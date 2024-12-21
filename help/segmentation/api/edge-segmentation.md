@@ -4,9 +4,9 @@ title: 使用API的Edge區段
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用邊緣區段的範例。
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
+source-git-commit: 828a586f0264147676da5c43c73d3b3b9d50b9c2
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '809'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ Edge區段能讓您在Adobe Experience Platform的邊緣即時評估區段定義
 | 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 |
 | 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 |
 | 區段區段 | 包含一或多個批次或串流區段定義的任何區段定義。 **注意：**&#x200B;如果區段的區段搭配&#x200B;**批次**&#x200B;區段定義使用，則設定檔取消資格可能需要&#x200B;**最多24小時**&#x200B;才能發生。 如果區段搭配&#x200B;**串流**&#x200B;區段定義使用，將會以串流方式發生設定檔取消資格。 |
-| 具有設定檔屬性的多個事件 | 任何在過去24小時&#x200B;**內參考多個事件**&#x200B;且（選擇性）具有一或多個設定檔屬性的區段定義。 |
+| 具有設定檔屬性的多個事件 | 任何在過去24小時&#x200B;**內參考多個非循序事件**&#x200B;的區段定義，以及（選擇性）具有一或多個設定檔屬性。 |
 
 此外，區段&#x200B;**必須**&#x200B;繫結至邊緣上作用中的合併原則。 如需有關合併原則的詳細資訊，請參閱[合併原則指南](../../profile/api/merge-policies.md)。
 
