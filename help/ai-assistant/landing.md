@@ -2,9 +2,9 @@
 title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
+source-git-commit: 9a8b1527f932e8b0091af7fb999ed638e28de2d0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,20 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
 
+### 使用AI助理驗證回應
+
+觀看以下影片，瞭解如何使用AI Assistant驗證和驗證回應。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on)
+
+如需詳細資訊，請閱讀有關[驗證AI助理答案](ui-guide.md#verify-operational-insights-responses)的檔案。
+
+### 使用AI助理進行影響分析
+
+觀看以下影片，瞭解如何使用AI Assistant在對資料物件進行任何變更之前，執行更有效的影響分析。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
 ## AI Assistant使用案例庫
 
 >[!BEGINTABS]
@@ -136,6 +150,7 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 * [縮短團隊新成員的上線時間](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [清理您的對象並最佳化您的行銷作業](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [檢查相依性並在資料更新期間將風險降至最低](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [檢查相依性（以秒為單位），將資料更新期間的風險降到最低](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 >[!TAB 其他視訊內容]
 
