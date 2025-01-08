@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 透過指南、文件和教學課程，了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
+source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 24%
+source-wordcount: '288'
+ht-degree: 25%
 
 ---
 
@@ -71,10 +71,12 @@ ht-degree: 24%
       * [設定Azure金鑰儲存庫](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
       * [使用API設定CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [使用UI設定CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+   * 金鑰管理服務{#key-management-service}
+      * [金鑰管理服務](./governance-privacy-security/key-management-service/overview.md)
 * 授權使用和護欄{#license}
    * [資料管理授權權益最佳實務](./license-usage-and-guardrails/data-management-best-practices.md)
    * [授權使用量儀表板](./license-usage-and-guardrails/license-usage-dashboard.md)
-   * [總資料量](./license-usage-and-guardrails/total-data-volume.md)
+   * [資料總量](./license-usage-and-guardrails/total-data-volume.md)
    * [Adobe Journey Optimizer護欄](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
    * [Customer Journey Analytics護欄](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [Real-Time CDP護欄](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)

@@ -4,9 +4,9 @@ description: 瞭解如何為Adobe Experience Platform中儲存的資料設定您
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Adobe Experience Platform中的客戶自控金鑰
 
 儲存在Adobe Experience Platform上的資料會使用系統層級的金鑰進行靜態加密。 如果您使用以Platform為基礎建立的應用程式，可以選擇改用您自己的加密金鑰，讓您更能掌控資料安全性。
+
+>[!AVAILABILITY]
+>
+>如果您的Experience Platform實作在Amazon Web Services (AWS)上執行，您可以選擇使用金鑰管理服務(KMS)來加密平台資料。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。 若要瞭解AWS KMS中加密金鑰的建立與管理，請參閱[AWS KMS資料加密指南](../key-management-service/overview.md)。
 
 >[!NOTE]
 >
