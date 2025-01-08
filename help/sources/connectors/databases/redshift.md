@@ -3,9 +3,9 @@ title: Amazon Redshift Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Amazon Redshift連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: dbeeab9182ae67e5c9c691707faeddf04f4e94b2
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,17 @@ Experience Platform支援從協力廠商資料庫擷取資料。 Platform可以�
 
 使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-以下檔案提供如何使用API或使用者介面將[!DNL Amazon Redshift]連線到Platform的資訊：
+## 設定您在Amazon Web Services上Experience Platform的[!DNL Amazon Redshift]來源 {#aws}
+
+>[!AVAILABILITY]
+>
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+
+將下列IP位址新增至您的允許清單，以將您的[!DNL Amazon Redshift]帳戶連線至Amazon Web Services (AWS)上的Experience Platform：
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
 
 ## 使用API連線[!DNL Amazon Redshift]至平台
 
