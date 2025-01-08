@@ -2,9 +2,9 @@
 title: Salesforce Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
+source-git-commit: 258e54b969e7b392eec97459e0a51931f2109fe7
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '1483'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,183 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 成功的請求會根據測試版規格建立B2B名稱空間和結構描述。
 
-## 使用API連線[!DNL Salesforce]至平台
+## 設定您在Amazon Web Services上Experience Platform的[!DNL Salesforce]來源 {#aws}
+
+>[!AVAILABILITY]
+>
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+
+請依照下列步驟瞭解如何設定您的[!DNL Salesforce]帳戶以在Amazon Web Services (AWS)上Experience Platform。
+
+### 先決條件
+
+若要將您的[!DNL Salesforce]帳戶連線至AWS地區的Experience Platform，您必須具備下列條件：
+
+- 具有API存取許可權的[!DNL Salesforce]帳戶。
+- [!DNL Salesforce Connected App]可供您用來啟用JWT_BEARER OAuth流程。
+- [!DNL Salesforce]中存取資料的必要許可權。
+
+您也必須新增下列IP位址至您的允許清單，才能將您的[!DNL Salesforce]帳戶連線至Amazon Web Services (AWS)上的Experience Platform：
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
+
+### 建立[!DNL Salesforce Connected App]
+
+首先，使用以下專案來建立PEM檔案的憑證/金鑰組。
+
+```shell
+openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
+```
+
+1. 在[!DNL Salesforce]儀表板中，選取設定(![設定圖示。](/help/images/icons/settings.png))，然後選取&#x200B;**[!DNL Setup]**。
+2. 導覽至[!DNL App Manager]，然後選取&#x200B;**[!DNL New Connection App]**。
+3. 為您的應用程式命名，並允許自動填寫其餘欄位。
+4. 為[!DNL Enable OAuth Settings]啟用此方塊。
+5. 設定回呼URL。 由於這不會用於JWT，因此您可以使用`https://localhost`。
+6. 為[!DNL Use Digital Signatures]啟用此方塊。
+7. 上傳先前建立的cert.perm檔案。
+
+#### 新增必要許可權
+
+新增下列許可權：
+
+1. 透過API (API)管理使用者資料
+2. 存取自訂許可權(custom_permissions)
+3. 存取身分URL服務（識別碼、設定檔、電子郵件、地址、電話）
+4. 存取唯一識別碼(openid)
+5. 隨時執行請求(refresh_token、offline_access)
+
+在新增您的許可權後，請確定您已啟用&#x200B;**[!DNL Issue JSON Web Token (JWT)-based access tokens for named user]**&#x200B;的方塊。
+
+接著，選取&#x200B;**[!DNL Save]**、**[!DNL Continue]**，然後選取&#x200B;**[!DNL Manage Customer Details]**。 使用消費者詳細資訊面板來擷取下列內容：
+
+- **消費者金鑰**：您稍後會在驗證Experience Platform的[!DNL Salesforce]帳戶時，使用此消費者金鑰作為使用者端ID。
+- **使用者密碼**：您稍後會在驗證Experience Platform的[!DNL Salesforce]帳戶時，使用此使用者密碼作為使用者端ID。
+
+### 授權您的[!DNL Salesforce]使用者使用連線應用程式
+
+請依照下列步驟，取得使用連線應用程式的授權：
+
+1. 瀏覽至&#x200B;**[!DNL Manage Connected Apps]**。
+2. 選擇「**[!DNL Edit]**」。
+3. 將&#x200B;**[!DNL Permitted Users]**&#x200B;設定為&#x200B;**[!DNL Admin approved users are pre-authorized]**，然後選取&#x200B;**[!DNL Save]**。
+4. 導覽至&#x200B;**[!DNL Settings]> [!DNL Manage Users] >[!DNL Profiles]**。
+5. 編輯與使用者相關聯的設定檔。
+6. 導覽至&#x200B;**[!DNL Connected App Access]**，然後選取您在先前步驟中建立的應用程式。
+
+### 產生JWT持有人權杖
+
+請依照下列步驟產生您的JWT持有人權杖。
+
+#### 將索引鍵配對轉換為pkcs12
+
+若要產生JWT持有人權杖，您必須先使用以下命令將您的憑證/金鑰組轉換為pkcs12格式。 在此步驟中，您還必須在系統提示時&#x200B;**設定匯出密碼**。
+
+```shell
+openssl pkcs12 -export -in cert.pem -inkey key.pem -name jwtcert >jwtcert.p12
+```
+
+#### 根據pkcs12建立Java金鑰存放區
+
+接下來，使用以下命令，根據您剛產生的pkcs12建立Java金鑰儲存區。 在此步驟中，當出現提示時，您也必須設定&#x200B;**目的地金鑰存放區密碼**。 此外，您必須提供先前的匯出密碼作為來源金鑰存放區密碼。
+
+```shell
+keytool -importkeystore -srckeystore jwtcert.p12 -destkeystore keystore.jks -srcstoretype pkcs12 -alias jwtcert
+```
+
+#### 確認您的keystroke.jks包含jwtcert別名
+
+接下來，使用下列命令確認您的`keystroke.jks`包含`jwtcert`別名。 在此步驟中，系統會提示您提供上一步驟中產生的目的地金鑰存放區密碼。
+
+```shell
+keytool -keystore keystore.jks -list
+```
+
+#### 產生已簽署的權杖
+
+最後，使用下列java類別JWTExample產生您的簽署權杖。
+
+```java
+package org.example;
+ 
+import org.apache.commons.codec.binary.Base64;
+ 
+import java.io.*;
+import java.security.*;
+import java.text.MessageFormat;
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        String header = "{\"alg\":\"RS256\"}";
+        String claimTemplate = "'{'\"iss\": \"{0}\", \"sub\": \"{1}\", \"aud\": \"{2}\", \"exp\": \"{3}\"'}'";
+ 
+        try {
+            StringBuffer token = new StringBuffer();
+ 
+            //Encode the JWT Header and add it to our string to sign
+            token.append(Base64.encodeBase64URLSafeString(header.getBytes("UTF-8")));
+ 
+            //Separate with a period
+            token.append(".");
+ 
+            //Create the JWT Claims Object
+            String[] claimArray = new String[5];
+            claimArray[0] = "{CLIENT_ID}";
+            claimArray[1] = "{AUTHORIZED_SALESFORCE_USERNAME}";
+            claimArray[2] = "{SALESFORCE_LOGIN_URL}";
+            claimArray[3] = Long.toString((System.currentTimeMillis() / 1000) + 2629746*4);
+            MessageFormat claims;
+            claims = new MessageFormat(claimTemplate);
+            String payload = claims.format(claimArray);
+ 
+            //Add the encoded claims object
+            token.append(Base64.encodeBase64URLSafeString(payload.getBytes("UTF-8")));
+ 
+            //Load the private key from a keystore
+            KeyStore keystore = KeyStore.getInstance("JKS");
+            keystore.load(new FileInputStream("path/to/keystore"), "keystorepassword".toCharArray());
+            PrivateKey privateKey = (PrivateKey) keystore.getKey("jwtcert", "privatekeypassword".toCharArray());
+ 
+            //Sign the JWT Header + "." + JWT Claims Object
+            Signature signature = Signature.getInstance("SHA256withRSA");
+            signature.initSign(privateKey);
+            signature.update(token.toString().getBytes("UTF-8"));
+            String signedPayload = Base64.encodeBase64URLSafeString(signature.sign());
+ 
+            //Separate with a period
+            token.append(".");
+ 
+            //Add the encoded signature
+            token.append(signedPayload);
+ 
+            System.out.println(token.toString());
+ 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+| 屬性 | 設定 |
+| --- | --- |
+| `claimArray[0]` | 以您的使用者端識別碼更新`claimArray[0]`。 |
+| `claimArray[1]` | 以針對應用程式授權的[!DNL Salesforce]使用者名稱更新`claimArray[1]`。 |
+| `claimArray[2]` | 以您的[!DNL Salesforce]登入URL更新`claimArray[2]`。 |
+| `claimArray[3]` | 以自epoch時間以來的毫秒格式來更新到期日期的`claimArray[3]`。 例如，`3660624000000`是12-31-2085。 |
+| `/path/to/keystore` | 將`/path/to/keystore`取代為您keystore.jks的正確路徑 |
+| `keystorepassword` | 將`keystorepassword`取代為您的目的地金鑰存放區密碼。 |
+| `privatekeypassword` | 以您的來源金鑰存放區密碼取代`privatekeypassword`。 |
+
+## 後續步驟
+
+完成[!DNL Salesforce]帳戶的先決條件設定後，您可以繼續連線您的[!DNL Salesforce]帳戶，以Experience Platform並內嵌您的CRM資料。 如需詳細資訊，請閱讀以下檔案：
+
+### 使用API連線[!DNL Salesforce]至平台
 
 以下檔案提供如何使用API或使用者介面將[!DNL Salesforce]連線到Platform的資訊：
 
@@ -91,7 +267,7 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 - [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 - [使用流程服務API為CRM來源建立資料流](../../tutorials/api/collect/crm.md)
 
-## 使用UI連線[!DNL Salesforce]至平台
+### 使用UI連線[!DNL Salesforce]至平台
 
-- [在使用者介面中建立Salesforce來源連線](../../tutorials/ui/create/crm/salesforce.md)
+- [在UI中建立Salesforce來源連線](../../tutorials/ui/create/crm/salesforce.md)
 - [在UI中為CRM連線建立資料流](../../tutorials/ui/dataflow/crm.md)
