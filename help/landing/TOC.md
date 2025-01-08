@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 透過指南、文件和教學課程，了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
+source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 25%
+source-wordcount: '290'
+ht-degree: 24%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 25%
 
 * [平台概觀](home.md)
 * [平台概觀（影片）](video/platform-overview.md)
+* [多雲端概述](multi-cloud.md)
 * [平台教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [由Platform支援的客戶體驗（影片）](video/customer-experience.md)
 * [Platform支援的客戶體驗幕後（影片）](video/customer-experience-bts.md)
