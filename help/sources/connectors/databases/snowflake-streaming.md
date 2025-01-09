@@ -4,9 +4,9 @@ description: 瞭解如何建立來源連線和資料流，以將您的Snowflake�
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '816'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,10 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> 已購買Real-time Customer Data Platform Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
+>* 已購買Real-Time CDP Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
+>
+>* 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Snowflake]串流來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
@@ -61,7 +64,7 @@ Experience Platform支援從[!DNL Snowflake]資料庫串流資料。
 | --- | --- |
 | 倉儲 | 操作，使用 |
 | 資料庫 | 使用狀況 |
-| 綱要 | 使用狀況 |
+| 結構描述 | 使用狀況 |
 | 表格 | 選取 |
 
 >[!NOTE]

@@ -3,9 +3,9 @@ title: Amazon Redshift Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Amazon Redshift連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: dbeeab9182ae67e5c9c691707faeddf04f4e94b2
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,10 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Redshift]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>- [!DNL Amazon Redshift]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
+>
+>- 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Amazon Redshift]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

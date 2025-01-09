@@ -4,14 +4,18 @@ solution: Experience Platform
 title: HTTP API Source聯結器總覽
 description: 瞭解如何建立串流聯結器，以使用API或使用者介面與Adobe Experience Platform連線。
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
+source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
 # [!DNL HTTP API]聯結器
+
+>[!IMPORTANT]
+>
+>您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL HTTP API]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
 Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

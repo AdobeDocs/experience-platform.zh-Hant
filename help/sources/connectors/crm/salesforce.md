@@ -2,14 +2,19 @@
 title: Salesforce Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 258e54b969e7b392eec97459e0a51931f2109fe7
+source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1528'
 ht-degree: 0%
 
 ---
 
 # [!DNL Salesforce]
+
+>[!IMPORTANT]
+>
+>您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Salesforce]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

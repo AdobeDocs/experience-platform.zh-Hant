@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Google雲端儲存空間Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Google Cloud Storage連線至Adobe Experience Platform。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
+source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
 
 # Google雲端儲存空間聯結器
+
+>[!IMPORTANT]
+>
+>您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Google Cloud Storage]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
 Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線，可讓您從這些系統帶入資料。
 

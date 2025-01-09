@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Marketo Engage聯結器
 description: 本檔案提供Marketo Engage來源聯結器的概觀，包括其驗證、對應和資料延遲的相關資訊。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
+source-git-commit: 37e23b060c34c628b2be80256cffd1480c899ce7
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
 
 # [!DNL Marketo Engage]聯結器
+
+>[!IMPORTANT]
+>
+>您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Marketo Engage]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../../landing/multi-cloud.md)。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
@@ -21,7 +25,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 
 >[!IMPORTANT]
 >
->您必須有權存取[Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md)，才能將所有Marketo資料集與[即時客戶個人檔案](../../../../profile/home.md)一起用於區段。 如果沒有Real-Time CDP B2B Edition，您仍可使用Marketo來源，將人員和活動資料集的資料匯入即時客戶個人檔案以進行分段。
+>您必須能存取[Adobe Real-time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md)，才能將所有Marketo資料集與[即時客戶個人檔案](../../../../profile/home.md)一起用於區段。 如果沒有Real-Time CDP B2B edition，您仍可使用Marketo來源，將人員和活動資料集中的資料匯入即時客戶個人檔案以進行分段。
 
 本檔案提供[!DNL Marketo Engage]來源聯結器的概觀，包括有關如何驗證聯結器、如何將[!DNL Marketo Engage]欄位對應到體驗資料模型(XDM)以及聯結器的資料延遲的資訊。
 
@@ -68,7 +72,7 @@ XDM是公開記錄的規格，提供通用結構和定義，可讓您從協力�
 
 下表根據擷取的性質和所要的目的地，概述將[!DNL Marketo Engage]資料帶入Platform的預期延遲：
 
-| 目的地 | 預期延遲 |
+| 目標 | 預期延遲 |
 | ----------- | ---------------- |
 | [!DNL Real-Time Customer Profile] | &lt; 10分鐘 |
 | 資料湖 | &lt; 60分鐘 |

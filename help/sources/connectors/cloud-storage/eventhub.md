@@ -3,9 +3,9 @@ title: Azure事件中樞Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Azure事件中樞連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Azure Event Hubs]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>* [!DNL Azure Event Hubs]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
+>
+>* 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Azure Event Hubs]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
 Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入Platform。
 
