@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的AI助理
 description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和Real-time Customer Data Platform概念，以及有關您物件的使用資訊。
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -75,10 +75,6 @@ AI Assistant會更新介面，並提供檔案連結給您，以證實初始回�
 
 ![AI助理提供的概念問題引文下拉式功能表。](./images/citations.png)
 
-您也可以使用AI小幫手在&#x200B;**[!UICONTROL 相關建議]**&#x200B;下提供的建議來進一步探索與您原始問題相關的主題。
-
-![由AI助理提供的建議清單。](./images/related-suggestions.png)
-
 +++
 
 ### 運作深入分析 {#operational-insights}
@@ -127,9 +123,9 @@ AI助理接著會以表格回應，該表格會列出您的資料流及其對應
 
 +++
 
-### 使用自動完成 {#use-auto-complete}
+### 使用實體自動完成 {#use-entity-auto-complete}
 
-您可以使用自動完成函式來接收沙箱中存在之資料物件的清單。 自動完成建議適用於下列網域：受眾、結構描述、資料集、來源和目的地。
+您可以使用自動完成函式來接收沙箱中存在之資料物件的清單。 自動完成建議適用於下列網域：受眾、結構描述、資料集、歷程、來源和目的地。
 
 +++選取以檢視自動完成的範例
 
@@ -176,6 +172,44 @@ AI助理接著會以表格回應，該表格會列出您的資料流及其對應
 接著，選取類別，然後從提供的清單中選取提示。 您可以使用此功能來進一步瞭解AI助理可以回答的問題型別。 您也可以使用自由文字或[自動完成](#use-auto-complete)，以與您的沙箱相關的特定詳細資訊更新現有的提示。
 
 ![AI助理在可發現性中提示。](./images/prompt.png)
+
++++
+
+### 使用問題自動完成 {#use-question-autocomplete}
+
+您可以使用AI助理的問題自動完成功能，從AI助理的建議清單中選取問題。
+
++++選取以檢視問題自動完成的範例
+
+若要檢視建議問題的面板，請在輸入方塊中輸入至少七(7)個字元。 接著，從出現的選單中選取與您相關的問題。
+
+![包含AI助理建議問題的快顯面板。](./images/suggested_questions.png)
+
+在某些建議問題涉及操作深入分析的情況下，您可能需要更新預留位置。 例如，如果AI助理的建議包含預留位置，您可能需要新增資料集或對象的特定名稱。
+
+![AI助理的建議包含預留位置。](./images/placeholder.png)
+
+預留位置會以藍色反白。 選取預留位置以開始更新其值。 為獲得數字預留位置的最佳結果，請務必使用數字而非文字。 您也可以使用圖元自動完成功能來更新預留位置值。 您無法傳送包含未填預留位置的問題。
+
+**注意**：建議預設為啟用。 選取&#x200B;**[!UICONTROL 建議想法]**&#x200B;切換以停用此功能。
+
+![來自AI助理的建議（含更新的預留位置）。](./images/updated_placeholder.png)
+
++++
+
+### 使用相關建議 {#use-related-suggestions}
+
+您可以使用每個AI助理回應的相關建議區段來繼續您的交談。
+
++++選取以檢視相關建議的範例
+
+AI助理的每個回應都會傳回相關建議。 若要繼續您的交談，請在相關建議區段中選取任何建議。
+
+![來自AI助理的相關建議清單。](./images/related_suggestions.png)
+
+與問題中的預留位置自動完成類似，在提交查詢之前，您需要更新相關建議中包含的預留位置。
+
+![來自相關建議的查詢（預留位置已更新）。](./images/related_suggestions_placeholder.png)
 
 +++
 
