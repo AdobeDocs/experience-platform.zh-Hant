@@ -3,18 +3,14 @@ keywords: Experience Platform；首頁；熱門主題；警報
 description: 您可以在建立資料流時訂閱警報，以接收有關流程執行的狀態、成功或失敗的警報訊息。
 title: 訂閱UI中的內容感知警報
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
+source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '819'
 ht-degree: 7%
 
 ---
 
 # 訂閱UI中來源資料流程的警報
-
->[!NOTE]
->
->警報在非生產沙箱中不受支援。 為了訂閱警報，您必須確保使用生產沙箱。
 
 Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的事件型警報。 警示可減少或消除輪詢[[!DNL Observability Insights] API](../../../observability/api/overview.md)的需求，以檢查工作是否已完成、工作流程中是否已達到特定里程碑，或是否已發生任何錯誤。
 
@@ -52,7 +48,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 >
 >警示目前不支援串流來源。 您只能訂閱批次來源的警示通知。
 
-| 警報 | 說明 |
+| 警示 | 說明 |
 | --- | --- |
 | 來源資料流執行開始 | 此警報會在您的來源資料流啟動時傳送訊息給您。 |
 | 來源資料流執行成功 | 當來源中的資料成功擷取到Platform時，此警報會傳送訊息給您。 |
