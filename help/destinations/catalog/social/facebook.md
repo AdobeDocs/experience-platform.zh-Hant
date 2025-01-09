@@ -3,9 +3,9 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '1985'
+source-wordcount: '2091'
 ht-degree: 6%
 
 ---
@@ -151,6 +151,22 @@ Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/s
 2. 選取&#x200B;**[!UICONTROL 連線到目的地]**。
    ![驗證啟動工作流程中顯示的Facebook步驟。](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. 輸入您的Facebook認證，並選取&#x200B;**登入**。
+
+### 重新整理驗證認證 {#refresh-authentication-credentials}
+
+facebook Token每60天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+
+1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
+2. （選用）使用頁面上可用的篩選器，僅顯示Facebook帳戶。
+   ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
+   ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Facebook認證重新驗證。
+   使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>您的驗證認證已更新，其到期時間已重設為60天。
 
 ### 填寫目標詳細資訊 {#destination-details}
 

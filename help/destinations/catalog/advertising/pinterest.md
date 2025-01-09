@@ -2,10 +2,10 @@
 title: pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人，或已在Pinterest上與您的內容互動的人中建立對象。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 4%
+source-wordcount: '828'
+ht-degree: 3%
 
 ---
 
@@ -67,11 +67,27 @@ ht-degree: 4%
 
 ### 連線參數 {#parameters}
 
-在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
+當[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
 * **[!UICONTROL 廣告帳戶ID]**：您的Pinterest廣告商ID。
+
+### 重新整理驗證認證 {#refresh-authentication-credentials}
+
+pinterest Token每30天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+
+1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
+2. （選用）使用頁面上可用的篩選器，僅顯示Pinterest帳戶。
+   ![篩選以僅顯示Pinterest帳戶](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
+   ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Pinterest認證重新驗證。
+   使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>您的驗證認證已更新，其到期時間已重設為30天。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -79,7 +95,7 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的對象 {#activate}
+## 啟動此目標的客群 {#activate}
 
 >[!IMPORTANT]
 > 

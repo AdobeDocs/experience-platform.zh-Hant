@@ -3,10 +3,10 @@ keywords: linkedin連線；linkedin連線；linkedin目的地；linkedin；
 title: Linkedin相符受眾連線
 description: 根據雜湊電子郵件，為您的LinkedIn行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
+source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 4%
+source-wordcount: '1201'
+ht-degree: 3%
 
 ---
 
@@ -118,6 +118,22 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 2. 選取&#x200B;**[!UICONTROL 連線到目的地]**。
    ![驗證LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. 輸入您的LinkedIn認證，並選取&#x200B;**登入**。
+
+### 重新整理驗證認證 {#refresh-authentication-credentials}
+
+linkedIn Token每60天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+
+1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
+2. （選用）使用頁面上可用的篩選器，僅顯示LinkedIn帳戶。
+   ![篩選以僅顯示LinkedIn帳戶](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
+   ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的LinkedIn認證重新驗證。
+   使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>您的驗證認證已更新，其到期時間已重設為60天。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
