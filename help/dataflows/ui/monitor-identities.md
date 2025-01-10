@@ -24,7 +24,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 - [身分識別服務](../../identity-service/home.md)：透過跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
 - [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-## 監視身分儀表板 {#identity-metrics}
+## 監視身分識別儀表板 {#identity-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"

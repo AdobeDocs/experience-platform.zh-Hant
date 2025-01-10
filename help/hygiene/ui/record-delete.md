@@ -63,17 +63,17 @@ ht-degree: 8%
 >
 >選取&#x200B;**[!UICONTROL 所有資料集]**&#x200B;選項可能會導致刪除作業花費更長的時間，並且可能不會導致精確的記錄刪除。
 
-## 提供身分 {#provide-identities}
+## 提供身分識別 {#provide-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="身分命名空間"
->abstract="身分命名空間指將記錄和 Experience Platform 中的消費者輪廓繫結的屬性。資料集的身分命名空間欄位由資料集建立基礎的方案定義。在此欄中，您必須提供記錄的身分命名空間的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
+>title="身分識別命名空間"
+>abstract="身分識別命名空間指將記錄和 Experience Platform 中的消費者輪廓繫結的屬性。資料集的身分識別命名空間欄位由資料集建立基礎的方案定義。在此欄中，您必須提供記錄的身分識別命名空間的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="主要身分值"
->abstract="在此欄中，您必須提供記錄的身分命名空間的值，該值必須和左欄中提供的身分識別類型相對應。如果身分命名空間類型是 `email`，則該值應該是記錄的電子郵件地址。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
+>title="主要身分識別值"
+>abstract="在此欄中，您必須提供記錄的身分命名空間的值，該值必須和左欄中提供的身分識別類型相對應。如果身分識別命名空間類型是 `email`，則該值應該是記錄的電子郵件地址。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
 刪除記錄時，您必須提供身分資訊，讓系統能夠決定要刪除哪些記錄。 對於Platform中的任何資料集，會根據資料集結構描述所定義的&#x200B;**身分名稱空間**&#x200B;欄位來刪除記錄。
 

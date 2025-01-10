@@ -14,7 +14,7 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="刪除不要的或過期的客戶記錄和資料集"
->abstract="<h2>說明</h2><p>要管理與合規性無關的 Experience Platform 資料的生命週期，您可以刪除消費者記錄並排程資料集的到期日。若要建立或管理資料主體要求，請參閱「執行資料主體隱私權要求」使用案例區塊。</p>"
+>abstract="<h2>說明</h2><p>要管理與合規性無關的 Experience Platform 資料的生命週期，您可以刪除消費者記錄並排程資料集的過期日。若要建立或管理資料主體要求，請參閱「執行資料主體隱私權要求」使用案例區塊。</p>"
 
 Adobe Experience Platform UI中的[[!UICONTROL 資料生命週期]工作區](./overview.md)可讓您排程資料集的到期日。 當資料集到達其到期日時，資料湖、身分服務和即時客戶設定檔會開始個別程式，從各自的服務中移除資料集的內容。 從所有三項服務中刪除資料後，到期日即會標示為完成。
 
@@ -34,12 +34,12 @@ Adobe Experience Platform UI中的[[!UICONTROL 資料生命週期]工作區](./o
 >
 >資料生命週期不支援批次刪除。
 
-## 排程資料集到期 {#schedule-dataset-expiration}
+## 排程資料集期限 {#schedule-dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="說明"
->abstract="<ul><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html#">資料生命週期</a>，然後選取<b>建立要求</b>。</li><li>如果您要刪除記錄：</li>   <li>選取<b>記錄</b>。</li>   <li>選擇要從中刪除記錄的特定資料集，或選擇從所有資料集中刪除記錄的選項。</li>   <li>提供要刪除其記錄之消費者的身分。選取<b>新增身分</b>一次提供一個身分，或選取<b>選擇檔案</b>改上傳身分的 JSON 檔案。</li>   <li>如果需要，選取 <b>範本</b> 以查看 JSON 檔案的預期格式。</li><li>如果您想要 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">排程資料集的到期日</a>，請參閱文件以取得指示。</li></ul>"
+>abstract="<ul><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html#">資料生命週期</a>，然後選取<b>建立要求</b>。</li><li>如果您要刪除記錄：</li>   <li>選取<b>記錄</b>。</li>   <li>選擇要從中刪除記錄的特定資料集，或選擇從所有資料集中刪除記錄的選項。</li>   <li>提供要刪除其記錄之消費者的身分識別。選取<b>新增身分識別</b>一次提供一個身分識別，或選取<b>選擇檔案</b>改上傳身分識別的 JSON 檔案。</li>   <li>如果需要，選取 <b>範本</b> 以查看 JSON 檔案的預期格式。</li><li>如果您想要 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">排程資料集的過期日</a>，請參閱文件以取得指示。</li></ul>"
 
 若要建立請求，請選取工作區首頁面中的&#x200B;**[!UICONTROL 建立請求]**。
 

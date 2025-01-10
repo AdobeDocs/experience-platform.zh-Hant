@@ -1,6 +1,6 @@
 ---
-title: 在Real-time Customer Data Platform B2B版本中定義兩個結構描述之間的關係
-description: 瞭解如何在Adobe Real-time Customer Data Platform B2B Edition中定義兩個結構描述之間的多對一關係。
+title: 在Real-time Customer Data Platform B2B edition中定義兩個結構描述之間的關係
+description: 瞭解如何在Adobe Real-time Customer Data Platform B2B edition中定義兩個結構描述之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 12%
 >title="參考方案"
 >abstract="選取要建立關係的方案。根據方案的類別，方案還可能和 B2B 內容中的其他實體存在現有關係。請查看文件以了解 B2B 方案類別彼此間的關係。"
 
-Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Model (XDM)類別，可擷取基本B2B資料實體，包括[帳戶](../classes/b2b/business-account.md)、[機會](../classes/b2b/business-opportunity.md)、[行銷活動](../classes/b2b/business-campaign.md)等。 透過根據這些類別建立結構描述並啟用它們以用於[即時客戶設定檔](../../profile/home.md)，您可以將不同來源的資料合併到稱為聯合結構描述的統一表示中。
+Adobe Real-time Customer Data Platform B2B edition提供可擷取基本B2B資料實體的數個Experience Data Model (XDM)類別，包括[帳戶](../classes/b2b/business-account.md)、[機會](../classes/b2b/business-opportunity.md)、[行銷活動](../classes/b2b/business-campaign.md)等。 透過根據這些類別建立結構描述並啟用它們以用於[即時客戶設定檔](../../profile/home.md)，您可以將不同來源的資料合併到稱為聯合結構描述的統一表示中。
 
 不過，聯合結構描述只能包含共用相同類別的結構描述所擷取的欄位。 這就是結構描述關係的用處。 透過在B2B結構描述中實作關係，您可以說明這些業務實體如何彼此關聯，並可在下游細分使用案例中包含來自多個類別的屬性。
 
@@ -24,11 +24,11 @@ Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Mo
 
 ![B2B類別關係](../images/tutorials/relationship-b2b/classes.png)
 
-本教學課程涵蓋在Real-Time CDP B2B Edition中定義兩個結構描述之間多對一關係的步驟。
+本教學課程涵蓋在Real-Time CDP B2B edition中定義兩個結構描述之間多對一關係的步驟。
 
 >[!NOTE]
 >
->如果您未使用Real-time Customer Data Platform B2B Edition或想建立一對一的關係，請改為參閱[建立一對一關係](./relationship-ui.md)指南。
+>如果您未使用Real-time Customer Data Platform B2B edition或想建立一對一的關係，請改為參閱[建立一對一的關係](./relationship-ui.md)指南。
 >
 >本教學課程著重於如何在Platform UI中手動建立B2B結構描述之間的關係。 如果您從B2B來源連線引進資料，您可以使用自動產生公用程式來建立所需的結構描述、身分和關係。 如需使用自動產生公用程式[的詳細資訊，請參閱B2B名稱空間和結構描述的來原始檔](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)。
 
@@ -46,11 +46,11 @@ Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Mo
 
 結構描述關聯性由&#x200B;**來源結構描述**&#x200B;中的專用欄位表示，該欄位參照&#x200B;**參考結構描述**&#x200B;的主要身分欄位。 在接下來的步驟中，&quot;[!DNL Opportunities]&quot;做為來源結構描述，而&quot;[!DNL Accounts]&quot;做為參考結構描述。
 
-### 了解 B2B 關係中的身分
+### 了解 B2B 關係中的身分識別
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
->title="參考身分命名空間"
+>title="參考身分識別命名空間"
 >abstract="適用於參考方案的主要身分識別欄位的命名空間 (類型)。參考方案必須有一個已建立的主要身分識別欄位才能參與關係。請查看文件以了解有關 B2B 關係中身分識別的詳細資訊。"
 
 為了建立關係，參考結構描述必須具有定義的主要身分。 為B2B實體設定主要身分時，請記住，如果您跨不同系統或位置收集字串型實體ID，則這些ID可能會重疊，這可能會導致Platform中的資料衝突。

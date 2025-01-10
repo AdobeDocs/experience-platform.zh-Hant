@@ -36,7 +36,7 @@ ht-degree: 5%
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_daysRemaining"
->title="資料集有效期"
+>title="資料集期限"
 >abstract="此欄表示目標資料集在自動到期之前剩餘的天數。"
 
 >[!CONTEXTUALHELP]

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；架構；架構；列舉；mixin；欄位群組；欄位群組；mixin；資料型別；資料型別；資料型別；主要身分；XDM個人設定檔；XDM欄位；列舉資料型別；體驗事件；XDM體驗事件；XDM ExperienceEvent；XDM Experienceevent；XDM Experienceevenet；架構設計；類別；類別；類別；類別；資料型別；資料型別；架構；架構as；identityMap；身份對映；身份對映；架構設計；對映；合併架構；合併
+keywords: Experience Platform；首頁；熱門主題；架構；架構；列舉；mixin；欄位群組；欄位群組；mixin；資料型別；資料型別；資料型別；主要身分；XDM個人設定檔；XDM欄位；列舉資料型別；體驗事件；XDM體驗事件；XDM ExperienceEvent；experienceevent；XDM Experienceevent；架構設計；類別；類別；類別；類別；資料型別；資料型別；架構；架構架構；identityMap；身份對映；身份對映；架構設計；對映；合併架構；合併
 solution: Experience Platform
 title: 結構描述組合基本概念
 description: 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。
@@ -48,12 +48,12 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 記錄和時間序列結構描述都包含身分地圖(`xdm:identityMap`)。 此欄位包含主旨的身分表示，從標示為「身分」的欄位中擷取，如下節所述。
 
-### [!UICONTROL 身分] {#identity}
+### [!UICONTROL 身分識別] {#identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
->title="方案中的身分"
->abstract="身分是方案中的重要欄位，可用於識別主題，例如電子郵件地址或行銷 ID。這些欄位用於為每個人建構身分識別圖並建立客戶輪廓。如需進一步了解方案中的身分，請查看此文件。"
+>title="方案中的身分識別"
+>abstract="身分識別是方案中的重要欄位，可用於身分識別主題，例如電子郵件地址或行銷 ID。這些欄位用於為每個人建構身分識別圖並建立客戶輪廓。如需進一步了解方案中的身分識別，請查看此文件。"
 
 結構用於擷取資料到Experience Platform中。 此資料可用於多項服務，以建立個別實體的單一、統一檢視。 因此，在為客戶身分設計結構時，重要的是考慮哪些欄位可用於識別主旨，無論資料來自何處。
 
@@ -78,7 +78,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 >
 >使用`identityMap`的結構描述可以做為關聯性中的來源結構描述，但不能做為參考結構描述。 這是因為所有參考結構描述都必須具備可見的身分識別，且可以在來源結構描述內的參考欄位中進行對應。 請參閱[關係](../tutorials/relationship-ui.md)的UI指南，以取得來源和參考結構描述需求的詳細資訊。
 
-不過，如果結構描述的身分識別數目不同，或是您從一起儲存身分識別的來源(例如[!DNL Airship]或Adobe Audience Manager)匯入資料，身分對應就相當實用。 此外，如果您使用[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)，也需要身分對應。
+不過，如果結構描述的身分識別數目不同，或是您從一起儲存身分識別的來源(例如[!DNL Airship]或Adobe Audience Manager)匯入資料，身分對應就相當實用。 此外，如果您使用[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)，則需要身分對應。
 
 簡單身分對應的範例看起來像這樣：
 

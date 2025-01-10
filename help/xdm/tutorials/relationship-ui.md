@@ -26,7 +26,7 @@ ht-degree: 9%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
->title="參考身分命名空間"
+>title="參考身分識別命名空間"
 >abstract="適用於參考方案的主要身分識別欄位的命名空間 (類型)。參考方案必須有一個已建立的主要身分識別欄位才能參與關係。如需有關方案關係的詳細資訊，請查看此文件。"
 
 瞭解客戶之間的關係以及他們跨不同管道與您品牌的互動，是Adobe Experience Platform的重要一環。 在[!DNL Experience Data Model] (XDM)結構描述的結構中定義這些關係，可讓您獲得有關客戶資料的複雜見解。
@@ -41,7 +41,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->如需如何在Adobe Real-time Customer Data Platform B2B Edition中建立多對一關係的步驟，請參閱[建立B2B關係](./relationship-b2b.md)指南。
+>如需如何在Adobe Real-time Customer Data Platform B2B edition中建立多對一關係的步驟，請參閱[建立B2B關係](./relationship-b2b.md)指南。
 
 ## 快速入門
 
@@ -119,7 +119,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->如果您有Real-Time CDP B2B Edition的存取權，可以使用畫布的右邊欄控制項來定義關係欄位，並使用[相同對話方塊](./relationship-b2b.md#relationship-field)建立多對一關係。
+>如果您有Real-Time CDP B2B edition的存取權，您可以使用畫布的右邊欄控制項來定義關係欄位，並使用[相同對話方塊](./relationship-b2b.md#relationship-field)建立多對一關係。
 
 ![新增關係對話方塊。](../images/tutorials/relationship/add-relationship-dialog.png)
 

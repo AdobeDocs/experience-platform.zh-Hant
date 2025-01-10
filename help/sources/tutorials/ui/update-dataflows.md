@@ -24,8 +24,8 @@ ht-degree: 8%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
->title="資料集有效期"
->abstract="此欄表示目標資料集在自動到期之前剩餘的天數。<br>如果目標資料集過期，資料流將會失敗。為避免資料流失敗，請確保將目標資料集設定為在正確的日期到期。請參閱文件以了解如何更新到期日。"
+>title="資料集期限"
+>abstract="此欄表示目標資料集在自動到期之前剩餘的天數。<br>如果目標資料集過期，資料流將會失敗。為避免資料流失敗，請確保將目標資料集設定為在正確的日期到期。請參閱文件以了解如何更新過期日。"
 
 在Experience PlatformUI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**，然後從頂端標題選取&#x200B;**[!UICONTROL 資料流程]**。
 

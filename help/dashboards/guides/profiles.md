@@ -99,7 +99,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ![基本屬性Widget。](../images/profiles/basic-attributes.png)
 
-#### 連結的身分 {#linked-identities}
+#### 連結的身分識別 {#linked-identities}
 
 [!UICONTROL 連結的身分] Widget會顯示與設定檔相關聯的任何其他身分。
 
@@ -119,7 +119,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 * 若要瞭解根據Adobe標準[收集同意資料所需的結構描述欄位群組](../../landing/governance-privacy-security/consent/adobe/overview.md)，請參閱這些啟用設定檔的結構描述欄位群組的相關檔案。
    * [[!UICONTROL 同意和偏好設定詳細資料]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) （若使用Platform Web或Mobile SDK傳送同意訊號則為必要）
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (若使用Platform Web或Mobile SDK傳送同意訊號則為必要)
 * 若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md)中[同意處理的概述。
 * 合併的資料治理和同意原則可用於根據其同意偏好設定和您建立的組織規則篩選要分段的設定檔。 若要瞭解如何建立和使用這些合併原則，請參閱[管理資料使用原則](../../data-governance/policies/user-guide.md#combine-policies)的使用手冊。
 
@@ -186,7 +186,7 @@ Adobe Experience Platform的所有新執行個體都會提供預設Widget載出�
 * [[!UICONTROL 輪廓計數]](#profile-count)
 * [[!UICONTROL 輪廓計數變更]](#profile-count-change)
 * [[!UICONTROL 輪廓計數變更趨勢]](#profiles-count-change-trend)
-* [[!UICONTROL 依身分劃分的輪廓]](#profiles-by-identity)
+* [[!UICONTROL 依身分識別劃分的輪廓]](#profiles-by-identity)
 * [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
 
 >[!NOTE]
@@ -263,13 +263,13 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 * [[!UICONTROL 輪廓計數變更]](#profile-count-change)
 * [[!UICONTROL 輪廓計數變更趨勢]](#profiles-count-change-trend)
 * [[!UICONTROL 依身分割槽分的設定檔計數變更趨勢]](#profiles-count-change-trend-by-identity)
-* [[!UICONTROL 依身分劃分的輪廓]](#profiles-by-identity)
+* [[!UICONTROL 依身分識別劃分的輪廓]](#profiles-by-identity)
 * [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
-* [[!UICONTROL 單一身分輪廓]](#single-identity-profiles)
+* [[!UICONTROL 單一身分識別輪廓]](#single-identity-profiles)
 * [[!UICONTROL 依身分割槽分的單一身分設定檔]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 未細分的輪廓]](#unsegmented-profiles)
 * [[!UICONTROL 未細分的輪廓變化趨勢]](#unsegmented-profiles-change-trend)
-* [[!UICONTROL 依身分劃分的未細分的輪廓]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL 依身分識別劃分的未細分的輪廓]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL 對象]](#audiences)
 * [[!UICONTROL 對應到目的地狀態的對象]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 對象人數]](#audiences-size)
@@ -345,12 +345,12 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 ![依身分Widget區分的設定檔計數變更趨勢。](../images/profiles/profiles-count-change-trend-by-identity.png)
 
-### [!UICONTROL 依身分劃分的輪廓] {#profiles-by-identity}
+### [!UICONTROL 依身分識別劃分的輪廓] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
->title="依身分劃分的輪廓"
->abstract="這個小工具會顯示輪廓存放區中依身分劃分的所有合併的輪廓。"
+>title="依身分識別劃分的輪廓"
+>abstract="這個小工具會顯示輪廓存放區中依身分識別劃分的所有合併的輪廓。"
 
 依身分割槽分的&#x200B;**[!UICONTROL 設定檔]** Widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 依身分割槽分的設定檔總數（也就是將每個名稱空間顯示的值相加）可能會高於合併的設定檔總數，因為一個設定檔可能會有多個相關聯的名稱空間。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。
 
@@ -371,7 +371,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="身分識別覆蓋"
->abstract="這個小工具使用文氏圖表顯示輪廓存放區中包含兩個所選身分的輪廓重疊。"
+>abstract="這個小工具使用文氏圖表顯示輪廓存放區中包含兩個所選身分識別的輪廓重疊。"
 
 **[!UICONTROL 身分重疊]** Widget使用文氏圖表或設定圖表，顯示個人資料存放區中包含兩個所選身分的設定檔重疊。
 
@@ -383,11 +383,11 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 ![識別重疊Widget醒目提示的設定檔儀表板總覽。](../images/profiles/identity-overlap.png)
 
-### [!UICONTROL 單一身分輪廓] {#single-identity-profiles}
+### [!UICONTROL 單一身分識別輪廓] {#single-identity-profiles}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_singleidentityprofiles"
->title="單一身分輪廓"
+>title="單一身分識別輪廓"
 >abstract="這個小工具會提供您組織的輪廓計數，這些輪廓只有一種可以建立其身分識別的 ID 類型。此 ID 類型可以是電子郵件或 ECID。"
 
 [!UICONTROL 單一身分設定檔] Widget會提供您組織的設定檔計數，這些設定檔只有一種建立其身分識別的ID型別。 此ID型別可以是電子郵件或ECID。 設定檔計數是從最近快照中所包含的資料產生。
@@ -424,7 +424,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 ![未分段的設定檔變更趨勢Widget。](../images/profiles/unsegmented-profiles-change-trend.png)
 
-### [!UICONTROL 依身分劃分的未細分的輪廓] {#unsegmented-profiles-by-identity}
+### [!UICONTROL 依身分識別劃分的未細分的輪廓] {#unsegmented-profiles-by-identity}
 
 >[!NOTE]
 >

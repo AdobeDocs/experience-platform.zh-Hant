@@ -84,7 +84,7 @@ Adobe Experience Platform的所有新執行個體都會提供預設Widget載出�
 * [[!UICONTROL 客群規模]](#audience-size)
 * [[!UICONTROL 對象人數變更趨勢]](#audience-size-change-trend)
 * [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
-* [[!UICONTROL 依身分劃分的輪廓]](#profiles-by-identity)
+* [[!UICONTROL 依身分識別劃分的輪廓]](#profiles-by-identity)
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 * [[!UICONTROL 對象重疊]](#audience-overlap)
 * [[!UICONTROL 對象重疊報表]](#audience-overlap-report)
 * [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
-* [[!UICONTROL 依身分劃分的輪廓]](#profiles-by-identity)
+* [[!UICONTROL 依身分識別劃分的輪廓]](#profiles-by-identity)
 * [[!UICONTROL 排定的啟用]](#scheduled-activations)
 
 ### [!UICONTROL 客群規模] {#audience-size}
@@ -270,11 +270,11 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 ![反白顯示具有身分重疊Widget的[!UICONTROL 受眾]儀表板總覽。](../images/audiences/identity-overlap.png)
 
-### [!UICONTROL 依身分劃分的輪廓] {#profiles-by-identity}
+### [!UICONTROL 依身分識別劃分的輪廓] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
->title="依身分劃分的輪廓"
+>title="依身分識別劃分的輪廓"
 >abstract="此小工具會顯示選取客群中每個合併輪廓身分識別的劃分。"
 
 依身分割槽分的&#x200B;**[!UICONTROL 設定檔]** Widget會顯示您所選對象中每個合併設定檔的身分劃分。 依身分割槽分的設定檔總數可能會高於對象中的設定檔總數，因為一個設定檔可能會有多個相關聯的身分。 換言之，將每個身分顯示的值加總在一起，可能會超過總對象人數。 這是因為如果客戶透過多個管道與您的品牌互動，則多個身分可能會與該個別客戶相關聯。

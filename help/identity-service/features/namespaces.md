@@ -9,7 +9,7 @@ ht-degree: 16%
 
 ---
 
-# 身分命名空間總覽
+# 身分識別命名空間總覽
 
 請閱讀以下檔案，深入瞭解您可以在Adobe Experience Platform Identity Service中處理身分識別名稱空間的動作。
 
@@ -21,18 +21,18 @@ ht-degree: 16%
 * [[!DNL Identity Service]](../home.md)：跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
 * [[!DNL Privacy Service]](../../privacy-service/home.md)：身分名稱空間用於一般資料保護規範(GDPR)等法律隱私權法規的規範要求中。 每個隱私權請求都是相對於名稱空間提出，以識別哪些消費者的資料應該受到影響。
 
-## 了解身分命名空間 {#understanding-identity-namespaces}
+## 了解身分識別命名空間 {#understanding-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="身分識別命名空間"
->abstract="身分命名空間是特定身分的背景。例如，`Email`的命名空間可以對應 **name<span>@acme.com**。同樣地，`Phone` 的命名空間可以對應 `555-555-1234`。"
+>abstract="身分識別命名空間是特定身分識別的背景。例如，`Email`的命名空間可以對應 **name<span>@acme.com**。同樣地，`Phone` 的命名空間可以對應 `555-555-1234`。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="身分識別值"
->abstract="身分識別值是代表唯一個人、組織或資產的識別碼。該值代表的身分識別的內容或類型由相對應的身分命名空間定義。當全部輪廓片段都符合記錄資料時，命名空間和識別值必須相符。當全部輪廓片段都符合記錄資料時，命名空間和識別值必須相符。"
+>abstract="身分識別值是代表唯一個人、組織或資產的識別碼。該值代表的身分識別的內容或類型由相對應的身分命名空間定義。當全部輪廓片段都符合記錄資料時，命名空間和身分識別值必須相符。當全部輪廓片段都符合記錄資料時，命名空間和身分識別值必須相符。"
 >text="Learn more in documentation"
 
 完整識別包含兩個元件： **識別值**&#x200B;和&#x200B;**識別名稱空間**。 例如，如果身分的值為`scott@acme.com`，則名稱空間會提供此值的內容，方法是將其識別為電子郵件地址。 同樣地，名稱空間可以將`555-123-456`區分為電話號碼，將`3126ABC`區分為CRMID。 基本上，**名稱空間會提供特定身分識別的內容**。 跨設定檔片段比對記錄資料時，例如[!DNL Real-Time Customer Profile]合併設定檔資料時，身分值和名稱空間必須相符。
@@ -61,11 +61,11 @@ ht-degree: 16%
 * **身分型別**：指定名稱空間的分類。
 * **描述**： （選擇性）您可以提供的有關指定名稱空間的補充資訊。
 
-### 身分類型 {#identity-type}
+### 身分識別類型 {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
->title="指定身分類型"
+>title="指定身分識別類型"
 >abstract="身分類型控制資料是否儲存到身分識別圖中。不會為下列身分類型產生身分識別圖：非個人識別碼和合作夥伴 ID。"
 >text="Learn more in documentation"
 
@@ -78,7 +78,7 @@ ht-degree: 16%
 
 Experience Platform中有以下身分型別：
 
-| 身分類型 | 說明 |
+| 身分識別類型 | 說明 |
 | --- | --- |
 | Cookie ID | Cookie ID可識別網頁瀏覽器。 這些身分對於擴充至關重要，並構成身分圖表的大多數。 然而，自然而然地，它們會迅速衰落，並隨著時間而失去價值。 |
 | 跨裝置ID | 跨裝置ID會識別個人，通常會將其他ID連結在一起。 例如登入ID、CRMID和熟客ID。 這是指示[!DNL Identity Service]要敏感地處理值。 |
@@ -114,12 +114,12 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 | TNTID | 代表Adobe Target的名稱空間。 如需詳細資訊，請參閱[Target](https://experienceleague.adobe.com/docs/target/using/target-home.html)上的下列檔案。 |
 | Windows AID | 代表Windows Advertising ID的名稱空間。 如需詳細資訊，請參閱[Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)上的下列檔案。 |
 
-### 檢視身分命名空間 {#view-identity-namespaces}
+### 檢視身分識別命名空間 {#view-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
->title="檢視整合身分"
->abstract="整合身分識別是用於連接其他系統的命名空間，不用於身分識別解析或拼接身分識別。<br>這些身分依預設是隱藏的。使用切換來檢視整合命名空間。"
+>title="檢視整合身分識別"
+>abstract="整合身分識別是用於連接其他系統的命名空間，不用於身分識別解析或拼接身分識別。<br>這些身分識別依預設是隱藏的。使用切換來檢視整合命名空間。"
 
 若要在UI中檢視身分識別名稱空間，請在左側導覽中選取&#x200B;**[!UICONTROL 身分]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**。
 
