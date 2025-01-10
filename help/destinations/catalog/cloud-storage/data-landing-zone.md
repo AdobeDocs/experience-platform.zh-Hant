@@ -3,9 +3,9 @@ title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域，以啟用受眾及匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
+source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1968'
 ht-degree: 2%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 Platform會對上傳至[!DNL Data Landing Zone]容器的所有檔案強制實施嚴格的七天存留時間(TTL)。 所有檔案會在七天後刪除。
 
-使用Azure或Amazon Web服務雲端支援的客戶可以使用[!DNL Data Landing Zone]目的地聯結器。 根據布建目的地的雲端，驗證機制會不同，有關目的地及其使用案例的所有其他專案都相同。 在[向Azure Blob中布建的資料登陸區域驗證]和[向AWS布建的資料登陸區域驗證](#authenticate-dlz-aws)小節中，深入瞭解兩種不同的驗證機制。
+使用Azure或Amazon Web服務雲端支援的客戶可以使用[!DNL Data Landing Zone]目的地聯結器。 根據布建目的地的雲端，驗證機制會不同，有關目的地及其使用案例的所有其他專案都相同。 在[向Azure Blob中布建的資料登陸區域驗證](#authenticate-dlz-azure)和[向AWS布建的資料登陸區域驗證](#authenticate-dlz-aws)小節中，深入瞭解兩種不同的驗證機制。
 
-![圖表顯示根據雲端支援，資料登陸區域目的地的實作有何不同。](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
+![圖表顯示根據雲端支援，資料登陸區域目的地的實作方式有何不同。由雲端支援進行的](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Data Landing Zone目的地實作"){zoomable="yes"}
 
 ## 透過API或UI連線至您的[!UICONTROL 資料登陸區域]儲存空間 {#connect-api-or-ui}
 
@@ -77,7 +77,7 @@ Platform會對上傳至[!DNL Data Landing Zone]容器的所有檔案強制實施
 
 [!DNL Data Landing Zone]支援SAS式驗證，其資料受到標準[!DNL Azure Blob]存放裝置安全機制的保護。 SAS代表[共用存取簽章](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers)。
 
-SAS式驗證可讓您透過公用網際網路連線，安全地存取[!DNL Data Landing Zone]容器。 您不需要變更網路即可存取[!DNL Data Landing Zone]容器，這表示您不需要為網路設定任何允許清單或跨區域設定。
+若要透過公用網際網路連線保護您的資料，請使用SAS式驗證來安全地存取您的[!DNL Data Landing Zone]容器。 您不需要變更網路即可存取[!DNL Data Landing Zone]容器，這表示您不需要為網路設定任何允許清單或跨區域設定。
 
 ### 將您的[!DNL Data Landing Zone]容器連線至[!DNL Azure Storage Explorer]
 
@@ -212,7 +212,7 @@ curl -X POST \
 >
 >本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
-執行以下作業，以取得在AWS上布建之資料登陸區域執行個體的認證。 接著，使用您選擇的使用者端連線至您的資料登陸區域執行個體。
+執行以下作業，以取得您在AWS上布建之[!DNL Data Landing Zone]執行個體的認證。 然後，使用所選的使用者端連線至您的[!DNL Data Landing Zone]執行個體。
 
 >[!BEGINSHADEBOX]
 
@@ -228,7 +228,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | 查詢參數 | 說明 |
 | --- | --- |
-| `dlz_destination` | `dlz_destination`型別允許API將登陸區域目的地容器與您可用的其他型別容器區分開來。 |
+| `dlz_destination` | 新增`dlz_destination`查詢引數，以指定您要擷取[!DNL Data Landing Zone] *目的地*&#x200B;型別的容器認證。 若要連線並擷取資料登陸區域&#x200B;*來源*&#x200B;的認證，請檢視[來原始檔](/help/sources/connectors/cloud-storage/data-landing-zone.md)。 |
 
 {style="table-layout:auto"}
 
@@ -270,7 +270,7 @@ curl --request GET \
 | `credentials` | 此物件包含Experience Platform用來將檔案匯出至您布建的資料登陸區域位置的`awsAccessKeyId`、`awsSecretAccessKey`和`awsSessionToken`。 |
 | `dlzPath` | 此物件包含存放匯出檔案的Adobe布建AWS位置中的路徑。 |
 | `dlzProvider` | 指出這是Amazon S3布建的資料登陸區域。 |
-| `expiryTime` | 表示上述物件中的認證何時到期。 您可以再次進行呼叫以重新整理這些專案。 |
+| `expiryTime` | 指示`credentials`物件中的認證何時到期。 若要重新整理認證，請再次執行請求。 |
 
 {style="table-layout:auto"}
 

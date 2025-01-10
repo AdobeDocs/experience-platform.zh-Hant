@@ -1,16 +1,16 @@
 ---
-title: 利用計算欄位將陣列匯出為字串
+title: 將陣列物件從Real-Time CDP匯出至雲端儲存目的地
 type: Tutorial
 description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 7%
+source-wordcount: '1622'
+ht-degree: 5%
 
 ---
 
-# 利用計算欄位將陣列匯出為字串{#use-calculated-fields-to-export-arrays-as-strings}
+# 將陣列物件從Real-Time CDP匯出至雲端儲存目的地 {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -21,22 +21,16 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->通常提供透過計算欄位匯出陣列的功能。
+>我們通常提供將陣列匯出至雲端儲存目的地的功能。
 
-瞭解如何透過計算欄位，將陣列從Real-Time CDP匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)，做為字串。 請參閱本檔案以瞭解此功能啟用的使用案例。
+瞭解如何將陣列從Real-Time CDP匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 請參閱本檔案以瞭解匯出工作流程、此功能啟用的使用案例和已知限制。
 
-取得有關計算欄位的廣泛資訊 — 這些是什麼以及它們為什麼重要。 請閱讀以下連結的頁面，瞭解「資料準備」中的計算欄位，以及有關所有可用函式的詳細資訊：
+目前必須使用`array_to_string`函式，將陣列匯出為字串。
+
+若要匯出陣列，您必須使用匯出工作流程對應步驟中的計算欄位功能，*除非您[匯出陣列的個別元素](#index-based-array-access)*。 如需有關計算欄位的詳細資訊，請瀏覽以下連結的頁面。 其中包括「資料準備」中計算欄位的介紹，以及有關所有可用函式的更多資訊：
 
 * [UI指南和概觀](/help/data-prep/ui/mapping.md#calculated-fields)
 * [資料準備函式](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Platform中的陣列和其他物件型別 {#arrays-strings-other-objects}
 
@@ -259,6 +253,10 @@ johndoe@acme.org,"5"
 ```
 
 ### 索引型陣列存取 {#index-based-array-access}
+
+>[!IMPORTANT]
+>
+>不同於此頁面上說明的其他函式，若要匯出陣列的個別元素，您&#x200B;*不需要*&#x200B;在UI中使用&#x200B;**[!UICONTROL 計算欄位]**&#x200B;控制項。
 
 您可以存取陣列的索引，以從陣列匯出單一專案。 例如，與上述的`size_of`函式範例類似，如果您只想在客戶第一次購買特定產品時存取和匯出，您可以使用`purchaseTime[0]`匯出時間戳記的第一個元素，`purchaseTime[1]`匯出時間戳記的第二個元素，`purchaseTime[2]`匯出時間戳記的第三個元素，依此類推。
 
