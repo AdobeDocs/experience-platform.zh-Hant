@@ -3,11 +3,11 @@ title: Real-Time CDP B2B中的銷售線索與帳戶相符
 type: Documentation
 description: 有關Experience PlatformCDP B2B中潛在客戶與帳戶比對功能的概述和詳細資訊。
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '408'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 3%
 - 減少浪費的資源
 - 較短的銷售週期
 
-帳戶型行銷可將已知人員和匿名網路訪客連結至銷售帳戶。 這可讓行銷團隊在客戶歷程的早期，與目標客戶的潛在客戶互動，以提高其轉換機會。 已知人員記錄通常包括下列部分或全部資訊：
+帳戶型行銷提供將已知客戶連結至銷售帳戶的功能。 這可讓行銷團隊在客戶歷程的早期，與目標客戶的潛在客戶互動，以提高其轉換機會。 已知人員記錄通常包括下列部分或全部資訊：
 
 - 個人名稱
 - 電子郵件地址
@@ -33,30 +33,6 @@ ht-degree: 3%
 - 公司網站
 - 職稱
 - 位置
-
-銷售機會帳戶比對可讓您將已知人員設定檔聯結到帳戶設定檔。 然後，您可以在B2B內容（例如帳戶、商機等）中細分及鎖定資料。 個人資料可分類為下列三個類別：
-
-- **帳戶個人檔案：**&#x200B;個人檔案已透過資料來源的關係與至少一個帳戶個人檔案相關聯。 這表示至少有一個連絡人片段。
-
->[!NOTE]
->
-> 執行銷售線索與帳戶比對工作時，帳戶個人設定檔不相符。
-
-- **已知人員設定檔：**&#x200B;此人員設定檔未關聯至任何帳戶設定檔，且至少下列其中一個人員設定檔屬性具有值：
-
-   - 電子郵件地址
-   - 公司名稱
-   - 公司網站
-
-- **匿名人員設定檔：**&#x200B;此人員設定檔未關聯至任何帳戶設定檔，且下列人員設定檔屬性都沒有值：
-
-   - 電子郵件地址
-   - 公司名稱
-   - 公司網站
-
->[!NOTE]
->
-> 個人設定檔可能與多個帳戶設定檔相關。 但是，銷售線索與帳戶的比對程式只會比對到最佳比對。 如果需要更廣的相符集合，請將銷售機會連結到與相關帳戶功能相符的帳戶。
 
 ## 運作方式 {#how-it-works}
 
