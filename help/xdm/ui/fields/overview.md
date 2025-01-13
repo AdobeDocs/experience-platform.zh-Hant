@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在使用者介面中定義XDM欄位
 description: 瞭解如何在Experience Platform使用者介面中定義XDM欄位。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
+source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1606'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 | 欄位屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 欄位名稱] | 欄位的不重複、描述性名稱。 請注意，一旦結構描述已儲存，欄位名稱就無法變更。 此值用於識別及參考程式碼和其他下游應用程式中的欄位<br><br>最好以camelCase撰寫此名稱。 它可包含英數、破折號或底線字元，但&#x200B;**不能**&#x200B;以底線開頭。<ul><li>**正確**： `fieldName`</li><li>**可接受：** `field_name2`，`Field-Name`，`field-name_3`</li><li>**不正確**： `_fieldName`</li></ul> |
+| [!UICONTROL 欄位名稱] | 欄位的不重複、描述性名稱。 請注意，一旦結構描述已儲存，欄位名稱就無法變更。 此值用於識別及參考程式碼和其他下游應用程式中的欄位<br><br>最好以camelCase撰寫此名稱。 它可包含英數字元或底線字元，但&#x200B;**不能**&#x200B;以底線開頭。<ul><li>**正確**： `fieldName`</li><li>**可接受：** `field_name2`，`fieldName_3`</li><li>**不正確**： `_fieldName`</li></ul> |
 | [!UICONTROL 顯示名稱] | 欄位的顯示名稱。 這是將用於表示結構描述編輯器畫布中欄位的名稱。 可使用[顯示名稱切換](../resources/schemas.md#display-name-toggle)將欄位名稱變更為顯示名稱。 |
 | [!UICONTROL 類型] | 欄位將包含的資料型別。 從這個下拉式功能表，您可以選取XDM支援的[標準純量型別](../../schema/field-constraints.md)之一，或是先前在[!DNL Schema Registry]中定義的多欄位[資料型別](../resources/data-types.md)之一。<br>注意：如果您選取「對應」資料型別，則會顯示[!UICONTROL 對應值型別]屬性。<br><br>您也可以選取&#x200B;**[!UICONTROL 進階型別搜尋]**，以搜尋及篩選現有的資料型別，更輕鬆地找到所要的型別。 |
 | [!UICONTROL 對應值型別] | 如果您選取[!UICONTROL 對應]作為欄位的資料型別，則需要此值。 對應的可用值為[!UICONTROL 字串]和[!UICONTROL 整數]。 從可用選項的下拉式清單中選取一個值。<br>若要深入瞭解[特定型別的欄位屬性](#type-specific-properties)，請參閱定義欄位概觀。 |
