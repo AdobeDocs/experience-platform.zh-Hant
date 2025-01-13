@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；
-solution: Experience Platform
 title: 使用流量服務API將資料登陸區域連線至Adobe Experience Platform
-type: Tutorial
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至資料登陸區域。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
+source-git-commit: 527e62e5fb90bc32ef3788f261e0a24b680f29c0
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1375'
 ht-degree: 3%
 
 ---
@@ -29,9 +26,9 @@ ht-degree: 3%
 * [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功建立[!DNL Data Landing Zone]來源連線。
-
 本教學課程也要求您閱讀[平台API快速入門](../../../../../landing/api-guide.md)的指南，瞭解如何驗證平台API並解譯檔案中提供的範例呼叫。
+
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功建立[!DNL Data Landing Zone]來源連線。
 
 ## 擷取可用的登陸區域
 
@@ -63,7 +60,11 @@ curl -X GET \
 
 **回應**
 
-下列回應傳回登陸區域的資訊，包括其對應的`containerName`和`containerTTL`。
+根據您的提供者，成功的請求會傳回以下內容：
+
+>[!BEGINTABS]
+
+>在Azure]上的[!TAB 回應
 
 ```json
 {
@@ -76,6 +77,26 @@ curl -X GET \
 | --- | --- |
 | `containerName` | 擷取的登陸區域名稱。 |
 | `containerTTL` | 登陸區域內套用至您資料的到期時間（以天為單位）。 指定登陸區域中的任何專案都會在七天後刪除。 |
+
+
+>在AWS上[!TAB 回應]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## 擷取[!DNL Data Landing Zone]認證
 
@@ -103,7 +124,11 @@ curl -X GET \
 
 **回應**
 
-下列回應會傳回您資料登陸區域的認證資訊，包括目前的`SASToken`、`SASUri`、`storageAccountName`和到期日。
+根據您的提供者，成功的請求會傳回以下內容：
+
+>[!BEGINTABS]
+
+>在Azure]上的[!TAB 回應
 
 ```json
 {
@@ -117,10 +142,43 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `containerName` | 您的登陸區域的名稱。 |
-| `SASToken` | 您登陸區域的共用存取權簽章Token。 此字串包含授權請求所需的所有資訊。 |
-| `SASUri` | 登陸區域的共用存取簽章URI。 此字串是您正在接受驗證的登陸區域的URI及其對應的SAS權杖的組合， |
-| `expiryDate` | 您的SAS Token到期的日期。 您必須在到期日之前重新整理權杖，才能繼續在您的應用程式中使用它來將資料上傳到資料登陸區域。 如果您未在所述的到期日之前手動重新整理權杖，則會在執行GET認證呼叫時自動重新整理並提供新權杖。 |
+| `containerName` | [!DNL Data Landing Zone]的名稱。 |
+| `SASToken` | 您的[!DNL Data Landing Zone]的共用存取權簽章權杖。 此字串包含授權請求所需的所有資訊。 |
+| `storageAccountName` | 儲存體帳戶的名稱。 |
+| `SASUri` | 您的[!DNL Data Landing Zone]的共用存取權簽章URI。 此字串是[!DNL Data Landing Zone]的URI組合，您要對其驗證以及它對應的SAS權杖。 |
+| `expiryDate` | 您的SAS Token到期的日期。 您必須在到期日之前重新整理您的權杖，才能繼續在您的應用程式中使用它來上傳資料到[!DNL Data Landing Zone]。 如果您未在所述的到期日之前手動重新整理權杖，則會在執行GET認證呼叫時自動重新整理並提供新權杖。 |
+
+>在AWS上[!TAB 回應]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `credentials.clientId` | 您在AWS中[!DNL Data Landing Zone]的使用者端ID。 |
+| `credentials.awsAccessKeyId` | 您在AWS中[!DNL Data Landing Zone]的存取金鑰ID。 |
+| `credentials.awsSecretAccessKey` | 您在AWS中[!DNL Data Landing Zone]的秘密存取金鑰。 |
+| `credentials.awsSessionToken` | 您的AWS工作階段權杖。 |
+| `dlzPath.bucketName` | 您的AWS貯體名稱。 |
+| `dlzPath.dlzFolder` | 您正在存取的[!DNL Data Landing Zone]資料夾。 |
+| `dlzProvider` | 您正在使用的[!DNL Data Landing Zone]提供者。 若為Amazon，則為[!DNL Amazon S3]。 |
+| `expiryTime` | 到期時間（以Unix時間為單位）。 |
+
+>[!ENDTABS]
 
 ### 使用API擷取必填欄位
 
