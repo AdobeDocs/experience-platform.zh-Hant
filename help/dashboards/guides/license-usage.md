@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
+source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
-source-wordcount: '2908'
+source-wordcount: '2947'
 ht-degree: 17%
 
 ---
@@ -46,6 +46,14 @@ ht-degree: 17%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="預測的運算小時數"
 >abstract="您的使用量可能會達到已授權數量。若要評估或減少運算小時數，請導覽至「查詢 > 記錄」以查看查詢歷史記錄。如果您沒有「查詢」工作區的存取權限，請聯絡您的管理員。"
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="查詢記錄工作區"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="預測的可定址對象"
+>abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名輪廓資料期限。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="體驗事件有效期"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
