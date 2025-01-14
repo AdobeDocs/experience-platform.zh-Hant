@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform發行說明2019年9月
-description: Adobe Experience Platform 2019年9月版本注意事項。
+title: Adobe Experience Platform 發行說明 (2019 年 9 月)
+description: Adobe Experience Platform 2019 年 9 月版發行說明。
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]是[!DNL Experience Platf
 
 **已知問題**
 
-* [!DNL Service Gallery]中目前沒有刪除現有服務的存取方式。 同時，請參閱[Sensei機器學習API參考](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)以透過API呼叫刪除現有服務。
+* [!DNL Service Gallery]中目前沒有刪除現有服務的存取方式。 同時，請參閱[Sensei機器學習API參考](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)以透過API呼叫刪除現有服務。
 * [!DNL Service Gallery]沒有分頁支援來篩選服務的訓練和評分回合。
 * 當透過[!DNL Service Gallery]設定已排程的訓練或評分回合時，將頻率設定為每小時可防止套用排程。
 

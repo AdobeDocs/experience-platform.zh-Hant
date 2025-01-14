@@ -9,7 +9,7 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 4%
@@ -213,7 +213,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 | 存取控制 | [存取控制API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [存取控制疑難排解指南](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform資料擷取 | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [批次擷取疑難排解指南](../ingestion/batch-ingestion/troubleshooting.md) |
 | Adobe Experience Platform資料擷取 | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [串流擷取疑難排解指南](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Adobe Experience Platform資料科學Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] 疑難排解指南](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform資料科學Workspace | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] 疑難排解指南](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform資料控管 | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] 疑難排解指南](../identity-service/troubleshooting-guide.md) |
 | Adobe Experience Platform查詢服務 | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] 疑難排解指南](../query-service/troubleshooting-guide.md) |

@@ -5,7 +5,7 @@ title: 使用流量服務API建立CRM來源的資料流
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，以及使用來源聯結器和API將資料引進Platform的步驟。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%
@@ -135,7 +135,7 @@ curl -X POST \
 
 ## 建立目標資料集 {#target-dataset}
 
-可以透過對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可以透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
 
 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](../../../../catalog/api/create-dataset.md)的教學課程。
 
@@ -198,7 +198,7 @@ curl -X POST \
 
 為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，向[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml)的`mappingSets`端點提出POST要求。
+若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，向[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
 
 **API格式**
 

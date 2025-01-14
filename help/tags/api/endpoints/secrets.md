@@ -2,7 +2,7 @@
 title: 密碼端點
 description: 瞭解如何在Reactor API中呼叫/secrets端點。
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 4%
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 ## 快速入門
 
-此指南中使用的端點是[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
+此指南中使用的端點是[Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 擷取屬性的密碼清單 {#list-property}
 

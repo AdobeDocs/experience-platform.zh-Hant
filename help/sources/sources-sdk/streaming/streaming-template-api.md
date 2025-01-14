@@ -3,7 +3,7 @@ title: 串流SDK API的檔案自助服務範本
 description: 瞭解如何使用流量服務API，將來源中的串流資料匯入Adobe Experience Platform。
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ### 將&#x200B;*YOURSOURCE*&#x200B;與您的webhook整合
 
-*串流SDK需要您的來源能夠支援Webhook，才能與Experience Platform通訊。 在本節中，您必須提供使用者必須遵循的步驟，才能將YOURSOURCE與webhook整合。*
+*串流SDK需要您的來源能夠支援webhook，才能與Experience Platform通訊。 在本節中，您必須提供使用者必須遵循的步驟，才能將YOURSOURCE與webhook整合。*
 
 ## 使用[!DNL Flow Service] API將&#x200B;*YOURSOURCE*&#x200B;連線至平台
 
@@ -117,7 +117,7 @@ curl -X POST \
 
 ### 建立目標資料集 {#target-dataset}
 
-可以透過對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可以透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
 
 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)的教學課程。
 

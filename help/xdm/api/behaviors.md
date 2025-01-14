@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 行為API端點
 description: 結構描述登入API中的/behaviors端點可讓您擷取全域容器中所有可用的行為。
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 2%
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 擷取行為清單 {#list}
 

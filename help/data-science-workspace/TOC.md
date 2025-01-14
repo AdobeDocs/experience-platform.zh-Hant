@@ -6,7 +6,7 @@ user-guide-description: 透過 Adobe Sensei 和 JupyterLab Notebooks，使用機
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 32%
@@ -43,7 +43,7 @@ ht-degree: 32%
 * 模型製作{#authoring}
    * [模型製作SDK](authoring/sdk.md)
    * [建立特徵管線](authoring/feature-pipeline.md)
-   * [使用Platform SDK (Python)進行模型製作](authoring/platform-sdk.md)
+   * [使用SDK (Python)平台進行模型製作](authoring/platform-sdk.md)
    * [Python資料存取](authoring/python.md)
    * [Spark資料存取](authoring/spark.md)
 * 模型與配方教學課程{#models-recipes}
@@ -64,5 +64,5 @@ ht-degree: 32%
    * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
    * [排程服務的自動化訓練和評分(UI)](models-recipes/schedule-models-ui.md)
 * [疑難排解指南](troubleshooting-guide.md)
-* [API 參考資料](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [API 參考資料](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
 * [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

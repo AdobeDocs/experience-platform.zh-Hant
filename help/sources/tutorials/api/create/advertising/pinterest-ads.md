@@ -5,7 +5,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2265'
 ht-degree: 1%
@@ -596,7 +596,7 @@ curl -X POST \
 
 ### 建立目標資料集 {#target-dataset}
 
-可以透過對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可以透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
 
 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)的教學課程。
 

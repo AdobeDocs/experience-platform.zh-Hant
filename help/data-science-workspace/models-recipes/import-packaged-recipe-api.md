@@ -5,7 +5,7 @@ title: 使用Sensei機器學習API匯入封裝的配方
 type: Tutorial
 description: 本教學課程使用Sensei Machine Learning API建立引擎，也稱為使用者介面中的方式。
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 3%
@@ -20,18 +20,18 @@ ht-degree: 3%
 >
 >本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
-此教學課程使用[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)來建立[引擎](../api/engines.md)，也稱為使用者介面中的配方。
+此教學課程使用[[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)來建立[引擎](../api/engines.md)，也稱為使用者介面中的配方。
 
 在開始使用之前，請務必注意，Adobe Experience Platform [!DNL Data Science Workspace]使用不同的辭彙來參照API和UI中的類似元素。 在本教學課程中使用API辭彙，下表概述相關辭彙：
 
-| UI術語 | API 術語 |
+| UI詞語 | API詞語 |
 | ---- | ---- |
 | 配方 | [引擎](../api/engines.md) |
 | 模型 | [MLInstance](../api/mlinstances.md) |
 | 訓練與評估 | [實驗](../api/experiments.md) |
-| 服務 | [MLS服務](../api/mlservices.md) |
+| 服務 | [MLService](../api/mlservices.md) |
 
-引擎包含用於解決特定問題的機器學習演算法和邏輯。 下圖提供顯示[!DNL Data Science Workspace]中API工作流程的視覺效果。 本教學課程著重於建立引擎，即機器學習模型的大腦。
+引擎包含用於解決特定問題的機器學習演演算法和邏輯。 下圖提供顯示[!DNL Data Science Workspace]中API工作流程的視覺效果。 本教學課程著重於建立引擎，即機器學習模型的大腦。
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
@@ -49,9 +49,9 @@ ht-degree: 3%
 
 ## 建立引擎
 
-可以透過向/engines端點發出POST請求來建立引擎。 創建的引擎是根據打包的配方文件的格式配置的，該文件必須作為 API 請求的一部分包含在內。
+可以透過向/engines端點發出POST請求來建立引擎。 已根據API請求中必須包含之封裝配方檔案的形式，來設定建立的引擎。
 
-### 建立帶有 Docker URL的引擎 {#create-an-engine-with-a-docker-url}
+### 使用Docker URL建立引擎 {#create-an-engine-with-a-docker-url}
 
 若要使用儲存在Docker容器中的封裝配方檔案建立引擎，您必須提供封裝配方檔案的Docker URL。
 
@@ -93,12 +93,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------  | ----------- |
-| `engine.name` | 引擎的所需名稱。 與此引擎對應的配方將繼承此值，以用戶介面中 [!DNL Data Science Workspace] 顯示為配方的名稱。 |
-| `engine.description` | 引擎的可選說明。 與此引擎對應的配方將繼承此值用戶以顯示為 [!DNL Data Science Workspace] 配方的描述。 請勿移除此屬性，如果您選擇不提供說明，請將此值設為空字串。 |
+| `engine.name` | Engine所需的名稱。 與此引擎對應的配方將繼承此值，以在[!DNL Data Science Workspace]使用者介面中顯示為配方名稱。 |
+| `engine.description` | 「引擎」的選擇性說明。 與此引擎對應的配方將繼承此值，以在[!DNL Data Science Workspace]使用者介面中顯示配方說明。 請勿移除此屬性，如果您選擇不提供說明，請將此值設為空字串。 |
 | `engine.type` | 引擎的執行型別。 此值對應於在其中開發Docker映像的語言。 當提供Docker URL以建立引擎時，`type`是`Python`、`R`、`PySpark`、`Spark` (Scala)或`Tensorflow`。 |
 | `artifacts.default.image.location` | 您的`{DOCKER_URL}`將移至此處。 完整的Docker URL具有以下結構： `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Docker影像檔案的額外名稱。 請勿移除此屬性，如果您選擇不提供額外的Docker影像檔案名稱，請將此值設為空字串。 |
-| `artifacts.default.image.executionType` | 此引擎的執行類型。 此值對應於開發 Docker 映射時使用的語言。 當提供 Docker URL 以建立引擎時， `executionType` 為 `Python`、 `R`、 `PySpark`、（ `Spark` Scala） 或 `Tensorflow`。 |
+| `artifacts.default.image.executionType` | 此引擎的執行型別。 此值對應於在其中開發Docker映像的語言。 當提供Docker URL以建立引擎時，`executionType`是`Python`、`R`、`PySpark`、`Spark` (Scala)或`Tensorflow`。 |
 
 **要求PySpark**
 
@@ -131,8 +131,8 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | Engine所需的名稱。 對應至此引擎的配方將繼承此值，以作為配方名稱顯示在UI中。 |
-| `description` | 「引擎」的選擇性說明。 與此引擎對應的配方將繼承此值，以在UI中顯示為方式的描述。 此屬性為必填項。 如果不想提供說明，請將其值設置為空字串。 |
-| `type` | 引擎的執行類型。 此值對應於在「PySpark」上構建 Docker 映像的語言。 |
+| `description` | 「引擎」的選擇性說明。 對應至此引擎的配方將繼承此值，以作為配方說明顯示在UI中。 此屬性為必要項。 如果您不想要提供說明，請將其值設為空字串。 |
+| `type` | 引擎的執行型別。 此值對應於在「PySpark」上構建Docker映像的語言。 |
 | `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 |
 | `artifacts.default.image.location` | Docker URL所連結之Docker影像的位置。 |
 | `artifacts.default.image.executionType` | 引擎的執行型別。 此值對應於在「Spark」上構建Docker影象的語言。 |
@@ -169,8 +169,8 @@ curl -X POST \
 | --- | --- |
 | `name` | Engine所需的名稱。 對應至此引擎的配方將繼承此值，以作為配方名稱顯示在UI中。 |
 | `description` | 「引擎」的選擇性說明。 對應至此引擎的配方將繼承此值，以作為配方說明顯示在UI中。 此屬性為必要項。 如果您不想要提供說明，請將其值設為空字串。 |
-| `type` | 引擎的執行型別。 此值對應於在「Spark」上構建 Docker 映像的語言。 |
-| `mlLibrary` | 為 PySpark 和 Scala 配方建立引擎時需要的欄位。 |
+| `type` | 引擎的執行型別。 此值對應於在「Spark」上構建Docker影象的語言。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 |
 | `artifacts.default.image.location` | Docker URL所連結之Docker影像的位置。 |
 | `artifacts.default.image.executionType` | 引擎的執行型別。 此值對應於在「Spark」上構建Docker影象的語言。 |
 
@@ -203,8 +203,8 @@ curl -X POST \
 }
 ```
 
-成功的回應會顯示一個 JSON 有效負載，其中包含有關新創建的引擎的資訊。 密鑰 `id` 表示唯一的引擎標識符，在下一個教學課程中創建 MLInstance 時需要該密鑰。 確保已保存引擎標識碼，然後再繼續執行後續步驟。
+成功的回應會顯示JSON裝載，其中包含新建立之引擎的相關資訊。 `id`索引鍵代表唯一的Engine識別碼，在下一個教學課程中是建立MLInstance的必要專案。 繼續後續步驟之前，請確定已儲存引擎識別碼。
 
 ## 後續步驟 {#next-steps}
 
-您已使用 API 建立了一個引擎，並且作為回應正文的一部分獲取了唯一的引擎識別碼。 當您瞭解如何使用API[建立、訓練及評估模型](./train-evaluate-model-api.md)時，可以在下一個教學課程中使用此引擎識別碼。
+您已使用API建立引擎，且已取得唯一引擎識別碼作為回應本文的一部分。 當您瞭解如何使用API[建立、訓練及評估模型](./train-evaluate-model-api.md)時，可以在下一個教學課程中使用此引擎識別碼。

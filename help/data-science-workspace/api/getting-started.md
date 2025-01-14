@@ -5,7 +5,7 @@ title: Sensei Machine Learning API指南
 description: Sensei機器學習API可讓開發人員對各種資料科學Workspace資源執行CRUD操作。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 12%
@@ -22,7 +22,7 @@ ht-degree: 12%
 
 [!DNL Sensei Machine Learning] API為資料科學家提供組織和管理機器學習服務的機制，從演演算法上線到實驗，再到服務部署。
 
-本開發人員指南提供步驟，協助您開始使用[Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)，並示範在各種資料科學Workspace資源上執行CRUD作業的API呼叫。
+本開發人員指南提供步驟，協助您開始使用[Sensei Machine Learning API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)，並示範在各種資料科學Workspace資源上執行CRUD作業的API呼叫。
 
 ## 快速入門
 

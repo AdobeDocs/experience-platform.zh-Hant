@@ -5,7 +5,7 @@ title: 使用Publish Machine Learning API的Sensei a Model as a Service
 type: Tutorial
 description: 本教學課程涵蓋使用Sensei機器學習API將模型發佈為服務的程式。
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 1%
@@ -20,31 +20,31 @@ ht-degree: 1%
 >
 >本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
-本教學課程涵蓋使用[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)將模型發佈為服務的程式。
+本教學課程涵蓋使用[[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)將模型發佈為服務的程式。
 
 ## 快速入門
 
 此教學課程需要您實際瞭解Adobe Experience Platform資料科學Workspace。 在開始本教學課程之前，請檢閱[資料科學Workspace概觀](../home.md)，以取得服務的概略介紹。
 
-要與此教學課程一起追隨，您必須具有現有的 ML 引擎、ML 實例和 實驗。 有關如何在 API 中創建這些元件的步驟，請參閱有關導入打包方式](./import-packaged-recipe-api.md)教學課程[。
+若要在本教學課程中跟進，您必須擁有現有的ML引擎、ML例項和Experiment。 如需如何在API中建立這些方法的步驟，請參閱有關[匯入封裝的配方](./import-packaged-recipe-api.md)的教學課程。
 
-最後，在開始此教學課程之前，請查看開發人員指南的入門](../api/getting-started.md)部分，了解[成功調用 [!DNL Sensei Machine Learning] API 需要了解的重要信息，包括本教學課程中使用的所需標頭：
+最後，在開始進行此教學課程之前，請檢閱開發人員指南的[快速入門](../api/getting-started.md)章節，以取得您成功呼叫[!DNL Sensei Machine Learning] API所需瞭解的重要資訊，包括此教學課程使用的必要標題：
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`
 - `{API_KEY}`
 
-所有 POST、PUT 和 PATCH 要求都需要一個額外的標題：
+所有POST、PUT和PATCH請求都需要額外的標頭：
 
-- 內容類型： 應用程式/json
+- Content-Type： application/json
 
-### 重要術語
+### 主要條款
 
 下表概述本教學課程中使用的一些常見術語：
 
 | 詞語 | 定義 |
 | --- | --- |
-| **機器學習執行個體（ML執行個體）** | 特定租户的引擎執行個體 [!DNL Sensei] ，包含特定數據、参数和 [!DNL Sensei] 代碼。 |
+| **機器學習執行個體（ML執行個體）** | 特定租使用者的[!DNL Sensei]引擎執行個體，包含特定資料、引數和[!DNL Sensei]程式碼。 |
 | **實驗** | 用來儲存訓練實驗回合、評分實驗回合或兩者的傘狀實體。 |
 | **已排程的實驗** | 說明訓練或評分實驗回合自動化程度的術語，由使用者定義的排程管理。 |
 | **實驗回合** | 訓練或評分實驗的特定例項。 特定實驗的多次實驗回合中，用於訓練或評分的資料集值可能有所不同。 |
@@ -174,11 +174,11 @@ curl -X POST
 | `trainingDataSetId` | 參考要用於訓練實驗的特定資料集的識別。 |
 | `trainingTimeframe` | 一個整數值，代表篩選要用於訓練實驗的資料的分鐘數。 例如，值`"10080"`表示過去10080分鐘或168小時的資料將用於訓練實驗回合。 請注意，值`"0"`不會篩選資料，資料集內的所有資料都會用於訓練。 |
 | `scoringDataSetId` | 參考要用於已排程評分實驗執行的特定資料集的身分識別。 |
-| `scoringTimeframe` | 一個整數值，表示篩選要用於對實驗運行進行評分的數據的分鐘數。 例如，值 means `"10080"` 過去 10080 分鐘或 168 小時的數據將用于每個計劃的評分實驗 Run。 請注意，的值 `"0"` 不會篩選數據，資料集內的所有數據都用於評分。 |
-| `scoringSchedule` | 包含有關計劃計分實驗運行的詳細信息。 |
-| `scoringSchedule.startTime` | 指示何時開始得分的日期時間。 |
-| `scoringSchedule.endTime` | 指示何時開始得分的日期時間。 |
-| `scoringSchedule.cron` | 指示實驗運行得分間隔的 cron 值。 |
+| `scoringTimeframe` | 一個整數值，代表篩選要用於評分實驗回合的資料的分鐘數。 例如，值`"10080"`表示每個排程的評分實驗回合將使用過去10080分鐘或168小時的資料。 請注意，值`"0"`不會篩選資料，資料集內的所有資料都會用於評分。 |
+| `scoringSchedule` | 包含有關已排程評分實驗執行的詳細資訊。 |
+| `scoringSchedule.startTime` | 表示何時開始評分的日期時間。 |
+| `scoringSchedule.endTime` | 表示何時開始評分的日期時間。 |
+| `scoringSchedule.cron` | Cron值，表示對實驗執行評分的間隔。 |
 
 **回應**
 
@@ -208,7 +208,7 @@ curl -X POST
 
 ### 使用已排程實驗的ML服務以進行訓練和評分 {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
-若要將現有的ML執行個體發佈為ML服務，並包含已排程的訓練和評分實驗回合，您必須提供訓練和評分排程。 创建此配置的 ML 服務時，還會為培訓和評分創建計劃實驗實體。 請注意，訓練和評分排程不一定要相同。 在評分工作執行期間，將會擷取由排程的訓練實驗回合產生的最新已訓練模型，並用於排程的評分回合。
+若要將現有的ML執行個體發佈為ML服務，並包含已排程的訓練和評分實驗回合，您必須提供訓練和評分排程。 當建立此設定的ML服務時，也會建立用於訓練和評分的排程實驗實體。 請注意，訓練和評分排程不一定要相同。 在評分工作執行期間，將會擷取由排程的訓練實驗回合產生的最新已訓練模型，並用於排程的評分回合。
 
 **API格式**
 

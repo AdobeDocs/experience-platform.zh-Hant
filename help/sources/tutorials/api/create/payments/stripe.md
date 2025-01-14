@@ -3,7 +3,7 @@ title: 使用API從您的 [!DNL Stripe] 帳戶擷取付款資料以Experience Pl
 description: 瞭解如何使用Flow Service API從您的Stripe帳戶擷取付款資料以Experience Platform
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2020'
 ht-degree: 1%
@@ -471,7 +471,7 @@ curl -X POST \
 
 ### 建立目標資料集 {#target-dataset}
 
-可以透過對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可以透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
 
 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](../../../../../catalog/api/create-dataset.md)的教學課程。
 

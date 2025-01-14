@@ -5,7 +5,7 @@ title: 使用流量服務API為原始資料建立串流資料流
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料，以及使用來源聯結器和API將其帶入Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 2%
@@ -265,7 +265,7 @@ curl -X POST \
 
 為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，向[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml)的`mappingSets`端點提出POST要求。
+若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，向[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
 
 **API格式**
 
@@ -482,7 +482,7 @@ curl -X POST \
 }
 ```
 
-## 用於內嵌的Post資料
+## 發佈資料以供擷取
 
 檢視下列裝載範例，以取得您可傳送以進行內嵌的原始或XDM相容JSON範例。
 

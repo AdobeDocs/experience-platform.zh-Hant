@@ -1,22 +1,22 @@
 ---
-title: 自助來源快速入門(Streaming SDK)
-description: 本文介紹嘗試使用自助來源（串流SDK）建立新來源之前，需要知道的先決條件資訊。
+title: 自助來源快速入門(串流SDK)
+description: 本文簡介在嘗試使用自助來源(串流SDK)建立新來源之前，需要知道的先決條件資訊。
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 12%
 
 ---
 
-# 自助來源快速入門(Streaming SDK)
+# 自助來源快速入門(串流SDK)
 
 >[!NOTE]
 >
 >自助來源串流SDK為測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-自助來源（串流SDK）可讓您整合自己的來源，以將串流資料帶到Adobe Experience Platform。 本檔案提供嘗試呼叫[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)之前需要瞭解的核心概念簡介。
+自助來源(串流SDK)可讓您整合自己的來源，將串流資料引進Adobe Experience Platform。 本檔案提供嘗試呼叫[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)之前需要瞭解的核心概念簡介。
 
 ## 高階流程
 
@@ -24,7 +24,7 @@ ht-degree: 12%
 
 ### 整合
 
-* [建立Streaming SDK的新連線規格](create.md)。
+* [建立串流SDK的新連線規格](create.md)。
 * [使用新的連線規格ID](update-flow-specs.md)更新串流流程規格。
 * [測試並提交您的串流來源](submit.md)。
 
@@ -47,7 +47,7 @@ ht-degree: 12%
 >
 >您與Experience Platform整合的來源必須能夠支援端點可訂閱的webhook，以傳送更新。
 
-若要使用自助來源（串流SDK），您必須確保您有權存取布建Adobe Experience Platform來源的沙箱組織。
+若要使用自助來源(串流SDK)，您必須確保您有權存取以Adobe Experience Platform來源布建的沙箱組織。
 
 本指南也需要您實際瞭解下列Adobe Experience Platform元件：
 
@@ -56,7 +56,7 @@ ht-degree: 12%
 
 ## 讀取範例 API 呼叫
 
-自助來源（串流SDK）和[!DNL Flow Service] API檔案提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
+自助來源(串流SDK)和[!DNL Flow Service] API檔案提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
 
 ## 收集所需標頭的值
 
@@ -80,4 +80,4 @@ Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與�
 
 ## 後續步驟
 
-若要開始使用自助來源（串流SDK）建立新來源，請參閱[建立新來源](./create.md)的相關教學課程。
+若要開始使用自助式來源(串流SDK)建立新來源，請參閱[建立新來源](./create.md)的相關教學課程。

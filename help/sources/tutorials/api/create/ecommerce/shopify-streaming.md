@@ -3,7 +3,7 @@ title: 使用Flow Service API為Shopify資料建立串流Source連線和資料�
 description: 瞭解如何使用Flow Service API為Shopify資料建立串流來源連線和資料流。
 badge: Beta
 exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1421'
 ht-degree: 1%
@@ -97,7 +97,7 @@ curl -X POST \
 
 ### 建立目標資料集 {#target-dataset}
 
-可以透過對[目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可以透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
 
 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](../../../../../catalog/api/create-dataset.md)的教學課程。
 
