@@ -1,12 +1,12 @@
 ---
 keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
-description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性(例如搜尋、購物、Gmail和YouTube)聯絡客戶，並與客戶重新互動。
+description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物和Gmail）聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
 workflow-type: tm+mt
-source-wordcount: '2100'
-ht-degree: 2%
+source-wordcount: '2140'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,11 @@ ht-degree: 2%
 ><br/>
 >未購買AdobePrivacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/ui/segment-builder.md)中的[區段定義](../../../segmentation/home.md#segment-definitions)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)可讓您使用線上和離線資料，透過Google所擁有和運作的屬性（例如： [!DNL Search]、[!DNL Shopping]、[!DNL Gmail]和[!DNL YouTube]）聯絡及重新與您的客戶互動。
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)可讓您使用線上和離線資料，透過Google所擁有和運作的屬性（例如： [!DNL Search]、[!DNL Shopping]和[!DNL Gmail]），聯絡及重新與您的客戶互動。
+
+>[!TIP]
+>
+>若要透過[!DNL YouTube]詳細目錄聯絡客戶，請使用[Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md)目的地，此目的地使用Google對象合作夥伴API。
 
 ![Adobe Experience Platform UI中的Google Customer Match目的地。](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -35,6 +39,10 @@ ht-degree: 2%
 運動服裝品牌想要透過[!DNL Google Search]和[!DNL Google Shopping]觸及現有客戶，以根據他們過去的購買和瀏覽記錄來個人化優惠和專案。 服飾品牌可以從他們自己的CRM擷取電子郵件地址以進行Experience Platform，以及從他們自己的離線資料建立受眾。 接著，他們可以將這些對象傳送至[!DNL Google Customer Match]，以便在[!DNL Search]和[!DNL Shopping]中使用，最佳化其廣告支出。
 
 ### 使用案例#2
+
+>[!TIP]
+>
+>若要在[!DNL YouTube]詳細目錄上執行此使用案例，請使用新的[Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md)目的地，此目的地使用Google對象合作夥伴API。
 
 一家知名科技公司推出新手機。 為了推廣此新款手機，他們想要讓擁有舊款手機的客戶進一步瞭解手機的新功能和特性。
 
@@ -222,7 +230,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 >
-> Adobe自2024年10月起陸續推出更新，以提高串流目的地的報表準確性。 此增強功能可確保Experience Platform與目的地平台報告之間更佳的對應。
+> 自 2024 年 10 月開始，Adobe 推出更新以提高串流目標的報告準確性。此增強功能可確保Experience Platform與目的地平台報告之間更佳的對應。
 >
 > 在此更新之前，**[!UICONTROL 身分失敗]**&#x200B;包含所有啟用重試。 在此更新後，只有上次啟用重試會包含在總計數中。
 >
