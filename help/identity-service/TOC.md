@@ -2,23 +2,23 @@
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: 平台 Identity Service 指南
-user-guide-description: 跨裝置和系統橋接客戶身分，以提供個人化的數位體驗。
+user-guide-description: 跨裝置和系統橋接客戶身分識別，以提供個人化的數位體驗。
 feature: Identities
 role: Admin,Developer
 source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
 
 # Adobe Experience Platform Identity Service {#identity}
 
-- [身分服務總覽](home.md)
+- [身分識別服務總覽](home.md)
 - [Identity Service和即時客戶個人檔案](identity-and-profile.md)
 - 功能 {#features}
-   - [身分命名空間](./features/namespaces.md)
+   - [身分識別命名空間](./features/namespaces.md)
    - [身分連結邏輯](./features/identity-linking-logic.md)
    - [身分圖表檢視器](./features/identity-graph-viewer.md)
    - [Identity Service中的刪除](./features/deletion.md)
@@ -28,7 +28,7 @@ ht-degree: 26%
       - [身分圖表連結規則的實作指南](./identity-graph-linking-rules/implementation-guide.md)
       - [圖表設定範例](./identity-graph-linking-rules/example-configurations.md)
       - [身分圖表連結規則的疑難排解](./identity-graph-linking-rules/troubleshooting.md)
-      - [名稱空間優先順序](./identity-graph-linking-rules/namespace-priority.md)
+      - [命名空間優先等級](./identity-graph-linking-rules/namespace-priority.md)
       - [圖表模擬UI](./identity-graph-linking-rules/graph-simulation.md)
       - [身分設定UI](./identity-graph-linking-rules/identity-settings-ui.md)
    - [ECID概觀](./features/ecid.md)

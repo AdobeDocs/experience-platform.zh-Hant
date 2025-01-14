@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
 source-wordcount: '852'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->新的[AI Assistant產品檔案](../../ai-assistant/landing.md)現已推出。 使用此頁面作為所有 AI 助理相關資源的中心。
+>現已推出新的 [AI 助理產品文件](../../ai-assistant/landing.md)。使用此頁面作為所有 AI 助理相關資源的中心。
 
 **發行日期：2024 年 11 月 26 日**
 
