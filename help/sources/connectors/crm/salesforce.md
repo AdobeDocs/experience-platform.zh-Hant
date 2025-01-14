@@ -2,9 +2,9 @@
 title: Salesforce Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Salesforce]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
-
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
@@ -50,6 +49,8 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 透過平台開發人員主控台和[!DNL Postman]設定，您現在可以開始將適當的環境值套用至您的[!DNL Postman]環境。
 
++++檢視變數表格指南
+
 下表包含範例值，以及有關填入[!DNL Postman]環境的其他資訊：
 
 | 變數 | 說明 | 範例 |
@@ -73,6 +74,8 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 | `has_msi` | 表示您是否訂閱[!DNL Marketo Sales Insight]的布林值。 | `false` |
 
 {style="table-layout:auto"}
+
++++
 
 ### 執行指令碼
 
@@ -124,7 +127,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 4. 為[!DNL Enable OAuth Settings]啟用此方塊。
 5. 設定回呼URL。 由於這不會用於JWT，因此您可以使用`https://localhost`。
 6. 為[!DNL Use Digital Signatures]啟用此方塊。
-7. 上傳先前建立的cert.perm檔案。
+7. 上傳先前建立的cert.pem檔案。
 
 #### 新增必要許可權
 
