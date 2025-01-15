@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找有關Experience Data Model (XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
+source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
 workflow-type: tm+mt
-source-wordcount: '2390'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -142,13 +142,7 @@ XDM對於此資料型別的使用有下列限制：
 
 為即時客戶設定檔啟用結構描述後，您就無法再刪除它。 為設定檔啟用結構描述後，就無法停用或刪除它，也無法從結構描述中移除欄位。 因此，在為設定檔啟用結構描述之前，請務必仔細規劃及驗證該結構描述設定。 不過，您可以刪除已啟用設定檔的資料集。 您可在此找到資訊： <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
->[!IMPORTANT]
->
->若要移除已啟用設定檔的結構描述，您需要XDM平台支援團隊的協助，且必須遵循下列步驟：
->
-> 1. 刪除與結構描述（為設定檔啟用）關聯的所有資料集
-> 2. 從沙箱中刪除設定檔匯出快照（這需要XDM平台支援團隊的協助）
-> 3. 強制從沙箱中刪除結構描述（這只能由XDM平台支援團隊完成）
+如果您不想再使用已啟用設定檔的結構描述，建議將結構描述重新命名為包含&#x200B;**不要使用**&#x200B;或&#x200B;**非使用中**。
 
 ## 結構描述修改和限制
 
