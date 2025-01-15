@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 透過指南、文件和教學課程，了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
+source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '304'
 ht-degree: 24%
 
 ---
@@ -67,13 +67,15 @@ ht-degree: 24%
          * [活動](./governance-privacy-security/audit-logs/api/events.md)
          * [轉存](./governance-privacy-security/audit-logs/api/export.md)
    * [資料加密](./governance-privacy-security/encryption.md)
-   * 客戶管理的金鑰{#customer-managed-keys}
-      * [客戶自控金鑰](./governance-privacy-security/customer-managed-keys/overview.md)
-      * [設定Azure金鑰儲存庫](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
-      * [使用API設定CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
-      * [使用UI設定CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
-   * 金鑰管理服務{#key-management-service}
-      * [金鑰管理服務](./governance-privacy-security/key-management-service/overview.md)
+   * 客戶自控金鑰{#customer-managed-keys}
+      * [客戶託管金鑰](./governance-privacy-security/customer-managed-keys/overview.md)
+      * Azure {#azure}
+         * [設定Azure金鑰儲存庫](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
+         * [使用API設定CMK](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
+         * [使用UI設定CMK](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+      * Amazon Web Services {#aws}
+         * [為CMK設定AWS KMS](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
+         * [使用UI在AWS上設定CMK](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
 * 授權使用和護欄{#license}
    * [資料管理授權權益最佳實務](./license-usage-and-guardrails/data-management-best-practices.md)
    * [授權使用量儀表板](./license-usage-and-guardrails/license-usage-dashboard.md)
