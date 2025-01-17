@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
-user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
+user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
 source-git-commit: 25d74df335e3d7930b7f3a4f4836bd20556780ed
@@ -16,7 +16,7 @@ ht-degree: 44%
 # Experience Data Model (XDM)系統 {#xdm}
 
 * [XDM系統概覽](home.md)
-* 綱要 {#schema}
+* 結構描述 {#schema}
    * [結構描述構成的基礎知識](schema/composition.md)
    * [資料建模的最佳做法](schema/best-practices.md)
    * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
