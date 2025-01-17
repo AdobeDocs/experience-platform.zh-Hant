@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service和Experience Cloud應用程式
 description: 本檔案提供如何為隱私權相關作業設定不同Experience Cloud應用程式的參考資料。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 46ca46460de9211c3e876454c986d030b964646e
+source-git-commit: a1ac1f56a22b279aca6607a53dd1e44ffccd1877
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 7%
+source-wordcount: '900'
+ht-degree: 8%
 
 ---
 
@@ -39,9 +39,10 @@ Adobe Experience Platform [!DNL Privacy Service]是專為支援數個Adobe Exper
 | Adobe Campaign Standard | ✓ (A) | ✓ (A) | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=zh-Hant)</li><li>[選擇退出檔案](../segmentation/consents.md)</li></ul> |
 | Adobe客戶屬性(CRS) | ✓ (A) | 不適用 | 資料主體的屬性會從系統中刪除。 | <ul><li>[存取/刪除GDPR的檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[存取/刪除CCPA的檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>客戶屬性無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 | Adobe Experience Platform | ✓ (A) | ✓ (A) | 當Experience Platform收到來自Privacy Service的刪除請求時，平台會傳送確認給Privacy Service，確認已收到請求且受影響的資料已標示為刪除。 隱私權工作完成後，記錄會從資料湖或設定檔存放區中移除。 在工作完成之前，資料會軟刪除，因此任何平台服務都無法存取。 | <ul><li>[存取/刪除資料湖的檔案](../catalog/privacy.md)</li><li>[存取/刪除Identity服務的檔案](../identity-service/privacy.md)</li><li>[存取/刪除即時客戶個人檔案的檔案](../profile/privacy.md)</li><li>[!DNL Experience Platform]會針對對象區段](../segmentation/consents.md)執行[個選擇退出請求。</li></ul> |
-| Adobe Journey Optimizer | ✓ (A) | 不適用 | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests)</li></ul> |
+| Adobe Journey Optimizer | ✓ (A) | 不適用 | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/privacy/requests)</li></ul> |
 | Adobe Pass 驗證 | ✓ (A) | 不適用 | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Pass沒有傳輸資料的功能，因此選擇退出銷售請求並不適用。</li></ul> |
 | Adobe Target | ✓ (A) | 不適用 | 所有與資料主體ID相關的資料都會從訪客資料中刪除。 無法識別個人或無關聯的彙總或匿名資料（例如內容資料），不適用於刪除請求。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target]無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
+| Commerce (Personalization) | ✓ (A) | 不適用 | Privacy Service會針對行銷目的刪除儲存在Commerce SaaS服務中的[!DNL Commerce]資料，這表示資料主體的設定檔和訂單將不再傳送至Adobe行銷應用程式，以用於行銷活動和客戶歷程。 不過，Privacy Service不會刪除[!DNL Commerce]應用程式中的資料，因為商家交易需求可能仍需要該資料。 商家需負責[!DNL Commerce]應用程式中的任何資料刪除/存取要求。 | <ul><li>[存取/刪除Commerce的檔案](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/data-connection/handle-privacy-request)</li></ul> |
 | Marketo Engage | ✓ (A) | 不適用 | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo]無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 
 {style="table-layout:auto"}
@@ -54,7 +55,7 @@ Adobe Experience Platform [!DNL Privacy Service]是專為支援數個Adobe Exper
 | ------- | ----------- |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 概述客戶隱私權管理員或AEM管理員如何處理GDPR請求。 |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | 使用Livefyre發出GDPR存取和刪除請求的步驟。 |
-| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | 確保您的Magento Commerce安裝符合特定隱私權法規的要求。 |
+| [Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview) | 確保您的Adobe Commerce安裝符合特定隱私權法規的要求。 |
 | Adobe Experience Platform中的[標籤](../tags/ui/client-side/consent.md) | 開發人員可如何使用擴充功能及規則建立器，以定義加入和退出解決方案。 |
 | [Workfront](https://www.workfront.com/privacy-notice) | 瞭解Workfront如何收集個人資料，以及資料主體如何透過表單提交隱私權請求。 |
 
