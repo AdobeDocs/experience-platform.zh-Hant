@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來
 title: 使用Platform UI建立Adobe Campaign Managed Cloud Services來源連線
 description: 瞭解如何使用Platform UI將Adobe Experience Platform連線至Adobe Campaign Managed Cloud Services。
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1185'
 ht-degree: 6%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="方案名稱"
+>title="結構描述名稱"
 >abstract="Adobe Campaign 資料庫中定義的實體的名稱。"
 >text="Learn more in documentation"
 
@@ -60,7 +60,7 @@ ht-degree: 6%
 | --- | --- |
 | Adobe Campaign執行個體 | 您使用的Adobe Campaign環境例項名稱。 |
 | 目標對應 | Campaign為了傳送訊息而使用的技術物件，包含傳送傳送訊息所需的所有技術設定。 |
-| 方案名稱 | 您要帶到Platform的結構描述實體名稱。 選項包括傳送記錄和追蹤記錄。 |
+| 結構描述名稱 | 您要帶到Platform的結構描述實體名稱。 選項包括傳送記錄和追蹤記錄。 |
 
 ![您可以在此介面設定Adobe Campaign執行個體、目標對應和結構描述名稱。](../../../../images/tutorials/create/campaign/select-data.png)
 
@@ -101,6 +101,8 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 >[!IMPORTANT]
 >
 >將來源欄位對應到目標XDM欄位時，您必須確保將指定的主要身分欄位對應到其適當的目標XDM欄位。
+>
+>您可以為每個對象新增最多20個欄位以對應至Adobe Campaign。 您可以更新Campaign Explorer之「管理」 > 「平台」 > 「選項」資料夾中`NmsCdp_Aep_Sources_Max_Columns`選項的值，以變更此限制。
 
 成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
