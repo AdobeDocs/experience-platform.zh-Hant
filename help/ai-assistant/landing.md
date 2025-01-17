@@ -1,8 +1,9 @@
 ---
 title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
+feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a8b1527f932e8b0091af7fb999ed638e28de2d0
+source-git-commit: 3c100042ab828e10326d314fcaa00278cc8eb694
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
