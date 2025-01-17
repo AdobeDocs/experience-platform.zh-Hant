@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform可讓您從設定檔存放區中刪除資料集或批次，以移除不再需要或錯誤新增的即時客戶設定檔資料。 這需要使用設定檔API來建立設定檔系統作業或刪除請求。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 3664d3d1f6433bce4678ab8b17c008c064d8e943
+source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '2020'
 ht-degree: 2%
 
 ---
@@ -64,6 +64,8 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!TAB Microsoft Azure]
 
++++ 檢視系統作業的範例要求。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -72,11 +74,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 >[!TAB Amazon Web Services (AWS)]
 
 >[!IMPORTANT]
 >
 >將此端點與AWS搭配使用時，您&#x200B;**必須**&#x200B;使用`x-sandbox-id`要求標頭，而非`x-sandbox-name`要求標頭。
+
++++ 檢視系統作業的範例要求。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
@@ -85,6 +91,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-id: {SANDBOX_ID}' \
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -133,8 +141,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 }
 ```
 
-+++
-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `_page.count` | 要求總數。 此回應已因空間而遭截斷。 |
@@ -142,6 +148,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 | `jobType` | 正在建立的工作型別。 在此情況下，它一律會傳回`"DELETE"`。 |
 | `status` | 刪除請求的狀態。 可能的值包括`"NEW"`、`"PROCESSING"`、`"COMPLETED"`和`"ERROR"`。 |
 | `metrics` | 物件包含已處理的記錄數(`"recordsProcessed"`)、要求已處理的秒數時間，或要求完成所需的時間(`"timeTakenInSec"`)。 |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -222,6 +230,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ 刪除資料集的範例請求。
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -235,6 +245,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `dataSetId` | 您要刪除的資料集ID。 |
@@ -244,6 +256,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >將此端點與AWS搭配使用時，您&#x200B;**必須**&#x200B;使用`x-sandbox-id`要求標頭，而非`x-sandbox-name`要求標頭。
+
++++ 刪除資料集的範例請求。
 
 ```shell
 curl -X POST \
@@ -257,6 +271,8 @@ curl -X POST \
         "dataSetId": "5c802d3cd83fc114b741c4b5"
       }'
 ```
+
++++
 
 | 屬性 | 說明 |
 | -------- | ----------- |
@@ -290,12 +306,12 @@ curl -X POST \
 }
 ```
 
-+++
-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 系統產生的唯一刪除請求唯讀ID。 |
 | `dataSetId` | 資料集的ID，如POST請求中所指定。 |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -322,14 +338,14 @@ curl -X POST \
 }
 ```
 
-+++
-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `requestId` | 系統作業的ID。 |
 | `requestType` | 系統作業的型別。 可能的值包括`BACKFILL_TTL`、`DELETE_EE_BATCH`和`TRUNCATE_DATASET`。 |
 | `status` | 系統作業的狀態。 可能的值包括`NEW`、`SUCCESS`、`ERROR`、`FAILED`和`IN-PROGRESS`。 |
 | `properties` | 包含批次和/或系統作業之資料集ID的物件。 |
+
++++
 
 >[!ENDTABS]
 
@@ -359,6 +375,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ 刪除批次的範例請求。
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -373,6 +391,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `datasetId` | 您要刪除之批次的資料集ID。 |
@@ -383,6 +403,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >將此端點與AWS搭配使用時，您&#x200B;**必須**&#x200B;使用`x-sandbox-id`要求標頭，而非`x-sandbox-name`要求標頭。
+
++++ 刪除批次的範例請求。
 
 ```shell
 curl -X POST \
@@ -398,13 +420,14 @@ curl -X POST \
       }'
 ```
 
++++
+
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `datasetId` | 您要刪除之批次的資料集ID。 |
 | `batchId` | 您要刪除之批次的ID。 |
 
 >[!ENDTABS]
-
 
 **回應**
 
@@ -417,6 +440,8 @@ curl -X POST \
 >[!TAB Microsoft Azure]
 
 成功的回應會傳回新建立的刪除請求的詳細資料，包括請求的不重複、系統產生的唯讀ID。 這可用來查閱請求並檢查其狀態。 在建立時請求的`"status"`是`"NEW"`，直到它開始處理為止。 回應中的`"batchId"`值應符合要求中傳送的`"batchId"`值。
+
++++ 建立刪除請求的成功回應。
 
 ```json
 {
@@ -436,6 +461,8 @@ curl -X POST \
 | `id` | 系統產生的唯一刪除請求唯讀ID。 |
 | `datasetId` | 指定資料集的識別碼。 |
 | `batchId` | 批次的ID，如POST請求中所指定。 |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -462,14 +489,14 @@ curl -X POST \
 }
 ```
 
-+++
-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `requestId` | 系統作業的ID。 |
 | `requestType` | 系統作業的型別。 可能的值包括`BACKFILL_TTL`、`DELETE_EE_BATCH`和`TRUNCATE_DATASET`。 |
 | `status` | 系統作業的狀態。 可能的值包括`NEW`、`SUCCESS`、`ERROR`、`FAILED`和`IN-PROGRESS`。 |
 | `properties` | 包含批次和/或系統作業之資料集ID的物件。 |
+
++++
 
 >[!ENDTABS]
 
@@ -517,13 +544,17 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!TAB Microsoft Azure]
 
++++ 檢視設定檔工作的範例要求。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -531,13 +562,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >
 >將此端點與AWS搭配使用時，您&#x200B;**必須**&#x200B;使用`x-sandbox-id`要求標頭，而非`x-sandbox-name`要求標頭。
 
++++ 檢視設定檔工作的範例要求。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -553,6 +588,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >[!TAB Microsoft Azure]
 
 回應會提供刪除請求的詳細資訊，包括其更新狀態。 回應中的刪除要求ID （`"id"`值）應與要求路徑中傳送的ID相符。
+
++++ 檢視刪除請求的成功回應。
 
 ```json
 {
@@ -572,6 +609,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 | `jobType` | 正在建立的工作型別，在此情況下，一律會傳回`"DELETE"`。 |
 | `status` | 刪除請求的狀態。 可能的值包括`NEW`、`PROCESSING`、`COMPLETED`和`ERROR`。 |
 | `metrics` | 陣列，包含已處理的記錄數(`"recordsProcessed"`)以及處理要求所需的秒數，或是完成要求所需的時間(`"timeTakenInSec"`)。 |
+
++++
 
 >[!TAB Amazon Web Services (AWS)]
 
@@ -598,14 +637,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 }
 ```
 
-+++
-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `requestId` | 系統作業的ID。 |
 | `requestType` | 系統作業的型別。 可能的值包括`BACKFILL_TTL`、`DELETE_EE_BATCH`和`TRUNCATE_DATASET`。 |
 | `status` | 系統作業的狀態。 可能的值包括`NEW`、`SUCCESS`、`ERROR`、`FAILED`和`IN-PROGRESS`。 |
 | `properties` | 包含批次和/或系統作業之資料集ID的物件。 |
+
++++
 
 >[!ENDTABS]
 
@@ -626,45 +665,18 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 ```
 
 | 參數 | 說明 |
-|---|---|
+| --------- | ----------- |
 | {DELETE_REQUEST_ID} | 您要移除之刪除請求的ID。 |
 
 **要求**
 
->[!IMPORTANT]
->
->Azure和AWS執行個體之間的以下要求不同。
-
->[!BEGINTABS]
-
->[!TAB Microsoft Azure]
-
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
->[!TAB Amazon Web Services (AWS)]
-
->[!IMPORTANT]
->
->將此端點與AWS搭配使用時，您&#x200B;**必須**&#x200B;使用`x-sandbox-id`要求標頭，而非`x-sandbox-name`要求標頭。
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
-```
-
->[!ENDTABS]
-
 
 **回應**
 
