@@ -2,7 +2,7 @@
 title: 使用SQL建立對象
 description: 瞭解如何在Adobe Experience Platform的Data Distiller中使用SQL對象擴充功能，以使用SQL命令建立、管理和發佈對象。 本指南涵蓋對象生命週期的所有方面，包括建立、更新和刪除設定檔，以及使用資料導向對象定義來鎖定以檔案為基礎的目的地。
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 1%
@@ -44,7 +44,7 @@ AS (select_query)
 | `schema` | 選填。 為查詢建立的資料集定義XDM結構描述。 |
 | `table_name` | 表格和對象的名稱。 |
 | `primary_identity` | 指定對象的主要身分欄。 |
-| `identity_namespace` | 身分的名稱空間。 您可以使用現有的名稱空間或建立新的名稱空間。 若要檢視可用的名稱空間，請使用`SHOW NAMESPACE`命令。 若要建立新的名稱空間，請使用`CREATE NAMESPACE`。 例如： `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`。 |
+| `identity_namespace` | 身分的名稱空間。 您可以使用現有的名稱空間或建立新的名稱空間。 若要檢視可用的名稱空間，請使用`SHOW NAMESPACES`命令。 若要建立新的名稱空間，請使用`CREATE NAMESPACE`。 例如： `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`。 |
 | `select_query` | 定義對象的SELECT陳述式。 您可以在[SELECT查詢](../sql/syntax.md#select-queries)區段中找到SELECT查詢的語法。 |
 
 {style="table-layout:auto"}
