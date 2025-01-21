@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
 source-wordcount: '2947'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -50,9 +50,9 @@ ht-degree: 17%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
->title="預測的可定址對象"
+>title="預測的可定址客群"
 >abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名輪廓資料期限。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="體驗事件有效期"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/event-expirations" text="體驗事件過期"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。

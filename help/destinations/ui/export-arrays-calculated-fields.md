@@ -1,16 +1,16 @@
 ---
-title: 將陣列物件從Real-Time CDP匯出至雲端儲存目的地
+title: 將陣列物件從即時 CDP 匯出到雲端儲存空間目的地
 type: Tutorial
 description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# 將陣列物件從Real-Time CDP匯出至雲端儲存目的地 {#export-arrays-cloud-storage}
+# 將陣列物件從即時 CDP 匯出到雲端儲存空間目的地 {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
