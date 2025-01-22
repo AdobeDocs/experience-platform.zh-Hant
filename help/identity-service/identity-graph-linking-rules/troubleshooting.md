@@ -2,14 +2,14 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '3335'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
 
-# 識別圖連結規則疑難排解指南
+# 身分識別圖連結規則疑難排解指南
 
 >[!AVAILABILITY]
 >
@@ -149,12 +149,8 @@ ht-degree: 0%
 * [設定檔](../../xdm/classes/experienceevent.md)可能發生驗證失敗。
    * 例如，體驗事件必須同時包含`_id`和`timestamp`。
    * 此外，每個事件（記錄）的`_id`必須是唯一的。
-* 具有最高優先順序的名稱空間是空字串。
 
-在名稱空間優先順序的情境下，設定檔將拒絕：
-
-* 任何包含兩個以上具有最高名稱空間優先順序的身分識別的事件。 例如，如果GAID未標籤為唯一的名稱空間，且有兩個身分都具有GAID名稱空間和不同的身分值傳入，則設定檔不會儲存任何事件。
-* 任何具有最高優先順序的名稱空間是空字串的事件。
+在名稱空間優先順序的情境下，設定檔將拒絕任何包含兩個或多個具有最高名稱空間優先順序的身分的事件。 例如，如果GAID未標籤為唯一的名稱空間，且有兩個身分都具有GAID名稱空間和不同的身分值傳入，則設定檔不會儲存任何事件。
 
 **疑難排解步驟**
 
@@ -175,16 +171,7 @@ ht-degree: 0%
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-您也可以執行以下查詢來檢查對設定檔的擷取是否由於最高的名稱空間具有空白字串而並未發生：
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-這兩個查詢假設如下：
+這些查詢假設：
 
 * 一個身分會從identityMap傳送，另一個身分會從身分描述項傳送。 **注意**：在Experience Data Model (XDM)結構描述中，身分描述項是標示為身分的欄位。
 * CRMID會透過identityMap傳送。 如果CRMID是以欄位傳送，請從WHERE子句移除`key='Email'`。

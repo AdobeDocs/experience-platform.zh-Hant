@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1585'
 ht-degree: 2%
 
 ---
@@ -119,31 +119,6 @@ ht-degree: 2%
 
 
 >[!ENDTABS]
-
-使用XDM體驗事件傳送事件時，請勿傳送空白字串作為身分值。 如果具有最高名稱空間優先順序的名稱空間的身分值是空字串，則會從即時客戶設定檔中忽略記錄。 這同時適用於identityMap以及標示為身分的欄位。
-
-+++選取此選項可檢視具有空字串的裝載範例
-
-下列範例傳回錯誤，因為`Phone`的身分值是以空字串提交。
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
 
 使用XDM體驗事件傳送事件時，您必須確保擁有完整身分識別。
 
