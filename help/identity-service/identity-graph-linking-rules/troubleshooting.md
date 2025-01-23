@@ -2,7 +2,7 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -171,7 +171,7 @@ ht-degree: 0%
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-這些查詢假設：
+此查詢假設：
 
 * 一個身分會從identityMap傳送，另一個身分會從身分描述項傳送。 **注意**：在Experience Data Model (XDM)結構描述中，身分描述項是標示為身分的欄位。
 * CRMID會透過identityMap傳送。 如果CRMID是以欄位傳送，請從WHERE子句移除`key='Email'`。
