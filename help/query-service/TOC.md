@@ -5,9 +5,9 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: c3065710e5f50541b074fc493df07130221d8078
+source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '397'
 ht-degree: 21%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 21%
       - [分類](advanced-statistics/implement-models/classification.md)
       - [叢集](advanced-statistics/implement-models/clustering.md)
 範例{#examples}
+      - [使用統計和機器學習進行機器人篩選](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [使用SQL型Logistic回歸預測客戶流失](advanced-statistics/examples/predict-customer-churn.md)
 - 資料Distiller對象{#data-distiller-audiences}
    - [使用SQL建置外部對象](data-distiller-audiences/overview.md)
@@ -58,6 +59,7 @@ ht-degree: 21%
    - [捨棄的瀏覽](use-cases/abandoned-browse.md)
    - [歸因分析](use-cases/attribution-analysis.md)
    - [機器人篩選](use-cases/bot-filtering.md)
+   - [使用統計和機器學習進行機器人篩選](use-cases/statistics-and-ml-bot-filtering-stub.md)
    - [建立事件的趨勢報表](use-cases/trended-report-of-events.md)
    - [同意分析](use-cases/consent-analysis.md)
    - [客戶期限值](use-cases/customer-lifetime-value.md)
