@@ -3,9 +3,9 @@ title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: fcda4dc3ecdd4ae9272f1cc65cabb20b6236c71a
+source-git-commit: 8022195e755df92b7ceacea52214f81593994e2a
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
@@ -156,7 +156,6 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 * [縮短團隊新成員的上線時間](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [清理您的對象並最佳化您的行銷作業](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [檢查相依性並在資料更新期間將風險降至最低](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [檢查相依性（以秒為單位），將資料更新期間的風險降到最低](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [更快探索及部署新功能](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
 
 >[!TAB 其他視訊內容]
