@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e66f3540d22a441089916183538921ea5654b312
+source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2807'
 ht-degree: 0%
 
 ---
@@ -217,12 +217,9 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 物件瀏覽器中顯示的綱要是可觀察的綱要。 這表示您可以在變更立即可見時，使用它來即時監視變更和更新。 可觀察的結構描述有助於確保資料同步化，並有助於偵錯或分析工作。
 
-#### 目前限制 {#current-limitations}
+#### 目前限制 {#current-limitation}
 
-以下是目前的限制清單：
-
-- 循序查詢執行：一次只能執行一個查詢。 查詢進行中時，由於查詢是按順序處理的，因此無法在左側導覽中開啟其他表格。
-- 查詢記錄中的額外列：您可能會在記錄中遇到標示為「SHOW TABLES」的外部查詢。 這些功能將在未來版本中移除。
+系統會循序處理查詢，這表示一次只能執行一個查詢。 查詢進行時，無法在左側導覽中存取其他表格。
 
 #### 存取表格中繼資料 {#table-metadata}
 

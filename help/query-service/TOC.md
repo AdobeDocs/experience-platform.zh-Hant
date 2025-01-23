@@ -5,10 +5,10 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
+source-git-commit: c3065710e5f50541b074fc493df07130221d8078
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 22%
+source-wordcount: '382'
+ht-degree: 21%
 
 ---
 
@@ -43,12 +43,14 @@ ht-degree: 22%
    - [概觀](advanced-statistics/overview.md)
    - [功能工程](advanced-statistics/feature-engineering.md)
    - [模型](advanced-statistics/models.md)
+   - [功能轉換](advanced-statistics/feature-transformation.md)
 實作模型{#implement-models}
       - [實作模型](advanced-statistics/implement-models/implement-models.md)
       - [迴歸](advanced-statistics/implement-models/regression.md)
       - [分類](advanced-statistics/implement-models/classification.md)
       - [叢集](advanced-statistics/implement-models/clustering.md)
-   - [特徵轉換](advanced-statistics/feature-transformation.md)
+範例{#examples}
+      - [使用SQL型Logistic回歸預測客戶流失](advanced-statistics/examples/predict-customer-churn.md)
 - 資料Distiller對象{#data-distiller-audiences}
    - [使用SQL建置外部對象](data-distiller-audiences/overview.md)
 - 範例 {#use-cases}
@@ -64,6 +66,7 @@ ht-degree: 22%
    - [模糊比對](use-cases/fuzzy-match.md)
    - [列出使用者的頁面檢視](use-cases/list-visitor-sessions.md)
    - [依頁面檢視列出訪客](use-cases/visitors-by-number-of-page-views.md)
+   - [使用SQL預測客戶流失](use-cases/predict-customer-churn-stub.md)
    - [傾向分數](use-cases/propensity-score.md)
    - [使用較高階函式擷取類似記錄](use-cases/retrieve-similar-records.md)
    - [從Analytics資料傳回並使用銷售變數](use-cases/merchandising-variables.md)
