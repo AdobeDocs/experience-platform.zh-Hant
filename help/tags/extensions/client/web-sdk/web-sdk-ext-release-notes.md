@@ -2,16 +2,29 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 28%
+source-wordcount: '2413'
+ht-degree: 27%
 
 ---
 
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
-本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](/help/web-sdk/release-notes.md)。
+本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台網頁SDK發行說明](/help/web-sdk/release-notes.md)。
+
+## 2.28.0版 — 2024年1月23日
+
+**修正和改良**
+
+- 修正了在未啟用Audience Manager的情況下，無法設定ID同步容器覆寫的問題。
+- 修正升級到最新版本時，資料流設定覆寫為停用的問題。
+- 修正使用者無法儲存Target自動點選集合設定的問題。
+
+**新特性**
+
+- 新增一項功能，可在XDM物件中的技術名稱和顯示名稱之間切換。
+- 包含[2.25.0](../../../../web-sdk/release-notes.md#2-25-0)版的Adobe Experience Platform Web SDK。
 
 ## 2.27.0版 — 2024年10月31日
 
@@ -188,9 +201,9 @@ ht-degree: 28%
 
 ## 2.14.1版 — 2022年10月13日
 
-- 修正Web SDK未接受來自Experience CloudID服務的ID的問題。
+- 修正網站SDK未遵循Experience CloudID服務的ID的問題。
 
-包含2.13.1版的Adobe Experience Platform Web SDK程式庫。
+包含2.13.1版的Adobe Experience Platform Web SDK資料庫。
 
 ## 2.14.0版 — 2022年9月28日
 
@@ -198,13 +211,13 @@ ht-degree: 28%
 - 新增套用回應動作，以啟用混合式伺服器 — 使用者端實作。
 - 新增高平均資訊量使用者代理程式使用者端提示內容選項。
 
-包含2.13.0版的Adobe Experience Platform Web SDK程式庫。
+包含2.13.0版的Adobe Experience Platform Web SDK資料庫。
 
 ## 2.13.0版 — 2022年6月29日
 
 - 修正XDM物件資料元素（例如eVar）中數值屬性的排序順序。
 
-包含2.12.0版的Adobe Experience Platform Web SDK程式庫。
+包含2.12.0版的Adobe Experience Platform Web SDK資料庫。
 
 ## 2.12.0版 — 2022年6月13日
 
@@ -214,24 +227,24 @@ ht-degree: 28%
 - 升級React Spectrum UI程式庫。
 - 多項使用者介面增強功能。
 
-包含2.11.0版的Adobe Experience Platform Web SDK程式庫。
+包含2.11.0版的Adobe Experience Platform Web SDK資料庫。
 
 ## 2.11.2版 — 2022年5月3日
 
-包含2.10.1版的Adobe Experience Platform Web SDK程式庫。
+包含2.10.1版的Adobe Experience Platform Web SDK資料庫。
 
 ## 2.11.1版 — 2022年4月22日
 
 - 已修正2.11.0版的設定命令錯誤。
 
-包含2.10.0版的Adobe Experience Platform Web SDK程式庫。
+包含2.10.0版的Adobe Experience Platform Web SDK資料庫。
 
 ## 2.11.0版 — 2022年4月22日
 
 - 已改善標籤UI效能。
 - 將沙箱選擇器新增到資料串流擴充功能設定。
 
-包含2.10.0版的Adobe Experience Platform Web SDK程式庫。
+包含2.10.0版的Adobe Experience Platform Web SDK資料庫。
 
 ## 2.10.0版 — 2022年3月10日
 
@@ -326,7 +339,7 @@ ht-degree: 28%
 - 在 `setConsent` 動作中支援 IAB 2.0 同意標準。
 - 支援在 `sendEvent` 動作中覆寫資料集 ID。
 - 新增全新的 `IdentityMap` 類型「資料元素」，可供在 XDM 物件資料元素 (現已啟用) 以及 `setConsent` 動作中填入 `identityMap` 項目。
-- 支援在 `setConsent` 動作中傳遞身分對應。
+- 支援在 `setConsent` 動作中傳遞身分識別對應。
 - 支援在XDM物件資料元素中選擇Platform沙箱。
 
 ## 1.0.0版 — 2020年5月26日
@@ -336,11 +349,12 @@ ht-degree: 28%
 ## 0.1.2版 — 2020年5月4日
 
 - 將 `configId` 重新命名為 `edgeConfigId`。
-- 將 `viewStart` 重新命名為 `renderDecisions`，預設為 false。如果設為 true，系統會擷取個人化選件並自動轉譯。
+- 將 `viewStart` 重新命名為 `renderDecisions`，預設為 false。如果設為 true，系統會擷取個人化產品建議並自動轉譯。
 - `Get Decisions` 相關變更：
    - 移除 `getDecisions` 命令。
    - `sendEvent` 命令新增「`scopes`」選項。決策會以 `sendEvent` 所解析的 Promise 傳回。
-   - 新增內建 `__view__` 範圍，系統會傳回頁面/檢視範圍選件(例如 Target 的 VEC 選件)。唯有將 `renderDecisions` 設為 false，決策才會從 `sendEvent` 命令傳回。
+   - 新增內建 `__view__` 範圍，系統會傳回頁面/檢視範圍產品建議（例如Target中的VEC選件）。
+唯有`renderDecisions`設為false，決策才會從`sendEvent`命令傳回。
    - 新增 `Decisions Received` 事件，決策可供使用時就會觸發。
 - 整合單一伺服器呼叫中的多個個人化通知。
 - 修正每次參考資料元素時，「事件合併 ID」都會重設的問題。
