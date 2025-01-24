@@ -2,10 +2,10 @@
 title: Identity Service連結邏輯
 description: 瞭解Identity Service如何連結不同的身分，以建立客戶的完整檢視。
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 0%
+source-wordcount: '968'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,12 @@ ht-degree: 0%
 | 一般使用者使用Google Chrome，然後使用Firefox登入。 | CRMID連結至兩個不同的ECID。 | 人員(CRMID)與2個網頁瀏覽器相關聯（**注意**：每個瀏覽器都有自己的ECID）。 |
 | 資料工程師會擷取CRM記錄，該記錄包含兩個標示為身分的欄位：CRMID和電子郵件。 | CRMID和電子郵件已連結。 | 人員(CRMID)與電子郵件地址相關聯。 |
 
-## 瞭解Identity Service連結邏輯
+## 瞭解Identity Service連結邏輯 {#identity-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="模擬圖表"
+>abstract="當身分識別命名空間和身分識別值相符時，便會連結身分識別。"
 
 身分由身分名稱空間和身分值組成。
 

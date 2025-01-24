@@ -2,10 +2,10 @@
 title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 1%
+source-wordcount: '1489'
+ht-degree: 4%
 
 ---
 
@@ -51,6 +51,12 @@ ht-degree: 1%
 
 ## 新增事件 {#add-events}
 
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="新增事件"
+>abstract="模擬圖表以了解身分識別服務如何連結身分識別，以及身分識別最佳化演算法如何運作。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤概觀"
+
 若要開始，請選取&#x200B;**[!UICONTROL 新增事件]**。
 
 ![已選取[新增事件]按鈕。](../images/graph-simulation/add-events.png)
@@ -91,7 +97,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | 共用裝置 | 共用裝置是指兩個不同使用者登入同一部裝置的情境。 | 夫妻共用一個iPad進行網際網路瀏覽和電子商務。 |
 | 無效 (非唯一) 電話 | 無效或非唯一電話是指兩個不同使用者使用相同電話號碼建立帳戶的情況。 | 母親和女兒使用他們共用的家庭電話號碼註冊任何電子商務帳戶。 |
-| 「不良」身分值 | 「不良」身分值是指身分服務因錯誤實作而產生非唯一IDFA的情況。 | 由於程式碼實作問題，WebSDK會針對每個事件錯誤傳送`user_null`值。 |
+| 「不良」身分識別值 | 「不良」身分值是指身分服務因錯誤實作而產生非唯一IDFA的情況。 | 由於程式碼實作問題，WebSDK會針對每個事件錯誤傳送`user_null`值。 |
 
 ![顯示可用預先設定範例的視窗：共用裝置、無效的電話和錯誤的身分值。](../images/graph-simulation/example-options.png)
 
@@ -126,6 +132,16 @@ ht-degree: 1%
 ![已選取刪除事件圖示。](../images/graph-simulation/delete.png)
 
 ## 設定演演算法 {#configure-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="演演算法設定"
+>abstract="設定適合您所攝取身分識別的唯一命名空間和命名空間優先等級。"
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="演演算法設定"
+>abstract="命名空間優先等級會決定如何從身分識別圖表中移除連結。"
 
 >[!IMPORTANT]
 >
