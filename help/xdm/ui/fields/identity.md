@@ -28,7 +28,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
 >title="對主要身分識別的限制"
->abstract="此方案使用的欄位群組用於特定來源連接。此連線要求將 identityMap 做為主要身分識別並已自動設定。"
+>abstract="此結構描述使用的欄位群組用於特定來源連接。此連線要求將 identityMap 做為主要身分識別並已自動設定。"
 
 在UI中定義[新欄位](./overview.md#define)時，您可以選取右側邊欄中的&#x200B;**[!UICONTROL 身分]**&#x200B;核取方塊，將其設定為身分欄位。
 

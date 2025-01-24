@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；XDM；XDM系統；XDM個人設定檔；XDM ExperienceEvent；XDM體驗事件；體驗事件；欄位群組；欄位群組；欄位群組；體驗事件；XDM ExperienceEvent；XDM Experienceevent；XDM Experienceevent；體驗資料模型；體驗資料模型；資料模型；結構描述登入；結構描述庫；結構描述庫；記錄時間序列
+keywords: Experience Platform；首頁；熱門主題；XDM；XDM系統；XDM個人設定檔；XDM ExperienceEvent；XDM體驗事件；體驗事件；欄位群組；欄位群組；欄位群組；體驗事件；XDM ExperienceEvent；XDM Experienceevent；XDM Experienceevent；體驗資料模型；體驗資料模型；資料模型；結構描述登入；結構描述庫；結構描述庫；記錄資料；時間序列；時間序列
 solution: Experience Platform
 title: XDM系統概覽
 description: 標準化和互通性是Adobe Experience Platform背後的重要概念。 體驗資料模型(XDM)由Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
@@ -53,7 +53,7 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="資料行為"
->abstract="用於 Experience Platform 的資料分為三種行為類型：記錄、時間序列和臨時。記錄方案會提供有關主體屬性的資訊，而時間序列方案則會在採取動作時擷取系統的快照。臨時方案會擷取僅供單一資料集使用的命名空間欄位。如需有關 Platform 中資料行為的詳細資訊，請查看此文件。"
+>abstract="用於 Experience Platform 的資料分為三種行為類型：記錄、時間序列和臨時。記錄結構描述會提供有關主體屬性的資訊，而時間序列結構描述則會在採取動作時擷取系統的快照。臨時結構描述會擷取僅供單一資料集使用的命名空間欄位。如需有關 Platform 中資料行為的詳細資訊，請查看此文件。"
 
 打算用於Experience Platform的資料分為三種行為型別：
 

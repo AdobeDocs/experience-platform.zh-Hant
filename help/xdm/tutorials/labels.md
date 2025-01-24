@@ -29,12 +29,12 @@ ht-degree: 8%
    * [結構描述編輯器](../ui/overview.md)：瞭解如何在Platform UI中建立和管理結構描述和其他資源。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：提供基礎結構，以強制對Platform作業執行資料使用限制，使用定義哪些行銷動作可以（或無法）對標籤資料執行的原則。
 
-## 選取要新增標籤的方案或欄位 {#select-schema-field}
+## 選取要新增標籤的結構描述或欄位 {#select-schema-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
 >title="編輯控管標籤"
->abstract="將標籤套用在方案欄位以顯示適用於該特定欄位中包含的資料的使用原則。"
+>abstract="將標籤套用在結構描述欄位以顯示適用於該特定欄位中包含的資料的使用原則。"
 
 若要開始新增標籤，您必須先[選取要編輯的現有結構描述](../ui/resources/schemas.md#edit)，或[建立新的結構描述](../ui/resources/schemas.md#create)以在結構描述編輯器中檢視其結構。
 

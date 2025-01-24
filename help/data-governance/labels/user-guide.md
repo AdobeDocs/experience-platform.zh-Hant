@@ -16,7 +16,7 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="控管 Platform 中的資料使用情況"
->abstract="<h2>說明</h2><p>Experience Platform 中的資料控管架構可讓您根據資料使用限制來標記屬性和方案，並設定原則來識別和執行特定行銷活動的這些限制。</p>"
+>abstract="<h2>說明</h2><p>Experience Platform 中的資料控管結構描述可讓您根據資料使用限制來標記屬性和結構描述，並設定原則來識別和執行特定行銷活動的這些限制。</p>"
 
 本使用手冊說明在[!DNL Experience Platform]使用者介面中使用資料使用標籤的步驟。
 

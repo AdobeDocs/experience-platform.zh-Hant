@@ -11,7 +11,7 @@ ht-degree: 8%
 
 ---
 
-# 在 UI 中建立和編輯方案欄位 {#ui-create-and-edit}
+# 在 UI 中建立和編輯結構描述欄位 {#ui-create-and-edit}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"

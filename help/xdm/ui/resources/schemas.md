@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# 在 UI 中建立和編輯綱要 {#create-edit-schemas-in-ui}
+# 在 UI 中建立和編輯結構描述 {#create-edit-schemas-in-ui}
 
 本指南概述如何在Adobe Experience Platform UI中建立、編輯及管理貴組織的Experience Data Model (XDM)方案。
 
@@ -311,12 +311,12 @@ ht-degree: 1%
 
 ![欄位已新增至標準物件](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## 啟用即時客戶輪廓的方案 {#profile}
+## 啟用即時客戶輪廓的結構描述 {#profile}
 
 [!CONTEXTUALHELP]
 id="platform_schemas_enableforprofile"
-title="啟用輪廓的方案"
-abstract="為輪廓啟用方案時，從此方案建立的任何資料集都會參與即時客戶輪廓，該輪廓會合併來自不同來源的資料以建構每個客戶的完整視圖。一旦將方案用於擷取資料至輪廓中，即無法停用。如需詳細資訊，請查看文件。"
+title="啟用輪廓的結構描述"
+abstract="為輪廓啟用結構描述時，從此結構描述建立的任何資料集都會參與即時客戶輪廓，該輪廓會合併來自不同來源的資料以建構每個客戶的完整視圖。一旦將結構描述用於擷取資料至輪廓中，即無法停用。如需詳細資訊，請查看文件。"
 
 [即時客戶設定檔](../../../profile/home.md)會合併來自不同來源的資料，以建構每個個別客戶的完整檢視。 若要讓結構描述擷取的資料參與此程式，您必須啟用結構描述以在[!DNL Profile]中使用。
 

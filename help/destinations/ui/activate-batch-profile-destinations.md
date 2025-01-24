@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
 source-wordcount: '4151'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -137,7 +137,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
    >[!IMPORTANT]
    >
-   >如果您對已設定在區段評估後啟用的對象執行[彈性對象評估](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)，則無論任何先前的每日啟用工作，彈性對象評估工作一完成，對象就會啟用。 這可能會導致根據您的動作，一天匯出對象多次。
+   >若您對原已設定為在區段評估後啟用的客群，執行[彈性客群評估](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)，則一旦彈性客群評估工作完成，無論先前的每日啟用工作為何，這些客群都會立即啟用。這可能會導致根據您的動作，一天匯出對象多次。
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -285,7 +285,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="關於強制屬性"
->abstract="選取所有匯出的輪廓應包含的 XDM 架構屬性。沒有強制金鑰的輪廓不會匯出到目的地。若未選取強制金鑰，則會匯出所有合格的輪廓，無論其屬性如何。"
+>abstract="選取所有匯出的輪廓應包含的 XDM 結構描述屬性。沒有強制金鑰的輪廓不會匯出到目的地。若未選取強制金鑰，則會匯出所有合格的輪廓，無論其屬性如何。"
 
 強制屬性是使用者啟用的核取方塊，可確保所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址&#x200B;。
 
@@ -300,7 +300,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
 >title="關於去重複化索引鍵"
->abstract="選取去重複化金鑰，以消除匯出檔案中同一輪廓的多筆記錄。選取單一命名空間或最多兩個 XDM 方案屬性作為去重複化索引鍵。未選取去重複化金鑰可能會導致匯出檔案中出現重複的輪廓項目。"
+>abstract="選取去重複化金鑰，以消除匯出檔案中同一輪廓的多筆記錄。選取單一命名空間或最多兩個 XDM 結構描述屬性作為去重複化索引鍵。未選取去重複化金鑰可能會導致匯出檔案中出現重複的輪廓項目。"
 
 重複資料刪除索引鍵是使用者定義的主索引鍵，可決定使用者要透過哪個身分來為其設定檔進行重複資料刪除重複資料刪除&#x200B;。
 
