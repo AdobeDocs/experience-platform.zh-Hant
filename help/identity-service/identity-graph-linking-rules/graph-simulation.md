@@ -2,9 +2,9 @@
 title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1484'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,6 @@ ht-degree: 4%
 >id="platform_identities_graphsimulation"
 >title="新增事件"
 >abstract="模擬圖表以了解身分識別服務如何連結身分識別，以及身分識別最佳化演算法如何運作。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤概觀"
 
 若要開始，請選取&#x200B;**[!UICONTROL 新增事件]**。
 
