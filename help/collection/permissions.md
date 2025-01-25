@@ -2,14 +2,19 @@
 title: Experience Platform中資料收集的許可權管理
 description: 有關如何在Adobe Experience Platform中管理許可權和控制資料收集功能存取的高級概觀。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 60590a77859320891717244eec58b556935354b5
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1356'
 ht-degree: 25%
 
 ---
 
-# Experience Platform中資料收集的許可權管理
+# Experience Platform中資料收集的許可權管理 {#permission-management}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="權限"
+>abstract="瞭解在Adobe Experience Platform中使用資料串流、結構描述、身分和沙箱所需的關鍵許可權。"
 
 [Adobe Experience Platform](./home.md)中的資料收集是由數種不同的技術所組成，這些技術可共同收集並傳輸您的資料。 這些技術的存取權可透過Adobe Admin Console中精細的角色型許可權加以控制。
 
@@ -17,7 +22,7 @@ ht-degree: 25%
 
 ## 快速入門
 
-若要設定資料收集的存取控制，您必須針對與Adobe Experience Platform資料收集產品整合的組織擁有管理員許可權。 若要能授予或撤回權限，至少要擁有&#x200B;**產品設定檔管理員**&#x200B;的角色。其他可管理權限的管理員角色為&#x200B;**產品管理員** (可管理產品內的所有設定檔) 和&#x200B;**系統管理員** (沒有任何限制)。如需詳細資訊，請參閱 Adobe 企業版管理指南中有關[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)的文章。
+若要設定資料收集的存取控制，您必須針對與Adobe Experience Platform資料收集產品整合的組織擁有管理員許可權。 若要能授予或撤回權限，至少要擁有&#x200B;**產品設定檔管理員**&#x200B;的角色。其他可管理權限的管理員角色為&#x200B;**產品管理員** (可管理產品內的所有輪廓) 和&#x200B;**系統管理員** (沒有任何限制)。如需詳細資訊，請參閱 Adobe 企業版管理指南中有關[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)的文章。
 
 本指南假設您熟悉基本的 Admin Console 概念，例如產品設定檔以及它們如何授予個別使用者和群組產品權限。如需詳細資訊，請參閱 [Admin Console 使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)。
 
@@ -116,7 +121,7 @@ Experience Cloud的&#x200B;**[!UICONTROL 許可權]**&#x200B;區段可讓您定�
 
 #### 編輯產品設定檔的許可權 {#edit-permissions}
 
-編輯設定檔的權限時，可用權限會顯示在左欄的清單中，而設定檔中包含的權限則會顯示在右欄的清單中。選取清單中的權限在任一欄之間移動。
+編輯輪廓的權限時，可用權限會顯示在左欄的清單中，而輪廓中包含的權限則會顯示在右欄的清單中。選取清單中的權限在任一欄之間移動。
 
 ![影像顯示已新增至包含資料行](./images/permissions/added-permissions.png)的許可權
 
@@ -134,7 +139,7 @@ Experience Cloud的&#x200B;**[!UICONTROL 許可權]**&#x200B;區段可讓您定�
 
 #### 將使用者指派給產品設定檔 {#assign-users}
 
-若要將使用者指派至產品設定檔 (並授予他們設定檔的設定權限)，請選取「**[!UICONTROL 使用者]**」索引標籤，接著選取「**[!UICONTROL 新增使用者]**」。
+若要將使用者指派至產品設定檔 (並授予他們輪廓的設定權限)，請選取「**[!UICONTROL 使用者]**」索引標籤，接著選取「**[!UICONTROL 新增使用者]**」。
 
 ![顯示 Admin Console 中產品設定檔的使用者索引標籤的影像](./images/permissions/manage-users.png)
 
