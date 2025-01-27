@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Experience PlatformUI總覽
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 2%
+source-wordcount: '1924'
+ht-degree: 1%
 
 ---
 
@@ -157,7 +157,7 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 **[!UICONTROL 監視]**&#x200B;區段可讓您監視批次和串流擷取。 您可以在[監視資料擷取使用手冊](../ingestion/quality/monitor-data-ingestion.md)中找到更多有關監視的資訊。
 
-### [!UICONTROL 同盟資料] （可用性限制）
+### [!UICONTROL 同盟資料]
 
 **[!UICONTROL 模型]**&#x200B;區段可讓您設計和建立定義資料結構、關係和限制的資料模型和結構描述。 您可以在[同盟對象構成使用手冊](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas)中找到有關資料模型和結構描述的詳細資訊。
 
@@ -166,11 +166,7 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 **[!UICONTROL 同盟資料庫]**&#x200B;區段可讓您將Adobe Experience Platform連線至您的企業資料倉儲。 您可以在[同盟對象組合使用手冊](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db)中找到有關連線到同盟資料庫的詳細資訊。
 
->[!AVAILABILITY]
->
->聯合客群組成目前僅開放給某些組織使用 (限量開放使用)。如需詳細資訊，請聯絡您的 Adobe 代表。
-
-### [!UICONTROL 決策]
+### [!UICONTROL Decisioning]
 
 Adobe Journey Optimizer是以Experience Platform為建置基礎的應用程式服務。 它可讓您使用強大的決策技術，在適當的時間為所有接觸點的客戶提供最佳優惠和體驗。 若要進一步瞭解Journey Optimizer，包括使用[!UICONTROL 選件]和[!UICONTROL 活動]，請造訪[Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=zh-Hant)。
 

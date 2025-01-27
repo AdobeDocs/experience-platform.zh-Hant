@@ -5,10 +5,10 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶輪廓資料建置客群。
 feature: Segments
 role: User
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 44%
+source-wordcount: '192'
+ht-degree: 43%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 44%
    - [Audience Portal](ui/audience-portal.md)
    - [客群構成](ui/audience-composition.md)
    - [區段產生器](ui/segment-builder.md)
-   - [聯合客群構成 (可用性限制)](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)
+   - [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)
    - [帳戶客群](ui/account-audiences.md)
    - [相似客群](ui/lookalike-audiences.md)
    - [潛在客戶客群](ui/prospect-audience.md)
