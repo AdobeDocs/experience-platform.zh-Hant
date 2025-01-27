@@ -2,20 +2,15 @@
 title: 內容API端點
 description: 瞭解如何使用Privacy Service API擷取您的存取資料。
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
+source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
 
 # 內容端點
-
->[!IMPORTANT]
->
->`/content`端點目前為測試版，而您的組織可能尚未擁有其存取權。 功能和檔案可能會有所變更。
 
 使用`/content`端點安全地擷取您客戶的&#x200B;*存取資訊* （隱私權主體可以合法要求存取的資訊）。 回應`/jobs/{JOB_ID}`GET要求時提供的下載URL指向Adobe服務端點。 然後，您可以向`/jobs/:JOB_ID/content`發出GET請求，以JSON格式傳回您的客戶資料。 此存取方法實作多層驗證和存取控制以增強安全性。
 
