@@ -2,7 +2,7 @@
 title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="演演算法設定"
+>title="唯一的名稱空間"
 >abstract="圖表不能有兩個具有唯一名稱空間的身分。 如果圖表嘗試超過此限制，則會保留最近的連結，並移除最舊的連結。"
 
 唯一的名稱空間會決定圖形摺疊時移除的連結。

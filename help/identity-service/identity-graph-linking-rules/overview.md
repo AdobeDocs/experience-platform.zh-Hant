@@ -2,7 +2,7 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 3%
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="圖表收合案例"
+>title="圖表摺疊案例"
 >abstract="圖表可能「收合」或代表多人實體的原因有很多。"
 
 在單一裝置上可能發生多次登入的例項：

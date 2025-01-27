@@ -2,7 +2,7 @@
 title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1484'
 ht-degree: 4%
@@ -53,8 +53,9 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
->title="新增事件"
+>title="圖表模擬"
 >abstract="模擬圖表以了解身分識別服務如何連結身分識別，以及身分識別最佳化演算法如何運作。"
+>text="Learn more in documentation"
 
 若要開始，請選取&#x200B;**[!UICONTROL 新增事件]**。
 
@@ -139,7 +140,7 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="演演算法設定"
+>title="名稱空間優先順序"
 >abstract="命名空間優先等級會決定如何從身分識別圖表中移除連結。"
 
 >[!IMPORTANT]
