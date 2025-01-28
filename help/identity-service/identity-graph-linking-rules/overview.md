@@ -2,9 +2,9 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1436'
 ht-degree: 3%
 
 ---
@@ -29,17 +29,16 @@ ht-degree: 3%
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)
 
-## 可能發生圖表摺疊的範例情境 {#example-scenarios-where-graph-collapse-could-happen}
-
-本節概述設定身分圖表連結規則時可考慮的範例情境。
-
-### 共用裝置 {#shared-device}
+## 圖表收合案例 {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="圖表摺疊案例"
 >abstract="圖表可能「收合」或代表多人實體的原因有很多。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="了解更多"
+
+本節概述設定身分圖表連結規則時可考慮的範例情境。
+
+### 共用裝置
 
 在單一裝置上可能發生多次登入的例項：
 

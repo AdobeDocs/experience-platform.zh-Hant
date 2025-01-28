@@ -2,9 +2,9 @@
 title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1458'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_graphsimulation"
 >title="圖表模擬"
 >abstract="模擬圖表以了解身分識別服務如何連結身分識別，以及身分識別最佳化演算法如何運作。"
->additional-url="http://www.adobe.com/go/identity-graph-simulation" text="了解更多"
 
 >[!AVAILABILITY]
 >
