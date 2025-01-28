@@ -2,14 +2,20 @@
 title: Graph設定範例
 description: 瞭解使用身分圖表連結規則和身分資料時，可能會遇到的常見圖表情境。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '2783'
+source-wordcount: '2799'
 ht-degree: 6%
 
 ---
 
-# 圖表設定範例
+# 圖表設定範例 {#examples-of-graph-configurations}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="演演算法設定"
+>abstract="設定適合您所攝取身分識別的唯一命名空間和命名空間優先等級。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/example-configurations" text="了解更多"
 
 >[!AVAILABILITY]
 >
@@ -44,7 +50,7 @@ CRMID: Tom, ECID: 111
 
 您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
 
-| 優先順序 | 顯示名稱 | 身分類型 | 在每個圖表中唯一 |
+| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
 | ---| --- | --- | --- |
 | 1 | CRMID | 跨裝置 | 是 |
 | 2 | ECID | COOKIE | 無 |
@@ -112,7 +118,7 @@ CRMID: Summer, ECID: 222
 
 您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
 
-| 優先順序 | 顯示名稱 | 身分類型 | 在每個圖表中唯一 |
+| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
 | ---| --- | --- | --- |
 | 1 | CRMID | 跨裝置 | 是 |
 | 2 | 電子郵件 (SHA256，小寫) | 電子郵件 | 無 |
@@ -202,7 +208,7 @@ CRMID: Summer, ECID: 444, GAID:B-B-B
 
 您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
 
-| 優先順序 | 顯示名稱 | 身分類型 | 在每個圖表中唯一 |
+| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
 | ---| --- | --- | --- |
 | 1 | CRMID | 跨裝置 | 是 |
 | 2 | 電子郵件 (SHA256，小寫) | 電子郵件 | 無 |
@@ -382,7 +388,7 @@ loginID: ID_C, ECID: 222
 
 您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
 
-| 優先順序 | 顯示名稱 | 身分類型 | 在每個圖表中唯一 |
+| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
 | ---| --- | --- | --- |
 | 1 | CRMID | 跨裝置 | 是 |
 | 2 | loginID | 跨裝置 | 無 |
@@ -499,7 +505,7 @@ loginID: ID_C, ECID: 222
 
 您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
 
-| 優先順序 | 顯示名稱 | 身分類型 | 在每個圖表中唯一 |
+| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
 | ---| --- | --- | --- | 
 | 1 | CRMID | 跨裝置 | 是 |
 | 2 | Email_LC_SHA256 | 電子郵件 | 無 |
@@ -664,7 +670,7 @@ CRMID: Tom, ECID: 111
 
 您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
 
-| 優先順序 | 顯示名稱 | 身分類型 | 在每個圖表中唯一 |
+| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
 | ---| --- | --- | --- | 
 | 1 | CRMID | 跨裝置 | 是 |
 | 2 | 電子郵件 | 電子郵件 | 是 |

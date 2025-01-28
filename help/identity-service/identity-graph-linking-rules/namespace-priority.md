@@ -2,14 +2,20 @@
 title: 命名空間優先等級
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 2%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
-# 命名空間優先等級
+# 命名空間優先等級 {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="名稱空間優先順序"
+>abstract="命名空間優先等級會決定如何從身分識別圖表中移除連結。"
+>additional-url="http://www.adobe.com/go/identity-namespace-priority" text="了解更多"
 
 >[!AVAILABILITY]
 >
@@ -77,7 +83,7 @@ ht-degree: 2%
 * 在您設定好指定沙箱的身分設定後，體驗事件的主要身分將由設定中最高的名稱空間優先順序決定。
    * 這是因為體驗事件的本質是動態的。 身分對應可能包含三個或更多身分，而名稱空間優先順序可確保最重要的名稱空間與體驗事件相關聯。
 * 因此，即時客戶設定檔&#x200B;**將不再使用下列設定**：
-   * 使用Web SDK、Mobile SDK或Edge Network伺服器API在identityMap中傳送身分時，主要身分設定(`primary=true`) （身分名稱空間和身分值將繼續用於設定檔中）。 **注意**： Real-time Customer Profile以外的服務(如Data Lake Storage或Adobe Target)將繼續使用主要身分設定(`primary=true`)。
+   * 使用Web SDK、Mobile SDK或Edge Network伺服器API （身分名稱空間和身分值將繼續用於設定檔中）在identityMap中傳送身分時，主要身分設定(`primary=true`)。 **注意**： Real-time Customer Profile以外的服務(如Data Lake Storage或Adobe Target)將繼續使用主要身分設定(`primary=true`)。
    * 任何在XDM體驗事件類別結構描述上標示為主要身分的欄位。
    * Adobe Analytics來源聯結器（ECID或AAID）中的預設主要身分設定。
 * 另一方面，**名稱空間優先順序不會決定設定檔記錄**&#x200B;的主要身分。
@@ -155,7 +161,7 @@ ht-degree: 2%
 
 ### 資料湖
 
-資料湖的資料擷取將繼續遵循在[Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map)和結構描述上設定的主要身分設定。
+資料湖的資料擷取將繼續遵循在[網頁SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map)和結構描述上設定的主要身分設定。
 
 資料湖不會根據名稱空間優先順序來判斷主要身分。 例如，Adobe Customer Journey Analytics將繼續使用身分對應中的值，即使在啟用名稱空間優先順序後（例如，將資料集新增到新連線），因為Customer Journey Analytics會消耗其來自資料湖的資料。
 

@@ -2,14 +2,20 @@
 title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 1%
+source-wordcount: '1563'
+ht-degree: 2%
 
 ---
 
-# 身分最佳化演演算法
+# 身分最佳化演演算法 {#identity-optimization-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="唯一的名稱空間"
+>abstract="圖表不能有兩個具有唯一名稱空間的身分。 如果圖表嘗試超過此限制，則會保留最近的連結，並移除最舊的連結。"
+>additional-url="http://www.adobe.com/go/identity-ido-algo" text="了解更多"
 
 >[!AVAILABILITY]
 >
@@ -22,11 +28,6 @@ ht-degree: 1%
 請閱讀本節，瞭解不重複名稱空間和名稱空間優先順序的相關資訊。 這兩個概念可作為身分最佳化演演算法所需的輸入引數。
 
 ### 唯一命名空間 {#unique-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identities_uniquenamespace"
->title="唯一的名稱空間"
->abstract="圖表不能有兩個具有唯一名稱空間的身分。 如果圖表嘗試超過此限制，則會保留最近的連結，並移除最舊的連結。"
 
 唯一的名稱空間會決定圖形摺疊時移除的連結。
 
