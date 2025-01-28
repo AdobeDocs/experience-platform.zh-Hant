@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1270'
 ht-degree: 5%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 5%
       * [Pubmatic Connect連線](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads連線](./catalog/advertising/snap-inc.md)
       * [交易台連線](./catalog/advertising/tradedesk.md)
-      * [(Beta)交易台CRM連線](./catalog/advertising/tradedesk-emails.md)
+      * [交易台CRM連線](./catalog/advertising/tradedesk-emails.md)
       * [twitter通用網站標籤擴充功能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX連線](./catalog/advertising/datax.md)
    * Analytics目的地{#analytics}
