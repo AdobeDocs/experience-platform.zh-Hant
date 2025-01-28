@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4387'
 ht-degree: 11%
 
 ---
@@ -439,25 +439,32 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 * **確定性選擇**：當多個設定檔具有相同的重複資料刪除索引鍵和相同的參考時間戳記時，重複資料刪除邏輯會藉由排序其他選取欄的值（排除陣列、對應或物件等複雜型別）來決定要匯出的設定檔。 排序的值會依字典順序計算，且會選取第一個設定檔。
 
-* **範例情境**：\
-  請考量下列資料，其中重複資料刪除索引鍵是`Email`欄：\
-  |電子郵件*|名字|姓氏|時間戳記|\
-  |—|—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+* **範例情境**
 
-  重複資料刪除後，匯出檔案將包含：\
-  |電子郵件*|名字|姓氏|時間戳記|\
-  |—|—|—|—|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+請考量下列資料，其中重複資料刪除索引鍵是`Email`欄：
 
-  **說明**：對於`test1@test.com`，兩個設定檔共用相同的重複資料刪除索引鍵和時間戳記。 演演算法會以字典方式排序`first_name`和`last_name`資料行值。 由於名字相同，因此使用`last_name`欄來解析領帶，其中「Doe」在「Morris」之前。
+| 電子郵件* | 名字 | last_name | 時間戳記 |
+|---|---|---|---|  
+| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
+| `test1@test.com` | John | 完成 | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
-* **提升可靠性**：此更新的重複資料刪除程式可確保使用相同座標連續執行將一律產生相同的結果，提升一致性。
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative}透過計算欄位匯出陣列 {#export-arrays-calculated-fields}
+重複資料刪除後，匯出檔案將包含：
+
+| 電子郵件* | 名字 | last_name | 時間戳記 |
+|---|---|---|---|  
+| `test1@test.com` | John | 完成 | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**說明**：對於`test1@test.com`，兩個設定檔共用相同的重複資料刪除索引鍵和時間戳記。 演演算法會以字典方式排序`first_name`和`last_name`資料行值。 由於名字相同，因此使用`last_name`欄來解析領帶，其中「Doe」在「Morris」之前。
+
+**提升可靠性**：此更新的重複資料刪除程式可確保使用相同座標連續執行將一律產生相同的結果，提升一致性。
+
+### 透過計算欄位匯出陣列 {#export-arrays-calculated-fields}
 
 部分測試版客戶可將陣列物件從Experience Platform匯出至雲端儲存目的地。 閱讀有關[匯出陣列和計算欄位](/help/destinations/ui/export-arrays-calculated-fields.md)的詳細資訊，並連絡您的Adobe代表以取得功能的存取權。
 
@@ -474,10 +481,10 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 >[!NOTE]
 >
-對於雲端儲存空間目的地，下列屬性會預設新增至對應：
+>對於雲端儲存空間目的地，下列屬性會預設新增至對應：
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 視是否選取`segmentMembership.seg_namespace.seg_id.status`而定，檔案匯出會依下列方式而有所不同：
 
@@ -500,9 +507,9 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 >[!IMPORTANT]
 > 
-目錄中的所有雲端儲存空間目的地都可以檢視已改善的[[!UICONTROL 對應]步驟](#mapping)，以取代本節中說明的&#x200B;**[!UICONTROL 選取屬性]**&#x200B;步驟。
+>目錄中的所有雲端儲存空間目的地都可以檢視已改善的[[!UICONTROL 對應]步驟](#mapping)，以取代本節中說明的&#x200B;**[!UICONTROL 選取屬性]**&#x200B;步驟。
 >
-此&#x200B;**[!UICONTROL 選取屬性]**&#x200B;步驟仍會針對Adobe Campaign、Oracle Responsys、Oracle Eloqua和SalesforceMarketing Cloud電子郵件行銷目的地顯示。
+>此&#x200B;**[!UICONTROL 選取屬性]**&#x200B;步驟仍會針對Adobe Campaign、Oracle Responsys、Oracle Eloqua和SalesforceMarketing Cloud電子郵件行銷目的地顯示。
 
 針對以設定檔為基礎的目的地，您必須選取要傳送至目標目的地的設定檔屬性。
 
@@ -522,15 +529,15 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 >[!NOTE]
 >
-Adobe Experience Platform會使用結構描述中四個建議且常用的屬性來預先填入您的選取範圍： `person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.seg_namespace.seg_id.status`。
+> Adobe Experience Platform會使用結構描述中四個建議且常用的屬性來預先填入您的選取範圍： `person.name.firstName`、`person.name.lastName`、`personalEmail.address`、`segmentMembership.seg_namespace.seg_id.status`。
 
 ![此影像顯示對象啟動工作流程對應步驟中預先填入的建議屬性。](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-由於已知的限制，您目前無法使用&#x200B;**[!UICONTROL 選取欄位]**&#x200B;視窗將`segmentMembership.seg_namespace.seg_id.status`新增至您的檔案匯出。 相反地，您必須手動將值`xdm: segmentMembership.seg_namespace.seg_id.status`貼到結構描述欄位中，如下所示。
+>由於已知的限制，您目前無法使用&#x200B;**[!UICONTROL 選取欄位]**&#x200B;視窗將`segmentMembership.seg_namespace.seg_id.status`新增至您的檔案匯出。 相反地，您必須手動將值`xdm: segmentMembership.seg_namespace.seg_id.status`貼到結構描述欄位中，如下所示。
 >
-![熒幕錄製，顯示啟動工作流程對應步驟中的對象成員資格因應措施。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![熒幕錄製，顯示啟動工作流程對應步驟中的對象成員資格因應措施。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 視是否選取`segmentMembership.seg_namespace.seg_id.status`而定，檔案匯出會依下列方式而有所不同：
 * 如果選取`segmentMembership.seg_namespace.seg_id.status`欄位，匯出的檔案會在初始完整快照中包含&#x200B;**[!UICONTROL Active]**&#x200B;成員，並在後續的增量匯出中包含&#x200B;**[!UICONTROL Active]**&#x200B;和&#x200B;**[!UICONTROL Expired]**&#x200B;成員。
@@ -538,14 +545,14 @@ Adobe Experience Platform會使用結構描述中四個建議且常用的屬性�
 
 ## 選取擴充屬性 {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="排除擴充屬性"
-abstract="啟用此選項可從選取的自訂已上傳客群匯出輪廓至您的目的地，同時排除其所有屬性。"
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="排除擴充屬性"
+>abstract="啟用此選項可從選取的自訂已上傳客群匯出輪廓至您的目的地，同時排除其所有屬性。"
 
 >[!IMPORTANT]
 >
-只有當您在[對象選取](#select-audiences)步驟期間選取&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;對象時，才會顯示此步驟。
+>只有當您在[對象選取](#select-audiences)步驟期間選取&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;對象時，才會顯示此步驟。
 
 擴充屬性對應至在Experience Platform中擷取的自訂上傳對象，做為&#x200B;**[!UICONTROL 自訂上傳]**。 在此步驟中，您可以為每個選取的外部對象選取要匯出至目的地的屬性。
 
@@ -572,12 +579,12 @@ abstract="啟用此選項可從選取的自訂已上傳客群匯出輪廓至您�
 
 >[!NOTE]
 > 
-如果有任何資料使用標籤套用至資料集內的特定欄位（而非整個資料集），則會在下列條件下在啟用時強制執行這些欄位層級標籤：
+>如果有任何資料使用標籤套用至資料集內的特定欄位（而非整個資料集），則會在下列條件下在啟用時強制執行這些欄位層級標籤：
 >
-* 這些欄位會用於對象定義中。
-* 這些欄位會設定為目標目的地的投影屬性。
+>* 這些欄位會用於對象定義中。
+>* 這些欄位會設定為目標目的地的投影屬性。
 >
-例如，如果欄位`person.name.firstName`的某些資料使用標籤與目的地的行銷動作衝突，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱[Adobe Experience Platform中的資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations)。
+> 例如，如果欄位`person.name.firstName`的某些資料使用標籤與目的地的行銷動作衝突，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱[Adobe Experience Platform中的資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations)。
 
 在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或選取&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 
@@ -585,10 +592,10 @@ abstract="啟用此選項可從選取的自訂已上傳客群匯出輪廓至您�
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="檢視適用的同意原則"
-abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個輪廓。如果您的公司無權存取上述 SKU，則會停用此控制項。"
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="檢視適用的同意原則"
+>abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個輪廓。如果您的公司無權存取上述 SKU，則會停用此控制項。"
 
 如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個輪廓。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
 
