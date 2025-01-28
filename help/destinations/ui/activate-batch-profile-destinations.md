@@ -3,10 +3,10 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
+source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
 workflow-type: tm+mt
-source-wordcount: '4151'
-ht-degree: 12%
+source-wordcount: '4395'
+ht-degree: 11%
 
 ---
 
@@ -431,14 +431,31 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址）作為重複資料刪除索引鍵，以確保所有設定檔記錄都可唯一識別。
 
->[!NOTE]
-> 
->如果有任何資料使用標籤套用至資料集內的特定欄位（而非整個資料集），則會在下列條件下在啟用時強制執行這些欄位層級標籤：
->
->* 這些欄位會用於對象定義中。
->* 這些欄位會設定為目標目的地的投影屬性。
->
-> 例如，如果欄位`person.name.firstName`的某些資料使用標籤與目的地的行銷動作衝突，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱[Adobe Experience Platform中的資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations)。
+### 具有相同時間戳記之設定檔的重複資料刪除行為 {#deduplication-same-timestamp}
+
+將設定檔匯出至檔案型目的地時，重複資料刪除可確保在多個設定檔共用相同的重複資料刪除索引鍵和相同的參考時間戳記時，僅匯出一個設定檔。 此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
+
+#### 主要考量事項
+
+* **確定性選擇**：當多個設定檔具有相同的重複資料刪除索引鍵和相同的參考時間戳記時，重複資料刪除邏輯會藉由排序其他選取欄的值（排除陣列、對應或物件等複雜型別）來決定要匯出的設定檔。 排序的值會依字典順序計算，且會選取第一個設定檔。
+
+* **範例情境**：\
+  請考量下列資料，其中重複資料刪除索引鍵是`Email`欄：\
+  |電子郵件*|名字|姓氏|時間戳記|\
+  |—|—|—|—|\
+  |test1@test.com|John|Morris|2024-10-12T09:50|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  重複資料刪除後，匯出檔案將包含：\
+  |電子郵件*|名字|姓氏|時間戳記|\
+  |—|—|—|—|\
+  |test1@test.com|John|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  **說明**：對於`test1@test.com`，兩個設定檔共用相同的重複資料刪除索引鍵和時間戳記。 演演算法會以字典方式排序`first_name`和`last_name`資料行值。 由於名字相同，因此使用`last_name`欄來解析領帶，其中「Doe」在「Morris」之前。
+
+* **提升可靠性**：此更新的重複資料刪除程式可確保使用相同座標連續執行將一律產生相同的結果，提升一致性。
 
 ### [!BADGE Beta]{type=Informative}透過計算欄位匯出陣列 {#export-arrays-calculated-fields}
 
@@ -552,6 +569,15 @@ abstract="啟用此選項可從選取的自訂已上傳客群匯出輪廓至您�
 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以移至[檢閱](#review)步驟。
 
 ## 檢閱 {#review}
+
+>[!NOTE]
+> 
+如果有任何資料使用標籤套用至資料集內的特定欄位（而非整個資料集），則會在下列條件下在啟用時強制執行這些欄位層級標籤：
+>
+* 這些欄位會用於對象定義中。
+* 這些欄位會設定為目標目的地的投影屬性。
+>
+例如，如果欄位`person.name.firstName`的某些資料使用標籤與目的地的行銷動作衝突，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱[Adobe Experience Platform中的資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations)。
 
 在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或選取&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 
