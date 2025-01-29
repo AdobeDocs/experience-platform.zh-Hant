@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 測量資料型別
 description: 瞭解測量體驗資料模型(XDM)資料型別。
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '208'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!UICONTROL Measure]是標準的Experience Data Model (XDM)資料型別，包含特定量度的具體可量化資料點。 測量由唯一識別碼和值組成。
 
-<img src="../images/data-types/measure.PNG" width="500" /><br />
+![量值影像](../images/data-types/measure.PNG){width=500}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

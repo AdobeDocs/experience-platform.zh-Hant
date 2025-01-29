@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 網路互動資料型別
 description: 瞭解網路互動Experience Data Model (XDM)資料型別。
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '169'
 ht-degree: 10%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 [!UICONTROL 網頁互動]是標準的Experience Data Model (XDM)資料型別，描述初次頁面載入完成後發生在網頁上的互動資訊。 它可用來記錄豐富網頁應用程式(例如單頁網頁應用程式(SPA))中的互動，而不會觸發新的頁面載入。
 
-<img src="../images/data-types/web-interaction.PNG" width="500" /><br />
+![網頁互動影像](../images/data-types/web-interaction.PNG){width=500}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 應用程式資料型別
 description: 瞭解應用程式體驗資料模型(XDM)資料型別。
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '420'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 [!UICONTROL 應用程式]是標準的體驗資料模型(XDM)資料型別，可描述與應用程式產生的互動相關的詳細資訊。 應用程式是指軟體體驗，例如可由一般使用者安裝、執行、關閉或解除安裝的行動或案頭應用程式。 此資料型別的屬性並非旨在說明聊天機器人、瀏覽器外掛程式等代理程式，或其他不適用於應用程式的體驗。
 
-<img src="../images/data-types/application.PNG" width="500" /><br />
+![應用程式影像](../images/data-types/application.PNG){width=500}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

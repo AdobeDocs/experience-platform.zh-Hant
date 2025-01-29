@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 搜尋資料型別
 description: 瞭解搜尋Experience Data Model (XDM)資料型別。
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 11%
+source-wordcount: '164'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 [!UICONTROL 搜尋]是標準的體驗資料模型(XDM)資料型別，其中包含網頁搜尋活動的相關資訊。
 
-<img src="../images/data-types/search.PNG" width="500" /><br />
+![搜尋影像](../images/data-types/search.PNG){width=500}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

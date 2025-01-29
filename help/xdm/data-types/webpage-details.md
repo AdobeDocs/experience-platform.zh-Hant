@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 網頁詳細資料資料型別
 description: 瞭解網頁詳細資訊Experience Data Model (XDM)資料型別。
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '386'
 ht-degree: 11%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 此資料型別適用於單頁網頁應用程式(SPA)的完整頁面詳細資料和初始頁面載入。 若為載入頁面上發生的互動不會觸發新頁面載入，請參閱[網頁互動](./web-interaction.md)資料型別。
 
-<img src="../images/data-types/web-page-details.PNG" width="500" /><br />
+![網頁詳細資料](../images/data-types/web-page-details.PNG){width="500"}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

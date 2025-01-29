@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 個人資料型別
 description: 瞭解個人體驗資料模型(XDM)資料型別。
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '322'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL Person]是描述個人情況的標準Experience Data Model (XDM)資料型別。 此資料型別可代表擔任各種角色的人員，例如客戶、聯絡人或擁有者。
 
-<img src="../images/data-types/person.PNG" width="500" /><br />
+![個人影像](../images/data-types/person.PNG){width=500}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

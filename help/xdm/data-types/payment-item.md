@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 付款專案資料型別
 description: 瞭解付款專案體驗資料模型(XDM)資料型別。
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 15%
+source-wordcount: '144'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 [!UICONTROL 付款專案]是標準的體驗資料模型(XDM)資料型別，描述與訂單相關聯的付款，定義付款型別、金額和相關聯的貨幣。
 
-<img src="../images/data-types/payment-item.PNG" width="400" /><br />
+![付款專案影像](../images/data-types/payment-item.PNG){width=400}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
