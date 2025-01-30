@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙箱UI指南
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙箱相關的各種作業的步驟。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: c63de71c248e6a41dbbadbe8089156ee3c2829cf
+source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1066'
 ht-degree: 4%
 
 ---
@@ -81,6 +81,7 @@ ht-degree: 4%
 >
 >* 在警告訊息後，可以重設使用者建立的、用於與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱。
 >* 在起始沙箱重設之前，您將需要手動刪除您的構圖，以確保適當的清理關聯的對象資料。
+>* 重設完成後，沙箱ID將會變更。
 
 ### 刪除對象組合
 
