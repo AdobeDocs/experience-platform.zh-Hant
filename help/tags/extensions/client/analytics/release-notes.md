@@ -2,10 +2,10 @@
 title: Adobe Analytics擴充功能發行說明
 description: Adobe Experience Platform中Adobe Analytics標籤擴充功能的最新發行說明。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
+source-git-commit: 5f4e157a39bf927b3821931d55f968862b2ed16d
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 68%
+source-wordcount: '1524'
+ht-degree: 65%
 
 ---
 
@@ -16,6 +16,14 @@ ht-degree: 68%
 >[!NOTE]
 >
 >Analytics標籤擴充功能（如果經常更新）以回應[AppMeasurementJavaScript資料庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)的更新。 請參閱[AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)，瞭解下列特定版本的詳細資訊。
+
+## 2024年10月28日
+
+**Adobe Analytics擴充功能1.9.6**
+
+**功能**：
+
+* 新增新功能，可讓使用者檢視及編輯[設定變數動作](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables)的JSON版本。 AdobeWeb SDK擴充功能也包含提供JSON以[填入Analytics變數](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types)的動作。 透過將JSON資料從AA擴充功能複製到Web SDK擴充功能，移轉客戶可輕鬆一次傳輸數個設定，而不必手動新增每個變數。
 
 ## 2024年8月12日
 
