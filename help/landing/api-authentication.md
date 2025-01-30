@@ -6,9 +6,9 @@ description: 本文件逐步說明如何存取 Adobe Experience Platform 開發�
 role: Developer
 feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 48c75f88d6862fa602e43929b72a6eac27d20e07
+source-git-commit: 850a4ae82fda22a761a28ac9059d7dea57c9662a
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2487'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 本教學課程涵蓋如何收集驗證Platform API呼叫所需的認證，如下方流程圖所述。 您可以在初始的一次性設定中收集大部分必要的認證。 然而，存取權杖必須每24小時重新整理一次。
 
-![](./images/api-authentication/authentication-flowchart.png)
+![一次性初始設定和每個後續工作階段的驗證流程需求。](./images/api-authentication/authentication-flowchart.png)
 
 ## 先決條件 {#prerequisites}
 
@@ -52,15 +52,15 @@ ht-degree: 2%
 
 ### 取得開發人員存取權 {#gain-developer-access}
 
-請連絡貴組織的[!DNL Admin Console]管理員，使用[[!DNL Admin Console]](https://adminconsole.adobe.com/)將您新增為Experience Platform產品設定檔的開發人員。 請參閱[!DNL Admin Console]檔案以取得如何[管理產品設定檔的開發人員存取權](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)的特定指示。
+請聯絡貴組織的Admin Console管理員，將您作為開發人員新增至Experience Platform產品設定檔。 請參閱Admin Console檔案以取得如何[管理產品設定檔的開發人員存取權](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)的特定指示。
 
 一旦指派您為開發人員，您就可以開始在[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)中建立整合。 這些整合是從外部應用程式和服務到Adobe API的管道。
 
 ### 取得使用者存取權 {#gain-user-access}
 
-您的[!DNL Admin Console]管理員也必須將您新增為相同產品設定檔的使用者。 透過使用者存取權，您可以在UI中檢視您執行的API作業的結果。
+您的Admin Console管理員還必須將您作為使用者新增到相同的產品設定檔。 透過使用者存取權，您可以在UI中檢視您執行的API作業的結果。
 
-如需詳細資訊，請參閱[在 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)中管理使用者群組的指南。
+如需詳細資訊，請參閱[在Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)中管理使用者群組的指南。
 
 ## 產生API金鑰（使用者端ID）和組織ID {#generate-credentials}
 
@@ -68,11 +68,11 @@ ht-degree: 2%
 >
 >如果您是從[Privacy ServiceAPI指南](../privacy-service/api/getting-started.md)追蹤此檔案，您現在可以返回該指南以產生[!DNL Privacy Service]唯一的存取認證。
 
-在透過[!DNL Admin Console]授予您開發人員和使用者存取Platform的許可權後，下一步就是在Adobe Developer Console中產生您的`{ORG_ID}`和`{API_KEY}`認證。 這些認證只需產生一次，並可在未來平台API呼叫中重複使用。
+透過Admin Console授予您開發人員和使用者存取Platform的許可權後，下一步就是在Adobe Developer Console中產生您的`{ORG_ID}`和`{API_KEY}`認證。 這些認證只需產生一次，並可在未來平台API呼叫中重複使用。
 
 >[!TIP]
 >
->您可以直接從API參考檔案頁面取得使用Platform API所需的所有驗證認證，而不用前往Developer Console。 [深入瞭解](#get-credentials-functionality)功能。
+>您可以直接從API參考檔案頁面取得使用Platform API所需的所有驗證認證，而不用前往Developer Console。 [閱讀更多](#get-credentials-functionality)有關此功能的資訊。
 
 ### 將Experience Platform新增至專案 {#add-platform-to-project}
 
@@ -86,9 +86,9 @@ ht-degree: 2%
 
 ![Developer Console熒幕，醒目提示「新增API」選項。](./images/api-authentication/add-api.png)
 
-**[!UICONTROL 新增API]**&#x200B;畫面會出現。 選取Adobe Experience Platform的產品圖示，然後選擇&#x200B;**[!UICONTROL Experience PlatformAPI]**，再選取&#x200B;**[!UICONTROL 下一步]**。
+**[!UICONTROL 新增API]**&#x200B;畫面會出現。 選取&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;的產品圖示，然後選擇&#x200B;**[!UICONTROL Experience PlatformAPI]**，再選取&#x200B;**[!UICONTROL 下一步]**。
 
-![選取Experience PlatformAPI。](./images/api-authentication/platform-api.png)
+![在新增API畫面中選取Experience PlatformAPI。](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
@@ -96,22 +96,17 @@ ht-degree: 2%
 
 ### 選取[!UICONTROL OAuth伺服器對伺服器]驗證型別 {#select-oauth-server-to-server}
 
-接著，選取[!UICONTROL OAuth伺服器對伺服器]驗證型別，以產生存取權杖並存取Experience PlatformAPI。
+接著，選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**&#x200B;驗證型別，以產生存取權杖並存取Experience PlatformAPI。 在選取&#x200B;**[!UICONTROL 下一步]**&#x200B;之前，請在&#x200B;**[!UICONTROL 認證名稱]**&#x200B;文字欄位中為您的認證提供有意義的名稱。
 
 >[!IMPORTANT]
 >
->**[!UICONTROL OAuth Server-to-Server]**&#x200B;方法是日後唯一支援的權杖產生方法。 先前支援的&#x200B;**[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時，無法選取以進行新整合。 雖然使用JWT驗證方法的現有整合可繼續運作至2025年1月1日，但Adobe強烈建議您在該日期之前將現有整合移轉至新的[!UICONTROL OAuth伺服器對伺服器]方法。 在[!BADGE 已棄用]一節中取得詳細資訊{type=negative}[產生JSON Web權杖(JWT)](#jwt)。
+>**[!UICONTROL OAuth Server-to-Server]**&#x200B;方法是日後唯一支援的權杖產生方法。 先前支援的&#x200B;**[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時，無法選取以進行新整合。 雖然使用JWT驗證方法的現有整合可繼續運作至2025年6月30日，但Adobe強烈建議您在該日期之前將現有整合移轉至新的[!UICONTROL OAuth伺服器對伺服器]方法。 在[!BADGE 已棄用]一節中取得詳細資訊{type=negative}[產生JSON Web權杖(JWT)](#jwt)。
 
 ![選取Experience PlatformAPI的OAuth伺服器對伺服器驗證方法。](./images/api-authentication/oauth-authentication-method.png)
 
 ### 選取要整合的產品設定檔 {#select-product-profiles}
 
-在&#x200B;**[!UICONTROL 設定API]**&#x200B;畫面中，選取&#x200B;**[!UICONTROL AEP-Default-All-Users]**。
-
-<!--
-Your integration's service account will gain access to granular features through the product profiles selected here.
-
--->
+在&#x200B;**[!UICONTROL 設定API]**&#x200B;畫面中，選取&#x200B;**[!UICONTROL AEP-Default-All-Users]**&#x200B;以及您想要存取的任何其他產品設定檔。
 
 >[!IMPORTANT]
 >
@@ -127,7 +122,7 @@ Your integration's service account will gain access to granular features through
 
 ### 收集認證 {#gather-credentials}
 
-將API新增至專案後，專案的&#x200B;**[!UICONTROL Experience Platform API]**&#x200B;頁面會顯示所有呼叫Experience Platform API時所需的下列認證：
+將API新增至專案後，專案的&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**&#x200B;頁面會顯示所有呼叫Experience PlatformAPI時所需的下列認證：
 
 在Developer Consle中新增API之後的![整合資訊。](./images/api-authentication/api-integration-information.png)
 
@@ -148,9 +143,9 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## 產生存取權杖 {#generate-access-token}
 
-下一步是產生`{ACCESS_TOKEN}`認證以用於Platform API呼叫。 不像`{API_KEY}`和`{ORG_ID}`的值，必須每24小時產生一次新Token，才能繼續使用Platform API。 選取&#x200B;**[!UICONTROL 產生存取權杖]**，如下所示。
+下一步是產生`{ACCESS_TOKEN}`認證以用於Platform API呼叫。 不像`{API_KEY}`和`{ORG_ID}`的值，必須每24小時產生一次新Token，才能繼續使用Platform API。 選取&#x200B;**[!UICONTROL 產生存取權杖]**，這會產生您的存取權杖，如下所示。
 
-![顯示如何產生存取權杖](././images/api-authentication/generate-access-token.gif)
+![顯示如何產生存取權杖](././images/api-authentication/generate-access-token.png)
 
 >[!TIP]
 >
@@ -180,7 +175,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 >[!WARNING]
 >
-不建議使用產生存取權杖的JWT方法。 所有新的整合都必須使用[OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server)來建立。 Adobe也要求您在2025年1月1日前將現有的整合移轉至OAuth方法，以便您的整合能繼續運作。 請參閱下列重要檔案：
+不建議使用產生存取權杖的JWT方法。 所有新的整合都必須使用[OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server)來建立。 Adobe也要求您在2025年6月30日前將現有的整合移轉至OAuth方法，以便您的整合能繼續運作。 請參閱下列重要檔案：
 > 
 * [您的應用程式從JWT移轉至OAuth的移轉指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [使用OAuth的新舊應用程式實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
@@ -331,71 +326,47 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 ## 系統管理員：透過Experience Platform許可權授予開發人員和API存取控制 {#grant-developer-and-api-access-control}
 
+您必須先擁有開發人員和使用者許可權，才能在Adobe Developer Console上建立整合，才能使用Experience Platform產品設定檔。
+
 >[!NOTE]
 >
 只有系統管理員才能在「許可權」中檢視和管理API認證。
 
-在Adobe Developer Console上建立整合之前，您的帳戶必須擁有Adobe Admin Console中Experience Platform產品設定檔的開發人員和使用者許可權。
-
 ### 將開發人員新增至產品設定檔 {#add-developers-to-product-profile}
 
-移至[[!DNL Admin Console]](https://adminconsole.adobe.com/)並使用您的Adobe ID登入。
+導覽至[Admin Console](https://adminconsole.adobe.com/)並使用您的Adobe ID登入。
 
-選取&#x200B;**[!UICONTROL 產品]**，然後從產品清單中選取&#x200B;**[!UICONTROL Adobe Experience Platform]**。
+從導覽列中選取&#x200B;**[!UICONTROL 產品]**，然後從產品清單中選取&#x200B;**[!UICONTROL Adobe Experience Platform]**。
 
-Admin Console](././images/api-authentication/products.png)上的![產品清單
+![Adobe Admin Console上的產品頁面中反白顯示Adobe Experience Platform產品。](././images/api-authentication/products.png)
 
 從&#x200B;**[!UICONTROL 產品設定檔]**&#x200B;索引標籤中，選取&#x200B;**[!UICONTROL AEP-Default-All-Users]**。 或者，使用搜尋列透過輸入名稱來搜尋產品描述檔。
 
-![搜尋產品設定檔](././images/api-authentication/select-product-profile.png)
+![產品設定檔頁面中反白顯示搜尋列和AEP-Default-All-Users產品。](././images/api-authentication/select-product-profile.png)
 
 選取&#x200B;**[!UICONTROL 開發人員]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL 新增開發人員]**。
 
-![從[開發人員]索引標籤新增開發人員](././images/api-authentication/add-developer1.png)
+![顯示[開發人員]索引標籤，並反白顯示[新增開發人員]選項，](././images/api-authentication/add-developer1.png)
 
-輸入開發人員的&#x200B;**[!UICONTROL 電子郵件或使用者名稱]**。 有效的[!UICONTROL 電子郵件或使用者名稱]將顯示開發人員詳細資料。 選取「**[!UICONTROL 儲存]**」。
+**[!UICONTROL 新增開發人員]**&#x200B;對話方塊出現。 輸入開發人員的&#x200B;**[!UICONTROL 電子郵件或使用者名稱]**。 有效的[!UICONTROL 電子郵件或使用者名稱]會顯示開發人員詳細資料。 選取「**[!UICONTROL 儲存]**」。
 
-![使用開發人員的電子郵件或使用者名稱新增開發人員](././images/api-authentication/add-developer-email.png)
+![新增開發人員對話方塊中填入開發人員資訊，並反白顯示[儲存]選項。](././images/api-authentication/add-developer-email.png)
 
-開發人員已成功新增，並出現在[!UICONTROL 開發人員]標籤上。
+開發人員已成功新增，並出現在&#x200B;**[!UICONTROL 開發人員]**&#x200B;標籤上。
 
-![在[開發人員]索引標籤上列出的開發人員](././images/api-authentication/developer-added.png)
+![「開發人員」標籤會顯示所有新增開發人員的清單，並反白標示新新增的開發人員。](././images/api-authentication/developer-added.png)
 
-<!--
+### 指派API認證給角色
 
-Commenting out this part since it duplicates information from the section Add Experience Platform to a project
+>[!NOTE]
+>
+只有系統管理員可以將API指派給Experience PlatformUI中的角色。
 
-### Set up an API
+若要在Experience Platform API上使用及執行作業，系統管理員除了角色的特定許可權集之外，還需要新增API認證。 在章節中取得有關[管理角色](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role)的API認證的詳細資訊。
 
-A developer can add and configure an API within a project in the Adobe Developer Console.
+以下影片教學課程也提供上述步驟的逐步解說，說明如何將開發人員新增至產品設定檔，以及將API指派至角色：
 
-Select your project, then select **[!UICONTROL Add API]**.
-
-![Add API to a project](././images/api-authentication/add-api-project.png)
-
-In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
-
-![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
-
-In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
-
--->
-
-### 將API指派給角色
-
-系統管理員可以將API指派給Experience PlatformUI中的角色。
-
-選取&#x200B;**[!UICONTROL 許可權]**&#x200B;以及您要將API新增到的角色。 選取&#x200B;**[!UICONTROL API認證]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL 新增API認證]**。
-
-選取角色中的![API認證標籤](././images/api-authentication/api-credentials.png)
-
-選取您要新增至角色的API，然後選取[儲存]。****
-
-![可供選擇的API清單](././images/api-authentication/select-api.png)
-
-您會返回[!UICONTROL API認證]標籤，其中列出新加入的API。
-
-![API認證索引標籤包含新新增的API](././images/api-authentication/api-credentials-with-added-api.png)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## 其他資源 {#additional-resources}
 
