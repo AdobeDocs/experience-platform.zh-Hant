@@ -2,10 +2,10 @@
 title: Adobe Target v2擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Target v2標籤擴充功能。
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 58%
+source-wordcount: '1351'
+ht-degree: 60%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 您可參閱此參考文件，了解使用此擴充功能建立規則時可使用哪些選項。
 
@@ -69,11 +69,13 @@ Target 擴充功能提供規則的「Then」部分中的下列動作：
 
 無需設定。
 
-### 使用「裝置上決策」載入Target
+### 使用裝置上決策載入Target
 
-將此動作新增至您的標籤規則，其中載入在您的規則內容中啟用[裝置上決策](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html)的Target是可行的。 這會載入已啟用裝置上決策的at.js程式庫至頁面。 在大部分實作中，您網站的每個頁面上都應載入 Target。Adobe建議，除非先前已有Target呼叫，否則應搭配使用「載入Target及裝置上決策」動作。 否則可能會發生 Analytics 呼叫延遲等問題。
+將此動作新增至您的標籤規則，其中載入在您的規則內容中啟用[裝置上決策](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html)的Target是可行的。 這會載入已啟用裝置上決策的at.js程式庫至頁面。 在大部分實作中，您網站的每個頁面上都應載入 Target。Adobe建議，除非先前已有Target呼叫，否則應搭配裝置上決策動作使用「載入Target」 。 否則可能會發生 Analytics 呼叫延遲等問題。
 
-無需設定。
+>[!IMPORTANT]
+>
+>僅將頁面載入請求與裝置上決策搭配使用（如果已設定）。 將此動作新增至規則會增加最終Launch套件組合的大小，因為它包含裝置上決策規則引擎。
 
 ### 新增參數至所有要求
 
