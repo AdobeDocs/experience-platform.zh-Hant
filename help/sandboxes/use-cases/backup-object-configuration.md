@@ -2,9 +2,9 @@
 title: 使用沙箱工具備份物件設定
 description: 若要安全地重設沙箱並新增版本設定支援，請使用沙箱工具套件備份物件設定（或中繼資料）。 備份套件可防止關鍵組態（例如結構描述、資料集和對象）遺失，尤其是在開發反複專案期間。
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 若要安全地重設沙箱並新增版本設定支援，請使用沙箱工具套件備份物件設定（或中繼資料）。 備份套件可防止關鍵組態（例如結構描述、資料集和對象）遺失，尤其是在開發反複專案期間。
 
-![顯示沙箱工具優點的總覽](../images/use-cases/tooling-overview.png)
+![顯示沙箱工具優點的總覽](../images/use-cases/tooling-overview.png){zoomable="yes"}
 
 ## 為何考慮此使用案例 {#why-this-use-case}
 
@@ -65,7 +65,7 @@ ht-degree: 3%
 
 ### 將您選擇的中繼資料匯出至封裝
 
-此時，您已準備好使用沙箱工具使用者介面來備份沙箱。 此步驟將涵蓋備份整個沙箱和備份特定物件。
+此時，您已準備好使用沙箱工具使用者介面來備份沙箱。 此步驟涵蓋備份整個沙箱和備份特定物件。
 
 >[!NOTE]
 >

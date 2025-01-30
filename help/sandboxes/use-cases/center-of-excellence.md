@@ -1,7 +1,8 @@
 ---
 title: 使用沙箱工具啟用卓越中心
 description: 透過建立「黃金沙箱」套件，以標準化多個沙箱的最佳做法，使用沙箱工具啟用卓越中心。
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 7%
@@ -12,7 +13,7 @@ ht-degree: 7%
 
 透過建立「黃金沙箱」套件，以標準化多個沙箱的最佳做法，使用沙箱工具啟用卓越中心。
 
-![跨不同組織匯出套件的概觀](../images/use-cases/packages-across-orgs.png)
+![跨不同組織匯出套件的概觀](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## 為何考慮此使用案例 {#why-this-use-case}
 
