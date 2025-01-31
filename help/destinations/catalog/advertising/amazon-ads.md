@@ -1,16 +1,16 @@
 ---
 title: Amazon Ads
 description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書供應商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的鑰匙式整合。 使用Adobe Experience Platform中的Amazon Ads目的地，使用者能在Amazon DSP上定義用於鎖定和啟用的廣告商對象。
-last-substantial-update: 2024-09-20T00:00:00Z
+last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1837'
 ht-degree: 2%
 
 ---
 
-# (Beta) Amazon Ads連線 {#amazon-ads}
+# Amazon Ads連線 {#amazon-ads}
 
 ## 概觀 {#overview}
 
@@ -24,7 +24,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 >[!IMPORTANT]
 >
->此目的地聯結器和檔案頁面是由&#x200B;*[!DNL Amazon Ads]*&#x200B;團隊建立和維護。 此產品目前為測試版，功能可能會有所變更。 若有任何查詢或更新要求，請直接在&#x200B;*`amc-support@amazon.com`.*&#x200B;聯絡他們
+>此目的地聯結器和檔案頁面是由&#x200B;*[!DNL Amazon Ads]*&#x200B;團隊建立和維護。 若有任何查詢或更新要求，請直接在&#x200B;*`amc-support@amazon.com`.*&#x200B;聯絡他們
 
 ## 使用案例 {#use-cases}
 
@@ -85,8 +85,6 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 系統會將您帶往[!DNL Amazon Ads]連線介面，讓您先選取要連線的廣告商帳戶。 連線後，系統會將您重新導向回Adobe Experience Platform，並顯示您選取的廣告商帳戶ID，其中包含新的連線。 在目的地設定畫面上選取適當的廣告商帳戶以繼續。
 
-* **[!UICONTROL 持有人權杖]**：填入持有人權杖以驗證目的地。
-
 ### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
@@ -101,9 +99,13 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 * **[!UICONTROL 廣告商地區]**：選取您的廣告商所在的適當地區。 如需各個區域支援之市場環境的詳細資訊，請瀏覽[Amazon Ads檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)。
 
+>[!IMPORTANT]
+>
+>包含&#x200B;**[!UICONTROL Amazon Ads同意訊號]**&#x200B;的更新已排定於2025年2月7日前上線。
 
+* **[!UICONTROL Amazon Ads同意訊號]**：確認透過此連線傳送的所有資料都已同意使用個人資料做廣告用途。 「GRANTED」表示Amazon同意將客戶的個人資料用於廣告。 允許值為「GRANTED」和「DENIED」。 任何透過連線傳送的記錄若有「DENIED」，將會遭拒，以便在Amazon Ads中進一步使用。
 
-![設定新的目的地](../../assets/catalog/advertising/amazon_ads_image_4.png)
+![設定新的目的地](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### 啟用警示 {#enable-alerts}
 
@@ -124,7 +126,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 [!DNL Amazon Ads]連線支援雜湊電子郵件地址和雜湊電話號碼，以進行身分比對。 下面的熒幕擷圖提供與[!DNL Amazon Ads]連線相容的相符範例：
 
-![Adobe至Amazon Ads對應](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![Adobe至Amazon Ads對應](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * 若要對應雜湊電子郵件地址，請選取`Email_LC_SHA256`身分名稱空間作為來源欄位。
 * 若要對應雜湊電話號碼，請選取`Phone_SHA256`身分名稱空間作為來源欄位。
@@ -143,7 +145,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 導覽至您的&#x200B;**[!UICONTROL 廣告商ID]** > **[!UICONTROL 對象]** > **[!UICONTROL 廣告商對象]**。 若您的對象已成功建立且符合對象成員的最小數量，您將會看到`Active`的狀態。 您可以在Amazon DSP使用者介面右側的預測觸及面板中，找到有關您對象人數和觸及率的其他詳細資訊。
 
-![Amazon DSP對象建立驗證](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Amazon DSP對象建立驗證](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 [!DNL Amazon Marketing Cloud]**的**
 
@@ -151,8 +153,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![AmazonMarketing Cloud對象建立驗證](../../assets/catalog/advertising/amazon_ads_image_5.png)
-
+![AmazonMarketing Cloud對象建立驗證](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 
@@ -172,7 +173,8 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2024 年 5 月 | 功能和檔案更新 | 已新增對應選項，以便將`countryCode`引數匯出至Amazon Ads。 在[對應步驟](#map)中使用`countryCode`來提高您與Amazon的身分符合率。 |
+| 2025 年 2 月 | 新增新增&#x200B;**[!UICONTROL Amazon Ads同意訊號]**&#x200B;以匯出資料流程的需求，並將目的地從Beta版升級為一般可用。 |
+| 2024 年 5 月 | 功能和檔案更新 | 已新增對應選項，以便將`countryCode`引數匯出至Amazon Ads。 使用 `countryCode` (在[對應步驟](#map)中) 來提高您與 Amazon 的身分識別符合率。 |
 | 2024 年 3 月 | 功能和檔案更新 | 新增匯出對象以在[!DNL Amazon Marketing Cloud] (AMC)中使用的選項。 |
 | 2023 年 5 月 | 功能和檔案更新 | <ul><li>已在[目的地連線工作流程](#destination-details)中新增對廣告商區域選取的支援。</li><li>更新說明檔案，反映新增廣告商地區選擇。 如需選取正確廣告商地區的詳細資訊，請參閱[Amazon檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)。</li></ul> |
 | 2023 年 3 月 | 首次發行 | 已發佈初始目的地版本和檔案。 |

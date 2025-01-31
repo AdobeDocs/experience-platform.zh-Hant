@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
+source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: '1269'
 ht-degree: 5%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 5%
       * [Advertising目的地概觀](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud連線](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud擴充功能](./catalog/advertising/adobe-advertising-cloud.md)
-      * [(Beta) Amazon Ads連線](./catalog/advertising/amazon-ads.md)
+      * [Amazon Ads連線](./catalog/advertising/amazon-ads.md)
       * [Awin廣告商轉換標籤擴充功能](./catalog/advertising/awin-conversiontag.md)
       * [Awin廣告商Mastertag擴充功能](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads通用事件追蹤(UET)擴充功能](./catalog/advertising/bing-ads.md)
