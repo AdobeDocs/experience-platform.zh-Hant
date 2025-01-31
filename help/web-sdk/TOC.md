@@ -6,7 +6,7 @@ breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
 role: Developer
-source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
+source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 23%
@@ -20,13 +20,13 @@ ht-degree: 23%
 * [發行說明](release-notes.md)
 * Web SDK安裝{#install}
    * [概觀](install/overview.md)
-   * [使用標籤擴充功能安裝Web SDK](install/extension.md)
-   * [使用JavaScript程式庫安裝Web SDK](install/library.md)
-   * [使用NPM套件安裝Web SDK](install/npm.md)
+   * [使用標籤擴充功能安裝網頁SDK](install/extension.md)
+   * [使用JavaScript程式庫安裝網頁SDK](install/library.md)
+   * [使用NPM套件安裝網頁SDK](install/npm.md)
 * 命令{#commands}
    * 設定{#configure}
       * [概觀](commands/configure/overview.md)
-      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+      * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [內容](commands/configure/context.md)
@@ -101,7 +101,7 @@ ht-degree: 23%
 
 * 使用案例 {#use-cases}
    * [概觀](use-cases/overview.md)
-   * [使用Web SDK傳送資料給Adobe Analytics](use-cases/adobe-analytics.md)
+   * [使用網頁SDK傳送資料至Adobe Analytics](use-cases/adobe-analytics.md)
    * [使用者代理使用者端提示](use-cases/client-hints.md)
    * [收集商務資料](use-cases/collect-commerce-data.md)
    * [設定CSP](use-cases/configuring-a-csp.md)
