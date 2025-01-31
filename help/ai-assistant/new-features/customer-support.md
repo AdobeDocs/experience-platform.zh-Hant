@@ -3,9 +3,9 @@ title: 客戶支援的AI助理
 description: 瞭解如何使用AI Assistant來簡化疑難排解和客戶支援票證歸檔流程。
 badge: Alpha
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
+source-git-commit: e224716f8fba59529c5d7634d4b4a3013a0986a3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,8 @@ ht-degree: 0%
    * 「票證E-67890有什麼更新？」
 
 若要存取客戶支援的AI助理，請聯絡您的Adobe客戶團隊。
+
+如需詳細資訊，請觀看以下影片，瞭解如何使用客戶支援專用的AI助理進行順暢的疑難排解，而不需要離開您的工作流程。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
