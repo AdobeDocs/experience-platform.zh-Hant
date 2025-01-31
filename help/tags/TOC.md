@@ -6,9 +6,9 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
+source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '775'
 ht-degree: 35%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 35%
          * [概觀](./extensions/client/product-string/overview.md)
          * [發行說明](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics產品字串產生器](https://exchange.adobe.com/apps/ec/101461)
-      * 透過Adobe Experience Platform Web SDK [Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
+      * [透過Adobe Experience Platform Web SDK的Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [概觀](./extensions/client/audience-manager/overview.md)
       * Adobe使用者端資料層{#client-data-layer}
@@ -100,7 +100,7 @@ ht-degree: 35%
          * [概觀](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#web-sdk}
          * [概觀](./extensions/client/web-sdk/overview.md)
-         * [設定Web SDK標籤擴充功能](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [設定網頁SDK標籤擴充功能](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
          * [事件類型](./extensions/client/web-sdk/event-types.md)
          * [動作類型](./extensions/client/web-sdk/action-types.md)
          * [資料元素類型](./extensions/client/web-sdk/data-element-types.md)
@@ -206,9 +206,8 @@ ht-degree: 35%
       * [Vimeo播放](https://exchange.adobe.com/apps/ec/108937)
       * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
       * [XDM撰寫器](https://exchange.adobe.com/apps/ec/106062)
-      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
       * [Yext轉換追蹤](https://exchange.adobe.com/apps/ec/103174)
-      * [[!DNL Youtube] 播放](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] 播放](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube]視訊追蹤{#youtube}
          * [概觀](./extensions/client/youtube/overview.md)
          * [發行說明](./extensions/client/youtube/release-notes.md)
