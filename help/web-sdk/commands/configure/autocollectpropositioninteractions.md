@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: 瞭解如何設定Experience Platform Web SDK以自動收集連結資料。
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## 透過網路SDK標籤擴充功能啟用自動主張和互動點選追蹤 {#tag-extension}
 
 1. 使用您的Adobe ID認證登入[experience.adobe.com](https://experience.adobe.com)。
-2. 導覽至&#x200B;**資料彙集** > **標籤**。
-3. 選取所需的標籤屬性。
-4. 導覽至&#x200B;**擴充功能**，然後選取Adobe Experience Platform Web SDK卡片上的&#x200B;**設定**。
-5. 向下捲動至&#x200B;**[!UICONTROL 資料彙集]**&#x200B;區段，然後選取核取方塊&#x200B;**啟用主張與互動連結追蹤**。
-6. 選取「**儲存**」，然後發佈您的變更。
+1. 導覽至&#x200B;**資料彙集** > **標籤**。
+1. 選取所需的標籤屬性。
+1. 導覽至&#x200B;**擴充功能**，然後選取Adobe Experience Platform Web SDK卡片上的&#x200B;**設定**。
+1. 向下捲動至&#x200B;**[!UICONTROL 資料彙集]**&#x200B;區段，然後選取核取方塊&#x200B;**啟用主張與互動連結追蹤**。
+1. 選取「**儲存**」，然後發佈您的變更。
 
 ## 透過網路SDK JavaScript資料庫啟用自動主張和互動連結追蹤 {#library}
 
