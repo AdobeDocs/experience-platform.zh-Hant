@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="唯一的名稱空間"
->abstract="圖表不能有兩個具有唯一名稱空間的身分。 如果圖表嘗試超過此限制，則會保留最近的連結，並移除最舊的連結。"
+>abstract="一個圖不能有兩個具有唯一命名空間的身分識別。若圖表試圖超出此限制時，將會保留最新的連結並移除最舊的連結。"
 
 >[!AVAILABILITY]
 >

@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_simulatedgraph"
 >title="模擬圖表"
->abstract="當身分識別命名空間和身分識別值相符時，便會連結身分識別。"
+>abstract="當身分識別命名空間和身分識別值相符時，身分便會連結。"
 
 當身分名稱空間和身分值相符時，就會建立兩個身分之間的連結。
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 | 一般使用者使用Google Chrome，然後使用Firefox登入。 | CRMID連結至兩個不同的ECID。 | 人員(CRMID)與2個網頁瀏覽器相關聯（**注意**：每個瀏覽器都有自己的ECID）。 |
 | 資料工程師會擷取CRM記錄，該記錄包含兩個標示為身分的欄位：CRMID和電子郵件。 | CRMID和電子郵件已連結。 | 人員(CRMID)與電子郵件地址相關聯。 |
 
-## 瞭解Identity Service連結邏輯
+## 了解身分識別服務連結邏輯
 
 身分由身分名稱空間和身分值組成。
 

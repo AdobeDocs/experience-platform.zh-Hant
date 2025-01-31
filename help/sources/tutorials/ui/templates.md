@@ -1,7 +1,7 @@
 ---
 description: 瞭解如何在Adobe Experience Platform UI中使用範本，以加速B2B資料的資料擷取程式。
 title: 使用 UI 中的範本建立來源資料流
-badge1: "Beta"
+badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -51,7 +51,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 >id="platform_sources_templates_accounttype"
 >title="選取商業類型"
 >abstract="為您的使用案例選取適合的商業類型。您的存取權限可能會依據您的即時客戶資料平台訂閱帳戶而不同。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#" text="Real-Time CDP 概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP 概觀"
 
 在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區，並檢視Experience Platform中可用的來源目錄。
 
@@ -137,7 +137,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 | [!DNL Salesforce]個B2C範本 | 說明 |
 | --- | --- |
-| 連絡人 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
+| 聯絡 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
 | 銷售機會 | 潛在客戶範本會擷取潛在客戶的屬性，例如人口統計細節、聯絡資訊和相關業務實體。 |
 
 {style="table-layout:auto"}
@@ -167,7 +167,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 | [!DNL Microsoft Dynamics]個B2C範本 | 說明 |
 | --- | --- |
-| 連絡人 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
+| 聯絡 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
 | 銷售機會 | 潛在客戶範本會擷取潛在客戶的屬性，例如人口統計細節、聯絡資訊和相關業務實體。 |
 
 {style="table-layout:auto"}

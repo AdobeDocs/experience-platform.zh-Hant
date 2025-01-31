@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="圖表模擬"
->abstract="模擬圖表以了解身分識別服務如何連結身分識別，以及身分識別最佳化演算法如何運作。"
+>abstract="模擬圖表以了解身分識別服務如何連結身分，以及身分識別最佳化演算法如何運作。"
 
 >[!AVAILABILITY]
 >
@@ -130,7 +130,7 @@ ht-degree: 2%
 
 ![已選取刪除事件圖示。](../images/graph-simulation/delete.png)
 
-## 設定演演算法 {#configure-algorithm}
+## 設定演算法 {#configure-algorithm}
 
 >[!IMPORTANT]
 >

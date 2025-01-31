@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
 >title="名稱空間優先順序"
->abstract="命名空間優先等級會決定如何從身分識別圖表中移除連結。"
+>abstract="命名空間優先順序會決定如何從身分識別圖中移除連結。"
 
 >[!AVAILABILITY]
 >

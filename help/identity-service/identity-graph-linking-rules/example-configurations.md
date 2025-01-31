@@ -13,8 +13,8 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
->title="演演算法設定"
->abstract="設定適合您所攝取身分識別的唯一命名空間和命名空間優先等級。"
+>title="演算法設定"
+>abstract="設定適合您所攝取身分的唯一命名空間和命名空間優先順序。"
 
 >[!AVAILABILITY]
 >
