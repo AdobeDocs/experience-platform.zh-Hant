@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段會籍詳細資料結構欄位群組
 description: 瞭解區段會籍詳細資料結構欄位群組。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '402'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 >
 >雖然`segmentMembership`欄位必須使用此欄位群組手動新增到您的設定檔結構描述，但您不應該嘗試手動填入或更新此欄位。 在執行分段工作時，系統會自動更新每個設定檔的`segmentMembership`對應。
 
-<img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
+![設定檔分段](../../images/data-types/profile-segmentation.png){width=400}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

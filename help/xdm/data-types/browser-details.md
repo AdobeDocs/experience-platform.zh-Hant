@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 瀏覽器詳細資料型別
 description: 瞭解瀏覽器詳細資料XDM資料型別。
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '242'
 ht-degree: 27%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 [!UICONTROL 瀏覽器詳細資料]是標準的XDM資料型別，說明與瀏覽器或應用程式相關的詳細資料。
 
-<img src="../images/data-types/browser-details.png" width="450" /><br />
+![](../images/data-types/browser-details.png){width=450}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

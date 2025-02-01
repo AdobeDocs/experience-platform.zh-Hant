@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 管理Privacy Service UI中的隱私權工作
 description: 瞭解如何使用Privacy Service使用者介面來協調及監控各種Experience Cloud應用程式的隱私權請求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1786'
 ht-degree: 11%
 
 ---
@@ -159,29 +159,29 @@ Waiting:
 
 「**[!UICONTROL 建立請求]**」對話方塊開啟，顯示可用於針對目前選取的法規型別提交隱私權工作請求的選項。
 
-<img src="../images/user-guide/request-builder.png" width="500" /><br/>
+![](../images/user-guide/request-builder.png){width=500}
 
 從清單中選取請求的&#x200B;**[!UICONTROL 工作型別]** （「刪除」或「存取」）以及一個或多個可用產品。
 
 Privacy Service支援兩種個人資料工作要求： [!UICONTROL 存取] （讀取）及/或[!UICONTROL 刪除]。 您可以提交請求，以接收產品中與查詢主題相關的所有資訊，或請求刪除與查詢主題相關的所有資訊。
 
-<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
+![](../images/user-guide/type-and-products.png){width=500}
 
 在&#x200B;**[!UICONTROL 名稱空間型別]**&#x200B;底下，為傳送至[!DNL Privacy Service]的客戶ID選取適當的名稱空間型別。
 
-<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+![](../images/user-guide/namespace-type.png){width=500}
 
 使用標準名稱空間型別時，請從下拉式選單中選取名稱空間（電子郵件、ECID或AAID），然後在右側的文字方塊中輸入ID值，對每個ID按&#x200B;**\&lt;enter>**&#x200B;即可將其新增至清單。
 
-<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+![](../images/user-guide/standard-namespace.png){width=500}
 
 使用自訂名稱空間型別時，您必須手動輸入名稱空間，才能在下方提供ID值。
 
-<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+![](../images/user-guide/custom-namespace.png){width=500}
 
 完成後，選取&#x200B;**[!UICONTROL 建立]**。
 
-<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
+![](../images/user-guide/request-builder-create.png){width=500}
 
 對話方塊會消失，而新工作（或多個工作）及其目前處理狀態會列在工作請求Widget中。
 
@@ -195,12 +195,12 @@ Privacy Service支援兩種個人資料工作要求： [!UICONTROL 存取] （�
 
 **[!UICONTROL 上傳JSON]**&#x200B;對話方塊隨即顯示，為您提供可將JSON檔案拖放到的視窗。
 
-<img src="../images/user-guide/upload-json.png" width="500" /><br/>
+![](../images/user-guide/upload-json.png){width=500}
 
 如果您沒有要上傳的JSON檔案，請選取&#x200B;**[!UICONTROL 下載Adobe-GDPR-Request.json]**&#x200B;以下載範本，您可以根據從資料主體收集的值填入範本。
 
 
-<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
+![](../images/user-guide/privacy-template.png){width=500}
 
 
 在電腦上找到JSON檔案，並將其拖曳至對話方塊視窗。 如果上傳成功，檔案名稱會顯示在對話方塊中。 您可以視需要繼續新增更多JSON檔案，方法是將其拖放至對話方塊中。

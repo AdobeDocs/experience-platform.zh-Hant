@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 地理座標資料型別
 description: 瞭解地理座標XDM資料型別。
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 13%
+source-wordcount: '124'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 [!UICONTROL 地理座標]是描述某個地點地理座標的標準XDM資料型別。 此資料型別是以[schema.org](https://schema.org/GeoCoordinates)上記錄的公用規格為基礎。
 
-<img src="../images/data-types/geo-coordinates.png" width="400" /><br />
+![](../images/data-types/geo-coordinates.png){width=400}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

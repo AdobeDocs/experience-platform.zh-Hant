@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 地理形狀資料型別
 description: 瞭解地理形狀XDM資料型別。
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '240'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 [!UICONTROL 地理形狀]是描述地理區域形狀的標準XDM資料型別。 此資料型別是以[schema.org](https://schema.org/GeoShape)上記錄的公用規格為基礎。
 
-<img src="../images/data-types/geo-shape.png" width="500" /><br />
+![](../images/data-types/geo-shape.png){width=500}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

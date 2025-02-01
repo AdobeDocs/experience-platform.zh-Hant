@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 信標資料型別
 description: 瞭解XDM個別設定檔類別。
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '235'
 ht-degree: 17%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 17%
 
 [!UICONTROL 信標]是標準的XDM資料型別，說明在行動裝置進入範圍內時，無線裝置會與行動應用程式通訊身分資訊。
 
-<img src="../images/data-types/beacon.png" width="450" /><br />
+![](../images/data-types/beacon.png){width=450}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

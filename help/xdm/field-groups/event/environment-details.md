@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 環境詳細資料結構欄位群組
 description: 瞭解ExperienceEvent環境詳細資料結構欄位群組。
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '191'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 [!UICONTROL 環境詳細資料]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，用於擷取與體驗事件相關的環境詳細資料相關資訊，例如裝置詳細資料、瀏覽器資訊、當地時間和其他地理資訊。
 
-<img src="../../images/field-groups/environment-details.png" width="500" /><br />
+![](../../images/field-groups/environment-details.png){width=500}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

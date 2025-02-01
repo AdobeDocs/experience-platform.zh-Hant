@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 個人名稱資料型別
 description: 瞭解人員名稱XDM資料型別。
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '232'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 此外，資料型別提供許多可選屬性，可用於只需要使用全名片段的狀況，例如建立正式或非正式的問候語。
 
-<img src="../images/data-types/person-name.png" width="500" /><br />
+![](../images/data-types/person-name.png){width=500}
 
 | 屬性 | 說明 |
 | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 興趣點互動資料型別
 description: 瞭解興趣點互動XDM資料型別。
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '164'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL 興趣點互動]是標準的XDM資料型別，說明在行動裝置進入範圍內時，將身分資訊傳達給行動應用程式的無線裝置。
 
-<img src="../images/data-types/poi-interaction.png" width="400" /><br />
+![](../images/data-types/poi-interaction.png){width=400}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

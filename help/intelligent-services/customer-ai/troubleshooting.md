@@ -6,9 +6,9 @@ title: Customer AI錯誤疑難排解
 description: 尋找Customer AI中常見錯誤的答案。
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 如果顯示&#x200B;**[!UICONTROL 失敗]**&#x200B;或&#x200B;**[!UICONTROL 訓練問題]**，您可以選取執行狀態以開啟側面板。 側面板包含您的&#x200B;**[!UICONTROL 上次執行狀態]**&#x200B;和&#x200B;**[!UICONTROL 上次執行詳細資料]**。 **[!UICONTROL 上次執行詳細資料]**&#x200B;包含執行失敗原因的資訊。 如果Customer AI無法提供您錯誤的詳細資訊，請聯絡支援人員並提供錯誤代碼。
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## 無法無痕存取Chrome中的Customer AI
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 如果您收到錯誤「[!UICONTROL 模型品質不良」。 建議您使用修改後的設定]來建立新的應用程式。 請依照下列建議的步驟進行疑難排解。
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### 建議的修正
 

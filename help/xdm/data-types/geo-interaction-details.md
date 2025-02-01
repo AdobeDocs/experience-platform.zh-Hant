@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 地理互動詳細資料資料型別
 description: 瞭解地理互動細節XDM資料型別。
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '137'
 ht-degree: 13%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 [!UICONTROL 地理互動詳細資料]是標準的XDM資料型別，說明地理定義區域中目前的包含狀態。
 
-<img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
+![](../images/data-types/geo-interaction-details.png){width=400}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 身分資料型別
 description: 瞭解身分XDM資料型別。
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '264'
 ht-degree: 11%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 [!UICONTROL 身分]是標準的XDM資料型別，用來明確區分與數位體驗互動的人。 身分由身分提供者建立，其本身在`namespace`屬性中參考。 在每個`namespace`中，此身分是唯一的。
 
-<img src="../images/data-types/identity.png" width="550" /><br />
+![](../images/data-types/identity.png){width=550}
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
