@@ -2,10 +2,10 @@
 title: 快速入門手冊
 description: 瞭解如何快速上手並執行Adobe Experience Platform中的標籤。
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
+source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
 workflow-type: tm+mt
 source-wordcount: '1521'
-ht-degree: 41%
+ht-degree: 44%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 標籤是Adobe Experience Platform的下一代標籤管理技術。 這套技術從頭開始打造，以支援開放且永續的生態系統，讓任何人都能自行建立整合功能，供Adobe客戶部署在他們的網站上。 這是 API 優先的應用程式，所以您可以透過 UI 完成的任何工作，也可以透過 API 以程式設計方式完成。
 
@@ -134,6 +134,6 @@ ht-degree: 41%
 
 若要深入瞭解標籤，請參閱以下資源：
 
-* **[資料收集社群](https://forums.adobe.com/community/experience-cloud/platform/launch)**：詢問和解答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
+* **[資料收集社群](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**：詢問和解答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
 * **[開發人員檔案](../api/overview.md)**：參與標籤開發人員社群，以建立擴充功能或使用標籤API
 * **[Tutorials總覽](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**：這些檔案會向您介紹Android應用程式中的標籤概念，包括事件轉送和Mobile SDK。
