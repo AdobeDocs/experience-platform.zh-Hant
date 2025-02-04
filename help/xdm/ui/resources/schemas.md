@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4072'
 ht-degree: 1%
 
 ---
@@ -354,7 +354,7 @@ abstract="為輪廓啟用結構描述時，從此結構描述建立的任何資�
 >
 一旦您變更了結構描述的欄位顯示名稱，這些變更就會立即反映在基於該結構描述的現有資料集中。
 
-若要編輯綱要欄位的顯示名稱，請選取畫布中的欄位。 在右邊欄中，在&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;下提供新名稱。
+切換至&#x200B;**[!UICONTROL 顯示欄位]**&#x200B;的顯示名稱，將欄位名稱變更為顯示名稱。 若要編輯綱要欄位的顯示名稱，請選取畫布中的欄位。 在右邊欄中，在&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;下提供新名稱。
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
