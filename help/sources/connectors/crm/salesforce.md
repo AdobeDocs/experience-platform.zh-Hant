@@ -2,9 +2,9 @@
 title: Salesforce Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
+source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,15 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 
 Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的支援包括[!DNL Salesforce]。
 
-## IP位址允許清單
+## 設定您在Azure上Experience Platform的[!DNL Salesforce]來源 {#azure}
+
+請依照下列步驟，瞭解如何設定[!DNL Salesforce]帳戶以在Azure上Experience Platform。
+
+### IP位址允許清單
 
 使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-## 從[!DNL Salesforce]到XDM的欄位對應
+### 從[!DNL Salesforce]到XDM的欄位對應
 
 若要在[!DNL Salesforce]和Platform之間建立來源連線，[!DNL Salesforce]來源資料欄位必須先對應到適當的目標XDM欄位，才能擷取到Platform。
 
@@ -38,7 +42,7 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 - [行銷活動成員](../adobe-applications/mapping/salesforce.md#campaign-member)
 - [帳戶聯絡人關係](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
-## 設定[!DNL Salesforce]名稱空間和結構描述自動產生公用程式
+### 設定[!DNL Salesforce]名稱空間和結構描述自動產生公用程式
 
 若要使用[!DNL Salesforce]來源做為[!DNL B2B-CDP]的一部分，您必須先設定[!DNL Postman]公用程式來自動產生[!DNL Salesforce]名稱空間和結構描述。 下列檔案提供有關設定[!DNL Postman]公用程式的額外資訊：
 
@@ -271,7 +275,7 @@ public class Main {
 
 以下檔案提供如何使用API或使用者介面將[!DNL Salesforce]連線到Platform的資訊：
 
-- [使用Flow Service API建立Salesforce基本連線](../../tutorials/api/create/crm/salesforce.md)
+- [使用流量服務API連線Salesforce至Experience Platform](../../tutorials/api/create/crm/salesforce.md)
 - [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 - [使用流程服務API為CRM來源建立資料流](../../tutorials/api/collect/crm.md)
 

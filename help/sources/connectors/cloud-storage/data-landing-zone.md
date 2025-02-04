@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: 瞭解如何將Data Landing Zone連結至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1530d7b9815688ab58fb6349ef77e92124741883
+source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,15 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone]支援SAS式驗證，其資料受到標準[!DNL Azure Blob]存放裝置安全機制的保護。 SAS式驗證可讓您透過公用網際網路連線，安全地存取[!DNL Data Landing Zone]容器。 您不需要變更網路即可存取[!DNL Data Landing Zone]容器，這表示您不需要為網路設定任何允許清單或跨區域設定。 Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案和資料夾強制實施嚴格的七天到期時間。 所有檔案和資料夾都會在七天後刪除。
 
+## 設定您在Azure上Experience Platform的[!DNL Data Landing Zone]來源 {#azure}
+
+請依照下列步驟，瞭解如何設定[!DNL Data Landing Zone]帳戶以在Azure上Experience Platform。
+
 >[!NOTE]
 >
 >如果您要從[!DNL Azure Data Factory]存取[!DNL Data Landing Zone]，則必須使用Experience Platform提供的[SAS認證](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)為[!DNL Data Landing Zone]建立連結的服務。 建立連結的服務後，您就可以選取容器路徑（而非預設的根路徑）來探索[!DNL Data Landing Zone]。
 
-## 檔案和目錄的命名限制
+### 檔案和目錄的命名限制
 
 以下是您在命名雲端儲存空間檔案或目錄時必須考慮的限制清單。
 
@@ -34,17 +38,17 @@ ht-degree: 0%
 - 不允許非法URL路徑字元。 類似`\uE000`的程式碼點雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，不允許使用某些ASCII或Unicode字元，例如控制字元（例如`0x00`到`0x1F`、`\u0081`等）。 如需HTTP/1.1中Unicode字串的規則，請參閱[RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt)和[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
 - 不允許下列檔案名稱： LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)和兩個點字元(..)。
 
-## 管理資料登陸區域的內容{#manage-the-contents-of-your-data-landing-zone}
+### 管理資料登陸區域的內容{#manage-the-contents-of-your-data-landing-zone}
 
 您可以使用[[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/)來管理[!DNL Data Landing Zone]容器的內容。
 
 在[!DNL Azure Storage Explorer] UI中，選取左側導覽中的連線圖示。 **選取資源**&#x200B;視窗會出現，提供您連線的選項。 選取&#x200B;**[!DNL Blob container]**&#x200B;以連線至[!DNL Data Landing Zone]。
 
-![select-resource](../../images/tutorials/create/dlz/select-resource.png)
+![Azure Explorer上的選取資源工作區。](../../images/tutorials/create/dlz/select-resource.png)
 
 接著，選取&#x200B;**共用存取簽章URL (SAS)**&#x200B;作為您的連線方法，然後選取&#x200B;**下一步**。
 
-![select-connection-method](../../images/tutorials/create/dlz/select-connection-method.png)
+![Azure Explorer上的選取連線方法，已選取共用存取簽章。](../../images/tutorials/create/dlz/select-connection-method.png)
 
 選取您的連線方法後，您必須接著提供與[!DNL Data Landing Zone]容器相對應的&#x200B;**顯示名稱**&#x200B;和&#x200B;**[!DNL Blob]容器SAS URL**。
 
@@ -54,19 +58,19 @@ ht-degree: 0%
 
 提供您的[!DNL Data Landing Zone] SAS URL，然後選取&#x200B;**下一步**
 
-![enter-connection-info](../../images/tutorials/create/dlz/enter-connection-info.png)
+![輸入顯示名稱和SAS URL的Azure Explorer上的連線資訊工作區。](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 「**摘要**」視窗會出現，提供您設定的總覽，包括[!DNL Blob]端點與許可權的相關資訊。 準備就緒後，選取&#x200B;**連線**。
 
-![摘要](../../images/tutorials/create/dlz/summary.png)
+![重設資源連線設定的Azure Explorer摘要工作區。](../../images/tutorials/create/dlz/summary.png)
 
 成功連線會以您的[!DNL Data Landing Zone]容器更新您的[!DNL Azure Storage Explorer] UI。
 
-![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
+![Azure Explorer上的資料登陸區域導覽工作區。](../../images/tutorials/create/dlz/dlz-user-container.png)
 
 在您的[!DNL Data Landing Zone]容器連線至[!DNL Azure Storage Explorer]後，您現在可以開始將檔案上傳至[!DNL Data Landing Zone]容器。 若要上傳，請選取&#x200B;**上傳**，然後選取&#x200B;**上傳檔案**。
 
-![上傳](../../images/tutorials/create/dlz/upload.png)
+![Azure Explorer的上傳檔案工作區。](../../images/tutorials/create/dlz/upload.png)
 
 選取要上傳的檔案後，您必須識別要上傳的[!DNL Blob]型別，以及您想要的目的地目錄。 完成後，選取&#x200B;**上傳**。
 
@@ -75,9 +79,9 @@ ht-degree: 0%
 | 封鎖[!DNL Blob] | 區塊[!DNL Blobs]已最佳化，以有效率的方式上傳大量資料。 區塊[!DNL Blobs]是[!DNL Data Landing Zone]的預設選項。 |
 | 附加[!DNL Blob] | 已針對在檔案結尾附加資料最佳化[!DNL Blobs]。 |
 
-![上傳檔案](../../images/tutorials/create/dlz/upload-files.png)
+![Azure Explorer的上傳檔案視窗，其中顯示選取的檔案、Blob型別和目的地類別。](../../images/tutorials/create/dlz/upload-files.png)
 
-## 使用命令列介面上傳檔案至您的[!DNL Data Landing Zone]
+### 使用命令列介面上傳檔案至您的[!DNL Data Landing Zone]
 
 您也可以使用裝置的命令列介面，並存取上傳檔案至[!DNL Data Landing Zone]。
 
