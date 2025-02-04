@@ -3,10 +3,10 @@ title: 事件轉送快速入門
 description: 請依照此逐步教學課程，開始在Adobe Experience Platform中使用事件轉送。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
 source-wordcount: '887'
-ht-degree: 21%
+ht-degree: 26%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->事件轉送是一項付費功能，屬於Adobe Real-time Customer Data Platform Connections、Prime或Ultimate方案的一部分。
+>事件轉送是一項付費功能，包含在Adobe Real-time Customer Data Platform連線、Prime或Ultimate供應專案中。
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 若要在Adobe Experience Platform中使用事件轉送，您必須使用下列一個或多個選項，將資料傳送至Adobe Experience PlatformEdge Network：
 
@@ -81,7 +81,7 @@ ht-degree: 21%
 
 1. 選取「**[!UICONTROL 儲存]**」。
 
-## 啟用事件轉送
+## 啟用事件轉送 {#enable-event-forwarding}
 
 接著，設定Edge Network將資料傳送至事件轉送及其他Adobe產品。
 
@@ -101,7 +101,7 @@ ht-degree: 21%
 
 ## 設定Platform Web SDK擴充功能，將資料傳送至先前建立的資料流
 
-在&#x200B;**[!UICONTROL 標籤]**&#x200B;工作區中建立您的屬性，然後導覽至&#x200B;**[!UICONTROL 擴充功能]**，並從目錄中選取Experience PlatformWeb SDK擴充功能以進行設定和安裝。
+在&#x200B;**[!UICONTROL 標籤]**&#x200B;工作區中建立您的屬性，然後導覽至&#x200B;**[!UICONTROL 擴充功能]**，並從目錄中選取Experience Platform的Web SDK擴充功能以進行設定和安裝。
 
 如需設定選項的詳細資訊，請參閱[Web SDK擴充功能檔案](../../extensions/client/web-sdk/overview.md)。
 
