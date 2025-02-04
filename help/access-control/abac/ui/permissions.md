@@ -3,14 +3,20 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理角色許可權
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面設定角色許可權的相關資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
+source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 1%
+source-wordcount: '1608'
+ht-degree: 4%
 
 ---
 
-# 管理角色的許可權
+# 管理角色的許可權 {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="什麼是角色？"
+>abstract="角色定義管理員、專家或一般使用者對貴組織資源的存取權。 它們會將與您的Platform執行個體互動的使用者分類，並且是存取控制原則的建置組塊。 一個角色具有一組給定的權限，您的組織成員可以指派到一個或多個角色，依據他們需要的視圖範圍或寫入權限而定。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="管理角色"
 
 >[!IMPORTANT]
 >
@@ -41,7 +47,14 @@ UI中的角色可使用下列篩選器：
 
 ![許可權UI中的[角色]儀表板，在選取的篩選器上反白顯示X和[清除所有選取專案]。](../../images/flac-ui/flac-clear-filters.png)
 
-## 角色詳細資料
+## 角色詳細資料 {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="角色概觀"
+>abstract="角色總覽對話方塊會顯示角色的詳細資訊，包括指定角色有權存取的資源和沙箱。 您可以導覽至角色工作區中對應的標籤，以管理角色的標籤、使用者、使用者群組和API認證。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="管理角色的標籤"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="管理角色的使用者"
 
 從&#x200B;**[!UICONTROL 角色]**&#x200B;標籤中選取角色，這會開啟角色的[!UICONTROL 詳細資料]儀表板。
 

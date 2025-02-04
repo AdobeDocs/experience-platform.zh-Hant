@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理標籤
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面管理標籤的資訊
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
+source-git-commit: 71a2e91b6c23021aa11c19d84096d6b23f0de112
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 10%
+source-wordcount: '247'
+ht-degree: 24%
 
 ---
 
@@ -24,6 +24,12 @@ ht-degree: 10%
 >id="platform_abac_labelusage"
 >title="標籤使用"
 >abstract="您可以使用自訂標籤，將資料控管和存取權控制的設定套用至您的資料。"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="建立新標籤"
+>abstract="您可以建立適合您組織需求的自訂標籤。自訂標籤可用於資料控管和存取控制設定套用到您的資料。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="管理自訂標籤"
 
 >[!NOTE]
 >

@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制建立角色
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面管理角色的資訊
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '618'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,14 @@ ht-degree: 7%
 
 角色定義管理員、專家或一般使用者對貴組織資源的存取權。 在基於角色的存取控制環境中，使用者存取布建是透過共同責任和需求進行分組。 一個角色具有一組給定的權限，您的組織成員可以指派到一個或多個角色，依據他們需要的視圖範圍或寫入權限而定。
 
-## 建立新角色
+## 建立新角色 {#create-new-role}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="建立新角色"
+>abstract="建立新角色，以便更妥善地分類與您的Platform執行個體互動的使用者。 例如，您可以為內部行銷團隊建立角色，並將法規健康資料(RHD)標籤套用至該角色，讓您的內部行銷團隊可存取受保護的健康資訊(PHI)。 或者，您也可以為外部機構建立角色，並且不將RHD標籤套用至該角色，拒絕該角色存取PHI資料。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="管理角色"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="將標籤套用至角色"
 
 若要建立新角色，請選取側邊欄中的&#x200B;**[!UICONTROL 角色]**&#x200B;索引標籤，然後選取&#x200B;**[!UICONTROL 建立角色]**。
 
