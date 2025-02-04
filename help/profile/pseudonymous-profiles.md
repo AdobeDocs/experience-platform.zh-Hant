@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 假名設定檔資料有效期
 description: 本檔案提供在Adobe Experience Platform中設定假名設定檔資料到期日的一般指引。
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 9489156617f29d4aab2038b74f75a832ff4dc8eb
+source-git-commit: 208f327d35749c97ac77f337493d8759e8622dcd
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,12 @@ ht-degree: 0%
 在Adobe Experience Platform中，您可以設定假名設定檔的資料到期時間，好讓您將資料從設定檔存放區中自動移除，這些資料對您的使用案例而言不再有效或實用。
 
 ## 假名設定檔 {#pseudonymous-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_pseudonymousprofile"
+>title="什麼是假名設定檔？"
+>abstract="假名設定檔是具有假名或未知身分名稱空間的設定檔，或是在指定時間內未發生活動的設定檔。"
+>text="Learn more in documentation"
 
 如果設定檔符合下列條件，則會視為假名資料的有效期：
 
