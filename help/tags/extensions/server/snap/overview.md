@@ -2,9 +2,10 @@
 title: Snapchat Conversions API擴充功能概觀
 description: 使用Snapchat轉換將伺服器端事件資料傳送到Snap。
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
+source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 2%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 需要&#x200B;**[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/)帳戶才能使用轉換API。 Business Manager可協助廣告商整合&#x200B;**[!DNL Snapchat]**&#x200B;在其整個企業中的行銷工作，並與外部合作夥伴整合。 如果您沒有Business Manager帳戶，請參閱有關建立帳戶的&#x200B;**[!DNL Snapchat]** [說明中心文章](https://businesshelp.snapchat.com/s/article/get-started?language=en_US)。
 
-必須在Snapchat廣告管理員中設定&#x200B;**[!DNL Snap Pixel]**(https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)，而且您必須具有檢視`Pixel ID`的存取權。 `Pixel ID`可以在&#x200B;**[!UICONTROL 事件管理員]**(https://businesshelp.snapchat.com/s/article/events-manager?language=en_US)區段中找到。
+必須在Snapchat廣告管理員中設定[!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)，而且您必須具有檢視`Pixel ID`的存取權。 在[!UICONTROL [事件管理員]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US)區段中可以找到`Pixel ID`。
 
 您需要一個靜態、生命週期較長的API Token。 請參閱[[!DNL Snapchat] 轉換API檔案](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token)以取得此Token。
 
@@ -190,7 +191,7 @@ ht-degree: 2%
 
 ![影像顯示啟用的規則](../../../images/extensions/server/snap/enabled_rule.png)
 
-您現在可以將這些變更發佈至屬性。 如需詳細資訊，請參閱[發佈流程](/help/tags/ui/publishing/overview.md)(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview)的相關檔案。
+您現在可以將這些變更發佈至屬性。 如需詳細資訊，請參閱[發佈流程](/help/tags/ui/publishing/overview.md)的相關檔案。
 
 ## 疑難排解 {#troubleshoot}
 
