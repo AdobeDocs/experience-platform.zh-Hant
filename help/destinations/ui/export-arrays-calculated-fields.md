@@ -3,10 +3,10 @@ title: 將陣列物件從即時 CDP 匯出到雲端儲存空間目的地
 type: Tutorial
 description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
+source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 7%
+source-wordcount: '1698'
+ht-degree: 6%
 
 ---
 
@@ -72,6 +72,11 @@ organizations = [{
 ## 如何匯出計算欄位 {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="啟用階層式輸出結構描述"
+>abstract="<p> 切換此設定&#x200B;**on**&#x200B;以啟用將陣列、對應和物件匯出至JSON或Parquet檔案。</p><p>關閉此切換後，您可以在啟用對象時使用計算欄位選項，但無法將陣列、地圖和物件匯出至JSON或Parquet檔案</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="啟用階層式輸出結構描述"
 >abstract="如果您想匯出像是陣列之類的階層式結構，將此選項切換為開啟。"
@@ -79,7 +84,7 @@ organizations = [{
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="新增計算欄位已停用"
->abstract="此控制項已停用，因為您在連接到目標時選取匯出單層結構。"
+>abstract="此控制項已停用，因為在設定此目的地連線時，您選取了&#x200B;**匯出陣列、對應、物件**&#x200B;切換&#x200B;*開啟*。 若要使用計算欄位及中可用的函式，請使用&#x200B;**匯出陣列、地圖、物件**&#x200B;來設定新的目的地連線，將&#x200B;*關閉*。"
 
 在雲端儲存體目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL 新增計算欄位]**。
 
