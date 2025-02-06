@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料彙集概觀
 description: 瞭解在Adobe Experience Platform中收集客戶體驗資料相關的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '472'
 ht-degree: 4%
 
 ---
@@ -31,18 +31,18 @@ Adobe Experience Platform提供了一套技術，可讓您從使用者端來源�
 * [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
 * [邊緣網路伺服器 API](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
-* [Experience Platform保證](../assurance/home.md)
+* [Experience PlatformAssurance](../assurance/home.md)
 
 
 本指南提供資料收集的高層級簡介，並說明如何透過PlatformEdge Network將資料傳送至Adobe Experience Cloud產品和非Adobe應用程式。
 
-## 標籤、Web SDK和行動SDK
+## 標籤、Web SDK和Mobile SDK
 
-Platform Web SDK和Platform Mobile SDK可摺疊所有Adobe產品程式庫，並將其壓縮為分別適用於Web和行動平台的單一開發套件。 您可以使用原始程式碼或透過資料收集UI或Adobe Experience Platform UI使用[標籤](../tags/home.md)來實作這些專案。
+Platform Web SDK和Platform Mobile SDK可摺疊所有Adobe產品程式庫，並將其分別壓縮為適用於Web和行動平台的單一開發套件。 您可以使用原始程式碼或透過資料收集UI或Adobe Experience Platform UI使用[標籤](../tags/home.md)來實作這些專案。
 
 壓縮這些程式庫可加快資料收集速度，並將從使用者端裝置到PlatformEdge Network的作業整合為單一資料流。
 
-![標籤， Web SDK， Mobile SDK](./images/home/tags-sdks.png)
+![標籤，網頁SDK，行動SDK](./images/home/tags-sdks.png)
 
 ## 平台Edge Network和資料串流 {#edge}
 
@@ -52,10 +52,6 @@ PlatformEdge Network是全域分散的、快速且可靠的伺服器網路，能
 
 ![資料串流和Adobe解決方案](./images/home/adobe-solutions.png)
 
->[!NOTE]
->
->如需PlatformEdge Network的高層級簡介，請參閱下列[互動式產品導覽](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1)。
-
 ## 事件轉送
 
 [事件轉送](../tags/ui/event-forwarding/overview.md)可以利用任何Experience Platform資料串流，讓您以極低的延遲轉換及擴充資料，並將資料傳送到任何非Adobe目的地，而不需將任何協力廠商程式碼新增到使用者端裝置。
@@ -64,7 +60,7 @@ PlatformEdge Network是全域分散的、快速且可靠的伺服器網路，能
 
 >[!NOTE]
 >
->事件轉送是一項付費功能，屬於Adobe Real-time Customer Data Platform Connections、Prime或Ultimate方案的一部分。
+>事件轉送是一項付費功能，包含在Adobe Real-time Customer Data Platform連線、Prime或Ultimate供應專案中。
 
 ## 後續步驟
 
