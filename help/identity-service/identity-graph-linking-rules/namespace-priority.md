@@ -1,19 +1,19 @@
 ---
-title: 命名空間優先等級
+title: 命名空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1801'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# 命名空間優先等級 {#namespace-priority}
+# 命名空間優先順序 {#namespace-priority}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="名稱空間優先順序"
+>title="命名空間優先順序"
 >abstract="命名空間優先順序會決定如何從身分識別圖中移除連結。"
 
 >[!AVAILABILITY]

@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1436'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 3%
 
 下列檔案對於瞭解身分圖表連結規則至關重要。
 
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [命名空間優先等級](./namespace-priority.md)
+* [命名空間優先順序](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="圖表摺疊案例"
+>title="圖表收合案例"
 >abstract="圖表可能「收合」或代表多人實體的原因有很多。"
 
 本節概述設定身分圖表連結規則時可考慮的範例情境。
@@ -94,8 +94,8 @@ ht-degree: 3%
 | 術語 | 說明 |
 | --- | --- |
 | 唯一命名空間 | 唯一名稱空間是身分識別名稱空間，在身分識別圖形的上下文中已設定為不同。 您可以使用UI將名稱空間設定為唯一。 一旦名稱空間定義為唯一，圖表就只能有一個包含該名稱空間的身分。 |
-| 命名空間優先等級 | 名稱空間優先順序是指名稱空間彼此相比的相對重要性。 名稱空間優先順序可透過UI設定。 您可以在指定的身分圖表中排列名稱空間。 啟用後，名稱優先順序將用於各種情境，例如身分最佳化演演算法的輸入以及確定體驗事件片段的主要身分。 |
-| 身分最佳化演演算法 | 身分最佳化演演算法可確保透過設定唯一名稱空間和名稱空間優先順序所建立的准則，在指定的身分圖形中強制執行。 |
+| 命名空間優先順序 | 名稱空間優先順序是指名稱空間彼此相比的相對重要性。 名稱空間優先順序可透過UI設定。 您可以在指定的身分圖表中排列名稱空間。 啟用後，名稱優先順序將用於各種情境，例如身分最佳化演演算法的輸入以及確定體驗事件片段的主要身分。 |
+| 身分識別最佳化演算法 | 身分最佳化演演算法可確保透過設定唯一名稱空間和名稱空間優先順序所建立的准則，在指定的身分圖形中強制執行。 |
 
 ### 唯一命名空間 {#unique-namespace}
 
@@ -118,7 +118,7 @@ ht-degree: 3%
 
 您必須設定唯一的名稱空間，以通知身分最佳化演演算法強制限制擷取到指定身分圖表的身分資料。
 
-### 命名空間優先等級 {#namespace-priority}
+### 命名空間優先順序 {#namespace-priority}
 
 名稱空間優先順序是指名稱空間彼此相比的相對重要性。 名稱空間優先順序可透過UI設定，並且您可以在指定的身分圖表中排行名稱空間。
 
@@ -129,7 +129,7 @@ ht-degree: 3%
 | | 身分識別服務 | 即時客戶輪廓 |
 | --- | --- | --- |
 | 唯一命名空間 | 在Identity Service中，身分最佳化演演算法會參考唯一的名稱空間，以判斷要內嵌至指定身分圖表的身分資料。 | 不重複名稱空間不會影響即時客戶個人檔案。 |
-| 命名空間優先等級 | 在Identity Service中，對於擁有多個圖層的圖形，名稱空間優先順序將決定適當的連結是否已移除。 | 在設定檔中擷取體驗事件時，具有最高優先順序的名稱空間會成為設定檔片段的主要身分。 |
+| 命名空間優先順序 | 在Identity Service中，對於擁有多個圖層的圖形，名稱空間優先順序將決定適當的連結是否已移除。 | 在設定檔中擷取體驗事件時，具有最高優先順序的名稱空間會成為設定檔片段的主要身分。 |
 
 * 當達到每個圖表50個身分的限制時，名稱空間優先順序不會影響圖表行為。
 * **名稱空間優先順序是指派給名稱空間的數值**，表示其相對重要性。 這是名稱空間的屬性。
@@ -144,10 +144,10 @@ ht-degree: 3%
 
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [命名空間優先等級](./namespace-priority.md)
+* [命名空間優先順序](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)

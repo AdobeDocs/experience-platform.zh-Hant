@@ -5,11 +5,11 @@ exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '968'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# Identity Service連結邏輯 {#identity-service-linking-logic}
+# 身分識別服務連結邏輯 {#identity-service-linking-logic}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_simulatedgraph"

@@ -5,16 +5,16 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# [!DNL Graph Simulation] UI指南 {#graph-simulation}
+# [!DNL Graph Simulation] 使用者介面指南 {#graph-simulation}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="圖表模擬"
->abstract="模擬圖表以了解身分識別服務如何連結身分，以及身分識別最佳化演算法如何運作。"
+>abstract="模擬圖表，以了解身分識別服務如何連結身分，以及身分識別最佳化演算法如何運作。"
 
 >[!AVAILABILITY]
 >
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 >[!BEGINTABS]
 
->[!TAB 事件]
+>[!TAB 活動]
 
 事件：使用&#x200B;**[!UICONTROL 事件]**&#x200B;面板新增身分以模擬圖形。 完整身分必須具有身分名稱空間及其對應的身分值。 您必須至少新增兩個身分才能模擬圖形。 您也可以選取&#x200B;**[!UICONTROL 載入範例]**&#x200B;以輸入預先設定的事件和演演算法設定。
 
@@ -177,9 +177,9 @@ ht-degree: 2%
 閱讀本檔案後，您現在已瞭解如何使用[!DNL Graph Simulation]工具，以更清楚瞭解在指定一組特定規則和設定時，身分資料的處理方式。 如需詳細資訊，請閱讀下列檔案：
 
 * [身分圖表連結規則概觀](./overview.md)
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [圖表設定範例](./example-configurations.md)
-* [命名空間優先等級](./namespace-priority.md)
+* [命名空間優先順序](./namespace-priority.md)
 * [身分設定UI](./identity-settings-ui.md)

@@ -1,19 +1,19 @@
 ---
-title: 身分最佳化演演算法
+title: 身分識別最佳化演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# 身分最佳化演演算法 {#identity-optimization-algorithm}
+# 身分識別最佳化演算法 {#identity-optimization-algorithm}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="唯一的名稱空間"
+>title="唯一命名空間"
 >abstract="一個圖不能有兩個具有唯一命名空間的身分識別。若圖表試圖超出此限制時，將會保留最新的連結並移除最舊的連結。"
 
 >[!AVAILABILITY]
@@ -45,7 +45,7 @@ ht-degree: 3%
 >
 >* 作為人員識別碼以及用在沙箱中以產生身分圖表的所有名稱空間都必須標示為唯一的名稱空間。 否則，您可能會看到不想要的連結結果。
 
-### 命名空間優先等級 {#namespace-priority}
+### 命名空間優先順序 {#namespace-priority}
 
 名稱空間優先順序會決定身分最佳化演演算法如何移除連結。
 
@@ -169,6 +169,6 @@ ECID會儲存未驗證（匿名）的事件，而CRMID會儲存已驗證的事�
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [命名空間優先等級](./namespace-priority.md)
+* [命名空間優先順序](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)

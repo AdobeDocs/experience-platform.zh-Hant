@@ -5,7 +5,7 @@ exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1509'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 36%
 >[!CONTEXTUALHELP]
 >id="platform_tags_publishing_flow"
 >title="發佈流程"
->abstract="瞭解發佈流程所需的使用者許可權等級，包括開發、核准和Publish許可權。"
+>abstract="了解發佈流程所需的使用者權限層級，包括開發、核准和發佈權限。"
 
 >[!NOTE]
 >

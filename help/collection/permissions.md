@@ -1,20 +1,20 @@
 ---
-title: Experience Platform中資料收集的許可權管理
+title: Experience Platform 中資料彙集的權限管理
 description: 有關如何在Adobe Experience Platform中管理許可權和控制資料收集功能存取的高級概觀。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1356'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
-# Experience Platform中資料收集的許可權管理 {#permission-management}
+# Experience Platform 中資料彙集的權限管理 {#permission-management}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_permissions"
 >title="權限"
->abstract="瞭解在Adobe Experience Platform中使用資料串流、結構描述、身分和沙箱所需的關鍵許可權。"
+>abstract="了解在 Adobe Experience Platform 中使用資料流、結構描述、身分識別和沙箱所需的關鍵權限。"
 
 [Adobe Experience Platform](./home.md)中的資料收集是由數種不同的技術所組成，這些技術可共同收集並傳輸您的資料。 這些技術的存取權可透過Adobe Admin Console中精細的角色型許可權加以控制。
 
