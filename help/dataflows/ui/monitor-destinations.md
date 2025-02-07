@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
 workflow-type: tm+mt
-source-wordcount: '3639'
-ht-degree: 10%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -105,7 +105,7 @@ ht-degree: 10%
   > 此增強功能之後，[Google 目標客戶比對目標](../../destinations/catalog/advertising/google-customer-match.md)的使用者應該會發現&#x200B;**[!UICONTROL 失敗的身分識別]**&#x200B;計數有所下降。
 
 
-- **[!UICONTROL 啟用率]**：已順利啟用或略過的接收身分百分比。 下列公式示範如何計算此值：
+- **[!UICONTROL 啟用率]**：已順利啟用的接收身分百分比。 下列公式示範如何計算此值：
   ![啟用率公式。](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL 狀態]**：代表資料流所處的狀態： [!UICONTROL 已完成]或[!UICONTROL 正在處理]。 [!UICONTROL 已完成]表示已在一小時內匯出對應資料流執行的所有身分。 [!UICONTROL 正在處理]表示資料流執行尚未完成。
 
