@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: 瞭解如何將Data Landing Zone連結至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1316'
 ht-degree: 0%
 
 ---
@@ -299,6 +299,12 @@ print(f"Sign-in URL: {signin_url}")
 
 ## 連線[!DNL Data Landing Zone]至Experience Platform
 
+>[!IMPORTANT]
+>
+>- 若要連線到來源，您需要&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;存取控制許可權。 如需詳細資訊，請閱讀[存取控制總覽](../../../access-control/home.md)，或連絡您的產品管理員以取得必要的許可權。
+>
+>- 使用[!DNL Data Landing Zone]連線到Experience Platform時，目前不支援私人連結。 唯一支援的存取方法是[這裡](#manage-the-contents-of-your-data-landing-zone)列出的方法。
+
 以下檔案提供如何使用API或使用者介面將資料從您的[!DNL Data Landing Zone]容器帶入Adobe Experience Platform的資訊。
 
 ### 使用API
@@ -310,8 +316,4 @@ print(f"Sign-in URL: {signin_url}")
 
 - [使用UI連線 [!DNL Data Landing Zone] 至平台](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [在UI中為雲端儲存空間連線建立資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->使用[!DNL Data Landing Zone]連線到Experience Platform時，目前不支援私人連結。 唯一支援的存取方法是[這裡](#manage-the-contents-of-your-data-landing-zone)列出的方法。
 

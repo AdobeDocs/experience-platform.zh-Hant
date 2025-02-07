@@ -2,9 +2,9 @@
 title: 使用流量服務API將資料登陸區域連線至Adobe Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至資料登陸區域。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 527e62e5fb90bc32ef3788f261e0a24b680f29c0
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1410'
 ht-degree: 3%
 
 ---
@@ -31,6 +31,10 @@ ht-degree: 3%
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功建立[!DNL Data Landing Zone]來源連線。
 
 ## 擷取可用的登陸區域
+
+>[!IMPORTANT]
+>
+>您必須擁有&#x200B;**[!UICONTROL 管理來源]**&#x200B;存取控制許可權，才能使用[!DNL Data Landing Zone] API並擷取`type=user_drop_zone`。 如需詳細資訊，請閱讀[存取控制總覽](../../../../../access-control/home.md)，或連絡您的產品管理員以取得必要的許可權。
 
 使用API存取[!DNL Data Landing Zone]的第一步是向[!DNL Connectors] API的`/landingzone`端點發出GET要求，同時提供`type=user_drop_zone`作為要求標頭的一部分。
 
