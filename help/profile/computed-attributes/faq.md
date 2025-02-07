@@ -2,14 +2,14 @@
 title: 計算屬性常見問題
 description: 瞭解關於使用計算屬性的常見問題解答。
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
 
-# 常見問答
+# 常見問題
 
 在Adobe Experience Platform中，計算屬性是用來將事件層級資料彙總至設定檔層級屬性的函式。 這些函式會自動計算，以便用於區段、啟用和個人化。 以下是有關計算屬性的常見問題清單。
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ## 我可以建立的運算屬性數目是否有任何限制？
 
-可以，您可以建立的計算屬性數目是有限制的。 請參閱產品說明或聯絡Adobe客戶團隊以取得詳細資訊。
+可以，您可以建立的計算屬性數目是有限制的。 此限制僅適用於&#x200B;**使用中**&#x200B;計算屬性。 請參閱產品說明或聯絡Adobe客戶團隊以取得詳細資訊。
 
 ## 停用計算屬性對下游是否有任何影響？
 
