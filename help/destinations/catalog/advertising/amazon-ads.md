@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書供應商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的鑰匙式整合。 使用Adobe Experience Platform中的Amazon Ads目的地，使用者能在Amazon DSP上定義用於鎖定和啟用的廣告商對象。
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
@@ -98,10 +98,6 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 >儲存目的地設定後，您將無法變更[!DNL Amazon Ads]廣告商ID，即使您透過Amazon帳戶重新驗證亦然。 若要使用其他[!DNL Amazon Ads]廣告商ID，您必須建立新的目的地連線。 已設定與ADSP整合的廣告商，如果他們想要將其對象傳送至AMC或其他ADSP帳戶，則必須建立新的目的地流程。
 
 * **[!UICONTROL 廣告商地區]**：選取您的廣告商所在的適當地區。 如需各個區域支援之市場環境的詳細資訊，請瀏覽[Amazon Ads檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)。
-
->[!IMPORTANT]
->
->包含&#x200B;**[!UICONTROL Amazon Ads同意訊號]**&#x200B;的更新已排定於2025年2月7日前上線。
 
 * **[!UICONTROL Amazon Ads同意訊號]**：確認透過此連線傳送的所有資料都已同意使用個人資料做廣告用途。 「GRANTED」表示Amazon同意將客戶的個人資料用於廣告。 允許值為「GRANTED」和「DENIED」。 任何透過連線傳送的記錄若有「DENIED」，將會遭拒，以便在Amazon Ads中進一步使用。
 

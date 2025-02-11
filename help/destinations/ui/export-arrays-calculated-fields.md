@@ -3,10 +3,10 @@ title: 將陣列物件從即時 CDP 匯出到雲端儲存空間目的地
 type: Tutorial
 description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1698'
-ht-degree: 6%
+source-wordcount: '1730'
+ht-degree: 5%
 
 ---
 
@@ -73,8 +73,8 @@ organizations = [{
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="啟用階層式輸出結構描述"
->abstract="<p> 切換此設定&#x200B;**on**&#x200B;以啟用將陣列、對應和物件匯出至JSON或Parquet檔案。</p><p>關閉此切換後，您可以在啟用對象時使用計算欄位選項，但無法將陣列、地圖和物件匯出至JSON或Parquet檔案</p>"
+>title="匯出陣列、地圖和物件"
+>abstract="<p> 切換此設定<b> on</b>以啟用將陣列、對應和物件匯出至JSON或Parquet檔案。 您可以在對應步驟的來源欄位檢視中選取這些物件型別。</p><p>透過這個切換<b>關閉</b>，您便可以使用計算欄位選項，並在啟用對象時套用各種資料轉換函式。 不過，您可以<i>不</i>將陣列、對應和物件匯出至JSON或Parquet檔案，且必須為此設定個別的目的地。</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
