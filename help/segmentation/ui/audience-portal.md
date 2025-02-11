@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
 workflow-type: tm+mt
-source-wordcount: '4569'
+source-wordcount: '4597'
 ht-degree: 4%
 
 ---
@@ -233,6 +233,8 @@ abstract="您可以在單一彈性客群評估執行中評估最多 20 個客群
 >
 選取對象以進行彈性的對象評估時，適用下列條件：
 >
+- 您每天只能使用彈性對象評估&#x200B;**兩次**。 此限制會在午夜(UTC)重設。
+- 您每年有&#x200B;**最多**&#x200B;次彈性對象評估，共50次。
 - 所有對象&#x200B;**都必須**&#x200B;具有「分段服務」的來源。
 - 所有對象&#x200B;**都必須**&#x200B;使用批次細分進行評估。
 - 所有對象&#x200B;**都必須**&#x200B;是以人物為基礎的對象。
