@@ -2,9 +2,9 @@
 title: Marketo Engage目的地
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商業的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化並管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ Marketo V2目的地的改良專案包括：
 
 ### 支援的屬性 {#supported-attributes}
 
-您可以將屬性從「Experience Platform」對應至貴組織在Marketo中可以存取的任何屬性。 在Marketo中，您可以使用[Describe API要求](https://developers.marketo.com/rest-api/lead-database/leads/#describe)來擷取貴組織有權存取的屬性欄位。
+您可以將屬性從Experience Platform對應至貴組織在Marketo中可存取的任何屬性。 在Marketo中，您可以使用[Describe API要求](https://developers.marketo.com/rest-api/lead-database/leads/#describe)來擷取貴組織有權存取的屬性欄位。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -57,8 +57,8 @@ Marketo V2目的地的改良專案包括：
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ Marketo V2目的地的改良專案包括：
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有[!DNL Marketo Engage]目的地中所使用識別碼（電子郵件、ECID）之對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -88,8 +88,8 @@ Marketo V2目的地的改良專案包括：
 >
 >此影片並未完整反映目前的功能。 如需最新資訊，請參閱以上連結的指南。 視訊的下列部分已過時：
 > 
->* 您應在Experience PlatformUI中使用的目的地卡片是&#x200B;**[!UICONTROL Marketo V2]**。
->* 影片未顯示連線至目的地工作流程中的新&#x200B;**[!UICONTROL 人員建立]**&#x200B;選擇器欄位。
+>* 您應在Experience Platform UI中使用的目的地卡片是&#x200B;**[!UICONTROL Marketo V2]**。
+>* 影片未顯示連線至目的地工作流程中的新&#x200B;**[!UICONTROL 人員建立]**&#x200B;選擇器欄位。 若要使用該欄位，您必須在屬性對應步驟期間同時對應名字和姓氏。
 >* 影片中叫用的兩個限制不再適用。 除了錄製影片時支援的對象成員資格資訊之外，您現在可以對應許多其他設定檔屬性欄位。 您也可以將尚未存在於Marketo靜態清單中的受眾成員匯出至Marketo，這些受眾成員將會新增至清單中。
 >* 在Marketo V1的啟動工作流程的&#x200B;**[!UICONTROL 排程對象步驟]**&#x200B;中，您需要手動新增&#x200B;**[!UICONTROL 對應ID]**，才能成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
 
