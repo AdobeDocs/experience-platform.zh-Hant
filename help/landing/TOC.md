@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 透過指南、文件和教學課程，了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '309'
 ht-degree: 24%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 24%
 * [平台概觀](home.md)
 * [平台概觀（影片）](video/platform-overview.md)
 * [多雲端概述](multi-cloud.md)
+* [Edge Network與集線器比較](./edge-and-hub-comparison.md)
 * [平台教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [由Platform支援的客戶體驗（影片）](video/customer-experience.md)
 * [Platform支援的客戶體驗幕後（影片）](video/customer-experience-bts.md)
@@ -25,13 +26,13 @@ ht-degree: 24%
    * [主要使用案例（影片）](video/platform-use-cases.md)
    * [平台架構（影片）](video/platform-architecture.md)
    * [角色和專案階段（影片）](video/roles-project-phases.md)
-* Experience PlatformUI {#platform-ui}
+* Experience Platform UI {#platform-ui}
    * [Platform UI指南](ui-guide.md)
    * [Platform UI導覽（影片）](video/platform-ui.md)
    * [工作流程UI指南](workflows.md)
    * [瀏覽器和語言支援](browser-language-support.md)
    * [自我識別調查](self-identification.md)
-* Experience PlatformAPI {#platform-apis}
+* Experience Platform API {#platform-apis}
    * [Platform API快速入門](api-guide.md)
    * [驗證及存取平台API](api-authentication.md)
    * [API基礎知識](api-fundamentals.md)
@@ -42,7 +43,7 @@ ht-degree: 24%
    * [語言支援](documentation/language-support.md)
 * 在平台{#ecosystem}上建置的應用程式
    * [概觀](application-services.md)
-   * [Adobe Real-time Customer Data Platform （所有版本）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Adobe Real-Time Customer Data Platform （所有版本）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [應用程式與Intelligent Services （影片）](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=zh-Hant)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=zh-Hant)
@@ -52,7 +53,7 @@ ht-degree: 24%
 * 治理、隱私和安全性{#governance-privacy-security}
    * [概觀](./governance-privacy-security/overview.md)
    * 同意管理 {#consent}
-      * Adobe標準{#adobe}
+      * Adobe standard {#adobe}
          * [概觀](./governance-privacy-security/consent/adobe/overview.md)
          * [設定資料集以擷取同意和偏好設定資料](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
