@@ -5,10 +5,10 @@ breadcrumb-title: 平台 Identity Service 指南
 user-guide-description: 跨裝置和系統橋接客戶身分識別，以提供個人化的數位體驗。
 feature: Identities
 role: Admin,Developer
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 28%
+source-wordcount: '143'
+ht-degree: 30%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 28%
    - [Identity Service中的刪除](./features/deletion.md)
    - 身分圖表連結規則{#identity-graph-linking-rules}
       - [功能概觀](./identity-graph-linking-rules/overview.md)
-      - [身分最佳化演演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [身分識別最佳化演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [身分圖表連結規則的實作指南](./identity-graph-linking-rules/implementation-guide.md)
       - [圖表設定範例](./identity-graph-linking-rules/example-configurations.md)
       - [身分圖表連結規則的疑難排解](./identity-graph-linking-rules/troubleshooting.md)
-      - [命名空間優先等級](./identity-graph-linking-rules/namespace-priority.md)
+      - [命名空間優先順序](./identity-graph-linking-rules/namespace-priority.md)
       - [圖表模擬UI](./identity-graph-linking-rules/graph-simulation.md)
       - [身分設定UI](./identity-graph-linking-rules/identity-settings-ui.md)
    - [ECID概觀](./features/ecid.md)
@@ -44,7 +44,6 @@ ht-degree: 28%
    - [建立自訂名稱空間](api/create-custom-namespace.md)
    - [列出身分的原生ID](api/list-native-id.md)
    - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [共用裝置偵測](shared-device-detection.md)
 - [在UI中定義身分欄位](label-identities.md)
 - [隱私權請求處理](privacy.md)
 - [疑難排解指南](troubleshooting-guide.md)

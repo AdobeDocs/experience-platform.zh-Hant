@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題
 title: Identity Service中的隱私權請求處理
 description: Adobe Experience Platform Privacy Service會根據多項隱私權法規的規定，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。 本文介紹與處理Identity Service的隱私權請求相關的重要概念。
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1000'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Privacy Service]會根據一般資料保護規�
 
 >[!NOTE]
 >
->本指南僅涵蓋如何向Experience Platform中的身分資料存放區提出隱私權請求。 如果您也打算針對Platform Data Lake或[!DNL Real-Time Customer Profile]提出隱私權請求，請參閱資料湖](../catalog/privacy.md)中[隱私權請求處理指南，以及本教學課程以外的[設定檔隱私權請求處理指南](../profile/privacy.md)。
+>本指南僅涵蓋如何在Experience Platform中向Identity資料存放區提出隱私權請求。 如果您也打算針對Platform Data Lake或[!DNL Real-Time Customer Profile]提出隱私權請求，請參閱資料湖](../catalog/privacy.md)中[隱私權請求處理指南，以及本教學課程以外的[設定檔隱私權請求處理指南](../profile/privacy.md)。
 >
 >如需如何對其他Adobe Experience Cloud應用程式提出隱私權要求的步驟，請參閱[Privacy Service檔案](../privacy-service/experience-cloud-apps.md)。
 
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service]會根據一般資料保護規�
 * [[!DNL Identity Service]](../identity-service/home.md)：透過跨裝置和系統橋接身分，解決客戶體驗資料分散所造成的根本挑戰。
 * [[!DNL Real-Time Customer Profile]](home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-## 了解身分命名空間 {#namespaces}
+## 了解身分識別命名空間 {#namespaces}
 
 Adobe Experience Platform [!DNL Identity Service]可跨系統和裝置橋接客戶身分資料。 [!DNL Identity Service]使用&#x200B;**身分識別名稱空間**，透過將身分識別值與其來源系統建立關聯來提供身分識別值的內容。 名稱空間可代表一般概念，例如電子郵件地址（「電子郵件」），或將身分與特定應用程式相關聯，例如Adobe Advertising Cloud ID (「AdCloud」)或Adobe Target ID (「TNTID」)。
 
@@ -40,7 +40,7 @@ Identity Service維護全域定義（標準）和使用者定義（自訂）的�
 
 ## 提交請求 {#submit}
 
-以下各節概述如何使用[!DNL Privacy Service] API或UI為[!DNL Identity Service]提出隱私權請求。 在閱讀這些章節之前，強烈建議您檢閱[Privacy ServiceAPI](../privacy-service/api/getting-started.md)或[Privacy ServiceUI](../privacy-service/ui/overview.md)檔案，以取得有關如何提交隱私權工作的完整步驟，包括如何在要求裝載中正確格式化使用者資料。
+以下各節概述如何使用[!DNL Privacy Service] API或UI為[!DNL Identity Service]提出隱私權請求。 在閱讀這些章節之前，強烈建議您檢閱[Privacy Service API](../privacy-service/api/getting-started.md)或[Privacy Service UI](../privacy-service/ui/overview.md)檔案，以取得有關如何提交隱私權工作的完整步驟，包括如何在請求裝載中正確格式化使用者資料。
 
 ### 使用 API
 
@@ -52,7 +52,7 @@ Identity Service維護全域定義（標準）和使用者定義（自訂）的�
 
 >[!TIP]
 >
->使用API刪除自訂名稱空間時，您必須將身分符號指定為名稱空間，而非顯示名稱。
+>使用GDPR刪除身分時，您必須將身分符號指定為名稱空間，而非顯示名稱。
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->使用UI刪除自訂名稱空間時，您必須將身分符號指定為名稱空間，而非顯示名稱。 此外，您無法刪除非生產沙箱的UI中的自訂名稱空間。
+>使用GDPR刪除身分時，您必須將身分符號指定為名稱空間，而非顯示名稱。
 
 在UI中建立工作請求時，請務必在&#x200B;**[!UICONTROL 產品]**&#x200B;下選取&#x200B;**[!UICONTROL 身分]**，以便處理儲存在[!DNL Identity Service]中之資料的工作。
 
