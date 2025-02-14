@@ -3,10 +3,10 @@ title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: 49c06a1dfb3431ce8fe416d35a22567ce614107a
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '902'
+ht-degree: 0%
 
 ---
 
@@ -42,10 +42,9 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
     </tr>
 </table>
 
-
 ## 新功能
 
-大致瞭解AI助理的最新增強功能，包括目前在Alpha或Beta階段中的功能。
+大致瞭解AI助理的最新增強功能，包括目前Alpha或Beta階段中的功能。
 
 >[!BEGINTABS]
 
@@ -82,6 +81,21 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 [![影像](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
+
+## AI Assistant的安全性功能 {#security}
+
+
+觀看以下影片，瞭解有關AI Assistant安全性功能的更多資訊：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**閱讀AI Assistant安全性資料表**
+
+如需AI助理的詳細資訊，請閱讀Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf)中AI助理的[安全性說明書。
+
+>[!ENDSHADEBOX]
 
 ## 視訊程式庫
 
@@ -183,20 +197,6 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 * [瞭解對象的AI助理](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
-
-## 其他資源
-
->[!BEGINSHADEBOX]
-
-**閱讀AI Assistant安全性資料表**
-
-如需AI助理的詳細資訊，請閱讀Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf)中AI助理的[安全性說明書。
-
->[!ENDSHADEBOX]
-
-觀看以下影片，瞭解有關AI Assistant安全性功能的更多資訊：
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 瀏覽以下連結，進一步瞭解AI Assistant使用案例、功能等。
 
