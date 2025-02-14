@@ -14,7 +14,7 @@ ht-degree: 67%
 ---
 
 
-# 資料收集 {#collection}
+# 資料彙集 {#collection}
 
 - [資料彙集概觀](home.md)
 - [端對端總覽](e2e.md)
