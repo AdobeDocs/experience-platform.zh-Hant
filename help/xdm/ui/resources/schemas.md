@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；資料模型；ui；工作區；綱要；綱要；
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；資料模型；ui；工作區；結構；方案；
 solution: Experience Platform
 title: 在UI中建立和編輯方案
-description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
+description: 瞭解如何在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '4072'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 先決條件 {#prerequisites}
 
-本指南需要實際瞭解XDM系統。 請參閱[XDM總覽](../../home.md)，瞭解XDM在Experience Platform生態系統中的角色簡介，以及[結構描述組合基本概念](../../schema/composition.md)，瞭解結構描述建構方式的總覽。
+本指南需要實際瞭解XDM系統。 請參閱[XDM總覽](../../home.md)，瞭解XDM在Experience Platform生態系統中的角色簡介，以及[結構描述組合基本概念](../../schema/composition.md)，瞭解結構描述如何建構。
 
 ## 建立新結構描述 {#create}
 
@@ -159,7 +159,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
 >
 ![結構描述編輯器反白顯示掛鎖圖示](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -374,7 +374,7 @@ abstract="為輪廓啟用結構描述時，從此結構描述建立的任何資�
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-會出現一個對話方塊，其中顯示所有可用類別的清單，包括貴組織定義的任何類別（擁有者為&quot;[!UICONTROL Customer]&quot;）以及Adobe定義的標準類別。
+會顯示一個對話方塊，其中列出所有可用的類別，包括貴組織定義的任何類別（擁有者為&quot;[!UICONTROL Customer]&quot;）以及Adobe定義的標準類別。
 
 從清單中選取類別，以在對話方塊的右側顯示其說明。 您也可以選取&#x200B;**[!UICONTROL 預覽類別結構]**&#x200B;以檢視與類別關聯的欄位和中繼資料。 選取&#x200B;**[!UICONTROL 指派類別]**&#x200B;以繼續。
 
