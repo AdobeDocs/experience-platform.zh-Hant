@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
 source-wordcount: '1730'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -34,9 +34,9 @@ ht-degree: 5%
 
 ## Platform中的陣列和其他物件型別 {#arrays-strings-other-objects}
 
-在Experience Platform中，您可以使用[XDM結構描述](/help/xdm/home.md)來管理不同的欄位型別。 在新增支援陣列匯出功能之前，您能夠將簡單的機碼值組型別欄位（例如字串）匯出到Experience Platform不佳的所要目的地。 先前支援匯出的欄位範例為`personalEmail.address`：`johndoe@acme.org`。
+在Experience Platform中，您可以使用[XDM結構描述](/help/xdm/home.md)來管理不同的欄位型別。 在新增支援陣列匯出功能之前，您能夠將簡單的索引鍵/值組型別欄位（例如字串）從Experience Platform匯出至您想要的目的地。 先前支援匯出的欄位範例為`personalEmail.address`：`johndoe@acme.org`。
 
-Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[如何在Experience PlatformUI](/help/xdm/ui/fields/array.md)中管理陣列欄位。 除了先前支援的欄位型別之外，您現在還可以匯出陣列物件，例如使用`array_to_string`函式串連到字串中的下列範例。
+Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[如何在Experience Platform UI](/help/xdm/ui/fields/array.md)中管理陣列欄位。 除了先前支援的欄位型別之外，您現在還可以匯出陣列物件，例如使用`array_to_string`函式串連到字串中的下列範例。
 
 ```
 organizations = [{
@@ -84,13 +84,13 @@ organizations = [{
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="新增計算欄位已停用"
->abstract="此控制項已停用，因為在設定此目的地連線時，您選取了&#x200B;**匯出陣列、對應、物件**&#x200B;切換&#x200B;*開啟*。 若要使用計算欄位及中可用的函式，請使用&#x200B;**匯出陣列、地圖、物件**&#x200B;來設定新的目的地連線，將&#x200B;*關閉*。"
+>abstract="此控制項已停用，因為您在設定此目標連線時，將「**匯出陣列、對應、物件**」切換為「*開啟*」。若要使用計算欄位和其中可用的函數，請將「**匯出陣列、對應、物件**」切換為「*關閉*」，再設定新的目標連線。"
 
 在雲端儲存體目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL 新增計算欄位]**。
 
 ![新增批次啟動工作流程對應步驟中反白顯示的計算欄位。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-這會開啟一個模型視窗，您可在其中選取函式和欄位，以將屬性匯出為Experience Platform以外的內容。
+這會開啟模型視窗，您可在其中選取要從Experience Platform匯出屬性的函式和欄位。
 
 ![計算欄位功能的模型視窗，尚未選取函式。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 

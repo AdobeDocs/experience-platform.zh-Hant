@@ -16,13 +16,13 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="資料治理義務"
->abstract="請記住，您有責任遵守組織的資料治理原則並滿足監管要求。Experience Platform 可提供資料治理工具，以協助您管理資料使用義務。請在查詢或處理資料前套用適當的資料使用標籤。請參閱文件以了解資料治理工具和最佳實務。"
+>abstract="請記住，您有責任遵守組織的資料治理原則並滿足監管需求。Experience Platform 可提供資料治理工具，以協助您管理資料使用義務。請在查詢或處理資料前套用適當的資料使用標籤。請參閱文件以了解資料治理工具和最佳實務。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant" text="資料治理概觀"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant" text="資料治理標籤概觀"
 
 Adobe Experience Platform的核心功能之一，是將來自多個企業系統的資料彙集在一起，以便讓行銷人員更能識別、瞭解客戶並與之互動。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 因此，請務必確保您在[!DNL Platform]內的資料作業符合資料使用原則。
 
-管理客戶資料，並確保符合Adobe Experience Platform資料控管適用於資料的規定、限制和政策。 資料控管在Experience Platform的不同層級上扮演著關鍵角色，包括編目、資料譜系、資料使用標籤、資料使用原則，以及控制行銷動作資料的使用方式。
+管理客戶資料，並確保符合Adobe Experience Platform資料控管適用於資料的規定、限制和政策。 資料控管在Experience Platform中的各個層級上扮演著重要的角色，包括編目、資料譜系、資料使用標籤、資料使用原則，以及控制行銷動作對資料的使用方式。
 
 >[!NOTE]
 >
@@ -83,7 +83,7 @@ Adobe Experience Platform的核心功能之一，是將來自多個企業系統�
 
 ## 資料使用原則 {#data-usage-policies}
 
-為了使資料使用標籤有效地支援資料合規性，必須實施資料使用原則。 資料使用原則是描述允許或限制您對Experience Platform內的資料執行何種行銷動作的規則。
+為了使資料使用標籤有效地支援資料合規性，必須實施資料使用原則。 資料使用原則是描述允許或限制您在Experience Platform中對資料執行的行銷動作型別的規則。
 
 行銷動作的範例可能是想要將資料集匯出至第三方服務。 如果制定原則宣佈無法匯出個人識別資訊(PII)，且「I」標籤（身分資料）已從其結構描述套用至欄位層級。 然後，原則服務會防止任何會將此資料集匯出至第三方目的地的動作。 如果其中一個動作嘗試發生，原則服務會傳送訊息告訴您資料使用原則已違反。
 
@@ -121,7 +121,7 @@ Adobe Experience Platform的核心功能之一，是將來自多個企業系統�
 | **資料集標籤** | 標籤可新增到結構描述。 資料集內的所有欄位都會繼承結構的標籤。 |
 | **欄位標籤** | 欄位標籤是從結構描述繼承或直接套用至欄位的資料治理標籤。 套用至欄位的資料治理標籤不會繼承到結構描述層級。 |
 | **地理圍欄** | 地理柵欄是虛擬地理邊界，由GPS或RFID技術定義，可讓軟體在行動裝置進入或離開特定區域時觸發回應。 |
-| **身分標籤** | 身分「I」標籤可用來分類可識別或聯絡特定人員的資料。 |
+| **身分標籤** | 身分識別「I」標籤可用來分類可識別或聯絡特定人員的資料。 |
 | **以興趣為基礎的鎖定目標** | 如果符合下列三個條件，就會發生以興趣為基礎的鎖定目標（也稱為個人化）： <br>現場收集的資料為，<br><ul><li>用於推斷使用者的興趣，</li><li>用於其他情境，例如用於其他網站或應用程式（站外）</li><li>用於根據這些推斷來選取要提供哪些內容或廣告。</li></ul> |
 | **行銷動作** | 在資料控管架構中，行銷動作是Experience Platform資料消費者採取的動作，需要檢查其是否違反資料使用原則 |
 | **原則** | 在資料控管框架中，原則是描述允許或不允許對特定資料執行何種行銷動作的規則。 |
@@ -134,6 +134,6 @@ Adobe Experience Platform的核心功能之一，是將來自多個企業系統�
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-以下影片提供如何在結構描述或Experience Platform的整個資料集中套用資料使用標籤的指引。
+以下影片提供如何在Experience Platform中套用資料使用標籤至結構描述或整個資料集的指引。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

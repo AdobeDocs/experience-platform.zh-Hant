@@ -26,7 +26,7 @@ ht-degree: 35%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="監控 Platform 中的使用者活動"
->abstract="<h2>說明</h2><p>您可以採用「稽核記錄」的方式監控各種 Platform 服務和功能的使用者活動。這些記錄會形成稽核軌跡，其中會記錄<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄可以幫助解決 Platform 上的問題，並幫助您的企業有效地遵守公司資料管理原則和監管要求。</p>"
+>abstract="<h2>說明</h2><p>您可以採用「稽核記錄」的方式監控各種 Platform 服務和功能的使用者活動。這些記錄會形成稽核軌跡，其中會記錄<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄可以幫助解決 Platform 上的問題，並幫助您的企業有效地遵守公司資料管理原則和監管需求。</p>"
 
 為了提高系統中所執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些記錄形成了稽核軌跡，可以幫助對Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和法規要求。
 
@@ -65,7 +65,7 @@ ht-degree: 35%
 | [角色（以屬性為基礎的存取控制）](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>新增使用者</li><li>移除使用者</li></ul> |
 | [沙箱](../../../sandboxes/home.md) | <ul><li>建立</li><li>更新</li><li>重設</li><li>刪除</li></ul> |
 | [排定的查詢](../../../query-service/ui/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [方案](../../../xdm/schema/composition.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>為輪廓啟用</li></ul> |
+| [結構描述](../../../xdm/schema/composition.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>為輪廓啟用</li></ul> |
 | [區段](../../../segmentation/home.md) | <ul><li>建立</li><li>刪除</li><li>區段啟用</li><li>區段移除</li></ul> |
 | [Source資料流程](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟用</li><li>資料集移除</li><li>設定檔啟用</li><li>輪廓移除</li></ul> |
 | [工單](../../../hygiene/home.md) | <ul><li>建立</li></ul> |
@@ -81,7 +81,7 @@ ht-degree: 35%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="說明"
->abstract="<ul><li>在左側導覽中選取<b>稽核</b>。「稽核」工作區會顯示已記錄的記錄清單，依預設會從時間最近的開始排序。</li>   <li> 注意：稽核記錄會保留 365 天，超過此天數將從系統中刪除。因此，您最多只能往回查看 365 天。如果您需要查看超過 365 天的資料，您應該定期匯出記錄以符合您的內部政策要求。 </li><li>從清單中選取一個事件以在右邊欄中查看其詳細資料。 </li><li>選取漏斗圖示以顯示篩選控制項清單，可協助縮小結果範圍。僅顯示最後 1,000 條記錄，無論選取的篩選器為何。 </li><li>若要匯出目前的稽核記錄清單，請選取&#x200B;**下載記錄**。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概觀</a>。</li></ul>"
+>abstract="<ul><li>在左側導覽中選取<b>稽核</b>。「稽核」工作區會顯示已記錄的記錄清單，依預設會從時間最近的開始排序。</li>   <li> 注意：稽核記錄會保留 365 天，超過此天數將從系統中刪除。因此，您最多只能往回查看 365 天。如果您需要查看超過 365 天的資料，您應該定期匯出記錄以符合您的內部原則需求。 </li><li>從清單中選取一個事件以在右邊欄中查看其詳細資料。 </li><li>選取漏斗圖示以顯示篩選控制項清單，可協助縮小結果範圍。僅顯示最後 1,000 條記錄，無論選取的篩選器為何。 </li><li>若要匯出目前的稽核記錄清單，請選取&#x200B;**下載記錄**。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概觀</a>。</li></ul>"
 
 您可以在Platform UI的&#x200B;**[!UICONTROL 稽核]**&#x200B;工作區中，檢視不同Experience Platform功能的稽核記錄。 工作區會顯示記錄日誌的清單，預設情況下會從最近排序為最近排序。
 
@@ -150,8 +150,8 @@ ht-degree: 35%
 * 資料集建立
 * 資料集更新
 * 資料集刪除
-* 綱要建立
-* 綱要更新
+* 結構描述建立
+* 結構描述更新
 * 結構描述刪除
 
 從清單中選取所需的警報，以訂閱接收通知。 如需警示的詳細資訊，請參閱[使用UI訂閱警示](../../../observability/alerts/ui.md)的指南。
@@ -166,7 +166,7 @@ ht-degree: 35%
 
 ## 後續步驟和其他資源
 
-本指南說明如何管理Experience Platform中的稽核記錄。 如需如何監視Platform活動的詳細資訊，請參閱有關[可觀察性深入分析](../../../observability/home.md)和[監視資料擷取](../../../ingestion/quality/monitor-data-ingestion.md)的檔案。
+本指南說明如何在Experience Platform中管理稽核記錄。 如需如何監視Platform活動的詳細資訊，請參閱有關[可觀察性深入分析](../../../observability/home.md)和[監視資料擷取](../../../ingestion/quality/monitor-data-ingestion.md)的檔案。
 
 若要加深您對Experience Platform稽核記錄的瞭解，請觀看以下影片：
 

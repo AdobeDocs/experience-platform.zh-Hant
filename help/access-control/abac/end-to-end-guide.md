@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '1593'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 本教學課程需要您實際瞭解下列平台元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)： [!DNL Platform]內的細分引擎用來根據客戶行為和屬性，從您的客戶設定檔建立對象區段。
@@ -49,13 +49,13 @@ ht-degree: 3%
 
 ## 權限
 
-[!UICONTROL 許可權]是管理員可以定義使用者Experience Cloud和原則，以管理產品應用程式內功能和物件的許可權。
+[!UICONTROL 許可權]是Experience Cloud的區域，管理員可在此定義使用者角色和原則，以管理產品應用程式內功能和物件的許可權。
 
 透過[!UICONTROL 許可權]，您可以建立和管理角色，並為這些角色指派所需的資源許可權。 [!UICONTROL 許可權]也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。
 
 如果您沒有管理員許可權，請聯絡系統管理員以獲得存取權。
 
-一旦您擁有管理員許可權，請移至[Adobe Experience Cloud](https://experience.adobe.com/)並使用您的Adobe認證登入。 登入後，會針對您擁有管理員許可權的組織顯示&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面。 此頁面顯示貴組織訂閱的產品，以及新增使用者和管理員至組織的其他控制項。 選取&#x200B;**[!UICONTROL 許可權]**&#x200B;以開啟您的Platform整合工作區。
+一旦您擁有管理員許可權，請前往[Adobe Experience Cloud](https://experience.adobe.com/)並使用您的Adobe憑證登入。 登入後，會針對您擁有管理員許可權的組織顯示&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面。 此頁面顯示貴組織訂閱的產品，以及新增使用者和管理員至組織的其他控制項。 選取&#x200B;**[!UICONTROL 許可權]**&#x200B;以開啟您的Platform整合工作區。
 
 ![影像顯示正在Adobe Experience Cloud中選取的許可權產品](../images/flac-ui/flac-select-product.png)
 
@@ -66,7 +66,7 @@ Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL 總�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="什麼是標籤？"
->abstract="使用標籤，根據套用至該資料的使用和存取原則，將資料集和欄位分類。 Platform提供數個Adobe定義的<strong>核心</strong>資料使用標籤，涵蓋適用於資料控管的各種常見限制。 例如，RHD (Regulated Health Data)等敏感<strong>S</strong>標籤可讓您分類參考受保護健康資訊(PHI)的資料。 您也可以定義適合您組織需求的自訂標籤。"
+>abstract="根據適用於相關資料的使用情況和存取原則，使用標籤將資料集和欄位進行分類。平台提供數個 Adobe 定義的<strong>核心</strong>資料使用標籤，涵蓋適用於資料治理的各種常見限制。例如 RHD (受監管的健康資料) 這種敏感資料 <strong>S</strong> 標籤，可以將關於受保護的健康資訊 (PHI) 的資料加以分類。您也可以定義符合本身組織需求的自訂標籤。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤概觀"
 
 角色是分類與您的Platform執行個體互動的使用者型別的方法，也是存取控制原則的建置組塊。 角色具有一組指定的許可權，而您組織的成員可以根據他們需要的存取範圍，指派一或多個角色。
@@ -93,7 +93,7 @@ Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL 總�
 
 從頂端導覽列中選取&#x200B;**應用程式切換器** （以![應用程式切換器](/help/images/icons/apps.png)圖示表示），然後選取&#x200B;**[!UICONTROL Experience Platform]**。
 
-![顯示從應用程式切換器的下拉式功能表中選取之Experience Platform的影像](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
+![顯示從應用程式切換器的下拉式功能表中選取Experience Platform的影像](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 從左側導覽選取&#x200B;**[!UICONTROL 結構描述]**，然後從出現的結構描述清單中選取&#x200B;**[!UICONTROL ACME Healthcare]**。
 
