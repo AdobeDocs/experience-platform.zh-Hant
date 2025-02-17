@@ -1,22 +1,18 @@
 ---
-title: 搭配Platform Web SDK使用Offer Decisioning
-description: Adobe Experience Platform Web SDK可以提供並轉譯Offer Decisioning管理的個人化服務。 您可以使用Offer Decisioning UI或API建立您的優惠方案與其他相關物件。
-keywords: offer decisioning；決策；Web SDK；Platform Web SDK；個人化優惠；提供優惠；優惠傳遞；優惠個人化；
+title: 將Offer Decisioning與Platform Web SDK搭配使用
+description: Adobe Experience Platform Web SDK可以提供並轉譯Offer Decisioning中管理的個人化優惠。 您可以使用Offer Decisioning UI或API建立您的優惠方案與其他相關物件。
+keywords: offer decisioning；decisioning；Web SDK；Platform Web SDK；個人化優惠；提供優惠；優惠傳遞；優惠個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
+source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
 
-# 搭配Platform Web SDK使用Offer Decisioning
+# 將Offer Decisioning與Platform Web SDK搭配使用
 
->[!NOTE]
->
->特定使用者可提早存取Adobe Experience Platform Web SDK中的Offer decisioning。 此功能並非適用於所有組織。
-
-Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯Offer Decisioning管理的個人化優惠。 您可以使用Offer decisioning使用者介面(UI)或API建立您的優惠方案與其他相關物件。
+Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯受Offer Decisioning管理的個人化優惠。 您可以使用Offer Decisioning使用者介面(UI)或API建立您的優惠方案與其他相關物件。
 
 ## 先決條件
 
@@ -26,9 +22,9 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯Offer Decisioning�
 
 ## 術語
 
-使用Offer Decisioning時，請務必瞭解下列術語。 如需詳細資訊和檢視其他辭彙，請造訪[Offer decisioning字彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)。
+使用Offer Decisioning時，請務必瞭解下列術語。 如需詳細資訊和檢視其他辭彙，請造訪[Offer Decisioning辭彙](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)。
 
-* **決定範圍：**&#x200B;對於Offer decisioning，決定範圍是JSON的Base64編碼字串，其中包含您希望offer decisioning服務用來建議優惠的活動和位置ID。
+* **決定範圍：**&#x200B;對於Offer Decisioning，決定範圍是JSON的Base64編碼字串，包含您要優惠決定服務用來建議優惠的活動和位置ID。
 
   *決定範圍JSON：*
 
@@ -55,16 +51,16 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯Offer Decisioning�
 
 * **身分**：如需詳細資訊，請閱讀此檔案以概述[Platform Web SDK如何使用身分識別服務](../../identity/overview.md)。
 
-## 啟用Offer decisioning
+## 啟用Offer Decisioning
 
-若要啟用Offer Decisioning，請執行下列步驟：
+若要啟用Offer Decisioning，請執行以下步驟：
 
-1. 在您的[資料流](/help/datastreams/overview.md)中啟用Adobe Experience Platform，並勾選「Offer decisioning」方塊
+1. 在您的[資料流](/help/datastreams/overview.md)中啟用Adobe Experience Platform，並勾選「Offer Decisioning」方塊
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
 1. 請依照指示[安裝SDK](/help/web-sdk/install/overview.md) (SDK可以獨立安裝，也可以透過UI安裝。 如需詳細資訊，請參閱[標籤快速入門手冊](/help/tags/quick-start/quick-start.md))。
-1. 設定SDK以使用`personalization.decisionScopes`進行Offer decisioning。 以下提供其他Offer decisioning特定步驟。
+1. 使用`personalization.decisionScopes`設定Offer Decisioning的SDK。 以下提供其他Offer Decisioning特定步驟。
 
    * 安裝獨立SDK
 
@@ -92,7 +88,7 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯Offer Decisioning�
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 建立必要的[資料元素](/help/tags/ui/managing-resources/data-elements.md)。 您至少必須建立Platform Web SDK身分對應和Platform Web SDK XDM物件資料元素。
+      1. 建立必要的[資料元素](/help/tags/ui/managing-resources/data-elements.md)。 您至少必須建立Platform Web SDK「身分對應」和Platform Web SDK XDM物件資料元素。
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
@@ -100,7 +96,7 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯Offer Decisioning�
 
       1. 建立您的[規則](/help/tags/ui/managing-resources/rules.md)。
 
-         * 新增Platform Web SDK傳送事件動作，並將相關的`decisionScopes`新增至該動作的設定
+         * 新增Platform Web SDK傳送事件動作，並將相關`decisionScopes`新增至該動作的設定
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
