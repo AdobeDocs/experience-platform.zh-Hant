@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform中的AI助理
-description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和Real-time Customer Data Platform概念，以及有關您物件的使用資訊。
+description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和Real-Time Customer Data Platform概念，以及有關您物件的使用資訊。
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 請閱讀本指南，瞭解如何在Adobe Experience Platform UI中使用AI Assistant。
 
-## 在Experience PlatformUI中存取AI助理
+## 在Experience Platform UI中存取AI助理
 
-若要啟動AI助理，請從Experience PlatformUI的頂端標題中選取&#x200B;**[!UICONTROL AI助理圖示]**。
+若要啟動AI助理，請從Experience Platform UI的頂端標題中選取&#x200B;**[!UICONTROL AI助理圖示]**。
 
 ![Experience Platform首頁，已選取AI助理圖示並開啟AI助理介面。](./images/ai-assistant-full-icon.png)
 
@@ -29,23 +29,23 @@ AI Assistant介面隨即顯示，立即為您提供開始使用的資訊。 您�
 
 >[!NOTE]
 >
->以下工作流程是使用Experience Event結構描述建立程式的範例，說明如何使用Experience PlatformUI中的AI Assistant。
+>以下工作流程是使用體驗事件結構描述建立程式的範例，說明如何使用Experience Platform UI時的AI Assistant。
 
 請考量您正在建立&#x200B;**事件結構描述中的裝置交易**&#x200B;的使用案例。 在體驗事件結構描述建立程式期間，您遇到了`eventType`欄位。 「此時，您可以選擇結束工作流程並參閱結構描述組合的[基本概念](../xdm/schema/composition.md)檔案，或者您可以使用AI助理來擷取問題的答案，並透過AI助理所建議的檔案連結尋找其他資源。」
 
 若要開始，請在提供的文字方塊中輸入您的問題。 在以下範例中，AI助理會提出以下問題： &quot;**什麼是ExperienceEvent結構描述中的eventType欄位？**&quot;
 
-![用於Experience Platform的AI助理具有下列準備進行查詢的問題：「ExperienceEvent結構描述中的eventType欄位是什麼？](./images/question.png)
+![Experience Platform的AI助理具有下列準備進行查詢的問題：「ExperienceEvent結構描述中的eventType欄位是什麼？](./images/question.png)
 
 AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assistant會傳回答案和相關建議，您可將其用作後續提示。
 
-![AI助理用於Experience Platform，並有上一個查詢的答案。](./images/answer.png)
+![Experience Platform的AI小幫手，含上一個查詢的答案。](./images/answer.png)
 
 收到來自AI助理的回應後，您可以從多個選項中進行選取，以決定要如何繼續。
 
 ### AI助理功能 {#features}
 
-本節概述您可以在Experience Platform工作流程中使用的AI Assistant各種功能。
+本節概述您可以在Experience Platform工作流程中使用的AI助理不同功能。
 
 ### 檢視作業資料物件 {#view-operational-data-objects}
 
@@ -87,7 +87,7 @@ AI Assistant會更新介面，並提供檔案連結給您，以證實初始回�
 
 ![有關營運深入分析的問題。](./images/op-insights-question.png)
 
-AI助理接著會以表格回應，該表格會列出您的資料流及其對應的ID。 若要檢視整個資料表格，請選取右上角的展開圖示。
+AI助理接著會以表格回應，該表格會列出您的資料流及其對應的ID。 選取下載圖示（![下載圖示](/help/images/icons/download.png)），將表格下載為CSV檔案。 若要檢視整個表格，請選取展開圖示（![展開圖示](/help/images/icons/expand.png)）。
 
 ![操作見解答案](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ AI助理接著會以表格回應，該表格會列出您的資料流及其對應
 ![AI助理提供其如何計算其答案的說明。](./images/answer-explained.png)
 
 您也可以提供篩選器和修改問題，也可以指示AI助理根據您包含的篩選器來呈現其結果。 例如，您可以要求AI助理按照區段定義的建立日期順序，顯示區段定義計數的趨勢；移除總設定檔為零的區段定義；以及在顯示資料時，使用月份名稱而非整數。
-
-**注意：**&#x200B;操作深入分析答案目前為Beta版。 選取AI助理使用者介面中的工具提示圖示以檢視Beta通知和檔案的連結。
-
-已選取![AI助理工具提示圖示。](./images/op-insights-beta-note.png)
 
 +++
 

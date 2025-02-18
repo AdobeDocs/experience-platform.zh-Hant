@@ -2,10 +2,10 @@
 title: Adobe Experience Platform中的AI助理概述
 description: 了解 AI 助理、其細微差別和使用案例，以及如何使用它來加快 Adobe Experience Platform 和 Real-Time Customer Data Platform 的工作流程。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 14%
+source-wordcount: '927'
+ht-degree: 15%
 
 ---
 
@@ -55,7 +55,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 | --- | --- |
 | 點式學習 | <ul><li>身分識別與主要或外部索引鍵之間有何差異？</li><li>什麼是相似客群？</li></ul> |
 | 開啟探索 | <ul><li>如何匯出此資料集？</li><li>是否有適用於醫療保健客戶的結構描述？</li></ul> |
-| 疑難排解 | <ul><li>為什麼我無法為設定檔開啟Adobe擁有的結構描述？</li><li>我為何刪除不了區段？</li></ul> |
+| 疑難排解 | <ul><li>為何我無法開啟Adobe擁有的結構描述以供設定檔使用？</li><li>我為何刪除不了區段？</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,10 +64,6 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### 運作深入分析 {#operational-insights}
-
->[!IMPORTANT]
->
->營運見解答案為測試版。 有權存取&#x200B;**檢視營運分析**&#x200B;許可權的任何人將有權存取營運分析答案。
 
 營運深入分析是指回答AI助理產生的中繼資料物件（屬性、受眾、資料流、資料集、目的地、歷程、結構描述和來源），包括計數、查閱和歷程影響。 它不會檢視沙箱中的任何資料。
 
@@ -100,7 +96,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 目前，AI助理的範圍如下：
 
-* [產品知識](./home.md#product-knowledge)： AI助理可以回答Experience Platform、Real-time Customer Data Platform和Adobe Journey Optimizer的產品知識問題。 您也可以深入探討Customer Journey Analytics的產品知識主題，但必須透過Customer Journey AnalyticsUI。
+* [產品知識](./home.md#product-knowledge)： AI助理可以回答Experience Platform、Real-Time Customer Data Platform和Adobe Journey Optimizer的產品知識問題。 您也可以深入探討Customer Journey Analytics的產品知識主題，但必須透過Customer Journey Analytics UI。
 * [營運分析](./home.md#operational-insights)：您可以向AI助理詢問有關下列資料物件的營運分析問題：屬性、對象、資料流、資料集、目的地、歷程、結構描述和來源。
 
 ## 後續步驟
