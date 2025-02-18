@@ -4,20 +4,20 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
+source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3637'
+ht-degree: 10%
 
 ---
 
 # 在UI中監視目的地的資料流
 
-使用Experience Platform目錄中的各種目的地，從Platform向無數的外部合作夥伴啟用您的資料。 Platform藉由提供資料流透明度，讓追蹤資料流向目的地的程式變得更輕鬆。
+使用Experience Platform目錄中的各種目的地，從Platform啟用資料給無數外部合作夥伴。 Platform藉由提供資料流透明度，讓追蹤資料流向目的地的程式變得更輕鬆。
 
 監視儀表板可讓您以視覺化方式呈現資料流程的歷程，包括資料啟用的目的地、您要檢視的資料型別、每次資料流程執行的匯出資料等等。
 
-本教學課程提供如何直接在目的地Workspace中監視資料流，或使用「監視」控制面板透過Experience Platform使用者介面監視目的地的資料流的說明。
+本教學課程提供如何直接在目的地工作區中監視資料流，或使用「監視」控制面板透過Experience Platform使用者介面監視目的地的資料流的說明。
 
 ## 快速入門 {#getting-started}
 
@@ -121,7 +121,12 @@ ht-degree: 0%
 
 #### (Beta)適用於串流目的地的受眾層級資料流執行監控 {#audience-level-dataflow-runs-for-streaming-destinations}
 
-您可以檢視在對象層級劃分的啟用、排除或失敗身分的相關資訊，瞭解屬於資料流的每個對象。 串流目的地的對象層級監視目前僅適用於[[!DNL Google Customer Match + Display & Video 360] 目的地](/help/destinations/catalog/advertising/google-customer-match-dv360.md)。
+您可以檢視在對象層級劃分的啟用、排除或失敗身分的相關資訊，瞭解屬於資料流的每個對象。
+
+串流目的地的對象層級監控目前僅適用於下列目的地：
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![串流目的地的對象層級監視。](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
@@ -205,7 +210,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Experience Platform *中除* [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)和[自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)目的地以外的所有目的地目前都支援目的地監視功能。
+>Experience Platform *中目前支援所有目的地的目的地監視功能，但* [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)和[自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)目的地除外。
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
