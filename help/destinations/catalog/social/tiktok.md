@@ -3,9 +3,9 @@ title: TikTok連線
 description: 使用您的資料在TikTok上建立自訂對象，以便透過廣告促銷活動進行目標定位。 這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1077'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 您必須擁有[!DNL Admin]或[!DNL Operator]許可權，才能存取您要傳送對象的TikTok Ads Manager帳戶。 如需更多說明，請參閱[TikTok說明中心](https://ads.tiktok.com/help/article/add-users-tiktok-business-center)。
 
-在將資料傳送至您的TikTok Ads Manager帳戶之前，您需要授予Adobe Experience Platform許可權以存取`Audience Management`的廣告帳戶。 在Experience PlatformUI中輸入您的Ads Manager ID](#authenticate)，並在重新導向您的TikTok Ads Manager帳戶後授與許可權，即可提供此許可權。[
+在將資料傳送至您的TikTok Ads Manager帳戶之前，您需要授予Adobe Experience Platform許可權以存取`Audience Management`的廣告帳戶。 在Experience Platform使用者介面中輸入您的廣告管理員ID](#authenticate)，並在重新導向至您的TikTok廣告管理員帳戶後授與許可權，即可提供此許可權。[
 
 ## 支援的身分 {#supported-identities}
 
@@ -47,6 +47,18 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 {style="table-layout:auto"}
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Federated Audience Composition] | ✓ | 透過[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)匯入到Experience Platform中的對象。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
@@ -54,7 +66,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有TikTok目的地所使用識別碼（名稱、電話號碼或其他）的對象所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -90,7 +102,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的對象 {#activate}
+## 啟動此目標的客群 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -99,7 +111,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 閱讀[將設定檔和對象啟用至串流對象匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)，以瞭解啟用此目的地對象的指示。
 
-### 對應身分 {#map}
+### 對應身分識別 {#map}
 
 以下是將對象匯出至TikTok Ads Manager時的正確身分對應範例。
 
