@@ -2,30 +2,32 @@
 keywords: Experience Platform；首頁；熱門主題；篩選；篩選；篩選資料；日期範圍
 solution: Experience Platform
 title: 使用查詢引數篩選目錄資料
-description: 目錄服務API可讓您透過使用請求查詢引數來篩選回應資料。 「目錄」最佳實務的一部分是在所有API呼叫中使用篩選器，因為它們會降低API的負載，並有助於改善整體效能。
+description: 使用查詢引數來篩選目錄服務API中的回應資料，並僅擷取您需要的資訊。 將篩選器套用至API呼叫，以降低負載並改善效能，確保更快且更有效率地擷取資料。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
+source-git-commit: 14ecb971af3f6cdcc605caa05ef6609ecb9b38fd
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2339'
 ht-degree: 1%
 
 ---
 
 # 使用查詢引數篩選[!DNL Catalog]資料
 
-[!DNL Catalog Service] API允許透過使用要求查詢引數來篩選回應資料。 [!DNL Catalog]的部分最佳實務是在所有API呼叫中使用篩選器，因為它們會降低API的負載，並有助於改善整體效能。
+若要改善效能並擷取相關結果，請使用查詢引數來篩選[!DNL Catalog Service] API回應資料。
 
-本檔案概述篩選API中[!DNL Catalog]物件的最常見方法。 在閱讀[目錄開發人員指南](getting-started.md)時，建議您參考此檔案，以進一步瞭解如何與[!DNL Catalog] API互動。 如需[!DNL Catalog Service]的一般資訊，請參閱[[!DNL Catalog] 概觀](../home.md)。
+瞭解API中[!DNL Catalog]物件的常見篩選方法。 請將此檔案與[Catalog Developer Guide](getting-started.md)一併使用，以取得API互動的詳細資訊。 如需一般[!DNL Catalog Service]資訊，請參閱[[!DNL Catalog] 概觀](../home.md)。
 
-## 限制傳回的物件
+## 限制傳回的物件 {#limit-returned-objects}
 
-`limit`查詢引數會限制回應中傳回的物件數目。 [!DNL Catalog]回應會根據設定的限制自動計量：
+`limit`查詢引數會限制回應中傳回的物件數目。 [!DNL Catalog]個回應遵循預先定義的限制：
 
-* 如果未指定`limit`引數，則每個回應承載的物件數目上限為20。
+* 如果未指定`limit`引數，則每個回應的物件數目上限為20。
 * 針對資料集查詢，如果使用`properties`查詢引數要求`observableSchema`，則傳回的資料集數目上限為20。
-* 所有其他目錄查詢的全域限製為100個物件。
-* 無效的`limit`引數（包括`limit=0`）會產生概述正確範圍的400層級錯誤回應。
-* 以查詢引數傳遞的限制或位移優先於以標頭傳遞的限制或位移。
+* 若為使用者權杖，上限為1。
+* 對於服務權杖，最大限製為20。
+* 其他目錄查詢的全域限製為100個物件。
+* 無效的`limit`值（包括`limit=0`）導致400層級的錯誤回應，指定了適當的範圍。
+* 作為查詢引數傳遞的限制或位移優先於標題中的限制或位移。
 
 **API格式**
 
@@ -35,8 +37,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{LIMIT}` | 整數，表示傳回的物件數目，範圍從1到100。 |
+| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效物件： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{LIMIT}` | 指定傳回物件數目的整數（範圍： 1-100）。 |
 
 **要求**
 
@@ -73,7 +75,7 @@ curl -X GET \
 }
 ```
 
-## 限制顯示的屬性
+## 限制顯示的屬性 {#limit-displayed-properties}
 
 即使使用`limit`引數篩選傳回的物件數目，傳回的物件本身通常也會包含超出您實際需要的更多資訊。 若要進一步降低系統的負載，最佳實務是篩選回應，僅包含您需要的屬性。
 
@@ -158,7 +160,7 @@ curl -X GET \
 >
 >在每個資料集的`schemaRef`屬性中，版本號碼會指出結構描述的最新次要版本。 如需詳細資訊，請參閱XDM API指南中[架構版本設定](../../xdm/api/getting-started.md#versioning)的相關章節。
 
-## 回應清單的位移開始索引
+## 回應清單的位移開始索引 {#offset-starting-index}
 
 `start`查詢引數會使用從零開始的編號，將回應清單向前位移指定的數字。 例如，`start=2`會將回應位移，以在列出的第三個物件上啟動。
 
@@ -455,6 +457,10 @@ curl -X GET \
 * [使用簡單篩選器](#using-simple-filters)：依特定屬性是否符合特定值來篩選。
 * [使用屬性引數](#using-the-property-parameter)：使用條件運算式來篩選屬性是否存在，或屬性的值是否符合、近似或與其他指定值或規則運算式比較。
 
+>[!NOTE]
+>
+>目錄物件的任何屬性都可用於篩選目錄服務API中的結果。
+
 ### 使用簡單篩選器 {#using-simple-filters}
 
 簡單篩選器可讓您根據特定屬性值來篩選回應。 簡單篩選器採用`{PROPERTY_NAME}={VALUE}`的形式。
@@ -524,6 +530,22 @@ curl -X GET \
 
 `property`查詢引數比簡單篩選提供更大的彈性以屬性為基礎的篩選。 除了根據屬性是否具有特定值來進行篩選之外，`property`引數還可以使用其他比較運運算元(例如「大於」(`>`)和「小於」(`<`))以及規則運算式來依屬性值進行篩選。 它也可以依屬性是否存在進行篩選，無論其值為何。
 
+使用&amp;符號(`&`)來結合多個篩選器，並在單一請求中精簡您的查詢。 依多個欄位篩選時，預設會套用`AND`關係。
+
+>[!NOTE]
+>
+>若您在單一查詢中合併多個`property`引數，則必須至少將一個引數套用至`id`或`created`欄位。 下列查詢傳回`id`為`abc123` **且** `name`不是`test`的物件：
+>
+>```http
+>GET /datasets?property=id==abc123&property=name!=test
+>```
+
+如果您在同一欄位上使用多個`property`引數，則只有最後指定的引數才會生效。
+
+>[!IMPORTANT]
+>
+>您&#x200B;**無法**&#x200B;使用單一`property`引數一次篩選多個欄位。 每個欄位都必須有自己的`property`引數。 下列範例(`property=id>abc,name==myDataset`)是&#x200B;**不允許**，因為它嘗試在&#x200B;**單一`property`引數**&#x200B;中套用條件至`id`和`name`。
+
 `property`引數可以接受任何層級的物件屬性。 `sampleKey`可以使用`?properties=subItem.sampleKey`進行篩選。
 
 ```json
@@ -562,6 +584,8 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 | &lt;= | 只傳回屬性值小於（或等於）指定數量的物件。 | `property=version<=1.0.0` |
 | > | 只傳回屬性值大於（但不等於）指定數量的物件。 | `property=version>1.0.0` |
 | >= | 只傳回屬性值大於（或等於）指定數量的物件。 | `property=version>=1.0.0` |
+| * | 萬用字元會套用至任何字串屬性，並符合任何字元順序。 使用`**`來逸出常值星號。 | `property=name==te*st` |
+| &amp; | 結合多個`property`引數以及它們之間的`AND`關係。 | `property=id==abc&property=name!=test` |
 
 >[!NOTE]
 >
@@ -619,12 +643,38 @@ curl -X GET \
 }
 ```
 
-## 合併多個篩選器
+## 使用屬性引數篩選陣列 {#filter-arrays}
 
-使用&amp;符號(`&`)，您可以在單一要求中合併多個篩選器。 將其他條件新增至請求時，假設為AND關係。
+根據陣列屬性篩選結果時，請使用相等和不等運運算元來包含或排除特定值。
+
+### 相等篩選器 {#equality-filters}
+
+若要依多個值篩選陣列欄位，請對每個值使用個別的屬性引數。 使用相等篩選器只傳回陣列資料中與指定值相符的專案。
+
+>[!NOTE]
+>
+>篩選多個欄位時包含`id`或`created`的要求&#x200B;**不**&#x200B;適用於篩選陣列欄位中的多個值。
+
+下列範例查詢只會傳回同時包含`val1`和`val2`的陣列結果。
 
 **API格式**
 
 ```http
-GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
+GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
+
+### 不等式篩選器 {#inequality-filters}
+
+在陣列欄位上使用不等式運運算元(`!=`)，以排除資料中陣列包含指定值的任何專案。
+
+**API格式**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
+```
+
+此查詢傳回arrayField不包含`val1`或`val2`的檔案。
+
+### 等式和不等式篩選器限制 {#equality-inequality-limitations}
+
+您無法在單一查詢中將等式(`=`)和不等式(`!=`)同時套用至相同的欄位。
