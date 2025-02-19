@@ -2,7 +2,7 @@
 title: Splunk擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Splunk擴充功能。
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Splunk擴充功能概觀
 
-[Splunk](https://www.splunk.com)是可觀察性平台，可提供針對您資料的可操作深入分析之搜尋、分析和視覺化。 Splunk [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能運用[Splunk HTTP事件收集器REST API](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints)，將事件從Adobe Experience PlatformEdge Network傳送至[Splunk HTTP事件收集器](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)。
+[Splunk](https://www.splunk.com)是可觀察性平台，可提供針對您資料的可操作深入分析之搜尋、分析和視覺化。 Splunk [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能運用[Splunk HTTP事件收集器REST API](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints)，將事件從Adobe Experience Platform Edge Network傳送至[Splunk HTTP事件收集器](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)。
 
 Splunk使用持有人權杖作為驗證機制，與Splunk事件收集器API通訊。
 
@@ -38,6 +38,7 @@ Splunk使用持有人權杖作為驗證機制，與Splunk事件收集器API通�
 
 * [事件收集器權杖](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform)。 Token通常是UUIDv4格式，如下所示： `12345678-1234-1234-1234-1234567890AB`。
 * 貴組織的Splunk平台執行個體位址和連線埠。 Platform執行個體位址和連線埠通常具有下列格式： `mysplunkserver.example.com:443`。
+
   >[!IMPORTANT]
   >
   > 在事件轉送中參考的Splunk端點應僅使用連線埠`443`。 事件轉送實作目前不支援非標準連線埠。

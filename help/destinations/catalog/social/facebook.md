@@ -1,9 +1,9 @@
 ---
 keywords: facebook連線；facebook連線；facebook目的地；facebook；instagram；messenger；facebook messenger
-title: facebook連線
+title: Facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 6%
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 您可以將此目的地用於[!DNL Custom Audiences]所支援之[!DNL Facebook's]系列應用程式的對象目標定位，包括[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]和[!DNL Messenger]。 在[!DNL Facebook Ads Manager]中的版位層級會指出您選擇針對哪個應用程式執行行銷活動。
 
-Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/social/facebook/catalog.png)
+在Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/social/facebook/catalog.png)
 
 ## 使用案例
 
@@ -54,8 +54,8 @@ Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/s
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -65,22 +65,25 @@ Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/s
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有Facebook目的地所使用識別碼（名稱、電話號碼或其他）的對象所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有Facebook目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
-## facebook帳戶必要條件 {#facebook-account-prerequisites}
+## Facebook帳戶必要條件 {#facebook-account-prerequisites}
 
 在將您的對象傳送至[!DNL Facebook]之前，請確定您符合下列要求：
 
 * 您的[!DNL Facebook]使用者帳戶必須擁有擁有您正在使用之廣告帳戶的[!DNL Facebook Business Account]的完整存取權。
 * 您的[!DNL Facebook]使用者帳戶必須針對您計畫使用的廣告帳戶啟用&#x200B;**[!DNL Manage campaigns]**&#x200B;許可權。
 * **Adobe Experience Cloud**&#x200B;商業帳戶必須新增為您[!DNL Facebook Ad Account]的廣告合作夥伴。 使用`business ID=206617933627973`。 如需詳細資訊，請參閱Facebook檔案中的[新增合作夥伴至您的Business Manager](https://www.facebook.com/business/help/1717412048538897)。
+
   >[!IMPORTANT]
   >
   > 設定Adobe Experience Cloud的許可權時，您必須啟用&#x200B;**管理行銷活動**&#x200B;許可權。 [!DNL Adobe Experience Platform]整合需要許可權。
+
 * 閱讀並簽署[!DNL Facebook Custom Audiences]服務條款。 若要這麼做，請移至`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`，其中`accountID`是您的[!DNL Facebook Ad Account ID]。 簽署服務條款時，請確定URL中有`business_id=206617933627973`區段。
+
   >[!IMPORTANT]
   >
   >簽署[!DNL Facebook Custom Audiences]服務條款時，請務必使用您在Facebook API中驗證時所用的相同使用者帳戶。
@@ -104,7 +107,7 @@ Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/s
 
 ## 電子郵件雜湊需求 {#email-hashing-requirements}
 
-您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或使用Experience Platform中清楚的電子郵件地址，並在啟用時將[!DNL Platform]個電子郵件地址雜湊。
+您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Platform]個電子郵件地址雜湊。
 
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取總覽](/help/ingestion/batch-ingestion/overview.md)和[串流擷取總覽](/help/ingestion/streaming-ingestion/overview.md)。
 
@@ -127,7 +130,7 @@ Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/s
 
 ## 使用自訂名稱空間 {#custom-namespaces}
 
-在使用`Extern_ID`名稱空間傳送資料給[!DNL Facebook]之前，請確定您使用[!DNL Facebook Pixel]同步處理自己的識別碼。 如需詳細資訊，請參閱[Facebook正式檔案](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)。
+在使用`Extern_ID`名稱空間傳送資料給[!DNL Facebook]之前，請確定您使用[!DNL Facebook Pixel]同步處理自己的識別碼。 如需詳細資訊，請參閱[Facebook官方檔案](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)。
 
 ## 連線到目標 {#connect}
 
@@ -143,21 +146,21 @@ Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/s
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，自從錄製此影片後，該介面可能已經變更。 如需最新資訊，請參閱[目的地設定教學課程](../../ui/connect-destination.md)。
+>Experience Platform使用者介面經常更新，自從錄製此影片後，可能已經變更。 如需最新資訊，請參閱[目的地設定教學課程](../../ui/connect-destination.md)。
 
 ### 驗證目標 {#authenticate}
 
 1. 在目的地目錄中尋找Facebook目的地，並選取&#x200B;**[!UICONTROL 設定]**。
 2. 選取&#x200B;**[!UICONTROL 連線到目的地]**。
    ![驗證啟動工作流程中顯示的Facebook步驟。](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
-3. 輸入您的Facebook認證，並選取&#x200B;**登入**。
+3. 輸入您的Facebook認證，然後選取&#x200B;**登入**。
 
 ### 重新整理驗證認證 {#refresh-authentication-credentials}
 
-facebook Token每60天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+Facebook權杖每60天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
 
 1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
-2. （選用）使用頁面上可用的篩選器，僅顯示Facebook帳戶。
+2. （選用）使用頁面上可用的篩選器，以僅顯示Facebook帳戶。
    ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)

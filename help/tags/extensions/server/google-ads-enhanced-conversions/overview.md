@@ -3,7 +3,7 @@ title: Google Ads增強型轉換延伸功能
 description: 瞭解Adobe Experience Platform中用於事件轉送的Google Ads Enhanced Conversion擴充功能。
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -74,6 +74,7 @@ ht-degree: 1%
 1. **[!UICONTROL 事件名稱（動作）]**：輸入`conversion`作為值。
 1. 新增索引鍵為`transaction_id`且值為包含[交易ID](https://support.google.com/google-ads/answer/6386790)值的[資料元素](../../../ui/managing-resources/data-elements.md)的欄位。
 1. **[!UICONTROL 轉換標籤]**：從您的[!DNL Google Ads]帳戶輸入適當的轉換標籤。 若要尋找此值，請登入Google Ads並導覽至&#x200B;**[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**。 您可以在[!DNL Instructions]下找到轉換標籤。
+
    >[!IMPORTANT]
    >
    >當您在[!DNL Google Ads]帳戶的標籤設定區域中時，請確定已啟用增強型轉換。 若要這麼做，請檢閱並接受服務條款，然後選取&#x200B;**[!DNL Turn on enhanced conversions]**&#x200B;與&#x200B;**[!DNL API]**&#x200B;作為實作方法。
