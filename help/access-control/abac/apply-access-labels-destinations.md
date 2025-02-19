@@ -1,36 +1,33 @@
 ---
 title: 使用存取權標籤來管理使用者對目的地資料流程的存取權
 description: 瞭解如何使用存取標籤來管理使用者對目的地資料流程的存取，以便只有組織中使用者的子集才能存取特定目的地資料流程。
-badgePrivateBeta: label="Private Beta" type="Informative"
-hide: true
-hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
+source-git-commit: e1b8ca463146d300b48257304778a82aa745df73
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '995'
 ht-degree: 1%
 
 ---
 
 # 使用存取權標籤來管理使用者對目的地資料流程的存取權
 
-作為Real-Time CDP中[!UICONTROL 以屬性為基礎的存取控制]功能的一部分，您現在可以將存取標籤套用至目的地資料流。 因此，您可以確保組織中只有一部分使用者有權存取特定目的地資料流。
+作為Real-Time CDP中[[!UICONTROL 屬性型存取控制]](overview.md)功能的一部分，您現在可以將存取標籤套用至[目的地資料流](../../dataflows/ui/monitor-destinations.md)。 這樣的話，您可以確保組織中只有一部分使用者才能存取特定目的地資料流。
 
-將存取權標籤新增至特定目的地時，只有可存取已指派該標籤之角色的使用者，才能檢視及編輯該目的地資料流。 如果目的地資料流未標籤任何標籤，則屬於您組織的所有使用者皆可看到該資料流。
+將存取標籤新增至特定目的地時，只有可存取已指派該標籤之角色的使用者，才能檢視及編輯該目的地資料流。 如果目的地資料流未標籤任何標籤，則屬於您組織的所有使用者皆可看到該資料流。
 
 請參閱本頁面以瞭解範例使用案例、使用此功能時將存取標籤套用至目的地資料流程的先決條件，以及其他重要圖說文字。
 
 ## 先決條件 {#prerequisites}
 
-開始使用此功能前，請注意下列要完成的先決條件。 若要熟悉[!UICONTROL 以屬性為基礎的存取控制]功能，Adobe也建議您閱讀下列文章：
+開始使用此功能前，請注意下列要完成的先決條件。 若要熟悉[!UICONTROL 屬性型存取控制]，Adobe也建議您閱讀下列文章：
 
 * [屬性式存取控制概觀](/help/access-control/abac/overview.md)
 * [以屬性為基礎的存取控制端對端指南](/help/access-control/abac/end-to-end-guide.md)
 
 ### 存取許可權UI {#access-permissions-ui}
 
-[!UICONTROL 許可權]是管理員可以定義使用者Experience Cloud和原則，以管理產品應用程式內功能和物件的許可權。 閱讀[許可權區段](/help/access-control/abac/end-to-end-guide.md#permissions)以開始。
+[!UICONTROL 許可權]是Experience Cloud的區域，管理員可在此定義使用者角色和原則，以管理產品應用程式內功能和物件的許可權。 閱讀[許可權區段](/help/access-control/abac/end-to-end-guide.md#permissions)以開始。
 
 ### 建立角色、標籤並指派使用者 {#create-roles-labels-assign-users}
 
@@ -46,7 +43,7 @@ ht-degree: 1%
 
 閱讀[連線至目的地](/help/destinations/ui/connect-destination.md)和[啟用資料至目的地](/help/destinations/ui/activation-overview.md)的指南。 然後，從可用聯結器的[目錄](/help/destinations/catalog/overview.md)中選取所要的目的地。
 
-## 已經可用：將存取權標籤套用至其他Experience Platform資源 {#apply-labels-other-resources}
+## 已可使用：將存取權標籤套用至其他Experience Platform資源 {#apply-labels-other-resources}
 
 雖然此版本可讓您授與使用者物件層級存取特定目的地資料流程的許可權，但其他Experience Platform資源（例如[對象](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-segments)）已普遍可以使用授與物件層級存取控制的功能。
 
@@ -66,7 +63,7 @@ ht-degree: 1%
 1. 請注意資料流現在如何在UI中顯示存取標籤。
    ![含有所選資料流的數個目的地資料流檢視如何顯示存取標籤。](/help/access-control/images/olac/dataflow-with-access-label.png)
 
-如果目的地資料流未標籤任何標籤，則會為所有使用者顯示。 如果資料流標示有一或多個存取標籤，則它只會針對屬於具有相同標籤或標籤組合之角色的使用者顯示。
+如果目的地資料流未標籤任何標籤，所有使用者都可以看到該資料流。 如果資料流標示有一或多個存取標籤，則只有屬於具有相同標籤或標籤組合之角色的使用者才能看到該資料流。
 
 您可以將標準和自訂標籤新增到目的地資料流。 將標籤新增至目的地資料流後：
 
@@ -76,11 +73,15 @@ ht-degree: 1%
 
 ## 要瞭解的重要圖說文字和專案 {#important-callouts}
 
-目前，存取標籤只能套用至現有的資料流。 這表示某人必須先建立連至目的地的資料流，才能套用存取標籤。
+目前，存取標籤只能套用至現有的資料流。 這表示在套用存取權標籤之前，您必須先建立指向目的地的資料流。
 
 如果您沒有存取權標籤，就無法將存取權標籤套用至目的地資料流。
 
 將多個標籤新增至目的地資料流時，應該能夠檢視和編輯資料流的使用者必須新增至至少具有相同標籤組合的角色。 例如，如果您將標籤C1、I2和另一個自訂標籤套用至目的地資料流，則只有新增至角色且具有這三個標籤組合存取權的使用者才能檢視和編輯此特定目的地資料流。
+
+>[!NOTE]
+>
+> 使用Experience Platform使用者介面頂端的搜尋方塊搜尋目的地資料流時，結果可能包括您的使用者存取標籤限制您檢視的目的地資料流。 此行為將在未來更新中更正。
 
 ![文氏圖表顯示只有特定使用者才能存取已套用多個標籤的目的地。](/help/access-control/images/olac/multiple-labels-venn.png)
 
