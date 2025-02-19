@@ -3,14 +3,20 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理使用者
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面管理使用者和使用者群組的相關資訊
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 0%
+source-wordcount: '285'
+ht-degree: 1%
 
 ---
 
-# 管理使用者
+# 管理使用者 {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="什麼是使用者？"
+>abstract="使用者是指有權存取Experience Platform的個人。 個別使用者對組織資源的存取權會透過角色進行管理。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="管理角色"
 
 如果您想要檢視使用者詳細資訊以及指派給他們的角色，請選取「**[!UICONTROL 使用者]**」標籤。
 

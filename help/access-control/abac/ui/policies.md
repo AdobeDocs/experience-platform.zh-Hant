@@ -3,16 +3,16 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 管理存取控制原則
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面管理存取控制原則的資訊。
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 0%
+source-wordcount: '684'
+ht-degree: 2%
 
 ---
 
 # 管理存取控制原則
 
-存取控制原則是將屬性集合在一起，以建立允許和不允許動作的陳述式。 存取原則可以是本機或全域，並且可以覆寫其他原則。 Adobe提供預設原則，可立即啟動，或當您的組織準備好開始根據標籤控制特定物件的存取權時，隨時啟動。 預設原則會利用套用至資源的標籤來拒絕存取，除非使用者處於具有相符標籤的角色中。
+存取控制原則是將屬性集合在一起，以建立允許和不允許動作的陳述式。 存取原則可以是本機或全域，並且可以覆寫其他原則。 Adobe提供預設原則，可立即啟動，或是您的組織準備好開始根據標籤控制特定物件的存取權時，隨時啟動。 預設原則會利用套用至資源的標籤來拒絕存取，除非使用者處於具有相符標籤的角色中。
 
 >[!IMPORTANT]
 >
@@ -184,7 +184,13 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 >
 >已成功從原則中移除選取的沙箱。
 
-## 啟用原則
+## 啟用原則 {#activate-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="什麼是原則？"
+>abstract="策略是將屬性組合在一起的陳述式，用於建立允許和不允許的動作。每個組織都附有您必須啟動的預設原則，才能開始根據標籤控制特定物件的存取權。 除非將使用者指派給具有相符標籤的角色，否則套用至資源的標籤會拒絕存取。 預設原則無法編輯或刪除，但可以啟用或停用。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="管理標籤"
 
 若要啟用現有原則，請從&#x200B;**[!UICONTROL 原則]**&#x200B;標籤中選取原則。
 
