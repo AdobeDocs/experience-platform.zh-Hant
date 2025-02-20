@@ -3,9 +3,9 @@ keywords: 廣告目的地；目的地；平台目的地
 title: Advertising目的地概觀
 description: 將Adobe Experience Platform連線至第三方廣告平台(例如DSP、廣告網路、SSP)，並在這些平台上共用假名對象。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '272'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 * [(Beta) Acxiom對象分佈](acxiom-audience-distribution.md)
 * [Adobe Advertising Cloud連線](adobe-advertising-cloud-connection.md)
 * [Amazon Ads連線](amazon-ads.md)
-* [(Beta) Criteo連線](criteo.md)
+* [標準連線](criteo.md)
 * [Google顯示和視訊360連線](google-dv360.md)
 * [Google Ads連線](google-ads-destination.md)
 * [Google廣告管理員連線](google-ad-manager.md)
@@ -38,7 +38,7 @@ ht-degree: 1%
 * [Magnite批次連線](magnite-batch.md)
 * [Magnite串流即時連線](magnite-streaming.md)
 * [Microsoft Bing連線](bing.md)
-* [pinterest客戶清單連線](pinterest.md)
+* [Pinterest客戶清單連線](pinterest.md)
 * [PubMatic Connect目的地](pubmatic.md)
 * [(Beta) Snapchat Ads連線](snap-inc.md)
 * [交易台連線](tradedesk.md)
@@ -53,13 +53,13 @@ ht-degree: 1%
 * [Bing Ads通用事件追蹤擴充功能](bing-ads.md)
 * [分支擴充功能](branch.md)
 * [DoubleClick Floodlight擴充功能](doubleclick-floodlight.md)
-* [facebook畫素擴充功能](facebook-pixel.md)
+* [Facebook Pixel擴充功能](facebook-pixel.md)
 * [Flashtalking OneTag擴充功能](flashtalking.md)
 * [Google Ads擴充功能](google-ads-extension.md)
 * [Google gtag擴充功能](gtag-advertising.md)
-* [linkedIn Insight標籤擴充功能](linkedin.md)
-* [pinterest轉換追蹤擴充功能](pinterest-extension.md)
-* [twitter通用網站標籤擴充功能](twitter-uwt.md)
+* [LinkedIn Insight標籤擴充功能](linkedin.md)
+* [Pinterest轉換追蹤擴充功能](pinterest-extension.md)
+* [Twitter通用網站標籤擴充功能](twitter-uwt.md)
 
 ## 連線到新的廣告目的地 {#connect-destination}
 
