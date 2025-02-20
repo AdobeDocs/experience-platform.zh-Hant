@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
+source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 0%
+source-wordcount: '2228'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,17 @@ ht-degree: 0%
 
 ## [!UICONTROL 客群] {#audience-block}
 
-**[!UICONTROL 對象]**&#x200B;區塊型別可讓您新增要組成新較大對象的子對象。 依預設，**[!UICONTROL 對象]**&#x200B;區塊會包含在構成畫布的最上方。
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="對象區塊"
+>abstract="「對象」區塊可讓您建立要用來組成新對象的子對象。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="合併類型"
+>abstract="合併型別會決定所選子對象的合併方式。 支援的值包括「聯集」、「交集」和「排除」重疊。"
+
+**[!UICONTROL 對象]**&#x200B;區塊型別可讓您新增要用來組成新的較大對象的子對象。 依預設，**[!UICONTROL 對象]**&#x200B;區塊會包含在構成畫布的最上方。
 
 當您選取&#x200B;**[!UICONTROL 對象]**&#x200B;區塊時，右側邊欄會顯示用來標示對象、將對象新增至區塊以及建置對象區塊的自訂規則的控制項。
 
@@ -88,6 +98,16 @@ ht-degree: 0%
 
 ## [!UICONTROL 排除] {#exclude-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="排除區塊"
+>abstract="「排除」區塊可讓您從構成中排除指定的對象或屬性。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>title="排除類型"
+>abstract="您可以排除屬於特定對象的設定檔（依對象排除）或根據特定屬性排除設定檔（依屬性排除）。"
+
 **[!UICONTROL 排除]**&#x200B;區塊型別可讓您從新的較大對象中排除指定的子對象或屬性。
 
 若要新增&#x200B;**[!UICONTROL 排除]**&#x200B;區塊，請選取&#x200B;**+**&#x200B;圖示，然後選取&#x200B;**[!UICONTROL 排除]**。
@@ -127,6 +147,26 @@ ht-degree: 0%
 >依屬性排除時，您只能指定要排除的&#x200B;**一個**&#x200B;值。 使用逗號或分號之類的任何分隔符號，都只會排除該確切值。 例如，將值設定為`red, blue`會導致從屬性中排除字詞`red, blue`，但&#x200B;**不會**&#x200B;導致排除字詞`red`或`blue`。
 
 ## [!UICONTROL 擴充] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="豐富區塊"
+>abstract="擴充區塊可讓您利用來自Adobe Experience Platform資料集的其他屬性擴充您的對象。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="擴充資料集"
+>abstract="擴充資料集包含您要與構成建立關聯的資料。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="擴充條件"
+>abstract="擴充條件包括Source聯結金鑰和擴充資料集聯結金鑰。 這兩個索引鍵可協調來源資料集和擴充資料集。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="擴充屬性"
+>abstract="擴充屬性是您想要與構成相關聯的屬性。"
 
 >[!IMPORTANT]
 >
@@ -206,6 +246,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL 排名] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="排名區塊"
+>abstract="Rank區塊可讓您根據特定屬性來排名設定檔，並將其納入您的構成中。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="新增輪廓限制"
+>abstract="「新增設定檔限制」切換可讓您指定排名程式中要包含的設定檔數目上限。"
+
 **[!UICONTROL Rank]**&#x200B;區塊型別可讓您根據指定的屬性來排名和排序設定檔，並將這些排名設定檔納入您的組合。
 
 若要新增&#x200B;**[!UICONTROL 排名]**&#x200B;區塊，請選取&#x200B;**+**&#x200B;圖示，然後選取&#x200B;**[!UICONTROL 排名]**。
@@ -231,6 +281,21 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 ![新增設定檔限制切換會反白顯示，讓您限制傳回的設定檔數目。](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL 分割] {#split-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="分割區塊"
+>abstract="「分割」區塊可讓您將構成分割成多個路徑。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="分割類型"
+>abstract="您可以依「百分比」分割或「屬性」分割來分割構成。 百分比分割會隨機將設定檔分割成多個路徑。 屬性分割可讓您根據指定的屬性分割設定檔。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="其他輪廓"
+>abstract="其他設定檔切換可讓您使用不符合其他路徑任何指定條件的剩餘設定檔建立其他路徑。"
 
 **[!UICONTROL 分割]**&#x200B;區塊型別可讓您將新對象分割成各種子對象。 您可以根據百分比或屬性來分割此對象。 將您的對象分割成子對象時，此分割是&#x200B;**不**&#x200B;持續性的。 這表示每個評估的設定檔可能位於不同的子對象中。
 
@@ -272,13 +337,13 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >
 >發佈您的對象構成時，請注意，評估並啟動該對象構成以用於下游服務(例如Real-Time CDP目的地或Adobe Journey Optimizer頻道)可能需要48小時。
 
-建立構成後，您可以選取&#x200B;**[!UICONTROL Publish]**，儲存並發佈構成。
+建立構成後，您可以選取&#x200B;**[!UICONTROL 發佈]**&#x200B;來儲存並發佈。
 
-![Publish按鈕反白顯示，顯示如何儲存和發佈您的組合。](../images/ui/audience-composition/publish.png)
+![「發佈」按鈕會反白顯示，顯示如何儲存和發佈您的組合。](../images/ui/audience-composition/publish.png)
 
 如果在建立對象時發生錯誤，會出現警報，讓您知道如何解決問題。
 
-![Publish按鈕反白顯示，顯示如何儲存和發佈您的組合。](../images/ui/audience-composition/audience-alert.png)
+![「發佈」按鈕會反白顯示，顯示如何儲存和發佈您的組合。](../images/ui/audience-composition/audience-alert.png)
 
 ## 後續步驟
 
