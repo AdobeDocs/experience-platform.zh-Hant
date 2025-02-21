@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: 了解輪廓資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
+source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2523'
 ht-degree: 2%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --------- | ----- | ---------- | ----------- |
-| 每個沙箱的受眾 | 4000 | 效能護欄 | 每個沙箱最多可以有4000個&#x200B;**作用中**&#x200B;對象。 只要每個&#x200B;**個別**&#x200B;沙箱少於4000個對象，您每個組織的沙箱就可以超過4000個。 其中包含批次、串流和邊緣對象。 嘗試建立其他對象可能會影響系統效能。 深入瞭解[透過區段產生器建立對象](/help/segmentation/ui/segment-builder.md)。 |
+| 每個沙箱的受眾 | 4000 | 效能護欄 | 每個沙箱最多可以有4000個&#x200B;**作用中**&#x200B;對象。 只要每個&#x200B;**個別**&#x200B;沙箱中的對象少於4000個，您每個組織可以有超過4000個對象。 其中包含批次、串流和邊緣對象。 嘗試建立其他對象可能會影響系統效能。 深入瞭解[透過區段產生器建立對象](/help/segmentation/ui/segment-builder.md)。 |
 | 每個沙箱的Edge受眾 | 150 | 效能護欄 | 每個沙箱最多可以有150個&#x200B;**使用中**&#x200B;邊緣對象。 只要每個&#x200B;**個別**&#x200B;沙箱中有少於150個邊緣對象，您每個組織就可以有超過150個邊緣對象。 嘗試建立其他邊緣對象可能會影響系統效能。 深入瞭解[邊緣對象](/help/segmentation/methods/edge-segmentation.md)。 |
 | 所有沙箱中的Edge輸送量 | 1500 RPS | 效能護欄 | Edge細分支援每秒鐘尖峰值1500個進入Adobe Experience Platform Edge Network的傳入事件。 Edge區段在進入Adobe Experience Platform Edge Network後，最多可能需要350毫秒來處理傳入事件。 深入瞭解[邊緣對象](/help/segmentation/methods/edge-segmentation.md)。 |
 | 每個沙箱的串流受眾 | 500 | 效能護欄 | 每個沙箱最多可以有500個&#x200B;**使用中**&#x200B;串流對象。 只要每個&#x200B;**個別**&#x200B;沙箱中的串流對象少於500個，您每個組織就可以有超過500個串流對象。 其中包含串流和邊緣對象。 嘗試建立其他串流對象可能會影響系統效能。 深入瞭解[串流對象](/help/segmentation/methods/streaming-segmentation.md)。 |
@@ -162,7 +162,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 雖然維護設定檔資料的設定檔資料存放區不是關聯式存放區，但設定檔允許與小型維度實體整合，以便以簡化且直覺的方式建立對象。 此整合稱為[多實體分段](../segmentation/tutorials/multi-entity-segmentation.md)。
 
-您的組織也可以定義XDM類別來說明個人以外的專案，例如商店、產品或屬性。 這些非[!DNL XDM Individual Profile]結構描述稱為「維度實體」（也稱為「查詢實體」），不包含時間序列資料。 代表維度實體的結構描述會透過使用[結構描述關係](../xdm/tutorials/relationship-ui.md)連結至設定檔實體。
+您的組織也可以定義XDM類別來說明個人以外的專案，例如商店、產品或屬性。 這些使用XDM個別設定檔類別以外的XDM類別模型化的結構描述稱為「維度實體」（也稱為「查詢實體」），不包含時間序列資料。 代表維度實體的結構描述會透過使用[結構描述關係](../xdm/tutorials/relationship-ui.md)連結至設定檔實體。
 
 Dimension實體提供查詢資料，可協助並簡化多實體區段定義，且必須夠小，讓區段引擎可以將整個資料集載入記憶體，以進行最佳處理（快速點查詢）。
 

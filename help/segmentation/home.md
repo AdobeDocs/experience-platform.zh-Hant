@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 分段服務總覽
 description: 瞭解Adobe Experience Platform區段服務，以及此服務在平台生態系統中所扮演的角色。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
+source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1678'
 ht-degree: 13%
 
 ---
@@ -67,6 +67,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 >id="platform_segments_evaluation_streaming"
 >title="串流評估"
 >abstract="串流分段是持續進行的資料選擇流程；此功能會根據使用者活動來更新對象。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="使用串流分段近乎即時地評估事件"
 
 Platform 目前支援三種評估對象的方式：串流分段、批次分段以及邊緣分段。
 
@@ -93,6 +94,7 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 >id="platform_segments_evaluation_edge"
 >title="邊緣評估"
 >abstract="邊緣分段指在 Edge Network 上即時評估 Platform 中的區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Edge分段指南"
 
 Edge區段能在Edge Network](../landing/edge-and-hub-comparison.md)上即時評估Platform中的區段[，啟用相同頁面和下一頁個人化使用案例。
 
