@@ -5,10 +5,10 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
+source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
 workflow-type: tm+mt
-source-wordcount: '1268'
-ht-degree: 5%
+source-wordcount: '1278'
+ht-degree: 4%
 
 ---
 
@@ -49,7 +49,8 @@ ht-degree: 5%
       * [使用Experience Platform UI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
       * [(Beta)在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
-      * [利用計算欄位將陣列匯出為字串](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [將陣列、地圖和物件匯出至雲端儲存空間目的地](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [對匯出至雲端儲存空間的資料執行轉換](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)
    * [更新目的地帳戶](./ui/update-accounts.md)
    * [刪除目的地帳戶](./ui/delete-destination-account.md)

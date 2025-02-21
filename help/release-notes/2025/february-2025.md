@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2025 年 2 月)
 description: Adobe Experience Platform 2025 年 2 月版發行說明。
-source-git-commit: b29c63942b00fdf597ebfd3ab105519a6b05a476
+source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
 workflow-type: tm+mt
-source-wordcount: '1378'
-ht-degree: 22%
+source-wordcount: '1481'
+ht-degree: 21%
 
 ---
 
@@ -73,7 +73,7 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 如需詳細資訊，請閱讀[資料準備總覽](../../data-prep/home.md)。
 
-## 目標 {#destinations}
+## 目的地（更新日期：2月20日） {#destinations}
 
 [!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
@@ -96,6 +96,7 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 | 使用存取權標籤來管理使用者對目的地資料流程的存取權 | 作為Real-Time CDP中[[!UICONTROL 屬性型存取控制]](/help/access-control/abac/overview.md)功能的一部分，您現在可以將存取標籤套用至[目的地資料流](/help/dataflows/ui/monitor-destinations.md)。 這樣的話，您可以確保組織中只有一部分使用者才能存取特定目的地資料流。<br> **重要**：使用Experience Platform使用者介面頂端的搜尋方塊搜尋目的地資料流時，結果可能包含您的使用者存取標籤限制您檢視的目的地資料流。 此行為將在未來更新中更正。 |
 | [Marketo Engage連線](/help/destinations/catalog/adobe/marketo-engage.md)的[對象層級報表](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) | 您現在可以[檢視在對象層級劃分的啟用、排除或失敗身分的相關資訊](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations)，瞭解屬於此目的地資料流一部分的每個對象。 |
 | [TikTok](/help/destinations/catalog/social/tiktok.md)和[Snap Inc](/help/destinations/catalog/advertising/snap-inc.md)連線的外部對象支援 | 您可以從[自訂上傳](../../segmentation/ui/audience-portal.md#import-audience)和[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)啟用外部對象到這些目的地。 |
+| 將陣列、地圖和物件匯出至雲端儲存空間目的地 | 當連線到雲端儲存空間目的地時，透過使用新的&#x200B;**[!UICONTROL 匯出陣列、地圖、物件]**&#x200B;切換，您可以將複雜的物件新匯出到選取的目的地。 [閱讀更多](/help/destinations/ui/export-arrays-calculated-fields.md)有關此功能的資訊。 |
 
 {style="table-layout:auto"}
 
@@ -103,6 +104,10 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 - Destination SDK測試工具中的問題已修正。 某些客戶或合作夥伴遇到[範例設定檔產生工具](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)的問題，因為在用於產生設定檔的結構描述包含具有`No format`選取器的資料型別時，格式不受支援。
 - 已修正使用流程服務API更新目的地`targetConnection`規格時的問題。 在某些情況下，PATCH作業的行為類似於POST作業，會損毀現有的資料流。 此問題現已修正，所有客戶都可以使用流程服務API更新其`targetConnection`規格。 [閱讀全文](/help/destinations/api/edit-destination.md#patch-target-connection)。
+- 將設定檔匯出至檔案型目的地時，重複資料刪除可確保在多個設定檔共用相同的重複資料刪除索引鍵和相同的參考時間戳記時，僅匯出一個設定檔。 此版本包括重複資料刪除流程的更新，確保使用相同座標連續執行將一律產生相同的結果，提升一致性。 [閱讀全文](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp)。
+
+如需更多資訊，請閱讀[目標概觀](../../destinations/home.md)。
+
 
 ## 來源 {#sources}
 
