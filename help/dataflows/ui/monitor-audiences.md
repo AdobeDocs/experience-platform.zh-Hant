@@ -28,12 +28,12 @@ ht-degree: 4%
    - [匯出作業](../../segmentation/api/export-jobs.md)：匯出作業是用來將對象成員保留到資料集的非同步程式。
 - [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-## 監視客群儀表板 {#monitoring-audiences-dashboard}
+## 監視對象儀表板 {#monitoring-audiences-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="客群"
->abstract="客群檢視包含有關您組織之所有客群的資訊，以及有關其啟動和評估工作的詳細資訊。"
+>abstract="對象檢視包含有關您組織之所有對象的資訊，以及有關其啟動和評估工作的詳細資訊。"
 
 若要存取&#x200B;**[!UICONTROL 對象]**&#x200B;儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL 監視]**。 在&#x200B;**[!UICONTROL 監視]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 對象]**&#x200B;卡片。
 
@@ -85,7 +85,7 @@ ht-degree: 4%
 | **[!UICONTROL 工作完成]** | 分段工作完成的日期和時間。 |
 | **[!UICONTROL 處理時間]** | 完成細分工作所需的時間。 |
 | **[!UICONTROL 工作狀態]** | 分段工作的狀態。 支援的值包括&#x200B;**[!UICONTROL Success]**、**[!UICONTROL In Progress]**&#x200B;和&#x200B;**[!UICONTROL Failed]**。 |
-| **[!UICONTROL 設定檔計數]** | 分段工作正在評估的設定檔數。 每個使用者都應該有唯一的設定檔。 |
+| **[!UICONTROL 輪廓計數]** | 分段工作正在評估的設定檔數。 每個使用者都應該有唯一的設定檔。 |
 | **[!UICONTROL 身分已啟用]** | 正在啟用細分工作的身分數。 每個設定檔都可以有多個身分。 例如，個人資料可以包含電子郵件、電話號碼和忠誠度編號作為身分。 |
 | **[!UICONTROL 目的地名稱]** | 分段工作啟動的目標目的地名稱。 |
 
@@ -163,14 +163,14 @@ ht-degree: 4%
 | 量度 | 說明 |
 | ------ | ----------- |
 | **[!UICONTROL 名稱]** | 正在評估的對象名稱。 |
-| **[!UICONTROL 設定檔計數]** | 正在評估的設定檔數。 |
+| **[!UICONTROL 輪廓計數]** | 正在評估的設定檔數。 |
 
 ## 監視分段工作儀表板 {#monitoring-segmentation-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="分段工作"
->abstract="分段工作檢視包含有關您所有客群之評估和匯出工作的資訊。"
+>abstract="分段工作檢視包含有關您所有對象之評估和匯出工作的資訊。"
 
 若要存取&#x200B;**[!UICONTROL 分段工作]**&#x200B;儀表板，請在[!UICONTROL 對象]儀表板中選取&#x200B;**[!UICONTROL 分段工作]**。 [!UICONTROL 監視]儀表板包含評估與匯出作業的度量與資訊。
 

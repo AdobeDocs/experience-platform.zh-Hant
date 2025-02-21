@@ -63,8 +63,8 @@ ht-degree: 11%
 
 您可以根據對象的來源，從多種對象型別中進行選取：
 
-* **[!UICONTROL 細分服務]**：細分服務在Experience Platform內產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
+* **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
+* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
 * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
 ![選取一或多個要啟動的對象時顯示的核取方塊。](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
@@ -77,7 +77,7 @@ ht-degree: 11%
 >
 >您可以從&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面移除現有啟用流程中的對象。 如需詳細資訊，請參閱[專屬檔案](../ui/destination-details-page.md#bulk-remove)。
 
-## 排程客群匯出 {#scheduling}
+## 排程對象匯出 {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -92,7 +92,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 若要同時編輯多個排程，請使用畫面左側的核取方塊來選取對象，然後選取&#x200B;**[!UICONTROL 編輯排程]**。 然後，您設定的排程將套用至所選對象的所有匯出檔案。
 
-![顯示多個選取對象之編輯排程選項的Experience Platform使用者介面影像。](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+![Experience Platform使用者介面的影像，顯示多個選取對象的編輯排程選項。](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
@@ -109,12 +109,12 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="檔案匯出選項 "
->abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合客群資格的所有輪廓的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合客群資格的輪廓。<br> 第一個增量檔案匯出包括符合客群資格的所有輪廓，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合客群資格的輪廓。"
+>abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有輪廓的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合對象資格的輪廓。<br> 第一個增量檔案匯出包括符合對象資格的所有輪廓，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的輪廓。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="客群評估後啟動"
+>title="對象評估後啟動"
 >abstract="每日分段作業完成後立即執行啟動。這可確保匯出最新的輪廓。"
 
 >[!CONTEXTUALHELP]
@@ -159,7 +159,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
 >title="設定檔案名稱"
->abstract="若為檔案型目的地，會對每個客群產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 選取&#x200B;**[!UICONTROL 匯出增量檔案]**&#x200B;以觸發匯出，其中第一個檔案是所選對象所有設定檔資格的完整快照，而後續檔案則是自上次匯出以來的增量設定檔資格。
 
@@ -189,7 +189,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="設定檔案名稱"
->abstract="若為檔案型目的地，會對每個客群產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 對於大多數目的地，預設檔案名稱會包含目的地名稱、對象ID以及日期和時間指示器。 例如，您可以編輯匯出的檔案名稱，以區分不同的促銷活動，或將資料匯出時間附加至檔案。 請注意，某些目的地開發人員可能會選擇為其目的地顯示不同的預設檔案名稱附加選項。
 
@@ -214,14 +214,14 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 | **[!UICONTROL 自訂文字]** | 您要新增至檔案名稱的任何自訂文字。 |
 | **[!UICONTROL 目的地識別碼]** | 用來匯出對象的目的地資料流的ID。 |
 | **[!UICONTROL 目的地名稱]** | 用來匯出對象的目的地資料流名稱。 |
-| **[!UICONTROL 組織名稱]** | 在Experience Platform中的組織名稱。 |
+| **[!UICONTROL 組織名稱]** | Experience Platform中的組織名稱。 |
 | **[!UICONTROL 沙箱名稱]** | 您用來匯出對象的沙箱的ID。 |
 
 {style="table-layout:auto"}
 
 若要同時編輯多個檔案名稱，請使用畫面左側的核取方塊來選取對象，然後選取&#x200B;**[!UICONTROL 編輯檔案名稱]**。 然後，您設定的檔案名稱選項將套用至所選對象的所有匯出檔案。
 
-![顯示多個選取對象之編輯檔案名稱選項的Experience Platform使用者介面影像。](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
+![Experience Platform使用者介面的影像，顯示多個選取對象的編輯檔案名稱選項。](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 選取&#x200B;**[!UICONTROL 套用變更]**&#x200B;以確認您的選擇。
 
@@ -466,7 +466,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 ### 透過計算欄位匯出陣列 {#export-arrays-calculated-fields}
 
-部分測試版客戶可將陣列物件從Experience Platform匯出至雲端儲存目的地。 閱讀有關[匯出陣列和計算欄位](/help/destinations/ui/export-arrays-calculated-fields.md)的詳細資訊，並連絡您的Adobe代表以取得功能的存取權。
+部分Beta版客戶可將陣列物件從Experience Platform匯出至雲端儲存目的地。 閱讀有關[匯出陣列和計算欄位](/help/destinations/ui/export-arrays-calculated-fields.md)的詳細資訊，並連絡您的Adobe代表以取得該功能的存取權。
 
 ### 已知限制 {#known-limitations}
 
@@ -501,7 +501,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 作為臨時解決方法，如果您在Beta版期間需要將身分識別名稱空間新增到匯出的檔案，您可以：
 * 針對您要在匯出中包含身分名稱空間的資料流，使用舊版雲端儲存空間目的地
-* 將身分作為屬性上傳到Experience Platform，然後將其匯出到您的雲端儲存空間目標。
+* 將身分作為屬性上傳到Experience Platform，然後匯出到您的雲端儲存空間目標。
 
 ## 選取設定檔屬性 {#select-attributes}
 
@@ -509,7 +509,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 > 
 >目錄中的所有雲端儲存空間目的地都可以檢視已改善的[[!UICONTROL 對應]步驟](#mapping)，以取代本節中說明的&#x200B;**[!UICONTROL 選取屬性]**&#x200B;步驟。
 >
->此&#x200B;**[!UICONTROL 選取屬性]**&#x200B;步驟仍會針對Adobe Campaign、Oracle Responsys、Oracle Eloqua和SalesforceMarketing Cloud電子郵件行銷目的地顯示。
+>此&#x200B;**[!UICONTROL 選取屬性]**&#x200B;步驟仍會針對Adobe Campaign、Oracle Responsys、Oracle Eloqua和Salesforce Marketing Cloud電子郵件行銷目標顯示。
 
 針對以設定檔為基礎的目的地，您必須選取要傳送至目標目的地的設定檔屬性。
 
@@ -548,13 +548,13 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="排除擴充屬性"
->abstract="啟用此選項可從選取的自訂已上傳客群匯出輪廓至您的目的地，同時排除其所有屬性。"
+>abstract="啟用此選項可從選取的自訂已上傳對象匯出輪廓至您的目的地，同時排除其所有屬性。"
 
 >[!IMPORTANT]
 >
 >只有當您在[對象選取](#select-audiences)步驟期間選取&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;對象時，才會顯示此步驟。
 
-擴充屬性對應至在Experience Platform中擷取的自訂上傳對象，做為&#x200B;**[!UICONTROL 自訂上傳]**。 在此步驟中，您可以為每個選取的外部對象選取要匯出至目的地的屬性。
+擴充屬性對應至Experience Platform中擷取的自訂上傳對象，做為&#x200B;**[!UICONTROL 自訂上傳]**。 在此步驟中，您可以為每個選取的外部對象選取要匯出至目的地的屬性。
 
 ![顯示擴充屬性選取步驟的UI影像。](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 

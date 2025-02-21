@@ -16,7 +16,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_ignoreYear"
 >title="忽略年份更新"
->abstract="忽略年份時間限制已更新。請重新儲存您的客群。"
+>abstract="忽略年份時間限制已更新。請重新儲存您的對象。"
 
 >[!IMPORTANT]
 >

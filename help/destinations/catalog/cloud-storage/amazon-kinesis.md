@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 此目的地僅供[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
+> 此目的地僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
 
 [!DNL Amazon Web Services]的[!DNL Kinesis Data Streams]服務可讓您即時收集和處理大型資料記錄串流。
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 * 若要以程式設計方式連線到[!DNL Amazon Kinesis]，請參閱[串流目的地API教學課程](../../api/streaming-destinations.md)。
 * 若要使用Platform使用者介面連線至[!DNL Amazon Kinesis]，請參閱下列章節。
 
-在UI中![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## 使用案例 {#use-cases}
 
@@ -41,8 +41,8 @@ ht-degree: 5%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ ht-degree: 5%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ ht-degree: 5%
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-這些許可權會透過[!DNL Kinesis]主控台進行排列，一旦您在Platform使用者介面中設定Kinesis目的地，Platform就會檢查這些許可權。
+這些許可權是透過[!DNL Kinesis]主控台排列，一旦您在Platform使用者介面中設定Kinesis目的地，Platform就會檢查這些許可權。
 
 下列範例顯示成功匯出資料至[!DNL Kinesis]目的地所需的最低存取許可權。
 
@@ -96,7 +96,7 @@ ht-degree: 5%
 | -------- | ----------- |
 | `kinesis:ListStreams` | 此動作會列出您的Amazon Kinesis資料串流。 |
 | `kinesis:PutRecord` | 此動作會將單一資料記錄寫入Kinesis資料串流。 |
-| `kinesis:PutRecords` | 此動作可透過單一呼叫，將多筆資料記錄寫入Kinesis資料流中。 |
+| `kinesis:PutRecords` | 此動作可透過單一呼叫，將多筆資料記錄寫入Kinesis資料串流。 |
 
 {style="table-layout:auto"}
 
@@ -114,7 +114,7 @@ ht-degree: 5%
 
 輸入下列欄位並選取&#x200B;**[!UICONTROL 連線到目的地]**：
 
-![顯示Amazon Kinesis驗證詳細資料已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+![顯示Amazon Kinesis驗證詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]存取金鑰與秘密金鑰**：在[!DNL Amazon Web Services]中，產生`access key - secret access key`配對，以授與您[!DNL Amazon Kinesis]帳戶的Platform存取權。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
 * **[!UICONTROL 區域]**：指出資料流要傳送到哪個[!DNL Amazon Web Services]區域。
@@ -124,16 +124,16 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="包括區段名稱"
->abstract="切換是否希望資料匯出包括您正在匯出的客群的名稱。檢視選取此選項時的資料匯出範例的文件。"
+>abstract="切換是否希望資料匯出包括您正在匯出的對象的名稱。檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="包括區段時間戳記"
->abstract="切換是否希望資料匯出包括建立和更新客群時的 UNIX 時間戳記，以及客群對應至啟動目的地時的 UNIX 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
+>abstract="切換是否希望資料匯出包括建立和更新對象時的 UNIX 時間戳記，以及對象對應至啟動目的地時的 UNIX 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![顯示Amazon Kinesis目的地詳細資料已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+![顯示Amazon Kinesis目的地詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
 * **[!UICONTROL 名稱]**：提供您與[!DNL Amazon Kinesis]的連線名稱
 * **[!UICONTROL 描述]**：提供您與[!DNL Amazon Kinesis]的連線描述。
@@ -155,18 +155,18 @@ ht-degree: 5%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 目前匯出至Amazon Kinesis目的地不支援[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。 [閱讀全文](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
+>* 目前匯出至Amazon Kinesis目的地時不支援[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。 [閱讀全文](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
 如需啟用此目的地對象的指示，請參閱[啟用串流設定檔匯出目的地的對象資料](../../ui/activate-streaming-profile-destinations.md)。
 
 ## 設定檔匯出行為 {#profile-export-behavior}
 
-Experience Platform會最佳化您[!DNL Amazon Kinesis]目的地的設定檔匯出行為，以只在對象資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至您的目的地。 在下列情況下，設定檔會匯出至您的目的地：
+Experience Platform會最佳化[!DNL Amazon Kinesis]目的地的設定檔匯出行為，只會在符合對象資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至目的地。 在下列情況下，設定檔會匯出至您的目的地：
 
 * 設定檔更新是由對應至目的地的至少一個對象的對象成員資格變更所決定。 例如，設定檔已符合對應至目的地的其中一個對象的資格，或已退出對應至目的地的其中一個對象。
 * 設定檔更新是由[身分對應](/help/xdm/field-groups/profile/identitymap.md)中的變更所決定。 例如，已符合對應至目的地之其中一個對象資格的設定檔，已在身分對應屬性中新增身分。

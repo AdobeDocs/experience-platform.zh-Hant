@@ -25,14 +25,14 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="欄位"
->abstract="構成區段定義的三種欄位類型為屬性、事件和客群。屬性可讓您使用屬於 XDM 個人輪廓類別的輪廓屬性，事件可讓您根據使用 XDM ExperienceEvent 資料元素發生的動作或事件來建立客群，而客群則可讓您使用從外部來源匯入的客群。"
+>abstract="構成區段定義的三種欄位類型為屬性、事件和對象。屬性可讓您使用屬於 XDM 個人輪廓類別的輪廓屬性，事件可讓您根據使用 XDM ExperienceEvent 資料元素發生的動作或事件來建立對象，而對象則可讓您使用從外部來源匯入的對象。"
 
 區段定義的基本建置區塊是屬性和事件。 此外，現有對象中包含的屬性和事件可作為新定義的元件。
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="摘要資料"
->abstract="僅有設定檔屬性會顯示摘要資料，事件或客群屬性則<b>不會</b>顯示。<br/><br/>於下列情況下，可能不會顯示設定檔屬性的摘要資料： <ol><li>該屬性部分值的長度超過 100 個字元。</li><li>該屬性有超過 3000 個唯一值。</li></ol>"
+>abstract="僅有設定檔屬性會顯示摘要資料，事件或對象屬性則<b>不會</b>顯示。<br/><br/>於下列情況下，可能不會顯示設定檔屬性的摘要資料： <ol><li>該屬性部分值的長度超過 100 個字元。</li><li>該屬性有超過 3000 個唯一值。</li></ol>"
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
 >title="複雜評估"
->abstract="下面的運算式太複雜，無法作為單一客群來表達。若要在相同區段定義中同時使用 B2B 規則和以人員為基礎的事件，請依照下列步驟操作。<ol><li>建立僅引用以人員為基礎事件的區段定義，並將其另存為自己專有的區段定義。</li><li>在新的區段定義中，匯入先前建立的區段定義，同時引用 B2B 規則。</li></ol>"
+>abstract="下面的運算式太複雜，無法作為單一對象來表達。若要在相同區段定義中同時使用 B2B 規則和以人員為基礎的事件，請依照下列步驟操作。<ol><li>建立僅引用以人員為基礎事件的區段定義，並將其另存為自己專有的區段定義。</li><li>在新的區段定義中，匯入先前建立的區段定義，同時引用 B2B 規則。</li></ol>"
 
 >[!NOTE]
 >
@@ -173,12 +173,12 @@ ht-degree: 8%
 
 ![會顯示警告，指出您已達到值的數量上限。](../images/ui/segment-builder/maximum-values.png)
 
-### 新增客群
+### 新增對象
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
 >title="搜尋更新"
->abstract="現有搜尋系統已更新為使用整合式搜尋。整合式搜尋讓您可以更輕鬆果斷地為區段會籍搜尋客群。"
+>abstract="現有搜尋系統已更新為使用整合式搜尋。整合式搜尋讓您可以更輕鬆果斷地為區段會籍搜尋對象。"
 
 您可以從&#x200B;**[!UICONTROL 對象]**&#x200B;標籤將對象拖放到規則產生器畫布上，以參考新區段定義中的對象成員資格。 這可讓您在新的區段定義規則中，以屬性的形式包含或排除對象成員資格。
 
@@ -349,7 +349,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="合併原則"
->abstract="合併原則可讓不同的資料集合併，形成您的輪廓。平台已提供預設的合併原則，不然您也可以在輪廓中建立新的預設合併原則。針對此客群選擇和您的行銷目的相符的合併原則。"
+>abstract="合併原則可讓不同的資料集合併，形成您的輪廓。平台已提供預設的合併原則，不然您也可以在輪廓中建立新的預設合併原則。針對此對象選擇和您的行銷目的相符的合併原則。"
 
 [!DNL Experience Platform]可讓您將來自多個來源的資料彙集在一起，並加以合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是[!DNL Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立設定檔的規則。
 
@@ -364,13 +364,13 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="區段定義屬性"
->abstract="區段定義屬性區段會顯示結果區段定義的大小預估值，顯示合格的輪廓數與輪廓總數的比較。這可讓您在建立客群本身之前，視需要調整區段定義。"
+>abstract="區段定義屬性區段會顯示結果區段定義的大小預估值，顯示合格的輪廓數與輪廓總數的比較。這可讓您在建立對象本身之前，視需要調整區段定義。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
->abstract="重新整理區段定義的預估值，即可立即預覽有多少輪廓符合提議的區段定義的資格。客群預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽客群"
+>abstract="重新整理區段定義的預估值，即可立即預覽有多少輪廓符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 建立區段定義時，工作區右側的&#x200B;**[!UICONTROL 對象屬性]**&#x200B;區段會顯示結果區段定義的大小預估值，好讓您在建立對象本身之前根據需要調整區段定義。
 

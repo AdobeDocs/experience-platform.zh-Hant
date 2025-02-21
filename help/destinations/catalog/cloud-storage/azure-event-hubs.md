@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> 此目的地僅供[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
+> 此目的地僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
 
 [!DNL Azure Event Hubs]是巨量資料串流平台和事件擷取服務。 其每秒可接收及處理數百萬個事件。 傳送到事件中樞的資料可以使用任何即時分析提供者或批次/儲存配接卡進行轉換和儲存。
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 * 若要以程式設計方式連線到[!DNL Azure Event Hubs]，請參閱[串流目的地API教學課程](../../api/streaming-destinations.md)。
 * 若要使用Platform使用者介面連線至[!DNL Azure Event Hubs]，請參閱下列章節。
 
-在UI中![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
+UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
 ## 使用案例 {#use-cases}
 
@@ -41,8 +41,8 @@ ht-degree: 5%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ ht-degree: 5%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -97,12 +97,12 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
 >title="包括區段名稱"
->abstract="切換是否希望資料匯出包括您正在匯出的客群的名稱。檢視選取此選項時的資料匯出範例的文件。"
+>abstract="切換是否希望資料匯出包括您正在匯出的對象的名稱。檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
 >title="包括區段時間戳記"
->abstract="切換是否希望資料匯出包括建立和更新客群時的 UNIX 時間戳記，以及客群對應至啟動目的地時的 UNIX 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
+>abstract="切換是否希望資料匯出包括建立和更新對象時的 UNIX 時間戳記，以及對象對應至啟動目的地時的 UNIX 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -120,7 +120,7 @@ ht-degree: 5%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -131,7 +131,7 @@ ht-degree: 5%
 
 ## 設定檔匯出行為 {#profile-export-behavior}
 
-Experience Platform會最佳化您[!DNL Azure Event Hubs]目的地的設定檔匯出行為，以只在對象資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至您的目的地。 在下列情況下，設定檔會匯出至您的目的地：
+Experience Platform會最佳化[!DNL Azure Event Hubs]目的地的設定檔匯出行為，只會在符合對象資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至目的地。 在下列情況下，設定檔會匯出至您的目的地：
 
 * 設定檔更新是由對應至目的地的至少一個對象的對象成員資格變更所決定。 例如，設定檔已符合對應至目的地的其中一個對象的資格，或已退出對應至目的地的其中一個對象。
 * 設定檔更新是由[身分對應](/help/xdm/field-groups/profile/identitymap.md)中的變更所決定。 例如，已符合對應至目的地之其中一個對象資格的設定檔，已在身分對應屬性中新增身分。

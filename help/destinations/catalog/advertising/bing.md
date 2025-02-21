@@ -28,7 +28,7 @@ ht-degree: 10%
 
 [!DNL Microsoft Bing]支援根據下表所示的身分啟用對象。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-| 身分 | 說明 |
+| 身分識別 | 說明 |
 |---|---|
 | MAID | MICROSOFT ADVERTISING ID |
 
@@ -40,8 +40,8 @@ ht-degree: 10%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ ht-degree: 10%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至[!DNL Microsoft Bing]目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且先前未在Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，則您設定的ID同步會移轉到Platform。
+>如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步會移轉到Platform。
 
 設定目的地時，您必須提供下列資訊：
 
@@ -90,12 +90,12 @@ ht-degree: 10%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="對應 ID"
->abstract="輸入要對應選取區段的數值 Bing 客群 ID。如果提供的[!UICONTROL 已對應 ID] 未對應至 Bing 目的地中的客群 ID，您將不會在 Bing 帳戶中看到預期的客群資料。"
+>abstract="輸入要對應選取區段的數值 Bing 對象 ID。如果提供的[!UICONTROL 已對應 ID] 未對應至 Bing 目的地中的對象 ID，您將不會在 Bing 帳戶中看到預期的對象資料。"
 
 >[!IMPORTANT]
 > 

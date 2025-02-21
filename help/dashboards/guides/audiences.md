@@ -81,7 +81,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 Adobe Experience Platform的所有新執行個體都會提供預設Widget載出，以強調資料中最新可用的深入分析。 下列Widget從一開始便已在您的區段檢視中預先設定。 有關Widget用途和功能的完整詳細資訊，請參閱其各自章節。
 
-* [[!UICONTROL 客群規模]](#audience-size)
+* [[!UICONTROL 對象規模]](#audience-size)
 * [[!UICONTROL 對象人數變更趨勢]](#audience-size-change-trend)
 * [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
 * [[!UICONTROL 依身分識別劃分的輪廓]](#profiles-by-identity)
@@ -119,7 +119,7 @@ Customer AI 可產生自訂傾向評分，例如大規模個別輪廓的流失�
 
 若要導覽至所選Customer AI模型的詳細深入分析頁面，請選取「**[!UICONTROL 檢視模型詳細資料]**」。
 
-![具有[!UICONTROL 分數的Customer AI分佈]介面工具集和[!UICONTROL 檢視模型詳細資料]的Experience Platform受眾儀表板（已強調顯示）。](../images/segments/customer-ai-distribution-of-scores.png)
+![Experience Platform Audiences儀表板，含有[!UICONTROL 分數的Customer AI分佈]介面工具集和[!UICONTROL 檢視模型詳細資料]強調顯示。](../images/segments/customer-ai-distribution-of-scores.png)
 
 詳細模型深入分析頁面隨即顯示。
 
@@ -146,19 +146,19 @@ Widget標題下方的下拉式選單提供所有已設定的Customer AI模型清
 >
 >計算的設定檔總數取決於所選的合併原則。 若要變更所使用的合併原則，請選取概述標籤正下方的下拉式清單。 請參閱[合併原則](#merge-policies)的相關章節以取得簡要說明，或參閱[合併原則概觀](../../profile/merge-policies/overview.md)以取得詳細資料。
 
-![反白顯示Customer AI評分摘要Widget的Experience Platform受眾儀表板。](../images/segments/customer-ai-scoring-summary.png)
+![反白顯示Customer AI評分摘要Widget的Experience Platform Audiences儀表板。](../images/segments/customer-ai-scoring-summary.png)
 
 選取「**[!UICONTROL 檢視模型詳細資料]**」以導覽至所選Customer AI模型的詳細深入分析頁面。 您可以在[探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md)中找到有關Customer AI的更多資訊。
 
 ## 標準小工具 {#standard-widgets}
 
-Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同量度。 您也可以使用[!UICONTROL Widget資料庫]建立自訂Widget並與您的組織共用。 若要深入瞭解如何建立自訂Widget，請先閱讀[Widget程式庫概觀](../customize/widget-library.md)。
+Adobe提供多個標準Widget，您可用來視覺化與對象相關的不同量度。 您也可以使用[!UICONTROL Widget資料庫]建立自訂Widget並與您的組織共用。 若要深入瞭解如何建立自訂Widget，請先閱讀[Widget程式庫概觀](../customize/widget-library.md)。
 
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
-* [[!UICONTROL 客群規模]](#audience-size)
+* [[!UICONTROL 對象規模]](#audience-size)
 * [[!UICONTROL 對象啟用順序]](#audience-activation-order)
-* [[!UICONTROL 客群規模趨勢]](#audience-size-trend)
+* [[!UICONTROL 對象規模趨勢]](#audience-size-trend)
 * [[!UICONTROL 對象人數變更趨勢]](#audience-size-change-trend)
 * [[!UICONTROL 依身分割槽分的對象人數趨勢]](#audience-size-trend-by-identity)
 * [[!UICONTROL 對象重疊]](#audience-overlap)
@@ -167,12 +167,12 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 * [[!UICONTROL 依身分識別劃分的輪廓]](#profiles-by-identity)
 * [[!UICONTROL 排定的啟用]](#scheduled-activations)
 
-### [!UICONTROL 客群規模] {#audience-size}
+### [!UICONTROL 對象規模] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="客群規模"
->abstract="此小工具會顯示選取客群內合併輪廓的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
+>title="對象規模"
+>abstract="此小工具會顯示選取對象內合併輪廓的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
 
 **[!UICONTROL 對象大小]** Widget會顯示擷取快照時所選對象內的合併設定檔總數。 此數字是將對象合併原則套用至您的設定檔資料，以將設定檔片段合併在一起，並為對象中的每個人形成單一設定檔的結果。
 
@@ -180,11 +180,11 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 ![醒目提示[!UICONTROL 對象大小]介面工具集的[!UICONTROL 對象]儀表板總覽。](../images/audiences/audience-size.png)
 
-### [!UICONTROL 客群規模趨勢] {#audience-size-trend}
+### [!UICONTROL 對象規模趨勢] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="客群規模趨勢"
+>title="對象規模趨勢"
 >abstract="這個小工具會提供有關符合&#x200B;**任何**&#x200B;區段定義標準的總輪廓數的資訊，擷取於過去 30 天、90 天或 12 個月的每日快照。"
 
 **[!UICONTROL 對象人數趨勢]** Widget提供一段指定時間內符合&#x200B;**任何**&#x200B;對象資格的設定檔總數線條圖說明。 對象人數趨勢可在30天、90天和12個月的期間內以視覺化方式呈現。 期間是從Widget的下拉式功能表中選擇。 對象人數會反映在y軸，而時間則反映在x軸。
@@ -258,7 +258,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="身分識別覆蓋"
->abstract="此小工具會顯示包含兩個所選身分識別的客群中輪廓的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的輪廓的數量由圓圈之間的覆蓋表示。"
+>abstract="此小工具會顯示包含兩個所選身分識別的對象中輪廓的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的輪廓的數量由圓圈之間的覆蓋表示。"
 
 **[!UICONTROL 身分重疊]** Widget會顯示文氏圖表或集合圖表，顯示您對象中包含多個身分的設定檔重疊。
 
@@ -275,7 +275,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="依身分識別劃分的輪廓"
->abstract="此小工具會顯示選取客群中每個合併輪廓身分識別的劃分。"
+>abstract="此小工具會顯示選取對象中每個合併輪廓身分識別的劃分。"
 
 依身分割槽分的&#x200B;**[!UICONTROL 設定檔]** Widget會顯示您所選對象中每個合併設定檔的身分劃分。 依身分割槽分的設定檔總數可能會高於對象中的設定檔總數，因為一個設定檔可能會有多個相關聯的身分。 換言之，將每個身分顯示的值加總在一起，可能會超過總對象人數。 這是因為如果客戶透過多個管道與您的品牌互動，則多個身分可能會與該個別客戶相關聯。
 

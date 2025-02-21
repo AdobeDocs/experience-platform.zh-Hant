@@ -51,8 +51,8 @@ ht-degree: 6%
 
 您可以根據對象的來源，從多種對象型別中進行選取：
 
-* **[!UICONTROL 細分服務]**：細分服務在Experience Platform內產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
+* **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
+* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
 * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
 ![選取對象步驟中反白顯示的幾個對象。](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -104,12 +104,12 @@ ht-degree: 6%
 
 ![套用識別對應步驟中反白顯示的轉換控制項。](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## 排程客群匯出 {#scheduling}
+## 排程對象匯出 {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="結束日期"
->abstract="無法使用新增客群排程的結束日期。"
+>abstract="無法使用新增對象排程的結束日期。"
 
 依預設，**[!UICONTROL 對象排程]**&#x200B;頁面僅顯示您目前啟用流程中選擇的新選取對象。
 
@@ -143,7 +143,7 @@ ht-degree: 6%
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個輪廓。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 

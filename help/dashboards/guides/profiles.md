@@ -35,7 +35,7 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可以透過儀
 >
 >如果您的組織剛開始使用Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示設定檔控制面板。 [!UICONTROL 總覽]標籤會顯示連結和檔案，協助您開始使用即時客戶個人檔案。
 
-![反白顯示設定檔和概觀的Experience Platform設定檔儀表板。](../images/profiles/dashboard-overview.png)
+![醒目提示設定檔和概觀的Experience Platform設定檔儀表板。](../images/profiles/dashboard-overview.png)
 
 ### 修改設定檔儀表板 {#modify-dashboard}
 
@@ -115,7 +115,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ![頻道偏好設定Widget.](../images/profiles/channel-preferences.png)
 
-客戶同意和聯絡人偏好設定是複雜的主題。 若要瞭解如何在Experience Platform中收集、處理和篩選同意和內容偏好設定，建議您閱讀以下檔案：
+客戶同意和聯絡人偏好設定是複雜的主題。 若要瞭解如何在Experience Platform中收集、處理和篩選同意和內容偏好設定，建議您閱讀下列檔案：
 
 * 若要瞭解根據Adobe標準[收集同意資料所需的結構描述欄位群組](../../landing/governance-privacy-security/consent/adobe/overview.md)，請參閱這些啟用設定檔的結構描述欄位群組的相關檔案。
    * [[!UICONTROL 同意和偏好設定詳細資料]](../../xdm/field-groups/profile/consents.md)
@@ -221,7 +221,7 @@ Customer AI 可產生自訂傾向評分，例如大規模個別輪廓的流失�
 
 若要導覽至所選Customer AI模型的詳細深入分析頁面，請選取「**[!UICONTROL 檢視模型詳細資料]**」。
 
-![具有[!UICONTROL 分數的Customer AI分佈]介面工具集和[!UICONTROL 檢視模型詳細資料]的Experience Platform受眾儀表板（已強調顯示）。](../images/segments/customer-ai-distribution-of-scores.png)
+![Experience Platform Audiences儀表板，含有[!UICONTROL 分數的Customer AI分佈]介面工具集和[!UICONTROL 檢視模型詳細資料]強調顯示。](../images/segments/customer-ai-distribution-of-scores.png)
 
 詳細模型深入分析頁面隨即顯示。
 
@@ -248,7 +248,7 @@ Widget標題下方的下拉式選單提供所有已設定的Customer AI模型清
 >
 >計算的設定檔總數取決於所選的合併原則。 若要變更所使用的合併原則，請選取概述標籤正下方的下拉式清單。 請參閱[合併原則](#merge-policies)的相關章節以取得簡要說明，或參閱[合併原則概觀](../../profile/merge-policies/overview.md)以取得詳細資料。
 
-![反白顯示Customer AI評分摘要Widget的Experience Platform受眾儀表板。](../images/segments/customer-ai-scoring-summary.png)
+![反白顯示Customer AI評分摘要Widget的Experience Platform Audiences儀表板。](../images/segments/customer-ai-scoring-summary.png)
 
 若要導覽至所選Customer AI模型的詳細深入分析頁面，請選取「**[!UICONTROL 檢視模型詳細資料]**」。 您可以在[探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md)中找到有關Customer AI的更多資訊。
 
@@ -407,7 +407,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="未細分的輪廓"
->abstract="此小工具會提供未附加到任何客群的所有輪廓總數，代表在整個組織中啟用輪廓的機會。"
+>abstract="此小工具會提供未附加到任何對象的所有輪廓總數，代表在整個組織中啟用輪廓的機會。"
 
 [!UICONTROL 未分段的設定檔] Widget提供未附加至任何對象的所有設定檔總數。 產生的數字在最後一個快照集之前是準確的，代表您組織內設定檔啟用的機會。 它還表示有機會刪除未提供足夠ROI的個人檔案。
 
@@ -418,7 +418,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="未細分的輪廓的趨勢"
->abstract="此小工具會提供一個折線圖，說明在特定時段內未附加到任何客群的所有輪廓數量。可以將 30 天、90 天和 12 個月時段內未附加到任何客群的輪廓趨勢視覺化。"
+>abstract="此小工具會提供一個折線圖，說明在特定時段內未附加到任何對象的所有輪廓數量。可以將 30 天、90 天和 12 個月時段內未附加到任何對象的輪廓趨勢視覺化。"
 
 [!UICONTROL 未分段的設定檔變更趨勢] Widget會使用線圖來說明自上次每日快照後新增的未附加至任何對象的設定檔數量。 未附加至任何對象的設定檔變化趨勢可以在30天、90天和12個月期間進行視覺化。 期間是從Widget的下拉式功能表中選擇。 輪廓計數會反映在y軸上，而時間則反映在x軸上。
 
@@ -587,4 +587,4 @@ The three levels of completeness are:
 
 ## 後續步驟
 
-閱讀本檔案後，您現在應該能夠找到設定檔控制面板，並瞭解可用介面工具列中顯示的量度。 若要進一步瞭解如何在Experience PlatformUI中使用[!DNL Profile]資料，請參閱[即時客戶設定檔UI指南](../../profile/ui/user-guide.md)。
+閱讀本檔案後，您現在應該能夠找到設定檔控制面板，並瞭解可用介面工具列中顯示的量度。 若要進一步瞭解如何在Experience Platform UI中使用[!DNL Profile]資料，請參閱[即時客戶設定檔UI指南](../../profile/ui/user-guide.md)。

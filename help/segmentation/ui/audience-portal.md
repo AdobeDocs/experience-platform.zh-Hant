@@ -30,17 +30,17 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 若要開啟Audience Portal，請選取「細分」區段內的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤。
 
-## 客群清單 {#list}
+## 對象清單 {#list}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="流失"
->abstract="流失代表和上次執行區段作業時相比，客群內正在變更的輪廓的百分比。"
+>abstract="流失代表和上次執行區段作業時相比，對象內正在變更的輪廓的百分比。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="評估方式"
->abstract="客群的評估方式包括批次、串流和邊緣。"
+>abstract="對象的評估方式包括批次、串流和邊緣。"
 
 依預設，Audience Portal會顯示您的組織和沙箱中所有對象的清單，包括設定檔計數、來源、建立日期、上次修改日期、標籤和劃分。
 
@@ -62,7 +62,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 管理對象所屬的資料夾。 如需有關此功能的詳細資訊，請閱讀[篩選和標籤](#manage-audiences)的章節。 |
 | [!UICONTROL 副本] | 分段服務 | 複製選取的對象。 您可以在[區段常見問答集](../faq.md#copy)中找到有關此函式的詳細資訊。 |
 | [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請閱讀[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 |
-| [!UICONTROL Publish] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集](../faq.md#lifecycle-states)的[生命週期狀態區段。 |
+| [!UICONTROL 發佈] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集](../faq.md#lifecycle-states)的[生命週期狀態區段。 |
 | [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集](../faq.md#lifecycle-states)的[生命週期狀態區段。 |
 | [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 不能刪除下游目的地中使用的對象或是其他對象&#x200B;**中的相依對象**。 如需有關刪除對象的詳細資訊，請參閱[區段常見問題集](../faq.md#lifecycle-states)。 |
 | [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱[沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md)。 |
@@ -224,8 +224,8 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="彈性客群評估限制"
-abstract="您可以在單一彈性客群評估執行中評估最多 20 個客群。<br/><br/>此外，雖然評估工作會盡快執行，但可能會出現系統延遲，因為隨選評估<b>無法</b>與另一個隨選或批次評估同時執行。"
+>title="彈性對象評估限制"
+abstract="您可以在單一彈性對象評估執行中評估最多 20 個對象。<br/><br/>此外，雖然評估工作會盡快執行，但可能會出現系統延遲，因為隨選評估<b>無法</b>與另一個隨選或批次評估同時執行。"
 
 彈性的對象評估可讓您隨選執行細分工作。 選擇您要評估的對象並選取&#x200B;**[!UICONTROL 評估對象]**。
 
@@ -371,8 +371,8 @@ abstract="您可以在單一彈性客群評估執行中評估最多 20 個客群
 
 [!CONTEXTUALHELP]
 id="platform_segments_browse_addallsegmentstoschedule"
-title="將所有客群新增到排程"
-abstract="啟用以在每日排程更新中包含所有使用批次分段評估的客群。停用以從排程更新中移除所有客群。"
+title="將所有對象新增到排程"
+abstract="啟用以在每日排程更新中包含所有使用批次分段評估的對象。停用以從排程更新中移除所有對象。"
 
 建立對象後，您就可以透過隨選或排程（持續）評估來評估對象。 評估表示將[!DNL Real-Time Customer Profile]資料移動至區段工作，以產生對應的對象。 建立對象後，會儲存並儲存對象，以便使用[!DNL Experience Platform] API匯出對象。
 
@@ -414,7 +414,7 @@ abstract="啟用以在每日排程更新中包含所有使用批次分段評估�
 
 ### 聯合客群構成 {#fac}
 
-除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
+除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成從企業資料集建立新受眾，無需複製基礎資料即可將這些受眾儲存至Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
 
 ![在您組織的同盟對象組合中建立的對象清單。](../images/ui/overview/federated-audience-composition.png)
 

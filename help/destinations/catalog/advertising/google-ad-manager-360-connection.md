@@ -17,9 +17,9 @@ ht-degree: 6%
 ><br/>
 >為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
 ><br/>
->已購買AdobePrivacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶不需要採取任何動作。
+>已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
 ><br/>
->未購買AdobePrivacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/ui/segment-builder.md)中的[區段定義](../../../segmentation/home.md#segment-definitions)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
+>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/ui/segment-builder.md)中的[區段定義](../../../segmentation/home.md#segment-definitions)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
 [!DNL Google Ad Manager 360]連線可透過[!DNL Google Cloud Storage]將[!DNL publisher provided identifiers] (PPID)的批次上傳至[!DNL Google Ad Manager 360]。
 
@@ -54,8 +54,8 @@ ht-degree: 6%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -105,8 +105,8 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="將客群 ID 附加到客群名稱"
->abstract="選取此選項可讓這個目標中的客群名稱包含來自 Experience Platform 的客群 ID，如下所示：`Audience Name (Audience ID)`"
+>title="將對象 ID 附加到對象名稱"
+>abstract="選取此選項可讓這個目標中的對象名稱包含來自 Experience Platform 的對象 ID，如下所示：`Audience Name (Audience ID)`"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -118,7 +118,7 @@ ht-degree: 6%
 * **[!UICONTROL 帳戶型別]**：根據您的[!DNL Google]帳戶選取選項：
    * 對[!DNL Google AdX]使用`AdX buyer`
    * 使用`DFP by Google`作為發行者的[!DNL DoubleClick]
-* **[!UICONTROL 將對象ID附加至對象名稱]**：選取此選項，讓Google Ad Manager 360中的對象名稱包含來自Experience Platform的對象ID，如下所示： `Audience Name (Audience ID)`。
+* **[!UICONTROL 將對象ID附加至對象名稱]**：選取此選項，讓Google Ad Manager 360中的對象名稱包含來自Experience Platform的對象名稱，如下所示： `Audience Name (Audience ID)`。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -126,7 +126,7 @@ ht-degree: 6%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

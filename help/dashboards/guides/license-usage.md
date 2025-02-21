@@ -50,22 +50,22 @@ ht-degree: 18%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
->title="預測的可定址客群"
+>title="預測的可定址對象"
 >abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名輪廓資料期限。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/event-expirations" text="體驗事件過期"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
-授權使用報告提供授權使用量度之高度精細度。 控制面板提供每個已購買產品（及相關附加元件）的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 以下Experience Platform應用程式可透過使用量度進行追蹤：Real-time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
+授權使用報告提供授權使用量度之高度精細度。 控制面板提供每個已購買產品（及相關附加元件）的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 下列Experience Platform應用程式可透過使用量度進行追蹤：Real-Time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
 
 本指南概述如何存取和使用UI中的授權使用儀表板，並提供有關儀表板中顯示的視覺效果的更多資訊。
 
-如需Platform UI的一般概觀，請參閱[Experience PlatformUI指南](../../landing/ui-guide.md)。
+如需Platform UI的一般概觀，請參閱[Experience Platform UI指南](../../landing/ui-guide.md)。
 
 ## [!UICONTROL 授權使用情況]儀表板資料
 
-[!UICONTROL 授權使用情況]儀表板會顯示您已購買的所有Experience Platform產品清單，以及這些產品的任何附加元件。 在此控制面板中，您可以找到組織授權相關資料的快照，以便Experience Platform任何關聯的沙箱。
+[!UICONTROL 授權使用情況]儀表板會顯示您已購買的所有Experience Platform產品清單，以及這些產品的任何附加元件。 在此控制面板中，您可以找到組織在任何相關沙箱中用於Experience Platform的授權相關資料快照。
 
 此儀表板中的資料會顯示在拍攝快照的特定時間點上。 換句話說，快照不是資料的近似或樣本，而且圖示板並未即時更新。
 
@@ -93,7 +93,7 @@ ht-degree: 18%
 
 | 欄名稱 | 說明 |
 |---|---|
-| **[!UICONTROL 產品]** | 貴組織授權的Adobe解決方案。 |
+| **[!UICONTROL 產品]** | 您的組織授權的Adobe解決方案。 |
 | **[!UICONTROL 主要量度]** | 該產品中用於追蹤的主要量度。 |
 | **[!UICONTROL 授權金額]** | 產品授權合約中同意的主要量度數量上限的合約值。 |
 | **[!UICONTROL 使用狀況]** | 您使用的主要量度數量。 此值提供該量度在所有沙箱（生產或開發）中的總使用量。 |
@@ -136,7 +136,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->請注意，授權用量預估是根據過去使用量計算的近似值。您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。
+>請注意，授權用量預估是根據過去使用量計算的近似值。您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織使用Adobe的授權範圍。
 
 ![預測使用量資料行反白顯示的Platform產品摘要檢視。](../images/license-usage/summary-predicted-usage.png)
 
@@ -216,7 +216,7 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->自8月20日起，擁有&#39;[!UICONTROL 平均設定檔豐富度]&#39;和&#39;[!UICONTROL 總儲存空間]&#39;許可權的客戶在授權使用儀表板中看到&#39;[!UICONTROL 總資料量]&#39;。 客戶權益沒有變動，只是追蹤量度的簡化。 [!UICONTROL 總資料量]代表Adobe Experience Platform設定檔服務中可用於參與和個人化工作流程的資料。 此簡化量度改善了個人資料服務使用的管理和測量。 我們鼓勵客戶聯絡其Adobe代表，以進一步釐清這項變更。
+>自8月20日起，擁有&#39;[!UICONTROL 平均設定檔豐富度]&#39;和&#39;[!UICONTROL 總儲存空間]&#39;許可權的客戶在授權使用儀表板中看到&#39;[!UICONTROL 總資料量]&#39;。 客戶權益沒有變動，只是追蹤量度的簡化。 [!UICONTROL 總資料量]代表Adobe Experience Platform設定檔服務中可用於參與和個人化工作流程的資料。 此簡化量度改善了個人資料服務使用的管理和測量。 我們鼓勵客戶連絡其Adobe代表，進一步釐清這項變更。
 
 授權使用儀表板會報告適用於組織中多個產品的多個不重複量度。 可用的量度包括：
 
@@ -226,7 +226,7 @@ ht-degree: 18%
 | [!UICONTROL 可定址對象] | 您的業務受眾權益與消費者受眾權益的總和。 消費者受眾的定義是銷售訂單上識別為「消費者受眾」的個人檔案數。 業務對象定義為銷售訂單上識別為「業務對象」的業務人員個人檔案數。 |
 | [!UICONTROL Adhoc Query Service使用者套件] | 一個附加元件，可讓您的授權並行查詢服務使用者權益增加5個額外的並行查詢服務使用者，以及每個套件一個額外的並行執行特定查詢。 可以授權多個其他Ad Hoc Query使用者套件。 |
 | [!UICONTROL 平均設定檔豐富度] | **已棄用** — 任何時間點儲存在集線器設定檔服務中的所有生產資料總和，除以授權企業人員設定檔數目的五倍。 [!UICONTROL 平均設定檔豐富度]是共用功能。 |
-| [!UICONTROL 可用的CJA資料列] | 可在Analysis中分析的每日平均資料列Customer Journey Analytics。 |
+| [!UICONTROL 可用的CJA資料列] | 可在Customer Journey Analytics中分析的每日平均資料列。 |
 | [!UICONTROL 計算屬性] | 彙總的個人資料行為資料的總數。 彙總的個人資料行為資料是根據體驗事件，這些事件會轉換為個人資料屬性，並可包含在個人資料或企業個人資料中。 |
 | [!UICONTROL 消費者對象] | 銷售訂單上識別為「消費者對象」的個人設定檔數目。 |
 | [!UICONTROL 資料匯出大小] | 一年內透過資料集啟用傳送的資料量。 |
@@ -234,8 +234,8 @@ ht-degree: 18%
 | [!UICONTROL 資料湖儲存空間] | Adobe Experience Platform中分析資料存放區的使用數量。 |
 | [!UICONTROL 可參與的對象] | 此量度代表可參與設定檔的對象。 可參與的設定檔是代表個人的資訊記錄，並顯示在「設定檔服務」中。 這些記錄是您在過去12個月中，嘗試使用Journey Optimizer的編寫、決策、傳送、實驗或協調功能所使用的設定檔。 |
 | [!UICONTROL 相似對象] | 將現有消費者對象模型化，以識別與現有消費者對象類似之個人設定檔所產生的對象計數。 |
-| [!UICONTROL 個AMM模型] | 機器學習模型(內建Adobe Mix Modeler)的計數，用於根據您的投資測量和/或預測指定的結果。 |
-| [!UICONTROL 沙箱數目] | 存取Adobe Experience Platform隔離資料和作業的任何Adobe隨選服務例項中的邏輯分隔計數。 |
+| [!UICONTROL 個AMM模型] | 機器學習模型(內建於Adobe Mix Modeler)的計數，用於根據您的投資測量及/或預測指定的結果。 |
+| [!UICONTROL 沙箱數目] | 存取Adobe隔離資料和作業的任何Adobe Experience Platform On-demand Service例項中的邏輯分隔計數。 |
 | [!UICONTROL 設定檔豐富度（Pack數目）] | 每個額外設定檔豐富度套件的授權總資料量會增加25 KB。 |
 | [!UICONTROL 查詢服務計算時數] | 測量執行批次查詢時，查詢服務引擎讀取、處理和將資料寫入資料湖所花費的時間。 |
 | [!UICONTROL 串流區段數Pack] | 當新資料透過串流流進入「細分服務」時，套件會更新個人設定檔的區段會籍。 評估區段會籍時會根據目前人員設定檔屬性和目前事件的值，而不考慮歷史行為。 串流區段是一項共用功能。 |
@@ -253,7 +253,7 @@ ht-degree: 18%
 | --- | --- |
 | <ul><li>Adobe Experience Platform：OD LITE</li><li>Adobe Experience Platform：OD STANDARD</li><li>Adobe Experience Platform：OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>Adobe Experience Platform：OD</li></ul> | [Experience Platform、應用程式服務和智慧型服務](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT客戶資料平台：OD</li><li>RT CUSTOMER DATA PLATFORM：OD PRFL至10M</li><li>RT客戶資料平台：OD PRFL至50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>RT客戶資料平台：OD</li><li>RT CUSTOMER DATA PLATFORM：OD PRFL至10M</li><li>RT客戶資料平台：OD PRFL至50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP：OD啟用</li><li>AEP：OD啟用PRFL至10M</li><li>AEP：OD啟用PRFL，最高50米</li></ul> | [Adobe Experience Platform啟用](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP：OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>Journey Optimizer SELECT：OD</li><li>Journey Optimizer PRIME：OD</li><li>Journey Optimizer ULTIMATE：OD</li><li>UNP AJO PRIME簡易版：OD</li><li>UNP AJO ULTIMATE簡易版：OD</li><li>UNP Real-Time CDP：OD設定檔協調流程</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-journey-optimizer.html) |

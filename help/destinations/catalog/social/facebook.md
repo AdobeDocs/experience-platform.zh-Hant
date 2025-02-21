@@ -190,26 +190,26 @@ Facebook權杖每60天過期一次。 代號過期後，將資料匯出至目的
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="客群來源"
->abstract="選擇最初如何在客群中收集客戶資料。當區段以使用者為目標時，資料會顯示在 Facebook 中"
+>title="對象來源"
+>abstract="選擇最初如何在對象中收集客戶資料。當區段以使用者為目標時，資料會顯示在 Facebook 中"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
->title="客群來源"
+>title="對象來源"
 >abstract="廣告商直接從客戶那裡收集到資料了。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_partners"
->title="客群來源"
+>title="對象來源"
 >abstract="廣告商直接從他們的合作夥伴那裡收集到資料了。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
->title="客群來源"
+>title="對象來源"
 >abstract="廣告商直接從他們的客戶和合作夥伴那裡收集到資料了。"
 
 >[!IMPORTANT]

@@ -132,17 +132,17 @@ ht-degree: 21%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
 >title="巢狀容器深度上限錯誤"
->abstract="巢狀容器深度上限為 **5**。這表示建立客群時，**不能**&#x200B;有超過五個巢狀容器。"
+>abstract="巢狀容器深度上限為 **5**。這表示建立對象時，**不能**&#x200B;有超過五個巢狀容器。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
 >title="規則數上限錯誤"
->abstract="單一容器內規則數上限為 **5**。這表示建立客群時，**不能**&#x200B;在單一容器中有超過五個規則。"
+>abstract="單一容器內規則數上限為 **5**。這表示建立對象時，**不能**&#x200B;在單一容器中有超過五個規則。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
 >title="跨實體數上限錯誤"
->abstract="單一客群中可以進行的跨實體數上限為 **5**。跨實體是指您在客群內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。"
+>abstract="單一對象中可以進行的跨實體數上限為 **5**。跨實體是指您在對象內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowCustomEntity"
@@ -192,17 +192,17 @@ ht-degree: 21%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_generic"
 >title="違反限制"
->abstract="客群違反限制。請閱讀連結的文件以了解更多詳細資訊。"
+>abstract="對象違反限制。請閱讀連結的文件以了解更多詳細資訊。"
 
 使用帳戶對象時，對象&#x200B;**必須**&#x200B;符合下列限制：
 
 - 體驗事件的回顧期間上限為&#x200B;**30天**。
 - 巢狀容器的最大深度為&#x200B;**5**。
-   - 這表示建立客群時，**不能**&#x200B;有超過五個巢狀容器。
+   - 這表示建立對象時，**不能**&#x200B;有超過五個巢狀容器。
 - 單一容器內的規則數目上限為&#x200B;**5**。
    - 這表示您的對象&#x200B;**不能**&#x200B;有超過五個規則組成您的對象。
 - 可使用的跨實體數目上限為&#x200B;**5**。
-   - 跨實體是指您在客群內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。
+   - 跨實體是指您在對象內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。
 - 無法使用自訂實體&#x200B;****。
 - 單一欄位可以檢查的值數量上限為 **50**。
    - 例如，如果您有「城市名稱」欄位，您可以根據50個城市名稱檢查該值。

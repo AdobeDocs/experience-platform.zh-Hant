@@ -25,7 +25,7 @@ ht-degree: 9%
 >
 >設定檔屬性可能包含敏感資料。 若要保護此資料，您必須在為屬性式個人化設定&#x200B;**[!UICONTROL 自訂Personalization]**&#x200B;目的地時，使用[Edge Network伺服器API](/help/server-api/overview.md)。 所有伺服器API呼叫都必須在[已驗證的內容](../../../server-api/authentication.md)中進行。
 >
-><br>您可以新增伺服器端整合，使用您已在網頁或行動SDK實作中使用的相同資料流，透過[Edge Network伺服器API](/help/server-api/overview.md)擷取設定檔屬性。
+><br>您可以新增伺服器端整合，利用您已在網頁或行動SDK實作中使用的相同資料流，透過[Edge Network Server API](/help/server-api/overview.md)擷取設定檔屬性。
 >
 ><br>如果您未遵循上述要求，個人化將僅以對象成員資格為基礎。
 
@@ -39,7 +39,7 @@ ht-degree: 9%
 
 * 如果您想要從網站收集資料，請使用[Adobe Experience Platform Web SDK](/help/web-sdk/home.md)。
 * 如果您想要從行動應用程式收集資料，請使用[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)。
-* 如果您未使用[Web SDK](/help/web-sdk/home.md)或[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)，或您想要根據設定檔屬性個人化使用者體驗，請使用[Edge Network伺服器API](../../../server-api/overview.md)。
+* 如果您未使用[網頁SDK](/help/web-sdk/home.md)或[行動SDK](https://developer.adobe.com/client-sdks/documentation/)，或您想要根據設定檔屬性個人化使用者體驗，請使用[Edge Network伺服器API](../../../server-api/overview.md)。
 
 >[!IMPORTANT]
 >
@@ -51,8 +51,8 @@ ht-degree: 9%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -61,14 +61,14 @@ ht-degree: 9%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!DNL Profile request]** | 您正在請求已對應至單一設定檔之自訂個人化目的地的所有對象。 可以為不同的[Adobe資料收集資料串流](../../../datastreams/overview.md)設定不同的自訂個人化目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 ## 連線到目標 {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流 ID"
->abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含客群。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
+>abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含對象。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="了解如何設定資料流"
 
 >[!IMPORTANT]
@@ -83,7 +83,7 @@ ht-degree: 9%
 
 * **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 * **[!UICONTROL 描述]**：輸入目的地的描述。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
-* **[!UICONTROL 整合別名]**：此值會以JSON物件名稱的形式傳送到Experience PlatformWeb SDK。
+* **[!UICONTROL 整合別名]**：此值會作為JSON物件名稱傳送到Experience Platform Web SDK。
 * **[!UICONTROL 資料串流ID]**：這會決定要在頁面的回應中包含對象的資料收集資料串流。 下拉選單僅顯示已啟用目的地設定的資料流。如需詳細資訊，請參閱[設定資料串流](../../../datastreams/overview.md)。
 
 ### 啟用警示 {#enable-alerts}
@@ -92,7 +92,7 @@ ht-degree: 9%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -102,7 +102,7 @@ ht-degree: 9%
 
 ## 匯出的資料 {#exported-data}
 
-如果您使用Adobe Experience Platform](../../../tags/home.md)中的[標籤來部署Experience PlatformWeb SDK，請使用[傳送事件完成](../../../tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
+如果您使用Adobe Experience Platform](../../../tags/home.md)中的[標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](../../../tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
 
 以下是`event.destinations`變數的範例值：
 
@@ -124,7 +124,7 @@ ht-degree: 9%
 ]
 ```
 
-如果您不是使用[標籤](/help/tags/home.md)來部署Experience PlatformWeb SDK，請使用[命令回應](/help/web-sdk/commands/command-responses.md)來檢視匯出的資料。
+如果您不是使用[標籤](/help/tags/home.md)來部署Experience Platform Web SDK，請使用[命令回應](/help/web-sdk/commands/command-responses.md)來檢視匯出的資料。
 
 來自Adobe Experience Platform的JSON回應可加以剖析，以找出您要與Adobe Experience Platform整合之應用程式的對應整合別名。 對象ID可傳入應用程式的程式碼中作為定位引數。 以下是目標回應特有的內容範例。
 
