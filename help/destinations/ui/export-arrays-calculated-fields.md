@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
 source-wordcount: '1730'
-ht-degree: 8%
+ht-degree: 13%
 
 ---
 
@@ -73,8 +73,8 @@ organizations = [{
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="匯出陣列、地圖和物件"
->abstract="<p> 切換此設定<b> on</b>以啟用將陣列、對應和物件匯出至JSON或Parquet檔案。 您可以在對應步驟的來源欄位檢視中選取這些物件型別。</p><p>透過這個切換<b>關閉</b>，您便可以使用計算欄位選項，並在啟用對象時套用各種資料轉換函式。 不過，您可以<i>不</i>將陣列、對應和物件匯出至JSON或Parquet檔案，且必須為此設定個別的目的地。</p>"
+>title="匯出陣列、對應及物件"
+>abstract="<p> 將此設定切換為<b>開啟</b>，便可以將陣列、對應及物件匯出至 JSON 或 Parquet 檔案。您可以在對應步驟的來源欄位檢視中選擇這些物件類型。</p><p>將這項設定切換為<b>關閉</b>後，您可以使用計算欄位選項並在啟動客群時套用各種資料轉換函數。但是，您<i>不能</i>將陣列、對應和物件匯出至 JSON 或 Parquet 檔案，並且必須設定不同的目的地才能完成該目的。</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
