@@ -3,7 +3,7 @@ title: 使用合作夥伴協助的訪客辨識功能，為未知訪客提供個�
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 90%
@@ -24,7 +24,7 @@ ht-degree: 90%
 
 消費者以各種方式與品牌互動時，數位體驗呈現片段化是很真實的，而且越來越難以解決。 針對凝聚式體驗、鎖定目標的建議和量身打造的互動的最佳客戶參與策略，全都受到使用者認知度的限制。
 
-這是合作夥伴協助的即時辨識可帶來有意義的差異之處。 Adobe可讓身分識別合作夥伴瞭解我們複雜的使用者端資料收集和領先市場的體驗最佳化產品，有效提升體驗傳送的標準（從第一次造訪開始），無需先前的記錄或驗證。
+這是合作夥伴協助的即時辨識可帶來有意義的差異之處。 Adobe可讓身分識別合作夥伴瞭解我們複雜的使用者端資料收集和領先市場的體驗最佳化產品，有效提升體驗傳送的標準（從第一次造訪開始），無需先前的歷史記錄或驗證。
 
 這對於驗證率低的垂直市場尤其有用，例如消費性包裝商品、線上零售等。
 
@@ -51,12 +51,12 @@ ht-degree: 90%
    * [標記](/help/tags/home.md)
    * [資料流](/help/datastreams/overview.md)
 * Real-Time CDP 中的資料管理
-   * [身分](/help/identity-service/features/namespaces.md)
+   * [身分識別](/help/identity-service/features/namespaces.md)
    * [結構描述](/help/xdm/home.md)
    * [資料使用情況標籤](/help/data-governance/labels/overview.md)
    * [資料集](/help/catalog/datasets/overview.md)
 *  Web 屬性個人化
-   * [邊緣分段](/help/segmentation/ui/edge-segmentation.md)
+   * [邊緣分段](/help/segmentation/methods/edge-segmentation.md)
    * [邊緣個人化目的地](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (或您選擇的個人化平台。本使用案例教學課程旨在重點介紹以 Adobe Target 作為個人化引擎)
 
@@ -83,7 +83,7 @@ ht-degree: 90%
 
 ### 資料管理 - 建立身分識別命名空間、結構描述和資料集，以便管理資料屬性 {#data-management}
 
-在準備為實現使用案例以便為未經身分驗證訪客的體驗進行個人化時，您必須首先在 Real-Time CDP 中設定資料管理結構，以接收傳入的即時事件和對象資格資料。
+在準備為實現使用案例以便為未經身分驗證訪客的體驗進行個人化時，您必須首先在 Real-Time CDP 中設定資料管理結構，以接收傳入的即時事件和客群資格篩選資料。
 
 #### 建立合作夥伴 ID 身分識別命名空間
 
@@ -103,7 +103,7 @@ ht-degree: 90%
 
 此外，您可以建立或重複使用現有欄位群組並將其新增至您的結構描述，以擷取作夥伴提供關於訪客的見解。閱讀如何[建立欄位群組](/help/xdm/ui/resources/field-groups.md)以及如何[新增欄位](/help/xdm/ui/resources/field-groups.md)至欄位群組。例如，如果您希望針對合作夥伴所提供的分析 (例如年齡範圍、就業狀況、每月消費能力或購買行為) 進行個人化，請將您的欄位群組加入有關的欄位。
 
-假設資料合作夥伴為訪客提供了穩定的識別碼，並且您希望將其引入 Real-Time CDP，請務必在自訂欄位群組中為識別碼提供適當命名的欄位。您應該還要在之前建立的身分識別命名空間中將該欄位標示為身分識別。記得還要[讓結構描述包含在設定檔中](/help/xdm/ui/resources/schemas.md#profile)。
+假設資料合作夥伴為訪客提供了穩定的識別碼，並且您希望將其引入 Real-Time CDP，請務必在自訂欄位群組中為識別碼提供適當命名的欄位。您應該還要在之前建立的身分識別命名空間中將該欄位標示為身分識別。記得還要[讓結構描述包含在輪廓中](/help/xdm/ui/resources/schemas.md#profile)。
 
 #### 建立資料集
 
@@ -111,7 +111,7 @@ ht-degree: 90%
 
 閱讀有關[如何建立資料集](/help/catalog/datasets/user-guide.md#create)的教學課程，並記得要選取從結構描述建立資料集的選項。根據您在上一步建立的結構描述來建立資料集。
 
-與建立結構描述的步驟類似，您需要讓資料集包含在[!UICONTROL 即時客戶設定檔]中。如需進一步了解關於啟用資料集以用於[!UICONTROL 即時客戶設定檔]，請閱讀[建立結構描述教學課程](/help/xdm/tutorials/create-schema-ui.md#profile)。
+與建立結構描述的步驟類似，您需要讓資料集包含在[!UICONTROL 即時客戶輪廓]中。如需進一步了解關於啟用資料集以用於[!UICONTROL 即時客戶輪廓]，請閱讀[建立結構描述教學課程](/help/xdm/tutorials/create-schema-ui.md#profile)。
 
 ### 在您的 Web 屬性上實施事件資料收集 {#implement-data-collection}
 
@@ -143,7 +143,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 [選取事件資料集](/help/datastreams/configure.md#aep) (您之前從下拉式選單建立)，勾選&#x200B;**[!UICONTROL 邊緣分割]**&#x200B;和&#x200B;**[!UICONTROL 個人化目的地]**&#x200B;旁邊的方格，然後選取「**[!UICONTROL 儲存]**」。
 
-請注意，在此場境中您不必選取設定檔資料集，因為您引入的是以事件為主的時間序列資料。
+請注意，在此場境中您不必選取輪廓資料集，因為您引入的是以事件為主的時間序列資料。
 
 #### 建立標記屬性
 
@@ -255,7 +255,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 ### 個人化 {#personalization}
 
-您現在已準備好建立並啟動對象進行個人化。
+您現在已準備好建立並啟動客群進行個人化。
 
 #### 建立對象並設定邊緣細分
 
@@ -263,9 +263,9 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 ![如何導覽至對象的檢視。](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-您必須使用[邊緣細分](/help/segmentation/ui/edge-segmentation.md)設定您的對象，以便在訪客造訪您的Web屬性時，即時評估訪客的對象成員資格。
+您必須使用[邊緣細分](/help/segmentation/methods/edge-segmentation.md)設定您的對象，以便在訪客造訪您的Web屬性時，即時評估訪客的對象成員資格。
 
-還要確保為邊緣對象設定一項「[有效邊緣合併原則](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)。
+還要確保為邊緣客群設定一項「[有效邊緣合併原則](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)。
 
 #### 與 Adobe Target 或其他自訂個人化目的地整合
 
@@ -273,7 +273,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 >[!IMPORTANT]
 >
->閱讀有關[對邊緣個人化目的地啟用對象](/help/destinations/ui/activate-edge-personalization-destinations.md)，了解啟用對象所需步驟的完整情況。
+>閱讀有關[對邊緣個人化目的地啟用客群](/help/destinations/ui/activate-edge-personalization-destinations.md)，了解啟用客群所需步驟的完整情況。
 
 ## 限制和疑難排解 {#limitations-and-troubleshooting}
 
@@ -285,6 +285,6 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
-* [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
-* [擴大啟用潛在客戶個人資料和潛在客戶對象](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。
+* [使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的客群最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶輪廓來[擴大您的輪廓庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
+* [擴大啟用潛在客戶輪廓和潛在客戶客群](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

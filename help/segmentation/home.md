@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 分段服務總覽
 description: 瞭解Adobe Experience Platform區段服務，以及此服務在平台生態系統中所扮演的角色。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1665'
 ht-degree: 13%
 
 ---
@@ -54,7 +54,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 ### 聯合客群構成 {#fac}
 
-除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
+除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成從企業資料集建立新受眾，無需複製基礎資料即可將這些受眾儲存至Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
 
 ## 評估客群 {#evaluate-segments}
 
@@ -67,7 +67,6 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 >id="platform_segments_evaluation_streaming"
 >title="串流評估"
 >abstract="串流分段是持續進行的資料選擇流程；此功能會根據使用者活動來更新客群。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="使用串流分段近乎即時地評估事件"
 
 Platform 目前支援三種評估客群的方式：串流分段、批次分段以及邊緣分段。
 
@@ -75,7 +74,7 @@ Platform 目前支援三種評估客群的方式：串流分段、批次分段�
 
 串流細分是持續進行的資料選擇流程，其會根據使用者活動來更新客群。 建立並儲存對象後，區段定義就會套用至對[!DNL Real-Time Customer Profile]傳入的資料。 會定期處理對象的新增和移除，確保您的目標對象仍然相關。
 
-若要深入瞭解串流區段，請閱讀[串流區段檔案](./api/streaming-segmentation.md)。
+若要深入瞭解串流區段，請閱讀[串流區段檔案](./methods/streaming-segmentation.md)。
 
 ### 批次分段 {#batch}
 
@@ -94,11 +93,10 @@ Platform 目前支援三種評估客群的方式：串流分段、批次分段�
 >id="platform_segments_evaluation_edge"
 >title="邊緣評估"
 >abstract="邊緣分段指在 Edge Network 上即時評估 Platform 中的區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="邊緣分段服務 UI 指南"
 
-Edge區段能在Edge Network](../web-sdk/home.md)上即時評估Platform中的區段[，啟用相同頁面和下一頁個人化使用案例。
+Edge區段能在Edge Network](../landing/edge-and-hub-comparison.md)上即時評估Platform中的區段[，啟用相同頁面和下一頁個人化使用案例。
 
-若要深入瞭解邊緣細分，請閱讀[API檔案](./api/edge-segmentation.md)或[UI檔案](./ui/edge-segmentation.md)。
+若要深入瞭解邊緣細分，請閱讀[API檔案](./methods/edge-segmentation.md)或[UI檔案](./methods/edge-segmentation.md)。
 
 ## 存取區段結果
 
@@ -165,7 +163,7 @@ Edge區段能在Edge Network](../web-sdk/home.md)上即時評估Platform中的�
 
 ### 多實體分段 {#multi-entity}
 
-使用進階多實體分段功能，您可以根據產品、商店或其他非人員（也稱為「維度」實體）的其他資料來擴充[!DNL Real-Time Customer Profile]資料。 因此，[!DNL Segmentation Service]可以在區段定義期間存取其他欄位，就好像這些欄位是[!DNL Profile]資料存放區的原生欄位一樣。 根據與您獨特業務需求相關的資料，多實體細分在識別對象時可提供彈性。 如需詳細資訊，包括使用案例和工作流程，請參閱[多實體分段指南](multi-entity-segmentation.md)。
+使用進階多實體分段功能，您可以根據產品、商店或其他非人員（也稱為「維度」實體）的其他資料來擴充[!DNL Real-Time Customer Profile]資料。 因此，[!DNL Segmentation Service]可以在區段定義期間存取其他欄位，就好像這些欄位是[!DNL Profile]資料存放區的原生欄位一樣。 根據與您獨特業務需求相關的資料，多實體細分在識別對象時可提供彈性。 如需詳細資訊，包括使用案例和工作流程，請參閱[多實體分段指南](./tutorials/multi-entity-segmentation.md)。
 
 ## [!DNL Segmentation Service]資料型別
 

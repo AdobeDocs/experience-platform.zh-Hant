@@ -2,8 +2,8 @@
 title: Adobe Experience Platform 發行說明 (2024 年 2 月)
 description: Adobe Experience Platform 2024 年 2 月版發行說明。
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
-workflow-type: ht
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 100%
 
@@ -115,7 +115,7 @@ Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 帳戶客群 | 帳戶客群現已正式推出！您現在能夠使用帳戶細分功能，在 Real-Time Customer Platform 的 B2B 和 B2P 兩種版本中，將行銷細分體驗的簡易性與精密處從人員型客群完整帶至帳戶型客群中。此版本可讓您將人員型客群作為帳戶型客群的述詞、新增搜尋功能、支援自訂實體的使用情況，同時能符合資料治理規範。如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/ui/account-audiences.md)。 |
+| 帳戶客群 | 帳戶客群現已正式推出！您現在能夠使用帳戶細分功能，在 Real-Time Customer Platform 的 B2B 和 B2P 兩種版本中，將行銷細分體驗的簡易性與精密處從人員型客群完整帶至帳戶型客群中。此版本可讓您將人員型客群作為帳戶型客群的述詞、新增搜尋功能、支援自訂實體的使用情況，同時能符合資料治理規範。如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/types/account-audiences.md)。 |
 
 {style="table-layout:auto"}
 

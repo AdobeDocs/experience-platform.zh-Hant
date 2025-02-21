@@ -1,14 +1,14 @@
 ---
 title: 即時查詢邊緣設定檔屬性
-description: 瞭解如何使用自訂Personalization目的地和Edge NetworkAPI即時查詢邊緣設定檔屬性
+description: 瞭解如何使用自訂Personalization目的地和Edge Network API即時查詢邊緣設定檔屬性
 type: Tutorial
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 3%
 
 ---
-
 
 # 即時查詢邊緣上的設定檔屬性
 
@@ -29,17 +29,17 @@ Adobe Experience Platform使用[即時客戶個人檔案](../../profile/home.md)
 
 * [資料串流](../../datastreams/overview.md)：資料串流會接收來自Web SDK的傳入事件資料，並以邊緣設定檔資料回應。
 * [合併原則](../../segmentation/ui/segment-builder.md#merge-policies)：您將建立[!UICONTROL Edge上的Active-On]合併原則，以確保邊緣設定檔使用正確的設定檔資料。
-* [自訂Personalization連線](../catalog/personalization/custom-personalization.md)：您將設定新的自訂個人化連線，將設定檔屬性傳送給Edge Network。
-* [Edge NetworkAPI](../../server-api/overview.md)：您將使用Edge NetworkAPI [互動式資料集合](../../server-api/interactive-data-collection.md)功能，從邊緣設定檔快速擷取設定檔屬性。
+* [自訂Personalization連線](../catalog/personalization/custom-personalization.md)：您將設定新的自訂個人化連線，以將設定檔屬性傳送至Edge Network。
+* [Edge Network API](../../server-api/overview.md)：您將使用Edge Network API [互動式資料集合](../../server-api/interactive-data-collection.md)功能，從邊緣設定檔快速擷取設定檔屬性。
 
 ## 效能護欄 {#guardrails}
 
-Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 如需Edge NetworkAPI護欄的詳細資訊，請參閱護欄[檔案頁面](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)。
+Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 如需Edge Network API護欄的詳細資訊，請參閱護欄[檔案頁面](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)。
 
 | Edge Network服務 | Edge區段 | 每秒要求數 |
 |---------|----------|---------|
-| [透過[Edge NetworkAPI](https://developer.adobe.com/data-collection-apis/docs/api/)自訂個人化目的地](../catalog/personalization/custom-personalization.md) | 是 | 1500 |
-| [透過[Edge NetworkAPI](https://developer.adobe.com/data-collection-apis/docs/api/)自訂個人化目的地](../catalog/personalization/custom-personalization.md) | 無 | 1500 |
+| [透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)自訂個人化目的地](../catalog/personalization/custom-personalization.md) | 是 | 1500 |
+| [透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)自訂個人化目的地](../catalog/personalization/custom-personalization.md) | 無 | 1500 |
 
 ## 步驟1：建立和設定資料流 {#create-datastream}
 
@@ -61,7 +61,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 在Edge上查詢設定檔屬性時，需要針對邊緣評估設定您的對象。
 
-確定您計畫啟用的對象已將[Edge上作用中合併原則](../../segmentation/ui/segment-builder.md#merge-policies)設定為預設值。 [!DNL Active-On-Edge]合併原則可確保持續評估邊緣](../../segmentation/ui/edge-segmentation.md)上的對象[，並可用於即時個人化使用案例。
+確定您計畫啟用的對象已將[Edge上作用中合併原則](../../segmentation/ui/segment-builder.md#merge-policies)設定為預設值。 [!DNL Active-On-Edge]合併原則可確保持續評估邊緣](../../segmentation/methods/edge-segmentation.md)上的對象[，並可用於即時個人化使用案例。
 
 依照[建立合併原則](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)上的指示進行，並確定啟用&#x200B;**[!UICONTROL Edge上主動式合併原則]**&#x200B;切換按鈕。
 
@@ -71,7 +71,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 ## 步驟3：將設定檔屬性資料傳送至Edge Network{#configure-custom-personalization-connection}
 
-為了即時查詢邊緣設定檔，包括屬性和對象成員資格資料，資料必須在Edge Network上提供。 為此，您必須建立與&#x200B;**[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;目的地的連線，並啟用對象，包括您想在邊緣設定檔上查閱的屬性。
+為了即時查詢邊緣設定檔，包括屬性和對象成員資格資料，這些資料必須在Edge Network上提供。 為此，您必須建立與&#x200B;**[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;目的地的連線，並啟用對象，包括您想在邊緣設定檔上查閱的屬性。
 
 +++ 使用屬性連線設定自訂Personalization
 
@@ -79,13 +79,13 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 設定新目的地時，請在&#x200B;**[!UICONTROL 資料串流識別碼]**&#x200B;欄位中選取您在[步驟1](#create-datastream)中建立的資料串流。 對於&#x200B;**[!UICONTROL 整合別名]**，您可以使用任何有助於您日後識別此目的地連線的值，例如目的地名稱。
 
-![Experience PlatformUI影像顯示「具有屬性的自訂Personalization」設定畫面。](../assets/ui/activate-edge-profile-lookup/destination-config.png)
+![Experience Platform UI影像顯示「具有屬性的自訂Personalization」設定畫面。](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
 +++
 
 +++透過屬性連線啟用自訂Personalization的對象
 
-建立具有屬性&#x200B;]**的**[!UICONTROL &#x200B;自訂Personalization連線後，您就可以將設定檔資料傳送給Edge Network了。
+建立具有屬性&#x200B;]**的**[!UICONTROL &#x200B;自訂Personalization連線後，您就可以將設定檔資料傳送至Edge Network了。
 
 >[!IMPORTANT]
 > 
@@ -95,7 +95,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 1. 移至&#x200B;**[!UICONTROL 連線>目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
 
-   ![在Experience PlatformUI中反白顯示的目的地目錄索引標籤。](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   在Experience Platform UI中反白顯示![目的地目錄索引標籤。](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. 尋找&#x200B;**[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;目的地卡片，然後選取&#x200B;**[!UICONTROL 啟用對象]**，如下圖所示。
 
@@ -109,8 +109,8 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
    您可以根據對象的來源，從多種對象型別中進行選取：
 
-   * **[!UICONTROL 細分服務]**：細分服務在Experience Platform內產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-   * **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/overview.md#import-audience)的檔案。
+   * **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
+   * **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/overview.md#import-audience)的檔案。
    * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
      ![選取啟用工作流程的對象步驟，並反白數個對象。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -129,7 +129,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 當您完成對應設定檔屬性時，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇並開始傳送設定檔資料給Edge Network。
+在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇並開始將設定檔資料傳送至Edge Network。
 
 ![檢閱步驟中的選擇摘要。](../assets/ui/activate-edge-personalization-destinations/review.png)
 
@@ -160,13 +160,13 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 ## 步驟4：在邊緣上查詢設定檔屬性 {#configure-edge-profile-lookup}
 
-現在您應該已完成[設定資料串流](#create-datastream)，您已[建立新的具有屬性的自訂Personalization目的地連線](#configure-destination)，而且您已使用此連線來[傳送您可查閱該Edge Network的設定檔屬性](#activate-audiences)。
+現在您應該已完成[設定資料串流](#create-datastream)，您已[建立新的具有屬性的自訂Personalization目的地連線](#configure-destination)，而且您已使用此連線來[傳送設定檔屬性](#activate-audiences)，以便查閱Edge Network。
 
 下一步是設定個人化解決方案，以從邊緣設定檔擷取設定檔屬性。
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 若要保護此資料，您必須透過[Edge NetworkAPI](../../server-api/overview.md)擷取設定檔屬性。 此外，您必須透過Edge NetworkAPI [互動式資料收集端點](../../server-api/interactive-data-collection.md)擷取設定檔屬性，才能驗證API呼叫。
+>設定檔屬性可能包含敏感資料。 若要保護此資料，您必須透過[Edge Network API](../../server-api/overview.md)擷取設定檔屬性。 此外，您必須透過Edge Network API [互動式資料收集端點](../../server-api/interactive-data-collection.md)擷取設定檔屬性，才能驗證API呼叫。
 ><br>如果您不遵循上述要求，個人化將僅以對象成員資格為基礎，而且您將無法取得設定檔屬性。
 
 您在[步驟1](#create-datastream)中設定的資料流現在已準備好接受傳入的事件資料並以邊緣設定檔資訊回應。

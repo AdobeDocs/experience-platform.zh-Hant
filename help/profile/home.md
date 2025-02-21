@@ -2,7 +2,7 @@
 title: 即時客戶個人檔案概述
 description: 即時客戶個人檔案會合併來自各種來源的資料，並以個別客戶個人檔案和相關時間序列事件的形式提供對該資料的存取權。 此功能可讓行銷人員跨多個管道，與其對象推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
+source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 ### 設定檔實體組合
 
-即時客戶個人檔案由稱為&#x200B;**主要實體**&#x200B;的主要實體和各種支援實體組成。 在Experience Platform內容中，主要實體通常是&#x200B;**個人資料實體**，由個人特徵、行為和對象會籍組成。 其他實體可讓細分引擎使用設定檔主要實體以外的資料，並包括下列專案：
+即時客戶個人檔案由稱為&#x200B;**主要實體**&#x200B;的主要實體和各種支援實體組成。 在Experience Platform的內容中，主要實體通常是&#x200B;**個人資料實體**，其由個人特徵、行為和對象會籍組成。 其他實體可讓細分引擎使用設定檔主要實體以外的資料，並包括下列專案：
 
 - **維度實體**：用來簡化跨事件或設定檔記錄共用資訊的資料模型化程式的實體。 這也稱為查詢實體或分類實體。
 - **B2B實體**：描述設定檔與企業對企業帳戶和商機關係的實體。
@@ -53,7 +53,7 @@ Experience Platform提供一系列護欄，協助您避免建立Real-Time Custom
 
 ### 輪廓儀表板 {#profile-dashboard}
 
-Experience PlatformUI提供了一個儀表板，您可以在其中檢視有關即時客戶設定檔資料的重要資訊，如每日快照期間所擷取。 若要瞭解如何在UI中存取及使用[!DNL Profile]儀表板，以及有關儀表板中顯示之量度的詳細資訊，請參閱[設定檔儀表板UI指南](ui/profile-dashboard.md)。
+Experience Platform UI提供儀表板，可讓您檢視即時客戶設定檔資料的重要資訊，如每日快照期間所擷取。 若要瞭解如何在UI中存取及使用[!DNL Profile]儀表板，以及有關儀表板中顯示之量度的詳細資訊，請參閱[設定檔儀表板UI指南](ui/profile-dashboard.md)。
 
 ### 設定檔片段與合併的設定檔 {#profile-fragments-vs-merged-profiles}
 
@@ -135,8 +135,8 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 
 ### 處理選擇退出和資料隱私權請求
 
-[!DNL Experience Platform]可讓您的客戶傳送與[!DNL Real-Time Customer Profile]內其資料的使用和儲存相關的選擇退出請求。 如需有關如何處理選擇退出請求的詳細資訊，請參閱有關[接受選擇退出請求](../segmentation/consents.md)的檔案。
+[!DNL Experience Platform]可讓您的客戶傳送與[!DNL Real-Time Customer Profile]內其資料的使用和儲存相關的選擇退出請求。 如需有關如何處理選擇退出請求的詳細資訊，請參閱有關[接受選擇退出請求](../segmentation/tutorials/consents.md)的檔案。
 
 ## 後續步驟和其他資源
 
-若要進一步瞭解如何使用Experience PlatformUI或設定檔API使用即時客戶設定檔資料，請先分別閱讀[設定檔UI指南](ui/user-guide.md)或[API開發人員指南](api/overview.md)。
+若要進一步瞭解如何使用Experience Platform UI或設定檔API使用即時客戶設定檔資料，請先分別閱讀[設定檔UI指南](ui/user-guide.md)或[API開發人員指南](api/overview.md)。

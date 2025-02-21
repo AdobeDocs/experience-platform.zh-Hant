@@ -3,14 +3,14 @@ title: 潛在客戶設定檔
 description: 瞭解如何建立和使用潛在客戶設定檔，以使用第三方資訊收集有關未知客戶的資訊。
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 1%
 
 ---
 
-# 潛在客戶設定檔
+# 潛在客戶輪廓
 
 Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，無論客戶在哪裡或何時與您的品牌互動。
 
@@ -62,4 +62,4 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 ## 後續步驟
 
-閱讀本指南後，您現在瞭解如何在Adobe Experience Platform中使用潛在客戶設定檔。 若要瞭解這些潛在客戶設定檔如何在對象中使用，請閱讀[潛在客戶對象指南](../../segmentation/ui/prospect-audience.md)。
+閱讀本指南後，您現在瞭解如何在Adobe Experience Platform中使用潛在客戶設定檔。 若要瞭解這些潛在客戶設定檔如何在對象中使用，請閱讀[潛在客戶對象指南](../../segmentation/types/prospect-audiences.md)。

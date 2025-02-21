@@ -3,26 +3,27 @@ title: （公司） LinkedIn連線
 description: 使用此目標來啟用 Account-Based Marketing (ABM) 使用案例的帳戶客群。根據雜湊電子郵件，為您的LinkedIn行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: e45c50a6447be4a60145eea6956d30d51166e675
+exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 5%
 
 ---
 
-# （公司） LinkedIn Match受眾連線 {#companies-linkedin}
+# （公司） LinkedIn比對受眾連線 {#companies-linkedin}
 
 >[!AVAILABILITY]
 >
->購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版LinkedIn的公司可以使用（公司） Real-time Customer Data Platform目的地啟用帳戶對象的功能。
+>針對（公司） LinkedIn目的地啟用帳戶對象的功能，適用於購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司。
 
-使用此目的地為Account-Based Marketing (ABM)使用案例啟用您的[帳戶對象](/help/segmentation/ui/account-audiences.md)。 透過&#x200B;**[!UICONTROL （公司） LinkedIn]**&#x200B;企業對企業的目的地，向目標帳戶中的相關角色和角色做廣告。 瀏覽LinkedIn檔案，以[進一步瞭解LinkedIn平台上的帳戶目標定位](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting)。
+使用此目的地為Account-Based Marketing (ABM)使用案例啟用您的[帳戶對象](/help/segmentation/types/account-audiences.md)。 透過&#x200B;**[!UICONTROL （公司） LinkedIn]**&#x200B;企業對企業目的地，向目標帳戶中的相關角色和角色做廣告。 瀏覽LinkedIn檔案，以[進一步瞭解LinkedIn平台上的帳戶目標定位](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting)。
 
 >[!TIP]
 >
 >若是個別層級（或企業對消費者）的使用案例，Adobe建議您使用[LinkedIn相符對象](/help/destinations/catalog/social/linkedin.md)目的地。
 
-在Experience PlatformUI中顯示![LinkedIn帳戶目的地。](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
+在Experience Platform UI中顯示的![LinkedIn帳戶目的地。](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
 
 ## 支援的對象 {#supported-audiences}
 
@@ -30,7 +31,7 @@ ht-degree: 5%
 
 | 對象來源 | 支援 | 說明 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
 | 自訂上傳 | X | 對象[從CSV檔案匯入](../../../segmentation/ui/overview.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
@@ -48,13 +49,13 @@ ht-degree: 5%
 
 ## 先決條件 {#prerequisites}
 
-若要將帳戶對象匯出至LinkedIn，請確定您符合下列必要條件：
+確認您符合下列必要條件，即可將帳戶對象匯出至LinkedIn：
 
-### linkedIn帳戶必要條件 {#LinkedIn-account-prerequisites}
+### LinkedIn帳戶必要條件 {#LinkedIn-account-prerequisites}
 
 使用[!UICONTROL （公司） LinkedIn相符對象]目的地之前，請先確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]或更高的許可權層級。
 
-若要瞭解如何編輯您的[!DNL LinkedIn Campaign Manager]使用者許可權，請參閱LinkedIn檔案中的[在Advertising帳戶上新增、編輯和移除使用者許可權](https://www.linkedin.com/help/lms/answer/5753)。
+若要瞭解如何編輯您的[!DNL LinkedIn Campaign Manager]使用者許可權，請參閱LinkedIn檔案中的[新增、編輯及移除Advertising帳戶的使用者許可權](https://www.linkedin.com/help/lms/answer/5753)。
 
 ## 連線到目標 {#connect}
 
@@ -69,9 +70,9 @@ ht-degree: 5%
 1. 在目的地目錄中尋找[!DNL (Companies) LinkedIn Matched Audiences]目的地，並選取&#x200B;**[!UICONTROL 設定]**。
 2. 選取&#x200B;**[!UICONTROL 連線到目的地]**。
    ![驗證LinkedIn](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
-3. 輸入您的LinkedIn認證，並選取&#x200B;**登入**。
+3. 輸入您的LinkedIn認證並選取&#x200B;**登入**。
 
-使用LinkedIn完成登入程式後，您可以繼續下一個步驟。
+使用LinkedIn完成登入程式後，您可以繼續進行下一個步驟。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -92,9 +93,9 @@ ht-degree: 5%
 
 閱讀[啟用帳戶對象](/help/destinations/ui/activate-account-audiences.md)以取得啟用此目的地的帳戶對象的指示。
 
-## 將帳戶對象啟用至&#x200B;**[!UICONTROL （公司） LinkedIn相符對象]**&#x200B;目的地時，在對應步驟中需要對應的配對 {#required-mappings}
+## 啟用帳戶對象至&#x200B;**[!UICONTROL （公司） LinkedIn相符對象]**&#x200B;目的地時，對應步驟中所需的對應配對 {#required-mappings}
 
-將帳戶對象啟用至&#x200B;**[!UICONTROL （公司） LinkedIn Matched Audiences]**&#x200B;目的地時，請注意，若要成功匯出資料，必須有下列兩個對應配對：
+將帳戶對象啟用至&#x200B;**[!UICONTROL （公司） LinkedIn相符對象]**&#x200B;目的地時，請注意，若要成功匯出資料，下列兩個對應配對是必要的：
 
 ![LinkedIn對應必要欄位。](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 

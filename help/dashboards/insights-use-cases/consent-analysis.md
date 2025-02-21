@@ -2,7 +2,7 @@
 title: 同意分析和追蹤
 description: 瞭解如何建立同意分析儀表板，以追蹤使用者同意在一段時間內的趨勢。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 同意分析和追蹤
 
-在現今的行銷格局中，您需要瞭解並尊重客戶同意偏好設定。 Adobe Real-time Customer Data Platform可讓行銷人員分析客戶同意，以建立信任、遵守隱私權法規，並提供更個人化的體驗。
+在現今的行銷格局中，您需要瞭解並尊重客戶同意偏好設定。 Adobe Real-Time Customer Data Platform可讓行銷人員分析客戶同意，以建立信任、遵守隱私權法規，並提供更個人化的體驗。
 
 本檔案詳細說明如何針對Real-Time CDP資料的各種行銷使用案例建立同意儀表板。 具體來說，它著重於如何根據您的業務需求建立具有適當屬性的對象，然後透過Adobe Experience Platform UI中使用預先設定的Widget來使用深入分析。 此外，也提供使用使用者定義儀表板功能建立自訂Widget的替代方法。
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 建立同意的對象 {#create-consent-audiences}
 
-若要建立同意儀表板，您必須先建立同意聯絡的所有設定檔對象。 若要導覽至Real-time Customer Data Platform區段產生器，請在Platform UI的左側導覽中選取&#x200B;**[!UICONTROL 對象]**。 從[!UICONTROL 對象]儀表板的[!UICONTROL 客戶]索引標籤中，選取檢視右上角的&#x200B;**[!UICONTROL 建立對象]**，然後選取&#x200B;**[!UICONTROL 建置規則]**。
+若要建立同意儀表板，您必須先建立同意聯絡的所有設定檔對象。 若要導覽至Real-Time Customer Data Platform區段產生器，請在Platform UI的左側導覽中選取&#x200B;**[!UICONTROL 對象]**。 從[!UICONTROL 對象]儀表板的[!UICONTROL 客戶]索引標籤中，選取檢視右上角的&#x200B;**[!UICONTROL 建立對象]**，然後選取&#x200B;**[!UICONTROL 建置規則]**。
 
 ![具有[!UICONTROL 客戶]、[!UICONTROL 受眾]和[!UICONTROL 建立區段]的[!UICONTROL 受眾]儀表板已強調顯示。](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 >
 >如果您在與Adobe建議欄位群組不同的屬性中維持您的使用者同意，則必須選取這些屬性，而不是下列屬性。
 
-在細分](../../segmentation/consents.md#handling-consent-in-segmentation)檔案中的[處理同意上可找到更多資訊。
+在細分](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation)檔案中的[處理同意上可找到更多資訊。
 
 ![含有[!UICONTROL 同意和偏好設定]屬性資料夾的區段產生器已反白顯示。](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 

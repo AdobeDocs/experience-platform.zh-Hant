@@ -2,8 +2,9 @@
 solution: Experience Platform
 title: 重構分段時間限制UI指南
 description: 區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
+hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
+source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 9%

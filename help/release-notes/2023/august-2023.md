@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2023 年 8 月)
 description: Adobe Experience Platform 2023 年 8 月版發行說明。
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 92%
@@ -72,7 +72,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 {style="table-layout:auto"}
 
-如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂小工具，請先詳閱[儀表板概觀](../../dashboards/home.md)。
 
 ## 資料收集 {#data-collection}
 
@@ -168,7 +168,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 | 功能 | 說明 |
 | --- | --- |
-| 相似的客群 (數量有限) | 相似客群可以為您的每個客群提供智慧型分析見解，運用機器學習型的分析見解來透過行銷活動識別和定位高價值客戶。透過相似客群功能，您可以建立範圍擴大的客群，目標是針對類似高績效客群的客戶或類似先前轉換客群的客戶。若要了解更多相似客群，請閱讀[相似客群概觀](../../segmentation/ui/lookalike-audiences.md)。 |
+| 相似的客群 (數量有限) | 相似客群可以為您的每個客群提供智慧型分析見解，運用機器學習型的分析見解來透過行銷活動識別和鎖定高價值客戶。透過相似客群功能，您可以建立範圍擴大的客群，目標是針對類似高績效客群的客戶或類似先前轉換客群的客戶。若要了解更多相似客群，請閱讀[相似客群概觀](../../segmentation/types/account-audiences.md)。 |
 
 {style="table-layout:auto"}
 

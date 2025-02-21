@@ -4,16 +4,16 @@ description: 開始使用Adobe Real-Time CDP，瞭解其所提供的豐富功能
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1175'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
 # Adobe [!DNL Real-Time CDP] 文件 {#rtcdp-documentation}
 
-使用Adobe Real-time Customer Data Platform (Real-Time CDP)整合來自多個企業來源的已知和匿名資料，以建立客戶設定檔，其可用於跨所有管道和裝置即時提供個人化客戶體驗。 如需詳細資訊，請閱讀[Real-Time CDP概觀](/help/rtcdp/overview.md)。
+使用Adobe Real-Time Customer Data Platform (Real-Time CDP)整合來自多個企業來源的已知和匿名資料，以建立客戶設定檔，其可用於跨所有管道和裝置即時提供個人化客戶體驗。 如需詳細資訊，請閱讀[Real-Time CDP概觀](/help/rtcdp/overview.md)。
 
 ## 新增功能？ {#whats-new}
 
@@ -21,15 +21,15 @@ ht-degree: 3%
 
 >[!BEGINTABS]
 
->[!TAB 同盟對象構成]
+>[!TAB 聯合客群構成]
 
-同盟對象構成可讓企業構成資料，以便在各種使用案例中更好地應用。 使用此新方法，身為Adobe Real-time Customer Data Platform和/或Adobe Journey Optimizer使用者，您可以直接從您現有的資料倉儲同盟資料集，以在一個系統中建立並擴充Adobe Experience Platform對象和屬性。
+聯合客群構成可讓企業構成資料，以善加應用於各種使用案例中。有了這種新方法，Adobe Real-Time Customer Data Platform 和/或 Adobe Journey Optimizer 的使用者就可以直接聯合現有資料倉儲中的資料集，透過單一系統建立並擴充 Adobe Experience Platform 的客群及屬性。
 
 [![影像](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)
 
 >[!TAB 使用案例教戰手冊]
 
-[!UICONTROL 使用案例教戰手冊]功能現在已普遍提供給所有Real-Time CDP和Adobe Journey Optimizer客戶。 [!UICONTROL 使用案例教戰手冊]的設計目的，是協助使用者在開始使用Real-time Customer Data Platform或Adobe Journey Optimizer時克服挑戰。 當您不確定從何處開始或是如何針對您想要的使用案例建立正確的資產時，使用案例教戰手冊會提供靈感，並建立不同的資產，讓您在準備就緒時測試並匯入生產環境。
+「[!UICONTROL 使用案例教戰手冊]」功能現在已正式推出，可供所有 Real-Time CDP 及 Adobe Journey Optimizer 的客戶使用。「[!UICONTROL 使用案例教戰手冊]」旨在協助使用者克服開始使用 Real-Time Customer Data Platform 或 Adobe Journey Optimizer 時遇到的挑戰。當您不確定要從哪裡開始或如何為所需的使用案例建立正確資產時，使用案例教戰手冊能夠提供靈感和建立不同的資產供您測試，並在準備好時匯入到生產環境中。
 
 [![影像](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
 
@@ -136,7 +136,7 @@ ht-degree: 3%
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>雲端和AI/ML功能</strong><br/>AI和ML功能會在您使用多個控制面板的每一步協助您。 部分重點包括以下區域。 <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">相似對象</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">相關帳戶</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">預測性銷售線索和帳戶評分</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">銷售線索與帳戶的比對</a>
+      <strong>雲端和AI/ML功能</strong><br/>AI和ML功能會在您使用多個控制面板的每一步協助您。 部分重點包括以下區域。 <br/> <a href="/help/segmentation/types/account-audiences.md">相似對象</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">相關帳戶</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">預測性銷售線索和帳戶評分</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">銷售線索與帳戶的比對</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
@@ -203,12 +203,12 @@ ht-degree: 3%
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">產品說明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">安全性總覽(PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=zh-Hant" target="_blank">實作Blueprint</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">字彙表</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant" target="_blank">教學課程</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">產品說明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">安全性總覽(PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=zh-Hant" target="_blank">實作藍圖</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">字彙表</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=zh-Hant" target="_blank">檔案</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API參考 — <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">課程：Experience Platform簡介</a></a>
+<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=zh-Hant" target="_blank">檔案</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API參考 — <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">課程： Experience Platform簡介</a></a>
 </td>
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>掌握最新資訊、為社群作出貢獻，並提升您的Adobe Real-Time CDP體驗！</b><br/>造訪Real-time Customer Data Platform社群，與其他從業人員討論功能。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">立即加入社群！</a></td></tr></table>
+<b>掌握最新資訊、為社群作出貢獻，並提升您的Adobe Real-Time CDP體驗！</b><br/>造訪Real-Time Customer Data Platform社群，與其他從業人員討論功能。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">立即加入社群！</a></td></tr></table>

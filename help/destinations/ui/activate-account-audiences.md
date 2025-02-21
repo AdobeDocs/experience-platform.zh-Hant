@@ -5,7 +5,7 @@ description: 瞭解如何對目的地啟用帳戶對象
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-time Customer Data Platform的公司可以使用啟用帳戶對象到目的地的功能。
+>購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司可以使用啟用帳戶對象到目的地的功能。
 
-本文說明從Adobe Experience Platform將[帳戶對象](/help/segmentation/ui/account-audiences.md)匯出至您偏好的目的地所需的工作流程。
+本文說明從Adobe Experience Platform將[帳戶對象](/help/segmentation/types/account-audiences.md)匯出至您偏好的目的地所需的工作流程。
 
 ## 支援的目的地 {#supported-destinations}
 
-移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 使用&#x200B;**[!UICONTROL 資料型別]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL 帳戶]**，檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob儲存空間](/help/destinations/catalog/cloud-storage/azure-blob.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)和[SFTP](/help/destinations/catalog/cloud-storage/sftp.md))以及[Demandbase](/help/destinations/catalog/advertising/demandbase.md)和[（公司） LinkedIn相符的對象](/help/destinations/catalog/social/linkedin-b2b.md)串流目的地。
+移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 使用&#x200B;**[!UICONTROL 資料型別]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL 帳戶]**，檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob儲存空間](/help/destinations/catalog/cloud-storage/azure-blob.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)和[SFTP](/help/destinations/catalog/cloud-storage/sftp.md))以及[Demandbase](/help/destinations/catalog/advertising/demandbase.md)和[（公司） LinkedIn相符對象](/help/destinations/catalog/social/linkedin-b2b.md)串流目的地。
 
 ![支援帳戶對象的目的地。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-* 您必須先內嵌[帳戶設定檔](/help/rtcdp/accounts/account-profile-overview.md)並建立[帳戶對象](/help/segmentation/ui/account-audiences.md)，才能將其啟動至下游目的地。
+* 您必須先內嵌[帳戶設定檔](/help/rtcdp/accounts/account-profile-overview.md)並建立[帳戶對象](/help/segmentation/types/account-audiences.md)，才能將其啟動至下游目的地。
 * 若要將帳戶對象啟用至目的地，您必須已成功連線至目的地。 如果您尚未這麼做，請前往[目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。 如需詳細資訊，請參閱[連線到目的地](./connect-destination.md)的UI教學課程。
 
 ### 必要權限 {#permissions}
@@ -87,9 +87,9 @@ ht-degree: 0%
 
 請注意下列重要圖說和已知限制，瞭解啟用帳戶對象功能的一般可用性版本。
 
-### 將帳戶對象啟用至&#x200B;**[!UICONTROL （公司） LinkedIn相符對象]**&#x200B;目的地時，在對應步驟中需要對應的配對 {#required-mappings}
+### 啟用帳戶對象至&#x200B;**[!UICONTROL （公司） LinkedIn相符對象]**&#x200B;目的地時，對應步驟中所需的對應配對 {#required-mappings}
 
-將帳戶對象啟用至&#x200B;**[!UICONTROL （公司） LinkedIn Matched Audiences]**&#x200B;目的地時，請注意，若要成功匯出資料，必須有下列兩個對應配對：
+將帳戶對象啟用至&#x200B;**[!UICONTROL （公司） LinkedIn相符對象]**&#x200B;目的地時，請注意，若要成功匯出資料，下列兩個對應配對是必要的：
 
 ![LinkedIn對應必要欄位。](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 

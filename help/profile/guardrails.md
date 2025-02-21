@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: 了解輪廓資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1f682fc5c109f3dc8a7ed8513260a1a3c3108bbb
+source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
 workflow-type: tm+mt
 source-wordcount: '2511'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 ## 快速入門
 
-下列Experience Platform服務與即時客戶個人檔案資料的模型化有關：
+下列Experience Platform服務參與即時客戶個人檔案資料的模型化：
 
 * [[!DNL Real-Time Customer Profile]](home.md)：使用來自多個來源的資料建立統一的消費者設定檔。
 * [身分](../identity-service/home.md)：Bridge身分在擷取到Platform時來自不同的資料來源。
@@ -41,7 +41,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 | 護欄型別 | 說明 |
 | -------------- | ----------- |
-| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降級概不負責。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
+| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降低不負任何責任。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
 | **系統強制的護欄（硬限制）** | Real-Time CDP UI或API會強制執行系統強制的護欄。 這些限制不得超過，因為UI和API會阻止您這樣做或會傳回錯誤。 |
 
 {style="table-layout:auto"}
@@ -114,17 +114,17 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 ## 分段護欄 {#segmentation-guardrails}
 
-本節中概述的護欄是指組織可在Experience Platform中建立的對象數量和性質，以及對應及啟用對象至目的地。
+本節中概述的護欄是指組織可以在Experience Platform中建立的對象數量和性質，以及對應和啟用對象到目的地。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --------- | ----- | ---------- | ----------- |
 | 每個沙箱的受眾 | 4000 | 效能護欄 | 每個沙箱最多可以有4000個&#x200B;**作用中**&#x200B;對象。 只要每個&#x200B;**個別**&#x200B;沙箱少於4000個對象，您每個組織的沙箱就可以超過4000個。 其中包含批次、串流和邊緣對象。 嘗試建立其他對象可能會影響系統效能。 深入瞭解[透過區段產生器建立對象](/help/segmentation/ui/segment-builder.md)。 |
-| 每個沙箱的Edge受眾 | 150 | 效能護欄 | 每個沙箱最多可以有150個&#x200B;**使用中**&#x200B;邊緣對象。 只要每個&#x200B;**個別**&#x200B;沙箱中有少於150個邊緣對象，您每個組織就可以有超過150個邊緣對象。 嘗試建立其他邊緣對象可能會影響系統效能。 深入瞭解[邊緣對象](/help/segmentation/ui/edge-segmentation.md)。 |
-| 所有沙箱中的Edge輸送量 | 1500 RPS | 效能護欄 | Edge分段支援每秒鐘尖峰值1500個進入Adobe Experience PlatformEdge Network的傳入事件。 Edge區段在進入Adobe Experience PlatformEdge Network後，最多可能需要350毫秒來處理傳入事件。 深入瞭解[邊緣對象](/help/segmentation/ui/edge-segmentation.md)。 |
-| 每個沙箱的串流受眾 | 500 | 效能護欄 | 每個沙箱最多可以有500個&#x200B;**使用中**&#x200B;串流對象。 只要每個&#x200B;**個別**&#x200B;沙箱中的串流對象少於500個，您每個組織就可以有超過500個串流對象。 其中包含串流和邊緣對象。 嘗試建立其他串流對象可能會影響系統效能。 深入瞭解[串流對象](/help/segmentation/ui/streaming-segmentation.md)。 |
-| 所有沙箱的串流輸送量 | 1500 RPS | 效能護欄 | 串流細分支援每秒1500個傳入事件的峰值。 串流區段最多可能需要5分鐘，才能讓設定檔符合區段會籍資格。 深入瞭解[串流對象](/help/segmentation/ui/streaming-segmentation.md)。 |
+| 每個沙箱的Edge受眾 | 150 | 效能護欄 | 每個沙箱最多可以有150個&#x200B;**使用中**&#x200B;邊緣對象。 只要每個&#x200B;**個別**&#x200B;沙箱中有少於150個邊緣對象，您每個組織就可以有超過150個邊緣對象。 嘗試建立其他邊緣對象可能會影響系統效能。 深入瞭解[邊緣對象](/help/segmentation/methods/edge-segmentation.md)。 |
+| 所有沙箱中的Edge輸送量 | 1500 RPS | 效能護欄 | Edge細分支援每秒鐘尖峰值1500個進入Adobe Experience Platform Edge Network的傳入事件。 Edge區段在進入Adobe Experience Platform Edge Network後，最多可能需要350毫秒來處理傳入事件。 深入瞭解[邊緣對象](/help/segmentation/methods/edge-segmentation.md)。 |
+| 每個沙箱的串流受眾 | 500 | 效能護欄 | 每個沙箱最多可以有500個&#x200B;**使用中**&#x200B;串流對象。 只要每個&#x200B;**個別**&#x200B;沙箱中的串流對象少於500個，您每個組織就可以有超過500個串流對象。 其中包含串流和邊緣對象。 嘗試建立其他串流對象可能會影響系統效能。 深入瞭解[串流對象](/help/segmentation/methods/streaming-segmentation.md)。 |
+| 所有沙箱的串流輸送量 | 1500 RPS | 效能護欄 | 串流細分支援每秒1500個傳入事件的峰值。 串流區段最多可能需要5分鐘，才能讓設定檔符合區段會籍資格。 深入瞭解[串流對象](/help/segmentation/methods/streaming-segmentation.md)。 |
 | 每個沙箱的批次對象 | 4000 | 效能護欄 | 每個沙箱最多可以有4000個&#x200B;**作用中**&#x200B;批次對象。 只要每個&#x200B;**個別**&#x200B;沙箱中的批次對象少於4000個，您每個組織可以有超過4000個批次對象。 嘗試建立其他批次對象可能會影響系統效能。 |
-| 每個沙箱的帳戶對象 | 50 | 系統強制的護欄 | 您最多可以在沙箱中建立50個帳戶對象。 當您在沙箱中達到50個對象後，嘗試建立新帳戶對象時，**[!UICONTROL 建立對象]**&#x200B;控制項會停用。 深入瞭解[帳戶對象](/help/segmentation/ui/account-audiences.md)。 |
+| 每個沙箱的帳戶對象 | 50 | 系統強制的護欄 | 您最多可以在沙箱中建立50個帳戶對象。 當您在沙箱中達到50個對象後，嘗試建立新帳戶對象時，**[!UICONTROL 建立對象]**&#x200B;控制項會停用。 深入瞭解[帳戶對象](/help/segmentation/types/account-audiences.md)。 |
 | 每個沙箱的已發佈組合 | 10 | 效能護欄 | 一個沙箱中最多可以有10個已發佈的組合。 進一步瞭解UI指南](/help/segmentation/ui/audience-composition.md)中的[對象構成。 |
 | 最大對象人數 | 30% | 效能護欄 | 建議的對象最大成員資格為系統中設定檔總數的30%。 您可以建立具有超過30%設定檔的對象為成員，或是多個大型對象，但會影響系統效能。 |
 
@@ -160,11 +160,11 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 #### Dimension實體
 
-雖然維護設定檔資料的設定檔資料存放區不是關聯式存放區，但設定檔允許與小型維度實體整合，以便以簡化且直覺的方式建立對象。 此整合稱為[多實體分段](../segmentation/multi-entity-segmentation.md)。
+雖然維護設定檔資料的設定檔資料存放區不是關聯式存放區，但設定檔允許與小型維度實體整合，以便以簡化且直覺的方式建立對象。 此整合稱為[多實體分段](../segmentation/tutorials/multi-entity-segmentation.md)。
 
 您的組織也可以定義XDM類別來說明個人以外的專案，例如商店、產品或屬性。 這些非[!DNL XDM Individual Profile]結構描述稱為「維度實體」（也稱為「查詢實體」），不包含時間序列資料。 代表維度實體的結構描述會透過使用[結構描述關係](../xdm/tutorials/relationship-ui.md)連結至設定檔實體。
 
-Dimension實體提供查閱資料，可協助並簡化多實體區段定義，且必須夠小，讓區段引擎可以將整個資料集載入記憶體，以進行最佳處理（快速點查閱）。
+Dimension實體提供查詢資料，可協助並簡化多實體區段定義，且必須夠小，讓區段引擎可以將整個資料集載入記憶體，以進行最佳處理（快速點查詢）。
 
 ![顯示設定檔實體是由維度實體組成的資訊圖。](images/guardrails/profile-and-dimension-entities.png)
 
@@ -186,6 +186,6 @@ Dimension實體提供查閱資料，可協助並簡化多實體區段定義，�
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
 * [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

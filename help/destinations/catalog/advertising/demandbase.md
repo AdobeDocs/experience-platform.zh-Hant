@@ -1,30 +1,30 @@
 ---
 title: Demandbase連線
-description: 使用此目的地為Account-Based Marketing (ABM)使用案例啟用您的帳戶對象。 透過DemandBase的B2BDemand Side Platform(DSP)向目標帳戶中的相關角色和角色做廣告。 Target帳戶也可以使用Demandbase第三方資料進行擴充，以用於行銷和銷售中的其他下游使用案例。
-badgeB2B: label="B2B版本" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+description: 使用此目標來啟用 Account-Based Marketing (ABM) 使用案例的帳戶客群。透過 DemandBase 的 B2B Demand Side Platform (DSP) 向目標帳戶中的相關人物誌和角色投放廣告。還可以利用 Demandbase 第三方資料來擴充目標帳戶，以用於行銷和銷售中的其他下游使用案例。
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
-source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
+exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
+source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 3%
+ht-degree: 17%
 
 ---
-
 
 # Demandbase連線 {#demandbase}
 
 >[!AVAILABILITY]
 >
->>購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-time Customer Data Platform的公司，皆可透過Demandbase目的地啟用帳戶對象。
+>>購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司，皆可透過Demandbase目的地啟用帳戶對象。
 
-為您的Demandbase行銷活動啟用設定檔，以根據[帳戶對象](/help/segmentation/ui/account-audiences.md)進行對象目標定位、個人化和隱藏。
+為您的Demandbase行銷活動啟用設定檔，以根據[帳戶對象](/help/segmentation/types/account-audiences.md)進行對象目標定位、個人化和隱藏。
 
 ## 使用實例 {#use-case}
 
-使用此目的地為Account-Based Marketing (ABM)使用案例啟用您的帳戶對象。 透過DemandBase的B2BDemand Side Platform(DSP)向目標帳戶中的相關角色和角色做廣告。 Target帳戶也可以使用Demandbase第三方資料進行擴充，以用於行銷和銷售中的其他下游使用案例。
+使用此目標來啟用 Account-Based Marketing (ABM) 使用案例的帳戶客群。透過 DemandBase 的 B2B Demand Side Platform (DSP) 向目標帳戶中的相關人物誌和角色投放廣告。還可以利用 Demandbase 第三方資料來擴充目標帳戶，以用於行銷和銷售中的其他下游使用案例。
 
-例如，運用Demandbase的廣告技術DSP，針對關鍵帳戶中的特定角色或角色，以創造漏斗頂端的銷售機會，或建立並擴大購買群組。 使用Demandbase目的地來探索其他使用案例，以有效鎖定您的帳戶。
+例如，運用Demandbase的廣告技術DSP，針對關鍵客戶中的特定角色或角色，以創造漏斗頂端的銷售機會，或建立並擴大購買群組。 使用Demandbase目的地來探索其他使用案例，以有效鎖定您的帳戶。
 
 透過這項整合，您也可以使用即時帳戶資訊查詢來個人化網站體驗，以最佳化參與情形。
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 | 對象來源 | 支援 | 說明 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
 | 自訂上傳 | X | 對象[從CSV檔案匯入](../../../segmentation/ui/overview.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
@@ -97,4 +97,4 @@ ht-degree: 3%
 ## 其他附註和重要圖說文字 {#additional-notes}
 
 * 如果先前已將具有相同名稱的帳戶對象啟動至Demandbase，則無法透過與Demandbase目的地不同的資料流再次啟動該對象。
-* 如果您已將對象匯出至Demandbase，且匯出在Experience Platform中成功，但並非所有資料都會到達Demandbase，您可能會在Demandbase端遇到API節流。 如需進一步說明，請洽詢他們。
+* 如果您已將對象匯出至Demandbase，且在Experience Platform中成功匯出，但並非所有資料都會送達Demandbase，您可能會在Demandbase端遇到API節流。 如需進一步說明，請洽詢他們。

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 2%
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 ## 概觀
 
-在Experience PlatformUI中，選取左側導覽中的&#x200B;**[!UICONTROL 對象]**&#x200B;以開啟&#x200B;**[!UICONTROL 總覽]**&#x200B;標籤，其中顯示[!UICONTROL 對象]儀表板。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 對象]**&#x200B;以開啟&#x200B;**[!UICONTROL 總覽]**&#x200B;標籤，其中顯示[!UICONTROL 對象]儀表板。
 
 >[!NOTE]
 >
@@ -90,9 +90,9 @@ ht-degree: 2%
 
 將會顯示「對象構成」頁面，其中包含構成對象的建置區塊。 如需如何使用對象構成的詳細資訊，請參閱[對象構成UI指南](./audience-composition.md)。
 
-## 聯合客群組成 {#fac}
+## 聯合客群構成 {#fac}
 
-除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)的指南。
+除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成從企業資料集建立新受眾，無需複製基礎資料即可將這些受眾儲存至Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
 
 ![在您組織的同盟對象組合中建立的對象清單。](../images/ui/overview/federated-audience-composition.png)
 
@@ -100,7 +100,7 @@ ht-degree: 2%
 
 串流區段是近乎即時對[!DNL Platform]執行區段的能力，同時著重於資料豐富度。 有了串流區段，現在當資料進入[!DNL Platform]時，區段的資格就會發生，而不需要排程和執行區段工作。
 
-如需串流區段的詳細資訊，請參閱[串流區段使用手冊](./streaming-segmentation.md)。
+如需串流區段的詳細資訊，請參閱[串流區段使用手冊](../methods/streaming-segmentation.md)。
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ ht-degree: 2%
 
 Edge區段能夠在邊緣即時評估Platform中的受眾，啟用相同頁面和下一頁個人化使用案例。
 
-您可以在[邊緣細分UI指南](./edge-segmentation.md)中找到邊緣細分的詳細資訊
+您可以在[邊緣細分UI指南](../methods/edge-segmentation.md)中找到邊緣細分的詳細資訊
 
 ## 原則違規
 

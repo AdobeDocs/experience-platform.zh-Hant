@@ -3,7 +3,7 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 1%
@@ -41,11 +41,11 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->進階企業目的地或串流設定檔匯出目的地僅限[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
+>進階企業目的地或串流設定檔匯出目的地僅限[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
 
-使用進階企業目的地資料聯結器，以近乎即時的方式將Adobe Real-time Customer Data Platform設定檔傳送至內部系統或其他協力廠商系統，以進行資料同步、分析和進一步擴充設定檔使用案例。
+使用進階企業目的地資料聯結器，以近乎即時的方式將Adobe Real-Time Customer Data Platform設定檔傳送至內部系統或其他協力廠商系統，以進行資料同步、分析和進一步擴充設定檔使用案例。
 
-這些目的地會接收對象和設定檔資料作為Experience Platform資料流。
+這些目的地會接收作為Experience Platform資料流的對象和設定檔資料。
 
 進階企業目的地包括：
 
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 ## 串流受眾匯出目標 {#streaming-destinations}
 
-對象匯出目的地會接收Experience Platform的對象資料。 這些目的地會使用對象ID或使用者ID。 Advertising和社交目的地(如[[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)、[[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)或[Facebook](catalog/social/facebook.md))就是這類目的地的範例。
+對象匯出目標會接收Experience Platform對象資料。 這些目的地會使用對象ID或使用者ID。 Advertising和社交目的地（例如[[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)、[[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)或[Facebook](catalog/social/facebook.md)）就是這類目的地的範例。
 
 ## Edge個人化目的地 {#edge-personalization-destinations}
 
@@ -79,9 +79,9 @@ Experience Platform中的Edge個人化目的地包含[Adobe Target](/help/destin
 
 * People對象
 * 帳戶客群
-* 潛在客戶對象
+* 潛在客戶客群
 
-深入瞭解[各種對象型別](/help/segmentation/ui/account-audiences.md#terminology)。
+深入瞭解[各種對象型別](/help/segmentation/types/account-audiences.md#terminology)。
 
 目的地卡上的符號會顯示您可以匯出至每個目的地的對象型別。
 

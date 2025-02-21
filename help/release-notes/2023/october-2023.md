@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform發行說明2023年10月
-description: Adobe Experience Platform 2023 年 10 月版本注意事項。
+title: Adobe Experience Platform 發行說明 (2023 年 10 月)
+description: Adobe Experience Platform 2023 年 10 月版發行說明。
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1054'
-ht-degree: 39%
+ht-degree: 40%
 
 ---
 
@@ -30,11 +30,11 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | --- | --- |
-| 目的地使用量度 | 新的計量量度已新增到授權使用儀表板。 **[!UICONTROL Audience Activation大小]**&#x200B;和&#x200B;**[!UICONTROL 資料匯出大小]**&#x200B;量度提供便利的方法，可追蹤您從Platform匯出多少與授權使用權益相關的資料。 請參閱[可用量度](../../dashboards/guides/license-usage.md#available-metrics)檔案，瞭解這些量度和其他授權使用量度的說明。 |
+| 目的地使用量度 | 新的計量量度已新增到授權使用儀表板。 **[!UICONTROL Audience Activation Size]**&#x200B;和&#x200B;**[!UICONTROL Data Export Size]**&#x200B;量度提供一種便利的方法，可追蹤您已從Platform匯出多少資料與您的授權使用許可權相關。 請參閱[可用量度](../../dashboards/guides/license-usage.md#available-metrics)檔案，瞭解這些量度和其他授權使用量度的說明。 |
 
 {style="table-layout:auto"}
 
-如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂小工具，請先詳閱[儀表板概觀](../../dashboards/home.md)。
 
 ## 資料收集 {#data-collection}
 
@@ -44,7 +44,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
-| 擴充功能 | [!DNL Meta]轉換API增強功能 | [中繼轉換API](/help/tags/extensions/server/meta/overview.md)擴充功能有三個增強功能： <ul><li>與[[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)整合：可讓您共用pixelID並存取Conversions API與Adobe整合的代號，建立順暢的登入體驗。</li><li>與[[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)整合：可讓您傳送廣告給更有可能完成所需動作的使用者，並將動作連結回傳送的廣告。</li><li>與[[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha)整合：可讓您在CIP欄位中傳遞LiveRamp的RampID，而不需直接與合作夥伴或Meta共用PII。 </li></ul> |
+| 擴充功能 | [!DNL Meta]轉換API增強功能 | [中繼轉換API](/help/tags/extensions/server/meta/overview.md)擴充功能有三個增強功能： <ul><li>與[[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)整合：可讓您共用pixelID並存取Conversions API與Adobe整合的Token，建立順暢的登入體驗。</li><li>與[[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)整合：可讓您傳送廣告給更有可能完成所需動作的使用者，並將動作連結回傳送的廣告。</li><li>與[[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha)整合：可讓您在CIP欄位中傳遞LiveRamp的RampID，而不需直接與合作夥伴或Meta共用PII。 </li></ul> |
 | 擴充功能 | [!DNL LinkedIn]轉換API | [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md)擴充功能可將Experience Platform事件資料轉送至LinkedIn，讓您評估LinkedIn行銷活動的效益。 |
 | Secret | [!DNL LinkedIn] OAuth 2密碼 | [[!DNL LinkedIn] OAuth 2密碼](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2)可讓您在事件轉送中將伺服器與伺服器的互動傳送至[!DNL LinkedIn]。 |
 | 事件轉送 | 更新標籤和事件轉送 | 若要在Platform中保留[標籤](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)和[事件轉送](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)效能，僅會保留最新的開發和階段組建（成功和不成功）。 將移除所有不再使用的組建。 此外，已實施節流和速率限制，以確保少數大量的API使用不會降低其他人的API效能。 |
@@ -70,7 +70,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | 功能 | 說明 |
 | ----------- | ----------- |
 | (Beta)計算欄位支援雜湊函式 | 除了[匯出陣列](../../destinations/ui/export-arrays-calculated-fields.md)的特定函式或從陣列中匯出元素之外，您現在還可以使用額外的[雜湊函式](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions)在匯出的檔案中雜湊屬性。 支援的雜湊函式為： `sha`、`sha256`、`sha512`、`hash`、`md5`、`crc32`。 |
-| （有限GA）在特定目的地啟用帳戶對象 | Real-Time CDP B2B客戶現在可以在某些目的地啟用[帳戶對象](../../segmentation/ui/account-audiences.md)。 如需有關此功能的詳細資訊，請參閱[啟用帳戶對象教學課程](/help/destinations/ui/activate-account-audiences.md)。 |
+| （有限GA）在特定目的地啟用帳戶對象 | Real-Time CDP B2B客戶現在可以在某些目的地啟用[帳戶對象](../../segmentation/types/account-audiences.md)。 如需有關此功能的詳細資訊，請參閱[啟用帳戶對象教學課程](/help/destinations/ui/activate-account-audiences.md)。 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 帳戶對象（有限GA） | 在Real-time Customer Data Platform B2B edition中，您現在可以使用帳戶細分，讓行銷細分體驗（從以人物為基礎的對象到以帳戶為基礎的對象）更趨簡單明瞭。 如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/ui/account-audiences.md)。 |
+| 帳戶對象（有限GA） | 在Real-Time Customer Data Platform B2B edition中，您現在可以使用帳戶細分，讓行銷細分體驗（從以人物為基礎的對象到以帳戶為基礎的對象）更趨簡單明瞭。 如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/types/account-audiences.md)。 |
 
 若要深入瞭解分段服務，請閱讀[分段服務概觀](../../segmentation/home.md)。
 

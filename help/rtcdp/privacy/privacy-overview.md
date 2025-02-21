@@ -1,17 +1,17 @@
 ---
 keywords: 資料治理rtcdp；rtcdp資料治理；即時客戶資料設定檔資料治理；隱私權rtcdp；rtcdp隱私權
-title: Real-time Customer Data Platform的隱私權
-description: Adobe Real-time Customer Data Platform可讓您簡化流程，讓資料作業符合隱私權法規。
+title: Real-Time Customer Data Platform的隱私權
+description: Adobe Real-Time Customer Data Platform可讓您簡化流程，讓資料作業符合隱私權法規。
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform的隱私權
+# Real-Time Customer Data Platform的隱私權
 
 [!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP])可協助行銷人員將來自多個企業系統的資料彙集在一起，讓他們更能識別、瞭解客戶，並與客戶互動。 Adobe將消費者資料隱私權視為基本設計原則，並提供各種控制功能，協助行銷人員管理其客戶的資料隱私權。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 [!DNL Real-Time CDP]可讓客戶選擇退出將其個人資料納入細分使用案例。 客戶的選擇退出偏好設定是由[!DNL Real-Time Customer Profile]擷取並儲存，並可在區段述詞中使用布林值邏輯(「AND NOT」)排除選擇退出對象的使用者，以強制執行此偏好設定。
 
-如需詳細資訊，請參閱Adobe Experience Platform Segmentation Service檔案中的有關[接受選擇退出請求](../../segmentation/consents.md)的檔案。
+如需詳細資訊，請參閱Adobe Experience Platform Segmentation Service檔案中的有關[接受選擇退出請求](../../segmentation/tutorials/consents.md)的檔案。
 
 ## IAB TCF 2.0支援
 

@@ -3,7 +3,7 @@ title: 對目的地啟用潛在客戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用潛在客戶對象
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 16%
@@ -16,7 +16,7 @@ ht-degree: 16%
 >
 >已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 如需詳細資訊，請聯絡您的Adobe代表。
 
-本文說明從Adobe Experience Platform將[潛在客戶對象](/help/segmentation/ui/prospect-audience.md)匯出至您偏好的目的地所需的工作流程。
+本文說明從Adobe Experience Platform將[潛在客戶對象](/help/segmentation/types/prospect-audiences.md)匯出至您偏好的目的地所需的工作流程。
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -26,7 +26,7 @@ ht-degree: 16%
 
 ## 先決條件 {#prerequisites}
 
-* 您必須先擷取[潛在客戶設定檔](/help/profile/ui/prospect-profile.md)並建立[潛在客戶對象](/help/segmentation/ui/prospect-audience.md)，才能將其啟動至下游目的地。
+* 您必須先擷取[潛在客戶設定檔](/help/profile/ui/prospect-profile.md)並建立[潛在客戶對象](/help/segmentation/types/prospect-audiences.md)，才能將其啟動至下游目的地。
 * 若要將潛在客戶對象啟用至目的地，您必須已成功連線至目的地。 如果您尚未這麼做，請前往[目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。 如需詳細資訊，請參閱[連線到目的地](./connect-destination.md)的UI教學課程。
 
 ### 必要權限 {#permissions}
@@ -85,6 +85,6 @@ Note that we will need to add links to other destination types here as more dest
 
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
-* [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
+* [使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的客群最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶輪廓來[擴大您的輪廓庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
 * [利用合作夥伴輔助識別，不需要使用者驗證或之前使用您的品牌的紀錄，即可在造訪期間提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)。

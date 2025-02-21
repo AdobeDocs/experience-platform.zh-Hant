@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '4955'
+source-wordcount: '4976'
 ht-degree: 8%
 
 ---
@@ -242,6 +242,10 @@ ht-degree: 8%
 >
 >如果您在2024年6月之前以「本月」或「今年」時間限制建立區段定義，則需要重新儲存區段定義。 2024年6月之前，「本月」是以30天為基準，而「今年」是以365天為基準。
 
+>[!NOTE]
+>
+>[忽略年度時間限制](./ignore-year.md)和[規則層級時間限制](./segment-refactoring.md)兩者先前都已重構，在連結的概覽中有更多資訊可用。
+
 可用的時間限制清單如下：
 
 +++ 可用的時間限制
@@ -394,7 +398,7 @@ ht-degree: 8%
 
 您也可以選取評估方法。 如果您知道要使用的評估方法，可以使用下拉式清單選取所需的評估方法。 如果您想要瞭解此區段定義符合哪些評估型別，可以選取帶有放大鏡的瀏覽圖示![資料夾圖示](/help/images/icons/folder-search.png)，以檢視可用區段定義評估方法的清單。
 
-[!UICONTROL 評估方法資格]彈出視窗即會顯示。 此彈出視窗會顯示可用的評估方法，包括批次、串流和邊緣。 彈出視窗會顯示哪些評估方法符合資格和不符合資格。 根據您在區段定義中使用的引數，它可能不符合某些評估方法的資格。 如需每個評估方法需求的詳細資訊，請閱讀[串流區段](./streaming-segmentation.md#query-types)或[邊緣區段](./edge-segmentation.md#query-types)概述。
+[!UICONTROL 評估方法資格]彈出視窗即會顯示。 此彈出視窗會顯示可用的評估方法，包括批次、串流和邊緣。 彈出視窗會顯示哪些評估方法符合資格和不符合資格。 根據您在區段定義中使用的引數，它可能不符合某些評估方法的資格。 如需每個評估方法需求的詳細資訊，請閱讀[串流區段](../methods/streaming-segmentation.md#query-types)或[邊緣區段](../methods/edge-segmentation.md#query-types)概述。
 
 完成建立區段定義後，您也可以變更區段定義的評估方法。 如果您將評估方法從Edge或串流變更為「批次」，您將&#x200B;**無法**&#x200B;將其變更回Edge或串流。 在彈出視窗中選取&#x200B;**[!UICONTROL 儲存]**&#x200B;後，對評估方法的變更將&#x200B;**僅**&#x200B;生效。 取消對話方塊將&#x200B;**保留**&#x200B;原始的評估方法。
 

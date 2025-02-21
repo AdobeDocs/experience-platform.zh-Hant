@@ -1,25 +1,25 @@
 ---
-keywords: 設定檔；即時客戶設定檔；疑難排解；護欄；指引；限制；實體；主要實體；維度實體；RTCDP；CDP；B2B版本；Real-time Customer Data Platform；即時客戶資料平台；real time cdp；b2b；cdp；
-title: Real-time Customer Data Platform B2B版本的預設護欄
+keywords: 設定檔；即時客戶設定檔；疑難排解；護欄；指引；限制；實體；主要實體；維度實體；RTCDP；CDP；B2B edition；Real-Time Customer Data Platform；即時客戶資料平台；real time cdp；b2b；cdp；
+title: Real-Time Customer Data Platform B2B edition的預設護欄
 type: Documentation
-description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。本檔案提供預設的使用和速率限制，協助您使用Adobe Real-time Customer Data Platform B2B Edition為資料建立模型，以獲得最佳系統效能。
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。本檔案提供預設的使用和速率限制，協助您使用Adobe Real-Time Customer Data Platform B2B edition為資料建立模型，以獲得最佳系統效能。
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 2%
 
 ---
 
-# Real-time Customer Data Platform B2B版本的預設護欄
+# Real-Time Customer Data Platform B2B edition的預設護欄
 
 >[!NOTE]
 >
->本檔案中概述的限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP B2B Edition預設限制的完整清單，請將這些限制與[即時客戶設定檔資料檔案](../profile/guardrails.md)護欄中概述的一般Adobe Experience Platform限制結合。
+>本檔案所列的限制代表Real-Time Customer Data Platform B2B edition啟用的變更。 如需Real-Time CDP B2B edition預設限制的完整清單，請將這些限制與即時客戶設定檔資料檔案](../profile/guardrails.md)的[護欄中概述的一般Adobe Experience Platform限制結合。
 
-Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和客戶屬性，以即時客戶設定檔和帳戶設定檔的形式，提供個人化的跨頻道體驗。 為了支援這種處理設定檔的新方法，Experience Platform使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。
+Real-Time Customer Data Platform B2B edition可讓您根據行為深入分析和客戶屬性，以即時客戶設定檔和帳戶設定檔的形式，提供個人化的跨管道體驗。 為了支援這種處理設定檔的新方法，Experience Platform使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 | 護欄型別 | 說明 |
 | -------------- | ----------- |
-| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降級概不負責。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
+| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降低不負任何責任。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
 | **系統強制的護欄（硬限制）** | Real-Time CDP UI或API會強制執行系統強制的護欄。 這些限制不得超過，因為UI和API會阻止您這樣做或會傳回錯誤。 |
 
 >[!INFO]
@@ -52,11 +52,11 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 >[!NOTE]
 >
->本節中概述的資料模型限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP B2B Edition預設限制的完整清單，請將這些限制與[即時客戶設定檔資料檔案](../profile/guardrails.md)護欄中概述的一般Adobe Experience Platform限制結合。
+>本節概述的資料模型限制代表Real-Time Customer Data Platform B2B edition啟用的變更。 如需Real-Time CDP B2B edition預設限制的完整清單，請將這些限制與即時客戶設定檔資料檔案](../profile/guardrails.md)的[護欄中概述的一般Adobe Experience Platform限制結合。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --------- | ----- | ---------- | ----------- |
-| Real-Time CDP B2B Edition standard XDM類別資料集 | 60 | 效能護欄 | 建議使用最多60個資料集，這些資料集會利用Real-Time CDP B2B Edition提供的標準Experience Data Model (XDM)類別。 如需B2B使用案例的標準XDM類別的完整清單，請參閱Real-Time CDP B2B Edition檔案](schemas/b2b.md)中的[結構描述。 <br/><br/>*注意：由於Experience Platform非標準化混合資料模型的性質，大部分客戶不會超過此限制。 如需瞭解如何建立資料模型，或想進一步瞭解自訂限制，請聯絡客戶服務代表。* |
+| Real-Time CDP B2B edition標準XDM類別資料集 | 60 | 效能護欄 | 建議使用最多60個運用Real-Time CDP B2B edition提供的標準Experience Data Model (XDM)類別的資料集。 如需B2B使用案例的標準XDM類別的完整清單，請參閱Real-Time CDP B2B edition檔案](schemas/b2b.md)中的[結構描述。 <br/><br/>*注意：由於Experience Platform非標準化混合資料模型的性質，大部分客戶不會超過此限制。 如需瞭解如何建立資料模型，或想進一步瞭解自訂限制，請聯絡客戶服務代表。* |
 | 身分圖表中的個人帳戶身分計數 | 50 | 效能護欄 | 個人帳戶在身分圖表中的身分數量上限為50。 任何具有超過50個身分的設定檔都會從分段、匯出和查詢中排除。 |
 | 舊版多實體關係 | 20 | 效能護欄 | 建議在主要實體和維度實體之間最多定義20個多實體關係。 在移除或停用現有關聯性之前，不應進行其他關聯性對應。 |
 | 每個XDM類別的多對一關係 | 2 | 效能護欄 | 建議每個XDM類別最多定義2個多對一關係。 在移除或停用現有關係之前，不應建立其他關係。 如需如何在兩個結構描述之間建立關係的步驟，請參閱有關[定義B2B結構描述關係](../xdm/tutorials/relationship-b2b.md)的教學課程。 |
@@ -65,7 +65,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 >[!NOTE]
 >
->本節中概述的資料模型限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP B2B Edition預設限制的完整清單，請將這些限制與[即時客戶設定檔資料檔案](../profile/guardrails.md)護欄中概述的一般Adobe Experience Platform限制結合。
+>本節概述的資料模型限制代表Real-Time Customer Data Platform B2B edition啟用的變更。 如需Real-Time CDP B2B edition預設限制的完整清單，請將這些限制與即時客戶設定檔資料檔案](../profile/guardrails.md)的[護欄中概述的一般Adobe Experience Platform限制結合。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --------- | ----- | ---------- | ----------- |
@@ -86,7 +86,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 >[!NOTE]
 >
->本節中概述的資料大小限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP B2B Edition預設限制的完整清單，請將這些限制與[即時客戶設定檔資料檔案](../profile/guardrails.md)護欄中概述的一般Adobe Experience Platform限制結合。
+>本節中概述的資料大小限制代表Real-Time Customer Data Platform B2B edition啟用的變更。 如需Real-Time CDP B2B edition預設限制的完整清單，請將這些限制與即時客戶設定檔資料檔案](../profile/guardrails.md)的[護欄中概述的一般Adobe Experience Platform限制結合。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --------- | ----- | ---------- | ----------- |
@@ -96,7 +96,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 >[!NOTE]
 >
->本節中概述的資料大小限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP B2B Edition預設限制的完整清單，請將這些限制與[即時客戶設定檔資料檔案](../profile/guardrails.md)護欄中概述的一般Adobe Experience Platform限制結合。
+>本節中概述的資料大小限制代表Real-Time Customer Data Platform B2B edition啟用的變更。 如需Real-Time CDP B2B edition預設限制的完整清單，請將這些限制與即時客戶設定檔資料檔案](../profile/guardrails.md)的[護欄中概述的一般Adobe Experience Platform限制結合。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --------- | ----- | ---------- | ----------- |
@@ -106,11 +106,11 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 ## 分段護欄
 
-本節中概述的護欄是指組織可在Experience Platform中建立的對象數量和性質，以及對應及啟用對象至目的地。
+本節中概述的護欄是指組織可以在Experience Platform中建立的對象數量和性質，以及對應和啟用對象到目的地。
 
 >[!NOTE]
 >
->本節中概述的區段限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP B2B Edition預設限制的完整清單，請將這些限制與[即時客戶設定檔資料檔案](../profile/guardrails.md)護欄中概述的一般Adobe Experience Platform限制結合。
+>本節中概述的區段限制代表Real-Time Customer Data Platform B2B edition啟用的變更。 如需Real-Time CDP B2B edition預設限制的完整清單，請將這些限制與即時客戶設定檔資料檔案](../profile/guardrails.md)的[護欄中概述的一般Adobe Experience Platform限制結合。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --------- | ----- | ---------- | ----------- |
@@ -118,7 +118,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 ## 後續步驟
 
-本檔案中概述的限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP B2B Edition預設限制的完整清單，請將這些限制與[即時客戶設定檔資料檔案](../profile/guardrails.md)護欄中概述的一般Adobe Experience Platform限制結合。
+本檔案所列的限制代表Real-Time Customer Data Platform B2B edition啟用的變更。 如需Real-Time CDP B2B edition預設限制的完整清單，請將這些限制與即時客戶設定檔資料檔案](../profile/guardrails.md)的[護欄中概述的一般Adobe Experience Platform限制結合。
 
 ## 附錄
 
@@ -138,10 +138,10 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 #### Dimension實體
 
-雖然維護設定檔資料的設定檔資料存放區不是關聯式存放區，但設定檔允許與小型維度實體整合，以便以簡化且直覺的方式建立對象。 此整合稱為[多實體分段](../segmentation/multi-entity-segmentation.md)。
+雖然維護設定檔資料的設定檔資料存放區不是關聯式存放區，但設定檔允許與小型維度實體整合，以便以簡化且直覺的方式建立對象。 此整合稱為[多實體分段](../segmentation/tutorials/multi-entity-segmentation.md)。
 
 您的組織也可以定義XDM類別來說明個人以外的專案，例如商店、產品或屬性。 這些非[!DNL XDM Individual Profile]結構描述稱為「維度實體」（也稱為「查詢實體」），不包含時間序列資料。 代表維度實體的結構描述會透過使用[結構描述關係](../xdm/tutorials/relationship-ui.md)連結至設定檔實體。
 
-Dimension實體提供查閱資料，可協助並簡化多實體區段定義，且必須夠小，讓區段引擎可以將整個資料集載入記憶體，以進行最佳處理（快速點查閱）。
+Dimension實體提供查詢資料，可協助並簡化多實體區段定義，且必須夠小，讓區段引擎可以將整個資料集載入記憶體，以進行最佳處理（快速點查詢）。
 
 ![顯示設定檔實體是由維度實體組成的資訊圖。](../profile/images/guardrails/profile-and-dimension-entities.png)

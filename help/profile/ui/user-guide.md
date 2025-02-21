@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；UNIFIED；設定檔；rtcp；啟用設定檔；啟用設定檔；聯合結構描述；聯合設定檔
+keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；Unified；設定檔；rtcp；啟用設定檔；啟用設定檔；聯合結構描述；聯合設定檔
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '2212'
 ht-degree: 3%
 
 ---
 
-# [!DNL Real-Time Customer Profile] UI指南
+# [!DNL Real-Time Customer Profile] 使用者介面指南
 
 [!DNL Real-Time Customer Profile]會針對個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可做為在Adobe Experience Platform使用者介面(UI)中與[!DNL Real-Time Customer Profile]資料互動的指南。
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 ## [!UICONTROL 概觀]
 
-在Experience PlatformUI中，選取左側導覽中的&#x200B;**[!UICONTROL 設定檔]**&#x200B;以開啟顯示設定檔儀表板的&#x200B;**[!UICONTROL 概觀]**&#x200B;標籤。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 設定檔]**&#x200B;以開啟顯示設定檔儀表板的&#x200B;**[!UICONTROL 概觀]**&#x200B;標籤。
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 ### 輪廓計數 {#profile-count}
 
-在您組織的預設合併原則已與設定檔片段合併在一起，以針對每個個別客戶形成單一設定檔後，設定檔計數會顯示貴組織在Experience Platform內的設定檔總數。 換言之，您的組織可能擁有與單一客戶相關的多個設定檔片段，該客戶會跨不同管道與您的品牌互動，但這些片段會合併在一起（根據預設合併原則），且會傳回「1」設定檔計數，因為這些片段都與同一個人相關。
+在您組織的預設合併原則已與設定檔片段合併，以針對每個個別客戶形成單一設定檔後，設定檔計數會顯示貴組織在Experience Platform中的設定檔總數。 換言之，您的組織可能擁有與單一客戶相關的多個設定檔片段，該客戶會跨不同管道與您的品牌互動，但這些片段會合併在一起（根據預設合併原則），且會傳回「1」設定檔計數，因為這些片段都與同一個人相關。
 
 設定檔計數也包含具有屬性的設定檔（記錄資料），以及僅包含時間序列（事件）資料(例如Adobe Analytics設定檔)的設定檔。 設定檔計數會定期更新，以提供Platform內最新的設定檔總數。
 
@@ -171,15 +171,15 @@ ht-degree: 3%
 
 **[!UICONTROL 對象成員資格]**&#x200B;標籤會顯示清單，其中包含個別客戶設定檔目前所屬對象的名稱和說明。 當設定檔符合對象資格或過期時，此清單會自動更新。 設定檔目前符合資格的受眾總數會顯示在索引標籤的右側。
 
-如需Experience Platform中區段的詳細資訊，請參閱[AdobeExperience Platform區段服務檔案](../../segmentation/home.md)。
+如需Experience Platform中區段的詳細資訊，請參閱[Adobes Experience Platform Segmentation Service檔案](../../segmentation/home.md)。
 
 ![標示對象成員資格標籤。 顯示設定檔的對象成員資格詳細資料。](../images/user-guide/audience-membership.png)
 
-若要檢視Edge上可用設定檔的對象成員資格，請在資料位置選取器中選取&#x200B;**[!UICONTROL Edge]**。 您可以在[邊緣分段指南](../../segmentation/ui/edge-segmentation.md)中找到邊緣分段的詳細資訊。
+若要檢視Edge上可用設定檔的對象成員資格，請在資料位置選取器中選取&#x200B;**[!UICONTROL Edge]**。 您可以在[邊緣分段指南](../../segmentation/methods/edge-segmentation.md)中找到邊緣分段的詳細資訊。
 
 ![對象成員資格標籤中的資料位置選擇器會醒目提示。](../images/user-guide/audience-membership-select.png)
 
-## 合併政策
+## 合併原則
 
 從主要&#x200B;**[!UICONTROL 設定檔]**&#x200B;功能表中，選取&#x200B;**[!UICONTROL 合併原則]**&#x200B;索引標籤，以檢視屬於您組織的合併原則清單。 每個列出的原則都會顯示其名稱（無論是否為預設的合併原則）及其套用的結構描述類別。
 
@@ -205,4 +205,4 @@ ht-degree: 3%
 
 ## 後續步驟
 
-閱讀本指南後，您就會知道如何使用Experience PlatformUI檢視及管理組織的設定檔資料。 有關如何使用Experience PlatformAPI處理設定檔資料的資訊，請參閱[即時客戶設定檔API指南](../api/overview.md)。
+閱讀本指南後，您就會知道如何使用Experience Platform UI檢視及管理組織的設定檔資料。 有關如何使用Experience Platform API處理設定檔資料的資訊，請參閱[即時客戶設定檔API指南](../api/overview.md)。
