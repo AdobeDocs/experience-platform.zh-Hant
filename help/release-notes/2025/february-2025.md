@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2025 年 2 月)
 description: Adobe Experience Platform 2025 年 2 月版發行說明。
-source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
+source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
 workflow-type: tm+mt
-source-wordcount: '1481'
-ht-degree: 21%
+source-wordcount: '1542'
+ht-degree: 20%
 
 ---
 
@@ -38,14 +38,13 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 | 功能 | 說明 |
 | --- | --- |
+| 營運深入分析的一般可用性 | AI Assistant中的作業深入分析現在於GA推出。 營運深入分析是指回答AI助理產生的中繼資料物件（屬性、對象、資料流、資料集、目的地、歷程、結構描述和來源），包括計數、查閱和歷程影響。 操作深入分析不會檢視沙箱中的任何資料。 如需詳細資訊，請閱讀[AI助理使用者介面指南](../../ai-assistant/ui-guide.md)。 |
 | 支援問題自動完成 | 向AI助理輸入問題時，您現在可以從AI助理提供的建議問題清單中進行選擇。 使用此功能透過AI助理進一步加速您的工作流程。 如需詳細資訊，請參閱[使用問題自動完成與AI小幫手](../../ai-assistant/ui-guide.md#use-question-autocomplete)的指南。 |
 | 支援資料集可觀察性 | 您現在可以使用AI Assistant來回答有關特定資料集量度的問題，例如儲存大小和列計數。 資料可觀察性問題支援限定詞，您可以使用它來依特定時段篩選查詢。 如需詳細資訊，請閱讀[AI助理問題指南](../../ai-assistant/questions.md)。 |
 
 {style="table-layout:auto"}
 
 如需詳細資訊，請閱讀[AI助理概述](../../ai-assistant/home.md)。
-
-<!-- | General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). | -->
 
 ## 目錄服務 {#catalog-service}
 
