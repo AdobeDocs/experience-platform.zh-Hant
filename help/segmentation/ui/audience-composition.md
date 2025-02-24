@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
+source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2342'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="對象區塊"
->abstract="「對象」區塊可讓您建立要用來組成新對象的子對象。"
+>abstract="「對象」區塊可讓您新增要用來組成新對象的子對象。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -83,6 +83,11 @@ ht-degree: 1%
 | [!UICONTROL 排除重疊] | 對象已合併，只與在&#x200B;**一個中共用的對象合併，但並非全部**&#x200B;個對象都將被新增。 這相當於XOR操作。 |
 
 ### [!UICONTROL 建置規則] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="區段產生器"
+>abstract="您可以使用區段產生器為您的組合新增自訂規則。"
 
 若要將自訂規則新增至對象區塊，請選取&#x200B;**[!UICONTROL 建置規則]**。
 
@@ -134,7 +139,12 @@ ht-degree: 1%
 
 ### 依屬性排除 {#exclude-attribute}
 
-如果您依屬性排除，可以選取&#x200B;**[!UICONTROL 排除規則]**&#x200B;區段內的![篩選器](/help/images/icons/project-edit.png)圖示，以選取您要排除的屬性。
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="依屬性排除"
+>abstract="依屬性排除時，您可以根據選取的屬性，排除構成中不會出現的特定設定檔。"
+
+如果您依屬性排除，可以選取&#x200B;**[!UICONTROL 排除規則]**&#x200B;區段內的![篩選器](/help/images/icons/project-edit.png)圖示，以選取您要排除的屬性。 排除屬性可讓您從產生的對象中排除包含此屬性的任何設定檔。
 
 ![屬性區段會反白顯示，顯示從何處選取要排除的屬性。](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -307,6 +317,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ### 依百分比分割 {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="依百分比分割"
+>abstract="您可以根據提供的路徑數和百分比，將受眾隨機分割為多個受眾。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="持續性分割"
+>abstract="您可以啟用此選項並選取要保留分割的身分名稱空間，讓百分比分割持續存在。"
+
 依百分比分割時，會根據提供的路徑數和百分比，隨機分割對象。
 
 例如，您可以有三個路徑，每個路徑具有不同的設定檔百分比。
@@ -331,7 +351,12 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![其他設定檔切換會反白顯示。](../images/ui/audience-composition/split-other-profiles.png)
 
-## 發佈您的對象
+## 發佈您的對象 {#publish}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="發佈"
+>abstract="您可以發佈構成來在Adobe Experience Platform中建立產生的對象。"
 
 >[!IMPORTANT]
 >
