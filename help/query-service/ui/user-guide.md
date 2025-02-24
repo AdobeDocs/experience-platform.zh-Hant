@@ -2,20 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；查詢編輯器；查詢編輯器；查詢服務；查詢服務；
 solution: Experience Platform
 title: Query Editor UI指南
-description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
+description: 查詢編輯器是Adobe Experience Platform查詢服務所提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發目的，以及非互動式查詢來填入Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
+source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
 
 # 查詢編輯器UI指南
-
->[!NOTE]
->
->舊版編輯器已於2024年5月24日淘汰。 它無法再供使用。 您現在可以使用[增強型查詢編輯器](#enhanced-editor-toggle)來撰寫、驗證和執行查詢
 
 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在[!DNL Experience Platform]使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢來填入[!DNL Experience Platform]中的資料集。
 
@@ -42,10 +38,6 @@ ht-degree: 0%
 從「查詢編輯器」執行的查詢會以互動方式執行，這表示如果您關閉瀏覽器或離開瀏覽器，則會取消查詢。 從查詢輸出產生資料集的查詢也是如此。
 
 ## 使用增強型查詢編輯器編寫查詢 {#query-authoring}
-
->[!NOTE]
->
->舊版編輯器已於2024年5月24日淘汰。 它無法再供使用。 您現在可以使用增強型查詢編輯器來撰寫、驗證和執行查詢。
 
 使用查詢編輯器，您可以編寫、執行和儲存客戶體驗資料的查詢。 在查詢編輯器中執行或儲存的所有查詢，都可供貴組織中有權存取查詢服務的所有使用者使用。
 
@@ -101,11 +93,11 @@ ht-degree: 0%
 
 ### 結果計數 {#result-count}
 
-「查詢編輯器」有最多50,000列的輸出。 您可以選擇在查詢編輯器主控台中一次顯示的列數。 若要變更主控台中顯示的列數，請選取&#x200B;**[!UICONTROL 結果計數]**&#x200B;下拉式清單，並從50、100、150、300和500選項中選取。
+「查詢編輯器」有最多50,000列的輸出。 您可以選擇在查詢編輯器主控台中一次顯示的列數。 若要變更主控台中顯示的列數，請選取&#x200B;**[!UICONTROL 結果計數]**&#x200B;下拉式清單，並從50、100、150、300、500和1000選項中選取。
 
 >[!NOTE]
 >
->由於Platform UI最多只能支援500列，因此超過500列的LIMIT值會被忽略。
+>由於Platform UI可支援最多1000列，因此超過1000的LIMIT值會被忽略。
 
 ![結果計數下拉式清單反白顯示的查詢編輯器。](../images/ui/query-editor/result-count.png)
 
@@ -249,7 +241,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 ### 查詢結果 {#query-results}
 
-完成查詢後，結果會顯示在&#x200B;**[!UICONTROL 主控台]**&#x200B;標籤旁的&#x200B;**[!UICONTROL 結果]**&#x200B;標籤中。 此檢視顯示您查詢的表格輸出，根據您選擇的[結果計數](#result-count)顯示50到500列結果。 此檢視可讓您驗證您的查詢是否產生預期的輸出。 若要使用您的查詢產生資料集，請移除傳回資料列的限制，然後使用`CREATE TABLE tablename AS SELECT`執行查詢，以使用輸出產生資料集。 請參閱[產生資料集教學課程](./create-datasets.md)，瞭解如何從查詢編輯器中的查詢結果產生資料集的指示。
+完成查詢後，結果會顯示在&#x200B;**[!UICONTROL 主控台]**&#x200B;標籤旁的&#x200B;**[!UICONTROL 結果]**&#x200B;標籤中。 此檢視顯示您查詢的表格輸出，根據您選擇的[結果計數](#result-count)顯示50到1000列結果。 此檢視可讓您驗證您的查詢是否產生預期的輸出。 若要使用您的查詢產生資料集，請移除傳回資料列的限制，然後使用`CREATE TABLE tablename AS SELECT`執行查詢，以使用輸出產生資料集。 請參閱[產生資料集教學課程](./create-datasets.md)，瞭解如何從查詢編輯器中的查詢結果產生資料集的指示。
 
 ![查詢編輯器主控台的[結果]索引標籤顯示查詢執行的結果。](../images/ui/query-editor/query-results.png)
 
