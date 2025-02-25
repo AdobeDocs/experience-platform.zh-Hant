@@ -2,10 +2,10 @@
 title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: ee0f6d6dbbbdf55a1a0f10038b785e48f2b41474
+source-git-commit: 7c2e5cad997b7e7b9e0a08d3a3a1f5c9b218329e
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -24,10 +24,10 @@ ht-degree: 1%
 開始使用身分設定前，請先閱讀下列檔案：
 
 * [身分圖表連結規則](./overview.md)
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
-* [命名空間優先等級](./namespace-priority.md)
+* [命名空間優先順序](./namespace-priority.md)
 * [圖表模擬](./graph-simulation.md)
 
 ## 設定您的身分設定
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 ### 指定您的唯一名稱空間
 
-若要指定唯一的名稱空間，請選取與該名稱空間相對應的[!UICONTROL 每個圖表唯一的]核取方塊。 您可以為您的身分設定組態選取多個唯一的名稱空間。
+若要指定唯一的名稱空間，請選取與該名稱空間相對應的[!UICONTROL 每個圖表唯一的]核取方塊。 您最多可以為身分設定組態選取三個唯一的名稱空間。
 
 ![選取並定義為唯一的兩個名稱空間。](../images/rules/unique-namespace.png)
 
@@ -65,9 +65,9 @@ ht-degree: 1%
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
 * [身分圖表連結規則概觀](./overview.md)
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [命名空間優先等級](./namespace-priority.md)
+* [命名空間優先順序](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
