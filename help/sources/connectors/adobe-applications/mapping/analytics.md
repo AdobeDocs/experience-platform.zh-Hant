@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Analytics Source聯結器的對應欄位
 description: 使用Adobe Analytics Source Connector將Analytics欄位對應到XDM欄位。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
+source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2415'
 ht-degree: 8%
 
 ---
@@ -172,11 +172,11 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `hitid_low` | `_id` | 字串 | 搭配hitid_high使用以專門識別點選。 |
 | `ip` | `environment.ipV4` | 字串 | IP位址，根據影像要求的HTTP標頭。 |
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | 布林值 | 使用的JavaScript版本。 |
-| `mcvisid_high` + `mcvisid_low` | identityMap | 物件 | Experience Cloud的訪客ID。 |
-| `mcvisid_high` + `mcvisid_low` | endUserIDs。_experience.mcid.id | 字串 | Experience CloudID (ECID)也稱為MCID，有時用於名稱空間。 |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | 布林值 | Experience CloudID (ECID)也稱為MCID，有時用於名稱空間。 |
-| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | 字串 | Experience CloudID (ECID)也稱為MCID，有時用於名稱空間。 |
-| `mcvisid_low` | `identityMap` | 物件 | Experience Cloud的訪客ID。 |
+| `mcvisid_high` + `mcvisid_low` | identityMap | 物件 | Experience Cloud訪客ID。 |
+| `mcvisid_high` + `mcvisid_low` | endUserIDs。_experience.mcid.id | 字串 | Experience Cloud ID (ECID)也稱為MCID，有時用於名稱空間。 |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | 布林值 | Experience Cloud ID (ECID)也稱為MCID，有時用於名稱空間。 |
+| `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | 字串 | Experience Cloud ID (ECID)也稱為MCID，有時用於名稱空間。 |
+| `mcvisid_low` | `identityMap` | 物件 | Experience Cloud訪客ID。 |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | 字串 | 點選拼接ID。 分析欄位sdid_high和sdid_low是用於彙整兩個（或更多）傳入點選的補充資料ID。 |
 | `mobilebeaconproximity` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximity` | 字串 | 行動服務鄰近地區信標。 |
 | `videochapter` | `media.mediaTimed.mediaChapter.`<br/>`chapterAssetReference._xmpDM.duration` | 整數 | 視訊章節的名稱。 |
@@ -186,9 +186,11 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 
 ## 進階對應欄位
 
-在Adobe使用處理規則、VISTA規則和查詢表格調整值後，選取欄位（稱為「貼文值」）會包含資料。 大部分的貼文值都有預先處理的對應專案。 貴組織可決定您要使用預處理欄位、後處理欄位或兩者。
+Adobe使用處理規則、VISTA規則和查詢表格調整值後，選取欄位（稱為「貼文值」）會包含資料。 大部分的貼文值都有預先處理的對應專案。
 
-若要進一步瞭解如何使用查詢服務執行這些轉換，請參閱查詢服務使用手冊中的[Adobe定義函式](/help/query-service/sql/adobe-defined-functions.md)。
+Analytics來源聯結器會將預先處理的資料傳送到Experience Platform中的資料集。 您可以使用轉換將此資料轉換為後續處理的對應資料。 若要進一步瞭解如何使用查詢服務執行這些轉換，請參閱查詢服務使用手冊中的[Adobe定義的函式](/help/query-service/sql/adobe-defined-functions.md)。
+
+若要進一步瞭解如何使用查詢服務執行這些轉換，請參閱查詢服務使用手冊中的[Adobe定義的函式](/help/query-service/sql/adobe-defined-functions.md)。
 
 | 分析欄位 | XDM欄位 | XDM型別 | 說明 |
 | --------------- | --------- | -------- | ---------- |
