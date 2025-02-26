@@ -6,9 +6,9 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 35%
 
 ---
@@ -90,7 +90,9 @@ ht-degree: 35%
       * Adobe使用者端資料層{#client-data-layer}
          * [概觀](./extensions/client/client-data-layer/overview.md)
          * [發行說明](./extensions/client/client-data-layer/release-notes.md)
-      * AdobeContextHub {#contexthub}
+      * Adobe內容分析{#contentanalytics}
+         * [概觀](./extensions/client/content-analytics/overview.md)
+      * Adobe ContextHub {#contexthub}
          * [概觀](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
       * Adobe Experience Cloud ID 服務 {#id-service}
@@ -112,10 +114,10 @@ ht-degree: 35%
          * [概觀](./extensions/client/asset-insights/overview.md)
          * [發行說明](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
-      * 音訊和視訊Adobe Medium Analytics {#media-analytics}
+      * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [概觀](./extensions/client/media-analytics/overview.md)
          * [發行說明](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Medium Analytics (3.x SDK) {#media-analytics-3x}
+      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [概觀](./extensions/client/media-analytics-3x/overview.md)
          * [發行說明](./extensions/client/media-analytics-3x/release-notes.md)
       * Adobe隱私權{#privacy}
@@ -220,7 +222,7 @@ ht-degree: 35%
          * [概述](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [概述](./extensions/server/braze/overview.md)
-      * Google Analytics的[雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
+      * 適用於Google Analytics的[雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
       * 核心{#core}
          * [概觀](./extensions/server/core/overview.md)
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
