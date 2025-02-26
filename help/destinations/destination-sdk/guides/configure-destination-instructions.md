@@ -1,8 +1,8 @@
 ---
-description: 本頁面列出並說明使用Destination SDK設定串流目的地的步驟。
+description: 本頁面列出及說明使用Destination SDK設定串流目的地的步驟。
 title: 使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-在繼續進行下列步驟之前，請閱讀[Destination SDK快速入門](../getting-started.md)頁面，以取得使用Destination SDKAPI所需的必要Adobe I/O驗證認證和其他必要條件。 這假設您已完成合作關係與許可權必要條件，並準備好開始開發您的目的地。
+在繼續進行下列步驟之前，請閱讀[Destination SDK快速入門](../getting-started.md)頁面，以取得使用Destination SDK API所需的必要Adobe I/O驗證認證和其他必要條件。 這假設您已完成合作關係與許可權必要條件，並準備好開始開發您的目的地。
 
 ## 在Destination SDK中使用設定選項來設定目的地的步驟 {#steps}
 
@@ -117,12 +117,14 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },   
+   },  
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -150,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 步驟3：建立訊息轉換範本 — 使用範本化語言指定訊息輸出格式 {#create-transformation-template}
 
-您必須根據目的地支援的負載，建立範本，將匯出的資料格式從AdobeXDM格式轉換為目的地支援的格式。 請參閱[使用範本語言進行身分、屬性和對象成員資格轉換](../functionality/destination-server/message-format.md#using-templating)一節中的範本範例，並使用Adobe提供的[範本撰寫工具](../testing-api/streaming-destinations/create-template.md)。
+您必須根據目的地支援的負載，建立範本，將匯出的資料格式從Adobe XDM格式轉換為目的地支援的格式。 請參閱[使用範本語言進行身分、屬性和對象成員資格轉換](../functionality/destination-server/message-format.md#using-templating)一節中的範本範例，並使用Adobe提供的[範本撰寫工具](../testing-api/streaming-destinations/create-template.md)。
 
 在您建立適合您的訊息轉換範本後，請將其新增到您在步驟1中建立的伺服器和範本設定中。
 
@@ -229,10 +231,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
-   "audienceMetadataConfig":{
+   "segmentMappingConfig":{
       "mapExperiencePlatformSegmentName":false,
       "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
+      "mapUserInput":false
+   },
+   "audienceMetadataConfig":{
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },   
    "aggregation":{
@@ -277,18 +281,18 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 使用先前步驟中的設定端點設定您的目的地後，您可以使用[目的地測試工具](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)來測試Adobe Experience Platform與您的目的地之間的整合。
 
-在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
+在測試目的地的程式中，您必須使用Experience Platform UI來建立區段，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
 * [建立對象檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
 * [建立對象視訊逐步說明](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## 步驟7：Publish您的目的地 {#publish-destination}
+## 步驟7：發佈您的目的地 {#publish-destination}
 
 >[!NOTE]
 >
 >如果您要建立供自己使用的私人目的地，且不想將其發佈到目的地目錄以供其他客戶使用，則不需要執行此步驟。
 
-設定並測試您的目的地之後，請使用[目的地發佈API](../publishing-api/create-publishing-request.md)將您的設定提交給Adobe進行檢閱。
+設定並測試您的目的地後，請使用[目的地發佈API](../publishing-api/create-publishing-request.md)將您的設定提交至Adobe以供檢閱。
 
 ## 步驟8：記錄您的目的地 {#document-destination}
 
@@ -298,10 +302,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 如果您是建立[產品化整合](../overview.md#productized-custom-integrations)的獨立軟體廠商(ISV)或系統整合商(SI)，請使用[自助服務檔案程式](../docs-framework/documentation-instructions.md)，為您在[Experience Platform目的地目錄](/help/destinations/catalog/overview.md)中的目的地建立產品檔案頁面。
 
-## 步驟9：提交目的地以供Adobe複查 {#submit-for-review}
+## 步驟9：提交目的地以供Adobe檢閱 {#submit-for-review}
 
 >[!NOTE]
 >
 >如果您要建立供自己使用的私人目的地，且不想將其發佈到目的地目錄以供其他客戶使用，則不需要執行此步驟。
 
-最後，在Experience Platform目錄中發佈目的地並對所有Experience Platform客戶可見之前，您必須正式提交目的地以供Adobe檢閱。 尋找關於如何[提交以檢閱Destination SDK](../guides/submit-destination.md)撰寫之產品化目的地的完整資訊。
+最後，在Experience Platform目錄中發佈目的地，並供所有Experience Platform客戶檢視之前，您必須正式提交目的地以供Adobe檢閱。 尋找關於如何[提交以檢閱Destination SDK](../guides/submit-destination.md)中製作之目的地的完整資訊。

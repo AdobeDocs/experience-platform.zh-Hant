@@ -1,23 +1,23 @@
 ---
-description: 此頁面列出並說明使用Destination SDK設定檔案型目的地的步驟。
-title: 使用Destination SDK來設定以檔案為基礎的目的地
+description: 本頁面列出並說明使用Destination SDK設定檔案型目的地的步驟。
+title: 使用Destination SDK設定以檔案為基礎的目的地
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 0%
 
 ---
 
-# 使用Destination SDK來設定以檔案為基礎的目的地
+# 使用Destination SDK設定以檔案為基礎的目的地
 
 ## 概觀 {#overview}
 
-此頁面說明如何在目的地SDK](../functionality/configuration-options.md)的[設定選項以及其他Destination SDK功能和API參考檔案中使用資訊，來設定[檔案型目的地](../../destination-types.md#file-based)。 這些步驟會依序排列如下。
+此頁面說明如何在目的地SDK](../functionality/configuration-options.md)的[設定選項以及其他Destination SDK功能和API參考檔案中使用資訊來設定[檔案型目的地](../../destination-types.md#file-based)。 這些步驟會依序排列如下。
 
 ## 先決條件 {#prerequisites}
 
-在繼續進行下列步驟之前，請閱讀[Destination SDK快速入門](../getting-started.md)頁面，以取得使用Destination SDKAPI所需的必要Adobe I/O驗證認證和其他必要條件。
+在繼續進行下列步驟之前，請閱讀[Destination SDK快速入門](../getting-started.md)頁面，以取得使用Destination SDK API所需的必要Adobe I/O驗證認證和其他必要條件。
 
 ## 在Destination SDK中使用設定選項來設定目的地的步驟 {#steps}
 
@@ -345,11 +345,13 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d"
         }
     ],
+    "segmentMappingConfig":{
+        "mapExperiencePlatformSegmentName":false,
+        "mapExperiencePlatformSegmentId":false,
+        "mapUserInput":false
+    },
     "audienceMetadataConfig":{
-    "mapExperiencePlatformSegmentName":false,
-    "mapExperiencePlatformSegmentId":false,
-    "mapUserInput":false,
-    "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+        "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
     },   
     "schemaConfig": {
         "profileRequired": true,
@@ -402,7 +404,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 >
 >`CUSTOMER_AUTHENTICATION`是兩個驗證規則中較常見的一個，如果您要求使用者在設定連線及匯出資料之前，提供某種形式的驗證給您的目的地，則需使用這個驗證規則。
 
-* 如果您在目的地組態中選取`"authenticationRule": "CUSTOMER_AUTHENTICATION"`，請參閱下列章節，以瞭解Destination SDK支援的檔案型目的地驗證型別：
+* 如果您在目的地設定中選取`"authenticationRule": "CUSTOMER_AUTHENTICATION"`，請參閱下列章節，以瞭解Destination SDK支援的檔案型目的地驗證型別：
 
    * [Amazon S3驗證](../functionality/destination-configuration/customer-authentication.md#s3)
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
@@ -418,18 +420,18 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 使用先前步驟中的設定端點設定您的目的地後，您可以使用[目的地測試工具](../testing-api/batch-destinations/file-based-destination-testing-overview.md)來測試Adobe Experience Platform與您的目的地之間的整合。
 
-在測試目的地的程式中，您必須使用Experience PlatformUI來建立對象，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
+在測試目的地的程式中，您必須使用Experience Platform UI來建立對象，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
 * [建立對象 — 檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
 * [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## 步驟6：Publish您的目的地 {#publish-destination}
+## 步驟6：發佈您的目的地 {#publish-destination}
 
 >[!NOTE]
 >
 >如果您要建立供自己使用的私人目的地，且不想將其發佈到目的地目錄以供其他客戶使用，則不需要執行此步驟。
 
-設定並測試您的目的地之後，請使用[目的地發佈API](../publishing-api/create-publishing-request.md)將您的設定提交給Adobe進行檢閱。
+設定並測試您的目的地後，請使用[目的地發佈API](../publishing-api/create-publishing-request.md)將您的設定提交至Adobe以供檢閱。
 
 ## 步驟7：記錄您的目的地 {#document-destination}
 
@@ -439,10 +441,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 如果您是建立[產品化整合](../overview.md#productized-custom-integrations)的獨立軟體廠商(ISV)或系統整合商(SI)，請使用[自助服務檔案程式](../docs-framework/documentation-instructions.md)，為您在[Experience Platform目的地目錄](/help/destinations/catalog/overview.md)中的目的地建立產品檔案頁面。
 
-## 步驟8：提交目的地以供Adobe複查 {#submit-for-review}
+## 步驟8：提交目的地以供Adobe檢閱 {#submit-for-review}
 
 >[!NOTE]
 >
 >如果您要建立供自己使用的私人目的地，且不想將其發佈到目的地目錄以供其他客戶使用，則不需要執行此步驟。
 
-最後，在Experience Platform目錄中發佈目的地並對所有Experience Platform客戶可見之前，您必須正式提交目的地以供Adobe檢閱。 尋找關於如何[提交以檢閱Destination SDK](../guides/submit-destination.md)撰寫之產品化目的地的完整資訊。
+最後，在Experience Platform目錄中發佈目的地，並供所有Experience Platform客戶檢視之前，您必須正式提交目的地以供Adobe檢閱。 尋找關於如何[提交以檢閱Destination SDK](../guides/submit-destination.md)中製作之目的地的完整資訊。
