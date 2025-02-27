@@ -2,7 +2,7 @@
 title: appendIdentityToUrl
 description: 在應用程式、網頁和跨網域之間，更準確地提供個人化體驗。
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
+source-git-commit: 7c262e5819f8e3488c5ddd5a0221d1c52c28c029
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 `appendIdentityToUrl`命令可讓您將使用者識別碼新增至URL做為查詢字串。 此動作可讓您在網域之間攜帶訪客的身分，以防止同時包含網域或管道的資料集出現重複訪客計數。 它適用於Web SDK 2.11.0或更新版本。
 
-產生並附加至URL的查詢字串為`adobe_mc`。 如果Web SDK找不到ECID，它會呼叫`/acquire`端點以產生一個。
+產生並附加至URL的查詢字串為`adobe_mc`。 如果網頁SDK找不到ECID，它會呼叫`/acquire`端點以產生一個。
 
 >[!NOTE]
 >
 >如果尚未提供同意，則傳回此方法的URL不會變更。 此命令會立即執行；不會等待同意更新。
 
-## 使用Web SDK擴充功能將身分附加至URL {#extension}
+## 使用網頁SDK擴充功能將身分附加至URL {#extension}
 
 將身分附加至URL是在Adobe Experience Platform資料收集標籤介面的規則中作為動作執行的。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 1. 選取所需的標籤屬性。
 1. 導覽至&#x200B;**[!UICONTROL 規則]**，然後選取所要的規則。
 1. 在[!UICONTROL 動作]下，選取現有動作或建立動作。
-1. 將[!UICONTROL 擴充功能]下拉式清單欄位設定為&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**，並將[!UICONTROL 動作型別]設定為&#x200B;**[!UICONTROL 使用身分識別重新導向]**。
+1. 將[!UICONTROL 擴充功能]下拉式欄位設定為&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**，並將[!UICONTROL 動作型別]設定為&#x200B;**[!UICONTROL 使用身分識別重新導向]**。
 1. 按一下&#x200B;**[!UICONTROL 保留變更]**，然後執行您的發佈工作流程。
 
 這個命令通常會與特定規則搭配使用，此規則會監聽點按次數並檢查所需的網域。
@@ -77,7 +77,11 @@ ht-degree: 0%
 以URL作為引數執行`appendIdentityToUrl`命令。 此方法會傳回URL，並附加識別碼作為查詢字串。
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 您可以為頁面上收到的所有點按新增事件接聽程式，並檢視URL是否符合任何需要的網域。 如果包含，則將身分附加至URL並重新導向使用者。
