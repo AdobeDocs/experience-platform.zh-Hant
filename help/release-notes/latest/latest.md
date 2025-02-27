@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 2 月)
 description: Adobe Experience Platform 2025 年 2 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 94%
+source-wordcount: '1645'
+ht-degree: 91%
 
 ---
 
@@ -24,6 +24,7 @@ Adobe Experience Platform 現有功能和文件的更新：
 - [資料準備](#data-prep)
 - [目標](#destinations)
 - [來源](#sources)
+- [分段服務](#segmentation)
 - [文件更新](#documentation-updates)
    - [Edge Network 與中心網路的比較](#edge)
    - [來源的擴充 Flow Service API](#flow-service)
@@ -106,7 +107,19 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 - 使用 Flow Service API 更新目標 `targetConnection` 規格時出現的問題已修正。在某些情況下，PATCH 操作的行為類似於 POST 操作，因而會破壞現有的資料流。此問題現已修正，所有客戶都可以使用 Flow Service API 來更新他們的 `targetConnection` 規格。[閱讀全文](/help/destinations/api/edit-destination.md#patch-target-connection)。
 - 將設定檔匯出至檔案型目的地時，重複資料刪除可確保在多個設定檔共用相同的重複資料刪除索引鍵和相同的參考時間戳記時，僅匯出一個設定檔。 此版本包括重複資料刪除流程的更新，確保使用相同座標連續執行將一律產生相同的結果，提升一致性。 [閱讀全文](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp)。
 
-如需更多資訊，請閱讀[目標概觀](../../destinations/home.md)。
+如需詳細資訊，請閱讀[目標概觀](../../destinations/home.md)。
+
+## 分段服務 {#segmentation-service}
+
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 持續性分割 | 對象構成現在支援持續分割。 您可以透過將身分名稱空間新增到分割區塊，讓分割對象在依設定檔分割時保持穩定。 如需有關此功能的詳細資訊，請參閱[對象組合檔案](../../segmentation/ui/audience-composition.md)。 |
+
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 

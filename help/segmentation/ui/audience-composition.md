@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2342'
+source-wordcount: '2313'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 將對象新增至「對象」區塊。 選取&#x200B;**[!UICONTROL 新增對象]**。
 
-![已醒目顯示[新增對象]按鈕。](../images/ui/audience-composition/add-audience.png)
+![已醒目顯示[新增對象]按鈕。](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ ht-degree: 1%
 
 若要將自訂規則新增至對象區塊，請選取&#x200B;**[!UICONTROL 建置規則]**。
 
-![建置規則按鈕已反白顯示。](../images/ui/audience-composition/build-rule.png)
+![建置規則按鈕已反白顯示。](../images/ui/audience-composition/select-build-rule.png)
 
 「區段產生器」隨即顯示。 您可以使用區段產生器建立自訂規則，供對象追蹤。 如需有關使用區段產生器的詳細資訊，請參閱[區段產生器指南](./segment-builder.md)。
 
@@ -196,7 +196,7 @@ ht-degree: 1%
 
 **[!UICONTROL 選取資料集]**&#x200B;彈出視窗會出現。 選取您要新增以擴充的資料集，接著選取&#x200B;**[!UICONTROL 選取]**&#x200B;以新增資料集以擴充。
 
-![已選取選取的資料集。](../images/ui/audience-composition/enrich-dataset-selected.png)
+![已選取選取的資料集。](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ ht-degree: 1%
 
 若要選取&#x200B;**[!UICONTROL Source聯結索引鍵]**，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
-![ [!UICONTROL Source聯結索引鍵]的篩選圖示會醒目提示。](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 **[!UICONTROL 選取設定檔屬性]**&#x200B;彈出視窗即會出現。 選取要做為來源聯結金鑰的設定檔屬性，然後選取&#x200B;**[!UICONTROL 選取]**&#x200B;以選擇該屬性做為來源聯結金鑰。
 
-![要做為來源聯結金鑰的屬性會反白顯示。](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![要做為來源聯結金鑰的屬性會反白顯示。](../images/ui/audience-composition/select-source-join-key.png)
 
 若要選取&#x200B;**[!UICONTROL 擴充資料集聯結索引鍵]**，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
-![ [!UICONTROL 擴充資料集加入索引鍵]的篩選圖示已醒目提示。](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
-
 **[!UICONTROL 擴充屬性]**&#x200B;彈出視窗會出現。 選取要做為擴充資料集加入金鑰使用的屬性，然後選取&#x200B;**[!UICONTROL 選取]**，選擇該屬性做為擴充資料集加入金鑰。
 
-![您想做為擴充資料集加入金鑰的屬性已反白顯示。](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![您想做為擴充資料集加入金鑰的屬性已反白顯示。](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 現在您已新增兩個加入金鑰，**[!UICONTROL 擴充屬性]**&#x200B;區段隨即顯示。 您現在可以新增您想要用來增強對象的屬性。 若要新增這些屬性，請選取&#x200B;**[!UICONTROL 新增屬性]**。
 
-![已反白顯示[!UICONTROL 新增屬性]按鈕。](../images/ui/audience-composition/enrich-select-add-attribute.png)
-
 **[!UICONTROL 擴充屬性]**&#x200B;彈出視窗會出現。 您可以從資料集中選取屬性，以擴充您的對象，接著選取&#x200B;**[!UICONTROL 選取]**&#x200B;以新增屬性至對象。
 
-![您想要新增的擴充屬性已反白顯示。](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![您想要新增的擴充屬性已反白顯示。](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 設定檔屬性清單隨即顯示。 在此彈出視窗中，您可以選取要依其排名對象的屬性型別。 選取&#x200B;**[!UICONTROL 選取]**&#x200B;以將其新增至您的排名區塊。 請注意，選取的屬性只能&#x200B;**是**&#x200B;數字。
 
-![顯示屬性清單。](../images/ui/audience-composition/select-attribute-rank.png)
+![顯示屬性清單。](../images/ui/audience-composition/rank-attribute.png)
 
 選取屬性後，您可以選取排序依據。 這是以遞增（從最低到最高）或遞減（從最高到最低）順序顯示。
 
 此外，您可以啟用&#x200B;**[!UICONTROL 新增設定檔限制]**&#x200B;切換來限制傳回的設定檔數目。 啟用此切換時，您可以在&#x200B;**[!UICONTROL 包含的設定檔]**&#x200B;欄位中設定傳回的設定檔數目上限。
 
-![新增設定檔限制切換會反白顯示，讓您限制傳回的設定檔數目。](../images/ui/audience-composition/add-profile-limit.png)
+![新增設定檔限制切換會反白顯示，讓您限制傳回的設定檔數目。](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL 分割] {#split-block}
 
@@ -307,7 +301,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >title="其他輪廓"
 >abstract="其他設定檔切換可讓您使用不符合其他路徑任何指定條件的剩餘設定檔建立其他路徑。"
 
-**[!UICONTROL 分割]**&#x200B;區塊型別可讓您將新對象分割成各種子對象。 您可以根據百分比或屬性來分割此對象。 將您的對象分割成子對象時，此分割是&#x200B;**不**&#x200B;持續性的。 這表示每個評估的設定檔可能位於不同的子對象中。
+**[!UICONTROL 分割]**&#x200B;區塊型別可讓您將新對象分割成各種子對象。 您可以根據百分比或屬性來分割此對象。
 
 若要新增&#x200B;**[!UICONTROL 分割]**&#x200B;區塊，請選取&#x200B;**+**&#x200B;圖示，然後選取&#x200B;**[!UICONTROL 分割]**。
 
@@ -325,23 +319,25 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="持續性分割"
->abstract="您可以啟用此選項並選取要保留分割的身分名稱空間，讓百分比分割持續存在。"
+>abstract="您可以啟用此選項並選取身分名稱空間，讓百分比分割持續存在。"
 
 依百分比分割時，會根據提供的路徑數和百分比，隨機分割對象。
 
-例如，您可以有三個路徑，每個路徑具有不同的設定檔百分比。
+![百分比分割已反白顯示。](../images/ui/audience-composition/split-by-percentage.png)
 
-![系統會顯示已儲存對象數目和百分比的明細。](../images/ui/audience-composition/percentages.png)
+或者，您也可以提供身分，讓基於百分比的分割持續存在。 可用的身分型別包括組織上可用的所有身分名稱空間。
+
+![「依身分分割」核取方塊會反白顯示。 此外，可讓您選取要作為分割依據之身分的下拉式清單會反白顯示。](../images/ui/audience-composition/split-by-identity.png)
 
 ### 依屬性分割 {#split-attribute}
 
 依屬性分割時，將會根據提供的屬性分割對象。 若要選取要分割的屬性，請選取&#x200B;**[!UICONTROL 分割]**&#x200B;區塊，接著選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
-![已選取篩選按鈕，顯示如何依屬性篩選。](../images/ui/audience-composition/select-split-attribute.png)
+![已選取篩選按鈕，顯示如何依屬性篩選。](../images/ui/audience-composition/split-by-attribute.png)
 
 設定檔屬性清單隨即顯示。 選取屬性型別，然後選取&#x200B;**[!UICONTROL 選取]**&#x200B;以將其新增至您的分割區塊。
 
-![顯示屬性清單。](../images/ui/audience-composition/select-attribute-exclude.png)
+![顯示屬性清單。](../images/ui/audience-composition/select-attribute.png)
 
 選取屬性後，您可以在&#x200B;**[!UICONTROL 值]**&#x200B;欄位中新增值，以選擇哪些設定檔將屬於哪個子對象。
 
