@@ -1,11 +1,11 @@
 ---
 title: 資料收集的資料準備
-description: 了解設定 Adob​​e Experience Platform Web 和 Mobile SDK 的資料流時如何將資料對應到體驗資料模型 (XDM) 事件綱要。
+description: 了解設定 Adob​​e Experience Platform Web 和 Mobile SDK 的資料流時如何將資料對應到體驗資料模型 (XDM) 事件結構描述。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 60%
+source-wordcount: '1199'
+ht-degree: 59%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 60%
 
 「資料準備」是一種 Adob&#x200B;&#x200B;e Experience Platform 服務，可讓您和[體驗資料模型 (XDM)](../xdm/home.md) 相互對應、轉換和驗證資料。設定啟用 Platform 的[資料流](./overview.md)時，若將來源資料傳送到 Platform Edge Network，可以使用資料準備功能將其對應到 XDM。
 
-所有從網頁傳送的資料都必須以XDM的形式Experience Platform。 有3種方式可以將資料從頁面上的資料層轉譯為Experience Platform接受的XDM：
+所有從網頁傳送的資料都必須以XDM形式登入Experience Platform。 有3種方式可以將資料從頁面上的資料層轉譯為Experience Platform接受的XDM：
 
 1. 在網頁本身上將資料層重新格式化為XDM。
 2. 使用標籤原生資料元素功能，將網頁的現有資料層格式重新格式化為XDM。
-3. 使用資料收集的資料準備，透過Edge Network將網頁的現有資料層格式重新格式化為XDM。
+3. 透過Edge Network使用資料收集的資料準備，將網頁的現有資料層格式重新格式化為XDM。
 
 本指南著重於第3個選項。
 
@@ -28,7 +28,7 @@ ht-degree: 60%
 1. 網站具有格式正確、受控管和維護的資料層，且偏好直接傳送給Edge Network，而非使用JavaScript操作在頁面上將其轉換為XDM (透過標籤資料元素或手動JavaScript操作)。
 2. 網站上會部署標籤系統以外的標籤系統。
 
-## 透過WebSDK傳送現有資料層給Edge Network {#send-datalayer-via-websdk}
+## 透過WebSDK將現有的資料層傳送至Edge Network {#send-datalayer-via-websdk}
 
 必須使用`sendEvent`命令內的[`data`](/help/web-sdk/commands/sendevent/data.md)物件來傳送現有的資料層。
 
@@ -152,7 +152,7 @@ ht-degree: 60%
 
 +++
 
-您可以選取將物件以檔案形式上傳的選項，或選擇將原始物件貼到所提供的文字方塊中。如果 JSON 有效，則會在右側面板中顯示預覽綱要。選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
+您可以選取將物件以檔案形式上傳的選項，或選擇將原始物件貼到所提供的文字方塊中。如果 JSON 有效，則會在右側面板中顯示預覽結構描述。選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
 預期傳入資料的![JSON範例。](assets/data-prep/select-data.png)
 
@@ -162,10 +162,14 @@ ht-degree: 60%
 
 ## [!UICONTROL 對應]
 
-**[!UICONTROL 對應]**&#x200B;步驟隨即顯示，可讓您將來源資料中的欄位對應到 Platform 中目標事件綱要的欄位。在這裡，您可以使用兩種方式設定對應：
+**[!UICONTROL 對應]**&#x200B;步驟隨即顯示，可讓您將來源資料中的欄位對應到 Platform 中目標事件結構描述的欄位。在這裡，您可以使用兩種方式設定對應：
 
 * [透過手動程式為此資料流建立對應規則](#create-mapping)。
 * 從現有資料流[匯入對應規則](#import-mapping)。
+
+>[!IMPORTANT]
+>
+>「資料準備」對應會覆寫`identityMap`個XDM裝載，而這會進一步影響Real-Time CDP對象的設定檔比對。
 
 ### 建立對應規則 {#create-mapping}
 
@@ -177,7 +181,7 @@ ht-degree: 60%
 
 ![正在來源結構描述中選取要對應的欄位。](assets/data-prep/source-mapping.png)
 
-接下來，選取綱要圖示 (![綱要圖示](/help/images/icons/schema.png))，開啟目標事件綱要的類似對話框。選擇要將資料對應到的欄位，然後再確認「**[!UICONTROL 選取]**」。
+接下來，選取結構描述圖示 (![結構描述圖示](/help/images/icons/schema.png))，開啟目標事件結構描述的類似對話框。選擇要將資料對應到的欄位，然後再確認「**[!UICONTROL 選取]**」。
 
 ![選取要在目標結構描述中對應的欄位。](assets/data-prep/target-mapping.png)
 
@@ -221,7 +225,7 @@ ht-degree: 60%
 
 ### 完成對應
 
-繼續依照上述步驟將其餘的欄位對應到目標綱要。雖然您不必對應所有可用的來源欄位，但目標結構描述中設定為必要的任何欄位都必須對應，才能完成此步驟。 **[!UICONTROL 必要欄位]**&#x200B;計數器會顯示目前的設定中有多少個必要欄位尚未對應。
+繼續依照上述步驟將其餘的欄位對應到目標結構描述。雖然您不必對應所有可用的來源欄位，但目標結構描述中設定為必要的任何欄位都必須對應，才能完成此步驟。 **[!UICONTROL 必要欄位]**&#x200B;計數器會顯示目前的設定中有多少個必要欄位尚未對應。
 
 當必要的欄位數達到零且您對對應感到滿意後，請選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以完成變更。
 
