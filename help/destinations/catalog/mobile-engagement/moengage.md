@@ -3,9 +3,9 @@ title: Moengage連線
 description: Moengage是客戶參與平台，可即時促進消費者與品牌之間以客戶為中心的互動。
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-使用[!DNL Moengage]目的地來連線您的Adobe資料（使用者屬性、區段和事件），並即時對應至MoEngage。 然後，客戶可以對這些資料採取行動，提供個人化、鎖定目標的體驗。
+使用[!DNL Moengage]目的地來連線您的Adobe資料（使用者屬性、區段和事件），並將其對應至MoEngage即時處理。 然後，客戶可以對這些資料採取行動，提供個人化、鎖定目標的體驗。
 
 透過Adobe，整合非常簡單且直覺。 只需取用任何Adobe使用者設定檔，並將其對應至MoEngage使用者屬性即可。
 
@@ -143,7 +143,10 @@ ht-degree: 2%
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
-若要確認資料是否已成功匯出至[!DNL Moengage]目的地，請移至您[!DNL Moengage]帳戶的使用者設定檔。 您會看到名為「AEP區段」的使用者屬性。
+若要驗證資料是否已成功匯出至[!DNL Moengage]目的地，請移至[!DNL Moengage]帳戶中的使用者設定檔。 在這裡，您應該找到名為`AEPSegments`的使用者屬性（已自動建立），以及已在Adobe Experience Platform中先前步驟中對應的其他自訂屬性。
+
+`AEPSegments`是[!DNL Moengage]中的陣列型別屬性。 其中會列出使用者在Experience Platform中與之相關聯的所有Adobe對象名稱。
+
 
 ![Moengage目的地對應完成](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
