@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
 source-wordcount: '2313'
-ht-degree: 1%
+ht-degree: 11%
 
 ---
 
@@ -38,13 +38,13 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
->title="對象區塊"
+>title="客群區塊"
 >abstract="「對象」區塊可讓您新增要用來組成新對象的子對象。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
 >title="合併類型"
->abstract="合併型別會決定所選子對象的合併方式。 支援的值包括「聯集」、「交集」和「排除」重疊。"
+>abstract="合併類型決定所選子客群的組合方式。支援的值包括聯合、交集和排除重疊。"
 
 **[!UICONTROL 對象]**&#x200B;區塊型別可讓您新增要用來組成新的較大對象的子對象。 依預設，**[!UICONTROL 對象]**&#x200B;區塊會包含在構成畫布的最上方。
 
@@ -106,12 +106,12 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
 >title="排除區塊"
->abstract="「排除」區塊可讓您從構成中排除指定的對象或屬性。"
+>abstract="您可以利用排除區塊從客群構成當中排除特定的客群或屬性。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
 >title="排除類型"
->abstract="您可以排除屬於特定對象的設定檔（依對象排除）或根據特定屬性排除設定檔（依屬性排除）。"
+>abstract="您可以排除屬於特定客群的設定檔 (依客群排除)，也可以根據特定屬性排除設定檔 (依屬性排除)。"
 
 **[!UICONTROL 排除]**&#x200B;區塊型別可讓您從新的較大對象中排除指定的子對象或屬性。
 
@@ -160,23 +160,23 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich"
->title="豐富區塊"
->abstract="擴充區塊可讓您利用來自Adobe Experience Platform資料集的其他屬性擴充您的對象。"
+>title="擴充區塊"
+>abstract="您可以利用擴充區塊，透過 Adobe Experience Platform 資料集提供的其他屬性來擴充您的客群。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dataset"
 >title="擴充資料集"
->abstract="擴充資料集包含您要與構成建立關聯的資料。"
+>abstract="擴充資料集包含您想要與該客群構成相關聯的資料。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_criteria"
 >title="擴充條件"
->abstract="擴充條件包括Source聯結金鑰和擴充資料集聯結金鑰。 這兩個索引鍵可協調來源資料集和擴充資料集。"
+>abstract="擴充條件包括來源聯結索引鍵及擴充資料集聯結索引鍵。這兩個索引鍵會調和來源資料集和擴充資料集。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_attributes"
 >title="擴充屬性"
->abstract="擴充屬性是您想要與構成相關聯的屬性。"
+>abstract="擴充屬性是您想要與客群構成相關聯的屬性。"
 
 >[!IMPORTANT]
 >
@@ -248,17 +248,17 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
 
-## [!UICONTROL 排名] {#rank-block}
+## [!UICONTROL 等級] {#rank-block}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
->title="排名區塊"
->abstract="Rank區塊可讓您根據特定屬性來排名設定檔，並將其納入您的構成中。"
+>title="等級區塊"
+>abstract="您可以利用等級區塊並根據特定屬性將設定檔分為不同等級，並將這些等級包含在您的客群構成中。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rank_profilelimit_text"
->title="新增輪廓限制"
->abstract="「新增設定檔限制」切換可讓您指定排名程式中要包含的設定檔數目上限。"
+>title="新增設定檔限制"
+>abstract="透過新增設定檔限制的切換開關，您可以指定在決定等級過程中要包含設定檔的最大數量。"
 
 **[!UICONTROL Rank]**&#x200B;區塊型別可讓您根據指定的屬性來排名和排序設定檔，並將這些排名設定檔納入您的組合。
 
@@ -289,17 +289,17 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
 >title="分割區塊"
->abstract="「分割」區塊可讓您將構成分割成多個路徑。"
+>abstract="您可以利用分割區塊將您的客群構成分割成多個路徑。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_type"
 >title="分割類型"
->abstract="您可以依「百分比」分割或「屬性」分割來分割構成。 百分比分割會隨機將設定檔分割成多個路徑。 屬性分割可讓您根據指定的屬性分割設定檔。"
+>abstract="您可以使用百分比分割或屬性分割來分割客群構成。百分比分割會把設定檔隨機分割為多個路徑。屬性分割會根據指定屬性分割設定檔。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
->title="其他輪廓"
->abstract="其他設定檔切換可讓您使用不符合其他路徑任何指定條件的剩餘設定檔建立其他路徑。"
+>title="其他設定檔"
+>abstract="透過「其他設定檔」的切換開關，您可以利用剩餘的設定檔 (即與其他路徑的指定條件均不相符者) 建立其他路徑。"
 
 **[!UICONTROL 分割]**&#x200B;區塊型別可讓您將新對象分割成各種子對象。 您可以根據百分比或屬性來分割此對象。
 

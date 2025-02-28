@@ -46,7 +46,7 @@ ht-degree: 5%
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_profileretention"
->title="輪廓保留"
+>title="設定檔保留"
 >abstract="顯示每個資料集目前的保留原則。可在每個資料集的保留設定中修改此值。您只能設定 ExperienceEvent 資料集的保留時間。"
 
 >[!CONTEXTUALHELP]

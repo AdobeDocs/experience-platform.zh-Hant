@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '684'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -184,13 +184,13 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 >
 >已成功從原則中移除選取的沙箱。
 
-## 啟用原則 {#activate-policy}
+## 啟動原則 {#activate-policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="什麼是原則？"
->abstract="策略是將屬性組合在一起的陳述式，用於建立允許和不允許的動作。每個組織都附有您必須啟動的預設原則，才能開始根據標籤控制特定物件的存取權。 除非將使用者指派給具有相符標籤的角色，否則套用至資源的標籤會拒絕存取。 預設原則無法編輯或刪除，但可以啟用或停用。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/labels" text="管理標籤"
+>abstract="策略是將屬性組合在一起的陳述式，用於建立允許和不允許的動作。每個組織都有一個預設原則，您必須啟動該原則才能開始根據標籤控制特定物件的存取權。除非使用者被指派的角色擁有相符的標籤，否則資源所套用的標籤將拒絕使用者存取。您不能編輯或刪除預設原則，但可以啟動或停用預設原則。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/abac/permissions-ui/labels" text="管理標籤"
 
 若要啟用現有原則，請從&#x200B;**[!UICONTROL 原則]**&#x200B;標籤中選取原則。
 

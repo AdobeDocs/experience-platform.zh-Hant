@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；監控設定檔；監控資料流程；資料流程；設定檔；即時客戶設定檔；
+keywords: Experience Platform；首頁；熱門主題；監視器設定檔；監視器資料流程；資料流程；設定檔；即時客戶設定檔；
 description: 即時客戶設定檔可讓您透過合併來自多個管道（包括線上、離線、CRM和協力廠商）的資料，檢視每個個別客戶的整體檢視。 本教學課程提供如何使用Experience Platform使用者介面監控設定檔資料流的指示。
 title: 在UI中監視設定檔的資料流
 type: Tutorial
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 即時客戶設定檔可讓您透過合併來自多個管道（包括線上、離線、CRM和協力廠商）的資料，檢視每個個別客戶的整體檢視。 設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
-監控儀表板可讓您以視覺化方式呈現設定檔中的資料活動，包括資料設定檔的狀態。 本教學課程提供有關如何使用監視儀表板來使用Experience Platform使用者介面監視資料設定檔的說明，以讓您追蹤設定檔處理的狀態。
+監控儀表板可讓您以視覺化方式呈現設定檔中的資料活動，包括資料設定檔的狀態。 本教學課程提供如何使用Experience Platform使用者介面監控資料設定檔的監控儀表板，讓您追蹤設定檔處理狀態的說明。
 
 ## 快速入門 {#getting-started}
 
@@ -26,18 +26,18 @@ ht-degree: 7%
 - [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
 - [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-## 監視輪廓儀表板 {#profile-metrics}
+## 監視設定檔儀表板 {#profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
->title="輪廓處理"
->abstract="輪廓處理視圖會包含有關擷取至輪廓服務的記錄的資訊，包括建立的輪廓片段數、更新的輪廓片段數以及輪廓片段總數。"
+>title="設定檔處理"
+>abstract="設定檔處理視圖會包含有關擷取至設定檔服務的記錄的資訊，包括建立的設定檔片段數、更新的設定檔片段數以及設定檔片段總數。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
 >title="資料流執行詳細資訊"
->abstract="資料流執行詳細資訊頁面會顯示有關輪廓資料流執行的詳細資訊，包括其組織 ID 和資料流執行 ID。"
+>abstract="資料流執行詳細資訊頁面會顯示有關設定檔資料流執行的詳細資訊，包括其組織 ID 和資料流執行 ID。"
 
 若要存取&#x200B;**[!UICONTROL 設定檔]**&#x200B;儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL 監視]**。 在&#x200B;**[!UICONTROL 監視]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;卡片。
 

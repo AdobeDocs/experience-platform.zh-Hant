@@ -17,9 +17,9 @@ ht-degree: 3%
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [體驗資料模型(XDM)系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [體驗資料模型(XDM)系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
 * [即時客戶個人檔案](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 重要術語
 
@@ -57,7 +57,7 @@ ht-degree: 3%
 
 報表套裝是資料容器，構成[!DNL Analytics]報表的基礎。 一個組織可以有許多報表套裝，每個報表套裝都包含不同的資料集。
 
-您可以從任何區域擷取報告套裝（美國、英國或新加坡），前提是這些報告套裝對應至與在中建立來源連線的Experience Platform沙箱例項相同的組織。 報告套裝只能使用單一作用中資料流擷取。 已在您使用的沙箱或其他沙箱中擷取無法選取的報表套裝。
+您可以從任何區域擷取報表套裝（美國、英國或新加坡），前提是這些報表套裝對應至與Experience Platform沙箱例項（正在其中建立來源連線）相同的組織。 報告套裝只能使用單一作用中資料流擷取。 已在您使用的沙箱或其他沙箱中擷取無法選取的報表套裝。
 
 可以建立多個繫結連線，將多個報告套裝帶入同一個沙箱。 如果報表套裝中變數（例如eVar或事件）的結構描述不同，則應將其對應至自訂欄位群組中的特定欄位，並使用「資料準備」[避免資料衝突。 ](../../../../../data-prep/ui/mapping.md)報告套裝只能新增至單一沙箱。
 
@@ -168,12 +168,12 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-## 篩選即時客戶輪廓 {#filtering-for-profile}
+## 篩選即時客戶設定檔 {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="建立篩選規則 "
->abstract="將資料傳送到即時客戶輪廓時定義列層級和欄層級的篩選規則。使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於攝取輪廓**。使用欄層級篩選來選取您要&#x200B;**為攝取輪廓排除**&#x200B;的資料欄。篩選規則不適用於傳送到資料湖的資料。"
+>abstract="將資料傳送到即時客戶設定檔時定義列層級和欄層級的篩選規則。使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於攝取設定檔**。使用欄層級篩選來選取您要&#x200B;**為攝取設定檔排除**&#x200B;的資料欄。篩選規則不適用於傳送到資料湖的資料。"
 
 完成[!DNL Analytics]報表套裝資料的對映後，您可以套用篩選規則和條件，選擇性地將資料納入或排除內嵌至Real-Time Customer Profile。 僅支援篩選[!DNL Analytics]資料，且資料僅在輸入[!DNL Profile.]之前篩選。所有資料都會擷取到資料湖。
 
@@ -187,7 +187,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 * 如果您在[!DNL Analytics]流程的初始設定期間使用「資料準備」設定，這些變更也會套用至13個月自動回填。
    * 不過，不適用於篩選，因為篩選僅保留給即時資料。
 * 「資料準備」會套用至串流和批次擷取路徑。 如果您修改現有的「資料準備」設定，這些變更會套用至串流和批次擷取路徑上的新傳入資料。
-   * 不過，無論資料是串流或批次資料，任何「資料準備」設定都不會套用至已擷取到Experience Platform的資料。
+   * 不過，無論資料是串流或批次資料，任何「資料準備」設定都不會套用至已擷取至Experience Platform的資料。
 * 來自Analytics的標準屬性一律會自動對應。 因此，您無法將轉換套用至標準屬性。
    * 不過，您可以篩選掉標準屬性，只要Identity Service或設定檔中不需要這些屬性。
 * 您不能使用欄層級篩選來篩選必填欄位和身分欄位。
@@ -200,7 +200,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 >[!IMPORTANT]
 >
->使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於攝取輪廓**。使用資料行層級篩選來選取您要&#x200B;**排除以進行設定檔擷取**&#x200B;的資料資料行。
+>使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於攝取設定檔**。使用資料行層級篩選來選取您要&#x200B;**排除以進行設定檔擷取**&#x200B;的資料資料行。
 
 您可以在列層級和欄層級篩選[!DNL Profile]擷取的資料。 列層級篩選可讓您定義字串包含、等於、開頭或結尾等條件。 您也可以使用資料列層級篩選來使用`AND`以及`OR`聯結條件，並使用`NOT`否定條件。
 

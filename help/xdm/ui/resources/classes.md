@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；資料模型；ui；工作區；類別；類別；
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；資料模型；ui；工作區；類別；類別
 solution: Experience Platform
 title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
@@ -16,13 +16,13 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_filter"
 >title="標準或自訂類別篩選器"
->abstract="可用類別清單已根據其建立方式預先進行篩選。選取選項按鈕，在「標準」和「自訂」選項之間進行選擇。標準選項顯示由 Adobe 建立的實體，並包括 XDM 個人輪廓和 XDM 體驗事件類別。自訂選項顯示在您的組織內建立的實體。請參閱文件以了解更多有關建立和編輯類別的資訊。"
+>abstract="可用類別清單已根據其建立方式預先進行篩選。選取選項按鈕，在「標準」和「自訂」選項之間進行選擇。標準選項顯示由 Adobe 建立的實體，並包括 XDM 個人設定檔和 XDM 體驗事件類別。自訂選項顯示在您的組織內建立的實體。請參閱文件以了解更多有關建立和編輯類別的資訊。"
 
 在Adobe Experience Platform中，結構描述的類別會定義結構描述將包含的資料的行為方面（記錄或時間序列）。 除此之外，類別會說明基於該類別的所有結構描述所需包含的最小通用屬性數量，並提供合併多個相容資料集的方法。
 
 Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[XDM個人設定檔](../../classes/individual-profile.md)和[XDM ExperienceEvent](../../classes/experienceevent.md)。 除了這些核心類別之外，您也可以建立自己的自訂類別，以說明貴組織更具體的使用案例。
 
-本檔案概述如何在Experience PlatformUI中建立、編輯及管理自訂類別。
+本檔案概述如何在Experience Platform UI中建立、編輯及管理自訂類別。
 
 ## 先決條件 {#prerequisites}
 
@@ -38,7 +38,7 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 
 ## 篩選類別 {#filter}
 
-系統會根據類別的建立方式自動篩選類別清單。 預設設定會顯示由Adobe定義的類別。 您還可以篩選清單以顯示您的組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL Standard]選項會顯示Adobe建立的實體，而[!UICONTROL Custom]選項則會顯示在您的組織內建立的實體。
+系統會根據類別的建立方式自動篩選類別清單。 預設設定會顯示Adobe定義的類別。 您還可以篩選清單以顯示您的組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL 標準]選項會顯示Adobe建立的實體，而[!UICONTROL 自訂]選項則會顯示貴組織內建立的實體。
 
 ![ [!UICONTROL 結構描述]工作區的[!UICONTROL 類別]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/classes/standard-and-custom-classes.png)
 

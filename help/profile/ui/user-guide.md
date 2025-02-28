@@ -52,7 +52,7 @@ ht-degree: 3%
 
 ![設定檔量度會顯示並反白顯示。](../images/user-guide/browse-metrics.png)
 
-### 輪廓計數 {#profile-count}
+### 設定檔計數 {#profile-count}
 
 在您組織的預設合併原則已與設定檔片段合併，以針對每個個別客戶形成單一設定檔後，設定檔計數會顯示貴組織在Experience Platform中的設定檔總數。 換言之，您的組織可能擁有與單一客戶相關的多個設定檔片段，該客戶會跨不同管道與您的品牌互動，但這些片段會合併在一起（根據預設合併原則），且會傳回「1」設定檔計數，因為這些片段都與同一個人相關。
 
@@ -126,12 +126,12 @@ ht-degree: 3%
 
 ![符合身分值的設定檔會反白顯示。](../images/user-guide/filtered-identity-value.png)
 
-## 檢視輪廓詳細資訊 {#profile-detail}
+## 檢視設定檔詳細資訊 {#profile-detail}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="找不到實體"
->abstract="這代表 Platform 無法找到所要求的實體。若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保您所要存取的實體 URL 列出正確的輪廓 ID。</li><li>確保您擁有所要存取的實體之正確的組織和沙箱組合。</li></ul>"
+>abstract="這代表 Platform 無法找到所要求的實體。若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保您所要存取的實體 URL 列出正確的設定檔 ID。</li><li>確保您擁有所要存取的實體之正確的組織和沙箱組合。</li></ul>"
 
 選取&#x200B;**[!UICONTROL 設定檔識別碼]**&#x200B;後，**[!UICONTROL 詳細資料]**&#x200B;索引標籤會開啟。 **[!UICONTROL 詳細資料]**&#x200B;標籤上顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成個別客戶的單一檢視。 這包括基本屬性、連結的身分和管道偏好設定等客戶細節。
 

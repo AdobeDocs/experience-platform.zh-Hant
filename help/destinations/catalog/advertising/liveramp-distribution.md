@@ -11,7 +11,7 @@ ht-degree: 38%
 
 # [!DNL LiveRamp - Distribution]個連線
 
-[!DNL LiveRamp - Distribution]連線可讓您在行動、網頁、顯示和連線的電視媒體中，啟用從Experience Platform到高階發行者的對象。
+[!DNL LiveRamp - Distribution]連線可讓您在行動裝置、網路、顯示和連線的電視媒體中，啟用從Experience Platform到高階發行者的對象。
 
 >[!IMPORTANT]
 >
@@ -52,7 +52,7 @@ ht-degree: 38%
 
 ## 將對象上線到LiveRamp {#onboarding}
 
-透過[!DNL LiveRamp - Distribution]連線啟用對象之前，請使用[LiveRamp — 上線](liveramp-onboarding.md)連線將您的Experience Platform對象匯出至LiveRamp。
+透過[!DNL LiveRamp - Distribution]連線啟用對象之前，請使用[LiveRamp — 入門](liveramp-onboarding.md)連線將您的Experience Platform對象匯出至LiveRamp。
 
 將對象加入LiveRamp後，從[連線到目的地](#connect)步驟繼續啟用工作流程，以選取並設定資料啟用的目標目的地平台。
 
@@ -109,8 +109,8 @@ ht-degree: 38%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
->title="4C 品牌輪廓 ID"
->abstract="輸入與您的 4C 品牌輪廓相關的數值 ID。如果您沒有此 ID，請聯絡您的 4C 用戶端服務代表。"
+>title="4C 品牌設定檔 ID"
+>abstract="輸入與您的 4C 品牌設定檔相關的數值 ID。如果您沒有此 ID，請聯絡您的 4C 用戶端服務代表。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
@@ -427,7 +427,7 @@ ht-degree: 38%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

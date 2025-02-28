@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 7%
+ht-degree: 15%
 
 ---
 
@@ -61,12 +61,12 @@ organizations = [{
 
 [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地，完成雲端儲存空間目的地的[啟動步驟](/help/destinations/ui/activate-batch-profile-destinations.md)並到達[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。 連線到所需的雲端目的地時，您必須選取&#x200B;**[!UICONTROL 匯出陣列、對應、物件]**&#x200B;切換開啟。 如需詳細資訊，請參閱以下章節。
 
-## 匯出陣列、地圖、物件切換 {#export-arrays-maps-objects-toggle}
+## 匯出陣列、對應及物件的切換開關 {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="匯出陣列、對應及物件"
->abstract="<p> 將此設定切換為<b>開啟</b>，便可以將陣列、對應及物件匯出至 JSON 或 Parquet 檔案。您可以在對應步驟的來源欄位檢視中選取這些物件型別。 開啟切換後，您就無法在對應步驟中使用計算欄位選項。</p><p>透過這個切換<b>關閉</b>，您可以在啟用對象時使用計算欄位選項並套用各種資料轉換函式。 但是，您<i>不能</i>將陣列、對應和物件匯出至 JSON 或 Parquet 檔案，並且必須設定不同的目的地才能完成該目的。</p>"
+>abstract="<p> 將此設定切換為<b>開啟</b>，便可以將陣列、對應及物件匯出至 JSON 或 Parquet 檔案。您可以在對應步驟的來源欄位視圖中選取這些物件類型。在切換為開啟的情況下，您無法在對應步驟中使用計算欄位選項。</p><p>將這項設定切換為<b>關閉</b>後，即可使用計算欄位選項並在啟動客群時套用各種資料轉換函數。但是，您<i>不能</i>將陣列、對應和物件匯出至 JSON 或 Parquet 檔案，並且必須設定不同的目的地才能達成該目的。</p>"
 
 連線到雲端儲存空間目的地時，您可以設定&#x200B;**[!UICONTROL 匯出陣列、地圖、物件]**&#x200B;的切換開啟或關閉。
 
@@ -74,7 +74,7 @@ organizations = [{
 
 將此設定切換為&#x200B;**開啟**，便可以將陣列、對應及物件匯出至 JSON 或 Parquet 檔案。啟用受眾至雲端儲存空間目的地時，您可以在[對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)的來源欄位檢視中選取這些物件型別。 不過，若開啟此設定，您就無法於啟用時使用計算欄位選項來轉換資料。
 
-透過這個切換&#x200B;**關閉**，您可以在啟用對象時使用計算欄位選項並套用各種資料轉換函式。 不過，您無法將陣列、地圖和物件匯出至JSON或Parquet檔案，且必須為此設定個別的目的地。
+將這項設定切換為&#x200B;**關閉**&#x200B;後，即可使用計算欄位選項並在啟動客群時套用各種資料轉換函數。不過，您無法將陣列、地圖和物件匯出至JSON或Parquet檔案，且必須為此設定個別的目的地。
 
 ## 匯出陣列、地圖、物件切換&#x200B;*開啟* {#export-arrays-maps-objects-toggle-on}
 

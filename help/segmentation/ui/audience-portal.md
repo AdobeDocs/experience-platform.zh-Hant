@@ -35,7 +35,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="流失"
->abstract="流失代表和上次執行區段作業時相比，對象內正在變更的輪廓的百分比。"
+>abstract="流失代表和上次執行區段作業時相比，對象內正在變更的設定檔的百分比。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
@@ -96,7 +96,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | 欄位 | 說明 |
 | ----- | ----------- |
 | [!UICONTROL 名稱] | 對象名稱。 |
-| [!UICONTROL 輪廓計數] | 符合對象資格的設定檔總數。 |
+| [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
 | [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括細分服務、自訂上傳、對象構成和Audience Manager。 |
 | [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括`Draft`、`Inactive`和`Published`。 如需生命週期狀態的詳細資訊，包括不同狀態的意義，以及如何將對象移至不同生命週期狀態，請參閱分段常見問答集](../faq.md#lifecycle-status)的[生命週期狀態區段。 |
 | [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括[!UICONTROL 批次]、[!UICONTROL 串流]、[!UICONTROL Edge]和[!UICONTROL 未排程]。 |
@@ -323,7 +323,7 @@ abstract="您可以在單一彈性對象評估執行中評估最多 20 個對象
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| 輪廓計數 | 符合對象資格的設定檔總數。 |
+| 設定檔計數 | 符合對象資格的設定檔總數。 |
 | 資料集名稱 | 對象所擷取的資料集名稱。 您可以選取資料集名稱，以取得資料集的詳細資訊。 若要深入瞭解資料集，請閱讀[資料集UI指南](../../catalog/datasets/user-guide.md)。 |
 | 資料集批次 | 對象所擷取的資料集ID。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
 | 輪廓批次 | 在Platform上建立設定檔的批次識別碼。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |

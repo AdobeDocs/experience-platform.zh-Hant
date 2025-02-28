@@ -6,7 +6,7 @@ exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '259'
-ht-degree: 0%
+ht-degree: 17%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_sandboxes_about"
->title="何謂沙箱？"
->abstract="沙箱是單一Platform執行個體中的虛擬分割區。 在沙箱內採取的所有內容和動作都限於該沙箱，不會影響其他沙箱。 沙箱的存取權透過角色進行管理。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="沙箱總覽"
+>title="什麼是沙箱？"
+>abstract="沙箱是 Platform 的單一實例內的虛擬分割。沙箱內所有內容及所採取的動作僅能在該沙箱中運作，而不會影響其他沙箱。沙箱的存取權按照角色進行管理。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sandbox/home" text="沙箱概觀"
 
 沙箱是單一Experience Platform執行個體中的虛擬分割區，可與數位體驗應用程式的開發流程無縫整合。 在沙箱內採取的所有內容和動作都僅限於該沙箱，不會影響任何其他沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概觀](../../../sandboxes/home.md)。
 

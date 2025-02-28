@@ -50,27 +50,27 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="資料流執行詳細資訊"
->abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
+>abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
->title="收到的輪廓"
->abstract="資料流中收到的輪廓總數。此值每 60 分鐘更新一次。"
+>title="收到的設定檔"
+>abstract="資料流中收到的設定檔總數。此值每 60 分鐘更新一次。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="啟用的身分識別"
->abstract="成功啟用到所選目的地之個別輪廓身分識別的計數。此量度包括從匯出的對象中建立、更新和刪除的身分識別。"
+>abstract="成功啟用到所選目的地之個別設定檔身分識別的計數。此量度包括從匯出的對象中建立、更新和刪除的身分識別。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="排除的身分識別"
->abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別輪廓記錄的計數。"
+>abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別設定檔記錄的計數。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="失敗的身分識別"
->abstract="針對所選目的地失敗的個別輪廓身分識別的計數。請檢查錯誤診斷以取得詳細資料。"
+>abstract="針對所選目的地失敗的個別設定檔身分識別的計數。請檢查錯誤診斷以取得詳細資料。"
 
 針對串流目的地，[!UICONTROL 資料流執行]索引標籤會提供資料流執行上量度資料的每小時更新。 標示為最顯著的統計資料是用於身分。
 
@@ -139,23 +139,23 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
->abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
+>abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
->title="收到的輪廓"
->abstract="資料流中收到的輪廓總數。此值每 60 分鐘更新一次。"
+>title="收到的設定檔"
+>abstract="資料流中收到的設定檔總數。此值每 60 分鐘更新一次。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="啟用的身分識別"
->abstract="成功啟用到所選目的地之個別輪廓身分識別的計數。此量度包括從匯出的對象中建立、更新和刪除的身分識別。"
+>abstract="成功啟用到所選目的地之個別設定檔身分識別的計數。此量度包括從匯出的對象中建立、更新和刪除的身分識別。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="排除的身分識別"
->abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別輪廓記錄的計數。"
+>abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別設定檔記錄的計數。"
 
 針對批次目的地，[!UICONTROL 資料流執行]索引標籤會提供資料流執行上的量度資料。 接著會顯示個別執行及其特定量度的清單，以及身分的下列總計：
 
@@ -215,7 +215,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="啟用"
->abstract="目標啟用視圖包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分識別的量度。"
+>abstract="目標啟用視圖包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。"
 
 若要存取[!UICONTROL 監視]儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL 監視]** （![監檢視示](/help/images/icons/monitoring.png)）。 在[!UICONTROL 監視]頁面上，選取[!UICONTROL 目的地]。 [!UICONTROL 監視]儀表板包含目的地執行工作的度量和資訊。
 

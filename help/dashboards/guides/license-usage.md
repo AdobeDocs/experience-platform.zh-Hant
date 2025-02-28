@@ -33,14 +33,14 @@ ht-degree: 18%
 >title="授權使用量儀表板"
 >abstract="授權使用量儀表板讓您可深入了解您已購買的 Adobe Experience Platform 產品。儀表板概觀會顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="授權使用量儀表板"
 >abstract="授權使用量儀表板讓您可深入了解您已購買的 Adobe Experience Platform 產品。儀表板概觀會顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
@@ -51,9 +51,9 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="預測的可定址對象"
->abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名輪廓資料期限。"
+>abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/event-expirations" text="體驗事件過期"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
@@ -111,16 +111,16 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="預估使用量"
->abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名輪廓資料期限。"
+>abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="預估使用量"
->abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名輪廓資料期限。"
+>abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 根據深入的使用預測主動管理並最佳化您的授權資源。 [!UICONTROL 預計使用量]欄可精確地預測您所有購買產品在所有生產及開發沙箱中沙箱層級的未來授權使用量。 此警示功能會根據您截至本日曆月15日的使用情況，提供未來六週內授權使用情況的預測。 預測提供上下限。
 

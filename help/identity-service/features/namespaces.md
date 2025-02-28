@@ -32,12 +32,12 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="身分識別值"
->abstract="身分識別值是代表唯一個人、組織或資產的識別碼。該值代表的身分識別的內容或類型由相對應的身分命名空間定義。當全部輪廓片段都符合記錄資料時，命名空間和身分識別值必須相符。當全部輪廓片段都符合記錄資料時，命名空間和身分識別值必須相符。"
+>abstract="身分識別值是代表唯一個人、組織或資產的識別碼。該值代表的身分識別的內容或類型由相對應的身分命名空間定義。當全部設定檔片段都符合記錄資料時，命名空間和身分識別值必須相符。當全部設定檔片段都符合記錄資料時，命名空間和身分識別值必須相符。"
 >text="Learn more in documentation"
 
 完整識別包含兩個元件： **識別值**&#x200B;和&#x200B;**識別名稱空間**。 例如，如果身分的值為`scott@acme.com`，則名稱空間會提供此值的內容，方法是將其識別為電子郵件地址。 同樣地，名稱空間可以將`555-123-456`區分為電話號碼，將`3126ABC`區分為CRMID。 基本上，**名稱空間會提供特定身分識別的內容**。 跨設定檔片段比對記錄資料時，例如[!DNL Real-Time Customer Profile]合併設定檔資料時，身分值和名稱空間必須相符。
 
-例如，兩個設定檔片段可能包含不同的主要ID，但兩者的「電子郵件」名稱空間值相同，因此Experience Platform能看到這些片段實際上是同一個人，並將個人資料一起匯入身分圖表中。
+例如，兩個設定檔片段可能包含不同的主要ID，但兩者的「電子郵件」名稱空間值相同，因此Experience Platform能夠看到這些片段實際上是相同的個人，並將個人資料一起匯入身分圖表中。
 
 >[!BEGINSHADEBOX]
 
@@ -85,7 +85,7 @@ Experience Platform中有以下身分型別：
 | 裝置 ID | 裝置 ID 會識別硬體裝置，例如 IDFA (iPhone 和 iPad)、GAID (Android) 和 RIDA (Roku)，而且可由家中的多個人共用。 |
 | 電子郵件地址 | 電子郵件地址通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 此型別的身分包含個人識別資訊(PII)。 這是指示[!DNL Identity Service]要敏感地處理值。 |
 | 非人員識別碼 | 非人員 ID 是用於儲存需要命名空間但未連接到人員叢集的識別碼。例如，產品 SKU；與產品、組織或存放區有關的資料。 |
-| 合作夥伴 ID | <ul><li>合作夥伴 ID 指資料合作夥伴用於代表人員的識別碼。合作夥伴ID通常使用假名，以免揭露個人的真實身分，而且可能是機率。 在Real-time Customer Data Platform中，合作夥伴ID主要用於擴充受眾啟用和資料擴充，而非用於建立身分圖表連結。</li><li>擷取包含指定為合作夥伴ID型別的身分名稱空間的身分時，不會產生身分圖表。</li><li>若無法使用合作夥伴ID的身分型別來內嵌合作夥伴資料，可能會導致身分服務受到系統圖表限制，且個人資料可能會不必要地合併。</li><ul> |
+| 合作夥伴 ID | <ul><li>合作夥伴 ID 指資料合作夥伴用於代表人員的識別碼。合作夥伴ID通常使用假名，以免揭露個人的真實身分，而且可能是機率。 在Real-Time Customer Data Platform中，合作夥伴ID主要用於擴充受眾啟用和資料擴充，而非用於建立身分圖表連結。</li><li>擷取包含指定為合作夥伴ID型別的身分名稱空間的身分時，不會產生身分圖表。</li><li>若無法使用合作夥伴ID的身分型別來內嵌合作夥伴資料，可能會導致身分服務受到系統圖表限制，且個人資料可能會不必要地合併。</li><ul> |
 | 電話號碼 | 電話號碼通常與單一人員相關聯，因此可用於跨不同頻道識別該人員。 此型別的身分識別包括PII。 這是指示[!DNL Identity Service]以敏感地處理值。 |
 
 {style="table-layout:auto"}
@@ -98,7 +98,7 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 
 | 顯示名稱 | 說明 |
 | ------------ | ----------- |
-| AdCloud | 代表AdobeAdCloud的名稱空間。 |
+| AdCloud | 代表Adobe AdCloud的名稱空間。 |
 | Adobe Analytics (舊 ID) | 代表Adobe Analytics的名稱空間。 如需詳細資訊，請參閱[Adobe Analytics名稱空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)上的下列檔案。 |
 | Apple IDFA （廣告商的ID） | 代表廣告商Apple ID的名稱空間。 如需詳細資訊，請參閱下列有關[興趣型廣告](https://support.apple.com/en-us/HT202074)的檔案。 |
 | Apple推播通知服務 | 代表使用Apple推播通知服務所收集之身分的名稱空間。 如需詳細資訊，請參閱[Apple推播通知服務](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)上的下列檔案。 |

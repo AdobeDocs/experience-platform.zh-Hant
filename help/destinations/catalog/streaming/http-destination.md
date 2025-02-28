@@ -176,7 +176,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="HTTP 端點"
->abstract="要將輪廓資料傳送到的 HTTP 端點的 URL。"
+>abstract="要將設定檔資料傳送到的 HTTP 端點的 URL。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"

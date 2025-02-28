@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 10%
+ht-degree: 16%
 
 ---
 
@@ -118,13 +118,13 @@ UI中的角色可使用下列篩選器：
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
-## 管理角色的API認證 {#manage-api-credentials-for-role}
+## 管理角色 API 認證 {#manage-api-credentials-for-role}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
->title="什麼是API認證？"
->abstract="系統會將API憑證指派給角色，以授予使用者和開發人員對Platform API的存取權。 使用Platform API，您可以利用程式設計方式執行資料上的基本CRUD （建立、讀取、更新、刪除）操作，例如設定計算屬性、存取資料/實體、匯出資料、刪除不需要的資料或批次等。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="平台API指南"
+>title="什麼是 API 認證？"
+>abstract="指派給各個角色的 API 認證，將賦予使用者和開發人員存取 Platform API 的權限。您可以使用 Platform API 以程式設計的方式對資料執行基本的 CRUD (建立、讀取、更新、刪除) 操作，例如設定計算屬性、存取資料/實體、匯出資料、刪除不需要的資料或批次等。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API 指南"
 
 >[!IMPORTANT]
 >
@@ -154,13 +154,13 @@ UI中的角色可使用下列篩選器：
 
 您將會返回&#x200B;**[!UICONTROL API認證]**&#x200B;標籤。
 
-## 管理角色的使用者群組 {#manage-user-groups}
+## 管理角色所屬使用者群組 {#manage-user-groups}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_usergroups_about"
 >title="什麼是使用者群組？"
->abstract="使用者群組是多個使用者的集合，這些使用者共用相同功能的存取權。 組織內資源的存取權會透過指派給使用者群組的角色來管理。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="管理角色"
+>abstract="使用者群組是擁有相同功能之存取權的多位使用者的集合。存取組織內各項資源的權限，則是透過指派給使用者群組的角色進行管理。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/abac/permissions-ui/roles" text="管理角色"
 
 使用者群組是多個使用者，這些使用者已分組在一起，並且擁有執行相同功能的存取權。
 

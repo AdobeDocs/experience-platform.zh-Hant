@@ -1,20 +1,21 @@
 ---
-title: 使用計算欄位，對匯出至雲端儲存空間的資料執行轉換
+title: 使用計算欄位對匯出到雲端儲存目標的資料執行轉換
 type: Tutorial
 description: 瞭解如何使用計算欄位功能，對匯出至雲端儲存空間的資料執行轉換
-source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
+exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
+source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
-# 使用計算欄位，對匯出至雲端儲存空間的資料執行轉換 {#data-transformation-calculated-fields}
+# 使用計算欄位對匯出到雲端儲存目標的資料執行轉換 {#data-transformation-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="新增計算欄位"
->abstract="<p>使用&#x200B;**新增計算欄位**&#x200B;控制項，對匯出至雲端儲存目的地的資料執行各種資料轉換。 例如，您可以將雜湊套用至資料、將陣列串連至字串等。"
+>abstract="<p>使用「**新增計算欄位**」控制項對匯出到雲端儲存目標的資料執行各種資料轉換。例如，您可以對資料進行雜湊、將陣列串連成字串等等。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="範例"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="已知限制"
 
@@ -39,7 +40,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="啟用階層式輸出結構描述"
->abstract="開啟此設定以啟用將陣列、地圖和物件匯出至JSON或Parquet檔案。"
+>abstract="將此設定切換為開啟，便可以將陣列、對應及物件匯出至 JSON 或 Parquet 檔案。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"

@@ -6,7 +6,7 @@ exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 1%
+ht-degree: 11%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_users_about"
 >title="什麼是使用者？"
->abstract="使用者是指有權存取Experience Platform的個人。 個別使用者對組織資源的存取權會透過角色進行管理。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="管理角色"
+>abstract="使用者是擁有 Experience Platform 存取權的個體。個人使用者存取組織資源的權限須按照角色進行管理。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/abac/permissions-ui/roles" text="管理角色"
 
 如果您想要檢視使用者詳細資訊以及指派給他們的角色，請選取「**[!UICONTROL 使用者]**」標籤。
 

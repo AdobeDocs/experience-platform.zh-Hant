@@ -119,7 +119,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="貯體名稱"
->abstract="長度必須介於 3 到 63 個字元之間。開頭和結尾必須是字母或數字。必須僅包含小寫字母、數字或連字號 (-)。不得格式化為IP位址（例如，192.100.1.1）。"
+>abstract="長度必須介於 3 到 63 個字元之間。開頭和結尾必須是字母或數字。必須僅包含小寫字母、數字或連字號 (-)。不可以採用 IP 位址的格式 (例如 192.100.1.1)。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"

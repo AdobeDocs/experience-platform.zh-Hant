@@ -1,6 +1,6 @@
 ---
-title: 在Real-time Customer Data Platform B2B edition中定義兩個結構描述之間的關係
-description: 瞭解如何在Adobe Real-time Customer Data Platform B2B edition中定義兩個結構描述之間的多對一關係。
+title: 在Real-Time Customer Data Platform B2B edition中定義兩個結構描述之間的關係
+description: 瞭解如何在Adobe Real-Time Customer Data Platform B2B edition中定義兩個結構描述之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 12%
 >title="參考結構描述"
 >abstract="選取要建立關係的結構描述。根據結構描述的類別，結構描述還可能和 B2B 內容中的其他實體存在現有關係。請查看文件以了解 B2B 結構描述類別彼此間的關係。"
 
-Adobe Real-time Customer Data Platform B2B edition提供可擷取基本B2B資料實體的數個Experience Data Model (XDM)類別，包括[帳戶](../classes/b2b/business-account.md)、[機會](../classes/b2b/business-opportunity.md)、[行銷活動](../classes/b2b/business-campaign.md)等。 透過根據這些類別建立結構描述並啟用它們以用於[即時客戶設定檔](../../profile/home.md)，您可以將不同來源的資料合併到稱為聯合結構描述的統一表示中。
+Adobe Real-Time Customer Data Platform B2B edition提供可擷取基本B2B資料實體的數個Experience Data Model (XDM)類別，包括[帳戶](../classes/b2b/business-account.md)、[機會](../classes/b2b/business-opportunity.md)、[行銷活動](../classes/b2b/business-campaign.md)等。 透過根據這些類別建立結構描述並啟用它們以用於[即時客戶設定檔](../../profile/home.md)，您可以將不同來源的資料合併到稱為聯合結構描述的統一表示中。
 
 不過，聯合結構描述只能包含共用相同類別的結構描述所擷取的欄位。 這就是結構描述關係的用處。 透過在B2B結構描述中實作關係，您可以說明這些業務實體如何彼此關聯，並可在下游細分使用案例中包含來自多個類別的屬性。
 
@@ -28,7 +28,7 @@ Adobe Real-time Customer Data Platform B2B edition提供可擷取基本B2B資料
 
 >[!NOTE]
 >
->如果您未使用Real-time Customer Data Platform B2B edition或想建立一對一的關係，請改為參閱[建立一對一的關係](./relationship-ui.md)指南。
+>如果您未使用Real-Time Customer Data Platform B2B edition或想建立一對一的關係，請改為參閱[建立一對一的關係](./relationship-ui.md)指南。
 >
 >本教學課程著重於如何在Platform UI中手動建立B2B結構描述之間的關係。 如果您從B2B來源連線引進資料，您可以使用自動產生公用程式來建立所需的結構描述、身分和關係。 如需使用自動產生公用程式[的詳細資訊，請參閱B2B名稱空間和結構描述的來原始檔](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)。
 
@@ -36,7 +36,7 @@ Adobe Real-time Customer Data Platform B2B edition提供可擷取基本B2B資料
 
 此教學課程需要您實際瞭解[!DNL XDM System]以及[!DNL Experience Platform] UI中的結構描述編輯器。 在開始本教學課程之前，請先檢閱下列檔案：
 
-* Experience Platform](../home.md)中的[XDM系統： [!DNL Experience Platform]中XDM及其實作的概觀。
+* Experience Platform中的[XDM系統](../home.md)： [!DNL Experience Platform]中XDM及其實作的概觀。
 * [結構描述組合的基本概念](../schema/composition.md)： XDM結構描述的建置區塊簡介。
 * [使用 [!DNL Schema Editor]](create-schema-ui.md)建立結構描述：此教學課程涵蓋如何在UI中建立和編輯結構描述的基本知識。
 
@@ -84,12 +84,12 @@ Adobe Real-time Customer Data Platform B2B edition提供可擷取基本B2B資料
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="目前結構描述中的關係名稱"
->abstract="說明從目前結構描述到參考結構描述的關係的標籤 (例如，「相關帳戶」)。此標籤用於輪廓和客戶細分，以從相關 B2B 實體為資料提供上下文。請查看文件以了解有關建置 B2B 結構描述關係的詳細資訊。"
+>abstract="說明從目前結構描述到參考結構描述的關係的標籤 (例如，「相關帳戶」)。此標籤用於設定檔和客戶細分，以從相關 B2B 實體為資料提供上下文。請查看文件以了解有關建置 B2B 結構描述關係的詳細資訊。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="參考結構描述中的關係名稱"
->abstract="說明從參考結構描述到目前結構描述的關係的標籤 (例如，「相關機會」)。此標籤用於輪廓和客戶細分，以從相關 B2B 實體為資料提供上下文。請查看文件以了解有關建置 B2B 結構描述關係的詳細資訊。"
+>abstract="說明從參考結構描述到目前結構描述的關係的標籤 (例如，「相關機會」)。此標籤用於設定檔和客戶細分，以從相關 B2B 實體為資料提供上下文。請查看文件以了解有關建置 B2B 結構描述關係的詳細資訊。"
 
 為了定義兩個結構描述之間的關係，來源結構描述必須具有專用欄位，以指示參考結構描述的主要身分。 標準B2B類別包含常用相關商業實體的專用來源索引鍵欄位。 例如，[!UICONTROL XDM商業機會]類別包含相關帳戶(`accountKey`)與相關行銷活動(`campaignKey`)的來源金鑰欄位。 不過，如果您需要超過預設的元件，也可以使用自訂欄位群組，將其他[!UICONTROL B2B Source]欄位新增到結構描述中。
 

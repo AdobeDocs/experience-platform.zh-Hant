@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；UI；UI；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；架構編輯器；架構編輯器；架構；架構；架構；架構；架構；建立
+keywords: Experience Platform；首頁；熱門主題；ui；UI；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；結構描述編輯器；結構描述編輯器；結構描述；結構描述；結構描述；建立
 solution: Experience Platform
 title: 使用結構編輯器建立結構
 type: Tutorial
@@ -245,7 +245,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 | [!UICONTROL 必要] | 表示資料擷取需要欄位。 根據此結構描述上傳到資料集，但不包含此欄位的任何資料在擷取時都會失敗。 |
 | [!UICONTROL 陣列] | 表示欄位包含值的陣列，每個都具有資料型別 specified. 例如，在資料型別的欄位上使用此限制 of 「[!UICONTROL 字串]」指定欄位將包含字串陣列。 |
 | [!UICONTROL 列舉與建議值] | 列舉表示此欄位必須包含可能值的列舉清單中的其中一個值。 或者，您也可以使用此選項來只提供字串欄位的建議值清單，而不用限制欄位為這些值。 |
-| [!UICONTROL 身分] | 表示此欄位是身分欄位。 有關身分欄位的詳細資訊[稍後在本教學課程](#identity-field)中提供。 |
+| [!UICONTROL 身分識別] | 表示此欄位是身分欄位。 有關身分欄位的詳細資訊[稍後在本教學課程](#identity-field)中提供。 |
 | [!UICONTROL 關係] | 雖然結構描述關聯性可透過使用聯合結構描述和[!DNL Real-Time Customer Profile]來推斷，但這僅適用於共用相同類別的結構描述。 [!UICONTROL Relationship]條件約束指出此欄位參考以不同類別為基礎的結構描述的主要身分，這表示兩個結構描述之間的關係。 如需詳細資訊，請參閱[定義關聯性](./relationship-ui.md)的教學課程。 |
 
 {style="table-layout：自動"}
@@ -369,12 +369,12 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 [!CONTEXTUALHELP]
 id="platform_schemas_delete_profileenabledwithdatasets"
 title="無法刪除結構描述"
-abstract="無法刪除結構描述，因為已針對輪廓啟用它，而且它有關聯的資料集。"
+abstract="無法刪除結構描述，因為已針對設定檔啟用它，而且它有關聯的資料集。"
 
 [!CONTEXTUALHELP]
 id="platform_schemas_delete_profileenablednodatasets"
 title="無法刪除結構描述"
-abstract="無法刪除結構描述，因為已針對輪廓啟用它。"
+abstract="無法刪除結構描述，因為已針對設定檔啟用它。"
 
 [!CONTEXTUALHELP]
 id="platform_schemas_delete_withdatasetsnotprofileenabled"

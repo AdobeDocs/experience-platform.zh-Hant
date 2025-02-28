@@ -23,7 +23,7 @@ ht-degree: 8%
 
 ## 先決條件 {#prerequisites}
 
-刪除記錄需要實際瞭解身分欄位在Experience Platform中的運作方式。 具體來說，您必須知道要刪除其記錄的實體的身分名稱空間值，端視您要從中刪除這些記錄的資料集（或資料集）而定。
+刪除記錄需要實際瞭解Experience Platform中身分欄位的運作方式。 具體來說，您必須知道要刪除其記錄的實體的身分名稱空間值，端視您要從中刪除這些記錄的資料集（或資料集）而定。
 
 請參閱下列檔案，以取得有關Platform中身分的詳細資訊：
 
@@ -68,7 +68,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="身分識別命名空間"
->abstract="身分識別命名空間指將記錄和 Experience Platform 中的消費者輪廓繫結的屬性。資料集的身分識別命名空間欄位由資料集建立基礎的結構描述定義。在此欄中，您必須提供記錄的身分識別命名空間的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
+>abstract="身分識別命名空間指將記錄和 Experience Platform 中的消費者設定檔繫結的屬性。資料集的身分識別命名空間欄位由資料集建立基礎的結構描述定義。在此欄中，您必須提供記錄的身分識別命名空間的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
@@ -140,7 +140,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 >[!IMPORTANT]
 > 
->每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買所有Adobe Real-time Customer Data Platform或Adobe Journey Optimizer版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買&#x200B;**AdobeHealthcare Shield**&#x200B;或&#x200B;**AdobePrivacy &amp; Security Shield**&#x200B;的組織每個月最多可提交600,000個身分記錄刪除。<br>透過UI的單一記錄刪除請求可讓您一次提交10,000個ID。 刪除記錄的[API方法](../api/workorder.md#create)允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
+>每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買所有Adobe Real-Time Customer Data Platform或Adobe Journey Optimizer版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買&#x200B;**Adobe Healthcare Shield**&#x200B;或&#x200B;**Adobe Privacy &amp; Security Shield**&#x200B;的組織每個月最多可提交600,000筆身分識別記錄刪除。<br>透過UI的單一記錄刪除請求可讓您一次提交10,000個ID。 刪除記錄的[API方法](../api/workorder.md#create)允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
 
 ![要求設定的[!UICONTROL 名稱]和[!UICONTROL 描述]欄位，並反白顯示[!UICONTROL 提交]。](../images/ui/record-delete/submit.png)
 
