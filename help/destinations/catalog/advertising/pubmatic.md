@@ -1,14 +1,15 @@
 ---
 title: PubMatic Connect
 description: PubMatic提供未來程式化的數位行銷供應鏈，以最大化客戶價值。 PubMatic Connect結合平台技術與專屬服務，以強化詳細目錄與資料的封裝與異動方式。
-last-substantial-update: 2023-12-14T00:00:00Z
+last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 2041c06e660e24f63d4c44adc0e8f3082bb007ae
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '1056'
 ht-degree: 2%
 
 ---
+
 
 # PubMatic Connect目的地 {#pubmatic-connect}
 
@@ -16,11 +17,21 @@ ht-degree: 2%
 
 使用[!DNL PubMatic Connect]提供未來程式化的數位行銷供應鏈，以最大化客戶價值。 [!DNL PubMatic Connect]結合平台技術與專屬服務，以強化詳細目錄與資料的封裝與交易方式。
 
-使用此目的地將對象資料傳送至[!DNL PubMatic Connect]平台。
+有兩個可用的目的地可讓您將受眾資料傳送至PubMatic Connect平台。 它們的功能稍有不同：
+
+1. PubMatic Connect
+
+   在初始啟用期間，此目的地會自動在PubMatic平台中註冊對象，並使用內部Adobe Experience Platform ID進行對應。
+
+2. PubMatic Connect （自訂對象ID對應）
+
+   此目的地可讓您選擇在啟動工作流程期間手動新增對應ID。 當資料應傳送至PubMatic平台中的現有對象，或需要自訂「Source對象ID」時，請使用此目的地。
+
+![目的地目錄中兩個PubMatic聯結器的並排檢視。](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
 
 >[!IMPORTANT]
 >
->目的地聯結器和檔案頁面是由[!DNL PubMatic]團隊建立和維護的。 若有任何查詢或更新要求，請直接透過`support@pubmatic.com`連絡他們。
+> 目的地聯結器和檔案頁面是由[!DNL PubMatic]團隊建立和維護的。 若有任何查詢或更新要求，請直接透過`support@pubmatic.com`連絡他們。
 
 ## 使用案例 {#use-cases}
 
@@ -39,7 +50,7 @@ ht-degree: 2%
 [!DNL PubMatic Connect]支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
 | 目標身分 | 說明 | 考量事項 |
-| --------------- | ------ | --- |
+| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
@@ -51,9 +62,9 @@ ht-degree: 2%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
-| --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -62,7 +73,7 @@ ht-degree: 2%
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
-| --- | --- | --- |
+| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，而這些區段具有PubMatic Connect目的地所使用的識別碼（名稱、電話號碼或其他）。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據區段評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
@@ -128,6 +139,12 @@ ht-degree: 2%
 - 選取符合您在第一個步驟中選取的識別碼的[!DNL PubMatic UID]型別編號。
 
 ![對應屬性和身分](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+
+### 對象排程
+
+如果您使用PubMatic Connect （自訂對象ID對應）目的地，則必須為對應至PubMatic平台中「Source對象ID」的每個對象提供對應ID。
+
+![對象排程](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
