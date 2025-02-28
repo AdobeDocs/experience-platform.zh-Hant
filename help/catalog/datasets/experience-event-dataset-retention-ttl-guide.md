@@ -1,9 +1,10 @@
 ---
 title: 使用TTL管理Data Lake中的體驗事件資料集保留
 description: 瞭解如何使用存留時間(TTL)設定和Adobe Experience Platform API，評估、設定和管理Data Lake中的體驗事件資料集保留。 本指南說明TTL資料列層級的有效期限如何支援資料保留原則、最佳化儲存效率，以及確保有效的資料生命週期管理。 此外，還提供使用案例和最佳實務，協助您有效套用TTL。
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2196'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,12 @@ TTL在管理時效性資料時會很有用，因為這類資料會隨著時間�
 - 將無關資料減至最少，以改善查詢效能。
 - 僅保留相關資訊以維持資料衛生。
 - 最佳化資料保留，以支援業務目標。
+
+>[!NOTE]
+>
+>體驗事件資料集保留適用於儲存在Data Lake中的事件資料。 如果您在Real-Time Customer Data Platform中管理保留，請考慮搭配使用[體驗事件有效期](../../profile/event-expirations.md)和[假名設定檔有效期](../../profile/pseudonymous-profiles.md)以及資料湖保留設定。
+>
+>TTL設定可協助您根據許可權最佳化儲存。 雖然在Real-Time CDP中使用的設定檔存放區資料可能會被視為過時，並在30天後移除，但針對分析和資料Distiller使用案例，資料湖中的相同事件資料仍可在12至13個月內可用（或更久則根據權益）。
 
 ### 行業範例 {#industry-example}
 
@@ -121,7 +128,7 @@ curl -X GET \
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ curl -X PATCH \
 | `extensions` | 與資料集相關的其他中繼資料的容器。 |
 | `extensions.adobe_lakeHouse` | 指定與儲存架構相關的設定，包括列層級的到期設定 |
 | `rowExpiration` | 物件包含可定義資料集保留期間的TTL設定。 |
-| `rowExpiration.ttlValue` | 定義自動移除資料集中的記錄之前的持續時間。 使用ISO-8601週期格式（例如，`P3M`代表3個月，`P7D`代表一週）。 |
+| `rowExpiration.ttlValue` | 定義自動移除資料集中的記錄之前的持續時間。 使用ISO-8601週期格式（例如，`P3M`代表3個月，`P30D`代表一週）。 |
 | `rowExpiration.valueStatus` | 字串會指出TTL設定是預設系統值，還是使用者設定的自訂值。 可能的值為： `default`， `custom`。 |
 | `rowExpiration.setBy` | 指定上次修改TTL設定的人。 可能的值包括： `user` （手動設定）或`service` （自動指派）。 |
 | `rowExpiration.updated` | 上次TTL更新的時間戳記。 此值表示上次修改TTL設定的時間。 |
@@ -418,4 +425,3 @@ curl -X PATCH \
 - 保留工作：瞭解如何使用[資料生命週期UI指南](../../hygiene/ui/dataset-expiration.md)，在Platform UI中排程並自動化資料集有效期，或檢查資料集保留設定，以及驗證是否已刪除過期的記錄。
 - [資料集過期API端點指南](../../hygiene/api/dataset-expiration.md)：探索如何刪除整個資料集，而不只是刪除資料列。 瞭解如何使用API排程、管理和自動化資料集到期日，以確保有效率的資料保留。
 - [資料使用原則概觀](../../data-governance/policies/overview.md)：瞭解如何將您的資料保留策略與更廣泛的法規遵循要求及行銷使用限制保持一致。
-
