@@ -5,14 +5,18 @@ type: Documentation
 description: Adobe Experience Platform可讓您使用RESTful API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用設定檔API存取實體（通常稱為「設定檔」）。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 9f9823a23c488e63b8b938cb885f050849836e36
+source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '1706'
 ht-degree: 3%
 
 ---
 
 # 實體端點（設定檔存取）
+
+>[!IMPORTANT]
+>
+>不建議使用個人資料存取API進行ExperienceEvent查閱。 請針對需要查詢ExperienceEvents的使用案例使用運算屬性等功能。 如需此變更的詳細資訊，請聯絡Adobe客戶服務。
 
 Adobe Experience Platform可讓您使用RESTful API或使用者介面存取[!DNL Real-Time Customer Profile]資料。 本指南會概述如何使用API存取實體（通常稱為「設定檔」）。 如需使用[!DNL Platform] UI存取設定檔的詳細資訊，請參閱[設定檔使用手冊](../ui/user-guide.md)。
 
@@ -22,7 +26,7 @@ Adobe Experience Platform可讓您使用RESTful API或使用者介面存取[!DNL
 
 ## 擷取實體 {#retrieve-entity}
 
-您可以透過向`/access/entities`端點發出GET請求以及所需的查詢引數，來擷取設定檔實體或其時間序列資料。
+您可以透過向`/access/entities`端點發出GET請求以及所需的查詢引數來擷取設定檔實體。
 
 >[!BEGINTABS]
 
@@ -138,100 +142,6 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 >[!NOTE]
 >
 >如果相關圖表連結超過50個身分，此服務將傳回HTTP狀態422和「太多相關身分」訊息。 如果收到此錯誤，請考慮新增更多查詢引數來縮小搜尋範圍。
-
->[!TAB 時間序列事件]
-
-**API格式**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-請求路徑中提供的查詢引數會指定要存取的資料。 您可以包含多個引數，以&amp;分隔。
-
-若要存取時間序列事件資料，您&#x200B;**必須**&#x200B;提供下列查詢引數：
-
-- `schema.name`：實體的XDM結構描述的名稱。 在此使用案例中，這個值為`schema.name=_xdm.context.experienceevent`。
-- `relatedSchema.name`：相關結構描述的名稱。 由於結構描述名稱是Experience Event，因此&#x200B;**的值必須**&#x200B;為`relatedSchema.name=_xdm.context.profile`。
-- `relatedEntityId`：相關實體的識別碼。
-- `relatedEntityIdNS`：相關實體的名稱空間。 如果`relatedEntityId`是&#x200B;**而非** XID，則必須提供此值。
-
-附錄的[查詢引數](#query-parameters)區段中提供了有效引數的完整清單。
-
-**要求**
-
-下列要求會依ID尋找設定檔實體，並擷取與該實體相關聯之所有時間序列事件的屬性`endUserIDs`、`web`和`channel`的值。
-
-+++ 擷取與實體相關之時間序列事件的範例要求
-
-```shell
-curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-+++
-
-**回應**
-
-成功的回應會傳回HTTP狀態200，其中包含要求查詢引數中指定的時間序列事件和相關欄位的分頁清單。
-
->[!NOTE]
->
->要求指定一個(`limit=1`)的限制，因此下列回應中的`count`為1，且僅傳回一個實體。
-
-+++ 包含請求的時間序列事件資料的範例回應
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
-
-+++
 
 >[!TAB B2B帳戶]
 
@@ -427,7 +337,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 擷取多個實體 {#retrieve-entities}
 
-您可以對`/access/entities`端點發出POST要求，並在承載中提供身分，以擷取多個設定檔實體或時間序列事件。
+您可以對`/access/entities`端點發出POST要求，並在承載中提供身分，以擷取多個設定檔實體。
 
 >[!BEGINTABS]
 
@@ -648,290 +558,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 ```
 
 +++
-
->[!TAB 時間序列事件]
-
-**API格式**
-
-```http
-POST /access/entities
-```
-
-**要求**
-
-下列請求會擷取與設定檔身分識別清單相關之時間序列事件的使用者ID、當地時間和國家/地區代碼。
-
-+++ 擷取時間序列資料的範例要求
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "schema": {
-        "name": "_xdm.context.experienceevent"
-    },
-    "relatedSchema": {
-        "name": "_xdm.context.profile"
-    },
-    "identities": [
-        {
-            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW"
-        }
-        {
-            "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY"
-        }
-    ],
-    "fields": [
-        "endUserIDs",
-        "placeContext.localTime",
-        "placeContext.geo.countryCode"
-    ],
-    
-    "timeFilter": {
-        "startTime": 11539838505
-        "endTime": 1539838510
-    },
-    "limit": 10,
-    "orderby": "-timestamp"
-}'
-```
-
-| 屬性 | 類型 | 說明 |
-| -------- | ---- | ----------- |
-| `schema.name` | 字串 | **（必要）**&#x200B;實體所屬的XDM結構描述名稱。 |
-| `relatedSchema.name` | 字串 | 如果`schema.name`是`_xdm.context.experienceevent`，此值必須指定時間序列事件相關之設定檔實體的結構描述。 |
-| `identities` | 陣列 | **（必要）**&#x200B;要從中擷取關聯時間序列事件的設定檔陣列清單。 陣列中的每個專案都是以兩種方式之一設定的： <ol><li>使用包含ID值和名稱空間的完整身分識別</li><li>提供XID</li></ol> |
-| `fields` | 字串 | 要以字串陣列形式傳回的XDM欄位。 預設會傳回所有欄位。 |
-| `orderby` | 字串 | 依時間戳記擷取的體驗事件排序順序，寫入為`(+/-)timestamp`，預設為`+timestamp`。 |
-| `timeFilter.startTime` | 整數 | 指定篩選時間序列物件的開始時間（毫秒）。 預設情況下，此值會設定為可用時間的開始。 |
-| `timeFilter.endTime` | 整數 | 指定篩選時間序列物件的結束時間（毫秒）。 預設情況下，此值會設定為可用時間的結尾。 |
-| `limit` | 整數 | 要傳回的最大記錄數。 預設情況下，此值會設為1,000。 |
-
-+++
-
-**回應**
-
-成功的回應會傳回HTTP狀態200，其中包含與要求中指定的多個設定檔相關聯的時間序列事件分頁清單。
-
-+++ 包含時間序列事件的範例回應
-
-```json
-{
-    "GkouAW-yD9aoRCPhRYROJ-TetAFW": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-            "count": 10,
-            "next": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-                "timestamp": 1537275882000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:42Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "a9e137b4-1348-4878-8167-e308af523d8b",
-                "timestamp": 1537275889000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:49Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": "/entities",
-                "payload": {
-                    "schema": {
-                        "name": "_xdm.context.experienceevent"
-                    },
-                    "relatedSchema": {
-                        "name": "_xdm.context.profile"
-                    },
-                    "timeFilter": {
-                        "startTime": 1537275882000
-                    },
-                    "fields": [
-                        "endUserIDs",
-                        "placeContext.localTime",
-                        "placeContext.geo.countryCode"
-                    ],
-                    "identities": [
-                        {
-                            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                            "start": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-                        }
-                    ],
-                    "limit": 10
-                }
-            }
-        }
-    },
-    "GkouAW-2u-7iWt5vQ9u2wm40JOZY": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "2746d0db-fa64-4e29-b67e-324bec638816",
-            "count": 9,
-            "next": ""
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "2746d0db-fa64-4e29-b67e-324bec638816",
-                "timestamp": 1537559483000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:23Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "9bf337a1-3256-431e-a38c-5c0d42d121d1",
-                "timestamp": 1537559486000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:26Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": ""
-            }
-        }
-    }
-}`
-```
-
-+++
-
->[!NOTE]
->
->在此範例回應中，列出的第一個設定檔(「GkouAW-yD9aoRCPhRYROJ-TetAFW」)提供`_links.next.payload`的值，表示此設定檔還有其他結果頁面。
->
->若要存取這些結果，您可以對`/access/entities`端點執行其他POST要求，並將列出的裝載作為要求內文。
 
 >[!TAB B2B帳戶]
 
@@ -1468,7 +1094,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 
 ### 存取後續結果頁面
 
-擷取時間序列事件時，結果會分頁。 如果有後續結果頁面，`_page.next`屬性將包含ID。 此外，`_links.next.href`屬性提供要求URI以擷取下一頁。 若要擷取結果，請對`/access/entities`端點提出另一個GET要求，並以提供的URI值取代`/entities`。
+擷取時間序列事件時，結果會分頁。 如果有後續結果頁面，`_page.next`屬性將包含ID。 此外，`_links.next.href`屬性提供要求URI以擷取下一頁。 若要擷取結果，請對`/access/entities`端點提出另一個GET要求，並使用提供的URI值取代`/entities`。
 
 >[!NOTE]
 >
@@ -1609,7 +1235,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 | 參數 | 說明 | 範例 |
 | --------- | ----------- | ------- |
-| `schema.name` | **（必要）**&#x200B;實體的XDM結構描述名稱。 | `schema.name=_xdm.context.experienceevent` |
+| `schema.name` | **（必要）**&#x200B;實體的XDM結構描述名稱。 | `schema.name=_xdm.context.profile` |
 | `relatedSchema.name` | 如果`schema.name`是`_xdm.context.experienceevent`，此值&#x200B;**必須**&#x200B;為時間序列事件相關的設定檔實體指定結構描述。 | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **（必要）**&#x200B;實體的識別碼。 如果此引數的值不是XID，則必須也提供身分名稱空間引數(`entityIdNS`)。 | `entityId=janedoe@example.com` |
 | `entityIdNS` | 如果未提供`entityId`作為XID，此欄位&#x200B;**必須**&#x200B;指定身分名稱空間。 | `entityIdNS=email` |
