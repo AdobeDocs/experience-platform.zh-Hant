@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
+source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 1%
+source-wordcount: '1666'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 | 護欄型別 | 說明 |
 |----------|---------|
-| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降級概不負責。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
+| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降低不負任何責任。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
 | **系統強制的護欄（硬限制）** | Real-Time CDP UI或API會強制執行系統強制的護欄。 這些限制不得超過，因為UI和API會阻止您這樣做或會傳回錯誤。 |
 
 {style="table-layout:auto"}
@@ -53,7 +53,7 @@ ht-degree: 1%
 | 對應到目的地的屬性數目上限 | 50 | 效能護欄 | 如果有多種目的地和目的地型別，您可以選取要對應以匯出的設定檔屬性和身分。 為獲得最佳效能，在資料流中應將最多50個屬性對應到目的地。 |
 | 目的地數量上限 | 100 | 系統強制的護欄 | 您最多可以建立100個可連線並啟用資料的目的地，每個沙箱&#x200B;*有*&#x200B;個。 [Edge個人化目的地（自訂個人化）](#edge-destinations-activation)在100個建議目的地中最多可組成10個。 |
 | 啟用至目的地的資料型別 | 設定檔資料，包括身分和身分對應 | 系統強制的護欄 | 目前只能將&#x200B;*個人資料記錄屬性*&#x200B;匯出至目的地。 說明事件資料的XDM屬性目前不支援匯出。 |
-| 啟用至目的地的資料型別 — 陣列和對應屬性支援 | 部分可用 | 系統強制的護欄 | 您可以將陣列屬性匯出至[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)。 您仍需使用`array_to_string`函式將陣列平面化為目標檔案中的字串。 [深入瞭解](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality)功能。 <br><br>目前&#x200B;**無法**&#x200B;將&#x200B;*對應屬性*&#x200B;匯出至目的地。 此規則的例外是[身分對應](/help/xdm/field-groups/profile/identitymap.md)，它會匯出到串流和檔案型啟用中。 |
+| 啟用至目的地的資料型別 — 陣列和對應屬性支援 | 部分可用 | 系統強制的護欄 | 您可以將陣列屬性匯出至[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)。 [閱讀更多](/help/destinations/ui/export-arrays-calculated-fields.md)有關此功能的資訊。 |
 
 {style="table-layout:auto"}
 
@@ -126,7 +126,7 @@ ht-degree: 1%
 **以XDM個別設定檔結構描述為基礎的資料集**
 在以XDM個別設定檔結構描述為基礎的資料集的情況下，資料集結構描述不包含頂層*時間戳記*&#x200B;欄。 資料會以更新插入的方式內嵌。
 
-以下軟護欄適用於所有匯出為Experience Platform的資料集。 也請檢閱下方針對不同資料集和壓縮型別的硬護欄。
+以下軟性護欄適用於從Experience Platform匯出的所有資料集。 也請檢閱下方針對不同資料集和壓縮型別的硬護欄。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
@@ -173,7 +173,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 ### Destination SDK護欄 {#destination-sdk-guardrails}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md)是一套組態API，可讓您根據您選擇的資料和驗證格式，設定Experience Platform的目的地整合模式，以將對象和設定檔資料傳送至您的端點。 以下護欄適用於您使用Destination SDK設定的目的地。
+[Destination SDK](/help/destinations/destination-sdk/overview.md)是一套組態API，可讓您設定Experience Platform的目的地整合模式，以根據您選擇的資料和驗證格式，將對象和設定檔資料傳送至您的端點。 以下護欄適用於您使用Destination SDK設定的目的地。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
@@ -188,7 +188,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 | 目的地型別 | 說明 |
 | --- | --- |
-| 企業目的地(HTTP API、Amazon Kinesis、Azure EventHubs) | 在95%的時間中，Experience Platform會嘗試為成功傳送的訊息提供少於10分鐘的輸送量延遲，每個資料流到企業目的地的每秒請求率少於10,000個。 <br>如果對您企業目的地的要求失敗，Experience Platform會儲存失敗的要求並重試兩次，以將要求傳送至您的端點。 |
+| 企業目的地(HTTP API、Amazon Kinesis、Azure EventHubs) | 在95%的時間中，Experience Platform會嘗試針對每個資料流以每秒少於10,000個要求的速率，為成功傳送至企業目的地的訊息提供少於10分鐘的輸送量延遲。 <br>如果對您企業目的地的要求失敗，Experience Platform會儲存失敗的要求並重試兩次，以將要求傳送至您的端點。 |
 
 {style="table-layout:auto"}
 
@@ -198,6 +198,6 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
 * [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform （B2C Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2P - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2B - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
