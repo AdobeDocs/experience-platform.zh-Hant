@@ -3,10 +3,10 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4387'
-ht-degree: 11%
+source-wordcount: '4374'
+ht-degree: 12%
 
 ---
 
@@ -433,7 +433,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 ### 具有相同時間戳記之設定檔的重複資料刪除行為 {#deduplication-same-timestamp}
 
-將設定檔匯出至檔案型目的地時，重複資料刪除可確保在多個設定檔共用相同的重複資料刪除索引鍵和相同的參考時間戳記時，僅匯出一個設定檔。 此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
+將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
 
 #### 主要考量事項
 
@@ -464,9 +464,9 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 **提升可靠性**：此更新的重複資料刪除程式可確保使用相同座標連續執行將一律產生相同的結果，提升一致性。
 
-### 透過計算欄位匯出陣列 {#export-arrays-calculated-fields}
+### 透過計算欄位執行資料轉換 {#calculated-fields}
 
-部分Beta版客戶可將陣列物件從Experience Platform匯出至雲端儲存目的地。 閱讀有關[匯出陣列和計算欄位](/help/destinations/ui/export-arrays-calculated-fields.md)的詳細資訊，並連絡您的Adobe代表以取得該功能的存取權。
+您可以使用[計算欄位](/help/destinations/ui/data-transformations-calculated-fields.md)控制項，對匯出至檔案型目的地的資料執行各種資料轉換。
 
 ### 已知限制 {#known-limitations}
 

@@ -3,9 +3,9 @@ title: 使用計算欄位對匯出到雲端儲存目標的資料執行轉換
 type: Tutorial
 description: 瞭解如何使用計算欄位功能，對匯出至雲端儲存空間的資料執行轉換
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
+source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1595'
 ht-degree: 8%
 
 ---
@@ -16,8 +16,15 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="新增計算欄位"
 >abstract="<p>使用「**新增計算欄位**」控制項對匯出到雲端儲存目標的資料執行各種資料轉換。例如，您可以對資料進行雜湊、將陣列串連成字串等等。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="範例"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="已知限制"
+
+<!--
+
+disable additional URLs for a while
+
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#examples" text="Examples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#known-limitations" text="Known limitations"
+
+-->
 
 >[!AVAILABILITY]
 >
@@ -32,7 +39,7 @@ ht-degree: 8%
 
 若要使用計算欄位進行資料轉換：
 
-1. [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地。 連線到所需的雲端目的地時，將&#x200B;**[!UICONTROL 匯出陣列、對應、物件]** [選項關閉](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle)。
+1. [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地。 連線到所需的雲端目的地時，將&#x200B;**[!UICONTROL 匯出陣列、對應、物件]** [選項關閉](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)。
 2. 進行雲端儲存空間目的地](/help/destinations/ui/activate-batch-profile-destinations.md)的[啟動步驟，並前往[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。
 
 ## 如何使用計算欄位 {#how-to-export-calculated-fields}
@@ -51,7 +58,7 @@ ht-degree: 8%
 
 >[!TIP]
 >
->已針對已關閉&#x200B;**[!UICONTROL 匯出陣列、對應及物件]**&#x200B;控制項的目的地連線，停用&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;控制項。 [閱讀全文](/help/destinations/ui/export-arrays-calculated-fields.md#export-arrays-maps-objects-toggle)。
+>已針對已關閉&#x200B;**[!UICONTROL 匯出陣列、對應及物件]**&#x200B;控制項的目的地連線，停用&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;控制項。 [閱讀全文](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)。
 
 ![新增批次啟動工作流程對應步驟中反白顯示的計算欄位。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 

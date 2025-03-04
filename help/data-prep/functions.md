@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 830aa01828785a9ae4dea71078ee418fc510253c
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '6028'
 ht-degree: 2%
@@ -63,8 +63,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ltrim | 移除字串開頭的空格。 | <ul><li>字串： **必要**&#x200B;您要移除空白字元的字串。</li></ul> | ltrim(STRING) | ltrim(&quot; hello&quot;) | &quot;hello&quot; |
 | rtrim | 移除字串結尾的空格。 | <ul><li>字串： **必要**&#x200B;您要移除空白字元的字串。</li></ul> | rtrim(STRING) | rtrim(「hello 」) | &quot;hello&quot; |
 | trim | 移除字串開頭和結尾的空格。 | <ul><li>字串： **必要**&#x200B;您要移除空白字元的字串。</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;hello&quot; |
-| 等於 | 比較兩個字串以確認是否相等。 此函式區分大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;。equals(&#x200B;STRING2) | &quot;string1&quot;。 &#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
-| equalsIgnoreCase | 比較兩個字串以確認是否相等。 此函式&#x200B;**不區分**&#x200B;大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;。equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;。 &#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
+| 等於 | 比較兩個字串以確認是否相等。 此函式區分大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;。equals(&#x200B;STRING2) | &quot;string1&quot;。 &#x200B;equals&#x200B;(&quot;STRING1&quot;) | 假 |
+| equalsIgnoreCase | 比較兩個字串以確認是否相等。 此函式&#x200B;**不區分**&#x200B;大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;。equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;。 &#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | 真 |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | 根據規則運算式，從輸入字串中擷取群組。 | <ul><li>字串： **必要**&#x200B;您正在擷取群組的字串。</li><li>REGEX： **必要**&#x200B;您希望群組比對的規則運算式。</li></ul> | extract_regex(STRING， REGEX) | extract_regex&#x200B;(&quot;E259，E259B_009,1_1&quot;&#x200B;， &quot;([^，]+)，[^，]*，([^，]+)&quot;) | [「E259，E259B_009,1_1」、「E259」、「1_1」] |
-| matches_regex | 檢查字串是否符合輸入的規則運算式。 | <ul><li>字串： **必要**&#x200B;您正在檢查的字串符合規則運算式。</li><li>REGEX： **必要**&#x200B;您要比較的規則運算式。</li></ul> | matches_regex(STRING， REGEX) | matches_regex(&quot;E259，E259B_009,1_1&quot;， &quot;([^，]+)，[^，]*，([^，]+)&quot;) | true |
+| matches_regex | 檢查字串是否符合輸入的規則運算式。 | <ul><li>字串： **必要**&#x200B;您正在檢查的字串符合規則運算式。</li><li>REGEX： **必要**&#x200B;您要比較的規則運算式。</li></ul> | matches_regex(STRING， REGEX) | matches_regex(&quot;E259，E259B_009,1_1&quot;， &quot;([^，]+)，[^，]*，([^，]+)&quot;) | 真 |
 
 {style="table-layout:auto"}
 
@@ -87,7 +87,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | 接受輸入並使用安全雜湊演演算法1 (SHA-1)產生雜湊值。 | <ul><li>輸入： **必要**&#x200B;要雜湊的純文字。</li><li>CHARSET： *選擇性*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha1(INPUT， CHARSET) | sha1（「我的文字」、「UTF-8」） | c3599c11e47719df18a24&#x200B;48690840c5dfcce3c80 |
 | sha256 | 接受輸入並使用安全雜湊演演算法256 (SHA-256)產生雜湊值。 | <ul><li>輸入： **必要**&#x200B;要雜湊的純文字。</li><li>CHARSET： *選擇性*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha256（輸入，字元集） | sha256（「我的文字」、「UTF-8」） | 7330d2b39ca35eaf4cb95fc846c21&#x200B;ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | 接受輸入並使用安全雜湊演演算法512 (SHA-512)產生雜湊值。 | <ul><li>輸入： **必要**&#x200B;要雜湊的純文字。</li><li>CHARSET： *選擇性*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha512（輸入，字元集） | sha512（「我的文字」、「UTF-8」） | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef&#x200B;708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89&#x200B;a5c908cfe377aceb1072a7b386d4fd2ff68a fd24d16 |
+| sha512 | 接受輸入並使用安全雜湊演演算法512 (SHA-512)產生雜湊值。 | <ul><li>輸入： **必要**&#x200B;要雜湊的純文字。</li><li>CHARSET： *選擇性*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha512（輸入，字元集） | sha512（「我的文字」、「UTF-8」） | A a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef&#x200B;708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89&#x200B;a5c908cfe377aceb1072a7b386d4fd2ff68a |
 | md5 | 接受輸入並使用MD5產生雜湊值。 | <ul><li>輸入： **必要**&#x200B;要雜湊的純文字。</li><li>CHARSET： *選擇性*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。 </li></ul> | md5（輸入，字元集） | md5（「我的文字」、「UTF-8」） | d3b96ce8c9fb4&#x200B;e9bd0198d03ba6852c7 |
 | crc32 | 取得輸入使用循環冗餘檢查(CRC)演演算法來產生32位元循環代碼。 | <ul><li>輸入： **必要**&#x200B;要雜湊的純文字。</li><li>CHARSET： *選擇性*&#x200B;字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | crc32(INPUT， CHARSET) | crc32（「我的文字」，「UTF-8」） | 8df92e80 |
 
@@ -126,7 +126,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li><li>DEFAULT_DATE： **必要**&#x200B;如果提供的日期為Null，則傳回預設日期。</li></ul> | date(DATE， FORMAT， DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH：mm&quot;， now()) | `2019-10-23T11:24:00Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH：mm&quot;) | `2019-10-23T11:24:00Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | 「2019-10-23T11:24:00Z」 |
-| date_part | 擷取日期部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;millisecond&quot;<br>&quot;SSS&quot;<br> | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | date_part&#x200B;(COMPONENT， DATE) | date_part(&quot;MM&quot;， date(&quot;2019-10-17 11:55:12&quot;) | 10 |
+| date_part | 擷取日期部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;{20&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | date_part&#x200B;(COMPONENT， DATE) | date_part(&quot;MM&quot;， date(&quot;2019-10-17 11:55:12&quot;) | 10 |
 | set_date_part | 取代指定日期中的元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>值： **必要**&#x200B;為指定日期的元件設定的值。</li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | set_date_part&#x200B;(COMPONENT， VALUE， DATE) | set_date_part(&quot;m&quot;， 4， date(&quot;2016-11-09T11:44:44.797&quot;) | 「2016-04-09T11:44:44Z」 |
 | make_date_time | 從零件建立日期。 此函式也可以使用make_timestamp感生。 | <ul><li>YEAR： **必填**&#x200B;以四位數寫入的年份。</li><li>月份： **必要**&#x200B;月份。 允許的值為1到12。</li><li>日： **必要**&#x200B;日。 允許的值為1到31。</li><li>小時： **必要**&#x200B;小時。 允許的值為0到23。</li><li>MINUTE： **必要**&#x200B;分鐘。 允許值為0到59。</li><li>NANOSECOND： **必要**&#x200B;納秒的值。 允許的值為0到999999999。</li><li>時區： **必要**&#x200B;日期時間的時區。</li></ul> | make_date_time&#x200B;（年、月、日、小時、分鐘、秒、納秒、時區） | make_date_time&#x200B;（2019， 10， 17， 11， 55， 12， 999， &quot;美洲/洛杉磯&quot;） | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 將任何時區的日期轉換為UTC格式的日期。 | <ul><li>日期： **必要**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
@@ -142,11 +142,11 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | 檢查物件是否為空白。 | <ul><li>輸入： **必要**&#x200B;您嘗試檢查的物件是空的。</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| is_empty | 檢查物件是否為空白。 | <ul><li>輸入： **必要**&#x200B;您嘗試檢查的物件是空的。</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | 假 |
 | arrays_to_object | 建立物件清單。 | <ul><li>INPUT： **必要**&#x200B;索引鍵和陣列配對的群組。</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | 根據指定的平面索引鍵/值配對建立物件。 | <ul><li>INPUT： **必要**&#x200B;索引鍵/值配對的平面清單。</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;， &quot;John&quot;， &quot;lastName&quot;， &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | 從輸入字串建立物件。 | <ul><li>字串： **必要**&#x200B;正在剖析以建立物件的字串。</li><li>VALUE_DELIMITER： *Optional*&#x200B;將欄位與值分開的分隔符號。 預設分隔字元為`:`。</li><li>FIELD_DELIMITER： *Optional*&#x200B;分隔欄位值配對的分隔符號。 預設分隔字元為`,`。</li></ul> | str_to_object&#x200B;(STRING， VALUE_DELIMITER， FIELD_DELIMITER) **注意**：您可以使用`get()`函式搭配`str_to_object()`來擷取字串中索引鍵的值。 | <ul><li>範例#1： str_to_object(&quot;firstName - John ； lastName - ； - 123 345 7890&quot;， &quot;-&quot;， &quot;；&quot;)</li><li>範例#2： str_to_object(&quot;firstName - John ； lastName - ； phone - 123 456 7890&quot;， &quot;-&quot;， &quot;；&quot;)。get(&quot;firstName&quot;)</li></ul> | <ul><li>範例#1：`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>範例#2： &quot;John&quot;</li></ul> |
-| contains_key | 檢查物件是否存在於來源資料中。 **注意：**&#x200B;此函式會取代已棄用的`is_set()`函式。 | <ul><li>INPUT： **必要**&#x200B;要檢查的路徑是否存在於來源資料中。</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
+| contains_key | 檢查物件是否存在於來源資料中。 **注意：**&#x200B;此函式會取代已棄用的`is_set()`函式。 | <ul><li>INPUT： **必要**&#x200B;要檢查的路徑是否存在於來源資料中。</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | 真 |
 | 無效 | 將屬性的值設定為`null`。 當您不想將欄位複製到目標結構描述時，就應該使用此專案。 | | nullify() | nullify() | `null` |
 | get_keys | 剖析索引鍵/值配對並傳回所有索引鍵。 | <ul><li>物件： **必要**&#x200B;將從中擷取金鑰的物件。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;： &quot;Pride and Impance&quot;， &quot;book2&quot;： &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | 根據指定的索引鍵，剖析索引鍵/值配對並傳回字串的值。 | <ul><li>字串： **必要**&#x200B;您要剖析的字串。</li><li>索引鍵： **必要**&#x200B;必須擷取值的索引鍵。</li><li>VALUE_DELIMITER： **必要**&#x200B;分隔欄位與值的分隔符號。 若提供`null`或空字串，則此值為`:`。</li><li>FIELD_DELIMITER： *Optional*&#x200B;分隔欄位和值配對的分隔符號。 若提供`null`或空字串，則此值為`,`。</li></ul> | get_values(STRING， KEY， VALUE_DELIMITER， FIELD_DELIMITER) | get_values(\&quot;firstName - John ， lastName - Cena ， phone - 555 420 8692\&quot;， \&quot;firstName\&quot;， \&quot;-\&quot;， \&quot;，\&quot;) | John |
@@ -178,10 +178,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 大小_of | 傳回輸入的大小。 | <ul><li>輸入： **必要**&#x200B;您嘗試尋找大小的物件。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | 此函式用於將整個輸入陣列中的所有元素附加到Profile中陣列的結尾。 此函式僅&#x200B;**適用於更新期間**。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必要**&#x200B;要在設定檔中附加陣列的陣列。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123， 456] |
 | upsert_array_replace | 此函式用於取代陣列中的元素。 此函式僅&#x200B;**適用於更新期間**。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必要**&#x200B;要取代設定檔中陣列的陣列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123， 456] |
-| [!BADGE 僅目的地]{type=Informative} array_to_string | 使用指定的分隔符號聯結陣列中元素的字串表示法。 如果陣列是多維度的，則會在聯結前將其平面化。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-calculated-fields.md)。 | <ul><li>SEPARATOR： **必要**&#x200B;用來聯結陣列中元素的分隔符號。</li><li>ARRAY： **必要**&#x200B;要聯結的陣列（平面化之後）。</li></ul> | array_to_string(SEPARATOR， ARRAY) | `array_to_string(";", ["Hello", "world"])` | 「Hello；world」 |
-| [!BADGE 僅目的地]{type=Informative} filterArray* | 根據述詞篩選指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-calculated-fields.md)。 | <ul><li>陣列： **必要**&#x200B;要篩選的陣列</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | filterArray(ARRAY， PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5， 7] |
-| [!BADGE 僅目的地]{type=Informative} transformArray* | 根據述詞轉換指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-calculated-fields.md)。 | <ul><li>陣列： **必要**&#x200B;要轉換的陣列。</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | transformArray(ARRAY， PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6， 7， 8] |
-| [!BADGE 只限目的地]{type=Informatic} flattenArray* | 將指定的（多維）陣列平面化為一維陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-calculated-fields.md)。 | <ul><li>陣列： **必要**&#x200B;要平面化的陣列。</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;， &#39;b&#39;]， [&#39;c&#39;， &#39;d&#39;]]， [[&#39;e&#39;]， [&#39;f&#39;]]]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
+| [!BADGE 僅目的地]{type=Informative} array_to_string | 使用指定的分隔符號聯結陣列中元素的字串表示法。 如果陣列是多維度的，則會在聯結前將其平面化。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>SEPARATOR： **必要**&#x200B;用來聯結陣列中元素的分隔符號。</li><li>ARRAY： **必要**&#x200B;要聯結的陣列（平面化之後）。</li></ul> | array_to_string(SEPARATOR， ARRAY) | `array_to_string(";", ["Hello", "world"])` | 「Hello；world」 |
+| [!BADGE 僅目的地]{type=Informative} filterArray* | 根據述詞篩選指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要篩選的陣列</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | filterArray(ARRAY， PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5， 7] |
+| [!BADGE 僅目的地]{type=Informative} transformArray* | 根據述詞轉換指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要轉換的陣列。</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | transformArray(ARRAY， PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6， 7， 8] |
+| [!BADGE 只限目的地]{type=Informatic} flattenArray* | 將指定的（多維）陣列平面化為一維陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要平面化的陣列。</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;， &#39;b&#39;]， [&#39;c&#39;， &#39;d&#39;]]， [[&#39;e&#39;]， [&#39;f&#39;]]]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -220,8 +220,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| min | 傳回給定引數的最小值。 使用自然排序。 | <ul><li>OPTIONS： **必要**&#x200B;可以相互比較的一或多個物件。</li></ul> | min(OPTIONS) | min(3， 1， 4) | 1 |
-| max | 傳回給定引數的最大值。 使用自然排序。 | <ul><li>OPTIONS： **必要**&#x200B;可以相互比較的一或多個物件。</li></ul> | 最大(OPTIONS) | max(3， 1， 4) | 4 |
+| min | 傳回給定引數的最小值。 使用自然排序。 | <ul><li>OPTIONS： **必要**&#x200B;一或多個可以相互比較的物件。</li></ul> | min(OPTIONS) | min(3， 1， 4) | 1 |
+| max | 傳回給定引數的最大值。 使用自然排序。 | <ul><li>OPTIONS： **必要**&#x200B;一或多個可以相互比較的物件。</li></ul> | max(OPTIONS) | max(3， 1， 4) | 4 |
 
 {style="table-layout:auto"}
 
@@ -280,14 +280,14 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| ua_os_name | 從使用者代理字串中擷取作業系統名稱。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | 從使用者代理程式字串中擷取作業系統的主要版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
-| ua_os_version | 從使用者代理程式字串中擷取作業系統的版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
+| ua_os_name | 從使用者代理字串中擷取作業系統名稱。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1 (如Mac OS X)) AppleWebKit/534.46 (KHTML （如Gecko）)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
+| ua_os_version_major | 從使用者代理程式字串中擷取作業系統的主要版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version | 從使用者代理程式字串中擷取作業系統的版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1 (如Mac OS X)) AppleWebKit/534.46 (KHTML （如Gecko）)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
 | ua_os_name_version | 從使用者代理字串中擷取作業系統的名稱和版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
-| ua_agent_version | 從使用者代理字串中擷取代理程式版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
-| ua_agent_version_major | 從使用者代理字串中擷取代理名稱和主要版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
-| ua_agent_name | 從使用者代理字串中擷取代理名稱。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
-| ua_device_class | 從使用者代理程式字串中擷取裝置類別。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 電話 |
+| ua_agent_version | 從使用者代理字串中擷取代理程式版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1 (如Mac OS X)) AppleWebKit/534.46 (KHTML （如Gecko）)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_agent_version_major | 從使用者代理字串中擷取代理名稱和主要版本。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML，like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
+| ua_agent_name | 從使用者代理字串中擷取代理名稱。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1 (如Mac OS X)) AppleWebKit/534.46 (KHTML （如Gecko）)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
+| ua_device_class | 從使用者代理程式字串中擷取裝置類別。 | <ul><li>USER_AGENT： **必要**&#x200B;使用者代理字串。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1 (如Mac OS X)) AppleWebKit/534.46 (KHTML （如Gecko）)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 電話 |
 
 {style="table-layout:auto"}
 
@@ -306,7 +306,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | aa_get_product_quantities | 從Analytics產品字串中擷取數量。 | <ul><li>PRODUCTS_STRING： **必要** Analytics產品字串。</li></ul> | aa_get_product_quantices(PRODUCTS_STRING) | aa_get_product_quantices（&quot;；範例產品1；1；3.50，範例類別2；範例產品2&quot;） | [&quot;1&quot;，空值] |
 | aa_get_product_prices | 從Analytics產品字串中擷取價格。 | <ul><li>PRODUCTS_STRING： **必要** Analytics產品字串。</li></ul> | aa_get_product_prices(PRODUCTS_STRING) | aa_get_product_prices（&quot;；範例產品1；1；3.50，範例類別2；範例產品2&quot;） | [&quot;3.50&quot;，空值] |
 | aa_get_product_event_values | 從產品字串中擷取已命名事件的值，做為字串陣列。 | <ul><li>PRODUCTS_STRING： **必要** Analytics產品字串。</li><li>EVENT_NAME： **必要**&#x200B;要從中擷取值的事件名稱。</li></ul> | aa_get_product_event_values(PRODUCTS_STRING， EVENT_NAME) | aa_get_product_event_values（&quot;；範例產品1；1；4.20；event1=2.3\|event2=5:1，；範例產品2；1；4.20；event1=3\|event2=2:2&quot;， &quot;event1&quot;） | [&quot;2.3&quot;，&quot;3&quot;] |
-| aa_get_product_evars | 從產品字串中擷取已命名事件的evar值，做為字串陣列。 | <ul><li>PRODUCTS_STRING： **必要** Analytics產品字串。</li><li>eVar_名稱： **必要**&#x200B;要擷取的eVar名稱。</li></ul> | aa_get_product_evars(PRODUCTS_STRING， EVENT_NAME) | aa_get_product_evars(&quot;；範例產品；1；6.69；；eVar1=銷售值&quot;， &quot;eVar1&quot;) | [「銷售值」] |
+| aa_get_product_evars | 從產品字串中擷取已命名事件的evar值，做為字串陣列。 | <ul><li>PRODUCTS_STRING： **必要** Analytics產品字串。</li><li>eVar_NAME： **必要**&#x200B;要擷取的eVar名稱。</li></ul> | aa_get_product_evars(PRODUCTS_STRING， EVENT_NAME) | aa_get_product_evars(&quot;；範例產品；1；6.69；；eVar1=Merchandising value&quot;， &quot;eVar1&quot;) | [「銷售值」] |
 
 {style="table-layout:auto"}
 

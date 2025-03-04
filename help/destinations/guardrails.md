@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 2%
@@ -53,7 +53,7 @@ ht-degree: 2%
 | 對應到目的地的屬性數目上限 | 50 | 效能護欄 | 如果有多種目的地和目的地型別，您可以選取要對應以匯出的設定檔屬性和身分。 為獲得最佳效能，在資料流中應將最多50個屬性對應到目的地。 |
 | 目的地數量上限 | 100 | 系統強制的護欄 | 您最多可以建立100個可連線並啟用資料的目的地，每個沙箱&#x200B;*有*&#x200B;個。 [Edge個人化目的地（自訂個人化）](#edge-destinations-activation)在100個建議目的地中最多可組成10個。 |
 | 啟用至目的地的資料型別 | 設定檔資料，包括身分和身分對應 | 系統強制的護欄 | 目前只能將&#x200B;*個人資料記錄屬性*&#x200B;匯出至目的地。 說明事件資料的XDM屬性目前不支援匯出。 |
-| 啟用至目的地的資料型別 — 陣列和對應屬性支援 | 部分可用 | 系統強制的護欄 | 您可以將陣列屬性匯出至[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)。 [閱讀更多](/help/destinations/ui/export-arrays-calculated-fields.md)有關此功能的資訊。 |
+| 啟用至目的地的資料型別 — 陣列和對應屬性支援 | 部分可用 | 系統強制的護欄 | 您可以將陣列屬性匯出至[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)。 [閱讀更多](/help/destinations/ui/export-arrays-maps-objects.md)有關此功能的資訊。 |
 
 {style="table-layout:auto"}
 

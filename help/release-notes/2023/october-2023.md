@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2023 年 10 月)
 description: Adobe Experience Platform 2023 年 10 月版發行說明。
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 40%
@@ -54,7 +54,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 **新目標或更新的目標** {#new-updated-destinations}
 
@@ -69,7 +69,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| (Beta)計算欄位支援雜湊函式 | 除了[匯出陣列](../../destinations/ui/export-arrays-calculated-fields.md)的特定函式或從陣列中匯出元素之外，您現在還可以使用額外的[雜湊函式](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions)在匯出的檔案中雜湊屬性。 支援的雜湊函式為： `sha`、`sha256`、`sha512`、`hash`、`md5`、`crc32`。 |
+| (Beta)計算欄位支援雜湊函式 | 除了[匯出陣列](../../destinations/ui/export-arrays-maps-objects.md)的特定函式或從陣列中匯出元素之外，您現在還可以使用額外的[雜湊函式](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions)在匯出的檔案中雜湊屬性。 支援的雜湊函式為： `sha`、`sha256`、`sha512`、`hash`、`md5`、`crc32`。 |
 | （有限GA）在特定目的地啟用帳戶對象 | Real-Time CDP B2B客戶現在可以在某些目的地啟用[帳戶對象](../../segmentation/types/account-audiences.md)。 如需有關此功能的詳細資訊，請參閱[啟用帳戶對象教學課程](/help/destinations/ui/activate-account-audiences.md)。 |
 
 {style="table-layout:auto"}
