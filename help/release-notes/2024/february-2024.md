@@ -3,7 +3,7 @@ title: Adobe Experience Platform 發行說明 (2024 年 2 月)
 description: Adobe Experience Platform 2024 年 2 月版發行說明。
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1244'
 ht-degree: 100%
 
@@ -66,7 +66,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新目標** {#new-destinations}
 
