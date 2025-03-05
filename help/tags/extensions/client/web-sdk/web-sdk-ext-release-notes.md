@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 27%
+source-wordcount: '2580'
+ht-degree: 25%
 
 ---
 
@@ -13,15 +13,28 @@ ht-degree: 27%
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台網頁SDK發行說明](/help/web-sdk/release-notes.md)。
 
+## 2.29.0版 — 2025年3月5日
+
+**新功能**
+
+- 您現在可以建立自訂Web SDK組建，並從標籤擴充功能使用者介面選擇所需的元件。 透過排除未使用的元件，這可能會導致較小的組建。 請參閱有關[建立自訂Web SDK組建](web-sdk-extension-configuration.md#custom-build)的檔案。
+- 包含[2.26.0](../../../../web-sdk/release-notes.md#2-26-0)版的Adobe Experience Platform Web SDK。
+
+**修正和改良**
+
+- 已在[更新變數](action-types.md#update-variable)動作中新增順利處理遺失的資料元素。 以往，在編輯缺少資料元素的更新變數動作時會顯示錯誤訊息。 現在，您可以選擇不同的資料元素，並且更新變數動作的所有設定仍會套用。 如果刪除資料元素或複製Tags屬性，資料元素可能會遺失。
+- 新增支援以[識別重新導向](action-types.md#redirect-with-identity)動作開啟新標籤。 現在，使用動作時，在重新導向瀏覽器時會使用錨點標籤的`target`屬性。
+- 修正無法在設定覆寫中停用Adobe Audience Manager的問題。
+
 ## 2.28.0版 — 2025年1月23日
 
 **修正和改良**
 
-- 修正了在未啟用Audience Manager的情況下，無法設定ID同步容器覆寫的問題。
+- 修正在未啟用Audience Manager的情況下無法設定ID同步容器覆寫的問題。
 - 修正升級到最新版本時，資料流設定覆寫為停用的問題。
 - 修正使用者無法儲存Target自動點選集合設定的問題。
 
-**新特性**
+**新功能**
 
 - 新增一項功能，可在XDM物件中的技術名稱和顯示名稱之間切換。
 - 包含[2.25.0](../../../../web-sdk/release-notes.md#2-25-0)版的Adobe Experience Platform Web SDK。
@@ -201,7 +214,7 @@ ht-degree: 27%
 
 ## 2.14.1版 — 2022年10月13日
 
-- 修正網站SDK未遵循Experience CloudID服務的ID的問題。
+- 修正Web SDK未遵守來自Experience Cloud ID服務的ID的問題。
 
 包含2.13.1版的Adobe Experience Platform Web SDK資料庫。
 
@@ -260,7 +273,7 @@ ht-degree: 27%
 
 包含 2.7.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-- Edge Network的其他資訊可在「傳送事件完成」事件中使用，包括`inferences`和`destinations`。 這些屬性的格式可能會隨著這些功能目前在Beta中推出而改變。
+- 來自Edge Network的其他資訊可在「傳送事件完成」事件中使用，包括`inferences`和`destinations`。 這些屬性的格式可能會隨著這些功能目前在Beta中推出而改變。
 
 ## 2.7.3版 — 2021年9月7日
 
@@ -310,7 +323,7 @@ ht-degree: 27%
 - 已新增[「檔案正在解除安裝」](/help/web-sdk/commands/sendevent/documentunloading.md)核取方塊以傳送事件動作UI。
 - 新增對`out`選項的支援，當[設定預設同意](/help/web-sdk/commands/configure/defaultconsent.md)時，會捨棄所有事件直到收到同意為止（現有的`pending`選項會佇列事件，並在收到同意後傳送它們）。
 - 新增工具提示至預設同意欄位。
-- 新增使用[`setConsent`](/help/web-sdk/commands/setconsent.md)命令時對Adobe同意2.0標準的支援。
+- 新增使用[`setConsent`](/help/web-sdk/commands/setconsent.md)命令時對Adobe的Consent 2.0標準的支援。
 - 如果使用者的存取權杖無效或布建不正確，XDM物件資料元素UI中現在會顯示更好的錯誤。
 - 修正檢視XDM物件資料元素時，瀏覽器開發人員主控台顯示的跨來源錯誤（不會影響擴充功能的作業）。
 

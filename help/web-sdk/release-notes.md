@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2285'
 ht-degree: 2%
 
 ---
@@ -16,6 +16,18 @@ ht-degree: 2%
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
 
+## 2.26.0版 — 2025年3月5日
+
+**新功能**
+
+- 您現在可以使用Web SDK NPM套件建立自訂Web SDK組建，並僅選取您需要的程式庫元件。 這可讓程式庫大小得以縮小，並最佳化載入時間。 請參閱有關如何使用NPM套件[建立自訂Web SDK組建的檔案](install/create-custom-build.md)。
+- [`getIdentity`](commands/getidentity.md)命令現在會自動直接從`kndctr`身分Cookie讀取ECID。 如果您使用`ECID`名稱空間呼叫`getIdentity`，而且已有身分Cookie，Web SDK將不再向Edge Network要求取得身分。 現在會從Cookie讀取身分識別。
+
+**修正和改良**
+
+- 修正傳送`collect`呼叫後，`getIdentity`命令未傳回身分的問題。
+- 修正個人化重新導向導致內容在重新導向發生前忽隱忽現的問題。
+
 ## 2.25.0版 — 2025年1月23日
 
 **修正和改良**
@@ -24,7 +36,7 @@ ht-degree: 2%
 - 在設定`onBeforeLinkClickSend`函式或下載連結限定詞時新增警告（當點選集合停用時）。
 - 修正顯示通知中未包含轉譯主張的問題。
 
-**新特性**
+**新功能**
 
 - 當啟用協力廠商Cookie並封鎖對adobedc.demdex.net的請求時，對已設定的Edge網域實施遞補。
 
@@ -45,8 +57,8 @@ ht-degree: 2%
 **修正和改良**
 
 - 傳回多個應用程式內訊息時，只會顯示優先順序最高的訊息。 其他則被記錄為隱抑。
-- 空的資料流覆寫不再傳送給Edge Network，減少與伺服器端路由設定的潛在衝突。
-- 已重新命名下列記錄訊息元件名稱，以與其他AdobeSDK一致：
+- 空的資料流覆寫不再傳送至Edge Network，減少與伺服器端路由設定的潛在衝突。
+- 已重新命名下列記錄訊息元件名稱，以與其他Adobe SDK一致：
    - `DecisioningEngine`已重新命名為`RulesEngine`
    - `LegacyMediaAnalytics`已重新命名為`MediaAnalyticsBridge`
    - `Privacy`已重新命名為`Consent`
@@ -145,7 +157,7 @@ ht-degree: 2%
 
 **修正和改良**
 
-- Web SDK現在會對Audience ManagerCookie目的地值進行編碼，類似於[Data Integration Library(DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant)。
+- Web SDK現在會編碼Audience Manager Cookie目的地值，類似於[Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant)。
 
 ## 2.16.0版 — 2023年4月25日
 
@@ -200,7 +212,7 @@ ht-degree: 2%
 
 ## 2.12.0版 — 2022年6月29日
 
-- 將請求變更為Edge Network以使用`cluster` Cookie位置提示做為URL的一部分。 這可確保在工作階段中變更位置（例如，透過VPN或透過行動裝置駕駛等）的使用者點選相同的邊緣，並具有相同的個人化設定檔。
+- 變更對Edge Network的請求，以使用`cluster` Cookie位置提示作為URL的一部分。 這可確保在工作階段中變更位置（例如，透過VPN或透過行動裝置駕駛等）的使用者點選相同的邊緣，並具有相同的個人化設定檔。
 - 將getLibraryInfo命令回應中設定的函式字串化。
 
 ## 2.11.0版 — 2022年6月13日
@@ -240,7 +252,7 @@ ht-degree: 2%
 
 - 支援個人化的影子DOM選取器。
 - 已重新命名個人化事件型別。 （`display`和`click`成為`decisioning.propositionDisplay`和`decisioning.propositionInteract`）
-- 修正具有內嵌指令碼標籤的HTML選件將指令碼標籤新增兩次至頁面的問題，即使指令碼僅執行一次。
+- 修正內嵌指令碼標籤的HTML選件將指令碼標籤新增兩次至頁面的問題，即使指令碼僅執行一次。
 
 ## 版本 2.7.0 - 2021 年 10 月 26 日
 
@@ -248,7 +260,7 @@ ht-degree: 2%
 
 ## 2.6.4版 — 2021年9月7日
 
-- 修正套用至`head`元素的設定HTMLAdobe Target動作會取代整個`head`內容的問題。 現在，套用至`head`專案的HTML動作已變更為附加HTML。
+- 修正套用至`head`元素的設定HTML Adobe Target動作會取代整個`head`內容的問題。 現在，套用至`head`元素的HTML動作已變更為附加HTML。
 
 ## 2.6.3版 — 2021年8月16日
 
@@ -281,8 +293,8 @@ ht-degree: 2%
 - 現在傳送有關個人化內容呈現或點按的事件時，會使用XDM結構描述欄位群組，而非`meta.personalization`。
 - [`getIdentity`](/help/web-sdk/commands/getidentity.md)命令現在會連同身分一併傳回邊緣區域ID。
 - 已改善從伺服器收到的警告和錯誤，並以更適當的方式加以處理。
-- 新增對[`setConsent`](/help/web-sdk/commands/setconsent.md)命令之Adobe同意2.0標準的支援。
-- 收到同意偏好設定時，會進行雜湊處理，並儲存在本機儲存體中，以最佳化CMP、Platform Web SDK和PlatformEdge Network之間的整合。 如果您正在收集同意偏好設定，我們現在鼓勵您在每次載入頁面時呼叫`setConsent`。
+- 新增對Adobe的[`setConsent`](/help/web-sdk/commands/setconsent.md)命令同意2.0標準的支援。
+- 收到同意偏好設定時，會進行雜湊處理，並儲存在本機儲存體中，以最佳化CMP、Platform Web SDK和Platform Edge Network之間的整合。 如果您正在收集同意偏好設定，我們現在鼓勵您在每次載入頁面時呼叫`setConsent`。
 - 已新增兩個[監視鉤點](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)、`onCommandResolved`和`onCommandRejected`。
 - 錯誤修正：當使用者導覽至新的單頁應用程式檢視、返回原始檢視，並按一下符合轉換資格的元素時，Personalization互動通知事件會包含相同活動的重複資訊。
 - 錯誤修正：如果SDK傳送的第一個事件將`documentUnloading`設為`true`，則會使用[`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)傳送事件，導致有關未建立身分的錯誤。
@@ -293,9 +305,9 @@ ht-degree: 2%
 - 新增對單頁應用程式的個人化支援。
 - 改善與其他可能覆寫`window.console` API的頁面上JavaScript程式碼的相容性。
 - 錯誤修正： `documentUnloading`設為`true`或自動追蹤連結點選時，未使用`sendBeacon`。
-- 錯誤修正：如果錨點元素包含HTML內容，則不會自動追蹤連結。
+- 錯誤修正：如果錨點元素包含HTML內容，系統不會自動追蹤連結。
 - 錯誤修正：某些包含唯讀`message`屬性的瀏覽器錯誤未適當處理，導致向客戶公開不同的錯誤。
-- 錯誤修正：如果iframe的HTML頁面來自與上層視窗的HTML頁面不同的子網域，則在iframe內執行SDK會導致錯誤。
+- 錯誤修正：如果iframe的SDKHTML頁面來自與上層視窗的HTML頁面不同的子網域，則在iframe內執行iframe會導致錯誤。
 
 ## 2.2.0版 — 2020年10月
 
