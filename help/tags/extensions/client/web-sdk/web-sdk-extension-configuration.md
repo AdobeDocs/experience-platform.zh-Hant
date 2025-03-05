@@ -1,23 +1,23 @@
 ---
-title: 設定Web SDK標籤擴充功能
+title: 設定網頁SDK標籤擴充功能
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
+source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
 workflow-type: tm+mt
-source-wordcount: '2525'
+source-wordcount: '2874'
 ht-degree: 4%
 
 ---
 
-# 設定Web SDK標籤擴充功能
+# 設定網頁SDK標籤擴充功能
 
-[!DNL Web SDK]標籤擴充功能會透過Experience PlatformEdge Network，從網頁屬性傳送資料至Adobe Experience Cloud。
+[!DNL Web SDK]標籤擴充功能會透過Adobe Experience Cloud Edge Network，將資料從Experience Platform屬性傳送至。
 
 擴充功能可讓您將資料串流至Platform、同步身分、處理客戶同意訊號，以及自動收集內容資料。
 
 本檔案說明如何在標籤UI中設定標籤擴充功能。
 
-## 安裝Web SDK標籤擴充功能 {#install}
+## 安裝網頁SDK標籤擴充功能 {#install}
 
 Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參閱有關[建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)的檔案。
 
@@ -32,6 +32,39 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 >[!NOTE]
 >
 >標籤擴充功能只會在儲存設定後安裝。 請參閱下一節以瞭解如何設定標籤擴充功能。
+
+## 建立自訂網頁SDK組建 {#custom-build}
+
+Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身分、連結追蹤等。 根據您的使用案例，您可能只需要特定功能，而不需要整個程式庫。 建立自訂的Web SDK組建可讓您僅選取所需的模組，藉此縮小程式庫大小並提升效能。
+
+當您建立自訂Web SDK組建時，您的所有Web SDK執行個體都會使用該組建。
+
+>[!IMPORTANT]
+>
+>停用Web SDK元件可能會破壞您現有的實作。 每次停用元件時，請務必徹底測試實作，以確保所需的所有功能皆如預期般運作。
+>停用元件時，無法再編輯該元件的設定。
+
+若要使用Web SDK標籤擴充功能建立自訂Web SDK組建，請遵循下列步驟。
+
+1. 在標籤延伸設定頁面中，展開&#x200B;**[!UICONTROL 自訂組建元件]**&#x200B;區段。
+1. 根據您的需求啟用或停用元件。 您可以從下列元件中選取：
+   * **[!UICONTROL 活動收集器]**：此元件可啟用自動連結收集和Activity Map追蹤。
+   * **[!UICONTROL 對象]**：此元件可啟用Audience Manager整合，包括URL和Cookie型目的地，以及ID同步。
+   * **[!UICONTROL 同意]**：此元件會啟用同意整合。 停用此元件會停用下列元素：
+      * [設定同意](action-types.md#set-consent)動作型別
+   * **[!UICONTROL Context]**：此元件可啟用自動收集內容資料。
+   * **[!UICONTROL 事件合併]**： _已棄用_。 停用此元件會停用下列元素：
+      * [事件合併ID](action-types.md#data)資料元素
+      * **[!UICONTROL 重設事件合併ID]**&#x200B;動作型別
+   * **[!UICONTROL Media Analytics橋接器]**：此元件會使用Media Analytics介面啟用Edge Network串流媒體。 停用此元件會停用下列元素：
+      * [取得Media Analytics追蹤器](action-types.md#get-media-analytics-tracker)動作型別
+   * **[!UICONTROL Personalization]**：此元件可啟用Adobe Target與Adobe Journey Optimizer的整合。 停用此元件會停用下列元素：
+      * [套用主張動作](action-types.md)型別
+   * **[!UICONTROL 規則引擎]**：此元件會啟用Adobe Journey Optimizer裝置上決策。 停用此元件會停用下列元素：
+      * [評估規則集](action-types.md#evaluate-rulesets)動作型別
+      * [訂閱規則集專案](event-types.md#subscribe-ruleset-items)事件型別
+   * **[!UICONTROL 串流媒體]**：此元件可啟用Edge Network串流媒體。 停用此元件會停用下列元素：
+      * [傳送媒體事件](action-types.md#send-media-event)動作型別
 
 ## 設定執行個體設定 {#general}
 
@@ -76,12 +109,12 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 ## 設定身分設定 {#identity}
 
-本節可讓您定義Web SDK在處理使用者身分識別時的行為。
+本節可讓您定義處理使用者身分識別時的網頁SDK行為。
 
 ![此影像顯示標籤UI中Web SDK標籤擴充功能的身分設定](assets/web-sdk-ext-identity.png)
 
 * **[!UICONTROL 從VisitorAPI移轉ECID]**：此選項預設為啟用。 啟用此功能後，SDK可以讀取`AMCV`和`s_ecid` Cookie，並設定[!DNL Visitor.js]使用的`AMCV` Cookie。 移轉至Web SDK時，此功能很重要，因為有些頁面可能仍在使用[!DNL Visitor.js]。 此選項可讓SDK繼續使用相同的[!DNL ECID]，這樣就不會將使用者識別為兩個不同的使用者。
-* **[!UICONTROL 使用第三方Cookie]**：啟用此選項時，Web SDK會嘗試將使用者識別碼儲存在第三方Cookie中。 如果成功，則會在使用者瀏覽多個網域時將其識別為單一使用者，而不是在每個網域上將其識別為個別使用者。 如果已啟用此選項，如果瀏覽器不支援第三方Cookie或使用者已設定不允許第三方Cookie，SDK仍可能無法將使用者識別碼儲存在第三方Cookie中。 在此情況下，SDK只會將識別碼儲存在第一方網域中。
+* **[!UICONTROL 使用第三方Cookie]**：啟用此選項時，Web SDK會嘗試將使用者識別碼儲存在第三方Cookie中。 如果成功，則會在使用者瀏覽多個網域時將其識別為單一使用者，而不是在每個網域上將其識別為個別使用者。 如果已啟用此選項，如果瀏覽器不支援第三方Cookie或使用者已設定不允許第三方Cookie，則SDK可能仍無法將使用者識別碼儲存在第三方Cookie中。 在此情況下，SDK只會將識別碼儲存在第一方網域中。
 
   >[!IMPORTANT]
   >>第三方Cookie與Web SDK中的[第一方裝置識別碼](../../../../web-sdk/identity/first-party-device-ids.md)功能不相容。
@@ -91,9 +124,9 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 此區段可讓您設定在載入個人化內容時如何隱藏頁面的某些部分。 這可確保您的訪客只會看到個人化頁面。
 
-![此影像顯示標籤UI中Web SDK標籤擴充功能的個人化設定](assets/web-sdk-ext-personalization.png)
+![此影像顯示標籤使用者介面中Web SDK標籤擴充功能的個人化設定](assets/web-sdk-ext-personalization.png)
 
-* **[!UICONTROL 將Target從at.js移轉至Web SDK]**：使用此選項可讓[!DNL Web SDK]讀取及寫入at.js `1.x`或`2.x`資料庫所使用的舊版`mbox`和`mboxEdgeCluster` Cookie。 這可協助您在從使用Web SDK的頁面移至使用at.js `1.x`或`2.x`資料庫的頁面時保留訪客設定檔，反之亦然。
+* **[!UICONTROL 將Target從at.js移轉至Web SDK]**：使用此選項可讓[!DNL Web SDK]讀取及寫入at.js `1.x`或`2.x`資料庫所使用的舊版`mbox`和`mboxEdgeCluster` Cookie。 這可協助您在從使用Web SDK的頁面移動到使用at.js `1.x`或`2.x`資料庫的頁面時保留訪客設定檔，反之亦然。
 
 ### 預先隱藏樣式 {#prehiding-style}
 
@@ -101,7 +134,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 ### 預先隱藏程式碼片段 {#prehiding-snippet}
 
-非同步載入Web SDK程式庫時，預先隱藏程式碼片段相當實用。 在此情況下，為避免忽隱忽現的情形，我們建議在載入Web SDK程式庫之前隱藏內容。
+非同步載入Web SDK程式庫時，預先隱藏程式碼片段相當實用。 在此情況下，為避免閃爍，我們建議在載入Web SDK程式庫之前隱藏內容。
 
 若要使用預先隱藏的程式碼片段，請複製該程式碼片段，並貼到頁面的`<head>`元素中。
 
@@ -115,10 +148,10 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 ![此影像顯示標籤UI中Web SDK標籤擴充功能的資料收集設定。](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL 在事件傳送回呼之前]**：回呼函式，用於評估及修改傳送給Adobe的裝載。 在回呼函式中使用`content`變數來修改裝載。 此回呼的標籤相當於JavaScript資料庫中的[`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md)。
+* **[!UICONTROL 在事件傳送回呼之前]**：回呼函式，用於評估及修改傳送至Adobe的裝載。 在回呼函式中使用`content`變數來修改裝載。 此回呼的標籤相當於JavaScript資料庫中的[`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md)。
 * **[!UICONTROL 收集內部連結點按次數]**：啟用收集網站或屬性內部連結追蹤資料的核取方塊。 啟用此核取方塊時，會顯示事件分組選項：
-   * **[!UICONTROL 沒有事件分組]**：連結追蹤資料會以個別事件傳送給Adobe。 在個別事件中傳送的連結點選可能會增加傳送至Adobe Experience Platform的資料的合約使用量。
-   * **[!UICONTROL 使用工作階段存放區進行事件分組]**：將連結追蹤資料儲存在工作階段存放區中，直到發生下一頁事件為止。 在以下頁面中，儲存的連結追蹤資料和頁面檢視資料會同時傳送給Adobe。 Adobe建議在追蹤內部連結時啟用此設定。
+   * **[!UICONTROL 無事件分組]**：連結追蹤資料會以個別事件傳送至Adobe。 在個別事件中傳送的連結點選可能會增加傳送至Adobe Experience Platform的資料的合約使用量。
+   * **[!UICONTROL 使用工作階段存放區進行事件分組]**：將連結追蹤資料儲存在工作階段存放區中，直到發生下一頁事件為止。 在以下頁面中，儲存的連結追蹤資料和頁面檢視資料會同時傳送到Adobe。 Adobe建議在追蹤內部連結時啟用此設定。
    * **[!UICONTROL 使用本機物件進行事件分組]**：將連結追蹤資料儲存在本機物件中，直到下一頁事件為止。 如果訪客導覽至新頁面，連結追蹤資料會遺失。 此設定在單頁應用程式環境中最為有利。
 * **[!UICONTROL 收集外部連結點按次數]**：啟用外部連結收集的核取方塊。
 * **[!UICONTROL 收集下載連結點按次數]**：啟用收集下載連結的核取方塊。
@@ -133,7 +166,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 >[!TIP]
 >
-**[!UICONTROL 在連結點選前開啟]**&#x200B;欄位是已棄用的回呼，只對已設定它的屬性可見。 它等同於JavaScript資料庫中的[`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md)標籤。 使用&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼來篩選或調整點選資料，或使用&#x200B;**[!UICONTROL 在事件傳送回呼前開啟]**&#x200B;來篩選或調整傳送給Adobe的整體承載。 如果&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼和&#x200B;**[!UICONTROL 在連結點選前開啟]**&#x200B;回呼都已設定，則只有&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼執行。
+**[!UICONTROL 在連結點選前開啟]**&#x200B;欄位是已棄用的回呼，只對已設定它的屬性可見。 它等同於JavaScript資料庫中的[`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md)標籤。 使用&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼來篩選或調整點選資料，或使用&#x200B;**[!UICONTROL 在事件傳送回呼前開啟]**&#x200B;來篩選或調整傳送至Adobe的整體裝載。 如果&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼和&#x200B;**[!UICONTROL 在連結點選前開啟]**&#x200B;回呼都已設定，則只有&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼執行。
 
 ## 設定媒體收集設定 {#media-collection}
 
@@ -159,7 +192,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 資料流設定覆寫的流程包含兩個步驟：
 
 1. 首先，您必須在[資料流設定頁面](/help/datastreams/configure.md)中定義您的資料流設定覆寫。
-2. 然後，您必須透過Web SDK命令或使用Web SDK標籤擴充功能，將覆寫傳送給Edge Network。
+2. 接著，您必須透過Web SDK命令或使用Web SDK標籤擴充功能，將覆寫傳送至Edge Network。
 
 如需如何覆寫資料流設定的詳細說明，請參閱資料流[設定覆寫檔案](/help/datastreams/overrides.md)。
 
@@ -169,7 +202,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 >
 資料流覆寫必須根據環境進行設定。 開發、測試和生產環境都有不同的覆寫。 您可以使用下方畫面中顯示的專用選項，複製設定值。
 
-![影像顯示使用Web SDK標籤延伸功能頁面的資料流設定覆寫。](assets/datastream-overrides.png)
+![影像顯示使用網頁SDK標籤延伸功能頁面的Datastream設定覆寫。](assets/datastream-overrides.png)
 
 預設會停用資料流設定覆寫。 預設會選取&#x200B;**[!UICONTROL 符合資料流組態]**&#x200B;選項。
 
@@ -187,7 +220,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 使用此區段中的設定覆寫路由傳送至Adobe Analytics服務的資料。
 
-![顯示Adobe Analytics資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-analytics.png)
+![顯示Adobe Analytics資料流覆寫設定的Web SDK標籤擴充功能UI影像。](assets/datastream-override-analytics.png)
 
 * **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe Analytics服務的資料。
 * **[!UICONTROL 報表套裝]**： Adobe Analytics中目標報表套裝的ID。 該值必須是來自您的資料流設定的預先設定覆寫報告套裝（或以逗號分隔的報告套裝清單）。 此設定會覆寫主要報表套裝。
@@ -197,20 +230,20 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 使用此區段中的設定覆寫路由傳送至Adobe Audience Manager服務的資料。
 
-![顯示Adobe Audience Manager資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-audience-manager.png)
+![顯示Adobe Audience Manager資料流覆寫設定的Web SDK標籤擴充功能UI影像。](assets/datastream-override-audience-manager.png)
 
 * **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe Audience Manager服務的資料。
-* **[!UICONTROL 協力廠商ID同步容器]**：Audience Manager中目的地協力廠商ID同步容器的識別碼。 值必須是來自資料流設定的預先設定次要容器，並覆寫主要容器。
+* **[!UICONTROL 協力廠商ID同步容器]**： Audience Manager中目的地協力廠商ID同步容器的識別碼。 值必須是來自資料流設定的預先設定次要容器，並覆寫主要容器。
 
 ### Adobe Experience Platform {#experience-platform}
 
 使用此區段中的設定覆寫路由傳送至Adobe Experience Platform服務的資料。
 
-![顯示Adobe Experience Platform資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-experience-platform.png)
+![顯示Adobe Experience Platform資料流覆寫設定的Web SDK標籤擴充功能UI影像。](assets/datastream-override-experience-platform.png)
 
 * **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe Experience Platform服務的資料。
 * **[!UICONTROL 事件資料集]**： Adobe Experience Platform中目的地事件資料集的識別碼。 該值必須是來自您的資料流設定的預先設定次要資料集。
-* **[!UICONTROL Offer decisioning]**：使用此下拉式功能表來啟用或停用到[!DNL Offer Decisioning]服務的資料路由。
+* **[!UICONTROL Offer Decisioning]**：使用此下拉式功能表來啟用或停用到[!DNL Offer Decisioning]服務的資料路由。
 * **[!UICONTROL Edge Segmentation]**：使用此下拉式功能表來啟用或停用到[!DNL Edge Segmentation]服務的資料路由。
 * **[!UICONTROL Personalization目的地]**：使用此下拉式功能表來啟用或停用個人化目的地的資料路由。
 * **[!UICONTROL Adobe Journey Optimizer]**：使用此下拉式功能表來啟用或停用到[!DNL Adobe Journey Optimizer]服務的資料路由。
@@ -219,7 +252,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 使用此區段中的設定覆寫路由傳送至Adobe伺服器端事件轉送服務的資料。
 
-![顯示Adobe伺服器端事件轉送資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-ssf.png)
+![顯示Adobe伺服器端事件轉送資料流覆寫設定的Web SDK標籤擴充功能UI影像。](assets/datastream-override-ssf.png)
 
 * **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe伺服器端事件轉送服務的資料。
 
@@ -227,12 +260,12 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 
 使用此區段中的設定覆寫路由傳送至Adobe Target服務的資料。
 
-![顯示Adobe Target資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-target.png)
+![顯示Adobe Target資料流覆寫設定的Web SDK標籤擴充功能UI影像。](assets/datastream-override-target.png)
 
 * **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe Target服務的資料。
 
 ## 設定進階設定
 
-如果您需要變更與Edge Network互動所用的基底路徑，請使用&#x200B;**[!UICONTROL Edge基底路徑]**&#x200B;欄位。 這應該不需要更新，但在您參與Beta或Alpha的情況下，Adobe可能會要求您變更此欄位。
+如果您需要變更用來與Edge Network互動的基本路徑，請使用&#x200B;**[!UICONTROL Edge基本路徑]**&#x200B;欄位。 這應該不需要更新，但若您參與Beta或Alpha版測試，Adobe可能會要求您變更此欄位。
 
 ![顯示使用Web SDK標籤延伸頁面之進階設定的影像。](assets/advanced-settings.png)

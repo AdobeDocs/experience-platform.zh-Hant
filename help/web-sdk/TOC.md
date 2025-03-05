@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
 role: Developer
-source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
+source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 23%
+source-wordcount: '239'
+ht-degree: 22%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 23%
    * [使用標籤擴充功能安裝網頁SDK](install/extension.md)
    * [使用JavaScript程式庫安裝網頁SDK](install/library.md)
    * [使用NPM套件安裝網頁SDK](install/npm.md)
+   * [使用NPM套件建立自訂Web SDK組建](install/create-custom-build.md)
 * 命令{#commands}
    * 設定{#configure}
       * [概觀](commands/configure/overview.md)
@@ -86,7 +87,7 @@ ht-degree: 23%
          * [概觀](personalization/adobe-target/analytics-logging/overview.md)
          * [使用者端記錄](personalization/adobe-target/analytics-logging/client-side.md)
          * [伺服器端記錄](personalization/adobe-target/analytics-logging/server-side.md)
-   * offer decisioning{#offer-decisioning}
+   * Offer Decisioning {#offer-decisioning}
       * [概觀](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [概觀](personalization/ajo/overview.md)
