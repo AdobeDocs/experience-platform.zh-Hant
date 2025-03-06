@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Access API指南
 description: 資料存取API為開發人員提供RESTful介面，著重於Experience Platform內擷取資料集的可發現性和可存取性，以支援Adobe Experience Platform。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: 78dbb735bad70e2115cbbaabb6cf74bf38983460
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 4%
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `data.name` | 檔案的名稱（例如，`profiles.csv`）。 |
+| `data.name` | 檔案的名稱（例如，`profiles.parquet`）。 |
 | `data.length` | 檔案的大小（位元組）。 |
 | `data._links.self.href` | 下載檔案的URL。 |
 
@@ -201,7 +201,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `data.name` | 檔案的名稱（例如，`profiles.csv`）。 |
+| `data.name` | 檔案的名稱（例如，`profiles.parquet`）。 |
 | `data._links.self.href` | 下載檔案的URL。 |
 
 ## 存取檔案的內容 {#access-file-contents}
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `{FILE_ID}` | 資料集中檔案的ID。 |
-| `{FILE_NAME}` | 檔案的完整名稱（例如，`profiles.csv`）。 |
+| `{FILE_NAME}` | 檔案的完整名稱（例如，`profiles.parquet`）。 |
 
 **回應**
 
@@ -243,4 +243,4 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## 訂閱資料擷取事件 {#subscribe-to-data-ingestion-events}
 
-您可以透過[Adobe Developer Console](https://developer.adobe.com/console/)訂閱特定的高值事件。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱[訂閱Adobe事件通知](../observability/alerts/subscribe.md)的教學課程。
+您可以透過[Adobe Developer Console](https://developer.adobe.com/console/)訂閱特定的高值事件。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱有關[訂閱Adobe事件通知](../observability/alerts/subscribe.md)的教學課程。
