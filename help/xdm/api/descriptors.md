@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 描述項API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述項。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
+source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '2192'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ## 擷取描述項清單 {#list}
 
@@ -211,11 +211,11 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **要求**
 
-此請求基本上會重寫描述項，因此請求內文必須包含定義該型別描述項所需的所有欄位。 換句話說，更新(PUT)描述項的要求承載與[建立(POST)相同型別的描述項](#create)的承載相同。
+此請求基本上會重寫描述項，因此請求內文必須包含定義該型別描述項所需的所有欄位。 換句話說，更新(PUT)描述項的要求承載與[建立相同型別(POST)描述項](#create)的承載相同。
 
 >[!IMPORTANT]
 >
->和使用POST要求建立描述項一樣，每種描述項型別都需要在PUT要求裝載中傳送其專屬欄位。 請參閱[附錄](#defining-descriptors)，以取得描述元的完整清單以及定義描述元所需的欄位。
+>與使用POST要求建立描述項一樣，每種描述項型別都需要在PUT要求裝載中傳送其專屬欄位。 請參閱[附錄](#defining-descriptors)，以取得描述元的完整清單以及定義描述元所需的欄位。
 
 下列範例會更新身分描述項以參考其他`xdm:sourceProperty` (`mobile phone`)，並將`xdm:namespace`變更為`Phone`。
 
@@ -248,11 +248,11 @@ curl -X PUT \
 }
 ```
 
-執行[查詢(GET)要求](#lookup)以檢視描述項，顯示欄位現在已更新，以反映PUT要求中傳送的變更。
+執行[查詢(GET)要求](#lookup)以檢視描述項，會顯示欄位現已更新，以反映PUT要求中傳送的變更。
 
 ## 刪除描述項 {#delete}
 
-有時您可能需要從[!DNL Schema Registry]中移除已定義的描述項。 這是透過發出DELETE請求來完成，該請求會參考您要移除之描述項的`@id`。
+有時您可能需要從[!DNL Schema Registry]中移除已定義的描述項。 這可透過發出DELETE請求來完成，該請求會參考您要移除之描述項的`@id`。
 
 **API格式**
 
@@ -369,7 +369,7 @@ curl -X DELETE \
 
 {style="table-layout:auto"}
 
-#### 關係描述項
+#### 關係描述項 {#relationship-descriptor}
 
 關聯性描述項描述兩個不同結構描述之間的關係，以`sourceProperty`和`destinationProperty`中描述的屬性作為索引鍵。 如需詳細資訊，請參閱有關[定義兩個結構描述](../tutorials/relationship-api.md)之間關係的教學課程。
 
@@ -389,13 +389,49 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述項型別。 對於關聯性描述項，此值必須設定為`xdm:descriptorOneToOne`。 |
+| `@type` | 正在定義的描述項型別。 對於關係描述項，除非您擁有Real-Time CDP B2B edition的存取權，否則此值必須設定為`xdm:descriptorOneToOne`。 使用B2B edition時，您可以選擇使用`xdm:descriptorOneToOne`或[`xdm:descriptorRelationship`](#b2b-relationship-descriptor)。 |
 | `xdm:sourceSchema` | 正在定義描述項的結構描述的`$id` URI。 |
 | `xdm:sourceVersion` | 來源結構描述的主要版本。 |
-| `xdm:sourceProperty` | 來源結構描述中定義關係的欄位路徑。 應該以「/」開頭，而不是以開頭。 請勿在路徑中包含「properties」（例如，「/personalEmail/address」而非「/properties/personalEmail/properties/address」）。 |
+| `xdm:sourceProperty` | 來源結構描述中定義關係的欄位路徑。 開頭應為&quot;/&quot;，結尾應為&quot;/&quot;。 請勿在路徑中包含「properties」（例如，「/personalEmail/address」而非「/properties/personalEmail/properties/address」）。 |
 | `xdm:destinationSchema` | 此描述項正在定義關聯性的參考結構描述的`$id` URI。 |
 | `xdm:destinationVersion` | 參考結構描述的主要版本。 |
-| `xdm:destinationProperty` | 參照結構描述中目標欄位的選用路徑。 如果省略此屬性，則任何包含相符參考身分描述項的欄位都會推斷目標欄位（請參閱下文）。 |
+| `xdm:destinationProperty` | （選用）參照結構描述中目標欄位的路徑。 如果省略此屬性，則任何包含相符參考身分描述項的欄位都會推斷目標欄位（請參閱下文）。 |
+
+{style="table-layout:auto"}
+
+##### B2B關係描述項 {#B2B-relationship-descriptor}
+
+Real-Time CDP B2B edition引進了定義結構描述之間關係的替代方式，其允許多對一關係。 此新關聯性必須具有`@type: xdm:descriptorRelationship`型別，而且裝載必須包含比`@type: xdm:descriptorOneToOne`關聯性更多的欄位。 如需詳細資訊，請參閱有關[定義B2B edition](../tutorials/relationship-b2b.md)的結構描述關係的教學課程。
+
+```json
+{
+   "@type": "xdm:descriptorRelationship",
+   "xdm:sourceSchema" : "https://ns.adobe.com/{TENANT_ID}/schemas/9f2b2f225ac642570a110d8fd70800ac0c0573d52974fa9a",
+   "xdm:sourceVersion" : 1,
+   "xdm:sourceProperty" : "/person-ref",
+   "xdm:destinationSchema" : "https://ns.adobe.com/{TENANT_ID/schemas/628427680e6b09f1f5a8f63ba302ee5ce12afba8de31acd7",
+   "xdm:destinationVersion" : 1,
+   "xdm:destinationProperty": "/personId",
+   "xdm:destinationNamespace" : "People", 
+   "xdm:destinationToSourceTitle" : "Opportunity Roles",
+   "xdm:sourceToDestinationTitle" : "People",
+   "xdm:cardinality": "M:1"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `@type` | 正在定義的描述項型別。 對於具有下列欄位的我們，值必須設定為`xdm:descriptorRelationship`。 如需其他型別的詳細資訊，請參閱[關聯性描述元](#relationship-descriptor)區段。 |
+| `xdm:sourceSchema` | 正在定義描述項的結構描述的`$id` URI。 |
+| `xdm:sourceVersion` | 來源結構描述的主要版本。 |
+| `xdm:sourceProperty` | 來源結構描述中定義關係的欄位路徑。 開頭應為&quot;/&quot;，結尾應為&quot;/&quot;。 請勿在路徑中包含「properties」（例如，「/personalEmail/address」而非「/properties/personalEmail/properties/address」）。 |
+| `xdm:destinationSchema` | 此描述項正在定義關聯性的參考結構描述的`$id` URI。 |
+| `xdm:destinationVersion` | 參考結構描述的主要版本。 |
+| `xdm:destinationProperty` | （選用）參照結構描述中目標欄位的路徑，該路徑必須是結構描述的主要ID。 如果省略此屬性，則任何包含相符參考身分描述項的欄位都會推斷目標欄位（請參閱下文）。 |
+| `xdm:destinationNamespace` | 參照結構描述中的主要ID名稱空間。 |
+| `xdm:destinationToSourceTitle` | 從參考結構描述到來源結構描述的關係顯示名稱。 |
+| `xdm:sourceToDestinationTitle` | 從來源結構描述到參考結構描述的關係顯示名稱。 |
+| `xdm:cardinality` | 結構描述之間的結合關係。 此值應設為`M:1`，表示多對一關係。 |
 
 {style="table-layout:auto"}
 
