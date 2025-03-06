@@ -3,9 +3,9 @@ title: 使用UI連線AWS Redshift至Experience Platform
 description: 瞭解如何使用來源UI將AWS Redshift帳戶連結至Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
+source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 >
 >[!DNL AWS Redshift]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
-閱讀本指南，瞭解如何使用使用者介面將您的[!DNL AWS Redshift]帳戶連結至Adobe Experience Platform。
+請閱讀本指南，瞭解如何使用UI中的來源工作區將您的[!DNL AWS Redshift]帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
 
