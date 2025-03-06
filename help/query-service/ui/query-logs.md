@@ -2,18 +2,14 @@
 title: 查詢記錄
 description: 每次執行查詢時都會自動產生查詢記錄，並可透過UI取得查詢記錄以協助疑難排解。 本檔案概述如何使用及導覽UI的「查詢服務記錄檔」區段。
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
 # 查詢記錄
-
->[!IMPORTANT]
->
->某些查詢記錄功能目前還在有限版本中，無法供所有客戶使用。 如果沒有編輯圖示，您的UI可能會以稍微不同的方式顯示。 此外，選取查詢名稱的程式可能會瀏覽到查詢編輯器，而不是[!UICONTROL 查詢記錄詳細資料]檢視。
 
 Adobe Experience Platform會維護透過API和UI發生的所有查詢事件的記錄。 此資訊可在[!UICONTROL 記錄檔]索引標籤的查詢服務UI中使用。
 
@@ -52,10 +48,6 @@ Adobe Experience Platform會維護透過API和UI發生的所有查詢事件的�
 >[!UICONTROL 以CTAS]執行的選項僅適用於SELECT查詢。
 
 ![已選取資料列的查詢記錄工作區、以CTAS身分執行、刪除查詢，以及反白顯示的複製SQL圖示。](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->某些查詢記錄功能目前還在有限版本中，無法供所有客戶使用。
 
 您也可以從[!UICONTROL 名稱]資料行選取查詢範本名稱，以直接導覽至[!UICONTROL 查詢記錄詳細資料]檢視。
 

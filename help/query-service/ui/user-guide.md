@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務所提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發目的，以及非互動式查詢來填入Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
+source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2682'
 ht-degree: 0%
 
 ---
@@ -192,12 +192,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >記錄檔不會儲存未執行的查詢。 查詢必須執行或儲存在「查詢編輯器」中，查詢才能在「查詢服務」中使用。
 
-### [!BADGE 有限可用性]{type=Informative}物件瀏覽器 {#object-browser}
-
->[!AVAILABILITY]
->
-資料集導覽邊欄僅適用於Data Distiller客戶。 您的Platform UI可能未包含左側資料集導覽邊欄。 此檔案中的其他影像可能不會反映資料集導覽邊欄。 如需詳細資訊，請聯絡您的Adobe代表。<br>
-物件瀏覽器目前只能在**限定的版本**&#x200B;中使用。 請聯絡您的Adobe代表，以取得搶先發行的存取權。
+### 物件瀏覽器 {#object-browser}
 
 使用物件瀏覽器輕鬆搜尋和篩選資料集。 物件瀏覽器可縮短在有大量資料集的大型環境中搜尋表格和資料集所花費的時間。 透過簡化相關資料和中繼資料的存取，您可以將更多精力放在查詢撰寫上，而較少精力放在導覽上。
 
@@ -221,7 +216,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 #### 探索子資料表
 
-若要瀏覽子表格或連結表格，請選取清單中表格名稱旁的下拉箭頭。 這會展開表格以顯示任何相關聯的子表格，並提供資料結構的清楚檢視，並允許更複雜的查詢建構。 欄位名稱旁的圖示表示欄的資料型別。 to 協助您在複雜查詢期間識別它。
+若要瀏覽子表格或連結表格，請選取清單中表格名稱旁的下拉箭頭。 這會展開表格以顯示任何相關聯的子表格，並提供資料結構的清楚檢視，並允許更複雜的查詢建構。 欄位名稱旁邊的圖示表示欄的資料型別，可幫助您在複雜查詢期間識別它。
 
 ![已顯示篩選資料表清單的查詢編輯器。](../images/ui/query-editor/child-table-list.png)
 
@@ -237,7 +232,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 >[!NOTE]
 >
-主控台只會顯示因執行查詢而產生的錯誤。 它不會顯示查詢執行前發生的查詢驗證錯誤。
+>主控台只會顯示因執行查詢而產生的錯誤。 它不會顯示查詢執行前發生的查詢驗證錯誤。
 
 ### 查詢結果 {#query-results}
 
@@ -257,7 +252,7 @@ Query Service為跨產業和業務案例的各種使用案例提供解決方案�
 
 >[!NOTE]
 >
-影片中描述的UI已過時，但工作流程中使用的邏輯保持不變。
+>影片中描述的UI已過時，但工作流程中使用的邏輯保持不變。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

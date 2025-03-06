@@ -3,9 +3,9 @@ keywords: Experience Platform；查詢；查詢服務；疑難排解；護欄；
 title: 查詢服務的護欄
 description: 本檔案提供查詢服務資料的使用量限制資訊，以協助您最佳化查詢使用。
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 23c7a4590b365a49edb066567b6ebe2ac08c67e8
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 * **批次查詢**：用於執行`INSERT TABLE AS SELECT`和`CREATE TABLE AS SELECT`查詢，以清除、塑形、操縱和擴充資料。 這些查詢的結果&#x200B;**儲存在資料湖上**。 測量此功能耗用的量度是計算時數。
 
-* **查詢服務使用者**：在您目前的Customer Journey Analytics、Adobe Real-time Customer Data Platform及/或Adobe Journey Optimizer授權內提供的查詢服務使用者，也可以與Data Distiller搭配使用。 查詢服務使用者在功能之間共用。
+* **查詢服務使用者**：在您目前的Customer Journey Analytics、Adobe Real-Time Customer Data Platform及/或Adobe Journey Optimizer授權內提供的查詢服務使用者，也可以搭配Data Distiller使用。 查詢服務使用者在功能之間共用。
 
 * **臨機操作使用者**：臨機操作使用者是執行臨機操作查詢的使用者。
 
@@ -35,15 +35,13 @@ ht-degree: 2%
 
 * **報表API**：用於進行資料擷取呼叫的API （內部或外部）。 延伸報表資料模型衍生自Adobe Experience Platform中的原生報表資料模型，例如Real-Time CDP儀表板資料模型。
 
-下圖摘要說明目前封裝和授權查詢服務功能的方式：
-
 ## 護欄型別
 
 本檔案有兩種預設限制：
 
 | 護欄型別 | 說明 |
 |----------|---------|
-| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降級概不負責。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
+| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降低不負任何責任。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
 | **系統強制的護欄（硬限制）** | Real-Time CDP UI或API會強制執行系統強制的護欄。 這些限制不得超過，因為UI和API會阻止您這樣做或會傳回錯誤。 |
 
 {style="table-layout:auto"}
@@ -105,6 +103,6 @@ ht-degree: 2%
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
 * [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform （B2C Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2P - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2B - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

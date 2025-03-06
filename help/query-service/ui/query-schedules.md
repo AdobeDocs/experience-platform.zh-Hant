@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
@@ -118,10 +118,6 @@ ht-degree: 0%
 如需Adobe Experience Platform中警示的概觀，包括警示規則的定義結構，請參閱[警示概觀](../../observability/alerts/overview.md)。 如需在Adobe Experience Platform UI中管理警示和警示規則的指南，請參閱[警示UI指南](../../observability/alerts/ui.md)。
 
 ### 為排程的引數化查詢設定引數 {#set-parameters}
-
->[!IMPORTANT]
->
->引數化查詢UI功能目前僅在&#x200B;**有限發行版本**&#x200B;中可用，而且不是所有客戶都可使用。 如果您無法存取引數化查詢，請繼續執行[刪除或停用排程](#delete-schedule)區段。
 
 如果您要為引數化查詢建立排定的查詢，現在必須設定這些查詢執行的引數值。
 
