@@ -2,9 +2,9 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4830'
+source-wordcount: '4832'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 ### 我可以在哪裡啟用外部產生的對象？
 
-外部產生的對象可以對應至任何目的地，並可在Adobe Journey Optimizer行銷活動中使用。
+外部產生的對象可以對應至任何目的地，並可用於Adobe Journey Optimizer行銷活動和歷程。
 
 ### 我可以刪除外部產生的對象嗎？
 
@@ -313,7 +313,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
    - 此外，此區塊&#x200B;**不**&#x200B;支援擴充屬性。
 - 排除區塊
    - 此區塊&#x200B;**不**&#x200B;支援日期或布林資料型別。
-- 排名區塊
+- 等級區塊
    - 此區塊&#x200B;**不**&#x200B;支援擴充屬性。
 
 如需有關使用對象構成的詳細資訊，請參閱[對象構成UI指南](./ui/audience-composition.md)。
