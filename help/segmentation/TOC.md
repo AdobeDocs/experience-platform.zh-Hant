@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
-user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶輪廓資料建置客群。
+user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置客群。
 feature: Segments
 role: User
 source-git-commit: be480fee733eb786c5488a9a10d04a62ef845566
 workflow-type: tm+mt
 source-wordcount: '200'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 41%
    - [受眾控制面板](ui/audience-dashboard.md)
    - [Audience Portal](ui/audience-portal.md)
    - [客群構成](ui/audience-composition.md)
-   - [區段產生器](ui/segment-builder.md)
+   - [客戶細分工具](ui/segment-builder.md)
    - [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)
    - [忽略年份時間限制更新](ui/ignore-year.md)
    - [時間限制重構](ui/segment-refactoring.md)

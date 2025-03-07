@@ -16,7 +16,7 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="資料治理義務"
->abstract="請記住，您有責任遵守組織的資料治理原則並滿足監管需求。Experience Platform 可提供資料治理工具，以協助您管理資料使用義務。請在查詢或處理資料前套用適當的資料使用標籤。請參閱文件以了解資料治理工具和最佳實務。"
+>abstract="請記住，您有責任遵守組織的資料治理原則並滿足監管需求。Experience Platform 可提供資料治理工具，以協助您管理資料使用義務。請在查詢或處理資料前套用適當的資料使用標籤。請參閱文件以了解資料治理工具和最佳做法。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant" text="資料治理概觀"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant" text="資料治理標籤概觀"
 

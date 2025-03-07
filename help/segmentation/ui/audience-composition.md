@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
 source-wordcount: '2344'
-ht-degree: 11%
+ht-degree: 16%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="客群區塊"
->abstract="「對象」區塊可讓您新增要用來組成新對象的子對象。"
+>abstract="客群區塊可讓您新增要用來組成新客群的子客群。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -96,8 +96,8 @@ ht-degree: 11%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rule_builder"
->title="區段產生器"
->abstract="您可以使用區段產生器為您的組合新增自訂規則。"
+>title="客戶細分工具"
+>abstract="您可以使用客戶細分工具為您的客群構成新增自訂規則。"
 
 若要將自訂規則新增至對象區塊，請選取&#x200B;**[!UICONTROL 建置規則]**。
 
@@ -147,12 +147,12 @@ ht-degree: 11%
 
 ![會出現對象清單。 您可以從此對話方塊選取要新增的對象。](../images/ui/audience-composition/select-audience.png)
 
-### 依屬性排除 {#exclude-attribute}
+### 依照屬性排除 {#exclude-attribute}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_attribute"
->title="依屬性排除"
->abstract="依屬性排除時，您可以根據選取的屬性，排除構成中不會出現的特定設定檔。"
+>title="依照屬性排除"
+>abstract="依照屬性排除時，您可以根據所選屬性將特定設定檔排除在您的客群構成之外。"
 
 如果您依屬性排除，可以選取&#x200B;**[!UICONTROL 排除規則]**&#x200B;區段內的![篩選器](/help/images/icons/project-edit.png)圖示，以選取您要排除的屬性。 排除屬性可讓您從產生的對象中排除包含此屬性的任何設定檔。
 
@@ -319,17 +319,17 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 分割對象時，您可以依百分比分割對象或依屬性分割。
 
-### 依百分比分割 {#split-percentage}
+### 依照百分比分割 {#split-percentage}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_percentage"
->title="依百分比分割"
->abstract="您可以根據提供的路徑數和百分比，將受眾隨機分割為多個受眾。"
+>title="依照百分比分割"
+>abstract="您可以根據提供的路徑數量和百分比，將客群隨機分割成多個客群。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
->title="持續性分割"
->abstract="您可以啟用此選項並選取身分名稱空間，讓百分比分割持續存在。"
+>title="持續分割"
+>abstract="您可以透過啟用此選項並選取身分識別命名空間，持續採用依照百分比分割的方式。"
 
 依百分比分割時，會根據提供的路徑數和百分比，隨機分割對象。
 
@@ -357,12 +357,12 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![其他設定檔切換會反白顯示。](../images/ui/audience-composition/split-other-profiles.png)
 
-## 發佈您的對象 {#publish}
+## 發佈您的客群 {#publish}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_publish"
 >title="發佈"
->abstract="您可以發佈構成來在Adobe Experience Platform中建立產生的對象。"
+>abstract="您可以發佈客群構成，以在 Adobe Experience Platform 中建立產生的客群。"
 
 >[!IMPORTANT]
 >

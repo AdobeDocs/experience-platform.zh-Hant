@@ -1,7 +1,7 @@
 ---
 keywords: rtcdp b2b；b2b；帳戶；帳戶設定檔；帳戶設定檔rtcdp；即時客戶資料平台；
 title: Real-Time CDP B2B edition中的帳戶設定檔
-description: 了解 Adobe Real-Time Customer Data Platform B2B Edition 如何讓您使用帳戶輪廓整合來自多個來源的帳戶資訊。
+description: 了解 Adobe Real-Time Customer Data Platform B2B Edition 如何讓您使用帳戶設定檔整合來自多個來源的帳戶資訊。
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010

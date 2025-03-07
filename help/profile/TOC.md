@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: 即時客戶輪廓指南
+user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: Profiles
 role: User
 source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 27%
+ht-degree: 31%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 27%
 * [[!DNL Profile]和分段護欄](guardrails.md)
 * [[!DNL Profile]儀表板](ui/profile-dashboard.md)
 * [Edge設定檔](edge-profiles.md)
-* [體驗事件有效期](event-expirations.md)
+* [體驗事件過期](event-expirations.md)
 * [假名設定檔有效期](pseudonymous-profiles.md)
 * [客戶時間戳記排序](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
@@ -30,7 +30,7 @@ ht-degree: 27%
    * [預覽樣本狀態（[!DNL Profile]預覽）](api/preview-sample-status.md)
    * [[!DNL Profile]個系統工作（刪除要求）](api/profile-system-jobs.md)
 * 設定檔UI {#ui}
-   * [[!DNL Profile] UI指南](ui/user-guide.md)
+   * [[!DNL Profile] 使用者介面指南](ui/user-guide.md)
    * [[!DNL Profile]詳細資料自訂](ui/profile-customization.md)
    * [潛在客戶輪廓](ui/prospect-profile.md)
 * 計算屬性{#computed-attributes}

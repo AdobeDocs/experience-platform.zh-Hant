@@ -26,7 +26,7 @@ ht-degree: 78%
 
 Adobe Real-time Customer Data Platform可協助品牌透過一或多個信任合作夥伴的重要深入分析、識別碼和屬性，以負責任的方式補充其第一方資料。
 
-Adobe瞭解沒有一刀切的方法，能夠與資料及身分合作夥伴緊密互通，在客戶生命週期的各個階段促進個人化及深思熟慮的互動。 這些功能由值得信賴的資料控管架構所支援，可讓您對使用合作夥伴資料的位置和方式進行精細控制。 例如，您可能想要使用合作夥伴提供的分析進行細分，但不要用於個人化。
+Adobe瞭解沒有一刀切的方法，可與資料和身分識別合作夥伴緊密互通，在客戶生命週期的各個階段促進個人化且深思熟慮的互動。 這些功能由值得信賴的資料控管架構所支援，可讓您對使用合作夥伴資料的位置和方式進行精細控制。 例如，您可能想要使用合作夥伴提供的分析進行細分，但不要用於個人化。
 
 例如，當您需要使用人口統計和意圖訊號豐富您的客戶記錄時，請遵循此使用案例中所述的步驟。
 
@@ -41,7 +41,7 @@ Adobe瞭解沒有一刀切的方法，能夠與資料及身分合作夥伴緊密
 
 >[!WARNING]
 >
->擷取到Real-Time CDP中的其他合作夥伴提供的屬性會影響您的&#x200B;*總資料量*。 閱讀[Real-time Customer Data Platform產品說明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)，以取得有關總資料量的詳細資訊。
+>擷取到Real-Time CDP中的其他合作夥伴提供的屬性會影響您的&#x200B;*總資料量*。 閱讀[Real-Time Customer Data Platform產品說明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)，以取得有關總資料量的詳細資訊。
 
 ## 影片逐步解說 {#video-walkthrough}
 
@@ -71,16 +71,16 @@ Adobe瞭解沒有一刀切的方法，能夠與資料及身分合作夥伴緊密
 
 此刻，您正要擴充 Real-Time CDP 中的資料管理架構，以和合作夥伴提供的屬性相符。
 
-您可選擇建立 **[!UICONTROL XDM 個別輪廓]**&#x200B;類別的新綱要，或擴充相同類型的現有綱要以包含合作夥伴提供的屬性。Adobe 強烈建議使用一組最能代表資料廠商的額外屬性的新欄位群組建立新綱要。這可確保您的資料綱要未使用過且彼此都可獨立地發展。
+您可選擇建立 **[!UICONTROL XDM 個別輪廓]**&#x200B;類別的新結構描述，或擴充相同類型的現有結構描述以包含合作夥伴提供的屬性。Adobe 強烈建議使用一組最能代表資料廠商的額外屬性的新欄位群組建立新結構描述。這可確保您的資料結構描述未使用過且彼此都可獨立地發展。
 
-若要在綱要中包含合作夥伴提供的屬性，您可以使用期望的屬性建立新的欄位群組，也可以使用 Adob&#x200B;&#x200B;e 提供的其中一個預先設定的欄位群組。
+若要在結構描述中包含合作夥伴提供的屬性，您可以使用期望的屬性建立新的欄位群組，也可以使用 Adob&#x200B;&#x200B;e 提供的其中一個預先設定的欄位群組。
 
 如需詳細資訊，請閱讀以下文件頁面：
 
-* [綱要組合的基本](/help/xdm/schema/composition.md)
+* [結構描述組合的基本](/help/xdm/schema/composition.md)
 * [[!UICONTROL XDM 個別輪廓]類別的概觀](/help/xdm/classes/individual-profile.md)
-* [在 UI 中建立和編輯綱要](/help/xdm/ui/resources/schemas.md)
-* [在 UI 中建立和編輯綱要欄位](/help/xdm/ui/resources/field-groups.md)
+* [在 UI 中建立和編輯結構描述](/help/xdm/ui/resources/schemas.md)
+* [在 UI 中建立和編輯結構描述欄位](/help/xdm/ui/resources/field-groups.md)
 
 <!--
 
@@ -94,15 +94,15 @@ Commenting out links for now
 此外，在此步驟中，請考慮隨著您擴大資料管理策略以包含合作夥伴提供的協力廠商資料時，您的資料治理模式會如何變更。探索以下文件連結中的考量事項：
 
 * (**即將推出**) 將協力廠商資料保存在單獨的資料集中，以便可輕鬆進行刪除及還原整合。
-* (**即將推出**) 對於購買了資料清理附加元件的用戶端，在資料集上使用[資料集到期](/help/hygiene/ui/dataset-expiration.md)功能。
+* (**即將推出**) 對於購買了資料清理附加元件的用戶端，在資料集上使用[資料集期限](/help/hygiene/ui/dataset-expiration.md)功能。
 * (**即將出**) 建立引入協力廠商資料的衍生資料集時需謹慎小心，因為一旦混合在一起，若要移除協力廠商資料，唯一的解決方案是刪除整個衍生資料集。
 
 >[!TIP]
 >
->如果您選擇使用資料廠商提供的個人型識別碼來補充您的客戶輪廓，您可以建立類型為&#x200B;**[[!UICONTROL 合作夥伴 ID]](/help/identity-service/features/namespaces.md)** 的新身分類型。
+>如果您選擇使用資料廠商提供的個人型身分識別碼來補充您的客戶輪廓，您可以建立類型為&#x200B;**[[!UICONTROL 合作夥伴 ID]](/help/identity-service/features/namespaces.md)** 的新身分識別類型。
 >
->如需有關合作夥伴 ID 的詳細資訊，請閱讀[身分類型章節](/help/identity-service/features/namespaces.md)。
->閱讀有關在 Experience Platform 使用者介面中[如何定義身分欄位](/help/xdm/ui/fields/identity.md)的資訊。
+>如需有關合作夥伴 ID 的詳細資訊，請閱讀[身分識別類型章節](/help/identity-service/features/namespaces.md)。
+>閱讀有關在 Experience Platform 使用者介面中[如何定義身分識別欄位](/help/xdm/ui/fields/identity.md)的資訊。
 
 ### 匯出您在刪去個人可識別資訊 (PII) 或雜湊 PII 時要擴充的客群 {#export-audiences}
 

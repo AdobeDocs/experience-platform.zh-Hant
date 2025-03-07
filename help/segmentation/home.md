@@ -94,7 +94,7 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 >id="platform_segments_evaluation_edge"
 >title="邊緣評估"
 >abstract="邊緣分段指在 Edge Network 上即時評估 Platform 中的區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Edge分段指南"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="邊緣分段服務指南"
 
 Edge區段能在Edge Network](../landing/edge-and-hub-comparison.md)上即時評估Platform中的區段[，啟用相同頁面和下一頁個人化使用案例。
 
