@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；綱要；綱要；XDM；個別設定檔；欄位；綱要；綱要；身分對應；身分對應；綱要設計；對應；聯合綱要；聯合
+keywords: Experience Platform；首頁；熱門主題；結構描述；結構描述；XDM；個別設定檔；欄位；結構描述；身分對應；身分對應；結構描述設計；對應；聯合結構描述；聯合
 title: IdentityMap結構描述欄位群組
 description: 瞭解XDM個別設定檔類別。
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: cfa3e5c6811f148376a2d2012f5687be6fad2299
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >數個結構描述欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱更新](../name-updates.md)的檔案。
 
-[!UICONTROL IdentityMap]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組。 欄位群組提供單一對應欄位，其中包含一組由名稱空間輸入的使用者身分。
+[!UICONTROL IdentityMap]是[[!UICONTROL XDM ExperienceEvent]類別](../../classes/experienceevent.md)的標準結構描述欄位群組，以及[[!UICONTROL XDM個人設定檔]類別](../../classes/individual-profile.md)的相容欄位群組。 欄位群組提供單一對應欄位，其中包含一組由名稱空間輸入的使用者身分。
 
 ![ [!UICONTROL IdentityMap]結構描述欄位群組](../../images/field-groups/identitymap.png)的圖表
 
