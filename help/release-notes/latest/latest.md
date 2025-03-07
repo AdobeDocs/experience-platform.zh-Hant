@@ -3,9 +3,9 @@ title: Adobe Experience Platform 發行說明 (2025 年 2 月)
 description: Adobe Experience Platform 2025 年 2 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1628'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform 現有功能和文件的更新：
 - [目錄服務](#catalog-service)
 - [資料準備](#data-prep)
 - [目標](#destinations)
-- [同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/release-notes){target="_blank"}
+- [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [來源](#sources)
 - [分段服務](#segmentation)
 - [文件更新](#documentation-updates)
@@ -114,7 +114,7 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 持續性分割 | 對象構成現在支援持續分割。 您可以透過將身分名稱空間新增到分割區塊，讓分割對象在依設定檔分割時保持穩定。 如需有關此功能的詳細資訊，請參閱[對象組合檔案](../../segmentation/ui/audience-composition.md)。 |
+| 持續分割 | 客群構成現在支援持續分割。在您的分割區塊中加入身分識別命名空間，則在依照輪廓分割時，分割客群可以保持不變。如需有關這個功能的詳細資訊，請參閱[客群構成文件](../../segmentation/ui/audience-composition.md)。 |
 
 如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
 
