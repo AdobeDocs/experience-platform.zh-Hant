@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
+source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1047'
 ht-degree: 30%
 
 ---
@@ -27,10 +27,10 @@ ht-degree: 30%
       - [資料收集來源](connectors/adobe-applications/data-collection.md)
       - 欄位對應{#mapping}
          - [Analytics欄位對應](connectors/adobe-applications/mapping/analytics.md)
-         - [Audience Manager欄位對應](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Marketo Engage欄位對應](connectors/adobe-applications/mapping/marketo.md)
+         - [Audience Manager欄位對映](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Marketo Engage欄位對映](connectors/adobe-applications/mapping/marketo.md)
          - [Microsoft Dynamics欄位對映](connectors/adobe-applications/mapping/dynamics.md)
-         - [Salesforce欄位對應](connectors/adobe-applications/mapping/salesforce.md)
+         - [Salesforce欄位對映](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [Marketo Engage聯結器](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage驗證指南](connectors/adobe-applications/marketo/marketo-auth.md)
@@ -38,7 +38,7 @@ ht-degree: 30%
          - [ECID對應移轉指南](connectors/adobe-applications/marketo/migration.md)
    - Advertising {#advertising}
       - [Google Ads聯結器](connectors/advertising/ads.md)
-      - [pinterest Ads](connectors/advertising/pinterest-ads.md)
+      - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Mixpanel聯結器](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
@@ -75,8 +75,8 @@ ht-degree: 30%
       - [Amazon Redshift聯結器](connectors/databases/redshift.md)
       - [Azure HDInsights聯結器上的Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights聯結器上的Apache Spark](connectors/databases/spark.md)
-      - [AzureData Explorer聯結器](connectors/databases/data-explorer.md)
-      - [azure synapse Analytics聯結器](connectors/databases/synapse-analytics.md)
+      - [Azure Data Explorer聯結器](connectors/databases/data-explorer.md)
+      - [Azure Synapse Analytics聯結器](connectors/databases/synapse-analytics.md)
       - [Azure資料表儲存體聯結器](connectors/databases/ats.md)
       - [Couchbase聯結器](connectors/databases/couchbase.md)
       - [Google BigQuery聯結器](connectors/databases/bigquery.md)
@@ -86,12 +86,12 @@ ht-degree: 30%
       - [MariaDB聯結器](connectors/databases/mariadb.md)
       - [Microsoft SQL Server聯結器](connectors/databases/sql-server.md)
       - [MySQL聯結器](connectors/databases/mysql.md)
-      - [oracle聯結器](connectors/databases/oracle.md)
+      - [Oracle聯結器](connectors/databases/oracle.md)
       - [Phoenix聯結器](connectors/databases/phoenix.md)
       - [PostgreSQL聯結器](connectors/databases/postgres.md)
       - [Snowflake串流聯結器](connectors/databases/snowflake-streaming.md)
       - [Snowflake聯結器](connectors/databases/snowflake.md)
-      - [teradata Vantage聯結器](connectors/databases/teradata-vantage.md)
+      - [Teradata Vantage聯結器](connectors/databases/teradata-vantage.md)
    - 資料與身分識別夥伴{#data-partner}
       - [Acxiom 資料內嵌](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom 潛在客戶資料匯入](connectors/data-partners/acxiom-prospecting-data-import.md)
@@ -108,9 +108,9 @@ ht-degree: 30%
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot聯結器](connectors/marketing-automation/hubspot.md)
       - [Mailchimp聯結器](connectors/marketing-automation/mailchimp.md)
-      - [oracleEloqua聯結器](connectors/marketing-automation/oracle-eloqua.md)
-      - [oracleNetSuite](connectors/marketing-automation/oracle-netsuite.md)
-      - [oracleResponsys聯結器](connectors/marketing-automation/oracle-responsys.md)
+      - [Oracle Eloqua聯結器](connectors/marketing-automation/oracle-eloqua.md)
+      - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
+      - [Oracle Responsys聯結器](connectors/marketing-automation/oracle-responsys.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 付款{#payments}
@@ -126,7 +126,7 @@ ht-degree: 30%
    - 建立基底連線{#create}
       - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
-         - [pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
+         - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
@@ -190,8 +190,8 @@ ht-degree: 30%
          - [MailChimp行銷活動](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp成員](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
-         - [oracleNetSuite活動](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
-         - [oracleNetSuite實體](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
+         - [Oracle NetSuite活動](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Oracle NetSuite實體](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -248,7 +248,7 @@ ht-degree: 30%
          - [Marketo自訂活動](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
-         - [pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
+         - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
@@ -306,6 +306,8 @@ ht-degree: 30%
       - 資料與身分識別夥伴{#data-partner}
          - [Acxiom 資料內嵌](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom 潛在客戶資料匯入](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
+         - [Demandbase方法](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - 電子商務{#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
@@ -321,8 +323,8 @@ ht-degree: 30%
          - [Mailchimp 行銷活動](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp 會員](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
-         - [oracleNetSuite活動](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
-         - [oracleNetSuite實體](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
+         - [Oracle NetSuite活動](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Oracle NetSuite實體](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -359,15 +361,15 @@ ht-degree: 30%
    - [刪除資料流](tutorials/ui/delete.md)
    - [訂閱來源警示](tutorials/ui/alerts.md)
    - [將資料流儲存為草稿](tutorials/ui/draft.md)
-- 自助來源（批次SDK） {#sdk}
+- 自助來源(批次SDK) {#sdk}
    - [概觀](sources-sdk/overview.md)
    - 設定您的連線規格{#config}
       - [設定選項](sources-sdk/config/config.md)
       - [設定驗證規格](sources-sdk/config/authspec.md)
       - [設定來源規格](sources-sdk/config/sourcespec.md)
       - [設定瀏覽規格](sources-sdk/config/explorespec.md)
-   - 自助來源（批次SDK） API指南{#self-serve-api}
-      - [自助來源（批次SDK） API總覽](sources-sdk/api/api-overview.md)
+   - 自助來源(批次SDK) API指南{#self-serve-api}
+      - [自助來源(批次SDK) API總覽](sources-sdk/api/api-overview.md)
       - [快速入門](sources-sdk/api/getting-started.md)
       - [建立連線規格](sources-sdk/api/create.md)
       - [更新連線規格](sources-sdk/api/update-connection-specs.md)
@@ -380,12 +382,12 @@ ht-degree: 30%
       - [檔案自助服務API範本](sources-sdk/documentation/template.md)
       - [檔案自助服務UI範本](sources-sdk/documentation/ui-template.md)
    - 串流SDK {#streaming-sdk}
-      - [開始使用自助來源（串流SDK）](sources-sdk/streaming/getting-started.md)
+      - [開始使用自助來源(串流SDK)](sources-sdk/streaming/getting-started.md)
       - [建立串流來源的連線規格](sources-sdk/streaming/create.md)
       - [更新串流來源的連線規格](sources-sdk/streaming/update-connection-specs.md)
       - [更新串流流程規格](sources-sdk/streaming/update-flow-specs.md)
       - [測試並提交您的連線規格以進行驗證](sources-sdk/streaming/submit.md)
-      - [記錄您的來源（串流SDK）](sources-sdk/streaming/document-streaming.md)
+      - [記錄您的來源(串流SDK)](sources-sdk/streaming/document-streaming.md)
       - [檔案自助式API串流範本](sources-sdk/streaming/streaming-template-api.md)
       - [檔案自助式UI串流範本](sources-sdk/streaming/streaming-template-ui.md)
 - 錯誤訊息{#errors}
