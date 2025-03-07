@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4374'
+source-wordcount: '4405'
 ht-degree: 12%
 
 ---
@@ -64,18 +64,18 @@ ht-degree: 12%
 您可以根據對象的來源，從多種對象型別中進行選取：
 
 * **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
+* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。 選取源自&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;的對象會自動啟用[選取擴充屬性](#select-enrichment-attributes)步驟。
 * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
+
+>[!IMPORTANT]
+>
+>將自訂上傳對象啟用至批次檔案型目的地時，您可以在資料流中啟用10個這類對象的限制。
 
 ![選取一或多個要啟動的對象時顯示的核取方塊。](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->選取源自&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;的對象會自動啟用[選取擴充屬性](#select-enrichment-attributes)步驟。
-
->[!TIP]
->
->您可以從&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面移除現有啟用流程中的對象。 如需詳細資訊，請參閱[專屬檔案](../ui/destination-details-page.md#bulk-remove)。
+>若要從現有的啟用流程移除對象，請使用&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面。 閱讀有關如何[從啟用流程](../ui/destination-details-page.md#bulk-remove)移除多個對象的章節，以取得詳細資料。
 
 ## 排程對象匯出 {#scheduling}
 

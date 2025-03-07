@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1718'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 2%
 | 啟用頻率 | 每3、6、8或12小時進行一次每日完整匯出或更頻繁的增量匯出。 | 系統強制的護欄 | 閱讀[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)檔案區段，以取得批次匯出頻率增量的詳細資訊。 |
 | 在指定小時可匯出的受眾數上限 | 100 | 效能護欄 | 建議您將最多100個對象新增到批次目的地資料流。 |
 | 要啟用的每個檔案的最大列數（記錄） | 500萬 | 系統強制的護欄 | Adobe Experience Platform會自動將匯出的檔案分割為每個檔案500萬筆記錄（列）。 每一列代表一個設定檔。 分割檔案名稱會附加一個數字，表示檔案是較大匯出的一部分，例如： `filename.csv`、`filename_2.csv`、`filename_3.csv`。 如需詳細資訊，請參閱啟動批次目的地教學課程的[排程區段](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。 |
+| 要在資料流中啟用的自訂上傳對象最大數量 | 10 | 系統強制的護欄 | 啟用[自訂上傳對象](/help/segmentation/ui/audience-portal.md#import-audience)至批次檔案型目的地時，有10個您可以在資料流中啟用的對象限制。 深入瞭解[啟用批次檔案型目的地的自訂上傳對象](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)的工作流程。 |
 
 {style="table-layout:auto"}
 
