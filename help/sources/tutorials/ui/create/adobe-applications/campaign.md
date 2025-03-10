@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；促銷活動；促銷活動受管理的服務
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；行銷活動；行銷活動受管理的服務
 title: 使用Platform UI建立Adobe Campaign Managed Cloud Services來源連線
 description: 瞭解如何使用Platform UI將Adobe Experience Platform連線至Adobe Campaign Managed Cloud Services。
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
+source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1233'
 ht-degree: 6%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 6%
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Experience Platform元件：
+本指南需要您深入瞭解下列Experience Platform元件：
 
 * [來源](../../../../home.md)： Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [沙箱](../../../../../sandboxes/home.md)： Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
@@ -136,6 +136,12 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 此頁面也提供您更新資料流的中繼資料描述的介面，啟用部分擷取和錯誤診斷，以及向資料集新增資料。
 
 ![介面，其中包含代表選取資料集擷取速率的圖表。](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>您無法使用Adobe Campaign Managed Cloud Services來源回填舊的事件記錄檔。 如果需要回填，請使用自訂工作流程或自訂實作，將資料匯出至Amazon S3或Azure Blob，或是從Amazon S3或Azure Blob匯出至Adobe Experience Platform資料集。
+
 
 ## 後續步驟
 
