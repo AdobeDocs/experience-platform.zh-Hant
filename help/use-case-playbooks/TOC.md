@@ -5,10 +5,10 @@ breadcrumb-title: Adobe Experience Platform 使用案例教戰手冊
 user-guide-description: 使用 Experience Platform 中的教戰手冊以產生資產並開始使用各種行銷使用案例。
 feature: Playbooks
 role: User
-source-git-commit: 2563e343270051642afc1eaa7af54d12483a1ce1
+source-git-commit: 875d3b97faeed03317309aae22bc975946d09f14
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 68%
+source-wordcount: '82'
+ht-degree: 60%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 68%
 
 * 教戰手冊 {#playbooks}
    * [概觀](/help/use-case-playbooks/playbooks/overview.md)
+   * [運用客戶體驗使用案例來推動業務目標](/help/use-case-playbooks/playbooks/business-use-case-framework.md)
    * [導覽至使用案例教戰手冊](/help/use-case-playbooks/playbooks/navigate.md)
    * [快速入門](/help/use-case-playbooks/playbooks/get-started.md)
    * [可用的使用案例教戰手冊](/help/use-case-playbooks/playbooks/playbooks-list.md)
