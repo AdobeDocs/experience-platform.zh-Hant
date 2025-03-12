@@ -2,9 +2,9 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1449'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 >身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
 透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 為避免這些不想要的合併，您可以使用透過身分圖表連結規則提供的設定，並允許使用者進行精確的個人化。
+
+觀看以下影片，瞭解使用身分圖表連結規則的其他資訊：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## 快速入門
 
@@ -135,7 +139,7 @@ ht-degree: 5%
 * **名稱空間優先順序是指派給名稱空間的數值**，表示其相對重要性。 這是名稱空間的屬性。
 * **主要身分是針對**&#x200B;儲存設定檔片段的身分。 設定檔片段是儲存特定使用者相關資訊的資料記錄：屬性（通常透過CRM記錄擷取）或事件（通常從體驗事件或線上資料擷取）。
 * 名稱空間優先順序決定體驗事件片段的主要身分。
-   * 對於設定檔記錄，您可以使用Experience PlatformUI中的結構描述工作區來定義身分欄位，包括主要身分。 如需詳細資訊，請參閱[在UI](../../xdm/ui/fields/identity.md)中定義身分欄位的指南。
+   * 對於設定檔記錄，您可以使用Experience Platform UI中的結構描述工作區來定義身分欄位，包括主要身分。 如需詳細資訊，請參閱[在UI](../../xdm/ui/fields/identity.md)中定義身分欄位的指南。
 * 如果體驗事件在identityMap中具有兩個或多個最高名稱空間優先順序的身分，該事件將會因為會被視為「錯誤資料」而遭到拒絕的擷取。 例如，如果identityMap包含`{ECID: 111, CRMID: John, CRMID: Jane}`，則整個事件將會被拒絕為錯誤資料，因為它表示該事件同時與`CRMID: John`和`CRMID: Jane`相關聯。
 
 如需詳細資訊，請閱讀[名稱空間優先順序](./namespace-priority.md)的指南。
