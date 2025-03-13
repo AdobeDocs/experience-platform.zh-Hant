@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: 使用案例的AI助理 — 編寫並分享您自己的教戰手冊。
+title: 瞭解如何使用AI助理撰寫和分享您自己的教戰手冊。
 description: 如何編寫和分享您自己的使用案例教戰手冊。
 role: User
-source-git-commit: f813db7599409a8fc048480f7803ed86c9f397fe
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
+source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
 
-
 # 撰寫並分享您自己的教戰手冊
 
-由Adobe的AI Assistant支援的&#x200B;**教戰手冊編寫架構**&#x200B;可讓您在Adobe Experience Platform中有效率地建立、管理和共用教戰手冊。
+[!DNL Playbook Authoring Framework]由Adobe Experience Platform中的AI Assistant提供技術支援，可讓您在Adobe Experience Platform中有效率地建立、管理和共用教戰手冊。
 
 此架構遵循三個步驟的流程：
 
@@ -23,35 +23,33 @@ ht-degree: 0%
 
 3. **行動手冊發佈**：跨不同組織共用行動手冊。 例如，ACME的德國Martech Center of Excellence可以建立「黃金」行動手冊，並分發給泰國、澳洲等地的區域組織。 協助標準化行銷使用案例。
 
-## 使用Adobe的AI助理建立教戰手冊
+## 建立行動手冊
+
+您可以使用兩種方式建立行動手冊：使用AI助理或手動。 請閱讀以下小節以瞭解如何操作。
 
 ### 教戰手冊概述
 
-您可以透過兩種方式建立行動手冊：使用Adobe的AI助理或手動。
+請依照下列步驟，使用AI Assistant建立行動手冊：
 
-請依照下列步驟，使用Adobe的AI Assistant建立行動手冊：
-
-1. 在左側導覽窗格中，選取&#x200B;**教戰手冊**。
+在左側導覽面板中，選取&#x200B;**[!UICONTROL 教戰手冊]**。
 
 在UI的左側導覽窗格中反白顯示![「教戰手冊」。](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. 選取&#x200B;**新行動手冊**，然後選取&#x200B;**使用AI助理產生行動手冊**。
+選取&#x200B;**[!UICONTROL 新行動手冊]**，然後選取&#x200B;**使用AI助理產生行動手冊**。
 
-![選取[新行動手冊]按鈕。](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![已選取「使用AI助理產生行動手冊」的行動手冊介面。](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![選取「使用AI助理產生行動手冊」按鈕強調顯示。](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. 在提示欄位中，說明使用案例。
+在提示欄位中，說明使用案例。
 
 **範例**：「與瀏覽跑步鞋但未完成購買的ACME客戶互動。」
 
-![選取[使用AI助理產生行動手冊]按鈕。](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![反白顯示網頁表單區域的Playbook介面。](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. 選取&#x200B;**產生**&#x200B;以建立Playbook中繼資料。
+選取&#x200B;**[!UICONTROL 產生]**&#x200B;以建立Playbook中繼資料。
 
 ![提示區域的「產生」Playbook按鈕反白顯示。](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. 產生後，選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以視需要修改產生的標題、說明和中繼資料。
+產生後，選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以視需要修改產生的標題、說明和中繼資料。
 
 ![產生的Playbook中反白顯示「編輯」按鈕。](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -61,17 +59,15 @@ ht-degree: 0%
 * **目標客群**
 * **行銷管道**
 
-![標示「編輯」按鈕的Playbook詳細資訊區段。](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![標示「編輯」按鈕的行動手冊詳細資訊區段。](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-中繼資料產生後，請選取&#x200B;**編輯歷程圖**&#x200B;按鈕，以視需要調整歷程圖中的步驟。
+中繼資料產生後，選取&#x200B;**[!UICONTROL 編輯歷程圖]**&#x200B;以視需要調整歷程圖中的步驟。
 
 ![編輯歷程地圖按鈕。](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![擷取行動手冊中繼資料後，請編輯歷程地圖。](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-然後繼續將教戰手冊與技術資產建立關聯。
-
-若要手動建立行動手冊，請選取&#x200B;**手動建立行動手冊**。
+接著，繼續將行動手冊與技術資產建立關聯。 若要手動建立行動手冊，請選取&#x200B;**[!UICONTROL 手動建立行動手冊]**。
 
 ![手動建立行動手冊](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -79,13 +75,13 @@ ht-degree: 0%
 
 ## 將行動手冊與技術資產建立關聯
 
-無論您是以手動方式還是使用AI助理建立行動手冊，您都必須將其與所需的技術資產建立關聯。 導覽至&#x200B;**[!UICONTROL 技術Assets]**&#x200B;標籤，然後選取所需的產品。 在此範例中，請選擇&#x200B;**[!UICONTROL Journey Optimizer]**。
+無論您是以手動方式還是使用AI助理建立行動手冊，您都必須將其與所需的技術資產建立關聯。 導覽至&#x200B;**[!UICONTROL 技術Assets]**&#x200B;標籤，然後選取所需的產品。 在此範例中，選取&#x200B;**[!UICONTROL Journey Optimizer]**。
 
 >[!NOTE]
 >
-> 未來版本將新增對Real-Time Customer Data Platform的支援。
+> 未來版本將新增對Real-Time CDP的支援。
 
-![「技術資產」索引標籤和「新增必要產品」按鈕強調顯示。](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![ 「技術資產」索引標籤和「新增必要產品」按鈕已反白顯示。](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 選擇&#x200B;**[!UICONTROL 選取資產]**&#x200B;以將此行動手冊與歷程建立關聯，如下圖所示。 然後選取&#x200B;**發佈行動手冊**&#x200B;以完成行動手冊。
 
@@ -162,4 +158,4 @@ AI助理會移除所有不必要的詳細資料，例如「專案名稱」或「
 
 ## 後續步驟
 
-現在您已瞭解如何使用Adobe的AI Assistant建立和發佈教戰手冊，瞭解如何開始使用可用的教戰手冊，並從[教戰手冊清單](/help/use-case-playbooks/playbooks/choose.md)為您的使用案例選擇正確的教戰手冊。
+現在您已瞭解如何使用AI Assistant建立及發佈教戰手冊，瞭解如何開始使用可用的教戰手冊，並從[教戰手冊清單](/help/use-case-playbooks/playbooks/choose.md)為您的使用案例選擇正確的教戰手冊。
