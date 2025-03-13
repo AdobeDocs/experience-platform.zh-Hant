@@ -2,7 +2,7 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
 workflow-type: tm+mt
 source-wordcount: '4609'
 ht-degree: 4%
@@ -114,7 +114,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | 狀態 | 說明 |
 | ------ | ----------- |
 | [!UICONTROL 已實現] | 自上次批次區段作業執行以來，過去24小時內符合對象&#x200B;**資格**&#x200B;的設定檔計數。 |
-| [!UICONTROL 現有] | 自上次批次區段作業執行以來，過去24小時內對象中仍有&#x200B;**保留**&#x200B;的設定檔計數。 此欄位是&#x200B;**已計算**，不會顯示在`segmentMembership`物件中。 |
+| [!UICONTROL 現有] | 自上次批次區段作業執行以來，過去24小時內對象中仍有&#x200B;**保留**&#x200B;的設定檔計數。 此欄位是&#x200B;**已計算**，不會顯示在[`segmentMembership`物件](../../xdm/field-groups/profile/segmentation.md)中。 |
 | [!UICONTROL 正在結束] | 自上次批次區段作業執行以來，在過去24小時內已&#x200B;**退出**&#x200B;對象的設定檔計數。 |
 
 選取要顯示的欄位後，您也可以重新調整顯示欄的寬度。 您可以拖曳資料行之間的區域，或選取要重新調整大小之資料行的![箭頭圖示](/help/images/icons/chevron-down.png)，接著選取&#x200B;**[!UICONTROL 調整資料行大小]**&#x200B;來執行此動作。
