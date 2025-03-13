@@ -4,10 +4,10 @@ description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platfor
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
+source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 35%
+source-wordcount: '1466'
+ht-degree: 32%
 
 ---
 
@@ -87,7 +87,9 @@ ht-degree: 35%
 
 ![左側功能表中反白稽核的稽核儀表板。](../../images/audit-logs/audits.png)
 
-稽核記錄會保留365天，之後會從系統中刪除。 因此，您最多只能往回查看 365 天。如果您需要超過365天的資料，您應定期匯出記錄檔，以符合內部原則需求。
+稽核記錄會保留365天，之後會從系統中刪除。 如果您需要超過365天的資料，您應定期匯出記錄檔，以符合內部原則需求。
+
+請求稽核記錄的方法會變更允許的時段以及您可存取的記錄數。 [匯出記錄檔](#export-audit-logs)可讓您返回365天（以90天為間隔）至最多1000筆記錄，其中作為Experience Platform中的[活動記錄檔UI](#filter-audit-logs)，會顯示過去90天至最多1000筆記錄。
 
 從清單中選取一個事件以在右邊欄中查看其詳細資料。
 
@@ -95,12 +97,11 @@ ht-degree: 35%
 
 ### 篩選稽核記錄
 
+選取漏斗圖示（![篩選圖示](/help/images/icons/filter.png)）以顯示篩選控制項清單，以協助縮小結果範圍。
+
 >[!NOTE]
 >
->由於這是一項新功能，因此顯示的資料僅追溯至2022年3月。 視選取的資源而定，2022年1月起可能會提供舊版資料。
-
-
-選取漏斗圖示（![篩選圖示](/help/images/icons/filter.png)）以顯示篩選控制項清單，以協助縮小結果範圍。 僅顯示最後1000筆記錄，無論選擇的各種篩選器為何。
+>Experience Platform UI只會顯示過去90天的記錄（最多1000筆記錄），無論套用的篩選器為何。 如果您需要超過該天的記錄（最多365天），您需要[匯出稽核記錄](#export-audit-logs)。
 
 ![已反白篩選活動記錄檔的[稽核]儀表板。](../../images/audit-logs/filters.png)
 
@@ -130,9 +131,13 @@ ht-degree: 35%
 
 ![已反白篩選活動記錄檔的[稽核]儀表板。](../../images/audit-logs/filtered.png)
 
-### 匯出稽核記錄
+### 匯出稽核記錄 {#export-audit-logs}
 
 若要匯出目前的稽核記錄清單，請選取&#x200B;**[!UICONTROL 下載記錄]**。
+
+>[!NOTE]
+>
+>可在90天間隔內要求記錄檔，最多可達365天過去。 不過，單一匯出期間可傳回的最大記錄數量為10,000。
 
 ![反白顯示[!UICONTROL 下載記錄]的稽核儀表板。](../../images/audit-logs/download.png)
 
