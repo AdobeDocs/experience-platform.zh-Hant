@@ -4,9 +4,9 @@ title: 串流目的地的IP位址允許清單
 type: Documentation
 description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP REST API端點、Amazon Kinesis或Azure事件中樞執行個體。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 您可以透過網路防火牆定義網路存取控制。 透過指定適當的IP範圍，您可以允許資料傳輸服務的流量。
 
-Adobe建議您先將下列IP範圍新增至允許清單，然後再使用本頁所述目的地。 使用這些串流目的地時，如果無法將您專屬區域的IP範圍新增到允許清單，可能會導致錯誤或效能不佳。
+Adobe建議您先將下列IP範圍新增至允許清單，然後再使用本頁面上所述的目標。 使用這些串流目的地時，如果無法將您專屬區域的IP範圍新增到允許清單，可能會導致錯誤或效能不佳。
 
 ## VA7：美國和美洲客戶 {#us-americas}
 
@@ -57,6 +57,12 @@ Adobe建議您先將下列IP範圍新增至允許清單，然後再使用本頁�
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+
+## VA6：執行AWS的美國和美洲客戶 {#aws}
+
+以下IP範圍適用於在Amazon Web Services (AWS)上執行的Experience Platform客戶。 如需詳細資訊，請參閱[Experience Platform Multi-Cloud概述](../../../landing/multi-cloud.md)。
+
+`66.117.18.0/24`
 
 ## NLD2：EMEA客戶 {#emea}
 
