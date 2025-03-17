@@ -3,9 +3,9 @@ title: 檔案式雲端儲存目的地的IP位址允許清單
 type: Documentation
 description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform將資料匯出至雲端儲存空間目的地。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
+source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '249'
 ht-degree: 1%
 
 ---
@@ -40,14 +40,14 @@ Adobe建議在使用雲端儲存空間目的地連線之前，將下列IP範圍�
 ## 所有客戶均需要 {#all-customers}
 
 * `52.247.108.70`
+<!-- 
+## US customers running on AWS {#aws}
 
-## 在AWS上執行的美國客戶 {#aws}
-
-以下IP範圍適用於在Amazon Web Services (AWS)上執行的Experience Platform客戶。 如需詳細資訊，請參閱[Experience Platform Multi-Cloud概述](../../../landing/multi-cloud.md)。
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
 
 >[!NOTE]
 >
->若客戶在AWS上執行以檔案為基礎的目的地，以將資料匯出至Amazon S3，則此IP範圍不受支援。
+>This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
 
 * `66.117.18.0/24`
 

@@ -4,9 +4,9 @@ title: 串流目的地的IP位址允許清單
 type: Documentation
 description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP REST API端點、Amazon Kinesis或Azure事件中樞執行個體。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
+source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -57,12 +57,12 @@ Adobe建議您先將下列IP範圍新增至允許清單，然後再使用本頁�
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+<!-- 
+## VA6: US and Americas customers running on AWS {#aws}
 
-## VA6：執行AWS的美國和美洲客戶 {#aws}
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
 
-以下IP範圍適用於在Amazon Web Services (AWS)上執行的Experience Platform客戶。 如需詳細資訊，請參閱[Experience Platform Multi-Cloud概述](../../../landing/multi-cloud.md)。
-
-`66.117.18.0/24`
+`66.117.18.0/24` -->
 
 ## NLD2：EMEA客戶 {#emea}
 
