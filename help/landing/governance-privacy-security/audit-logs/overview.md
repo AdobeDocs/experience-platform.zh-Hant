@@ -4,7 +4,7 @@ description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platfor
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 32%
@@ -89,7 +89,7 @@ ht-degree: 32%
 
 稽核記錄會保留365天，之後會從系統中刪除。 如果您需要超過365天的資料，您應定期匯出記錄檔，以符合內部原則需求。
 
-請求稽核記錄的方法會變更允許的時段以及您可存取的記錄數。 [匯出記錄檔](#export-audit-logs)可讓您返回365天（以90天為間隔）至最多1000筆記錄，其中作為Experience Platform中的[活動記錄檔UI](#filter-audit-logs)，會顯示過去90天至最多1000筆記錄。
+請求稽核記錄的方法會變更允許的時段以及您可存取的記錄數。 [匯出記錄檔](#export-audit-logs)可讓您回到365天（以90天為間隔），最多為10,000筆記錄，其中作為Experience Platform中的[活動記錄檔UI](#filter-audit-logs)，會顯示過去90天，最多為1000筆記錄。
 
 從清單中選取一個事件以在右邊欄中查看其詳細資料。
 
