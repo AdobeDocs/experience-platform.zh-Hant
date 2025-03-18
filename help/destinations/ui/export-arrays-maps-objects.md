@@ -3,10 +3,10 @@ title: 將陣列、地圖和物件從Real-Time CDP匯出至雲端儲存空間目
 type: Tutorial
 description: 瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至雲端儲存空間目標。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 15%
+source-wordcount: '862'
+ht-degree: 16%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->將陣列匯出至雲端儲存空間目的地的功能通常適用於下列目的地： [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md)，
+>將陣列和其他複雜物件匯出至雲端儲存空間目的地的功能通常適用於下列目的地： [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md)
 
-瞭解如何將陣列從Real-Time CDP匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 請參閱本檔案以瞭解匯出工作流程、此功能啟用的使用案例和已知限制。
+瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 請參閱本檔案以瞭解匯出工作流程、此功能啟用的使用案例和已知限制。
 
 請考量此頁面，您可以前往想瞭解如何從Experience Platform匯出陣列、地圖和其他物件型別的任何位置。
 
@@ -52,8 +52,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-請參閱以下[廣泛的範例](#examples)，瞭解如何使用各種函式來存取陣列元素、轉換和篩選陣列、將陣列元素加入字串等等。
 
 除了陣列之外，您也可以從Experience Platform將地圖和物件匯出至您想要的雲端儲存空間目的地。 深入瞭解Experience Platform中的[對應](/help/xdm/ui/fields/map.md)和[物件](/help/xdm/ui/fields/object.md)。
 
