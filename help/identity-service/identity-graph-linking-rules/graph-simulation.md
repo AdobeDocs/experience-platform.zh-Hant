@@ -2,9 +2,9 @@
 title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1502'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 >
 >* 身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 >
->* 您的帳戶必須布建&#x200B;**檢視身分圖表**&#x200B;許可權，才能存取[!DNL Graph Simulation]工具。 如需詳細資訊，請閱讀[以屬性為基礎的存取控制](../../access-control/abac/ui/permissions.md)中的許可權指南。
+>* 您的帳戶必須有&#x200B;**檢視身分圖表**&#x200B;許可權才能存取[!DNL Graph Simulation]工具。 如需詳細資訊，請閱讀[以屬性為基礎的存取控制](../../access-control/abac/ui/permissions.md)中的許可權指南。
 
 [!DNL Graph Simulation]是Identity Service UI中的工具，可用於模擬指定特定身分組合下身分圖表的行為方式，以及設定[身分最佳化演演算法](./identity-optimization-algorithm.md)的方式。
 

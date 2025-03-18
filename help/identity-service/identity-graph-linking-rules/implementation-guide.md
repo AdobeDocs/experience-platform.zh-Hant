@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1688'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 4. [使用身分設定UI來指定您專屬的名稱空間，並設定名稱空間的優先順序排名](#identity-settings)
 5. [建立體驗資料模型(XDM)結構描述](#schema)
 6. [建立資料集](#dataset)
-7. [將您的資料內嵌至Experience Platform](#ingest)
+7. [將資料內嵌至Experience Platform](#ingest)
 
 ## 實作的先決條件 {#prerequisites-for-implementation}
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 
 ### XDM體驗事件
 
-在預先實作程式中，您必須確保系統要傳送給Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
+在預先實作程式中，請確定系統要傳送至Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
 
 >[!BEGINTABS]
 
@@ -120,20 +120,22 @@ ht-degree: 2%
 
 >[!ENDTABS]
 
-使用XDM體驗事件傳送事件時，您必須確保擁有完整身分識別。
+在預先實作程式中，您必須確保系統要傳送至Experience Platform的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如CRMID。
 
-+++選取此選項可檢視具有完整身分之事件的範例
+* （建議）具有一個人員識別碼的已驗證事件。
+* （不建議）具有兩個人員識別碼的已驗證事件。
+* （不建議）沒有任何人員識別碼的已驗證事件。
 
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
+如果您的系統傳送兩個人員識別碼，則實作可能會讓單一人員名稱空間需求失效。 例如，如果webSDK實作中的identityMap包含CRMID、customerID和ECID名稱空間，則兩個共用裝置的個人可能會錯誤地關聯到不同的名稱空間。
+
+在Identity Service中，此實作可能如下所示：
+
+* `timestamp1` = John登入 — >系統擷取`CRMID: John, ECID: 111`。
+* `timestamp2` = Jane登入 — >系統擷取`customerID: Jane, ECID: 111`。
+
++++檢視實施在圖表模擬中的外觀
+
+![呈現範例圖形的圖形模擬UI。](../images/implementation/example-graph.png)
 
 +++
 
@@ -190,7 +192,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 * 至少一個XDM結構描述。 （根據您的資料和特定使用案例，您可能需要建立設定檔和體驗事件結構。）
 * 以您的結構描述為基礎的資料集。
 
-完成上述所有專案後，您就可以開始將資料內嵌至Experience Platform中。 您可以透過數種不同的方式執行資料擷取。 您可以使用下列服務將您的資料帶入Experience Platform：
+完成上述所有專案後，您就可以開始將資料內嵌至Experience Platform。 您可以透過數種不同的方式執行資料擷取。 您可以使用下列服務將資料帶入Experience Platform：
 
 * [批次和串流擷取](../../ingestion/home.md)
 * [Experience Platform中的資料收集](../../collection/home.md)
@@ -251,9 +253,9 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
 * [身分圖表連結規則概觀](./overview.md)
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [命名空間優先等級](./namespace-priority.md)
+* [命名空間優先順序](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)

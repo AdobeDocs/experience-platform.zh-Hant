@@ -2,7 +2,7 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->* 本節假設資料已成功擷取至Data Lake，且沒有語法或其他錯誤會防止資料從一開始就擷取至Experience Platform。
+>* 本節假設資料已成功擷取至Data Lake，且沒有語法或其他錯誤會阻止資料先擷取至Experience Platform。
 >
 >* 這些範例使用ECID作為Cookie名稱空間，使用CRMID作為人員名稱空間。
 
@@ -192,13 +192,13 @@ ht-degree: 0%
 >
 >* 單一資料集正在使用中（這不會查詢多個資料集）。
 >
->* 由於[進階資料生命週期管理](../../hygiene/home.md)、[Privacy Service](../../privacy-service/home.md)或執行刪除的其他服務已刪除，因此資料不會從資料湖中刪除。
+>* 由於[進階資料生命週期管理](../../hygiene/home.md)、[Privacy Service](../../privacy-service/home.md)或其他執行刪除的服務已刪除，因此資料不會從資料湖中刪除。
 
 首先，您必須收集下列資訊：
 
 1. 已傳送之Cookie名稱空間（例如ECID）和人員名稱空間（例如CRMID）的身分符號(namespaceCode)。
 1.1.針對Web SDK實作，這些通常是identityMap中包含的名稱空間。
-1.2.對於Analytics來源聯結器實作，這些是identityMap中包含的Cookie識別碼。 個人識別碼是標示為身分的eVar欄位。
+1.2.對於Analytics來源聯結器實作，這些是identityMap中包含的Cookie識別碼。 個人識別碼是標籤為身分的eVar欄位。
 2. 在中傳送事件的資料集(dataset_name)。
 3. 要查閱的Cookie名稱空間身分值(identity_value)。
 
@@ -320,7 +320,7 @@ ORDER BY timestamp desc
 
 本節概述有關身分圖表連結規則常見問題的解答清單。
 
-## 身分最佳化演演算法 {#identity-optimization-algorithm}
+## 身分識別最佳化演算法 {#identity-optimization-algorithm}
 
 請閱讀本節，瞭解有關[身分最佳化演演算法](./identity-optimization-algorithm.md)的常見問題解答。
 
@@ -363,7 +363,7 @@ ORDER BY timestamp desc
 >* ECID及非唯一電子郵件/電話名稱空間可從一個人移動至另一個人。
 >* 如果歷程有等待條件，且如果這些非唯一名稱空間用於在歷程中查詢設定檔，則歷程訊息可能會傳送給錯誤的人。
 
-## 命名空間優先等級
+## 命名空間優先順序
 
 請閱讀本節，瞭解有關[名稱空間優先順序](./namespace-priority.md)的常見問題解答。
 
@@ -373,7 +373,7 @@ ORDER BY timestamp desc
 
 ### 如果即時客戶設定檔不再使用identityMap上的「主要」標幟，是否仍需傳送此值？
 
-是，identityMap上的「主要」旗標已由其他服務使用。 如需詳細資訊，請閱讀[名稱空間優先順序對其他Experience Platform服務的影響](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services)的指南。
+是，identityMap上的「主要」旗標已由其他服務使用。 如需詳細資訊，請閱讀[名稱空間優先順序對其他Experience Platform服務的影響](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services)指南。
 
 ### 名稱空間優先順序是否會套用至即時客戶個人檔案中的個人檔案記錄資料集？
 

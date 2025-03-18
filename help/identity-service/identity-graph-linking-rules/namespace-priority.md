@@ -2,7 +2,7 @@
 title: 命名空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -82,7 +82,7 @@ ht-degree: 3%
 * 在您設定好指定沙箱的身分設定後，體驗事件的主要身分將由設定中最高的名稱空間優先順序決定。
    * 這是因為體驗事件的本質是動態的。 身分對應可能包含三個或更多身分，而名稱空間優先順序可確保最重要的名稱空間與體驗事件相關聯。
 * 因此，即時客戶設定檔&#x200B;**將不再使用下列設定**：
-   * 使用Web SDK、Mobile SDK或Edge Network伺服器API （身分名稱空間和身分值將繼續用於設定檔中）在identityMap中傳送身分時，主要身分設定(`primary=true`)。 **注意**： Real-time Customer Profile以外的服務(如Data Lake Storage或Adobe Target)將繼續使用主要身分設定(`primary=true`)。
+   * 使用Web SDK、Mobile SDK或Edge Network伺服器API （身分名稱空間和身分值將繼續用於設定檔中）在identityMap中傳送身分時，使用主要身分設定(`primary=true`)。 **注意**： Real-time Customer Profile以外的服務(如Data Lake Storage或Adobe Target)將繼續使用主要身分設定(`primary=true`)。
    * 任何在XDM體驗事件類別結構描述上標示為主要身分的欄位。
    * Adobe Analytics來源聯結器（ECID或AAID）中的預設主要身分設定。
 * 另一方面，**名稱空間優先順序不會決定設定檔記錄**&#x200B;的主要身分。
@@ -162,7 +162,7 @@ ht-degree: 3%
 
 資料湖的資料擷取將繼續遵循在[網頁SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map)和結構描述上設定的主要身分設定。
 
-資料湖不會根據名稱空間優先順序來判斷主要身分。 例如，Adobe Customer Journey Analytics將繼續使用身分對應中的值，即使在啟用名稱空間優先順序後（例如，將資料集新增到新連線），因為Customer Journey Analytics會消耗其來自資料湖的資料。
+資料湖不會根據名稱空間優先順序來判斷主要身分。 例如，即使在啟用名稱空間優先順序（例如將資料集新增至新連線）後，Adobe Customer Journey Analytics仍會繼續使用身分對應中的值，因為Customer Journey Analytics會消耗其來自資料湖的資料。
 
 ### Experience Data Model (XDM)結構
 
@@ -179,7 +179,7 @@ ht-degree: 3%
 
 此設定導致僅使用已驗證的事件計算分數。
 
-如需詳細資訊，請閱讀[Attribution AI](../../intelligent-services/attribution-ai/overview.md)和[客戶人工智慧](../../intelligent-services/customer-ai/overview.md)上的檔案。
+如需詳細資訊，請閱讀[Attribution AI](../../intelligent-services/attribution-ai/overview.md)和[Customer AI](../../intelligent-services/customer-ai/overview.md)上的檔案。
 
 ### 合作夥伴建立的目的地
 
@@ -192,7 +192,7 @@ ht-degree: 3%
 
 ### Privacy Service
 
-針對指定的身分，以下列方式[Privacy Service刪除要求](../privacy.md)功能：
+針對指定身分識別的[Privacy Service刪除要求](../privacy.md)會以下列方式運作：
 
 * 即時客戶設定檔：刪除任何將指定身分值作為主要身分的設定檔片段。 **設定檔上的主要身分現在將根據名稱空間優先順序來判定。**
 * 資料湖：刪除具有指定身分作為主要或次要身分的任何記錄。
