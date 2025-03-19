@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Data Distiller - OS656提供最大化價值的重要秘訣
 description: 瞭解如何透過擴充Adobe Experience Platform Data Distiller的即時客戶個人檔案資料，並使用行為深入分析來建立目標受眾，藉此實現最大價值。 此資源包含範例資料集和案例研究，示範如何套用造訪間隔、頻率、貨幣(RFM)模型用於客戶細分。
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
+source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3658'
 ht-degree: 0%
 
 ---
@@ -438,15 +438,15 @@ SELECT * FROM rfm_model_segment;
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
 
 INSERT INTO adls_rfm_profile
 SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
@@ -578,28 +578,9 @@ WITH (
 );
 ```
 
-#### 插入對象 {#insert-an-audience}
+#### 建立空的對象資料集 {#create-empty-audience-dataset}
 
-若要將設定檔新增至現有對象，請使用`INSERT INTO`命令。 這可讓您將個別設定檔或整個對象新增到現有的對象資料集。
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _{TENANT_ID}.userId, 
-    _{TENANT_ID}.days_since_last_purchase, 
-    _{TENANT_ID}.orders, 
-    _{TENANT_ID}.total_revenue, 
-    _{TENANT_ID}.recency, 
-    _{TENANT_ID}.frequency, 
-    _{TENANT_ID}.monetization 
-FROM adls_rfm_profile 
-WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### 新增設定檔至對象 {#add-profiles-to-audience}
-
-使用下列SQL命令來建立和填入對象：
+在新增設定檔之前，請先建立空的資料集以儲存對象記錄。
 
 ```sql
 -- Create an empty audience dataset
@@ -620,11 +601,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### 將設定檔插入現有對象 {#insert-an-audience}
+
+若要將設定檔新增至現有對象，請使用「插入」命令。 這可讓您將個別設定檔或整個對象區段新增到現有的對象資料集。
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### 刪除對象 {#delete-an-audience}
 
-若要刪除現有對象，請使用`DROP AUDIENCE`命令。 如果對象不存在，除非指定`IF EXISTS`，否則會發生例外狀況。
-
-使用下列SQL命令刪除對象：
+若要刪除現有對象，請使用DROP AUDIENCE命令。 如果對象不存在，則除非指定IF EXISTS，否則會發生例外狀況。
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
