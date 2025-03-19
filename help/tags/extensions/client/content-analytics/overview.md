@@ -3,9 +3,10 @@ title: Adobe Content Analytics擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Content Analytics標籤擴充功能。
 hide: true
 hidefromtoc: true
-source-git-commit: d6288d9515d7efaf874cb056f06d04b2002fd369
+exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
+source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -35,7 +36,7 @@ ht-degree: 0%
 
 ![影像顯示已選取Web SDK擴充功能的Tags UI](assets/aca-tag-install.png)
 
-選取&#x200B;**[!UICONTROL 安裝]**&#x200B;後，您必須設定Adobe Content Analytics標籤擴充功能並儲存設定。
+選取&#x200B;**[!UICONTROL 安裝]**&#x200B;之後，您必須設定Adobe Content Analytics標籤延伸並儲存設定。
 
 
 <!--
@@ -57,7 +58,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ![此影像顯示標籤UI中Adobe Content Analytics標籤擴充功能的「資料串流」設定](assets/aca-tag-datastreams.png)
 
-您可以覆寫&#x200B;**[!UICONTROL 沙箱]**&#x200B;和&#x200B;**[!UICONTROL 生產資料流]**&#x200B;的自動選取值，以備您想要在不同沙箱上使用內容分析並搭配不同資料流時使用。 這樣做時，您可以從可用的下拉式功能表中選取沙箱和資料流，或選取&#x200B;**[!UICONTROL 輸入值]**&#x200B;並為每個環境輸入自訂資料流ID。
+您可以覆寫&#x200B;**[!UICONTROL 沙箱]**&#x200B;和&#x200B;**[!UICONTROL 生產資料流]**&#x200B;的自動選取值，以備您想在其他沙箱上搭配不同的資料流使用Content Analytics時使用。 這樣做時，您可以從可用的下拉式功能表中選取沙箱和資料流，或選取&#x200B;**[!UICONTROL 輸入值]**&#x200B;並為每個環境輸入自訂資料流ID。
 
 >[!IMPORTANT]
 >
@@ -68,11 +69,22 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 請參閱[資料串流](../../../../datastreams/overview.md)指南，瞭解如何設定資料串流。
 
+## 設定體驗擷取和定義
 
+在&#x200B;**[!UICONTROL 體驗擷取與定義]**&#x200B;區段中，您可以啟用&#x200B;**[!UICONTROL 包含體驗]**，以便在為Content Analytics收集資料時包含體驗。
+
+![影像顯示延伸模組](assets/aca-tag-experiencecapture.png)中的體驗擷取與定義區段
+
+1. 啟用&#x200B;**[!UICONTROL 包含體驗]**。
+1. 選擇性。 指定在您的網站上呈現內容的方式。 引數是&#x200B;**[!UICONTROL 網域規則運算式]**&#x200B;和&#x200B;**[!UICONTROL 查詢引數]**&#x200B;的零個或多個組合。
+   1. 輸入&#x200B;**[!UICONTROL 網域規則運算式]**，例如`^(?!.*\b(store|help|admin)\b)`。
+   1. 指定&#x200B;**[!UICONTROL 查詢引數]**&#x200B;的逗號分隔清單，例如`outdoors, patio, kitchen`。
+1. 如果要移除網域規則運算式和查詢引數的組合，請選取&#x200B;**[!UICONTROL 移除]**。
+1. 如果要新增其他規則運算式和查詢參陣列合，請選取&#x200B;**[!UICONTROL 新增Regex]**。
 
 ## 設定事件篩選
 
-在&#x200B;**[!UICONTROL 事件篩選]**&#x200B;區段中，您可以修改規則運算式，以便在收集Content Analytics的資料時篩選&#x200B;**[!UICONTROL 頁面URL]**&#x200B;和&#x200B;**[!UICONTROL Assets URL]**。 您在[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)中定義的規則運算式會自動填入。
+在&#x200B;**[!UICONTROL 事件篩選]**&#x200B;區段中，您可以修改規則運算式，以便在為Content Analytics收集資料時篩選&#x200B;**[!UICONTROL 頁面URL]**&#x200B;和&#x200B;**[!UICONTROL Assets URL]**。 您在[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)中定義的規則運算式會自動填入。
 
 ![此影像顯示標籤UI中Adobe Content Analytics標籤擴充功能的事件篩選設定](assets/aca-tag-eventfiltering.png)
 
@@ -80,7 +92,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 ### 範例
 
 * 您想從Content Analytics排除所有檔案頁面。<br/>使用以下規則運算式： `^(?!.*documentation).*`
-* 您想從Content Analytics排除所有標誌JPEG和SVG影像。<br/>使用以下規則運算式： `^(?!.*(logo\.jpg|\.svg)).*$`
+* 您想從Content Analytics中排除所有標誌JPEG和SVG影像。<br/>使用以下規則運算式： `^(?!.*(logo\.jpg|\.svg)).*$`
 
 您可以使用&#x200B;**[!UICONTROL 測試Regex]**，在&#x200B;**[!UICONTROL 規則運算式測試器]**&#x200B;中測試您的規則運算式。
 
