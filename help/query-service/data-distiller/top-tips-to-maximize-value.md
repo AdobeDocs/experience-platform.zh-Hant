@@ -1,17 +1,15 @@
 ---
-title: 使用Adobe Experience Platform Data Distiller最大化價值的重要秘訣
+title: Adobe Experience Platform Data Distiller - OS656提供最大化價值的重要秘訣
 description: 瞭解如何透過擴充Adobe Experience Platform Data Distiller的即時客戶個人檔案資料，並使用行為深入分析來建立目標受眾，藉此實現最大價值。 此資源包含範例資料集和案例研究，示範如何套用造訪間隔、頻率、貨幣(RFM)模型用於客戶細分。
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: c7a6a37679541dc37bdfed33b72d2396db7ce054
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
 
-# 使用Adobe Experience Platform Data Distiller最大化價值的重要秘訣
+# Adobe Experience Platform Data Distiller - OS656提供最大化價值的重要秘訣
 
 此頁面包含範例資料集，可套用您在Adobe Summit工作階段「OS656 — 使用Adobe Experience Platform Data Distiller最大化價值的重要提示」中學到的內容。 您將瞭解如何透過豐富即時客戶設定檔資料來加速Adobe Real-Time Customer Data Platform和Journey Optimizer的實施。 此擴充功能運用對客戶行為模式的深入分析，以建立體驗傳送和最佳化的對象。
 
@@ -53,7 +51,7 @@ RFM模型使用三個關鍵引數，根據交易行為來細分客戶。
 
 #### 從CSV檔案建立資料集 {#create-a-dataset}
 
-在Experience Platform UI中，導覽至左側導覽邊欄中選取&#x200B;**[!UICONTROL 工作流程]**，然後從可用選項中選取&#x200B;**[!UICONTROL 從CSV檔案建立資料集]**。 熒幕右側會出現新的側欄，請選取&#x200B;**[!UICONTROL 啟動]**。
+在Experience Platform UI中，選取左側導覽邊欄中的&#x200B;**[!UICONTROL 資料集]**，然後選取&#x200B;**[!UICONTROL 建立資料集]**。 然後從可用選項中選取&#x200B;**[!UICONTROL 從CSV檔案建立資料集]**。
 
 [!UICONTROL 設定資料集]面板隨即顯示。 在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中，將資料集名稱輸入為&quot;luma_web_data&quot;，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
@@ -135,7 +133,7 @@ RFM模型會根據完成的購買來評估造訪間隔、頻率和貨幣值。 �
 第一個查詢會選取與取消關聯的所有非Null的購買ID，並使用`GROUP BY`加以彙總。 必須從資料集中排除產生的購買ID。
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -241,7 +239,7 @@ GROUP BY userid;
 若要提高查詢效率和可重複使用性，請建立`VIEW`以儲存彙總的RFM值。
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -258,7 +256,7 @@ AS
 同樣作為最佳實務，請執行簡單的探索查詢以檢查檢視中的資料。 請使用下列陳述式。
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 下列熒幕擷圖顯示查詢的範例結果，顯示每個使用者的計算RFM值。 結果對應至`CREATE VIEW`查詢的檢視識別碼。
@@ -289,7 +287,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 結果如下所示。
@@ -320,6 +318,10 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+結果看起來類似下列影像，但檢視ID不同。
+
+![ &#39;rfm_scores&#39;檢視的[查詢結果]對話方塊。](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### 模型RFM區段 {#model-rfm-segments}
 
@@ -398,7 +400,7 @@ SELECT * FROM rfm_model_segment;
 
 ### 步驟4：使用SQL將RFM資料批次擷取至Real-Time Customer Profile {#sql-batch-ingest-rfm-data}
 
-批次將RFM豐富的客戶資料擷取到即時客戶個人檔案。 首先，建立已啟用設定檔的資料集，並使用SQL插入轉換後的資料。
+接著，將擴充RFM的客戶資料批次擷取到即時客戶設定檔。 首先，建立已啟用設定檔的資料集，並使用SQL插入轉換後的資料。
 
 #### 建立衍生資料集以儲存RFM屬性 {#create-a-derived-dataset}
 
@@ -426,7 +428,13 @@ SELECT * FROM rfm_model_segment;
 >
 >如需定義身分識別欄位和使用身分識別名稱空間的詳細資訊，請參閱[身分識別服務檔案](../../identity-service/home.md)或[在Adobe Experience Platform UI中定義身分識別欄位的指南](../../xdm/ui/fields/identity.md)。
 
-下列SQL會建立啟用設定檔的表格來儲存RFM屬性
+由於「查詢編輯器」支援循序執行，因此您可以在單一工作階段中包含表格建立和資料插入查詢。 下列SQL會先建立啟用設定檔的表格來儲存RFM屬性。 然後，它會從`rfm_model_segment`將擴充RFM的客戶資料插入`adls_rfm_profile`表格，在您的租使用者特定名稱空間（即時客戶設定檔擷取所需）下建構每個記錄。
+
+由於「查詢編輯器」支援循序執行，因此您可以在單一工作階段中執行表格建立和資料插入查詢。 下列SQL會先建立啟用設定檔的表格來儲存RFM屬性。 然後，它會從`rfm_model_segment`將擴充RFM的客戶資料插入`adls_rfm_profile`表格，確保每個記錄都在您的租使用者特定名稱空間(`_{TENANT_ID}`)下正確建構。 此名稱空間是即時客戶個人檔案擷取和準確身分解析的必要條件。
+
+>[!IMPORTANT]
+>
+>將`_{TENANT_ID}`取代為您組織的租使用者名稱空間。 此名稱空間是貴組織所獨有的，可確保在Adobe Experience Platform中正確指派所有擷取的資料。
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
@@ -439,15 +447,20 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
     monetization INTEGER, -- Monetary score
     rfm_model TEXT -- RFM segment classification
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 此查詢的結果類似於此Playbook中之前的資料集建立，但ID不同。
 
-建立資料集後，請導覽至「資料集>瀏覽> `adls_rfm_profile`」以確認資料集是空的。
+建立資料集後，請導覽至&#x200B;**[!UICONTROL 資料集]** > **[!UICONTROL 瀏覽]** > `adls_rfm_profile`以驗證資料集是空的。
 
 ![包含&#39;adls_rfm_profile&#39;資料集詳細資訊的資料集工作區已顯示，且已啟用設定檔的切換已反白顯示。](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-您也可以導覽至「**[!UICONTROL 結構描述]** > **[!UICONTROL 瀏覽]** > `adls_rfm_profile`」，以檢視您新建立資料集的XDM個別設定檔結構描述圖表及其自訂欄位群組。
+您也可以導覽至「**[!UICONTROL 結構描述]** > **[!UICONTROL 瀏覽]** > `adls_rfm_profile`」，以檢視您新建立之資料集的XDM個別設定檔結構描述圖表及其自訂欄位群組。
 
 ![結構描述畫布中顯示&#39;adls_rfm_profile&#39;圖表的XDM工作區。](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -464,7 +477,7 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -490,10 +503,10 @@ FROM   rfm_model_segment;
 
 [!UICONTROL 排程詳細資料]檢視就會顯示。 從此處，輸入以下詳細資料以設定排程：
 
-- **[!UICONTROL 執行頻率]**： **每年**
-- **[!UICONTROL 執行日]**： **4月30日**
-- **[!UICONTROL 排程執行時間]**： **11下午UTC**
-- **[!UICONTROL 排程期間]**： **2024年4月1日至5月31日**
+- **[!UICONTROL 執行頻率]**： **每週**
+- **[!UICONTROL 執行日]**： **星期一與星期二**
+- **[!UICONTROL 排程執行時間]**： **上午10:10 UTC**
+- **[!UICONTROL 排程期間]**： **2025年3月17日至4月30日**
 
 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以確認排程。
 
@@ -518,11 +531,11 @@ FROM   rfm_model_segment;
 
 使用`CREATE AUDIENCE AS SELECT`命令來定義新對象。 建立的對象儲存在資料集中，並在&#x200B;**[!UICONTROL 資料Distiller]**&#x200B;下的&#x200B;**[!UICONTROL 對象]**&#x200B;工作區中註冊。
 
-使用SQL擴充功能建立的對象會自動在[!UICONTROL 對象]工作區的[!UICONTROL 資料Distiller]來源下註冊。 您可以從[!UICONTROL 對象] UI檢視、管理及視需要啟用對象。
+使用SQL擴充功能建立的對象會自動在[!UICONTROL 對象]工作區的[!UICONTROL 資料Distiller]來源下註冊。 您可以從[對象入口網站](../../segmentation/ui/audience-portal.md)視需要檢視、管理及啟用對象。
 
-![顯示可用對象的「對象」工作區。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![顯示可用對象的對象入口網站。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![此對象工作區顯示已選取篩選器側邊欄和資料Distiller的可用對象。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![對象入口網站顯示已選取篩選器側邊欄和資料Distiller的可用對象。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
 如需SQL對象的詳細資訊，請參閱[資料Distiller對象檔案](../data-distiller-audiences/overview.md)。 若要瞭解如何在UI中管理對象，請參閱[對象入口網站概觀](../../segmentation/ui/audience-portal.md#audience-list)。
 
@@ -534,19 +547,19 @@ FROM   rfm_model_segment;
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -555,33 +568,33 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
 #### 插入對象 {#insert-an-audience}
 
-若要將設定檔新增至現有對象，請使用`INSERT INTO`命令。 這可讓您將個別設定檔或整個對象區段新增到現有的對象資料集。
+若要將設定檔新增至現有對象，請使用`INSERT INTO`命令。 這可讓您將個別設定檔或整個對象新增到現有的對象資料集。
 
 ```sql
 -- Insert profiles into the audience dataset
 INSERT INTO AUDIENCE adls_rfm_audience 
 SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
 FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
 #### 新增設定檔至對象 {#add-profiles-to-audience}
@@ -649,4 +662,4 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 若要完成對象，請選取右上角的&#x200B;**[!UICONTROL 儲存並發佈]**。 儲存後，新建立的對象會出現在[!UICONTROL 對象]工作區中，您可在此檢閱其摘要和合格條件。
 
-使用區段產生器來存取衍生的RFM屬性並設計其他對象。 根據RFM分數啟用新建立的SQL對象，並將其傳送到任何偏好的目的地，包括Adobe Journey Optimizer。
+使用「區段產生器」來存取衍生的RFM屬性，並設計其他對象。 根據RFM分數啟用新建立的SQL對象，並將其傳送到任何偏好的目的地，包括Adobe Journey Optimizer。

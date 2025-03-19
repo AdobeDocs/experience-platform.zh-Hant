@@ -5,9 +5,9 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 21%
 
 ---
@@ -23,7 +23,6 @@ ht-degree: 21%
 - 資料Distiller {#data-distiller}
    - [概觀](data-distiller/overview.md)
    - [授權使用情況](data-distiller/license-usage.md)
-   - [最大價值的前幾個秘訣](data-distiller/top-tips-to-maximize-value.md)
    - 衍生資料集{#derived-datasets}
       - [概觀](data-distiller/derived-datasets/overview.md)
       - [使用SQL建立衍生資料集](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -40,6 +39,7 @@ ht-degree: 21%
       - [ML的工程師功能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [將資料匯出至ML環境](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML資料管道擴充端對端工作流程](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [2025年高峰會會議](data-distiller/top-tips-to-maximize-value.md)
 - 資料Distiller統計資料和機器學習{#advanced-statistics}
    - [概觀](advanced-statistics/overview.md)
    - [功能工程](advanced-statistics/feature-engineering.md)
