@@ -2,7 +2,7 @@
 title: 內嵌範本
 description: 瞭解如何使用內嵌範本在多個查詢中重複使用多個條件。
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%
@@ -42,7 +42,7 @@ UI和查詢服務API都支援內嵌範本。 在繼續本指南之前，請先�
 
 您可以使用範本來儲存一或多個條件。 它們本身不需要是完整的查詢。 如果您的範本包含有效的查詢，只要呼叫前面有雜湊符號的範本名稱，即可執行查詢。 例如，如果您將`SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;`儲存為名為`JUNE_2023_LOYALTY_MEMBERS`的範本，則命令`#JUNE_2023_LOYALTY_MEMBERS;`會執行範本中包含的有效查詢。
 
->
+>[!NOTE]
 >
 >在Adobe Experience Platform UI中，僅在父層級支援引數化查詢形式的內嵌範本。 這表示引數化查詢只會在原始範本中使用時運作。 子範本必須是靜態範本，而且不能有動態引數。 請參閱[引數化查詢檔案](../ui/parameterized-queries.md)以深入瞭解。
 

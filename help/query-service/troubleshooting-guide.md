@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務和資料Distiller常見問題
 description: 本檔案包含和查詢服務及資料Distiller相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5024'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Query Service可協助您快速獲得見解，而Data Distiller則可進行深�
 ### 我可以將[!DNL Postman]用於查詢服務API嗎？
 
 +++回答
-可以，您可以使用[!DNL Postman] （免費的協力廠商應用程式）將所有AdobeAPI服務視覺化並與其互動。 請觀看[[!DNL Postman] 設定指南](https://video.tv.adobe.com/v/28832)，瞭解如何在Adobe Developer Console中設定專案及取得與[!DNL Postman]搭配使用所需的所有認證的逐步指示。 請參閱有關啟動、執行和共用 [!DNL Postman] 集合](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)的[指南的官方檔案。
+可以，您可以使用[!DNL Postman] （免費的協力廠商應用程式）將所有Adobe API服務視覺化並與其互動。 請觀看[[!DNL Postman] 設定指南](https://video.tv.adobe.com/v/28832)，瞭解如何在Adobe Developer Console中設定專案及取得與[!DNL Postman]搭配使用所需的所有認證的逐步指示。 請參閱有關啟動、執行和共用 [!DNL Postman] 集合](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)的[指南的官方檔案。
 +++
 
 ### 透過UI從查詢傳回的最大列數是否有限制？
@@ -84,17 +84,6 @@ Query Service可協助您快速獲得見解，而Data Distiller則可進行深�
 
 +++回答
 不適用。 資料大小沒有限制，但互動式工作階段有10分鐘的查詢逾時限制。 如果查詢是以批次CTAS方式執行，則10分鐘逾時不適用。 如需詳細資訊，請參閱[互動式查詢執行](./best-practices/writing-queries.md#interactive-query-execution)的指南。
-+++
-
-### 如何略過SELECT查詢的輸出列數限制？
-
-+++回答
-若要略過輸出列限制，請在查詢中套用「LIMIT 0」。 例如：
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
 +++
 
 ### 如何防止我的查詢在10分鐘內逾時？
@@ -126,7 +115,7 @@ SELECT * FROM customers LIMIT 0;
 +++回答
 下列步驟說明如何透過UI顯示資料集的表格檢視，包括平面化表單中的所有巢狀欄位和欄。
 
-- 登入Experience Platform後，請在UI的左側導覽中選取&#x200B;**[!UICONTROL 資料集]**&#x200B;以導覽至[!UICONTROL 資料集]儀表板。
+- 登入Experience Platform後，在UI的左側導覽中選取「**[!UICONTROL 資料集]**」以導覽至「[!UICONTROL 資料集]」儀表板。
 - 資料集[!UICONTROL 瀏覽]索引標籤開啟。 您可以使用搜尋列來調整可用選項。 從顯示的清單中選取資料集。
 
 ![Platform UI中的資料集儀表板，具有搜尋列和醒目提示的資料集。](./images/troubleshooting/dataset-selection.png)
@@ -153,7 +142,7 @@ SELECT * FROM customers LIMIT 0;
 +++回答
 如果查詢在非常小的資料集上花費了很長的時間，請聯絡客戶支援。
 
-查詢在處理期間卡住的原因不勝列舉。 若要判斷確切原因，需要逐案進行深入分析。 [連絡Adobe客戶支援](#customer-support)以成為此程式。
+查詢在處理期間卡住的原因不勝列舉。 若要判斷確切原因，需要逐案進行深入分析。 [聯絡Adobe客戶支援](#customer-support)以成為此程式。
 +++
 
 ### 如何聯絡Adobe客戶支援？ {#customer-support}
@@ -164,14 +153,14 @@ SELECT * FROM customers LIMIT 0;
 - 在網頁瀏覽器中導覽至[https://www.adobe.com/](https://www.adobe.com/tw)。
 - 在頂端導覽列的右側，選取&#x200B;**[!UICONTROL 登入]**。
 
-![已登入的Adobe網站反白顯示。](./images/troubleshooting/adobe-sign-in.png)
+![已登入的Adobe網站強調顯示。](./images/troubleshooting/adobe-sign-in.png)
 
-- 使用已在您的Adobe授權中註冊的Adobe ID和密碼。
+- 使用已在您的Adobe ID授權中註冊的Adobe和密碼。
 - 從上方導覽列中選取&#x200B;**[!UICONTROL 說明與支援]**。
 
 ![上方導覽列的下拉式功能表，包含[說明及支援]、[企業支援]及[連絡我們]等標示專案。](./images/troubleshooting/help-and-support.png)
 
-會顯示包含[!UICONTROL 說明與支援]區段的下拉式橫幅。 選取&#x200B;**[!UICONTROL 連絡我們]**&#x200B;以開啟Adobe客戶服務虛擬助理，或選取&#x200B;**[!UICONTROL 企業支援]**以取得大型組織的專用說明。
+會顯示包含[!UICONTROL 說明與支援]區段的下拉式橫幅。 選取&#x200B;**[!UICONTROL 連絡我們]**&#x200B;以開啟Adobe客戶服務虛擬助理，或選取&#x200B;**[!UICONTROL 企業支援]**以取得大型組織的專屬說明。
 +++
 
 ### 如果前一個工作未成功完成，該如何實作循序工作序列，而不執行後續工作？
@@ -187,7 +176,7 @@ SELECT * FROM customers LIMIT 0;
 +++回答
 實作自訂歸因的方式有兩種：
 
-1. 使用現有[Adobe定義函式](./sql/adobe-defined-functions.md)的組合，以識別是否符合使用案例需求。
+1. 使用現有[Adobe定義函式](./sql/adobe-defined-functions.md)的組合，以識別是否滿足使用案例需求。
 1. 如果前面的建議不符合您的使用案例，您應該使用[視窗函式](./sql/adobe-defined-functions.md#window-functions)的組合。 視窗函式會依序檢視所有事件。 它們也可讓您檢閱歷史資料，並可用於任何組合。
 +++
 
@@ -307,7 +296,7 @@ SELECT count(1) FROM myTableName
 Query Service提供數種內建的SQL Helper函式，以擴充SQL功能。 請參閱檔案，以取得查詢服務](./sql/spark-sql-functions.md)所支援[SQL函式的完整清單。
 +++
 
-### 是否支援所有原生[!DNL Spark SQL]函式，或使用者是否僅限於Adobe提供的包裝函式[!DNL Spark SQL]函式？
+### 是否支援所有原生[!DNL Spark SQL]函式，或使用者是否僅限使用Adobe提供的包裝函式[!DNL Spark SQL]函式？
 
 +++回答
 尚未在資料湖資料上測試所有開放原始碼[!DNL Spark SQL]函式。 測試並確認後，會將其新增至支援清單。 請參考支援的 [!DNL Spark SQL] 函式](./sql/spark-sql-functions.md)的[清單，以檢查特定函式。
@@ -518,19 +507,19 @@ WHERE T2.ID IS NULL
 ### 我可以使用CTAS查詢建立具有雙底線名稱（類似於UI中顯示的名稱）的資料集嗎？ 例如： `test_table_001`。
 
 +++回答
-不會，這是跨Experience Platform的刻意限制，適用於所有Adobe服務，包括查詢服務。 結構描述和資料集名稱可接受具有兩個底線的名稱，但資料集的表格名稱只能包含單一底線。
+不會，這是Experience Platform的刻意限制，適用於所有Adobe服務，包括查詢服務。 結構描述和資料集名稱可接受具有兩個底線的名稱，但資料集的表格名稱只能包含單一底線。
 +++
 
 ### 一次可以執行多少個同時查詢？
 
 +++回答
-There is no query concurrency limit as batch queries run as back-end jobs. 但是，查詢逾時限制設為24小時。
+批次查詢作為後端作業執行時，沒有查詢並行限制。 但是，查詢逾時限制設為24小時。
 +++
 
 ### 是否有活動控制面板，讓您檢視查詢活動和狀態？
 
 +++回答
-There are monitoring and alerting capabilities to check on query activities and statuses. 如需詳細資訊，請參閱[查詢服務稽核記錄整合](./data-governance/audit-log-guide.md)和[查詢記錄](./ui/overview.md#log)檔案。
+有監視和警報功能可檢查查詢活動和狀態。 如需詳細資訊，請參閱[查詢服務稽核記錄整合](./data-governance/audit-log-guide.md)和[查詢記錄](./ui/overview.md#log)檔案。
 +++
 
 ### 是否有任何復原更新的方式？ 例如，如果出現錯誤，或在將資料寫入Platform時某些計算需要重新設定，應如何處理該情況？
@@ -584,7 +573,7 @@ There are monitoring and alerting capabilities to check on query activities and 
 是的，支援SSL模式。 請參閱[SSL模式檔案](./clients/ssl-modes.md)，以取得可用不同SSL模式的劃分及其提供的保護等級。
 +++
 
-### 我們是否針對所有從Power BI使用者端到查詢服務的連線使用TLS 1.2？
+### 我們是否針對來自Power BI使用者端的所有連線使用TLS 1.2來查詢服務？
 
 +++回答
 是。 傳輸中的資料一律符合HTTPS規範。 目前支援的版本為TLS1.2。
@@ -725,7 +714,7 @@ and timestamp < to_timestamp('2022-07-23');
 ### 資料Distiller或查詢服務是否支援MERGE INTO？
 
 +++回答
-The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
+Data Distiller或查詢服務不支援MERGE INTO SQL建構。
 +++
 
 ## ITAS查詢
@@ -738,7 +727,7 @@ INSERT INTO查詢稱為ITAS查詢。 請注意，CREATE TABLE查詢稱為CTAS查
 
 ## 協力廠商工具 {#third-party-tools}
 
-本節包含有關使用協力廠商工具(例如PSQL和Power BI)的資訊。
+本節包含有關使用PSQL和Power BI等協力廠商工具的資訊。
 
 ### 我可以將Query Service連線到協力廠商工具嗎？
 
@@ -768,7 +757,7 @@ INSERT INTO查詢稱為ITAS查詢。 請注意，CREATE TABLE查詢稱為CTAS查
 ### 我可以將Power BI工具連線到查詢服務嗎？
 
 +++回答
-可以，您可以將Power BI連線至查詢服務。 請參閱檔案，以取得有關將Power BI案頭應用程式連線至查詢服務](./clients/power-bi.md)的[指示。
+是，您可以將Power BI連線至查詢服務。 請參閱檔案，以取得有關將Power BI案頭應用程式連線至查詢服務](./clients/power-bi.md)的[指示。
 +++
 
 ### 儀表板在連線至查詢服務時為何需要很長時間才能載入？
@@ -776,7 +765,7 @@ INSERT INTO查詢稱為ITAS查詢。 請注意，CREATE TABLE查詢稱為CTAS查
 +++回答
 當系統連線到查詢服務時，它會連線到互動式或批次處理引擎。 這可能會導致載入時間更長，以反映處理的資料。
 
-如果您想要改善儀表板的回應時間，您應該實作Business Intelligence(BI)伺服器，作為Query Service和BI工具之間的快取層。 一般而言，大部分的BI工具都有額外的伺服器供應專案。
+如果您想要改善儀表板的回應時間，您應該實作Business Intelligence (BI)伺服器，作為Query Service與BI工具之間的快取階層。 一般而言，大部分的BI工具都有額外的伺服器供應專案。
 
 新增快取伺服器層的目的，是為了快取查詢服務的資料，並讓儀表板利用相同的快取伺服器層來加速回應。 這是可行的，因為執行的查詢結果每天都會在BI伺服器中快取。 快取伺服器接著會將這些結果提供給具有相同查詢的任何使用者，以減少延遲。 請參閱您所使用的公用程式或協力廠商工具的說明檔案，以進一步瞭解此設定。
 +++
