@@ -3,10 +3,11 @@ title: 使用UI將Demandbase意圖連線至Experience Platform
 description: 瞭解如何將Demandbase意圖連結至Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 81a615b9826ed69bb050cae9c074a4e457ba128a
+exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
+source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 11%
+ht-degree: 36%
 
 ---
 
@@ -38,18 +39,18 @@ ht-degree: 11%
 
 ## 建立新帳戶 {#create}
 
-## 提供資料流詳細資料 {#provide-dataflow-details}
+## 提供資料流詳細資訊 {#provide-dataflow-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_domain"
 >title="網域來源"
->abstract="雖然Adobe使用XDM accountOrganization.website，但可能有客戶針對個別網站使用自訂欄位。 因此，您必須確保您的網域來源是網域/網站欄位，將比對您的Demandbase帳戶記錄與Experience Platform帳戶。"
+>abstract="雖然 Adobe 使用 XDM accountOrganization.website，但可能有客戶在其個別網站上使用自訂欄位。因此，您必須確保網域來源為會將您的 Demandbase 帳戶記錄與 Experience Platform 帳戶進行比對的網域/網站欄位。"
 
 ## 排程資料流 {#schedule-dataflow}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_schedule"
 >title="排程您的資料流"
->abstract="Demandbase會在星期一早上UTC下午5:00刪除資料一次。 因此，您必須在UTC下午5:00之後設定擷取開始時間。 此外，您必須向Demandbase確認擷取時間，因為在將檔案拖放至Adobe時，他們可能會變更排程。"
+>abstract="Demandbase 每週一早上 (UTC 時間下午 5:00) 卸除資料。因此，您必須將攝取開始時間設定為 UTC 時間下午 5:00 之後。此外，您必須與 Demandbase 確認攝取時間，因為他們可能會在將檔案卸除至 Adobe 時變更其排程。"
 
 ## 檢閱資料流 {#review-dataflow}
