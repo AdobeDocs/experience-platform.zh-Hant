@@ -2,14 +2,19 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 5%
+source-wordcount: '1476'
+ht-degree: 4%
 
 ---
 
-# 身分圖表連結規則概觀
+# 身分圖表連結規則概觀 {#identity-graph-linking-rules-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_overview"
+>title="身分圖表連結規則"
+>abstract="為避免這些不想要的合併，您可以使用透過身分圖表連結規則提供的設定，並允許使用者進行精確的個人化。"
 
 >[!AVAILABILITY]
 >

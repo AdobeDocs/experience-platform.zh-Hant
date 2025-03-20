@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1725'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,12 @@ ht-degree: 2%
 
 如果您使用[Adobe Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)來內嵌資料，則您必須為ECID指定比Adobe Analytics ID (AAID)更高的優先順序，因為Identity Service會封鎖AAID。 透過優先處理ECID，您可以指示即時客戶設定檔將未驗證事件儲存至ECID而非AAID。
 
-### XDM體驗事件
+### XDM體驗事件 {#xdm-experience-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_xdm"
+>title="確定您有單一人員識別碼"
+>abstract="在預先實作程式中，您必須確保系統要傳送至Experience Platform的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如CRMID。"
 
 在預先實作程式中，請確定系統要傳送至Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
 
