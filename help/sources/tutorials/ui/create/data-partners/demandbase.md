@@ -51,6 +51,6 @@ ht-degree: 36%
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_schedule"
 >title="排程您的資料流"
->abstract="Demandbase 每週一早上 (UTC 時間下午 5:00) 卸除資料。因此，您必須將攝取開始時間設定為 UTC 時間下午 5:00 之後。此外，您必須與 Demandbase 確認攝取時間，因為他們可能會在將檔案卸除至 Adobe 時變更其排程。"
+>abstract="Demandbase 每週一早上 (UTC 時間下午 5:00) 卸除資料。因此，您必須等到 UTC 時間下午 5:00 之後，才能設定攝取開始時間。此外，您必須與 Demandbase 確認攝取時間，因為他們可能會在將檔案卸除至 Adobe 時變更其排程。"
 
 ## 檢閱資料流 {#review-dataflow}
