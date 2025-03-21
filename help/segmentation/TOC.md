@@ -5,10 +5,10 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置客群。
 feature: Segments
 role: User
-source-git-commit: be480fee733eb786c5488a9a10d04a62ef845566
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 42%
+source-wordcount: '203'
+ht-degree: 41%
 
 ---
 
@@ -45,6 +45,7 @@ ht-degree: 42%
    - [批次分段](methods/batch-segmentation.md)
    - [串流區段](methods/streaming-segmentation.md)
    - [邊緣分段](methods/edge-segmentation.md)
+   - [彈性的受眾評估](methods/flexible-audience-evaluation.md)
 - 對象型別{#types}
    - [概觀](types/overview.md)
    - [People對象](types/people-audiences.md)

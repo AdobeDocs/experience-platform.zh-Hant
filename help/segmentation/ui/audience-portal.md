@@ -2,10 +2,10 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '4609'
-ht-degree: 4%
+source-wordcount: '4561'
+ht-degree: 3%
 
 ---
 
@@ -221,11 +221,6 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 - 如果您選取篩選器，選取的對象&#x200B;**將**&#x200B;重設。
 
 #### [!BADGE 可用性有限]{type=Informative}彈性對象評估 {#flexible-audience-evaluation}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="彈性對象評估限制"
-abstract="您可以在單一彈性對象評估執行中評估最多 20 個對象。<br/><br/>此外，雖然評估工作會盡快執行，但可能會出現系統延遲，因為隨選評估<b>無法</b>與另一個隨選或批次評估同時執行。"
 
 彈性的對象評估可讓您隨選執行細分工作。 選擇您要評估的對象並選取&#x200B;**[!UICONTROL 評估對象]**。
 
