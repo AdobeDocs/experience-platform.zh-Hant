@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1778'
 ht-degree: 2%
 
 ---
@@ -65,11 +65,16 @@ ht-degree: 2%
 >title="確定您有單一人員識別碼"
 >abstract="在預先實作程式中，您必須確保系統要傳送至Experience Platform的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如CRMID。"
 
-在預先實作程式中，請確定系統要傳送至Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
+在預先實作程式中，您必須確保系統要傳送至Experience Platform的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如CRMID。
+
+* （建議）具有一個人員識別碼的已驗證事件。
+* （不建議）具有兩個人員識別碼的已驗證事件。
+* （不建議）沒有任何人員識別碼的已驗證事件。
+
 
 >[!BEGINTABS]
 
->[!TAB 具有人員識別碼的已驗證事件]
+>[!TAB 已驗證事件，具有一個人員識別碼]
 
 ```json
 {
@@ -98,8 +103,57 @@ ht-degree: 2%
 }
 ```
 
->[!TAB 沒有人員識別碼的已驗證事件]
+>[!TAB 具有兩個人員識別碼的已驗證事件]
 
+如果您的系統傳送兩個人員識別碼，則實作可能會讓單一人員名稱空間需求失效。 例如，如果webSDK實作中的identityMap包含CRMID、customerID和ECID名稱空間，就無法保證每個單一事件都會包含CRMID和customerID。
+
+理想情況下，您應該傳送類似下列的裝載：
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ],
+      "customerID": [
+          {
+            "id": "Jane",
+            "primary": false
+          }
+      ],
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+不過，請務必注意，雖然您可以傳送兩個人員識別碼，但由於實作或資料錯誤，無法保證避免不需要的圖表摺疊。 請考量下列情況：
+
+* `timestamp1` = John登入 — >系統擷取`CRMID: John, ECID: 111`。 但是，此事件承載中不存在`customerID: John`。
+* `timestamp2` = Jane登入 — >系統擷取`customerID: Jane, ECID: 111`。 但是，此事件承載中不存在`CRMID: Jane`。
+
+因此，最佳實務是隻傳送包含已驗證事件的一個人員識別碼。
+
+在圖表模擬中，此內嵌看起來可能像這樣：
+
+![呈現範例圖形的圖形模擬UI。](../images/implementation/example-graph.png)
+
+>[!TAB 已驗證的事件，沒有任何人員識別碼]
 
 ```json
 {
@@ -122,27 +176,7 @@ ht-degree: 2%
 }
 ```
 
-
 >[!ENDTABS]
-
-在預先實作程式中，您必須確保系統要傳送至Experience Platform的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如CRMID。
-
-* （建議）具有一個人員識別碼的已驗證事件。
-* （不建議）具有兩個人員識別碼的已驗證事件。
-* （不建議）沒有任何人員識別碼的已驗證事件。
-
-如果您的系統傳送兩個人員識別碼，則實作可能會讓單一人員名稱空間需求失效。 例如，如果webSDK實作中的identityMap包含CRMID、customerID和ECID名稱空間，則兩個共用裝置的個人可能會錯誤地關聯到不同的名稱空間。
-
-在Identity Service中，此實作可能如下所示：
-
-* `timestamp1` = John登入 — >系統擷取`CRMID: John, ECID: 111`。
-* `timestamp2` = Jane登入 — >系統擷取`customerID: Jane, ECID: 111`。
-
-+++檢視實施在圖表模擬中的外觀
-
-![呈現範例圖形的圖形模擬UI。](../images/implementation/example-graph.png)
-
-+++
 
 ## 設定許可權 {#set-permissions}
 

@@ -2,9 +2,9 @@
 title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '641'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* 身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
->
->* 您的帳戶必須具有&#x200B;**檢視身分圖表**&#x200B;許可權，才能存取UI中的身分設定。 如需詳細資訊，請閱讀[以屬性為基礎的存取控制](../../access-control/abac/ui/permissions.md)中的許可權指南。
+>身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
 身分設定是Adobe Experience Platform Identity Service UI中的功能，可用來指定唯一的名稱空間及設定名稱空間優先順序。
 
@@ -31,6 +29,15 @@ ht-degree: 3%
 * [圖表設定範例](./example-configurations.md)
 * [命名空間優先順序](./namespace-priority.md)
 * [圖表模擬](./graph-simulation.md)
+
+### 設定許可權 {#set-permissions}
+
+接下來，您必須確保您的帳戶已布建下列許可權：
+
+* **[!UICONTROL 檢視身分設定]**：套用此許可權，以便在身分名稱空間瀏覽頁面中檢視唯一的名稱空間和名稱空間優先順序。
+* **[!UICONTROL 編輯身分設定]**：套用此許可權，以便能夠編輯並儲存您的身分設定。
+
+如果您沒有這些許可權，請聯絡管理員。 如需詳細資訊，請閱讀[許可權指南](../../access-control/abac/ui/permissions.md)。
 
 ## 設定您的身分設定
 
