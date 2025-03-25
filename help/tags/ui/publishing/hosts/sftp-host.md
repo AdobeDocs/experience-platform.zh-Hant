@@ -2,10 +2,10 @@
 title: SFTP 主機
 description: 瞭解如何在Adobe Experience Platform中設定標籤，以將程式庫組建傳送至自行託管的安全SFTP伺服器。
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
+source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 11%
+source-wordcount: '875'
+ht-degree: 10%
 
 ---
 
@@ -36,6 +36,22 @@ Platform會使用加密的金鑰連線至您的SFTP網站。 正確設定此項�
 私密金鑰是用來加密公開金鑰。 在SFTP主機建立過程中，您需要提供私密金鑰。 請參閱Reactor API指南中有關[加密值](../../../api/guides/encrypting-values.md)的章節，以取得加密公開金鑰的指示。 使用生產環境的GPG金鑰，除非您確定您需要特定金鑰。 最後，您可以從任何電腦加密私密金鑰，因此不需要在伺服器上安裝GPG即可完成此步驟。
 
 ### 允許清單平台IP位址
+
+>[!IMPORTANT]
+>
+> 在2025年6月23日，Adobe Launch將更新用來支援SFTP主機型別和回撥API功能的外部IP位址。 若要繼續使用其中一項功能，請確定您的防火牆規則允許來自新IP位址的流量。
+>
+> 為了保持存取不中斷，我們建議現在新增新的IP，並在2025年6月23日之後移除舊的IP。
+>
+>**舊IP位址：**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**新IP位址：**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
 
 您可能需要核准一組IP位址，以便在公司防火牆內使用，以允許Platform連線您的SFTP伺服器並與其連線。 這些IP位址包括：
 
