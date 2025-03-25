@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: 瞭解如何將Data Landing Zone連結至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -13,19 +13,19 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此頁面是Experience Platform中[!DNL Data Landing Zone] *來源*&#x200B;聯結器的專屬頁面。 如需有關連線至[!DNL Data Landing Zone] *目的地*&#x200B;聯結器的資訊，請參閱[[!DNL Data Landing Zone] 目的地檔案頁面](/help/destinations/catalog/cloud-storage/data-landing-zone.md)。
+>此頁面特定於Experience Platform中的[!DNL Data Landing Zone] *來源*&#x200B;聯結器。 如需有關連線至[!DNL Data Landing Zone] *目的地*&#x200B;聯結器的資訊，請參閱[[!DNL Data Landing Zone] 目的地檔案頁面](/help/destinations/catalog/cloud-storage/data-landing-zone.md)。
 
-[!DNL Data Landing Zone]是Adobe Experience Platform布建的[!DNL Azure Blob]儲存體介面，可授予您存取安全、雲端式的檔案儲存設施，以將檔案帶入Platform。 您有權存取每個沙箱的一個[!DNL Data Landing Zone]容器，而且所有容器的資料量總計以您的Platform產品和服務授權所提供的資料量為限。 所有Experience Platform客戶都已為每個沙箱布建一個[!DNL Data Landing Zone]容器。 您可以透過[!DNL Azure Storage Explorer]或命令列介面讀取及寫入檔案至容器。
+[!DNL Data Landing Zone]是Adobe Experience Platform布建的[!DNL Azure Blob]儲存體介面，可授予您存取安全、雲端式的檔案儲存設施，以將檔案帶入Platform。 您有權存取每個沙箱的一個[!DNL Data Landing Zone]容器，而且所有容器的資料量總計以您的Platform產品和服務授權所提供的資料量為限。 Experience Platform的所有客戶都已為每個沙箱布建一個[!DNL Data Landing Zone]容器。 您可以透過[!DNL Azure Storage Explorer]或命令列介面讀取及寫入檔案至容器。
 
 [!DNL Data Landing Zone]支援SAS式驗證，其資料受到標準[!DNL Azure Blob]存放裝置安全機制的保護。 SAS式驗證可讓您透過公用網際網路連線，安全地存取[!DNL Data Landing Zone]容器。 您不需要變更網路即可存取[!DNL Data Landing Zone]容器，這表示您不需要為網路設定任何允許清單或跨區域設定。 Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案和資料夾強制實施嚴格的七天到期時間。 所有檔案和資料夾都會在七天後刪除。
 
-## 設定您在Azure上Experience Platform的[!DNL Data Landing Zone]來源 {#azure}
+## 在Azure上設定Experience Platform的[!DNL Data Landing Zone]來源 {#azure}
 
-請依照下列步驟，瞭解如何設定[!DNL Data Landing Zone]帳戶以在Azure上Experience Platform。
+請依照下列步驟，瞭解如何在Azure上為Experience Platform設定[!DNL Data Landing Zone]帳戶。
 
 >[!NOTE]
 >
->如果您要從[!DNL Azure Data Factory]存取[!DNL Data Landing Zone]，則必須使用Experience Platform提供的[SAS認證](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)為[!DNL Data Landing Zone]建立連結的服務。 建立連結的服務後，您就可以選取容器路徑（而非預設的根路徑）來探索[!DNL Data Landing Zone]。
+>如果您想要從[!DNL Azure Data Factory]存取[!DNL Data Landing Zone]，則必須使用Experience Platform提供的[SAS認證](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)為[!DNL Data Landing Zone]建立連結的服務。 建立連結的服務後，您就可以選取容器路徑（而非預設的根路徑）來探索[!DNL Data Landing Zone]。
 
 ### 檔案和目錄的命名限制
 
@@ -155,13 +155,17 @@ set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
 azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ```
 
-## 設定您在Amazon Web Services上Experience Platform的[!DNL Data Landing Zone]來源 {#aws}
+## 在Amazon Web Services上設定Experience Platform的[!DNL Data Landing Zone]來源 {#aws}
 
 >[!AVAILABILITY]
 >
->本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
-請依照下列步驟瞭解如何設定您的[!DNL Data Landing Zone]帳戶以在Amazon Web Services (AWS)上Experience Platform。
+請依照下列步驟，瞭解如何在Amazon Web Services (AWS)上為Experience Platform設定[!DNL Data Landing Zone]帳戶。
+
+### AWS上連線的IP位址允許清單
+
+您必須先將地區特定的IP位址新增至允許清單，才能將您的來源連線到AWS上的Experience Platform。 如需詳細資訊，請參閱[允許清單IP位址以連線至AWS](../../ip-address-allow-list.md)上的Experience Platform的指南。
 
 ### 設定AWS CLI並執行作業
 
@@ -297,13 +301,13 @@ print(f"Sign-in URL: {signin_url}")
 
 最後，導覽至產生的URL，以使用您的[!DNL Data Landing Zone]認證直接登入AWS Console，進而存取[!DNL Amazon S3]貯體中的特定資料夾。 登入URL會直接將您帶往該資料夾，確保您只會看見和管理允許的資料。
 
-## 連線[!DNL Data Landing Zone]至Experience Platform
+## 將[!DNL Data Landing Zone]連線至Experience Platform
 
 >[!IMPORTANT]
 >
 >- 若要連線到來源，您需要&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;存取控制許可權。 如需詳細資訊，請閱讀[存取控制總覽](../../../access-control/home.md)，或連絡您的產品管理員以取得必要的許可權。
 >
->- 使用[!DNL Data Landing Zone]連線到Experience Platform時，目前不支援私人連結。 唯一支援的存取方法是[這裡](#manage-the-contents-of-your-data-landing-zone)列出的方法。
+>- 使用[!DNL Data Landing Zone]連線至Experience Platform時，目前不支援私人連結。 唯一支援的存取方法是[這裡](#manage-the-contents-of-your-data-landing-zone)列出的方法。
 
 以下檔案提供如何使用API或使用者介面將資料從您的[!DNL Data Landing Zone]容器帶入Adobe Experience Platform的資訊。
 

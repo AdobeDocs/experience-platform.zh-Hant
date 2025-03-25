@@ -2,9 +2,9 @@
 title: Salesforce Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Salesforce]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+>您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Salesforce]來源。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的支援包括[!DNL Salesforce]。
 
-## 設定您在Azure上Experience Platform的[!DNL Salesforce]來源 {#azure}
+## 在Azure上設定Experience Platform的[!DNL Salesforce]來源 {#azure}
 
-請依照下列步驟，瞭解如何設定[!DNL Salesforce]帳戶以在Azure上Experience Platform。
+請依照下列步驟，瞭解如何在Azure上為Experience Platform設定[!DNL Salesforce]帳戶。
 
 ### IP位址允許清單
 
@@ -48,7 +48,7 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 - 您可以從此[GitHub存放庫](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)下載名稱空間和結構描述自動產生公用程式集合和環境。
 - 如需有關使用Platform API的詳細資訊，包括如何收集必要標題的值以及讀取範例API呼叫，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
-- 如需如何產生Platform API認證的詳細資訊，請參閱有關[驗證和存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。
+- 如需如何產生Platform API認證的詳細資訊，請參閱有關[驗證和存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。
 - 如需如何設定Platform API [!DNL Postman]的相關資訊，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)上的教學課程。
 
 透過平台開發人員主控台和[!DNL Postman]設定，您現在可以開始將適當的環境值套用至您的[!DNL Postman]環境。
@@ -59,13 +59,13 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 | 變數 | 說明 | 範例 |
 | --- | --- | --- |
-| `CLIENT_SECRET` | 用來產生`{ACCESS_TOKEN}`的唯一識別碼。 如需如何擷取`{CLIENT_SECRET}`的詳細資訊，請參閱[驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。 | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON Web權杖(JWT)是用於產生{ACCESS_TOKEN}的驗證認證。 如需如何產生`{JWT_TOKEN}`的相關資訊，請參閱[驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。 | `{JWT_TOKEN}` |
-| `API_KEY` | 用於驗證對Experience Platform API的呼叫的唯一識別碼。 如需如何擷取`{API_KEY}`的詳細資訊，請參閱[驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | 完成對Experience Platform API的呼叫所需的授權權杖。 如需如何擷取`{ACCESS_TOKEN}`的詳細資訊，請參閱[驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。 | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | 用來產生`{ACCESS_TOKEN}`的唯一識別碼。 如需如何擷取`{CLIENT_SECRET}`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JSON Web權杖(JWT)是用於產生{ACCESS_TOKEN}的驗證認證。 如需如何產生`{JWT_TOKEN}`的相關資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `{JWT_TOKEN}` |
+| `API_KEY` | 用於驗證Experience Platform API呼叫的唯一識別碼。 如需如何擷取`{API_KEY}`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | 完成對Experience Platform API的呼叫所需的授權權杖。 如需如何擷取`{ACCESS_TOKEN}`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | 關於[!DNL Marketo]，此值是固定的，並且一律設定為： `ent_dataservices_sdk`。 | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | `global`容器儲存所有標準Adobe和Experience Platform合作夥伴提供的類別、結構描述欄位群組、資料型別和結構描述。 關於[!DNL Marketo]，此值是固定的，且一律設為`global`。 | `global` |
-| `PRIVATE_KEY` | 用來驗證您的[!DNL Postman]執行個體以Experience PlatformAPI的認證。 請參閱有關設定開發人員主控台和[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)的教學課程，以瞭解如何擷取{PRIVATE_KEY}的說明。 | `{PRIVATE_KEY}` |
+| `CONTAINER_ID` | `global`容器保有所有標準Adobe和Experience Platform合作夥伴提供的類別、結構描述欄位群組、資料型別和結構描述。 關於[!DNL Marketo]，此值是固定的，且一律設為`global`。 | `global` |
+| `PRIVATE_KEY` | 用於向Experience Platform API驗證您的[!DNL Postman]執行個體的認證。 請參閱有關設定開發人員主控台和[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)的教學課程，以瞭解如何擷取{PRIVATE_KEY}的說明。 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | 用來整合至Adobe I/O的認證。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management系統(IMS)提供驗證Adobe服務的架構。 關於[!DNL Marketo]，此值是固定的，且一律設為： `ims-na1.adobelogin.com`。 | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 企業實體，可以擁有或授權產品及服務並允許存取其成員。 如需如何擷取`{ORG_ID}`資訊的說明，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)的教學課程。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -95,13 +95,13 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 成功的請求會根據測試版規格建立B2B名稱空間和結構描述。
 
-## 設定您在Amazon Web Services上Experience Platform的[!DNL Salesforce]來源 {#aws}
+## 在Amazon Web Services上設定Experience Platform的[!DNL Salesforce]來源 {#aws}
 
 >[!AVAILABILITY]
 >
->本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
-請依照下列步驟瞭解如何設定您的[!DNL Salesforce]帳戶以在Amazon Web Services (AWS)上Experience Platform。
+請依照下列步驟，瞭解如何在Amazon Web Services (AWS)上為Experience Platform設定[!DNL Salesforce]帳戶。
 
 ### 先決條件
 
@@ -111,11 +111,9 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 - [!DNL Salesforce Connected App]可供您用來啟用JWT_BEARER OAuth流程。
 - [!DNL Salesforce]中存取資料的必要許可權。
 
-您也必須新增下列IP位址至您的允許清單，才能將您的[!DNL Salesforce]帳戶連線至Amazon Web Services (AWS)上的Experience Platform：
+### AWS上連線的IP位址允許清單
 
-- `34.193.63.59`
-- `44.217.93.240`
-- `44.194.79.229`
+您必須先將地區特定的IP位址新增至允許清單，才能將您的來源連線到AWS上的Experience Platform。 如需詳細資訊，請參閱[允許清單IP位址以連線至AWS](../../ip-address-allow-list.md)上的Experience Platform的指南。
 
 ### 建立[!DNL Salesforce Connected App]
 
@@ -147,8 +145,8 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 
 接著，選取&#x200B;**[!DNL Save]**、**[!DNL Continue]**，然後選取&#x200B;**[!DNL Manage Customer Details]**。 使用消費者詳細資訊面板來擷取下列內容：
 
-- **消費者金鑰**：您稍後會在驗證Experience Platform的[!DNL Salesforce]帳戶時，使用此消費者金鑰作為使用者端ID。
-- **使用者密碼**：您稍後會在驗證Experience Platform的[!DNL Salesforce]帳戶時，使用此使用者密碼作為使用者端ID。
+- **消費者金鑰**：您稍後在向Experience Platform驗證[!DNL Salesforce]帳戶時，會使用此消費者金鑰作為使用者端ID。
+- **消費者機密**：您稍後在向Experience Platform驗證[!DNL Salesforce]帳戶時，會使用此消費者機密作為使用者端ID。
 
 ### 授權您的[!DNL Salesforce]使用者使用連線應用程式
 
@@ -269,7 +267,7 @@ public class Main {
 
 ## 後續步驟
 
-完成[!DNL Salesforce]帳戶的先決條件設定後，您可以繼續連線您的[!DNL Salesforce]帳戶，以Experience Platform並內嵌您的CRM資料。 如需詳細資訊，請閱讀以下檔案：
+完成[!DNL Salesforce]帳戶的先決條件設定後，您就可以繼續將您的[!DNL Salesforce]帳戶連線至Experience Platform並內嵌您的CRM資料。 如需詳細資訊，請閱讀以下檔案：
 
 ### 使用API連線[!DNL Salesforce]至平台
 

@@ -1,10 +1,10 @@
 ---
-description: 瞭解您需要將哪些IP位址新增至允許清單，才能成功使用Adobe Experience Platform來源。
+description: 瞭解您需要將IP位址新增到允許清單才能成功使用Adobe Experience Platform來源。
 title: 來源的IP位址允許清單
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 您可以透過網路防火牆定義網路存取控制。 透過指定適當的來源IP範圍，您可以讓資料傳輸服務的流量流動。 使用來源聯結器之前，必須將下列IP位址新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。
 
-## 批次來源的IP位址允許清單 {#batch}
+## 連線到[!DNL Azure]上Experience Platform之來源的IP位址允許清單 {#azure}
+
+### [!DNL Azure]上的Experience Platform批次來源 {#batch}
 
 您必須將下列IP位址新增至允許清單，讓流量流向批次來源的資料傳輸服務。
 
@@ -21,7 +23,7 @@ ht-degree: 0%
 
 >[!TAB VA7：北美]
 
-### VA7：北美
+#### VA7：北美
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ ht-degree: 0%
 
 >[!TAB NLD2：歐洲]
 
-### NLD2：歐洲
+#### NLD2：歐洲
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ ht-degree: 0%
 
 >[!TAB AUS5：澳洲]
 
-### AUS5：澳洲
+#### AUS5：澳洲
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ ht-degree: 0%
 
 >[!TAB CAN2：加拿大]
 
-### CAN2：加拿大
+#### CAN2：加拿大
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ ht-degree: 0%
 
 >[!TAB IND2：印度]
 
-### IND2：印度
+#### IND2：印度
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,7 +104,7 @@ ht-degree: 0%
 
 >[!ENDTABS]
 
-## 串流來源的IP位址允許清單 {#streaming}
+### 在[!DNL Azure]上的Experience Platform串流來源 {#streaming}
 
 您必須將下列IP位址新增至允許清單，讓串流來源（例如[[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md)、[[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md)、[[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md)和[[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md)）的資料傳輸服務流量流動。
 
@@ -110,7 +112,7 @@ ht-degree: 0%
 
 >[!TAB VA7：北美]
 
-### VA7：北美
+#### VA7：北美
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ ht-degree: 0%
 
 >[!TAB NLD2：歐洲]
 
-### NLD2：歐洲
+#### NLD2：歐洲
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ ht-degree: 0%
 
 >[!TAB AUS5：澳洲]
 
-### AUS5：澳洲
+#### AUS5：澳洲
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ ht-degree: 0%
 
 >[!TAB CAN2：加拿大]
 
-### CAN2：加拿大
+#### CAN2：加拿大
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ ht-degree: 0%
 
 >[!TAB GBR9：英國]
 
-### GBR9：英國
+#### GBR9：英國
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ ht-degree: 0%
 
 >[!TAB IND2：印度]
 
-### IND2：印度
+#### IND2：印度
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ ht-degree: 0%
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## [!DNL Amazon Web Services] (AWS)上Experience Platform的來源連線允許清單的IP位址 {#aws}
+
+您必須將以下IP位址新增至允許清單，才能將您的來源連線至AWS上的Experience：
+
+- `66.117.18.0/24`
