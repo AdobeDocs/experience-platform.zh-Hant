@@ -5,10 +5,10 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
+source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 30%
+source-wordcount: '1059'
+ht-degree: 29%
 
 ---
 
@@ -236,6 +236,7 @@ ht-degree: 30%
    - [刪除資料流](tutorials/api/delete-dataflows.md)
    - [收錄加密的資料](tutorials/api/encrypt-data.md)
    - [將資料流儲存為草稿](tutorials/api/draft.md)
+   - [將存取權標籤套用至資料流](tutorials/api/labels.md)
 - UI教學課程{#ui-tutorials}
    - 建立來源連線{#create}
       - Adobe應用程式{#adobe-applications}
@@ -361,6 +362,7 @@ ht-degree: 30%
    - [刪除資料流](tutorials/ui/delete.md)
    - [訂閱來源警示](tutorials/ui/alerts.md)
    - [將資料流儲存為草稿](tutorials/ui/draft.md)
+   - [將存取權標籤套用至資料流](tutorials/ui/labels.md)
 - 自助來源(批次SDK) {#sdk}
    - [概觀](sources-sdk/overview.md)
    - 設定您的連線規格{#config}
