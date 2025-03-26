@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 發行說明
 breadcrumb-title: Platform 發行說明
 user-guide-description: 尋找 Adobe Experience Platform 的每月發行說明。
-source-git-commit: 6877d7a1679184976cdc608dbc400a257ef8e2f6
+source-git-commit: f29aedc417aed0e2e82117741dda7ec71adfd92e
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 99%
+source-wordcount: '158'
+ht-degree: 100%
 
 ---
 
@@ -14,9 +14,10 @@ ht-degree: 99%
 # Adobe Experience Platform 發行說明 {#release-notes}
 
 * [目前 Platform 的發行說明](latest/latest.md)
-* 2025 {#2025}
+* 2025 年{#2025}
+   * [2025 年 3 月](2025/march-2025.md)
    * [2025 年 2 月](2025/february-2025.md)
-* 2024 {#2024}
+* 2024 年{#2024}
    * [2024 年 11 月](2024/november-2024.md)
    * [2024 年 10 月](2024/october-2024.md)
    * [2024 年 9 月](2024/september-2024.md)
@@ -28,7 +29,7 @@ ht-degree: 99%
    * [2024 年 3 月](2024/march-2024.md)
    * [2024 年 2 月](2024/february-2024.md)
    * [2024 年 1 月](2024/january-2024.md)
-* 2023 {#2023}
+* 2023 年{#2023}
    * [2023 年 10 月](2023/october-2023.md)
    * [2023 年 9 月](2023/september-2023.md)
    * [2023 年 8 月](2023/august-2023.md)
