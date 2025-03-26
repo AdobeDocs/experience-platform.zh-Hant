@@ -4,10 +4,10 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 1c31ef58eec727638cab28202afc762da0e226a2
+source-git-commit: 7332b39b0e213632e595dc52eda390aa0b9a24ec
 workflow-type: tm+mt
-source-wordcount: '3125'
-ht-degree: 22%
+source-wordcount: '3483'
+ht-degree: 16%
 
 ---
 
@@ -45,48 +45,90 @@ ht-degree: 22%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="預測的運算小時數"
->abstract="您的使用量可能會達到已授權數量。若要評估或減少運算小時數，請導覽至「查詢 > 記錄」以查看查詢歷史記錄。如果您沒有「查詢」工作區的存取權限，請聯絡您的管理員。"
+>abstract="「計算小時」可測量查詢服務引擎在執行批次查詢時所花費的讀取、處理和寫入資料時間。<br>您的使用量可能達到授權數量。 若要評估或減少使用量，請前往「查詢>記錄」以檢閱查詢記錄。 如果您沒有「查詢」工作區的存取權，請聯絡管理員。"
 >additional-url="https://experience.adobe.com/#/platform/query/log.html" text="查詢記錄工作區"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="預測的可定址對象"
->abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
+>abstract="可定址對象是即時客戶個人檔案中貴組織有權參與的人員個人檔案集。 這包括可直接識別的設定檔和假名設定檔。<br>您的使用量可能達到授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
 >title="預測的可參與設定檔"
->abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
+>abstract="可參與設定檔是即時客戶設定檔中的人員設定檔，您的組織在過去12個月內嘗試使用Journey Optimizer進行參與。<br>您的使用量可能達到授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="預測的商業人士設定檔"
->abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
+>abstract="企業人員設定檔是即時客戶設定檔中的記錄，代表B2B內容中的個人。<br>您的使用量可能達到授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
 >title="預測的核心時數"
->abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
+>abstract="核心時數代表使用Experience Platform服務的處理時間。<br>您的使用量可能達到授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
 >title="預測的總資料量"
->abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
+>abstract="總資料量是即時客戶個人檔案中可用於參與和個人化工作流程的資料量。<br>您的使用量可能達到授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="預測的 CJA 可用列數"
->abstract="您的使用量可能會達到已授權數量。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
+>abstract="CJA可用列數是指可用於在Customer Journey Analytics中分析的每日平均資料列。<br>您的使用量可能達到授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
+>title="預測的可定址對象"
+>abstract="可定址對象是即時客戶個人檔案中貴組織有權參與的人員個人檔案集。 這包括可直接識別的設定檔和假名設定檔。<br>您的使用量已超過授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
+>title="預測的可參與設定檔"
+>abstract="可參與設定檔是即時客戶設定檔中的人員設定檔，您的組織在過去12個月內嘗試使用Journey Optimizer進行參與。<br>您的使用量已超過授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
+>title="預測的商業人士設定檔"
+>abstract="企業人員設定檔是即時客戶設定檔中的記錄，代表B2B內容中的個人。<br>您的使用量已超過授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_corehours"
+>title="預測的核心時數"
+>abstract="核心時數代表使用Experience Platform服務的處理時間。<br>您的使用量已超過授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
+>title="預測的總資料量"
+>abstract="總資料量是即時客戶個人檔案中可用於參與和個人化工作流程的資料量。<br>您的使用量已超過授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
+>title="預測的 CJA 可用列數"
+>abstract="CJA可用列數是指可用於在Customer Journey Analytics中分析的每日平均資料列。<br>您的使用量已超過授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
@@ -146,22 +188,22 @@ ht-degree: 22%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="預估使用量"
->abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
+>abstract="預測是根據過去6至7個月的使用量，每週星期五產生。 請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="自動化資料集期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="預估使用量"
->abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以針對沙箱和資料集設定資料集期限或匿名設定檔資料期限。"
+>abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="自動化資料集期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
-根據深入的使用預測主動管理並最佳化您的授權資源。 [!UICONTROL 預計使用量]欄可精確地預測您所有購買產品在所有生產及開發沙箱中沙箱層級的未來授權使用量。 此警示功能會根據您截至本日曆月15日的使用情況，提供未來六週內授權使用情況的預測。 預測提供上下限。
+透過準確且最新的使用預測，主動管理並最佳化您的授權資源。 [!UICONTROL 預計使用量]欄預測所有已購買產品的所有生產及開發沙箱中沙箱層級的未來授權使用量。 預測現在每週更新，根據最新使用資料提供六週預測。 每個預測都包含上下限，以支援明智的規劃。
 
 >[!IMPORTANT]
 >
->預測每月都會重新整理。 重新整理的日期包含在資訊圖示中(![此資訊圖示。](../images/license-usage/info-icon.png))在欄標題上方。
+>預測每週五都會重新整理。 重新整理的日期包含在資訊圖示中(![此資訊圖示。](../images/license-usage/info-icon.png))在欄標題上方。
 
 若要檢視產品的權益使用摘要，請從[!UICONTROL 核心產品]表格中選取產品。
 
@@ -188,8 +230,10 @@ ht-degree: 22%
 預測的使用量功能支援下列量度：
 
 - [!UICONTROL 可定址對象]
+- [!UICONTROL 商務人員設定檔]
 - [!UICONTROL 計算時數]
 - [!UICONTROL 客戶歷程對象列數]
+- [!UICONTROL 可參與的設定檔]
 - [!UICONTROL 資料磁碟區總數]
 
 ## [!UICONTROL 摘要]索引標籤 {#summary-tab}
@@ -251,30 +295,34 @@ ht-degree: 22%
 
 >[!IMPORTANT]
 >
->自8月20日起，擁有&#39;[!UICONTROL 平均設定檔豐富度]&#39;和&#39;[!UICONTROL 總儲存空間]&#39;許可權的客戶在授權使用儀表板中看到&#39;[!UICONTROL 總資料量]&#39;。 客戶權益沒有變動，只是追蹤量度的簡化。 [!UICONTROL 總資料量]代表Adobe Experience Platform設定檔服務中可用於參與和個人化工作流程的資料。 此簡化量度改善了個人資料服務使用的管理和測量。 我們鼓勵客戶連絡其Adobe代表，進一步釐清這項變更。
+>自8月20日起，擁有&#39;[!UICONTROL 平均設定檔豐富度]&#39;和&#39;[!UICONTROL 總儲存空間]&#39;許可權的客戶在授權使用儀表板中看到&#39;[!UICONTROL 總資料量]&#39;。 客戶權益沒有變動，只是追蹤量度的簡化。 [!UICONTROL 總資料量]代表即時客戶個人檔案中可供參與和個人化工作流程使用的資料。 此簡化量度改善了即時客戶個人檔案使用的管理和測量。 我們鼓勵客戶連絡其Adobe代表，進一步釐清這項變更。
 
 授權使用儀表板會報告適用於組織中多個產品的多個不重複量度。 可用的量度包括：
 
 | 量度 | 說明 |
 |---|---|
 | [!UICONTROL Audience Activation大小] | 一年內任何以檔案為基礎的目的地啟用的設定檔總大小。 注意：這不包括透過串流目的地傳送的設定檔。 |
-| [!UICONTROL 可定址對象] | 您的業務受眾權益與消費者受眾權益的總和。 消費者受眾的定義是銷售訂單上識別為「消費者受眾」的個人檔案數。 業務對象定義為銷售訂單上識別為「業務對象」的業務人員個人檔案數。 |
+| [!UICONTROL 可定址對象] | 您的組織有權參與的即時客戶個人檔案中的人員個人檔案集，包括直接可識別的和假名個人檔案。 這些設定檔可能包含屬性、行為和區段成員資格資料。 設定檔磁碟區是使用Adobe Experience Platform的預設確定性身分圖表來計算，並視為共用功能。 |
 | [!UICONTROL Adhoc Query Service使用者套件] | 一個附加元件，可讓您的授權並行查詢服務使用者權益增加5個額外的並行查詢服務使用者，以及每個套件一個額外的並行執行特定查詢。 可以授權多個其他Ad Hoc Query使用者套件。 |
 | [!UICONTROL 平均設定檔豐富度] | **已棄用** — 任何時間點儲存在集線器設定檔服務中的所有生產資料總和，除以授權企業人員設定檔數目的五倍。 [!UICONTROL 平均設定檔豐富度]是共用功能。 |
 | [!UICONTROL 可用的CJA資料列] | 可在Customer Journey Analytics中分析的每日平均資料列。 |
-| [!UICONTROL 計算屬性] | 彙總的個人資料行為資料的總數。 彙總的個人資料行為資料是根據體驗事件，這些事件會轉換為個人資料屬性，並可包含在個人資料或企業個人資料中。 |
+| [!UICONTROL 計算屬性] | 根據體驗事件的彙總設定檔行為資料，這些體驗事件會轉換為設定檔屬性，並可包含在個人設定檔中。 |
 | [!UICONTROL 消費者對象] | 銷售訂單上識別為「消費者對象」的個人設定檔數目。 |
 | [!UICONTROL 資料匯出大小] | 一年內透過資料集啟用傳送的資料量。 |
 | [!UICONTROL 資料匯出] | 一年內可匯出至任何非Adobe解決方案（直接或間接）的資料集總大小。 |
 | [!UICONTROL 資料湖儲存空間] | Adobe Experience Platform中分析資料存放區的使用數量。 |
-| [!UICONTROL 可參與的對象] | 此量度代表可參與設定檔的對象。 可參與的設定檔是代表個人的資訊記錄，並顯示在「設定檔服務」中。 這些記錄是您在過去12個月中，嘗試使用Journey Optimizer的編寫、決策、傳送、實驗或協調功能所使用的設定檔。 |
-| [!UICONTROL 相似對象] | 將現有消費者對象模型化，以識別與現有消費者對象類似之個人設定檔所產生的對象計數。 |
+| [!UICONTROL 可參與的對象] | 即時客戶設定檔中的一組人員設定檔，您在過去12個月內嘗試使用Journey Optimizer的編寫、決策、傳送、實驗或協調功能與其互動。 |
+| [!UICONTROL 相似對象] | 消費者相似對象是透過模型化現有消費者對象來產生的對象，以識別具有類似屬性或行為的個人設定檔。 |
 | [!UICONTROL 個AMM模型] | 機器學習模型(內建於Adobe Mix Modeler)的計數，用於根據您的投資測量及/或預測指定的結果。 |
 | [!UICONTROL 沙箱數目] | 存取Adobe隔離資料和作業的任何Adobe Experience Platform On-demand Service例項中的邏輯分隔計數。 |
 | [!UICONTROL 設定檔豐富度（Pack數目）] | 每個額外設定檔豐富度套件的授權總資料量會增加25 KB。 |
 | [!UICONTROL 查詢服務計算時數] | 測量執行批次查詢時，查詢服務引擎讀取、處理和將資料寫入資料湖所花費的時間。 |
 | [!UICONTROL 串流區段數Pack] | 當新資料透過串流流進入「細分服務」時，套件會更新個人設定檔的區段會籍。 評估區段會籍時會根據目前人員設定檔屬性和目前事件的值，而不考慮歷史行為。 串流區段是一項共用功能。 |
-| [!UICONTROL 資料磁碟區總數] | 參與工作流程中可供Adobe Experience Platform設定檔服務使用的資料總數。 如需瞭解詳細資訊，請參閱關於總資料量](../../landing/license-usage-and-guardrails/total-data-volume.md)的[常見問題。 |
+| [!UICONTROL 資料磁碟區總數] | 可用於參與工作流程中的即時客戶個人檔案的總資料量。 如需瞭解詳細資訊，請參閱關於總資料量](../../landing/license-usage-and-guardrails/total-data-volume.md)的[常見問題。 |
+| [!UICONTROL 資料輸出總量] | 從Adobe Experience Platform匯出至第三方資料倉儲的累積年度資料量。 |
+
+<!-- Approval needed on my revision above.
+Original PM version: | [!UICONTROL Total Volume of Data Egress] | The cumulative annual amount of data processed from third-party data warehouses. | -->
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
