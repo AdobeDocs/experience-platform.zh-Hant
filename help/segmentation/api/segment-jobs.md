@@ -4,9 +4,9 @@ title: 區段作業API端點
 description: Adobe Experience Platform Segmentation Service API中的區段作業端點可讓您以程式設計方式管理組織的區段作業。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1232'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 ## 擷取區段作業清單 {#retrieve-list}
 
-您可以藉由對`/segment/jobs`端點發出GET要求，擷取貴組織的所有區段工作清單。
+您可以向`/segment/jobs`端點發出GET要求，以擷取貴組織的所有區段工作清單。
 
 **API格式**
 
@@ -64,13 +64,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定組織的區段作業清單，格式為JSON。 不過，回應會因區段作業中的區段定義數量而異。
-
->[!BEGINTABS]
-
->[!TAB 您的區段工作中有小於或等於1500個區段定義]
-
-如果您的區段作業中執行的區段定義少於1500個，則`children.segments`屬性內將顯示所有區段定義的完整清單。
+成功的回應會傳回HTTP狀態200，其中包含指定組織的區段作業清單，格式為JSON。 所有區段定義的完整清單將顯示在`children.segments`屬性中。
 
 >[!NOTE]
 >
@@ -178,105 +172,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
-+++
-
->[!TAB 超過1500個區段定義]
-
-如果您的區段作業中執行的區段定義超過1500個，則`children.segments`屬性將顯示`*`，表示正在評估所有區段定義。
-
->[!NOTE]
->
->下列回應已因空間而截斷，且僅會顯示第一個傳回的工作。
-
-+++ 檢視區段作業清單時的範例回應。
-
-```json
-{
-    "_page": {
-        "totalCount": 14,
-        "pageSize": 14
-    },
-    "children": [
-        {
-            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-            "sandbox": {
-                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-                "sandboxName": "prod",
-                "type": "production",
-                "default": true
-            },
-            "profileInstanceId": "ups",
-            "source": "scheduler",
-            "status": "SUCCEEDED",
-            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-            "computeJobId": 8811,
-            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-            "segments": [
-                {
-                    "segmentId": "*",
-                }
-            ],
-            "metrics": {
-                "totalTime": {
-                    "startTimeInMs": 1573203617195,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 778460
-                },
-                "profileSegmentationTime": {
-                    "startTimeInMs": 1573204266727,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 128928
-                },
-                "totalProfiles": 13146432,
-                "segmentedProfileCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
-                },
-                "segmentedProfileByNamespaceCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "tenantiduserobjid":1033,
-                        "campaign_profile_mscom_mkt_prod2":1033
-                    }
-                },
-                "segmentedProfileByStatusCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "exited":144646,
-                        "realized":2056
-                    }
-                },
-                "totalProfilesByMergePolicy":{
-                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-                }
-            },
-            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-            "schema": {
-                "name": "_xdm.context.profile"
-            },
-            "properties": {
-                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-            },
-            "_links": {
-                "cancel": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "DELETE"
-                },
-                "checkStatus": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "GET"
-                }
-            },
-            "updateTime": 1573204395000,
-            "creationTime": 1573203600535,
-            "updateEpoch": 1573204395
-        }
-    ],
-    "_links": {
-        "next": {}
-    }
-}
-```
-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 區段作業的系統產生唯讀識別碼。 |
@@ -294,23 +189,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 +++
 
->[!ENDTABS]
-
 ## 建立新的區段工作 {#create}
 
-您可以對`/segment/jobs`端點發出POST要求，並在內文中加入您要建立新對象之區段定義的ID，藉此建立新的區段作業。
+您可以對`/segment/jobs`端點發出POST要求，並在要求內文中包含區段定義的ID，藉此建立新的區段作業。
 
 **API格式**
 
 ```http
 POST /segment/jobs
 ```
-
-建立新區段作業時，請求和回應會因區段作業中的區段定義數量而異。
-
->[!BEGINTABS]
-
->[!TAB 您的區段工作少於或等於1500個區段]
 
 **要求**
 
@@ -335,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `segmentId` | 您要為其建立區段作業的區段定義ID。 這些區段定義可屬於不同的合併原則。 如需區段定義的詳細資訊，請參閱[區段定義端點指南](./segment-definitions.md)。 |
+| `segmentId` | 您要評估之區段定義的ID。 這些區段定義可屬於不同的合併原則。 如需區段定義的詳細資訊，請參閱[區段定義端點指南](./segment-definitions.md)。 |
 
 +++
 
@@ -460,139 +347,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 +++
 
->[!TAB 您的區段作業中有超過1500個區段定義]
-
-**要求**
-
->[!NOTE]
->
->雖然您可以建立超過1500個區段定義的區段作業，但&#x200B;**強烈不建議這麼做**。
-
-+++ 建立區段作業的範例請求。
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '{
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ]
- }'
-```
-
-| 屬性 | 說明 |
-| -------- | ----------- |
-| `schema.name` | 區段定義的結構描述名稱。 |
-| `segments.segmentId` | 執行含有超過1500個區段的區段作業時，您必須傳遞`*`作為區段ID，以表示您要執行含有所有區段的區段作業。 |
-
-+++
-
-**回應**
-
-成功的回應會傳回HTTP狀態200以及您新建立的區段工作的詳細資訊。
-
-+++ 建立區段作業時的範例回應。
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "PROCESSING",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
-| 屬性 | 說明 |
-| -------- | ----------- |
-| `id` | 新建立區段作業的系統產生唯讀識別碼。 |
-| `status` | 區塊作業的目前狀態。 由於區段作業是新建立的，因此狀態將一律為`NEW`。 |
-| `segments` | 一個物件，其中包含此區段工作執行的目標區段定義相關資訊。 |
-| `segments.segment.id` | `*`表示此區段工作正在貴組織內針對所有區段定義執行。 |
-
-+++
-
->[!ENDTABS]
-
-
 ## 擷取特定區段工作 {#get}
 
-您可以向`/segment/jobs`端點發出GET要求，並在要求路徑中提供您要擷取之區段作業的識別碼，藉此擷取特定區段作業的詳細資訊。
+您可以向`/segment/jobs`端點發出GET請求，並提供您要在請求路徑中擷取之區段作業的ID，藉此擷取特定區段作業的詳細資訊。
 
 **API格式**
 
@@ -620,13 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定區段工作的詳細資訊。  不過，回應會因區段作業中的區段定義數目而異。
-
->[!BEGINTABS]
-
->[!TAB 您的區段工作中有小於或等於1500個區段定義]
-
-如果您的區段作業中執行的區段定義少於1500個，則`children.segments`屬性內將顯示所有區段定義的完整清單。
+成功的回應會傳回HTTP狀態200，其中包含指定區段工作的詳細資訊。 所有區段定義的完整清單將顯示在`children.segments`屬性中。
 
 +++ 擷取區段作業的範例回應。
 
@@ -690,90 +441,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
-+++
-
->[!TAB 超過1500個區段定義]
-
-如果您的區段作業中執行的區段定義超過1500個，則`children.segments`屬性將顯示`*`，表示正在評估所有區段定義。
-
-+++ 擷取區段作業的範例回應。
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "SUCCEEDED",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 區段作業的系統產生唯讀識別碼。 |
@@ -824,7 +491,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **回應**
 
-成功的回應會傳回HTTP狀態207以及請求的區段作業。 不過，如果區段作業的執行時間超過1500個區段定義，則`children.segments`屬性的值會有所不同。
+成功的回應會傳回HTTP狀態207以及請求的區段作業。
 
 >[!NOTE]
 >
@@ -867,7 +534,20 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "*"
+                    "segmentId": "30230300-d78c-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-d78c-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
                 }
             ],
             "updateTime": 1573204395000,
@@ -890,7 +570,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 ## 取消或刪除特定區段工作 {#delete}
 
-您可以向`/segment/jobs`端點發出DELETE要求，並在要求路徑中提供您要刪除之區段作業的識別碼，藉此刪除特定區段作業。
+您可以向`/segment/jobs`端點發出DELETE請求，並在請求路徑中提供您要刪除之區段作業的ID，藉此刪除特定區段作業。
 
 >[!NOTE]
 >

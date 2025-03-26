@@ -1,13 +1,13 @@
 ---
 title: 客群評估方法
 description: 瞭解Adobe Experience Platform上可用的各種評估方法。
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 5%
+source-wordcount: '241'
+ht-degree: 4%
 
 ---
-
 
 # 客群評估方法
 
@@ -18,6 +18,10 @@ Adobe Experience Platform提供多種評估方法，將您的設定檔區隔為�
 批次細分是一種細分評估方法，可用於一次移動所有設定檔資料，以建立您的對應受眾。 您可以使用批次細分建立詳細而豐富的對象，以鎖定大型設定檔群組。
 
 如需批次區段的詳細資訊，請閱讀[批次區段總覽](./batch-segmentation.md)。
+
+### 彈性的受眾評估
+
+彈性的對象評估可讓您視需求執行批次細分工作。 如需詳細資訊，請參閱[彈性對象評估指南](./flexible-audience-evaluation.md)。
 
 ## 串流區段
 

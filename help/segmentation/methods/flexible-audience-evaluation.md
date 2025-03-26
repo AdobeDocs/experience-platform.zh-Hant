@@ -2,12 +2,10 @@
 title: 彈性的對象評估指南
 description: 瞭解如何使用彈性的對象評估，以應要求執行批次細分工作。
 role: Developer, User
-hide: true
-hidefromtoc: true
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 6%
+source-wordcount: '996'
+ht-degree: 5%
 
 ---
 
@@ -32,6 +30,10 @@ ht-degree: 6%
 - 所有對象&#x200B;**都必須**&#x200B;使用批次細分進行評估。
 - 所有對象&#x200B;**都必須**&#x200B;是以人物為基礎的對象。
 - 每個彈性受眾評估回合最多只能選取20個受眾。
+
+>[!NOTE]
+>
+>您&#x200B;*可以*&#x200B;每年購買額外的彈性對象評估回合。 如需詳細資訊，請聯絡Adobe客戶服務。
 
 ## 存取 {#access}
 
@@ -308,11 +310,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 >[!NOTE]
 >
->如果您執行彈性對象評估，您必須確保將頻率設定為&#x200B;**[!UICONTROL 區段評估後]**。 針對已設定在區段評估](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動[的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
+>區段工作的狀態可能會在監視控制面板中報告為「已排入佇列」狀態。 您可以透過向`/segment/jobs`端點發出GET請求，在請求路徑中提供區段作業的ID，來檢視區段作業的最新狀態。 您可以在API標籤中找到有關使用此端點的更多資訊。
+>
+>如果您執行彈性對象評估，並希望評估將對象啟用到目的地，您必須確保頻率設定為&#x200B;**[!UICONTROL 區段評估後]**。 針對已設定在區段評估](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動[的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
 
 >[!ENDTABS]
 
-## 後續步驟 {#next-steps}
+## 影片 {#video}
+
+下列影片示範如何在Experience Platform中存取和使用彈性的對象評估。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 常見問題 {#faq}
 

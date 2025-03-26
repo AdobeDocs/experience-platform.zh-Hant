@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: 了解設定檔資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
+source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2611'
 ht-degree: 2%
 
 ---
@@ -127,6 +127,9 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 | 每個沙箱的帳戶對象 | 50 | 系統強制的護欄 | 您最多可以在沙箱中建立50個帳戶對象。 當您在沙箱中達到50個對象後，嘗試建立新帳戶對象時，**[!UICONTROL 建立對象]**&#x200B;控制項會停用。 深入瞭解[帳戶對象](/help/segmentation/types/account-audiences.md)。 |
 | 每個沙箱的已發佈組合 | 10 | 效能護欄 | 一個沙箱中最多可以有10個已發佈的組合。 進一步瞭解UI指南](/help/segmentation/ui/audience-composition.md)中的[對象構成。 |
 | 最大對象人數 | 30% | 效能護欄 | 建議的對象最大成員資格為系統中設定檔總數的30%。 您可以建立具有超過30%設定檔的對象為成員，或是多個大型對象，但會影響系統效能。 |
+| 彈性的對象評估執行 | 每年50個（生產沙箱）<br/>100個（開發沙箱） | 系統強制的護欄 | 您每年每個&#x200B;**生產**&#x200B;沙箱最多可執行50次彈性對象評估。 您每年每個&#x200B;**開發**&#x200B;沙箱最多可執行100次彈性對象評估。 |
+| 彈性的對象評估執行 | 每天2個 | 系統強制的護欄 | 每個沙箱每天最多執行2次。 |
+| 每次彈性受眾評估回合的受眾 | 20 | 系統強制的護欄 | 每個彈性受眾評估回合最多可以有20個受眾。 |
 
 {style="table-layout:auto"}
 
