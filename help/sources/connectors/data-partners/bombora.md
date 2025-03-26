@@ -2,9 +2,10 @@
 title: Bombora Intent
 description: 瞭解Experience Platform上的Bombora Intent來源。
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: c558ed7c5ce5fcb26d98a47ad7b7c1461192dc9b
+exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
+source-git-commit: 39bbd9505b931b82aa925cba0bf8675f25dbf498
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1605'
 ht-degree: 1%
 
 ---

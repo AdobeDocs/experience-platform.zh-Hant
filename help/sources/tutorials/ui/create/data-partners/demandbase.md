@@ -1,13 +1,11 @@
 ---
 title: 使用UI將Demandbase意圖連線至Experience Platform
 description: 瞭解如何將Demandbase意圖連結至Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
-source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 36%
+source-wordcount: '1007'
+ht-degree: 4%
 
 ---
 
@@ -23,34 +21,88 @@ ht-degree: 36%
 * [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
+### 先決條件
+
+請閱讀[[!DNL Demandbase Intent] 總覽](../../../../connectors/data-partners/demandbase.md)，瞭解如何擷取您的驗證認證的相關資訊。
+
 ## 瀏覽來源目錄 {#navigate}
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 您可以在&#x200B;*[!UICONTROL 類別]*&#x200B;面板中選取適當的類別。 或者，您可以使用搜尋列導覽至您要使用的特定來源。
 
-在&#x200B;*[!UICONTROL B2B]*&#x200B;類別下選取&#x200B;**[!DNL Demandbase Intent]**，然後選取&#x200B;**[!UICONTROL 設定]**。
+若要使用[!DNL Demandbase]，請選取[!UICONTROL 資料與識別合作夥伴]下的&#x200B;**[!UICONTROL Demandbase意圖]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
 >[!TIP]
 >
 >當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
+![已選取「Demandbase意圖」卡片的來源目錄。](../../../../images/tutorials/create/demandbase/catalog.png)
 
+## Authentication {#authentication}
 
-## 使用現有帳戶 {#existing}
+### 使用現有帳戶 {#existing}
 
-## 建立新帳戶 {#create}
+若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後從介面的帳戶清單中選取您要使用的帳戶。
+
+選取您的帳戶後，選取[下一步] **[!UICONTROL 以繼續執行下一步。]**
+
+![來源工作流程的現有帳戶介面。](../../../../images/tutorials/create/demandbase/existing.png)
+
+### 建立新帳戶 {#create}
+
+如果您沒有現有的帳戶，則必須提供與您來源對應的必要驗證認證，以建立新的帳戶。
+
+若要建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後提供帳戶名稱，並選擇性地提供帳戶詳細資訊的說明。 接下來，提供適當的驗證值，以針對Experience Platform驗證您的來源。 若要連線您的[!DNL Demandbase Intent]帳戶，您必須擁有下列認證：
+
+* **存取金鑰識別碼**：您的[!DNL Demandbase]存取金鑰識別碼。 這是61個字元的英數字串，需要它才能向Experience Platform驗證您的帳戶。
+* **秘密存取金鑰**：您的[!DNL Demandbase]秘密存取金鑰。 這是40個字元、以Base64編碼的字串，驗證您的帳戶給Experience Platform是必要的。
+* **Bucket名稱**：將從其中提取資料的[!DNL Demandbase]Bucket。
+
+![來源工作流程的新帳戶介面。](../../../../images/tutorials/create/demandbase/new.png)
 
 ## 提供資料流詳細資訊 {#provide-dataflow-details}
 
->[!CONTEXTUALHELP]
->id="platform_sources_demandbase_domain"
->title="網域來源"
->abstract="雖然 Adobe 使用 XDM accountOrganization.website，但可能有客戶在其個別網站上使用自訂欄位。因此，您必須確保網域來源為會將您的 Demandbase 帳戶記錄與 Experience Platform 帳戶進行比對的網域/網站欄位。"
+帳戶通過驗證並連線後，您現在必須為資料流提供下列詳細資料：
+
+* **資料流名稱**：您的資料流名稱。 建立並處理資料流後，您就可以使用此名稱在UI中搜尋資料流。
+* **描述**： （選擇性）資料流的簡短說明或其他資訊。
+* **網域來源**：符合來源帳戶記錄與Experience Platform帳戶的網域或網站欄位。 此值取決於您的設定。 如果未提供，則網域預設為`accountOrganization.website`。
+
+![來源工作流程的資料流詳細資料步驟。](../../../../images/tutorials/create/demandbase/dataflow-detail.png)
 
 ## 排程資料流 {#schedule-dataflow}
 
->[!CONTEXTUALHELP]
->id="platform_sources_demandbase_schedule"
->title="排程您的資料流"
->abstract="Demandbase 每週一早上 (UTC 時間下午 5:00) 卸除資料。因此，您必須等到 UTC 時間下午 5:00 之後，才能設定攝取開始時間。此外，您必須與 Demandbase 確認攝取時間，因為他們可能會在將檔案卸除至 Adobe 時變更其排程。"
+接下來，使用排程介面來設定資料流的擷取排程。
+
+* **頻率**：設定頻率以指出資料流應該執行的頻率。 您可以排程[!DNL Demandbase]資料流每週擷取資料。
+* **間隔**：間隔代表每個擷取週期之間的時間量。 [!DNL Demandbase]資料流唯一支援的間隔是`1`。 這表示您的資料流每週會擷取一次資料。
+* **開始時間**：開始時間會指定資料流首次執行反複專案的時間。 [!DNL Demandbase]每週在UTC下午12:00將資料捨棄到Adobe一次。 因此，您必須在UTC下午12:00之後設定擷取開始時間。 此外，您必須向[!DNL Demandbase]確認擷取時間，因為他們可能會變更排程，將檔案拖放至Adobe時。
+* **回填**：回填會決定最初要擷取的資料。 如果已啟用回填，則會在第一次排程擷取期間擷取指定路徑中的所有目前檔案。 如果停用回填，則只會擷取在第一次內嵌執行到開始時間之間載入的檔案。 將不會擷取在開始時間之前載入的檔案。
+
+設定資料流的擷取排程後，請選取&#x200B;**[!UICONTROL 下一步]**。
+
+![來源工作流程的排程介面。](../../../../images/tutorials/create/demandbase/scheduling.png)
 
 ## 檢閱資料流 {#review-dataflow}
+
+資料流建立流程的最後一步是在執行資料流之前進行檢閱。 使用&#x200B;*[!UICONTROL 檢閱]*&#x200B;步驟，在執行新資料流之前先檢閱其詳細資料。 詳細資料會分組到以下類別中：
+
+* **連線**：顯示來源型別、所選來源檔案的相關路徑，以及該來源檔案中的欄數。
+* **排程**：顯示內嵌排程的有效期間、頻率和間隔。
+
+![來源工作流程的稽核介面。](../../../../images/tutorials/create/demandbase/review.png)
+
+## 後續步驟
+
+依照本教學課程中的指示，您已成功建立資料流，以將意圖資料從[!DNL Demandbase]來源帶入Experience Platform。 如需其他資源，請瀏覽以下概述的檔案。
+
+### 監視資料流
+
+建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI](../../../../../dataflows/ui/monitor-sources.md)中[監視帳戶和資料流的教學課程。
+
+### 更新您的資料流
+
+若要更新資料流排程、對應和一般資訊的設定，請瀏覽有關[在UI中更新來源資料流的教學課程](../../update-dataflows.md)。
+
+### 刪除您的資料流
+
+您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI](../../delete.md)中刪除資料流[。

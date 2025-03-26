@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1552'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 
 [!DNL Flow Service]用於收集並集中來自Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，可讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證協力廠商系統、設定擷取執行時間，以及管理資料擷取輸送量。
 
-透過Experience Platform，您可以集中從不同來源收集的資料，並使用從中獲得的見解做更多工作。
+有了Experience Platform，您可以集中從不同來源收集的資料，並使用從中獲得的見解做更多事情。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -28,7 +28,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 
 ## 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅限[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 串流]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 批次]{type=Informative}
@@ -41,13 +41,13 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 
 ## Adobe建置和合作夥伴建置的來源 {#adobe-and-partner-built-sources}
 
-Experience Platform來源目錄中的某些聯結器是由Adobe建置和維護的，而其他聯結器則是由夥伴公司使用[來源SDK](/help/sources/sources-sdk/overview.md)建置和維護的。 若合作夥伴已建立並維護來源，檔案頁面頂端的備註會指出每個合作夥伴建立的聯結器。 例如，[Amazon S3聯結器](/help/sources/connectors/cloud-storage/s3.md)是由Adobe建立，而[RainFocus聯結器](/help/sources/connectors/analytics/rainfocus.md)是由RainFocus團隊建立和維護。
+Experience Platform來源目錄中的部分聯結器是由Adobe建置和維護的，而其他聯結器則是由合作夥伴公司使用[來源SDK](/help/sources/sources-sdk/overview.md)建置和維護的。 若合作夥伴已建立並維護來源，檔案頁面頂端的備註會指出每個合作夥伴建立的聯結器。 例如，[Amazon S3聯結器](/help/sources/connectors/cloud-storage/s3.md)是由Adobe建立，而[RainFocus聯結器](/help/sources/connectors/analytics/rainfocus.md)是由RainFocus團隊建立及維護。
 
 對於合作夥伴編寫和維護的聯結器，這表示聯結器的問題可能需要由合作夥伴團隊解決（聯絡方法提供在檔案頁面的附註中）。 如需Adobe編寫和維護的聯結器發生問題，請聯絡您的Adobe代表或客戶服務。
 
 ## 來源類別
 
-Experience Platform中的來源會分組到以下類別中：
+Experience Platform中的來源分為下列類別：
 
 ### Adobe 應用程式 {#adobe-applications}
 
@@ -105,7 +105,7 @@ Experience Platform支援從第三方同意和偏好設定管理平台擷取資�
 
 ### 客戶關係管理(CRM) {#customer-relationship-management}
 
-CRM系統提供的資料可協助建立客戶關係，進而建立忠誠度並提升客戶保留率。 Experience Platform提供從[!DNL Microsoft Dynamics 365]和[!DNL Salesforce]擷取CRM資料的支援。 如需詳細資訊，請參閱下列相關檔案：
+CRM系統提供的資料可協助建立客戶關係，進而建立忠誠度並提升客戶保留率。 Experience Platform支援從[!DNL Microsoft Dynamics 365]和[!DNL Salesforce]擷取CRM資料。 如需詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 批次]{type=Informative}
@@ -142,12 +142,14 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 批次]{type=Informative}
 
-### 資料與身分合作夥伴 {#data-partner}
+### 資料與身分識別合作夥伴 {#data-partner}
 
-Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+Experience Platform支援從資料和身分識別合作夥伴擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE 批次]{type=Informative}
 
 ### 電子商務 {#ecommerce}
@@ -160,13 +162,13 @@ Experience Platform支援從協力廠商電子商務系統擷取資料。 如需
 
 ### 本機系統 {#local-system}
 
-Experience Platform提供從本機系統擷取資料的支援。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+Experience Platform支援從本機系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [本機檔案上傳](connectors/local-system/local-file-upload.md)
 
 ### 行銷自動化 {#marketing-automation}
 
-Experience Platform提供從協力廠商行銷自動化系統擷取資料的支援。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+Experience Platform支援從協力廠商行銷自動化系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE 串流]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE 串流]{type=Positive}
@@ -214,7 +216,7 @@ Experience Platform支援從協力廠商通訊協定系統擷取資料。 如需
 | **[!UICONTROL 管理來源]**&#x200B;於 | 除了&#x200B;**[!UICONTROL 檢視來源]**&#x200B;中包含的功能外，還授與&#x200B;**[!UICONTROL 目錄]**&#x200B;中&#x200B;**[!UICONTROL 連線Source]**&#x200B;選項的存取權，以及&#x200B;**[!UICONTROL 瀏覽]**&#x200B;中&#x200B;**[!UICONTROL 選取資料]**&#x200B;選項的存取權。 **[!UICONTROL 管理來源]**&#x200B;也可讓您啟用或停用&#x200B;**[!UICONTROL DataFlows]**&#x200B;並編輯其排程。 |
 | **[!UICONTROL 關閉檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 關閉管理來源]** | 撤銷對來源的所有存取權。 |
 
-如需透過「Adobe許可權」授與之可用許可權的詳細資訊，請閱讀[存取控制總覽](../access-control/home.md)。
+如需透過「Adobe許可權」授與之可用許可權的詳細資訊，請參閱[存取控制總覽](../access-control/home.md)。
 
 ### 屬性型存取控制
 
@@ -240,6 +242,6 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 Adobe沒有義務維護、更正、更新、變更、修改或以其他方式支援Beta。 建議您使用資訊性，切勿依賴這類Beta及/或隨附資料的正確功能或效能。 Beta視為Adobe的機密資訊。
 
-任何「意見回饋」(有關Beta的資訊，包括但不限於您在使用Beta時遇到的問題或缺陷、建議、改進和建議)會在此指定給Adobe，包括此等意見回饋的所有權利、標題和興趣，以供Adobe使用。
+任何「意見回饋」(有關Beta的資訊，包括但不限於您在使用Beta時遇到的問題或缺陷、建議、改進和建議)會在此指派給Adobe Adobe，包括所有權利、標題，以及對此等意見回饋的興趣。
 
 提交開放式意見或建立支援票證以分享您的建議或報告錯誤，並尋求功能增強。

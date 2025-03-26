@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 86f17ed4dc012481c2b4a7f1a40b492bfac5e137
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1063'
 ht-degree: 29%
 
 ---
@@ -96,6 +96,7 @@ ht-degree: 29%
       - [Acxiom 資料內嵌](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom 潛在客戶資料匯入](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Bombora Intent](connectors/data-partners/bombora.md)
+      - [Demandbase方法](connectors/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - 電子商務{#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
