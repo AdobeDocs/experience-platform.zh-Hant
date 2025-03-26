@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將取自多個企業來源的已知和匿名資料匯整起來，並藉此建立客戶設定檔，利用這些設定檔建立客群，以及對協力廠商目標啟動這些客群。
 role: Admin
-source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
+source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 67%
@@ -35,7 +35,7 @@ ht-degree: 67%
    * [管理概觀](administration/admin-overview.md)
 * 對象和細分{#segmentation}
    * [分段概觀](segmentation/segmentation-overview.md)
-   * [區段產生器指南](segmentation/segment-builder-guide.md)
+   * [Audience Builder指南](segmentation/audience-builder.md)
    * [Real-Time CDP B2B 版本中的分段](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * 資料集 {#datasets}

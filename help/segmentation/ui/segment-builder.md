@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
 workflow-type: tm+mt
 source-wordcount: '4976'
 ht-degree: 8%
@@ -322,7 +322,7 @@ ht-degree: 8%
 
 +++
 
-## 容器
+## 容器 {#containers}
 
 區段規則會依照其列出順序進行評估。 容器可讓您透過使用巢狀查詢來控制執行順序。
 
