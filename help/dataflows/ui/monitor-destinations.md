@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
+source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
 workflow-type: tm+mt
-source-wordcount: '3637'
-ht-degree: 10%
+source-wordcount: '3620'
+ht-degree: 9%
 
 ---
 
@@ -97,12 +97,12 @@ ht-degree: 10%
 
   >[!IMPORTANT]
   >
-  > 自 2024 年 10 月開始，Adobe 推出更新以提高串流目標的報告準確性。此增強功能可確保Experience Platform與目的地平台報告之間更佳的對應。
+  > 從2025年3月開始，Adobe將推出更新以提高串流目的地的報表準確性。 此增強功能可確保Experience Platform中的報告與目的地平台之間有更好的一致性。
   >
   > 在此更新之前，**[!UICONTROL 身分失敗]**&#x200B;包含所有啟用重試。 在此更新後，只有上次啟用重試會包含在總計數中。
   > 
-  > 此增強功能目前適用於[Google Customer Match目的地](../../destinations/catalog/advertising/google-customer-match.md)，但將逐步推廣至其他Experience Platform串流目的地。
-  > 此增強功能之後，[Google 目標客戶比對目標](../../destinations/catalog/advertising/google-customer-match.md)的使用者應該會發現&#x200B;**[!UICONTROL 失敗的身分識別]**&#x200B;計數有所下降。
+  > 此增強功能適用於所有串流目的地。
+  > 在此增強功能後，串流目的地的使用者可能會在其&#x200B;**[!UICONTROL 身分識別失敗]**&#x200B;計數中看到預期的下降。
 
 
 - **[!UICONTROL 啟用率]**：已順利啟用的接收身分百分比。 下列公式示範如何計算此值：

@@ -3,10 +3,10 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物和Gmail）聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
+source-git-commit: 38c1020a7e7ff556ed16963239a30bf906ff79e7
 workflow-type: tm+mt
-source-wordcount: '2140'
-ht-degree: 3%
+source-wordcount: '2046'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 3%
 ><br/>
 >為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
 ><br/>
->已購買AdobePrivacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶不需要採取任何動作。
+>已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
 ><br/>
->未購買AdobePrivacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/ui/segment-builder.md)中的[區段定義](../../../segmentation/home.md#segment-definitions)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
+>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/ui/segment-builder.md)中的[區段定義](../../../segmentation/home.md#segment-definitions)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)可讓您使用線上和離線資料，透過Google所擁有和運作的屬性（例如： [!DNL Search]、[!DNL Shopping]和[!DNL Gmail]），聯絡及重新與您的客戶互動。
 
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 ### 使用案例#1
 
-運動服裝品牌想要透過[!DNL Google Search]和[!DNL Google Shopping]觸及現有客戶，以根據他們過去的購買和瀏覽記錄來個人化優惠和專案。 服飾品牌可以從他們自己的CRM擷取電子郵件地址以進行Experience Platform，以及從他們自己的離線資料建立受眾。 接著，他們可以將這些對象傳送至[!DNL Google Customer Match]，以便在[!DNL Search]和[!DNL Shopping]中使用，最佳化其廣告支出。
+運動服裝品牌想要透過[!DNL Google Search]和[!DNL Google Shopping]觸及現有客戶，以根據他們過去的購買和瀏覽記錄來個人化優惠和專案。 服飾品牌可以從他們自己的CRM擷取電子郵件地址到Experience Platform，並從他們自己的離線資料建立受眾。 接著，他們可以將這些對象傳送至[!DNL Google Customer Match]，以便在[!DNL Search]和[!DNL Shopping]中使用，最佳化其廣告支出。
 
 ### 使用案例#2
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 
 一家知名科技公司推出新手機。 為了推廣此新款手機，他們想要讓擁有舊款手機的客戶進一步瞭解手機的新功能和特性。
 
-為了提升版本，他們會使用電子郵件地址作為識別碼，從CRM資料庫上傳電子郵件地址至Experience Platform。 建立受眾的基礎是擁有舊款手機型號的客戶。 然後會將對象傳送到[!DNL Google Customer Match]，以便公司可以在[!DNL YouTube]上鎖定目前的客戶、擁有舊版手機型號的客戶以及類似的客戶。
+為了提升此版本，他們會使用電子郵件地址作為識別碼，從CRM資料庫將電子郵件地址上傳到Experience Platform。 建立受眾的基礎是擁有舊款手機型號的客戶。 然後會將對象傳送到[!DNL Google Customer Match]，以便公司可以在[!DNL YouTube]上鎖定目前的客戶、擁有舊版手機型號的客戶以及類似的客戶。
 
 ## [!DNL Google Customer Match]個目的地的資料控管 {#data-governance}
 
@@ -72,8 +72,8 @@ Experience Platform中的某些目的地對於傳送到目的地平台或從目�
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -84,7 +84,7 @@ Experience Platform中的某些目的地對於傳送到目的地平台或從目�
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有[!DNL Google Customer Match]目的地中所使用識別碼（名稱、電話號碼及其他）之對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -119,7 +119,7 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 ### 電子郵件雜湊需求 {#hashing-requirements}
 
-您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或使用Experience Platform中清楚的電子郵件地址，並在啟用時將[!DNL Platform]個電子郵件地址雜湊。
+您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Platform]個電子郵件地址雜湊。
 
 如需Google雜湊需求和其他啟用限制的詳細資訊，請參閱Google檔案中的下列章節：
 
@@ -180,7 +180,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -227,16 +227,6 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ## 監視目的地 {#monitor-destination}
 
 連線到目的地並建立目的地資料流後，您可以使用Real-Time CDP中的[監視功能](/help/dataflows/ui/monitor-destinations.md)來取得每次資料流執行中在您的目的地啟用的設定檔記錄的廣泛資訊。
-
->[!IMPORTANT]
->
-> 自 2024 年 10 月開始，Adobe 推出更新以提高串流目標的報告準確性。此增強功能可確保Experience Platform與目的地平台報告之間更佳的對應。
->
-> 在此更新之前，**[!UICONTROL 身分失敗]**&#x200B;包含所有啟用重試。 在此更新後，只有上次啟用重試會包含在總計數中。
->
-> 此增強功能目前適用於[Google Customer Match目的地](google-customer-match.md)，但將逐步推廣至其他Experience Platform串流目的地。
-> 在此增強功能之後，此目的地的使用者可能會看到其&#x200B;**[!UICONTROL 身分識別失敗]**&#x200B;計數中預期的下降。
-
 
 ## 驗證對象啟用是否成功 {#verify-activation}
 
