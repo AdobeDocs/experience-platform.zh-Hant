@@ -1,22 +1,36 @@
 ---
-title: 將陣列、地圖和物件從Real-Time CDP匯出至雲端儲存空間目的地
+title: 從Real-Time CDP匯出陣列、地圖和物件
 type: Tutorial
 description: 瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至雲端儲存空間目標。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
+source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 16%
+source-wordcount: '1095'
+ht-degree: 13%
 
 ---
 
-# 將陣列、地圖和物件從Real-Time CDP匯出至雲端儲存空間目的地 {#export-arrays-cloud-storage}
+# 從Real-Time CDP匯出陣列、地圖和物件 {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->將陣列和其他複雜物件匯出至雲端儲存空間目的地的功能通常適用於下列目的地： [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md)
+>將陣列和其他複雜物件匯出至雲端儲存空間的功能通常適用於下列目的地： [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md)。
+>
+>此外，您可以將對應型別欄位匯出至下列目的地： [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、[Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、[Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)。
 
-瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 請參閱本檔案以瞭解匯出工作流程、此功能啟用的使用案例和已知限制。
+
+瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 此外，您可以將對應型別欄位匯出至[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)和有限的[邊緣個人化目的地](/help/destinations/destination-types.md#edge-personalization-destinations)。 請參閱本檔案以瞭解匯出工作流程、此功能啟用的使用案例和已知限制。 檢視下表以瞭解每種目的地型別可用的功能。
+
+| 目的地型別 | 可匯出陣列、地圖和其他自訂物件 |
+|---|---|
+| Adobe編寫的雲端儲存空間目標(Amazon S3、Azure Blob、Azure Data Lake Storage Gen2、資料登陸區、Google雲端儲存空間、SFTP) | 可以，在設定目的地連線時，啟用陣列、地圖和物件的匯出切換功能會開啟。 |
+| 檔案式電子郵件行銷目的地(Adobe Campaign、Oracle Eloqua、Oracle Responsys、Salesforce Marketing Cloud) | 無 |
+| 現有自訂合作夥伴建置的雲端儲存空間目的地(透過Destination SDK建置的自訂檔案型目的地) | 無 |
+| 企業目的地(Amazon Kinesis、Azure事件中樞、HTTP API) | 部分。 您可以在啟動工作流程的對應步驟中選取和匯出對應型別物件。 |
+| 串流目的地(例如：Facebook、Braze、Google Customer Match等) | 無 |
+| Edge個人化目標(Adobe Target) | 部分。 您可以在啟動工作流程的對應步驟中選取和匯出對應型別物件。 |
+
+{style="table-layout:auto"}
 
 請考量此頁面，您可以前往想瞭解如何從Experience Platform匯出陣列、地圖和其他物件型別的任何位置。
 
@@ -24,9 +38,9 @@ ht-degree: 16%
 
 取得本節中有關功能的最重要資訊，然後繼續參閱檔案中的其他章節，以取得詳細資訊。
 
-* 匯出陣列、對映和物件的功能取決於您選取的&#x200B;**匯出陣列、對映、物件**&#x200B;切換。 請在頁面](#export-arrays-maps-objects-toggle)的下一頁閱讀更多相關資訊[。
-* 您只能在`JSON`和`Parquet`個檔案中將陣列、地圖和物件匯出至雲端儲存體目的地。 支援人員和潛在客戶對象，但不支援帳戶對象。
-* 您&#x200B;*可以*&#x200B;將陣列、對應和物件匯出至CSV檔案，但只能使用計算欄位功能，並使用`array_to_string`函式將它們串連到字串中。
+* 對於雲端儲存空間目的地，匯出陣列、地圖和物件的功能取決於您選取的&#x200B;**匯出陣列、地圖、物件**&#x200B;切換。 請在頁面](#export-arrays-maps-objects-toggle)的下一頁閱讀更多相關資訊[。
+* 您可以匯出陣列、地圖和物件至`JSON`和`Parquet`檔案中的雲端儲存體目的地。 對於Enterprise和Edge個人化目的地，匯出的資料型別為`JSON`。 支援人員和潛在客戶對象，但不支援帳戶對象。
+* 針對以檔案為基礎的雲端儲存目的地，您&#x200B;*可以*&#x200B;將陣列、對應和物件匯出至CSV檔案，但僅透過使用計算欄位功能並使用`array_to_string`功能將它們串連到字串中。
 
 ## Platform中的陣列和其他物件型別 {#arrays-strings-other-objects}
 
@@ -59,6 +73,10 @@ organizations = [{
 
 [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地，完成雲端儲存空間目的地的[啟動步驟](/help/destinations/ui/activate-batch-profile-destinations.md)並到達[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。 連線到所需的雲端目的地時，您必須選取&#x200B;**[!UICONTROL 匯出陣列、對應、物件]**&#x200B;切換開啟。 如需詳細資訊，請參閱以下章節。
 
+>[!NOTE]
+>
+>對於企業和邊緣個人化目的地，無需選取&#x200B;**[!UICONTROL 匯出陣列、對應、物件]**&#x200B;切換即可使用對映型別欄位的匯出支援。 連線到這些型別的目的地時，無法使用或需要此切換按鈕。
+
 ## 匯出陣列、對應及物件的切換開關 {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
@@ -66,7 +84,7 @@ organizations = [{
 >title="匯出陣列、對應及物件"
 >abstract="<p> 將此設定切換為<b>開啟</b>，便可以將陣列、對應及物件匯出至 JSON 或 Parquet 檔案。您可以在對應步驟的來源欄位視圖中選取這些物件類型。在切換為開啟的情況下，您無法在對應步驟中使用計算欄位選項。</p><p>將這項設定切換為<b>關閉</b>後，即可使用計算欄位選項並在啟動客群時套用各種資料轉換函數。但是，您<i>不能</i>將陣列、對應和物件匯出至 JSON 或 Parquet 檔案，並且必須設定不同的目的地才能達成該目的。</p>"
 
-連線到雲端儲存空間目的地時，您可以設定&#x200B;**[!UICONTROL 匯出陣列、地圖、物件]**&#x200B;的切換開啟或關閉。
+連線到以檔案為基礎的雲端儲存空間目的地時，您可以設定&#x200B;**[!UICONTROL 匯出陣列、地圖、物件]**&#x200B;的開啟或關閉。
 
 ![以開啟或關閉設定以及反白彈出視窗來顯示匯出陣列、地圖、物件切換。](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
