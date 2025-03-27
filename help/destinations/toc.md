@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
+source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1278'
 ht-degree: 5%
 
 ---
@@ -78,6 +78,7 @@ ht-degree: 5%
       * [Awin廣告商轉換標籤擴充功能](./catalog/advertising/awin-conversiontag.md)
       * [Awin廣告商Mastertag擴充功能](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads通用事件追蹤(UET)擴充功能](./catalog/advertising/bing-ads.md)
+      * [Bombora連線](./catalog/advertising/bombora.md)
       * [分支擴充功能](./catalog/advertising/branch.md)
       * [標準連線](./catalog/advertising/criteo.md)
       * [Demandbase連線](./catalog/advertising/demandbase.md)
