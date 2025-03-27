@@ -2,9 +2,9 @@
 title: 使用流量服務API建立Microsoft Dynamics基本連線
 description: 瞭解如何使用流量服務API將Platform連線至Microsoft Dynamics帳戶。
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: bda26fa4ecf4f54cb36ffbedf6a9aa13faf7a09d
+source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1330'
 ht-degree: 3%
 
 ---
@@ -264,6 +264,44 @@ curl -X GET \
 
 +++
 
+### 使用主索引鍵來最佳化資料探索
+
+>[!NOTE]
+>
+>使用主要索引鍵進行最佳化時，您只能使用非查詢屬性。
+
+您可以將`primaryKey`作為查詢引數的一部分提供，以最佳化您的探索查詢。 包含`primaryKey`作為查詢引數時，您必須指定[!DNL Dynamics]資料表的主索引鍵。
+
+**API格式**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?preview=true&object={OBJECT}&objectType={OBJECT_TYPE}&previewCount=10&primaryKey={PRIMARY_KEY}
+```
+
+| 查詢參數 | 說明 |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | 基礎連線的ID。 使用此ID來探索來源的內容和結構。 |
+| `preview` | 啟用資料預覽的布林值。 |
+| `{OBJECT}` | 您要探索的[!DNL Dynamics]物件。 |
+| `{OBJECT_TYPE}` | 物件的型別。 |
+| `previewCount` | 限制傳回的預覽僅能預覽特定數量的記錄。 |
+| `{PRIMARY_KEY}` | 您要擷取以供預覽之表格的主索引鍵。 |
+
+**要求**
+
++++選取以檢視請求範例
+
+```shell
+curl -X GET \
+  'https://platform-stage.adobe.io/data/foundation/flowservice/connections/dd668808-25da-493f-8782-f3433b976d1e/explore?preview=true&object=lead&objectType=table&previewCount=10&primaryKey=leadid' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
 
 ## 檢查表格的結構
 
@@ -581,6 +619,74 @@ curl -X POST \
 ```
 
 +++
+
+### 使用主索引鍵來最佳化您的資料流
+
+您也可以將主索引鍵指定為要求內文引數的一部分，以最佳化[!DNL Dynamics]資料流。
+
+**API格式**
+
+```http
+POST /sourceConnections
+```
+
+**要求**
+
+將主索引鍵指定為`contactid`時，下列要求會建立[!DNL Dynamics]來源連線。
+
++++選取以檢視請求範例
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics Source Connection",
+      "description": "Dynamics Source Connection",
+      "baseConnectionId": "dd668808-25da-493f-8782-f3433b976d1e",
+      "data": {
+          "format": "tabular"
+      },
+      "params": {
+          "tableName": "contact",
+          "primaryKey": "contactid"
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `baseConnectionId` | 基礎連線的ID。 |
+| `data.format` | 資料的格式。 |
+| `params.tableName` | [!DNL Dynamics]中資料表的名稱。 |
+| `params.primaryKey` | 將最佳化查詢之表格的主索引鍵。 |
+| `connectionSpec.id` | 與[!DNL Dynamics]來源對應的連線規格識別碼。 |
+
++++
+
+**回應**
+
+成功的回應會傳回新產生的來源連線ID及其對應的電子標籤。
+
++++選取以檢視回應範例
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
 
 ## 後續步驟
 
