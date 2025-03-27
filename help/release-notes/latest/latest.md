@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 3 月)
 description: Adobe Experience Platform 2025 年 3 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 445bf302baadf478a39b0c11a31ccfe25d5dd726
+source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 26%
+source-wordcount: '1227'
+ht-degree: 25%
 
 ---
 
@@ -46,6 +46,8 @@ Experience Platform 提供多個儀表板，您可以透過這些儀表板檢視
 
 | 目標 | 說明 |
 | --- | --- |
+| [Demandbase People連線](/help/destinations/catalog/advertising/demandbase-people.md) | 使用[!DNL Demandbase People]連線為您的Demandbase行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。 |
+| [Bombra帳戶連線](/help/destinations/catalog/advertising/bombora.md) | 根據[帳戶對象](/help/segmentation/types/account-audiences.md)，使用[!DNL Bombora]連線為您的Bombora行銷活動啟用設定檔，以進行對象目標定位、個人化和隱藏。 |
 | [飛艇屬性](/help/destinations/catalog/mobile-engagement/airship-attributes.md)升級 | 自2025年3月25日起，您可以在目的地目錄中並排看到兩個&#x200B;**[!UICONTROL 飛艇屬性]**&#x200B;卡片。 這是因為目的地服務的內部升級。 現有的&#x200B;**[!UICONTROL 飛艇屬性]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用）飛艇屬性]**，現在您可以使用名稱為&#x200B;**[!UICONTROL 飛艇屬性]**&#x200B;的新卡片。 <br>使用目錄中的&#x200B;**[!UICONTROL 飛艇屬性]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何前往[!DNL (Deprecated) Airship Attributes]目的地的作用中資料流，它們將會自動更新，因此您不需要採取任何動作。 <br>如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值： <ul><li> 流程規格ID： `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> 連線規格ID： `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
