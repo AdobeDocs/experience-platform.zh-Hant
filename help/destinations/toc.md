@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 26125b0496b8b08443e9a1ccb13a384bf33ab4be
+source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1276'
 ht-degree: 5%
 
 ---
@@ -139,6 +139,7 @@ ht-degree: 5%
       * [資料登陸區域](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [sftp連線](./catalog/cloud-storage/sftp.md)
+      * [Snowflake連線](./catalog/cloud-storage/snowflake.md)
       * [檔案式雲端儲存目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 客戶關係管理(CRM)目的地{#crm}
       * [Hubspot連線](./catalog/crm/hubspot.md)
