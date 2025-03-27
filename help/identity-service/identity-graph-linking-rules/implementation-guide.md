@@ -2,10 +2,10 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
+source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
-source-wordcount: '1778'
-ht-degree: 2%
+source-wordcount: '1819'
+ht-degree: 6%
 
 ---
 
@@ -58,19 +58,18 @@ ht-degree: 2%
 
 如果您使用[Adobe Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)來內嵌資料，則您必須為ECID指定比Adobe Analytics ID (AAID)更高的優先順序，因為Identity Service會封鎖AAID。 透過優先處理ECID，您可以指示即時客戶設定檔將未驗證事件儲存至ECID而非AAID。
 
-### XDM體驗事件 {#xdm-experience-events}
+### XDM 體驗事件 {#xdm-experience-events}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
->title="確定您有單一人員識別碼"
->abstract="在預先實作程式中，您必須確保系統要傳送至Experience Platform的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如CRMID。"
+>title="確保您擁有單一人員識別碼"
+>abstract="在實施前流程中，您必須確保系統傳送至 Experience Platform 已驗證的事件始終包含&#x200B;**單一**&#x200B;人員識別碼，例如 CRMID。"
 
-在預先實作程式中，您必須確保系統要傳送至Experience Platform的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如CRMID。
+在實施前流程中，您必須確保系統傳送至 Experience Platform 已驗證的事件始終包含&#x200B;**單一**&#x200B;人員識別碼，例如 CRMID。
 
-* （建議）具有一個人員識別碼的已驗證事件。
-* （不建議）具有兩個人員識別碼的已驗證事件。
-* （不建議）沒有任何人員識別碼的已驗證事件。
-
+* （建議）具有一個唯一人員識別碼的已驗證事件。
+* （不建議）具有兩個不重複人員識別碼的已驗證事件。 如果您有多個不重複的個人識別碼，則可能會遇到不想要的圖表摺疊情況。
+* （不建議）沒有任何不重複人員識別碼的已驗證事件。 如果您沒有任何不重複的個人識別碼，則未驗證和已驗證的事件都會根據ECID儲存。
 
 >[!BEGINTABS]
 
@@ -291,7 +290,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
-* [身分圖表連結規則概觀](./overview.md)
+* [身分識別圖連結規則概觀](./overview.md)
 * [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
