@@ -1,9 +1,8 @@
 ---
 title: 套用存取標籤以管理使用API之來源資料流程的使用者存取權
 description: 瞭解如何使用流量服務API來套用存取權標籤，並管理使用者對您的來源資料流的存取權。
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 572d6838-3e4c-4fd5-89fa-32cad6280325
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 3%

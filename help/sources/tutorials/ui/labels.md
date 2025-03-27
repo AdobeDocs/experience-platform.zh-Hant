@@ -1,9 +1,8 @@
 ---
 title: 套用存取權標籤以管理使用者對UI中來源資料流的存取權
 description: 瞭解如何使用Experience Platform UI套用存取標籤並管理使用者對您的來源資料流程的存取。
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 2%

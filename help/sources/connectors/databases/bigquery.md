@@ -3,9 +3,9 @@ title: Google BigQuery Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Google BigQuery連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
+source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -14,23 +14,21 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Google BigQuery]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>[!DNL Google BigQuery]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
-
-閱讀本檔案以瞭解您必須完成哪些先決條件步驟，才能成功將您的[!DNL Google BigQuery]帳戶連線到Experience Platform。
+閱讀本檔案以瞭解您必須完成哪些先決條件步驟，才能在Azure或Amazon Web Services (AWS)上成功將您的[!DNL Google BigQuery]帳戶連線至Adobe Experience Platform。
 
 ## 先決條件 {#prerequisites}
 
-下節提供建立[!DNL Google BigQuery]來源連線之前所需先決條件設定的進一步資訊。
+請閱讀下列章節，瞭解必須先完成哪些先決條件設定，您才能將[!DNL Google BigQuery]帳戶連線至Experience Platform。
 
 ### IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+在Azure或Amazon Web Services (AWS)上將來源連線至Experience Platform之前，您必須將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址指南，以連線至Azure和AWS上的Experience Platform ](../../ip-address-allow-list.md)以取得詳細資訊。
 
-### 產生您的[!DNL Google BigQuery]認證 {#credentials}
+### 在Azure上驗證Experience Platform {#azure}
 
-若要將[!DNL Google BigQuery]連線到Experience Platform，您必須產生下列認證的值：
+您必須提供下列認證，才能將您的[!DNL Google BigQuery]帳戶連線至Azure上的Experience Platform。
 
 >[!BEGINTABS]
 
@@ -64,9 +62,19 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 
 >[!ENDTABS]
 
-## 將[!DNL Google BigQuery]連線至平台
+### 在AWS上驗證Experience Platform {#aws}
 
-以下檔案提供如何使用API或使用者介面將[!DNL Google BigQuery]連線到Platform的資訊：
+您必須提供下列認證，才能將您的[!DNL Google BigQuery]帳戶連線至AWS上的Experience Platform。
+
+| 認證 | 說明 |
+| --- | --- |
+| `projectId` | 您要查詢的[!DNL Google BigQuery]識別碼。 |
+| `keyFileContent` | 用來驗證服務帳戶的金鑰檔案。 您可以從[[!DNL Google Cloud service accounts] 儀表板](https://console.cloud.google.com)擷取此值。 金鑰檔案內容為JSON格式。 向Experience Platform驗證時，您必須在[!DNL Base64]中編碼此專案。 |
+| `datasetId` | [!DNL Google BigQuery]資料集識別碼。 此ID代表資料表所在的位置。 |
+
+## 將[!DNL Google BigQuery]連線至Experience Platform
+
+以下檔案提供如何使用API或使用者介面將[!DNL Google BigQuery]連線至Experience Platform的資訊：
 
 ### 使用API
 
