@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 7332b39b0e213632e595dc52eda390aa0b9a24ec
+source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
 workflow-type: tm+mt
-source-wordcount: '3483'
+source-wordcount: '3367'
 ht-degree: 16%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="預測的可定址對象"
->abstract="可定址對象是即時客戶個人檔案中貴組織有權參與的人員個人檔案集。 這包括可直接識別的設定檔和假名設定檔。<br>您的使用量可能達到授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
+>abstract="可定址對象是即時客戶個人檔案中貴組織有權參與的人員個人檔案集。 此量度包含可直接識別的設定檔和假名設定檔。<br>您的使用量可能達到授權數量。 若要減少使用量，請設定資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
@@ -134,7 +134,7 @@ ht-degree: 16%
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
-授權使用報告提供授權使用量度之高度精細度。 控制面板提供每個已購買產品（及相關附加元件）的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 下列Experience Platform應用程式可透過使用量度進行追蹤：Real-Time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
+授權使用報告提供高度精細度。 大多數量度會在多個產品之間共用，並反映所有使用它們的產品的彙總使用量，而非每個產品的總計。 儀表板提供這些量度在所有生產或開發沙箱中的綜合使用方式，以及來自特定沙箱的使用量度。 下列Experience Platform應用程式可透過使用量度進行追蹤：Real-Time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
 
 本指南概述如何存取和使用UI中的授權使用儀表板，並提供有關儀表板中顯示的視覺效果的更多資訊。
 
@@ -144,7 +144,7 @@ ht-degree: 16%
 
 [!UICONTROL 授權使用情況]儀表板會顯示您已購買的所有Experience Platform產品清單，以及這些產品的任何附加元件。 在此控制面板中，您可以找到組織在任何相關沙箱中用於Experience Platform的授權相關資料快照。
 
-此儀表板中的資料會顯示在拍攝快照的特定時間點上。 換句話說，快照不是資料的近似或樣本，而且圖示板並未即時更新。
+此儀表板中的資料會顯示在拍攝快照的特定時間點上。 換句話說，快照不是資料的近似或樣本，而且圖示板不會即時更新。
 
 >[!NOTE]
 >
@@ -152,36 +152,87 @@ ht-degree: 16%
 
 ## 探索授權使用儀表板 {#explore}
 
-若要導覽至Platform UI中的授權使用儀表板，請在左側邊欄中選取&#x200B;**[!UICONTROL 授權使用]**。 [!UICONTROL 總覽]標籤隨即開啟，顯示可用產品的清單。
+若要導覽至Platform UI中的授權使用儀表板，請在左側邊欄中選取&#x200B;**[!UICONTROL 授權使用]**。 儀表板包含兩個標籤： **[!UICONTROL Metrics]**&#x200B;和&#x200B;**[!UICONTROL Products]**。
 
 >[!NOTE]
 >
->授權使用儀表板預設為未啟用。 必須授予使用者「檢視授權使用儀表板」許可權才能檢視儀表板。 如需授與存取許可權以檢視授權使用儀表板的步驟，請參閱[儀表板許可權指南](../permissions.md)。
+>授權使用儀表板預設為未啟用。 必須授予使用者「檢視授權使用儀表板」許可權才能檢視儀表板。 如需授與存取許可權的步驟，請參閱[儀表板許可權指南](../permissions.md)。
 
-![授權使用儀表板的[概觀]索引標籤，在左側導覽側邊欄中反白顯示[授權使用]。](../images/license-usage/dashboard-overview.png)
+## [!UICONTROL 量度]標籤 {#metrics-tab}
 
-## [!UICONTROL 概觀]索引標籤 {#overview-tab}
+**[!UICONTROL Metrics]**&#x200B;索引標籤可讓您集中檢視整個組織中的所有授權使用量度。 由於大部分的量度會在產品之間共用，因此這些量度沒有個別的個別產品劃分。
 
-[!UICONTROL 授權使用情況]儀表板顯示兩個不同的表格： **核心產品**&#x200B;和&#x200B;**附加元件**。
+量度表格包含下列各欄：
 
-- **[!UICONTROL 核心產品]表格**：此表格列出貴組織授權的主要Adobe Experience Platform產品。 每個核心產品在沙箱層級都有自己的量度、使用追蹤和鑽研檢視。 這些核心產品提供關鍵量度以利追蹤，而且任何附加元件皆包含在這些量度中。
+| 欄名稱 | 說明 |
+|---|---|
+| **[!UICONTROL 量度名稱]** | 授權使用量度的名稱。 每個專案都包含一個資訊圖示(`ⓘ`)，顯示相關產品的說明和清單。 |
+| **[!UICONTROL 已授權]** | 貴組織有權使用的單位數量（如合約所定義）。 此量度的值與[產品]索引標籤中的&#x200B;**授權金額**&#x200B;相同。 |
+| **[!UICONTROL 已測量]** | 您的組織目前使用的量度數量。 |
+| **[!UICONTROL 使用狀況%]** | 目前使用中的授權值百分比。 |
+| **[!UICONTROL 預計使用量%]** | 未來6週內量度使用的預測範圍。 |
 
-- **[!UICONTROL 附加元件]資料表**：此資料表列出其授權金額與核心產品支援的量度結合的其他產品。 附加元件沒有獨立的量度，但可加強對相關核心產品的使用追蹤。
+使用&#x200B;**[!UICONTROL 生產]**&#x200B;或&#x200B;**[!UICONTROL 開發]**&#x200B;沙箱切換來篩選沙箱顯示的量度。
+
+>[!NOTE]
+>
+>消耗報告是依沙箱型別的累計。 選取[!UICONTROL 生產]或[!UICONTROL 開發]會顯示該型別所有沙箱的組合使用情形。
+
+![授權使用儀表板[量度]索引標籤會顯示量度、授權金額和使用量資料的清單。](../images/license-usage/metrics-tab.png)
+
+>[!WARNING]
+>
+>必須在沙箱層級指定檢視授權使用儀表板的許可權。 新增許可權至每個個別沙箱，以在控制面板中檢視它們。 此限制將在未來版本中解決。 同時，提供下列因應措施：
+>
+>1. 在Adobe Admin Console中建立產品設定檔。
+>2. 在沙箱類別的許可權下，新增您想在授權使用儀表板中檢視的所有沙箱。
+>3. 在「使用者儀表板許可權」類別下方，新增「檢視授權使用儀表板」許可權。
+
+### 檢視量度詳細資訊 {#view-metric-details}
+
+若要檢視特定測量結果的使用狀況詳細資訊，請在清單中選取測量結果名稱。 此時會出現量度的詳細檢視，包括：
+
+- 顯示一段時間使用情況的歷史折線圖
+- 授權值與測量值的比較
+- 依個別沙箱的使用情況
+- 用於篩選資料的沙箱選擇器
+- CSV下載的匯出選項
+
+此視覺效果可讓您追蹤趨勢、瞭解每個沙箱對整體使用量的貢獻，並匯出資料以供離線分析。
+
+每個圖表都包含用於篩選資料的下拉式選單。 使用日期範圍下拉式清單來調整回顧期間（預設值：過去30天），或使用沙箱下拉式清單來檢視特定生產或開發沙箱的使用量。
+
+![包含歷史使用圖形、沙箱表格和匯出按鈕的「可定址對象」量度詳細資料檢視。](../images/license-usage/metric-details-view.png)
+
+您也可以選取&#x200B;**[!UICONTROL 自訂日期]**&#x200B;以選擇顯示的時段。
+
+![授權使用儀表板的[概觀]索引標籤中反白顯示自訂日期範圍選項。](../images/license-usage/custom-date-range.png)
+
+### CSV匯出 {#export-metric-usage-data}
+
+您可以直接從量度詳細資料檢視，將所選量度和沙箱的歷史使用資料匯出為CSV檔案。 選取&#x200B;**[!UICONTROL 匯出]**&#x200B;圖示，以表格格式下載圖表資料。 匯出的CSV可讓您輕鬆離線分析趨勢，或在團隊之間分享使用見解。
+
+## [!UICONTROL 產品]索引標籤 {#products-tab}
+
+**[!UICONTROL Products]**&#x200B;索引標籤顯示依購買的產品和任何相關附加元件分組的授權使用資料。 [!UICONTROL Products]索引標籤包含兩個表格：
+
+- **[!UICONTROL 核心產品]表格**：此表格列出貴組織授權的主要Adobe Experience Platform產品。 每個產品都列出其主要量度、使用追蹤和預測使用。
+- **[!UICONTROL 附加元件]資料表**：列出授權金額對核心產品量度有貢獻的附加專案。 附加元件沒有獨立的量度，但可加強對相關核心產品的使用追蹤。
 
 | 欄名稱 | 說明 |
 |---|---|
 | **[!UICONTROL 產品]** | 您的組織授權的Adobe解決方案。 |
 | **[!UICONTROL 主要量度]** | 該產品中用於追蹤的主要量度。 |
-| **[!UICONTROL 授權金額]** | 產品授權合約中同意的主要量度數量上限的合約值。 |
-| **[!UICONTROL 使用狀況]** | 您使用的主要量度數量。 此值提供該量度在所有沙箱（生產或開發）中的總使用量。 |
+| **[!UICONTROL 授權金額]** | 主要量度最大量的約定值。 |
+| **[!UICONTROL 使用狀況]** | 您使用的主要量度數量。 |
 | **[!UICONTROL 使用狀況%]** | 根據您的授權數量使用的主要量度百分比。 |
-| **[!UICONTROL 預測使用量]** | 根據您的授權數量，主要量度的預測使用百分比。 |
+| **[!UICONTROL 預計使用量]** | 主要量度的預測使用百分比。 |
 
 >[!NOTE]
 >
->附加元件的授權金額包含在核心產品的[!UICONTROL 授權金額]中。 例如，如果您購買一包5個沙箱作為附加元件，則金額會加入基本產品的金額中。 附加元件表格顯示附加元件特定的[!UICONTROL 授權金額]，但實際使用量會透過基礎產品追蹤。
+>附加元件的[!UICONTROL 授權金額]包含在核心產品的授權總金額中。 系統不會個別追蹤附加元件，但會增強其相關產品的功能。 例如，如果您購買一包5個沙箱作為附加元件，則金額會加入基本產品的金額中。 附加元件表格顯示附加元件特定的[!UICONTROL 授權金額]，但實際使用量會透過基礎產品追蹤。
 
-這些表格會指出每個產品的主要量度，因為每個產品都可以追蹤許多量度。
+![授權使用儀表板產品索引標籤，包含核心產品和附加元件的表格。](../images/license-usage/products-tab.png)
 
 ### 預估使用量 {#predicted-usage}
 
@@ -205,17 +256,13 @@ ht-degree: 16%
 >
 >預測每週五都會重新整理。 重新整理的日期包含在資訊圖示中(![此資訊圖示。](../images/license-usage/info-icon.png))在欄標題上方。
 
-若要檢視產品的權益使用摘要，請從[!UICONTROL 核心產品]表格中選取產品。
+從[!UICONTROL 核心產品]資料表下的[!UICONTROL 產品]索引標籤，檢視產品的權益使用摘要。
 
-![產品及預測使用量資料行醒目提示的[!UICONTROL 授權使用量] [!UICONTROL 總覽]。](../images/license-usage/product-predicted-usage.png)
-
-摘要標籤隨即顯示。 您可以使用[!UICONTROL 摘要]和[!UICONTROL 詳細資料]標籤上提供的精細預測，確保做出明智的決策，以有效使用授權。
+![產品及預測使用量資料行醒目提示的[!UICONTROL 授權使用量] [!UICONTROL 產品]標籤。](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
 >請注意，授權用量預估是根據過去使用量計算的近似值。您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織使用Adobe的授權範圍。
-
-![預測使用量資料行反白顯示的Platform產品摘要檢視。](../images/license-usage/summary-predicted-usage.png)
 
 預計使用量的百分比取決於以下因素：
 
@@ -236,61 +283,6 @@ ht-degree: 16%
 - [!UICONTROL 可參與的設定檔]
 - [!UICONTROL 資料磁碟區總數]
 
-## [!UICONTROL 摘要]索引標籤 {#summary-tab}
-
-若要檢視更多量度和您產品授權使用方式的詳細深入分析，請從清單中選取產品名稱。 該產品的[!UICONTROL 摘要]檢視即會顯示。 所有可用的量度都會顯示在[!UICONTROL 摘要]索引標籤上。 可用的量度取決於授權產品。 此檢視提供&#x200B;**所有生產或開發沙箱中所有量度的整合檢視**。 生產沙箱和開發沙箱會提供相同等級的分析。
-
-![顯示產品所有可用量度的平台產品摘要檢視。](../images/license-usage/summary-tab.png)
-
-在摘要標籤上，表格包含[!UICONTROL 量度]欄。 這些人類看得懂的說明會指出用於該型別沙箱的所有量度。
-
-### 選取沙箱 {#select-sandbox}
-
-若要變更生產及開發沙箱型別之間的檢視，請選取[!UICONTROL 生產沙箱]或[!UICONTROL 開發沙箱]。 沙箱名稱旁的選項按鈕會指出選取的沙箱型別。
-
-相同型別的所有沙箱的沙箱消耗報告都是累積的。 換句話說，選取[!UICONTROL 生產]或[!UICONTROL 開發]會分別提供所有生產或開發沙箱的耗用報告。
-
-![Platform產品的摘要檢視，其中生產沙箱和開發沙箱已反白顯示。](../images/license-usage/summary-tab-sandboxes.png)
-
->[!WARNING]
->
->必須在沙箱層級指定檢視授權使用儀表板的許可權。 新增許可權至每個個別沙箱，以在控制面板中檢視它們。 此限制將在未來版本中解決。 同時，提供下列因應措施：
->
->1. 在Adobe Admin Console中建立產品設定檔。
->2. 在沙箱類別的許可權下，新增您想在授權使用儀表板中檢視的所有沙箱。
->3. 在「使用者儀表板許可權」類別下方，新增「檢視授權使用儀表板」許可權。
-
-## [!UICONTROL 詳細資料]標籤 {#details-tab}
-
-若要檢視來自特定沙箱的&#x200B;**特定使用量度**，請瀏覽至[!UICONTROL 詳細資料]標籤。 [!UICONTROL 詳細資料]索引標籤會顯示「生產」或「開發」沙箱中所有可用的沙箱。
-
-![授權使用儀表板的詳細資訊標籤。](../images/license-usage/details-tab.png)
-
-您可以從此檢視中選取![檢查圖示。沙箱名稱旁的](/help/images/icons/inspect.png)可檢視該量度的視覺效果。 隨即開啟對話方塊，其中包含該量度的視覺效果。
-
-### 視覺效果 {#visualizations}
-
-每個視覺效果Widget都包含下列方面：
-
-- 追蹤量度隨時間變化的折線圖
-- 折線圖的鍵
-- 沙箱名稱
-- 用於調整折線圖時段的下拉式功能表
-
-折線圖會比較貴組織的使用量數目與貴組織授權可用的使用量總數，並提供使用量總數的百分比。
-
-![量度的視覺效果。](../images/license-usage/visualization.png)
-
-您可以從下拉式選單中調整分析的回顧期間。 過去30天的預設值
-
-若要選取日期範圍，您可以使用日期範圍下拉式選單來選取要在控制面板中顯示的時段。 有多個可用選項，包括過去30天的預設值。
-
-![日期範圍下拉式清單醒目提示的視覺效果對話方塊。](../images/license-usage/date-range.png)
-
-您也可以選取&#x200B;**[!UICONTROL 自訂日期]**&#x200B;以選擇顯示的時段。
-
-![授權使用儀表板的[概觀]索引標籤中反白顯示自訂日期範圍選項。](../images/license-usage/custom-date-range.png)
-
 ## 可用量度 {#available-metrics}
 
 >[!IMPORTANT]
@@ -302,7 +294,7 @@ ht-degree: 16%
 | 量度 | 說明 |
 |---|---|
 | [!UICONTROL Audience Activation大小] | 一年內任何以檔案為基礎的目的地啟用的設定檔總大小。 注意：這不包括透過串流目的地傳送的設定檔。 |
-| [!UICONTROL 可定址對象] | 您的組織有權參與的即時客戶個人檔案中的人員個人檔案集，包括直接可識別的和假名個人檔案。 這些設定檔可能包含屬性、行為和區段成員資格資料。 設定檔磁碟區是使用Adobe Experience Platform的預設確定性身分圖表來計算，並視為共用功能。 |
+| [!UICONTROL 可定址對象] | 您的組織有權參與的即時客戶個人檔案中的人員個人檔案集，包括直接可識別的和假名個人檔案。 這些設定檔可能包含屬性、行為和區段成員資格資料。 設定檔磁碟區是使用Adobe Experience Platform的預設確定性身分圖表來計算，且視為共用功能。 |
 | [!UICONTROL Adhoc Query Service使用者套件] | 一個附加元件，可讓您的授權並行查詢服務使用者權益增加5個額外的並行查詢服務使用者，以及每個套件一個額外的並行執行特定查詢。 可以授權多個其他Ad Hoc Query使用者套件。 |
 | [!UICONTROL 平均設定檔豐富度] | **已棄用** — 任何時間點儲存在集線器設定檔服務中的所有生產資料總和，除以授權企業人員設定檔數目的五倍。 [!UICONTROL 平均設定檔豐富度]是共用功能。 |
 | [!UICONTROL 可用的CJA資料列] | 可在Customer Journey Analytics中分析的每日平均資料列。 |
@@ -321,14 +313,11 @@ ht-degree: 16%
 | [!UICONTROL 資料磁碟區總數] | 可用於參與工作流程中的即時客戶個人檔案的總資料量。 如需瞭解詳細資訊，請參閱關於總資料量](../../landing/license-usage-and-guardrails/total-data-volume.md)的[常見問題。 |
 | [!UICONTROL 資料輸出總量] | 從Adobe Experience Platform匯出至第三方資料倉儲的累積年度資料量。 |
 
-<!-- Approval needed on my revision above.
-Original PM version: | [!UICONTROL Total Volume of Data Egress] | The cumulative annual amount of data processed from third-party data warehouses. | -->
-
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
 >[!TIP]
 >
->您可以在銷售訂單中檢查授權權利，以計算「儲存空間津貼」等量度。<br>例如，<ul><li>儲存容量=合約中「授權設定檔」的數量X平均設定檔豐富度</li></ul>
+>您可以檢查銷售訂單中的授權權益，以計算量度，例如「儲存空間津貼」。<br>例如，<ul><li>儲存容量=合約中「授權設定檔」的數量X平均設定檔豐富度</li></ul>
 
 這些量度的可用性，以及每個量度的特定定義，會因貴組織已購買的授權而有所不同。 如需每個量度的詳細定義，請參閱適當的產品說明檔案：
 
