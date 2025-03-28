@@ -2,15 +2,19 @@
 title: 彈性的對象評估指南
 description: 瞭解如何使用彈性的對象評估，以應要求執行批次細分工作。
 role: Developer, User
-source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1049'
 ht-degree: 5%
 
 ---
 
-
 # 彈性的對象評估指南
+
+>[!AVAILABILITY]
+>
+>彈性的對象評估僅&#x200B;**在[!DNL Microsoft Azure]上執行的Experience Platform執行個體上提供**。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../landing/multi-cloud.md)。
 
 彈性的對象評估可讓您視需求執行批次細分工作。 透過彈性的對象評估，您可以執行臨機行銷活動啟動、即時通訊或其他時效性活動。
 
@@ -33,7 +37,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->您&#x200B;*可以*&#x200B;每年購買額外的彈性對象評估回合。 如需詳細資訊，請聯絡Adobe客戶服務。
+>您可以每年購買額外的彈性受眾評估回合。 如需詳細資訊，請聯絡Adobe客戶服務。
 
 ## 存取 {#access}
 
@@ -326,6 +330,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 下節列出與彈性對象評估相關的常見問題。
 
+### 我多久才能使用彈性的對象評估來啟用對象？
+
++++ 回答
+
+您可以在對象建立後，立即使用彈性的對象評估來啟用對象。
+
++++
+
 ### 我是否可透過彈性的對象評估執行排程？
 
 +++ 回答
@@ -373,4 +385,3 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 使用API或UI建立的彈性受眾評估執行接近上限。 不過，每晚執行的每日批次細分工作不會&#x200B;**對**&#x200B;這個限制有貢獻。
 
 +++
-
