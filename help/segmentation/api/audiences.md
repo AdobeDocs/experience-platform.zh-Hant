@@ -3,9 +3,9 @@ title: Audiences API端點
 description: 使用Adobe Experience Platform Segmentation Service API中的受眾端點，以程式設計方式建立、管理和更新您組織的受眾。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1590'
 ht-degree: 2%
 
 ---
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 ## 查詢指定的對象 {#get}
 
-您可以向`/audiences`端點發出GET要求，並在要求路徑中提供您想要擷取之對象的識別碼，以查詢特定對象的詳細資訊。
+您可以向`/audiences`端點發出GET要求，並提供您要在要求路徑中擷取之對象的ID，以查詢特定對象的詳細資訊。
 
 **API格式**
 
@@ -422,9 +422,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 +++
 
-## 更新對象 {#put}
+## 覆寫對象 {#put}
 
-您可以更新（覆寫）特定對象，方法是向`/audiences`端點發出PUT要求，並在要求路徑中提供您要更新對象的識別碼。
+您可以更新（覆寫）特定對象，方法是向`/audiences`端點發出PUT要求，並在要求路徑中提供您要更新之對象的ID。
 
 **API格式**
 
@@ -453,6 +453,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "namespace": "AEPSegments",
     "description": "Last 30 days",
     "type": "SegmentDefinition",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country=\"US\""
+    }
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -468,6 +473,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | 對象的名稱空間。 |
 | `description` | 對象說明。 |
 | `type` | 系統產生的欄位，顯示對象是平台產生的還是外部產生的對象。 可能的值包括`SegmentDefinition`和`ExternalSegment`。 `SegmentDefinition`是指在Platform中產生的對象，而`ExternalSegment`是指未在Platform中產生的對象。 |
+| `expression` | 包含對象PQL運算式的物件。 |
 | `lifecycleState` | 對象的狀態。 可能的值包括`draft`、`published`和`inactive`。 `draft`代表建立對象時、`published`代表發佈對象時，以及`inactive`代表對象不再作用中。 |
 | `datasetId` | 可找到對象資料的資料集ID。 |
 | `labels` | 與對象相關的物件層級資料使用情況和屬性型存取控制標籤。 |
@@ -496,6 +502,81 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "description": "Last 30 days",
     "type": "SegmentDefinition",
     "lifecycleState": "published",
+    "createdBy": "{CREATED_BY_ID}",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
++++
+
+## 更新對象 {#patch}
+
+您可以對`/audiences`端點發出PATCH要求，並在要求路徑中提供您要更新之對象的ID，以更新特定對象。
+
+**API格式**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | 您要更新的對象ID。 請注意，這是`id`欄位，而&#x200B;**不是** `audienceId`欄位。 |
+
+**要求**
+
++++ 更新對象的範例請求。
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '[
+    {
+        "op": "add",
+        "path": "/lifecycleState",
+        "value": "inactive"
+    }
+ ]'
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `op` | 所執行的PATCH作業型別。 對於此端點，這個值為&#x200B;**一律為** `/add`。 |
+| `path` | 要更新的欄位路徑。 無法編輯系統產生的欄位，例如`id`、`audienceId`和`namespace` ****。 |
+| `value` | 指派給`path`中指定的屬性的新值。 |
+
++++
+
+**回應**
+
+成功的回應會傳回HTTP狀態200和更新的對象。
+
++++修補對象中欄位時的範例回應。
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "SegmentDefinition",
+    "lifecycleState": "inactive",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
@@ -542,7 +623,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4
 
 ## 擷取多個對象 {#bulk-get}
 
-您可以向`/audiences/bulk-get`端點發出POST要求，並提供您要擷取之對象的ID，以擷取多個對象。
+您可以對`/audiences/bulk-get`端點發出POST要求，並提供您要擷取之對象的ID，以擷取多個對象。
 
 **API格式**
 
