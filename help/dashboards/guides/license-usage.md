@@ -4,10 +4,10 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
+source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 16%
+source-wordcount: '3408'
+ht-degree: 15%
 
 ---
 
@@ -144,11 +144,11 @@ ht-degree: 16%
 
 [!UICONTROL 授權使用情況]儀表板會顯示您已購買的所有Experience Platform產品清單，以及這些產品的任何附加元件。 在此控制面板中，您可以找到組織在任何相關沙箱中用於Experience Platform的授權相關資料快照。
 
-此儀表板中的資料會顯示在拍攝快照的特定時間點上。 換句話說，快照不是資料的近似或樣本，而且圖示板不會即時更新。
+此儀表板中的資料會完全依照快照拍攝時的特定時間點顯示。 它不是近似值或範例，但儀表板不會即時更新。
 
 >[!NOTE]
 >
->自拍攝快照以來對資料所做的任何變更或更新都不會反映在儀表板中，直到拍攝下一個快照為止。
+>儀表板中的大部分量度都會根據您的Platform執行個體快照每日更新。 [!UICONTROL 可用的CJA資料列]為例外狀況，每月都會更新。 標示為「套件」的量度，例如[!UICONTROL Adhoc Query Service Users Pack]、[!UICONTROL Profile Richness No of Pack]和[!UICONTROL Streaming Segmentation No of Pack]，反映附加元件產品的授權權益，且不會追蹤目前使用情況。 在拍攝下一個快照之前，不會顯示快照之後所做的變更。
 
 ## 探索授權使用儀表板 {#explore}
 
