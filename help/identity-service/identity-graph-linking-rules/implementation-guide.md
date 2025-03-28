@@ -63,9 +63,9 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
 >title="確保您擁有單一人員識別碼"
->abstract="在實施前流程中，您必須確保系統傳送至 Experience Platform 已驗證的事件始終包含&#x200B;**單一**&#x200B;人員識別碼，例如 CRMID。"
+>abstract="在實作前流程中，您必須確保系統傳送至 Experience Platform 的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如 CRMID。"
 
-在實施前流程中，您必須確保系統傳送至 Experience Platform 已驗證的事件始終包含&#x200B;**單一**&#x200B;人員識別碼，例如 CRMID。
+在實作前流程中，您必須確保系統傳送至 Experience Platform 的已驗證事件一律包含&#x200B;**單一**&#x200B;人員識別碼，例如 CRMID。
 
 * （建議）具有一個唯一人員識別碼的已驗證事件。
 * （不建議）具有兩個不重複人員識別碼的已驗證事件。 如果您有多個不重複的個人識別碼，則可能會遇到不想要的圖表摺疊情況。

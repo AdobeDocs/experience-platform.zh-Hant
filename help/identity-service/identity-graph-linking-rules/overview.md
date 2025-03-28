@@ -5,22 +5,22 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# 身分圖表連結規則概觀 {#identity-graph-linking-rules-overview}
+# 身分識別圖連結規則概觀 {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
->title="身分圖表連結規則"
->abstract="為避免這些不想要的合併，您可以使用透過身分圖表連結規則提供的設定，並允許使用者進行精確的個人化。"
+>title="身分識別圖連結規則"
+>abstract="若要防止這些不必要的合併，您可以使用透過身分識別圖連結規則提供的設定，並為您的使用者提供準確的個人化。"
 
 >[!AVAILABILITY]
 >
 >身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
-透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 為避免這些不想要的合併，您可以使用透過身分圖表連結規則提供的設定，並允許使用者進行精確的個人化。
+透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 若要防止這些不必要的合併，您可以使用透過身分識別圖連結規則提供的設定，並為您的使用者提供準確的個人化。
 
 觀看以下影片，瞭解使用身分圖表連結規則的其他資訊：
 
@@ -91,7 +91,7 @@ ht-degree: 4%
 
 透過身分圖表連結規則，您可以將CRMID設定為唯一識別碼，以防止由於此型別的資料造成不想要的設定檔摺疊。
 
-## 身分圖表連結規則 {#identity-graph-linking-rules}
+## 身分識別圖連結規則 {#identity-graph-linking-rules}
 
 使用身分圖表連結規則，您可以：
 
