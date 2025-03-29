@@ -3,9 +3,9 @@ title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
+source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -441,6 +441,10 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 >[!ENDTABS]
 
 ### 使用AI Assistant提高生產力
+
+>[!NOTE]
+>
+>此活頁簿的上次更新日期為2025年3月31日。 從那時起，某些功能可能已經進化或擴展。 此外，本指南中參考的一些功能可能仍在搶先使用中。 如果您遇到環境尚未提供的內容，而您有興趣探索該內容，請聯絡您的Adobe帳戶團隊以要求搶先使用。
 
 請參閱下列內容，以取得如何使用AI Assistant提高生產力的實作指南。
 

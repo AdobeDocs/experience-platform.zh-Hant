@@ -2,7 +2,7 @@
 title: 命名空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -73,11 +73,11 @@ ht-degree: 3%
 
 ![名稱空間優先順序應用程式範圍的圖表](../images/namespace-priority/application-scope.png)
 
-### Identity Service：身分最佳化演演算法
+## Identity Service：身分最佳化演演算法
 
 對於相對複雜的圖表結構，名稱空間優先順序在確保在圖表摺疊情況發生時移除正確連結方面扮演重要角色。 如需詳細資訊，請閱讀[身分最佳化演演算法總覽](../identity-graph-linking-rules/identity-optimization-algorithm.md)。
 
-### 即時客戶個人檔案：體驗事件的主要身分確定
+## 即時客戶個人檔案：體驗事件的主要身分確定
 
 * 在您設定好指定沙箱的身分設定後，體驗事件的主要身分將由設定中最高的名稱空間優先順序決定。
    * 這是因為體驗事件的本質是動態的。 身分對應可能包含三個或更多身分，而名稱空間優先順序可確保最重要的名稱空間與體驗事件相關聯。
@@ -122,7 +122,7 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-### 細分服務：區段會籍中繼資料儲存
+## 細分服務：區段會籍中繼資料儲存
 
 ![區塊會籍儲存的圖表](../images/namespace-priority/segment-membership-storage.png)
 
@@ -139,7 +139,7 @@ ht-degree: 3%
 
 如果John和Jane共用裝置，則ECID （網頁瀏覽器）會從一個人傳輸給另一個人。 不過，這不會影響針對John和Jane所儲存的區段會籍資訊。
 
-如果區段資格標準完全以根據ECID儲存的匿名事件為基礎，則Jane將符合該區段的資格
+如果區段資格標準完全以根據ECID儲存的匿名事件為基礎，則Jane將符合該區段的資格。
 
 ## 對其他Experience Platform服務的影響 {#implications}
 
