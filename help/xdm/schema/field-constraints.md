@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM欄位型別限制
 description: Experience Data Model (XDM)中欄位型別限制的參考，包括它們可以對應的其他序列化格式，以及如何在API中定義您自己的欄位型別。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 使用本指南之前，請先檢閱結構描述組合的[基本知識](./composition.md)，以瞭解XDM結構描述、類別和結構描述欄位群組的簡介。
 
-如果您打算在API中定義自己的欄位型別，強烈建議您從[Schema Registry開發人員指南](../api/getting-started.md)開始，瞭解如何建立欄位群組和資料型別，以包含您的自訂欄位。 如果您使用Experience PlatformUI建立結構描述，請參閱[在UI中定義欄位的指南](../ui/fields/overview.md)，以瞭解如何在自訂欄位群組和資料型別中定義的欄位上實作限制。
+如果您打算在API中定義自己的欄位型別，強烈建議您從[Schema Registry開發人員指南](../api/getting-started.md)開始，瞭解如何建立欄位群組和資料型別，以包含您的自訂欄位。 如果您使用Experience Platform UI建立結構描述，請參閱[在UI中定義欄位的指南](../ui/fields/overview.md)，以瞭解如何對您在自訂欄位群組和資料型別中定義的欄位實作限制。
 
 ## 基底結構和範例 {#basic-types}
 
@@ -130,7 +130,7 @@ XDM是以JSON結構描述為基礎建立，因此XDM欄位在定義其型別時�
       <td>[！UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type"： "string"}</pre>
+{"type"： "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
