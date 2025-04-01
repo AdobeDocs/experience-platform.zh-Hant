@@ -1,12 +1,10 @@
 ---
 title: Adobe Content Analytics擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Content Analytics標籤擴充功能。
-hide: true
-hidefromtoc: true
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
+source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -79,6 +77,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 1. 選擇性。 指定在您的網站上呈現內容的方式。 引數是&#x200B;**[!UICONTROL 網域規則運算式]**&#x200B;和&#x200B;**[!UICONTROL 查詢引數]**&#x200B;的零個或多個組合。
    1. 輸入&#x200B;**[!UICONTROL 網域規則運算式]**，例如`^(?!.*\b(store|help|admin)\b)`。
    1. 指定&#x200B;**[!UICONTROL 查詢引數]**&#x200B;的逗號分隔清單，例如`outdoors, patio, kitchen`。
+使用![關閉](./assets/CrossSize300.svg)刪除個別引數，或使用&#x200B;**[!UICONTROL 全部清除]**&#x200B;刪除所有引數。
 1. 如果要移除網域規則運算式和查詢引數的組合，請選取&#x200B;**[!UICONTROL 移除]**。
 1. 如果要新增其他規則運算式和查詢參陣列合，請選取&#x200B;**[!UICONTROL 新增Regex]**。
 
