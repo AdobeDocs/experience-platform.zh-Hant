@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；目的地api；隨選啟用；隨選啟用對象
+keywords: Experience Platform；目的地api；臨機啟動；臨機啟動對象
 solution: Experience Platform
 title: 透過臨機啟動API將對象啟動至批次目的地
 description: 本文說明透過臨機啟動API啟動對象的端對端工作流程，包括在啟動前進行的細分工作。
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -30,21 +30,19 @@ ht-degree: 0%
 
 ![臨機啟動](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
 ## 使用案例 {#use-cases}
 
-### Flash銷售或促銷
+### Flash銷售或促銷活動
 
-一家線上零售商正準備進行限量閃購，並希望在短時間內通知客戶。 透過Experience Platform臨機啟動API，行銷團隊可以隨選匯出對象，並快速傳送促銷電子郵件給客戶群。
+線上retailer正在準備進行限量搶購，並希望在短時間內通知客戶。 透過Experience Platform隨選啟用API，行銷團隊可以依需求匯出對象，並快速傳送促銷電子郵件給客戶群。
 
 ### 最新事件或突發新聞
 
-飯店期望在接下來的幾天內遇到惡劣天氣，而團隊想要快速通知到來的客人，以便他們做出相應的計畫。 行銷團隊可以使用Experience PlatformAd Hoc Activation API來隨選匯出受眾，並通知來賓。
+飯店期望在接下來的幾天內遇到惡劣天氣，而團隊想要快速通知到來的客人，以便他們做出相應的計畫。 行銷團隊可以使用Experience Platform隨選啟動API來隨選匯出受眾，並通知來賓。
 
 ### 整合測試
 
-IT管理員可使用Experience Platform臨機啟動API來隨選匯出對象，以便測試其與Adobe Experience Platform的自訂整合，並確保一切都正常運作。
+IT管理員可使用Experience Platform隨選啟用API來隨選匯出對象，以便測試其與Adobe Experience Platform的自訂整合，並確保一切都正常運作。
 
 ## 護欄 {#guardrails}
 
@@ -126,7 +124,7 @@ Adobe Experience Platform每24小時執行一次排程的區段工作。 臨機�
 
 >[!IMPORTANT]
 >
->請注意下列一次性限制：在執行臨機操作啟用工作之前，請確定根據您在[步驟3 — 在Platform UI](#activation-flow)中建立啟用流程中所設定的排程，從對象首次啟用的那一刻起已過去至少20分鐘。
+>請注意下列一次性限制：在執行臨機操作啟用工作之前，請確定根據您在[步驟3 — 在Platform UI](#activation-flow)中建立啟用流程中所設定的排程，從第一次啟用對象的那一刻起已過去至少一個小時。
 
 在執行臨機啟動工作之前，請確定您對象的排程對象匯出工作已完成。 如需如何監視啟用流程狀態的資訊，請參閱[目的地資料流程監視](../../dataflows/ui/monitor-destinations.md)。 例如，如果您的啟動資料流顯示&#x200B;**[!UICONTROL 正在處理]**&#x200B;狀態，請等待它完成後再執行臨機操作啟動工作以匯出完整檔案。
 
@@ -253,4 +251,4 @@ Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則�
 ## 相關資訊 {#related-information}
 
 * [使用流程服務API連線到批次目的地並啟用資料](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Beta)使用Experience PlatformUI隨選將檔案匯出至批次目的地](/help/destinations/ui/export-file-now.md)
+* [(Beta)使用Experience Platform UI隨選將檔案匯出至批次目的地](/help/destinations/ui/export-file-now.md)

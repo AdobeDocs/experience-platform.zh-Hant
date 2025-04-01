@@ -1,9 +1,9 @@
 ---
-title: 使用Experience PlatformUI隨選將檔案匯出至批次目的地
+title: 使用Experience Platform UI隨選將檔案匯出至批次目的地
 type: Tutorial
-description: 瞭解如何使用Experience PlatformUI隨選將檔案匯出至批次目的地。
+description: 瞭解如何使用Experience Platform UI隨選將檔案匯出至批次目的地。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: d3bd76f5b36b6a6afcb67fe923eb8e4f3d7a9415
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 9%
@@ -11,7 +11,7 @@ ht-degree: 9%
 ---
 
 
-# 使用Experience PlatformUI隨選將檔案匯出至批次目的地
+# 使用Experience Platform UI隨選將檔案匯出至批次目的地
 
 >[!IMPORTANT]
 > 
@@ -24,11 +24,11 @@ ht-degree: 9%
 >title="立即匯出檔案"
 >abstract="選取此控制項可在任何先前排程的匯出外實現完整的檔案匯出。檔案匯出會即刻觸發，並從 Experience Platform 分段執行中獲取最新結果。"
 
-本文說明如何使用Experience PlatformUI隨選將檔案匯出至批次目的地，例如[雲端儲存空間](/help/destinations/catalog/cloud-storage/overview.md)和[電子郵件行銷](/help/destinations/catalog/email-marketing/overview.md)目的地。
+本文說明如何使用Experience Platform UI隨選將檔案匯出至批次目的地，例如[雲端儲存空間](/help/destinations/catalog/cloud-storage/overview.md)和[電子郵件行銷](/help/destinations/catalog/email-marketing/overview.md)目的地。
 
 **[!UICONTROL 立即匯出檔案]**&#x200B;控制項可讓您匯出完整檔案，而不會中斷先前排程對象的目前匯出排程。 除了先前排程的匯出外，也會進行此匯出，不會變更對象的匯出頻率。 檔案匯出會即刻觸發，並從 Experience Platform 分段執行中獲取最新結果。
 
-您也可以將Experience Platform API用於此目的。 瞭解如何透過Ad Hoc Activation API](/help/destinations/api/ad-hoc-activation-api.md)將隨選對象[啟動至批次目的地。
+您也可以將Experience Platform API用於此用途。 瞭解如何透過Ad Hoc Activation API](/help/destinations/api/ad-hoc-activation-api.md)將隨選對象[啟動至批次目的地。
 
 ## 先決條件 {#prerequisites}
 
@@ -63,7 +63,7 @@ ht-degree: 9%
 使用&#x200B;**[!UICONTROL 立即匯出檔案]**&#x200B;控制項時，請記住下列考量事項：
 
 * **[!UICONTROL 現在匯出檔案]**&#x200B;僅適用於批次啟動資料流中的排程與目前日期重疊的對象。 這包含其排程沒有結束日期（**[!UICONTROL 一次]**&#x200B;的匯出頻率）或結束日期尚未超過的受眾。
-* 將對象新增至現有資料流時，請等候至少15分鐘，直到使用&#x200B;**[!UICONTROL 立即匯出檔案]**&#x200B;控制項為止。
+* 將對象新增至現有資料流時，至少要等待&#x200B;**一小時**，才能使用&#x200B;**[!UICONTROL 立即匯出檔案]**&#x200B;控制項。
 * 如果您變更對象的合併原則，或如果您建立使用新合併原則的對象，請等待24小時，直到使用&#x200B;**[!UICONTROL 立即匯出檔案]**&#x200B;控制項。
 
 ## UI錯誤訊息 {#ui-error-messages}
@@ -77,5 +77,5 @@ ht-degree: 9%
 
 ## 相關資訊 {#related-information}
 
-* [使用Experience PlatformAPI依需求啟用批次目的地的對象](/help/destinations/api/ad-hoc-activation-api.md)
+* [使用Experience Platform API依需求啟用批次目的地的對象](/help/destinations/api/ad-hoc-activation-api.md)
 * [啟用對象資料至批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md)
