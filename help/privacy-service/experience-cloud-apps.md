@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service和Experience Cloud應用程式
 description: 本檔案提供設定不同Experience Cloud應用程式以進行隱私權相關作業的相關參考資料。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: c524e4533f2ebcc6fd27b5ec7f5ac622107a371b
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '901'
 ht-degree: 8%
 
 ---
@@ -35,8 +35,8 @@ Adobe Experience Platform [!DNL Privacy Service]是專為支援數個Adobe Exper
 | Adobe Advertising Cloud | ✓ | ✓ | 資料主體的Cookie ID或裝置ID會從系統刪除，以及與Cookie相關的所有成本、點選次數和收入資料。 | <ul><li>[存取/刪除GDPR的檔案](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[存取/刪除CCPA的檔案](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[CCPA的選擇退出銷售檔案](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | Adobe Analytics根據其敏感度和合約限制提供標籤資料的工具。 標籤是下列作業的重要步驟：<ol><li>識別資料主體。</li><li>決定要傳回做為存取要求一部分的資料。</li><li>識別在刪除請求中必須刪除的資料欄位。</li></ol> | <ul><li>[隱私權工作流程](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)</li><li>[Analytics標籤](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/data-labels/gdpr-labels.html)</li><li>[Analytics選擇退出](https://experienceleague.adobe.com/docs/analytics/components/dimensions/cm-opt-out.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | 與請求中包含的Audience Manager識別碼相關聯的所有特徵和區段都會被刪除。 此外，個人的個別識別碼會退出進一步的資料收集，且個別ID對應會被移除。 | <ul><li>[存取](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#access-data) / [刪除](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#delete-data)檔案</li><li>[選擇退出檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html#opt-out-calls)</li><li>[選擇退出要求](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests)</li></ul> |
-| Adobe Campaign Classic | ✓ | ✓ | 資料主體的儲存資料會從系統刪除。 | <ul><li>[隱私權管理](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=zh-Hant)。</li></ul> |
-| Adobe Campaign Standard | ✓ | ✓ | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=zh-Hant)</li><li>[選擇退出檔案](../segmentation/tutorials/consents.md)</li></ul> |
+| Adobe Campaign Classic | ✓ | ✓ | 資料主體的儲存資料會從系統刪除。 | <ul><li>[隱私權管理](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=zh-Hant)</li></ul> |
+| Adobe Campaign Standard | ✓ | ✓ | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/en/docs/campaign-standard/using/getting-started/privacy/privacy-management#right-access-forgotten)</li><li>[選擇退出檔案](https://experienceleague.adobe.com/en/docs/campaign-standard/using/profiles-and-audiences/understanding-opt-in-and-opt-out-processes/about-opt-in-and-opt-out-in-campaign)</li></ul> |
 | Adobe客戶屬性(CRS) | ✓ | 不適用 | 資料主體的屬性會從系統中刪除。 | <ul><li>[存取/刪除GDPR的檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[存取/刪除CCPA的檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>客戶屬性無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | 當Experience Platform收到來自Privacy Service的刪除請求時，Platform會向Privacy Service傳送確認訊息，確認已收到請求並標籤要刪除受影響的資料。 隱私權工作完成後，記錄會從資料湖或設定檔存放區中移除。 在工作完成之前，資料會軟刪除，因此任何平台服務都無法存取。 | <ul><li>[存取/刪除資料湖的檔案](../catalog/privacy.md)</li><li>[存取/刪除Identity服務的檔案](../identity-service/privacy.md)</li><li>[存取/刪除即時客戶個人檔案的檔案](../profile/privacy.md)</li><li>[!DNL Experience Platform]會針對對象區段](../segmentation/tutorials/consents.md)執行[個選擇退出請求。</li></ul> |
 | Adobe Journey Optimizer | ✓ | 不適用 | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/privacy/requests)</li></ul> |
