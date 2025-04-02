@@ -4,9 +4,9 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的分析，或針對從Experience Platform匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
+source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2701'
 ht-degree: 8%
 
 ---
@@ -158,6 +158,10 @@ curl --location --request POST 'https://some-api.com/token' \
 如果您選取&#x200B;**[!UICONTROL OAuth 2使用者端認證]**&#x200B;驗證型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL 連線至目的地]**：
 
 ![UI熒幕的影像，您可在此使用OAuth 2搭配使用者端憑證驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+
+>[!WARNING]
+> 
+>使用[!UICONTROL OAuth 2使用者端認證]驗證時，[!UICONTROL 存取權杖URL]最多可以有一個查詢引數。 新增包含更多查詢引數的[!UICONTROL 存取權杖URL]可能會導致連線到端點時發生問題。
 
 * **[!UICONTROL 存取權杖URL]**：您那邊發行存取權杖的URL，並可選擇重新整理權杖。
 * **[!UICONTROL 使用者端識別碼]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
