@@ -2,9 +2,9 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
+source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2485'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 7%
 
 沙箱工具功能可讓您將[!DNL Adobe Real-Time Customer Data Platform]和[!DNL Adobe Journey Optimizer]物件匯出至封裝。
 
-### Real-time Customer Data Platform物件 {#real-time-cdp-objects}
+### 即時客戶資料平台物件 {#real-time-cdp-objects}
 
 下表列出目前沙箱工具支援的[!DNL Adobe Real-Time Customer Data Platform]物件：
 
@@ -31,7 +31,7 @@ ht-degree: 7%
 | --- | --- | --- |
 | 客戶資料平台 | 來源 | 出於安全原因，不會將來源帳戶認證復寫到目標沙箱中，而是需要手動更新。 依照預設，來源資料流會以草稿狀態複製。 |
 | 客戶資料平台 | 客群 | 僅支援&#x200B;**[!UICONTROL 客戶對象]**&#x200B;型別&#x200B;**[!UICONTROL 細分服務]**。 用於同意和管理的現有標籤將複製到相同的匯入工作中。 檢查合併原則相依性時，系統將在具有相同XDM類別的目標沙箱中自動選取預設合併原則。 |
-| 客戶資料平台 | 身分 | 在Adobe沙箱中建立時，系統會自動刪除重複的Target標準身分名稱空間。 對象規則中的所有屬性都已在聯合結構描述中啟用時，才能複製對象。 必須先移動並啟用統一設定檔的必要結構描述。 |
+| 客戶資料平台 | 身分識別 | 系統將在Target沙箱中建立時自動刪除重複的Adobe標準身分名稱空間。 對象規則中的所有屬性都已在聯合結構描述中啟用時，才能複製對象。 必須先移動並啟用統一設定檔的必要結構描述。 |
 | 客戶資料平台 | 結構描述 | 用於同意和管理的現有標籤將複製到相同的匯入工作中。 使用者可靈活地匯入未啟用統一設定檔選項的結構描述。 封裝中不包含結構描述關聯邊緣案例。 |
 | 客戶資料平台 | 資料集 | 資料集複製時會預設停用整合設定檔設定。 |
 | 客戶資料平台 | 同意和治理原則 | 將使用者建立的自訂原則新增至套件，並橫跨沙箱移動這些原則。 |
@@ -60,6 +60,7 @@ ht-degree: 7%
 | [!DNL Adobe Journey Optimizer] | 歷程 | 將整個歷程新增至套件時，將會複製歷程所依賴的大部分物件，包括對象、結構描述、事件和動作。 |
 | [!DNL Adobe Journey Optimizer] | 內容範本 | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer行銷活動和歷程中重複使用自訂內容。 |
 | [!DNL Adobe Journey Optimizer] | 片段 | 片段可以復製為歷程物件的相依物件。 片段是可重複使用的元件，可在各個Journey Optimizer促銷活動和歷程的一封或多封電子郵件中參考。 |
+| [!DNL Adobe Journey Optimizer] | 行銷活動 | 行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如決定專案、資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。 |
 
 不會複製曲面（例如預設集）。 系統會根據訊息型別和表面名稱，自動選取目標沙箱上最接近的相符專案。 如果在目標沙箱上找不到表面，則表面複製將失敗，導致訊息複製失敗，因為訊息需要表面才能用於設定。 在這種情況下，至少需要為訊息的正確通道建立一個表面，副本才能運作。
 
@@ -114,13 +115,13 @@ ht-degree: 7%
 
 ![[!UICONTROL 新增到封裝]對話方塊，顯示下拉式清單中選取的封裝。](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-會列出加入封裝的物件清單。 若要發佈套件並使其可匯入沙箱，請選取&#x200B;**[!UICONTROL Publish]**。
+會列出加入封裝的物件清單。 若要發佈封裝並使其可匯入沙箱，請選取&#x200B;**[!UICONTROL 發佈]**。
 
-![封裝中的物件清單，醒目提示[!UICONTROL Publish]選項。](../images/ui/sandbox-tooling/publish-package.png)
+![封裝中的物件清單，醒目顯示[!UICONTROL 發佈]選項。](../images/ui/sandbox-tooling/publish-package.png)
 
-選取&#x200B;**[!UICONTROL Publish]**&#x200B;以確認發佈封裝。
+選取&#x200B;**[!UICONTROL 發佈]**&#x200B;以確認發佈封裝。
 
-![Publish封裝確認對話方塊，醒目提示[!UICONTROL Publish]選項。](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![發佈封裝確認對話方塊，醒目提示[!UICONTROL 發佈]選項。](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
@@ -191,7 +192,7 @@ ht-degree: 7%
 
 ![ [!UICONTROL 建立封裝]對話方塊顯示已完成的欄位並醒目提示[!UICONTROL 建立]。](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-已成功建立封裝，請選取&#x200B;**[!UICONTROL Publish]**&#x200B;以發佈封裝。
+已成功建立封裝，請選取&#x200B;**[!UICONTROL 發佈]**&#x200B;以發佈封裝。
 
 ![醒目提示新發佈封裝的沙箱封裝清單。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
@@ -261,6 +262,6 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ## 後續步驟
 
-本檔案會示範如何在Experience PlatformUI中使用沙箱工具功能。 如需沙箱的相關資訊，請參閱[沙箱使用手冊](../ui/user-guide.md)。
+本檔案會示範如何使用Experience Platform UI中的沙箱工具功能。 如需沙箱的相關資訊，請參閱[沙箱使用手冊](../ui/user-guide.md)。
 
 如需使用沙箱API執行不同作業的步驟，請參閱[沙箱開發人員指南](../api/getting-started.md)。 如需Experience Platform中沙箱的整體概觀，請參閱[概觀檔案](../home.md)。
