@@ -3,9 +3,9 @@ title: Segmentation Service API指南
 description: 分段服務API可讓開發人員以程式設計方式管理Adobe Experience Platform中的分段作業。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 3%
 
 ---
@@ -18,9 +18,9 @@ Adobe Experience Platform [!DNL Segmentation Service]可讓您從[!DNL Real-Time
 
 若要檢視所有可用的端點和CRUD作業，請參閱[Segmentation Service API參考](https://www.adobe.io/experience-platform-apis/references/segmentation/)。
 
-## 對象
+## 客群
 
-對象是具有相同類似行為和/或特徵的人物集合。 這些可透過使用Platform或從外部來源產生。 您可以使用`/audiences`端點來擷取所有對象、建立新對象、擷取特定對象的詳細資料、更新特定對象或刪除特定對象。
+對象是具有相同類似行為和/或特徵的人物集合。 這些可透過Experience Platform或從外部來源產生。 您可以使用`/audiences`端點來擷取所有對象、建立新對象、擷取特定對象的詳細資料、更新特定對象或刪除特定對象。
 
 如需使用此端點的詳細資訊，請參閱[對象端點指南](./audiences.md)。
 
@@ -62,4 +62,4 @@ Adobe Experience Platform [!DNL Segmentation Service]可讓您從[!DNL Real-Time
 
 ## 後續步驟
 
-若要開始使用[!DNL Segmentation Service] API，請檢閱不同的端點指南，以取得有關如何呼叫服務各種端點的詳細步驟。 若要進一步瞭解如何使用[!DNL Platform] UI處理區段，請參閱[分段使用手冊](../ui/overview.md)。
+若要開始使用[!DNL Segmentation Service] API，請檢閱不同的端點指南，以取得有關如何呼叫服務各種端點的詳細步驟。 若要進一步瞭解如何使用[!DNL Experience Platform] UI處理區段，請參閱[分段使用手冊](../ui/overview.md)。

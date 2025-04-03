@@ -3,9 +3,9 @@ title: Audiences API端點
 description: 使用Adobe Experience Platform Segmentation Service API中的受眾端點，以程式設計方式建立、管理和更新您組織的受眾。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
+source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1592'
 ht-degree: 2%
 
 ---
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | 對象名稱。 |
 | `namespace` | 對象的名稱空間。 |
 | `description` | 對象說明。 |
-| `type` | 系統產生的欄位，顯示對象是平台產生的還是外部產生的對象。 可能的值包括`SegmentDefinition`和`ExternalSegment`。 `SegmentDefinition`是指在Platform中產生的對象，而`ExternalSegment`是指未在Platform中產生的對象。 |
+| `type` | 系統產生的欄位，顯示對象是平台產生的還是外部產生的對象。 可能的值包括`SegmentDefinition`和`ExternalSegment`。 `SegmentDefinition`參考在Experience Platform中產生的對象，而`ExternalSegment`參考未在Experience Platform中產生的對象。 |
 | `expression` | 包含對象PQL運算式的物件。 |
 | `lifecycleState` | 對象的狀態。 可能的值包括`draft`、`published`和`inactive`。 `draft`代表建立對象時、`published`代表發佈對象時，以及`inactive`代表對象不再作用中。 |
 | `datasetId` | 可找到對象資料的資料集ID。 |
@@ -482,7 +482,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **回應**
 
-成功的回應會傳回HTTP狀態200以及您新更新對象的詳細資料。 請注意，您的對象詳細資訊會因平台產生的對象或外部產生的對象而有所不同。
+成功的回應會傳回HTTP狀態200以及您新更新對象的詳細資料。 請注意，根據您對象是Experience Platform產生的對象還是外部產生的對象，對象的詳細資訊會有所不同。
 
 +++更新整個對象時的範例回應。
 
@@ -490,7 +490,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -565,7 +565,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

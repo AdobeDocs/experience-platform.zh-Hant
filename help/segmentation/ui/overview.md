@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 2%
 
 - [[!DNL Segmentation Service]](../home.md)： [!DNL Segmentation Service]可讓您將儲存在[!DNL Experience Platform]中與個人（例如客戶、潛在客戶、使用者或組織）相關的資料分割成較小的群組。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：透過從擷取至[!DNL Platform]的不同資料來源橋接身分，以建立客戶設定檔。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：透過從擷取至[!DNL Experience Platform]的不同資料來源橋接身分，以建立客戶設定檔。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
 
 您也應該瞭解在本檔案中使用的以下主要辭彙，並瞭解它們之間的差異：
 
-- **對象**：一組具有類似行為和/或特徵的人。 此人員集合可透過Adobe Experience Platform使用區段定義（平台產生的對象）、對象構成產生，或從外部來源（例如自訂上傳） （外部產生的對象）產生。
+- **對象**：一組具有類似行為和/或特徵的人。 此人員集合可由Adobe Experience Platform使用區段定義（Experience Platform產生的對象）、對象構成產生，或由外部來源（例如自訂上傳）產生（外部產生的對象）。
 - **區段定義**： Adobe Experience Platform用來描述目標對象關鍵特性或行為的規則。
 - **區段**：將設定檔分隔成對象的動作。
 
@@ -35,7 +35,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您的組織剛開始使用Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL 受眾]儀表板。 相反，[!UICONTROL 概觀]索引標籤會顯示連結和檔案，以幫助您開始使用對象。
+>如果您的組織剛開始使用Experience Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL 受眾]儀表板。 相反，[!UICONTROL 概觀]索引標籤會顯示連結和檔案，以幫助您開始使用對象。
 
 ### [!UICONTROL 對象]儀表板 {#segments-dashboard}
 
@@ -49,7 +49,7 @@ ht-degree: 2%
 
 選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以檢視對象入口網站。 Audience Portal提供屬於您組織和沙箱的所有受眾清單，並包含設定檔計數、來源、建立日期、上次修改日期、標籤和劃分等詳細資訊。
 
-此外，Audience Portal可讓您使用「區段產生器」或「對象構成」建立新對象，以及將外部產生的對象匯入Platform。
+此外，對象入口網站可讓您使用區段產生器或對象構成建立新對象，以及將外部產生的對象匯入Experience Platform。
 
 如需對象入口網站的詳細資訊，請閱讀[對象入口網站概觀](./audience-portal.md)。
 
@@ -98,7 +98,7 @@ ht-degree: 2%
 
 ## 串流區段 {#streaming-segmentation}
 
-串流區段是近乎即時對[!DNL Platform]執行區段的能力，同時著重於資料豐富度。 有了串流區段，現在當資料進入[!DNL Platform]時，區段的資格就會發生，而不需要排程和執行區段工作。
+串流區段是近乎即時對[!DNL Experience Platform]執行區段的能力，同時著重於資料豐富度。 有了串流區段，現在當資料進入[!DNL Experience Platform]時，區段的資格就會發生，而不需要排程和執行區段工作。
 
 如需串流區段的詳細資訊，請參閱[串流區段使用手冊](../methods/streaming-segmentation.md)。
 
@@ -108,7 +108,7 @@ ht-degree: 2%
 
 ## 邊緣分段 {#edge-segmentation}
 
-Edge區段能夠在邊緣即時評估Platform中的受眾，啟用相同頁面和下一頁個人化使用案例。
+Edge區段能夠在邊緣即時評估Experience Platform中的對象，啟用相同頁面和下一頁個人化使用案例。
 
 您可以在[邊緣細分UI指南](../methods/edge-segmentation.md)中找到邊緣細分的詳細資訊
 

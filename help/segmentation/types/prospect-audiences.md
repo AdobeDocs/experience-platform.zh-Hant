@@ -3,9 +3,9 @@ title: 潛在客戶對象
 description: 瞭解如何使用協力廠商資訊建立和使用潛在客戶受眾，以鎖定未知的客戶。
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ Adobe Experience Platform可讓您為[潛在客戶設定檔](../../profile/ui/pr
 
 ## 建議的使用案例 {#use-cases}
 
-若要瞭解如何在Experience Platform中結合其他Platform功能使用潛在客戶對象功能，請閱讀以下使用案例檔案：
+若要瞭解如何在Experience Platform中將潛在客戶對象功能與其他Experience Platform功能搭配使用，請參閱下列使用案例檔案：
 
 - [透過潛在客戶功能吸引和贏取新客戶](../../rtcdp/partner-data/prospecting.md)
 

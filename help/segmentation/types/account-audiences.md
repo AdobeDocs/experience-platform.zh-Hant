@@ -4,9 +4,9 @@ description: 瞭解如何建立和使用帳戶對象，以定位下游目的地�
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 21%
 
 ![帳戶對象瀏覽頁面會醒目顯示[!UICONTROL 建立對象]按鈕。](../images/types/account/select-create-audience.png)
 
-「區段產生器」隨即顯示。 帳戶屬性和對象會顯示在左側導覽列上。 在[!UICONTROL 屬性]標籤下，您可以同時新增Platform建立和自訂屬性。
+「區段產生器」隨即顯示。 帳戶屬性和對象會顯示在左側導覽列上。 在[!UICONTROL 屬性]標籤下方，您可以同時新增Experience Platform建立的屬性和自訂屬性。
 
 ![會顯示區段產生器。 請注意，只會顯示屬性和對象。](../images/types/account/segment-builder.png)
 
@@ -116,7 +116,7 @@ ht-degree: 21%
 
 ## 後續步驟 {#next-steps}
 
-閱讀本指南後，您現在已更瞭解如何在Adobe Experience Platform中建立和使用您的帳戶對象。 若要瞭解如何在Platform中使用其他型別的對象，請閱讀[對象型別概觀](./overview.md)。
+閱讀本指南後，您現在已更瞭解如何在Adobe Experience Platform中建立和使用您的帳戶對象。 若要瞭解如何在Experience Platform中使用其他型別的對象，請閱讀[對象型別概觀](./overview.md)。
 
 ## 附錄 {#appendix}
 

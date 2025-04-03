@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 在區段定義中遵循同意
 description: 瞭解如何在細分操作中遵循個人資料收集和分享的客戶同意偏好設定。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 接受客戶同意值需要瞭解所涉及的各種[!DNL Adobe Experience Platform]服務。 開始進行本教學課程之前，請確定您熟悉下列服務：
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Experience Platform組織客戶體驗資料的標準化架構。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您從[!DNL Real-Time Customer Profile]資料建立對象。
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 依照本教學課程進行，您現在應該能更清楚瞭解在Experience Platform中建立區段定義時，如何遵循客戶同意和偏好設定。
 
-如需在Platform中管理同意的詳細資訊，請參閱下列檔案：
+如需在Experience Platform中管理同意的詳細資訊，請參閱下列檔案：
 
 * [使用Adobe標準進行同意處理](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [使用IAB TCF 2.0標準進行同意處理](../../landing/governance-privacy-security/consent/iab/overview.md)

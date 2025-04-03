@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2345'
 ht-degree: 16%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 16%
 >- 管理設定檔
 >- 管理合併原則
 >
->您可以在[存取控制總覽](../../access-control/home.md#permissions)中找到有關Platform內許可權的更多資訊。
+>您可以在[存取控制總覽](../../access-control/home.md#permissions)中找到Experience Platform內許可權的詳細資訊。
 
 >[!NOTE]
 >

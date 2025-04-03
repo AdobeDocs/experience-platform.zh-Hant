@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
 workflow-type: tm+mt
-source-wordcount: '4310'
+source-wordcount: '4356'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
    - [使用區段產生器建立受眾](#segment-builder)
    - [使用對象構成來建立對象](#audience-composition)
    - [使用同盟對象構成，使用您現有資料倉儲中的資料來建立對象](#fac)
+   - [使用Data Distiller建立對象](#data-distiller)
 - [匯入外部產生的客群](#import-audience)
 
 若要開啟Audience Portal，請選取「細分」區段內的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤。
@@ -57,7 +58,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | [!UICONTROL 編輯] | 分段服務 | 開啟區段產生器以編輯您的對象。 請注意，如果您的對象是透過API建立的，您將&#x200B;**無法**&#x200B;使用區段產生器編輯對象。 如需使用區段產生器的詳細資訊，請參閱[區段產生器UI指南](./segment-builder.md)。 |
 | [!UICONTROL 開啟構成] | 客群構成 | 開啟「對象」構成來檢視對象。 如需對象構成的詳細資訊，請參閱[對象構成UI指南](./audience-composition.md)。 |
 | [!UICONTROL 啟用到目的地] | 分段服務 | 將對象啟用至目的地。 如需將對象啟用至目的地的詳細資訊，請參閱[啟用概觀](../../destinations/ui/activation-overview.md)。 |
-| [!UICONTROL 與合作夥伴共用] | 對象構成、自訂上傳、細分服務 | 與其他Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請閱讀[區段比對總覽](./segment-match/overview.md)。 |
+| [!UICONTROL 與合作夥伴共用] | 對象構成、自訂上傳、細分服務 | 與其他Experience Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請閱讀[區段比對總覽](./segment-match/overview.md)。 |
 | [!UICONTROL 管理標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的使用者定義標籤。 如需有關此功能的詳細資訊，請閱讀[篩選和標籤](#manage-audiences)的章節。 |
 | [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 管理對象所屬的資料夾。 如需有關此功能的詳細資訊，請閱讀[篩選和標籤](#manage-audiences)的章節。 |
 | [!UICONTROL 副本] | 分段服務 | 複製選取的對象。 您可以在[區段常見問答集](../faq.md#copy)中找到有關此函式的詳細資訊。 |
@@ -274,7 +275,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ### 客群總計 {#audience-total}
 
-針對平台產生的對象和組合，**[!UICONTROL 對象總計]**&#x200B;區段會顯示符合對象資格的設定檔總數。
+針對Experience Platform產生的對象和組合，**[!UICONTROL 對象總計]**&#x200B;區段會顯示符合對象資格的設定檔總數。
 
 >[!NOTE]
 >
@@ -297,7 +298,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | 設定檔計數 | 符合對象資格的設定檔總數。 |
 | 資料集名稱 | 對象所擷取的資料集名稱。 您可以選取資料集名稱，以取得資料集的詳細資訊。 若要深入瞭解資料集，請閱讀[資料集UI指南](../../catalog/datasets/user-guide.md)。 |
 | 資料集批次 | 對象所擷取的資料集ID。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
-| 輪廓批次 | 在Platform上建立設定檔的批次識別碼。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
+| 輪廓批次 | 在Experience Platform上建立設定檔的批次識別碼。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
 | 結構描述 | 對象所屬的結構描述名稱。 您可以選取結構描述的名稱，以檢視有關結構描述結構的資訊並套用資料使用標籤。 如需詳細資訊，請閱讀結構描述指南](../../xdm/tutorials/labels.md)的[管理資料使用標籤。 |
 | 已擷取的記錄 | 擷取到資料集中的記錄數。 |
 | 失敗的記錄 | 無法擷取到資料集中的記錄數。 |
@@ -385,9 +386,17 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ### 聯合客群構成 {#fac}
 
-除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成從企業資料集建立新受眾，無需複製基礎資料即可將這些受眾儲存至Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
+您可以使用Adobe Federated Audience Composition從企業資料集建立新對象，而不需複製基礎資料並將這些對象儲存於Adobe Experience Platform對象入口網站。
+
+您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
 
 ![在您組織的同盟對象組合中建立的對象清單。](../images/ui/overview/federated-audience-composition.png)
+
+### 資料蒸餾器 {#data-distiller}
+
+您可以使用Data Distiller的SQL擴充功能，從Data Lake建立對象。 此資料包含現有的維度實體，例如客戶屬性或產品資訊。
+
+有關資料Distiller的更多資訊，請參閱[使用SQL指南建立對象](../../query-service/data-distiller-audiences/overview.md)。
 
 ## 匯入對象 {#import-audience}
 
@@ -446,7 +455,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 >
 >此外，如果您的外部產生的對象包含敏感和/或醫療保健相關資訊，則您&#x200B;**必須**&#x200B;在將其啟用至任何目的地之前，先套用必要的資料使用標籤。 由於來自外部產生對象的變數會儲存在資料湖中，而非即時客戶個人檔案中，因此&#x200B;**不應**&#x200B;在CSV檔案中包含同意資料。
 >
->如需套用資料使用標籤的詳細資訊，請參閱[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 若要瞭解一般平台上的資料使用標籤，請閱讀[資料使用標籤概觀](../../data-governance/labels/overview.md)。 若要瞭解同意在外部產生的對象中如何運作，請閱讀[對象常見問題集](../faq.md#consent)。
+>如需套用資料使用標籤的詳細資訊，請參閱[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 若要瞭解一般的Experience Platform資料使用標籤，請閱讀[資料使用標籤概觀](../../data-governance/labels/overview.md)。 若要瞭解同意在外部產生的對象中如何運作，請閱讀[對象常見問題集](../faq.md#consent)。
 
 ## 後續步驟
 

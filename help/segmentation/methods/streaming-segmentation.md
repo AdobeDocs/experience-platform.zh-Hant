@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 串流分段指南
 description: 瞭解串流細分是什麼、如何建立使用串流細分評估的受眾，以及如何檢視使用串流細分建立的受眾。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 3f0cfd6c36344f481751bf05236df4fb288eab60
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1256'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 串流細分是近乎即時評估Adobe Experience Platform中的受眾，同時專注於資料豐富度的能力。
 
-有了串流區隔，現在當串流資料登陸至Platform時，就能進行對象資格，減少排程及執行區隔工作的需求。 這可讓您在資料傳入Platform時評估資料，讓對象成員資格自動保持在最新狀態。
+有了串流區隔，當串流資料進入Experience Platform時，對象資格就會立即生效，無需排程及執行區隔工作。 這可讓您在資料傳入Experience Platform時評估資料，讓對象成員資格自動保持在最新狀態。
 
 ## 合格的查詢型別 {#query-types}
 
@@ -312,7 +312,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 ![已選取串流更新頻率，顯示組織中使用串流細分評估的所有對象。](../images/methods/streaming/filter-streaming.png)
 
-若要進一步瞭解如何在Platform中檢視對象，請參閱[對象入口網站指南](../ui/audience-portal.md)。
+若要進一步瞭解如何在Experience Platform中檢視對象，請參閱[對象入口網站指南](../ui/audience-portal.md)。
 
 >[!ENDTABS]
 

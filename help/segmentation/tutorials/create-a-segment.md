@@ -4,9 +4,9 @@ title: 使用區段服務API建立區段定義
 type: Tutorial
 description: 按照本教學課程瞭解如何使用Adobe Experience Platform Segmentation Service API開發、測試、預覽和儲存區段定義。
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1067'
 ht-degree: 6%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 6%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您使用區段定義或其他外部來源，從即時客戶設定檔資料建立對象。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
 
-下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Platform] API。
+下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Experience Platform] API。
 
 ### 讀取範例 API 呼叫
 
@@ -33,19 +33,19 @@ ht-degree: 6%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人`{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 
@@ -72,7 +72,7 @@ ht-degree: 6%
 
 ### 如何產生預估值
 
-當啟用即時客戶個人檔案的資料擷取到Platform時，會儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過5%，則會觸發取樣工作以更新計數。 如果設定檔計數未變更超過5%，則取樣工作每週都會自動執行。
+為即時客戶個人檔案啟用的資料會擷取到Experience Platform中，並儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過5%，則會觸發取樣工作以更新計數。 如果設定檔計數未變更超過5%，則取樣工作每週都會自動執行。
 
 範例的觸發方式取決於所使用的擷取型別：
 
@@ -91,13 +91,13 @@ ht-degree: 6%
 
 ### 建立預覽工作
 
-您可以對`/preview`端點發出POST要求，以建立新的預覽作業。
+您可以對`/preview`端點發出POST要求，以建立新的預覽工作。
 
 建立預覽工作的詳細指示可以在[預覽和估計端點指南](../api/previews-and-estimates.md#create-preview)中找到。
 
 ### 檢視預估或預覽
 
-預估和預覽程式會以非同步方式執行，因為不同的查詢可能需要不同的時間長度才能完成。 開始查詢後，您可以使用API呼叫來擷取(GET)預估或預覽的目前狀態。
+預估和預覽程式會以非同步方式執行，因為不同的查詢可能需要不同的時間長度才能完成。 一旦啟動查詢後，您就可以使用API呼叫來擷取(GET)目前的預估或預覽狀態。
 
 使用[!DNL Segmentation Service] API，您可以依據預覽作業的ID來查詢其目前狀態。 如果狀態為「RESULT_READY」，則可以檢視結果。 若要查詢預覽工作的目前狀態，請閱讀預覽與預估端點指南中[擷取預覽工作區段](../api/previews-and-estimates.md#get-preview)的區段。 若要查詢預估工作的目前狀態，請閱讀預覽與預估端點指南中[擷取預估工作](../api/previews-and-estimates.md#get-estimate)一節。
 

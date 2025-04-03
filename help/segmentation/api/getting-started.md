@@ -5,7 +5,7 @@ title: Segmentation Service API快速入門
 description: 下列檔案提供成功使用分段API所需瞭解的其他資訊。
 role: Developer
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 7%
@@ -21,7 +21,7 @@ Adobe Experience Platform [!DNL Segmentation Service]可讓您從[!DNL Real-Time
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您從[!DNL Real-Time Customer Profile]資料建立對象。
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能成功使用[!DNL Segmentation] API。
 
@@ -31,13 +31,13 @@ Adobe Experience Platform [!DNL Segmentation Service]可讓您從[!DNL Real-Time
 
 ## 必要的標頭
 
-API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Platform]端點。 完成驗證教學課程會提供[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Experience Platform]端點。 完成驗證教學課程會提供[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 - 授權： `Bearer {ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要一個標頭，以指定將執行操作的沙箱名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要一個標頭，以指定將執行操作的沙箱名稱：
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 

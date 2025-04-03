@@ -5,9 +5,9 @@ description: 按照本教學課程瞭解如何搭配Adobe Experience Platform使
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1732'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 - [分段服務](../home.md)：可讓您從即時客戶設定檔資料建立對象。
 - [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
-- [體驗資料模型(XDM)](../../xdm/home.md)： Platform用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
-- [資料集](../../catalog/datasets/overview.md)：Experience Platform中資料持續性的儲存和管理結構。
+- [體驗資料模型(XDM)](../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
+- [資料集](../../catalog/datasets/overview.md)： Experience Platform中資料持續性的儲存和管理結構。
 - [串流擷取](../../ingestion/streaming-ingestion/overview.md)： Experience Platform如何從使用者端和伺服器端裝置即時擷取及儲存資料。
 
 ### 受眾vs區段定義
@@ -38,13 +38,13 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 區段定義包含名稱、說明、運算式（如果適用）、建立日期、上次修改日期及ID等資訊。 ID會將區段中繼資料連結至符合區段資格的個別設定檔，並屬於產生的對象。
 
-| 對象 | 區塊定義 |
+| 客群 | 區塊定義 |
 | --------- | ---------------- |
 | 您嘗試尋找的設定檔群組。 使用區段定義時，這表示這會是符合區段資格的設定檔群組。 | 用來區隔您所尋找對象的規則群組。 |
 
 ## 為外部對象建立身分名稱空間
 
-使用外部對象的第一個步驟是建立身分名稱空間。 身分名稱空間可讓Platform關聯受眾的來源。
+使用外部對象的第一個步驟是建立身分名稱空間。 身分名稱空間可讓Experience Platform關聯受眾的來源。
 
 若要建立身分名稱空間，請依照[身分名稱空間指南](../../identity-service/features/namespaces.md#manage-namespaces)中的指示操作。 建立您的身分名稱空間時，請將來源詳細資料新增至身分名稱空間，並將其[!UICONTROL 型別]標籤為&#x200B;**[!UICONTROL 非人員識別碼]**。
 
@@ -70,7 +70,7 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ![在結構描述編輯器中反白顯示啟用設定檔結構描述的切換。](../images/tutorials/external-audiences/schema-profile.png)
 
-現在，此結構描述已針對設定檔啟用，主要身分識別已指派給您建立的非個人身分名稱空間。 因此，這表示使用此結構描述匯入Platform的區段中繼資料將內嵌到設定檔中，而不會與其他人員相關的設定檔資料合併。
+現在，此結構描述已針對設定檔啟用，主要身分識別已指派給您建立的非個人身分名稱空間。 因此，這表示使用此結構描述匯入至Experience Platform的區段中繼資料將內嵌至設定檔中，而不會與其他人員相關的設定檔資料合併。
 
 ## 為結構描述建立資料集
 
@@ -86,7 +86,7 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ## 設定和匯入對象資料
 
-在啟用資料集後，現在可以透過UI或使用Experience Platform API將資料傳送到Platform。 您可以透過批次或串流連線擷取此資料。
+在啟用資料集後，現在可以透過UI或使用Experience Platform API將資料傳送到Experience Platform中。 您可以透過批次或串流連線擷取此資料。
 
 ### 使用批次連線擷取資料
 
@@ -102,7 +102,7 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ## 對象中繼資料結構
 
-建立連線後，您現在可以將資料內嵌至Platform。
+建立連線後，您現在可以將資料內嵌至Experience Platform。
 
 您可在下方看到外部對象裝載中繼資料的範例：
 
@@ -163,7 +163,7 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ## 附錄
 
-除了使用匯入的外部受眾中繼資料及使用這些中繼資料建立區段外，您也可以將外部區段會籍匯入至Platform。
+除了使用匯入的外部受眾中繼資料並使用它們建立區段外，您也可以將外部區段會籍匯入至Experience Platform。
 
 ### 設定外部區段會籍目的地結構描述
 
@@ -193,7 +193,7 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ## 設定和匯入外部對象成員資格資料
 
-在啟用資料集後，現在可以透過UI或使用Experience Platform API將資料傳送到Platform。 您可以透過批次或串流連線擷取此資料。
+在啟用資料集後，現在可以透過UI或使用Experience Platform API將資料傳送到Experience Platform中。 您可以透過批次或串流連線擷取此資料。
 
 ### 使用批次連線擷取資料
 
@@ -209,7 +209,7 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ## 區段會籍結構
 
-建立連線後，您現在可以將資料內嵌至Platform。
+建立連線後，您現在可以將資料內嵌至Experience Platform。
 
 您可在下方看到外部對象成員資格裝載的範例：
 

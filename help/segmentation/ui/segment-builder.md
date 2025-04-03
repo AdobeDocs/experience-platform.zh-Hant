@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4976'
-ht-degree: 8%
+source-wordcount: '4980'
+ht-degree: 7%
 
 ---
 
@@ -76,11 +76,11 @@ ht-degree: 8%
 
 您可以將單一或多個Adobe Analytics報表套裝的資料當成區段內的事件使用。
 
-使用單一Analytics報告套裝中的資料時，Platform會自動新增描述項和易記名稱至eVar，以便在[!DNL Segment Builder]中更輕鬆地尋找這些欄位。
+使用單一Analytics報告套裝中的資料時，Experience Platform會自動新增描述項和易記名稱至eVar，以便在[!DNL Segment Builder]中更輕鬆地尋找這些欄位。
 
 ![此影像顯示一般變數(eVar)如何以使用者易記名稱對應。](../images/ui/segment-builder/single-report-suite.png)
 
-使用多個Analytics報表套裝的資料時，平台&#x200B;**無法**&#x200B;自動將描述項或易記名稱新增至eVar。 因此，您必須先對應至XDM欄位，才能使用Analytics報表套裝的資料。 如需將Analytics變數對應至XDM的詳細資訊，請參閱[Adobe Analytics來源連線指南](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping)。
+使用來自多個Analytics報表套裝的資料時，Experience Platform **無法**&#x200B;自動將描述項或易記名稱新增到eVar。 因此，您必須先對應至XDM欄位，才能使用Analytics報表套裝的資料。 如需將Analytics變數對應至XDM的詳細資訊，請參閱[Adobe Analytics來源連線指南](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping)。
 
 例如，假設您有兩個報表套裝包含以下變數：
 
@@ -119,7 +119,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->對於在Platform內建立的對象，只會顯示具有&#x200B;**相同**&#x200B;合併原則的對象。
+>對於在Experience Platform中建立的對象，只會顯示具有&#x200B;**相同**&#x200B;合併原則的對象。
 
 **[!UICONTROL 對象]**&#x200B;索引標籤會列出從外部來源(例如Adobe Audience Manager或Customer Journey Analytics)匯入的所有對象，以及在[!DNL Experience Platform]內建立的對象。
 
@@ -182,7 +182,7 @@ ht-degree: 8%
 
 您可以從&#x200B;**[!UICONTROL 對象]**&#x200B;標籤將對象拖放到規則產生器畫布上，以參考新區段定義中的對象成員資格。 這可讓您在新的區段定義規則中，以屬性的形式包含或排除對象成員資格。
 
-針對使用[!DNL Segment Builder]建立的[!DNL Platform]個對象，您可以選擇將對象轉換為用於該對象區段定義的規則集。 此轉換會建立規則邏輯的副本，之後可加以修改而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存對區段定義所做的任何最近變更。
+針對使用[!DNL Segment Builder]建立的[!DNL Experience Platform]個對象，您可以選擇將對象轉換為用於該對象區段定義的規則集。 此轉換會建立規則邏輯的副本，之後可加以修改而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存對區段定義所做的任何最近變更。
 
 >[!NOTE]
 >
@@ -349,11 +349,11 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="合併原則"
->abstract="合併原則可讓不同的資料集合併，形成您的設定檔。平台已提供預設的合併原則，不然您也可以在設定檔中建立新的預設合併原則。針對此對象選擇和您的行銷目的相符的合併原則。"
+>abstract="合併原則可讓不同的資料集合併，形成您的設定檔。Experience Platform已提供預設合併原則，或者，您可以在設定檔中建立新的預設合併原則。 針對此對象選擇和您的行銷目的相符的合併原則。"
 
-[!DNL Experience Platform]可讓您將來自多個來源的資料彙集在一起，並加以合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是[!DNL Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立設定檔的規則。
+[!DNL Experience Platform]可讓您將來自多個來源的資料彙集在一起，並加以合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是[!DNL Experience Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立設定檔的規則。
 
-您可以為此對象選取符合行銷目的的合併原則，或使用[!DNL Platform]提供的預設合併原則。 您可以建立組織專屬的多個合併原則，包括建立您自己的預設合併原則。 如需建立組織合併原則的逐步指示，請先閱讀[合併原則概觀](../../profile/merge-policies/overview.md)。
+您可以為此對象選取符合行銷目的的合併原則，或使用[!DNL Experience Platform]提供的預設合併原則。 您可以建立組織專屬的多個合併原則，包括建立您自己的預設合併原則。 如需建立組織合併原則的逐步指示，請先閱讀[合併原則概觀](../../profile/merge-policies/overview.md)。
 
 若要為您的區段定義選取合併原則，請選取&#x200B;**[!UICONTROL 欄位]**&#x200B;索引標籤上的齒輪圖示，然後使用&#x200B;**[!UICONTROL 合併原則]**&#x200B;下拉式功能表來選取您要使用的合併原則。
 

@@ -4,7 +4,7 @@ title: 評估及存取區段結果
 type: Tutorial
 description: 按照本教學課程瞭解如何使用Adobe Experience Platform分段服務API評估區段定義及存取分段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 1%
@@ -22,23 +22,23 @@ ht-degree: 1%
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您從[!DNL Real-Time Customer Profile]資料建立對象。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
-- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 ### 必要的標頭
 
-此教學課程也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Platform] API。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+此教學課程也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Experience Platform] API。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人`{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的請求需要一個標頭，該標頭會指定將在其中執行操作的沙箱的名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的請求需要一個標頭，該標頭會指定將在其中執行操作的沙箱的名稱：
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有POST、PUT和PATCH請求都需要額外的標頭：
 
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 ### 建立排程
 
-透過向`/config/schedules`端點發出POST要求，您可以建立排程並包含應觸發排程的特定時間。
+透過向`/config/schedules`端點發出POST請求，您可以建立排程並包含應觸發排程的特定時間。
 
 您可以在[排程端點指南](../api/schedules.md#create)中找到有關使用此端點的詳細資訊
 
@@ -74,7 +74,7 @@ ht-degree: 1%
 
 ### 更新排程時間
 
-可以透過向`/config/schedules`端點發出PATCH請求並在路徑中包含排程的ID來更新排程計時。
+您可以透過向`/config/schedules`端點發出PATCH請求並在路徑中包含排程的ID來更新排程計時。
 
 您可以在[排程端點指南](../api/schedules.md#update-schedule)中找到有關使用此端點的詳細資訊
 
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 ## 解讀區段作業結果
 
-成功執行區段作業時，會針對區段定義中包含的每個設定檔更新`segmentMembership`對應。 `segmentMembership`也會儲存擷取至[!DNL Platform]的任何預先評估對象，以允許與其他解決方案（例如[!DNL Adobe Audience Manager]）整合。
+成功執行區段作業時，會針對區段定義中包含的每個設定檔更新`segmentMembership`對應。 `segmentMembership`也會儲存擷取至[!DNL Experience Platform]的任何預先評估對象，以允許與其他解決方案（例如[!DNL Adobe Audience Manager]）整合。
 
 下列範例顯示每個個別設定檔記錄的`segmentMembership`屬性外觀：
 
@@ -212,7 +212,7 @@ curl -X POST \
 
 ### 產生對象成員的設定檔 {#generate-profiles}
 
-擁有聯合持續資料集後，您可以建立匯出作業，以持續將對象成員存放在資料集，方法是向[!DNL Real-Time Customer Profile] API中的`/export/jobs`端點發出POST請求，並提供您要匯出的區段定義的資料集ID和區段定義資訊。
+擁有聯合持續資料集後，您可以建立匯出作業，以便持續將對象成員存放在資料集，方法是向[!DNL Real-Time Customer Profile] API中的`/export/jobs`端點發出POST請求，並提供您要匯出的區段定義的資料集ID和區段定義資訊。
 
 您可以在[匯出作業端點指南](../api/export-jobs.md#create)中找到有關使用此端點的詳細資訊
 

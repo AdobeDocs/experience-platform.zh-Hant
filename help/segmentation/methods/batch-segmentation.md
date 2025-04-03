@@ -1,13 +1,13 @@
 ---
 title: 批次分段指南
 description: 瞭解批次細分，包括內容、如何建立使用批次細分評估的對象，以及如何檢視使用批次細分建立的對象。
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
-
 
 # 批次分段指南
 
@@ -279,7 +279,7 @@ curl -X GET \
 
 ![已選取批次更新頻率，顯示組織中使用批次細分評估的所有對象。](../images/methods/batch/filter-batch.png)
 
-若要進一步瞭解如何在Platform中檢視對象，請參閱[對象入口網站指南](../ui/audience-portal.md)。
+若要進一步瞭解如何在Experience Platform中檢視對象，請參閱[對象入口網站指南](../ui/audience-portal.md)。
 
 >[!ENDTABS]
 

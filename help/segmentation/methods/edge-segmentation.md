@@ -1,15 +1,15 @@
 ---
 title: Edge分段指南
-description: 瞭解如何使用邊緣分段，在邊緣即時評估Platform中的受眾，啟用相同頁面和下一頁個人化使用案例。
+description: 瞭解如何使用邊緣細分即時評估Experience Platform中的對象，啟用相同頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 7ed92ed7573f82a2da2fc96f0868fe6f97a61899
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1154'
 ht-degree: 1%
 
 ---
 
-# Edge分段指南
+# 邊緣分段服務指南
 
 Edge區段能在Adobe Experience Platform中即時評估[邊緣](../../landing/edge-and-hub-comparison.md)的區段定義，啟用相同頁面和下一頁個人化使用案例。
 
@@ -302,7 +302,7 @@ curl -X GET \
 
 ![已選取Edge更新頻率，顯示組織中使用邊緣細分評估的所有對象。](../images/methods/edge/filter-edge.png)
 
-若要進一步瞭解如何在Platform中檢視對象，請參閱[對象入口網站指南](../ui/audience-portal.md)。
+若要進一步瞭解如何在Experience Platform中檢視對象，請參閱[對象入口網站指南](../ui/audience-portal.md)。
 
 >[!ENDTABS]
 

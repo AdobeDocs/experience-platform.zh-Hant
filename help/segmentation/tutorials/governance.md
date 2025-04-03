@@ -4,7 +4,7 @@ title: 使用API強制對象區段遵守資料使用規範
 type: Tutorial
 description: 本教學課程涵蓋使用API強制資料使用法規遵循區段定義的步驟。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 6%
@@ -19,16 +19,16 @@ ht-degree: 6%
 
 此教學課程需要您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md)： [!DNL Real-Time Customer Profile]是一般查詢實體存放區，用來管理[!DNL Platform]內的[!DNL Experience Data Model (XDM)]資料。 設定檔會合併各種企業資料資產的資料，並在統一的簡報中提供該資料的存取權。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)： [!DNL Real-Time Customer Profile]是一般查詢實體存放區，用來管理[!DNL Experience Platform]內的[!DNL Experience Data Model (XDM)]資料。 設定檔會合併各種企業資料資產的資料，並在統一的簡報中提供該資料的存取權。
    - [合併原則](../../profile/api/merge-policies.md)： [!DNL Real-Time Customer Profile]用來決定哪些資料可以在特定條件下合併到統一檢視中的規則。 您可以針對資料控管目的設定合併原則。
 - [[!DNL Segmentation]](../home.md)： [!DNL Real-Time Customer Profile]如何將設定檔存放區中包含的大量個人群組劃分為具有類似特徵且會以類似方式回應行銷策略的較小群組。
 - [資料控管](../../data-governance/home.md)：「資料控管」使用下列元件，提供資料使用標籤與強制實施的基礎結構：
    - [資料使用標籤](../../data-governance/labels/user-guide.md)：用來描述資料集和欄位的標籤，以處理其個別資料的敏感度等級。
    - [資料使用原則](../../data-governance/policies/overview.md)：指出對依特定資料使用標籤分類的資料允許哪些行銷動作的設定。
    - [原則執行](../../data-governance/enforcement/overview.md)：可讓您執行資料使用原則，並防止構成原則違規的資料作業。
-- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Platform] API。
+下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Experience Platform] API。
 
 ### 讀取範例 API 呼叫
 
@@ -36,19 +36,19 @@ ht-degree: 6%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人`{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 
@@ -124,7 +124,7 @@ curl -X GET \
 
 ## 從合併原則尋找來源資料集 {#datasets}
 
-合併原則包含其來源資料集的相關資訊，而來源資料集又包含資料使用標籤。 您可以在[!DNL Profile] API的GET要求中提供合併原則ID，以查詢合併原則的詳細資料。 您可以在[合併原則端點指南](../../profile/api/merge-policies.md)中找到有關合併原則的更多資訊。
+合併原則包含其來源資料集的相關資訊，而來源資料集又包含資料使用標籤。 您可以在GET要求中向[!DNL Profile] API提供合併原則ID，藉此查詢合併原則的詳細資料。 您可以在[合併原則端點指南](../../profile/api/merge-policies.md)中找到有關合併原則的更多資訊。
 
 **API格式**
 

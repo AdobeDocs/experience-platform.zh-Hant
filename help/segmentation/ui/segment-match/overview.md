@@ -2,18 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；分段；區段比對；區段比對
 solution: Experience Platform
 title: 區段比對概觀
-description: 「區段比對」是Adobe Experience Platform中的區段共用服務，可讓兩位或以上的Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。
+description: 「區段比對」是Adobe Experience Platform中的區段共用服務，可讓兩位或更多Experience Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 2%
+source-wordcount: '1978'
+ht-degree: 3%
 
 ---
 
 # [!DNL Segment Match] 概觀
 
-Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位或以上的Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。 [!DNL Segment Match]使用Platform隱私權標準和個人識別碼，例如雜湊電子郵件、雜湊電話號碼以及裝置識別碼，例如IDFA和GAID。
+Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位或以上的Experience Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。 [!DNL Segment Match]使用Experience Platform隱私權標準和個人識別碼，例如雜湊電子郵件、雜湊電話號碼以及裝置識別碼，例如IDFA和GAID。
 
 透過[!DNL Segment Match]，您可以：
 
@@ -44,9 +44,9 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 | 命名空間 | 說明 |
 | --------- | ----------- |
-| 電子郵件 (SHA256，小寫) | 預先雜湊電子郵件地址的名稱空間。 使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 Platform提供兩種支援資料收集雜湊的方法，透過[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)和透過[資料準備](../../../data-prep/functions.md#hashing)。 |
-| 電話(SHA256_E.164) | 代表需要使用SHA256和E.164格式雜湊的原始電話號碼的名稱空間。 |
-| ECID | 代表Experience CloudID (ECID)值的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID總覽](../../../identity-service/features/ecid.md)。 |
+| 電子郵件 (SHA256，小寫) | 預先雜湊電子郵件地址的名稱空間。使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 Experience Platform提供兩種支援資料收集雜湊的方法，透過[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)和[資料準備](../../../data-prep/functions.md#hashing)。 |
+| 電話(SHA256_E.164) | 表示需要使用 SHA256 和 E.164 格式進行雜湊的原始電話號碼的命名空間。 |
+| ECID | 代表Experience Cloud ID (ECID)值的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID總覽](../../../identity-service/features/ecid.md)。 |
 | Apple IDFA （廣告商的ID） | 代表廣告商Apple ID的名稱空間。 如需詳細資訊，請參閱下列有關[興趣型廣告](https://support.apple.com/en-us/HT202074)的檔案。 |
 | Google 廣告 ID | 代表Google Advertising ID的名稱空間。 如需詳細資訊，請參閱[Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)上的下列檔案。 |
 
@@ -56,7 +56,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 選擇加入和選擇退出同意檢查會決定您預設是否可以在同意下操作，以共用使用者資料。 如果同意設定預設設為`opt-out`，則除非使用者明確選擇退出，否則可以共用使用者資料。 如果預設值設為`opt-in`，則無法共用使用者資料，除非使用者明確選擇加入。
 
-[!DNL Segment Match]的預設同意設定設為`opt-out`。 若要對您的資料強制執行選擇加入模式，請傳送電子郵件要求給您的Adobe帳戶團隊。
+[!DNL Segment Match]的預設同意設定設為`opt-out`。 若要對您的資料強制執行選擇加入模型，請傳送電子郵件要求給您的Adobe帳戶團隊。
 
 如需有關用來設定資料共用同意值的`share`屬性的詳細資訊，請參閱下列有關[隱私權與同意欄位群組](../../../xdm/field-groups/profile/consents.md)的檔案。 如需用於擷取消費者同意收集及使用隱私、個人化和行銷偏好設定相關資料的特定欄位群組資訊，請參閱下列[隱私同意、Personalization和行銷偏好設定GitHub範例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)。
 
@@ -64,7 +64,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 您必須建立的最後一個先決條件是設定新的資料使用標籤，以防止資料共用。 透過資料使用標籤，您可以管理哪些資料允許透過[!DNL Segment Match]共用。
 
-資料使用情況標籤可讓您根據套用至該資料的使用原則來分類資料集和欄位。 標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料內嵌至Experience Platform後，或資料可在Platform中使用時，立即加上標籤。
+資料使用情況標籤可讓您根據套用至該資料的使用原則來分類資料集和欄位。 標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料內嵌至Experience Platform後立即加上標籤，或資料可在Experience Platform中使用後立即加上標籤。
 
 [!DNL Segment Match]使用C11標籤，這是[!DNL Segment Match]專屬的合約標籤，您可以手動新增到任何資料集或屬性，以確保這些資料集或屬性不會從[!DNL Segment Match]合作夥伴共用程式中排除。 C11標籤表示不應在[!DNL Segment Match]處理程式中使用的資料。 在您決定要從[!DNL Segment Match]排除的資料集和/或欄位並相應地新增C11標籤後，[!DNL Segment Match]工作流程會自動強制該標籤。 [!DNL Segment Match]會自動啟用[!UICONTROL 限制資料共用]核心原則。 如需如何將資料使用標籤套用至資料集的特定指示，請參閱有關[在UI](../../../data-governance/labels/user-guide.md)中管理資料使用標籤的教學課程。
 
@@ -87,7 +87,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 ### 管理合作夥伴
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 區段]**，然後從頂端標題選取&#x200B;**[!UICONTROL 摘要]**。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 區段]**，然後從頂端標題選取&#x200B;**[!UICONTROL 摘要]**。
 
 ![segments-feed.png](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 ![manage-partners.png](./images/manage-partners.png)
 
-兩個合作夥伴之間的連線是「雙向交握」，可作為使用者在沙箱層級將其Platform組織連結在一起的自助方法。 必須有連線，才能通知Platform已建立合約，且Platform可協助您與合作夥伴共用服務。
+兩個合作夥伴之間的連線是「雙向交握」，可作為使用者在沙箱層級將其Experience Platform組織連結在一起的自助方法。 您必須建立連線，才能通知Experience Platform已建立合約，且Experience Platform可協助您與合作夥伴共用服務。
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 >abstract="受限制的行銷使用案例有助於為您的合作夥伴提供指引，以確保根據您的資料控管限制正確使用共用的區段。"
 >text="Learn more in documentation"
 
-**摘要**&#x200B;是一組資料（區段）、如何公開或使用該資料的規則，以及決定如何將您的資料與合作夥伴的資料比對的設定。 摘要可以獨立管理，並可透過[!DNL Segment Match]與其他Platform使用者交換。
+**摘要**&#x200B;是一組資料（區段）、如何公開或使用該資料的規則，以及決定如何將您的資料與合作夥伴的資料比對的設定。 摘要可以獨立管理，並可透過[!DNL Segment Match]與其他Experience Platform使用者交換。
 
 若要建立新的摘要，請從[!UICONTROL 摘要]儀表板選取&#x200B;**[!UICONTROL 建立摘要]**。
 

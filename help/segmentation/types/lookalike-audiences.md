@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 相似的對象
 description: 瞭解如何使用Adobe Experience Platform中的相似受眾鎖定新的高價值受眾。
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 9%
 
 為了使用相似見解，基礎對象&#x200B;**必須**&#x200B;符合以下資格條件：
 
-- 基礎對象&#x200B;**必須在Platform中建立**。
+- 必須在Experience Platform中建立基礎對象&#x200B;****。
    - 外部產生的對象&#x200B;**不**&#x200B;符合相似深入分析的資格。
 - 基礎對象&#x200B;**必須**&#x200B;使用預設的合併原則。
 - 基礎對象&#x200B;**必須**&#x200B;不使用資料控管所限制的欄位。
