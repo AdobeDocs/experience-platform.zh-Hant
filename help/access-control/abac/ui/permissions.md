@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理角色許可權
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面設定角色許可權的相關資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1699'
-ht-degree: 16%
+source-wordcount: '1703'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="什麼是角色？"
->abstract="角色會定義管理員、專家或一般使用者對組織資源的存取權。角色會將與平台執行個體互動的使用者分類，也是存取控制原則的建置區塊。一個角色具有特定一組權限，而您可以根據組織成員所需的檢視範圍或寫入存取權，對成員指派一個或多個角色。"
+>abstract="角色會定義管理員、專家或一般使用者對組織資源的存取權。它們會將與您的Experience Platform執行個體互動的使用者分類，並且是存取控制原則的建置區塊。 一個角色具有特定一組權限，而您可以根據組織成員所需的檢視範圍或寫入存取權，對成員指派一個或多個角色。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="管理角色"
 
 >[!IMPORTANT]
@@ -123,8 +123,8 @@ UI中的角色可使用下列篩選器：
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="什麼是 API 認證？"
->abstract="指派給各個角色的 API 認證，將賦予使用者和開發人員存取 Platform API 的權限。您可以使用 Platform API 以程式設計的方式對資料執行基本的 CRUD (建立、讀取、更新、刪除) 操作，例如設定計算屬性、存取資料/實體、匯出資料、刪除不需要的資料或批次等。"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API 指南"
+>abstract="系統會將API憑證指派給角色，以授予使用者和開發人員對Experience Platform API的存取權。 您可以使用Experience Platform API，以程式設計方式執行資料上的基本CRUD （建立、讀取、更新、刪除）操作，例如設定計算屬性、存取資料/實體、匯出資料、刪除不需要的資料或批次等。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API指南"
 
 >[!IMPORTANT]
 >
@@ -204,7 +204,7 @@ UI中的角色可使用下列篩選器：
 
 **[!UICONTROL 選取產品設定檔]**&#x200B;對話方塊就會顯示。 選取&#x200B;**[!UICONTROL AEP-Default-All-Users]**，然後選取&#x200B;**[!UICONTROL 儲存]**。
 
-![已選取AEP-Default-All-Users並套用的選取產品設定檔對話方塊反白顯示。](../../images/flac-ui/product-profile-select-product-profiles.png)
+![已選取並套用AEP-Default-All-Users的「選取產品設定檔」對話方塊反白顯示。](../../images/flac-ui/product-profile-select-product-profiles.png)
 
 檢閱資訊，然後選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以新增使用者。
 

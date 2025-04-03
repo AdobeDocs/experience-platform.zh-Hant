@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中管理資料使用原則
 description: Adobe Experience Platform資料控管提供使用者介面，可讓您建立和管理資料使用原則。 本檔案概述您可以在Experience Platform使用者介面的「原則」工作區中執行的動作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 16%
+source-wordcount: '1769'
+ht-degree: 15%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="在您的設定檔資料中整合並強制執行客戶同意"
->abstract="<h2>說明</h2><p>Platform 可讓您將從客戶收集來的同意資料整合到他們各自的設定檔中。然後，您可以設定同意原則以確定此資料是否可以包含在已啟用至特定目的地的區段中。</p>"
+>abstract="<h2>說明</h2><p>Experience Platform可讓您將從客戶收集到的同意資料整合到其個別設定檔中。 然後，您可以設定同意原則以確定此資料是否可以包含在已啟用至特定目的地的區段中。</p>"
 
 本文介紹如何在Adobe Experience Platform UI中使用&#x200B;**[!UICONTROL 原則]**&#x200B;工作區來建立及管理資料使用原則。
 

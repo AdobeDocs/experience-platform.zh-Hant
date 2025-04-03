@@ -3,10 +3,10 @@ description: 瞭解如何在Adobe Experience Platform UI中使用範本，以加
 title: 使用 UI 中的範本建立來源資料流
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2241'
-ht-degree: 10%
+source-wordcount: '2250'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Platform UI 中的來源範本"
+>title="Experience Platform UI中的來源範本"
 >abstract="範本包括多種自動產生的資產，例如結構描述、資料集、身分識別、對應規則、身分命名空間和資料流，您將資料從來源帶入 Experience Platform 時可以使用。您可以更新自動產生的資產，以針對您的使用案例進行自訂。"
 
 >[!IMPORTANT]
@@ -35,17 +35,17 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 * 將手動資料擷取流程中可能發生的錯誤減到最少。
 * 隨時更新自動產生的資產，以符合您的使用案例。
 
-下列教學課程提供如何在Platform UI中使用範本的步驟。
+下列教學課程提供如何在Experience Platform UI中使用範本的步驟。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
-* [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 在 Platform UI 中使用範本 {#use-templates-in-the-platform-ui}
+## 在Experience Platform UI中使用範本 {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -53,13 +53,13 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 >abstract="為您的使用案例選取適合的商業類型。您的存取權限可能會依據您的即時客戶資料平台訂閱帳戶而不同。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP 概觀"
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區，並檢視Experience Platform中可用的來源目錄。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區，並檢視Experience Platform中可用的來源目錄。
 
 使用&#x200B;*[!UICONTROL 類別]*&#x200B;功能表，依類別篩選來源。 或者，在搜尋列中輸入來源名稱，從目錄中尋找特定來源。
 
 移至[!UICONTROL Adobe應用程式]類別以檢視[!DNL Marketo Engage]來源卡，然後選取[!UICONTROL 新增資料]以開始。
 
-![標示Marketo Engage來源之來源工作區的目錄。](../../images/tutorials/templates/catalog.png)
+![反白顯示Marketo Engage來源之來源工作區的目錄。](../../images/tutorials/templates/catalog.png)
 
 系統隨即顯示快顯視窗，提供您瀏覽範本或使用現有方案和資料集的選項。
 
@@ -70,7 +70,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 ![包含瀏覽範本或使用現有資產的選項的快顯視窗。](../../images/tutorials/templates/browse-templates.png)
 
-### 驗證
+### Authentication
 
 此時會出現驗證步驟，提示您建立新帳戶或使用現有帳戶。
 
@@ -237,7 +237,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 >
 >![來源工作區資料流目錄中的現有資料流清單。](../../images/tutorials/templates/dataflows.png)
 
-### Publish您的資料流
+### 發佈您的資料流
 
 透過瀏覽來源工作流程開始發佈程式。 選取[!UICONTROL 更新資料流]後，您就會進入工作流程的&#x200B;*[!UICONTROL 新增資料]*&#x200B;步驟。 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續。
 
@@ -267,8 +267,8 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 Adobe Experience Platform警報支援範本，您可以使用通知面板來接收資產狀態的更新，並導覽回檢閱頁面。
 
-選取Platform UI頂端標題的通知圖示，然後選取狀態警報以檢視您要檢閱的資產。
+選取Experience Platform UI頂端的通知圖示，然後選取狀態警報以檢視您要檢閱的資產。
 
-![Platform UI中的通知面板（具有警示失敗資料流的通知）已反白顯示。](../../images/tutorials/templates/notifications.png)
+![Experience Platform UI中通知面板（具有警示失敗資料流的通知）已反白顯示。](../../images/tutorials/templates/notifications.png)
 
-您可以更新範本的警報設定，以接收有關資料流狀態的電子郵件和平台內通知。 如需設定警示的詳細資訊，請參閱[如何訂閱來源資料流](../ui/alerts.md)的警示指南。
+您可以更新範本的警報設定，以接收有關資料流狀態的電子郵件和Experience Platform內通知。 如需設定警示的詳細資訊，請參閱[如何訂閱來源資料流](../ui/alerts.md)的警示指南。

@@ -4,31 +4,31 @@ title: 屬性型存取控制端對端指南
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的端對端指南
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 7%
+source-wordcount: '1603'
+ht-degree: 5%
 
 ---
 
 # 以屬性為基礎的存取控制端對端指南
 
-在Adobe Experience Platform上使用以屬性為基礎的存取控制，為您自己和其他重視隱私權的多品牌客戶提供更大的彈性，以管理使用者存取許可權。 個別物件（例如綱要欄位和對象）的存取權可根據物件的屬性和角色以原則授予。 此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
+在Adobe Experience Platform上使用以屬性為基礎的存取控制，為您自己和其他重視隱私權的多品牌客戶提供更大的彈性，以管理使用者存取許可權。 個別物件（例如綱要欄位和對象）的存取權可根據物件的屬性和角色以原則授予。 此功能可讓您為貴組織中的特定Experience Platform使用者授予或撤銷個別物件的存取權。
 
 此功能可讓您使用定義組織或資料使用範圍的標籤，將結構描述欄位、對象等分類。 您可以將這些相同的標籤套用至Adobe Journey Optimizer中的歷程、選件和其他物件。 同時，管理員可以定義有關Experience Data Model (XDM)結構描述欄位的存取原則，並更好地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
 
 >[!NOTE]
 >
->本檔案著重於存取控制原則的使用案例。 如果您嘗試設定原則來控管&#x200B;**使用**&#x200B;的資料，而非哪些Platform使用者有權存取該資料，請改為參閱[資料控管](../../data-governance/e2e.md)的端對端指南。
+>本檔案著重於存取控制原則的使用案例。 如果您嘗試設定原則以控管&#x200B;**使用**&#x200B;的資料，而非Experience Platform使用者有權存取的資料，請改為參閱[資料控管](../../data-governance/e2e.md)的端對端指南。
 
 ## 快速入門
 
-本教學課程需要您實際瞭解下列平台元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)： [!DNL Platform]內的細分引擎用來根據客戶行為和屬性，從您的客戶設定檔建立對象區段。
+* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)： [!DNL Experience Platform]內的細分引擎用來根據客戶行為和屬性，從您的客戶設定檔建立對象區段。
 
 ### 使用案例概觀
 
@@ -55,21 +55,21 @@ ht-degree: 7%
 
 如果您沒有管理員許可權，請聯絡系統管理員以獲得存取權。
 
-一旦您擁有管理員許可權，請前往[Adobe Experience Cloud](https://experience.adobe.com/)並使用您的Adobe憑證登入。 登入後，會針對您擁有管理員許可權的組織顯示&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面。 此頁面顯示貴組織訂閱的產品，以及新增使用者和管理員至組織的其他控制項。 選取&#x200B;**[!UICONTROL 許可權]**&#x200B;以開啟您的Platform整合工作區。
+一旦您擁有管理員許可權，請前往[Adobe Experience Cloud](https://experience.adobe.com/)並使用您的Adobe憑證登入。 登入後，會針對您擁有管理員許可權的組織顯示&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面。 此頁面顯示貴組織訂閱的產品，以及新增使用者和管理員至組織的其他控制項。 選取「**[!UICONTROL 許可權]**」以開啟Experience Platform整合的工作區。
 
 ![影像顯示正在Adobe Experience Cloud中選取的許可權產品](../images/flac-ui/flac-select-product.png)
 
-Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面上開啟。
+Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面上開啟。
 
 ## 將標籤套用至角色 {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="什麼是標籤？"
->abstract="根據適用於相關資料的使用情況和存取原則，使用標籤將資料集和欄位進行分類。平台提供數個 Adobe 定義的<strong>核心</strong>資料使用標籤，涵蓋適用於資料治理的各種常見限制。例如 RHD (受監管的健康資料) 這種敏感資料 <strong>S</strong> 標籤，可以將關於受保護的健康資訊 (PHI) 的資料加以分類。您也可以定義符合本身組織需求的自訂標籤。"
+>abstract="根據適用於相關資料的使用情況和存取原則，使用標籤將資料集和欄位進行分類。Adobe Experience Platform提供數個Adobe定義的<strong>核心</strong>資料使用標籤，涵蓋適用於資料控管的各種常見限制。 例如 RHD (受監管的健康資料) 這種敏感資料 <strong>S</strong> 標籤，可以將關於受保護的健康資訊 (PHI) 的資料加以分類。您也可以定義符合本身組織需求的自訂標籤。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤概觀"
 
-角色是分類與您的Platform執行個體互動的使用者型別的方法，也是存取控制原則的建置組塊。 角色具有一組指定的許可權，而您組織的成員可以根據他們需要的存取範圍，指派一或多個角色。
+角色是分類與您的Experience Platform執行個體互動的使用者型別的方法，也是存取控制原則的建置組塊。 角色具有一組指定的許可權，而您組織的成員可以根據他們需要的存取範圍，指派一或多個角色。
 
 若要開始，請從左側導覽選取&#x200B;**[!UICONTROL 角色]**，然後選取&#x200B;**[!UICONTROL ACME業務群組]**。
 
@@ -144,7 +144,7 @@ Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL 總�
 
 ## 啟動存取控制原則 {#policy}
 
-預設的存取控制原則將運用標籤來定義哪些使用者角色可以存取特定平台資源。 在此範例中，如果使用者不在結構欄位中具有對應標籤的角色中，其存取結構欄位和對象將在所有沙箱中遭到拒絕。
+預設存取控制原則將運用標籤來定義哪些使用者角色擁有特定Experience Platform資源的存取權。 在此範例中，如果使用者不在結構欄位中具有對應標籤的角色中，其存取結構欄位和對象將在所有沙箱中遭到拒絕。
 
 若要啟用存取控制原則，請從左側導覽選取[!UICONTROL 許可權]，然後選取&#x200B;**[!UICONTROL 原則]**。
 
@@ -192,7 +192,7 @@ Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL 總�
 >title="Edit conditions"
 >abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
+Access control policies leverage labels to define which user roles have access to specific Experience Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
@@ -218,7 +218,7 @@ The table below shows the conditions available when creating a policy:
 | The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
 | Matches any| The user has a label that matches any label applied to a resource. |
 | Matches all| The user has all labels that matches all labels applied to a resource. |
-| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Core label| A core label is an Adobe-defined label that is available in all Experience Platform instances.|
 | Custom label| A custom label is a label that has been created by your organization.|
 
 Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.

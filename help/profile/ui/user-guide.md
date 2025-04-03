@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2219'
 ht-degree: 3%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 3%
 此UI指南需要瞭解與管理[!DNL Real-Time Customer Profiles]有關的各種[!DNL Experience Platform]服務。 在閱讀本指南或使用UI之前，請檢視以下服務的檔案：
 
 * [[!DNL Real-Time Customer Profile] 概述](../home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-* [[!DNL Identity Service]](../../identity-service/home.md)：啟用[!DNL Real-Time Customer Profile]，方法是在不同資料來源中的身分擷取到[!DNL Platform]時將其橋接起來。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
+* [[!DNL Identity Service]](../../identity-service/home.md)：啟用[!DNL Real-Time Customer Profile]，方法是在不同資料來源中的身分擷取到[!DNL Experience Platform]時將其橋接起來。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 
 ## [!UICONTROL 概觀]
 
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如果您的組織剛開始使用Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL 設定檔]儀表板。 [!UICONTROL 總覽]標籤會顯示連結和檔案，協助您開始使用即時客戶個人檔案。
+>如果您的組織剛開始使用Experience Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL 設定檔]儀表板。 [!UICONTROL 總覽]標籤會顯示連結和檔案，協助您開始使用即時客戶個人檔案。
 
 ### 輪廓儀表板 {#profile-dashboard}
 
@@ -56,7 +56,7 @@ ht-degree: 3%
 
 在您組織的預設合併原則已與設定檔片段合併，以針對每個個別客戶形成單一設定檔後，設定檔計數會顯示貴組織在Experience Platform中的設定檔總數。 換言之，您的組織可能擁有與單一客戶相關的多個設定檔片段，該客戶會跨不同管道與您的品牌互動，但這些片段會合併在一起（根據預設合併原則），且會傳回「1」設定檔計數，因為這些片段都與同一個人相關。
 
-設定檔計數也包含具有屬性的設定檔（記錄資料），以及僅包含時間序列（事件）資料(例如Adobe Analytics設定檔)的設定檔。 設定檔計數會定期更新，以提供Platform內最新的設定檔總數。
+設定檔計數也包含具有屬性的設定檔（記錄資料），以及僅包含時間序列（事件）資料(例如Adobe Analytics設定檔)的設定檔。 設定檔計數會定期更新，以提供Experience Platform中最新的設定檔總數。
 
 #### 更新設定檔計數量度
 
@@ -96,7 +96,7 @@ ht-degree: 3%
 
 ![顯示符合合併原則的範例設定檔。](../images/user-guide/sample-profiles.png)
 
-若要進一步瞭解合併原則及其在Platform中的角色，請參閱[合併原則概觀](../merge-policies/overview.md)。
+若要進一步瞭解合併原則及其在Experience Platform中的角色，請參閱[合併原則概觀](../merge-policies/overview.md)。
 
 ### 依[!UICONTROL 身分]瀏覽 {#browse-identity}
 
@@ -131,7 +131,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="找不到實體"
->abstract="這代表 Platform 無法找到所要求的實體。若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保您所要存取的實體 URL 列出正確的設定檔 ID。</li><li>確保您擁有所要存取的實體之正確的組織和沙箱組合。</li></ul>"
+>abstract="這表示Experience Platform找不到要求的實體。 若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保您所要存取的實體 URL 列出正確的設定檔 ID。</li><li>確保您擁有所要存取的實體之正確的組織和沙箱組合。</li></ul>"
 
 選取&#x200B;**[!UICONTROL 設定檔識別碼]**&#x200B;後，**[!UICONTROL 詳細資料]**&#x200B;索引標籤會開啟。 **[!UICONTROL 詳細資料]**&#x200B;標籤上顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成個別客戶的單一檢視。 這包括基本屬性、連結的身分和管道偏好設定等客戶細節。
 
@@ -149,7 +149,7 @@ ht-degree: 3%
 
 **[!UICONTROL 屬性]**&#x200B;索引標籤提供清單檢視，在套用指定的合併原則之後，彙總與單一設定檔相關的所有屬性。
 
-也可以選取&#x200B;**[!UICONTROL 檢視JSON]**，將這些屬性視為JSON物件。 對於想更瞭解如何將設定檔屬性擷取到Platform的使用者，此功能會很有幫助。
+也可以選取&#x200B;**[!UICONTROL 檢視JSON]**，將這些屬性視為JSON物件。 對於想更瞭解如何將設定檔屬性擷取到Experience Platform的使用者，此功能會很有幫助。
 
 ![[屬性]索引標籤會反白顯示。 顯示設定檔屬性。](../images/user-guide/attributes.png)
 
@@ -163,7 +163,7 @@ ht-degree: 3%
 
 **[!UICONTROL Events]**&#x200B;索引標籤包含來自與客戶相關聯的100個最新ExperienceEvents的資料。 此資料可能包括電子郵件開啟、購物車活動和頁面檢視。 為任何個別事件選取「**[!UICONTROL 檢視全部]**」，可提供額外的欄位和值做為事件的一部分擷取。
 
-也可以選取&#x200B;**[!UICONTROL 檢視JSON]**，將事件檢視為JSON物件。 這有助於瞭解如何在Platform中擷取事件。
+也可以選取&#x200B;**[!UICONTROL 檢視JSON]**，將事件檢視為JSON物件。 這有助於瞭解如何在Experience Platform中擷取事件。
 
 ![[事件]索引標籤會反白顯示。 顯示設定檔事件。](../images/user-guide/events.png)
 
@@ -187,7 +187,7 @@ ht-degree: 3%
 
 ![[合併原則]索引標籤會反白顯示。 顯示屬於組織的合併原則。](../images/user-guide/merge-policies.png)
 
-## 聯合結構描述 {#union-schema}
+## 聯集結構 {#union-schema}
 
 從主要&#x200B;**[!UICONTROL 設定檔]**&#x200B;功能表中，選取&#x200B;**[!UICONTROL 聯合結構描述]**&#x200B;索引標籤，以檢視您擷取資料的可用聯合結構描述。 聯合結構描述是相同類別下所有[!DNL Experience Data Model] (XDM)欄位的合併，其結構描述已在[!DNL Real-Time Customer Profile]中啟用。
 
@@ -201,7 +201,7 @@ ht-degree: 3%
 
 ![已反白顯示[計算屬性]索引標籤。](../images/user-guide/computed-attributes.png)
 
-如需計算屬性的詳細資訊，請閱讀[計算屬性總覽](../computed-attributes/overview.md)。 如需有關如何在Platform UI中使用計算屬性的詳細資訊，請參閱[計算屬性UI指南](../computed-attributes/ui.md)。
+如需計算屬性的詳細資訊，請閱讀[計算屬性總覽](../computed-attributes/overview.md)。 如需如何在Experience Platform UI中使用計算屬性的詳細資訊，請參閱[計算屬性UI指南](../computed-attributes/ui.md)。
 
 ## 後續步驟
 

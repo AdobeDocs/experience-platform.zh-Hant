@@ -3,9 +3,9 @@ title: 合併原則UI指南
 type: Documentation
 description: 瞭解如何使用Adobe Experience Platform使用者介面處理合併原則。
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2458'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 合併原則 UI 指南
 
-Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以便檢視每個個別客戶的完整檢視。 將這個資料集合在一起時，合併原則是[!DNL Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立統一檢視的規則。
+Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以便檢視每個個別客戶的完整檢視。 將這個資料集合在一起時，合併原則是[!DNL Experience Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立統一檢視的規則。
 
 使用RESTful API或使用者介面，您可以建立新的合併原則、管理現有原則，並為您的組織設定預設合併原則。 本指南提供使用Adobe Experience Platform使用者介面(UI)處理合併原則的逐步指示。
 
@@ -24,15 +24,15 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
 本指南需要您實際瞭解幾項重要的[!DNL Experience Platform]功能。 在遵循本指南之前，請檢視以下服務的檔案：
 
 * [即時客戶個人檔案](../home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md)：透過橋接擷取到[!DNL Platform]中的不同資料來源的身分，啟用即時客戶個人檔案。
-* [體驗資料模型(XDM)](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md)：透過橋接擷取到[!DNL Experience Platform]中的不同資料來源的身分，啟用即時客戶個人檔案。
+* [體驗資料模型(XDM)](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 
 ## 檢視合併原則 {#view-merge-policies}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="找不到合併原則"
->abstract="這代表平台無法找到所要求的合併原則。若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保 URL 中列出正確的合併原則 ID。</li><li>根據您正在嘗試存取的合併原則，確認您擁有正確的組織和沙箱組合。</li></ul>"
+>abstract="這表示Experience Platform找不到要求的合併原則。 若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保 URL 中列出正確的合併原則 ID。</li><li>根據您正在嘗試存取的合併原則，確認您擁有正確的組織和沙箱組合。</li></ul>"
 
 在[!DNL Experience Platform] UI中，您可以透過選取左側導覽中的&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 合併原則]**&#x200B;索引標籤，開始使用合併原則。
 
@@ -77,7 +77,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
 
 ![新合併原則工作流程上會醒目顯示[檢視聯合結構描述]按鈕。](../images/merge-policies/view-union-schema.png)
 
-這會開啟[!UICONTROL 檢視聯合結構描述]對話方塊，顯示與聯合結構描述相關的所有貢獻結構描述、身分和關係。 您可以使用此對話方塊來探索聯合結構描述，其方式與存取Platform UI [!UICONTROL 設定檔]區段中的[!UICONTROL 聯合結構描述]索引標籤相同。
+這會開啟[!UICONTROL 檢視聯合結構描述]對話方塊，顯示與聯合結構描述相關的所有貢獻結構描述、身分和關係。 您可以使用此對話方塊來探索聯合結構描述，其方式與存取Experience Platform UI [!UICONTROL 設定檔]區段中的[!UICONTROL 聯合結構描述]索引標籤相同。
 
 如需有關聯合結構描述的詳細資訊，包括如何在合併原則工作流程中顯示的[!UICONTROL 聯合結構描述]索引標籤或[!UICONTROL 檢視聯合結構描述]對話方塊中與它們互動，請造訪[聯合結構描述UI指南](../ui/union-schema.md)。
 
@@ -207,7 +207,7 @@ ExperienceEvent資料集無法手動排序，如果ExperienceEvent資料集中�
 
 ## 資料治理原則違規
 
-建立或更新合併原則時，會執行檢查以判斷合併原則是否違反貴組織定義的任何資料使用原則。 資料使用原則是Adobe Experience Platform資料控管的一部分，也是描述允許或限制您對特定[!DNL Platform]資料執行的行銷動作型別的規則。
+建立或更新合併原則時，會執行檢查以判斷合併原則是否違反貴組織定義的任何資料使用原則。 資料使用原則是Adobe Experience Platform資料控管的一部分，也是描述允許或限制您對特定[!DNL Experience Platform]資料執行的行銷動作型別的規則。
 
 例如，如果使用合併原則來建立啟用至協力廠商目的地的對象，而您的組織有資料使用原則來防止將特定資料匯出至協力廠商，則在嘗試儲存合併原則時，您將會收到&#x200B;**[!UICONTROL 偵測到資料治理原則違規]**&#x200B;的通知。
 
@@ -217,4 +217,4 @@ ExperienceEvent資料集無法手動排序，如果ExperienceEvent資料集中�
 
 ## 後續步驟
 
-現在您已為組織建立並設定合併原則，您可以使用這些原則來調整Platform中客戶設定檔的檢視，以及從您的設定檔資料建立對象。 如需如何使用[!DNL Experience Platform] UI和API建立及使用對象的詳細資訊，請參閱[區段總覽](../../segmentation/home.md)。
+現在您已為組織建立並設定合併原則，您可以使用這些原則在Experience Platform中調整客戶設定檔的檢視，以及從您的設定檔資料建立對象。 如需如何使用[!DNL Experience Platform] UI和API建立及使用對象的詳細資訊，請參閱[區段總覽](../../segmentation/home.md)。

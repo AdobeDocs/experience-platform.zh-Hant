@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中管理資料使用標籤
 description: 本指南說明在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 17%
+source-wordcount: '1552'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 17%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="控管 Platform 中的資料使用情況"
+>title="控管Experience Platform中的資料使用"
 >abstract="<h2>說明</h2><p>Experience Platform 中的資料控管結構描述可讓您根據資料使用限制來標記屬性和結構描述，並設定原則來識別和執行特定行銷活動的這些限制。</p>"
 
 本使用手冊說明在[!DNL Experience Platform]使用者介面中使用資料使用標籤的步驟。
@@ -24,7 +24,7 @@ ht-degree: 17%
 
 若要將標籤套用至您的資料，您需要&#x200B;**[!UICONTROL 管理使用標籤]**&#x200B;許可權，才能用於名為「prod」的預設生產沙箱。 若要建立自訂標籤，您也必須擁有產品設定檔的管理許可權。 每個組織只有一個適用標籤清單。 您&#x200B;**無法**&#x200B;刪除標籤。 反之，您可以從套用這些變數的資料集或欄位中將其移除。
 
-如需如何指派許可權的詳細資訊，請參閱如何[設定許可權](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)的指南，或[存取控制總覽](../../access-control/home.md)。 如果您無法存取貴組織的Admin Console，請聯絡組織管理員。
+如需如何指派許可權的詳細資訊，請參閱如何[設定許可權](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)的指南，或[存取控制總覽](../../access-control/home.md)。 如果您無法存取組織的Admin Console，請聯絡組織管理員。
 
 ## 管理結構層級的標籤
 
@@ -61,11 +61,11 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="說明"
->abstract="<ol><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=zh-Hant">資料集</a>，然後選取要限制其資料的資料集。</li><li>從資料集的詳細資料檢視中，選取<b>資料控管</b>索引標籤。</li><li>選取要限制的資料集欄位，然後選取<b>編輯控管標籤</b>以根據使用限制來標記資料。</li><li>標記資料後，在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<b>建立原則</b>。</li><li>選擇建立<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">資料控管原則</a>，然後選取原則將套用到原則的資料使用標籤。</li><li>選取行銷動作，原則將拒絕對包含這些標籤的任何資料。建立原則後，從清單中選擇它並使用右側邊欄中的切換啟用它。</li><li>對於每個啟用的原則，Platform 會阻止包含指定之標籤的任何資料用於定義的行銷動作。當您嘗試對具有關聯的行銷動作的目的地啟用標記的資料時，此強制執行會自動發生。</li></ol>"
+>abstract="<ol><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=zh-Hant">資料集</a>，然後選取要限制其資料的資料集。</li><li>從資料集的詳細資料檢視中，選取<b>資料控管</b>索引標籤。</li><li>選取要限制的資料集欄位，然後選取<b>編輯控管標籤</b>以根據使用限制來標記資料。</li><li>標記資料後，在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<b>建立原則</b>。</li><li>選擇建立<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">資料控管原則</a>，然後選取原則將套用到原則的資料使用標籤。</li><li>選取行銷動作，原則將拒絕對包含這些標籤的任何資料。建立原則後，從清單中選擇它並使用右側邊欄中的切換啟用它。</li><li>對於每個啟用的原則，Experience Platform會防止將包含指定標籤的任何資料用於定義的行銷動作。 當您嘗試對具有關聯的行銷動作的目的地啟用標記的資料時，此強制執行會自動發生。</li></ol>"
 
 >[!IMPORTANT]
 >
->標籤無法再套用至資料集層級的欄位。 此工作流程已淘汰，而改為在結構描述層級套用標籤。 在2024年5月31日之前，先前在資料集物件層級套用的任何標籤仍會透過Platform UI受到支援。 為確保您的標籤在所有結構描述中保持一致，您必須在未來一年將之前附加至資料集層級欄位的任何標籤移轉至結構描述層級。 請參閱檔案以瞭解[如何將先前套用的標籤從資料集移轉至結構描述層級](../e2e.md#migrate-labels)的說明。
+>標籤無法再套用至資料集層級的欄位。 此工作流程已淘汰，而改為在結構描述層級套用標籤。 在2024年5月31日之前，先前在資料集物件層級套用的任何標籤仍會透過Experience Platform UI受到支援。 為確保您的標籤在所有結構描述中保持一致，您必須在未來一年將之前附加至資料集層級欄位的任何標籤移轉至結構描述層級。 請參閱檔案以瞭解[如何將先前套用的標籤從資料集移轉至結構描述層級](../e2e.md#migrate-labels)的說明。
 
 標籤可以從&#x200B;**[!UICONTROL 資料集]**&#x200B;工作區的&#x200B;**[!UICONTROL 資料控管]**&#x200B;索引標籤套用至整個資料集。 工作區可讓您在資料集層級管理資料使用標籤。
 
@@ -120,7 +120,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="建立標籤"
->abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。平台提供了一組標準標籤供您使用，但您也可以建立您組織專用的自訂標籤。"
+>abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。Experience Platform提供一組標準標籤供您使用，但您也可以建立貴組織專屬的自訂標籤。"
 
 您可以在[!DNL Experience Platform] UI的&#x200B;**[!UICONTROL 原則]**&#x200B;工作區中建立您自己的自訂使用標籤。 在左側導覽中選取「**[!UICONTROL 原則]**」，然後選取「**[!UICONTROL 標籤]**」以檢視現有標籤的清單。 從這裡，選取&#x200B;**[!UICONTROL 建立標籤]**。
 

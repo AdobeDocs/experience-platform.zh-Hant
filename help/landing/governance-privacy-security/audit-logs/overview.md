@@ -4,10 +4,10 @@ description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platfor
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 32%
+source-wordcount: '1476'
+ht-degree: 27%
 
 ---
 
@@ -16,19 +16,19 @@ ht-degree: 32%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="熱門動作"
->abstract="此小工具會顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
+>abstract="此小工具會顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要檢視Experience Platform中記錄動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="熱門使用者"
->abstract="此小工具會顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
+>abstract="此小工具會顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要檢視Experience Platform中記錄動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="監控 Platform 中的使用者活動"
->abstract="<h2>說明</h2><p>您可以採用「稽核記錄」的方式監控各種 Platform 服務和功能的使用者活動。這些記錄會形成稽核軌跡，其中會記錄<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄可以幫助解決 Platform 上的問題，並幫助您的企業有效地遵守公司資料管理原則和監管需求。</p>"
+>title="監視Experience Platform中的使用者活動"
+>abstract="<h2>說明</h2><p>您可以透過稽核記錄的形式，監控各種Experience Platform服務和功能的使用者活動。 這些記錄會形成稽核軌跡，其中會記錄<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄有助於對Experience Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和法規要求。</p>"
 
-為了提高系統中所執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些記錄形成了稽核軌跡，可以幫助對Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和法規要求。
+為了提高系統中所執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些記錄形成了稽核軌跡，可以幫助對Experience Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和監管要求。
 
 基本上，稽核記錄會告知&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;動作，以及&#x200B;**何時**。 記錄中記錄的每個動作都包含中繼資料，其指出動作型別、日期和時間、執行動作之使用者的電子郵件ID，以及與動作型別相關的其他屬性。
 
@@ -36,7 +36,7 @@ ht-degree: 32%
 >
 > 在&#x200B;**角色**&#x200B;資源中，動作&#x200B;**新增使用者**&#x200B;和&#x200B;**移除使用者**&#x200B;的中繼資料不會包含執行動作之使用者的電子郵件識別碼。 記錄檔而是會顯示系統產生的電子郵件ID (system@adobe.com)。
 
-本檔案涵蓋Platform中的稽核記錄，包括如何在UI或API中檢視和管理它們。
+本檔案涵蓋Experience Platform中的稽核記錄，包括如何在UI或API中檢視和管理它們。
 
 ## 由稽核記錄擷取的事件類型 {#category}
 
@@ -74,7 +74,7 @@ ht-degree: 32%
 
 為您的組織啟用此功能後，活動發生時會自動收集稽核記錄。 您不需要手動啟用記錄收集。
 
-若要檢視和匯出稽核記錄，您必須授予&#x200B;**[!UICONTROL 檢視使用者活動記錄]**&#x200B;存取控制許可權（可在[!UICONTROL 資料控管]類別下找到）。 若要瞭解如何管理Platform功能的個別許可權，請參閱[存取控制檔案](../../../access-control/home.md)。
+若要檢視和匯出稽核記錄，您必須授予&#x200B;**[!UICONTROL 檢視使用者活動記錄]**&#x200B;存取控制許可權（可在[!UICONTROL 資料控管]類別下找到）。 若要瞭解如何管理Experience Platform功能的個別許可權，請參閱[存取控制檔案](../../../access-control/home.md)。
 
 ## 在 UI 中管理稽核記錄 {#managing-audit-logs-in-the-ui}
 
@@ -83,7 +83,7 @@ ht-degree: 32%
 >title="說明"
 >abstract="<ul><li>在左側導覽中選取<b>稽核</b>。「稽核」工作區會顯示已記錄的記錄清單，依預設會從時間最近的開始排序。</li>   <li> 注意：稽核記錄會保留 365 天，超過此天數將從系統中刪除。因此，您最多只能往回查看 365 天。如果您需要查看超過 365 天的資料，您應該定期匯出記錄以符合您的內部原則需求。 </li><li>從清單中選取一個事件以在右邊欄中查看其詳細資料。 </li><li>選取漏斗圖示以顯示篩選控制項清單，可協助縮小結果範圍。僅顯示最後 1,000 條記錄，無論選取的篩選器為何。 </li><li>若要匯出目前的稽核記錄清單，請選取&#x200B;**下載記錄**。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概觀</a>。</li></ul>"
 
-您可以在Platform UI的&#x200B;**[!UICONTROL 稽核]**&#x200B;工作區中，檢視不同Experience Platform功能的稽核記錄。 工作區會顯示記錄日誌的清單，預設情況下會從最近排序為最近排序。
+您可以在Experience Platform UI的&#x200B;**[!UICONTROL 稽核]**&#x200B;工作區中，檢視不同Experience Platform功能的稽核記錄。 工作區會顯示記錄日誌的清單，預設情況下會從最近排序為最近排序。
 
 ![左側功能表中反白稽核的稽核儀表板。](../../images/audit-logs/audits.png)
 
@@ -171,7 +171,7 @@ ht-degree: 32%
 
 ## 後續步驟和其他資源
 
-本指南說明如何在Experience Platform中管理稽核記錄。 如需如何監視Platform活動的詳細資訊，請參閱有關[可觀察性深入分析](../../../observability/home.md)和[監視資料擷取](../../../ingestion/quality/monitor-data-ingestion.md)的檔案。
+本指南說明如何在Experience Platform中管理稽核記錄。 如需如何監視Experience Platform活動的詳細資訊，請參閱有關[可觀察性深入分析](../../../observability/home.md)和[監視資料擷取](../../../ingestion/quality/monitor-data-ingestion.md)的檔案。
 
 若要加深您對Experience Platform稽核記錄的瞭解，請觀看以下影片：
 
