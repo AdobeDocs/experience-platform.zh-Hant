@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 量度API端點
 description: 瞭解如何使用可觀察性深入分析API在Experience Platform中擷取可觀察性量度。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 3b217f7bcb60f762b5d380d82076cfb17d7a2d13
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1294'
 ht-degree: 3%
 
 ---
@@ -277,7 +277,7 @@ curl -X POST \
 
 | 錯誤代碼 | 標題 | 說明 |
 | --- | --- | --- |
-| `INSGHT-1000-400` | 錯誤的請求承載 | 請求承載發生問題。 請確定您完全符合以上所示的裝載格式[](#v2)。 觸發此錯誤的可能原因有：<ul><li>遺失必要欄位，例如`aggregator`</li><li>無效的量度</li><li>請求包含無效彙總</li><li>開始日期發生在結束日期之後</li></ul> |
+| `INSGHT-1000-400` | 錯誤的請求承載 | 請求承載發生問題。 請確定您完全符合以上所示的裝載格式[](#v2)。 觸發此錯誤的可能原因有：<ul><li>遺失必要欄位，例如`aggregator`</li><li>無效的量度</li><li>請求包含無效彙總</li><li>開始日期發生在結束日期之後</li><li>請求的時間範圍（介於開始和結束日期之間）超過32天</li></ul> |
 | `INSGHT-1001-400` | 量度查詢失敗 | 嘗試查詢量度資料庫時發生錯誤，因為錯誤請求或查詢本身無法剖析。 在重試之前，請確定您的請求已正確格式化。 |
 | `INSGHT-1001-500` | 量度查詢失敗 | 由於伺服器錯誤，嘗試查詢量度資料庫時發生錯誤。 請再次嘗試該請求，如果問題仍然存在，請聯絡Adobe支援。 |
 | `INSGHT-1002-500` | 服務錯誤 | 由於內部錯誤，無法處理請求。 請再次嘗試該請求，如果問題仍然存在，請聯絡Adobe支援。 |
