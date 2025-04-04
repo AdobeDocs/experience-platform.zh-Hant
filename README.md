@@ -1,8 +1,8 @@
 ---
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 67adfddf57d3b10bb80688cf0f0a109a704f4fa5
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 95%
+source-wordcount: '351'
+ht-degree: 98%
 
 ---
 # 貢獻內容
@@ -30,20 +30,6 @@ ht-degree: 95%
 ### 由社群成員提出重大變更或新文章
 
 若您是 Adobe 社群的一份子，且想建立文章或提交重大變更，請按一下 GitHub 存放庫中的&#x200B;**「問題」**&#x200B;索引標籤提交問題。提交問題後，即可開始與文件編撰團隊對話。您需要與撰寫人員 (或其他 Adobe 員工) 合作才能發佈新內容。
-
-<!--
-If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
--->
-
-### 由 Adobe 員工提出的重大變更或新文章
-
-若您是 Adobe Experience Cloud 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。如需詳細資訊，請參閱[內部共同作業指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html)。
-
-<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
-
-## 和 Experience Platform 文件團隊聯絡
-
-如上所述，Adobe 社群的成員可以提交問題，該問題會被指派給適當的撰寫人員。如果您是 Adob&#x200B;&#x200B;e 員工，您可以提交問題或直接和 Experience Platform 文件團隊聯絡。若要尋找特定Experience Platform區域的首席作者，請參閱[Adobe Experience Platform檔案wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
 
 ## 工具和設定
 
