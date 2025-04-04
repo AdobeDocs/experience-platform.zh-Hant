@@ -1,8 +1,8 @@
 ---
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 98%
+source-wordcount: '470'
+ht-degree: 95%
 
 ---
 # 貢獻內容
@@ -19,7 +19,7 @@ ht-degree: 98%
 
 貢獻方式取決於您的身分和您要提交的變更類型：
 
-### 微幅變更或請求
+### 微幅變更或要求
 
 若要提交請求，請按一下文章中的&#x200B;**「登錄問題」**&#x200B;連結，在 GitHub 中開啟問題。指定標題和說明，然後按一下&#x200B;**「提交新問題」**。
 
@@ -43,7 +43,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ## 和 Experience Platform 文件團隊聯絡
 
-如上所述，Adobe 社群的成員可以提交問題，該問題會被指派給適當的撰寫人員。如果您是 Adob&#x200B;&#x200B;e 員工，您可以提交問題或直接和 Experience Platform 文件團隊聯絡。若要找到特定平台領域的主要撰寫人員，請參閱[Adobe Experience Platform 文件維基百科](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
+如上所述，Adobe 社群的成員可以提交問題，該問題會被指派給適當的撰寫人員。如果您是 Adob&#x200B;&#x200B;e 員工，您可以提交問題或直接和 Experience Platform 文件團隊聯絡。若要尋找特定Experience Platform區域的首席作者，請參閱[Adobe Experience Platform檔案wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
 
 ## 工具和設定
 

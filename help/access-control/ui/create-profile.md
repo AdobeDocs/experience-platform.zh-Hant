@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在Adobe Admin Console中建立新的產品設定檔
 description: 本文介紹在Adobe Admin Console中建立新產品設定檔所需的必要步驟。 若要開始建立新設定檔，請導覽至「產品設定檔」索引標籤，然後按一下「新增設定檔」。
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ![create-new-product-profile](../images/create-new-product-profile.png)
 
-下一個畫面會提示您選擇要包含在設定檔中的平台服務。 選取服務旁的切換按鈕以將其停用。 如果服務已停用，則指派給此產品設定檔的使用者將無法使用與該服務相關聯的所有功能。 完成後，選取&#x200B;**[!UICONTROL 儲存]**。
+下一個畫面會提示您選擇要包含在設定檔中的Experience Platform服務。 選取服務旁的切換按鈕以將其停用。 如果服務已停用，則指派給此產品設定檔的使用者將無法使用與該服務相關聯的所有功能。 完成後，選取&#x200B;**[!UICONTROL 儲存]**。
 
 ![啟用服務](../images/enable-services.png)
 

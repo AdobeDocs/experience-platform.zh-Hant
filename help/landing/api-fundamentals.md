@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: Experience PlatformAPI基礎知識
-description: 本檔案簡要概述Experience Platform API相關的一些基礎技術和語法。
+title: Experience Platform API基礎知識
+description: 本檔案簡要概述Experience Platform API的相關基礎技術和語法。
 role: Developer
 feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 1%
 
 ---
 
-# Experience PlatformAPI基礎知識
+# Experience Platform API基礎知識
 
-Adobe Experience Platform API採用數個重要的基礎技術和語法，以有效管理JSON型[!DNL Platform]資源。 本檔案提供這些技術的簡短概觀，以及外部檔案的連結以取得詳細資訊。
+Adobe Experience Platform API採用數個重要的基礎技術和語法，以有效管理JSON型[!DNL Experience Platform]資源。 本檔案提供這些技術的簡短概觀，以及外部檔案的連結以取得詳細資訊。
 
 ## JSON指標 {#json-pointer}
 
-JSON指標是標準化的字串語法([RFC 6901](https://tools.ietf.org/html/rfc6901))，用於識別JSON檔案內的特定值。 JSON指標是以`/`字元分隔的權杖字串，指定了物件索引鍵或陣列索引，而權杖可以是字串或數字。 [!DNL Platform] API的許多PATCH作業都會使用JSON指標字串，如本檔案稍後所述。 如需JSON指標的詳細資訊，請參閱[JSON指標概觀檔案](https://rapidjson.org/md_doc_pointer.html)。
+JSON指標是標準化的字串語法([RFC 6901](https://tools.ietf.org/html/rfc6901))，用於識別JSON檔案內的特定值。 JSON指標是以`/`字元分隔的權杖字串，指定了物件索引鍵或陣列索引，而權杖可以是字串或數字。 JSON指標字串用於[!DNL Experience Platform] API的許多PATCH作業，如本檔案稍後所述。 如需JSON指標的詳細資訊，請參閱[JSON指標概觀檔案](https://rapidjson.org/md_doc_pointer.html)。
 
 ### 範例JSON結構描述物件
 
@@ -98,7 +98,7 @@ JSON指標是標準化的字串語法([RFC 6901](https://tools.ietf.org/html/rfc
 
 ## JSON修補程式 {#json-patch}
 
-[!DNL Platform] API有許多接受JSON修補程式物件的PATCH作業，以供其要求裝載使用。 JSON修補程式是標準化格式([RFC 6902](https://tools.ietf.org/html/rfc6902))，用於說明JSON檔案的變更。 它可讓您定義JSON的部分更新，而不需在請求內文中傳送整個檔案。
+[!DNL Experience Platform] API許多PATCH作業都接受JSON修補程式物件作為其要求承載。 JSON修補程式是標準化格式([RFC 6902](https://tools.ietf.org/html/rfc6902))，用於說明JSON檔案的變更。 它可讓您定義JSON的部分更新，而不需在請求內文中傳送整個檔案。
 
 ### 範例JSON修補程式物件
 
@@ -109,7 +109,7 @@ JSON指標是標準化的字串語法([RFC 6901](https://tools.ietf.org/html/rfc
 }
 ```
 
-* `op`：修補操作的型別。 雖然JSON修補程式支援數種不同的作業型別，但並非所有[!DNL Platform] API中的PATCH作業都與每種作業型別相容。 可用的作業型別為：
+* `op`：修補操作的型別。 雖然JSON修補程式支援數種不同的作業型別，但並非所有[!DNL Experience Platform] API中的PATCH作業都與每種作業型別相容。 可用的作業型別為：
    * `add`
    * `remove`
    * `replace`
@@ -126,4 +126,4 @@ JSON結構描述是一種用於說明和驗證JSON資料結構的格式。 [體�
 
 ## 後續步驟
 
-本檔案介紹管理[!DNL Experience Platform]之JSON型資源相關的一些技術和語法。 如需使用Platform API （包括最佳實務）的詳細資訊，請參閱[快速入門手冊](api-guide.md)。 如需常見問題的解答，請參閱[平台疑難排解指南](troubleshooting.md)。
+本檔案介紹管理[!DNL Experience Platform]之JSON型資源相關的一些技術和語法。 如需使用Experience Platform API （包括最佳實務）的詳細資訊，請參閱[快速入門手冊](api-guide.md)。 如需常見問題的解答，請參閱[Experience Platform疑難排解指南](troubleshooting.md)。

@@ -4,9 +4,9 @@ title: Real-Time Customer Data Platform的隱私權
 description: Adobe Real-Time Customer Data Platform可讓您簡化流程，讓資料作業符合隱私權法規。
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 接受客戶存取和刪除請求
 
-[!DNL General Data Protection Regulation] (GDPR)和[!DNL California Consumer Privacy Act] (CCPA)等法律隱私權法規授予客戶要求存取或刪除您從他們收集之個人資料的權利。 由於[!DNL Real-Time CDP]利用[!DNL Experience Platform]功能進行資料收集和儲存，因此應在[!DNL Platform]內管理客戶存取和刪除其個人資料的請求。 如需詳細資訊，請參閱[Adobe Experience Platform Privacy Service](../../privacy-service/home.md)的概觀。
+[!DNL General Data Protection Regulation] (GDPR)和[!DNL California Consumer Privacy Act] (CCPA)等法律隱私權法規授予客戶要求存取或刪除您從他們收集之個人資料的權利。 由於[!DNL Real-Time CDP]利用[!DNL Experience Platform]功能進行資料收集和儲存，因此應在[!DNL Experience Platform]內管理客戶存取和刪除其個人資料的請求。 如需詳細資訊，請參閱[Adobe Experience Platform Privacy Service](../../privacy-service/home.md)的概觀。
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## IAB TCF 2.0支援
 
-[!DNL Real-Time CDP]建置在Adobe Experience Platform上，這是[!DNL Transparency & Consent Framework (TCF)]的已登入[廠商清單](https://iabeurope.eu/vendor-list-tcf/)的一部分，如[!DNL Interactive Advertising Bureau (IAB)]所概述。 為符合TCF 2.0要求，Platform可讓您收集詳細的客戶同意資料，並將其整合至您儲存的客戶設定檔中。 之後，您可根據特定設定檔的使用案例，將此同意資料納入轉存對象中是否包含特定設定檔。
+[!DNL Real-Time CDP]建置在Adobe Experience Platform上，這是[!DNL Transparency & Consent Framework (TCF)]的已登入[廠商清單](https://iabeurope.eu/vendor-list-tcf/)的一部分，如[!DNL Interactive Advertising Bureau (IAB)]所概述。 為符合TCF 2.0要求，Experience Platform可讓您收集詳細的客戶同意資料，並將其整合至您儲存的客戶設定檔中。 之後，您可根據特定設定檔的使用案例，將此同意資料納入轉存對象中是否包含特定設定檔。
 
 如需詳細資訊，請參閱Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md)中[IAB TCF 2.0支援的總覽。
 

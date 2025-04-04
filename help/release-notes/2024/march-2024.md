@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2024 年 3 月)
 description: Adobe Experience Platform 2024 年 3 月版發行說明。
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
-workflow-type: ht
-source-wordcount: '1190'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1192'
+ht-degree: 97%
 
 ---
 
@@ -29,7 +29,7 @@ Experience Platform 現有功能的更新：
 
 ## 目錄服務 {#catalog-service}
 
-目錄服務是在 Adobe Experience Platform 內針對資料位置和連結的記錄系統。雖然攝取至 Experience Platform 中的所有資料都會以檔案及目錄形式儲存在資料湖中，但是為了查詢和監控目的，目錄也會保留這些檔案及目錄的中繼資料與說明。
+目錄服務是 Adobe Experience Platform 內部的資料位置和譜系記錄系統。雖然攝取至 Experience Platform 中的所有資料都會以檔案及目錄形式儲存在資料湖中，但是為了查詢和監控目的，目錄也會保留這些檔案及目錄的中繼資料與說明。
 
 | 功能 | 說明 |
 | --- | --- |
@@ -69,7 +69,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新目標和更新的目標** {#new-updated-destinations}
 
@@ -98,15 +98,15 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | --- | --- |
-| Experience Platform 使用者介面對應資料類型支援 | 透過在 Platform 使用者介面中定義對應欄位，可進一步自訂您的體驗資料模型 (XDM) 資料結構。現在起，您可以在結構描述編輯器中建立對應欄位，以建置靈活資料結構的模型或有效率地儲存金鑰/值配對。定義新欄位時，請從「類型」下拉式選單中選取「對應」，以設定子欄位並將其指派至欄位群組中。可支援的對應值類型為字串和整數。<br>![結構描述編輯器，特別標示出「類型」和「對應值類型」欄位。](../2024/assets/march/maps.png "結構描述編輯器，特別標示出「類型」和「對應值類型」欄位。"){width="100" zoomable="yes"}<br>若要了解如何[在使用者介面中定義對應欄位](../../xdm/ui/fields/map.md)，請參閱使用者介面指南。 |
+| Experience Platform 使用者介面對應資料類型支援 | 在Experience Platform UI中定義對應欄位，進一步自訂Experience Data Model (XDM)資料結構。 現在起，您可以在結構描述編輯器中建立對應欄位，以建置靈活資料結構的模型或有效率地儲存金鑰/值配對。定義新欄位時，請從「類型」下拉式選單中選取「對應」，以設定子欄位並將其指派至欄位群組中。可支援的對應值類型為字串和整數。<br>![結構描述編輯器，特別標示出「類型」和「對應值類型」欄位。](../2024/assets/march/maps.png "結構描述編輯器，特別標示出「類型」和「對應值類型」欄位。"){width="100" zoomable="yes"}<br>若要了解如何[在使用者介面中定義對應欄位](../../xdm/ui/fields/map.md)，請參閱使用者介面指南。 |
 
 {style="table-layout:auto"}
 
-如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
+如需Experience Platform中XDM的詳細資訊，請參閱[XDM系統總覽](../../xdm/home.md)。
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Experience Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 **新功能**
 

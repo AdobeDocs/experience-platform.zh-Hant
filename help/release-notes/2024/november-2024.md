@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2024 年 11 月)
 description: Adobe Experience Platform 2024 年 11 月版發行說明。
 exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
-source-git-commit: f71fc1d4ad51af52046caeee289546e05967d5bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 98%
+source-wordcount: '853'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->新的[AI Assistant產品檔案](../../ai-assistant/landing.md)現已推出。 使用此頁面作為所有 AI 助理相關資源的中心。
+>現已推出新的 [AI 助理產品文件](../../ai-assistant/landing.md)。使用此頁面作為所有 AI 助理相關資源的中心。
 
 **發行日期：2024 年 11 月 26 日**
 
@@ -43,7 +43,7 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 **新目標或更新的目標** {#new-updated-destinations}
 
@@ -78,7 +78,7 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足這種需求，Experience Platform 提供的沙箱可將單一 Platform 執行個體分割成個別的虛擬環境，以協助開發並改進數位體驗應用程式。
+Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足此需求，Experience Platform提供可將單一Experience Platform執行個體分割成個別虛擬環境的沙箱，以利開發及改進數位體驗應用程式。
 
 **新功能或更新功能**
 

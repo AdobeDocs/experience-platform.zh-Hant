@@ -3,9 +3,9 @@ title: 資料衛生API指南
 description: 瞭解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '446'
 ht-degree: 6%
 
 ---
@@ -34,9 +34,9 @@ ht-degree: 6%
 
 ### 讀取範例 API 呼叫
 
-本檔案提供範例API呼叫，示範如何格式化您的請求。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Experience PlatformAPI快速入門手冊中[如何讀取範例API呼叫](../../landing/api-guide.md#sample-api)的相關章節。
+本檔案提供範例API呼叫，示範如何格式化您的請求。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Experience Platform API快速入門手冊中[如何讀取範例API呼叫](../../landing/api-guide.md#sample-api)的相關章節。
 
-## 資料集到期
+## 資料集期限
 
 資料集到期是時間延遲的「刪除資料集」動作。 透過建立資料集有效期，您就能指定該資料集應該刪除的未來時間。 請參閱[資料集到期端點指南](./dataset-expiration.md)，以取得在API中排程資料集到期的詳細資訊。
 
@@ -44,7 +44,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->記錄刪除請求僅適用於已購買&#x200B;**AdobeHealthcare Shield**&#x200B;的組織。
+>記錄刪除請求僅適用於已購買&#x200B;**Adobe Healthcare Shield**&#x200B;的組織。
 >
 >
 >記錄刪除旨在用於資料清理、匿名資料移除或資料最小化。 它們&#x200B;**不**&#x200B;用於資料主體權利要求（法規遵循），因為與一般資料保護規範(GDPR)等隱私權法規相關。 對於所有規範使用案例，請改用[Adobe Experience Platform Privacy Service](../../privacy-service/home.md)。
@@ -57,4 +57,4 @@ ht-degree: 6%
 
 ## 後續步驟
 
-本指南說明如何使用API呼叫管理資料生命週期請求。 如需有關如何在Platform UI中執行這些動作的資訊，請參閱[資料生命週期UI指南](../ui/overview.md)。
+本指南說明如何使用API呼叫管理資料生命週期請求。 如需有關如何在Experience Platform UI中執行這些動作的資訊，請參閱[資料生命週期UI指南](../ui/overview.md)。

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 1 月)
 description: Adobe Experience Platform 2023 年 1 月版發行說明。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 99%
+source-wordcount: '2227'
+ht-degree: 97%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform 現有功能的更新：
 - [資料集合](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
-- [即時客戶設定檔](#profile)
+- [即時客戶輪廓](#profile)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
@@ -45,7 +45,7 @@ Attribution AI 可用於將點數歸因到導致轉換事件的接觸點。行�
 
 ### Customer AI
 
-適用於 Real-Time Customer Data Platform 的 Customer AI 可用於產生自訂傾向評分，例如大規模個別設定檔的流失和轉換。 不必將企業需求轉換為機器學習問題、挑選演算法、訓練或部署，即可達成上述目的。
+適用於 Real-Time Customer Data Platform 的 Customer AI 可用於產生自訂傾向評分，例如大規模個別輪廓的流失和轉換。 不必將企業需求轉換為機器學習問題、挑選演算法、訓練或部署，即可達成上述目的。
 
 **更新的功能**
 
@@ -59,7 +59,7 @@ Attribution AI 可用於將點數歸因到導致轉換事件的接觸點。行�
 
 ## Assurance {#assurance}
 
-Adobe Assurance 可讓您檢查、證明、模擬和驗證您在行動應用程式中收集資料或服務體驗的方式。
+Adobe Assurance 可讓您檢查、校訂、模擬和驗證您在行動應用程式中收集資料或服務體驗的方式。
 
 **新功能或更新功能**
 
@@ -73,7 +73,7 @@ Adobe Assurance 可讓您檢查、證明、模擬和驗證您在行動應用程�
 
 ## 資料集合 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目標。
 
 **新功能或更新功能**
 
@@ -86,21 +86,21 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 目的地 (於 2 月 2 日更新) {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 **新目的地**
 
-| 目的地 | 說明 |
+| 目標 | 說明 |
 | ----------- | ----------- |
-| [(Beta) Adobe Experience Cloud 對象連線](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 使用 [!UICONTROL (Beta) Adobe Experience Cloud 對象]連線，將 Experience Platform 的區段和不同的 Experience Platform 解決方案共用，例如 Audience Manager、Analytics、Advertising Cloud、Adobe Campaign、Target 或 Marketo。 |
-| [Pega 設定檔連線](../../destinations/catalog/personalization/pega-profile.md) | 在 Adob&#x200B;&#x200B;e Experience Platform 中使用 [!DNL Pega Profile Connector] 建立跟您的 [!DNL Amazon] S3 儲存體的即時傳出連線，定期將設定檔資料匯出到 CSV 檔案 (從 Adob&#x200B;&#x200B;e Experience Platform 到您自己的 S3 貯體中)。在 [!DNL Pega Customer Decision Hub] 中，您可以排程資料作業，從 S3 儲存體匯入此設定檔資料，以更新 [!DNL Pega Customer Decision Hub] 設定檔。 |
+| [(Beta) Adobe Experience Cloud 客群連線](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 使用 [!UICONTROL (Beta) Adobe Experience Cloud 對象]連線，將 Experience Platform 的區段和不同的 Experience Platform 解決方案共用，例如 Audience Manager、Analytics、Advertising Cloud、Adobe Campaign、Target 或 Marketo。 |
+| [Pega 輪廓連線](../../destinations/catalog/personalization/pega-profile.md) | 在 Adob&#x200B;&#x200B;e Experience Platform 中使用 [!DNL Pega Profile Connector] 建立跟您的 [!DNL Amazon] S3 儲存體的即時傳出連線，定期將輪廓資料匯出到 CSV 檔案 (從 Adob&#x200B;&#x200B;e Experience Platform 到您自己的 S3 貯體中)。在 [!DNL Pega Customer Decision Hub] 中，您可以排程資料作業，從 S3 儲存體匯入此輪廓資料，以更新 [!DNL Pega Customer Decision Hub] 輪廓。 |
 | [(Beta) The Trade Desk CRM EU 連線](../../destinations/catalog/advertising/tradedesk-emails.md) | 隨著 EUID (歐洲統一 ID) 的發行，您現在可以查看兩個 [!DNL The Trade Desk - CRM] 目的地 (從[目的地目錄](/help/destinations/catalog/overview.md))。 <ul><li> 如果您要在歐盟獲取資料，請使用 **[!DNL The Trade Desk - CRM (EU)]** 目的地。</li><li> 如果您要在亞太 (APAC) 或北美 (NAMER) 區域獲取資料，請使用 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 目的地。 </li></ul> |
 
 **新功能或更新的功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 「付費媒體同意政策」擴充以用於和串流目的地的整合 | 適用於付費媒體啟動使用案例的[擴充同意政策執行](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) (在[串流媒體目的地](/help/destinations/destination-types.md#streaming-destinations))。當設定檔不再符合同意政策的條件時，Experience Platform 現在會主動向串流目的地傳達其政策退場的訊息。<br> <b>注意事項</b>：此功能僅適用於 **[!UICONTROL Privacy and Security Shield]** 以及 **[!UICONTROL Healthcare Shield]** 的客戶。 |
+| 「付費媒體同意政策」擴充以用於和串流目的地的整合 | 適用於付費媒體啟動使用案例的[擴充同意政策執行](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) (在[串流媒體目的地](/help/destinations/destination-types.md#streaming-destinations))。當輪廓不再符合同意政策的條件時，Experience Platform 現在會主動向串流目的地傳達其政策退場的訊息。<br> <b>注意事項</b>：此功能僅適用於 **[!UICONTROL Privacy and Security Shield]** 以及 **[!UICONTROL Healthcare Shield]** 的客戶。 |
 | Beta 雲端儲存空間目的地連接器的新分隔符號選項 | 三個新分隔符號選項 (冒號`:`、直立線符號、分號`;`) 現在可用於新 Beta 雲端儲存空間目的地 - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[(Beta) Google 雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、[(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md)。<br>閱讀有關適用於檔案型目的地的受支援[檔案格式選項](/help/destinations/ui/batch-destinations-file-formatting-options.md)。 |
 | 在[客戶資料欄位](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md)設定 (在 [Destination SDK](/help/destinations/destination-sdk/overview.md) 中) 可取得新的選用參數 | `unique`：當您需要建立的客戶資料欄位其值在使用者的組織所設定的所有目的地資料流中都必須是唯一時，可使用此參數。<br>例如，**[!UICONTROL 整合別名]**&#x200B;欄位 (在[[!UICONTROL 自訂個人化]](/help/destinations/catalog/personalization/custom-personalization.md#parameters)目的地中) 就必須是唯一的，這表示到此目的地的兩個單獨的資料流在此欄位不能具有相同的值。 |
 
@@ -125,13 +125,13 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 綱要樹狀顯示名稱改進 | 之前，欄位名稱會在 UI 中顯示，但現在，綱要畫布上綱要欄位的顯示名稱更易於閱讀。 |
+| 結構描述樹狀顯示名稱改進 | 之前，欄位名稱會在 UI 中顯示，但現在，結構描述畫布上結構描述欄位的顯示名稱更易於閱讀。 |
 
 **新的 XDM 元件**
 
@@ -163,33 +163,33 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
+如需Experience Platform中XDM的詳細資訊，請參閱[XDM系統總覽](../../xdm/home.md)。
 
-## 即時客戶設定檔 {#profile}
+## 即時客戶輪廓 {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶輪廓，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 輪廓可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 **即將淘汰**{#deprecation}
 
 為了消除區段會籍生命週期中的冗餘，在 2023 年 3 月底即淘汰了 `Existing` 狀態 (從[區段會籍地圖](../../xdm/field-groups/profile/segmentation.md))。後續公告會包括確切的淘汰日期。
 
-淘汰後，區段中合格的設定檔會以 `Realized` 表示，而喪失資格的設定檔則會繼續以 `Exited` 表示。這會使得 `Active` 和 `Expired` 區段和檔案型目的地有同等狀態。
+淘汰後，區段中合格的輪廓會以 `Realized` 表示，而喪失資格的輪廓則會繼續以 `Exited` 表示。這會使得 `Active` 和 `Expired` 區段和檔案型目的地有同等狀態。
 
-如果您正在使用[企業目的地](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格設定檔，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。
+如果您正在使用[企業目的地](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格輪廓，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。
 
-若要了解有關即時客戶設定檔的詳細資訊，包括使用設定檔資料的教學課程和最佳做法，請從閱讀[即時客戶設定檔概觀](../../profile/home.md)開始。
+若要了解有關即時客戶輪廓的詳細資訊，包括使用輪廓資料的教學課程和最佳做法，請從閱讀[即時客戶輪廓概觀](../../profile/home.md)開始。
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
 | 區段產生器中的批次值匯入 | 區段產生器現在支援以上傳 CSV 或 TSV 檔案或手動插入逗號分隔值的方式匯入多個值。如需詳細資訊，可參閱[區段產生器指南](../../segmentation/ui/segment-builder.md#rule-builder-canvas)。 |
-| 外部對象會籍到期 | 預設情況下，外部對象會籍會保留 30 天。若要保留更長的時間，請在擷取對象資料過程中使用 `validUntil` 欄位。 |
-| 平台產生的區段會籍到期 | 任何區段會籍若處於 `Exited` 狀態超過 30 天，根據 `lastQualificationTime` 欄位，可能會予以刪除。 |
+| 外部客群會籍期限 | 預設情況下，外部客群會籍會保留 30 天。若要保留更長的時間，請在擷取客群資料過程中使用 `validUntil` 欄位。 |
+| Experience Platform產生的區段會籍有效期 | 任何區段會籍若處於 `Exited` 狀態超過 30 天，根據 `lastQualificationTime` 欄位，可能會予以刪除。 |
 
 {style="table-layout:auto"}
 
@@ -197,9 +197,9 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 ## 來源 {#sources}
 
-Adobe Experience Platform 可從外部來源擷取資料，並讓您使用 Platform 服務建構、標示和強化該資料。您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
+Adobe Experience Platform可從外部來源擷取資料，並允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 | 功能 | 說明 |
 | --- | --- |

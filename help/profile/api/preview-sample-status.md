@@ -4,16 +4,16 @@ title: 預覽範例狀態（設定檔預覽） API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分佈，並產生顯示資料集重疊、身分重疊和未拼接設定檔的報告。
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2906'
+source-wordcount: '2909'
 ht-degree: 1%
 
 ---
 
 # 預覽樣本狀態端點（設定檔預覽）
 
-Adobe Experience Platform可讓您從多個來源擷取客戶資料，以便為每個個別客戶建立強大且統一的設定檔。 將資料內嵌至Platform後，會執行範例工作以更新設定檔計數和其他即時客戶設定檔資料相關量度。
+Adobe Experience Platform可讓您從多個來源擷取客戶資料，以便為每個個別客戶建立強大且統一的設定檔。 將資料內嵌至Experience Platform後，會執行範例工作以更新設定檔計數和其他即時客戶設定檔資料相關量度。
 
 此範例工作的結果可以使用`/previewsamplestatus`端點（即時客戶設定檔API的一部分）進行檢視。 此端點也可用來根據資料集和身分名稱空間列出設定檔分佈，以及產生多個報表，以瞭解您組織設定檔存放區的構成。 本指南會逐步說明使用`/previewsamplestatus` API端點檢視這些量度所需的步驟。
 
@@ -31,26 +31,26 @@ Adobe Experience Platform可讓您從多個來源擷取客戶資料，以便為�
 
 每個個別客戶設定檔都由多個設定檔片段組成，這些片段已合併以構成該客戶的單一檢視。 例如，如果客戶跨多個管道與您的品牌互動，則您的組織可能會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。
 
-將設定檔片段擷取到Platform時，會合併在一起（根據合併原則），以為該客戶建立單一設定檔。 因此，由於每個設定檔都是由多個片段組成，因此設定檔片段的總數可能會永遠高於合併的設定檔總數。
+將設定檔片段擷取至Experience Platform時，會合併在一起（根據合併原則），以為該客戶建立單一設定檔。 因此，由於每個設定檔都是由多個片段組成，因此設定檔片段的總數可能會永遠高於合併的設定檔總數。
 
 若要進一步瞭解設定檔及其在Experience Platform中的角色，請先閱讀[即時客戶設定檔總覽](../home.md)。
 
 ## 如何觸發範例作業
 
-啟用即時客戶個人檔案的資料擷取到[!DNL Platform]後，會儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過5%，則會觸發取樣工作以更新計數。 範例的觸發方式取決於所使用的擷取型別：
+啟用即時客戶個人檔案的資料擷取到[!DNL Experience Platform]後，會儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過5%，則會觸發取樣工作以更新計數。 範例的觸發方式取決於所使用的擷取型別：
 
 * 對於&#x200B;**串流資料工作流程**，會每小時進行一次檢查，以判斷是否已達到5%的增加或減少臨界值。 如果有，則會自動觸發範例工作以更新計數。
 * 對於&#x200B;**批次擷取**，在成功將批次擷取到設定檔存放區後15分鐘內，如果符合5%的增加或減少臨界值，則會執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例作業，以及依資料集和身分名稱空間列出設定檔分佈。
 
-名稱空間量度的設定檔計數和設定檔也可在Experience PlatformUI的[!UICONTROL 設定檔]區段中取得。 如需有關如何使用UI存取設定檔資料的資訊，請瀏覽[[!DNL Profile] UI指南](../ui/user-guide.md)。
+在Experience Platform UI的[!UICONTROL 設定檔]區段中，也可使用名稱空間量度的設定檔計數和設定檔。 如需有關如何使用UI存取設定檔資料的資訊，請瀏覽[[!DNL Profile] UI指南](../ui/user-guide.md)。
 
 ## 檢視上一個範例狀態 {#view-last-sample-status}
 
-您可以對`/previewsamplestatus`端點執行GET要求，以檢視針對您的組織執行的最後一個成功範例工作的詳細資料。 這包括範例中的設定檔總數，以及設定檔計數量度，或您的組織在Experience Platform內擁有的設定檔總數。
+您可以對`/previewsamplestatus`端點執行GET要求，以檢視針對您的組織執行的最後一個成功範例工作的詳細資料。 這包括範例中的設定檔總數，以及設定檔計數量度，或您的組織在Experience Platform中擁有的設定檔總數。
 
 個人資料計數是在合併個人資料片段以針對每個個別客戶形成單一個人資料後產生的。 換言之，當設定檔片段合併在一起時，它們會傳回「1」設定檔計數，因為它們都與同一個人相關。
 
-設定檔計數也包含具有屬性的設定檔（記錄資料），以及僅包含時間序列（事件）資料(例如Adobe Analytics設定檔)的設定檔。 範例作業會在擷取設定檔資料時定期更新，以提供Platform內最新的設定檔總數。
+設定檔計數也包含具有屬性的設定檔（記錄資料），以及僅包含時間序列（事件）資料(例如Adobe Analytics設定檔)的設定檔。 範例工作會在擷取設定檔資料時定期更新，以便在Experience Platform中提供最新的設定檔總數。
 
 **API格式**
 
@@ -207,7 +207,7 @@ curl -X GET \
 
 ## 依身分名稱空間列出設定檔分佈
 
-您可以對`/previewsamplestatus/report/namespace`端點執行GET要求，以檢視個人資料存放區中所有合併設定檔的依身分名稱空間劃分。 這包括Adobe提供的標準身分識別，以及貴組織定義的自訂身分識別。
+您可以對`/previewsamplestatus/report/namespace`端點執行GET要求，以檢視個人資料存放區中所有合併個人資料中依身分名稱空間區分的劃分。 這包括Adobe提供的標準身分識別，以及貴組織定義的自訂身分識別。
 
 身分識別名稱空間是Adobe Experience Platform Identity Service的重要元件，用途是作為客戶資料相關內容的指標。 若要深入瞭解，請先閱讀[身分名稱空間概觀](../../identity-service/features/namespaces.md)。
 
@@ -299,14 +299,14 @@ curl -X GET \
 | `fullIDsFragmentCount` | 名稱空間中的設定檔片段總數。 |
 | `fullIDsCount` | 名稱空間中合併的設定檔總數。 |
 | `fullIDsPercentage` | `fullIDsCount`佔合併的設定檔總數的百分比（在[最後一個範例狀態](#view-last-sample-status)中傳回的`totalRows`值），以十進位格式表示。 |
-| `code` | 名稱空間的`code`。 使用[Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)使用名稱空間時，可找到此專案，在Experience PlatformUI中也稱為[!UICONTROL 身分符號]。 若要深入瞭解，請造訪[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
+| `code` | 名稱空間的`code`。 使用[Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)處理名稱空間時，可找到此專案，在Experience Platform UI中也稱為[!UICONTROL Identity符號]。 若要深入瞭解，請造訪[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
 | `value` | 名稱空間的`id`值。 使用[Identity Service API](../../identity-service/api/list-namespaces.md)處理名稱空間時，可以找到此專案。 |
 
 ## 產生資料集重疊報告
 
 資料集重疊報表可公開對可定址對象貢獻最大的資料集（合併的設定檔），讓您檢視組織設定檔存放區的構成。 除了提供您資料的深入分析，此報表還可協助您採取動作以最佳化授權使用，例如設定特定資料集的到期時間。
 
-您可以透過對`/previewsamplestatus/report/dataset/overlap`端點執行GET要求來產生資料集重疊報表。
+您可以透過對`/previewsamplestatus/report/dataset/overlap`端點執行GET請求來產生資料集重疊報表。
 
 如需逐步指示，瞭解如何使用命令列或Postman UI產生資料集重疊報告，請參閱[產生資料集重疊報告教學課程](../tutorials/dataset-overlap-report.md)。
 
@@ -372,9 +372,9 @@ curl -X GET \
 
 ## 產生身分名稱空間重疊報表 {#identity-overlap-report}
 
-身分名稱空間重疊報表可公開對可定址對象貢獻最大的身分名稱空間（合併的設定檔），讓您檢視組織設定檔存放區的組成。 這包括Adobe提供的標準身分名稱空間，以及貴組織定義的自訂身分名稱空間。
+身分名稱空間重疊報表可公開對可定址對象貢獻最大的身分名稱空間（合併的設定檔），讓您檢視組織設定檔存放區的組成。 其中包括Adobe提供的標準身分名稱空間，以及貴組織定義的自訂身分名稱空間。
 
-您可以透過對`/previewsamplestatus/report/namespace/overlap`端點執行GET要求來產生身分名稱空間重疊報告。
+您可以透過對`/previewsamplestatus/report/namespace/overlap`端點執行GET請求來產生身分名稱空間重疊報表。
 
 **API格式**
 
@@ -445,7 +445,7 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `data` | `data`物件包含以逗號分隔的清單，具有身分名稱空間程式碼及其個別設定檔計數的唯一組合。 |
-| 名稱空間程式碼 | `code`是每個身分名稱空間名稱的簡短形式。 可使用[Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)找到每個`code`與其`name`的對應。 在Experience PlatformUI中，`code`也稱為[!UICONTROL 身分符號]。 若要深入瞭解，請造訪[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
+| 名稱空間程式碼 | `code`是每個身分名稱空間名稱的簡短形式。 可使用[Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)找到每個`code`與其`name`的對應。 在Experience Platform UI中，`code`也稱為[!UICONTROL 身分符號]。 若要深入瞭解，請造訪[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
 | `reportTimestamp` | 報表的時間戳記。 如果在請求期間提供了`date`引數，則傳回的報告會用於提供的日期。 如果未提供`date`引數，則會傳回最近的報告。 |
 
 ### 解譯身分名稱空間重疊報表
@@ -559,7 +559,7 @@ curl -X GET \
 
 ### 解譯未拼接的設定檔報告
 
-報表結果可讓您深入分析貴組織在其設定檔存放區中有多少未拼接和非作用中的設定檔。
+報表的結果可為insight提供貴組織在其設定檔存放區中有多少未拼接和非作用中的設定檔。
 
 請考慮下列`data`物件的摘錄：
 

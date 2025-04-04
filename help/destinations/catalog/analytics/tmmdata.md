@@ -3,9 +3,9 @@ keywords: TMMData；TMM資料；TMMDATA；TMM資料
 title: TMMData延伸模組
 description: TMMData擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '478'
 ht-degree: 3%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-[!DNL TMMData's] Foundation platform for Adobe Marketing Cloud為行銷團隊提供工具，可存取及混合其所有重要資料來源，包括內部/外部及線上/離線資料，以建立自信、完整的跨管道分析，並具備自動化行銷活動設定，以及直接匯入至Adobe和其他分析與BI工具。
+[!DNL TMMData's] Foundation platform for Adobe Marketing Cloud為行銷團隊提供工具，可存取和混合其所有重要資料來源，包括內部/外部和線上/離線資料，以建立自信、完整的跨管道分析，並具備自動化行銷活動設定，以及直接匯入至Adobe和其他分析和BI工具。
 
 [!DNL TMMData]是Adobe Experience Platform中的Analytics擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html)上的擴充功能頁面。
 
-此目的地是標籤延伸模組。 如需標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
+此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
 ![TMMData延伸模組](../../assets/catalog/analytics/tmmdata/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-此擴充功能可在[!DNL Destinations]目錄中提供給所有已購買Platform的客戶。
+此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
 若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，讓您可以安裝擴充功能。
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 若要安裝[!DNL TMMData]擴充功能：
 
-在[平台介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
+在[Experience Platform介面](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 
 從目錄中選取擴充功能或使用搜尋列。
 
@@ -58,6 +58,6 @@ ht-degree: 3%
 
 >[!TIP]
 >
->如果擴充功能已安裝在您的其中一個屬性上，Platform UI仍會顯示擴充功能的&#x200B;**[!UICONTROL 安裝]**。 依照[安裝擴充功能](#install-extension)中的說明啟動安裝工作流程，以設定或刪除您的擴充功能。
+>如果擴充功能已安裝在您的其中一個屬性上，Experience Platform UI仍會顯示擴充功能的&#x200B;**[!UICONTROL 安裝]**。 依照[安裝擴充功能](#install-extension)中的說明啟動安裝工作流程，以設定或刪除您的擴充功能。
 
 若要升級您的擴充功能，請參閱標籤檔案中的[擴充功能升級程式](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)指南。

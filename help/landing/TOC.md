@@ -3,45 +3,45 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 透過指南、文件和教學課程，了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 24%
+source-wordcount: '324'
+ht-degree: 28%
 
 ---
 
 
 # Adobe Experience Platform概觀 {#landing}
 
-* [平台概觀](home.md)
-* [平台概觀（影片）](video/platform-overview.md)
+* [Experience 平台概觀](home.md)
+* [Experience Platform概述（影片）](video/platform-overview.md)
 * [多雲端概述](multi-cloud.md)
-* [Edge Network與集線器比較](./edge-and-hub-comparison.md)
-* [平台教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
-* [由Platform支援的客戶體驗（影片）](video/customer-experience.md)
-* [Platform支援的客戶體驗幕後（影片）](video/customer-experience-bts.md)
+* [Edge Network 與中心網路的比較](./edge-and-hub-comparison.md)
+* [Experience Platform 教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [Experience Platform支援的客戶體驗（影片）](video/customer-experience.md)
+* [Experience Platform支援的客戶體驗幕後（影片）](video/customer-experience-bts.md)
 * 快速入門 {#getting-started}
    * [端對端範例工作流程](end-to-end-tutorial.md)
    * [重要功能（影片）](video/key-capabilities.md)
    * [主要使用案例（影片）](video/platform-use-cases.md)
-   * [平台架構（影片）](video/platform-architecture.md)
+   * [Experience Platform架構（影片）](video/platform-architecture.md)
    * [角色和專案階段（影片）](video/roles-project-phases.md)
 * Experience Platform UI {#platform-ui}
-   * [Platform UI指南](ui-guide.md)
-   * [Platform UI導覽（影片）](video/platform-ui.md)
+   * [Experience Platform UI指南](ui-guide.md)
+   * [Experience Platform UI導覽（影片）](video/platform-ui.md)
    * [工作流程UI指南](workflows.md)
    * [瀏覽器和語言支援](browser-language-support.md)
    * [自我識別調查](self-identification.md)
 * Experience Platform API {#platform-apis}
-   * [Platform API快速入門](api-guide.md)
-   * [驗證及存取平台API](api-authentication.md)
+   * [Experience Platform API快速入門](api-guide.md)
+   * [驗證及存取 Experience Platform API](api-authentication.md)
    * [API基礎知識](api-fundamentals.md)
-   * [搭配Platform API使用Postman](postman.md)
+   * [搭配Experience Platform API使用Postman](postman.md)
    * [API參考檔案](https://www.adobe.com/go/platform-api-reference-en)
-* 平台檔案{#documentation}
+* Experience Platform檔案{#documentation}
    * [概觀](documentation/overview.md)
    * [語言支援](documentation/language-support.md)
-* 在平台{#ecosystem}上建置的應用程式
+* 以Experience Platform {#ecosystem}建置的應用程式
    * [概觀](application-services.md)
    * [Adobe Real-Time Customer Data Platform （所有版本）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [應用程式與Intelligent Services （影片）](video/application-intelligent-services.md)
@@ -49,7 +49,7 @@ ht-degree: 24%
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=zh-Hant)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
-   * [Platform與Experience Cloud整合（影片）](video/experience-cloud-integrations.md)
+   * [Experience Platform與Experience Cloud的整合（影片）](video/experience-cloud-integrations.md)
 * 治理、隱私和安全性{#governance-privacy-security}
    * [概觀](./governance-privacy-security/overview.md)
    * 同意管理 {#consent}
@@ -59,7 +59,7 @@ ht-degree: 24%
       * IAB TCF 2.0 {#iab}
          * [概觀](./governance-privacy-security/consent/iab/overview.md)
          * [設定資料集以擷取同意和偏好設定資料](./governance-privacy-security/consent/iab/dataset.md)
-      * [整合Platform Web SDK以處理同意和偏好設定資料](./governance-privacy-security/consent/sdk.md)
+      * [整合Experience Platform Web SDK以處理同意和偏好設定資料](./governance-privacy-security/consent/sdk.md)
    * 稽核記錄{#audit-logs}
       * [概觀](./governance-privacy-security/audit-logs/overview.md)
       * 稽核查詢API {#audit-api}

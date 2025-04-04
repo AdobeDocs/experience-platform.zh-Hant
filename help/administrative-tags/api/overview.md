@@ -3,16 +3,16 @@ title: 統一標籤API總覽
 description: 瞭解如何使用統一標籤API來管理Adobe Experience Platform中的統一標籤和資料夾。
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 2%
 
 ---
 
 # 統一標籤API總覽
 
-統一標籤API可讓您在Adobe Experience Platform中分類及管理您的企業物件。 您可以建立資料夾和標籤，藉由使用此API中的端點，更好地整理Platform物件（例如對象或資料集）。
+統一標籤API可讓您在Adobe Experience Platform中分類及管理您的企業物件。 您可以建立資料夾和標籤，藉由使用此API中的端點，更好地整理Experience Platform物件（例如對象或資料集）。
 
 在閱讀個別端點指南之前，請參閱[快速入門手冊](./getting-started.md)，以取得有關必要標頭、閱讀範例API呼叫等的重要資訊。
 

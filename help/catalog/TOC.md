@@ -4,10 +4,10 @@ user-guide-title: 目錄與資料集指南
 user-guide-description: 在 Data Lake 中探索資料處理歷程、中繼資料、檔案說明、目錄和資料集，並進一步了解「目錄服務」系統。
 feature: Catalog
 role: Developer
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 33%
+source-wordcount: '124'
+ht-degree: 42%
 
 ---
 
@@ -34,8 +34,8 @@ ht-degree: 33%
    * [使用API建立並填入資料集](datasets/create.md)
    * [為設定檔和身分啟用資料集](datasets/enable-for-profile.md)
    * [為設定檔更新啟用資料集（更新插入）](datasets/enable-upsert.md)
-   * [資料湖中的體驗事件資料集保留](datasets/experience-event-dataset-retention-ttl-guide.md)
+   * [在資料湖中體驗事件資料集保留](datasets/experience-event-dataset-retention-ttl-guide.md)
 * [Data Lake中的隱私權請求處理](privacy.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [常見問題](catalog-faq.md)
-* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+* [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

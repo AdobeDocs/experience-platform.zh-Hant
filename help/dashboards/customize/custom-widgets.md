@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；使用者介面；UI；儀表板；儀表板；設定檔；區段；目的地；授權使用；Widget；量度；
+keywords: Experience Platform；使用者介面；UI；控制面板；控制面板；設定檔；區段；目的地；授權使用情況；Widget；量度；
 title: 建立儀表板的自訂Widget
 description: 本指南提供建立用於Adobe Experience Platform控制面板的自訂Widget的逐步指示。
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 在Adobe Experience Platform中，您可以使用多個儀表板檢視組織的資料並與之互動。 您也可以將新的Widget新增至儀表板檢視，以更新某些儀表板。 除了Adobe提供的標準Widget之外，您也可以建立自訂Widget，並在整個組織內共用。
 
-本指南提供在Platform UI中建立自訂Widget並新增至[!UICONTROL 設定檔]、[!UICONTROL 區段]和[!UICONTROL 目的地]儀表板的逐步指示。
+本指南提供在Experience Platform UI中建立自訂Widget並新增至[!UICONTROL 設定檔]、[!UICONTROL 區段]和[!UICONTROL 目的地]儀表板的逐步指示。
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->在程式庫中隱藏Widget並不會從個別使用者的控制面板中移除該Widget。 如果您的組織不應再使用Widget，請務必直接與所有Platform使用者溝通，因為他們需要將該Widget從儀表板上移除。
+>在程式庫中隱藏Widget並不會從個別使用者的控制面板中移除該Widget。 如果您的組織不應再使用Widget，請務必直接將此資訊傳達給所有Experience Platform使用者，因為他們需要將該Widget從儀表板上移除。
 
 ![Widget資料庫工作區的「自訂」索引標籤，其中包含Widget下拉式功能表選項和「顯示隱藏的Widget」反白顯示。](../images/customization/hide-widget.png)
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->編輯資料庫中的Widget不會更新個別使用者的小工具。 如果Widget已更新，請務必將此資訊直接傳達給所有Platform使用者，因為他們需要從儀表板上移除過時的Widget，然後從Widget資料庫中選取並新增更新後的Widget。
+>編輯資料庫中的Widget不會更新個別使用者的小工具。 如果Widget已更新，請務必將此資訊直接傳達給所有Experience Platform使用者，因為他們需要從儀表板上移除過時的Widget，然後從Widget資料庫中選取並新增更新後的Widget。
 
 ![編輯Widget對話方塊。](../images/customization/edit-widget.png)
 

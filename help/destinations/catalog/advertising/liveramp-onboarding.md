@@ -1,18 +1,18 @@
 ---
 title: LiveRamp — 入門連線
-description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-time Customer Data Platform上線到LiveRamp Connect。
+description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-Time Customer Data Platform上線到LiveRamp Connect。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1948'
 ht-degree: 3%
 
 ---
 
 # [!DNL LiveRamp - Onboarding]個連線 {#liveramp-onboarding}
 
-使用[!DNL LiveRamp - Onboarding]連線將對象從Adobe Real-time Customer Data Platform上線到[!DNL LiveRamp Connect]。
+使用[!DNL LiveRamp - Onboarding]連線將對象從Adobe Real-Time Customer Data Platform上線到[!DNL LiveRamp Connect]。
 
 ## 使用案例 {#use-cases}
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 [!DNL LiveRamp - Onboarding]連線使用[LiveRamp的SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)儲存空間匯出檔案。
 
-在從Experience Platform傳送資料給[!DNL LiveRamp - Onboarding]之前，您需要您的[!DNL LiveRamp]認證。 如果您尚未取得認證，請洽詢您的[!DNL LiveRamp]代表以取得認證。
+在您可以從Experience Platform傳送資料給[!DNL LiveRamp - Onboarding]之前，您需要您的[!DNL LiveRamp]認證。 如果您尚未取得認證，請洽詢您的[!DNL LiveRamp]代表以取得認證。
 
 ## 支援的身分 {#supported-identities}
 
@@ -38,8 +38,8 @@ ht-degree: 3%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ ht-degree: 3%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有[!DNL LiveRamp - Onboarding]目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 每日批次]** | 由於設定檔會根據對象評估在Experience Platform中更新，因此設定檔（身分）會每天更新一次，從下游到目的地平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
+| 匯出頻率 | **[!UICONTROL 每日批次]** | 由於設定檔會根據對象評估在Experience Platform中更新，因此設定檔（身分）會每天更新一次，從下游傳送到目的地平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
 
 {style="table-layout:auto"}
 
@@ -104,14 +104,14 @@ ht-degree: 3%
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![平台UI熒幕擷圖顯示如何填寫您目的地的詳細資料](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Experience Platform UI熒幕擷圖顯示如何填寫您目的地的詳細資料](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
 * **[!UICONTROL 地區]**：您LiveRamp SFTP儲存體執行個體的地理區域。
 * **[!UICONTROL 資料夾路徑]**： [!DNL LiveRamp] `uploads`子資料夾的路徑，此子資料夾將裝載匯出的檔案。 `uploads`首碼會自動新增至資料夾路徑。 [!DNL LiveRamp]建議從Adobe Real-Time CDP建立傳遞的專用子資料夾，以將檔案與其他任何現有的摘要分開，並確保所有自動化運作順暢無礙。
    * 例如，如果您要將檔案匯出至`uploads/my_export_folder`，請在&#x200B;**[!UICONTROL 資料夾路徑]**&#x200B;欄位中輸入`my_export_folder`。
-* **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。 可用的選項為&#x200B;**[!UICONTROL GZIP]**&#x200B;或&#x200B;**[!UICONTROL 無]**。
+* **[!UICONTROL 壓縮格式]**：選取Experience Platform應該用於匯出檔案的壓縮型別。 可用的選項為&#x200B;**[!UICONTROL GZIP]**&#x200B;或&#x200B;**[!UICONTROL 無]**。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -127,7 +127,7 @@ ht-degree: 3%
 
 讀取[啟用批次設定檔匯出目的地的對象資料](/help/destinations/ui/activate-batch-profile-destinations.md)，以取得啟用此目的地對象的指示。
 
-### 正在排程 {#scheduling}
+### 正在安排 {#scheduling}
 
 在[!UICONTROL 排程]步驟中，為每個對象建立一個匯出排程，其設定如下所示。
 
@@ -135,13 +135,13 @@ ht-degree: 3%
 * **[!UICONTROL 頻率]**： [!UICONTROL 每日]
 * **[!UICONTROL 日期]**：視需要選取匯出開始和結束時間。
 
-![顯示對象排程步驟的平台UI熒幕擷取畫面。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Experience Platform UI熒幕擷圖顯示對象排程步驟。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 匯出的檔案名稱目前無法由使用者設定。 所有匯出至[!DNL LiveRamp - Onboarding]目的地的檔案都會根據下列範本自動命名：
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![平台UI熒幕擷圖顯示匯出的檔案名稱範本。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Experience Platform UI熒幕擷圖顯示匯出的檔案名稱範本。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 例如，名為[!DNL Luma]之組織的匯出檔案名稱可能如下所示：
 
@@ -165,19 +165,19 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您會在畫面上看到新的對應列。
 
-   ![Experience PlatformUI熒幕顯示對應熒幕。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
+   ![Experience Platform UI熒幕顯示對應熒幕。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
 
 2. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別並選取您要對應的XDM屬性，或選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;類別並選取要對應到目的地的身分。
 
-   ![Experience PlatformUI熒幕顯示來源對應熒幕。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
+   ![Experience Platform UI熒幕顯示來源對應熒幕。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
 
 3. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，輸入您要將選取的來源欄位對應到的屬性名稱。 此處定義的屬性名稱將在匯出的CSV檔案中反映為欄標題。
 
-   ![Experience PlatformUI熒幕顯示目標對應熒幕。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
+   ![Experience Platform UI熒幕顯示目標對應熒幕。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
 
    您也可以直接在&#x200B;**[!UICONTROL 目標欄位]**&#x200B;中輸入屬性名稱，以輸入屬性名稱。
 
-   ![Experience PlatformUI熒幕顯示目標對應熒幕。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
+   ![Experience Platform UI熒幕顯示目標對應熒幕。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
 
 新增所有需要的對應之後，請選取&#x200B;**[!UICONTROL 下一步]**&#x200B;並完成啟動工作流程。
 
@@ -185,9 +185,9 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 您的資料會匯出至您設定的[!DNL LiveRamp - Onboarding]儲存位置（CSV檔案）。
 
-匯出的檔案大小上限為1,000萬列。 如果選取的對象超過1,000萬列，Experience Platform會在每次傳送中產生多個檔案。 如果您預計會超過單一檔案限制，請聯絡您的[!DNL LiveRamp]代表，讓他們為您設定批次擷取。
+匯出的檔案大小上限為1,000萬列。 如果選取的對象超過1,000萬列，Experience Platform會每次傳送產生多個檔案。 如果您預計會超過單一檔案限制，請聯絡您的[!DNL LiveRamp]代表，讓他們為您設定批次擷取。
 
-將檔案匯出至[!DNL LiveRamp - Onboarding]目的地時，Platform會為每個[合併原則ID](../../../profile/merge-policies/overview.md)產生一個CSV檔案。
+將檔案匯出至[!DNL LiveRamp - Onboarding]目的地時，Experience Platform會為每個[合併原則ID](../../../profile/merge-policies/overview.md)產生一個CSV檔案。
 
 例如，我們考慮以下對象：
 
@@ -196,7 +196,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 * 對象C （合併原則1）
 * 對象D （合併原則1）
 
-Platform會將兩個CSV檔案匯出至[!DNL LiveRamp - Onboarding]：
+Experience Platform會將兩個CSV檔案匯出至[!DNL LiveRamp - Onboarding]：
 
 * 一個CSV檔案，包含對象A、C和D；
 * 一個CSV檔案包含對象B。
@@ -211,7 +211,7 @@ Platform會將兩個CSV檔案匯出至[!DNL LiveRamp - Onboarding]：
 * `Expired`：設定檔不再符合對象的資格，但過去已符合資格。
 * `""`（空字串）：設定檔從未符合對象的資格。
 
-例如，具有一個`email`屬性、兩個源自Experience Platform[分段服務](../../../segmentation/home.md)的對象，以及一個[匯入](../../../segmentation/ui/audience-portal.md#import-audience)外部對象的匯出CSV檔案可能如下所示：
+例如，具有一個`email`屬性、兩個源自Experience Platform [分段服務](../../../segmentation/home.md)的對象以及一個[匯入](../../../segmentation/ui/audience-portal.md#import-audience)外部對象的匯出CSV檔案可能如下所示：
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,15 +223,15 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-在上述範例中，`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df`和`ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f`區段說明源自細分服務的對象，而`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e`說明將對象匯入至Platform做為[自訂上傳](../../../segmentation/ui/audience-portal.md#import-audience)。
+在上述範例中，`ups_aa2e3d98-974b-4f8b-9507-59f65b6442df`和`ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f`區段說明源自細分服務的對象，而`CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e`說明匯入Experience Platform作為[自訂上傳](../../../segmentation/ui/audience-portal.md#import-audience)的對象。
 
-由於Platform會針對每個[合併原則ID](../../../profile/merge-policies/overview.md)產生一個CSV檔案，因此也會針對每個合併原則ID產生個別的資料流執行。
+由於Experience Platform會為每個[合併原則ID](../../../profile/merge-policies/overview.md)產生一個CSV檔案，因此也會為每個合併原則ID產生個別的資料流執行。
 
 這表示[資料流執行](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)頁面中收到的&#x200B;**[!UICONTROL 身分啟用]**&#x200B;和&#x200B;**[!UICONTROL 設定檔]**&#x200B;量度，會針對使用相同合併原則的每個對象群組進行彙總，而非針對每個對象顯示。
 
 由於為使用相同合併原則的對象群組產生資料流執行，對象名稱不會顯示在[監視儀表板](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)中。
 
-![Experience PlatformUI熒幕顯示已啟用的身分識別量度。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
+![Experience Platform UI熒幕顯示已啟用的身分識別量度。](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
 
 ## 將匯出的資料上傳至LiveRamp {#upload-to-liveramp}
 

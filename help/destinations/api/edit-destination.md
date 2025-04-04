@@ -4,9 +4,9 @@ title: 使用流程服務API編輯目的地連線
 type: Tutorial
 description: 瞭解如何使用流量服務API編輯目的地連線的各種元件。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1609'
 ht-degree: 5%
 
 ---
@@ -29,24 +29,24 @@ ht-degree: 5%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
-* [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+* [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功更新資料流。
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
 
 ### 收集所需標頭的值 {#gather-values-for-required-headers}
 
-若要呼叫Platform API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
+若要呼叫Experience Platform API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對Platform API的所有請求都需要標頭，以指定將在其中進行操作的沙箱名稱：
+Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對Experience Platform API的所有請求都要求標頭，用於指定將在其中進行操作的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -60,13 +60,13 @@ Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源
 
 ## 查詢資料流詳細資料 {#look-up-dataflow-details}
 
-編輯目的地連線的第一個步驟，是使用流量ID擷取資料流詳細資訊。 您可以透過向`/flows`端點發出GET要求來檢視現有資料流的目前詳細資料。
+編輯目的地連線的第一個步驟，是使用流量ID擷取資料流詳細資訊。 您可以對`/flows`端點發出GET要求，以檢視現有資料流的目前詳細資料。
 
 >[!TIP]
 >
->您可以使用Experience PlatformUI來取得目的地所需的資料流ID。 前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**，選取所需的目的地資料流，然後在右側邊欄中尋找目的地ID。 目的地ID是您將在下一個步驟中作為流量ID使用的值。
+>您可以使用Experience Platform UI來取得目的地所需的資料流ID。 前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**，選取所需的目的地資料流，然後在右側邊欄中尋找目的地ID。 目的地ID是您將在下一個步驟中作為流量ID使用的值。
 >
-> ![使用Experience PlatformUI取得目的地ID](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![使用Experience Platform UI取得目的地ID](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
 >[!BEGINSHADEBOX]
 
@@ -235,7 +235,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回目標連線ID和更新的Etag。 您可以向[!DNL Flow Service] API發出GET要求，同時提供目標連線ID以驗證更新。
+成功的回應會傳回目標連線ID和更新的Etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的目標連線ID。
 
 ```json
 {
@@ -275,7 +275,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回目標連線ID和更新的etag。 您可以向[!DNL Flow Service] API發出GET要求，同時提供目標連線ID以驗證更新。
+成功的回應會傳回目標連線ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的目標連線ID。
 
 ```json
 {
@@ -317,7 +317,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回目標連線ID和更新的etag。 您可以向[!DNL Flow Service] API發出GET要求，同時提供目標連線ID以驗證更新。
+成功的回應會傳回目標連線ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的目標連線ID。
 
 ```json
 {
@@ -342,7 +342,7 @@ curl -X PATCH \
 >
 >發出`PATCH`請求時需要`If-Match`標頭。 此標頭的值是您要更新的基礎連線的唯一版本。 每次成功更新資料流、基本連線等流程實體時，etag值都會隨之更新。
 >
-> 若要取得最新版的Etag值，請對`/connections/{BASE_CONNECTION_ID}`端點執行GET要求，其中`{BASE_CONNECTION_ID}`是您要更新的基礎連線ID。
+> 若要取得最新版Etag值，請對`/connections/{BASE_CONNECTION_ID}`端點執行GET要求，其中`{BASE_CONNECTION_ID}`是您要更新的基本連線ID。
 >
 > 提出`PATCH`請求時，請務必將`If-Match`標頭的值括在雙引號中，如下例所示。
 
@@ -394,7 +394,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回您的基本連線ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET要求來驗證更新，同時提供您的基本連線ID。
+成功的回應會傳回您的基本連線ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的基本連線ID。
 
 ```json
 {
@@ -436,7 +436,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回您的基本連線ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET要求來驗證更新，同時提供您的基本連線ID。
+成功的回應會傳回您的基本連線ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的基本連線ID。
 
 ```json
 {
@@ -451,7 +451,7 @@ curl -X PATCH \
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[要求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Experience Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 

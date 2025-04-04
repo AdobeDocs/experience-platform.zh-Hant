@@ -2,11 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；資料模型；ui；工作區；欄位群組；欄位群組；
 solution: Experience Platform
 title: 在UI中建立和編輯結構描述欄位群組
-description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構描述欄位群組。
+description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構欄位群組。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1001'
 ht-degree: 8%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 欄位群組會根據欄位群組代表的資料行為（記錄或時間序列），定義其相容的類別。 這表示並非所有欄位群組都可用於所有類別。
 
-Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷使用案例。 不過，您也可以建立和編輯自己的自訂欄位群組，以在XDM結構描述中定義與您的業務相關的其他概念。 本指南概述如何在Platform UI中建立、編輯及管理組織的自訂欄位群組。
+Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷使用案例。 不過，您也可以建立和編輯自己的自訂欄位群組，以在XDM結構描述中定義與您的業務相關的其他概念。 本指南概述如何在Experience Platform UI中建立、編輯及管理組織的自訂欄位群組。
 
 ## 先決條件 {#prerequisites}
 
@@ -48,7 +48,7 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ## 篩選欄位群組 {#filter}
 
-可用欄位群組清單已根據其建立方式預先進行篩選。預設設定會顯示由Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL Standard]選項會顯示Adobe建立的實體，而[!UICONTROL Custom]選項則會顯示在您的組織內建立的實體。
+可用欄位群組清單已根據其建立方式預先進行篩選。預設設定會顯示Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL 標準]選項會顯示Adobe建立的實體，而[!UICONTROL 自訂]選項則會顯示貴組織內建立的實體。
 
 ![ [!UICONTROL 結構描述]工作區的[!UICONTROL 欄位群組]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
@@ -56,7 +56,7 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 >[!NOTE]
 >
->只有貴組織定義的自訂欄位群組才能完全編輯和自訂。 對於由Adobe定義的核心欄位群組，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 它們在「結構描述編輯器」中以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png))。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
+>只有貴組織定義的自訂欄位群組才能完全編輯和自訂。 對於Adobe定義的核心欄位群組，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 它們在「結構描述編輯器」中以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png))。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
 >
 >儲存自訂欄位群組並在結構描述中使用以進行資料擷取後，之後只能對欄位群組進行附加變更。 如需詳細資訊，請參閱結構描述演化](../../schema/composition.md#evolution)的[規則。
 
@@ -92,6 +92,6 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ## 後續步驟 {#next-steps}
 
-本指南說明如何使用Platform UI建立及編輯欄位群組。 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
+本指南說明如何使用Experience Platform UI建立和編輯欄位群組。 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
 
 若要瞭解如何使用[!DNL Schema Registry] API管理欄位群組，請參閱[欄位群組端點指南](../../api/field-groups.md)。

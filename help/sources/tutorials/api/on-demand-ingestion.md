@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；流程服務；
 title: 使用流程服務API建立隨選擷取的流程執行
 description: 瞭解如何使用流程服務API建立隨選擷取的流程執行
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
@@ -26,16 +26,16 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
 
 ## 為以表格為基礎的來源建立資料流執行
 
-若要建立以表格為基礎的來源的流程，請向[!DNL Flow Service] API提出POST要求，同時提供您要建立執行之流程的識別碼，以及開始時間、結束時間和差異欄的值。
+若要為表格型來源建立流程，請對[!DNL Flow Service] API提出POST要求，同時提供您要建立執行之流程的識別碼，以及開始時間、結束時間和差異欄的值。
 
 >[!TIP]
 >
@@ -125,7 +125,7 @@ curl -X POST \
 
 ## 為檔案型來源建立資料流執行
 
-若要建立檔案型來源的流程，請向[!DNL Flow Service] API提出POST要求，同時提供您要建立執行的流程識別碼，以及開始時間和結束時間的值。
+若要建立檔案型來源的流程，請對[!DNL Flow Service] API提出POST要求，同時提供您要建立執行的流程識別碼，以及開始時間和結束時間的值。
 
 >[!TIP]
 >
@@ -189,4 +189,4 @@ curl -X POST \
 
 ## 監視您的流量執行
 
-建立流程執行後，您可以監視透過它擷取的資料，以檢視有關流程執行、完成狀態和錯誤的資訊。 若要使用API監視您的資料流執行，請參閱有關[監視API中的資料流的教學課程](./monitor.md)。 若要使用Platform UI監視您的資料流執行，請參閱[使用監視儀表板](../../../dataflows/ui/monitor-sources.md)監視來源資料流的指南。
+建立流程執行後，您可以監視透過它擷取的資料，以檢視有關流程執行、完成狀態和錯誤的資訊。 若要使用API監視您的資料流執行，請參閱有關[監視API中的資料流的教學課程](./monitor.md)。 若要使用Experience Platform UI監視您的資料流執行，請參閱[使用監視儀表板](../../../dataflows/ui/monitor-sources.md)監視來源資料流的指南。

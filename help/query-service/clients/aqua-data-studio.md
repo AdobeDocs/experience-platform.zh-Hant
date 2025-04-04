@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將Aqua Data Studio連線至查詢服務
 description: 本檔案將逐步說明連線Aqua Data Studio與Adobe Experience Platform Query Service的步驟。
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >[!DNL Aqua Data Studio]有[!DNL Windows]和[!DNL macOS]個版本。 本指南中的熒幕擷取畫面是使用[!DNL macOS]案頭應用程式擷取。 不同版本之間的UI可能會有細微差異。
 
-若要取得連線[!DNL Aqua Data Studio]至Experience Platform所需的認證，您必須能存取Platform UI中的[!UICONTROL 查詢]工作區。 如果您目前無法存取[!UICONTROL 查詢]工作區，請連絡組織管理員。
+若要取得將[!DNL Aqua Data Studio]連線至Experience Platform所需的認證，您必須能存取Experience Platform UI中的[!UICONTROL 查詢]工作區。 如果您目前無法存取[!UICONTROL 查詢]工作區，請連絡組織管理員。
 
 ## 註冊伺服器 {#register-server}
 
@@ -32,14 +32,14 @@ ht-degree: 0%
 一旦PostgresSQL伺服器的&#x200B;**[!DNL Register Server]**&#x200B;對話方塊顯示後，請提供伺服器設定的下列詳細資料。
 
 - **[!DNL Name]**：連線的名稱。 建議您提供易記名稱以辨識連線。
-- **[!DNL Login Name]**：登入名稱是您的Platform組織識別碼。 它採用`ORG_ID@AdobeOrg`的形式。
+- **[!DNL Login Name]**：登入名稱是您的Experience Platform組織ID。 它採用`ORG_ID@AdobeOrg`的形式。
 - **[!DNL Password]**：這是在[!DNL Query Service]認證儀表板上找到的英數字串。
 - **[!DNL Host and Port]**： [!DNL Query Service]的主機端點及其連線埠。 您必須使用連線埠80來連線[!DNL Query Service]。
-- **[!DNL Database]：**&#x200B;將使用的資料庫。 使用平台UI認證`dbname`的值： `prod:all`。
+- **[!DNL Database]：**&#x200B;將使用的資料庫。 使用Experience Platform UI認證`dbname`的值： `prod:all`。
 
 ### [!DNL Query Service]認證
 
-若要尋找您的認證，請登入[!DNL Platform] UI並從左側導覽選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。 如需尋找您的登入認證、主機、連線埠和資料庫名稱的完整指示，請參閱[認證指南](../ui/credentials.md)。
+若要尋找您的認證，請登入[!DNL Experience Platform] UI並從左側導覽選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。 如需尋找您的登入認證、主機、連線埠和資料庫名稱的完整指示，請參閱[認證指南](../ui/credentials.md)。
 
 [!DNL Query Service]還提供不會到期的認證，以允許與協力廠商使用者端進行一次性設定。 請參閱檔案以取得[有關如何產生及使用不會到期的認證](../ui/credentials.md#non-expiring-credentials)的完整指示。
 

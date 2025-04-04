@@ -5,7 +5,7 @@ title: 使用資料存取API擷取失敗的批次
 type: Tutorial
 description: 本教學課程涵蓋使用資料擷取API擷取失敗批次相關資訊的步驟。
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 13%
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 # 使用資料存取API擷取失敗的批次
 
-Adobe Experience Platform提供兩種上傳和擷取資料的方法。 您可以使用批次擷取，這可讓您使用各種檔案型別（例如CSV）插入其資料，或是使用串流擷取，可讓您使用串流端點即時將其資料插入[!DNL Platform]。
+Adobe Experience Platform提供兩種上傳和擷取資料的方法。 您可以使用批次擷取，這可讓您使用各種檔案型別（例如CSV）插入其資料，或是使用串流擷取，可讓您使用串流端點即時將其資料插入[!DNL Experience Platform]。
 
 本教學課程涵蓋使用[!DNL Data Ingestion] API擷取失敗批次相關資訊的步驟。
 
@@ -31,19 +31,19 @@ Adobe Experience Platform提供兩種上傳和擷取資料的方法。 您可以
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Schema Registry]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Schema Registry]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 

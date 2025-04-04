@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何透過將受眾傳送至串流設定檔型目的地，以啟用您在Adobe Experience Platform中的受眾資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 1%
 
 ---
@@ -57,8 +57,8 @@ ht-degree: 1%
 
 您可以根據對象的來源，從多種對象型別中進行選取：
 
-* **[!UICONTROL 細分服務]**：細分服務在Experience Platform內產生的對象。 如需詳細資訊，請參閱[Audience Portal檔案](../../segmentation/ui/audience-portal.md)。
-* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
+* **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[Audience Portal檔案](../../segmentation/ui/audience-portal.md)。
+* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Experience Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
 * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
 ![啟用工作流程的「選取對象」步驟中，反白核取方塊選取專案的影像。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 1. 若要新增更多欄位，請重複步驟1到3，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 檢閱 {#review}
+## 審核 {#review}
 
 在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或選取&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-[目前不支援將同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)匯出到三個企業目的地 — Amazon Kinesis、Azure事件中樞和HTTP API。
+匯出至三個企業目的地(Amazon Kinesis、Azure事件中樞和HTTP API)時，目前不支援[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
 
 這表示未同意成為目標&#x200B;*的設定檔會包含在匯出到這三個目的地的內容中*。
 

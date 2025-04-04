@@ -2,11 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；產品設定檔；管理許可權
 solution: Experience Platform
 title: 管理產品設定檔的許可權
-description: Adobe Experience Platform中的存取控制可讓您使用Adobe Admin Console管理各種Platform功能的角色和許可權。 本檔案可用作如何管理Platform產品設定檔許可權的指南。
+description: Adobe Experience Platform中的存取控制可讓您使用Adobe Admin Console管理各種Experience Platform功能的角色和許可權。 本檔案可用作如何管理Experience Platform產品設定檔許可權的指南。
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---

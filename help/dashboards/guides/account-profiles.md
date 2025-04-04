@@ -2,9 +2,9 @@
 title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2401'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 ## 快速入門
 
-您必須有[Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md)的許可權，才能存取B2B [!UICONTROL 帳戶設定檔]儀表板。
+您必須有[Adobe Real-Time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md)的許可權，才能存取B2B [!UICONTROL 帳戶設定檔]儀表板。
 
 ## 帳戶設定檔資料 {#data}
 
@@ -31,9 +31,9 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 ## 探索[!UICONTROL 帳戶設定檔]儀表板 {#explore}
 
-若要導覽至Platform UI中的[!UICONTROL 帳戶設定檔]儀表板，請在左側導覽面板的[!UICONTROL 帳戶]下選取&#x200B;**[!UICONTROL 設定檔]**。
+若要導覽至Experience Platform UI中的[!UICONTROL 帳戶設定檔]儀表板，請在左側導覽面板的[!UICONTROL 帳戶]下選取&#x200B;**[!UICONTROL 設定檔]**。
 
-![左側導覽中具有帳戶設定檔的Platform UI反白顯示，且總覽標籤顯示。](../images/account-profiles/account-profiles-dashboard.png)
+![Experience Platform UI的帳戶設定檔在左側導覽反白顯示，且總覽標籤顯示。](../images/account-profiles/account-profiles-dashboard.png)
 
 從[!UICONTROL 帳戶設定檔]儀表板，您可以[瀏覽擷取到您組織的帳戶設定檔](#browse-account-profiles)，或[使用Widget](#standard-widgets)檢視您完整的帳戶設定檔資料。
 
@@ -61,7 +61,7 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 ![「帳戶設定檔」瀏覽標籤，顯示結果並反白顯示設定檔ID。](../images/account-profiles/account-profiles-browse-tab.png)
 
-[!UICONTROL 詳細資料]標籤上顯示的帳戶設定檔資訊已從多個設定檔片段合併在一起，以形成個別帳戶的單一檢視。 請參閱有關[在Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles)中瀏覽帳戶設定檔的檔案，以進一步瞭解Platform UI中的帳戶設定檔檢視功能。
+[!UICONTROL 詳細資料]標籤上顯示的帳戶設定檔資訊已從多個設定檔片段合併在一起，以形成個別帳戶的單一檢視。 請參閱有關[在Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles)中瀏覽帳戶設定檔的檔案，以進一步瞭解Experience Platform UI中的帳戶設定檔檢視功能。
 
 ## 標準小工具 {#standard-widgets}
 
@@ -103,7 +103,7 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 >[!NOTE]
 >
->[!UICONTROL 每個帳戶的客戶總覽]分析及其鑽研圖表（[!UICONTROL 每個帳戶的客戶詳細資料]，[!UICONTROL 每個帳戶的機會]，[!UICONTROL 每個帳戶詳細資料]）不受您可能已設定的任何全域日期篩選器影響。
+>[!UICONTROL 每個帳戶的客戶總覽] insight及其鑽研圖表（[!UICONTROL 每個帳戶的客戶詳細資料]、[!UICONTROL 每個帳戶的機會總覽]、[!UICONTROL 每個帳戶的機會詳細資料]）不受您可能已設定的任何全域日期篩選器影響。
 
 [!UICONTROL 每個帳戶的客戶總覽]圖表會根據其客戶型別提供帳戶的摘要。 它會顯示一個四清單格，將帳戶分類為擁有直接或間接客戶，或沒有直接或間接客戶的帳戶。 它提供每個類別的帳戶總數。 圖表可協助識別具有直接與間接客戶的科目分配。
 
@@ -129,7 +129,7 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 ![帳戶設定檔儀表板中的鑽研檢視中，導覽下拉式功能表反白顯示。](../images/account-profiles/navigation-dropdown.png)
 
-若要進一步瞭解Platform UI中的鑽研，請參閱[鑽研指南](../sql-insights-query-pro-mode/drill-through.md)。
+若要進一步瞭解Experience Platform UI中的鑽研，請參閱[鑽研指南](../sql-insights-query-pro-mode/drill-through.md)。
 
 #### [!UICONTROL 每個帳戶的客戶詳細資料] {#customers-per-account-detail}
 
@@ -167,7 +167,7 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 >[!NOTE]
 >
->結構描述中未使用&#39;Opportunity-Person&#39; bridge-table時，造成[!UICONTROL 找不到資料]或[!UICONTROL 無法載入]錯誤。 如果您的分析顯示其中一個錯誤，請檢查您的聯合結構描述，並確定「機會 — 人員」欄位群組正在擷取資料。
+>結構描述中未使用&#39;Opportunity-Person&#39; bridge-table時，造成[!UICONTROL 找不到資料]或[!UICONTROL 無法載入]錯誤。 如果您的insight顯示其中一個錯誤，請檢查您的聯合結構描述，並確定「機會 — 人員」欄位群組正在擷取資料。
 
 ![依人員角色的新機會Widget。](../images/account-profiles/new-opportunities-by-person-role.png)
 
@@ -233,10 +233,10 @@ Widget中的下拉式功能表可讓您選取帳戶評分模式。
 
 如果介面工具顯示&#x200B;*[!UICONTROL 無法載入。 請再試一次。]*&#x200B;這是因為沒有可用於B2B實體的資料。 例如，在[!UICONTROL 依人員角色的新商機]下方顯示的Widget，會顯示訊息「[!UICONTROL 無法載入」。 請再試一次。]」，因為此沙箱沒有可用的機會資料。
 
-![無法載入分析錯誤。](../images/account-profiles/unable-to-load.png)
+![無法載入insight錯誤。](../images/account-profiles/unable-to-load.png)
 
 若要解決此問題，您必須將B2B實體資料（例如&#x200B;*機會人員*&#x200B;資料）擷取到沙箱。 48小時後，資料會反映在Widget中。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在應該知道如何找到[!UICONTROL 帳戶設定檔]儀表板，同時也瞭解可用介面工具中顯示的量度。 若要進一步瞭解如何在Experience Platform UI中使用帳戶設定檔作為B2B資料的一部分，請參閱Adobe Real-Time CDP、B2B edition的[帳戶設定檔總覽](../../rtcdp/accounts/account-profile-overview.md)。
+閱讀本檔案後，您現在應該知道如何找到[!UICONTROL 帳戶設定檔]儀表板，同時也瞭解可用介面工具中顯示的量度。 若要進一步瞭解如何在Experience Platform UI中使用帳戶設定檔做為B2B資料的一部分，請參閱Adobe Real-Time CDP、B2B edition的[帳戶設定檔總覽](../../rtcdp/accounts/account-profile-overview.md)。

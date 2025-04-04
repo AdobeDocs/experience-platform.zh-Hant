@@ -5,9 +5,9 @@ title: Sandbox API指南
 description: Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。
 role: Developer
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## 沙箱型別
 
-目前，Experience Platform上支援的沙箱型別為生產及開發沙箱。 預設的Platform授權共授予您5個沙箱，您可將其分類為生產或開發。 您可以額外授權10個沙箱，最多總共75個沙箱。 請參閱[沙箱型別端點指南](./types.md)，瞭解如何在API中檢視貴組織支援的沙箱型別。
+目前，Experience Platform上支援的沙箱型別為生產及開發沙箱。 預設Experience Platform授權共授予您5個沙箱，您可將其分類為生產或開發。 您可以額外授權10個沙箱，最多總共75個沙箱。 請參閱[沙箱型別端點指南](./types.md)，瞭解如何在API中檢視貴組織支援的沙箱型別。
 
 ## 後續步驟
 

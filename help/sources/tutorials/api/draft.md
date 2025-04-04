@@ -2,9 +2,9 @@
 title: 建立流程服務實體API的草稿
 description: 瞭解如何使用流量服務API建立基本連線、來源連線、目標連線和資料流的草稿
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1193'
 ht-degree: 3%
 
 ---
@@ -21,12 +21,12 @@ ht-degree: 3%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
 
 ### 檢查草稿模式支援
 
@@ -571,7 +571,7 @@ curl -X GET \
 
 ## 建立拔模基礎連線 {#create-a-draft-base-connection}
 
-若要建立草稿基底連線，請向[!DNL Flow Service] API的`/connections`端點提出POST要求，並提供`mode=draft`作為查詢引數。
+若要建立草稿基底連線，請對[!DNL Flow Service] API的`/connections`端點提出POST要求，並提供`mode=draft`作為查詢引數。
 
 **API格式**
 
@@ -624,9 +624,9 @@ curl -X POST \
 }
 ```
 
-## Publish您的草稿基底連線 {#publish-your-draft-base-connection}
+## 發佈草稿基本連線 {#publish-your-draft-base-connection}
 
-一旦您的草稿已準備好發佈，請向`/connections`端點提出POST要求，並提供您要發佈的草稿基底連線識別碼，以及發佈的動作操作。
+一旦您的草稿已準備好發佈，請對`/connections`端點提出POST要求，並提供您要發佈的草稿基底連線識別碼，以及發佈的動作操作。
 
 **API格式**
 
@@ -665,7 +665,7 @@ curl -X POST \
 
 ## 建立草稿來源連線 {#create-a-draft-source-connection}
 
-若要建立草稿來源連線，請向[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求，並提供`mode=draft`作為查詢引數。
+若要建立草稿來源連線，請對[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求，並提供`mode=draft`作為查詢引數。
 
 **API格式**
 
@@ -716,13 +716,13 @@ curl -X POST \
 }
 ```
 
-## Publish您的草稿來源連線 {#publish-your-draft-source-connection}
+## 發佈您的草稿來源連線 {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >如果來源連線的關聯基礎連線仍處於草稿狀態，則無法發佈來源連線。 請確定您的基礎連線已先發佈，然後再發佈來源連線。
 
-準備好要發佈草稿後，請向`/sourceConnections`端點提出POST要求，並提供您要發佈的草稿來源連線識別碼，以及發佈的動作操作。
+一旦您的草稿已準備好發佈，請對`/sourceConnections`端點提出POST要求，並提供您要發佈的草稿來源連線識別碼，以及發佈的動作操作。
 
 **API格式**
 
@@ -761,7 +761,7 @@ curl -X POST \
 
 ## 建立草稿目標連線 {#create-a-draft-target-connection}
 
-若要建立草稿目標連線，請向[!DNL Flow Service] API的`/targetConnections`端點提出POST要求，並提供`mode=draft`作為查詢引數。
+若要建立草稿目標連線，請對[!DNL Flow Service] API的`/targetConnections`端點提出POST要求，並提供`mode=draft`作為查詢引數。
 
 **API格式**
 
@@ -813,13 +813,13 @@ curl -X POST \
 }
 ```
 
-## Publish您的草稿目標連線 {#publish-your-draft-target-connection}
+## 發佈您的草稿目標連線 {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >如果關聯的基本連線仍處於草稿狀態，則您無法發佈目標連線。 請確定您的基礎連線已先發佈，然後再發佈目標連線。
 
-準備好要發佈草稿後，請向`/targetConnections`端點提出POST要求，並提供您要發佈的草稿目標連線識別碼，以及發佈的動作操作。
+準備好要發佈草稿後，請對`/targetConnections`端點提出POST要求，並提供您要發佈的草稿目標連線識別碼，以及發佈的動作操作。
 
 **API格式**
 
@@ -908,7 +908,7 @@ POST /flows?mode=draft
 }
 ```
 
-## Publish您的草稿資料流 {#publish-your-draft-dataflow}
+## 發佈您的草稿資料流 {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料控管概觀
 description: Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和政策。 它在 Experience Platform 的各個層面發揮關鍵作用，包括編目、資料譜系、資料使用標籤、資料使用原則和控制資料在行銷活動的使用。
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1624'
 ht-degree: 9%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant" text="資料治理概觀"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant" text="資料治理標籤概觀"
 
-Adobe Experience Platform的核心功能之一，是將來自多個企業系統的資料彙集在一起，以便讓行銷人員更能識別、瞭解客戶並與之互動。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 因此，請務必確保您在[!DNL Platform]內的資料作業符合資料使用原則。
+Adobe Experience Platform的核心功能之一，是將來自多個企業系統的資料彙集在一起，以便讓行銷人員更能識別、瞭解客戶並與之互動。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 因此，請務必確保您在[!DNL Experience Platform]內的資料作業符合資料使用原則。
 
 管理客戶資料，並確保符合Adobe Experience Platform資料控管適用於資料的規定、限制和政策。 資料控管在Experience Platform中的各個層級上扮演著重要的角色，包括編目、資料譜系、資料使用標籤、資料使用原則，以及控制行銷動作對資料的使用方式。
 
 >[!NOTE]
 >
->在Experience Platform中，資料控管只關注資料的使用或啟用方式，無論使用者是否執行動作。 如需有關如何控制組織內特定Platform使用者存取特定資料欄位的資訊，請改為參閱[屬性型存取控制](../access-control/abac/overview.md)的檔案。
+>在Experience Platform中，資料控管只關注資料的使用或啟用方式，無論使用者是否執行動作。 如需有關如何控制組織內特定Experience Platform使用者存取特定資料欄位的資訊，請改為參閱[屬性型存取控制](../access-control/abac/overview.md)的檔案。
 
 ## 資料治理角色 {#data-governance-roles}
 
@@ -77,7 +77,7 @@ Adobe Experience Platform的核心功能之一，是將來自多個企業系統�
 >
 >如需可用標籤的完整清單，以及每種標籤型別的定義，請參閱[支援的資料使用標籤](labels/reference.md)指南。
 
-標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料擷取至Experience Platform時，或資料在[!DNL Platform]中成為可用時，立即加上標籤。
+標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料擷取至Experience Platform時，或資料在[!DNL Experience Platform]中成為可用時，立即加上標籤。
 
 請參閱[資料使用標籤](./labels/overview.md)的概觀，以取得有關如何使用資料使用標籤來協助強制資料控管合規性的詳細資訊。
 

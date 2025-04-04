@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 監視設定檔擴充工作
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 
 使用[!UICONTROL 設定檔擴充]儀表板來瞭解設定檔擴充工作是否成功執行並完成，並檢視基本量度以評估擴充的有效性。
 
-在[平台UI](https://platform.adobe.com)中，從左側導覽選取&#x200B;**[!UICONTROL 監視]**&#x200B;以存取[!UICONTROL 監視]儀表板。 在檢視選擇器中，選取&#x200B;**B2B流量**&#x200B;以檢視特定於[Real-Time CDP B2B](/help/rtcdp/b2b-overview.md)的儀表板元素。  [!UICONTROL 監視]儀表板包含最近一次成功執行的基本量度，以及過去90天內的每日工作狀態。
+在[Experience Platform UI](https://platform.adobe.com)中，從左側導覽選取&#x200B;**[!UICONTROL 監視]**&#x200B;以存取[!UICONTROL 監視]儀表板。 在檢視選擇器中，選取&#x200B;**B2B流量**&#x200B;以檢視特定於[Real-Time CDP B2B](/help/rtcdp/b2b-overview.md)的儀表板元素。  [!UICONTROL 監視]儀表板包含最近一次成功執行的基本量度，以及過去90天內的每日工作狀態。
 
 ## 相關帳戶設定檔擴充 {#related-accounts}
 
 [!UICONTROL 相關帳戶]儀表板會顯示基本量度，以及[相關帳戶](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)設定檔擴充特有的每日工作狀態。
 
-![如何在Experience PlatformUI中進入設定檔擴充工作監視畫面的視覺指示。](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
+![如何在Experience Platform UI中存取設定檔擴充工作監視畫面的視覺指示。](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
 **[!UICONTROL Metrics]**&#x200B;卡片中的資料包含最近成功執行「相關帳戶」工作的基本量度。
 

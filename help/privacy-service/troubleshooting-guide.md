@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service疑難排解指南
 description: 本檔案提供有關Privacy Service常見問題的解答，以及API中常見錯誤的資訊。
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1028'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -63,13 +63,13 @@ Adobe Experience Platform [!DNL Privacy Service]提供RESTful API和使用者介
 如需提供使用者身分資訊的詳細資訊，請參閱隱私權要求[身分資料](identity-data.md)的指南。
 
 
-## 我可以使用[!DNL Privacy Service]來清除不小心傳送給[!DNL Platform]的資料嗎？
+## 我可以使用[!DNL Privacy Service]來清除不小心傳送給[!DNL Experience Platform]的資料嗎？
 
 Adobe不支援使用[!DNL Privacy Service]來清除意外提交至產品的資料。 [!DNL Privacy Service]的設計目的是協助您履行資料主體（或消費者）存取或刪除要求的義務。 不支援或允許將Privacy Service用於資料清理或維護的任何其他用途。
 
 隱私權請求常有時效性，而且是根據適用的隱私權法律完成。 提交非資料主體/消費者存取或刪除請求的請求會影響所有[!DNL Privacy Service]客戶，以及[!DNL Privacy Service]支援適當法律時間表的能力。 現已設定每日硬性上傳限制，以協助防止濫用服務。
 
-請聯絡您的Adobe客戶團隊，以協調並提供移除任何PII或資料問題的所需時間。
+請聯絡您的Adobe客戶團隊以協調並提供移除任何PII或資料問題的幫助。
 
 ## 如何取得隱私權請求或工作狀態的資訊？
 
@@ -81,7 +81,7 @@ Adobe不支援使用[!DNL Privacy Service]來清除意外提交至產品的資�
 
 ### 使用UI
 
-所有作用中的工作請求都列在[!DNL Privacy Service] UI儀表板上的&#x200B;**[!UICONTROL 工作請求]** Widget中。 每個工作要求的狀態會顯示在&#x200B;**[!UICONTROL 狀態]**&#x200B;欄下。 如需在UI中檢視工作要求的詳細資訊，請參閱[Privacy Service使用手冊](ui/user-guide.md)。
+所有作用中的工作請求都列在[!DNL Privacy Service] UI儀表板上的&#x200B;**[!UICONTROL 工作請求]** Widget中。 每個工作要求的狀態會顯示在&#x200B;**[!UICONTROL 狀態]**&#x200B;欄下。 如需在UI中檢視工作請求的詳細資訊，請參閱[Privacy Service使用手冊](ui/user-guide.md)。
 
 ## 如何下載已完成的隱私權工作結果？
 

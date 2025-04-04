@@ -4,9 +4,9 @@ title: 在UI中匯出XDM結構描述
 description: 瞭解如何在Adobe Experience Platform使用者介面中將現有結構描述匯出至其他沙箱或組織。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 11%
 
 ---
@@ -28,11 +28,11 @@ ht-degree: 11%
 
 ## 先決條件
 
-雖然Platform UI可讓您匯出XDM資源，但您必須使用結構描述登入API將這些資源匯入其他沙箱或組織以完成工作流程。 在遵循本指南之前，請參閱[架構登入API快速入門](../api/getting-started.md)指南，以取得有關所需驗證標頭的重要資訊。
+雖然Experience Platform UI可讓您匯出XDM資源，但您必須使用結構描述登入API將這些資源匯入其他沙箱或組織以完成工作流程。 在遵循本指南之前，請參閱[架構登入API快速入門](../api/getting-started.md)指南，以取得有關所需驗證標頭的重要資訊。
 
 ## 產生匯出裝載 {#generate-export-payload}
 
-匯出裝載可在Platform UI中從[!UICONTROL 瀏覽]標籤的詳細資訊面板產生，或直接從結構描述編輯器中的結構描述畫布產生。
+匯出裝載可在Experience Platform UI中從[!UICONTROL 瀏覽]標籤的詳細資訊面板產生，或直接從結構描述編輯器中的結構描述畫布產生。
 
 若要產生匯出裝載，請在左側導覽中選取&#x200B;**[!UICONTROL 結構描述]**。 在[!UICONTROL 結構描述]工作區中，選取您要匯出的結構描述列，以在右側邊欄中顯示結構描述詳細資訊。
 
@@ -226,7 +226,7 @@ ht-degree: 11%
 
 ## 使用API匯入資源 {#import-resource-with-api}
 
-一旦您複製了結構描述的匯出JSON後，您就可以將它當做結構描述登入API中`/rpc/import`端點的POST要求裝載。 請參閱[匯入端點指南](../api/import.md)，以取得有關如何設定呼叫以將結構描述傳送至所需組織和沙箱的詳細資訊。
+複製結構描述的匯出JSON後，您可以將其用作POST要求的裝載到結構描述登入API中的`/rpc/import`端點。 請參閱[匯入端點指南](../api/import.md)，以取得有關如何設定呼叫以將結構描述傳送至所需組織和沙箱的詳細資訊。
 
 ## 後續步驟
 

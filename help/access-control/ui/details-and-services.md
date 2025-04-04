@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 管理產品描述檔的詳細資訊和其他服務
 description: 本檔案涵蓋在Adobe Admin Console中管理產品描述檔的詳細資訊和其他服務所需的必要步驟。 您可以從「設定檔設定」功能表設定設定設定檔的詳細資訊，以及存取其他服務。
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以存取&#x200B;**[!UICONTROL 啟用服務]**&#x200B;頁面。
 
-**[!UICONTROL 啟用服務]**&#x200B;功能表可讓您修改設定檔對建立設定檔時最初設定的其他[!DNL Platform]服務的存取權。 根據您的[!DNL Platform]訂閱，這些服務可能包括：
+**[!UICONTROL 啟用服務]**&#x200B;功能表可讓您修改設定檔對建立設定檔時最初設定的其他[!DNL Experience Platform]服務的存取權。 根據您的[!DNL Experience Platform]訂閱，這些服務可能包括：
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]

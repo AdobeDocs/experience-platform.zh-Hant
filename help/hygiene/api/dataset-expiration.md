@@ -3,10 +3,10 @@ title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 1%
+source-wordcount: '1966'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->雖然到期時間指定為特定即時，但在實際刪除開始之前，到期後最多可能有24小時的延遲。 開始刪除後，可能需要長達七天的時間，資料集的所有追蹤才會從Platform系統中移除。
+>雖然到期時間指定為特定即時，但在實際刪除開始之前，到期後最多可能有24小時的延遲。 開始刪除後，可能需要長達七天的時間，資料集的所有追蹤才會從Experience Platform系統中移除。
 
 在實際起始資料集刪除作業之前，您可以隨時取消到期日或修改其觸發時間。 取消資料集到期日後，您可以設定新的到期日，以重新開啟資料集。
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 >
 >如果資料集設為過期，您必須手動變更任何可能會將資料擷取至該資料集的資料流程，讓您的下游工作流程不會受到負面影響。
 
-進階資料生命週期管理支援透過資料集到期端點進行資料集刪除，以及使用主要身分透過[工單端點](./workorder.md)進行的識別碼刪除（列層級資料）。 您也可以透過Platform UI管理[資料集有效期](../ui/dataset-expiration.md)和[記錄刪除](../ui/record-delete.md)。 如需詳細資訊，請參閱連結的檔案。
+進階資料生命週期管理支援透過資料集到期端點進行資料集刪除，以及使用主要身分透過[工單端點](./workorder.md)進行的識別碼刪除（列層級資料）。 您也可以透過Experience Platform UI管理[資料集有效期](../ui/dataset-expiration.md)和[記錄刪除](../ui/record-delete.md)。 如需詳細資訊，請參閱連結的檔案。
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 ## 列出資料集有效期 {#list}
 
-您可以發出GET要求，列出貴組織的所有資料集有效期。 查詢引數可用來篩選適當結果的回應。
+您可以發出GET請求，列出貴組織的所有資料集有效期。 查詢引數可用來篩選適當結果的回應。
 
 **API格式**
 
@@ -107,7 +107,7 @@ curl -X GET \
 
 ## 查詢資料集有效期 {#lookup}
 
-若要查詢資料集有效期，請使用`{DATASET_ID}`或`{DATASET_EXPIRATION_ID}`提出GET要求。
+若要查詢資料集有效期，請使用`{DATASET_ID}`或`{DATASET_EXPIRATION_ID}`提出GET請求。
 
 >[!IMPORTANT]
 >
@@ -202,7 +202,7 @@ curl -X GET \
 
 為確保資料在指定期間後從系統中移除，請以ISO 8601格式提供資料集ID和到期日與時間，以排程特定資料集的到期日。
 
-若要建立資料集有效期，請執行如下所示的POST請求，並在裝載中提供下列提及的值。
+若要建立資料集有效期，請執行如下所示的POST要求，並在裝載中提供下列提及的值。
 
 >[!NOTE]
 >

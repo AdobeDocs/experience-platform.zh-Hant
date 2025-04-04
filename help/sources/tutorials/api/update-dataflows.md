@@ -2,9 +2,9 @@
 title: 使用流程服務API更新資料流程
 description: 瞭解如何使用流程服務API建立資料流，包括其名稱、說明和排程。
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '661'
 ht-degree: 2%
 
 ---
@@ -23,16 +23,16 @@ ht-degree: 2%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
 
 ## 查詢資料流詳細資料
 
-更新資料流的第一步是使用流量ID擷取資料流詳細資料。 您可以透過向`/flows`端點發出GET要求來檢視現有資料流的目前詳細資料。
+更新資料流的第一步是使用流量ID擷取資料流詳細資料。 您可以對`/flows`端點發出GET要求，以檢視現有資料流的目前詳細資料。
 
 **API格式**
 
@@ -177,7 +177,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->發出PATCH要求時需要`If-Match`標頭。 此標頭的值是您要更新之連線的唯一版本。 每次成功更新資料流時，etag值都會更新。
+>發出PATCH請求時需要`If-Match`標頭。 此標頭的值是您要更新之連線的唯一版本。 每次成功更新資料流時，etag值都會更新。
 
 **API格式**
 
@@ -235,7 +235,7 @@ curl -X PATCH \
 
 ## 更新對應
 
-您可以對[!DNL Flow Service] API發出PATCH要求並為您的`mappingId`和`mappingVersion`提供更新的值，以更新現有資料流的對應集。
+您可以對[!DNL Flow Service] API發出PATCH要求，並為您的`mappingId`和`mappingVersion`提供更新的值，以更新現有資料流的對應集。
 
 **API格式**
 

@@ -4,7 +4,7 @@ title: 新增資料至即時客戶個人檔案
 type: Tutorial
 description: 本教學課程概述將資料新增至即時客戶個人檔案的必要步驟。
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 使用批次擷取新增資料
 
-所有使用批次擷取上傳至[!DNL Platform]的資料都會上傳至個別資料集。 必須明確設定相關資料集，[!DNL Real-Time Customer Profile]才能使用此資料。 如需完整的指示，請參閱[設定設定檔與身分識別服務的資料集](dataset-configuration.md)上的教學課程。
+所有使用批次擷取上傳至[!DNL Experience Platform]的資料都會上傳至個別資料集。 必須明確設定相關資料集，[!DNL Real-Time Customer Profile]才能使用此資料。 如需完整的指示，請參閱[設定設定檔與身分識別服務的資料集](dataset-configuration.md)上的教學課程。
 
 設定資料集後，您就可以開始將資料擷取至其中。 如需如何上傳不同格式檔案的詳細步驟，請參閱[批次擷取開發人員指南](../../ingestion/batch-ingestion/api-overview.md)。
 

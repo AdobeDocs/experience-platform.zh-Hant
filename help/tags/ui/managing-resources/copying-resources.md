@@ -2,10 +2,10 @@
 title: 複製資源
 description: 瞭解如何使用Adobe Experience Platform中現有標籤資源的設定來建立新的標籤資源。
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 73%
+source-wordcount: '781'
+ht-degree: 79%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 有時候，使用現有資源的設定來製作新資源會很方便。 在這些情況下，您可以製作副本。
 
@@ -60,7 +60,7 @@ ht-degree: 73%
 
 ## 複製規則和資料元素
 
-所有規則和資料元素均由擴充功能提供，因此當您跨屬性複製時，Platform必須考慮這些基礎擴充功能。
+所有規則和資料元素均由擴充功能提供，因此當您跨屬性複製時，Experience Platform必須考慮這些基礎擴充功能。
 
 ![將規則複製到我的示範屬性](../../images/copy-rules-dialog1.png)
 

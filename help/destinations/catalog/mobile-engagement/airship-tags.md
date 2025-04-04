@@ -1,11 +1,11 @@
 ---
 keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
-description: 將Adobe對象資料順暢地傳遞給Airship，作為Airship中用於鎖定目標的對象標籤。
+description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '972'
 ht-degree: 2%
 
 ---
@@ -42,8 +42,8 @@ ht-degree: 2%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -54,13 +54,13 @@ ht-degree: 2%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員具有在「飛艇標籤」目的地中使用的識別碼。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
 ## 標籤群組
 
-Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https://docs.airship.com/guides/audience/tags/)，在實施上稍有不同。 此整合將使用者在Experience Platform區段](../../../xdm/field-groups/profile/segmentation.md)中的[成員資格狀態對應至[!DNL Airship]標籤是否存在或不存在。 例如，在`xdm:status`變更為`realized`的Platform對象中，標籤已新增至此設定檔對應到的[!DNL Airship]頻道或具名使用者。 如果`xdm:status`變更為`exited`，標籤將會移除。
+Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https://docs.airship.com/guides/audience/tags/)，在實施上稍有差異。 此整合將使用者在Experience Platform區段](../../../xdm/field-groups/profile/segmentation.md)中的[成員資格狀態對應至[!DNL Airship]標籤是否存在或不存在。 例如，在`xdm:status`變更為`realized`的Experience Platform對象中，標籤已新增至此設定檔對應到的[!DNL Airship]頻道或具名使用者。 如果`xdm:status`變更為`exited`，標籤將會移除。
 
 若要啟用這項整合，請在[!DNL Airship]中建立一個名為`adobe-segments`的&#x200B;*標籤群組*。
 
@@ -76,7 +76,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 按一下&#x200B;**[!UICONTROL 建立Token]**。
 
-為您的Token提供好記的名稱，例如「Adobe標籤目的地」，並為該角色選取「完全存取」。
+為您的Token提供好記的名稱，例如「Adobe標籤目的地」，然後為角色選取「完全存取」。
 
 按一下&#x200B;**[!UICONTROL 建立Token]**，並將詳細資料儲存為機密檔案。
 
@@ -92,7 +92,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 當使用者進入或退出Adobe Experience Platform中的特定對象時，即時觸發一對一訊息。
 
-例如，零售商在Platform中設定牛仔褲品牌特定對象。 只要某人將其牛仔褲偏好設定為特定品牌，該零售商現在就能觸發行動裝置訊息。
+例如，retailer會在Experience Platform中設定牛仔褲品牌專屬對象。 retailer現在會在有人將牛仔褲偏好設定為特定品牌時，立即觸發行動訊息。
 
 ## 連線到目標 {#connect}
 

@@ -5,9 +5,9 @@ title: 使用串流擷取API串流記錄資料
 type: Tutorial
 description: 本教學課程將協助您開始使用串流獲取API，這是Adobe Experience Platform資料獲取服務API的一部分。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 2%
 
 本教學課程需要各種Adobe Experience Platform服務的實際操作知識。 在開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織體驗資料的標準化架構。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織體驗資料的標準化架構。
    - [結構描述登入開發人員指南](../../xdm/api/getting-started.md)：涵蓋[!DNL Schema Registry] API每個可用端點的完整指南，以及如何對其發出呼叫。 這包括瞭解您在本教學課程呼叫中顯示的`{TENANT_ID}`，以及瞭解如何建立結構描述（用於建立要擷取的資料集）。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者設定檔。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../landing/api-guide.md)指南。
 
 ## 根據[!DNL XDM Individual Profile]類別來撰寫結構描述
 
@@ -247,7 +247,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## 將記錄資料擷取至串流連線 {#ingest-data}
 
-資料集和串流連線就緒後，您就可以內嵌XDM格式的JSON記錄，將記錄資料內嵌至[!DNL Platform]。
+資料集和串流連線就緒後，您就可以內嵌XDM格式的JSON記錄，將記錄資料內嵌至[!DNL Experience Platform]。
 
 **API格式**
 
@@ -264,7 +264,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 您可以將記錄資料擷取至串流連線，無論是否使用來源名稱皆可。
 
-以下範例請求會將缺少來源名稱的記錄擷取至Platform。 如果記錄缺少來源名稱，則會從串流連線定義新增來源ID。
+以下範例請求會將缺少來源名稱的記錄擷取至Experience Platform。 如果記錄缺少來源名稱，則會從串流連線定義新增來源ID。
 
 >[!NOTE]
 >
@@ -346,7 +346,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 先前建立串流連線的ID。 |
-| `xactionId` | 在伺服器端為您剛傳送的記錄產生的唯一識別碼。 此ID可協助Adobe透過各種系統和偵錯追蹤此記錄的生命週期。 |
+| `xactionId` | 在伺服器端為您剛傳送的記錄產生的唯一識別碼。 此ID可協助Adobe透過各種系統和偵錯追蹤此紀錄的生命週期。 |
 | `receivedTimeMs` | 顯示收到要求的時間戳記（紀元單位：毫秒）。 |
 | `syncValidation.status` | 由於已新增查詢引數`syncValidation=true`，因此會顯示這個值。 如果驗證成功，狀態將會是`pass`。 |
 
@@ -374,7 +374,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **要求**
 
-您可以使用以下GET請求來檢閱先前擷取的記錄資料。
+您可以使用以下GET請求檢閱先前擷取的記錄資料。
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
@@ -435,6 +435,6 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 後續步驟
 
-閱讀本檔案後，您現在瞭解如何使用串流連線將記錄資料擷取到[!DNL Platform]。 您可以嘗試使用不同的值發出更多呼叫並擷取更新的值。 此外，您可以透過[!DNL Platform] UI開始監視您擷取的資料。 如需詳細資訊，請參閱[監視資料擷取](../quality/monitor-data-ingestion.md)指南。
+閱讀本檔案後，您現在瞭解如何使用串流連線將記錄資料擷取到[!DNL Experience Platform]。 您可以嘗試使用不同的值發出更多呼叫並擷取更新的值。 此外，您可以透過[!DNL Experience Platform] UI開始監視您擷取的資料。 如需詳細資訊，請參閱[監視資料擷取](../quality/monitor-data-ingestion.md)指南。
 
 如需一般串流擷取的詳細資訊，請閱讀[串流擷取總覽](../streaming-ingestion/overview.md)。

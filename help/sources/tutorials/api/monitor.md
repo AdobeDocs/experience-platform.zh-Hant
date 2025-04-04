@@ -5,9 +5,9 @@ title: 使用流量服務API監視來源資料流
 type: Tutorial
 description: 本教學課程涵蓋使用流程服務API監控流程執行資料的完整性、錯誤和量度的步驟。
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '411'
 ht-degree: 2%
 
 ---
@@ -24,16 +24,16 @@ ht-degree: 2%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
 
 ## 監視資料流
 
-若要檢視資料流的狀態，請向[!DNL Flow Service] API提出GET要求，同時提供資料流的對應資料流識別碼。
+若要檢視資料流的狀態，請向[!DNL Flow Service] API提出GET要求，同時提供資料流的對應資料流ID。
 
 **API格式**
 

@@ -2,9 +2,9 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1095'
 ht-degree: 8%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 ## 目的地變更記錄檔 {#changelog}
 
-2023年7月Experience Platform發行版本中，SFTP目的地會提供新功能，如下所示：
+在2023年7月發行的Experience Platform中，SFTP目的地會提供新功能，如下所示：
 
 * [資料集匯出支援](/help/destinations/ui/export-datasets.md)。
 * 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
@@ -30,7 +30,7 @@ ht-degree: 8%
 
 ## 透過API或UI連線至SFTP {#connect-api-or-ui}
 
-* 若要使用Platform使用者介面連線至您的SFTP儲存位置，請閱讀以下章節： [連線至目的地](#connect)和[啟用對象至此目的地](#activate)。
+* 若要使用Experience Platform使用者介面連線至您的SFTP儲存位置，請閱讀以下章節： [連線至目的地](#connect)和[啟用對象至此目的地](#activate)。
 * 若要以程式設計方式連線至您的SFTP儲存位置，請使用「流程服務API」教學課程](../../api/activate-segments-file-based-destinations.md)，讀取[將對象啟用至檔案型目的地。
 
 ## 支援的對象 {#supported-audiences}
@@ -39,8 +39,8 @@ ht-degree: 8%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -61,14 +61,14 @@ ht-degree: 8%
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
+* 如何使用Experience Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
 * 如何使用流程服務API](/help/destinations/api/export-datasets.md)以程式設計方式[匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 
-匯出&#x200B;*對象資料*&#x200B;時，Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
+匯出&#x200B;*對象資料*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
 
-匯出&#x200B;*資料集*&#x200B;時，Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
+匯出&#x200B;*資料集*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
 
 ## 連線到目標 {#connect}
 
@@ -124,8 +124,8 @@ ht-degree: 8%
 * **[!UICONTROL 名稱]**：輸入有助於您在Experience Platform使用者介面中識別此目的地的名稱；
 * **[!UICONTROL 描述]**：輸入此目的地的描述；
 * **[!UICONTROL 資料夾路徑]**：輸入要匯出檔案之SFTP位置中的資料夾路徑。
-* **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 選取[!UICONTROL CSV]選項時，您也可以[設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md)。
-* **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。
+* **[!UICONTROL 檔案型別]**：選取Experience Platform用於匯出檔案的格式。 選取[!UICONTROL CSV]選項時，您也可以[設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md)。
+* **[!UICONTROL 壓縮格式]**：選取Experience Platform應該用於匯出檔案的壓縮型別。
 * **[!UICONTROL 包含資訊清單檔案]**：如果您想要匯出包含資訊清單JSON檔案，其中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 資訊清單的命名格式為`manifest-<<destinationId>>-<<dataflowRunId>>.json`。 檢視[範例資訊清單檔案](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)。 資訊清單檔案包含下列欄位：
    * `flowRunId`：產生匯出檔案的[資料流執行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
    * `scheduledTime`：檔案匯出的時間(UTC)。
@@ -148,4 +148,4 @@ ht-degree: 8%
 
 ## IP位址允許清單 {#ip-address-allow-list}
 
-如果您需要將AdobeIP新增至允許清單，請參閱[IP位址允許清單](ip-address-allow-list.md)文章。
+如果您需要將Adobe IP新增至允許清單，請參閱[IP位址允許清單](ip-address-allow-list.md)文章。

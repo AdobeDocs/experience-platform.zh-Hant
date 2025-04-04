@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Platform發行說明2022年8月
+title: Adobe Experience Platform 發行說明 (2022 年 8 月)
 description: Adobe Experience Platform 2022 年 8 月版發行說明。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2012'
 ht-degree: 26%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform 現有功能的更新：
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
-- [即時客戶設定檔](#profile)
+- [即時客戶輪廓](#profile)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
@@ -36,23 +36,23 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 隱私權支援 | <ul><li> Attribution AI現在支援定義使用者角色與存取原則，以管理產品應用程式內功能與物件的[許可權](../../../help/access-control/abac/ui/permissions.md)。 </li><li>活動發生時，會自動記錄稽核記錄資源。</li><li> 透過[以屬性為基礎的存取控制](../../access-control/abac/overview.md)，管理員可以控制特定物件及/或特定屬性的權能，這些屬性可以是新增至物件的中繼資料，例如標籤。管理員也可以定義使用者角色，這些角色只能存取特定欄位，以及對應至這些欄位的資料。</li><li>Attribution AI可運用Platform資料集。 為支援品牌可能收到的消費者權利請求，品牌應使用平台Privacy Service提交消費者存取和刪除請求，以透過Data Lake、Identity Service和即時客戶個人檔案移除其資料。  </li><li>所有用於模型輸入/輸出的資料集都將遵循Platform准則。 Platform Data Encryption適用於閒置和傳輸中的資料。 請參閱檔案以進一步瞭解[資料加密](../../../help/landing/governance-privacy-security/encryption.md)。</li></ul> |
+| 隱私權支援 | <ul><li> Attribution AI現在支援定義使用者角色和存取原則，以管理產品應用程式內功能和物件的[許可權](../../../help/access-control/abac/ui/permissions.md)。 </li><li>活動發生時，會自動記錄稽核記錄資源。</li><li> 透過[以屬性為基礎的存取控制](../../access-control/abac/overview.md)，管理員可以控制特定物件及/或特定屬性的權能，這些屬性可以是新增至物件的中繼資料，例如標籤。管理員也可以定義使用者角色，這些角色只能存取特定欄位，以及對應至這些欄位的資料。</li><li>Attribution AI會利用Experience Platform資料集。 為支援品牌可能收到的消費者權利請求，品牌應使用Experience Platform Privacy Service提交消費者存取和刪除請求，以透過Data Lake、Identity Service和即時客戶設定檔移除其資料。  </li><li>所有用於模型輸入/輸出的資料集都將遵循Experience Platform准則。 Experience Platform資料加密適用於待命和傳輸中的資料。 請參閱檔案以進一步瞭解[資料加密](../../../help/landing/governance-privacy-security/encryption.md)。</li></ul> |
 
 {style="table-layout:auto"}
 
-**注意**：在進一步通知之前，現有Healthcare Shield客戶將無法使用Attribution AI。
+**注意**：在進一步通知之前，Attribution AI不可供現有的Healthcare Shield客戶使用。
 
-如需Attribution AI的詳細資訊，請參閱[Attribution AI](../../intelligent-services/attribution-ai/overview.md)概觀。
+如需Attribution AI的詳細資訊，請參閱[Attribution AI](../../intelligent-services/attribution-ai/overview.md)總覽。
 
 ### Customer AI
 
-Real-time Customer Data Platform中可用的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換情形。
+Real-Time Customer Data Platform中可用的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換情形。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 隱私權支援 | <ul><li> Customer AI現在支援定義使用者角色和存取原則，以管理產品應用程式內功能和物件的[許可權](../../../help/access-control/abac/ui/permissions.md)。 </li><li>活動發生時，會自動記錄稽核記錄資源。</li><li> 透過[以屬性為基礎的存取控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制特定物件和/或權能的存取。 這些屬性可以是新增至物件的中繼資料，例如標籤。 管理員也可以定義只有對應至特定欄位和資料之存取權的使用者角色。</li><li>Customer AI會利用Platform資料集。 為支援品牌可能收到的消費者權利請求，品牌應使用平台Privacy Service提交消費者存取和刪除請求，以透過Data Lake、Identity Service和即時客戶個人檔案移除其資料。 </li><li>所有用於模型輸入/輸出的資料集都將遵循Platform准則。 Platform Data Encryption適用於閒置和傳輸中的資料。 請參閱檔案以進一步瞭解[資料加密](../../../help/landing/governance-privacy-security/encryption.md)。</li></ul> |
+| 隱私權支援 | <ul><li> Customer AI現在支援定義使用者角色和存取原則，以管理產品應用程式內功能和物件的[許可權](../../../help/access-control/abac/ui/permissions.md)。 </li><li>活動發生時，會自動記錄稽核記錄資源。</li><li> 透過[以屬性為基礎的存取控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制特定物件和/或權能的存取。 這些屬性可以是新增至物件的中繼資料，例如標籤。 管理員也可以定義只有對應至特定欄位和資料之存取權的使用者角色。</li><li>Customer AI會利用Experience Platform資料集。 為支援品牌可能收到的消費者權利請求，品牌應使用Experience Platform Privacy Service提交消費者存取和刪除請求，以透過Data Lake、Identity Service和即時客戶設定檔移除其資料。 </li><li>所有用於模型輸入/輸出的資料集都將遵循Experience Platform准則。 Experience Platform資料加密適用於待命和傳輸中的資料。 請參閱檔案以進一步瞭解[資料加密](../../../help/landing/governance-privacy-security/encryption.md)。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform提供多個[!DNL dashboards]，您可以透過它們�
 | --- | --- |
 | 排定的啟用Widget | [!UICONTROL 已排程的啟用] Widget提供最近啟用的目的地的表格化檢視。 每個區段都包含名稱、目的地平台，以及啟動開始和結束日期。 此Widget可讓您一目瞭然地發現正在啟用對象的位置和時間，並讓重複或不必要的啟用更加透明。 此累積資訊也會反白標示任何啟用被遺漏的位置。 |
 
-如需[!DNL Dashboards]的詳細資訊，請參閱[[!DNL Dashboards] 總覽](../../dashboards/home.md)。
+如需更多有關 [!DNL Dashboards] 的資訊，請參閱[[!DNL Dashboards] 概觀](../../dashboards/home.md)。
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -88,7 +88,7 @@ Adobe Experience Platform提供多個[!DNL dashboards]，您可以透過它們�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 **新功能或更新功能**
 
@@ -100,17 +100,17 @@ Adobe Experience Platform提供多個[!DNL dashboards]，您可以透過它們�
 
 **新目的地**
 
-| 目的地 | 說明 |
+| 目標 | 說明 |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/)是銷售執行平台，擁有世界上最多B2B買賣雙方互動資料，並在專有AI技術方面投入巨資，以將銷售資料轉換為智慧。 [!DNL Outreach]可協助組織自動化銷售參與度，並依據收入情報採取行動，以改善其效率、可預測性及成長。 |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/)是Sales Execution Experience Platform，擁有全球最豐富的B2B買賣雙方互動資料，並在專有AI技術方面投入巨資，以將銷售資料轉換為智慧。 [!DNL Outreach]可協助組織自動化銷售參與度，並依據收入情報採取行動，以改善其效率、可預測性及成長。 |
 
 {style="table-layout:auto"}
 
-如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
+如需有關目標的詳細一般資訊，請參閱[目標概觀](../../destinations/home.md)。
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **新的 XDM 元件**
 
@@ -137,47 +137,47 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
+如需Experience Platform中XDM的詳細資訊，請參閱[XDM系統總覽](../../xdm/home.md)。
 
-## 即時客戶設定檔 {#profile}
+## 即時客戶輪廓 {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶輪廓，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 輪廓可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 合併原則硬性限制 | Platform現在會強制每個沙箱硬性限制&#x200B;**5個**&#x200B;合併原則。 如果您的沙箱目前有超過五個合併原則，在沙箱有少於五個合併原則之前，您將&#x200B;**無法**&#x200B;建立新的合併原則。 |
+| 合併原則硬性限制 | Experience Platform現在會強制每個沙箱硬性限制&#x200B;**5個**&#x200B;合併原則。 如果您的沙箱目前有超過五個合併原則，在沙箱有少於五個合併原則之前，您將&#x200B;**無法**&#x200B;建立新的合併原則。 |
 | 孤立的設定檔邊緣屬性清理 | 對於所有組織，設定檔服務現在會每天移除使用者活動區域的剩餘邊緣屬性，以在系統中更準確地呈現您的設定檔。 此清理會在特定設定檔的所有設定檔片段刪除後發生，而且應該會影響從`com_adobe_aep_profile_region_dataset`標示為`true`的資料集中合併的設定檔。 授權使用儀表板中的「可定址的受眾」量度可能會下降，而個人資料儀表板中的「個人資料計數」量度可能會下降，因為這些量度包含此版本之前的剩餘邊緣屬性片段。 |
 
 {style="table-layout:auto"}
 
-若要了解有關即時客戶設定檔的詳細資訊，包括使用設定檔資料的教學課程和最佳做法，請從閱讀[即時客戶設定檔概觀](../../profile/home.md)開始。
+若要了解有關即時客戶輪廓的詳細資訊，包括使用輪廓資料的教學課程和最佳做法，請從閱讀[即時客戶輪廓概觀](../../profile/home.md)開始。
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 支援4000個區段 | 所有具有Platform的組織現在最多可支援4000個區段定義。 如需此變更如何影響區段作業API的詳細資訊，請參閱[區段作業端點指南](../../segmentation/api/segment-jobs.md) |
+| 支援4000個區段 | 所有具有Experience Platform的組織現在最多可支援4000個區段定義。 如需此變更如何影響區段作業API的詳細資訊，請參閱[區段作業端點指南](../../segmentation/api/segment-jobs.md) |
 
 如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 自助來源的一般可用性（批次SDK） | 開發、測試及整合您的REST API型資料來源，以使用易於設定的來源規格將批次資料擷取到Experience Platform。 使用Sources SDK，您可以： <ul><li>設定Experience Platform目錄的新來源。</li><li>定義來源規格，包括與支援的驗證型別、排程及資源資料擷取方式相關的資訊。</li><li>為您的新來源建立面向使用者的檔案。</li></ul> 如需詳細資訊，請參閱有關[自助式來源（批次SDK）](../../sources/sources-sdk/overview.md)的檔案。 |
-| [!DNL Google BigQuery]來源的一般可用性 | 使用[!DNL Google BigQuery]來源從您的[!DNL Google BigQuery]資料倉儲擷取資料至Experience Platform。 如需詳細資訊，請閱讀[[!DNL Google BigQuery] 來源](../../sources/connectors/databases/bigquery.md)的檔案。 |
-| [!DNL Teradata Vantage]來源(Beta) | 使用[!DNL Teradata Vantage]來源從混合式多雲端環境擷取資料以Experience Platform。 如需詳細資訊，請閱讀[[!DNL Teradata Vantage] 來源](../../sources/connectors/databases/teradata-vantage.md)的檔案。 |
-| Adobe Analytics來源的跨區域支援 | 您現在可以從任何區域擷取報告套裝（美國、英國或新加坡）。 報告套裝必須對應至跟Experience Platform沙箱例項（正在其中建立來源連線）相同的組織。 如需詳細資訊，請參閱[在UI](../../sources/tutorials/ui/create/adobe-applications/analytics.md)中建立Adobe Analytics來源連線的指南。 |
+| 自助來源的一般可用性(批次SDK) | 開發、測試及整合您的REST API型資料來源，以使用易於設定的來源規格將批次資料擷取到Experience Platform。 使用來源SDK，您可以： <ul><li>設定Experience Platform目錄的新來源。</li><li>定義來源規格，包括與支援的驗證型別、排程及資源資料擷取方式相關的資訊。</li><li>為您的新來源建立面向使用者的檔案。</li></ul> 如需詳細資訊，請參閱有關[自助式來源(批次SDK)](../../sources/sources-sdk/overview.md)的檔案。 |
+| [!DNL Google BigQuery] 來源正式推出 | 使用[!DNL Google BigQuery]來源將資料從您的[!DNL Google BigQuery]資料倉儲擷取至Experience Platform。 如需詳細資訊，請閱讀[[!DNL Google BigQuery] 來源](../../sources/connectors/databases/bigquery.md)的檔案。 |
+| [!DNL Teradata Vantage]來源(Beta) | 使用[!DNL Teradata Vantage]來源將混合式多雲端環境中的資料擷取至Experience Platform。 如需詳細資訊，請閱讀[[!DNL Teradata Vantage] 來源](../../sources/connectors/databases/teradata-vantage.md)的檔案。 |
+| Adobe Analytics來源的跨區域支援 | 您現在可以從任何區域擷取報告套裝（美國、英國或新加坡）。 報告套裝必須對應至跟Experience Platform Sandbox執行個體（正在其中建立來源連線）相同的組織。 如需詳細資訊，請參閱[在UI](../../sources/tutorials/ui/create/adobe-applications/analytics.md)中建立Adobe Analytics來源連線的指南。 |
 
 {style="table-layout:auto"}
 

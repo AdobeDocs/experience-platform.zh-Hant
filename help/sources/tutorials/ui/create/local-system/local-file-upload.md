@@ -3,31 +3,31 @@ keywords: Experience Platform；首頁；熱門主題；本機系統；檔案上
 solution: Experience Platform
 title: 在UI中建立本機檔案上傳Source聯結器
 type: Tutorial
-description: 瞭解如何建立本機系統的來源連線，以將本機檔案帶到Platform
+description: 瞭解如何建立本機系統的來源連線，以將本機檔案帶到Experience Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '777'
 ht-degree: 0%
 
 ---
 
 # 在UI中建立本機檔案上傳來源聯結器
 
-本教學課程提供建立本機檔案上傳來源聯結器的步驟，以便使用使用者介面將本機檔案擷取到Platform。
+本教學課程提供使用使用者介面建立本機檔案上傳來源聯結器以將本機檔案擷取到Experience Platform的步驟。
 
 ## 快速入門
 
-本教學課程需要您實際瞭解下列Platform元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-## 將本機檔案上傳到Platform
+## 將本機檔案上傳至Experience Platform
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -91,4 +91,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-依照本教學課程，您已成功將一般CSV檔案對應至XDM結構描述，並將其內嵌至Platform。 此資料現在可供下游[!DNL Platform]服務（例如[!DNL Real-Time Customer Profile]）使用。 如需詳細資訊，請參閱[[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)的概觀。
+依照本教學課程所述，您已成功將一般CSV檔案對應至XDM結構描述，並將其擷取至Experience Platform。 此資料現在可供下游[!DNL Experience Platform]服務（例如[!DNL Real-Time Customer Profile]）使用。 如需詳細資訊，請參閱[[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)的概觀。

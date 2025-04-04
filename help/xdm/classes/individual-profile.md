@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；綱要；綱要；XDM；個別設定檔；欄位；綱要；綱要；身分對應；身分對應；綱要設計；對應；聯合綱要；聯合
+keywords: Experience Platform；首頁；熱門主題；結構描述；結構描述；XDM；個別設定檔；欄位；結構描述；身分對應；身分對應；結構描述設計；對應；聯合結構描述；聯合
 solution: Experience Platform
 title: XDM個別設定檔類別
 description: 瞭解XDM個別設定檔類別。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL XDM Individual Profile]是標準的體驗資料模型(XDM)類別，可形成個人的單一代表（或「個人檔案」）。 具體來說，類別（及其相容的欄位群組）會擷取與您品牌互動的已識別和已部分識別個人的屬性和興趣。
 
-設定檔的範圍包括匿名行為訊號（例如瀏覽器Cookie），以及包含詳細資訊（例如姓名、出生日期、地點和電子郵件地址）的高度識別設定檔。 隨著個人檔案成長，它會成為個人資訊、身分、聯絡詳細資料和個人通訊偏好設定的健全存放庫。 如需在Platform生態系統中使用此類別的高階資訊，請參閱[XDM概觀](../home.md#data-behaviors)。
+設定檔的範圍包括匿名行為訊號（例如瀏覽器Cookie），以及包含詳細資訊（例如姓名、出生日期、地點和電子郵件地址）的高度識別設定檔。 隨著個人檔案成長，它會成為個人資訊、身分、聯絡詳細資料和個人通訊偏好設定的健全存放庫。 如需在Experience Platform生態系統中使用此類別的高層級資訊，請參閱[XDM概觀](../home.md#data-behaviors)。
 
 ![XDM個別設定檔類別的結構描述圖。](../images/classes/individual-profile.png)
 
@@ -50,6 +50,6 @@ Adobe提供數個標準欄位群組以與[!DNL XDM Individual Profile]類別搭�
 * [[!UICONTROL XDM商業人士元件]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM商業人士詳細資料]](../field-groups/profile/business-person-details.md)\*
 
-*\*此欄位群組僅適用於具有Adobe Real-time Customer Data Platform B2B版本存取權的組織。*
+*\*此欄位群組僅供可存取Adobe Real-Time Customer Data Platform B2B edition的組織使用。*
 
 如需[!DNL XDM Individual Profile]所有相容欄位群組的完整清單，請參閱[XDM GitHub存放庫](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile)。

@@ -5,9 +5,9 @@ title: 從查詢結果產生輸出資料集
 type: Tutorial
 description: Adobe Experience Platform查詢服務可讓您從UI建立資料集。 建立資料集後，即可像資料湖中的其他資料集一樣存取該資料集，並用於各種使用案例。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 1. 使用連線的使用者端建立查詢並驗證輸出。 若要瞭解如何使用[!DNL Query Editor]撰寫查詢，請閱讀撰寫查詢的[!DNL Query Editor] UI指南[](./user-guide.md#writing-queries)。
 
-2. 在Platform UI中，依序導覽至&#x200B;**[!UICONTROL 查詢]**&#x200B;和&#x200B;**[!UICONTROL 範本]**&#x200B;標籤，並選取您已建立的查詢。 如需有關如何在Platform UI中檢視為您的組織建立和儲存的查詢的詳細資訊，請閱讀[[!DNL Query Service] 概觀](./overview.md#browse)。
+2. 在Experience Platform UI中，依序導覽至&#x200B;**[!UICONTROL 查詢]**&#x200B;和&#x200B;**[!UICONTROL 範本]**&#x200B;標籤，並選取您已建立的查詢。 如需有關如何在Experience Platform UI中檢視為您的組織建立和儲存的查詢的詳細資訊，請閱讀[[!DNL Query Service] 總覽](./overview.md#browse)。
 
 3. 在「查詢詳細資料」面板中，選取&#x200B;**[!UICONTROL 以CTAS執行]**。
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
    ![輸出資料集對話方塊，其中包含資料集詳細資料和[!UICONTROL 以CTAS執行]強調顯示](../images/ui/create-datasets/run-query.png)
 
-6. 查詢執行完成後，請導覽至&#x200B;**[!UICONTROL 資料集]**&#x200B;以檢視您建立的資料集。 若要進一步瞭解在Platform UI中使用資料集時如何執行常見動作，請參閱[資料集UI指南](../../catalog/datasets/user-guide.md)。
+6. 查詢執行完成後，請導覽至&#x200B;**[!UICONTROL 資料集]**&#x200B;以檢視您建立的資料集。 若要進一步瞭解在Experience Platform UI中使用資料集時如何執行常見動作，請參閱[資料集UI指南](../../catalog/datasets/user-guide.md)。
 
 建立資料集後，可以像[!DNL Data Lake]中的任何其他資料集一樣存取該資料集，並用於各種使用案例。
 
@@ -52,4 +52,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-閱讀本檔案後，您現在應該瞭解如何使用[!DNL Query Service]從Platform UI產生資料集。 如需如何在Platform UI中存取、寫入及執行查詢的詳細資訊，請參閱[[!DNL Query Service] UI概觀](./overview.md)。
+閱讀本檔案後，您現在應瞭解如何使用[!DNL Query Service]從Experience Platform UI產生資料集。 如需有關如何在Experience Platform UI中存取、寫入和執行查詢的詳細資訊，請參閱[[!DNL Query Service] UI總覽](./overview.md)。

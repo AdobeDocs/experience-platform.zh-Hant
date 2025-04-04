@@ -3,9 +3,9 @@ title: Mailchimp標籤
 description: Mailchimp標籤目的地可讓您匯出帳戶資料，並在Mailchimp中將其啟用，以便與聯絡人互動。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1657'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 相較於您根據連絡人的興趣和喜好來排序連絡人的[!DNL Mailchimp Interest Categories]，[!DNL Mailchimp Tags]旨在管理您的連絡人可能感興趣的主題訂閱。 *請注意，Experience Platform也有[!DNL Mailchimp Interest Categories]的連線，您可以在[[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md)頁面上檢視。*
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/)端點。 在新對象中啟用現有[!DNL Mailchimp]對象中的現有[!DNL Mailchimp]連絡人&#x200B;**後，您可以**&#x200B;新增連絡人&#x200B;**或**&#x200B;更新這些連絡人的標籤。 [!DNL Mailchimp Tags]使用從Platform選取的對象名稱做為[!DNL Mailchimp]內的標籤名稱。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/)端點。 在新對象中啟用現有[!DNL Mailchimp]對象中的現有[!DNL Mailchimp]連絡人&#x200B;**後，您可以**&#x200B;新增連絡人&#x200B;**或**&#x200B;更新這些連絡人的標籤。 [!DNL Mailchimp Tags]使用從Experience Platform選取的對象名稱做為[!DNL Mailchimp]內的標籤名稱。
 
 ## 使用案例 {#use-cases}
 
@@ -26,11 +26,11 @@ ht-degree: 2%
 
 ### 傳送電子郵件給行銷活動的連絡人 {#use-case-send-emails}
 
-組織的銷售部門想要將電子郵件行銷活動廣播至已組織的聯絡人清單。 連絡人清單是從不同的離線來源以批次方式收到，因此需要加以追蹤。 團隊會識別現有[!DNL Mailchimp]對象，並開始建置將每個清單中的連絡人加入其中的Experience Platform對象。 將這些對象傳送至[!DNL Mailchimp Tags]後，如果所選[!DNL Mailchimp]對象中不存在任何連絡人，則會新增連絡人並附上相關標籤，其中包含連絡人所屬的對象名稱。 如果[!DNL Mailchimp]對象中已存在任何連絡人，則會新增一個具有對象名稱的新標籤。 由於標籤會顯示在[!DNL Mailchimp]中，因此可輕鬆識別離線來源。 資料傳送至[!DNL Mailchimp]後，他們會傳送行銷活動電子郵件給對象。
+組織的銷售部門想要將電子郵件行銷活動廣播至已組織的聯絡人清單。 連絡人清單是從不同的離線來源以批次方式收到，因此需要加以追蹤。 團隊會識別現有[!DNL Mailchimp]對象，並開始建立每個清單中的聯絡人加入的Experience Platform對象。 將這些對象傳送至[!DNL Mailchimp Tags]後，如果所選[!DNL Mailchimp]對象中不存在任何連絡人，則會新增連絡人並附上相關標籤，其中包含連絡人所屬的對象名稱。 如果[!DNL Mailchimp]對象中已存在任何連絡人，則會新增一個具有對象名稱的新標籤。 由於標籤會顯示在[!DNL Mailchimp]中，因此可輕鬆識別離線來源。 資料傳送至[!DNL Mailchimp]後，他們會傳送行銷活動電子郵件給對象。
 
 ## 先決條件 {#prerequisites}
 
-請參閱以下各節，瞭解在Experience Platform和[!DNL Mailchimp]中需要設定的任何先決條件，以及使用[!DNL Mailchimp Tags]目的地之前需要收集的資訊。
+請參閱以下各節，瞭解在Experience Platform和[!DNL Mailchimp]中設定所需的任何先決條件，以及使用[!DNL Mailchimp Tags]目的地之前需要收集的資訊。
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
@@ -38,7 +38,7 @@ ht-degree: 2%
 
 ### [!DNL Mailchimp Tags]目的地的先決條件 {#prerequisites-destination}
 
-若要將資料從Platform匯出至您的[!DNL Mailchimp Tags]帳戶，請注意下列必要條件：
+若要將資料從Experience Platform匯出至您的[!DNL Mailchimp Tags]帳戶，請注意下列必要條件：
 
 #### 您必須擁有[!DNL Mailchimp]帳戶 {#prerequisites-account}
 
@@ -88,8 +88,8 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -99,8 +99,8 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 對於在Platform中選取的每個對象，相對應的[!DNL Mailchimp Tags]區段狀態會以Platform中的對象狀態更新。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 對於在Experience Platform中選取的每個對象，相對應的[!DNL Mailchimp Tags]區段狀態會以Experience Platform中的對象狀態更新。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -125,7 +125,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 {style="table-layout:auto"}
 
-![平台UI熒幕擷圖顯示如何驗證。](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+![Experience Platform UI熒幕擷圖顯示如何驗證。](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL 已連線]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
@@ -133,14 +133,14 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![顯示目的地詳細資訊的平台UI熒幕擷取畫面。](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
 
 | 欄位 | 說明 |
 | --- | --- |
 | **[!UICONTROL 名稱]** | 您日後可辨識此目的地的名稱。 |
 | **[!UICONTROL 說明]** | 可協助您日後識別此目的地的說明。 |
 | **[!UICONTROL 資料中心]** | 您的[!DNL Mailchimp]帳戶`data center`。 如需任何指引，請參閱[識別 [!DNL Mailchimp] 資料中心](#identify-data-center)區段。 |
-| **[!UICONTROL 對象名稱（請先輸入資料中心）]** | 在您輸入&#x200B;**[!UICONTROL 資料中心]**&#x200B;後，此下拉式清單會自動填入您[!DNL Mailchimp]帳戶中的對象名稱。 選取您要以Platform資料更新的對象。 |
+| **[!UICONTROL 對象名稱（請先輸入資料中心）]** | 在您輸入&#x200B;**[!UICONTROL 資料中心]**&#x200B;後，此下拉式清單會自動填入您[!DNL Mailchimp]帳戶中的對象名稱。 選取您要以Experience Platform資料更新的對象。 |
 
 {style="table-layout:auto"}
 
@@ -161,18 +161,18 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Mailchimp Tags]目的地，您必須完成欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
+若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Mailchimp Tags]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
 
 若要將您的XDM欄位正確對應到[!DNL Mailchimp Tags]目的地欄位，請遵循下列步驟：
 
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您會在畫面上看到新的對應列。
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取`Email`身分名稱空間。
 
-   ![Platform UI熒幕擷取畫面顯示Source欄位，作為來自身分名稱空間的電子郵件。](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Experience Platform UI熒幕擷取畫面顯示Source欄位，作為來自身分名稱空間的電子郵件。](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取`Email`身分名稱空間。
 
-   ![Platform UI熒幕擷取畫面，將Target欄位作為來自身分名稱空間的電子郵件。](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+   ![Experience Platform UI熒幕擷取畫面，將Target欄位顯示為來自身分名稱空間的電子郵件。](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    您的XDM設定檔結構描述與[!DNL Mailchimp Tags]之間的對應將會如下所示：
 
@@ -181,7 +181,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
    | `IdentityMap: Email` | `Identity: Email` | 是 |
 
    具有已完成對應的範例如下所示：
-   ![顯示欄位對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+   ![Experience Platform UI熒幕擷圖範例，顯示欄位對應。](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
 當您完成提供目的地連線的對應時，請選取&#x200B;**[!UICONTROL 下一步]**。
 

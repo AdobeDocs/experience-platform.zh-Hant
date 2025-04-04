@@ -2,9 +2,9 @@
 title: Google Ads連線
 description: Google Ads (先前稱為Google AdWords)是一項線上廣告服務，可讓企業在各種文字搜尋、圖形顯示、YouTube影片和應用程式內行動顯示中按一下付費廣告。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '952'
 ht-degree: 2%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 2%
 請注意下列專屬於[!DNL Google Ads]目的地的詳細資料：
 
 * 啟用的對象是以程式設計方式在[!DNL Google]平台中建立。
-* [!DNL Platform]目前不包含驗證成功啟用的測量量度。 請參考Google中的對象計數，以驗證整合併瞭解對象目標定位大小。
+* [!DNL Experience Platform]目前不包含驗證成功啟用的測量量度。 請參考Google中的對象計數，以驗證整合併瞭解對象目標定位大小。
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL Google Ads]建立您的第一個目的地，而且先前尚未啟用Experience CloudID服務中的[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) (使用Audience Manager或其他應用程式)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定Google整合，您設定的ID同步會延續至Platform。
+>如果您想要使用[!DNL Google Ads]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定Google整合，您設定的ID同步會傳遞至Experience Platform。
 
 ## 支援的身分 {#supported-identities}
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | 當您的來源身分是GAID名稱空間時，請選取此目標身分。 |
 | IDFA | [!DNL Apple ID for Advertisers] | 當您的來源身分是IDFA名稱空間時，請選取此目標身分。 |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)，也稱為[!DNL Device ID]。 38位數的裝置ID，Audience Manager會與每個與其互動的裝置建立關聯。 | Google使用[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)來鎖定加州的使用者，並鎖定所有其他使用者的Google Cookie ID。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)，也稱為[!DNL Device ID]。 Audience Manager與其互動的每個裝置相關聯的數字38位數裝置ID。 | Google使用[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)來鎖定加州的使用者，並使用所有其他使用者的Google Cookie ID。 |
 | [!DNL Google] Cookie ID | [!DNL Google] Cookie ID | [!DNL Google]使用此ID來鎖定加州以外的使用者。 |
 | RIDA | Advertising的Roku ID。 此ID可唯一識別Roku裝置。 |  |
 | MAID | Microsoft Advertising ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
@@ -48,8 +48,8 @@ ht-degree: 2%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至Google目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -76,13 +76,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在Platform中設定第一個[!DNL Google Ads]目的地前，必須先加入允許清單。 在建立目的地之前，請確定[!DNL Google]已完成下述允許清單程式。
+>在Experience Platform中設定第一個[!DNL Google Ads]目的地前，必須先加入允許清單。 在建立目的地之前，請確定[!DNL Google]已完成下述允許清單程式。
 >此規則的例外情況適用於[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html)客戶。 如果您已經在Audience Manager中建立了與此Google目的地的連線，則不需要再次進行允許清單程式，您可以繼續後續步驟。
 
-在Platform中建立[!DNL Google Ads]目的地之前，您必須連絡[!DNL Google]，才能將Adobe放入允許的資料提供者清單中，並將您的帳戶新增到允許清單中。 請連絡[!DNL Google]並提供下列資訊：
+在Experience Platform中建立[!DNL Google Ads]目的地之前，您必須先聯絡[!DNL Google]，才能Adobe加入允許的資料提供者清單，並將您的帳戶新增至允許清單。 請連絡[!DNL Google]並提供下列資訊：
 
-* **帳戶ID**：Adobe與Google的帳戶ID。 帳戶ID：87933855。
-* **客戶識別碼**：Adobe與Google的客戶帳戶識別碼。 客戶ID：89690775。
+* **帳戶ID**： Adobe的帳戶ID與Google。 帳戶ID：87933855。
+* **客戶ID**： Adobe的客戶帳戶ID與Google。 客戶ID：89690775。
 * 您的帳戶型別： **AdWords**
 * **Google AdWords ID**：這是您使用[!DNL Google]的ID。 ID格式通常為123-456-7890。
 

@@ -4,9 +4,9 @@ description: 瞭解如何使用Adobe Experience Platform UI建立Merkury企業�
 last-substantial-update: 2023-12=12
 badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2143'
+source-wordcount: '2146'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 ## 連線您的Merkury帳戶
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 ## 新增資料
 
-建立[!DNL Merkury]帳戶後，**[!UICONTROL 新增資料]**&#x200B;步驟就會顯示，提供介面讓您探索[!DNL Merkury]檔案階層，並選取您要帶入Experience Platform的資料夾或特定檔案。
+建立[!DNL Merkury]帳戶後，**[!UICONTROL 新增資料]**&#x200B;步驟隨即顯示，提供介面讓您探索[!DNL Merkury]檔案階層，並選取您要帶入Experience Platform的資料夾或特定檔案。
 
 * 介面的左側是目錄瀏覽器，顯示您的[!DNL Merkury]檔案階層。
 * 介面的右側部分可讓您預覽相容資料夾或檔案中最多100列的資料。
@@ -121,13 +121,13 @@ ht-degree: 1%
 
 在[!UICONTROL 選取資料]步驟中，選取要擷取的壓縮檔案，然後選取其適當的檔案型別，以及是否符合XDM規範。 接著，選取&#x200B;**[!UICONTROL 壓縮型別]**，然後為您的來源資料選取適當的壓縮檔案型別。
 
-若要將特定檔案帶入Platform，請選取資料夾，然後選取您要擷取的檔案。 在此步驟中，您也可以使用檔案名稱旁的預覽圖示，來預覽指定資料夾中其他檔案的內容。
+若要將特定檔案帶入Experience Platform，請選取資料夾，然後選取您要擷取的檔案。 在此步驟中，您也可以使用檔案名稱旁的預覽圖示，來預覽指定資料夾中其他檔案的內容。
 
 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
 
 +++
 
-## 提供資料流詳細資料
+## 提供資料流詳細資訊
 
 [!UICONTROL 資料流詳細資料]頁面可讓您選取要使用現有資料集還是新資料集。 在此程式中，您也可以設定要擷取至設定檔的資料，並啟用[!UICONTROL 錯誤診斷]、[!UICONTROL 部分擷取]和[!UICONTROL 警示]等設定。
 
@@ -167,7 +167,7 @@ ht-degree: 1%
 
 [!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
-Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
+Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
 
 成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
@@ -216,7 +216,7 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功建立資料流，以將批次資料從您的[!DNL Merkury]來源帶入Experience Platform。 如需其他資源，請瀏覽以下概述的檔案。
+依照本教學課程中的指示，您已成功建立資料流，以將批次資料從[!DNL Merkury]來源帶入Experience Platform。 如需其他資源，請瀏覽以下概述的檔案。
 
 ### 監視資料流
 

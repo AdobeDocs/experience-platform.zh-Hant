@@ -3,16 +3,16 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；使用者介
 title: UI中的設定檔詳細資料自訂
 description: 本指南逐步說明如何自訂Adobe Experience Platform UI中顯示即時客戶設定檔資料的方式。
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
 
 # [!DNL Real-Time Customer Profile]詳細資料自訂 {#profile-detail-customization}
 
-在Adobe Experience Platform使用者介面中，您可以檢視客戶設定檔形式的[!DNL Real-Time Customer Profile]資料並與之互動。 UI中顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成每個個別客戶的單一檢視。 這包括基本屬性、連結的身分和管道偏好設定等詳細資訊。 設定檔中顯示的預設欄位也可以在組織層級變更以顯示偏好的[!DNL Profile]屬性。 本指南提供逐步指示，說明如何自訂[!DNL Profile]資料在Platform UI中的顯示方式。
+在Adobe Experience Platform使用者介面中，您可以檢視客戶設定檔形式的[!DNL Real-Time Customer Profile]資料並與之互動。 UI中顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成每個個別客戶的單一檢視。 這包括基本屬性、連結的身分和管道偏好設定等詳細資訊。 設定檔中顯示的預設欄位也可以在組織層級變更以顯示偏好的[!DNL Profile]屬性。 本指南提供逐步指示，說明如何自訂[!DNL Profile]資料在Experience Platform UI中的顯示方式。
 
 如需設定檔UI的完整指南，請造訪[設定檔UI指南](user-guide.md)。
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## 新增卡片 {#add-a-new-card}
 
-若要進一步自訂Experience Platform中設定檔的外觀，您可以選取將新卡片新增至控制面板，並選取您想在這些卡片上顯示的屬性。 若要開始，請在&#x200B;**[!UICONTROL 詳細資料]**&#x200B;索引標籤上選取&#x200B;**[!UICONTROL 修改儀表板]**。
+若要進一步自訂Experience Platform中設定檔的外觀，您可以選取將新卡片新增至控制面板，並選取您想在這些卡片顯示的屬性。 若要開始，請在&#x200B;**[!UICONTROL 詳細資料]**&#x200B;索引標籤上選取&#x200B;**[!UICONTROL 修改儀表板]**。
 
 ![[自訂設定檔詳細資料]按鈕已反白顯示。](../images/profile-customization/customize-profile-details.png)
 
@@ -110,4 +110,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-依照此檔案，您現在應該能夠更新組織的設定檔檢視，包括新增和移除卡片，編輯卡片詳細資料和屬性，以及重新排序卡片並重新調整其大小。 若要進一步瞭解如何在Experience PlatformUI中使用[!DNL Profile]資料，請參閱[[!DNL Profile] 使用手冊](user-guide.md)。
+依照此檔案，您現在應該能夠更新組織的設定檔檢視，包括新增和移除卡片，編輯卡片詳細資料和屬性，以及重新排序卡片並重新調整其大小。 若要進一步瞭解如何在Experience Platform UI中使用[!DNL Profile]資料，請參閱[[!DNL Profile] 使用手冊](user-guide.md)。

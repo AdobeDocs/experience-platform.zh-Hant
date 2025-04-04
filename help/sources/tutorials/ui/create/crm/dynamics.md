@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Microsoft Dynamics；microsoft dynamics；Dynamics；dynamics
+keywords: Experience Platform；首頁；熱門主題；Microsoft Dynamics；microsoft dynamics；Dynamics；Dynamics
 solution: Experience Platform
 title: 在使用者介面中建立Microsoft Dynamics Source連線
 type: Tutorial
-description: 瞭解如何使用Microsoft UI建立Adobe Experience Platform Dynamics來源連線。
+description: 瞭解如何使用Microsoft Dynamics UI建立Adobe Experience Platform來源連線。
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -54,7 +54,7 @@ ht-degree: 1%
 
 ## 連線您的[!DNL Dynamics]帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -86,7 +86,7 @@ ht-degree: 1%
 
 >[!TAB 基本驗證]
 
-若要建立具有基本驗證的[!DNL Dynamics]帳戶，請選取[!UICONTROL 基本驗證]，然後提供您的[!UICONTROL 服務URI]、[!UICONTROL 使用者名稱]和[!UICONTROL 密碼]的值。 **注意**： [!DNL Dynamics]中的基本驗證可能遭到雙因素驗證封鎖，目前平台不支援雙因素驗證。 在此情況下，建議使用金鑰式驗證，以使用[!DNL Dynamics]建立來源聯結器。
+若要建立具有基本驗證的[!DNL Dynamics]帳戶，請選取[!UICONTROL 基本驗證]，然後提供您的[!UICONTROL 服務URI]、[!UICONTROL 使用者名稱]和[!UICONTROL 密碼]的值。 **注意**： [!DNL Dynamics]中的基本驗證可能被Experience Platform目前不支援的雙重因素驗證封鎖。 在此情況下，建議使用金鑰式驗證，以使用[!DNL Dynamics]建立來源聯結器。
 
 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**，然後留出一些時間建立新帳戶。
 
@@ -104,4 +104,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Dynamics]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](../../dataflow/crm.md)。
+依照本教學課程中的指示，您已建立與[!DNL Dynamics]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/crm.md)。

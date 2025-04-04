@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 聯合API端點
 description: 結構描述登入API中的/unions端點可讓您以程式設計方式管理體驗應用程式中的XDM聯合結構描述。
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -31,13 +31,13 @@ ht-degree: 1%
 
 ### 區段會籍地圖
 
-`segmentMembership`對應會儲存評估區段定義的結果。 使用[分段API](https://www.adobe.io/experience-platform-apis/references/segmentation/)成功執行區段作業時，對應會更新。 `segmentMembership`也會儲存擷取至Platform的任何預先評估對象，以允許與其他解決方案(例如Adobe Audience Manager)整合。 如需詳細資訊，請參閱有關[使用API建立對象](../../segmentation/tutorials/create-a-segment.md)的教學課程。
+`segmentMembership`對應會儲存評估區段定義的結果。 使用[分段API](https://www.adobe.io/experience-platform-apis/references/segmentation/)成功執行區段作業時，對應會更新。 `segmentMembership`也會儲存擷取至Experience Platform的任何預先評估對象，以允許與其他解決方案(例如Adobe Audience Manager)整合。 如需詳細資訊，請參閱有關[使用API建立對象](../../segmentation/tutorials/create-a-segment.md)的教學課程。
 
 ## 擷取聯合清單 {#list}
 
 當您在結構描述上設定`union`標籤時，[!DNL Schema Registry]會自動將結構描述新增到結構描述所依據之類別的聯合。 如果相關類別不存在聯集，則會自動建立新的聯集。 聯集的`$id`與其他[!DNL Schema Registry]資源的標準`$id`類似，唯一的差異是附加了兩個底線和單字「聯集」(`__union`)。
 
-您可以透過向`/tenant/unions`端點發出GET要求來檢視可用的聯合清單。
+您可以透過向`/tenant/unions`端點發出GET請求來檢視可用聯合的清單。
 
 **API格式**
 
@@ -91,7 +91,7 @@ curl -X GET \
 
 ## 查詢聯集 {#lookup}
 
-您可以執行包含`$id`的GET要求來檢視特定的聯合，並且視Accept標頭而定，檢視聯合的部分或全部細節。
+您可以透過執行包含`$id`的GET請求來檢視特定的聯合，並且視Accept標頭而定，會檢視聯合的部分或全部詳細資訊。
 
 >[!NOTE]
 >
@@ -180,7 +180,7 @@ curl -X GET \
 
 ## 啟用聯合成員資格的結構描述 {#enable}
 
-若要將結構描述加入其類別的聯合中，必須將`union`標籤新增到結構描述的`meta:immutableTags`屬性。 您可以發出PATCH要求，將單一字串值為`union`的`meta:immutableTags`陣列新增到有問題的結構描述中，藉此達成此目的。 如需詳細範例，請參閱[結構描述端點指南](./schemas.md#union)。
+若要將結構描述加入其類別的聯合中，必須將`union`標籤新增到結構描述的`meta:immutableTags`屬性。 您可以發出PATCH要求，將單一字串值為`union`的`meta:immutableTags`陣列新增至有問題的結構描述，藉此完成此作業。 如需詳細範例，請參閱[結構描述端點指南](./schemas.md#union)。
 
 ## 聯合中的清單結構描述 {#list-schemas}
 

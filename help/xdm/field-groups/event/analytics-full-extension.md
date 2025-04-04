@@ -2,9 +2,9 @@
 title: Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組
 description: 瞭解Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組。
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '812'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->由於此欄位群組中重複元素的大小和數量，本指南中顯示的許多欄位已收合以節省空間。 若要探索此欄位群組的完整結構，您可以[在Platform UI](../../ui/explore.md)中查詢它，或在[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)中檢視完整的結構描述。
+>由於此欄位群組中重複元素的大小和數量，本指南中顯示的許多欄位已收合以節省空間。 若要探索此欄位群組的完整結構，您可以[在Experience Platform UI](../../ui/explore.md)中查詢它，或在[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)中檢視完整的結構描述。
 
 ## 欄位群組結構
 

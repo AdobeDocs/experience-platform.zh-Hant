@@ -2,9 +2,9 @@
 description: 此頁面說明如何使用/authoring/testing/template/render端點，以視覺效果呈現目的地設定中定義的範本化客戶資料欄位外觀。
 title: 驗證範本化客戶欄位
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: 6bd169075cd3826ae2a0907e6e624fd901076a4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '388'
 ht-degree: 2%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 2%
 
 在使用`/template/render`端點之前，請確定您符合下列條件：
 
-* 您有一個透過Destination SDK建立的檔案型目的地，且您可以在[目的地目錄](../../../ui/destinations-workspace.md)中看到它。
-* 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Platform UI中瀏覽與目的地的連線時，從URL取得應在API呼叫中使用的目的地執行個體ID。
+* 您有一個透過Destination SDK建立的檔案型目的地，而且您可以在[目的地目錄](../../../ui/destinations-workspace.md)中看到它。
+* 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Experience Platform UI中瀏覽與目的地的連線時，從URL取得應在API呼叫中使用的目的地執行個體ID。
 
   ![UI影像顯示如何從URL取得目的地執行個體識別碼。](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -98,7 +98,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 

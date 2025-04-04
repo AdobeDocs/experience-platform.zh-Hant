@@ -2,9 +2,9 @@
 title: Amazon S3連線
 description: 建立與您的Amazon Web Services (AWS) S3儲存區的即時輸出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1503'
 ht-degree: 16%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 16%
 
 ## 透過API或UI連線至您的[!DNL Amazon S3]儲存空間 {#connect-api-or-ui}
 
-* 若要使用Platform使用者介面連線到您的[!DNL Amazon S3]儲存位置，請閱讀以下章節： [連線到目的地](#connect)以及[啟用對象到此目的地](#activate)。
+* 若要使用Experience Platform使用者介面連線至您的[!DNL Amazon S3]儲存位置，請閱讀以下章節： [連線至目的地](#connect)及[啟用對象至此目的地](#activate)。
 * 若要以程式設計方式連線至您的[!DNL Amazon S3]儲存位置，請閱讀如何使用「流程服務API」教學課程](../../api/activate-segments-file-based-destinations.md)，將對象[啟用至檔案型目的地的指南。
 
 ## 支援的對象 {#supported-audiences}
@@ -58,14 +58,14 @@ ht-degree: 16%
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
+* 如何使用Experience Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
 * 如何使用流程服務API](/help/destinations/api/export-datasets.md)以程式設計方式[匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 
-匯出&#x200B;*對象資料*&#x200B;時，Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
+匯出&#x200B;*對象資料*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
 
-匯出&#x200B;*資料集*&#x200B;時，Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
+匯出&#x200B;*資料集*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
 
 ## 連線到目標 {#connect}
 
@@ -93,7 +93,7 @@ ht-degree: 16%
 
 ![選取存取金鑰和機密金鑰驗證時必要欄位的影像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
-* **[!DNL Amazon S3]存取金鑰**&#x200B;與&#x200B;**[!DNL Amazon S3]秘密金鑰**：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授與您[!DNL Amazon S3]帳戶的Platform存取權。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
+* **[!DNL Amazon S3]存取金鑰**&#x200B;與&#x200B;**[!DNL Amazon S3]秘密金鑰**：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授予Experience Platform存取您的[!DNL Amazon S3]帳戶。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
 * **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，將加密新增至匯出的檔案。 在下圖中檢視格式正確的加密金鑰範例。
 
   ![顯示UI中格式正確的PGP金鑰範例的影像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -154,7 +154,7 @@ ht-degree: 16%
 
 ### 必要的[!DNL Amazon S3]許可權 {#required-s3-permission}
 
-若要成功連線並匯出資料至您的[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Platform]建立識別與存取管理(IAM)使用者，並為下列動作指派許可權：
+若要成功連線並匯出資料至您的[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Experience Platform]建立識別與存取管理(IAM)使用者，並為下列動作指派許可權：
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -201,7 +201,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 

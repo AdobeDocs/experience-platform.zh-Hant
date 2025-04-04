@@ -2,9 +2,9 @@
 title: 在使用者介面中建立Zendesk Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Zendesk來源連線。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '746'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 ### 收集必要的認證
 
-若要在Platform上存取您的[!DNL Zendesk]帳戶，您必須提供下列認證的值：
+若要在Experience Platform上存取您的[!DNL Zendesk]帳戶，您必須提供下列認證的值：
 
 | 認證 | 說明 | 範例 |
 | --- | --- | --- |
@@ -35,9 +35,9 @@ ht-degree: 7%
 
 ![Zendesk API權杖](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### 建立[!DNL Zendesk]的平台結構描述
+### 為[!DNL Zendesk]建立Experience Platform結構描述
 
-在建立[!DNL Zendesk]來源連線之前，您也必須先建立平台結構描述以用於您的來源。 請參閱有關[建立Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程，以瞭解如何建立結構描述的完整步驟。
+在建立[!DNL Zendesk]來源連線之前，您也必須先建立Experience Platform結構描述以用於您的來源。 如需如何建立結構描述的完整步驟，請參閱有關[建立Experience Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程。
 
 有關[!DNL Zendesk Search API]所需的[!DNL Zendesk]結構描述的其他指引，請參閱以下[限制](#limits)區段。
 
@@ -45,7 +45,7 @@ ht-degree: 7%
 
 ## 連線您的[!DNL Zendesk]帳戶
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -75,7 +75,7 @@ ht-degree: 7%
 
 ## 後續步驟
 
-依照本教學課程，您已驗證並建立[!DNL Zendesk]帳戶與平台之間的來源連線。 您現在可以繼續進行下一個教學課程，並[建立資料流以將客戶成功資料帶入Platform](../../dataflow/customer-success.md)。
+依照本教學課程，您已驗證並建立[!DNL Zendesk]帳戶與Experience Platform之間的來源連線。 您現在可以繼續進行下一個教學課程，並[建立資料流以將客戶成功資料帶入Experience Platform](../../dataflow/customer-success.md)。
 
 ## 其他資源
 
@@ -83,9 +83,9 @@ ht-degree: 7%
 
 ### 驗證 {#validation}
 
-以下概述您可以採取的步驟，以驗證您是否已成功連線您的[!DNL Zendesk]來源，以及是否正在將[!DNL Zendesk]設定檔擷取到Platform。
+以下概述您可以採取的步驟，以驗證您是否已成功連線您的[!DNL Zendesk]來源，以及是否正在將[!DNL Zendesk]設定檔擷取到Experience Platform。
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 資料集]**&#x200B;以存取[!UICONTROL 資料集]工作區。 [!UICONTROL 資料集活動]畫面會顯示執行的詳細資訊。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 資料集]**&#x200B;以存取[!UICONTROL 資料集]工作區。 [!UICONTROL 資料集活動]畫面會顯示執行的詳細資訊。
 
 ![活動頁面](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -97,7 +97,7 @@ ht-degree: 7%
 
 ![Zendesk資料集](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-您也可以根據[!DNL Zendesk] > [!DNL Customers]頁面上的資料來驗證您的Platform資料。
+您也可以根據[!DNL Zendesk] > [!DNL Customers]頁面上的資料來驗證您的Experience Platform資料。
 
 ![zendesk-customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 

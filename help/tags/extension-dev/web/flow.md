@@ -2,10 +2,10 @@
 title: Web擴充功能流程
 description: 瞭解Web擴充功能元件如何在執行階段在Adobe Experience Platform中互相互動。
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 42%
+source-wordcount: '272'
+ht-degree: 59%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Web 擴充功能中，每個事件、條件、動作和資料元素類型都具有可讓使用者修改設定的檢視，還有程式庫模組可依使用者定義的設定來執行。
 
-如下列高階圖表所示，擴充功能的事件型別檢視會顯示於與Adobe Experience Platform整合的應用程式內，呈現於iframe之中。 使用者可透過檢視修改設定，設定會儲存至Platform中。 建置標籤執行階段程式庫時，擴充功能的事件型別程式庫模組以及使用者定義的設定都會包含在執行階段程式庫中。 在執行階段，Platform會將使用者定義的設定插入程式庫模組中。
+如下列高階圖表所示，擴充功能的事件型別檢視會顯示於與Adobe Experience Platform整合的應用程式內，呈現於iframe之中。 使用者可透過檢視修改設定，設定會儲存至Experience Platform中。 建置標籤執行階段程式庫時，擴充功能的事件型別程式庫模組以及使用者定義的設定都會包含在執行階段程式庫中。 在執行階段，Experience Platform會將使用者定義的設定插入程式庫模組中。
 
 ![擴充功能流程圖](../images/flow/web/extension-flow.png)
 

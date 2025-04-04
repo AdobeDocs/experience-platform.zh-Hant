@@ -3,7 +3,7 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 0%
@@ -24,19 +24,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您的組織剛開始進行Experience Platform，但尚未擁有作用中的目的地，則不會顯示[!UICONTROL 目的地]儀表板和[!UICONTROL 概觀]索引標籤。 從左側導覽選取[!UICONTROL 目的地]會顯示[[!UICONTROL 目錄]索引標籤](#catalog)。
+>如果您的組織剛開始使用Experience Platform，但尚未擁有作用中的目的地，則不會顯示[!UICONTROL 目的地]儀表板和[!UICONTROL 概觀]標籤。 從左側導覽選取[!UICONTROL 目的地]會顯示[[!UICONTROL 目錄]索引標籤](#catalog)。
 
 ![目的地儀表板概觀標籤。](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL 目錄] {#catalog}
 
-**[!UICONTROL 目錄]**&#x200B;索引標籤會顯示[!DNL Platform]中所有可用目的地的清單，您可以將這些資料傳送至這些目的地。
+**[!UICONTROL 目錄]**&#x200B;索引標籤會顯示[!DNL Experience Platform]中所有可用目的地的清單，您可以將這些資料傳送至這些目的地。
 
-[!DNL Platform]使用者介面在目的地目錄頁面上提供數個搜尋和篩選選項：
+[!DNL Experience Platform]使用者介面在目的地目錄頁面上提供數個搜尋和篩選選項：
 
 * 使用頁面上的搜尋功能來找出特定目的地。
 * 使用[!UICONTROL 類別]控制項篩選目的地。
-* 在[!UICONTROL 所有目的地]和[!UICONTROL 我的目的地]之間切換。 當您選取「**[!UICONTROL 所有目的地]**」時，會顯示所有可用的[!DNL Platform]目的地。 當您選取&#x200B;**[!UICONTROL 我的目的地]**&#x200B;時，您只能看到已建立連線的目的地。
+* 在[!UICONTROL 所有目的地]和[!UICONTROL 我的目的地]之間切換。 當您選取「**[!UICONTROL 所有目的地]**」時，會顯示所有可用的[!DNL Experience Platform]目的地。 當您選取&#x200B;**[!UICONTROL 我的目的地]**&#x200B;時，您只能看到已建立連線的目的地。
 * 選取以檢視&#x200B;**[!UICONTROL 連線]**&#x200B;和/或&#x200B;**[!UICONTROL 延伸模組]**&#x200B;型別。 若要瞭解這兩個類別之間的差異，請閱讀[目的地型別和類別](../destination-types.md)。
 
 ![顯示幾個廣告和雲端儲存空間目的地的目的地目錄。](../assets/ui/workspace/catalog.png)

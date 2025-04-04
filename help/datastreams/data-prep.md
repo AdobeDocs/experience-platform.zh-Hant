@@ -2,16 +2,16 @@
 title: 資料收集的資料準備
 description: 了解設定 Adob​​e Experience Platform Web 和 Mobile SDK 的資料流時如何將資料對應到體驗資料模型 (XDM) 事件結構描述。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 59%
+source-wordcount: '1203'
+ht-degree: 53%
 
 ---
 
 # 資料收集的資料準備
 
-「資料準備」是一種 Adob&#x200B;&#x200B;e Experience Platform 服務，可讓您和[體驗資料模型 (XDM)](../xdm/home.md) 相互對應、轉換和驗證資料。設定啟用 Platform 的[資料流](./overview.md)時，若將來源資料傳送到 Platform Edge Network，可以使用資料準備功能將其對應到 XDM。
+「資料準備」是一種 Adob&#x200B;&#x200B;e Experience Platform 服務，可讓您和[體驗資料模型 (XDM)](../xdm/home.md) 相互對應、轉換和驗證資料。設定啟用Experience Platform的[資料流](./overview.md)時，您可以在將來源資料傳送到Experience Platform Edge Network時，使用「資料準備」功能將來源資料對應到XDM。
 
 所有從網頁傳送的資料都必須以XDM形式登入Experience Platform。 有3種方式可以將資料從頁面上的資料層轉譯為Experience Platform接受的XDM：
 
@@ -52,7 +52,7 @@ ht-degree: 59%
 
 ## [!UICONTROL 選擇資料] {#select-data}
 
-完成資料流的基本設定之後，請選取「**[!UICONTROL 儲存並新增對應]**」，「**[!UICONTROL 選取資料]**」步驟會隨即顯示。在這裡，您必須提供一個 JSON 物件範例 (代表您計劃傳送到 Platform 的資料的結構)。
+完成資料流的基本設定之後，請選取「**[!UICONTROL 儲存並新增對應]**」，「**[!UICONTROL 選取資料]**」步驟會隨即顯示。從這裡，您必須提供範例JSON物件，代表您計畫傳送至Experience Platform的資料結構。
 
 若要直接從資料層擷取屬性，JSON 物件必須具有單一根屬性`data`。然後應該以對應至您要擷取的資料層屬性的方式建構`data`物件的子屬性。 請選取以下區段，即可檢視正確格式化並具有 `data` 根的 JSON 物件範例。
 
@@ -162,7 +162,7 @@ ht-degree: 59%
 
 ## [!UICONTROL 對應]
 
-**[!UICONTROL 對應]**&#x200B;步驟隨即顯示，可讓您將來源資料中的欄位對應到 Platform 中目標事件結構描述的欄位。在這裡，您可以使用兩種方式設定對應：
+**[!UICONTROL 對應]**&#x200B;步驟出現，可讓您將來源資料中的欄位對應到Experience Platform中的目標事件結構描述中的欄位。 在這裡，您可以使用兩種方式設定對應：
 
 * [透過手動程式為此資料流建立對應規則](#create-mapping)。
 * 從現有資料流[匯入對應規則](#import-mapping)。

@@ -3,9 +3,9 @@ keywords: 個人化；Personalization
 title: Personalization目的地概觀
 description: Personalization平台會從個人行為收集資料和深入分析。 這些平台可協助行銷人員導覽匿名資料，根據先前的活動或作為具有類似習慣的受眾的一部分為潛在客戶提供優惠或廣告。
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '151'
 ht-degree: 9%
 
 ---
@@ -18,7 +18,7 @@ Personalization平台會從個人行為收集資料和深入分析。 這些平�
 
 ## 支援的個人化目的地 {#supported-destinations}
 
-目前，Platform支援下列個人化目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
+目前，Experience Platform支援下列個人化目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 
 **連線**
 

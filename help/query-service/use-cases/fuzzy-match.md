@@ -1,10 +1,10 @@
 ---
 title: 查詢服務中的模糊比對
-description: 瞭解如何在您的Platform資料上執行比對，並透過大致比對您選擇的字串來合併來自多個資料集的結果。
+description: 瞭解如何在您的Experience Platform資料上執行比對，並透過大致比對您選擇的字串來合併來自多個資料集的結果。
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ cur = conn.cursor()
 
 您的[!DNL Jupyter Notebook]執行個體現在已連線至查詢服務。 如果連線成功，則不會顯示任何訊息。 如果連線失敗，將會顯示錯誤。
 
-### Luma資料集的Draw資料 {#luma-dataset}
+### 從Luma資料集提取資料 {#luma-dataset}
 
 使用下列命令，從第一個資料集擷取要分析的資料。 為簡短起見，這些範例已限製為欄的前10個結果。
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Acme資料集的Draw資料 {#acme-dataset}
+### 從Acme資料集提取資料 {#acme-dataset}
 
 現在，使用下列命令從第二個資料集擷取分析資料。 同樣地，為了簡單起見，這些範例已限製為欄的前10個結果。
 
@@ -350,7 +350,7 @@ WHERE
 
 +++
 
-### 將模糊比對結果儲存至Platform {#save-to-platform}
+### 將模糊比對結果儲存至Experience Platform {#save-to-platform}
 
 最後，模糊比對的結果可以儲存為資料集，以供使用SQL的Adobe Experience Platform使用。
 

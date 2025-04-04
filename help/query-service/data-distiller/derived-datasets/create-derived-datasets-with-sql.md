@@ -2,9 +2,9 @@
 title: 使用SQL建立衍生資料集
 description: 瞭解如何使用SQL建立為設定檔啟用的衍生資料集，以及如何將資料集用於即時客戶設定檔和分段服務。
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1238'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 瞭解如何使用SQL查詢來操縱和轉換現有資料集的資料，以建立為設定檔啟用的衍生資料集。 此工作流程提供高效率的替代方法，可以為您的Real-time Customer Profile業務使用案例建立衍生資料集。
 
-本檔案概述各種方便使用的SQL擴充功能，這些擴充功能會產生衍生的資料集，以與即時客戶設定檔搭配使用。 工作流程簡化了您原本必須透過各種API呼叫或Platform UI互動完成的程式。
+本檔案概述各種方便使用的SQL擴充功能，這些擴充功能會產生衍生的資料集，以與即時客戶設定檔搭配使用。 工作流程簡化了您原本必須透過各種API呼叫或Experience Platform UI互動完成的程式。
 
 一般來說，產生和發佈即時客戶個人檔案的衍生資料集會涉及以下步驟：
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 >
 >下面提供的SQL查詢假設使用預先存在的名稱空間。
 
-使用「建立表格為選取」(CTAS)查詢來建立資料集、指派資料型別、設定主要身分、建立結構描述，並標籤為已啟用設定檔。 以下範例SQL陳述式會建立資料集，並供Real-time Customer Data Platform (Real-Time CDP)使用。 您的SQL查詢將遵循以下範例中顯示的格式：
+使用「建立表格為選取」(CTAS)查詢來建立資料集、指派資料型別、設定主要身分、建立結構描述，並標籤為已啟用設定檔。 以下範例SQL陳述式會建立資料集，並供Real-Time Customer Data Platform (Real-Time CDP)使用。 您的SQL查詢將遵循以下範例中顯示的格式：
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -51,7 +51,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-或者，也可以透過Platform UI為設定檔啟用資料集。 如需將資料集標示為已啟用設定檔的詳細資訊，請參閱[啟用即時客戶設定檔的資料集檔案](../../../catalog/datasets/user-guide.md#enable-profile)。
+或者，也可以透過Experience Platform UI為設定檔啟用資料集。 如需將資料集標示為已啟用設定檔的詳細資訊，請參閱[啟用即時客戶設定檔的資料集檔案](../../../catalog/datasets/user-guide.md#enable-profile)。
 
 在下列範例查詢中，`decile_table`資料集是以`id`作為主要身分資料行建立，且名稱空間為`IDFA`。 它也有對應資料型別名為`decile1Month`的欄位。 已針對設定檔啟用建立的資料表(`decile_table`)。
 
@@ -178,7 +178,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### 使用SQL建立欄位群組
 
-現在可以透過使用SQL來建立欄位群組。 這是在Platform UI中使用結構描述編輯器，或對Schema登入進行API呼叫的替代方式。
+現在可以透過使用SQL來建立欄位群組。 這是在Experience Platform UI中使用結構描述編輯器，或向結構描述登入進行API呼叫的替代方式。
 
 下面顯示建立欄位群組的範例陳述式。
 

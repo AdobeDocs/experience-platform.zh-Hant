@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Attribution AI UI指南
 description: 本檔案可用作在Intelligent Services使用者介面中與Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2451'
 ht-degree: 0%
 
 ---
 
 # Attribution AI UI指南
 
-作為Intelligent Services的一部分，Attribution AI是一種多管道的演演算法歸因服務，可計算客戶互動對指定結果的影響和累加影響。 透過Attribution AI，行銷人員可經由瞭解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。
+Attribution AI是Intelligent Services的一部分，它是一種多管道的演演算法歸因服務，可計算客戶互動對指定結果的影響和累加影響。 透過Attribution AI，行銷人員可經由瞭解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。
 
 本檔案可用作在Intelligent Services使用者介面中與Attribution AI互動的指南。
 
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 ![正在存取您的模型](./images/user-guide/open_Attribution_ai.png)
 
-便會顯示「Attribution AI服務」頁面。 此頁面列出Attribution AI的服務模型並顯示其相關資訊，包括模型名稱、轉換事件、模型執行頻率以及上次更新狀態。
+便會顯示Attribution AI服務頁面。 此頁面列出Attribution AI的服務模型並顯示其相關資訊，包括模型名稱、轉換事件、模型執行頻率以及上次更新狀態。
 
-您可以在&#x200B;**[!UICONTROL 建立模型]**&#x200B;容器的右下角找到&#x200B;**[!UICONTROL 已評分的轉換事件總數]**&#x200B;個量度。 此量度會追蹤目前日曆年度內Attribution AI評分的轉換事件總數，包括所有沙箱環境及任何已刪除的服務模型。
+您可以在&#x200B;**[!UICONTROL 建立模型]**&#x200B;容器的右下角找到&#x200B;**[!UICONTROL 已評分的轉換事件總數]**&#x200B;個量度。 此量度會追蹤Attribution AI目前日曆年度所評分的轉換事件總數，包括所有沙箱環境及任何已刪除的服務模型。
 
 ![轉換總數](./images/user-guide/total_conversions.png)
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 - **[!UICONTROL 編輯]**：選取&#x200B;**[!UICONTROL 編輯]**&#x200B;可讓您修改現有的服務模型。 您可以編輯模型的名稱、說明、狀態、評分頻率以及其他評分資料集欄。
 - **[!UICONTROL 複製]**：選取&#x200B;**[!UICONTROL 複製]**&#x200B;會複製選取的服務模型。 然後，您可以修改工作流程以進行微幅調整，並將其重新命名為新模型。
-- **[!UICONTROL 刪除]**：您可以刪除包含任何歷史執行的服務模型。 對應的輸出資料集將會從Platform中刪除。 不過，同步至即時客戶設定檔的分數不會刪除。
+- **[!UICONTROL 刪除]**：您可以刪除包含任何歷史執行的服務模型。 對應的輸出資料集將會從Experience Platform中刪除。 不過，同步至即時客戶設定檔的分數不會刪除。
 - **[!UICONTROL 資料來源]**：正在使用的資料集連結。 如果Attribution AI使用多個資料集，則會顯示「多個」，後面接著資料集數目。 選取超連結時，會顯示資料集預覽彈出視窗。
 - **[!UICONTROL 上次執行詳細資料]**：這只有在執行失敗時才會顯示。 有關執行失敗原因的資訊，例如錯誤代碼會顯示在這裡。
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ![建立模型](./images/user-guide/landing_page.png)
 
-接著，會顯示Attribution AI的設定頁面，您可以在其中提供服務模式的名稱和選擇性說明。
+接著，Attribution AI的設定頁面就會顯示，您可以在其中提供名稱和選用的服務模型說明。
 
 ![命名模型](./images/user-guide/naming_instance.png)
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-在設計上，Attribution AI可以使用Adobe Analytics、體驗事件和消費者體驗事件資料來計算歸因分數。 選取資料集時，只會列出與Attribution AI相容的資料集。 若要選取資料集，請選取資料集名稱旁的(**+**)符號，或選取核取方塊以一次新增多個資料集。 您也可以使用搜尋選項來快速尋找您感興趣的資料集。
+依設計，Attribution AI可以使用Adobe Analytics、體驗事件和消費者體驗事件資料來計算歸因分數。 選取資料集時，只會列出與Attribution AI相容的資料集。 若要選取資料集，請選取資料集名稱旁的(**+**)符號，或選取核取方塊以一次新增多個資料集。 您也可以使用搜尋選項來快速尋找您感興趣的資料集。
 
 選取您要使用的資料集後，選取「**[!UICONTROL 新增]**」按鈕，將資料集新增至資料集預覽窗格。
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 選取「儲存&#x200B;****」以儲存您在工作流程中移動時的草稿。 您也可以儲存草稿模型組態，並移至工作流程中的下一個步驟。 使用&#x200B;**[!UICONTROL 儲存並繼續]**&#x200B;在模型組態期間建立並儲存草稿。 功能可讓您建立和儲存模型組態的草稿，當您必須在組態工作流程中定義許多欄位時，此功能特別有用。
 
-![資料科學服務Attribution AI索引標籤的「建立工作流程」中，「儲存並儲存並繼續」會反白顯示。](./images/user-guide/aai-save-save-&-exit.png)
+![Data Science Services Attribution AI索引標籤的建立工作流程中，「儲存並儲存並繼續」會醒目提示。](./images/user-guide/aai-save-save-&-exit.png)
 
 ### 資料集完整性 {#dataset-completeness}
 
@@ -109,7 +109,7 @@ ht-degree: 0%
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
-完成選取和新增資料集後，**對應**&#x200B;設定步驟就會顯示。 您必須對應您在上一步中選取的每個資料集的媒體頻道欄位，才能Attribution AI。 這是因為缺少資料集之間的媒體管道對應，從Attribution AI衍生的深入分析可能無法正常顯示，導致深入分析頁面難以解譯。 雖然只需要媒體頻道，強烈建議您對應部分選用欄位，例如媒體動作、行銷活動名稱、行銷活動群組和行銷活動標籤。 這麼做可讓Attribution AI提供更清楚的深入分析和最佳結果。
+完成選取和新增資料集後，**對應**&#x200B;設定步驟就會顯示。 Attribution AI需要您對應您在上一步中選取的每個資料集的媒體頻道欄位。 這是因為如果沒有資料集之間的媒體管道對應，從Attribution AI衍生的深入分析可能無法正常顯示，導致深入分析頁面難以解譯。 雖然只需要媒體頻道，強烈建議您對應部分選用欄位，例如媒體動作、行銷活動名稱、行銷活動群組和行銷活動標籤。 這麼做可讓Attribution AI提供更清楚的深入分析和最佳結果。
 
 ![對應](./images/user-guide/mapping-save-&-exit.png)
 
@@ -205,7 +205,7 @@ ht-degree: 0%
 
 ## 進階訓練和評分設定
 
-Attribution AI的最後一頁是用於設定訓練和評分的&#x200B;**[!UICONTROL 進階]**&#x200B;頁面。
+Attribution AI中的最後一頁是用於設定訓練和評分的&#x200B;**[!UICONTROL 進階]**&#x200B;頁面。
 
 ![新頁面集選項](./images/user-guide/advanced_settings_set_options.png)
 
@@ -267,7 +267,7 @@ Attribution AI的最後一頁是用於設定訓練和評分的&#x200B;**[!UICONT
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功在Attribution AI中建立服務執行個體。 執行個體完成評分後（最多允許24小時），您就可以[探索Attribution AI深入分析](./discover-insights.md)。 此外，如果您想要下載您的評分結果，請瀏覽[下載分數](./download-scores.md)檔案。
+依照本教學課程，您已成功在Attribution AI中建立服務執行個體。 執行個體完成評分後（最多允許24小時），您就可以[探索Attribution AI深入分析](./discover-insights.md)。 此外，如果您想要下載您的評分結果，請瀏覽[下載分數](./download-scores.md)檔案。
 
 ## 其他資源
 

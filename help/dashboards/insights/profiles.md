@@ -2,9 +2,9 @@
 title: 設定檔深入分析
 description: 探索為您的設定檔深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索您的客戶及其消費者體驗。
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1660'
 ht-degree: 3%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 3%
 
 存取提供個人資料的SQL來瞭解您的個人資料見解，然後產生您自己的見解，以進一步探索您的客戶及其構成個人資料的消費者體驗。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 
-請參閱[檢視SQL檔案](../view-sql.md)，以取得有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
+請參閱[檢視SQL檔案](../view-sql.md)，以取得有關如何直接透過Experience Platform UI調整您見解的SQL的詳細資訊。
 
 下列見解全部都可供您用作[設定檔儀表板](../guides/profiles.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
 
 ## 依合併原則區分的客群重疊 {#audience-overlap-by-merge-policy}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 哪些設定檔對兩個對象都是通用的？
 - 重疊對參與或轉換率有何影響？
 - 如何為重疊的區段量身打造行銷策略？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -64,17 +64,17 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱合併原則Widget檔案的[對象重疊](../guides/profiles.md#audience-overlap-by-merge-policy)。
+如需有關此insight外觀和功能的資訊，請參閱合併原則Widget檔案的[對象重疊](../guides/profiles.md#audience-overlap-by-merge-policy)。
 
 ## 客群重疊報告 {#audience-overlap-report}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 50個最重疊的對象是哪個？
 - 50個最少的重疊受眾為何？
 - 重疊模式會依合併原則而如何變更？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT source_segment_name,
@@ -131,17 +131,17 @@ SELECT source_segment_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[對象重疊報表Widget檔案](../guides/profiles.md#audience-overlap-report)。
+如需此insight的外觀和功能的相關資訊，請參閱[對象重疊報表Widget檔案](../guides/profiles.md#audience-overlap-report)。
 
 ## 對象（計數） {#audiences}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 哪種合併原則主要用於分段？
 - 對象在合併原則間的分佈情況如何？
 - 特定合併政策的對象人數在一段時間內是否有任何重大變化？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT count(DISTINCT a.segment_id) count_of_segments
@@ -159,18 +159,18 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[對象Widget檔案](../guides/profiles.md#audiences)。
+請參閱[對象Widget檔案](../guides/profiles.md#audiences)，以取得有關此insight外觀和功能的資訊。
 
 ## 對應到目的地狀態的客群 {#audiences-mapped-to-destination-status}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 對應和未對應目的地之間的對象整體分佈情況如何？
 - 哪些特定目的地的對應對象數量最高？
 - 未對應的對象佔總對象比例為何？
 - 在這些未對應的對象中，是否有模式或相關的趨勢？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
@@ -191,17 +191,17 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱對應到目的地狀態Widget檔案的[對象](../guides/profiles.md#audiences-mapped-to-destination-status)。
+如需有關此insight外觀和功能的資訊，請參閱對應到目的地狀態Widget檔案的[對象](../guides/profiles.md#audiences-mapped-to-destination-status)。
 
 ## 客群人數 {#audiences-size}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 哪個受眾區段規模最大？
 - 五大受眾為何？
 - 排名在前的對象的對象人數分佈會隨著時間而如何變化？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
@@ -224,17 +224,17 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[對象大小Widget檔案](../guides/profiles.md#audiences-size)。
+如需有關此insight外觀和功能的資訊，請參閱[對象大小Widget檔案](../guides/profiles.md#audiences-size)。
 
 ## Customer AI 分數的分佈 {#customer-ai-distribution-of-scores}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 我每個Customer AI模型各貯體中的分數分佈如何？
 - 高、中、低分數的分數分佈情況如何？
 - 依合併原則劃分評分分佈的資料為何？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT b.model_name,
@@ -361,17 +361,17 @@ SELECT b.model_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱分數Widget檔案的[Customer AI分佈](../guides/profiles.md#customer-ai-distribution-of-scores)。
+如需有關此insight的外觀和功能的資訊，請參閱[分數Widget檔案的Customer AI分佈](../guides/profiles.md#customer-ai-distribution-of-scores)。
 
 ## Customer AI 評分摘要 {#customer-ai-scoring-summary}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 我的每個Customer AI模型的評分摘要為何？
 - 我的Customer AI傾向分數如何隨著不同對象而改變？
 - 與設定檔概述中的其他KPI相比，我的評分摘要有何變更？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT model_name,
@@ -402,18 +402,18 @@ SELECT model_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[Customer AI評分摘要Widget檔案](../guides/profiles.md#customer-ai-scoring-summary)。
+如需有關此insight的外觀和功能的資訊，請參閱[Customer AI評分摘要Widget檔案](../guides/profiles.md#customer-ai-scoring-summary)。
 
 ## 身分識別覆蓋 {#identity-overlap}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - [!UICONTROL 身分型別A]和[!UICONTROL 身分型別B]之間的共同交集是什麼？
 - 我如何根據特定身分型別的重疊來調整客戶對象，以增強目標式行銷策略？
 - 評估交集區域內的行銷活動績效能獲得哪些深入分析？
-- 運用此行銷活動績效深入分析，如何最佳化未來的行銷工作？
+- 使用此行銷活動績效insight，如何最佳化未來的行銷工作？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -459,13 +459,13 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[身分重疊Widget檔案](../guides/profiles.md#identity-overlap)。
+如需有關此insight外觀和功能的資訊，請參閱[身分重疊Widget檔案](../guides/profiles.md#identity-overlap)。
 
-## 輪廓計數 {#profile-count}
+## 設定檔計數 {#profile-count}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
-- Adobe Real-time Customer Data Platform中的整體設定檔計數為何？
+- Adobe Real-Time Customer Data Platform中的整體設定檔計數為何？
 - 如何根據合併原則分配設定檔？
 - 哪個合併原則具有最高的設定檔計數？
 
@@ -481,19 +481,19 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-您可以在[設定檔計數Widget指南](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count)中找到此深入分析外觀和功能的完整資訊。
+您可以在[設定檔計數Widget指南](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count)中找到此insight外觀和功能的完整資訊。
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數Widget檔案](../guides/profiles.md#profile-count)。
+如需有關此insight外觀和功能的資訊，請參閱[設定檔計數Widget檔案](../guides/profiles.md#profile-count)。
 
-## 輪廓計數變更 {#profile-count-change}
+## 設定檔計數變更 {#profile-count-change}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 整體設定檔計數變更的趨勢為何？
 - 是什麼導致設定檔計數出現重大尖峰或下降？
 - 是否有特定合併原則可推動設定檔計數變更？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
@@ -528,17 +528,17 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數變更Widget檔案](../guides/profiles.md#profile-count-change)。
+如需有關此insight外觀和功能的資訊，請參閱[設定檔計數變更Widget檔案](../guides/profiles.md#profile-count-change)。
 
 ## 設定檔計數變更趨勢 {#profile-count-change-trend}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 根據合併原則，過去12個月設定檔計數變更的整體趨勢為何？
 - 過去30天內設定檔計數是否有特定模式或波動需要注意？
 - 與整體趨勢相比，過去90天的設定檔計數有何變更？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT date_key,
@@ -562,18 +562,18 @@ SELECT date_key,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數變更趨勢Widget檔案](../guides/profiles.md#profile-count-change-trend)。
+如需有關此insight外觀和功能的資訊，請參閱[設定檔計數變更趨勢Widget檔案](../guides/profiles.md#profile-count-change-trend)。
 
 ## 輪廓計數趨勢 {#profile-count-trend}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 根據合併原則計算，過去30天的設定檔計數整體趨勢為何？
 - 根據此趨勢，與長期趨勢（例如90天和12個月）有何不同？
 - 在指定的時段（30天、90天和12個月）內，哪個合併原則對設定檔計數的增加或減少貢獻最大？
 - 在30天的時間範圍內，是否有任何個人檔案計數的特定尖峰或下降與特定事件或期間相關聯？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT date_key,
@@ -593,18 +593,18 @@ SELECT date_key,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數趨勢Widget檔案](../guides/profiles.md#profile-count-trend)。
+如需有關此insight外觀和功能的資訊，請參閱[設定檔計數趨勢Widget檔案](../guides/profiles.md#profile-count-trend)。
 
-## 依身分劃分的輪廓 {#profiles-by-identity}
+## 依身分識別劃分的設定檔 {#profiles-by-identity}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 在設定檔總數中，哪個身分型別所佔的比例較高？
 - 身分型別之間是否有明顯的差異？
 - 身分型別的整體分佈情況如何？
 - 身分計數是否有任何重大差異或異常？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -622,17 +622,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[依身分Widget的設定檔檔案](../guides/profiles.md#profiles-by-identity)。
+如需有關此insight外觀和功能的資訊，請參閱[依身分Widget的設定檔檔案](../guides/profiles.md#profiles-by-identity)。
 
-## 輪廓計數變更趨勢 {#profiles-count-change-trend}
+## 設定檔計數變更趨勢 {#profiles-count-change-trend}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 根據合併原則，過去12個月期間設定檔計數變化的整體趨勢為何？
 - 過去30天內設定檔計數變更是否有特定模式或波動需要注意？
 - 與整體趨勢相比，過去90天內設定檔中的變更如何計算？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT date_key,
@@ -656,17 +656,17 @@ SELECT date_key,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數變更趨勢Widget檔案](../guides/profiles.md#profiles-count-change-trend)。
+如需有關此insight外觀和功能的資訊，請參閱[設定檔計數變更趨勢Widget檔案](../guides/profiles.md#profiles-count-change-trend)。
 
-## 依身分列出的輪廓計數變更趨勢 {#profiles-count-change-trend-by-identity}
+## 依身分識別列出的輪廓計數變更趨勢 {#profiles-count-change-trend-by-identity}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 過去12個月跨不同身分的設定檔計數變更的總體趨勢為何？
 - 是否有任何特定身分趨勢會在過去30天內顯示重大變更？
 - 比較特定身分的30天、90天和12個月趨勢時，設定檔計數的變更會有何不同？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT date_key,
@@ -697,18 +697,18 @@ SELECT date_key,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱身分識別介面工具檔案的[設定檔計數變更趨勢](../guides/profiles.md#profiles-count-change-trend-by-identity)。
+如需此insight外觀和功能的相關資訊，請參閱身分識別介面工具檔案的[設定檔計數變更趨勢](../guides/profiles.md#profiles-count-change-trend-by-identity)。
 
-## 單一身分輪廓 {#single-identity-profiles}
+## 單一身分識別設定檔 {#single-identity-profiles}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 我的客戶身分資料是否一致地以單一身分表示？
 - 在我的使用者群中，僅有單一身分型別的設定檔佔多大百分比？
 - 在只有單一身分型別的設定檔中，這會對設定檔完整性造成什麼影響？
 - 最常見的身分型別與單一身分設定檔計數之間是否有關聯？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -722,17 +722,17 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[單一身分設定檔Widget檔案](../guides/profiles.md#single-identity-profiles)。
+如需有關此insight外觀和功能的資訊，請參閱[單一身分設定檔Widget檔案](../guides/profiles.md#single-identity-profiles)。
 
-## 依身分區分的單一身分輪廓 {#single-identity-profiles-by-identity}
+## 依身分識別區分的單一身分識別輪廓 {#single-identity-profiles-by-identity}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 有多少不重複客戶以單一身分註冊（例如電子郵件或電話號碼）？
 - 不同身分型別（例如電子郵件或電話號碼）之間的單一身分設定檔分佈情況如何？
 - 單一身分設定檔中是否有新興的身分模式或轉變？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -749,17 +749,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[依身分識別的Widget檔案](../guides/profiles.md#single-identity-profiles-by-identity)。
+如需有關此insight外觀和功能的資訊，請參閱[依身分識別的Widget檔案](../guides/profiles.md#single-identity-profiles-by-identity)。
 
-## 未細分的輪廓 {#unsegmented-profiles}
+## 未細分的設定檔 {#unsegmented-profiles}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 有多少設定檔不屬於某個對象？
 - 未分段的設定檔佔總對象的多少百分比？
 - 任何合併原則是否都會對大量未分段的設定檔產生作用？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -773,7 +773,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[未分段的設定檔Widget檔案](../guides/profiles.md#unsegmented-profiles)。
+如需有關此insight外觀和功能的資訊，請參閱[未分段的設定檔Widget檔案](../guides/profiles.md#unsegmented-profiles)。
 
 ## 後續步驟
 

@@ -4,16 +4,16 @@ description: 瞭解如何使用稽核查詢API在Experience Platform中擷取稽
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
 
 # 稽核事件端點
 
-稽核記錄用於提供各種服務和功能的使用者活動細節。 記錄中記錄的每個動作都包含中繼資料，其指出動作型別、日期和時間、執行動作之使用者的電子郵件ID，以及與動作型別相關的其他屬性。 [!DNL Audit Query] API中的`/audit/events`端點可讓您以程式設計方式擷取貴組織在[!DNL Platform]中的活動事件資料。
+稽核記錄用於提供各種服務和功能的使用者活動細節。 記錄中記錄的每個動作都包含中繼資料，其指出動作型別、日期和時間、執行動作之使用者的電子郵件ID，以及與動作型別相關的其他屬性。 [!DNL Audit Query] API中的`/audit/events`端點可讓您以程式設計方式擷取貴組織在[!DNL Experience Platform]中的活動事件資料。
 
 ## 快速入門
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 列出稽核事件
 
-您可以向`/audit/events`端點發出GET要求，指定您要在承載中擷取的事件，以擷取事件資料。
+您可以對`/audit/events`端點發出GET要求，指定您要在裝載中擷取的事件，以擷取事件資料。
 
 **API格式**
 
@@ -152,9 +152,9 @@ curl -X POST \
 | `imsOrgId` | 發生事件之組織的ID。 |
 | `permissionResource` | 提供許可權的產品或功能會執行此動作。 資源可以是下列任一專案： <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | 動作涉及的許可權型別。 |
-| `assetType` | 執行動作的Platform資源型別。 |
-| `assetId` | 執行動作之Platform資源的唯一識別碼。 |
-| `assetName` | 執行動作的Platform資源名稱。 |
+| `assetType` | 執行動作的Experience Platform資源型別。 |
+| `assetId` | 執行動作之Experience Platform資源的唯一識別碼。 |
+| `assetName` | 執行動作的Experience Platform資源名稱。 |
 | `action` | 為事件記錄的動作型別。 動作可以是下列任一專案： <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | 動作的狀態。 狀態可以是下列任一專案： </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 

@@ -2,9 +2,9 @@
 title: 資料集範例
 description: 查詢服務範例資料集可讓您對巨量資料執行探索性查詢，並大幅減少處理時間，但代價是查詢準確性。 本指南提供如何管理範例以進行近似查詢處理的資訊
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform查詢服務提供範例資料集，作為其近似查�
 
 >[!NOTE]
 >
->每次登入Platform時，都必須啟用工作階段標幟。
+>每次登入Experience Platform時，都必須啟用工作階段標幟。
 
 ![反白顯示&#39;SET aqp=true；&#39;命令的查詢編輯器。](../images/key-concepts/set-session-flag.png)
 

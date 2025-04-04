@@ -2,18 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；analytics；mixpanel
 solution: Experience Platform
 title: 在UI中使用Analytics Source建立資料流
-description: 本教學課程提供如何使用Platform UI為分析來源建立資料流的步驟。
+description: 本教學課程提供如何使用Experience Platform UI為分析來源建立資料流的步驟。
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1459'
 ht-degree: 1%
 
 ---
 
 # 在UI中使用分析來源建立資料流
 
-資料流是排程的工作，可擷取來源中的資料並將資料擷取到Adobe Experience Platform中的資料集。 本教學課程提供如何使用Platform UI為分析來源建立資料流的步驟。
+資料流是排程的工作，可擷取來源中的資料並將資料擷取到Adobe Experience Platform中的資料集。 本教學課程提供如何使用Experience Platform UI為分析來源建立資料流的步驟。
 
 >[!NOTE]
 >
@@ -21,10 +21,10 @@ ht-degree: 1%
 
 ## 快速入門
 
-本教學課程需要您實際瞭解下列Platform元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [來源](../../../home.md)： Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [來源](../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -45,7 +45,7 @@ Once you find the source data, select the table, then select **[!UICONTROL Next]
 
 ![select-data](../../../images/tutorials/dataflow/table-based/select-data.png) -->
 
-## 提供資料流詳細資料
+## 提供資料流詳細資訊
 
 [!UICONTROL 資料流詳細資料]頁面可讓您選取要使用現有資料集還是新資料集。 在此過程中，您也可以設定[!UICONTROL 設定檔資料集]、[!UICONTROL 錯誤診斷]、[!UICONTROL 部分擷取]和[!UICONTROL 警報]的設定。
 
@@ -83,11 +83,11 @@ Once you find the source data, select the table, then select **[!UICONTROL Next]
 
 >[!IMPORTANT]
 >
->您無法將任何動態索引鍵配對值對應為從[!DNL OneTrust]到Platform的物件，必須在目標結構描述中指定這些索引鍵，以便在擷取期間對應您的資料。
+>您無法將任何動態索引鍵配對值對應為從[!DNL OneTrust]到Experience Platform的物件，必須在目標結構描述中指定這些索引鍵，以便在擷取期間對應您的資料。
 
 [!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
-Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../data-prep/ui/mapping.md)。
+Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../data-prep/ui/mapping.md)。
 
 成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
@@ -141,7 +141,7 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功建立資料流，將資料從您的分析來源帶入Platform。 下游[!DNL Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
+依照本教學課程所述，您已成功建立資料流，以將資料從您的分析來源帶入Experience Platform。 下游[!DNL Experience Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 * [[!DNL Real-Time Customer Profile] 概觀](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 概觀](../../../../data-science-workspace/home.md)
@@ -149,6 +149,6 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 >[!WARNING]
 >
-> 下列影片中顯示的Platform UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
+> 以下影片中顯示的Experience Platform UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

@@ -5,7 +5,7 @@ title: 在API中建立資料控管原則
 type: Tutorial
 description: 瞭解如何使用原則服務API建立資料治理原則。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 2%
@@ -26,10 +26,10 @@ ht-degree: 2%
 
 本教學課程需要您實際瞭解下列與建立和評估原則有關的主要概念：
 
-* [Adobe Experience Platform資料控管](../home.md)： [!DNL Platform]用來強制資料使用方式法規遵循的架構。
+* [Adobe Experience Platform資料控管](../home.md)： [!DNL Experience Platform]用來強制資料使用方式法規遵循的架構。
    * [資料使用標籤](../labels/overview.md)：資料使用標籤套用至XDM資料欄位，指定存取該資料方式的限制。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
-* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
+* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 開始進行此教學課程之前，請檢閱[開發人員指南](../api/getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫[!DNL Policy Service] API，包括必要的標頭以及如何讀取範例API呼叫。
 
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 ### 查詢現有的行銷動作 {#look-up}
 
-您可以透過向`/marketingActions`個端點之一發出GET要求，查詢要由您的原則評估的現有行銷動作。
+您可以透過向其中一個`/marketingActions`端點發出GET請求，查詢要由您的原則評估的現有行銷動作。
 
 **API格式**
 
@@ -129,7 +129,7 @@ curl -X GET \
 
 ### 建立新的行銷動作 {#create-new}
 
-您可以向`/marketingActions/custom/`端點發出PUT要求，並在要求路徑結尾提供行銷動作的名稱，藉此建立新的行銷動作。
+您可以對`/marketingActions/custom/`端點發出PUT要求，並在要求路徑結尾提供行銷動作的名稱，藉此建立新的行銷動作。
 
 **API格式**
 
@@ -225,7 +225,7 @@ curl -X PUT \
 >
 >僅支援OR和AND運運算元。
 
-設定原則運算式後，您可以對`/policies/custom`端點發出POST要求，以建立新的原則。
+設定原則運算式後，您可以對`/policies/custom`端點發出POST要求，以建立新原則。
 
 **API格式**
 

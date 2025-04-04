@@ -3,9 +3,9 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '781'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 [!DNL The Trade Desk]支援根據下表所示的身分啟用對象。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-| 身分 | 說明 |
+| 身分識別 | 說明 |
 |---|---|
 | GAID | [!DNL Google Advertising ID] |
 | IDFA | [!DNL Apple ID for Advertisers] |
@@ -42,8 +42,8 @@ ht-degree: 3%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ ht-degree: 3%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且先前未在Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，則您設定的ID同步會移轉到Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
@@ -104,7 +104,7 @@ ht-degree: 3%
 
 在[對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling)步驟中，您必須手動將對象對應至目的地平台中其對應的ID或易記名稱。
 
-對應對象時，Adobe建議您使用Platform對象名稱或較短的形式，以方便使用。 不過，您目的地中的對象ID或名稱不需要符合您Platform帳戶中的對象ID。 您在對應欄位中插入的任何值都會反映在目的地中。
+對應對象時，Adobe建議您使用Experience Platform對象名稱或較短的形式，以方便使用。 不過，您目的地中的對象ID或名稱不需要符合Experience Platform帳戶中的對象ID。 您在對應欄位中插入的任何值都會反映在目的地中。
 
 如果您使用多個裝置對應(Cookie ID、[!DNL IDFA]、[!DNL GAID])，請務必針對所有三個對應使用相同的對應值。 [!DNL The Trade Desk]會將所有資料彙總至單一區段，並包含裝置層級的劃分。
 

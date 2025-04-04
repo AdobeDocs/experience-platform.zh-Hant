@@ -4,13 +4,13 @@ description: 使用私人清單將資料匯出至您的Snowflake帳戶。
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2893356e36fde4759ffe76e01296fcb8811ab8e7
+exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '676'
 ht-degree: 6%
 
 ---
-
 
 # Snowflake連線 {#snowflake-destination}
 
@@ -99,7 +99,7 @@ ht-degree: 6%
 
 Snowflake目的地支援將設定檔屬性對應至自訂屬性。
 
-![顯示Snowflake目的地對應畫面的Platform使用者介面影像。](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Experience Platform使用者介面影像，顯示Snowflake目的地的對應畫面。](../../assets/catalog/cloud-storage/snowflake/mapping.png)
 
 系統會自動使用您在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中提供的屬性名稱，在Snowflake中建立目標屬性。
 

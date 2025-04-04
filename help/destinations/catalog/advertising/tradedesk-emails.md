@@ -3,9 +3,9 @@ title: 交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1122'
 ht-degree: 5%
 
 ---
@@ -95,11 +95,11 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
 * **[!UICONTROL 廣告商ID]**：您的[!DNL Trade Desk Advertiser ID]，可由您的[!DNL Trade Desk]帳戶管理員共用，或可在[!DNL Trade Desk] UI的[!DNL Advertiser Preferences]下找到。
 
-![平台UI熒幕擷圖顯示如何填寫目的地詳細資料。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Experience Platform UI熒幕擷圖顯示如何填寫目的地詳細資料。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-連線到目的地時，設定資料治理原則是完全選用的。 如需詳細資訊，請檢閱Experience Platform[資料控管概觀](/help/data-governance/policies/overview.md)。
+連線到目的地時，設定資料治理原則是完全選用的。 如需詳細資訊，請檢閱Experience Platform [資料控管概觀](/help/data-governance/policies/overview.md)。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -110,17 +110,17 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 在&#x200B;**[!UICONTROL 排程]**&#x200B;頁面中，您可以設定排程和要匯出之每個對象的檔案名稱。 必須設定排程，但可選擇是否設定檔案名稱。
 
-![平台UI熒幕擷圖以排程對象啟用。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Experience Platform UI熒幕擷圖以排程對象啟用。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >所有啟用至[!DNL The Trade Desk] CRM目的地的對象都會自動設定為每日頻率和完整檔案匯出。
 
-![平台UI熒幕擷圖以排程對象啟用。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Experience Platform UI熒幕擷圖以排程對象啟用。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 在&#x200B;**[!UICONTROL 對應]**&#x200B;頁面中，您必須從來源資料行選取屬性或身分識別名稱空間，並對應到目標資料行。
 
-![平台UI熒幕擷圖來對應對象啟用。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![用來對應對象啟用的Experience Platform UI熒幕擷取畫面。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 以下是啟用對象至[!DNL The Trade Desk] CRM目的地時的正確身分對應範例。
 
@@ -131,7 +131,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 選取來源欄位：
 
 * 如果在資料擷取時使用原始電子郵件地址，請選取`Email`名稱空間或屬性作為來源身分。
-* 如果您在資料擷取至Platform時雜湊了客戶電子郵件地址，請選取`Email_LC_SHA256`名稱空間或屬性作為來源身分。
+* 如果您在資料擷取至Experience Platform時雜湊了客戶電子郵件地址，請選取`Email_LC_SHA256`名稱空間或屬性作為來源身分。
 
 選取目標欄位：
 
@@ -140,11 +140,11 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 ## 驗證資料匯出 {#validate}
 
-若要驗證資料是否已正確地從Experience Platform匯出並匯入[!DNL The Trade Desk]，請在[!DNL The Trade Desk]資料管理平台(DMP)內的Adobe1PD資料拼貼下找到對象。 以下是在[!DNL Trade Desk] UI中尋找對應ID的步驟：
+若要驗證資料是否已正確從Experience Platform匯出並匯入[!DNL The Trade Desk]，請在[!DNL The Trade Desk]資料管理平台(DMP)的Adobe 1PD資料方塊下找到對象。 以下是在[!DNL Trade Desk] UI中尋找對應ID的步驟：
 
 1. 首先，選取&#x200B;**[!UICONTROL 資料]**&#x200B;標籤，並檢閱&#x200B;**[!UICONTROL 第一方]**&#x200B;區段。
-2. 向下捲動頁面，在&#x200B;**[!UICONTROL 匯入的資料]**&#x200B;下方，您會找到&#x200B;**[!UICONTROL Adobe1PD磚]**。
-3. 按一下**[!UICONTROL Adobe1PD]**圖磚，它會列出您的廣告商在[!DNL Trade Desk]目的地啟用的所有對象。 您也可以使用搜尋功能。
+2. 向下捲動頁面，在&#x200B;**[!UICONTROL 匯入的資料]**&#x200B;下方，您會找到&#x200B;**[!UICONTROL Adobe 1PD磚]**。
+3. 按一下**[!UICONTROL Adobe 1PD]**圖磚，系統會列出所有啟用至廣告商[!DNL Trade Desk]目的地的對象。 您也可以使用搜尋功能。
 4. 來自Experience Platform的區段ID #將顯示為[!DNL Trade Desk] UI中的區段名稱。
 
 ## 資料使用與控管 {#data-usage-governance}

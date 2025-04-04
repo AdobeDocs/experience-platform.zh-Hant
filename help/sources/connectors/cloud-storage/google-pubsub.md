@@ -3,9 +3,9 @@ title: Google PubSub Source概觀
 description: 瞭解如何使用API或使用者介面將Google PubSub連結至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 >
 >[!DNL Google PubSub]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 
-Adobe Experience Platform為雲端提供者（例如[!DNL AWS]、[!DNL Google Cloud Platform]和[!DNL Azure]）提供原生連線，可讓您將資料從這些系統帶入Platform，以用於下游服務和目的地。
+Adobe Experience Platform為[!DNL AWS]、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線，可讓您將這些系統的資料帶入Experience Platform，以用於下游服務和目的地。
 
-雲端儲存空間來源可將您的資料帶入Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合到來源工作流程中。 Platform可讓您即時從[!DNL Google PubSub]匯入資料。
+雲端儲存空間來源可將您的資料帶入Experience Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合到來源工作流程中。 Experience Platform可讓您即時從[!DNL Google PubSub]匯入資料。
 
 ## 先決條件 {#prerequisites}
 
@@ -81,9 +81,9 @@ Adobe Experience Platform為雲端提供者（例如[!DNL AWS]、[!DNL Google Cl
 >
 >每個[!DNL Google PubSub]訂閱只能建立一個來源資料流。 重複使用訂閱，即使在沙箱間重複使用，也會導致資料遺失。
 
-## 連線[!DNL Google PubSub]至Experience Platform
+## 將[!DNL Google PubSub]連線至Experience Platform
 
-以下檔案提供如何使用API或使用者介面將[!DNL Google PubSub]連線到Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Google PubSub]連線至Experience Platform的資訊：
 
 ### 使用API
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；架構；架構；列舉；主要身分；主要身分；XDM個人設定檔；體驗事件；XDM體驗事件；XDM ExperienceEvent；experienceevent；XDM Experienceevent；架構設計；最佳實務
+keywords: Experience Platform；首頁；熱門主題；結構；結構；列舉；主要身分；主要身分；XDM個人設定檔；體驗事件；XDM體驗事件；XDM ExperienceEvent；experienceevent；XDM Experienceevent；結構描述設計；最佳實務
 solution: Experience Platform
 title: 資料模型化的最佳實務
 description: 本檔案介紹Experience Data Model (XDM)結構描述，以及構成要在Adobe Experience Platform中使用的結構描述的建置組塊、原則和最佳實務。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3224'
 ht-degree: 1%
 
 ---
@@ -25,27 +25,27 @@ ht-degree: 1%
 
 ## 最佳實務摘要 {#summary}
 
-設計資料模型以用於Experience Platform的建議方法可概括如下：
+設計資料模型以用於Experience Platform的建議方法可概述如下：
 
 1. 瞭解您資料的業務使用案例。
-1. 確定應引入Platform的主要資料來源，以解決這些使用案例。
-1. 識別可能也會感興趣的任何次要資料來源。 例如，如果貴組織中目前只有一個業務單位有興趣將其資料移植到Platform，則類似的業務單位將來也可能會有興趣移植類似的資料。 考慮這些次要來源，有助於將整個組織的資料模型標準化。
+1. 確定應帶入Experience Platform的主要資料來源，以解決這些使用案例。
+1. 識別可能也會感興趣的任何次要資料來源。 例如，如果貴組織中目前只有一個業務單位有興趣將其資料移轉到Experience Platform，則類似的業務單位將來可能也會有興趣移轉類似的資料。 考慮這些次要來源，有助於將整個組織的資料模型標準化。
 1. 為已識別的資料來源建立高階實體關係圖(ERD)。
-1. 將高階的ERD轉換為以平台為中心的ERD （包括設定檔、體驗事件和查詢實體）。
+1. 將高階的ERD轉換為以Experience Platform為中心的ERD （包括設定檔、體驗事件和查詢實體）。
 
-與識別執行業務使用案例所需的適用資料來源相關的步驟因組織而異。 雖然本檔案的其餘章節著重於在識別資料來源後組織及建構ERD的後幾個步驟，但圖表各元件的說明可能會告知您決定要將哪些資料來源移轉至Platform。
+與識別執行業務使用案例所需的適用資料來源相關的步驟因組織而異。 雖然本檔案的其餘章節專注於在識別資料來源後組織和建立ERD的後幾個步驟，但圖表各種元件的說明可能會告知您決定要將哪些資料來源移轉至Experience Platform。
 
 ## 建立高階ERD {#create-an-erd}
 
-在您決定好要引進Platform的資料來源後，請建立高階ERD來協助引導將資料對應至XDM結構的程式。
+在您決定好要帶入Experience Platform的資料來源後，請建立高層級ERD以協助引導將資料對應至XDM結構的程式。
 
-以下範例代表想要將資料帶入Platform之公司的簡化ERD。 圖表會強調應分類為XDM類別的基本實體，包括客戶帳戶、飯店和幾個常見的電子商務事件。
+以下範例代表想要將資料帶入Experience Platform之公司的簡化ERD。 圖表會強調應分類為XDM類別的基本實體，包括客戶帳戶、飯店和幾個常見的電子商務事件。
 
 ![實體關聯圖表，強調應排序為XDM類別以進行資料擷取的必要實體。](../images/best-practices/erd.png)
 
 ## 將實體排序為設定檔、查詢及事件類別 {#sort-entities}
 
-建立ERD以識別要帶入Platform的基本實體後，這些實體必須分類為設定檔、查詢和事件類別：
+建立ERD以識別要帶入Experience Platform的基本實體後，這些實體必須分類為設定檔、查詢和事件類別：
 
 | 類別 | 說明 |
 | --- | --- |
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 #### 追蹤一段時間內的資料 {#track-data}
 
-如果您想要分析實體內的某些屬性如何隨著時間改變，則很可能是事件實體。 例如，在Platform中將產品專案新增至購物車可以當做購物車新增事件進行追蹤：
+如果您想要分析實體內的某些屬性如何隨著時間改變，則很可能是事件實體。 例如，在Experience Platform中，將產品專案新增至購物車可以當作購物車新增事件進行追蹤：
 
 | 客戶ID | 類型 | 產品 ID | 數量 | 時間戳記 |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->Experience Platform目前不會執行自動值彙總，不過此動作已規劃於未來發行。 如果您選擇使用彙總值，則必須先從外部執行計算，再將資料傳送至Platform。
+>Experience Platform目前不會執行自動值彙總，不過此動作預計會在未來發行中執行。 如果您選擇使用彙總值，則必須先從外部執行計算，再將資料傳送至Experience Platform。
 
 #### 基數 {#cardinality}
 
@@ -210,7 +210,7 @@ ht-degree: 1%
 
 ### Adobe應用程式結構欄位群組 {#adobe-application-schema-field-groups}
 
-Experience Platform提供幾個現成的XDM結構描述欄位群組，用於擷取和以下Adobe應用程式相關的資料：
+Experience Platform提供幾個現成的XDM結構描述欄位群組，用於擷取與下列Adobe應用程式相關的資料：
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -221,17 +221,17 @@ Experience Platform提供幾個現成的XDM結構描述欄位群組，用於擷�
 
 ![ [!UICONTROL Adobe Analytics ExperienceEvent範本]的結構描述圖表。](../images/best-practices/analytics-field-group.png)
 
-Adobe應用程式欄位群組會透過使用`identityMap`欄位自動指派預設主要身分，這是系統產生的唯讀物件，可對應個別客戶的標準身分值。
+Adobe應用程式欄位群組會透過使用`identityMap`欄位自動指派預設主要身分，該欄位是系統產生的唯讀物件，可對應個別客戶的標準身分值。
 
 對於Adobe Analytics，ECID是預設的主要身分。 如果客戶未提供ECID值，則主要身分會預設為AAID。
 
 >[!IMPORTANT]
 >
->使用Adobe應用程式欄位群組時，不應將其他欄位標示為主要身分。 如果有其他屬性需要標籤為身分，這些欄位必須指派為次要身分。
+>使用Adobe應用程式欄位群組時，其他任何欄位都不應標示為主要身分。 如果有其他屬性需要標籤為身分，這些欄位必須指派為次要身分。
 
 ## 資料驗證欄位 {#data-validation-fields}
 
-當您將資料內嵌至Data Lake時，只會針對受限欄位強制執行資料驗證。 若要在批次擷取期間驗證特定欄位，您必須在XDM結構描述中將欄位標籤為受限。 為了防止將不良資料擷取到Platform，建議您在建立結構描述時，定義欄位層級驗證的條件。
+當您將資料內嵌至Data Lake時，只會針對受限欄位強制執行資料驗證。 若要在批次擷取期間驗證特定欄位，您必須在XDM結構描述中將欄位標籤為受限。 為了防止將不良資料擷取到Experience Platform，建議您在建立結構描述時，定義欄位層級驗證的條件。
 
 >[!IMPORTANT]
 >
@@ -249,13 +249,13 @@ Adobe應用程式欄位群組會透過使用`identityMap`欄位自動指派預�
 * **確定`_id`未作為身分使用**：體驗事件結構描述中的`_id`欄位無法作為身分使用，因為它適用於記錄唯一性。
 * **設定長度限制**：最佳實務是在標示為身分的欄位上設定最小和最大長度。 如果您嘗試將自訂名稱空間指派給身分欄位，但不符合最小和最大長度限制，則會觸發警告。 這些限制有助於維持一致性和資料品質。
 * **套用一致值的模式**：如果您的身分值遵循特定模式，您應該使用&#x200B;**[!UICONTROL 模式]**&#x200B;設定來強制此限制。 此設定可包含僅數字、大寫或小寫或特定字元組合等規則。 使用規則運算式來比對字串中的模式。
-* **在Analytics結構描述中限制eVar**：通常，Analytics結構描述應該只將一個eVar指定為身分。 如果您想要使用多個eVar作為身分，應仔細檢查資料結構是否可以最佳化。
+* **在Analytics結構描述中限制eVar**：通常，Analytics結構描述應該只將一個eVar指定為身分。 如果您打算使用多個eVar作為身分，應仔細檢查資料結構是否可以最佳化。
 * **確定所選欄位的唯一性**：與結構描述中的主要身分相比，您選擇的欄位應該是唯一的。 如果不是，請勿標籤為身分。 例如，如果多位客戶可以提供相同的電子郵件地址，則該名稱空間不是合適的身分。 此原則也適用於其他身分識別名稱空間，例如電話號碼。 將非唯一欄位標示為身分可能會導致不需要的設定檔摺疊。
 * **驗證字串長度下限**：所有字串欄位的長度至少要有一個字元，因為字串值絕不能空白。 不過，可接受非必要欄位的Null值。
 
 ## 後續步驟
 
-本檔案說明為Experience Platform設計資料模型的一般准則和最佳實務。 總結：
+本檔案說明為Experience Platform設計資料模型的一般准則和最佳作法。 總結：
 
 * 在建構方案之前，使用由上而下的方法，將資料表格排序為設定檔、查詢和事件類別。
 * 在設計針對不同目的的結構時，通常有多種方法和選項。

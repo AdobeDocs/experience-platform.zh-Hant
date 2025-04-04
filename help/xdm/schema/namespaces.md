@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Experience Data Model (XDM)中的名稱空間
 description: 瞭解Experience Data Model (XDM)中的名稱空間如何讓您擴充結構描述，並在不同結構描述元件彙整時防止欄位衝突。
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ### 標準XDM {#standard}
 
-標準XDM語法可讓您深入瞭解名稱空間在結構描述中的呈現方式(包括[它們在Adobe Experience Platform](#compatibility)中的轉譯方式)。
+標準XDM語法可讓insight瞭解名稱空間在結構描述中的呈現方式(包括[它們在Adobe Experience Platform](#compatibility)中的轉譯方式)。
 
 標準XDM使用[JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts)語法將名稱空間指派給欄位。 此名稱空間採用URI的形式（例如`xdm`名稱空間的`https://ns.adobe.com/xdm`），或是在結構描述的`@context`屬性中設定的速記首碼。
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 ### 相容性模式 {#compatibility}
 
-在Adobe Experience Platform中，XDM結構描述是以[相容性模式](../api/appendix.md#compatibility)語法表示，不會使用JSON-LD語法來表示名稱空間。 Platform會將名稱空間轉換為父欄位（以底線開頭），並將欄位巢狀在其下。
+在Adobe Experience Platform中，XDM結構描述是以[相容性模式](../api/appendix.md#compatibility)語法表示，不會使用JSON-LD語法來表示名稱空間。 Experience Platform會將名稱空間轉換為父欄位（以底線開頭），並將欄位巢狀在其下。
 
 例如，標準XDM `repo:createdDate`已轉換為`_repo.createdDate`，並會顯示在相容性模式的下列結構下：
 

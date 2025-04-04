@@ -3,7 +3,7 @@ keywords: linkedin連線；linkedin連線；linkedin目的地；linkedin；
 title: Linkedin相符受眾連線
 description: 根據雜湊電子郵件，為您的LinkedIn行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取此目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取此目標身分。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[ID符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[ID符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
 {style="table-layout:auto"}
 
@@ -42,8 +42,8 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -54,15 +54,15 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有[!DNL LinkedIn Matched Audiences]目的地中所使用識別碼（名稱、電話號碼及其他）之對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
-## linkedIn帳戶必要條件 {#LinkedIn-account-prerequisites}
+## LinkedIn帳戶必要條件 {#LinkedIn-account-prerequisites}
 
 使用[!UICONTROL LinkedIn相符對象]目的地之前，請先確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]或更高的許可權等級。
 
-若要瞭解如何編輯您的[!DNL LinkedIn Campaign Manager]使用者許可權，請參閱LinkedIn檔案中的[在Advertising帳戶上新增、編輯和移除使用者許可權](https://www.linkedin.com/help/lms/answer/5753)。
+若要瞭解如何編輯您的[!DNL LinkedIn Campaign Manager]使用者許可權，請參閱LinkedIn檔案中的[新增、編輯及移除Advertising帳戶的使用者許可權](https://www.linkedin.com/help/lms/answer/5753)。
 
 ## ID比對要求 {#id-matching-requirements}
 
@@ -72,7 +72,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 ## 電子郵件雜湊需求 {#email-hashing-requirements}
 
-您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或使用Experience Platform中清楚的電子郵件地址，並在啟用時將[!DNL Platform]個電子郵件地址雜湊。
+您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
 
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取總覽](/help/ingestion/batch-ingestion/overview.md)和[串流擷取總覽](/help/ingestion/streaming-ingestion/overview.md)。
 
@@ -87,10 +87,10 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 >[!NOTE]
 >
->來自未雜湊名稱空間的資料在啟用時由[!DNL Platform]自動雜湊。
+>來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
 > 屬性來源資料不會自動雜湊。
 > 
-> 在[身分對應](../../ui/activate-segment-streaming-destinations.md#mapping)步驟中，當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。
+> 在[身分對應](../../ui/activate-segment-streaming-destinations.md#mapping)步驟中，當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
 > 
 > **[!UICONTROL 套用轉換]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
 
@@ -110,18 +110,18 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，自從錄製此影片後，該介面可能已經變更。 如需最新資訊，請參閱[目的地設定教學課程](../../ui/connect-destination.md)。
+>Experience Platform使用者介面經常更新，自從錄製此影片後，可能已經變更。 如需最新資訊，請參閱[目的地設定教學課程](../../ui/connect-destination.md)。
 
 ### 驗證目標 {#authenticate}
 
 1. 在目的地目錄中尋找[!DNL LinkedIn Matched Audiences]目的地，並選取&#x200B;**[!UICONTROL 設定]**。
 2. 選取&#x200B;**[!UICONTROL 連線到目的地]**。
    ![驗證LinkedIn](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
-3. 輸入您的LinkedIn認證，並選取&#x200B;**登入**。
+3. 輸入您的LinkedIn認證並選取&#x200B;**登入**。
 
 ### 重新整理驗證認證 {#refresh-authentication-credentials}
 
-linkedIn Token每60天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+LinkedIn權杖每60天過期。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
 
 1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
 2. （選用）使用頁面上可用的篩選器，僅顯示LinkedIn帳戶。
@@ -154,7 +154,7 @@ linkedIn Token每60天過期一次。 代號過期後，將資料匯出至目的
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

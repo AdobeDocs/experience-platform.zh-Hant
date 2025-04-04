@@ -1,11 +1,11 @@
 ---
 title: 在使用者介面中建立Google PubSub Source連線
-description: 瞭解如何使用Platform使用者介面建立Google PubSub來源聯結器。
+description: 瞭解如何使用Google使用者介面建立Experience Platform PubSub來源聯結器。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1106'
 ht-degree: 1%
 
 ---
@@ -14,16 +14,16 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->[!DNL Google PubSub]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>[!DNL Google PubSub]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
-本教學課程提供使用Platform使用者介面建立[!DNL Google PubSub] （以下稱為「[!DNL PubSub]」）的步驟。
+本教學課程提供使用Experience Platform使用者介面建立[!DNL Google PubSub] （以下稱為「[!DNL PubSub]」）的步驟。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 如果您已經有有效的[!DNL PubSub]連線，您可以略過本檔案的其餘部分，並繼續進行有關[設定資料流](../../dataflow/batch/cloud-storage.md)的教學課程。
 
@@ -57,17 +57,17 @@ ht-degree: 1%
 >
 >如果您使用以服務帳戶為基礎的驗證，在複製和貼上認證時，請確保您已授予足夠的使用者存取權給您的服務帳戶，並且JSON中沒有額外的空格。
 
-收集必要的認證後，您可以依照下列步驟將[!DNL PubSub]帳戶連結至Platform。
+收集必要的認證後，您可以依照下列步驟將[!DNL PubSub]帳戶連結至Experience Platform。
 
 ## 連線您的[!DNL PubSub]帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在[!UICONTROL 雲端儲存空間]類別下，選取&#x200B;**[!UICONTROL Google PubSub]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
-![Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Experience Platform UI上的來源目錄。](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 **[!UICONTROL 連線至Google PubSub]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
@@ -136,4 +136,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照此教學課程，您已建立[!DNL PubSub]帳戶與平台之間的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將雲端儲存空間的串流資料匯入Platform](../../dataflow/streaming/cloud-storage-streaming.md)。
+依照此教學課程，您已建立[!DNL PubSub]帳戶與Experience Platform之間的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，以將雲端儲存空間的串流資料匯入Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md)。

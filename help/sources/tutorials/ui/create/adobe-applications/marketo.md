@@ -2,9 +2,9 @@
 title: 在UI中建立Marketo Engage Source Connection和資料流
 description: 本教學課程提供在UI中建立Marketo Engage來源連線和資料流的步驟，以便將B2B資料引進Adobe Experience Platform。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1836'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->建立[!DNL Marketo Engage]來源連線和資料流之前，您必須先確定已在[!DNL Marketo]中對應您的Adobe組織識別碼](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)。 [此外，您也必須確定在建立來源連線和資料流之前，已完成[自動填入 [!DNL Marketo] B2B名稱空間和結構描述](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md)。
+>在建立[!DNL Marketo Engage]來源連線和資料流之前，您必須先確定已在[!DNL Marketo]中對應您的Adobe組織ID ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)。 [此外，您也必須確定在建立來源連線和資料流之前，已完成[自動填入 [!DNL Marketo] B2B名稱空間和結構描述](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md)。
 
 本教學課程提供在UI中建立[!DNL Marketo Engage] （以下稱為「[!DNL Marketo]」）來源聯結器的步驟，以將B2B資料引進Adobe Experience Platform。
 
@@ -22,12 +22,12 @@ ht-degree: 2%
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
 * [B2B名稱空間與結構描述自動產生公用程式](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md)： B2B名稱空間與結構描述自動產生公用程式可讓您使用[!DNL Postman]自動產生B2B名稱空間與結構描述的值。 您必須先完成B2B名稱空間和結構描述，才能建立[!DNL Marketo]來源連線和資料流。
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [體驗資料模型(XDM)](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [體驗資料模型(XDM)](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [在UI中建立和編輯結構描述](../../../../../xdm/ui/resources/schemas.md)：瞭解如何在UI中建立和編輯結構描述。
 * [身分識別名稱空間](../../../../../identity-service/features/namespaces.md)：身分識別名稱空間是[!DNL Identity Service]的元件，用來做為身分識別相關內容的指標。 完整身分包含ID值和名稱空間。
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 收集必要的認證
 
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 ## 連線您的[!DNL Marketo]帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*Adobe應用程式*&#x200B;類別下，選取&#x200B;**[!UICONTROL Marketo Engage]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
@@ -97,7 +97,7 @@ ht-degree: 2%
 
 ### 資料集詳細資料 {#dataset-details}
 
-資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功擷取到Experience Platform的資料會以資料集的形式儲存在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
+資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功擷取至Experience Platform的資料會以資料集的形式儲存在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
 
 >[!BEGINTABS]
 
@@ -132,7 +132,7 @@ ht-degree: 2%
 
 **使用範例資料流的快速指南**
 
-範例資料流是您可以為[!DNL Marketo]資料流設定的設定，以限制擷取率，然後嘗試Experience Platform功能而不需要擷取大量資料。
+範例資料流是您可為您的[!DNL Marketo]資料流設定的設定，以限制您的擷取率，然後試用Experience Platform功能而不需要擷取大量資料。
 
 * 啟用範例資料流，可在回填工作期間擷取最多10萬筆記錄（從最大的記錄ID）或最多10天的活動，以限制歷史資料。
 * 針對所有B2B實體使用範例資料流設定時，您必須考慮到某些相關記錄可能會遺失，因為系統不會擷取來源資料的整個歷史記錄。
@@ -195,7 +195,7 @@ ht-degree: 2%
 
 ## 後續步驟
 
-依照此教學課程中的指示，您已成功建立資料流，以將B2B資料從您的[!DNL Marketo Engage]來源擷取至Experience Platform。
+依照本教學課程中的指示，您已成功建立資料流，以將[!DNL Marketo Engage]來源的B2B資料擷取至Experience Platform。
 
 ## 附錄 {#appendix}
 
@@ -203,11 +203,11 @@ ht-degree: 2%
 
 ### ui中的錯誤訊息 {#error-messages}
 
-當Platform偵測到您的設定發生問題時，UI中會顯示下列錯誤訊息：
+當Experience Platform偵測到您的設定發生問題時，UI中會顯示下列錯誤訊息：
 
 #### [!DNL Munchkin ID]未對應到適當的組織
 
-若您的[!DNL Munchkin ID]未對應至您正在使用的平台組織，則會拒絕驗證。 使用[[!DNL Marketo] 介面](https://app-sjint.marketo.com/#MM0A1)設定[!DNL Munchkin ID]與組織之間的對應。
+如果您的[!DNL Munchkin ID]未對應至您正在使用的Experience Platform組織，則會拒絕驗證。 使用[[!DNL Marketo] 介面](https://app-sjint.marketo.com/#MM0A1)設定[!DNL Munchkin ID]與組織之間的對應。
 
 ![錯誤訊息顯示Marketo執行個體未正確對應至Adobe組織。](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 

@@ -2,34 +2,34 @@
 keywords: Experience Platform；設定檔；即時客戶設定檔；合併原則；UI；使用者介面；時間戳記已排序；資料集優先順序
 title: 合併原則概述
 type: Documentation
-description: Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以檢視個別客戶的完整檢視。 彙總此資料時，合併原則是Platform用來判斷資料優先順序的方式，以及將合併哪些資料以建立統一檢視的規則。
+description: Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以檢視個別客戶的完整檢視。 彙總此資料時，合併原則是Experience Platform用來判斷資料優先順序的方式，以及將合併哪些資料以建立統一檢視的規則。
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1289'
 ht-degree: 1%
 
 ---
 
 # 合併政策概觀
 
-Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以便檢視每個個別客戶的完整檢視。 將這個資料集合在一起時，合併原則是[!DNL Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立統一檢視的規則。
+Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以便檢視每個個別客戶的完整檢視。 將這個資料集合在一起時，合併原則是[!DNL Experience Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立統一檢視的規則。
 
-使用RESTful API或使用者介面，您可以建立新的合併原則、管理現有原則，並為您的組織設定預設合併原則。 本檔案概述合併原則及其在Experience Platform中所扮演的角色。
+使用RESTful API或使用者介面，您可以建立新的合併原則、管理現有原則，並為您的組織設定預設合併原則。 本檔案概述合併原則及其在Experience Platform中扮演的角色。
 
 ## 快速入門
 
 本指南需要您實際瞭解幾項重要的[!DNL Experience Platform]功能。 在遵循本指南並使用合併原則之前，請檢視以下服務的檔案：
 
 * [即時客戶個人檔案](../home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md)：透過橋接擷取到[!DNL Platform]中的不同資料來源的身分，啟用即時客戶個人檔案。
-* [體驗資料模型(XDM)](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md)：透過橋接擷取到[!DNL Experience Platform]中的不同資料來源的身分，啟用即時客戶個人檔案。
+* [體驗資料模型(XDM)](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 
 ## 瞭解合併原則
 
-Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以檢視每個個別客戶的完整、統一檢視。 彙總此資料時，合併原則是Platform用來判斷資料優先順序的規則，以及將合併哪些資料以建立該統一檢視。
+Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以檢視每個個別客戶的完整、統一檢視。 彙總此資料時，合併原則是Experience Platform用來判斷資料優先順序的方式，以及將合併哪些資料以建立該統一檢視的規則。
 
-例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。
+例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Experience Platform時，會合併在一起，以便為該客戶建立單一設定檔。
 
 當來自多個來源的資料衝突時（例如，一個片段將客戶列為「單身」，而另一個片段將客戶列為「已婚」），合併原則會決定要包含在個人設定檔中的資訊。
 
@@ -54,7 +54,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
 
 ### 時間戳記已排序 {#timestamp-ordered}
 
-當設定檔記錄被擷取到Experience Platform中時，會在擷取時取得系統時間戳記並將其新增到記錄中。 當選取&#x200B;**[!UICONTROL 排序的時間戳記]**&#x200B;作為合併原則的合併方法時，會根據系統時間戳記來合併設定檔。 換言之，合併是根據記錄擷取到Platform時的時間戳記完成的。
+當設定檔記錄擷取至Experience Platform時，系統時間戳記會在擷取時取得，並新增至記錄中。 當選取&#x200B;**[!UICONTROL 排序的時間戳記]**&#x200B;作為合併原則的合併方法時，會根據系統時間戳記來合併設定檔。 換言之，合併是根據記錄擷取到Experience Platform的時間戳記完成的。
 
 ## 身分拼接 {#id-stitching}
 
@@ -79,4 +79,4 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
 
 ## 後續步驟
 
-閱讀本指南後，您現在瞭解什麼是合併原則，以及這些原則在Experience Platform中發揮的作用。 若要開始在Experience PlatformUI中使用合併原則，請參閱[合併原則UI指南](ui-guide.md)。 若要使用API來使用合併原則，請造訪[合併原則API端點指南](../api/merge-policies.md)。
+閱讀本指南後，您現在瞭解什麼是合併原則，以及原則在Experience Platform中發揮的作用。 若要開始在Experience Platform UI中使用合併原則，請參閱[合併原則UI指南](ui-guide.md)。 若要使用API來使用合併原則，請造訪[合併原則API端點指南](../api/merge-policies.md)。

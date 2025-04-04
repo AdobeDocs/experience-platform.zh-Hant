@@ -9,16 +9,16 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1817'
 ht-degree: 4%
 
 ---
 
-# [!DNL Platform]常見問題集和疑難排解指南
+# [!DNL Experience Platform]常見問題集和疑難排解指南
 
-本檔案提供有關Adobe Experience Platform常見問題的解答，以及任何[!DNL Experience Platform] API中可能遇到的常見錯誤的高層級疑難排解指南。 如需個別[!DNL Platform]服務的疑難排解指南，請參閱下方的[服務疑難排解目錄](#service-troubleshooting-directory)。
+本檔案提供有關Adobe Experience Platform常見問題的解答，以及任何[!DNL Experience Platform] API中可能遇到的常見錯誤的高層級疑難排解指南。 如需個別[!DNL Experience Platform]服務的疑難排解指南，請參閱下方的[服務疑難排解目錄](#service-troubleshooting-directory)。
 
 ## 常見問題集 {#faq}
 
@@ -26,21 +26,21 @@ ht-degree: 4%
 
 ## 什麼是[!DNL Experience Platform] API？ {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform]提供多個使用HTTP要求存取[!DNL Platform]資源的RESTful API。 這些服務API會分別公開多個端點，並允許您執行操作以列出(GET)、查詢(GET)、編輯(PUT和/或PATCH)以及刪除(DELETE)資源。 如需每個服務可用的特定端點和作業的詳細資訊，請參閱Adobe I/O上的[API參考檔案](https://www.adobe.com/go/platform-api-reference-en)。
+[!DNL Experience Platform]提供多個使用HTTP要求存取[!DNL Experience Platform]資源的RESTful API。 這些服務API會分別公開多個端點，並允許您執行作業以列出(GET)、查詢(GET)、編輯(PUT和/或PATCH)及刪除(DELETE)資源。 如需每個服務可用的特定端點和作業的詳細資訊，請參閱Adobe I/O上的[API參考檔案](https://www.adobe.com/go/platform-api-reference-en)。
 
 ## 如何格式化API請求？ {#how-do-i-format-an-api-request}
 
-要求格式會依使用的[!DNL Platform] API而有所不同。 要瞭解如何建構API呼叫，最好的方式是遵循檔案中針對您使用的特定[!DNL Platform]服務提供的範例。
+要求格式會依使用的[!DNL Experience Platform] API而有所不同。 要瞭解如何建構API呼叫，最好的方式是遵循檔案中針對您使用的特定[!DNL Experience Platform]服務提供的範例。
 
-如需格式化API要求的詳細資訊，請造訪Platform API快速入門手冊[閱讀範例API呼叫](./api-guide.md#sample-api)區段。
+如需格式化API要求的詳細資訊，請造訪Experience Platform API快速入門手冊[閱讀範例API呼叫](./api-guide.md#sample-api)區段。
 
 ## 什麼是我的組織？ {#what-is-my-ims-organization}
 
-組織是客戶的Adobe表示法。 任何授權的Adobe解決方案都會與此客戶組織整合。 當組織有權使用[!DNL Experience Platform]時，它可以指派存取權給開發人員。 組織ID (`x-gw-ims-org-id`)代表應為其執行API呼叫的組織，因此需要作為所有API要求中的標頭。 可以透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)找到此ID：在&#x200B;**整合**&#x200B;索引標籤中，瀏覽至&#x200B;**總覽**&#x200B;區段以進行任何特定整合，以在&#x200B;**使用者端認證**&#x200B;下找到此ID。 如需如何向[!DNL Platform]進行驗證的逐步說明，請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。
+組織是客戶的Adobe表示法。 任何授權的Adobe解決方案都會與此客戶組織整合。 當組織有權使用[!DNL Experience Platform]時，它可以指派存取權給開發人員。 組織ID (`x-gw-ims-org-id`)代表應為其執行API呼叫的組織，因此需要作為所有API要求中的標頭。 可以透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)找到此ID：在&#x200B;**整合**&#x200B;索引標籤中，瀏覽至&#x200B;**總覽**&#x200B;區段以進行任何特定整合，以在&#x200B;**使用者端認證**&#x200B;下找到此ID。 如需如何向[!DNL Experience Platform]進行驗證的逐步說明，請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。
 
 ## 我可以在哪裡找到我的API金鑰？ {#where-can-i-find-my-api-key}
 
-API金鑰需作為所有API請求中的標頭。 您可透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)找到它。 在主控台的&#x200B;**整合**&#x200B;標籤上，瀏覽至&#x200B;**總覽**&#x200B;區段以取得特定的整合，您會在&#x200B;**使用者端認證**&#x200B;下找到金鑰。 如需如何驗證[!DNL Platform]的逐步解說，請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。
+API金鑰需作為所有API請求中的標頭。 您可透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)找到它。 在主控台的&#x200B;**整合**&#x200B;標籤上，瀏覽至&#x200B;**總覽**&#x200B;區段以取得特定的整合，您會在&#x200B;**使用者端認證**&#x200B;下找到金鑰。 如需如何驗證[!DNL Experience Platform]的逐步解說，請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。
 
 ## 如何取得存取Token？ {#how-do-i-get-an-access-token}
 
@@ -48,7 +48,7 @@ API金鑰需作為所有API請求中的標頭。 您可透過[Adobe Developer Co
 
 ## 如何使用查詢引數？ {#how-do-i-user-query-parameters}
 
-某些[!DNL Platform] API端點會接受查詢引數，以找出特定資訊並篩選回應中傳回的結果。 查詢引數會以問號(`?`)符號附加至要求路徑，後面接著一或多個查詢引數（使用格式`paramName=paramValue`）。 在單一呼叫中組合多個引數時，您必須使用&amp;符號(`&`)來分隔個別引數。 下列範例示範使用多個查詢引數的請求在檔案中如何呈現。
+某些[!DNL Experience Platform] API端點會接受查詢引數，以找出特定資訊並篩選回應中傳回的結果。 查詢引數會以問號(`?`)符號附加至要求路徑，後面接著一或多個查詢引數（使用格式`paramName=paramValue`）。 在單一呼叫中組合多個引數時，您必須使用&amp;符號(`&`)來分隔個別引數。 下列範例示範使用多個查詢引數的請求在檔案中如何呈現。
 
 常用的查詢引數範例包括：
 
@@ -62,19 +62,19 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## 如何在PATCH請求中指定要更新的JSON欄位？ {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-[!DNL Platform] API中的許多PATCH作業都會使用[JSON指標](https://tools.ietf.org/html/rfc6901)字串來指示要更新的JSON屬性。 這些通常包含在使用[JSON修補程式](https://tools.ietf.org/html/rfc6902)格式的要求裝載中。 如需這些技術所需語法的詳細資訊，請參閱[API基礎指南](api-fundamentals.md)。
+[!DNL Experience Platform] API中的許多PATCH作業都會使用[JSON指標](https://tools.ietf.org/html/rfc6901)字串來指示要更新的JSON屬性。 這些通常包含在使用[JSON修補程式](https://tools.ietf.org/html/rfc6902)格式的要求裝載中。 如需這些技術所需語法的詳細資訊，請參閱[API基礎指南](api-fundamentals.md)。
 
-## 我可以使用Postman來呼叫[!DNL Platform] API嗎？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## 我可以使用Postman來呼叫[!DNL Experience Platform] API嗎？ {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/)是視覺化呼叫RESTful API的實用工具。 [Platform API快速入門手冊](api-guide.md)包含匯入Postman集合的影片和指示。 此外，也提供每項服務的Postman集合清單。
+[Postman](https://www.postman.com/)是視覺化呼叫RESTful API的實用工具。 [Experience Platform API快速入門手冊](api-guide.md)包含匯入Postman集合的影片和指示。 此外，也提供每項服務的Postman集合清單。
 
-## [!DNL Platform]的系統需求為何？{#what-are-the-system-requirements-for-platform}
+## [!DNL Experience Platform]的系統需求為何？{#what-are-the-system-requirements-for-platform}
 
 根據您使用的是UI還是API，以下系統需求適用：
 
 **針對以UI為基礎的作業：**
 - 現代的標準網路瀏覽器。 雖然建議使用最新版[!DNL Chrome]，但亦支援[!DNL Firefox]、[!DNL Internet Explorer]和Safari的最新和舊版主要版本。
-   - 每次發行新的主要版本時，[!DNL Platform]會開始支援最新版本，而不再支援第三個最新版本。
+   - 每次發行新的主要版本時，[!DNL Experience Platform]會開始支援最新版本，而不再支援第三個最新版本。
 - 所有瀏覽器都必須啟用Cookie和JavaScript。
 
 **對於API和開發人員互動：**
@@ -82,23 +82,23 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## 錯誤與疑難排解 {#errors-and-troubleshooting}
 
-以下是您使用任何[!DNL Experience Platform]服務時可能遇到的錯誤清單。 如需個別[!DNL Platform]服務的疑難排解指南，請參閱下方的[服務疑難排解目錄](#service-troubleshooting-directory)。
+以下是您使用任何[!DNL Experience Platform]服務時可能遇到的錯誤清單。 如需個別[!DNL Experience Platform]服務的疑難排解指南，請參閱下方的[服務疑難排解目錄](#service-troubleshooting-directory)。
 
 ## API狀態代碼 {#api-status-codes}
 
-在任何[!DNL Experience Platform] API上可能會遇到下列狀態代碼。 每種原因有多種多樣，因此本節中提供的說明本質上是一般性解釋。 如需個別[!DNL Platform]服務中特定錯誤的詳細資訊，請參閱下方的[服務疑難排解目錄](#service-troubleshooting-directory)。
+在任何[!DNL Experience Platform] API上可能會遇到下列狀態代碼。 每種原因有多種多樣，因此本節中提供的說明本質上是一般性解釋。 如需個別[!DNL Experience Platform]服務中特定錯誤的詳細資訊，請參閱下方的[服務疑難排解目錄](#service-troubleshooting-directory)。
 
 | 狀態代碼 | 說明 | 可能的原因 |
 |--- | --- | ---|
 | 400 | 錯誤的請求 | 請求建構不正確、遺漏關鍵資訊和/或包含不正確的語法。 |
 | 401 | 驗證失敗 | 請求未通過驗證檢查。 您的存取權杖可能遺失或無效。 如需詳細資訊，請參閱下方的[OAuth權杖錯誤](#oauth-token-is-missing)區段。 |
-| 403 | 禁止 | 已找到資源，但您沒有正確的認證可檢視該資源。 <br>發生此錯誤的可能原因是，您可能沒有存取或編輯資源所需的[存取控制許可權](/help/access-control/home.md)。 瞭解如何[取得必要的屬性型存取控制許可權](/help/landing/api-authentication.md#get-abac-permissions)，以使用Platform API。 </p> |
+| 403 | 禁止 | 已找到資源，但您沒有正確的認證可檢視該資源。 <br>發生此錯誤的可能原因是，您可能沒有存取或編輯資源所需的[存取控制許可權](/help/access-control/home.md)。 閱讀如何[取得必要的屬性型存取控制許可權](/help/landing/api-authentication.md#get-abac-permissions)，以使用Experience Platform API。 </p> |
 | 404 | 找不到 | 在伺服器上找不到要求的資源。 資源可能已被刪除，或輸入的路徑不正確。 |
 | 500 | 內部伺服器錯誤 | 這是伺服器端錯誤。 如果您同時進行多個呼叫，可能會達到API限制，且需要篩選結果。 （如需瞭解詳細資訊，請參閱[篩選資料](../catalog/api/filter-data.md)上的[!DNL Catalog Service] API開發人員指南子指南。） 請稍候片刻，然後再嘗試您的請求，如果問題仍然存在，請聯絡您的管理員。 |
 
 ## 請求標頭錯誤 {#request-header-errors}
 
-[!DNL Platform]中的所有API呼叫都需要特定的要求標頭。 若要檢視個別服務所需的標頭，請參閱[API參考檔案](https://www.adobe.com/go/platform-api-reference-en)。 若要尋找所需驗證標頭的值，請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 如果在進行API呼叫時，缺少這些標頭中的任何一個或這些標頭無效，便可能會發生以下錯誤。
+[!DNL Experience Platform]中的所有API呼叫都需要特定的要求標頭。 若要檢視個別服務所需的標頭，請參閱[API參考檔案](https://www.adobe.com/go/platform-api-reference-en)。 若要尋找所需驗證標頭的值，請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 如果在進行API呼叫時，缺少這些標頭中的任何一個或這些標頭無效，便可能會發生以下錯誤。
 
 ### 缺少OAuth權杖 {#oauth-token-is-missing}
 
@@ -202,11 +202,11 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 此錯誤訊息會在以下兩種情況之一中顯示：
 - 在API要求中傳遞不正確或格式錯誤的組織ID標頭(`x-gw-ims-org-id`)時。 在重試之前，請確定已包含您組織的正確ID。
-- 當您的帳戶（由提供的驗證憑證表示）未與用於Experience Platform的產品設定檔建立關聯時。 請依照Platform API驗證教學課程中[產生存取認證](./api-authentication.md#authentication-for-each-session)上的步驟，將Platform新增至您的帳戶，並相應地更新您的驗證認證。
+- 當您的帳戶（由提供的驗證憑證表示）未與Experience Platform的產品設定檔建立關聯時。 依照Experience Platform API驗證教學課程中[產生存取認證](./api-authentication.md#authentication-for-each-session)上的步驟操作，將Experience Platform新增至您的帳戶並相應地更新您的驗證認證。
 
 ## 服務疑難排解目錄 {#service-troubleshooting-directory}
 
-以下是[!DNL Experience Platform] API的疑難排解指南和API參考檔案清單。 每個疑難排解指南都會提供常見問題的解答，以及個別[!DNL Platform]服務特定問題的解決方案。 API參考檔案提供每個服務所有可用端點的完整指南，並顯示您可能收到的範例要求內文、回應和錯誤代碼。
+以下是[!DNL Experience Platform] API的疑難排解指南和API參考檔案清單。 每個疑難排解指南都會提供常見問題的解答，以及個別[!DNL Experience Platform]服務特定問題的解決方案。 API參考檔案提供每個服務所有可用端點的完整指南，並顯示您可能收到的範例要求內文、回應和錯誤代碼。
 
 | 服務 | API參考 | 疑難排解 |
 | --- | --- | --- |

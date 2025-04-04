@@ -1,15 +1,15 @@
 ---
-title: 使用沙箱工具啟用卓越中心
+title: 使用沙箱工具實現卓越中心
 description: 透過建立「黃金沙箱」套件，以標準化多個沙箱的最佳做法，使用沙箱工具啟用卓越中心。
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '882'
+ht-degree: 8%
 
 ---
 
-# 使用沙箱工具啟用卓越中心
+# 使用沙箱工具實現卓越中心
 
 透過建立「黃金沙箱」套件，以標準化多個沙箱的最佳做法，使用沙箱工具啟用卓越中心。
 
@@ -37,7 +37,7 @@ ht-degree: 7%
 - 建立沙箱，並包含所有將設定為黃金沙箱的相關和已驗證設定。
 - 如有需要，請取得利害關係人的意見，並同意您的基準標準。
 
-### 您將使用的 UI 功能、平台元件和 Experience Cloud 產品 {#ui-functionality-and-elements}
+### 您將使用的UI功能、Experience Platform元件和Experience Cloud產品 {#ui-functionality-and-elements}
 
 若要成功實作此使用案例，您必須使用Adobe Experience Platform的多個區域。 請確定您擁有這些區域所需的[屬性型存取控制許可權](../../access-control/abac/overview.md)，或要求系統管理員授與您必要的許可權。
 
@@ -73,7 +73,7 @@ ht-degree: 7%
 
 ### 將您的套件匯入相關的沙箱
 
-現在您的封裝已建立，您可以將此封裝匯入您的相關沙箱。 最佳實務是將包含整個沙箱的套件匯入到空沙箱中。 使用沙箱工具，您可以輕鬆地將整個沙箱套件](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package)直接匯入Experience Platform中的沙箱。[
+現在您的封裝已建立，您可以將此封裝匯入您的相關沙箱。 最佳實務是將包含整個沙箱的套件匯入到空沙箱中。 使用沙箱工具，您可以輕鬆[直接在Experience Platform中將整個沙箱套件](../../sandboxes/ui/sandbox-tooling.md#import-the-entire-sandbox-package)匯入沙箱。
 
 ### 跨組織共用套件
 
@@ -89,7 +89,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
-> 上述步驟遵循Experience Platform使用者介面中的程式。 您可以透過各種端點使用API來遵循相同的步驟。 如需透過API提出每個要求的資訊，請參閱`sandboxes` [端點指南](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create)和`packages` [端點指南](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages)。
+> 上述步驟遵循Experience Platform使用者介面中的程式進行。 您可以透過各種端點使用API來遵循相同的步驟。 如需透過API提出每個要求的資訊，請參閱`sandboxes` [端點指南](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create)和`packages` [端點指南](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages)。
 
 ## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
 

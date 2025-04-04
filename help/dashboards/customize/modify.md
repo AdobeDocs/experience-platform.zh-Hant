@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；使用者介面；UI；儀表板；儀表板；設定檔；區段；目的地；授權使用情況
-title: 修改UI中的平台控制面板
+keywords: Experience Platform；使用者介面；UI；控制面板；控制面板；設定檔；區段；目的地；授權使用情況
+title: 在UI中修改Experience Platform儀表板
 description: 本指南提供逐步指示，說明如何自訂貴組織的Adobe Experience Platform資料在儀表板中的顯示方式。
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >控制面板的任何更新都是根據組織和沙箱進行。
 
-本指南提供逐步指示，說明如何自訂儀表板資料在Platform UI中的[!UICONTROL 設定檔]、[!UICONTROL 區段]和[!UICONTROL 目的地]儀表板中的顯示方式。
+本指南提供逐步指示，說明如何在Experience Platform UI中自訂儀表板資料在[!UICONTROL 設定檔]、[!UICONTROL 區段]和[!UICONTROL 目的地]儀表板中的顯示方式。
 
 ## 快速入門
 

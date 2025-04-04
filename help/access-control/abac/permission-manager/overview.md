@@ -1,9 +1,10 @@
 ---
 title: 許可權管理員概觀
 description: 瞭解Adobe Experience Platform中的許可權管理員如何協助您跨多個工作流程產生報表。
-source-git-commit: d70e105e801ebc663cabba468f4efa863e5cd478
+exl-id: 807297e2-f06e-4b1c-92f7-b42a53c934b7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '293'
 ht-degree: 1%
 
 ---
@@ -23,13 +24,13 @@ ht-degree: 1%
 
 您可以藉由選取特定資源、動作和沙箱來縮小搜尋範圍。
 
-若要存取[!DNL Experience Platform]的[!UICONTROL 許可權管理員]，您必須是具有平台存取權的組織的管理員。 雖然Adobe可讓您在組織內自訂管理員階層，但您必須是[!DNL Adobe Experience Platform]的產品管理員。 如需詳細資訊，請參閱有關[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)的Adobe Help Center文章。
+若要存取[!DNL Experience Platform]的[!UICONTROL 許可權管理員]，您必須是具有存取Experience Platform許可權之組織的管理員。 雖然Adobe允許在組織內自訂管理員階層，但您必須是[!DNL Adobe Experience Platform]的產品管理員。 如需詳細資訊，請參閱有關[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)的Adobe說明中心文章。
 
 使用您的[!DNL Adobe]認證登入[Adobe Experience Platform](https://experience.adobe.com/)。  登入後，您將會看到貴組織的&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面。 此頁面顯示貴組織訂閱的產品。 若要啟動以屬性為基礎的存取控制工作區以進行平台整合，請選取&#x200B;**[!UICONTROL 許可權]**。
 
 ![Adobe Experience Platform概觀醒目提示許可權。](../../images/flac-ui/flac-select-product.png)
 
-Platform的屬性型存取控制工作區隨即出現，並在&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面上開啟。 此頁面可讓您檢視所有角色並管理本檔案中概述的各種設定。
+Experience Platform的屬性型存取控制工作區隨即顯示，並在&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面上開啟。 此頁面可讓您檢視所有角色並管理本檔案中概述的各種設定。
 
 從左側導覽中選取&#x200B;**[!UICONTROL 許可權管理員]**。
 

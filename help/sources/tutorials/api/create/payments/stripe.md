@@ -1,16 +1,16 @@
 ---
-title: 使用API從您的 [!DNL Stripe] 帳戶擷取付款資料以Experience Platform
-description: 瞭解如何使用Flow Service API從您的Stripe帳戶擷取付款資料以Experience Platform
+title: 使用API將付款資料從您的 [!DNL Stripe] 帳戶擷取至Experience Platform
+description: 瞭解如何使用流量服務API，將付款資料從您的Stripe帳戶擷取到Experience Platform
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2028'
 ht-degree: 1%
 
 ---
 
-# 從您的[!DNL Stripe]帳戶擷取付款資料，以使用APIExperience Platform
+# 使用API從您的[!DNL Stripe]帳戶擷取付款資料至Experience Platform
 
 >[!NOTE]
 >
@@ -20,28 +20,28 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Experience Platform元件：
+本指南需要您深入瞭解下列Experience Platform元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-### 驗證
+### Authentication
 
 請閱讀[[!DNL Stripe] 總覽](../../../../connectors/payments/stripe.md)，瞭解如何擷取您的驗證認證的相關資訊。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
-## 連線[!DNL Stripe]至Experience Platform
+## 將[!DNL Stripe]連線至Experience Platform
 
-請遵循以下指南以瞭解如何驗證您的[!DNL Stripe]來源、建立來源連線，以及建立資料流以將您的付款資料帶入Experience Platform。
+請依照下列指南瞭解如何驗證您的[!DNL Stripe]來源、建立來源連線，以及建立資料流，以將您的付款資料匯入Experience Platform。
 
 ### 建立基礎連線 {#base-connection}
 
-基礎連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基礎連線ID。 您可以使用基本連線ID從來源內部探索及導覽檔案。 此外，您可以識別要擷取的特定專案，包括有關這些專案的資料型別和格式的詳細資訊。
+基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 您可以使用基本連線ID從來源內部探索及導覽檔案。 此外，您可以識別要擷取的特定專案，包括有關這些專案的資料型別和格式的詳細資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL Stripe]驗證認證作為要求內文的一部分時，向`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的[!DNL Stripe]驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -82,7 +82,7 @@ curl -X POST \
 | `name` | 基礎連線的名稱。 確定基本連線的名稱是描述性的，因為您可以使用此名稱來查詢基本連線的資訊。 |
 | `description` | 您可以納入的選用值，可提供基礎連線的詳細資訊。 |
 | `connectionSpec.id` | 來源的連線規格ID。 [!DNL Stripe]的連線規格ID為`cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`，此ID已修正。 |
-| `auth.specName` | 您用來驗證來源以進行Experience Platform的驗證型別。 |
+| `auth.specName` | 您用來向Experience Platform驗證來源的驗證型別。 |
 | `auth.params.accessToken` | 您[!DNL Stripe]帳戶的存取權杖。 閱讀[[!DNL Stripe] 驗證指南](../../../../connectors/payments/stripe.md#prerequisites)以瞭解如何擷取存取權杖的步驟。 |
 
 **回應**
@@ -98,7 +98,7 @@ curl -X POST \
 
 ### 探索您的來源 {#explore}
 
-取得基礎連線ID後，您現在可以透過對`/connections`端點執行GET要求，同時提供基礎連線ID作為查詢引數，來探索來源資料的內容和結構。
+取得基礎連線ID後，您現在可以透過對`/connections`端點執行GET請求，同時提供基礎連線ID作為查詢引數，來探索來源資料的內容和結構。
 
 **API格式**
 
@@ -108,14 +108,14 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 
 **要求**
 
-執行GET請求以探索來源的檔案結構和內容時，您必須包括下表列出的查詢引數：
+執行GET請求以探索來源的檔案結構和內容時，您必須包含下表列出的查詢引數：
 
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 在上一步中產生的基本連線ID。 |
 | `objectType=rest` | 您要探索的物件型別。 此值一律設為`rest`。 |
 | `{OBJECT}` | 只有在檢視特定目錄時才需要此引數。 其值代表您要探索的目錄路徑。 對於此來源，值為`json`。 |
-| `fileType=json` | 您要帶到Platform的檔案型別。 目前，`json`是唯一受支援的檔案型別。 |
+| `fileType=json` | 您要帶入Experience Platform的檔案型別。 目前，`json`是唯一受支援的檔案型別。 |
 | `{PREVIEW}` | 布林值，定義連線的內容是否支援預覽。 |
 | `{SOURCE_PARAMS}` | [!DNL Base64-]編碼字串，指向您要探索的資源路徑。 您的資源路徑必須以[!DNL Base64]編碼，才能取得`{SOURCE_PARAMS}`的核准格式。 例如，`{"resourcePath":"charges"}`編碼為`eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`。 可用資源路徑的清單包括： <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
@@ -407,7 +407,7 @@ curl -X GET \
 
 ### 建立來源連線 {#source-connection}
 
-您可以向[!DNL Flow Service] API的`/sourceConnections`端點發出POST要求，以建立來源連線。 來源連線由連線ID、來源資料檔案的路徑以及連線規格ID組成。
+您可以對[!DNL Flow Service] API的`/sourceConnections`端點發出POST要求，以建立來源連線。 來源連線由連線ID、來源資料檔案的路徑以及連線規格ID組成。
 
 **API格式**
 
@@ -463,7 +463,7 @@ curl -X POST \
 
 ### 建立目標XDM結構描述 {#target-schema}
 
-為了在Experience Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後目標結構描述會用來建立包含來源資料的Platform資料集。
+為了在Experience Platform中使用來源資料，必須建立目標結構描述，以根據您的需求建構來源資料。 然後使用目標結構描述來建立包含來源資料的Experience Platform資料集。
 
 可透過對[結構描述登入API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)執行POST要求來建立目標XDM結構描述。
 
@@ -471,7 +471,7 @@ curl -X POST \
 
 ### 建立目標資料集 {#target-dataset}
 
-可以透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID，來建立目標資料集。
 
 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](../../../../../catalog/api/create-dataset.md)的教學課程。
 
@@ -540,7 +540,7 @@ curl -X POST \
 
 ### 建立對應 {#mapping}
 
-為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。 這是透過使用在要求裝載中定義的資料對應對[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/)執行POST要求來達成。
+為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。 這是透過對[[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/)執行POST要求，並在要求裝載中定義資料對應來達成。
 
 **API格式**
 
@@ -814,13 +814,13 @@ curl -X POST \
 
 ### 建立流程 {#flow}
 
-將資料從[!DNL Stripe]引進Platform的最後一步是建立資料流。 到現在為止，您已準備下列必要值：
+將資料從[!DNL Stripe]引進Experience Platform的最後一步是建立資料流。 到現在為止，您已準備下列必要值：
 
 * [Source連線ID](#source-connection)
 * [目標連線ID](#target-connection)
 * [對應 ID](#mapping)
 
-資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提到的值，藉此建立資料流。
+資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提及的值來建立資料流。
 
 **API格式**
 
@@ -904,11 +904,11 @@ curl -X POST \
 
 ### 更新您的資料流
 
-在提供資料流ID的同時，向[!DNL Flow Service] API的/flows端點發出PATCH要求，以更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 提出PATCH要求時，您必須在`If-Match`標頭中提供資料流的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
+在提供資料流ID的同時，向[!DNL Flow Service] API的/flows端點發出PATCH請求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`If-Match`標頭中提供資料流的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
 
 ### 更新您的帳戶
 
-在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH要求時，您必須在`If-Match`標頭中提供來源帳戶的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
+在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`If-Match`標頭中提供來源帳戶的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
 
 ### 刪除您的資料流
 
@@ -916,4 +916,4 @@ curl -X POST \
 
 ### 刪除您的帳戶
 
-在提供您要刪除之帳戶的基本連線ID時，透過對[!DNL Flow Service] API執行DELETE要求來刪除帳戶。 如需完整的API範例，請閱讀[使用API](../../delete.md)刪除來源帳戶的指南。
+在提供您要刪除之帳戶的基本連線ID時，對[!DNL Flow Service] API執行DELETE要求，以刪除您的帳戶。 如需完整的API範例，請閱讀[使用API](../../delete.md)刪除來源帳戶的指南。

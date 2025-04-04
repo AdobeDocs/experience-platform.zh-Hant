@@ -5,9 +5,9 @@ type: Documentation
 description: 設定檔API快速入門手冊概述您需瞭解的主要概念和基本功能，才能使用即時客戶設定檔API端點，對設定檔資料執行基本CRUD作業。
 role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '408'
 ht-degree: 6%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 6%
 * [[!DNL Real-Time Customer Profile]](../home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：跨裝置和系統橋接身分，以更清楚瞭解您的客戶及其行為。
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md)：可讓您從即時客戶設定檔資料建立對象。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform用來組織客戶體驗資料的標準化架構。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Experience Platform組織客戶體驗資料的標準化架構。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Profile] API端點。
 
@@ -32,19 +32,19 @@ ht-degree: 6%
 
 ## 必要的標頭
 
-API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Platform]端點。 完成驗證教學課程會提供[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
+API檔案也要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Experience Platform]端點。 完成驗證教學課程會提供[!DNL Experience Platform] API呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的請求需要一個標頭，該標頭會指定將在其中執行操作的沙箱的名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的請求需要一個標頭，該標頭會指定將在其中執行操作的沙箱的名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
-要求內文中具有裝載的所有要求(例如POST、PUT和PATCH呼叫)都必須包含`Content-Type`標頭。 呼叫引數中會提供每個呼叫專屬的接受值。
+所有要求內文中具有裝載的要求(例如POST、PUT和PATCH呼叫)都必須包含`Content-Type`標頭。 呼叫引數中會提供每個呼叫專屬的接受值。
 
 ## 後續步驟
 

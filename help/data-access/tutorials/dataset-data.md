@@ -5,9 +5,9 @@ title: 使用資料存取API檢視資料集資料
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform的資料存取API，尋找、存取及下載儲存在資料集中的資料。 本檔案會介紹資料存取API的一些獨特功能，例如分頁和部分下載。
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 9144a5f4cce88fc89973a7fea6d69384cc5f4ba1
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 7%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 7%
 
 本教學課程需要您深入瞭解如何建立和填入資料集。 如需詳細資訊，請參閱[資料集建立教學課程](../../catalog/datasets/create.md)。
 
-以下章節提供成功呼叫Platform API所需瞭解的其他資訊。
+以下小節提供成功呼叫Experience Platform API所需瞭解的其他資訊。
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
@@ -28,19 +28,19 @@ ht-degree: 7%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../landing/api-authentication.md)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](../../landing/api-authentication.md)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人`{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要一個標頭，該標頭會指定進行操作的沙箱的名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要一個標頭，該標頭會指定進行操作的沙箱的名稱：
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 
@@ -355,7 +355,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## 擷取檔案的中繼資料
 
-您可以發出HEAD要求來擷取檔案的中繼資料。 這會傳回檔案的中繼資料標題，包括其位元組大小和檔案格式。
+您可以提出HEAD要求來擷取檔案的中繼資料。 這會傳回檔案的中繼資料標題，包括其位元組大小和檔案格式。
 
 **API格式**
 
@@ -418,7 +418,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 若要從檔案下載特定範圍的位元組，請在向[!DNL Data Access] API發出的`GET /files/{FILE_ID}`要求期間指定範圍標頭。 如果未指定範圍，API預設會下載整個檔案。
 
-[previous區段](#retrieve-the-metadata-of-a-file)中的HEAD範例提供特定檔案的大小（位元組）。
+[上一節](#retrieve-the-metadata-of-a-file)中的HEAD範例提供特定檔案的大小（位元組）。
 
 **API格式**
 

@@ -2,10 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；方案；
 solution: Experience Platform
 title: 結構描述API端點
-description: 您可以在Adobe Experience Platform API中使用「/schemas」端點，以程式設計方式擷取、建立和更新方案，以便在Platform中與對應程式搭配使用。
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: 您可以在Adobe Experience Platform API中使用「/schemas」端點，以程式設計方式擷取、建立及更新綱要，以便與Experience Platform中的對應程式搭配使用。
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '619'
 ht-degree: 3%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # 結構描述端點
 
-結構描述可與對應程式搭配使用，以確保您擷取到Adobe Experience Platform的資料與您想要擷取的資料相符。 您可以使用`/schemas`端點以程式設計方式建立、列出和取得自訂結構描述，以便在Platform中與對應程式搭配使用。
+結構描述可與對應程式搭配使用，以確保您擷取到Adobe Experience Platform的資料與您想要擷取的資料相符。 您可以使用`/schemas`端點以程式設計方式建立、列出和取得自訂結構描述，以便與Experience Platform中的對應程式搭配使用。
 
 >[!NOTE]
 >
->使用此端點建立的結構描述只會搭配對應程式和對應集使用。 若要建立可由其他Platform服務存取的結構描述，請閱讀[結構描述登入開發人員指南](../../xdm/api/schemas.md)。
+>使用此端點建立的結構描述只會搭配對應程式和對應集使用。 若要建立其他Experience Platform服務可存取的結構描述，請參閱[結構描述登入開發人員指南](../../xdm/api/schemas.md)。
 
 ## 取得所有結構描述
 
-您可以藉由向`/schemas`端點發出GET要求，擷取貴組織所有可用對應程式結構描述的清單。
+您可以向`/schemas`端點發出GET要求，以擷取貴組織所有可用對應程式結構描述的清單。
 
 **API格式**
 

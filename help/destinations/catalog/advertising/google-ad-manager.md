@@ -3,9 +3,9 @@ keywords: google廣告管理員；google廣告；doubleclick；DoubleClick AdX�
 title: Google廣告管理員連線
 description: Google Ad Manager （舊稱為DoubleClick for Publishers或DoubleClick AdX）是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式管理其網站上的廣告顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1121'
 ht-degree: 7%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 7%
 請注意下列專屬於[!DNL Google Ad Manager]目的地的詳細資料：
 
 * 啟用的對象是以程式設計方式在[!DNL Google]平台中建立。
-* [!DNL Platform]目前不包含驗證成功啟用的測量量度。 請參考Google中的對象計數，以驗證整合併瞭解對象目標定位大小。
+* [!DNL Experience Platform]目前不包含驗證成功啟用的測量量度。 請參考Google中的對象計數，以驗證整合併瞭解對象目標定位大小。
 * 將對象對應到[!DNL Google Ad Manager]目的地後，對象名稱會立即出現在[!DNL Google Ad Manager]使用者介面中。
 * 區段母體需要24到48小時才能出現在[!DNL Google Ad Manager]中。 此外，受眾必須具有至少50個設定檔的受眾大小，才能在[!DNL Google Ad Manager]中顯示。 大小小於50個設定檔的對象將不會填入[!DNL Google Ad Manager]。
 
@@ -74,11 +74,11 @@ ht-degree: 7%
 
 ## 先決條件 {#prerequisites}
 
-如果您想要使用[!DNL Google Ad Manager]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Google]整合，您設定的ID同步會移轉到Platform。
+如果您想要使用[!DNL Google Ad Manager]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Google]整合，您設定的ID同步會移轉到Experience Platform。
 
 ### 允許清單 {#allow-listing}
 
-在Platform中設定第一個[!DNL Google Ad Manager]目的地前，必須先加入允許清單。 在建立目的地之前，請務必完成下述允許清單程式。
+在Experience Platform中設定第一個[!DNL Google Ad Manager]目的地前，必須先加入允許清單。 在建立目的地之前，請務必完成下述允許清單程式。
 
 1. 依照[Google Ad Manager檔案](https://support.google.com/admanager/answer/3289669?hl=en)中所述的步驟，將Adobe新增為連結的資料管理平台(DMP)。
 2. 在[!DNL Google Ad Manager]介面中，移至&#x200B;**[!UICONTROL 管理員]** > **[!UICONTROL 全域設定]** > **[!UICONTROL 網路設定]**，並啟用&#x200B;**[!UICONTROL API存取]**&#x200B;滑桿。

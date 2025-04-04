@@ -5,9 +5,9 @@ description: 了解 Adobe Real-Time Customer Data Platform B2B Edition 如何讓
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '306'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 ## 帳戶設定檔檢視器
 
-透過Real-Time CDP和B2B edition，您可以使用Experience Platform使用者介面檢視帳戶設定檔，並使用連線企業來源的帳戶ID或直接輸入來源詳細資料來搜尋特定帳戶。 如需有關如何在Platform UI中檢視帳戶設定檔的詳細資訊，請參閱[帳戶設定檔UI指南](account-profile-ui-guide.md)。
+透過Real-Time CDP和B2B edition，您可以使用Experience Platform使用者介面檢視帳戶設定檔，並使用連線企業來源的帳戶ID或直接輸入來源詳細資料來搜尋特定帳戶。 如需有關如何在Experience Platform UI中檢視帳戶設定檔的詳細資訊，請參閱[帳戶設定檔UI指南](account-profile-ui-guide.md)。
 
 ## 建立及啟用帳戶對象
 

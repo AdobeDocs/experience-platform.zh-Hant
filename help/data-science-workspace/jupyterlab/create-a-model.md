@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;食譜;筆記本;數據科學工作環境;熱門話題;建立方式
+keywords: Experience Platform；JupyterLab；配方；筆記本；資料科學Workspace；熱門主題；建立配方
 solution: Experience Platform
 title: 使用JupyterLab Notebooks建立模型
 type: Tutorial
 description: 本教學課程將逐步引導您完成使用JupyterLab Notebooks配方產生器範本建立配方所需的步驟。
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2108'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 引入的概念：
 
-- **配方：**&#x200B;配方是模型規格的Adobe術語，是代表特定機器學習、AI演演算法或演演算法組合、處理邏輯以及建立和執行已訓練模型所需設定的頂層容器。
+- **配方：**&#x200B;配方是Adobe的模型規格術語，是代表特定機器學習、AI演演算法或演演算法組合、處理邏輯以及建立和執行已訓練模型所需設定的頂層容器。
 - **模型：**&#x200B;模型是機器學習方法的執行個體，其使用歷史資料和設定進行訓練，以針對業務使用案例進行解析。
 - **訓練：**&#x200B;訓練是從標籤資料中學習模式和深入分析的程式。
 - **評分：**&#x200B;評分是使用經過訓練的模型，從資料產生深入分析的程式。
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## [!UICONTROL 開始使用配方生成器]筆記本
+## 開始使用[!UICONTROL 配方產生器]筆記本
 
 在提供的資產資料夾中為Luma傾向模型`propensity_model.ipynb`。 使用JupyterLab中的上傳筆記本選項，上傳提供的型號並開啟筆記本。
 
@@ -60,14 +60,14 @@ ht-degree: 0%
 本教學課程的其餘部分涵蓋下列在傾向性模型筆記本中預先定義的檔案：
 
 - [需求檔案](#requirements-file)
-- [配置檔案](#configuration-files)
-- [訓練數據載入程式](#training-data-loader)
-- [評分數據載入程式](#scoring-data-loader)
+- [組態檔](#configuration-files)
+- [訓練資料載入器](#training-data-loader)
+- [評分資料載入器](#scoring-data-loader)
 - [管道檔案](#pipeline-file)
-- [求值器檔案](#evaluator-file)
-- [流量節省程式檔案](#data-saver-file)
+- [評估器檔案](#evaluator-file)
+- [資料儲存器檔案](#data-saver-file)
 
-以下影片教學課程說明 Luma 傾向模型筆記本：
+下列影片教學課程說明Luma傾向性模型筆記本：
 
 >[!VIDEO](https://video.tv.adobe.com/v/333570)
 
@@ -85,7 +85,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->您添加的庫或特定版本可能與上述資料庫不相容。 此外，如果您選擇手動建立環境檔案，則不允許覆寫`name`欄位。
+>您新增的程式庫或特定版本可能與上述程式庫不相容。 此外，如果您選擇手動建立環境檔案，則不允許覆寫`name`欄位。
 
 對於Luma傾向性機型筆記型電腦，不需要更新需求。
 
@@ -93,48 +93,48 @@ data_access_sdk_python
 
 組態檔`training.conf`和`scoring.conf`是用來指定您要用來訓練和評分以及新增超引數的資料集。 培訓和評分有不同的設定。
 
-為了使模型培訓運行，必須提供 `trainingDataSetId`、 `ACP_DSW_TRAINING_XDM_SCHEMA`和 `tenantId`。 此外，對於評分，必須提供 `scoringDataSetId`、 `tenantId`和 `scoringResultsDataSetId `。
+為了讓模型執行訓練，您必須提供`trainingDataSetId`、`ACP_DSW_TRAINING_XDM_SCHEMA`和`tenantId`。 此外，若要評分，您必須提供`scoringDataSetId`、`tenantId`和`scoringResultsDataSetId `。
 
-若要查找資料集 ID 和綱要 ID，請轉到左側導覽欄（資料夾圖示下）筆記本中的數據標籤 ![“數據標籤](../images/jupyterlab/create-recipe/dataset-tab.png) ”。 需提供三種不同的 資料集 ID。 用於 `scoringResultsDataSetId` 商店模型評分結果，應為空資料集。 這些數據集之前已在必需 [資產](#assets) 步驟中創建。
+若要尋找資料集和結構描述ID，請前往左側導覽列（資料夾圖示下）之Notebooks內的資料標籤![資料標籤](../images/jupyterlab/create-recipe/dataset-tab.png)。 需要提供三個不同的資料集ID。 `scoringResultsDataSetId`是用來儲存模型評分結果，且應為空白資料集。 這些資料集先前是在[必要資產](#assets)步驟中建立的。
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-可以在Adobe Experience Platform架構和&#x200B;**[數據集**](https://platform.adobe.com/dataset/overview)選項卡下&#x200B;**[找到[相同的資訊。](https://platform.adobe.com/)**](https://platform.adobe.com/schema)
+在&#x200B;**[結構描述](https://platform.adobe.com/schema)**&#x200B;和&#x200B;**[資料集](https://platform.adobe.com/dataset/overview)**&#x200B;索引標籤下的[Adobe Experience Platform](https://platform.adobe.com/)中可以找到相同的資訊。
 
-比賽結束后，您的培訓和得分配置應類似於以下螢幕擷圖：
+競爭後，您的訓練和評分設定應類似於以下熒幕擷圖：
 
-![配置](../images/jupyterlab/create-recipe/config.png)
+![組態](../images/jupyterlab/create-recipe/config.png)
 
-預設情況下，在訓練和評分數據時會為您設置以下配置參數：
+根據預設，當您訓練和評分資料時，系統會為您設定下列設定引數：
 
 - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## 了解訓練數據載入程式 {#training-data-loader}
+## 瞭解訓練資料載入器 {#training-data-loader}
 
-訓練數據載入程式的目的是實例化用於創建機器學習模型的數據。 通常，訓練資料載入程序會完成兩項任務：
+「培訓資料載入器」的目的是將用來建立機器學習模型的資料例項化。 通常，訓練資料載入器會完成兩項工作：
 
-- 正在從[!DNL Platform]載入資料
+- 正在從[!DNL Experience Platform]載入資料
 - 資料準備和功能工程
 
-以下兩節將介紹如何載入數據和準備數據。
+以下兩個區段將過載資料和資料準備。
 
-### 載入數據 {#loading-data}
+### 正在載入資料 {#loading-data}
 
-此步驟使用 [pandas 數據幀](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 可以使用 SDK （`platform_sdk`） 從[!DNL Platform][!DNL Adobe Experience Platform]檔案載入資料，也可以使用 pandas&#39; `read_csv()` or `read_json()` 函數從外部源載入數據。
+此步驟使用[熊貓資料流](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 可以使用[!DNL Experience Platform] SDK (`platform_sdk`)從[!DNL Adobe Experience Platform]中的檔案載入資料，或是使用熊貓`read_csv()`或`read_json()`函式的外部來源載入資料。
 
-- [[!DNL Platform SDK]](#platform-sdk)
+- [[!DNL Experience Platform SDK]](#platform-sdk)
 - [外部來源](#external-sources)
 
 >[!NOTE]
 >
 >在配方產生器筆記本中，資料是透過`platform_sdk`資料載入器載入。
 
-### [!DNL Platform] SDK {#platform-sdk}
+### [!DNL Experience Platform] SDK {#platform-sdk}
 
-如需有關使用`platform_sdk`資料載入器的深入教學課程，請造訪[Platform SDK指南](../authoring/platform-sdk.md)。 本教學課程提供有關建置驗證、基本讀取資料和基本寫入資料的資訊。
+如需使用`platform_sdk`資料載入器的深入教學課程，請造訪[Experience Platform SDK指南](../authoring/platform-sdk.md)。 本教學課程提供有關建置驗證、基本讀取資料和基本寫入資料的資訊。
 
 ### 外部來源 {#external-sources}
 
@@ -158,7 +158,7 @@ df = pd.read_json(data)
 
 ## 訓練資料載入器檔案
 
-在此範例中，資料是使用Platform SDK載入。 您可以包含行來在頁面頂端匯入程式庫：
+在此範例中，資料是使用Experience Platform SDK載入。 您可以包含行來在頁面頂端匯入程式庫：
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
@@ -177,7 +177,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->如[組態檔區段](#configuration-files)中所述，當您使用`client_context = get_client_context(config_properties)`從Experience Platform存取資料時，會為您設定下列組態引數：
+>如[組態檔區段](#configuration-files)中所述，當您使用`client_context = get_client_context(config_properties)`從Experience Platform存取資料時，已為您設定下列組態引數：
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -187,7 +187,7 @@ def load(config_properties):
 
 ### 資料準備和功能工程 {#data-preparation-and-feature-engineering}
 
-載入資料後，需要清理資料並做好資料準備。 在此範例中，模型的目標是預測客戶是否會訂購產品。 因為模型未檢視特定產品，所以您不需要`productListItems`，因此會捨棄該欄。 接著，會捨棄只包含單一值或單一欄中兩個值的其他欄。 培訓模型時，請務必僅保留有助於預測目標的有用數據。
+載入資料後，需要清理資料並做好資料準備。 在此範例中，模型的目標是預測客戶是否會訂購產品。 因為模型未檢視特定產品，所以您不需要`productListItems`，因此會捨棄該欄。 接著，會捨棄只包含單一值或單一欄中兩個值的其他欄。 在訓練模型時，請務必僅保留有助於預測目標的有用資料。
 
 ![資料準備的範例](../images/jupyterlab/create-recipe/data_prep.png)
 
@@ -195,7 +195,7 @@ def load(config_properties):
 
 ![歷程分界](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
-劃界完成後，將標記數據並創建歷程。
+分界完成後，資料會加上標籤，並建立歷程。
 
 ![為資料加上標籤](../images/jupyterlab/create-recipe/label_data.png)
 
@@ -213,7 +213,7 @@ def load(config_properties):
 
 `pipeline.py`檔案包含訓練和評分的邏輯。
 
-培訓的目的是使用培訓 資料集中的特徵和標註創建模型。 選擇訓練模型後，您必須將x和y訓練資料集調整為適合模型，此函式會傳回經過訓練的模型。
+培訓的目的是使用培訓資料集中的功能和標籤來建立模型。 選擇訓練模型後，您必須將x和y訓練資料集調整為適合模型，此函式會傳回經過訓練的模型。
 
 >[!NOTE]
 > 
@@ -221,29 +221,29 @@ def load(config_properties):
 
 ![def列車](../images/jupyterlab/create-recipe/def_train.png)
 
-`score()`函式應包含評分演演算法，並傳回測量以指出模型執行的成功程度。 `score()`函式使用評分資料集標籤和訓練的模型來產生一組預測功能。 然後，將這些預測值與評分資料集中的實際功能進行比較。 在此示例中，該 `score()` 函數使用經過訓練的模型，使用評分資料集中的標籤來預測特徵。 將返回預測要素。
+`score()`函式應包含評分演演算法，並傳回測量以指出模型執行的成功程度。 `score()`函式使用評分資料集標籤和訓練的模型來產生一組預測功能。 然後，將這些預測值與評分資料集中的實際功能進行比較。 在此範例中，`score()`函式會使用經過訓練的模型，使用評分資料集中的標籤來預測功能。 會傳回預測特徵。
 
 ![定義分數](../images/jupyterlab/create-recipe/def_score.png)
 
-## 求值器檔案 {#evaluator-file}
+## 評估器檔案 {#evaluator-file}
 
-該文件 `evaluator.py` 包含您希望如何評估已訓練方式以及如何拆分訓練資料的邏輯。
+`evaluator.py`檔案包含您要如何評估訓練過的配方，以及如何分割訓練資料的邏輯。
 
-### 拆分資料集 {#split-the-dataset}
+### 分割資料集 {#split-the-dataset}
 
-培訓 的數據準備階段需要拆分要用於培訓和測試的資料集。 此 `val` 數據在訓練模型后隱式用於評估模型。 此過程與評分分開。
+訓練的資料準備階段需要分割資料集，以用於訓練和測試。 此`val`資料在訓練後隱含用於評估模型。 此程式與評分不同。
 
-本部分顯示將數據 `split()` 載入到筆記本，然後通過刪除資料集中不相關的列來清理數據的函數。 從那裡，您可以執行特徵工程，這是從數據中的現有原始特徵創建其他相關特徵的過程。
+此區段顯示將資料載入筆記本的`split()`函式，接著移除資料集中不相關的欄以清除資料。 從那裡，您可以執行特徵工程，即從資料中的現有原始特徵建立額外相關特徵的程式。
 
-![分體功能](../images/jupyterlab/create-recipe/split.png)
+![分割函式](../images/jupyterlab/create-recipe/split.png)
 
 ### 評估經過訓練的模型 {#evaluate-the-trained-model}
 
-`evaluate()`函式會在模型訓練後執行，並傳回量度以指出模型執行的成功程度。 `evaluate()`函式使用測試資料集標籤和訓練好的模型來預測一組功能。 然後將這些預測值與測試資料集中的實際特徵進行比較。 在這裡範例中，使用的量度為 `precision`、 `recall`、 `f1`和 `accuracy`。 請注意，該函數返回一個 `metric` 包含評估指標數位的物件。 這些指標用於評估經過訓練的模型的性能。
+`evaluate()`函式會在模型訓練後執行，並傳回量度以指出模型執行的成功程度。 `evaluate()`函式使用測試資料集標籤和訓練好的模型來預測一組功能。 然後，將這些預測值與測試資料集中的實際功能進行比較。 在此範例中，使用的量度為`precision`、`recall`、`f1`和`accuracy`。 請注意，此函式傳回包含評估量度陣列的`metric`物件。 這些量度用於評估經過訓練的模型的執行效果。
 
-![評價](../images/jupyterlab/create-recipe/evaluate.png)
+![評估](../images/jupyterlab/create-recipe/evaluate.png)
 
-新增 `print(metric)` 可讓您視圖量度結果。
+新增`print(metric)`可讓您檢視量度結果。
 
 ![個量度結果](../images/jupyterlab/create-recipe/evaluate_metric.png)
 
@@ -269,11 +269,11 @@ def load(config_properties):
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-選取&#x200B;**[!UICONTROL 建立配方]**&#x200B;後，系統會提示您輸入配方名稱。 此名稱代表在[!DNL Platform]上建立的實際配方。
+選取&#x200B;**[!UICONTROL 建立配方]**&#x200B;後，系統會提示您輸入配方名稱。 此名稱代表在[!DNL Experience Platform]上建立的實際配方。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-選擇「 **[!UICONTROL 確定]**」後，方式創建過程將開始。 這可能需要一些時間，並且會顯示進度列來取代建立配方按鈕。 完成後，您可以選取&#x200B;**[!UICONTROL 檢視配方]**&#x200B;按鈕，帶您進入&#x200B;**[!UICONTROL ML模型]**&#x200B;下的&#x200B;**[!UICONTROL 配方]**&#x200B;標籤
+一旦您選取&#x200B;**[!UICONTROL 確定]**，配方建立程式就會開始。 這可能需要一些時間，並且會顯示進度列來取代建立配方按鈕。 完成後，您可以選取&#x200B;**[!UICONTROL 檢視配方]**&#x200B;按鈕，帶您進入&#x200B;**[!UICONTROL ML模型]**&#x200B;下的&#x200B;**[!UICONTROL 配方]**&#x200B;標籤
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 

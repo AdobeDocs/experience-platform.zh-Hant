@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 結構描述登入API指南
 description: Schema Registry API可讓開發人員以程式設計方式管理Adobe Experience Platform中的所有結構描述和相關的Experience Data Model (XDM)資源。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1144'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 [!DNL Schema Registry]用於存取Adobe Experience Platform中的結構描述資料庫，提供可存取所有可用資料庫資源的使用者介面和RESTful API。
 
-Schema Registry API提供數個端點，可讓您以程式設計方式管理Platform中可供您使用的所有結構描述和相關的Experience Data Model (XDM)資源。 這包括Adobe、[!DNL Experience Platform]個合作夥伴以及您使用之應用程式的廠商所定義的專案。
+Schema Registry API提供數個端點，可讓您以程式設計方式管理Experience Platform中可供您使用的所有結構描述和相關的Experience Data Model (XDM)資源。 這包括Adobe、[!DNL Experience Platform]個合作夥伴以及您使用之應用程式的廠商所定義的專案。
 
 這些端點概述如下。 如需詳細資訊，請瀏覽個別端點指南，並參閱[快速入門手冊](./getting-started.md)，以取得必要標頭、讀取範例API呼叫等重要資訊。
 
@@ -27,7 +27,7 @@ Schema Registry API提供數個端點，可讓您以程式設計方式管理Plat
 
 ## 結構描述
 
-XDM結構描述會呈現並驗證擷取至Platform的資料結構和格式。 結構描述由一個類別和零個或多個結構描述欄位群組組成。 您可以使用`/schemas`端點建立、檢視、編輯和刪除結構描述。 若要瞭解如何使用此端點，請參閱[結構描述端點指南](./schemas.md)。
+XDM結構描述會呈現並驗證擷取至Experience Platform的資料結構和格式。 結構描述由一個類別和零個或多個結構描述欄位群組組成。 您可以使用`/schemas`端點建立、檢視、編輯和刪除結構描述。 若要瞭解如何使用此端點，請參閱[結構描述端點指南](./schemas.md)。
 
 如需如何在Schema Registry API中手動建立完整結構描述的逐步指南，包括建立和新增欄位群組和資料型別，請參閱[API結構描述建立教學課程](../tutorials/create-schema-api.md)。
 
@@ -59,7 +59,7 @@ XDM結構描述會呈現並驗證擷取至Platform的資料結構和格式。 �
 
 ## 聯合
 
-雖然Platform可讓您針對特定使用案例來撰寫結構描述，但也允許您為屬於特定類別的結構描述撰寫「聯合」。 聯合結構描述會將共用相同類別的所有結構描述的欄位彙總到單一表示中。 藉由啟用結構描述以搭配[即時客戶設定檔](../../profile/home.md)使用，該結構描述會成為其特定類別的聯集。 因此，聯合結構描述不能直接編輯，並且只能受到在設定檔中包含或排除使用結構描述的影響。
+雖然Experience Platform可讓您針對特定使用案例來撰寫結構描述，但也允許您為屬於特定類別的結構描述撰寫「聯合」。 聯合結構描述會將共用相同類別的所有結構描述的欄位彙總到單一表示中。 藉由啟用結構描述以搭配[即時客戶設定檔](../../profile/home.md)使用，該結構描述會成為其特定類別的聯集。 因此，聯合結構描述不能直接編輯，並且只能受到在設定檔中包含或排除使用結構描述的影響。
 
 若要瞭解如何在結構描述登入API中檢視聯合，請參閱[聯合端點指南](./unions.md)。
 
@@ -93,7 +93,7 @@ XDM結構描述會呈現並驗證擷取至Platform的資料結構和格式。 �
 
 ## 稽核記錄
 
-「結構描述登入」會維護不同更新之間對資源（類別、欄位群組、資料型別或結構描述）發生的所有變更記錄。 您可以在此端點的GET要求路徑中提供特定資源的`$id`或`meta:altId`，以擷取其記錄。
+「結構描述登入」會維護不同更新之間對資源（類別、欄位群組、資料型別或結構描述）發生的所有變更記錄。 您可以在GET要求至此端點的路徑中提供特定資源的`$id`或`meta:altId`，以擷取其記錄。
 
 請參閱[稽核記錄端點指南](./audit-log.md)，以取得有關使用此端點的詳細資訊。
 

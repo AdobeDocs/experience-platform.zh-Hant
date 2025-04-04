@@ -2,9 +2,9 @@
 title: 查詢記錄
 description: 每次執行查詢時都會自動產生查詢記錄，並可透過UI取得查詢記錄以協助疑難排解。 本檔案概述如何使用及導覽UI的「查詢服務記錄檔」區段。
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform會維護透過API和UI發生的所有查詢事件的�
 >
 >預設會排除系統查詢和控制面板查詢。 請參閱[篩選器](#filter-logs)區段，瞭解如何根據您的設定調整顯示的記錄檔。
 
-![顯示查詢和記錄檔的平台UI。](../images/ui/query-log/logs.png)
+![反白顯示查詢和記錄檔的Experience Platform UI。](../images/ui/query-log/logs.png)
 
 ## 自訂和搜尋 {#customize-and-search}
 

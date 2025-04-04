@@ -2,10 +2,10 @@
 title: Adobe Experience Cloud Identity Service擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Experience Cloud Identity服務標籤擴充功能。
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 73%
+source-wordcount: '793'
+ht-degree: 75%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 請使用此參考資料來瞭解有關設定Adobe Experience Cloud ID擴充功能的資訊，以及使用此擴充功能建立規則時可用的選項。
 
-使用此擴充功能整合Experience Cloud身分識別服務與您的屬性。 使用Experience CloudIdentity Service，您可以為網站訪客建立並儲存唯一的永久性識別碼。
+使用此擴充功能整合Experience Cloud Identity Service與您的屬性。 使用Experience Cloud Identity Service，您可以為網站訪客建立並儲存唯一的永久性識別碼。
 
 ## 設定 Experience Cloud ID 擴充功能
 
 本節提供設定 Experience Cloud ID 擴充功能時可用選項的參考資料。
 
-如果尚未安裝Experience Cloud識別碼擴充功能，請開啟您的屬性，然後選取[擴充功能] > [目錄] ]**，將游標停留在Experience Cloud識別碼擴充功能上，然後選取[安裝]****。**[!UICONTROL 
+如果尚未安裝Experience Cloud ID擴充功能，請開啟屬性，然後選取「**[!UICONTROL 擴充功能>目錄]**」，將游標停留在Experience Cloud ID擴充功能上，然後選取「**[!UICONTROL 安裝]**」。
 
 若要設定擴充功能，請開啟[擴充功能]索引標籤，將游標停留在擴充功能上，然後選取[設定]。****
 
@@ -49,7 +49,7 @@ ht-degree: 73%
 
 「加入宣告」選項可決定是否要求訪客在您的網站上同意使用 Adobe 服務，包括是否要建立追蹤訪客活動的 Cookie。
 
-「加入宣告」是所有平台解決方案用戶端程式庫的集中式參考點，能決定訪客瀏覽您的網站時，系統能否在使用者的裝置或瀏覽器上建立 Cookie。「加入宣告」不支援收集或儲存使用者的同意偏好設定。
+「加入宣告」是所有Experience Platform解決方案使用者端程式庫的集中式參考點，能決定訪客瀏覽您的網站時，系統能否在使用者的裝置或瀏覽器上建立Cookie。 「加入宣告」不支援收集或儲存使用者的同意偏好設定。
 
 **要啟用「加入宣告」功能嗎？**
 
@@ -89,7 +89,7 @@ ht-degree: 73%
 
 ### 變數
 
-將名稱值配對設定為 Experience Cloud ID 例項屬性。使用下拉式選單選取變數，然後輸入或選取值。如需每個變數的詳細資訊，請參閱[Experience CloudIdentity Service檔案](https://experiencecloud.adobe.com/resources/help/zh_TW/mcvid/mcvid-overview.html)。
+將名稱值配對設定為 Experience Cloud ID 例項屬性。使用下拉式選單選取變數，然後輸入或選取值。如需每個變數的詳細資訊，請參閱[Experience Cloud Identity Service檔案](https://experiencecloud.adobe.com/resources/help/zh_TW/mcvid/mcvid-overview.html)。
 
 ## Experience Cloud ID 擴充功能動作類型
 

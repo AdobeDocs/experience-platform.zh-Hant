@@ -2,9 +2,9 @@
 title: 標準儀表板
 description: 瞭解如何建立及管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，將關鍵量度視覺化。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## 建立自訂儀表板
 
-若要建立自訂儀表板，請先導覽至儀表板詳細目錄。 從Platform UI的左側導覽列中選取&#x200B;**[!UICONTROL 儀表板]**，接著選取&#x200B;**[!UICONTROL 建立儀表板]**。
+若要建立自訂儀表板，請先導覽至儀表板詳細目錄。 從Experience Platform UI的左側導覽中選取&#x200B;**[!UICONTROL 儀表板]**，接著選取&#x200B;**[!UICONTROL 建立儀表板]**。
 
 ![在左側導覽中顯示儀表板並反白顯示「建立儀表板」的控制面板詳細目錄。](./images/standard-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ Widget Composer工作區隨即顯示。 接著，選取&#x200B;**[!UICONTROL 選
 
 #### 選取資料模型 {#select-data-model}
 
-[!UICONTROL 選取資料模型]對話方塊就會顯示。 從左欄選取資料模型，以顯示所有可用表格的預覽清單。 Real-time Customer Data Platform的預先設定資料模型名為[!UICONTROL CDPInsights]。
+[!UICONTROL 選取資料模型]對話方塊就會顯示。 從左欄選取資料模型，以顯示所有可用表格的預覽清單。 Real-Time Customer Data Platform的預先設定資料模型名為[!UICONTROL CDPInsights]。
 
 >[!TIP]
 >
@@ -152,7 +152,7 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 ![包含自訂Widget和醒目提示儲存按鈕的使用者定義儀表板。](./images/standard-dashboards/user-defined-dashboard.png)
 
-為了確保Adobe Real-time Customer Data Platform見解儀表板的每個查詢都有足夠的資源來有效執行，API會透過為每個查詢指派並行位置來追蹤資源使用情況。 系統最多可以處理四個同時查詢，因此在任何給定時間都有四個同時查詢空位可用。 查詢會根據並行位置放入佇列中，然後在佇列中等待，直到有足夠的並行位置可用。
+為了確保Adobe Real-Time Customer Data Platform見解儀表板的每個查詢都有足夠的資源來有效執行，API會透過為每個查詢指派並行位置來追蹤資源使用情況。 系統最多可以處理四個同時查詢，因此在任何給定時間都有四個同時查詢空位可用。 查詢會根據並行位置放入佇列中，然後在佇列中等待，直到有足夠的並行位置可用。
 
 ### 編輯、複製或刪除Widget {#duplicate}
 
@@ -172,7 +172,7 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 >[!NOTE]
 >
->複製可讓您自訂深入分析的屬性，以建立唯一的Widget，而不需從頭開始。 如果複製Widget，它會出現在您的自訂儀表板中。 然後，您可以選取新Widget的省略符號，接著選取&#x200B;**[!UICONTROL 編輯]**，以自訂您的分析。
+>複製可讓您自訂insight的屬性，以建立唯一的Widget，而不需從頭開始。 如果複製Widget，它會出現在您的自訂儀表板中。 接著，您可以選取新Widget的省略符號，接著選取&#x200B;**[!UICONTROL 編輯]**，以自訂您的insight。
 
 ## 後續步驟和其他資源
 

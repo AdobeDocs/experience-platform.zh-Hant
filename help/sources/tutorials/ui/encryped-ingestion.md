@@ -3,9 +3,9 @@ title: 將加密資料內嵌在來源UI Workspace中
 description: 瞭解如何將加密資料內嵌在來源UI工作區中。
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1457'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 >
 >Beta版支援來源UI中的加密資料擷取。 功能和檔案可能會有所變更。
 
-您可以使用雲端儲存批次來源，將加密的資料檔案和資料夾擷取到Adobe Experience Platform。 透過加密的資料擷取，您可以運用非對稱的加密機制，將批次資料安全地傳輸至Experience Platform。 支援的非對稱加密機製為PGP和GPG。
+您可以使用雲端儲存批次來源，將加密的資料檔案和資料夾擷取到Adobe Experience Platform。 透過加密的資料擷取，您可以運用非對稱加密機制，將批次資料安全地傳輸至Experience Platform。 支援的非對稱加密機製為PGP和GPG。
 
 閱讀本指南，瞭解如何使用UI將加密資料與雲端儲存批次來源一起內嵌。
 
@@ -30,11 +30,11 @@ ht-degree: 6%
 
 ### 高階大綱
 
-* 使用Experience PlatformUI中的來源工作區來建立加密金鑰組。
+* 使用Experience Platform UI中的來源工作區來建立加密金鑰組。
    * 或者，您也可以建立自己的簽署驗證金鑰組，為您的加密資料提供額外的安全層。
 * 使用加密金鑰組中的公開金鑰來加密資料。
 * 將加密的資料放入雲端儲存空間。 在此步驟中，您也必須確保在雲端儲存空間中有資料的範例檔案，可作為參考，將您的來源資料對應至體驗資料模型(XDM)結構描述。
-* 使用您的雲端儲存批次來源，並在Experience PlatformUI的來源工作區中開始資料擷取流程。
+* 使用您的雲端儲存批次來源，並在Experience Platform UI的來源工作區中開始資料擷取程式。
 * 在建立來源連線的過程中，請提供與您用來加密資料的公開金鑰對應的金鑰ID。
    * 如果您也使用簽署驗證金鑰配對機制，則您也必須提供對應至加密資料的簽署驗證金鑰ID。
 * 繼續進行資料流建立步驟。
@@ -52,11 +52,11 @@ ht-degree: 6%
 
 加密金鑰組是一種非對稱的加密機制，由公開金鑰和私密金鑰組成。 公開金鑰用來加密資料，而私密金鑰則用來解密所述資料。
 
-您可以透過Experience Platform UI建立加密金鑰組。 產生後，您將會收到公開金鑰和對應的金鑰ID。 使用公開金鑰來加密資料，然後在您正在擷取加密資料時，使用金鑰ID來確認您的身分。 私密金鑰會自動移至Experience Platform，並儲存在安全的儲存庫中，且只有當資料準備好解密時，才會使用。
+您可以透過Experience Platform UI建立您的加密金鑰組。 產生後，您將會收到公開金鑰和對應的金鑰ID。 使用公開金鑰來加密資料，然後在您正在擷取加密資料時，使用金鑰ID來確認您的身分。 私密金鑰會自動傳送至Experience Platform，並儲存在安全的儲存庫中，且只有當資料準備好解密時，才會使用。
 
 >[!ENDSHADEBOX]
 
-在Platform UI中，導覽至來源工作區，然後從頂端標題中選取[!UICONTROL 金鑰組]。
+在Experience Platform UI中，導覽至來源工作區，然後從頂端標題中選取[!UICONTROL 索引鍵配對]。
 
 ![已選取「索引鍵配對」標頭的來源目錄。](../../images/tutorials/edi/catalog.png)
 
@@ -91,7 +91,7 @@ ht-degree: 6%
 
 **什麼是簽署驗證金鑰？**
 
-簽章驗證金鑰是另一種涉及私密金鑰與公開金鑰的加密機制。 在這種情況下，您可以建立您的簽署驗證金鑰組，並使用私密金鑰來簽署並提供額外的資料加密層。 然後，您會將對應的公開金鑰共用給Experience Platform。 在內嵌期間，Experience Platform將使用公開金鑰來驗證與您的私密金鑰相關聯的簽章。
+簽章驗證金鑰是另一種涉及私密金鑰與公開金鑰的加密機制。 在這種情況下，您可以建立您的簽署驗證金鑰組，並使用私密金鑰來簽署並提供額外的資料加密層。 然後，您會將對應的公開金鑰共用至Experience Platform。 在內嵌期間，Experience Platform將使用公開金鑰來驗證與您的私密金鑰相關的簽名。
 
 >[!ENDSHADEBOX]
 
@@ -136,7 +136,7 @@ ht-degree: 6%
 
 ![來源工作流程的「選取資料」步驟，其中選取要擷取的加密資料檔案。](../../images/tutorials/edi/select_data.png)
 
-接著，從來源資料中選取範例檔案。 由於您的資料已加密，Experience Platform將需要範例檔案才能建立可對應至您的來源資料的XDM結構描述。
+接著，從來源資料中選取範例檔案。 由於您的資料已加密，Experience Platform將需要範例檔案來建立可對應至您的來源資料的XDM結構描述。
 
 ![「此檔案是否已加密？」 啟用切換並選取「選取範例檔案」按鈕。](../../images/tutorials/edi/select_sample_file.png)
 
@@ -165,4 +165,4 @@ ht-degree: 6%
 
 ## 後續步驟
 
-閱讀本檔案後，您現在可以從雲端儲存空間批次來源擷取加密資料至Experience Platform。 如需有關如何使用API擷取加密資料的資訊，請參閱[使用 [!DNL Flow Service] API](../api/encrypt-data.md)擷取加密資料的指南。 如需Experience Platform來源的一般資訊，請閱讀[來源概觀](../../home.md)。
+閱讀本檔案後，您現在可以從雲端儲存空間批次來源將加密資料擷取到Experience Platform。 如需有關如何使用API擷取加密資料的資訊，請參閱[使用 [!DNL Flow Service] API](../api/encrypt-data.md)擷取加密資料的指南。 如需Experience Platform來源的一般資訊，請閱讀[來源概觀](../../home.md)。

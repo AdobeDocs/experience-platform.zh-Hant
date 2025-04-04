@@ -5,10 +5,10 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: 25d74df335e3d7930b7f3a4f4836bd20556780ed
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 44%
+source-wordcount: '698'
+ht-degree: 45%
 
 ---
 
@@ -193,13 +193,13 @@ ht-degree: 44%
    * [地理](./data-types/geo.md)
    * [身分識別](./data-types/identity.md)
    * [實作細節](./data-types/implementation-details.md)
-   * [曝光](./data-types/impressions.md)
+   * [曝光數](./data-types/impressions.md)
    * [內部網站搜尋](./data-types/internal-site-search.md)
    * [索引鍵值配對](./data-types/key-value-pair.md)
    * [狀態清單結束集合](./data-types/list-of-states-end-collection.md)
    * [狀態清單開始集合](./data-types/list-of-states-start-collection.md)
    * [行銷](./data-types/marketing.md)
-   * [測量](./data-types/measure.md)
+   * [衡量](./data-types/measure.md)
    * [媒體收集詳細資料](./data-types/media-collection-details.md)
    * [媒體事件資訊](./data-types/media-event-information.md)
    * [媒體報告細節](./data-types/media-reporting-details.md)
@@ -284,4 +284,4 @@ ht-degree: 44%
    * [建立臨時結構描述](tutorials/ad-hoc.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+* [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

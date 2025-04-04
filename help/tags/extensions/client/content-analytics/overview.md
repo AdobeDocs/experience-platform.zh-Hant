@@ -2,9 +2,9 @@
 title: Adobe Content Analytics擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Content Analytics標籤擴充功能。
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!DNL Adobe Content Analytics]標籤延伸允許追蹤網站上的內容相關事件。 此擴充功能會透過Experience Platform Edge Network，從Web屬性將內容資料（體驗和資產）傳送至Adobe Experience Cloud中的資料流。
 
-擴充功能可讓您將特定內容相關事件資料串流到Platform，以便在Customer Journey Analytics的內容分析報表中使用該資料。
+擴充功能可讓您將特定內容相關事件資料串流至Experience Platform，以便在Customer Journey Analytics的內容分析報表中使用該資料。
 
 本檔案說明如何在標籤UI中設定標籤擴充功能。
 

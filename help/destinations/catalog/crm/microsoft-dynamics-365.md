@@ -4,10 +4,10 @@ title: Microsoft Dynamics 365連線
 description: Microsoft Dynamics 365目的地可讓您匯出帳戶資料，並在Microsoft Dynamics 365中根據您的業務需求加以啟用。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2019'
-ht-degree: 1%
+source-wordcount: '2038'
+ht-degree: 2%
 
 ---
 
@@ -31,11 +31,11 @@ ht-degree: 1%
 
 在啟用資料至[!DNL Dynamics 365]目的地之前，您必須在[!DNL Experience Platform]中建立[結構描述](/help/xdm/schema/composition.md)、[資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)和[對象](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)。
 
-如果您需要對象狀態的指引，請參閱[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的Adobe檔案。
+如果您需要對象狀態的指引，請參閱Adobe關於[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的檔案。
 
 ### [!DNL Microsoft Dynamics 365]必要條件 {#prerequisites-destination}
 
-請注意[!DNL Dynamics 365]中的下列必要條件，以便從Platform匯出資料至您的[!DNL Dynamics 365]帳戶：
+請注意[!DNL Dynamics 365]中的下列必要條件，以便從Experience Platform將資料匯出至您的[!DNL Dynamics 365]帳戶：
 
 #### 您必須擁有[!DNL Microsoft Dynamics 365]帳戶 {#prerequisites-account}
 
@@ -94,7 +94,7 @@ ht-degree: 1%
 
 本節說明您可以匯出至此目的地的所有對象。
 
-此目的地支援啟動所有透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。
+此目的地支援啟用所有透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -102,8 +102,8 @@ ht-degree: 1%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 根據[對象排程](#schedule-audience-export-example)步驟期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Dynamics 365]中的每個對象狀態都會以來自平台的對應對象狀態更新。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 根據[對象排程](#schedule-audience-export-example)步驟期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Dynamics 365]中的每個對象狀態都會以來自Experience Platform的對應對象狀態更新。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -120,7 +120,7 @@ ht-degree: 1%
 ### 驗證目標 {#authenticate}
 
 若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**。
-![平台UI熒幕擷圖顯示如何驗證。](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
+![Experience Platform UI熒幕擷圖顯示如何驗證。](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 填寫以下必填欄位。 如需任何指引，請參閱[收集Dynamics 365認證](#gather-credentials)區段。
 * **[!UICONTROL 使用者端識別碼]**： [!DNL Azure Active Directory]應用程式的[!DNL Dynamics 365]使用者端識別碼。
@@ -134,7 +134,7 @@ ht-degree: 1%
 ### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
-![顯示目的地詳細資訊的平台UI熒幕擷取畫面。](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
+![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
@@ -157,17 +157,17 @@ ht-degree: 1%
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Dynamics 365]目的地，您必須完成欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL Dynamics 365]目的地欄位，請遵循下列步驟：
+若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Dynamics 365]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL Dynamics 365]目的地欄位，請遵循下列步驟：
 
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您會在畫面上看到新的對應列。
-   ![新增對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
+   ![新增對應之Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;類別並選取`contactid`。
-   ![Source對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
+   ![適用於Source對應的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選取您要將來源欄位對應到的目標欄位型別。
    * **[!UICONTROL 選取身分名稱空間]**：選取此選項可將您的來源欄位從清單對應至身分名稱空間。
-     ![平台UI熒幕擷取畫面顯示contactid的目標對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Experience Platform UI熒幕擷圖顯示連絡人的Target對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * 在您的XDM設定檔結構描述與[!DNL Dynamics 365]執行個體之間新增下列對應：
 
@@ -176,7 +176,7 @@ ht-degree: 1%
      | `contactid` | `contactid` | 是 |
 
    * **[!UICONTROL 選取自訂屬性]**：選取此選項可將您的來源欄位對應到您在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中定義的自訂屬性。 如需支援屬性的完整清單，請參閱[[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties)。
-     ![平台UI熒幕擷圖顯示電子郵件的目標對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
+     ![Experience Platform UI熒幕擷圖顯示電子郵件的Target對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
@@ -193,11 +193,11 @@ ht-degree: 1%
 
    * 以下顯示使用這些對應的範例：
 
-   ![顯示目標對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+   ![Experience Platform UI熒幕擷圖範例顯示Target對應。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### 排程對象匯出和範例 {#schedule-audience-export-example}
 
-在啟動工作流程的[[!UICONTROL 排程對象匯出]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟中，您必須手動將Platform對象對應到[!DNL Dynamics 365]中的自訂欄位屬性。
+在啟動工作流程的[[!UICONTROL 排程對象匯出]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟中，您必須手動將Experience Platform對象對應到[!DNL Dynamics 365]中的自訂欄位屬性。
 
 若要這麼做，請選取每個對象，然後在&#x200B;**[!UICONTROL 對應ID]**&#x200B;欄位中，從[!DNL Dynamics 365]輸入對應的自訂欄位屬性。
 
@@ -206,25 +206,25 @@ ht-degree: 1%
 >用於&#x200B;**[!UICONTROL 對應ID]**&#x200B;的值應該與[!DNL Dynamics 365]內建立的自訂欄位屬性名稱完全相符。 如果您需要尋找自訂欄位屬性的指引，請參閱[[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1)。
 
 範例如下：
-![顯示排程對象匯出的平台UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
+![Experience Platform UI熒幕擷圖範例，顯示排程對象匯出。](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
 
 ## 驗證資料匯出 {#exported-data}
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**以瀏覽目的地清單。
-   ![顯示瀏覽目的地的Platform UI熒幕擷圖。](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
+   ![Experience Platform UI熒幕擷圖顯示瀏覽目的地。](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
 
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL 已啟用]**。
-   ![顯示目的地資料流執行的平台UI熒幕擷取畫面。](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
+   ![Experience Platform UI熒幕擷圖顯示目的地資料流執行。](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
 1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
-   ![顯示目的地啟用資料的Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
+   ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在對象內建立的計數。
-   ![顯示對象的Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
+   ![顯示對象的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. 登入[!DNL Dynamics 365]網站，然後導覽至[!DNL Customers] > [!DNL Contacts]頁面，並檢查是否已新增對象的設定檔。 您可以看到根據[對象排程](#schedule-audience-export-example)步驟期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Dynamics 365]中的每個對象狀態已更新為來自Platform的對應對象狀態。
+1. 登入[!DNL Dynamics 365]網站，然後導覽至[!DNL Customers] > [!DNL Contacts]頁面，並檢查是否已新增對象的設定檔。 您可以看到根據[對象排程](#schedule-audience-export-example)步驟期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Dynamics 365]中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
    ![Dynamics 365 UI熒幕擷取畫面顯示「連絡人」頁面，其對象狀態已更新。](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## 資料使用與控管 {#data-usage-governance}
@@ -237,9 +237,9 @@ ht-degree: 1%
 
 檢查資料流執行時，如果收到下列錯誤訊息： `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![平台UI熒幕擷圖顯示錯誤請求錯誤。](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
+![Experience Platform UI熒幕擷圖顯示錯誤請求錯誤。](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-若要修正此錯誤，請確認您在[!DNL Dynamics 365]中為您的Platform對象提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;有效且存在於[!DNL Dynamics 365]內。
+若要修正此錯誤，請確認您在[!DNL Dynamics 365]中為Experience Platform對象提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;有效且存在於[!DNL Dynamics 365]中。
 
 ## 其他資源 {#additional-resources}
 
@@ -255,7 +255,7 @@ ht-degree: 1%
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2023 年 10 月 | 檔案更新 | 已更新指引，在[對應考量事項和範例](#mapping-considerations-example)步驟中，指出所有目標屬性名稱應為小寫。 |
+| 2023 年 10 月 | 文件更新 | 已更新指引，在[對應考量事項和範例](#mapping-considerations-example)步驟中，指出所有目標屬性名稱應為小寫。 |
 | 2023 年 8 月 | 功能和檔案更新 | 新增對未在[!DNL Dynamics 365]中預設方案內建立之自訂欄位的[!DNL Dynamics 365]自訂欄位首碼的支援。 已在[填寫目的地詳細資料](#destination-details)步驟中新增輸入欄位&#x200B;**[!UICONTROL 自訂字首]**。 (PLATIR-31602)。 |
 | 2022年11 | 首次發行 | 初始目的地版本和檔案發佈。 |
 

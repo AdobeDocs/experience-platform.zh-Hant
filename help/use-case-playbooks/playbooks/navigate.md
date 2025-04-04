@@ -4,16 +4,16 @@ title: 導覽至使用案例教戰手冊
 description: 瞭解如何在教戰手冊的收藏館中導覽，並開始使用勵志沙箱。
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
 
 # 導覽至使用案例教戰手冊
 
-所有Adobe Experience Platform客戶都可免費取得使用案例教戰手冊。 若要在Experience PlatformUI中存取豐富的使用案例教戰手冊，請從左側導覽中選取&#x200B;**[!UICONTROL 教戰手冊]**。
+所有Adobe Experience Platform客戶都可免費取得使用案例教戰手冊。 若要在Experience Platform UI中存取豐富的使用案例教戰手冊，請從左側導覽中選取&#x200B;**[!UICONTROL 教戰手冊]**。
 
 ![使用案例Playbook庫。](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
@@ -67,8 +67,8 @@ ht-degree: 2%
 
 ### 推播頻道介面
 
-確認通道設定是從Experience Platform或資料收集介面進行設定。 這是管道設定在資料收集環境中的樣子。
+確認頻道設定是從Experience Platform或資料收集介面設定。 這是管道設定在資料收集環境中的樣子。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您應會知道如何設定啟發靈感的沙箱，並熟悉存取Platform內使用案例教戰手冊的不同方式。 接下來，閱讀如何[選擇](/help/use-case-playbooks/playbooks/choose.md)正確的行動手冊。
+閱讀本檔案後，您應會知道如何設定啟發靈感的沙箱，並熟悉Experience Platform中存取使用案例教戰手冊的不同方式。 接下來，閱讀如何[選擇](/help/use-case-playbooks/playbooks/choose.md)正確的行動手冊。

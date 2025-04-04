@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；警報；目的地
 description: 您可以在建立資料流時訂閱警報，以接收有關流程執行的狀態、成功或失敗的警報訊息。
 title: 訂閱內容感知目的地警示
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '953'
 ht-degree: 8%
 
 ---
@@ -22,9 +22,9 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 參閱本檔案前，請先實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)：預先建立與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
-* [可觀察性](../../observability/home.md)： [!DNL Observability Insights]可讓您透過使用統計量度和事件通知來監視Platform活動。
-   * [警示](../../observability/alerts/overview.md)：當您的Platform作業達到特定條件集時（例如系統違反臨界值時會發生潛在問題），Platform可以將警示訊息傳送給貴組織中訂閱這些訊息的任何使用者。
+* [目的地](../home.md)：預先建立與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+* [可觀察性](../../observability/home.md)： [!DNL Observability Insights]可讓您透過使用統計量度和事件通知來監視Experience Platform活動。
+   * [警報](../../observability/alerts/overview.md)：當您的Experience Platform作業中達到特定條件集時（例如當系統違反臨界值時會發生潛在問題），Experience Platform可以將警報訊息傳送給組織中訂閱這些訊息的任何使用者。
 
 ## 訂閱 UI 中的警示 {#subscribe-destination-alerts}
 
@@ -36,7 +36,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 >[!IMPORTANT]
 >
->您必須為您的Platform帳戶啟用即時電子郵件通知，才能接收資料流程的電子郵件式警報通知。
+>您必須啟用Experience Platform帳戶的即時電子郵件通知，才能接收資料流程的電子郵件式警報通知。
 
 您可以在[目的地連線](connect-destination.md)工作流程的[!UICONTROL 設定新目的地]步驟期間，為資料流程啟用警示。
 
@@ -49,9 +49,9 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 * 對於串流目的地，只有[!DNL Activation Skipped Rate Exceeded]警報可用。
 * 針對以檔案為基礎的目的地，所有警報皆可使用。
 
-| 警報 | 說明 |
+| 警示 | 說明 |
 | --- | --- |
-| 目的地資料流執行延遲 | 此警報會在目的地流程執行需要150分鐘以上的時間才會啟用對象時通知您。 |
+| 目標資料流執行延遲 | 此警報會在目的地流程執行需要150分鐘以上的時間才會啟用對象時通知您。 |
 | 目的地資料流執行失敗 | 將受眾啟用至目的地時發生錯誤，此警報會通知您。 |
 | 目的地流程執行成功 | 此警報會在對象成功啟用至目的地時通知您。 |
 | 目的地資料流執行開始 | 此警報會在目的地流程執行開始啟用對象時通知您。 |
@@ -63,9 +63,9 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 ### 在UI中接收警報 {#receiving-alerts-in-ui}
 
-警報會在UI中以Platform UI頂端標題中的通知圖示表示。 選取通知圖示以檢視有關資料流的特定警報訊息。
+警報會在UI中以Experience Platform UI頂端標題中的通知圖示表示。 選取通知圖示以檢視有關資料流的特定警報訊息。
 
-顯示Experience Platform](../assets/ui/alerts/notification.png)中通知圖示的![UI影像
+在Experience Platform中顯示通知圖示的![UI影像](../assets/ui/alerts/notification.png)
 
 此時會顯示通知面板，其中顯示您所建立之資料流上的狀態更新清單。
 

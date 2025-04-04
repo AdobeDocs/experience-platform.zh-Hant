@@ -2,9 +2,9 @@
 title: XDM中的敏感和個人資訊
 description: 瞭解關於Experience Data Model (XDM)中敏感個人資訊(SPI)和個人識別資訊(PII)的主要考量事項。
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Experience Data Model (XDM)提供用於Adobe Experience Platform的標準資料�
 
 XDM提供各種標準欄位群組和資料型別，以說明可強化客戶體驗的相關常用資料結構。 但是，如果建議的標準資源包含您不想包含在結構描述中的受限制欄位，則不必使用該資源。
 
-Platform可讓您定義自己的自訂欄位群組和資料型別，讓您在任何可用的標準資源無法滿足您的需求時，可以完全控制資料的結構。 請參閱下列檔案，以取得如何定義這些自訂資源的詳細資訊：
+Experience Platform可讓您定義自己的自訂欄位群組和資料型別，讓您在任何可用標準資源無法滿足您的需求時，可以完全控制資料的結構。 請參閱下列檔案，以取得如何定義這些自訂資源的詳細資訊：
 
 * [建立自訂欄位群組](../ui/resources/field-groups.md#create)
 * [建立自訂資料型別](../ui/resources/data-types.md#create)
@@ -54,4 +54,4 @@ Platform可讓您定義自己的自訂欄位群組和資料型別，讓您在任
 
 本檔案涵蓋XDM中敏感和個人資料的相關重要考量事項。 如需如何模型化您的結構以最符合業務使用案例的詳細資訊，請參閱[資料模型化最佳實務](./best-practices.md)指南。
 
-如需Experience Platform資料控管和隱私權功能的詳細資訊，請參閱[控管、隱私權及安全性](../../landing/governance-privacy-security/overview.md)的概觀。
+如需Experience Platform的資料控管和隱私權功能的詳細資訊，請參閱[控管、隱私權和安全性](../../landing/governance-privacy-security/overview.md)的概觀。

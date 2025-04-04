@@ -2,9 +2,9 @@
 title: 在臨時資料集中設定主要身分
 description: Adobe Experience Platform查詢服務可讓您直接透過SQL ALTER TABLE命令，為臨機操作結構描述資料集欄位設定身分或主要身分。 本檔案說明如何使用ALTER TABLE指令來設定主要身分或次要身分。
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform查詢服務可讓您使用SQL `ALTER TABLE`命令的�
 
 ## 新增限制 {#add-constraints}
 
-`ALTER TABLE`命令可讓您將資料集資料行標示為人員身分，然後使用SQL更新關聯的中繼資料，將該標籤作為主要身分使用。 若資料集是透過SQL建立，而非透過Platform UI直接從結構描述建立時，這個用法特別實用。 命令可用來確保您在Platform中的資料作業符合資料使用原則。
+`ALTER TABLE`命令可讓您將資料集資料行標示為人員身分，然後使用SQL更新關聯的中繼資料，將該標籤作為主要身分使用。 若資料集是透過SQL建立，而非直接透過Experience Platform UI從結構描述建立，此方法會特別實用。 命令可用來確保您在Experience Platform中的資料作業符合資料使用原則。
 
 **範例**
 

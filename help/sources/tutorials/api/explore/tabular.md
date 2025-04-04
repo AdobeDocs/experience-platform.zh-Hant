@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；來源；API；探索；
 title: 使用流量服務API探索表格Source
 description: 本教學課程使用流程服務API來探索表格來源的內容和結構。
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
-source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '471'
 ht-degree: 5%
 
 ---
@@ -22,16 +22,16 @@ ht-degree: 5%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../landing/api-guide.md)指南。
 
 ## 探索您的資料表
 
-您可以在提供來源的基本連線ID的同時，向[!DNL Flow Service] API發出GET要求，以擷取資料表結構的資訊。
+您可以在提供來源的基本連線ID的同時，對[!DNL Flow Service] API發出GET要求，以擷取資料表結構的資訊。
 
 **API格式**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會從您的來源傳回資料表陣列。 尋找您要帶入Platform的資料表，並記下其`path`屬性，因為您必須在下個步驟中提供該資料表以檢查其結構。
+成功的回應會從您的來源傳回資料表陣列。 尋找您要帶入Experience Platform的表格並記下其`path`屬性，因為您必須在下一個步驟中提供它以檢查其結構。
 
 ```json
 [
@@ -77,7 +77,7 @@ curl -X GET \
 ]
 ```
 
-## Inspect表格的結構
+## 檢查表格的結構
 
 若要檢查資料表的內容，請在將表格的路徑指定為查詢引數時，對[!DNL Flow Service] API執行GET要求。
 
@@ -188,7 +188,7 @@ curl -X GET \
 
 ## 後續步驟
 
-依照本教學課程，您已收集有關資料表結構和內容的資訊。 此外，您已擷取要擷取至Platform的表格路徑。 您可以使用此資訊建立來源連線和資料流，將您的資料匯入Platform。 如需有關如何使用[!DNL Flow Service] API建立來源連線和資料流的特定步驟，請參閱下列教學課程：
+依照本教學課程，您已收集有關資料表結構和內容的資訊。 此外，您已擷取要擷取至Experience Platform的表格路徑。 您可以使用此資訊建立來源連線和資料流，將您的資料匯入Experience Platform。 如需有關如何使用[!DNL Flow Service] API建立來源連線和資料流的特定步驟，請參閱下列教學課程：
 
 * [Advertising來源](../collect/advertising.md)
 * [CRM來源](../collect/crm.md)

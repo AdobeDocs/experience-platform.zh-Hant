@@ -3,7 +3,7 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: Facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 6%
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 ### 使用案例#1
 
-線上零售商想要透過社交平台觸及現有客戶，並根據他們先前的訂單向他們顯示個人化優惠。 線上零售商可從自己的CRM擷取電子郵件地址至Adobe Experience Platform、從自己的離線資料建立對象，並將這些對象傳送至[!DNL Facebook]社交平台，以最佳化其廣告支出。
+線上retailer想要透過社交平台觸及現有客戶，並根據他們先前的訂單向他們顯示個人化優惠。 線上retailer可從自己的CRM擷取電子郵件地址至Adobe Experience Platform，從自己的離線資料建立對象，並將這些對象傳送至[!DNL Facebook]社交平台，以最佳化其廣告支出。
 
 ### 使用案例#2
 
@@ -44,8 +44,8 @@ ht-degree: 6%
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 
 ## 支援的對象 {#supported-audiences}
@@ -98,8 +98,8 @@ ht-degree: 6%
 
 在[!DNL Facebook]中啟用電話號碼的方法有兩種：
 
-* **擷取原始電話號碼**：您可以將[!DNL E.164]格式的原始電話號碼擷取至[!DNL Platform]。 它們會在啟動時自動執行雜湊處理。 如果選擇此選項，請務必將原始電話號碼擷取到`Phone_E.164`名稱空間。
-* **擷取雜湊電話號碼**：您可以在擷取至[!DNL Platform]之前預先雜湊電話號碼。 如果選擇此選項，請務必將雜湊電話號碼擷取到`Phone_SHA256`名稱空間。
+* **擷取原始電話號碼**：您可以將[!DNL E.164]格式的原始電話號碼擷取至[!DNL Experience Platform]。 它們會在啟動時自動執行雜湊處理。 如果選擇此選項，請務必將原始電話號碼擷取到`Phone_E.164`名稱空間。
+* **擷取雜湊電話號碼**：您可以在擷取至[!DNL Experience Platform]之前預先雜湊電話號碼。 如果選擇此選項，請務必將雜湊電話號碼擷取到`Phone_SHA256`名稱空間。
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ ht-degree: 6%
 
 ## 電子郵件雜湊需求 {#email-hashing-requirements}
 
-您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Platform]個電子郵件地址雜湊。
+您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
 
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取總覽](/help/ingestion/batch-ingestion/overview.md)和[串流擷取總覽](/help/ingestion/streaming-ingestion/overview.md)。
 
@@ -122,8 +122,8 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->來自未雜湊名稱空間的資料在啟用時由[!DNL Platform]自動雜湊。
-> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。
+>來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
+> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
 > **[!UICONTROL 套用轉換]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
 
 ![套用對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
@@ -230,9 +230,9 @@ Facebook權杖每60天過期一次。 代號過期後，將資料匯出至目的
 選取來源欄位：
 
 * 如果您使用的電子郵件地址未進行雜湊處理，請選取`Email`名稱空間作為來源身分。
-* 如果您根據[!DNL Facebook] [電子郵件雜湊需求](#email-hashing-requirements)將資料擷取的客戶電子郵件地址雜湊至[!DNL Platform]，請選取`Email_LC_SHA256`名稱空間作為來源身分。
-* 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`名稱空間作為來源身分。 [!DNL Platform]將雜湊電話號碼以符合[!DNL Facebook]要求。
-* 如果您根據[!DNL Facebook] [電話號碼雜湊需求](#phone-number-hashing-requirements)，將資料擷取中的電話號碼雜湊至[!DNL Platform]，請選取`Phone_SHA256`名稱空間作為來源身分。
+* 如果您根據[!DNL Facebook] [電子郵件雜湊需求](#email-hashing-requirements)將資料擷取的客戶電子郵件地址雜湊至[!DNL Experience Platform]，請選取`Email_LC_SHA256`名稱空間作為來源身分。
+* 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`名稱空間作為來源身分。 [!DNL Experience Platform]將雜湊電話號碼以符合[!DNL Facebook]要求。
+* 如果您根據[!DNL Facebook] [電話號碼雜湊需求](#phone-number-hashing-requirements)，將資料擷取中的電話號碼雜湊至[!DNL Experience Platform]，請選取`Phone_SHA256`名稱空間作為來源身分。
 * 如果您的資料包含[!DNL Apple]個裝置識別碼，請選取`IDFA`名稱空間作為來源識別碼。
 * 如果您的資料包含[!DNL Android]個裝置識別碼，請選取`GAID`名稱空間作為來源識別碼。
 * 如果您的資料包含其他型別的識別碼，請選取`Custom`名稱空間作為來源識別碼。
@@ -246,9 +246,9 @@ Facebook權杖每60天過期一次。 代號過期後，將資料匯出至目的
 
 >[!IMPORTANT]
 >
->來自未雜湊名稱空間的資料在啟用時由[!DNL Platform]自動雜湊。
+>來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
 > 
->屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。
+>屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
 
 ![套用對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 

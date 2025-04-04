@@ -1,9 +1,9 @@
 ---
-title: 在使用者介面中建立Azure synapse Analytics Source連線
-description: 瞭解如何使用Adobe Experience Platform UI建立Azure synapse Analytics （以下稱為「Synapse」）來源連線。
+title: 在使用者介面中建立Azure Synapse Analytics Source連線
+description: 瞭解如何使用Adobe Experience Platform UI建立Azure Synapse Analytics （以下稱為「Synapse」）來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 2%
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Azure Synapse Analytics]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>[!DNL Azure Synapse Analytics]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
-本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Azure Synapse Analytics] （以下稱為「[!DNL Synapse]」）來源聯結器的步驟。
+本教學課程提供使用[!DNL Experience Platform]使用者介面建立[!DNL Azure Synapse Analytics] （以下稱為「[!DNL Synapse]」）來源聯結器的步驟。
 
 ## 快速入門
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 ### 收集必要的認證
 
-若要在[!DNL Platform]上存取您的[!DNL Synapse]帳戶，您必須提供下列值：
+若要在[!DNL Experience Platform]上存取您的[!DNL Synapse]帳戶，您必須提供下列值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -41,17 +41,17 @@ ht-degree: 2%
 
 ## 連線您的[!DNL Synapse]帳戶
 
-收集必要的認證後，您可以依照下列步驟將[!DNL Synapse]帳戶連結至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟將[!DNL Synapse]帳戶連結至[!DNL Experience Platform]。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在&#x200B;**[!UICONTROL 資料庫]**&#x200B;類別下，選取&#x200B;**[!UICONTROL Azure synapse分析]**。 如果這是您第一次使用此聯結器，請選取&#x200B;**[!UICONTROL 設定]**。 否則，請選取&#x200B;**[!UICONTROL 新增資料]**&#x200B;以建立新的[!DNL Synapse]聯結器。
+在&#x200B;**[!UICONTROL 資料庫]**&#x200B;類別下，選取&#x200B;**[!UICONTROL Azure Synapse Analytics]**。 如果這是您第一次使用此聯結器，請選取&#x200B;**[!UICONTROL 設定]**。 否則，請選取&#x200B;**[!UICONTROL 新增資料]**&#x200B;以建立新的[!DNL Synapse]聯結器。
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-**[!UICONTROL 連線至Azure synapse Analytics]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+**[!UICONTROL 連線至Azure Synapse Analytics]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 新帳戶
 
@@ -67,4 +67,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Synapse]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Platform]](../../dataflow/databases.md)。
+依照本教學課程中的指示，您已建立與[!DNL Synapse]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Experience Platform]](../../dataflow/databases.md)。

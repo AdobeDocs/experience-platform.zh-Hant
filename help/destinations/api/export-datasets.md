@@ -4,9 +4,9 @@ title: 使用流量服務API匯出資料集
 description: 瞭解如何使用流量服務API將資料集匯出至所選目的地。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5146'
+source-wordcount: '5149'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**動作專案**： 2024年9月發行的Experience Platform](/help/release-notes/latest/latest.md#destinations)引進了為匯出資料集資料流設定`endTime`日期的選項。 [對於在9月版本&#x200B;*之前*&#x200B;建立的所有資料集匯出資料流，Adobe也引入了2025年5月1日的預設結束日期。 對於這些資料流中的任一資料流，您需要在結束日期之前手動更新資料流中的結束日期，否則您的匯出將在該日期停止。 使用Experience PlatformUI來檢視哪些資料流將設定在5月1日停止。
+>**動作專案**： Experience Platform ](/help/release-notes/latest/latest.md#destinations)的2024年9月[發行版本引進了為匯出資料集資料流設定`endTime`日期的選項。 Adobe也針對9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，推出預設結束日期為2025年5月1日。 對於這些資料流中的任一資料流，您需要在結束日期之前手動更新資料流中的結束日期，否則您的匯出將在該日期停止。 使用Experience Platform UI來檢視哪些資料流將設定在5月1日停止。
 >
 >同樣地，對於您建立但未指定`endTime`日期的任何資料流，這些資料流將預設為從建立日期起六個月的結束時間。
 
@@ -62,9 +62,9 @@ ht-degree: 3%
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md)：所有成功內嵌至Adobe Experience Platform的資料都會以資料集的形式儲存在[!DNL Data Lake]中。 資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 資料集也包含中繼資料，可說明其儲存資料的各個層面。
-   * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+   * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-以下小節提供您必須知道的其他資訊，才能將資料集匯出到Platform中的雲端儲存空間目標。
+以下小節提供您必須知道的其他資訊，才能將資料集匯出到Experience Platform中的雲端儲存空間目標。
 
 ### 必要權限 {#permissions}
 
@@ -78,13 +78,13 @@ ht-degree: 3%
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
-若要呼叫[!DNL Platform] API，您必須先完成[Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的資源可以隔離到特定的虛擬沙箱。 在對[!DNL Platform] API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
+[!DNL Experience Platform]中的資源可以隔離到特定的虛擬沙箱。 在對[!DNL Experience Platform] API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
@@ -2468,7 +2468,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[要求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Experience Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
 
 ## 已知限制 {#known-limitations}
 
@@ -2480,7 +2480,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功將Platform連線至您偏好的批次雲端儲存空間目的地之一，並設定資料流至個別目的地以匯出資料集。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
+依照本教學課程中的指示，您已成功將Experience Platform連線至其中一個慣用的批次雲端儲存目的地，並設定資料流至個別目的地以匯出資料集。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
 
 * [目的地概觀](../home.md)
 * [目的地目錄概觀](../catalog/overview.md)

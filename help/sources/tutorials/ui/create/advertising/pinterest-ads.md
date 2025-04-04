@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
 title: 在UI中建立Pinterest Ads來源連線
 description: 瞭解如何使用Pinterest UI建立Adobe Experience Platform Ads來源連線。
 badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '825'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 ## 先決條件 {#prerequisites}
 
-為了將[!DNL Pinterest Ads]連線到Experience Platform，您必須提供下列連線屬性的值：
+若要將[!DNL Pinterest Ads]連線至Experience Platform，您必須提供下列連線屬性的值：
 
 * [!DNL Pinterest]存取權杖。
 * [!DNL Pinterest]廣告帳戶識別碼。
@@ -40,17 +40,17 @@ ht-degree: 2%
 
 如需這些連線屬性的詳細資訊，請閱讀[[!DNL Pinterest Ads] 總覽](../../../../connectors/advertising/pinterest-ads.md#prerequisites)。
 
-### 建立Platform結構描述 {#create-platform-schema}
+### 建立Experience Platform結構描述 {#create-platform-schema}
 
-您也必須確保先建立要用於[!DNL Pinterst Ads]來源的Platform結構描述。 閱讀有關[建立Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程，以瞭解如何建立結構描述的完整步驟。
+您也必須確保先建立Experience Platform結構描述以用於您的[!DNL Pinterst Ads]來源。 閱讀有關[建立Experience Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程，以瞭解如何建立結構描述的完整步驟。
 
-![Pinterest Ads的平台結構描述範例](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![適用於Pinterest Ads的Experience Platform結構描述範例](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
 如需[!DNL Pinterest]行銷活動、廣告群組和廣告API支援的欄位清單，請參閱[[!DNL Pinterest] 欄位](#pinterest-fields)區段。
 
 ## 連線您的[!DNL Pinterest Ads]帳戶 {#connect-account}
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 ## 選取資料 {#select-data}
 
-**[!UICONTROL 選取資料]**&#x200B;步驟隨即顯示，提供介面供您輸入資訊，這些資訊會傳遞至API，以將您想要的資料帶入Platform。
+**[!UICONTROL 選取資料]**&#x200B;步驟隨即顯示，提供介面供您輸入資訊，這些資訊會傳遞至API，以將您想要的資料帶入Experience Platform。
 
 | 欄位 | 說明 |
 | --- | --- |
@@ -86,7 +86,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->您可以傳遞逗號分隔值以提供多個`object_ids`。 您可以在單一請求中傳遞的ID數量上限為100。 如果傳遞的值不正確，Platform會顯示下列訊息： `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>您可以傳遞逗號分隔值以提供多個`object_ids`。 您可以在單一請求中傳遞的ID數量上限為100。 如果傳遞的值不正確，Experience Platform會顯示下列訊息： `The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
 提供值之後，請選取&#x200B;**[!UICONTROL 選取]**。 如果提供的值有效，將會填入介面的正確部分（預覽資料）。
 
@@ -94,13 +94,13 @@ ht-degree: 2%
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已建立與[!DNL Pinterest Ads]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將廣告資料帶入Platform](../../dataflow/advertising.md)。
+依照本教學課程中的指示，您已建立與[!DNL Pinterest Ads]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將廣告資料帶入Experience Platform](../../dataflow/advertising.md)。
 
 ## 其他資源 {#additional-resources}
 
 以下各節提供在使用[!DNL Pinterest Ads]來源時可以參考的其他資源。
 
-## 正在排程 {#scheduling}
+## 正在安排 {#scheduling}
 
 排程[!DNL Pinterest Ads]資料流進行內嵌時，您必須選取下列其中一個頻率和間隔設定：
 
@@ -119,9 +119,9 @@ ht-degree: 2%
 
 若要驗證您已正確設定來源，而且正在擷取[!DNL Pinterest Ads]資料，請遵循下列步驟：
 
-在Platform UI中，選取目錄頁面上[!DNL Pinterest Ads]卡片功能表旁的&#x200B;**[!UICONTROL 檢視資料流程]**。 然後，您可以選取[!UICONTROL 預覽資料集]以驗證所擷取的資料。
+在Experience Platform UI中，選取目錄頁面上[!DNL Pinterest Ads]卡片功能表旁的&#x200B;**[!UICONTROL 檢視資料流程]**。 然後，您可以選取[!UICONTROL 預覽資料集]以驗證所擷取的資料。
 
-![Pinterest Ads預覽資料集的Platform UI熒幕擷圖。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![Pinterest Ads預覽資料集的Experience Platform UI熒幕擷圖。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 您可以根據[!DNL Pinterest] UI上顯示的計數來驗證資料
 

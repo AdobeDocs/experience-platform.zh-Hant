@@ -2,25 +2,25 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定目的地傳送設定，以指出匯出的資料前往何處，以及在資料著陸位置使用什麼驗證規則。
 title: 目的地傳遞
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 2%
 
 ---
 
 # 目的地傳遞
 
-為了讓您更能掌控匯出至目的地資料的著陸位置，Destination SDK可讓您指定目的地傳送設定。
+為了更能掌控資料匯出至目的地著陸的位置，Destination SDK可讓您指定目的地傳送設定。
 
 目的地傳送區段會指出匯出的資料前往何處，以及資料著陸位置所使用的驗證規則。
 
 <!-- When configuring a destination, you must specify an authentication rule and one or more `destinationServerId` parameters, corresponding to the destination servers that define where the data will be delivered to. In most cases, the authentication rule that you should use is `CUSTOMER_AUTHENTICATION`.  -->
 
-若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[組態選項](../configuration-options.md)檔案中的圖表，或檢視下列目的地組態概觀頁面：
+若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[設定選項](../configuration-options.md)檔案中的圖表，或檢視以下目的地設定概觀頁面：
 
 * [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration)
-* [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+* [使用Destination SDK設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
 您可以透過`/authoring/destinations`端點設定目的地傳遞設定。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `authenticationRule` | 字串 | 指示[!DNL Platform]應該如何連線到您的目的地。 支援的值：<ul><li>`CUSTOMER_AUTHENTICATION`：如果Platform客戶透過[此處](customer-authentication.md)說明的任何驗證方法登入您的系統，請使用此選項。</li><li>`PLATFORM_AUTHENTICATION`：如果Adobe與您的目的地之間有全域驗證系統，且[!DNL Platform]客戶不需要提供任何驗證認證即可連線至您的目的地，請使用此選項。 在此情況下，您必須使用[認證API](../../credentials-api/create-credential-configuration.md)設定來建立認證物件。 </li><li>`NONE`：如果不需要驗證即可將資料傳送至您的目的地平台，請使用此選項。 </li></ul> |
+| `authenticationRule` | 字串 | 指示[!DNL Experience Platform]應該如何連線到您的目的地。 支援的值：<ul><li>`CUSTOMER_AUTHENTICATION`：如果Experience Platform客戶透過[此處](customer-authentication.md)說明的任何驗證方法登入您的系統，請使用此選項。</li><li>`PLATFORM_AUTHENTICATION`：如果Adobe與您的目的地之間有全域驗證系統，且[!DNL Experience Platform]客戶不需要提供任何驗證認證即可連線至您的目的地，請使用此選項。 在此情況下，您必須使用[認證API](../../credentials-api/create-credential-configuration.md)設定來建立認證物件。 </li><li>`NONE`：如果不需要驗證即可將資料傳送至您的目的地平台，請使用此選項。 </li></ul> |
 | `destinationServerId` | 字串 | 您要匯出資料的[目的地伺服器](../../authoring-api/destination-server/create-destination-server.md)的`instanceId`。 |
 | `deliveryMatchers.type` | 字串 | <ul><li>設定檔案型目的地的目的地傳遞時，請一律將此項設為`SOURCE`。</li><li>設定串流目的地的目的地傳遞時，`deliveryMatchers`區段不是必要的。</li></ul> |
 | `deliveryMatchers.value` | 字串 | <ul><li>設定檔案型目的地的目的地傳遞時，請一律將此項設為`batch`。</li><li>設定串流目的地的目的地傳遞時，`deliveryMatchers`區段不是必要的。</li></ul> |
@@ -111,7 +111,7 @@ ht-degree: 2%
 * [OAuth2授權](oauth2-authorization.md)
 * [UI屬性](ui-attributes.md)
 * [客戶資料欄位](customer-data-fields.md)
-* [綱要設定](schema-configuration.md)
+* [結構描述設定](schema-configuration.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)
 * [支援的對應設定](supported-mapping-configurations.md)
 * [對象中繼資料設定](audience-metadata-configuration.md)

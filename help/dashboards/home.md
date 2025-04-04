@@ -4,9 +4,9 @@ title: 控制面板概觀
 type: Documentation
 description: 探索Adobe Experience Platform中的多個儀表板，以檢視有關您組織資料的重要資訊，如每日快照期間所擷取。
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform提供多個控制面板，讓您檢視有關組織資�
 
 ## 控制面板簡介
 
-控制面板提供組織資料的現成報告，並直接內建於Platform內的行銷人員工作流程中。 這些儀表板不需要額外的IT支援，也不需要透過其他資料倉儲設計與實作匯出及處理資料所需的時間和精力。
+控制面板提供組織資料的現成報告，並直接內建於Experience Platform的行銷人員工作流程中。 這些儀表板不需要額外的IT支援，也不需要透過其他資料倉儲設計與實作匯出及處理資料所需的時間和精力。
 
 ## 控制面板快速入門
 
@@ -38,6 +38,6 @@ Adobe Experience Platform提供多個控制面板，讓您檢視有關組織資�
 
 ## 可用的儀表板
 
-Experience Platform目前提供多個控制面板，每個控制面板都能讓您組織的客戶資料更透明。
+Experience Platform目前提供多個控制面板，每個控制面板都能讓您組織的客戶資料透明化。
 
 若要深入瞭解這些儀表板及其量度，請從檔案導覽的可用儀表板清單中選取儀表板。

@@ -2,19 +2,19 @@
 title: RainFocus與會者設定檔
 description: 瞭解如何使用RainFocus與會者設定檔目的地聯結器，將受眾設定檔與RainFocus全域與會者設定檔同步。
 last-substantial-update: 2024-12-17T00:00:00Z
-source-git-commit: a3dcf49d3ed9afacd3ffef10d6f280c71ebdf584
+exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1000'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
-
 
 # RainFocus與會者設定檔 {#rainfocus-destination}
 
 ## 概觀 {#overview}
 
-使用[!DNL RainFocus Attendee Profiles]目的地將客戶設定檔從Adobe Experience Platform串流到[!DNL RainFocus]平台，以建立和更新出席者設定檔。
+使用 [!DNL RainFocus Attendee Profiles] 目標將客戶設定檔從 Adobe Experience Platform 串流至 [!DNL RainFocus] 平台，以建立及更新與會者設定檔。
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
 {style="table-layout:auto"}
 
@@ -58,8 +58,8 @@ ht-degree: 2%
 
 | 對象來源 | 支援 | 說明 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/overview.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/overview.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 

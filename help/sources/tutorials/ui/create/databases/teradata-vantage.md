@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Teradata優勢
-title: 在UI中建立Teradata Vantage Source連線
+keywords: Experience Platform；首頁；熱門主題；Teradata Vantage
+title: 在使用者介面中建立Teradata Vantage Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Teradata Vantage來源連線。
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '418'
 ht-degree: 2%
 
 ---
@@ -16,14 +16,14 @@ ht-degree: 2%
 
 ## 快速入門
 
-本教學課程需要您實際瞭解下列Platform元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 收集必要的認證
 
-若要在Platform上存取您的[!DNL Teradata Vantage]帳戶，您必須提供下列驗證值：
+若要在Experience Platform上存取您的[!DNL Teradata Vantage]帳戶，您必須提供下列驗證值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -33,17 +33,17 @@ ht-degree: 2%
 
 ## 連線您的[!DNL Teradata Vantage]帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在[!UICONTROL 資料庫]類別下，選取&#x200B;**[!UICONTROL Teradata優勢]**，然後選取&#x200B;**[!UICONTROL 設定]**。
+在[!UICONTROL 資料庫]類別下，選取&#x200B;**[!UICONTROL Teradata Vantage]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 
 >[!TIP]
 >
 >當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
-![已選取TeradataVantage來源的來源目錄。](../../../../images/tutorials/create/teradata/catalog.png)
+![已選取Teradata Vantage來源的來源目錄。](../../../../images/tutorials/create/teradata/catalog.png)
 
-**[!UICONTROL 連線至Teradata優勢]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+**[!UICONTROL 連線至Teradata Vantage]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 現有帳戶
 
@@ -59,4 +59,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與TeradataVantage帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](../../dataflow/databases.md)。
+依照本教學課程中的指示，您已建立與Teradata Vantage帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/databases.md)。

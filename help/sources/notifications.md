@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；通知
-description: 透過訂閱Adobe I/O事件，您可以使用Webhook來接收有關來源連線之流量執行狀態的通知。 這些通知包含有關流程執行成功或導致執行失敗的錯誤的資訊。
+description: 透過訂閱Adobe I/O Events，您可以使用Webhook接收有關來源連線之流量執行狀態的通知。 這些通知包含有關流程執行成功或導致執行失敗的錯誤的資訊。
 solution: Experience Platform
 title: 資料流執行通知
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 # 資料流執行通知
 
-Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)是用來從[!DNL Platform]內不同的來源收集及集中客戶資料。 此服務提供使用者介面和RESTful API，所有支援的來源都可從此API連線。
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)是用來從[!DNL Experience Platform]內不同的來源收集及集中客戶資料。 此服務提供使用者介面和RESTful API，所有支援的來源都可從此API連線。
 
-透過Adobe I/O事件，您可以訂閱事件並使用Webhook接收有關流量執行狀態的通知。 這些通知包含有關流程執行成功或導致執行失敗的錯誤的資訊。
+透過Adobe I/O Events，您可以訂閱事件並使用Webhook接收有關流量執行狀態的通知。 這些通知包含有關流程執行成功或導致執行失敗的錯誤的資訊。
 
 本檔案提供如何訂閱事件、註冊webhook以及接收包含流程執行狀態資訊的通知的步驟。
 
@@ -37,8 +37,8 @@ Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠�
 >
 >在訂閱程式期間，請確定您選取&#x200B;**[!UICONTROL 平台通知]**&#x200B;作為事件提供者，並選取下列事件訂閱：
 >
->* **[!UICONTROL Experience PlatformSource的資料流執行成功]**
->* **[!UICONTROL Experience PlatformSource的資料流執行失敗]**
+>* **[!UICONTROL Experience Platform Source的資料流執行成功]**
+>* **[!UICONTROL Experience Platform Source的資料流執行失敗]**
 
 ## 接收資料流執行通知
 
@@ -323,9 +323,9 @@ Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠�
 
 ### 瞭解錯誤訊息 {#errors}
 
-從來源複製資料或將複製的資料處理到[!DNL Platform]時，可能會發生內嵌錯誤。 請參閱下表，以取得有關特定錯誤的詳細資訊。
+從來源複製資料或將複製的資料處理到[!DNL Experience Platform]時，可能會發生內嵌錯誤。 請參閱下表，以取得有關特定錯誤的詳細資訊。
 
 | 錯誤 | 說明 |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | 從來源複製資料時發生錯誤。 |
-| `CONNECTOR-2001-500` | 將複製的資料處理至[!DNL Platform]時發生錯誤。 此錯誤可能涉及解析、驗證或轉換。 |
+| `CONNECTOR-2001-500` | 將複製的資料處理至[!DNL Experience Platform]時發生錯誤。 此錯誤可能涉及解析、驗證或轉換。 |

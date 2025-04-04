@@ -4,16 +4,16 @@ solution: Experience Platform
 title: 工作流程UI指南
 description: 瞭解如何遵循多步驟工作流程，以便在Adobe Experience Platform使用者介面中執行常見操作。
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL 工作流程] UI指南
 
-Adobe Experience Platform使用者介面中的&#x200B;**[!UICONTROL 工作流程]**&#x200B;區段會顯示在Platform內執行作業的多步驟工作流程清單。 這些工作流程涵蓋的領域包括資料擷取和資料科學。
+Adobe Experience Platform使用者介面中的&#x200B;**[!UICONTROL 工作流程]**&#x200B;區段會顯示在Experience Platform中執行作業的多步驟工作流程清單。 這些工作流程涵蓋的領域包括資料擷取和資料科學。
 
 ![工作流程](./images/workflows/workflows.png)
 
@@ -31,8 +31,8 @@ Adobe Experience Platform使用者介面中的&#x200B;**[!UICONTROL 工作流程
 
 **[!UICONTROL 建立模型]**&#x200B;工作流程可讓您建立機器學習模型。 您可以在[模型訓練與評估教學課程](../data-science-workspace/models-recipes/train-evaluate-model-ui.md)中找到此工作流程的詳細資訊。
 
-**[!UICONTROL Publish a model as a service]**&#x200B;工作流程可讓您發佈已建立的模型作為可評分的服務。 如需此工作流程的詳細資訊，請參閱[將模型發佈為服務](../data-science-workspace/models-recipes/publish-model-service-ui.md)的教學課程。
+**[!UICONTROL 將模型發佈為服務]**&#x200B;工作流程可讓您將建立的模型發佈為可評分的服務。 如需此工作流程的詳細資訊，請參閱[將模型發佈為服務](../data-science-workspace/models-recipes/publish-model-service-ui.md)的教學課程。
 
 ## 後續步驟
 
-閱讀本指南後，您已經瞭解Experience Platform使用者介面中可用的[!UICONTROL 工作流程]。 如需Platform UI功能的詳細資訊，請參閱[Adobe Experience Platform UI指南](ui-guide.md)。
+閱讀本指南後，您已經瞭解Experience Platform使用者介面中可用的[!UICONTROL 工作流程]。 如需Experience Platform UI功能的詳細資訊，請參閱[Adobe Experience Platform UI指南](ui-guide.md)。

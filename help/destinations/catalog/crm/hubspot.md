@@ -3,9 +3,9 @@ title: HubSpot連線
 description: HubSpot目的地可讓您管理HubSpot帳戶中的聯絡人記錄。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1557'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 ## 先決條件 {#prerequisites}
 
-請參閱以下各節，瞭解在Experience Platform和[!DNL HubSpot]中需要設定的任何先決條件，以及使用[!DNL HubSpot]目的地之前必須收集的資訊。
+請參閱以下各節，瞭解您需要在Experience Platform和[!DNL HubSpot]中設定的任何先決條件，以及使用[!DNL HubSpot]目的地之前必須收集的資訊。
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
@@ -36,11 +36,11 @@ ht-degree: 3%
 
 ### [!DNL HubSpot]目的地的先決條件 {#prerequisites-destination}
 
-若要將資料從Platform匯出至您的[!DNL HubSpot]帳戶，請注意下列必要條件：
+若要將資料從Experience Platform匯出至您的[!DNL HubSpot]帳戶，請注意下列必要條件：
 
 #### 您必須擁有[!DNL HubSpot]帳戶 {#prerequisites-account}
 
-若要將資料從Platform匯出至您的[!DNL Hubspot]帳戶，您必須擁有[!DNL HubSpot]帳戶。 如果您還沒有帳戶，請造訪[設定HubSpot帳戶](https://knowledge.hubspot.com/get-started/set-up-your-account)頁面，並依照指引註冊及建立帳戶。
+若要將資料從Experience Platform匯出至您的[!DNL Hubspot]帳戶，您需要有[!DNL HubSpot]帳戶。 如果您還沒有帳戶，請造訪[設定HubSpot帳戶](https://knowledge.hubspot.com/get-started/set-up-your-account)頁面，並依照指引註冊及建立帳戶。
 
 #### 收集[!DNL HubSpot]私人應用程式存取權杖 {#gather-credentials}
 
@@ -74,7 +74,7 @@ ht-degree: 3%
 
 本節說明您可以匯出至此目的地的所有對象。
 
-此目的地支援啟動所有透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。
+此目的地支援啟用所有透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。
 
 此目的地也支援下表所述的對象啟用。
 
@@ -90,8 +90,8 @@ ht-degree: 3%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 此外，在[!DNL HubSpot]中會使用對象名稱建立新屬性，而且其值會與每個所選對象來自Platform的對應對象狀態一致。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 此外，已在[!DNL HubSpot]中使用對象名稱建立新屬性，而且其值會與每個所選對象來自Experience Platform的對應對象狀態一致。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -111,14 +111,14 @@ ht-degree: 3%
 * **[!UICONTROL 持有人權杖]**：您[!DNL HubSpot]私人應用程式的存取權杖。
 
 若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**。
-![平台UI熒幕擷圖顯示如何驗證。](../../assets/catalog/crm/hubspot/authenticate-destination.png)
+![Experience Platform UI熒幕擷圖顯示如何驗證。](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL 已連線]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
-![顯示目的地詳細資訊的平台UI熒幕擷取畫面。](../../assets/catalog/crm/hubspot/destination-details.png)
+![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
@@ -139,7 +139,7 @@ ht-degree: 3%
 
 ### 對應屬性和身分 {#map}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL HubSpot]目的地，您必須完成欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
+若要將對象資料從Adobe Experience Platform正確傳送至[!DNL HubSpot]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
 
 若要將您的XDM欄位正確對應到[!DNL HubSpot]目的地欄位，請遵循下列步驟：
 
@@ -147,28 +147,28 @@ ht-degree: 3%
 
 `Email`識別是這個目的地的必要對應。 請依照下列步驟進行對應：
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
-   ![Platform UI熒幕擷取畫面，其中反白顯示新增對應按鈕。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**並選取身分。
-   ![平台UI熒幕擷圖選取電子郵件作為來源屬性，以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
+   ![Experience Platform UI熒幕擷圖選取電子郵件作為來源屬性，以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;並選取`email`。
-   ![Platform UI熒幕擷圖選取電子郵件作為目標屬性，以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
+   ![Experience Platform UI熒幕擷圖選取電子郵件作為目標屬性，以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | 來源欄位 | 目標欄位 | 強制 |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | 是 |
 
 具有身分對應的範例如下所示：
-![具有電子郵件身分對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/hubspot/mapping-identities.png)
+![具有電子郵件身分對應之Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
 #### 對應&#x200B;**選用的**&#x200B;屬性
 
 若要在XDM設定檔結構描述與[!DNL HubSpot]帳戶之間新增任何其他要更新的屬性，請重複下列步驟：
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
-   ![Platform UI熒幕擷取畫面，其中反白顯示新增對應按鈕。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
+   ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**類別並選取XDM屬性。
-   ![Platform UI熒幕擷圖選取名字作為來源屬性。](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
+   ![Experience Platform UI熒幕擷圖選取名字作為來源屬性。](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別，並從自動從您的[!DNL HubSpot]帳戶填入的屬性清單中選取。 目的地使用[[!DNL HubSpot] 屬性](https://developers.hubspot.com/docs/api/crm/properties) API來擷取此資訊。 已擷取[!DNL HubSpot] [預設屬性](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties)及任何自訂屬性，以選取為目標欄位。
-   ![Platform UI熒幕擷圖選取名字作為目標屬性。](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
+   ![Experience Platform UI熒幕擷取畫面選取「名字」做為Target屬性。](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 以下是您的XDM設定檔結構描述與[!DNL Hubspot]之間的一些可用對應：
 
@@ -181,7 +181,7 @@ ht-degree: 3%
 | `xdm: workAddress.country` | `Attribute: country` |
 
 以下顯示使用這些屬性對應的範例：
-![具有屬性對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/hubspot/mapping-attributes.png)
+![具有屬性對應的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/hubspot/mapping-attributes.png)
 
 當您完成提供目的地連線的對應時，請選取&#x200B;**[!UICONTROL 下一步]**。
 

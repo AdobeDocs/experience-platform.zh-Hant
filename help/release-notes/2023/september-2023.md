@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 9 月)
 description: Adobe Experience Platform 2023 年 9 月版發行說明。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2265'
-ht-degree: 33%
+source-wordcount: '2269'
+ht-degree: 30%
 
 ---
 
@@ -37,7 +37,7 @@ Experience Platform 現有功能的更新：
 
 ## 警示 {#alerts}
 
-Experience Platform 可讓您訂閱各種 Platform 活動的事件型警示。您可以透過 Platform 使用者介面中的「[!UICONTROL 警示]」索引標籤訂閱不同的警示規則，而且可以選擇在使用者介面本身內或透過電子郵件通知接收警示訊息。
+Experience Platform可讓您訂閱各種Experience Platform活動的事件型警報。 您可以透過Experience Platform使用者介面中的[!UICONTROL 警報]索引標籤來訂閱不同的警報規則，也可以選擇在UI本身或透過電子郵件通知來接收警報訊息。
 
 **新功能或更新功能**
 
@@ -103,7 +103,7 @@ Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪�
 
 {style="table-layout:auto"}
 
-如需平台資料衛生功能的詳細資訊，請參閱[資料衛生概觀](../../hygiene/home.md)。
+如需Experience Platform資料檢疫功能的詳細資訊，請參閱[資料檢疫概觀](../../hygiene/home.md)。
 
 ## 目標 {#destinations}
 
@@ -180,7 +180,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
+如需Experience Platform中XDM的詳細資訊，請參閱[XDM系統總覽](../../xdm/home.md)
 
 ## 身分識別服務 {#identity-service}
 
@@ -214,7 +214,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Experience Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 **新功能或更新功能**
 

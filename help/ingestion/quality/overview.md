@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料品質
 description: 以下檔案提供Adobe Experience Platform中批次和串流擷取支援的檢查和驗證行為摘要。
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 5%
@@ -17,7 +17,7 @@ Adobe Experience Platform針對透過批次或串流擷取上傳的任何資料�
 
 ## 支援的檢查
 
-|    | 批次擷取 | 串流擷取 |
+|   | 批次擷取 | 串流擷取 |
 | ------ | --------------- | ------------------- |
 | 資料型別檢查 | 是 | 是 |
 | 列舉檢查 | 是 | 是 |
@@ -36,7 +36,7 @@ Adobe Experience Platform針對透過批次或串流擷取上傳的任何資料�
 
 | 驗證區域 | 說明 |
 | --------------- | ----------- |
-| 綱要 | 確保結構描述是&#x200B;**非**&#x200B;空的，並包含對聯合結構描述的參考，如下所示： `"meta:immutableTags": ["union"]` |
+| 結構描述 | 確保結構描述是&#x200B;**非**&#x200B;空的，並包含對聯合結構描述的參考，如下所示： `"meta:immutableTags": ["union"]` |
 | `identityField` | 請確定已定義所有有效的身分描述項。 |
 | `createdUser` | 確保允許擷取批次的使用者擷取批次。 |
 
@@ -46,7 +46,7 @@ Adobe Experience Platform針對透過批次或串流擷取上傳的任何資料�
 
 | 驗證區域 | 說明 |
 | --------------- | ----------- |
-| 綱要 | 確保結構描述是&#x200B;**非**&#x200B;空的，並包含對聯合結構描述的參考，如下所示： `"meta:immutableTags": ["union"]` |
+| 結構描述 | 確保結構描述是&#x200B;**非**&#x200B;空的，並包含對聯合結構描述的參考，如下所示： `"meta:immutableTags": ["union"]` |
 | `identityField` | 請確定已定義所有有效的身分描述項。 |
 | JSON | 確保JSON有效。 |
 | 組織 | 確保列出的組織是有效的組織。 |
@@ -54,7 +54,7 @@ Adobe Experience Platform針對透過批次或串流擷取上傳的任何資料�
 | 資料集 | 確保資料集已指定、啟用且未移除。 |
 | 標頭 | 請確定標頭已指定且有效。 |
 
-在[監視資料流程檔案](./monitor-data-ingestion.md)中可以找到[!DNL Platform]如何監視及驗證資料的詳細資訊。
+在[監視資料流程檔案](./monitor-data-ingestion.md)中可以找到[!DNL Experience Platform]如何監視及驗證資料的詳細資訊。
 
 ## 身分值驗證
 

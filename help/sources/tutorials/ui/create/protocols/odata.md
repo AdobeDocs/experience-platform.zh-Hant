@@ -5,7 +5,7 @@ title: 在UI中建立通用OData Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立通用開放資料通訊協定來源連線。
 exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 在使用者介面中建立[!DNL Generic OData]來源連線
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Generic Open Data Protocol] （以下稱為「[!DNL OData]」）來源聯結器的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面建立[!DNL Generic Open Data Protocol] （以下稱為「[!DNL OData]」）來源聯結器的步驟。
 
 ## 快速入門
 
@@ -29,7 +29,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ### 收集必要的認證
 
-若要在[!DNL Platform]中存取您的[!DNL OData]帳戶，您必須提供下列值：
+若要在[!DNL Experience Platform]中存取您的[!DNL OData]帳戶，您必須提供下列值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的[!DNL OData]帳戶
 
-收集必要的認證後，您可以依照下列步驟將[!DNL OData]帳戶連結至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟將[!DNL OData]帳戶連結至[!DNL Experience Platform]。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
@@ -65,4 +65,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL OData]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將通訊協定資料匯入 [!DNL Platform]](../../dataflow/protocols.md)。
+依照本教學課程中的指示，您已建立與[!DNL OData]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將通訊協定資料匯入 [!DNL Experience Platform]](../../dataflow/protocols.md)。

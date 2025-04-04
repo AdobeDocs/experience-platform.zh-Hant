@@ -5,7 +5,7 @@ title: 在使用者介面中建立IBM DB2 Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立IBM DB2來源連線。
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 > IBM DB2聯結器為Beta版。 如需使用Beta標籤聯結器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Platform]使用者介面建立IBM DB2 （以下稱為「DB2」）來源聯結器的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面建立IBM DB2 （以下稱為「DB2」）來源聯結器的步驟。
 
 ## 快速入門
 
@@ -46,7 +46,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的IBM DB2帳戶
 
-收集必要的認證後，您可以依照下列步驟將DB2帳戶連結至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟將DB2帳戶連結至[!DNL Experience Platform]。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
@@ -72,4 +72,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與DB2帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Platform]](../../dataflow/databases.md)。
+依照本教學課程中的指示，您已建立與DB2帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Experience Platform]](../../dataflow/databases.md)。

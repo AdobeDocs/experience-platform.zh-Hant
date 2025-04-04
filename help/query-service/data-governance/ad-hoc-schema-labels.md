@@ -2,9 +2,9 @@
 title: Ad Hoc結構描述的屬性型存取控制支援
 description: 限制存取透過Adobe Experience Platform查詢服務產生的臨時結構描述中資料欄位的指南。
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1020'
 ht-degree: 2%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 任何帶入Adobe Experience Platform的資料都會由Experience Data Model (XDM)結構描述封裝，並且可能會受到您組織或法規定義的使用限制所規範。
 
-若未指定綱要時，透過查詢服務執行CTAS查詢，便會自動產生臨時綱要。 通常需要限制使用特定結構描述的特定欄位或資料集，以控制對敏感個人資料和個人識別資訊的存取。 Adobe Experience Platform可讓您使用以屬性為基礎的存取控制功能，透過Platform UI標籤結構描述欄位，藉此協助進行此存取控制。
+若未指定綱要時，透過查詢服務執行CTAS查詢，便會自動產生臨時綱要。 通常需要限制使用特定結構描述的特定欄位或資料集，以控制對敏感個人資料和個人識別資訊的存取。 Adobe Experience Platform可讓您使用以屬性為基礎的存取控制功能，透過Experience Platform UI標籤結構描述欄位，藉此協助進行此存取控制。
 
-標籤可隨時套用，提供您選擇控管資料方式的靈活性。 不過，最佳實務是在資料內嵌至Platform時，或資料可在Platform中使用時，立即加上標籤。
+標籤可隨時套用，提供您選擇控管資料方式的靈活性。 不過，最佳實務是在資料內嵌至Experience Platform時，或資料可在Experience Platform中使用時，立即加上標籤。
 
 綱要式標籤是以屬性為基礎的存取控制的重要元件，可更有效管理使用者或使用者群組的存取許可權。 Adobe Experience Platform可讓您透過建立和套用標籤，限制對臨時結構描述之任何欄位的存取權。
 
@@ -25,8 +25,8 @@ ht-degree: 2%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [體驗資料模型(XDM)系統](../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md)：瞭解如何在Platform UI中建立和管理結構描述和其他資源。
+* [體驗資料模型(XDM)系統](../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md)：瞭解如何在Experience Platform UI中建立和管理結構描述和其他資源。
 * [[!DNL Data Governance]](../../data-governance/home.md)：瞭解[!DNL Data Governance]如何讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和原則。
 * [以屬性為基礎的存取控制](../../access-control/abac/overview.md)：以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓管理員根據屬性控制特定物件和/或功能的存取。 屬性可以是新增至物件的中繼資料，例如新增至臨時或一般結構描述欄位的標籤。 管理員定義存取原則，其中包含管理使用者存取許可權的屬性。
 
@@ -34,15 +34,15 @@ ht-degree: 2%
 
 一旦您的查詢執行完畢，且產生結果後，即會自動產生臨時結構描述，並新增至結構描述詳細目錄。
 
-若要新增資料標籤，請在Platform UI的左側邊欄中選取[!UICONTROL 結構描述]，導覽至[!UICONTROL 結構描述]儀表板瀏覽標籤。 此時會顯示結構描述詳細目錄。
+若要新增資料標籤，請在Experience Platform UI的左側邊欄中選取[!UICONTROL 結構描述]，以導覽至[!UICONTROL 結構描述]儀表板瀏覽標籤。 此時會顯示結構描述詳細目錄。
 
 >[!NOTE]
 >
 >依預設，臨時結構描述不會顯示在結構描述詳細目錄中。
 
-## 探索Platform UI結構描述詳細目錄中的臨時結構描述 {#discover-ad-hoc-schemas}
+## 探索Experience Platform UI結構描述詳細目錄中的臨時結構描述 {#discover-ad-hoc-schemas}
 
-若要在Platform UI中啟用顯示臨時結構描述，請選取篩選圖示(![篩選圖示。](/help/images/icons/filter.png))，然後在出現的左側欄中選取**[!UICONTROL 顯示臨機操作結構描述]。
+若要在Experience Platform UI中啟用顯示臨時結構描述，請選取篩選圖示(![篩選圖示。](/help/images/icons/filter.png))，然後在出現的左側欄中選取**[!UICONTROL 顯示臨機操作結構描述]。
 
 ![結構描述儀表板篩選選項左側邊欄的「顯示臨機結構描述」切換已啟用。](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -94,4 +94,4 @@ ht-degree: 2%
 閱讀本檔案後，您對如何透過查詢服務CTAS查詢建立的臨時結構描述新增資料使用標籤有了更深入的瞭解。 如果您尚未這麼做，以下檔案有助於您進一步瞭解查詢服務中的資料控管：
 
 * [臨時結構描述身分](./ad-hoc-schema-identities.md)
-* [資料控管](../../data-governance/home.md)
+* [資料治理](../../data-governance/home.md)

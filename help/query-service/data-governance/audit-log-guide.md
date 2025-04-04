@@ -2,22 +2,22 @@
 title: 查詢服務稽核記錄整合
 description: 查詢服務稽核記錄會維護各種使用者動作的記錄，以形成稽核軌跡，用於疑難排解問題或遵循公司資料管理政策和法規要求。 本教學課程提供查詢服務專屬稽核記錄功能的概觀。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
 
 # [!DNL Query Service]稽核記錄整合
 
-Adobe Experience Platform [!DNL Query Service]稽核記錄整合提供查詢相關使用者動作的記錄。 稽核記錄是進行疑難排解，並遵守公司資料管理政策和法規要求的重要工具。 此功能可讓您傳回許多事件型別的動作記錄，並篩選及匯出記錄。 可透過Platform UI或[稽核查詢API](https://www.adobe.io/experience-platform-apis/references/audit-query/)存取記錄檔，並以CSV或JSON檔案格式下載。
+Adobe Experience Platform [!DNL Query Service]稽核記錄整合提供查詢相關使用者動作的記錄。 稽核記錄是進行疑難排解，並遵守公司資料管理政策和法規要求的重要工具。 此功能可讓您傳回許多事件型別的動作記錄，並篩選及匯出記錄。 可透過Experience Platform UI或[稽核查詢API](https://www.adobe.io/experience-platform-apis/references/audit-query/)存取記錄檔，並以CSV或JSON檔案格式下載。
 
-若要瞭解有關稽核記錄使用者介面的詳細資訊，請參閱[稽核記錄概觀檔案](../../landing/governance-privacy-security/audit-logs/overview.md)。 若要進一步瞭解如何呼叫Platform API，請參閱[稽核記錄API指南](../../landing/api-guide.md)。
+若要瞭解有關稽核記錄使用者介面的詳細資訊，請參閱[稽核記錄概觀檔案](../../landing/governance-privacy-security/audit-logs/overview.md)。 若要進一步瞭解如何呼叫Experience Platform API，請參閱[稽核記錄API指南](../../landing/api-guide.md)。
 
 ## 先決條件
 
-您必須啟用[!DNL Data Governance] [!UICONTROL 檢視使用者活動記錄]許可權，才能在Platform UI中檢視稽核記錄儀表板。 已透過Adobe[Admin Console](https://adminconsole.adobe.com/)啟用許可權。 如果您沒有啟用此許可權的管理員許可權，請聯絡貴組織的管理員。 請參閱存取控制檔案以取得[透過Admin Console](../../access-control/home.md)新增許可權的完整指示。
+您必須啟用[!DNL Data Governance] [!UICONTROL 檢視使用者活動記錄]許可權，才能在Experience Platform UI中檢視稽核記錄儀表板。 許可權是透過Adobe [Admin Console](https://adminconsole.adobe.com/)啟用。 如果您沒有啟用此許可權的管理員許可權，請聯絡貴組織的管理員。 請參閱存取控制檔案以取得[透過Admin Console新增許可權的完整指示](../../access-control/home.md)。
 
 ## [!DNL Query Service]稽核記錄類別 {#audit-log-categories}
 
@@ -33,9 +33,9 @@ Adobe Experience Platform [!DNL Query Service]稽核記錄整合提供查詢相�
 
 若要執行[!DNL Query Service]活動的稽核，請從左側導覽選取&#x200B;**[!UICONTROL 稽核]**，然後選取漏斗圖示(![篩選圖示。](/help/images/icons/filter.png))以顯示篩選控制項清單，協助縮小結果範圍。
 
-![Platform UI稽核記錄儀表板，在左側導覽中顯示「稽核」，且篩選器控制項反白顯示。](../images/audit-log/filter-controls.png)
+![Experience Platform UI稽核記錄儀表板，左側導覽和篩選控制項中反白顯示「稽核」。](../images/audit-log/filter-controls.png)
 
-您可以從[!UICONTROL 稽核]儀表板[!UICONTROL 活動記錄]索引標籤中，依[!DNL Query Service]類別的任何一個篩選所有記錄的平台動作。 可根據記錄結果執行的時段、執行的動作/功能或執行查詢的使用者來進一步篩選記錄結果。 請參閱稽核記錄檔案以取得[有關如何根據類別、動作、使用者和狀態來篩選記錄的完整指示](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui)。
+您可以從[!UICONTROL 稽核]儀表板[!UICONTROL 活動記錄]索引標籤中，依[!DNL Query Service]類別的任一類別篩選所有記錄的Experience Platform動作。 可根據記錄結果執行的時段、執行的動作/功能或執行查詢的使用者來進一步篩選記錄結果。 請參閱稽核記錄檔案以取得[有關如何根據類別、動作、使用者和狀態來篩選記錄的完整指示](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui)。
 
 傳回的稽核記錄檔資料包含符合所選篩選條件之所有查詢的下列資訊。
 

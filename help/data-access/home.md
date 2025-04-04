@@ -2,11 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；資料存取；python sdk；spark sdk；資料存取api
 solution: Experience Platform
 title: 資料存取總覽
-description: 資料存取可支援Adobe Experience Platform，為使用者提供著重於擷取的Platform資料集可探索性和可存取性的工具。
+description: 資料存取可支援Adobe Experience Platform，為使用者提供著重於擷取的Experience Platform資料集可探索性和可存取性的工具。
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 [!DNL Data Access]透過提供使用者著重於[!DNL Experience Platform]內擷取資料集的可發現性和可存取性的工具，來支援Adobe Experience Platform。
 
-Experience Platform](images/Data_Access_Experience_Platform.png)上的![資料存取
+在Experience Platform上![資料存取](images/Data_Access_Experience_Platform.png)
 
 ## [!DNL Data Access] API
 
-有關使用[!DNL Data Access] API連線至[!DNL Platform]的詳細資訊，請參閱[資料存取開發人員指南](api.md)。
+有關使用[!DNL Data Access] API連線至[!DNL Experience Platform]的詳細資訊，請參閱[資料存取開發人員指南](api.md)。
 
 ## 在資料科學Workspace中存取資料
 
@@ -29,4 +29,4 @@ Experience Platform](images/Data_Access_Experience_Platform.png)上的![資料�
 
 ## 訂閱資料擷取事件
 
-[!DNL Platform]透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)讓特定的高值事件可供訂閱。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱[訂閱Adobe事件通知](../observability/alerts/subscribe.md)的教學課程。
+[!DNL Experience Platform]透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)讓特定的高值事件可供訂閱。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱有關[訂閱Adobe事件通知](../observability/alerts/subscribe.md)的教學課程。

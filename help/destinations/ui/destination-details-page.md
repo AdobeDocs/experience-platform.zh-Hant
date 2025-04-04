@@ -3,7 +3,7 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 檢視目的地詳細資料
 description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的對象以及編輯啟用、啟用及停用資料流程的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->目的地詳細資訊頁面是[!DNL Platform] [!DNL UI]中[!UICONTROL 目的地]工作區的一部分。 如需詳細資訊，請參閱[[!UICONTROL 目的地]工作區總覽](./destinations-workspace.md)。
+>目的地詳細資訊頁面是[!DNL Experience Platform] [!DNL UI]中[!UICONTROL 目的地]工作區的一部分。 如需詳細資訊，請參閱[[!UICONTROL 目的地]工作區總覽](./destinations-workspace.md)。
 
 ## 檢視目的地詳細資料 {#view-details}
 
 請依照下列步驟，檢視現有目的地的詳細資訊。 您可以找出目的地的目的地ID、建立目的地的使用者、目的地的建立時間以及其他資訊。
 
-1. 登入[Experience PlatformUI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL 目的地]**。 從頂端標題選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;以檢視您現有的目的地。
+1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL 目的地]**。 從頂端標題選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;以檢視您現有的目的地。
 
    ![瀏覽目的地](../assets/ui/details-page/browse-destinations.png)
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 | [!UICONTROL 類別] | 指示目的地型別。 如需詳細資訊，請參閱[目的地目錄](../catalog/overview.md)。 |
 | [!UICONTROL 連線型別] | 指出將您的對象傳送至目的地所使用的表單。 可能的值包括[!UICONTROL Cookie]和[!UICONTROL 設定檔型]。 |
 | [!UICONTROL 頻率] | 指出將對象傳送到目的地的頻率。 可能的值包括[!UICONTROL 串流]和[!UICONTROL 批次]。 |
-| [!UICONTROL 身分] | 代表目的地接受的身分名稱空間，例如`GAID`、`IDFA`或`email`。 如需接受之身分名稱空間的詳細資訊，請參閱[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
+| [!UICONTROL 身分識別] | 代表目的地接受的身分名稱空間，例如`GAID`、`IDFA`或`email`。 如需接受之身分名稱空間的詳細資訊，請參閱[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
 | [!UICONTROL 建立者：] | 表示建立此目的地的使用者。 |
 | [!UICONTROL 已建立] | 表示建立此目的地的UTC日期時間。 |
 
@@ -82,8 +82,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->* 目的地監視功能目前支援Experience Platform *中除* [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)、[自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)和[Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)目的地以外的所有目的地。
->* 對於[Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)和[HTTP API](/help/destinations/catalog/streaming/http-destination.md)目的地，與已排除、失敗和已啟用的身分相關的量度是估計值。 較大量的啟用資料會導致量度的準確性較高。
+>* Experience Platform *中目前所有目的地都支援目的地監視功能，但* [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)、[自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)和[Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)目的地除外。
+>* 針對[Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)及[HTTP API](/help/destinations/catalog/streaming/http-destination.md)目的地，預估了與已排除、失敗及啟用的身分相關的量度。 較大量的啟用資料會導致量度的準確性較高。
 
 ![資料流執行檢視](../assets/ui/details-page/dataflow-runs.png)
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 ### 串流目的地 {#streaming}
 
-雖然大多數串流資料流執行所指示的&#x200B;**[!UICONTROL 處理持續時間]**&#x200B;大約是四個小時（如下圖所示），但任何資料流執行的實際處理時間都短很多。 若Experience Platform需要重試對目的地的呼叫，資料流執行視窗會維持較長的開啟時間，同時確保不會錯過相同時間視窗中任何延遲送達的資料。
+雖然大多數串流資料流執行所指示的&#x200B;**[!UICONTROL 處理持續時間]**&#x200B;大約是四個小時（如下圖所示），但任何資料流執行的實際處理時間都短很多。 若Experience Platform需要重新嘗試呼叫目的地，資料流執行視窗仍會持續開啟較長時間，同時請確保其不會錯過相同時間視窗中任何延遲送達的資料。
 
 ![針對串流目的地反白顯示「處理時間」欄的資料流執行頁面影像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 

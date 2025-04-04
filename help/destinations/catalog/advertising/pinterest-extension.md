@@ -1,10 +1,10 @@
 ---
-title: pinterest轉換追蹤擴充功能
-description: pinterest轉換追蹤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
+title: Pinterest轉換追蹤擴充功能
+description: Pinterest轉換追蹤擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: c2a78f79-99c8-4aca-892e-fb40f9281f2d
-source-git-commit: 0d0f1afcc1cc259d3f3feae2584329ef030f1902
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '457'
 ht-degree: 3%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 3%
 
 [!DNL Pinterest Conversion Tracking]是Adobe Experience Platform中的廣告擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html)上的擴充功能頁面。
 
-此目的地是標籤延伸模組。 如需標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
+此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
 ![Pinterest轉換追蹤擴充功能](../../assets/catalog/advertising/pinterest/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-此擴充功能可在[!DNL Destinations]目錄中提供給所有已購買Platform的客戶。
+此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
 若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，讓您可以安裝擴充功能。
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 
 若要安裝[!DNL Pinterest Conversion Tracking]擴充功能：
 
-在[平台介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
+在[Experience Platform介面](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 
 從目錄中選取擴充功能或使用搜尋列。
 
@@ -41,7 +41,7 @@ ht-degree: 3%
 
 工作流程會逐步引導您完成安裝作業。
 
-如需擴充功能組態選項和安裝支援的相關資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html)上的[Pinterest轉換追蹤頁面。
+如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html)上的[Pinterest轉換追蹤頁面。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱標籤檔案中有關[新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的章節。
 
@@ -57,6 +57,6 @@ ht-degree: 3%
 
 >[!TIP]
 >
->如果擴充功能已安裝在您的其中一個屬性上，Platform UI仍會顯示擴充功能的&#x200B;**[!UICONTROL 安裝]**。 依照[安裝擴充功能](#install-extension)中的說明啟動安裝工作流程，以設定或刪除您的擴充功能。
+>如果擴充功能已安裝在您的其中一個屬性上，Experience Platform UI仍會顯示擴充功能的&#x200B;**[!UICONTROL 安裝]**。 依照[安裝擴充功能](#install-extension)中的說明啟動安裝工作流程，以設定或刪除您的擴充功能。
 
 若要升級您的擴充功能，請參閱標籤檔案中的[擴充功能升級程式](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)指南。

@@ -1,9 +1,9 @@
 ---
 title: 在UI中建立Amazon Kinesis Source連線
-description: 瞭解如何使用Amazon UI建立Adobe Experience Platform Kinesis來源連線。
+description: 瞭解如何使用Adobe Experience Platform UI建立Amazon Kinesis來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 2%
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Kinesis]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>[!DNL Amazon Kinesis]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Platform]使用者介面驗證[!DNL Amazon Kinesis] （以下稱為[!DNL "Kinesis"]）來源聯結器的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面驗證[!DNL Amazon Kinesis] （以下稱為[!DNL "Kinesis"]）來源聯結器的步驟。
 
 ## 快速入門
 
@@ -43,7 +43,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的[!DNL Kinesis]帳戶
 
-收集必要的認證後，您可以依照下列步驟將[!DNL Kinesis]帳戶連結至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟將[!DNL Kinesis]帳戶連結至[!DNL Experience Platform]。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
@@ -53,7 +53,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-**[!UICONTROL 連線至Amazon Kinesis]**&#x200B;對話方塊隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+**[!UICONTROL 連線至Amazon Kinesis]**&#x200B;對話方塊就會顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 新帳戶
 
@@ -69,4 +69,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程指示，您已將[!DNL Kinesis]帳戶連線至[!DNL Platform]。 您現在可以繼續進行下一個教學課程，並[設定資料流，將雲端儲存空間中的資料匯入 [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md)。
+依照本教學課程指示，您已將[!DNL Kinesis]帳戶連線至[!DNL Experience Platform]。 您現在可以繼續進行下一個教學課程，並[設定資料流，將雲端儲存空間中的資料匯入 [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md)。

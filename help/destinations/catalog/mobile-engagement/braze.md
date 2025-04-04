@@ -4,7 +4,7 @@ title: 硬式連線
 description: Braze是全方位的客戶參與平台，可在客戶與所喜愛品牌之間提供相關且令人難忘的體驗。
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -51,8 +51,8 @@ ht-degree: 2%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ ht-degree: 2%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分，視您的欄位對應而定。[!DNL Adobe Experience Platform]個對象已匯出至`AdobeExperiencePlatformSegments`屬性下的[!DNL Braze]。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ ht-degree: 2%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -108,7 +108,7 @@ ht-degree: 2%
 
 若要將對象資料從[!DNL Adobe Experience Platform]正確傳送至[!DNL Braze]目的地，您必須完成欄位對應步驟。
 
-對應包括在[!DNL Platform]帳戶中的[!DNL Experience Data Model] (XDM)結構描述欄位之間建立連結，以及從目標目的地建立對應對應專案。
+對應包括在[!DNL Experience Platform]帳戶中的[!DNL Experience Data Model] (XDM)結構描述欄位之間建立連結，以及從目標目的地建立對應對應專案。
 
 若要將您的XDM欄位正確對應到[!DNL Braze]目的地欄位，請遵循下列步驟：
 
@@ -125,7 +125,7 @@ ht-degree: 2%
 
 ![硬碟目的地對應Source屬性](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL 選取身分名稱空間]：使用此選項將[!DNL Platform]身分名稱空間對應至[!DNL Braze]名稱空間。
+* [!UICONTROL 選取身分名稱空間]：使用此選項將[!DNL Experience Platform]身分名稱空間對應至[!DNL Braze]名稱空間。
 
 ![硬碟目的地對應Source名稱空間](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -136,7 +136,7 @@ ht-degree: 2%
 ![硬碟目的地目標對應](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 在[!UICONTROL 選取目標欄位]視窗中，您可以選擇兩種目標欄位類別：
-* [!UICONTROL 選取身分名稱空間]：使用此選項將[!DNL Platform]身分名稱空間對應到[!DNL Braze]身分名稱空間。
+* [!UICONTROL 選取身分名稱空間]：使用此選項將[!DNL Experience Platform]身分名稱空間對應到[!DNL Braze]身分名稱空間。
 * [!UICONTROL 選取自訂屬性]：使用此選項將XDM屬性對應到您在[!DNL Braze]帳戶中定義的自訂[!DNL Braze]屬性。 <br>您也可以使用此選項將現有的XDM屬性重新命名為[!DNL Braze]。 例如，將`lastName` XDM屬性對應至[!DNL Braze]中的自訂`Last_Name`屬性，將在[!DNL Braze]中建立`Last_Name`屬性（如果尚未存在），並將`lastName` XDM屬性對應至該屬性。
 
 ![硬碟目的地目標對應欄位](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
@@ -156,7 +156,7 @@ ht-degree: 2%
 |  | XDM設定檔結構描述 | [!DNL Braze]執行個體 |
 |---|---|---|
 | 屬性 | <ul><li><code>person.name.firstname</code></li><li><code>person.name.lastName</code></li><li><code>行動電話。號碼</code></li></ul> | <ul><li><code>名字</code></li><li><code>姓氏</code></li><li><code>電話號碼</code></li></ul> |
-| 身分 | <ul><li><code>電子郵件</code></li><li><code>Google廣告ID (GAID)</code></li><li>廣告商的<code>Apple ID (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
+| 身分識別 | <ul><li><code>電子郵件</code></li><li><code>Google廣告ID (GAID)</code></li><li>廣告商的<code>Apple ID (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 正確的對應如下所示：
 

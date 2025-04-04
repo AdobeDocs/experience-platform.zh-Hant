@@ -2,10 +2,10 @@
 title: 重新發佈程式庫
 description: 瞭解如何在Adobe Experience Platform中重新發佈先前的標籤庫。
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 49%
+source-wordcount: '651'
+ht-degree: 56%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 最新以Web屬性發佈至生產環境的五個程式庫，發佈後仍可擷取。 若在生產程式庫中發現錯誤，且需立即回復至已知的良好狀態，則這項功能會很有幫助。
 
@@ -21,9 +21,9 @@ ht-degree: 49%
 
 提供下列選項：
 
-* **主機：Managed byAdobe，封存：關閉：**&#x200B;如果您使用的是Managed byAdobe主機，且不封存程式庫，則可重新發佈較舊的程式庫。
+* **主機：由Adobe管理，封存：關閉：**&#x200B;如果您使用的是Managed by Adobe主機，且不封存程式庫，則可重新發佈較舊的程式庫。
 
-* **主機：Managed byAdobe，封存：開啟：**&#x200B;如果您使用的是Managed byAdobe主機，且正在封存程式庫，則可以下載這些較舊的程式庫。
+* **主機：由Adobe管理，封存：開啟：**&#x200B;如果您使用的是Managed by Adobe主機，且正在封存程式庫，則可以下載這些較舊的程式庫。
 
 * **主機：SFTP，封存：開啟或關閉：**&#x200B;如果您使用的是 SFTP 主機，一般會假設您已制定封存策略，且不提供擷取選項。
 
@@ -37,7 +37,7 @@ ht-degree: 49%
 
 生產環境中最新的五個組建版本可供擷取。
 
-當您重新發佈舊程式庫時，Platform會更新環境連結，以指向任一個尚未清理的舊組建。  Platform也會向CDN邊緣節點快取傳送清除請求，告知程式庫已更新，且節點應從來源擷取新的副本。
+當您重新發佈舊程式庫時，Experience Platform會更新環境連結，使其指向任一個尚未清理的舊組建。  Experience Platform也會向CDN邊緣節點快取傳送清除要求，告知程式庫已更新，且節點應從來源擷取新的副本。
 
 換句話說，如果重新發佈舊程式庫：
 
@@ -47,7 +47,7 @@ ht-degree: 49%
 
 因特定規則發生問題而需復原時，請考量當下的情況。例如，目前生產環境所使用的規則可能已是三個修訂版本之前的舊版本。您在UI中檢視該規則以進行修正時，該規則仍會反映最近一次儲存的變更，而非目前生產環境中的最新狀態。
 
-因此，Platform會通知您某個屬性處於重新發佈狀態，提醒您在資料收集使用者介面中看到的內容，會與正常情況下的生產環境有些微差距。 此通知不可見，當您第一次檢視屬性時，每個瀏覽器工作階段會顯示一次。
+因此，Experience Platform會通知您某個屬性處於重新發佈狀態，提醒您在資料收集使用者介面中看到的內容，會與正常情況下的生產環境有些微差距。 此通知不可見，當您第一次檢視屬性時，每個瀏覽器工作階段會顯示一次。
 
 ### 如何重新發佈舊程式庫
 

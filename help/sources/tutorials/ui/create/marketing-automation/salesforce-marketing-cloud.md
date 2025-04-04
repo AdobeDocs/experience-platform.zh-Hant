@@ -1,15 +1,15 @@
 ---
-title: 連線您的SalesforceMarketing Cloud帳戶，以透過UIExperience Platform
-description: 瞭解如何連線您的SalesforceMarketing Cloud帳戶，以透過UIExperience Platform。
+title: 透過UI將您的Salesforce Marketing Cloud帳戶連線至Experience Platform
+description: 瞭解如何透過UI將您的Salesforce Marketing Cloud帳戶連結至Experience Platform。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
 
-# 連線您的[!DNL Salesforce Marketing Cloud]帳戶以透過UIExperience Platform
+# 透過UI將您的[!DNL Salesforce Marketing Cloud]帳戶連線至Experience Platform
 
 >[!WARNING]
 >
@@ -26,11 +26,11 @@ ht-degree: 2%
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-如果您已有[!DNL Salesforce Marketing Cloud]帳戶，您可以略過本檔案的其餘部分，並繼續進行有關[使用UI](../../dataflow/marketing-automation.md)將行銷自動化資料帶入Experience Platform的教學課程。
+如果您已有[!DNL Salesforce Marketing Cloud]帳戶，可以略過本檔案的其餘部分，然後繼續進行[使用UI將行銷自動化資料帶入Experience Platform的教學課程](../../dataflow/marketing-automation.md)。
 
 ### 收集必要的認證
 
-若要在Platform上存取您的[!DNL Salesforce Marketing Cloud]帳戶，您必須提供下列值：
+若要在Experience Platform上存取您的[!DNL Salesforce Marketing Cloud]帳戶，您必須提供下列值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -46,15 +46,15 @@ ht-degree: 2%
 >
 >[!DNL Salesforce Marketing Cloud]來源整合目前不支援自訂物件擷取。
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]顯示Experience Platform支援的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]顯示Experience Platform支援的各種來源。
 
 您可以從類別清單中選取適當的類別。 您也可以使用搜尋列來篩選特定來源。
 
-在[!UICONTROL 行銷自動化]類別下，選取&#x200B;**[!UICONTROL SalesforceMarketing Cloud]**，然後選取&#x200B;**[!UICONTROL 設定]**。
+在[!UICONTROL 行銷自動化]類別下，選取&#x200B;**[!UICONTROL Salesforce Marketing Cloud]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 
-![已選取SalesforceMarketing Cloud來源的來源目錄。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+![已選取Salesforce Marketing Cloud來源的來源目錄。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-**[!UICONTROL 連線至SalesforceMarketing Cloud]**&#x200B;頁面隨即顯示。 您可以在此頁面上建立新帳戶或使用現有帳戶。
+**[!UICONTROL 連線至Salesforce Marketing Cloud]**&#x200B;頁面隨即顯示。 您可以在此頁面上建立新帳戶或使用現有帳戶。
 
 ### 新帳戶
 
@@ -62,13 +62,13 @@ ht-degree: 2%
 
 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**，然後等待一段時間以建立新連線。
 
-![新帳戶介面，您可以在此介面驗證SalesforceMarketing Cloud的新帳戶。](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+![新帳戶介面，您可在此介面驗證Salesforce Marketing Cloud的新帳戶。](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
 
 ### 現有帳戶
 
 如果您已有現有的帳戶，請選取&#x200B;**[!UICONTROL 現有的帳戶]**，然後從顯示的清單中選取您要使用的帳戶。
 
-![您可以從現有SalesforceMarketing Cloud帳戶清單中選取的現有帳戶介面。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![您可以從現有Salesforce Marketing Cloud帳戶清單中選取的現有帳戶介面。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## 後續步驟
 

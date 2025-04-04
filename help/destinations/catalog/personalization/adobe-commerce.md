@@ -2,9 +2,9 @@
 title: Adobe Commerce目的地聯結器
 description: 瞭解Adobe Commerce和Real-Time CDP商家如何提供高度相關的網站內容和促銷活動，並根據Real-Time CDP中建立和管理之客戶對象進行自訂，進而個人化購物體驗。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 ## 先決條件 {#prerequisites}
 
-已購買Real-Time CDP Prime或Ultimate和Adobe Commerce的客戶可在目的地目錄中找到此聯結器。
+已購買Real-Time CDP Prime或Ultimate和Adobe Commerce的客戶可在目標目錄中取得此聯結器。
 
 若要使用此目的地連線，請確定您有以下存取權：
 
@@ -25,11 +25,11 @@ ht-degree: 3%
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 您可以存取開發人員主控台，檢視在Adobe Commerce中[完成擴充功能組態](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension)所需的服務帳戶和認證資訊。
 - [Adobe Commerce Cloud 2.4.4版或更新版本](https://business.adobe.com/products/magento/magento-commerce.html)
 
-在Experience Platform中，建立下列專案：
+在Experience Platform中建立下列專案：
 
 - [結構描述](../../../xdm/schema/composition.md)。 您建立的結構描述代表您計畫從Adobe Commerce擷取的資料。 [深入瞭解](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html)如何建立包含Commerce特定欄位群組的結構描述。
 - [資料集](../../../catalog/datasets/user-guide.md#create)。 資料集是資料集合的儲存和管理結構。 您會使用先前建立的結構描述建立此資料集。
-- [資料流](../../../datastreams/overview.md#create)。 可讓資料從Adobe Experience Platform流向其他AdobeDX產品的ID。 此ID必須與您特定Adobe Commerce執行個體中的特定網站相關聯。 當您建立此資料流時，請指定您在上面建立的XDM結構描述。
+- [資料流](../../../datastreams/overview.md#create)。 可讓資料從Adobe Experience Platform流向其他Adobe DX產品的ID。 此ID必須與您特定Adobe Commerce執行個體中的特定網站相關聯。 當您建立此資料流時，請指定您在上面建立的XDM結構描述。
 
 完成先決條件後，請連線至[!DNL Commerce]目的地。
 
@@ -41,7 +41,7 @@ ht-degree: 3%
 
 若要連線到[!DNL Adobe Commerce]目的地：
 
-1. 在[平台介面](https://experience.adobe.com/platform/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
+1. 在[Experience Platform介面](https://experience.adobe.com/platform/)中，前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 1. 選取&#x200B;**[!UICONTROL Personalization]**。
 1. 選取Adobe Commerce目的地以反白顯示，然後選取&#x200B;**[!UICONTROL 設定]**。
 1. 請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。
@@ -52,7 +52,7 @@ ht-degree: 3%
 
 - **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 - **[!UICONTROL 描述]**：輸入目的地的描述。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
-- **[!UICONTROL 整合別名]**：此值會以JSON物件名稱的形式傳送到Experience PlatformWeb SDK。
+- **[!UICONTROL 整合別名]**：此值會作為JSON物件名稱傳送到Experience Platform Web SDK。
 - **[!UICONTROL 資料串流識別碼]**：這會判斷哪個資料收集資料串流包含頁面回應中所包含的對象。 下拉選單僅顯示已啟用目的地設定的資料流。如需詳細資訊，請參閱[設定資料串流](../../../datastreams/overview.md)。
 
 ### 啟用警示 {#enable-alerts}

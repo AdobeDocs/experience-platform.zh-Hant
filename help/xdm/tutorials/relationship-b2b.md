@@ -2,9 +2,9 @@
 title: 在Real-Time Customer Data Platform B2B edition中定義兩個結構描述之間的關係
 description: 瞭解如何在Adobe Real-Time Customer Data Platform B2B edition中定義兩個結構描述之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1771'
 ht-degree: 12%
 
 ---
@@ -30,7 +30,7 @@ Adobe Real-Time Customer Data Platform B2B edition提供可擷取基本B2B資料
 >
 >如果您未使用Real-Time Customer Data Platform B2B edition或想建立一對一的關係，請改為參閱[建立一對一的關係](./relationship-ui.md)指南。
 >
->本教學課程著重於如何在Platform UI中手動建立B2B結構描述之間的關係。 如果您從B2B來源連線引進資料，您可以使用自動產生公用程式來建立所需的結構描述、身分和關係。 如需使用自動產生公用程式[的詳細資訊，請參閱B2B名稱空間和結構描述的來原始檔](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)。
+>本教學課程著重於如何在Experience Platform UI中手動建立B2B結構描述之間的關係。 如果您從B2B來源連線引進資料，您可以使用自動產生公用程式來建立所需的結構描述、身分和關係。 如需使用自動產生公用程式[的詳細資訊，請參閱B2B名稱空間和結構描述的來原始檔](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)。
 
 ## 快速入門
 
@@ -53,7 +53,7 @@ Adobe Real-Time Customer Data Platform B2B edition提供可擷取基本B2B資料
 >title="參考身分識別命名空間"
 >abstract="適用於參考結構描述的主要身分識別欄位的命名空間 (類型)。參考結構描述必須有一個已建立的主要身分識別欄位才能參與關係。請查看文件以了解有關 B2B 關係中身分識別的詳細資訊。"
 
-為了建立關係，參考結構描述必須具有定義的主要身分。 為B2B實體設定主要身分時，請記住，如果您跨不同系統或位置收集字串型實體ID，則這些ID可能會重疊，這可能會導致Platform中的資料衝突。
+為了建立關係，參考結構描述必須具有定義的主要身分。 為B2B實體設定主要身分時，請記住，如果您跨不同系統或位置收集字串型實體ID，則這些ID可能會重疊，這可能會導致Experience Platform中的資料衝突。
 
 為了解決這個問題，所有標準B2B類別都包含符合[[!UICONTROL B2B Source]資料型別](../data-types/b2b-source.md)的「key」欄位。 此資料型別提供B2B實體的字串識別碼欄位，以及有關識別碼來源的其他內容資訊。 其中一個欄位`sourceKey`串連資料型別中其他欄位的值，以產生實體的完整唯一識別碼。 此欄位一律應用作B2B實體結構描述的主要身分識別。
 

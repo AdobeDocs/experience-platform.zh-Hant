@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用原則概觀
 description: 資料使用原則是描述允許或限制您在Adobe Experience Platform中對資料執行的行銷動作型別的規則。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1213'
 ht-degree: 17%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->資料使用原則不應與[存取控制原則](../../access-control/abac/end-to-end-guide.md#policy)混淆，後者會決定您組織中的某些Platform使用者是否可以存取某些資料欄位，並透過[!UICONTROL 許可權]索引標籤進行設定。
+>資料使用原則不應與[存取控制原則](../../access-control/abac/end-to-end-guide.md#policy)混淆，後者會決定您組織中的某些Experience Platform使用者是否可以存取某些資料欄位，並透過[!UICONTROL 許可權]索引標籤進行設定。
 
 本檔案提供資料使用原則的高層級概觀，並提供在UI或API中使用原則的其他檔案的連結。
 
@@ -50,14 +50,14 @@ ht-degree: 17%
 >
 >您可以在目的地設定行銷使用案例，以自動化原則執行。 請參閱[目的地檔案](../../destinations/home.md)，以取得有關特定目的地組態選項的詳細資訊。
 
-請參閱本檔案的附錄，以取得[可用Adobe定義的行銷動作](#core-actions)的清單。 您也可以使用[!DNL Policy Service] API或[!DNL Experience Platform]使用者介面來定義您自己的自訂行銷動作。 下一節將提供有關使用行銷動作和原則的詳細資訊。
+請參閱本檔案的附錄，以取得[可用的Adobe定義行銷動作](#core-actions)清單。 您也可以使用[!DNL Policy Service] API或[!DNL Experience Platform]使用者介面來定義您自己的自訂行銷動作。 下一節將提供有關使用行銷動作和原則的詳細資訊。
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## 管理資料使用原則 {#manage}
@@ -70,7 +70,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 如需在API中使用行銷動作和資料使用原則的逐步指示，請參閱有關[建立和評估資料使用原則](create.md)的教學課程。 如需由[!DNL Policy Service] API提供的金鑰作業的詳細資訊，請參閱[原則服務開發人員指南](../api/getting-started.md)。
 
-有關如何在[!DNL Platform] UI中使用行銷動作和原則的資訊，請參閱[資料使用原則使用手冊](./user-guide.md)。
+有關如何在[!DNL Experience Platform] UI中使用行銷動作和原則的資訊，請參閱[資料使用原則使用手冊](./user-guide.md)。
 
 ## 後續步驟
 
@@ -82,7 +82,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ### Adobe定義的行銷動作 {#core-actions}
 
-下表說明可透過Adobe立即使用的核心行銷動作。
+下表說明Adobe現成可用的核心行銷動作。
 
 >[!NOTE]
 >
@@ -94,10 +94,10 @@ For a reference on how specific Data Export Controls map to marketing actions in
 | 結合直接可識別的資料 | 此動作會將任何個人識別資訊 (PII) 與匿名資料相結合。來自廣告網路、廣告伺服器和第三方資料提供者的資料合約通常包含明確的合約禁令，禁止將此類資料與可直接識別的資料一起使用。 |
 | 跨網站目標定位 | 此動作會將資料用於跨網站廣告目標定位。來自多個網站的資料組合（包括站內資料和站外資料的組合，或來自多個站外來源的資料組合）稱為跨網站資料。 通常會收集和處理跨網站資料，以推斷使用者的興趣。 |
 | 資料科學 | 此動作會將資料用於資料科學工作流程。有些合約包含明確禁令，禁止將資料用於資料科學。有時，這些措辭為禁止將資料用於人工智慧 (AI)、機器學習 (ML) 或建模。 |
-| 資料匯出 | 此動作會將資料匯出至Adobe產品和服務之外的任何位置或目的地。 例如，下載資料到您的本機電腦、從畫面複製資料、排程將資料傳送到Adobe之外的位置、Customer Journey Analytics已排程的專案、下載報表、報告API等等。 |
+| 資料匯出 | 此動作會將資料匯出至Adobe產品和服務之外的任何位置或目的地。 例如，下載資料至本機電腦、從畫面複製資料、排程傳送資料至Adobe以外的位置、Customer Journey Analytics已排程專案、下載報表、報表API等。 |
 | 電子郵件目標定位 | 此動作會將資料用於電子郵件目標定位行銷活動。 |
 | 匯出到第三方 | 此動作會將資料匯出至與客戶沒有直接關係的處理器和實體。許多資料提供者在合約中都有條款，禁止從最初收集資料的地方匯出資料。例如，社交網路合約通常會限制傳輸您從他們那裡收到的資料。 |
 | 現場Advertising | 此動作會將資料用於站內廣告，包括在您組織的網站或應用程式上選擇和投放廣告，或衡量此類廣告的投放和有效性。 |
 | 現場Personalization | 此動作會將資料用於站上內容個人化。 站上個人化是用於推斷使用者興趣的任何資料，並用於根據這些推斷選擇提供哪些內容或廣告。 |
-| 區段比對 | 此動作會將資料用於「Adobe Experience Platform區段比對」，可讓兩個或更多Platform使用者交換受眾資料。 透過啟用參考此動作的原則，您可以限制用於區段比對的資料。 例如，如果已啟用核心原則「限制資料共用」，則任何具有[C11標籤](../labels/reference.md#c11)的資料都無法用於區段比對。 |
-| 單一身分Personalization | 此動作會要求將單一身分用於個人化目的，而非拼接來自多個來源的身分。 |
+| 區段比對 | 此動作會將資料用於「Adobe Experience Platform區段比對」，可讓兩個或更多Experience Platform使用者交換受眾資料。 透過啟用參考此動作的原則，您可以限制用於區段比對的資料。 例如，如果已啟用核心原則「限制資料共用」，則任何具有[C11標籤](../labels/reference.md#c11)的資料都無法用於區段比對。 |
+| 單一身分Personalization | 此動作會要求將單一身分識別用於個人化目的，而非拼接來自多個來源的身分識別。 |

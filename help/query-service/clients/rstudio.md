@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將RStudio連線至查詢服務
 description: 本檔案將逐步說明連線R Studio與Adobe Experience Platform查詢服務的步驟。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -49,7 +49,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 >
 >請參閱[[!DNL Query Service] SSL檔案](./ssl-modes.md)，瞭解協力廠商連線至Adobe Experience Platform查詢服務的SSL支援，以及如何使用`verify-full` SSL模式連線。
 
-如需尋找資料庫名稱、主機、連線埠和登入認證的詳細資訊，請參閱[認證指南](../ui/credentials.md)。 若要尋找您的認證，請登入[!DNL Platform]，然後選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。
+如需尋找資料庫名稱、主機、連線埠和登入認證的詳細資訊，請參閱[認證指南](../ui/credentials.md)。 若要尋找您的認證，請登入[!DNL Experience Platform]，然後選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。
 
 主控台輸出中會顯示訊息，確認連線至查詢服務。
 

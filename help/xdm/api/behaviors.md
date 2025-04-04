@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 行為API端點
 description: 結構描述登入API中的/behaviors端點可讓您擷取全域容器中所有可用的行為。
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '419'
 ht-degree: 2%
 
 ---
 
 # 行為端點
 
-在Experience Data Model (XDM)中，行為會定義結構描述之資料的性質。 每個XDM類別都必須參考特定行為，採用該類別的所有結構描述都會繼承。 在Platform的幾乎所有使用案例中，有兩個可用的行為：
+在Experience Data Model (XDM)中，行為會定義結構描述之資料的性質。 每個XDM類別都必須參考特定行為，採用該類別的所有結構描述都會繼承。 在幾乎所有的Experience Platform使用案例中，有兩個可用的行為：
 
 * **[!UICONTROL 記錄]**：提供有關主旨屬性的資訊。 主旨可以是組織或個人。
 * **[!UICONTROL 時間序列]**：提供記錄主體直接或間接執行動作時的系統快照。
 
 >[!NOTE]
 >
->Platform中有些使用案例需要使用未採用上述任一行為的結構描述。 對於這些情況，有第三種「臨機」行為可供使用。 如需詳細資訊，請參閱有關[建立臨時結構描述](../tutorials/ad-hoc.md)的教學課程。
+>Experience Platform中有些使用案例會要求使用未採用上述任一行為的結構描述。 對於這些情況，有第三種「臨機」行為可供使用。 如需詳細資訊，請參閱有關[建立臨時結構描述](../tutorials/ad-hoc.md)的教學課程。
 >
 >如需資料行為如何影響結構描述組合的一般資訊，請參閱結構描述組合[基本概念指南](../schema/composition.md)。
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南中使用的端點是[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ## 擷取行為清單 {#list}
 

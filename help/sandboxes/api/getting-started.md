@@ -5,9 +5,9 @@ title: 開始使用沙箱API
 description: 沙箱API可讓開發人員以程式設計方式管理Adobe Experience Platform中的沙箱。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '373'
 ht-degree: 15%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 15%
 
 Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。
 
-此開發人員指南提供步驟，協助您使用沙箱API管理Experience Platform中的沙箱，並包含執行各種操作的範例API呼叫。
+本開發人員指南提供步驟，協助您使用沙箱API管理Experience Platform中的沙箱，並包含執行各種作業的範例API呼叫。
 
 ## 先決條件
 
@@ -24,11 +24,11 @@ Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測�
 
 ### 讀取範例 API 呼叫
 
-本指南提供範例 API 呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需在範例API呼叫檔案中所使用的慣例相關資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
+本指南提供範例 API 呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需範例API呼叫檔案中所使用慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
 
 ### 收集所需標頭的值
 
-本指南要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫Platform API。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
+本指南要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫Experience Platform API。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`

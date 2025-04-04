@@ -1,9 +1,10 @@
 ---
 title: 設定客戶自控金鑰的AWS KMS
 description: 瞭解如何設定Amazon Web Services金鑰管理服務(KMS)，以便與Adobe Experience Platform中的客戶自控金鑰搭配使用。
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -12,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->本檔案適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
+>本檔案適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 >
 >AWS上的[客戶自控金鑰](../overview.md) (CMK)支援Privacy and Security Shield，但不適用於Healthcare Shield。 Azure上的CMK同時支援Privacy和Security Shield以及Healthcare Shield。
 
 使用本指南，透過Amazon Web Services (AWS)金鑰管理服務(KMS)建立、管理和控制Adobe Experience Platform的加密金鑰，來保護您的資料。 此整合可簡化法規遵循、透過自動化簡化作業，並免除維護您自己的關鍵管理基礎建設的必要性。
 
-如需Customer Journey Analytics特定指示，請參閱[Customer Journey AnalyticsCMK檔案](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+如需Customer Journey Analytics的特定指示，請參閱[Customer Journey Analytics CMK檔案](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -36,7 +37,7 @@ ht-degree: 0%
    - 指定允許或拒絕使用者執行的動作。
    - 使用IAM原則指派許可權，實作微調存取控制。
 如需詳細資訊，請參閱[適用於AWS KMS的IAM原則](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html)。
-- **Experience Platform中的資料安全性**：探索Platform如何確保資料安全性，以及如何與AWS KMS等外部服務整合以進行加密。 Platform使用HTTPS TLS v1.2保護資料以便傳輸、雲端提供者靜態加密、隔離儲存以及可自訂的驗證和加密選項。 如需如何確保資料安全的詳細資訊，請參閱[治理、隱私權及安全性總覽](../overview.md)，或Platform中[資料加密](../../encryption.md)的檔案。
+- **Experience Platform的資料安全性**：探索Experience Platform如何確保資料安全性，以及如何與AWS KMS等外部服務整合以進行加密。 Experience Platform使用HTTPS TLS v1.2保護資料以進行傳輸、停止使用雲端提供者加密、隔離儲存以及可自訂的驗證和加密選項。 如需如何確保資料安全的詳細資訊，請參閱[治理、隱私權及安全性總覽](../overview.md)，或Experience Platform中[資料加密](../../encryption.md)的檔案。
 - **AWS Management Console**：中央樞紐，您可從一個Web應用程式存取及管理所有AWS服務。 使用搜尋列快速尋找工具、檢查通知、管理您的帳戶和帳單，以及自訂您的設定。 如需詳細資訊，請參閱[官方AWS管理主控台檔案](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html)。
 
 ## 快速入門 {#get-started}
@@ -73,7 +74,7 @@ AWS KMS僅於特定地區提供。 請確定您在支援KMS的區域中作業。
 
 >[!IMPORTANT]
 >
->確保加密金鑰的安全儲存、存取及可用性。 您有責任管理金鑰並防止平台作業中斷。
+>確保加密金鑰的安全儲存、存取及可用性。 您有責任管理您的金鑰，並防止Experience Platform作業中斷。
 
 在[!DNL Key Management Service (KMS)]工作區中，選取&#x200B;**[!DNL Create a key]**。
 
@@ -95,7 +96,7 @@ AWS KMS僅於特定地區提供。 請確定您在支援KMS的區域中作業。
 
 >[!IMPORTANT]
 >
->AWS會強制對KMS金鑰施加地區限制。 此區域限制表示金鑰必須位於與您的Adobe帳戶相同的區域。 Adobe只能存取位於您帳戶地區內的KMS金鑰。 確定您選取的區域符合您Adobe單一租使用者帳戶的地區。
+>AWS會強制對KMS金鑰施加地區限制。 此區域限制表示金鑰必須位於與您的Adobe帳戶相同的區域。 Adobe只能存取位於您帳戶地區內的KMS金鑰。 確認您選取的區域符合Adobe單一租使用者帳戶的地區。
 
 ![在AWS地區、KMS和單一地區金鑰進階選項強調顯示的設定金鑰工作流程的第一步。](../../../images/governance-privacy-security/key-management-service/configure-key-advanced-options.png)
 
@@ -103,7 +104,7 @@ AWS KMS僅於特定地區提供。 請確定您在支援KMS的區域中作業。
 
 工作流程的第二個[!DNL Add labels]階段隨即顯示。 您可在此設定[!DNL Alias]和[!DNL Tags]欄位，協助您從AWS KMS主控台管理並尋找您的加密金鑰。
 
-在&#x200B;**[!DNL Alias]**&#x200B;輸入欄位中輸入索引鍵的描述性標籤。 別名可做為使用者易記的識別碼，使用AWS KMS主控台中的搜尋列快速找到金鑰。 為避免混淆，請選擇可反映金鑰用途的有意義名稱，例如「Adobe平台金鑰」或「客戶加密金鑰」。 如果金鑰別名不足以說明其用途，您也可以包含金鑰的說明。
+在&#x200B;**[!DNL Alias]**&#x200B;輸入欄位中輸入索引鍵的描述性標籤。 別名可做為使用者易記的識別碼，使用AWS KMS主控台中的搜尋列快速找到金鑰。 為避免混淆，請選擇可反映金鑰用途的有意義名稱，例如「Adobe-Experience-Platform-Key」或「Customer-Encryption-Key」。 如果金鑰別名不足以說明其用途，您也可以包含金鑰的說明。
 
 最後，透過在[!DNL Tags]區段中新增索引鍵/值組，將中繼資料指派給您的索引鍵。 此步驟為選用，但您應新增標籤以分類及篩選AWS資源，以便於管理。 例如，如果貴組織使用多個Adobe相關資源，您可使用「Adobe」或「Experience-Platform」加以標籤。 這個額外的步驟可讓您在AWS Management Console中輕鬆搜尋及管理所有相關的資源。 選取&#x200B;**[!DNL Add tag]**&#x200B;以開始處理程式。
 
@@ -131,7 +132,7 @@ AWS KMS僅於特定地區提供。 請確定您在支援KMS的區域中作業。
 
 在工作流程的步驟四中，您可以[!DNL Define key usage permissions]。 從&#x200B;**[!DNL Key users]**&#x200B;清單中，選取您要擁有使用此金鑰之許可權的所有IAM使用者和角色的核取方塊。
 
-從這個檢視中，您也可以[!DNL Add another AWS account]；不過，強烈建議不要新增其他AWS帳戶。 新增另一個帳戶可能會帶來風險，並使加密和解密操作的許可權管理複雜化。 透過將金鑰與單一AWS帳戶相關聯，Adobe可確保與AWS KMS的安全整合，將風險降至最低，並確保可靠的運作。
+從這個檢視中，您也可以[!DNL Add another AWS account]；不過，強烈建議不要新增其他AWS帳戶。 新增另一個帳戶可能會帶來風險，並使加密和解密操作的許可權管理複雜化。 藉由保留與單一AWS帳戶相關聯的金鑰，Adobe可確保與AWS KMS的安全整合，將風險降到最低並確保可靠的運作。
 
 選取&#x200B;**[!DNL Next]**&#x200B;以繼續工作流程。
 

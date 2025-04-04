@@ -2,9 +2,9 @@
 title: 使用結構描述登入API新增特定欄位到結構描述
 description: 瞭解如何使用結構描述登入API，將現有欄位群組中的個別欄位新增到體驗資料模型(XDM)結構描述。
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ Experience Data Model (XDM)結構描述由基底類別組成，並使用由Adobe
 
 ## 使用PUT作業新增欄位
 
-您可以使用PUT要求來重寫整個結構描述，並設定您要包含在`allOf`下的欄位。
+您可以使用PUT要求重寫整個結構描述，並設定您要包含在`allOf`下的欄位。
 
 **API格式**
 
@@ -190,11 +190,11 @@ curl -X PUT \
 
 >[!NOTE]
 >
->如需結構描述之PUT要求的詳細資訊，請參閱[結構描述端點指南](../api/schemas.md#put)。
+>如需結構描述的PUT要求的詳細資訊，請參閱[結構描述端點指南](../api/schemas.md#put)。
 
 ## 使用PATCH作業新增欄位
 
-您可以使用PATCH請求將個別欄位新增到結構描述而不覆寫其他欄位。 結構描述登入支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH要求將個別欄位新增至結構描述，而不覆寫其他欄位。 結構描述登入支援所有標準JSON修補程式作業，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
 
 **API格式**
 
@@ -281,10 +281,10 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->如需結構描述之PATCH要求的詳細資訊，請參閱[結構描述端點指南](../api/schemas.md#patch)。
+>如需結構描述的PATCH要求的詳細資訊，請參閱[結構描述端點指南](../api/schemas.md#patch)。
 
 ## 後續步驟
 
-本指南說明如何使用API呼叫，將現有欄位群組中的個別欄位新增至結構描述。 如需有關如何在Platform UI中執行類似的欄位式工作的詳細資訊，請參閱[欄位式工作流程](../ui/field-based-workflows.md)的指南。
+本指南說明如何使用API呼叫，將現有欄位群組中的個別欄位新增至結構描述。 如需有關如何在Experience Platform UI中執行類似的欄位型工作的詳細資訊，請參閱[欄位型工作流程](../ui/field-based-workflows.md)的指南。
 
 如需Schema Registry API功能的詳細資訊，請參閱[API總覽](../api/overview.md)，以取得完整的端點與程式清單。

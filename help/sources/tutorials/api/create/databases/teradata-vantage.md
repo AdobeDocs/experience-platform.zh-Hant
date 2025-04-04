@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Teradata優勢
-title: 使用Flow Service API建立Teradata Vantage基本連線
+keywords: Experience Platform；首頁；熱門主題；Teradata Vantage
+title: 使用流量服務API建立Teradata Vantage基本連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連結至Teradata Vantage。
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '455'
 ht-degree: 4%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 4%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
 以下章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL Teradata Vantage]。
 
@@ -42,9 +42,9 @@ ht-degree: 4%
 
 ## 建立基礎連線
 
-基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL Teradata Vantage]驗證認證作為要求內文的一部分時，向`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的[!DNL Teradata Vantage]驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -99,4 +99,4 @@ curl -X POST \
 依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Teradata Vantage]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
-* [使用 [!DNL Flow Service] API建立資料流以將資料庫資料帶到Platform](../../collect/database-nosql.md)
+* [使用 [!DNL Flow Service] API建立資料流以將資料庫資料帶入Experience Platform](../../collect/database-nosql.md)

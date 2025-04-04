@@ -5,10 +5,10 @@ title: Attribute-based Access Control API指南
 description: 以屬性為基礎的存取控制API可讓您以程式設計方式管理Adobe Experience Platform中的角色和存取原則。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 6%
+source-wordcount: '451'
+ht-degree: 10%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->以屬性為基礎的存取控制不應與Experience Platform的資料控管功能混淆，後者可讓您使用標籤和原則來控制資料在Platform中的使用方式，而非組織中的哪些使用者有權存取資料。 請參閱[原則服務API指南](../../../data-governance/api/overview.md)，以取得如何以程式設計方式利用這些功能的步驟。
+>以屬性為基礎的存取控制不應與Experience Platform的資料控管功能混淆，後者可讓您使用標籤和原則來控制Experience Platform中使用資料的方式，而非貴組織中的哪些使用者有權存取資料。 請參閱[原則服務API指南](../../../data-governance/api/overview.md)，以取得如何以程式設計方式利用這些功能的步驟。
 
 這些端點概述如下。 如需詳細資訊，請瀏覽個別端點指南，並參閱[快速入門手冊](./getting-started.md)，以取得必要標頭、讀取範例API呼叫等重要資訊。
 
 ## 角色
 
-角色定義管理員、專家或一般使用者對貴組織資源的存取權。 在基於角色的存取控制環境中，使用者存取布建是透過共同責任和需求進行分組。 角色具有一組指定的許可權，而您組織的成員可以根據他們需要的檢視範圍或寫入存取權，指派一或多個角色。 如需在API中使用角色的詳細資訊，請參閱[角色端點指南](./roles.md)。
+角色會定義管理員、專家或一般使用者對組織資源的存取權。在基於角色的存取控制環境中，使用者存取布建是透過共同責任和需求進行分組。 角色具有一組指定的許可權，而您組織的成員可以根據他們需要的檢視範圍或寫入存取權，指派一或多個角色。 如需在API中使用角色的詳細資訊，請參閱[角色端點指南](./roles.md)。
 
 ## 原則
 

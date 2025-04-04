@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 產業資料模型概觀
 description: 瞭解各種垂直產業適用的標準化資料模型，這些模型可以使用標準Experience Data Model (XDM)元件來建構。
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Experience Data Model (XDM)可讓您建立高度自訂的結構描述，以擷�
 
 ## 先決條件
 
-若要閱讀本指南參考的ERD，您必須實際瞭解XDM元件如何互動以形成結構描述，以及XDM結構描述如何在Experience Platform整體中運作。 在繼續之前，請確定您已閱讀下列概述檔案：
+若要閱讀本指南中參考的ERD，您必須實際瞭解XDM元件如何互動以形成結構描述，以及XDM結構描述如何在Experience Platform整體中運作。 在繼續之前，請確定您已閱讀下列概述檔案：
 
-* [XDM系統總覽](../../home.md)：瞭解XDM在平台生態系統中如何運作。
+* [XDM系統總覽](../../home.md)：瞭解XDM在Experience Platform生態系統中如何運作。
 * [結構描述組合的基本概念](../../schema/composition.md)：瞭解XDM元件（例如結構描述欄位群組、類別和資料型別）如何影響結構描述的結構以及身分識別欄位的角色。
 
 也建議您檢閱[資料模型最佳實務指南](../../schema/best-practices.md)，以瞭解如何將資料對應至XDM的一般准則。

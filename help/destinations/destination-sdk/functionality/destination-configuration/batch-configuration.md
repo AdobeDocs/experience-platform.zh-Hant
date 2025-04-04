@@ -2,23 +2,23 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定檔案匯出設定。
 title: 批次設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1058'
 ht-degree: 2%
 
 ---
 
 # 批次設定 {#batch-configuration}
 
-使用Destination SDK中的批次組態選項可讓使用者自訂匯出的檔案名稱，並根據其偏好設定匯出排程。
+使用Destination SDK中的批次設定選項，讓使用者能夠自訂匯出的檔案名稱，並根據自己的偏好設定匯出排程。
 
-當您透過Destination SDK建立以檔案為基礎的目的地時，可以設定預設的檔案命名和匯出排程，也可以讓使用者選擇從Platform UI中設定這些設定。 例如，您可以設定行為指令，例如：
+透過Destination SDK建立檔案型目的地時，您可以設定預設檔案命名和匯出排程，也可以讓使用者選擇從Experience Platform UI設定這些設定。 例如，您可以設定行為指令，例如：
 
 * 在檔案名稱中包含特定資訊，例如對象ID、目的地ID或自訂資訊。
-* 允許使用者從Platform UI自訂檔案命名。
+* 允許使用者從Experience Platform UI自訂檔案命名。
 * 設定檔案匯出，使其以設定的時間間隔進行。
-* 定義使用者可在平台UI中看到的檔案命名和匯出排程自訂選項。
+* 定義使用者可在Experience Platform UI中看到的檔案命名和匯出排程自訂選項。
 
 批次組態設定是以檔案為基礎的目的地目的地組態的一部分。
 
@@ -29,11 +29,11 @@ ht-degree: 2%
 * [建立目的地設定](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-本文會說明您可用於目的地的所有支援批次設定選項，並顯示客戶在Platform UI中會看到的內容。
+本文會說明您可用於目的地的所有支援批次設定選項，並顯示客戶在Experience Platform UI中會看到的內容。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -95,7 +95,7 @@ ht-degree: 2%
 | `allowedScheduleFrequency` | 清單 | 定義客戶可用的檔案匯出頻率。 支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | 列舉 | 定義預設檔案匯出頻率。支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> 預設值為 `DAILY`。 |
 | `defaultStartTime` | 字串 | 定義檔案匯出的預設開始時間。 使用24小時檔案格式。 預設值為「00:00」。 |
-| `filenameConfig.allowedFilenameAppendOptions` | 字串 | *必要*。 可供使用者選擇的可用檔案名稱巨集清單。 這會決定要將哪些專案附加至匯出的檔案名稱（對象ID、組織名稱、匯出的日期和時間等）。 設定`defaultFilename`時，請務必避免重複巨集。 <br><br>支援的值： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>無論定義巨集的順序為何，Experience PlatformUI一律會依此處呈現的順序顯示巨集。 <br><br>如果`defaultFilename`是空的，則`allowedFilenameAppendOptions`清單必須至少包含一個巨集。 |
+| `filenameConfig.allowedFilenameAppendOptions` | 字串 | *必要*。 可供使用者選擇的可用檔案名稱巨集清單。 這會決定要將哪些專案附加至匯出的檔案名稱（對象ID、組織名稱、匯出的日期和時間等）。 設定`defaultFilename`時，請務必避免重複巨集。 <br><br>支援的值： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>無論定義巨集的順序為何，Experience Platform UI一律會依照此處呈現的順序顯示巨集。 <br><br>如果`defaultFilename`是空的，則`allowedFilenameAppendOptions`清單必須至少包含一個巨集。 |
 | `filenameConfig.defaultFilenameAppendOptions` | 字串 | *必要*。 預先選取的預設檔案名稱巨集，使用者可取消核取。<br><br>此清單中的巨集是`allowedFilenameAppendOptions`中定義的巨集子集。 |
 | `filenameConfig.defaultFilename` | 字串 | *選擇性*。 定義匯出檔案的預設檔案名稱巨集。 使用者無法覆寫這些專案。 <br><br> `allowedFilenameAppendOptions`所定義的任何巨集都會附加到`defaultFilename`巨集之後。 <br><br>如果`defaultFilename`是空的，您必須在`allowedFilenameAppendOptions`中至少定義一個巨集。 |
 | `segmentGroupingEnabled` | 布林值 | 根據對象[合併原則](../../../../profile/merge-policies/overview.md)，定義啟用的對象應匯出為單一檔案還是多個檔案。 支援的值： <ul><li>`true`：每個合併原則匯出一個檔案。</li><li>`false`：無論合併原則為何，都會為每個對象匯出單一檔案。 這是預設行為。 完全忽略此引數也能達到相同的結果。</li></ul> |
@@ -113,9 +113,9 @@ ht-degree: 2%
 | 巨集 | UI標籤 | 說明 | 範例 |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL 目標] | ui中的目的地名稱。 | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL 區段識別碼] | 平台產生的唯一受眾ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_ID` | [!UICONTROL 區段識別碼] | Experience Platform產生的唯一受眾ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL 區段名稱] | 使用者定義的對象名稱 | VIP訂閱者 |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL 目的地識別碼] | 目的地執行個體的唯一Platform產生ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL 目的地識別碼] | 目的地執行個體在Experience Platform產生的唯一ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL 目的地名稱] | 目的地執行個體的使用者定義名稱。 | 我的2022 Advertising目的地 |
 | `ORGANIZATION_NAME` | [!UICONTROL 組織名稱] | Adobe Experience Platform中的客戶組織名稱。 | 我的組織名稱 |
 | `SANDBOX_NAME` | [!UICONTROL 沙箱名稱] | 客戶使用的沙箱名稱。 | prod |
@@ -158,7 +158,7 @@ ht-degree: 2%
 * [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
-* [綱要設定](schema-configuration.md)
+* [結構描述設定](schema-configuration.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)
 * [支援的對應設定](supported-mapping-configurations.md)
 * [目的地傳遞](destination-delivery.md)

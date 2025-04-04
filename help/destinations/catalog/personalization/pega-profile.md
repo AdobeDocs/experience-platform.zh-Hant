@@ -3,9 +3,9 @@ title: Pega設定檔聯結器
 description: 使用Adobe Experience Platform中Amazon S3的Pega設定檔聯結器將完整或增量（或兩者）設定檔資料匯出至Amazon S3雲端儲存空間。 在Pega客戶決策中心，資料工作可在客戶設定檔Designer中排程，以定期從Amazon S3儲存空間匯入設定檔資料。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-在Adobe Experience Platform中使用[!DNL Pega Profile Connector]建立與您的[!DNL Amazon Web Services] (AWS) S3儲存空間的即時輸出連線，以定期將設定檔資料從Adobe Experience Platform匯出至CSV檔案，並匯入您自己的S3貯體。 在 [!DNL Pega Customer Decision Hub] 中，您可以排程資料作業，從 S3 儲存體匯入此設定檔資料，以更新 [!DNL Pega Customer Decision Hub] 設定檔。
+在Adobe Experience Platform中使用[!DNL Pega Profile Connector]建立與您的[!DNL Amazon Web Services] (AWS) S3儲存空間的即時輸出連線，以定期將設定檔資料從Adobe Experience Platform匯出至CSV檔案，並匯入您自己的S3貯體。 在 [!DNL Pega Customer Decision Hub] 中，您可以排程資料作業，從 S3 儲存體匯入此輪廓資料，以更新 [!DNL Pega Customer Decision Hub] 輪廓。
 
 此聯結器可協助設定設定檔資料的初始匯出，也可協助定期將新設定檔同步到[!DNL Pega Customer Decision Hub]。  在客戶決策中心擁有最新的資料，可為您的客戶群提供更好、更新的檢視，以便做出下一個最佳決策。
 
@@ -39,8 +39,8 @@ ht-degree: 4%
 使用此目的地從Adobe Experience Platform匯出資料並將設定檔匯入到[!DNL Pega Customer Decision Hub]之前，請確定您已完成下列必要條件：
 
 * 設定[!DNL Amazon S3]儲存貯體和資料夾路徑，以用於匯出和匯入資料檔案。
-* 設定[!DNL Amazon S3]存取金鑰和[!DNL Amazon S3]秘密金鑰：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授予Platform存取您的[!DNL Amazon S3]帳戶。
-* 若要成功連線並匯出資料至您的[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Platform]建立識別與存取管理(IAM)使用者，並指派`s3:DeleteObject`、`s3:GetBucketLocation`、`s3:GetObject`、`s3:ListBucket`、`s3:PutObject`、`s3:ListMultipartUploadParts`等許可權
+* 設定[!DNL Amazon S3]存取金鑰和[!DNL Amazon S3]秘密金鑰：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授予Experience Platform存取您的[!DNL Amazon S3]帳戶。
+* 若要成功連線並匯出資料至您的[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Experience Platform]建立識別與存取管理(IAM)使用者，並指派`s3:DeleteObject`、`s3:GetBucketLocation`、`s3:GetObject`、`s3:ListBucket`、`s3:PutObject`、`s3:ListMultipartUploadParts`等許可權
 * 請確定您的[!DNL Pega Customer Decision Hub]執行個體已升級至8.8版或更新版本。
 
 ## 支援的身分 {#supported-identities}
@@ -117,10 +117,10 @@ ht-degree: 4%
 
 ## 驗證資料匯出 {#exported-data}
 
-針對[!DNL Pega Profile Connector]目的地，[!DNL Platform]會在您提供的Amazon S3儲存位置中建立`.csv`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[將對象資料啟動至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)。
+針對[!DNL Pega Profile Connector]目的地，[!DNL Experience Platform]會在您提供的Amazon S3儲存位置中建立`.csv`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[將對象資料啟動至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)。
 
 從S3成功匯入設定檔資料會在[!DNL Pega Customer]設定檔資料存放區中插入資料。 匯入的客戶設定檔資料可在[!DNL Pega Customer Profile Designer]中驗證，如下圖所示。
-![UI熒幕的影像，您可以在其中驗證客戶設定檔Designer中的Adobe設定檔資料](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+![UI畫面影像，您可以在其中驗證客戶設定檔Designer中的Adobe設定檔資料](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
 在[!DNL Pega Customer Decision Hub]中，資料管理員可以在[!DNL Customer Profile Designer]中設定資料工作，以定期從S3匯入設定檔資料，如下圖所示。 請參閱[其他資源](#additional-resources)，以取得有關如何設定資料工作以從[!DNL Amazon S3]匯入設定檔資料的詳細資訊。
 ![在客戶設定檔Designer中設定資料工作的UI畫面影像](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)

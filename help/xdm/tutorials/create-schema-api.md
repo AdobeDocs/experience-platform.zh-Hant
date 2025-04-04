@@ -5,22 +5,22 @@ title: 使用結構描述登入API建立結構描述
 type: Tutorial
 description: 本教學課程使用Schema Registry API來逐步引導您執行各個步驟，使用標準類別來撰寫架構。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2584'
 ht-degree: 2%
 
 ---
 
 # 使用[!DNL Schema Registry] API建立結構描述
 
-[!DNL Schema Registry]是用來存取Adobe Experience Platform中的[!DNL Schema Library]。 [!DNL Schema Library]包含Adobe、[!DNL Experience Platform]合作夥伴以及您使用之應用程式的廠商所提供的資源。 登入提供使用者介面和RESTful API，所有可用的程式庫資源都可從其中存取。
+[!DNL Schema Registry]是用來存取Adobe Experience Platform中的[!DNL Schema Library]。 [!DNL Schema Library]包含Adobe、[!DNL Experience Platform]合作夥伴以及您使用之應用程式的廠商提供給您的資源。 登入提供使用者介面和RESTful API，所有可用的程式庫資源都可從其中存取。
 
 本教學課程使用[!DNL Schema Registry] API逐步引導您完成使用標準類別撰寫結構描述的步驟。 如果您偏好在[!DNL Experience Platform]中使用使用者介面，[結構描述編輯器教學課程](create-schema-ui.md)會提供在結構描述編輯器中執行類似動作的逐步指示。
 
 >[!NOTE]
 >
->如果您正在將CSV資料擷取至Platform，您可以[將該資料對應至AI產生的建議](../../ingestion/tutorials/map-csv/recommendations.md)所建立的XDM結構描述（目前為測試版），而無需自行手動建立結構描述。
+>如果您正在將CSV資料擷取至Experience Platform，您可以[將該資料對應至AI產生的建議](../../ingestion/tutorials/map-csv/recommendations.md) （目前為測試版）所建立的XDM結構描述，而不需要自行手動建立結構描述。
 
 ## 快速入門
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 * [[!DNL Experience Data Model (XDM) System]](../home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 開始進行此教學課程之前，請檢閱[開發人員指南](../api/getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫[!DNL Schema Registry] API。 這包括您的`{TENANT_ID}`、「容器」的概念以及發出要求所需的標頭（特別注意`Accept`標頭及其可能的值）。
 
@@ -129,7 +129,7 @@ curl -X POST \
 
 ### 查詢結構描述
 
-若要檢視您新建立的結構描述，請使用結構描述的`meta:altId`或URL編碼的`$id` URI來執行查詢(GET)要求。
+若要檢視您新建立的結構描述，請使用結構描述的`meta:altId`或URL編碼的`$id` URI來執行查詢(GET)請求。
 
 **API格式**
 
@@ -424,7 +424,7 @@ curl -X PATCH \
 
 若要新增這些欄位，您可以在`tenant`容器中定義您自己的自訂欄位群組。 這些欄位群組是您組織所獨有的，組織外部的任何人都看不到或無法編輯。
 
-為了建立(POST)新的欄位群組，您的要求必須包含一個`meta:intendedToExtend`欄位，其中包含與欄位群組相容的基底類別的`$id`，以及該欄位群組將包含的屬性。
+為了建立(POST)新欄位群組，您的要求必須包含包含與欄位群組相容之基底類別的`$id`的`meta:intendedToExtend`欄位，以及欄位群組將包含的屬性。
 
 任何自訂屬性都必須巢狀化至`TENANT_ID`下方，以避免與其他欄位群組或欄位衝突。
 
@@ -602,7 +602,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **要求**
 
-此請求會更新(PATCH)熟客方案以包含新「熟客方案」欄位群組中的欄位。
+此請求會更新(PATCH)「熟客會員」結構，加入新「熟客層」欄位群組中的欄位。
 
 ```SHELL
 curl -X PATCH \
@@ -959,7 +959,7 @@ curl -X POST \
 
 ### 在結構描述中使用資料型別
 
-現在已建立忠誠度層級資料型別，您可以更新(PATCH)您建立的欄位群組中的`loyaltyTier`欄位，以參考資料型別，取代先前存在的欄位。
+現在已建立熟客層級資料型別，您可以更新您建立之欄位群組中的`loyaltyTier`欄位(PATCH)，以參考資料型別，取代先前存在的欄位。
 
 **API格式**
 
@@ -1298,7 +1298,7 @@ curl -X PATCH \
 
 ### 聯合中的清單結構描述
 
-您現在已成功新增結構描述至[!DNL XDM Individual Profile]聯合。 若要檢視屬於相同聯合的所有結構描述清單，您可以使用查詢引數執行GET請求以篩選回應。
+您現在已成功新增結構描述至[!DNL XDM Individual Profile]聯合。 若要檢視屬於相同聯合的所有結構描述清單，您可以使用查詢引數來執行GET要求以篩選回應。
 
 使用`property`查詢引數，您可以指定只傳回包含`meta:immutableTags`欄位（其`meta:class`等於[!DNL XDM Individual Profile]類別的`$id`）的結構描述。
 
@@ -1374,7 +1374,7 @@ curl -X GET \
 
 在本教學課程中建立的完整熟客方案可在下列附錄中取得。 您可以檢視結構，瞭解欄位群組對整體結構的貢獻，以及哪些欄位可用於資料擷取。
 
-建立多個結構描述後，您就可以透過使用關係描述元來定義它們之間的關係。 如需詳細資訊，請參閱[的教學課程，以定義兩個結構描述](relationship-api.md)之間的關係。 如需如何在登入中執行所有作業(GET、POST、PUT、PATCH和DELETE)的詳細範例，在使用API時，請參閱[結構描述登入開發人員指南](../api/getting-started.md)。
+建立多個結構描述後，您就可以透過使用關係描述元來定義它們之間的關係。 如需詳細資訊，請參閱[的教學課程，以定義兩個結構描述](relationship-api.md)之間的關係。 如需如何在登入中執行所有作業(GET、POST、PUT、PATCH和DELETE)的詳細範例，使用API時，請參閱[Schema Registry開發人員指南](../api/getting-started.md)。
 
 ## 附錄 {#appendix}
 

@@ -5,10 +5,10 @@ title: 原則服務API指南
 description: 原則服務API可讓開發人員管理Experience Platform中的資料使用標籤和原則。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 3%
+source-wordcount: '545'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵�
 
 ## 標記
 
-將資料使用標籤套用至結構描述，以根據套用至該資料的使用原則來分類資料集和欄位。 標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料內嵌至[!DNL Experience Platform]時，或資料可在[!DNL Platform]中使用時，立即加上標籤。 您可以使用`/labels`端點建立、檢視、編輯和刪除標籤。 若要瞭解如何使用此端點，請造訪[標籤端點指南](./labels.md)。
+將資料使用標籤套用至結構描述，以根據套用至該資料的使用原則來分類資料集和欄位。 標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料內嵌至[!DNL Experience Platform]時，或資料可在[!DNL Experience Platform]中使用時，立即加上標籤。 您可以使用`/labels`端點建立、檢視、編輯和刪除標籤。 若要瞭解如何使用此端點，請造訪[標籤端點指南](./labels.md)。
 
 ## 行銷動作
 
@@ -34,7 +34,7 @@ Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵�
 
 >[!NOTE]
 >
->資料控管原則與存取控制原則不應混淆，存取控制原則會決定貴組織中特定Platform使用者可存取的特定資料屬性。 如需詳細資訊，請參閱[以屬性為基礎的存取控制](../../access-control/abac/overview.md)指南。
+>資料控管原則與存取控制原則不應混淆，存取控制原則會決定貴組織中特定Experience Platform使用者可存取的特定資料屬性。 如需詳細資訊，請參閱[以屬性為基礎的存取控制](../../access-control/abac/overview.md)指南。
 
 資料治理原則由以下內容定義：
 
@@ -45,7 +45,7 @@ Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵�
 
 ## 評估
 
-一旦資料使用標籤套用至Platform結構描述，且針對這些標籤為行銷動作定義資料使用原則後，您就可以透過資料控管功能強制執行這些原則，並防止構成原則違規的資料作業。
+一旦資料使用標籤套用至Experience Platform結構描述，並且針對這些標籤為行銷動作定義了資料使用原則，資料治理功能可讓您強制執行這些原則並防止構成原則違規的資料作業。
 
 [!DNL Policy Service] API提供的端點可讓您針對資料集或資料使用標籤的任意組合來測試行銷動作，以檢查是否發生任何原則違規。 接著，您可以根據API回應，在體驗應用程式中設定通訊協定，以適當地強制資料使用原則相容。 如需詳細資訊，請參閱[評估端點指南](./evaluation.md)。
 

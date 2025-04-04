@@ -1,12 +1,12 @@
 ---
-title: oracleNetSuite Source概觀
-description: 瞭解如何使用API或使用者介面將OracleNetSuite連線至Adobe Experience Platform。
+title: Oracle NetSuite Source概觀
+description: 瞭解如何使用API或使用者介面將Oracle NetSuite連線至Adobe Experience Platform。
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '756'
 ht-degree: 2%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 2%
 >
 >[!DNL Oracle NetSuite]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
-Experience Platform提供擷取資料協力廠商行銷自動化系統的支援。 對行銷自動化提供者的支援包括[!DNL Oracle NetSuite]。
+Experience Platform支援擷取資料協力廠商行銷自動化系統。 對行銷自動化提供者的支援包括[!DNL Oracle NetSuite]。
 
 [[!DNL Oracle NetSuite]](https://www.netsuite.com/)是以雲端為基礎的企業管理套件，包含ERP/財務、CRM及電子商務解決方案。
 
@@ -34,7 +34,7 @@ Experience Platform提供擷取資料協力廠商行銷自動化系統的支援�
 | --- | --- | --- |
 | [[!DNL Oracle NetSuite Activities]](#oracle-netsuite-activities) | 活動 | 擷取新增到行事曆的排程活動。 |
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | 客戶 | 擷取特定客戶資料，包括客戶名稱、地址和關鍵識別碼等詳細資訊。 |
-| [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | 連絡人 | 擷取聯絡人姓名、電子郵件、電話號碼，以及與客戶相關聯的任何自訂聯絡人相關欄位。 |
+| [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | 聯絡 | 擷取聯絡人姓名、電子郵件、電話號碼，以及與客戶相關聯的任何自訂聯絡人相關欄位。 |
 
 ## IP位址允許清單 {#ip-allow-list}
 
@@ -42,7 +42,7 @@ Experience Platform提供擷取資料協力廠商行銷自動化系統的支援�
 
 ## 先決條件 {#prerequisites}
 
-在將[!DNL Oracle NetSuite]資料帶入Experience Platform之前，您必須先確定您有以下專案：
+在將[!DNL Oracle NetSuite]資料帶入Experience Platform之前，您必須先確定您具備下列條件：
 
 * **一個[!DNL Oracle NetSuite]帳戶**。
    * 如果您還沒有有效的帳戶，請連絡[[!DNL Oracle NetSuite]](https://www.NetSuite.com/portal/company/contactus.shtml)。
@@ -58,7 +58,7 @@ Experience Platform提供擷取資料協力廠商行銷自動化系統的支援�
 
 ### 收集必要的認證 {#gather-credentials}
 
-為了將[!DNL Oracle NetSuite]連線到Platform，您必須提供下列連線屬性的值：
+若要將[!DNL Oracle NetSuite]連線至Experience Platform，您必須提供下列連線屬性的值：
 
 | 認證 | 說明 | 範例 |
 | --- | --- | --- |
@@ -67,24 +67,24 @@ Experience Platform提供擷取資料協力廠商行銷自動化系統的支援�
 | 授權測試URL | （選用）您的[!DNL NetSuite]授權測試URL。 | `https://{ACCOUNT_ID}.app.netsuite.com<br>/app/login/oauth2/authorize.nl?response_type=code<br>&redirect_uri=https%3A%2F%2Fapi.github.com<br>&scope=rest_webservices<br>&state=ykv2XLx1BpT5Q0F3MRPHb94j<br>&client_id={CLIENT_ID}` |
 | 存取權杖 | 存取權杖為JSON Web權杖(JWT)格式，僅有效60分鐘。 如需如何擷取存取權杖的詳細資訊，請參閱[NetSuite的OAuth 2.0授權](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint)上的[!DNL Oracle]指南。 | `eyJr......f4V0`<br>值是1024個字元的字串，格式為JSON Web權杖(JWT)。 |
 | 重新整理權杖 | 在存取權杖過期後，使用重新整理來產生新的存取權杖。 重新整理權杖的有效期為七天。 如需如何擷取存取權杖的詳細資訊，請參閱[NetSuite的OAuth 2.0授權](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint)上的[!DNL Oracle]指南。 | `eyJr......dmxM`<br>值是1024個字元的字串，格式為JSON Web權杖(JWT)。 |
-| 存取記號URL | 應用程式傳送POST要求的目的地權杖端點。 | `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token` |
+| 存取記號URL | 應用程式傳送POST要求的目標權杖端點。 | `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token` |
 
 >[!IMPORTANT]
 >
->重新整理Token過期後，您必須使用更新的Token以Experience Platform方式建立新帳戶。
+>重新整理Token過期後，您必須使用更新後的Token，在Experience Platform中建立新帳戶。
 
-## 將[!DNL Oracle NetSuite Activities]連線至平台 {#oracle-netsuite-activities}
+## 將[!DNL Oracle NetSuite Activities]連線至Experience Platform {#oracle-netsuite-activities}
 
-以下檔案提供如何使用API或使用者介面將[!DNL Oracle NetSuite Activities]連線到Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Oracle NetSuite Activities]連線至Experience Platform的資訊：
 
-* [使用API建立來源連線和資料流，將 [!DNL Oracle NetSuite Activities] 資料帶入Platform](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)。
-* [使用UI](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)連線您的 [!DNL Oracle NetSuite Activities] 帳戶以Experience Platform。
+* [使用API建立來源連線和資料流，將 [!DNL Oracle NetSuite Activities] 資料匯入Experience Platform](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)。
+* [使用UI](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)將您的 [!DNL Oracle NetSuite Activities] 帳戶連線至Experience Platform。
 * [使用UI](../../tutorials/ui/dataflow/marketing-automation.md)為來源連線建立資料流。
 
-## 將[!DNL Oracle NetSuite Entities]連線至平台 {#oracle-netsuite-entities}
+## 將[!DNL Oracle NetSuite Entities]連線至Experience Platform {#oracle-netsuite-entities}
 
-以下檔案提供如何使用API或使用者介面將[!DNL Oracle NetSuite Entities]連線到Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Oracle NetSuite Entities]連線至Experience Platform的資訊：
 
-* [使用API建立來源連線和資料流，將 [!DNL Oracle NetSuite Entities] 資料帶入Platform](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)。
-* [使用UI](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)連線您的 [!DNL Oracle NetSuite Entities] 帳戶以Experience Platform。
+* [使用API建立來源連線和資料流，將 [!DNL Oracle NetSuite Entities] 資料匯入Experience Platform](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)。
+* [使用UI](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)將您的 [!DNL Oracle NetSuite Entities] 帳戶連線至Experience Platform。
 * [使用UI](../../tutorials/ui/dataflow/marketing-automation.md)為來源連線建立資料流。

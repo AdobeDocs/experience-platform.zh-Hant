@@ -3,9 +3,9 @@ title: Amazon Kinesis Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Amazon Kinesis連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 0%
 >
 >- [!DNL Amazon Kinesis]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 >
->- 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Amazon Kinesis]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+>- 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Amazon Kinesis]來源。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入[!DNL Platform]。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入[!DNL Experience Platform]。
 
-雲端儲存空間來源可以將您自己的資料帶入[!DNL Platform]，而不需要下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合至來源工作流程。 [!DNL Platform]可讓您即時從[!DNL Amazon Kinesis]匯入資料。
+雲端儲存空間來源可以將您自己的資料帶入[!DNL Experience Platform]，而不需要下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合至來源工作流程。 [!DNL Experience Platform]可讓您即時從[!DNL Amazon Kinesis]匯入資料。
 
 >[!NOTE]
 >
->如果您需要擷取大量資料，必須增加[!DNL Kinesis]的縮放因數。 目前，您可以從[!DNL Kinesis]帳戶帶入Platform的最大資料量為每秒4000筆記錄。 若要擴充並擷取較大量的資料，請聯絡您的Adobe代表。
+>如果您需要擷取大量資料，必須增加[!DNL Kinesis]的縮放因數。 目前，您可以從[!DNL Kinesis]帳戶帶入Experience Platform的最大資料量為每秒4000筆記錄。 若要擴充並擷取較大量的資料，請聯絡您的Adobe代表。
 
 ## 先決條件
 
@@ -40,7 +40,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 - `DescribeStream`
 - `ListStreams`
 
-這些許可權是透過[!DNL Kinesis]主控台排列，並在您輸入認證及選取資料流後，由Platform檢查。
+這些許可權會透過[!DNL Kinesis]主控台進行排列，並在您輸入認證及選取資料流後，由Experience Platform檢查。
 
 下列範例顯示建立[!DNL Kinesis]來源連線所需的最低存取許可權。
 
@@ -85,13 +85,13 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 | `TRIM_HORIZON` | 從最舊的資料記錄開始讀取資料。 |
 | `LATEST` | 從最近的資料記錄開始讀取資料。 |
 
-[!DNL Kinesis] UI來源目前僅支援`TRIM_HORIZON`，而API同時支援`TRIM_HORIZON`和`LATEST`作為取得資料的模式。 Platform對[!DNL Kinesis]來源使用的預設疊代器值為`TRIM_HORIZON`。
+[!DNL Kinesis] UI來源目前僅支援`TRIM_HORIZON`，而API同時支援`TRIM_HORIZON`和`LATEST`作為取得資料的模式。 Experience Platform用於[!DNL Kinesis]來源的預設疊代器值為`TRIM_HORIZON`。
 
 如需疊代器型別的詳細資訊，請參閱下列[[!DNL Kinesis] 檔案](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax)。
 
-## 將[!DNL Amazon Kinesis]連線至[!DNL Platform]
+## 將[!DNL Amazon Kinesis]連線至[!DNL Experience Platform]
 
-以下檔案提供如何使用API或使用者介面將[!DNL Amazon Kinesis]連線到[!DNL Platform]的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Amazon Kinesis]連線到[!DNL Experience Platform]的資訊：
 
 ### 使用API
 

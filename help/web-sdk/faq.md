@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得有關Adobe Experience Platform Web SDK常見問題的解答。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2082'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform Web SDK是使用者端的JavaScript資料庫，可讓�
 * 這些程式庫都不是為了彼此搭配使用而建置的。
 * 跨解決方案和Adobe Experience Platform使用案例需要這些不同的程式庫相互依存，導致部署上的摩擦。
 
-雖然Platform中的標籤可讓您儘可能輕鬆部署及管理這些程式庫，但下列專案仍有問題：
+雖然Experience Platform中的標籤可讓您儘可能輕鬆部署及管理這些程式庫，但下列專案仍有問題：
 
 * 程式庫大小(頁面上的Adobe程式碼過多)
 * 效能（網站載入時間太長）
@@ -124,7 +124,7 @@ Web SDK需要存取[資料流設定](../datastreams/overview.md)和Experience Pl
 
 ## 我可以在開始使用Web SDK時移轉ECID，讓我的網站訪客不會開始顯示為新訪客嗎？
 
-是，Adobe Experience Platform Web SDK提供身分移轉功能。 如需詳細資訊，請依照[Platform Web SDK身分識別檔案](/help/web-sdk/identity/overview.md#id-migration)中的識別碼移轉指示操作。
+是，Adobe Experience Platform Web SDK提供身分移轉功能。 如需詳細資訊，請依照[Experience Platform Web SDK身分識別檔案](/help/web-sdk/identity/overview.md#id-migration)中有關ID移轉的指示操作。
 
 ## 網頁SDK與標籤有何不同？
 

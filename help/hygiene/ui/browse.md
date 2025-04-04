@@ -2,9 +2,9 @@
 title: 瀏覽資料生命週期工單
 description: 瞭解如何在Adobe Experience Platform使用者介面中檢視及管理現有資料生命週期工單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '843'
 ht-degree: 27%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 27%
 
 當您首次在UI中存取&#x200B;**[!UICONTROL 資料生命週期]**&#x200B;工作區時，會顯示現有工單清單及其基本詳細資料。
 
-![影像顯示Platform UI](../images/ui/browse/work-order-list.png)中的[!UICONTROL 資料生命週期]工作區
+![影像顯示Experience Platform UI中的[!UICONTROL 資料生命週期]工作區](../images/ui/browse/work-order-list.png)
 
 清單一次只會顯示一個類別的工作訂單。 選取&#x200B;**[!UICONTROL 取用者]**&#x200B;以檢視記錄刪除工作清單，並選取&#x200B;**[!UICONTROL 資料集]**&#x200B;以檢視排程的資料集到期清單。
 
@@ -97,7 +97,7 @@ ht-degree: 27%
 
 ## 後續步驟
 
-本指南說明如何在Platform UI中檢視及管理現有資料生命週期工單。 有關建立您自己的工單的資訊，請參閱下列檔案：
+本指南說明如何在Experience Platform UI中檢視及管理現有資料生命週期工單。 有關建立您自己的工單的資訊，請參閱下列檔案：
 
 * [管理資料集有效期](./dataset-expiration.md)
 * [管理記錄刪除](./record-delete.md)

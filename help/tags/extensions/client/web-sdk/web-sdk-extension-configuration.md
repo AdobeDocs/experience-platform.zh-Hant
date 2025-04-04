@@ -2,9 +2,9 @@
 title: 設定網頁SDK標籤擴充功能
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2875'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 [!DNL Web SDK]標籤擴充功能會透過Adobe Experience Cloud Edge Network，將資料從Experience Platform屬性傳送至。
 
-擴充功能可讓您將資料串流至Platform、同步身分、處理客戶同意訊號，以及自動收集內容資料。
+擴充功能可讓您將資料串流至Experience Platform、同步身分、處理客戶同意訊號，以及自動收集內容資料。
 
 本檔案說明如何在標籤UI中設定標籤擴充功能。
 

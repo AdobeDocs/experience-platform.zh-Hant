@@ -2,9 +2,9 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK擷取目的地發佈請求之詳細資料的API呼叫範例。
 title: 擷取目的地發佈請求
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '837'
 ht-degree: 2%
 
 ---
@@ -19,16 +19,16 @@ ht-degree: 2%
 >
 >**API端點**： `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-設定並測試目的地後，您就可以將其提交至Adobe以供稽核和發佈。 閱讀[針對在Destination SDK](../guides/submit-destination.md)中撰寫的目的地，提交檢閱作為目的地提交程式的一部分而必須執行的所有其他步驟。
+設定並測試目的地後，您就可以將其提交至Adobe進行檢閱和發佈。 閱讀[針對在Destination SDK](../guides/submit-destination.md)中撰寫的目的地，提交以供檢閱作為目的地提交程式一部分而必須執行的所有其他步驟。
 
 發生下列情況時，請使用發佈目的地API端點提交發佈請求：
 
-* 身為Destination SDK合作夥伴，您想要讓所有Experience Platform組織都能使用已生產化的目的地，以供所有Experience Platform客戶使用；
+* 身為Destination SDK合作夥伴，您想要讓所有Experience Platform組織都能使用您的產品化目的地，供所有Experience Platform客戶使用；
 * 您對設定進行了&#x200B;*任何更新*。 只有在您提交經Experience Platform團隊核准的新發佈請求後，設定更新才會反映在目的地中。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## Destination Publishing API操作快速入門 {#get-started}
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 ## 列出目的地發佈請求 {#retrieve-list}
 
-您可以向`/authoring/destinations/publish`端點發出GET要求，以擷取為您的IMS組織提交的所有目的地清單。
+您可以向`/authoring/destinations/publish`端點發出GET請求，以擷取為您的IMS組織提交的所有目的地清單。
 
 **API格式**
 
@@ -118,7 +118,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 |---------|----------|------|
 | `destinationId` | 字串 | 您已提交發佈的目的地組態目的地ID。 |
 | `publishDetailsList.configId` | 字串 | 您提交之目的地的目的地發佈要求唯一ID。 |
-| `publishDetailsList.allowedOrgs` | 字串 | 傳回目的地可用的Experience Platform組織。<br> <ul><li> 對於`"destinationType": "PUBLIC"`，此引數會傳回`"*"`，這表示目的地可供所有Experience Platform組織使用。</li><li> 針對`"destinationType": "DEV"`，此引數會傳回您用來製作及測試目的地的組織組織識別碼。</li></ul> |
+| `publishDetailsList.allowedOrgs` | 字串 | 傳回目的地適用的Experience Platform組織。<br> <ul><li> 對於`"destinationType": "PUBLIC"`，此引數會傳回`"*"`，這表示所有Experience Platform組織都可以使用此目的地。</li><li> 針對`"destinationType": "DEV"`，此引數會傳回您用來製作及測試目的地的組織組織識別碼。</li></ul> |
 | `publishDetailsList.status` | 字串 | 目的地發佈要求的狀態。 可能的值為`TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED`。 值為`PUBLISHED`的目的地已上線，可供Experience Platform客戶使用。 |
 | `publishDetailsList.destinationType` | 字串 | 目的地的型別。 值可以是`DEV`和`PUBLIC`。 `DEV`對應至您Experience Platform組織中的目的地。 `PUBLIC`對應於您已提交發佈的目的地。 以Git術語來思考這兩個選項，其中`DEV`版本代表您本機編寫分支，`PUBLIC`版本代表遠端主要分支。 |
 | `publishDetailsList.publishedDate` | 字串 | 以紀元時間提交目的地以供發佈的日期。 |
@@ -170,7 +170,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 |---------|----------|------|
 | `destinationId` | 字串 | 您已提交發佈的目的地組態目的地ID。 |
 | `publishDetailsList.configId` | 字串 | 您提交之目的地的目的地發佈要求唯一ID。 |
-| `publishDetailsList.allowedOrgs` | 字串 | 傳回目的地可用的Experience Platform組織。<br> <ul><li> 對於`"destinationType": "PUBLIC"`，此引數會傳回`"*"`，這表示目的地可供所有Experience Platform組織使用。</li><li> 針對`"destinationType": "DEV"`，此引數會傳回您用來製作及測試目的地的組織組織識別碼。</li></ul> |
+| `publishDetailsList.allowedOrgs` | 字串 | 傳回目的地適用的Experience Platform組織。<br> <ul><li> 對於`"destinationType": "PUBLIC"`，此引數會傳回`"*"`，這表示所有Experience Platform組織都可以使用此目的地。</li><li> 針對`"destinationType": "DEV"`，此引數會傳回您用來製作及測試目的地的組織組織識別碼。</li></ul> |
 | `publishDetailsList.status` | 字串 | 目的地發佈要求的狀態。 可能的值為`TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED`。 值為`PUBLISHED`的目的地已上線，可供Experience Platform客戶使用。 |
 | `publishDetailsList.destinationType` | 字串 | 目的地的型別。 值可以是`DEV`和`PUBLIC`。 `DEV`對應至您Experience Platform組織中的目的地。 `PUBLIC`對應於您已提交發佈的目的地。 以Git術語來思考這兩個選項，其中`DEV`版本代表您本機編寫分支，`PUBLIC`版本代表遠端主要分支。 |
 | `publishDetailsList.publishedDate` | 字串 | 以紀元時間提交目的地以供發佈的日期。 |
@@ -183,4 +183,4 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API錯誤處理
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。

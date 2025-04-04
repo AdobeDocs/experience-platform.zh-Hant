@@ -3,9 +3,9 @@ keywords: Analytics擴充功能；Analytics擴充功能；目的地分析
 title: Adobe Analytics 擴充功能
 description: Adobe Analytics擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '466'
 ht-degree: 4%
 
 ---
@@ -18,21 +18,21 @@ Adobe Analytics是領先業界的解決方案，能夠讓您從使用者觀點�
 
 Adobe Analytics是Adobe Experience Platform中的analytics擴充功能。 如需擴充功能功能的詳細資訊，請參閱標籤檔案中的[Adobe Analytics擴充功能概觀](/help/tags/extensions/client/analytics/overview.md)。
 
-此目的地是標籤延伸模組。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
+此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
 ![Adobe Analytics擴充功能](../../assets/catalog/analytics/adobe-analytics/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-所有已購買Platform的客戶都可在Destinations目錄中找到此擴充功能。
+所有已購買Experience Platform的客戶都可在「目的地」目錄中找到此擴充功能。
 
-若要使用此擴充功能，您需要存取Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員，以取得資料收集UI的存取權，並要求他們授與您此&#x200B;**[!UICONTROL manage_properties]**&#x200B;許可權，讓您可以安裝擴充功能。
+若要使用此擴充功能，您需要存取Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員，以取得資料收集UI的存取權，並要求他們授與您此&#x200B;**[!UICONTROL manage_properties]**&#x200B;許可權，讓您可以安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
 若要安裝Adobe Analytics擴充功能：
 
-在[平台介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
+在[Experience Platform介面](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 
 從目錄中選取擴充功能或使用搜尋列。
 

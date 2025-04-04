@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服
 title: 建立事件的趨勢報表
 description: 瞭解如何使用體驗事件來撰寫查詢，以建立指定日期範圍內事件的趨勢報表（依日期分組）。
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 本檔案提供依日期在特定日期範圍內建立事件趨勢報表所需SQL的範例。 使用Adobe Experience Platform查詢服務，您可以撰寫使用[!DNL Experience Events]來擷取各種使用案例的查詢。 體驗事件由體驗資料模型(XDM) ExperienceEvent類別表示，可在使用者與網站或服務互動時，擷取系統不可變且非彙總的快照。 體驗事件甚至可用於時間網域分析。 請參閱[後續步驟一節](#next-steps)，瞭解更多涉及[!DNL Experience Events]產生訪客報表的使用案例。
 
-報表可讓您存取Platform資料，以受益於組織的策略業務分析。 透過這些報表，您可以透過多種方式檢查您的Platform資料、以簡單易懂的格式顯示關鍵量度，以及分享成果見解。
+報表可讓您存取Experience Platform資料，以受益於組織的策略業務見解。 透過這些報表，您可以透過多種方式檢查Experience Platform資料、以簡單易懂的格式顯示關鍵量度，以及分享成果見解。
 
 有關XDM和[!DNL Experience Events]的更多資訊可在[[!DNL XDM System] 總覽](../../xdm/home.md)中找到。 結合查詢服務與[!DNL Experience Events]，您就能有效追蹤使用者之間的行為趨勢。 下列檔案提供涉及[!DNL Experience Events]的查詢範例。
 

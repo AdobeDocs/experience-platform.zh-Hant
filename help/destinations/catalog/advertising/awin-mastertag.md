@@ -3,9 +3,9 @@ keywords: Awin廣告商主標籤擴充功能；主標籤標籤；Awin；AWIN
 title: Awin廣告商Mastertag擴充功能
 description: Awin Advertiser Mastertag擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 99a9ea40-b89f-4503-91a7-60cc8e1cd6d3
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '482'
 ht-degree: 3%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 3%
 
 [!DNL Awin Advertiser Mastertag]是Adobe Experience Platform中的廣告擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html)上的擴充功能頁面。
 
-此目的地是標籤延伸模組。 如需擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
+此目的地是標籤延伸模組。 如需擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
 在UI中![Awin Advertiser Mastertag擴充功能](../../assets/catalog/advertising/awin-mastertag/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-此擴充功能可在[!DNL Destinations]目錄中提供給所有已購買Platform的客戶。
+此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
 若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，讓您可以安裝擴充功能。
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 若要安裝[!DNL Awin Advertiser Mastertag]擴充功能：
 
-在[平台介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
+在[Experience Platform介面](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 
 從目錄中選取擴充功能或使用搜尋列。
 

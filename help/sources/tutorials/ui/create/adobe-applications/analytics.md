@@ -2,9 +2,9 @@
 title: 在使用者介面中建立Adobe Analytics Source連線
 description: 瞭解如何在UI中建立Adobe Analytics來源連線，以將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2672'
+source-wordcount: '2676'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 * [體驗資料模型(XDM)系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
 * [即時客戶個人檔案](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
-* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 重要術語
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 >* 此資料流會將13個月的歷史報表套裝資料回填至Data Lake。 此資料流會在回填完成時結束。
 >* 將即時資料傳送到資料湖和[!DNL Real-Time Customer Profile]的資料流流程。 此資料流會持續執行。
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 您也可以使用搜尋列來縮小顯示的來源。
 
@@ -115,7 +115,7 @@ ht-degree: 3%
 
 ![欄位群組預覽](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-Platform會自動偵測您的對應集是否有任何易記名稱衝突。 如果對應集沒有衝突，請選取[下一步] **[!UICONTROL 以繼續。]**
+Experience Platform會自動偵測您的對應集是否有任何易記名稱衝突。 如果對應集沒有衝突，請選取[下一步] **[!UICONTROL 以繼續。]**
 
 ![對應](../../../../images/tutorials/create/analytics/mapping.png)
 
@@ -276,13 +276,13 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![次要身分](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
-### 提供資料流詳細資料
+### 提供資料流詳細資訊
 
 **[!UICONTROL 資料流詳細資料]**&#x200B;步驟隨即顯示，您必須在此為資料流提供名稱和選擇性說明。 完成時選取&#x200B;**[!UICONTROL 下一步]**。
 
 ![資料流詳細資料](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### 檢閱
+### 審核
 
 [!UICONTROL 檢閱]步驟隨即顯示，可讓您在建立新的Analytics資料流之前先檢閱該資料流。 連線的詳細資訊會依類別分組，包括：
 
@@ -322,7 +322,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ## 後續步驟和其他資源
 
-建立連線後，系統會自動建立資料流以包含傳入的資料，並以您選取的結構描述填入資料集。 此外，還會進行資料回填，以及內嵌長達13個月的歷史資料。 初始內嵌完成時，[!DNL Analytics]資料會被下游平台服務（例如[!DNL Real-Time Customer Profile]和分段服務）使用。 如需更多詳細資訊，請參閱下列檔案：
+建立連線後，系統會自動建立資料流以包含傳入的資料，並以您選取的結構描述填入資料集。 此外，還會進行資料回填，以及內嵌長達13個月的歷史資料。 初始內嵌完成時，[!DNL Analytics]個資料將會由下游Experience Platform服務（例如[!DNL Real-Time Customer Profile]和分段服務）使用。 如需更多詳細資訊，請參閱下列檔案：
 
 * [[!DNL Real-Time Customer Profile] 概觀](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] 概觀](../../../../../segmentation/home.md)
@@ -333,6 +333,6 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 >[!WARNING]
 >
-> 下列影片中顯示的[!DNL Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
+> 下列影片中顯示的[!DNL Experience Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

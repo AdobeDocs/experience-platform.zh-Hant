@@ -1,11 +1,11 @@
 ---
-keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；oracleresponsys目的地
-title: oracleResponsys連線
-description: Responsys是Oracle提供的跨頻道行銷活動的企業電子郵件行銷工具，可將電子郵件、行動裝置、顯示和社交的互動個人化。
+keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；oracle responsys目的地
+title: Oracle回應系統連線
+description: Responsys是Oracle所提供用於跨頻道行銷活動的企業電子郵件行銷工具，可將電子郵件、行動裝置、顯示和社交的互動個人化。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '709'
 ht-degree: 3%
 
 ---
@@ -24,8 +24,8 @@ ht-degree: 3%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -44,7 +44,7 @@ ht-degree: 3%
 
 使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將特定IP範圍新增至允許清單。
 
-如果您需要將AdobeIP新增至允許清單，請參閱SFTP目的地的[IP位址允許清單](../cloud-storage/ip-address-allow-list.md)。
+如果您需要將Adobe IP新增至允許清單，請參閱SFTP目的地的[IP位址允許清單](../cloud-storage/ip-address-allow-list.md)。
 
 ## 連線到目標 {#connect}
 
@@ -76,14 +76,14 @@ ht-degree: 3%
 * 您可以選擇附加RSA格式的公開金鑰，將PGP/GPG的加密新增至&#x200B;**[!UICONTROL 金鑰]**&#x200B;區段下的匯出檔案。 您的公開金鑰必須寫入為[!DNL Base64]編碼字串。
 * **[!UICONTROL 名稱]**：為您的目的地挑選相關名稱。
 * **[!UICONTROL 描述]**：輸入目的地的描述。
-* **[!UICONTROL 資料夾路徑]**：提供儲存位置的路徑，Platform會將您的匯出資料儲存為CSV檔案。
+* **[!UICONTROL 資料夾路徑]**：提供Experience Platform會將匯出資料儲存為CSV檔案的儲存位置路徑。
 * **[!UICONTROL 檔案格式]**：選取&#x200B;**CSV**，將CSV檔案匯出至您的儲存位置。
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -108,8 +108,8 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## 匯出的資料 {#exported-data}
 
-針對[!DNL Oracle Responsys]目的地，Platform會在您提供的儲存位置中建立`.csv`檔案。 如需檔案的詳細資訊，請參閱對象啟用教學課程中的[驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify)。
+針對[!DNL Oracle Responsys]目的地，Experience Platform會在您提供的儲存位置中建立`.csv`檔案。 如需檔案的詳細資訊，請參閱對象啟用教學課程中的[驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify)。
 
 ## 設定將資料匯入[!DNL Oracle Responsys] {#import-data-into-responsys}
 
-將[!DNL Platform]連線到您的[!DNL SFTP]儲存體後，您必須設定從儲存位置匯入到[!DNL Oracle Responsys]的資料匯入。 若要瞭解如何完成此作業，請參閱[!DNL Oracle Responsys Help Center]中的[匯入連絡人或帳戶](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)。
+將[!DNL Experience Platform]連線到您的[!DNL SFTP]儲存體後，您必須設定從儲存位置匯入到[!DNL Oracle Responsys]的資料匯入。 若要瞭解如何完成此作業，請參閱[!DNL Oracle Responsys Help Center]中的[匯入連絡人或帳戶](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)。

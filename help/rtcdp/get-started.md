@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP；CDP；Real-time Customer Data Platform；即時客戶資料平台；real time cdp；cdp；rtcdp
-title: Real-time Customer Data Platform快速入門
+keywords: RTCDP；CDP；Real-Time Customer Data Platform；即時客戶資料平台；real time cdp；cdp；rtcdp
+title: Real-Time Customer Data Platform快速入門
 description: 在設定您的 Adobe Real-Time Customer Data Platform 實作時，可使用此範例情境當作範例。
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2326'
 ht-degree: 1%
 
 ---
 
-# Real-time Customer Data Platform快速入門
+# Real-Time Customer Data Platform快速入門
 
-本快速入門手冊將引導您瞭解Real-time Customer Data Platform (Real-Time CDP)的範例實作。 您可在設定自己的實施作業時加以使用。 雖然本指南會顯示特定範例，但會連結至您建立設定時可使用的其他資訊。
+本快速入門手冊將引導您瞭解Real-Time Customer Data Platform (Real-Time CDP)的範例實作。 您可在設定自己的實施作業時加以使用。 雖然本指南會顯示特定範例，但會連結至您建立設定時可使用的其他資訊。
 
-此範例顯示由Adobe Experience Platform提供支援的Real-time Customer Data Platform強大功能，可以：
+此範例顯示由Adobe Experience Platform提供支援的Real-Time Customer Data Platform強大功能，可以：
 
 * 從多個來源擷取資料
 * 將它們合併為單一[!DNL real-time customer profile]
@@ -119,7 +119,7 @@ Sarah收到根據她在Adobe Experience Platform中的[!DNL Real-Time Customer P
 
 Sarah分心並離開網站，結束工作階段。 Luma可在Adobe Experience Platform中使用她的資料，協助帶她返回網站。
 
-Real-time Customer Data Platform採用Adobe Experience Platform技術，專為客戶體驗管理而打造。 它可讓組織：
+Real-Time Customer Data Platform採用Adobe Experience Platform技術，專為客戶體驗管理而打造。 它可讓組織：
 
 * 簡化資料整合與啟用
 * 控管已知和未知的資料使用情況
@@ -136,13 +136,13 @@ Luma的團隊將其所有行為和客戶資料放在一個地方。
 * 現有的Adobe Experience Cloud解決方案資料
 * 非Adobe來源，例如Luma的忠誠度計畫、客服中心和銷售點系統資料
 * 來自Luma資料來源的即時串流資料
-* 來自Adobe解決方案的即時資料（不需要新標籤）
+* 來自Adobe解決方案的即時資料（無需新標籤）
 
 來自不同來源的所有資料都會合併至單一統一客戶設定檔。
 
 ## 設定資料來源
 
-使用[!DNL Real-Time Customer Data Platform]將新的資料來源帶入Platform。 Real-Time CDP包括資料來源目錄，可快速輕鬆新增至設定檔。
+使用[!DNL Real-Time Customer Data Platform]將新的資料來源帶入Experience Platform。 Real-Time CDP包括資料來源目錄，可快速輕鬆新增至設定檔。
 
 ![影像](assets/luma-source-cat.png)
 
@@ -193,14 +193,14 @@ Luma擁有有關Sarah顯示的所有設定檔資訊。 這包括她的個人資�
 
 | 類別 | 說明 |
 |---|---|
-| 身分 | 顯示[!DNL Platform]中跨頻道與裝置從Sarah與Luma的互動連結在一起的身分。 隨即顯示她來自網站的ECID。 她的身分也包含行動應用程式的ECID、電子郵件ID、最近新增[!DNL Microsoft Dynamics]資料集的CRM ID，以及從Luma忠誠度系統傳入Adobe Experience Platform的忠誠度ID。 |
+| 身分識別 | 顯示[!DNL Experience Platform]中跨頻道與裝置從Sarah與Luma的互動連結在一起的身分。 隨即顯示她來自網站的ECID。 她的身分也包含行動應用程式的ECID、電子郵件ID、最近新增[!DNL Microsoft Dynamics]資料集的CRM ID，以及從Luma忠誠度系統傳入Adobe Experience Platform的忠誠度ID。 |
 | 活動 | 顯示Sarah與Luma品牌的所有互動資料。 這包括她剛才檢視的專案、過去檢視的任何專案、收到的電子郵件、她與客服中心的互動，以及這些互動中每個環節發生的頻道和裝置。 |
 
 Real-Time CDP設定檔將Luma行銷團隊的工作流程從幾週縮短至幾分鐘，並根據此360度客戶檢視開啟個人化的可能性。 設定檔會合併她在登入前瀏覽網站時的行為資料，以及現有的客戶設定檔，以建立Sarah的全面檢視。
 
 行銷團隊可以使用此增強的[!DNL Real-Time Customer Profile]，以更個人化Sarah的體驗，並提高她對Luma的品牌忠誠度。
 
-## 對象
+## 客群
 
 強大的Adobe Experience Platform細分功能可讓行銷人員根據[!DNL Real-Time Customer Profile]中擷取的資料，結合屬性、事件和現有對象。
 
@@ -231,14 +231,14 @@ Loyalty member
 
 因為Sarah在購物車中新增了看似禮品的專案並捨棄了，Luma可以免費贈送禮品套裝優惠來鎖定她。
 
-## 目的地
+## 目標
 
 當您新增「放棄贈送禮品購物車」對象時，您可以看到大致有多少人屬於此對象。 您可以對其採取動作，使其可用於跨頻道個人化。
 
 選取&#x200B;**[!UICONTROL 傳送至目的地]**。
 
 在Real-Time CDP中，Luma可順暢地對其對象進行個人化操作。\
-我們在這裡看到Luma可將此目的地傳送至的所有目的地，包括Adobe和非Adobe解決方案：
+我們在這裡看到Luma將此目的地傳送至的所有目的地，包括Adobe和非Adobe解決方案：
 
 ![影像](assets/luma-dest.png)
 

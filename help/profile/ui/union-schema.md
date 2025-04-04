@@ -2,26 +2,26 @@
 keywords: Experience Platform；設定檔；即時客戶設定檔；統一設定檔；統一；設定檔；rtcp；啟用設定檔；啟用設定檔；聯合結構描述；聯合設定檔；聯合設定檔
 title: 聯合結構描述UI指南
 type: Documentation
-description: 在Adobe Experience Platform使用者介面(UI)中，您可以輕鬆檢視組織內的任何聯合結構描述，並預覽特定類別的欄位、身分、關係和貢獻結構描述。 本指南提供如何使用Platform UI檢視和探索聯合結構的詳細資訊。
+description: 在Adobe Experience Platform使用者介面(UI)中，您可以輕鬆檢視組織內的任何聯合結構描述，並預覽特定類別的欄位、身分、關係和貢獻結構描述。 本指南提供如何使用Experience Platform UI檢視和探索聯合結構的詳細資訊。
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL 聯合結構描述] UI指南
 
-在Adobe Experience Platform使用者介面(UI)中，您可以輕鬆檢視組織內的任何聯合結構描述，並預覽特定類別的欄位、身分、關係和貢獻結構描述。 本指南提供如何使用Platform UI檢視和探索聯合結構的詳細資訊。
+在Adobe Experience Platform使用者介面(UI)中，您可以輕鬆檢視組織內的任何聯合結構描述，並預覽特定類別的欄位、身分、關係和貢獻結構描述。 本指南提供如何使用Experience Platform UI檢視和探索聯合結構的詳細資訊。
 
 ## 快速入門
 
 此UI指南需要瞭解與管理即時客戶設定檔資料有關的各種[!DNL Experience Platform]服務。 在閱讀本指南或使用UI之前，請檢視以下服務的檔案：
 
 * [[!DNL Real-Time Customer Profile]](../home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-* [[!DNL Identity Service]](../../identity-service/home.md)：啟用[!DNL Real-Time Customer Profile]，方法是在不同資料來源中的身分擷取到[!DNL Platform]時將其橋接起來。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
+* [[!DNL Identity Service]](../../identity-service/home.md)：啟用[!DNL Real-Time Customer Profile]，方法是在不同資料來源中的身分擷取到[!DNL Experience Platform]時將其橋接起來。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 
 ## 瞭解聯合結構描述
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 檢視聯合結構描述
 
-若要導覽至Platform UI中的聯合結構描述，請從左側導覽中選取&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 聯合結構描述]**&#x200B;索引標籤。 [!UICONTROL 聯合結構描述]索引標籤會開啟，以顯示目前所選類別的聯合結構描述。
+若要導覽至Experience Platform UI中的聯合結構描述，請從左側導覽中選取&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 聯合結構描述]**&#x200B;索引標籤。 [!UICONTROL 聯合結構描述]索引標籤會開啟，以顯示目前所選類別的聯合結構描述。
 
 ![顯示[聯合結構描述]頁面，並反白顯示[設定檔與聯合結構描述]索引標籤。](../images/union-schema/landing.png)
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ## 檢視參與的結構描述
 
-您也可以選取&#x200B;**[!UICONTROL 所有參與的結構描述]**&#x200B;來展開結構描述清單，以檢視哪些特定結構描述對聯合結構描述有貢獻。 根據您選取的類別以及貴組織在Platform中建立的結構描述數目，這可能是包含單一結構描述的簡短清單，或是包含許多結構描述的完整清單。
+您也可以選取&#x200B;**[!UICONTROL 所有參與的結構描述]**&#x200B;來展開結構描述清單，以檢視哪些特定結構描述對聯合結構描述有貢獻。 根據您選取的類別以及貴組織在Experience Platform中建立的結構描述數目，這可能是包含單一結構描述的簡短清單，或是包含許多結構描述的完整清單。
 
 ![加入聯合結構描述的結構描述清單已反白顯示。](../images/union-schema/contributing-schemas.png)
 
@@ -99,4 +99,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-閱讀本指南後，您現在瞭解如何使用[!DNL Experience Platform] UI檢視和導覽聯合結構描述。 如需結構描述的詳細資訊，包括它們在Platform中的使用方式，請先閱讀[XDM系統總覽](../../xdm/home.md)。
+閱讀本指南後，您現在瞭解如何使用[!DNL Experience Platform] UI檢視和導覽聯合結構描述。 如需結構描述的詳細資訊，包括如何在Experience Platform中使用，請先閱讀[XDM系統總覽](../../xdm/home.md)。

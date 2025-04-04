@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備總覽
 description: 本檔案介紹Adobe Experience Platform中的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ## 資料格式處理
 
-「資料準備」可以強健地處理擷取到Platform的不同格式資料。 若要深入瞭解「資料準備」如何處理不同的資料型別，請閱讀[資料格式處理概觀](./data-handling.md)。
+「資料準備」可以強健地處理擷取到Experience Platform中的不同格式資料。 若要深入瞭解「資料準備」如何處理不同的資料型別，請閱讀[資料格式處理概觀](./data-handling.md)。
 
 ## 使用[!DNL Data Prep]傳送部分資料列更新
 

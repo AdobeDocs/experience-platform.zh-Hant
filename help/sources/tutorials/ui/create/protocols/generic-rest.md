@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；一般REST API
 title: 在使用者介面中建立一般REST API Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立通用REST API來源連線。
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '647'
 ht-degree: 3%
 
 ---
@@ -20,14 +20,14 @@ ht-degree: 3%
 
 ## 快速入門
 
-本教學課程需要您實際瞭解下列Platform元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 收集必要的認證
 
-若要在Platform上存取您的[!DNL Generic REST API]帳戶，您必須為您選擇的驗證型別提供有效的認證。 一般REST API支援OAuth 2重新整理程式碼和基本驗證。 請參閱下清單格，瞭解兩種支援的驗證型別之證明資料的資訊。
+若要在Experience Platform上存取您的[!DNL Generic REST API]帳戶，您必須為您選擇的驗證型別提供有效的認證。 一般REST API支援OAuth 2重新整理程式碼和基本驗證。 請參閱下清單格，瞭解兩種支援的驗證型別之證明資料的資訊。
 
 #### OAuth 2重新整理代碼
 
@@ -53,7 +53,7 @@ ht-degree: 3%
 
 ## 連線您的通用REST API帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋列來尋找您要使用的特定來源。
 
@@ -89,4 +89,4 @@ ht-degree: 3%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與一般REST API帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](../../dataflow/protocols.md)。
+依照本教學課程中的指示，您已建立與一般REST API帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/protocols.md)。

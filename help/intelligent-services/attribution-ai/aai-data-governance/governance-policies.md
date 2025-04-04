@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Attribution AI的治理政策
 description: Adobe Experience Platform提供數種服務和工具，可讓您自信地控制收集到的體驗資料。
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
 
 # Attribution AI中的治理政策
 
-一旦您通過工作流程建立模型並提交模型的組態，[原則執行](../../../data-governance/enforcement/auto-enforcement.md)就會檢查是否有任何違規。 如果發生原則違規，會出現一個彈出視窗，指出已違反一或多個原則。 這是為了確保您的Platform資料作業和行銷動作符合資料使用原則。
+一旦您通過工作流程建立模型並提交模型的組態，[原則執行](../../../data-governance/enforcement/auto-enforcement.md)就會檢查是否有任何違規。 如果發生原則違規，會出現一個彈出視窗，指出已違反一或多個原則。 這是為了確保您在Experience Platform中的資料作業和行銷動作符合資料使用原則。
 
 ## 原則違規彈出視窗
 

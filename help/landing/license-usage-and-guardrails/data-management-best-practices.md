@@ -2,9 +2,9 @@
 title: 資料管理授權權益最佳實務
 description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳做法及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 1b8fd7671146519fa66768aab3fe081adb0bd6c6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2145'
+source-wordcount: '2154'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 Adobe Experience Platform是一個開放系統，可將您的資料轉換為健全的客戶設定檔，並即時更新，使用AI驅動的深入分析來協助您跨每個管道提供適當的體驗。 您可以使用來源將不同型別、磁碟區和歷程的資料擷取到Experience Platform，然後迎合從細分和個人化到分析和機器學習等使用案例的資料。
 
-Platform提供可建立設定檔數量及可匯入資料量的授權。 因為有引入任何資料來源、數量或歷史記錄的容量，所以可能會隨著資料數量的增加而超過您的授權權利。
+Experience Platform提供可建立設定檔數量及可匯入資料量的授權。 因為有引入任何資料來源、數量或歷史記錄的容量，所以可能會隨著資料數量的增加而超過您的授權權利。
 
 本文件會概述可遵循的最佳做法以及可用來將 Adobe Experience Platform 的授權權益管理得更好的工具。
 
@@ -48,9 +48,9 @@ Experience Platform主要由兩個資料存放庫組成： [!DNL data lake]和�
 
 ## 授權使用量儀表板
 
-Adobe Experience Platform UI提供控制面板，讓您檢視貴組織適用於Platform的授權相關資料快照。 儀表板中的資料與快照拍攝時的特定時間點顯示的資料完全相同。 快照既不是近似值，也不是資料範例，而且儀表板不會即時更新。
+Adobe Experience Platform UI提供控制面板，讓您檢視貴組織適用於Experience Platform的授權相關資料快照。 儀表板中的資料與快照拍攝時的特定時間點顯示的資料完全相同。 快照既不是近似值，也不是資料範例，而且儀表板不會即時更新。
 
-如需詳細資訊，請參閱[在Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data)上使用授權使用儀表板的指南。
+如需詳細資訊，請參閱[在Experience Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data)上使用授權使用儀表板的指南。
 
 ## 資料管理最佳實務
 
@@ -72,9 +72,9 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 
 在確保您的資料使用量維持在授權權益限制內時，請考慮以下兩種主要情況：
 
-### 要將哪些資料帶入Platform？
+### 要將哪些資料帶入Experience Platform？
 
-資料可以擷取到Platform的一或多個系統中，即[!DNL data lake]和/或設定檔存放區。 這表示在不同的使用案例中，兩個系統中都可以存在不同的資料。 例如，您可能想要在[!DNL data lake]中保留歷史資料，但不想在設定檔存放區中保留。 您可以啟用設定檔擷取的資料集，以選取要傳送至設定檔存放區的資料。
+資料可以內嵌至Experience Platform的一或多個系統中，即[!DNL data lake]和/或設定檔存放區。 這表示在不同的使用案例中，兩個系統中都可以存在不同的資料。 例如，您可能想要在[!DNL data lake]中保留歷史資料，但不想在設定檔存放區中保留。 您可以啟用設定檔擷取的資料集，以選取要傳送至設定檔存放區的資料。
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 
 ### 要保留哪些資料？
 
-您可以同時套用資料擷取篩選器和到期規則，以移除已因使用案例而過時的資料。 通常，行為資料（例如Analytics資料）使用的儲存空間遠高於記錄資料（例如CRM資料）。 例如，相較於記錄資料，許多Platform使用者有超過90%的設定檔僅由行為資料填入。 因此，管理您的行為資料對於確保授權權益的合規性至關重要。
+您可以同時套用資料擷取篩選器和到期規則，以移除已因使用案例而過時的資料。 通常，行為資料（例如Analytics資料）使用的儲存空間遠高於記錄資料（例如CRM資料）。 例如，相較於記錄資料，許多Experience Platform使用者有超過90%的設定檔僅由行為資料填入。 因此，管理您的行為資料對於確保授權權益的合規性至關重要。
 
 您可善用許多工具以符合授權使用權益：
 
@@ -102,10 +102,10 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 | 擷取篩選器 | 說明 |
 | --- | --- |
 | Adobe Audience Manager來源篩選 | 建立Adobe Audience Manager來源連線時，您可以挑選要帶入[!DNL data lake]和即時客戶個人檔案的區段和特徵，而不是擷取整個Audience Manager資料。 如需詳細資訊，請參閱[建立Audience Manager來源連線](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的指南。 |
-| Adobe Analytics資料準備 | 建立Analytics來源連線時，您可以使用[!DNL Data Prep]功能來篩選出使用案例不需要的資料。 透過[!DNL Data Prep]，您可以定義哪些屬性/欄需要發佈到設定檔。 您也可以提供條件陳述式，通知Platform資料應該發佈到設定檔，還是隻發佈到[!DNL data lake]。 如需詳細資訊，請參閱[建立Analytics來源連線](../../sources/tutorials/ui/create/adobe-applications/analytics.md)的指南。 |
+| Adobe Analytics資料準備 | 建立Analytics來源連線時，您可以使用[!DNL Data Prep]功能來篩選出使用案例不需要的資料。 透過[!DNL Data Prep]，您可以定義哪些屬性/欄需要發佈到設定檔。 您也可以提供條件陳述式，通知Experience Platform資料應該發佈至設定檔，還是僅發佈至[!DNL data lake]。 如需詳細資訊，請參閱[建立Analytics來源連線](../../sources/tutorials/ui/create/adobe-applications/analytics.md)的指南。 |
 | 支援為設定檔啟用/停用資料集 | 若要將資料擷取至即時客戶個人檔案，您必須啟用資料集以用於個人檔案存放區。 如此一來，新增至您的[!DNL Addressable Audience]和[!DNL Total Data Volume]權益。 客戶設定檔使用案例不再需要資料集後，您可以停用該資料集與設定檔的整合，以確保您的資料符合授權規範。 如需詳細資訊，請參閱[啟用和停用設定檔](../../catalog/datasets/enable-for-profile.md)的資料集指南。 |
 | 網頁SDK和行動SDK資料排除 | Web和Mobile SDK收集的資料有兩種型別：自動收集的資料以及開發人員明確收集的資料。 若要更妥善地管理授權法規遵循，您可以透過內容設定，在SDK的設定中停用自動資料收集。 您的開發人員也可以移除或設定自訂資料。 |
-| 伺服器端轉送資料排除 | 如果您使用伺服器端轉送將資料傳送至Platform，您可以移除規則動作中的對應以在所有事件中排除資料，或是將條件新增至規則，讓資料僅針對特定事件引發，藉此排除傳送的資料。 如需詳細資訊，請參閱有關[事件和條件](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if)的檔案。 |
+| 伺服器端轉送資料排除 | 如果您使用伺服器端轉送將資料傳送至Experience Platform，您可以移除規則動作中的對應以在所有事件中排除資料，或新增條件至規則，讓資料僅針對特定事件引發，藉此排除傳送的資料。 如需詳細資訊，請參閱有關[事件和條件](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if)的檔案。 |
 | 在來源層級篩選資料 | 在建立連線並將資料內嵌至Experience Platform之前，您可以使用邏輯和比較運運算元來篩選來源中的列層級資料。 如需詳細資訊，請參閱[使用 [!DNL Flow Service] API](../../sources/tutorials/api/filter.md)篩選來源之資料列層級資料的指南。 |
 
 {style="table-layout:auto"}
@@ -116,7 +116,7 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 
 | 設定檔存放區元件 | 說明 |
 | --- | --- |
-| 輪廓片段 | 每個客戶設定檔都由多個&#x200B;**設定檔片段**&#x200B;組成，這些片段已合併以形成該客戶的單一檢視。 例如，如果客戶跨多個管道與您的品牌互動，您的組織將有多個與該單一客戶相關的&#x200B;**設定檔片段**&#x200B;出現在多個資料集中。 將這些片段內嵌至Platform時，會使用身分圖表將它們彙整在一起，以為該客戶建立單一設定檔。 **設定檔片段**&#x200B;包含身分名稱空間做為識別碼，以及關聯的記錄資料和/或時間序列資料。 |
+| 輪廓片段 | 每個客戶設定檔都由多個&#x200B;**設定檔片段**&#x200B;組成，這些片段已合併以形成該客戶的單一檢視。 例如，如果客戶跨多個管道與您的品牌互動，您的組織將有多個與該單一客戶相關的&#x200B;**設定檔片段**&#x200B;出現在多個資料集中。 將這些片段內嵌至Experience Platform時，會使用身分圖表將它們彙整在一起，為該客戶建立單一設定檔。 **設定檔片段**&#x200B;包含身分名稱空間做為識別碼，以及關聯的記錄資料和/或時間序列資料。 |
 | 記錄資料（屬性） | 設定檔是主旨、組織或個人的表示法，由許多&#x200B;**屬性** （也稱為&#x200B;**記錄資料**）組成。 例如，產品的設定檔可能包含SKU和說明，而人員的設定檔包含名字、姓氏和電子郵件地址等資訊。 **記錄資料**&#x200B;的磁碟區通常為低/中等，但長時間都有價值。 |
 | 時間序列資料（行為） | **時間序列資料**&#x200B;提供有關使用者行為的資訊。 以標準結構描述類別Experience Data Model (XDM) [!DNL ExperienceEvent]表示，時間序列資料可說明新增至購物車的專案、點按連結及檢視影片等事件。 行為的價值可能會隨著時間而降低。 |
 | 身分名稱空間（身分） | 當客戶資料彙整在一起時，會透過使用&#x200B;**身分識別名稱空間**&#x200B;將其合併到單一設定檔中，並可在更多使用者相關資訊時將這些身分識別貼在一起。 如需詳細資訊，請參閱[身分識別名稱空間概觀](../../identity-service/features/namespaces.md)。 |
@@ -136,7 +136,7 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 
 此功能可讓您從設定檔存放區中自動移除過時的假名設定檔。 如需有關此功能的詳細資訊，請閱讀[假名設定檔資料到期總覽](../../profile/pseudonymous-profiles.md)。
 
-#### 體驗事件過期 {#event-expirations}
+#### 體驗事件期限 {#event-expirations}
 
 此功能可讓您從已啟用設定檔的資料集中自動移除行為資料，該資料不再對您的使用案例有用。 如需此程式在資料集啟用後如何運作的詳細資訊，請參閱[體驗事件有效期](../../profile/event-expirations.md)的概觀。
 

@@ -3,9 +3,9 @@ title: Pendo Source概觀
 description: 瞭解如何使用API或使用者介面利用Webhook將Pendo連線至Adobe Experience Platform
 badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >[!DNL Pendo]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從協力廠商分析應用程式擷取資料。 對分析提供者的支援包括[!DNL Pendo]。
 
@@ -38,16 +38,16 @@ Experience Platform支援從協力廠商分析應用程式擷取資料。 對分
 
 ### 設定[!DNL Pendo] Webhook {#set-up-webhook}
 
-成功建立資料流後，您必須設定webhook以通知Platform有關[!DNL Pendo]個事件的資訊。 [!DNL Pendo]個Webhook可以在特定事件發生時將即時通知推送至其他服務，並將此資訊傳送至您的[!DNL Pendo]來源。 如需詳細資訊，請閱讀[取得串流端點URL](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint)和[設定 [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook)的教學課程。
+成功建立資料流後，您必須設定webhook以通知Experience Platform有關[!DNL Pendo]個事件的資訊。 [!DNL Pendo]個Webhook可以在特定事件發生時將即時通知推送至其他服務，並將此資訊傳送至您的[!DNL Pendo]來源。 如需詳細資訊，請閱讀[取得串流端點URL](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint)和[設定 [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook)的教學課程。
 
-## 正在將[!DNL Pendo]連線至平台 {#connect-to-platform}
+## 正在將[!DNL Pendo]連線到Experience Platform {#connect-to-platform}
 
-以下檔案提供有關如何使用API或使用者介面建立[!DNL Pendo]串流聯結器以與[!DNL Platform]連線的資訊：
+以下檔案提供有關如何使用API或使用者介面建立[!DNL Pendo]串流聯結器以與[!DNL Experience Platform]連線的資訊：
 
-### 使用API連線[!DNL Pendo]至平台 {#connect-to-platform-using-api}
+### 使用API連線[!DNL Pendo]至Experience Platform {#connect-to-platform-using-api}
 
-* [使用API建立來源連線，將 [!DNL Pendo] 資料帶入Platform。](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [使用API建立來源連線，將 [!DNL Pendo] 資料帶入Experience Platform。](../../tutorials/api/create/analytics/pendo-webhook.md)
 
-### 使用UI連線[!DNL Pendo]至平台 {#connect-to-platform-using-ui}
+### 使用UI連線[!DNL Pendo]至Experience Platform {#connect-to-platform-using-ui}
 
-* [使用使用者介面建立來源連線，將 [!DNL Pendo] 資料帶入Platform](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [使用使用者介面建立來源連線，將 [!DNL Pendo] 資料帶入Experience Platform](../../tutorials/ui/create/analytics/pendo-webhook.md)

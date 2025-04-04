@@ -1,12 +1,12 @@
 ---
-title: Snowflake串流Source聯結器概述
-description: 瞭解如何建立來源連線和資料流，以將您的Snowflake執行個體中的串流資料擷取到Adobe Experience Platform
+title: Snowflake串流Source聯結器概觀
+description: 瞭解如何建立來源連線和資料流，以將串流資料從您的Snowflake執行個體擷取到Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '820'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 1%
 >
 >* 已購買Real-Time CDP Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
 >
->* 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Snowflake]串流來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+>* 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Snowflake]串流來源。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從[!DNL Snowflake]資料庫串流資料。
 
@@ -38,7 +38,7 @@ Experience Platform支援從[!DNL Snowflake]資料庫串流資料。
 
 使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources)頁面。
 
-以下檔案提供如何使用API或使用者介面將[!DNL Amazon Redshift]連線到Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Amazon Redshift]連線至Experience Platform的資訊：
 
 ### 收集必要的認證
 
@@ -47,8 +47,8 @@ Experience Platform支援從[!DNL Snowflake]資料庫串流資料。
 | 認證 | 說明 |
 | --- | --- |
 | `account` | [!DNL Snowflake]帳戶的完整帳戶識別碼（帳戶名稱或帳戶定位器）已附加尾碼`snowflakecomputing.com`。 帳戶識別碼可以是不同的格式： <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com （例如`acme-abc12345.snowflakecomputing.com`）</li><li>{ACCOUNT_LOCATOR}。{CLOUD_REGION_ID}.snowflakecomputing.com （例如`acme12345.ap-southeast-1.snowflakecomputing.com`）</li><li>{ACCOUNT_LOCATOR}。{CLOUD_REGION_ID}。{CLOUD}.snowflakecomputing.com （例如`acme12345.east-us-2.azure.snowflakecomputing.com`）</li></ul> 如需詳細資訊，請閱讀[[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>)。 |
-| `warehouse` | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料傳送至Platform時必須個別存取。 |
-| `database` | [!DNL Snowflake]資料庫包含您要帶入Platform的資料。 |
+| `warehouse` | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料帶到Experience Platform時必須個別存取。 |
+| `database` | [!DNL Snowflake]資料庫包含您要帶入Experience Platform的資料。 |
 | `username` | [!DNL Snowflake]帳戶的使用者名稱。 |
 | `password` | [!DNL Snowflake]使用者帳戶的密碼。 |
 | `role` | （選用）可以為使用者針對指定連線提供的自訂定義角色。 如果未提供，此值會預設為`public`。 |
@@ -89,5 +89,5 @@ Experience Platform支援從[!DNL Snowflake]資料庫串流資料。
 
 下列教學課程提供如何使用API將您的[!DNL Snowflake]串流來源連線至Experience Platform的步驟：
 
-* [使用Flow Service API從 [!DNL Snowflake] 資料庫串流資料以Experience Platform](../../tutorials/api/create/databases/snowflake-streaming.md)
-* [從 [!DNL Snowflake] 資料庫串流資料，以使用Experience Platform使用者介面中的來源工作區進行Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)
+* [使用流程服務API將資料從 [!DNL Snowflake] 資料庫串流到Experience Platform](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [使用Experience Platform使用者介面中的來源工作區將資料從 [!DNL Snowflake] 資料庫串流到Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

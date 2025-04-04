@@ -3,9 +3,9 @@ title: 使用流程服務API建立Azure事件中樞Source連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Azure事件中樞帳戶。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1496'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Azure Event Hubs]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>[!DNL Azure Event Hubs]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
-閱讀本教學課程以瞭解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將[!DNL Azure Event Hubs] （以下稱為&quot;[!DNL Event Hubs]&quot;）連線至Experience Platform。
+閱讀本教學課程，瞭解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將[!DNL Azure Event Hubs] （以下稱為&quot;[!DNL Event Hubs]&quot;）連線至Experience Platform。
 
 ## 快速入門
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-- [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-- [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+- [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線[!DNL Event Hubs]至Platform。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功將[!DNL Event Hubs]連線至Experience Platform。
 
 ### 收集必要的認證
 
@@ -79,9 +79,9 @@ ht-degree: 2%
 
 如需這些值的詳細資訊，請參閱[此「事件中樞」檔案](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
 ## 建立基礎連線
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
 建立來源連線的第一個步驟是驗證您的[!DNL Event Hubs]來源並產生基本連線識別碼。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供[!DNL Event Hubs]驗證認證作為要求引數的一部分時，向`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的[!DNL Event Hubs]驗證認證作為要求引數的一部分時，對`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -103,7 +103,7 @@ POST /connections
 
 >[!TAB 標準驗證]
 
-若要使用標準驗證建立帳戶，請在提供您的`sasKeyName`、`sasKey`和`namespace`的值時向`/connections`端點提出POST要求。
+若要使用標準驗證建立帳戶，請在提供您`sasKeyName`、`sasKey`和`namespace`的值時對`/connections`端點提出POST要求。
 
 +++要求
 
@@ -157,7 +157,7 @@ curl -X POST \
 
 >[!TAB SAS驗證]
 
-若要使用SAS驗證建立帳戶，請在提供您的`sasKeyName`、`sasKey`、`namespace`和`eventHubName`的值時向`/connections`端點提出POST要求。
+若要使用SAS驗證建立帳戶，請在提供您`sasKeyName`、`sasKey`、`namespace`和`eventHubName`的值時對`/connections`端點提出POST要求。
 
 +++要求
 
@@ -213,7 +213,7 @@ curl -X POST \
 
 >[!TAB 事件中心Azure Active Directory驗證]
 
-若要使用Azure Active Directory驗證建立帳戶，請在提供您的`tenantId`、`clientId`、`clientSecretValue`和`namespace`的值時向`/connections`端點提出POST要求。
+若要使用Azure Active Directory驗證建立帳戶，請在提供您的`tenantId`、`clientId`、`clientSecretValue`和`namespace`的值時，對`/connections`端點提出POST要求。
 
 +++要求
 
@@ -269,7 +269,7 @@ curl -X POST \
 
 >[!TAB 事件中樞範圍的Azure Active Directory驗證]
 
-若要使用Azure Active Directory驗證建立帳戶，請在提供您的`tenantId`、`clientId`、`clientSecretValue`、`namespace`和`eventHubName`的值時向`/connections`端點提出POST要求。
+若要使用Azure Active Directory驗證建立帳戶，請在提供您的`tenantId`、`clientId`、`clientSecretValue`、`namespace`和`eventHubName`的值時，對`/connections`端點提出POST要求。
 
 +++要求
 
@@ -335,7 +335,7 @@ curl -X POST \
 
 來源連線會建立和管理與擷取資料的外部來源的連線。 來源連線包含資料來源、資料格式等資訊，以及建立資料流所需的來源連線ID。 租使用者和組織專屬的來源連線例項。
 
-若要建立來源連線，請向[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
+若要建立來源連線，請對[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
 
 **API格式**
 

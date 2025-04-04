@@ -2,25 +2,25 @@
 keywords: Experience Platform；首頁；熱門主題；ETL；ETL整合；ETL整合
 solution: Experience Platform
 title: 為Adobe Experience Platform開發ETL整合
-description: ETL整合指南概述建立高效能、安全聯結器以供Experience Platform及將資料擷取到Platform的一般步驟。
+description: ETL整合指南概述為Experience Platform建立高效能、安全聯結器以及將資料擷取到Experience Platform的一般步驟。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3977'
+source-wordcount: '3978'
 ht-degree: 2%
 
 ---
 
 # 為Adobe Experience Platform開發ETL整合
 
-ETL整合指南概述為[!DNL Experience Platform]建立高效能、安全聯結器以及將資料擷取到[!DNL Platform]的一般步驟。
+ETL整合指南概述為[!DNL Experience Platform]建立高效能、安全聯結器以及將資料擷取到[!DNL Experience Platform]的一般步驟。
 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Experience PlatformAPI的驗證和授權](https://www.adobe.com/go/platform-api-authentication-en)
+- [Experience Platform API的驗證和授權](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 本指南也包含設計ETL聯結器時要使用的API呼叫範例，以及概述每個[!DNL Experience Platform]服務的檔案連結，並提供其API的更詳細資料。
@@ -37,10 +37,10 @@ ETL整合指南概述為[!DNL Experience Platform]建立高效能、安全聯結
 
 ETL聯結器整合涉及多個Experience Platform元件。 下列清單概述數個主要元件和功能：
 
-- **AdobeIdentity Management系統(IMS)** — 提供Adobe服務驗證的架構。
+- **Adobe Identity Management System (IMS)** — 提供Adobe服務驗證的架構。
 - **IMS組織** — 可以擁有或授權產品和服務並允許存取其成員的企業實體。
 - **IMS使用者** - IMS組織的成員。 組織與使用者的關係是多對多。
-- **[!DNL Sandbox]** — 虛擬分割單一[!DNL Platform]執行個體，以協助開發及改進數位體驗應用程式。
+- **[!DNL Sandbox]** — 虛擬分割單一[!DNL Experience Platform]執行個體，以協助開發及改進數位體驗應用程式。
 - **資料探索** — 在[!DNL Experience Platform]中記錄內嵌及轉換資料的中繼資料。
 - **[!DNL Data Access]** — 為使用者提供在[!DNL Experience Platform]中存取其資料的介面。
 - **[!DNL Data Ingestion]** — 透過[!DNL Data Ingestion] API將資料推送至[!DNL Experience Platform]。
@@ -56,19 +56,19 @@ ETL聯結器整合涉及多個Experience Platform元件。 下列清單概述數
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人`{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../sandboxes/home.md)。
 
 所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 
@@ -78,7 +78,7 @@ ETL聯結器整合涉及多個Experience Platform元件。 下列清單概述數
 
 若要開始，ETL使用者會登入[!DNL Experience Platform]使用者介面(UI)，並使用標準聯結器或推播服務聯結器建立要擷取的資料集。
 
-在UI中，使用者藉由選取資料集結構描述來建立輸出資料集。 結構描述的選擇取決於要擷取到[!DNL Platform]中的資料型別（記錄或時間序列）。 按一下UI內的「方案」標籤，使用者就可以檢視所有可用的方案，包括方案支援的行為型別。
+在UI中，使用者藉由選取資料集結構描述來建立輸出資料集。 結構描述的選擇取決於要擷取到[!DNL Experience Platform]中的資料型別（記錄或時間序列）。 按一下UI內的「方案」標籤，使用者就可以檢視所有可用的方案，包括方案支援的行為型別。
 
 在ETL工具中，使用者將在設定適當的連線（使用其憑證）之後，開始設計其對應轉換。 ETL工具假設已經安裝[!DNL Experience Platform]聯結器（此整合指南中未定義程式）。
 
@@ -168,7 +168,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
 
 XDM結構描述是您需要向使用者呈現所有可寫入可用欄位清單時所使用的結構描述。
 
-上一個回應物件(`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`)中的第一個「schemaRef.id」值是指向[!DNL Schema Registry]中的特定XDM結構描述的URI。 向[!DNL Schema Registry] API提出查詢(GET)要求即可擷取結構描述。
+上一個回應物件(`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`)中的第一個「schemaRef.id」值是指向[!DNL Schema Registry]中的特定XDM結構描述的URI。 向[!DNL Schema Registry] API提出查詢(GET)請求即可擷取結構描述。
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ curl -X GET \
 
 | 接受 | 說明 |
 | ------ | ----------- |
-| `application/vnd.adobe.xed-id+json` | 清單(GET)要求、標題、ID和版本 |
+| `application/vnd.adobe.xed-id+json` | 清單(GET)請求、標題、ID和版本 |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs和allOf已解決，有標題和說明 |
 | `application/vnd.adobe.xed+json; version={major version}` | 以$ref和allOf原始，有標題和說明 |
 | `application/vnd.adobe.xed-notext+json; version={major version}` | 含$ref和allOf的原始，無標題或說明 |
@@ -211,13 +211,13 @@ curl -X GET \
 
 **回應**
 
-傳回的JSON結構描述描述了結構和欄位層級資訊（「型別」、「格式」、「最小值」、「最大值」等） 中，已序列化為JSON。 如果內嵌使用JSON以外的序列化格式（例如Parquet或Scala），則[結構描述登入指南](../xdm/tutorials/create-schema-api.md)包含一個表格，其中顯示所需的JSON型別(&quot;meta：xdmType&quot;)及其在其他格式中的對應表示法。
+傳回的JSON結構描述描述了資料結構和欄位層級資訊（「型別」、「格式」、「最小值」、「最大值」等），序列化為JSON。 如果內嵌使用JSON以外的序列化格式（例如Parquet或Scala），則[結構描述登入指南](../xdm/tutorials/create-schema-api.md)包含一個表格，其中顯示所需的JSON型別(&quot;meta：xdmType&quot;)及其在其他格式中的對應表示法。
 
 除了此表外，[!DNL Schema Registry]開發人員指南還包含可以使用[!DNL Schema Registry] API進行的所有可能呼叫的深入範例。
 
 ### 資料集「schema」屬性（已棄用 — EOL 2019-05-30）
 
-資料集可能包含「結構描述」屬性，該屬性現在已被取代，並暫時可用於回溯相容性。 例如，類似先前提出的清單(GET)請求，其中`properties`查詢引數中的「schema」被替換為「schemaRef」，可能會傳回以下內容：
+資料集可能包含「結構描述」屬性，該屬性現在已被取代，並暫時可用於回溯相容性。 例如，類似先前提出的清單(GET)請求（其中`properties`查詢引數中的「schema」被替換為「schemaRef」）可能會傳回以下內容：
 
 ```json
 {
@@ -392,7 +392,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/5bf479a6
 
 ### 擷取檔案詳細資料
 
-先前回應中傳回的資料集檔案ID可用於GET要求，透過[!DNL Data Access] API擷取進一步的檔案詳細資料。
+先前回應中傳回的資料集檔案ID可用於GET要求，以透過[!DNL Data Access] API擷取進一步的檔案詳細資料。
 
 [資料存取總覽](../data-access/home.md)包含如何使用[!DNL Data Access] API的詳細資訊。
 
@@ -552,7 +552,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
 
 ### 存取檔案內容
 
-[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/)可用於存取特定檔案的內容。 若要擷取內容，使用使用檔案ID存取檔案時，會使用針對`_links.self.href`傳回的值發出GET要求。
+[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/)可用於存取特定檔案的內容。 若要擷取內容，使用檔案ID存取檔案時，會使用為`_links.self.href`傳回的值來發出GET要求。
 
 **要求**
 
@@ -759,7 +759,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 當使用者端發現過去「n」天內，ETL處理的資料未如預期發生，或來源資料本身可能不正確，此時可能需要批次重播和重新處理資料。
 
-若要這麼做，使用者端的資料管理員將使用[!DNL Platform] UI移除包含損毀資料的批次。 接著，可能需要重新執行ETL，因此會重新填入正確的資料。 如果來源本身有損壞的資料，資料工程師/管理員將需要更正來源批次並重新內嵌資料(透過Adobe Experience Platform或ETL聯結器)。
+若要這麼做，使用者端的資料管理員將使用[!DNL Experience Platform] UI移除包含損毀資料的批次。 接著，可能需要重新執行ETL，因此會重新填入正確的資料。 如果來源本身有損壞的資料，資料工程師/管理員將需要更正來源批次並重新內嵌資料(透過Adobe Experience Platform或ETL聯結器)。
 
 根據產生的資料型別，資料工程師會選擇從特定資料集中移除單一批次或所有批次。 將根據[!DNL Experience Platform]准則移除/封存資料。
 
@@ -781,7 +781,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 延遲是輸入資料尚未完成以致無法傳送給下遊程式，但日後可能可以使用的程式。 客戶將決定其未來比對資料視窗的個別容許度與處理成本，以告知其決定捨棄資料並在下次轉換執行中重新處理，希望可以在保留視窗中的未來某個時間擴充及協調/彙整。 此週期會持續進行，直到資料列處理足夠或被視為過時，而無法繼續投資為止。 每個反複專案都會產生延遲資料，這是先前反複專案中所有延遲資料的超集。
 
-Adobe Experience Platform目前無法識別延遲的資料，因此使用者端實作必須依賴ETL和資料集手動設定，在[!DNL Platform]中鏡射來源資料集，以建立另一個資料集，用來保留延遲的資料。 在這種情況下，延期的資料將與快照集資料類似。 每次ETL轉換執行時，來源資料都會與延遲的資料合併，並傳送以進行處理。
+Adobe Experience Platform目前無法識別延遲的資料，因此使用者端實作必須依賴ETL和資料集手動設定，在[!DNL Experience Platform]中鏡射來源資料集，以建立另一個資料集，用來保留延遲的資料。 在這種情況下，延期的資料將與快照集資料類似。 每次ETL轉換執行時，來源資料都會與延遲的資料合併，並傳送以進行處理。
 
 ## Changelog
 

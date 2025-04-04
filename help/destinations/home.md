@@ -2,9 +2,9 @@
 title: 目的地概觀
 description: 目的地是預先建立的與目的地平台的整合，可無縫地從Adobe Experience Platform啟用資料。 您可以使用Adobe Experience Platform中的「目的地」，針對跨頻道行銷活動、電子郵件行銷活動、鎖定特定目標的廣告和許多其他使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1368'
 ht-degree: 3%
 
 ---
@@ -24,11 +24,11 @@ ht-degree: 3%
 
 ## 目的地和來源 {#destinations-and-sources}
 
-Platform的核心功能之一，就是擷取您的第一方資料，並根據您的業務需求加以啟用。 使用[來源](../sources/home.md)將資料擷取至Platform，並使用目的地從Platform匯出資料。
+Experience Platform的核心功能之一，就是擷取您的第一方資料，並根據您的業務需求加以啟用。 使用[來源](../sources/home.md)將資料擷取至Experience Platform，並使用目的地從Experience Platform匯出資料。
 
 ## 目的地步驟 {#steps}
 
-* 從Platform中所有可用目的地的[自助服務目錄](./catalog/overview.md)中選擇。
+* 從Experience Platform所有可用目的地的[自助服務目錄](./catalog/overview.md)中選擇。
 * 使用目的地將受眾或資料集傳送至行銷自動化平台、數位廣告平台等。
 * 排程定期將資料匯出至您偏好的目的地。
 
@@ -38,7 +38,7 @@ Platform的核心功能之一，就是擷取您的第一方資料，並根據您
 
 * 瀏覽可啟用資料的目的地平台目錄；
 * 建立、編輯、啟用和停用流向目錄中的目的地的資料流；
-* 在儲存位置中建立帳戶，或將Platform連結至目的地平台中的帳戶；
+* 在儲存位置中建立帳戶，或將Experience Platform連結至目的地平台中的帳戶；
 * 選取應該對目的地啟用的對象或資料集；
 * 選取在啟用對象至某些目的地（例如電子郵件行銷目的地、CRM平台、雲端儲存位置等）時，要匯出哪些[體驗資料模型(XDM)欄位](../xdm/home.md)。
 * 對目的地啟用不同型別的設定檔和對象 — 人員、帳戶和潛在客戶。
@@ -55,7 +55,7 @@ Experience Platform目標目錄中的部分聯結器是由Adobe建置和維護�
 
 ## 目的地和存取控制 {#access-controls}
 
-Platform中的目標功能可搭配Adobe Experience Platform存取控制許可權使用。 您可以檢視、管理和啟用目的地，實際取決於您的使用者許可權等級。 如需個別許可權的相關資訊，請移至Adobe Experience Platform中的[存取控制](../access-control/home.md)，然後向下捲動至頁面底部的表格。
+Experience Platform中的目標功能可與Adobe Experience Platform存取控制許可權搭配使用。 您可以檢視、管理和啟用目的地，實際取決於您的使用者許可權等級。 如需個別許可權的相關資訊，請移至Adobe Experience Platform中的[存取控制](../access-control/home.md)，然後向下捲動至頁面底部的表格。
 
 下表概述對目的地執行特定動作所需的許可權和許可權組合。
 
@@ -102,14 +102,14 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 ## 啟用目的地的資料治理限制 {#data-governance}
 
-透過以下方式強制執行Platform目的地的資料控管：
+透過下列方式，強制對Experience Platform目的地進行資料控管：
 
 * *可在建立目的地工作流程中選取的行銷動作*；
 * *資料使用原則*，限制將包含特定使用標籤的資料啟動至具有特定行銷動作的目的地。
 
-請參閱Platform檔案中的資料控管，以取得有關[行銷動作](../data-governance/policies/overview.md)和[解決資料原則違規](../data-governance/enforcement/auto-enforcement.md)的詳細資訊。
+請參閱Experience Platform檔案中的資料控管，以取得有關[行銷動作](../data-governance/policies/overview.md)和[解決資料原則違規](../data-governance/enforcement/auto-enforcement.md)的詳細資訊。
 
-如需在建立目標工作流程中選取行銷動作的詳細資訊，請參閱Platform中不同目標型別的下列頁面：
+如需在建立目標工作流程中選取行銷動作的詳細資訊，請參閱Experience Platform中不同目標型別的下列頁面：
 
 * [Advertising目的地 — Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Advertising目的地 — Google Ads](./catalog/advertising/google-ads-destination.md)

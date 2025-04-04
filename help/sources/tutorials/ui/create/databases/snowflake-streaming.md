@@ -1,15 +1,15 @@
 ---
-title: 使用UI從Snowflake資料庫串流資料以Experience Platform
-description: 瞭解如何從Snwoflake資料庫將資料串流到Experience Platform
+title: 使用UI將資料從Snowflake資料庫串流到Experience Platform
+description: 瞭解如何將資料從Snwoflake資料庫串流至Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
 
-# 使用UI從您的[!DNL Snowflake]資料庫串流資料以Experience Platform
+# 使用UI將資料從您的[!DNL Snowflake]資料庫串流到Experience Platform
 
 按照本指南瞭解如何使用使用者介面將資料從您的[!DNL Snowflake]資料庫串流到Adobe Experience Platform。
 
@@ -22,13 +22,13 @@ ht-degree: 3%
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-### 驗證
+### Authentication
 
-閱讀 [!DNL Snowflake] 串流資料](../../../../connectors/databases/snowflake-streaming.md)的[必要條件設定指南，瞭解從[!DNL Snowflake]擷取串流資料至Experience Platform前，您需要完成的步驟。
+閱讀 [!DNL Snowflake] 串流資料](../../../../connectors/databases/snowflake-streaming.md)的[必要條件設定指南，瞭解從[!DNL Snowflake]擷取串流資料至Experience Platform前，您需要完成的步驟相關資訊。
 
-## 使用[!DNL Snowflake Streaming]來源串流[!DNL Snowflake]資料以進行Experience Platform
+## 使用[!DNL Snowflake Streaming]來源將[!DNL Snowflake]資料串流到Experience Platform
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*資料庫*&#x200B;類別下，選取&#x200B;**[!DNL Snowflake Streaming]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
@@ -36,7 +36,7 @@ ht-degree: 3%
 >
 >來源目錄中沒有已驗證帳戶的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
-![Experience PlatformUI中的來源目錄，已選取Snowflake串流來源卡。](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![Experience Platform UI中的來源目錄，已選取Snowflake串流來源卡。](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
 **[!UICONTROL 連線Snowflake串流帳戶]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的或現有的證明資料。
 
@@ -53,9 +53,9 @@ ht-degree: 3%
 | 認證 | 說明 |
 | --- | --- |
 | 帳戶 | 您的[!DNL Snowflake]帳戶名稱。 如需帳戶名稱的慣例，請閱讀[[!DNL Snowflake Streaming] 驗證指南](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)。 |
-| 倉儲 | [!DNL Snowflake]倉儲的名稱。 倉儲管理[!DNL Snowflake]中查詢的執行。 每個[!DNL Snowflake]倉儲彼此獨立，必須個別存取以便Experience Platform資料。 |
+| 倉儲 | [!DNL Snowflake]倉儲的名稱。 倉儲管理[!DNL Snowflake]中查詢的執行。 每個[!DNL Snowflake]倉儲彼此獨立，必須個別存取，才能將資料帶到Experience Platform。 |
 | 資料庫 | [!DNL Snowflake]資料庫的名稱。 資料庫包含您要帶入Experience Platform的資料。 |
-| 綱要 | （選擇性）與您的[!DNL Snowflake]帳戶關聯的資料庫結構描述。 |
+| 結構描述 | （選擇性）與您的[!DNL Snowflake]帳戶關聯的資料庫結構描述。 |
 | 使用者名稱 | 您[!DNL Snowflake]帳戶的使用者名稱。 |
 | 密碼 | 您的[!DNL Snowflake]帳戶密碼。 |
 | 角色 | （選用）可以為使用者提供的自訂角色，用於特定連線。 如果未提供，此值會預設為`public`。 |
@@ -76,13 +76,13 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->* 時間戳記欄必須存在於您的來源表格中，才能建立串流資料流。 Experience Platform需有時間戳記，才能知道何時會擷取資料，以及何時會串流增量資料。 您可以回溯性地為現有連線新增時間戳記欄，並建立新的資料流。
+>* 時間戳記欄必須存在於您的來源表格中，才能建立串流資料流。 Experience Platform需要時間戳記才能知道何時會擷取資料，以及何時會串流增量資料。 您可以回溯性地為現有連線新增時間戳記欄，並建立新的資料流。
 >
 >* 確保範例來源資料檔中的資料欄位大小寫符合[!DNL Snowflake]對於識別碼大小寫解決的指引。 如需詳細資訊，請閱讀識別碼大小寫](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing)上的[[!DNL Snowflake] 檔案。
 
-[!UICONTROL 選取資料]步驟隨即顯示。 在此步驟中，您必須選取要匯入至Experience Platform的資料、設定時間戳記和時區，並提供用於擷取原始資料的範例來源資料檔案。
+[!UICONTROL 選取資料]步驟隨即顯示。 在此步驟中，您必須選取要匯入Experience Platform的資料、設定時間戳記和時區，並提供用於擷取原始資料的範例來源資料檔案。
 
-使用畫面左側的資料庫目錄，並選取您要匯入以Experience Platform的表格。
+使用畫面左側的資料庫目錄，並選取您要匯入至Experience Platform的表格。
 
 ![選取的資料介面已選取資料庫資料表。](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
@@ -106,7 +106,7 @@ ht-degree: 3%
 
 ### 資料集詳細資料 {#dataset-details}
 
-資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功擷取至Experience Platform的資料會以資料集的形式保留在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
+資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功內嵌至Experience Platform的資料會以資料集的形式保留在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
 
 >[!BEGINTABS]
 
@@ -120,7 +120,7 @@ ht-degree: 3%
 | --- | --- |
 | 輸出資料集名稱 | 新資料集的名稱。 |
 | 說明 | （選用）新資料集的簡短總覽。 |
-| 綱要 | 貴組織中現有的結構描述下拉式清單。 您也可以在來源設定程式之前建立自己的結構描述。 如需詳細資訊，請閱讀[在UI](../../../../../xdm/tutorials/create-schema-ui.md)中建立XDM結構描述的指南。 |
+| 結構描述 | 貴組織中現有的結構描述下拉式清單。 您也可以在來源設定程式之前建立自己的結構描述。 如需詳細資訊，請閱讀[在UI](../../../../../xdm/tutorials/create-schema-ui.md)中建立XDM結構描述的指南。 |
 
 >[!TAB 使用現有的資料集]
 

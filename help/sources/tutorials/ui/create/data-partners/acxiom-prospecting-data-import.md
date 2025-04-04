@@ -4,9 +4,9 @@ description: 了解如何使用 UI 將 Acxiom 潛在客戶資料連接到 Adobe 
 last-substantial-update: 2024-02-21T00:00:00Z
 badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1862'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 >
 >[!DNL Acxiom Prospecting Data Import]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
-[!DNL Acxiom]針對Adobe Real-time Customer Data Platform的潛在客戶資料匯入是提供儘可能有效率潛在客戶對象的程式。 [!DNL Acxiom]透過安全匯出取得Real-Time CDP第一方資料，並透過獲獎的衛生和身分解析系統執行該資料。 這會產生資料檔案，以用作隱藏清單。 然後，此資料檔案會與「Acxiom全域」資料庫進行比對，如此即可針對匯入量身打造潛在客戶清單。
+[!DNL Acxiom]針對Adobe Real-Time Customer Data Platform的潛在客戶資料匯入是提供儘可能有效率潛在客戶對象的程式。 [!DNL Acxiom]透過安全匯出取得Real-Time CDP第一方資料，並透過獲獎的衛生和身分解析系統執行該資料。 這會產生資料檔案，以用作隱藏清單。 然後，此資料檔案會與「Acxiom全域」資料庫進行比對，如此即可針對匯入量身打造潛在客戶清單。
 
 您可以使用[!DNL Acxiom]來源，以Amazon S3作為放置點，從Acxiom潛在客戶服務擷取及對應回應。
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -50,7 +50,7 @@ ht-degree: 5%
 
 ## 連線您的[!DNL Acxiom]帳戶
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -108,7 +108,7 @@ ht-degree: 5%
 
 >[!TAB 使用新的資料集]
 
-資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功擷取至Experience Platform的資料會以資料集的形式保留在資料湖中。 若要使用新的資料集，請選取&#x200B;**[!UICONTROL 新的資料集]**。
+資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功內嵌至Experience Platform的資料會以資料集的形式保留在資料湖中。 若要使用新的資料集，請選取&#x200B;**[!UICONTROL 新的資料集]**。
 
 ![新資料集介面。](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
 
@@ -116,7 +116,7 @@ ht-degree: 5%
 | --- | --- |
 | 輸出資料集名稱 | 新資料集的名稱。 |
 | 說明 | （選用）資料集用途的簡短說明。 |
-| 綱要 | 貴組織中現有的結構描述下拉式清單。 您也可以在來源設定程式之前建立自己的結構描述。 如需詳細資訊，請閱讀[在UI](../../../../../xdm/tutorials/create-schema-ui.md)中建立結構描述的指南。 |
+| 結構描述 | 貴組織中現有的結構描述下拉式清單。 您也可以在來源設定程式之前建立自己的結構描述。 如需詳細資訊，請閱讀[在UI](../../../../../xdm/tutorials/create-schema-ui.md)中建立結構描述的指南。 |
 
 >[!TAB 使用現有的資料集]
 
@@ -141,11 +141,11 @@ ht-degree: 5%
 | --- | --- |
 | 資料流名稱 | 資料流的名稱。  依預設，這將使用正在匯入的檔案名稱。 |
 | 說明 | （選用）資料流的簡短說明。 |
-| 警報 | Experience Platform可產生使用者可訂閱的事件型警報，這些選項都是執行中的資料流以觸發這些警報。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
+| 警示 | Experience Platform可產生使用者可訂閱的事件型警報，這些選項都是執行中的資料流以觸發這些警報。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
 
 ## 對應
 
-使用對應介面將來源資料對應到適當的結構描述欄位，然後再將資料擷取到Experience Platform。  如需詳細資訊，請閱讀UI](../../../../../data-prep/ui/mapping.md)中的[對應指南
+在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。  如需詳細資訊，請閱讀UI](../../../../../data-prep/ui/mapping.md)中的[對應指南
 
 ![對應介面。](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
@@ -175,7 +175,7 @@ ht-degree: 5%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功建立資料流，以將批次資料從您的[!DNL Acxiom]來源帶入Experience Platform。 如需其他資源，請瀏覽以下概述的檔案。
+依照本教學課程中的指示，您已成功建立資料流，以將批次資料從[!DNL Acxiom]來源帶入Experience Platform。 如需其他資源，請瀏覽以下概述的檔案。
 
 ### 監視資料流
 

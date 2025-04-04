@@ -2,9 +2,9 @@
 description: 瞭解如何設定彙總原則，以判斷應如何分組和批次傳送目的地的HTTP請求。
 title: 彙總原則
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 為確保將資料匯出至API端點時發揮最大效率，您可以使用各種設定將匯出的設定檔彙總為較大或較小的批次、依身分將其分組，以及其他使用案例。 這也允許您量身打造資料匯出以符合API端點的任何下游限制（速率限制、每個API呼叫的身分數量等）。
 
-使用可設定的彙總來深入探討Destination SDK提供的設定，或使用盡力彙總來告知Destination SDK儘可能批次處理API呼叫。
+使用可設定的彙總來深入探討Destination SDK提供的設定，或使用盡最大努力彙總來告知Destination SDK儘可能批次處理API呼叫。
 
-使用Destination SDK建立即時（串流）目的地時，您可以設定應如何在產生的匯出中結合匯出的設定檔。 此行為由彙總原則設定決定。
+使用Destination SDK建立即時（串流）目的地時，您可以設定如何將匯出的設定檔合併到產生的匯出中。 此行為由彙總原則設定決定。
 
 若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[設定選項](../configuration-options.md)檔案中的圖表，或參閱如何[使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration)的指南。
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `aggregationType` | 字串 | 指示您的目的地應使用的彙總原則型別。 支援的彙總型別： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單一HTTP呼叫中彙總多個匯出的設定檔。 <br><br>此值表示您的端點在單一HTTP呼叫中應接收的設定檔數目上限。 請注意，這是最大努力彙總。 例如，如果您指定值100，Platform在呼叫時可能會傳送任何數量小於100的設定檔。 <br><br>如果您的伺服器不接受每個請求多個使用者，請將此值設定為`1`。 |
+| `bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單一HTTP呼叫中彙總多個匯出的設定檔。 <br><br>此值表示您的端點在單一HTTP呼叫中應接收的設定檔數目上限。 請注意，這是最大努力彙總。 例如，如果您指定值100，Experience Platform在呼叫時可能會傳送任何數量小於100的設定檔。 <br><br>如果您的伺服器不接受每個請求多個使用者，請將此值設定為`1`。 |
 | `bestEffortAggregation.splitUserById` | 布林值 | 如果對目的地的呼叫應該依身分分割，請使用此旗標。 如果您的伺服器針對指定的身分識別名稱空間，在每次呼叫僅接受一個身分識別，請將此標幟設為`true`。 |
 
 {style="table-layout:auto"}
@@ -109,7 +109,7 @@ ht-degree: 2%
 |---------|----------|------|
 | `aggregationType` | 字串 | 指示您的目的地應使用的彙總原則型別。 支援的彙總型別： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | 布林值 | 如果對目的地的呼叫應該依身分分割，請使用此旗標。 如果您的伺服器針對指定的身分識別名稱空間，在每次呼叫僅接受一個身分識別，請將此標幟設為`true`。 |
-| `configurableAggregation.maxBatchAgeInSecs` | 整數 | 此引數與`maxNumEventsInBatch`搭配使用，可決定Experience Platform在傳送API呼叫至端點之前應等待的時間長度。 <ul><li>最小值（秒）：1,800</li><li>最大值（秒）：3,600</li></ul> 例如，如果您將兩個引數的最大值都使用，Experience Platform會等待3,600秒或直到10000有合格的設定檔為止，再進行API呼叫（以先發生者為準）。 |
+| `configurableAggregation.maxBatchAgeInSecs` | 整數 | 此引數與`maxNumEventsInBatch`搭配使用可決定Experience Platform在傳送API呼叫至端點之前應等待的時間長度。 <ul><li>最小值（秒）：1,800</li><li>最大值（秒）：3,600</li></ul> 例如，如果您將兩個引數的最大值都使用，Experience Platform會等候3,600秒或直到10000有合格的設定檔為止，再執行API呼叫（以先發生者為準）。 |
 | `configurableAggregation.maxNumEventsInBatch` | 整數 | 此引數與`maxBatchAgeInSecs`搭配使用，決定了API呼叫中應彙總多少個合格設定檔。 <ul><li>最小值： 1,000</li><li>最大值：10,000</li></ul> 例如，如果您將兩個引數的最大值都使用，Experience Platform會等候3,600秒或直到有10,000個合格的設定檔為止，才會進行API呼叫（以先發生者為準）。 |
 | `configurableAggregation.aggregationKey` | - | 可讓您根據下列描述引數，彙總對應至目的地的匯出設定檔。 |
 | `configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 如果您想要依對象ID將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
@@ -130,7 +130,7 @@ ht-degree: 2%
 * [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
-* [綱要設定](schema-configuration.md)
+* [結構描述設定](schema-configuration.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)
 * [支援的對應設定](supported-mapping-configurations.md)
 * [目的地傳遞](destination-delivery.md)

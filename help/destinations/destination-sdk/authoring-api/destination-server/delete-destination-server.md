@@ -1,10 +1,10 @@
 ---
-description: 此頁面是用來透過Adobe Experience Platform Destination SDK刪除現有目的地伺服器設定的API呼叫的範例。
+description: 此頁面是透過Adobe Experience Platform Destination SDK刪除現有目的地伺服器設定的API呼叫範例。
 title: 刪除目的地伺服器設定
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '331'
 ht-degree: 1%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 1%
 
 如需您可透過此端點刪除的功能的詳細說明，請參閱下列文章：
 
-* [以Destination SDK建立的目的地的伺服器規格](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [使用Destination SDK建立之目的地的伺服器規格](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [使用Destination SDK建立之目的地的範本規格](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [訊息格式](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [檔案格式設定](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
@@ -64,11 +64,11 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀此檔案後，您現在知道如何透過Destination SDK`/authoring/destination-servers` API端點刪除現有的目的地伺服器。
+閱讀本檔案後，您現在知道如何透過Destination SDK `/authoring/destination-servers` API端點刪除現有的目的地伺服器。
 
 若要深入瞭解您可以使用此端點的功能，請參閱下列文章：
 

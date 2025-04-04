@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一；設定檔；rtcp；XDM圖形
-title: Platform的一般協助工具功能
+keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一的設定檔；統一的設定檔；統一的設定檔；rtcp；XDM圖形
+title: Experience Platform中的一般協助工具功能
 type: Documentation
 description: 進一步瞭解Adobe Experience Platform支援的一般協助工具功能，包括鍵盤導覽、調色盤和對比以及輔助技術支援。
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
 # Experience Platform的協助工具功能
 
-Adobe Experience Platform致力為每個人提供無障礙和包容的功能，包括使用輔助裝置的使用者，例如語音辨識軟體和熒幕閱讀器。 本檔案概述Platform支援的一般協助工具功能，包括鍵盤導覽、語意結構、前景元素和背景元素之間的充分對比，以及支援輔助技術。
+Adobe Experience Platform致力為每個人提供無障礙和包容的功能，包括使用輔助裝置的使用者，例如語音辨識軟體和熒幕閱讀器。 本檔案概述Experience Platform支援的一般協助工具功能，包括鍵盤導覽、語意結構、前景元素和背景元素之間的充分對比，以及支援輔助技術。
 
 ## 輔助技術
 
@@ -35,9 +35,9 @@ Experience Platform致力於支援完整的鍵盤協助功能。
 
 ## 調色盤和對比
 
-Experience Platform致力於符合[WCAG 2.1 AA](https://www.w3.org/TR/WCAG/)，包括色彩對比的要求。 Experience PlatformUI在應用程式中提供足夠的對比功能，以確保為視力不足或色彩缺乏的使用者提供可存取的檢視體驗。
+Experience Platform致力於符合[WCAG 2.1 AA](https://www.w3.org/TR/WCAG/)，包括色彩對比的要求。 Experience Platform UI在應用程式中提供足夠的對比功能，以確保為視力不足或色彩缺乏的使用者提供可存取的檢視體驗。
 
-![Experience PlatformUI首頁上的調色盤和對比度。](images/homepage.png)
+![Experience Platform UI首頁上呈現的調色盤與對比。](images/homepage.png)
 
 ## 必要欄位驗證
 

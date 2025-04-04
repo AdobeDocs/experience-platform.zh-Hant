@@ -2,16 +2,16 @@
 title: 管理結構描述的資料使用標籤
 description: 瞭解如何在Adobe Experience Platform UI中新增資料使用標籤到Experience Data Model (XDM)結構描述欄位。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '770'
 ht-degree: 8%
 
 ---
 
 # 管理結構描述的資料使用標籤
 
-所有帶入Adobe Experience Platform的資料都受到Experience Data Model (XDM)結構描述的限制。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 為了說明這個問題，Platform可讓您透過使用[資料使用標籤](../../data-governance/labels/overview.md)來限制特定資料集和欄位的使用。
+所有帶入Adobe Experience Platform的資料都受到Experience Data Model (XDM)結構描述的限制。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 為了說明這個問題，Experience Platform可讓您透過使用[資料使用標籤](../../data-governance/labels/overview.md)，限制特定資料集和欄位的使用。
 
 套用至結構描述欄位的標籤會指出套用至該特定欄位中所包含資料的使用原則。
 
@@ -19,15 +19,15 @@ ht-degree: 8%
 
 此外，您新增至一個結構描述的任何欄位標籤，都會傳播至採用共用類別或欄位群組中相同欄位的所有其他結構描述。 這可協助確保類似欄位的使用規則在整個資料模型中保持一致。
 
-本教學課程涵蓋在Platform UI中使用結構描述編輯器將標籤新增到結構描述的步驟。
+本教學課程涵蓋在Experience Platform UI中使用「結構描述編輯器」將標籤新增至結構描述的步驟。
 
 ## 快速入門
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
-   * [結構描述編輯器](../ui/overview.md)：瞭解如何在Platform UI中建立和管理結構描述和其他資源。
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：提供基礎結構，以強制對Platform作業執行資料使用限制，使用定義哪些行銷動作可以（或無法）對標籤資料執行的原則。
+   * [結構描述編輯器](../ui/overview.md)：瞭解如何在Experience Platform UI中建立和管理結構描述和其他資源。
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：提供基礎結構，以強制對Experience Platform作業執行資料使用限制，使用定義哪些行銷動作可以（或無法）對標籤資料執行的原則。
 
 ## 選取要新增標籤的結構描述或欄位 {#select-schema-field}
 

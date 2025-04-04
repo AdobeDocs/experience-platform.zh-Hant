@@ -2,9 +2,9 @@
 description: 此頁面說明如何使用/testing/destinationInstance API端點來測試您的檔案型目的地是否已正確設定，以及驗證資料流至您設定之目的地的完整性。
 title: 使用範例設定檔測試您的檔案型目的地
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '831'
 ht-degree: 2%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 2%
 
 在使用`/testing/destinationInstance`端點之前，請確定您符合下列條件：
 
-* 您有一個透過Destination SDK建立的檔案型目的地，且您可以在[目的地目錄](../../../ui/destinations-workspace.md)中看到它。
+* 您有一個透過Destination SDK建立的檔案型目的地，而且您可以在[目的地目錄](../../../ui/destinations-workspace.md)中看到它。
 * 您已在Experience Platform UI中為您目的地建立至少一個啟用流程。
-* 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Platform UI中瀏覽與目的地的連線時，從URL取得應在API呼叫中使用的目的地執行個體ID。
+* 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Experience Platform UI中瀏覽與目的地的連線時，從URL取得應在API呼叫中使用的目的地執行個體ID。
 
   ![UI影像顯示如何從URL取得目的地執行個體識別碼。](../../assets/testing-api/get-destination-instance-id.png)
 * *Optional*：如果您想要使用新增至API呼叫的範例設定檔來測試目的地組態，請使用[/sample-profiles](file-based-sample-profile-generation-api.md)端點，根據您現有的來源結構描述產生範例設定檔。 如果您未提供範例設定檔，API將會產生設定檔並在回應中傳回。
@@ -238,7 +238,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟
 
@@ -246,4 +246,4 @@ Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則�
 
 如果您收到有效的API回應，表示您的目的地正常運作。 如果您想檢視啟動流程的詳細資訊，可以使用[回應中的`results`屬性來檢視詳細的啟動結果](file-based-destination-results-api.md)。
 
-如果您正在建置公用目的地，您現在可以[提交目的地組態](../../guides/submit-destination.md)給Adobe進行檢閱。
+如果您正在建立公用目的地，您現在可以[將目的地組態](../../guides/submit-destination.md)提交至Adobe以供檢閱。

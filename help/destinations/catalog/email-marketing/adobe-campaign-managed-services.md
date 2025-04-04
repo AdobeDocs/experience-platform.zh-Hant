@@ -2,7 +2,7 @@
 title: Adobe Campaign Managed Cloud Services連線
 description: Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 299868e5ca1b8fde667c4c0ec9a7435634a1717d
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1633'
 ht-degree: 2%
@@ -47,9 +47,9 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 * Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、來自analytics的行為資料、合併離線和線上資料等資訊。 透過這項整合，您可以透過Adobe Experience Platform支援的受眾來增強Adobe Campaign中已存在的細分功能，並且因此可以在Campaign中啟用該資料。
 
-  例如，一家運動服裝公司想要運用Adobe Experience Platform支援的對象，並使用Adobe Campaign啟用他們，以便透過Adobe Campaign支援的不同管道聯絡其客戶基礎。 傳送訊息後，他們想要使用Adobe Campaign的體驗資料（例如傳送、開啟和點按）增強AdobeExperience Platform中的客戶設定檔。
+  例如，一家運動服裝公司想要運用Adobe Experience Platform支援的對象，並使用Adobe Campaign啟用他們，以便透過Adobe Campaign支援的不同管道聯絡其客戶基礎。 傳送訊息後，他們想要使用Adobe Campaign的體驗資料（例如傳送、開啟和點按）增強Adobe Experience Platform中的客戶設定檔。
 
-  跨管道的行銷活動在整個AdobeExperience Cloud生態系統中更為一致，並擁有豐富的客戶個人檔案，可快速適應和學習。
+  跨通路的行銷活動在整個Adobe Experience Cloud生態系統中更為一致，並擁有豐富的客戶個人檔案，可快速適應和學習。
 
 
 * 除了在Campaign中啟用對象外，您還可以運用Adobe Campaign Managed Services目的地來引進其他設定檔屬性，這些屬性會繫結至Adobe Experience Platform上的設定檔，並設定同步程式，以便在Adobe Campaign資料庫中更新。
@@ -70,8 +70,8 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 |---|---|---|
 | external_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 我們建議使用此身分識別，並將其對應至您的Campaign執行個體中代表客戶的ID (loyalty_ID、account_ID、customer_ID...) |
 | ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 

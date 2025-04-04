@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料擷取；批次；批次；啟用資料集；批次擷取總覽；總覽；批次擷取總覽；
+keywords: Experience Platform；首頁；熱門主題；資料擷取；批次；啟用資料集；批次擷取總覽；總覽；批次擷取總覽；
 solution: Experience Platform
 title: 批次擷取API概觀
-description: Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形式擷取到Platform。 所擷取的資料可以是CRM系統中平面檔案（例如Parquet檔案）的設定檔資料，或是符合Experience Data Model (XDM)登入中已知結構的資料。
+description: Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形式擷取到Experience Platform中。 所擷取的資料可以是CRM系統中平面檔案（例如Parquet檔案）的設定檔資料，或是符合Experience Data Model (XDM)登入中已知結構的資料。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1390'
 ht-degree: 4%
 
 ---
 
 # 批次擷取API總覽
 
-Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形式擷取到Platform。 所擷取的資料可以是平面檔案（例如Parquet檔案）的設定檔資料，或是符合[!DNL Experience Data Model] (XDM)登入中已知結構描述的資料。
+Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形式擷取到Experience Platform中。 所擷取的資料可以是平面檔案（例如Parquet檔案）的設定檔資料，或是符合[!DNL Experience Data Model] (XDM)登入中已知結構描述的資料。
 
 [批次擷取API參考](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)提供這些API呼叫的其他資訊。
 
@@ -23,7 +23,7 @@ Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形�
 
 ## 快速入門
 
-本指南中使用的API端點是[批次擷取API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)的一部分。 繼續之前，請先檢閱[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的API端點是[批次擷取API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)的一部分。 在繼續之前，請先檢閱[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ### [!DNL Data Ingestion]必要條件
 
@@ -50,7 +50,7 @@ Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形�
 >
 >若要上傳大於512MB的檔案，檔案必須分成較小的區塊。 上傳大型檔案的指示可在此檔案的[大型檔案上傳區段中找到](#large-file-upload---create-file)。
 
-### 型別
+### 類型
 
 擷取資料時，請務必瞭解[!DNL Experience Data Model] (XDM)結構描述的運作方式。 如需有關XDM欄位型別如何對應到不同格式的詳細資訊，請參閱[結構描述登入開發人員指南](../../xdm/api/getting-started.md)。
 
@@ -220,7 +220,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### 大型檔案上傳 — 上傳後續部分
 
-建立檔案後，可以透過重複的PATCH請求（檔案的每個區段各一個）上傳所有後續的區塊。
+建立檔案後，可以透過發出重複的PATCH請求（檔案的每個區段各一個）上傳所有後續的區塊。
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -412,7 +412,7 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | 作用中 | 已成功提升批次，並可用於下游消耗。 此狀態可與「成功」互換使用。 |
 | 已刪除 | 批次的資料已完全移除。 |
 | 失敗 | 因設定錯誤和/或資料錯誤而導致的終端機狀態。 失敗的批次的資料將&#x200B;**不會**&#x200B;顯示。 此狀態可與「失敗」互換使用。 |
-| 停用中 | 批次已成功提升，但已還原或已過期。 該批次不再可用於下游沖銷。 |
+| 非使用中 | 批次已成功提升，但已還原或已過期。 該批次不再可用於下游沖銷。 |
 | 已載入 | 批次的資料已完成，且批次已準備好進行升級。 |
 | 載入中 | 此批次的資料正在上傳，批次目前為&#x200B;**尚未**&#x200B;可升級。 |
 | 正在重試 | 此批次的資料正在處理中。 但由於系統或暫時性錯誤，批次失敗 — 因此，將重試此批次。 |

@@ -2,10 +2,10 @@
 title: Google顯示和視訊360連線
 description: Display & Video 360 （先前稱為DoubleClick Bid Manager）工具可用來跨顯示器、影片和行動庫存來源執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 2%
+source-wordcount: '1158'
+ht-degree: 4%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 2%
 >
 > Google正在發佈[Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)和[Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)的變更，以支援歐盟（[歐盟使用者同意政策](https://www.google.com/about/company/user-consent-policy/)）中[數位市場法](https://digital-markets-act.ec.europa.eu/index_en) (DMA)所定義的法規遵循與同意相關需求。 自2024年3月6日起，將開始強制執行同意要求的這些變更。
 ><br/>
->為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 Adobe身為Google合作夥伴，為您提供在歐盟DMA下符合這些同意要求的必要工具。
+>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
 ><br/>
->已購買AdobePrivacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶不需要採取任何動作。
+>已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
 ><br/>
->未購買AdobePrivacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/ui/segment-builder.md)中的[區段定義](../../../segmentation/home.md#segment-definitions)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
+>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/ui/segment-builder.md)中的[區段定義](../../../segmentation/home.md#segment-definitions)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
 [!DNL Display & Video 360] （先前稱為[!DNL DoubleClick Bid Manager]）是用來跨顯示器、視訊和行動詳細目錄來源執行重新定位以及以對象為目標的數位行銷活動的工具。
 
@@ -32,17 +32,17 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->如果您打算使用Google Display &amp; Video 360建立您的第一個目的地，而且過去尚未在Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定Google整合，您設定的ID同步會延續至Platform。
+>如果您打算使用Google Display &amp; Video 360建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定Google整合，您設定的ID同步會傳遞至Experience Platform。
 
 ## 支援的身分 {#supported-identities}
 
 [!DNL Google Display & Video 360]支援根據下表所示的身分啟用對象。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-| 身分 | 說明 | 考量事項 |
+| 身分識別 | 說明 | 考量事項 |
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] |  |
 | IDFA | [!DNL Apple ID for Advertisers] |  |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)，也稱為[!DNL Device ID]。 38位數的裝置ID，Audience Manager會與每個與其互動的裝置建立關聯。 | Google使用[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)來鎖定加州的使用者，並鎖定所有其他使用者的Google Cookie ID。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)，也稱為[!DNL Device ID]。 Audience Manager與其互動的每個裝置相關聯的數字38位數裝置ID。 | Google使用[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)來鎖定加州的使用者，並使用所有其他使用者的Google Cookie ID。 |
 | [!DNL Google] Cookie ID | [!DNL Google] Cookie ID | [!DNL Google]使用此ID來鎖定加州以外的使用者。 |
 | RIDA | Advertising的Roku ID。 此ID可唯一識別Roku裝置。 |  |
 | MAID | Microsoft Advertising ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
@@ -54,8 +54,8 @@ ht-degree: 2%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ ht-degree: 2%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至Google目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 ## 先決條件 {#prerequisites}
 
@@ -74,13 +74,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在Platform中設定第一個[!DNL Google Display & Video 360]目的地前，必須先加入允許清單。 在建立目的地之前，請確定[!DNL Google]已完成下述允許清單程式。
+>在Experience Platform中設定第一個[!DNL Google Display & Video 360]目的地前，必須先加入允許清單。 在建立目的地之前，請確定[!DNL Google]已完成下述允許清單程式。
 >此規則的例外情況適用於[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html)客戶。 如果您已經在Audience Manager中建立了與此Google目的地的連線，則不需要再次進行允許清單程式，您可以繼續後續步驟。
 
-在Platform中建立[!DNL Google Display & Video 360]目的地之前，您必須聯絡Google以要求Adobe加入允許的資料提供者清單，並將您的帳戶新增至允許清單。 請聯絡Google並提供下列資訊：
+在Experience Platform中建立[!DNL Google Display & Video 360]目的地之前，您必須聯絡Google以要求Adobe加入允許的資料提供者清單，並將您的帳戶新增至允許清單。 請聯絡Google並提供下列資訊：
 
-* **帳戶ID**：Adobe與Google的帳戶ID。 帳戶ID：87933855。
-* **客戶識別碼**：Adobe與Google的客戶帳戶識別碼。 客戶ID：89690775。
+* **帳戶ID**： Adobe的帳戶ID與Google。 帳戶ID：87933855。
+* **客戶ID**： Adobe的客戶帳戶ID與Google。 客戶ID：89690775。
 * **您的帳戶型別**：使用&#x200B;**[!DNL Invite advertiser]**&#x200B;以允許對象僅與您顯示與視訊360帳戶中的特定品牌共用，或使用&#x200B;**[!DNL Invite partner]**&#x200B;以允許對象與您顯示與視訊360帳戶中的所有品牌共用。
 
 ## 連線到目標 {#connect}

@@ -1,16 +1,16 @@
 ---
-title: 連線您的PathFactory帳戶，以透過UIExperience Platform
+title: 透過UI將您的PathFactory帳戶連線至Experience Platform
 description: 瞭解如何透過UI將您的PathFactory帳戶連結至Experience Platform。
 badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '572'
 ht-degree: 2%
 
 ---
 
-# 連線您的[!DNL PathFactory]帳戶以透過UIExperience Platform
+# 透過UI將您的[!DNL PathFactory]帳戶連線至Experience Platform
 
 本教學課程提供如何透過UI將您的[!DNL PathFactory]訪客、工作階段和頁面檢視資料連結至Adobe Experience Platform的步驟。
 
@@ -23,11 +23,11 @@ ht-degree: 2%
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-如果您已有[!DNL PathFactory]帳戶，您可以略過本檔案的其餘部分，並繼續進行有關[使用UI](../../dataflow/marketing-automation.md)將行銷自動化資料帶入Experience Platform的教學課程。
+如果您已有[!DNL PathFactory]帳戶，可以略過本檔案的其餘部分，然後繼續進行[使用UI將行銷自動化資料帶入Experience Platform的教學課程](../../dataflow/marketing-automation.md)。
 
 ### 收集必要的認證 {#gather-credentials}
 
-若要在平台上存取您的PathFactory帳戶，您必須提供下列值：
+若要在Experience Platform上存取PathFactory帳戶，您必須提供下列值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 ## 連線您的[!DNL PathFactory]帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]顯示Experience Platform支援的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]顯示Experience Platform支援的各種來源。
 
 您可以從類別清單中選取適當的類別。 您也可以使用搜尋列來篩選特定來源。
 

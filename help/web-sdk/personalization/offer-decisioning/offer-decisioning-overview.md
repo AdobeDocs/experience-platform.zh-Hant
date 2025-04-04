@@ -1,16 +1,16 @@
 ---
-title: 將Offer Decisioning與Platform Web SDK搭配使用
+title: 搭配使用Offer Decisioning與Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK可以提供並轉譯Offer Decisioning中管理的個人化優惠。 您可以使用Offer Decisioning UI或API建立您的優惠方案與其他相關物件。
-keywords: offer decisioning；decisioning；Web SDK；Platform Web SDK；個人化優惠；提供優惠；優惠傳遞；優惠個人化；
+keywords: offer decisioning；decisioning；Web SDK；Experience Platform Web SDK；個人化優惠；提供優惠；優惠傳遞；優惠個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '799'
 ht-degree: 3%
 
 ---
 
-# 將Offer Decisioning與Platform Web SDK搭配使用
+# 搭配使用Offer Decisioning與Experience Platform Web SDK
 
 Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯受Offer Decisioning管理的個人化優惠。 您可以使用Offer Decisioning使用者介面(UI)或API建立您的優惠方案與其他相關物件。
 
@@ -49,7 +49,7 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯受Offer Decisionin
 
 * **資料串流：**&#x200B;如需詳細資訊，請閱讀[資料串流](/help/datastreams/overview.md)檔案。
 
-* **身分**：如需詳細資訊，請閱讀此檔案以概述[Platform Web SDK如何使用身分識別服務](../../identity/overview.md)。
+* **身分**：如需詳細資訊，請閱讀此檔案以概述[Experience Platform Web SDK如何使用身分識別服務](../../identity/overview.md)。
 
 ## 啟用Offer Decisioning
 
@@ -82,13 +82,13 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯受Offer Decisionin
 
       1. [建立標籤屬性](/help/tags/ui/administration/companies-and-properties.md)
       1. [新增內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. 透過從「資料流」下拉式選單中選取設定，使用您建立的資料流安裝並設定Platform Web SDK擴充功能。 請參閱有關[擴充功能](/help/tags/ui/managing-resources/extensions/overview.md)的檔案。
+      1. 使用您從「資料流」下拉式選單中選取設定而建立的資料流，安裝並設定Experience Platform Web SDK擴充功能。 請參閱有關[擴充功能](/help/tags/ui/managing-resources/extensions/overview.md)的檔案。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 建立必要的[資料元素](/help/tags/ui/managing-resources/data-elements.md)。 您至少必須建立Platform Web SDK「身分對應」和Platform Web SDK XDM物件資料元素。
+      1. 建立必要的[資料元素](/help/tags/ui/managing-resources/data-elements.md)。 您至少必須建立Experience Platform Web SDK Identity Map和Experience Platform Web SDK XDM物件資料元素。
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
@@ -96,7 +96,7 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯受Offer Decisionin
 
       1. 建立您的[規則](/help/tags/ui/managing-resources/rules.md)。
 
-         * 新增Platform Web SDK傳送事件動作，並將相關`decisionScopes`新增至該動作的設定
+         * 新增Experience Platform Web SDK傳送事件動作，並將相關`decisionScopes`新增至該動作的設定
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 

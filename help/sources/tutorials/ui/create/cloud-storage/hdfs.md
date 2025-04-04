@@ -3,12 +3,12 @@ keywords: Experience Platform；首頁；熱門主題；Apache HDFS；HDFS；hdf
 solution: Experience Platform
 title: 在使用者介面中建立Apache HDFS Source連線
 type: Tutorial
-description: 瞭解如何使用Adobe Experience Platform UI建立ApacheHadoop分散式檔案系統來源連線。
+description: 瞭解如何使用Adobe Experience Platform UI建立Apache Hadoop分散式檔案系統來源連線。
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 1%
 >
 >[!DNL Apache] HDFS聯結器為Beta版。 如需使用Beta標籤聯結器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
-[!DNL Adobe Experience Platform]中的Source聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供使用[!DNL Platform]使用者介面驗證[!DNL Apache Hadoop Distributed File System] （以下稱為「HDFS」）來源聯結器的步驟。
+[!DNL Adobe Experience Platform]中的Source聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面驗證[!DNL Apache Hadoop Distributed File System] （以下稱為「HDFS」）來源聯結器的步驟。
 
 ## 快速入門
 
-此教學課程需要您實際瞭解[!DNL Platform]的下列元件：
+此教學課程需要您實際瞭解[!DNL Experience Platform]的下列元件：
 
 - [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
    - [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 ## 連線您的HDFS帳戶
 
-收集必要的認證後，您可以依照下列步驟將HDFS帳戶連結至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟將HDFS帳戶連結至[!DNL Experience Platform]。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
@@ -67,4 +67,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與HDFS帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將雲端儲存空間中的資料匯入 [!DNL Platform]](../../dataflow/batch/cloud-storage.md)。
+依照本教學課程中的指示，您已建立與HDFS帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將雲端儲存空間中的資料匯入 [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md)。

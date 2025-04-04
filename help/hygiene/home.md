@@ -2,9 +2,9 @@
 title: 進階資料生命週期管理概觀
 description: 進階資料生命週期管理可讓您更新或清除過時或不準確的記錄，進而管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '832'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Adobe Experience Platform提供一套強大的工具，可管理大型複雜資料作業，以便協調消費者體驗。 隨著時間推移，資料會內嵌到系統中，因此管理您的資料存放區變得越來越重要，以便資料能如預期使用、在不正確的資料需要更正時更新，並在組織原則認為必要時刪除。
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -26,11 +26,11 @@ Adobe Experience Platform提供一套強大的工具，可管理大型複雜資�
 
 >[!NOTE]
 >
->進階資料生命週期管理支援透過[資料集到期端點](./api/dataset-expiration.md)進行資料集刪除，以及透過[工單端點](./api/workorder.md)使用主要身分的ID刪除（資料列層級資料）。 您也可以透過Platform UI管理[資料集有效期](./ui/dataset-expiration.md)和[記錄刪除](./ui/record-delete.md)。 如需詳細資訊，請參閱連結的檔案。 請注意，資料生命週期不支援批次刪除。
+>進階資料生命週期管理支援透過[資料集到期端點](./api/dataset-expiration.md)進行資料集刪除，以及透過[工單端點](./api/workorder.md)使用主要身分的ID刪除（資料列層級資料）。 您也可以透過Experience Platform UI管理[資料集有效期](./ui/dataset-expiration.md)和[記錄刪除](./ui/record-delete.md)。 如需詳細資訊，請參閱連結的檔案。 請注意，資料生命週期不支援批次刪除。
 
 ## [!UICONTROL 資料生命週期] UI工作區 {#ui}
 
-Platform UI中的[!UICONTROL 資料生命週期]工作區可讓您設定及排程資料生命週期作業，協助確保您的記錄可如預期般維護。
+Experience Platform UI中的[!UICONTROL 資料生命週期]工作區可讓您設定及排程資料生命週期作業，協助確保您的記錄可如預期般維護。
 
 如需在UI中管理資料生命週期任務的詳細步驟，請參閱[資料生命週期UI指南](./ui/overview.md)。
 
@@ -58,7 +58,7 @@ Platform UI中的[!UICONTROL 資料生命週期]工作區可讓您設定及排�
 
 >[!IMPORTANT]
 >
->Amazon Web Services (AWS)中的資料集刪除作業在完全套用變更前，可能會延遲約三個小時。 這包含最多2小時讓資料集標示為要刪除，接著是1小時，資料才會從系統完全刪除。 相反地，使用Azure Data Lake的Platform例項的刪除請求會導致各業務功能立即變更。
+>Amazon Web Services (AWS)中的資料集刪除作業在完全套用變更前，可能會延遲約三個小時。 這包含最多2小時讓資料集標示為要刪除，接著是1小時，資料才會從系統完全刪除。 相反地，使用Azure Data Lake的Experience Platform執行個體的刪除請求會導致整個業務功能立即變更。
 >
 >對於AWS使用者而言，此延遲可能會影響批次細分、串流細分、預覽、預估、匯出和資料存取。 此延遲只會影響使用AWS的客戶，因為Azure Data Lake使用者會體驗立即更新。 若為AWS使用者，刪除請求可能需要長達三小時的時間，才能完全傳播至所有受影響的系統。 相應地調整您的期望。
 
@@ -80,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## 後續步驟
 
-本檔案概述了Platform的資料生命週期功能。 若要開始在UI中提出資料衛生請求，請參閱[UI指南](./ui/overview.md)。 若要瞭解如何以程式設計方式建立資料生命週期工作，請參閱[資料衛生API指南](./api/overview.md)
+本檔案概述Experience Platform的資料生命週期功能。 若要開始在UI中提出資料衛生請求，請參閱[UI指南](./ui/overview.md)。 若要瞭解如何以程式設計方式建立資料生命週期工作，請參閱[資料衛生API指南](./api/overview.md)

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform示範擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Experience Platform示範擴充功能。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 69%
+source-wordcount: '1071'
+ht-degree: 74%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 69%
 
 此擴充功能的功能已移至新的擴充功能。以下快速比較目前功能。
 
-| Platform示範擴充功能 | Platform Web SDK |
+| Experience Platform示範擴充功能 | Experience Platform Web SDK |
 | ------------------ | ----------- |
 | 支援自訂客戶 ID | 支援自訂客戶 ID |
 | XDM的使用者端對應UI | 內建 ECID (不需 visitor.js) |
@@ -89,36 +89,36 @@ ht-degree: 69%
 
 ![](../../../images/adobe-experience-platform-send-beacon-schema-field-selector.png)
 
-### Adobe Experience Platform 中的身分欄位
+### Adobe Experience Platform 中的身分識別欄位
 
-記錄資料結構描述和時間序列資料結構描述可能包含一或多個身分欄位。 身分欄位會拼接在一起，形成主體的單一身分表示法，並包含諸如 CRM 識別碼、Experience Cloud ID (ECID)、瀏覽器 Cookie、Advertising ID，或其他網域中的其他 ID 等資訊。
+記錄資料結構描述和時間序列資料結構描述可能包含一或多個身分欄位。 身分識別欄位會拼接在一起，形成主體的單一身分識別表示法，並包含諸如 CRM 身分識別碼、Experience Cloud ID (ECID)、瀏覽器 Cookie、Advertising ID，或其他網域中的其他 ID 等資訊。
 
-結構描述中，身分欄位可以兩種方式定義：
+結構描述中，身分識別欄位可以兩種方式定義：
 
-1. 記錄和時間序列結構描述都含有一個特殊欄位，稱為「`xdm:identityMap`」，其中可包含身分地圖。
-1. 結構描述內，索引鍵欄位可能會標示為「身分」欄位。
+1. 記錄和時間序列結構描述都含有一個特殊欄位，稱為「`xdm:identityMap`」，其中可包含身分識別地圖。
+1. 結構描述內，索引鍵欄位可能會標示為「身分識別」欄位。
 
-### Adobe Experience Platform 擴充功能中的身分欄位
+### Adobe Experience Platform 擴充功能中的身分識別欄位
 
-針對各個定義為身分欄位的結構描述欄位，系統都會在結構描述對應區段中新增一列。每個新增的列都會包含已填入其對應 XDM 結構描述路徑的目標結構描述欄位。如果您在欄位附近看到設定檔圖示，即可識別結構描述欄位是否也是身分欄位。
+針對各個定義為身分識別欄位的結構描述欄位，系統都會在結構描述對應區段中新增一列。每個新增的列都會包含已填入其對應 XDM 結構描述路徑的目標結構描述欄位。如果您在欄位附近看到輪廓圖示，即可身分識別結構描述欄位是否也是身分識別欄位。
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-field.png)
 
-主要身分欄位一概為必填欄位，因此您無法從結構描述對應區段中刪除包含這些欄位的列。
+主要身分識別欄位一概為必填欄位，因此您無法從結構描述對應區段中刪除包含這些欄位的列。
 
-定義為非主要身分欄位的結構描述欄位會自動新增至結構描述對應區段，但來源值輸入內容可能會維持空白。該欄位可刪除。如果對應的來源值輸入為空白，則欄位會遭捨棄。
+定義為非主要身分識別欄位的結構描述欄位會自動新增至結構描述對應區段，但來源值輸入內容可能會維持空白。該欄位可刪除。如果對應的來源值輸入為空白，則欄位會遭捨棄。
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-field-warning.png)
 
-在不包含值的每個非主要身分欄位附近，會出現警告圖示。
+在不包含值的每個非主要身分識別欄位附近，會出現警告圖示。
 
-如果您的結構描述包含「`xdm:identityMap`」欄位，便會顯示身分區域。如果您偏好使用 `xdm:identityMap` 來傳送與身分相關的資料，可使用此區段。
+如果您的結構描述包含「`xdm:identityMap`」欄位，便會顯示身分識別區域。如果您偏好使用 `xdm:identityMap` 來傳送與身分識別相關的資料，可使用此區段。
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section.png)
 
-身分對應區段可包含多個列。每一列都可以定義特定的身分類型。您可以為身分定義下列屬性：型別、驗證狀態、主要身分和值。
+身分識別對應區段可包含多個列。每一列都可以定義特定的身分識別類型。您可以為身分定義下列屬性：型別、驗證狀態、主要身分和值。
 
-如果身分對應區段內有多個身分，您只能將一個身分標示為主要身分。
+如果身分識別對應區段內有多個身分識別，您只能將一個身分識別標示為主要身分識別。
 
 如果您的結構描述中有一個`xdm:identityMap`欄位，而同時有另一個欄位標示為主要身分欄位，則身分對應區段內的主要身分欄不會顯示。
 

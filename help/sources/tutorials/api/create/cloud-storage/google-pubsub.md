@@ -3,9 +3,9 @@ title: 使用流量服務API建立Google PubSub Source連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Google PubSub帳戶。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1153'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Google PubSub]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>[!DNL Google PubSub]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
 本教學課程將逐步引導您使用[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)，將[!DNL Google PubSub] （以下稱為&quot;[!DNL PubSub]&quot;）連線至Experience Platform。
 
@@ -22,10 +22,10 @@ ht-degree: 2%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線[!DNL PubSub]至Platform。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功將[!DNL PubSub]連線至Experience Platform。
 
 ### 收集必要的認證
 
@@ -58,9 +58,9 @@ ht-degree: 2%
 >
 >如果您使用以服務帳戶為基礎的驗證，在複製和貼上認證時，請確保您已授予足夠的使用者存取權給您的服務帳戶，並且JSON中沒有額外的空格。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
 ## 建立基礎連線
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 建立來源連線的第一個步驟是驗證您的[!DNL PubSub]來源並產生基本連線識別碼。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供[!DNL PubSub]驗證認證作為要求引數的一部分時，向`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的[!DNL PubSub]驗證認證作為要求引數的一部分時，對`/connections`端點提出POST要求。
 
 [!DNL PubSub]來源可讓您指定在驗證期間允許使用的存取型別。 您可以將帳戶設定為擁有根存取權，或限制特定[!DNL PubSub]主題和訂閱的存取權。
 
@@ -88,7 +88,7 @@ POST /connections
 
 >[!TAB 以專案為基礎的驗證]
 
-若要使用專案型驗證建立基底連線，請向`/connections`端點提出POST要求，並在要求內文中提供您的`projectId`和`credentials`。
+若要使用專案型驗證建立基底連線，請對`/connections`端點提出POST要求，並在要求內文中提供您的`projectId`和`credentials`。
 
 +++要求
 
@@ -140,7 +140,7 @@ curl -X POST \
 
 >[!TAB 主題和訂閱式驗證]
 
-若要使用主題和訂閱式驗證建立基底連線，請向`/connections`端點發出POST要求，並在要求內文中提供您的`credentials`、`topicName`和`subscriptionName`。
+若要使用主題和訂閱式驗證建立基底連線，請對`/connections`端點發出POST要求，並在要求內文中提供您的`credentials`、`topicName`和`subscriptionName`。
 
 +++要求
 
@@ -199,7 +199,7 @@ curl -X POST \
 
 來源連線會建立和管理與擷取資料的外部來源的連線。 來源連線包含資料來源、資料格式等資訊，以及建立資料流所需的來源連線ID。 租使用者和組織專屬的來源連線例項。
 
-若要建立來源連線，請向[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
+若要建立來源連線，請對[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
 
 **API格式**
 

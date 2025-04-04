@@ -2,9 +2,9 @@
 title: 快速入門手冊
 description: 瞭解如何快速上手並執行Adobe Experience Platform中的標籤。
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1522'
 ht-degree: 44%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 44%
 
 ## 1. 設定群組和使用者
 
-標籤已與您的Adobe ID完全整合。 使用者許可權是透過Admin Console管理來自[!DNL Creative Cloud]、[!DNL Document Cloud]和Experience Cloud的其他Adobe產品和解決方案。
+標籤已與您的Adobe ID完全整合。 使用者許可權是透過Admin Console與來自[!DNL Creative Cloud]、[!DNL Document Cloud]和Experience Cloud的其他Adobe產品和解決方案來管理。
 
 標籤具有許可權型使用者管理系統。 這表示個別許可權必須明確授予。 這些權限會指派給群組，然後使用者加入適當的群組以取得存取權限。即使您的組織擁有資料收集的存取權，除非管理員明確授予個別使用者特定許可權，否則他們無法執行任何動作。
 
@@ -37,7 +37,7 @@ ht-degree: 44%
 
 ## 2. 登入
 
-將標籤許可權新增到您的Adobe ID後，您需要登入Experience PlatformUI或資料收集UI。 您可以直接導覽至[Experience Cloud登入畫面](https://experience.adobe.com/)，並選取&#x200B;**[!UICONTROL 資料彙集]**&#x200B;或&#x200B;**[!UICONTROL Experience Platform]**，以執行此操作。
+將標籤許可權新增到Adobe ID後，您需要登入Experience Platform UI或資料收集UI。 您可以直接導覽至[Experience Cloud登入畫面](https://experience.adobe.com/)，並選取&#x200B;**[!UICONTROL 資料彙集]**&#x200B;或&#x200B;**[!UICONTROL Experience Platform]**，以執行此操作。
 
 >[!NOTE]
 >
@@ -51,11 +51,11 @@ ht-degree: 44%
 
 ## 4. 安裝擴充功能
 
-擴充功能是由Adobe或Adobe合作夥伴建立的整合功能，能針對您可部署至網站的標籤新增全新及無數的選項。 如果您將標籤當成作業系統，擴充功能就是您安裝的應用程式，用來執行您需執行的特定作業。
+擴充功能是由Adobe或Adobe合作夥伴建立的整合功能，為您可部署至網站的標籤新增源源不絕的全新選項。 如果您將標籤當成作業系統，擴充功能就是您安裝的應用程式，用來執行您需執行的特定作業。
 
-所有全新屬性都會隨[核心擴充功能](../extensions/client/core/overview.md)一併安裝。行動屬性會隨其他擴充功能提供。核心擴充功能是由Adobe建置，可為資料層提供強大的預設資料元素型別集，並為規則提供事件型別。 大部分您希望執行的動作 (取得 ECID、傳送 [!DNL Adobe Analytics] 信標、載入 [!DNL Target] 全域 mbox 等) 會來自您從目錄安裝的擴充功能。
+所有全新屬性都會隨[核心擴充功能](../extensions/client/core/overview.md)一併安裝。行動屬性會隨其他擴充功能提供。核心擴充功能由Adobe建置，可為資料層提供強大的預設資料元素型別集，並為規則提供事件型別。 大部分您希望執行的動作 (取得 ECID、傳送 [!DNL Adobe Analytics] 信標、載入 [!DNL Target] 全域 mbox 等) 會來自您從目錄安裝的擴充功能。
 
-讓Platform中的標籤真正獨特的是任何人都可以建置這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理使用者的隱私權和同意，以協助[!DNL GDPR]的處理？ 請深入了解 Evidon 和 Trust Arc。對於網站上個別使用者的行為，您是否希望獲得精細的深入分析？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱有關[新增擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension)的章節。
+讓Experience Platform中的標籤真正獨特的是任何人都可以建立這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理使用者的隱私權和同意，以協助[!DNL GDPR]的處理？ 請深入了解 Evidon 和 Trust Arc。您是否希望將精細的insight帶入網站上個別使用者的行為中？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱有關[新增擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension)的章節。
 
 ## 5. 建立資料元素和規則
 
@@ -83,7 +83,7 @@ ht-degree: 44%
 
    每個環境都與主機有關係，而主機會提供端點，指出要傳送組建的位置。 雖然一個屬性可以有許多主機，但主機只能屬於一個屬性。
 
-2. 內嵌程式碼以表格`<script>`標籤提供，該表格會進入網站HTML的`<head>`區段。
+2. 內嵌程式碼以表格`<script>`標籤提供，該表格會進入您網站HTML的`<head>`區段。
 
    當您建立環境並附加主機時，環境會自動產生唯一的內嵌程式碼，可讓您將指派的組建整合至您的網站。 `<script>`程式碼用於在執行階段部署程式庫組建。
 
@@ -91,7 +91,7 @@ ht-degree: 44%
 
 ### 主機
 
-主機是標籤屬性與您的託管位置之間的連線。 標籤目前支援透過[!DNL Akamai]主機進行Adobe管理託管，或透過SFTP主機自行託管。 每當您產生組建時，標籤都會連線至您主機定義的伺服器，並傳遞組建。
+主機是標籤屬性與您的託管位置之間的連線。 標籤目前支援透過[!DNL Akamai]主機由Adobe管理託管，或透過SFTP主機自行託管。 每當您產生組建時，標籤都會連線至您主機定義的伺服器，並傳遞組建。
 
 如果您是自行託管，標籤組建可以透過SFTP直接推送至您的伺服器，也可以推送至[!DNL Akamai]並使用您環境的「封存」選項進行下載。
 
@@ -136,4 +136,4 @@ ht-degree: 44%
 
 * **[資料收集社群](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**：詢問和解答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
 * **[開發人員檔案](../api/overview.md)**：參與標籤開發人員社群，以建立擴充功能或使用標籤API
-* **[Tutorials總覽](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**：這些檔案會向您介紹Android應用程式中的標籤概念，包括事件轉送和Mobile SDK。
+* **[教學課程總覽](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**：這些檔案會向您介紹Android應用程式中的標籤概念，包括事件轉送和Mobile SDK。

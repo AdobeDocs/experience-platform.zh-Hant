@@ -2,9 +2,9 @@
 title: 監視批次查詢授權使用情況
 description: Adobe Experience Platform UI提供控制面板，讓您檢視有關組織Data Distiller授權使用情況的重要資訊。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 授權使用儀表板提供關於貴組織查詢服務授權使用情況和每個所購買產品使用量度的詳細報告。 若要進一步瞭解儀表板中顯示的可用量度，請造訪[授權使用儀表板指南](../../dashboards/guides/license-usage.md#available-metrics)。
 
-控制面板提供每個已購買產品的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
+控制面板提供每個已購買產品的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 此處顯示的資訊是在Experience Platform執行個體的每日快照期間擷取。
 
 >[!NOTE]
 >

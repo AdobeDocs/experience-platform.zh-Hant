@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
-title: 自助來源（批次SDK）中的設定選項
-description: 本檔案提供使用自助式來源（批次SDK）所需準備的設定概觀。
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
+title: 自助來源中的設定選項(批次SDK)
+description: 本檔案提供使用自助來源(批次SDK)所需準備的設定概述。
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
 
-# 自助來源（批次SDK）中的設定選項
+# 自助來源中的設定選項(批次SDK)
 
-本檔案提供使用自助式來源（批次SDK）所需準備的設定概觀。
+本檔案提供使用自助來源(批次SDK)所需準備的設定概述。
 
 ## 連線規格
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 | 規格 | 說明 |
 | --- | --- |
-| `authSpec` | `authSpec`陣列包含將來源連線到Platform所需的驗證引數資訊。 任何特定來源都可以支援多種不同型別的驗證。 |
+| `authSpec` | `authSpec`陣列包含連線來源至Experience Platform所需的驗證引數資訊。 任何特定來源都可以支援多種不同型別的驗證。 |
 | `sourceSpec` | `sourceSpec`陣列包含與來源相關的一般資訊，包括在UI中顯示來源所需的屬性資訊、檔案連結，以及有關分頁、標題、內文和排程的引數。 此外，`sourceSpec`說明從基礎連線建立來源連線所需之引數的結構描述，而且是建立來源連線所必須的。 |
 | `exploreSpec` | `exploreSpec`陣列定義探索和檢查來源中所包含物件所需的引數。 `exploreSpec`也會定義探索及檢查物件時傳回的回應格式。 |
 

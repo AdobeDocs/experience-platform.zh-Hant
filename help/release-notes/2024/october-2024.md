@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2024 年 10 月)
 description: Adobe Experience Platform 2024 年 10 月版發行說明。
 exl-id: 5e2112b8-2a0a-4c1e-af3e-b00d8cc4f4cf
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 100%
+source-wordcount: '1160'
+ht-degree: 97%
 
 ---
 
@@ -86,7 +86,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足這種需求，Experience Platform 提供的沙箱可將單一 Platform 執行個體分割成個別的虛擬環境，以協助開發並改進數位體驗應用程式。
+Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足此需求，Experience Platform提供可將單一Experience Platform執行個體分割成個別虛擬環境的沙箱，以利開發及改進數位體驗應用程式。
 
 **新功能或更新功能**
 

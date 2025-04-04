@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zoho CRM Source Connector概述
 description: 瞭解如何使用API或使用者介面將Zoho CRM連結至Adobe Experience Platform。
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >[!DNL Zoho CRM]來源將於2025年6月底淘汰。
 
-Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的支援包括[!DNL Zoho CRM]。
 
@@ -27,7 +27,7 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 ## 擷取[!DNL Zoho CRM]的驗證認證
 
-您必須先擷取認證以驗證您的[!DNL Zoho CRM]來源，才能將[!DNL Zoho CRM]帳戶中的資料帶入Platform。 請依照下列步驟擷取您的使用者端ID、使用者端密碼、存取權杖和重新整理權杖。
+您必須先擷取認證以驗證您的[!DNL Zoho CRM]來源，才能將[!DNL Zoho CRM]帳戶中的資料帶入Experience Platform。 請依照下列步驟擷取您的使用者端ID、使用者端密碼、存取權杖和重新整理權杖。
 
 ### 註冊您的應用程式
 
@@ -49,15 +49,15 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 如需取得認證的詳細步驟，請參閱[[!DNL Zoho CRM] 驗證指南](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html)。
 
-## 使用API連線[!DNL Zoho CRM]至[!DNL Platform]
+## 使用API連線[!DNL Zoho CRM]至[!DNL Experience Platform]
 
-以下檔案提供如何使用API或使用者介面將[!DNL Zoho CRM]連線到Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Zoho CRM]連線至Experience Platform的資訊：
 
 - [使用Flow Service API建立 [!DNL Zoho CRM] 基本連線](../../tutorials/api/create/crm/zoho.md)
 - [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 - [使用流程服務API為CRM來源建立資料流](../../tutorials/api/collect/crm.md)
 
-## 使用UI連線[!DNL Zoho CRM]至[!DNL Platform]
+## 使用UI連線[!DNL Zoho CRM]至[!DNL Experience Platform]
 
 - [在使用者介面中建立 [!DNL Zoho CRM] 來源連線](../../tutorials/ui/create/crm/zoho.md)
 - [在UI中為CRM來源連線建立資料流](../../tutorials/ui/dataflow/crm.md)

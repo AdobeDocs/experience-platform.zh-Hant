@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform 發行說明 (2020 年 3 月)
-description: Adobe Experience Platform 2020 年 3 月的發行說明。
+title: Adobe Experience Platform 發行說明 (2020 年 3 月版)
+description: Adobe Experience Platform 2020 年 3 月版發行說明。
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: 發行說明；
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 16%
+source-wordcount: '859'
+ht-degree: 20%
 
 ---
 
@@ -27,9 +27,9 @@ Adobe Experience Platform 現有功能的更新：
 
 ## 資料治理 {#governance}
 
-[!DNL Experience Platform]可讓公司整合來自多個企業系統的資料，讓行銷人員更能識別、瞭解客戶並與之互動。 [!DNL Experience Platform]包含端對端資料治理基礎結構，以確保在[!DNL Platform]內以及系統之間共用資料時能正確使用資料。
+[!DNL Experience Platform]可讓公司整合來自多個企業系統的資料，讓行銷人員更能識別、瞭解客戶並與之互動。 [!DNL Experience Platform]包含端對端資料治理基礎結構，以確保在[!DNL Experience Platform]內以及系統之間共用資料時能正確使用資料。
 
-Adobe Experience Platform 資料治理是一系列的策略和技術，用於管理客戶資料並確保符合適用於資料使用方式的法規、限制和政策。它在[!DNL Experience Platform]內各種層級扮演關鍵角色，包括編目、資料譜系、資料使用標籤、資料存取原則，以及行銷動作資料的存取控制。
+Adobe Experience Platform 資料治理是一系列的策略和技術，用於管理客戶資料並確保符合適用於資料使用方式的法規、限制和政策。它在 [!DNL Experience Platform] 的不同階層都扮演重要的角色，包括編目、資料譜系、資料使用標籤、資料存取政策，以及對行銷動作資料的存取控制。
 
 **新功能**
 
@@ -49,7 +49,7 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 如需資料控管的詳細資訊，請參閱[資料控管概觀](../../data-governance/home.md)。
 
-## 資料擷取 {#ingestion}
+## 資料攝取 {#ingestion}
 
 Adobe Experience Platform提供豐富的功能，可擷取任何型別和延遲的資料。 Adobe Experience Platform [!DNL Data Ingestion]提供多種擷取資料的替代方案，包括批次API、串流API、原生Adobe聯結器、資料整合合作夥伴或Adobe Experience Platform UI。
 
@@ -63,18 +63,18 @@ Adobe Experience Platform提供豐富的功能，可擷取任何型別和延遲�
 
 * None
 
-若要進一步瞭解如何將資料擷取到Platform，請瀏覽[資料擷取檔案](../../ingestion/home.md)。
+若要進一步瞭解如何將資料擷取至Experience Platform，請瀏覽[資料擷取檔案](../../ingestion/home.md)。
 
 
-## 目的地 {#destinations}
+## 目標 {#destinations}
 
-在[Real-time Customer Data Platform](../../rtcdp/overview.md)中，目的地是預先建立的與目的地平台的整合，可透過順暢的方式為這些合作夥伴啟用資料。
+在[Real-Time Customer Data Platform](../../rtcdp/overview.md)中，目的地是預先建立的與目的地平台的整合，可透過順暢的方式為這些合作夥伴啟用資料。
 
 **新目的地**
 
 有新的目的地可供您啟用Adobe Experience Platform資料。 如需詳細資訊，請參閱下文：
 
-| 目的地 | 說明 |
+| 目標 | 說明 |
 |--- | ---|
 | 雲端儲存空間目的地 | Real-Time CDP現在可以將您的區段以資料檔案的形式傳送至您的[!DNL Amazon S3]或SFTP雲端儲存位置。 這可讓您透過CSV或定位字元分隔的檔案，將對象及其設定檔屬性傳送至您的內部系統。 |
 | Advertising目的地 | 針對Real-Time CDP目前支援的三個不同[!DNL Google]平台： [!DNL Google Ads]、[!DNL Google Ad Manager]、[!DNL Google]顯示和視訊360，[!DNL Google]目的地卡現在會分割為三個目的地卡。 |
@@ -101,9 +101,9 @@ Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身�
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Platform]服務來建構、加標籤及增強該資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Experience Platform]服務來建構、加標籤及增強該資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 **新功能**
 

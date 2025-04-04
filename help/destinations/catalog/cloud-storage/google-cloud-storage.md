@@ -3,9 +3,9 @@ title: Google雲端儲存空間連線
 description: 瞭解如何連線至Google Cloud Storage並啟用對象或匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1236'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 ## 透過API或UI連線至您的[!DNL Google Cloud Storage]儲存空間 {#connect-api-or-ui}
 
-* 若要使用Platform使用者介面連線到您的[!DNL Google Cloud Storage]儲存位置，請閱讀以下章節： [連線到目的地](#connect)以及[啟用對象到此目的地](#activate)。
+* 若要使用Experience Platform使用者介面連線至您的[!DNL Google Cloud Storage]儲存位置，請閱讀以下章節： [連線至目的地](#connect)及[啟用對象至此目的地](#activate)。
 * 若要以程式設計方式連線至您的[!DNL Google Cloud Storage]儲存位置，請使用「流程服務API」教學課程](../../api/activate-segments-file-based-destinations.md)，讀取[將對象啟用至檔案型目的地。
 
 ## 支援的對象 {#supported-audiences}
@@ -27,8 +27,8 @@ ht-degree: 2%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -47,18 +47,18 @@ ht-degree: 2%
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
+* 如何使用Experience Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
 * 如何使用流程服務API](/help/destinations/api/export-datasets.md)以程式設計方式[匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 
-匯出&#x200B;*對象資料*&#x200B;時，Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
+匯出&#x200B;*對象資料*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
 
-匯出&#x200B;*資料集*&#x200B;時，Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
+匯出&#x200B;*資料集*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
 
 ## 連線您的[!DNL Google Cloud Storage]帳戶的先決條件設定 {#prerequisites}
 
-若要將Platform連線到[!DNL Google Cloud Storage]，您必須先為您的[!DNL Google Cloud Storage]帳戶啟用互通性。 若要存取互通性設定，請開啟[!DNL Google Cloud Platform]，然後從導覽面板的&#x200B;**[!UICONTROL 雲端儲存空間]**&#x200B;選項中選取&#x200B;**[!UICONTROL 設定]**。
+若要將Experience Platform連線到[!DNL Google Cloud Storage]，您必須先為您的[!DNL Google Cloud Storage]帳戶啟用互通性。 若要存取互通性設定，請開啟[!DNL Google Cloud Platform]，然後從導覽面板的&#x200B;**[!UICONTROL 雲端儲存空間]**&#x200B;選項中選取&#x200B;**[!UICONTROL 設定]**。
 
 ![Google Cloud Platform儀表板，強調顯示雲端儲存空間與設定。](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
 ![在Google Cloud Platform儀表板中反白顯示的服務帳戶控制項的建立金鑰。](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
-您可以使用新產生的存取金鑰ID和機密存取金鑰，將您的[!DNL Google Cloud Storage]帳戶連線至Platform。
+您可以使用新產生的存取金鑰ID和機密存取金鑰，將您的[!DNL Google Cloud Storage]帳戶連線至Experience Platform。
 
 ## 連線到目標 {#connect}
 
@@ -84,8 +84,8 @@ ht-degree: 2%
 
 若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
 
-* **[!UICONTROL 存取金鑰識別碼]**：用於向Platform驗證您的[!DNL Google Cloud Storage]帳戶的61個字元英數字串。 如需如何取得此值的詳細資訊，請閱讀上述[必要條件](#prerequisites)區段。
-* **[!UICONTROL 秘密存取金鑰]**：用於向Platform驗證您的[!DNL Google Cloud Storage]帳戶的40個字元base64編碼字串。 如需如何取得此值的詳細資訊，請閱讀上述[必要條件](#prerequisites)區段。
+* **[!UICONTROL 存取金鑰識別碼]**：用於向Experience Platform驗證您的[!DNL Google Cloud Storage]帳戶的61個字元英數字串。 如需如何取得此值的詳細資訊，請閱讀上述[必要條件](#prerequisites)區段。
+* **[!UICONTROL 秘密存取金鑰]**：40個字元的base64編碼字串，用來向Experience Platform驗證您的[!DNL Google Cloud Storage]帳戶。 如需如何取得此值的詳細資訊，請閱讀上述[必要條件](#prerequisites)區段。
 * **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，將加密新增至匯出的檔案。 在下圖中檢視格式正確的加密金鑰範例。
 
   ![影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -100,8 +100,8 @@ ht-degree: 2%
 * **[!UICONTROL 描述]**：選擇性。 例如，您可以提及要將此目的地用於哪個行銷活動。
 * **[!UICONTROL Bucket名稱]**：輸入要由此目的地使用的[!DNL Google Cloud Storage]儲存貯體的名稱。
 * **[!UICONTROL 資料夾路徑]**：輸入目的地資料夾的路徑，此資料夾將裝載匯出的檔案。
-* **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 選取[!UICONTROL CSV]選項時，您也可以[設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md)。
-* **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。
+* **[!UICONTROL 檔案型別]**：選取Experience Platform用於匯出檔案的格式。 選取[!UICONTROL CSV]選項時，您也可以[設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md)。
+* **[!UICONTROL 壓縮格式]**：選取Experience Platform應該用於匯出檔案的壓縮型別。
 * **[!UICONTROL 包含資訊清單檔案]**：如果您想要匯出包含資訊清單JSON檔案，其中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 資訊清單的命名格式為`manifest-<<destinationId>>-<<dataflowRunId>>.json`。 檢視[範例資訊清單檔案](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)。 資訊清單檔案包含下列欄位：
    * `flowRunId`：產生匯出檔案的[資料流執行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
    * `scheduledTime`：檔案匯出的時間(UTC)。
@@ -140,7 +140,7 @@ ht-degree: 2%
 
 請參閱[啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)，以取得啟用對象至此目的地的指示。
 
-### 正在排程
+### 正在安排
 
 在&#x200B;**[!UICONTROL 排程]**&#x200B;步驟中，您可以[為您的[!DNL Google Cloud Storage]目的地設定匯出排程](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)，也可以[設定匯出檔案的名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
 
@@ -154,4 +154,4 @@ ht-degree: 2%
 
 ## IP位址允許清單 {#ip-address-allow-list}
 
-如果您需要將AdobeIP新增至允許清單，請參閱[IP位址允許清單](ip-address-allow-list.md)文章。
+如果您需要將Adobe IP新增至允許清單，請參閱[IP位址允許清單](ip-address-allow-list.md)文章。

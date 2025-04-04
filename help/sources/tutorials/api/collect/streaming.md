@@ -3,33 +3,33 @@ keywords: Experience Platform；首頁；熱門主題；雲端儲存資料；串
 solution: Experience Platform
 title: 使用流量服務API為原始資料建立串流資料流
 type: Tutorial
-description: 本教學課程涵蓋擷取串流資料，以及使用來源聯結器和API將其帶入Platform的步驟。
+description: 本教學課程涵蓋擷取串流資料，以及使用來源聯結器和API將其帶入Experience Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1180'
 ht-degree: 2%
 
 ---
 
 # 使用[!DNL Flow Service] API為原始資料建立串流資料流
 
-本教學課程涵蓋從串流來源聯結器擷取原始資料，以及使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將資料帶入Experience Platform的步驟。
+本教學課程涵蓋從串流來源聯結器擷取原始資料，並使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)帶入Experience Platform的步驟。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)： Experience Platform組織客戶體驗資料的標準化架構。
    - [結構描述組合的基本概念](../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    - [Schema Registry開發人員指南](../../../../xdm/api/getting-started.md)：包含您成功執行Schema Registry API呼叫所需瞭解的重要資訊。 這包括您的`{TENANT_ID}`、「容器」的概念，以及發出要求所需的標頭（特別注意Accept標頭及其可能的值）。
 - [[!DNL Catalog Service]](../../../../catalog/home.md)：目錄是Experience Platform中資料位置和歷程的記錄系統。
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md)： Platform的串流擷取為使用者提供從使用者端和伺服器端裝置傳送資料以即時Experience Platform的方法。
-- [沙箱](../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md)： Experience Platform的串流擷取為使用者提供即時從使用者端和伺服器端裝置傳送資料到Experience Platform的方法。
+- [沙箱](../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../landing/api-guide.md)指南。
 
 ### 建立來源連線 {#source}
 
@@ -41,9 +41,9 @@ ht-degree: 2%
 
 ## 建立目標XDM結構描述 {#target-schema}
 
-為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後目標結構描述會用來建立包含來源資料的Platform資料集。 此目標XDM結構描述也會擴充XDM [!DNL Individual Profile]類別。
+為了在Experience Platform中使用來源資料，必須建立目標結構描述，以根據您的需求建構來源資料。 然後使用目標結構描述來建立包含來源資料的Experience Platform資料集。 此目標XDM結構描述也會擴充XDM [!DNL Individual Profile]類別。
 
-若要建立目標XDM結構描述，請向[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的`/schemas`端點提出POST要求。
+若要建立目標XDM結構描述，請對[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的`/schemas`端點提出POST要求。
 
 **API格式**
 
@@ -151,7 +151,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-在建立目標XDM結構描述及其唯一`$id`後，您現在可以建立目標資料集以包含來源資料。 若要建立目標資料集，請向[目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)的`dataSets`端點提出POST要求，同時在承載中提供目標結構描述的ID。
+在建立目標XDM結構描述及其唯一`$id`後，您現在可以建立目標資料集以包含來源資料。 若要建立目標資料集，請對[目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)的`dataSets`端點提出POST要求，同時在承載中提供目標結構描述的ID。
 
 **API格式**
 
@@ -204,9 +204,9 @@ curl -X POST \
 
 ## 建立目標連線 {#target-connection}
 
-Target連線會建立並管理與Platform或任何已傳輸資料著陸位置的目的地連線。 目標連線包含有關資料目的地、資料格式以及建立資料流所需的目標連線ID的資訊。 Target連線例項是租使用者和組織專屬的。
+Target連線會建立和管理Experience Platform的目的地連線，或傳輸資料將著陸的任何位置。 目標連線包含有關資料目的地、資料格式以及建立資料流所需的目標連線ID的資訊。 Target連線例項是租使用者和組織專屬的。
 
-若要建立目標連線，請向[!DNL Flow Service] API的`/targetConnections`端點發出POST要求。 作為要求的一部分，您必須提供資料格式、上一步驟中擷取的`dataSetId`以及繫結至[!DNL Data Lake]的固定連線規格識別碼。 此識別碼為`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
+若要建立目標連線，請對[!DNL Flow Service] API的`/targetConnections`端點提出POST要求。 作為要求的一部分，您必須提供資料格式、上一步驟中擷取的`dataSetId`以及繫結至[!DNL Data Lake]的固定連線規格識別碼。 此識別碼為`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
 
 **API格式**
 
@@ -265,7 +265,7 @@ curl -X POST \
 
 為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，向[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
+若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
 
 **API格式**
 
@@ -325,7 +325,7 @@ curl -X POST \
 
 ## 擷取資料流規格清單 {#specs}
 
-資料流負責從來源收集資料，並將這些資料匯入Platform。 若要建立資料流，您必須先對[!DNL Flow Service] API執行GET要求，以取得資料流規格。
+資料流負責從來源收集資料，並將這些資料匯入Experience Platform。 若要建立資料流，您必須先對[!DNL Flow Service] API執行GET要求，以取得資料流規格。
 
 **API格式**
 
@@ -422,7 +422,7 @@ curl -X GET \
 - [對應 ID](#mapping)
 - [資料流規格ID](#specs)
 
-資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提到的值，藉此建立資料流。
+資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提及的值來建立資料流。
 
 **API格式**
 
@@ -566,7 +566,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程指示，您已建立資料流以從串流聯結器收集串流資料。 下游Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需更多詳細資訊，請參閱下列檔案：
+依照本教學課程指示，您已建立資料流以從串流聯結器收集串流資料。 下游Experience Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 - [即時客戶輪廓概觀](../../../../profile/home.md)
 - [資料科學工作區總覽](../../../../data-science-workspace/home.md)

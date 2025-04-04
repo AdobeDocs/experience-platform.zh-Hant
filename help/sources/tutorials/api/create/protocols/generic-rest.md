@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；一般REST；一般Rest
+keywords: Experience Platform；首頁；熱門主題；一般REST；一般rest
 solution: Experience Platform
 title: 使用流程服務API建立一般REST API基本連線
 type: Tutorial
 description: 瞭解如何使用流量服務API將Generic REST API連線至Adobe Experience Platform。
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '955'
 ht-degree: 3%
 
 ---
@@ -26,10 +26,10 @@ ht-degree: 3%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
 ### 收集必要的認證
 
@@ -61,13 +61,13 @@ ht-degree: 3%
 
 ## 建立基礎連線
 
-基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
 [!DNL Generic REST API]支援基本驗證和OAuth 2重新整理程式碼。 請參閱下列範例，以取得如何使用任一驗證型別進行驗證的指引。
 
 ### 使用OAuth 2重新整理程式碼建立[!DNL Generic REST API]基本連線
 
-若要使用OAuth 2重新整理程式碼建立基本連線ID，請在提供您的OAuth 2認證時，向`/connections`端點提出POST要求。
+若要使用OAuth 2重新整理程式碼建立基本連線ID，請在提供您的OAuth 2認證時，對`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -109,7 +109,7 @@ curl -X POST \
 | `name` | 基礎連線的名稱。 確定基本連線的名稱是描述性的，因為您可以使用此名稱來查詢基本連線的資訊。 |
 | `description` | （選用）可包含的屬性，可提供基礎連線的詳細資訊。 |
 | `connectionSpec.id` | 與[!DNL Generic REST API]關聯的連線規格識別碼。 此固定ID為： `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`。 |
-| `auth.specName` | 您用來向Platform驗證來源的驗證型別。 |
+| `auth.specName` | 您用來向Experience Platform驗證來源的驗證型別。 |
 | `auth.params.host` | 用來連線至您[!DNL Generic REST API]來源的根URL。 |
 | `auth.params.accessToken` | 用來驗證來源的對應存取權杖。 這是OAuth型驗證的必要專案。 |
 
@@ -126,7 +126,7 @@ curl -X POST \
 
 ### 使用基本驗證建立[!DNL Generic REST API]基本連線
 
-若要使用基本驗證建立[!DNL Generic REST API]基本連線，請在提供基本驗證認證時，向[!DNL Flow Service] API的`/connections`端點提出POST要求。
+若要使用基本驗證建立[!DNL Generic REST API]基本連線，請在提供基本驗證認證時，對[!DNL Flow Service] API的`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -169,7 +169,7 @@ curl -X POST \
 | `name` | 基礎連線的名稱。 確定基本連線的名稱是描述性的，因為您可以使用此名稱來查詢基本連線的資訊。 |
 | `description` | （選用）可包含的屬性，可提供基礎連線的詳細資訊。 |
 | `connectionSpec.id` | 與[!DNL Generic REST API]關聯的連線規格識別碼。 此固定ID為： `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`。 |
-| `auth.specName` | 您用來將來源連線到Platform的驗證型別。 |
+| `auth.specName` | 您用來將來源連線至Experience Platform的驗證型別。 |
 | `auth.params.host` | 用來連線至您[!DNL Generic REST API]來源的根URL。 |
 | `auth.params.username` | 與您的[!DNL Generic REST API]來源對應的使用者名稱。 這是基本驗證的必要專案。 |
 | `auth.params.password` | 與您的[!DNL Generic REST API]來源對應的密碼。 這是基本驗證的必要專案。 |
@@ -190,4 +190,4 @@ curl -X POST \
 依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Generic REST API]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
-* [使用 [!DNL Flow Service] API建立資料流以將通訊協定資料帶入Platform](../../collect/protocols.md)
+* [使用 [!DNL Flow Service] API建立資料流以將通訊協定資料帶入Experience Platform](../../collect/protocols.md)

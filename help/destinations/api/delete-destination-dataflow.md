@@ -5,9 +5,9 @@ title: 使用流程服務API刪除目的地資料流
 type: Tutorial
 description: 瞭解如何使用資料流服務API將資料流刪除至批次和串流目的地。
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 14%
 
 ---
@@ -24,8 +24,8 @@ ht-degree: 14%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
-* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功刪除資料流。
 
@@ -35,13 +35,13 @@ ht-degree: 14%
 
 ### 收集所需標頭的值 {#gather-values-for-required-headers}
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ ht-degree: 14%
 
 ## 刪除目的地資料流 {#delete-destination-dataflow}
 
-使用現有的資料流識別碼，您可以透過對[!DNL Flow Service] API執行DELETE要求來刪除目的地資料流。
+使用現有的資料流ID，您可以透過對[!DNL Flow Service] API執行DELETE請求來刪除目的地資料流。
 
 **API格式**
 
@@ -84,7 +84,7 @@ curl -X DELETE \
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[要求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Experience Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 

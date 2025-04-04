@@ -5,9 +5,9 @@ title: 使用原則服務API強制執行資料使用原則
 type: Tutorial
 description: 一旦您為資料建立了資料使用標籤，並針對這些標籤建立了行銷動作的使用原則，您就可以使用原則服務API來評估對資料集或任意一組標籤執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應處理原則違規。
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 1%
 
 ---
@@ -26,10 +26,10 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列與強制資料使用原則相關的主要概念：
 
-* [資料控管](../home.md)： [!DNL Platform]強制資料使用規範所依據的架構。
+* [資料控管](../home.md)： [!DNL Experience Platform]強制資料使用規範所依據的架構。
    * [資料使用標籤](../labels/overview.md)：資料使用標籤套用至資料集（和/或這些資料集中的個別欄位），以指定該資料使用方式的限制。
    * [資料使用原則](../policies/overview.md)：資料使用原則是描述允許或限制特定資料使用標籤集的行銷動作型別的規則。
-* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 開始進行此教學課程之前，請檢閱[開發人員指南](../api/getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫[!DNL Policy Service] API，包括必要的標頭以及如何讀取範例API呼叫。
 
@@ -376,4 +376,4 @@ curl -X POST \
 
 透過閱讀本檔案，您已成功檢查在資料集或一組資料使用標籤上執行行銷動作時是否違反原則。 您可以使用API回應中傳回的資料，在體驗應用程式中設定通訊協定，以便在發生原則違規時適當地強制執行。
 
-如需有關Platform如何自動為啟用的區段提供原則強制執行的資訊，請參閱[自動強制執行](./auto-enforcement.md)的指南。
+如需Experience Platform如何自動為啟用的區段提供原則強制執行的資訊，請參閱[自動強制執行](./auto-enforcement.md)指南。

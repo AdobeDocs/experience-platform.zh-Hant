@@ -3,7 +3,7 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: SendGrid連線
 description: SendGrid目的地可讓您匯出第一方資料，並在SendGrid中根據您的業務需求加以啟用。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 3%
@@ -40,7 +40,7 @@ SendGrid使用API持有人權杖作為驗證機制，與SendGrid API通訊。
 >
 >* 用於從電子郵件設定檔建立郵寄清單的SendGrid API要求在每個設定檔中提供唯一的電子郵件地址。 無論其用作&#x200B;*電子郵件*&#x200B;或&#x200B;*備用電子郵件*&#x200B;的值，皆不適用。 由於SendGrid連線支援電子郵件和備用電子郵件值的對應，請確定在&#x200B;*資料集*&#x200B;的每個設定檔中，使用的所有電子郵件地址都應該是唯一的。 否則，將電子郵件設定檔傳送至SendGrid時，將會導致錯誤，且該電子郵件設定檔將不會出現在資料匯出中。
 >
->* 目前，從Experience Platform的受眾移除設定檔時，無法從SendGrid移除設定檔。
+>* 目前，從Experience Platform的對象中移除設定檔時，無法從SendGrid移除設定檔。
 
 ## 支援的身分 {#supported-identities}
 
@@ -48,7 +48,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| 電子郵件 | 電子郵件地址 | 請注意，[!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電子郵件地址。 如果Experience Platform來源欄位包含未雜湊的屬性，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。<br/><br/>請注意，**SendGrid**&#x200B;不支援雜湊電子郵件地址，所以只會將純文字資料傳送至目的地，而不進行轉換。 |
+| 電子郵件 | 電子郵件地址 | 請注意，[!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電子郵件地址。 如果Experience Platform來源欄位包含未雜湊的屬性，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。<br/><br/>請注意，**SendGrid**&#x200B;不支援雜湊電子郵件地址，所以只會將純文字資料傳送至目的地，而不進行轉換。 |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 

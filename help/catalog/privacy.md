@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Lake中的隱私權請求處理
 description: Adobe Experience Platform Privacy Service會根據法律和組織隱私權法規，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。 本檔案說明與處理儲存在Data Lake中之客戶資料的隱私權請求相關的重要概念。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1430'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Adobe Experience Platform [!DNL Privacy Service]會根據法律和組織隱私�
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 * [[!DNL Identity Service]](../identity-service/home.md)：透過跨裝置和系統橋接身分，解決客戶體驗資料分散所造成的根本挑戰。
 
-## 了解身分命名空間 {#namespaces}
+## 了解身分識別命名空間 {#namespaces}
 
 Adobe Experience Platform [!DNL Identity Service]可跨系統和裝置橋接客戶身分資料。 [!DNL Identity Service]使用身分識別名稱空間，透過將身分識別值與其來源系統建立關聯來提供身分識別值的內容。 名稱空間可代表一般概念，例如電子郵件地址（「電子郵件」），或將身分與特定應用程式相關聯，例如Adobe Advertising Cloud ID (「AdCloud」)或Adobe Target ID (「TNTID」)。
 
@@ -73,7 +73,7 @@ Adobe Experience Platform [!DNL Identity Service]可跨系統和裝置橋接客�
 >
 >本節也假設您知道如何呼叫Schema Registry API。 如需與使用API相關的重要資訊，包括瞭解您的`{TENANT_ID}`和容器的概念，請參閱API指南的[快速入門](../xdm/api/getting-started.md)一節。
 
-您可以對[!DNL Schema Registry] API中的`/descriptors`端點發出POST要求，藉此將身分描述項新增到資料集的XDM結構描述。
+您可以對[!DNL Schema Registry] API中的`/descriptors`端點發出POST要求，藉此將身分描述項新增至資料集的XDM結構描述。
 
 **API格式**
 
@@ -147,7 +147,7 @@ curl -X POST \
 
 ### 使用UI
 
-在UI中建立工作請求時，請務必在&#x200B;**[!UICONTROL 產品]**&#x200B;下選取&#x200B;**[!UICONTROL AEP資料湖]**，以便處理儲存在資料湖中的資料工作。
+在UI中建立工作請求時，請務必在&#x200B;**[!UICONTROL 產品]**&#x200B;下選取&#x200B;**[!UICONTROL AEP Data Lake]**，以便處理儲存在Data Lake中之資料的工作。
 
 ![顯示隱私權請求建立對話方塊中選取之資料湖產品的影像](./images/privacy/product-value.png)
 
@@ -200,11 +200,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform會處理屬於您組織的所有[沙箱](../sandboxes/home.md)的隱私權要求。 因此，請求中包含的任何`x-sandbox-name`標頭都會被系統忽略。
+>Experience Platform會處理屬於您組織的所有[沙箱](../sandboxes/home.md)的隱私權請求。 因此，請求中包含的任何`x-sandbox-name`標頭都會被系統忽略。
 
 ## 正在處理刪除請求
 
-當[!DNL Experience Platform]收到來自[!DNL Privacy Service]的刪除請求時，[!DNL Platform]會傳送確認給[!DNL Privacy Service]，確認已收到該請求且受影響的資料已標示為刪除。 這些記錄接著會在七天內從資料湖中移除。 在這七天期間，資料會軟刪除，因此無法由任何[!DNL Platform]服務存取。
+當[!DNL Experience Platform]收到來自[!DNL Privacy Service]的刪除請求時，[!DNL Experience Platform]會傳送確認給[!DNL Privacy Service]，確認已收到該請求且受影響的資料已標示為刪除。 這些記錄接著會在七天內從資料湖中移除。 在這七天期間，資料會軟刪除，因此無法由任何[!DNL Experience Platform]服務存取。
 
 如果您也將`ProfileService`或`identity`包含在隱私權請求中，則會分別處理其相關資料。 如需詳細資訊，請參閱有關設定檔](../profile/privacy.md#delete)的[刪除請求處理的章節。
 

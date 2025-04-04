@@ -2,10 +2,10 @@
 title: YouTube影片追蹤擴充功能概觀
 description: 瞭解Adobe Experience Platform中的YouTube影片追蹤標籤擴充功能。
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 30%
+source-wordcount: '897'
+ht-degree: 35%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 30%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 **先決條件**
 
@@ -23,7 +23,7 @@ Adobe Experience Platform中的每個標籤屬性都需要從「擴充功能」�
 * Experience Cloud 訪客 ID 服務
 * 核心擴充功能
 
-在視訊播放器將轉譯的每個網頁的HTML中，使用Google開發人員檔案中的[「使用\&lt;iframe\>標籤嵌入播放器」](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)程式碼片段。
+針對影片播放器預計運行的每個網頁，在HTML中使用Google開發人員檔案中的[「使用\&lt;iframe\>標籤內嵌播放器」](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)程式碼片段。
 
 此擴充功能（2.0.1版）可支援在同一網頁內嵌一或多部YouTube影片，方法是在iframe指令碼標籤中插入具有唯一值的`id`屬性，並將`enablejsapi=1`和`rel=0`附加至`src`屬性值的結尾（若尚未包含）。 例如：
 
@@ -98,7 +98,7 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->對於無法對每個視訊元素使用多個eVar或prop的實作，可在Platform中串連資料元素值，使用「分類規則產生器」工具剖析為分類報表(如[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)所述)，然後套用為Analysis Workspace中的區段。
+>對於無法對每個視訊元素使用多個eVar或prop的實作，可在Experience Platform中串連資料元素值，使用「分類規則產生器」工具剖析為分類報表(如[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)所述)，然後套用為Analysis Workspace中的區段。
 
 若要串連視訊資訊值，請建立名為「視訊中繼資料」的新資料元素，並將其設定為提取所有視訊資料元素（如上所列），接著將其彙整起來。 例如：
 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-如需如何在Platform內有效建立及運用資料元素的詳細資訊，請閱讀[資料元素](../../../ui/managing-resources/data-elements.md)檔案。
+如需如何在Experience Platform中有效建立及運用資料元素的詳細資訊，請參閱[資料元素](../../../ui/managing-resources/data-elements.md)檔案。

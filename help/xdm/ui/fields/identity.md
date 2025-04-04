@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中定義身分欄位
 description: 瞭解如何在Experience Platform使用者介面中定義身分欄位。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '652'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 ## 先決條件
 
-身分欄位是在Platform中建構客戶身分圖表的重要元件，這最終會影響Real-time Customer Profile如何將不同的資料片段合併在一起，以獲得客戶的完整檢視。 在定義結構描述中的身分欄位之前，請參閱以下檔案以瞭解與身分欄位相關的主要服務和概念：
+身分欄位是在Experience Platform中建構客戶身分圖表的重要元件，這最終會影響Real-time Customer Profile如何將不同的資料片段合併在一起，以獲得客戶的完整檢視。 在定義結構描述中的身分欄位之前，請參閱以下檔案以瞭解與身分欄位相關的主要服務和概念：
 
 * [Adobe Experience Platform Identity服務](../../../identity-service/home.md)：跨裝置和系統橋接身分，根據資料集所符合的XDM結構描述所定義的身分欄位，將資料集連結在一起。
    * [身分識別名稱空間](../../../identity-service/features/namespaces.md)：身分識別名稱空間會定義與單一人員相關的不同身分識別資訊型別，而且是每個身分識別欄位的必要元件。
@@ -40,7 +40,7 @@ ht-degree: 6%
 >
 >單一結構描述可能定義了許多身分欄位，但只能有一個主要身分。 所有身分欄位（主要或其他身分欄位）都會協助個別客戶的身分圖表，但即時客戶設定檔在合併資料片段時，僅使用主要身分作為真實來源。 如果您想要啟用結構描述以用於設定檔，結構描述必須定義主要身分。
 
-在&#x200B;**[!UICONTROL 身分識別名稱空間]**&#x200B;底下，使用下拉式功能表為身分識別欄位選取適當的名稱空間。 列出Adobe提供的標準名稱空間，以及貴組織定義的任何自訂名稱空間。
+在&#x200B;**[!UICONTROL 身分識別名稱空間]**&#x200B;底下，使用下拉式功能表為身分識別欄位選取適當的名稱空間。 Adobe提供的標準名稱空間以及貴組織定義的任何自訂名稱空間都會列在清單中。
 
 完成後，選取&#x200B;**[!UICONTROL 套用]**&#x200B;將變更套用至結構描述。
 

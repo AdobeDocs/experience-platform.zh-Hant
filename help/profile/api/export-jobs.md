@@ -5,7 +5,7 @@ type: Documentation
 description: 即時客戶個人檔案可讓您結合來自多個來源的資料（包括屬性資料和行為資料），在Adobe Experience Platform中建立個別客戶的單一檢視。 然後，可將設定檔資料匯出至資料集，以供進一步處理。
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 2%
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ## 建立匯出作業
 
-匯出[!DNL Profile]資料需要先建立資料將匯出到的資料集，然後起始新的匯出工作。 這兩個步驟都可以使用Experience PlatformAPI來完成，前者使用目錄服務API，後者使用即時客戶設定檔API。 完成每個步驟的詳細指示在以下各節中概述。
+匯出[!DNL Profile]資料需要先建立資料將匯出到的資料集，然後起始新的匯出工作。 這兩個步驟都可以使用Experience Platform API來完成，前者使用目錄服務API，後者使用即時客戶設定檔API。 完成每個步驟的詳細指示在以下各節中概述。
 
 ### 建立目標資料集
 
@@ -38,7 +38,7 @@ ht-degree: 2%
 
 重要考量事項之一是資料集所依據的結構描述（在以下API範例要求中為`schemaRef.id`）。 為了匯出設定檔資料，資料集必須以[!DNL XDM Individual Profile]聯合結構描述(`https://ns.adobe.com/xdm/context/profile__union`)為基礎。 聯合結構描述是系統產生的唯讀結構描述，可彙總共用相同類別的結構描述欄位。 在此案例中，這是[!DNL XDM Individual Profile]類別。 如需聯合檢視結構描述的詳細資訊，請參閱結構描述組合基本概念指南](../../xdm/schema/composition.md#union)中的[聯合區段。
 
-本教學課程後續步驟概述如何使用[!DNL Catalog] API建立參照[!DNL XDM Individual Profile]聯合結構描述的資料集。 您也可以使用[!DNL Platform]使用者介面來建立參考聯合結構描述的資料集。 此UI教學課程匯出對象](../../segmentation/tutorials/create-dataset-export-segment.md)中概述了使用UI的步驟，但也適用於此處。 [完成後，您可以返回此教學課程，繼續進行[起始新匯出工作](#initiate)的步驟。
+本教學課程後續步驟概述如何使用[!DNL Catalog] API建立參照[!DNL XDM Individual Profile]聯合結構描述的資料集。 您也可以使用[!DNL Experience Platform]使用者介面來建立參考聯合結構描述的資料集。 此UI教學課程匯出對象](../../segmentation/tutorials/create-dataset-export-segment.md)中概述了使用UI的步驟，但也適用於此處。 [完成後，您可以返回此教學課程，繼續進行[起始新匯出工作](#initiate)的步驟。
 
 如果您已有相容的資料集且知道其識別碼，您可以直接進行[起始新匯出工作](#initiate)的步驟。
 
@@ -179,7 +179,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 ## 列出所有匯出工作
 
-您可以透過對`export/jobs`端點執行GET要求，傳回特定組織的所有匯出工作清單。 要求也支援查詢引數`limit`和`offset`，如下所示。
+您可以透過對`export/jobs`端點執行GET請求，傳回特定組織的所有匯出工作清單。 要求也支援查詢引數`limit`和`offset`，如下所示。
 
 **API格式**
 
@@ -324,7 +324,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/ \
 
 ## 監視匯出進度
 
-若要檢視特定匯出作業的詳細資料，或監視其處理狀態，您可以對`/export/jobs`端點發出GET要求，並在路徑中包含匯出作業的`id`。 當`status`欄位傳回「SUCCEEDED」值時，匯出作業即已完成。
+若要檢視特定匯出作業的詳細資料，或監視其處理狀態，您可以對`/export/jobs`端點發出GET請求，並在路徑中包含匯出作業的`id`。 當`status`欄位傳回「SUCCEEDED」值時，匯出作業即已完成。
 
 **API格式**
 
@@ -400,7 +400,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
 
 ## 取消匯出工作
 
-Experience Platform可讓您取消現有的匯出作業，這可能是由於許多原因所造成，包括匯出作業未完成或卡在處理階段中。 若要取消匯出作業，您可以對`/export/jobs`端點執行DELETE要求，並將您要取消的匯出作業`id`納入要求路徑。
+Experience Platform可讓您取消現有的匯出作業，這可能因數種原因有用，包括匯出作業未完成或卡在處理階段中。 若要取消匯出作業，您可以對`/export/jobs`端點執行DELETE要求，並將您要取消的匯出作業`id`納入要求路徑。
 
 **API格式**
 
@@ -428,7 +428,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs/726 \
 
 ## 後續步驟
 
-成功完成匯出後，您的資料就可以在Experience Platform的資料湖中使用。 然後，您就可以使用[資料存取API](https://www.adobe.io/experience-platform-apis/references/data-access/)，使用與匯出相關聯的`batchId`存取資料。 視匯出大小而定，資料可能會以區塊為單位，而批次可能包含數個檔案。
+匯出成功完成後，您的資料即可在Experience Platform的「資料湖」中使用。 然後，您就可以使用[資料存取API](https://www.adobe.io/experience-platform-apis/references/data-access/)，使用與匯出相關聯的`batchId`存取資料。 視匯出大小而定，資料可能會以區塊為單位，而批次可能包含數個檔案。
 
 如需如何使用資料存取API來存取及下載批次檔案的逐步指示，請遵循[資料存取教學課程](../../data-access/tutorials/dataset-data.md)。
 

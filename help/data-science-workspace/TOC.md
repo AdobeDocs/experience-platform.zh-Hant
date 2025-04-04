@@ -6,10 +6,10 @@ user-guide-description: 透過 Adobe Sensei 和 JupyterLab Notebooks，使用機
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 32%
+source-wordcount: '227'
+ht-degree: 33%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 32%
    * [實驗](api/experiments.md)
    * [模型](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [Insights](api/insights.md)
+   * [深入分析](api/insights.md)
    * [附錄](api/appendix.md)
 * 預先建立配方{#pre-built-recipes}
    * [產品推薦配方](pre-built-recipes/product-recommendations.md)
@@ -43,7 +43,7 @@ ht-degree: 32%
 * 模型製作{#authoring}
    * [模型製作SDK](authoring/sdk.md)
    * [建立特徵管線](authoring/feature-pipeline.md)
-   * [使用SDK (Python)平台進行模型製作](authoring/platform-sdk.md)
+   * [使用Experience Platform SDK (Python)進行模型製作](authoring/platform-sdk.md)
    * [Python資料存取](authoring/python.md)
    * [Spark資料存取](authoring/spark.md)
 * 模型與配方教學課程{#models-recipes}
@@ -60,9 +60,9 @@ ht-degree: 32%
    * [為模型(API)評分](models-recipes/score-model-api.md)
    * [最佳化模型](models-recipes/optimize-model.md)
    * [透過機器學習見解豐富即時客戶個人檔案](models-recipes/enrich-profile.md)
-   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
-   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
+   * [將模型發佈為服務(UI)](models-recipes/publish-model-service-ui.md)
+   * [將模型發佈為服務(API)](models-recipes/publish-model-service-api.md)
    * [排程服務的自動化訓練和評分(UI)](models-recipes/schedule-models-ui.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+* [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

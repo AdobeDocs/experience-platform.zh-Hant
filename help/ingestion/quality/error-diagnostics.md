@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 正在擷取資料擷取錯誤診斷
 description: 本檔案提供有關監視批次擷取、管理部分批次擷取錯誤的資訊，以及部分批次擷取型別的參考。
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 8%
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 # 正在擷取資料擷取錯誤診斷
 
-Adobe Experience Platform提供兩種上傳和擷取資料的方法。 您可以使用批次擷取，這可讓您使用各種檔案型別（例如CSV）插入資料，或是使用串流擷取，可讓您使用串流端點即時將其資料插入[!DNL Platform]。
+Adobe Experience Platform提供兩種上傳和擷取資料的方法。 您可以使用批次擷取，這可讓您使用各種檔案型別（例如CSV）插入資料，或是使用串流擷取，可讓您使用串流端點即時將其資料插入[!DNL Experience Platform]。
 
 本檔案提供有關監視批次擷取、管理部分批次擷取錯誤的資訊，以及部分批次擷取型別的參考。
 
@@ -30,23 +30,23 @@ Adobe Experience Platform提供兩種上傳和擷取資料的方法。 您可以
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Schema Registry]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Schema Registry]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 ## 正在下載錯誤診斷 {#download-diagnostics}
 
-Adobe Experience Platform可讓使用者下載輸入檔案的錯誤診斷。 診斷將在[!DNL Platform]內保留最多30天。
+Adobe Experience Platform可讓使用者下載輸入檔案的錯誤診斷。 診斷將在[!DNL Experience Platform]內保留最多30天。
 
 ### 列出輸入檔案 {#list-files}
 
@@ -145,7 +145,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 ### 檢查狀態 {#check-status}
 
-若要檢查所擷取批次的狀態，您必須在GET請求的路徑中提供批次識別碼。 若要進一步瞭解如何使用此API呼叫，請參閱[目錄端點指南](../../catalog/api/list-objects.md)。
+若要檢查所擷取批次的狀態，您必須在GET請求的路徑中提供批次ID。 若要進一步瞭解如何使用此API呼叫，請參閱[目錄端點指南](../../catalog/api/list-objects.md)。
 
 **API格式**
 

@@ -5,16 +5,16 @@ title: 在UI中建立Azure Data Lake Storage Gen2 Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Azure Data Lake Storage Gen2來源連線。
 exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # 在使用者介面中建立[!DNL Azure Data Lake Storage Gen2]來源連線
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Platform]使用者介面驗證[!DNL Azure Data Lake Storage Gen2] （以下稱為「[!DNL ADLS Gen2]」）來源聯結器的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面驗證[!DNL Azure Data Lake Storage Gen2] （以下稱為「[!DNL ADLS Gen2]」）來源聯結器的步驟。
 
 ## 快速入門
 
@@ -42,7 +42,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的[!DNL ADLS Gen2]帳戶
 
-收集必要的認證後，您可以依照下列步驟連結[!DNL ADLS Gen2]帳戶以連線至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟連結[!DNL ADLS Gen2]帳戶以連線至[!DNL Experience Platform]。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
@@ -68,4 +68,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL ADLS Gen2]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將雲端儲存空間中的資料匯入 [!DNL Platform]](../../dataflow/batch/cloud-storage.md)。
+依照本教學課程中的指示，您已建立與[!DNL ADLS Gen2]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將雲端儲存空間中的資料匯入 [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md)。

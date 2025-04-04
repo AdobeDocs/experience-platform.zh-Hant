@@ -5,7 +5,7 @@ title: 使用流量服務API從第三方雲端儲存系統擷取Parquet資料
 type: Tutorial
 description: 本教學課程使用流程服務API來逐步引導您完成從協力廠商雲端儲存系統中擷取Apache Parquet資料的步驟。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 9%
@@ -22,8 +22,8 @@ ht-degree: 9%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-- [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-- [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+- [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API從協力廠商雲端儲存空間成功擷取Parquet資料。
 
@@ -33,13 +33,13 @@ ht-degree: 9%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -49,7 +49,7 @@ ht-degree: 9%
 
 ## 建立連線
 
-若要使用[!DNL Platform] API擷取Parquet資料，您必須對要存取的第三方雲端儲存空間來源擁有有效的連線。 如果您尚未建立要使用的儲存裝置連線，您可以透過下列教學課程建立連線：
+若要使用[!DNL Experience Platform] API擷取Parquet資料，您必須對要存取的第三方雲端儲存空間來源擁有有效的連線。 如果您尚未建立要使用的儲存裝置連線，您可以透過下列教學課程建立連線：
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -61,7 +61,7 @@ ht-degree: 9%
 
 ## 建立目標結構描述
 
-為了在[!DNL Platform]中使用來源資料，也必須建立目標結構描述，以根據您的需求建構來源資料。 然後使用目標結構描述來建立包含來源資料的[!DNL Platform]資料集。
+為了在[!DNL Experience Platform]中使用來源資料，也必須建立目標結構描述，以根據您的需求建構來源資料。 然後使用目標結構描述來建立包含來源資料的[!DNL Experience Platform]資料集。
 
 如果您偏好在[!DNL Experience Platform]中使用使用者介面，[結構描述編輯器教學課程](../../../xdm/tutorials/create-schema-ui.md)會提供在結構描述編輯器中執行類似動作的逐步指示。
 
@@ -198,7 +198,7 @@ curl -X POST \
 
 ## 建立來源連線 {#source}
 
-建立目標XDM結構描述後，現在即可使用對[!DNL Flow Service] API的POST要求來建立來源連線。 來源連線包含API的連線、來源資料格式，以及對上一步驟中擷取的目標XDM架構的參照。
+建立目標XDM結構描述後，現在即可使用[!DNL Flow Service] API的POST要求來建立來源連線。 來源連線包含API的連線、來源資料格式，以及對上一步驟中擷取的目標XDM架構的參照。
 
 **API格式**
 
@@ -257,7 +257,7 @@ curl -X POST \
 
 ## 建立資料集基礎連線
 
-若要將外部資料擷取到[!DNL Platform]，必須先取得[!DNL Experience Platform]資料集基礎連線。
+若要將外部資料擷取到[!DNL Experience Platform]，必須先取得[!DNL Experience Platform]資料集基礎連線。
 
 若要建立資料集基礎連線，請依照[資料集基礎連線教學課程](./create-dataset-base-connection.md)中概述的步驟操作。
 
@@ -265,7 +265,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-可以透過對[目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可透過對[目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID，來建立目標資料集。
 
 **API格式**
 
@@ -371,7 +371,7 @@ curl -X POST \
 - [Source連線ID](#source)
 - [目標連線ID](#target)
 
-資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提到的值，藉此建立資料流。
+資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提及的值來建立資料流。
 
 **API格式**
 
@@ -427,7 +427,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程所述，您已建立來源聯結器，以依排程從您的協力廠商雲端儲存系統收集Parquet資料。 下游[!DNL Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
+依照本教學課程所述，您已建立來源聯結器，以依排程從您的協力廠商雲端儲存系統收集Parquet資料。 下游[!DNL Experience Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 - [即時客戶輪廓概觀](../../../profile/home.md)
 - [資料科學工作區總覽](../../../data-science-workspace/home.md)

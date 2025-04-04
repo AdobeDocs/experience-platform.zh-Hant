@@ -2,9 +2,9 @@
 title: 將Jupyter Notebook連線至查詢服務
 description: 瞭解如何連結Jupyter Notebook與Adobe Experience Platform查詢服務。
 exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 本指南要求您已擁有[!DNL Jupyter Notebook]的存取權並熟悉其介面。 若要下載[!DNL Jupyter Notebook]或如需詳細資訊，請參閱[正式 [!DNL Jupyter Notebook] 檔案](https://jupyter.org/)。
 
-若要取得連線[!DNL Jupyter Notebook]至Experience Platform所需的認證，您必須能存取Platform UI中的[!UICONTROL 查詢]工作區。 如果您目前無法存取[!UICONTROL 查詢]工作區，請連絡組織管理員。
+若要取得將[!DNL Jupyter Notebook]連線至Experience Platform所需的認證，您必須能存取Experience Platform UI中的[!UICONTROL 查詢]工作區。 如果您目前無法存取[!UICONTROL 查詢]工作區，請連絡組織管理員。
 
 >[!TIP]
 >
@@ -40,13 +40,13 @@ ht-degree: 0%
 
 接下來，為[!DNL Python]匯入[!DNL PostgreSQL]資料庫配接器。 輸入值： `import psycopg2`並選取&#x200B;**[!DNL Run]**。 此程式沒有成功訊息。 如果沒有錯誤訊息，請繼續進行下一個步驟。
 
-您現在必須輸入值來提供您的Adobe Experience Platform認證： `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`。 您可以在Platform UI的[!UICONTROL 認證]標籤下的[!UICONTROL 查詢]區段中找到您的連線認證。 如需詳細指示，請參閱有關如何[尋找組織認證](../ui/credentials.md)的檔案。
+您現在必須輸入值來提供您的Adobe Experience Platform認證： `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`。 您可以在Experience Platform UI的[!UICONTROL 認證]標籤下的[!UICONTROL 查詢]區段中找到您的連線認證。 如需詳細指示，請參閱有關如何[尋找組織認證](../ui/credentials.md)的檔案。
 
 使用協力廠商使用者端時，建議使用不會到期的認證，以省下重複輸入詳細資料的時間。 請參閱檔案以瞭解[如何產生及使用不會到期的認證](../ui/credentials.md#non-expiring-credentials)的說明。
 
 >[!IMPORTANT]
 >
->從Platform UI複製認證時，不需要其他認證格式。 它們可以在一行中指定，屬性和值之間有單一空格。 認證以引號括住，且&#x200B;**不是**&#x200B;逗號分隔。
+>從Experience Platform UI複製認證時，不需要額外的認證格式。 它們可以在一行中指定，屬性和值之間有單一空格。 認證以引號括住，且&#x200B;**不是**&#x200B;逗號分隔。
 
 ```python
 conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"

@@ -2,24 +2,24 @@
 title: 結構描述編輯器中的欄位式工作流程
 description: 瞭解如何將現有欄位群組中的欄位個別新增至您的Experience Data Model (XDM)結構描述。
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
 
 # 結構描述編輯器中的欄位式工作流程
 
-Adobe Experience Platform提供一組強大的標準化[欄位群組](../schema/composition.md#field-group)，以用於體驗資料模型(XDM)結構描述。 這些欄位群組背後的結構和語意經過精心設計，以符合各種細分使用案例和Platform中其他下游應用程式。 您也可以定義自己的自訂欄位群組，以滿足獨特的業務需求。
+Adobe Experience Platform提供一組強大的標準化[欄位群組](../schema/composition.md#field-group)，以用於體驗資料模型(XDM)結構描述。 這些欄位群組背後的結構和語意經過精心設計，以符合Experience Platform中的各種細分使用案例和其他下游應用程式。 您也可以定義自己的自訂欄位群組，以滿足獨特的業務需求。
 
 將欄位群組新增到結構描述時，該結構描述會繼承該群組包含的所有欄位。 不過，您現在可以將個別欄位新增到結構描述中，而無需包含關聯的欄位群組中，您可能不一定要使用的其他欄位。
 
-本指南說明在Platform UI中新增個別欄位至結構描述的不同方法。
+本指南說明在Experience Platform UI中新增個別欄位至結構描述的各種方法。
 
 ## 先決條件
 
-本教學課程假設您熟悉XDM結構描述的[構成](../schema/composition.md)，以及如何在Platform UI中使用結構描述編輯器。 若要繼續，您應該開始進行[建立新結構描述](./resources/schemas.md)並將其指派給標準類別的程式，然後再繼續本指南。
+本教學課程假設您熟悉XDM結構描述的[構成](../schema/composition.md)，以及如何在Experience Platform UI中使用結構描述編輯器。 若要繼續，您應該開始進行[建立新結構描述](./resources/schemas.md)並將其指派給標準類別的程式，然後再繼續本指南。
 
 ## 移除從標準欄位群組新增的欄位 {#remove-field-group}
 
@@ -111,4 +111,4 @@ Adobe Experience Platform提供一組強大的標準化[欄位群組](../schema/
 
 ## 後續步驟
 
-本指南涵蓋Platform UI中結構描述編輯器的全新欄位式工作流程。 如需在UI中管理結構描述的詳細資訊，請參閱[UI總覽](./overview.md)。
+本指南涵蓋Experience Platform UI中結構描述編輯器的全新欄位式工作流程。 如需在UI中管理結構描述的詳細資訊，請參閱[UI總覽](./overview.md)。

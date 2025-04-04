@@ -2,11 +2,11 @@
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地
 title: 電子郵件行銷目的地概觀
 type: Tutorial
-description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 瞭解哪些ESP受支援作為Experience Platform目的地。
+description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 瞭解哪些ESP支援做為Experience Platform目的地。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 4%
 
 ---
@@ -25,9 +25,9 @@ Adobe Experience Platform支援下列電子郵件行銷目的地：
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Mailchimp興趣類別](mailchimp-interest-categories.md)
 * [Mailchimp標籤](mailchimp-tags.md)
-* [(API)OracleEloqua](oracle-eloqua-api.md)
+* [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
-* [（檔案）OracleEloqua](oracle-eloqua.md)
+* [（檔案） Oracle Eloqua](oracle-eloqua.md)
 * [（檔案） [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
 * [Oracle Responsys](oracle-responsys.md)
@@ -35,7 +35,7 @@ Adobe Experience Platform支援下列電子郵件行銷目的地：
 
 ## 連線至新的電子郵件行銷目的地 {#connect-destination}
 
-若要將對象傳送至行銷活動的電子郵件行銷目的地，平台必須先連線至目的地。 如需設定新目的地的詳細資訊，請參閱[目的地建立教學課程](../../ui/connect-destination.md)。
+若要將對象傳送至行銷活動的電子郵件行銷目的地，Experience Platform必須先連線至目的地。 如需設定新目的地的詳細資訊，請參閱[目的地建立教學課程](../../ui/connect-destination.md)。
 
 ## 將受眾啟用至電子郵件行銷目的地的最佳實務 {#best-practices}
 
@@ -55,7 +55,7 @@ Adobe建議您從[聯合結構描述](../../../profile/home.md#profile-fragments
 
 在「結構描述」欄位選取器中，選擇要匯出至電子郵件目的地的其他欄位。 建議的選項包括：
 
-| 綱要 | XDM欄位 |
+| 結構描述 | XDM欄位 |
 |------ | ---------|
 | 名字 | `person.name.firstName` |
 | 姓氏 | `person.name.lastName` |

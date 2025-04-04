@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 事件結構描述的IAB TCF 2.0同意欄位群組
 description: 瞭解XDM ExperienceEvent類別的IAB TCF 2.0同意結構描述欄位群組。
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-如需此欄位群組使用案例的詳細資訊，請參閱Platform](../../../landing/governance-privacy-security/consent/iab/overview.md)中[IAB TCF 2.0支援指南。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
+如需此欄位群組使用案例的詳細資訊，請參閱Experience Platform](../../../landing/governance-privacy-security/consent/iab/overview.md)中[IAB TCF 2.0支援指南。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
 
 * [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料擷取；資料位置；資料位置；資料管理；歷程記錄；歷程記錄；批次；批次；擷取的資料
+keywords: Experience Platform；首頁；熱門主題；資料擷取；資料位置；資料管理；資料管理；譜系；譜系；批次；批次；擷取的資料
 solution: Experience Platform
 title: 資料擷取概觀
-description: 本檔案主要介紹將資料擷取到Platform的三種方式，並附有各自概述檔案的連結，以取得更詳細的資訊。
+description: 本檔案主要介紹將資料擷取到Experience Platform的三種方式，並附有各自概述檔案的連結，以取得更詳細的資訊。
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform將來自多個來源的資料彙集在一起，以協助行銷人員進一步瞭解客戶的行為。 Adobe Experience Platform資料擷取代表Experience Platform從這些來源擷取資料的多種方法，以及該資料如何儲存在資料湖中，以供下游Experience Platform服務使用。
 
-本檔案會介紹將資料擷取到Experience Platform的三種主要方式，並提供其各自概述檔案的連結，以取得更詳細的資訊。
+本檔案主要介紹將資料擷取到Experience Platform的三種方式，並附有各自概述檔案的連結，以取得更詳細的資訊。
 
 ## 批次擷取
 

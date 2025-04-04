@@ -1,18 +1,18 @@
 ---
-title: 搭配Platform Web SDK使用Adobe Journey Optimizer
-description: 瞭解如何使用Adobe Journey Optimizer以Experience Platform Web SDK呈現個人化內容
+title: 搭配使用Adobe Journey Optimizer與Experience Platform Web SDK
+description: 瞭解如何使用Adobe Journey Optimizer在Experience Platform Web SDK呈現個人化內容
 keywords: ajo；ajo網頁；adobe journey optimizer；renderDecisions；介面；決定；主張；範圍；結構
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
-# 搭配[!DNL Platform Web SDK]使用[!DNL Adobe Journey Optimizer]
+# 搭配[!DNL Experience Platform Web SDK]使用[!DNL Adobe Journey Optimizer]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Journey Optimizer]中管理的個人化體驗至Web Channel。 您可以使用WYSIWYG編輯器[!DNL Adobe Journey Optimizer] [Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)或非視覺化介面[程式碼式體驗管道](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)，來建立、啟用及傳遞您的[!DNL Journey Optimizer Web]行銷活動和個人化體驗。
+[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Journey Optimizer]中管理的個人化體驗至Web Channel。 您可以使用WYSIWYG編輯器[!DNL Adobe Journey Optimizer] [Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)或非視覺化介面[程式碼型體驗管道](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)，來建立、啟用及傳遞您的[!DNL Journey Optimizer Web]行銷活動和個人化體驗。
 
 >[!IMPORTANT]
 >
@@ -42,7 +42,7 @@ ht-degree: 0%
    })
    ```
 
-3. 可選擇在事件中指定其他介面。 根據預設，Web SDK會自動產生目前網頁的網頁表面，並將其包含在對Edge Network發出的請求中。 如有需要，可在`sendEvent`命令的`personalization.surfaces`選項中，或在Web SDK擴充功能的對應&#x200B;**[!UICONTROL Surfaces]** [[!UICONTROL 傳送事件]動作](../../../tags/extensions/client/web-sdk/action-types.md#send-event)設定中指定這些專案，以便在要求中包含其他介面。
+3. 可選擇在事件中指定其他介面。 根據預設，網頁SDK會自動產生目前網頁的網頁表面，並將其納入Edge Network要求中。 如有需要，可在`sendEvent`命令的`personalization.surfaces`選項中，或在Web SDK擴充功能的對應&#x200B;**[!UICONTROL Surfaces]** [[!UICONTROL 傳送事件]動作](../../../tags/extensions/client/web-sdk/action-types.md#send-event)設定中指定這些專案，以便在要求中包含其他介面。
 
    ```javascript
    alloy("sendEvent", {
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 如需詳細資訊，請參閱有關[呈現個人化內容](../rendering-personalization-content.md)的檔案。
 
-網頁介面的Adobe Journey Optimizer主張的處理方式與`__view__`決定範圍主張類似。 具體來說，當`sendEvent`命令中的`renderDecisions`選項設為`true`時，這些將會由Web SDK自動轉譯。
+網頁介面的Adobe Journey Optimizer主張的處理方式與`__view__`決定範圍主張類似。 具體來說，當`sendEvent`命令中的`renderDecisions`選項設定為`true`時，這些將會由網頁SDK自動轉譯。
 
 Journey Optimizer內容主張範例：
 

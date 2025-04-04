@@ -4,9 +4,9 @@ title: 即時客戶設定檔疑難排解指南
 type: Documentation
 description: 本檔案提供即時客戶個人檔案常見問題的解答，以及使用Adobe Experience Platform處理個人檔案資料時常見錯誤的疑難排解指南。
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '968'
 ht-degree: 1%
 
 ---
@@ -25,15 +25,15 @@ ht-degree: 1%
 
 設定檔接受&#x200B;**記錄**&#x200B;和&#x200B;**時間序列**&#x200B;資料，只要有關資料至少包含一個識別值，可將資料與不重複的個人建立關聯。
 
-和所有Platform服務一樣，設定檔需要其資料在Experience Data Model (XDM)結構描述下語義結構化。 反過來，此結構描述必須已定義&#x200B;**主要身分**，而且必須啟用才能在設定檔中使用。
+和所有Experience Platform服務一樣，設定檔需要其資料在Experience Data Model (XDM)結構描述下進行語義結構化。 反過來，此結構描述必須已定義&#x200B;**主要身分**，而且必須啟用才能在設定檔中使用。
 
 如果您不熟悉XDM，請從[XDM總覽](../xdm/home.md)開始瞭解更多。 接下來，請參閱XDM使用手冊，瞭解如何[設定身分識別欄位](../xdm/tutorials/create-schema-ui.md#identity-field)和[為設定檔](../xdm/tutorials/create-schema-ui.md#profile)啟用結構描述。
 
 ### 設定檔資料會儲存在哪裡？
 
-即時客戶個人檔案會維護自己的資料存放區（稱為「個人檔案存放區」），與包含其他內嵌Platform資料的資料湖分開。
+即時客戶個人檔案會維護自己的資料存放區（稱為「個人檔案存放區」），與包含其他已擷取Experience Platform資料的資料湖分開。
 
-### 如果我已經將資料內嵌至Platform，可以在設定檔存放區中使用嗎？
+### 如果我已經將資料內嵌至Experience Platform，可以在設定檔存放區中使用嗎？
 
 如果資料已內嵌至非設定檔資料集，您必須將該資料重新內嵌至已啟用設定檔的資料集，才能使其在設定檔存放區中使用。 可以為設定檔啟用現有資料集，但是在該設定之前擷取的任何資料仍將不會顯示在設定檔存放區中。
 
@@ -51,13 +51,13 @@ ht-degree: 1%
 
 #### 使用UI
 
-在Experience PlatformUI中，**[!UICONTROL 設定檔]**&#x200B;工作區中的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤可讓您檢視設定檔總計數，並依其身分值搜尋個別設定檔。 如需詳細資訊，請參閱[設定檔使用手冊](./ui/user-guide.md)。
+在Experience Platform UI中，**[!UICONTROL 設定檔]**&#x200B;工作區中的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤可讓您檢視設定檔總計數，並依其身分值搜尋個別設定檔。 如需詳細資訊，請參閱[設定檔使用手冊](./ui/user-guide.md)。
 
 您也可以在&#x200B;**[!UICONTROL 對象]**&#x200B;工作區的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤下檢視對象清單。 選取對象後，畫面會顯示符合該對象資格的設定檔範例。 然後，您可以選取這些列出的設定檔之一，以檢視其詳細資訊。 如需詳細資訊，請參閱[區段UI總覽](../segmentation/ui/overview.md)。
 
 ## 錯誤代碼
 
-以下是您在使用Real-time Customer Profile API時可能會遇到的錯誤訊息清單。 如果此處未列出您遇到的錯誤，您可以在一般[平台疑難排解指南](../landing/troubleshooting.md)中找到。
+以下是您在使用Real-time Customer Profile API時可能會遇到的錯誤訊息清單。 如果此處未列出您遇到的錯誤，您可以在一般[Experience Platform疑難排解指南](../landing/troubleshooting.md)中找到。
 
 ### 無法查詢所提供路徑之計算屬性的結構描述
 

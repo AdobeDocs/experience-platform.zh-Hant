@@ -3,16 +3,16 @@ keywords: Experience Platform；首頁；熱門主題；
 title: 資料準備疑難排解指南
 description: 本檔案提供有關Adobe Experience Platform資料準備常見問題的解答。
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: ff8f660c2b3a04d8b4b9d4f19891816a44069088
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Prep]疑難排解指南
 
-本檔案提供有關Adobe Experience Platform [!DNL Data Prep]常見問題的解答，以及常見錯誤的疑難排解指南。 如需Platform API的一般問題和疑難排解資訊，請參閱[Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform [!DNL Data Prep]常見問題的解答，以及常見錯誤的疑難排解指南。 如需Experience Platform API的一般問題和疑難排解資訊，請參閱[Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
 
 ## 常見問題集
 
@@ -98,7 +98,7 @@ iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | --- | --- | --- | --- | --- | --- |
 | iif | 評估給定的布林運算式，並根據結果傳回指定的值。 | <ul><li>運算式： **必要**&#x200B;正在評估的布林運算式。</li><li>TRUE_VALUE： **必要**&#x200B;如果運算式評估為true，則傳回的值。</li><li>FALSE_VALUE： **必要**&#x200B;運算式評估為false時所傳回的值。</li></ul> | iif（運算式， TRUE_VALUE， FALSE_VALUE） | iif(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;)， &quot;True&quot;， &quot;False&quot;) | &quot;True&quot; |
-| 等於 | 比較兩個字串以確認是否相等。 此函式區分大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。 | STRING1&#x200B;。equals(&#x200B;STRING2) | &quot;string1&quot;。 &#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
+| 等於 | 比較兩個字串以確認是否相等。 此函式區分大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。 | STRING1&#x200B;。equals(&#x200B;STRING2) | &quot;string1&quot;。 &#x200B;equals&#x200B;(&quot;STRING1&quot;) | 假 |
 | 無效 | 將屬性的值設定為null。 當您不想將欄位複製到目標結構描述時，就應該使用此專案。 | | nullify() | nullify() | Null |
 
 {style="table-layout:auto"}

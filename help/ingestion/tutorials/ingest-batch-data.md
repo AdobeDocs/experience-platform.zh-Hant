@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；擷取；擷取批次資料；教學課程；批次擷取；教學課程；ui指南；
 solution: Experience Platform
-title: 將資料擷取至Experience Platform
+title: 將資料內嵌至Experience Platform
 type: Tutorial
 description: Adobe Experience Platform可讓您以Parquet檔案的形式，輕鬆將資料匯入為批次檔案，或是符合已知Experience Data Model (XDM)架構的資料。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
 # 將資料內嵌至Adobe Experience Platform
 
-Adobe Experience Platform可讓您輕鬆將資料匯入[!DNL Platform]作為批次檔案。 要擷取的資料範例可能包括CRM系統中平面檔案（例如Parquet檔案）的設定檔資料，或是符合結構描述登入中已知[!DNL Experience Data Model] (XDM)結構描述的資料。
+Adobe Experience Platform可讓您輕鬆將資料匯入[!DNL Experience Platform]作為批次檔案。 要擷取的資料範例可能包括CRM系統中平面檔案（例如Parquet檔案）的設定檔資料，或是符合結構描述登入中已知[!DNL Experience Data Model] (XDM)結構描述的資料。
 
 ## 快速入門
 
@@ -80,7 +80,7 @@ Adobe Experience Platform可讓您輕鬆將資料匯入[!DNL Platform]作為批�
 
 ## 為[!DNL Real-Time Customer Profile]啟用資料集
 
-資料集用於將資料擷取到[!DNL Experience Platform]，而該資料最終用於識別個人並將來自多個來源的資訊拼接在一起。 該拼接資訊稱為[!DNL Real-Time Customer Profile]。 為了讓[!DNL Platform]知道哪些資訊應包含在[!DNL Real-Time Profile]中，可以使用&#x200B;**[!UICONTROL 設定檔]**&#x200B;切換將資料集標示為包含。
+資料集用於將資料擷取到[!DNL Experience Platform]，而該資料最終用於識別個人並將來自多個來源的資訊拼接在一起。 該拼接資訊稱為[!DNL Real-Time Customer Profile]。 為了讓[!DNL Experience Platform]知道哪些資訊應包含在[!DNL Real-Time Profile]中，可以使用&#x200B;**[!UICONTROL 設定檔]**&#x200B;切換將資料集標示為包含。
 
 依預設，此切換為關閉。 如果您選擇開啟[!DNL Profile]，所有擷取到資料集中的資料都將用於協助識別個人並將其[!DNL Real-Time Profile]拼接在一起。
 
@@ -106,13 +106,13 @@ Adobe Experience Platform可讓您輕鬆將資料匯入[!DNL Platform]作為批�
 
 >[!NOTE]
 >
->Platform支援兩種檔案型別以進行資料擷取：Parquet或JSON。 您一次最多可以新增5個檔案，每個檔案的大小上限為1 GB。
+>Experience Platform支援兩種檔案型別以進行資料擷取：Parquet或JSON。 您一次最多可以新增5個檔案，每個檔案的大小上限為1 GB。
 
 ![新增資料索引標籤](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## 上傳檔案 {#upload-file}
 
-拖放（或瀏覽並選取）您要上傳的Parquet或JSON檔案後，[!DNL Platform]將立即開始處理該檔案，且&#x200B;**[!UICONTROL 新增資料]**&#x200B;索引標籤上將會顯示&#x200B;**[!UICONTROL 上傳]**&#x200B;對話方塊，顯示檔案上傳的進度。
+拖放（或瀏覽並選取）您要上傳的Parquet或JSON檔案後，[!DNL Experience Platform]將立即開始處理該檔案，且&#x200B;**[!UICONTROL 新增資料]**&#x200B;索引標籤上將會顯示&#x200B;**[!UICONTROL 上傳]**&#x200B;對話方塊，顯示檔案上傳的進度。
 
 ![正在上傳對話方塊](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -150,6 +150,6 @@ Adobe Experience Platform可讓您輕鬆將資料匯入[!DNL Platform]作為批�
 
 >[!WARNING]
 >
->下列影片中顯示的[!DNL Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
+>下列影片中顯示的[!DNL Experience Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

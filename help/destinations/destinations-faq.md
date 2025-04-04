@@ -1,20 +1,20 @@
 ---
 keywords: 目的地；問題；常見問題；faq；目的地常見問題
-title: 常見問答
+title: 常見問題
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1675'
 ht-degree: 0%
 
 ---
 
-# 常見問答 {#faq}
+# 常見問題 {#faq}
 
 ## 概觀 {#overview}
 
-本檔案提供有關Adobe Experience Platform目的地的常見問題解答。 有關其他[!DNL Platform]服務的相關問題和疑難排解，包括所有[!DNL Platform] API中遇到的問題，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform目的地的常見問題解答。 有關其他[!DNL Experience Platform]服務的相關問題和疑難排解，包括所有[!DNL Experience Platform] API中遇到的問題，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
 ## 一般目的地問題 {#general}
 
@@ -107,24 +107,24 @@ See the table below for a feature comparison between the Experience Cloud Audien
 不適用。 由於這不是以畫素為基礎的整合，因此不需要將任何畫素新增至您的廣告商帳戶。
 +++
 
-### facebook需要多久才能處理來自Adobe Experience Platform的資訊？
+### Facebook需要多久才能處理來自Adobe Experience Platform的資訊？
 
 +++回答
-自2021年3月起，[!DNL Facebook Custom Audiences]最多需要一小時來處理從[!DNL Platform]收到的資訊。
+自2021年3月起，[!DNL Facebook Custom Audiences]最多需要一小時來處理從[!DNL Experience Platform]收到的資訊。
 +++
 
 ### 我可以將[!DNL Facebook Custom Audiences]用於其他[!DNL Facebook]應用程式（例如[!DNL Instagram]）中的對象鎖定目標嗎？
 
 +++Amswer
-您可以在[!DNL Facebook Custom Audiences]支援的Facebook應用程式系列（包括[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]和[!DNL Messenger]）中，使用[!DNL Facebook Custom Audiences]目的地進行對象目標定位。 在[!DNL Facebook Ads Manager]中的版位層級會指出廣告商要在其上執行行銷活動的選取應用程式。
+您可以使用[!DNL Facebook Custom Audiences]目的地，在[!DNL Facebook Custom Audiences]支援的Facebook應用程式系列中鎖定受眾，包括[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]和[!DNL Messenger]。 在[!DNL Facebook Ads Manager]中的版位層級會指出廣告商要在其上執行行銷活動的選取應用程式。
 +++
 
 ### [!DNL Facebook Custom Audiences]連線與[!DNL Facebook Pixel]延伸之間有何差異？
 
 +++回答
-傳送對象至[!DNL Facebook]時，[!DNL Facebook Custom Audiences]連線使用[!DNL Platform]身分，而[[!DNL Facebook Pixel] 連線](../destinations/catalog/advertising/facebook-pixel.md)使用整合在網站中的[!DNL Facebook]畫素。
+傳送對象至[!DNL Facebook]時，[!DNL Facebook Custom Audiences]連線使用[!DNL Experience Platform]身分，而[[!DNL Facebook Pixel] 連線](../destinations/catalog/advertising/facebook-pixel.md)使用整合在網站中的[!DNL Facebook]畫素。
 
-這兩項整合相輔相成，您可以同時使用兩者來確保受眾涵蓋範圍更廣。 例如，您可以使用[!DNL Facebook Pixel]擴充功能來協助尚未建立帳戶的潛在網站訪客，而[!DNL Facebook Custom Audiences]則可協助您根據[!DNL Platform]身分鎖定現有客戶。
+這兩項整合相輔相成，您可以同時使用兩者來確保受眾涵蓋範圍更廣。 例如，您可以使用[!DNL Facebook Pixel]擴充功能來協助尚未建立帳戶的潛在網站訪客，而[!DNL Facebook Custom Audiences]則可協助您根據[!DNL Experience Platform]身分鎖定現有客戶。
 +++
 
 ### Adobe Experience Platform與[!DNL Facebook Custom Audiences]的整合是否支援在使用者不再符合受眾資格時，取消其受眾資格?**
@@ -147,10 +147,10 @@ See the table below for a feature comparison between the Experience Cloud Audien
 [!DNL Facebook Custom Audiences]支援啟用下列身分識別：雜湊電子郵件、雜湊電話號碼、[!DNL GAID]、[!DNL IDFA]和自訂外部ID。
 +++
 
-### 我可以為個別的Facebook帳戶在Platform UI中建立多個Facebook目的地嗎？
+### 我可以為個別的Facebook帳戶在Experience Platform UI中建立多個Facebook目的地嗎？
 
 +++回答
-是。 Experience Platform中的Facebook目的地與Facebook中的廣告帳戶之比是1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 遵循[目的地連線教學課程](/help/destinations/ui/connect-destination.md)，針對Platform UI中的每個新Facebook目的地，連線至個別的Facebook帳戶。 您可以連線的Facebook廣告帳戶數量沒有限制。
+是。 Experience Platform中的Facebook目的地與Facebook中的廣告帳戶的比率是1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 遵循[目的地連線教學課程](/help/destinations/ui/connect-destination.md)，並在Experience Platform UI中為每個新的Facebook目的地連線至個別的Facebook帳戶。 您可以連線的Facebook廣告帳戶數量沒有限制。
 +++
 
 ## Google 目標客戶比對 {#google-customer-match}
@@ -161,7 +161,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 Google要求對象名稱必須是唯一的。 如果您將相同的對象對應到多個Google目的地，您看到的數字是[UNIX時間戳記](https://www.unixtimestamp.com/)，並附加這些數字以保持對象名稱的唯一性。
 +++
 
-## linkedIn相符的受眾 {#linkedin}
+## LinkedIn相符對象 {#linkedin}
 
 ### 我需要將任何應用程式或畫素新增到我的[!DNL LinkedIn]廣告商帳戶嗎？
 
@@ -174,7 +174,7 @@ Google要求對象名稱必須是唯一的。 如果您將相同的對象對應�
 +++回答
 使用[!UICONTROL LinkedIn相符對象]目的地之前，請先確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]或更高的許可權等級。
 
-若要瞭解如何編輯您的[!DNL LinkedIn Campaign Manager]使用者許可權，請參閱LinkedIn檔案中的[在Advertising帳戶上新增、編輯和移除使用者許可權](https://www.linkedin.com/help/lms/answer/5753)。
+若要瞭解如何編輯您的[!DNL LinkedIn Campaign Manager]使用者許可權，請參閱LinkedIn檔案中的[新增、編輯及移除Advertising帳戶的使用者許可權](https://www.linkedin.com/help/lms/answer/5753)。
 +++
 
 ### 在傳送對象資料給[!DNL LinkedIn]之前，該如何先將對象資料雜湊化？
@@ -194,17 +194,17 @@ Google要求對象名稱必須是唯一的。 如果您將相同的對象對應�
 
 ## 透過Adobe Target和自訂Personalization目的地實現相同頁面和下一頁個人化 {#same-next-page-personalization}
 
-### 我是否需要使用Experience Platform Web SDK傳送對象和屬性至Adobe Target？
+### 我是否需要使用Experience Platform Web SDK將對象和屬性傳送至Adobe Target？
 
 +++回答
 否，[不需要Web SDK](../web-sdk/home.md)才能為[Adobe Target](catalog/personalization/adobe-target-connection.md)啟用對象。
 
-不過，如果使用[[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)而非Web SDK，則僅支援下一次工作階段個人化。
+不過，如果使用[[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)來代替Web SDK，則僅支援下一次工作階段個人化。
 
-針對[相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md)使用案例，您必須使用[Web SDK](../web-sdk/home.md)或[Edge Network伺服器API](../server-api/overview.md)。 如需更多實作詳細資訊，請參閱有關[將對象啟用至邊緣目的地](ui/activate-edge-personalization-destinations.md)的檔案。
+針對[相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md)使用案例，您必須使用[網頁SDK](../web-sdk/home.md)或[Edge Network伺服器API](../server-api/overview.md)。 如需更多實作詳細資訊，請參閱有關[將對象啟用至邊緣目的地](ui/activate-edge-personalization-destinations.md)的檔案。
 +++
 
-### 我可以從Real-time Customer Data Platform傳送至Adobe Target或自訂Personalization目的地的屬性數量是否有限制？
+### 我可以從Real-time Customer Data Platform傳送到Adobe Target或自訂Personalization目的地的屬性數量是否有限制？
 
 +++回答
 可以，在Adobe Target或自訂Personalization目的地啟用受眾時，同頁和下一頁個人化使用案例支援每個沙箱最多30個屬性。 請參閱[護欄檔案](guardrails.md#edge-destinations-activation)中有關啟動護欄的詳細資訊。
@@ -220,7 +220,7 @@ Google要求對象名稱必須是唯一的。 如果您將相同的對象對應�
 
 Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
 
-### 我在Experience Platform中建立對象後，需要多久才能供邊緣細分使用案例使用？
+### 在Experience Platform中建立受眾後，需要多久才能供邊緣細分使用案例使用？
 
 +++回答
 對象定義最多可在一小時內傳播至[Edge Network](../web-sdk/home.md)。 但是，如果對象在這第一個小時內啟動，可能會錯過一些符合對象資格的訪客。
@@ -235,13 +235,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### 我可以建立沒有資料串流的目的地，然後在稍後將資料串流新增到相同目的地嗎？
 
 +++回答
-目前不支援透過目的地UI執行此操作。 如果您需要這方面的協助，請洽詢您的Adobe代表。
+目前不支援透過目的地UI執行此操作。 如果您需要此情況下的協助，請洽詢您的Adobe代表。
 +++
 
 ### 如果我刪除Adobe Target目的地，會發生什麼事？
 
 +++回答
-當您刪除目的地時，對應至目的地的所有對象和屬性都會從Adobe Target中刪除，也會從Edge Network中移除。
+當您刪除目的地時，對應至目的地的所有對象和屬性都會從Adobe Target中刪除，同時也會從Edge Network中移除。
 +++
 
 ### 整合是否可使用Edge Network伺服器API運作？

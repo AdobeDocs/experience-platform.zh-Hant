@@ -2,12 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；原則執行；API型執行；資料控管
 solution: Experience Platform
 title: 資料控管原則API端點
-description: 資料治理原則是您的組織採用的規則，可說明允許或限制您在Experience Platform內對資料執行的行銷動作型別。 /policies端點用於與檢視、建立、更新或刪除資料治理原則相關的所有API呼叫。
+description: 資料治理原則是您的組織採用的規則，可說明允許或限制您在Experience Platform中對資料執行的行銷動作型別。 /policies端點用於與檢視、建立、更新或刪除資料治理原則相關的所有API呼叫。
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1864'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->治理原則不應與存取控制原則混淆，存取控制原則會決定貴組織中特定Platform使用者可存取的特定資料屬性。 如需如何以程式設計方式管理存取控制原則的詳細資訊，請參閱[存取控制API](../../access-control/abac/api/policies.md)的`/policies`端點指南。
+>治理原則不應與存取控制原則混淆，存取控制原則會決定貴組織中特定Experience Platform使用者可存取的特定資料屬性。 如需如何以程式設計方式管理存取控制原則的詳細資訊，請參閱[存取控制API](../../access-control/abac/api/policies.md)的`/policies`端點指南。
 
 ## 快速入門
 
@@ -478,7 +478,7 @@ curl -X PUT \
 >
 >您只能更新自訂原則。 如果要啟用或停用核心原則，請參閱[更新已啟用的核心原則清單](#update-enabled-core)中的章節。
 
-可以使用PATCH請求更新原則的特定部分。 不同於重寫原則的PUT要求，PATCH要求只更新要求內文中指定的屬性。 當您想要啟用或停用原則時，這個功能特別有用，因為您只需要提供適當屬性(`/status`)及其值（`ENABLED`或`DISABLED`）的路徑。
+原則的特定部分可使用PATCH請求進行更新。 不同於重寫原則的PUT要求，PATCH要求僅更新要求內文中指定的屬性。 當您想要啟用或停用原則時，這個功能特別有用，因為您只需要提供適當屬性(`/status`)及其值（`ENABLED`或`DISABLED`）的路徑。
 
 >[!NOTE]
 >
@@ -580,7 +580,7 @@ curl -X PATCH \
 
 >[!WARNING]
 >
->一旦刪除，原則就無法復原。 最佳實務是先[執行查詢(GET)要求](#lookup)以檢視原則，並確認它是您要移除的正確原則。
+>一旦刪除，原則就無法復原。 最佳實務是先[執行查詢(GET)請求](#lookup)以檢視原則，並確認它是您要移除的正確原則。
 
 **API格式**
 
@@ -607,7 +607,7 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態200 （確定），並帶有空白內文。
 
-您可以再次嘗試查閱(GET)原則以確認刪除。 如果原則已成功刪除，您應該會收到HTTP 404 （找不到）錯誤。
+您可以再次嘗試查詢(GET)原則以確認刪除。 如果原則已成功刪除，您應該會收到HTTP 404 （找不到）錯誤。
 
 ## 擷取已啟用的核心原則清單 {#list-enabled-core}
 
@@ -663,7 +663,7 @@ curl -X GET \
 
 ## 更新已啟用的核心原則清單 {#update-enabled-core}
 
-依預設，只有已啟用的資料治理原則會參與評估。 透過向`/enabledCorePolicies`端點發出PUT要求，您可以使用單一呼叫來更新貴組織的已啟用核心原則清單。
+依預設，只有已啟用的資料治理原則會參與評估。 透過向`/enabledCorePolicies`端點發出PUT請求，您可以使用單一呼叫來更新貴組織的已啟用核心原則清單。
 
 >[!NOTE]
 >

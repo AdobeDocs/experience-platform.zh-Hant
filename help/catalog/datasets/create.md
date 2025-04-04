@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用API建立資料集
 description: 本檔案提供使用Adobe Experience Platform API建立資料集以及使用檔案填入資料集的一般步驟。
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1302'
 ht-degree: 6%
@@ -21,9 +21,9 @@ ht-degree: 6%
 
 * [批次內嵌](../../ingestion/batch-ingestion/overview.md)： [!DNL Experience Platform]可讓您將資料內嵌為批次檔案。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Platform] API。
+下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Experience Platform] API。
 
 ### 讀取範例 API 呼叫
 
@@ -31,19 +31,19 @@ ht-degree: 6%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有包含裝載(POST、PUT、PATCH)的要求都需要額外`Content-Type: application/json`標題。 若為JSON+PATCH要求，`Content-Type`應為`application/json-patch+json`。
 
@@ -466,7 +466,7 @@ curl -X GET \
 
 ## 更新資料集結構
 
-您可以新增欄位，並將其他資料擷取到您建立的資料集中。 若要這麼做，您首先需要透過新增定義新資料的其他屬性來更新結構。 這可以使用PATCH和/或PUT操作來更新現有結構描述來完成。
+您可以新增欄位，並將其他資料擷取到您建立的資料集中。 若要這麼做，您首先需要透過新增定義新資料的其他屬性來更新結構。 您可以使用PATCH和/或PUT作業來更新現有結構描述來完成此操作。
 
 如需更新結構描述的詳細資訊，請參閱[結構描述登入API開發人員指南](../../xdm/api/getting-started.md)。
 

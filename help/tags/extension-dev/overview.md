@@ -2,10 +2,10 @@
 title: 擴充功能開發概述
 description: 了解關於不同標記擴充功能類型的主要元件，以及 Adobe Experience Platform 中的擴充功能開發程序。
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 18%
+source-wordcount: '938'
+ht-degree: 23%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
-Adobe Experience Platform中標籤的主要目標之一，是建立開放的生態系統，讓Adobe以外的工程師能夠在其網站和行動應用程式上公開其他功能。 這可透過標籤擴充功能來完成。 將擴充功能安裝在標籤屬性上後，該擴充功能即可供屬性的所有使用者使用。
+Adobe Experience Platform標籤的主要目標之一，是建立開放的生態系統，讓Adobe以外的工程師能夠在其網站和行動應用程式上公開其他功能。 這可透過標籤擴充功能來完成。 將擴充功能安裝在標籤屬性上後，該擴充功能即可供屬性的所有使用者使用。
 
 本檔案會概述擴充功能的主要元件，並提供進一步檔案的連結，以協助您進行擴充功能開發程式。
 
@@ -37,13 +37,13 @@ Adobe Experience Platform中標籤的主要目標之一，是建立開放的生�
 
 ### 檢視
 
-檢視是HTML檔案，能夠載入標籤應用程式中的[`iframe`元素](https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/iframe)，特別是透過Platform UI和Data Collection UI。 檢視必須包含擴充功能提供的指令碼，並符合小型API，才能與應用程式通訊。
+檢視是HTML檔案，能夠載入標籤應用程式中的[`iframe`元素](https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/iframe)，特別是透過Experience Platform UI和資料收集UI。 檢視必須包含擴充功能提供的指令碼，並符合小型API，才能與應用程式通訊。
 
 任何擴充功能最重要的檢視檔案是其設定。 如需詳細資訊，請參閱[擴充功能組態](#configuration)的相關章節。
 
 您的檢視中並沒有可用程式庫的限制。換言之，您可以使用jQuery、Underscore、React、Angular、Bootstrap或其他。 不過，仍建議您讓擴充功能具有類似於UI的外觀和風格。
 
-建議您將所有檢視相關檔案 (HTML、CSS、JavaScript) 放在與程式庫模組檔案不同的單一子目錄中。在`extension.json`中，您可以說明此檢視子目錄的位置。 然後，Platform將從其Web伺服器為此子目錄（僅此子目錄）提供服務。
+建議您將所有檢視相關檔案 (HTML、CSS、JavaScript) 放在與程式庫模組檔案不同的單一子目錄中。在`extension.json`中，您可以說明此檢視子目錄的位置。 Experience Platform將從其Web伺服器為此子目錄（僅此子目錄）提供服務。
 
 ## 程式庫元件 {#components}
 
@@ -93,4 +93,4 @@ Adobe Experience Platform中標籤的主要目標之一，是建立開放的生�
 
 ## 提交擴充功能
 
-當您完成擴充功能的建置後，可以將其提交，以列在Platform的擴充功能目錄中。 如需詳細資訊，請參閱[擴充功能提交程式概觀](./submit/overview.md)。
+擴充功能建置完成後，您可以提交該擴充功能，以列在Experience Platform的擴充功能目錄中。 如需詳細資訊，請參閱[擴充功能提交程式概觀](./submit/overview.md)。

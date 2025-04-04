@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查詢；查詢編輯器；查詢編輯器；查詢編輯器；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢；查詢編輯器；查詢編輯器；查詢編輯器；
 solution: Experience Platform
 title: 查詢服務UI指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 
 - **[[!UICONTROL 資料探索]](../use-cases/data-exploration.md)**：瞭解如何使用SQL探索、疑難排解及驗證批次擷取的資料。
 - **[[!UICONTROL Experience Platform應用程式的衍生資料集]](../data-distiller/derived-datasets/overview.md)**：瞭解如何建立衍生資料集，以支援複雜而多樣的使用案例，讓您的資料公用程式發揮最大效用。
-- **[[!UICONTROL AI/ML管道]](../data-distiller/ml-feature-pipelines/overview.md)**：瞭解您偏好的機器學習工具背後的重要概念，以及如何建立可支援行銷使用案例的自訂模型。 本系列指南說明建置功能管道的必要步驟，這些管道會準備來自Experience Platform的資料，以饋送機器學習環境中的自訂模型。
+- **[[!UICONTROL AI/ML管道]](../data-distiller/ml-feature-pipelines/overview.md)**：瞭解您偏好的機器學習工具背後的重要概念，以及如何建立可支援行銷使用案例的自訂模型。 本系列指南說明建置功能管道的必要步驟，這些管道會準備來自Experience Platform的資料，以饋送您機器學習環境中的自訂模型。
 - **[[!UICONTROL SQL深入分析]](../data-distiller/sql-insights/overview.md)**：瞭解使用Data Distiller從SQL開發深入分析儀表板的主要功能和必要步驟。
 
 ![已反白顯示資料Distiller功能區段的查詢服務工作區。](../images/ui/overview/data-distiller-capabilities.png)
@@ -142,7 +142,7 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 | **[!UICONTROL 修改者]** | 上次修改查詢的使用者。 貴組織中有權存取Query Service的任何使用者都可以修改查詢。 |
 | **[!UICONTROL 上次修改時間]** | 上次修改查詢的日期和時間，以瀏覽器的時區表示。 |
 
-請參閱[查詢範本](./query-templates.md)檔案，以取得有關Platform UI中範本的詳細資訊。
+請參閱[查詢範本](./query-templates.md)檔案，以取得有關Experience Platform UI中範本的詳細資訊。
 
 ## 記錄檔 {#log}
 
@@ -174,4 +174,4 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 
 ## 後續步驟
 
-現在您已經熟悉[!DNL Platform]上的查詢服務使用者介面，您可以存取查詢編輯器以開始建立您自己的查詢專案，與組織中的其他使用者共用。 如需有關在查詢編輯器中編寫和執行查詢的詳細資訊，請參閱[查詢編輯器使用手冊](./user-guide.md)。
+現在您已經熟悉[!DNL Experience Platform]上的查詢服務使用者介面，您可以存取查詢編輯器以開始建立您自己的查詢專案，與組織中的其他使用者共用。 如需有關在查詢編輯器中編寫和執行查詢的詳細資訊，請參閱[查詢編輯器使用手冊](./user-guide.md)。

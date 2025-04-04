@@ -2,9 +2,9 @@
 title: 使用流量服務API將資料登陸區域連線至Adobe Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至資料登陸區域。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1419'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->此頁面是Experience Platform中[!DNL Data Landing Zone] *來源*&#x200B;聯結器的專屬頁面。 如需有關連線至[!DNL Data Landing Zone] *目的地*&#x200B;聯結器的資訊，請參閱[[!DNL Data Landing Zone] 目的地檔案頁面](/help/destinations/catalog/cloud-storage/data-landing-zone.md)。
+>此頁面特定於Experience Platform中的[!DNL Data Landing Zone] *來源*&#x200B;聯結器。 如需有關連線至[!DNL Data Landing Zone] *目的地*&#x200B;聯結器的資訊，請參閱[[!DNL Data Landing Zone] 目的地檔案頁面](/help/destinations/catalog/cloud-storage/data-landing-zone.md)。
 
 [!DNL Data Landing Zone]是安全的雲端型檔案儲存裝置，可將檔案帶入Adobe Experience Platform。 資料會在七天後自動從[!DNL Data Landing Zone]中刪除。
 
@@ -21,12 +21,12 @@ ht-degree: 3%
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Experience Platform元件：
+本指南需要您深入瞭解下列Experience Platform元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-本教學課程也要求您閱讀[平台API快速入門](../../../../../landing/api-guide.md)的指南，瞭解如何驗證平台API並解譯檔案中提供的範例呼叫。
+本教學課程也要求您閱讀[Experience Platform API快速入門](../../../../../landing/api-guide.md)的指南，瞭解如何驗證Experience Platform API並解譯檔案中提供的範例呼叫。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功建立[!DNL Data Landing Zone]來源連線。
 
@@ -104,7 +104,7 @@ curl -X GET \
 
 ## 擷取[!DNL Data Landing Zone]認證
 
-若要擷取[!DNL Data Landing Zone]的認證，請向[!DNL Connectors] API的`/credentials`端點提出GET要求。
+若要擷取[!DNL Data Landing Zone]的認證，請向[!DNL Connectors] API的`/credentials`端點提出GET請求。
 
 **API格式**
 
@@ -287,7 +287,7 @@ public class Main {
 
 ## 更新[!DNL Data Landing Zone]認證
 
-您可以向[!DNL Connectors] API的`/credentials`端點發出POST要求，以更新您的`SASToken`。
+您可以對[!DNL Connectors] API的`/credentials`端點發出POST要求，以更新您的`SASToken`。
 
 **API格式**
 
@@ -385,7 +385,7 @@ curl -X GET \
 
 ## 預覽登陸區域檔案結構和內容
 
-若要檢查登入區域中的檔案結構，請在提供檔案路徑並輸入作為查詢引數的同時，執行GET要求。
+若要檢查登入區域中的檔案結構，請在提供檔案路徑及輸入作為查詢引數的同時，執行GET要求。
 
 **API格式**
 
@@ -479,7 +479,7 @@ curl -X GET \
 
 ### 使用`determineProperties`自動偵測[!DNL Data Landing Zone]的檔案屬性資訊
 
-當進行GET呼叫以探索您來源的內容和結構時，您可以使用`determineProperties`引數自動偵測[!DNL Data Landing Zone]之檔案內容的內容資訊。
+進行GET呼叫以探索您來源的內容和結構時，您可以使用`determineProperties`引數自動偵測[!DNL Data Landing Zone]之檔案內容的屬性資訊。
 
 #### `determineProperties`個使用案例
 
@@ -619,7 +619,7 @@ curl -X GET \
 
 來源連線會建立和管理與擷取資料的外部來源的連線。 來源連線包含資料來源、資料格式以及建立資料流所需的來源連線ID等資訊。 租使用者和組織專屬的來源連線例項。
 
-若要建立來源連線，請向[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
+若要建立來源連線，請對[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
 
 
 **API格式**
@@ -656,8 +656,8 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | [!DNL Data Landing Zone]來源連線的名稱。 |
-| `data.format` | 您要帶到Platform的資料格式。 |
-| `params.path` | 您要帶到Platform的檔案路徑。 |
+| `data.format` | 您要帶入Experience Platform的資料格式。 |
+| `params.path` | 您要帶入Experience Platform的檔案路徑。 |
 | `connectionSpec.id` | 對應至[!DNL Data Landing Zone]的連線規格識別碼。 此固定ID為： `26f526f2-58f4-4712-961d-e41bf1ccc0e8`。 |
 
 **回應**
@@ -673,4 +673,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已擷取您的[!DNL Data Landing Zone]認證、探索其檔案結構以尋找您要帶到Platform的檔案，並建立來源連線以開始將您的資料帶到Platform。 您現在可以繼續進行下一個教學課程，您將瞭解如何[建立資料流，以使用 [!DNL Flow Service] API](../../collect/cloud-storage.md)將雲端儲存空間資料帶入Platform。
+依照本教學課程所述，您已擷取您的[!DNL Data Landing Zone]認證、探索其檔案結構以尋找您要帶入Experience Platform的檔案，並建立來源連線以開始將您的資料帶入Experience Platform。 您現在可以繼續進行下一個教學課程，您將瞭解如何[建立資料流，以使用 [!DNL Flow Service] API](../../collect/cloud-storage.md)將雲端儲存空間資料帶入Experience Platform。

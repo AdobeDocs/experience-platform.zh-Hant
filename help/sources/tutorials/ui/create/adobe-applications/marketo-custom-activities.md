@@ -1,10 +1,10 @@
 ---
-title: 在UI中建立自訂活動資料的Source連線和資料流Marketo Engage
+title: 在UI中為自訂活動資料建立Marketo Engage Source連線和資料流
 description: 本教學課程提供在UI中建立Marketo Engage來源連線和資料流的步驟，以便將自訂活動資料引進Adobe Experience Platform。
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1477'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本教學課程提供如何設定並將&#x200B;**自訂活動**&#x200B;資料從[!DNL Marketo]帶入Experience Platform的特定步驟。 如需如何匯入&#x200B;**標準活動**&#x200B;資料的步驟，請閱讀[[!DNL Marketo] UI指南](./marketo.md)。
+>本教學課程提供如何設定並將&#x200B;**自訂活動**&#x200B;資料從[!DNL Marketo]帶到Experience Platform的特定步驟。 如需如何匯入&#x200B;**標準活動**&#x200B;資料的步驟，請閱讀[[!DNL Marketo] UI指南](./marketo.md)。
 
 除了[標準活動](../../../../connectors/adobe-applications/mapping/marketo.md#activities)之外，您也可以使用[!DNL Marketo]來源將自訂活動資料帶入Adobe Experience Platform。 本檔案提供如何在UI中使用[!DNL Marketo]來源建立自訂活動資料的來源連線和資料流的步驟。
 
@@ -22,16 +22,16 @@ ht-degree: 0%
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
 * [B2B名稱空間與結構描述自動產生公用程式](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md)： B2B名稱空間與結構描述自動產生公用程式可讓您使用[!DNL Postman]自動產生B2B名稱空間與結構描述的值。 您必須先完成B2B名稱空間和結構描述，才能建立[!DNL Marketo]來源連線和資料流。
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [體驗資料模型(XDM)](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [體驗資料模型(XDM)](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [在UI中建立和編輯結構描述](../../../../../xdm/ui/resources/schemas.md)：瞭解如何在UI中建立和編輯結構描述。
 * [身分識別名稱空間](../../../../../identity-service/features/namespaces.md)：身分識別名稱空間是[!DNL Identity Service]的元件，用來做為身分識別相關內容的指標。 完整身分包含ID值和名稱空間。
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 擷取您的自訂活動詳細資料
 
-將自訂活動資料從[!DNL Marketo]引進Experience Platform的第一個步驟是擷取API名稱和自訂活動的顯示名稱。
+將自訂活動資料從[!DNL Marketo]引進Experience Platform的第一步是擷取API名稱和自訂活動的顯示名稱。
 
 使用[[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1)介面登入您的帳戶。 在左側導覽列中的[!DNL Database Management]下方，選取&#x200B;**Marketo自訂活動**。
 
@@ -41,17 +41,17 @@ ht-degree: 0%
 
 從頂端標題選取&#x200B;**欄位**&#x200B;以檢視與自訂活動相關聯的欄位。 在此頁面中，您可以檢視自訂活動中欄位的名稱、API名稱、說明和資料型別。 有關個別欄位的詳細資訊將在建立結構描述時的後續步驟中使用。
 
-![Marketo EngageUI中的Marketo自訂活動欄位詳細資訊頁面。](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
+![Marketo Engage UI中的Marketo自訂活動欄位詳細資訊頁面。](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
 
 ## 在B2B活動結構中設定自訂活動的欄位群組
 
-在Experience PlatformUI的&#x200B;*[!UICONTROL 結構描述]*&#x200B;儀表板中，選取&#x200B;**[!UICONTROL 瀏覽]**，然後從結構描述清單中選取&#x200B;**[!UICONTROL B2B活動]**。
+在Experience Platform UI的&#x200B;*[!UICONTROL 結構描述]*&#x200B;儀表板中，選取&#x200B;**[!UICONTROL 瀏覽]**，然後從結構描述清單中選取&#x200B;**[!UICONTROL B2B活動]**。
 
 >[!TIP]
 >
 >使用搜尋列可加快您在方案清單中的導覽。
 
-![已選取B2B活動結構描述的Experience PlatformUI中的結構描述工作區。](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
+![已選取B2B活動結構描述的Experience Platform UI中的結構描述工作區。](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
 
 ### 為自訂活動建立新的欄位群組
 
@@ -91,13 +91,13 @@ ht-degree: 0%
 
 結構描述設定完成後，您現在可以繼續為自訂活動資料建立資料流。
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋列來尋找您要使用的特定來源。
 
 在[!UICONTROL Adobe應用程式]類別下，選取&#x200B;**[!UICONTROL Marketo Engage]**。 然後，選取&#x200B;**[!UICONTROL 新增資料]**&#x200B;以建立新的[!DNL Marketo]資料流。
 
-![已選取Marketo Engage來源的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/marketo/catalog.png)
+![已選取Marketo Engage來源的Experience Platform UI上的來源目錄。](../../../../images/tutorials/create/marketo/catalog.png)
 
 ### 選取資料
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 
 ![來源與目標資料的所有對應。](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
 
-### 檢閱
+### 審核
 
 *[!UICONTROL 檢閱]*&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
 
@@ -154,7 +154,7 @@ ht-degree: 0%
 
 資料流完成後，您可以使用[查詢服務](../../../../../query-service/home.md)來篩選自訂活動資料的活動。
 
-將自訂活動內嵌到Platform中時，自訂活動的API名稱會自動變成其`eventType`。 使用`eventType={API_NAME}`篩選自訂活動資料。
+將自訂活動內嵌至Experience Platform時，自訂活動的API名稱會自動變成其`eventType`。 使用`eventType={API_NAME}`篩選自訂活動資料。
 
 ```sql
 SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
@@ -169,8 +169,8 @@ SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCus
 
 下圖顯示[查詢編輯器](../../../../../query-service/ui/user-guide.md)中篩選自訂活動資料的範例SQL陳述式。
 
-![顯示自訂活動查詢範例的平台UI。](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
+![Experience Platform UI顯示自訂活動的查詢範例。](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## 後續步驟
 
-依照此教學課程中的指示，您已為[!DNL Marketo]個自訂活動資料設定Platform結構描述，並建立資料流以將該資料引進Platform。 如需[!DNL Marketo]來源的一般資訊，請閱讀[[!DNL Marketo] 來源概觀](../../../../connectors/adobe-applications/marketo/marketo.md)。
+依照本教學課程中的指示，您已為[!DNL Marketo]個自訂活動資料設定Experience Platform結構描述，並建立資料流以便將該資料引進Experience Platform。 如需[!DNL Marketo]來源的一般資訊，請閱讀[[!DNL Marketo] 來源概觀](../../../../connectors/adobe-applications/marketo/marketo.md)。

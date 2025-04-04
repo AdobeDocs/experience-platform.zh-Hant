@@ -5,9 +5,9 @@ feature: Customer AI
 title: 設定Customer AI執行個體
 description: AI/ML服務提供Customer AI作為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下小節提供設定Customer AI執行個體的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ AI/ML服務提供Customer AI作為簡單易用的Adobe Sensei服務，可針對�
 
 ## 建立執行個體 {#set-up-your-instance}
 
-在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 服務]**。 **[!UICONTROL 服務]**&#x200B;瀏覽器會出現，並顯示您可使用的所有服務。 在Customer AI的容器中，選取&#x200B;**[!UICONTROL 開啟]**。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 服務]**。 **[!UICONTROL 服務]**&#x200B;瀏覽器會出現，並顯示您可使用的所有服務。 在Customer AI的容器中，選取&#x200B;**[!UICONTROL 開啟]**。
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -35,7 +35,7 @@ AI/ML服務提供Customer AI作為簡單易用的Adobe Sensei服務，可針對�
 
 - **[!UICONTROL 編輯]**：選取&#x200B;**[!UICONTROL 編輯]**&#x200B;可讓您修改現有的服務執行個體。 您可以編輯執行個體的名稱、說明和評分頻率。
 - **[!UICONTROL 複製]**：選取&#x200B;**[!UICONTROL 複製]**&#x200B;會複製目前選取的服務執行個體設定。 然後，您可以修改工作流程以進行微幅調整，並將其重新命名為新例證。
-- **[!UICONTROL 刪除]**：您可以刪除包含任何歷史執行的服務執行個體。 對應的輸出資料集將會從Platform中刪除。 不過，同步至即時客戶設定檔的分數不會刪除。
+- **[!UICONTROL 刪除]**：您可以刪除包含任何歷史執行的服務執行個體。 對應的輸出資料集將會從Experience Platform中刪除。 不過，同步至即時客戶設定檔的分數不會刪除。
 - **[!UICONTROL 資料來源]**：此執行個體使用的資料集連結。 如果使用多個資料集，選取超連結文字會開啟資料集預覽彈出視窗。
 - **[!UICONTROL 上次執行詳細資料]**：這只有在執行失敗時才會顯示。 有關執行失敗原因的資訊，例如錯誤代碼會顯示在這裡。
 - **[!UICONTROL 分數定義]**：您為此執行個體設定的目標快速概覽。

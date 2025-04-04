@@ -3,10 +3,10 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 2%
+source-wordcount: '1153'
+ht-degree: 3%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->* 自2025年3月25日起，您可以在目的地目錄中並排看到兩張[!DNL Airship Attributes]卡片。 這是因為目的地服務的內部升級。 現有的[!DNL Airship Attributes]目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Airship屬性]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Airship屬性]**&#x200B;的新卡片。
+>* 自2025年3月25日起，您可以在目的地目錄中並排看到兩張[!DNL Airship Attributes]卡片。 這是因為目標服務內部升級所致。現有的[!DNL Airship Attributes]目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Airship屬性]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Airship屬性]**&#x200B;的新卡片。
 >* 使用目錄中的&#x200B;**[!UICONTROL 飛艇屬性]**&#x200B;連線來建立新的啟用資料流程。 如果您有任何使用中的資料流至&#x200B;**[!UICONTROL （已棄用）飛艇屬性]**&#x200B;目的地，這些資料流將會自動更新，因此您不需要採取任何動作。
 >* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
->   * 流程規格ID： `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * 連線規格ID： `594bc002-4a47-49b7-8a98-ac0d21045502`
+>   * 流程規格 ID：`a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * 連線規格 ID：`594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## 概觀 {#overview}
 
-[!DNL Airship]是領先的客戶參與平台，可在客戶生命週期的每個階段協助您為使用者提供有意義、個人化的全通路訊息。
+[!DNL Airship]是領先的客戶參與Experience Platform，可在客戶生命週期的每個階段協助您為使用者提供有意義、個人化的全通路訊息。
 
 此整合會將Adobe設定檔資料傳遞至[!DNL Airship]，做為[屬性](https://docs.airship.com/guides/audience/attributes/)，以用於鎖定或觸發。
 
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 ## 啟用屬性 {#enable-attributes}
 
-Adobe Experience Platform設定檔屬性與[!DNL Airship]屬性類似，而且可以透過本頁面下方進一步示範的對映工具，在Platform中輕鬆相互對應。
+Adobe Experience Platform設定檔屬性與[!DNL Airship]屬性類似，並可使用本頁面下方進一步示範的對應工具，在Experience Platform中輕鬆相互對應。
 
 [!DNL Airship]個專案具有數個預先定義的和預設屬性。 如果您有自訂屬性，必須先在[!DNL Airship]中定義它。 如需詳細資訊，請參閱[設定和管理屬性](https://docs.airship.com/tutorials/audience/attributes/)。
 
@@ -91,7 +91,7 @@ Adobe Experience Platform設定檔屬性與[!DNL Airship]屬性類似，而且�
 
 ### 使用案例#2
 
-運用Adobe Experience Platform的屬性進一步擴充[!DNL Airship]設定檔，並將其與SDK或[!DNL Airship]預測資料結合。 例如，零售商可建立具有忠誠度狀態和位置資料（來自Platform的屬性）以及[!DNL Airship]預測會流失資料的對象，以傳送高針對性訊息給住在內華達州拉斯維加斯且具有高流失率的金級忠誠度狀態使用者。
+運用Adobe Experience Platform的屬性進一步擴充[!DNL Airship]設定檔，並將其與SDK或[!DNL Airship]預測資料結合。 例如，retailer可建立具有忠誠度狀態和位置資料(來自Experience Platform的屬性)以及[!DNL Airship]預測會流失資料的對象，以傳送高針對性訊息給住在內華達州拉斯維加斯且具有高流失率的金級忠誠度狀態使用者。
 
 ## 連線到目標 {#connect}
 

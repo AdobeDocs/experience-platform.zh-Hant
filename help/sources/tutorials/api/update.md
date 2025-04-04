@@ -2,9 +2,9 @@
 title: 使用流程服務API更新帳戶
 description: 本教學課程涵蓋使用Flow Service API更新帳戶詳細資訊和認證的步驟。
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '544'
 ht-degree: 2%
 
 ---
@@ -25,16 +25,16 @@ ht-degree: 2%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
 
 ## 查詢連線詳細資料
 
-更新連線的第一個步驟是使用連線ID擷取其詳細資訊。 若要擷取您連線的目前詳細資料，請在提供您要更新的連線之連線ID時，向[!DNL Flow Service] API提出GET要求。
+更新連線的第一個步驟是使用連線ID擷取其詳細資訊。 若要擷取您連線的目前詳細資料，請在提供您要更新的連線的連線ID時，向[!DNL Flow Service] API提出GET要求。
 
 **API格式**
 
@@ -103,7 +103,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->發出PATCH要求時需要`If-Match`標頭。 此標頭的值是您要更新之連線的唯一版本。
+>發出PATCH請求時需要`If-Match`標頭。 此標頭的值是您要更新之連線的唯一版本。
 
 **API格式**
 
@@ -158,7 +158,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回您的連線ID和更新的etag。 您可以向[!DNL Flow Service] API發出GET要求，同時提供連線ID以驗證更新。
+成功的回應會傳回您的連線ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的連線ID。
 
 ```json
 {

@@ -5,7 +5,7 @@ solution: Experience Platform
 title: 刪除UI中的資料流
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 1%
@@ -22,12 +22,12 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-- [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-- [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+- [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 ## 刪除資料流
 
-在[Experience PlatformUI](https://platform.adobe.com)中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區，然後從頂端標題選取&#x200B;**[!UICONTROL 資料流]**。
+在[Experience Platform UI](https://platform.adobe.com)中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區，然後從頂端標題選取&#x200B;**[!UICONTROL 資料流]**。
 
 ![目錄](../../images/tutorials/delete/catalog.png)
 

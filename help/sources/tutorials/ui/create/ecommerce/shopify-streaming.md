@@ -1,18 +1,18 @@
 ---
 title: 在UI中建立Shopify串流連線和資料流
-description: 瞭解如何使用Platform使用者介面建立Shopify串流來源連線和資料流
+description: 瞭解如何使用Experience Platform使用者介面建立Shopify串流來源連線和資料流
 badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
 
 # 使用UI為[!DNL Shopify Streaming]資料建立來源連線和資料流
 
-本教學課程提供使用Platform使用者介面建立[!DNL Shopify Streaming]來源連線和資料流的步驟。
+本教學課程提供使用Experience Platform使用者介面建立[!DNL Shopify Streaming]來源連線和資料流的步驟。
 
 ## 快速入門 {#getting-started}
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 ## 連線您的[!DNL Shopify Streaming]帳戶
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ## 選取資料
 
-**[!UICONTROL 選取資料]**&#x200B;步驟隨即顯示，提供介面供您選取要帶到Platform的資料。
+**[!UICONTROL 選取資料]**&#x200B;步驟隨即顯示，提供介面供您選取要帶到Experience Platform的資料。
 
 * 介面的左側是瀏覽器，可讓您檢視帳戶內的可用資料流；
 * 介面的右側部分可讓您預覽JSON檔案中最多100列的資料。
@@ -66,13 +66,13 @@ ht-degree: 1%
 
 [!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
-Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html)。
+Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html)。
 
 成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
 ![來源工作流程的對應步驟。](../../../../images/tutorials/create/shopify-streaming/mapping.png)
 
-## 檢閱
+## 審核
 
 **[!UICONTROL 檢閱]**&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
 
@@ -85,7 +85,7 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 ## 取得您的串流端點URL
 
-建立串流資料流後，您現在可以擷取串流端點URL。 此端點將用於訂閱您的webhook，允許您的串流來源與Experience Platform通訊。
+建立串流資料流後，您現在可以擷取串流端點URL。 此端點將用於訂閱您的webhook，讓您的串流來源能夠與Experience Platform通訊。
 
 若要擷取您的串流端點，請移至您剛建立之資料流的[!UICONTROL 資料流活動]頁面，並從[!UICONTROL 屬性]面板底部複製端點。
 

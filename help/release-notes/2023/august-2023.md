@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 8 月)
 description: Adobe Experience Platform 2023 年 8 月版發行說明。
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1741'
-ht-degree: 92%
+source-wordcount: '1743'
+ht-degree: 89%
 
 ---
 
@@ -46,9 +46,9 @@ Adobe Experience Platform 現有功能的更新：
 
 ## 屬性型存取控制 {#abac}
 
-屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別物件指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
+屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別物件指派給使用者角色。此功能可讓您為貴組織中的特定Experience Platform使用者授予或撤銷個別物件的存取權。
 
-透過屬性型存取控制，組織的管理員可以控制使用者對所有平台工作流程和資源的存取權限，包括其中的敏感個人資料 (SPD)、個人身分資訊 (PII) 和其他自訂類型資料。管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
+透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Experience Platform工作流程和資源的敏感個人資料(SPD)、個人識別資訊(PII)和其他自訂資料型別的存取。 管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
 
 **新功能或更新功能**
 
@@ -116,7 +116,7 @@ Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新功能或更新的功能** {#destinations-new-updated-functionality}
 
@@ -162,7 +162,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Experience Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 **新功能或更新功能**
 

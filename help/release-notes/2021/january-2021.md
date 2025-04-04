@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 27%
 
 ---
@@ -35,13 +35,13 @@ Adobe Experience Platform 現有功能的更新：
 
 如需詳細資訊，請參閱[[!DNL Data Prep] 總覽](../../data-prep/home.md)。
 
-## 目的地 {#destinations}
+## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 **新目的地**
 
-| 目的地 | 說明 |
+| 目標 | 說明 |
 | ----------- | ----------- |
 | [!DNL Azure Blob] | [!DNL Azure Blob]是Microsoft的雲端物件儲存解決方案。 |
 
@@ -53,9 +53,9 @@ Adobe Experience Platform 現有功能的更新：
 
 若要進一步瞭解，請造訪[目的地概觀](../../destinations/home.md)。
 
-## 即時客戶設定檔 {#profile}
+## 即時客戶輪廓 {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 [!DNL Profile]可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶輪廓，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 [!DNL Profile]可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 **新功能**
 
@@ -68,15 +68,15 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強這些資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| Adobe Audience Manager來源聯結器增強功能 | 您現在可以從Audience Manager中篩選及選取個別第一方區段，以擷取至Platform，並篩選掉第一方特徵。 如需詳細資訊，請參閱有關[建立Audience Manager來源聯結器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的教學課程。 |
+| Adobe Audience Manager來源聯結器增強功能 | 您現在可以從Audience Manager篩選及選取個別第一方區段，以擷取至Experience Platform，並篩選掉第一方特徵。 如需詳細資訊，請參閱有關[建立Audience Manager來源聯結器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的教學課程。 |
 | [!DNL Google BigQuery]來源聯結器增強功能 | 您現在可以使用[!DNL BigQuery]來源聯結器在一次資料流執行中擷取大於10GB的檔案。 如需詳細資訊，請參閱[[!DNL BigQuery] 來源聯結器總覽](../../sources/connectors/databases/bigquery.md)。 |
 | 支援雲端儲存的複雜資料型別 | 使用雲端儲存空間來源聯結器時，您現在可以內嵌複雜的資料型別，例如JSON檔案中的陣列。 如需詳細資訊，請參閱在UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)中建立雲端儲存體資料流[或使用 [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md)建立[的教學課程。 |
 | 支援[!DNL Microsoft Dynamics]來源的服務主體金鑰式驗證 | 您現在可以使用服務主要金鑰來驗證您的[!DNL Dynamics]帳戶，作為密碼式驗證的替代方案。 如需詳細資訊，請參閱[[!DNL Dynamics] 來源聯結器總覽](../../sources/connectors/crm/ms-dynamics.md)。 |

@@ -2,9 +2,9 @@
 title: 排序和篩選流程服務API中的回應
 description: 本教學課程涵蓋使用流程服務API中的查詢引數排序和篩選的語法，包括一些進階使用案例。
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 2%
 
 ---
@@ -197,7 +197,7 @@ GET /flows?property=state==enabled&count=true
 
 ## 使用案例 {#use-cases}
 
-閱讀本節內容，瞭解如何使用篩選和排序功能傳回特定聯結器的相關資訊，或協助您偵錯問題的特定範例。 如果有任何您希望Adobe新增的其他使用案例，請使用頁面上的&#x200B;**[!UICONTROL 詳細意見選項]**&#x200B;來提交請求。
+閱讀本節內容，瞭解如何使用篩選和排序功能傳回特定聯結器的相關資訊，或協助您偵錯問題的特定範例。 如果您希望Adobe新增任何其他使用案例，請使用頁面上的&#x200B;**[!UICONTROL 詳細意見選項]**&#x200B;提交請求。
 
 **篩選只傳回特定目的地的連線**
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## 後續步驟
 
-本指南說明如何使用`orderby`和`property`查詢引數來排序及篩選流程服務API中的回應。 如需如何將API用於Platform中常見工作流程的逐步指南，請參閱[來源](../../sources/home.md)和[目的地](../../destinations/home.md)檔案中所包含的API教學課程。
+本指南說明如何使用`orderby`和`property`查詢引數來排序及篩選流程服務API中的回應。 如需如何使用API進行Experience Platform中常見工作流程的逐步指南，請參閱[來源](../../sources/home.md)和[目的地](../../destinations/home.md)檔案中包含的API教學課程。

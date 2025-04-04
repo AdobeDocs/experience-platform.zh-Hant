@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2024 年 1 月)
 description: Adobe Experience Platform 2024 年 1 月版發行說明。
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
-workflow-type: ht
-source-wordcount: '1659'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1662'
+ht-degree: 95%
 
 ---
 
@@ -23,7 +23,7 @@ Experience Platform 現有功能的更新：
 - [資料準備](#data-prep)
 - [儀表板](#dashboards)
 - [目標](#destinations)
-- [身分服務](#identity-service)
+- [身分識別服務](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [即時客戶輪廓](#profile)
 - [Segmentation Service](#segmentation)
@@ -43,9 +43,9 @@ Experience Platform 現有功能的更新：
 
 ## 屬性型存取控制 {#abac}
 
-屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別物件指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
+屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別物件指派給使用者角色。此功能可讓您為貴組織中的特定Experience Platform使用者授予或撤銷個別物件的存取權。
 
-透過屬性型存取控制，組織的管理員可以控制使用者對所有平台工作流程和資源的存取權限，包括其中的敏感個人資料 (SPD)、個人身分資訊 (PII) 和其他自訂類型資料。管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
+透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Experience Platform工作流程和資源的敏感個人資料(SPD)、個人識別資訊(PII)和其他自訂資料型別的存取。 管理員可以將使用者角色定義為只能存取特定欄位及這些欄位對應的資料。
 
 **新文件或更新的文件**
 
@@ -79,15 +79,15 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | --- | --- |
-| 檢視 SQL | 您現在可以使用「檢視 SQL」切換鈕檢視輪廓、客群、目標和自訂深入解析背後的 SQL，然後透過查詢編輯器隨選執行查詢。存取為 Real-time Customer Data Platform 深入解析提供支援的 SQL，可協助您了解資料模型分析背後的邏輯。這種透明度可讓您的 Adobe Real-time CDP 資料更易於存取和理解，並對決策產生影響。<br>從 40 多個現有深入解析的 SQL 中汲取靈感，然後建立新的查詢，以根據您的業務需求，從 Platform 資料中獲得獨特的深入解析。SQL 也可用於 Experience League 文件中的[輪廓](../../dashboards/insights/profiles.md)、[客群](../../dashboards/insights/audiences.md)，以及[目標](../../dashboards/insights/destinations.md)深入解析。這些文件特別介紹了能夠透過標準深入解析來回應的業務使用案例。如需詳細資訊，請閱讀[檢視 SQL 深入解析](../../dashboards/view-sql.md)的指南。 |
+| 檢視 SQL | 您現在可以使用「檢視 SQL」切換鈕檢視輪廓、客群、目標和自訂深入解析背後的 SQL，然後透過查詢編輯器隨選執行查詢。存取為 Real-time Customer Data Platform 深入解析提供支援的 SQL，可協助您了解資料模型分析背後的邏輯。這種透明度可讓您的 Adobe Real-time CDP 資料更易於存取和理解，並對決策產生影響。<br>從SQL中汲取超過40種現有見解的靈感，以建立新的查詢，這些查詢會根據您的業務需求從Experience Platform資料中獲得獨特的見解。 SQL 也可用於 Experience League 文件中的[輪廓](../../dashboards/insights/profiles.md)、[客群](../../dashboards/insights/audiences.md)，以及[目標](../../dashboards/insights/destinations.md)深入解析。這些文件特別介紹了能夠透過標準深入解析來回應的業務使用案例。如需詳細資訊，請閱讀[檢視 SQL 深入解析](../../dashboards/view-sql.md)的指南。 |
 
 {style="table-layout:auto"}
 
-如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先閱讀[儀表板概觀](../../dashboards/home.md)。
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂小工具，請先閱讀[儀表板概觀](../../dashboards/home.md)。
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新目標** {#new-destinations}
 
@@ -115,11 +115,11 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 | 文件更新 | 說明 |
 | --- | --- |
-| 文件重組 | 身分服務文件已經過重組，以改善身分服務中概念的呈現和清晰度：<ul><li>造訪[身分服務概觀頁面](../../identity-service/home.md)可取得擴充的術語指南、詳細說明典型客戶歷程的使用案例範例、身分服務如何將身分連結在一起的詳細介紹，以及身分服務在 Experience Platform 生態系中扮演之角色的摘要。</li><li>閱讀[了解身分服務和即時客戶輪廓之間的關係](../../identity-service/identity-and-profile.md)指南，即可詳細了解這兩種服務如何協同運作，以及其目的、流程、輸入和輸出方面的不同之處。</li><li>參閱[身分服務連結邏輯指南](../../identity-service/features/identity-linking-logic.md)，即可透過說明和視覺效果來了解識別圖在特定場景與時間戳記下會如何運作。</li></ul> |
+| 文件重組 | 身分識別服務文件已經過重組，以改善身分識別服務中概念的呈現和清晰度：<ul><li>造訪[身分識別服務概觀頁面](../../identity-service/home.md)可取得擴充的術語指南、詳細說明典型客戶歷程的使用案例範例、身分識別服務如何將身分識別連結在一起的詳細介紹，以及身分識別服務在 Experience Platform 生態系中扮演之角色的摘要。</li><li>閱讀[了解身分識別服務和即時客戶輪廓之間的關係](../../identity-service/identity-and-profile.md)指南，即可詳細了解這兩種服務如何協同運作，以及其目的、流程、輸入和輸出方面的不同之處。</li><li>參閱[身分識別服務連結邏輯指南](../../identity-service/features/identity-linking-logic.md)，即可透過說明和視覺效果來了解身分識別圖在特定場景與時間戳記下會如何運作。</li></ul> |
 
 {style="table-layout:auto"}
 
-若要了解更多有關身分服務的資訊，請閱讀[身分服務概觀](../../identity-service/home.md)。
+若要了解更多有關身分識別服務的資訊，請閱讀[身分識別服務概觀](../../identity-service/home.md)。
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
@@ -129,7 +129,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 | 功能 | 說明 |
 | --- | --- |
-| [Real-Time CDP 首頁](https://experience.adobe.com)的更新 | <ul><li>**輪廓 Widget**：您現在可以使用輪廓 Widget 導覽至輪廓概觀頁面，並檢視您組織的輪廓量度。</li><li>**輪廓量度卡片**：視您個別的合併原則而定，首頁儀表板中的輪廓量度卡片現在會顯示組織中的輪廓總數。</li><li>**結構描述 Widget**：您現在可以使用結構描述 Widget 導覽至使用者介面中的結構描述建立工作流程。</li></ul> |
+| [Real-Time CDP 首頁](https://experience.adobe.com)的更新 | <ul><li>**輪廓小工具**：您現在可以使用輪廓小工具導覽至輪廓概觀頁面，並檢視您組織的輪廓量度。</li><li>**輪廓量度卡片**：視您個別的合併原則而定，首頁儀表板中的輪廓量度卡片現在會顯示組織中的輪廓總數。</li><li>**結構描述小工具**：您現在可以使用結構描述小工具導覽至使用者介面中的結構描述建立工作流程。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -158,7 +158,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 若要深入了解即時客戶輪廓，請閱讀[輪廓概觀](../../profile/home.md)
 
-## Segmentation Service {#segmentation}
+## 分段服務 {#segmentation}
 
 [!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 

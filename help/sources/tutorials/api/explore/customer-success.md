@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流量服務API探索客戶成功系統
 description: 本教學課程使用流程服務API來探索客戶成功(CS)系統。
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '594'
 ht-degree: 12%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 12%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 以下章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到CS系統。
 
 ### 取得基礎連線
 
-若要使用[!DNL Platform] API探索您的CS系統，您必須擁有有效的基底連線識別碼。 如果您還沒有要使用的CS系統的基礎連線，您可以透過下列教學課程建立一個基礎連線：
+若要使用[!DNL Experience Platform] API探索您的CS系統，您必須擁有有效的基底連線識別碼。 如果您還沒有要使用的CS系統的基礎連線，您可以透過下列教學課程建立一個基礎連線：
 
 * [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
@@ -39,13 +39,13 @@ ht-degree: 12%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ ht-degree: 12%
 
 ## 探索您的資料表
 
-使用CS系統的基礎連線，您可以透過執行GET請求來探索資料表。 使用以下呼叫來尋找您要檢查或擷取至[!DNL Platform]的資料表的路徑。
+使用您CS系統的基礎連線，您可以透過執行GET請求來探索資料表。 使用以下呼叫來尋找您要檢查或擷取至[!DNL Experience Platform]的資料表的路徑。
 
 **API格式**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會從CS系統傳回資料表陣列。 尋找您要帶入[!DNL Platform]的資料表並記下其`path`屬性，因為您必須在下個步驟中提供它以檢查其結構。
+成功的回應會從CS系統傳回資料表陣列。 尋找您要帶入[!DNL Experience Platform]的資料表並記下其`path`屬性，因為您必須在下個步驟中提供它以檢查其結構。
 
 ```json
 [
@@ -115,9 +115,9 @@ curl -X GET \
 ]
 ```
 
-## Inspect表格的結構
+## 檢查表格的結構
 
-若要從CS系統檢查表格的結構，請在將表格的路徑指定為查詢引數時執行GET要求。
+若要從CS系統檢查表格結構，請在將表格路徑指定為查詢引數時執行GET要求。
 
 **API格式**
 
@@ -176,4 +176,4 @@ curl -X GET \
 
 ## 後續步驟
 
-依照本教學課程，您已探索您的CS系統、找到您要擷取至[!DNL Platform]的表格路徑，並取得有關其結構的資訊。 您可以在下個教學課程中使用此資訊，從您的CS系統[收集資料並將其帶入Platform](../collect/customer-success.md)。
+依照本教學課程，您已探索您的CS系統、找到您要擷取至[!DNL Experience Platform]的表格路徑，並取得有關其結構的資訊。 您可以在下個教學課程中使用此資訊，從您的CS系統[收集資料並將其帶入Experience Platform](../collect/customer-success.md)。

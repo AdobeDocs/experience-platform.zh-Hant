@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將Power BI連線至查詢服務
 description: 本檔案將逐步說明連線Power BI與Adobe Experience Platform查詢服務的步驟。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 > [!DNL Power BI]案頭應用程式&#x200B;**僅限**&#x200B;可在Windows裝置上使用。
 
-若要取得連線[!DNL Power BI]至Experience Platform的必要認證，您必須擁有平台UI中查詢工作區的存取權。 如果您目前沒有查詢工作區的存取權，請聯絡您的組織管理員。
+若要取得將[!DNL Power BI]連線到Experience Platform所需的認證，您必須能存取Experience Platform UI中的查詢工作區。 如果您目前沒有查詢工作區的存取權，請聯絡您的組織管理員。
 
 ## 將[!DNL Power BI]連線至查詢服務 {#connect-power-bi}
 
@@ -31,13 +31,13 @@ ht-degree: 0%
 
 [!DNL PostgreSQL]資料庫對話方塊隨即顯示，要求伺服器和資料庫的值。 有關如何[從Power Query Desktop](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop)連線至PostgreSQL資料庫的其他說明，請參閱官方[!DNL PowerBI]檔案。
 
-這些必要的值會從您的Adobe Experience Platform憑證中取得。 若要尋找您的認證，請登入Platform UI並從左側導覽選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。 如需尋找資料庫名稱、主機、連線埠和登入認證的詳細資訊，請參閱[認證指南](../ui/credentials.md)。
+這些必要的值會從您的Adobe Experience Platform憑證中取得。 若要尋找您的認證，請登入Experience Platform UI，然後從左側導覽選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。 如需尋找資料庫名稱、主機、連線埠和登入認證的詳細資訊，請參閱[認證指南](../ui/credentials.md)。
 
 >[!IMPORTANT]
 >
->身為Power BI或Tableau使用者，您可以從「查詢服務」憑證標籤將Customer Journey Analytics連線至您的BI工具。 請參閱認證檔案，瞭解如何[將您的BI工具連線至Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics)的說明。
+>身為Power BI或Tableau使用者，您可以從查詢服務憑證標籤將Customer Journey Analytics連線至您的BI工具。 請參閱認證檔案，瞭解如何[將您的BI工具連線至Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics)的說明。
 
-![已反白顯示[認證]索引標籤和[過期]認證的[Experience Platform查詢]工作區。](../images/clients/power-bi/query-service-credentials-page.png)
+![Experience Platform查詢工作區的[認證]索引標籤和[過期]認證已反白顯示。](../images/clients/power-bi/query-service-credentials-page.png)
 
 在[!DNL PostgreSQL database]對話方塊的&#x200B;**[!DNL Server]**&#x200B;欄位中，輸入在查詢服務[!UICONTROL 認證]區段中找到之主機的值。 對於生產，請將連線埠`:80`新增到主機字串的結尾。 例如 `made-up.platform-query.adobe.io:80`。
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 在確認您的資料庫詳細資料之後，選取&#x200B;**[!DNL OK]**。
 
-### 驗證 {#authentication}
+### Authentication {#authentication}
 
 確認您的資料連線模式後，畫面會顯示提示，詢問您的使用者名稱、密碼和應用程式設定。 在此案例中，使用者名稱是您的組織ID，密碼是您的驗證Token。 兩者皆可在「查詢服務認證」頁面上找到。
 
@@ -69,13 +69,13 @@ ht-degree: 0%
 >
 >若要檢視自初始匯入後發生的資料變更，您必須重新匯入完整資料集，重新整理[!DNL Power BI]內的資料。
 
-若要匯入資料表，請輸入伺服器和資料庫詳細資訊[，如上所述](#connect-power-bi)，然後選取&#x200B;**[!DNL Import]** [!DNL Data Connectivity mode]，接著選取&#x200B;**[!DNL OK]**。 [!DNL Navigator]對話方塊隨即顯示，顯示所有可用表格的清單。 選取您要預覽的資料表，接著選取&#x200B;**[!DNL Load]**&#x200B;以將資料集引進Power BI。 資料表現在已匯入[!DNL Power BI]。
+若要匯入資料表，請輸入伺服器和資料庫詳細資訊[，如上所述](#connect-power-bi)，然後選取&#x200B;**[!DNL Import]** [!DNL Data Connectivity mode]，接著選取&#x200B;**[!DNL OK]**。 [!DNL Navigator]對話方塊隨即顯示，顯示所有可用表格的清單。 選取您要預覽的資料表，接著選取&#x200B;**[!DNL Load]**&#x200B;以將資料集匯入Power BI。 資料表現在已匯入[!DNL Power BI]。
 
 [在官方檔案中可找到有關連線至PowerBi案頭應用程式中資料的一般資訊](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data)。
 
 ### 使用自訂SQL匯入表格
 
-[!DNL Power BI]和其他協力廠商工具（例如[!DNL Tableau]）目前不允許使用者匯入巢狀物件，例如Platform中的XDM物件。 若要解決此問題，[!DNL Power BI]可讓您使用自訂SQL來存取這些巢狀欄位，並建立資料的平面化檢視。 [!DNL Power BI]接著會將先前巢狀資料的這個平面化檢視載入為一般表格。
+[!DNL Power BI]和其他協力廠商工具（例如[!DNL Tableau]）目前不允許使用者匯入巢狀物件，例如Experience Platform中的XDM物件。 若要解決此問題，[!DNL Power BI]可讓您使用自訂SQL來存取這些巢狀欄位，並建立資料的平面化檢視。 [!DNL Power BI]接著會將先前巢狀資料的這個平面化檢視載入為一般表格。
 
 從[!DNL PostgreSQL database]對話方塊中，選取&#x200B;**[!DNL Advanced options]**&#x200B;以在&#x200B;**[!DNL SQL statement]**&#x200B;區段中輸入自訂SQL查詢。 此自訂查詢可用來將JSON名稱值配對平面化為表格格式。 官方檔案也提供如何在進階選項](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options)中使用SQL陳述式[連線PowerBI的資訊。
 

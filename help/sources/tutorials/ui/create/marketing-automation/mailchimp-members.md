@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
 solution: Experience Platform
-title: 使用Platform UI建立MailChimp成員來源連線
-description: 瞭解如何使用Platform UI將Adobe Experience Platform連線至MailChimp會員。
+title: 使用Experience Platform UI建立MailChimp成員來源連線
+description: 瞭解如何使用Experience Platform UI將Adobe Experience Platform連線至MailChimp會員。
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '697'
 ht-degree: 4%
 
 ---
 
-# 使用Platform UI建立[!DNL Mailchimp Members]來源連線
+# 使用Experience Platform UI建立[!DNL Mailchimp Members]來源連線
 
 本教學課程提供建立[!DNL Mailchimp]來源聯結器的步驟，以使用使用者介面將[!DNL Mailchimp Members]資料擷取至Adobe Experience Platform。
 
@@ -19,12 +19,12 @@ ht-degree: 4%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)： Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 收集必要的認證
 
-為了將您的[!DNL Mailchimp Members]資料帶入Platform，您必須先提供對應至您[!DNL Mailchimp]帳戶的適當驗證認證。
+為了將您的[!DNL Mailchimp Members]資料帶入Experience Platform，您必須先提供對應至您[!DNL Mailchimp]帳戶的適當驗證認證。
 
 [!DNL Mailchimp Members]來源同時支援OAuth 2重新整理程式碼和基本驗證。 請參閱下表，以取得這些驗證型別的詳細資訊。
 
@@ -33,10 +33,10 @@ ht-degree: 4%
 | 認證 | 說明 |
 | --- | --- |
 | 網域 | 用來連線至MailChimp API的根URL。 根URL的格式為`https://{DC}.api.mailchimp.com`，其中`{DC}`代表與您的帳戶對應的資料中心。 |
-| 授權測試URL | 授權測試URL是用來在將[!DNL Mailchimp]連線到Platform時驗證認證。 如果未提供，則會在來源連線建立步驟期間自動檢查認證。 |
+| 授權測試URL | 將[!DNL Mailchimp]連線至Experience Platform時，會使用授權測試URL來驗證認證。 如果未提供，則會在來源連線建立步驟期間自動檢查認證。 |
 | 存取權杖 | 用來驗證來源的對應存取權杖。 這是OAuth型驗證的必要專案。 |
 
-如需使用OAuth 2向Platform驗證您[!DNL Mailchimp]帳戶的詳細資訊，請參閱有關使用OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/)的此[[!DNL Mailchimp] 檔案。
+如需使用OAuth 2向Experience Platform驗證您[!DNL Mailchimp]帳戶的詳細資訊，請參閱有關使用OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/)的此[[!DNL Mailchimp] 檔案。
 
 ### 基本驗證
 
@@ -46,9 +46,9 @@ ht-degree: 4%
 | 使用者名稱 | 與您的MailChimp帳戶對應的使用者名稱。 這是基本驗證的必要專案。 |
 | 密碼 | 與您的MailChimp帳戶對應的密碼。 這是基本驗證的必要專案。 |
 
-## 將您的[!DNL Mailchimp Members]帳戶連線到Platform
+## 將您的[!DNL Mailchimp Members]帳戶連線至Experience Platform
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -97,4 +97,4 @@ ht-degree: 4%
 
 ## 後續步驟
 
-在您的[!DNL Mailchimp]帳戶通過驗證，且已選取[!DNL Mailchimp Members]資料後，您現在可以開始建立資料流，將您的資料匯入Platform。 如需有關如何建立資料流的詳細步驟，請參閱有關[建立資料流以將行銷自動化資料帶到Platform](../../dataflow/marketing-automation.md)的檔案。
+在您的[!DNL Mailchimp]帳戶通過驗證且已選取[!DNL Mailchimp Members]資料後，您現在可以開始建立資料流，將您的資料匯入Experience Platform。 如需有關如何建立資料流的詳細步驟，請參閱有關[建立資料流，以將行銷自動化資料帶到Experience Platform](../../dataflow/marketing-automation.md)的檔案。

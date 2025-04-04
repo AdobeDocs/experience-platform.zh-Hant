@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 33%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Platform 現有功能的更新：
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
-Experience Data Model (XDM)是開放原始碼規格，旨在改善數位體驗的力量。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+Experience Data Model (XDM)是開放原始碼規格，旨在改善數位體驗的力量。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 | 功能 | 說明 |
 | --- | --- |
@@ -51,12 +51,12 @@ Experience Data Model (XDM)是開放原始碼規格，旨在改善數位體驗�
 
 ### Customer AI
 
-Real-time Customer Data Platform中可用的Customer AI可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 不必將企業需求轉換為機器學習問題、挑選演算法、訓練或部署，即可達成上述目的。
+Real-Time Customer Data Platform中可用的Customer AI可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 不必將企業需求轉換為機器學習問題、挑選演算法、訓練或部署，即可達成上述目的。
 
 | 功能 | 說明 |
 | ------- | ----------- |
 | 支援Adobe Analytics資料 | 更新功能，透過Analytics來源聯結器支援Adobe Analytics資料集，無需ETL您的資料符合消費者體驗事件(CEE)結構描述。 |
-| 支援Adobe Audience Manager資料 | 更新功能，透過Audience Manager來源聯結器支援Adobe Audience Manager資料集，無需ETL您的資料符合消費者體驗事件(CEE)結構描述。 |
+| 支援Adobe Audience Manager資料 | 更新功能，透過Adobe Audience Manager來源聯結器支援Audience Manager資料集，無需ETL您的資料符合消費者體驗事件(CEE)結構描述。 |
 | 模型效能摘要 | Customer AI現在在服務執行個體深入分析頁面中有[模型效能摘要標籤](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics)。 模型績效標籤會顯示所有實際轉換率和流失率。 這可讓您解密並瞭解每個傾向性貯體中發生的情況。 |
 
 如需支援資料集的詳細資訊，請參閱[[!DNL Intelligent Services] 資料準備檔案](../../intelligent-services/data-preparation.md)。
@@ -71,11 +71,11 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。行銷人�
 
 如需支援資料集的詳細資訊，請參閱[[!DNL Intelligent Services] 資料準備檔案](../../intelligent-services/data-preparation.md)。
 
-## Segmentation Service {#segmentation}
+## 分段服務 {#segmentation}
 
-Adobe Experience Platform Segmentation Service提供使用者介面和RESTful API，可讓您建立區段，並從[!DNL Real-Time Customer Profile]資料產生對象。 這些區段是在Platform上集中設定和維護的，因此任何Adobe應用程式都可輕鬆存取。
+Adobe Experience Platform Segmentation Service提供使用者介面和RESTful API，可讓您建立區段，並從[!DNL Real-Time Customer Profile]資料產生對象。 這些區段是在Experience Platform上集中設定和維護，讓任何Adobe應用程式都可輕鬆存取。
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能**
 
@@ -83,17 +83,17 @@ Adobe Experience Platform Segmentation Service提供使用者介面和RESTful AP
 | ------- | ----------- |
 | 其他彙總函式 | 已在區段產生器中新增計數函式。 計數函式可讓您計算指定事件的完成次數。 如需計數函式的詳細資訊，請參閱[區段產生器指南](../../segmentation/ui/segment-builder.md#count-functions)的計數函式區段 |
 
-如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[細分概觀](../../segmentation/home.md)。
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | 您現在可以使用UI建立[!DNL Marketo Engage]來源連線，以將B2B資料帶入Platform，並使用平台連線的應用程式保持此資料在最新狀態。 如需詳細資訊，請參閱[[!DNL Marketo Engage] 來源聯結器檔案](../../sources/connectors/adobe-applications/marketo/marketo.md)。 |
+| [!DNL Marketo Engage] (Beta) | 您現在可以使用UI建立[!DNL Marketo Engage]來源連線，將B2B資料帶入Experience Platform，並使用Experience Platform連線的應用程式保持此資料在最新狀態。 如需詳細資訊，請參閱[[!DNL Marketo Engage] 來源聯結器檔案](../../sources/connectors/adobe-applications/marketo/marketo.md)。 |
 | Beta來源移至GA | 下列來源已從Beta版升級至GA版： <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 若要深入瞭解來源，請參閱[來源概觀](../../sources/home.md)。

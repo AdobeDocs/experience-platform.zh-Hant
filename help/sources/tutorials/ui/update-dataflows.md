@@ -1,10 +1,10 @@
 ---
-description: 瞭解如何在Experience PlatformUI中更新現有的來源資料流。
+description: 瞭解如何在Experience Platform UI中更新現有的來源資料流。
 title: 更新UI中的Source連線資料流
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 8%
 
 ---
@@ -17,8 +17,8 @@ ht-degree: 8%
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 更新資料流 {#update-dataflows}
 
@@ -27,7 +27,7 @@ ht-degree: 8%
 >title="資料集期限"
 >abstract="此欄表示目標資料集在自動到期之前剩餘的天數。<br>如果目標資料集過期，資料流將會失敗。為避免資料流失敗，請確保將目標資料集設定為在正確的日期到期。請參閱文件以了解如何更新過期日。"
 
-在Experience PlatformUI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**，然後從頂端標題選取&#x200B;**[!UICONTROL 資料流程]**。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**，然後從頂端標題選取&#x200B;**[!UICONTROL 資料流程]**。
 
 ![已選取資料流標題索引標籤的來源目錄。](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -79,7 +79,7 @@ ht-degree: 8%
 
 ![您必須確認要停用資料流的快顯視窗。](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
-如果您稍後重新啟用此資料流，Experience Platform會自動排程回填執行，以涵蓋資料流停用期間。 例如，如果資料流設定為每小時執行且停用48小時，在重新啟用此資料流時，Experience Platform將建立48個回填執行以處理錯過的間隔。
+如果您且稍後重新啟用此資料流，Experience Platform會自動排程回填執行，以涵蓋資料流停用的期間。 例如，如果資料流設定為每小時執行且停用48小時，在重新啟用此資料流時，Experience Platform將建立48個回填執行以處理錯過的間隔。
 
 ## 後續步驟
 

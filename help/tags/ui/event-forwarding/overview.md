@@ -1,12 +1,12 @@
 ---
 title: 事件轉送概觀
-description: 了解 Adobe Experience Platform 中的事件轉送功能，它可讓您使用 Platform Edge Network 執行工作，而不變更標記實作。
+description: 瞭解Adobe Experience Platform中的事件轉送功能，此功能可讓您使用Experience Platform Edge Network執行工作，而不變更標籤實施。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 8%
+source-wordcount: '1190'
+ht-degree: 6%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 8%
 
 Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳送至目的地以進行伺服器端處理。 事件轉送使用Adobe Experience Platform Edge Network執行通常在使用者端上完成的工作，以降低網頁和應用程式負載。 透過與標籤類似的方式實作，事件轉送規則可以轉換資料並將資料傳送到新目的地，但此資料不會從網頁瀏覽器之類的使用者端應用程式傳送，而是從Adobe的伺服器傳送。
 
-本檔案提供Platform中事件轉送的整體概觀。
+本檔案提供Experience Platform中事件轉送的整體概觀。
 
 ![資料收集生態系統中的事件轉送。](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->若要瞭解事件轉送如何在Platform的資料收集生態系統中運作，請參閱[資料收集概觀](../../../collection/home.md)。
+>若要瞭解事件轉送如何在Experience Platform的資料收集生態系統中運作，請參閱[資料收集概觀](../../../collection/home.md)。
 
 結合Adobe Experience Platform [網頁SDK](/help/web-sdk/home.md)和[行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)的事件轉送提供下列優點：
 
@@ -46,10 +46,10 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 
 在設定方面，事件轉送使用許多與標籤相同的概念，例如[規則](../managing-resources/rules.md)、[資料元素](../managing-resources/data-elements.md)和[延伸模組](../managing-resources/extensions/overview.md)。 兩者之間的主要差異可概括如下：
 
-* 標籤&#x200B;**會從網站或原生行動應用程式收集**&#x200B;事件資料，並將其傳送至Platform Edge Network。
-* 事件轉送&#x200B;**會從Platform Edge Network傳送**&#x200B;傳入事件資料至端點，該端點代表最終目的地或端點，提供您要擴充原始裝載的資料。
+* 標籤&#x200B;**會從網站或原生行動應用程式收集**&#x200B;事件資料，並將其傳送至Experience Platform Edge Network。
+* 事件轉送&#x200B;**從Experience Platform Edge Network傳送**&#x200B;傳入事件資料至端點，該端點代表最終目的地或端點，提供您要擴充原始裝載的資料。
 
-雖然標籤會使用Platform Web和Mobile SDK直接從您的網站或原生行動應用程式收集事件資料，但事件轉送需要透過Platform Edge Network傳送事件資料，才能將其轉送至目的地。 換言之，您必須在數位屬性上實作Platform Web或Mobile SDK （透過標籤或使用原始程式碼），才能使用事件轉送。
+雖然標籤會使用Experience Platform Web和Mobile SDK直接從您的網站或原生行動應用程式收集事件資料，但事件轉送需先透過Experience Platform Edge Network傳送事件資料，才能將其轉送至目的地。 換言之，您必須在數位屬性上實作Experience Platform網頁版或行動版SDK （透過標籤或使用原始程式碼），才能使用事件轉送。
 
 ### 屬性 {#properties}
 
@@ -61,7 +61,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 
 ![資料收集UI中的事件轉送屬性。](../../images/ui/event-forwarding/overview/properties.png)
 
-所有事件轉送屬性都會將&#x200B;**[!UICONTROL Edge]**&#x200B;列為平台。 它們不會區分Web或行動裝置，因為它們只會處理從Platform Edge Network收到的資料，而該平台本身可同時接收來自Web和行動平台的事件資料。
+所有事件轉送屬性都會將&#x200B;**[!UICONTROL Edge]**&#x200B;列為平台。 它們不會區分Web或行動裝置，因為它們只會處理從Experience Platform Edge Network收到的資料，而後者本身可同時接收來自Web和行動平台的事件資料。
 
 ### 擴充功能 {#extensions}
 
@@ -75,11 +75,11 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 
 事件轉送中可用的資料元素型別僅限於提供它們的相容[擴充功能](#extensions)的目錄。
 
-雖然資料元素本身的建立和設定方式與標籤在事件轉送中的設定方式相同，但在如何參照來自Platform Edge Network的資料方面，有一些重要的語法差異。
+雖然資料元素本身的建立和設定與標籤事件轉送相同，但在如何參照Experience Platform Edge Network的資料方面，有一些重要的語法差異。
 
-#### 引用Platform Edge Network的資料 {#data-element-path}
+#### 引用Experience Platform Edge Network中的資料 {#data-element-path}
 
-若要參照來自Platform Edge Network的資料，您必須建立提供該資料的有效路徑的資料元素。 在UI中建立資料元素時，請為擴充功能選取&#x200B;**[!UICONTROL 核心]**，為型別選取&#x200B;**[!UICONTROL 路徑]**。
+若要參照來自Experience Platform Edge Network的資料，您必須建立提供該資料的有效路徑的資料元素。 在UI中建立資料元素時，請為擴充功能選取&#x200B;**[!UICONTROL 核心]**，為型別選取&#x200B;**[!UICONTROL 路徑]**。
 
 資料元素的&#x200B;**[!UICONTROL 路徑]**&#x200B;值必須遵循模式`arc.event.{ELEMENT}` （例如： `arc.event.xdm.web.webPageDetails.URL`）。 必須正確指定此路徑才能傳送資料。
 

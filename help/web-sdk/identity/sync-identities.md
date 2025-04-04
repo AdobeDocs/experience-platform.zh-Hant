@@ -1,11 +1,11 @@
 ---
-title: 使用Platform Web SDK在Audience Manager和Adobe Experience Platform之間同步身分
-description: 瞭解如何使用Platform Web SDK在Audience Manager和Adobe Experience Platform之間同步身分
+title: 使用Audience Manager Web SDK在Experience Platform和Adobe Experience Platform之間同步身分
+description: 瞭解如何使用Experience Platform Web SDK在Audience Manager和Adobe Experience Platform之間同步身分
 seo-description: Learn how to sync identities with Adobe Audience Manager with Experience Platform Web SDK
 keywords: audience manager；aam；身分；同步身分；名稱空間；
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,6 @@ Adobe Experience Platform Web SDK支援透過[sendEvent](./overview.md#syncing-i
 
 ![名稱空間UI的檢視](../assets/identity/edge_namespaceUI_identity-symbol.png)
 
-身為Audience Manager客戶，您所有使用ID型別：跨裝置的現有資料來源都會自動擁有對應的身分名稱空間。 若要尋找Audience Manager資料Source的對應身分名稱空間，請登入Adobe Experience Platform並導覽至「身分」區段。
+身為Audience Manager客戶，您所有使用ID型別：跨裝置的現有資料來源都會自動擁有對應的身分名稱空間。 若要尋找Audience Manager Data Source的對應身分名稱空間，請登入Adobe Experience Platform並導覽至「身分」區段。
 
 任何使用ID型別：跨裝置的新[!DNL Audience Manager]資料Source都會產生對應的身分名稱空間。 目前不支援資料Source ID型別Cookie和裝置Advertising ID。 此外，在Adobe Experience Platform中建立的任何身分識別名稱空間都會產生對應的[!DNL Audience Manager]資料Source，但請注意，syncIdentity方法僅支援名稱空間身分識別符號。

@@ -1,11 +1,11 @@
 ---
 title: 測試並提交您的Source
-description: 以下檔案提供如何使用Flow Service API測試及驗證新來源，以及透過Self-Serve Sources (Streaming SDK)整合新來源的步驟。
+description: 以下檔案提供如何使用「流量服務API」測試及驗證新來源，以及透過自助來源(串流SDK)整合新來源的步驟。
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 0%
 >
 >自助來源串流SDK為測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-使用自助式來源（串流SDK）將新來源整合到Adobe Experience Platform的最後步驟，是測試並提交您的新來源。 當您完成連線規格並更新串流流程規格後，您就可以開始透過API或UI測試來源的功能。 成功後，您可以連絡您的Adobe代表以提交新的來源。
+使用自助式來源(串流SDK)將新來源整合到Adobe Experience Platform的最後步驟，是測試並提交您的新來源。 當您完成連線規格並更新串流流程規格後，您就可以開始透過API或UI測試來源的功能。 成功後，您可以連絡您的Adobe代表以提交新的來源。
 
 以下檔案提供如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)測試及偵錯來源的步驟。
 
 ## 快速入門
 
-* 如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
-* 如需如何產生Platform API認證的詳細資訊，請參閱有關[驗證和存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。
-* 如需如何設定Platform API [!DNL Postman]的相關資訊，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)上的教學課程。
+* 如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
+* 如需如何產生Experience Platform API認證的詳細資訊，請參閱[驗證及存取Experience Platform API](../../../landing/api-authentication.md)教學課程。
+* 如需如何為Experience Platform API設定[!DNL Postman]的詳細資訊，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)上的教學課程。
 * 若要協助您的測試和偵錯程式，請在此下載[自助來源驗證集合和環境](../assets/sdk-verification.zip)，並遵循下列步驟。
 
 ## 使用API測試您的來源
@@ -39,10 +39,10 @@ ht-degree: 0%
 
 | 參數 | 說明 | 範例 |
 | --- | --- | --- |
-| `x-api-key` | 用於驗證對Experience Platform API的呼叫的唯一識別碼。 如需如何擷取`x-api-key`的詳細資訊，請參閱[驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | 用於驗證Experience Platform API呼叫的唯一識別碼。 如需如何擷取`x-api-key`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | 企業實體，可以擁有或授權產品及服務並允許存取其成員。 如需如何擷取`x-gw-ims-org-id`資訊的說明，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)的教學課程。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | 完成對Experience Platform API的呼叫所需的授權權杖。 如需如何擷取`authorizationToken`的詳細資訊，請參閱[驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。 | `Bearer authorizationToken` |
-| `schemaId` | 為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 如需有關如何建立目標XDM結構描述的詳細步驟，請參閱有關使用API [建立結構描述的教學課程](../../../xdm/api/schemas.md)。 | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `authorizationToken` | 完成對Experience Platform API的呼叫所需的授權權杖。 如需如何擷取`authorizationToken`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `Bearer authorizationToken` |
+| `schemaId` | 為了在Experience Platform中使用來源資料，必須建立目標結構描述，以根據您的需求建構來源資料。 如需有關如何建立目標XDM結構描述的詳細步驟，請參閱有關使用API [建立結構描述的教學課程](../../../xdm/api/schemas.md)。 | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | 與您的結構描述對應的唯一版本。 | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | 建立新結構描述時與`schemaId`一併傳回的`meta:altId`。 | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](../../../catalog/api/create-dataset.md)的教學課程。 | `5f3c3cedb2805c194ff0b69a` |
@@ -62,13 +62,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您偏好使用Platform UI中的來源監視儀表板，可以停用執行訂單檢查清單中的&#x200B;**刪除流程**。 不過，一旦完成測試，您必須確保已刪除測試流程。
+>如果您偏好使用Experience Platform UI中的來源監視儀表板，可以停用執行訂單檢查清單中的&#x200B;**刪除流程**。 不過，一旦完成測試，您必須確保已刪除測試流程。
 
 ![run-collection](../assets/run-collection.png)
 
 ## 使用UI測試您的來源
 
-若要在UI中測試您的來源，請前往Platform UI中您組織沙箱的來源目錄。 從這裡，您應該會看到新來源出現在&#x200B;*串流*&#x200B;類別下。
+若要在UI中測試您的來源，請前往Experience Platform UI中您組織沙箱的來源目錄。 從這裡，您應該會看到新來源出現在&#x200B;*串流*&#x200B;類別下。
 
 由於您的沙箱中現在有您的新來源，您必須遵循來源工作流程以測試功能。 若要開始，請選取&#x200B;**[!UICONTROL 設定]**。
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 [!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
-Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../data-prep/ui/mapping.md)
+Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../data-prep/ui/mapping.md)
 
 成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
@@ -103,10 +103,10 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 ![來源工作流程的稽核步驟。](../assets/testing/review-test.png)
 
-最後，您必須擷取資料流的串流端點。 此端點將用於訂閱您的webhook，允許您的串流來源與Experience Platform通訊。 若要擷取您的串流端點，請移至您剛建立之資料流的[!UICONTROL 資料流活動]頁面，並從[!UICONTROL 屬性]面板底部複製端點。
+最後，您必須擷取資料流的串流端點。 此端點將用於訂閱您的webhook，讓您的串流來源能夠與Experience Platform通訊。 若要擷取您的串流端點，請移至您剛建立之資料流的[!UICONTROL 資料流活動]頁面，並從[!UICONTROL 屬性]面板底部複製端點。
 
 ![資料流活動中的串流端點。](../assets/testing/endpoint-test.png)
 
 ## 提交您的來源
 
-您的來源能夠完成整個工作流程後，您可以繼續聯絡您的Adobe代表，並提交您的來源，以跨其他Experience Platform組織整合。
+當您的來源能夠完成整個工作流程後，您可以繼續聯絡您的Adobe代表，並提交您的來源，以跨其他Experience Platform組織整合。

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2022 年 2 月)
 description: Adobe Experience Platform 2022 年 2 月版發行說明。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 16%
+source-wordcount: '1018'
+ht-degree: 17%
 
 ---
 
@@ -35,31 +35,31 @@ Adobe Experience Platform提供多個[!DNL dashboards]，您可以透過它們�
 | --- | --- |
 | 新的標準目的地Widget | 下列標準Widget可讓您視覺化與目的地相關的不同量度。<ul><li>目的地最近啟用的區段。 此Widget會根據所選目的地，以遞減順序顯示最近啟用的前五個區段。</li><li>對象人數趨勢。 此Widget針對已對應至目的地帳戶的區段，描述一段時間內設定檔計數之間的關係。</li><li>依身分割槽分的未對應區段。 此Widget會依指定目的地和身分的遞減身分計數，列出前五個未對應的區段。</li><li>依身分割槽分的對應區段。 此Widget列出前五個對應區段。 區段會根據其各自符合從Widget下拉式選單中所選目的地ID的來源ID計數，從高到低排序。</li><li>通用對象。 此Widget提供在頁面上方所選目的地帳戶，以及在下拉式Widget中選取的目的地啟用的前五個區段清單。</li></ul> 如需可用標準Widget的詳細資訊，請參閱[目的地儀表板檔案。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets)。 |
 
-如需[!DNL Dashboards]的詳細資訊，請參閱[[!DNL Dashboards] 總覽](../../dashboards/home.md)。
+如需更多有關 [!DNL Dashboards] 的資訊，請參閱[[!DNL Dashboards] 概觀](../../dashboards/home.md)。
 
-## 資料收集 {#data-collection}
+## 資料彙集 {#data-collection}
 
-Platform提供了一套技術，可讓您收集使用者端客戶體驗資料並將資料傳送至Adobe Experience PlatformEdge Network，在那裡可以擴充和轉換資料，並將資料分發至Adobe或非Adobe目的地。
+Experience Platform提供了一套技術，可讓您收集使用者端客戶體驗資料並將資料傳送至Adobe Experience Platform Edge Network，在那裡可以擴充和轉換資料，並將其分發至Adobe或非Adobe目的地。
 
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
 | 改善資料流設定的UI工作流程 | 更新在資料收集UI中建立新資料流的工作流程。 將服務新增至資料流時，只有您有權存取的服務會包含在選項清單中。 如需詳細資訊，請參閱[設定資料流](../../datastreams/overview.md)的指南。 |
-| 資料收集的資料準備 | 如果您使用Adobe Experience Platform Web SDK，您現在可以運用資料準備功能，將您的資料對應至伺服器端的Experience Data Model (XDM)。 如需詳細資訊，請參閱資料串流指南中資料彙集](../../datastreams/data-prep.md)的[資料準備。 |
-| 第一方裝置ID | 您現在可以在使用Adobe Experience Platform Edge Network Web SDK收集客戶資料時，將自己的裝置ID傳送至Platform Web SDK，針對第三方Cookie有效期限的最近瀏覽器限制提供因應措施。 如需詳細資訊，請參閱[第一方裝置識別碼](../../web-sdk/identity/first-party-device-ids.md)的指南。 |
+| 資料收集的資料準備 | 如果您使用Adobe Experience Platform Web SDK，現在可以運用資料準備功能，將您的資料對應至伺服器端的Experience Data Model (XDM)。 如需詳細資訊，請參閱資料串流指南中資料彙集](../../datastreams/data-prep.md)的[資料準備。 |
+| 第一方裝置 ID | 您現在可以在使用Adobe Experience Platform Web Edge Network收集客戶資料時，將自己的裝置ID傳送至Experience Platform SDK，針對第三方Cookie有效期限的最新瀏覽器限制提供因應措施。 如需詳細資訊，請參閱[第一方裝置識別碼](../../web-sdk/identity/first-party-device-ids.md)的指南。 |
 
-如需Platform資料收集的詳細資訊，請參閱[資料收集概觀](../../collection/home.md)。
+如需Experience Platform中資料收集的詳細資訊，請參閱[資料收集概觀](../../collection/home.md)。
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| (Beta)檔案型目的地的Destination SDK支援 | [檔案型目的地的Destination SDK支援](../../destinations/destination-sdk/functionality/destination-server/server-specs.md)目前為私人測試版，僅供特定數目的合作夥伴和客戶使用。 功能和相關檔案在正式發行前可能會有所變更。<br><br>請聯絡您的Adobe客戶代表，瞭解如何存取此功能。 Adobe內部客戶代表應聯絡Experience Platform目標產品和工程團隊，以討論支援的使用案例。 <br><br>在對檔案型目的地提供Destination SDK支援的測試階段，測試版合作夥伴和客戶可以使用[Experience PlatformDestination SDK](../../destinations/destination-sdk/overview.md)來建置私人目的地，以受益於下列功能： <ul><li>透過Amazon S3、SFTP伺服器、Azure Blob、Azure Data Lake儲存空間、資料登陸區域儲存空間，建立檔案式（批次）目的地。</li><li>設定並設定預設的檔案匯出排程和頻率選項。</li><li>設定並設定選項，以格式化匯出的CSV檔案（分隔字元、逸出字元和其他選項）。</li><li>設定和編輯自訂檔案標題的功能。</li><li>能夠接收有關檔案和區段匯出的事件通知。</li><li>可匯出其他檔案型別，例如CSV、TSV、JSON、Parquet。</li></ul>  <br>若要開始使用新功能，請閱讀[(Beta)使用Destination SDK設定以檔案為基礎的目的地](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)。 <br><br>所有Experience Platform客戶和合作夥伴皆可使用Destination SDK來建立私人或產品化的&#x200B;*串流*&#x200B;目的地。 閱讀如何[使用Destination SDK設定串流目的地](../../destinations/destination-sdk/guides/configure-destination-instructions.md)的指南，以取得詳細資料。 |
+| (Beta) Destination SDK支援檔案型目的地 | [檔案型目的地的Destination SDK支援](../../destinations/destination-sdk/functionality/destination-server/server-specs.md)目前為私人測試版，僅供特定數目的合作夥伴和客戶使用。 功能和相關檔案在正式發行前可能會有所變更。<br><br>請聯絡您的Adobe客戶代表，瞭解如何存取此功能。 Adobe內部客戶代表應聯絡Experience Platform目標產品與工程團隊，討論支援的使用案例。 <br><br>在Destination SDK檔案型目的地支援的測試階段中，測試版合作夥伴和客戶可以使用[Experience Platform Destination SDK](../../destinations/destination-sdk/overview.md)建置私人目的地，以受益於下列功能： <ul><li>透過Amazon S3、SFTP伺服器、Azure Blob、Azure Data Lake儲存空間、資料登陸區域儲存空間，建立檔案式（批次）目的地。</li><li>設定並設定預設的檔案匯出排程和頻率選項。</li><li>設定並設定選項，以格式化匯出的CSV檔案（分隔字元、逸出字元和其他選項）。</li><li>設定和編輯自訂檔案標題的功能。</li><li>能夠接收有關檔案和區段匯出的事件通知。</li><li>可匯出其他檔案型別，例如CSV、TSV、JSON、Parquet。</li></ul>  <br>若要開始使用新功能，請閱讀[(Beta)使用Destination SDK設定檔案型目的地](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)。 <br><br>所有Experience Platform客戶和合作夥伴皆可使用Destination SDK來建立私人或產品化的&#x200B;*串流*&#x200B;目的地。 閱讀如何[使用Destination SDK設定串流目的地](../../destinations/destination-sdk/guides/configure-destination-instructions.md)的指南，以取得詳細資料。 |
 
 ## [!DNL Identity Service] {#identity}
 
@@ -77,7 +77,7 @@ Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身�
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
 Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 

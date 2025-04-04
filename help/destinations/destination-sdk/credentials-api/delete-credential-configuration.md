@@ -2,9 +2,9 @@
 description: 此頁面是用來刪除認證設定Adobe Experience Platform Destination SDK的API呼叫的範例。
 title: 刪除認證設定
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '397'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 1%
 > 
 >閱讀[客戶驗證組態](../functionality/destination-configuration/customer-authentication.md)，以取得支援的驗證型別的詳細資訊。
 
-只有在Adobe和您的目的地平台之間有全域驗證系統，且[!DNL Platform]客戶不需要提供任何驗證認證即可連線到您的目的地時，才使用此API端點來建立認證設定。 在此情況下，您必須使用`/credentials` API端點建立認證組態。
+只有在Adobe和您的目的地平台之間有全域驗證系統，且[!DNL Experience Platform]客戶不需要提供任何驗證認證即可連線至您的目的地時，才使用此API端點來建立認證設定。 在此情況下，您必須使用`/credentials` API端點建立認證組態。
 
 使用全域驗證系統時，在[建立新的目的地組態](../authoring-api/destination-configuration/create-destination-configuration.md)時，您必須在[目的地傳遞](../functionality/destination-configuration/destination-delivery.md)組態中設定`"authenticationRule":"PLATFORM_AUTHENTICATION"`。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 認證API操作快速入門 {#get-started}
 
@@ -75,8 +75,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀此檔案後，您現在知道如何使用`/authoring/credentials` API端點刪除認證設定。 閱讀[如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的過程中適合到什麼位置。
+閱讀此檔案後，您現在知道如何使用`/authoring/credentials` API端點刪除認證設定。 閱讀[如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的程式中的位置。

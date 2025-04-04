@@ -2,14 +2,14 @@
 description: 瞭解如何格式化傳送至您端點的HTTP請求。 使用/authoring/destination-servers端點在Adobe Experience Platform Destination SDK中設定目的地伺服器範本規格。
 title: 使用Destination SDK建立之目的地的範本規格
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '512'
 ht-degree: 2%
 
 ---
 
-# 以Destination SDK建立之目的地的範本規格
+# 使用Destination SDK建立之目的地的範本規格
 
 使用目的地伺服器設定的範本規格部分來設定如何格式化傳送到目的地的HTTP要求。
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -69,9 +69,9 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `httpMethod` | 字串 | *必要。* Adobe將在伺服器呼叫中使用的方法。 支援的方法： `GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
+| `httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 支援的方法： `GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
 | `templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
-| `value` | 字串 | *必要。*&#x200B;此字串是範本的字元逸出版本，可將Platform傳送的HTTP要求格式化為您目的地預期的格式。 <br>如需如何撰寫範本的詳細資訊，請使用範本](message-format.md#using-templating)閱讀[上的區段。 <br>如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 <br>如需簡單轉換的範例，請參閱[設定檔屬性](message-format.md#attributes)轉換。 |
+| `value` | 字串 | *必要。*&#x200B;此字串是範本的字元逸出版本，可將Experience Platform傳送的HTTP要求格式化為您目的地預期的格式。 <br>如需如何撰寫範本的詳細資訊，請使用範本](message-format.md#using-templating)閱讀[上的區段。 <br>如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 <br>如需簡單轉換的範例，請參閱[設定檔屬性](message-format.md#attributes)轉換。 |
 | `contentType` | 字串 | *必要。*&#x200B;您的伺服器接受的內容型別。 視轉換範本產生的輸出型別而定，這可以是任何支援的[HTTP應用程式內容型別](https://www.iana.org/assignments/media-types/media-types.xhtml#application)。 在大多數情況下，這個值應該設定為`application/json`。 |
 
 {style="table-layout:auto"}
@@ -82,6 +82,6 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 
 若要深入瞭解其他目的地伺服器元件，請參閱下列文章：
 
-* [以Destination SDK建立的目的地的伺服器規格](server-specs.md)
+* [使用Destination SDK建立之目的地的伺服器規格](server-specs.md)
 * [訊息格式](message-format.md)
 * [檔案格式設定](file-formatting.md)

@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Identity Service疑難排解指南
 description: 本檔案提供有關Adobe Experience Platform Identity Service常見問題的解答，以及常見錯誤的疑難排解指南。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
 
 # Identity Service疑難排解指南
 
-本檔案提供有關Adobe Experience Platform [!DNL Identity Service]常見問題的解答，以及常見錯誤的疑難排解指南。 如需[!DNL Platform] API的一般問題和疑難排解，請參閱[Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform [!DNL Identity Service]常見問題的解答，以及常見錯誤的疑難排解指南。 如需[!DNL Experience Platform] API的一般問題和疑難排解，請參閱[Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
 
 用來識別單一客戶的資料，通常分散於客戶用來與您的品牌互動的各種裝置和系統中。 [!DNL Identity Service]將這些分散的身分識別集合在一起，有助於全面瞭解客戶行為，以便您即時提供具影響力的數位體驗。 如需詳細資訊，請參閱[Identity Service概觀](./home.md)。
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 ## 我可以在哪裡找到我的組織可用的身分識別名稱空間清單？
 
-使用[身分識別服務API](https://www.adobe.io/experience-platform-apis/references/identity-service)，您可以透過向`/idnamespace/identities`端點發出GET要求，列出您組織的所有可用身分識別名稱空間。 如需詳細資訊，請參閱Identity Service API概觀中[列出可用名稱空間](./api/list-namespaces.md)一節。
+您可以使用[身分識別服務API](https://www.adobe.io/experience-platform-apis/references/identity-service)，透過向`/idnamespace/identities`端點發出GET要求來列出組織的所有可用身分識別名稱空間。 如需詳細資訊，請參閱Identity Service API概觀中[列出可用名稱空間](./api/list-namespaces.md)一節。
 
 ## 如何為我的組織建立自訂名稱空間？
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 ## Identity Service如何處理個人識別資訊(PII)？
 
-Identity Service具有標準名稱空間，可支援擷取電話號碼和電子郵件的雜湊身分值。 不過，您應負責值的雜湊處理。 若要深入瞭解擷取到Platform的雜湊資料，請參閱[[!DNL Data Prep] 對應函式指南](../data-prep/functions.md#hashing)。
+Identity Service具有標準名稱空間，可支援擷取電話號碼和電子郵件的雜湊身分值。 不過，您應負責值的雜湊處理。 若要進一步瞭解如何雜湊擷取到Experience Platform中的資料，請參閱[[!DNL Data Prep] 對應函式指南](../data-prep/functions.md#hashing)。
 
 ## 雜湊處理PII型身分時，是否有任何考量事項？
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## 為何無法存取身分圖表頁面或API？
 
-您的Platform管理員必須布建您具有`view-identity-graph`許可權，您才能檢視身分圖表資料。 若沒有此許可權，您將在身分圖表檢視器頁面上及呼叫Platform API時，收到許可權遭拒訊息。 如需許可權的詳細資訊，請參閱[存取控制概述](../access-control/home.md)。
+您的Experience Platform管理員必須以`view-identity-graph`許可權布建您，您才能檢視身分圖表資料。 若沒有此許可權，您將在身分圖表檢視器頁面上及呼叫Experience Platform API時，收到許可權遭拒訊息。 如需許可權的詳細資訊，請參閱[存取控制概述](../access-control/home.md)。
 
 ## 疑難排解
 
@@ -216,7 +216,7 @@ Internal solutions|Preferred|Common
 }
 ```
 
-發生此錯誤時，您的存取權杖無效。 存取權杖每24小時過期一次，必須重新產生才能繼續使用[!DNL Platform] API。 請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，瞭解產生新存取權杖的說明。
+發生此錯誤時，您的存取權杖無效。 存取權杖每24小時過期一次，必須重新產生才能繼續使用[!DNL Experience Platform] API。 請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，瞭解產生新存取權杖的說明。
 
 ### 授權服務權杖無效
 
@@ -228,7 +228,7 @@ Internal solutions|Preferred|Common
 }
 ```
 
-發生此錯誤時，您的存取權杖無效。 存取權杖每24小時過期一次，必須重新產生才能繼續使用[!DNL Platform] API。 請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，瞭解產生新存取權杖的說明。
+發生此錯誤時，您的存取權杖無效。 存取權杖每24小時過期一次，必須重新產生才能繼續使用[!DNL Experience Platform] API。 請參閱[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，瞭解產生新存取權杖的說明。
 
 ### 使用者權杖並沒有有效的產品內容
 
@@ -276,11 +276,11 @@ Internal solutions|Preferred|Common
 }
 ```
 
-執行[!DNL Platform]服務呼叫時發生未預期的例外狀況時，便會顯示此錯誤。 最佳實務是在收到此錯誤時，以固定的間隔設定程式來重試自動呼叫的請求。 如果問題仍然存在，請聯絡您的系統管理員。
+執行[!DNL Experience Platform]服務呼叫時發生未預期的例外狀況時，便會顯示此錯誤。 最佳實務是在收到此錯誤時，以固定的間隔設定程式來重試自動呼叫的請求。 如果問題仍然存在，請聯絡您的系統管理員。
 
 ## 批次擷取錯誤代碼
 
-[!DNL Identity Service]會使用批次擷取，從已上傳至[!DNL Platform]的記錄和時間序列資料中擷取身分資料。 由於批次擷取為非同步流程，因此您必須檢視批次的詳細資料才能檢視錯誤。 錯誤會隨著批次進行而累積，直到批次完成。
+[!DNL Identity Service]會使用批次擷取，從已上傳至[!DNL Experience Platform]的記錄和時間序列資料中擷取身分資料。 由於批次擷取為非同步流程，因此您必須檢視批次的詳細資料才能檢視錯誤。 錯誤會隨著批次進行而累積，直到批次完成。
 
 以下是使用[批次擷取API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)時，您可能會遇到的與[!DNL Identity Service]相關的錯誤訊息清單。
 

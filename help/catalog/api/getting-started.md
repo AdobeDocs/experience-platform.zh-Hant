@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 目錄服務API指南
 description: 目錄服務API可讓開發人員管理Adobe Experience Platform中的資料集中繼資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 22%
@@ -21,7 +21,7 @@ ht-degree: 22%
 
 [!DNL Catalog]追蹤[!DNL Experience Platform]內多種資源與作業的中繼資料。 此開發人員指南需要實際瞭解與建立和管理這些資源有關的各種[!DNL Experience Platform]服務：
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 * [批次內嵌](../../ingestion/batch-ingestion/overview.md)： [!DNL Experience Platform]如何內嵌及儲存資料檔案（例如CSV和Parquet）中的資料。
 * [串流擷取](../../ingestion/streaming-ingestion/overview.md)： [!DNL Experience Platform]如何從使用者端和伺服器端裝置即時擷取及儲存資料。
 
@@ -33,19 +33,19 @@ ht-degree: 22%
 
 ## 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 

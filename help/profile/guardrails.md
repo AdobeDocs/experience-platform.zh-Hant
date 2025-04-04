@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: 了解設定檔資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2611'
+source-wordcount: '2617'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,9 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 下列Experience Platform服務參與即時客戶個人檔案資料的模型化：
 
 * [[!DNL Real-Time Customer Profile]](home.md)：使用來自多個來源的資料建立統一的消費者設定檔。
-* [身分](../identity-service/home.md)：Bridge身分在擷取到Platform時來自不同的資料來源。
-* [結構描述](../xdm/home.md)： Experience Data Model (XDM)結構描述是Platform用來組織客戶體驗資料的標準化架構。
-* [對象](../segmentation/home.md)： Platform內的細分引擎是用來根據客戶行為和屬性，從您的客戶設定檔建立對象。
+* [身分](../identity-service/home.md)：Bridge身分擷取到Experience Platform時，來自不同的資料來源。
+* [結構描述](../xdm/home.md)： Experience Data Model (XDM)結構描述是Experience Platform用來組織客戶體驗資料的標準化架構。
+* [對象](../segmentation/home.md)： Experience Platform中的細分引擎是用來根據客戶行為和屬性，從您的客戶設定檔建立對象。
 
 ## 限制型別
 
@@ -177,9 +177,9 @@ Dimension實體提供查詢資料，可協助並簡化多實體區段定義，�
 
 ### 合併原則 {#merge-policies}
 
-將來自多個來源的資料彙集在一起時，合併原則是Platform用來判斷資料優先順序的方式以及將會合併哪些資料以建立該統一檢視的規則。 例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。 當來自多個來源的資料衝突時，合併原則會決定要將哪些資訊包含在個人設定檔中。 每個沙箱最多允許五(5)個使用`_xdm.context.profile`結構描述的合併原則。 若要深入瞭解合併原則，請參閱[合併原則概述](merge-policies/overview.md)。
+將來自多個來源的資料彙集在一起時，合併原則是Experience Platform用來判斷資料優先順序的方式以及將合併哪些資料以建立該統一檢視的規則。 例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Experience Platform時，會合併在一起，以便為該客戶建立單一設定檔。 當來自多個來源的資料衝突時，合併原則會決定要將哪些資訊包含在個人設定檔中。 每個沙箱最多允許五(5)個使用`_xdm.context.profile`結構描述的合併原則。 若要深入瞭解合併原則，請參閱[合併原則概述](merge-policies/overview.md)。
 
-### Platform中的Adobe Analytics報表套裝資料集 {#aa-datasets}
+### Experience Platform中的Adobe Analytics報表套裝資料集 {#aa-datasets}
 
 只要解決所有資料衝突，就可以為設定檔啟用多個報表套裝。 您可以使用「資料準備」功能來解決eVar、清單和Prop之間的資料衝突。 若要進一步瞭解如何使用「資料準備」功能，請參閱[Adobe Analytics聯結器UI指南](../sources/tutorials/ui/create/adobe-applications/analytics.md)。
 

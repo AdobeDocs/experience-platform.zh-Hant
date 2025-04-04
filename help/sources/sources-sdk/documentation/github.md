@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
 solution: Experience Platform
 title: 使用GitHub網頁介面建立來原始檔頁面
 description: 本檔案提供如何使用GitHub網頁介面來撰寫檔案及提交提取請求(PR)的步驟。
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe投稿指南中的下列檔案可用來進一步支援您的檔案程式： <ul><li>[安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Adobe的投稿指南中的下列檔案可用來進一步支援您的說明檔案程式： <ul><li>[安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## 設定您的GitHub環境
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ![create-new-file](../assets/create-new-file.png)
 
-將您的來源檔案命名為`YOURSOURCE.md`，其中YOURSOURCE是您在Platform中的來源名稱。 例如，如果您的公司是ACME CRM，則您的檔案名稱應該是`acme-crm.md`。
+將您的來源檔案命名為`YOURSOURCE.md`，其中YOURSOURCE是您在Experience Platform中的來源名稱。 例如，如果您的公司是ACME CRM，則您的檔案名稱應該是`acme-crm.md`。
 
 ![git-interface](../assets/git-interface.png)
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 ![比較 — pr](../assets/compare-pr.png)
 
-請確認基礎分支和比較分支正確無誤。 將說明您更新的附註新增至PR，然後選取&#x200B;**建立提取請求**。 這會開啟PR，以將您工作的工作分支合併到Adobe存放庫的主分支。
+請確認基礎分支和比較分支正確無誤。 將說明您更新的附註新增至PR，然後選取&#x200B;**建立提取請求**。 這會開啟PR，將您工作的工作分支合併至Adobe存放庫的主分支。
 
 >[!TIP]
 >

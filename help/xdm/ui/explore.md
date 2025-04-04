@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；UI；UI；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；探索；類別；欄位群組；資料型別；結構描述；
+keywords: Experience Platform；首頁；熱門主題；ui；UI；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；探索；類別；欄位群組；資料型別；結構描述；
 solution: Experience Platform
 title: 探索UI中的結構描述資源
 description: 瞭解如何在Experience Platform使用者介面中探索現有結構描述、類別、結構描述欄位群組和資料型別。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 # 探索UI中的結構描述資源
 
-在Adobe Experience Platform中，所有Experience Data Model (XDM)結構描述資源都儲存在[!DNL Schema Library]中，包括由Adobe提供的標準資源以及您組織定義的自訂資源。 在Experience PlatformUI中，您可以檢視[!DNL Schema Library]中任何現有結構描述、類別、欄位群組或資料型別的結構和欄位。 這在計畫和準備資料擷取時特別有用，因為UI會提供關於這些XDM資源提供的每個欄位的預期資料型別和使用案例的資訊。
+在Adobe Experience Platform中，所有Experience Data Model (XDM)結構描述資源都儲存在[!DNL Schema Library]中，包括Adobe提供的標準資源以及您組織定義的自訂資源。 在Experience Platform UI中，您可以檢視[!DNL Schema Library]中任何現有結構描述、類別、欄位群組或資料型別的結構和欄位。 這在計畫和準備資料擷取時特別有用，因為UI會提供關於這些XDM資源提供的每個欄位的預期資料型別和使用案例的資訊。
 
-本教學課程涵蓋在Experience PlatformUI中探索現有結構描述、類別、欄位群組和資料型別的步驟。
+本教學課程涵蓋在Experience Platform UI中探索現有結構描述、類別、欄位群組和資料型別的步驟。
 
 ## 查詢結構描述資源 {#lookup}
 
-在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**。 [!UICONTROL 結構描述]工作區提供&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以探索您組織中的所有結構描述，以及其他專用索引標籤以分別探索&#x200B;**[!UICONTROL 類別]**、**[!UICONTROL 欄位群組]**、**[!UICONTROL 資料型別]**&#x200B;和&#x200B;**[!UICONTROL 關係]**。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**。 [!UICONTROL 結構描述]工作區提供&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以探索您組織中的所有結構描述，以及其他專用索引標籤以分別探索&#x200B;**[!UICONTROL 類別]**、**[!UICONTROL 欄位群組]**、**[!UICONTROL 資料型別]**&#x200B;和&#x200B;**[!UICONTROL 關係]**。
 
 ![包含數個反白索引標籤的結構描述工作區。](../images/ui/explore/tabs.png)
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 某些欄位名稱的前置字元為底線，例如`_repo`和`_id`。 這些代表系統將在擷取資料時自動產生並指派之欄位的預留位置。
 
-因此，大部分這些欄位在擷取至Platform時應從資料結構中排除。 此規則的主要例外是[`_{TENANT_ID}`欄位](../api/getting-started.md#know-your-tenant_id)，在您組織下建立的所有XDM欄位都必須位於該欄位之下。
+因此，大部分這些欄位在擷取至Experience Platform時應該從資料結構中排除。 此規則的主要例外是[`_{TENANT_ID}`欄位](../api/getting-started.md#know-your-tenant_id)，在您組織下建立的所有XDM欄位都必須位於該欄位之下。
 
 ### 資料類型 {#data-types}
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ![結構描述編輯器已選取欄位，且欄位屬性邊欄中反白顯示的列舉值和顯示名稱。](../images/ui/explore/enum-field.png)
 
-### 身分欄位 {#identity}
+### 身分識別欄位 {#identity}
 
 檢查包含身分欄位的結構描述時，這些欄位會列在左側邊欄中，位於類別或欄位群組（提供這些欄位給結構描述）下方。 在左側邊欄中選取身分欄位名稱，以顯示畫布中的欄位，無論其巢狀深度為何。
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請參閱[定義身分欄位](./fields/identity.md)的指南，以取得身分欄位及其與下游平台服務關係的詳細資訊。
+>請參閱[定義身分欄位](./fields/identity.md)的指南，以取得身分欄位及其與下游Experience Platform服務關係的詳細資訊。
 
 ### 關係欄位 {#relationship}
 

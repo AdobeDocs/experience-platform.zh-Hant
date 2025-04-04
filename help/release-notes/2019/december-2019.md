@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 exl-id: 98d50b90-38ed-4cc2-ad48-78b712b453f7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 15%
@@ -25,9 +25,9 @@ Adobe Experience Platform 現有功能的更新：
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform Segmentation Service提供使用者介面和RESTful API，可讓您建立區段，並從[!DNL Real-Time Customer Profile]資料產生對象。 這些區段是在[!DNL Platform]上集中設定和維護，讓任何Adobe應用程式都能輕鬆存取。
+Adobe Experience Platform Segmentation Service提供使用者介面和RESTful API，可讓您建立區段，並從[!DNL Real-Time Customer Profile]資料產生對象。 這些區段是在[!DNL Experience Platform]上集中設定和維護，讓任何Adobe應用程式都能輕鬆存取。
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能**
 
@@ -58,7 +58,7 @@ Adobe Experience Platform [!DNL Decisioning Service]能以程式設計方式，�
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Platform]服務來建構、加標籤及增強該資料。 您可以從多種來源擷取資料，例如Adobe解決方案、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Experience Platform]服務來建構、加標籤及增強該資料。 您可以從多種來源擷取資料，例如Adobe解決方案、雲端型儲存空間、協力廠商軟體和您的CRM系統。
 
 [!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證儲存系統和CRM服務、設定擷取執行時間，以及管理資料擷取輸送量。
 
@@ -77,9 +77,9 @@ Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[
 
 ## [!DNL Experience Data Model] (XDM)系統 {#xdm}
 
-標準化和互通性是[!DNL Experience Platform]背後的重要概念。 [!DNL Experience Data Model] (XDM)由Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構描述。
+標準化和互通性是[!DNL Experience Platform]背後的重要概念。 由Adobe驅動的[!DNL Experience Data Model] (XDM)致力於標準化客戶體驗資料並定義客戶體驗管理的結構描述。
 
-XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **新功能**
 

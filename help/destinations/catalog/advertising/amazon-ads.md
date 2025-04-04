@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書供應商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的鑰匙式整合。 使用Adobe Experience Platform中的Amazon Ads目的地，使用者能在Amazon DSP上定義用於鎖定和啟用的廣告商對象。
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1820'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Amazon Ads]提供一系列選項，協助您為註冊賣家、廠商、圖書廠商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。
 
-[!DNL Amazon Ads]與Adobe Experience Platform的整合提供與[!DNL Amazon Ads]產品的按鍵式整合，包括Amazon DSP (ADSP)和AmazonMarketing Cloud(AMC)。
+[!DNL Amazon Ads]與Adobe Experience Platform的整合提供與[!DNL Amazon Ads]產品的按鍵式整合，包括Amazon DSP (ADSP)和Amazon Marketing Cloud (AMC)。
 
 使用Adobe Experience Platform中的[!DNL Amazon Ads]目的地，使用者能在Amazon DSP上定義目標定位和啟用的廣告商對象。  此外，使用者可將其資料上傳至[!DNL Amazon Marketing Cloud]，以瞭解對象、廣告商提供的維度、Amazon區段中的成員資格，或AMC中可用的其他訊號的效能。 將廣告商受眾上傳至AMC後，使用者可以使用[!DNL Amazon Marketing Cloud]來修改、增強或附加至使用[!DNL Amazon Marketing Cloud]內Amazon訊號的受眾成員。
 
@@ -32,7 +32,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 ### 啟用與定位 {#activation-and-targeting}
 
-此與Amazon DSP的整合可讓[!DNL Amazon Ads]個廣告商從Adobe Experience Platform將廣告商CDP受眾傳遞至Amazon的DSP，以建立廣告商受眾以用於廣告鎖定。 您可以在Amazon DSP中選取正面目標定位和負面目標定位（隱藏）的對象。
+此與Amazon DSP的整合可讓[!DNL Amazon Ads]個廣告商從Adobe Experience Platform傳遞廣告商CDP對象至Amazon的DSP，以建立廣告商對象來進行廣告鎖定。 您可以在Amazon DSP中選取正面目標定位和負面目標定位（隱藏）的對象。
 
 ### Analytics與Measurement {#analytics-and-measurement}
 
@@ -47,7 +47,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 若要使用[!DNL Amazon Ads]與Adobe Experience Platform的連線，使用者必須先存取Amazon DSP廣告商帳戶或[!DNL Amazon Marketing Cloud]執行個體。 若要布建這些執行個體，請造訪[!DNL Amazon Ads]網站上的下列頁面：
 
 * [開始使用Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
-* [開始使用AmazonMarketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
+* [開始使用Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## 支援的身分 {#supported-identities}
 
@@ -55,8 +55,8 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有&#x200B;*[!DNL Amazon Ads]*&#x200B;目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -109,7 +109,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -122,11 +122,11 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 [!DNL Amazon Ads]連線支援雜湊電子郵件地址和雜湊電話號碼，以進行身分比對。 下面的熒幕擷圖提供與[!DNL Amazon Ads]連線相容的相符範例：
 
-![Adobe至Amazon Ads對應](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
+![Adobe與Amazon Ads對應](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * 若要對應雜湊電子郵件地址，請選取`Email_LC_SHA256`身分名稱空間作為來源欄位。
 * 若要對應雜湊電話號碼，請選取`Phone_SHA256`身分名稱空間作為來源欄位。
-* 若要對應未雜湊的電子郵件地址或電話號碼，請選取對應的身分識別名稱空間作為來源欄位，並核取`Apply Transformation`選項以讓Platform在啟用時雜湊身分。
+* 若要對應未雜湊的電子郵件地址或電話號碼，請選取對應的身分識別名稱空間作為來源欄位，並核取`Apply Transformation`選項以讓Experience Platform在啟用時雜湊身分識別。
 * *自2024年9月發行版本開始新增*： Amazon Ads需要您對應包含2個字元ISO格式之`countryCode`值的欄位，以便加速身分解析程式（例如：US、GB、MX、CA等）。 沒有`countryCode`對應的連線將會對身分符合率產生負面影響。
 
 您在[!DNL Amazon Ads]聯結器的目的地設定中只選取一次指定的目標欄位。  例如，如果您提交商務電子郵件，您就無法在同一目的地設定中對應個人電子郵件。
@@ -149,7 +149,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![AmazonMarketing Cloud對象建立驗證](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![Amazon Marketing Cloud對象建立驗證](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 

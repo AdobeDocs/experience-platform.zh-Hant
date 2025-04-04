@@ -2,20 +2,20 @@
 title: 身分圖表檢視器
 description: 身分圖表是特定客戶不同身分之間關係的對應，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
 
 # 身分圖表檢視器
 
-身分圖表是特定客戶不同身分之間關係的對應，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。 所有客戶識別圖均由 Adobe Experience Platform 身分服務以近乎即時的方式集中管理並更新，以回應客戶活動。
+身分圖表是特定客戶不同身分之間關係的對應，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。 所有客戶身分識別圖均由 Adobe Experience Platform 身分識別服務以近乎即時的方式集中管理並更新，以回應客戶活動。
 
-Platform使用者介面中的身分圖表檢視器可讓您視覺化並更瞭解哪些客戶身分拼接在一起，以及拼接方式。 檢視器可讓您拖曳圖形的不同部分並加以互動，讓您檢查複雜的身分關係、更有效率地偵錯，並透過資訊的使用方式提高透明度而受益。
+Experience Platform使用者介面中的身分圖表檢視器可讓您視覺化並更瞭解哪些客戶身分拼接在一起，以及拼接方式。 檢視器可讓您拖曳圖形的不同部分並加以互動，讓您檢查複雜的身分識別關係、更有效率地偵錯，並透過資訊的使用方式提高透明度而受益。
 
-以下檔案提供如何在Platform UI中存取及使用身分圖表檢視器的步驟。
+以下檔案提供如何在Experience Platform UI中存取及使用身分圖表檢視器的步驟。
 
 ## 教學課程影片
 
@@ -38,9 +38,9 @@ Platform使用者介面中的身分圖表檢視器可讓您視覺化並更瞭解
 
 ## 存取身分圖表檢視器 {#access-identity-graph-viewer}
 
-在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 身分識別]**，然後從標題的索引標籤清單中選取&#x200B;**[!UICONTROL 身分識別圖表]**。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 身分識別]**，然後從標題的索引標籤清單中選取&#x200B;**[!UICONTROL 身分識別圖表]**。
 
-![Experience PlatformUI中的身分工作區，已選取身分圖表索引標籤。](../images/graph-viewer/identity-graph.png)
+![Experience Platform UI中的身分工作區，已選取身分圖表索引標籤。](../images/graph-viewer/identity-graph.png)
 
 若要檢視身分圖表，請提供身分名稱空間及其對應的值，然後選取&#x200B;**[!UICONTROL 檢視]**。
 
@@ -85,7 +85,7 @@ Platform使用者介面中的身分圖表檢視器可讓您視覺化並更瞭解
 | 批次 ID | 與批次資料對應的自動產生識別碼。 |
 | 資料集 ID | 與您的資料集對應的自動產生識別碼。 |
 | 資料集名稱 | 包含批次資料的資料集名稱。 |
-| 方案名稱 | 結構描述的名稱。 結構描述提供一組規則，可代表及驗證資料的結構和格式。 |
+| 結構描述名稱 | 結構描述的名稱。 結構描述提供一組規則，可代表及驗證資料的結構和格式。 |
 
 ![顯示身分資料以及資訊資料來源的右邊欄。](../images/graph-viewer/right-rail.png)
 
@@ -135,7 +135,7 @@ Platform使用者介面中的身分圖表檢視器可讓您視覺化並更瞭解
 
 ## 後續步驟
 
-閱讀本檔案後，您已瞭解如何在Platform UI中探索客戶的身分圖。 如需Platform中身分的詳細資訊，請參閱[身分服務總覽](../home.md)
+閱讀本檔案後，您已瞭解如何在Experience Platform UI中探索客戶的身分圖。 如需Experience Platform中身分的詳細資訊，請參閱[身分服務總覽](../home.md)
 
 ## Changelog
 

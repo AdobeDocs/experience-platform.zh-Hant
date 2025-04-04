@@ -2,9 +2,9 @@
 title: 使用UI建立HTTP API串流連線
 description: 本UI指南將協助您使用Adobe Experience Platform建立串流連線。
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1003'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 建立串流連線
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ## 將資料欄位對應至XDM結構描述
 
-[!UICONTROL 對應]步驟出現，提供介面以將來源資料對應到Platform資料集。
+[!UICONTROL 對應]步驟隨即顯示，提供介面將來源資料對應至Experience Platform資料集。
 
 [!DNL HTTP API]來源支援擷取JSON檔案。 如果JSON檔案標示為XDM申訴，則不需要手動設定。 如果沒有，則必須明確設定對應。
 
@@ -120,7 +120,7 @@ ht-degree: 1%
 
 ![資料流詳細資料](../../../../images/tutorials/create/http/dataflow-detail.png)
 
-## 檢閱
+## 審核
 
 **[!UICONTROL 檢閱]**&#x200B;步驟隨即顯示，可讓您在建立資料流之前先檢閱資料流的詳細資訊。 詳細資料分為以下類別：
 
@@ -141,4 +141,4 @@ ht-degree: 1%
 
 依照此教學課程中的指示，您已建立串流HTTP連線，讓您能夠使用串流端點來存取各種[!DNL Data Ingestion] API。 如需在API中建立串流連線的指示，請參閱[建立串流連線教學課程](../../../api/create/streaming/http.md)。
 
-若要瞭解如何將資料串流到Platform，請閱讀[串流時間序列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教學課程或[串流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教學課程。
+若要瞭解如何將資料串流至Experience Platform，請閱讀[串流時間序列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教學課程或[串流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教學課程。

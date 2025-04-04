@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: 檢視範圍指南
-user-guide-description: 了解如何使用 Adobe Experience Platform 檢視範圍的統計量度和事件通知來監控平台活動。
+user-guide-description: 瞭解如何使用Adobe Experience Platform Observability Insights中的統計量度和事件通知來監控Experience Platform活動。
 feature: Observability
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 61%
+source-wordcount: '57'
+ht-degree: 31%
 
 ---
 
@@ -19,10 +19,10 @@ ht-degree: 61%
    * [概觀](./api/overview.md)
    * [快速入門](./api/getting-started.md)
    * [量度](./api/metrics.md)
-* 警報 {#alerts}
+* 提醒 {#alerts}
    * [概觀](./alerts/overview.md)
    * [標準警報規則](./alerts/rules.md)
    * [UI指南](./alerts/ui.md)
    * [訂閱I/O事件通知](./alerts/subscribe.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+* [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

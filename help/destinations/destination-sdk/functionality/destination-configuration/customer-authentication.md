@@ -1,10 +1,10 @@
 ---
-description: 瞭解如何為目的地設定驗證機制，並深入瞭解根據您選取的驗證方法使用者會在UI中看到的內容。
+description: 瞭解如何為目的地設定驗證機制，並根據您選取的驗證方法，讓insight瞭解使用者在UI中會看到的內容。
 title: 客戶驗證設定
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 Experience Platform在提供給合作夥伴和客戶的驗證通訊協定方面提供極大的彈性。 您可以將目的地設定為支援任何業界標準的驗證方法，例如[!DNL OAuth2]、持有人權杖驗證、密碼驗證等等。
 
-此頁面說明如何使用您偏好的驗證方法來設定目的地。 根據您建立目的地時使用的驗證設定，客戶在Experience PlatformUI中連線到目的地時會看到不同型別的驗證頁面。
+此頁面說明如何使用您偏好的驗證方法來設定目的地。 根據您建立目的地時使用的驗證設定，客戶在Experience Platform UI中連線至目的地時，將會看到不同型別的驗證頁面。
 
-若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[組態選項](../configuration-options.md)檔案中的圖表，或檢視下列目的地組態概觀頁面：
+若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[設定選項](../configuration-options.md)檔案中的圖表，或檢視以下目的地設定概觀頁面：
 
 * [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration)
-* [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+* [使用Destination SDK設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-客戶必須先依照[目的地連線](../../../ui/connect-destination.md)教學課程中所述的步驟，在Experience Platform和您的目的地之間建立新連線，才能將資料從Platform匯出至您的目的地。
+客戶必須先依照[目的地連線](../../../ui/connect-destination.md)教學課程中所述的步驟，在Experience Platform和您的目的地之間建立新連線，才能將資料從Experience Platform匯出至您的目的地。
 
 當[透過Destination SDK建立目的地](../../authoring-api/destination-configuration/create-destination-configuration.md)時，`customerAuthenticationConfigurations`區段會定義客戶在[驗證畫面](../../../ui/connect-destination.md#authenticate)中看到的內容。 根據目的地驗證型別，客戶必須提供各種驗證詳細資訊，例如：
 
-* 對於使用[基本驗證](#basic)的目的地，使用者必須直接在Experience Platform使用者介面驗證頁面中提供使用者名稱和密碼。
+* 對於使用[基本驗證](#basic)的目的地，使用者必須直接在Experience Platform UI驗證頁面中提供使用者名稱和密碼。
 * 對於使用[持有者驗證](#bearer)的目的地，使用者必須提供持有者權杖。
 * 針對使用[OAuth2授權](#oauth2)的目的地，系統會將使用者重新導向至您目的地的登入頁面，使用者可在此使用認證登入。
 * 針對[Amazon S3](#s3)目的地，使用者必須提供其[!DNL Amazon S3]存取金鑰和秘密金鑰。
@@ -35,15 +35,15 @@ Experience Platform在提供給合作夥伴和客戶的驗證通訊協定方面�
 * [建立目的地設定](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-本文會說明您可用於目的地的所有支援客戶驗證設定，並顯示根據您為目的地設定的驗證方法，客戶將在Experience PlatformUI中看到的內容。
+本文會說明您可用於目的地的所有支援客戶驗證設定，並顯示根據您為目的地設定的驗證方法，客戶將在Experience Platform UI中看到的內容。
 
 >[!IMPORTANT]
 >
->客戶驗證設定不需要您設定任何引數。 當[建立](../../authoring-api/destination-configuration/create-destination-configuration.md)或[更新](../../authoring-api/destination-configuration/update-destination-configuration.md)目的地組態時，您可以複製並貼上API呼叫中此頁面顯示的程式碼片段，您的使用者就會在Platform UI中看到對應的驗證畫面。
+>客戶驗證設定不需要您設定任何引數。 當[建立](../../authoring-api/destination-configuration/create-destination-configuration.md)或[更新](../../authoring-api/destination-configuration/update-destination-configuration.md)目的地組態時，您可以複製並貼上您API呼叫中此頁面顯示的程式碼片段，而您的使用者將會在Experience Platform UI中看到對應的驗證畫面。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -105,7 +105,7 @@ Experience Platform中的即時（串流）整合支援基本驗證。
 
 ## OAuth 2驗證 {#oauth2}
 
-使用者選取「**[!UICONTROL 連線到目的地]**」以觸發到您目的地的OAuth 2驗證流程，如以下範例所示，用於Twitter「自訂對象」目的地。 如需針對目的地端點設定OAuth 2驗證的詳細資訊，請閱讀專用的[Destination SDKOAuth 2驗證頁面](oauth2-authorization.md)。
+使用者選取「**[!UICONTROL 連線到目的地]**」以觸發到您目的地的OAuth 2驗證流程，如以下適用於Twitter自訂對象目的地的範例所示。 如需針對目的地端點設定OAuth 2驗證的詳細資訊，請閱讀專用的[Destination SDK OAuth 2驗證頁面](oauth2-authorization.md)。
 
 ![使用OAuth 2驗證的UI轉譯](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -121,7 +121,7 @@ Experience Platform中的即時（串流）整合支援基本驗證。
 
 ## Amazon S3驗證 {#s3}
 
-在Experience Platform中，以檔案為基礎的目的地支援[!DNL Amazon S3]驗證。
+Experience Platform中檔案型目的地支援[!DNL Amazon S3]驗證。
 
 設定Amazon S3驗證型別時，使用者必須輸入其S3認證。
 
@@ -139,7 +139,7 @@ Experience Platform中的即時（串流）整合支援基本驗證。
 
 ## Azure Blob驗證  {#blob}
 
-在Experience Platform中，以檔案為基礎的目的地支援[!DNL Azure Blob Storage]驗證。
+Experience Platform中檔案型目的地支援[!DNL Azure Blob Storage]驗證。
 
 設定Azure Blob驗證型別時，使用者必須輸入連線字串。
 
@@ -157,7 +157,7 @@ Experience Platform中的即時（串流）整合支援基本驗證。
 
 ## [!DNL Azure Data Lake Storage]驗證 {#adls}
 
-在Experience Platform中，以檔案為基礎的目的地支援[!DNL Azure Data Lake Storage]驗證。
+Experience Platform中檔案型目的地支援[!DNL Azure Data Lake Storage]驗證。
 
 當您設定[!DNL Azure Data Lake Storage]驗證型別時，使用者必須輸入Azure服務主體認證及其租使用者資訊。
 
@@ -175,7 +175,7 @@ Experience Platform中的即時（串流）整合支援基本驗證。
 
 ## 使用密碼驗證的SFTP
 
-Experience Platform中以檔案為基礎的目的地支援使用密碼的[!DNL SFTP]驗證。
+Experience Platform中的檔案型目的地支援使用密碼的[!DNL SFTP]驗證。
 
 當您使用密碼驗證型別設定SFTP時，使用者需要輸入SFTP使用者名稱和密碼，以及SFTP網域和連線埠（預設連線埠為22）。
 
@@ -193,7 +193,7 @@ Experience Platform中以檔案為基礎的目的地支援使用密碼的[!DNL S
 
 ## 使用SSH金鑰驗證的SFTP
 
-Experience Platform中檔案型目的地支援使用[!DNL SSH]金鑰的[!DNL SFTP]驗證。
+Experience Platform中的檔案型目的地支援使用[!DNL SSH]金鑰的[!DNL SFTP]驗證。
 
 當您設定具有SSH金鑰驗證型別的SFTP時，使用者需要輸入SFTP使用者名稱和SSH金鑰，以及SFTP網域和連線埠（預設連線埠為22）。
 
@@ -211,7 +211,7 @@ Experience Platform中檔案型目的地支援使用[!DNL SSH]金鑰的[!DNL SFT
 
 ## [!DNL Google Cloud Storage]驗證 {#gcs}
 
-在Experience Platform中，以檔案為基礎的目的地支援[!DNL Google Cloud Storage]驗證。
+Experience Platform中檔案型目的地支援[!DNL Google Cloud Storage]驗證。
 
 當您設定[!DNL Google Cloud Storage]驗證型別時，使用者必須輸入其[!DNL Google Cloud Storage] [!UICONTROL 存取金鑰識別碼]和[!UICONTROL 秘密存取金鑰]。
 
@@ -236,7 +236,7 @@ Experience Platform中檔案型目的地支援使用[!DNL SSH]金鑰的[!DNL SFT
 * [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
-* [綱要設定](schema-configuration.md)
+* [結構描述設定](schema-configuration.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)
 * [支援的對應設定](supported-mapping-configurations.md)
 * [目的地傳遞](destination-delivery.md)

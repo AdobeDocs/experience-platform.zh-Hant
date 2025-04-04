@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1586'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 下列Experience Platform服務與模型化身分資料有關：
 
-* [身分](home.md)：Bridge身分在擷取到Platform時來自不同的資料來源。
+* [身分](home.md)：Bridge身分擷取到Experience Platform時，來自不同的資料來源。
 * [[!DNL Real-Time Customer Profile]](../profile/home.md)：使用來自多個來源的資料建立統一的消費者設定檔。
 
 ## 資料模型限制
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 ## 效能護欄 {#performance-guardrails}
 
-Identity Service持續監控傳入的資料，以確保大規模的高效能和可靠性。 不過，在短時間內大量湧入的體驗事件資料可能會導致效能降低和延遲。 Adobe對這類效能降級概不負責。
+Identity Service持續監控傳入的資料，以確保大規模的高效能和可靠性。 不過，在短時間內大量湧入的體驗事件資料可能會導致效能降低和延遲。 Adobe對這類效能降低不負任何責任。
 
 ## 瞭解當容量中的身分圖表更新時的刪除邏輯 {#deletion-logic}
 
@@ -95,7 +95,7 @@ Adobe如果您的生產沙箱包含：
 * 將人員識別碼（例如CRMID）設定為Cookie/裝置身分型別的自訂名稱空間。
 * 將Cookie/裝置識別碼設定為跨裝置識別型別的自訂名稱空間。
 
-此功能可用後，超過50個身分限制的圖表將減少到最多50個身分。 對於Real-Time CDP B2C Edition，這可能會導致符合對象資格的設定檔數量增加到最低限度，因為這些設定檔先前在細分和啟動中被忽略。
+此功能可用後，超過50個身分限制的圖表將減少到最多50個身分。 對於Real-Time CDP B2C Edition，這可能會導致符合對象資格的設定檔數量增加至最低，因為這些設定檔先前在細分和啟動中被忽略。
 
 #### 即時客戶個人檔案：對可定址對象的影響
 
@@ -200,6 +200,6 @@ Adobe如果您的生產沙箱包含：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
 * [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
-* [Real-time Customer Data Platform （B2C Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2P - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2B - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

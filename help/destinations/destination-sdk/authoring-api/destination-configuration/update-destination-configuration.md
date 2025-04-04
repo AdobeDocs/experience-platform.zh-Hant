@@ -2,9 +2,9 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新現有目的地設定的API呼叫的範例。
 title: 更新目的地設定
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '371'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->只有在您使用[發佈API](../../publishing-api/create-publishing-request.md)並提交更新以供Adobe稽核後，才可看見生產/公開目的地上的任何更新操作。
+>只有在您使用[發佈API](../../publishing-api/create-publishing-request.md)並提交更新以供Adobe檢閱後，才可看見對已生產/公開目的地執行的任何更新操作。
 
 如需目的地組態功能的詳細說明，請參閱下列文章：
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 * [OAuth2授權](../../functionality/destination-configuration/oauth2-authorization.md)
 * [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI屬性](../../functionality/destination-configuration/ui-attributes.md)
-* [綱要設定](../../functionality/destination-configuration/schema-configuration.md)
+* [結構描述設定](../../functionality/destination-configuration/schema-configuration.md)
 * [身分名稱空間設定](../../functionality/destination-configuration/identity-namespace-configuration.md)
 * [目的地傳遞](../../functionality/destination-configuration/destination-delivery.md)
 * [對象中繼資料設定](../../functionality/destination-configuration/audience-metadata-configuration.md)
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 目的地設定API操作快速入門 {#get-started}
 
@@ -207,11 +207,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟
 
-閱讀此檔案後，您現在知道如何透過Destination SDK`/authoring/destinations` API端點更新目的地設定。
+閱讀本檔案後，您現在知道如何透過Destination SDK `/authoring/destinations` API端點更新目的地設定。
 
 若要深入瞭解您可以使用此端點的功能，請參閱下列文章：
 

@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3408'
+source-wordcount: '3413'
 ht-degree: 15%
 
 ---
@@ -132,13 +132,13 @@ ht-degree: 15%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="體驗事件期限"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料期限"
 
-您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
+您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Experience Platform執行個體的每日快照期間擷取。
 
 授權使用報告提供高度精細度。 大多數量度會在多個產品之間共用，並反映所有使用它們的產品的彙總使用量，而非每個產品的總計。 儀表板提供這些量度在所有生產或開發沙箱中的綜合使用方式，以及來自特定沙箱的使用量度。 下列Experience Platform應用程式可透過使用量度進行追蹤：Real-Time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
 
 本指南概述如何存取和使用UI中的授權使用儀表板，並提供有關儀表板中顯示的視覺效果的更多資訊。
 
-如需Platform UI的一般概觀，請參閱[Experience Platform UI指南](../../landing/ui-guide.md)。
+如需Experience Platform UI的一般概觀，請參閱[Experience Platform UI指南](../../landing/ui-guide.md)。
 
 ## [!UICONTROL 授權使用情況]儀表板資料
 
@@ -148,11 +148,11 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->儀表板中的大部分量度都會根據您的Platform執行個體快照每日更新。 [!UICONTROL 可用的CJA資料列]為例外狀況，每月都會更新。 標示為「套件」的量度，例如[!UICONTROL Adhoc Query Service Users Pack]、[!UICONTROL Profile Richness No of Pack]和[!UICONTROL Streaming Segmentation No of Pack]，反映附加元件產品的授權權益，且不會追蹤目前使用情況。 在拍攝下一個快照之前，不會顯示快照之後所做的變更。
+>儀表板中的大部分量度都會根據您的Experience Platform執行個體快照每日更新。 [!UICONTROL 可用的CJA資料列]為例外狀況，每月都會更新。 標示為「套件」的量度，例如[!UICONTROL Adhoc Query Service Users Pack]、[!UICONTROL Profile Richness No of Pack]和[!UICONTROL Streaming Segmentation No of Pack]，反映附加元件產品的授權權益，且不會追蹤目前使用情況。 在拍攝下一個快照之前，不會顯示快照之後所做的變更。
 
 ## 探索授權使用儀表板 {#explore}
 
-若要導覽至Platform UI中的授權使用儀表板，請在左側邊欄中選取&#x200B;**[!UICONTROL 授權使用]**。 儀表板包含兩個標籤： **[!UICONTROL Metrics]**&#x200B;和&#x200B;**[!UICONTROL Products]**。
+若要導覽至Experience Platform UI中的授權使用儀表板，請在左側邊欄中選取&#x200B;**[!UICONTROL 授權使用]**。 儀表板包含兩個標籤： **[!UICONTROL Metrics]**&#x200B;和&#x200B;**[!UICONTROL Products]**。
 
 >[!NOTE]
 >
@@ -338,4 +338,4 @@ ht-degree: 15%
 
 閱讀本檔案後，您可以找到授權使用儀表板，並檢視每個已購買產品、所有生產或開發沙箱以及特定沙箱的使用量度。 您可以根據貴組織已購買的授權，找到更多有關貴組織可用量度的資訊。
 
-若要進一步瞭解Experience Platform UI中可用的其他功能，請參閱[平台UI指南](../../landing/ui-guide.md)。
+若要進一步瞭解Experience Platform UI中可用的其他功能，請參閱[Experience Platform UI指南](../../landing/ui-guide.md)。

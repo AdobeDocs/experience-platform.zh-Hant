@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: 瞭解如何將Data Landing Zone連結至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1366'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >此頁面特定於Experience Platform中的[!DNL Data Landing Zone] *來源*&#x200B;聯結器。 如需有關連線至[!DNL Data Landing Zone] *目的地*&#x200B;聯結器的資訊，請參閱[[!DNL Data Landing Zone] 目的地檔案頁面](/help/destinations/catalog/cloud-storage/data-landing-zone.md)。
 
-[!DNL Data Landing Zone]是Adobe Experience Platform布建的[!DNL Azure Blob]儲存體介面，可授予您存取安全、雲端式的檔案儲存設施，以將檔案帶入Platform。 您有權存取每個沙箱的一個[!DNL Data Landing Zone]容器，而且所有容器的資料量總計以您的Platform產品和服務授權所提供的資料量為限。 Experience Platform的所有客戶都已為每個沙箱布建一個[!DNL Data Landing Zone]容器。 您可以透過[!DNL Azure Storage Explorer]或命令列介面讀取及寫入檔案至容器。
+[!DNL Data Landing Zone]是Adobe Experience Platform布建的[!DNL Azure Blob]儲存體介面，可授予您存取安全、雲端式的檔案儲存設施，以將檔案帶入Experience Platform。 您有權存取每個沙箱一個[!DNL Data Landing Zone]容器，而且所有容器的資料量總計以您的Experience Platform產品和服務授權所提供的資料量為限。 Experience Platform的所有客戶都已為每個沙箱布建一個[!DNL Data Landing Zone]容器。 您可以透過[!DNL Azure Storage Explorer]或命令列介面讀取及寫入檔案至容器。
 
 [!DNL Data Landing Zone]支援SAS式驗證，其資料受到標準[!DNL Azure Blob]存放裝置安全機制的保護。 SAS式驗證可讓您透過公用網際網路連線，安全地存取[!DNL Data Landing Zone]容器。 您不需要變更網路即可存取[!DNL Data Landing Zone]容器，這表示您不需要為網路設定任何允許清單或跨區域設定。 Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案和資料夾強制實施嚴格的七天到期時間。 所有檔案和資料夾都會在七天後刪除。
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->您可以從Platform UI中的來源目錄擷取您的[!DNL Data Landing Zone]認證。
+>您可以從Experience Platform UI中的來源目錄擷取您的[!DNL Data Landing Zone]認證。
 
 提供您的[!DNL Data Landing Zone] SAS URL，然後選取&#x200B;**下一步**
 
@@ -318,6 +318,6 @@ print(f"Sign-in URL: {signin_url}")
 
 ### 使用UI
 
-- [使用UI連線 [!DNL Data Landing Zone] 至平台](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [使用UI連線 [!DNL Data Landing Zone] 至Experience Platform](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [在UI中為雲端儲存空間連線建立資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
 

@@ -4,16 +4,16 @@ title: 警報訂閱端點
 description: 本指南提供範例HTTP請求和回應，說明您可以使用查詢服務API對警報訂閱端點進行的各種API呼叫。
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3217'
 ht-degree: 1%
 
 ---
 
 # 警報訂閱端點
 
-Adobe Experience Platform查詢服務可讓您針對臨時和已排程的查詢訂閱警報。 警報可透過電子郵件、Platform UI內或兩者來接收。 平台內警報和電子郵件警報的通知內容相同。
+Adobe Experience Platform查詢服務可讓您針對臨時和已排程的查詢訂閱警報。 警報可透過電子郵件或Experience Platform UI接收，或兩者同時接收。 Experience Platform內警報和電子郵件警報的通知內容相同。
 
 ## 快速入門
 
@@ -57,7 +57,7 @@ Adobe Experience Platform查詢服務可讓您針對臨時和已排程的查詢�
 
 ## 擷取組織和沙箱的所有警報清單 {#get-list-of-org-alert-subs}
 
-藉由向`/alert-subscriptions`端點發出GET要求，擷取組織沙箱的所有警示清單。
+向`/alert-subscriptions`端點發出GET要求，以擷取組織沙箱的所有警報清單。
 
 **API格式**
 
@@ -79,7 +79,7 @@ GET /alert-subscriptions?{QUERY_PARAMETERS}
 | `orderby` | 指定結果順序的欄位。 支援的欄位是`created`和`updated`。 在屬性名稱前面加上遞增的`+`和遞減的`-`。 預設值為`-created`。 請注意，加號(`+`)必須使用`%2B`逸出。 例如，`%2Bcreated`是遞增建立順序的值。 |
 | `pagesize` | 使用此引數可控制要從每頁API呼叫擷取的記錄數。 預設限制設定為每頁最多50筆記錄。 |
 | `page` | 指定您要檢視記錄的傳回結果的頁碼。 |
-| `property` | 根據所選欄位篩選結果。 篩選器&#x200B;**必須** HTML逸出。 逗號可用來組合多組篩選器。 下列屬性允許篩選： <ul><li>ID</li><li>assetId</li><li>狀態</li><li>警報型別</li></ul> 支援的運運算元為`==` （等於）。 例如，`id==6ebd9c2d-494d-425a-aa91-24033f3abeec`會傳回具有相符識別碼的警示。 |
+| `property` | 根據所選欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 下列屬性允許篩選： <ul><li>ID</li><li>assetId</li><li>狀態</li><li>警報型別</li></ul> 支援的運運算元為`==` （等於）。 例如，`id==6ebd9c2d-494d-425a-aa91-24033f3abeec`會傳回具有相符識別碼的警示。 |
 
 **要求**
 
@@ -165,9 +165,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `alerts.assetId` | 將警示與特定查詢相關聯的查詢ID。 |
-| `alerts.id` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[平台警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
+| `alerts.id` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[Experience Platform警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
 | `alerts.status` | 警示有四個狀態值： `enabled`、`enabling`、`disabled`和`disabling`。 警示正在主動接聽事件、暫停以供日後使用，同時保留所有相關訂閱者和設定，或是在這些狀態之間轉換。 |
-| `alerts.alertType` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> |
+| `alerts.alertType` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Experience Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> |
 | `alerts._links` | 提供可用來擷取、更新、編輯或刪除與此警示ID相關之資訊的可用方法和端點的相關資訊。 |
 | `_page` | 物件包含描述順序、大小、總頁數和目前頁面的屬性。 |
 | `_links` | 物件包含可用於取得資源的下一頁或上一頁的URI參照。 |
@@ -294,11 +294,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `assetId` | 警報與此ID相關聯。 ID可以是查詢ID或排程ID。 |
-| `id` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[平台警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
+| `id` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[Experience Platform警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
 | `status` | 警示有四個狀態值： `enabled`、`enabling`、`disabled`和`disabling`。 警示正在主動接聽事件、暫停以供日後使用，同時保留所有相關訂閱者和設定，或是在這些狀態之間轉換。 |
 | `alertType` | 每個警報可以有三種不同的警報型別。 它們是： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li></ul> |
-| `subscriptions.emailNotifications` | 訂閱接收警示電子郵件之使用者的Adobe註冊電子郵件地址陣列。 |
-| `subscriptions.inContextNotifications` | 訂閱警示UI通知的使用者之Adobe註冊電子郵件地址陣列。 |
+| `subscriptions.emailNotifications` | 訂閱接收警示電子郵件之使用者的一系列Adobe註冊電子郵件地址。 |
+| `subscriptions.inContextNotifications` | 為訂閱警示UI通知的使用者提供的一系列Adobe註冊電子郵件地址。 |
 
 ## 擷取特定查詢或排程ID和警示型別的警示訂閱資訊 {#get-alert-info-by-id-and-alert-type}
 
@@ -331,7 +331,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **回應**
 
-成功的回應會傳回HTTP狀態200以及訂閱的所有警示。 這包括警示ID、警示型別、訂閱者的Adobe註冊電子郵件ID，以及他們偏好的通知通道。
+成功的回應會傳回HTTP狀態200以及訂閱的所有警示。 這包括警報ID、警報型別、訂閱者的Adobe註冊電子郵件ID，以及他們偏好的通知通道。
 
 ```json
 {
@@ -382,14 +382,14 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `assetId` | 將警示與特定查詢相關聯的查詢ID。 |
-| `alertType` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> |
-| `subscriptions` | 用來傳遞與警示相關聯之Adobe註冊電子郵件ID的物件，以及使用者接收警示的通道。 |
-| `subscriptions.inContextNotifications` | 訂閱警示UI通知的使用者之Adobe註冊電子郵件地址陣列。 |
-| `subscriptions.emailNotifications` | 訂閱接收警示電子郵件之使用者的Adobe註冊電子郵件地址陣列。 |
+| `alertType` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Experience Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> |
+| `subscriptions` | 用來傳遞與警報相關聯之Adobe註冊電子郵件ID的物件，以及使用者接收警報的通道。 |
+| `subscriptions.inContextNotifications` | 為訂閱警示UI通知的使用者提供的一系列Adobe註冊電子郵件地址。 |
+| `subscriptions.emailNotifications` | 訂閱接收警示電子郵件之使用者的一系列Adobe註冊電子郵件地址。 |
 
 ## 擷取使用者訂閱的所有警報清單 {#get-alert-subscription-list}
 
-向`/alert-subscriptions/user-subscriptions/{EMAIL_ID}`端點發出GET要求，擷取使用者已訂閱的所有警報清單。 回應包括警示名稱、ID、狀態、警示型別和通知通道。
+向`/alert-subscriptions/user-subscriptions/{EMAIL_ID}`端點發出GET要求，以擷取使用者已訂閱的所有警報清單。 回應包括警示名稱、ID、狀態、警示型別和通知通道。
 
 **API格式**
 
@@ -399,11 +399,11 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{EMAIL_ID}` | 註冊到Adobe帳戶的電子郵件地址用於識別訂閱了警報的使用者。 |
+| `{EMAIL_ID}` | 註冊至Adobe帳戶的電子郵件地址可用於識別訂閱了警報的使用者。 |
 | `orderby` | 指定結果順序的欄位。 支援的欄位是`created`和`updated`。 在屬性名稱前面加上遞增的`+`和遞減的`-`。 預設值為`-created`。 請注意，加號(`+`)必須使用`%2B`逸出。 例如，`%2Bcreated`是遞增建立順序的值。 |
 | `pagesize` | 使用此引數可控制要從每頁API呼叫擷取的記錄數。 預設限制設定為每頁最多50筆記錄。 |
 | `page` | 指定您要檢視記錄的傳回結果的頁碼。 |
-| `property` | 根據所選欄位篩選結果。 篩選器&#x200B;**必須** HTML逸出。 逗號可用來組合多組篩選器。 下列屬性允許篩選： <ul><li>ID</li><li>assetId</li><li>狀態</li><li>警報型別</li></ul> 支援的運運算元為`==` （等於）。 例如，`id==6ebd9c2d-494d-425a-aa91-24033f3abeec`會傳回具有相符識別碼的警示。 |
+| `property` | 根據所選欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 下列屬性允許篩選： <ul><li>ID</li><li>assetId</li><li>狀態</li><li>警報型別</li></ul> 支援的運運算元為`==` （等於）。 例如，`id==6ebd9c2d-494d-425a-aa91-24033f3abeec`會傳回具有相符識別碼的警示。 |
 
 **要求**
 
@@ -512,11 +512,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `name` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[平台警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
+| `name` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[Experience Platform警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
 | `assetId` | 將警示與特定查詢相關聯的查詢ID。 |
 | `status` | 警示有四個狀態值： `enabled`、`enabling`、`disabled`和`disabling`。 警示正在主動接聽事件、暫停以供日後使用，同時保留所有相關訂閱者和設定，或是在這些狀態之間轉換。 |
-| `alertType` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> |
-| `subscriptions` | 用來傳遞與警示相關聯之Adobe註冊電子郵件ID的物件，以及使用者接收警示的通道。 |
+| `alertType` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Experience Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> |
+| `subscriptions` | 用來傳遞與警報相關聯之Adobe註冊電子郵件ID的物件，以及使用者接收警報的通道。 |
 | `subscriptions.inContextNotifications` | 一個布林值，可判斷使用者接收警報通知的方式。 `true`值會確認應透過UI提供警示。 `false`值可確保不會透過該頻道通知使用者。 |
 | `subscriptions.emailNotifications` | 一個布林值，可判斷使用者接收警報通知的方式。 `true`值會確認電子郵件應提供警示。 `false`值可確保不會透過該頻道通知使用者。 |
 
@@ -560,9 +560,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `assetId` | 警報與此ID相關聯。 ID可以是查詢ID或排程ID。 |
-| `alertType` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> |
-| `subscriptions` | 用來傳遞與警示相關聯之Adobe註冊電子郵件ID的物件，以及使用者接收警示的通道。 |
-| `subscriptions.emailIds` | 一系列電子郵件地址，用於識別應接收警報的使用者。 電子郵件地址&#x200B;**必須**&#x200B;已註冊到Adobe帳戶。 |
+| `alertType` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Experience Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> |
+| `subscriptions` | 用來傳遞與警報相關聯之Adobe註冊電子郵件ID的物件，以及使用者接收警報的通道。 |
+| `subscriptions.emailIds` | 一系列電子郵件地址，用於識別應接收警報的使用者。 電子郵件地址&#x200B;**必須**&#x200B;已註冊至Adobe帳戶。 |
 | `subscriptions.inContextNotifications` | 一個布林值，可判斷使用者接收警報通知的方式。 `true`值會確認應透過UI提供警示。 `false`值可確保不會透過該頻道通知使用者。 |
 | `subscriptions.emailNotifications` | 一個布林值，可判斷使用者接收警報通知的方式。 `true`值會確認電子郵件應提供警示。 `false`值可確保不會透過該頻道通知使用者。 |
 
@@ -613,7 +613,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `id` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[平台警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
+| `id` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[Experience Platform警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
 | `_links` | 提供可用來擷取、更新、編輯或刪除與此警示ID相關之資訊的可用方法和端點的相關資訊。 |
 
 ## 啟用或停用警示 {#enable-or-disable-alert}
@@ -629,7 +629,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `ALERT_TYPE` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul>您必須在端點名稱空間中指定目前的警報型別，才能進行變更。 |
+| `ALERT_TYPE` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Experience Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul>您必須在端點名稱空間中指定目前的警報型別，才能進行變更。 |
 | `QUERY_ID` | 要更新的查詢的唯一識別碼。 |
 | `SCHEDULE_ID` | 要更新的排程查詢的唯一識別碼。 |
 
@@ -673,7 +673,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `id` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[平台警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
+| `id` | 警示的名稱。 此名稱由「警示」服務產生，並用於「警示」儀表板。 警示名稱由儲存警示、`alertType`和流程ID的資料夾組成。 有關可用警示的資訊可在[Experience Platform警示儀表板檔案](../../observability/alerts/ui.md)中找到。 |
 | `assetId` | 警報與此ID相關聯。 ID可以是查詢ID或排程ID。 |
 | `alertType` | 每個警報可以有三種不同的警報型別。 它們是： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li></ul> |
 | `status` | 警示有四個狀態值： `enabled`、`enabling`、`disabled`和`disabling`。 警示正在主動接聽事件、暫停以供日後使用，同時保留所有相關訂閱者和設定，或是在這些狀態之間轉換。 |
@@ -689,7 +689,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `ALERT_TYPE` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> DELETE要求僅適用於所提供的特定警報型別。 |
+| `ALERT_TYPE` | 警示的型別。 雖然隨機查詢可用的警示狀態只有四種，但已排程的查詢可用的警示狀態有五種。 `quarantine`警示僅適用於排定的查詢。 此外，您只能從Experience Platform UI設定`delay`警報。 因此，此處未說明`delay`。 可用的警報包括： <ul><li>`start`：在查詢執行開始時通知使用者。</li><li>`success`：在查詢完成時通知使用者。</li><li>`failure`：如果查詢失敗，則通知使用者。</li><li>`quarantine`：當排定的查詢執行進入隔離狀態時啟用。</li></ul> DELETE要求僅適用於所提供的特定警報型別。 |
 | `QUERY_ID` | 要更新的查詢的唯一識別碼。 |
 | `SCHEDULE_ID` | 要更新的排程查詢的唯一識別碼。 |
 

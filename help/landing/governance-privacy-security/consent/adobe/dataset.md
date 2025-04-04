@@ -6,9 +6,9 @@ description: 瞭解如何設定Experience Data Model (XDM)結構描述和資料�
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 為了讓Adobe Experience Platform處理您的客戶同意/偏好設定資料，該資料必須傳送至其結構描述包含與同意和其他許可權相關欄位的資料集。 具體而言，此資料集必須以[!DNL XDM Individual Profile]類別為基礎，並啟用以在[!DNL Real-Time Customer Profile]中使用。
 
-本檔案提供設定資料集的步驟，以便在Experience Platform中處理同意資料。 如需Platform中處理同意/偏好設定資料的完整工作流程概觀，請參閱[同意處理概觀](./overview.md)。
+本檔案提供在Experience Platform中設定資料集以處理同意資料的步驟。 如需Experience Platform中處理同意/偏好設定資料的完整工作流程總覽，請參閱[同意處理總覽](./overview.md)。
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->本教學課程假設您知道Platform中要用來擷取客戶屬性資訊的[!DNL Profile]結構描述。 無論您使用何種方法來收集同意資料，此結構描述都必須針對Real-time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile)啟用[。 此外，結構描述的主要身分不能是禁止用於興趣型廣告（例如電子郵件地址）的直接可識別欄位。 如果您不確定哪些欄位受到限制，請諮詢法律顧問。
+>本教學課程假設您知道Experience Platform中要用來擷取客戶屬性資訊的[!DNL Profile]結構描述。 無論您使用何種方法來收集同意資料，此結構描述都必須針對Real-time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile)啟用[。 此外，結構描述的主要身分不能是禁止用於興趣型廣告（例如電子郵件地址）的直接可識別欄位。 如果您不確定哪些欄位受到限制，請諮詢法律顧問。
 
 ## [!UICONTROL 同意和偏好設定詳細資料]欄位群組結構 {#structure}
 
@@ -99,9 +99,9 @@ ht-degree: 0%
 為了使用Adobe標準收集同意資料，您必須具備已啟用設定檔的結構描述，包含下列兩個欄位群組：
 
 * [[!UICONTROL 同意和偏好設定詳細資料]](../../../../xdm/field-groups/profile/consents.md)
-* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) （若使用Platform Web或Mobile SDK傳送同意訊號則為必要）
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (若使用Experience Platform Web或Mobile SDK傳送同意訊號則為必要)
 
-在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以顯示現有結構描述清單。 從這裡，選取您要新增同意欄位的[!DNL Profile]啟用結構描述的名稱。 本節中的熒幕擷取畫面以[方案建立教學課程](../../../../xdm/tutorials/create-schema-ui.md)中內建的「忠誠會員」方案為例。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以顯示現有結構描述清單。 從這裡，選取您要新增同意欄位的[!DNL Profile]啟用結構描述的名稱。 本節中的熒幕擷取畫面以[方案建立教學課程](../../../../xdm/tutorials/create-schema-ui.md)中內建的「忠誠會員」方案為例。
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
@@ -129,7 +129,7 @@ ht-degree: 0%
 >
 >如果您要建立新的結構描述，或編輯尚未為設定檔啟用的現有結構描述，您必須在儲存之前[為設定檔](../../../../xdm/ui/resources/schemas.md#profile)啟用結構描述。
 
-如果您編輯的結構描述是由Platform Web SDK資料流中指定的[!UICONTROL 設定檔資料集]使用，該資料集現在會包含新的同意欄位。 您現在可以返回[同意處理指南](./overview.md#merge-policies)，繼續設定Experience Platform以處理同意資料的程式。 如果您尚未為此結構描述建立資料集，請依照下一節中的步驟操作。
+如果您編輯的結構描述是由Experience Platform Web SDK資料流中指定的[!UICONTROL 設定檔資料集]使用，該資料集現在會包含新的同意欄位。 您現在可以返回[同意處理指南](./overview.md#merge-policies)，繼續設定Experience Platform以處理同意資料的程式。 如果您尚未為此結構描述建立資料集，請依照下一節中的步驟操作。
 
 ## 根據您的同意結構描述建立資料集 {#dataset}
 
@@ -161,11 +161,11 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-資料集現已儲存並啟用以用於[!DNL Profile]。 如果您打算使用Platform Web SDK傳送同意資料給設定檔，在設定[資料流](../../../../datastreams/overview.md)時，您必須選取此資料集作為[!UICONTROL 設定檔資料集]。
+資料集現已儲存並啟用以用於[!DNL Profile]。 如果您打算使用Experience Platform Web SDK傳送同意資料至設定檔，在設定[資料流](../../../../datastreams/overview.md)時，您必須選取此資料集作為[!UICONTROL 設定檔資料集]。
 
 ## 後續步驟
 
-依照本教學課程，您已新增同意欄位至已啟用[!DNL Profile]的結構描述，其資料集將用來使用Platform Web SDK或直接XDM擷取來擷取同意資料。
+依照本教學課程，您已新增同意欄位至已啟用[!DNL Profile]的結構描述，其資料集將用來使用Experience Platform Web SDK或直接XDM擷取來擷取同意資料。
 
 您現在可以返回[同意處理概述](./overview.md#merge-policies)，繼續設定Experience Platform以處理同意資料。
 
@@ -179,7 +179,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Platform Web和Mobile SDK的同意變更命令不支援自訂欄位。 目前將自訂同意欄位擷取到設定檔的唯一方式是透過[批次擷取](../../../../ingestion/batch-ingestion/overview.md)或[來源連線](../../../../sources/home.md)。
+>Experience Platform Web和Mobile SDK的同意變更命令不支援自訂欄位。 目前將自訂同意欄位擷取到設定檔的唯一方式是透過[批次擷取](../../../../ingestion/batch-ingestion/overview.md)或[來源連線](../../../../sources/home.md)。
 
 強烈建議您使用[!UICONTROL 同意和偏好設定詳細資料]欄位群組作為同意資料結構的基準，並視需要新增其他欄位，而不是嘗試從頭開始建立整個結構。
 

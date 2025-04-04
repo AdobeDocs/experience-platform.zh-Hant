@@ -1,8 +1,8 @@
 ---
-title: twitter自訂對象連線
-description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的受眾來建立相關的再次行銷活動
+title: Twitter自訂對象連線
+description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: ba9b59a24079b61a0f5d6076f3acfd83fc8f4092
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 5%
@@ -13,11 +13,11 @@ ht-degree: 5%
 
 ## 概觀 {#overview}
 
-在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再次行銷活動。
+在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再行銷活動。
 
 ## 先決條件 {#prerequisites}
 
-在設定[!DNL Twitter Custom Audiences]目的地之前，請務必檢閱下列您需要符合的Twitter必要條件。
+設定[!DNL Twitter Custom Audiences]目的地之前，請務必檢閱下列需要符合的Twitter必要條件。
 
 1. 您的[!DNL Twitter Ads]帳戶必須符合廣告資格。 新[!DNL Twitter Ads]帳戶在建立後的前2週內不符合廣告資格。
 2. 您在[!DNL Twitter Audience Manager]中授權存取的Twitter使用者帳戶必須啟用&#x200B;*[!DNL Partner Audience Manager]*&#x200B;許可權。
@@ -29,7 +29,7 @@ ht-degree: 5%
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
 | device_id | IDFA/AdID/Android ID | Adobe Experience Platform支援廣告商適用的Google Advertising ID (GAID)和Apple ID (IDFA)。 請在目的地啟用工作流程的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中，對應來源結構描述的這些名稱空間和/或屬性。 |
-| 電子郵件 | 使用者的電子郵件地址 | 請將純文字電子郵件地址和SHA256雜湊電子郵件地址對應至此欄位。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 如果您將客戶電子郵件地址雜湊再上傳至Adobe Experience Platform，請注意，這些身分必須使用SHA256進行雜湊處理，不可使用Salt。 |
+| 電子郵件 | 使用者的電子郵件地址 | 請將純文字電子郵件地址和SHA256雜湊電子郵件地址對應至此欄位。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 如果您將客戶電子郵件地址雜湊再上傳至Adobe Experience Platform，請注意，這些身分必須使用SHA256進行雜湊處理，不可使用Salt。 |
 
 {style="table-layout:auto"}
 
@@ -39,8 +39,8 @@ ht-degree: 5%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -50,8 +50,8 @@ ht-degree: 5%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員具有Twitter自訂對象目的地中使用的識別碼。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正使用Twitter自訂對象目的地中使用的識別碼匯出對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -112,7 +112,7 @@ ht-degree: 5%
 
 ### 對應考量事項 {#mapping-considerations}
 
-將對象對應至Twitter時，請提供人類看得懂的對象對應名稱。 建議您使用與Experience Platform區段相同的名稱。
+將受眾對應至Twitter時，請提供人類看得懂的受眾對應名稱。 建議您使用與Experience Platform區段相同的名稱。
 
 ## 資料使用與控管 {#data-usage-governance}
 
@@ -120,4 +120,4 @@ ht-degree: 5%
 
 ## 其他資源 {#additional-resources}
 
-有關Twitter中[!DNL List Custom Audiences]的更多資訊可以在[Twitter檔案](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html)中找到。
+有關Twitter中[!DNL List Custom Audiences]的詳細資訊，請參閱[Twitter檔案](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html)。

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
 solution: Experience Platform
 title: 在本機環境中使用文字編輯器來建立來原始檔頁面
 description: 本檔案提供相關步驟，說明如何使用本機環境編寫來原始檔並提交提取請求(PR)。
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe投稿指南中的下列檔案可用來進一步支援您的檔案程式： <ul><li>[安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Adobe的投稿指南中的下列檔案可用來進一步支援您的說明檔案程式： <ul><li>[安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## 先決條件
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ![平台存放庫](../assets/platform-repo.png)
 
-在Platform GitHub存放庫的首頁上，選取&#x200B;**Fork**。
+在Experience Platform GitHub存放庫的首頁上，選取&#x200B;**Fork**。
 
 ![分支](../assets/fork.png)
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
-接著，選取&#x200B;**Publish分支**。
+接著，選取&#x200B;**發佈分支**。
 
 ![publish-branch](../assets/publish-branch.png)
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 將存放庫複製到本機電腦，並建立新分支後，您現在可以透過您選擇的[文字編輯器](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors)，開始為您的新來源編寫檔案頁面。
 
-Adobe建議您使用[Visual Studio Code](https://code.visualstudio.com/)，並安裝AdobeMarkdown Authoring擴充功能。 若要安裝擴充功能，請啟動Visual Studio Code，然後從左側導覽區中選取&#x200B;**擴充功能**&#x200B;索引標籤。
+Adobe建議您使用[Visual Studio Code](https://code.visualstudio.com/)，並安裝Adobe Markdown Authoring擴充功能。 若要安裝擴充功能，請啟動Visual Studio Code，然後從左側導覽區中選取&#x200B;**擴充功能**&#x200B;索引標籤。
 
 ![擴充功能](../assets/extension.png)
 
@@ -89,7 +89,7 @@ Adobe建議您使用[Visual Studio Code](https://code.visualstudio.com/)，並�
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-請確認基礎分支和比較分支正確無誤。 將說明您更新的附註新增至PR，然後選取&#x200B;**建立提取請求**。 這會開啟PR，以將您工作的工作分支合併到Adobe存放庫的主分支。
+請確認基礎分支和比較分支正確無誤。 將說明您更新的附註新增至PR，然後選取&#x200B;**建立提取請求**。 這會開啟PR，將您工作的工作分支合併至Adobe存放庫的主分支。
 
 >[!TIP]
 >

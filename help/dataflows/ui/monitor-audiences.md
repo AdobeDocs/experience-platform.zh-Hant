@@ -3,16 +3,16 @@ description: 瞭解如何使用Experience Platform使用者介面在細分期間
 title: 在UI中監視對象的資料流
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1864'
 ht-degree: 4%
 
 ---
 
 # 在UI中監視對象的資料流
 
-區段服務可讓您透過區段定義或其他來自[!DNL Real-Time Customer Profile]資料的來源來建立對象。 Platform提供資料流，透明地追蹤從來源到目的地的資料流程。
+區段服務可讓您透過區段定義或其他來自[!DNL Real-Time Customer Profile]資料的來源來建立對象。 Experience Platform提供資料流，透明地追蹤資料從來源到目的地的流程。
 
 使用監控儀表板可檢視對象中資料活動的視覺化表示法，包括資料細分的狀態。 閱讀教學課程，瞭解如何使用監視儀表板來使用Experience Platform使用者介面監視資料分段，讓您追蹤對象啟用、評估和匯出工作的狀態。
 
@@ -20,13 +20,13 @@ ht-degree: 4%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-- [資料流](../home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
+- [資料流](../home.md)：資料流可呈現跨Experience Platform行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
    - [資料流執行](../../sources/notifications.md)：資料流執行是根據所選資料流的頻率設定所排程的週期性工作。
 - [分段](../../segmentation/home.md)：分段可讓您從即時客戶設定檔資料建立對象。
    - [啟用工作](../../destinations/ui/activation-overview.md)：啟用工作用於將您的對象啟用到指定的目的地。
    - [評估作業](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment)：評估作業是評估對象的非同步程式。
    - [匯出作業](../../segmentation/api/export-jobs.md)：匯出作業是用來將對象成員保留到資料集的非同步程式。
-- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 ## 監視對象儀表板 {#monitoring-audiences-dashboard}
 
@@ -85,7 +85,7 @@ ht-degree: 4%
 | **[!UICONTROL 工作完成]** | 分段工作完成的日期和時間。 |
 | **[!UICONTROL 處理時間]** | 完成細分工作所需的時間。 |
 | **[!UICONTROL 工作狀態]** | 分段工作的狀態。 支援的值包括&#x200B;**[!UICONTROL Success]**、**[!UICONTROL In Progress]**&#x200B;和&#x200B;**[!UICONTROL Failed]**。 |
-| **[!UICONTROL 輪廓計數]** | 分段工作正在評估的設定檔數。 每個使用者都應該有唯一的設定檔。 |
+| **[!UICONTROL 設定檔計數]** | 分段工作正在評估的設定檔數。 每個使用者都應該有唯一的設定檔。 |
 | **[!UICONTROL 身分已啟用]** | 正在啟用細分工作的身分數。 每個設定檔都可以有多個身分。 例如，個人資料可以包含電子郵件、電話號碼和忠誠度編號作為身分。 |
 | **[!UICONTROL 目的地名稱]** | 分段工作啟動的目標目的地名稱。 |
 
@@ -163,7 +163,7 @@ ht-degree: 4%
 | 量度 | 說明 |
 | ------ | ----------- |
 | **[!UICONTROL 名稱]** | 正在評估的對象名稱。 |
-| **[!UICONTROL 輪廓計數]** | 正在評估的設定檔數。 |
+| **[!UICONTROL 設定檔計數]** | 正在評估的設定檔數。 |
 
 ## 監視分段工作儀表板 {#monitoring-segmentation-jobs-dashboard}
 

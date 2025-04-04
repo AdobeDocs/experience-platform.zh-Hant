@@ -3,9 +3,9 @@ title: Mailchimp興趣類別
 description: Mailchimp （也稱為Intuit Mailchimp）是一種流行的行銷自動化平台和電子郵件行銷服務，企業使用它來管理與聯絡人（客戶、客戶或其他感興趣的當事方）使用郵寄清單和電子郵件行銷活動。 可使用此連接器根據聯絡人的興趣和偏好將他們排序。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2312'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)使用[[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API來建立[興趣類別](https://mailchimp.com/developer/marketing/api/interest-categories/)，然後將每個所選平台對象的連絡人新增至對應的興趣類別。 您可以&#x200B;**新增連絡人**&#x200B;或&#x200B;**更新現有[!DNL Mailchimp]連絡人的資訊**，然後在新的區段中啟用這些連絡人後，在現有[!DNL Mailchimp]對象中&#x200B;**新增或移除他們想要的群組**。 [!DNL Mailchimp Interest Groups]使用從Platform選取的對象名稱做為[!DNL Mailchimp]內的興趣類別。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)使用[[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API來建立[興趣類別](https://mailchimp.com/developer/marketing/api/interest-categories/)，然後將每個選定Experience Platform對象的連絡人新增至對應的興趣類別。 您可以&#x200B;**新增連絡人**&#x200B;或&#x200B;**更新現有[!DNL Mailchimp]連絡人的資訊**，然後在新的區段中啟用這些連絡人後，在現有[!DNL Mailchimp]對象中&#x200B;**新增或移除他們想要的群組**。 [!DNL Mailchimp Interest Groups]使用從Experience Platform選取的對象名稱做為[!DNL Mailchimp]內的興趣類別。
 
 ## 使用案例 {#use-cases}
 
@@ -28,11 +28,11 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 ### 傳送電子郵件給行銷活動的連絡人 {#use-case-send-emails}
 
-一家體育用品網站的銷售部門想要廣播電子郵件行銷活動，給已自我認定對足球感興趣的聯絡人清單。 聯絡人清單在從網站開發團隊收到的資料匯出中被分離為批次，因此需要被追蹤。 團隊會識別現有[!DNL Mailchimp]對象，並開始建置將每個清單中的連絡人加入其中的Experience Platform對象。 將這些對象傳送至[!DNL Mailchimp Interest Categories]後，如果所選[!DNL Mailchimp]對象中不存在任何連絡人，則會將其新增至具有連絡人所屬對象名稱的群組。 如果[!DNL Mailchimp]對象或群組中已有任何連絡人，則會更新其資訊。 資料傳送至[!DNL Mailchimp Interest Categories]後，銷售團隊可以選取行銷活動電子郵件，並傳送給[!DNL Mailchimp]對象中的足球興趣群組。
+一家體育用品網站的銷售部門想要廣播電子郵件行銷活動，給已自我認定對足球感興趣的聯絡人清單。 聯絡人清單在從網站開發團隊收到的資料匯出中被分離為批次，因此需要被追蹤。 團隊會識別現有[!DNL Mailchimp]對象，並開始建立每個清單中的聯絡人加入的Experience Platform對象。 將這些對象傳送至[!DNL Mailchimp Interest Categories]後，如果所選[!DNL Mailchimp]對象中不存在任何連絡人，則會將其新增至具有連絡人所屬對象名稱的群組。 如果[!DNL Mailchimp]對象或群組中已有任何連絡人，則會更新其資訊。 資料傳送至[!DNL Mailchimp Interest Categories]後，銷售團隊可以選取行銷活動電子郵件，並傳送給[!DNL Mailchimp]對象中的足球興趣群組。
 
 ## 先決條件 {#prerequisites}
 
-請參閱以下各節，瞭解在Experience Platform和[!DNL Mailchimp]中需要設定的任何先決條件，以及使用[!DNL Mailchimp Interest Categories]目的地之前必須收集的資訊。
+請參閱以下各節，瞭解您需要在Experience Platform和[!DNL Mailchimp]中設定的任何先決條件，以及使用[!DNL Mailchimp Interest Categories]目的地之前必須收集的資訊。
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
@@ -40,7 +40,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 ### [!DNL Mailchimp Interest Categories]目的地的先決條件 {#prerequisites-destination}
 
-若要將資料從Platform匯出至您的[!DNL Mailchimp]帳戶，請注意下列必要條件：
+若要將資料從Experience Platform匯出至您的[!DNL Mailchimp]帳戶，請注意下列必要條件：
 
 #### 您必須擁有[!DNL Mailchimp]帳戶 {#prerequisites-account}
 
@@ -92,7 +92,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 針對Platform中每個選取的對象，相對應的[!DNL Mailchimp Interest Categories]區段狀態會從Platform更新其對象狀態。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 針對Experience Platform中每個選取的對象，相對應的[!DNL Mailchimp Interest Categories]區段狀態會從Experience Platform更新其對象狀態。</li></ul> |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
@@ -118,7 +118,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 {style="table-layout:auto"}
 
-![平台UI熒幕擷圖顯示如何驗證。](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
+![Experience Platform UI熒幕擷圖顯示如何驗證。](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL 已連線]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
@@ -126,15 +126,15 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![顯示目的地詳細資訊的平台UI熒幕擷取畫面。](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
+![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
 
 | 欄位 | 說明 |
 | --- | --- |
 | **[!UICONTROL 名稱]** | 您日後可辨識此目的地的名稱。 |
 | **[!UICONTROL 說明]** | 可協助您日後識別此目的地的說明。 |
 | **[!UICONTROL 資料中心]** | 您的[!DNL Mailchimp]帳戶`data center`。 如需任何指引，請參閱[識別 [!DNL Mailchimp] 資料中心](#identify-data-center)區段。 |
-| **[!UICONTROL 對象名稱（請先選取資料中心）]** | 選取您的&#x200B;**[!UICONTROL 資料中心]**&#x200B;後，此下拉式清單會自動填入您[!DNL Mailchimp]帳戶中的對象名稱。 選取您要以Platform資料更新的對象。 |
-| **[!UICONTROL 興趣類別（請先選取資料中心和對象名稱）]** | 選取您的&#x200B;**[!UICONTROL 對象名稱]**&#x200B;後，此下拉式清單會自動填入您[!DNL Mailchimp]帳戶中的興趣群組類別名稱。 選取您要以Platform資料更新的類別名稱。 |
+| **[!UICONTROL 對象名稱（請先選取資料中心）]** | 選取您的&#x200B;**[!UICONTROL 資料中心]**&#x200B;後，此下拉式清單會自動填入您[!DNL Mailchimp]帳戶中的對象名稱。 選取您要以Experience Platform資料更新的對象。 |
+| **[!UICONTROL 興趣類別（請先選取資料中心和對象名稱）]** | 選取您的&#x200B;**[!UICONTROL 對象名稱]**&#x200B;後，此下拉式清單會自動填入您[!DNL Mailchimp]帳戶中的興趣群組類別名稱。 選取您要以Experience Platform資料更新的類別名稱。 |
 
 {style="table-layout:auto"}
 
@@ -159,7 +159,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Mailchimp Interest Categories]目的地，您必須完成欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
+若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Mailchimp Interest Categories]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
 
 若要將您的XDM欄位正確對應到[!DNL Mailchimp Interest Categories]目的地欄位，請遵循下列步驟：
 
@@ -192,7 +192,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
    例如，您想要以連絡人的現有位址列位`addr1`、`city`、`state`和`zip`的值更新`country`的值，例如`132, My Street, Kingston`、`New York`、`New York`和`12401`。 若要更新`country`，您必須傳遞變更&#x200B;*（若有的話）*&#x200B;的現有值，以及國家/地區的新值。 所以資料集中的值應該是`132, My Street, Kingston`、`New York`、`New York`、`12401`和`US`。 若要重申，如果您只傳遞`country`而未提供`addr1`、`city`、`state`和`zip`的值，則會被`NULL`覆寫。
 
    具有已完成對應的範例如下所示：
-   ![顯示欄位對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
+   ![Experience Platform UI熒幕擷圖範例，顯示欄位對應。](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
 當您完成提供目的地連線的對應時，請選取&#x200B;**[!UICONTROL 下一步]**。
 
@@ -204,7 +204,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 ![顯示「對象」群組頁面的Mailchimp UI熒幕擷圖。](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* 選取群組，並檢查選取的對象是否以來自平台的對象名稱建立為類別，且後面可能會接著自動產生的尾碼。
+* 選取群組，並檢查選取的對象是否建立為類別，其對象名稱來自Experience Platform，且後面可能會跟著自動產生的尾碼。
    * 此目的地會使用[[!DNL Mailchimp] 新增興趣類別API](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/)，以選取的區段名稱來建立興趣類別。 如果您建立新目的地並再次啟用相同的對象，[!DNL Mailchimp]會新增尾碼以區分現有區段和新區段。
 * 群組中不存在其電子郵件的連絡人會新增至新建立的類別。
 * 對於群組中已存在的連絡人，會更新屬性欄位資料，並將連絡人新增至新建立的類別。
@@ -221,7 +221,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 如果您在&#x200B;**[!UICONTROL 密碼]**&#x200B;欄位中提供的API金鑰或&#x200B;**[!UICONTROL 資料中心]**&#x200B;值不正確，UI會顯示[!DNL Mailchimp] API錯誤回應： *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`*，如下所示。 在此情況下，您無法從&#x200B;**[!UICONTROL 對象名稱（請先選取資料中心）]**&#x200B;欄位中選取值。
 
-![若您的Mailchimp API金鑰或資料中心值不正確，則平台UI熒幕擷取畫面會顯示錯誤。](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
+![如果您的Mailchimp API金鑰或資料中心值不正確，Experience Platform UI熒幕擷圖會顯示錯誤。](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
 若要修正此錯誤並繼續進行下一個步驟，您必須提供正確的值。 請參閱[識別 [!DNL Mailchimp] 資料中心](#identify-data-center)和
 如果您需要指引，請[收集 [!DNL Mailchimp] API金鑰](#gather-credentials)區段。

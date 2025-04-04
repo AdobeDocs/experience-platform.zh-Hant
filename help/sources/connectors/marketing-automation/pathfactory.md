@@ -4,9 +4,9 @@ description: 瞭解如何使用API或使用者介面將PathFactory連線至Adobe
 last-substantial-update: 2024-04-30T00:00:00Z
 badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '467'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 ## 先決條件 {#prerequisites}
 
-開始整合[[!DNL PathFactory]](https://www.pathfactory.com/)聯結器與Experience Platform之前，請確定您符合下列必要條件：
+開始將[[!DNL PathFactory]](https://www.pathfactory.com/)聯結器與Experience Platform整合之前，請確定您符合下列必要條件：
 
 * **一個[PathFactory帳戶]**。
    * 如果您還沒有有效的帳戶，請連絡[[!DNL PathFactory]](https://www.pathfactory.com/portal/company/contactus.shtml)。
@@ -45,7 +45,7 @@ ht-degree: 3%
 
 ### 如何取得憑證和存取權杖 {#gather-credentials}
 
-若要連線[!DNL PathFactory]至Experience Platform，您必須提供下列認證：
+若要將[!DNL PathFactory]連線至Experience Platform，您必須提供下列認證：
 
 | 認證 | 說明 | 端點 |
 | --- | --- | --- |
@@ -59,14 +59,14 @@ ht-degree: 3%
 
 如需有關如何取得您的使用者名稱、密碼、網域和存取Token的詳細指示，請造訪[[!DNL PathFactory] 支援中心](https://support.pathfactory.com/categories/adobe/)。 此資源提供全面性的認證擷取與管理指南。
 
-### 設定Experience Platform的許可權
+### 在Experience Platform上設定許可權
 
 您必須同時為您的帳戶啟用&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;許可權，才能將您的[!DNL PathFactory]帳戶連線至Experience Platform。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀[存取控制UI指南](../../../access-control/ui/overview.md)。
 
-## 將[!DNL PathFactory]連線至平台 {#pathfactory-connect}
+## 將[!DNL PathFactory]連線至Experience Platform {#pathfactory-connect}
 
-以下檔案提供如何使用API或使用者介面將[!DNL PathFactory]連線到Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL PathFactory]連線至Experience Platform的資訊：
 
-* [使用API建立來源連線和資料流，將 [!DNL PathFactory] 資料帶入Platform](../../tutorials/api/create/marketing-automation/pathfactory.md)。
-* [使用UI](../../tutorials/ui/create/marketing-automation/pathfactory.md)連線您的 [!DNL PathFactory] 帳戶以Experience Platform。
+* [使用API建立來源連線和資料流，將 [!DNL PathFactory] 資料匯入Experience Platform](../../tutorials/api/create/marketing-automation/pathfactory.md)。
+* [使用UI](../../tutorials/ui/create/marketing-automation/pathfactory.md)將您的 [!DNL PathFactory] 帳戶連線至Experience Platform。
 * [使用UI](../../tutorials/ui/dataflow/marketing-automation.md)為來源連線建立資料流。

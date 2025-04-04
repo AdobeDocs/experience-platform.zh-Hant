@@ -6,10 +6,10 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5e3f1517b321cab756305cd61ad5f1def93d3de7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 35%
+source-wordcount: '777'
+ht-degree: 36%
 
 ---
 
@@ -329,5 +329,5 @@ ht-degree: 35%
 * [常見問題集](./faq.md)
 * [術語更新](./term-updates.md)
 * [停止支援Internet Explorer 10和11](./ie-deprecation.md)
-* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+* [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
 

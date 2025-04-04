@@ -1,10 +1,10 @@
 ---
 title: 使用機器學習產生的預測性模型決定傾向分數
-description: 瞭解如何使用查詢服務將您的預測模型套用至Platform資料。 本檔案會示範如何使用Platform資料來預測客戶每次造訪時的購買傾向。
+description: 瞭解如何使用查詢服務將您的預測模型套用至Experience Platform資料。 本檔案會示範如何使用Experience Platform資料來預測客戶每次造訪時的購買傾向。
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ numpy
 tqdm
 ```
 
-## 從Platform將分析資料表匯入[!DNL Jupyter Notebook] {#import-analytics-tables}
+## 從Experience Platform將分析資料表匯入[!DNL Jupyter Notebook] {#import-analytics-tables}
 
-若要產生傾向分數模型，必須將儲存在Platform中的分析資料投影匯入[!DNL Jupyter Notebook]。 從連線至查詢服務的[!DNL Python] 3 [!DNL Jupyter Notebook]，以下命令會從虛擬服裝商店Luma匯入客戶行為資料集。 使用Experience Data Model (XDM)格式儲存Platform資料時，必須產生符合結構描述結構的範例JSON物件。 請參閱檔案，瞭解如何[產生範例JSON物件](../../xdm/ui/sample.md)的說明。
+若要產生傾向分數模型，必須將Experience Platform中儲存之分析資料的投影匯入[!DNL Jupyter Notebook]。 從連線至查詢服務的[!DNL Python] 3 [!DNL Jupyter Notebook]，以下命令會從虛擬服裝商店Luma匯入客戶行為資料集。 由於Experience Platform資料是使用Experience Data Model (XDM)格式儲存，因此產生的範例JSON物件必須符合結構描述。 請參閱檔案，瞭解如何[產生範例JSON物件](../../xdm/ui/sample.md)的說明。
 
 ![反白顯示數個命令的[!DNL Jupyter Notebook]儀表板。](../images/use-cases/jupyter-commands.png)
 
@@ -185,7 +185,7 @@ SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```sql
 SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 THEN 1 ELSE 0 END AS Prediction;
 ```
-  
+ 
 ### 端對端範例
 
 在您有兩個資料行（`c1`和`c2`）的情況下，如果`c1`有兩個類別，則會使用下列函式來訓練[!DNL Logistic Regression]演演算法：

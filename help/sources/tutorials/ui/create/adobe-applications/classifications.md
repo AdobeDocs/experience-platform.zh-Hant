@@ -2,9 +2,9 @@
 description: 瞭解如何在UI中建立Adobe Analytics來源聯結器，以將分類資料帶入Adobe Experience Platform。
 title: 在UI中建立分類資料的Adobe Analytics Source連線
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 02b5c5f963c21247adbb1d13114f92b22f8758de
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 0%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md)：Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 Analytics分類來源聯結器會要求您的資料先移轉至Adobe Analytics的新分類基礎結構才能使用。 若要確認資料的移轉狀態，請聯絡您的Adobe客戶團隊。
 
 ## 選取您的分類
 
-在Experience PlatformUI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*Adobe應用程式*&#x200B;類別下，選取&#x200B;**[!UICONTROL Adobe Analytics]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 
@@ -37,11 +37,11 @@ Analytics分類來源聯結器會要求您的資料先移轉至Adobe Analytics�
 >
 >如果沒有已驗證的帳戶，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 帳戶通過驗證後，選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
-![已選取Adobe Analytics來源的Experience PlatformUI中的來源目錄。](../../../../images/tutorials/create/classifications/catalog.png)
+![已選取Adobe Analytics來源的Experience Platform UI中的來源目錄。](../../../../images/tutorials/create/classifications/catalog.png)
 
-接著，選取[!UICONTROL 分類]，然後選取您要擷取以Experience Platform的分類資料集。
+接著，選取「[!UICONTROL 分類]」，然後選取您要擷取至Experience Platform的分類資料集。
 
-您最多可以選取30個不同的分類資料集以納入Experience Platform。 您選取的任何資料集都會顯示在右側邊欄中。 完成時，選取[!UICONTROL 下一步]以繼續。
+您最多可以選取30個不同的分類資料集，以匯入Experience Platform。 您選取的任何資料集都會顯示在右側邊欄中。 完成時，選取[!UICONTROL 下一步]以繼續。
 
 ![已選取數個分類資料集的「分類」頁面。](../../../../images/tutorials/create/classifications/select.png)
 
@@ -59,7 +59,7 @@ Analytics分類來源聯結器會要求您的資料先移轉至Adobe Analytics�
 
 ## 後續步驟
 
-依照本教學課程指示，您已建立Analytics分類sata聯結器，將分類資料帶入Experience Platform。 請參閱下列檔案以取得有關[!DNL Analytics]和分類資料的詳細資訊：
+依照本教學課程指示，您已建立Analytics分類sata聯結器，將分類資料匯入Experience Platform。 請參閱下列檔案以取得有關[!DNL Analytics]和分類資料的詳細資訊：
 
 * [Adobe Analytics來源聯結器總覽](../../../../connectors/adobe-applications/analytics.md)
 * [在UI中建立報告套裝資料的Analytics來源連線](./analytics.md)

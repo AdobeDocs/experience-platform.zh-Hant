@@ -3,9 +3,9 @@ title: Customer.io Source概觀
 description: 瞭解如何使用API或使用者介面利用Webhook將Customer.io連線至Adobe Experience Platform
 badge: Beta
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >[!DNL Customer.io]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從串流應用程式擷取資料。 對串流提供者的支援包括[!DNL Customer.io]。
 
@@ -45,16 +45,16 @@ Experience Platform支援從串流應用程式擷取資料。 對串流提供者
 
 ### 設定[!DNL Customer.io] Webhook {#set-up-webhook}
 
-成功建立資料流後，您必須設定報告Webhook，以通知Platform有關[!DNL Customer.io]個事件的資訊。 Webhook可在客戶屬性變更或某人開啟您的訊息時立即通知您，並將此資訊傳送至您的[!DNL Customer.io]來源。 如需詳細資訊，請閱讀[取得串流端點URL](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint)和[設定 [!DNL Customer.io] Webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook)的教學課程。
+成功建立資料流後，您必須設定報告Webhook，以通知Experience Platform有關[!DNL Customer.io]個事件的資訊。 Webhook可在客戶屬性變更或某人開啟您的訊息時立即通知您，並將此資訊傳送至您的[!DNL Customer.io]來源。 如需詳細資訊，請閱讀[取得串流端點URL](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint)和[設定 [!DNL Customer.io] Webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook)的教學課程。
 
-## 正在將[!DNL Customer.io]連線至平台 {#connect-to-platform}
+## 正在將[!DNL Customer.io]連線到Experience Platform {#connect-to-platform}
 
-以下檔案提供有關如何使用API或使用者介面建立[!DNL Customer.io]串流連線以與[!DNL Platform]連線的資訊：
+以下檔案提供有關如何使用API或使用者介面建立[!DNL Customer.io]串流連線以與[!DNL Experience Platform]連線的資訊：
 
-### 使用API連線[!DNL Customer.io]至平台 {#connect-to-platform-using-api}
+### 使用API連線[!DNL Customer.io]至Experience Platform {#connect-to-platform-using-api}
 
-* [建立來源連線和資料流，以使用API將 [!DNL Customer.io] 資料帶入Platform。](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
+* [建立來源連線和資料流，以使用API將 [!DNL Customer.io] 資料帶入Experience Platform。](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
 
-### 使用UI連線[!DNL Customer.io]至平台 {#connect-to-platform-using-ui}
+### 使用UI連線[!DNL Customer.io]至Experience Platform {#connect-to-platform-using-ui}
 
-* [使用使用者介面建立來源連線和資料流，將 [!DNL Customer.io] 資料帶入Platform](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
+* [使用使用者介面建立來源連線和資料流，將 [!DNL Customer.io] 資料帶入Experience Platform](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)

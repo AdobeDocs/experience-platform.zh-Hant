@@ -2,12 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 使用流程服務API連線到批次目的地並啟用資料
-description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地並啟用資料
+description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地，並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3411'
+source-wordcount: '3416'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 ![概觀 — 建立目的地和啟用對象的步驟](../assets/api/email-marketing/overview.png)
 
-如果您偏好使用Platform使用者介面連線到目的地並啟用資料，請參閱[連線目的地](../ui/connect-destination.md)和[啟用對象資料到批次設定檔匯出目的地](../ui/activate-batch-profile-destinations.md)教學課程。
+如果您偏好使用Experience Platform使用者介面來連線到目的地並啟用資料，請參閱[連線到目的地](../ui/connect-destination.md)和[啟用對象資料到批次設定檔匯出目的地](../ui/activate-batch-profile-destinations.md)教學課程。
 
 ## 快速入門 {#get-started}
 
@@ -42,9 +42,9 @@ ht-degree: 2%
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Real-Time Customer Profile]資料在[!DNL Adobe Experience Platform]中建立對象。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-以下章節提供在Platform中啟用批次目的地資料所需的其他資訊。
+以下小節提供您需要瞭解的其他資訊，以便在Experience Platform中啟用批次目的地的資料。
 
 ### 收集必要的認證 {#gather-required-credentials}
 
@@ -65,13 +65,13 @@ ht-degree: 2%
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的資源可以隔離到特定的虛擬沙箱。 在對[!DNL Platform] API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
+[!DNL Experience Platform]中的資源可以隔離到特定的虛擬沙箱。 在對[!DNL Experience Platform] API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 
 ![目的地步驟概述步驟1](../assets/api/batch-destination/step1.png)
 
-首先，您必須決定要將資料啟動到的目的地。 首先，請執行呼叫以請求您可以連線並啟用對象的目標可用目的地清單。 對`connectionSpecs`端點執行下列GET要求，以傳回可用目的地的清單：
+首先，您必須決定要將資料啟動到的目的地。 首先，請執行呼叫以請求您可以連線並啟用對象的目標可用目的地清單。 對`connectionSpecs`端點執行下列GET請求，以傳回可用目的地的清單：
 
 **API格式**
 
@@ -126,7 +126,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 下表包含常用批次目的地的連線規格ID以供您參考：
 
-| 目的地 | 連線規格ID |
+| 目標 | 連線規格ID |
 ---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
@@ -173,9 +173,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `name` | 提供基礎連線至Experience Platform[!DNL Profile store]的名稱。 |
+| `name` | 提供基礎連線至Experience Platform [!DNL Profile store]的名稱。 |
 | `description` | 您可以選擇提供基本連線的說明。 |
-| `connectionSpec.id` | 使用[Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`的連線規格識別碼。 |
+| `connectionSpec.id` | 使用[Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`的連線規格ID。 |
 
 {style="table-layout:auto"}
 
@@ -224,9 +224,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `name` | 提供來源連線與Experience Platform[!DNL Profile store]的名稱。 |
+| `name` | 提供來源連線至Experience Platform [!DNL Profile store]的名稱。 |
 | `description` | 您可以選擇提供來源連線的說明。 |
-| `connectionSpec.id` | 使用[Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`的連線規格識別碼。 |
+| `connectionSpec.id` | 使用[Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`的連線規格ID。 |
 | `baseConnectionId` | 使用您在上一步中取得的基本連線ID。 |
 | `data.format` | `CSV`是目前唯一支援的檔案匯出格式。 |
 
@@ -869,7 +869,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 使用您在上一步中取得的流量規格、來源連線及目標連線ID，您現在可以在[!DNL Experience Platform]資料與匯出資料檔案的目的地之間建立資料流。 將此步驟視為建構管道，稍後資料會透過管道在[!DNL Experience Platform]和您想要的目的地之間流動。
 
-若要建立資料流，請執行POST請求，如下所示，同時在裝載中提供下列提及的值。
+若要建立資料流，請執行POST要求，如下所示，同時在承載中提供下列提及的值。
 
 **API格式**
 
@@ -922,13 +922,13 @@ curl -X POST \
 | `name` | 為您正在建立的資料流命名。 |
 | `description` | 您可以選擇為資料流提供說明。 |
 | `flowSpec.Id` | 使用您要連線之批次目的地的流程規格ID。 若要擷取流程規格ID，請對`flowspecs`端點執行GET作業，如[流程規格API參考檔案](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec)所示。 在回應中，尋找`upsTo`並複製您要連線之批次目的地的對應ID。 例如，若為Adobe Campaign，尋找`upsToCampaign`並複製`id`引數。 |
-| `sourceConnectionIds` | 使用您在步驟[連線至您的Experience Platform資料](#connect-to-your-experience-platform-data)中取得的來源連線識別碼。 |
+| `sourceConnectionIds` | 使用您在步驟[連線至您的Experience Platform資料](#connect-to-your-experience-platform-data)中取得的來源連線ID。 |
 | `targetConnectionIds` | 使用您在步驟[連線到批次目的地](#connect-to-batch-destination)中取得的目標連線識別碼。 |
 | `transformations` | 在下一步中，您會將要啟用的對象和設定檔屬性填入此區段中。 |
 
 下表包含常用批次目的地的流量規格ID以供您參考：
 
-| 目的地 | 流量規格ID |
+| 目標 | 流量規格ID |
 ---------|----------|
 | 所有雲端儲存空間目的地([!DNL Amazon S3]、SFTP、[!DNL Azure Blob])和[!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
 | [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
@@ -954,7 +954,7 @@ curl -X POST \
 
 您也可以決定匯出檔案的檔案命名格式，以及哪些屬性應該用作[重複資料刪除索引鍵](../ui/activate-batch-profile-destinations.md#mandatory-keys)或[必要屬性](../ui/activate-batch-profile-destinations.md#mandatory-attributes)。 在此步驟中，您也可以決定傳送資料至目的地的排程。
 
-若要將對象啟用至您的新目的地，您必須執行JSONPATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個對象和設定檔屬性。 若要深入瞭解JSONPATCH，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
+若要將對象啟用至您的新目的地，您必須執行JSON PATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個對象和設定檔屬性。 若要深入瞭解JSON PATCH，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
 
 **API格式**
 
@@ -1036,11 +1036,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | 您想要用來更新引數的新值。 |
 | `id` | 指定您要新增至目的地資料流的對象ID。 |
 | `name` | *選擇性*。 指定您要新增至目的地資料流的對象名稱。 請注意，此欄位並非必填欄位，您可以在不提供名稱的情況下成功將對象新增至目的地資料流。 |
-| `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`：選擇性。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`：選擇性。 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`：選擇性。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)一節。 |
+| `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`：選擇性。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`：選擇性。 選取這兩個檔案選項之一，加入Experience Platform產生檔案的時間。</li><li>`custom-text`：選擇性。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)一節。 |
 | `exportMode` | 強制。 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 |
 | `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
 | `frequency` | 強制。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`或`DAILY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |
-| `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`frequency`選取器中選取`"DAILY_FULL_EXPORT"`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日平台批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新的，這取決於批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
+| `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`frequency`選取器中選取`"DAILY_FULL_EXPORT"`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日Experience Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新狀態，端視批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
 | `endDate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>在選取`"exportMode":"DAILY_FULL_EXPORT"`和`"frequency":"ONCE"`時不適用。 <br>設定對象成員停止匯出至目的地的日期。 |
 | `startTime` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
 
@@ -1060,7 +1060,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 在教學課程的最後一步，您應該驗證對象和設定檔屬性是否確實已正確對應至資料流。
 
-若要驗證，請執行以下的GET要求：
+若要驗證，請執行下列GET請求：
 
 **API格式**
 
@@ -1240,11 +1240,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[要求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Experience Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功將Platform連線至其中一個慣用的檔案式電子郵件行銷目的地，並設定資料流至個別目的地以匯出資料檔案。 現在，傳出資料可用於電子郵件行銷活動、目標定位廣告和許多其他使用案例的目的地。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
+依照本教學課程中的指示，您已成功將Experience Platform連線至其中一個慣用的檔案式電子郵件行銷目的地，並設定資料流至個別目的地以匯出資料檔案。 現在，傳出資料可用於電子郵件行銷活動、目標定位廣告和許多其他使用案例的目的地。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
 
 * [目的地概觀](../home.md)
 * [目的地目錄概觀](../catalog/overview.md)

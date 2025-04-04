@@ -5,9 +5,9 @@ title: 查詢服務中查詢執行的一般指引
 type: Tutorial
 description: 本檔案概述在Adobe Experience Platform查詢服務中寫入查詢時需要瞭解的重要詳細資訊。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Adobe Experience Platform [!DNL Query Service]有兩個查詢執行模型：互�
 
 >[!NOTE]
 >
->Experience CloudID (ECID)也稱為MCID，並將繼續用於名稱空間。
+>Experience Cloud ID (ECID)也稱為MCID，並將繼續用於名稱空間。
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -201,7 +201,7 @@ LIMIT 10
 
 ## 檢視表格資訊
 
-連線到查詢服務後，您可以使用`\d`或`SHOW TABLES`命令，在Platform上檢視所有可用的表格。
+連線到查詢服務後，您可以使用`\d`或`SHOW TABLES`命令，在Experience Platform上檢視所有可用的表格。
 
 ### 標準表格檢視
 
@@ -309,7 +309,7 @@ LIMIT 50;
 | Windows Phone 7.5 | 11054.0 |
 | Android 4.3 | 9221.0 |
 
-## 去重複化
+## 重複資料刪除
 
 查詢服務支援重複資料刪除，或從資料中刪除重複列。 如需重複資料刪除的詳細資訊，請參閱[查詢服務重複資料刪除指南](../key-concepts/deduplication.md)。
 

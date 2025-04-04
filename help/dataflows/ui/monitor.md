@@ -2,9 +2,9 @@
 title: 監視儀表板總覽
 description: 瞭解如何使用Adobe Experience Platform UI中的監控儀表板
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -19,30 +19,30 @@ ht-degree: 0%
 
 監控儀表板支援多種不同資料型別的檢視：
 
-* **客戶與帳戶**：客戶資料會參考[Real-time Customer Data Platform](../../rtcdp/home.md)中使用的資料，而帳戶資料會參考[帳戶設定檔資料](../../rtcdp/accounts/account-profile-overview.md)，此資料在訂閱[Real-Time CDP， B2B Edition](../../rtcdp/b2b-overview.md)時可供存取。 如果您的Real-Time CDP授權不包含Real-Time CDP， B2B Edition，則您只能使用監控儀表板來監控客戶資料。
+* **客戶與帳戶**：客戶資料會參考[Real-Time Customer Data Platform](../../rtcdp/home.md)中使用的資料，而帳戶資料會參考[帳戶設定檔資料](../../rtcdp/accounts/account-profile-overview.md)，此資料在訂閱[Real-Time CDP、B2B edition](../../rtcdp/b2b-overview.md)時可供存取。 如果您的Real-Time CDP授權不包含Real-Time CDP、B2B edition，則您只能使用監控儀表板來監控客戶資料。
 * **潛在客戶**： [潛在客戶設定檔](../../profile/ui/prospect-profile.md)是用來代表尚未與貴公司訂婚但您想要聯絡的人。 使用潛在客戶設定檔，您可以使用受信任的第三方合作夥伴的屬性來補充您的客戶設定檔。 您必須取得Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的授權，才能檢視潛在客戶資料型別。
-* **帳戶設定檔擴充**：帳戶設定檔可讓您統一來自多個來源的帳戶資訊。 您必須獲得Real-Time CDP B2B版本的授權，才能監視帳戶設定檔擴充資料。
+* **帳戶設定檔擴充**：帳戶設定檔可讓您統一來自多個來源的帳戶資訊。 您必須獲得Real-Time CDP、B2B edition授權，才能監視帳戶設定檔擴充資料。
 
 請閱讀本檔案，瞭解如何使用監視儀表板來監視不同Experience Platform服務之間的資料歷程。
 
 ## 快速入門
 
-本檔案需要您實際瞭解下列Experience Platform元件：
+參閱本檔案前，請先實際瞭解下列Experience Platform元件：
 
 * [資料流](../home.md)：資料流是跨Experience Platform行動資料的資料作業的表示法。 您可以使用來源工作區建立資料流程，將指定來源的資料擷取至Experience Platform。
 * [來源](../../sources/home.md)：在Experience Platform中使用來源，從Adobe應用程式或協力廠商資料來源擷取資料。
 * [身分識別服務](../../identity-service/home.md)：透過跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
 * [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
 * [分段](../../segmentation/home.md)：使用分段服務，從您的即時客戶設定檔資料建立區段和對象。
-* [目的地](../../destinations/home.md)：目的地是預先建置的與常用應用程式的整合，可讓您順暢地從Platform啟用資料，以用於跨管道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例。
+* [目的地](../../destinations/home.md)：目的地是預先建置的與常用應用程式的整合，可讓您順暢地從Experience Platform啟用資料，用於跨管道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例。
 
 ## 監視儀表板指南
 
-在Experience PlatformUI中，選取左側導覽中[!UICONTROL 資料管理]下的&#x200B;**[!UICONTROL 監視]**。
+在Experience Platform UI中，選取左側導覽中[!UICONTROL 資料管理]下的&#x200B;**[!UICONTROL 監視]**。
 
-![Experience PlatformUI中的監視儀表板。](../assets/ui/monitor-overview/monitoring.png)
+![Experience Platform UI中的監視儀表板。](../assets/ui/monitor-overview/monitoring.png)
 
-選取&#x200B;**[!UICONTROL 資料型別]**，然後使用下拉式功能表選取您要檢視的資料型別。 資料型別由Experience Data Model (XDM)結構描述類別定義，以確保將其資料內嵌到Experience Platform中時遵循標準格式。 如需詳細資訊，請瀏覽下列檔案：
+選取&#x200B;**[!UICONTROL 資料型別]**，然後使用下拉式功能表選取您要檢視的資料型別。 資料型別由Experience Data Model (XDM)結構描述類別定義，以確保其資料在擷取至Experience Platform時遵循標準格式。 如需詳細資訊，請瀏覽下列檔案：
 
 * [B2B帳戶資料型別](../../rtcdp/b2b-tutorial.md)
 * [潛在客戶資料型別](../../rtcdp/partner-data/prospecting.md)
@@ -53,13 +53,13 @@ ht-degree: 0%
 
 >[!TAB 全部]
 
-選取「全部&#x200B;**[!UICONTROL 全部]**」以更新您的儀表板，並顯示指定期間內擷取到Experience Platform的所有資料量度。
+選取「全部&#x200B;**[!UICONTROL 全部]**」以更新您的儀表板，並顯示指定期間內擷取至Experience Platform之所有資料的量度。
 
 ![監視資料型別設定為[全部]。](../assets/ui/monitor-overview/all.png)
 
 >[!TAB 客戶與帳戶]
 
-選取&#x200B;**[!UICONTROL 客戶與帳戶]**&#x200B;以更新您的儀表板，並顯示指定期間內擷取到Experience Platform的客戶與帳戶資料量度。
+選取「**[!UICONTROL 客戶與帳戶]**」以更新您的儀表板，並顯示指定期間內擷取至Experience Platform的客戶與帳戶資料量度。
 
 ![監控資料型別設定為[客戶與帳戶]。](../assets/ui/monitor-overview/customer-account.png)
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 ![已選取身分卡的UI中的監視儀表板。](../assets/ui/monitor-overview/identities.png)
 
->[!TAB 設定檔]
+>[!TAB 輪廓]
 
 選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;以檢視設定檔資料的處理成功率。 如需詳細資訊，請閱讀[監視設定檔資料](monitor-profiles.md)的指南。
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 
 ## 後續步驟
 
-閱讀本檔案後，您現在可以透過UI中的監控儀表板快速瀏覽。 如需如何監控特定Experience Platform服務之資料的資訊，請閱讀以下檔案：
+閱讀本檔案後，您現在可以透過UI中的監控儀表板快速瀏覽。 如需如何監控特定Experience Platform服務的資料資訊，請閱讀以下檔案：
 
 * [監視來源資料](monitor-sources.md)。
 * [監視身分資料](monitor-identities.md)。

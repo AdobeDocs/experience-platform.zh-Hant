@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；ApacheHadoop式分散式檔案系統；Apachehadoop；hdfs；HDFS
+keywords: Experience Platform；首頁；熱門主題；Apache Hadoop分散式檔案系統；Apache Hadoop；hdfs；HDFS
 solution: Experience Platform
 title: 使用流量服務API建立Apache HDFS基本連線
 type: Tutorial
-description: 瞭解如何使用流量服務API將ApacheHadoop分散式檔案系統連結至Adobe Experience Platform。
+description: 瞭解如何使用流量服務API將Apache Hadoop分散式檔案系統連結至Adobe Experience Platform。
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '457'
 ht-degree: 5%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 5%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL HDFS]。
 
@@ -38,15 +38,15 @@ ht-degree: 5%
 | `url` | URL定義匿名連線至[!DNL HDFS]所需的驗證引數。 如需有關如何取得此值的詳細資訊，請參閱[此 [!DNL HDFS] 檔案](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html)。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL AdWords]的連線規格識別碼為： `54e221aa-d342-4707-bcff-7a4bceef0001`。 |
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
 ## 建立基礎連線
 
-基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供[!DNL HDFS]驗證認證作為要求引數的一部分時，向`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的[!DNL HDFS]驗證認證作為要求引數的一部分時，對`/connections`端點提出POST要求。
 
 **API格式**
 

@@ -4,9 +4,9 @@ title: Azure事件中樞連線
 description: 建立與您的 [!DNL Azure Event Hubs] 儲存裝置的即時輸出連線，以從Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2088'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 * 如需[!DNL Azure Event Hubs]的詳細資訊，請參閱[Microsoft檔案](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)。
 * 若要以程式設計方式連線到[!DNL Azure Event Hubs]，請參閱[串流目的地API教學課程](../../api/streaming-destinations.md)。
-* 若要使用Platform使用者介面連線至[!DNL Azure Event Hubs]，請參閱下列章節。
+* 若要使用Experience Platform使用者介面連線至[!DNL Azure Event Hubs]，請參閱下列章節。
 
 UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 

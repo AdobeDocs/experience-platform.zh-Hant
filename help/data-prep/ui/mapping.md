@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；對應csv；對應csv檔
 title: 資料準備UI指南
 description: 瞭解如何在Experience Platform UI中使用資料準備函式，將CSV檔案對應至XDM結構描述。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
@@ -16,14 +16,14 @@ ht-degree: 0%
 
 ## 開始使用
 
-本教學課程需要您實際瞭解下列平台元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md)： Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [身分識別服務](../../identity-service/home.md)：透過跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-* [來源](../../sources/home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
+* [來源](../../sources/home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 
 ## 存取UI中的對應介面
 

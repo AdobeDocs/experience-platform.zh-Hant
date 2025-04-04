@@ -6,9 +6,9 @@ description: 本檔案提供設定兩個必要資料集以收集IAB TCF 2.0同�
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Platform只會強制執行「個別設定檔」資料集中收集的TCF字串。 雖然在此工作流程中，仍需使用ExperienceEvent資料集建立資料串流，但您只需要將資料擷取至設定檔資料集。 如果您想要追蹤一段時間內的同意變更事件，您仍可使用ExperienceEvent資料集，但針對區段啟用強制實施時，不會使用這些值。
+>Experience Platform只會強制執行「個別設定檔」資料集中收集的TCF字串。 雖然在此工作流程中，仍需使用ExperienceEvent資料集建立資料串流，但您只需要將資料擷取至設定檔資料集。 如果您想要追蹤一段時間內的同意變更事件，您仍可使用ExperienceEvent資料集，但針對區段啟用強制實施時，不會使用這些值。
 
-本檔案提供設定這兩個資料集的步驟。 如需設定TCF 2.0之Platform資料作業的完整工作流程總覽，請參閱[IAB TCF 2.0法規遵循總覽](./overview.md)。
+本檔案提供設定這兩個資料集的步驟。 如需設定TCF 2.0之Experience Platform資料作業的完整工作流程總覽，請參閱[IAB TCF 2.0法規遵循總覽](./overview.md)。
 
 ## 先決條件
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 如果您想要追蹤一段期間內的同意變更事件，可以將[!UICONTROL IAB TCF 2.0 Consent Details]欄位群組新增至您的[!UICONTROL XDM ExperienceEvent]結構描述。
 
-如果您不打算隨著時間追蹤同意變更事件，您就不需要在事件結構描述中包含此欄位群組。 當自動強制執行TCF同意值時，Experience Platform只會使用擷取到[設定檔欄位群組](#profile-field-group)的最新同意資訊。 事件擷取的同意值不會參與自動執行工作流程。
+如果您不打算隨著時間追蹤同意變更事件，您就不需要在事件結構描述中包含此欄位群組。 自動強制執行TCF同意值時，Experience Platform只會使用擷取到[設定檔欄位群組](#profile-field-group)的最新同意資訊。 事件擷取的同意值不會參與自動執行工作流程。
 
 請參閱此欄位群組的[參考指南](../../../../xdm/field-groups/event/iab.md)，以取得有關其結構和使用案例的詳細資訊。
 
@@ -62,9 +62,9 @@ ht-degree: 0%
 
 為了建立擷取同意資料的資料集，您必須先建立XDM結構描述以作為這些資料集的基礎。
 
-如上一節所述，若要在下游平台工作流程中強制同意，需要使用[!UICONTROL XDM個別設定檔]類別的結構描述。 如果您想要追蹤一段時間的同意變更，也可以選擇根據[!UICONTROL XDM ExperienceEvent]建立個別結構描述。 兩個結構描述都必須包含`identityMap`欄位和適當的TCF 2.0欄位群組。
+如上一節所述，若要在下游Experience Platform工作流程中強制同意，需要使用[!UICONTROL XDM個別設定檔]類別的結構描述。 如果您想要追蹤一段時間的同意變更，也可以選擇根據[!UICONTROL XDM ExperienceEvent]建立個別結構描述。 兩個結構描述都必須包含`identityMap`欄位和適當的TCF 2.0欄位群組。
 
-在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**&#x200B;以開啟[!UICONTROL 結構描述]工作區。 從這裡，依照以下各節中的步驟建立每個所需的結構描述。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**&#x200B;以開啟[!UICONTROL 結構描述]工作區。 從這裡，依照以下各節中的步驟建立每個所需的結構描述。
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ ht-degree: 0%
 
 #### 啟用結構描述以用於[!DNL Real-Time Customer Profile]
 
-為了讓Platform將其收到的同意資料與特定客戶設定檔建立關聯，必須啟用同意結構描述以在[!DNL Real-Time Customer Profile]中使用。
+為了讓Experience Platform將其收到的同意資料與特定客戶設定檔建立關聯，必須啟用同意結構描述以在[!DNL Real-Time Customer Profile]中使用。
 
 >[!NOTE]
 >
@@ -192,4 +192,4 @@ ht-degree: 0%
 * 已啟用用於即時客戶個人檔案的記錄型資料集。 **（必要）**
 * 未針對[!DNL Profile]啟用的時間序列資料集。 (選填)
 
-您現在可以返回[IAB TCF 2.0總覽](./overview.md#merge-policies)，繼續設定Platform以符合TCF 2.0規範。
+您現在可以返回[IAB TCF 2.0總覽](./overview.md#merge-policies)，繼續設定Experience Platform以符合TCF 2.0規範。

@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -96,7 +96,7 @@ Experience Platform中的Edge個人化目的地包含[Adobe Target](/help/destin
 
 ## 擴充功能 {#extensions}
 
-Platform運用標籤管理的強大功能和彈性，讓您能夠在UI中設定標籤擴充功能。
+Experience Platform運用標籤管理的功能和彈性，讓您在UI中設定標籤擴充功能。
 
 >[!TIP]
 >

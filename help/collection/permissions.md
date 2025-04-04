@@ -2,10 +2,10 @@
 title: Experience Platform 中資料收集的權限管理
 description: 有關如何在Adobe Experience Platform中管理許可權和控制資料收集功能存取的高級概觀。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 28%
+source-wordcount: '1358'
+ht-degree: 27%
 
 ---
 
@@ -97,11 +97,11 @@ Experience Cloud的&#x200B;**[!UICONTROL 許可權]**&#x200B;區段可讓您定�
 
 ![顯示Admin Console中資料彙集產品卡的影像](./images/permissions/platform-permission-card.png)
 
-如需管理Platform許可權的詳細指示，請參閱[存取控制UI指南](../access-control/ui/overview.md)。
+如需管理Experience Platform許可權的詳細說明，請參閱[存取控制UI指南](../access-control/ui/overview.md)。
 
 >[!NOTE]
 >
->根據您的組織有權存取的產品SKU，您可能沒有每個可用的平台許可權。
+>根據您的組織有權存取的產品SKU，您可能沒有每個可用的Experience Platform許可權。
 
 ### 在Adobe Experience Platform Data Collection下管理許可權 {#manage-collection}
 

@@ -5,9 +5,9 @@ title: 透過機器學習深入分析豐富即時客戶設定檔
 type: Tutorial
 description: 本檔案提供如何透過機器學習深入解析豐富即時客戶設定檔的指南。
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Adobe Experience Platform [!DNL Data Science Workspace]提供各種工具和資�
 若要完成下列教學課程，您必須實際瞭解如何擷取[!DNL Profile]資料和建立對象。 在開始本教學課程之前，請先檢閱下列服務的檔案：
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供每個個別客戶的完整、統一表示法。
-- [[!DNL Identity Service]](../../identity-service/home.md)：透過從擷取到Platform的不同資料來源橋接身分來啟用[!DNL Real-Time Customer Profile]。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Platform用來組織客戶體驗資料的標準化架構。
+- [[!DNL Identity Service]](../../identity-service/home.md)：透過從擷取到Experience Platform中的不同資料來源橋接身分來啟用[!DNL Real-Time Customer Profile]。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： Experience Platform組織客戶體驗資料的標準化架構。
 
 除了上述檔案之外，強烈建議您也檢閱下列有關結構描述和結構描述編輯器的指南：
 

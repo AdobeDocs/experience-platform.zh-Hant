@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
 title: 提交您的Source
-description: 以下檔案提供如何使用「流量服務API」測試及驗證新來源，以及透過「自助來源」(Batch SDK)整合新來源的步驟。
+description: 以下檔案提供如何使用「流量服務API」測試及驗證新來源，以及透過「自助來源」(批次SDK)整合新來源的步驟。
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
 
 # 提交您的來源
 
-使用自助式來源（批次SDK）將新來源整合到Adobe Experience Platform的最後一步是測試來源以進行驗證。 一旦成功，您就可以連絡您的Adobe代表來提交新的來源。
+使用自助式來源(批次SDK)將新來源整合到Adobe Experience Platform的最後一步是測試來源以進行驗證。 一旦成功，您就可以連絡您的Adobe代表來提交新的來源。
 
 以下檔案提供如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)測試及偵錯來源的步驟。
 
 ## 快速入門
 
-* 如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
-* 如需如何產生Platform API認證的詳細資訊，請參閱有關[驗證和存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。
-* 如需如何設定Platform API [!DNL Postman]的相關資訊，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)上的教學課程。
+* 如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
+* 如需如何產生Experience Platform API認證的詳細資訊，請參閱[驗證及存取Experience Platform API](../../../landing/api-authentication.md)教學課程。
+* 如需如何為Experience Platform API設定[!DNL Postman]的詳細資訊，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)上的教學課程。
 * 若要協助您的測試和偵錯程式，請在此下載[自助來源驗證集合和環境](../assets/sdk-verification.zip)，並遵循下列步驟。
 
 ## 測試您的來源
@@ -59,10 +59,10 @@ ht-degree: 0%
 
 | 參數 | 說明 | 範例 |
 | --- | --- | --- |
-| `x-api-key` | 用於驗證對Experience Platform API的呼叫的唯一識別碼。 如需如何擷取`x-api-key`的詳細資訊，請參閱[驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | 用於驗證Experience Platform API呼叫的唯一識別碼。 如需如何擷取`x-api-key`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | 企業實體，可以擁有或授權產品及服務並允許存取其成員。 如需如何擷取`x-gw-ims-org-id`資訊的說明，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)的教學課程。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | 完成對Experience Platform API的呼叫所需的授權權杖。 如需如何擷取`authorizationToken`的詳細資訊，請參閱[驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)的教學課程。 | `Bearer authorizationToken` |
-| `schemaId` | 為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 如需有關如何建立目標XDM結構描述的詳細步驟，請參閱有關使用API [建立結構描述的教學課程](../../../xdm/api/schemas.md)。 | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `authorizationToken` | 完成對Experience Platform API的呼叫所需的授權權杖。 如需如何擷取`authorizationToken`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `Bearer authorizationToken` |
+| `schemaId` | 為了在Experience Platform中使用來源資料，必須建立目標結構描述，以根據您的需求建構來源資料。 如需有關如何建立目標XDM結構描述的詳細步驟，請參閱有關使用API [建立結構描述的教學課程](../../../xdm/api/schemas.md)。 | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | 與您的結構描述對應的唯一版本。 | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | 建立新結構描述時與`schemaId`一併傳回的`meta:altId`。 | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](../../../catalog/api/create-dataset.md)的教學課程。 | `5f3c3cedb2805c194ff0b69a` |
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您偏好使用Platform UI中的來源監視儀表板，可以停用執行訂單檢查清單中的&#x200B;**刪除流程**。 不過，一旦完成測試，您必須確保已刪除測試流程。
+>如果您偏好使用Experience Platform UI中的來源監視儀表板，可以停用執行訂單檢查清單中的&#x200B;**刪除流程**。 不過，一旦完成測試，您必須確保已刪除測試流程。
 
 ![run-collection](../assets/run-collection.png)
 

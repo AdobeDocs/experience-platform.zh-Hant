@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；行銷活動協調；協調；客戶歷程；歷程；歷程協調；功能；地區
+keywords: Experience Platform；首頁；熱門主題；CJA；journey analytics；customer journey analytics；campaign orchestration；orchestration；customer journey；journey；journey orchestration；功能；地區
 solution: Experience Platform
 title: Adobe Experience Platform 概觀
 description: Adobe Experience Platform可讓組織集中和標準化客戶資料，再運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 2%
 
 ---
@@ -28,9 +28,9 @@ Adobe Experience Platform是市面上功能最強大、最靈活、最開放的�
 
 ## [!DNL Experience Platform]檔案
 
-[!DNL Experience Platform]檔案提供多種格式，適用於各種功能和應用程式。 若要進一步瞭解可用的檔案型別，請造訪[平台檔案概覽](documentation/overview.md)。
+[!DNL Experience Platform]檔案提供多種格式，適用於各種功能和應用程式。 若要進一步瞭解可用的檔案型別，請造訪[Experience Platform檔案總覽](documentation/overview.md)。
 
-若要開始瞭解特定[!DNL Platform]服務的詳細資訊，請返回[檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html)並選取適當的指南。
+若要開始瞭解特定[!DNL Experience Platform]服務的詳細資訊，請返回[檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html)並選取適當的指南。
 
 ### 以[!DNL Experience Platform]為基礎的應用程式檔案
 
@@ -49,14 +49,14 @@ Adobe已在Experience Platform之上建立多個應用程式。 您可以在他�
 
 ## [!DNL Experience Platform] 教學課程
 
-您可以透過循序漸進的教學課程，從準備要擷取的資料到進階的機器學習演演算法，快速輕鬆地開始使用[!DNL Platform]。 這些教學課程是專為補充[!DNL Experience Platform]檔案中所含的資訊而設計，因此，為了取得最佳結果，請先備妥檔案，然後再完成教學課程。
+您可以透過循序漸進的教學課程，從準備要擷取的資料到進階的機器學習演演算法，快速輕鬆地開始使用[!DNL Experience Platform]。 這些教學課程是專為補充[!DNL Experience Platform]檔案中所含的資訊而設計，因此，為了取得最佳結果，請先備妥檔案，然後再完成教學課程。
 
-造訪[Experience Platform教學課程](https://www.adobe.com/go/platform-tutorials-home-en)登陸頁面以開始。
+造訪[Experience Platform教學課程](https://www.adobe.com/go/platform-tutorials-home-en)登陸頁面以開始使用。
 
 ## 參考檔案和資源
 
 * [**API基本知識**](api-fundamentals.md)\
-  瞭解使用[!DNL Platform] API的基本知識。
+  瞭解使用[!DNL Experience Platform] API的基本知識。
 
 * [**API參考檔案**](https://www.adobe.com/go/platform-api-reference-en)\
   探索[!DNL Experience Platform]個API，包括標題、引數、範例要求及回應。<br/>*這些檔案在Adobe I/O上託管。*

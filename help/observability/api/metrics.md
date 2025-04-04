@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 量度API端點
 description: 瞭解如何使用可觀察性深入分析API在Experience Platform中擷取可觀察性量度。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: bd5018a2d867d0483f3f2f0c45e356ea69a01801
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # 量度端點
 
-可觀察性量度可為Adobe Experience Platform中的各種功能提供使用統計資料、歷史趨勢和績效指標的深入分析。 [!DNL Observability Insights API]中的`/metrics`端點可讓您以程式設計方式擷取[!DNL Platform]中組織活動的量度資料。
+可觀察性量度可為Adobe Experience Platform中的各種功能提供使用統計資料、歷史趨勢和績效指標的深入分析。 [!DNL Observability Insights API]中的`/metrics`端點可讓您以程式設計方式擷取[!DNL Experience Platform]中組織活動的量度資料。
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 ## 擷取可觀察性量度
 
-您可以向`/metrics`端點發出POST要求，指定您要在裝載中擷取的量度，以擷取量度資料。
+您可以對`/metrics`端點發出POST要求，並指定您要在裝載中擷取的量度，以擷取量度資料。
 
 **API格式**
 
@@ -175,7 +175,7 @@ curl -X POST \
 | `metric` | 請求中提供的其中一個量度的名稱。 |
 | `filters` | 指定量度的篩選器設定。 |
 | `datapoints` | 陣列，其物件代表指定量度和篩選器的結果。 陣列中的物件數目取決於請求中提供的篩選選項。 如果未提供篩選器，則陣列將僅包含代表所有資料集的單一物件。 |
-| `groupBy` | 如果在量度的`filter`屬性中指定了多個資料集，且請求中的`groupBy`選項設定為true，則此物件將包含對應`dps`屬性套用的資料集識別碼。<br><br>如果此物件在回應中顯示為空白，則對應的`dps`屬性會套用至`filters`陣列中提供的所有資料集（如果未提供篩選器，則套用至[!DNL Platform]中的所有資料集）。 |
+| `groupBy` | 如果在量度的`filter`屬性中指定了多個資料集，且請求中的`groupBy`選項設定為true，則此物件將包含對應`dps`屬性套用的資料集識別碼。<br><br>如果此物件在回應中顯示為空白，則對應的`dps`屬性會套用至`filters`陣列中提供的所有資料集（如果未提供篩選器，則套用至[!DNL Experience Platform]中的所有資料集）。 |
 | `dps` | 針對指定的量度、篩選器及時間範圍傳回的資料。 此物件中的每個索引鍵都代表時間戳記，其中包含指定量度的對應值。 每個資料點之間的時間長度取決於要求中指定的`granularity`值。 |
 
 {style="table-layout:auto"}
@@ -186,7 +186,7 @@ curl -X POST \
 
 ### 可用量度 {#available-metrics}
 
-下表列出[!DNL Observability Insights]公開的所有度量，並依[!DNL Platform]服務劃分。 每個量度都包含說明和接受的ID查詢引數。
+下表列出[!DNL Observability Insights]公開的所有度量，並依[!DNL Experience Platform]服務劃分。 每個量度都包含說明和接受的ID查詢引數。
 
 >[!NOTE]
 >

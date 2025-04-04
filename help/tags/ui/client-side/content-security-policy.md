@@ -2,9 +2,9 @@
 title: 內容安全性原則(CSP)支援
 description: 瞭解將您的網站與Adobe Experience Platform中的標籤整合時，如何處理內容安全性原則(CSP)限制。
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1076'
 ht-degree: 58%
 
 ---
@@ -82,7 +82,7 @@ CSP 預設不允許內嵌指令碼，因此必須手動設定以允許。您可�
 
 >[!NOTE]
 >
->CSP規格有第三種方法，也就是使用雜湊的詳細資訊，但這種方法無法用於標籤等標籤管理系統。 如需有關搭配Platform中的標籤使用雜湊的限制的詳細資訊，請參閱[子資源完整性(SRI)指南](./sri.md)。
+>CSP規格有第三種方法，也就是使用雜湊的詳細資訊，但這種方法無法用於標籤等標籤管理系統。 如需搭配Experience Platform中的標籤使用雜湊的限制詳細資訊，請參閱[子資源完整性(SRI)指南](./sri.md)。
 
 ### 透過Nonce允許 {#nonce}
 
@@ -106,7 +106,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c'">
 ```
 
-設定標頭或HTML標籤後，您必須告訴標籤在載入內嵌指令碼時從何處尋找Nonce。 若要讓標籤在載入指令碼時使用Nonce，您必須：
+設定標頭或HTML標籤後，您必須告訴標籤在載入內嵌指令碼時要在哪裡尋找Nonce。 若要讓標籤在載入指令碼時使用Nonce，您必須：
 
 1. 建立資料元素，以參照 Nonce 在資料層中的位置。
 1. 設定核心擴充功能，並指定要使用的資料元素。
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 閱讀本檔案後，您現在應瞭解如何設定CSP標頭，以接受標籤程式庫檔案和內嵌指令碼。
 
-您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤等標籤管理系統搭配使用時有一些重大限制。 如需詳細資訊，請參閱Platform](./sri.md)中[SRI相容性的指南。
+您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤等標籤管理系統搭配使用時有一些重大限制。 如需詳細資訊，請參閱Experience Platform](./sri.md)中[SRI相容性的指南。

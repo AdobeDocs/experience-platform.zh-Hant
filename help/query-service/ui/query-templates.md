@@ -2,9 +2,9 @@
 title: 查詢範本
 description: 查詢範本是可重複使用的已儲存SQL查詢，可供其他使用者重複使用，以節省時間和精力。 它們可以使用查詢編輯器或查詢服務API建立，並可用於所有Experience Platform資料集。
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform查詢服務可讓您以查詢範本的形式儲存和�
 
 ## 先決條件
 
-您必須啟用[!UICONTROL 管理查詢]許可權，才能存取查詢編輯器，並在Platform UI中檢視查詢儀表板。 已透過Adobe[Admin Console](https://adminconsole.adobe.com/)啟用許可權。 如果您沒有啟用此許可權的管理員許可權，請聯絡貴組織的管理員。 請參閱存取控制檔案以取得[透過Admin Console](../../access-control/home.md)新增許可權的完整指示。
+您必須啟用[!UICONTROL 管理查詢]許可權，才能在Experience Platform UI中存取查詢編輯器並檢視查詢儀表板。 許可權是透過Adobe [Admin Console](https://adminconsole.adobe.com/)啟用。 如果您沒有啟用此許可權的管理員許可權，請聯絡貴組織的管理員。 請參閱存取控制檔案以取得[透過Admin Console新增許可權的完整指示](../../access-control/home.md)。
 
 ## 建立查詢範本
 
@@ -33,7 +33,7 @@ Adobe Experience Platform查詢服務可讓您以查詢範本的形式儲存和�
 
 ## 瀏覽查詢範本 {#browse}
 
-從Platform UI的查詢工作區中，選取&#x200B;**[!UICONTROL 範本]**&#x200B;以顯示可用的已儲存查詢清單。
+從Experience Platform UI的查詢工作區中，選取&#x200B;**[!UICONTROL 範本]**&#x200B;以顯示可用的已儲存查詢清單。
 
 ![已反白顯示[範本]索引標籤的查詢工作區。](../images/ui/query-templates/query-templates.png)
 
@@ -55,7 +55,7 @@ Adobe Experience Platform查詢服務可讓您以查詢範本的形式儲存和�
 
 >[!NOTE]
 >
->使用API建立的範本也會顯示在Platform UI查詢服務範本索引標籤中。
+>使用API建立的範本也可顯示在Experience Platform UI查詢服務範本索引標籤中。
 
 ## 後續步驟
 

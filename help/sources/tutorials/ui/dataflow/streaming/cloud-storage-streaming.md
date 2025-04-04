@@ -3,11 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；串流；雲端儲存聯
 solution: Experience Platform
 title: 在UI中為雲端儲存空間來源建立串流資料流
 type: Tutorial
-description: 資料流是排程的工作，可擷取來源中的資料並將其擷取至Platform資料集。 本教學課程提供使用雲端儲存基礎聯結器設定新資料流的步驟。
+description: 資料流是排程的工作，會從來源擷取資料並擷取資料至Experience Platform資料集。 本教學課程提供使用雲端儲存基礎聯結器設定新資料流的步驟。
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1078'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 資料流是排程的工作，會從來源擷取資料並擷取資料至Adobe Experience Platform資料集。 本教學課程提供在UI中為雲端儲存空間來源建立串流資料流的步驟。
 
-在嘗試本教學課程之前，您必須先在雲端儲存空間帳戶和平台之間建立有效且已驗證的連線。 如果您尚未驗證連線，請參閱下列教學課程之一，以瞭解如何驗證串流雲端儲存空間帳戶的資訊：
+在嘗試本教學課程之前，您必須先在雲端儲存空間帳戶和Experience Platform之間建立有效且已驗證的連線。 如果您尚未驗證連線，請參閱下列教學課程之一，以瞭解如何驗證串流雲端儲存空間帳戶的資訊：
 
 - [[!DNL Amazon Kinesis]](../../../ui/create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../../../ui/create/cloud-storage/eventhub.md)
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-- [資料流](../../../../../dataflows/home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流是跨不同服務設定的，從來源到[!DNL Identity Service]，到[!DNL Profile]，再到[!DNL Destinations]。
+- [資料流](../../../../../dataflows/home.md)：資料流可呈現跨Experience Platform行動資料的資料作業。 資料流是跨不同服務設定的，從來源到[!DNL Identity Service]，到[!DNL Profile]，再到[!DNL Destinations]。
 - [資料準備](../../../../../data-prep/home.md)：「資料準備」可讓資料工程師對應、轉換和驗證與Experience Data Model (XDM)之間的資料。 「資料準備」在資料擷取程式（包括CSV擷取工作流程）中顯示為「對應」步驟。
 - [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
    - [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
@@ -39,7 +39,7 @@ ht-degree: 1%
 >
 >對於指定的事件中樞，每個使用者群組只能建立一個來源資料流。
 
-建立驗證串流雲端儲存空間帳戶後，**[!UICONTROL 選取資料]**&#x200B;步驟隨即顯示，提供介面供您選取要帶到Platform的資料流。
+建立驗證串流雲端儲存空間帳戶後，**[!UICONTROL 選取資料]**&#x200B;步驟隨即顯示，提供介面供您選取將帶入Experience Platform的資料流。
 
 - 介面的左側是瀏覽器，可讓您檢視帳戶內的可用資料流；
 - 介面的右側部分可讓您預覽JSON檔案中最多100列的資料。
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 ## 對應
 
-**[!UICONTROL 對應]**&#x200B;步驟出現，提供介面以將來源資料對應到Platform資料集。
+**[!UICONTROL 對應]**&#x200B;步驟隨即顯示，提供介面將來源資料對應至Experience Platform資料集。
 
 選擇要將傳入資料擷取的資料集。 您可以使用現有的資料集或建立新的資料集。
 
@@ -106,7 +106,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。
+>Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。
 
 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
 
@@ -122,7 +122,7 @@ ht-degree: 1%
 
 ![資料流詳細資料](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
-### 檢閱
+### 審核
 
 **[!UICONTROL 檢閱]**&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
 
@@ -139,7 +139,7 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功建立資料流，以從雲端儲存空間來源串流資料。 下游Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需更多詳細資訊，請參閱下列檔案：
+依照本教學課程中的指示，您已成功建立資料流，以從雲端儲存空間來源串流資料。 下游Experience Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 - [[!DNL Real-Time Customer Profile] 概觀](../../../../../profile/home.md)
 - [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)

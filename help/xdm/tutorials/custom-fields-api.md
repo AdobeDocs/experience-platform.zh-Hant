@@ -2,9 +2,9 @@
 title: 在結構描述登入API中定義XDM欄位
 description: 瞭解如何在Schema Registry API中建立自訂Experience Data Model (XDM)資源時定義不同的欄位。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -368,7 +368,7 @@ XDM對於此儲存提示的使用會設定下列限制：
 * 來自[Adobe Experience Platform查詢服務](../../query-service/home.md)的回應時間，1億筆記錄會從3秒降低到10秒。
 * 地圖必須少於16個索引鍵，否則可能會進一步降低。
 
-Platform使用者介面在擷取對應型別欄位索引鍵的方式上也有限制。 雖然物件型別欄位可以展開，但地圖會顯示為單一欄位。
+Experience Platform使用者介面在擷取對應型別欄位索引鍵的方式上也有限制。 雖然物件型別欄位可以展開，但地圖會顯示為單一欄位。
 
 ## 後續步驟
 

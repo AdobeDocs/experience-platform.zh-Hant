@@ -5,7 +5,7 @@ title: 使用Sensei機器學習API匯入封裝的配方
 type: Tutorial
 description: 本教學課程使用Sensei Machine Learning API建立引擎，也稱為使用者介面中的方式。
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 3%
@@ -41,7 +41,7 @@ ht-degree: 3%
 
 - `{DOCKER_URL}`：智慧型服務Docker映像的URL位址。
 
-此教學課程需要您完成[對Adobe Experience Platform的驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Platform] API。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+此教學課程需要您完成[對Adobe Experience Platform的驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫[!DNL Experience Platform] API。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。
 - `{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。
@@ -176,7 +176,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回承載，其中包含新建立之引擎的詳細資料，包括其唯一識別碼(`id`)。 下列範例回應適用於[!DNL Python]引擎。 根據提供的POST，`executionType`和`type`金鑰會變更。
+成功的回應會傳回承載，其中包含新建立之引擎的詳細資料，包括其唯一識別碼(`id`)。 下列範例回應適用於[!DNL Python]引擎。 `executionType`和`type`金鑰會根據提供的POST變更。
 
 ```json
 {

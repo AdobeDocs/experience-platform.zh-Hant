@@ -2,7 +2,7 @@
 description: 瞭解使用Destination SDK建立的目的地支援的歷史設定檔資格。
 title: 歷史設定檔資格
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -33,14 +33,14 @@ ht-degree: 2%
 <!-- 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
 {style="table-layout:auto"} -->
 
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文後，您應該知道，Experience Platform會在對象首次匯出至目的地時，自動匯出曾符合已啟用對象資格的所有設定檔歷史母體。 此選項無法在Destination SDK或Experience Platform UI中設定。
+閱讀本文後，您應該知道，Experience Platform會在對象首次匯出至目的地時，自動匯出曾符合啟用對象資格的所有設定檔歷史母體。 此選項無法在Destination SDK或Experience Platform UI中設定。
 
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 * [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
-* [綱要設定](schema-configuration.md)
+* [結構描述設定](schema-configuration.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)
 * [支援的對應設定](supported-mapping-configurations.md)
 * [目的地傳遞](destination-delivery.md)

@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；快速入門；customer ai；熱門主題；customer ai輸入；customer ai輸出；資料需求
+keywords: Experience Platform；快速入門；customer ai；熱門主題；customer ai輸入；customer ai輸出；資料要求
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Customer AI的資料需求
 topic-legacy: Getting started
 description: 進一步瞭解Customer AI使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2545'
+source-wordcount: '2551'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 1%
 Customer AI的運作方式是藉由分析以下資料集來預測流失率（客戶何時可能停止使用產品）或轉換率（客戶何時可能購買）傾向分數：
 
 - 使用[Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)的Adobe Analytics資料
-- 使用[Audience Manager來源聯結器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的Adobe Audience Manager資料
+- 使用[Adobe Audience Manager來源聯結器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的Audience Manager資料
 - [體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
 - [取用者體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
@@ -62,20 +62,20 @@ Customer AI的運作方式是藉由分析以下資料集來預測流失率（客
 
 | 詞語 | 定義 |
 | --- | --- |
-| [體驗資料模型(XDM)](../../xdm/home.md) | XDM是基礎架構，可讓Adobe Experience Cloud (由Adobe Experience Platform提供技術支援)在適當的時間透過適當的管道將適當的訊息傳遞給適當的人。 Platform使用XDM系統以特定方式組織資料，以更方便用於Platform服務。 |
-| [XDM結構描述](../../xdm/schema/composition.md) | Experience Platform使用結構描述，以一致且可重複使用的方式說明資料結構。 藉由定義跨系統的一致資料，將更容易保留意義，進而從資料中獲得價值。 在將資料擷取到Platform之前，必須組成結構描述資料的結構並對可包含在每個欄位中的資料型別提供限制。 結構描述包含基本XDM類別和零個或多個結構描述欄位群組。 |
+| [體驗資料模型(XDM)](../../xdm/home.md) | XDM是基礎架構，可讓Adobe Experience Cloud (由Adobe Experience Platform提供技術支援)在適當的時間透過適當的管道將適當的訊息傳遞給適當的人。 Experience Platform使用XDM系統以特定方式組織資料，以便更輕鬆用於Experience Platform服務。 |
+| [XDM結構描述](../../xdm/schema/composition.md) | Experience Platform使用結構描述，以一致且可重複使用的方式說明資料結構。 藉由定義跨系統的一致資料，將更容易保留意義，進而從資料中獲得價值。 在將資料擷取到Experience Platform之前，必須組成結構描述資料的結構並對可包含在每個欄位中的資料型別提供限制。 結構描述包含基本XDM類別和零個或多個結構描述欄位群組。 |
 | [XDM類別](../../xdm/schema/field-constraints.md) | 所有XDM結構描述都說明可分類為`Experience Event`的資料。 結構描述的資料行為由結構描述的類別定義，該類別在首次建立時指派給結構描述。 XDM類別說明結構描述必須包含的最小屬性數量，才能代表特定的資料行為。 |
 | [欄位群組](../../xdm/schema/composition.md) | 定義結構描述中一或多個欄位的元件。 欄位群組會強制實施其欄位在結構描述階層中的顯示方式，因此會在其包含的每個結構描述中顯示相同的結構。 欄位群組僅與特定類別相容，由其`meta:intendedToExtend`屬性識別。 |
 | [資料型別](../../xdm/schema/composition.md) | 也可以為結構描述提供一或多個欄位的元件。 但是，與欄位群組不同，資料型別不受限於特定類別。 這讓資料型別成為一個更具彈性的選項，用來描述在多個結構描述中可以重複使用，且具有可能不同類別的常見資料結構。 CEE和Adobe Analytics架構均支援本檔案中概述的資料型別。 |
-| [即時客戶個人檔案](../../profile/home.md) | 即時客戶設定檔可提供集中式客戶設定檔，用於針對性化和個人化的體驗管理。 每個設定檔都包含跨所有系統彙總的資料，以及在您與Experience Platform搭配使用的任何系統中發生的涉及個人之事件的可操作時間戳記帳戶。 |
+| [即時客戶輪廓](../../profile/home.md) | 即時客戶設定檔可提供集中式客戶設定檔，用於針對性化和個人化的體驗管理。 每個設定檔都包含跨所有系統彙總的資料，以及在您與Experience Platform搭配使用的任何系統中發生的涉及個人之事件的可操作時間戳記帳戶。 |
 
 ## Customer AI輸入資料 {#customer-ai-input-data}
 
 對於輸入資料集(如Adobe Analytics和Adobe Audience Manager)，依預設，各自的來源聯結器會在連線過程中直接對應這些標準欄位群組(Commerce、Web、應用程式和搜尋)中的事件。 下表顯示Customer AI預設標準欄位群組中的事件欄位。
 
-如需對應Adobe Analytics資料或Audience Manager資料的詳細資訊，請造訪Analytics欄位對應或Audience Manager[欄位對應指南](../../sources/connectors/adobe-applications/mapping/audience-manager.md)。
+如需對應Adobe Analytics資料或Audience Manager資料的詳細資訊，請造訪Analytics欄位對應或Audience Manager [欄位對應指南](../../sources/connectors/adobe-applications/mapping/audience-manager.md)。
 
-對於未透過上述聯結器之一填入的輸入資料集，您可以使用體驗事件或取用者體驗事件XDM結構描述。 可在架構建立過程中新增其他XDM欄位群組。 欄位群組可以透過Adobe提供，例如標準欄位群組或自訂欄位群組，其符合Platform中的資料表示。
+對於未透過上述聯結器之一填入的輸入資料集，您可以使用體驗事件或取用者體驗事件XDM結構描述。 可在架構建立過程中新增其他XDM欄位群組。 欄位群組可由Adobe提供，例如標準欄位群組或自訂欄位群組，這符合Experience Platform中的資料表示。
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Customer AI的運作方式是藉由分析以下資料集來預測流失率（客
 
 Customer AI預設會使用這四個標準欄位群組中的事件：Commerce、Web、應用程式和搜尋。 下列標準欄位群組中不需要每個事件的資料，但在某些情況下需要特定事件。 如果您的標準欄位群組中有任何可用事件，建議將其納入結構描述中。 例如，如果您想要建立用於預測購買事件的Customer AI模型，則擁有Commerce和網頁詳細資料欄位群組中的資料會很有用。
 
-若要在Platform UI中檢視欄位群組，請選取左側邊欄上的&#x200B;**[!UICONTROL 結構描述]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL 欄位群組]**&#x200B;標籤。
+若要在Experience Platform UI中檢視欄位群組，請選取左側邊欄上的&#x200B;**[!UICONTROL 結構描述]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL 欄位群組]**&#x200B;標籤。
 
 | 欄位群組 | 事件型別 | XDM欄位路徑 |
 | --- | --- | --- |
@@ -135,18 +135,18 @@ Customer AI預設會使用這四個標準欄位群組中的事件：Commerce、W
 
 - 註冊帳戶
 
-- 訂閱Newsletter
+- 訂閱電子報
 
 - 致電客戶服務
 
 以下是業界特定的自訂事件範例：
 
-| 產業 | 自訂事件 |
+| 行業 | 自訂事件 |
 | --- | --- |
 | 零售 | 店內交易<br>註冊會員卡<br>手機優惠券。 |
 | 娛樂 | 購買季成員資格<br>串流影片。 |
 | 旅館業 | 進行餐廳預訂<br>購買忠誠度點數。 |
-| 旅遊 | 新增已知的旅行者資訊購買里程。 |
+| 旅行 | 新增已知的旅行者資訊購買里程。 |
 | 通訊 | 升級/降級/取消計畫。 |
 
 若要選取自訂事件，該事件必須代表使用者起始的動作。 例如，「電子郵件傳送」是由行銷人員而非使用者起始的動作，因此不應作為自訂事件使用。
@@ -211,7 +211,7 @@ Customer AI採用生存模型來估計特定時間發生事件的機率，並識
 
 Customer AI會針對視為符合資格的個別設定檔產生數個屬性。 根據您已布建的內容，有兩種方式可使用分數（輸出）。 如果您有已啟用即時客戶個人檔案的資料集，則可以在[區段產生器](../../segmentation/ui/segment-builder.md)中使用即時客戶個人檔案的深入分析。 如果您沒有啟用設定檔的資料集，您可以[下載資料湖中可用的Customer AI輸出](./user-guide/download-scores.md)資料集。
 
-您可以在Platform **資料集**&#x200B;工作區中找到輸出資料集。 所有Customer AI輸出資料集都以名稱&#x200B;**Customer AI分數 — NAME_OF_APP**&#x200B;開頭。 同樣地，所有的Customer AI輸出結構描述都以名稱&#x200B;**Customer AI結構描述 — Name_of_app**&#x200B;開頭。
+您可以在Experience Platform **資料集**&#x200B;工作區中找到輸出資料集。 所有Customer AI輸出資料集都以名稱&#x200B;**Customer AI分數 — NAME_OF_APP**&#x200B;開頭。 同樣地，所有的Customer AI輸出結構描述都以名稱&#x200B;**Customer AI結構描述 — Name_of_app**&#x200B;開頭。
 
 ![Customer AI中的輸出資料集名稱](./images/user-guide/cai-schema-name-of-app.png)
 

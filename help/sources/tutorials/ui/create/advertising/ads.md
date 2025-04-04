@@ -2,9 +2,9 @@
 title: 使用UI將Google Ads連線至Experience Platform
 description: 瞭解如何在UI中將您的Google Ads帳戶連結至Adobe Experience Platform。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -94,4 +94,4 @@ ht-degree: 0%
 
 ## 建立資料流以擷取廣告資料
 
-依照本教學課程中的指示，您已建立與Google Ads帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將廣告資料帶入Platform](../../dataflow/advertising.md)。
+依照本教學課程中的指示，您已建立與Google Ads帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將廣告資料帶入Experience Platform](../../dataflow/advertising.md)。

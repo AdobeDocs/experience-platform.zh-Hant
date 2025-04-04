@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;故障 排除;數據科學工作環境;熱門主題
+keywords: Experience Platform；疑難排解；資料科學Workspace；熱門主題
 solution: Experience Platform
 title: 資料科學Workspace疑難排解指南
 description: 本檔案提供有關Adobe Experience Platform資料科學Workspace常見問題的解答。
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 0%
@@ -15,19 +15,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->不再提供 Data Science 工作環境 購買。
+>Data Science Workspace已無法購買。
 >
->本文檔適用於先前有權使用數據科學工作環境的現有客戶。
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
-此檔提供了有關Adobe Experience Platform [!DNL Data Science Workspace]的常見問題解答。 有關一般 API 的問題和故障排除 [!DNL Platform] ，請參閱 [Adobe Experience Platform API 故障排除指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform [!DNL Data Science Workspace]常見問題的解答。 如需[!DNL Experience Platform] API的一般問題和疑難排解，請參閱[Adobe Experience Platform API疑難排解指南](../landing/troubleshooting.md)。
 
-## JupyterLab Notebook 查詢狀態卡在執行狀態
+## JupyterLab Notebook查詢狀態卡在執行狀態
 
-JupyterLab 筆記本可能指示單元在某些記憶體不足的情況下無限期地處於執行狀態。 例如，在查詢大型資料集或執行多個後續查詢時，JupyterLab 筆記本可能會耗盡可用記憶體來商店生成的數據幀物件。 在這種情況下可以看到一些指標。 首先，內核進入空閒狀態，平均儘管單元顯示為執行，由單元格旁邊的圖示指示 [`*`] 。 此外，底部欄指示已使用/可用的 RAM 量。
+JupyterLab Notebook可能表示儲存格在某些記憶體不足的情況下永遠處於執行狀態。 例如，在查詢大型資料集或執行多個後續查詢時，JupyterLab Notebook可能會用儘可用的記憶體來儲存產生的資料流物件。 在此情況下可以看到一些指標。 首先，即使儲存格旁邊的[`*`]圖示顯示正在執行，核心仍會進入閒置狀態。 此外，底部列會顯示已使用/可用的RAM數量。
 
-![可用記憶體](./images/jupyterlab/user-guide/allocate-ram.png)
+![可用的ram](./images/jupyterlab/user-guide/allocate-ram.png)
 
-在讀取數據期間，記憶體可能會增長，直到達到最大分配內存量。 一旦達到最大記憶體並且內核重新啟動，就會釋放記憶體。 這意味著在這種情況下，由於內核重新啟動，已用記憶體可能會顯示為非常低，而在重新啟動之前，記憶體將非常接近最大分配的 RAM。
+在資料讀取期間，記憶體可能會增加，直到達到您配置的記憶體最大數量為止。 當達到最大記憶體且核心重新啟動時，會立即釋放記憶體。 這表示在此案例中，由於核心重新啟動，使用的記憶體可能會顯示得很低，而在重新啟動之前，記憶體會非常接近配置的最大RAM。
 
 若要解決此問題，請選取JupyterLab右上方的齒輪圖示，並將滑桿滑至右側，接著選取&#x200B;**[!UICONTROL 更新設定]**&#x200B;以配置更多RAM。 此外，如果您正在執行多個查詢，而RAM值已接近配置的最大值，除非您需要先前查詢的結果，請重新啟動核心以重設可用的RAM量。 這可確保您擁有可用於目前查詢的最大RAM量。
 
@@ -35,7 +35,7 @@ JupyterLab 筆記本可能指示單元在某些記憶體不足的情況下無限
 
 如果您正在配置最大記憶體(RAM)量，但仍然遇到此問題，您可以透過減少資料行或資料範圍，修改查詢以在較小的資料集大小上操作。 若要使用完整的資料量，建議您使用Spark筆記本。
 
-## [!DNL JupyterLab] 環境未載入 [!DNL Google Chrome]
+## [!DNL JupyterLab]環境未在[!DNL Google Chrome]中載入
 
 >[!IMPORTANT]
 >
@@ -63,11 +63,11 @@ JupyterLab 筆記本可能指示單元在某些記憶體不足的情況下無限
 >
 >或者，您可以停用第三方Cookie並新增[*。]ds.adobe.net加入允許清單。
 
-導航到位址欄中的“chrome://flags/”。 使用右側的下拉功能表Search並停用標題為 *“SameSite 依預設 cookie 的 SameSite ”* 標幟。
+導覽至位址列中的「chrome://flags/」。 使用右側的下拉式功能表，搜尋並停用標題為&#x200B;*「預設SameSite Cookie」*&#x200B;的標幟。
 
-![停用 SameSite 標幟](./images/faq/samesite-flag.png)
+![停用samesite旗標](./images/faq/samesite-flag.png)
 
-在步驟 2 之後，系統會提示您重新啟動瀏覽器。 重新啟動後，[!DNL Jupyterlab]應該可以存取。
+在步驟2之後，系統會提示您重新啟動瀏覽器。 重新啟動後，[!DNL Jupyterlab]應該可以存取。
 
 ## 為什麼我無法在Safari中存取[!DNL JupyterLab]？
 
@@ -75,21 +75,21 @@ Safari預設會在Safari &lt; 12中停用第三方Cookie。 由於您的[!DNL Ju
 
 對於Safari 12，您必須將使用者代理程式切換至&#39;[!DNL Chrome]&#39;或&#39;[!DNL Firefox]&#39;。 若要切換您的使用者代理程式，請開啟&#x200B;*Safari*&#x200B;功能表並選取&#x200B;**偏好設定**。 偏好設定視窗即會出現。
 
-![Safari 偏好設定](./images/faq/preferences.png)
+![Safari喜好設定](./images/faq/preferences.png)
 
 在Safari偏好設定視窗中，選取&#x200B;**進階**。 然後核取功能表列&#x200B;*方塊中的*&#x200B;顯示[開發]功能表。 完成此步驟後，您可以關閉偏好設定視窗。
 
 ![Safari進階](./images/faq/advanced.png)
 
-接著，從頂端導覽列選取&#x200B;**開發**&#x200B;功能表。 從&#x200B;**開發**&#x200B;下拉式清單中，暫留在&#x200B;**使用者代理程式**&#x200B;上。 您可以選擇 **[!DNL Chrome]** 按讚使用的 OR **[!DNL Firefox]** 使用者代理字串。
+接著，從頂端導覽列選取&#x200B;**開發**&#x200B;功能表。 從&#x200B;**開發**&#x200B;下拉式清單中，暫留在&#x200B;**使用者代理程式**&#x200B;上。 您可以選取要使用的&#x200B;**[!DNL Chrome]**&#x200B;或&#x200B;**[!DNL Firefox]**&#x200B;使用者代理字串。
 
 ![開發功能表](./images/faq/user-agent.png)
 
 ## 我嘗試上傳或刪除[!DNL JupyterLab]中的檔案時，為何會看到「403禁止」訊息？
 
-如果您的瀏覽器啟用了廣告攔截軟體（如 [!DNL Ghostery] 或 [!DNL AdBlock] Plus），則每個廣告攔截軟體 [!DNL JupyterLab] 中必須允許域“\*.adobe.net”才能正常運行。 這是因為[!DNL JupyterLab]虛擬機器器執行於[!DNL Experience Platform]網域以外的網域。
+如果您的瀏覽器已啟用廣告封鎖軟體，例如[!DNL Ghostery]或[!DNL AdBlock] Plus，則每個廣告封鎖軟體都必須允許網域「\*.adobe.net」，以便[!DNL JupyterLab]正常運作。 這是因為[!DNL JupyterLab]虛擬機器器執行於[!DNL Experience Platform]網域以外的網域。
 
-## 為什麼我 [!DNL Jupyter Notebook] 的外觀的某些部分打亂或不呈現為代碼？
+## 為什麼我的[!DNL Jupyter Notebook]的某些部分看起來是亂碼或未呈現為程式碼？
 
 如果相關儲存格意外從「代碼」變更為「Markdown」，就可能發生這種情況。 當程式碼儲存格成為焦點時，按下按鍵組合&#x200B;**ESC+M**&#x200B;會將儲存格的型別變更為Markdown。 儲存格的型別可以透過所選儲存格記事本頂端的下拉式指示器來變更。 若要將儲存格型別變更為程式碼，請先選取您要變更的指定儲存格。 接著，按一下指出儲存格目前型別的下拉式清單，然後選取「程式碼」。
 
@@ -103,17 +103,17 @@ Safari預設會在Safari &lt; 12中停用第三方Cookie。 由於您的[!DNL Ju
 !pip install {LIBRARY_NAME}
 ```
 
-有關預安裝 [!DNL Python] 資料庫的完整清單，請参閱 [JupyterLab 使用手冊](./jupyterlab/overview.md#supported-libraries)的附錄部分。
+如需預先安裝的[!DNL Python]程式庫的完整清單，請參閱JupyterLab使用手冊](./jupyterlab/overview.md#supported-libraries)的[附錄區段。
 
-## 我可以安裝自定義 PySpark 資料庫嗎？
+## 我可以安裝自訂PySpark程式庫嗎？
 
-很遺憾，您無法為PySpark核心安裝其他程式庫。 但是，您可以聯繫您的Adobe Systems 客戶服務代表為您安裝自定義 PySpark 資料庫。
+很遺憾，您無法為PySpark核心安裝其他程式庫。 不過，您可以聯絡Adobe客戶服務代表，為您安裝自訂PySpark程式庫。
 
 如需預先安裝的PySpark程式庫清單，請參閱JupyterLab使用手冊](./jupyterlab/overview.md#supported-libraries)的[附錄區段。
 
 ## 可以為[!DNL JupyterLab] [!DNL Spark]或PySpark核心設定[!DNL Spark]叢集資源嗎？
 
-可以透過將以下塊添加到筆記本的第一個儲存格來設定資源：
+您可以將下列區塊新增至筆記本的第一個儲存格，以設定資源：
 
 ```python
 %%configure -f 
@@ -129,21 +129,21 @@ Safari預設會在Safari &lt; 12中停用第三方Cookie。 由於您的[!DNL Ju
 }
 ```
 
-有關群集資源配置的詳細信息 [!DNL Spark] （包括可配置屬性的完整清單），請參閱 [JupyterLab 使用手冊](./jupyterlab/overview.md#kernels)。
+如需[!DNL Spark]叢集資源組態的詳細資訊，包括可設定屬性的完整清單，請參閱[JupyterLab使用手冊](./jupyterlab/overview.md#kernels)。
 
-## 為什麼在嘗試為較大的數據集執行某些任務時收到錯誤？
+## 為什麼我在嘗試為較大的資料集執行某些任務時會收到錯誤？
 
-如果您收到錯誤的原因如下 `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` 這通常意味著驅動程式或執行程式記憶體不足。 有關數據限制以及如何在大型數據集上執行任務的詳細資訊，請參閱 JupyterLab 筆記本數據 [訪問](./jupyterlab/access-notebook-data.md) 文檔。 通常，可以通過將 `mode` 從更改為 `interactive` `batch`來解決此錯誤。
+如果您收到錯誤的原因如`Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.`，這通常表示驅動程式或執行程式的記憶體不足。 如需資料限制以及如何對大型資料集執行工作的詳細資訊，請參閱JupyterLab Notebooks [資料存取](./jupyterlab/access-notebook-data.md)檔案。 通常，將`mode`從`interactive`變更為`batch`即可解決此錯誤。
 
-此外，在編寫大型 Spark/PySpark 數據集時，在執行寫入代碼之前快取數據 （`df.cache()`） 可以大大提高性能。
+此外，在寫入大型Spark/PySpark資料集時，在執行寫入程式碼之前快取資料(`df.cache()`)可大幅改善效能。
 
 <!-- remove this paragraph at a later date once the sdk is updated -->
 
-如果在讀取數據時遇到問題並將轉換應用於數據，請嘗試在轉換之前快取數據。 緩存數據可防止通過網路進行多次讀取。 通過讀取數據進行開始。 下一個，快取 （`df.cache()`） 數據。 最後，執行您的轉換。
+如果您在讀取資料時遇到問題，並且要將轉換套用至資料，請嘗試在轉換之前快取資料。 快取您的資料可防止跨網路多次讀取。 從讀取資料開始。 接著，快取(`df.cache()`)資料。 最後，執行轉換。
 
-## 為什麼我的Spark/PySpark筆記本需要這麼長時間來讀取和寫入數據？
+## 我的Spark/PySpark筆記型電腦為何要花這麼長時間來讀取和寫入資料？
 
-如果要對資料執行轉換（例如使用 `fit()`），則轉換可能會執行多次。 要提高性能，請在執行 之前`fit()`使用 緩存`df.cache()`數據。這樣可確保只執行一次轉換，並防止跨網路多次讀取。
+如果您正在對資料執行轉換，例如使用`fit()`，則轉換可能會執行多次。 若要提高效能，請在執行`fit()`之前使用`df.cache()`快取您的資料。 這樣可確保只執行一次轉換，並防止跨網路多次讀取。
 
 **建議的順序：**&#x200B;從讀取資料開始。 接著，執行轉換，接著快取(`df.cache()`)資料。 最後，執行`fit()`。
 

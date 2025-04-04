@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 零售業資料模型
 description: 檢視適用於零售業的標準化資料模型，此模型與Experience Data Model (XDM)相容，可在Adobe Experience Platform中使用。
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->說明的ERD是您應如何針對此產業使用案例建立資料模型的建議。 若要在Platform中使用此資料模型，您必須自行建構建議的結構描述及其關係。 如需詳細資訊，請參閱在UI中管理[結構描述](../../ui/resources/schemas.md)和[關係](../../tutorials/relationship-ui.md)的指南。
+>說明的ERD是您應如何針對此產業使用案例建立資料模型的建議。 若要在Experience Platform中使用此資料模型，您必須自行建構建議的結構描述及其關係。 如需詳細資訊，請參閱在UI中管理[結構描述](../../ui/resources/schemas.md)和[關係](../../tutorials/relationship-ui.md)的指南。
 
 請使用下列圖例來解譯此ERD：
 

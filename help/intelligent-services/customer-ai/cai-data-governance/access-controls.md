@@ -5,9 +5,9 @@ feature: Customer AI
 title: Customer AI的存取控制
 description: 本檔案提供Customer AI以屬性為基礎的存取控制相關資訊。
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '520'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 此功能可讓您使用定義組織或資料使用範圍的標籤，來標籤Experience Data Model (XDM)結構描述欄位。 同時，管理員可以使用使用者和角色管理介面來定義有關XDM結構描述欄位的存取原則，並更好地管理使用者或使用者群組（內部、外部或第三方使用者）的存取許可權。 此外，屬性型存取控制可讓管理員管理特定區段的存取權。
 
-透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Platform工作流程和資源的敏感個人資料(SPD)和個人識別資訊(PII)的存取權。 管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
+透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Experience Platform工作流程和資源的敏感個人資料(SPD)和個人識別資訊(PII)的存取權。 管理員可以將使用者角色定義為只能存取特定欄位及這些欄位對應的資料。
 
 由於基於屬性的存取控制，某些欄位和功能將存取受限，並且無法用於某些Customer AI服務模型。 範例包括「身分」、「評分定義」和「原地複製」。
 
@@ -46,4 +46,4 @@ ht-degree: 4%
 
 ## 後續步驟
 
-閱讀本指南後，您已經瞭解[!DNL Experience Platform]中存取控制的主要原則。 您現在可以繼續參閱[存取控制使用手冊](../overview.md)，以取得有關如何使用[!DNL Admin Console]建立產品設定檔及為[!DNL Platform]指派許可權的詳細步驟。
+閱讀本指南後，您已經瞭解[!DNL Experience Platform]中存取控制的主要原則。 您現在可以繼續參閱[存取控制使用手冊](../overview.md)，以取得有關如何使用[!DNL Admin Console]建立產品設定檔及為[!DNL Experience Platform]指派許可權的詳細步驟。

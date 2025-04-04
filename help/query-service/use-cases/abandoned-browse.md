@@ -3,9 +3,9 @@ keywords: Experience Platform；查詢服務；查詢服務；查詢
 title: Adobe Experience Platform查詢服務的範例使用案例
 description: 以端對端範例示範Adobe Experience Platform查詢服務的多功能性和優點。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 0%
 * 如何[建立資料集並擷取資料](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
 * 如何使用Adobe Analytics來源聯結器[內嵌資料](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=zh-Hant)
 * [區段](../../segmentation/home.md)
-* [目的地](../../destinations/home.md)
+* [目標](../../destinations/home.md)
 
-瀏覽放棄範例的中心在於使用Adobe[!DNL Analytics]資料來建立特定可操作的對象。 對象經過改良，可包含過去四天瀏覽網站但未購買的每位客戶。 然後，對象中的每個設定檔都會以客戶行為模式所產生的最高價格SKU為目標。
+瀏覽放棄範例的中心為使用Adobe [!DNL Analytics]資料來建立特定可操作的對象。 對象經過改良，可包含過去四天瀏覽網站但未購買的每位客戶。 然後，對象中的每個設定檔都會以客戶行為模式所產生的最高價格SKU為目標。
 
 查詢本身規範性很強，並且只包含符合區段定義的使用案例條件的資料。 這會減少正在處理的[!DNL Analytics]資料量，進而改善效能。 此外也會依價格從最高到最低排序資料，並選擇使用者瀏覽時價格最高的SKU。
 
@@ -57,7 +57,7 @@ order by price desc)D;
 
 ## 使用adobe analytics的[!DNL Query Service]瀏覽放棄範例 {#video-example}
 
-下面觀看的影片簡報提供您專注於[!DNL Query Service]和Adobe分析整合的Experience Platform資料的全方位真實使用案例。
+下方所呈現的影片提供您的Experience Platform資料，並著重於[!DNL Query Service]和Adobe分析整合的整體真實使用案例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
@@ -69,7 +69,7 @@ order by price desc)D;
 
 此外，將滿足任何循環或靜態條件的邏輯納入查詢中，[!DNL Query Service]會提取複雜分段的負擔。
 
-Adobe Experience Platform提供資料存放庫和必要工具，讓您以有效率且可靠的方式啟用資料。 透過將資料保留在Platform內，可讓您在執行其他程式時衍生屬性，並免除將資料匯出至協力廠商工具以進行操作和處理的需求。 處理數百個屬性或行銷活動時，這類處理間接成本可能會大幅影響專案時間表。 這可讓行銷人員透過單一位置存取其資料並建置行銷活動，以及非常動態的訊息分段和個人化方式。
+Adobe Experience Platform提供資料存放庫和必要工具，讓您以有效率且可靠的方式啟用資料。 透過將資料保留在Experience Platform中，它可讓您在執行其他程式時衍生屬性，並免除將資料匯出至第三方工具以進行操作和處理的需求。 處理數百個屬性或行銷活動時，這類處理間接成本可能會大幅影響專案時間表。 這可讓行銷人員透過單一位置存取其資料並建置行銷活動，以及非常動態的訊息分段和個人化方式。
 
 ## 後續步驟
 

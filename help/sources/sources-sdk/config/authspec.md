@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來
 title: 設定自助來源驗證規格(批次SDK)
 description: 本檔案提供使用自助來源(批次SDK)所需準備的設定概述。
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '772'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 驗證規格會定義Adobe Experience Platform使用者如何連線至您的來源。
 
-`authSpec`陣列包含將來源連線到Platform所需的驗證引數資訊。 任何特定來源都可以支援多種不同型別的驗證。
+`authSpec`陣列包含連線來源至Experience Platform所需的驗證引數資訊。 任何特定來源都可以支援多種不同型別的驗證。
 
 ## 驗證規格
 
@@ -340,4 +340,4 @@ GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
 
 ## 後續步驟
 
-填入您的驗證規格後，您可以繼續設定您要整合至平台的來源的來源規格。 如需詳細資訊，請參閱[設定來源規格](./sourcespec.md)上的檔案。
+填入驗證規格後，您可以繼續設定要整合至Experience Platform之來源的來源規格。 如需詳細資訊，請參閱[設定來源規格](./sourcespec.md)上的檔案。

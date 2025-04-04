@@ -1,10 +1,10 @@
 ---
-description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新現有目的地伺服器設定的API呼叫的範例。
+description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新現有目的地伺服器設定的API呼叫範例。
 title: 更新目的地伺服器設定
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 7%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 7%
 
 >[!TIP]
 >
->只有在您使用[發佈API](../../publishing-api/create-publishing-request.md)並提交更新以供Adobe稽核後，才可看見生產/公開目的地上的任何更新操作。
+>只有在您使用[發佈API](../../publishing-api/create-publishing-request.md)並提交更新以供Adobe檢閱後，才可看見對已生產/公開目的地執行的任何更新操作。
 
 如需可透過此端點設定的功能的詳細說明，請參閱以下文章：
 
-* [以Destination SDK建立的目的地的伺服器規格](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [使用Destination SDK建立之目的地的伺服器規格](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [使用Destination SDK建立之目的地的範本規格](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [訊息格式](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [檔案格式設定](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
@@ -96,9 +96,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `destinationServerType` | 字串 | *必要。針對即時（串流）目的地，*&#x200B;設為`URL_BASED`。 |
 | `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必要。*&#x200B;填入Experience Platform應連線的API端點位址。 |
-| `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在伺服器呼叫中使用的方法。 選項為`GET`、`PUT`、`PUT`、`DELETE`、`PATCH`。 |
+| `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 選項為`GET`、`PUT`、`PUT`、`DELETE`、`PATCH`。 |
 | `httpTemplate.requestBody.templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
-| `httpTemplate.requestBody.value` | 字串 | *必要。*&#x200B;此字串是字元逸出版本，可將Platform客戶的資料轉換為您服務預期的格式。<br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀[使用範本區段](../../functionality/destination-server/message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 </li><li> 如需簡單轉換的範例，請參閱[設定檔屬性](../../functionality/destination-server/message-format.md#attributes)轉換。 </li></ul> |
+| `httpTemplate.requestBody.value` | 字串 | *必要。*&#x200B;此字串是字元逸出版本，會將Experience Platform客戶的資料轉換為您服務預期的格式。<br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀[使用範本區段](../../functionality/destination-server/message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 </li><li> 如需簡單轉換的範例，請參閱[設定檔屬性](../../functionality/destination-server/message-format.md#attributes)轉換。 </li></ul> |
 | `httpTemplate.contentType` | 字串 | *必要。*&#x200B;您的伺服器接受的內容型別。 此值很可能為`application/json`。 |
 
 {style="table-layout:auto"}
@@ -752,11 +752,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀此檔案後，您現在知道如何透過Destination SDK`/authoring/destination-servers` API端點更新目的地伺服器設定。
+閱讀本檔案後，您現在知道如何透過Destination SDK `/authoring/destination-servers` API端點更新目的地伺服器設定。
 
 若要深入瞭解您可以使用此端點的功能，請參閱下列文章：
 

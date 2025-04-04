@@ -4,18 +4,18 @@ solution: Experience Platform
 title: 來源疑難排解
 description: 本檔案提供有關Adobe Experience Platform來源常見問題的解答。
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # 來源疑難排解指南
 
-本檔案提供有關Adobe Experience Platform來源常見問題的解答。 有關其他[!DNL Platform]服務（包括所有[!DNL Platform] API中遇到的服務）的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform來源常見問題的解答。 有關其他[!DNL Experience Platform]服務（包括所有[!DNL Experience Platform] API中遇到的服務）的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-## 常見問答
+## 常見問題
 
 以下是有關來源的常見問題解答清單。
 
@@ -67,7 +67,7 @@ JSON和Parquet檔案原生支援陣列。 對於平面結構（例如CSV），�
 
 ### 何時應使用部分擷取？
 
-如果您&#x200B;**沒有**&#x200B;限制（例如將整個檔案擷取到Platform），應該使用部分擷取。 或者，如果您不介意擷取可能包含錯誤的資料，則應該使用部分擷取。
+如果您&#x200B;**沒有**&#x200B;限制(例如將整個檔案擷取到Experience Platform)，則應使用部分擷取。 或者，如果您不介意擷取可能包含錯誤的資料，則應該使用部分擷取。
 
 ### 典型的部分擷取錯誤臨界值為何？
 

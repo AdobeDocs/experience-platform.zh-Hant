@@ -2,9 +2,9 @@
 title: 使用API將Google Ads連線至Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連結至Google Ads。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 1%
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL Google Ads]。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
 ### 收集必要的認證
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ## 建立基礎連線
 
-基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
 若要建立基礎連線ID，請在提供您的Google Ads驗證認證作為要求引數的一部分時，對`/connections`端點提出POST要求。
 
@@ -110,4 +110,4 @@ curl -X POST \
 依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Google Ads]基本連線，並將您的[!DNL Google Ads]帳戶連線至Experience Platform。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
-* [使用 [!DNL Flow Service] API建立資料流以將廣告資料帶入Platform](../../collect/advertising.md)
+* [使用 [!DNL Flow Service] API建立資料流以將廣告資料帶入Experience Platform](../../collect/advertising.md)

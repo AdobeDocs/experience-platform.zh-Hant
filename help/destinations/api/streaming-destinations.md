@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題； API教學課程；串流目的地API；平台
+keywords: Experience Platform；首頁；熱門主題； API教學課程；串流目的地API； Experience Platform
 solution: Experience Platform
 title: 使用Adobe Experience Platform中的流量服務API連線到串流目的地並啟用資料
 description: 本檔案說明如何使用Adobe Experience Platform API建立串流目的地
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2219'
 ht-degree: 2%
 
 ---
@@ -28,17 +28,17 @@ ht-degree: 2%
 
 ![概觀 — 建立串流目的地和啟用對象的步驟](../assets/api/streaming-destination/overview.png)
 
-如果您偏好使用Platform中的使用者介面來連線到目的地並啟用資料，請參閱[連線目的地](../ui/connect-destination.md)和[將對象資料啟用到串流對象匯出目的地](../ui/activate-segment-streaming-destinations.md)教學課程。
+如果您偏好使用Experience Platform中的使用者介面來連線到目的地並啟用資料，請參閱[連線目的地](../ui/connect-destination.md)和[將對象資料啟用到串流對象匯出目的地](../ui/activate-segment-streaming-destinations.md)教學課程。
 
 ## 快速入門
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： Experience Platform組織客戶體驗資料的標準化架構。
 * [[!DNL Catalog Service]](../../catalog/home.md)： [!DNL Catalog]是Experience Platform中資料位置和歷程的記錄系統。
-* [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-以下章節提供您需要瞭解的其他資訊，才能在Platform中啟用串流目的地的資料。
+以下章節提供您需要瞭解的其他資訊，才能在Experience Platform中啟用串流目的地的資料。
 
 ### 收集必要的認證
 
@@ -49,17 +49,17 @@ ht-degree: 2%
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
 
 ### 收集必要和選用標題的值 {#gather-values}
 
-若要呼叫Platform API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
+若要呼叫Experience Platform API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Platform API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
+Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Experience Platform API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
@@ -79,7 +79,7 @@ Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Pla
 
 ![目的地步驟概述步驟1](../assets/api/streaming-destination/step1.png)
 
-首先，您應該決定要啟用資料的串流目的地。 首先，請執行呼叫以請求您可以連線並啟用對象的目標可用目的地清單。 對`connectionSpecs`端點執行下列GET要求，以傳回可用目的地的清單：
+首先，您應該決定要啟用資料的串流目的地。 首先，請執行呼叫以請求您可以連線並啟用對象的目標可用目的地清單。 對`connectionSpecs`端點執行下列GET請求，以傳回可用目的地的清單：
 
 **API格式**
 
@@ -129,7 +129,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 2. 然後，使用基本連線ID進行另一個呼叫，您會在其中建立來源連線，以建立與您的Experience Platform資料的連線。
 
 
-### 授權存取Experience Platform中的資料
+### 在Experience Platform中授權存取您的資料
 
 **API格式**
 
@@ -270,12 +270,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`：使用您在步驟[取得的連線規格ID取得可用目的地的清單](#get-the-list-of-available-destinations)。
 * `{AUTHENTICATION_CREDENTIALS}`：填入您的串流目的地的名稱： `Aws Kinesis authentication credentials`或`Azure EventHub authentication credentials`。
-* `{ACCESS_ID}`： *用於[!DNL Amazon Kinesis]個連線。*&#x200B;您的Amazon Kinesis儲存位置的存取ID。
+* `{ACCESS_ID}`： *用於[!DNL Amazon Kinesis]個連線。*&#x200B;您的Amazon Kinesis儲存位置存取識別碼。
 * `{SECRET_KEY}`： *用於[!DNL Amazon Kinesis]個連線。*&#x200B;您的Amazon Kinesis儲存位置的秘密金鑰。
-* `{REGION}`： *用於[!DNL Amazon Kinesis]個連線。*&#x200B;您的[!DNL Amazon Kinesis]帳戶中，Platform將串流您資料的地區。
+* `{REGION}`： *用於[!DNL Amazon Kinesis]個連線。*&#x200B;您的[!DNL Amazon Kinesis]帳戶中Experience Platform將串流您資料的地區。
 * `{SAS_KEY_NAME}`： *用於[!DNL Azure Event Hubs]個連線。*&#x200B;填入您的SAS金鑰名稱。 在[Microsoft檔案](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)中瞭解如何使用SAS金鑰驗證[!DNL Azure Event Hubs]。
 * `{SAS_KEY}`： *用於[!DNL Azure Event Hubs]個連線。*&#x200B;填入您的SAS金鑰。 在[Microsoft檔案](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)中瞭解如何使用SAS金鑰驗證[!DNL Azure Event Hubs]。
-* `{EVENT_HUB_NAMESPACE}`： *用於[!DNL Azure Event Hubs]個連線。*&#x200B;填入Platform將串流您資料的[!DNL Azure Event Hubs]名稱空間。 如需詳細資訊，請參閱[!DNL Microsoft]檔案中的[建立事件中樞名稱空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
+* `{EVENT_HUB_NAMESPACE}`： *用於[!DNL Azure Event Hubs]個連線。*&#x200B;填入Experience Platform將串流您資料的[!DNL Azure Event Hubs]名稱空間。 如需詳細資訊，請參閱[!DNL Microsoft]檔案中的[建立事件中樞名稱空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
 
 **回應**
 
@@ -330,9 +330,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`：使用您在上述步驟中取得的基本連線ID。
 * `{CONNECTION_SPEC_ID}`：使用您在步驟[中取得的連線規格。取得可用目的地的清單](#get-the-list-of-available-destinations)。
-* `{NAME_OF_DATA_STREAM}`： *用於[!DNL Amazon Kinesis]個連線。*&#x200B;提供您[!DNL Amazon Kinesis]帳戶中現有資料流的名稱。 Platform會將資料匯出至此資料流。
-* `{REGION}`： *用於[!DNL Amazon Kinesis]個連線。* Amazon Kinesis帳戶中，Platform將串流您資料的地區。
-* `{EVENT_HUB_NAME}`： *用於[!DNL Azure Event Hubs]個連線。*&#x200B;填入Platform將串流您資料的[!DNL Azure Event Hub]名稱。 如需詳細資訊，請參閱[!DNL Microsoft]檔案中的[建立事件中樞](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)。
+* `{NAME_OF_DATA_STREAM}`： *用於[!DNL Amazon Kinesis]個連線。*&#x200B;提供您[!DNL Amazon Kinesis]帳戶中現有資料流的名稱。 Experience Platform會將資料匯出至此資料流。
+* `{REGION}`： *用於[!DNL Amazon Kinesis]個連線。* Amazon Kinesis帳戶中Experience Platform將串流您資料的地區。
+* `{EVENT_HUB_NAME}`： *用於[!DNL Azure Event Hubs]個連線。*&#x200B;填入Experience Platform將串流您資料的[!DNL Azure Event Hub]名稱。 如需詳細資訊，請參閱[!DNL Microsoft]檔案中的[建立事件中樞](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)。
 
 **回應**
 
@@ -348,9 +348,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![目的地步驟概述步驟4](../assets/api/streaming-destination/step4.png)
 
-您現在可以使用前述步驟中取得的ID，在Experience Platform資料與資料啟用目標目的地之間建立資料流。 將此步驟視為建構管道，稍後資料將透過管道在Experience Platform和您所需的目的地之間流動。
+您現在可以使用前述步驟中取得的ID，在Experience Platform資料與資料啟用目的地之間建立資料流。 將此步驟視為建構管道，稍後資料將透過管道在Experience Platform與您的所需目的地之間流動。
 
-若要建立資料流，請執行POST要求（如下所示），同時在裝載中提供下列提及的值。
+若要建立資料流，請執行POST要求（如下所示），同時在承載中提供下列提及的值。
 
 執行下列POST要求以建立資料流。
 
@@ -404,7 +404,7 @@ curl -X POST \
 ```
 
 * `{FLOW_SPEC_ID}`：以設定檔為基礎的目的地的流程規格識別碼為`71471eba-b620-49e4-90fd-23f1fa0174d8`。 在呼叫中使用此值。
-* `{SOURCE_CONNECTION_ID}`：使用您在步驟[連線至您的Experience Platform](#connect-to-your-experience-platform-data)中取得的來源連線ID。
+* `{SOURCE_CONNECTION_ID}`：使用您在步驟[中取得的來源連線識別碼連線至您的Experience Platform](#connect-to-your-experience-platform-data)。
 * `{TARGET_CONNECTION_ID}`：使用您在步驟[連線到串流目的地](#connect-to-streaming-destination)中取得的目標連線識別碼。
 
 **回應**
@@ -425,7 +425,7 @@ curl -X POST \
 
 建立所有連線和資料流程後，您現在可以將設定檔資料啟用至串流平台。 在此步驟中，您可以選取要傳送至目的地的對象和設定檔屬性，且可以排程資料並將資料傳送至目的地。
 
-若要將對象啟用至您的新目的地，您必須執行JSONPATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個對象和設定檔屬性。 若要深入瞭解JSONPATCH，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
+若要將對象啟用至您的新目的地，您必須執行JSON PATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個對象和設定檔屬性。 若要深入瞭解JSON PATCH，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
 
 **API格式**
 
@@ -492,7 +492,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 在教學課程的最後一步，您應驗證對象和設定檔屬性是否已正確對應至資料流程。
 
-若要驗證，請執行以下的GET要求：
+若要驗證，請執行下列GET請求：
 
 **API格式**
 
@@ -630,11 +630,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[要求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Experience Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功將Platform連線至其中一個慣用的串流目的地，並設定流向相應目的地的資料流程。 傳出資料現在可用於客戶分析目的地或您可能想要執行的任何其他資料操作。 如需詳細資訊，請參閱下列頁面：
+依照本教學課程中的指示，您已成功將Experience Platform連線至其中一個慣用的串流目的地，並設定流向相應目的地的資料流程。 傳出資料現在可用於客戶分析目的地或您可能想要執行的任何其他資料操作。 如需詳細資訊，請參閱下列頁面：
 
 * [目的地概觀](../home.md)
 * [目的地目錄概觀](../catalog/overview.md)

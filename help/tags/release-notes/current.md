@@ -2,10 +2,10 @@
 title: 標記和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: e300e57df998836a8c388511b446e90499185705
-workflow-type: ht
-source-wordcount: '771'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 93%
 
 ---
 
@@ -54,13 +54,13 @@ ht-degree: 100%
 
 ## 2022 年 10 月 26 日
 
-* **資料流的敏感資料處理**：資料流現在可利用多種平台技術來依法規 (健康保險流通和責任法案，HIPAA) 的規定妥善處理敏感資料。請參閱有關[處理資料流中的敏感資料](../../datastreams/overview.md#sensitive)部份，了解更多資訊。
+* **資料串流的敏感資料處理**：資料串流現在會運用數種Experience Platform技術，依照健康保險可攜性及責任法案(HIPAA)等法規的強制執行，適當地處理敏感資料。 請參閱有關[處理資料流中的敏感資料](../../datastreams/overview.md#sensitive)部份，了解更多資訊。
 * 事件轉送的 **[!DNL Splunk]擴充功能**：您現在可以使用[事件轉送](../ui/event-forwarding/overview.md)擴充功能將資料傳送至 [!DNL Splunk]。如需詳細資訊，請參閱[[!DNL Splunk] 擴充功能概觀](../extensions/server/splunk/overview.md)。
 * 事件轉送的 **[!DNL Zendesk]擴充功能**：您現在可以使用[事件轉送](../ui/event-forwarding/overview.md)擴充功能將資料傳送至 [!DNL Zendesk]。如需詳細資訊，請參閱[[!DNL Zendesk] 擴充功能概觀](../extensions/server/zendesk/overview.md)。
 
 ## 2022 年 9 月 28 日
 
-* **Adobe Experience Platform 左側導覽列整合**：以前資料彙集 UI 專有的所有功能 (包括標記和事件轉送) 現在也可以透過 Experience Platform UI 中的左側導覽列 (在&#x200B;**[!UICONTROL 數據彙集]**&#x200B;類別下) 使用。這樣即不需要在平台使用資料彙集功能時在 UI 之間切換。
+* **Adobe Experience Platform 左側導覽列整合**：以前資料彙集 UI 專有的所有功能 (包括標記和事件轉送) 現在也可以透過 Experience Platform UI 中的左側導覽列 (在&#x200B;**[!UICONTROL 數據彙集]**&#x200B;類別下) 使用。如此一來，在Experience Platform中使用資料收集功能時，便不需要在UI之間切換。
 * **標記和事件轉送中的使用者屬性**：在標記和事件轉送中列出可用屬性時，每個列出的屬性現在都會顯示上次更新的時間和更新者。
 * 事件轉送的 **[[!DNL Snap Conversions API] 擴充功能](https://exchange.adobe.com/apps/ec/108550)**：您現在可以使用[事件轉送](../../tags/ui/event-forwarding/overview.md)擴充功能將資料傳送至 [!DNL Snapchat Conversions API]。若要了解更多如何驗證和使用此 API，請參閱[[!DNL Snapchat Marketing API] 文件](https://marketingapi.snapchat.com/docs/conversion.html)。
 

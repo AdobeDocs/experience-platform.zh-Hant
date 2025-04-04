@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Oracle物件儲存；oracle物件儲存
 solution: Experience Platform
-title: oracle物件儲存Source聯結器總覽
-description: 瞭解如何使用API或使用者介面將Oracle物件儲存裝置連結至Adobe Experience Platform。
+title: Oracle物件儲存Source聯結器總覽
+description: 瞭解如何使用API或使用者介面將Oracle物件儲存裝置連線到Adobe Experience Platform。
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
-# oracle物件儲存聯結器
+# Oracle物件儲存聯結器
 
-Adobe Experience Platform為AWS [!DNL Google Cloud Platform]等雲端提供者提供原生連線，可讓您將這些系統的資料匯入Platform，用於下游服務和目的地。
+Adobe Experience Platform為AWS [!DNL Google Cloud Platform]等雲端提供者提供原生連線，可讓您將這些系統的資料匯入Experience Platform，用於下游服務和目的地。
 
-雲端儲存空間來源可將您的資料帶入Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合到來源工作流程中。 平台可讓您透過批次從[!DNL Oracle Object Storage]匯入資料。
+雲端儲存空間來源可將您的資料帶入Experience Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合到來源工作流程中。 Experience Platform可讓您透過批次從[!DNL Oracle Object Storage]匯入資料。
 
 ## IP位址允許清單
 
@@ -32,13 +32,13 @@ Adobe Experience Platform為AWS [!DNL Google Cloud Platform]等雲端提供者�
 - 不允許非法URL路徑字元。 類似`\uE000`的程式碼點雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的規則，請參閱[RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt)和[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
 - 不允許下列檔案名稱： LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)和兩個點字元(..)。
 
-## 將[!DNL Oracle Object Storage]連線至平台
+## 將[!DNL Oracle Object Storage]連線至Experience Platform
 
-以下檔案提供如何使用API或使用者介面將Oracle物件儲存體連線到Adobe Experience Platform的資訊：
+以下檔案提供如何使用API或使用者介面將Oracle Object Storage連線至Adobe Experience Platform的資訊：
 
 ### 使用API
 
-- [使用Flow Service API建立Oracle物件儲存基礎連線](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
+- [使用Flow Service API建立Oracle Object Storage基本連線](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
 - [使用流量服務API探索雲端儲存空間來源的資料結構和內容](../../tutorials/api/explore/cloud-storage.md)
 - [使用流量服務API為雲端儲存空間來源建立資料流](../../tutorials/api/collect/cloud-storage.md)
 

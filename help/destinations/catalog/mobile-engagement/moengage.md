@@ -3,7 +3,7 @@ title: Moengage連線
 description: Moengage是客戶參與平台，可即時促進消費者與品牌之間以客戶為中心的互動。
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 2%
@@ -100,7 +100,7 @@ ht-degree: 2%
 
 若要將對象資料從[!DNL Adobe Experience Platform]正確傳送至[!DNL Moengage]目的地，您必須完成欄位對應步驟。
 
-對應包括在[!DNL Platform]帳戶中的[!DNL Experience Data Model] (XDM)結構描述欄位之間建立連結，以及從目標目的地建立對應對應專案。
+對應包括在[!DNL Experience Platform]帳戶中的[!DNL Experience Data Model] (XDM)結構描述欄位之間建立連結，以及從目標目的地建立對應對應專案。
 
 若要將您的XDM欄位正確對應到[!DNL Moengage]目的地欄位，請遵循下列步驟：
 
@@ -128,7 +128,7 @@ ht-degree: 2%
 ![移動目的地目標對應](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 在[!UICONTROL 選取目標欄位]視窗中，您可以選擇兩種目標欄位類別：
-* [!UICONTROL 選取身分名稱空間]：使用此選項將[!DNL Platform]身分名稱空間對應到[!DNL Moengage]身分名稱空間。
+* [!UICONTROL 選取身分名稱空間]：使用此選項將[!DNL Experience Platform]身分名稱空間對應到[!DNL Moengage]身分名稱空間。
 * [!UICONTROL 選取自訂屬性]：使用此選項將XDM屬性對應到您在[!DNL Moengage]帳戶中定義的自訂[!DNL Moengage]屬性。 <br>您也可以使用此選項將現有的XDM屬性重新命名為[!DNL Moengage]。 例如，將`lastName` XDM屬性對應至[!DNL Moengage]中的自訂`Last_Name`屬性，將在[!DNL Moengage]中建立`Last_Name`屬性（如果尚未存在），並將`lastName` XDM屬性對應至該屬性。
 
 ![Moengage目的地目標對應欄位](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)

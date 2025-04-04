@@ -4,9 +4,9 @@ title: 使用API啟用設定檔更新的資料集
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform API來啟用具有「更新插入」功能的資料集，以更新即時客戶設定檔資料。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1069'
 ht-degree: 6%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 6%
 
 ## 快速入門
 
-若要參閱本教學課程，請先實際瞭解管理已啟用設定檔的資料集所牽涉到的多項Adobe Experience Platform服務。 在開始本教學課程之前，請先檢閱這些相關[!DNL Platform]服務的檔案：
+若要參閱本教學課程，請先實際瞭解管理已啟用設定檔的資料集所牽涉到的多項Adobe Experience Platform服務。 在開始本教學課程之前，請先檢閱這些相關[!DNL Experience Platform]服務的檔案：
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 - [[!DNL Catalog Service]](../../catalog/home.md)： RESTful API可讓您建立資料集並為[!DNL Real-Time Customer Profile]和[!DNL Identity Service]設定資料集。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
-- [批次擷取](../../ingestion/batch-ingestion/overview.md)：批次擷取API可讓您將資料以批次檔案的形式擷取到Experience Platform中。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
+- [批次擷取](../../ingestion/batch-ingestion/overview.md)：批次擷取API可讓您將資料以批次檔案的形式擷取到Experience Platform。
 
-以下章節提供您需瞭解的其他資訊，才能成功呼叫Platform API。
+以下章節提供您需瞭解的其他資訊，才能成功呼叫Experience Platform API。
 
 ### 讀取範例 API 呼叫
 
@@ -36,7 +36,7 @@ ht-degree: 6%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ ht-degree: 6%
 
 所有包含裝載(POST、PUT、PATCH)的要求都需要額外`Content-Type`標題。 必要時，此標頭的正確值會顯示在範例要求中。
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要`x-sandbox-name`標頭，以指定將在其中執行操作的沙箱名稱。 如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要`x-sandbox-name`標頭，以指定將在其中執行操作的沙箱名稱。 如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 ## 建立已啟用設定檔更新的資料集
 
@@ -179,7 +179,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 
 ### 停用設定檔的資料集
 
-若要設定已啟用設定檔的資料集以進行更新，您必須先停用`unifiedProfile`和`unifiedIdentity`標籤，然後隨著`isUpsert`標籤重新啟用它們。 這是使用兩個PATCH要求來完成，一次為停用，另一次為重新啟用。
+若要設定已啟用設定檔的資料集以進行更新，您必須先停用`unifiedProfile`和`unifiedIdentity`標籤，然後隨著`isUpsert`標籤重新啟用它們。 這是使用兩個PATCH請求來完成，一次為停用，另一次為重新啟用。
 
 >[!WARNING]
 >
@@ -197,7 +197,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **要求**
 
-第一個PATCH要求內文包含`path`到`unifiedProfile`以及`path`到`unifiedIdentity`，為停用標籤將這兩個路徑的`value`設定為`enabled:false`。
+第一個PATCH要求內文包含`path`至`unifiedProfile`和`path`至`unifiedIdentity`，為這兩個路徑將`value`設定為`enabled:false`以停用標籤。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -236,7 +236,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 >[!IMPORTANT]
 >
->為設定檔啟用資料集時，請確保與資料集相關聯的結構描述也&#x200B;**已啟用**&#x200B;設定檔。 如果結構描述未啟用設定檔，資料集&#x200B;**不會**&#x200B;在Platform UI中顯示為啟用設定檔。
+>為設定檔啟用資料集時，請確保與資料集相關聯的結構描述也&#x200B;**已啟用**&#x200B;設定檔。 如果結構描述未啟用設定檔，資料集&#x200B;**不會**&#x200B;在Experience Platform UI中顯示為啟用設定檔。
 
 **API格式**
 

@@ -3,9 +3,9 @@ title: 使用UI連線 [!DNL Google BigQuery] 至Experience Platform
 description: 瞭解如何使用Adobe Experience Platform UI建立Google Big Query來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Google BigQuery]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](../../dataflow/databases.md)。
+依照本教學課程中的指示，您已建立與[!DNL Google BigQuery]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/databases.md)。

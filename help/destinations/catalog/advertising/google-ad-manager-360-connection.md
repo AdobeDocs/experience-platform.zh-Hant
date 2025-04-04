@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] 連線
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式，管理其網站上廣告的顯示方式。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1221'
 ht-degree: 6%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 6%
 
 ### 允許清單 {#allow-listing}
 
-在Platform中設定第一個[!DNL Google Ad Manager 360]目的地前，必須先加入允許清單。 在建立目的地之前，請務必完成下述允許清單程式。
+在Experience Platform中設定第一個[!DNL Google Ad Manager 360]目的地前，必須先加入允許清單。 在建立目的地之前，請務必完成下述允許清單程式。
 
 >[!NOTE]
 >
@@ -96,8 +96,8 @@ ht-degree: 6%
 
 若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
 
-* **[!UICONTROL 存取金鑰識別碼]**：用於向Platform驗證您的[!DNL Google Cloud Storage]帳戶的61個字元英數字串。
-* **[!UICONTROL 秘密存取金鑰]**：用於向Platform驗證您的[!DNL Google Cloud Storage]帳戶的40個字元base64編碼字串。
+* **[!UICONTROL 存取金鑰識別碼]**：用於向Experience Platform驗證您的[!DNL Google Cloud Storage]帳戶的61個字元英數字串。
+* **[!UICONTROL 秘密存取金鑰]**：40個字元的base64編碼字串，用來向Experience Platform驗證您的[!DNL Google Cloud Storage]帳戶。
 
 如需這些值的詳細資訊，請參閱[Google雲端儲存空間HMAC金鑰](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)指南。 如需如何產生您自己的存取金鑰ID和秘密存取金鑰的步驟，請參閱[[!DNL Google Cloud Storage] 來源概觀](/help/sources/connectors/cloud-storage/google-cloud-storage.md)。
 
@@ -139,7 +139,7 @@ ht-degree: 6%
 
 | 預先填入的對應 | 說明 |
 |---------|----------|
-| `ECID` -> `ppid` | 這是使用者唯一可編輯的預先填入對應。 您可以從Platform選取任何屬性或身分識別名稱空間，並將它們對應至`ppid`。 |
+| `ECID` -> `ppid` | 這是使用者唯一可編輯的預先填入對應。 您可以從Experience Platform選取任何屬性或身分識別名稱空間，並將它們對應至`ppid`。 |
 | `metadata.segment.alias` -> `list_id` | 將Experience Platform對象名稱對應至Google平台中的對象ID。 |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | 告訴Google平台何時從區段移除不符合資格的使用者。 |
 

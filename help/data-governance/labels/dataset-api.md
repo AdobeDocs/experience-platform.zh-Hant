@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用API管理資料集的資料使用標籤
 description: 資料集服務API可讓您套用及編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的目錄服務API不同。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 1%
@@ -23,13 +23,13 @@ ht-degree: 1%
 
 ## 快速入門
 
-在閱讀本指南之前，請依照目錄開發人員指南的[快速入門區段](../../catalog/api/getting-started.md)中概述的步驟，收集呼叫[!DNL Platform] API所需的認證。
+在閱讀本指南之前，請依照目錄開發人員指南的[快速入門區段](../../catalog/api/getting-started.md)中概述的步驟，收集呼叫[!DNL Experience Platform] API所需的認證。
 
 若要呼叫本檔案中概述的端點，您必須具有特定資料集的唯一`id`值。 如果您沒有這個值，請參閱[目錄物件清單](../../catalog/api/list-objects.md)上的指南，以尋找現有資料集的ID。
 
 ## 查詢資料集的標籤 {#look-up}
 
-您可以向[!DNL Dataset Service] API發出GET要求，查詢已套用至現有資料集的資料使用標籤。
+您可以向[!DNL Dataset Service] API發出GET請求，查詢已套用至現有資料集的資料使用標籤。
 
 **API格式**
 
@@ -82,7 +82,7 @@ curl -X GET \
 
 ## 將標籤套用至資料集 {#apply}
 
-您可以在[!DNL Dataset Service] API的POST或PUT要求裝載中提供標籤，藉此為整個資料集套用一組標籤。 兩個呼叫的要求內文相同。 您無法將標籤新增至個別資料集欄位。
+您可以在POST或PUT要求的裝載中將這些標籤提供至[!DNL Dataset Service] API，藉此為整個資料集套用一組標籤。 兩個呼叫的要求內文相同。 您無法將標籤新增至個別資料集欄位。
 
 **API格式**
 
@@ -99,13 +99,13 @@ PUT /datasets/{DATASET_ID}/labels
 
 以下範例POST請求會以`C1`標籤更新整個資料集。 承載中提供的欄位與PUT請求所需的欄位相同。
 
-當進行API呼叫以更新資料集(PUT)的現有標籤時，必須包含指出資料集服務中資料集 — 標籤實體的目前版本的`If-Match`標頭。 為了避免資料衝突，服務將只會在包含的`If-Match`字串符合系統針對該資料集產生的最新版本標籤時，更新資料集實體。
+進行更新資料集(PUT)現有標籤的API呼叫時，必須包含指出資料集服務中資料集 — 標籤實體的目前版本的`If-Match`標頭。 為了避免資料衝突，服務將只會在包含的`If-Match`字串符合系統針對該資料集產生的最新版本標籤時，更新資料集實體。
 
 >[!NOTE]
 >
->如果相關資料集目前存在標籤，則只能透過PUT要求新增新標籤，該要求需要`If-Match`標頭。 將標籤新增到資料集後，需要最新的`etag`值才能在稍後更新或移除標籤<br>執行PUT方法之前，您必須先對資料集標籤執行GET要求。 請確定您僅更新請求中要修改的特定欄位，其餘欄位保持不變。 此外，請確定PUT呼叫維護與GET呼叫相同的父項實體。 任何差異都會導致客戶發生錯誤。
+>如果相關資料集目前存在標籤，則只能透過PUT請求新增新標籤，該請求需要`If-Match`標頭。 標籤新增至資料集後，稍後需要最新的`etag`值才能更新或移除標籤<br>執行PUT方法之前，您必須先對資料集標籤執行GET要求。 請確定您僅更新請求中要修改的特定欄位，其餘欄位保持不變。 此外，請確定PUT呼叫維護與GET呼叫相同的父實體。 任何差異都會導致客戶發生錯誤。
 
-若要擷取最新版本的資料集 — 標籤實體，請對`/datasets/{DATASET_ID}/labels`端點發出[GET要求](#look-up)。 目前值是在`etag`標頭下的回應中傳回。 更新現有的資料集標籤時，最佳實務是先執行資料集的查詢要求，以擷取其最新的`etag`值，然後再在後續PUT要求的`If-Match`標頭中使用該值。
+若要擷取最新版本的資料集 — 標籤實體，請對`/datasets/{DATASET_ID}/labels`端點發出[GET請求](#look-up)。 目前值是在`etag`標頭下的回應中傳回。 更新現有的資料集標籤時，最佳實務是先執行資料集的查詢要求，以擷取其最新的`etag`值，然後再在後續PUT要求的`If-Match`標題中使用該值。
 
 ```shell
 curl -X POST \
@@ -143,7 +143,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->`optionalLabels`屬性已棄用，無法與POST要求搭配使用。 無法再將資料標籤新增至資料集欄位。 如果出現`optionalLabel`值，POST作業將擲回錯誤。 不過，您可以使用PUT要求和`optionalLabels`屬性，從個別欄位中刪除標籤。 如需詳細資訊，請參閱[從資料集移除標籤](#remove)一節。
+>`optionalLabels`屬性已棄用，不適用於POST要求。 無法再將資料標籤新增至資料集欄位。 如果出現`optionalLabel`值，POST作業將會擲回錯誤。 不過，您可以使用PUT要求和`optionalLabels`屬性，從個別欄位中刪除標籤。 如需詳細資訊，請參閱[從資料集移除標籤](#remove)一節。
 
 ```json
 {
@@ -165,7 +165,7 @@ curl -X POST \
 
 ## 從資料集中移除標籤 {#remove}
 
-您可以透過以現有欄位標籤的子集更新現有`optionalLabels`值，或透過空白清單以完全移除它們，來移除任何先前套用的欄位標籤。 向[!DNL Dataset Service] API發出PUT要求，以更新或移除先前套用的標籤。
+您可以透過以現有欄位標籤的子集更新現有`optionalLabels`值，或透過空白清單以完全移除它們，來移除任何先前套用的欄位標籤。 向[!DNL Dataset Service] API提出PUT請求以更新或移除先前套用的標籤。
 
 >[!NOTE]
 >
@@ -183,9 +183,9 @@ PUT /datasets/{DATASET_ID}/labels
 
 **要求**
 
-套用PUT操作的以下資料集在properties/person/properties/address欄位上有C1 optionalLabel，在/properties/person/properties/name/properties/fullName欄位上有C1， C2 optionalLabels。 put作業之後，第一個欄位將沒有標籤（移除C1標籤），而第二個欄位將只有C1標籤（移除C2標籤）
+以下是套用PUT作業的資料集，其屬性/人員/屬性/位址欄位有C1 optionalLabel，而/properties/人員/屬性/名稱/屬性/完整名稱欄位有C1， C2 optionalLabels。 put作業之後，第一個欄位將沒有標籤（移除C1標籤），而第二個欄位將只有C1標籤（移除C2標籤）
 
-在以下範例案例中，PUT請求用於移除新增至個別欄位的標籤。 在提出要求之前，`fullName`欄位已套用`C1`和`C2`標籤，而`address`欄位已套用`C1`標籤。 PUT要求使用`optionalLabels.labels`引數覆寫`fullName`欄位中具有`C1`標籤的現有標籤`C1, C2`標籤。 請求也會以一組空白欄位標籤覆寫`address`欄位中的`C1`標籤。
+在以下範例案例中，PUT要求用於移除新增至個別欄位的標籤。 在提出要求之前，`fullName`欄位已套用`C1`和`C2`標籤，而`address`欄位已套用`C1`標籤。 PUT要求使用`optionalLabels.labels`引數覆寫`fullName`欄位中具有`C1`標籤的現有標籤`C1, C2`標籤。 請求也會以一組空白欄位標籤覆寫`address`欄位中的`C1`標籤。
 
 ```shell
 curl -X PUT \

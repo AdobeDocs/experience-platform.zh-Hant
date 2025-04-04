@@ -3,10 +3,10 @@ title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3894'
-ht-degree: 49%
+source-wordcount: '3896'
+ht-degree: 48%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 49%
 
 採用即時考慮方式、將所有消費者的品質和行為納入考量，並根據線上和線下事件提供更快的重新資格認證。
 
-以下是Real-Time CDP和Journey Optimizer各種元件的高階架構檢視。 此圖表顯示資料如何流經兩個Experience Platform應用程式，從資料收集一直到透過歷程或促銷活動啟用它到目的地的時間，以達到本頁面上描述的使用案例。
+以下是Real-Time CDP和Journey Optimizer各種元件的高階架構檢視。 此圖表顯示資料如何流經兩個Experience Platform應用程式，從資料收集到透過歷程或促銷活動啟用到目的地的時間，以達到本頁面上描述的使用案例。
 
 ![智慧型重新參與高階視覺化概觀。](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -36,17 +36,17 @@ ht-degree: 49%
 
 完成實施使用案例的步驟後，您將運用下列Real-Time CDP和Adobe Journey Optimizer功能（依使用順序列出）。 確保您擁有所有這些區域所需的[屬性型存取控制權限](/help/access-control/home.md)，或要求系統管理員授予您必要的權限。
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)- 整合跨資料來源的資料，以推動行銷活動。然後，使用此資料來建立行銷活動對象，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。CDP 也用於跨電子郵件和網頁啟動對象 (透過 [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)- 整合跨資料來源的資料，以推動行銷活動。然後，使用此資料來建立行銷活動客群，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。CDP 也用於跨電子郵件和網頁啟動客群 (透過 [!DNL Adobe Target]).
    * [結構描述](/help/xdm/home.md)
-   * [設定檔](/help/profile/home.md)
+   * [輪廓](/help/profile/home.md)
    * [資料集](/help/catalog/datasets/overview.md)
-   * [對象](/help/segmentation/home.md)
+   * [客群](/help/segmentation/home.md)
    * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
-   * [目的地](/help/destinations/home.md)
+   * [目標](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=zh-Hant) — 協助您為客戶提供連線、情境式和個人化的體驗。
-   * [事件或對象觸發](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [對象/事件](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
+   * [事件或客群觸發](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [客群/事件](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [歷程動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## 如何實現使用案例 {#achieve-use-case-instruction}
@@ -60,11 +60,11 @@ ht-degree: 49%
 放棄的產品瀏覽情境會鎖定網站和行動應用程式上放棄的產品瀏覽。 當已檢視產品但未購買或未新增到購物車時，就會觸發此情境。 在此範例中，如果過去24小時內沒有清單新增，則會在3天後觸發品牌參與度。<p>![客戶智慧型放棄產品瀏覽案例高階視覺概觀。](../intelligent-re-engagement/images/re-engagement-journey.png "客戶智慧型放棄產品瀏覽案例高階視覺概觀。"){width="1920" zoomable="yes"}</p>
 
 1. 您建立結構描述和資料集，然後為[!UICONTROL 設定檔]啟用。
-2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
+2. 您可以透過網頁SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
-4. 您從設定檔清單建立重點對象，以檢查&#x200B;**使用者**&#x200B;在過去三天是否有進行參與行動。
+4. 您從輪廓清單建立重點客群，以檢查&#x200B;**使用者**&#x200B;在過去三天是否有進行參與行動。
 5. 您在[!DNL Adobe Journey Optimizer]中建立放棄的產品瀏覽歷程。
-6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將對象啟動到所需付費媒體目的地。
+6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將客群啟動到所需付費媒體目的地。
 7. [!DNL Adobe Journey Optimizer] 檢查是否同意並發送設定的各種動作。
 
 >[!TAB 放棄的購物車案例]
@@ -72,11 +72,11 @@ ht-degree: 49%
 放棄購物車情況適用於產品已放入購物車但尚未在網站和行動應用程式上購買的情況。 此外，付費媒體行銷活動可以使用此方法開始和停止。<p>![客戶放棄的購物車案例高階視覺化概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶放棄的購物車案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 1. 您建立結構描述和資料集，為[!UICONTROL 設定檔]啟用。
-2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
+2. 您可以透過網頁SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
-4. 您從設定檔清單建立重點對象，以檢查&#x200B;**客戶**&#x200B;是否已將商品放入購物車但尚未完成購買。**[!UICONTROL 新增到購物車]**&#x200B;事件會啟動計時器；計時器會等待 30 分鐘，然後檢查是否有購買。如果沒有購買，那麼會將&#x200B;**客戶**&#x200B;新增到&#x200B;**[!UICONTROL 捨棄購物車]**&#x200B;對象。
+4. 您從輪廓清單建立重點客群，以檢查&#x200B;**客戶**&#x200B;是否已將商品放入購物車但尚未完成購買。**[!UICONTROL 新增到購物車]**&#x200B;事件會啟動計時器；計時器會等待 30 分鐘，然後檢查是否有購買。如果沒有購買，那麼會將&#x200B;**客戶**&#x200B;新增到&#x200B;**[!UICONTROL 捨棄購物車]**&#x200B;客群。
 5. 您在 [!DNL Adobe Journey Optimizer] 中建立一個廢棄購物車歷程。
-6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將對象啟動到所需付費媒體目的地。
+6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將客群啟動到所需付費媒體目的地。
 7. [!DNL Adobe Journey Optimizer] 檢查是否同意並發送設定的各種動作。
 
 >[!TAB 訂單確認案例]
@@ -84,7 +84,7 @@ ht-degree: 49%
 訂購確認案例聚焦於透過網站和行動應用程式進行的產品購買。<p>![客戶訂單確認案例高階視覺化概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png "客戶訂單確認案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 1. 您建立結構描述和資料集，然後為[!UICONTROL 設定檔]啟用。
-2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
+2. 您可以透過網頁SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您在 [!DNL Adobe Journey Optimizer] 中建立一個確認歷程。
 5. [!DNL Adobe Journey Optimizer] 使用偏好管道發送訂購確認訊息。
@@ -103,13 +103,13 @@ ht-degree: 49%
 
 #### 客戶屬性結構描述
 
-此結構描述是用來安排和參考構成客戶資訊的設定檔資料。此資料通常會透過您的CRM或類似系統擷取至[!DNL Adobe Experience Platform]，且為參考用於個人化、行銷同意和增強受眾功能的客戶詳細資料所必需。
+此結構描述是用來安排和參考構成客戶資訊的輪廓資料。此資料通常會透過您的CRM或類似系統擷取至[!DNL Adobe Experience Platform]，且為參考用於個人化、行銷同意和增強受眾功能的客戶詳細資料所必需。
 
-客戶屬性結構描述以 [[!UICONTROL XDM 個人設定檔]](/help/xdm/classes/individual-profile.md)類別表示，其中包括以下欄位群組：
+客戶屬性結構描述以 [[!UICONTROL XDM 個人輪廓]](/help/xdm/classes/individual-profile.md)類別表示，其中包括以下欄位群組：
 
 +++個人聯絡詳細資料 (欄位群組)
 
-[個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人設定檔類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
+[個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人輪廓類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
 
 | 欄位 | 說明 |
 | --- | --- |
@@ -139,7 +139,7 @@ ht-degree: 49%
 
 +++
 
-+++設定檔測試詳細資料 (欄位群組)
++++輪廓測試詳細資料 (欄位群組)
 
 此欄位群組可讓您使用測試設定檔，在發佈歷程之前測試歷程。 如需建立測試設定檔的詳細資訊，請閱讀[建立測試設定檔教學課程](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html)和[測試歷程教學課程](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html)。
 
@@ -147,7 +147,7 @@ ht-degree: 49%
 
 #### 客戶數位交易結構描述
 
-此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會透過[Web SDK](/help/web-sdk/home.md)擷取至[!DNL Adobe Experience Platform]，且為參考用於觸發歷程、詳細的線上客戶分析、增強受眾功能及個人化傳訊的各種瀏覽和轉換事件所必需。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會透過[網頁SDK](/help/web-sdk/home.md)擷取至[!DNL Adobe Experience Platform]，且為參考各種用來觸發歷程、詳細線上客戶分析、增強受眾功能和個人化傳訊的瀏覽和轉換事件所必需。
 
 客戶數位交易結構描述以[[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)類別表示。
 
@@ -205,7 +205,7 @@ ht-degree: 49%
 
 #### 客戶離線交易結構描述
 
-此結構描述是用來安排和引用構成發生在您網站以外平台上客戶活動的事件資料。該資料通常是從 POS (或類似系統) 被擷取至 [!DNL Adobe Experience Platform]，且大部份通常會透過 API 連線串流至平台。其目的是參考各種離線轉換事件，這些事件用於觸發歷程、深層線上和離線客戶分析、增強受眾功能和個人化傳訊。
+此結構描述是用來安排和引用構成發生在您網站以外平台上客戶活動的事件資料。此資料通常會從POS （或類似系統）擷取到[!DNL Adobe Experience Platform]，且通常會透過API連線串流到Experience Platform。 其目的是參考各種離線轉換事件，這些事件用於觸發歷程、深層線上和離線客戶分析、增強受眾功能和個人化傳訊。
 
 客戶離線交易結構描述以[[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)類別表示。
 
@@ -242,7 +242,7 @@ ht-degree: 49%
 
 +++個人聯絡詳細資料 (欄位群組)
 
-[個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人設定檔類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
+[個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人輪廓類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
 
 | 欄位 | 說明 |
 | --- | --- |
@@ -308,7 +308,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->與結構描述建立步驟類似，您需要啟用資料集以包含在即時客戶設定檔中。如需啟用資料集以用於Real-Time Customer Profile的詳細資訊，請參閱有關[將資料引入Real-Time Customer Profile](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html?lang=zh-Hant)的教學課程。
+>與結構描述建立步驟類似，您需要啟用資料集以包含在即時客戶輪廓中。如需啟用資料集以用於Real-Time Customer Profile的詳細資訊，請參閱有關[將資料引入Real-Time Customer Profile](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html?lang=zh-Hant)的教學課程。
 
 ### 同意與資料控管 {#privacy-consent}
 
@@ -348,21 +348,21 @@ ht-degree: 49%
 
 如需如何建立對象的詳細資訊，請參閱[對象服務UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)。
 
-如需深入了解如何直接組成[對象](/help/segmentation/home.md)，請參閱[對象組成 UI 指南](/help/segmentation/ui/audience-composition.md)。
+如需深入了解如何直接組成[客群](/help/segmentation/home.md)，請參閱[客群組成 UI 指南](/help/segmentation/ui/audience-composition.md)。
 
-如需如何透過平台衍生的對象定義來建立對象的詳細資訊，請參閱[對象產生器UI指南](/help/segmentation/ui/segment-builder.md)。
+如需如何透過Experience Platform衍生的對象定義來建立對象的詳細資訊，請參閱[對象產生器UI指南](/help/segmentation/ui/segment-builder.md)。
 
 >[!BEGINTABS]
 
 >[!TAB 放棄的產品瀏覽案例]
 
-建立此對象是為了加強經典的「購物車放棄」情境。雖然購物車放棄通常是著重在購物車新增但在特定時間內未接著購買的情形，但此類對象尋求較早參與，特別是在特定時間內於您網站上可能瀏覽過特定產品但未加入購物車且沒有後續活動的人。此對象有助於讓符合此納入標準的客戶「優先考慮」您的品牌，也可運用在數位屬性可能不同於傳統電子商務模式的客戶。
+建立此客群是為了加強經典的「購物車放棄」情境。雖然購物車放棄通常是著重在購物車新增但在特定時間內未接著購買的情形，但此類客群尋求較早參與，特別是在特定時間內於您網站上可能瀏覽過特定產品但未加入購物車且沒有後續活動的人。此客群有助於讓符合此納入標準的客戶「優先考慮」您的品牌，也可運用在數位屬性可能不同於傳統電子商務模式的客戶。
 
 +++放棄的產品檢視，過去三天無參與
 
 以下事件適用於放棄的產品瀏覽情境，即使用者於線上檢視產品，且未在接下來的3天內參與（網站造訪、應用程式造訪、線上購買、離線購買及加入購物車事件）。
 
-設定此對象時需要以下欄位和條件：
+設定此客群時需要以下欄位和條件：
 
 * `eventType: commerce.productViews`
 * 和`THEN` （循序事件）排除`eventType: commerce.productListAdds`和`application.launch`以及`web.webpagedetails.pageViews`和`commerce.purchases` （這包含線上和離線）
@@ -375,7 +375,7 @@ ht-degree: 49%
 
 以下事件適用於放棄的產品瀏覽情境，即使用者於線上檢視產品，並在隨後3天內參與（網站造訪、應用程式造訪、線上購買、離線購買及新增至購物車事件）。
 
-設定此對象時需要以下欄位和條件：
+設定此客群時需要以下欄位和條件：
 
 * `eventType: commerce.productViews`
 * 且`THEN` （循序事件）包含`eventType: commerce.productListAdds`、`application.launch`、`web.webpagedetails.pageViews`或`commerce.purchases` （這包含線上和離線）
@@ -387,7 +387,7 @@ ht-degree: 49%
 
 以下事件適用於放棄的產品瀏覽情境，即使用者在過去1天內參與其中（網站造訪、應用程式造訪、線上購買、離線購買及加入購物車事件）。
 
-設定此對象時需要以下欄位和條件：
+設定此客群時需要以下欄位和條件：
 
 * `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` （串流）
@@ -398,7 +398,7 @@ ht-degree: 49%
 
 以下事件適用於放棄的產品瀏覽情境，即使用者在過去3天內參與其中（網站造訪、應用程式造訪、線上購買、離線購買及加入購物車事件）。
 
-設定此對象時需要以下欄位和條件：
+設定此客群時需要以下欄位和條件：
 
 * `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 3 days` （批次）
@@ -407,11 +407,11 @@ ht-degree: 49%
 
 >[!TAB 放棄的購物車案例]
 
-建立此對象是為了支持一般「購物車放棄」情境。其目的是找到將產品加入購物車但最後未購買的客戶。此對象不僅有助於您的客戶「最先想到」您的品牌，而且還有助於他們保留被遺棄而未繼續購買的產品。
+建立此客群是為了支持一般「購物車放棄」情境。其目的是找到將產品加入購物車但最後未購買的客戶。此客群不僅有助於您的客戶「最先想到」您的品牌，而且還有助於他們保留被遺棄而未繼續購買的產品。
 
 下列事件適用於放棄購物車的情況，即使用者在1至4天前將產品新增至購物車，但未完成購買或清除購物車。
 
-設定此對象時需要以下欄位和條件：
+設定此客群時需要以下欄位和條件：
 
 * `eventType: commerce.productListAdds`
    * `Timestamp: >= 1 days before now AND <= 4 days before now `
@@ -426,7 +426,7 @@ ht-degree: 49%
 
 >[!TAB 訂單確認案例]
 
-此歷程不需要建立任何對象。
+此歷程不需要建立任何客群。
 
 >[!ENDTABS]
 

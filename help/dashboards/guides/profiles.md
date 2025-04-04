@@ -4,9 +4,9 @@ title: 設定檔控制面板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織即時客戶設定檔資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4997'
+source-wordcount: '5005'
 ht-degree: 9%
 
 ---
@@ -29,11 +29,11 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可以透過儀
 
 ## 探索設定檔控制面板 {#explore-dashboard}
 
-若要導覽至Platform UI中的「設定檔」儀表板，請在左側邊欄中選取「**[!UICONTROL 設定檔]**」，然後選取「**[!UICONTROL 概觀]**」標籤以顯示儀表板。
+若要導覽至Experience Platform UI中的「設定檔」儀表板，請在左側邊欄中選取「**[!UICONTROL 設定檔]**」，然後選取「**[!UICONTROL 概觀]**」標籤以顯示儀表板。
 
 >[!NOTE]
 >
->如果您的組織剛開始使用Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示設定檔控制面板。 [!UICONTROL 總覽]標籤會顯示連結和檔案，協助您開始使用即時客戶個人檔案。
+>如果您的組織剛開始使用Experience Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示設定檔控制面板。 [!UICONTROL 總覽]標籤會顯示連結和檔案，協助您開始使用即時客戶個人檔案。
 
 ![醒目提示設定檔和概觀的Experience Platform設定檔儀表板。](../images/profiles/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可以透過儀
 
 ### 檢視 SQL {#view-sql}
 
-您可以透過在[!UICONTROL 總覽]工作區上的切換來檢視產生視覺化分析的SQL。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要深入瞭解此功能，請參閱[檢視SQL UI指南](../view-sql.md)。
+您可以透過在[!UICONTROL 總覽]工作區上的切換來檢視產生視覺化分析的SQL。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Experience Platform資料獲得獨特的見解。 若要深入瞭解此功能，請參閱[檢視SQL UI指南](../view-sql.md)。
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -119,7 +119,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 * 若要瞭解根據Adobe標準[收集同意資料所需的結構描述欄位群組](../../landing/governance-privacy-security/consent/adobe/overview.md)，請參閱這些啟用設定檔的結構描述欄位群組的相關檔案。
    * [[!UICONTROL 同意和偏好設定詳細資料]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (若使用Platform Web或Mobile SDK傳送同意訊號則為必要)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (若使用Experience Platform Web或Mobile SDK傳送同意訊號則為必要)
 * 若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md)中[同意處理的概述。
 * 合併的資料治理和同意原則可用於根據其同意偏好設定和您建立的組織規則篩選要分段的設定檔。 若要瞭解如何建立和使用這些合併原則，請參閱[管理資料使用原則](../../data-governance/policies/user-guide.md#combine-policies)的使用手冊。
 
@@ -169,7 +169,7 @@ Widget建立器隨即出現。 在[!UICONTROL 卡片標題]文字欄位中輸入
 
 聯合結構描述由共用相同類別並已為設定檔啟用的多個結構描述組成。 它們可讓您在單一檢視中看到，共用相同類別的每個結構描述中包含的每個欄位都合併在一起。
 
-若要進一步瞭解[在Platform UI](../../profile/ui/union-schema.md#view-union-schemas)中檢視聯合結構描述，請參閱聯合結構描述UI指南。
+若要深入瞭解[在Experience Platform UI](../../profile/ui/union-schema.md#view-union-schemas)中檢視聯合結構描述，請參閱聯合結構描述UI指南。
 
 ## Widget和量度
 
@@ -195,7 +195,7 @@ Adobe Experience Platform的所有新執行個體都會提供預設Widget載出�
 
 ## Customer AI Widget {#customer-ai-profiles-widgets}
 
-Customer AI 可產生自訂傾向評分，例如大規模個別輪廓的流失和轉換情形。 Customer AI透過分析現有的消費者體驗事件資料來預測&#x200B;**流失或轉換傾向分數**&#x200B;來執行此操作。 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 分數](#customer-ai-distribution-of-scores)和[評分摘要](#customer-ai-scoring-summary)深入分析的[分佈會示範您對象中的部門。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
+Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。Customer AI透過分析現有的消費者體驗事件資料來預測&#x200B;**流失或轉換傾向分數**&#x200B;來執行此操作。 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 分數](#customer-ai-distribution-of-scores)和[評分摘要](#customer-ai-scoring-summary)深入分析的[分佈會示範您對象中的部門。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
 
 * [[!UICONTROL Customer AI 評分摘要]](#customer-ai-scoring-summary)
 * [[!UICONTROL Customer AI 分數的分佈]](#customer-ai-distribution-of-scores)
@@ -314,7 +314,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >
 >[!UICONTROL 設定檔計數變更] Widget反映了在初始設定檔擷取和設定檔存放區設定&#x200B;**之後新增的設定檔數量**。 換言之，如果您的組織設定了設定檔存放區並在第1天擷取4,000,000個，則儀表板在24小時內即可使用，但[!UICONTROL 設定檔計數變更] Widget將設為0。 此計數方法旨在避免與將設定檔初始擷取至系統相關的尖峰。 在接下來的30天中，您的組織會額外擷取1,000,000個設定檔至設定檔存放區。 拍攝下一個快照後，[!UICONTROL 設定檔計數變更]介面工具集將顯示總計已新增1,000,000個設定檔，而[!UICONTROL 設定檔計數]介面工具集將顯示總計已新增5,000,000個設定檔。
 
-![反白顯示設定檔計數變更Widget的Platform UI設定檔儀表板。](../images/profiles/profile-count-change.png)
+![反白顯示設定檔計數變更Widget的Experience Platform UI設定檔儀表板。](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL 設定檔計數變更趨勢] {#profiles-count-change-trend}
 
@@ -323,7 +323,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="設定檔計數變更趨勢"
 >abstract="這個小工具會顯示在過去 30 天、90 天或 12 個月內每天新增至設定檔存放區的合併設定檔數量。該數量也取決於套用至您設定檔資料的所選合併原則。"
 
-**[!UICONTROL 設定檔計數變更趨勢]** Widget會顯示過去30天、90天或12個月每日新增至設定檔存放區的合併設定檔總數。 此數字會每天在擷取快照時更新，因此如果您要將設定檔擷取到Platform，則要等到下次擷取快照時才會反映設定檔的數量。 新增的設定檔計數是選定的合併原則套用至設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
+**[!UICONTROL 設定檔計數變更趨勢]** Widget會顯示過去30天、90天或12個月每日新增至設定檔存放區的合併設定檔總數。 此數字會每天在擷取快照時更新，因此如果您要將設定檔擷取到Experience Platform，則要等到下次擷取快照時才會反映設定檔的數量。 新增的設定檔計數是選定的合併原則套用至設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
 
 若要深入瞭解，請參閱此檔案](#merge-policies)中先前合併原則的[一節。
 
@@ -514,7 +514,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 由於Widget會顯示區段定義的視覺交叉，因此您可以研究區段定義之間的相似性，以最佳化區段策略。
 
-![Platform UI Profiles儀表板，包含強調顯示的合併原則下拉式清單和Widget受眾下拉式清單。](../images/profiles/audience-overlap-by-merge-policy.png)
+![包含合併原則下拉式清單及Widget受眾下拉式清單的Experience Platform UI設定檔控制面板，強調顯示。](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

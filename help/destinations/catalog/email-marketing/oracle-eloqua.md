@@ -1,11 +1,11 @@
 ---
-keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；oracleEloqua；oracle
-title: （檔案） Eloqua連線Oracle
-description: oracle Eloqua是Oracle提供的行銷自動化軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動與銷售機會開發。
+keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；oracle eloqua；oracle
+title: （檔案） Oracle Eloqua連線
+description: Oracle Eloqua是Oracle所提供用於行銷自動化的軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動和銷售機會開發。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '719'
 ht-degree: 2%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 2%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將特定IP範圍新增至允許清單。
 
-如果您需要將AdobeIP新增至允許清單，請參閱SFTP目的地的[IP位址允許清單](../cloud-storage/ip-address-allow-list.md)。
+如果您需要將Adobe IP新增至允許清單，請參閱SFTP目的地的[IP位址允許清單](../cloud-storage/ip-address-allow-list.md)。
 
 ## 連線到目標 {#connect}
 
@@ -75,14 +75,14 @@ ht-degree: 2%
 * 您可以選擇附加RSA格式的公開金鑰，將PGP/GPG的加密新增至&#x200B;**[!UICONTROL 金鑰]**&#x200B;區段下的匯出檔案。 您的公開金鑰必須寫入為[!DNL Base64]編碼字串。
 * **[!UICONTROL 名稱]**：為您的目的地挑選相關名稱。
 * **[!UICONTROL 描述]**：輸入目的地的描述。
-* **[!UICONTROL 資料夾路徑]**：提供儲存位置的路徑，Platform會將您的匯出資料儲存為CSV檔案。
+* **[!UICONTROL 資料夾路徑]**：提供Experience Platform會將匯出資料儲存為CSV檔案的儲存位置路徑。
 * **[!UICONTROL 檔案格式]**：選取&#x200B;**CSV**，將CSV檔案匯出至您的儲存位置。
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -107,8 +107,8 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## 匯出的資料 {#exported-data}
 
-針對[!DNL Oracle Eloqua]目的地，Platform會在您提供的儲存位置中建立`.csv`檔案。 如需檔案的詳細資訊，請參閱對象啟用教學課程中的[驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify)。
+針對[!DNL Oracle Eloqua]目的地，Experience Platform會在您提供的儲存位置中建立`.csv`檔案。 如需檔案的詳細資訊，請參閱對象啟用教學課程中的[驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify)。
 
 ## 設定將資料匯入[!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-將[!DNL Platform]連線到您的[!DNL SFTP]儲存體後，您必須設定從儲存位置匯入到[!DNL Oracle Eloqua]的資料匯入。 若要瞭解如何完成此作業，請參閱[!DNL Oracle Eloqua Help Center]中的[匯入連絡人或帳戶](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)。
+將[!DNL Experience Platform]連線到您的[!DNL SFTP]儲存體後，您必須設定從儲存位置匯入到[!DNL Oracle Eloqua]的資料匯入。 若要瞭解如何完成此作業，請參閱[!DNL Oracle Eloqua Help Center]中的[匯入連絡人或帳戶](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)。

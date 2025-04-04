@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；日期範圍
 title: 訂閱Adobe I/O事件通知
-description: 本檔案提供如何訂閱Adobe Experience Platform服務Adobe I/O事件通知的步驟。 也提供有關可用事件型別的參考資訊，以及有關如何解譯每個適用 [!DNL Platform] 服務之傳回事件資料的更多檔案的連結。
+description: 本檔案提供如何訂閱適用於Adobe Experience Platform服務的Adobe I/O事件通知的步驟。 也提供有關可用事件型別的參考資訊，以及有關如何解譯每個適用 [!DNL Experience Platform] 服務之傳回事件資料的更多檔案的連結。
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 [!DNL Observability Insights]可讓您訂閱有關Adobe Experience Platform活動的Adobe I/O事件通知。 這些事件會傳送至已設定的webhook，以促進活動監控的有效自動化。
 
-本檔案提供如何訂閱Adobe Experience Platform服務Adobe I/O事件通知的步驟。 也提供有關可用事件型別的參考資訊，以及有關如何解譯每個適用[!DNL Platform]服務之傳回事件資料的進一步檔案連結。
+本檔案提供如何為Adobe Experience Platform服務訂閱Adobe I/O事件通知的步驟。 也提供有關可用事件型別的參考資訊，以及有關如何解譯每個適用[!DNL Experience Platform]服務之傳回事件資料的進一步檔案連結。
 
 ## 快速入門
 

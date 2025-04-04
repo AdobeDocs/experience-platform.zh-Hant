@@ -2,10 +2,10 @@
 title: LiveRamp — 散發連線
 description: 瞭解如何使用LiveRamp - Distribution聯結器來編排及啟用先前上線到LiveRamp的受眾，以及下游廣告目的地。
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2722'
-ht-degree: 38%
+source-wordcount: '2744'
+ht-degree: 37%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 38%
 
 為協助您更清楚瞭解您應如何及何時使用[!DNL LiveRamp - Distribution]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
 
-運動服裝零售商的行銷團隊使用[LiveRamp — 入門](liveramp-onboarding.md)連線將對象從Experience Platform傳送至其LiveRamp帳戶。
+運動服裝retailer的行銷團隊使用[LiveRamp — 入門](liveramp-onboarding.md)連線將對象從Experience Platform傳送至其LiveRamp帳戶。
 
 透過[!DNL LiveRamp - Distribution]連線，他們現在可以觸發啟用已上線的對象至[支援的目的地](#supported-destinations)。 接著，他們便可將目標鎖定在行動、開放Web、社交及[!DNL CTV]平台上的使用者。
 
@@ -73,7 +73,7 @@ ht-degree: 38%
 
 若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
 
-![顯示目的地連線畫面的Platform UI影像。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
+![顯示目的地連線畫面的Experience Platform UI影像。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
 * **[!UICONTROL LiveRamp組織識別碼]**：您的LiveRamp帳戶的組織識別碼（在您的LiveRamp提供的認證中列為&#x200B;_owner_org_）。
 * **[!UICONTROL 密碼]**：您的LiveRamp帳戶密碼（在您的LiveRamp提供的認證中列為&#x200B;_secret_key_）。
@@ -84,7 +84,7 @@ ht-degree: 38%
 
 成功連線至您的LiveRamp帳戶後，請輸入連線至您要啟用對象的目標所需的資訊。
 
-![顯示目的地詳細資訊畫面的Platform UI影像。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
+![Experience Platform UI影像顯示目的地詳細資訊畫面。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
 * **[!UICONTROL 名稱]**：填寫您目的地連線的偏好名稱。
 
@@ -114,7 +114,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示4C Insights目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
+![Experience Platform UI影像顯示4C Insights目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
 * **[!UICONTROL 4C品牌設定檔ID]**：輸入與您的4C品牌設定檔相關的數值ID。 如果您沒有此 ID，請聯絡您的 4C 用戶端服務代表。
 
@@ -127,7 +127,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Acast目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
+![Experience Platform UI影像顯示Acast目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
 
 * **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望顯示給目的地合作夥伴的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
@@ -140,7 +140,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示&amp;目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
+![Experience Platform UI影像顯示&amp;目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
 
 * **[!UICONTROL 您的公司名稱]**：您希望向目的地合作夥伴顯示的公司名稱。 請勿使用空格或特殊字元。
 
@@ -153,7 +153,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Captify目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
+![Experience Platform UI影像顯示Captify目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
 
 * **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望顯示給目的地合作夥伴的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
@@ -166,7 +166,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Cardlytics目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
+![顯示Cardlytics目的地之客戶資料欄位的Experience Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
 
 * **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望顯示給目的地合作夥伴的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
@@ -191,7 +191,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![平台UI影像顯示Disney目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
+![Experience Platform UI影像顯示Disney目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
 * **[!UICONTROL 廣告商資料目的地條款合約]**：輸入`I AGREE`以確認對迪士尼廣告商資料條款的認可與合約。
 * **[!UICONTROL 使用者端名稱]**：輸入您想要顯示給目的地合作夥伴的公司名稱。
@@ -206,7 +206,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示iHeartMedia目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
+![顯示iHeartMedia目的地之客戶資料欄位的Experience Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
 
 * **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望顯示給目的地合作夥伴的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
@@ -219,7 +219,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Index Exchange目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
+![顯示Index Exchange目的地之客戶資料欄位的Experience Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
 
 * **[!UICONTROL 帳戶名稱]**：您的Index Exchange使用者端帳戶名稱。 請勿使用空格或特殊字元。
 
@@ -232,7 +232,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Magnite CTV目的地的客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
+![Experience Platform UI影像顯示Magnite CTV目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
 
 * **[!UICONTROL 使用者端]**：您想要顯示給目的地合作夥伴的使用者端名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
@@ -250,7 +250,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Magnite DV+目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
+![Experience Platform UI影像顯示Magnite DV+目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
 * **[!UICONTROL 合作夥伴ID]**：與擁有區段/資料的發行者相關聯的Rubicon專案合作夥伴ID。 如果不確定您應該使用的值，請聯絡您的 Rubicon Project 帳戶代表。
 * **[!UICONTROL 名額ID]**：您的Magnite客戶經理所提供的菱形DV+名額ID
@@ -279,7 +279,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![Platform UI影像顯示Nexen目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
+![Experience Platform UI影像顯示Nexen目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
 * **[!UICONTROL 費率型別]**：費率型別代表資料使用應計費的方式。 所有 $0.00 的費率應為固定費用。如果您不確定要使用哪種費率類型，請與您的 Nexxen 代表確認。
 * **[!UICONTROL 市場ID]**：輸入應建立Nexen資料合約的數值市場ID。 如果您在 Nexxen 平台的每個市場上進行「AlwaysOn」整合，請輸入 -1。
@@ -295,7 +295,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示One Fox目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
+![Experience Platform UI影像顯示One Fox目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
 * **[!UICONTROL Client]**：您想要向合作夥伴顯示的公司/通訊群組帳戶名稱。 預設使用您的公司名稱。 如果不確定要使用什麼名稱，請聯絡您的合作夥伴帳戶代表。請勿使用空格或特殊字元。
 
@@ -308,7 +308,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Pandora目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
+![Experience Platform UI影像顯示Pandora目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
 
 * **[!UICONTROL 帳戶名稱]**：您的Pandora帳戶名稱。 如果不確定您的帳戶名稱是什麼，請聯絡您的 Pandora 客戶代表。請勿使用空格或特殊字元。
 
@@ -326,7 +326,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Reddit目的地之客戶資料欄位的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
+![Experience Platform UI影像顯示Reddit目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
 
 * **[!UICONTROL Reddit廣告商ID]**：您的Reddit廣告商ID。 必須以「t2_」或「a2_」開頭。如果您不知道自己的廣告商 ID，請聯絡您的 Reddit 代表。
 * **[!UICONTROL Reddit廣告商名稱]**：您的Reddit廣告商名稱。 請勿使用空格或特殊字元。
@@ -345,7 +345,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Roku目的地支援識別碼的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
+![Experience Platform UI影像顯示Roku目的地支援的識別碼。](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
 
 * **[!UICONTROL Roku帳戶電子郵件地址]**：輸入與您的Roku帳戶相關聯的電子郵件地址。
 * **[!UICONTROL Roku帳戶代表電子郵件地址]**：輸入您Roku帳戶代表的電子郵件地址。 若要輸入多個地址，請用逗號分隔。
@@ -359,7 +359,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Spotify目的地支援的識別碼的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
+![Experience Platform UI影像顯示Spotify目的地支援的識別碼。](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
 
 * **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望顯示給目的地合作夥伴的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
@@ -377,7 +377,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示Taboola目的地支援的識別碼的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
+![Experience Platform UI影像顯示Taboola目的地支援的識別碼。](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL 帳戶管理員電子郵件地址]**：您Taboola帳戶管理員的電子郵件地址。
 * **[!UICONTROL 區段型別]**：區段型別。 目前僅支援第一方區段。
@@ -391,7 +391,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![Platform UI影像顯示TargetSpot目的地支援的識別碼。](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
+![Experience Platform UI影像顯示TargetSpot目的地支援的識別碼。](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
 
 * **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望顯示給目的地合作夥伴的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
@@ -404,7 +404,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![Platform UI影像顯示TargetSpot目的地支援的識別碼。](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
+![Experience Platform UI影像顯示TargetSpot目的地支援的識別碼。](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
 
 * **[!UICONTROL Teads ID]**：您的Teads ID
 
@@ -417,7 +417,7 @@ ht-degree: 38%
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
-![顯示WB探索目的地支援的識別碼的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
+![Experience Platform UI影像顯示WB探索目的地支援的識別碼。](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
 
 * **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望顯示給目的地合作夥伴的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 

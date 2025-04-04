@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流程服務；刪除目的地帳戶；刪除；API
+keywords: Experience Platform；首頁；熱門主題；流程服務；刪除目的地帳戶；刪除；api
 solution: Experience Platform
 title: 使用流程服務API刪除目的地帳戶
 type: Tutorial
 description: 瞭解如何使用流量服務API刪除目的地帳戶。
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 16%
 
 ---
 
 # 使用流程服務API刪除目的地帳戶
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 在啟用資料之前，您必須先設定目的地帳戶，以連線至目的地。 本教學課程涵蓋使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)刪除不再需要的目的地帳戶的步驟。
 
 >[!NOTE]
 >
->目前僅流程服務API支援刪除目的地帳戶。 無法使用Experience PlatformUI刪除目的地帳戶。
+>目前僅流程服務API支援刪除目的地帳戶。 無法使用Experience Platform UI刪除目的地帳戶。
 
 ## 快速入門 {#get-started}
 
@@ -28,8 +28,8 @@ ht-degree: 16%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
-* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功刪除目的地帳戶。
 
@@ -39,13 +39,13 @@ ht-degree: 16%
 
 ### 收集所需標頭的值 {#gather-values-for-required-headers}
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -64,7 +64,7 @@ ht-degree: 16%
 
 刪除目的地帳戶的第一步，是找出與您要刪除的目的地帳戶對應的連線ID。
 
-在Experience PlatformUI中，瀏覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**，並選取&#x200B;**[!UICONTROL 目的地]**&#x200B;欄中的數字，以選取您要刪除的帳戶。
+在Experience Platform UI中，瀏覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**，並選取&#x200B;**[!UICONTROL 目的地]**&#x200B;欄中的數字，以選取您要刪除的帳戶。
 
 ![選取要刪除的目的地帳戶](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
@@ -148,10 +148,10 @@ A successful response returns the current details of your connection including i
 >
 >在刪除目的地帳戶之前，您必須刪除任何傳送到目的地帳戶的現有資料流。
 >若要刪除現有的資料流，請參閱以下頁面：
->* [使用Experience PlatformUI](../ui/delete-destinations.md)刪除現有的資料流；
+>* [使用Experience Platform UI](../ui/delete-destinations.md)刪除現有的資料流；
 >* [使用流程服務API](delete-destination-dataflow.md)刪除現有的資料流。
 
-當您有連線ID並已確定目的地帳戶不存在任何資料流後，請對[!DNL Flow Service] API執行DELETE要求。
+當您有連線ID並已確保目的地帳戶沒有資料流時，請對[!DNL Flow Service] API執行DELETE請求。
 
 **API格式**
 
@@ -176,11 +176,11 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204 （無內容）和空白內文。 您可以嘗試對連線進行查詢(GET)來確認刪除。 此API將傳回HTTP 404 （找不到）錯誤，這表示已刪除目的地帳戶。
+成功的回應會傳回HTTP狀態204 （無內容）和空白內文。 您可以嘗試向連線提出查詢(GET)請求以確認刪除。 此API將傳回HTTP 404 （找不到）錯誤，這表示已刪除目的地帳戶。
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟
 

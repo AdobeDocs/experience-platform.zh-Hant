@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 4 月)
 description: Adobe Experience Platform 2023 年 4 月版發行說明。
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2038'
-ht-degree: 98%
+source-wordcount: '2040'
+ht-degree: 97%
 
 ---
 
@@ -37,11 +37,11 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用者定義的儀表板 | 您現在可以在您的 Widget 分析中&#x200B;**篩選歷史資料**，並使用最近的資料或自訂分析期間。如需詳細資訊，請參閱[使用者定義的儀表板指南](../../dashboards/standard-dashboards.md#filter-historical-data)。<br>您現在也可以&#x200B;**複製您現有的 Widget**。藉由自訂複本並編輯其屬性，您可以避免在建立新的唯一 Widget 時從頭開始重新啟動。若要了解詳細資訊，請詳閱 [Widget 複本指南](../../dashboards/standard-dashboards.md#duplicate-a-widget)。 |
+| 使用者定義的儀表板 | 您現在可以在您的小工具分析中&#x200B;**篩選歷史資料**，並使用最近的資料或自訂分析期間。如需詳細資訊，請參閱[使用者定義的儀表板指南](../../dashboards/standard-dashboards.md#filter-historical-data)。<br>您現在也可以&#x200B;**複製您現有的小工具**。藉由自訂複本並編輯其屬性，您可以避免在建立新的唯一小工具時從頭開始重新啟動。若要了解詳細資訊，請詳閱 [小工具複本指南](../../dashboards/standard-dashboards.md#duplicate-a-widget)。 |
 
 {style="table-layout:auto"}
 
-如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂小工具，請先詳閱[儀表板概觀](../../dashboards/home.md)。
 
 ## 資料準備 {#data-prep}
 
@@ -75,7 +75,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新目標** {#new-destinations}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 
-- 我們已經解決了用於檔案型目的地匯出的&#x200B;**排除的身分**&#x200B;報表量度中出現的問題。客戶依預期收到了來自已啟動的匯出的所有已匯出 ID。但是，UI 中的&#x200B;**排除的身分**&#x200B;報表量度由於錯誤地計入決不應匯出的身分，而錯誤地顯示了大量已排除的身分。(PLAT-149774)
+- 我們已經解決了用於檔案型目的地匯出的&#x200B;**排除的身分識別**&#x200B;報表量度中出現的問題。客戶依預期收到了來自已啟動的匯出的所有已匯出 ID。但是，UI 中的&#x200B;**排除的身分識別**&#x200B;報表量度由於錯誤地計入決不應匯出的身分識別，而錯誤地顯示了大量已排除的身分識別。(PLAT-149774)
 - 我們已經解決了啟動工作流程的&#x200B;**排程**&#x200B;步驟中的問題。對於需要對應 ID 的目的地，客戶無法為新增到現有目的地連線的區段新增對應 ID。(PLAT-148808)
 
 <!--
@@ -115,7 +115,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | --- | --- |
-| 顯示名稱切換 | 綱要編輯器現在可提供切換功能，在原始欄位名稱和人類更易於理解的顯示名稱之間進行變更。<br>![顯示名稱切換反白顯示的綱要編輯器。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "綱要編輯器顯示名稱切換"){width="100" zoomable="yes"}<br>這種靈活性可提高欄位易尋性和綱要的編輯。標準欄位群組的顯示名稱由系統產生，但如有必要，也可透過 UI 自訂。若要了解詳細資訊，請閱讀[顯示名稱切換文件](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle)。 |
+| 顯示名稱切換 | 結構描述編輯器現在可提供切換功能，在原始欄位名稱和人類更易於理解的顯示名稱之間進行變更。<br>![顯示名稱切換反白顯示的結構描述編輯器。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "結構描述編輯器顯示名稱切換"){width="100" zoomable="yes"}<br>這種靈活性可提高欄位易尋性和結構描述的編輯。標準欄位群組的顯示名稱由系統產生，但如有必要，也可透過 UI 自訂。若要了解詳細資訊，請閱讀[顯示名稱切換文件](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle)。 |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 綱要 | [[!UICONTROL Adobe Target 分類欄位]](https://github.com/adobe/xdm/pull/1719/files) | Target 分類資料集的新 XDM 綱要包含一組中繼資料欄位，用於將 Target 活動和體驗進行分類。 |
+| 結構描述 | [[!UICONTROL Adobe Target 分類欄位]](https://github.com/adobe/xdm/pull/1719/files) | Target 分類資料集的新 XDM 結構描述包含一組中繼資料欄位，用於將 Target 活動和體驗進行分類。 |
 
 {style="table-layout:auto"}
 
@@ -132,14 +132,14 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
 | 欄位群組 | [[!UICONTROL Adobe 統一輪廓服務帳戶聯合擴充功能]](https://github.com/adobe/xdm/pull/1696/files) | 新增即時客戶輪廓的帳戶擴充功能欄位群組，讓使用者可在帳戶聯合上新增區段會籍。 |
-| 綱要 | [[!UICONTROL 已計算的屬性系統綱要]](https://github.com/adobe/xdm/pull/1696/files) | 即時客戶輪廓所使用的已計算的屬性欄位群組已更新為系統唯讀全域綱要。 |
-| 欄位群組 | 多個 | 已將幾個事件新增為[[!UICONTROL 時間序列綱要]](https://github.com/adobe/xdm/pull/1718/files)的欄位。 |
+| 結構描述 | [[!UICONTROL 已計算的屬性系統結構描述]](https://github.com/adobe/xdm/pull/1696/files) | 即時客戶輪廓所使用的已計算的屬性欄位群組已更新為系統唯讀全域結構描述。 |
+| 欄位群組 | 多個 | 已將幾個事件新增為[[!UICONTROL 時間序列結構描述]](https://github.com/adobe/xdm/pull/1718/files)的欄位。 |
 | 欄位群組 | 輪廓忠誠度詳細資料 | [已修正 ](https://github.com/adobe/xdm/pull/1717/files)`xdm:upgradeDate` 的標題，從「方案名稱」變成「升級日期」。 |
 | 欄位群組 | 多個 | [[!UICONTROL 決策項目]](https://github.com/adobe/xdm/pull/1714/files)中有幾個欄位已更新，移除了雙重巢狀階層。 |
 
 {style="table-layout:auto"}
 
-如需有關 Platform 中 XDM 的詳細資訊，請閱讀 [XDM 系統概觀](../../xdm/home.md)。
+如需Experience Platform中XDM的詳細資訊，請閱讀[XDM系統總覽](../../xdm/home.md)。
 
 ## Real-Time Customer Data Platform
 
@@ -149,7 +149,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 經過美化的 Real-Time CDP 首頁 | 此 [Real-Time CDP 首頁](https://experience.adobe.com)已經過美化，具有煥然一新的外觀和提升的效能。此主頁現在具有權限感知功能，並會顯示和您有權存取的功能相關的 Widget。如需詳細資訊，請閱讀 [Real-Time CDP 首頁儀表板概觀](../../rtcdp/home-page-dashboards.md)。 |
+| 經過美化的 Real-Time CDP 首頁 | 此 [Real-Time CDP 首頁](https://experience.adobe.com)已經過美化，具有煥然一新的外觀和提升的效能。此主頁現在具有權限感知功能，並會顯示和您有權存取的功能相關的小工具。如需詳細資訊，請閱讀 [Real-Time CDP 首頁儀表板概觀](../../rtcdp/home-page-dashboards.md)。 |
 | 自我識別調查 | 自我識別調查是 Adob&#x200B;&#x200B;e Experience Platform UI 首頁中提供的簡短問卷。可使用此自我識別調查建置您的 Experience Platform 個人輪廓，並根據您的選擇接收訂製的準則。如需詳細資訊，請閱讀[自我識別調查概觀](../../landing/self-identification.md)。 |
 
 如需有關 [!DNL Real-Time CDP] 的詳細資訊，請參閱 [[!DNL Real-Time CDP]  概觀](../../rtcdp/overview.md)。
@@ -162,7 +162,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 匿名輪廓資料到期 | 匿名輪廓資料到期現在正式推出！啟用後，此版本會從您的 Experience Platform 執行個體中持續移除過期的匿名輪廓。若要了解有關此功能和匿名輪廓的詳細資訊，請閱讀[匿名輪廓資料到期指南](../../profile/pseudonymous-profiles.md)。 |
+| 匿名輪廓資料到期 | 匿名輪廓資料到期現在正式推出！啟用後，此版本會從您的 Experience Platform 執行個體中持續移除過期的匿名輪廓。若要了解有關此功能和匿名輪廓的詳細資訊，請閱讀[匿名輪廓資料期限指南](../../profile/pseudonymous-profiles.md)。 |
 
 {style="table-layout:auto"}
 
@@ -182,7 +182,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 ## 來源 {#sources}
 
-Adobe Experience Platform 可從外部來源擷取資料，並讓您使用 Platform 服務建構、標示和強化該資料。您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
+Adobe Experience Platform可從外部來源擷取資料，並允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
 Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 

@@ -3,9 +3,9 @@ title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域，以啟用受眾及匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1978'
 ht-degree: 2%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-[!DNL Data Landing Zone]是由Adobe Experience Platform布建的雲端儲存空間介面，可授予您安全、雲端式的檔案儲存機制存取權，以將檔案匯出至Platform之外。 您有權存取每個沙箱的一個[!DNL Data Landing Zone]容器，而且所有容器的資料量總計以您的Platform產品和服務授權所提供的資料量為限。 Platform及其應用程式（例如[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]和[!DNL Real-Time Customer Data Platform]）的所有客戶都已為每個沙箱布建一個[!DNL Data Landing Zone]容器。
+[!DNL Data Landing Zone]是Adobe Experience Platform布建的雲端儲存空間介面，可授予您安全、雲端式的檔案儲存機制存取權，以將檔案匯出Experience Platform。 您有權存取每個沙箱一個[!DNL Data Landing Zone]容器，而且所有容器的資料量總計以您的Experience Platform產品和服務授權所提供的資料量為限。 Experience Platform及其應用程式（例如[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]和[!DNL Real-Time Customer Data Platform]）的所有客戶都已為每個沙箱布建一個[!DNL Data Landing Zone]容器。
 
-Platform會對上傳至[!DNL Data Landing Zone]容器的所有檔案強制實施嚴格的七天存留時間(TTL)。 所有檔案會在七天後刪除。
+Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案強制實施嚴格的七天存留時間(TTL)。 所有檔案會在七天後刪除。
 
 使用Azure或Amazon Web服務雲端支援的客戶可以使用[!DNL Data Landing Zone]目的地聯結器。 根據布建目的地的雲端，驗證機制會不同，有關目的地及其使用案例的所有其他專案都相同。 在[向Azure Blob中布建的資料登陸區域驗證](#authenticate-dlz-azure)和[向AWS布建的資料登陸區域驗證](#authenticate-dlz-aws)小節中，深入瞭解兩種不同的驗證機制。
 
@@ -29,7 +29,7 @@ Platform會對上傳至[!DNL Data Landing Zone]容器的所有檔案強制實施
 
 ## 透過API或UI連線至您的[!UICONTROL 資料登陸區域]儲存空間 {#connect-api-or-ui}
 
-* 若要使用Platform使用者介面連線到您的[!UICONTROL 資料登陸區域]儲存位置，請閱讀以下章節： [連線到目的地](#connect)和[啟用對象到此目的地](#activate)。
+* 若要使用Experience Platform使用者介面連線至您的[!UICONTROL 資料登陸區域]儲存位置，請閱讀以下章節： [連線至目的地](#connect)和[啟用對象至此目的地](#activate)。
 * 若要以程式設計方式連線至您的[!UICONTROL 資料登陸區域]儲存位置，請使用「流程服務API」教學課程](../../api/activate-segments-file-based-destinations.md)，讀取[將對象啟用至檔案型目的地。
 
 ## 支援的對象 {#supported-audiences}
@@ -38,8 +38,8 @@ Platform會對上傳至[!DNL Data Landing Zone]容器的所有檔案強制實施
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -58,20 +58,20 @@ Platform會對上傳至[!DNL Data Landing Zone]容器的所有檔案強制實施
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
+* 如何使用Experience Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
 * 如何使用流程服務API](/help/destinations/api/export-datasets.md)以程式設計方式[匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 
-匯出&#x200B;*對象資料*&#x200B;時，Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
+匯出&#x200B;*對象資料*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
 
-匯出&#x200B;*資料集*&#x200B;時，Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
+匯出&#x200B;*資料集*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
 
 ## 驗證Azure Blob中布建的資料登陸區域 {#authenticate-dlz-azure}
 
 >[!AVAILABILITY]
 >
->本節適用於在Microsoft Azure上執行的Experience Platform實作。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
+>本節適用於在Microsoft Azure上執行的Experience Platform實作。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
 您可以透過[!DNL Azure Storage Explorer]或命令列介面讀取及寫入檔案到容器。
 
@@ -97,7 +97,7 @@ Platform會對上傳至[!DNL Data Landing Zone]容器的所有檔案強制實施
 
 ### 擷取您[!DNL Data Landing Zone]的認證 {#retrieve-dlz-credentials}
 
-您必須使用Platform API來擷取您的[!DNL Data Landing Zone]認證。 擷取您認證的API呼叫說明如下。 如需有關取得標頭所需值的資訊，請參閱[Adobe Experience Platform API快速入門](/help/landing/api-guide.md)指南。
+您必須使用Experience Platform API來擷取您的[!DNL Data Landing Zone]認證。 擷取您認證的API呼叫說明如下。 如需有關取得標頭所需值的資訊，請參閱[Adobe Experience Platform API快速入門](/help/landing/api-guide.md)指南。
 
 **API格式**
 
@@ -148,7 +148,7 @@ curl -X GET \
 
 ### 更新[!DNL Data Landing Zone]認證 {#update-dlz-credentials}
 
-您也可以視需要重新整理您的認證。 您可以向[!DNL Connectors] API的`/credentials`端點發出POST要求，以更新您的`SASToken`。
+您也可以視需要重新整理您的認證。 您可以對[!DNL Connectors] API的`/credentials`端點發出POST要求，以更新您的`SASToken`。
 
 **API格式**
 
@@ -204,13 +204,13 @@ curl -X POST \
 
 ![在Azure UI中反白顯示的DLZ使用者容器摘要。](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-在您的[!DNL Data Landing Zone]容器連線至[!DNL Azure Storage Explorer]後，您現在可以開始將檔案從Experience Platform匯出至您的[!DNL Data Landing Zone]容器。 若要匯出檔案，您必須在Experience PlatformUI中建立與[!DNL Data Landing Zone]目的地的連線，如下節所述。
+在您的[!DNL Data Landing Zone]容器連線至[!DNL Azure Storage Explorer]後，您現在可以開始從Experience Platform將檔案匯出至您的[!DNL Data Landing Zone]容器。 若要匯出檔案，您必須在Experience Platform UI中建立與[!DNL Data Landing Zone]目的地的連線，如下節所述。
 
 ## 驗證AWS布建的資料登陸區域 {#authenticate-dlz-aws}
 
 >[!AVAILABILITY]
 >
->本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
 執行以下作業，以取得您在AWS上布建之[!DNL Data Landing Zone]執行個體的認證。 然後，使用所選的使用者端連線至您的[!DNL Data Landing Zone]執行個體。
 
@@ -218,7 +218,7 @@ curl -X POST \
 
 ### 擷取您[!DNL Data Landing Zone]的認證 {#retrieve-dlz-credentials-aws}
 
-您必須使用Platform API來擷取您的[!DNL Data Landing Zone]認證。 擷取您認證的API呼叫說明如下。 如需有關取得標頭所需值的資訊，請參閱[Adobe Experience Platform API快速入門](/help/landing/api-guide.md)指南。
+您必須使用Experience Platform API來擷取您的[!DNL Data Landing Zone]認證。 擷取您認證的API呼叫說明如下。 如需有關取得標頭所需值的資訊，請參閱[Adobe Experience Platform API快速入門](/help/landing/api-guide.md)指南。
 
 **API格式**
 
@@ -286,7 +286,7 @@ curl --request GET \
 
 ### 驗證目標 {#authenticate}
 
-確定您已依照[必要條件](#prerequisites)一節中的說明將[!DNL Data Landing Zone]容器連線至[!DNL Azure Storage Explorer]。 因為[!DNL Data Landing Zone]是Adobe布建的存放裝置，您不需要在Experience PlatformUI中執行任何進一步的步驟來驗證目的地。
+確定您已依照[必要條件](#prerequisites)一節中的說明將[!DNL Data Landing Zone]容器連線至[!DNL Azure Storage Explorer]。 因為[!DNL Data Landing Zone]是Adobe布建的存放裝置，您不需要在Experience Platform UI中執行任何進一步的步驟，即可對目的地進行驗證。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -295,8 +295,8 @@ curl --request GET \
 * **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 * **[!UICONTROL 描述]**：選擇性。 例如，您可以提及要將此目的地用於哪個行銷活動。
 * **[!UICONTROL 資料夾路徑]**：輸入目的地資料夾的路徑，此資料夾將裝載匯出的檔案。
-* **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 選取[!UICONTROL CSV]選項時，您也可以[設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md)。
-* **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。
+* **[!UICONTROL 檔案型別]**：選取Experience Platform用於匯出檔案的格式。 選取[!UICONTROL CSV]選項時，您也可以[設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md)。
+* **[!UICONTROL 壓縮格式]**：選取Experience Platform應該用於匯出檔案的壓縮型別。
 * **[!UICONTROL 包含資訊清單檔案]**：如果您想要匯出包含資訊清單JSON檔案，其中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 資訊清單的命名格式為`manifest-<<destinationId>>-<<dataflowRunId>>.json`。 檢視[範例資訊清單檔案](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)。 資訊清單檔案包含下列欄位：
    * `flowRunId`：產生匯出檔案的[資料流執行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
    * `scheduledTime`：檔案匯出的時間(UTC)。
@@ -310,7 +310,7 @@ curl --request GET \
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -319,7 +319,7 @@ curl --request GET \
 
 請參閱[啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)，以取得啟用對象至此目的地的指示。
 
-### 正在排程
+### 正在安排
 
 在&#x200B;**[!UICONTROL 排程]**&#x200B;步驟中，您可以[為您的[!DNL Data Landing Zone]目的地設定匯出排程](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)，也可以[設定匯出檔案的名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
 

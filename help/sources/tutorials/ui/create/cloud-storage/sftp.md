@@ -2,9 +2,9 @@
 title: 在使用者介面中建立SFTP Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立SFTP來源連線。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '665'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 ## 快速入門
 
-本教學課程需要您實際瞭解下列Platform元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 ## 連線到您的[!DNL SFTP]伺服器
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 若要連線現有帳戶，請選取您要連線的FTP或SFTP帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
 
-![Experience PlatformUI上的現有SFTP帳戶清單。](../../../../images/tutorials/create/sftp/existing.png)
+![Experience Platform UI上的現有SFTP帳戶清單。](../../../../images/tutorials/create/sftp/existing.png)
 
 ### 新帳戶
 
@@ -101,4 +101,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程指示，您已建立與SFTP帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，以將雲端儲存空間中的資料帶入Platform](../../dataflow/batch/cloud-storage.md)。
+依照本教學課程指示，您已建立與SFTP帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將您的雲端儲存空間中的資料匯入Experience Platform](../../dataflow/batch/cloud-storage.md)。

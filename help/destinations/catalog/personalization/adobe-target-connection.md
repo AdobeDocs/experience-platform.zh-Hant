@@ -3,9 +3,9 @@ keywords: target個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1769'
 ht-degree: 9%
 
 ---
@@ -161,7 +161,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
 當受眾已用於Adobe Target [活動](https://experienceleague.adobe.com/en/docs/target/using/activities/activities)時，需要執行額外的步驟，才能從現有Adobe Target連線中移除該受眾。 嘗試從Adobe Target連線中移除對象時，如果Adobe Target活動使用對象，則會導致錯誤。
 
-![Platform UI影像顯示嘗試移除Target活動使用的對象所導致的錯誤。](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+![Experience Platform UI影像顯示嘗試移除Target活動使用的對象所導致的錯誤。](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
 若要在活動中使用對象時，從Target目的地移除對象，您必須先從使用對象的Target活動中移除對象，或完全刪除活動。 然後，您就可以從Target連線中移除對象。
 

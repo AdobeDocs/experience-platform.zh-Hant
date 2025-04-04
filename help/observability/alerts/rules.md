@@ -4,9 +4,9 @@ title: 標準警報規則
 description: 本文介紹Experience Platform提供的預先定義警示規則。
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4279'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Adobe Experience Platform提供數個預先定義的警報規則，供您為組織啟用。 本文介紹這些Adobe提供之警示規則的詳細資料。 如需Experience Platform中警示的一般詳細資訊，請參閱[警示概觀](./overview.md)。
 
-在Platform UI](./ui.md)中檢視[警示規則時，您可以個別訂閱每個規則。 但是，透過[I/O事件通知](./subscribe.md)訂閱警示時，警示規則會整理到不同的訂閱套件中。 下表顯示每個規則及其對應的I/O事件訂閱名稱。
+在Experience Platform UI](./ui.md)中檢視[警示規則時，您可以個別訂閱每個規則。 但是，透過[I/O事件通知](./subscribe.md)訂閱警示時，警示規則會整理到不同的訂閱套件中。 下表顯示每個規則及其對應的I/O事件訂閱名稱。
 
 ## 來源 {#sources}
 
@@ -36,7 +36,7 @@ Adobe Experience Platform提供數個預先定義的警報規則，供您為組�
 
 | I/O事件訂閱 | 警示規則 | 說明 |
 | --- | --- | --- |
-| Source資料流執行延遲、失敗和錯誤 | 缺乏內嵌 | 如果擷取延遲超過七小時，而且沒有資料擷取到Platform，此警報會傳送訊息給您。 |
+| Source資料流執行延遲、失敗和錯誤 | 缺乏內嵌 | 如果擷取延遲超過七小時，而且沒有資料擷取到Experience Platform，此警報會傳送訊息給您。 |
 
 {style="table-layout:auto"}
 

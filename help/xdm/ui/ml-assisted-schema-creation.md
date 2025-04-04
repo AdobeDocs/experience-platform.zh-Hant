@@ -2,9 +2,10 @@
 title: 機器學習輔助結構描述建立
 description: 瞭解如何在Experience Platform使用者介面中建立方案。
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
+exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '997'
 ht-degree: 2%
 
 ---
@@ -31,7 +32,7 @@ ht-degree: 2%
 
 ## 導覽至建立結構描述工作流程 {#navigate-to-schema-creation-workflow}
 
-從Platform UI的左側導覽列中，選取&#x200B;**[!UICONTROL 結構描述]**&#x200B;工作區。 **[!UICONTROL 結構描述]**&#x200B;工作區隨即顯示。 選取&#x200B;**[!UICONTROL 建立結構描述]**&#x200B;以新增結構描述，以啟動結構描述建立工作流程。
+從Experience Platform UI的左側導覽中，選取&#x200B;**[!UICONTROL 結構描述]**&#x200B;工作區。 **[!UICONTROL 結構描述]**&#x200B;工作區隨即顯示。 選取&#x200B;**[!UICONTROL 建立結構描述]**&#x200B;以新增結構描述，以啟動結構描述建立工作流程。
 
 ![結構描述工作區在左側導覽和建立結構描述突出顯示。](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 

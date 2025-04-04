@@ -1,11 +1,11 @@
 ---
-title: 比較at.js與Experience PlatformWeb SDK
+title: 比較at.js與Experience Platform Web SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2183'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 預先建立的版本可在CDN上取得。 您可以直接在頁面上在CDN上參考程式庫，或將其下載並託管在您自己的基礎架構上。 它提供縮制和未縮制的格式。 未縮制的版本對於除錯而言相當實用。
 
-如需詳細資訊，請參閱[使用JavaScript程式庫安裝Web SDK](/help/web-sdk/install/library.md)。
+如需詳細資訊，請參閱[使用JavaScript資料庫](/help/web-sdk/install/library.md)安裝Web SDK。
 
 ## 設定程式庫
 
@@ -71,7 +71,7 @@ window.adobe.target.init(window, document, {
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
-### 設定Web SDK
+### 設定網頁SDK
 
 使用[`configure`](/help/web-sdk/commands/configure/overview.md)命令完成SDK的設定。 `configure`命令是&#x200B;*一律*&#x200B;先呼叫。
 
@@ -81,9 +81,9 @@ window.adobe.target.init(window, document, {
 
 使用at.js 2.x時，如果您啟用設定`pageLoadEnabled`，程式庫將會觸發使用`execute -> pageLoad`的Target Edge呼叫。 如果所有設定都設為預設值，則不需要進行自訂編碼。將at.js新增至頁面並由瀏覽器載入後，就會執行Target Edge呼叫。
 
-### 使用Web SDK
+### 使用網頁SDK
 
-SDK可自動擷取及轉譯在Adobe Target [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)中建立的內容。
+在Adobe Target的[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)中建立的內容，可由SDK自動擷取及轉譯。
 
 若要要求並自動轉譯Target選件，請使用`sendEvent`命令並將`renderDecisions`選項設定為`true`。 這麼做會強制SDK自動轉譯任何符合自動轉譯條件的個人化內容。
 
@@ -217,7 +217,7 @@ adobe.target.getOffers({
 
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
-### 使用Web SDK
+### 使用網頁SDK
 
 在`decisionScopes`下執行具有特殊領域的`sendEvent`命令： `__view__`。 我們使用此範圍當作訊號，從Target擷取所有頁面載入活動，並預先擷取所有檢視。 Web SDK也會嘗試評估所有VEC檢視型活動。 Web SDK目前不支援停用檢視預先擷取。
 
@@ -303,7 +303,7 @@ adobe.target.getOffers({
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
-### 使用Web SDK
+### 使用網頁SDK
 
 您可以使用`sendEvent`命令並將mbox名稱傳遞至`decisionScopes`選項下，擷取表單式撰寫器式活動。 `sendEvent`命令將傳回Promise，此承諾會以包含所請求活動/主張的物件來解析：
 這是`propositions`陣列的外觀：
@@ -441,7 +441,7 @@ adobe.target.getOffers({...})
 從[專屬檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html)進一步瞭解`applyOffers`命令。
 
 
-### 使用Web SDK
+### 使用網頁SDK
 
 您可以使用`applyPropositions`命令套用Target活動。
 
@@ -492,7 +492,7 @@ adobe.target.sendNotifications({
 
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
-### 使用Web SDK
+### 使用網頁SDK
 
 您可以呼叫`sendEvent`命令、填入`_experience.decisioning.propositions` XDM欄位群組，並將`eventType`設定為2個值中的其中一個來追蹤事件和使用者動作：
 
@@ -657,7 +657,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-使用`adobe.target.triggerView`函式。 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函式。 應該為單頁應用程式(SPA)實作adobe.target.triggerView()，以便使用視覺化體驗撰寫器(VEC)來建立A/B測試和體驗鎖定目標(XT)活動。 如果網站上未實作adobe.target.triggerView()，VEC就無法用於SPA。
+使用`adobe.target.triggerView`函式。 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函式。 應該針對單頁應用程式(SPA)實作adobe.target.triggerView()，以便使用視覺化體驗撰寫器(VEC)來建立A/B測試和體驗鎖定目標(XT)活動。 如果沒有在網站上實作adobe.target.triggerView()，VEC就無法用於SPA。
 
 **範例**
 
@@ -668,9 +668,9 @@ adobe.target.triggerView("homeView")
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
-### 使用Web SDK
+### 使用網頁SDK
 
-若要觸發或表示單頁應用程式檢視變更，請在`sendEvent`命令的`xdm`選項下設定`web.webPageDetails.viewName`屬性。 Web SDK將會檢查檢視快取，如果`sendEvent`中指定的`viewName`有選件，SDK將會執行這些選件並傳送顯示通知事件。
+若要觸發或表示單頁應用程式檢視變更，請在`sendEvent`命令的`xdm`選項下設定`web.webPageDetails.viewName`屬性。 Web SDK將會檢查檢視快取，如果`sendEvent`中指定的`viewName`有選件，它將會執行這些選件並傳送顯示通知事件。
 
 **範例**
 
@@ -708,11 +708,11 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 [了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
-### 使用Web SDK
+### 使用網頁SDK
 
 >[!IMPORTANT]
 >
->確保您使用Platform Web SDK 2.6.0版或更新版本。
+>確保您使用Experience Platform Web SDK 2.6.0版或更新版本。
 
 回應Token是`propositions`的一部分，在`sendEvent`命令的結果中顯示。 每個主張包含陣列`items`，而且如果在Target管理員UI中啟用回應Token，則每個專案都會填入`meta`物件。 [了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
@@ -760,12 +760,12 @@ alloy("sendEvent", {
 使用at.js時，您可以設定`bodyHidingEnabled: true`來管理忽隱忽現的情形，讓at.js妥善處理
 在擷取及套用DOM變更之前，預先隱藏個人化容器。
 可以覆寫at.js `bodyHiddenStyle`，預先隱藏包含個人化內容的頁面區段。
-依預設，`bodyHiddenStyle`會隱藏整個HTML`body`。
+依預設，`bodyHiddenStyle`會隱藏整個HTML `body`。
 可使用`window.targetGlobalSettings`覆寫這兩個設定。 載入at.js之前應先放置`window.targetGlobalSettings`。
 
-### 使用Web SDK
+### 使用網頁SDK
 
-客戶可以使用Web SDK，在configure命令中設定其預先隱藏樣式，如下列範例所示：
+客戶可以使用Web SDK在configure命令中設定其預先隱藏樣式，如下列範例所示：
 
 ```javascript
 alloy("configure", {
@@ -882,7 +882,7 @@ Analytics裝載(`tnta` Token)應包含在使用[資料插入API](https://github.
 
 [了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
-### 使用Web SDK
+### 使用網頁SDK
 
 Web SDK也支援：
 
@@ -966,9 +966,9 @@ window.targetGlobalSettings = {
 
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
-### 使用Web SDK
+### 使用網頁SDK
 
-Web SDK不支援此功能。
+網頁SDK不支援此功能。
 
 ## 如何更新Target設定檔屬性
 
@@ -1007,7 +1007,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-### 使用Web SDK
+### 使用網頁SDK
 
 若要更新Target設定檔，請使用`sendEvent`命令並設定`data.__adobe.target`屬性，並使用`profile`加上索引鍵名稱的前置詞。
 
@@ -1027,7 +1027,7 @@ alloy("sendEvent", {
 });
 ```
 
-## 如何使用Target Recommendations
+## 如何使用Target建議
 
 ### 使用at.js
 
@@ -1067,7 +1067,7 @@ adobe.target.getOffers({
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
-### 使用Web SDK
+### 使用網頁SDK
 
 若要傳送Recommendation資料，請使用`sendEvent`命令並設定`data.__adobe.target`屬性，使用`entity`為索引鍵名稱加上前置詞。
 
@@ -1146,7 +1146,7 @@ window.targetPageParams = function() {
 
 [了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
-### 使用Web SDK
+### 使用網頁SDK
 
 Web SDK支援Target協力廠商ID。 不過，還需要執行幾個步驟。 在深入研究解決方案之前，我們應該先談談`identityMap`。
 身分對應可讓客戶傳送多個身分。 所有身分識別都已設定名稱空間。 每個名稱空間可以有一或多個身分。 特定身分可以標示為主要身分。
@@ -1200,9 +1200,9 @@ window.targetPageParams = function() {
     };
 ```
 
-### 使用Web SDK
+### 使用網頁SDK
 
-使用Web SDK，客戶在設定Adobe Target名稱空間下的資料流設定時，可以在更高層級設定屬性：
+使用Web SDK，客戶在設定資料流設定時，能夠在Adobe Target名稱空間下的更高層級設定屬性：
 ![顯示Adobe Target設定的Datastreams UI。](assets/at-property-setup.png)
 這表示該特定資料流設定的每個Target呼叫都將包含該屬性Token。
 
@@ -1235,7 +1235,7 @@ adobe.target.getOffers({
 
 注意：強烈建議確保`mboxes`陣列中的每個`mbox`都有自己的索引。 通常第一個mbox有`index=0`、下一個`index=1`等。
 
-### 使用Web SDK
+### 使用網頁SDK
 
 Web SDK目前不支援此功能。
 
@@ -1251,12 +1251,12 @@ At.js會公開這些偵錯功能：
 
 注意：所有這些偵錯功能都可以在[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)的增強功能中使用
 
-### 使用Web SDK
+### 使用網頁SDK
 
-使用Web SDK時，您擁有多項偵錯功能：
+使用Web SDK時，您有多項偵錯功能：
 
-* 使用[保證](/help/assurance/home.md)
-* [Web SDK偵錯已啟用](/help/web-sdk/use-cases/debugging.md)
-* 使用[Web SDK監視掛接](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* 使用[Assurance](/help/assurance/home.md)
+* [已啟用網頁SDK偵錯](/help/web-sdk/use-cases/debugging.md)
+* 使用[Web SDK監視鉤點](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * 使用[Adobe Experience Platform Debugger](/help/debugger/home.md)
 * 目標追蹤

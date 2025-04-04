@@ -2,20 +2,20 @@
 keywords: Experience Platform；首頁；熱門主題；來源聯結器；來源聯結器；來源；資料來源；資料來源；資料來源連線
 solution: Experience Platform
 title: Source聯結器概觀
-description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 2%
+source-wordcount: '1557'
+ht-degree: 3%
 
 ---
 
 # Source聯結器概觀
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源 (如 Adobe 應用程式、雲端型的儲存空間、資料庫和其他許多來源) 內嵌資料。 
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源 (如 Adobe 應用程式、雲端型的儲存空間、資料庫和其他許多來源) 內嵌資料。 
 
-[!DNL Flow Service]用於收集並集中來自Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，可讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證協力廠商系統、設定擷取執行時間，以及管理資料擷取輸送量。
+[!DNL Flow Service]用於收集及集中來自Experience Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，可讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證協力廠商系統、設定擷取執行時間，以及管理資料擷取輸送量。
 
 有了Experience Platform，您可以集中從不同來源收集的資料，並使用從中獲得的見解做更多事情。
 
@@ -84,7 +84,7 @@ Experience Platform支援從協力廠商分析平台擷取資料。 如需詳細
 
 ### 雲端儲存空間 {#cloud-storage}
 
-雲端儲存空間來源可將您自己的資料帶入Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會使用使用者介面整合到來源工作流程中。 如需詳細資訊，請參閱下列相關檔案：
+雲端儲存空間來源可將您自己的資料帶入Experience Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會使用使用者介面整合到來源工作流程中。 如需詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE 批次]{type=Informative}
@@ -224,11 +224,11 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 透過以屬性為基礎的存取控制，您可以將對應設定套用至您有許可權的欄位。 此外，如果您無法存取資料集中的所有欄位，則無法將資料內嵌至資料集。
 
-#### 支援來源中的屬性型存取控制
+#### 支援來源中以屬性為基礎的存取控制
 
 >[!TIP]
 >
->以屬性為基礎的存取控制運作方式如下： **角色**&#x200B;的建立是為了分類與您的Platform執行個體互動的使用者型別。 **標籤**&#x200B;已套用至&#x200B;**角色**，以指定該指定角色的存取權。 **標籤**&#x200B;也會套用至結構描述欄位和區段之類的資源。 為了讓使用者能夠存取某些結構描述欄位和區段，必須將其新增至具有指派給查詢資源&#x200B;*之相同標籤的*&#x200B;角色。 如需詳細資訊，請閱讀[屬性型存取控制端對端指南](../access-control/abac/end-to-end-guide.md)。
+>屬性型存取控制的運作方式如下： **角色**&#x200B;的建立是為了分類與您的Experience Platform執行個體互動的使用者型別。 **標籤**&#x200B;已套用至&#x200B;**角色**，以指定該指定角色的存取權。 **標籤**&#x200B;也會套用至結構描述欄位和區段之類的資源。 為了讓使用者能夠存取某些結構描述欄位和區段，必須將其新增至具有指派給查詢資源&#x200B;*之相同標籤的*&#x200B;角色。 如需詳細資訊，請閱讀[屬性型存取控制端對端指南](../access-control/abac/end-to-end-guide.md)。
 
 - 將標籤套用至結構描述欄位，以定義對貴組織中特定結構描述欄位的存取權。 建立對特定結構描述欄位的存取權後，使用者將只能為他們有權存取的欄位建立對應。
 - 沒有適當角色的使用者將無法使用包含無法存取之結構描述欄位的對應來建立或更新資料流程。 此外，未經授權的使用者無法更新、刪除、啟用或停用具有無法存取之結構描述欄位的現有資料流。

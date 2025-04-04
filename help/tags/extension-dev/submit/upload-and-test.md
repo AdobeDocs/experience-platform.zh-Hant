@@ -2,9 +2,9 @@
 title: 上傳並實作擴充功能的端對端測試
 description: 瞭解如何在Adobe Experience Platform中驗證、上傳和測試您的擴充功能。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2347'
 ht-degree: 22%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 22%
 >
 >Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-若要在Adobe Experience Platform中測試標籤擴充功能，請使用標籤API和/或命令列工具來上傳您的擴充功能套件。 接下來，使用Platform UI或資料收集UI將您的擴充功能套件安裝至屬性，並在標籤程式庫和組建中實作其功能。
+若要在Adobe Experience Platform中測試標籤擴充功能，請使用標籤API和/或命令列工具來上傳您的擴充功能套件。 接下來，使用Experience Platform UI或資料收集UI將您的擴充功能套件安裝至屬性，並在標籤程式庫和組建中實作其功能。
 
 本文介紹如何為擴充功能實作端對端測試。
 
@@ -29,7 +29,7 @@ ht-degree: 22%
 
 上傳之前，請先驗證是否有任何必要欄位或設定需完成。例如，檢閱您的[擴充功能資訊清單](../manifest.md)、[擴充功能組態](../configuration.md)、[檢視](../web/views.md)以及[程式庫模組](../web/format.md) （最少）是良好的作法。
 
-您的標誌檔案就是明確的範例：請在您的`extension.json`檔案中新增`"iconPath": "example.svg",`行，並將該標誌影像檔案加入您的專案中。 這是會針對擴充功能顯示之圖示的相對路徑。 此路徑不應以斜線開頭。它必須參考副檔名為 `.svg` 的 SVG 檔案。該SVG在呈現為正方形時應該會正常顯示，並可由使用者介面縮放。 如需詳細資訊，請參閱[如何縮放SVG文章](https://css-tricks.com/scale-svg/)。
+您的標誌檔案就是明確的範例：請在您的`extension.json`檔案中新增`"iconPath": "example.svg",`行，並將該標誌影像檔案加入您的專案中。 這是會針對擴充功能顯示之圖示的相對路徑。 此路徑不應以斜線開頭。它必須參考副檔名為 `.svg` 的 SVG 檔案。SVG在呈現為正方形時應該會正常顯示，並可依使用者介面進行調整。 如需詳細資訊，請參閱[如何縮放SVG文章](https://css-tricks.com/scale-svg/)。
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ npx @adobe/reactor-uploader
 `npx`可讓您下載並執行npm套件，而無需在機器上實際安裝。 這是上傳程式最簡單的執行方式。
 
 >[!NOTE]
-> 依預設，上傳程式會預期伺服器對伺服器Oauth流程的Adobe I/O認證。 舊版`jwt-auth`認證
+> 依預設，Uploader會預期伺服器對伺服器Oauth流程的Adobe I/O認證。 舊版`jwt-auth`認證
 > 可藉由執行`npx @adobe/reactor-uploader@v5.2.0`使用，直到2025年1月1日停止使用。 必要的引數
 > 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)找到。
 
@@ -114,7 +114,7 @@ npx @adobe/reactor-uploader
 
 ![](../images/getting-started/catalog.png)
 
-目錄會顯示每個可用擴充功能的卡片圖示。如果您的擴充功能未顯示在目錄中，請確定您已完成上述「Adobe管理主控台設定」和「建立您的擴充功能套件」區段中的步驟。 如果平台尚未完成初始處理，您的擴充功能套件也可能會顯示為「擱置中」。
+目錄會顯示每個可用擴充功能的卡片圖示。如果您的擴充功能未顯示在目錄中，請確定您已完成上述「Adobe Administration Console設定」和「建立您的擴充功能套件」小節中的步驟。 如果Experience Platform尚未完成初始處理，您的擴充功能套件也可能會顯示為「擱置中」。
 
 如果您已執行先前步驟，但目錄中仍未顯示「擱置中」或「失敗」擴充功能套件，則應直接使用API檢視擴充功能套件的狀態。 如需如何進行適當API呼叫的詳細資訊，請參閱API檔案中的[擷取ExtensionPackage](../../api/endpoints/extension-packages.md#lookup)。
 
@@ -122,7 +122,7 @@ npx @adobe/reactor-uploader
 
 ![](../images/getting-started/install-extension.png)
 
-設定畫面隨即開啟（前提是擴充功能具有擴充功能）。 新增設定擴充功能所需的任何資訊，並選取底部的&#x200B;**儲存**。 這裡所示的設定畫面範例使用Facebook擴充功能，此擴充功能需要畫素ID。
+設定畫面隨即開啟（前提是擴充功能具有擴充功能）。 新增設定擴充功能所需的任何資訊，並選取底部的&#x200B;**儲存**。 這裡所見的設定畫面範例使用Facebook擴充功能，該擴充功能需要畫素ID。
 
 ![](../images/getting-started/fb-extension.png)
 
@@ -146,7 +146,7 @@ npx @adobe/reactor-uploader
 
 當使用者從&#x200B;**擴充功能**&#x200B;下拉式清單選取您的擴充功能時，**資料元素型別**&#x200B;下拉式清單會填入您的擴充功能所提供的任何資料元素型別。 使用者可將每個資料元素對應至其來源值。然後，在「資料元素變更事件」或「自訂程式碼事件」中建立規則時，可使用資料元素來觸發要執行的規則。資料元素也可用於資料元素條件或規則中的其他條件、例外或動作。
 
-建立資料元素 (設定對應) 後，使用者只需參考資料元素即可參考來源資料。如果值的來源有所變更 (網站重新設計等)，使用者只需在UI中更新一次對應，所有資料元素都會自動接收新的來源值。
+建立資料元素 (設定對應) 後，使用者只需參考資料元素即可參考來源資料。如果值的來源有所變更（網站重新設計等），使用者只需在UI中更新一次對應，所有資料元素就會自動收到新的來源值。
 
 ### 規則
 
@@ -160,7 +160,7 @@ npx @adobe/reactor-uploader
 
 如果發生事件，且符合條件，而且沒有例外，則會觸發動作。擴充功能中也存在相同的流程，您可在其中建立或運用事件、條件、例外、資料元素或動作。
 
-以Facebook擴充功能為例，每當頁面載入測試網站時，都新增事件。
+以Facebook擴充功能為例，針對頁面在測試網站上載入的每次機會，新增一個事件。
 
 ![](../images/getting-started/load-event.png)
 
@@ -172,7 +172,7 @@ npx @adobe/reactor-uploader
 
 測試擴充功能時，請選取任何相關的事件、條件等。 任何數量的規則中提供的任何事件、條件等。
 
-## Publish您的變更 {#publish}
+## 發佈您的變更 {#publish}
 
 在主要導覽區中選取&#x200B;**「發佈」**，然後選取&#x200B;**「新增程式庫」**&#x200B;連結：
 

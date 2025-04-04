@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 在UI中更新Source連線帳戶詳細資料
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '454'
 ht-degree: 1%
 
 ---
@@ -22,12 +22,12 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-- [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-- [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+- [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+- [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 更新帳戶
 
-登入[Experience PlatformUI](https://platform.adobe.com)，然後從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 從頂端標題選取&#x200B;**[!UICONTROL 帳戶]**&#x200B;以檢視現有帳戶。
+登入[Experience Platform UI](https://platform.adobe.com)，然後從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 從頂端標題選取&#x200B;**[!UICONTROL 帳戶]**&#x200B;以檢視現有帳戶。
 
 ![目錄](../../images/tutorials/update/catalog.png)
 

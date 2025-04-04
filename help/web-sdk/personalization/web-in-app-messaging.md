@@ -2,9 +2,9 @@
 title: 在Web SDK中設定網頁應用程式內傳訊支援
 description: 瞭解如何設定Web SDK標籤擴充功能以支援Web應用程式內傳訊。
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Web應用程式內傳訊功能是[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)功能，它使用Web SDK來提供個人化內容。
+>Web應用程式內傳訊功能是[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)功能，它會使用Web SDK來提供個人化內容。
 >
 >如需如何設定網頁應用程式內傳訊活動的詳細指示，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html)。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ### Web SDK標籤擴充功能版本 {#extension-version}
 
-Web應用程式內傳訊功能需要最新版Web SDK標籤擴充功能。
+Web應用程式內傳訊功能需要最新版的Web SDK標籤擴充功能。
 
 ### 設定CSP以傳送網頁應用程式內訊息 {#csp}
 
@@ -40,25 +40,25 @@ default-src  blob:;
 
 如需有關設定CSP的詳細資訊，請參閱[專屬檔案](../use-cases/configuring-a-csp.md)。
 
-## 使用Web SDK標籤擴充功能設定網頁應用程式內傳訊 {#tag-extension}
+## 使用Web SDK標籤擴充功能設定Web應用程式內訊息 {#tag-extension}
 
-請參閱[Web SDK標籤擴充功能組態頁面](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)，瞭解您可在何處找到下述設定。
+請參閱[網頁SDK標籤擴充功能組態頁面](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)，瞭解您可在何處找到下述設定。
 
 在您[安裝](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) Web SDK標籤擴充功能後，請依照下列步驟設定Web應用程式內傳訊的擴充功能。
 
-在&#x200B;**[!UICONTROL Personalization]**&#x200B;區段中，勾選&#x200B;**[!UICONTROL 啟用個人化儲存空間]**&#x200B;選項。 此選項可讓Web SDK追蹤使用者在頁面載入過程中所看到的體驗。
+在&#x200B;**[!UICONTROL Personalization]**&#x200B;區段中，勾選&#x200B;**[!UICONTROL 啟用個人化儲存空間]**&#x200B;選項。 此選項可讓Web SDK追蹤使用者在頁面載入過程中看過哪些體驗。
 
 ![此影像在標籤延伸設定頁面中顯示個人化儲存選項。](assets/web-in-app-messaging/enable-personalization-storage.png)
 
 
 Web應用程式內傳訊支援兩種型別的觸發器：
 
-* [傳送資料至Platform](#send-data-platform)
+* [傳送資料至Experience Platform](#send-data-platform)
 * [手動觸發訊息](#manual-trigger)
 
-請參閱下列章節，根據您想使用的觸發程式來設定Web SDK標籤擴充功能。
+請參閱下列章節，根據您想使用的觸發程式設定網頁SDK標籤擴充功能。
 
-### **[!UICONTROL 傳送資料至Platform]**&#x200B;觸發器的設定步驟 {#send-data-platform}
+### **[!UICONTROL 傳送資料至Experience Platform]**&#x200B;觸發器的設定步驟 {#send-data-platform}
 
 選取包含您Web SDK擴充功能的標籤屬性，並使用下列設定[建立新規則](../../tags/ui/managing-resources/rules.md##create-a-rule)：
 
@@ -140,7 +140,7 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
 設定程式現已完成，您的訊息已準備好向使用者顯示。
 
-## 使用Web SDK JavaScript資料庫設定Web應用程式內傳訊 {#js-library}
+## 使用Web SDK JavaScript資料庫設定應用程式內傳訊 {#js-library}
 
 除了使用Web SDK標籤擴充功能外，您也可以直接從Web SDK JavaScript資料庫設定「Web應用程式內傳訊」 。
 
@@ -150,7 +150,7 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
 ### 方法1：自動擷取個人化內容 {#automatic}
 
-若要讓Web SDK在頁面載入時自動擷取個人化內容，請使用`sendEvent`命令，如下列範例所示。
+若要讓網頁SDK在頁面載入時自動擷取個人化內容，請使用`sendEvent`命令，如下列範例所示。
 
 ```js
   alloy("sendEvent", {
@@ -182,7 +182,7 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
 您可以透過`personalizationStorageEnabled`設定選項，選擇在使用者設定次數內或每次造訪頁面時，向使用者顯示應用程式內訊息。
 
-在[Web SDK組態](../commands/configure/overview.md)中，根據您的需求設定`personalizationStorageEnabled`選項：
+在[網頁SDK組態](../commands/configure/overview.md)中，根據您的需求設定`personalizationStorageEnabled`選項：
 
 * `personalizationStorageEnabled: true`會以您在[Adobe Journey Optimizer行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp)中定義的頻率觸發應用程式內訊息。
 * `personalizationStorageEnabled: false`會在每次頁面載入時觸發應用程式內訊息。

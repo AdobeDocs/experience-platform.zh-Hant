@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何使用Snowflake UI建立Adobe Experience Platform來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: cde31b692e9a11b15cf91a505133f75f69604cba
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1153'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 >[!NOTE]
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 ## 瀏覽來源目錄 {#navigate}
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*[!UICONTROL 資料庫]*&#x200B;類別下選取&#x200B;**[!DNL Snowflake]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 
@@ -71,8 +71,8 @@ ht-degree: 3%
 | 認證 | 說明 |
 | --- | --- |
 | 帳戶 | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如： `orgname-account_name`。 閱讀[擷取 [!DNL Snowflake] 帳戶識別碼](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier)的指南，以取得其他指引。 如需詳細資訊，請參閱[[!DNL Snowflake] 文件](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)，以瞭解詳情。 |
-| 倉儲 | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料傳送至Platform時必須個別存取。 |
-| 資料庫 | [!DNL Snowflake]資料庫包含您要帶入Platform的資料。 |
+| 倉儲 | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料帶到Experience Platform時必須個別存取。 |
+| 資料庫 | [!DNL Snowflake]資料庫包含您要帶入Experience Platform的資料。 |
 | 使用者名稱 | [!DNL Snowflake]帳戶的使用者名稱。 |
 | 密碼 | [!DNL Snowflake]使用者帳戶的密碼。 |
 | 角色 | 在[!DNL Snowflake]工作階段中使用的預設存取控制角色。 該角色應為已指派給指定使用者的現有角色。 預設角色為`PUBLIC`。 |
@@ -93,7 +93,7 @@ ht-degree: 3%
 | 私密金鑰 | 您[!DNL Snowflake]帳戶的[!DNL Base64-]編碼私密金鑰。 您可以產生加密或未加密的私密金鑰。 如果您使用加密的私密金鑰，則在對Experience Platform進行驗證時，也必須提供私密金鑰複雜密碼。 如需詳細資訊，請參閱[擷取 [!DNL Snowflake] 私密金鑰](../../../../connectors/databases/snowflake.md)的指南。 |
 | 私密金鑰複雜密碼 | 私密金鑰複雜密碼是附加的安全性層級，在使用加密的私密金鑰進行驗證時必須使用此層級。 如果您使用未加密的私密金鑰，則不需要提供複雜密碼。 |
 | 資料庫 | 包含您要擷取至Experience Platform之資料的[!DNL Snowflake]資料庫。 |
-| 倉儲 | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料傳送至Platform時必須個別存取。 |
+| 倉儲 | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料帶到Experience Platform時必須個別存取。 |
 
 如需這些值的詳細資訊，請參閱[此Snowflake檔案](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)。
 
@@ -127,4 +127,4 @@ ht-degree: 3%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與Snowflake帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Platform]](../../dataflow/databases.md)。
+依照本教學課程中的指示，您已建立與Snowflake帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Experience Platform]](../../dataflow/databases.md)。

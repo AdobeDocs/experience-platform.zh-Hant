@@ -2,9 +2,9 @@
 title: Web SDK中的第一方裝置ID
 description: 瞭解如何在Adobe Experience Platform Web SDK中設定第一方裝置識別碼(FPID)。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2058'
 ht-degree: 0%
 
 ---
@@ -16,18 +16,18 @@ Adobe Experience Platform Web SDK會使用Cookie將[Adobe Experience Cloud ID (E
 
 >[!NOTE]
 >
->只有在透過Web SDK傳送資料給Experience PlatformEdge Network時，才支援第一方裝置ID。
+>只有透過Web SDK將資料傳送至Experience Platform Edge Network時，才能使用第一方裝置ID支援。
 
 >[!IMPORTANT]
 >
->第一方裝置識別碼與Web SDK中的[第三方Cookie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity)功能不相容。
+>第一方裝置ID與Web SDK中的[第三方Cookie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity)功能不相容。
 >您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
 
-本檔案說明如何為Web SDK實作設定第一方裝置ID。
+本檔案說明如何為您的Web SDK實作設定第一方裝置ID。
 
 ## 先決條件
 
-本指南假設您熟悉身分識別資料在Platform Web SDK中的運作方式，包括ECID和`identityMap`的角色。 如需詳細資訊，請參閱Web SDK](./overview.md)中[身分資料的概觀。
+本指南假設您熟悉身分識別資料在Experience Platform Web SDK中的運作方式，包括ECID和`identityMap`的角色。 如需詳細資訊，請參閱網頁SDK](./overview.md)中[身分資料的概觀。
 
 ## 使用第一方裝置ID (FPID) {#using-fpid}
 
@@ -37,7 +37,7 @@ Adobe Experience Platform Web SDK會使用Cookie將[Adobe Experience Cloud ID (E
 >
 >[!DNL A]或[!DNL AAAA]記錄僅支援設定和追蹤Cookie。 資料收集的主要方法是透過[!DNL DNS] [!DNL CNAME]。 換句話說，[!DNL FPIDs]是使用[!DNL A]記錄或[!DNL AAAA]記錄所設定，然後使用[!DNL CNAME]傳送至Adobe。
 >
->[Adobe管理的憑證方案](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)也仍支援第一方資料收集。
+>[Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)仍支援第一方資料收集。
 
 設定[!DNL FPID] Cookie後，便可在收集事件資料時擷取其值並傳送至Adobe。 收集的[!DNL FPIDs]會作為產生[!DNL ECIDs]的種子使用，繼續成為Adobe Experience Cloud應用程式中的主要識別碼。
 
@@ -59,17 +59,17 @@ Edge Network只接受符合[UUIDv4格式](https://datatracker.ietf.org/doc/html/
 
 如需如何設定資料串流的詳細資訊，請參閱[資料串流檔案](../../datastreams/configure.md)。
 
-設定資料流時，請啟用&#x200B;**[!UICONTROL 第一方ID Cookie]**&#x200B;選項。 此設定可告知Edge Network在查詢第一方裝置識別碼時參考指定的Cookie，而不是在[身分對應](#identityMap)中查詢此值。
+設定資料流時，請啟用&#x200B;**[!UICONTROL 第一方ID Cookie]**&#x200B;選項。 此設定可告知Edge Network在查詢第一方裝置ID時參考指定的Cookie，而不是在[身分對應](#identityMap)中查詢此值。
 
 請參閱[第一方Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant)的相關檔案，深入瞭解其如何使用Adobe Experience Cloud。
 
-![顯示資料流設定的平台UI影像，其中強調第一方ID Cookie設定](../assets/first-party-id-datastreams.png)
+![Experience Platform UI影像顯示強調第一方ID Cookie設定的資料流設定](../assets/first-party-id-datastreams.png)
 
 啟用此設定時，您必須提供預期儲存ID的Cookie名稱。
 
 使用第一方ID時，無法執行第三方ID同步。 協力廠商ID同步依賴於[!DNL Visitor ID]服務以及該服務產生的`UUID`。 使用第一方ID功能時，會產生[!DNL ECID]而不使用[!DNL Visitor ID]服務，因此無法同步第三方ID。
 
-使用第一方ID時，由於Audience Manager合作夥伴ID同步主要以`UUIDs`或`DIDs`為基礎，因此不支援在合作夥伴平台中針對啟用的[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager)功能。 衍生自第一方ID的[!DNL ECID]未連結至`UUID`，使其無法定址。
+使用第一方ID時，由於Audience Manager合作夥伴ID同步主要是以`UUIDs`或`DIDs`為基礎，因此不支援在合作夥伴平台中啟用的[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager)功能。 衍生自第一方ID的[!DNL ECID]未連結至`UUID`，使其無法定址。
 
 ## 使用您自己的伺服器設定Cookie {#set-cookie-server}
 
@@ -226,9 +226,9 @@ Edge Network只接受符合[UUIDv4格式](https://datatracker.ietf.org/doc/html/
 
 使用[!DNL CNAME]啟用第一方資料收集時，將會在對資料收集端點提出請求時傳送您網域的所有Cookie。
 
-與Adobe的資料收集用途無關的所有Cookie都會被捨棄。 對於[!DNL FPID]，您可以在資料流設定中指定[!DNL FPID] Cookie的名稱。 執行此操作時，Edge Network將讀取[!DNL FPID] Cookie的內容，而不是在身分對應中尋找[!DNL FPID]。
+所有與Adobe的資料收集用途無關的Cookie都會被捨棄。 對於[!DNL FPID]，您可以在資料流設定中指定[!DNL FPID] Cookie的名稱。 當您執行此動作時，Edge Network將會讀取[!DNL FPID] Cookie的內容，而非在身分對應中尋找[!DNL FPID]。
 
-若要使用此功能，您必須將[!DNL FPID]設定在您網域的頂層，而非特定子網域。 如果您在子網域上設定它，Cookie值將不會傳送給Edge Network，且[!DNL FPID]解決方案將無法如預期運作。
+若要使用此功能，您必須將[!DNL FPID]設定在您網域的頂層，而非特定子網域。 如果您在子網域上設定它，Cookie值將不會傳送至Edge Network，且[!DNL FPID]解決方案將無法如預期運作。
 
 ## ID階層 {#id-hierarchy}
 
@@ -273,12 +273,12 @@ Edge Network只接受符合[UUIDv4格式](https://datatracker.ietf.org/doc/html/
 
 ### 何時應該產生第一方裝置識別碼？
 
-若要降低訪客的潛在數量膨脹，應先產生[!DNL FPID]，再使用Web SDK提出您的第一個請求。 不過，如果您無法執行此動作，仍會為該使用者產生[!DNL ECID]，並將作為主要識別碼使用。 產生的[!DNL FPID]不會成為主要識別碼，直到[!DNL ECID]不再存在為止。
+若要降低訪客可能的膨脹率，應先產生[!DNL FPID]，再使用網頁SDK提出您的第一個要求。 不過，如果您無法執行此動作，仍會為該使用者產生[!DNL ECID]，並將作為主要識別碼使用。 產生的[!DNL FPID]不會成為主要識別碼，直到[!DNL ECID]不再存在為止。
 
 ### 哪些資料收集方法支援第一方裝置ID？
 
 目前只有Web SDK支援第一方裝置ID。
 
-### 第一方裝置ID是否儲存在任何平台或Experience Cloud解決方案上？
+### 第一方裝置ID是否儲存在任何Experience Platform或Experience Cloud解決方案中？
 
 一旦使用[!DNL FPID]來植入[!DNL ECID]，就會從`identityMap`中捨棄該專案，並取代為已產生的[!DNL ECID]。 [!DNL FPID]未儲存在任何Adobe Experience Platform或Experience Cloud解決方案中。

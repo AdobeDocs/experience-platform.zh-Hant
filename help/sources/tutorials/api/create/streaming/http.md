@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流量服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API使用HTTP API來源為原始資料和XDM資料建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1656'
 ht-degree: 3%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 3%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md)： [!DNL Platform]用來組織體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md)： [!DNL Experience Platform]用來組織體驗資料的標準化架構。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者設定檔。
 
 此外，建立串流連線需要您具備目標XDM結構描述和資料集。 若要瞭解如何建立這些資料，請閱讀[串流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教學課程或[串流時間序列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教學課程。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
 ## 建立基礎連線
 
@@ -36,9 +36,9 @@ ht-degree: 3%
 
 ### 未驗證的連線
 
-未驗證的連線是標準的串流連線，您可以在想要將資料串流到Platform時建立。
+未驗證的連線是標準的串流連線，您可以在想要將資料串流到Experience Platform中時建立。
 
-若要建立未驗證的基礎連線，請在提供連線的名稱、資料型別和HTTP API連線規格ID時，向`/connections`端點提出POST要求。 此識別碼為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
+若要建立未驗證的基礎連線，請在提供連線的名稱、資料型別和HTTP API連線規格ID時，對`/connections`端點提出POST要求。 此識別碼為`bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`。
 
 **API格式**
 
@@ -130,7 +130,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ### 已驗證的連線
 
-當您需要區分來自受信任與不受信任來源的記錄時，應使用已驗證的連線。 想要傳送個人識別資訊(PII)資訊的使用者，應在將資訊串流至Platform時建立已驗證的連線。
+當您需要區分來自受信任與不受信任來源的記錄時，應使用已驗證的連線。 想要傳送個人識別資訊(PII)資訊的使用者，應在將資訊串流至Experience Platform時建立已驗證的連線。
 
 若要建立已驗證的基底連線，您必須在要求中加入`authenticationRequired`引數，並指定其值為`true`。 在此步驟中，您也可以提供已驗證基本連線的來源ID。 此引數為選用引數，若未提供，將使用與`name`屬性相同的值。
 
@@ -290,7 +290,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
 
 ## 建立來源連線 {#source}
 
-若要建立來源連線，請在提供您的基本連線ID時，向`/sourceConnections`端點提出POST要求。
+若要建立來源連線，請在提供您的基本連線ID時，對`/sourceConnections`端點提出POST要求。
 
 **API格式**
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 ## 建立目標XDM結構描述 {#target-schema}
 
-為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後目標結構描述會用來建立包含來源資料的Platform資料集。
+為了在Experience Platform中使用來源資料，必須建立目標結構描述，以根據您的需求建構來源資料。 然後使用目標結構描述來建立包含來源資料的Experience Platform資料集。
 
 可透過對[結構描述登入API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)執行POST要求來建立目標XDM結構描述。
 
@@ -340,13 +340,13 @@ curl -X POST \
 
 ### 建立目標資料集 {#target-dataset}
 
-可以透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID，來建立目標資料集。
 
 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](../../../../../catalog/api/create-dataset.md)的教學課程。
 
 ## 建立目標連線 {#target}
 
-目標連線代表與擷取資料著陸目的地之間的連線。 若要建立目標連線，請在提供目標資料集和目標XDM結構描述的ID時，向`/targetConnections`發出POST要求。 在此步驟中，您也必須提供資料湖連線規格ID。 此識別碼為`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
+目標連線代表與擷取資料著陸目的地之間的連線。 若要建立目標連線，請在為目標資料集和目標XDM結構描述提供ID時，向`/targetConnections`發出POST請求。 在此步驟中，您也必須提供資料湖連線規格ID。 此識別碼為`c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
 
 **API格式**
 
@@ -398,7 +398,7 @@ curl -X POST \
 
 為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，向[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
+若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
 
 **API格式**
 
@@ -559,7 +559,7 @@ curl -X POST \
 }
 ```
 
-## 張貼要擷取至平台的資料 {#ingest-data}
+## 張貼要擷取至Experience Platform的資料 {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,7 +575,7 @@ POST /collection/{INLET_URL}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INLET_URL}` | 您的串流端點網址。 您可以在提供基本連線ID時，透過向`/connections`端點發出GET要求來擷取此URL。 |
+| `{INLET_URL}` | 您的串流端點網址。 您可以在提供基本連線ID的同時，對`/connections`端點發出GET要求來擷取此URL。 |
 | `{FLOW_ID}` | HTTP API串流資料流的ID。 XDM和RAW資料都需要此ID。 |
 
 **要求**
@@ -686,15 +686,15 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 先前建立串流連線的ID。 |
-| `xactionId` | 在伺服器端為您剛傳送的記錄產生的唯一識別碼。 此ID可協助Adobe透過各種系統和偵錯追蹤此記錄的生命週期。 |
+| `xactionId` | 在伺服器端為您剛傳送的記錄產生的唯一識別碼。 此ID可協助Adobe透過各種系統和偵錯追蹤此紀錄的生命週期。 |
 | `receivedTimeMs` | 顯示收到要求的時間戳記（紀元單位：毫秒）。 |
 
 
 ## 後續步驟
 
-依照本教學課程指示，您已建立串流HTTP連線，讓您能夠使用串流端點將資料擷取到Platform。 如需在UI中建立串流連線的指示，請參閱[建立串流連線教學課程](../../../ui/create/streaming/http.md)。
+依照本教學課程所述，您已建立串流HTTP連線，可讓您使用串流端點將資料擷取到Experience Platform。 如需在UI中建立串流連線的指示，請參閱[建立串流連線教學課程](../../../ui/create/streaming/http.md)。
 
-若要瞭解如何將資料串流到Platform，請閱讀[串流時間序列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教學課程或[串流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教學課程。
+若要瞭解如何將資料串流至Experience Platform，請閱讀[串流時間序列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md)的教學課程或[串流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md)的教學課程。
 
 ## 附錄
 

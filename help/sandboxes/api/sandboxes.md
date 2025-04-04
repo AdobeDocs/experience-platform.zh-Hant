@@ -5,24 +5,24 @@ title: 沙箱管理API端點
 description: 沙箱API中的/sandboxes端點可讓您以程式設計方式管理Adobe Experience Platform中的沙箱。
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1477'
 ht-degree: 3%
 
 ---
 
 # 沙箱管理端點
 
-Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。 [!DNL Sandbox] API中的`/sandboxes`端點可讓您以程式設計方式管理Platform中的沙箱。
+Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。 [!DNL Sandbox] API中的`/sandboxes`端點可讓您以程式設計方式管理Experience Platform中的沙箱。
 
 ## 快速入門
 
-本指南中使用的API端點是[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ## 擷取沙箱清單 {#list}
 
-您可以透過向`/sandboxes`端點發出GET要求，列出屬於您組織的所有沙箱（作用中或其他方式）。
+您可以透過向`/sandboxes`端點發出GET請求，列出屬於您組織的所有沙箱（作用中或其他方式）。
 
 **API格式**
 
@@ -136,7 +136,7 @@ curl -X GET \
 
 ## 查詢沙箱 {#lookup}
 
-您可以透過在請求路徑中包含沙箱的`name`屬性的GET請求來查詢個別沙箱。
+您可以發出GET請求，在請求路徑中包含沙箱的`name`屬性，以查詢個別沙箱。
 
 **API格式**
 
@@ -228,7 +228,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 將在未來請求中用於存取沙箱的識別碼。 此值必須是唯一的，最佳做法是使其儘可能具描述性。 此值不能包含任何空格或特殊字元。 |
-| `title` | 在Platform使用者介面中用於顯示用途的人類可讀名稱。 |
+| `title` | 在Experience Platform使用者介面中用於顯示用途的人類可讀名稱。 |
 | `type` | 要建立的沙箱型別。 對於非生產沙箱，此值必須是`development`。 |
 
 **回應**
@@ -281,7 +281,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 將在未來請求中用於存取沙箱的識別碼。 此值必須是唯一的，最佳做法是使其儘可能具描述性。 此值不能包含任何空格或特殊字元。 |
-| `title` | 在Platform使用者介面中用於顯示用途的人類可讀名稱。 |
+| `title` | 在Experience Platform使用者介面中用於顯示用途的人類可讀名稱。 |
 | `type` | 要建立的沙箱型別。 對於生產沙箱，此值必須是`production`。 |
 
 **回應**
@@ -304,7 +304,7 @@ curl -X POST \
 
 ## 更新沙箱 {#put}
 
-您可以透過提出PATCH請求來更新沙箱中的一個或多個欄位，該請求在請求路徑中包含沙箱的`name`以及在請求承載中要更新的屬性。
+您可以發出PATCH請求，在請求路徑中包含沙箱的`name`，並在請求承載中包含要更新的屬性，以更新沙箱中的一個或多個欄位。
 
 >[!NOTE]
 >
@@ -352,7 +352,7 @@ curl -X PATCH \
 
 ## 重設沙箱 {#reset}
 
-沙箱具有「原廠重設」功能，可從沙箱中刪除所有非預設資源。 您可以透過在請求路徑中包含沙箱的`name`的PUT請求來重設沙箱。
+沙箱具有「原廠重設」功能，可從沙箱中刪除所有非預設資源。 您可以發出PUT請求，在請求路徑中包含沙箱的`name`，以重設沙箱。
 
 **API格式**
 
@@ -481,7 +481,7 @@ curl -X PUT \
 >
 >無法刪除預設的生產沙箱。
 
-您可以透過在請求路徑中包含沙箱的`name`的DELETE請求來刪除沙箱。
+您可以發出DELETE請求，在請求路徑中包含沙箱的`name`，藉此刪除沙箱。
 
 >[!NOTE]
 >

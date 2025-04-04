@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；資料科學Workspace；熱門主題；存取控制；沙箱；情報套件；dsw功能；dsw存取；Adobe Experience Platform Intelligence；情報；aep intelligence套件
+keywords: Experience Platform；首頁；Data Science Workspace；熱門主題；存取控制；沙箱；intelligence pack；dsw功能；dsw存取；Adobe Experience Platform Intelligence；intelligence；aep intelligence套件
 solution: Experience Platform
 title: 資料科學Workspace存取與功能
 description: 以下檔案概述資料科學Workspace許可權和功能的存取權。
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '717'
 ht-degree: 1%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 1%
 
 ![DSW標籤](./images/access/platform-tabs.png)
 
-- **筆記型電腦：**&#x200B;提供互動式開發環境([JupyterLab](./jupyterlab/overview.md))，以探索、分析您的資料，並在Experience Platform上建立模型。
+- **筆記型電腦：**&#x200B;提供互動式開發環境([JupyterLab](./jupyterlab/overview.md))，以便在Experience Platform上探索、分析您的資料並將其模型化。
 - **模型：**&#x200B;提供用來建立、發佈和儲存進階機器學習配方和模型的工具。 如需詳細資訊，請造訪[建立和發佈機器學習模型](./models-recipes/create-publish-model.md)教學課程。
 - **服務：**&#x200B;包含Adobe提供的服務（例如[AI/ML服務](../intelligent-services/home.md)）以及您使用Data Science Workspace建立的任何自訂服務。
 
 為什麼我只看到「服務」標籤？
 
-- 您的組織可能僅有權使用Adobe Real-time Customer Data Platform (Real-Time CDP)，其中包括Customer AI/ML服務。
+- 您的組織可能僅有權使用Adobe Real-Time Customer Data Platform (Real-Time CDP)，其中包括Customer AI/ML服務。
 
 如果您無法看到任何&#x200B;**資料科學**&#x200B;標籤，但想要使用資料科學Workspace功能，請聯絡公司管理員，檢查您是否擁有Adobe Experience Platform Intelligence授權。
 
@@ -64,11 +64,11 @@ Experience Platform的存取控制是透過[Adobe Admin Console](https://adminco
 
 | 權限 | 啟用 | 停用 |
 |---|---|---|
-| 管理資料科學Workspace | 提供資料科學Workspace中所有服務的存取權。 | 已停用對Data Science Workspace中所有服務的API和UI存取。 停用時，無法選取&#x200B;**筆記本**、**模型**&#x200B;和&#x200B;**服務**&#x200B;頁面。 <li>仍可透過Adobe Real-time Customer Data Platform (Real-Time CDP)存取&#x200B;**服務**。</li> |
+| 管理資料科學Workspace | 提供資料科學Workspace中所有服務的存取權。 | 已停用對Data Science Workspace中所有服務的API和UI存取。 停用時，無法選取&#x200B;**筆記本**、**模型**&#x200B;和&#x200B;**服務**&#x200B;頁面。 <li>仍可透過Adobe Real-Time Customer Data Platform (Real-Time CDP)存取&#x200B;**服務**。</li> |
 
 ## 沙箱支援
 
-沙箱是單一Experience Platform執行個體中的虛擬分割區。 每個Platform執行個體支援多個生產和非生產沙箱，每個沙箱都維護自己的Platform資源庫。 非生產沙箱可讓您測試功能、執行實驗並進行自訂設定，而不會影響您的生產沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。
+沙箱是單一Experience Platform執行個體中的虛擬分割區。 每個Experience Platform執行個體都支援多個生產和非生產沙箱，每個沙箱都會維護自己的Experience Platform資源資料庫。 非生產沙箱可讓您測試功能、執行實驗並進行自訂設定，而不會影響您的生產沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。
 
 目前，Data Science Workspace有下列沙箱限制：
 

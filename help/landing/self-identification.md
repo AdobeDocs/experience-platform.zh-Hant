@@ -3,9 +3,9 @@ title: 使用自我識別調查來建置您的Experience Platform個人設定檔
 description: 瞭解如何使用自我識別調查UI，根據您的工作職能和相關目標接收相關內容。
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '569'
 ht-degree: 16%
 
 ---
@@ -18,17 +18,17 @@ ht-degree: 16%
 
 自我識別調查是 Adob&#x200B;&#x200B;e Experience Platform UI 首頁中提供的簡短問卷。您可以填寫問卷以提供有關您工作職能和一般目標的資訊。 這些資訊隨後可用於更妥善地調整產品內指南，最終提供更符合您目標的內容。
 
-本檔案說明如何在Platform UI中使用自我識別調查，以根據您的目標和任務接收相關內容，以及如何使用UI重新設定您的個人設定檔屬性。
+本檔案提供如何在Experience Platform UI中使用自我識別調查來根據您的目標和任務接收相關內容的資訊，以及如何使用UI重新設定您的個人設定檔屬性的資訊。
 
 若要進一步瞭解Adobe Experience Platform，請閱讀[Experience Platform概觀](home.md)。
 
-## Platform UI中的自我識別調查
+## Experience Platform UI中的自我識別調查
 
-登入時，自我識別調查提示會顯示在Platform UI首頁的右下方。
+登入時，自我識別調查提示會顯示在Experience Platform UI首頁的右下方。
 
 若要開始問卷，請選取&#x200B;**[!UICONTROL 開始]**。
 
-![含有快顯通知訊息的Platform UI首頁，提示您開始自我識別問卷。](./images/survey/survey-prompt.png)
+![Experience Platform UI首頁，其中包含提示您開始自我識別問卷的快顯通知訊息。](./images/survey/survey-prompt.png)
 
 對於第一個調查問題，請選取最能描述您工作的函式。
 
@@ -79,18 +79,18 @@ ht-degree: 16%
 
 ## 更新您的調查回應
 
-使用Experience Cloud偏好設定選單更新您的工作功能和物件。 若要存取偏好設定功能表，請選取頂端導覽的設定檔圖示，然後選取&#x200B;**[!UICONTROL 偏好設定]**。
+使用Experience Cloud偏好設定選單更新您的工作函式和物件。 若要存取偏好設定功能表，請選取頂端導覽的設定檔圖示，然後選取&#x200B;**[!UICONTROL 偏好設定]**。
 
-![Platform UI首頁，其中包含已選取的設定檔圖示和偏好設定按鈕。](./images/survey/preferences.png)
+![包含設定檔圖示和已選取偏好設定按鈕的Experience Platform UI首頁。](./images/survey/preferences.png)
 
 接著，在您設定檔偏好設定功能表的[!UICONTROL 一般]區段中，選取&#x200B;**[!UICONTROL 更新您的工作職能和目標]**。
 
-![Platform UI設定檔偏好設定頁面的一般區段](./images/survey/update.png)
+![Experience Platform UI設定檔偏好設定頁面的一般區段](./images/survey/update.png)
 
 自我識別調查會出現，讓您重新設定回應並更新設定檔。
 
-![顯示自我識別問卷的Platform UI設定檔偏好設定頁面，允許使用者更新其個人設定檔。](./images/survey/new-survey.png)
+![顯示自我識別問卷的Experience Platform UI設定檔偏好設定頁面，允許使用者更新其個人設定檔。](./images/survey/new-survey.png)
 
 ## 後續步驟
 
-閱讀本檔案後，您現在已提交並更新有關工作職能和目標的資訊，以便在使用Platform UI時接收更相關的內容。 如需有關Platform UI的詳細資訊，請閱讀[Experience Platform概觀](home.md)。
+閱讀本檔案後，您現在已提交並更新有關工作職能和目標的資訊，以便在使用Experience Platform UI時接收更相關的內容。 如需Experience Platform UI的詳細資訊，請閱讀[Experience Platform概觀](home.md)。

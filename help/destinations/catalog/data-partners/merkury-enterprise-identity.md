@@ -3,7 +3,7 @@ title: Mercury Enterprise身分目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise Identity目的地連線。
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: a5452183-289c-49c3-9574-e09b0153dc00
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 3%
@@ -28,7 +28,7 @@ ht-degree: 3%
 >
 >如果您想要以您的[!DNL Merkury Connect]帳戶啟用媒體目的地的對象，請改用[!DNL Merkury Connections]目的地。
 
-![在Experience Platform目的地目錄中反白顯示的Merkury Enterprise身分識別目的地卡。](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
+![Experience Platform目的地目錄中反白顯示的Merkury Enterprise身分識別目的地卡。](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
 ## 使用案例
 
@@ -56,8 +56,8 @@ ht-degree: 3%
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 | ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 
 {style="table-layout:auto"}
@@ -68,8 +68,8 @@ ht-degree: 3%
 
 | **客群** | **支援** | **說明** | **來源** |
 |---|---|---|---|
-| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
-| 自訂上傳 | x | 對象[[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至CSV檔案中的Experience Platform。 |
+| 分段服務 | ✓ | 透過Experience Platform [[細分服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
+| 自訂上傳 | x | 對象[[已將]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)從CSV檔案匯入Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -79,8 +79,8 @@ ht-degree: 3%
 
 | **客群** | **支援** | **描述來源** |
 |---|---|---|      
-| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
-| 自訂上傳 | X | 對象[[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至CSV檔案中的Experience Platform。 |
+| 分段服務 | ✓ | 透過Experience Platform [[細分服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
+| 自訂上傳 | X | 對象[[已將]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)從CSV檔案匯入Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -119,7 +119,7 @@ ht-degree: 3%
 * **描述** — 目的地的簡短說明
 * **貯體名稱（必要）** — 在S3上設定的Amazon S3貯體的名稱
 * **資料夾路徑（必要）** — 如果使用儲存貯體中的子目錄，則必須定義路徑，或使用&#39;/&#39;來參考根路徑。
-* **檔案型別** — 選取匯出檔案應使用的格式Experience Platform。 如需您帳戶的預期檔案型別，請洽詢您的Merkury團隊。
+* **檔案型別** — 選取Experience Platform用於匯出檔案的格式。 如需您帳戶的預期檔案型別，請洽詢您的Merkury團隊。
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ csv選項](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**下一步**。
 
-## 啟動此目標的客群
+## 啟動此目標的對象
 
 >[!IMPORTANT]
 >
@@ -157,7 +157,7 @@ csv選項](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
 | 目標欄位 | Source說明 |
 |---|---|
-| ID | 用於透過[!DNL Merkury Enterprise Identity] Source聯結器將[!DNL Merkury]資料對應到Experience Platform的身分欄位 |
+| ID | 透過[!DNL Merkury Enterprise Identity] Source聯結器將[!DNL Merkury]資料對應至Experience Platform的身分欄位 |
 | Input_First_Name | Experience Platform中的`person.name.firstName`值。 |
 | Input_Last_Name | Experience Platform中的`person.name.lastName`值。 |
 | Input_Address_Line_1 | Experience Platform中的`mailingAddress.street`值。 |
@@ -180,4 +180,4 @@ csv選項](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
 ## 後續步驟
 
-依照此教學課程中的指示，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至[!DNL Merkury]受管理的S3位置。 接下來，您需要連絡您的[!DNL Merkury]代表，提供帳戶名稱、檔案名稱以及儲存貯體路徑，以便設定處理作業。
+依照本教學課程中的指示，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至[!DNL Merkury]受管理的S3位置。 接下來，您需要連絡您的[!DNL Merkury]代表，提供帳戶名稱、檔案名稱以及儲存貯體路徑，以便設定處理作業。

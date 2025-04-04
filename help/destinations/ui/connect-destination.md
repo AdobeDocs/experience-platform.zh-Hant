@@ -3,9 +3,9 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟用警示，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 1. 移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
 
-   ![Experience PlatformUI熒幕擷圖，顯示目的地目錄頁面。](../assets/ui/connect-destinations/catalog.png)
+   ![Experience Platform UI熒幕擷圖，顯示目的地目錄頁面。](../assets/ui/connect-destinations/catalog.png)
 
 2. 目錄中的目的地卡片可能會有不同的動作控制項，實際情形取決於您是否有現有的目的地連線，以及目的地是否支援啟用受眾、匯出資料集或兩者。 您可能會看見目的地卡片的下列任一控制項：
 
@@ -37,9 +37,9 @@ ht-degree: 0%
 
    根據您可用的控制項，選取&#x200B;**[!UICONTROL 設定]**、**[!UICONTROL 啟用]**&#x200B;或&#x200B;**[!UICONTROL 啟用對象]**。
 
-   ![Experience PlatformUI熒幕擷圖，顯示反白顯示「設定」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/set-up.png)
+   ![Experience Platform UI熒幕擷圖，顯示醒目提示「設定」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/set-up.png)
 
-   ![Experience PlatformUI熒幕擷圖，顯示反白顯示「啟用對象」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/activate-segments.png)
+   ![Experience Platform UI熒幕擷圖，顯示反白顯示「啟用對象」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/activate-segments.png)
 
 3. 如果您已選取&#x200B;**[!UICONTROL 設定]**，請跳至下一個步驟，以[驗證](#authenticate)至目的地。
 
@@ -47,13 +47,13 @@ ht-degree: 0%
 
    選取&#x200B;**[!UICONTROL 設定新目的地]**&#x200B;以建立與目的地的新連線。
 
-   ![Experience PlatformUI的熒幕擷圖，顯示可用目的地的清單，並反白顯示[設定新目的地]控制項。](../assets/ui/connect-destinations/configure-new-destination.png)
+   ![Experience Platform UI熒幕擷圖，顯示可用目的地的清單，並反白顯示「設定新目的地」控制項。](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## 驗證目標 {#authenticate}
 
 連線到目的地的第一個步驟是驗證到目的地平台。
 
-根據您連線的目的地，您可能會被帶往目的地合作夥伴的頁面進行驗證，或者系統可能會要求您直接在Platform工作流程中輸入驗證認證。 以下是驗證[!DNL Amazon S3]目的地所需的輸入範例。 每個目的地檔案頁面都會提供必要輸入的詳細指示（例如，請參閱[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate)和[[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)的驗證區段）。
+根據您連線到的目的地，您可能會被帶往目的地合作夥伴的頁面進行驗證，或者系統可能會要求您直接在Experience Platform工作流程中輸入驗證認證。 以下是驗證[!DNL Amazon S3]目的地所需的輸入範例。 每個目的地檔案頁面都會提供必要輸入的詳細指示（例如，請參閱[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate)和[[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)的驗證區段）。
 
 **[!DNL Amazon S3]必要和選用的驗證引數**
 
@@ -113,6 +113,6 @@ ht-degree: 0%
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您已瞭解如何使用Experience PlatformUI建立與目的地的連線。 提醒一下，可用和必要的連線引數會因目的地而異。 您也應該參閱[目的地目錄](/help/destinations/catalog/overview.md)中的目的地檔案頁面，以取得關於每個目的地型別的必要輸入和可用選項的特定資訊。
+閱讀本檔案後，您已瞭解如何使用Experience Platform UI建立與目的地的連線。 提醒一下，可用和必要的連線引數會因目的地而異。 您也應該參閱[目的地目錄](/help/destinations/catalog/overview.md)中的目的地檔案頁面，以取得關於每個目的地型別的必要輸入和可用選項的特定資訊。
 
 接著，您可以繼續[啟用對象](/help/destinations/ui/activation-overview.md)或[將資料集](/help/destinations/ui/export-datasets.md)匯出至您的目的地。

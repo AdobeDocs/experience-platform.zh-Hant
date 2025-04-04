@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 管理產品設定檔的使用者
 description: 本檔案說明如何在Adobe Experience Platform的UI中管理產品設定檔的使用者。
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-現在您已瞭解如何透過[!DNL Admin Console]控制對Platform功能的存取，請參閱[存取控制總覽](../home.md)中的附錄一節，以進一步瞭解每個個別許可權及其所授予存取權的Platform功能。
+現在您已瞭解如何透過[!DNL Admin Console]控制對Experience Platform功能的存取，請參閱[存取控制總覽](../home.md)中的附錄一節，以進一步瞭解每個個別許可權及其所授予存取權的Experience Platform功能。

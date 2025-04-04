@@ -2,9 +2,9 @@
 title: 在使用者介面中建立Microsoft SQL Server Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Microsoft SQL Server來源連線。
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-若要連線到[!DNL Platform]上的[!DNL SQL Server]，您必須提供下列連線屬性：
+若要連線到[!DNL Experience Platform]上的[!DNL SQL Server]，您必須提供下列連線屬性：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 ## 連線您的[!DNL SQL Server]帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*資料庫*&#x200B;類別下，選取&#x200B;**[!DNL Microsoft SQL Server]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 
@@ -70,4 +70,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL SQL Server]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Platform]](../../dataflow/databases.md)。
+依照本教學課程中的指示，您已建立與[!DNL SQL Server]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Experience Platform]](../../dataflow/databases.md)。

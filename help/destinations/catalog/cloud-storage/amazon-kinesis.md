@@ -4,9 +4,9 @@ title: Amazon Kinesis連線
 description: 建立與您的Amazon Kinesis儲存空間的即時輸出連線，以從Adobe Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1989'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 * 如需[!DNL Amazon Kinesis]的詳細資訊，請參閱[Amazon檔案](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
 * 若要以程式設計方式連線到[!DNL Amazon Kinesis]，請參閱[串流目的地API教學課程](../../api/streaming-destinations.md)。
-* 若要使用Platform使用者介面連線至[!DNL Amazon Kinesis]，請參閱下列章節。
+* 若要使用Experience Platform使用者介面連線至[!DNL Amazon Kinesis]，請參閱下列章節。
 
 UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
@@ -69,7 +69,7 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-這些許可權是透過[!DNL Kinesis]主控台排列，一旦您在Platform使用者介面中設定Kinesis目的地，Platform就會檢查這些許可權。
+這些許可權是透過[!DNL Kinesis]主控台排列，當您在Experience Platform使用者介面中設定Kinesis目的地後，Experience Platform會檢查這些許可權。
 
 下列範例顯示成功匯出資料至[!DNL Kinesis]目的地所需的最低存取許可權。
 
@@ -116,7 +116,7 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 
 ![顯示Amazon Kinesis驗證詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services]存取金鑰與秘密金鑰**：在[!DNL Amazon Web Services]中，產生`access key - secret access key`配對，以授與您[!DNL Amazon Kinesis]帳戶的Platform存取權。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
+* **[!DNL Amazon Web Services]存取金鑰和秘密金鑰**：在[!DNL Amazon Web Services]中，產生`access key - secret access key`配對，以授予Experience Platform存取您的[!DNL Amazon Kinesis]帳戶。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
 * **[!UICONTROL 區域]**：指出資料流要傳送到哪個[!DNL Amazon Web Services]區域。
 
 ### 填寫目標詳細資訊 {#destination-details}
@@ -137,7 +137,7 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 
 * **[!UICONTROL 名稱]**：提供您與[!DNL Amazon Kinesis]的連線名稱
 * **[!UICONTROL 描述]**：提供您與[!DNL Amazon Kinesis]的連線描述。
-* **[!UICONTROL 資料流]**：提供您[!DNL Amazon Kinesis]帳戶中現有資料流的名稱。 Platform會將資料匯出至此資料流。
+* **[!UICONTROL 資料流]**：提供您[!DNL Amazon Kinesis]帳戶中現有資料流的名稱。 Experience Platform會將資料匯出至此資料流。
 * **[!UICONTROL 包含區段名稱]**：如果要讓資料匯出包含您匯出的對象名稱，請切換選項。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 * **[!UICONTROL 包含區段時間戳記]**：若要讓資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 
@@ -145,7 +145,7 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 

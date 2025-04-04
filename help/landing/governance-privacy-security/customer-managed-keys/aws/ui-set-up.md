@@ -1,22 +1,23 @@
 ---
-title: 使用平台UI透過AWS設定及設定客戶自控金鑰
+title: 使用Experience Platform UI透過AWS設定及設定客戶自控金鑰
 description: 瞭解如何使用Amazon資源名稱(ARN)設定您的CMK應用程式，並將您的加密金鑰ID傳送至Adobe Experience Platform。
-source-git-commit: e67aed9e8072bcd531d5aa6ce5b631c910a1812a
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
 
-# 使用平台UI透過AWS設定及設定客戶自控金鑰
+# 使用Experience Platform UI透過AWS設定及設定客戶自控金鑰
 
-使用本指南，透過Platform UI為AWS上託管的Platform執行個體啟用客戶自控金鑰(CMK)。
+使用本指南，透過Experience Platform UI為AWS上託管的Experience Platform執行個體啟用客戶自控金鑰(CMK)。
 
 >[!IMPORTANT]
 >
 >繼續進行本指南之前，請確定您已完成[&#39;為CMK設定AWS KMS&#39;](./configure-kms.md)檔案中詳述的設定。
 
-## 更新AWS金鑰原則，以整合金鑰與Experience Platform
+## 更新AWS金鑰政策，以整合金鑰與Experience Platform
 
 若要將您的AWS金鑰與Experience Platform整合，您必須在KMS工作區的「**[!DNL Key Policy]**」區段中編輯JSON。 預設金鑰原則看起來類似於以下JSON。
 
@@ -40,11 +41,11 @@ ht-degree: 0%
 }
 ```
 
-在上述範例中，相同帳戶(`Principal.AWS`)內的所有資源(`"Resource": "*"`)都可以存取金鑰。 此原則允許帳戶中的服務執行加密和解密作業，但僅限於指定的帳戶。 若要授與您Platform單一租使用者帳戶對此金鑰的存取權，請將新陳述式新增至預設的AWS原則。 您可以從Platform UI取得必要的JSON原則，並將其套用至您的AWS KMS金鑰，以建立與Adobe Experience Platform的安全連線。
+在上述範例中，相同帳戶(`Principal.AWS`)內的所有資源(`"Resource": "*"`)都可以存取金鑰。 此原則允許帳戶中的服務執行加密和解密作業，但僅限於指定的帳戶。 若要授與您的Experience Platform單一租使用者帳戶對此金鑰的存取權，請將新陳述式新增至預設的AWS原則。 您可以從Experience Platform UI取得必要的JSON原則，並將其套用至您的AWS KMS金鑰，以與Adobe Experience Platform建立安全連線。
 
-在Platform UI中，前往左側導覽邊欄中的&#x200B;**[!UICONTROL 管理]**&#x200B;區段，然後選取&#x200B;**[!UICONTROL 加密]**。 在[!UICONTROL 加密組態]工作區中，選取[!UICONTROL 客戶自控金鑰]卡片中的&#x200B;**[!UICONTROL 組態]**。
+在Experience Platform UI中，前往左側導覽邊欄中的&#x200B;**[!UICONTROL 管理]**&#x200B;區段，然後選取&#x200B;**[!UICONTROL 加密]**。 在[!UICONTROL 加密組態]工作區中，選取[!UICONTROL 客戶自控金鑰]卡片中的&#x200B;**[!UICONTROL 組態]**。
 
-![具有設定的Platform Encryption Configuration Workspace在[客戶管理的金鑰]卡中反白顯示。](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![客戶自控金鑰卡中醒目提示設定的Experience Platform加密設定工作區。](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 [!UICONTROL Customer Managed Keys組態]出現。 從[!UICONTROL 客戶受管理金鑰] [!UICONTROL 加密組態]中顯示的CMK KMS原則複製`statement`物件。
 
@@ -159,9 +160,9 @@ ht-degree: 0%
 
 AWS [!DNL Key Management Service]的已更新[!DNL Customer Managed Keys]工作區隨即顯示。
 
-### 將AWS加密金鑰詳細資料新增至平台
+### 將AWS加密金鑰詳細資料新增至Experience Platform
 
-接下來，若要啟用加密，請將金鑰的Amazon資源名稱(ARN)新增至您的平台[!UICONTROL 客戶自控金鑰組態]。 在AWS的[!DNL Customer Managed Keys]區段中，從[!DNL Key Management Service]的清單中選取新金鑰的別名。
+接下來，若要啟用加密，請將金鑰的Amazon資源名稱(ARN)新增至您的Experience Platform [!UICONTROL 客戶自控金鑰組態]。 在AWS的[!DNL Customer Managed Keys]區段中，從[!DNL Key Management Service]的清單中選取新金鑰的別名。
 
 ![反白顯示新金鑰別名的AWS KMS客戶自控金鑰工作區。](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -172,17 +173,17 @@ AWS [!DNL Key Management Service]的已更新[!DNL Customer Managed Keys]工作�
 
 ![醒目提示ARN的AWS KMS客戶管理金鑰的金鑰詳細資料。](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-現在，導覽回平台[!UICONTROL 客戶自控金鑰組態] UI。 在&#x200B;**[!UICONTROL 新增AWS加密金鑰詳細資料]**&#x200B;區段中，新增您從AWS UI複製的&#x200B;**[!UICONTROL 設定名稱]**&#x200B;和&#x200B;**[!UICONTROL KMS金鑰ARN]**。
+現在，導覽回Experience Platform [!UICONTROL 客戶自控金鑰組態] UI。 在&#x200B;**[!UICONTROL 新增AWS加密金鑰詳細資料]**&#x200B;區段中，新增您從AWS UI複製的&#x200B;**[!UICONTROL 設定名稱]**&#x200B;和&#x200B;**[!UICONTROL KMS金鑰ARN]**。
 
-![新增AWS加密金鑰詳細資訊區段中反白顯示具有設定名稱和KMS金鑰ARN的平台加密設定工作區。](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![新增Experience Platform加密金鑰詳細資訊區段中反白顯示設定名稱和KMS金鑰ARN的AWS加密設定工作區。](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 接著，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以提交組態名稱、KMS金鑰ARN，並開始驗證金鑰。
 
-![已反白儲存的平台加密設定工作區。](../../../images/governance-privacy-security/key-management-service/save.png)
+![已反白儲存的Experience Platform加密設定工作區。](../../../images/governance-privacy-security/key-management-service/save.png)
 
 您返回[!UICONTROL 加密設定]工作區。 加密組態的狀態會顯示在&#x200B;**[!UICONTROL 客戶受管理的金鑰]**&#x200B;卡片底部。
 
-![在客戶自控金鑰卡上反白顯示處理功能的平台UI中的加密設定工作區。](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![客戶自控金鑰卡上反白顯示的Experience Platform UI處理中的加密設定工作區。](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 在驗證金鑰後，金鑰儲存庫識別碼將新增到所有沙箱的Data Lake和設定檔資料存放區。
 
@@ -198,7 +199,7 @@ AWS [!DNL Key Management Service]的已更新[!DNL Customer Managed Keys]工作�
 
 以下是金鑰撤銷的主要考量事項：
 
-- 撤銷或停用金鑰將會使您的Platform資料無法存取。 此動作不可逆，應謹慎執行。
+- 撤銷或停用金鑰將會使您的Experience Platform資料無法存取。 此動作不可逆，應謹慎執行。
 - 在撤銷加密金鑰存取權時，請考慮傳輸時間表。 主要資料存放區在幾分鐘到24小時內變得無法存取。 快取或暫時性資料存放區在7天內無法存取。
 
 若要撤銷金鑰，請導覽至AWS KMS工作區。 **[!DNL Customer managed keys]**&#x200B;區段會顯示您AWS帳戶的所有可用金鑰。 從清單中選取金鑰的別名。
@@ -209,7 +210,7 @@ AWS [!DNL Key Management Service]的已更新[!DNL Customer Managed Keys]工作�
 
 ![AWS KMS UI中AWS金鑰的詳細資料，其中的「金鑰動作」和「停用」會反白顯示。](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-確認對話方塊隨即顯示。 選取&#x200B;**[!DNL Disable key]**&#x200B;以確認您的選擇。 大約五分鐘內，Platform應用程式和UI應會反映停用金鑰的影響。
+確認對話方塊隨即顯示。 選取&#x200B;**[!DNL Disable key]**&#x200B;以確認您的選擇。 停用索引鍵的影響應在約五分鐘內反映在Experience Platform應用程式和UI中。
 
 >[!NOTE]
 >
@@ -221,7 +222,7 @@ AWS [!DNL Key Management Service]的已更新[!DNL Customer Managed Keys]工作�
 
 ![在[金鑰原則]區段中反白顯示[編輯的AWS金鑰的詳細資訊區段。](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-**[!DNL Edit key policy]**&#x200B;頁面隨即顯示。 反白標示並刪除從平台UI複製的原則宣告，以移除客戶自控金鑰應用程式的許可權。 然後，選取&#x200B;**[!DNL Save changes]**&#x200B;以完成程式。
+**[!DNL Edit key policy]**&#x200B;頁面隨即顯示。 反白標示並刪除從Experience Platform UI複製的原則宣告，以移除客戶自控金鑰應用程式的許可權。 然後，選取&#x200B;**[!DNL Save changes]**&#x200B;以完成程式。
 
 ![AWS上的Edit key policy workspace以陳述式JSON物件和Save變更強調顯示。](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 

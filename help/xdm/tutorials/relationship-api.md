@@ -4,7 +4,7 @@ title: 使用結構描述登入API定義兩個結構描述之間的關係
 description: 本檔案提供教學課程，說明如何使用Schema Registry API定義由您的組織定義之兩個結構描述間的一對一關係。
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 1%
@@ -27,10 +27,10 @@ ht-degree: 1%
 
 此教學課程需要實際瞭解[!DNL Experience Data Model] (XDM)和[!DNL XDM System]。 在開始本教學課程之前，請先檢閱下列檔案：
 
-* Experience Platform](../home.md)中的[XDM系統： [!DNL Experience Platform]中XDM及其實作的概觀。
+* Experience Platform中的[XDM系統](../home.md)： [!DNL Experience Platform]中XDM及其實作的概觀。
    * [結構描述組合的基本概念](../schema/composition.md)： XDM結構描述的建置區塊簡介。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
-* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 開始進行此教學課程之前，請檢閱[開發人員指南](../api/getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫[!DNL Schema Registry] API。 這包括您的`{TENANT_ID}`、「容器」的概念以及發出要求所需的標頭（特別注意[!DNL Accept]標頭及其可能的值）。
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 >
 >為了建立關聯性，兩個結構描述都必須定義主要身分並啟用[!DNL Real-Time Customer Profile]。 如果您需要如何適當地設定結構描述的指引，請參閱結構描述建立教學課程中[啟用結構描述以用於設定檔](./create-schema-api.md#profile)的區段。
 
-若要定義兩個結構描述之間的關係，您必須先取得兩個結構描述的`$id`值。 如果您知道結構描述的顯示名稱(`title`)，您可以向[!DNL Schema Registry] API中的`/tenant/schemas`端點發出GET要求來尋找其`$id`值。
+若要定義兩個結構描述之間的關係，您必須先取得兩個結構描述的`$id`值。 如果您知道結構描述的顯示名稱(`title`)，您可以對[!DNL Schema Registry] API中的`/tenant/schemas`端點發出GET要求來尋找其`$id`值。
 
 **API格式**
 
@@ -126,7 +126,7 @@ curl -X GET \
 
 ### 建立新的欄位群組
 
-為了將新欄位新增到結構描述，必須首先在欄位群組中定義它。 您可以向`/tenant/fieldgroups`端點發出POST要求，以建立新的欄位群組。
+為了將新欄位新增到結構描述，必須首先在欄位群組中定義它。 您可以對`/tenant/fieldgroups`端點發出POST要求，以建立新的欄位群組。
 
 **API格式**
 
@@ -238,7 +238,7 @@ curl -X POST\
 
 ### 將欄位群組新增至來源結構描述
 
-建立欄位群組後，您可以對`/tenant/schemas/{SCHEMA_ID}`端點發出PATCH要求，將其新增至來源結構描述。
+建立欄位群組後，您可以對`/tenant/schemas/{SCHEMA_ID}`端點發出PATCH請求，將其新增至來源結構描述。
 
 **API格式**
 
@@ -405,7 +405,7 @@ curl -X POST \
 
 ## 建立關係描述項 {#create-descriptor}
 
-關係描述元在來源結構描述和參考結構描述之間建立一對一的關係。 一旦您在來源結構描述中定義了適當欄位的參考身分描述項，您就可以對`/tenant/descriptors`端點發出POST要求來建立新的關係描述項。
+關係描述元在來源結構描述和參考結構描述之間建立一對一的關係。 一旦您在來源結構描述中定義了適當欄位的參考身分描述項，您就可以對`/tenant/descriptors`端點發出POST要求，以建立新的關係描述項。
 
 **API格式**
 

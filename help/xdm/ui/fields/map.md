@@ -2,9 +2,9 @@
 title: 在UI中定義對應欄位
 description: 瞭解如何在Experience Platform使用者介面中定義對應欄位。
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Adobe Experience Platform可讓您完全自訂自訂Experience Data Model (XDM)�
 
 您也可以在結構描述編輯器中定義對應欄位，以模型化和動態資料結構，或儲存索引鍵值配對的集合。
 
-在Platform使用者介面(UI)中定義新欄位時，請使用&#x200B;**[!UICONTROL Type]**&#x200B;下拉式清單，並從清單中選取&#x200B;**[!UICONTROL Map]**。
+在Experience Platform使用者介面(UI)中定義新欄位時，請使用&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單，然後從清單中選取&#x200B;**[!UICONTROL 地圖]**。
 
 ![包含反白顯示的[型別]下拉式清單和[對應]值的結構描述編輯器。](../../images/ui/fields/special/map.png)
 
@@ -44,10 +44,10 @@ XDM對於此資料型別的使用有下列限制：
 
 >[!NOTE]
 >
->Platform UI在擷取對應型別欄位索引鍵的方式上有所限制。 雖然物件型別欄位可以展開，但地圖會顯示為單一欄位。 透過Schema Registry API建立的非字串或整數資料型別的對應欄位會顯示為&quot;[!UICONTROL 複雜]&quot;資料型別。
+>Experience Platform UI在擷取對應型別欄位索引鍵的方式上有所限制。 雖然物件型別欄位可以展開，但地圖會顯示為單一欄位。 透過Schema Registry API建立的非字串或整數資料型別的對應欄位會顯示為&quot;[!UICONTROL 複雜]&quot;資料型別。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在可以在Platform UI中定義對應欄位。 請記住，您只能使用類別和欄位群組來將欄位新增到結構描述。 若要進一步瞭解如何在UI中管理這些資源，請參閱建立和編輯[類別](../resources/classes.md)和[欄位群組](../resources/field-groups.md)的指南。
+閱讀本檔案後，您現在可以在Experience Platform UI中定義對應欄位。 請記住，您只能使用類別和欄位群組來將欄位新增到結構描述。 若要進一步瞭解如何在UI中管理這些資源，請參閱建立和編輯[類別](../resources/classes.md)和[欄位群組](../resources/field-groups.md)的指南。
 
 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。

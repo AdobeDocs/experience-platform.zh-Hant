@@ -3,9 +3,9 @@ title: 啟用串流目的地的受眾資料
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的受眾對應至串流目的地來啟用這些受眾。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 6%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 6%
 您可以根據對象的來源，從多種對象型別中進行選取：
 
 * **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
+* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Experience Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
 * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
 ![選取對象步驟中反白顯示的幾個對象。](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -125,7 +125,7 @@ ht-degree: 6%
 
      ![反白顯示對應ID下拉式清單。](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * 部分目的地會要求您手動將[!DNL Platform]對象對應至目標目的地中的對應對象。 若要這麼做，請選取每個對象，然後在&#x200B;**[!UICONTROL 對應ID]**&#x200B;欄位中輸入目的地平台中的對應對象ID。 如果您的目的地不包含此欄位，請略過此步驟。
+   * 部分目的地會要求您手動將[!DNL Experience Platform]對象對應至目標目的地中的對應對象。 若要這麼做，請選取每個對象，然後在&#x200B;**[!UICONTROL 對應ID]**&#x200B;欄位中輸入目的地平台中的對應對象ID。 如果您的目的地不包含此欄位，請略過此步驟。
 
      ![醒目提示的對象來源下拉式清單。](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
@@ -135,7 +135,7 @@ ht-degree: 6%
 
 1. 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以移至[!UICONTROL 檢閱]頁面。
 
-## 檢閱 {#review}
+## 審核 {#review}
 
 在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或選取&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 
@@ -143,7 +143,7 @@ ht-degree: 6%
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個輪廓。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 

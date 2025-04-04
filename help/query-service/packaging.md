@@ -2,9 +2,9 @@
 title: 查詢服務封裝
 description: 以下檔案概述查詢服務可用功能和產品的包裝，並著重說明隨機查詢和批次查詢之間的差異。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 2%
 
 根據可以執行的查詢模式，Adobe Experience Platform查詢服務可以分成兩個功能：
 
-- **隨機查詢**&#x200B;是用於探索用於驗證、驗證、實驗等擷取資料集的SQL查詢。 這些查詢不會將資料寫回Platform資料湖。
-- **批次查詢**&#x200B;是用於執行擷取資料集的擷取後處理的SQL查詢。 這些查詢會清除、調整、操縱及擴充資料，且結果會回寫至Platform Data Lake。 這些查詢可以作為批次作業進行排程、管理和監視。
+- **隨機查詢**&#x200B;是用於探索用於驗證、驗證、實驗等擷取資料集的SQL查詢。 這些查詢不會將資料寫回Experience Platform Data Lake。
+- **批次查詢**&#x200B;是用於執行擷取資料集的擷取後處理的SQL查詢。 這些查詢會清除、調整、操縱及擴充資料，且結果會回寫至Experience Platform資料湖。 這些查詢可以作為批次作業進行排程、管理和監視。
 
 查詢服務功能會與下列產品和附加元件一起封裝：
 
-- **以平台為基礎的應用程式** (Adobe Real-time Customer Data Platform、Adobe Customer Journey Analytics和Adobe Journey Optimizer)：從一開始就會針對以平台為基礎的應用程式的每個變數和階層，提供查詢服務存取權以執行ad hoc查詢。
+- **以Experience Platform為基礎的應用程式** (Adobe Real-Time Customer Data Platform、Adobe Customer Journey Analytics和Adobe Journey Optimizer)：從Experience Platform為基礎的應用程式的每個變數和層級，都會從一開始提供查詢服務存取權，以執行Ad Hoc Query。
 - **[!DNL Data Distiller]** (可與Adobe Real-Time CDP、Customer Journey Analytics和Adobe Journey Optimizer一起購買的附加元件套件)： [!DNL Data Distiller]提供執行批次查詢的查詢服務存取權。
 
 ## 權益 {#entitlements}
 
 下表根據封裝方式概述主要查詢服務權益：
 
-| 查詢服務權益 | 與平台式應用程式封裝 | 已使用[!DNL Data Distiller]封裝 |
+| 查詢服務權益 | 與Experience Platform應用程式封裝 | 已使用[!DNL Data Distiller]封裝 |
 |---|---|---|
 | 支援的查詢模式 | 僅限特定查詢 | 批次查詢 |
 | 支援的使用案例 | <ul><li>探索&#x200B;</li><li>資料探索&#x200B;</li><li>資料驗證</li><li>實驗</li></ul> | <ul><li>清潔</li><li>塑形</li><li>操控</li><li>充實</li></ul> |
@@ -50,7 +50,7 @@ ht-degree: 2%
 
 ## 存取控制 {#access-control}
 
-Experience Platform的存取控制是透過[Adobe Admin Console](https://adminconsole.adobe.com/)管理，其中產品設定檔會連結具有許可權和沙箱的使用者。 如需詳細資訊，請參閱[存取控制總覽](../access-control/home.md)。
+Experience Platform的存取控制是透過[Adobe Admin Console](https://adminconsole.adobe.com/)管理，其中產品設定檔會將使用者與許可權和沙箱連結。 如需詳細資訊，請參閱[存取控制總覽](../access-control/home.md)。
 
 請參閱產品設定檔的[管理許可權](../access-control/ui/permissions.md)以及產品設定檔的[管理使用者](../access-control/ui/users.md)檔案，以取得要求存取產品設定檔許可權的詳細說明
 
@@ -69,7 +69,7 @@ Experience Platform的存取控制是透過[Adobe Admin Console](https://adminco
 
 ### 相關的SQL深入分析許可權 {#sql-insights-permissions}
 
-若要在儀表板中建立資料Distiller [SQL Insights](./data-distiller/sql-insights/overview.md)，必須在Admin Console中啟用下列許可權&#x200B;****。
+若要在儀表板中建立資料Distiller [SQL深入分析](./data-distiller/sql-insights/overview.md)，必須在Admin Console中啟用下列許可權&#x200B;****。
 
 | 權限 | 函數 |
 |---|---|
@@ -80,7 +80,7 @@ Experience Platform的存取控制是透過[Adobe Admin Console](https://adminco
 
 ## 沙箱支援 {#sandbox-support}
 
-沙箱是單一Experience Platform執行個體中的虛擬分割區。 每個Platform執行個體支援多個生產和非生產沙箱，每個沙箱都維護自己的Platform資源庫。 非生產沙箱可讓您測試功能、執行實驗並進行自訂設定，而不會影響您的生產沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。 所有查詢服務許可權會在所有沙箱之間共用。
+沙箱是單一Experience Platform執行個體中的虛擬分割區。 每個Experience Platform執行個體都支援多個生產和非生產沙箱，每個沙箱都會維護自己的Experience Platform資源資料庫。 非生產沙箱可讓您測試功能、執行實驗並進行自訂設定，而不會影響您的生產沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。 所有查詢服務許可權會在所有沙箱之間共用。
 
 ## 後續步驟
 

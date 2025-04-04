@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1692'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 
 ## 快速入門 {#getting-started}
 
-在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**&#x200B;以開啟[!UICONTROL 結構描述]工作區，然後選取&#x200B;**[!UICONTROL 類別]**&#x200B;索引標籤。 會顯示可用類別的清單。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**&#x200B;以開啟[!UICONTROL 結構描述]工作區，然後選取&#x200B;**[!UICONTROL 類別]**&#x200B;索引標籤。 會顯示可用類別的清單。
 
 ![在[!UICONTROL 結構描述]工作區[!UICONTROL 類別]和[!UICONTROL 結構描述]的[!UICONTROL 類別]標籤內的類別已反白。](../../images/ui/resources/classes/available-classes.png)
 
@@ -48,7 +48,7 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 
 ## 建立新類別 {#create}
 
-在Platform UI中建立類別的方法有兩種：透過&#x200B;**[!UICONTROL Create class]**&#x200B;或&#x200B;**[!UICONTROL Create schema]**。
+在Experience Platform UI中建立類別的方法有兩種：透過&#x200B;**[!UICONTROL 建立類別]**&#x200B;或&#x200B;**[!UICONTROL 建立結構描述]**。
 
 ### 建立類別
 
@@ -156,6 +156,6 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 
 ## 後續步驟 {#next-steps}
 
-本檔案說明如何使用Platform UI建立和編輯類別。 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
+本檔案說明如何使用Experience Platform UI建立和編輯類別。 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
 
 若要瞭解如何使用Schema Registry API管理類別，請參閱[類別端點指南](../../api/classes.md)。

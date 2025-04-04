@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Pinterest Ads；
-title: pinterest Ads Source概觀
+title: Pinterest Ads Source概觀
 description: 瞭解如何使用API或使用者介面將Pinterest Ads連結至Adobe Experience Platform。
 badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 1%
 >
 >[!DNL Pinterest Ads]來源是測試版。 閱讀[來源概觀](../../home.md#terms-and-conditions)，瞭解使用Beta標籤聯結器的詳細資訊。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提供者的支援包括[!DNL Pinterest Ads]。
 
-[[!DNL Pinterest]](https://www.pinterest.com)是視覺化探索引擎，可在網路上尋找配方、家庭裝飾、風格靈感和其他創意。 這些以小比例呈現，使用插接板格式的影像、動畫GIF和影片。 [[!DNL Pinterest Ads]](https://ads.pinterest.com/)可讓您使用[!DNL Pinterest]發展業務並觸及4億人。
+[[!DNL Pinterest]](https://www.pinterest.com)是視覺化探索引擎，可在網路上尋找配方、家庭裝飾、風格靈感和其他創意。 這些以小比例呈現，使用插接板格式的影像、動畫GIF和視訊。 [[!DNL Pinterest Ads]](https://ads.pinterest.com/)可讓您使用[!DNL Pinterest]發展業務並觸及4億人。
 
 透過[!DNL Pinterest Ads]，您可以透過目標廣告觸及使用者，以探索及購買您的產品。 來自[!DNL Pinterest Ads]的圖釘已贊助以在相關搜尋結果中取得額外的曝光。 訂閱[!DNL Pinterest Business]的使用者可選擇提升現有表現最佳的釘選、建立新的影像或影片，或甚至提升已從網站釘選的影像。 [!DNL Pinterest Ads]提供多種廣告格式，協助您達成特定的行銷活動目標。
 
@@ -35,7 +35,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提
 * [廣告群組分析](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
 * [廣告分析](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
-使用[!DNL Pinterest Ads]來源將您的資料從[!DNL Pinterest]帶入Experience Platform，然後您可以在此執行資料分析。 日期回溯範圍為90天的資料會從擷取日期開始傳回。 [!DNL Pinterest Ads]使用持有人權杖作為驗證機制來與[!DNL Pinterest] API通訊。
+使用[!DNL Pinterest Ads]來源將您的資料從[!DNL Pinterest]帶到Experience Platform，您接著可以在其中執行資料分析。 日期回溯範圍為90天的資料會從擷取日期開始傳回。 [!DNL Pinterest Ads]使用持有人權杖作為驗證機制來與[!DNL Pinterest] API通訊。
 
 ## 先決條件 {#prerequisites}
 
@@ -51,7 +51,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提
 
 ### 收集必要的認證 {#gather-required-credentials}
 
-為了將[!DNL Pinterest Ads]連線到Platform，您必須提供下列連線屬性的值：
+若要將[!DNL Pinterest Ads]連線至Experience Platform，您必須提供下列連線屬性的值：
 
 | 認證 | 說明 |
 | --- | --- |
@@ -87,7 +87,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提
 
 [!DNL Pinterest] API支援各種時間粒度，以便擷取資料：
 
-| 時間粒度 | 說明 |
+| 時間詳細程度 | 說明 |
 | --- | --- |
 | **總計** | 資料量度會在指定的日期範圍內彙總。 |
 | **天** | 資料量度每天都會劃分。 |
@@ -95,23 +95,23 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提
 | **每週** | 資料量度每週都會劃分。 |
 | **每月** | 資料量度每月都會劃分。 |
 
-針對Platform，[!DNL Pinterest Ads]來源在內部設定為`Day`，這表示資料將會每日彙總。 例如，使用`impressions recorded`做為量度，因為詳細程度設定為`DAY`，您將會在`day 1`上取得`xx`次曝光數，在`day 2`上取得`yy`次曝光數，以此類推。
+針對Experience Platform，[!DNL Pinterest Ads]來源在內部設定為`Day`，這表示資料將會每日彙總。 例如，使用`impressions recorded`做為量度，因為詳細程度設定為`DAY`，您將會在`day 1`上取得`xx`次曝光數，在`day 2`上取得`yy`次曝光數，以此類推。
 
 >[!IMPORTANT]
 >
->pinterest會對其API施加每日1000次API呼叫的速率限制，以從廣告、廣告群組或廣告行銷活動中讀取資訊。 如需適用於基礎API呼叫的速率限制資訊，請參閱[[!DNL Pinterest] 有關速率限制](https://developers.pinterest.com/docs/reference/ratelimits/)的檔案。
+>Pinterest會對其API施加每日1000次API呼叫的速率限制，以從廣告、廣告群組或廣告行銷活動中讀取資訊。 如需適用於基礎API呼叫的速率限制資訊，請參閱[[!DNL Pinterest] 有關速率限制](https://developers.pinterest.com/docs/reference/ratelimits/)的檔案。
 
-## 將[!DNL Pinterest Ads]連線至平台 {#connect-to-platform}
+## 將[!DNL Pinterest Ads]連線至Experience Platform {#connect-to-platform}
 
-以下檔案提供如何使用API或使用者介面將[!DNL Pinterest Ads]連線到Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Pinterest Ads]連線至Experience Platform的資訊：
 
-### 使用API連線[!DNL Pinterest Ads]至平台 {#connect-to-platform-using-api}
+### 使用API連線[!DNL Pinterest Ads]至Experience Platform {#connect-to-platform-using-api}
 
 * [使用Flow Service API建立Pinterest基本連線](../../tutorials/api/create/advertising/pinterest-ads.md)
 * [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 * [使用流量服務API為廣告來源建立資料流](../../tutorials/api/collect/advertising.md)
 
-### 使用UI連線[!DNL Pinterest Ads]至平台 {#connect-to-platform-using-ui}
+### 使用UI連線[!DNL Pinterest Ads]至Experience Platform {#connect-to-platform-using-ui}
 
 * [在UI中建立Pinterest來源連線](../../tutorials/ui/create/advertising/pinterest-ads.md)
 * [在UI中為Advertising來源連線建立資料流](../../tutorials/ui/dataflow/advertising.md)

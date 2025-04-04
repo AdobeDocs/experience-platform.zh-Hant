@@ -1,30 +1,30 @@
 ---
-description: 此頁面是用來透過Adobe Experience Platform Destination SDK建立目的地伺服器的API呼叫的範例。
+description: 此頁面是透過Adobe Experience Platform Destination SDK建立目的地伺服器所使用的API呼叫範例。
 title: 建立目的地伺服器組態
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2036'
+source-wordcount: '2040'
 ht-degree: 5%
 
 ---
 
 # 建立目的地伺服器組態
 
-使用Destination SDK建立自己的目的地時，第一步是建立目的地伺服器。 目的地伺服器包含[伺服器](../../functionality/destination-server/server-specs.md)和[範本](../../functionality/destination-server/templating-specs.md)規格的組態選項、[訊息格式](../../functionality/destination-server/message-format.md)以及[檔案格式](../../functionality/destination-server/file-formatting.md)選項（適用於檔案型目的地）。
+使用Destination SDK建立自己的目的地時，第一步便是建立目的地伺服器。 目的地伺服器包含[伺服器](../../functionality/destination-server/server-specs.md)和[範本](../../functionality/destination-server/templating-specs.md)規格的組態選項、[訊息格式](../../functionality/destination-server/message-format.md)以及[檔案格式](../../functionality/destination-server/file-formatting.md)選項（適用於檔案型目的地）。
 
 此頁面是您可用來使用`/authoring/destination-servers` API端點建立自己的目的地伺服器的API要求與裝載範例。
 
 如需可透過此端點設定的功能的詳細說明，請參閱以下文章：
 
-* [以Destination SDK建立的目的地的伺服器規格](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [使用Destination SDK建立之目的地的伺服器規格](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [使用Destination SDK建立之目的地的範本規格](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [訊息格式](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [檔案格式設定](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
@@ -96,11 +96,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 字串 | *必要。*&#x200B;代表您伺服器的易記名稱，僅對Adobe可見。 合作夥伴或客戶看不到此名稱。 範例`Moviestar destination server`。 |
 | `destinationServerType` | 字串 | *必要。針對即時（串流）目的地，*&#x200B;設為`URL_BASED`。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似`https://api.moviestar.com/data/{{customerData.region}}/items`的端點，其中`region`部分可以因客戶而異，請使用此選項。 在此情況下，您也需要將`region`設定為[目的地設定](../destination-configuration/create-destination-configuration.md)中的[客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似`https://api.moviestar.com/data/{{customerData.region}}/items`的端點，其中`region`部分可以因客戶而異，請使用此選項。 在此情況下，您也需要將`region`設定為[目的地設定]&#x200B;(../destination-configuration/create-destination-configuration.md)中的[客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必要。*&#x200B;填入Experience Platform應連線的API端點位址。 |
-| `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在伺服器呼叫中使用的方法。 選項為`GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
+| `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 選項為`GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
 | `httpTemplate.requestBody.templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
-| `httpTemplate.requestBody.value` | 字串 | *必要。*&#x200B;此字串是字元逸出版本，可將Platform客戶的資料轉換為您服務預期的格式。<br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀[使用範本區段](../../functionality/destination-server/message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 </li><li> 如需簡單轉換的範例，請參閱[設定檔屬性](../../functionality/destination-server/message-format.md#attributes)轉換。 </li></ul> |
+| `httpTemplate.requestBody.value` | 字串 | *必要。*&#x200B;此字串是字元逸出版本，會將Experience Platform客戶的資料轉換為您服務預期的格式。<br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀[使用範本區段](../../functionality/destination-server/message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 </li><li> 如需簡單轉換的範例，請參閱[設定檔屬性](../../functionality/destination-server/message-format.md#attributes)轉換。 </li></ul> |
 | `httpTemplate.contentType` | 字串 | *必要。*&#x200B;您的伺服器接受的內容型別。 此值很可能為`application/json`。 |
 
 {style="table-layout:auto"}
@@ -826,13 +826,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `name` | 字串 | *必要。*&#x200B;代表動態結構描述伺服器的易記名稱，僅對Adobe可見。 |
+| `name` | 字串 | *必要。*&#x200B;代表您的動態結構描述伺服器的易記名稱，僅對Adobe可見。 |
 | `destinationServerType` | 字串 | *必要。動態結構描述伺服器的*&#x200B;設定為`URL_BASED`。 |
 | `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必要。*&#x200B;填入Experience Platform應連線的API端點位址，並擷取結構描述欄位，以填入為啟動工作流程對應步驟中的目標欄位。 |
-| `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在伺服器呼叫中使用的方法。 對於動態結構描述伺服器，請使用`GET`。 |
+| `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 對於動態結構描述伺服器，請使用`GET`。 |
 | `responseFields.templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
-| `responseFields.value` | 字串 | *必要。*&#x200B;此字串是字元逸出轉換範本，可將從合作夥伴API收到的回應轉換為將顯示在平台UI中的合作夥伴結構描述。<br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀[使用範本區段](../../functionality/destination-server/message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 </li><li> 如需簡單轉換的範例，請參閱[設定檔屬性](../../functionality/destination-server/message-format.md#attributes)轉換。 </li></ul> |
+| `responseFields.value` | 字串 | *必要。*&#x200B;此字串是字元逸出轉換範本，可將從合作夥伴API收到的回應轉換為將顯示在Experience Platform UI中的合作夥伴結構描述。<br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀[使用範本區段](../../functionality/destination-server/message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 </li><li> 如需簡單轉換的範例，請參閱[設定檔屬性](../../functionality/destination-server/message-format.md#attributes)轉換。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -927,10 +927,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationServerType` | 字串 | *必要。動態下拉式伺服器的*&#x200B;設定為`URL_BASED`。 |
 | `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必要。*&#x200B;填入Experience Platform應連線的API端點位址並擷取下拉式清單值。 |
-| `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在伺服器呼叫中使用的方法。 對於動態下拉式伺服器，請使用`GET`。 |
+| `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 對於動態下拉式伺服器，請使用`GET`。 |
 | `httpTemplate.headers` | 物件 | *Optiona.l*&#x200B;包含連線至動態下拉式伺服器所需的任何標頭。 |
 | `responseFields.templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
-| `responseFields.value` | 字串 | *必要。*&#x200B;此字串是字元逸出轉換範本，可將從API收到的回應轉換為將顯示在平台UI中的值。<br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀[使用範本區段](../../functionality/destination-server/message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 |
+| `responseFields.value` | 字串 | *必要。*&#x200B;此字串是字元逸出轉換範本，可將從API收到的回應轉換為將顯示在Experience Platform UI中的值。<br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀[使用範本區段](../../functionality/destination-server/message-format.md#using-templating)。 </li><li> 如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 |
 
 {style="table-layout:auto"}
 
@@ -946,11 +946,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀此檔案後，您現在知道如何透過Destination SDK`/authoring/destination-servers` API端點建立新的目的地伺服器。
+閱讀本檔案後，您現在知道如何透過Destination SDK `/authoring/destination-servers` API端點建立新的目的地伺服器。
 
 若要深入瞭解您可以使用此端點的功能，請參閱下列文章：
 
@@ -961,4 +961,4 @@ Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則�
 若要瞭解此端點適用於目標製作程式的位置，請參閱下列文章：
 
 * [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-server-template-configuration)
-* [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
+* [使用Destination SDK設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)

@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1267'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)。
 
 Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能會將事件傳送至Mailchimp行銷API，可觸發Mailchimp行銷活動、歷程或交易的電子郵件。
 
@@ -101,19 +101,19 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能�
 
 擴充功能現已安裝並設定為可在您的屬性中使用。
 
-## 資料收集
+## 資料彙集
 
-在[規則](../../../ui/managing-resources/rules.md)中使用此擴充功能時，擴充功能會隨著每個事件傳送數個資料值給Mailchimp。 對於一般實作，您可以設定[Adobe Experience Platform Web SDK擴充功能](../../client/web-sdk/overview.md)將該資料傳送至[!DNL Platform Edge Network]，供擴充功能在事件轉送屬性中使用。
+在[規則](../../../ui/managing-resources/rules.md)中使用此擴充功能時，擴充功能會隨著每個事件傳送數個資料值給Mailchimp。 對於一般實作，您可以設定[Adobe Experience Platform Web SDK擴充功能](../../client/web-sdk/overview.md)將該資料傳送至[!DNL Experience Platform Edge Network]，以供擴充功能在事件轉送屬性中使用。
 
-此擴充功能所需的資料可從Web SDK以XDM資料（使用[`xdm`](/help/web-sdk/commands/sendevent/xdm.md)物件）或非XDM資料（使用[`data`](/help/web-sdk/commands/sendevent/data.md)物件）傳送。
+此擴充功能所需的資料可透過XDM資料（使用[`xdm`](/help/web-sdk/commands/sendevent/xdm.md)物件）或非XDM資料（使用[`data`](/help/web-sdk/commands/sendevent/data.md)物件）從網頁SDK傳送。
 
-例如，如果客戶進行購買或在您的網站上註冊了事件，您可以使用此擴充功能透過Mailchimp傳送確認電子郵件。 從Web SDK傳送所需資訊至Edge Network後，擴充功能會透過Mailchimp觸發電子郵件。
+例如，如果客戶進行購買或在您的網站上註冊了事件，您可以使用此擴充功能透過Mailchimp傳送確認電子郵件。 一旦您將必要資訊從網頁SDK傳送到Edge Network後，擴充功能會透過Mailchimp觸發電子郵件。
 
 ![新增事件動作設定](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### 資料元素
 
-上一節中的熒幕擷圖顯示您可以與此擴充功能中每個事件一起傳送至Mailchimp的資料。 設定Web SDK將此資料傳送至Edge Network後，您可以在事件轉送屬性中建立資料元素，讓擴充功能可存取這些值。
+上一節中的熒幕擷圖顯示您可以與此擴充功能中每個事件一起傳送至Mailchimp的資料。 設定網頁SDK以將此資料傳送至Edge Network後，您可以在事件轉送屬性中建立資料元素，讓擴充功能可存取這些值。
 
 下表提供每個可能值的詳細資訊。
 
@@ -130,7 +130,7 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能�
 
 >[!IMPORTANT]
 >  
->上述&#x200B;**範例路徑**&#x200B;值僅為範例。 這些資料元素中參照的欄位名稱和[路徑](../../../ui/event-forwarding/overview.md#data-element-path)在屬性中可能會不同，具體取決於您在上述步驟中命名和設定Web SDK的方式。
+>上述&#x200B;**範例路徑**&#x200B;值僅為範例。 這些資料元素中參照的欄位名稱和[路徑](../../../ui/event-forwarding/overview.md#data-element-path)在屬性中可能會不同，具體取決於您在上面步驟中命名和設定Web SDK的方式。
 
 在事件轉送屬性中，您可以為上述每個欄位建立資料元素。 建立後，您可以參照此擴充功能之[!UICONTROL 新增事件]動作中的資料元素。
 

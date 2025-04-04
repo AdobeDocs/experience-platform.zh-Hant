@@ -2,9 +2,9 @@
 title: 引數化查詢
 description: 瞭解如何在Adobe Experience Platform UI中使用引數化查詢。
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '691'
 ht-degree: 11%
 
 ---
@@ -79,4 +79,4 @@ SELECT
 
 閱讀本檔案後，您已瞭解如何在Adobe Experience Platform UI中引數化查詢，並在排程的查詢執行中使用它們。 本檔案也重點說明如何檢查日誌中用於查詢執行的引數值。
 
-接下來，建議您閱讀[監視排定的查詢](./monitor-queries.md)的指南，以透過Platform UI更好地瞭解所有查詢工作的狀態。
+接下來，建議您閱讀[監視排程的查詢](./monitor-queries.md)指南，以透過Experience Platform UI進一步瞭解所有查詢工作的狀態。

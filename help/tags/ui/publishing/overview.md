@@ -2,10 +2,10 @@
 title: 發佈概觀
 description: 瞭解在Adobe Experience Platform中發佈變更至標籤管理程式碼程式庫的程式。
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 72%
+source-wordcount: '610'
+ht-degree: 79%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Adobe Experience Platform可讓您將變更封裝至個別程式庫內的標籤管理程式碼。 由於不同團隊現在可同時開發多個程式庫，這些程式庫在推送至生產環境前，必須依照合併變更的授權程式進行。
 
@@ -33,7 +33,7 @@ Adobe Experience Platform可讓您將變更封裝至個別程式庫內的標籤�
 | --- | --- |
 | 程式庫 | 程式庫是一組指令集，用於定義擴充功能、資料元素和規則如何相互互動並與您的網站互動。程式庫經過編譯要部署到環境時，該程式庫則會變成組建。<br><br>如需如何在 UI 中建立、管理及啟用程式庫的詳細資訊，請參閱[程式庫](./libraries.md)概觀。 |
 | 組建 | 組建是一個經過編譯的程式庫。在環境中部署時，組建提供實際的檔案集合，其中包含傳遞至各用戶瀏覽器在檢視網站時的程式碼。<br><br>如需組建內容和格式的詳細資訊，請參閱[組建](./builds.md)概觀。 |
-| 環境 | 標籤環境是一組部署指示，會告知Platform您想使用的組建格式，以及您想將該組建傳送至何處。<br><br>如需不同類型環境、如何安裝和設定現有環境，以及如何建立新環境的詳細資訊，請參閱[環境](./environments.md)概觀。 |
+| 環境 | 標籤環境是一組部署指示，會告知Experience Platform您想使用的組建格式，以及您想將該組建傳送至何處。<br><br>如需不同類型環境、如何安裝和設定現有環境，以及如何建立新環境的詳細資訊，請參閱[環境](./environments.md)概觀。 |
 | 主機 | 主機呈現環境的連線詳細資訊，以將組建遞送至您的網站。您可以選擇讓 Adobe 管理您組建的託管，或您可以提供自己的主機伺服器資訊。<br><br>如需每種託管選項的詳細資訊，請參閱[主機](./hosts/hosts-overview.md)概觀。 |
 | 用戶端程式碼 | 用戶端程式碼是指令碼集合，您可以在當中放入網站或應用程式的原始程式碼，以告知各用戶端要到哪裡擷取組建。程式碼已附加到環境中並可以在修改環境設定時變更。<br><br>如需瞭解詳細資訊，請參閱環境概觀中[內嵌程式碼](./environments.md#embed-code)的相關章節。 |
 

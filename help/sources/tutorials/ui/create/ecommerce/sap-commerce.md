@@ -3,10 +3,10 @@ title: 在使用者介面中建立SAP Commerce來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立SAP Commerce來源連線。
 badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 3%
+source-wordcount: '976'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 
 ### 收集必要的認證 {#gather-credentials}
 
-為了將[!DNL SAP Commerce]連線到Experience Platform，您必須提供下列連線屬性的值：
+若要將[!DNL SAP Commerce]連線至Experience Platform，您必須提供下列連線屬性的值：
 
 | 認證 | 說明 |
 | --- | --- |
@@ -42,9 +42,9 @@ ht-degree: 3%
 
 如需詳細資訊，請參閱[[!DNL SAP Commerce] 檔案](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html)。
 
-### 建立Platform結構描述 {#create-platform-schema}
+### 建立Experience Platform結構描述 {#create-platform-schema}
 
-在建立[!DNL SAP Commerce]來源連線之前，您也必須先建立Experience Platform結構描述以用於您的來源。 請參閱有關[建立Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程，以瞭解如何建立結構描述的完整步驟。
+在建立[!DNL SAP Commerce]來源連線之前，您也必須先建立Experience Platform結構描述以用於您的來源。 如需如何建立結構描述的完整步驟，請參閱有關[建立Experience Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程。
 
 展開下列區段以檢視結構描述範例。
 
@@ -143,13 +143,13 @@ ht-degree: 3%
 
 ## 連線您的[!DNL SAP Commerce]帳戶 {#connect-account}
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*電子商務*&#x200B;類別下，選取&#x200B;**[!UICONTROL SAP Commerce]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
-![使用SAP Commerce卡之目錄的Platform UI熒幕擷取畫面](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+使用SAP Commerce卡目錄的![Experience Platform UI熒幕擷圖](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
 **[!UICONTROL Connect SAP Commerce帳戶]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
@@ -157,17 +157,17 @@ ht-degree: 3%
 
 若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL SAP Commerce]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
 
-![用於將SAP Commerce帳戶與現有帳戶連線的平台UI熒幕擷取畫面](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+![用於將SAP Commerce帳戶與現有帳戶連線的Experience Platform UI熒幕擷取畫面](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### 新帳戶 {#new-account}
 
 如果您正在建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後提供名稱、選擇性說明和您的認證。 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**，然後等待一段時間以建立新連線。
 
-![用來連線SAP Commerce帳戶與新帳戶的平台UI熒幕擷圖](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+![用於連線SAP Commerce帳戶與新帳戶的Experience Platform UI熒幕擷圖](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### 選取資料 {#select-data}
 
-最後，您必須選取要擷取至Platform的物件型別。
+最後，您必須選取要擷取至Experience Platform的物件型別。
 
 | 物件類型 | 說明 |
 | --- | --- |
@@ -180,19 +180,19 @@ ht-degree: 3%
 
 若要內嵌客戶資料，請選取&#x200B;**[!UICONTROL 客戶]**&#x200B;作為您的物件型別，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
-![SAP Commerce的平台UI熒幕擷取畫面，顯示已選取客戶選項的組態](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+![SAP Commerce的Experience Platform UI熒幕擷取畫面，顯示已選取客戶選項的組態](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB 連絡人]
 
 若要內嵌連絡人資料，請選取&#x200B;**[!UICONTROL 連絡人]**&#x200B;作為物件型別，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
-![顯示已選取[連絡人]選項之組態的SAP Commerce平台UI熒幕擷取畫面](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+![SAP Commerce的Experience Platform UI熒幕擷取畫面顯示已選取連絡人選項的組態](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已建立與[!DNL SAP Commerce]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](../../dataflow/ecommerce.md)。
+依照本教學課程中的指示，您已建立與[!DNL SAP Commerce]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/ecommerce.md)。
 
 ## 其他資源 {#additional-resources}
 
@@ -200,7 +200,7 @@ ht-degree: 3%
 
 ### 對應 {#mapping}
 
-Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
+Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
 
 資料流的對應設定會因您的結構描述以及您選取要擷取的物件型別而異。
 

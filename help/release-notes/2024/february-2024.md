@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2024 年 2 月)
 description: Adobe Experience Platform 2024 年 2 月版發行說明。
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
-workflow-type: ht
-source-wordcount: '1244'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1248'
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ Experience Platform 現有功能的更新：
 
 ## 警示 {#alerts}
 
-Experience Platform 可讓您訂閱各種 Platform 活動的事件型警示。您可以透過 Platform 使用者介面中的「[!UICONTROL 警示]」索引標籤訂閱不同的警示規則，而且可以選擇在使用者介面本身內或透過電子郵件通知接收警示訊息。
+Experience Platform可讓您訂閱各種Experience Platform活動的事件型警報。 您可以透過Experience Platform使用者介面中的[!UICONTROL 警報]索引標籤來訂閱不同的警報規則，也可以選擇在UI本身或透過電子郵件通知來接收警報訊息。
 
 **新功能或更新功能**
 
@@ -95,7 +95,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足這種需求，Experience Platform 提供的沙箱可將單一 Platform 執行個體分割成個別的虛擬環境，以協助開發並改進數位體驗應用程式。
+Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足此需求，Experience Platform提供可將單一Experience Platform執行個體分割成個別虛擬環境的沙箱，以利開發及改進數位體驗應用程式。
 
 **新功能或更新功能**
 
@@ -109,13 +109,13 @@ Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Experience Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 帳戶客群 | 帳戶客群現已正式推出！您現在能夠使用帳戶細分功能，在 Real-Time Customer Platform 的 B2B 和 B2P 兩種版本中，將行銷細分體驗的簡易性與精密處從人員型客群完整帶至帳戶型客群中。此版本可讓您將人員型客群作為帳戶型客群的述詞、新增搜尋功能、支援自訂實體的使用情況，同時能符合資料治理規範。如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/types/account-audiences.md)。 |
+| 帳戶客群 | 帳戶客群現已正式推出！您現在可以使用帳戶細分，讓Real-Time Customer Experience Platform的B2B和B2P版本中，行銷細分體驗從以人物為基礎的對象到以帳戶為基礎的對象，變得完整而精細。 此版本可讓您將人員型客群作為帳戶型客群的述詞、新增搜尋功能、支援自訂實體的使用情況，同時能符合資料治理規範。如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/types/account-audiences.md)。 |
 
 {style="table-layout:auto"}
 

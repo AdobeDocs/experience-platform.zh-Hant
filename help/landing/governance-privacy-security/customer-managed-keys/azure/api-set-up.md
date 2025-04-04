@@ -4,16 +4,16 @@ description: 瞭解如何使用您的Azure租使用者設定您的CMK應用程�
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
 
 # 使用API為Azure設定及設定客戶自控金鑰
 
-本文介紹在Adobe Experience Platform中使用API啟用客戶自控金鑰(CMK)的Azure特定指示。 如需有關如何使用Azure代管Platform執行個體的UI完成此程式的說明，請參閱[UI CMK設定檔案](./ui-set-up.md)。
+本文介紹在Adobe Experience Platform中使用API啟用客戶自控金鑰(CMK)的Azure特定指示。 如需有關如何使用Azure代管Experience Platform執行個體的UI完成此程式的說明，請參閱[UI CMK設定檔案](./ui-set-up.md)。
 
 如需AWS的特定指示，請參閱[AWS安裝指南](../aws/ui-set-up.md)。
 
@@ -21,9 +21,9 @@ ht-degree: 1%
 
 若要在Adobe Experience Platform中檢視並瀏覽[!UICONTROL 加密]區段，您必須已建立角色，並已將[!UICONTROL 管理客戶管理的金鑰]許可權指派給該角色。 任何擁有[!UICONTROL 管理客戶管理的金鑰]許可權的使用者都可以為其組織啟用CMK。
 
-有關在Experience Platform中指派角色和許可權的詳細資訊，請參閱[設定許可權檔案](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)。
+如需在Experience Platform中指派角色和許可權的詳細資訊，請參閱[設定許可權檔案](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)。
 
-若要為Azure代管的Platform執行個體啟用CMK，您的[[!DNL Azure] 金鑰儲存庫必須使用下列設定來設定](./azure-key-vault-config.md)：
+若要為Azure代管的Experience Platform執行個體啟用CMK，您的[[!DNL Azure] 金鑰儲存庫必須使用下列設定來設定](./azure-key-vault-config.md)：
 
 * [啟用清除保護](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [啟用軟刪除](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 ### 快速入門
 
-註冊CMK應用程式時，您必須呼叫平台API。 如需有關如何收集進行這些呼叫所需的驗證標頭的詳細資訊，請參閱[平台API驗證指南](../../../api-authentication.md)。
+註冊CMK應用程式時，您必須呼叫Experience Platform API。 如需有關如何收集進行這些呼叫所需的驗證標頭的詳細資訊，請參閱[Experience Platform API驗證指南](../../../api-authentication.md)。
 
 雖然驗證指南提供如何為必要的`x-api-key`請求標頭產生您自己的唯一值的指示，但本指南中的所有API作業都使用靜態值`acp_provisioning`。 不過，您仍必須提供您自己的`{ACCESS_TOKEN}`和`{ORG_ID}`值。
 
@@ -96,7 +96,7 @@ curl -X GET \
 
 ## 在Experience Platform上啟用加密金鑰設定 {#send-to-adobe}
 
-在[!DNL Azure]上安裝CMK應用程式後，您可以將加密金鑰識別碼傳送給Adobe。 在左側導覽中選取&#x200B;**[!DNL Keys]**，然後選取您要傳送的金鑰名稱。
+在[!DNL Azure]上安裝CMK應用程式後，您可以將加密金鑰識別碼傳送至Adobe。 在左側導覽中選取&#x200B;**[!DNL Keys]**，然後選取您要傳送的金鑰名稱。
 
 ![反白顯示[!DNL Keys]物件和金鑰名稱的Microsoft Azure儀表板。](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -114,7 +114,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->只有金鑰儲存庫和金鑰名稱與Adobe一起儲存，而不是金鑰版本。
+>Adobe中只會儲存金鑰儲存庫和金鑰名稱，不會儲存金鑰版本。
 
 **要求**
 
@@ -221,13 +221,13 @@ curl -X GET \
 
 `status`屬性可以有以下含義的四個值之一：
 
-1. `RUNNING`：驗證Platform可以存取金鑰和金鑰儲存庫。
+1. `RUNNING`：驗證Experience Platform是否可以存取金鑰和金鑰儲存庫。
 1. `UPDATE_EXISTING_RESOURCES`：系統正在將金鑰儲存庫和金鑰名稱新增至貴組織所有沙箱的資料存放區。
 1. `COMPLETED`：金鑰儲存庫和金鑰名稱已成功新增至資料存放區。
 1. `FAILED`：發生問題，主要與金鑰、金鑰儲存庫或多租使用者應用程式設定有關。
 
 ## 後續步驟
 
-完成上述步驟，您已成功為組織啟用CMK。 對於Azure代管的Platform執行個體，現在將使用[!DNL Azure]金鑰儲存庫中的金鑰加密和解密擷取到主要資料存放區的資料。
+完成上述步驟，您已成功為組織啟用CMK。 對於Azure代管的Experience Platform執行個體，現在將使用[!DNL Azure]金鑰儲存庫中的金鑰加密和解密擷取到主要資料存放區的資料。
 
 若要進一步瞭解Adobe Experience Platform中的資料加密，請參閱[加密檔案](../../encryption.md)。

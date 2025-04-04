@@ -3,42 +3,42 @@ keywords: Experience Platform；首頁；熱門主題；收集客戶成功；客
 solution: Experience Platform
 title: 使用流程服務API建立客戶成功來源的資料流
 type: Tutorial
-description: 本教學課程涵蓋從客戶成功系統擷取資料，以及使用來源聯結器和API擷取資料至Platform的步驟。
+description: 本教學課程涵蓋從客戶成功系統擷取資料，以及使用來源聯結器和API將其擷取至Experience Platform的步驟。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1267'
 ht-degree: 2%
 
 ---
 
 # 使用[!DNL Flow Service] API建立客戶成功來源的資料流
 
-本教學課程涵蓋從客戶成功來源擷取資料，以及使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將資料帶到Platform的步驟。
+本教學課程涵蓋從客戶成功來源擷取資料，以及使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將資料帶入Experience Platform的步驟。
 
 >[!NOTE]
 >
 >* 為了建立資料流，您必須擁有具有客戶成功來源的有效基本連線ID。 如果您沒有此ID，請參閱[來源概觀](../../../home.md#customer-success)，以取得您可建立基礎連線的客戶成功來源清單。
->* 為了讓Experience Platform擷取資料，所有以表格為基礎的批次來源的時區都必須設定為UTC。
+>* 為了讓Experience Platform擷取資料，所有表格型批次來源的時區都必須設定為UTC。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)： Experience Platform組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [Schema Registry開發人員指南](../../../../xdm/api/getting-started.md)：包含您成功執行Schema Registry API呼叫所需瞭解的重要資訊。 這包括您的`{TENANT_ID}`、「容器」的概念，以及發出要求所需的標頭（特別注意Accept標頭及其可能的值）。
 * [[!DNL Catalog Service]](../../../../catalog/home.md)：目錄是[!DNL Experience Platform]內資料位置和歷程的記錄系統。
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：批次擷取API可讓您將資料以批次檔案的形式擷取到[!DNL Experience Platform]。
-* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../landing/api-guide.md)指南。
 
 ## 建立來源連線 {#source}
 
-您可以向[!DNL Flow Service] API發出POST要求，以建立來源連線。 來源連線由連線ID、來源資料檔案的路徑以及連線規格ID組成。
+您可以對[!DNL Flow Service] API發出POST要求，以建立來源連線。 來源連線由連線ID、來源資料檔案的路徑以及連線規格ID組成。
 
 若要建立來源連線，您也必須定義資料格式屬性的列舉值。
 
@@ -136,7 +136,7 @@ curl -X POST \
 
 ## 建立目標XDM結構描述 {#target-schema}
 
-為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後目標結構描述會用來建立包含來源資料的Platform資料集。
+為了在Experience Platform中使用來源資料，必須建立目標結構描述，以根據您的需求建構來源資料。 然後使用目標結構描述來建立包含來源資料的Experience Platform資料集。
 
 可透過對[結構描述登入API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)執行POST要求來建立目標XDM結構描述。
 
@@ -144,7 +144,7 @@ curl -X POST \
 
 ## 建立目標資料集 {#target-dataset}
 
-可以透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID來建立目標資料集。
+可透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID，來建立目標資料集。
 
 如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](../../../../catalog/api/create-dataset.md)的教學課程。
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，向[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
+若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
 
 **API格式**
 
@@ -283,7 +283,7 @@ curl -X POST \
 
 ## 擷取資料流規格 {#specs}
 
-資料流負責從來源收集資料，並將這些資料匯入Platform。 若要建立資料流，您必須先透過對流程服務API執行GET要求來取得資料流規格。 資料流規格負責從協力廠商客戶成功系統收集資料。
+資料流負責從來源收集資料，並將這些資料匯入Experience Platform。 為了建立資料流，您必須先透過對流程服務API執行GET請求來取得資料流規格。 資料流規格負責從協力廠商客戶成功系統收集資料。
 
 **API格式**
 
@@ -303,7 +303,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回負責將資料從來源帶入Platform的資料流規格的詳細資料。 回應包含建立新資料流所需的唯一流程規格`id`。
+成功的回應會傳回負責將資料從來源帶入Experience Platform的資料流規格的詳細資料。 回應包含建立新資料流所需的唯一流程規格`id`。
 
 >[!NOTE]
 >
@@ -623,7 +623,7 @@ curl -X GET \
 
 ## 後續步驟
 
-依照本教學課程所述，您已建立來源聯結器，以依排程從客戶成功系統收集資料。 下游[!DNL Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
+依照本教學課程所述，您已建立來源聯結器，以依排程從客戶成功系統收集資料。 下游[!DNL Experience Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 * [即時客戶輪廓概觀](../../../../profile/home.md)
 * [資料科學工作區總覽](../../../../data-science-workspace/home.md)

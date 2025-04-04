@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 8%
@@ -36,13 +36,13 @@ Adobe Experience Platform提供豐富的功能，可擷取任何型別和延遲�
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace]是[!DNL Experience Platform]中完全受管理的服務，可讓資料科學家透過建置和操作機器學習模型，順暢地從Adobe解決方案和協力廠商系統的資料和內容產生深入分析。 [!DNL Data Science Workspace]與[!DNL Platform]緊密整合，並支援端對端資料科學生命週期，包括探索和準備XDM資料，接著開發和操作模型，以使用機器學習深入分析自動豐富[!DNL Real-Time Customer Profile]。
+Adobe Experience Platform [!DNL Data Science Workspace]是[!DNL Experience Platform]中完全受管理的服務，可讓資料科學家透過建置和操作機器學習模型，順暢地從Adobe解決方案和協力廠商系統的資料和內容產生深入分析。 [!DNL Data Science Workspace]與[!DNL Experience Platform]緊密整合，並支援端對端資料科學生命週期，包括探索和準備XDM資料，接著開發和操作模型，以使用機器學習深入分析自動豐富[!DNL Real-Time Customer Profile]。
 
 **新功能**
 
 | 功能 | 說明 |
 | -----------| ---------- |
-| 透過UI排程服務 | 已與[!DNL Platform]協調服務整合，以使用UI透過使用者定義的排程自動進行模型訓練和評分。 |
+| 透過UI排程服務 | 已與[!DNL Experience Platform]協調服務整合，以使用UI透過使用者定義的排程自動進行模型訓練和評分。 |
 | [!DNL Service Gallery] | 瀏覽、監視和存取機器學習服務，並排程自動化訓練和評分工作，所有這些都在重新設計的[!DNL Service Gallery]內。 |
 | [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] UI改良。 |
 
@@ -65,7 +65,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]是[!DNL Experience Platf
 | 功能 | 說明 |
 | -----------| ---------- |
 | [!DNL Query Editor]的改善 | 新增儲存功能，可讓您儲存查詢並稍後處理。 在Adobe Experience Platform的[!DNL Query Service]使用者介面中新增「瀏覽」標籤，顯示貴組織使用者儲存的查詢。 實作「查詢詳細資訊」面板，顯示有關正在檢視的查詢的有用中繼資料。 |
-| 新的歸因函式 | [!DNL Query Service]中的Adobe定義函式，以查詢具有到期引數的管道歸因。 |
+| 新的歸因函式 | [!DNL Query Service]中的Adobe定義函式，以查詢具有過期引數的管道歸因。 |
 | SQL語法的增強功能 | 支援iLike語法。 |
 | 使用定義的XDM結構描述產生資料集 | 在「建立表格為選取」(CTAS)查詢中新增子句，可讓您指定目標綱要。 |
 

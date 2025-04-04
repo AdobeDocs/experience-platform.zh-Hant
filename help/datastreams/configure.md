@@ -2,10 +2,10 @@
 title: 建立和設定資料串流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2817'
-ht-degree: 51%
+source-wordcount: '2822'
+ht-degree: 48%
 
 ---
 
@@ -103,7 +103,7 @@ ht-degree: 51%
 | [!UICONTROL 存取類型] | 定義 Edge Network 接受資料流的驗證類型。 <ul><li>**[!UICONTROL 混合驗證]**：選取此選項時，Edge Network 會同時接受已驗證和未驗證的要求。當您計劃使用 Web SDK 或 [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 以及[伺服器 API](../server-api/overview.md) 時，請選取此選項。 </li><li>**[!UICONTROL 僅限已驗證]**：選取此選項時，Edge Network 只接受已驗證的要求。當您計劃只使用伺服器 API 並希望防止 Edge Network 處理任何未驗證的要求時，請選取此選項。</li></ul> |
 | [!UICONTROL Media Analytics] | 啟用透過Experience Platform SDK或[Media Edge API](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/)處理Edge Network整合的串流追蹤資料。 從[檔案](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant)瞭解Media Analytics。 |
 
-在這裡，如果您要設定 Experience Platform 的資料流，請依照[資料收集的資料準備](./data-prep.md)教學課程的說明，將資料對應至 Platform 事件結構描述，然後才返回本指南。否則，請選取「**[!UICONTROL 儲存]**」，並繼續進行下一區段。
+如果您正在設定Experience Platform的資料串流，請先按照[資料收集的資料準備](./data-prep.md)上的教學課程將資料對應到Experience Platform事件結構描述，然後再返回本指南。 否則，請選取「**[!UICONTROL 儲存]**」，並繼續進行下一區段。
 
 ## 檢視資料流詳細資料 {#view-details}
 
@@ -160,7 +160,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->啟用 Platform 的資料流時，請記下目前使用的 Platform 沙箱 (顯示在 UI 的頂端功能區中)。
+>為Experience Platform啟用資料串流時，請記下您目前使用的Experience Platform沙箱，如UI的頂端功能區中所示。
 >
 >![選取的沙箱](assets/configure/platform-sandbox.png)
 >
@@ -172,8 +172,8 @@ ht-degree: 51%
 
 | 設定 | 說明 |
 |---| --- |
-| [!UICONTROL 事件資料集] | **(必要)** 選取要將客戶事件資料串流到的 Platform 資料集。此結構描述必須使用 [XDM 體驗事件類別](../xdm/classes/experienceevent.md)。若要新增其他資料集，請選取&#x200B;**[!UICONTROL 新增事件資料集]**。 |
-| [!UICONTROL 輪廓資料集] | 選取要將客戶屬性資料傳送到的 Platform 資料集。此結構描述必須使用 [XDM 個人輪廓類別](../xdm/classes/individual-profile.md)。 |
+| [!UICONTROL 事件資料集] | **（必要）**&#x200B;選取將串流至客戶事件資料的Experience Platform資料集。 此結構描述必須使用 [XDM 體驗事件類別](../xdm/classes/experienceevent.md)。若要新增其他資料集，請選取&#x200B;**[!UICONTROL 新增事件資料集]**。 |
+| [!UICONTROL 輪廓資料集] | 選取將傳送客戶屬性資料的Experience Platform資料集。 此結構描述必須使用 [XDM 個人輪廓類別](../xdm/classes/individual-profile.md)。 |
 | [!UICONTROL Offer Decisioning] | 為Web SDK實作啟用Offer Decisioning。 如需更多實作詳細資訊，請參閱[搭配使用Offer Decisioning與Web SDK](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md)指南。<br><br>如需有關 Offer Decisioning 功能的詳細資訊，請參閱 [Adobe Journey Optimizer 文件](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant)。 |
 | [!UICONTROL 邊緣分段] | 啟用此資料流的[邊緣分段](../segmentation/methods/edge-segmentation.md)。 當[網頁SDK](../web-sdk/home.md)或[Edge Network伺服器API](../server-api/overview.md)透過啟用邊緣細分的資料流傳送資料時，相關設定檔的任何更新對象會傳回回應。<br><br>您可以透過[邊緣目的地](../destinations/ui/activate-edge-personalization-destinations.md)或[!DNL Offer Decisioning]，將此選項與&#x200B;**[!UICONTROL Personalization目的地]**&#x200B;搭配用於相同頁面和下一頁個人化使用案例。 |
 | [!UICONTROL 個人化目的地] | 啟用[!UICONTROL 邊緣分段]核取方塊後再啟用此功能時，此選項可讓資料流連線至個人化目的地，例如[自訂個人化](../destinations/catalog/personalization/custom-personalization.md)。<br><br>如需有關[設定個人化目的地](../destinations/ui/activate-edge-personalization-destinations.md)的具體步驟，請參閱目的地文件。 |

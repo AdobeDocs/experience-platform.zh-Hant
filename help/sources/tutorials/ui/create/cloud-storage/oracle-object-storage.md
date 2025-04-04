@@ -5,9 +5,9 @@ title: 在UI中建立Oracle物件儲存Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Oracle物件儲存來源連線。
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 收集必要的認證
 
@@ -37,11 +37,11 @@ ht-degree: 1%
 
 如需如何取得這些值的詳細資訊，請參閱[Oracle物件儲存驗證指南](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials)。
 
-收集完所需的認證後，您可以依照下列步驟建立新的Oracle物件儲存體帳戶以連線至Platform。
+收集必要的認證後，您可以依照下列步驟建立新的Oracle物件儲存帳戶，以連線至Experience Platform。
 
-## 連線到Oracle物件儲存體
+## 連線至Oracle物件儲存空間
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋列來尋找您要使用的特定來源。
 
@@ -63,4 +63,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Oracle Object Storage]帳戶的連線。 您現在可以繼續進行有關[設定資料流以將雲端儲存空間中的資料帶入Platform](../../dataflow/batch/cloud-storage.md)的下一個教學課程。
+依照本教學課程中的指示，您已建立與[!DNL Oracle Object Storage]帳戶的連線。 您現在可以繼續進行有關[設定資料流以將雲端儲存空間中的資料帶入Experience Platform](../../dataflow/batch/cloud-storage.md)的下一個教學課程。

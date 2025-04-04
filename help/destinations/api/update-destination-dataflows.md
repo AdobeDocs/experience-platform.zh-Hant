@@ -5,16 +5,16 @@ title: 使用流程服務API更新目的地資料流程
 type: Tutorial
 description: 本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用流量服務API來啟用或停用資料流、更新其基本資訊，或新增和移除對象和屬性。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2410'
 ht-degree: 3%
 
 ---
 
 # 使用流程服務API更新目的地資料流程
 
-本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)來啟用或停用資料流、更新其基本資訊，或新增及移除對象和屬性。 如需使用Experience PlatformUI編輯目的地資料流程的資訊，請閱讀[編輯啟動流程](/help/destinations/ui/edit-activation.md)。
+本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)來啟用或停用資料流、更新其基本資訊，或新增及移除對象和屬性。 如需使用Experience Platform UI編輯目的地資料流程的資訊，請閱讀[編輯啟動流程](/help/destinations/ui/edit-activation.md)。
 
 ## 快速入門 {#get-started}
 
@@ -26,24 +26,24 @@ ht-degree: 3%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
-* [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+* [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功更新資料流。
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
 
 ### 收集所需標頭的值 {#gather-values-for-required-headers}
 
-若要呼叫Platform API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
+若要呼叫Experience Platform API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對Platform API的所有請求都需要標頭，以指定將在其中進行操作的沙箱名稱：
+Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對Experience Platform API的所有請求都要求標頭，用於指定將在其中進行操作的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -57,7 +57,7 @@ Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源
 
 ## 查詢資料流詳細資料 {#look-up-dataflow-details}
 
-更新目的地資料流的第一步，是使用您的流程ID擷取資料流詳細資料。 您可以透過向`/flows`端點發出GET要求來檢視現有資料流的目前詳細資料。
+更新目的地資料流的第一步，是使用您的流程ID擷取資料流詳細資料。 您可以對`/flows`端點發出GET要求，以檢視現有資料流的目前詳細資料。
 
 **API格式**
 
@@ -349,7 +349,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->發出PATCH要求時需要`If-Match`標頭。 此標頭的值是您要更新之資料流的唯一版本。 每次成功更新資料流時，etag值都會更新。
+>發出PATCH請求時需要`If-Match`標頭。 此標頭的值是您要更新之資料流的唯一版本。 每次成功更新資料流時，etag值都會更新。
 
 **API格式**
 
@@ -499,11 +499,11 @@ curl -X PATCH \
 | `value` | 您想要用來更新引數的新值。 |
 | `id` | 指定您要新增至目的地資料流的對象ID。 |
 | `name` | **（選擇性）**。 指定您要新增至目的地資料流的對象名稱。 請注意，此欄位並非必填欄位，您可以在不提供名稱的情況下成功將對象新增至目的地資料流。 |
-| `filenameTemplate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>此欄位決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`： **（選擇性）**。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`： **（選擇性）**。 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`： **（選擇性）**。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)一節。 |
+| `filenameTemplate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>此欄位決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`： **（選擇性）**。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`： **（選擇性）**。 選取這兩個檔案選項之一，加入Experience Platform產生檔案的時間。</li><li>`custom-text`： **（選擇性）**。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)一節。 |
 | `exportMode` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 |
 | `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
 | `frequency` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`或`DAILY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |
-| `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`frequency`選取器中選取`"DAILY_FULL_EXPORT"`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日平台批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新的，這取決於批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
+| `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`frequency`選取器中選取`"DAILY_FULL_EXPORT"`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日Experience Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新狀態，端視批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
 | `endDate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>在選取`"exportMode":"DAILY_FULL_EXPORT"`和`"frequency":"ONCE"`時不適用。 <br>設定對象成員停止匯出至目的地的日期。 |
 | `startTime` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
 
@@ -581,7 +581,7 @@ curl -X PATCH \
 
 ## 更新資料流中的對象元件 {#update-segment}
 
-您可以在現有的目的地資料流中更新對象的元件。 例如，您可以變更匯出頻率或編輯檔案名稱範本。 若要這麼做，請提供您的流量ID、版本，以及您要更新之對象的索引選取器，同時對[!DNL Flow Service] API執行PATCH要求。 索引從`0`開始。 例如，以下請求會更新資料流中的第九個對象。
+您可以在現有的目的地資料流中更新對象的元件。 例如，您可以變更匯出頻率或編輯檔案名稱範本。 若要這麼做，請提供您的流量ID、版本，以及要更新之對象的索引選取器，同時對[!DNL Flow Service] API執行PATCH要求。 索引從`0`開始。 例如，以下請求會更新資料流中的第九個對象。
 
 **API格式**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-在現有目的地資料流中更新對象時，您應該先執行GET操作，以擷取您要更新對象的詳細資訊。 然後，提供承載中的所有對象資訊，而不僅僅是您要更新的欄位。 在以下範例中，自訂文字會新增到檔案名稱範本的結尾，而匯出排程頻率會從6小時更新為12小時。
+在現有目的地資料流中更新對象時，您應該先執行GET作業，以擷取您要更新對象的詳細資料。 然後，提供承載中的所有對象資訊，而不僅僅是您要更新的欄位。 在以下範例中，自訂文字會新增到檔案名稱範本的結尾，而匯出排程頻率會從6小時更新為12小時。
 
 ```shell
 curl -X PATCH \
@@ -644,7 +644,7 @@ curl -X PATCH \
 
 ## 在對象評估後，將對象匯出模式從已排程更新為 {#update-export-mode}
 
-+++ 按一下以檢視對象匯出的範例，從每天在指定時間啟動匯出更新為在Platform批次細分工作完成後每天啟動。
++++ 按一下以檢視對象匯出的範例，瞭解對象匯出從每天在指定時間啟動更新為在Experience Platform批次細分工作完成後每天啟動。
 
 每日的16:00 UTC會匯出對象。
 
@@ -801,7 +801,7 @@ curl -X PATCH \
 
 ## 從資料流移除設定檔屬性 {#remove-profile-attribute}
 
-若要從現有的目的地資料流移除設定檔屬性，請在提供您要移除之設定檔屬性的流量ID、版本和索引選取器的同時，執行PATCH至[!DNL Flow Service] API的要求。 索引從`0`開始。 例如，底下的範例要求會將第五個設定檔屬性從資料流中移除。
+若要從現有的目的地資料流移除設定檔屬性，請提供您要移除之設定檔屬性的流量ID、版本和索引選取器，同時對[!DNL Flow Service] API執行PATCH要求。 索引從`0`開始。 例如，底下的範例要求會將第五個設定檔屬性從資料流中移除。
 
 
 **API格式**
@@ -855,7 +855,7 @@ curl -X PATCH \
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[要求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Experience Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 

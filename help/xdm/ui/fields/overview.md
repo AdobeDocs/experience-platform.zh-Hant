@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在使用者介面中定義XDM欄位
 description: 瞭解如何在Experience Platform使用者介面中定義XDM欄位。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 ## 先決條件
 
-本指南需要實際瞭解XDM系統。 請參閱[XDM總覽](../../home.md)，瞭解XDM在Experience Platform生態系統中的角色簡介，以及結構描述組合的[基本知識](../../schema/composition.md)，瞭解類別和欄位群組如何對XDM結構描述貢獻欄位。
+本指南需要實際瞭解XDM系統。 請參閱[XDM總覽](../../home.md)，瞭解XDM在Experience Platform生態系統中的角色簡介，以及結構描述組合的[基本概念](../../schema/composition.md)，瞭解類別和欄位群組如何對XDM結構描述貢獻欄位。
 
 雖然本指南並非必要專案，但建議您也按照有關[在UI](../../tutorials/create-schema-ui.md)中構成結構描述的教學課程，熟悉[!DNL Schema Editor]的各種功能。
 
@@ -102,7 +102,7 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 ## 特殊欄位型別 {#special}
 
-右邊欄提供數個核取方塊，可指定所選欄位的特殊角色。 其中部分選項的使用案例涉及有關您的資料模型化策略以及您打算如何使用下游平台服務的重要考量。
+右邊欄提供數個核取方塊，可指定所選欄位的特殊角色。 其中部分選項的使用案例涉及有關您的資料模型化策略以及您打算如何使用下游Experience Platform服務的重要考量。
 
 若要深入瞭解這些特殊型別，請參閱下列檔案：
 

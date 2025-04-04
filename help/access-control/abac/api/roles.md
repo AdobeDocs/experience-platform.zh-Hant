@@ -5,10 +5,10 @@ title: 角色API端點
 description: 屬性式存取控制API中的/roles端點可讓您以程式設計方式管理Adobe Experience Platform中的角色。
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 4%
+source-wordcount: '1670'
+ht-degree: 6%
 
 ---
 
@@ -18,17 +18,17 @@ ht-degree: 4%
 >
 >如果傳遞的是使用者權杖，則權杖的使用者必須具有請求組織的「組織管理員」角色。
 
-角色定義管理員、專家或一般使用者對貴組織資源的存取權。 在基於角色的存取控制環境中，使用者存取布建是透過共同責任和需求進行分組。 一個角色具有一組給定的權限，您的組織成員可以指派到一個或多個角色，依據他們需要的視圖範圍或寫入權限而定。
+角色會定義管理員、專家或一般使用者對組織資源的存取權。在基於角色的存取控制環境中，使用者存取布建是透過共同責任和需求進行分組。 一個角色具有特定一組權限，而您可以根據組織成員所需的檢視範圍或寫入存取權，對成員指派一個或多個角色。
 
 以屬性為基礎的存取控制API中的`/roles`端點可讓您以程式設計方式管理組織中的角色。
 
 ## 快速入門
 
-本指南中使用的API端點屬於屬性型存取控制API的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的API端點屬於屬性型存取控制API的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ## 擷取角色清單 {#list}
 
-您可以透過向`/roles`端點發出GET要求，列出屬於您組織的所有現有角色。
+您可以透過向`/roles`端點發出GET請求，列出屬於您組織的所有現有角色。
 
 **API格式**
 
@@ -108,12 +108,12 @@ curl -X GET \
 | `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
-| `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
+| `subjectAttributes` | 指出主旨與他們可以存取的Experience Platform資源之間關聯的屬性。 |
 | `subjectAttributes.labels` | 顯示套用至查詢角色的資料使用標籤。 |
 
 ## 查詢角色 {#lookup}
 
-您可以透過在請求路徑中包含對應`roleId`的GET請求來查詢個別角色。
+您可以透過提出GET請求（包含請求路徑中的對應`roleId`）來查詢個別角色。
 
 **API格式**
 
@@ -175,12 +175,12 @@ curl -X GET \
 | `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
-| `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
+| `subjectAttributes` | 指出主旨與他們可以存取的Experience Platform資源之間關聯的屬性。 |
 | `subjectAttributes.labels` | 顯示套用至查詢角色的資料使用標籤。 |
 
 ## 依角色ID查詢主題
 
-您也可以在提供{ROLE_ID}的同時向`/roles`端點提出GET要求來擷取主題。
+您也可以在提供{ROLE_ID}的同時，向`/roles`端點提出GET要求來擷取主題。
 
 **API格式**
 
@@ -256,7 +256,7 @@ curl -X GET \
 
 ## 建立角色 {#create}
 
-若要建立新角色，請在提供角色名稱、說明和角色型別的值時，向`/roles`端點提出POST要求。
+若要建立新角色，請在提供角色名稱、說明和角色型別的值時，對`/roles`端點發出POST要求。
 
 **API格式**
 
@@ -323,12 +323,12 @@ curl -X POST \
 | `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
-| `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
+| `subjectAttributes` | 指出主旨與他們可以存取的Experience Platform資源之間關聯的屬性。 |
 | `subjectAttributes.labels` | 顯示套用至查詢角色的資料使用標籤。 |
 
 ## 更新角色 {#patch}
 
-您可以透過向`/roles`端點發出PATCH要求來更新角色的屬性，同時為您要套用的操作提供對應的角色ID和值。
+您可以透過向`/roles`端點發出PATCH請求來更新角色的屬性，同時為您要套用的操作提供對應的角色ID和值。
 
 **API格式**
 
@@ -403,12 +403,12 @@ curl -X PATCH \
 | `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
-| `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
+| `subjectAttributes` | 指出主旨與他們可以存取的Experience Platform資源之間關聯的屬性。 |
 | `subjectAttributes.labels` | 顯示套用至查詢角色的資料使用標籤。 |
 
 ## 依角色ID更新角色 {#put}
 
-您可以對`/roles`端點發出PUT要求，並指定與您要更新之角色對應的角色ID，以更新角色。
+您可以對`/roles`端點發出PUT要求，並指定與您要更新的角色對應的角色ID，以更新角色。
 
 **API格式**
 
@@ -477,7 +477,7 @@ curl -X PUT \
 | `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
-| `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
+| `subjectAttributes` | 指出主旨與他們可以存取的Experience Platform資源之間關聯的屬性。 |
 | `subjectAttributes.labels` | 顯示套用至查詢角色的資料使用標籤。 |
 
 ## 依角色ID更新主旨
@@ -552,7 +552,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 ## 刪除角色 {#delete}
 
-若要刪除角色，請在指定您要刪除的DELETE識別碼時，向`/roles`端點提出角色要求。
+若要刪除角色，請在指定您要刪除之角色的ID時，向`/roles`端點提出DELETE要求。
 
 **API格式**
 
@@ -584,7 +584,7 @@ curl -X DELETE \
 
 ## 新增API認證 {#apicredential}
 
-若要新增API認證，請在提供主體的角色ID時，向`/roles`端點提出PATCH要求。
+若要新增API認證，請在提供主體的角色ID時，對`/roles`端點提出PATCH要求。
 
 **API格式**
 

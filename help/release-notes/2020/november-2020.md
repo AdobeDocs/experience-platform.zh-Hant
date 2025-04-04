@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform發行說明2020年11月
-description: Adobe Experience Platform 2020年11月版本注意事項。
+title: Adobe Experience Platform 發行說明 (2020 年 11 月)
+description: Adobe Experience Platform 2020 年 11 月版發行說明。
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2176'
-ht-degree: 8%
+source-wordcount: '2178'
+ht-degree: 10%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 **發行日期： 2020年11月11日**
 
-Adobe Experience Platform中的新功能：
+Adobe Experience Platform 的新功能：
 
 - [Adobe Experience Platform資料湖移轉](#migration)
 - [[!DNL Access control]](#access-control)
@@ -34,46 +34,46 @@ Adobe Experience Platform中的新功能：
 
 ## Adobe Experience Platform資料湖移轉 {#migration}
 
-當Adobe將Data Lake從Gen1移轉至Gen2時，使用者將能夠從Data Lake讀取，但寫入至Data Lake的所有功能都將受到影響。 Adobe將會連絡系統管理員，詳細討論移轉的影響，並確認特定組織的移轉日期和時間。
+雖然Adobe正在將Data Lake從Gen1移轉至Gen2，使用者將能從Data Lake讀取，但寫入至Data Lake的所有功能都將受到影響。 Adobe將會連絡系統管理員，詳細討論移轉的影響，並確認特定組織的移轉日期和時間。
 
 如需詳細資訊，請參閱[資料湖移轉指南](../../landing/adls2-gen2-migration.md)。
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform]利用[Adobe Admin Console](https://adminconsole.adobe.com)產品設定檔將使用者與許可權和沙箱連結。 許可權可控制對各種Platform功能的存取，包括資料模型、設定檔管理和沙箱管理。
+[!DNL Experience Platform]利用[Adobe Admin Console](https://adminconsole.adobe.com)產品設定檔將使用者與許可權和沙箱連結。 許可權可控制各種Experience Platform功能的存取權，包括資料模型製作、設定檔管理和沙箱管理。
 
 **主要功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 權限 | 在[!DNL Admin Console]中，[!DNL Platform]產品設定檔中的索引標籤可讓您自訂哪些[!DNL Platform]功能可供附加到該設定檔的使用者使用。 可用的許可權類別包括： **[!UICONTROL 資料模型]**、**[!UICONTROL 資料管理]**、**[!UICONTROL 設定檔管理]**、**[!UICONTROL Identity Management]**、**[!UICONTROL 資料監視]**、**[!UICONTROL 沙箱管理]**、**[!UICONTROL 目的地]**、**[!UICONTROL 資料擷取]**、**[!UICONTROL 資料科學Workspace]**、**[!UICONTROL 查詢服務]**&#x200B;以及&#x200B;**[!UICONTROL 資料控管]**。 |
-| 存取沙箱 | [!DNL Platform]產品設定檔中的&#x200B;**[!UICONTROL 許可權]**&#x200B;索引標籤可授予使用者存取特定沙箱的許可權。 如需詳細資訊，請參閱以下[沙箱](#sandboxes)的相關章節。 |
+| 權限 | 在[!DNL Admin Console]中，[!DNL Experience Platform]產品設定檔中的索引標籤可讓您自訂哪些[!DNL Experience Platform]功能可供附加到該設定檔的使用者使用。 可用的許可權類別包括： **[!UICONTROL 資料模型]**、**[!UICONTROL 資料管理]**、**[!UICONTROL 設定檔管理]**、**[!UICONTROL Identity Management]**、**[!UICONTROL 資料監視]**、**[!UICONTROL 沙箱管理]**、**[!UICONTROL 目的地]**、**[!UICONTROL 資料擷取]**、**[!UICONTROL 資料科學Workspace]**、**[!UICONTROL 查詢服務]**&#x200B;以及&#x200B;**[!UICONTROL 資料控管]**。 |
+| 存取沙箱 | [!DNL Experience Platform]產品設定檔中的&#x200B;**[!UICONTROL 許可權]**&#x200B;索引標籤可授予使用者存取特定沙箱的許可權。 如需詳細資訊，請參閱以下[沙箱](#sandboxes)的相關章節。 |
 
 如需詳細資訊，請參閱[存取控制總覽](../../access-control/home.md)。
 
 ## [!DNL Offer Decisioning] {#offer-decisioning}
 
-[!DNL Offer Decisioning]是與[!DNL Experience Platform]整合的應用程式服務。 它可讓您運用[!DNL Platform]，在適當的時間為所有接觸點的客戶提供最佳優惠和體驗。
+[!DNL Offer Decisioning]是與[!DNL Experience Platform]整合的應用程式服務。 它可讓您運用[!DNL Experience Platform]，在適當的時間為所有接觸點的客戶提供最佳優惠和體驗。
 
 **主要功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
 | 集中式優惠資料庫 | 此介面可讓您建立和管理組成優惠方案的不同元素，並定義其規則和限制。 |
-| 優惠決定引擎 | 優惠決定引擎運用[!DNL Platform]資料和[!DNL Real-Time Customer Profiles]以及優惠資料庫，以選擇即將提供優惠的適當時間、客戶和管道。 |
+| 優惠決定引擎 | 優惠決定引擎運用[!DNL Experience Platform]資料和[!DNL Real-Time Customer Profiles]以及優惠資料庫，以選擇即將提供優惠的適當時間、客戶和管道。 |
 
 如需詳細資訊，請參閱[[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=zh-Hant)檔案。
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-[!DNL Experience Platform]是專為豐富全球的數位體驗應用程式而建置。 公司通常會同時執行多個數位體驗應用程式，而且需要滿足這些應用程式的開發、測試和部署需求，同時確保營運合規性。 為了滿足此需求，[!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的沙箱，以協助開發及改進數位體驗應用程式。
+[!DNL Experience Platform]是專為豐富全球的數位體驗應用程式而建置。 公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足此需求，[!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的沙箱，以協助開發及改進數位體驗應用程式。
 
 **主要功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
 | 生產沙箱 | [!DNL Experience Platform]提供單一生產沙箱，無法刪除或重設。 可用沙箱（包括生產及非生產）的總數取決於取得的授權。 |
-| 非生產沙箱 | 您可以為單一[!DNL Platform]執行個體建立多個非生產沙箱，讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產沙箱。 |
+| 非生產沙箱 | 您可以為單一[!DNL Experience Platform]執行個體建立多個非生產沙箱，讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產沙箱。 |
 | 沙箱切換器 | 在[!DNL Experience Platform]使用者介面中，熒幕左上角的沙箱切換器可讓您透過下拉式功能表在可用沙箱之間切換。 沙箱切換器也提供搜尋功能，可讓您篩選可用沙箱。 |
 | `x-sandbox-name`標題 | 所有對[!DNL Experience Platform] API的呼叫現在必須包含新的`x-sandbox-name`標頭，其值會參考將進行作業的沙箱的`name`屬性。 |
 
@@ -94,7 +94,7 @@ Adobe Experience Platform中的新功能：
 
 ## Data Science Workspace {#dsw}
 
-資料科學Workspace使用機器學習和人工智慧，從您的資料建立深入分析。 資料科學Workspace已整合至Adobe Experience Platform，可協助您在各個Adobe解決方案中使用您的內容和資料資產進行預測。 Data Science Workspace完成此作業的其中一個方法是使用[!DNL JupyterLab]。 [!DNL JupyterLab]是[[!DNL Project Jupyter]](https://jupyter.org/)的網頁式使用者介面，且已緊密整合至Adobe Experience Platform。 它為資料科學家提供互動式開發環境，以使用[!DNL Jupyter]筆記本、程式碼和資料。
+資料科學Workspace使用機器學習和人工智慧，從您的資料建立深入分析。 資料科學Workspace已整合至Adobe Experience Platform，可協助您跨Adobe解決方案使用您的內容和資料資產進行預測。 Data Science Workspace完成此作業的其中一個方法是使用[!DNL JupyterLab]。 [!DNL JupyterLab]是[[!DNL Project Jupyter]](https://jupyter.org/)的網頁式使用者介面，且已緊密整合至Adobe Experience Platform。 它為資料科學家提供互動式開發環境，以使用[!DNL Jupyter]筆記本、程式碼和資料。
 
 **主要功能**
 
@@ -106,11 +106,11 @@ Adobe Experience Platform中的新功能：
 
 ## [!DNL Destinations]服務 {#destinations}
 
-在[Real-time Customer Data Platform](../../rtcdp/overview.md)中，目的地是預先建立的與目的地平台的整合，可透過順暢的方式為這些合作夥伴啟用資料。
+在[Real-Time Customer Data Platform](../../rtcdp/overview.md)中，目的地是預先建立的與目的地平台的整合，可透過順暢的方式為這些合作夥伴啟用資料。
 
 **新目的地**
 
-| 目的地 | 說明 |
+| 目標 | 說明 |
 | ----------- | ----------- |
 | 釺焊 | Braze是全方位的客戶參與平台，可在客戶與所喜愛品牌之間提供相關且令人難忘的體驗。 |
 | Microsoft Bing | Microsoft Bing目的地可幫助您在Microsoft Display Advertising中執行重新定位以及以對象為目標的數位行銷活動。 |
@@ -141,7 +141,7 @@ Adobe Experience Platform中的新功能：
 
 ### Attribution AI
 
-作為Intelligent Services的一部分，Attribution AI是一種多管道的演演算法歸因服務，可計算客戶互動對指定結果的影響和累加影響。
+Attribution AI是Intelligent Services的一部分，它是一種多管道的演演算法歸因服務，可計算客戶互動對指定結果的影響和累加影響。
 
 **主要功能**
 
@@ -153,13 +153,13 @@ Adobe Experience Platform中的新功能：
 | 修改執行個體組態引數 | 如果現有Attribution AI執行個體尚未開始評分，您現在可以修改其設定。 |
 | 單次評分 | 您現在可以在Attribution AI執行個體中觸發臨機模型評分。 |
 | 通過欄 | 您現在可以設定要新增至原始輸出分數檔案的其他欄，以新增其他維度至BI工具檢視。 |
-| 執行個體啟用和停用 | 您現在可以啟用和停用已排程的模型訓練以及Attribution AI執行個體的評分。 |
+| 執行個體啟用和停用 | 您現在可以啟用和停用您的Attribution AI執行個體已排程的模型訓練和評分。 |
 | 權益追蹤 | 您可以在建立執行個體容器中找到您的帳戶使用的歸因深入分析總數。 |
 | 依位置的接觸點劃分 | 新的深入分析圖表，可依轉換路徑位置提供接觸點分析。 |
 | 排名在前的轉換路徑 | 位於「路徑分析」標籤中的新見解圖表。 此圖表包含前五個轉換路徑的清單，顯示帶來最多轉換的行銷管道接觸點順序。 |
 | 接觸點有效性 | 針對您的模型用來測量接觸點有效性的最重要三個變數，提供深入分析。 變數是接觸正面與負面路徑的比率、接觸點效率以及接觸點數量。 |
 
-如需詳細資訊，請閱讀[Attribution AI概觀](../../intelligent-services/attribution-ai/overview.md)。
+如需詳細資訊，請閱讀[Attribution AI總覽](../../intelligent-services/attribution-ai/overview.md)。
 
 ### Customer AI
 
@@ -179,26 +179,26 @@ Customer AI是Intelligent Services的一部分，它讓行銷人員能夠產生�
 
 如需詳細資訊，請閱讀[Customer AI總覽](../../intelligent-services/customer-ai/overview.md)。
 
-## 即時客戶設定檔 {#profile}
+## 即時客戶輪廓 {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 [!DNL Profile]可讓您將不同的客戶資料合併成統一的檢視表，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶輪廓，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 [!DNL Profile]可讓您將不同的客戶資料合併成統一的檢視表，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 **主要功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 已更新合併原則工作流程 | Platform已將合併原則設定升級為新的逐步工作流程。 此工作流程可讓使用者將多個設定檔資料集的資料片段彙整在一起，並設定這些資料集間資料合併方式的優先順序，以便建立每個人的完整檢視。 使用者可以合併所選的XDM個別設定檔資料集，方法是選取適當的合併方法（依時間戳記或資料集優先順序），並將ExperienceEvent資料集附加至設定檔資料集。 |
-| 聯合結構描述檢視 | 在Experience PlatformUI中，使用者可以更輕鬆地找到有關貢獻聯合結構的所有結構描述和資料集的資訊，以及表面關鍵屬性，例如身分和關係欄位。 這些更新可改善疑難排解功能，並驗證設定檔是否已正確設定、身分是否已正確連結，以及資料是否已成功內嵌。 |
+| 已更新合併原則工作流程 | Experience Platform已將合併原則設定升級為新的逐步工作流程。 此工作流程可讓使用者將多個設定檔資料集的資料片段彙整在一起，並設定這些資料集間資料合併方式的優先順序，以便建立每個人的完整檢視。 使用者可以合併所選的XDM個別設定檔資料集，方法是選取適當的合併方法（依時間戳記或資料集優先順序），並將ExperienceEvent資料集附加至設定檔資料集。 |
+| 聯合結構描述檢視 | 在Experience Platform UI中，使用者可以更輕鬆地找到有關貢獻聯合結構的所有結構描述和資料集的資訊，以及表面關鍵屬性，例如身分和關係欄位。 這些更新可改善疑難排解功能，並驗證設定檔是否已正確設定、身分是否已正確連結，以及資料是否已成功內嵌。 |
 
 如需即時客戶個人檔案的詳細資訊，包括使用[!DNL Profile]資料的教學課程和最佳實務，請閱讀[即時客戶個人檔案總覽](../../profile/home.md)。
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Platform]服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Experience Platform]服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
-**新來源**
+**新的來源**
 
 | 功能 | 說明 |
 | ------- | ----------- |

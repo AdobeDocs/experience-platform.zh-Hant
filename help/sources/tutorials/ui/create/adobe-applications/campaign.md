@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；行銷活動；行銷活動受管理的服務
-title: 使用Platform UI建立Adobe Campaign Managed Cloud Services來源連線
-description: 瞭解如何使用Platform UI將Adobe Experience Platform連線至Adobe Campaign Managed Cloud Services。
+title: 使用Experience Platform UI建立Adobe Campaign Managed Cloud Services來源連線
+description: 瞭解如何使用Adobe Experience Platform UI將Experience Platform連結至Adobe Campaign Managed Cloud Services。
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1246'
 ht-degree: 6%
 
 ---
 
-# 使用Platform UI建立Adobe Campaign Managed Cloud Services來源連線
+# 使用Experience Platform UI建立Adobe Campaign Managed Cloud Services來源連線
 
 本教學課程提供建立來源連線的步驟，以便將您的Adobe Campaign Managed Cloud Services資料引進Adobe Experience Platform。
 
@@ -18,15 +18,15 @@ ht-degree: 6%
 
 本指南需要您深入瞭解下列Experience Platform元件：
 
-* [來源](../../../../home.md)： Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
-* [沙箱](../../../../../sandboxes/home.md)： Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 將Adobe Campaign Managed Cloud Services連線至平台
+## 將Adobe Campaign Managed Cloud Services連線至Experience Platform
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 您也可以使用搜尋列來縮小顯示的來源。
 
@@ -60,7 +60,7 @@ ht-degree: 6%
 | --- | --- |
 | Adobe Campaign執行個體 | 您使用的Adobe Campaign環境例項名稱。 |
 | 目標對應 | Campaign為了傳送訊息而使用的技術物件，包含傳送傳送訊息所需的所有技術設定。 |
-| 結構描述名稱 | 您要帶到Platform的結構描述實體名稱。 選項包括傳送記錄和追蹤記錄。 |
+| 結構描述名稱 | 您要帶到Experience Platform的結構描述實體名稱。 選項包括傳送記錄和追蹤記錄。 |
 
 ![您可以在此介面設定Adobe Campaign執行個體、目標對應和結構描述名稱。](../../../../images/tutorials/create/campaign/select-data.png)
 
@@ -96,7 +96,7 @@ ht-degree: 6%
 
 [!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
-Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
+Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
 
 >[!IMPORTANT]
 >
@@ -145,7 +145,7 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 ## 後續步驟
 
-依照本教學課程所述，您已成功建立資料流，將您的Campaign v8傳遞記錄檔和追蹤記錄檔資料帶入Platform。 下游Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需更多詳細資訊，請參閱下列檔案：
+依照本教學課程指示，您已成功建立資料流，將您的Campaign v8傳遞記錄檔和追蹤記錄檔資料帶入Experience Platform。 下游Experience Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 * [[!DNL Real-Time Customer Profile] 概觀](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)

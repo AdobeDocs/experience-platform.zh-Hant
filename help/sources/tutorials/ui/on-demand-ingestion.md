@@ -2,9 +2,9 @@
 title: UI中來源資料流程的隨選擷取
 description: 瞭解如何使用Experience Platform使用者介面，依需求為您的來源連線建立資料流程。
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ ht-degree: 0%
 
 參閱本檔案前，請先實際瞭解下列Experience Platform元件：
 
-* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [資料流](../../../dataflows/home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流可跨不同服務進行設定，有助於將資料從來源聯結器移至目標資料集、身分服務和即時客戶個人檔案，以及移至目的地。
-* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [資料流](../../../dataflows/home.md)：資料流可呈現跨Experience Platform行動資料的資料作業。 資料流可跨不同服務進行設定，有助於將資料從來源聯結器移至目標資料集、身分服務和即時客戶個人檔案，以及移至目的地。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 隨選建立資料流 {#create-a-dataflow-on-demand}
 

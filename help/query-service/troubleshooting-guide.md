@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務和資料Distiller常見問題
 description: 本檔案包含和查詢服務及資料Distiller相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5024'
+source-wordcount: '5029'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ Query Service可協助您快速獲得見解，而Data Distiller則可進行深�
 - 登入Experience Platform後，在UI的左側導覽中選取「**[!UICONTROL 資料集]**」以導覽至「[!UICONTROL 資料集]」儀表板。
 - 資料集[!UICONTROL 瀏覽]索引標籤開啟。 您可以使用搜尋列來調整可用選項。 從顯示的清單中選取資料集。
 
-![Platform UI中的資料集儀表板，具有搜尋列和醒目提示的資料集。](./images/troubleshooting/dataset-selection.png)
+![Experience Platform UI中的資料集控制面板，其搜尋列和資料集已反白顯示。](./images/troubleshooting/dataset-selection.png)
 
 - [!UICONTROL 資料集活動]畫面會出現。 選取&#x200B;**[!UICONTROL 預覽資料集]**&#x200B;以開啟XDM結構描述的對話方塊，以及所選資料集中平面化資料的表格檢視。 如需詳細資訊，請參閱[預覽資料集檔案](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -287,7 +287,7 @@ SELECT count(1) FROM myTableName
 ### 我可以抽樣我的資料嗎？
 
 +++回答
-此功能目前正在進行中。 當功能準備發行時，將在[發行說明](../release-notes/latest/latest.md)中以及透過Platform UI對話方塊提供詳細資訊。
+此功能目前正在進行中。 當功能準備發行時，詳細資料將可在[發行說明](../release-notes/latest/latest.md)中取得，並可透過Experience Platform UI對話方塊取得。
 +++
 
 ### 查詢服務支援哪些協助程式函式？
@@ -522,7 +522,7 @@ WHERE T2.ID IS NULL
 有監視和警報功能可檢查查詢活動和狀態。 如需詳細資訊，請參閱[查詢服務稽核記錄整合](./data-governance/audit-log-guide.md)和[查詢記錄](./ui/overview.md#log)檔案。
 +++
 
-### 是否有任何復原更新的方式？ 例如，如果出現錯誤，或在將資料寫入Platform時某些計算需要重新設定，應如何處理該情況？
+### 是否有任何復原更新的方式？ 例如，如果在將資料寫回Experience Platform時發生錯誤，或某些計算需要重新設定，應如何處理此情況？
 
 +++回答
 目前，我們不支援以此方式復原或更新。
@@ -563,7 +563,7 @@ WHERE T2.ID IS NULL
 
 +++
 
-### 查詢服務傳回資料後，Platform是否可執行任何檢查，以確保其未傳回任何受保護的資料？
+### 查詢服務傳回資料後，Experience Platform是否可執行任何檢查，以確保其未傳回任何受保護的資料？
 
 - 查詢服務支援以屬性為基礎的存取控制。 您可以限制資料欄/分葉層級和/或結構層級的資料存取權。 請參閱檔案以進一步瞭解屬性型存取控制。
 
@@ -652,7 +652,7 @@ Data Distiller電腦時數的授權使用儀表板每天更新四次，每六小
 ### 嘗試連線到查詢服務時，「建立查詢」卡住「正在初始化連線……」。 如何修正問題？
 
 +++回答
-如果「建立查詢」卡在「初始化連線……」上，這可能是連線或工作階段問題。 如果您使用Platform UI，請重新整理瀏覽器，然後再試一次。
+如果「建立查詢」卡在「初始化連線……」上，這可能是連線或工作階段問題。 如果您使用Experience Platform UI，請重新整理瀏覽器，然後再試一次。
 +++
 
 ## 資料集範例

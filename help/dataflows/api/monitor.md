@@ -5,16 +5,16 @@ title: 使用流量服務API監控資料流
 type: Tutorial
 description: 本教學課程涵蓋使用流程服務API監控流程執行資料的完整性、錯誤和量度的步驟。
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 8%
 
 ---
 
 # 使用流量服務API監控資料流
 
-Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。 此外，Experience Platform還可讓外部合作夥伴啟用資料。
+Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。 此外，Experience Platform還允許向外部合作夥伴啟用資料。
 
 [!DNL Flow Service]用於收集及集中來自Adobe Experience Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，所有支援的來源和目的地都可以從中連線。
 
@@ -26,9 +26,9 @@ Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠�
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-- [目的地](../../destinations/home.md)：目的地是預先建置的與常用應用程式的整合，可讓您順暢地從Platform啟用資料，以用於跨管道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例。
-- [來源](../../sources/home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [目的地](../../destinations/home.md)：目的地是預先建置的與常用應用程式的整合，可讓您順暢地從Experience Platform啟用資料，用於跨管道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例。
+- [來源](../../sources/home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功監視流量執行。
 
@@ -38,13 +38,13 @@ Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠�
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠�
 
 ## 監視流程執行
 
-完成資料流後，請對[!DNL Flow Service] API執行GET要求。
+建立資料流後，請對[!DNL Flow Service] API執行GET請求。
 
 **API格式**
 

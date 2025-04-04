@@ -4,10 +4,10 @@ user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: Profiles
 role: User
-source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 31%
+source-wordcount: '133'
+ht-degree: 33%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 31%
 * [[!DNL Profile]和分段護欄](guardrails.md)
 * [[!DNL Profile]儀表板](ui/profile-dashboard.md)
 * [Edge設定檔](edge-profiles.md)
-* [體驗事件過期](event-expirations.md)
+* [體驗事件期限](event-expirations.md)
 * [假名設定檔有效期](pseudonymous-profiles.md)
 * [客戶時間戳記排序](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
@@ -54,4 +54,4 @@ ht-degree: 31%
 * [隱私權請求處理](privacy.md)
 * [[!DNL Profile]疑難排解指南](troubleshooting.md)
 * [設定檔API參考](https://www.adobe.com/go/profile-apis-en)
-* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+* [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服
 title: 查詢服務SSL選項
 description: 瞭解協力廠商連線至Adobe Experience Platform查詢服務的SSL支援，以及如何使用驗證完整SSL模式連線。
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1011'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 ## 先決條件
 
-本檔案假設您已下載協力廠商案頭使用者端應用程式，以便與您的Platform資料搭配使用。 在各自的連線指南檔案中可找到有關如何在與協力廠商使用者端連線時整合SSL安全性的特定指示。 如需所有[!DNL Query Service]受支援使用者端的清單，請參閱[使用者端連線總覽](./overview.md)。
+本檔案假設您已下載協力廠商案頭使用者端應用程式，以便與您的Experience Platform資料搭配使用。 在各自的連線指南檔案中可找到有關如何在與協力廠商使用者端連線時整合SSL安全性的特定指示。 如需所有[!DNL Query Service]受支援使用者端的清單，請參閱[使用者端連線總覽](./overview.md)。
 
 ## 可用的SSL選項 {#available-ssl-options}
 
-Platform支援各種SSL選項，以符合您的資料安全性需求，並平衡加密和金鑰交換的處理開銷。
+Experience Platform支援各種SSL選項，以符合您的資料安全需求，並平衡加密和金鑰交換的處理額外負荷。
 
 不同的`sslmode`引數值提供不同的保護等級。 使用SSL憑證即時加密資料，有助於防止「中間人」(MITM)攻擊、竊聽和模擬。 下表提供可用不同SSL模式的明細，及其提供的保護等級。
 
@@ -40,7 +40,7 @@ Platform支援各種SSL選項，以符合您的資料安全性需求，並平衡
 >
 >`verify-ca`與`verify-full`之間的差異取決於根憑證授權單位(CA)的原則。 如果您已建立自己的本機CA來發行應用程式的私密憑證，則使用`verify-ca`通常可提供足夠的保護。 如果使用公用CA，`verify-ca`會允許連線到其他人可能已向CA註冊的伺服器。 `verify-full`應一律搭配公用根CA使用。
 
-建立與Platform資料庫的協力廠商連線時，建議您至少使用`sslmode=require`，以確保移動中的資料有安全的連線。 建議將`verify-full` SSL模式用於大多數安全性敏感型環境。
+建立與Experience Platform資料庫的協力廠商連線時，建議您至少使用`sslmode=require`，以確保傳輸中的資料有安全的連線。 建議將`verify-full` SSL模式用於大多數安全性敏感型環境。
 
 ## 設定伺服器驗證的根憑證 {#root-certificate}
 

@@ -5,9 +5,9 @@ title: 在使用者介面中建立PayPal Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立PayPal來源連線。
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '462'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >[!DNL PayPal]來源將於2025年6月底淘汰。
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用Platform使用者介面建立[!DNL PayPal]來源聯結器的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用Experience Platform使用者介面建立[!DNL PayPal]來源聯結器的步驟。
 
 ## 快速入門
 
@@ -33,7 +33,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ### 收集必要的認證
 
-若要存取您的[!DNL PayPal]帳戶平台，您必須提供下列值：
+若要存取您的[!DNL PayPal]帳戶Experience Platform，您必須提供下列值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的[!DNL PayPal]帳戶
 
-收集必要的認證後，您可以依照下列步驟將[!DNL PayPal]帳戶連結至Platform。
+收集必要的認證後，您可以依照下列步驟將[!DNL PayPal]帳戶連結至Experience Platform。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
@@ -71,4 +71,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL PayPal]帳戶的連線。 您現在可以繼續下一個教學課程，並[設定資料流，將付款資料帶入Platform](../../dataflow/payments.md)。
+依照本教學課程中的指示，您已建立與[!DNL PayPal]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將付款資料帶入Experience Platform](../../dataflow/payments.md)。

@@ -4,10 +4,10 @@ title: 警報UI指南
 description: 瞭解如何在Experience Platform使用者介面中管理警報。
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 3%
+source-wordcount: '798'
+ht-degree: 7%
 
 ---
 
@@ -71,7 +71,7 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 警示通知可以直接傳送到您的電子郵件。
 
-選取位於右上角功能區的鈴鐺圖示（![鈴鐺圖示](/help/images/icons/bell.png)）以顯示通知和公告。 在出現的下拉式清單中，選取齒輪圖示（![齒輪圖示](/help/images/icons/settings.png)）以存取Experience Cloud偏好設定頁面。
+選取位於右上角功能區的鈴鐺圖示（![鈴鐺圖示](/help/images/icons/bell.png)）以顯示通知和公告。 在出現的下拉式清單中，選取Cog圖示（![Cog圖示](/help/images/icons/settings.png)）以存取Experience Cloud偏好設定頁面。
 
 ![醒目提示鈴鐺圖示和齒輪圖示的警示清單。](../images/alerts/ui/edit-preferences.png)
 
@@ -91,15 +91,15 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 | 警報類型 | 自訂引數 |
 |---|---|
-| 區段工作延遲 | 延遲臨界值 |
-| 區段匯出延遲 | 延遲臨界值 |
+| 客戶細分工作延遲 | 延遲臨界值 |
+| 客戶細分匯出延遲 | 延遲臨界值 |
 | 目的地流程執行延遲 | 延遲臨界值 |
-| Identity服務流程執行延遲 | 延遲臨界值 |
-| 設定檔流程執行延遲 | 延遲臨界值 |
+| 身分識別服務資料流執行延遲 | 延遲臨界值 |
+| 輪廓資料流執行延遲 | 延遲臨界值 |
 | 來源資料流執行延遲 | 延遲臨界值 |
 | 查詢執行延遲 | 延遲臨界值 |
 | 超出啟用略過率 | 錯誤臨界值 |
-| 超過來源擷取錯誤率 | 錯誤臨界值 |
+| 超出來源攝取錯誤率 | 錯誤臨界值 |
 
 選取規則名稱旁邊的省略符號(**...**)，下拉式清單會顯示控制項。 選取&#x200B;**[!UICONTROL 編輯]**。
 
@@ -125,4 +125,4 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ## 後續步驟
 
-本文概述如何在Platform UI中檢視及管理警報。 如需有關服務功能的詳細資訊，請參閱[可觀察性深入分析](../home.md)的概觀。
+本文概述如何在Experience Platform UI中檢視及管理警報。 如需有關服務功能的詳細資訊，請參閱[可觀察性深入分析](../home.md)的概觀。

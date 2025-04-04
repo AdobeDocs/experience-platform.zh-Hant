@@ -2,10 +2,10 @@
 title: 資料元素
 description: 資料元素是資料字典 (或資料地圖) 的建置組塊。使用資料元素，在行銷和廣告技術之間收集、組織和傳遞資料。
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 68%
+source-wordcount: '1615'
+ht-degree: 70%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 資料元素是資料字典 (或資料地圖) 的建置組塊。使用資料元素，在行銷和廣告技術之間收集、組織和傳遞資料。
 
@@ -238,7 +238,7 @@ CSS 選擇器鏈結：
 
 ### 訪客行為
 
-與「頁面資訊」類似，此資料元素使用常見行為型別，在規則或其他Platform解決方案中擴充邏輯。
+與「頁面資訊」類似，此資料元素使用常見行為型別，在規則或其他Experience Platform解決方案中擴充邏輯。
 
 選取下列其中一個訪客行為屬性：
 

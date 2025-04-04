@@ -2,10 +2,10 @@
 title: 組建
 description: 瞭解組建的概念，以及它們在Adobe Experience Platform中的運作方式。
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 48%
+source-wordcount: '791'
+ht-degree: 54%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 組建版本是包含所有在用戶端裝置上執行之程式碼的檔案集。
 
@@ -56,15 +56,15 @@ ht-degree: 48%
 
 極簡化可從檔案中移除不需要用於執行的資料，藉此降低頻寬費用並提升速度。
 
-為提升效能，Platform會縮制所有內容，包括：
+為提升效能，Experience Platform會縮制所有內容，包括：
 
 * 主要標籤庫
 * 擴充功能開發人員提供的模組程式碼，作為擴充功能的一部分
-* 平台使用者提供的自訂程式碼
+* Experience Platform使用者提供的自訂程式碼
 
 >[!NOTE]
 >
->如果您的模組代碼和自訂程式碼已縮制，Platform會再次加以辨識。 第二次極簡化不會提供額外的好處，但並不會導致任何傷害，而且可降低Platform的複雜度且更容易維護。
+>如果您的模組代碼和自訂程式碼已縮制，Experience Platform會再次加以辨識。 第二次極簡化不會提供額外的好處，但並不會導致任何傷害，而且可降低Experience Platform的複雜度且更容易維護。
 
 提供的任何使用者端代碼都會指向程式碼的縮製版本。 這在檔案名稱中可看到，其遵循縮制檔案的標準命名慣例：
 
@@ -74,7 +74,7 @@ ht-degree: 48%
 
 `launch-%environment_id%.js`
 
-如果擴充功能開發人員使用其擴充功能提供縮制的程式碼，Platform不會在未縮制的組建中提供未縮制的程式碼。 同樣地，如果Platform使用者將縮製程式碼放入自訂程式碼方塊中，該程式碼在未縮制的組建中仍為縮制的程式碼。 Platform不會解壓縮任何內容。
+如果擴充功能開發人員使用其擴充功能提供縮制的程式碼，Experience Platform不會在未縮制的組建中提供未縮制的程式碼。 同樣地，如果Experience Platform使用者將縮製程式碼放入自訂程式碼方塊中，該程式碼在未縮制的組建中仍為縮制的程式碼。 Experience Platform不會解壓縮任何內容。
 
 如需詳細資訊的詳細資訊，請參閱[此stackpath文章](https://blog.stackpath.com/glossary/minification/)。
 

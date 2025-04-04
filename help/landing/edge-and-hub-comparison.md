@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Edge Network與集線器比較
+title: Edge Network 與中心網路的比較
 description: 瞭解可在Adobe Experience Platform上使用的不同處理路徑。
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 2%
+source-wordcount: '713'
+ht-degree: 3%
 
 ---
 
+# Edge Network 與中心網路的比較
 
-# Edge Network與集線器比較
-
-Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可建置和管理可提升客戶體驗的完整解決方案。 您可以使用Experience Platform來集中和標準化來自任何系統的客戶資料和內容，並運用資料科學和機器學習來顯著改進豐富個人化體驗的設計和傳遞。 因此，Platform擁有多種資料處理方式，可讓您以最佳方式評估資料。
+Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可建置和管理可提升客戶體驗的完整解決方案。 您可以使用Experience Platform來集中和標準化來自任何系統的客戶資料和內容，並運用資料科學和機器學習來顯著改進豐富個人化體驗的設計和傳遞。 因此，Experience Platform提供多種資料處理方式，讓您以最佳方式評估資料。
 
 ## 伺服器型別
 
-在Platform上，可透過兩個不同的路徑處理資料：適用於批次和串流工作流程的Adobe Experience Platform中樞以及適用於即時體驗的Edge Network。
+在Experience Platform上，可透過兩個不同的路徑處理資料：適用於批次和串流工作流程的Adobe Experience Platform中樞以及適用於即時體驗的Edge Network 。
 
 ### Adobe Experience Platform中心
 

@@ -3,10 +3,10 @@ title: 使用合作夥伴協助的訪客辨識功能，為未知訪客提供個�
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 90%
+source-wordcount: '2676'
+ht-degree: 89%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 90%
 * 根據機率衍生的資料集和決定確認的屬性，您在多大程度上可以輕鬆地在不同頻道中並針對不同使用案例提供個人化？
 * 預先經過身分驗證但已經過識別的訪客在進行身分驗證時，他們的體驗應該如何改變？
 
-### 您將使用的 UI 功能、平台元件和 Experience Cloud 產品 {#ui-functionality-and-elements}
+### 您將使用的UI功能、Experience Platform元件和Experience Cloud產品 {#ui-functionality-and-elements}
 
 若要成功實施此使用案例，您必須使用多個區域的 Real-Time Customer Data Platform 和其他 Experience Cloud 解決方案。確保您擁有所有這些區域所需的[屬性型存取控制權限](/help/access-control/abac/overview.md)，或要求系統管理員授予您必要的權限。
 
@@ -131,7 +131,7 @@ ht-degree: 90%
 
 UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下影像。
 
-![Platform UI 的資料收集部分。](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Experience Platform UI的資料收集區段。](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### 建立資料流
 
@@ -259,7 +259,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 #### 建立對象並設定邊緣細分
 
-在Platform UI中，導覽至&#x200B;**[!UICONTROL 客戶]** > **[!UICONTROL 對象]**，並建立對象以擷取您的網站訪客。
+在Experience Platform UI中，導覽至&#x200B;**[!UICONTROL 客戶]** > **[!UICONTROL 對象]**，並建立對象以擷取您的網站訪客。
 
 ![如何導覽至對象的檢視。](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

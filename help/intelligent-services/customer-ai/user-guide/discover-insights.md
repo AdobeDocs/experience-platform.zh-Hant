@@ -5,16 +5,16 @@ feature: Customer AI
 title: 利用Customer AI探索深入分析
 description: 本檔案可用作在Intelligent Services Customer AI使用者介面中與服務執行個體深入分析互動的指南。
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2099'
 ht-degree: 1%
 
 ---
 
 # 利用Customer AI探索深入分析
 
-Customer AI是Intelligent Services的一部分，它讓行銷人員能夠運用Adobe Sensei來預測客戶的下一個動作。 Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 不必將業務需求轉換為機器學習問題、挑選演演算法、訓練或部署，就能達成上述目的。
+Customer AI是Intelligent Services的一部分，它讓行銷人員能夠運用Adobe Sensei來預測客戶的下一個動作。 Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將業務需求轉換為機器學習問題、挑選演演算法、訓練或部署，就能達成上述目的。
 
 本檔案可用作在Intelligent Services Customer AI使用者介面中與服務執行個體深入分析互動的指南。
 
@@ -164,7 +164,7 @@ Customer AI是Intelligent Services的一部分，它讓行銷人員能夠運用A
 
 ![區段填入](../images/insights/segment-saving.png)
 
-若要在Platform UI中檢視您的新區段，請在左側導覽中選取&#x200B;**[!UICONTROL 區段]**。 **[!UICONTROL 瀏覽]**&#x200B;頁面出現，並顯示所有可用的區段。
+若要在Experience Platform UI中檢視您的新區段，請在左側導覽中選取&#x200B;**[!UICONTROL 區段]**。 **[!UICONTROL 瀏覽]**&#x200B;頁面出現，並顯示所有可用的區段。
 
 ![您的所有區段](../images/insights/Segments-dashboard.png)
 
@@ -225,7 +225,7 @@ AUC反映了分數排名與預測目標發生之間的關係強度。 0.5的&#x2
 
 ## 後續步驟
 
-本檔案概述Customer AI服務執行個體所提供的深入分析。 您現在可以繼續有關[在Customer AI下載分數](./download-scores.md)的教學課程，或瀏覽提供的其他[Adobe智慧服務](../../home.md)指南。
+本檔案概述Customer AI服務執行個體所提供的深入分析。 您現在可以繼續有關[在Customer AI下載分數](./download-scores.md)的教學課程，或瀏覽提供的其他[Adobe Intelligent Services](../../home.md)指南。
 
 ## 其他資源
 

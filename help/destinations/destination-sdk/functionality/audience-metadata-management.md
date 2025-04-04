@@ -2,10 +2,10 @@
 description: 使用對象中繼資料範本，以程式設計方式在您的目的地建立、更新或刪除對象。 Adobe提供可擴充的對象中繼資料範本，您可以根據行銷API的規格進行設定。 定義、測試及提交範本後，Adobe會使用該範本來建構對目的地的API呼叫。
 title: 對象中繼資料管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 0%
+source-wordcount: '1309'
+ht-degree: 2%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 ## 受眾中繼資料管理支援的使用案例 {#use-cases}
 
-透過Destination SDK中的受眾中繼資料支援，當您設定Experience Platform目的地時，可以為Platform使用者提供下列其中一個選項，方便他們將受眾對應及啟用至您的目的地。 您可以透過目的地組態的[對象中繼資料組態](../functionality/destination-configuration/audience-metadata-configuration.md)區段中的引數，控制使用者可用的選項。
+透過Destination SDK中的受眾中繼資料支援，當您設定Experience Platform目的地時，可以為Experience Platform使用者提供下列其中一個選項，方便他們將受眾對應及啟用至您的目的地。 您可以透過目的地組態的[對象中繼資料組態](../functionality/destination-configuration/audience-metadata-configuration.md)區段中的引數，控制使用者可用的選項。
 
 ### 使用案例1 — 您有第三方API，使用者不需要輸入對應ID
 
-如果您有建立/更新/刪除對象或對象的API端點，則可以使用對象中繼資料範本來設定Destination SDK，以符合對象建立/更新/刪除端點的規格。 Experience Platform能以程式設計方式建立/更新/刪除對象，並將中繼資料同步回Experience Platform。
+如果您有建立/更新/刪除對象或對象的API端點，則可以使用對象中繼資料範本來設定Destination SDK，以符合對象建立/更新/刪除端點的規格。 Experience Platform可以程式設計方式建立/更新/刪除對象，並將中繼資料同步回Experience Platform。
 
-在Experience Platform使用者介面(UI)中將對象啟用到您的目的地時，使用者不需要手動填寫啟用工作流程中的對象對應ID欄位。
+在Experience Platform使用者介面(UI)中，將對象啟用至您的目的地時，使用者不需要手動填寫啟用工作流程中的對象對應ID欄位。
 
 ### 使用案例2 — 使用者需要先在您的目的地建立受眾，並需要手動輸入對應ID
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ![輸入對應識別碼](../assets/functionality/input-mapping-id.png)
 
-### 使用案例3 — 您的目的地接受Experience Platform的受眾ID，使用者不需要手動輸入對應ID
+### 使用案例3 — 您的目的地接受Experience Platform對象ID，使用者不需要手動輸入對應ID
 
 如果您的目的地系統接受Experience Platform對象ID，您可以在對象中繼資料範本中加以設定。 使用者啟用區段時，不必填入對象對應ID。
 
@@ -47,11 +47,11 @@ ht-degree: 0%
 
 如果您的API支援：，您可以使用通用範本來[建立新的對象範本](../metadata-api/create-audience-template.md)
 
-* HTTP方法：POST、GET、PUT、DELETE、PATCH
+* HTTP方法： POST、GET、PUT、DELETE、PATCH
 * 驗證型別：OAuth 1、具有重新整理權杖的OAuth 2、具有持有人權杖的OAuth 2
 * 函式：建立對象、更新對象、取得對象、刪除對象、驗證認證
 
-如果您的使用案例需要，Adobe工程團隊可以幫助您展開具有自訂欄位的通用範本。
+如果您的使用案例需要，Adobe工程團隊可以協助您展開具有自訂欄位的通用範本。
 
 
 ## 支援的範本事件 {#supported-events}
@@ -542,24 +542,24 @@ ht-degree: 0%
 
 ## 對象中繼資料範本中使用的巨集 {#macros}
 
-為了在Experience Platform與API之間傳遞對象ID、存取權杖、錯誤訊息等資訊，對象範本包含您可以使用的巨集。 請閱讀以下本頁三個設定範例中所使用的巨集說明：
+為了在Experience Platform與您的API之間傳遞對象ID、存取權杖、錯誤訊息等資訊，對象範本包含您可以使用的巨集。 請閱讀以下本頁三個設定範例中所使用的巨集說明：
 
 | 巨集 | 說明 |
 |--- |--- |
 | `{{segment.alias}}` | 可讓您存取Experience Platform中的對象別名。 |
-| `{{segment.name}}` | 可讓您以Experience Platform存取對象名稱。 |
-| `{{segment.id}}` | 可讓您以Experience Platform存取對象ID。 |
+| `{{segment.name}}` | 可讓您存取Experience Platform中的對象名稱。 |
+| `{{segment.id}}` | 可讓您存取Experience Platform中的對象ID。 |
 | `{{customerData.accountId}}` | 可讓您存取在目的地設定中設定的帳戶ID欄位。 |
 | `{{oauth2ServiceAccessToken}}` | 可讓您根據您的OAuth 2設定動態產生存取權杖。 |
 | `{{authData.accessToken}}` | 可讓您將存取Token傳遞至API端點。 如果Experience Platform應該使用不會到期的權杖來連線到您的目的地，請使用`{{authData.accessToken}}`，否則請使用`{{oauth2ServiceAccessToken}}`來產生存取權杖。 |
 | `{{body.segments[0].segment.id}}` | 傳回已建立對象的唯一識別碼，作為索引鍵`externalAudienceId`的值。 |
-| `{{error.message}}` | 傳回會在Experience PlatformUI中向使用者顯示的錯誤訊息。 |
-| `{{{segmentEnrichmentAttributes}}}` | 可讓您存取特定對象的所有擴充屬性。  `create`、`update`和`delete`事件支援此巨集。 擴充屬性僅適用於[自訂上傳對象](destination-configuration/schema-configuration.md#external-audiences)。 請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
+| `{{error.message}}` | 傳回錯誤訊息，此訊息將會在Experience Platform UI中呈現給使用者。 |
+| `{{{segmentEnrichmentAttributes}}}` | 可讓您存取特定對象的所有擴充屬性。  `create`、`update`和`delete`事件支援此巨集。 擴充屬性僅適用於[自訂上傳客群](destination-configuration/schema-configuration.md#external-audiences)。請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
 | `{{destination.name}}` | 傳回目的地的名稱。 |
 | `{{destination.sandboxName}}` | 傳回設定目的地的Experience Platform沙箱名稱。 |
 | `{{destination.id}}` | 傳回目的地設定的ID。 |
 | `{{destination.imsOrgId}}` | 傳回設定目的地的IMS組織ID。 |
-| `{{destination.enrichmentAttributes}}` | 可讓您存取對應至目的地之所有對象的所有擴充屬性。 `createDestination`、`updateDestination`和`deleteDestination`事件支援此巨集。 擴充屬性僅適用於[自訂上傳對象](destination-configuration/schema-configuration.md#external-audiences)。 請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | 可讓您存取對應至目的地之特定外部對象的擴充屬性。 擴充屬性僅適用於[自訂上傳對象](destination-configuration/schema-configuration.md#external-audiences)。 請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
+| `{{destination.enrichmentAttributes}}` | 可讓您存取對應至目的地之所有對象的所有擴充屬性。 `createDestination`、`updateDestination`和`deleteDestination`事件支援此巨集。 擴充屬性僅適用於[自訂上傳客群](destination-configuration/schema-configuration.md#external-audiences)。請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | 可讓您存取對應至目的地之特定外部對象的擴充屬性。 擴充屬性僅適用於[自訂上傳客群](destination-configuration/schema-configuration.md#external-audiences)。請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
 
 {style="table-layout:auto"}

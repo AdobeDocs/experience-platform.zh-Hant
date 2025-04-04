@@ -5,10 +5,10 @@ title: 在UI中的Azure HDInsights Source連線上建立Apache Spark
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI在Azure HDInsights來源連線上建立Apache Spark。
 exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 1%
 >
 > [!DNL Azure HDInsights]聯結器上的[!DNL Apache Spark]為Beta版。 如需使用Beta標籤聯結器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Platform]使用者介面在[!DNL Azure HDInsights]來源聯結器上建立[!DNL Apache Spark]的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面在[!DNL Azure HDInsights]來源聯結器上建立[!DNL Apache Spark]的步驟。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [體驗資料模型(XDM)系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [體驗資料模型(XDM)系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [即時客戶個人檔案](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
@@ -33,7 +33,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ### 收集必要的認證
 
-若要在[!DNL Platform]上存取您的[!DNL Spark]帳戶，您必須提供下列值：
+若要在[!DNL Experience Platform]上存取您的[!DNL Spark]帳戶，您必須提供下列值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的[!DNL Spark]帳戶
 
-收集必要的認證後，您可以依照下列步驟連結[!DNL Spark]帳戶以連線至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟連結[!DNL Spark]帳戶以連線至[!DNL Experience Platform]。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
@@ -71,4 +71,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Spark]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Platform]](../../dataflow/databases.md)。
+依照本教學課程中的指示，您已建立與[!DNL Spark]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Experience Platform]](../../dataflow/databases.md)。

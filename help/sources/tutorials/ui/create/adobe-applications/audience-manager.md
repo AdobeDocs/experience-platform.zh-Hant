@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Audience Manager來源聯結器；Audience Manager；Audience Manager聯結器
+keywords: Experience Platform；首頁；熱門主題；Audience Manager來源聯結器；Audience Manager；audience Manager聯結器
 title: 在使用者介面中建立Adobe Audience Manager Source連線
-description: 本教學課程將逐步帶您瞭解如何建立Adobe Audience Manager的來源連線，以便使用使用者介面將消費者體驗事件資料匯入Platform。
+description: 本教學課程將逐步帶您瞭解如何建立Adobe Audience Manager的來源連線，以便使用使用者介面將消費者體驗事件資料匯入Experience Platform。
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '590'
 ht-degree: 1%
 
 ---
 
 # 在UI中建立Adobe Audience Manager來源連線
 
-本教學課程將逐步帶您瞭解如何建立Adobe Audience Manager的來源聯結器，以便使用使用者介面將消費者體驗事件資料匯入Platform。
+本教學課程將逐步帶您瞭解如何建立Adobe Audience Manager的來源聯結器，以便使用使用者介面將消費者體驗事件資料匯入Experience Platform。
 
 ## 建立與Adobe Audience Manager的來源連線
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋列來尋找您要使用的特定來源。
 
@@ -45,17 +45,17 @@ ht-degree: 1%
 
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
-或者，您可以選取「**[!UICONTROL 選取所有區段]**」和「**[!UICONTROL 選取所有特徵]**」方塊。 選取所有區段會將Audience Manager區段引進Platform，而選取所有特徵則會從Audience Manager中啟用所有第一方特徵。
+或者，您可以選取「**[!UICONTROL 選取所有區段]**」和「**[!UICONTROL 選取所有特徵]**」方塊。 選取所有區段會將Audience Manager區段引進Experience Platform，而選取所有特徵則會從Audience Manager啟用所有第一方特徵。
 
 >[!WARNING]
 >
->當您使用Audience Manager來源首次將Audience Manager區段傳送至Platform時，大量的Audience Manager區段母體的擷取會直接影響您的總設定檔計數。 這表示選取所有區段可能會導致設定檔計數超過您的授權使用權益。 請先檢閱您的[授權使用量](../../../../../dashboards/guides/license-usage.md)，然後再繼續。
+>當您使用Audience Manager來源首次將Audience Manager區段傳送至Experience Platform時，大量的Audience Manager區段母體的擷取會直接影響您的總設定檔計數。 這表示選取所有區段可能會導致設定檔計數超過您的授權使用權益。 請先檢閱您的[授權使用量](../../../../../dashboards/guides/license-usage.md)，然後再繼續。
 
 完成後，請選取&#x200B;**[!UICONTROL 下一步]**
 
 ![所有區段](../../../../images/tutorials/create/aam/all-segments.png)
 
-[!UICONTROL 檢閱]步驟隨即顯示，可讓您在選取的特徵和區段連線至Platform之前，先檢閱這些特徵和區段。 詳細資料會分組到以下類別中：
+[!UICONTROL 檢閱]步驟隨即顯示，可讓您在選取的特徵和區段連線至Experience Platform之前，先檢閱這些特徵和區段。 詳細資料會分組到以下類別中：
 
 * **[!UICONTROL 連線]**：顯示來源平台和連線的狀態。
 * **[!UICONTROL 選取的資料]**：顯示選取的區段數和啟用的特徵數。
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ## 後續步驟
 
-當Audience Manager資料流作用中時，傳入的資料會自動擷取到即時客戶個人檔案中。 您現在可以利用這些傳入資料，並使用Platform Segmentation Service建立對象區段。 如需更多詳細資訊，請參閱下列檔案：
+當Audience Manager資料流作用中時，傳入的資料會自動擷取到即時客戶個人檔案中。 您現在可以利用這些傳入資料，並使用Experience Platform Segmentation Service建立對象區段。 如需更多詳細資訊，請參閱下列檔案：
 
 * [即時客戶輪廓概觀](../../../../../profile/home.md)
 * [Segmentation Service概述](../../../../../segmentation/home.md)

@@ -3,9 +3,9 @@ title: 使用UI連線AWS Redshift至Experience Platform
 description: 瞭解如何使用來源UI將AWS Redshift帳戶連結至Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '719'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 ## 瀏覽來源目錄
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*[!UICONTROL 資料庫]*&#x200B;類別下選取&#x200B;**[!DNL AWS Redshift]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 

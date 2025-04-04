@@ -2,9 +2,9 @@
 title: Reactor API指南
 description: Reactor API 可讓開發人員以程式設計方式管理 Adobe Experience Platform 標記的所有資源。請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1080'
 ht-degree: 4%
 
 ---
@@ -99,15 +99,15 @@ Reactor API提供數個端點，可讓您以程式設計方式管理Adobe Experi
 
 ## 回呼
 
-回呼是每當產生新稽核事件時，Platform傳送給URL主機的訊息。 請參閱[回呼端點指南](./endpoints/callbacks.md)，瞭解如何在API中管理回呼。
+回呼是每當產生新稽核事件時，Experience Platform傳送給URL主機的訊息。 請參閱[回呼端點指南](./endpoints/callbacks.md)，瞭解如何在API中管理回呼。
 
 ## 附註
 
 附註是可新增至特定標籤資源的文字註釋，例如資料元素、擴充功能、程式庫、屬性、規則和規則元件。 請參閱[筆記端點指南](./endpoints/notes.md)，瞭解如何在API中管理筆記。
 
-## 設定檔
+## 輪廓
 
-設定檔包含有關登入使用者的所有資訊，包括所屬所有Adobe組織、每個組織內所屬的產品設定檔，以及每個產品設定檔所擁有的許可權。
+設定檔包含有關登入使用者的所有資訊，包括所屬所有Adobe組織、每個組織內的產品設定檔以及每個產品設定檔所擁有的許可權。
 
 請參閱[設定檔端點指南](./endpoints/profile.md)，瞭解如何在API中檢視此資訊。
 

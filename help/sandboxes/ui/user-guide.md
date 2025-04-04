@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙箱UI指南
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙箱相關的各種作業的步驟。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 4%
 
 ## 檢視沙箱
 
-在Experience PlatformUI中，選取左側導覽中的&#x200B;**[!UICONTROL 沙箱]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以開啟[!UICONTROL 沙箱]儀表板。 儀表板會列出貴組織的所有可用沙箱，包括其個別型別（生產或開發）。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 沙箱]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以開啟[!UICONTROL 沙箱]儀表板。 儀表板會列出貴組織的所有可用沙箱，包括其個別型別（生產或開發）。
 
 ![已選取瀏覽標籤的沙箱儀表板，顯示可用的沙箱清單。](../images/ui/view-sandboxes.png)
 
 ## 在沙箱之間切換
 
-沙箱指標位於Platform UI的頂端標題中，會顯示您目前所在沙箱的標題、區域及型別。
+沙箱指標位於Experience Platform UI的頂端標題中，顯示您目前所在沙箱的標題、其區域和型別。
 
 ![沙箱指標反白顯示的沙箱儀表板。](../images/ui/sandbox-indicator.png)
 

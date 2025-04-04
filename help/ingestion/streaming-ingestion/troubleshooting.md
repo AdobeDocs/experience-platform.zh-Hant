@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 串流擷取疑難排解指南
 description: 本檔案提供在Adobe Experience Platform上串流擷取相關常見問題的解答。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 串流擷取疑難排解指南
 
-本檔案提供在Adobe Experience Platform上串流擷取相關常見問題的解答。 有關其他[!DNL Platform]服務（包括所有[!DNL Platform] API中遇到的服務）的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../../landing/troubleshooting.md)。
+本檔案提供在Adobe Experience Platform上串流擷取相關常見問題的解答。 有關其他[!DNL Experience Platform]服務（包括所有[!DNL Experience Platform] API中遇到的服務）的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../../landing/troubleshooting.md)。
 
 Adobe Experience Platform [!DNL Data Ingestion]提供您可用來將資料擷取到[!DNL Experience Platform]的RESTful API。 內嵌的資料會用於近乎即時更新個別客戶設定檔，讓您跨多個管道提供個人化的相關體驗。 請閱讀[資料擷取概觀](../home.md)，以取得有關服務和不同擷取方法的詳細資訊。 如需如何使用串流擷取API的步驟，請閱讀[串流擷取總覽](../streaming-ingestion/overview.md)。
 
@@ -33,9 +33,9 @@ Adobe Experience Platform [!DNL Data Ingestion]提供您可用來將資料擷取
 
 如需同步和非同步驗證的詳細資訊，請參閱[串流驗證概觀](../quality/streaming-validation.md)。 如需如何檢視驗證失敗的批次的步驟，請參閱[擷取失敗的批次](../quality/retrieve-failed-batches.md)的指南。
 
-### 我可以先驗證要求裝載再傳送至[!DNL Platform]嗎？
+### 我可以先驗證要求裝載再傳送至[!DNL Experience Platform]嗎？
 
-要求裝載只有在傳送至[!DNL Platform]後，才能進行評估。 執行同步驗證時，有效裝載會傳回填入的JSON物件，而無效裝載會傳回錯誤訊息。 在非同步驗證期間，服務會偵測任何格式錯誤的資料，並將其傳送至[!DNL Data Lake]，以便稍後擷取該資料進行分析。 如需詳細資訊，請參閱[串流驗證概觀](../quality/streaming-validation.md)。
+要求裝載只有在傳送至[!DNL Experience Platform]後，才能進行評估。 執行同步驗證時，有效裝載會傳回填入的JSON物件，而無效裝載會傳回錯誤訊息。 在非同步驗證期間，服務會偵測任何格式錯誤的資料，並將其傳送至[!DNL Data Lake]，以便稍後擷取該資料進行分析。 如需詳細資訊，請參閱[串流驗證概觀](../quality/streaming-validation.md)。
 
 ### 在不支援同步驗證的邊緣上請求同步驗證時，會發生什麼情況？
 
@@ -43,7 +43,7 @@ Adobe Experience Platform [!DNL Data Ingestion]提供您可用來將資料擷取
 
 ### 如何確保僅從受信任的來源收集資料？
 
-[!DNL Experience Platform]支援安全資料收集。 啟用已驗證的資料收集時，使用者端必須傳送JSON Web權杖(JWT)及其組織ID作為要求標題。 如需有關如何將已驗證的資料傳送至[!DNL Platform]的詳細資訊，請參閱[已驗證的資料彙集](../tutorials/create-authenticated-streaming-connection.md)的指南。
+[!DNL Experience Platform]支援安全資料收集。 啟用已驗證的資料收集時，使用者端必須傳送JSON Web權杖(JWT)及其組織ID作為要求標題。 如需有關如何將已驗證的資料傳送至[!DNL Experience Platform]的詳細資訊，請參閱[已驗證的資料彙集](../tutorials/create-authenticated-streaming-connection.md)的指南。
 
 ### 將資料串流至[!DNL Real-Time Customer Profile]的延遲為何？
 
@@ -51,15 +51,15 @@ Adobe Experience Platform [!DNL Data Ingestion]提供您可用來將資料擷取
 
 ### 我可以在同一API請求中包含多則訊息嗎？
 
-您可以在單一要求裝載中將多個訊息分組，並將它們串流至[!DNL Platform]。 若正確使用，在單一請求中將多個訊息分組，是最佳化資料作業的絕佳方式。 如需詳細資訊，請閱讀有關[在要求中傳送多封郵件](../tutorials/streaming-multiple-messages.md)的教學課程。
+您可以在單一要求裝載中將多個訊息分組，並將它們串流至[!DNL Experience Platform]。 若正確使用，在單一請求中將多個訊息分組，是最佳化資料作業的絕佳方式。 如需詳細資訊，請閱讀有關[在要求中傳送多封郵件](../tutorials/streaming-multiple-messages.md)的教學課程。
 
 ### 如何知道是否收到我傳送的資料？
 
-傳送到[!DNL Platform]的所有資料（無論成功與否）都會先儲存為批次檔案，再保留在資料集中。 批次的處理狀態會顯示在它們被傳送到的資料集中。
+傳送到[!DNL Experience Platform]的所有資料（無論成功與否）都會先儲存為批次檔案，再保留在資料集中。 批次的處理狀態會顯示在它們被傳送到的資料集中。
 
 您可以使用[Experience Platform使用者介面](https://platform.adobe.com)檢查資料集活動，以確認是否已成功擷取資料。 按一下左側導覽中的&#x200B;**[!UICONTROL 資料集]**&#x200B;以顯示資料集清單。 從顯示的清單中選取您要串流至的資料集，以開啟其&#x200B;**[!UICONTROL 資料集活動]**&#x200B;頁面，其中顯示所選時段內傳送的所有批次。 如需有關使用[!DNL Experience Platform]監視資料串流的詳細資訊，請參閱[監視串流資料流](../quality/monitor-data-ingestion.md)的指南。
 
-如果您的資料擷取失敗，而您想要從[!DNL Platform]復原該資料，您可以將失敗批次的ID傳送至[!DNL Data Access API]以擷取它們。 如需詳細資訊，請參閱[擷取失敗的批次](../quality/retrieve-failed-batches.md)的指南。
+如果您的資料擷取失敗，而您想要從[!DNL Experience Platform]復原該資料，您可以將失敗批次的ID傳送至[!DNL Data Access API]以擷取它們。 如需詳細資訊，請參閱[擷取失敗的批次](../quality/retrieve-failed-batches.md)的指南。
 
 ### 為什麼我的串流資料無法在資料湖中使用？
 

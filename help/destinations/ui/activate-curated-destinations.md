@@ -3,9 +3,9 @@ title: 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 type: Tutorial
 description: 瞭解如何使用LiveRamp RampID從Adobe Experience Platform啟用對象至連線的電視和音訊目的地，以及其他整合。
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -70,13 +70,13 @@ ht-degree: 0%
 
 您可以使用&#x200B;**[!DNL LiveRamp - Onboarding]**&#x200B;目的地來執行此動作。
 
-顯示LiveRamp — 上線目的地卡片的![Experience PlatformUI影像](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
+![顯示LiveRamp — 上線目的地卡片的Experience Platform UI影像](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
 若要瞭解如何設定[!DNL LiveRamp - Onboarding]目的地並從Experience Platform匯出您的對象，請閱讀[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md)目的地檔案。
 
 >[!IMPORTANT]
 >
->將檔案匯出至[!DNL LiveRamp - Onboarding]目的地時，Platform會為每個[合併原則ID](../../profile/merge-policies/overview.md)產生一個CSV檔案。 如需如何驗證資料匯出至LiveRamp的詳細資訊，請參閱[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md)目的地檔案。
+>將檔案匯出至[!DNL LiveRamp - Onboarding]目的地時，Experience Platform會為每個[合併原則ID](../../profile/merge-policies/overview.md)產生一個CSV檔案。 如需如何驗證資料匯出至LiveRamp的詳細資訊，請參閱[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md)目的地檔案。
 
 
 成功將對象匯出至LiveRamp後，請繼續[步驟2](#distribution)。
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 您使用&#x200B;**[!DNL LiveRamp - Distribution]**&#x200B;目的地來啟用對象（已在[步驟1](#onboarding)中匯出）。
 
-顯示LiveRamp — 散發目的地卡片的![Experience PlatformUI影像](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
+![顯示LiveRamp — 散發目的地卡片的Experience Platform UI影像](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
 若要瞭解如何設定&#x200B;**[!DNL LiveRamp - Distribution]**&#x200B;目的地並啟用您在[步驟1](#onboarding)中匯出的對象，請閱讀[[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md)目的地檔案。
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 ><br>
 >範例：`LiveRamp - Roku`。
 
-![顯示多個LiveRamp目的地的Platform UI熒幕擷圖。](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+![Experience Platform UI熒幕擷圖顯示多個LiveRamp目的地。](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系
 title: 在UI中定義必填欄位
 description: 瞭解如何在Experience Platform使用者介面中定義必要的XDM欄位。
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->無論結構描述欄位是否為必要欄位，Platform不接受任何內嵌欄位的`null`或空值。 如果記錄或事件中沒有特定欄位的值，則應該從擷取裝載中排除該欄位的索引鍵。
+>無論結構描述欄位是否為必要欄位，Experience Platform都不會接受任何已擷取欄位的`null`或空白值。 如果記錄或事件中沒有特定欄位的值，則應該從擷取裝載中排除該欄位的索引鍵。
 
 在Adobe Experience Platform使用者介面中定義[新欄位](./overview.md#define)時，您可以選取右側邊欄中的&#x200B;**[!UICONTROL 必要]**&#x200B;核取方塊，將其設定為必要欄位。 選取&#x200B;**[!UICONTROL 套用]**&#x200B;以套用變更至結構描述。
 

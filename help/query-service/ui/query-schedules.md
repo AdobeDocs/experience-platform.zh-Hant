@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2028'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您選擇設定[!UICONTROL 查詢執行延遲]警報，您必須在Platform UI中設定您想要的延遲時間（以分鐘為單位）。 輸入持續時間（分鐘）。 延遲時間上限為24小時（1440分鐘）。
+>如果您選擇設定[!UICONTROL 查詢執行延遲]警報，您必須在Experience Platform UI中設定您想要的延遲時間（以分鐘為單位）。 輸入持續時間（分鐘）。 延遲時間上限為24小時（1440分鐘）。
 
 如需Adobe Experience Platform中警示的概觀，包括警示規則的定義結構，請參閱[警示概觀](../../observability/alerts/overview.md)。 如需在Adobe Experience Platform UI中管理警示和警示規則的指南，請參閱[警示UI指南](../../observability/alerts/ui.md)。
 
@@ -153,7 +153,7 @@ ht-degree: 0%
 |---------------------|----------------------------------|
 | [!UICONTROL 查詢執行ID] | 顯示每個查詢回合的唯一識別碼，可讓您追蹤和參考已排程查詢的個別執行。 |
 | [!UICONTROL 查詢執行開始] | 表示查詢執行的開始日期和時間，協助您監視每次執行的開始時間。 |
-| [!UICONTROL 查詢執行完成] | 顯示查詢執行的完成日期和時間，以提供執行持續時間和狀態的深入分析。 |
+| [!UICONTROL 查詢執行完成] | 顯示查詢執行的完成日期和時間，以提供insight的執行期間和狀態。 |
 | [!UICONTROL 狀態] | 顯示查詢執行的目前狀態，例如`Completed,` `Running,`或`Failed,`，以快速評估結果。 |
 | [!UICONTROL 資料集] | 列出查詢執行中使用的資料集，以顯示與執行有關的資料來源。 |
 | [!UICONTROL 計算時數] | 顯示用於每次查詢執行的運算時間（以小時為單位）。 這有助於追蹤資源使用情況並最佳化查詢效能。 |

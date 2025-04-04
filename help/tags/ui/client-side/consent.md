@@ -2,10 +2,10 @@
 title: 部署JavaScript標籤以管理客戶同意
 description: 瞭解如何在Adobe Experience Platform中針對各種Adobe解決方案管理客戶選擇加入和選擇退出訊號。
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 72%
+source-wordcount: '610'
+ht-degree: 79%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 一般資料保護規範(GDPR)等隱私權法規要求公司必須能夠管理其使用者的同意宣告。 Adobe客戶在為任何特定訪客執行Adobe解決方案之前，可能會要求訪客選擇加入。 訪客應該要能管理自己的選擇加入和選擇退出狀態。
 
@@ -36,7 +36,7 @@ Adobe Experience Platform不會自動引發[!DNL Advertising Cloud]。 只有在
 * 追蹤下載連結
 * 追蹤對外連結
 
-未選取這些設定時，Platform不會自動引發[!DNL Adobe Analytics]。 只有在您明確指定規則動作時，[!DNL Analytics] 才會引發。使用規則條件來判斷要在何時引發以及要引發的行為。例如，若要使用 Cookie 判斷選擇加入狀態，請設定資料元素以讀取該 Cookie 並將其用作規則中的條件，以判斷何時引發「傳送信標」動作。
+未選取這些設定時，Experience Platform不會自動引發[!DNL Adobe Analytics]。 只有在您明確指定規則動作時，[!DNL Analytics] 才會引發。使用規則條件來判斷要在何時引發以及要引發的行為。例如，若要使用 Cookie 判斷選擇加入狀態，請設定資料元素以讀取該 Cookie 並將其用作規則中的條件，以判斷何時引發「傳送信標」動作。
 
 另外，您可以考慮使用 [Adobe 選擇加入物件](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html)，搭配您的同意聲明管理平台，控制此標籤的引發機制。
 

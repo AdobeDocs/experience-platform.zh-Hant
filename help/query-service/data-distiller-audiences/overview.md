@@ -2,9 +2,9 @@
 title: 使用SQL建立對象
 description: 瞭解如何在Adobe Experience Platform的Data Distiller中使用SQL對象擴充功能，以使用SQL命令建立、管理和發佈對象。 本指南涵蓋對象生命週期的所有方面，包括建立、更新和刪除設定檔，以及使用資料導向對象定義來鎖定以檔案為基礎的目的地。
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 使用此SQL擴充功能可改善您建立受眾的能力，因為在定義受眾區段時，您不需要在設定檔中使用原始資料。 使用此方法建立的對象會自動在對象工作區中註冊，您可以進一步將對象鎖定在檔案型目的地。
 
-![顯示SQL對象擴充功能工作流程的資訊圖。 階段包括：使用SQL命令透過查詢服務建立對象、在平台UI中管理對象，以及在檔案型目的地中啟用對象。](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![顯示SQL對象擴充功能工作流程的資訊圖。 這些階段包括：使用SQL命令透過查詢服務建立對象、在Experience Platform UI中管理對象，以及在檔案型目的地中啟用對象。](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 本文介紹如何在Adobe Experience Platform的Data Distiller中使用SQL對象擴充功能，以使用SQL命令建立、管理和發佈對象。
 
@@ -203,7 +203,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### 自動對象註冊與可用性 {#registration-and-availability}
 
-使用SQL擴充功能建立的對象會自動在Audience工作區的Data Distiller [!UICONTROL Origin]下註冊。 註冊後，這些受眾即可在檔案型目的地中用於鎖定目標、增強細分和目標定位策略。 此程式不需要額外設定，可簡化受眾管理。 如需如何在Platform UI中檢視、管理和建立對象的詳細資訊，請參閱[對象入口網站概觀](../../segmentation/ui/audience-portal.md)。
+使用SQL擴充功能建立的對象會自動在Audience工作區的Data Distiller [!UICONTROL Origin]下註冊。 註冊後，這些受眾即可在檔案型目的地中用於鎖定目標、增強細分和目標定位策略。 此程式不需要額外設定，可簡化受眾管理。 如需如何在Experience Platform UI中檢視、管理和建立對象的詳細資訊，請參閱[對象入口網站概觀](../../segmentation/ui/audience-portal.md)。
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -289,9 +289,9 @@ Adobe Journey Optimizer中也提供資料Distiller對象。 您可以在Adobe Jo
 
 閱讀本檔案後，您已瞭解如何在資料Distiller中使用SQL對象擴充功能，以使用SQL命令有效建立、管理和發佈對象。 您現在可以根據獨特的業務需求自訂對象定義，並在各種目的地啟用對象定義，以最佳化行銷策略和資料導向式決策。
 
-接下來，您可以閱讀下列檔案，進一步開發並最佳化Platform對象管理策略：
+接下來，您可以閱讀下列檔案，以進一步開發及最佳化Experience Platform對象管理策略：
 
-- **探索對象評估**：瞭解Adobe Experience Platform中的[對象評估方法](../../segmentation/home.md#evaluate-segments)：即時更新的串流細分、排程或隨選處理的批次細分，以及即時評估Edge Network的邊緣細分。
-- **與目的地整合**：閱讀如何使用Platform目的地UI [隨選匯出檔案至批次目的地](../../destinations/ui/export-file-now.md)的指南。
+- **探索對象評估**：瞭解Adobe Experience Platform中的[對象評估方法](../../segmentation/home.md#evaluate-segments)：即時更新的串流細分、排程或隨選處理的批次細分，以及Edge Network上即時評估的邊緣細分。
+- **與目的地整合**：閱讀如何使用Experience Platform目的地UI [隨選匯出檔案至批次目的地](../../destinations/ui/export-file-now.md)的指南。
 - **檢閱對象效能**：分析您的SQL定義對象在不同管道中的執行方式。 使用資料深入分析來調整和改善您的對象定義和定位策略。 閱讀有關[對象深入分析](../../dashboards/insights/audiences.md)的檔案，瞭解如何在Adobe Real-Time CDP中存取和調整SQL查詢，以獲得對象深入分析。 接著，您可以自訂「對象」控制面板，建立自己的深入分析，並將原始資料轉換為可操作的資訊，以有效視覺化並運用這些深入分析，做出更好決策。
 

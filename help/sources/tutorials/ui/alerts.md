@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；警報
 description: 您可以在建立資料流時訂閱警報，以接收有關流程執行的狀態、成功或失敗的警報訊息。
 title: 訂閱UI中的內容感知警報
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '825'
 ht-degree: 7%
 
 ---
@@ -22,9 +22,9 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 參閱本檔案前，請先實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [可觀察性](../../../observability/home.md)： [!DNL Observability Insights]可讓您透過使用統計量度和事件通知來監視Platform活動。
-   * [警示](../../../observability/alerts/overview.md)：當您的Platform作業達到特定條件集時（例如系統違反臨界值時會發生潛在問題），Platform可以將警示訊息傳送給貴組織中訂閱這些訊息的任何使用者。
+* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [可觀察性](../../../observability/home.md)： [!DNL Observability Insights]可讓您透過使用統計量度和事件通知來監視Experience Platform活動。
+   * [警報](../../../observability/alerts/overview.md)：當您的Experience Platform作業中達到特定條件集時（例如當系統違反臨界值時會發生潛在問題），Experience Platform可以將警報訊息傳送給組織中訂閱這些訊息的任何使用者。
 
 ## 訂閱 UI 中的警示 {#subscribe-sources-alerts}
 
@@ -36,7 +36,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 >[!IMPORTANT]
 >
->您必須為您的Platform帳戶啟用即時電子郵件通知，才能接收資料流程的電子郵件式警報通知。
+>您必須啟用Experience Platform帳戶的即時電子郵件通知，才能接收資料流程的電子郵件式警報通知。
 
 您可以在來源工作區中來源工作流程的[!UICONTROL 資料流詳細資料]步驟期間，為資料流啟用警示。
 
@@ -51,7 +51,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 | 警示 | 說明 |
 | --- | --- |
 | 來源資料流執行開始 | 此警報會在您的來源資料流啟動時傳送訊息給您。 |
-| 來源資料流執行成功 | 當來源中的資料成功擷取到Platform時，此警報會傳送訊息給您。 |
+| 來源資料流執行成功 | 當來源中的資料成功擷取到Experience Platform時，此警報會傳送訊息給您。 |
 | 來源資料流執行失敗 | 如果您的資料流發生錯誤，此警報會傳送訊息給您。 |
 
 選取您要訂閱的警示，然後選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以檢視並完成您的資料流。
@@ -76,7 +76,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 ### 在UI中
 
-警報會在UI中以Platform UI頂端標題中的通知圖示表示。 選取通知圖示以檢視有關資料流的特定警報訊息。
+警報會在UI中以Experience Platform UI頂端標題中的通知圖示表示。 選取通知圖示以檢視有關資料流的特定警報訊息。
 
 ![通知](../../images/tutorials/alerts/notification.png)
 

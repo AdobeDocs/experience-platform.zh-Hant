@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
-title: 自助來源（批次SDK） API指南
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
+title: 自助來源(批次SDK) API指南
 description: 本檔案提供建立新來源的程式概觀，包括如何使用「流程服務API」擷取、寫入及提交新連線規格的步驟。
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
-# 自助來源（批次SDK） API指南
+# 自助來源(批次SDK) API指南
 
 本檔案提供建立新來源的程式概觀，包括如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)編寫並提交新連線規格的步驟。
 
-[!DNL Flow Service]用於收集並集中來自Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，可讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證協力廠商系統、設定擷取執行時間，以及管理資料擷取輸送量。
+[!DNL Flow Service]用於收集及集中來自Experience Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，可讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證協力廠商系統、設定擷取執行時間，以及管理資料擷取輸送量。
 
-[!DNL Flow Service] API提供數個端點，可讓您以程式設計方式管理要透過自助式來源（批次SDK）整合之新來源的連線和流量規格。
+[!DNL Flow Service] API提供數個端點，可讓您以程式設計方式管理要透過自助式來源(批次SDK)整合之新來源的連線和流量規格。
 
 ## 建立新的連線規格
 
@@ -44,4 +44,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-若要開始使用[!DNL Flow Service] API並透過自助來源（批次SDK）建立新來源，請閱讀[快速入門手冊](./getting-started.md)，然後選取其中一個端點指南，以瞭解如何使用特定端點。
+若要開始使用[!DNL Flow Service] API並透過自助服務來源(批次SDK)建立新來源，請閱讀[快速入門手冊](./getting-started.md)，然後選取其中一個端點指南，以瞭解如何使用特定端點。

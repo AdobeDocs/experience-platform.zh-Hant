@@ -3,9 +3,9 @@ keywords: Marketo；marketo；Marketo擴充功能；marketo擴充功能
 title: Marketo擴充功能
 description: Marketo擴充功能是Adobe Experience Platform中的電子郵件目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '449'
 ht-degree: 4%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 4%
 
 [!DNL Marketo]是Adobe Experience Platform中的電子郵件副檔名。 如需有關擴充功能功能的詳細資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)上的[擴充功能頁面。
 
-此目的地是標籤延伸模組。 如需標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
+此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
 ![Marketo擴充功能](../../assets/catalog/email/marketo/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-此擴充功能可在[!DNL Destinations]目錄中提供給所有已購買Platform的客戶。
+此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
 若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，讓您可以安裝擴充功能。
 
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 若要安裝[!DNL Marketo]擴充功能：
 
-1. 在[平台介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
+1. 在[Experience Platform介面](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 2. 從目錄中選取擴充功能或使用搜尋列。
 3. 按一下目的地以反白顯示，然後在右側邊欄中選取&#x200B;**[!UICONTROL 設定]**。 如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈現灰色，表示您缺少&#x200B;**[!UICONTROL manage_properties]**&#x200B;許可權。 請參閱[必要條件](#prerequisites)。
 4. 選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。在標籤檔案的[屬性頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中瞭解屬性。
@@ -54,6 +54,6 @@ ht-degree: 4%
 
 >[!TIP]
 >
->如果擴充功能已安裝在您的其中一個屬性上，Platform UI仍會顯示擴充功能的&#x200B;**[!UICONTROL 安裝]**。 依照[安裝擴充功能](#install-extension)中的說明啟動安裝工作流程，以設定或刪除您的擴充功能。
+>如果擴充功能已安裝在您的其中一個屬性上，Experience Platform UI仍會顯示擴充功能的&#x200B;**[!UICONTROL 安裝]**。 依照[安裝擴充功能](#install-extension)中的說明啟動安裝工作流程，以設定或刪除您的擴充功能。
 
 若要升級您的擴充功能，請參閱標籤檔案中的[擴充功能升級程式](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)指南。

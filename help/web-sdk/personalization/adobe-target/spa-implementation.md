@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK的單頁應用程式實作
 description: 瞭解如何使用Adobe Target建立Adobe Experience Platform Web SDK的單頁應用程式(SPA)實作。
 keywords: target；adobe target；xdm檢視；檢視；單頁應用程式；SPA；SPA生命週期；使用者端；AB測試；AB；體驗鎖定目標；XT；VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -19,15 +19,15 @@ Adobe Experience Platform Web SDK提供豐富的功能，讓貴公司能以新�
 
 單頁應用程式等新式Web應用程式已改為採用可加快瀏覽器UI呈現速度的模型，且通常與頁面重新載入無關。 這些體驗可由客戶互動觸發，例如捲動、點按和游標移動。 隨著現代網路環境的不斷演化，傳統的一般事件（例如頁面載入）與部署個人化和實驗不再具有相關性。
 
-![與傳統頁面生命週期比較顯示SPA生命週期的圖表。](assets/spa-vs-traditional-lifecycle.png)
+![與傳統頁面生命週期比較，顯示SPA生命週期的圖表。](assets/spa-vs-traditional-lifecycle.png)
 
-## 適用於SPA的Platform Web SDK的優點
+## 適用於SPA的Experience Platform Web SDK的優點
 
-以下是為單頁應用程式使用Adobe Experience Platform Web SDK的一些好處：
+以下是為單頁應用程式使用Adobe Experience Platform Web SDK的一些優點：
 
 * 可在頁面載入時快取所有選件，以減少對單一伺服器呼叫發出的多個伺服器呼叫。
 * 顯著改善網站的使用者體驗，因為選件可透過快取立即顯示，避免傳統伺服器呼叫造成的時間延遲。
-* 只要編寫一行程式碼和進行開發人員一次性設定，行銷人員就能透過SPA上的視覺化體驗撰寫器(VEC)建立及執行A/B和體驗鎖定目標(XT)活動。
+* 只要一行程式碼和一次性開發人員設定，行銷人員就能透過視覺化體驗撰寫器(VEC)，在SPA上建立和執行A/B和體驗鎖定目標(XT)活動。
 
 ## xdm檢視和單頁應用程式
 
@@ -221,7 +221,7 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->若要針對SPA使用VEC，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper擴充功能。
+>若要將VEC用於SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper擴充功能。
 
 ### 「修改」面板
 

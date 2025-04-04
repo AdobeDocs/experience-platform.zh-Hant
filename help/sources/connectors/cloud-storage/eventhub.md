@@ -3,9 +3,9 @@ title: Azure事件中樞Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Azure事件中樞連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -16,39 +16,39 @@ ht-degree: 0%
 >
 >* [!DNL Azure Event Hubs]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 >
->* 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Azure Event Hubs]來源。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+>* 您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Azure Event Hubs]來源。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入Platform。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入Experience Platform。
 
-雲端儲存空間來源可將您自己的資料帶入Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合至來源工作流程。 Platform可讓您即時從[!DNL Event Hubs]匯入資料。
+雲端儲存空間來源可將您自己的資料帶入Experience Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合至來源工作流程。 Experience Platform可讓您即時從[!DNL Event Hubs]匯入資料。
 
 ## 使用[!DNL Event Hubs]縮放
 
-如果您需要擷取大量資料、增加平行度或提高擷取平台的速度，必須增加[!DNL Event Hubs]執行個體的比例因數。
+如果您需要擷取大量資料、增加平行度或提高Experience Platform上的擷取速度，必須增加[!DNL Event Hubs]執行個體的比例因數。
 
 ### 匯入較大量的資料
 
-目前，您可以從[!DNL Event Hubs]帳戶帶入Platform的最大資料量為每秒2000筆記錄。 若要擴充並擷取較大量的資料，請聯絡您的Adobe代表。
+目前，您可以從[!DNL Event Hubs]帳戶帶入Experience Platform的最大資料量為每秒2000筆記錄。 若要擴充並擷取較大量的資料，請聯絡您的Adobe代表。
 
-### 增加[!DNL Event Hubs]和平台上的平行程度
+### 增加[!DNL Event Hubs]和Experience Platform上的平行程度
 
 平行度是指在多個處理單元上同時執行相同工作，以提高速度和效能。 您可以透過增加分割或為您的[!DNL Event Hubs]帳戶取得更多處理單位來增加[!DNL Event Hubs]端的平行程度。 如需詳細資訊，請參閱有關縮放](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability)的[[!DNL Event Hubs] 檔案。
 
-若要提高平台端的擷取速度，平台必須增加來源聯結器中要從[!DNL Event Hubs]資料分割讀取的工作數量。 增加[!DNL Event Hubs]端的平行程度後，請連絡您的Adobe代表，以根據您的新磁碟分割調整平台工作。 目前，此程式尚未自動化。
+若要提高Experience Platform端的擷取速度，Experience Platform必須增加來源聯結器中要從[!DNL Event Hubs]分割區讀取的工作數量。 增加[!DNL Event Hubs]端的平行程度後，請聯絡您的Adobe代表，以根據新分割來縮放Experience Platform工作。 目前，此程式尚未自動化。
 
-## 使用虛擬網路連線至[!DNL Event Hubs]至平台
+## 使用虛擬網路連線至[!DNL Event Hubs]至Experience Platform
 
-您可以設定虛擬網路，在啟用防火牆測量時，將[!DNL Event Hubs]連線至平台。 若要設定虛擬網路，請前往此[[!DNL Event Hubs] 網路規則集檔案](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)，然後遵循下列步驟：
+您可以設定虛擬網路，在啟用防火牆測量時，將[!DNL Event Hubs]連線至Experience Platform。 若要設定虛擬網路，請前往此[[!DNL Event Hubs] 網路規則集檔案](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)，然後遵循下列步驟：
 
 * 從REST API面板選取&#x200B;**試用**；
 * 在相同瀏覽器中使用您的認證驗證您的[!DNL Azure]帳戶；
-* 選取您要帶到Platform的[!DNL Event Hubs]名稱空間、資源群組和訂閱，然後選取&#x200B;**執行**；
-* 在出現的JSON內文中，在`properties`內的`virtualNetworkRules`下新增下列Platform子網路：
+* 選取您要帶到Experience Platform的[!DNL Event Hubs]名稱空間、資源群組和訂閱，然後選取&#x200B;**執行**；
+* 在出現的JSON內文中，在`properties`內的`virtualNetworkRules`下新增下列Experience Platform子網路：
 
 
 >[!IMPORTANT]
 >
->在使用Platform子網路更新`virtualNetworkRules`之前，您必須備份您收到的JSON內文，因為它包含您現有的IP篩選規則。 否則，會在呼叫後刪除規則。
+>在使用Experience Platform子網路更新`virtualNetworkRules`之前，您必須備份您收到的JSON內文，因為它包含您現有的IP篩選規則。 否則，會在呼叫後刪除規則。
 
 
 ```json
@@ -60,7 +60,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 }
 ```
 
-有關Platform子網路的不同區域，請參閱以下清單：
+如需Experience Platform子網路的不同區域，請參閱以下清單：
 
 ### VA7：北美
 
@@ -121,9 +121,9 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 如需網路規則集的詳細資訊，請參閱下列[[!DNL Event Hubs] 檔案](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)。
 
-## 將[!DNL Event Hubs]連線至平台
+## 將[!DNL Event Hubs]連線至Experience Platform
 
-以下檔案提供如何使用API或使用者介面將[!DNL Event Hubs]連線到Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Event Hubs]連線至Experience Platform的資訊：
 
 ### 使用API
 

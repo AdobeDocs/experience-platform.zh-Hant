@@ -1,12 +1,12 @@
 ---
 keywords: 行動；行動參與目的地；LINE；LINE行動參與目的地
 title: LINE連線
-description: LINE目的地可讓您新增設定檔至平台對象，並為連線的使用者提供個人化體驗。
+description: LINE目的地可讓您新增設定檔至Experience Platform對象，並為已連線的使用者提供個人化體驗。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1198'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [[!DNL LINE]](https://line.me/en/)是連線人員、服務和資訊的常用通訊平台，已從聊天應用程式成長為娛樂、社交和日常活動的中心。
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[[!DNL LINE] 傳訊API](https://developers.line.biz/en/reference/messaging-api/)。 您可以從Experience Platform對象中啟用設定檔，作為[!DNL LINE]內的連線，以滿足您的業務需求。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[[!DNL LINE] 傳訊API](https://developers.line.biz/en/reference/messaging-api/)。 您可以從Experience Platform對象啟用設定檔，作為[!DNL LINE]內的連線，以滿足您的業務需求。
 
 [!DNL LINE]使用持有人權杖作為驗證機制，以與[!DNL LINE]傳訊API通訊。 在[向目的地驗證](#authenticate)區段中，進一步說明如何向您的[!DNL LINE]執行個體進行驗證。
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 ### [!DNL LINE]必要條件 {#prerequisites-destination}
 
-請注意[!DNL LINE]中的下列必要條件，以便從Platform匯出資料至您的[!DNL LINE]帳戶：
+請注意[!DNL LINE]中的下列必要條件，以便從Experience Platform將資料匯出至您的[!DNL LINE]帳戶：
 
 #### 您必須擁有[!DNL LINE]帳戶 {#prerequisites-account}
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 #### 從[!DNL LINE]開發人員主控台收集[!DNL LINE channel access token (long-lived)] {#gather-credentials}
 
-若要允許Platform存取[!DNL LINE]資源，您將需要所需[!DNL LINE] *傳訊API*&#x200B;通道的&#x200B;*[!DNL Channel access token (long-lived)]*。
+若要允許Experience Platform存取[!DNL LINE]資源，您將需要所需[!DNL LINE] *傳訊API*&#x200B;通道的&#x200B;*[!DNL Channel access token (long-lived)]*。
 
 1. 使用您的[!DNL LINE]帳戶登入[[!DNL LINE] 開發人員主控台](https://developers.line.biz/console)。
 1. 接著，存取&#x200B;*[!DNL Providers]*&#x200B;清單，然後選取感興趣的&#x200B;*[!DNL Provider]*，最後選取&#x200B;*傳訊API*&#x200B;通道以存取其設定。 如果您是第一次存取開發人員主控台，請依照[[!DNL LINE] 檔案](https://developers.line.biz/en/docs/messaging-api/getting-started/)完成建立提供者所需的步驟。
@@ -68,7 +68,7 @@ ht-degree: 2%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出具有[!DNL LINE]目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ ht-degree: 2%
 ### 驗證目標 {#authenticate}
 
 若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**。
-![平台UI熒幕擷圖顯示如何驗證。](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+![Experience Platform UI熒幕擷圖顯示如何驗證。](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 填寫以下必填欄位。
 * **[!UICONTROL 持有人權杖]**：您從[!DNL LINE]開發人員主控台的[!DNL LINE Channel access token (long-lived)]。 請參閱[收集認證](#gather-credentials)區段。
@@ -95,7 +95,7 @@ ht-degree: 2%
 ### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
-![顯示目的地詳細資訊的平台UI熒幕擷取畫面。](../../assets/catalog/mobile-engagement/line/destination-details.png)
+![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
@@ -118,7 +118,7 @@ ht-degree: 2%
 
 ### 對應屬性和身分 {#map}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL LINE]目的地，您必須完成欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL LINE]目的地欄位，請遵循下列步驟：
+若要將對象資料從Adobe Experience Platform正確傳送至[!DNL LINE]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL LINE]目的地欄位，請遵循下列步驟：
 
 根據您的來源身分，必須對應以下目標身分名稱空間：
 
@@ -128,14 +128,14 @@ ht-degree: 2%
 | LINE使用者ID | `UserID` | `LineId` |
 
 如果您的目標身分識別是&#x200B;*LINE使用者ID的*，您將需要下列專案：
-![Platform UI熒幕擷圖範例，顯示將LINE使用者ID用於目標身分識別時的Target對應。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![Experience Platform UI熒幕擷圖範例，顯示將LINE使用者ID用於Target身分識別時的Target對應。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 如果您的目標識別碼是廣告商(IFA)*的*ID，您將需要下列專案：
-![Platform UI熒幕擷圖範例，顯示將廣告商(IFA)的ID用於目標身分識別時的Target對應。](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![Experience Platform UI熒幕擷圖範例，顯示當廣告商(IFA)的ID用於目標身分識別時，Target對應。](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## 驗證資料匯出 {#exported-data}
 
-成功匯出不Experience Platform的資料後，[!DNL LINE]目的地會使用選取的對象名稱，在[!DNL LINE]內建立新的對象。
+成功從Experience Platform匯出資料後，[!DNL LINE]目的地會使用選取的對象名稱，在[!DNL LINE]內建立新的對象。
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 

@@ -1,10 +1,10 @@
 ---
 title: 使用Adobe Target搭配Web SDK進行個人化
-description: 瞭解如何使用Adobe Target以Experience Platform Web SDK呈現個人化內容
+description: 瞭解如何使用Adobe Target在Experience Platform Web SDK呈現個人化內容
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 116db0808835c548c21635148b81b3e884b5cebd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1368'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->瞭解如何使用[將Target從at.js 2.x移轉至Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html)教學課程，將Target實作移轉至Platform Web SDK。
+>瞭解如何使用[將Target從at.js 2.x移轉至Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html)教學課程，將Target實作移轉至Experience Platform Web SDK。
 >
->透過[使用Web SDK實作Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hant)教學課程，首次瞭解如何實作Target。 如需Target的特定資訊，請參閱教學課程中標題為[使用Platform Web SDK設定Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的部分。
+>透過[使用Web SDK實作Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hant)教學課程，首次瞭解如何實作Target。 如需Target的特定資訊，請參閱教學課程中標題為[使用Experience Platform Web SDK設定Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的部分。
 
 
 下列功能已經過測試，目前在[!DNL Target]中支援：
@@ -35,18 +35,18 @@ ht-degree: 1%
 
 下圖可協助您瞭解[!DNL Target]和[!DNL Web SDK]邊緣決策的工作流程。
 
-![使用Platform Web SDK的Adobe Target Edge Decisioning圖表](assets/target-platform-web-sdk-new.png)
+![使用Experience Platform Web SDK的Adobe Target Edge Decisioning圖表](assets/target-platform-web-sdk-new.png)
 
 | 呼叫 | 詳細資料 |
 | --- | --- |
-| 1 | 裝置載入[!DNL Web SDK]。 [!DNL Web SDK]傳送要求給Edge Network並包含XDM資料、資料串流環境ID、傳入引數和客戶ID （選用）。 頁面（或容器）已預先隱藏。 |
-| 2 | Edge Network會傳送要求給Edge Services，以使用訪客ID、同意和其他訪客內容資訊（例如地理位置和方便使用的裝置名稱）來擴充要求。 |
+| 1 | 裝置載入[!DNL Web SDK]。 [!DNL Web SDK]傳送要求至Edge Network並包含XDM資料、資料串流環境ID、傳入引數和客戶ID （選用）。 頁面（或容器）已預先隱藏。 |
+| 2 | Edge Network會傳送要求給Edge服務，以使用訪客ID、同意和其他訪客內容資訊（例如地理位置和方便使用的裝置名稱）來擴充要求。 |
 | 3 | Edge Network會使用訪客ID和傳入的引數將擴充的個人化要求傳送至[!DNL Target]邊緣。 |
 | 4 | 設定檔指令碼執行，然後注入至[!DNL Target]設定檔儲存體。 設定檔存放區會從[!UICONTROL 對象庫]擷取區段（例如從[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]共用的區段）。 |
 | 5 | 根據URL要求引數和設定檔資料，[!DNL Target]會決定要針對目前頁面檢視和未來預先擷取檢視，為訪客顯示哪些活動和體驗。 [!DNL Target]然後將此資料傳回Edge Network。 |
-| 6 | a.Edge Network會將個人化回應傳送回頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會儘快出現，不會有忽隱忽現的預設內容。<br>b。作為使用者在單頁應用程式(SPA)中的動作結果而針對檢視顯示的個人化內容會快取，以便在觸發檢視時立刻套用，不需額外的伺服器呼叫。 <br>c。Edge Network會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化。 |
-| 7 | Web SDK會從裝置傳送通知給Edge Network。 |
-| 8 | Edge Network將[!UICONTROL Analytics for Target] (A4T)詳細資料（活動、體驗和轉換中繼資料）轉送到[!DNL Analytics]邊緣。 |
+| 6 | a. Edge Network會將個人化回應傳送回頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會儘快出現，不會有忽隱忽現的預設內容。<br>b。作為使用者在單頁應用程式(SPA)中的動作結果而針對檢視顯示的個人化內容會進行快取，以便在觸發檢視時立刻套用，不需額外的伺服器呼叫。 <br>c。Edge Network會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化。 |
+| 7 | 網頁SDK會將通知從裝置傳送至Edge Network。 |
+| 8 | Edge Network將[!UICONTROL Analytics for Target] (A4T)詳細資料（活動、體驗和轉換中繼資料）轉送至[!DNL Analytics]邊緣。 |
 
 ## 正在啟用[!DNL Adobe Target]
 
@@ -74,7 +74,7 @@ ht-degree: 1%
 
 為透過[!DNL Web SDK]傳遞的[!DNL Target]活動定義對象時，必須定義並使用[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant)。 定義XDM結構描述、類別和結構描述欄位群組後，您可以建立由XDM資料定義的[!DNL Target]對象規則以用於目標定位。 在[!DNL Target]內，XDM資料會在[!UICONTROL 對象產生器]中顯示為自訂引數。 XDM是使用點標籤法序列化（例如，`web.webPageDetails.name`）。
 
-如果您有[!DNL Target]個活動，其中包含使用自訂引數或使用者設定檔的預先定義對象，則無法透過SDK正確傳送這些對象。 您必須改用XDM，而不是使用自訂引數或使用者設定檔。 不過，有透過[!DNL Web SDK]支援的現成受眾目標定位欄位不需要XDM。 這些欄位可在[!DNL Target] UI中使用，不需要XDM：
+如果您的[!DNL Target]活動具有使用自訂引數或使用者設定檔的預定義對象，則無法透過SDK正確傳送這些對象。 您必須改用XDM，而不是使用自訂引數或使用者設定檔。 不過，有透過[!DNL Web SDK]支援的現成受眾目標定位欄位不需要XDM。 這些欄位可在[!DNL Target] UI中使用，不需要XDM：
 
 * Target資料庫
 * 地理
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 ### 回應Token
 
-回應Token可用來傳送中繼資料給第三方，例如Google或Facebook。 傳回回應Token
+回應Token可用來將中繼資料傳送給第三方，例如Google或Facebook。 傳回回應Token
 在`propositions` -> `items`內的`meta`欄位中。 範例如下：
 
 ```json
@@ -181,7 +181,7 @@ alloy("sendEvent",
 | --- | --- | --- |
 | `renderDecisions` | 布林值 | 指示個人化元件是否應解譯DOM動作 |
 | `decisionScopes` | 陣列`<String>` | 要擷取決定的範圍清單 |
-| `xdm` | 物件 | 在Web SDK中作為體驗事件登陸的XDM格式資料 |
+| `xdm` | 物件 | 在XDM中格式化的資料，登陸到網頁SDK做為體驗事件 |
 | `data` | 物件 | 任意索引鍵/值配對會傳送至target類別下的[!DNL Target]個解決方案。 |
 
 <!--Typical [!DNL Web SDK] code using this command looks like the following:-->
@@ -240,7 +240,7 @@ alloy("sendEvent", {
 |  | productPurchasedId | 支援 |
 | 類別相關性的頁面或料號類別 | user.categoryId | 支援 |
 
-**如何將Recommendations屬性傳送至Adobe Target：**
+**如何傳送Recommendations屬性至Adobe Target：**
 
 ```js
 alloy("sendEvent", {

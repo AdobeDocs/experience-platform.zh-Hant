@@ -3,9 +3,9 @@ title: 從Real-Time CDP匯出陣列、地圖和物件
 type: Tutorial
 description: 瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至雲端儲存空間目標。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 13%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 13%
 * 您可以匯出陣列、地圖和物件至`JSON`和`Parquet`檔案中的雲端儲存體目的地。 對於Enterprise和Edge個人化目的地，匯出的資料型別為`JSON`。 支援人員和潛在客戶對象，但不支援帳戶對象。
 * 針對以檔案為基礎的雲端儲存目的地，您&#x200B;*可以*&#x200B;將陣列、對應和物件匯出至CSV檔案，但僅透過使用計算欄位功能並使用`array_to_string`功能將它們串連到字串中。
 
-## Platform中的陣列和其他物件型別 {#arrays-strings-other-objects}
+## Experience Platform中的陣列和其他物件型別 {#arrays-strings-other-objects}
 
 在Experience Platform中，您可以使用[XDM結構描述](/help/xdm/home.md)來管理不同的欄位型別。 在新增支援陣列匯出功能之前，您能夠將簡單的索引鍵/值組型別欄位（例如字串）從Experience Platform匯出至您想要的目的地。 先前支援匯出的欄位範例為`personalEmail.address`：`johndoe@acme.org`。
 

@@ -3,9 +3,9 @@ keywords: Adform擴充功能；Adform
 title: Adform網站追蹤擴充功能
 description: Adform擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: f616ecbf-6833-40cd-86be-7c13afe31180
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '447'
 ht-degree: 3%
 
 ---
@@ -18,13 +18,13 @@ Adform網站追蹤擴充功能可讓廣告商在其網站上輕鬆實作Adform�
 
 [!DNL Adform]是Adobe Experience Platform中的Analytics擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html)上的擴充功能頁面
 
-此目的地是標籤延伸模組。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
+此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
 ![Adform延伸模組](../../assets/catalog/analytics/adform/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-此擴充功能可在[!DNL Destinations]目錄中提供給所有已購買Platform的客戶。
+此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
 若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，讓您可以安裝擴充功能。
 
@@ -32,7 +32,7 @@ Adform網站追蹤擴充功能可讓廣告商在其網站上輕鬆實作Adform�
 
 若要安裝Adform擴充功能：
 
-在[平台介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
+在[Experience Platform介面](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 
 從目錄中選取擴充功能或使用搜尋列。
 

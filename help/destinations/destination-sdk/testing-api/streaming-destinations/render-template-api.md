@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API，根據您的訊息轉換範本，驗證串流目的地的輸出。
 title: 驗證匯出的設定檔結構
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 根據訊息轉換範本演算匯出的設定檔 {#render-exported-data}
 
-您可以向`authoring/testing/template/render`端點發出POST要求，並提供目的地組態的目的地識別碼，以及您使用[範例範本API端點](sample-template-api.md)建立的範本，以轉譯匯出的設定檔。
+您可以對`authoring/testing/template/render`端點發出POST要求，並提供目的地組態的目的地識別碼，以及您使用[範例範本API端點](sample-template-api.md)建立的範本，以轉譯匯出的設定檔。
 
 您可以先使用簡單範本匯出原始設定檔而不套用任何轉換，然後移至更複雜的範本，將轉換套用至設定檔。 簡單範本的語法為： <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
@@ -1066,8 +1066,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在知道如何使用訊息轉換範本，產生符合目的地預期資料格式的匯出設定檔。 閱讀[如何使用Destination SDK來設定您的目的地](../../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的過程中適合到什麼位置。
+閱讀本檔案後，您現在知道如何使用訊息轉換範本，產生符合目的地預期資料格式的匯出設定檔。 閱讀[如何使用Destination SDK來設定您的目的地](../../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的程式中的位置。

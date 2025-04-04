@@ -3,10 +3,10 @@ title: 在使用者介面中建立Azure事件中樞Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Azure事件中樞來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 2%
+source-wordcount: '1098'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Azure Event Hubs]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
+>[!DNL Azure Event Hubs]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
 閱讀本教學課程，瞭解如何使用Adobe Experience Platform使用者介面建立[!DNL Azure Event Hubs]帳戶。
 
@@ -56,7 +56,7 @@ ht-degree: 2%
 
 | 認證 | 說明 |
 | --- | --- |
-| 租使用者ID | 您要向其請求許可權的租使用者ID。 您可以將您的租使用者ID格式化為GUID或友好名稱。 **注意**：租使用者ID在[!DNL Microsoft Azure]介面中稱為「目錄ID」。 |
+| 租用戶 ID | 您要向其請求許可權的租使用者ID。 您可以將您的租使用者ID格式化為GUID或友好名稱。 **注意**：租使用者ID在[!DNL Microsoft Azure]介面中稱為「目錄ID」。 |
 | 用戶端 ID | 指派給應用程式的應用程式ID。 您可以從您註冊[!DNL Azure Active Directory]的[!DNL Microsoft Entra ID]入口網站擷取此ID。 |
 | 使用者端密碼值 | 使用者端密碼與使用者端ID搭配使用，用來驗證您的應用程式。 您可以從您註冊[!DNL Azure Active Directory]的[!DNL Microsoft Entra ID]入口網站擷取您的使用者端密碼。 |
 | 命名空間 | 您正在存取的[!DNL Event Hub]的名稱空間。 [!DNL Event Hub]名稱空間提供唯一的範圍設定容器，您可以在其中建立一或多個[!DNL Event Hubs]。 |
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 | 認證 | 說明 |
 | --- | --- |
-| 租使用者ID | 您要向其請求許可權的租使用者ID。 您可以將您的租使用者ID格式化為GUID或友好名稱。 **注意**：租使用者ID在[!DNL Microsoft Azure]介面中稱為「目錄ID」。 |
+| 租用戶 ID | 您要向其請求許可權的租使用者ID。 您可以將您的租使用者ID格式化為GUID或友好名稱。 **注意**：租使用者ID在[!DNL Microsoft Azure]介面中稱為「目錄ID」。 |
 | 用戶端 ID | 指派給應用程式的應用程式ID。 您可以從您註冊[!DNL Azure Active Directory]的[!DNL Microsoft Entra ID]入口網站擷取此ID。 |
 | 使用者端密碼值 | 使用者端密碼與使用者端ID搭配使用，用來驗證您的應用程式。 您可以從您註冊[!DNL Azure Active Directory]的[!DNL Microsoft Entra ID]入口網站擷取您的使用者端密碼。 |
 | 命名空間 | 您正在存取的[!DNL Event Hub]的名稱空間。 [!DNL Event Hub]名稱空間提供唯一的範圍設定容器，您可以在其中建立一或多個[!DNL Event Hubs]。 |
@@ -77,11 +77,11 @@ ht-degree: 2%
 
 >[!ENDTABS]
 
-收集必要的認證後，您可以依照下列步驟連結您的[!DNL Event Hubs]帳戶以Experience Platform。
+收集必要的認證後，您可以依照下列步驟將[!DNL Event Hubs]帳戶連結至Experience Platform。
 
 ## 連線您的[!DNL Event Hubs]帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -142,4 +142,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-依照此教學課程，您已將[!DNL Event Hubs]帳戶連線至Experience Platform。 您現在可以繼續進行下一個教學課程，並[設定資料流，以將雲端儲存空間中的資料帶入Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md)。
+依照此教學課程，您已將[!DNL Event Hubs]帳戶連線至Experience Platform。 您現在可以繼續進行下一個教學課程，並[設定資料流，將您的雲端儲存空間中的資料匯入Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md)。

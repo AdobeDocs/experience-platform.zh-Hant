@@ -1,16 +1,16 @@
 ---
-title: 使用使用者介面從您的Stripe帳戶擷取付款資料以Experience Platform。
-description: 瞭解如何使用使用者介面，從您的Stripe帳戶擷取付款資料以Experience Platform。
+title: 使用使用者介面，將付款資料從您的Stripe帳戶擷取至Experience Platform。
+description: 瞭解如何使用使用者介面，將付款資料從您的Stripe帳戶擷取到Experience Platform。
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: dd9afe650f4c83b3877f980acac66e703e9ae5d8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1658'
 ht-degree: 3%
 
 ---
 
-# 使用使用者介面從您的[!DNL Stripe]帳戶擷取付款資料以Experience Platform
+# 使用使用者介面將付款資料從您的[!DNL Stripe]帳戶擷取到Experience Platform
 
 >[!NOTE]
 >
@@ -27,13 +27,13 @@ ht-degree: 3%
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-### 驗證
+### Authentication
 
 請閱讀[[!DNL Stripe] 總覽](../../../../connectors/payments/stripe.md)，瞭解如何擷取您的驗證認證的相關資訊。
 
 ## 連線您的[!DNL Stripe]帳戶 {#connect}
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*付款*&#x200B;類別下，選取&#x200B;**[!DNL Stripe]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 
@@ -41,7 +41,7 @@ ht-degree: 3%
 >
 >當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
-![Experience PlatformUI中的來源目錄，已選取Stripe來源卡。](../../../../images/tutorials/create/stripe/catalog.png)
+![Experience Platform UI中的來源目錄，已選取Stripe來源卡。](../../../../images/tutorials/create/stripe/catalog.png)
 
 **[!UICONTROL 連線Stripe帳戶]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的或現有的證明資料。
 
@@ -84,7 +84,7 @@ ht-degree: 3%
 
 選取您的端點後，介面會更新為預覽畫面，顯示您選取的[!DNL Stripe]端點的資料結構。 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續。
 
-![您Stripe資料的預覽視窗。](../../../../images/tutorials/create/stripe/preview.png)
+![您的Stripe資料預覽視窗。](../../../../images/tutorials/create/stripe/preview.png)
 
 ## 提供資料集和資料流詳細資料 {#provide-dataset-and-dataflow-details}
 
@@ -92,7 +92,7 @@ ht-degree: 3%
 
 ### 資料集詳細資料 {#dataset-details}
 
-資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功擷取到Experience Platform的資料會以資料集的形式儲存在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
+資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功擷取至Experience Platform的資料會以資料集的形式儲存在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
 
 >[!BEGINTABS]
 
@@ -106,7 +106,7 @@ ht-degree: 3%
 | --- | --- |
 | 輸出資料集名稱 | 新資料集的名稱。 |
 | 說明 | （選用）新資料集的簡短說明。 |
-| 綱要 | 貴組織中現有的結構描述下拉式清單。 您也可以在來源設定程式之前建立自己的結構描述。 如需詳細資訊，請閱讀[在UI](../../../../../xdm/tutorials/create-schema-ui.md)中建立XDM結構描述的指南。 |
+| 結構描述 | 貴組織中現有的結構描述下拉式清單。 您也可以在來源設定程式之前建立自己的結構描述。 如需詳細資訊，請閱讀[在UI](../../../../../xdm/tutorials/create-schema-ui.md)中建立XDM結構描述的指南。 |
 
 >[!TAB 使用現有的資料集]
 
@@ -135,13 +135,13 @@ ht-degree: 3%
 | --- | --- |
 | 資料流名稱 | 資料流的名稱。  依預設，這將使用正在匯入的檔案名稱。 |
 | 說明 | （選用）資料流的簡短說明。 |
-| 警報 | Experience Platform可產生使用者可訂閱的事件型警報。 這些選項都需要執行中的資料流才能觸發。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
+| 警示 | Experience Platform可產生使用者可訂閱的事件型警報。 這些選項都需要執行中的資料流才能觸發。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
 
 完成後，選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續。
 
 ## 將欄位對應至XDM結構描述 {#mapping}
 
-**[!UICONTROL 對應]**&#x200B;步驟出現。 使用對應介面將來源資料對應到適當的結構描述欄位，然後再將該資料擷取到Experience Platform。 如需如何使用對應介面的詳細指南，請閱讀[資料準備UI指南](../../../../../data-prep/ui/mapping.md)以取得詳細資訊。
+**[!UICONTROL 對應]**&#x200B;步驟出現。 使用對應介面將來源資料對應至適當的結構描述欄位，然後再將該資料擷取至Experience Platform。 如需如何使用對應介面的詳細指南，請閱讀[資料準備UI指南](../../../../../data-prep/ui/mapping.md)以取得詳細資訊。
 
 ![來源工作流程的對應介面。](../../../../images/tutorials/create/stripe/mapping.png)
 
@@ -182,7 +182,7 @@ ht-degree: 3%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功建立資料流，以將來自[!DNL Stripe]來源的付款資料帶入Experience Platform。 如需其他資源，請瀏覽以下概述的檔案。
+依照本教學課程中的指示，您已成功建立資料流，將您[!DNL Stripe]來源的付款資料帶入Experience Platform。 如需其他資源，請瀏覽以下概述的檔案。
 
 ### 監視資料流
 

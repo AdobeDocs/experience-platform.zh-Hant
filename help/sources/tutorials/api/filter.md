@@ -2,9 +2,9 @@
 title: 使用流量服務API篩選Source的列層級資料
 description: 本教學課程涵蓋如何使用Flow Service API在來源層級篩選資料的步驟
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1823'
 ht-degree: 4%
 
 ---
@@ -27,12 +27,12 @@ ht-degree: 4%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
 
 ## 篩選來源資料 {#filter-source-data}
 
@@ -334,7 +334,7 @@ curl -X GET \
 
 ### 建立篩選資料的來源連線
 
-若要建立來源連線並擷取經過篩選的資料，請對`/sourceConnections`端點提出POST要求，並在要求內文引數中提供您的篩選條件。
+若要建立來源連線並擷取篩選的資料，請對`/sourceConnections`端點提出POST要求，並在要求內文引數中提供您的篩選條件。
 
 **API格式**
 
@@ -460,7 +460,7 @@ curl -X POST \
 
 ### 擷取您的資料流詳細資料
 
-接下來，您必須擷取資料流詳細資料，尤其是與資料流相關聯的來源連線ID。 若要擷取您的資料流詳細資料，請向`/flows`端點提出GET要求，並提供您的資料流ID作為路徑引數。
+接下來，您必須擷取資料流詳細資料，尤其是與資料流相關聯的來源連線ID。 若要擷取您的資料流詳細資料，請向`/flows`端點提出GET請求，並提供您的資料流ID作為路徑引數。
 
 **API格式**
 
@@ -591,7 +591,7 @@ curl -X GET \
 
 ### 擷取您的來源連線詳細資料
 
-接下來，使用您的來源連線ID並向`/sourceConnections`端點發出GET要求，以擷取您的來源連線詳細資料。
+接下來，使用您的來源連線ID並向`/sourceConnections`端點發出GET請求，以擷取您的來源連線詳細資料。
 
 **API格式**
 
@@ -676,13 +676,13 @@ curl -X GET \
 
 ### 使用篩選條件更新您的來源連線
 
-現在您已擁有來源連線ID及其對應版本，現在可以使用指定標準活動型別的篩選條件來發出PATCH請求。
+現在您已具備來源連線ID及其對應版本，現在可以使用指定標準活動型別的篩選條件來提出PATCH請求。
 
-若要更新您的來源連線，請對`/sourceConnections`端點提出PATCH要求，並提供您的來源連線ID作為查詢引數。 此外，您必須提供`If-Match`標頭引數，以及您來源連線的對應版本。
+若要更新您的來源連線，請對`/sourceConnections`端點發出PATCH要求，並提供您的來源連線ID作為查詢引數。 此外，您必須提供`If-Match`標頭引數，以及您來源連線的對應版本。
 
 >[!TIP]
 >
->發出PATCH要求時需要`If-Match`標頭。 此標題的值是您要更新之資料流的唯一版本/etag。 每次成功更新資料流時，版本/etag值都會更新。
+>發出PATCH請求時需要`If-Match`標頭。 此標題的值是您要更新之資料流的唯一版本/etag。 每次成功更新資料流時，版本/etag值都會更新。
 
 **API格式**
 
@@ -747,9 +747,9 @@ curl -X PATCH \
 
 +++
 
-### Publish您的來源連線
+### 發佈您的來源連線
 
-您的來源連線已隨著篩選條件而更新，您現在可以從草稿狀態繼續並發佈您的來源連線。 若要這麼做，請向`/sourceConnections`端點提出POST要求，並提供草稿來源連線的識別碼，以及發佈的動作操作。
+您的來源連線已隨著篩選條件而更新，您現在可以從草稿狀態繼續並發佈您的來源連線。 若要這麼做，請對`/sourceConnections`端點提出POST要求，並提供草稿來源連線的識別碼，以及發佈的動作作業。
 
 **API格式**
 
@@ -791,7 +791,7 @@ curl -X POST \
 
 +++
 
-### Publish您的目標連線
+### 發佈您的目標連線
 
 與上一個步驟類似，您也必須發佈目標連線，才能繼續並發佈草稿資料流。 向`/targetConnections`端點發出POST要求，並提供您要發佈的草稿目標連線識別碼，以及發佈的動作操作。
 
@@ -836,9 +836,9 @@ curl -X POST \
 +++
 
 
-### Publish您的資料流
+### 發佈您的資料流
 
-您的來源和目標連線均已發佈後，您現在可以繼續進行最後步驟並發佈資料流。 若要發佈您的資料流，請向`/flows`端點提出POST要求，並提供您的資料流ID和用於發佈的動作操作。
+您的來源和目標連線均已發佈後，您現在可以繼續進行最後步驟並發佈資料流。 若要發佈您的資料流，請對`/flows`端點提出POST要求，並提供您的資料流ID和用於發佈的動作操作。
 
 **API格式**
 
@@ -880,7 +880,7 @@ curl -X POST \
 
 +++
 
-您可以使用Experience PlatformUI來確認草稿資料流已發佈。 導覽至來源目錄中的資料流頁面，並參考您的資料流的&#x200B;**[!UICONTROL 狀態]**。 如果成功，狀態現在應該設定為&#x200B;**已啟用**。
+您可以使用Experience Platform UI來確認草稿資料流已發佈。 導覽至來源目錄中的資料流頁面，並參考您的資料流的&#x200B;**[!UICONTROL 狀態]**。 如果成功，狀態現在應該設定為&#x200B;**已啟用**。
 
 >[!TIP]
 >

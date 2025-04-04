@@ -2,21 +2,21 @@
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
 title: 合併原則API端點
 type: Documentation
-description: Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是Platform用來判斷資料優先順序的方式，以及將合併哪些資料以建立統一檢視的規則。
+description: Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是Experience Platform用來判斷資料優先順序的方式，以及將合併哪些資料以建立統一檢視的規則。
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2468'
 ht-degree: 1%
 
 ---
 
 # 合併原則端點
 
-Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以便檢視每個個別客戶的完整檢視。 將這個資料集合在一起時，合併原則是[!DNL Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立統一檢視的規則。
+Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起，並將它們合併，以便檢視每個個別客戶的完整檢視。 將這個資料集合在一起時，合併原則是[!DNL Experience Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立統一檢視的規則。
 
-例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。 當來自多個來源的資料衝突時（例如，一個片段將客戶列為「單身」，而另一個片段將客戶列為「已婚」），合併原則會決定要包含在個人設定檔中的資訊。
+例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Experience Platform時，會合併在一起，以便為該客戶建立單一設定檔。 當來自多個來源的資料衝突時（例如，一個片段將客戶列為「單身」，而另一個片段將客戶列為「已婚」），合併原則會決定要包含在個人設定檔中的資訊。
 
 使用RESTful API或使用者介面，您可以建立新的合併原則、管理現有原則，並為您的組織設定預設合併原則。 本指南提供使用API處理合併原則的步驟。
 
@@ -28,7 +28,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
 
 ## 合併原則的元件 {#components-of-merge-policies}
 
-合併原則是您組織專屬的原則，可讓您建立不同的原則，以您所需的特定方式合併方案。 任何存取[!DNL Profile]資料的API都需要合併原則，但如果未明確提供合併原則，則會使用預設原則。 [!DNL Platform]為組織提供預設的合併原則，或者您可以為特定Experience Data Model (XDM)結構描述類別建立合併原則，並將其標籤為組織的預設值。
+合併原則是您組織專屬的原則，可讓您建立不同的原則，以您所需的特定方式合併方案。 任何存取[!DNL Profile]資料的API都需要合併原則，但如果未明確提供合併原則，則會使用預設原則。 [!DNL Experience Platform]為組織提供預設的合併原則，或者您可以為特定Experience Data Model (XDM)結構描述類別建立合併原則，並將其標籤為組織的預設值。
 
 雖然每個組織在每個結構描述類別中可能都有多個合併原則，但每個類別只能有一個預設合併原則。 若提供結構描述類別的名稱，但需要合併原則但未提供，則會使用任何設為預設的合併原則。
 
@@ -73,7 +73,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
 | `name` | 可在清單檢視中識別合併原則的易記名稱。 |
 | `imsOrgId` | 此合併原則所屬的組織識別碼 |
 | `schema.name` | `name`欄位是[`schema`](#schema)物件的一部分，包含與合併原則相關的XDM結構描述類別。 如需結構描述和類別的詳細資訊，請參閱[XDM檔案](../../xdm/home.md)。 |
-| `version` | [!DNL Platform]維護的合併原則版本。 此唯讀值在合併原則更新時遞增。 |
+| `version` | [!DNL Experience Platform]維護的合併原則版本。 此唯讀值在合併原則更新時遞增。 |
 | `identityGraph` | [身分圖表](#identity-graph)物件，指出將從中取得相關身分的身分圖表。 將合併針對所有相關身分找到的設定檔片段。 |
 | `attributeMerge` | [屬性合併](#attribute-merge)物件，指出當資料衝突時，合併原則優先處理設定檔屬性的方式。 |
 | `isActiveOnEdge` | 表示此合併原則是否可用於Edge的布林值。 預設值為`false`。 |
@@ -103,7 +103,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
     }
 ```
 
-### 識別圖 {#identity-graph}
+### 身分識別圖 {#identity-graph}
 
 [Adobe Experience Platform Identity Service](../../identity-service/home.md)管理[!DNL Experience Platform]上每個組織全域使用的身分圖表。 合併原則的`identityGraph`屬性定義如何判斷使用者的相關身分。
 
@@ -168,7 +168,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
     }
 ```
 
-### 綱要 {#schema}
+### 結構描述 {#schema}
 
 結構描述物件會指定為其建立此合併原則的Experience Data Model (XDM)結構描述類別。
 
@@ -283,7 +283,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態207 （多重狀態）以及POST要求中提供ID的合併原則詳細資料。
+成功的回應會傳回HTTP狀態207 （多重狀態）以及POST要求中提供ID之合併原則的詳細資料。
 
 ```json
 { 
@@ -348,7 +348,7 @@ curl -X POST \
 
 ### 依條件列出多個合併原則
 
-您可以透過向`/config/mergePolicies`端點發出GET要求，並使用選用的查詢引數來篩選、排序和分頁回應，列出組織內的多個合併原則。 可包含多個引數，以&amp;分隔。 在不使用引數的情況下呼叫此端點將會擷取您的組織可用的所有合併原則。
+您可以發出GET要求給`/config/mergePolicies`端點，並使用選用的查詢引數來篩選、排序及分頁回應，藉此列出組織內的多個合併原則。 可包含多個引數，以&amp;分隔。 在不使用引數的情況下呼叫此端點將會擷取您的組織可用的所有合併原則。
 
 **API格式**
 
@@ -462,7 +462,7 @@ curl -X GET \
 
 ## 建立合併原則
 
-您可以透過向`/config/mergePolicies`端點發出POST要求，為您的組織建立新的合併原則。
+您可以透過對`/config/mergePolicies`端點發出POST要求，為您的組織建立新的合併原則。
 
 **API格式**
 
@@ -551,7 +551,7 @@ curl -X POST \
 
 ## 更新合併原則 {#update}
 
-您可以透過編輯個別屬性(PATCH)或使用新屬性(PUT)覆寫整個合併原則來修改現有的合併原則。 每種的範例如下所示。
+您可以編輯個別屬性(PATCH)或使用新屬性覆寫整個合併原則(PUT)，以修改現有的合併原則。 每種的範例如下所示。
 
 ### 編輯個別合併原則欄位
 
@@ -588,7 +588,7 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 |---|---|
-| `op` | 指定要執行的作業。 在[JSON修補程式檔案](https://datatracker.ietf.org/doc/html/rfc6902)中找到其他PATCH作業的範例 |
+| `op` | 指定要執行的作業。 其他PATCH作業的範例可在[JSON修補程式檔案](https://datatracker.ietf.org/doc/html/rfc6902)中找到 |
 | `path` | 要更新的欄位路徑。 接受的值為：「/name」、「/identityGraph.type」、「/attributeMerge.type」、「/schema.name」、「/version」、「/default」、「/isActiveOnEdge」 |
 | `value` | 要設定指定欄位的值。 |
 
@@ -632,7 +632,7 @@ curl -X PATCH \
 
 ### 覆寫合併原則
 
-修改合併原則的另一種方法是使用PUT請求，這會覆寫整個合併原則。
+修改合併原則的另一種方法是使用PUT請求，該請求會覆寫整個合併原則。
 
 **API格式**
 
@@ -727,7 +727,7 @@ curl -X PUT \
 
 ## 刪除合併原則
 
-您可以透過向`/config/mergePolicies`端點發出DELETE要求，並在要求路徑中包含您要刪除的合併原則識別碼，來刪除合併原則。
+透過向`/config/mergePolicies`端點發出DELETE請求，並在請求路徑中包含您要刪除的合併原則ID，可以刪除合併原則。
 
 >[!NOTE]
 >
@@ -758,10 +758,10 @@ curl -X DELETE \
 
 **回應**
 
-成功的刪除請求會傳回HTTP狀態200 （確定）和空白的回應內文。 若要確認刪除成功，您可以執行GET要求，依合併原則的ID檢視合併原則。 如果刪除合併原則，您將會收到HTTP狀態404 （找不到）錯誤。
+成功的刪除請求會傳回HTTP狀態200 （確定）和空白的回應內文。 若要確認刪除成功，您可以執行GET要求，依其ID檢視合併原則。 如果刪除合併原則，您將會收到HTTP狀態404 （找不到）錯誤。
 
 ## 後續步驟
 
-現在您已經知道如何為組織建立和設定合併原則，您可以使用這些原則來調整Platform中客戶設定檔的檢視，以及從您的[!DNL Real-Time Customer Profile]資料建立對象。
+現在您知道如何為組織建立和設定合併原則，您可以使用這些原則來調整Experience Platform中客戶設定檔的檢視，以及從您的[!DNL Real-Time Customer Profile]資料建立對象。
 
 請參閱[Adobe Experience Platform Segmentation Service檔案](../../segmentation/home.md)，以開始定義和使用對象。

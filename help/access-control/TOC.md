@@ -5,10 +5,10 @@ breadcrumb-title: Access Control 指南
 user-guide-description: 使用 Adobe Admin Console 中的產品設定檔管理使用者權限。了解如何將使用者指派到產品和沙箱。
 feature: Access Control
 role: Admin
-source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 45%
+source-wordcount: '132'
+ht-degree: 56%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 45%
 * 以屬性為基礎的存取控制{#abac}
    * [概觀](abac/overview.md)
    * [端對端指南](abac/end-to-end-guide.md)
-   * [使用存取權標籤來管理使用者對目的地資料流程的存取權](/help/access-control/abac/apply-access-labels-destinations.md)
+   * [利用存取權標籤管理使用者對於目標資料流的存取](/help/access-control/abac/apply-access-labels-destinations.md)
    * 權限 {#permissions-ui}
       * [瀏覽](abac/ui/browse.md)
       * [標記](abac/ui/labels.md)
@@ -50,4 +50,4 @@ ht-degree: 45%
    * [檢視有效原則](api/effective-policies.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+* [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

@@ -4,16 +4,16 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4760'
+source-wordcount: '4763'
 ht-degree: 3%
 
 ---
 
 # 使用流程服務API將對象啟用至檔案型目的地
 
-匯出不Experience Platform的檔案時，請使用增強型檔案匯出功能來存取增強的自訂功能：
+從Experience Platform匯出檔案時，請使用增強型檔案匯出功能來存取增強的自訂功能：
 
 * 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
 * 能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。
@@ -51,9 +51,9 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Real-Time Customer Profile]資料建立對象，並在[!DNL Adobe Experience Platform]中產生對象。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-以下章節提供在Platform中以檔案為基礎的目的地啟用資料所需瞭解的其他資訊。
+以下小節提供您需要瞭解的其他資訊，以便在Experience Platform中將資料啟用至檔案型目的地。
 
 ### 必要權限 {#permissions}
 
@@ -67,13 +67,13 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
-若要呼叫[!DNL Platform] API，您必須先完成[Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的資源可以隔離到特定的虛擬沙箱。 在對[!DNL Platform] API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
+[!DNL Experience Platform]中的資源可以隔離到特定的虛擬沙箱。 在對[!DNL Experience Platform] API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
@@ -99,7 +99,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 在開始匯出設定檔的工作流程之前，請先識別您要將對象匯出至的目的地之連線規格和流程規格ID。 請參考下表。
 
-| 目的地 | 連線規格 | 流量規格 |
+| 目標 | 連線規格 | 流量規格 |
 ---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
 | Azure Blob 儲存體 | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
@@ -3477,7 +3477,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ 檢視要在輸入結構描述中使用的可用身分
 
-回應會傳回您在建立輸入結構描述時可使用的身分。 請注意，此回應會傳回您在Experience Platform中設定的[standard](/help/identity-service/features/namespaces.md#standard)和[custom](/help/identity-service/features/namespaces.md#manage-namespaces)身分名稱空間。
+回應會傳回您在建立輸入結構描述時可使用的身分。 請注意，此回應會傳回您在Experience Platform中設定的[standard](/help/identity-service/features/namespaces.md#standard)和[custom](/help/identity-service/features/namespaces.md#manage-namespaces)身分識別名稱空間。
 
 ```json
 [
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **包含範例結構描述的回應**
 
-Inspect會回應您執行上述呼叫時所取得的回應。 您必須深入檢視回應以尋找物件`targetSpec.attributes.partnerSchema.jsonSchema`
+檢查您執行上述呼叫時取得的回應。 您必須深入檢視回應以尋找物件`targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ 取得輸出結構描述之合作夥伴結構描述的回應
 
@@ -4817,11 +4817,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[要求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Experience Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功將Platform連線至其中一個慣用的雲端儲存空間目的地，並設定資料流至個別目的地以匯出對象。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
+依照本教學課程中的指示，您已成功將Experience Platform連線至其中一個慣用的雲端儲存空間目的地，並設定資料流至個別目的地以匯出受眾。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
 
 * [目的地概觀](../home.md)
 * [目的地目錄概觀](../catalog/overview.md)

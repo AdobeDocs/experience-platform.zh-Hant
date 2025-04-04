@@ -1,27 +1,27 @@
 ---
 title: 使用Experience Platform使用者介面連線您的Phoenix帳戶
-description: 瞭解如何使用使用者介面連線您的Phoenix帳戶，並將Phoenix資料庫中的資料帶入Experience Platform。
+description: 瞭解如何使用使用者介面連線您的Phoenix帳戶，並將資料從Phoenix資料庫帶入Experience Platform。
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
 
-# 使用UI連線您的[!DNL Phoenix]帳戶以Experience Platform
+# 使用使用者介面將您的[!DNL Phoenix]帳戶連線至Experience Platform
 
 >[!WARNING]
 >
 >[!DNL Phoenix]來源將於2025年6月底淘汰。
 
-本教學課程提供如何連線您的[!DNL Phoenix]帳戶以及將[!DNL Phoenix]資料庫中的資料帶入Experience Platform的步驟。
+本教學課程提供如何連線您的[!DNL Phoenix]帳戶，以及從[!DNL Phoenix]資料庫將資料帶入Experience Platform的步驟。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -43,11 +43,11 @@ ht-degree: 1%
 
 如需開始使用的詳細資訊，請參閱[此 [!DNL Phoenix] 檔案](https://python-phoenixdb.readthedocs.io/en/latest/api.html)。
 
-收集必要的認證後，您可以依照下列步驟連線您的[!DNL Phoenix]帳戶以Experience Platform。
+收集必要的認證後，您可以依照下列步驟將[!DNL Phoenix]帳戶連線至Experience Platform。
 
 ## 連線您的[!DNL Phoenix]帳戶
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取來源工作區。 *[!UICONTROL 目錄]*&#x200B;畫面會顯示Experience Platform來源目錄中的各種可用來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取來源工作區。 *[!UICONTROL 目錄]*&#x200B;畫面會顯示Experience Platform來源目錄中的各種可用來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找特定來源。
 
@@ -61,7 +61,7 @@ ht-degree: 1%
 >
 >* **[!UICONTROL 設定]**&#x200B;表示您必須提供認證並驗證新帳戶，才能使用您選取的來源。
 
-![已選取Phoenix來源卡的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/phoenix/catalog.png)
+![已選取Phoenix來源卡的Experience Platform UI上的來源目錄。](../../../../images/tutorials/create/phoenix/catalog.png)
 
 **[!UICONTROL 連線至Phoenix]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 

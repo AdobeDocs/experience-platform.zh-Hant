@@ -4,9 +4,9 @@ description: Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專�
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 
 ### 使用廣告鎖定使用者 {#use-case-target-users}
 
-廣告商的目標是透過ZetaDemand Side Platform(DSP)鎖定特定受眾內的使用者，因為這些使用者會與他們的品牌互動。 如需Zeta DSP的詳細資訊，請按一下[這裡](https://knowledgebase.zetaglobal.com/pug/)。
+廣告商的目標是透過Zeta Demand Side Platform (DSP)鎖定特定受眾內的使用者，因為這些使用者會與他們的品牌互動。 如需Zeta DSP的詳細資訊，請按一下[這裡](https://knowledgebase.zetaglobal.com/pug/)。
 
 ## 先決條件 {#prerequisites}
 
@@ -53,7 +53,7 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 | 目標身分 | 說明 | 考量事項 | 附註 |
 ---------|----------|----------|----------|
 | uid | ZMP用來區別客戶個人檔案的唯一ID | 強制 | 如果您想要使用唯一的設定檔的電子郵件地址來識別它們，請選擇`Email`標準身分名稱空間。 或者，如果客戶設定檔沒有電子郵件，您可以選擇將自訂名稱空間對應到`uid`。 |
-| email_md5_id | 電子郵件MD5代表每個客戶設定檔 | 選填 | 當您想要使用電子郵件MD5值唯一識別客戶設定檔時，請選擇此目標身分。 由於Platform無法將純文字轉換為MD5，因此Experience Platform中的電子郵件地址必須是MD5格式。 在此案例中，將`uid` （必要）設為相同的電子郵件MD5值或其他適當的身分名稱空間。 |
+| email_md5_id | 電子郵件MD5代表每個客戶設定檔 | 選填 | 當您想要使用電子郵件MD5值唯一識別客戶設定檔時，請選擇此目標身分。 電子郵件地址在Experience Platform中必須已採用MD5格式，因為Experience Platform無法將純文字轉換為MD5。 在此案例中，將`uid` （必要）設為相同的電子郵件MD5值或其他適當的身分名稱空間。 |
 
 {style="table-layout:auto"}
 
@@ -63,13 +63,13 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
 | 自訂上傳 | X | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
-> 新增或移除Platform對象中的個別成員後，系統會將更新傳送至ZMP，以確保目標客戶清單會據此同步。
+> 在Experience Platform對象中新增或移除個別成員時，系統會將更新傳送至ZMP，以確保目標客戶清單會適當地同步。
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -104,7 +104,7 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
 * **[!UICONTROL ZMP帳戶網站ID]**：您要將對象傳送至的ZMP **網站ID**。 您可以瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以檢視您的網站ID。 在[這裡](https://knowledgebase.zetaglobal.com/kb/integrations)可找到更多資訊。
-* **[!UICONTROL ZMP區段]**：您ZMP網站ID帳戶中要與Platform對象一起更新的客戶清單區段。
+* **[!UICONTROL ZMP區段]**：您ZMP網站ID帳戶中要與Experience Platform對象一起更新的客戶清單區段。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -131,14 +131,14 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 
 選取目標欄位：
 * （必要）選取`uid`作為您對應來源身分名稱空間的目標身分。
-* （選擇性）選取`email_md5_id`作為目標身分，您將代表電子郵件md5值的來源身分名稱空間對應至該身分。 由於Platform無法將純文字轉換為MD5，因此Experience Platform中的電子郵件地址必須是MD5格式
+* （選擇性）選取`email_md5_id`作為目標身分，您將代表電子郵件md5值的來源身分名稱空間對應至該身分。 電子郵件地址在Experience Platform中必須已採用MD5格式，因為Experience Platform無法將純文字轉換為MD5
 * 視需要選取任何其他目標對應。
 
 ![身分對應](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
-從Experience Platform到Zeta Marketing Platform的成功受眾啟用會更新ZMP中的目標客戶清單。 目標客戶清單中的計數和範例設定檔將等於成功啟用的身分數量。
+從Experience Platform成功啟用對象至Zeta Marketing Platform，會更新ZMP中的目標客戶清單。 目標客戶清單中的計數和範例設定檔將等於成功啟用的身分數量。
 
 ZMP中的![客戶清單](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform字彙表
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '7996'
+source-wordcount: '8009'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## A
 
-**存取控制**：角色型存取控制可讓管理員指派存取許可權給Experience Platform的使用者。 許可權包括檢視和/或使用Experience Platform功能，例如建立沙箱、定義結構以及管理資料集。
+**存取控制**：角色型存取控制可讓管理員指派存取權和許可權給Experience Platform的使用者。 許可權包括檢視和/或使用Experience Platform功能，例如建立沙箱、定義結構以及管理資料集的能力。
 
 **存取金鑰識別碼**：存取金鑰識別碼是與[!DNL Amazon] S3機密存取金鑰相關聯的唯一識別碼。 存取金鑰ID和機密存取金鑰會搭配使用，以簽署[!DNL Amazon Web Services] (AWS)請求。
 
@@ -25,9 +25,9 @@ ht-degree: 0%
 
 **活動**：在[!DNL Offer Decisioning]中，活動包含通知優惠方案選擇的邏輯。
 
-**管理員**：您組織中的一或多個可以設定和自訂Adobe Admin Console中Experience Platform許可權的人員。
+**管理員**：貴組織中可以設定和自訂Adobe Admin Console中Experience Platform許可權的一或多個個人。
 
-**Adobe Admin Console**： Adobe Admin Console提供管理貴組織Adobe產品權益和存取許可權的集中位置。 透過主控台，管理員可以授予使用者群組各種Platform功能的存取許可權，例如「管理資料集」、「檢視資料集」或「管理設定檔」。
+**Adobe Admin Console**： Adobe Admin Console提供管理貴組織Adobe產品權益和存取許可權的集中位置。 透過主控台，管理員可以授予使用者群組各種Experience Platform功能的存取許可權，例如「管理資料集」、「檢視資料集」或「管理設定檔」。
 
 **Adobe Experience Platform**： Adobe Experience Platform可標準化整個企業的資料和內容、提供即時消費者個人檔案、運用資料科學，以及加快內容速度，藉此推動客戶歷程中的體驗個人化。
 
@@ -35,19 +35,19 @@ ht-degree: 0%
 
 **Adobe Experience Platform Segmentation Service**：可讓您從即時客戶設定檔資料建立區段及產生對象。 這些對象就可以匯出至自己在資料湖中的資料集。
 
-**Adobe Intelligent Services**：智慧型服務(例如Attribution AI和Customer AI)是機器學習、人工智慧型模型，是專門建置並需要Experience Platform才能執行和運作。
+**Adobe Intelligent Services**：智慧型服務（例如Attribution AI和Customer AI）是機器學習、人工智慧為主的模型，專門建置並需要Experience Platform執行及操作。
 
-**Adobe I/O**：Adobe I/O是Experience Platform的一部分，提供開發人員整合、擴充及自訂平台所需的一切存取權，包括API、事件、開發人員主控台及實用工具。
+**Adobe I/O**： Adobe I/O是Experience Platform的一部分，提供開發人員整合、擴充及自訂Experience Platform所需的一切，包括API、事件、開發人員主控台及實用工具。
 
 **Adobe Sensei**： Adobe Sensei是支援Experience Platform的智慧架構。 此外，也提供了一組AI服務，讓品牌得以增強其能力，提供即時、個人化的客戶體驗。
 
 **Amazon S3貯體**： [!DNL Amazon S3]貯體是儲存在[!DNL Amazon]生態系統之資料的基本容器。 貯體包含物件，每個物件都是使用唯一的開發人員指派的金鑰儲存和擷取的。
 
-**Amazon S3聯結器**： [!DNL Amazon] S3聯結器可讓Experience Platform的客戶安全地連線並存取其[!DNL Amazon] S3資料。
+**Amazon S3聯結器**： [!DNL Amazon] S3聯結器可讓Experience Platform的客戶安全地連線及存取其[!DNL Amazon] S3資料。
 
 **APA**： [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act)會提升並保護個人的隱私權，並規範澳洲政府機構和組織處理個人資訊的方式。 [!DNL Privacy Act]包含適用於私營組織的原則。 例如，個人有權瞭解收集個人資訊的原因及用途，以及存取、清除其資料和更正個人資訊的能力。
 
-**附加儲存策略**： 「附加」儲存策略是指定透過連線擷取第三方資料，並在資料集結尾附加任何新資料或列時使用的選項。 先前擷取的列會維持不變，只有自上次排程執行以來建立的列才會擷取至Experience Platform。 在Experience Platform時，在來源系統中變更的任何列都會保持不變。
+**附加儲存策略**： 「附加」儲存策略是指定透過連線擷取第三方資料，並在資料集結尾附加任何新資料或列時使用的選項。 先前擷取的列會維持不變，只有自上次排程執行以來建立的列才會擷取至Experience Platform。 在來源系統中變更的任何列在Experience Platform上保持不變。
 
 **陣列**：陣列用於具有相同資料型別的有序元素。
 
@@ -55,9 +55,9 @@ ht-degree: 0%
 
 **屬性**：屬性是代表設定檔的指定特性。
 
-**屬性合併**：使用Real-Time Customer Profile API定義合併原則時，`attributeMerge`物件會指出當資料衝突時，合併原則會優先處理設定檔屬性的方式。 這等同於在平台UI中定義合併原則時選取[!UICONTROL 合併方法]。
+**屬性合併**：使用Real-Time Customer Profile API定義合併原則時，`attributeMerge`物件會指出當資料衝突時，合併原則會優先處理設定檔屬性的方式。 這等同於在Experience Platform UI中定義合併原則時選取[!UICONTROL 合併方法]。
 
-**Attribution AI**： [!DNL Attribution AI]是由Adobe Sensei支援的Intelligent Service，可在整個客戶生命週期中提供演算式多管道歸因功能。
+**Attribution AI**： [!DNL Attribution AI]是一項由Adobe Sensei提供支援的Intelligent Service，可在整個客戶生命週期中提供演演算法多管道歸因功能。
 
 **對象**：對象是符合區段定義條件的結果設定檔集。
 
@@ -69,13 +69,13 @@ ht-degree: 0%
 
 **回填**：對於已排程的來源，回填選項可擷取歷史資料。
 
-**回填期間**：回填期間是設定透過來源連線擷取協力廠商歷史資料的時間長度選項。 選取「永久」的回填期間會擷取來源資料的整個歷程記錄以Experience Platform。
+**回填期間**：回填期間是設定透過來源連線擷取協力廠商歷史資料的時間長度選項。 選取「永久」的回填期間，會將來源資料的整個歷史記錄擷取至Experience Platform。
 
 **批次**：批次是指一段時間內收集並一起處理為單一單位的一組資料。 資料集是由多個批次組成。
 
-**批次ID**：批次ID是批次資料的Adobe產生識別碼。
+**批次ID**：批次ID是Adobe為批次資料產生的識別碼。
 
-**批次擷取**：批次擷取可讓您將資料以批次檔案的形式擷取到Experience Platform中。 批次是資料單位，由一或多個要作為單一單位內嵌的檔案組成。
+**批次擷取**：批次擷取可讓您將資料以批次檔案的形式擷取到Experience Platform。 批次是資料單位，由一或多個要作為單一單位內嵌的檔案組成。
 
 **批次分段**：批次分段是進行中資料選擇流程的替代方法，並會透過區段定義一次移動所有設定檔資料以產生對應的對象。 建立後，會儲存並儲存此區段，以便將其匯出以供使用。
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 **目錄**：在來源和目的地的內容中，目錄是擁有可用連線至Adobe應用程式和協力廠商技術的相簿。 不要與[!DNL Catalog Service]混淆。
 
-**[!DNL Catalog Service]**： [!DNL Catalog Service] （有時稱為[!DNL Catalog]）是Adobe Experience Platform中資料位置和歷程的記錄系統。 雖然所有擷取至Experience Platform的資料都會以檔案和目錄的形式儲存在Data Lake中，但[!DNL Catalog]會儲存這些檔案和目錄的中繼資料和描述，以供查詢、監視和資料控管之用。
+**[!DNL Catalog Service]**： [!DNL Catalog Service] （有時稱為[!DNL Catalog]）是Adobe Experience Platform中資料位置和歷程的記錄系統。 雖然所有內嵌至Experience Platform的資料都會以檔案和目錄的形式儲存在Data Lake中，但[!DNL Catalog]會儲存這些檔案和目錄的中繼資料和描述，以供查詢、監控和資料控管之用。
 
 **CCPA**： [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa)增強了美國加州居民的隱私權和消費者保護。 CCPA為加州居民提供了新的資料隱私權，包括存取和刪除其個人資料的權利、知悉其個人資料是否遭到販售或揭露（以及對象是誰）的權利，以及選擇退出將資料販售給第三方的權利。
 
@@ -155,17 +155,17 @@ ht-degree: 0%
 
 **資料元素**：在標籤的內容中，資料元素是指標，用於規則和擴充功能中，指向使用者端裝置上存在的特定資料片段。
 
-**資料擷取**：資料擷取是將資料從來源新增至Experience Platform的程式。 資料可以多種方式內嵌至Platform，包括串流、批次，或透過來源聯結器新增。
+**資料擷取**：資料擷取是將資料從來源新增至Experience Platform的程式。 資料可以多種方式擷取至Experience Platform中，包括串流、批次，或透過來源聯結器新增。
 
 **資料層**：在標籤的內容中，資料層是存在於使用者端裝置上的資料結構，其中包含檢視頁面或熒幕的內容相關中繼資料。
 
 **資料控管**：資料控管包含用於確保資料符合資料使用相關法規與組織政策的策略與技術。
 
-**資料整合合作夥伴**：資料整合合作夥伴可簡化並自動將200多個來源的大量資料載入並轉換成Experience Platform，而不需編寫程式碼。
+**資料整合合作夥伴**：資料整合合作夥伴可簡化並自動化從200多個來源向Experience Platform載入及轉換大量資料的作業，而不需編寫程式碼。
 
 **資料集標籤**：資料使用標籤可以新增到資料集。 該資料集內的所有欄位將會繼承資料集的標籤。
 
-**資料科學Workspace**： Experience Platform中的[!DNL Data Science Workspace]可讓客戶利用平台和Adobe應用程式的資料，建立機器學習模型，以建立智慧型區段、產生見解和提供預測，讓您大幅提升一般使用者的數位體驗。
+**資料科學Workspace**： Experience Platform中的[!DNL Data Science Workspace]可讓客戶運用Experience Platform和Adobe應用程式的資料，建立機器學習模型，以建立智慧型區段、產生見解並提供預測，讓您大幅提升一般使用者數位體驗。
 
 **資料來源**：資料來源是使用者指定的資料來源。 資料來源的範例為行動應用程式、設定檔及/或體驗事件、網站設定檔事件或CRM。
 
@@ -177,13 +177,13 @@ ht-degree: 0%
 
 **資料使用標籤**：資料使用標籤可讓您分類反映隱私權相關考量事項，以及遵循法規和公司政策的合約條件的資料。 新增到資料集的資料使用標籤會向下繼承或套用到該資料集內的所有欄位。 資料使用標籤也可以直接套用至欄位。
 
-**資料流**：資料流是從來源流入Platform並流出到目的地的虛擬資料管道。
+**資料流**：資料流是從來源流入Experience Platform並流出到目的地的虛擬資料管道。
 
-**資料流執行**：資料流執行是根據使用者指定的排程進入Experience Platform的資料流。
+**資料流執行**：資料流執行是根據使用者指定的排程登陸Experience Platform的資料流。
 
 **資料集**：資料集是資料集合的儲存和管理結構，通常是包含結構描述（欄）和欄位（列）的表格。
 
-**資料集識別碼**：內嵌資料集的Adobe產生識別碼。
+**資料集識別碼**： Adobe為擷取的資料集產生的識別碼。
 
 **資料集輸出**：資料集輸出提供一種機制，用於決定哪個「建立資料表為選取」選項將用於特定[!DNL Query Service]執行。
 
@@ -191,9 +191,9 @@ ht-degree: 0%
 
 **差異資料行**：差異資料行可讓您選取來源資料欄位，以代表增量擷取的時間戳記。
 
-**差異儲存策略**：差異儲存策略是透過來源連線擷取協力廠商資料的選項。 選項可讓使用者指定將來源資料的新列或已變更列擷取到Experience Platform。 新列會新增到資料集的結尾，而變更的列會在Experience Platform時更新資料集。
+**差異儲存策略**：差異儲存策略是透過來源連線擷取協力廠商資料的選項。 選項可讓使用者指定將新的或變更的來源資料列擷取到Experience Platform。 新列會新增到資料集的結尾，而變更的列則會在Experience Platform上的資料集中更新。
 
-**描述項**：在Experience Data Model (XDM)中，描述項是額外的結構描述相關中繼資料集，可描述欄位的特定行為。 Experience Platform可以使用描述項來瞭解預期的結構描述行為，例如兩個結構描述之間的關係。
+**描述項**：在Experience Data Model (XDM)中，描述項是額外的結構描述相關中繼資料集，可描述欄位的特定行為。 Experience Platform可使用描述項來瞭解預期的結構描述行為，例如兩個結構描述之間的關係。
 
 **目的地**：目的地是任何端點的一般辭彙，例如Adobe應用程式、廣告平台、雲端儲存服務或行銷服務，其中會啟用並傳送對象。
 
@@ -213,7 +213,7 @@ ht-degree: 0%
 
 **電子郵件目標定位行銷動作**：此行銷動作會將資料用於電子郵件目標定位行銷活動。
 
-**內嵌程式碼**：在標籤的內容中，內嵌程式碼是放置在網站或環境之HTML中的指令碼標籤。 內嵌程式碼會指示瀏覽器在何處擷取組建。
+**內嵌程式碼**：在標籤的內容中，內嵌程式碼是放置在網站或環境上HTML中的指令碼標籤。 內嵌程式碼會指示瀏覽器在何處擷取組建。
 
 **列舉**：列舉（列舉）是限制在一組預先定義值的XDM欄位。
 
@@ -227,7 +227,7 @@ ht-degree: 0%
 
 **事件**：事件是與設定檔相關聯的行為資料。
 
-**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM)是開放原始碼架構，使用標準結構描述來統一資料，以便與Experience Platform和Adobe Experience Cloud應用程式搭配使用。 XDM將資料的結構標準化，並加速及簡化從大量資料中獲得深入分析的程式。
+**體驗資料模型(XDM)** [!DNL Experience Data Model] (XDM)是開放原始碼架構，使用標準結構描述來統一資料，以便與Experience Platform和Adobe Experience Cloud應用程式搭配使用。 XDM將資料的結構標準化，並加速及簡化從大量資料中獲得深入分析的程式。
 
 **實驗**：實驗是透過使用即時生產資料的範例部分來訓練執行個體，以建立經過訓練的模型的程式。 這和受過訓練的模型不同，這種模型會根據保留測試資料集進行測試。 這也不同於某些機器學習架構中實驗的概念，實驗實際上是指範例模型專案。
 
@@ -259,7 +259,7 @@ ht-degree: 0%
 
 ## G
 
-**地理柵欄**：地理柵欄是虛擬地理邊界，由GPS或RFID技術定義，可讓軟體在行動裝置進入或離開特定區域時觸發回應。
+**地理柵欄**：地理柵欄是虛擬地理界限，由GPS或RFID技術定義，可讓軟體在行動裝置進入或離開特定區域時觸發回應。
 
 **GDPR （一般資料保護規範）**：一般資料保護規範(GDPR)為一法律架構，其設定收集和處理歐盟(EU)境內人員之個人資訊的准則。 GDPR說明資料管理原則以及個人的權利，並涵蓋處理歐盟公民資料的所有公司。
 
@@ -297,7 +297,7 @@ ht-degree: 0%
 
 **I2資料使用標籤**： `I2`資料使用標籤是用來分類資料，這些資料可以與任何其他資料結合使用，以間接識別或連絡特定人員。
 
-**IMS組織**： IMS組織（有時稱為IMS組織）是用於跨Adobe產品識別公司或公司內的特定群組的名稱。 管理員可以設定和管理功能的存取權以及組織使用者的許可權。
+**IMS組織**： IMS組織（有時稱為IMS組織）是用來在Adobe產品中識別公司或公司內部特定群組的名稱。 管理員可以設定和管理功能的存取權以及組織使用者的許可權。
 
 **擷取**：請參閱資料擷取。
 
@@ -305,7 +305,7 @@ ht-degree: 0%
 
 **輸入功能**：在功能對應中指定了輸入功能，機器學習模型使用它來作出預測。
 
-**[!DNL Intelligent Services]**： [!DNL Intelligent Services] （例如[!DNL Attribution AI]和[!DNL Customer AI]）是機器學習、人工智慧型的模型，需要Experience Platform(或建立在Adobe Real-time Customer Data Platform等平台之上的應用程式)才能執行及操作。
+**[!DNL Intelligent Services]**： [!DNL Intelligent Services] （例如[!DNL Attribution AI]和[!DNL Customer AI]）是機器學習、人工智慧型的模型，需要Experience Platform (或以Experience Platform (例如Adobe Real-Time Customer Data Platform)為基礎建置的應用程式)才能執行及運作。
 
 **以興趣為基礎的目標定位或個人化**：如果符合下列三個條件，就會發生以興趣為基礎的目標定位，也稱為個人化：
 
@@ -315,9 +315,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]**：專案[!DNL Jupyter]的開放原始碼Web式介面已整合至平台UI。
+**[!DNL JupyterLab]**：專案[!DNL Jupyter]的開放原始碼Web式介面已整合至Experience Platform UI。
 
-**[!DNL Jupyter Notebook]**：與JupyterLab整合的Jupyter Notebooks可讓您使用Python、Scala和PySpark等多種語言，對Experience Platform資料執行資料清理和轉換、數值模擬、統計模型、資料視覺化、機器學習等等。
+**[!DNL Jupyter Notebook]**：與JupyterLab整合的Jupyter Notebooks可讓您使用Python、Scala和PySpark等多種語言，在Experience Platform資料上執行資料清理和轉換、數值模擬、統計模型、資料視覺化、機器學習等等。
 
 ## K
 
@@ -341,9 +341,9 @@ ht-degree: 0%
 
 **行銷動作**：在資料控管架構中，行銷動作（也稱為行銷使用案例）是Experience Platform資料消費者採取的動作，需要檢查其是否違反資料使用原則。
 
-**合併方法**：使用Platform UI定義合併原則時，合併方法會指定發生衝突時資料片段的優先順序。 使用即時客戶設定檔API定義合併原則時，會使用`attributeMerge`物件來決定合併方法。
+**合併方法**：使用Experience Platform UI定義合併原則時，合併方法會指定發生衝突時資料片段的優先順序。 使用即時客戶設定檔API定義合併原則時，會使用`attributeMerge`物件來決定合併方法。
 
-**合併原則**：合併原則是Experience Platform用來決定如何合併來自多個來源的客戶資料片段以建立個別設定檔的規則。 當發生資料衝突時，合併原則會決定哪些資料應優先納入設定檔中。
+**合併原則**：合併原則是Experience Platform用來判斷如何將來自多個來源的客戶資料片段合併以建立個別設定檔的規則。 當發生資料衝突時，合併原則會決定哪些資料應優先納入設定檔中。
 
 **MHMDAa**： [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true)增強消費者有關其健康資料的隱私權。 它規定健康資料的披露、消費者同意和刪除權利，並禁止在未經授權的情況下銷售健康資料。 此外，該法令規定，在醫療保健設施周圍使用地理圍欄是非法的。
 
@@ -389,11 +389,11 @@ ht-degree: 0%
 
 **個人化優惠方案**：個人化優惠方案是根據適用性規則和限制而自訂的行銷訊息。
 
-**位置**：位置是為一般使用者所顯示優惠方案的所在位置和/或內容。
+**位置**：位置是為一般使用者所顯示產品建議的所在位置和/或內容。
 
-**原則工作區**： Platform UI中的工作區，可讓資料管理員檢視及管理您組織的資料使用標籤和原則。
+**原則工作區**： Experience Platform UI中的工作區，可讓資料管理員檢視及管理您組織的資料使用標籤和原則。
 
-**原則**：資料使用原則是指定根據套用至Platform資料的使用標籤來限制行銷動作的規則。
+**原則**：資料使用原則是指定根據套用至Experience Platform資料的使用標籤來限制行銷動作的規則。
 
 **原則執行**：可讓您透過套用的行銷動作來執行資料使用原則，以防止在組織內構成原則違規的資料作業。
 
@@ -403,7 +403,7 @@ ht-degree: 0%
 
 **私人身分圖表**：私人身分圖表（有時稱為私人圖表）是根據您第一方資料建置且僅由您的組織顯示的拼接與連結身分之間關係的私人對應。 每個組織只有一個專用圖，且會作為針對與您的品牌互動的每個客戶所產生的個別身分圖的結構性藍圖。
 
-**產品設定檔**：產品設定檔可讓系統管理員授與使用者存取所有或與Experience Platform相關之服務的子集。
+**產品設定檔**：產品設定檔可讓系統管理員授與使用者存取所有或與Experience Platform相關聯之服務子集的許可權。
 
 **生產沙箱**：生產沙箱是打算用於生產環境的沙箱。 不像非生產沙箱，生產沙箱無法重設或刪除。
 
@@ -433,11 +433,11 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**： Adobe Real-time Customer Data Platform (Real-Time CDP)將已知和未知的客戶資料彙整在一起，透過簡化的整合、智慧劃分和跨數位客戶歷程即時啟動，來建立受信任的客戶設定檔。
+**Real-Time Customer Data Platform**： Adobe Real-Time Customer Data Platform (Real-Time CDP)將已知和未知的客戶資料彙整在一起，透過簡化的整合、智慧劃分和跨數位客戶歷程即時啟動，來建立受信任的客戶設定檔。
 
 **即時客戶設定檔**：即時客戶設定檔（有時稱為設定檔）透過合併來自多個管道（包括線上、離線、CRM和協力廠商）的資料，提供每個個別客戶的整體檢視。 設定檔可讓您將客戶資料整合至個別設定檔，針對每個客戶互動提供可採取行動且附有時間戳記的帳戶。
 
-**配方**：配方是模型規格的Adobe辭彙，是代表特定機器學習程式、AI演演算法、處理邏輯及組態引數的最上層容器，這些是建立及執行已訓練的模型，因此有助於解決特定業務問題所需的引數。
+**配方**：配方是Adobe對模型規格的術語，是代表特定機器學習程式、AI演演算法、處理邏輯和設定引數的頂層容器，這些是建立和執行經過訓練的模型所需的引數，因此有助於解決特定業務問題。
 
 **記錄**：記錄是資料集中持續做為列的資料。
 
@@ -449,7 +449,7 @@ ht-degree: 0%
 
 **資源**：在標籤的內容中，資源是通用術語，表示tagsa使用者可在使用者端環境中設定的選項，包括擴充功能、資料元素和規則。
 
-**角色型存取控制**：角色型存取控制可讓管理員指派存取許可權給Experience Platform的使用者。 許可權包括檢視和/或使用Experience Platform功能，例如建立沙箱、定義結構以及管理資料集。
+**角色型存取控制**：角色型存取控制可讓管理員指派存取權和許可權給Experience Platform的使用者。 許可權包括檢視和/或使用Experience Platform功能，例如建立沙箱、定義結構以及管理資料集的能力。
 
 **規則**：在標籤的內容中，規則是定義應在邏輯上分組的特定事件、條件和動作集合的元件集合。
 
@@ -461,7 +461,7 @@ ht-degree: 0%
 
 **範例資料**：範例資料是資料檔的預覽，通常為前100列，可提供資料科學家或工程師對於資料檔案中有什麼結構描述或資料的想法。
 
-**沙箱**：沙箱是將單一Platform執行個體分割成個別虛擬環境的虛擬建構，以協助開發及改進數位體驗應用程式。
+**沙箱**：沙箱是將單一Experience Platform執行個體分割成個別虛擬環境的虛擬建構，以協助開發及改進數位體驗應用程式。
 
 **沙箱重設**：沙箱重設會刪除沙箱中的所有資料，包括資料、設定檔和區段。 沙箱重設可能會影響連線至內部或外部目的地的資料。
 
@@ -475,7 +475,7 @@ ht-degree: 0%
 
 **結構描述欄位群組**：在體驗資料模型(XDM)中，結構描述欄位群組可讓使用者擴充可重複使用的欄位，以定義要包含在結構描述中的一個或多個屬性。
 
-**結構描述資料庫**：結構描述資料庫包含Adobe提供的業界標準XDM資源，以及貴組織定義的自訂資源。
+**結構描述資料庫**：結構描述資料庫包含Adobe提供的業界標準XDM資源，以及您的組織定義的自訂資源。
 
 **結構描述登入**： Schema登入提供使用者介面和RESTful API，用於檢視及管理Schema資料庫中所有與結構描述相關的資源。
 
@@ -483,7 +483,7 @@ ht-degree: 0%
 
 **區段**：區段是包含屬性和事件資料的一組規則，這些屬性和事件資料可限定許多設定檔成為閱聽眾。
 
-**區段產生器**： [!DNL Segment Builder]是用於建立區段定義的視覺化開發環境。 它是所有使用Experience Platform劃分服務之應用程式的通用元件。
+**區段產生器**： [!DNL Segment Builder]是用於建立區段定義的視覺化開發環境。 它是所有使用Experience Platform Segmentation Service之應用程式的通用元件。
 
 **區段定義**：區段定義是用於描述目標對象的主要特性或行為的規則集。 概念化之後，區段定義中概述的規則可用於判斷區段的合格受眾成員。
 
@@ -503,7 +503,7 @@ ht-degree: 0%
 
 **敏感(「S」)標籤**：敏感(「S」)標籤是用來分類被視為敏感的資料，例如您想要標籤為敏感的不同行為或地理資料。
 
-**服務**：利用Adobe智慧型服務讓AI和ML服務運作的強大架構。 服務可提供即時、個人化的客戶體驗，或是讓自訂的智慧型服務開始運轉。
+**服務**：利用Adobe Intelligent Services讓AI和ML服務運作的強大架構。 服務可提供即時、個人化的客戶體驗，或是讓自訂的智慧型服務開始運轉。
 
 **單一身分個人化行銷動作**：使用資料進行站上內容個人化的行銷動作。 站上個人化是用於推斷使用者興趣的任何資料，並用於根據這些推斷選擇提供哪些內容或廣告。
 
@@ -511,7 +511,7 @@ ht-degree: 0%
 
 **S2資料使用標籤**： `S2`資料使用標籤可用來分類資料，以判斷廣泛定義的地理圍欄區域。
 
-**Source**：來源是Platform中任何輸入聯結器的一般辭彙。 另請參閱： Source聯結器
+**Source**：來源是Experience Platform中任何輸入聯結器的一般辭彙。 另請參閱： Source聯結器
 
 **Source屬性**：來源屬性是來源資料集中的欄位。 Source屬性會對應至目標結構描述欄位。
 
@@ -519,13 +519,13 @@ ht-degree: 0%
 
 **Source類別**：來源類別是具有類似特性的來源群組。
 
-**Source聯結器**： Source聯結器（也稱為來源）可協助使用者輕鬆地從多個來源擷取資料，允許使用Experience Platform服務來建構、標籤及增強資料。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
+**Source聯結器**： Source聯結器（也稱為來源）可協助使用者輕鬆地從多個來源擷取資料，允許使用Experience Platform服務來建構、標示和增強資料。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
 
 **串流連線**：串流連線是Adobe提供的唯一端點，繫結至您的組織以將資料串流至Experience Platform。
 
-**標準身分名稱空間**：標準身分名稱空間是由Adobe提供的預先定義的身分名稱空間，代表業界普遍用來識別客戶的標準解決方案。
+**標準身分名稱空間**：標準身分名稱空間是Adobe提供的預先定義身分名稱空間，代表用來識別客戶的業界標準解決方案。
 
-**串流擷取**：串流擷取可讓您從使用者端和伺服器端裝置傳送資料以即時Experience Platform。
+**串流擷取**：串流擷取可讓您即時從使用者端和伺服器端裝置傳送資料至Experience Platform。
 
 **串流區段**：串流區段是進行中的資料選擇程式，會更新區段以回應使用者活動。 建立並儲存區段後，區段定義就會套用至對[!DNL Real-Time Customer Profile]傳入的資料。 會定期處理區段新增和移除，確保您的目標對象仍然相關。
 

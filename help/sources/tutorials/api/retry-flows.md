@@ -2,9 +2,9 @@
 title: 重試失敗的資料流執行
 description: 瞭解如何使用流程服務API重試失敗的資料流執行。
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '272'
 ht-degree: 2%
 
 ---
@@ -21,16 +21,16 @@ ht-degree: 2%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)：Experience Platform提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../landing/api-guide.md)指南。
 
 ## 重試失敗的資料流執行
 
-若要重試失敗的資料流執行，請在提供資料流的執行ID及`re-trigger`作業作為查詢引數的一部分時，向`/runs`端點提出POST要求。
+若要重試失敗的資料流執行，請在提供資料流和`re-trigger`作業的執行ID作為查詢引數的一部分時，對`/runs`端點提出POST要求。
 
 **API格式**
 

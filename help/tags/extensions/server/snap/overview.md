@@ -3,9 +3,9 @@ title: Snapchat Conversions API擴充功能概觀
 description: 使用Snapchat轉換將伺服器端事件資料傳送到Snap。
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '966'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 2%
 
 ## 建立規則以將轉換事件傳送至Snap {#create-snap-rules}
 
-[規則](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)是用來在Platform中觸發擴充功能。 本節概述如何在事件轉送屬性中建立規則，以使用轉換API擴充功能將轉換事件傳送至Snap。
+[規則](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)是用來在Experience Platform中觸發擴充功能。 本節概述如何在事件轉送屬性中建立規則，以使用轉換API擴充功能將轉換事件傳送至Snap。
 
 ### 建立新規則
 
@@ -201,4 +201,4 @@ ht-degree: 2%
 
 ## 後續步驟 {#next-steps}
 
-本指南說明如何使用&#x200B;**[!DNL Snap Conversions API]**&#x200B;擴充功能將伺服器端事件資料傳送至&#x200B;**[!DNL Snap]**。 如需Platform中事件轉送功能的詳細資訊，請參閱[事件轉送概觀](../../../ui/event-forwarding/overview.md)。
+本指南說明如何使用&#x200B;**[!DNL Snap Conversions API]**&#x200B;擴充功能將伺服器端事件資料傳送至&#x200B;**[!DNL Snap]**。 如需Experience Platform中事件轉送功能的詳細資訊，請參閱[事件轉送概觀](../../../ui/event-forwarding/overview.md)。

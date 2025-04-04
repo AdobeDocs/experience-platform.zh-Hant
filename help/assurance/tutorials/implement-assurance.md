@@ -2,16 +2,16 @@
 title: 實作 Adobe Experience Platform Assurance 擴充功能
 description: 本指南會說明如何實作和安裝 Adob​​e Experience Platform Assurance 擴充功能。
 exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 100%
+source-wordcount: '387'
+ht-degree: 95%
 
 ---
 
 # 實作 Adobe Experience Platform Assurance 擴充功能
 
-本教學課程會說明如何在 Mobile SDK 中安裝和實作 Platform Assurance 擴充功能。如需有關如何將 Assurance 擴充功能新增到您的應用程式的說明，請閱讀 [Adobe Experience Platform Assurance 擴充功能概觀](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app)。
+本教學課程說明如何在Mobile SDK中安裝和實作Experience Platform Assurance擴充功能。 如需有關如何將 Assurance 擴充功能新增到您的應用程式的說明，請閱讀 [Adobe Experience Platform Assurance 擴充功能概觀](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app)。
 
 ## 快速入門
 

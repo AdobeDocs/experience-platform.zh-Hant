@@ -2,9 +2,9 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
+source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2486'
 ht-degree: 7%
 
 ---
@@ -252,7 +252,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![顯示匯入詳細資料的[!UICONTROL 匯入詳細資料]對話方塊。](../images/ui/sandbox-tooling/import-details.png)
 
-匯入完成時，會在Platform UI中收到通知。 您可以從警示圖示存取這些通知。 如果工作失敗，您可以從這裡導覽至疑難排解。
+匯入完成時，會在Experience Platform UI中收到通知。 您可以從警示圖示存取這些通知。 如果工作失敗，您可以從這裡導覽至疑難排解。
 
 ## 教學課程影片
 

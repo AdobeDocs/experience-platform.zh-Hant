@@ -2,9 +2,9 @@
 title: 在UI中建立SugarCRM帳戶和聯絡人來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立SugarCRM帳戶與聯絡人來源連線。
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '779'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ### 收集必要的認證
 
-為了將[!DNL SugarCRM Accounts & Contacts]連線到Platform，您必須提供下列連線屬性的值：
+若要將[!DNL SugarCRM Accounts & Contacts]連線至Experience Platform，您必須提供下列連線屬性的值：
 
 | 認證 | 說明 | 範例 |
 | --- | --- | --- |
@@ -34,9 +34,9 @@ ht-degree: 2%
 | `Username` | 您的SugarCRM開發人員帳戶使用者名稱。 | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | 您的SugarCRM開發人員帳戶密碼。 | `123456789` |
 
-### 建立Platform結構描述
+### 建立Experience Platform結構描述
 
-在建立[!DNL SugarCRM]來源連線之前，您也必須先建立平台結構描述以用於您的來源。 請參閱有關[建立Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程，以瞭解如何建立結構描述的完整步驟。
+在建立[!DNL SugarCRM]來源連線之前，您也必須先建立Experience Platform結構描述以用於您的來源。 如需如何建立結構描述的完整步驟，請參閱有關[建立Experience Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程。
 
 [!DNL SugarCRM Accounts & Contacts]支援多個API。 這表示您必須根據要運用的物件型別，建立個別綱要。 請參閱下列帳戶和連絡人結構描述的範例：
 
@@ -44,23 +44,23 @@ ht-degree: 2%
 
 >[!TAB 帳戶]
 
-![平台UI熒幕擷圖顯示帳戶](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)的結構描述範例
+![Experience Platform UI熒幕擷圖顯示帳戶](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)的結構描述範例
 
 >[!TAB 連絡人]
 
-![顯示連絡人範例結構描述的平台UI熒幕擷圖](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
+![Experience Platform UI熒幕擷圖顯示連絡人的範例結構描述](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png)
 
 >[!ENDTABS]
 
 ## 連線您的[!DNL SugarCRM Accounts & Contacts]帳戶
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*CRM*&#x200B;類別下，選取&#x200B;**[!UICONTROL SugarCRM帳戶與聯絡人]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
-![目錄的Platform UI熒幕擷圖，其中包含SugarCRM帳戶與聯絡人卡片](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
+![包含SugarCRM帳戶與聯絡人卡之目錄的Experience Platform UI熒幕擷圖](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 **[!UICONTROL 連線SugarCRM帳戶與連絡人帳戶]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
@@ -68,17 +68,17 @@ ht-degree: 2%
 
 若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL SugarCRM Accounts & Contacts]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
 
-![使用現有帳戶連線SugarCRM帳戶與連絡人帳戶的Platform UI熒幕擷圖](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+使用現有帳戶連線SugarCRM帳戶與連絡人帳戶的![Experience Platform UI熒幕擷圖](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### 新帳戶
 
 如果您正在建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後提供名稱、選擇性說明和您的認證。 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**，然後等待一段時間以建立新連線。
 
-![使用新帳戶連線SugarCRM帳戶與連絡人帳戶的Platform UI熒幕擷圖](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+使用新帳戶連線SugarCRM帳戶與連絡人帳戶的![Experience Platform UI熒幕擷圖](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### 選取資料
 
-最後，您必須選取要擷取至Platform的物件型別。
+最後，您必須選取要擷取至Experience Platform的物件型別。
 
 | 物件類型 | 說明 |
 | --- | --- |
@@ -89,17 +89,17 @@ ht-degree: 2%
 
 >[!TAB 帳戶]
 
-![SugarCRM帳戶與聯絡人的平台UI熒幕擷取畫面，顯示已選取[帳戶]選項的組態](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
+![SugarCRM帳戶與連絡人的Experience Platform UI熒幕擷取畫面顯示已選取帳戶選項的組態](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
 
 >[!TAB 連絡人]
 
-![SugarCRM帳戶與連絡人的平台UI熒幕擷取畫面，顯示已選取連絡人選項的組態](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
+![SugarCRM帳戶與連絡人的Experience Platform UI熒幕擷取畫面，顯示已選取連絡人選項的組態](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL SugarCRM Accounts & Contacts]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](../../dataflow/crm.md)。
+依照本教學課程中的指示，您已建立與[!DNL SugarCRM Accounts & Contacts]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/crm.md)。
 
 ## 其他資源
 
@@ -113,7 +113,7 @@ ht-degree: 2%
 
 若要驗證您已正確設定來源，而且正在擷取[!DNL SugarCRM Accounts & Contacts]資料，請遵循下列步驟：
 
-* 在Platform UI中，選取來源目錄上[!DNL SugarCRM Accounts & Contacts]卡片功能表旁的&#x200B;**[!UICONTROL 檢視資料流程]**。 接著，選取&#x200B;**[!UICONTROL 預覽資料集]**&#x200B;以驗證所擷取的資料。
+* 在Experience Platform UI中，選取來源目錄上[!DNL SugarCRM Accounts & Contacts]卡片功能表旁的&#x200B;**[!UICONTROL 檢視資料流程]**。 接著，選取&#x200B;**[!UICONTROL 預覽資料集]**&#x200B;以驗證所擷取的資料。
 
 * 根據您使用的物件型別，您可以根據以下[!DNL SugarMarket]個「帳戶」或「連絡人」頁面上顯示的計數，驗證彙總資料：
 

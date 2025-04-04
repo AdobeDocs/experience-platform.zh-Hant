@@ -3,9 +3,9 @@ keywords: Advertising Cloud；advertising cloud擴充功能；advertising cloud�
 title: Adobe Advertising Cloud擴充功能
 description: Adobe Advertising Cloud擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '441'
 ht-degree: 3%
 
 ---
@@ -14,25 +14,25 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-這是[!DNL Advertising Cloud]擴充功能，用於實作DSP和Search的[!DNL Advertising Cloud]轉換和對象標籤（目前不支援DCO）。
+這是[!DNL Advertising Cloud]擴充功能，用於實作DSP和搜尋的[!DNL Advertising Cloud]轉換和對象標籤（目前不支援DCO）。
 
 Adobe Advertising Cloud是Adobe Experience Platform中的廣告擴充功能。
 
-此目的地是標籤延伸模組。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
+此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
 ![Adobe Advertising Cloud擴充功能](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-所有已購買Platform的客戶都可在Destinations目錄中找到此擴充功能。
+所有已購買Experience Platform的客戶都可在「目的地」目錄中找到此擴充功能。
 
-若要使用此擴充功能，您需要存取Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員，以存取UI中的資料收集功能，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，讓您可以安裝擴充功能。
+若要使用此擴充功能，您需要存取Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員，以存取UI中的資料收集功能，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，讓您可以安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
 若要安裝Adobe Advertising Cloud擴充功能：
 
-在[平台介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
+在[Experience Platform介面](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 
 從目錄中選取擴充功能或使用搜尋列。
 

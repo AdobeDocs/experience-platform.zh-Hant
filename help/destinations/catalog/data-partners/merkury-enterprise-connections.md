@@ -3,7 +3,7 @@ title: Mercury Enterprise連線目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise連線目的地連線。
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 ## 概觀
 
-使用 [!DNL Merkury Enterprise Connections] 目標將客群安全地傳送至 [!DNL Merkury]。[!DNL Merkury]可讓行銷人員輕鬆比對和傳送個人型對象至[!DNL Merkury]超過80個進階可定址電視/電視、發行者和廣告技術連線。 [!DNL Merkury] 由涵蓋超過 2.68 億人的全方位美國成人消費者識別圖提供支援。
+使用 [!DNL Merkury Enterprise Connections] 目標將客群安全地傳送至 [!DNL Merkury]。[!DNL Merkury]可讓行銷人員輕鬆比對和傳送個人型對象至[!DNL Merkury]超過80個進階可定址電視/電視、發行者和廣告技術連線。 [!DNL Merkury] 由涵蓋超過 2.68 億人的全方位美國成人消費者身分識別圖提供支援。
 
 ![顯示Merkury與Experience Platform之間相互連線的圖表，包括擷取與啟用](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
@@ -49,8 +49,8 @@ ht-degree: 4%
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 | ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 
 {style="table-layout:auto"}
@@ -61,8 +61,8 @@ ht-degree: 4%
 
 | **客群** | **支援** | **描述來源** |
 |---|---|---|      
-| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
-| 自訂上傳 | X | 對象[[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至CSV檔案中的Experience Platform。 |
+| 分段服務 | ✓ | 透過Experience Platform [[細分服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
+| 自訂上傳 | X | 對象[[已將]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)從CSV檔案匯入Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -112,7 +112,7 @@ ht-degree: 4%
 * **描述** — 目的地的簡短說明
 * **貯體名稱（必要）** — 在S3上設定的Amazon S3貯體的名稱
 * **資料夾路徑（必要）** — 如果使用儲存貯體中的子目錄，則必須定義路徑，或使用&#39;/&#39;來參考根路徑。
-* **檔案型別** — 選取匯出檔案應使用的格式Experience Platform。 如需您帳戶的預期檔案型別，請洽詢您的Merkury團隊。
+* **檔案型別** — 選取Experience Platform用於匯出檔案的格式。 如需您帳戶的預期檔案型別，請洽詢您的Merkury團隊。
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**下一步**。
 
-## 啟動此目標的客群
+## 啟動此目標的對象
 
 >[!IMPORTANT]
 >
@@ -150,7 +150,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 | 目標欄位 | Source說明 |
 |---|---|
-| ID | 用於透過[!DNL Merkury Enterprise Identity] Source聯結器將[!DNL Merkury]資料對應到Experience Platform的身分欄位 |
+| ID | 透過[!DNL Merkury Enterprise Identity] Source聯結器將[!DNL Merkury]資料對應至Experience Platform的身分欄位 |
 | Input_First_Name | Experience Platform中的`person.name.firstName`值。 |
 | Input_Last_Name | Experience Platform中的`person.name.lastName`值。 |
 | Input_Address_Line_1 | Experience Platform中的`mailingAddress.street`值。 |
@@ -173,4 +173,4 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 ## 後續步驟
 
-依照此教學課程中的指示，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至[!DNL Merkury]受管理的S3位置。 接下來，您需要連絡您的[!DNL Merkury]代表，提供帳戶名稱、檔案名稱以及儲存貯體路徑，以便設定處理作業。
+依照本教學課程中的指示，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至[!DNL Merkury]受管理的S3位置。 接下來，您需要連絡您的[!DNL Merkury]代表，提供帳戶名稱、檔案名稱以及儲存貯體路徑，以便設定處理作業。

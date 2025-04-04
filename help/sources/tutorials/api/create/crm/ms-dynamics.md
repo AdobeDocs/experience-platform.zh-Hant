@@ -1,10 +1,10 @@
 ---
 title: 使用流量服務API建立Microsoft Dynamics基本連線
-description: 瞭解如何使用流量服務API將Platform連線至Microsoft Dynamics帳戶。
+description: 瞭解如何使用Flow Service API將Experience Platform連結至Microsoft Dynamics帳戶。
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1338'
 ht-degree: 3%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 3%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線Platform至Dynamics帳戶。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功將Experience Platform連線至Dynamics帳戶。
 
 ### 收集必要的認證
 
@@ -693,4 +693,4 @@ curl -X POST \
 依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Microsoft Dynamics]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
-* [使用 [!DNL Flow Service] API建立資料流以將CRM資料帶入Platform](../../collect/crm.md)
+* [使用 [!DNL Flow Service] API建立資料流以將CRM資料帶入Experience Platform](../../collect/crm.md)

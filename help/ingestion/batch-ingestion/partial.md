@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 部分批次擷取概觀
 description: 本檔案提供管理部分批次擷取的教學課程。
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 7%
@@ -21,10 +21,10 @@ ht-degree: 7%
 
 本教學課程需要您具備與部分批次擷取相關的各種Adobe Experience Platform服務的運作知識。 在開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [批次擷取](./overview.md)： [!DNL Platform]從資料檔案（例如CSV和Parquet）擷取及儲存資料的方法。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
+- [批次擷取](./overview.md)： [!DNL Experience Platform]從資料檔案（例如CSV和Parquet）擷取及儲存資料的方法。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 
-下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Platform] API。
+下列章節提供您需瞭解的其他資訊，才能成功呼叫[!DNL Experience Platform] API。
 
 ### 讀取範例 API 呼叫
 
@@ -32,19 +32,19 @@ ht-degree: 7%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人`{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
+>如需[!DNL Experience Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 ## 在API中啟用部分批次擷取的批次 {#enable-api}
 
@@ -65,7 +65,7 @@ ht-degree: 7%
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | 允許[!DNL Platform]產生批次詳細錯誤訊息的標幟。 |
+| `enableErrorDiagnostics` | 允許[!DNL Experience Platform]產生批次詳細錯誤訊息的標幟。 |
 | `partialIngestionPercent` | 整個批次失敗之前可接受的錯誤百分比。 因此，在此範例中，最多5%的批次可能是錯誤，然後才會失敗。 |
 
 
@@ -75,7 +75,7 @@ ht-degree: 7%
 >
 >本節說明如何使用UI為部分批次擷取啟用批次。 如果您已使用API為部分批次擷取啟用批次，則可以跳至下一節。
 
-若要透過[!DNL Platform] UI啟用部分擷取的批次，您可以透過來源連線建立新批次、在現有資料集中建立新批次，或透過&quot;[!UICONTROL 將CSV對應至XDM流程]&quot;建立新批次。
+若要透過[!DNL Experience Platform] UI啟用部分擷取的批次，您可以透過來源連線建立新批次、在現有資料集中建立新批次，或透過&quot;[!UICONTROL 將CSV對應至XDM流程]&quot;建立新批次。
 
 ### 建立新的來源連線 {#new-source}
 
@@ -85,7 +85,7 @@ ht-degree: 7%
 
 **[!UICONTROL 部分擷取]**&#x200B;切換可讓您啟用或停用部分批次擷取。
 
-**[!UICONTROL 錯誤診斷]**&#x200B;切換僅在&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換關閉時顯示。 此功能可讓[!DNL Platform]產生有關您擷取批次的詳細錯誤訊息。 如果已開啟&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換，則會自動強制執行增強的錯誤診斷。
+**[!UICONTROL 錯誤診斷]**&#x200B;切換僅在&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換關閉時顯示。 此功能可讓[!DNL Experience Platform]產生有關您擷取批次的詳細錯誤訊息。 如果已開啟&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -99,7 +99,7 @@ ht-degree: 7%
 
 **[!UICONTROL 部分擷取]**&#x200B;切換可讓您啟用或停用部分批次擷取。
 
-**[!UICONTROL 錯誤診斷]**&#x200B;切換僅在&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換關閉時顯示。 此功能可讓[!DNL Platform]產生有關您擷取批次的詳細錯誤訊息。 如果已開啟&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換，則會自動強制執行增強的錯誤診斷。
+**[!UICONTROL 錯誤診斷]**&#x200B;切換僅在&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換關閉時顯示。 此功能可讓[!DNL Experience Platform]產生有關您擷取批次的詳細錯誤訊息。 如果已開啟&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
@@ -115,7 +115,7 @@ ht-degree: 7%
 
 **[!UICONTROL 部分擷取]**&#x200B;切換可讓您啟用或停用部分批次擷取。
 
-**[!UICONTROL 錯誤診斷]**&#x200B;切換僅在&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換關閉時顯示。 此功能可讓[!DNL Platform]產生有關您擷取批次的詳細錯誤訊息。 如果已開啟&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換，則會自動強制執行增強的錯誤診斷。
+**[!UICONTROL 錯誤診斷]**&#x200B;切換僅在&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換關閉時顯示。 此功能可讓[!DNL Experience Platform]產生有關您擷取批次的詳細錯誤訊息。 如果已開啟&#x200B;**[!UICONTROL 部分擷取]**&#x200B;切換，則會自動強制執行增強的錯誤診斷。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 

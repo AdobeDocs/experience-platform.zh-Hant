@@ -2,9 +2,9 @@
 title: 即時客戶個人檔案概述
 description: 即時客戶個人檔案會合併來自各種來源的資料，並以個別客戶個人檔案和相關時間序列事件的形式提供對該資料的存取權。 此功能可讓行銷人員跨多個管道，與其對象推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1826'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 ## 瞭解設定檔
 
-[!DNL Real-Time Customer Profile]會合併來自各種企業系統的資料，然後以客戶設定檔和相關時間序列事件的形式提供該資料的存取權。 此功能可讓行銷人員跨多個管道，與其對象推動協調、一致且相關的體驗。 以下章節重點說明為了在Platform內有效建置和維護設定檔，您必須瞭解的一些核心概念。
+[!DNL Real-Time Customer Profile]會合併來自各種企業系統的資料，然後以客戶設定檔和相關時間序列事件的形式提供該資料的存取權。 此功能可讓行銷人員跨多個管道，與其對象推動協調、一致且相關的體驗。 以下章節重點說明您必須瞭解的一些核心概念，才能在Experience Platform中有效建置和維護設定檔。
 
 ### 設定檔實體組合
 
@@ -45,7 +45,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 雖然[!DNL Real-Time Customer Profile]會處理所擷取的資料，並使用Adobe Experience Platform [!DNL Identity Service]透過身分對應來合併相關資料，但它會在[!DNL Profile]資料存放區中維護自己的資料。 [!DNL Profile]存放區與資料湖中的目錄資料以及身分圖表中的[!DNL Identity Service]資料不同。
 
-設定檔存放區使用Microsoft Azure Cosmos DB基礎結構，而平台資料湖使用Microsoft Azure資料湖儲存空間。
+設定檔存放區使用Microsoft Azure Cosmos DB基礎結構，而Experience Platform資料湖使用Microsoft Azure資料湖儲存空間。
 
 ### 輪廓護欄
 
@@ -57,15 +57,15 @@ Experience Platform UI提供儀表板，可讓您檢視即時客戶設定檔資�
 
 ### 設定檔片段與合併的設定檔 {#profile-fragments-vs-merged-profiles}
 
-每個個別客戶設定檔都由多個設定檔片段組成，這些片段已合併以構成該客戶的單一檢視。 例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。
+每個個別客戶設定檔都由多個設定檔片段組成，這些片段已合併以構成該客戶的單一檢視。 例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Experience Platform時，會合併在一起，以便為該客戶建立單一設定檔。
 
 換句話說，設定檔片段代表指定資料集中該ID的唯一主要身分和對應的[記錄](#record-data)或[事件](#time-series-events)資料。
 
-當來自多個資料集的資料衝突時（例如，一個片段將客戶列為「單身」，而另一個片段將客戶列為「已婚」），[合併原則](#merge-policies)會決定哪些資訊要優先處理，並包含在個人設定檔中。 因此，Platform內的設定檔片段總數可能一律高於合併的設定檔總數，因為每個設定檔通常是由多個資料集中的多個片段組成。
+當來自多個資料集的資料衝突時（例如，一個片段將客戶列為「單身」，而另一個片段將客戶列為「已婚」），[合併原則](#merge-policies)會決定哪些資訊要優先處理，並包含在個人設定檔中。 因此，Experience Platform中的設定檔片段總數可能一律高於合併的設定檔總數，因為每個設定檔通常是由多個資料集中的多個片段組成。
 
 ### 記錄資料 {#record-data}
 
-設定檔是由許多屬性（也稱為記錄資料）組成的主體、組織或個人的表示法。 例如，產品的設定檔可能包含SKU和說明，而人員的設定檔包含名字、姓氏和電子郵件地址等資訊。 使用[!DNL Experience Platform]，您可以自訂設定檔以使用與您的企業相關的特定資料。 標準[!DNL Experience Data Model] (XDM)類別[!DNL XDM Individual Profile]是描述客戶記錄資料時建置結構描述的偏好類別，而且會為Platform服務之間的許多互動提供不可或缺的資料。 如需在[!DNL Experience Platform]中使用結構描述的詳細資訊，請先閱讀[XDM系統總覽](../xdm/home.md)。
+設定檔是由許多屬性（也稱為記錄資料）組成的主體、組織或個人的表示法。 例如，產品的設定檔可能包含SKU和說明，而人員的設定檔包含名字、姓氏和電子郵件地址等資訊。 使用[!DNL Experience Platform]，您可以自訂設定檔以使用與您的企業相關的特定資料。 標準[!DNL Experience Data Model] (XDM)類別[!DNL XDM Individual Profile]是描述客戶記錄資料時建置結構描述的偏好類別，並且提供資料是Experience Platform服務之間許多互動不可或缺的一部分。 如需在[!DNL Experience Platform]中使用結構描述的詳細資訊，請先閱讀[XDM系統總覽](../xdm/home.md)。
 
 ### 時間序列事件 {#time-series-events}
 
@@ -77,7 +77,7 @@ Experience Platform UI提供儀表板，可讓您檢視即時客戶設定檔資�
 
 ### 合併原則
 
-將來自多個來源的資料片段彙整在一起並加以合併，以便檢視每個個別客戶的完整檢視時，合併原則是[!DNL Platform]用來判斷資料優先順序的方式以及用於建立客戶設定檔的資料的規則。
+將來自多個來源的資料片段彙整在一起並加以合併，以便檢視每個個別客戶的完整檢視時，合併原則是[!DNL Experience Platform]用來判斷資料優先順序的方式以及用於建立客戶設定檔的資料的規則。
 
 當多個資料集中的資料發生衝突時，合併原則會決定該資料應該如何處理，以及應該使用哪個值。 透過RESTful API或使用者介面，您可以建立新的合併原則、管理現有原則，並為您的組織設定預設合併原則。
 
@@ -107,7 +107,7 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 
 ## 正在擷取資料到[!DNL Profile]
 
-可以將[!DNL Platform]設定為傳送記錄和時間序列資料至[!DNL Profile]，支援即時串流擷取和批次擷取。 如需詳細資訊，請參閱概述如何[將資料新增到即時客戶設定檔](tutorials/add-profile-data.md)的教學課程。
+可以將[!DNL Experience Platform]設定為傳送記錄和時間序列資料至[!DNL Profile]，支援即時串流擷取和批次擷取。 如需詳細資訊，請參閱概述如何[將資料新增到即時客戶設定檔](tutorials/add-profile-data.md)的教學課程。
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 
 ### 設定檔擷取量度
 
-可觀察性深入分析可讓您在Adobe Experience Platform中公開關鍵量度。 除了各種[!DNL Platform]功能的[!DNL Experience Platform]使用狀況統計資料和效能指標之外，還有特定的設定檔相關量度，可讓您深入瞭解傳入的請求率、成功的擷取率、擷取的記錄大小等。 若要瞭解更多資訊，請先閱讀[可觀察性深入分析API總覽](../observability/api/overview.md)，如需即時客戶個人檔案量度的完整清單，請參閱[可用量度](../observability/api/metrics.md#available-metrics)的相關檔案。
+可觀察性深入分析可讓您在Adobe Experience Platform中公開關鍵量度。 除了各種[!DNL Experience Platform]功能的[!DNL Experience Platform]使用狀況統計資料和效能指標之外，還有一些特定的設定檔相關量度，可讓您將insight取得傳入要求率、成功擷取率、擷取記錄大小等。 若要瞭解更多資訊，請先閱讀[可觀察性深入分析API總覽](../observability/api/overview.md)，如需即時客戶個人檔案量度的完整清單，請參閱[可用量度](../observability/api/metrics.md#available-metrics)的相關檔案。
 
 ## 更新設定檔存放區資料
 
@@ -131,7 +131,7 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 - 資料存取原則
 - 行銷動作資料的存取控制
 
-資料控管可在數個時間點進行管理。 其中包括決定哪些資料已擷取至[!DNL Platform]，以及擷取後可針對指定的行銷動作存取哪些資料。 如需詳細資訊，請先閱讀[資料控管概觀](../data-governance/home.md)。
+資料控管可在數個時間點進行管理。 其中包括決定哪些資料已擷取至[!DNL Experience Platform]，以及擷取後可針對指定的行銷動作存取哪些資料。 如需詳細資訊，請先閱讀[資料控管概觀](../data-governance/home.md)。
 
 ### 處理選擇退出和資料隱私權請求
 

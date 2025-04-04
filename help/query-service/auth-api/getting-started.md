@@ -4,9 +4,9 @@ title: 資料Distiller Authorization API指南
 description: 瞭解如何在Adobe Experience Platform的查詢服務中開始進行授權和IP範圍限制的安全資料存取。
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 5%
 
 ---
@@ -27,21 +27,21 @@ ht-degree: 5%
 
 ### 必要權限 {#required-permissions}
 
-若要在查詢服務中啟用安全資料存取限制，您需要&#x200B;**[!UICONTROL 管理允許清單]**&#x200B;許可權。 此許可權可讓組織定義特定IP範圍（IPv4或IPv6格式），這些範圍有權透過SQL介面存取Platform中的資料。 存取在沙箱層級管理，使用者可以設定核准IP位址或CIDR區塊清單，將存取限製為僅存取允許的網路。
+若要在查詢服務中啟用安全資料存取限制，您需要&#x200B;**[!UICONTROL 管理允許清單]**&#x200B;許可權。 此許可權可讓組織定義特定IP範圍（IPv4或IPv6格式），這些範圍有權透過SQL介面存取Experience Platform中的資料。 存取在沙箱層級管理，使用者可以設定核准IP位址或CIDR區塊清單，將存取限製為僅存取允許的網路。
 
 >[!NOTE]
 >
->系統管理員可以從Adobe[Admin Console](https://adminconsole.adobe.com/)設定使用者許可權。 如需詳細資訊，請參閱 [Admin Console 使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)。
+>系統管理員可以從Adobe [Admin Console](https://adminconsole.adobe.com/)設定使用者許可權。 如需詳細資訊，請參閱 [Admin Console 使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)。
 
 下列功能具有&#x200B;**[!UICONTROL 管理允許清單]**&#x200B;許可權：
 
-- **定義允許的IP範圍**：只有來自這些定義範圍的IP位址或CIDR區塊才能使用SQL透過查詢服務存取Platform中的資料。
+- **定義允許的IP範圍**：只有來自這些定義範圍的IP位址或CIDR區塊才能使用SQL透過查詢服務存取Experience Platform中的資料。
 - **強制IP範圍檢查**：拒絕來自允許範圍以外之IP的連線。
 - **稽核和警示功能**：所有存取嘗試（包括被拒絕的連線）都會記錄為稽核事件。 這些事件可在[Adobe Experience Platform稽核記錄](../../landing/governance-privacy-security/audit-logs/overview.md)中取得，以監視潛在的安全性違規。
 
 ### 收集所需標頭的值 {#gather-values-for-required-headers}
 
-若要呼叫Data Distiller Authorization API，您必須完成[Platform API驗證教學課程](../../landing/api-authentication.md)，此教學課程會提供API呼叫中所需標頭的值。 在每個請求中包含以下標頭：
+若要呼叫Data Distiller Authorization API，您必須完成[Experience Platform API驗證教學課程](../../landing/api-authentication.md)，此教學課程會提供API呼叫中所需標頭的值。 在每個請求中包含以下標頭：
 
 - **授權**： `Bearer {ACCESS_TOKEN}`
 - **x-api-key**： `{API_KEY}`

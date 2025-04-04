@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4452'
+source-wordcount: '4454'
 ht-degree: 11%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 11%
 您可以根據對象的來源，從多種對象型別中進行選取：
 
 * **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。 選取源自&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;的對象會自動啟用[選取擴充屬性](#select-enrichment-attributes)步驟。
+* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Experience Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。 選取源自&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;的對象會自動啟用[選取擴充屬性](#select-enrichment-attributes)步驟。
 * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
 >[!IMPORTANT]
@@ -133,7 +133,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 2. 使用&#x200B;**[!UICONTROL 時間]**&#x200B;切換功能來選取匯出應該在對象評估後立即執行，還是在指定的時間依排程執行。 選取&#x200B;**[!UICONTROL 已排程]**&#x200B;選項時，您可以使用選取器來選取一天中應該進行匯出時的時間（格式為[!DNL UTC]）。
 
-   使用&#x200B;**[!UICONTROL 區段評估之後]**&#x200B;選項，讓啟動工作在每日平台批次分段工作完成後立即執行。 此選項可確保當啟動工作執行時，最新的設定檔會匯出至您的目的地。 這可能會導致根據您的動作，一天匯出對象多次。
+   使用&#x200B;**[!UICONTROL 區段評估之後]**&#x200B;選項，讓啟動工作在每日Experience Platform批次分段工作完成後立即執行。 此選項可確保當啟動工作執行時，最新的設定檔會匯出至您的目的地。 這可能會導致根據您的動作，一天匯出對象多次。
 
    >[!IMPORTANT]
    >
@@ -293,7 +293,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 強制屬性是使用者啟用的核取方塊，可確保所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址&#x200B;。
 
-您可以將屬性標籤為必要，以確保[!DNL Platform]僅匯出包含特定屬性的設定檔。 因此，可作為其他篩選形式使用。 將屬性標籤為必要是&#x200B;**不需要**。
+您可以將屬性標籤為必要，以確保[!DNL Experience Platform]僅匯出包含特定屬性的設定檔。 因此，可作為其他篩選形式使用。 將屬性標籤為必要是&#x200B;**不需要**。
 
 若未選取強制屬性，會匯出所有合格的設定檔，無論其屬性為何。
 
@@ -310,7 +310,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 重複資料刪除索引鍵可排除一個匯出檔案中有多個相同設定檔記錄的可能性。
 
-有三種方式可以在[!DNL Platform]中使用重複資料刪除索引鍵：
+有三種方式可以在[!DNL Experience Platform]中使用重複資料刪除索引鍵：
 
 * 使用單一身分名稱空間做為[!UICONTROL 重複資料刪除索引鍵]
 * 使用[!DNL XDM]設定檔中的單一設定檔屬性做為[!UICONTROL 重複資料刪除索引鍵]

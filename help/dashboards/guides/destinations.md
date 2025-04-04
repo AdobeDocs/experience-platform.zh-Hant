@@ -4,9 +4,9 @@ title: 目的地控制面板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織作用中目的地的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3243'
+source-wordcount: '3246'
 ht-degree: 19%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 ## 探索[!UICONTROL 目的地]儀表板 {#explore}
 
-若要導覽至Platform UI中的目的地儀表板，請在左側邊欄中選取&#x200B;**[!UICONTROL 目的地]**，然後選取「**[!UICONTROL 概觀]**」標籤以顯示儀表板。
+若要導覽至Experience Platform UI中的目的地儀表板，請在左側邊欄中選取「**[!UICONTROL 目的地]**」，然後選取「**[!UICONTROL 概觀]**」標籤以顯示儀表板。
 
 最近快照的日期和時間會顯示在目的地下拉式清單旁的[!UICONTROL 總覽]頂端。 截至該日期和時間，所有Widget資料都是準確的。 快照的時間戳記會以UTC提供；而不是在個別使用者或組織的時區中。
 
@@ -35,7 +35,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 >
 >如果您的組織剛開始使用Experience Platform，但尚未擁有作用中的目的地，則目的地控制面板和[!UICONTROL 概觀]標籤不會顯示。 相反地，從左側導覽選取[!UICONTROL 目的地]會顯示[!UICONTROL 目錄]標籤。 若要深入瞭解[!UICONTROL 目錄]標籤，請參閱[[!UICONTROL 目的地]工作區指南](../../destinations/ui/destinations-workspace.md)。
 
-![反白顯示最近快照的Platform UI目的地總覽。](../images/destinations/snapshot-timestamp.png)
+![反白顯示最近快照的Experience Platform UI目的地概觀。](../images/destinations/snapshot-timestamp.png)
 
 ### 修改[!UICONTROL 目的地]儀表板 {#modify}
 
@@ -53,7 +53,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 ### 檢視 SQL {#view-sql}
 
-您可以透過在[!UICONTROL 總覽]工作區上的切換來檢視產生視覺化分析的SQL。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要深入瞭解此功能，請參閱[檢視SQL UI指南](../view-sql.md)。
+您可以透過在[!UICONTROL 總覽]工作區上的切換來檢視產生視覺化分析的SQL。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Experience Platform資料獲得獨特的見解。 若要深入瞭解此功能，請參閱[檢視SQL UI指南](../view-sql.md)。
 
 ## 預設Widget {#default-widgets}
 
@@ -107,7 +107,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >title="最常用的目的地"
 >abstract="此小工具會依據對應的對象數顯示貴組織最活躍的目的地。這些數字在上次快照時是準確的。此排名會提供對目前使用最多的目的地的分析，同時會強調可能未受到充分利用的目的地。"
 
-**[!UICONTROL 最常使用的目的地]** Widget會依對應對象數目（截至最後一個快照為止）顯示您組織的最上層目的地。 此排名可讓您深入瞭解正在使用的目的地，同時可能會顯示可能未充分利用的目的地。
+**[!UICONTROL 最常使用的目的地]** Widget會依對應對象數目（截至最後一個快照為止）顯示您組織的最上層目的地。 此排名可讓insight瞭解哪些目的地正在使用中，同時也可能顯示那些可能未充分利用的目的地。
 
 例如，如果您昨天設定了目的地，但尚未將任何對象對應至該目的地，您便可看到該目的地目前利用不足。
 
@@ -253,7 +253,7 @@ Widget提供最多20個對應對象的清單，這些對應對象截至上次每
 
 如果您的對應對象設定檔計數超過過去30天內對映設定檔大小平均值的標準差，這表示系統中出現異常，應加以調查。
 
-如果[!UICONTROL 對應的對象健康狀況] Widget中的對象發生大幅偏差，您應該參考對象人數趨勢圖，並找出異常對象。 趨勢可讓您更深入瞭解對象的健康情況。
+如果[!UICONTROL 對應的對象健康狀況] Widget中的對象發生大幅偏差，您應該參考對象人數趨勢圖，並找出異常對象。 此趨勢可進一步提供insight來瞭解您對象的健康情況。
 
 >[!NOTE]
 >

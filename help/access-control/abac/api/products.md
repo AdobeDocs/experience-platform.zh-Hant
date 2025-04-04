@@ -5,9 +5,9 @@ title: 產品API端點
 description: 以屬性為基礎的存取控制API中的/products端點可讓您以程式設計方式管理Adobe Experience Platform中的產品。
 role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## 快速入門
 
-本指南中使用的API端點屬於屬性型存取控制API的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的API端點屬於屬性型存取控制API的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ## 擷取已授權產品的清單 {#list}
 
@@ -70,7 +70,7 @@ curl -X GET \
 
 ## 依產品ID查詢許可權類別
 
-您可以在指定產品ID時，透過向`/products/{PRODUCT_ID}/categories`端點發出GET要求來查詢指定產品的許可權類別。
+您可以在指定產品ID時，向`/products/{PRODUCT_ID}/categories`端點發出GET要求，藉此查詢指定產品的許可權類別。
 
 **API格式**
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 ## 依產品ID查詢許可權集
 
-您可以在指定產品ID時，透過向`/products/{PRODUCT_ID}/permission-sets`端點發出GET要求來查詢指定產品的許可權集。
+您可以在指定產品ID時，向`/products/{PRODUCT_ID}/permission-sets`端點發出GET要求，藉此查詢指定產品的許可權集。
 
 **API格式**
 
@@ -240,6 +240,6 @@ curl -X GET \
 | `id` | 查詢許可權集的對應ID。 |
 | `name` | 查詢許可權集的對應名稱。 |
 | `category` | 可用的許可權類別。 |
-| `permissions` | 許可權包括檢視和/或使用Platform功能的能力，例如建立沙箱、定義結構以及管理資料集。 |
+| `permissions` | 許可權包括檢視和/或使用Experience Platform功能，例如建立沙箱、定義結構以及管理資料集的能力。 |
 | `permissions.resource` | 主體可以或無法存取的資產或物件。 資源可以是檔案、應用程式、伺服器或甚至API。 |
 | `permissions.actions` | 允許主體對查詢的資源執行的動作。 可能的值包括： `view`、`read`、`create`、`edit`和`delete` |

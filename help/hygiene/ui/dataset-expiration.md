@@ -2,9 +2,9 @@
 title: 自動化資料集有效期
 description: 瞭解如何在Adobe Experience Platform UI中排程資料集有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '873'
 ht-degree: 18%
 
 ---
@@ -22,13 +22,13 @@ Adobe Experience Platform UI中的[[!UICONTROL 資料生命週期]工作區](./o
 >
 >如果資料集設為過期，您必須手動變更任何可能會將資料擷取至該資料集的資料流程，讓您的下游工作流程不會受到負面影響。
 
-本文介紹如何在Platform UI中排程及自動化資料集有效期。
+本文介紹如何在Experience Platform UI中排程和自動化資料集有效期。
 
 >[!NOTE]
 >
->資料集到期目前不會從Adobe Experience PlatformEdge Network中刪除資料。 不過，資料集設為過期後，資料不可能保留在Edge Network內。 這是因為資料集到期的15天服務授權合約與Edge Network中存在資料的14天期間重疊，之後才捨棄資料。
+>資料集到期目前不會從Adobe Experience Platform Edge Network中刪除資料。 不過，資料集設為過期後，資料不可能保留在Edge Network中。 這是因為資料集到期的15天服務授權合約與Edge Network中存在資料的14天期間重疊，之後才捨棄資料。
 
-進階資料生命週期管理支援透過[資料集到期端點](../api/dataset-expiration.md)進行資料集刪除，以及透過[工單端點](../api/workorder.md)使用主要身分的ID刪除（資料列層級資料）。 您也可以透過Platform UI管理資料集到期日和[記錄刪除](./record-delete.md)。 如需詳細資訊，請參閱連結的檔案。
+進階資料生命週期管理支援透過[資料集到期端點](../api/dataset-expiration.md)進行資料集刪除，以及透過[工單端點](../api/workorder.md)使用主要身分的ID刪除（資料列層級資料）。 您也可以透過Experience Platform UI管理資料集到期日，以及[記錄刪除](./record-delete.md)。 如需詳細資訊，請參閱連結的檔案。
 
 >[!NOTE]
 >

@@ -4,10 +4,10 @@ description: 瞭解如何使用Adobe Experience Platform UI為您的Braze帳戶�
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 1%
+source-wordcount: '1003'
+ht-degree: 2%
 
 ---
 
@@ -45,9 +45,9 @@ ht-degree: 1%
 
 >[!TIP]
 >
->如果您是第一次建立[!DNL Braze Currents]連線，則必須建立體驗資料模型(XDM)結構描述。 如果您已建立[!DNL Braze Currents]的結構描述，則可以跳過此步驟，繼續進行[將您的帳戶連線到Experience Platform](#connect)。
+>如果您是第一次建立[!DNL Braze Currents]連線，則必須建立體驗資料模型(XDM)結構描述。 如果您已建立[!DNL Braze Currents]的結構描述，則可以略過此步驟，並繼續[將您的帳戶連線至Experience Platform](#connect)。
 
-在Platform UI中，使用左側導覽，然後選取&#x200B;**[!UICONTROL 結構描述]**&#x200B;以存取[!UICONTROL 結構描述]工作區。 接著，選取&#x200B;**[!UICONTROL 建立結構描述]**，然後選取&#x200B;**[!UICONTROL 體驗事件]**。 若要繼續，請選取&#x200B;**[!UICONTROL 下一步]**。
+在Experience Platform UI中，使用左側導覽，然後選取「**[!UICONTROL 結構描述]**」以存取[!UICONTROL 結構描述]工作區。 接著，選取&#x200B;**[!UICONTROL 建立結構描述]**，然後選取&#x200B;**[!UICONTROL 體驗事件]**。 若要繼續，請選取&#x200B;**[!UICONTROL 下一步]**。
 
 ![已完成的結構描述。](../../../../images/tutorials/create/braze/schema.png)
 
@@ -57,11 +57,11 @@ ht-degree: 1%
 
 ## 將您的[!DNL Braze]帳戶連線至Experience Platform {#connect}
 
-在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*行銷自動化*&#x200B;類別下，選取&#x200B;**[!UICONTROL 硬碟電流]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
-![已選取「硬碟電流」來源的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/braze/catalog.png)
+![已選取「硬碟電流」來源的Experience Platform UI上的來源目錄。](../../../../images/tutorials/create/braze/catalog.png)
 
 接著，上傳提供的[Braze Currences範例檔案](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json)。 此檔案包含Braze在事件中可能傳送的所有可能欄位。
 
@@ -94,13 +94,13 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-建立連線後，您必須收集下列認證值，然後您會在「硬碟控制面板」中提供這些值，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀瀏覽至Currences](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents)的[!DNL Braze] [指南。
+建立連線後，您必須收集下列認證值，然後在硬碟控制面板中提供，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀瀏覽至Currences](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents)的[!DNL Braze] [指南。
 
 | 欄位 | 說明 |
 | --- | --- |
 | 用戶端 ID | 與您的Experience Platform來源相關聯的使用者端ID。 |
 | 使用者端密碼 | 與您的Experience Platform來源相關聯的使用者端密碼。 |
-| 租使用者ID | 與您的Experience Platform來源相關聯的租使用者ID。 |
+| 租用戶 ID | 與您的Experience Platform來源相關聯的租使用者ID。 |
 | 沙箱名稱 | 與您的Experience Platform來源關聯的沙箱。 |
 | 資料流 ID | 與您的Experience Platform來源相關聯的資料流ID。 |
 | 串流端點 | 與您的Experience Platform來源相關聯的串流端點。 **注意**： [!DNL Braze]會自動將此轉換為批次串流端點。 |
@@ -111,4 +111,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Braze]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，以將行銷自動化系統資料匯入 [!DNL Platform]](../../dataflow/marketing-automation.md)。
+依照本教學課程中的指示，您已建立與[!DNL Braze]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，以將行銷自動化系統資料匯入 [!DNL Experience Platform]](../../dataflow/marketing-automation.md)。

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4108'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 * [資料集](overview.md)： [!DNL Experience Platform]中資料持續性的儲存和管理建構。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
-   * [結構描述編輯器](../../xdm/tutorials/create-schema-ui.md)：瞭解如何在[!DNL Platform]使用者介面中使用[!DNL Schema Editor]建置您自己的自訂XDM結構描述。
+   * [結構描述編輯器](../../xdm/tutorials/create-schema-ui.md)：瞭解如何在[!DNL Experience Platform]使用者介面中使用[!DNL Schema Editor]建置您自己的自訂XDM結構描述。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：確保遵守使用客戶資料的相關法規、限制和政策。
 
@@ -57,7 +57,7 @@ ht-degree: 4%
 
 在[!DNL Experience Platform] UI中，選取左側導覽中的&#x200B;**[!UICONTROL 資料集]**&#x200B;以開啟&#x200B;**[!UICONTROL 資料集]**&#x200B;儀表板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資料，包括其名稱、資料集所遵守的結構描述，以及最近一次擷取執行的狀態。
 
-![在左側導覽列中反白顯示資料集專案的Platform UI。](../images/datasets/user-guide/browse-datasets.png)
+![Experience Platform UI的資料集專案在左側導覽列中反白顯示。](../images/datasets/user-guide/browse-datasets.png)
 
 從[!UICONTROL 瀏覽]索引標籤中選取資料集名稱，以存取其&#x200B;**[!UICONTROL 資料集活動]**&#x200B;畫面，並檢視您選取的資料集詳細資料。 活動索引標籤包含將所使用訊息的比率視覺化的圖形，以及成功和失敗批次的清單。
 
@@ -168,7 +168,7 @@ ht-degree: 4%
 
 將標籤新增到資料集後，即可根據對應的標籤篩選資料集。 如需詳細資訊，請參閱如何[依標籤](#enable-profile)篩選資料集的章節。
 
-如需如何分類商業物件以便輕鬆探索和分類的詳細資訊，請參閱[管理中繼資料分類](../../administrative-tags/ui/managing-tags.md)的指南。 本指南說明具有適當許可權的使用者如何在Platform UI中建立預先定義的標籤、將其指派給類別，以及管理所有相關的CRUD作業。
+如需如何分類商業物件以便輕鬆探索和分類的詳細資訊，請參閱[管理中繼資料分類](../../administrative-tags/ui/managing-tags.md)的指南。 本指南說明具有適當許可權的使用者如何在Experience Platform UI中建立預先定義的標籤、將其指派給類別，以及管理所有相關的CRUD作業。
 
 ### (Beta)設定資料保留政策 {#data-retention-policy}
 
@@ -176,7 +176,7 @@ ht-degree: 4%
 > 
 >資料保留設定目前為測試版，僅適用於&#x200B;**有限版本**&#x200B;中的特定組織。 您的UI可能無法反映下列功能。
 
-使用[!UICONTROL 資料集]工作區的[!UICONTROL 瀏覽]索引標籤中的內嵌動作功能表，管理資料集到期日和保留設定。 您可以使用此功能來設定資料在資料湖和個人資料存放區中保留的時間長度。 到期日是根據資料擷取至Platform的時間和您設定的保留期間而定。
+使用[!UICONTROL 資料集]工作區的[!UICONTROL 瀏覽]索引標籤中的內嵌動作功能表，管理資料集到期日和保留設定。 您可以使用此功能來設定資料在資料湖和個人資料存放區中保留的時間長度。 到期日是根據資料擷取至Experience Platform的時間和您設定的保留期間而定。
 
 >[!TIP]
 >
@@ -419,7 +419,7 @@ Beta版使用者可以使用四個新的資料行，以更清楚瞭解您的資�
 
 ## 後續步驟
 
-此使用手冊提供在[!DNL Experience Platform]使用者介面中使用資料集時執行一般動作的指示。 如需執行涉及資料集的常見[!DNL Platform]工作流程的步驟，請參閱下列教學課程：
+此使用手冊提供在[!DNL Experience Platform]使用者介面中使用資料集時執行一般動作的指示。 如需執行涉及資料集的常見[!DNL Experience Platform]工作流程的步驟，請參閱下列教學課程：
 
 * [使用API建立資料集](create.md)
 * [使用資料存取API查詢資料集資料](../../data-access/home.md)

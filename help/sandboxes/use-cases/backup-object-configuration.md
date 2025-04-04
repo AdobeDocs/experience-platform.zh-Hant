@@ -2,10 +2,10 @@
 title: 使用沙箱工具備份物件設定
 description: 若要安全地重設沙箱並新增版本設定支援，請使用沙箱工具套件備份物件設定（或中繼資料）。 備份套件可防止關鍵組態（例如結構描述、資料集和對象）遺失，尤其是在開發反複專案期間。
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 3%
+source-wordcount: '1167'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 - 根據您想要備份的範圍中繼資料，請確定您瞭解如何手動[新增物件至封裝](../ui/sandbox-tooling.md#add-object-to-a-new-package)，或如何[匯出整個沙箱](../ui/sandbox-tooling.md#export-an-entire-sandbox)。
 - 確保您擁有存取組織中沙箱工具的許可權，且擁有正確的許可權。
 
-### 您將使用的 UI 功能、平台元件和 Experience Cloud 產品 {#ui-functionality-and-elements}
+### 您將使用的UI功能、Experience Platform元件和Experience Cloud產品 {#ui-functionality-and-elements}
 
 若要成功實作此使用案例，您必須使用Adobe Experience Platform的多個區域。 請確定您擁有這些區域所需的[屬性型存取控制許可權](../../access-control/abac/overview.md)，或要求系統管理員授與您必要的許可權。
 
@@ -85,7 +85,7 @@ ht-degree: 3%
 
 ##### 建立多物件套件
 
-在Experience Platform中，選取左側導覽中的&#x200B;**[!UICONTROL 沙箱]**，然後選取&#x200B;**[!UICONTROL 封裝]**。 若要開始建立新封裝，請從右上角選取&#x200B;**[!UICONTROL 建立封裝]**。
+在Experience Platform中，選取左側導覽中的&#x200B;**[!UICONTROL 沙箱]**，然後選取&#x200B;**[!UICONTROL 套件]**。 若要開始建立新封裝，請從右上角選取&#x200B;**[!UICONTROL 建立封裝]**。
 
 ![沙箱儀表板中的「套件」索引標籤中反白顯示「建立套件」。](../images/use-cases/create-package.png)
 
@@ -125,4 +125,4 @@ ht-degree: 3%
 
 探索透過沙箱工具啟用的更多使用案例：
 
-- [使用沙箱工具啟用卓越中心](./center-of-excellence.md)
+- [使用沙箱工具實現卓越中心](./center-of-excellence.md)

@@ -4,9 +4,9 @@ title: Mixpanel追蹤事件API事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能會將Edge Network事件傳送至Mixpanel。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 使用案例
 
-如果您想要使用[!DNL Mixpanel]中Edge Network的資料以利用其產品分析功能，應使用此擴充功能。
+如果您想要在[!DNL Mixpanel]中使用Edge Network的資料，以善用其產品分析功能，應使用此擴充功能。
 
 例如，假設某個零售組織擁有多頻道實體（網站和行動裝置）。 組織從其平台擷取交易式或對話式輸入作為事件資料，並使用事件轉送擴充功能將其載入到[!DNL Mixpanel]。
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 [!DNL Mixpanel]透過兩種方法解析身分叢集：
 
-* **識別碼** ： [!DNL Mixpanel]會將您選擇的識別碼連線至匿名`distinct_id`。 如果您的網站已啟用[!DNL Mixpanel] SDK，Platform將會使用指派給目前登入之使用者的`distinct_id`。
+* **識別碼** ： [!DNL Mixpanel]會將您選擇的識別碼連線至匿名`distinct_id`。 如果您的網站已啟用[!DNL Mixpanel] SDK，Experience Platform會使用指派給目前登入之使用者的`distinct_id`。
 * **別名**：如果符合其他合併條件，[!DNL Mixpanel]會將兩個非匿名`distinct id`合併在一起。
 
 >[!NOTE]
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 ### 收集必要的設定詳細資料 {#configuration-details}
 
-若要將Experience Platform連線到[!DNL Mixpanel]，您必須有下列輸入：
+若要將Experience Platform連線至[!DNL Mixpanel]，您必須具備下列輸入專案：
 
 | 金鑰型別 | 說明 | 範例 |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->如果您的網站正在使用[!DNL Mixpanel] SDK，您可以繼續下一步驟： [在 [!DNL Mixpanel]](#validate)內驗證您的資料。 如果您沒有使用[!DNL Mixpanel] SDK，您必須[建立個別的身分追蹤規則](#create-an-identity-tracking-rule)，以確保在使用者識別事件發生時，適當的事件和`distinct_id`值會傳送至[!DNL Mixpanel]。
+>如果您的網站使用[!DNL Mixpanel] SDK，您可以繼續下一步驟： [在 [!DNL Mixpanel]](#validate)內驗證您的資料。 如果您沒有使用[!DNL Mixpanel] SDK，您必須[建立個別的身分追蹤規則](#create-an-identity-tracking-rule)，以確保在使用者識別事件發生時，適當的事件和`distinct_id`值會傳送至[!DNL Mixpanel]。
 
 ## 驗證[!DNL Mixpanel]中的資料 {#validate}
 

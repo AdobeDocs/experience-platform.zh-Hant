@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service總覽
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1556'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 * 建立即時客戶個人檔案的圖形，接著用於合併屬性和行為，以建立客戶的全面檢視。
 * 使用各種工具執行驗證和偵錯。
 
-本檔案概述Identity Service，以及您如何在Experience Platform內容中使用其功能。
+本檔案概述Identity Service，以及在Experience Platform環境中使用其功能的方法。
 
 ## 術語 {#terminology}
 
@@ -31,21 +31,21 @@ ht-degree: 2%
 
 | 詞語 | 定義 |
 | --- | --- |
-| 身分 | 身分是實體獨有的資料。 通常這是真實世界的物件，例如個人、硬體裝置或網頁瀏覽器（以Cookie表示）。 完整識別包含兩個元素： **識別名稱空間**&#x200B;和&#x200B;**識別值**。 |
-| 身分命名空間 | 身分命名空間是特定身分的背景。例如，`Email`的名稱空間可能對應到身分值： **julien<span>@acme.com**。 同樣地，`Phone`的名稱空間可能對應到身分值： `555-555-1234`。 如需詳細資訊，請閱讀[身分名稱空間概觀](./features/namespaces.md)。 |
+| 身分識別 | 身分是實體獨有的資料。 通常這是真實世界的物件，例如個人、硬體裝置或網頁瀏覽器（以Cookie表示）。 完整識別包含兩個元素： **識別名稱空間**&#x200B;和&#x200B;**識別值**。 |
+| 身分識別命名空間 | 身分識別命名空間是特定身分識別的背景。例如，`Email`的名稱空間可能對應到身分值： **julien<span>@acme.com**。 同樣地，`Phone`的名稱空間可能對應到身分值： `555-555-1234`。 如需詳細資訊，請閱讀[身分名稱空間概觀](./features/namespaces.md)。 |
 | 身分識別值 | 身分值是代表真實世界實體的字串，並會透過名稱空間在身分服務中分類。 例如，身分值（字串） **julien<span>@acme.com**&#x200B;可歸類為`Email`名稱空間。 |
-| 身分類型 | 身分型別是身分名稱空間的元件。 身分型別會指定身分資料是否連結在身分圖表中。 |
+| 身分識別類型 | 身分型別是身分名稱空間的元件。 身分型別會指定身分資料是否連結在身分圖表中。 |
 | 連結 | 連結或連結是一種方法，可讓兩個不同的身分分別代表相同的實體。 例如，「`Email` = julien<span>@acme.com」和「`Phone` = 555-555-1234」之間的連結表示兩個身分都代表相同的實體。 這表示與您品牌互動的客戶，其電子郵件地址為julien<span>@acme.com，電話號碼為555-555-1234，兩者是相同的。 |
-| 身分識別服務 | Identity Service是Experience Platform中的服務，可連結（或取消連結）身分以維護身分圖表。 |
-| 識別圖 | 身分圖表是身分的集合，代表單一客戶。 如需詳細資訊，請參閱[上的使用身分圖表檢視器](./features/identity-graph-viewer.md)的指南。 |
-| 即時客戶設定檔 | 即時客戶個人檔案是Adobe Experience Platform中的一項服務，其功能： <ul><li>合併設定檔片段，根據身分圖表建立設定檔。</li><li>將設定檔分段，以便傳送至目的地進行啟用。</li></ul> |
-| 設定檔 | 設定檔是主旨、組織或個人的表示法。 設定檔由四個元素組成： <ul><li>屬性：屬性會提供名稱、年齡或性別等資訊。</li><li>行為：行為可提供有關指定設定檔活動的資訊。 例如，設定檔行為可以分辨特定設定檔是「搜尋涼鞋」還是「訂購T恤」。</li><li>身分：對於合併的個人檔案，這會提供與個人相關聯的所有身分資訊。 身分可以分為三種類別：人員（CRMID、電子郵件、電話）、裝置(IDFA、GAID)和Cookie (ECID、AAID)。</li><li>對象成員資格：設定檔所屬的群組（忠誠使用者、住在加利福尼亞的使用者等）</li></ul> |
+| 身分識別服務 | Identity Service是Experience Platform中的一項服務，可連結（或取消連結）身分以維護身分圖表。 |
+| 身分識別圖 | 身分圖表是身分的集合，代表單一客戶。 如需詳細資訊，請參閱[上的使用身分圖表檢視器](./features/identity-graph-viewer.md)的指南。 |
+| 即時客戶輪廓 | 即時客戶個人檔案是Adobe Experience Platform中的一項服務，其功能： <ul><li>合併設定檔片段，根據身分圖表建立設定檔。</li><li>將設定檔分段，以便傳送至目的地進行啟用。</li></ul> |
+| 輪廓 | 設定檔是主旨、組織或個人的表示法。 設定檔由四個元素組成： <ul><li>屬性：屬性會提供名稱、年齡或性別等資訊。</li><li>行為：行為可提供有關指定設定檔活動的資訊。 例如，設定檔行為可以分辨特定設定檔是「搜尋涼鞋」還是「訂購T恤」。</li><li>身分：對於合併的個人檔案，這會提供與個人相關聯的所有身分資訊。 身分可以分為三種類別：人員（CRMID、電子郵件、電話）、裝置(IDFA、GAID)和Cookie (ECID、AAID)。</li><li>對象成員資格：設定檔所屬的群組（忠誠使用者、住在加利福尼亞的使用者等）</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 什麼是Identity Service？
 
-在平台](./images/identity-service-stitching.png)上進行![身分拼接
+在Experience Platform上進行![身分拼接](./images/identity-service-stitching.png)
 
 在企業對客戶(B2C)情境中，客戶會與您的企業互動，並與您的品牌建立關係。 一般客戶可能會在您組織資料基礎架構內的任意數量的系統中活動。 任何特定客戶都可能在您的電子商務、忠誠度和服務檯系統中處於活躍狀態。 同一客戶也可在任何數量的不同裝置上匿名或透過驗證方法進行互動。
 
@@ -76,7 +76,7 @@ Identity Service提供下列作業，以達成其使命：
 
 當身分名稱空間和身分值相符時，就會建立兩個身分之間的連結。
 
-一般登入事件&#x200B;**會將兩個身分**&#x200B;傳送到Experience Platform中：
+一般登入事件&#x200B;**會將兩個身分**&#x200B;傳送到Experience Platform：
 
 * 代表已驗證使用者的個人識別碼（例如CRMID）。
 * 代表網頁瀏覽器的瀏覽器識別碼（例如ECID）。
@@ -103,15 +103,15 @@ Identity Service提供下列作業，以達成其使命：
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
-## 瞭解Identity Service在Experience Platform基礎結構中的角色
+## 瞭解Identity Service在Experience Platform基礎架構中的角色
 
 Identity Service在Experience Platform中扮演著重要的角色。 部分重要整合專案包括：
 
 * [結構描述](../xdm/home.md)：在指定的結構描述中，標示為身分的結構描述欄位允許建立身分圖表。
 * [資料集](../catalog/datasets/overview.md)：當資料集已啟用擷取至Real-Time Customer Profile時，會從資料集產生身分圖表，前提是資料集至少有兩個欄位標籤為身分。
-* [Web SDK](../web-sdk/home.md)： Web SDK會將體驗事件傳送至Adobe Experience Platform，而且當事件中有兩個或多個身分時，身分識別服務會產生圖形。
+* [網頁SDK](../web-sdk/home.md)： Web SDK會將體驗事件傳送至Adobe Experience Platform，而且當事件中有兩個或多個身分時，身分識別服務會產生圖形。
 * [即時客戶個人檔案](../profile/home.md)：在合併指定個人檔案的屬性和事件之前，即時客戶個人檔案可以參考身分圖表。 如需詳細資訊，請閱讀[瞭解Identity Service和即時客戶個人檔案](./identity-and-profile.md)之間關係的指南。
 * [目的地](../destinations/home.md)：目的地可以根據身分名稱空間將設定檔資訊傳送至其他系統，例如雜湊電子郵件。
 * [區段比對](../segmentation/ui/segment-match/overview.md)：區段比對在兩個具有相同身分名稱空間和身分值的不同沙箱中比對兩個設定檔。
-* [Privacy Service](../privacy-service/home.md)：如果刪除要求包含`identity`，則可使用Privacy Service的隱私權要求處理功能，從身分服務中刪除指定的名稱空間和身分值組合。
+* [Privacy Service](../privacy-service/home.md)：如果刪除請求包含`identity`，則可使用Privacy Service中的隱私權請求處理功能，從身分服務中刪除指定的名稱空間和身分值組合。
 

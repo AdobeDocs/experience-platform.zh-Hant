@@ -1,26 +1,26 @@
 ---
-description: 瞭解如何在Experience PlatformUI中建立輸入欄位，讓使用者指定有關如何連線及將資料匯出至目的地的各種相關資訊。
+description: 瞭解如何在Experience Platform UI中建立輸入欄位，讓使用者指定有關如何連線及將資料匯出至目的地的各種相關資訊。
 title: 客戶資料欄位
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1750'
 ht-degree: 1%
 
 ---
 
 # 透過客戶資料欄位設定使用者輸入
 
-在Experience PlatformUI中連線到您的目的地時，您可能需要使用者提供特定的設定詳細資訊，或選取您向他們提供的特定選項。 在Destination SDK中，這些選項稱為客戶資料欄位。
+在Experience Platform UI中連線到您的目的地時，您可能需要使用者提供特定設定詳細資訊，或選取您向他們提供的特定選項。 在Destination SDK中，這些選項稱為客戶資料欄位。
 
-若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[組態選項](../configuration-options.md)檔案中的圖表，或檢視下列目的地組態概觀頁面：
+若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[設定選項](../configuration-options.md)檔案中的圖表，或檢視以下目的地設定概觀頁面：
 
 * [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration)
-* [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+* [使用Destination SDK設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
 ## 客戶資料欄位的使用案例 {#use-cases}
 
-若您需要使用者將資料輸入至Experience PlatformUI中，您可針對各種使用案例使用客戶資料欄位。 例如，當使用者需要提供以下內容時，請使用客戶資料欄位：
+若您需要使用者將資料輸入至Experience Platform UI，請針對各種使用案例使用客戶資料欄位。 例如，當使用者需要提供以下內容時，請使用客戶資料欄位：
 
 * 適用於檔案型目的地的雲端儲存貯體名稱和路徑。
 * 客戶資料欄位接受的格式。
@@ -32,11 +32,11 @@ ht-degree: 1%
 * [建立目的地設定](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-本文會說明您可用於目的地的所有支援客戶資料欄位設定型別，並顯示客戶會在Experience PlatformUI中看到的內容。
+本文說明可用於目的地的所有支援客戶資料欄位設定型別，並顯示客戶在Experience Platform UI中會看到的內容。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -53,10 +53,10 @@ ht-degree: 1%
 
 | 參數 | 類型 | 必要/選用 | 說明 |
 |---------|----------|------|---|
-| `name` | 字串 | 必要 | 為您要介紹的自訂欄位提供名稱。 此名稱在Platform UI中不可見，除非`title`欄位空白或遺失。 |
+| `name` | 字串 | 必要 | 為您要介紹的自訂欄位提供名稱。 此名稱在Experience Platform UI中不可見，除非`title`欄位空白或遺失。 |
 | `type` | 字串 | 必要 | 表示您要引入的自訂欄位的型別。 接受的值： <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | 字串 | 選填 | 表示欄位名稱，如客戶在Platform UI中所見。 如果此欄位空白或遺失，UI會繼承`name`值的欄位名稱。 |
-| `description` | 字串 | 選填 | 提供自訂欄位的說明。 此說明不會顯示在Platform UI中。 |
+| `title` | 字串 | 選填 | 表示欄位名稱，如客戶在Experience Platform UI中所見。 如果此欄位空白或遺失，UI會繼承`name`值的欄位名稱。 |
+| `description` | 字串 | 選填 | 提供自訂欄位的說明。 此說明不會顯示在Experience Platform UI中。 |
 | `isRequired` | 布林值 | 選填 | 指出是否要求使用者在目的地設定工作流程中提供此欄位的值。 |
 | `pattern` | 字串 | 選填 | 如有需要，強制自訂欄位使用模式。 使用規則運算式強制執行模式。 例如，如果您的客戶ID不包含數字或底線，請在此欄位中輸入`^[A-Za-z]+$`。 |
 | `enum` | 字串 | 選填 | 將自訂欄位呈現為下拉式功能表，並列出使用者可用的選項。 |
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-在下列範例中，`customerDataFields`區段定義使用者在連線至目的地時，必須在Platform UI中輸入的兩個欄位：
+在以下範例中，`customerDataFields`區段定義使用者在連線至目的地時必須在Experience Platform UI中輸入的兩個欄位：
 
 * `Account ID`：您目的地平台的使用者帳戶識別碼。
 * `Endpoint region`：它們要連線的API區域端點。 `enum`區段會建立下拉式功能表，其中包含定義於中的值，可供使用者選取。
@@ -103,7 +103,7 @@ ht-degree: 1%
 
 ## 目的地連線名稱和說明 {#names-description}
 
-建立新目的地時，Destination SDK會自動新增&#x200B;**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位至Platform UI中的目的地連線畫面。 如上述範例所示，**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位會在UI中轉譯，而不會包含在客戶資料欄位設定中。
+建立新目的地時，Destination SDK會自動將&#x200B;**[!UICONTROL 名稱]**&#x200B;和&#x200B;**[!UICONTROL 描述]**&#x200B;欄位新增到Experience Platform UI中的目的地連線畫面。 如上述範例所示，**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位會在UI中轉譯，而不會包含在客戶資料欄位設定中。
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ ht-degree: 1%
 
 ## 訂購客戶資料欄位 {#ordering}
 
-您在目的地設定中新增客戶資料欄位的順序，會反映在Platform UI中。
+您在目的地設定中新增客戶資料欄位的順序，會反映在Experience Platform UI中。
 
 例如，下列組態會相應反映在UI中，選項會依序顯示&#x200B;**[!UICONTROL Name]**、**[!UICONTROL Description]**、**[!UICONTROL Bucket名稱]**、**[!UICONTROL 資料夾路徑]**、**[!UICONTROL 檔案型別]**、**[!UICONTROL 壓縮格式]**。
 
@@ -169,7 +169,7 @@ ht-degree: 1%
 ]
 ```
 
-![顯示Experience PlatformUI中檔案格式選項順序的影像。](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
+![顯示Experience Platform UI中檔案格式選項順序的影像。](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
 
 ## 群組客戶資料欄位 {#grouping}
 
@@ -559,7 +559,7 @@ ht-degree: 1%
 
 ## 存取範本化客戶資料欄位 {#accessing-templatized-fields}
 
-當您的目的地需要使用者輸入時，您必須向使用者提供一系列客戶資料欄位，讓使用者可透過Platform UI填寫這些欄位。 然後，您必須設定目的地伺服器，以從客戶資料欄位正確讀取使用者輸入。 這是透過範本化欄位完成的。
+當您的目的地需要使用者輸入時，您必須向使用者提供一系列客戶資料欄位，讓使用者可透過Experience Platform UI填寫這些欄位。 然後，您必須設定目的地伺服器，以從客戶資料欄位正確讀取使用者輸入。 這是透過範本化欄位完成的。
 
 範本化欄位使用格式`{{customerData.fieldName}}`，其中`fieldName`是您正在讀取資訊的客戶資料欄位名稱。 所有範本化的客戶資料欄位前面都有`customerData.`，並括在雙大括弧`{{ }}`內。
 
@@ -592,7 +592,7 @@ ht-degree: 1%
 
 此設定會提示您的使用者在各自的客戶資料欄位中輸入其[!DNL Amazon S3]貯體名稱和資料夾路徑。
 
-若要Experience Platform正確連線到[!DNL Amazon S3]，您的目的地伺服器必須設定為從這兩個客戶資料欄位讀取值，如下所示：
+若要Experience Platform正確連線至[!DNL Amazon S3]，您的目的地伺服器必須設定為從這兩個客戶資料欄位讀取值，如下所示：
 
 ```json
  "fileBasedS3Destination":{
@@ -613,14 +613,14 @@ ht-degree: 1%
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文後，您應該更加瞭解如何允許使用者透過客戶資料欄位在Experience PlatformUI中輸入資訊。 您現在也知道如何針對使用案例選取正確的客戶資料欄位，以及在Platform UI中設定、訂購和分組客戶資料欄位。
+閱讀本文後，您應該更加瞭解如何允許使用者透過客戶資料欄位在Experience Platform UI中輸入資訊。 您現在也知道如何針對使用案例選取正確的客戶資料欄位，以及如何在Experience Platform UI中設定、訂購和分組客戶資料欄位。
 
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證](customer-authentication.md)
 * [OAuth2授權](oauth2-authorization.md)
 * [UI屬性](ui-attributes.md)
-* [綱要設定](schema-configuration.md)
+* [結構描述設定](schema-configuration.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)
 * [支援的對應設定](supported-mapping-configurations.md)
 * [目的地傳遞](destination-delivery.md)

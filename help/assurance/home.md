@@ -1,17 +1,17 @@
 ---
 title: Adobe Experience Platform Assurance 概觀
-description: Adobe Experience Platform Assurance 讓您可以檢查、證明、模擬和驗證您在行動應用程式中收集資料或服務體驗的方式。
+description: Adobe Experience Platform Assurance 讓您可以檢查、校訂、模擬和驗證您在行動應用程式中收集資料或服務體驗的方式。
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 100%
+source-wordcount: '809'
+ht-degree: 95%
 
 ---
 
 # Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance 是 [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) 所提供的產品，可協助您檢查、證明、模擬和驗證您在行動應用程式中收集資料或服務體驗的方式。
+Adobe Experience Platform Assurance 是 [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) 所提供的產品，可協助您檢查、校訂、模擬和驗證您在行動應用程式中收集資料或服務體驗的方式。
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Adobe Experience Platform Assurance 是 [Adobe Experience Cloud](https://www.ado
 
 ### 輕鬆連線
 
-使用 Assurance 將您的應用程式和 Platform 連線既簡單又可靠。您不需要使用網路 Proxy、[MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) 和其他複雜的網路操作 - 將您的應用程式連線至 Assurance 就像掃描 QR 碼或輕敲按鈕一樣容易。
+透過Assurance，將您的應用程式連線至Experience Platform既簡單又可靠。 您不需要使用網路 Proxy、[MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) 和其他複雜的網路操作 - 將您的應用程式連線至 Assurance 就像掃描 QR 碼或輕敲按鈕一樣容易。
 
 ![](./images/index/no-hassle-connection.png)
 
@@ -67,7 +67,7 @@ Assurance 可協助您檢查 Adobe Experience Platform Mobile SDK 產生的原�
 
 ### Adobe Analytics
 
-Adobe Analytics > Analytics 事件檢視是一種聚焦式檢視，會顯示和 Adob&#x200B;&#x200B;e Analytics 行動實作相關的事件。清單檢視則會以特殊格式檢視顯示生命週期或動作/狀態事件、後續處理「狀態」以及必要的事件詳細資料。後續處理狀態會向您顯示對事件套用處理規則後 Adob&#x200B;&#x200B;e Analytics 會如何處理該事件。
+Adobe Analytics > Analytics 事件檢視是一種聚焦式檢視，會顯示和 Adob&#x200B;&#x200B;e Analytics 行動實作相關的事件。清單檢視會在特殊格式化的檢視中顯示生命週期或動作/狀態事件、後處理的「狀態」，以及必要的事件詳細資訊。 後續處理狀態會向您顯示對事件套用處理規則後 Adob&#x200B;&#x200B;e Analytics 會如何處理該事件。
 
 ### 適用於串流媒體的 Adobe Analytics
 

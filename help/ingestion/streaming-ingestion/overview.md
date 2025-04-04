@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 串流擷取概觀
 description: Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從使用者端和伺服器端裝置傳送資料至Experience Platform。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Adobe Experience Platform可讓您為每個個別客戶產生[!DNL Real-Time Cus
 
 ### 串流設定檔記錄和[!DNL ExperienceEvents]
 
-透過串流擷取，使用者可在數秒內將設定檔記錄和[!DNL ExperienceEvents]串流到[!DNL Platform]，以協助推動即時個人化。 傳送至串流擷取API的所有資料都會自動儲存在[!DNL Data Lake]中。
+透過串流擷取，使用者可在數秒內將設定檔記錄和[!DNL ExperienceEvents]串流到[!DNL Experience Platform]，以協助推動即時個人化。 傳送至串流擷取API的所有資料都會自動儲存在[!DNL Data Lake]中。
 
 如需詳細資訊，請參閱[建立串流連線指南](../tutorials/create-streaming-connection.md)。
 

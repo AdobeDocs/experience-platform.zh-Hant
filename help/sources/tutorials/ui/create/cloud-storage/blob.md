@@ -1,23 +1,23 @@
 ---
 title: 在使用者介面中建立Azure Blob Source連線
-description: 瞭解如何使用Platform使用者介面建立Azure Blob來源聯結器。
+description: 瞭解如何使用Experience Platform使用者介面建立Azure Blob來源聯結器。
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '819'
 ht-degree: 2%
 
 ---
 
 # 在使用者介面中建立[!DNL Azure Blob]來源連線
 
-本教學課程提供使用Platform使用者介面建立[!DNL Azure Blob] （以下稱為「[!DNL Blob]」）來源連線的步驟。
+本教學課程提供使用Experience Platform使用者介面建立[!DNL Azure Blob] （以下稱為「[!DNL Blob]」）來源連線的步驟。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：以Experience Platform組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：在Experience Platform中組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -42,7 +42,7 @@ Experience Platform支援從外部儲存擷取下列檔案格式：
 
 | 認證 | 說明 |
 | --- | --- |
-| 連接字串 | 包含驗證[!DNL Blob]以Experience Platform所需的授權資訊的字串。 [!DNL Blob]連線字串模式為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 如需有關連線字串的詳細資訊，請參閱[設定連線字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)上的此[!DNL Blob]檔案。 |
+| 連接字串 | 字串，其中包含驗證[!DNL Blob]給Experience Platform所需的授權資訊。 [!DNL Blob]連線字串模式為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 如需有關連線字串的詳細資訊，請參閱[設定連線字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)上的此[!DNL Blob]檔案。 |
 
 >[!TAB SAS URI驗證]
 
@@ -54,11 +54,11 @@ Experience Platform支援從外部儲存擷取下列檔案格式：
 
 >[!ENDTABS]
 
-收集必要的認證後，您可以依照下列步驟將[!DNL Blob]儲存裝置連線至Experience Platform
+收集必要的認證後，您可以依照下列步驟，將[!DNL Blob]儲存空間連線至Experience Platform
 
 ## 連線您的[!DNL Blob]帳戶
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋列來尋找您要使用的特定來源。
 
@@ -108,4 +108,4 @@ Experience Platform支援從外部儲存擷取下列檔案格式：
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Blob]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，以將雲端儲存空間中的資料帶入Platform](../../dataflow/batch/cloud-storage.md)。
+依照本教學課程中的指示，您已建立與[!DNL Blob]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將您的雲端儲存空間中的資料匯入Experience Platform](../../dataflow/batch/cloud-storage.md)。

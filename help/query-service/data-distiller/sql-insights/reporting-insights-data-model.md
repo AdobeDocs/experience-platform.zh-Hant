@@ -2,9 +2,9 @@
 title: Query Accelerated Store Reporting Insights指南
 description: 瞭解如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -13,31 +13,31 @@ ht-degree: 0%
 
 查詢加速存放區可讓您減少從資料獲得重要深入分析所需的時間和處理能力。 一般會定期（例如，每小時或每天）處理資料，並在此期間建立和報告彙總檢視。 分析這些從彙總資料產生的報表會得出旨在改善業務績效的見解。 query accelerated store提供快取服務、並行、互動式體驗和無狀態API。 不過，它假設資料已針對彙總查詢進行預處理和最佳化，而不是針對原始資料查詢。
 
-查詢加速存放區可讓您建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型。 然後，您就可以與互動，或將您的報表深入解析內嵌至您選擇的報表/視覺效果架構中。 請參閱Real-time Customer Data Platform前瞻分析資料模型檔案，瞭解如何[自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報告](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)。
+查詢加速存放區可讓您建立自訂資料模型及/或擴充現有的Adobe Real-Time Customer Data Platform資料模型。 然後，您就可以與互動，或將您的報表深入解析內嵌至您選擇的報表/視覺效果架構中。 請參閱Real-Time Customer Data Platform前瞻分析資料模型檔案，瞭解如何[自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報告](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)。
 
-Adobe Experience Platform的Real-Time CDP資料模型提供設定檔、對象和目標的深入分析，並啟用Real-Time CDP深入分析控制面板。 本檔案將引導您完成建立報表見解資料模型的程式，同時也會說明如何視需要擴充Real-Time CDP資料模型。
+Adobe Experience Platform的Real-Time CDP資料模型提供設定檔、對象和目標的深入分析，並啟用Real-Time CDP insight控制面板。 本檔案將引導您完成建立報表見解資料模型的程式，同時也會說明如何視需要擴充Real-Time CDP資料模型。
 
 ## 先決條件
 
-本教學課程使用使用者定義儀表板，在Platform UI中以視覺效果呈現自訂資料模型中的資料。 若要深入瞭解此功能，請參閱[使用者定義儀表板檔案](../../../dashboards/standard-dashboards.md)。
+本教學課程使用使用者定義儀表板，在Experience Platform UI中以視覺效果呈現自訂資料模型中的資料。 若要深入瞭解此功能，請參閱[使用者定義儀表板檔案](../../../dashboards/standard-dashboards.md)。
 
 ## 快速入門
 
-您必須使用Data Distiller SKU來建立自訂資料模型，以利您的報表深入分析，並擴充內含豐富Platform資料的Real-Time CDP資料模型。 請參閱與資料Distiller SKU相關的[封裝](../../packaging.md)、[護欄](../../guardrails.md#query-accelerated-store)和[授權](../../data-distiller/license-usage.md)檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
+您必須使用Data Distiller SKU來建立自訂資料模型以供您的報表深入分析使用，以及擴充內含豐富Experience Platform資料的Real-Time CDP資料模型。 請參閱與資料Distiller SKU相關的[封裝](../../packaging.md)、[護欄](../../guardrails.md#query-accelerated-store)和[授權](../../data-distiller/license-usage.md)檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得詳細資訊。
 
 ## 建立報表見解資料模型
 
-本教學課程以建立對象分析資料模型為例。 如果您使用一或多個廣告商平台觸及您的對象，您可以使用廣告商的API來取得對象的大致相符計數。
+本教學課程以建立對象insight資料模型為例。 如果您使用一或多個廣告商平台觸及您的對象，您可以使用廣告商的API來取得對象的大致相符計數。
 
 首先，您會擁有來自您的來源的初始資料模型（可能來自您的廣告商平台API）。 若要以彙總方式檢視您的原始資料，請建立報表深入分析模型（如下圖所述）。 這可讓一個資料集取得相符對象的上下限。
 
-![對象分析使用者模型的實體關聯圖表(ERD)。](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
+![對象insight使用者模型的實體關聯圖表(ERD)。](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-在此範例中，`externalaudiencereach`資料表/資料集是以ID為基礎，並追蹤相符計數的上下限。 `externalaudiencemapping`維度表格/資料集將外部ID對應至Platform上的目的地和對象。
+在此範例中，`externalaudiencereach`資料表/資料集是以ID為基礎，並追蹤相符計數的上下限。 `externalaudiencemapping`維度表格/資料集將外部ID對應至Experience Platform上的目的地和對象。
 
 ## 使用Data Distiller建立報告深入分析的模型
 
-接下來，建立報告分析模型（在此範例中為`audienceinsight`），並使用SQL命令`ACCOUNT=acp_query_batch and TYPE=QSACCEL`來確保在加速存放區上建立它。 然後使用查詢服務為`audienceinsight`資料庫建立`audienceinsight.audiencemodel`結構描述。
+接下來，建立報告insight模型（在此範例中為`audienceinsight`），並使用SQL命令`ACCOUNT=acp_query_batch and TYPE=QSACCEL`來確保在加速存放區上建立它。 然後使用查詢服務為`audienceinsight`資料庫建立`audienceinsight.audiencemodel`結構描述。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ CREATE schema audienceinsight.audiencemodel;
 
 ## 建立表格、關係和填入資料
 
-現在您已建立`audienceinsight`報告深入分析模型，請建立`externalaudiencereach`和`externalaudiencemapping`資料表並建立它們之間的關係。 接下來，使用`ALTER TABLE`命令在資料表之間新增外部索引鍵條件約束並定義關聯性。 下列SQL範例示範如何執行此動作。
+現在您已建立`audienceinsight`報告insight模型，請建立`externalaudiencereach`和`externalaudiencemapping`資料表並建立它們之間的關係。 接下來，使用`ALTER TABLE`命令在資料表之間新增外部索引鍵條件約束並定義關聯性。 下列SQL範例示範如何執行此動作。
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -93,7 +93,7 @@ ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audien
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach   | true           | 1b941a6d-6214-4810-815c-81c497a0b636
 ```
 
-## 查詢報表分析資料模型
+## 查詢報表insight資料模型
 
 使用查詢服務來查詢`audiencemodel.externalaudiencereach`維度資料表。 以下是範例查詢。
 
@@ -131,7 +131,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 您可以使用其他詳細資料擴充您的對象模型，以建立更豐富的維度表格。 例如，您可以將對象名稱和目的地名稱對應到外部對象識別碼。 若要這麼做，請使用查詢服務建立或重新整理新資料集，並將其新增至對象模型，此模型會將對象和目的地與外部身分相結合。 下圖說明此資料模型擴充功能的概念。
 
-![連結Real-Time CDP分析資料模型和Query加速存放區模型的ERD圖表。](../../images/data-distiller/sql-insights/updatingAudienceInsightUserModel.png)
+![連結Real-Time CDP insight資料模型與查詢加速存放區模型的ERD圖表。](../../images/data-distiller/sql-insights/updatingAudienceInsightUserModel.png)
 
 ## 建立維度表格以擴充您的報表見解模型
 

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 3 月)
 description: Adobe Experience Platform 2023 年 3 月的發行說明。
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 99%
+source-wordcount: '2081'
+ht-degree: 97%
 
 ---
 
@@ -33,15 +33,15 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用者定義的儀表板 | 你現在可以&#x200B;**對屬性值進行取樣**，然後再於使用者定義的儀表板 Widget 撰寫器中將屬性新增到 Widget。建立 Widget 時，該屬性欄中的一些範例值可用於個別屬性。<br>您現在可以使用交換軸按鈕，在您的 Widget 上&#x200B;**將 X 軸和 Y 軸交換**。將屬性新增到您的 Widget 時，上述步驟可節省時間並提供更符合人體工學的體驗。這讓您無須再次從屬性面板同時找到兩種屬性。<br>您現在可以&#x200B;**變更 Widget 內圖例的位置和標題**。Widget 上顯示圖例後，您即可將該圖例重新放置在圖表周圍的任何位置，還可以將圖例標題重新命名，就像您可對座標軸標籤和 Widget 標題採取的動作一樣。 |
+| 使用者定義的儀表板 | 你現在可以&#x200B;**對屬性值進行取樣**，然後再於使用者定義的儀表板小工具撰寫器中將屬性新增到小工具。建立小工具時，該屬性欄中的一些範例值可用於個別屬性。<br>您現在可以使用交換軸按鈕，在您的小工具上&#x200B;**將 X 軸和 Y 軸交換**。將屬性新增到您的小工具時，上述步驟可節省時間並提供更符合人體工學的體驗。這讓您無須再次從屬性面板同時找到兩種屬性。<br>您現在可以&#x200B;**變更小工具內圖例的位置和標題**。小工具上顯示圖例後，您即可將該圖例重新放置在圖表周圍的任何位置，還可以將圖例標題重新命名，就像您可對座標軸標籤和小工具標題採取的動作一樣。 |
 
 {style="table-layout:auto"}
 
-如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂小工具，請先詳閱[儀表板概觀](../../dashboards/home.md)。
 
 ## 資料收集 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目標。
 
 **新功能或更新功能**
 
@@ -63,26 +63,26 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | --- | --- |
-| Adobe Analytics 資料的篩選功能正式推出 | 您現在可以使用「資料準備」功能套用規則和條件對 Analytics 資料進行篩選，然後再將其擷取至即時客戶設定檔中。如需詳細資訊，請至「[篩選用於設定檔擷取的 Analytics 資料](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile)」詳閱指南。 |
+| Adobe Analytics 資料的篩選功能正式推出 | 您現在可以使用「資料準備」功能套用規則和條件對 Analytics 資料進行篩選，然後再將其擷取至即時客戶輪廓中。如需詳細資訊，請至「[篩選用於輪廓擷取的 Analytics 資料](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile)」詳閱指南。 |
 | 用於對 URL 字串進行編碼和解碼的新函數 | <ul><li>此 `get_url_encoded` 函數會將 URL 作為輸入，並使用 ASCII 字元取代特殊字元或對其進行編碼。</li><li>此 `get_url_decoded` 函數會將 URL 作為輸入，並將 ASCII 字元解碼成特殊字元。</li></ul> 如需詳細資訊，請詳閱[「資料準備」功能指南](../../data-prep/functions.md)。如需保留字元及其相對應編碼字元的完整清單，請至「[特殊字元](../../data-prep/functions.md#special-characters)」詳閱指南。 |
 
 如需有關「資料準備」的詳細資訊，請詳閱[「資料準備」概觀](../../data-prep/home.md)。
 
-## 目的地 {#destinations}
+## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
-**新目的地** {#new-destinations}
+**新目標** {#new-destinations}
 
-| 目的地 | 說明 |
+| 目標 | 說明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Commerce]  連線正式推出](../../destinations/catalog/personalization/adobe-commerce.md) | 此 [!DNL Adobe Commerce] 目的地連接器 (現已正式推出) 可讓您選取一個或多個 Real-Time CDP 對象，以啟動您的 [!DNL Adobe Commerce] 帳戶，為您的購物者提供動態的個人化體驗。 |
+| [[!DNL Adobe Commerce]  連線正式推出](../../destinations/catalog/personalization/adobe-commerce.md) | 此 [!DNL Adobe Commerce] 目的地連接器 (現已正式推出) 可讓您選取一個或多個 Real-Time CDP 客群，以啟動您的 [!DNL Adobe Commerce] 帳戶，為您的購物者提供動態的個人化體驗。 |
 | [[!DNL Snap Inc] 連線正式推出](../../destinations/catalog/advertising/snap-inc.md) | 此 [!DNL Snap Inc] 目的地連接器 (現已正式推出) 讓行銷人員能夠將在 Experience Platform 中建立的使用者區段匯入到 [!DNL Snapchat Ads]，並將其用於投放廣告的目標。 |
 | [(API) Oracle Eloqua 連線](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | 以 API 為基礎連線至 [!DNL Oracle Eloqua]，以規劃和執行行銷活動，同時為在 [!DNL Oracle Eloqua] 中的潛在客戶實現個人化的客戶體驗。 |
-| [(Beta)  [!DNL Amazon Ads]  連線](../../destinations/catalog/advertising/amazon-ads.md) | [!DNL Amazon Ads] 和 Adobe Experience Platform 的整合提供了現成可用的整合給 [!DNL Amazon Ads] 產品，包括 [!DNL Amazon DSP (ADSP)]。在 Adob&#x200B;&#x200B;e Experience Platform 中使用 [!DNL Amazon Ads] 目的地，使用者即可定義廣告商對象，以便在 [!DNL Amazon DSP] 上進行目標定位和啟動。 |
+| [(Beta)  [!DNL Amazon Ads]  連線](../../destinations/catalog/advertising/amazon-ads.md) | [!DNL Amazon Ads] 和 Adobe Experience Platform 的整合提供了現成可用的整合給 [!DNL Amazon Ads] 產品，包括 [!DNL Amazon DSP (ADSP)]。在 Adob&#x200B;&#x200B;e Experience Platform 中使用 [!DNL Amazon Ads] 目的地，使用者即可定義廣告商客群，以便在 [!DNL Amazon DSP] 上進行目標定位和啟動。 |
 | [[!DNL Marketo Measure Ultimate] 連線](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (之前稱為 Bizible) 可協助行銷人員深入了解哪些行銷手法最能有效提升公司營收並取得最大的投資報酬率。該目的地支援從 Adob&#x200B;&#x200B;e Experience Platform 至 [!DNL Marketo Measure] 的企業對企業 (B2B) 資料流。卡片僅適用於 [!DNL Marketo Measure Ultimate] 客戶。 |
-| [TikTok 連線](../../destinations/catalog/social/tiktok.md) | 使用您的資料在 TikTok 上建置自訂對象，以設定您的廣告行銷活動的目標定位。 |
-| [Zendesk 連線](../../destinations/catalog/crm/zendesk.md) | 使用此目的地建立和更新區段內的身分，以作為 [!DNL Zendesk] 內的聯絡人。 |
+| [TikTok 連線](../../destinations/catalog/social/tiktok.md) | 使用您的資料在 TikTok 上建置自訂客群，以設定您的廣告行銷活動的目標定位。 |
+| [Zendesk 連線](../../destinations/catalog/crm/zendesk.md) | 使用此目的地建立和更新區段內的身分識別，以作為 [!DNL Zendesk] 內的聯絡人。 |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 目的地的新存取控制權限：[[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | 新的權限讓使用者能夠將區段啟動至現有的目的地，而無需顯示[對應步驟](../../destinations/ui/activate-batch-profile-destinations.md#mapping)。使用者在啟動工作流程中可以新增和移除區段，但無法新增或移除已對應的屬性或身分。 |
+| 目的地的新存取控制權限：[[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | 新的權限讓使用者能夠將區段啟動至現有的目的地，而無需顯示[對應步驟](../../destinations/ui/activate-batch-profile-destinations.md#mapping)。使用者在啟動工作流程中可以新增和移除區段，但無法新增或移除已對應的屬性或身分識別。 |
 
 {style="table-layout:auto"}
 
@@ -105,13 +105,13 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| CSV 到綱要推薦 | 您現在可以上傳本機檔案，無須手動建立綱要即可建立機器學習生成式綱要。從[!UICONTROL 來源]工作區上傳範例 CSV 檔案，Adobe 機器學習演算法即會根據目標欄位為您建議綱要。如需詳細資訊，請參閱此[文件](../../ingestion/tutorials/map-csv/recommendations.md)。 |
+| CSV 到結構描述推薦 | 您現在可以上傳本機檔案，無須手動建立結構描述即可建立機器學習生成式結構描述。從[!UICONTROL 來源]工作區上傳範例 CSV 檔案，Adobe 機器學習演算法即會根據目標欄位為您建議結構描述。如需詳細資訊，請參閱此[文件](../../ingestion/tutorials/map-csv/recommendations.md)。 |
 
 {style="table-layout:auto"}
 
@@ -119,13 +119,13 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 類別 | [[!UICONTROL 選件項目]](https://github.com/adobe/xdm/pull/1678/files) | 代表選件的類別。 |
+| 類別 | [[!UICONTROL 產品建議項目]](https://github.com/adobe/xdm/pull/1678/files) | 代表產品建議的類別。 |
 | 類別 | [[!UICONTROL 決策項目]](https://github.com/adobe/xdm/pull/1678/files) | 可以進行決策的項目。決策流程的輸出會是一個或多個決策項目。 |
 | 類別 | [[!UICONTROL 媒體工作階段伺服器逾時]](https://github.com/adobe/xdm/pull/1676/files) | 這表示使用者最後一次已知互動和工作階段關閉那一刻之間經過的時間量 (秒數)。 |
-| 欄位群組 | [[!UICONTROL XDM 設定檔計算屬性]](https://github.com/adobe/xdm/pull/1686/files) | 這會將內部 Adob&#x200B;&#x200B;e 服務的計算屬性新增到傳入的客戶資料中。客戶不應使用它來擷取資料。 |
+| 欄位群組 | [[!UICONTROL XDM 輪廓計算屬性]](https://github.com/adobe/xdm/pull/1686/files) | 這會將內部 Adob&#x200B;&#x200B;e 服務的計算屬性新增到傳入的客戶資料中。客戶不應使用它來擷取資料。 |
 | 資料類型 | [[!UICONTROL 退款項目]](https://github.com/adobe/xdm/pull/1685/files) | 這會表示退款是否和訂單有關聯，並定義退款類型、金額和相關貨幣。 |
 | 資料類型 | [[!UICONTROL 類別資料]](https://github.com/adobe/xdm/pull/1677/files) | 此新的資料類型代表產品的類別。 |
-| 綱要 | [[!UICONTROL Adobe Target 分類欄位]](https://github.com/adobe/xdm/pull/1682/files) | 建立 Target 分類資料集的新 XDM 綱要。這會包含一組對 Target 活動和體驗進行分類的中繼資料欄位。 |
+| 結構描述 | [[!UICONTROL Adobe Target 分類欄位]](https://github.com/adobe/xdm/pull/1682/files) | 建立 Target 分類資料集的新 XDM 結構描述。這會包含一組對 Target 活動和體驗進行分類的中繼資料欄位。 |
 
 {style="table-layout:auto"}
 
@@ -147,17 +147,17 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-如需有關 Platform 中 XDM 的詳細資訊，請閱讀 [XDM 系統概觀](../../xdm/home.md)。
+如需Experience Platform中XDM的詳細資訊，請閱讀[XDM系統總覽](../../xdm/home.md)。
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入任何資料湖的資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或擷取至即時客戶設定檔。
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入任何資料湖的資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或擷取至即時客戶輪廓。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 加速存放區的屬性型存取控制 | 將屬性型存取控制和 Data Distiller 搭配使用，以定義對加速存放區中所有資料集的存取控制。這會控制對於由使用者所建立並儲存在加速存放區中的自訂資料模式的存取權，以支援自訂儀表板。 |
+| 加速存放區的屬性型存取控制 | 將屬性型存取控制和資料蒸餾器搭配使用，以定義對加速存放區中所有資料集的存取控制。這會控制對於由使用者所建立並儲存在加速存放區中的自訂資料模式的存取權，以支援自訂儀表板。 |
 
 {style="table-layout:auto"}
 
@@ -165,13 +165,13 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 ## Real-Time Customer Data Platform B2B 版本 {#b2b}
 
-在 Real-Time Customer Data Platform (Real-Time CDP) 上建置的 Real-Time CDP B2B 版本是專為採用企業對企業服務模式操作的行銷人員所建置的。它將來自多個來源的資料集中在一起，並將其合併成包含人員和帳戶設定檔的單一檢視。這種統一的資料讓行銷人員可以精確地以特定對象為目標，並在所有可用的管道中和這些對象互動。
+在 Real-Time Customer Data Platform (Real-Time CDP) 上建置的 Real-Time CDP B2B 版本是專為採用企業對企業服務模式操作的行銷人員所建置的。它將來自多個來源的資料集中在一起，並將其合併成包含人員和帳戶輪廓的單一檢視。這種統一的資料讓行銷人員可以精確地以特定客群為目標，並在所有可用的管道中和這些客群互動。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 錯誤修正 | 為了更準確地表示系統中的設定檔，系統不再將內部設定檔包含在 Real-Time Customer Data Platform B2B 版本的設定檔總計數或可定址對象量度中。從今天開始，您可能會看到在設定檔總計數/可定址對象量度中出現一次性下降。您沒有任何資料遭到清除，這單純是計數變更。如果您有任何疑慮，請和您的 Adob&#x200B;&#x200B;e 專員聯絡 |
+| 錯誤修正 | 為了更準確地表示系統中的輪廓，系統不再將內部輪廓包含在 Real-Time Customer Data Platform B2B 版本的輪廓總計數或可定址客群量度中。從今天開始，您可能會看到在輪廓總計數/可定址客群量度中出現一次性下降。您沒有任何資料遭到清除，這單純是計數變更。如果您有任何疑慮，請和您的 Adob&#x200B;&#x200B;e 專員聯絡 |
 
 {style="table-layout:auto"}
 
@@ -179,13 +179,13 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 設定檔量度 | 為了向您更準確地表示設定檔量度，我們將會籍劃分和流失量度合併，而且現在會在 24 小時期間計算。如需詳細資訊，請參閱[分段 UI 指南](../../segmentation/ui/overview.md#browse) |
+| 輪廓量度 | 為了向您更準確地表示輪廓量度，我們將會籍劃分和流失量度合併，而且現在會在 24 小時期間計算。如需詳細資訊，請參閱[分段 UI 指南](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 ## 來源 {#sources}
 
-Adobe Experience Platform 可從外部來源擷取資料，並讓您使用 Platform 服務建構、標示和強化該資料。您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
+Adobe Experience Platform可從外部來源擷取資料，並允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
 Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 

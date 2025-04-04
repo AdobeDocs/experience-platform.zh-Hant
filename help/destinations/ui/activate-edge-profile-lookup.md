@@ -3,9 +3,9 @@ title: 即時查詢邊緣設定檔屬性
 description: 瞭解如何使用自訂Personalization目的地和Edge Network API即時查詢邊緣設定檔屬性
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1907'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform使用[即時客戶個人檔案](../../profile/home.md)
 
 ## 術語和先決條件 {#prerequisites}
 
-設定本頁面所述的使用案例時，將使用下列Platform元件：
+設定本頁面所述的使用案例時，您將使用下列Experience Platform元件：
 
 * [資料串流](../../datastreams/overview.md)：資料串流會接收來自Web SDK的傳入事件資料，並以邊緣設定檔資料回應。
 * [合併原則](../../segmentation/ui/segment-builder.md#merge-policies)：您將建立[!UICONTROL Edge上的Active-On]合併原則，以確保邊緣設定檔使用正確的設定檔資料。
@@ -54,7 +54,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![顯示資料流設定畫面的Platform UI影像。](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+  ![顯示資料流設定畫面的Experience Platform UI影像。](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## 步驟2：設定您的對象以進行邊緣評估 {#audience-edge-evaluation}
@@ -110,7 +110,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
    您可以根據對象的來源，從多種對象型別中進行選取：
 
    * **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-   * **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/overview.md#import-audience)的檔案。
+   * **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Experience Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/overview.md#import-audience)的檔案。
    * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
      ![選取啟用工作流程的對象步驟，並反白數個對象。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -137,7 +137,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 +++同意原則評估
 
-如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個輪廓。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
 
 **資料使用原則檢查**
 

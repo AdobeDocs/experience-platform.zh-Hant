@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2119'
 ht-degree: 1%
 
 ---
@@ -25,14 +25,14 @@ ht-degree: 1%
 
 您可以針對各種使用案例使用此動作型別，例如：
 
-1. **轉譯mboxHTML選件**。 透過&#x200B;**[!UICONTROL 傳送事件]**&#x200B;動作之範圍或介面明確要求的主張不會自動轉譯。 您可以使用&#x200B;**[!UICONTROL 套用主張]**&#x200B;動作型別，透過指定主張中繼資料來告知Web SDK要在哪裡演算它們。
+1. **呈現mbox HTML選件**。 透過&#x200B;**[!UICONTROL 傳送事件]**&#x200B;動作之範圍或介面明確要求的主張不會自動轉譯。 您可以使用&#x200B;**[!UICONTROL 套用主張]**&#x200B;動作型別，透過指定主張中繼資料，來告知Web SDK在何處演算這些主張。
 2. **在單頁應用程式上呈現檢視的選件**。 呈現檢視變更事件時，如果分析資料尚未準備就緒，您可以使用&#x200B;**[!UICONTROL 套用主張]**&#x200B;動作來呈現頁面頂端的檢視主張。 如需詳細資訊，請參閱[頁面事件的頂端和底部（第二個頁面檢視 — 選項2）](../../../../web-sdk/use-cases/top-bottom-page-events.md)。 若要使用此專案，請在表單中輸入&#x200B;**[!UICONTROL 檢視名稱]**。
 3. **重新呈現建議**。 當您的網站使用React等架構重新呈現內容時，您可能需要重新套用個人化。 在這種情況下，您可以使用&#x200B;**[!UICONTROL 套用主張]**&#x200B;動作型別來執行此操作。
 
 此動作型別不會針對演算後的主張傳送顯示事件。 它會追蹤已轉譯的主張，以便將其包含在後續&#x200B;**[!UICONTROL 傳送事件]**&#x200B;呼叫中。
 
 
-![顯示[套用主張]動作型別的Platform Tags UI。](assets/apply-propositions.png)
+![顯示「套用主張」動作型別的Experience Platform Tags UI。](assets/apply-propositions.png)
 
 此動作型別支援下列欄位：
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ## 套用回應 {#apply-response}
 
-當您要根據Edge Network的回應執行各種動作時，請使用&#x200B;**[!UICONTROL 套用回應]**&#x200B;動作型別。 此動作型別通常用於混合式部署，其中伺服器會對Edge Network發出初始呼叫，然後此動作型別會從該呼叫取得回應，並在瀏覽器中初始化Web SDK。
+當您要根據Edge Network的回應執行各種動作時，請使用&#x200B;**[!UICONTROL 套用回應]**&#x200B;動作型別。 此動作型別通常用於混合部署，其中伺服器會對Edge Network發出初始呼叫，然後此動作型別會從該呼叫取得回應，並在瀏覽器中初始化Web SDK。
 
 使用此動作型別可減少混合個人化使用案例的使用者端載入時間。
 
@@ -54,7 +54,7 @@ ht-degree: 1%
 此動作型別支援下列組態選項：
 
 * **[!UICONTROL 執行個體]**：選取您正在使用的Web SDK執行個體。
-* **[!UICONTROL 回應標頭]**：選取資料元素，此資料元素會傳回包含標頭索引鍵和從Edge Network伺服器呼叫傳回之值的物件。
+* **[!UICONTROL 回應標頭]**：選取資料元素，此資料元素會傳回包含Edge Network伺服器呼叫傳回之標頭索引鍵和值的物件。
 * **[!UICONTROL 回應內文]**：選取資料元素，此資料元素會傳回包含Edge Network回應所提供JSON裝載的物件。
 * **[!UICONTROL 呈現視覺化個人化決定]**：啟用此選項以自動呈現Edge Network所提供的個人化內容，並預先隱藏內容以防止閃爍。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 此動作用於取得舊版Media Analytics API。 設定動作並提供物件名稱時，系統會匯出舊版Media Analytics API至該視窗物件。 如果未提供，則會像目前的Media JS程式庫一樣將其匯出至`window.Media`。
 
-![顯示[取得Media Analytics追蹤器]動作型別的Platform UI影像。](assets/get-media-analytics-tracker.png)
+![Experience Platform UI影像顯示「取得Media Analytics追蹤器」動作型別。](assets/get-media-analytics-tracker.png)
 
 ## 使用身分重新導向 {#redirect-with-identity}
 
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 ## 傳送事件 {#send-event}
 
-傳送事件給Experience Platform，讓Platform可以收集您傳送的資料，並對該資訊採取行動。 您想要傳送的任何資料可在&#x200B;**[!UICONTROL XDM資料]**&#x200B;欄位中傳送。 使用符合[!DNL XDM]結構描述結構的[!DNL JSON]物件。 可以在您的頁面上或透過&#x200B;**[!UICONTROL 自訂程式碼]** **[!UICONTROL 資料元素]**&#x200B;建立此物件。
+傳送事件至Experience Platform，讓Experience Platform可以收集您傳送的資料，並對該資訊採取行動。 您想要傳送的任何資料可在&#x200B;**[!UICONTROL XDM資料]**&#x200B;欄位中傳送。 使用符合[!DNL XDM]結構描述結構的[!DNL JSON]物件。 可以在您的頁面上或透過&#x200B;**[!UICONTROL 自訂程式碼]** **[!UICONTROL 資料元素]**&#x200B;建立此物件。
 
 **[!UICONTROL 傳送事件]**&#x200B;動作型別支援下列欄位和設定。 這些欄位都是選用欄位。
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 使用&#x200B;**[!UICONTROL Instance]**&#x200B;選取器來選擇要設定的Web SDK執行個體。 如果您只有一個例項，則會預先選取它。
 
-![顯示[傳送事件]動作型別之執行個體設定的Platform Tags UI影像。](assets/instance-settings.png)
+![Experience Platform Tags UI影像顯示[傳送事件]動作型別的執行個體設定。](assets/instance-settings.png)
 
 * **[!UICONTROL 執行個體]**：選取您要設定的Web SDK執行個體。 如果您只有一個例項，則會預先選取它。
 * **[!UICONTROL 使用引導式事件]**：啟用此選項可自動填寫或隱藏特定欄位，以啟用特定使用案例。 啟用此選項會觸發下列設定的顯示。
@@ -108,7 +108,7 @@ ht-degree: 1%
 
 ### 資料 {#data}
 
-![顯示[傳送事件]動作型別的[資料元素]設定的Platform Tags UI影像。](assets/data.png)
+![Experience Platform Tags UI影像顯示「傳送事件」動作型別的資料元素設定。](assets/data.png)
 
 * **[!UICONTROL 型別]**：此欄位可讓您指定將記錄在XDM結構描述中的事件型別。 如需詳細資訊，請參閱`sendEvent`命令中的[`type`](/help/web-sdk/commands/sendevent/type.md)。
 * **[!UICONTROL XDM]**：
@@ -119,7 +119,7 @@ ht-degree: 1%
 
 ### 個人化 {#personalization}
 
-![顯示「傳送事件」動作型別Personalization設定的Platform Tags UI影像。](assets/personalization-settings.png)
+![Experience Platform Tags UI影像顯示「傳送事件」動作型別的Personalization設定。](assets/personalization-settings.png)
 
 * **[!UICONTROL 範圍]**：選取您想要明確要求個人化要求的範圍(Adobe Target [!DNL mboxes])。 您可以手動輸入範圍，或提供資料元素來輸入範圍。
 * **[!UICONTROL 介面]**：設定網頁上可用於個人化的網頁介面。 如需詳細資訊，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)。
@@ -140,11 +140,11 @@ ht-degree: 1%
 
 傳送媒體事件至Adobe Experience Platform和/或Adobe Analytics。 當您追蹤網站上的媒體事件時，此動作很有用。 選取執行個體（如果有多個執行個體）。 此動作需要代表追蹤媒體工作階段唯一識別碼的`playerId`。 啟動媒體工作階段時，也需要&#x200B;**[!UICONTROL 體驗品質]**&#x200B;和`playhead`資料元素。
 
-![顯示傳送媒體事件畫面的Platform UI影像。](assets/send-media-event.png)
+![Experience Platform UI影像顯示傳送媒體事件畫面。](assets/send-media-event.png)
 
 **[!UICONTROL 傳送媒體事件]**&#x200B;動作型別支援下列屬性：
 
-* **[!UICONTROL Instance]**：正在使用的Web SDK執行個體。
+* **[!UICONTROL 執行個體]**：正在使用的Web SDK執行個體。
 * **[!UICONTROL 媒體事件型別]**：要追蹤的媒體事件型別。
 * **[!UICONTROL 播放器識別碼]**：媒體工作階段唯一識別碼。
 * **[!UICONTROL 播放點]**：媒體播放的目前位置（以秒為單位）。
@@ -159,7 +159,7 @@ ht-degree: 1%
 
 ## 設定同意 {#set-consent}
 
-在您收到使用者的同意後，必須使用「設定同意」動作型別，將此同意傳達Adobe Experience Platform Web SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。請參閱[支援客戶同意偏好設定](../../../../web-sdk/commands/setconsent.md)。 使用Adobe版本2.0時，僅支援資料元素值。 您將需要建立可解析為同意物件的資料元素。
+在您收到使用者的同意後，必須使用「設定同意」動作型別，將此同意傳達Adobe Experience Platform Web SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。請參閱[支援客戶同意偏好設定](../../../../web-sdk/commands/setconsent.md)。 使用Adobe 2.0版時，僅支援資料元素值。 您將需要建立可解析為同意物件的資料元素。
 
 在此動作中，系統也會提供選填欄位，供您加入身分對應，以便在收到同意後同步身分資料。 同意設為「擱置中」或「退出」時，同步會很有用，因為同意呼叫可能是第一個要觸發的呼叫。
 

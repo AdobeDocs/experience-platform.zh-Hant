@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 假名設定檔資料有效期
 description: 本檔案提供在Adobe Experience Platform中設定假名設定檔資料到期日的一般指引。
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1068'
 ht-degree: 6%
 
 ---
 
-# 匿名輪廓資料期限
+# 匿名設定檔資料期限
 
 在Adobe Experience Platform中，您可以設定假名設定檔的資料到期時間，好讓您將資料從設定檔存放區中自動移除，這些資料對您的使用案例而言不再有效或實用。
 
@@ -37,7 +37,7 @@ ht-degree: 6%
 
 ## 存取 {#access}
 
-無法透過Platform UI或API設定假名設定檔資料的有效期。 反之，您必須聯絡支援才能啟用此功能。 聯絡支援時，請包含下列資訊：
+無法透過Experience Platform UI或API設定假名設定檔資料的有效期。 反之，您必須聯絡支援才能啟用此功能。 聯絡支援時，請包含下列資訊：
 
 - 要考慮用於假名設定檔刪除的身分名稱空間。
    - 例如： `ECID`僅限，`AAID`僅限，或`ECID`與`AAID`的組合。
@@ -75,11 +75,11 @@ Experience Event資料到期日僅&#x200B;**僅**&#x200B;會移除事件，且&#
 
 您應該根據保留已知客戶資料的需求，一律&#x200B;**在資料集中**&#x200B;設定體驗事件資料的有效期。 設定體驗事件資料到期後，您可以使用假名設定檔資料到期來自動移除假名設定檔。 一般而言，假名設定檔的資料到期日小於體驗事件的資料到期日。
 
-對於典型使用案例，您可以根據已知使用者資料的值來設定體驗事件資料有效期，也可以將假名設定檔資料有效期設定為更短的持續時間，以限制假名設定檔對您的Platform授權合規性的影響。
+對於典型使用案例，您可以根據已知使用者資料的值設定體驗事件資料有效期，也可以將假名設定檔資料有效期的設定設為更短的持續時間，以限制假名設定檔對您的Experience Platform授權合規性的影響。
 
 ### 哪些使用者應該使用假名設定檔資料的有效期？
 
-- 如果您使用網頁SDK直接傳送資料給Platform。
+- 如果您使用Web SDK直接將資料傳送至Experience Platform。
 - 如果您的網站同時為未驗證的客戶提供服務。
 - 如果您在資料集中有大量設定檔計數，而且您已確認這種過多的設定檔計數是因為匿名Cookie型身分名稱空間。
    - 若要判斷這點，您應使用身分名稱空間重疊報表。 預覽範例狀態API指南的[身分重疊報告區段](./api/preview-sample-status.md#identity-overlap-report)中可以找到有關此報告的詳細資訊。

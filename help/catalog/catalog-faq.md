@@ -2,16 +2,17 @@
 keywords: 目錄服務；問題；常見問題；faq；資料集常見問題
 title: 常見問題
 description: 關於Adobe Experience Platform目錄服務和資料集的最常見問題解答。
-source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
+exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
 # 常見問題 {#faq}
 
-本檔案提供有關Adobe Experience Platform目錄服務和資料集的常見問題解答。 有關其他Platform服務的問題和疑難排解，包括所有Platform API遇到的問題，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform目錄服務和資料集的常見問題解答。 有關其他Experience Platform服務的問題和疑難排解，包括所有Experience Platform API遇到的問題，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
 ## 保留原則和規則 {#retention-policies-and-rules}
 
@@ -37,7 +38,7 @@ ht-degree: 1%
 
 +++回答
 
-系統會每週評估及處理資料集過期時間，刪除過期的所有記錄。 如果事件已擷取至Platform超過30天（擷取日期> 30天），且其事件日期超過定義的保留期，則會視為已過期。
+系統會每週評估及處理資料集過期時間，刪除過期的所有記錄。 如果事件已擷取至Experience Platform超過30天（擷取日期> 30天），且其事件日期超過定義的保留期，則會視為已過期。
 
 +++
 
@@ -45,7 +46,7 @@ ht-degree: 1%
 
 +++回答
 
-設定保留原則後，如果現有事件的事件時間戳記超過保留期間，便會立即從Platform中刪除現有事件。 一旦新事件的時間戳記超過保留期間，就會刪除這些事件。
+設定保留原則後，如果現有事件的事件時間戳記超過保留期間，則會立即從Experience Platform中刪除現有事件。 一旦新事件的時間戳記超過保留期間，就會刪除這些事件。
 
 例如，如果您在5月15日套用30天到期原則，便會發生下列情況：
 
@@ -82,4 +83,3 @@ ht-degree: 1%
 否，一旦套用保留原則，任何超過保留期的資料都會永久刪除且無法復原。
 
 +++
-

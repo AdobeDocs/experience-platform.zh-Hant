@@ -1,16 +1,16 @@
 ---
-title: 使用UI連線您的RainFocus帳戶以Experience Platform
-description: 瞭解如何使用UI將RainFocus帳戶連結至Experience Platform。
+title: 使用UI將您的RainFocus帳戶連結至Experience Platform
+description: 瞭解如何使用UI將您的RainFocus帳戶連結至Experience Platform。
 badge: Beta
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
 
-# 使用UI連線您的[!DNL RainFocus]帳戶以Experience Platform
+# 使用使用者介面將您的[!DNL RainFocus]帳戶連線至Experience Platform
 
 >[!NOTE]
 >
@@ -26,14 +26,14 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
 ### 先決條件
 
-您必須先完成下列先決條件作業，才能將[!DNL RainFocus]帳戶連線到Experience Platform：
+您必須先完成下列先決條件作業，才能將[!DNL RainFocus]帳戶連線至Experience Platform：
 
 * [收集必要的認證](../../../../connectors/analytics/rainfocus.md#gather-required-credentials)
 * [建立XDM結構描述並定義身分欄位](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
@@ -43,17 +43,17 @@ ht-degree: 1%
 
 ## 將您的RainFocus帳戶連結至Experience Platform
 
-在Platform UI中，從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取來源工作區。 *[!UICONTROL 目錄]*&#x200B;畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取來源工作區。 *[!UICONTROL 目錄]*&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在&#x200B;*[!UICONTROL Analytics]*&#x200B;類別下，選取&#x200B;**[!UICONTROL RainFocus體驗]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
-![已選取RainFocus來源的Experience PlatformUI上的來源目錄。](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![已選取RainFocus來源的Experience Platform UI上的來源目錄。](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## 選取資料
 
-「選取資料」步驟隨即顯示，為您提供一個介面，讓您選取要帶入Experience Platform的資料。
+「選取資料」步驟隨即顯示，提供介面讓您選取要帶入Experience Platform的資料。
 
 * 介面的左側是瀏覽器，可讓您檢視帳戶內的可用資料流；
 * 介面的右側部分可讓您預覽JSON檔案中最多100列的資料。
@@ -88,7 +88,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 ![來源工作流程的對應步驟。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-mappings.png)
 
-## 檢閱
+## 審核
 
 **檢閱**&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
 
@@ -101,7 +101,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 ## 取得您的串流端點URL {#get-your-streaming-endpoint-url}
 
-建立串流資料流後，您現在可以擷取串流端點URL。 此端點將用於訂閱您的webhook，允許您的串流來源與Experience Platform通訊。
+建立串流資料流後，您現在可以擷取串流端點URL。 此端點將用於訂閱您的webhook，讓您的串流來源能夠與Experience Platform通訊。
 
 若要擷取您的串流端點，請移至您剛建立之資料流的&#x200B;*[!UICONTROL 資料流活動]*&#x200B;頁面，並從&#x200B;*[!UICONTROL 屬性]*&#x200B;面板底部複製端點。
 
@@ -117,7 +117,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立您[!DNL RainFocus]來源的連線，可讓您串流事件管理和分析資料以Experience Platform。
+依照此教學課程中的指示，您已建立您[!DNL RainFocus]來源的連線，可讓您將事件管理及分析資料串流至Experience Platform。
 
 ## 其他資源
 

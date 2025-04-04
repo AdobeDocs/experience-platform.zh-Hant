@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；監視器帳戶；監視
 description: Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供從來源工作區監控串流資料流的步驟。
 title: 在UI中監視串流來源的資料流
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
-source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1041'
 ht-degree: 10%
 
 ---
@@ -18,14 +18,14 @@ ht-degree: 10%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [資料流](../../../dataflows/home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
+* [資料流](../../../dataflows/home.md)：資料流可呈現跨Experience Platform行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
    * [資料流執行](../../notifications.md)：資料流執行是根據所選資料流的頻率設定所排程的週期性工作。
-* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 監控串流來源的資料流
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 若要檢視串流來源的現有資料流，請從頂端標題選取&#x200B;**[!UICONTROL 資料流]**。
 
@@ -45,7 +45,7 @@ ht-degree: 10%
 | 成功 | `Success`狀態表示對應資料流執行的所有記錄都在一小時期間內處理，且在資料流執行期間沒有發生錯誤。 |
 | 正在處理 | `Processing`狀態表示資料流尚未啟用。 此狀態通常會在建立新資料流後立即發生。 |
 | 錯誤 | `Error`狀態表示資料流程的啟用程式已中斷。 |
-| 沒有回合 | `No runs`狀態表示已建立資料流，但未啟動任何資料流執行。 |
+| 無執行 | `No runs`狀態表示已建立資料流，但未啟動任何資料流執行。 |
 
 [!UICONTROL 資料流活動]頁面會顯示串流資料流的特定資訊。 頂端橫幅包含您所選取日期範圍內所有串流資料流執行的累計擷取記錄和失敗記錄數。
 

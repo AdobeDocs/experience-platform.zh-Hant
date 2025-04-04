@@ -3,9 +3,9 @@ keywords: Experience Platform；查詢服務；查詢服務；巢狀資料結構
 title: 平面化巢狀資料結構以用於BI工具
 description: 本檔案說明如何將工作階段期間的所有表格和檢視的XDM結構描述平面化為搭配查詢服務使用協力廠商BI工具。
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 0%
 
 * [XDM系統](../../xdm/home.md)： XDM及其在Experience Platform中實作的高層級概觀。
 
-   * [建立臨機操作結構描述](../../xdm/tutorials/ad-hoc.md)： XDM結構描述具有僅供單一資料集使用的名稱空間的欄位，稱為臨機操作結構描述。 臨時結構用於各種資料擷取工作流程中，以進行Experience Platform和建立特定型別的來源連線。
+   * [建立臨機操作結構描述](../../xdm/tutorials/ad-hoc.md)： XDM結構描述具有僅供單一資料集使用的名稱空間的欄位，稱為臨機操作結構描述。 臨時結構描述用於Experience Platform的各種資料擷取工作流程，並用於建立特定型別的來源連線。
 
-* [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 * [巢狀資料結構](./nested-data-structures.md)：本檔案提供如何建立、處理或轉換包含複雜資料型別（包括巢狀資料結構）的資料集範例。
 

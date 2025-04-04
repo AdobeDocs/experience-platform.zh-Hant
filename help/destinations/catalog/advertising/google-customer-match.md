@@ -3,7 +3,7 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物和Gmail）聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 38c1020a7e7ff556ed16963239a30bf906ff79e7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 2%
@@ -60,8 +60,8 @@ Experience Platform中的某些目的地對於傳送到目的地平台或從目�
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取此目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取此目標身分。 |
-| phone_sha256_e.164 | E164格式的電話號碼，使用SHA256演演算法雜湊 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| phone_sha256_e.164 | E164格式的電話號碼，使用SHA256演演算法雜湊 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | user_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 
 {style="table-layout:auto"}
@@ -110,8 +110,8 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 在[!DNL Google Customer Match]中啟用電話號碼的方法有兩種：
 
-* **擷取原始電話號碼**：您可以將[!DNL E.164]格式的原始電話號碼擷取至[!DNL Platform]，這些電話號碼在啟用時自動雜湊。 如果選擇此選項，請務必將原始電話號碼擷取到`Phone_E.164`名稱空間。
-* **擷取雜湊電話號碼**：您可以在擷取至[!DNL Platform]之前預先雜湊電話號碼。 如果選擇此選項，請務必將雜湊電話號碼擷取到`PHONE_SHA256_E.164`名稱空間。
+* **擷取原始電話號碼**：您可以將[!DNL E.164]格式的原始電話號碼擷取至[!DNL Experience Platform]，這些電話號碼在啟用時自動雜湊。 如果選擇此選項，請務必將原始電話號碼擷取到`Phone_E.164`名稱空間。
+* **擷取雜湊電話號碼**：您可以在擷取至[!DNL Experience Platform]之前預先雜湊電話號碼。 如果選擇此選項，請務必將雜湊電話號碼擷取到`PHONE_SHA256_E.164`名稱空間。
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 ### 電子郵件雜湊需求 {#hashing-requirements}
 
-您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Platform]個電子郵件地址雜湊。
+您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
 
 如需Google雜湊需求和其他啟用限制的詳細資訊，請參閱Google檔案中的下列章節：
 
@@ -137,9 +137,9 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 在使用`User_ID`名稱空間將資料傳送至Google之前，請確定您使用[!DNL gTag]同步處理自己的識別碼。 如需詳細資訊，請參閱[Google正式檔案](https://support.google.com/google-ads/answer/9199250)。
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
 <!-- ## Configure destination - video walkthrough {#video}
@@ -202,9 +202,9 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 選取來源欄位：
 
 * 如果您使用的電子郵件地址未進行雜湊處理，請選取`Email`名稱空間作為來源身分。
-* 如果您根據[!DNL Google Customer Match] [電子郵件雜湊需求](#hashing-requirements)將資料擷取的客戶電子郵件地址雜湊至[!DNL Platform]，請選取`Email_LC_SHA256`名稱空間作為來源身分。
-* 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`名稱空間作為來源身分。 [!DNL Platform]將雜湊電話號碼以符合[!DNL Google Customer Match]要求。
-* 如果您根據[!DNL Facebook] [電話號碼雜湊需求](#phone-number-hashing-requirements)，將資料擷取中的電話號碼雜湊至[!DNL Platform]，請選取`Phone_SHA256_E.164`名稱空間作為來源身分。
+* 如果您根據[!DNL Google Customer Match] [電子郵件雜湊需求](#hashing-requirements)將資料擷取的客戶電子郵件地址雜湊至[!DNL Experience Platform]，請選取`Email_LC_SHA256`名稱空間作為來源身分。
+* 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`名稱空間作為來源身分。 [!DNL Experience Platform]將雜湊電話號碼以符合[!DNL Google Customer Match]要求。
+* 如果您根據[!DNL Facebook] [電話號碼雜湊需求](#phone-number-hashing-requirements)，將資料擷取中的電話號碼雜湊至[!DNL Experience Platform]，請選取`Phone_SHA256_E.164`名稱空間作為來源身分。
 * 如果您的資料包含[!DNL Apple]個裝置識別碼，請選取`IDFA`名稱空間作為來源識別碼。
 * 如果您的資料包含[!DNL Android]個裝置識別碼，請選取`GAID`名稱空間作為來源識別碼。
 * 如果您的資料包含其他型別的識別碼，請選取`Custom`名稱空間作為來源識別碼。
@@ -218,9 +218,9 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ![啟動工作流程對應步驟中顯示的來源與目標欄位之間的身分對應。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
-來自未雜湊名稱空間的資料在啟用時由[!DNL Platform]自動雜湊。
+來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
 
-屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。
+屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
 
 ![套用啟用工作流程對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 

@@ -4,9 +4,9 @@ feature: Attribution AI
 title: 使用查詢服務分析歸因分數
 description: 瞭解如何使用Adobe Experience Platform查詢服務來分析Attribution AI分數。
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ## 存取查詢服務
 
-若要從Platform UI存取查詢服務，請在左側導覽中選取&#x200B;**[!UICONTROL 查詢]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤。 將載入您先前儲存的查詢清單。
+若要從Experience Platform UI存取查詢服務，請從左側導覽中選取&#x200B;**[!UICONTROL 查詢]**&#x200B;開始，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤。 將載入您先前儲存的查詢清單。
 
 ![查詢服務瀏覽](./images/aai-query/query_tab.png)
 
@@ -153,7 +153,7 @@ ht-degree: 0%
         conversionName, tp_count DESC
 ```
 
-### 分析產生範例
+### insight產生範例
 
 **依接觸點和轉換日期劃分的遞增單位（在轉換視窗內）**
 
@@ -305,7 +305,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> 在此範例中，除了`_tenantId`和`your_score_output_dataset`之外，您還需要取代`{COLUMN_NAME}`。 `COLUMN_NAME`變數可以使用在設定Attribution AI模型期間新增的選用傳遞資料行名稱（報表資料行）的值。 請檢閱您的評分輸出結構描述，以尋找完成此查詢所需的`{COLUMN_NAME}`值。
+> 在此範例中，除了`_tenantId`和`your_score_output_dataset`之外，您還需要取代`{COLUMN_NAME}`。 `COLUMN_NAME`變數可以使用在設定Attribution AI模型期間新增的選用傳遞欄名稱（報表欄）值。 請檢閱您的評分輸出結構描述，以尋找完成此查詢所需的`{COLUMN_NAME}`值。
 
 ```sql
 SELECT 

@@ -5,9 +5,9 @@ title: 建立Luma網頁結構描述和資料集
 type: Tutorial
 description: 本教學課程提供Luma示範傾向模型所需的必要條件和資產。
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### 建立Luma Web資料結構描述並擷取資料
 
-為了建立模型，Platform中必須有資料集，可用來對模型進行訓練和評分。 下列來自[Data Science Workspace課程](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)的影片教學課程，將逐步引導您建立Luma結構描述及擷取購買傾向模型使用的資料。
+為了建立模型，Experience Platform中必須有資料集，可用來對模型進行訓練和評分。 下列來自[Data Science Workspace課程](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)的影片教學課程，將逐步引導您建立Luma結構描述及擷取購買傾向模型使用的資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

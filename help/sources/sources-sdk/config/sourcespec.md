@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
-title: 設定自助式來源的來源規格（批次SDK）
-description: 本檔案提供使用自助式來源（批次SDK）所需準備的設定概觀。
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
+title: 設定自助服務來源的來源規格(批次SDK)
+description: 本檔案提供使用自助來源(批次SDK)所需準備的設定概述。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2090'
 ht-degree: 1%
 
 ---
 
-# 設定自助式來源的來源規格（批次SDK）
+# 設定自助式來源的來源規格(批次SDK)
 
 Source規格包含來源的特定資訊，包括與來源類別、測試版狀態和目錄圖示相關的屬性。 它們也包含有用的資訊，例如URL引數、內容、標題和排程。 Source規格也說明從基本連線建立來源連線所需引數的結構。 要建立來源連線，架構是必要的。
 
@@ -233,21 +233,21 @@ Source規格包含來源的特定資訊，包括與來源類別、測試版狀�
 | `sourceSpec.attributes.uiAttributes` | 顯示UI專屬來源的相關資訊。 |
 | `sourceSpec.attributes.uiAttributes.isBeta` | 一個布林值屬性，可指出來源是否需要來自客戶的更多意見回饋才能新增至其功能。 | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | 定義來源的類別。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | 定義在Platform UI中用於呈現來源的圖示。 | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | 定義在Experience Platform UI中用於呈現來源的圖示。 | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | 顯示來源的簡短說明。 |
-| `sourceSpec.attributes.uiAttributes.label` | 顯示用於在Platform UI中呈現來源的標籤。 |
+| `sourceSpec.attributes.uiAttributes.label` | 顯示用於在Experience Platform UI中呈現來源的標籤。 |
 | `sourceSpec.attributes.spec.properties.urlParams` | 包含有關URL資源路徑、方法和支援的查詢引數的資訊。 |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | 定義從何處擷取資料的來源路徑。 | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | 定義HTTP方法，用於向資源發出擷取資料的要求。 | `GET`、`POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | 定義支援的查詢引數，這些引數可用來在提出擷取資料的請求時附加來源URL。 **注意**：任何使用者提供的引數值都必須格式化為預留位置。 例如： `${USER_PARAMETER}`。 | `"queryParams" : {"key" : "value", "key1" : "value1"}`將會附加至來源URL做為： `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | 定義在擷取資料時，需要在HTTP請求中提供以來源URL的標頭。 | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | 此屬性可設定為透過POST要求傳送HTTP內文。 |
-| `sourceSpec.attributes.spec.properties.contentPath` | 定義包含需要擷取至Platform的專案清單的節點。 此屬性應遵循有效的JSON路徑語法，且必須指向特定陣列。 | 檢視[其他資源區段](#content-path)，以取得內容路徑中所包含資源的範例。 |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | 指向要擷取至Platform的集合記錄的路徑。 | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath` | 定義包含所需擷取至Experience Platform的專案清單的節點。 此屬性應遵循有效的JSON路徑語法，且必須指向特定陣列。 | 檢視[其他資源區段](#content-path)，以取得內容路徑中所包含資源的範例。 |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | 指向要擷取至Experience Platform的集合記錄的路徑。 | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | 此屬性可讓您從在內容路徑中識別的資源中，識別要排除以防止內嵌的特定專案。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | 此屬性可讓您明確指定要保留的個別屬性。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | 此屬性可讓您覆寫您在`contentPath`中指定的屬性名稱值。 | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | 此屬性可讓您平面化兩個陣列，並將資源資料轉換為Platform資源。 |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | 此屬性可讓您平面化兩個陣列，並將資源資料轉換為Experience Platform資源。 |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | 指向您要平面化的集合記錄的路徑。 | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | 此屬性可讓您從實體路徑中識別的資源，識別要排除以不擷取的特定專案。 | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | 此屬性可讓您明確指定要保留的個別屬性。 | `[total_items]` |
@@ -379,7 +379,7 @@ Source規格包含來源的特定資訊，包括與來源類別、測試版狀�
 
 ### 為您的來源設定不同的分頁型別 {#pagination}
 
-以下是自助來源（批次SDK）支援的其他分頁型別範例：
+以下是自助來源(批次SDK)支援的其他分頁型別範例：
 
 >[!BEGINTABS]
 
@@ -509,7 +509,7 @@ Source規格包含來源的特定資訊，包括與來源類別、測試版狀�
 
 >[!TAB 無]
 
-`NONE`分頁型別可用於不支援任何可用分頁型別的來源。 使用`NONE`分頁型別的來源在發出GET要求時，只會傳回所有可擷取的記錄。
+`NONE`分頁型別可用於不支援任何可用分頁型別的來源。 使用`NONE`分頁型別的來源，在發出GET請求時只會傳回所有可擷取的記錄。
 
 ```json
 "paginationParams": {
@@ -519,7 +519,7 @@ Source規格包含來源的特定資訊，包括與來源類別、測試版狀�
 
 >[!ENDTABS]
 
-### 自助式來源的進階排程（批次SDK）
+### 自助式來源的進階排程(批次SDK)
 
 使用進階排程來設定來源的增量與回填排程。 `incremental`屬性可讓您設定一個排程，其中您的來源只會擷取新的或修改的記錄，而`backfill`屬性則可讓您建立排程來擷取歷史資料。
 
@@ -556,7 +556,7 @@ Source規格包含來源的特定資訊，包括與來源類別、測試版狀�
 
 ### 新增自訂結構描述以定義來源的動態屬性
 
-您可以在您的`sourceSpec`中加入自訂結構描述，以定義來源所需的所有屬性，包括您可能需要的任何動態屬性。 您可以對[!DNL Flow Service] API的`/connectionSpecs`端點發出PUT要求，同時在連線規格的`sourceSpec`區段中提供自訂結構描述，以更新來源對應的連線規格。
+您可以在您的`sourceSpec`中加入自訂結構描述，以定義來源所需的所有屬性，包括您可能需要的任何動態屬性。 您可以對[!DNL Flow Service] API的`/connectionSpecs`端點發出PUT要求，同時在連線規格的`sourceSpec`區段中提供您的自訂結構描述，以更新來源的對應連線規格。
 
 以下是您可以新增至來源連線規格的自訂結構描述範例：
 
@@ -659,4 +659,4 @@ Source規格包含來源的特定資訊，包括與來源類別、測試版狀�
 
 ## 後續步驟
 
-填入您的來源規格後，您可以繼續設定您要整合至Platform之來源的探索規格。 如需詳細資訊，請參閱[設定瀏覽規格](./explorespec.md)上的檔案。
+填入您的來源規格後，您可以繼續設定您要整合至Experience Platform之來源的探索規格。 如需詳細資訊，請參閱[設定瀏覽規格](./explorespec.md)上的檔案。

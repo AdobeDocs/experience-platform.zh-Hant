@@ -2,9 +2,9 @@
 title: SQL深入分析
 description: 瞭解使用案例、基本功能，以及使用Data Distiller開發SQL深入分析儀表板的必要步驟。 探索Data Distiller中的SQL深入分析功能如何增強透明度，並取得不同維度（例如設定檔、受眾、行銷活動、歷程、權益和同意）的營運深入分析。
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 ## 先決條件
 
-本教學課程使用使用者定義儀表板，在Platform UI中以視覺效果呈現自訂資料模型中的資料。 若要深入瞭解此功能，請參閱[使用者定義控制面板檔案](../../../dashboards/standard-dashboards.md)。
+本教學課程使用使用者定義儀表板，在Experience Platform UI中以視覺效果呈現自訂資料模型中的資料。 若要深入瞭解此功能，請參閱[使用者定義控制面板檔案](../../../dashboards/standard-dashboards.md)。
 
 ## 快速入門
 
-您必須使用Data Distiller SKU來建立自訂資料模型，以利您的報表深入分析，並擴充內含豐富Platform資料的Real-Time CDP資料模型。 請參閱與資料Distiller SKU相關的[封裝](../../packaging.md)、[護欄](../../guardrails.md#query-accelerated-store)和[授權](../../data-distiller/license-usage.md)檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
+您必須使用Data Distiller SKU來建立自訂資料模型以供您的報表深入分析使用，以及擴充內含豐富Experience Platform資料的Real-Time CDP資料模型。 請參閱與資料Distiller SKU相關的[封裝](../../packaging.md)、[護欄](../../guardrails.md#query-accelerated-store)和[授權](../../data-distiller/license-usage.md)檔案。 如果您沒有Data Distiller SKU，請聯絡Adobe客戶服務代表以取得詳細資訊。
 
 ## SQL深入分析使用案例 {#use-cases}
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 **SQL深入分析解決方案：** Data Distiller允許包含自訂ML模型的[傾向分數](../../use-cases/propensity-score.md)，以方便在對象層級計算彙總分數。 然後可將此資料與標準KPI一起報告。
 
-### 對象擴展 {#audience-expansion}
+### 客群擴展 {#audience-expansion}
 
 **挑戰：**&#x200B;如何在受眾重疊報表中取得個人資料計數以外的專案，並取得其他人口統計資料或偏好設定來指導受眾擴張策略。
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 1. **儀表板製作：**&#x200B;啟用建立根據特定使用案例量身打造的自訂儀表板，提供更個人化且目標更明確的分析體驗。
 1. **彈性的SQL資料模型化：**&#x200B;使用通用的SQL資料模型化方法，讓使用者能夠順暢地結合併操控不同的資料集，增強適應性和分析深度。
 1. **加速儲存：**&#x200B;實作加速儲存機制，以透過SQL有效率地提供彙總的深入分析，確保簡化並快速存取有價值的資訊。
-1. **BI連線：**&#x200B;促進與熱門Business Intelligence(BI)工具(包括Power BI、Tableau、Looker和Apache Superset)的緊密整合。 此連線可確保與多種BI環境的相容性，讓使用者能夠靈活使用所選取的工具，進行深入分析和報告。
+1. **BI連線：**&#x200B;促進與熱門的Business Intelligence (BI)工具(包括Power BI、Tableau、Looker和Apache Superset)的緊密整合。 此連線可確保與多種BI環境的相容性，讓使用者能夠靈活使用所選取的工具，進行深入分析和報告。
 
 ![資料Distiller SQL Insights主要功能的視覺化表示法。](../../images/data-distiller/sql-insights/key-capabilities-of-customizable-insights.png)
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 1. **隨選查詢探索：**&#x200B;開始執行隨選`SELECT`查詢以探索資料湖上的原始資料。 這允許對實驗進行即時、探索性資料分析，並驗證未將查詢結果儲存在Data Lake中的資料。
 1. **批次查詢使用率：**&#x200B;使用批次查詢來[建立排定的工作](../../api/scheduled-queries.md#create-a-new-scheduled-query)，以產生見解彙總表格，確保資料處理的系統化和自動化方法。 批次查詢執行`INSERT TABLE AS SELECT`和`CREATE TABLE AS SELECT`查詢以清理、塑形、操縱和擴充資料。 這些查詢的結果會儲存在Data Lake中。
 1. **彙總見解載入：**&#x200B;將產生的彙總見解載入加速存放區，並使用SQL測試查詢，並確保資料擷取的正確性和效率。 若要瞭解如何[對加速存放區](../../api/accelerated-queries.md)進行無狀態查詢，請參閱檔案。
-1. **存取與整合：**&#x200B;透過與Adobe Experience Platform [使用者定義儀表板](../../../dashboards/standard-dashboards.md)或其他偏好的Business Intelligence(BI)工具整合，可順暢地存取加速存放區中儲存的深入分析。 這些與協力廠商使用者端的整合讓使用者獲得有凝聚力的直覺式體驗。
+1. **存取與整合：**&#x200B;透過與Adobe Experience Platform [使用者定義儀表板](../../../dashboards/standard-dashboards.md)或其他偏好的Business Intelligence (BI)工具整合，可順暢地存取加速存放區中儲存的深入分析。 這些與協力廠商使用者端的整合讓使用者獲得有凝聚力的直覺式體驗。
 
 ![說明資料Distiller中SQL深入分析四個步驟的資訊圖表。](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

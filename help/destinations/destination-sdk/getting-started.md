@@ -1,10 +1,10 @@
 ---
-description: 本頁說明如何驗證並開始使用Adobe Experience Platform Destination SDK。 其中包括如何取得Adobe I/O驗證認證、沙箱名稱和目的地編寫存取控制許可權的指示。
+description: 本頁面說明如何驗證及開始使用Adobe Experience Platform Destination SDK。 其中包括如何取得Adobe I/O驗證認證、沙箱名稱和目的地編寫存取控制許可權的指示。
 title: Destination SDK快速入門
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-本頁說明如何驗證並開始使用Adobe Experience Platform Destination SDK。 其中包括如何取得Adobe I/O驗證認證、沙箱名稱和目的地編寫存取控制許可權的指示。
+本頁面說明如何驗證及開始使用Adobe Experience Platform Destination SDK。 其中包括如何取得Adobe I/O驗證認證、沙箱名稱和目的地編寫存取控制許可權的指示。
 
 ## 術語 {#terminology}
 
-本指南使用平台專屬的概念，例如組織和沙箱。 請參閱[Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)，瞭解這些字詞的定義。 請參閱[Destination SDK字彙表](/help/destinations/destination-sdk/glossary.md)，以取得與此功能直接相關的辭彙。
+本指南使用Experience Platform專屬的概念，例如組織和沙箱。 請參閱[Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)，瞭解這些字詞的定義。 請參閱[Destination SDK字彙表](/help/destinations/destination-sdk/glossary.md)，以取得與此功能直接相關的辭彙。
 
 ## 取得必要的驗證認證 {#obtain-authentication-credentials}
 
@@ -48,15 +48,15 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 ## 目的地擁有權和沙箱 {#destination-ownership}
 
-Experience Platform中的所有資源都會隔離至特定的虛擬沙箱。 請求Destination SDK需要標頭，指定執行操作的沙箱名稱：
+Experience Platform中的所有資源都會隔離至特定的虛擬沙箱。 向Destination SDK發出的請求需要標頭，以指定進行作業的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Adobe Exchange團隊會提供您沙箱名稱，您必須在呼叫Destination SDKAPI端點時使用它。
+Adobe Exchange團隊會提供您沙箱名稱，您必須在呼叫Destination SDK API端點時使用它。
 
 ## 角色型存取控制(RBAC) {#rbac}
 
-若要使用[參考檔案](functionality/configuration-options.md)中說明的Destination SDKAPI端點，您需要&#x200B;**[!UICONTROL 目的地製作]**&#x200B;存取控制許可權。 與Adobe Exchange團隊合作，在[Adobe Admin Console](https://adminconsole.adobe.com/)中將此許可權指派給您。
+若要使用[參考檔案](functionality/configuration-options.md)中說明的Destination SDK API端點，您需要&#x200B;**[!UICONTROL 目的地製作]**&#x200B;存取控制許可權。 與Adobe Exchange團隊合作，在[Adobe Admin Console](https://adminconsole.adobe.com/)中將此許可權指派給您。
 
 ![目的地編寫許可權](./assets/destination-authoring-permission.png)
 
@@ -68,17 +68,17 @@ Adobe Exchange團隊會提供您沙箱名稱，您必須在呼叫Destination SDK
 
 ## 其他考量事項 {#additional-considerations}
 
-* 對於產品化/公用目的地，無論您對目的地設定所做的任何變更（建立或編輯目的地設定）都需要Adobe稽核和核准。 您的變更只有在檢閱完成後才會反映在您的目的地。 這不適用於只有您才能使用的私人目的地。
+* 針對產品化/公用目的地，無論您對目的地設定進行的任何變更（建立或編輯目的地設定）都需經過Adobe的檢閱和核准。 您的變更只有在檢閱完成後才會反映在您的目的地。 這不適用於只有您才能使用的私人目的地。
 * 只有屬於相同組織且具有沙箱存取許可權的使用者才能編輯目的地設定。
 
 ## 後續步驟 {#next-steps}
 
-依照本文的步驟操作，您已取得Adobe I/O的驗證認證、沙箱名稱和目的地編寫存取控制許可權。 接下來，您可以使用Destination SDK來設定目的地。
+依照本文的步驟操作，您已取得Adobe I/O的驗證認證、沙箱名稱和目的地編寫存取控制許可權。 接下來，您可以使用Destination SDK設定目的地。
 
 * 根據您的目的地型別，閱讀下列設定指南：
 
    * [使用Destination SDK設定串流目的地](guides/configure-destination-instructions.md)
-   * [使用Destination SDK來設定以檔案為基礎的目的地](guides/configure-file-based-destination-instructions.md)
+   * [使用Destination SDK設定以檔案為基礎的目的地](guides/configure-file-based-destination-instructions.md)
 
 * 如需所有作業，請參閱[Destination Authoring API檔案](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)。
-* 使用[Destination Authoring API Postman集合](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)，使用Destination SDKAPI端點設定您的目的地。 若要開始使用Postman，請參閱[匯入環境和集合的步驟](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)以及建立Postman環境的[影片指南](https://video.tv.adobe.com/v/28832)。
+* 使用[Destination Authoring API Postman集合](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)，使用Destination SDK API端點設定您的目的地。 若要開始使用Postman，請參閱[匯入環境和集合的步驟](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)以及建立Postman環境的[影片指南](https://video.tv.adobe.com/v/28832)。

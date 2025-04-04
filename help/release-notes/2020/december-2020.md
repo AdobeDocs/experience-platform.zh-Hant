@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 exl-id: 89d631f1-1b11-4a18-98e1-08e1d5bd8b0d
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 11%
+source-wordcount: '433'
+ht-degree: 12%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 **發行日期： 2020年12月9日**
 
-Adobe Experience Platform中的新功能：
+Adobe Experience Platform 的新功能：
 
 - [[!DNL Dataflows]](#dataflows)
 
@@ -27,7 +27,7 @@ Adobe Experience Platform 現有功能的更新：
 
 ## [!DNL Dataflows] {#dataflows}
 
-資料流能呈現資料處理作業在Platform上行動資料的情形。 這些資料流會在不同的服務間進行設定，有助於將資料從來源聯結器移至目標資料集、身分和設定檔服務以及目的地。
+資料流能呈現資料處理作業在Experience Platform上行動資料的情形。 這些資料流會在不同的服務間進行設定，有助於將資料從來源聯結器移至目標資料集、身分和設定檔服務以及目的地。
 
 **主要功能**
 
@@ -39,7 +39,7 @@ Adobe Experience Platform 現有功能的更新：
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-資料科學Workspace使用機器學習和人工智慧，從您的資料建立深入分析。 資料科學Workspace已整合至Adobe Experience Platform，可協助您在各個Adobe解決方案中使用您的內容和資料資產進行預測。
+資料科學Workspace使用機器學習和人工智慧，從您的資料建立深入分析。 資料科學Workspace已整合至Adobe Experience Platform，可協助您跨Adobe解決方案使用您的內容和資料資產進行預測。
 
 **主要功能**
 
@@ -51,9 +51,9 @@ Adobe Experience Platform 現有功能的更新：
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Platform]服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Experience Platform]服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 **主要功能**
 

@@ -4,16 +4,16 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3620'
-ht-degree: 9%
+source-wordcount: '3626'
+ht-degree: 10%
 
 ---
 
 # 在UI中監視目的地的資料流
 
-使用Experience Platform目錄中的各種目的地，從Platform啟用資料給無數外部合作夥伴。 Platform藉由提供資料流透明度，讓追蹤資料流向目的地的程式變得更輕鬆。
+使用Experience Platform目錄中的各種目的地，將資料從Experience Platform啟動至無數外部合作夥伴。 Experience Platform透過提供資料流透明度，讓您更輕鬆地追蹤資料流向目的地的流程。
 
 監視儀表板可讓您以視覺化方式呈現資料流程的歷程，包括資料啟用的目的地、您要檢視的資料型別、每次資料流程執行的匯出資料等等。
 
@@ -23,14 +23,14 @@ ht-degree: 9%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-- [資料流](../home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
+- [資料流](../home.md)：資料流可呈現跨Experience Platform行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
    - [資料流執行](../../sources/notifications.md)：資料流執行是根據所選資料流的頻率設定所排程的週期性工作。
-- [目的地](../../destinations/home.md)：目的地是預先建置的與常用應用程式的整合，可讓您順暢地從Platform啟用資料，以用於跨管道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例。
-- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+- [目的地](../../destinations/home.md)：目的地是預先建置的與常用應用程式的整合，可讓您順暢地從Experience Platform啟用資料，用於跨管道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例。
+- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 ## 監視目的地工作區中的資料流 {#monitor-dataflows-in-the-destinations-workspace}
 
-在Platform UI的&#x200B;**[!UICONTROL 目的地]**&#x200B;工作區中，導覽至&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，並選取您要檢視的目的地的名稱。
+在Experience Platform UI內的&#x200B;**[!UICONTROL 目的地]**&#x200B;工作區中，導覽至&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，並選取您要檢視的目的地的名稱。
 
 ![選取目的地連線反白顯示的目的地檢視](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -97,7 +97,7 @@ ht-degree: 9%
 
   >[!IMPORTANT]
   >
-  > 從2025年3月開始，Adobe將推出更新以提高串流目的地的報表準確性。 此增強功能可確保Experience Platform中的報告與目的地平台之間有更好的一致性。
+  > 自 2025 年 3 月開始，Adobe 推出更新以提高串流目標的報告準確性。此增強功能可確保Experience Platform中的報告與目的地平台之間有更好的一致性。
   >
   > 在此更新之前，**[!UICONTROL 身分失敗]**&#x200B;包含所有啟用重試。 在此更新後，只有上次啟用重試會包含在總計數中。
   > 
@@ -349,4 +349,4 @@ ht-degree: 9%
 
 ## 後續步驟 {#next-steps}
 
-依照本指南，您現在瞭解如何監控批次和串流目的地的資料流，包括所有相關資訊，例如處理時間、啟用率和狀態。 若要深入瞭解Platform中的資料流，請閱讀[資料流概觀](../home.md)。 若要深入瞭解目的地，請閱讀[目的地概觀](../../destinations/home.md)。
+依照本指南，您現在瞭解如何監控批次和串流目的地的資料流，包括所有相關資訊，例如處理時間、啟用率和狀態。 若要進一步瞭解Experience Platform中的資料流，請閱讀[資料流概觀](../home.md)。 若要深入瞭解目的地，請閱讀[目的地概觀](../../destinations/home.md)。

@@ -2,9 +2,9 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK建立對象範本的API呼叫範例。
 title: 建立對象範本
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '623'
 ht-degree: 3%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 3%
 >
 >**API端點**： `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-對於某些使用Destination SDK建立的目的地，您需要建立對象中繼資料設定，以程式設計方式在目的地建立、更新或刪除對象中繼資料。 此頁面顯示如何使用`/authoring/audience-templates` API端點來建立設定。
+對於使用Destination SDK建立的一些目的地，您需要建立對象中繼資料設定，以程式設計方式在目的地建立、更新或刪除對象中繼資料。 此頁面顯示如何使用`/authoring/audience-templates` API端點來建立設定。
 
 如需您可以透過此端點設定的功能的詳細說明，請參閱[對象中繼資料管理](../functionality/audience-metadata-management.md)。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 對象範本API操作快速入門 {#get-started}
 
@@ -256,7 +256,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | 屬性 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `name` | 字串 | 您目的地的對象中繼資料範本名稱。 此名稱將出現在Experience Platform使用者介面的任何合作夥伴特定錯誤訊息中。 |
+| `name` | 字串 | 您目的地的對象中繼資料範本名稱。 此名稱將出現在Experience Platform使用者介面中的任何合作夥伴特定錯誤訊息中。 |
 | `url` | 字串 | API的URL和端點，用於建立、更新、刪除或驗證您平台中的對象和/或資料流。 兩個產業範例是： `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments`和`https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`。 |
 | `httpMethod` | 字串 | 端點上使用的方法，以程式設計方式在您的目的地建立、更新、刪除或驗證對象。 例如： `POST`、`PUT`、`DELETE` |
 | `headers.header` | 字串 | 指定應新增至API呼叫的任何HTTP標頭。 例如, `"Content-Type"` |
@@ -281,8 +281,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 ## API錯誤處理
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道何時該使用對象範本，以及如何使用`/authoring/audience-templates` API端點設定對象範本。 閱讀[如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的過程中適合到什麼位置。
+閱讀本檔案後，您現在知道何時該使用對象範本，以及如何使用`/authoring/audience-templates` API端點設定對象範本。 閱讀[如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的程式中的位置。

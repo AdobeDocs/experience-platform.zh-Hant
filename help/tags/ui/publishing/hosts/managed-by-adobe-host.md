@@ -1,11 +1,11 @@
 ---
-title: Adobe管理主機概述
+title: Adobe代管主機概述
 description: 瞭解在Adobe Experience Platform中部署標籤程式庫組建時的預設託管選項。
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 52%
+source-wordcount: '1181'
+ht-degree: 55%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-Adobe管理主機是您在Adobe Experience Platform中部署標籤程式庫組建時的預設主機設定。 當您透過「資料收集」使用者介面建立新屬性時，系統會為您建立預設的Adobe管理主機。
+Adobe代管主機是您在Adobe Experience Platform中部署標籤程式庫組建時的預設主機設定。 當您透過「資料收集」使用者介面建立新屬性時，系統會為您建立預設的Adobe代管主機。
 
-藉由 Adobe 管理主機，程式庫組建會傳送至 Adobe 簽約合作的第三方內容傳遞網路 (CDN)。這些CDN的運作獨立於Adobe，因此即使Platform處於維護狀態或停止運作，您部署的程式碼仍可在您的網站和應用程式中正常運作。 Adobe 管理主機的內嵌程式碼會參照 CDN 上的主程式庫檔案，讓用戶端裝置可在執行階段擷取檔案。
+藉由 Adobe 管理主機，程式庫組建會傳送至 Adobe 簽約合作的第三方內容傳遞網路 (CDN)。這些CDN的運作獨立於Adobe，因此即使Experience Platform處於維護狀態或停止運作，您部署的程式碼仍可在您的網站和應用程式中正常運作。 Adobe 管理主機的內嵌程式碼會參照 CDN 上的主程式庫檔案，讓用戶端裝置可在執行階段擷取檔案。
 
-本文旨在概略介紹Platform中的Adobe管理主機，並說明在UI中建立新Adobe管理主機的相關步驟。
+本文旨在概略介紹Experience Platform中的Adobe代管主機，並說明在UI中建立新Adobe代管主機的相關步驟。
 
 ## Akamai
 
@@ -33,7 +33,7 @@ Adobe管理主機是您在Adobe Experience Platform中部署標籤程式庫組�
 
 >[!WARNING]
 >
->如果您的程式庫無法透過Akamai網路存取，則Platform無法防止因此而產生的任何錯誤。
+>如果您的程式庫無法透過Akamai網路存取，則Experience Platform無法防止因此而產生的任何錯誤。
 
 ## 程式庫組建快取
 
@@ -88,22 +88,22 @@ CDN的主要用途是以智慧化方式將內容發佈至地理位置上較接�
 
 快取控制標頭僅適用於主要程式庫組建。 主程式庫之下的子資源一律視為全新資源，因此不需在瀏覽器上加以快取。
 
-## 在UI中使用Adobe管理的託管
+## 在UI中使用Adobe代管託管
 
-您在Platform UI或資料收集UI中首次建立屬性時，系統會自動為您建立Adobe管理主機。 依預設，所有具有立即可用屬性的可用環境也會指派給Adobe管理主機。
+您在Experience Platform UI或資料收集UI中首次建立屬性時，系統會自動為您建立Adobe代管主機。 依預設，所有具有立即可用屬性的可用環境也會指派給Adobe管理主機。
 
 >[!NOTE]
 >
 >如果從所有環境取消指派預設的 Adobe 管理主機，則可刪除該主機。如果您想在執行此動作後切換回 Adobe 管理主機，可依下列步驟建立新主機:
 >
 >1. 選取您屬性上的&#x200B;**[!UICONTROL 主機]**&#x200B;索引標籤，然後選取&#x200B;**[!UICONTROL 新增主機]**。
->1. 提供主機的名稱，選取&#x200B;**[!UICONTROL Managed byAdobe]**&#x200B;作為主機型別，然後選取&#x200B;**[!UICONTROL 儲存]**。
+>1. 提供主機的名稱，選取&#x200B;**[!UICONTROL Managed by Adobe]**&#x200B;作為主機型別，然後選取&#x200B;**[!UICONTROL 儲存]**。
 >
 >接著，您就可以視需求將環境重新指派給 Adobe 管理主機。
 
 ## 後續步驟
 
-本文概述了Adobe Experience Platform中標籤程式庫的Adobe管理託管機制。 如需其他託管服務的相關資訊，請參閱下列文件：
+本文概述在Adobe Experience Platform中託管標籤程式庫的Adobe管理託管。 如需其他託管服務的相關資訊，請參閱下列文件：
 
 * [SFTP託管](./sftp-host.md)
 * [自行託管程式庫](./self-hosting-libraries.md)

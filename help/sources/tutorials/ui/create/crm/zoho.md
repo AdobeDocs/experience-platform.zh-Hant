@@ -5,9 +5,9 @@ title: 在使用者介面中建立Zoho CRM Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Zoho CRM來源連線。
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '553'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >[!DNL Zoho CRM]來源將於2025年6月底淘汰。
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源的CRM資料。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Zoho CRM]來源聯結器的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源的CRM資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面建立[!DNL Zoho CRM]來源聯結器的步驟。
 
 ## 快速入門
 
@@ -33,7 +33,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ### 收集必要的認證
 
-為了將[!DNL Zoho CRM]連線到Platform，您必須提供下列連線屬性的值：
+若要將[!DNL Zoho CRM]連線至Experience Platform，您必須提供下列連線屬性的值：
 
 | 認證 | 說明 |
 | --- | --- |
@@ -48,9 +48,9 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的[!DNL Zoho CRM]帳戶
 
-收集必要的認證後，您可以依照下列步驟將[!DNL Zoho CRM]帳戶連結至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟將[!DNL Zoho CRM]帳戶連結至[!DNL Experience Platform]。
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -78,4 +78,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Zoho CRM]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](../../dataflow/crm.md)。
+依照本教學課程中的指示，您已建立與[!DNL Zoho CRM]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/crm.md)。

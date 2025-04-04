@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；雲端儲存；雲端儲
 title: 使用流量服務API探索雲端儲存資料夾
 description: 本教學課程使用流量服務API來探索協力廠商雲端儲存系統。
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '695'
 ht-degree: 4%
 
 ---
@@ -22,18 +22,18 @@ ht-degree: 4%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../landing/api-guide.md)指南。
 
 ## 探索您的雲端儲存資料夾
 
-您可以在提供來源的基本連線ID的同時，向[!DNL Flow Service] API發出GET要求，以擷取有關雲端儲存資料夾結構的資訊。
+您可以在提供來源的基本連線ID時，對[!DNL Flow Service] API發出GET要求，以擷取有關雲端儲存資料夾結構的資訊。
 
-執行GET請求以探索您的雲端儲存空間時，您必須包括下表列出的查詢引數：
+執行GET請求以探索您的雲端儲存空間時，您必須包含下表所列的查詢引數：
 
 | 參數 | 說明 |
 | --------- | ----------- |
@@ -94,11 +94,11 @@ curl -X GET \
 ]
 ```
 
-## Inspect檔案的結構
+## 檢查檔案的結構
 
-若要從雲端儲存空間檢查資料檔案的結構，請在提供檔案路徑及型別作為查詢引數的同時，執行GET請求。
+若要從雲端儲存空間檢查資料檔案的結構，請在提供檔案路徑及型別作為查詢引數的同時，執行GET要求。
 
-您可以在提供檔案的路徑和型別的同時執行GET要求，從雲端儲存空間來源檢查資料檔案的結構。 您也可以檢查不同的檔案型別（例如CSV、TSV或壓縮的JSON）和分隔檔案，方法是將其檔案型別指定為查詢引數的一部分。
+您可以在提供檔案路徑和型別的同時，執行GET要求，從雲端儲存空間來源檢查資料檔案的結構。 您也可以檢查不同的檔案型別（例如CSV、TSV或壓縮的JSON）和分隔檔案，方法是將其檔案型別指定為查詢引數的一部分。
 
 **API格式**
 
@@ -168,4 +168,4 @@ curl -X GET \
 
 ## 後續步驟
 
-依照本教學課程，您已探索您的雲端儲存系統、找到您要帶入[!DNL Platform]的檔案路徑，並檢視其結構。 您可以在下個教學課程中使用此資訊，從您的雲端儲存空間[收集資料並將其帶入Platform](../collect/cloud-storage.md)。
+依照本教學課程，您已探索您的雲端儲存系統、找到您要帶入[!DNL Experience Platform]的檔案路徑，並檢視其結構。 您可以在下個教學課程中使用此資訊，從您的雲端儲存空間[收集資料，並將其帶入Experience Platform](../collect/cloud-storage.md)。

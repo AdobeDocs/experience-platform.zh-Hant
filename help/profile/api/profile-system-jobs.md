@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform可讓您從設定檔存放區中刪除資料集或批次，以移除不再需要或錯誤新增的即時客戶設定檔資料。 這需要使用設定檔API來建立設定檔系統作業或刪除請求。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->在Microsoft Azure和Amazon Web Services (AWS)上執行的Adobe Experience Platform實作有下列端點。 在AWS上執行的Experience Platform目前可供有限數量的客戶使用。 若要深入瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
+>在Microsoft Azure和Amazon Web Services (AWS)上執行的Adobe Experience Platform實作有下列端點。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
-Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強大的設定檔。 擷取到[!DNL Platform]的資料儲存在[!DNL Data Lake]中，如果已為設定檔啟用資料集，則該資料也會儲存在[!DNL Real-Time Customer Profile]資料存放區中。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用[!DNL Real-Time Customer Profile] API來建立[!DNL Profile]系統作業或「刪除請求」。
+Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強大的設定檔。 擷取到[!DNL Experience Platform]的資料儲存在[!DNL Data Lake]中，如果已為設定檔啟用資料集，則該資料也會儲存在[!DNL Real-Time Customer Profile]資料存放區中。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用[!DNL Real-Time Customer Profile] API來建立[!DNL Profile]系統作業或「刪除請求」。
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客�
 
 ## 快速入門
 
-本指南中使用的API端點是[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)的一部分。 繼續之前，請先檢閱[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)的一部分。 在繼續之前，請先檢閱[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ## 檢視刪除請求 {#view}
 
@@ -38,7 +38,7 @@ Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客�
 
 >[!AVAILABILITY]
 >
->在Microsoft Azure上使用Platform時，下列查詢引數僅&#x200B;**可用**。
+>在Microsoft Azure上使用Experience Platform時，下列查詢引數僅&#x200B;**可用**。
 >
 >在AWS上使用此端點時，前100個系統作業會根據其建立日期以降序傳回。
 
@@ -208,11 +208,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 ## 建立刪除請求 {#create-a-delete-request}
 
-透過POST要求至`/systems/jobs`端點來起始新的刪除要求，其中要刪除的資料集或批次識別碼會提供在要求內文中。
+初始化新的刪除請求是透過POST請求完成至`/systems/jobs`端點，其中要刪除的資料集或批次識別碼會提供在請求內文中。
 
 ### 刪除資料集和相關聯的設定檔資料
 
-為了從設定檔存放區中刪除資料集以及與資料集相關聯的所有設定檔資料，資料集ID必須包含在POST請求內文中。 此動作將會刪除指定資料集的所有資料。 [!DNL Experience Platform]可讓您根據記錄和時間序列結構描述來刪除資料集。
+若要從設定檔存放區中刪除資料集及與資料集相關聯的所有設定檔資料，必須在POST請求內文中包含資料集ID。 此動作將會刪除指定資料集的所有資料。 [!DNL Experience Platform]可讓您根據記錄和時間序列結構描述來刪除資料集。
 
 **API格式**
 
@@ -309,7 +309,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 系統產生的唯一刪除請求唯讀ID。 |
-| `dataSetId` | 資料集的ID，如POST請求中所指定。 |
+| `dataSetId` | 資料集的ID，如POST要求中所指定。 |
 
 +++
 
@@ -351,7 +351,7 @@ curl -X POST \
 
 ### 刪除批次
 
-為了刪除批次，批次ID必須包含在POST請求正文中。 請注意，您無法刪除以記錄結構描述為基礎的資料集批次。 只能刪除以時間序列結構描述為基礎的資料集批次。
+要刪除批次，批次ID必須包含在POST請求正文中。 請注意，您無法刪除以記錄結構描述為基礎的資料集批次。 只能刪除以時間序列結構描述為基礎的資料集批次。
 
 >[!NOTE]
 >
@@ -502,7 +502,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->在Microsoft Azure上使用Platform時，下列功能僅&#x200B;**可用**。
+>在Microsoft Azure上使用Experience Platform時，下列功能僅&#x200B;**可用**。
 
 如果您嘗試起始記錄資料集批次的刪除請求，您將會遇到400層級的錯誤，類似以下情況：
 
@@ -522,7 +522,7 @@ curl -X POST \
 
 ## 檢視特定的刪除請求 {#view-a-specific-delete-request}
 
-若要檢視特定的刪除要求，包括其狀態等詳細資訊，您可以對`/system/jobs`端點執行查詢(GET)要求，並在路徑中包含刪除要求的識別碼。
+若要檢視特定刪除請求，包括其狀態等詳細資訊，您可以對`/system/jobs`端點執行查詢(GET)請求，並在路徑中包含刪除請求的ID。
 
 **API格式**
 
@@ -656,7 +656,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >
 >此端點在Adobe Experience Platform的Azure執行個體中僅&#x200B;**支援**，而在AWS執行個體中則是&#x200B;**不支援**。
 
-[!DNL Experience Platform]可讓您刪除先前的請求，這可能對許多原因有用，包括刪除工作未完成或卡在處理階段中。 若要移除刪除請求，您可以對`/system/jobs`端點執行DELETE請求，並包含您要移除至請求路徑的刪除請求ID。
+[!DNL Experience Platform]可讓您刪除先前的請求，這可能對許多原因有用，包括刪除工作未完成或卡在處理階段中。 若要移除刪除請求，您可以對`/system/jobs`端點執行DELETE請求，並將您要移除之刪除請求的ID加入請求路徑。
 
 **API格式**
 
@@ -680,7 +680,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-4
 
 **回應**
 
-成功的刪除請求會傳回HTTP狀態200 （確定）和空白的回應內文。 您可以透過執行GET請求來確認請求已刪除，以按其ID檢視刪除請求。 這會傳回HTTP狀態404 （找不到），指出刪除請求已移除。
+成功的刪除請求會傳回HTTP狀態200 （確定）和空白的回應內文。 您可以透過執行GET請求來確認請求已刪除，以依據其ID檢視刪除請求。 這會傳回HTTP狀態404 （找不到），指出刪除請求已移除。
 
 ## 後續步驟
 

@@ -5,10 +5,10 @@ user-guide-title: Intelligent Services 說明
 breadcrumb-title: Intelligent Services 指南
 user-guide-description: 使用智慧型人工智慧服務，從行銷事件資料產生分數、探索見解並建立區段。
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 34%
+source-wordcount: '137'
+ht-degree: 37%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 34%
 
 - [Intelligent Services 概觀](home.md)
 - [準備資料以用於Intelligent Services](data-preparation.md)
-- Attribution AI{#attribution-ai}
+- Attribution AI {#attribution-ai}
    - [概觀](attribution-ai/overview.md)
    - [Attribution AI快速入門](attribution-ai/getting-started.md)
    - [輸入和輸出](attribution-ai/input-output.md)
@@ -28,7 +28,7 @@ ht-degree: 34%
       - [存取控制](attribution-ai/aai-data-governance/access-controls.md)
       - [稽核記錄](attribution-ai/aai-data-governance/audit-logs.md)
       - [客戶自控金鑰](attribution-ai/aai-data-governance/customer-managed-keys.md)
-      - [資料控管](attribution-ai/aai-data-governance/data-governance.md)
+      - [資料治理](attribution-ai/aai-data-governance/data-governance.md)
       - [治理原則](attribution-ai/aai-data-governance/governance-policies.md)
    - [使用查詢服務分析分數](attribution-ai/aai-query-service.md)
    - [錯誤疑難排解](attribution-ai/troubleshooting.md)
@@ -53,6 +53,6 @@ ht-degree: 34%
       - [存取控制](customer-ai/cai-data-governance/access-controls.md)
       - [稽核記錄](customer-ai/cai-data-governance/audit-logs.md)
       - [客戶自控金鑰](customer-ai/cai-data-governance/customer-managed-keys.md)
-      - [資料控管](customer-ai/cai-data-governance/data-governance.md)
+      - [資料治理](customer-ai/cai-data-governance/data-governance.md)
       - [治理原則](customer-ai/cai-data-governance/governance-policies.md)
-- [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+- [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure Blob Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Azure Blob連線至Adobe Experience Platform。
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Azure Blob聯結器
 
-Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入[!DNL Platform]。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線。 您可以將資料從這些系統帶入[!DNL Experience Platform]。
 
-雲端儲存空間來源可以將您自己的資料帶入[!DNL Platform]，而不需要下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合至來源工作流程。 [!DNL Platform]可讓您透過批次從[!DNL Azure Blob]匯入資料。
+雲端儲存空間來源可以將您自己的資料帶入[!DNL Experience Platform]，而不需要下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合至來源工作流程。 [!DNL Experience Platform]可讓您透過批次從[!DNL Azure Blob]匯入資料。
 
 ## IP位址允許清單
 
@@ -36,7 +36,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 - 不允許非法URL路徑字元。 類似`\uE000`的程式碼點雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的規則，請參閱[RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt)和[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
 - 不允許下列檔案名稱： LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)和兩個點字元(..)。
 
-## 將[!DNL Azure Blob]連線至[!DNL Platform]
+## 將[!DNL Azure Blob]連線至[!DNL Experience Platform]
 
 以下檔案提供如何使用API或使用者介面將Azure Blob連線至Adobe Experience Platform的資訊：
 

@@ -3,9 +3,9 @@ title: TikTok連線
 description: 使用您的資料在TikTok上建立自訂對象，以便透過廣告促銷活動進行目標定位。 這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1079'
 ht-degree: 3%
 
 ---
@@ -42,8 +42,8 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| 電話號碼 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform支援純文字和SHA256雜湊電話號碼，且必須採用E.164格式。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
-| 電子郵件 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| 電話號碼 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform支援純文字和SHA256雜湊電話號碼，且必須採用E.164格式。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| 電子郵件 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
 | 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
-| [!DNL Federated Audience Composition] | ✓ | 透過[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)匯入到Experience Platform中的對象。 |
+| [!DNL Federated Audience Composition] | ✓ | 透過[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/start/audiences)匯入到Experience Platform中的對象。 |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![目的地連線詳細資料](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "平台UI的影像，顯示要填寫的目的地連線詳細資料")
+![目的地連線詳細資料](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Experience Platform UI的影像，顯示要填寫的目的地連線詳細資料")
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
@@ -102,7 +102,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -123,7 +123,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 * 選取電子郵件名稱空間作為目標身分。
 
-![身分對應](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "平台UI的影像，身分對應")
+![身分對應](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Experience Platform UI的影像，身分對應")
 
 ## 匯出的資料 {#exported-data}
 

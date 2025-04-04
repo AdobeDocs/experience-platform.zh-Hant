@@ -2,9 +2,9 @@
 title: 驗證及存取Reactor API
 description: 瞭解如何開始使用Reactor API，包括產生所需存取憑證的步驟。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '912'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 ## 取得開發人員的Adobe Experience Platform存取權 {#gain-developer-access}
 
-您必須先擁有開發人員Experience Platform存取權，才能產生Reactor API的驗證值。 若要取得開發人員存取權，請依照[Experience Platform驗證教學課程](/help/landing/api-authentication.md)中的開始步驟操作。 完成[取得使用者存取權](/help/landing/api-authentication.md#gain-user-access)步驟後，請返回此教學課程，產生Reactor API的特定認證。
+您必須先擁有Experience Platform的開發人員存取權，才能產生Reactor API的驗證值。 若要取得開發人員存取權，請依照[Experience Platform驗證教學課程](/help/landing/api-authentication.md)中的開始步驟操作。 完成[取得使用者存取權](/help/landing/api-authentication.md#gain-user-access)步驟後，請返回此教學課程，產生Reactor API的特定認證。
 
 ## 產生存取認證 {#generate-access-credentials}
 
@@ -43,15 +43,15 @@ ht-degree: 3%
 
 ![](../images/api/getting-started/add-api-button.png)
 
-**新增API**&#x200B;畫面會出現。 選取&#x200B;**Experience Platform LaunchAPI**，再選取&#x200B;**下一步**。
+**新增API**&#x200B;畫面會出現。 選取&#x200B;**Experience Platform Launch API** （從可用API清單中），然後再選取&#x200B;**下一步**。
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-接著，選取驗證型別以產生存取權杖並存取Experience PlatformAPI。
+接著，選取驗證型別以產生存取權杖並存取Experience Platform API。
 
 >[!IMPORTANT]
 >
->選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**&#x200B;方法，因為這是日後唯一支援的方法。 **[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在[!BADGE 已棄用]一節中取得詳細資訊{type=negative}[在Platform API驗證教學課程中產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt)。
+>選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**&#x200B;方法，因為這是日後唯一支援的方法。 **[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將持續運作，Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在[!BADGE 已棄用]一節中取得詳細資訊{type=negative}[在Experience Platform API驗證教學課程中產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt)。
 
 選取&#x200B;**「下一步」**&#x200B;以繼續。
 
@@ -78,7 +78,7 @@ ht-degree: 3%
 
 ### 產生存取權杖 {#generate-access-token}
 
-下一步是產生`{ACCESS_TOKEN}`認證以用於Platform API呼叫。 不像`{API_KEY}`和`{ORG_ID}`的值，必須每24小時產生一次新Token，才能繼續使用Platform API。
+下一步是產生`{ACCESS_TOKEN}`認證以用於Experience Platform API呼叫。 不像`{API_KEY}`和`{ORG_ID}`的值，必須每24小時產生一次新Token，才能繼續使用Experience Platform API。
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ ht-degree: 3%
 
 #### 自動化權杖產生 {#auto-token}
 
-您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀Experience PlatformAPI驗證指南中有關[使用Postman驗證和測試API呼叫](/help/landing/api-authentication.md#use-postman)的章節。
+您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請參閱Experience Platform API驗證指南中有關[使用Postman驗證和測試API呼叫](/help/landing/api-authentication.md#use-postman)的章節。
 
 ## 測試API認證 {#test-api-credentials}
 
@@ -115,7 +115,7 @@ ht-degree: 3%
 
 ## 讀取範例 API 呼叫 {#read-sample-api-calls}
 
-每個端點指南都提供API呼叫範例，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Platform API快速入門手冊中[如何讀取範例API呼叫](../../landing/api-guide.md#sample-api)的相關章節。
+每個端點指南都提供API呼叫範例，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Experience Platform API快速入門手冊中[如何讀取範例API呼叫](../../landing/api-guide.md#sample-api)的相關章節。
 
 ## 後續步驟 {#next-steps}
 

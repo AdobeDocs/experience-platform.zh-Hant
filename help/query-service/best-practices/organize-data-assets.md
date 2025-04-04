@@ -2,9 +2,9 @@
 title: 查詢服務中資料資產組織的最佳實務
 description: 本檔案概述整理資料的邏輯方法，以方便使用查詢服務。
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 本檔案提供整理資料資產的最佳實務指引，包括搭配Adobe Experience Platform查詢服務使用的資料集、檢視和暫時表格。 其中涵蓋如何建構您的資料，以及如何存取、更新和刪除此資訊的資訊。
 
-隨著資料資產的成長，在Platform [!DNL Data Lake]內以邏輯方式組織這些資產非常重要。 Query Service可擴充SQL建構，讓您在邏輯上將資料資產分組在沙箱中。 這種組織方法允許在結構描述之間共用資料資產，而不需要實際移動它們。
+隨著資料資產的成長，在Experience Platform [!DNL Data Lake]中以邏輯方式組織這些資產非常重要。 Query Service可擴充SQL建構，讓您在邏輯上將資料資產分組在沙箱中。 這種組織方法允許在結構描述之間共用資料資產，而不需要實際移動它們。
 
 ## 快速入門
 

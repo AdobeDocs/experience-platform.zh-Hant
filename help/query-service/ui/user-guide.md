@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務所提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發目的，以及非互動式查詢來填入Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在[!DNL Experience Platform]使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢來填入[!DNL Experience Platform]中的資料集。
 
-如需有關查詢服務概念和功能的詳細資訊，請參閱[查詢服務總覽](../home.md)。 若要進一步瞭解如何在[!DNL Platform]上瀏覽查詢服務使用者介面，請參閱[查詢服務UI總覽](./overview.md)。
+如需有關查詢服務概念和功能的詳細資訊，請參閱[查詢服務總覽](../home.md)。 若要進一步瞭解如何在[!DNL Experience Platform]上瀏覽查詢服務使用者介面，請參閱[查詢服務UI總覽](./overview.md)。
 
 ## 快速入門 {#getting-started}
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->由於Platform UI可支援最多1000列，因此超過1000的LIMIT值會被忽略。
+>由於Experience Platform UI可支援最多1000列，因此若傳遞LIMIT值超過1000則會遭到忽略。
 
 ![結果計數下拉式清單反白顯示的查詢編輯器。](../images/ui/query-editor/result-count.png)
 
@@ -258,4 +258,4 @@ Query Service為跨產業和業務案例的各種使用案例提供解決方案�
 
 ## 後續步驟
 
-現在您已經知道查詢編輯器中有哪些功能可用，以及如何導覽應用程式，您可以開始直接在[!DNL Platform]中編寫您自己的查詢。 如需對[!DNL Data Lake]中的資料集執行SQL查詢的詳細資訊，請參閱[執行查詢](../best-practices/writing-queries.md)的指南。
+現在您已經知道查詢編輯器中有哪些功能可用，以及如何導覽應用程式，您可以開始直接在[!DNL Experience Platform]中編寫您自己的查詢。 如需對[!DNL Data Lake]中的資料集執行SQL查詢的詳細資訊，請參閱[執行查詢](../best-practices/writing-queries.md)的指南。

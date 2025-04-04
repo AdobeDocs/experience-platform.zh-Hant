@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 對應集概述
 description: 瞭解如何搭配Adobe Experience Platform資料準備使用對應集。
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 此概覽需要深入瞭解下列Adobe Experience Platform元件：
 
 - [資料準備](./home.md)：「資料準備」可讓資料工程師對應、轉換和驗證與Experience Data Model (XDM)之間的資料。
-- [資料流](../dataflows/home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
+- [資料流](../dataflows/home.md)：資料流可呈現跨Experience Platform行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
 - [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md)：傳送資料給[!DNL Experience Platform]的方法。
 - [[!DNL Experience Data Model (XDM) System]](../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 

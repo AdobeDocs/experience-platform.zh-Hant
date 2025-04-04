@@ -5,7 +5,7 @@ title: 將CSV檔案對應至現有的XDM結構描述
 type: Tutorial
 description: 本教學課程涵蓋如何使用Adobe Experience Platform使用者介面將CSV檔案對應至現有的XDM結構描述。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 1%
@@ -18,14 +18,14 @@ ht-degree: 1%
 >
 >本文介紹如何將CSV檔案對應至現有的XDM結構描述。 如需有關如何使用AI產生的結構描述建議工具（目前為測試版）的資訊，請參閱[使用機器學習建議對應CSV檔案](./recommendations.md)上的檔案。
 
-為了將CSV資料擷取到[!DNL Adobe Experience Platform]，資料必須對應到[!DNL Experience Data Model] (XDM)結構描述。 本教學課程涵蓋如何使用[!DNL Platform]使用者介面將CSV檔案對應到XDM結構描述。
+為了將CSV資料擷取到[!DNL Adobe Experience Platform]，資料必須對應到[!DNL Experience Data Model] (XDM)結構描述。 本教學課程涵蓋如何使用[!DNL Experience Platform]使用者介面將CSV檔案對應到XDM結構描述。
 
 ## 快速入門
 
-此教學課程需要您實際瞭解[!DNL Platform]的下列元件：
+此教學課程需要您實際瞭解[!DNL Experience Platform]的下列元件：
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
-- [批次擷取](../../batch-ingestion/overview.md)： [!DNL Platform]從使用者提供的資料檔擷取資料的方法。
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
+- [批次擷取](../../batch-ingestion/overview.md)： [!DNL Experience Platform]從使用者提供的資料檔擷取資料的方法。
 - [Adobe Experience Platform資料準備](../../batch-ingestion/overview.md)：功能套件，可讓您對應及轉換擷取的資料，以符合XDM結構描述。 有關[資料準備函式](../../../data-prep/functions.md)的檔案與結構描述對應特別相關。
 
 本教學課程也要求您已建立資料集以將CSV資料擷取到。 如需在UI中建立資料集的步驟，請參閱[資料擷取教學課程](../ingest-batch-data.md)。
@@ -64,7 +64,7 @@ ht-degree: 1%
 
 **[!UICONTROL 對應]**&#x200B;步驟出現。 CSV檔案的欄列在&#x200B;**[!UICONTROL Source欄位]**&#x200B;下，其對應的XDM結構描述欄位列在&#x200B;**[!UICONTROL 目標欄位]**&#x200B;下。
 
-[!DNL Platform]會根據您選取的目標結構描述或資料集，自動提供智慧型建議給自動對應的欄位。 您可以手動調整對應規則以符合您的使用案例。
+[!DNL Experience Platform]會根據您選取的目標結構描述或資料集，自動提供智慧型建議給自動對應的欄位。 您可以手動調整對應規則以符合您的使用案例。
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -120,7 +120,7 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功將一般CSV檔案對應至XDM結構描述，並將其擷取至[!DNL Platform]。 此資料現在可供下游[!DNL Platform]服務（例如[!DNL Real-Time Customer Profile]）使用。 如需詳細資訊，請參閱[[!DNL Real-Time Customer Profile]](../../../profile/home.md)的概觀。
+依照本教學課程中的指示，您已成功將一般CSV檔案對應至XDM結構描述，並將其擷取至[!DNL Experience Platform]。 此資料現在可供下游[!DNL Experience Platform]服務（例如[!DNL Real-Time Customer Profile]）使用。 如需詳細資訊，請參閱[[!DNL Real-Time Customer Profile]](../../../profile/home.md)的概觀。
 
 >[!TIP]
 >

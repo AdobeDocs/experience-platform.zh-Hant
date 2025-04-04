@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一；設定檔；rtcp；XDM圖形
+keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一的設定檔；統一的設定檔；統一的設定檔；rtcp；XDM圖形
 title: Experience Platform的自訂協助工具解決方案
 type: Documentation
 description: 進一步瞭解Adobe Experience Platform使用者介面中的自訂協助工具解決方案。
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform持續強化，以符合各類使用者的需求，並�
 
 Experience Platform使用者介面符合一般文字、圖形和UI元件所需的對比率。 使用者介面的顏色也經過選擇，可支援所有使用者的無障礙功能，包括視覺障礙的使用者。
 
-在Platform中，可使用指標點選或操作的UI元素也可以使用鍵盤來參與。 這包括左側導覽、視訊播放器、表格等。
+在中，可使用指標點選或操作的UI元素也可以使用鍵盤來參與。 這包括左側導覽、視訊播放器、表格等。
 
 Experience Platform致力於符合國際無障礙標準，包括網頁內容無障礙指引2.1 A級和AA級，以及網頁無障礙倡議 — 無障礙多樣化網際網路應用程式(WAI-ARIA)網頁標準。
 
@@ -41,13 +41,13 @@ Experience Platform UI中的左側導覽可使用鍵盤存取，並可在符合�
 
 ![已選取來源的Experience Platform左側導覽。](images/left-navigation-sources.png)
 
-Platform中的部分功能未針對所有使用者啟用。 這些專案會顯示在導覽中，但無法加以選取。 使用鍵盤導覽時，這些專案會在箭頭導覽期間略過，且無法使用&#x200B;**Enter (Return)**&#x200B;選取。
+Experience Platform中的部分功能未針對所有使用者啟用。 這些專案會顯示在導覽中，但無法加以選取。 使用鍵盤導覽時，這些專案會在箭頭導覽期間略過，且無法使用&#x200B;**Enter (Return)**&#x200B;選取。
 
 ![無法選取未針對使用者啟用的Experience Platform左側導覽區段。](images/left-navigation-sections-disabled.png)
 
 ## 內嵌視訊對話方塊
 
-在Experience Platform中，您可以使用鍵盤導覽來反白顯示並選取可用的視訊連結，以檢視視訊。 這會在Platform UI中開啟內嵌視訊對話方塊。
+在Experience Platform中，您可以使用鍵盤導覽來反白顯示並選取可用的視訊連結，以檢視視訊。 這會在Experience Platform UI中開啟內嵌視訊對話方塊。
 
 ![選取專案周圍出現藍色邊框，表示已套用焦點。](images/profile-overview-tab.png)
 
@@ -74,7 +74,7 @@ Platform中的部分功能未針對所有使用者啟用。 這些專案會顯�
 
 ## 檔案拖放
 
-在Experience Platform中，所有檔案選取拖放區域都可使用鍵盤存取。 使用&#x200B;**Tab**&#x200B;反白顯示&#x200B;**[!UICONTROL 選擇檔案]**，並使用&#x200B;**Enter或空格鍵**&#x200B;進行選取，會叫用作業系統的檔案選取UI。
+在Experience Platform中，所有檔案選取專案拖放區域都可使用鍵盤存取。 使用&#x200B;**Tab**&#x200B;反白顯示&#x200B;**[!UICONTROL 選擇檔案]**，並使用&#x200B;**Enter或空格鍵**&#x200B;進行選取，會叫用作業系統的檔案選取UI。
 
 上傳檔案後，可使用鍵盤導覽刪除圖示，以移除選取的檔案並上傳新檔案。 使用者可以使用&#x200B;**Tab**&#x200B;將焦點放在刪除圖示上，並使用&#x200B;**Enter或空白鍵**&#x200B;選取它。 移除檔案後，**[!UICONTROL 選擇檔案]**&#x200B;會自動成為焦點並可供選取。
 

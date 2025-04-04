@@ -4,9 +4,9 @@ title: 產生資料集重疊報表
 type: Tutorial
 description: 本教學課程概述使用即時客戶設定檔API產生資料集重疊報表的必要步驟。
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-若要使用Adobe Experience Platform API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，以收集所需標題的值。 若要深入瞭解Experience Platform API，請參閱[Platform API快速入門檔案](../../landing/api-guide.md)。
+若要使用Adobe Experience Platform API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，以收集所需標題的值。 若要深入瞭解Experience Platform API，請參閱[Experience Platform API快速入門檔案](../../landing/api-guide.md)。
 
 本教學課程中所有API呼叫的必要標題為：
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ## 使用命令列產生資料集重疊報表
 
-如果您熟悉使用命令列，則可以使用以下cURL請求，透過對`/previewsamplestatus/report/dataset/overlap`執行GET請求來產生資料集重疊報表。
+如果您熟悉使用命令列，則可透過對`/previewsamplestatus/report/dataset/overlap`執行GET請求，使用下列cURL請求來產生資料集重疊報表。
 
 **要求**
 
@@ -132,4 +132,4 @@ Postman是API開發的合作平台，對API呼叫的視覺化相當實用。 可
 
 ## 後續步驟
 
-完成本教學課程後，您現在可以使用即時客戶設定檔API產生資料集重疊報表。 若要進一步瞭解如何在API和Experience PlatformUI中使用設定檔資料，請先閱讀[設定檔概述檔案](../home.md)。
+完成本教學課程後，您現在可以使用即時客戶設定檔API產生資料集重疊報表。 若要進一步瞭解如何在API和Experience Platform UI中使用設定檔資料，請先閱讀[設定檔概述檔案](../home.md)。

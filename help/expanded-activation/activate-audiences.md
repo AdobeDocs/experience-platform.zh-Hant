@@ -1,17 +1,17 @@
 ---
 title: 透過延展的啟用來啟用Audience Manager對象
-description: 瞭解如何透過Audience Manager展開啟用，將Audience Manager對象啟用至社交和廣告目的地。
+description: 瞭解如何透過Audience Manager擴充式啟用，將Audience Manager對象啟用至社交和廣告目的地。
 exl-id: 4105f5c5-db69-414f-9ee4-8630b0a86da7
-source-git-commit: 2222e9fbf75f3082d331868f820247e0c0ce3ba2
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # 透過Audience Manager展開啟用來啟用對象
 
-此頁面說明您必須遵循的端對端工作流程，才能將對象從Audience Manager啟動至擴展啟動支援的目的地平台。
+此頁面說明從Audience Manager啟用對象至擴展啟用所支援之目的地平台必須遵循的端對端工作流程。
 
 ## 開始之前 {#before-you-begin}
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 按照如何[建立Audience Manager來源連線](../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的指南來設定您的來源聯結器。
 
-![顯示具有Audience Manager來源連線之[來源]索引標籤的Platform UI影像。](assets/sources-tab.png)
+![Experience Platform UI影像顯示[來源]索引標籤與Audience Manager來源連線。](assets/sources-tab.png)
 
 >[!TIP]
 >
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 若要檢視您的對象，請移至&#x200B;**[!UICONTROL 客戶]** -> **[!UICONTROL 對象]** -> **[!UICONTROL 瀏覽]**。
 
-![顯示[對象]頁面的Platform UI影像。](assets/audiences-browse.png)
+![顯示「對象」頁面的Experience Platform UI影像。](assets/audiences-browse.png)
 
 >[!IMPORTANT]
 >
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 [!DNL Expanded Activation]可用的目的地類別為[廣告](../destinations/catalog/advertising/overview.md)和[社交](../destinations/catalog/social/overview.md)。
 
-![平台UI影像顯示擴展啟用的目的地目錄。](assets/destination-catalog.png)
+![Experience Platform UI影像顯示擴展啟用的目的地目錄。](assets/destination-catalog.png)
 
 若要建立與目的地平台的新連線，請按照[上的指南來建立新的目的地連線](../destinations/ui/connect-destination.md)。 然後，移至[步驟3](#activate-audiences)。
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 在您成功[內嵌Audience Manager對象](#configure-source)及[建立新的目的地連線](#create-destination-connection)後，您現在可以將對象啟用至您選擇的目的地平台。
 
-![平台UI影像顯示擴展啟用的目的地目錄。](assets/activate-audiences.png)
+![Experience Platform UI影像顯示擴展啟用的目的地目錄。](assets/activate-audiences.png)
 
 若要針對您的目的地啟用對象，請依照[上的指南操作，瞭解如何針對串流目的地啟用對象](../destinations/ui/activate-segment-streaming-destinations.md)。
 

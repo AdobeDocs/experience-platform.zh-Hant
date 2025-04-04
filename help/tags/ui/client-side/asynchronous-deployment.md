@@ -2,10 +2,10 @@
 title: 非同步部署
 description: 瞭解如何在網站上非同步部署Adobe Experience Platform標籤程式庫。
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 56%
+source-wordcount: '1046'
+ht-degree: 60%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-我們產品所需的JavaScript程式庫效能與非封鎖部署，對Adobe Experience Cloud使用者而言日益重要。 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/)之類的工具建議使用者變更在網站上部署Adobe程式庫的方式。 本文說明如何以非同步方式使用AdobeJavaScript程式庫。
+我們產品所需的JavaScript程式庫效能與非封鎖部署，對Adobe Experience Cloud使用者而言日益重要。 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/)之類的工具建議使用者變更在網站上部署Adobe資料庫的方式。 本文說明如何以非同步方式使用Adobe JavaScript程式庫。
 
 ## 同步與非同步
 
@@ -106,4 +106,4 @@ ht-degree: 56%
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   此程式碼會通知Platform瀏覽器剖析器已到達頁面底部。 在這個時間點之前，標籤可能尚未載入及執行，因此呼叫`_satellite.pageBottom()`會導致錯誤，且Page Bottom事件型別可能不會如預期般運作。
+   此程式碼會通知Experience Platform瀏覽器剖析器已到達頁面底部。 在這個時間點之前，標籤可能尚未載入及執行，因此呼叫`_satellite.pageBottom()`會導致錯誤，且Page Bottom事件型別可能不會如預期般運作。

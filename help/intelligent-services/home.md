@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；家庭；智慧型服務；熱門主題；智慧型服務；智慧型服務
+keywords: Experience Platform；首頁；智慧型服務；熱門主題；智慧型服務；智慧型服務
 solution: Experience Platform
 title: Intelligent Services 概觀
 description: 智慧型服務可讓行銷分析師及從業人員運用客戶體驗使用案例中人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司需求設定專屬預測，而不需要資料科學專業知識。 此外，行銷從業人員可以在Adobe Experience Cloud、Adobe Experience Platform和第三方應用程式中啟用預測。
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '506'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ### 符合成本效益的上市速度
 
-Adobe擁有AI/ML專業知識，並搭配深入的CXM經驗，而Intelligent Services則是專為行銷人員所設計，可讓AI/ML立即因應常見的行銷使用案例，而不需要僱用稀缺且昂貴的資料科學家，加速上市速度和操作性。
+Adobe具備AI/ML專業知識以及深入的CXM經驗，而Intelligent Services則是專為行銷人員所設計，可讓AI/ML立即投入一般的行銷使用案例，而不需要僱用稀缺且昂貴的資料科學家，加速上市的速度和可操作性。
 
 ### 預測性深入分析的更高準確性
 
@@ -52,7 +52,7 @@ Adobe擁有AI/ML專業知識，並搭配深入的CXM經驗，而Intelligent Serv
 
 ### 預測
 
-模型完成訓練和評分後，分數會回寫至Platform。
+模型完成訓練和評分後，分數會寫回Experience Platform。
 
 ### 採取動作
 
@@ -60,4 +60,4 @@ Adobe擁有AI/ML專業知識，並搭配深入的CXM經驗，而Intelligent Serv
 
 ## 後續步驟
 
-目前，Intelligent Services提供Attribution AI和Customer AI。 Attribution AI可讓行銷人員聰明地促進跨頻道和行銷活動的行銷效率。 若要深入瞭解Attribution AI，請瀏覽[Attribution AI概觀](./attribution-ai/overview.md)。 Customer AI可讓行銷人員超個人化客戶體驗。 若要進一步瞭解Customer AI，請造訪[Customer AI總覽](./customer-ai/overview.md)。
+目前，Intelligent Services提供Attribution AI和Customer AI。 Attribution AI可讓行銷人員聰明地跨頻道和行銷活動提升行銷效率。 若要深入瞭解Attribution AI，請造訪[Attribution AI概觀](./attribution-ai/overview.md)。 Customer AI可讓行銷人員超個人化客戶體驗。 若要進一步瞭解Customer AI，請造訪[Customer AI總覽](./customer-ai/overview.md)。

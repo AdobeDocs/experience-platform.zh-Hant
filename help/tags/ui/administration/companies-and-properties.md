@@ -2,10 +2,10 @@
 title: 屬性
 description: 瞭解如何在Adobe Experience Platform中為您的組織組織和分組擴充功能、環境和程式庫。
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 55%
+source-wordcount: '1178'
+ht-degree: 59%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 ## Web 屬性
 
@@ -67,7 +67,7 @@ Adobe Experience Platform中的每個標籤實作可能大不相同。 他們有
 
 針對使用Adobe Experience Platform的個人、團隊和組織，他們是否需要存取您的所有網站和應用程式、其中一部分或只有一個？
 
-「使用者管理」功能可讓您針對所有的 屬性或依每一屬性為基礎，指派不同角色給不同人員。如果某個使用者擁有足夠的許可權，該使用者即可在該Platform組織中的所有屬性之間執行管理動作。 所有其他角色可依每一屬性為基礎加以指派。您甚至可以隱藏某個 屬性，不讓某些使用者 (非管理員) 看見，方法是不要給予他們該 屬性中的任何角色。
+「使用者管理」功能可讓您針對所有的 屬性或依每一屬性為基礎，指派不同角色給不同人員。如果某個使用者擁有足夠的許可權，該使用者即可在該Experience Platform組織中的所有屬性之間執行管理動作。 所有其他角色可依每一屬性為基礎加以指派。您甚至可以隱藏某個 屬性，不讓某些使用者 (非管理員) 看見，方法是不要給予他們該 屬性中的任何角色。
 
 ## 屬性頁面
 
@@ -133,7 +133,7 @@ Properties 清單會顯示下列資訊：
 
 1. 選取「**[!UICONTROL 儲存]**」。
 
-建立屬性後，Platform會自動新增預設主機、一組環境（開發、測試和生產）和預設擴充功能。
+建立屬性後，Experience Platform會自動新增預設主機、一組環境（開發、測試和生產）和預設擴充功能。
 
 ## 刪除屬性
 

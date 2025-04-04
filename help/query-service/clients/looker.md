@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查閱者；查閱者；連線到查詢服務；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查詢器；查詢器；連線到查詢服務；
 solution: Experience Platform
 title: 將查閱者連線至查詢服務
 description: 本檔案將逐步說明連線Looker與Adobe Experience Platform查詢服務的步驟。
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 0%
 - **[!DNL Username and Password]：**&#x200B;將使用的登入認證。 使用者名稱將採用`ORG_ID@AdobeOrg`的形式。
 - **SSL**：啟用SSL以確保網路上的安全連線。
 
-若要尋找連線Looker與查詢服務所需的認證，請登入Platform UI，並從左側導覽選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。 如需尋找您的&#x200B;**主機**、**連線埠**、**資料庫**、**使用者名稱**&#x200B;以及&#x200B;**密碼**&#x200B;認證的相關資訊，請閱讀[認證指南](../ui/credentials.md)。
+若要尋找連線Looker與查詢服務所需的認證，請登入Experience Platform UI，並從左側導覽選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。 如需尋找您的&#x200B;**主機**、**連線埠**、**資料庫**、**使用者名稱**&#x200B;以及&#x200B;**密碼**&#x200B;認證的相關資訊，請閱讀[認證指南](../ui/credentials.md)。
 
-![包含認證和即將到期認證的Experience Platform查詢工作區的[認證]頁面反白顯示。](../images/clients/looker/query-service-credentials-page.png)
+![Experience Platform查詢工作區的「認證」頁面中，認證和即將到期的認證已反白顯示。](../images/clients/looker/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >

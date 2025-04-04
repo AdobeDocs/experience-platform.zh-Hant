@@ -4,9 +4,9 @@ title: Real-Time Customer Data Platform首頁和控制面板
 description: 了解 Adobe Real-Time CDP 的各種儀表板、首頁和首次使用者體驗。
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '925'
 ht-degree: 9%
 
 ---
@@ -19,18 +19,18 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 本檔案提供Real-Time CDP首頁概觀和量度控制面板。
 
-![平台UI首頁。](assets/platform-home/home.png)
+![Experience Platform UI首頁。](assets/platform-home/home.png)
 
 ## 快速入門widget
 
 [!UICONTROL 即時客戶個人檔案快速入門] Widget分為四個部分：
 
-* **將資料內嵌至Platform**：此Widget會將您導向來源目錄。 使用來源目錄來選取來源，並將您的資料內嵌至Experience Platform。 選取&#x200B;**[設定來源]**&#x200B;以瀏覽至來源目錄。 如需詳細資訊，請閱讀[來源概觀](../sources/home.md)。
+* **將資料內嵌至Experience Platform**：此Widget會將您導向來源目錄。 使用來源目錄來選取來源，並將您的資料內嵌至Experience Platform。 選取&#x200B;**[設定來源]**&#x200B;以瀏覽至來源目錄。 請閱讀[來源概觀](../sources/home.md)以了解更多資訊。
 * **模型資料結構**：此Widget會將您導向結構概觀。 使用方案概觀來瀏覽現有方案或建立說明資料結構的Blueprint。 選取「**[!UICONTROL 建立結構描述]**」以瀏覽至結構描述建立介面。 如需詳細資訊，請閱讀[結構描述概觀](../xdm/home.md)。
 * **建立對象**：此Widget會將您導向至UI中的區段產生器。 使用「區段產生器」與「設定檔」資料元素互動，並定義區段定義的條件。 選取&#x200B;**[!UICONTROL 建立對象]**&#x200B;以瀏覽至「區段產生器」。 如需詳細資訊，請閱讀[分段服務總覽](../segmentation/home.md)。
 * **將資料傳送至目的地**：此Widget會將您導向目的地目錄。 使用目的地目錄來選取目的地，然後您可以連線至目的地並將對象傳送至該目的地。 選取「**[!UICONTROL 設定目的地]**」以導覽至目的地目錄。 如需更多資訊，請閱讀[目標概觀](../destinations/home.md)。
 
-![顯示快速入門Widget的Platform UI首頁](assets/platform-home/getting-started-widget.png)
+![顯示快速入門Widget的Experience Platform UI首頁](assets/platform-home/getting-started-widget.png)
 
 ## 指標儀表板 {#metrics-dashboard}
 
@@ -46,7 +46,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 排行榜顯示貴組織中目前的結構描述、資料集、設定檔和對象的總數及其最近更新日期。
 
-![Platform UI首頁中的排行榜區段。](assets/platform-home/leaderboard.png)
+![Experience Platform UI首頁中的排行榜區段。](assets/platform-home/leaderboard.png)
 
 * **結構描述總數**： **結構描述總數**&#x200B;計數器會顯示系統中的結構描述數目。 建立結構描述時會更新此計數器。 如需詳細資訊，請閱讀[結構描述概觀](../xdm/home.md)。
 * **資料集總數**： **資料集總數**&#x200B;計數器會顯示系統中的資料集數目以及Experience Platform中的資料量。 建立資料集時會更新此計數器。 如需資料集的詳細資訊，請閱讀[資料集總覽](../catalog/datasets/overview.md)。
@@ -57,7 +57,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 最近專案會列出組織中最近的變更。 在以下範例中，最新變更與資料集、來源、對象和目的地有關。
 
-![Platform UI首頁的[最近使用的專案]區段。](assets/platform-home/recent-items.png)
+![ Experience Platform UI首頁中的「最近使用的專案」區段。](assets/platform-home/recent-items.png)
 
 * **最近的資料集**： **[!UICONTROL 最近的資料集]**&#x200B;卡片會顯示組織內建立的五個最近的資料集。 建立新資料集時會更新此清單。 選取資料集以檢視該專案的詳細資料，或針對資料集清單選取&#x200B;**[!UICONTROL 全部檢視]**。 從那裡，您可以選取特定來源以取得詳細資訊。 如需資料集的詳細資訊，請參閱[資料集總覽](../catalog/datasets/overview.md)。
 * **最近的來源**： **[!UICONTROL 最近的來源]**&#x200B;量度卡片會顯示組織內建立的五個最近的來源。 此清單會在建立新來源時更新。 選取來源以檢視該專案的詳細資料，或選取&#x200B;**[!UICONTROL 檢視全部]**&#x200B;以取得來源清單。 從那裡，您可以選取特定來源以取得詳細資訊。 如需來源的詳細資訊，請參閱[來源概觀](../sources/home.md)。
@@ -68,7 +68,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 最後，資源Widget提供您可參考的其他檔案資源。 這些功能包括：
 
-![Platform UI首頁的資源區段。](assets/platform-home/resources.png)
+![ Experience Platform UI首頁中的資源區段。](assets/platform-home/resources.png)
 
 * [了解結構描述](../xdm/schema/composition.md)
 * [正在連接來源](../sources/home.md)

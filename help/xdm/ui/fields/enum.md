@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中定義列舉欄位和建議值
 description: 瞭解如何在Experience Platform使用者介面中定義字串欄位的列舉和建議值。
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 8%
 
 ---
@@ -86,7 +86,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## 列舉和建議值的演化規則 {#evolution}
 
-使用具有列舉欄位的結構描述將資料擷取到Platform後，對結構描述定義所做的任何進一步變更都必須符合系統中已存在的資料。 一般而言，對現有欄位進行的變更只能使該欄位&#x200B;**減少**&#x200B;的限制。 欄位不可設定得比原來更嚴格。
+使用具有列舉欄位的結構描述將資料擷取到Experience Platform後，對結構描述定義所做的任何進一步變更都必須符合系統中已存在的資料。 一般而言，對現有欄位進行的變更只能使該欄位&#x200B;**減少**&#x200B;的限制。 欄位不可設定得比原來更嚴格。
 
 有關列舉和建議值，下列規則適用於擷取之後：
 

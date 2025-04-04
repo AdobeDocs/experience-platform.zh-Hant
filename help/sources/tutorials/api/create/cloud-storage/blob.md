@@ -2,9 +2,9 @@
 title: 使用流程服務API建立Azure Blob基本連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Azure Blob。
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '772'
 ht-degree: 3%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 3%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功建立[!DNL Blob]來源連線。
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | --- | --- |
-| `connectionString` | 包含驗證[!DNL Blob]以Experience Platform所需的授權資訊的字串。 [!DNL Blob]連線字串模式為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 如需有關連線字串的詳細資訊，請參閱[設定連線字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)上的此[!DNL Blob]檔案。 |
+| `connectionString` | 字串，其中包含驗證[!DNL Blob]給Experience Platform所需的授權資訊。 [!DNL Blob]連線字串模式為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 如需有關連線字串的詳細資訊，請參閱[設定連線字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)上的此[!DNL Blob]檔案。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Blob]的連線規格識別碼為： `d771e9c1-4f26-40dc-8617-ce58c4b53702`。 |
 
 >[!TAB SAS URI驗證]
@@ -48,9 +48,9 @@ ht-degree: 3%
 
 >[!ENDTABS]
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
 ## 建立基礎連線
 
@@ -58,13 +58,13 @@ ht-degree: 3%
 >
 >建立後，您無法變更[!DNL Blob]基本連線的驗證型別。 若要變更驗證型別，您必須建立新的基礎連線。
 
-基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
 [!DNL Blob]來源同時支援連線字串和共用存取簽章(SAS)驗證。 共用存取簽章(SAS) URI允許將安全授權委派給您的[!DNL Blob]帳戶。 您可以使用SAS建立具有不同存取許可權的驗證認證，因為以SAS為基礎的驗證可讓您設定許可權、開始和到期日期，以及配置給特定資源。
 
 在此步驟中，您還可以透過定義容器名稱和子資料夾的路徑，指定您的帳戶將可以存取的子資料夾。
 
-若要建立基底連線ID，請在提供[!DNL Blob]驗證認證作為要求引數的一部分時，向`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的[!DNL Blob]驗證認證作為要求引數的一部分時，對`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -130,7 +130,7 @@ curl -X POST \
 
 >[!TAB SAS URI驗證]
 
-若要使用共用存取簽章URI來建立[!DNL Blob]連線，請在提供您的[!DNL Blob] `sasUri`的值時向[!DNL Flow Service] API提出POST要求。
+若要使用共用存取簽章URI來建立[!DNL Blob]連線，請對[!DNL Flow Service] API發出POST要求，同時為您的[!DNL Blob] `sasUri`提供值。
 
 +++要求
 

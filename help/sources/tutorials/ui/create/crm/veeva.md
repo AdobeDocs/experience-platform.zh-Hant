@@ -5,16 +5,16 @@ title: 在使用者介面中建立Veeva CRM Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Veeva CRM來源連線。
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '427'
 ht-degree: 2%
 
 ---
 
 # 在使用者介面中建立[!DNL Veeva CRM]來源連線
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源的CRM資料。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Veeva CRM]來源聯結器的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源的CRM資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面建立[!DNL Veeva CRM]來源聯結器的步驟。
 
 ## 快速入門
 
@@ -40,9 +40,9 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的[!DNL Veeva CRM]帳戶
 
-收集必要的認證後，您可以依照下列步驟將[!DNL Veeva CRM]帳戶連結至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟將[!DNL Veeva CRM]帳戶連結至[!DNL Experience Platform]。
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -66,4 +66,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL Veeva CRM]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](../../dataflow/crm.md)。
+依照本教學課程中的指示，您已建立與[!DNL Veeva CRM]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/crm.md)。

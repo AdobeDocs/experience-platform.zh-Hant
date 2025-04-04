@@ -4,18 +4,18 @@ solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找有關Experience Data Model (XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2348'
 ht-degree: 0%
 
 ---
 
 # XDM系統疑難排解指南
 
-本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model] (XDM)和XDM系統的常見問題解答，包括常見錯誤的疑難排解指南。 有關其他Platform服務的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model] (XDM)和XDM系統的常見問題解答，包括常見錯誤的疑難排解指南。 有關其他Experience Platform服務的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-**[!DNL Experience Data Model](XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取[!DNL Experience Platform]內的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
+**[!DNL Experience Data Model](XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取[!DNL Experience Platform]內的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
 ## 常見問題集
 
@@ -100,7 +100,7 @@ XDM對於此資料型別的使用有下列限制：
 
 在API中，身分識別是透過建立身分描述項來建立。 身分描述項會指出結構描述的特定屬性是唯一識別碼。
 
-身分描述項是由POST對/descriptors端點的要求所建立。 如果成功，您將會收到HTTP Status 201 （已建立）以及包含新描述項詳細資訊的回應物件。
+身分描述項是由POST要求建立到/descriptors端點。 如果成功，您將會收到HTTP Status 201 （已建立）以及包含新描述項詳細資訊的回應物件。
 
 如需在API中建立身分描述項的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中[描述項](api/descriptors.md)章節的檔案。
 
@@ -277,7 +277,7 @@ XDM對於此資料型別的使用有下列限制：
 }
 ```
 
-[!DNL Schema Registry] API中的GET要求需要`Accept`標頭，系統才能決定如何格式化回應。 當必要的`Accept`標頭無效或遺失時，會發生此錯誤。
+[!DNL Schema Registry] API中的GET請求需要`Accept`標頭，系統才能決定如何格式化回應。 當必要的`Accept`標頭無效或遺失時，會發生此錯誤。
 
 根據您使用的端點，`detailed-message`屬性會指出有效的`Accept`標頭在成功回應中應該是什麼樣子。 在重試之前，請確定您已正確輸入與嘗試發出的API要求相容的`Accept`標頭。
 

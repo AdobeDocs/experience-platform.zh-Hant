@@ -2,9 +2,9 @@
 description: 瞭解如何使用監視儀表板來監視從來源擷取的資料。
 title: 在UI中監視來源的資料流
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1323'
 ht-degree: 11%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 11%
 >
 >監控儀表板目前不支援串流來源，例如[HTTP API來源](../../sources/connectors/streaming/http.md)。 目前，您只能使用儀表板來監視批次來源。
 
-請閱讀本檔案，瞭解如何使用監視儀表板在Experience PlatformUI中監視來源資料流。
+請閱讀本檔案，瞭解如何使用監視儀表板在Experience Platform UI中監視來源資料流。
 
 ## 快速入門 {#get-started}
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [資料流](../home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
+* [資料流](../home.md)：資料流可呈現跨Experience Platform行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
    * [資料流執行](../../sources/notifications.md)：資料流執行是根據所選資料流的頻率設定所排程的週期性工作。
-* [來源](../../sources/home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
+* [來源](../../sources/home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 * [身分識別服務](../../identity-service/home.md)：透過跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
 * [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
-* [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 使用監視儀表板監視您的來源資料
 
@@ -42,7 +42,7 @@ ht-degree: 11%
 >abstract="來源處理會包含有關資料湖服務中資料活動狀態和量度的資訊，包括擷取的記錄和失敗的記錄。檢閱量度定義指南以了解有關量度和圖表的詳細資訊。"
 >text="Learn more in documentation"
 
-<!-- In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
 At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
@@ -64,7 +64,7 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 | --- | --- |
 | 已收到的記錄 | 從指定來源接收的記錄總數。 |
 | 已擷取的記錄 | 擷取到Data Lake的記錄總數。 |
-| 已略過記錄 | 略過的記錄總數。 略過的記錄是指由於不需要擷取而被略過的欄位。 例如，如果您建立的來源資料流已啟用部分擷取，您可以設定可接受的錯誤率臨界值。 在擷取程式期間，擷取將會略過非必要欄位的記錄，例如身分欄位，只要這些欄位在錯誤臨界值內。 |
+| 略過的記錄 | 略過的記錄總數。 略過的記錄是指由於不需要擷取而被略過的欄位。 例如，如果您建立的來源資料流已啟用部分擷取，您可以設定可接受的錯誤率臨界值。 在擷取程式期間，擷取將會略過非必要欄位的記錄，例如身分欄位，只要這些欄位在錯誤臨界值內。 |
 | 失敗的記錄 | 因錯誤而無法擷取的記錄總數。 |
 | 擷取率 | 根據接收的記錄總數所擷取的記錄百分比。 |
 | 失敗的資料流總數 | 失敗的資料流總數。 |
@@ -112,7 +112,7 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 | 檔案總數 | 資料流執行中的檔案總數。 |
 | 資料的大小 | 資料流執行中包含的資料大小總計。 |
 | 資料流執行 ID | 資料流執行反複專案的ID。 |
-| 組織ID | 在其中建立資料流執行的組織ID。 |
+| 組織 ID | 在其中建立資料流執行的組織ID。 |
 | 狀態 | 資料流執行的狀態。 |
 | 資料流執行開始 | 表示資料流執行開始的時間戳記。 |
 | 資料流執行結束 | 表示資料流執行何時結束的時間戳記。 |

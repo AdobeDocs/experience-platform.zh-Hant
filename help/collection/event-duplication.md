@@ -2,9 +2,9 @@
 title: Experience Platform中的事件重複處理
 description: 瞭解Adobe Experience Platform如何處理事件重複
 exl-id: ac8c3ee8-52cf-459c-b283-16ed32d2976d
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Adobe Experience Platform是高度分散的系統，專為最大化可靠性而設計，同時可擴充至不斷增加的資料量。
 
-對於即時資料收集，[體驗事件](../xdm/classes/experienceevent.md)是透過[Edge Network](../web-sdk/home.md#edge-network)，從使用者端來源（例如[Web SDK](../web-sdk/home.md)或[Mobile SDK](https://developer.adobe.com/client-sdks/home/)）收集，並傳送至Experience Platform處理和儲存層。 這些圖層會構成解決方案，例如Experience Platform、[Real-Time CDP](../rtcdp/home.md)、[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)和[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)。
+對於即時資料收集，[體驗事件](../xdm/classes/experienceevent.md)是透過[Edge Network](../web-sdk/home.md#edge-network)，從使用者端來源(例如[Web SDK](../web-sdk/home.md)或[Mobile SDK](https://developer.adobe.com/client-sdks/home/))收集而來，並傳遞至Experience Platform處理和儲存層。 這些圖層會組成解決方案，例如Experience Platform、[Real-Time CDP](../rtcdp/home.md)、[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)和[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)。
 
-為了將體驗事件遺失減至最少，使用者端SDK和內部Experience Platform傳送服務會要求事件已成功收集的確認。
+為了將體驗事件遺失減至最少，使用者端SDK和內部Experience Platform傳送服務會要求您確認已成功收集事件。
 
-如果未收到該確認，使用者端SDK或內部Platform傳送服務會觸發重試，然後再次傳送體驗事件。
+如果未收到該確認，使用者端SDK或內部Experience Platform傳送服務會觸發重試，然後再次傳送體驗事件。
 
 這是處理暫時性失敗的最佳作法。 副作用是可能會引入重複事件。
 
@@ -39,9 +39,9 @@ Adobe Experience Platform資料收集層可支援「至少一次」處理作業�
 針對對重複事件敏感的業務案例，Experience Platform在其下游儲存系統中使用多種事件重複資料刪除方法，如下所述。
 
 * 如果[!DNL Profile store]中已存在具有相同`_id`的事件，Real-Time CDP設定檔存放區會捨棄事件。 如需詳細資訊，請參閱[XDM ExperienceEvent類別](../xdm/classes/experienceevent.md)的相關檔案。
-* Customer Journey Analytics可讓使用者將量度設定為僅對值進行非重複計數。 若要瞭解如何執行此動作，請參閱有關[量度重複資料刪除元件設定](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=zh-Hant)的檔案。
+* Customer Journey Analytics可讓使用者設定量度，以非重複的方式僅計算值。 若要瞭解如何執行此動作，請參閱有關[量度重複資料刪除元件設定](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=zh-Hant)的檔案。
 * 當需要從計算中移除整個列或忽略特定欄位集（因為列中只有部分資料是重複資訊）時，Experience Platform查詢服務支援重複資料刪除。 如需詳細資訊，請參閱查詢服務](../query-service/key-concepts/deduplication.md)中有關[重複資料刪除的檔案。
 
 >[!NOTE]
 >
->如果您在上述使用案例之外遇到事件重複問題，請洽詢您的Adobe代表，並提供您使用案例的詳細資訊。
+>如果您在上述使用案例之外遇到事件重複問題，請聯絡您的Adobe代表，並提供您使用案例的詳細資訊。

@@ -3,9 +3,9 @@ title: SAP Commerce連線
 description: 使用SAP Commerce目標聯結器更新SAP帳戶中的客戶記錄。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2268'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 [!DNL SAP Commerce] （先前稱為[[!DNL Hybris]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html)）是適用於B2B和B2C企業的雲端型電子商務平台解決方案，可作為SAP客戶體驗產品組合的一部分提供。 [[!DNL SAP] 訂閱帳單](https://www.sap.com/products/financial-management/subscription-billing.html)是產品組合下的產品，可透過標準化的整合，透過簡化的銷售和付款體驗來啟用完整的訂閱生命週期管理。
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)使用[[!DNL SAP Subscription Billing] 客戶管理API](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber)，在啟用後於[!DNL SAP Commerce]內從現有的Experience Platform對象更新您的客戶詳細資料。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)使用[[!DNL SAP Subscription Billing] 客戶管理API](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber)，在啟用後於[!DNL SAP Commerce]內從現有Experience Platform對象更新您的客戶詳細資料。
 
 [向目的地驗證](#authenticate)區段中進一步說明如何向您的[!DNL SAP Commerce]執行個體進行驗證。
 
@@ -36,11 +36,11 @@ ht-degree: 3%
 
 ### [!DNL SAP Commerce]目的地的先決條件 {#prerequisites-destination}
 
-若要將資料從Platform匯出至您的[!DNL SAP Commerce]帳戶，請注意下列必要條件：
+若要將資料從Experience Platform匯出至您的[!DNL SAP Commerce]帳戶，請注意下列必要條件：
 
 #### 您必須擁有[!DNL SAP Subscription Billing]帳戶 {#prerequisites-account}
 
-若要將資料從Platform匯出至您的[!DNL SAP Commerce]帳戶，您需要有[!DNL SAP Subscription Billing]帳戶。 如果您沒有有效的帳單帳戶，請連絡您的[!DNL SAP]帳戶管理員。 如需其他詳細資訊，請參閱[[!DNL SAP] 平台組態](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf)檔案。
+若要將資料從Experience Platform匯出至您的[!DNL SAP Commerce]帳戶，您需要有[!DNL SAP Subscription Billing]帳戶。 如果您沒有有效的帳單帳戶，請連絡您的[!DNL SAP]帳戶管理員。 如需其他詳細資訊，請參閱[[!DNL SAP] 平台組態](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf)檔案。
 
 #### 產生服務金鑰 {#prerequisites-service-key}
 
@@ -79,9 +79,9 @@ ht-degree: 3%
 
 #### 在[!DNL SAP Subscription Billing]中建立自訂參考 {#prerequisites-custom-reference}
 
-若要在[!DNL SAP Subscription Billing]中更新Experience Platform對象狀態，您需要在Platform中為每個選取的對象設定一個自訂參考欄位。
+若要在[!DNL SAP Subscription Billing]中更新Experience Platform對象狀態，您需要在Experience Platform中為每個選取的對象設定一個自訂參考欄位。
 
-若要建立自訂參考，請登入您的[!DNL SAP Subscription Billing]帳戶，並導覽至&#x200B;**[主要資料和組態]** > **[自訂參考]**&#x200B;頁面。 接著，選取「**[!UICONTROL 建立]**」，為Platform中選取的每個對象新增參考。 在後續[排程對象匯出和範例](#schedule-segment-export-example)步驟中，您將需要這些參考欄位名稱。
+若要建立自訂參考，請登入您的[!DNL SAP Subscription Billing]帳戶，並導覽至&#x200B;**[主要資料和組態]** > **[自訂參考]**&#x200B;頁面。 接著，選取「**[!UICONTROL 建立]**」，為Experience Platform中選取的每個對象新增參考。 在後續[排程對象匯出和範例](#schedule-segment-export-example)步驟中，您將需要這些參考欄位名稱。
 
 以下顯示如何在[!DNL SAP Subscription Billing]內建立自訂&#x200B;**[!UICONTROL 參考型別]**的範例：
 ![顯示在SAP訂閱帳單中建立自訂參考的位置的影像。](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
@@ -115,14 +115,14 @@ ht-degree: 3%
 
 本節說明您可以匯出至此目的地的所有對象。
 
-此目的地支援啟動所有透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。
+此目的地支援啟用所有透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。
 
 此目的地也支援下表所述的對象啟用。
 
 | 客群類型 | 支援 | 說明 |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ ht-degree: 3%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 針對Platform中選取的每個對象，相對應的[!DNL SAP Commerce]個額外屬性會從Platform更新其對象狀態。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 針對Experience Platform中每個選取的對象，相對應的[!DNL SAP Commerce]個其他屬性會從Experience Platform更新其對象狀態。</li></ul> |
 | 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
 
 {style="table-layout:auto"}
@@ -159,14 +159,14 @@ ht-degree: 3%
 | **[!UICONTROL 地區]** | 您的資料中心位置。 區域出現在`url`中，其值類似於`eu10`或`us10`。 例如，如果`url`是`https://eu10.revenue.cloud.sap/api`，您需要`eu10`。 |
 
 若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**。
-![顯示如何驗證目的地的Platform UI影像。](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
+![來自Experience Platform UI的影像，顯示如何驗證至目的地。](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL 已連線]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
-![來自Platform UI的影像，顯示驗證後要填寫的目的地詳細資料。](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
+![來自Experience Platform UI的影像，顯示驗證後要填寫的目的地詳細資料。](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
@@ -189,36 +189,36 @@ ht-degree: 3%
 
 ### 對應屬性和身分 {#map}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL SAP Commerce]目的地，您必須完成欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL SAP Commerce]目的地欄位，請遵循下列步驟：
+若要將對象資料從Adobe Experience Platform正確傳送至[!DNL SAP Commerce]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL SAP Commerce]目的地欄位，請遵循下列步驟：
 
 #### 對應`customerNumberSAP`身分
 
 `customerNumberSAP`識別是這個目的地的必要對應。 請依照下列步驟進行對應：
 
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
-   ![Platform UI熒幕擷取畫面，其中反白顯示新增對應按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+   ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取`customerNumberSAP`。
-   ![平台UI熒幕擷圖選取電子郵件作為來源屬性，以對應為身分。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
+   ![Experience Platform UI熒幕擷圖選取電子郵件作為來源屬性，以對應為身分。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取`customerNumber`身分。
-   ![Platform UI熒幕擷圖選取電子郵件作為目標屬性，以對應為身分。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
+   ![Experience Platform UI熒幕擷圖選取電子郵件作為目標屬性，以對應為身分。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
 | 來源欄位 | 目標欄位 | 強制 |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | 是 |
 
 具有身分對應的範例如下所示：
-![來自Platform UI的影像，顯示customerNumber身分對應範例。](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
+![來自Experience Platform UI的影像，顯示customerNumber身分對應範例。](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
 #### 對應屬性
 
 若要在XDM設定檔結構描述與[!DNL SAP Subscription Billing]帳戶之間新增任何其他要更新的屬性，請重複下列步驟：
 
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
-   ![Platform UI熒幕擷取畫面，其中反白顯示新增對應按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
+   ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**類別並選取XDM屬性。
-   ![平台UI熒幕擷圖選取姓氏作為來源屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
+   ![Experience Platform UI熒幕擷圖選取姓氏作為來源屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取自訂屬性]**&#x200B;類別，並從客戶[結構描述](https://api.sap.com/api/BusinessPartner_APIs/schema)屬性清單中輸入[!DNL SAP Subscription Billing]屬性的名稱。
-   ![將lastName定義為目標屬性的平台UI熒幕擷取畫面。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
+   ![Experience Platform UI熒幕擷取畫面，其中lastName定義為target屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
 
 >[!IMPORTANT]
 >
@@ -261,7 +261,7 @@ ht-degree: 3%
 | `xdm: workAddress.city` | `Attribute: city` | 無 |
 
 以下是客戶為個人的強制和選用屬性對應的範例：
-![來自Platform UI的影像，顯示具有強制和選擇性屬性對應的範例，其中客戶為個人。](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
+![來自Experience Platform UI的影像，顯示具有必要和選用屬性對應的範例，其中客戶為個人。](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
 >[!TAB 公司客戶]
 
@@ -271,7 +271,7 @@ ht-degree: 3%
 | `xdm: workAddress.city` | `Attribute: city` | 無 |
 
 以下是客戶為公司的具有強制和選擇性屬性對應的範例：
-![來自Platform UI的影像，顯示具有強制和選擇性屬性對應的範例，其中客戶為公司。](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
+![來自Experience Platform UI的影像，顯示具有強制和選擇性屬性對應的範例，其中客戶是企業使用者。](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
 
 >[!ENDTABS]
 
@@ -279,10 +279,10 @@ ht-degree: 3%
 
 ### 排程對象匯出和範例 {#schedule-segment-export-example}
 
-執行[排程對象匯出](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟時，您必須手動將Platform對象對應到[!DNL SAP Subscription Billing]中的[屬性](#prerequisites-attribute)。
+執行[排程對象匯出](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟時，您必須手動將Experience Platform對象對應到[!DNL SAP Subscription Billing]中的[屬性](#prerequisites-attribute)。
 
 以下顯示反白顯示[!DNL SAP Commerce] **[!UICONTROL 對應ID]**位置的排程對象匯出步驟範例：
-![來自Platform的影像，顯示填入對應ID的排程對象匯出。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
+![來自Experience Platform的影像，顯示填入對應ID的排程對象匯出。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 若要這麼做，請選取每個區段，然後在[!DNL SAP Commerce] **[!UICONTROL 對應ID]**&#x200B;目的地聯結器欄位中，輸入來自[!DNL SAP Subscription Billing]的自訂參考名稱。 如需建立自訂參考的指引，請參閱[在 [!DNL SAP Subscription Billing]](#prerequisites-custom-reference)中建立自訂參考區段。
 
@@ -297,11 +297,11 @@ ht-degree: 3%
 ![顯示在SAP訂閱帳單中建立自訂參考的位置的影像。](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
 已選取某個對象，並反白顯示其對應的[!DNL SAP Commerce] **[!UICONTROL 對應ID]**的「排程」對象匯出步驟的範例如下：
-![來自Platform的影像，顯示填入對應ID的排程對象匯出。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
+![來自Experience Platform的影像，顯示填入對應ID的排程對象匯出。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
 如圖所示，**[!UICONTROL 對應ID]**&#x200B;欄位中的值應完全符合[!DNL SAP Subscription Billing] **[!UICONTROL 參考型別]**&#x200B;值。
 
-對每個已啟用的平台對象重複此章節。
+對每個已啟動的Experience Platform對象重複此章節。
 
 根據上方顯示的影像，您已選取兩個對象，對應將會如下所示：
 

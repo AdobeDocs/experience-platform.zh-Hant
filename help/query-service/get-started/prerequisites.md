@@ -3,9 +3,9 @@ keywords: Experience Platform；查詢服務；查詢服務；查詢
 title: Adobe Experience Platform查詢服務快速入門
 description: 完整利用Adobe Experience Platform查詢服務的必要步驟劃分
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: 705d58fad98c6c021220a4b1c5fc85541d6572bb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '243'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 此[資料擷取教學課程影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)提供建立資料集、將資料集對應至結構描述、將資料新增至資料集，以及確認其擷取的概觀。 [內嵌概觀檔案](../../ingestion/home.md)可補充此內容，並提供更深入的資訊和其他學習資源的連結。
 
-將資料內嵌至Adobe Experience Platform後，您就可以使用Platform UI](../ui/user-guide.md)中的[[!DNL Query Editor] 或[[!DNL Query Service] API](../api/getting-started.md)開始使用[!DNL Query Service]。 如需如何使用上述各工具的完整檔案，請參閱其各自章節。
+將資料內嵌至Adobe Experience Platform後，您就可以在Experience Platform UI](../ui/user-guide.md)中使用[[!DNL Query Editor] 或[[!DNL Query Service] API](../api/getting-started.md)開始使用[!DNL Query Service]。 如需如何使用上述各工具的完整檔案，請參閱其各自章節。
 
 ## 後續步驟
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 - [查詢服務中的SQL語法](../sql/syntax.md)
 - [使用SQL建立衍生資料集](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-或者，若要進一步瞭解查詢服務如何在Platform中改善資料處理，請觀看[放棄的瀏覽使用案例簡報](../use-cases/abandoned-browse.md#video-example)。
+或者，若要進一步瞭解查詢服務如何在Experience Platform中改善資料處理，請觀看[放棄的瀏覽使用案例簡報](../use-cases/abandoned-browse.md#video-example)。
 
 下列資源有助於增進您對[!DNL Query Service]的瞭解：
 

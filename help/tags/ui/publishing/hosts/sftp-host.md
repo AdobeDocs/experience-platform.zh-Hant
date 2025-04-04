@@ -2,9 +2,9 @@
 title: SFTP 主機
 description: 瞭解如何在Adobe Experience Platform中設定標籤，以將程式庫組建傳送至自行託管的安全SFTP伺服器。
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '880'
 ht-degree: 10%
 
 ---
@@ -25,7 +25,7 @@ Experience Platform可讓您將標籤程式庫組建傳送至您自行託管的�
 
 ## 設定伺服器的存取金鑰 {#access-key}
 
-Platform會使用加密的金鑰連線至您的SFTP網站。 正確設定此項目的幾個步驟：
+Experience Platform會使用加密的金鑰連線至您的SFTP網站。 正確設定此項目的幾個步驟：
 
 ### 建立公開/私密金鑰組
 
@@ -35,7 +35,7 @@ Platform會使用加密的金鑰連線至您的SFTP網站。 正確設定此項�
 
 私密金鑰是用來加密公開金鑰。 在SFTP主機建立過程中，您需要提供私密金鑰。 請參閱Reactor API指南中有關[加密值](../../../api/guides/encrypting-values.md)的章節，以取得加密公開金鑰的指示。 使用生產環境的GPG金鑰，除非您確定您需要特定金鑰。 最後，您可以從任何電腦加密私密金鑰，因此不需要在伺服器上安裝GPG即可完成此步驟。
 
-### 允許清單平台IP位址
+### 將Experience Platform IP位址加入允許清單
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ Platform會使用加密的金鑰連線至您的SFTP網站。 正確設定此項�
 > * `44.194.43.191`
 > * `3.215.163.18`
 
-您可能需要核准一組IP位址，以便在公司防火牆內使用，以允許Platform連線您的SFTP伺服器並與其連線。 這些IP位址包括：
+您可能需要核准一組IP位址，以便在公司防火牆內使用，以允許Experience Platform連線您的SFTP伺服器並與其連線。 這些IP位址包括：
 
 * `184.72.239.68`
 * `23.20.85.113`
@@ -94,7 +94,7 @@ Platform會使用加密的金鑰連線至您的SFTP網站。 正確設定此項�
 
 ![顯示正在儲存之SFTP主機的影像](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-當您選取&#x200B;**[!UICONTROL 儲存]**&#x200B;時，會測試連線及將檔案傳送至SFTP伺服器的能力。 Platform會建立資料夾、在該資料夾中寫入檔案、檢查檔案是否確實存在，然後自行清除。 若您SFTP伺服器上的使用者帳戶（與您提供給Platform的安全憑證連結的帳戶）沒有執行此動作的必要許可權，則主機會進入「失敗」狀態。
+當您選取&#x200B;**[!UICONTROL 儲存]**&#x200B;時，會測試連線及將檔案傳送至SFTP伺服器的能力。 Experience Platform會建立資料夾、在該資料夾中寫入檔案、檢查檔案是否確實存在，然後自行清除。 若您SFTP伺服器上的使用者帳戶(與您提供給Experience Platform的安全憑證連結的帳戶)沒有執行此動作的必要許可權，則主機會進入「失敗」狀態。
 
 ## 後續步驟
 

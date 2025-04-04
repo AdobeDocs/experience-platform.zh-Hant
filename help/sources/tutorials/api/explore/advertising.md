@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流量服務API探索Advertising系統
 description: 流量服務是用來收集及集中來自Adobe Experience Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，所有支援的來源都可從此API連線。 本教學課程使用Flow Service API來探索廣告系統。
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '503'
 ht-degree: 5%
 
 ---
@@ -21,22 +21,22 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->本教學課程需要您擁有廣告來源的唯一基本連線ID。 如果您沒有此ID，請參閱有關[將廣告來源連線至Platform](../../api/create/advertising/ads.md)教學課程的教學課程。
+>本教學課程需要您擁有廣告來源的唯一基本連線ID。 如果您沒有此ID，請參閱有關[將廣告來源連線至Experience Platform](../../api/create/advertising/ads.md)的教學課程。
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線至廣告系統。
 
-### 使用平台API
+### 使用Experience Platform API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../landing/api-guide.md)的指南。
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../landing/api-guide.md)指南。
 
 ## 探索您的資料表
 
-使用廣告系統的基礎連線，您可以透過執行GET請求來探索資料表。 使用以下呼叫來尋找您要檢查或擷取至[!DNL Platform]的資料表的路徑。
+使用廣告系統的基本連線，您可以執行GET請求來探索資料表。 使用以下呼叫來尋找您要檢查或擷取至[!DNL Experience Platform]的資料表的路徑。
 
 **API格式**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應是從到廣告系統的大量表格。 尋找您要帶入[!DNL Platform]的資料表並記下其`path`屬性，因為您必須在下個步驟中提供它以檢查其結構。
+成功的回應是從到廣告系統的大量表格。 尋找您要帶入[!DNL Experience Platform]的資料表並記下其`path`屬性，因為您必須在下個步驟中提供它以檢查其結構。
 
 ```json
 [
@@ -96,7 +96,7 @@ curl -X GET \
 ]
 ```
 
-## Inspect表格的結構
+## 檢查表格的結構
 
 若要從廣告系統檢查表格的結構，請在將表格路徑指定為查詢引數時執行GET要求。
 
@@ -170,4 +170,4 @@ curl -X GET \
 
 ## 後續步驟
 
-依照本教學課程，您已探索您的廣告系統，找到您要帶入[!DNL Platform]的表格路徑，並取得有關其結構的資訊。 您可以在下個教學課程中使用此資訊，從您的廣告系統[收集資料並將其帶入Platform](../collect/advertising.md)。
+依照本教學課程，您已探索您的廣告系統，找到您要帶入[!DNL Experience Platform]的表格路徑，並取得有關其結構的資訊。 您可以在下個教學課程中使用此資訊，從您的廣告系統[收集資料並將其帶入Experience Platform](../collect/advertising.md)。

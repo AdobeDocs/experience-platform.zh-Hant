@@ -2,9 +2,9 @@
 title: 同意分析和追蹤
 description: 瞭解如何建立同意分析儀表板，以追蹤使用者同意在一段時間內的趨勢。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 建立同意的對象 {#create-consent-audiences}
 
-若要建立同意儀表板，您必須先建立同意聯絡的所有設定檔對象。 若要導覽至Real-Time Customer Data Platform區段產生器，請在Platform UI的左側導覽中選取&#x200B;**[!UICONTROL 對象]**。 從[!UICONTROL 對象]儀表板的[!UICONTROL 客戶]索引標籤中，選取檢視右上角的&#x200B;**[!UICONTROL 建立對象]**，然後選取&#x200B;**[!UICONTROL 建置規則]**。
+若要建立同意儀表板，您必須先建立同意聯絡的所有設定檔對象。 若要導覽至Real-Time Customer Data Platform區段產生器，請在Experience Platform UI的左側導覽中選取&#x200B;**[!UICONTROL 對象]**。 從[!UICONTROL 對象]儀表板的[!UICONTROL 客戶]索引標籤中，選取檢視右上角的&#x200B;**[!UICONTROL 建立對象]**，然後選取&#x200B;**[!UICONTROL 建置規則]**。
 
 ![具有[!UICONTROL 客戶]、[!UICONTROL 受眾]和[!UICONTROL 建立區段]的[!UICONTROL 受眾]儀表板已強調顯示。](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -72,7 +72,7 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 ## 客群重疊 {#audience-overlap}
 
-若要檢閱任何兩個同意對象之間的重疊，請將[!UICONTROL 依合併原則的對象重疊]新增到您的設定檔儀表板，並在下拉式選單中選取所需的對象。 如需深入分析的詳細資訊，請參閱檔案，瞭解如何將Widget [*合併原則所覆蓋的對象*](../guides/profiles.md#audience-overlap-by-merge-policy)&#x200B;新增到儀表板的指示。
+若要檢閱任何兩個同意對象之間的重疊，請將[!UICONTROL 依合併原則的對象重疊]新增到您的設定檔儀表板，並在下拉式選單中選取所需的對象。 如需有關insight的詳細資訊，請參閱檔案，瞭解如何將Widget [*依合併原則所重疊的對象*](../guides/profiles.md#audience-overlap-by-merge-policy)&#x200B;新增到您的儀表板。
 
 <!-- Image needs updating to night mode -->
 

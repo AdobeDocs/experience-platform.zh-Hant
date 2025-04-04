@@ -5,10 +5,10 @@ title: 在使用者介面中建立FTP Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立FTP來源連線。
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 1%
+source-wordcount: '464'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 ## 連線至您的FTP伺服器
 
-收集必要的認證後，您可以依照下列步驟建立新的FTP帳戶以連線至Platform。
+收集完所需的認證後，您可以依照下列步驟建立新的FTP帳戶以連線至Experience Platform。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示各種來源，您可為這些來源建立傳入帳戶。
 
@@ -69,4 +69,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與FTP帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，以將雲端儲存空間中的資料帶入Platform](../../dataflow/batch/cloud-storage.md)。
+依照本教學課程中的指示，您已建立與FTP帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將您的雲端儲存空間中的資料匯入Experience Platform](../../dataflow/batch/cloud-storage.md)。

@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API為您的目的地產生測試訊息轉換範本。
 title: 產生範例訊息轉換範本
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 取得範例範本 {#generate-sample-template}
 
-您可以向`authoring/testing/template/sample/`端點發出GET要求，並提供您建立範本時依據之目的地組態的目的地ID，以取得範例範本。
+您可以向`authoring/testing/template/sample/`端點發出GET請求，並提供目的地組態的目的地ID （您正在根據其建立範本），以取得範例範本。
 
 >[!TIP]
 >
@@ -132,7 +132,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 

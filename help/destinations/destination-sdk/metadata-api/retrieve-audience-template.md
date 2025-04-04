@@ -1,10 +1,10 @@
 ---
-description: 此頁面是用來透過Adobe Experience Platform Destination SDK擷取對象範本的API呼叫的範例。
+description: 此頁面是用來透過Adobe Experience Platform Destination SDK擷取對象範本的API呼叫範例。
 title: 擷取對象範本
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 對象範本API操作快速入門 {#get-started}
 
@@ -317,8 +317,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在知道如何使用`/authoring/destination-servers` API端點擷取目的地伺服器組態的詳細資料。 閱讀[如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的過程中適合到什麼位置。
+閱讀本檔案後，您現在知道如何使用`/authoring/destination-servers` API端點擷取目的地伺服器組態的詳細資料。 閱讀[如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的程式中的位置。

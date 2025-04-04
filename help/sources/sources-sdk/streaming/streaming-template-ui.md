@@ -3,9 +3,9 @@ title: 串流SDK UI的檔案自助服務範本
 description: 瞭解如何使用UI將來源中的串流資料匯入Adobe Experience Platform。
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1194'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 *從更新頁面頂端的中繼資料（標題和說明）開始。 請忽略此頁面上的所有UICONTROL執行個體。 此標籤可協助我們的機器翻譯流程將頁面正確翻譯為我們支援的多種語言。 我們會在您提交檔案後新增標籤。*
 
-本教學課程提供使用Platform使用者介面建立&#x200B;*YOURSOURCE*&#x200B;來源聯結器的步驟。
+本教學課程提供使用Experience Platform使用者介面建立&#x200B;*YOURSOURCE*&#x200B;來源聯結器的步驟。
 
 ## 概觀
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-為了將&#x200B;*YOURSOURCE*&#x200B;連線到Platform，您必須提供下列連線屬性的值：
+若要將&#x200B;*YOURSOURCE*&#x200B;連線至Experience Platform，您必須提供下列連線屬性的值：
 
 | 認證 | 說明 | 範例 |
 | --- | --- | --- |
@@ -49,11 +49,11 @@ ht-degree: 1%
 
 ### 將&#x200B;*YOURSOURCE*&#x200B;與您的webhook整合
 
-*串流SDK需要您的來源能夠支援Webhook，才能與Experience Platform通訊。 在本節中，您必須提供使用者必須遵循的步驟，才能將YOURSOURCE與webhook整合。*
+*串流SDK需要您的來源能夠支援webhook，才能與Experience Platform通訊。 在本節中，您必須提供使用者必須遵循的步驟，才能將YOURSOURCE與webhook整合。*
 
 ## 連線您的&#x200B;*YOURSOURCE*&#x200B;帳戶
 
-在Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
@@ -61,13 +61,13 @@ ht-degree: 1%
 
 >[!TIP]
 >
->以下使用的熒幕擷取畫面為範例。 建立檔案時，請以實際來源的熒幕擷取畫面取代影像。 您可以使用相同的標示圖樣和顏色，以及相同的檔案名稱。 請確定熒幕擷圖能擷取整個平台UI畫面。 如需如何上傳熒幕擷取畫面的資訊，請參閱[提交檔案以供稽核](../documentation/github.md)上的指南。
+>以下使用的熒幕擷取畫面為範例。 建立檔案時，請以實際來源的熒幕擷取畫面取代影像。 您可以使用相同的標示圖樣和顏色，以及相同的檔案名稱。 請確定熒幕擷圖能擷取整個Experience Platform UI畫面。 如需如何上傳熒幕擷取畫面的資訊，請參閱[提交檔案以供稽核](../documentation/github.md)上的指南。
 
 ![Experience Platform來源目錄](../assets/streaming/catalog.png)
 
 ## 選取資料
 
-**[!UICONTROL 選取資料]**&#x200B;步驟隨即顯示，提供介面供您選取要帶到Platform的資料。
+**[!UICONTROL 選取資料]**&#x200B;步驟隨即顯示，提供介面供您選取要帶到Experience Platform的資料。
 
 * 介面的左側是瀏覽器，可讓您檢視帳戶內的可用資料流；
 * 介面的右側部分可讓您預覽JSON檔案中最多100列的資料。
@@ -94,13 +94,13 @@ ht-degree: 1%
 
 [!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
-Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html)。
+Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html)。
 
 成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
 ![來源工作流程的對應步驟。](../assets/streaming/mapping.png)
 
-## 檢閱
+## 審核
 
 **[!UICONTROL 檢閱]**&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
 
@@ -113,7 +113,7 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 ## 取得您的串流端點URL
 
-建立串流資料流後，您現在可以擷取串流端點URL。 此端點將用於訂閱您的webhook，允許您的串流來源與Experience Platform通訊。
+建立串流資料流後，您現在可以擷取串流端點URL。 此端點將用於訂閱您的webhook，讓您的串流來源能夠與Experience Platform通訊。
 
 若要擷取您的串流端點，請移至您剛建立之資料流的[!UICONTROL 資料流活動]頁面，並從[!UICONTROL 屬性]面板底部複製端點。
 
@@ -123,7 +123,7 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 *建立資料流之剩餘步驟的工作流程會模組化。 如果您想要針對來源發出任何特定的號召，請參閱下列其他資源區段。*
 
-依照本教學課程中的指示，您已建立與您的&#x200B;*YOURSOURCE*&#x200B;帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)。
+依照本教學課程中的指示，您已建立與您的&#x200B;*YOURSOURCE*&#x200B;帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)。
 
 ## 其他資源
 

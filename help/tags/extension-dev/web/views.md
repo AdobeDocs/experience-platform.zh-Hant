@@ -2,10 +2,10 @@
 title: 網頁擴充功能中的檢視
 description: 瞭解如何在Adobe Experience Platform Web擴充功能中定義程式庫模組的檢視。
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 70%
+source-wordcount: '2063'
+ht-degree: 73%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 每個事件、條件、動作或資料元素類型都可提供一個檢視，讓使用者提供設定。擴充功能也可以有頂層[擴充功能組態檢視](../configuration.md)，讓使用者為整個擴充功能提供全域設定。所有檢視類型的檢視建置程序均相同。
 
@@ -27,7 +27,7 @@ ht-degree: 70%
 
 ## 包含標籤iframe指令碼
 
-在檢視的HTML中包含標籤iframe指令碼：
+在檢視的HTML中加入標籤iframe指令碼：
 
 ```html
 <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
@@ -72,7 +72,7 @@ window.extensionBridge.register({
 | `settings` | 一個物件，其中包含先前從這個檢視儲存的設定。如果 `settings` 為 `null`，表示使用者建立了初始設定，而非載入已儲存的版本。如果 `settings` 是物件，則您應使用該物件來填入檢視，因為使用者選擇編輯先前保存的設定。 |
 | `extensionSettings` | 從擴充功能組態檢視儲存的設定。在不是擴充功能組態檢視的檢視中存取擴充功能設定時，此屬性可能有其效用。如果目前的檢視是擴充功能組態檢視，請使用`settings`。 |
 | `propertySettings` | 包含屬性設定的物件。如需此物件所含內容的詳細資訊，請參閱 [Turbine 物件指南](../turbine.md#property-settings)。 |
-| `tokens` | 包含 API 代號的物件。若要從檢視內存取 Adobe API，通常需要在 `tokens.imsAccess` 下方使用 IMS 代號。此代號將僅供Adobe開發的擴充功能使用。 如果您是Adobe員工，代表Adobe所編寫的擴充功能，請[傳送電子郵件給資料收集工程團隊](mailto:reactor@adobe.com)，並提供擴充功能的名稱，以便我們將其新增至允許清單。 |
+| `tokens` | 包含 API 代號的物件。若要從檢視內存取 Adobe API，通常需要在 `tokens.imsAccess` 下方使用 IMS 代號。此代號將僅供Adobe開發的擴充功能使用。 如果您是Adobe員工，負責展現Adobe所製作的某項擴充功能，請[傳送電子郵件給資料收集工程團隊](mailto:reactor@adobe.com)，並提供擴充功能的名稱，以便我們將其新增至允許清單。 |
 | `company` | 包含單一屬性`orgId`的物件，其本身代表您的Adobe Experience Cloud ID （24個字元的英數字串）。 |
 | `schema` | [JSON 結構描述](https://json-schema.org/)格式的物件。此物件將來自[擴充功能資訊清單](../manifest.md)，可能有助於驗證您的表單。 |
 
@@ -148,9 +148,9 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 您的檢視可能有使用者想要使用資料元素的表單欄位。 例如，如果您的檢視有應由使用者輸入產品名稱的文字欄位，則使用者在該欄位中輸入硬式編碼值可能沒有意義。 此時，他們可能會希望欄位的值是動態的 (在執行階段確定)，並且可利用資料元素達此目的。
 
-例如，假設我們要建置會傳送信標以追蹤轉換的擴充功能。我們也假設信標所傳送的其中一個資料片段是產品名稱。在允許使用者設定信標的擴充功能檢視中，可能會有產品名稱的文字欄位。 Platform使用者輸入靜態產品名稱（例如&quot;Calzone Oven XL&quot;）通常沒什麼意義，因為產品名稱很可能取決於傳送信標的來源頁面。 這是資料元素的絕佳案例。
+例如，假設我們要建置會傳送信標以追蹤轉換的擴充功能。我們也假設信標所傳送的其中一個資料片段是產品名稱。在允許使用者設定信標的擴充功能檢視中，可能會有產品名稱的文字欄位。 Experience Platform使用者輸入靜態產品名稱（例如&quot;Calzone Oven XL&quot;）通常沒什麼意義，因為產品名稱很可能取決於傳送信標的來源頁面。 這是資料元素的絕佳案例。
 
-如果使用者想要將名為 `productname` 的資料元素用於產品名稱值，他們可以輸入在兩側加上百分比符號的資料元素名稱 (`%productname%`)。我們將兩側加上百分比符號的資料元素名稱稱為「資料元素代號」。 Platform使用者通常熟悉此建構。 您的擴充功能隨後會將資料元素代號儲存在其匯出的 `settings` 物件中。屆時您的設定物件可能顯示如下：
+如果使用者想要將名為 `productname` 的資料元素用於產品名稱值，他們可以輸入在兩側加上百分比符號的資料元素名稱 (`%productname%`)。我們將兩側加上百分比符號的資料元素名稱稱為「資料元素代號」。 Experience Platform使用者通常熟悉此建構。 您的擴充功能隨後會將資料元素代號儲存在其匯出的 `settings` 物件中。屆時您的設定物件可能顯示如下：
 
 ```js
 {
@@ -172,7 +172,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 >[!NOTE]
 >
->若要下載適當的圖示，請瀏覽至Adobe光譜](https://spectrum.adobe.com/page/icons/)上的[圖示頁面，並搜尋「[!DNL Data]」。
+>若要下載適當的圖示，請瀏覽至Adobe Spectrum](https://spectrum.adobe.com/page/icons/)上的[圖示頁面，並搜尋「[!DNL Data]」。
 
 使用者選取文字欄位旁的按鈕時，依[先前所述方式](#open-data-element)呼叫 `window.extensionBridge.openDataElementSelector`。這會顯示可供使用者選擇的使用者資料元素清單，而不是要求他們記住名稱並輸入百分比符號。使用者選取資料元素後，您將會收到兩側加上百分比符號的所選資料元素名稱 (除非您將 `tokenize` 選項設定為 `false`)。屆時，建議您將結果填入文字欄位中。
 

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Marketo Engage；marketo engage；Marketo；對應
 solution: Experience Platform
-title: Marketo EngageSource的對應欄位
+title: Marketo Engage Source的對應欄位
 description: 下表包含Marketo資料集中欄位與其對應XDM欄位之間的對應。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 2%
 
 ## 活動 {#activities}
 
-[!DNL Marketo]來源現在支援其他標準活動。 若要使用標準活動，您必須使用[結構描述自動產生公用程式](../marketo/marketo-namespaces.md)來更新結構描述，因為如果您建立新的`activities`資料流而不更新結構描述，對應範本將會失敗，因為新的目標欄位將不會出現在結構描述中。 如果您選擇不更新您的結構描述，您仍然可以建立新的資料流並解除任何錯誤。 不過，任何新欄位或更新後的欄位都不會內嵌到Platform中。
+[!DNL Marketo]來源現在支援其他標準活動。 若要使用標準活動，您必須使用[結構描述自動產生公用程式](../marketo/marketo-namespaces.md)來更新結構描述，因為如果您建立新的`activities`資料流而不更新結構描述，對應範本將會失敗，因為新的目標欄位將不會出現在結構描述中。 如果您選擇不更新您的結構描述，您仍然可以建立新的資料流並解除任何錯誤。 不過，任何新欄位或更新後的欄位都不會內嵌到Experience Platform中。
 
 閱讀[XDM體驗事件類別](../../../../xdm/classes/experienceevent.md)的檔案，以瞭解XDM類別和XDM欄位群組的詳細資訊。
 
 >[!NOTE]
 >
->`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)`來源欄位是必須使用Experience PlatformUI中的&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;選項新增的計算欄位。 閱讀有關[新增計算欄位](../../../../data-prep/ui/mapping.md#calculated-fields)的教學課程，以瞭解詳細資訊。
+>`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)`來源欄位是必須使用Experience Platform UI中的&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;選項新增的計算欄位。 閱讀有關[新增計算欄位](../../../../data-prep/ui/mapping.md#calculated-fields)的教學課程，以瞭解詳細資訊。
 
 | Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -415,4 +415,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-閱讀本檔案後，您已深入瞭解[!DNL Marketo]資料集與其對應XDM欄位之間的對應關係。 請參閱有關[建立 [!DNL Marketo] 來源連線](../../../tutorials/ui/create/adobe-applications/marketo.md)的教學課程，以完成您的[!DNL Marketo]資料流。
+閱讀本檔案後，您已經取得[!DNL Marketo]資料集與其對應XDM欄位之間對應關係的insight。 請參閱有關[建立 [!DNL Marketo] 來源連線](../../../tutorials/ui/create/adobe-applications/marketo.md)的教學課程，以完成您的[!DNL Marketo]資料流。

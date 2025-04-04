@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，將使用者與許可權和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 50d768eeb0dc8fa85af113db7790ad3e3258ea64
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3818'
 ht-degree: 0%
 
 ---
@@ -202,7 +202,7 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Data Governance] | [!UICONTROL 管理使用標籤] | 存取讀取、建立和刪除使用標籤。 |
 | [!DNL Data Governance] | [!UICONTROL 管理資料使用原則] | 讀取、建立、編輯和刪除資料使用原則的存取權。 |
 | [!DNL Data Governance] | [!UICONTROL 檢視資料使用原則] | 屬於您組織的資料使用原則的唯讀存取權。 |
-| [!DNL Data Governance] | [!UICONTROL 檢視使用者活動記錄] | 唯讀存取權，可檢視Platform活動中記錄的[稽核記錄](../landing/governance-privacy-security/audit-logs/overview.md)。 |
+| [!DNL Data Governance] | [!UICONTROL 檢視使用者活動記錄] | 唯讀存取權，可檢視Experience Platform活動中記錄的[稽核記錄](../landing/governance-privacy-security/audit-logs/overview.md)。 |
 | [!DNL Data Governance] | [!UICONTROL 檢視隱私主控台] | 對隱私權主控台的唯讀存取。 |
 | [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 讀取、建立、編輯和停用來源的存取權。 |
 | [!DNL Data Ingestion] | [!UICONTROL 檢視來源] | 以唯讀方式存取&#x200B;**[!UICONTROL 目錄]**&#x200B;索引標籤中的可用來源，以及&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤中的已驗證來源。 |
@@ -281,7 +281,7 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Profile Management] | [!UICONTROL 管理設定檔設定] | 存取以讀取及編輯所有設定檔設定。 |
 | [!DNL Prospects] | [!UICONTROL 檢視潛在客戶] | 對潛在客戶結構描述、設定檔、對象和潛在客戶摺疊式功能表的唯讀存取權。 |
 | [!DNL Prospects] | [!UICONTROL 管理潛在客戶] | 能夠建立和管理潛在客戶結構、設定檔和對象。 潛在客戶設定追蹤的唯讀存取權。 |
-| [!DNL Query Service] | [!UICONTROL 管理查詢] | 存取Platform資料的讀取、建立、編輯和刪除結構化SQL查詢。 |
+| [!DNL Query Service] | [!UICONTROL 管理查詢] | 存取Experience Platform資料的讀取、建立、編輯和刪除結構化SQL查詢。 |
 | [!DNL Query Service] | [!UICONTROL 管理查詢服務整合] | 存取以建立、更新和刪除不會到期的認證以進行查詢服務存取。 |
 | [!DNL Query Service] | [!UICONTROL 管理查詢工作階段] | 能夠逐出現有會議。 |
 | [!DNL Query Service] | [!UICONTROL 管理允許清單] | 能夠管理組織的IP限制。 |

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查詢；查詢編輯器；查詢編輯器；查詢編輯器；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢；查詢編輯器；查詢編輯器；查詢編輯器；
 solution: Experience Platform
 title: 查詢服務認證指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1830'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 >[!NOTE]
 >
->此認證面板不會自動提供給所有使用者使用。如果您需要，請聯絡您的Adobe帳戶團隊，以請求將[!UICONTROL 認證]索引標籤包含在查詢服務工作區中。 如有要求，此變更會涵蓋整個組織，並由Adobe的工程團隊執行。 這不是由使用者控制的設定。
+>此認證面板不會自動提供給所有使用者使用。如果您需要，請聯絡您的Adobe帳戶團隊以請求將[!UICONTROL 認證]索引標籤包含在查詢服務工作區中。 如有要求，此變更將適用於整個組織，並由Adobe的工程團隊執行。 這不是由使用者控制的設定。
 
 ## 到期的認證 {#expiring-credentials}
 
@@ -32,7 +32,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 **[!UICONTROL 即將到期的認證]**&#x200B;區段提供下列資訊：
 
-- **[!UICONTROL 主機]**：要連線使用者端的主機名稱。 這會合併您的組織名稱，如同在Platform UI的頂端功能區中所示。
+- **[!UICONTROL 主機]**：要連線使用者端的主機名稱。 這會合併您的組織名稱，如同在Experience Platform UI的頂端功能區中所示。
 - **[!UICONTROL 連線埠]**：要連線之主機的連線埠號碼。
 - **[!UICONTROL 資料庫]**：要連線使用者端的資料庫名稱。
 - **[!UICONTROL 使用者名稱]**：用來連線到查詢服務的使用者名稱。
@@ -42,29 +42,29 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 >[!TIP]
 >
->若要變更您即將到期的認證連線至查詢服務的工作階段期限，請瀏覽至[Admin Console](https://adminconsole.adobe.com/)，並在熒幕上選取下列選項： **設定** > **隱私權和安全性** > **驗證設定** > **進階設定** > **工作階段期限上限**。
+>若要變更您即將到期的認證連線至查詢服務的工作階段期限，請瀏覽至[Admin Console](https://adminconsole.adobe.com/)，並在熒幕選項上選取下列專案： **設定** > **隱私權和安全性** > **驗證設定** > **進階設定** > **工作階段期限上限**。
 >
->![反白顯示「隱私權與安全性」、「驗證設定」和「最大工作階段壽命」的「Admin Console設定」標籤。](../images/ui/credentials/max-session-life.png)
+>![反白顯示「隱私權與安全性」、「驗證設定」和「最長工作階段壽命」的Admin Console設定標籤。](../images/ui/credentials/max-session-life.png)
 >
 >請參閱Adobe說明檔案，以取得有關Admin Console所提供的[進階設定](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings)的詳細資訊。
 
 ### 連線至查詢工作階段中的Customer Journey Analytics資料 {#connect-to-customer-journey-analytics}
 
-使用具有Power BI或Tableau的Customer Journey AnalyticsBI延伸模組，存取具有SQL的Customer Journey Analytics[資料檢視](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views)。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
+使用Customer Journey Analytics BI擴充功能搭配Power BI或Tableau，使用SQL存取您的Customer Journey Analytics [資料檢視](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views)。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
 
-請參閱檔案以瞭解如何[將Query Service連線到各種案頭使用者端應用程式](../clients/overview.md)，例如[Power BI](../clients/power-bi.md)或[Tableau](../clients/tableau.md)
+請參閱檔案以瞭解如何[將Query Service連線至各種案頭使用者端應用程式](../clients/overview.md)，例如[Power BI](../clients/power-bi.md)或[Tableau](../clients/tableau.md)
 
 >[!IMPORTANT]
 >
 >需要Customer Journey Analytics工作區專案和資料檢視才能使用此功能。
 
-若要在Power BI或Tableau中存取您的Customer Journey Analytics資料，請選取[!UICONTROL 資料庫]下拉式功能表，然後從可用選項中選取`prod:cja`。 接著，複製您的[!DNL Postgres]認證引數（主機、連線埠、資料庫、使用者名稱及其他），以用於您的Power BI或Tableau設定。
+若要在Power BI或Tableau中存取Customer Journey Analytics資料，請選取[!UICONTROL 資料庫]下拉式功能表，然後從可用選項中選取`prod:cja`。 接著，複製您的[!DNL Postgres]認證引數（主機、連線埠、資料庫、使用者名稱及其他），以用於您的Power BI或Tableau設定。
 
 ![資料庫下拉式清單反白顯示的[查詢服務認證]索引標籤。](../images/ui/credentials/database-dropdown.png)
 
 >[!NOTE]
 >
->當您連線Power BI或Tableau以Customer Journey Analytics時，會使用查詢服務「並行工作階段」權益。 如果需要其他工作階段和查詢，可購買額外的臨時查詢使用者套件附加元件，以取得五個額外的並行工作階段和一個額外的並行查詢。
+>當您將Power BI或Tableau連線至Customer Journey Analytics時，將會使用查詢服務「並行工作階段」權益。 如果需要其他工作階段和查詢，可購買額外的臨時查詢使用者套件附加元件，以取得五個額外的並行工作階段和一個額外的並行查詢。
 
 您也可以直接從Query Editor或Postgres CLI存取您的Customer Journey Analytics資料。 若要這麼做，請在撰寫查詢時參考`cja`資料庫。 請參閱查詢編輯器[查詢撰寫指南](./user-guide.md#query-authoring)，以取得如何撰寫、執行和儲存查詢的詳細資訊。
 
@@ -99,7 +99,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 ### 產生認證 {#generate-credentials}
 
-若要建立一組不會到期的認證，請返回Platform UI並從左側導覽選取&#x200B;**[!UICONTROL 查詢]**&#x200B;以存取[!UICONTROL 查詢]工作區。 接著，選取&#x200B;**[!UICONTROL 認證]**&#x200B;標籤，接著選取&#x200B;**[!UICONTROL 產生認證]**。
+若要建立一組不會到期的認證，請返回Experience Platform UI並從左側導覽選取&#x200B;**[!UICONTROL 查詢]**&#x200B;以存取[!UICONTROL 查詢]工作區。 接著，選取&#x200B;**[!UICONTROL 認證]**&#x200B;標籤，接著選取&#x200B;**[!UICONTROL 產生認證]**。
 
 ![顯示[認證]索引標籤和[產生認證]的查詢儀表板。](../images/ui/credentials/generate-credentials.png)
 

@@ -5,7 +5,7 @@ title: 在使用者介面中建立ServiceNow Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立ServiceNow來源連線。
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 在使用者介面中建立[!DNL ServiceNow]來源連線
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL ServiceNow]來源聯結器的步驟。
+Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面建立[!DNL ServiceNow]來源聯結器的步驟。
 
 ## 快速入門
 
@@ -29,7 +29,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ### 收集必要的認證
 
-若要在[!DNL Platform]上存取您的[!DNL ServiceNow]帳戶，您必須提供下列值：
+若要在[!DNL Experience Platform]上存取您的[!DNL ServiceNow]帳戶，您必須提供下列值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
@@ -41,7 +41,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 連線您的[!DNL ServiceNow]帳戶
 
-收集必要的認證後，您可以依照下列步驟將[!DNL ServiceNow]帳戶連結至[!DNL Platform]。
+收集必要的認證後，您可以依照下列步驟將[!DNL ServiceNow]帳戶連結至[!DNL Experience Platform]。
 
 登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
 
@@ -67,4 +67,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL ServiceNow]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Platform]](../../dataflow/customer-success.md)。
+依照本教學課程中的指示，您已建立與[!DNL ServiceNow]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Experience Platform]](../../dataflow/customer-success.md)。

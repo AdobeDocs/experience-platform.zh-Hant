@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 監控資料擷取
 description: 本使用手冊提供如何在Adobe Experience Platform使用者介面中監視資料的步驟。 本指南會要求您擁有Adobe ID並存取Adobe Experience Platform。
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # 監視資料攝取
 
-資料內嵌可讓您將資料內嵌至Adobe Experience Platform。 您可以使用批次擷取，這可讓您使用各種檔案型別（例如CSV）插入資料，或是使用串流擷取，可讓您使用串流端點即時擷取您的資料到[!DNL Platform]。
+資料內嵌可讓您將資料內嵌至Adobe Experience Platform。 您可以使用批次擷取，這可讓您使用各種檔案型別（例如CSV）插入資料，或是使用串流擷取，可讓您使用串流端點即時擷取您的資料到[!DNL Experience Platform]。
 
 本使用手冊提供如何在Adobe Experience Platform使用者介面中監視資料的步驟。 本指南會要求您擁有Adobe ID並存取Adobe Experience Platform。
 
@@ -30,9 +30,9 @@ ht-degree: 4%
 >
 >若要計算特定日期的總事件數，請使用下列運算式： `total events / day = ingestion rate * 60 * 60 * 24`。
 
-在[Experience PlatformUI](https://platform.adobe.com)中，選取左側導覽功能表上的&#x200B;**[!UICONTROL 監視]**，然後選取&#x200B;**[!UICONTROL 串流處理端對端]**。
+在[Experience Platform UI](https://platform.adobe.com)中，選取左側導覽功能表上的&#x200B;**[!UICONTROL 監視]**，然後選取&#x200B;**[!UICONTROL 串流處理端對端]**。
 
-顯示&#x200B;**[!UICONTROL 串流端對端]**&#x200B;監視頁面。 此工作區提供顯示[!DNL Platform]接收串流事件的速率的圖表、顯示[[!DNL Real-Time Customer Profile]](../../profile/home.md)成功處理串流事件的速率的圖表，以及傳入資料的詳細清單。
+顯示&#x200B;**[!UICONTROL 串流端對端]**&#x200B;監視頁面。 此工作區提供顯示[!DNL Experience Platform]接收串流事件的速率的圖表、顯示[[!DNL Real-Time Customer Profile]](../../profile/home.md)成功處理串流事件的速率的圖表，以及傳入資料的詳細清單。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

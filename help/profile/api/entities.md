@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform可讓您使用RESTful API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用設定檔API存取實體（通常稱為「設定檔」）。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >不建議使用個人資料存取API進行ExperienceEvent查閱。 請針對需要查詢ExperienceEvents的使用案例使用運算屬性等功能。 如需此變更的詳細資訊，請聯絡Adobe客戶服務。
 
-Adobe Experience Platform可讓您使用RESTful API或使用者介面存取[!DNL Real-Time Customer Profile]資料。 本指南會概述如何使用API存取實體（通常稱為「設定檔」）。 如需使用[!DNL Platform] UI存取設定檔的詳細資訊，請參閱[設定檔使用手冊](../ui/user-guide.md)。
+Adobe Experience Platform可讓您使用RESTful API或使用者介面存取[!DNL Real-Time Customer Profile]資料。 本指南會概述如何使用API存取實體（通常稱為「設定檔」）。 如需使用[!DNL Experience Platform] UI存取設定檔的詳細資訊，請參閱[設定檔使用手冊](../ui/user-guide.md)。
 
 ## 快速入門
 
@@ -1223,7 +1223,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 ## 後續步驟
 
-依照本指南，您已成功存取[!DNL Real-Time Customer Profile]資料欄位、設定檔和時間序列資料。 若要瞭解如何存取儲存在[!DNL Platform]中的其他資料資源，請參閱[資料存取總覽](../../data-access/home.md)。
+依照本指南，您已成功存取[!DNL Real-Time Customer Profile]資料欄位、設定檔和時間序列資料。 若要瞭解如何存取儲存在[!DNL Experience Platform]中的其他資料資源，請參閱[資料存取總覽](../../data-access/home.md)。
 
 ## 附錄 {#appendix}
 

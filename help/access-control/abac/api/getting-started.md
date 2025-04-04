@@ -4,9 +4,9 @@ title: 屬性式存取控制API快速入門
 description: 以屬性為基礎的存取控制API可讓您以程式設計方式管理Adobe Experience Platform中的角色和存取原則。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '328'
 ht-degree: 17%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 17%
 
 ## 讀取範例 API 呼叫
 
-本指南提供範例 API 呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需在範例API呼叫檔案中所使用的慣例相關資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
+本指南提供範例 API 呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需範例API呼叫檔案中所使用慣例的詳細資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
 
 ## 收集所需標頭的值
 
-本指南要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫Platform API。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
+本指南要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫Experience Platform API。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

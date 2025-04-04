@@ -1,9 +1,10 @@
 ---
 title: 將GitHub Copilot和Visual Studio Code連線至查詢服務
 description: 瞭解如何將GitHub Copilot和Visual Studio Code與Adobe Experience Platform查詢服務連結。
-source-git-commit: f0c5b311721497bf2a14ca49dc5f1c9653e85efc
+exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1378'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,11 @@ ht-degree: 0%
 
 本指南要求您已存取GitHub帳戶並註冊[!DNL GitHub Copilot]。 您可以[從GitHub網站](https://github.com/github-copilot/signup)註冊。 您也需要[!DNL VS Code]。 您可從其官方網站](https://code.visualstudio.com/download)下載[1}。 [!DNL VS Code] 
 
-安裝[!DNL VS Code]並啟動您的[!DNL Copilot]訂閱後，請取得您的連線認證以進行Experience Platform。 這些認證位於Platform UI中[!UICONTROL 查詢]工作區的[!UICONTROL 認證]索引標籤中。 閱讀[的認證指南，瞭解如何在平台UI](../ui/credentials.md)中找到這些值。 如果您目前無法存取[!UICONTROL 查詢]工作區，請連絡組織管理員。
+安裝[!DNL VS Code]並啟動您的[!DNL Copilot]訂閱後，請取得Experience Platform的連線認證。 這些認證位於Experience Platform UI中[!UICONTROL 查詢]工作區的[!UICONTROL 認證]索引標籤中。 閱讀[的認證指南，瞭解如何在Experience Platform UI](../ui/credentials.md)中找到這些值。 如果您目前無法存取[!UICONTROL 查詢]工作區，請連絡組織管理員。
 
 ### 必要的[!DNL Visual Studio Code]副檔名 {#required-extensions}
 
-若要直接在程式碼編輯器中有效管理和查詢您的Platform SQL資料庫，需要下列[!DNL Visual Studio Code]擴充功能。 下載並安裝這些擴充功能。
+您必須使用下列[!DNL Visual Studio Code]擴充功能，才能直接在程式碼編輯器中有效管理和查詢您的Experience Platform SQL資料庫。 下載並安裝這些擴充功能。
 
 - [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)：使用SQLTools擴充功能來管理及查詢多個SQL資料庫。 它包含查詢執行器、SQL格式化程式和連線總管等功能，並支援其他驅動程式以提高開發人員的生產力。 如需詳細資訊，請閱讀Visual Studio Marketplace的概觀。
 - [SQLTools PostgreSQL/Cockroach驅動程式](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg)：此擴充功能可讓您直接在程式碼編輯器中連線、查詢及管理PostgreSQL與CockroachDB資料庫。
@@ -48,17 +49,17 @@ ht-degree: 0%
 
 ### 輸入連線設定 {#input-connection-settings}
 
-[!DNL Connection Settings]檢視出現。 在SQLTools [!DNL Connection Assistant]的適當欄位中輸入您的Platform連線認證。 下表會說明必要的值。
+[!DNL Connection Settings]檢視出現。 在SQLTools [!DNL Connection Assistant]的適當欄位中輸入您的Experience Platform連線認證。 下表會說明必要的值。
 
 | 屬性 | 說明 |
 | --- |--- |
 | [!DNL Connection name] | 提供`Prod_MySQL_Server`之類的&quot;[!DNL Connection name]&quot;，其內容應具描述性並清楚指出其用途（例如MySQL伺服器的生產環境）。 最佳實務包括：<br><ul><li>遵循您組織的命名慣例，以確保其在系統內是唯一的。</li><li>保持簡潔，以保持清晰度並避免與其他連線混淆。</li><li>在名稱中包含連線功能或環境的相關詳細資訊。</li></ul> |
-| [!DNL Connect using] | 使用&#x200B;**[!DNL Server and Port]**&#x200B;選項指定伺服器的位址（主機名稱）和連線埠號碼，以建立與平台的直接連線 |
-| [!DNL Server address] | 輸入您的Platform Postgres認證中提供的&#x200B;**[!UICONTROL 主機]**&#x200B;值，例如`acmeprod.platform-query.adobe.io`。 |
-| [!DNL Port] | Platform服務的這個值通常是`80`。 |
-| [!DNL Database] | 輸入您的Platform Postgres認證中提供的&#x200B;**[!UICONTROL 資料庫]**&#x200B;值，例如`prod:all`。 |
-| [!DNL Username] | 此屬性是指您的組織ID。 輸入您的Platform Postgres認證中提供的&#x200B;**[!UICONTROL 使用者名稱]**&#x200B;值。 |
-| [!DNL Password] | 此屬性是您的存取權杖。 輸入您的Platform Postgres認證中提供的&#x200B;**[!UICONTROL 密碼]**&#x200B;值。 |
+| [!DNL Connect using] | 使用&#x200B;**[!DNL Server and Port]**&#x200B;選項來指定伺服器的位址（主機名稱）和連線埠號碼，以建立與Experience Platform的直接連線 |
+| [!DNL Server address] | 輸入您的Experience Platform Postgres認證中提供的&#x200B;**[!UICONTROL 主機]**&#x200B;值，例如`acmeprod.platform-query.adobe.io`。 |
+| [!DNL Port] | Experience Platform服務的此值通常為`80`。 |
+| [!DNL Database] | 輸入您的Experience Platform Postgres認證中提供的&#x200B;**[!UICONTROL 資料庫]**&#x200B;值，例如`prod:all`。 |
+| [!DNL Username] | 此屬性是指您的組織ID。 輸入您的Experience Platform Postgres認證中提供的&#x200B;**[!UICONTROL 使用者名稱]**&#x200B;值。 |
+| [!DNL Password] | 此屬性是您的存取權杖。 輸入您的Experience Platform Postgres認證中提供的&#x200B;**[!UICONTROL 密碼]**&#x200B;值。 |
 
 ![連線小幫手工作區中數個設定已反白顯示。](../images/clients/github-copilot/connection-settings.png)
 
@@ -90,7 +91,7 @@ ht-degree: 0%
 
 ## [!DNL GitHub Copilot]快速指南
 
-連線至您的Platform執行個體後，您就可以使用[!DNL Copilot]做為AI程式碼助理，協助您更快且更自信地撰寫程式碼。 本節說明其主要功能及使用方式。
+連線至您的Experience Platform執行個體後，您就可以使用[!DNL Copilot]做為AI編碼助理，協助您更快且更自信地撰寫程式碼。 本節說明其主要功能及使用方式。
 
 ## 快速入門：[!DNL GitHub Copilot] {#get-started-with-copilot}
 
@@ -150,4 +151,4 @@ There are inline features for chat including doc, expalin, fix and test
 
 ## 後續步驟
 
-您現在已準備好直接從程式碼編輯器有效率地查詢您的Platform資料庫，並使用[!DNL GitHub Copilot]的AI支援程式碼建議來簡化撰寫和最佳化SQL查詢。 如需如何撰寫和執行查詢的詳細資訊，請參閱查詢執行的[指南](../best-practices/writing-queries.md)。
+您現在已準備好直接從程式碼編輯器有效率地查詢Experience Platform資料庫，並使用[!DNL GitHub Copilot]的AI支援程式碼建議來簡化撰寫和最佳化SQL查詢。 如需如何撰寫和執行查詢的詳細資訊，請參閱查詢執行的[指南](../best-practices/writing-queries.md)。

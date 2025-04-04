@@ -3,9 +3,9 @@ keywords: Experience Platform；查詢服務；查詢服務；巢狀資料結構
 title: 在查詢服務中使用巢狀資料結構
 description: 本檔案提供使用CTAS和INSERT INTO陳述式處理和轉換巢狀資料欄位的工作範例。
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Adobe Experience Platform查詢服務支援使用巢狀資料欄位。 企業資料結構的複雜度可能會讓轉換或處理這些資料變得複雜。 本檔案提供範例，說明如何建立、處理或轉換具有複雜資料型別（包括巢狀資料結構）的資料集。
 
-Query Service提供[!DNL PostgreSQL]介面，可對Experience Platform所管理的所有資料集執行SQL查詢。 Platform支援在表格欄（例如結構、陣列、對映和深度巢狀結構、陣列和對映）中使用基本或複雜的資料型別。 資料集也可以包含巢狀結構，其中的欄資料型別可以像巢狀結構的陣列一樣複雜，或是對應對應，其中索引鍵/值組的值可以是具有多個巢狀層級的結構。
+查詢服務提供[!DNL PostgreSQL]介面，可對Experience Platform所管理的所有資料集執行SQL查詢。 Experience Platform支援在表格欄（例如struct、array、map及深度巢狀結構、array和map）中使用基本或複雜的資料型別。 資料集也可以包含巢狀結構，其中的欄資料型別可以像巢狀結構的陣列一樣複雜，或是對應對應，其中索引鍵/值組的值可以是具有多個巢狀層級的結構。
 
 ## 快速入門
 

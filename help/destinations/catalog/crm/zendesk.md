@@ -3,9 +3,9 @@ title: Zendesk連線
 description: Zendesk目的地可讓您匯出帳戶資料，並在Zendesk中根據您的業務需求加以啟用。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1479'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ## 使用案例 {#use-cases}
 
-多管道B2C平台的客戶服務部門想要確保其客戶獲得順暢的個人化體驗。 部門可以從他們自己的離線資料建立對象，以建立新的使用者設定檔或更新不同互動（例如購買、退貨等）的現有設定檔資訊 並從Adobe Experience Platform將這些對象傳送至[!DNL Zendesk]。 在[!DNL Zendesk]中取得更新的資訊，可確保客戶服務代理程式能立即取得客戶的最新資訊，以更快的速度回應和解決問題。
+多管道B2C平台的客戶服務部門想要確保其客戶獲得順暢的個人化體驗。 此部門可以從其本身的離線資料建立對象，以建立新的使用者設定檔，或更新來自不同互動（例如購買、退貨等）的現有設定檔資訊，並從Adobe Experience Platform將這些對象傳送至[!DNL Zendesk]。 在[!DNL Zendesk]中取得更新的資訊，可確保客戶服務代理程式能立即取得客戶的最新資訊，以更快的速度回應和解決問題。
 
 ## 先決條件 {#prerequisites}
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 ### [!DNL Zendesk]必要條件 {#prerequisites-destination}
 
-若要將資料從Platform匯出至您的[!DNL Zendesk]帳戶，您必須擁有[!DNL Zendesk]帳戶。
+若要將資料從Experience Platform匯出至您的[!DNL Zendesk]帳戶，您需要有[!DNL Zendesk]帳戶。
 
 #### 收集[!DNL Zendesk]認證 {#gather-credentials}
 
@@ -60,8 +60,8 @@ ht-degree: 3%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 根據[對象排程](#schedule-segment-export-example)步驟期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Zendesk]中的每個區段狀態都會以來自Platform的對應對象狀態更新。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 根據[對象排程](#schedule-segment-export-example)步驟期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Zendesk]中的每個區段狀態都會以來自Experience Platform的對應對象狀態更新。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -81,14 +81,14 @@ ht-degree: 3%
 * **[!UICONTROL 持有人權杖]**：您已在[!DNL Zendesk]帳戶中產生的存取權杖。
 
 若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**。
-![平台UI熒幕擷圖顯示如何驗證。](../../assets/catalog/crm/zendesk/authenticate-destination.png)
+![Experience Platform UI熒幕擷圖顯示如何驗證。](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL 已連線]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
-![顯示目的地詳細資訊的平台UI熒幕擷取畫面。](../../assets/catalog/crm/zendesk/destination-details.png)
+![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/crm/zendesk/destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
@@ -110,7 +110,7 @@ ht-degree: 3%
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Zendesk]目的地，您必須完成欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
+若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Zendesk]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
 
 在&#x200B;**[!UICONTROL 目標欄位]**&#x200B;中指定的屬性應完全依照屬性對應表格中的說明命名，因為這些屬性將構成要求內文。
 
@@ -131,7 +131,7 @@ ht-degree: 3%
      | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * 以下顯示使用這些對應的範例：
-     ![具有屬性對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/mappings.png)
+     ![具有屬性對應的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -141,12 +141,12 @@ ht-degree: 3%
 
 ### 排程對象匯出和範例 {#schedule-segment-export-example}
 
-在啟動工作流程的[[!UICONTROL 排程對象匯出]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟中，您必須手動將Platform對象對應到[!DNL Zendesk]中的自訂欄位屬性。
+在啟動工作流程的[[!UICONTROL 排程對象匯出]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟中，您必須手動將Experience Platform對象對應到[!DNL Zendesk]中的自訂欄位屬性。
 
 若要這麼做，請選取每個區段，然後在&#x200B;**[!UICONTROL 對應ID]**&#x200B;欄位中輸入來自[!DNL Zendesk]的對應自訂欄位屬性。
 
 範例如下：
-![顯示排程對象匯出的平台UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![Experience Platform UI熒幕擷圖範例，顯示排程對象匯出。](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## 驗證資料匯出 {#exported-data}
 
@@ -154,10 +154,10 @@ ht-degree: 3%
 
 1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**&#x200B;並導覽至目的地清單。
 1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL 啟用資料]**標籤，然後選取對象名稱。
-   ![顯示目的地啟用資料的Platform UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
+   ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數與區段中的計數相對應。
-   ![顯示區段的Platform UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/segment.png)
+   ![Experience Platform UI熒幕擷圖範例，顯示區段。](../../assets/catalog/crm/zendesk/segment.png)
 
 1. 登入[!DNL Zendesk]網站，然後導覽至&#x200B;**[!UICONTROL 連絡人]**&#x200B;頁面，以檢查是否已新增對象中的設定檔。 此清單可設定為顯示使用audience**[!UICONTROL 對應ID]**和對象狀態所建立之其他欄位的欄。
    ![Zendesk UI熒幕擷圖顯示「連絡人」頁面，其中包含以對象名稱建立的其他欄位。](../../assets/catalog/crm/zendesk/contacts.png)
@@ -183,7 +183,7 @@ ht-degree: 3%
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2023 年 4 月 | 檔案更新 | <ul><li>我們已更新[使用案例](#use-cases)區段，針對客戶何時可受益於使用此目的地提供更清楚的範例。</li> <li>我們已更新[對應](#mapping-considerations-example)區段，以反映正確的必要對應。 此目的地必須有`Attribute: last_name`和`Identity: email`目標對應。 如果缺少這些對應，則會忽略任何其他對應，且不會傳送給[!DNL Zendesk]。</li> <li>我們已更新[對應](#mapping-considerations-example)區段，其中包含強制和選用對應的明確範例。</li></ul> |
+| 2023 年 4 月 | 文件更新 | <ul><li>我們已更新[使用案例](#use-cases)區段，針對客戶何時可受益於使用此目的地提供更清楚的範例。</li> <li>我們已更新[對應](#mapping-considerations-example)區段，以反映正確的必要對應。 此目的地必須有`Attribute: last_name`和`Identity: email`目標對應。 如果缺少這些對應，則會忽略任何其他對應，且不會傳送給[!DNL Zendesk]。</li> <li>我們已更新[對應](#mapping-considerations-example)區段，其中包含強制和選用對應的明確範例。</li></ul> |
 | 2023 年 3 月 | 首次發行 | 初始目的地版本和檔案發佈。 |
 
 {style="table-layout:auto"}

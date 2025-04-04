@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；資料準
 title: 使用「資料準備」將部分列更新傳送到「即時客戶個人檔案」
 description: 瞭解如何使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* 已棄用透過DCS入口擷取用於設定檔更新的體驗資料模型(XDM)實體更新訊息(含JSONPATCH作業)。 作為替代方法，請遵循本指南中概述的步驟。
+>* 已棄用透過DCS入口擷取用於設定檔更新的體驗資料模型(XDM)實體更新訊息(含JSON PATCH作業)。 作為替代方法，請遵循本指南中概述的步驟。
 >
 >* 您也可以使用HTTP API來源來[將原始資料擷取到DCS入口](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection)，並指定必要的資料對應，以將您的資料轉換為符合XDM規範的訊息以進行設定檔更新。
 >
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在[!DNL Data Prep]中使用串流更新插入，傳送部分資料列更新至[!DNL Real-Time Customer Profile]資料，同時透過單一API要求建立和建立新的身分連結。
 
-透過串流更新插入，您可以在擷取期間將該資料轉譯為[!DNL Real-Time Customer Profile]個PATCH請求時保留資料格式。 根據您提供的輸入，[!DNL Data Prep]可讓您傳送單一API裝載，並將資料轉譯為[!DNL Real-Time Customer Profile]PATCH和[!DNL Identity Service]建立要求。
+透過串流更新插入，您可以在擷取期間將該資料轉譯為[!DNL Real-Time Customer Profile]個PATCH請求時保留資料格式。 根據您提供的輸入，[!DNL Data Prep]可讓您傳送單一API裝載，並將資料轉譯為[!DNL Real-Time Customer Profile] PATCH和[!DNL Identity Service] CREATE要求。
 
 [!DNL Data Prep]使用標頭引數來區分插入和更新插入。 所有使用更新插入的列都必須有標題。 您可以使用包含或不包含身分描述元的更新插入。 如果您使用含身分的upsert，您必須遵循[設定身分資料集](#configure-the-identity-dataset)一節中概述的設定步驟。 如果您使用沒有身分的upsert，則不需要在請求中提供身分設定。 如需詳細資訊，請閱讀[不含身分的串流更新插入](#payload-without-identity-configuration)的區段。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 * [[!DNL Data Prep]](./home.md)： [!DNL Data Prep]可讓資料工程師對應、轉換及驗證與Experience Data Model (XDM)之間的資料。
 * [[!DNL Identity Service]](../identity-service/home.md)：跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
 * [即時客戶個人檔案](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶個人檔案。
-* [來源](../sources/home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
+* [來源](../sources/home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 
 ## 在[!DNL Data Prep]中使用串流更新插入 {#streaming-upserts-in-data-prep}
 

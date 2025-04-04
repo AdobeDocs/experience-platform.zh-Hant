@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4075'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->本節說明如何在UI中手動建立新結構描述。 如果您正在將CSV資料擷取至Platform，您可以使用機器學習(ML)演演算法，從範例CSV資料&#x200B;**產生結構描述**。 此工作流程會比對您的資料格式，並根據CSV檔案的結構和內容自動建立新結構描述。 如需此工作流程的詳細資訊，請參閱[ML輔助結構描述建立指南](../ml-assisted-schema-creation.md)。
+>本節說明如何在UI中手動建立新結構描述。 如果您正在將CSV資料擷取至Experience Platform，您可以使用機器學習(ML)演演算法，從範例CSV資料&#x200B;**產生結構描述**。 此工作流程會比對您的資料格式，並根據CSV檔案的結構和內容自動建立新結構描述。 如需此工作流程的詳細資訊，請參閱[ML輔助結構描述建立指南](../ml-assisted-schema-creation.md)。
 
 在[!UICONTROL 結構描述]工作區中，選取右上角的&#x200B;**[!UICONTROL 建立結構描述]**。
 
@@ -342,7 +342,7 @@ abstract="為設定檔啟用結構描述時，從此結構描述建立的任何�
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-結構描述現在已啟用以用於即時客戶個人檔案。 當Platform根據此結構描述將資料內嵌到資料集時，該資料將合併到您的整合設定檔資料中。
+結構描述現在已啟用以用於即時客戶個人檔案。 當Experience Platform根據此結構描述將資料內嵌到資料集時，該資料將合併到您的整合設定檔資料中。
 
 ## 編輯結構欄位的顯示名稱 {#display-names}
 
@@ -388,7 +388,7 @@ abstract="為設定檔啟用結構描述時，從此結構描述建立的任何�
 
 ## 後續步驟 {#next-steps}
 
-本檔案說明在Platform UI中建立和編輯結構描述的基本知識。 強烈建議您檢閱[結構描述建立教學課程](../../tutorials/create-schema-ui.md)，以瞭解在UI中建立完整結構描述（包括建立自訂欄位群組和資料型別）的完整工作流程 for 不重複使用案例。
+本檔案說明在Experience Platform UI中建立和編輯結構描述的基本知識。 強烈建議您檢閱[結構描述建立教學課程](../../tutorials/create-schema-ui.md)，以瞭解在UI中建立完整結構描述（包括建立自訂欄位群組和資料型別）的完整工作流程 for 不重複使用案例。
 
 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
 

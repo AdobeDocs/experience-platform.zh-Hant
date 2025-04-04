@@ -2,16 +2,16 @@
 title: 資料Distiller概觀
 description: 與您授權權益相關的查詢服務資料的Data Distiller使用限制摘要。
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
 # 資料Distiller概觀
 
-資料Distiller是一套產品，其中包括Adobe Experience Platform的部分功能。 透過資料Distiller，您可以透過在查詢服務中執行批次查詢，為即時客戶個人檔案或分析使用案例執行擷取後資料準備（例如清理、塑造和操控）。 您對Data Distiller的使用取決於您對平台型應用程式的權益。
+資料Distiller是一套產品，其中包括Adobe Experience Platform的部分功能。 透過資料Distiller，您可以透過在查詢服務中執行批次查詢，為即時客戶個人檔案或分析使用案例執行擷取後資料準備（例如清理、塑造和操控）。 您對Data Distiller的使用取決於您對Experience Platform型應用程式的權益。
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}

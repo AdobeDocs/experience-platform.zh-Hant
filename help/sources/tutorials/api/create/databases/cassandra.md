@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用流量服務API建立Apache Cassandra Source連線
 type: Tutorial
 description: 瞭解如何使用流量服務API將Apache Cassandra連線至Adobe Experience Platform。
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 11%
@@ -22,8 +22,8 @@ ht-degree: 11%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到Cassandra。
 
@@ -47,13 +47,13 @@ ht-degree: 11%
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
 * x-gw-ims-org-id： `{ORG_ID}`
 
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
 * x-sandbox-name： `{SANDBOX_NAME}`
 
@@ -73,7 +73,7 @@ POST /connections
 
 **要求**
 
-為了建立[!DNL Cassandra]連線，其唯一的連線規格ID必須提供為POST要求的一部分。 [!DNL Cassandra]的連線規格識別碼為`a8f4d393-1a6b-43f3-931f-91a16ed857f4`。
+為了建立[!DNL Cassandra]連線，必須在POST要求中提供其唯一的連線規格ID。 [!DNL Cassandra]的連線規格識別碼為`a8f4d393-1a6b-43f3-931f-91a16ed857f4`。
 
 ```shell
 curl -X POST \

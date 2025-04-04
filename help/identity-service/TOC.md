@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: 平台 Identity Service 指南
+breadcrumb-title: Experience Platform Identity Service指南
 user-guide-description: 跨裝置和系統橋接客戶身分識別，以提供個人化的數位體驗。
 feature: Identities
 role: Admin,Developer
-source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '145'
 ht-degree: 30%
 
 ---
@@ -47,4 +47,4 @@ ht-degree: 30%
 - [在UI中定義身分欄位](label-identities.md)
 - [隱私權請求處理](privacy.md)
 - [疑難排解指南](troubleshooting-guide.md)
-- [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+- [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；ui；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；結構描述登入；結構描述登入；結構描述；結構描述；結構描述；建立；資料型別；資料型別；
+keywords: Experience Platform；首頁；熱門主題；ui；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；結構描述登入；結構描述登入；結構描述；結構描述；結構描述；建立；資料型別；
 solution: Experience Platform
 title: 使用UI建立及編輯資料型別
 type: Tutorial
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯資料型別。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 >
 >如果欄位定義為特定資料型別，則無法在另一個結構描述中以不同的資料型別建立相同的欄位。 此限制適用於您組織的租使用者。
 
-本教學課程涵蓋在Platform使用者介面中建立和編輯自訂資料型別的步驟。
+本教學課程涵蓋在Experience Platform使用者介面中建立和編輯自訂資料型別的步驟。
 
 ## 先決條件 {#prerequisites}
 
@@ -37,7 +37,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 ## 開啟資料型別的[!DNL Schema Editor] {#data-type}
 
-在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**&#x200B;以開啟[!UICONTROL 結構描述]工作區，然後選取&#x200B;**[!UICONTROL 資料型別]**&#x200B;索引標籤。 畫面隨即顯示可用資料型別清單。 系統會根據資料型別的建立方式自動篩選資料型別清單。 預設設定會顯示Adobe定義的資料型別。 您還可以篩選清單以顯示您的組織建立的清單。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**&#x200B;以開啟[!UICONTROL 結構描述]工作區，然後選取&#x200B;**[!UICONTROL 資料型別]**&#x200B;索引標籤。 畫面隨即顯示可用資料型別清單。 系統會根據資料型別的建立方式自動篩選資料型別清單。 預設設定會顯示Adobe定義的資料型別。 您還可以篩選清單以顯示您的組織建立的清單。
 
 ![左側導覽中有[!UICONTROL 個結構描述]且[!UICONTROL 資料型別]反白顯示的[!UICONTROL 結構描述]工作區。](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -63,7 +63,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 ### 篩選資料型別 {#filter}
 
-可用資料類型清單已根據其建立方式預先進行篩選。選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL Standard]選項會顯示Adobe建立的實體，而[!UICONTROL Custom]選項則會顯示在您的組織內建立的實體。
+可用資料類型清單已根據其建立方式預先進行篩選。選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL 標準]選項會顯示Adobe建立的實體，而[!UICONTROL 自訂]選項則會顯示貴組織內建立的實體。
 
 ![ [!UICONTROL 結構描述]工作區的[!UICONTROL 資料型別]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
@@ -125,6 +125,6 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 ## 後續步驟 {#next-steps}
 
-本指南說明如何使用Platform UI建立及編輯資料型別。 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
+本指南說明如何使用Experience Platform UI建立和編輯資料型別。 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
 
 若要瞭解如何使用[!DNL Schema Registry] API管理資料型別，請參閱[資料型別端點指南](../../api/data-types.md)。

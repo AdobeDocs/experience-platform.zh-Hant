@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料流；資料流
 title: 設定資料流以從UI中的雲端儲存空間Source擷取批次資料
 description: 本教學課程提供如何設定新資料流的步驟，以便從UI中的雲端儲存空間來源擷取批次資料
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1929'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ## 新增資料
 
-建立雲端儲存空間帳戶後，**[!UICONTROL 新增資料]**&#x200B;步驟隨即顯示，提供介面讓您探索雲端儲存空間檔案階層，並選取您要帶入Platform的資料夾或特定檔案。
+建立雲端儲存空間帳戶後，**[!UICONTROL 新增資料]**&#x200B;步驟隨即顯示，提供介面讓您探索雲端儲存空間檔案階層，並選取您要帶入Experience Platform的資料夾或特定檔案。
 
 * 介面的左側是目錄瀏覽器，顯示您的雲端儲存空間檔案階層。
 * 介面的右側部分可讓您預覽相容資料夾或檔案中最多100列的資料。
@@ -83,13 +83,13 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-若要將特定檔案帶入Platform，請選取資料夾，然後選取您要擷取的檔案。 在此步驟中，您也可以使用檔案名稱旁的預覽圖示，來預覽指定資料夾中其他檔案的內容。
+若要將特定檔案帶入Experience Platform，請選取資料夾，然後選取您要擷取的檔案。 在此步驟中，您也可以使用檔案名稱旁的預覽圖示，來預覽指定資料夾中其他檔案的內容。
 
 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/select-file.png)
 
-## 提供資料流詳細資料
+## 提供資料流詳細資訊
 
 [!UICONTROL 資料流詳細資料]頁面可讓您選取要使用現有資料集還是新資料集。 在此程式中，您也可以設定要擷取至設定檔的資料，並啟用[!UICONTROL 錯誤診斷]、[!UICONTROL 部分擷取]和[!UICONTROL 警示]等設定。
 
@@ -127,7 +127,7 @@ ht-degree: 1%
 
 [!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
-Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
+Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
 
 成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
@@ -183,14 +183,14 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功建立資料流以從外部雲端儲存空間匯入資料，並深入瞭解監視資料集。 若要進一步瞭解如何建立資料流，您可以觀看下方的影片以補充您的學習。 此外，下游[!DNL Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需更多詳細資訊，請參閱下列檔案：
+依照本教學課程中的指示，您已成功建立資料流以從外部雲端儲存空間匯入資料，並取得監控資料集的insight。 若要進一步瞭解如何建立資料流，您可以觀看下方的影片以補充您的學習。 此外，下游[!DNL Experience Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用傳入的資料。 如需更多詳細資訊，請參閱下列檔案：
 
 * [[!DNL Real-Time Customer Profile] 概觀](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> 下列影片中顯示的[!DNL Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
+> 下列影片中顯示的[!DNL Experience Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 

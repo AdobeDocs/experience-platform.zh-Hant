@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Adobe Campaign Managed Cloud Services；行銷活動；campaign managed services
 title: Adobe Campaign Managed Cloud Services
-description: 瞭解如何使用使用者介面將Campaign ManagedCloud Service連結至Platform
+description: 瞭解如何使用使用者介面將Campaign Managed Cloud Services連線至Experience Platform
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '747'
 ht-degree: 1%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供了Managed Services平台，同時為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供適合環境。 如需詳細資訊，請瀏覽[Adobe Campaign v8檔案](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=zh-Hant)。
 
@@ -20,7 +20,7 @@ Adobe Campaign Managed Cloud Services來源可讓您將Adobe Campaign v8傳送�
 
 ## 先決條件
 
-建立來源連線以Experience PlatformCampaign v8之前，您必須先完成下列必要條件：
+建立來源連線以將Campaign v8帶至Experience Platform之前，您必須先完成下列必要條件：
 
 * [使用Adobe Campaign使用者端主控台設定事件記錄檔匯入](#view-delivery-and-tracking-log-data)
 * [建立XDM ExperienceEvent結構描述](#create-a-schema)
@@ -70,9 +70,9 @@ Adobe Campaign Managed Cloud Services來源可讓您將Adobe Campaign v8傳送�
 
 最後，您必須為結構描述建立資料集。 如需如何建立資料集的詳細指示，請閱讀[在UI](../../../catalog/datasets/user-guide.md)中建立資料集的指南。
 
-## 使用Platform UI建立Adobe Campaign Managed Cloud Services來源連線
+## 使用Adobe Campaign Managed Cloud Services UI建立Experience Platform來源連線
 
-現在您已在Campaign使用者端主控台中存取資料記錄、建立結構描述和資料集，接著可以繼續建立來源連線，將您的Campaign Managed Services資料引進Platform。
+現在您已在Campaign使用者端主控台中存取資料記錄、建立結構描述和資料集，接著可以繼續建立來源連線，將您的Campaign Managed Services資料引進Experience Platform。
 
 如需將Campaign v8傳遞記錄檔和追蹤記錄檔資料帶入Experience Platform的詳細指示，請閱讀[在UI中建立Campaigned Managed Services來源連線的指南](../../tutorials/ui/create/adobe-applications/campaign.md)。
 

@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: 發行說明；
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '985'
-ht-degree: 14%
+ht-degree: 28%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 14%
 
 **發行日期： 2020年4月8日**
 
-Adobe Experience Platform中的新功能：
+Adobe Experience Platform 的新功能：
 * [[!DNL Intelligent Services]](#intelligent)
 
 更新現有功能：
@@ -46,9 +46,9 @@ Adobe Experience Platform中的新功能：
 
 ## [!DNL Experience Data Model] (XDM)系統 {#xdm}
 
-標準化和互通性是[!DNL Experience Platform]背後的重要概念。 [!DNL Experience Data Model] (XDM)由Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構描述。
+標準化和互通性是[!DNL Experience Platform]背後的重要概念。 由Adobe驅動的[!DNL Experience Data Model] (XDM)致力於標準化客戶體驗資料並定義客戶體驗管理的結構描述。
 
-XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **新功能**
 
@@ -68,7 +68,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何�
 
 ## 資料治理 {#governance}
 
-Adobe Experience Platform 資料治理是一系列的策略和技術，用於管理客戶資料並確保符合適用於資料使用方式的法規、限制和政策。它在[!DNL Experience Platform]內各種層級扮演關鍵角色，包括編目、資料譜系、資料使用標籤、資料存取原則，以及行銷動作資料的存取控制。
+Adobe Experience Platform 資料治理是一系列的策略和技術，用於管理客戶資料並確保符合適用於資料使用方式的法規、限制和政策。它在 [!DNL Experience Platform] 的不同階層都扮演重要的角色，包括編目、資料譜系、資料使用標籤、資料存取政策，以及對行銷動作資料的存取控制。
 
 開始使用資料控管需要徹底瞭解適用於客戶資料的規定、合約義務和公司政策。 從那裡，可以套用適當的資料使用標籤來分類資料，並且可以透過資料使用原則的定義來控制其使用。
 
@@ -87,9 +87,9 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 如需詳細資訊，請參閱[資料控管概觀](../../data-governance/home.md)。
 
 
-## 目的地 {#destinations}
+## 目標 {#destinations}
 
-在[Real-time Customer Data Platform](../../rtcdp/overview.md)中，目的地是預先建立的與目的地平台的整合，可透過順暢的方式為這些合作夥伴啟用資料。
+在[Real-Time Customer Data Platform](../../rtcdp/overview.md)中，目的地是預先建立的與目的地平台的整合，可透過順暢的方式為這些合作夥伴啟用資料。
 
 **新目的地**
 
@@ -98,21 +98,21 @@ Real-Time CDP現在支援五十個以上的[!DNL Experience Cloud Launch]擴充�
 | 文件 | 說明 |
 |--- | ---|
 | [目的地型別和類別](../../destinations/destination-types.md) | 本文說明Real-Time CDP介面中的連線和擴充功能之間的差異，並建議何時應使用各個目的地。 |
-| [Experience Platform Launch延伸模組](../../destinations/catalog/launch-extensions/overview.md) | 此頁面說明何謂[!DNL Launch]擴充功能，列出使用這些擴充功能的使用案例，以及Real-Time CDP中每個[!DNL Launch]擴充功能的檔案連結。 |
+| [Experience Platform Launch擴充功能](../../destinations/catalog/launch-extensions/overview.md) | 此頁面說明何謂[!DNL Launch]擴充功能，列出使用這些擴充功能的使用案例，以及Real-Time CDP中每個[!DNL Launch]擴充功能的檔案連結。 |
 
 如需詳細資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
 ## [!DNL Privacy Service] {#privacy}
 
-新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。 Adobe Experience Platform [!DNL Privacy Service]提供RESTful API和使用者介面，協助您管理客戶的這些資料請求。 透過[!DNL Privacy Service]，您可以提交存取和刪除Adobe Experience Cloud應用程式中私人或個人客戶資料的請求，協助自動遵守法律和組織隱私權法規。
+新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。 Adobe Experience Platform [!DNL Privacy Service] 提供 RESTful API 和使用者介面，協助您管理這些來自客戶的資料請求。透過 [!DNL Privacy Service]，您可以提交請求來存取和刪除 Adobe Experience Cloud 應用程式中的私人或個人客戶資料，從而促進法律和組織隱私法規的自動化合規。
 
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| PDPA支援 | 隱私權請求現在可以在泰國根據個人資料保護法(PDPA)進行建立和追蹤。 在API中提出隱私權要求時，`regulation`陣列會接受值「pdpa_tha」。 |
-| UI中的名稱空間型別 | 您現在可以在[!DNL Privacy Service] UI的「請求產生器」中指定不同的名稱空間型別。 如需詳細資訊，請參閱[使用手冊](../../privacy-service/ui/user-guide.md)。 |
-| 棄用舊端點 | 已棄用舊的API端點(`data/privacy/gdpr`)。 |
+| PDPA 支援 | 隱私權請求現在可以在泰國根據個人資料保護法(PDPA)進行建立和追蹤。 在 API 中提出隱私權請求時，`regulation` 陣列會接受「pdpa_tha」值。 |
+| UI 中的命名空間類型 | 您現在可於 [!DNL Privacy Service] UI 的請求產生器中指定不同的命名空間類型。若需要更多資訊，請參閱[使用手冊](../../privacy-service/ui/user-guide.md)。 |
+| 舊端點不再使用不用 | 舊 API 端點 (`data/privacy/gdpr`) 已不再使用。 |
 
 已知問題
 
@@ -122,9 +122,9 @@ Real-Time CDP現在支援五十個以上的[!DNL Experience Cloud Launch]擴充�
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Platform]服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Experience Platform]服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 **新功能**
 

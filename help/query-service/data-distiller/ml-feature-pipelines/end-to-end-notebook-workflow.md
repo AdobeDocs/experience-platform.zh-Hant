@@ -4,9 +4,9 @@ description: 使用雲端型機器學習環境Notebooks來建立訓練和評分�
 hide: true
 hidefromtoc: true
 exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Old title:
 
 端對端工作流程可以根據用於實作工作流程的服務分為三個廣泛的階段。
 
-- Platform資料的初步探索和準備仰賴Platform服務。
+- Experience Platform資料的初步探索和準備仰賴Experience Platform服務。
 - 模型訓練和評分會運用您雲端式ML環境中的工具。 ML平台的常見選擇包括：Databricks ML、AWS Sagemaker、DataRobot等。
-- 將分數擷取回Platform，以及根據這些分數建立及啟用任何程式碼式對象將再次仰賴Platform服務。
+- 若將分數擷取回Experience Platform，以及根據這些分數進行的任何程式碼式對象建立和啟用，將再次仰賴Experience Platform服務。
 
-不過，所有這些階段都可以在您的ML環境中的一或多部筆記型電腦中執行，使用者不需要在Platform與其雲端型ML工具之間切換內容。
+不過，所有這些階段都可以在您的ML環境中的一或多部筆記型電腦中執行，使用者不需要在Experience Platform與其雲端型ML工具之間切換內容。
 
-此端對端流程的一般步驟已分成一組模組化的筆記型電腦，這些筆記型電腦會一起示範涉及Platform資料的典型機器學習專案中的步驟。 這可讓您更輕鬆地使用筆記本作為實作特定活動的參考，以及從相關筆記本中選取和調整程式碼以實作真實世界的使用案例。 實際上，資料科學家可以準備一個筆記本，為其ML專案實作端對端管道。 或者，資料科學家可以簡單地調整範常式式碼以查詢Platform資料，並使其在其ML環境中可用，然後再繼續專案在其ML平台中使用基於UI的功能。
+此端對端流程的一般步驟已分成一組模組化筆記本，這些筆記本會一起示範涉及Experience Platform資料的典型機器學習專案中的步驟。 這可讓您更輕鬆地使用筆記本作為實作特定活動的參考，以及從相關筆記本中選取和調整程式碼以實作真實世界的使用案例。 實際上，資料科學家可以準備一個筆記本，為其ML專案實作端對端管道。 或者，資料科學家可以簡單地調整範常式式碼以查詢Experience Platform資料，並使其可在其ML環境中使用，然後再繼續專案，在其ML平台中使用基於使用者介面的功能。
 
 連結的存放庫中所包含的範例筆記本如下所述。 每個筆記型電腦的詳細檔案都會與筆記型電腦本身的程式碼進行散佈。
 
@@ -46,11 +46,11 @@ Old title:
 
 ### 產生綜合資料 {#generate-synthetic-data}
 
-此筆記本提供在Platform中產生綜合設定檔和Experience事件資料集的程式碼，將用來說明CMLE工作流程。
+此筆記本提供在Experience Platform中產生綜合設定檔和體驗事件資料集的程式碼，將用來說明CMLE工作流程。
 
 ### EDA與查詢服務的功能 {#eda-and-featurization-with-query-service}
 
-此筆記本包含透過Platform查詢服務使用互動式查詢的Platform資料集探索性分析範例。 後面是功能化查詢範例，用於建立範例傾向模型的訓練資料集。
+此筆記本包含透過Experience Platform查詢服務使用互動式查詢，對Experience Platform資料集進行探索性分析的範例。 後面是功能化查詢範例，用於建立範例傾向模型的訓練資料集。
 
 ### 匯出訓練資料 {#export-training-data}
 
@@ -62,12 +62,12 @@ Old title:
 
 ### 對傾向性模型進行評分
 
-此筆記本說明如何對經過訓練的傾向模型評分，以產生每個Platform客戶個人檔案的傾向分數資料集。
+此筆記本說明如何對經過訓練的傾向模型評分，以產生每個Experience Platform客戶個人檔案的傾向分數資料集。
 
-### 將分數擷取至AEP
+### 將分數內嵌至AEP
 
 此簡短筆記本說明如何擷取傾向分數的資料集，以豐富AEP中的客戶設定檔。
 
 ### 從程式碼建立及啟用對象
 
-此筆記本說明使用者如何從分數建立對象，以及如何透過筆記本程式碼中的Platform應用程式啟動這些對象。
+此筆記本說明使用者如何透過分數建立對象，以及如何透過筆記本程式碼中的Experience Platform應用程式啟動這些對象。

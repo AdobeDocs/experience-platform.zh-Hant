@@ -2,9 +2,9 @@
 title: UI中的草稿資料流
 description: 瞭解如何將資料流儲存為草稿，並在稍後使用來源工作區時發佈。
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 參閱本檔案前，請先實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 
 ## 將資料流儲存為草稿
 
-選取要帶入Platform的資料後，您可以隨時暫停資料流建立進度。
+選取要帶入Experience Platform的資料後，您可以隨時暫停資料流建立進度。
 
 例如，如果您想在資料流詳細步驟期間儲存進度，請選取&#x200B;**[!UICONTROL 另存為草稿]**。
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ![指定組織的資料流清單。](../../images/tutorials/draft/catalog-access.png)
 
-## Publish您的草稿資料流
+## 發佈您的草稿資料流
 
 您會回到來源工作流程的[!UICONTROL 新增資料]步驟，您可以在此重新確認資料的格式，並繼續處理資料流。
 

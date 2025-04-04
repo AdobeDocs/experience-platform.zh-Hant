@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platform；使用手冊；ui指南；平台ui指南；平台簡介；控制面板；
 solution: Experience Platform
-title: Experience PlatformUI總覽
+title: Experience Platform UI總覽
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1938'
 ht-degree: 1%
 
 ---
@@ -59,9 +59,9 @@ ht-degree: 1%
 
 ## 頂端導覽列
 
-Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個重要控制項。
+Experience Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個重要控制項。
 
-導覽列的左側是Adobe Experience Platform標誌。 您隨時都可以選取此標誌，返回Platform UI首頁畫面。
+導覽列的左側是Adobe Experience Platform標誌。 您隨時都可以選取此標誌，返回Experience Platform UI首頁畫面。
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
@@ -75,11 +75,11 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 ### 切換應用程式
 
-頂端導覽列右側的下一個專案是&#x200B;**應用程式切換器**，由![應用程式切換器](/help/images/icons/apps.png)圖示表示。 選取此圖示時，您可以在組織有權存取的Adobe應用程式(例如Experience Platform、Analytics、Assets等)之間切換。
+頂端導覽列右側的下一個專案是&#x200B;**應用程式切換器**，由![應用程式切換器](/help/images/icons/apps.png)圖示表示。 選取此圖示時，您可以在組織有權存取的Adobe應用程式(例如Experience Platform、Analytics、Assets和其他應用程式)之間切換。
 
 ### 說明
 
-應用程式切換器右側是&#x200B;**說明與支援功能表**，以![問號/說明](/help/images/icons/help.png)圖示表示。 當您選取此圖示時，會顯示一個彈出選單，其中包含數個說明和支援資源。 **[!UICONTROL 說明]**&#x200B;索引標籤會顯示您目前所在頁面的相關檔案清單。 **[!UICONTROL 支援]**&#x200B;索引標籤可讓您與Adobe支援團隊建立支援票證。 **[!UICONTROL 意見反應]**&#x200B;標籤可讓您提交有關平台的意見反應給Adobe。
+應用程式切換器右側是&#x200B;**說明與支援功能表**，以![問號/說明](/help/images/icons/help.png)圖示表示。 當您選取此圖示時，會顯示一個彈出選單，其中包含數個說明和支援資源。 **[!UICONTROL 說明]**&#x200B;索引標籤會顯示您目前所在頁面的相關檔案清單。 **[!UICONTROL 支援]**&#x200B;索引標籤可讓您與Adobe支援團隊建立支援票證。 **[!UICONTROL 意見反應]**&#x200B;索引標籤可讓您將有關Experience Platform的意見反應提交至Adobe。
 
 ![](images/user-guide/homepage-help-clicked.png)
 
@@ -91,17 +91,17 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 頂端導覽列上的最後一個專案是&#x200B;**使用者設定**，以![使用者設定/使用者設定檔](images/user-guide/profile-icon.png)圖示表示。 選取此圖示可編輯您的偏好設定或登出。
 
-您可以使用位於您名稱和電子郵件正下方的開關，在Platform介面的淺色和深色主題之間切換。 選取您偏好的主題。
+您可以使用位於您名稱和電子郵件正下方的開關，在Experience Platform介面的淺色和深色主題之間切換。 選取您偏好的主題。
 
 ![](images/theme.png)
 
 ### 沙箱
 
-沙箱列緊鄰頂端導覽列下方。 此列顯示您目前用於Platform的沙箱。 您可以在[沙箱總覽](../sandboxes/home.md)中找到更多有關沙箱的資訊。
+沙箱列緊鄰頂端導覽列下方。 此列會顯示您目前用於Experience Platform的沙箱。 您可以在[沙箱總覽](../sandboxes/home.md)中找到更多有關沙箱的資訊。
 
 ## 左側導覽 {#left-nav}
 
-畫面左側的導覽會列出Platform UI支援的所有不同服務。
+畫面左側的導覽會列出Experience Platform UI支援的所有不同服務。
 
 按一下功能表圖示以顯示或隱藏左側導覽面板。
 
@@ -115,15 +115,15 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 ![](images/user-guide/homepage-left.png)
 
-**[!UICONTROL 首頁]**&#x200B;區段可讓您返回Platform UI首頁。
+**[!UICONTROL 首頁]**&#x200B;區段可讓您返回Experience Platform UI首頁。
 
-**[!UICONTROL 工作流程]**&#x200B;區段會顯示在Platform內執行作業的多步驟工作流程清單。 您可以在[工作流程概觀](./workflows.md)中找到工作流程的詳細資訊。
+**[!UICONTROL 工作流程]**&#x200B;區段會顯示在Experience Platform中執行作業的多步驟工作流程清單。 您可以在[工作流程概觀](./workflows.md)中找到工作流程的詳細資訊。
 
 ### [!UICONTROL 連線]
 
-**[!UICONTROL 來源]**&#x200B;區段可讓您建立、更新和刪除來源連線，讓您將資料從外部來源擷取到Platform。 您可以在[來源概觀](../sources/home.md)中找到更多有關來源的資訊。
+**[!UICONTROL 來源]**&#x200B;區段可讓您建立、更新及刪除來源連線，讓您將資料從外部來源擷取到Experience Platform。 您可以在[來源概觀](../sources/home.md)中找到更多有關來源的資訊。
 
-**[!UICONTROL 目的地]**&#x200B;區段可讓您建立、更新和刪除目的地，讓您將資料從Platform匯出至許多外部目的地。 您可以在[目的地概觀](../destinations/home.md)中找到有關目的地的詳細資訊。
+**[!UICONTROL 目的地]**&#x200B;區段可讓您建立、更新和刪除目的地，讓您將資料從Experience Platform匯出至許多外部目的地。 您可以在[目的地概觀](../destinations/home.md)中找到有關目的地的詳細資訊。
 
 ### [!UICONTROL 客戶]
 
@@ -131,13 +131,13 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 **[!UICONTROL 對象]**&#x200B;區段可讓您建立和管理區段定義。 若要進一步瞭解如何使用[!UICONTROL 對象]區段，請閱讀[分段使用手冊](../segmentation/ui/overview.md)。 您可以在[細分服務總覽](../segmentation/home.md)中找到更多有關細分服務的資訊。
 
-**[!UICONTROL 身分]**&#x200B;區段可讓您建立和管理身分名稱空間。 如需[!UICONTROL 身分]區段的詳細資訊，包括身分名稱空間以及如何在Platform UI中使用身分的資訊，請參閱[身分名稱空間概觀](../identity-service/features/namespaces.md)。
+**[!UICONTROL 身分]**&#x200B;區段可讓您建立和管理身分名稱空間。 如需[!UICONTROL 身分]區段的詳細資訊，包括身分名稱空間以及如何在Experience Platform UI中使用身分的資訊，請參閱[身分名稱空間概觀](../identity-service/features/namespaces.md)。
 
 ### [!UICONTROL 隱私]
 
 **[!UICONTROL 原則]**&#x200B;區段可讓您建立和管理資料使用原則。 若要進一步瞭解如何使用原則區段，請參閱[資料使用原則使用手冊](../data-governance/policies/user-guide.md)。 您可以在[資料使用原則概觀](../data-governance/policies/overview.md)中找到更多有關資料使用原則的資訊。
 
-**[!UICONTROL 要求]**&#x200B;區段可讓您建立和管理隱私權要求。 請注意，您必須加入允許清單才能存取Privacy ServiceUI。 若要進一步瞭解如何使用「要求」區段，請閱讀[Privacy Service使用手冊](../privacy-service/ui/user-guide.md)。 您可以在[Privacy Service概觀](../privacy-service/home.md)中找到有關Privacy Service的更多資訊。
+**[!UICONTROL 要求]**&#x200B;區段可讓您建立和管理隱私權要求。 請注意，您必須加入允許清單才能存取Privacy Service UI。 若要進一步瞭解如何使用請求區段，請參閱[Privacy Service使用手冊](../privacy-service/ui/user-guide.md)。 您可以在[Privacy Service概觀](../privacy-service/home.md)中找到更多有關Privacy Service的資訊。
 
 ### [!UICONTROL 資料科學]
 
@@ -172,7 +172,7 @@ Adobe Journey Optimizer是以Experience Platform為建置基礎的應用程式�
 
 ### [!UICONTROL 管理]
 
-Platform使用者介面(UI)提供儀表板，您可透過儀表板檢視有關您組織授權使用的重要資訊，如每日快照期間所擷取。 在導覽中選取&#x200B;**[!UICONTROL 授權使用情況]**，即可存取此儀表板。 若要深入瞭解授權使用儀表板，請造訪[授權使用儀表板指南](./license-usage-and-guardrails/license-usage-dashboard.md)。
+Experience Platform使用者介面(UI)提供了一個儀表板，您可以通過該儀表板檢視有關您組織的授權使用的重要資訊，如每日快照期間所擷取。 在導覽中選取&#x200B;**[!UICONTROL 授權使用情況]**，即可存取此儀表板。 若要深入瞭解授權使用儀表板，請造訪[授權使用儀表板指南](./license-usage-and-guardrails/license-usage-dashboard.md)。
 
 >[!IMPORTANT]
 >
@@ -180,4 +180,4 @@ Platform使用者介面(UI)提供儀表板，您可透過儀表板檢視有關�
 
 ## 後續步驟
 
-閱讀本指南後，您現在已瞭解的首頁以及Platform UI的主要導覽元素。 如需在使用者介面時的詳細資訊，請參閱各個Platform服務的檔案。 此檔案的[左側導覽](#left-nav)區段提供連結，該區段在此檔案的較早章節中找到。
+閱讀本指南後，您將瞭解Experience Platform UI的首頁和主要導覽元素。 如需在使用使用者介面時的詳細資訊，請參閱各個Experience Platform服務的檔案。 此檔案的[左側導覽](#left-nav)區段提供連結，該區段在此檔案的較早章節中找到。

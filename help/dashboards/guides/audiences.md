@@ -4,9 +4,9 @@ title: 受眾控制面板
 description: Adobe Experience Platform提供一個控制面板，您可以透過它檢視有關您組織已建立之對象的重要資訊。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3136'
 ht-degree: 9%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以透過該儀表板檢視有關受眾的重要資訊，如每日快照期間所擷取。 本指南概述如何在UI中存取及使用[!UICONTROL Audiences]儀表板，並提供有關儀表板中顯示之視覺效果的詳細資訊。
 
-如需Platform使用者介面中所有Adobe Experience Platform Segmentation Service功能的概觀，請造訪[Segmentation Service UI指南](../../segmentation/ui/overview.md)。
+如需Experience Platform使用者介面中所有Adobe Experience Platform Segmentation Service功能的概觀，請造訪[Segmentation Service UI指南](../../segmentation/ui/overview.md)。
 
 ## [!UICONTROL 對象]儀表板資料
 
@@ -29,11 +29,11 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 ## 探索[!UICONTROL 對象]儀表板 {#explore}
 
-若要導覽至Platform UI中的[!UICONTROL Audiences]儀表板，請在左側邊欄中選取&#x200B;**[!UICONTROL Audiences]**，然後選取「**[!UICONTROL 概觀]**」標籤以顯示儀表板。
+若要導覽至Experience Platform UI中的[!UICONTROL Audiences]儀表板，請在左側邊欄中選取&#x200B;**[!UICONTROL Audiences]**，然後選取「**[!UICONTROL 總覽]**」標籤以顯示儀表板。
 
 >[!NOTE]
 >
->如果您的組織剛開始使用Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL 受眾]儀表板。 相反，[!UICONTROL 概觀]標籤會顯示連結和檔案，以幫助您開始細分。
+>如果您的組織剛開始使用Experience Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL 受眾]儀表板。 相反，[!UICONTROL 概觀]標籤會顯示連結和檔案，以幫助您開始細分。
 
 ![醒目提示[!UICONTROL 對象]和[!UICONTROL 總覽]的[!UICONTROL 對象]儀表板[!UICONTROL 總覽]標籤。](../images/audiences/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 ### 檢視 SQL {#view-sql}
 
-您可以透過在[!UICONTROL 總覽]工作區上的切換來檢視產生視覺化分析的SQL。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要深入瞭解此功能，請參閱[檢視SQL UI指南](../view-sql.md)。
+您可以透過在[!UICONTROL 總覽]工作區上的切換來檢視產生視覺化分析的SQL。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Experience Platform資料獲得獨特的見解。 若要深入瞭解此功能，請參閱[檢視SQL UI指南](../view-sql.md)。
 
 ## 選取對象 {#select-audience}
 
@@ -93,7 +93,7 @@ Adobe Experience Platform的所有新執行個體都會提供預設Widget載出�
 
 ## Customer AI Widget {#customer-ai-audiences-widgets}
 
-Customer AI 可產生自訂傾向評分，例如大規模個別輪廓的流失和轉換情形。 Customer AI透過分析現有的消費者體驗事件資料來預測&#x200B;**流失或轉換傾向分數**&#x200B;來執行此操作。 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 分數](#customer-ai-distribution-of-scores)和[評分摘要](#customer-ai-scoring-summary)深入分析的[分佈會示範您對象中的部門。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
+Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。Customer AI透過分析現有的消費者體驗事件資料來預測&#x200B;**流失或轉換傾向分數**&#x200B;來執行此操作。 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 分數](#customer-ai-distribution-of-scores)和[評分摘要](#customer-ai-scoring-summary)深入分析的[分佈會示範您對象中的部門。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
 
 * [[!UICONTROL Customer AI 評分摘要]](#customer-ai-scoring-summary)
 * [[!UICONTROL Customer AI 分數的分佈]](#customer-ai-distribution-of-scores)

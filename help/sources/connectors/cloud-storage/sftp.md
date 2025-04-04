@@ -2,18 +2,18 @@
 title: SFTP Source聯結器概述
 description: 瞭解如何使用API或使用者介面將SFTP伺服器連線至Adobe Experience Platform。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
 
 # SFTP聯結器
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
-閱讀本檔案以瞭解您必須完成哪些先決條件步驟，才能成功將您的[!DNL SFTP]帳戶連線到Experience Platform。
+閱讀本檔案以瞭解成功將[!DNL SFTP]帳戶連線至Experience Platform所需完成的先決條件步驟。
 
 >[!TIP]
 >
@@ -40,7 +40,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 
 ### 設定[!DNL SFTP]的Base64編碼OpenSSH私密金鑰
 
-[!DNL SFTP]來源支援使用[!DNL Base64]編碼的OpenSSH私密金鑰進行驗證。 如需有關如何產生Base64編碼的OpenSSH私密金鑰以及如何將[!DNL SFTP]連線到Platform的資訊，請參閱下列步驟。
+[!DNL SFTP]來源支援使用[!DNL Base64]編碼的OpenSSH私密金鑰進行驗證。 如需有關如何產生Base64編碼的OpenSSH私密金鑰以及如何將[!DNL SFTP]連線至Experience Platform的資訊，請參閱下列步驟。
 
 >[!BEGINTABS]
 
@@ -96,7 +96,7 @@ The key's randomart image is:
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-上述命令會將[!DNL Base64]編碼的私密金鑰儲存在您指定的檔案路徑中。 然後，您可以使用該私密金鑰來驗證[!DNL SFTP]並連線到平台。
+上述命令會將[!DNL Base64]編碼的私密金鑰儲存在您指定的檔案路徑中。 然後，您可以使用該私密金鑰來驗證[!DNL SFTP]並連線到Experience Platform。
 
 >[!TAB Mac]
 
@@ -168,7 +168,7 @@ more ~/.ssh/authorized_keys
 | `port` | 您正在連線的[!DNL SFTP]伺服器連線埠。 如果未提供，則值預設為`22`。 |
 | `username` | 可存取您[!DNL SFTP]伺服器的使用者名稱。 |
 | `password` | [!DNL SFTP]伺服器的密碼。 |
-| `maxConcurrentConnections` | 此引數可讓您指定在連線至您的SFTP伺服器時，Platform將建立的同時連線數目上限。 您必須將此值設定為小於SFTP設定的限制。 **注意**：為現有SFTP帳戶啟用此設定時，只會影響未來的資料流，不會影響現有的資料流。 |
+| `maxConcurrentConnections` | 此引數可讓您指定Experience Platform在連線至您的SFTP伺服器時，將建立的同時連線數目上限。 您必須將此值設定為小於SFTP設定的限制。 **注意**：為現有SFTP帳戶啟用此設定時，只會影響未來的資料流，不會影響現有的資料流。 |
 | `folderPath` | 您要提供存取權的資料夾路徑。 [!DNL SFTP]來源，您可以提供資料夾路徑，以指定使用者對您所選子資料夾的存取權。 |
 | `disableChunking` | 在資料擷取期間，[!DNL SFTP]來源可以先擷取檔案長度、將檔案分割成多個部分，然後並行讀取。 您可以啟用或停用這個值，以指定您的[!DNL SFTP]伺服器是否可以從特定位移擷取檔案長度或讀取資料。 |
 | `connectionSpec.id` | （僅限API）連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL SFTP]的連線規格識別碼為： `b7bf2577-4520-42c9-bae9-cad01560f7bc`。 |
@@ -185,7 +185,7 @@ more ~/.ssh/authorized_keys
 | `password` | [!DNL SFTP]伺服器的密碼。 |
 | `privateKeyContent` | Base64編碼SSH私密金鑰內容。 OpenSSH金鑰的型別必須分類為RSA或DSA。 |
 | `passPhrase` | 如果金鑰檔案或金鑰內容受密語保護，則將私密金鑰解密的密語或密碼。 如果PrivateKeyContent受密碼保護，此引數必須搭配PrivateKeyContent的密碼短語作為值使用。 |
-| `maxConcurrentConnections` | 此引數可讓您指定在連線至您的SFTP伺服器時，Platform將建立的同時連線數目上限。 您必須將此值設定為小於SFTP設定的限制。 **注意**：為現有SFTP帳戶啟用此設定時，只會影響未來的資料流，不會影響現有的資料流。 |
+| `maxConcurrentConnections` | 此引數可讓您指定Experience Platform在連線至您的SFTP伺服器時，將建立的同時連線數目上限。 您必須將此值設定為小於SFTP設定的限制。 **注意**：為現有SFTP帳戶啟用此設定時，只會影響未來的資料流，不會影響現有的資料流。 |
 | `folderPath` | 您要提供存取權的資料夾路徑。 [!DNL SFTP]來源，您可以提供資料夾路徑，以指定使用者對您所選子資料夾的存取權。 |
 | `disableChunking` | 在資料擷取期間，[!DNL SFTP]來源可以先擷取檔案長度、將檔案分割成多個部分，然後並行讀取。 您可以啟用或停用這個值，以指定您的[!DNL SFTP]伺服器是否可以從特定位移擷取檔案長度或讀取資料。 |
 | `connectionSpec.id` | （僅限API）連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL SFTP]的連線規格識別碼為： `b7bf2577-4520-42c9-bae9-cad01560f7bc`。 |
@@ -194,7 +194,7 @@ more ~/.ssh/authorized_keys
 
 ## 將SFTP連線至Experience Platform
 
-以下檔案提供有關如何使用API或使用者介面連線SFTP伺服器以Experience Platform的資訊：
+以下檔案提供如何使用API或使用者介面將SFTP伺服器連線至Experience Platform的資訊：
 
 ### 使用API
 

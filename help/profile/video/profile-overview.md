@@ -1,6 +1,6 @@
 ---
 title: 即時客戶個人檔案影片概述
-description: 本影片提供對Adobe Experience Platform中即時客戶個人檔案的基本瞭解，並概述如何在Platform UI中瀏覽個人檔案。
+description: 本影片提供對Adobe Experience Platform中即時客戶個人檔案的基本瞭解，並概述如何在Experience Platform UI中瀏覽個人檔案。
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,9 +9,9 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '118'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,6 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，自從錄製此影片後，該介面可能已經變更。 如需最新資訊，請參閱[設定檔使用者介面指南](../ui/user-guide.md)。
+>Experience Platform使用者介面經常更新，自從錄製此影片後，可能已經變更。 如需最新資訊，請參閱[設定檔使用者介面指南](../ui/user-guide.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

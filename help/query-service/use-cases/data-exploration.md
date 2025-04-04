@@ -2,9 +2,9 @@
 title: 探索、疑難排解及驗證SQL的批次擷取
 description: 瞭解如何瞭解及管理Adobe Experience Platform中的資料擷取流程。 本檔案包含如何驗證批次和查詢擷取的資料。
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ ht-degree: 0%
 
 為了協助您瞭解本檔案中討論的概念，您應該瞭解下列主題：
 
-- **資料擷取**：請參閱[資料擷取總覽](../../ingestion/home.md)，瞭解資料如何擷取到平台的基礎知識，包括所涉及的不同方法和程式。
-- **批次擷取**：請參閱[批次擷取API總覽](../../ingestion/batch-ingestion/overview.md)，瞭解批次擷取的基本概念。 具體來說，什麼是「批次」，以及它在Platform資料擷取流程中的運作方式。
+- **資料擷取**：請參閱[資料擷取總覽](../../ingestion/home.md)，瞭解資料如何擷取到Experience Platform的基礎知識，包括所涉及的各種方法和程式。
+- **批次擷取**：請參閱[批次擷取API總覽](../../ingestion/batch-ingestion/overview.md)，瞭解批次擷取的基本概念。 具體來說，什麼是「批次」，以及它在Experience Platform資料擷取流程中的運作方式。
 - **資料集中的系統中繼資料**：請參閱[目錄服務總覽](../../catalog/home.md)，瞭解如何使用系統中繼資料欄位來追蹤和查詢擷取的資料。
-- **Experience Data Model (XDM)**：請參閱[結構描述UI總覽](../../xdm/ui/overview.md)和結構描述組合的基本概念](../../xdm/schema/composition.md)，瞭解XDM結構描述以及它們如何呈現和驗證擷取到Platform的資料結構和格式。[
+- **Experience Data Model (XDM)**：請參閱[結構描述UI總覽](../../xdm/ui/overview.md)和結構描述組合的基本概念](../../xdm/schema/composition.md)，以瞭解XDM結構描述以及它們如何呈現和驗證擷取到Experience Platform的資料結構和格式。[
 
 ## 存取資料集批次中繼資料 {#access-dataset-batch-metadata}
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ![顯示並反白顯示movie_data表格及其中繼資料資料欄的DBVisualizer UI。](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-將資料內嵌到Platform中時，會根據傳入的資料為其指派邏輯分割區。 此邏輯分割由`_acp_system_metadata.sourceBatchId`表示。 此ID可協助您在處理和儲存資料批次之前，依邏輯將其分組和識別。
+將資料內嵌至Experience Platform時，會根據傳入的資料為其指派邏輯分割區。 此邏輯分割由`_acp_system_metadata.sourceBatchId`表示。 此ID可協助您在處理和儲存資料批次之前，依邏輯將其分組和識別。
 
 在處理資料並擷取到資料湖後，會指派給它以`_ACP_BATCHID`表示的實體分割。 此ID反映所擷取資料所在的資料湖中的實際儲存分割區。
 
@@ -56,7 +56,7 @@ GROUP BY _acp_system_metadata
 
 這些結果顯示輸入批次的數量並不一定與輸出批次的數量相符，因為系統決定了批次和在Data Lake中儲存資料的最有效方式。
 
-在此範例中，假設您已將CSV檔案擷取至Platform，並建立名為`drug_checkout_data`的資料集。
+在此範例中，假設您已將CSV檔案擷取至Experience Platform，並建立名為`drug_checkout_data`的資料集。
 
 `drug_checkout_data`檔案是包含35,000筆記錄的深度巢狀集合。 使用SQL陳述式`SELECT * FROM drug_orders;`來預覽JSON型`drug_orders`資料集中的第一組記錄。
 
@@ -92,19 +92,19 @@ GROUP  BY _acp_system_metadata
 
 >[!TIP]
 >
->若要擷取與該批次ID相關聯的批次ID和查詢記錄，您必須先在Platform中建立批次。 如果您想自行測試此程式，可將CSV資料內嵌至Platform。 閱讀如何使用AI產生的建議](../../ingestion/tutorials/map-csv/recommendations.md)將CSV檔案[對應到現有XDM結構描述的指南。
+>若要擷取與該批次ID相關聯的批次ID和查詢記錄，您必須先在Experience Platform中建立批次。 如果您想自行測試此程式，可將CSV資料內嵌至Experience Platform。 閱讀如何使用AI產生的建議](../../ingestion/tutorials/map-csv/recommendations.md)將CSV檔案[對應到現有XDM結構描述的指南。
 
 擷取批次後，您必須針對您擷取資料的資料集，導覽至[!UICONTROL 資料集活動標籤]。
 
-在Experience PlatformUI中，選取左側導覽中的&#x200B;**[!UICONTROL 資料集]**&#x200B;以開啟[!UICONTROL 資料集]儀表板。 接下來，從[!UICONTROL 瀏覽]索引標籤中選取資料集名稱，以存取[!UICONTROL 資料集活動]畫面。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 資料集]**&#x200B;以開啟[!UICONTROL 資料集]儀表板。 接下來，從[!UICONTROL 瀏覽]索引標籤中選取資料集名稱，以存取[!UICONTROL 資料集活動]畫面。
 
-![Platform UI資料集儀表板在左側導覽中反白顯示資料集。](../images/use-cases/datasets-workspace.png)
+![左側導覽中反白顯示資料集的Experience Platform UI資料集儀表板。](../images/use-cases/datasets-workspace.png)
 
 [!UICONTROL 資料集活動]檢視即會顯示。 此檢視包含您所選資料集的詳細資料。 其中包含以表格格式顯示的任何擷取批次。
 
 從可用批次清單中選取批次，然後從右側的詳細資訊面板複製[!UICONTROL 批次ID]。
 
-![Experience Platform資料集UI會顯示反白顯示批次ID的擷取記錄。](../images/use-cases/batch-id.png)
+![Experience Platform資料集UI會顯示反白顯示批次ID的內嵌記錄。](../images/use-cases/batch-id.png)
 
 接下來，使用以下查詢來擷取該批次中包含在資料集中的所有記錄：
 
@@ -124,8 +124,8 @@ LIMIT 1;
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您已瞭解在資料擷取程式中，驗證及驗證擷取批次中記錄的基本知識。 您也深入瞭解了存取資料集批次中繼資料、瞭解邏輯和實體分割區，以及使用SQL命令查詢特定批次。 這些知識可協助您確保資料完整性，並最佳化Platform上的資料儲存空間。
+閱讀本檔案後，您已瞭解在資料擷取程式中，驗證及驗證擷取批次中記錄的基本知識。 您也深入瞭解了存取資料集批次中繼資料、瞭解邏輯和實體分割區，以及使用SQL命令查詢特定批次。 這些知識可協助您確保資料完整性，並最佳化Experience Platform上的資料儲存空間。
 
-接下來，您應該練習資料擷取，以套用所學的概念。 使用提供的範例檔案或您自己的資料將範例資料集擷取到Platform。 如果您尚未這麼做，請閱讀教學課程，瞭解如何[將資料內嵌至Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md)。
+接下來，您應該練習資料擷取，以套用所學的概念。 使用提供的範例檔案或您自己的資料將範例資料集擷取到Experience Platform。 如果您尚未這麼做，請閱讀教學課程，瞭解如何[將資料內嵌至Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md)。
 
 或者，您可以學習如何[使用各種案頭使用者端應用程式連線及驗證查詢服務](../clients/overview.md)，以增強您的資料分析功能。

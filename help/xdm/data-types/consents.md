@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；同意；同意；偏好設定；偏好設定；隱私權選擇退出；行銷偏好設定；選擇退出型別；basisOfProcessing；同意；同意
+keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；同意；同意；偏好設定；偏好設定；privacyOptOuts；marketingPreferences；optOutType；basisOfProcessing；同意
 title: 同意和偏好設定資料型別
 description: 「隱私權同意」、「Personalization」和「行銷偏好設定」資料型別旨在支援收集由「同意管理平台」(CMP)和其他資料來源從您的資料作業產生的客戶許可權和偏好設定。
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 7a2b6c1033ad9e78b049857b9b4e6fc3708ed36c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2332'
+source-wordcount: '2334'
 ht-degree: 0%
 
 ---
@@ -38,13 +38,13 @@ ht-degree: 0%
 * **Personalization偏好設定**：關於品牌應如何個人化體驗提供給客戶的偏好設定。
 * **行銷偏好設定**：關於是否允許品牌透過各種管道聯絡客戶的偏好設定。
 
-下列熒幕擷圖顯示資料型別的結構在Platform UI中的呈現方式：
+下列熒幕擷圖顯示資料型別的結構在Experience Platform UI中的呈現方式：
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->如需如何在Platform UI中查詢任何XDM資源及檢查其結構的步驟，請參閱[探索XDM資源](../ui/explore.md)的指南。
+>如需如何在Experience Platform UI中查詢任何XDM資源及檢查其結構的步驟，請參閱[探索XDM資源](../ui/explore.md)的指南。
 
 下列JSON顯示[!UICONTROL 同意和偏好設定]資料型別可以處理的資料型別範例。 以下各節將提供有關這些欄位各自特定用途的資訊。
 
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->您可以為您在Experience Platform中定義的任何XDM結構描述產生範例JSON資料，以協助視覺化客戶同意和偏好設定資料應如何對應。 如需詳細資訊，請參閱下列檔案：
+>您可以為您在Experience Platform中定義的任何XDM結構描述產生範例JSON資料，以視覺化方式對應您的客戶同意和偏好設定資料。 如需詳細資訊，請參閱下列檔案：
 >
 >* [在UI中產生範例資料](../ui/sample.md)
 >* [在API中產生範例資料](../api/sample-data.md)
@@ -267,7 +267,7 @@ ht-degree: 0%
 
 ## 處理同意和偏好設定變更
 
-當客戶在您的網站上變更其同意或偏好設定時，應使用[Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md)收集這些變更並立即強制執行。 如果客戶選擇退出資料收集，所有資料收集必須立即停止。 如果客戶選擇退出個人化，則他們造訪的下一個頁面上應該不會出現個人化。
+當客戶在您的網站上變更其同意或偏好設定時，應使用[Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md)收集並立即強制執行這些變更。 如果客戶選擇退出資料收集，所有資料收集必須立即停止。 如果客戶選擇退出個人化，則他們造訪的下一個頁面上應該不會出現個人化。
 
 ## 附錄 {#appendix}
 

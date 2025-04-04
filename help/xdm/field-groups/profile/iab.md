@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；個別設定檔；欄位；結構；結構描述；結構描述設計；欄位群組；欄位群組；iab；tcf；同意；
+keywords: Experience Platform；首頁；熱門主題；綱要；綱要；XDM；個別設定檔；欄位；綱要；綱要設計；欄位群組；欄位群組；iab；tcf；同意；
 solution: Experience Platform
 title: 設定檔結構描述的IAB TCF 2.0同意欄位群組
 description: 瞭解XDM個別設定檔類別的IAB TCF 2.0同意結構描述欄位群組。
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 1%
 }
 ```
 
-如範例所示，`xdm:identityPrivacyInfo`的每個根層級索引鍵都與識別服務所識別的識別名稱空間相對應。 反過來，每個名稱空間屬性必須至少有一個子屬性，其索引鍵符合該名稱空間中客戶對應的身分值。 在此範例中，客戶以`13782522493631189`的Experience Cloud識別碼(`ECID`)值識別。
+如範例所示，`xdm:identityPrivacyInfo`的每個根層級索引鍵都與識別服務所識別的識別名稱空間相對應。 反過來，每個名稱空間屬性必須至少有一個子屬性，其索引鍵符合該名稱空間中客戶對應的身分值。 在此範例中，客戶以`13782522493631189`的Experience Cloud ID (`ECID`)值識別。
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 必須為每個身分識別值提供`identityIABConsent`屬性，以提供身分識別的TCF同意值。 這個屬性的值必須符合[[!UICONTROL 同意字串]資料型別](../../data-types/consent-string.md)。
 
-如需此欄位群組使用案例的詳細資訊，請參閱Platform](../../../landing/governance-privacy-security/consent/iab/overview.md)中[IAB TCF 2.0支援指南。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
+如需此欄位群組使用案例的詳細資訊，請參閱Experience Platform](../../../landing/governance-privacy-security/consent/iab/overview.md)中[IAB TCF 2.0支援指南。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
 
 * [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)
