@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 3 月版)
 description: Adobe Experience Platform 2025 年 3 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -89,8 +89,8 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!DNL Bombora Intent] | 來源目錄中現在提供 [!DNL Bombora Intent] 來源。您可以使用此來源： <ul><li>整合 Bombora 公司的激增意圖資料，以確認正積極研究貴公司產品或服務的帳戶。</li><li>優先處理市場內帳戶，以建立精確細分，並執行高度精準的 ABM 行銷活動，確保針對最有可能轉換的帳戶進行行銷工作。</li><li>善用意圖導向策略，讓廣告支出發揮最大效益、提高參與度，並實現最大的 ROI。</li></ul> 請閱讀有關[將您的  [!DNL Bombora]  帳戶連線至 Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md) 的指南以了解更多詳細資訊。 |
-| [!DNL Demandbase Intent] | 來源目錄中現在提供 [!DNL Demandbase Intent] 來源。您可以使用此來源： <ul><li>整合 Demandbase 的帳戶意圖資料，根據即時參與度找出展現高度興趣的帳戶。</li><li>透過優先處理最強烈的意圖信號，您可以建立精確的細分，並執行高度精準的行銷活動，確保針對最有可能轉換的帳戶進行行銷工作。</li><li>啟用意圖導向策略，讓廣告支出發揮最大效益、增加參與度，並實現更高的 ROI。</li></ul> 請閱讀[將您的  [!DNL Demandbase]  帳戶連線至 Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md) 的指南以了解更多詳細資訊。 |
+| [!DNL Bombora Intent] | [!DNL Bombora Intent]來源現在可在來源目錄中取得。 您可以使用此來源： <ul><li>整合 Bombora 公司的激增意圖資料，以確認正積極研究貴公司產品或服務的帳戶。</li><li>優先處理市場內帳戶，以建立精確細分，並執行高度精準的 ABM 行銷活動，確保針對最有可能轉換的帳戶進行行銷工作。</li><li>善用意圖導向策略，讓廣告支出發揮最大效益、提高參與度，並實現最大的 ROI。</li></ul> 請閱讀有關[將您的  [!DNL Bombora]  帳戶連線至 Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md) 的指南以了解更多詳細資訊。 |
+| [!DNL Demandbase Intent] | [!DNL Demandbase Intent]¸來源現在可在來源目錄中取得。 您可以使用此來源： <ul><li>整合 Demandbase 的帳戶意圖資料，根據即時參與度找出展現高度興趣的帳戶。</li><li>透過優先處理最強烈的意圖信號，您可以建立精確的細分，並執行高度精準的行銷活動，確保針對最有可能轉換的帳戶進行行銷工作。</li><li>啟用意圖導向策略，讓廣告支出發揮最大效益、增加參與度，並實現更高的 ROI。</li></ul> 請閱讀[將您的  [!DNL Demandbase]  帳戶連線至 Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md) 的指南以了解更多詳細資訊。 |
 
 {style="table-layout:auto"}
 
