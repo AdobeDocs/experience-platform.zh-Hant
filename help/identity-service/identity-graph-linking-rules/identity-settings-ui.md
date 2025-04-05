@@ -2,10 +2,10 @@
 title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
+source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 3%
+source-wordcount: '644'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 開始使用身分設定前，請先閱讀下列檔案：
 
-* [身分圖表連結規則](./overview.md)
+* [身分識別圖連結規則](./overview.md)
 * [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
@@ -71,7 +71,13 @@ ht-degree: 3%
 
 ![已選取「確認」按鈕的確認視窗。](../images/rules/confirmation.png)
 
-最後一個步驟是另一個確認訊息，指出只有在儲存您的設定&#x200B;**後更新圖形時，現有圖形才會受到圖形演演算法**&#x200B;的影響，而且即使名稱空間優先順序變更後，即時客戶設定檔上的事件片段主要身分也不會更新。 此外，您會收到通知，新設定或更新後的設定最多需要&#x200B;**6小時**&#x200B;才會生效。 若要確認，請輸入您的沙箱名稱，然後選取&#x200B;**[!UICONTROL 確認]**。
+### 確認您的設定 {#confirm-your-settings}
+
+>[!IMPORTANT]
+>
+>* 最後一個步驟是另一個確認訊息，指出只有在儲存您的設定&#x200B;**後更新圖形時，現有圖形才會受到圖形演演算法**&#x200B;的影響，而且即使名稱空間優先順序變更後，即時客戶設定檔上的事件片段主要身分也不會更新。
+>
+>* 此外，您會收到通知，新設定或更新後的設定最多需要&#x200B;**6小時**&#x200B;才會生效。 若要確認，請輸入您的沙箱名稱，然後選取&#x200B;**[!UICONTROL 確認]**。
 
 ![確認視窗會顯示有關處理設定前延遲6小時的警告。](../images/rules/complete.png)
 
@@ -79,7 +85,7 @@ ht-degree: 3%
 
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
-* [身分圖表連結規則概觀](./overview.md)
+* [身分識別圖連結規則概觀](./overview.md)
 * [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)

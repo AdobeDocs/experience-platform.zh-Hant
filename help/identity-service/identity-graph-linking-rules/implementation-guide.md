@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
+source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1835'
 ht-degree: 6%
 
 ---
@@ -15,10 +15,13 @@ ht-degree: 6%
 >
 >身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
+>[!IMPORTANT]
+>
+>本檔案假設您正在沒有任何資料的新沙箱中開始實作。
+
 請參閱本檔案，瞭解在使用Adobe Experience Platform Identity Service實作資料時可遵循的逐步指南。
 
 逐步大綱：
-
 
 1. [實作的完整必要條件](#prerequisites-for-implementation)
 2. [建立必要的身分名稱空間](#namespace)
