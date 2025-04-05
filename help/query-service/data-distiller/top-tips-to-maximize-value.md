@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Data Distiller - OS656提供最大化價值的重要秘訣
 description: 瞭解如何透過擴充Adobe Experience Platform Data Distiller的即時客戶個人檔案資料，並使用行為深入分析來建立目標受眾，藉此實現最大價值。 此資源包含範例資料集和案例研究，示範如何套用造訪間隔、頻率、貨幣(RFM)模型用於客戶細分。
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
+source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3743'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ RFM模型使用三個關鍵引數，根據交易行為來細分客戶。
 但是，RFM建模也有限制。 它根據造訪間隔、頻率和貨幣值來假設區段內的一致性，這可能會過度簡化客戶行為。 此模型也會將相等的權重指派給這些因素，可能會錯誤代表客戶價值。 此外，它並未說明相關情境（例如產品特有特徵或客戶偏好設定），而可能導致對購買行為的誤解。
 
 ## 建立動態RFM分數型SQL對象 {#build-a-dynamic-rfm-audience}
+
+下列資訊圖表提供本教學課程中說明的RFM SQL對象建立工作流程的高階概觀。
+
+![標題為「RFM-Score-Based SQL Audience」的資訊圖表，說明四個步驟：上傳CSV、探索資料、以RFM分數擴充，以及啟用對象。](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
 在開始Luma案例研究之前，您需要擷取範例資料集。 首先，[選取連結，在本機下載`luma_web_data.zip`資料集](../resources/luma_web_data.zip)。 範例資料集是壓縮的.zip格式的csv檔案，以符合使用案例。 使用Adobe Acrobat或信任的檔案擷取工具（例如作業系統的內建公用程式）解壓縮此ZIP檔案。 實際上，您通常會從Adobe Analytics、Adobe Commerce或Adobe Web/Mobile SDK取得資料。
 
