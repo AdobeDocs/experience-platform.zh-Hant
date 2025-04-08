@@ -2,9 +2,9 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,10 @@ ht-degree: 0%
 
 * 一個身分會從identityMap傳送，另一個身分會從身分描述項傳送。 **注意**：在Experience Data Model (XDM)結構描述中，身分描述項是標示為身分的欄位。
 * CRMID會透過identityMap傳送。 如果CRMID是以欄位傳送，請從WHERE子句移除`key='Email'`。
+
+>[!NOTE]
+>
+>**在WebSDK實作與ECID重複上**：如果ECID欄位標示為身分（身分描述項）而非identityMap，則在identityMap中產生第二個ECID。 由於單一事件中出現兩個ECID，這種複製可能會導致Real-time Customer Profile無法儲存匿名事件。
 
 ## 圖表行為相關問題 {#graph-behavior-related-issues}
 
