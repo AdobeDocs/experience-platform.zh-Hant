@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 93%
+ht-degree: 98%
 
 ---
 
@@ -47,8 +47,8 @@ Experience Platform 提供多個儀表板，您可以透過這些儀表板，檢
 
 | 目標 | 說明 |
 | --- | --- |
-| [Demandbase People連線](/help/destinations/catalog/advertising/demandbase-people.md) | 使用[!DNL Demandbase People]連線為您的Demandbase行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。 |
-| [Bombra帳戶連線](/help/destinations/catalog/advertising/bombora.md) | 根據[帳戶對象](/help/segmentation/types/account-audiences.md)，使用[!DNL Bombora]連線為您的Bombora行銷活動啟用設定檔，以進行對象目標定位、個人化和隱藏。 |
+| [Demandbase People 連線](/help/destinations/catalog/advertising/demandbase-people.md) | 使用 [!DNL Demandbase People] 連線來為您的 Demandbase 行銷活動啟用設定檔，以進行客群鎖定、個人化和禁止。 |
+| [Bombora 帳戶連線](/help/destinations/catalog/advertising/bombora.md) | 使用 [!DNL Bombora] 連線來為您的 Bombora 行銷活動啟用設定檔，以根據[帳戶客群](/help/segmentation/types/account-audiences.md)進行客群鎖定、個人化和禁止。 |
 | [Airship 屬性](/help/destinations/catalog/mobile-engagement/airship-attributes.md)升級 | 從 2025 年 3 月 25 日起，您可以看到兩張 **[!UICONTROL Airship 屬性]**&#x200B;卡片在目標目錄中並列顯示。這是因為目標服務內部升級所致。現有的 **[!UICONTROL Airship 屬性]**&#x200B;目標連接器已重新命名為「**[!UICONTROL (已棄用) Airship 屬性]**」，且現在提供名為「**[!UICONTROL Airship 屬性]**」的新卡片。<br>使用目錄中的 **[!UICONTROL Airship 屬性]**&#x200B;連線，獲得全新的啟用資料流。如果您有任何傳送至 [!DNL (Deprecated) Airship Attributes] 目標的使用中資料流，它們將自動更新，因此您無需採取任何動作。<br> 如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值： <ul><li> 流程規格 ID：`a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> 連線規格 ID：`594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
@@ -62,15 +62,15 @@ Experience Platform 提供多個儀表板，您可以透過這些儀表板，檢
 
 {style="table-layout:auto"}
 
-如需更多資訊，請閱讀[目標概觀](../../destinations/home.md)。
+如需詳細資訊，請閱讀[目標概觀](../../destinations/home.md)。
 
 ## 聯合客群構成 {#federated-audience-composition}
 
-如需瞭解同盟對象構成的最新更新資訊，請在此處閱讀[專屬發行說明](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/release-notes)。
+如需有關聯合客群構成最新更新的資訊，請閱讀這裡的[專屬發行說明](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/release-notes)。
 
 ## 細分服務 {#segmentation-service}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，進而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 | 功能 | 說明 |
 | ------- | ----------- |
