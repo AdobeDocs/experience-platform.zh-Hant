@@ -3,9 +3,9 @@ title: Adobe Experience Platform 發行說明 (2024 年 4 月)
 description: Adobe Experience Platform 2024 年 4 月版發行說明。
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1899'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Experience Platform 現有功能的更新：
 - [監控](#monitoring)
 - [查詢服務](#query-service)
 - [沙箱](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [細分服務](#segmentation)
 - [來源](#sources)
 
 ## 儀表板 {#dashboards}
@@ -55,7 +55,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 | 資料流 | [Edge Network 機器人偵測](../../datastreams/bot-detection.md) | 來自非人類實體 (例如自動化程式、網頁抓取工具、編目程式、指令掃描器) 的流量，可能會使真人訪客事件的識別變得更加困難。此類流量會對重要的商業量度造成負面影響，導致流量報告不正確。<br>機器人偵測可讓您將 [Web SDK](../../web-sdk/home.md)、[Mobile SDK](https://developer.adobe.com/client-sdks/home/) 及 [[!DNL Server API]](../../server-api/overview.md) 產生的事件識別為由已知的編目程式和機器人所產生。為資料流設定機器人偵測後，您就可以識別出您想將其分類為機器人事件的特定 IP 位址、IP 範圍及要求標頭。<br>機器人流量的識別可讓您更準確地測量網站或行動應用程式上的使用者活動。 |
 | Mobile SDK | 主要版本發布 | 已針對以下平台發行新的 Mobile SDK 主要版本：iOS Mobile Core 5.x 和相容的 iOS 擴充功能、Android Mobile Core 3.x 和相容的 Android 擴充功能、React Native 6.x 和相容的 React Native 擴充功能、Flutter Core 4.x 和相容的 Flutter 擴充功能。這些版本提供了多項新功能和增強功能，包括適用於 Jetpack Compose 的 Android SDK 支援、對 Adobe Journey Optimizer 基於程式碼體驗的支援，以及適用於 Flutter 的 Adobe Journey Optimizer Messaging 擴充功能正式版本。如需更詳細的發行說明，請參閱 [Mobile SDK 發行說明](https://developer.adobe.com/client-sdks/home/release-notes/)。 |
 | Mobile SDK | 隱私權 | 由於 Apple 的政策更新，自 2024 年 5 月 1 日起，開發人員必須實作新的隱私權功能才能提交到 App Store。所有使用 Mobile SDK 的 Adobe 客戶若想在 5 月 1 日後獲得 App Store 核准，就必須升級至 SDK 5.x 版本。 |
-| Roku SDK | Roku SDK | Roku SDK的第一個主要版本已發行，並支援Experience Platform Edge Network適用的串流媒體。 |
+| Roku SDK | Roku SDK | Roku SDK 的第一個主要版本已經發佈，且包含 Experience Platform Edge Network 適用的串流媒體支援。 |
 | 標記和事件轉送 | 產品內指引 | Experience Platform [標記](../../tags/home.md)和[事件轉送](../../tags/ui/event-forwarding/overview.md)提供全新系列的體驗，可幫助您快速入門和快速地實現價值。這些體驗包括新的上線畫面、產品內教學和工具提示。<br>![事件轉送，其中特別標示出產品內指引。](../2024/assets/april/event-forwarding.png "結構描述編輯器，特別標示出「類型」和「對應值類型」欄位。"){width="100" zoomable="yes"}<br> |
 | Web SDK | 為 Audience Manager 客戶簡化 Web SDK 採用 | 多個 Web SDK 更新現在都能夠簡化 Web SDK 的採用，不再需要使用 Experience Cloud 解決方案 (例如 Audience Manager、Analytics 和 Target) 的體驗資料模型 (XDM)。透過以下指南深入了解 Audience Manager Web SDK 採用： <ul><li><a href="https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">將您的 Audience Manager 資料彙集庫從 Audience Manager 標記擴充功能更新為 Web SDK 標記擴充功能</li><li><a href="https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">將您的 Audience Manager 資料彙集庫從 AppMeasurement JavaScript 程式庫更新為 Web SDK JavaScript 程式庫</li></ul> |
 
@@ -83,7 +83,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 ## 身分識別服務 {#identity-service}
 
-使用 Adobe Experience Platform 身分識別服務，可在裝置及系統間進行身分識別橋接來建立客戶及其行為的全方位檢視，從而讓您即時實現具影響力的個人數位體驗。
+使用 Adobe Experience Platform 身分識別服務，可在裝置及系統間進行身分識別橋接來建立客戶及其行為的全方位檢視，進而讓您即時實現具影響力的個人數位體驗。
 
 **更新的功能**
 
@@ -97,7 +97,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 ## 監控 {#monitoring}
 
-利用 Experience Platform 使用者介面中的監控儀表板，從來源、身分識別服務、即時客戶輪廓、客群和目標監控資料的歷程。
+利用 Experience Platform 使用者介面中的監控儀表板，從來源、身分識別服務、即時客戶設定檔、客群和目標監控資料的歷程。
 
 **更新的功能**
 
@@ -111,7 +111,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入 [!DNL Data Lake] 中的任何資料集，並將查詢結果擷取為新資料集，以用於報告、資料科學工作區，或攝取至即時客戶輪廓中。
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入 [!DNL Data Lake] 中的任何資料集，並將查詢結果擷取為新資料集，以用於報告、資料科學工作區，或攝取至即時客戶設定檔中。
 
 **更新的功能**
 
@@ -119,7 +119,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 | --- | --- |
 | 查詢隔離 | 自動隔離失敗的查詢執行，以防止中斷並維持一致的效能。如需詳細資訊，請參閱[查詢隔離](../../query-service/ui/query-schedules.md#quarantine)文件。 |
 | 取消查詢 | 透過取消長時間執行的查詢可控制查詢執行並提高生產力。如需詳細資訊，請參閱[取消查詢](../../query-service/ui/user-guide.md#cancel-query)文件。 |
-| 已排程查詢警示 | 在排程查詢時隨時透過主動通知掌握情況，從而確保高效且及時的任務管理。您可以[在建立查詢時訂閱警示](../../query-service/ui/query-schedules.md#alerts-for-query-status)，或在使用現有已排程查詢的內聯動作時訂閱。如需詳細資訊，請參閱[使用內聯動作訂閱警示](../../query-service/ui/monitor-queries.md#alert-subscription)文件。 |
+| 已排程查詢警示 | 在排程查詢時隨時透過主動通知掌握情況，進而確保高效且及時的任務管理。您可以[在建立查詢時訂閱警示](../../query-service/ui/query-schedules.md#alerts-for-query-status)，或在使用現有已排程查詢的內聯動作時訂閱。如需詳細資訊，請參閱[使用內聯動作訂閱警示](../../query-service/ui/monitor-queries.md#alert-subscription)文件。 |
 | 已改善已排程的查詢導覽 | 在查詢範本與已排程執行之間輕鬆導覽，提高生產力。如需詳細資訊，請參閱有關[檢視已排程查詢執行](../../query-service/ui/query-schedules.md#scheduled-query-runs)的文件。 |
 | 擴充查詢輸出 | 最多可存取控制台中 500 行查詢結果，以便更深入分析您的資料。如需詳細資訊，請參閱[結果計數](../../query-service/ui/user-guide.md#result-count)文件。 |
 | 舊版查詢編輯器停用 | 自 2024 年 4 月 30 日起，增強型查詢編輯器已成為所有使用者的預設編輯器。舊版編輯器將於 2024 年 5 月 24 日汰除，無法再使用。如需詳細資訊，請參閱[查詢編輯器使用手冊](../../query-service/ui/user-guide.md)。 |
@@ -130,7 +130,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足此需求，Experience Platform提供可將單一Experience Platform執行個體分割成個別虛擬環境的沙箱，以利開發及改進數位體驗應用程式。
+Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足這種需求，Experience Platform 提供的沙箱可將單一 Experience Platform 執行個體分割成個別的虛擬環境，以協助開發並改進數位體驗應用程式。
 
 **新功能或更新功能**
 
@@ -154,7 +154,7 @@ Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式
 
 {style="table-layout:auto"}
 
-如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[細分概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 

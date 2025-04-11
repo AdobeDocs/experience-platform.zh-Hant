@@ -3,9 +3,9 @@ title: Adobe Experience Platform 發行說明 (2024 年 8 月)
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1565'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -24,14 +24,14 @@ Experience Platform 現有功能及文件的更新：
 - [目標](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
-- [Segmentation Service](#segmentation)
+- [細分服務](#segmentation)
 - [來源](#sources)
 
 ## 屬性型存取控制 {#abac}
 
-屬性型存取控制是 Adobe Experience Platform 的一項功能，為注重隱私的品牌提供更大的彈性來管理使用者存取。可以將結構描述欄位和分段等個別物件指派給使用者角色。此功能可讓您為貴組織中的特定Experience Platform使用者授予或撤銷個別物件的存取權。
+屬性型存取控制是 Adobe Experience Platform 的一項功能，為注重隱私的品牌提供更大的彈性來管理使用者存取。可以將結構描述欄位和分段等個別物件指派給使用者角色。此功能可讓您授予或撤銷貴組織中特定 Experience Platform 使用者對個別物件的存取權。
 
-透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Experience Platform工作流程和資源的敏感個人資料(SPD)、個人識別資訊(PII)及其他自訂資料型別的存取。 管理員可以將使用者角色定義為只能存取特定欄位及這些欄位對應的資料。
+透過屬性型存取控制，您組織的管理員可以在所有 Experience Platform 工作流程及資源中，控制使用者對敏感個人資料 (SPD)、個人身分識別資訊 (PII) 和其他自訂類型資料的存取權。管理員可以將使用者角色定義為只能存取特定欄位及這些欄位對應的資料。
 
 **新功能**
 
@@ -49,7 +49,7 @@ Adobe Experience Platform 會提供一組豐富的功能，用於攝取任何類
 
 **批次資料攝取中的日期格式處理方式更新**
 
-此版本解決了批次資料攝取過程中&#x200B;*日期格式處理*&#x200B;的問題。先前系統會將用戶端插入的日期欄位從 `Date` 格式轉換為 `DateTime` 格式。這表示時區已自動新增到欄位中，因而對偏好或需要 `Date` 格式的使用者造成不便。今後，時區將不會自動新增到 `Date` 類型的欄位中。此更新可確保匯出的資料格式會依照客戶要求，與該欄位輪廓中呈現的格式相符。
+此版本解決了批次資料攝取過程中&#x200B;*日期格式處理*&#x200B;的問題。先前系統會將用戶端插入的日期欄位從 `Date` 格式轉換為 `DateTime` 格式。這表示時區已自動新增到欄位中，因而對偏好或需要 `Date` 格式的使用者造成不便。今後，時區將不會自動新增到 `Date` 類型的欄位中。此更新可確保匯出的資料格式會依照客戶要求，與該欄位設定檔中呈現的格式相符。
 
 `Date` 欄位於此版本之前的格式：`"birthDate": "2018-01-12T00:00:00Z"`
 `Date` 欄位於此版本之後的格式：`"birthDate": "2018-01-12"`
@@ -96,11 +96,11 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-如需Experience Platform中XDM的詳細資訊，請參閱[XDM系統總覽](../../xdm/home.md)。
+如需有關 Experience Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
 
 ## 身分識別服務 {#identity-service}
 
-使用 Adobe Experience Platform 身分識別服務，可在裝置及系統間進行身分識別橋接來建立客戶及其行為的全方位檢視，從而讓您即時實現具影響力的個人數位體驗。
+使用 Adobe Experience Platform 身分識別服務，可在裝置及系統間進行身分識別橋接來建立客戶及其行為的全方位檢視，進而讓您即時實現具影響力的個人數位體驗。
 
 **更新的文件**
 
@@ -124,7 +124,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[細分概觀](../../segmentation/home.md)。
 
 ## 來源
 

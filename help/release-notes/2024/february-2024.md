@@ -3,9 +3,9 @@ title: Adobe Experience Platform 發行說明 (2024 年 2 月)
 description: Adobe Experience Platform 2024 年 2 月版發行說明。
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1248'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -19,12 +19,12 @@ Experience Platform 現有功能的更新：
 - [資料彙集](#data-collection)
 - [目標](#destinations)
 - [沙箱](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [細分服務](#segmentation)
 - [來源](#sources)
 
-## 警示 {#alerts}
+## 警報 {#alerts}
 
-Experience Platform可讓您訂閱各種Experience Platform活動的事件型警報。 您可以透過Experience Platform使用者介面中的[!UICONTROL 警報]索引標籤來訂閱不同的警報規則，也可以選擇在UI本身或透過電子郵件通知來接收警報訊息。
+Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型警報。您可以透過 Experience Platform 使用者介面中的「[!UICONTROL 警報]」標籤訂閱不同的警報規則，而且可以選擇在使用者介面本身內或透過電子郵件通知接收警報訊息。
 
 **新功能或更新功能**
 
@@ -83,7 +83,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 | 功能 | 說明 |
 | ----------- | ----------- |
 | 啟用帳戶客群功能正式推出 | 對特定目標啟用帳戶客群的功能現在已正式推出，可供購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版本之 Real-Time Customer Data Platform 的公司使用。請閱讀[啟用帳戶客群](/help/destinations/ui/activate-account-audiences.md)的教學課程，取得包括受支援目標的完整資訊。 |
-| Google 目標的《數位市場法》同意執行工具 | Google 發布了對 [Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[客戶比對](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)，以及 [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 的變更，以支持歐盟在《[數位市場法](https://digital-markets-act.ec.europa.eu/index_en)》(DMA) 中定義的合規性和同意相關要求 ([歐盟使用者同意政策](https://www.google.com/about/company/user-consent-policy/))。這些對同意要求的變更預計於 2024 年 3 月 6 日起生效執行。<br/><br/>為了遵守歐盟使用者同意政策，並繼續為歐洲經濟區 (EEA) 的使用者建立客群清單，廣告商及合作夥伴必須確保在上傳客群資料時已取得一般使用者的同意。作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。<br/><br/>如果客戶已購買 Adobe Privacy &amp; Security Shield，且已設定[同意政策](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)來篩選掉未經同意的輪廓，則不需要採取任何動作。<br/><br/>未購買 Adobe Privacy &amp; Security Shield 的客戶必須使用[區段定義](../../segmentation/home.md#segment-definitions)功能 (在[區段產生器](../../segmentation/ui/segment-builder.md)內) 篩選掉未經同意的輪廓，才能在不中斷的情況下繼續使用現有的 Real-Time CDP Google 目標。 |
+| Google 目標的《數位市場法》同意執行工具 | Google 發布了對 [Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[客戶比對](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)，以及 [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 的變更，以支持歐盟在《[數位市場法](https://digital-markets-act.ec.europa.eu/index_en)》(DMA) 中定義的合規性和同意相關要求 ([歐盟使用者同意政策](https://www.google.com/about/company/user-consent-policy/))。這些對同意要求的變更預計於 2024 年 3 月 6 日起生效執行。<br/><br/>為了遵守歐盟使用者同意政策，並繼續為歐洲經濟區 (EEA) 的使用者建立客群清單，廣告商及合作夥伴必須確保在上傳客群資料時已取得一般使用者的同意。作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。<br/><br/>如果客戶已購買 Adobe Privacy &amp; Security Shield，且已設定[同意政策](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)來篩選掉未經同意的設定檔，則不需要採取任何動作。<br/><br/>未購買 Adobe Privacy &amp; Security Shield 的客戶必須使用[區段定義](../../segmentation/home.md#segment-definitions)功能 (在[區段產生器](../../segmentation/ui/segment-builder.md)內) 篩選掉未經同意的設定檔，才能在不中斷的情況下繼續使用現有的 Real-Time CDP Google 目標。 |
 | [!BADGE Beta]{type=Informative} 重新排序批次目標的對應欄位 | 現在起，您可以在[對應](../../destinations/ui/activate-batch-profile-destinations.md#mapping)步驟中透過拖放對應欄位來變更 CSV 匯出中的欄位順序。使用者介面中的對應欄位順序會反映在匯出之 CSV 檔案中的欄位順序，由上至下，且頂端列是 CSV 檔案中最左邊的欄。<br/><br/>此功能為測試版，僅供精選客戶使用。若要請求此功能的存取權，請聯絡您的 Adobe 代表。 |
 | [!BADGE Beta]{type=Informative} 為批次目標事先選取預設匯出排程 | Experience Platform 現在會為每個檔案匯出設定預設排程。請參閱有關[排程客群匯出](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)的文件，以了解如何修改預設排程。<br/><br/>此功能為測試版，僅供精選客戶使用。若要請求此功能的存取權，請聯絡您的 Adobe 代表。 |
 | [!BADGE Beta]{type=Informative} 大量編輯批次目標的客群啟用排程 | 現在起，您可以從「[啟用資料](../../destinations/ui/destination-details-page.md#bulk-edit-schedule)」頁面一次大量編輯多個客群的啟用排程。<br/><br/>此功能為測試版，僅供精選客戶使用。若要請求此功能的存取權，請聯絡您的 Adobe 代表。 |
@@ -95,13 +95,13 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足此需求，Experience Platform提供可將單一Experience Platform執行個體分割成個別虛擬環境的沙箱，以利開發及改進數位體驗應用程式。
+Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足這種需求，Experience Platform 提供的沙箱可將單一 Experience Platform 執行個體分割成個別的虛擬環境，以協助開發並改進數位體驗應用程式。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 沙箱工具 | 除了目前支援同意和治理規則的物件類型之外，還可以使用沙箱工具在未啟用統一輪廓的情況下匯入結構描述、在匯入區段時檢查目標沙箱中是否有遺失的屬性，以及預設使用現有合併原則。如需有關這些功能的詳細資訊，請參閱[沙箱工具使用者介面指南](../../sandboxes/ui/sandbox-tooling.md)。 |
+| 沙箱工具 | 除了目前支援同意和治理規則的物件類型之外，還可以使用沙箱工具在未啟用統一設定檔的情況下匯入結構描述、在匯入區段時檢查目標沙箱中是否有遺失的屬性，以及預設使用現有合併原則。如需有關這些功能的詳細資訊，請參閱[沙箱工具使用者介面指南](../../sandboxes/ui/sandbox-tooling.md)。 |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 帳戶客群 | 帳戶客群現已正式推出！您現在可以使用帳戶細分，讓Real-Time Customer Experience Platform的B2B和B2P版本中，行銷細分體驗從以人物為基礎的對象到以帳戶為基礎的對象，變得完整而精細。 此版本可讓您將人員型客群作為帳戶型客群的述詞、新增搜尋功能、支援自訂實體的使用情況，同時能符合資料治理規範。如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/types/account-audiences.md)。 |
+| 帳戶客群 | 帳戶客群現已正式推出！您現在能夠使用帳戶細分功能，在 Real-Time Customer Experience Platform 的 B2B 和 B2P 兩種版本中，將行銷細分體驗的簡易性與精密處從人員型客群完整帶至帳戶型客群中。此版本可讓您將人員型客群作為帳戶型客群的述詞、新增搜尋功能、支援自訂實體的使用情況，同時能符合資料治理規範。如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/types/account-audiences.md)。 |
 
 {style="table-layout:auto"}
 
