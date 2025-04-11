@@ -3,13 +3,13 @@ title: Real-Time Customer Data Platform中的對象產生器
 description: 瞭解如何使用Real-Time Customer Data Platform中的對象產生器建立對象。
 feature: Get Started, Audiences
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b9099b123ae83eef6d470076dc2f8d143170a846
+exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
-
 
 # Real-Time Customer Data Platform中的對象產生器
 
@@ -18,6 +18,21 @@ ht-degree: 0%
 ![帳戶區段中的對象產生器。](../assets/segmentation/audience-builder/audience-builder.png){zoomable="yes"}
 
 ## 欄位 {#fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showfullxdmschema"
+>title="顯示完整XDM結構描述"
+>abstract="依預設，僅顯示包含資料的欄位。 啟用此選項以顯示XDM結構描述中的所有欄位。"
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showrelationselectors"
+>title="顯示關係選擇器"
+>abstract="依預設，會使用您組織的標準關係。 啟用此選項以顯示使用的關係選取器。"
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showconstrainedfields"
+>title="顯示限制的欄位"
+>abstract="依預設，只會顯示沒有任何限制的欄位。 啟用此選項可顯示具有限制的欄位。"
 
 針對帳戶使用Audience Builder時，您可以使用帳戶屬性或現有對象作為對象的欄位。
 

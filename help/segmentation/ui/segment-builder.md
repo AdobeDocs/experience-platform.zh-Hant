@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '4980'
+source-wordcount: '5024'
 ht-degree: 7%
 
 ---
@@ -26,6 +26,16 @@ ht-degree: 7%
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="欄位"
 >abstract="構成區段定義的三種欄位類型為屬性、事件和對象。屬性可讓您使用屬於 XDM 個人設定檔類別的設定檔屬性，事件可讓您根據使用 XDM ExperienceEvent 資料元素發生的動作或事件來建立對象，而對象則可讓您使用從外部來源匯入的對象。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="顯示完整XDM結構描述"
+>abstract="依預設，僅顯示包含資料的欄位。 啟用此選項以顯示XDM結構描述中的所有欄位。"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="顯示已被取代的欄位"
+>abstract="預設不會顯示已棄用的XDM欄位。 啟用此選項以顯示已棄用的XDM欄位。"
 
 區段定義的基本建置區塊是屬性和事件。 此外，現有對象中包含的屬性和事件可作為新定義的元件。
 

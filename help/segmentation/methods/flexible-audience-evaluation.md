@@ -3,9 +3,9 @@ title: 彈性的對象評估指南
 description: 瞭解如何使用彈性的對象評估，以應要求執行批次細分工作。
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1063'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 5%
 >[!AVAILABILITY]
 >
 >彈性的對象評估僅&#x200B;**在[!DNL Microsoft Azure]上執行的Experience Platform執行個體上提供**。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../landing/multi-cloud.md)。
+>
+>此外，彈性的對象評估僅&#x200B;**可**&#x200B;搭配Real-Time CDP B2C Edition使用。
 
 彈性的對象評估可讓您視需求執行批次細分工作。 透過彈性的對象評估，您可以執行臨機行銷活動啟動、即時通訊或其他時效性活動。
 
