@@ -1,26 +1,23 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Maria DB；maria db
-solution: Experience Platform
-title: 在使用者介面中建立MariaDB Source連線
-type: Tutorial
-description: 瞭解如何使用Adobe Experience Platform UI建立Maria DB來源連線。
+title: 使用UI連線MariaDB至Experience Platform
+description: 瞭解如何使用Experience Platform使用者介面中的來源工作區，將您的MariaDB帳戶連結至Experience Platform。
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 2%
+source-wordcount: '590'
+ht-degree: 0%
 
 ---
 
-# 在使用者介面中建立[!DNL MariaDB]來源連線
+# 使用UI連線[!DNL MariaDB]至Experience Platform
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面建立Maria DB來源聯結器的步驟。
+閱讀本指南，瞭解如何使用Experience Platform使用者介面中的來源工作區將您的[!DNL MariaDB]帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
 
-本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [即時客戶個人檔案](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
@@ -29,38 +26,64 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ### 收集必要的認證
 
-若要在[!DNL Experience Platform]上存取您的[!DNL MariaDB]帳戶，您必須提供下列值：
+閱讀[[!DNL MariaDB] 總覽](../../../../connectors/databases/mariadb.md#prerequisites)以取得驗證的相關資訊。
 
-| 認證 | 說明 |
-| ---------- | ----------- |
-| `connectionString` | 與您的MariaDB驗證關聯的連線字串。 [!DNL MariaDB]連線字串模式為： `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`。 |
+## 瀏覽來源目錄
 
-如需開始使用的詳細資訊，請參閱此[[!DNL MariaDB] 檔案](https://mariadb.com/kb/en/about-mariadb-connector-odbc/)。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 在&#x200B;*[!UICONTROL 類別]*&#x200B;面板中選取適當的類別或者，使用搜尋列導覽至您要使用的特定來源。
 
-## 連線您的[!DNL Maria DB]帳戶
+若要使用[!DNL MariaDB]，請選取&#x200B;*[!UICONTROL 資料庫]*&#x200B;下的&#x200B;**[!UICONTROL MariaDB]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 設定]**。
 
-收集必要的認證後，您可以依照下列步驟將[!DNL Maria DB]帳戶連結至[!DNL Experience Platform]。
+>[!TIP]
+>
+>當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
-登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
+![已選取MariaDB卡的UI中的來源目錄。](../../../../images/tutorials/create/maria-db/catalog.png)
 
-在&#x200B;**[!UICONTROL 資料庫]**&#x200B;類別下，選取&#x200B;**[!UICONTROL Maria DB]**。 如果這是您第一次使用此聯結器，請選取&#x200B;**[!UICONTROL 設定]**。 否則，請選取&#x200B;**[!UICONTROL 新增資料]**&#x200B;以建立新的[!DNL Maria DB]聯結器。
+## 使用現有帳戶 {#existing}
 
-![](../../../../images/tutorials/create/maria-db/catalog.png)
+若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後選取您要使用的[!DNL MariaDB]帳戶。
 
-**[!UICONTROL 連線至Maria DB]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+![來源工作流程中已選取「現有帳戶」的現有帳戶介面。](../../../../images/tutorials/create/maria-db/existing.png)
 
-### 新帳戶
+## 建立新帳戶 {#create}
 
-如果您正在使用新認證，請選取&#x200B;**[!UICONTROL 新帳戶]**。 在出現的輸入表單上，提供名稱、選擇性說明和您的[!DNL MariaDB]認證。 完成時，請選取&#x200B;**[!UICONTROL 連線]**，然後等待一段時間以建立新連線。
+如果您沒有現有的帳戶，則必須提供與您來源對應的必要驗證認證，以建立新的帳戶。
 
-![](../../../../images/tutorials/create/maria-db/new.png)
+若要建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後提供名稱並選擇性地為您的帳戶新增說明。
 
-### 現有帳戶
+![來源工作流程中的新帳戶介面已提供帳戶名稱和選擇性說明。](../../../../images/tutorials/create/maria-db/new.png)
 
-若要連線現有帳戶，請選取您要連線的[!DNL MariaDB]帳戶，然後選取[下一步]**[!UICONTROL 以繼續。]**
+### 在Azure上連線到Experience Platform {#azure}
 
-![](../../../../images/tutorials/create/maria-db/existing.png)
+您可以使用帳戶金鑰或基本驗證，將您的[!DNL MariaDB]帳戶連線至Azure上的Experience Platform。
+
+>[!BEGINTABS]
+
+>[!TAB 帳戶金鑰驗證]
+
+若要使用帳戶金鑰驗證，請選取&#x200B;**[!UICONTROL 帳戶金鑰驗證]**，提供您的[連線字串](../../../../connectors/databases/mariadb.md#azure)，然後選取&#x200B;**[!UICONTROL 連線至來源]**。
+
+![來源工作流程中的新帳戶介面已選取「帳戶金鑰驗證」。](../../../../images/tutorials/create/maria-db/account-key.png)
+
+>[!TAB 基本驗證]
+
+若要使用基本驗證，請選取&#x200B;**[!UICONTROL 基本驗證]**，提供您的[驗證認證](../../../../connectors/databases/mariadb.md#azure)的值，然後選取&#x200B;**[!UICONTROL 連線到來源]**。
+
+![來源工作流程中的新帳戶介面已選取「基本驗證」。](../../../../images/tutorials/create/maria-db/basic-auth.png)
+
+>[!ENDTABS]
+
+### 在Amazon Web Services (AWS)上連線至Experience Platform {#aws}
+
+>[!AVAILABILITY]
+>
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../../../landing/multi-cloud.md)。
+
+若要建立新的[!DNL MariaDB]帳戶並連線至AWS上的Experience Platform，請確定您位於VA6沙箱，然後提供驗證所需的[認證](../../../../connectors/databases/mariadb.md#aws)。
+
+![來源工作流程中的新帳戶介面可連線至AWS。](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與[!DNL MariaDB]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Experience Platform]](../../dataflow/databases.md)。
+依照本教學課程中的指示，您已建立與[!DNL MariaDB]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/databases.md)。
