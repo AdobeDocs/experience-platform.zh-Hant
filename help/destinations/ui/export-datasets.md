@@ -55,7 +55,7 @@ ht-degree: 7%
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>請參閱 <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Systems Journey Optimizer</a> 檔。</td>
+    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>檔案。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
@@ -160,22 +160,22 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 使用&#x200B;**[!UICONTROL 排程]**&#x200B;步驟來：
 
 * 設定開始日期和結束日期，以及資料集匯出的匯出步調。
-* 配置導出的資料集文件是應匯出資料集的完整會籍，還是僅匯出每個匯出發生次數的會籍增量更改。
+* 設定匯出的資料集檔案應該匯出資料集的完整成員資格，還是只對每個匯出事件的成員資格進行累加變更。
 * 自訂資料集應匯出的儲存位置中的資料夾路徑。 深入瞭解如何[編輯匯出資料夾路徑](#edit-folder-path)。
 
 使用頁面上的&#x200B;**[!UICONTROL 編輯排程]**&#x200B;控制項來編輯匯出的匯出步調，以及選取要匯出完整檔案還是增量檔案。
 
 ![編輯排程步驟中反白顯示的排程控制項。](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
-預設會選取&#x200B;**[!UICONTROL 匯出增量檔案]**&#x200B;選項。 這會觸發一個或多個文件的導出，這些文件表示資料集的完整快照。 後續檔是自上次匯出以來對資料集的增量添加。 您還可以選擇匯出 **[!UICONTROL 完整檔]**。 在這種情況下，請選擇頻率 **[!UICONTROL 一次]** “以一次性完全匯出資料集。
+預設會選取&#x200B;**[!UICONTROL 匯出增量檔案]**&#x200B;選項。 這會觸發一或多個檔案的匯出，這些檔案代表資料集的完整快照。 後續檔案是自上次匯出以來的資料集增量新增。 您也可以選取&#x200B;**[!UICONTROL 匯出完整檔案]**。 在這種情況下，請選取頻率&#x200B;**[!UICONTROL 一次]**&#x200B;以一次完整匯出資料集。
 
 >[!IMPORTANT]
 >
->第一個增量文件匯出包括資料集中的所有現有數據，用作回填。 匯出可以包含一個或多個檔。
+>第一個增量檔案匯出會包含資料集中的所有現有資料，以作為回填功能。 匯出可包含一或多個檔案。
 
-![數據集匯出工作流程顯示計劃步驟。](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
+![資料集匯出工作流程顯示排程步驟。](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
-1. **[!UICONTROL 使用「頻]**&#x200B;度」選擇器選擇導出頻率：
+1. 使用&#x200B;**[!UICONTROL 頻率]**&#x200B;選擇器來選取匯出頻率：
 
    * **[!UICONTROL 每日]**：排程增量檔案匯出一次，每天一次，在您指定的時間。
    * **[!UICONTROL 每小時]**：排程每3、6、8或12小時匯出一次增量檔案。
@@ -202,13 +202,13 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 >title="資料集資料夾路徑預覽"
 >abstract="預覽根據您在此視窗中新增巨集而在您的儲存位置中建立的資料夾結構。"
 
-選擇 **[!UICONTROL 編輯資料夾路徑]** 以自定義儲存存儲匯出數據集的資料夾結構。
+選取「**[!UICONTROL 編輯資料夾路徑]**」以自訂儲存匯出資料集所在儲存位置的資料夾結構。
 
-![編輯計劃步驟中突出显示的資料夾路徑控制。](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
+![編輯在排程步驟中反白顯示的資料夾路徑控制項。](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
 
-您可以使用多個可用的巨集來自定義所需的資料夾名稱。 按兩下巨集以將其添加到資料夾路徑，並在巨集之間使用 `/` 以分隔資料夾。
+您可以使用數個可用的巨集來自訂所需的資料夾名稱。 按兩下巨集以將其新增至資料夾路徑，並在巨集之間使用`/`來分隔資料夾。
 
-![巨集選擇在自訂資料夾模式視窗中突出顯示。](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
+![自訂資料夾模型視窗中反白的巨集選取專案。](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
 選取所需的巨集後，您可以看到將在儲存位置中建立的資料夾結構預覽。 資料夾結構的第一個層級代表您[連線至目的地](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)以匯出資料集時所指示的&#x200B;**[!UICONTROL 資料夾路徑]**。
 
@@ -279,7 +279,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 請參閱產品說明檔案，瞭解您每年每個Experience Platform應用程式有權匯出多少資料。 例如，您可以在[這裡](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)檢視Real-Time CDP產品說明。
 
-請注意，不同應用程式的數據匯出授權不是累加的。 例如，這意味著如果您購買即時 CDP 旗艦版和Adobe Systems旅程優化旗艦版，則根據產品說明，設定檔匯出權利將是兩個權利中較大的一個。 您的卷權利的計算方法是，將您的許可配置檔總數乘以即時 CDP Prime 的 500 KB 或即時 CDP 旗艦版的 700 KB，以確定您有權獲得的數據量。
+請注意，不同應用程式的資料匯出許可權並非累加。 例如，這表示如果您購買Real-Time CDP Ultimate和Adobe Journey Optimizer Ultimate，則根據產品說明，設定檔匯出權利將是兩個權利中較大的一個權利。 您的大量權益的計算方式為：取用您的授權設定檔總數，然後乘以Real-Time CDP Prime的500 KB或Real-Time CDP Ultimate的700 KB，以判斷您有權取得的資料量。
 
 另一方面，如果您購買了Data Distiller等附加元件，您有權取得的資料匯出限制則代表產品層級和附加元件的總和。
 
@@ -300,20 +300,20 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 **如果我們只在`/`儲存為資料夾路徑，可以產生沒有資料夾的檔案嗎？ 此外，如果我們不需要資料夾路徑，如何在資料夾或位置中產生具有重複名稱的檔案？**
 
-+++答案
-從 2024 年 9 月版本開始，可以自定義用於匯出同一資料夾中所有資料集的檔案的資料夾名稱和平均 `/` 。 Adobe Systems不建議對匯出多個數據集的目標執行此作，因為屬於不同數據集的系統生成的文件名將混合在同一資料夾中。
++++回答
+自2024年9月發行版本開始，您可以自訂資料夾名稱，甚至使用`/`匯出相同資料夾中所有資料集的檔案。 Adobe不建議將此用於匯出多個資料集的目的地，因為屬於不同資料集的系統產生檔案名稱將混合在同一個資料夾中。
 +++
 
-**是否可以將資料檔路由到一個資料夾，將資料檔路由到另一個資料夾？**
+**您可將資訊清單檔案路由到某個資料夾，並將資料檔路由到另一個資料夾嗎？**
 
-+++答案
-否，沒有將指令清單檔案複製到其他位置的功能。
++++回答
+否，無法將資訊清單檔案複製到其他位置。
 +++
 
-**我們可以控制文件傳遞的順序或時間嗎？**
+**我們可以控制檔案傳送的順序或時間嗎？**
 
-+++答案
-有用於排程導出的選項。 沒有用於延遲或排序檔副本的選項。 產生後，就會立即複製到您的儲存位置。
++++回答
+有排程匯出的選項。 沒有延遲或排序檔案副本的選項。 產生後，就會立即複製到您的儲存位置。
 +++
 
 **資訊清單檔案可以使用哪些格式？**
