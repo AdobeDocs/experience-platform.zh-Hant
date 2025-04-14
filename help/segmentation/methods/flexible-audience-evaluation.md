@@ -3,7 +3,7 @@ title: 彈性的對象評估指南
 description: 瞭解如何使用彈性的對象評估，以應要求執行批次細分工作。
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
 workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 5%
@@ -387,3 +387,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 使用API或UI建立的彈性受眾評估執行接近上限。 不過，每晚執行的每日批次細分工作不會&#x200B;**對**&#x200B;這個限制有貢獻。
 
 +++
+
