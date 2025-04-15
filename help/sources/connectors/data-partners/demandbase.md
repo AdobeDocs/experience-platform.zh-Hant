@@ -2,10 +2,12 @@
 title: Demandbase方法
 description: 瞭解Experience Platform上的Demandbase意圖來源。
 last-substantial-update: 2025-03-26T00:00:00Z
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 78aae71ff48fc710aaaabf4ef71f6e50d2a8c12e
+source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1475'
 ht-degree: 1%
 
 ---
@@ -20,7 +22,7 @@ ht-degree: 1%
 
 ## 先決條件 {#prerequisites}
 
-在連線[!DNL Demandbase]至Experience Platform之前，請閱讀下列章節中的先決條件步驟。
+請閱讀以下部分，了解連接到 [!DNL Demandbase] Experience Platform 之前的先決條件步驟。
 
 ### IP位址允許清單
 
@@ -66,7 +68,7 @@ Experience Platform上的[!DNL Demandbase]由[!DNL Google Cloud Storage]代管�
 | `domain` | STRING | TRUE | 是 | 顯示意圖的已識別帳戶網域。 |
 | `start_date` | 日期 | TRUE | 是 | 期間中發生意圖活動的開始日期。 |
 | `end_date` | 日期 | TRUE | 是 | 期間中發生意圖活動的結束日期。 |
-| `duration_type` | STRING | TRUE | 是 | 持續時間的型別。 一般而言，此值可為每日、每週或每月，視所選的彙總期間而定。 對於此資料範例，此值為`week`。 |
+| `duration_type` | STRING | TRUE | 是的 | 持續時間的類型。 通常，此值可以是每天、每周或每月，具體取決於所選的匯總持續時間。 對於此資料範例，此值為 `week`。 |
 | `keyword_set_id` | STRING | TRUE | 是 | 關鍵字集識別碼。 每個特定客戶的情況都是獨一無二。 |
 | `keyword_set` | STRING | TRUE | 是 | 關鍵字集名稱。 |
 | `is_trending` | STRING | TRUE | | 指定趨勢的目前狀態。 趨勢狀態是指相對於前七週的平均值，在上週以意圖活動中的高載來測量。 |
@@ -136,10 +138,10 @@ Experience Platform上的[!DNL Demandbase]由[!DNL Google Cloud Storage]代管�
 
 +++回答
 
-解決方法取決於特定問題：
+解決方案取決於特定問題：
 
-* **Experience Platform中的公司網域不正確或遺失**：如果問題是因為帳戶資料中的公司網域值不正確，請更新Experience Platform中的公司網域欄位，以確保正確比對。
-* **資料流中的欄位對應不正確**：如果問題是因為資料流中的公司網域欄位路徑不正確，請更新資料流設定以參考正確的欄位路徑。
+* **Experience Platform**&#x200B;中的公司域不正確或缺失：如果問題源於帳戶數據中的公司域值不正確，請更新 Experience Platform 中的公司域字段，以確保準確匹配。
+* **數據流**&#x200B;中的欄位映射不正確：如果問題是由於數據流中的公司域欄位路徑不正確造成的，請更新數據流配置以引用正確的欄位路徑。
 
 +++
 
@@ -173,9 +175,9 @@ Experience Platform上的[!DNL Demandbase]由[!DNL Google Cloud Storage]代管�
 
 ### 什麼是網域比對程式？
 
-+++回答
++++答案
 
-Experience Platform中的網域比對是根據已清除網域欄位值的精確比對。 Experience Platform會自動移除首碼(例如https:/<span>/www.)，並保留最上層網域(例如adobe.com)。 相符專案需要精確的網域值，不支援模糊相符或子網域。
+Experience Platform 中的域匹配基於已清理的域字段值的完全匹配。 Experience Platform 會自動移除前綴 （例如 HTTPs：/<span>/www.） 並保留頂級域 （例如 adobe.com）。 匹配需要精確的域值，不支援模糊匹配或子域。
 
 +++
 
