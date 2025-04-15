@@ -2,7 +2,7 @@
 title: 使用UI將資料從Snowflake資料庫串流到Experience Platform
 description: 瞭解如何將資料從Snwoflake資料庫串流至Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 3%
@@ -86,7 +86,7 @@ ht-degree: 3%
 
 ![選取的資料介面已選取資料庫資料表。](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-接著，選取表格的時間戳記欄型別。 您可以在兩種時間戳記資料行型別之間選取： `TIMESTAMP_NTZ`或`TIMESTAMP_LTZ`。 如果您選取`TIMESTAMP_NTZ`的欄型別，則必須也提供時區。 您的欄應該有非null的限制。 如需詳細資訊，請閱讀有關[限制和常見問題集]的章節
+接著，選取表格的時間戳記欄型別。 您可以在兩種時間戳記資料行型別之間選取： `TIMESTAMP_NTZ`或`TIMESTAMP_LTZ`。 如果您選取`TIMESTAMP_NTZ`的欄型別，則必須也提供時區。 您的欄應該有非null的限制。 如需詳細資訊，請閱讀有關[限制和常見問題](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions)的章節。
 
 您也可以在此步驟中設定回填設定。 回填會決定最初要擷取的資料。 如果已啟用回填，則會在第一次排程擷取期間擷取指定路徑中的所有目前檔案。 如果沒有，則只會擷取在第一次內嵌執行與開始時間之間載入的檔案。 將不會擷取在開始時間之前載入的檔案。
 
@@ -149,7 +149,7 @@ ht-degree: 3%
 | --- | --- |
 | 資料流名稱 | 資料流的名稱。  依預設，這將使用正在匯入的檔案名稱。 |
 | 說明 | （選用）資料流的簡短說明。 |
-| 警示 | Experience Platform可產生使用者可訂閱的事件型警報。 這些選項需要執行中的資料流才能觸發。 如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
+| 警報 | Experience Platform可產生使用者可訂閱的事件型警報。 這些選項需要執行中的資料流才能觸發。 如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
 
 完成後，選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續。
 
