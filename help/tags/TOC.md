@@ -6,9 +6,9 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '778'
 ht-degree: 36%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 36%
 * 快速入門 {#get-started}
    * [快速入門手冊](./quick-start/quick-start.md)
    * [實作指南](./quick-start/implementation-guides.md)
-* UI指南{#ui}
+* UI 指南 {#ui}
    * [概觀](./ui/managing-resources/overview.md)
    * 擴充功能 {#extensions}
       * [概觀](./ui/managing-resources/extensions/overview.md)
@@ -55,7 +55,7 @@ ht-degree: 36%
    * [內容安全性原則(CSP)支援](./ui/client-side/content-security-policy.md)
    * [子資源完整性(SRI)支援](./ui/client-side/sri.md)
    * [傳輸層安全性](./ui/client-side/transport-layer-security.md)
-* 事件轉寄{#event-forwarding}
+* 事件轉送 {#event-forwarding}
    * [概觀](./ui/event-forwarding/overview.md)
    * [快速入門](./ui/event-forwarding/getting-started.md)
    * [設定密碼](./ui/event-forwarding/secrets.md)
@@ -66,7 +66,7 @@ ht-degree: 36%
    * [使用者權限](./ui/administration/user-permissions.md)
 * 擴充功能 {#extensions}
    * [概觀](./extensions/overview.md)
-   * 標籤延伸模組（使用者端） {#client}
+   * 標籤擴充功能（使用者端） {#client}
       * [概觀](./extensions/client/overview.md)
       * [可存取的網站速度量度](https://exchange.adobe.com/apps/ec/103053)
       * [Activity Map自訂者](https://exchange.adobe.com/apps/ec/101531)
@@ -80,25 +80,25 @@ ht-degree: 36%
       * [Adobe Analytics與Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics與Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
       * [Adobe Analytics與Salesforce](https://exchange.adobe.com/apps/ec/101530)
-      * Adobe Analytics產品字串{#product-string}
+      * Adobe Analytics Product String {#product-string}
          * [概觀](./extensions/client/product-string/overview.md)
          * [發行說明](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics產品字串產生器](https://exchange.adobe.com/apps/ec/101461)
       * [透過Adobe Experience Platform Web SDK的Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [概觀](./extensions/client/audience-manager/overview.md)
-      * Adobe使用者端資料層{#client-data-layer}
+      * Adobe使用者端資料層 {#client-data-layer}
          * [概觀](./extensions/client/client-data-layer/overview.md)
          * [發行說明](./extensions/client/client-data-layer/release-notes.md)
-      * Adobe內容分析{#content-analytics}
+      * Adobe Content Analytics {#content-analytics}
          * [概觀](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [概觀](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
-      * Adobe Experience Cloud ID 服務 {#id-service}
+      * Adobe Experience Cloud ID服務 {#id-service}
          * [概觀](./extensions/client/id-service/overview.md)
          * [發行說明](./extensions/client/id-service/release-notes.md)
-      * Adobe Experience Platform示範{#platform-demo}
+      * Adobe Experience Platform示範 {#platform-demo}
          * [概觀](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#web-sdk}
          * [概觀](./extensions/client/web-sdk/overview.md)
@@ -110,7 +110,7 @@ ht-degree: 36%
          * [Web SDK外掛程式](./extensions/client/web-sdk/web-sdk-plugins.md)
          * [Web SDK擴充功能發行說明](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
          * [Web SDK外掛程式發行說明](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
-      * Adobe Experience Manager資產分析{#asset-insights}
+      * Adobe Experience Manager Asset Insights {#asset-insights}
          * [概觀](./extensions/client/asset-insights/overview.md)
          * [發行說明](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
@@ -120,7 +120,7 @@ ht-degree: 36%
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [概觀](./extensions/client/media-analytics-3x/overview.md)
          * [發行說明](./extensions/client/media-analytics-3x/release-notes.md)
-      * Adobe隱私權{#privacy}
+      * Adobe隱私權 {#privacy}
          * [概觀](./extensions/client/privacy/overview.md)
       * [Adobe報表套裝選擇器](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
@@ -140,20 +140,20 @@ ht-degree: 36%
       * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
       * [Bing Ads通用事件追蹤](https://exchange.adobe.com/apps/ec/100154)
       * [分支](https://exchange.adobe.com/apps/ec/101382)
-      * [!DNL BrightCove]視訊追蹤{#brightcove}
+      * [!DNL BrightCove]視訊追蹤 {#brightcove}
          * [概觀](./extensions/client/brightcove/overview.md)
          * [發行說明](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
       * [管道Source識別碼](https://exchange.adobe.com/apps/ec/101412)
       * [Cheetah體驗](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
-      * 常見Analytics外掛程式{#plugins}
+      * 常見Analytics外掛程式 {#plugins}
          * [概觀](./extensions/client/plugins/overview.md)
          * [發行說明](./extensions/client/plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Usercentrics CMP同意管理Cookie v2](https://exchange.adobe.com/apps/ec/107037)
-      * 核心{#core}
+      * 核心 {#core}
          * [概觀](./extensions/client/core/overview.md)
          * [發行說明](./extensions/client/core/release-notes.md)
       * [自訂偵錯記錄器](https://exchange.adobe.com/apps/ec/104698)
@@ -169,7 +169,7 @@ ht-degree: 36%
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
       * [Genesys預測性參與](https://exchange.adobe.com/apps/ec/106148)
-      * Google資料層{#google-data-layer}
+      * Google資料層 {#google-data-layer}
          * [概觀](./extensions/client/google-data-layer/overview.md)
          * [發行說明](./extensions/client/google-data-layer/release-notes.md)
       * [Google全域網站標籤(gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
@@ -210,25 +210,27 @@ ht-degree: 36%
       * [XDM撰寫器](https://exchange.adobe.com/apps/ec/106062)
       * [Yext轉換追蹤](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] 播放](https://exchange.adobe.com/apps/ec/104160)
-      * [!DNL YouTube]視訊追蹤{#youtube}
+      * [!DNL YouTube]視訊追蹤 {#youtube}
          * [概觀](./extensions/client/youtube/overview.md)
          * [發行說明](./extensions/client/youtube/release-notes.md)
-   * 事件轉送延伸模組（伺服器端） {#server}
+   * 事件轉送擴充功能（伺服器端） {#server}
       * [概觀](./extensions/server/overview.md)
-      * Adobe Experience Platform Cloud Connector {#cloud-connector}
+      * Adobe Experience Platform雲端聯結器 {#cloud-connector}
          * [概觀](./extensions/server/cloud-connector/overview.md)
          * [發行說明](./extensions/server/cloud-connector/release-notes.md)
+      * [!DNL Adform] {#adform}
+         * [概述](./extensions/server/adform/overview.md)
       * [!DNL AWS] {#aws}
          * [概述](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [概述](./extensions/server/braze/overview.md)
       * 適用於Google Analytics的[雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
-      * 核心{#core}
+      * 核心 {#core}
          * [概觀](./extensions/server/core/overview.md)
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
-      * Google Ads增強型轉換{#google-ads-enhanced-conversions}
+      * Google Ads增強型轉換 {#google-ads-enhanced-conversions}
          * [概觀](./extensions/server/google-ads-enhanced-conversions/overview.md)
-      * Google雲端平台{#google-cloud-platform}
+      * Google Cloud Platform {#google-cloud-platform}
          * [概述](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [概述](./extensions/server/linkedin/overview.md)
@@ -251,7 +253,7 @@ ht-degree: 36%
          * [概述](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [概述](./extensions/server/twitter/overview.md)
-      * [!DNL Tiktok] Web事件API {#tiktok}
+      * [!DNL Tiktok]網頁事件API {#tiktok}
          * [概述](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
          * [概述](./extensions/server/tradedesk/overview.md)
@@ -261,7 +263,7 @@ ht-degree: 36%
    * [概觀](./extension-dev/overview.md)
    * [快速入門](./extension-dev/getting-started.md)
    * [支援的瀏覽器](./extension-dev/browsers.md)
-   * 提交程序 {#submit}
+   * 提交程式 {#submit}
       * [概觀](./extension-dev/submit/overview.md)
       * [組織設定](./extension-dev/submit/setup.md)
       * [授與使用者存取權](./extension-dev/submit/access.md)
@@ -272,7 +274,7 @@ ht-degree: 36%
       * [發行擴充功能](./extension-dev/submit/release.md)
    * [擴充功能組態](./extension-dev/configuration.md)
    * [擴充功能資訊清單](./extension-dev/manifest.md)
-   * Web擴充功能{#web}
+   * Web擴充功能 {#web}
       * [擴充功能流程](./extension-dev/web/flow.md)
       * [程式庫模組格式](./extension-dev/web/format.md)
       * [檢視](./extension-dev/web/views.md)
@@ -282,7 +284,7 @@ ht-degree: 36%
       * [資料元素類型](./extension-dev/web/data-element-types.md)
       * [核心模組](./extension-dev/web/core.md)
       * [共用模組](./extension-dev/web/shared.md)
-   * Edge擴充功能{#edge}
+   * Edge擴充功能 {#edge}
       * [擴充功能流程](./extension-dev/edge/flow.md)
       * [程式庫模組格式](./extension-dev/edge/format.md)
       * [條件類型](./extension-dev/edge/condition-types.md)
@@ -295,7 +297,7 @@ ht-degree: 36%
 * Reactor API {#api}
    * [概觀](./api/overview.md)
    * [驗證及存取Reactor API](./api/getting-started.md)
-   * 端點{#endpoints}
+   * 端點 {#endpoints}
       * [公司](./api/endpoints/companies.md)
       * [屬性](./api/endpoints/properties.md)
       * [資料元素](./api/endpoints/data-elements.md)
