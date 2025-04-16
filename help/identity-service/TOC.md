@@ -8,7 +8,7 @@ role: Admin,Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 30%
+ht-degree: 35%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 30%
    - [身分連結邏輯](./features/identity-linking-logic.md)
    - [身分圖表檢視器](./features/identity-graph-viewer.md)
    - [Identity Service中的刪除](./features/deletion.md)
-   - 身分圖表連結規則{#identity-graph-linking-rules}
+   - 身分識別圖連結規則 {#identity-graph-linking-rules}
       - [功能概觀](./identity-graph-linking-rules/overview.md)
       - [身分識別最佳化演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [身分圖表連結規則的實作指南](./identity-graph-linking-rules/implementation-guide.md)
@@ -34,7 +34,7 @@ ht-degree: 30%
    - [ECID概觀](./features/ecid.md)
 - [實作指南](implementation.md)
 - [身分資料的護欄](guardrails.md)
-- 身分識別服務API {#api}
+- 身分識別服務 API {#api}
    - [快速入門](api/getting-started.md)
    - [將欄位標示為身分](api/label-identities.md)
    - [列出叢集身分](api/list-cluster-identites.md)

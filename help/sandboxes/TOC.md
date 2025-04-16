@@ -20,7 +20,7 @@ ht-degree: 47%
    * [沙箱使用手冊](ui/user-guide.md)
    * [沙箱工具](ui/sandbox-tooling.md)
    * [跨組織共用套件](ui/sharing-packages-across-orgs.md)
-* 沙箱API {#api}
+* Sandbox API {#api}
    * [概觀](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [可用的沙箱](api/available.md)

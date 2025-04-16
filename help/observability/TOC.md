@@ -19,7 +19,7 @@ ht-degree: 31%
    * [概觀](./api/overview.md)
    * [快速入門](./api/getting-started.md)
    * [量度](./api/metrics.md)
-* 提醒 {#alerts}
+* 警報 {#alerts}
    * [概觀](./alerts/overview.md)
    * [標準警報規則](./alerts/rules.md)
    * [UI指南](./alerts/ui.md)

@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1250'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -43,7 +43,7 @@ Experience Platform 提供多個儀表板，您可以透過這些儀表板，檢
 
 [!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
-**新目標或更新的目標** {#new-updated-destinations}
+**新的或更新目的地** {#new-updated-destinations}
 
 | 目標 | 說明 |
 | --- | --- |
@@ -53,7 +53,7 @@ Experience Platform 提供多個儀表板，您可以透過這些儀表板，檢
 
 {style="table-layout:auto"}
 
-**新功能或更新的功能** {#destinations-new-updated-functionality}
+**新功能或更新功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | --- | --- |
