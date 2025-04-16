@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定合作夥伴結構。
 title: 合作夥伴結構描述設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '1896'
 ht-degree: 3%
 
 ---
@@ -105,8 +105,8 @@ Destination SDK支援多個結構描述設定：
 | `profileRequired` | 布林值 | 選填 | 如果使用者應該能夠從Experience Platform將設定檔屬性對應到您目的地平台上的自訂屬性，請使用`true`。 |
 | `segmentRequired` | 布林值 | 必要 | Destination SDK需要此引數，且應一律設為`true`。 |
 | `identityRequired` | 布林值 | 必要 | 若使用者應能將Experience Platform中的[身分型別](identity-namespace-configuration.md)對應到您在`profileFields`陣列中定義的屬性，則設為`true`。 |
-| `segmentNamespaceAllowList` | 陣列 | 選填 | 定義使用者可將受眾對應至目的地的特定受眾名稱空間。 使用此引數可限制Experience Platform使用者僅從您在陣列中定義的對象名稱空間匯出對象。 此引數不能與`segmentNamespaceDenyList`.<br>一起使用 <br>範例： `"segmentNamespaceAllowList": ["AudienceManager"]`將允許使用者僅將對象從`AudienceManager`名稱空間對應至此目的地。<br> <br>若要允許使用者將任何對象匯出至您的目的地，您可以忽略此引數。<br> <br>如果您的設定中同時缺少`segmentNamespaceAllowList`和`segmentNamespaceDenyList`，使用者將只能匯出源自[分段服務](../../../../segmentation/home.md)的對象。 |
-| `segmentNamespaceDenyList` | 陣列 | 選填 | 從陣列中定義的對象名稱空間，限制將對象對應到目的地的使用者。 無法與`segmentNamespaceAllowed`一起使用。<br> <br>範例： `"segmentNamespaceDenyList": ["AudienceManager"]`將封鎖使用者從`AudienceManager`名稱空間對應對象到此目的地。<br> <br>若要允許使用者將任何對象匯出至您的目的地，您可以忽略此引數。<br> <br>如果您的設定中同時缺少`segmentNamespaceAllowed`和`segmentNamespaceDenyList`，使用者將只能匯出源自[分段服務](../../../../segmentation/home.md)的對象。<br> <br>若要允許匯出所有對象，無論來源為何，請設定`"segmentNamespaceDenyList":[]`。 |
+| `segmentNamespaceAllowList` | 陣列 | 選填 | 允許使用者僅將對象從陣列中定義的對象名稱空間對應到目的地。 <br><br>在大多數情況下不建議使用此引數。 請改用`"segmentNamespaceDenyList":[]`以允許將所有型別的對象匯出至您的目的地。 <br><br>如果您的設定中同時缺少`segmentNamespaceAllowList`和`segmentNamespaceDenyList`，使用者將只能匯出源自[分段服務](../../../../segmentation/home.md)的對象。 <br><br>`segmentNamespaceAllowList`與`segmentNamespaceDenyList`互斥。 |
+| `segmentNamespaceDenyList` | 陣列 | 選填 | 限制使用者將對象從陣列中定義的對象名稱空間對應到目的地。 <br><br>Adobe建議設定`"segmentNamespaceDenyList":[]`，允許匯出所有對象，無論其來源為何。 <br><br>如果您的設定中同時缺少`segmentNamespaceAllowed`和`segmentNamespaceDenyList`，使用者將只能匯出源自[分段服務](../../../../segmentation/home.md)的對象。 <br><br>`segmentNamespaceAllowList`與`segmentNamespaceDenyList`互斥。 |
 
 {style="table-layout:auto"}
 
