@@ -3,9 +3,9 @@ title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
+source-git-commit: 40c5162801b95d73ce70587f3abd87ad44fa0f01
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,17 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
+### 使用AI Assistant提高生產力的實作指南
+
+>[!NOTE]
+>
+>此活頁簿的上次更新日期為2025年3月31日。 從那時起，某些功能可能已經進化或擴展。 此外，本指南中參考的一些功能可能仍在搶先使用中。 如果您遇到環境尚未提供的內容，而您有興趣探索該內容，請聯絡您的Adobe帳戶團隊以要求搶先使用。
+
+請參閱下列內容，以取得如何使用AI Assistant提高生產力的實作指南。
+
+* [使用AI Assistant大幅提升生產力](./assets/landing/ai-assistant-lab-workbook.pdf)
+
 
 ## 新功能
 
@@ -439,16 +450,6 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 * [使用AI助理解除鎖定作業分析](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### 使用AI Assistant提高生產力
-
->[!NOTE]
->
->此活頁簿的上次更新日期為2025年3月31日。 從那時起，某些功能可能已經進化或擴展。 此外，本指南中參考的一些功能可能仍在搶先使用中。 如果您遇到環境尚未提供的內容，而您有興趣探索該內容，請聯絡您的Adobe帳戶團隊以要求搶先使用。
-
-請參閱下列內容，以取得如何使用AI Assistant提高生產力的實作指南。
-
-* [使用AI Assistant大幅提升生產力](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## 後續步驟
 
