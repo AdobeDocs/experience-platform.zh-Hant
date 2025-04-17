@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2250'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Experience Platform UI中的來源範本"
+>title="Experience Platform UI 中的來源範本"
 >abstract="範本包括多種自動產生的資產，例如結構描述、資料集、身分識別、對應規則、身分命名空間和資料流，您將資料從來源帶入 Experience Platform 時可以使用。您可以更新自動產生的資產，以針對您的使用案例進行自訂。"
 
 >[!IMPORTANT]
@@ -45,7 +45,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 * [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
 * [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 在Experience Platform UI中使用範本 {#use-templates-in-the-platform-ui}
+## 在 Experience Platform UI 中使用範本 {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"

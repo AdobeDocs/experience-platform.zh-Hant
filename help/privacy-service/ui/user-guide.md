@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；匯出；匯出
 solution: Experience Platform
-title: 管理Privacy Service UI中的隱私權工作
+title: 在Privacy Service UI中管理隱私權工作
 description: 瞭解如何使用Privacy Service使用者介面來協調及監控各種Experience Cloud應用程式的隱私權請求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1770'
 ht-degree: 11%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->Privacy Service僅適用於資料主體和消費者權利要求。 不支援或允許將Privacy Service用於資料清理或維護的任何其他用途。 Adobe有法定義務須及時履行。 因此，不允許在Privacy Service上進行負載測試，因為這是僅限生產的環境，且會為有效隱私權請求建立不必要的待處理專案。
+>Privacy Service僅適用於資料主體和消費者權利要求。 不支援或允許將Privacy Service用於資料清理或維護的任何其他用途。 Adobe有法定義務須及時履行。 因此，不允許在Privacy Service上進行載入測試，因為這是僅限生產的環境，且會為有效隱私權請求建立不必要的待處理專案。
 >
->現已設定每日硬性上傳限制，以協助防止濫用服務。 發現濫用系統的使用者將會停用其服務的存取權。 隨後將與他們舉行會議，討論他們的動作，並討論可接受的Privacy Service用途。
+>現已設定每日硬性上傳限制，以協助防止濫用服務。 發現濫用系統的使用者將會停用其服務的存取權。 隨後將與他們舉行會議，討論他們的動作，並討論Privacy Service的可接受用途。
 
 ## 瀏覽[!DNL Privacy Service] UI儀表板
 
@@ -75,7 +75,7 @@ Waiting:
 
 系統會分別追蹤每種規則型別的工作。 若要在法規型別之間切換，請選取&#x200B;**[!UICONTROL 法規型別]**&#x200B;下拉式功能表，然後從清單中選取想要的法規。
 
-![具有Regulation Type下拉式清單的Privacy Service主控台。](../images/user-guide/regulation.png)
+![Privacy Service主控台具有[規則型別]下拉式清單。](../images/user-guide/regulation.png)
 
 在變更法規型別後，儀表板會更新以顯示適用於所選法規的所有操作、篩選器、Widget和工作建立對話方塊。
 
@@ -109,7 +109,7 @@ Waiting:
 >
 >先前建立之工作的資料僅可在完成日期後30天記憶體取。
 
-您可以在[!UICONTROL 工作請求]標題下方的搜尋列中鍵入關鍵字，以篩選清單。 清單會在您輸入時自動篩選，顯示包含符合搜尋詞之值的請求。 搜尋欄位會執行「快速」搜尋，比對隱私權工作ID與UI中目前轉譯/載入的工作。 它不是您所有提交工作的完整搜尋。 而是套用至載入結果的篩選器。 使用Privacy ServiceAPI來[根據特定規則、日期範圍或單一工作](../api/privacy-jobs.md#list)傳回工作。
+您可以在[!UICONTROL 工作請求]標題下方的搜尋列中鍵入關鍵字，以篩選清單。 清單會在您輸入時自動篩選，顯示包含符合搜尋詞之值的請求。 搜尋欄位會執行「快速」搜尋，比對隱私權工作ID與UI中目前轉譯/載入的工作。 它不是您所有提交工作的完整搜尋。 而是套用至載入結果的篩選器。 使用Privacy Service API可根據特定規則、日期範圍或單一工作[傳回工作](../api/privacy-jobs.md#list)。
 
 >[!TIP]
 >
@@ -163,7 +163,7 @@ Waiting:
 
 從清單中選取請求的&#x200B;**[!UICONTROL 工作型別]** （「刪除」或「存取」）以及一個或多個可用產品。
 
-Privacy Service支援兩種個人資料工作要求： [!UICONTROL 存取] （讀取）及/或[!UICONTROL 刪除]。 您可以提交請求，以接收產品中與查詢主題相關的所有資訊，或請求刪除與查詢主題相關的所有資訊。
+Privacy Service支援兩種針對個人資料的工作要求： [!UICONTROL 存取] （讀取）及/或[!UICONTROL 刪除]。 您可以提交請求，以接收產品中與查詢主題相關的所有資訊，或請求刪除與查詢主題相關的所有資訊。
 
 ![](../images/user-guide/type-and-products.png){width=500}
 

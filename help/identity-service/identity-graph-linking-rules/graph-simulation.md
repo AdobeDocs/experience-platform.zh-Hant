@@ -182,7 +182,7 @@ ht-degree: 3%
 
 閱讀本檔案後，您現在已瞭解如何使用[!DNL Graph Simulation]工具，以更清楚瞭解在指定一組特定規則和設定時，身分資料的處理方式。 如需詳細資訊，請閱讀下列檔案：
 
-* [身分圖表連結規則概觀](./overview.md)
+* [身分識別圖連結規則概觀](./overview.md)
 * [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)

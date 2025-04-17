@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Real-time Customer Data Platform和Adobe Journey Optimizer的可用使用案例手冊。
-description: Real-time Customer Data Platform和Adobe Journey Optimizer中的所有教戰手冊。
+title: Real-Time Customer Data Platform和Adobe Journey Optimizer的可用使用案例手冊。
+description: Real-Time Customer Data Platform和Adobe Journey Optimizer中的所有教戰手冊。
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
@@ -61,7 +61,7 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-## Real-time Customer Data Platform中的使用案例手冊 {#rtcdp-playbooks}
+## Real-Time Customer Data Platform中的使用案例手冊 {#rtcdp-playbooks}
 
 | 教戰手冊名稱 | 說明 |
 | ------------- | ----------- |

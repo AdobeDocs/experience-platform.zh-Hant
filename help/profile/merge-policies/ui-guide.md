@@ -32,7 +32,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段彙整在一起�
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="找不到合併原則"
->abstract="這表示Experience Platform找不到要求的合併原則。 若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保 URL 中列出正確的合併原則 ID。</li><li>根據您正在嘗試存取的合併原則，確認您擁有正確的組織和沙箱組合。</li></ul>"
+>abstract="這代表 Experience Platform 無法找到所要求的合併原則。若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保 URL 中列出正確的合併原則 ID。</li><li>根據您正在嘗試存取的合併原則，確認您擁有正確的組織和沙箱組合。</li></ul>"
 
 在[!DNL Experience Platform] UI中，您可以透過選取左側導覽中的&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 合併原則]**&#x200B;索引標籤，開始使用合併原則。
 

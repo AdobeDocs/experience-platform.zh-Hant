@@ -7,13 +7,13 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1603'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
 # 以屬性為基礎的存取控制端對端指南
 
-在Adobe Experience Platform上使用以屬性為基礎的存取控制，為您自己和其他重視隱私權的多品牌客戶提供更大的彈性，以管理使用者存取許可權。 個別物件（例如綱要欄位和對象）的存取權可根據物件的屬性和角色以原則授予。 此功能可讓您為貴組織中的特定Experience Platform使用者授予或撤銷個別物件的存取權。
+在Adobe Experience Platform上使用以屬性為基礎的存取控制，為您自己和其他重視隱私權的多品牌客戶提供更大的彈性，以管理使用者存取許可權。 個別物件（例如綱要欄位和對象）的存取權可根據物件的屬性和角色以原則授予。 此功能可讓您授予或撤銷貴組織中特定 Experience Platform 使用者對個別物件的存取權。
 
 此功能可讓您使用定義組織或資料使用範圍的標籤，將結構描述欄位、對象等分類。 您可以將這些相同的標籤套用至Adobe Journey Optimizer中的歷程、選件和其他物件。 同時，管理員可以定義有關Experience Data Model (XDM)結構描述欄位的存取原則，並更好地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
 
@@ -66,7 +66,7 @@ Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICO
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="什麼是標籤？"
->abstract="根據適用於相關資料的使用情況和存取原則，使用標籤將資料集和欄位進行分類。Adobe Experience Platform提供數個Adobe定義的<strong>核心</strong>資料使用標籤，涵蓋適用於資料控管的各種常見限制。 例如 RHD (受監管的健康資料) 這種敏感資料 <strong>S</strong> 標籤，可以將關於受保護的健康資訊 (PHI) 的資料加以分類。您也可以定義符合本身組織需求的自訂標籤。"
+>abstract="根據適用於相關資料的使用情況和存取原則，使用標籤將資料集和欄位進行分類。Adobe Experience Platform 提供數個 Adobe 定義的<strong>核心</strong>資料使用標籤，涵蓋適用於資料治理的各種常見限制。例如 RHD (受監管的健康資料) 這種敏感資料 <strong>S</strong> 標籤，可以將關於受保護的健康資訊 (PHI) 的資料加以分類。您也可以定義符合本身組織需求的自訂標籤。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤概觀"
 
 角色是分類與您的Experience Platform執行個體互動的使用者型別的方法，也是存取控制原則的建置組塊。 角色具有一組指定的許可權，而您組織的成員可以根據他們需要的存取範圍，指派一或多個角色。

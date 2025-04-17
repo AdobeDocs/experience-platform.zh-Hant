@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2135'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -53,7 +53,7 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="資料行為"
->abstract="用於 Experience Platform 的資料分為三種行為類型：記錄、時間序列和臨時。記錄結構描述會提供有關主體屬性的資訊，而時間序列結構描述則會在採取動作時擷取系統的快照。臨時結構描述會擷取僅供單一資料集使用的命名空間欄位。請參閱檔案以取得有關Experience Platform中資料行為的詳細資訊。"
+>abstract="用於 Experience Platform 的資料分為三種行為類型：記錄、時間序列和臨時。記錄結構描述會提供有關主體屬性的資訊，而時間序列結構描述則會在採取動作時擷取系統的快照。臨時結構描述會擷取僅供單一資料集使用的命名空間欄位。如需有關 Experience Platform 中資料行為的詳細資訊，請查看此文件。"
 
 打算用於Experience Platform的資料分為三種行為型別：
 
@@ -113,7 +113,7 @@ Experience Platform與結構無關，這表示符合XDM標準的任何結構都�
 
 如需服務的詳細資訊，請參閱[查詢服務總覽](../query-service/home.md)。
 
-### 即時客戶輪廓 {#real-time-customer-profile}
+### 即時客戶設定檔 {#real-time-customer-profile}
 
 即時客戶設定檔提供集中式消費者設定檔，用於針對性和個人化的體驗管理。 每個設定檔都包含跨所有系統彙總的資料，並包含涉及設定檔主旨之事件的可行時間戳記帳戶。 這些事件可能在您搭配Experience Platform使用的任何系統中發生。
 

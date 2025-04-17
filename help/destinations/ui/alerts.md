@@ -49,7 +49,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 * 對於串流目的地，只有[!DNL Activation Skipped Rate Exceeded]警報可用。
 * 針對以檔案為基礎的目的地，所有警報皆可使用。
 
-| 警示 | 說明 |
+| 警報 | 說明 |
 | --- | --- |
 | 目標資料流執行延遲 | 此警報會在目的地流程執行需要150分鐘以上的時間才會啟用對象時通知您。 |
 | 目的地資料流執行失敗 | 將受眾啟用至目的地時發生錯誤，此警報會通知您。 |

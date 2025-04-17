@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -359,7 +359,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="合併原則"
->abstract="合併原則可讓不同的資料集合併，形成您的設定檔。Experience Platform已提供預設合併原則，或者，您可以在設定檔中建立新的預設合併原則。 針對此對象選擇和您的行銷目的相符的合併原則。"
+>abstract="合併原則可讓不同的資料集合併，形成您的設定檔。Experience Platform 已提供預設的合併原則，您也可以在輪廓中建立新的預設合併原則。針對此對象選擇和您的行銷目的相符的合併原則。"
 
 [!DNL Experience Platform]可讓您將來自多個來源的資料彙集在一起，並加以合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是[!DNL Experience Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立設定檔的規則。
 

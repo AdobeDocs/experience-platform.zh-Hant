@@ -26,7 +26,7 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-本指南提供如何在Experience PlatformUI或資料收集UI中設定事件轉送([!UICONTROL Edge])屬性的密碼的高層級概觀。
+本指南提供如何在Experience Platform UI或資料收集UI中設定事件轉送([!UICONTROL Edge])屬性的密碼的高層級概觀。
 
 >[!NOTE]
 >
@@ -242,7 +242,7 @@ ht-degree: 3%
 
 ## 在事件轉送中使用秘密
 
-為了在事件轉送中使用密碼，您必須先建立參考密碼本身的[資料元素](../managing-resources/data-elements.md)。 儲存資料元素後，您可以將其包含在事件轉送[規則](../managing-resources/rules.md)中，並將這些規則新增到[資料庫](../publishing/libraries.md)，資料庫可部署到Adobe的伺服器作為[組建](../publishing/builds.md)。
+為了在事件轉送中使用密碼，您必須先建立參考密碼本身的[資料元素](../managing-resources/data-elements.md)。 儲存資料元素後，您可以將它包含在事件轉送[規則](../managing-resources/rules.md)中，並將這些規則新增至[資料庫](../publishing/libraries.md)，這些資料庫可部署到Adobe的伺服器做為[組建](../publishing/builds.md)。
 
 建立資料元素時，請選取&#x200B;**[!UICONTROL 核心]**&#x200B;擴充功能，然後為資料元素型別選取&#x200B;**[!UICONTROL 密碼]**。 右側面板會更新並提供下拉式控制項，以將最多三個密碼指派給資料元素：一個分別適用於[!UICONTROL 開發]、[!UICONTROL 測試]和[!UICONTROL 生產]。
 

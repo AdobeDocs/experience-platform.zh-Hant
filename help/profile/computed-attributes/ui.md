@@ -28,7 +28,7 @@ ht-degree: 6%
 
 ## 檢視計算屬性 {#view}
 
-在Experience PlatformUI中，選取左側導覽中的&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 計算屬性]**，以檢視貴組織可用的計算屬性清單。 這包括計算屬性的名稱、說明、上次評估日期和上次評估狀態的相關資訊。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 計算屬性]**，以檢視貴組織可用的計算屬性清單。 這包括計算屬性的名稱、說明、上次評估日期和上次評估狀態的相關資訊。
 
 ![ [!UICONTROL 設定檔]區段和[!UICONTROL 計算屬性]標籤會反白顯示，顯示使用者如何存取計算屬性瀏覽頁面。](./images/ui/browse.png)
 
@@ -118,7 +118,7 @@ ht-degree: 6%
 
 完成這些步驟後，您現在可以選擇將此計算屬性儲存為草稿，或立即發佈。
 
-![已反白顯示[!UICONTROL 另存為草稿]和[!UICONTROL Publish]按鈕。](./images/ui/draft-or-publish.png)
+![已反白顯示[!UICONTROL 另存為草稿]和[!UICONTROL 發佈]按鈕。](./images/ui/draft-or-publish.png)
 
 ## 檢視計算屬性的詳細資料 {#view-details}
 

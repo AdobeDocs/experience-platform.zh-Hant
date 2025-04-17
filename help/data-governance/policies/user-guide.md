@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1769'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 15%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="在您的設定檔資料中整合並強制執行客戶同意"
->abstract="<h2>說明</h2><p>Experience Platform可讓您將從客戶收集到的同意資料整合到其個別設定檔中。 然後，您可以設定同意原則以確定此資料是否可以包含在已啟用至特定目的地的區段中。</p>"
+>abstract="<h2>說明</h2><p>您可以使用 Experience Platform 將向客戶收集而來的同意資料整合到其各自的輪廓中。然後，您可以設定同意原則來確定在已對特定目的地啟用的區段中，是否可以包含這些資料。</p>"
 
 本文介紹如何在Adobe Experience Platform UI中使用&#x200B;**[!UICONTROL 原則]**&#x200B;工作區來建立及管理資料使用原則。
 

@@ -41,13 +41,13 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->如需如何在Adobe Real-time Customer Data Platform B2B edition中建立多對一關係的步驟，請參閱[建立B2B關係](./relationship-b2b.md)指南。
+>如需如何在Adobe Real-Time Customer Data Platform B2B edition中建立多對一關係的步驟，請參閱[建立B2B關係](./relationship-b2b.md)指南。
 
 ## 快速入門
 
 此教學課程需要您實際瞭解[!DNL XDM System]以及[!DNL Experience Platform] UI中的結構描述編輯器。 在開始本教學課程之前，請先檢閱下列檔案：
 
-* Experience Platform](../home.md)中的[XDM系統： [!DNL Experience Platform]中XDM及其實作的概觀。
+* Experience Platform中的[XDM系統](../home.md)： [!DNL Experience Platform]中XDM及其實作的概觀。
 * [結構描述組合的基本概念](../schema/composition.md)： XDM結構描述的建置區塊簡介。
 * [使用 [!DNL Schema Editor]](create-schema-ui.md)建立結構描述：涵蓋使用[!DNL Schema Editor]基本知識的教學課程。
 

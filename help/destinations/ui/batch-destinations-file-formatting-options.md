@@ -17,7 +17,7 @@ ht-degree: 17%
 
 當您[連線](/help/destinations/ui/connect-destination.md)至檔案型目的地(例如[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect)或[SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect))時，可以使用選項為匯出的檔案設定各種檔案格式選項。
 
-您可以使用Experience PlatformUI為匯出的檔案設定各種檔案格式選項。 您可以修改匯出檔案的幾個屬性，以符合您這端的檔案接收系統的需求，以便以最佳方式讀取和解譯從Experience Platform接收的檔案。
+您可以使用Experience Platform UI為匯出的檔案設定各種檔案格式選項。 您可以修改匯出檔案的幾個屬性，以符合您這端的檔案接收系統的需求，以便以最佳方式讀取和解譯從Experience Platform接收的檔案。
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -30,9 +30,9 @@ ht-degree: 17%
 
 >[!IMPORTANT]
 >
->您連線的目的地可能沒有所有這些可用選項。 由目的地開發人員決定要在其目的地支援哪些檔案格式選項。 目的地開發人員可決定連線至目的地時可用的選項。 在Experience PlatformUI中，必要選項會以星號標示。
+>您連線的目的地可能沒有所有這些可用選項。 由目的地開發人員決定要在其目的地支援哪些檔案格式選項。 目的地開發人員可決定連線至目的地時可用的選項。 Experience Platform UI中的必要選項會以星號標示。
 > 
->Adobe建置的雲端儲存空間目的地 — [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[Google雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、[SFTP](/help/destinations/catalog/cloud-storage/sftp.md) — 目前僅支援下列標示的六個CSV選項。
+>Adobe建置的雲端儲存空間目的地 — [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)、[Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、[Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)、[SFTP](/help/destinations/catalog/cloud-storage/sftp.md) — 目前僅支援下列六個強調的CSV選項。
 
 ![顯示部分可用檔案格式選項的影像。](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 

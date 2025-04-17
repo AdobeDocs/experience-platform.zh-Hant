@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -165,7 +165,7 @@ ECID會儲存未驗證（匿名）的事件，而CRMID會儲存已驗證的事�
 
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
-* [身分圖表連結規則概觀](./overview.md)
+* [身分識別圖連結規則概觀](./overview.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)

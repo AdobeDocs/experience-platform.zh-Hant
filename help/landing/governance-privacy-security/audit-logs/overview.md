@@ -7,7 +7,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 27%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="熱門動作"
->abstract="此小工具會顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要檢視Experience Platform中記錄動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
+>abstract="此小工具會顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要查看 Experience Platform 中記錄的動作的完整清單，請在左側導覽中選取「**稽核**」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="熱門使用者"
->abstract="此小工具會顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要檢視Experience Platform中記錄動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
+>abstract="此小工具會顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要查看 Experience Platform 中記錄的動作的完整清單，請在左側導覽中選取「**稽核**」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="監視Experience Platform中的使用者活動"
->abstract="<h2>說明</h2><p>您可以透過稽核記錄的形式，監控各種Experience Platform服務和功能的使用者活動。 這些記錄會形成稽核軌跡，其中會記錄<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄有助於對Experience Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和法規要求。</p>"
+>title="監控 Experience Platform 中的使用者活動"
+>abstract="<h2>說明</h2><p>您可以採用稽核記錄的形式監控各種 Experience Platform 服務和功能的使用者活動。這些記錄會形成稽核軌跡，其中記錄<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄可以幫助解決 Experience Platform 上的問題，並幫助您的企業有效地遵守公司資料管理原則和監管需求。</p>"
 
 為了提高系統中所執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些記錄形成了稽核軌跡，可以幫助對Experience Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和監管要求。
 

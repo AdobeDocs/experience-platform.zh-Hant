@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1703'
-ht-degree: 12%
+ht-degree: 16%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 12%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="什麼是角色？"
->abstract="角色會定義管理員、專家或一般使用者對組織資源的存取權。它們會將與您的Experience Platform執行個體互動的使用者分類，並且是存取控制原則的建置區塊。 一個角色具有特定一組權限，而您可以根據組織成員所需的檢視範圍或寫入存取權，對成員指派一個或多個角色。"
+>abstract="角色會定義管理員、專家或一般使用者對組織資源的存取權。角色會將與 Experience Platform 執行個體互動的使用者分類，也是存取控制原則的建置要素。一個角色具有特定一組權限，而您可以根據組織成員所需的檢視範圍或寫入存取權，對成員指派一個或多個角色。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="管理角色"
 
 >[!IMPORTANT]
@@ -123,8 +123,8 @@ UI中的角色可使用下列篩選器：
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="什麼是 API 認證？"
->abstract="系統會將API憑證指派給角色，以授予使用者和開發人員對Experience Platform API的存取權。 您可以使用Experience Platform API，以程式設計方式執行資料上的基本CRUD （建立、讀取、更新、刪除）操作，例如設定計算屬性、存取資料/實體、匯出資料、刪除不需要的資料或批次等。"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API指南"
+>abstract="指派給各個角色的 API 認證，將賦予使用者和開發人員存取 Experience Platform API 的權限。您可以使用 Experience Platform API 以程式設計的方式對資料執行基本的 CRUD (建立、讀取、更新、刪除) 操作，例如設定計算屬性、存取資料/實體、匯出資料、刪除不需要的資料或批次等。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API 指南"
 
 >[!IMPORTANT]
 >

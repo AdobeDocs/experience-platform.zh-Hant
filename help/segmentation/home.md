@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
 source-wordcount: '1679'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -61,7 +61,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="評估方式"
->abstract="Experience Platform目前支援三種評估受眾的方法：串流分段、批次分段和邊緣分段。"
+>abstract="Experience Platform 目前支援三種評估客群的方式：串流分段、批次分段以及邊緣分段。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 >abstract="串流分段是持續進行的資料選擇流程；此功能會根據使用者活動來更新對象。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="使用串流分段近乎即時地評估事件"
 
-Experience Platform目前支援三種評估受眾的方法：串流分段、批次分段和邊緣分段。
+Experience Platform 目前支援三種評估客群的方式：串流分段、批次分段以及邊緣分段。
 
 ### 串流區段 {#streaming}
 
@@ -93,7 +93,7 @@ Experience Platform目前支援三種評估受眾的方法：串流分段、批�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="邊緣評估"
->abstract="Edge區段能在Edge Network上即時評估Experience Platform中的區段，啟用相同頁面和下一頁個人化使用案例。"
+>abstract="邊緣分段指在 Edge Network 上即時評估 Experience Platform 中區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="邊緣分段服務指南"
 
 Edge區段能在Edge Network](../landing/edge-and-hub-comparison.md)上即時評估Experience Platform中的區段[，啟用相同頁面和下一頁個人化使用案例。

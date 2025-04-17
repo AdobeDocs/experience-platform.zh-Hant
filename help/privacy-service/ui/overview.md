@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: Privacy ServiceUI總覽
+title: Privacy Service UI總覽
 description: 開始使用Privacy Service使用者介面來協調及監控各種Experience Cloud應用程式的隱私權請求。
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
@@ -22,7 +22,7 @@ Privacy Service UI可讓您協調各種Adobe Experience Cloud應用程式的隱�
 
 >[!NOTE]
 >
->如需有關使用Privacy ServiceAPI以程式設計方式管理法規遵循要求的資訊，請參閱[Privacy ServiceAPI指南](../api/overview.md)。 如需詳細資訊，請參閱檔案[管理Privacy Service許可權](../permissions.md)。
+>如需有關使用Privacy Service API以程式設計方式管理法規遵循要求的資訊，請參閱[Privacy Service API指南](../api/overview.md)。 如需詳細資訊，請參閱檔案[管理Privacy Service許可權](../permissions.md)。
 
 ## 登入[!DNL Privacy Service] UI
 

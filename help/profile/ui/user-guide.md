@@ -131,7 +131,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="找不到實體"
->abstract="這表示Experience Platform找不到要求的實體。 若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保您所要存取的實體 URL 列出正確的設定檔 ID。</li><li>確保您擁有所要存取的實體之正確的組織和沙箱組合。</li></ul>"
+>abstract="這代表 Experience Platform 無法找到所要求的實體。若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保您所要存取的實體 URL 列出正確的設定檔 ID。</li><li>確保您擁有所要存取的實體之正確的組織和沙箱組合。</li></ul>"
 
 選取&#x200B;**[!UICONTROL 設定檔識別碼]**&#x200B;後，**[!UICONTROL 詳細資料]**&#x200B;索引標籤會開啟。 **[!UICONTROL 詳細資料]**&#x200B;標籤上顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成個別客戶的單一檢視。 這包括基本屬性、連結的身分和管道偏好設定等客戶細節。
 

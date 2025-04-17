@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1552'
-ht-degree: 14%
+ht-degree: 17%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 14%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="控管Experience Platform中的資料使用"
+>title="治理 Experience Platform 中的資料使用情況"
 >abstract="<h2>說明</h2><p>Experience Platform 中的資料控管結構描述可讓您根據資料使用限制來標記屬性和結構描述，並設定原則來識別和執行特定行銷活動的這些限制。</p>"
 
 本使用手冊說明在[!DNL Experience Platform]使用者介面中使用資料使用標籤的步驟。
@@ -61,7 +61,7 @@ ht-degree: 14%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="說明"
->abstract="<ol><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=zh-Hant">資料集</a>，然後選取要限制其資料的資料集。</li><li>從資料集的詳細資料檢視中，選取<b>資料控管</b>索引標籤。</li><li>選取要限制的資料集欄位，然後選取<b>編輯控管標籤</b>以根據使用限制來標記資料。</li><li>標記資料後，在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<b>建立原則</b>。</li><li>選擇建立<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">資料控管原則</a>，然後選取原則將套用到原則的資料使用標籤。</li><li>選取行銷動作，原則將拒絕對包含這些標籤的任何資料。建立原則後，從清單中選擇它並使用右側邊欄中的切換啟用它。</li><li>對於每個啟用的原則，Experience Platform會防止將包含指定標籤的任何資料用於定義的行銷動作。 當您嘗試對具有關聯的行銷動作的目的地啟用標記的資料時，此強制執行會自動發生。</li></ol>"
+>abstract="<ol><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=zh-Hant">資料集</a>，然後選取要限制其資料的資料集。</li><li>從資料集的詳細資料檢視中，選取<b>資料控管</b>索引標籤。</li><li>選取要限制的資料集欄位，然後選取<b>編輯控管標籤</b>以根據使用限制來標記資料。</li><li>標記資料後，在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<b>建立原則</b>。</li><li>選擇建立<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">資料控管原則</a>，然後選取原則將套用到原則的資料使用標籤。</li><li>選取行銷動作，原則將拒絕對包含這些標籤的任何資料。建立原則後，從清單中選擇它並使用右側邊欄中的切換啟用它。</li><li>對於每個啟用的原則，Experience Platform 會阻止包含指定標籤的任何資料被用於已定義好的行銷動作。當您嘗試對具有相關聯行銷動作的目的地啟用有標籤的資料時，便會自動強制執行這項要求。</li></ol>"
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="建立標籤"
->abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。Experience Platform提供一組標準標籤供您使用，但您也可以建立貴組織專屬的自訂標籤。"
+>abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。Experience Platform 提供一組標準標籤供您使用，但您也可以建立組織專用的自訂標籤。"
 
 您可以在[!DNL Experience Platform] UI的&#x200B;**[!UICONTROL 原則]**&#x200B;工作區中建立您自己的自訂使用標籤。 在左側導覽中選取「**[!UICONTROL 原則]**」，然後選取「**[!UICONTROL 標籤]**」以檢視現有標籤的清單。 從這裡，選取&#x200B;**[!UICONTROL 建立標籤]**。
 
