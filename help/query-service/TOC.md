@@ -5,10 +5,10 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 22%
+source-wordcount: '404'
+ht-degree: 27%
 
 ---
 
@@ -18,21 +18,22 @@ ht-degree: 22%
 - [查詢服務總覽](home.md)
 - [查詢服務封裝](packaging.md)
 - [查詢服務護欄](guardrails.md)
-- 開始使用 {#get-started}
+- 快速入門 {#get-started}
    - [先決條件](get-started/prerequisites.md)
-- 資料Distiller {#data-distiller}
+- 資料蒸餾器 {#data-distiller}
    - [概觀](data-distiller/overview.md)
    - [授權使用情況](data-distiller/license-usage.md)
-   - 衍生資料集{#derived-datasets}
+   - 衍生資料集 {#derived-datasets}
       - [概觀](data-distiller/derived-datasets/overview.md)
       - [使用SQL建立衍生資料集](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [建立十等分衍生資料集](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 延伸應用程式報告{#sql-insights}的SQL深入分析
+   - 用於擴展應用程式報告的 SQL 深入解析 {#sql-insights}
       - [概觀](data-distiller/sql-insights/overview.md)
       - [查詢專業模式](data-distiller/sql-insights/query-pro-mode.md)
+      - [Accelerated Store概述](data-distiller/sql-insights/accelerated-store-overview.md)
       - [傳送加速的查詢](data-distiller/sql-insights/send-accelerated-queries.md)
       - [報表深入分析資料模型指南](data-distiller/sql-insights/reporting-insights-data-model.md)
-   - AI/ML功能管道{#ml-feature-pipelines}
+   - AI/ML 功能管道 {#ml-feature-pipelines}
       - [概觀](data-distiller/ml-feature-pipelines/overview.md)
       - [連線到Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [探索資料分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -40,12 +41,12 @@ ht-degree: 22%
       - [將資料匯出至ML環境](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML資料管道擴充端對端工作流程](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
    - [2025年高峰會會議](data-distiller/top-tips-to-maximize-value.md)
-- 資料Distiller統計資料和機器學習{#advanced-statistics}
+- 資料Distiller統計資料和機器學習 {#advanced-statistics}
    - [概觀](advanced-statistics/overview.md)
    - [功能工程](advanced-statistics/feature-engineering.md)
    - [模型](advanced-statistics/models.md)
    - [特徵轉換](advanced-statistics/feature-transformation.md)
-   - 實作模型{#implement-models}
+   - 實作模型 {#implement-models}
       - [實作模型](advanced-statistics/implement-models/implement-models.md)
       - [迴歸](advanced-statistics/implement-models/regression.md)
       - [分類](advanced-statistics/implement-models/classification.md)
@@ -53,7 +54,7 @@ ht-degree: 22%
    - 範例 {#examples}
       - [使用統計和機器學習進行機器人篩選](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [使用SQL型Logistic回歸預測客戶流失](advanced-statistics/examples/predict-customer-churn.md)
-- 資料Distiller對象{#data-distiller-audiences}
+- 資料Distiller受眾 {#data-distiller-audiences}
    - [使用SQL建置外部對象](data-distiller-audiences/overview.md)
 - 範例 {#use-cases}
    - [概觀](use-cases/overview.md)
@@ -76,7 +77,7 @@ ht-degree: 22%
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [檢視訪客的統計報表](use-cases/roll-up-report-of-a-visitor.md)
    - [網站和行動分析深入分析](use-cases/analytics-insights.md)
-- 重要概念{#key-concepts}
+- 重要概念 {#key-concepts}
    - [使用巢狀資料結構](key-concepts/nested-data-structures.md)
    - [平面化巢狀資料結構](key-concepts/flatten-nested-data.md)
    - [匿名區塊](key-concepts/anonymous-block.md)
@@ -85,9 +86,9 @@ ht-degree: 22%
    - [重複資料刪除](key-concepts/deduplication.md)
    - [資料集範例](key-concepts/dataset-samples.md)
    - [資料集統計資料計算](key-concepts/dataset-statistics.md)
-- 資料Distiller超立方體{#hypercubes}
+- 資料Distiller超立方體 {#hypercubes}
    - [使用超多維度資料集進行高效率的大資料分析](hypercubes/overview.md)
-- 將使用者端連線至查詢服務{#clients}
+- 將用戶端連線至查詢服務 {#clients}
    - [使用者端連線概觀](clients/overview.md)
    - [SSL模式](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -124,15 +125,15 @@ ht-degree: 22%
    - [快速入門](auth-api/getting-started.md)
    - [IP存取](auth-api/ip-access.md)
    - [驗證](auth-api/validate.md)
-- 資料控管{#data-governance}
+- 資料治理 {#data-governance}
    - [概觀](data-governance/overview.md)
    - [稽核記錄指南](data-governance/audit-log-guide.md)
    - [臨時結構描述資料集中的身分](data-governance/ad-hoc-schema-identities.md)
    - [針對臨時結構描述的屬性型存取控制支援](./data-governance/ad-hoc-schema-labels.md)
-- 最佳實務{#best-practices}
+- 最佳作法 {#best-practices}
    - [查詢執行](best-practices/writing-queries.md)
    - [資料資產組織](./best-practices/organize-data-assets.md)
-- SQL參考{#sql}
+- SQL 參照 {#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
    - [Adobe定義的函式](sql/adobe-defined-functions.md)
