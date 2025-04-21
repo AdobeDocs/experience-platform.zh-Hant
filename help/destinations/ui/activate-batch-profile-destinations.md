@@ -3,7 +3,7 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
+source-git-commit: 11961e291188d509609a036f41084f4487cab584
 workflow-type: tm+mt
 source-wordcount: '4517'
 ht-degree: 11%
@@ -87,12 +87,12 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_weekly_messaging"
 >title="每週匯出"
->abstract="選取開始日期，在選取的結束日期之前，後續的匯出作業將發生在一週的該日。"
+>abstract="<sup>*</sup>選取開始日期，在選取的結束日期之前，後續的匯出將發生在一週的該日。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
 >title="每月匯出"
->abstract="選取開始日期，後續的匯出作業會在該月的該日期進行，直到選取的結束日期為止。 對於少於30或31天的月份，匯出會發生在當月的最後一天。"
+>abstract="<sup>*</sup>選取開始日期，後續的匯出將在該月的該日期進行，直到選取的結束日期為止。 對於少於30或31天的月份，匯出會發生在當月的最後一天。"
 
 [!DNL Adobe Experience Platform]會將電子郵件行銷和雲端儲存空間的資料匯出為[不同的檔案型別](#supported-file-formats-export)。 在&#x200B;**[!UICONTROL 排程]**&#x200B;頁面中，您可以設定排程和要匯出之每個對象的檔案名稱。
 
