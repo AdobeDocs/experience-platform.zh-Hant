@@ -3,22 +3,14 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 3%
+source-wordcount: '1042'
+ht-degree: 2%
 
 ---
 
 # [!DNL Airship Attributes]個連線 {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->* 自2025年3月25日起，您可以在目的地目錄中並排看到兩張[!DNL Airship Attributes]卡片。 這是因為目標服務內部升級所致。現有的[!DNL Airship Attributes]目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Airship屬性]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Airship屬性]**&#x200B;的新卡片。
->* 使用目錄中的&#x200B;**[!UICONTROL 飛艇屬性]**&#x200B;連線來建立新的啟用資料流程。 如果您有任何使用中的資料流至&#x200B;**[!UICONTROL （已棄用）飛艇屬性]**&#x200B;目的地，這些資料流將會自動更新，因此您不需要採取任何動作。
->* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
->   * 流程規格 ID：`a862e0be-966e-4e5a-80d3-1bb566461986`
->   * 連線規格 ID：`594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## 概觀 {#overview}
 
