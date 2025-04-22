@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1888'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
+>身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
+>
+>* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
+>* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
+>* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
 
 >[!IMPORTANT]
 >
@@ -33,7 +37,7 @@ ht-degree: 6%
 
 ## 實作的先決條件 {#prerequisites-for-implementation}
 
-本節概述在實作身分圖表連結規則至您的資料之前，您必須完成的先決條件步驟。
+本節概述對資料實作[!DNL Identity Graph Linking Rules]之前必須完成的先決條件步驟。
 
 ### 唯一命名空間
 
@@ -291,9 +295,9 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 ## 後續步驟
 
-如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
+如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
-* [身分識別圖連結規則概觀](./overview.md)
+* [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
 * [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)

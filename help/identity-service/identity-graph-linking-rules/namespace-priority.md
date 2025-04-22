@@ -2,10 +2,10 @@
 title: 命名空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1801'
-ht-degree: 3%
+source-wordcount: '1866'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
+>身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
+>
+>* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
+>* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
+>* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
 
 每個客戶實作都是獨一無二，並根據特定組織的目標量身打造，因此，特定名稱空間的重要性因客戶而異。 現實世界的範例包括：
 

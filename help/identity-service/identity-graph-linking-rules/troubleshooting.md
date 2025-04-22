@@ -2,20 +2,24 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3375'
 ht-degree: 0%
 
 ---
 
-# 身分識別圖連結規則疑難排解指南
+# [!DNL Identity Graph Linking Rules]的疑難排解指南
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
+>身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
+>
+>* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
+>* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
+>* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
 
-測試和驗證身分圖表連結規則時，您可能會遇到一些與資料擷取和圖表行為相關的問題。 請閱讀本檔案，瞭解如何疑難排解使用身分圖表連結規則時可能會遇到的一些常見問題。
+當您測試及驗證[!DNL Identity Graph Linking Rules]時，您可能會遇到一些與資料擷取和圖表行為相關的問題。 閱讀本檔案以瞭解如何疑難排解您在使用[!DNL Identity Graph Linking Rules]時可能會遇到的一些常見問題。
 
 ## 資料擷取流程概觀 {#data-ingestion-flow-overview}
 
@@ -55,7 +59,7 @@ ht-degree: 0%
 * 依預設，[AAID會封鎖擷取](../guardrails.md#identity-namespace-ingestion)。
 * 身分已移除，因為[系統護欄](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated)。
 
-在身分圖表連結規則的內容中，可能會拒絕身分服務的記錄，因為傳入事件有兩個或多個具有相同唯一名稱空間但不同身分值的身分。 發生此情形通常是因為實作錯誤。
+在[!DNL Identity Graph Linking Rules]的內容中，可能會拒絕識別服務的記錄，因為傳入事件有兩個或多個具有相同唯一名稱空間但不同識別值的識別。 發生此情形通常是因為實作錯誤。
 
 考量下列事件有兩個假設：
 
@@ -318,11 +322,11 @@ ORDER BY timestamp desc
 
 >[!TIP]
 >
->如果沙箱未針對共用裝置臨時方法啟用，則上述兩個查詢將產生預期結果，且行為將與身分圖表連結規則不同。
+>如果沙箱未針對共用裝置臨時方法啟用，則上述兩個查詢將產生預期結果，且行為與[!DNL Identity Graph Linking Rules]不同。
 
 ## 常見問題 {#faq}
 
-本節概述有關身分圖表連結規則常見問題的解答清單。
+本節概述有關[!DNL Identity Graph Linking Rules]常見問題的解答清單。
 
 ## 身分識別最佳化演算法 {#identity-optimization-algorithm}
 
@@ -389,7 +393,7 @@ ORDER BY timestamp desc
 
 ## 測試
 
-請參閱本節，以取得有關測試和偵錯身分圖表連結規則中功能的常見問題解答。
+請閱讀本節，以取得有關[!DNL Identity Graph Linking Rules]中測試和偵錯功能的常見問題解答。
 
 ### 我應該在開發沙箱環境中測試哪些情境？
 

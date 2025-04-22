@@ -2,14 +2,14 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 8%
+source-wordcount: '1497'
+ht-degree: 6%
 
 ---
 
-# 身分識別圖連結規則概觀 {#identity-graph-linking-rules-overview}
+# [!DNL Identity Graph Linking Rules] 概觀 {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
@@ -18,17 +18,21 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
+>身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
+>
+>* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
+>* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
+>* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
 
-透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 若要防止這些不必要的合併，您可以使用透過身分識別圖連結規則提供的設定，並為您的使用者提供準確的個人化。
+透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 若要防止這些不想要的合併，您可以使用透過[!DNL Identity Graph Linking Rules]提供的設定，並允許使用者進行精確的個人化。
 
-觀看以下影片，瞭解使用身分圖表連結規則的其他資訊：
+觀看下列影片以取得使用[!DNL Identity Graph Linking Rules]的其他資訊：
 
 >[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## 快速入門
 
-下列檔案對於瞭解身分圖表連結規則至關重要。
+下列檔案是瞭解[!DNL Identity Graph Linking Rules]的必要條件。
 
 * [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
@@ -45,7 +49,7 @@ ht-degree: 8%
 >title="圖表收合案例"
 >abstract="圖表可能「收合」或代表多人實體的原因有很多。"
 
-本節概述設定身分圖表連結規則時可考慮的範例情境。
+本節概述設定[!DNL Identity Graph Linking Rules]時可考慮的範例情境。
 
 ### 共用裝置
 
@@ -61,7 +65,7 @@ ht-degree: 8%
 
 在這些情況下，從圖表觀點來看，未啟用任何限制，單一ECID會連結至多個CRMID。
 
-使用身分圖表連結規則，您可以：
+透過[!DNL Identity Graph Linking Rules]，您可以：
 
 * 設定用於登入的ID作為唯一識別碼。 例如，您可以限制圖表僅儲存一個具有CRMID名稱空間的身分識別，然後將CRMID定義為共用裝置的唯一識別碼。
    * 這麼做可確保ECID不會合併CRMID。
@@ -72,7 +76,7 @@ ht-degree: 8%
 
 ![代表無效電子郵件或電話情況的圖表。](../images/identity-settings/invalid-email-phone.png)
 
-使用身分圖表連結規則，您可以：
+透過[!DNL Identity Graph Linking Rules]，您可以：
 
 * 將CRMID、電話號碼或電子郵件地址設定為唯一識別碼，因此將一個人限製為只能有一個與其帳戶相關聯的CRMID、電話號碼和/或電子郵件地址。
 
@@ -89,11 +93,11 @@ ht-degree: 8%
 
 ![具有錯誤或錯誤身分值的身分資料圖形範例。](../images/identity-settings/bad-data.png)
 
-透過身分圖表連結規則，您可以將CRMID設定為唯一識別碼，以防止由於此型別的資料造成不想要的設定檔摺疊。
+透過[!DNL Identity Graph Linking Rules]，您可以將CRMID設定為唯一識別碼，以防止由於此型別的資料而造成不需要的設定檔摺疊。
 
-## 身分識別圖連結規則 {#identity-graph-linking-rules}
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
-使用身分圖表連結規則，您可以：
+透過[!DNL Identity Graph Linking Rules]，您可以：
 
 * 透過設定唯一的名稱空間，為每個使用者建立單一身分圖表/合併的設定檔，以防止兩個不同的個人識別碼合併到一個身分圖表中。
 * 透過設定優先順序來關聯線上、已驗證的事件與人員
@@ -151,7 +155,7 @@ ht-degree: 8%
 
 ## 後續步驟
 
-如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
+如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
 * [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)

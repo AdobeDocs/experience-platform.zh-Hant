@@ -2,10 +2,10 @@
 title: 身分識別最佳化演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 5%
+source-wordcount: '1617'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,11 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
+>身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
+>
+>* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
+>* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
+>* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
 
 身分最佳化演演算法是Identity Service上的圖表演演算法，可協助確保身分圖表代表單一人員，因此可防止即時客戶設定檔上不想要的身分合併。
 
@@ -163,9 +167,9 @@ ECID會儲存未驗證（匿名）的事件，而CRMID會儲存已驗證的事�
 
 ## 後續步驟
 
-如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
+如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
-* [身分識別圖連結規則概觀](./overview.md)
+* [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
