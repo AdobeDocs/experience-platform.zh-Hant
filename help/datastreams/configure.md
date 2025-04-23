@@ -2,7 +2,7 @@
 title: 建立和設定資料串流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 48%
@@ -81,7 +81,7 @@ ht-degree: 48%
 
 此外，請確定您的結構描述中存在每個所需的XDM欄位。 如果不適用，您可以將Adobe提供的`Environment Details`欄位群組新增到結構描述。
 
-### 設定進階選項{#@advanced-options}
+### 設定進階選項 {#advanced-options}
 
 若要顯示進階設定選項，請選取&#x200B;**[!UICONTROL 進階選項]**。 您可以在此處設定其他資料流設定，例如IP模糊化、第一方ID Cookie等。
 
