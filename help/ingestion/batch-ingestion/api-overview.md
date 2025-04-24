@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；批次擷取；批次擷取；擷取；開發人員指南；API指南；上傳；擷取Parquet；擷取json；
+keywords: Experience Platform；首頁；熱門主題；批次擷取；批次擷取；開發人員指南；api指南；上傳；擷取Parquet；擷取json；
 solution: Experience Platform
 title: 批次擷取API指南
 description: 本檔案為使用Adobe Experience Platform批次擷取API的開發人員提供完整指南。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
-ht-degree: 5%
+source-wordcount: '2435'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,9 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->下列步驟適用於小型檔案（256 MB或更小）。 如果您遇到閘道逾時或請求內文大小錯誤，您必須切換到大型檔案上傳。
+>- 下列步驟適用於小型檔案（256 MB或更小）。 如果您遇到閘道逾時或請求內文大小錯誤，您必須切換到大型檔案上傳。
+>
+>- 使用單行JSON而非多行JSON作為批次擷取的輸入。 單行JSON可提供較佳的效能，因為系統可以將一個輸入檔案分割成多個區塊並平行處理，而多行JSON無法分割。 這可以大幅降低資料處理成本並改善批次處理延遲。
 
 ### 建立批次
 
@@ -405,7 +407,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 上傳大型檔案區塊
 
-現在檔案已建立，您可以透過進行重複的PATCH請求（檔案的每個區段各一個）來上傳所有後續區塊。
+現在檔案已建立，您可以進行重複的PATCH請求（檔案的每個區段各一個），上傳所有後續的區塊。
 
 **API格式**
 
@@ -720,7 +722,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 刪除批次 {#delete-a-batch}
 
-若要刪除批次，請以您要刪除之批次的ID的`action=REVERT`查詢引數執行下列POST請求。 該批次被標籤為「非使用中」，因此符合記憶體回收的資格。 系統會以非同步方式收集批次，然後將收集到的批次標示為「已刪除」。
+若要刪除批次，請對要刪除之批次的ID使用下列POST要求`action=REVERT`查詢引數。 該批次被標籤為「非使用中」，因此符合記憶體回收的資格。 系統會以非同步方式收集批次，然後將收集到的批次標示為「已刪除」。
 
 **API格式**
 
