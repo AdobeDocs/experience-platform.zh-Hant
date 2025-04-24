@@ -3,9 +3,9 @@ keywords: 目的地；問題；常見問題；faq；目的地常見問題
 title: 常見問題
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ Google要求對象名稱必須是唯一的。 如果您將相同的對象對應�
 
 不過，如果使用[[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)來代替Web SDK，則僅支援下一次工作階段個人化。
 
-針對[相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md)使用案例，您必須使用[網頁SDK](../web-sdk/home.md)或[Edge Network伺服器API](../server-api/overview.md)。 如需更多實作詳細資訊，請參閱有關[將對象啟用至邊緣目的地](ui/activate-edge-personalization-destinations.md)的檔案。
+針對[相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md)使用案例，您必須使用[網頁SDK](../web-sdk/home.md)或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)。 如需更多實作詳細資訊，請參閱有關[將對象啟用至邊緣目的地](ui/activate-edge-personalization-destinations.md)的檔案。
 +++
 
 ### 我可以從Real-time Customer Data Platform傳送到Adobe Target或自訂Personalization目的地的屬性數量是否有限制？
@@ -244,10 +244,10 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 當您刪除目的地時，對應至目的地的所有對象和屬性都會從Adobe Target中刪除，同時也會從Edge Network中移除。
 +++
 
-### 整合是否可使用Edge Network伺服器API運作？
+### 整合是否可使用Edge Network API運作？
 
 +++回答
-是，Edge Network伺服器API可與自訂Personalization目的地搭配使用。 由於設定檔屬性可能包含敏感資料，為了保護此資料，自訂Personalization目的地需要您使用Edge Network伺服器API來收集資料。 此外，所有API呼叫都必須在[已驗證的內容](../server-api/authentication.md)中進行。
+是，Edge Network API可與自訂Personalization目的地搭配使用。 由於設定檔屬性可能包含敏感資料，為了保護此資料，自訂Personalization目的地需要您使用Edge Network API來收集資料。 此外，所有API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)中進行。
 +++
 
 ### 我只能有一個邊緣主動的合併原則。 我可以建立使用不同合併原則的受眾，並且仍將其當作串流受眾傳送給Adobe Target嗎？

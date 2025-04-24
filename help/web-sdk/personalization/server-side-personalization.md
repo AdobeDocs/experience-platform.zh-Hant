@@ -1,22 +1,22 @@
 ---
-title: 使用Edge Network伺服器API的伺服器端個人化
-description: 本文會示範如何使用Edge Network伺服器API在網頁屬性上部署伺服器端個人化。
+title: 使用Edge Network API的伺服器端個人化
+description: 本文會示範如何使用Edge Network API在網頁屬性上部署伺服器端個人化。
 keywords: 個人化；伺服器api；邊緣網路；伺服器端；
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '559'
 ht-degree: 2%
 
 ---
 
 
-# 使用Edge Network伺服器API的伺服器端個人化
+# 使用Edge Network API的伺服器端個人化
 
 ## 概觀 {#overview}
 
-伺服器端個人化涉及使用[Edge Network伺服器API](../../server-api/overview.md)個人化您Web屬性的客戶體驗。
+伺服器端個人化涉及使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)個人化您Web屬性的客戶體驗。
 
-在本文所述的範例中，個人化內容是使用伺服器API在伺服器端擷取。 接著，系統會根據擷取的個人化內容，在伺服器端轉譯HTML。
+在本文中所述的範例中，個人化內容是使用Edge Network API在伺服器端擷取。 接著，HTML會根據擷取的個人化內容在伺服器端轉譯。
 
 下表顯示個人化及非個人化內容的範例。
 
@@ -37,12 +37,12 @@ Cookie可用來儲存使用者身分和叢集資訊。  使用伺服器端實作
 
 ### 請求刊登 {#request-placement}
 
-需要Personalization請求才能取得主張並傳送顯示通知。 使用伺服器端實作時，應用程式伺服器會向Edge Network伺服器API提出這些要求。
+需要Personalization請求才能取得主張並傳送顯示通知。 使用伺服器端實作時，應用程式伺服器會向Edge Network API提出這些請求。
 
 | 請求 | 製作者 |
 |---|---|
-| 擷取主張的互動請求 | 呼叫Edge Network伺服器API的應用程式伺服器。 |
-| 傳送顯示通知的互動請求 | 呼叫Edge Network伺服器API的應用程式伺服器。 |
+| 擷取主張的互動請求 | 呼叫Edge Network API的應用程式伺服器。 |
+| 傳送顯示通知的互動請求 | 呼叫Edge Network API的應用程式伺服器。 |
 
 ## 範例應用程式 {#sample-app}
 
@@ -68,7 +68,7 @@ Cookie可用來儲存使用者身分和叢集資訊。  使用伺服器端實作
 
 1. [Express](https://expressjs.com/)用於精簡伺服器端實作。 這會處理基本伺服器請求和路由。
 2. 瀏覽器要求網頁。 包含先前由瀏覽器儲存且前置詞為`kndctr_`的所有Cookie。
-3. 從應用程式伺服器要求頁面時，會傳送事件至[互動式資料收集端點](../../../server-api/interactive-data-collection.md)，以擷取個人化內容。 範例應用程式使用協助程式方法來簡化建立及傳送要求至API的程式（請參閱[aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)）。 `POST`要求包含`event`和`query`。 先前步驟的Cookie （若有）包含在`meta>state>entries`陣列中。
+3. 從應用程式伺服器要求頁面時，會傳送事件至[互動式資料收集端點](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)，以擷取個人化內容。 範例應用程式使用協助程式方法來簡化建立及傳送要求至API的程式（請參閱[aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)）。 `POST`要求包含`event`和`query`。 先前步驟的Cookie （若有）包含在`meta>state>entries`陣列中。
 
    ```js
    fetch(

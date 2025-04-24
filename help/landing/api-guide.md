@@ -6,9 +6,9 @@ description: Adobe Experience Platform提供的API服務彼此緊密連結。 �
 role: Developer
 feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,7 @@ curl -X GET \
 | [[!DNL Data Access] API指南](.././data-access/api.md) | [!DNL Data Access] API可讓開發人員擷取Experience Platform內擷取資料集的資訊。 這包括存取和下載資料集檔案、擷取標題資訊、列出失敗和成功的批次，以及下載預覽CSV / Parquet檔案。 |
 | [[!DNL Dataset Service] API指南](.././data-governance/labels/dataset-api.md) | 資料集服務API可讓您套用及編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的目錄服務API不同。 |
 | [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | [!DNL Data Hygiene] API可讓您以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料，以及排程資料集的到期日。 |
-| [[!DNL Edge Network Server] API指南](../server-api/overview.md) | [!DNL Edge Network Server API]可用於各種資料收集、個人化、廣告和行銷使用案例。 [!DNL Server API]可用於伺服器、[!DNL IoT]裝置、機上盒和其他各種裝置。 |
+| [[!DNL Edge Network] API指南](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | [!DNL Edge Network API]可用於各種資料收集、個人化、廣告和行銷使用案例。 [!DNL Edge Network API]可用於伺服器、[!DNL IoT]裝置、機上盒和其他各種裝置。 |
 | [[!DNL Identity Service] API指南](.././identity-service/api/getting-started.md) | [!DNL Identity Service] API可讓開發人員在Adobe Experience Platform中使用身分圖表來管理跨裝置、跨頻道及幾乎即時的客戶身分識別。 |
 | [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | [!DNL MTLS Service] API可讓您安全地擷取Adobe為您的組織發行的公開憑證。 |
 | [[!DNL Observability Insights] API指南](.././observability/api/overview.md) | [!DNL Observability Insights]是RESTful API，可讓開發人員在Adobe Experience Platform中公開金鑰可觀察性度量。 這些量度可深入分析Experience Platform使用統計資料、Experience Platform服務的健康情況檢查、歷史趨勢，以及各種Experience Platform功能的績效指標。 |

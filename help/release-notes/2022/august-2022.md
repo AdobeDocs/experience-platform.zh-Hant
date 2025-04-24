@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2022 年 8 月)
 description: Adobe Experience Platform 2022 年 8 月版發行說明。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 26%
+source-wordcount: '2014'
+ht-degree: 27%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform 現有功能的更新：
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
-- [即時客戶輪廓](#profile)
+- [即時客戶設定檔](#profile)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
@@ -94,7 +94,7 @@ Adobe Experience Platform提供多個[!DNL dashboards]，您可以透過它們�
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| (Beta)個人化目的地的屬性式個人化支援 | 隨著屬性型個人化的測試版發行，您會在[目的地目錄](../../destinations/catalog/overview.md)中看到兩張新卡片： <ul><li>**[!UICONTROL Adobe Target V2]**：此聯結器目前為測試版，僅供特定數量的客戶使用。 除了Adobe Target V1卡片所提供的功能之外，Target V2聯結器還將[對應步驟](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)新增至啟用工作流程，可讓您將設定檔屬性對應至Adobe Target，進而啟用屬性式相同頁面和下一頁個人化。</li><li>**[!UICONTROL 具有屬性的自訂Personalization]**：此聯結器目前為測試版，僅供特定數量的客戶使用。 除了&#x200B;**[!UICONTROL 自訂Personalization]**&#x200B;所提供的功能之外，**[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;聯結器還新增了選用的[對應步驟](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)至啟動工作流程，可讓您將設定檔屬性對應至您的自訂個人化目的地，以啟用基於屬性的相同頁面和下一頁個人化。</li></ul> <br>設定檔屬性可能包含敏感資料。 為了保護此資料，**[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;目的地需要您使用[Edge Network伺服器API](../../server-api/overview.md)進行資料收集。 此外，所有伺服器API呼叫都必須在[已驗證的內容](../../server-api/authentication.md)中進行。 |
+| (Beta)個人化目的地的屬性式個人化支援 | 隨著屬性型個人化的測試版發行，您會在[目的地目錄](../../destinations/catalog/overview.md)中看到兩張新卡片： <ul><li>**[!UICONTROL Adobe Target V2]**：此聯結器目前為測試版，僅供特定數量的客戶使用。 除了Adobe Target V1卡片所提供的功能之外，Target V2聯結器還將[對應步驟](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)新增至啟用工作流程，可讓您將設定檔屬性對應至Adobe Target，進而啟用屬性式相同頁面和下一頁個人化。</li><li>**[!UICONTROL 具有屬性的自訂Personalization]**：此聯結器目前為測試版，僅供特定數量的客戶使用。 除了&#x200B;**[!UICONTROL 自訂Personalization]**&#x200B;所提供的功能之外，**[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;聯結器還新增了選用的[對應步驟](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes)至啟動工作流程，可讓您將設定檔屬性對應至您的自訂個人化目的地，以啟用基於屬性的相同頁面和下一頁個人化。</li></ul> <br>設定檔屬性可能包含敏感資料。 為了保護此資料，**[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;目的地需要您使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)進行資料收集。 此外，所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)中進行。 |
 
 {style="table-layout:auto"}
 
@@ -137,11 +137,11 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-如需Experience Platform中XDM的詳細資訊，請參閱[XDM系統總覽](../../xdm/home.md)。
+如需有關 Experience Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
 
-## 即時客戶輪廓 {#profile}
+## 即時客戶設定檔 {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶輪廓，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 輪廓可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 | 功能 | 說明 |
 | ------- | ----------- |
@@ -154,7 +154,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，進而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能**
 
@@ -162,7 +162,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 | ------- | ----------- |
 | 支援4000個區段 | 所有具有Experience Platform的組織現在最多可支援4000個區段定義。 如需此變更如何影響區段作業API的詳細資訊，請參閱[區段作業端點指南](../../segmentation/api/segment-jobs.md) |
 
-如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[細分概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 

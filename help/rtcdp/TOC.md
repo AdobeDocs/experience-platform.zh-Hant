@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將取自多個企業來源的已知和匿名資料匯整起來，並藉此建立客戶設定檔，利用這些設定檔建立客群，以及對協力廠商目標啟動這些客群。
 role: Admin
-source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 63%
@@ -47,7 +47,7 @@ ht-degree: 63%
 * 護欄 {#guardrails}
    * [Real-Time CDP護欄概觀](guardrails/overview.md)
    * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   *  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}的[護欄
+   *  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}的[護欄
    *  [!DNL Real-Time Customer Profile] 資料與分段的[護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
    *  [!DNL Identity Service] 資料的[護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    *  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}的[護欄

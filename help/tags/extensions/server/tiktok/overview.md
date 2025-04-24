@@ -1,9 +1,9 @@
 ---
-title: AdobeTikTok網站事件API擴充功能整合
+title: Adobe TikTok網站事件API擴充功能整合
 description: 此Adobe Experience Platform網頁事件API可讓您直接與TikTok共用網站互動。
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL TikTok]網站事件API擴充功能總覽
 
-[!DNL TikTok] events API是安全的[Edge Network伺服器API](/help/server-api/overview.md)介面，可讓您直接與[!DNL TikTok]共用您網站上使用者動作的資訊。 您可以使用[!DNL TikTok] Web Events API擴充功能，運用事件轉送規則，將資料從[!DNL Adobe Experience Platform Edge Network]傳送至[!DNL TikTok]。
+[!DNL TikTok] events API是安全的[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)介面，可讓您直接與[!DNL TikTok]共用您網站上使用者動作的資訊。 您可以使用[!DNL TikTok] Web Events API擴充功能，運用事件轉送規則，將資料從[!DNL Adobe Experience Platform Edge Network]傳送至[!DNL TikTok]。
 
 ## [!DNL TikTok]必要條件 {#prerequisites}
 
@@ -82,7 +82,7 @@ Web事件和引數包含有關事件的一般資訊。 [!DNL TikTok]整合工具
 | 使用者代理 | 來自使用者裝置的非雜湊使用者代理。 |
 | 電子郵件 | 與轉換事件相關之連絡人的電子郵件地址。 |
 | 電話 | 在雜湊之前，電話號碼必須是E164格式[+][國家代碼][區號][local phone number]。 |
-| Cookie ID | 如果您使用Pixel SDK，將會在`_ttp` Cookie中自動儲存唯一識別碼（如果已啟用Cookie）。 `_ttp`值可以擷取並用於此欄位。 |
+| Cookie ID | 如果您使用Pixel SDK，將會在啟用Cookie的情況下，自動在`_ttp` Cookie中儲存唯一識別碼。 `_ttp`值可以擷取並用於此欄位。 |
 | 外部 ID | 任何唯一識別碼，例如使用者ID、外部Cookie ID等，都必須使用SHA256進行雜湊處理。 |
 | TikTok點按ID | 每次在[!DNL TikTok]上選取廣告時，都會新增至登陸頁面URL的`ttclid`。 |
 | 頁面 URL | 事件時的頁面URL。 |
@@ -118,7 +118,7 @@ Web事件和引數包含有關事件的一般資訊。 [!DNL TikTok]整合工具
 
 如果您同時使用[!DNL TikTok] pixel SDK和[!DNL TikTok] Web事件API擴充功能，將相同的事件傳送至[!DNL TikTok]，則需要設定[!DNL TikTok]畫素以進行重複資料刪除。
 
-如果從使用者端和伺服器傳送的相異事件型別沒有任何重疊，則不需要重複資料刪除。 若要確保您的報表不會受到負面影響，您必須確定已針對[!DNL TikTok]畫素SDK與[!DNL TikTok]網頁事件API擴充功能共用的任何單一事件，進行重複資料刪除。
+如果從使用者端和伺服器傳送的相異事件型別沒有任何重疊，則不需要重複資料刪除。 若要確保您的報表不會受到負面影響，您必須確定已針對[!DNL TikTok]畫素SDK和[!DNL TikTok]網頁事件API擴充功能共用的任何單一事件，進行重複資料刪除。
 
 傳送共用事件時，請確定每個事件都包含畫素ID、事件ID和名稱。 相隔五分鐘內送達的重複事件將會合併。 如果第一個事件中沒有資料欄位，則會與後續事件結合。 我們將移除48小時內收到的所有重複事件。
 

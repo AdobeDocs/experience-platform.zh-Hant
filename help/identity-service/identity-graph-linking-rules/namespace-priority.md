@@ -2,9 +2,9 @@
 title: 命名空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1865'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 2%
 * 在您設定好指定沙箱的身分設定後，體驗事件的主要身分將由設定中最高的名稱空間優先順序決定。
    * 這是因為體驗事件的本質是動態的。 身分對應可能包含三個或更多身分，而名稱空間優先順序可確保最重要的名稱空間與體驗事件相關聯。
 * 因此，即時客戶設定檔&#x200B;**將不再使用下列設定**：
-   * 使用Web SDK、Mobile SDK或Edge Network伺服器API （身分名稱空間和身分值將繼續用於設定檔中）在identityMap中傳送身分時，使用主要身分設定(`primary=true`)。 **注意**： Real-time Customer Profile以外的服務(如Data Lake Storage或Adobe Target)將繼續使用主要身分設定(`primary=true`)。
+   * 使用Web SDK、Mobile SDK或Edge Network API在identityMap中傳送身分時，主要身分設定(`primary=true`) （身分名稱空間和身分值將繼續用於設定檔中）。 **注意**： Real-time Customer Profile以外的服務(如Data Lake Storage或Adobe Target)將繼續使用主要身分設定(`primary=true`)。
    * 任何在XDM體驗事件類別結構描述上標示為主要身分的欄位。
    * Adobe Analytics來源聯結器（ECID或AAID）中的預設主要身分設定。
 * 另一方面，**名稱空間優先順序不會決定設定檔記錄**&#x200B;的主要身分。

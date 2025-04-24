@@ -2,9 +2,9 @@
 title: 設定資料串流的機器人偵測
 description: 瞭解如何為資料串流設定機器人偵測，以區分人類和非人類流量。
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 來自自動化程式、網頁刮刀、編目程式和指令碼掃描器的非人為流量可能讓識別來自人為訪客的事件變得困難。 此類流量可能會對重要的商業量度產生負面影響，導致不正確的流量報表。
 
-機器人偵測可讓您將[Web SDK](../web-sdk/home.md)、[Mobile SDK](https://developer.adobe.com/client-sdks/home/)和[[!DNL Server API]](../server-api/overview.md)產生的事件識別為已知編目程式和機器人所產生。
+機器人偵測可讓您將[網頁SDK](../web-sdk/home.md)、[行動SDK](https://developer.adobe.com/client-sdks/home/)和[[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/)產生的事件識別為已知編目程式和機器人所產生。
 
 透過為資料串流設定機器人偵測，您可以識別特定IP位址、IP範圍和請求標題，以分類為機器人事件。 這有助於針對使用者在您網站或行動應用程式上的活動提供更準確的測量。
 
-當Edge Network的請求符合任何機器人偵測規則時，XDM結構描述會以機器人分數（一律設為1）更新，如下所示：
+當對Edge Network的請求符合任何機器人偵測規則時，XDM結構描述會以機器人分數（一律設為1）更新，如下所示：
 
 ```json
 {
@@ -35,7 +35,7 @@ ht-degree: 0%
 >
 >Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)，而不使用Edge Network設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
 
-建立機器人偵測規則後，最多可能需要15分鐘的時間才能傳播至整個Edge Network。
+建立機器人偵測規則後，可能需要最多15分鐘的時間才能在Edge Network中傳播。
 
 ## 先決條件 {#prerequisites}
 

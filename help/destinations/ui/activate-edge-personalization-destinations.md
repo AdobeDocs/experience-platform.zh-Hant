@@ -3,9 +3,9 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
@@ -150,9 +150,9 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 為了保護此資料，**[!UICONTROL 自訂Personalization]**&#x200B;目的地要求您在設定以屬性為基礎的個人化目的地時使用[Edge Network伺服器API](../../server-api/overview.md)。 所有伺服器API呼叫都必須在[已驗證的內容](../../server-api/authentication.md)中進行。
+>設定檔屬性可能包含敏感資料。 為了保護此資料，**[!UICONTROL 自訂Personalization]**&#x200B;目的地在設定以屬性為基礎的個人化目的地時，需要您使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)中進行。
 >
-><br>如果您已使用Web SDK或Mobile SDK進行整合，您可以透過新增伺服器端整合來透過伺服器API擷取屬性。
+><br>如果您已使用Web SDK或Mobile SDK進行整合，您可以新增伺服器端整合，透過Edge Network API擷取屬性。
 >
 ><br>如果您未遵循上述要求，個人化將僅以對象成員資格為基礎。
 

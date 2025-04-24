@@ -2,9 +2,9 @@
 title: 使用來自DNL天氣頻道的天氣資料增強資料收集
 description: 使用來自DNL The Weather Channel的天氣資料，增強您透過資料串流收集的資料。
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 68%
 
 ---
@@ -28,7 +28,7 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 在使用天氣資料之前，請確保滿足以下先決條件：
 
 * 您必須從[!DNL The Weather Channel]授權您將使用的天氣資料。 然後他們會在您的帳戶上啟用授權。
-* 天氣資料只能透過資料流取得。若要使用天氣資料，您必須使用[!DNL Web SDK]、[!DNL Mobile Edge Extension]或[伺服器API](../../server-api/overview.md)來包含此資料。
+* 天氣資料只能透過資料流取得。若要使用天氣資料，您必須使用[!DNL Web SDK]、[!DNL Mobile Edge Extension]或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)以包含此資料。
 * 您的資料流必須啟用[[!UICONTROL 地理位置]](../configure.md#advanced-options)。
 * 將[天氣欄位群組](#schema-configuration)新增到您正在使用的結構描述。
 
@@ -38,9 +38,9 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 
 使用偵錯工具執行邊緣追蹤或使用 Assurance 追蹤通過 [!DNL Edge Network] 的點擊，即可驗證是否已新增。
 
-### 綱要設定 {#schema-configuration}
+### 結構描述設定 {#schema-configuration}
 
-您必須將天氣欄位群組新增到和您在資料流中正在使用的事件資料集相對應的 Experience Platform 綱要。可提供五種欄位群組：
+您必須將天氣欄位群組新增到和您在資料流中正在使用的事件資料集相對應的 Experience Platform 結構描述。可提供五種欄位群組：
 
 * [!UICONTROL 預報的天氣]
 * [!UICONTROL 目前的天氣]
@@ -54,9 +54,9 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 
 ### Adobe Analytics {#analytics}
 
-在 [!DNL Adobe Analytics] 中，可透過處理規則和您的其餘 [!DNL XDM] 綱要一起對應天氣資料。
+在 [!DNL Adobe Analytics] 中，可透過處理規則和您的其餘 [!DNL XDM] 結構描述一起對應天氣資料。
 
-您可以在[天氣參考](weather-reference.md)頁面找到可以對應的欄位清單。和所有的 [!DNL XDM] 綱要一樣，索引鍵的首碼為 `a.x`。例如，名為 `weather.current.temperature.farenheit` 的欄位會在 [!DNL Analytics] 中顯示為 `a.x.weather.current.temperature.farenheit`。
+您可以在[天氣參考](weather-reference.md)頁面找到可以對應的欄位清單。和所有的 [!DNL XDM] 結構描述一樣，索引鍵的首碼為 `a.x`。例如，名為 `weather.current.temperature.farenheit` 的欄位會在 [!DNL Analytics] 中顯示為 `a.x.weather.current.temperature.farenheit`。
 
 ![處理規則介面](../assets/data-enrichment/weather/processing-rules.png)
 
@@ -66,7 +66,7 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-氣象資料可在[Real-time Customer Data Platform](../../rtcdp/overview.md)中使用，以用於對象。 天氣資料會附加到事件。
+氣象資料可在[Real-Time Customer Data Platform](../../rtcdp/overview.md)中使用，以用於對象。 天氣資料會附加到事件。
 
 ![顯示天氣事件的區段產生器](../assets/data-enrichment/weather/schema-builder.png)
 
@@ -78,7 +78,7 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 
 在 [!DNL Adobe Target] 中，您可以使用天氣資料即時提升個人化。天氣資料會傳遞至 [!DNL Target] (以 [!UICONTROL mBox] 參數的形式)，您可以透過自訂的 [!UICONTROL mBox] 參數進行存取。
 
-![目標對象產生器](../assets/data-enrichment/weather/target-audience-builder.png)
+![目標客群產生器](../assets/data-enrichment/weather/target-audience-builder.png)
 
 此參數是到特定欄位的 [!DNL XDM] 路徑。如需可用的欄位及其相對應的路徑，請參閱[天氣參考](weather-reference.md)。
 

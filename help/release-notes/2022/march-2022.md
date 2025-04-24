@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2022 年 3 月版)
 description: Adobe Experience Platform 2022 年 3 月版發行說明。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 16%
+source-wordcount: '1183'
+ht-degree: 20%
 
 ---
 
@@ -57,9 +57,9 @@ B2B企業通常將其客戶資訊儲存在多個系統中，每個系統僅包�
 
 若要進一步瞭解Real-Time CDP B2B edition，請參閱[總覽](../../rtcdp/overview.md)。
 
-## 警示 {#alerts}
+## 警報 {#alerts}
 
-Experience Platform可讓您訂閱各種Experience Platform活動的事件型警報。 您可以透過Experience Platform使用者介面中的[!UICONTROL 警報]索引標籤來訂閱不同的警報規則，也可以選擇在UI本身或透過電子郵件通知來接收警報訊息。
+Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型警報。您可以透過 Experience Platform 使用者介面中的「[!UICONTROL 警報]」標籤訂閱不同的警報規則，而且可以選擇在使用者介面本身內或透過電子郵件通知接收警報訊息。
 
 **更新的功能**
 
@@ -115,13 +115,13 @@ Experience Platform提供了一套技術，可讓您收集使用者端客戶體�
 | 功能 | 說明 |
 | --- | --- |
 | 全域資料流設定 | 您現在可在設定資料流時設定數個新的全域設定：地理位置、第一方ID Cookie和協力廠商ID同步。 如需詳細資訊，請參閱資料串流UI指南中[設定資料串流](../../datastreams/overview.md#create)的相關章節。 |
-| [Edge Network伺服器API](../../server-api/overview.md) | 伺服器API可讓客戶使用新的、經過驗證的端點與Experience Platform Edge Network互動，以支援各種資料收集、個人化、廣告和行銷使用案例。 |
+| [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Edge Network API可讓客戶使用新的、經過驗證的端點與Experience Platform Edge Network互動，以支援各種資料收集、個人化、廣告和行銷使用案例。 |
 
 如需Experience Platform中資料收集的詳細資訊，請參閱[資料收集概觀](../../collection/home.md)。
 
 ## 查詢服務 {#query-service}
 
-[!DNL Query Service]可讓您使用標準SQL在Adobe Experience Platform [!DNL Data Lake]中查詢資料。 您可以加入 [!DNL Data Lake] 中的任何資料集，並將查詢結果擷取為新資料集，以用於報告、資料科學工作區，或攝取至即時客戶輪廓中。
+[!DNL Query Service]可讓您使用標準SQL在Adobe Experience Platform [!DNL Data Lake]中查詢資料。 您可以加入 [!DNL Data Lake] 中的任何資料集，並將查詢結果擷取為新資料集，以用於報告、資料科學工作區，或攝取至即時客戶設定檔中。
 
 **更新的功能**
 

@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '2288'
 ht-degree: 2%
@@ -199,7 +199,7 @@ ht-degree: 2%
 
 - 新增對[Page by Page Full Migration](home.md#migrating-to-web-sdk)的支援。 現在，當訪客在at.js和SDK網頁之間移動時，Adobe Target設定檔將會保留。
 - 新增可設定的[高平均資訊量使用者代理程式使用者端提示](/help/web-sdk/use-cases/client-hints.md)支援。
-- 新增對[`applyResponse`](/help/web-sdk/commands/applyresponse.md)命令的支援。 這會透過[Edge Network伺服器API](../server-api/overview.md)啟用混合式個人化。
+- 新增對[`applyResponse`](/help/web-sdk/commands/applyresponse.md)命令的支援。 透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)啟用混合式個人化。
 - QA模式連結現在可跨多個頁面運作。
 
 **修正和改良**

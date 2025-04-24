@@ -3,9 +3,9 @@ title: Real-Time CDP護欄
 description: 瞭解Real-Time CDP各種服務和領域的資料護欄。
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 從這裡開始，然後按照下面的連結來瞭解Real-Time CDP各種服務和區域的所有護欄：
 
 * [資料擷取的護欄](/help/ingestion/guardrails.md)
-* [ [!DNL Edge Network Server API]的護欄](/help/server-api/guardrails.md)
+*  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)的[護欄
 * [ [!DNL Real-Time Customer Profile] 資料和分段的護欄](/help/profile/guardrails.md)
 * [ [!DNL Identity Service] 資料的護欄](/help/identity-service/guardrails.md)
 * [ [!DNL Query Service]的護欄](/help/query-service/guardrails.md)
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 | 護欄型別 | 說明 |
 |----------|---------|
-| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降級概不負責。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
+| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降低不負任何責任。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
 | **系統強制的護欄（硬限制）** | Real-Time CDP UI或API會強制執行系統強制的護欄。 這些限制不得超過，因為UI和API會阻止您這樣做或會傳回錯誤。 |
 
 {style="table-layout:auto"}
@@ -48,9 +48,9 @@ ht-degree: 1%
 此外，請參考以下產品說明連結，以取得根據您購買的Real-Time CDP版本和層級而設計的授權和權益資訊：
 
 * [所有Adobe產品說明](https://helpx.adobe.com/legal/product-descriptions.html)
-* [Real-time Customer Data Platform （B2C Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2P版本 — Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2B Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P版本 — Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B edition - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## 其他Experience Platform應用程式的護欄  {#guardrails-other-aep-apps}
 

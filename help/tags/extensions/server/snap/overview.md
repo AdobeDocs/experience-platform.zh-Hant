@@ -3,7 +3,7 @@ title: Snapchat Conversions API擴充功能概觀
 description: 使用Snapchat轉換將伺服器端事件資料傳送到Snap。
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL Snapchat] Conversions API擴充功能概觀
 
-[!DNL Snap]轉換API擴充功能是安全的[Edge Network伺服器API](/help/server-api/overview.md)介面，可讓您直接與[!DNL Snapchat]共用您網站上使用者動作的資訊。 您可以使用&#x200B;**[!DNL Snap]**&#x200B;轉換API擴充功能，運用事件轉送規則，將資料從&#x200B;**[!DNL Adobe Experience Platform Edge Network]**&#x200B;傳送至&#x200B;**[!DNL Snapchat]**。
+[!DNL Snap]轉換API擴充功能是安全的[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)介面，可讓您直接與[!DNL Snapchat]共用您網站上的使用者動作相關資訊。 您可以使用&#x200B;**[!DNL Snap]**&#x200B;轉換API擴充功能，運用事件轉送規則，將資料從&#x200B;**[!DNL Adobe Experience Platform Edge Network]**&#x200B;傳送至&#x200B;**[!DNL Snapchat]**。
 
 ## [!DNL Snapchat]必要條件 {#prerequisites}
 

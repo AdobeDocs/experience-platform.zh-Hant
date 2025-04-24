@@ -3,9 +3,9 @@ title: 即時查詢邊緣設定檔屬性
 description: 瞭解如何使用自訂Personalization目的地和Edge Network API即時查詢邊緣設定檔屬性
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1911'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform使用[即時客戶個人檔案](../../profile/home.md)
 * [資料串流](../../datastreams/overview.md)：資料串流會接收來自Web SDK的傳入事件資料，並以邊緣設定檔資料回應。
 * [合併原則](../../segmentation/ui/segment-builder.md#merge-policies)：您將建立[!UICONTROL Edge上的Active-On]合併原則，以確保邊緣設定檔使用正確的設定檔資料。
 * [自訂Personalization連線](../catalog/personalization/custom-personalization.md)：您將設定新的自訂個人化連線，以將設定檔屬性傳送至Edge Network。
-* [Edge Network API](../../server-api/overview.md)：您將使用Edge Network API [互動式資料集合](../../server-api/interactive-data-collection.md)功能，從邊緣設定檔快速擷取設定檔屬性。
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)：您將使用Edge Network API [互動式資料集合](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)功能，從邊緣設定檔快速擷取設定檔屬性。
 
 ## 效能護欄 {#guardrails}
 
@@ -166,7 +166,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 若要保護此資料，您必須透過[Edge Network API](../../server-api/overview.md)擷取設定檔屬性。 此外，您必須透過Edge Network API [互動式資料收集端點](../../server-api/interactive-data-collection.md)擷取設定檔屬性，才能驗證API呼叫。
+>設定檔屬性可能包含敏感資料。 若要保護此資料，您必須透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)擷取設定檔屬性。 此外，您必須透過Edge Network API [互動式資料收集端點](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)擷取設定檔屬性，才能驗證API呼叫。
 ><br>如果您不遵循上述要求，個人化將僅以對象成員資格為基礎，而且您將無法取得設定檔屬性。
 
 您在[步驟1](#create-datastream)中設定的資料流現在已準備好接受傳入的事件資料並以邊緣設定檔資訊回應。

@@ -1,23 +1,23 @@
 ---
 title: 透過FPID的訪客身分識別
-description: 瞭解如何使用FPID，透過伺服器API一致地識別訪客
-seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
+description: 瞭解如何使用FPID，透過Edge Network API一致地識別訪客
+seo-description: Learn how to consistently identify visitors via the Edge Network API, by using the FPID
 keywords: 邊緣網路；閘道；API；訪客；識別；fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
 # 透過FPID的訪客身分識別
 
-[!DNL First-party IDs] (`FPIDs`)是由客戶產生、管理和儲存的裝置ID。 這可讓客戶控制識別使用者裝置。 傳送`FPIDs`後，Edge Network不會針對不包含的全新`ECID`請求產生全新的請求。
+[!DNL First-party IDs] (`FPIDs`)是由客戶產生、管理和儲存的裝置ID。 這可讓客戶控制識別使用者裝置。 傳送`FPIDs`後，Edge Network不會針對不包含的全新`ECID`請求產生全新。
 
 `FPID`可以作為`identityMap`的一部分包含在API要求內文中，也可以作為Cookie傳送。
 
-Edge Network可決定性地將`FPID`轉譯為`ECID`，因此`FPID`識別與Experience Cloud解決方案完全相容。 從特定`FPID`取得`ECID`一律會產生相同的結果，因此使用者將擁有一致的體驗。
+`FPID`可由Edge Network決定性地轉譯為`ECID`，因此`FPID`識別與Experience Cloud解決方案完全相容。 從特定`FPID`取得`ECID`一律會產生相同的結果，因此使用者將擁有一致的體驗。
 
 以這種方式取得的`ECID`可透過`identity.fetch`查詢擷取：
 
@@ -33,7 +33,7 @@ Edge Network可決定性地將`FPID`轉譯為`ECID`，因此`FPID`識別與Exper
 }
 ```
 
-對於同時包含`FPID`和`ECID`的請求，已存在於請求中的`ECID`將優先於可從`FPID`產生的請求。 換言之，Edge Network使用已提供的`ECID`，而忽略`FPID`。 只有在自行提供`FPID`時，才會產生新的`ECID`。
+對於同時包含`FPID`和`ECID`的請求，已存在於請求中的`ECID`將優先於可從`FPID`產生的請求。 換言之，Edge Network使用已提供的`ECID`，而`FPID`則被忽略。 只有在自行提供`FPID`時，才會產生新的`ECID`。
 
 就裝置ID而言，`server`資料串流應使用`FPID`作為裝置ID。 其他身分（亦即`EMAIL`）也可於要求內文中提供，但Edge Network需要明確提供主要身分。 主要身分是將設定檔資料儲存到的基本身分。
 
@@ -102,7 +102,7 @@ Edge Network可決定性地將`FPID`轉譯為`ECID`，因此`FPID`識別與Exper
 
 ## 使用`FPID`的訪客身分識別
 
-若要透過`FPID`識別使用者，在向Edge Network提出任何要求之前，請確定已傳送`FPID` Cookie。 `FPID`可以在Cookie中或作為要求內文中`identityMap`的一部分傳遞。
+若要透過`FPID`識別使用者，在向Edge Network提出任何請求之前，請確定已傳送`FPID` Cookie。 `FPID`可以在Cookie中或作為要求內文中`identityMap`的一部分傳遞。
 
 <!--
 

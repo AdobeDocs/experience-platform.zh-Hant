@@ -1,19 +1,19 @@
 ---
 title: 訪客身分識別
-description: 瞭解Adobe Experience PlatformEdge Network伺服器API如何識別訪客
-seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
+description: 瞭解Adobe Experience Platform Edge Network API如何識別訪客
+seo-description: Learn how Adobe Experience Platform Edge Network API identifies visitors
 keywords: 邊緣網路；閘道；API；訪客；識別
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 3%
+source-wordcount: '149'
+ht-degree: 4%
 
 ---
 
 # 訪客身分識別
 
-Edge Network伺服器API透過第一方ID ([!DNL FPID])](visitor-identification-fpid.md)支援[訪客識別。
+Edge Network API透過第一方ID ([!DNL FPID])](visitor-identification-fpid.md)支援[訪客身分識別。
 
 所有使用者身分應在`identityMap`欄位群組中提供。 此欄位群組包含在AEP Web SDK `ExperienceEvent` mixin中。
 
@@ -38,12 +38,12 @@ Edge Network伺服器API透過第一方ID ([!DNL FPID])](visitor-identification-
 
 ## 裝置識別碼 {#identifiers}
 
-在Edge Network內有多種方式可用來識別裝置。 請參閱下表，瞭解支援的ID概述。
+在Edge Network中有多種方式可用來識別裝置。 請參閱下表，瞭解支援的ID概述。
 
 | ID 命名空間 | 管理者 | 說明 |
 | --- | --- | --- |
 | `FPID` | 客戶 | `FPID`將由Edge Network自動編碼為`ECID`，因此需要`ECID`的解決方案也可運作。  <br><br>為了取得一致的裝置識別，這些ID必須保留在裝置上，並在每個要求上提供。 針對網頁互動，這涉及將其儲存為瀏覽器Cookie。 |
-| `IDFA`/`GAID` | Experience Platform | 可以跨應用程式識別使用者，因此這些ID不會由Edge Network編碼為`ECID`。 |
+| `IDFA`/`GAID` | Experience Platform | 可以跨應用程式識別使用者，因此Edge Network不會將這些ID編碼為`ECID`。 |
 
 <!--
 | `ECID` | Adobe | `ECID` is required when leveraging and integrating with Adobe Analytics and Adobe Audience Manager. <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies. |

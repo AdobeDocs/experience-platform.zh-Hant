@@ -3,9 +3,9 @@ title: 事件轉送快速入門
 description: 請依照此逐步教學課程，開始在Adobe Experience Platform中使用事件轉送。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '892'
 ht-degree: 25%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 25%
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [邊緣網路伺服器 API](/help/server-api/overview.md)
+* [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)
 
 >[!NOTE]
 >Experience Platform Web SDK和Experience Platform Mobile SDK不需要透過Adobe Experience Platform中的標籤進行部署。 不過，建議使用標籤來部署這些SDK。
@@ -35,7 +35,7 @@ ht-degree: 25%
 
 * Adobe Real-Time CDP Connections、Prime或Ultimate (如需定價，請聯絡您的Adobe客戶團隊)
 * Adobe Experience Platform中的事件轉送
-* Adobe Experience Platform Web SDK、Mobile SDK或Edge Network Server API已設定為傳送資料至Edge Network
+* Adobe Experience Platform Web SDK、Mobile SDK或Edge Network API已設定為傳送資料至Edge Network
 * 將資料對應至Experience Data Model (XDM) （此對應可使用標籤完成）
 
 ## 建立 XDM 結構描述

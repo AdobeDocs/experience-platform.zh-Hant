@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2024 年 4 月)
 description: Adobe Experience Platform 2024 年 4 月版發行說明。
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: ht
-source-wordcount: '1899'
-ht-degree: 100%
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+workflow-type: tm+mt
+source-wordcount: '1896'
+ht-degree: 97%
 
 ---
 
@@ -52,7 +52,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
 | 擴充功能 | [!DNL Acxiom Anonymous Visitor Insights] 標記擴充功能 | 透過 [!DNL Acxiom's Visitor Insights] 了解您的網站訪客來自何處。利用地理 IP 查詢技術，Acxiom 能夠精準定位匿名瀏覽器的位置。識別出資訊後，在其組織化資料庫中進行的搜尋會產生額外的深入解析並回傳至瀏覽器。於是，內容創作者便能夠量身打造符合這些資料點的內容，為訪客提供更個人化且更具吸引力的體驗，即便他們是初次到訪亦然。 |
-| 資料流 | [Edge Network 機器人偵測](../../datastreams/bot-detection.md) | 來自非人類實體 (例如自動化程式、網頁抓取工具、編目程式、指令掃描器) 的流量，可能會使真人訪客事件的識別變得更加困難。此類流量會對重要的商業量度造成負面影響，導致流量報告不正確。<br>機器人偵測可讓您將 [Web SDK](../../web-sdk/home.md)、[Mobile SDK](https://developer.adobe.com/client-sdks/home/) 及 [[!DNL Server API]](../../server-api/overview.md) 產生的事件識別為由已知的編目程式和機器人所產生。為資料流設定機器人偵測後，您就可以識別出您想將其分類為機器人事件的特定 IP 位址、IP 範圍及要求標頭。<br>機器人流量的識別可讓您更準確地測量網站或行動應用程式上的使用者活動。 |
+| 資料流 | [Edge Network 機器人偵測](../../datastreams/bot-detection.md) | 來自非人類實體 (例如自動化程式、網頁抓取工具、編目程式、指令掃描器) 的流量，可能會使真人訪客事件的識別變得更加困難。此類流量會對重要的商業量度造成負面影響，導致流量報告不正確。<br>機器人偵測可讓您識別由[網頁SDK](../../web-sdk/home.md)、[行動SDK](https://developer.adobe.com/client-sdks/home/)和[[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/)產生的事件，這些事件是由已知的編目程式和機器人所產生。 為資料流設定機器人偵測後，您就可以識別出您想將其分類為機器人事件的特定 IP 位址、IP 範圍及要求標頭。<br>機器人流量的識別可讓您更準確地測量網站或行動應用程式上的使用者活動。 |
 | Mobile SDK | 主要版本發布 | 已針對以下平台發行新的 Mobile SDK 主要版本：iOS Mobile Core 5.x 和相容的 iOS 擴充功能、Android Mobile Core 3.x 和相容的 Android 擴充功能、React Native 6.x 和相容的 React Native 擴充功能、Flutter Core 4.x 和相容的 Flutter 擴充功能。這些版本提供了多項新功能和增強功能，包括適用於 Jetpack Compose 的 Android SDK 支援、對 Adobe Journey Optimizer 基於程式碼體驗的支援，以及適用於 Flutter 的 Adobe Journey Optimizer Messaging 擴充功能正式版本。如需更詳細的發行說明，請參閱 [Mobile SDK 發行說明](https://developer.adobe.com/client-sdks/home/release-notes/)。 |
 | Mobile SDK | 隱私權 | 由於 Apple 的政策更新，自 2024 年 5 月 1 日起，開發人員必須實作新的隱私權功能才能提交到 App Store。所有使用 Mobile SDK 的 Adobe 客戶若想在 5 月 1 日後獲得 App Store 核准，就必須升級至 SDK 5.x 版本。 |
 | Roku SDK | Roku SDK | Roku SDK 的第一個主要版本已經發佈，且包含 Experience Platform Edge Network 適用的串流媒體支援。 |
@@ -67,15 +67,15 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
-**新功能或更新的功能** {#destinations-new-updated-functionality}
+**新功能或更新功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | ----------- | ----------- |
 | `isRequired` 參數現在可用於 Destination SDK 中的巢狀客戶資料欄位 | 在 Destination SDK 中設定目標時，您現在可以[視需要設定巢狀客戶資料欄位](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields)。這樣一來，設定您目標的使用者必須先為該欄位選取值，才能繼續其啟用流程。 |
 | 使用 Web SDK 設定 Adobe Target 目標時，邊緣分段已不再是強制性的要求 | 過去使用 Web SDK 設定 [Adobe Target 目標](/help/destinations/catalog/personalization/adobe-target-connection.md)時，必須啟用資料流才能進行個人化和邊緣分段。需啟用資料流才能進行邊緣分段的要求[現已移除](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)。請注意，使用 Adobe Target 搭配 Real-Time CDP 時，此整合模式只會讓您從個人化使用案例的子集中獲益。閱讀更多有關[依照整合類型啟用的使用案例](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases)。 |
-| [!BADGE Beta]{type=Informative} 從啟用流程中移除多個客群和資料集 | 您現在可以從目標啟用流程中選取和移除多個客群和資料集。如需更多詳細資訊，請參閱[目標詳細資料](../../destinations/ui/destination-details-page.md#bulk-remove)和[資料集匯出](../../destinations/ui/export-datasets.md)文件。 |
+| [!BADGE Beta]{type=Informative}從啟動流程中移除多個對象和資料集 | 您現在可以從目標啟用流程中選取和移除多個客群和資料集。如需更多詳細資訊，請參閱[目標詳細資料](../../destinations/ui/destination-details-page.md#bulk-remove)和[資料集匯出](../../destinations/ui/export-datasets.md)文件。 |
 
 {style="table-layout:auto"}
 
