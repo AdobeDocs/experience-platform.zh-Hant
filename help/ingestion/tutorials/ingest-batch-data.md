@@ -5,7 +5,7 @@ title: 將資料內嵌至Experience Platform
 type: Tutorial
 description: Adobe Experience Platform可讓您以Parquet檔案的形式，輕鬆將資料匯入為批次檔案，或是符合已知Experience Data Model (XDM)架構的資料。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Adobe Experience Platform可讓您輕鬆將資料匯入[!DNL Experience Platform
 
 ![資料集活動](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## 為[!DNL Real-Time Customer Profile]啟用資料集
+## 為[!DNL Real-Time Customer Profile]啟用資料集 {#enable-for-profile}
 
 資料集用於將資料擷取到[!DNL Experience Platform]，而該資料最終用於識別個人並將來自多個來源的資訊拼接在一起。 該拼接資訊稱為[!DNL Real-Time Customer Profile]。 為了讓[!DNL Experience Platform]知道哪些資訊應包含在[!DNL Real-Time Profile]中，可以使用&#x200B;**[!UICONTROL 設定檔]**&#x200B;切換將資料集標示為包含。
 

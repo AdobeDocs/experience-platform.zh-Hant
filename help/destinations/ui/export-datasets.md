@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '2703'
+source-wordcount: '2732'
 ht-degree: 7%
 
 ---
@@ -104,7 +104,10 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ## 先決條件 {#prerequisites}
 
-若要將資料集匯出至雲端儲存空間目的地，您必須已成功[連線至目的地](./connect-destination.md)。 如果您尚未這麼做，請前往[目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
+若要匯出資料集，請注意下列先決條件：
+
+* 若要將資料集匯出至雲端儲存空間目的地，您必須已成功[連線至目的地](./connect-destination.md)。 如果您尚未這麼做，請前往[目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
+* 需要啟用設定檔資料集才能在即時客戶設定檔中使用。 [閱讀更多資訊](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile)以瞭解如何啟用此選項。
 
 ### 必要權限 {#permissions}
 

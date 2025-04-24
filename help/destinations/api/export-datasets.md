@@ -4,9 +4,9 @@ title: 使用流量服務API匯出資料集
 description: 瞭解如何使用流量服務API將資料集匯出至所選目的地。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '5151'
+source-wordcount: '5220'
 ht-degree: 3%
 
 ---
@@ -57,6 +57,13 @@ ht-degree: 3%
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
+## 先決條件 {#prerequisites}
+
+若要匯出資料集，請注意下列先決條件：
+
+* 若要將資料集匯出至雲端儲存空間目的地，您必須已成功[連線至目的地](/help/destinations/ui/connect-destination.md)。 如果您尚未這麼做，請前往[目的地目錄](/help/destinations/catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
+* 需要啟用設定檔資料集才能在即時客戶設定檔中使用。 [閱讀更多資訊](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile)以瞭解如何啟用此選項。
+
 ## 快速入門 {#get-started}
 
 ![概述 — 建立目的地和匯出資料集的步驟](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
@@ -98,20 +105,20 @@ ht-degree: 3%
 
 * Content-Type： `application/json`
 
-### API 參考檔 {#api-reference-documentation}
+### API參考檔案 {#api-reference-documentation}
 
-您可以在此教學課程中找到所有 API作的隨附參考文檔。 請參閱 [[!DNL Flow Service] Adobe Systems 開發人員網站上的](https://developer.adobe.com/experience-platform-apis/references/destinations/) - 目標 API 文件。 我們建議您同時使用此教學課程和 API 參考文檔。
+在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe Developer網站](https://developer.adobe.com/experience-platform-apis/references/destinations/)上的[[!DNL Flow Service] - Destinations API檔案。 我們建議您同時使用本教學課程和API參考檔案。
 
 ### 字彙 {#glossary}
 
-有關您將在此 API 教學課程中遇到的術語的說明，請閱讀 [API 參考文檔的術語表部分](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 。
+如需在此API教學課程中將會遇到的術語說明，請閱讀API參考檔案的[字彙表區段](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)。
 
-### 收集所需目標的連接規格和流量規格 {#gather-connection-spec-flow-spec}
+### 收集所需目的地的連線規格和流量規格 {#gather-connection-spec-flow-spec}
 
-在開始匯出資料集工作流程之前，請確定要將數據集匯出到的目標的連接規範和流程規範 ID。 請使用下表作為參考。
+在開始匯出資料集的工作流程之前，請確定您要將資料集匯出到的目的地的連線規格和流程規格ID。 請參考下表。
 
 
-| 目標 | 連接規格 | 流量規格 |
+| 目標 | 連線規格 | 流量規格 |
 ---------|----------|---------|
 | [!DNL Amazon S3] | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
 | [!DNL Azure Blob Storage] | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
@@ -344,7 +351,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **要求**
 
-+++檢索符合條件的數據集 - 請求
++++擷取合格的資料集 — 請求
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/23598e46-f560-407b-88d5-ea6207e49db0/configs?outputType=activationDatasets&outputField=datasets&start=0&limit=20&properties=name,state' \
@@ -355,13 +362,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-請注意，要檢索符合條件的數據集，[!DNL connection spec]請求URL中使用的ID必須是數據湖源連接規範ID，`23598e46-f560-407b-88d5-ea6207e49db0`以及兩個查詢參數`outputField=datasets``outputType=activationDatasets`，並且必須指定。所有其他查詢參數均為目錄服務 API](https://developer.adobe.com/experience-platform-apis/references/catalog/) 支持[的標準參數。
+請注意，若要擷取合格的資料集，要求URL中使用的[!DNL connection spec] ID必須是資料湖來源連線規格ID `23598e46-f560-407b-88d5-ea6207e49db0`，而且必須指定兩個查詢引數`outputField=datasets`和`outputType=activationDatasets`。 所有其他查詢引數都是[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)支援的標準引數。
 
 +++
 
 **回應**
 
-+++檢索數據集 - 回應
++++擷取資料集 — 回應
 
 ```json
 {
@@ -440,23 +447,23 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-成功的回應包含清單符合啟用條件的數據集。 在下一步中構造源連接時，可以使用這些數據集。
+成功的回應包含符合啟用條件的資料集清單。 這些資料集可在下一步中建構來源連線時使用。
 
-有關每個返回資料集的各種響應參數的資訊，請參閱 [數據集 API 開發人員文檔](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets)。
+如需每個傳回資料集的不同回應引數相關資訊，請參閱[資料集API開發人員檔案](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets)。
 
-## 建立源連接 {#create-source-connection}
+## 建立來源連線 {#create-source-connection}
 
-![顯示匯出數據集工作流程步驟 2 的圖表](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
+![顯示匯出資料集工作流程步驟2的圖表](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
-檢索要匯出的數據集清單后，可以使用這些資料集 ID 創建源連接。
+擷取您要匯出的資料集清單後，您可以使用這些資料集ID建立來源連線。
 
 >[!BEGINSHADEBOX]
 
 **要求**
 
-+++建立 源連接 - 請求
++++建立來源連線 — 請求
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,16"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
@@ -490,7 +497,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++建立 源連接 - 回應
++++建立來源連線 — 回應
 
 ```json
 {
@@ -503,12 +510,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-成功的回應將傳回新建立的源連接的 ID （）`id` 和 `etag`. 記下源連接ID，因為稍後在創建資料流時需要用到它。
+成功的回應會傳回新建立的來源連線的識別碼(`id`)和`etag`。 記下來源連線ID，因為稍後建立資料流時會需要它。
 
 另請記住：
 
-* 在此步驟中創建的源連接需要連結到數據流，才能將其數據集啟動到目標。 [有關如何連結數據流的源連接的信息，請參閱創建數據流](#create-dataflow)部分。
-* 創建後，無法修改源連接的 資料集 ID。 如果需要在源連接中添加或刪除數據集，則必須創建新的源連接，並將新源連接的 ID 連結到數據流。
+* 在此步驟中建立的來源連線需要連結至資料流，其資料集才能啟動至目的地。 請參閱[建立資料流](#create-dataflow)區段，瞭解如何將來源連線連結到資料流的資訊。
+* 來源連線的資料集ID在建立後即無法修改。 如果您需要從來源連線新增或移除資料集，則必須建立新的來源連線，並將新來源連線的ID連結至資料流。
 
 ## 建立（目標）基礎連線 {#create-base-connection}
 
@@ -835,7 +842,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >如需有關如何取得所需驗證認證的資訊，請參閱Amazon S3目的地檔案頁面的[對目的地進行驗證](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate)區段。
 
-請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -880,13 +887,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **要求**
 
-+++[!DNL Azure Blob Storage] - 基本連接請求
++++[!DNL Azure Blob Storage] — 基底連線要求
 
 >[!TIP]
 >
->有關如何獲取所需身份驗證憑據的信息，請參閱 [Azure Blob 儲存目標文檔頁面的向目標](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) 進行身份驗證部分。
+>有關如何取得所需驗證認證的資訊，請參閱Azure Blob儲存體目的地檔案頁面的[對目的地](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate)驗證區段。
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="16"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -915,7 +922,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++[!DNL Azure Blob Storage] - 基本連接回應
++++[!DNL Azure Blob Storage] — 基底連線回應
 
 ```json
 {
@@ -926,17 +933,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2（ADLS Gen2）]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **要求**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - 基本連接請求
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] — 基底連線要求
 
 >[!TIP]
 >
->有關如何獲取所需身份驗證憑據的信息，請參閱 Azure 數據湖第 2 代（ADLS 第 2 代）目標文檔頁面的向 [目標](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) 進行身份驗證部分。
+>有關如何取得所需驗證認證的資訊，請參閱Azure Data Lake Gen 2(ADLS Gen2)目的地檔案頁面的[對目的地](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate)驗證區段。
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="20"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -968,7 +975,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - 基本連接回應
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] — 基底連線回應
 
 ```json
 {
@@ -979,15 +986,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB 數據登陸區域]
+>[!TAB 資料登陸區域(DLZ)]
 
 **要求**
 
-+++[!DNL Data Landing Zone(DLZ)] - 基本連接請求
++++[!DNL Data Landing Zone(DLZ)] — 基底連線要求
 
 >[!TIP]
 >
->數據登陸區域目標不需要身份驗證憑據。 有關詳細資訊，請參閱 [數據登陸區域目標文檔頁面的向目標](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) 進行身份驗證部分。
+>資料登陸區域目的地不需要驗證認證。 如需詳細資訊，請參閱資料登陸區域目的地檔案頁面的[對目的地](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate)驗證區段。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1010,7 +1017,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++[!DNL Data Landing Zone] - 基本連接回應
++++[!DNL Data Landing Zone] — 基底連線回應
 
 ```json
 {
@@ -1025,13 +1032,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **要求**
 
-+++[!DNL Google Cloud Storage] - 基本連接請求
++++[!DNL Google Cloud Storage] — 基底連線要求
 
 >[!TIP]
 >
->有關如何獲取所需身份驗證憑據的信息，請參閱 [Google Cloud Storage 目標文檔頁面的身份驗證到目標](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) 部分。
+>如需有關如何取得所需驗證認證的資訊，請參閱Google雲端儲存空間目的地檔案頁面的[對目的地進行驗證](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate)區段。
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1061,7 +1068,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++[!DNL Google Cloud Storage] - 基本連接回應
++++[!DNL Google Cloud Storage] — 基底連線回應
 
 ```json
 {
@@ -1173,15 +1180,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >僅壓縮模式支援匯出至JSON檔案。 壓縮和非壓縮模式都支援匯出至[!DNL Parquet]個檔案。
 >
->導出的 JSON 檔的格式是 NDJSON，它是 巨量資料 生態系統中的標準交換格式。 Adobe Systems建議使用 NDJSON 相容的用戶端來讀取導出的檔。
+>匯出的JSON檔案格式為NDJSON，這是大資料生態系統中的標準交換格式。 Adobe建議使用與NDJSON相容的使用者端來讀取匯出的檔案。
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] 顯示目標連接參數
++++[!DNL Amazon S3] - [!DNL Connection spec]顯示目標連線引數
 
-請注意以下示例中 [!DNL connection spec] 帶有内聯評論的突出顯示行，這些行提供了有關在連接規範中查找 [!DNL target spec] 參數的位置的其他信息。 您還可以在下面的示例中看到哪些目標參數&#x200B;**&#x200B;不適用於資料集導出目標。
+請注意下方[!DNL connection spec]範例中有內嵌註解之醒目提示的行，這些註解提供了在連線規格中何處尋找[!DNL target spec]引數的相關額外資訊。 您也可以在下列範例中看到目標引數是&#x200B;*不*&#x200B;適用於資料集匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,41,56"}
 {
@@ -1263,11 +1270,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob 儲存]
+>[!TAB Azure Blob儲存體]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] 顯示目標連接參數
++++[!DNL Azure Blob Storage] - [!DNL Connection spec]顯示目標連線引數
 
-請注意以下示例中 [!DNL connection spec] 帶有内聯評論的突出顯示行，這些行提供了有關在連接規範中查找 [!DNL target spec] 參數的位置的其他信息。 您還可以在下面的示例中看到哪些目標參數&#x200B;**&#x200B;不適用於資料集導出目標。
+請注意下方[!DNL connection spec]範例中有內嵌註解之醒目提示的行，這些註解提供了在連線規格中何處尋找[!DNL target spec]引數的相關額外資訊。 您也可以在下列範例中看到目標引數是&#x200B;*不*&#x200B;適用於資料集匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1338,7 +1345,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++
 
 
->[!TAB Azure Data Lake Gen 2（ADLS Gen2）]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec]顯示目標連線引數
 
@@ -1408,7 +1415,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec]顯示目標連線引數
 
-請注意下方[!DNL connection spec]範例中有內嵌註解之醒目提示的行，這些註解提供了在連線規格中何處尋找[!DNL target spec]引數的相關額外資訊。 您還可以在下面的示例中看到哪些目標參數&#x200B;**&#x200B;不適用於資料集導出目標。
+請注意下方[!DNL connection spec]範例中有內嵌註解之醒目提示的行，這些註解提供了在連線規格中何處尋找[!DNL target spec]引數的相關額外資訊。 您也可以在下列範例中看到目標引數是&#x200B;*不*&#x200B;適用於資料集匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="9,21,36"}
 "items": [
@@ -1471,9 +1478,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Google雲端儲存空間]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] 顯示目標連接參數
++++[!DNL Google Cloud Storage] - [!DNL Connection spec]顯示目標連線引數
 
-請注意以下示例中 [!DNL connection spec] 帶有内聯評論的突出顯示行，這些行提供了有關在連接規範中查找 [!DNL target spec] 參數的位置的其他信息。 您還可以在下面的示例中看到哪些目標參數&#x200B;**&#x200B;不適用於資料集導出目標。
+請注意下方[!DNL connection spec]範例中有內嵌註解之醒目提示的行，這些註解提供了在連線規格中何處尋找[!DNL target spec]引數的相關額外資訊。 您也可以在下列範例中看到目標引數是&#x200B;*不*&#x200B;適用於資料集匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1545,9 +1552,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] 顯示目標連接參數
++++SFTP - [!DNL Connection spec]顯示目標連線引數
 
-請注意以下示例中 [!DNL connection spec] 帶有内聯評論的突出顯示行，這些行提供了有關在連接規範中查找 [!DNL target spec] 參數的位置的其他信息。 您還可以在下面的示例中看到哪些目標參數&#x200B;**&#x200B;不適用於資料集導出目標。
+請注意下方[!DNL connection spec]範例中有內嵌註解之醒目提示的行，這些註解提供了在連線規格中何處尋找[!DNL target spec]引數的相關額外資訊。 您也可以在下列範例中看到目標引數是&#x200B;*不*&#x200B;適用於資料集匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1612,7 +1619,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!ENDTABS]
 
 
-通過使用上述規範，您可以構造特定於所需雲端儲存目標的目標連接請求，如下面的選項卡中所示。
+透過使用上述規格，您可以建構專屬於您所需雲端儲存空間目的地的目標連線要求，如下方標籤所示。
 
 >[!BEGINTABS]
 
@@ -1620,14 +1627,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **要求**
 
-+++[!DNL Amazon S3] - Target連接請求
++++[!DNL Amazon S3] - Target連線要求
 
 >[!TIP]
 >
->有關如何獲取所需目標參數的信息，請參閱[目標文檔頁面的[!DNL Amazon S3]填寫目標詳細信息](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)部分。
->有關 的其他 `datasetFileType`支援值，請參閱 API 參考文件。
+>如需有關如何取得所需目標引數的資訊，請參閱[!DNL Amazon S3]目的地檔案頁面的[填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)區段。
+>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1658,7 +1665,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++Target 連線 - 回應
++++目標連線 — 回應
 
 ```json
 {
@@ -1669,19 +1676,19 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob 儲存]
+>[!TAB Azure Blob儲存體]
 
 **要求**
 
-+++[!DNL Azure Blob Storage] - Target連接請求
++++[!DNL Azure Blob Storage] - Target連線要求
 
 >[!TIP]
 >
->有關如何獲取所需目標參數的信息，請參閱[目標文檔頁面的[!DNL Azure Blob Storage]填寫目標詳細信息](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)部分。
->有關 的其他 `datasetFileType`支援值，請參閱 API 參考文件。
+>如需有關如何取得所需目標引數的資訊，請參閱[!DNL Azure Blob Storage]目的地檔案頁面的[填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)區段。
+>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1712,7 +1719,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++Target 連線 - 回應
++++目標連線 — 回應
 
 ```json
 {
@@ -1723,7 +1730,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2（ADLS Gen2）]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **要求**
 
@@ -1779,14 +1786,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **要求**
 
-+++[!DNL Data Landing Zone] - Target連接請求
++++[!DNL Data Landing Zone] - Target連線要求
 
 >[!TIP]
 >
 >如需有關如何取得所需目標引數的資訊，請參閱[!DNL Data Landing Zone]目的地檔案頁面的[填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)區段。
 >如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
-請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1816,7 +1823,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++Target 連線 - 回應
++++目標連線 — 回應
 
 ```json
 {
@@ -1831,15 +1838,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **要求**
 
-+++[!DNL Google Cloud Storage] - Target連接請求
++++[!DNL Google Cloud Storage] - Target連線要求
 
 >[!TIP]
 >
->有關如何獲取所需目標參數的信息，請參閱[目標文檔頁面的[!DNL Google Cloud Storage]填寫目標詳細信息](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)部分。
->有關 的其他 `datasetFileType`支援值，請參閱 API 參考文件。
+>如需有關如何取得所需目標引數的資訊，請參閱[!DNL Google Cloud Storage]目的地檔案頁面的[填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)區段。
+>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1870,7 +1877,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++Target 連線 - 回應
++++目標連線 — 回應
 
 ```json
 {
@@ -1885,11 +1892,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **要求**
 
-+++SFTP - Target聯機請求
++++SFTP - Target連線要求
 
 >[!TIP]
 >
->有關如何獲取所需目標参數的信息，請參閱 [SFTP 目標文檔頁面的填寫目標詳細信息](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 部分。
+>如需有關如何取得所需目標引數的資訊，請參閱SFTP目的地檔案頁面的[填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)區段。
 >如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
@@ -1935,13 +1942,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-記下回應中的Target連接ID。 創建資料流以匯出數據集時，下一步將需要此ID。
+記下回應中的Target連線ID。 建立資料流以匯出資料集時，下個步驟將需要此ID。
 
-## 建立數據流 {#create-dataflow}
+## 建立資料流 {#create-dataflow}
 
-![匯出數據集工作流程中步驟 5 的圖表](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
+![顯示匯出資料集工作流程步驟5的圖表](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
-目標配置的最後一步是設置數據流。 數據流將以前創建的實體連結在一起，還提供用於配置資料集匯出計劃的選項。 若要創建數據流，請使用下面的有效負載（具體取決於所需的雲端儲存目標），並替換前面步驟中的實體ID。
+目的地設定的最後一步是設定資料流。 資料流會將先前建立的實體連結在一起，並提供設定資料集匯出排程的選項。 若要建立資料流，請根據您所需的雲端儲存空間目的地，使用下列裝載，並取代先前步驟中的實體ID。
 
 >[!BEGINTABS]
 
@@ -1949,9 +1956,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **要求**
 
-+++建立 資料集數據流到 [!DNL Amazon S3] 目標 - 請求
++++建立資料集資料流到[!DNL Amazon S3]目的地 — 請求
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -1987,23 +1994,23 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-下表提供了該 `scheduleParams` 部分中所有參數的說明，允許您自定義資料集導出的匯出時間、頻率、位置等。
+下表提供`scheduleParams`區段中所有引數的說明，可讓您自訂資料集匯出的匯出時間、頻率、位置等。
 
 | 參數 | 說明 |
 |---------|----------|
-| `exportMode` | 選擇 `"DAILY_FULL_EXPORT"` 或 `"FIRST_FULL_THEN_INCREMENTAL"`。 有關這兩個選項的詳細信息，請參閱 [導出完整文件](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [導出批處理目標中的增量文件](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 啟用教學課程。 可用的三種匯出選項為： <br> **完整檔 - 一次**：`"DAILY_FULL_EXPORT"`只能與 ：`day` 和 `interval`：`0` 結合使用`timeUnit`，用於資料集的一次性完整匯出。不支持數據集的每日完整匯出。 如果需要每日匯出，請使用增量匯出選項。 <br> **每日增量匯出**：用於每日增量匯出，請選擇 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`：`day` 和 `interval` ：`1` 。 <br> **每小時增量匯出**：選擇 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`：`hour` 和 `interval` ：`3`，`6`，，`9`或 `12` 用於每小時增量匯出。 |
-| `timeUnit` | 選擇 `day` 或 `hour` 取決於要用于匯出資料集文件的頻率。 |
-| `interval` | 選擇`1`何時為日，`3`選擇時間單位為 `hour`時`6``9``12` `timeUnit` |
-| `startTime` | 資料集導出應開始的日期和時間，以 UNIX 秒為單位。 |
-| `endTime` | 資料集匯出應結束的日期和時間，以 UNIX 秒為單位。 |
-| `foldernameTemplate` | 在將存放匯出檔的儲存位置指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一識別碼。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>日期和時間格式為 yyyyMMdd_HHmmss。</span></li><li><code>匯出時間</code> = <span>格式化為`exportTime=YYYYMMDDHHMM`的資料匯出排程時間。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地的特定執行個體名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目標執行個體的唯一標識符。</span></li><li><code>沙箱名稱</code> = <span>沙盤環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
+| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 三個可用的匯出選項為： <br> **完整檔案 — 一次**： `"DAILY_FULL_EXPORT"`只能搭配`timeUnit`：`day`和`interval`：`0`使用，以一次完整匯出資料集。 不支援資料集的每日完整匯出。 如果您需要每日匯出，請使用增量匯出選項。<br> **每日增量匯出**：針對每日增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`day`和`interval`：`1`。<br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
+| `timeUnit` | 根據您想要匯出資料集檔案的頻率，選取`day`或`hour`。 |
+| `interval` | 選取`timeUnit`為天時的`1`，以及時間單位為`hour`時的`3`，`6`，`9`，`12`。 |
+| `startTime` | 開始匯出資料集的日期和時間（以UNIX秒為單位）。 |
+| `endTime` | 資料集匯出應該結束的日期和時間（以UNIX秒為單位）。 |
+| `foldernameTemplate` | 在儲存匯出檔案的儲存位置中，指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一識別碼。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>格式為yyyyMMdd_HHmmss.</span>的日期和時間</li><li><code>匯出時間</code> = <span>格式化為`exportTime=YYYYMMDDHHMM`的資料匯出排程時間。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地的特定執行個體名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目的地執行個體的唯一識別碼。</span></li><li><code>沙箱名稱</code> = <span>沙箱環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
 
 **回應**
 
-+++建立數據流 - 回應
++++建立資料流 — 回應
 
 ```json
 {
@@ -2014,13 +2021,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Blob 儲存]
+>[!TAB Azure Blob儲存體]
 
 **要求**
 
-+++建立 資料集數據流到 [!DNL Azure Blob Storage] 目標 - 請求
++++建立資料集資料流到[!DNL Azure Blob Storage]目的地 — 請求
 
-請注意請求示例中帶有内聯評論突出显示的行，其中提供了其他信息。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2056,16 +2063,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-下表提供了該 `scheduleParams` 部分中所有參數的說明，允許您自定義資料集導出的匯出時間、頻率、位置等。
+下表提供`scheduleParams`區段中所有引數的說明，可讓您自訂資料集匯出的匯出時間、頻率、位置等。
 
 | 參數 | 說明 |
 |---------|----------|
-| `exportMode` | 選擇 `"DAILY_FULL_EXPORT"` 或 `"FIRST_FULL_THEN_INCREMENTAL"`。 有關這兩個選項的詳細信息，請參閱 [導出完整文件](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [導出批處理目標中的增量文件](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 啟用教學課程。 可用的三種匯出選項為： <br> **完整檔 - 一次**：`"DAILY_FULL_EXPORT"`只能與 ：`day` 和 `interval`：`0` 結合使用`timeUnit`，用於資料集的一次性完整匯出。不支持數據集的每日完整匯出。 如果需要每日匯出，請使用增量匯出選項。 <br> **每日增量匯出**：用於每日增量匯出，請選擇 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`：`day` 和 `interval` ：`1` 。 <br> **每小時增量匯出**：選擇 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`：`hour` 和 `interval` ：`3`，`6`，，`9`或 `12` 用於每小時增量匯出。 |
-| `timeUnit` | 選擇 `day` 或 `hour` 取決於要用于匯出資料集文件的頻率。 |
+| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 三個可用的匯出選項為： <br> **完整檔案 — 一次**： `"DAILY_FULL_EXPORT"`只能搭配`timeUnit`：`day`和`interval`：`0`使用，以一次完整匯出資料集。 不支援資料集的每日完整匯出。 如果您需要每日匯出，請使用增量匯出選項。<br> **每日增量匯出**：針對每日增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`day`和`interval`：`1`。<br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
+| `timeUnit` | 根據您想要匯出資料集檔案的頻率，選取`day`或`hour`。 |
 | `interval` | 選取`timeUnit`為天時的`1`，以及時間單位為`hour`時的`3`，`6`，`9`，`12`。 |
 | `startTime` | 開始匯出資料集的日期和時間（以UNIX秒為單位）。 |
 | `endTime` | 資料集匯出應該結束的日期和時間（以UNIX秒為單位）。 |
-| `foldernameTemplate` | 在儲存匯出檔案的儲存位置中，指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一標識符。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>日期和時間格式為 yyyyMMdd_HHmmss。</span></li><li><code>匯出時間</code> = <span>資料匯出的計劃時間，格式為 `exportTime=YYYYMMDDHHMM`。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地特定執行個體的名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目標執行個體的唯一標識符。</span></li><li><code>沙箱名稱</code> = <span>沙盤環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
+| `foldernameTemplate` | 在儲存匯出檔案的儲存位置中，指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一識別碼。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>格式為yyyyMMdd_HHmmss.</span>的日期和時間</li><li><code>匯出時間</code> = <span>格式化為`exportTime=YYYYMMDDHHMM`的資料匯出排程時間。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地的特定執行個體名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目的地執行個體的唯一識別碼。</span></li><li><code>沙箱名稱</code> = <span>沙箱環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2084,7 +2091,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2（ADLS Gen2）]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **要求**
 
@@ -2130,12 +2137,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 參數 | 說明 |
 |---------|----------|
-| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 有關這兩個選項的詳細信息，請參閱 [導出完整文件](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [導出批處理目標中的增量文件](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 啟用教學課程。 可用的三種匯出選項為： <br> **完整檔 - 一次**：`"DAILY_FULL_EXPORT"`只能與 ：`day` 和 `interval`：`0` 結合使用`timeUnit`，用於資料集的一次性完整匯出。不支持數據集的每日完整匯出。 如果需要每日匯出，請使用增量匯出選項。 <br> **每日增量匯出**：針對每日增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`day`和`interval`：`1`。<br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
+| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 三個可用的匯出選項為： <br> **完整檔案 — 一次**： `"DAILY_FULL_EXPORT"`只能搭配`timeUnit`：`day`和`interval`：`0`使用，以一次完整匯出資料集。 不支援資料集的每日完整匯出。 如果您需要每日匯出，請使用增量匯出選項。<br> **每日增量匯出**：針對每日增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`day`和`interval`：`1`。<br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
 | `timeUnit` | 根據您想要匯出資料集檔案的頻率，選取`day`或`hour`。 |
 | `interval` | 選取`timeUnit`為天時的`1`，以及時間單位為`hour`時的`3`，`6`，`9`，`12`。 |
 | `startTime` | 開始匯出資料集的日期和時間（以UNIX秒為單位）。 |
-| `endTime` | 資料集匯出應結束的日期和時間，以 UNIX 秒為單位。 |
-| `foldernameTemplate` | 在將存放匯出檔的儲存位置指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一標識符。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>日期和時間格式為 yyyyMMdd_HHmmss。</span></li><li><code>匯出時間</code> = <span>資料匯出的計劃時間，格式為 `exportTime=YYYYMMDDHHMM`。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地特定執行個體的名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目標執行個體的唯一標識符。</span></li><li><code>沙箱名稱</code> = <span>沙盤環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
+| `endTime` | 資料集匯出應該結束的日期和時間（以UNIX秒為單位）。 |
+| `foldernameTemplate` | 在儲存匯出檔案的儲存位置中，指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一識別碼。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>格式為yyyyMMdd_HHmmss.</span>的日期和時間</li><li><code>匯出時間</code> = <span>格式化為`exportTime=YYYYMMDDHHMM`的資料匯出排程時間。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地的特定執行個體名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目的地執行個體的唯一識別碼。</span></li><li><code>沙箱名稱</code> = <span>沙箱環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2143,7 +2150,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++建立數據流 - 回應
++++建立資料流 — 回應
 
 ```json
 {
@@ -2154,7 +2161,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB 數據登陸區域]
+>[!TAB 資料登陸區域(DLZ)]
 
 **要求**
 
@@ -2200,7 +2207,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 參數 | 說明 |
 |---------|----------|
-| `exportMode` | 選擇 `"DAILY_FULL_EXPORT"` 或 `"FIRST_FULL_THEN_INCREMENTAL"`。 有關這兩個選項的詳細信息，請參閱 [導出完整文件](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [導出批處理目標中的增量文件](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 啟用教學課程。 可用的三種匯出選項為： <br> **完整檔 - 一次**：`"DAILY_FULL_EXPORT"`只能與 ：`day` 和 `interval`：`0` 結合使用`timeUnit`，用於資料集的一次性完整匯出。不支援資料集的每日完整匯出。 如果您需要每日匯出，請使用增量匯出選項。<br> **每日增量匯出**：針對每日增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`day`和`interval`：`1`。<br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
+| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 三個可用的匯出選項為： <br> **完整檔案 — 一次**： `"DAILY_FULL_EXPORT"`只能搭配`timeUnit`：`day`和`interval`：`0`使用，以一次完整匯出資料集。 不支援資料集的每日完整匯出。 如果您需要每日匯出，請使用增量匯出選項。<br> **每日增量匯出**：針對每日增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`day`和`interval`：`1`。<br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
 | `timeUnit` | 根據您想要匯出資料集檔案的頻率，選取`day`或`hour`。 |
 | `interval` | 選取`timeUnit`為天時的`1`，以及時間單位為`hour`時的`3`，`6`，`9`，`12`。 |
 | `startTime` | 開始匯出資料集的日期和時間（以UNIX秒為單位）。 |
@@ -2229,7 +2236,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++建立資料集資料流到[!DNL Google Cloud Storage]目的地 — 請求
 
-請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製粘貼到所选終端時，移除請求中的内聯評論。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2265,16 +2272,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-下表提供了該 `scheduleParams` 部分中所有參數的說明，允許您自定義資料集導出的匯出時間、頻率、位置等。
+下表提供`scheduleParams`區段中所有引數的說明，可讓您自訂資料集匯出的匯出時間、頻率、位置等。
 
 | 參數 | 說明 |
 |---------|----------|
-| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 可用的三種匯出選項為： <br> **完整檔 - 一次**：`"DAILY_FULL_EXPORT"`只能與 ：`day` 和 `interval`：`0` 結合使用`timeUnit`，用於資料集的一次性完整匯出。不支持數據集的每日完整匯出。 如果需要每日匯出，請使用增量匯出選項。 <br> **每日增量匯出**：用於每日增量匯出，請選擇 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`：`day` 和 `interval` ：`1` 。 <br> **每小時增量匯出**：選擇 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`：`hour` 和 `interval` ：`3`，`6`，，`9`或 `12` 用於每小時增量匯出。 |
-| `timeUnit` | 選擇 `day` 或 `hour` 取決於要用于匯出資料集文件的頻率。 |
-| `interval` | 選擇`1`何時為日，`3`選擇時間單位為 `hour`時`6``9``12` `timeUnit` |
-| `startTime` | 資料集導出應開始的日期和時間，以 UNIX 秒為單位。 |
-| `endTime` | 資料集匯出應結束的日期和時間，以 UNIX 秒為單位。 |
-| `foldernameTemplate` | 在將存放匯出檔的儲存位置指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一標識符。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>格式為yyyyMMdd_HHmmss.</span>的日期和時間</li><li><code>匯出時間</code> = <span>格式化為`exportTime=YYYYMMDDHHMM`的資料匯出排程時間。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地的特定執行個體名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目的地執行個體的唯一識別碼。</span></li><li><code>沙箱名稱</code> = <span>沙箱環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
+| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 三個可用的匯出選項為： <br> **完整檔案 — 一次**： `"DAILY_FULL_EXPORT"`只能搭配`timeUnit`：`day`和`interval`：`0`使用，以一次完整匯出資料集。 不支援資料集的每日完整匯出。 如果您需要每日匯出，請使用增量匯出選項。<br> **每日增量匯出**：針對每日增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`day`和`interval`：`1`。<br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
+| `timeUnit` | 根據您想要匯出資料集檔案的頻率，選取`day`或`hour`。 |
+| `interval` | 選取`timeUnit`為天時的`1`，以及時間單位為`hour`時的`3`，`6`，`9`，`12`。 |
+| `startTime` | 開始匯出資料集的日期和時間（以UNIX秒為單位）。 |
+| `endTime` | 資料集匯出應該結束的日期和時間（以UNIX秒為單位）。 |
+| `foldernameTemplate` | 在儲存匯出檔案的儲存位置中，指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一識別碼。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>格式為yyyyMMdd_HHmmss.</span>的日期和時間</li><li><code>匯出時間</code> = <span>格式化為`exportTime=YYYYMMDDHHMM`的資料匯出排程時間。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地的特定執行個體名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目的地執行個體的唯一識別碼。</span></li><li><code>沙箱名稱</code> = <span>沙箱環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2339,12 +2346,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 參數 | 說明 |
 |---------|----------|
-| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 三個可用的匯出選項為： <br> **完整檔案 — 一次**： `"DAILY_FULL_EXPORT"`只能搭配`timeUnit`：`day`和`interval`：`0`使用，以一次完整匯出資料集。 不支援資料集的每日完整匯出。 如果需要每日匯出，請使用增量匯出選項。 <br> **每日增量匯出**：用於每日增量匯出，請選擇 `"FIRST_FULL_THEN_INCREMENTAL"`、 `timeUnit`：`day` 和 `interval` ：`1` 。 <br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
+| `exportMode` | 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 三個可用的匯出選項為： <br> **完整檔案 — 一次**： `"DAILY_FULL_EXPORT"`只能搭配`timeUnit`：`day`和`interval`：`0`使用，以一次完整匯出資料集。 不支援資料集的每日完整匯出。 如果您需要每日匯出，請使用增量匯出選項。<br> **每日增量匯出**：針對每日增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`day`和`interval`：`1`。<br> **每小時增量匯出**：針對每小時增量匯出選取`"FIRST_FULL_THEN_INCREMENTAL"`、`timeUnit`：`hour`和`interval`：`3`、`6`、`9`或`12`。 |
 | `timeUnit` | 根據您想要匯出資料集檔案的頻率，選取`day`或`hour`。 |
 | `interval` | 選取`timeUnit`為天時的`1`，以及時間單位為`hour`時的`3`，`6`，`9`，`12`。 |
 | `startTime` | 開始匯出資料集的日期和時間（以UNIX秒為單位）。 |
 | `endTime` | 資料集匯出應該結束的日期和時間（以UNIX秒為單位）。 |
-| `foldernameTemplate` | 在儲存匯出檔案的儲存位置中，指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一標識符。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>格式為yyyyMMdd_HHmmss.</span>的日期和時間</li><li><code>匯出時間</code> = <span>格式化為`exportTime=YYYYMMDDHHMM`的資料匯出排程時間。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地特定執行個體的名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目標執行個體的唯一標識符。</span></li><li><code>沙箱名稱</code> = <span>沙箱環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
+| `foldernameTemplate` | 在儲存匯出檔案的儲存位置中，指定預期的資料夾名稱結構。 <ul><li><code>資料集ID</code> = <span>資料集的唯一識別碼。</span></li><li><code>目的地</code> = <span>目的地的名稱。</span></li><li><code>日期時間</code> = <span>格式為yyyyMMdd_HHmmss.</span>的日期和時間</li><li><code>匯出時間</code> = <span>格式化為`exportTime=YYYYMMDDHHMM`的資料匯出排程時間。</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>目的地的特定執行個體名稱。</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>目的地執行個體的唯一識別碼。</span></li><li><code>沙箱名稱</code> = <span>沙箱環境的名稱。</span></li><li><code>組織名稱</code> = <span>組織的名稱。</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2352,7 +2359,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-+++建立數據流 - 回應
++++建立資料流 — 回應
 
 ```json
 {
@@ -2365,7 +2372,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-記下回應中的數據流ID。 擷取資料流執行以驗證成功的日期集匯出時，下個步驟將需要此ID。
+記下回應中的資料流ID。 擷取資料流執行以驗證成功的日期集匯出時，下個步驟將需要此ID。
 
 ## 取得資料流執行 {#get-dataflow-runs}
 
