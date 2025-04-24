@@ -4,9 +4,9 @@ title: 編輯啟動資料流
 type: Tutorial
 description: 請依照本文的步驟，在Adobe Experience Platform中編輯現有的啟用資料流。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: ca33131c505803b74075f6d8331095b016a301a0
+source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,12 @@ ht-degree: 0%
 
 在Adobe Experience Platform中，您可以將現有啟用資料流的各種元件設定到目的地，例如：
 
-* [啟用或停用](#enable-disable-dataflows)啟動資料流；
-* [新增其他對象和設定檔屬性](#add-audiences)至啟動資料流；
-* [新增其他資料集](#add-datasets)至啟用工作流程；
-* [編輯啟動資料流程的名稱和說明](#edit-names-descriptions)；
+* [啟用或停用](#enable-disable-dataflows)啟用資料流
+* [新增其他對象](#add-audiences)至啟用資料流
+* [編輯對應的屬性和身分](#edit-mapped-attributes)
+* [編輯啟用排程和匯出頻率](#edit-schedule-frequency)
+* [新增其他資料集](#add-datasets)至啟用工作流程
+* [編輯啟動資料流程的名稱和說明](#edit-names-descriptions)
 
 <!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
@@ -26,7 +28,7 @@ ht-degree: 0%
 
 請依照下列步驟，瀏覽您現有的啟用資料流程，並識別您要編輯的資料流程。
 
-1. 登入[Experience PlatformUI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL 目的地]**。 從頂端標題選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;以檢視您現有的目的地資料流。
+1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL 目的地]**。 從頂端標題選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;以檢視您現有的目的地資料流。
 
    ![瀏覽目的地](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -44,19 +46,61 @@ ht-degree: 0%
 
 使用&#x200B;**[!UICONTROL 已啟用]/[!UICONTROL 已停用]**&#x200B;切換以開始或暫停所有資料匯出至目的地。
 
-![Experience PlatformUI影像顯示已啟用/已停用的資料流執行切換。](../assets/ui/edit-activation/enable-toggle.png)
+![Experience Platform UI影像顯示「啟用/停用」資料流執行切換。](../assets/ui/edit-activation/enable-toggle.png)
 
 ## 將對象新增至啟用資料流 {#add-audiences}
 
-在右側邊欄中選取「**[!UICONTROL 啟用對象]**」，以變更要傳送至目的地的對象或設定檔屬性。 此動作會將您導向啟動工作流程，此工作流程會依目的地型別而有所不同。
+選取右側邊欄中的&#x200B;**[!UICONTROL 啟用對象]**，以變更要傳送至目的地的對象。 此動作會帶您進入啟動工作流程。
 
-![顯示[啟用對象資料流執行]選項的Experience PlatformUI影像。](../assets/ui/edit-activation/activate-audiences.png)
+![Experience Platform UI影像顯示「啟用對象資料流執行」選項。](../assets/ui/edit-activation/activate-audiences.png)
 
-如需每種目的地型別之啟用工作流程的詳細資訊，請參閱下列指南：
+在啟動工作流程的&#x200B;**[!UICONTROL 選取對象]**&#x200B;步驟中，您可以移除現有對象或將新對象新增至啟動工作流程。
 
-* [啟用串流目的地的對象](./activate-segment-streaming-destinations.md) (例如Facebook或Twitter)；
+啟用工作流程會依目的地型別而略有不同。 如需每種目的地型別之啟用工作流程的詳細資訊，請閱讀下列指南：
+
+* [啟用串流目的地的對象](./activate-segment-streaming-destinations.md) （例如Facebook或Twitter）；
 * [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) (例如，Amazon S3或Oracle Eloqua)；
 * [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) (例如HTTP API或Amazon Kinesis)。
+
+## 編輯啟用排程和匯出頻率 {#edit-schedule-frequency}
+
+在右側邊欄中選取&#x200B;**[!UICONTROL 啟用對象]**。 此動作會帶您進入啟動工作流程。
+
+![Experience Platform UI影像顯示「啟用對象資料流執行」選項。](../assets/ui/edit-activation/activate-audiences.png)
+
+選取啟動工作流程中的&#x200B;**[!UICONTROL 排程]**&#x200B;步驟，以編輯資料流程的啟動排程和匯出頻率。 此步驟可讓您設定將資料匯出至目的地的頻率。
+
+在啟動工作流程的&#x200B;**[!UICONTROL 排程]**&#x200B;步驟中，您可以：
+* 調整匯出頻率。
+* 設定或修改啟動資料流的開始和結束日期等。
+
+您可以執行的排程作業會因目的地型別而稍有不同。 如需每種目的地型別之啟用工作流程的詳細資訊，請閱讀下列指南：
+
+* [啟用串流目的地的對象](./activate-segment-streaming-destinations.md) （例如Facebook或Twitter）；
+* [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) (例如，Amazon S3或Oracle Eloqua)；
+* [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) (例如HTTP API或Amazon Kinesis)。
+
+## 編輯對應的屬性和身分 {#edit-mapped-attributes}
+
+在右側邊欄中選取&#x200B;**[!UICONTROL 啟用對象]**。 此動作會帶您進入啟動工作流程。
+
+![Experience Platform UI影像顯示「啟用對象資料流執行」選項。](../assets/ui/edit-activation/activate-audiences.png)
+
+選取啟動工作流程中的&#x200B;**[!UICONTROL 對應]**&#x200B;步驟，編輯啟動資料流程的對應屬性和身分。 這可讓您調整應將哪些設定檔屬性和身分匯出至目的地。
+
+在啟動工作流程的&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，您可以：
+
+* 將新屬性或身分新增到對應。
+* 從對應移除現有的屬性或身分。
+* 調整對應順序，以定義匯出檔案中的欄順序。
+
+啟用工作流程會依目的地型別而略有不同。 如需每種目的地型別之啟用工作流程的詳細資訊，請閱讀下列指南：
+
+* [啟用串流目的地的對象](./activate-segment-streaming-destinations.md) （例如Facebook或Twitter）；
+* [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) (例如，Amazon S3或Oracle Eloqua)；
+* [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) (例如HTTP API或Amazon Kinesis)。
+
+
 
 ## 將資料集新增至啟用資料流 {#add-datasets}
 
@@ -66,7 +110,9 @@ ht-degree: 0%
 >
 >此選項僅對支援資料集匯出](export-datasets.md#supported-destinations)的[目的地可見。
 
-![顯示[匯出資料集]資料流執行選項的Experience PlatformUI影像。](../assets/ui/edit-activation/export-datasets.png)
+![Experience Platform UI影像顯示「匯出資料集」資料流執行選項。](../assets/ui/edit-activation/export-datasets.png)
+
+
 
 <!-- ## Apply access labels {#apply-access-labels}
 
