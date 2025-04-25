@@ -7,7 +7,7 @@ exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -21,18 +21,18 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showfullxdmschema"
->title="顯示完整XDM結構描述"
->abstract="依預設，僅顯示包含資料的欄位。 啟用此選項以顯示XDM結構描述中的所有欄位。"
+>title="呈現完整的 XDM 結構描述"
+>abstract="預設情況下，僅會顯示內含資料的欄位。啟用此選項會顯示 XDM 結構描述中所有欄位。"
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showrelationselectors"
 >title="顯示關係選擇器"
->abstract="依預設，會使用您組織的標準關係。 啟用此選項以顯示使用的關係選取器。"
+>abstract="預設情況下會使用您組織的標準關係。啟用此選項會顯示所使用的關係選擇器。"
 
 >[!CONTEXTUALHELP]
 >id="platform_b2b_audiencebuilder_showconstrainedfields"
->title="顯示限制的欄位"
->abstract="依預設，只會顯示沒有任何限制的欄位。 啟用此選項可顯示具有限制的欄位。"
+>title="顯示受限欄位"
+>abstract="預設情況下，僅會顯示沒有任何限制的欄位。啟用此選項會顯示設有限制的欄位。"
 
 針對帳戶使用Audience Builder時，您可以使用帳戶屬性或現有對象作為對象的欄位。
 

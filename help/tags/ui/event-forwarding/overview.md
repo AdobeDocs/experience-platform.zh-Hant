@@ -1,12 +1,12 @@
 ---
 title: 事件轉送概觀
-description: 瞭解Adobe Experience Platform中的事件轉送功能，此功能可讓您使用Experience Platform Edge Network執行工作，而不變更標籤實施。
+description: 了解 Adobe Experience Platform 中的事件轉送功能，讓您不需要變更標記實作便可以使用 Experience Platform Edge Network 執行工作。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
