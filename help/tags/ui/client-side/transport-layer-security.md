@@ -2,10 +2,10 @@
 title: 傳輸層安全性(TLS)資訊
 description: 有關使用哪些TLS版本和密碼的資訊
 exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 236c5a11f40490fc7ee536358fb146027fe64545
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '201'
+ht-degree: 15%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱[術語更新](../../term-updates.md)檔案。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱[術語更新](../../term-updates.md)檔案。
 
 傳輸層安全性(TLS)是一種密碼編譯通訊協定，可為透過網際網路在應用程式之間傳送的資料提供端對端安全性。 如需TLS的詳細資訊，請閱讀[TLS基本資訊](https://www.internetsociety.org/deploy360/tls/basics/)檔案。
 
@@ -52,34 +52,3 @@ PORT    STATE SERVICE
 ### 自行託管
 
 如果您[自行託管](../publishing/hosts/self-hosting-libraries.md)您的資料庫，則支援的TLS版本將由您自己的託管服務決定。
-
-## TLS加密將於2024年5月1日移除
-
-```
-PORT    STATE SERVICE
-443/tcp open  https
-| ssl-enum-ciphers:
-|   TLSv1.2:
-|     ciphers:
-|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
-|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
-|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
-|     compressors:
-|       NULL
-|     cipher preference: server
-|   TLSv1.3:
-|     ciphers:
-|       TLS_AKE_WITH_AES_128_CCM_8_SHA256 (secp256r1) - A
-|       TLS_AKE_WITH_AES_128_CCM_SHA256 (secp256r1) - A
-|     cipher preference: client
-|_  least strength: A
-```
