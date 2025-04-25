@@ -1,15 +1,16 @@
 ---
-title: 未驗證訪客的離站重新目標定位
+title: 未驗證的伺服器端重新目標定位
 description: 瞭解如何使用ECID重新鎖定未經驗證的使用者
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# 未驗證的重新目標定位 {#unauthenticated-retargeting}
+# 未驗證的伺服器端重新目標定位 {#unauthenticated-retargeting}
 
 由於第三方Cookie失效，企業正轉為使用無Cookie解決方案進行個人化參與和重新鎖定目標。 異地重新鎖定目標可讓企業根據先前的互動觸及高意圖使用者，而不需依賴使用者端JavaScript。
 

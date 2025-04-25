@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將取自多個企業來源的已知和匿名資料匯整起來，並藉此建立客戶設定檔，利用這些設定檔建立客群，以及對協力廠商目標啟動這些客群。
 role: Admin
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '305'
 ht-degree: 63%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 63%
       * [在不依賴第三方Cookie的情況下與新客戶互動及取得新客戶](/help/rtcdp/partner-data/prospecting.md)
       * [使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)
       * [未驗證使用者的離站重新目標定位](./partner-data/offsite-retargeting.md)
-      * [未驗證使用者的離站重新目標定位](./partner-data/unauthenticated-retargeting.md)
+      * [未驗證的伺服器端重新目標定位](./partner-data/unauthenticated-retargeting.md)
    * 輪廓擴充 {#profile-enrichment}
       * [使用合作夥伴提供的屬性補充第一方輪廓](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * 個人化的深入解析和參與 {#personalization-insights-engagement}
