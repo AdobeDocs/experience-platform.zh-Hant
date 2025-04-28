@@ -8,7 +8,7 @@ role: User
 source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 41%
    - [區段定義](api/segment-definitions.md)
    - [區段工作](api/segment-jobs.md)
    - [區段搜尋](api/segment-search.md)
-- 分段UI {#ui}
+- 區段UI {#ui}
    - [概觀](ui/overview.md)
    - [受眾控制面板](ui/audience-dashboard.md)
    - [Audience Portal](ui/audience-portal.md)
@@ -37,16 +37,16 @@ ht-degree: 41%
    - [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)
    - [忽略年份時間限制更新](ui/ignore-year.md)
    - [時間限制重構](ui/segment-refactoring.md)
-   - 區段相符{#segment-match}
+   - 區段比對 {#segment-match}
       - [區段比對總覽](ui/segment-match/overview.md)
       - [疑難排解](ui/segment-match/troubleshooting.md)
-- 分段方法{#methods}
+- 分段方法 {#methods}
    - [概觀](methods/overview.md)
    - [批次分段](methods/batch-segmentation.md)
    - [串流區段](methods/streaming-segmentation.md)
    - [邊緣分段](methods/edge-segmentation.md)
    - [彈性的受眾評估](methods/flexible-audience-evaluation.md)
-- 對象型別{#types}
+- 對象型別 {#types}
    - [概觀](types/overview.md)
    - [People對象](types/people-audiences.md)
    - [潛在客戶客群](types/prospect-audiences.md)
