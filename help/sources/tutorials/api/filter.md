@@ -2,9 +2,9 @@
 title: 使用流量服務API篩選Source的列層級資料
 description: 本教學課程涵蓋如何使用Flow Service API在來源層級篩選資料的步驟
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
+source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1823'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 >
 >篩選列層級資料的支援目前僅適用於下列來源：
 >
->* [[Amazon Redshift]](../../connectors/databases/redshift.md)
+>* [[!DNL Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
 >* [[!DNL Marketo Engage] 標準活動](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
