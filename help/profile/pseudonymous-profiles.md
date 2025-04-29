@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 假名設定檔資料有效期
 description: 本檔案提供在Adobe Experience Platform中設定假名設定檔資料到期日的一般指引。
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 6%
+source-wordcount: '1245'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="匿名設定檔資料到期"
->abstract="匿名設定檔資料到期代表匿名設定檔將保留在 Adobe Experience Platform 中直至移除的天數。"
+>abstract="假名設定檔資料到期日代表假名設定檔在移除前將保留在Adobe Experience Platform中的天數。 此值必須設定為至少1。 請注意，移除假名設定檔最多可能需要三天時間。"
 
 如果設定檔符合下列條件，則會視為假名資料的有效期：
 
@@ -37,17 +37,36 @@ ht-degree: 6%
 
 ## 存取 {#access}
 
-無法透過Experience Platform UI或API設定假名設定檔資料的有效期。 反之，您必須聯絡支援才能啟用此功能。 聯絡支援時，請包含下列資訊：
+>[!AVAILABILITY]
+>
+>若要存取此功能，您必須具備下列許可權：
+>
+>- 管理設定檔設定
+>- 檢視設定檔
+>
+>**管理設定檔設定**&#x200B;許可權可讓您設定資料有效期，而&#x200B;**檢視設定檔**&#x200B;許可權則可讓您檢視資料有效期。
+>
+>您可以在[存取控制總覽](../access-control/home.md#permissions)中找到Experience Platform內許可權的詳細資訊。
 
-- 要考慮用於假名設定檔刪除的身分名稱空間。
-   - 例如： `ECID`僅限，`AAID`僅限，或`ECID`與`AAID`的組合。
-- 刪除假名設定檔之前的等待時間。 客戶的預設建議為14天。 不過，此值可能會因您的使用案例而異。
+若要將假名設定檔資料到期日新增至您的組織，請移至[設定檔]儀表板，並選取&#x200B;**[!UICONTROL 設定]**。
+
+![設定檔儀表板上的[設定]按鈕會反白顯示。](./images/pseudonymous-profiles/profile-settings.png)
+
+[!UICONTROL 設定檔設定]彈出視窗即會顯示。 在此彈出視窗中，您可以設定假名設定檔資料到期的天數，以及用於資料到期的身分名稱空間。
+
+對於生產沙箱，預設的假名設定檔資料到期為14天，最小為1天，最大為365天。 對於開發沙箱，預設的假名設定檔資料到期日為3天，最小為1天，最大為365天。
+
+選取&#x200B;**[!UICONTROL 套用]**&#x200B;以儲存您的資料到期設定。
+
+![將假名設定檔資料到期日新增至貴組織設定檔的彈出視窗。 已反白顯示[套用]按鈕。](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
 ## 常見問題 {#faq}
 
 下節列出有關假名設定檔資料到期的常見問題：
 
 ### 假名設定檔資料到期與體驗事件資料到期有何不同？
+
++++ 回答
 
 假名設定檔資料到期和體驗事件資料到期是互補功能。
 
@@ -69,7 +88,11 @@ Experience Event資料到期日會根據事件記錄的時間戳記，僅移除�
 
 Experience Event資料到期日僅&#x200B;**僅**&#x200B;會移除事件，且&#x200B;**不會**&#x200B;移除設定檔類別資料。 只有在移除&#x200B;**所有**&#x200B;資料集中的所有資料，且該設定檔還有&#x200B;**沒有**&#x200B;個設定檔類別記錄時，才會移除設定檔類別資料。
 
++++
+
 ### 假名設定檔資料到期如何與體驗事件資料到期結合使用？
+
++++ 回答
 
 假名設定檔資料到期和體驗事件資料到期可用於相互補充。
 
@@ -77,14 +100,22 @@ Experience Event資料到期日僅&#x200B;**僅**&#x200B;會移除事件，且&#
 
 對於典型使用案例，您可以根據已知使用者資料的值設定體驗事件資料有效期，也可以將假名設定檔資料有效期的設定設為更短的持續時間，以限制假名設定檔對您的Experience Platform授權合規性的影響。
 
-### 哪些使用者應該使用假名設定檔資料的有效期？
++++
+
+### 我該使用假名設定檔資料有效期的使用案例有哪些種類？
+
++++ 回答
 
 - 如果您使用Web SDK直接將資料傳送至Experience Platform。
 - 如果您的網站同時為未驗證的客戶提供服務。
 - 如果您在資料集中有大量設定檔計數，而且您已確認這種過多的設定檔計數是因為匿名Cookie型身分名稱空間。
    - 若要判斷這點，您應使用身分名稱空間重疊報表。 預覽範例狀態API指南的[身分重疊報告區段](./api/preview-sample-status.md#identity-overlap-report)中可以找到有關此報告的詳細資訊。
 
++++
+
 ### 在使用假名設定檔資料到期之前，您應注意哪些注意事項？
+
++++ 回答
 
 - 假名設定檔資料到期日在&#x200B;**沙箱**&#x200B;層級執行。 您可以選擇為生產及開發沙箱設定不同的設定。
 - 啟動此功能後，設定檔的刪除是&#x200B;**永久**。 有&#x200B;**沒有**&#x200B;方法可以復原或還原已刪除的設定檔。
@@ -93,7 +124,17 @@ Experience Event資料到期日僅&#x200B;**僅**&#x200B;會移除事件，且&#
 - 此清理將&#x200B;**只會在設定檔中進行**。 如果設定檔有兩個或多個關聯的假名身分（例如`AAID`和`ECID`），Identity Service在清理後仍可在圖形中顯示已刪除的身分。 我們將在不久的未來解決此差異。
 - 假名設定檔資料過期&#x200B;**不會**&#x200B;立即執行，最多可能需要三天才能處理。
 
++++
+
 ### 假名設定檔資料到期如何與Identity Service資料的護欄互動？
+
++++ 回答
 
 - Identity Service [的「先入先出」刪除系統](../identity-service/guardrails.md)可從儲存在Identity Service的身分圖表刪除ECID。
 - 如果此刪除行為導致僅ECID設定檔儲存在即時客戶設定檔（設定檔存放區）中，則假名設定檔資料到期將從設定檔存放區中刪除此設定檔。
+
++++
+
+## 後續步驟
+
+閱讀本指南後，您會瞭解如何檢視和建立假名設定檔資料有效期。 如需有關Experience Platform整體資料管理的詳細資訊，請參閱[資料管理授權權益最佳實務指南](../landing/license-usage-and-guardrails/data-management-best-practices.md)。
