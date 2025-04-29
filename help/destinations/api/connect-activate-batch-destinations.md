@@ -5,7 +5,7 @@ title: 使用流程服務API連線到批次目的地並啟用資料
 description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地，並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 81641f707dbd9fb2952589506bc42c3dd6cd83b3
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 2%
@@ -1039,7 +1039,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`：選擇性。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`：選擇性。 選取這兩個檔案選項之一，加入Experience Platform產生檔案的時間。</li><li>`custom-text`：選擇性。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)一節。 |
 | `exportMode` | 強制。 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 |
 | `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
-| `frequency` | 強制。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`或`DAILY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |
+| `frequency` | 強制。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`、`DAILY`、`WEEKLY`或`MONTHLY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |
 | `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`frequency`選取器中選取`"DAILY_FULL_EXPORT"`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日Experience Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新狀態，端視批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
 | `endDate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>在選取`"exportMode":"DAILY_FULL_EXPORT"`和`"frequency":"ONCE"`時不適用。 <br>設定對象成員停止匯出至目的地的日期。 |
 | `startTime` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |

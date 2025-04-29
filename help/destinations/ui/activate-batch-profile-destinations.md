@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4517'
+source-wordcount: '4596'
 ht-degree: 11%
 
 ---
@@ -125,7 +125,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="對象評估後啟動"
->abstract="每日分段作業完成後立即執行啟動。這可確保匯出最新的設定檔。"
+>abstract="<p>每日分段作業完成後立即執行啟動。這可確保匯出最新的設定檔。</p><p>對象評估後匯出設定檔的選項是<i>不</i>可用於每週和每月匯出頻率。</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
    * **[!UICONTROL 一次]**：排程一次隨選完整檔案匯出。
    * **[!UICONTROL 每日]**：排程每天一次在您指定的時間匯出完整檔案。
+   * **[!UICONTROL 每週]**：選取開始日期，後續的匯出將發生在一週的該日，直到選取的結束日期為止。
+   * **[!UICONTROL 每月]**：選取開始日期，後續的匯出會在該月的該日期發生，直到選取的結束日期為止。 對於少於30或31天的月份，匯出會發生在當月的最後一天。
 
 2. 使用&#x200B;**[!UICONTROL 時間]**&#x200B;切換功能來選取匯出應該在對象評估後立即執行，還是在指定的時間依排程執行。 選取&#x200B;**[!UICONTROL 已排程]**&#x200B;選項時，您可以使用選取器來選取一天中應該進行匯出時的時間（格式為[!DNL UTC]）。
 
@@ -187,6 +189,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
    * **[!UICONTROL 每日]**：排程增量檔案匯出一次，每天一次，在您指定的時間。
    * **[!UICONTROL 每小時]**：排程每3、6、8或12小時匯出一次增量檔案。
+
 
 2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器來選擇要進行匯出的時間（格式為[!DNL UTC]）。
 
