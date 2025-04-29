@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 假名設定檔資料有效期
 description: 本檔案提供在Adobe Experience Platform中設定假名設定檔資料到期日的一般指引。
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
+source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
 workflow-type: tm+mt
 source-wordcount: '1245'
 ht-degree: 4%
@@ -138,3 +138,4 @@ Experience Event資料到期日僅&#x200B;**僅**&#x200B;會移除事件，且&#
 ## 後續步驟
 
 閱讀本指南後，您會瞭解如何檢視和建立假名設定檔資料有效期。 如需有關Experience Platform整體資料管理的詳細資訊，請參閱[資料管理授權權益最佳實務指南](../landing/license-usage-and-guardrails/data-management-best-practices.md)。
+
