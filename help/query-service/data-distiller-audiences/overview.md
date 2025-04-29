@@ -2,10 +2,10 @@
 title: 使用SQL建立對象
 description: 瞭解如何在Adobe Experience Platform的Data Distiller中使用SQL對象擴充功能，以使用SQL命令建立、管理和發佈對象。 本指南涵蓋對象生命週期的所有方面，包括建立、更新和刪除設定檔，以及使用資料導向對象定義來鎖定以檔案為基礎的目的地。
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 1%
+source-wordcount: '1833'
+ht-degree: 2%
 
 ---
 
@@ -100,6 +100,97 @@ SELECT select_query
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### 取代對象資料（插入覆寫） {#replace-audience}
+
+使用`INSERT OVERWRITE INTO`命令以新SQL查詢的結果取代對象中的所有現有設定檔。 此命令可讓您在單一步驟中完全重新整理對象的內容，因此對於管理動態對象區段相當實用。
+
+>[!AVAILABILITY]
+>
+>`INSERT OVERWRITE INTO`命令僅適用於Data Distiller客戶。 若要進一步瞭解Data Distiller附加元件，請聯絡您的Adobe代表。
+
+與[`INSERT INTO`](#add-profiles-to-audience)新增到目前的對象不同，`INSERT OVERWRITE INTO`會移除所有現有的對象成員，並僅插入查詢傳回的成員。 這在管理需要經常或完整更新的對象時，可提供更好的控制能力和彈性。
+
+使用下列語法範本，以一組新的設定檔覆寫對象：
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**參數**
+
+下表說明`INSERT OVERWRITE INTO`命令所需的引數：
+
+| 參數 | 說明 |
+|-----------|-------------|
+| `audience_name` | 使用`CREATE AUDIENCE`命令建立的對象名稱。 |
+| `select_query` | 定義要包含在對象中的設定檔的`SELECT`陳述式。 |
+
+**範例：**
+
+在此範例中，`audience_monthly_refresh`對象被查詢結果完全覆寫。 查詢未傳回的任何設定檔都會從對象中移除。
+
+>[!NOTE]
+>
+>對象只能關聯一個批次上傳，覆寫作業才能正常運作。
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### 受眾覆寫即時客戶個人檔案中的行為
+
+當您覆寫對象時，Real-Time Customer Profile會套用下列邏輯來更新設定檔成員資格：
+
+- 僅出現在新批次中的設定檔會標籤為已輸入。
+- 僅存在於先前批次中的設定檔會標籤為已退出。
+- 兩個批次中的設定檔保持不變（不執行任何操作）。
+
+這可確保在下游系統和工作流程中準確反映受眾更新。
+
+**範例情境**
+
+如果對象`A1`最初包含：
+
+| ID | 名稱 |
+|----|------|
+| A | 傑克 |
+| B | John |
+| C | 瑪莎 |
+
+覆寫查詢會傳回：
+
+| ID | 名稱 |
+|----|------|
+| A | Stewart |
+| C | 瑪莎 |
+
+然後，更新的對象將包含：
+
+| ID | 名稱 |
+|----|------|
+| A | Stewart |
+| C | 瑪莎 |
+
+設定檔B被移除，設定檔A被更新，設定檔C保持不變。
+
+如果覆寫查詢包含新的設定檔：
+
+| ID | 名稱 |
+|----|------|
+| A | Stewart |
+| C | 瑪莎 |
+| D | Chris |
+
+最終對象會是：
+
+| ID | 名稱 |
+|----|------|
+| A | Stewart |
+| C | 瑪莎 |
+| D | Chris |
 
 ### RFM模型對象範例 {#rfm-model-audience-example}
 
