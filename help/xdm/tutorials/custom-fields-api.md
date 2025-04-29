@@ -2,9 +2,9 @@
 title: 在結構描述登入API中定義XDM欄位
 description: 瞭解如何在Schema Registry API中建立自訂Experience Data Model (XDM)資源時定義不同的欄位。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1197'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 您可選擇透過下列其他屬性，限制可為字串輸入哪些型別的值：
 
 * `pattern`：要限制的Regex模式。
-* `minLength`：字串的最小長度。
+* `minLength`：字串的最小長度。 字串預設會接收最小值`1`。
 * `maxLength`：字串的長度上限。
 
 ```json
