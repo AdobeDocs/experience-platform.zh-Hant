@@ -1,7 +1,7 @@
 ---
 title: (V2) Pega CDH即時受眾連線
 description: 在Adobe Experience Platform中使用Pega客戶決定中心即時對象目的地，將設定檔屬性和對象成員資格資料傳送至Pega客戶決定中心，以做出次優決策。
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 3%
@@ -115,17 +115,21 @@ ht-degree: 3%
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
 成功更新設定檔的對象成員資格時，會在Pega行銷對象成員資格資料存放區中插入對象識別碼、名稱和狀態。 成員資格資料與[!DNL Pega Customer Decision Hub]中使用客戶設定檔Designer的客戶相關聯，如下所示。
+
 ![UI畫面影像，您可在此使用客戶設定檔Designer，將Adobe對象會籍資料與客戶建立關聯](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 對象會籍資料用於Pega次佳動作Designer參與政策，以供次佳動作決策，如下所示。
-![UI畫面影像，您可在其中新增對象成員資格欄位，作為Pega下一個最佳動作Designer的參與政策條件](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![UI畫面影像，您可在其中新增對象成員資格欄位，作為Pega下一個最佳動作Designer的參與政策條件](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 客戶受眾會籍資料欄位會新增為最適化模型中的預測值，如下所示。
+
 ![UI熒幕的影像，您可以在其中使用Prediction Studio將Audience會籍欄位新增為最適化模型中的述詞](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## 其他資源 {#additional-resources}
 
 如需詳細資訊，請參閱下列[!DNL Pega]檔案：
+
 * [正在設定OAuth 2.0使用者端註冊](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [正在建立資料流程的即時執行](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [在客戶設定檔Designer中管理客戶記錄](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)

@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1292'
 ht-degree: 5%
 
 ---
@@ -203,7 +203,8 @@ ht-degree: 5%
       * [Gainsight擴充功能](./catalog/personalization/gainsight.md)
       * [KickFire擴充功能](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization擴充功能](./catalog/personalization/marketo-web-personalization.md)
-      * [Pega客戶決策中心連線](./catalog/personalization/pega.md)
+      * [Pega CDH即時對象連線](./catalog/personalization/pega.md)
+      * [(V2) Pega CDH即時受眾連線](./catalog/personalization/pega-v2.md)
       * [Pega設定檔連線](./catalog/personalization/pega-profile.md)
    * 社交目的地{#social}
       * [社交目的地概觀](./catalog/social/overview.md)
