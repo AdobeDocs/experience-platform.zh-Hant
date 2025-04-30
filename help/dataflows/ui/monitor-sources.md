@@ -1,21 +1,21 @@
 ---
-description: 瞭解如何使用監視儀表板來監視從來源擷取的資料。
-title: 在UI中監視來源的資料流
+description: 瞭解如何使用監視儀表板來監視擷取到Data Lake中的資料。
+title: 監視資料湖擷取
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 11%
+source-wordcount: '1303'
+ht-degree: 10%
 
 ---
 
-# 監視 UI 中來源的資料流
+# 監視資料湖擷取
 
 >[!IMPORTANT]
 >
 >監控儀表板目前不支援串流來源，例如[HTTP API來源](../../sources/connectors/streaming/http.md)。 目前，您只能使用儀表板來監視批次來源。
 
-請閱讀本檔案，瞭解如何使用監視儀表板在Experience Platform UI中監視來源資料流。
+請閱讀本檔案，瞭解如何使用監視儀表板在Experience Platform UI中監視資料湖擷取。
 
 ## 快速入門 {#get-started}
 
@@ -28,7 +28,7 @@ ht-degree: 11%
 * [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
 * [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 使用監視儀表板監視您的來源資料
+## 使用監控儀表板來擷取資料湖
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -42,13 +42,9 @@ ht-degree: 11%
 >abstract="來源處理會包含有關資料湖服務中資料活動狀態和量度的資訊，包括擷取的記錄和失敗的記錄。檢閱量度定義指南以了解有關量度和圖表的詳細資訊。"
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+從監視儀表板的主要標題中選取&#x200B;**[!UICONTROL 資料湖]**，以檢視您的資料湖擷取率。
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
-
-在監視儀表板中，從主要標題中選取[!UICONTROL 來源]，以顯示您的來源資料流擷取率來更新儀表板。
-
-![已選取來源卡的監視儀表板。](../assets/ui/monitor-sources/sources.png)
+![已選取來源卡的監視儀表板。](../assets/ui/monitor-sources/data-lake.png)
 
 [!UICONTROL 擷取率]圖表會根據您設定的時間範圍顯示您的資料擷取率。 依預設，監視控制面板會顯示過去24小時的擷取率。 如需設定時間範圍的步驟，請閱讀[設定監視時間範圍](monitor.md#configure-monitoring-time-frame)的指南。
 
@@ -132,11 +128,9 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 >
 >只有在來源連線建立過程中啟用了特徵時，才能使用錯誤診斷。
 
-![資料流執行錯誤面板。](../assets/ui/monitor-sources/errors.png)
-
 ## 後續步驟 {#next-steps}
 
-依照此教學課程，您已使用&#x200B;**[!UICONTROL 監視]**&#x200B;儀表板，成功監視來源層級的擷取資料流。 您也已成功識別在擷取程式期間導致資料流失敗的錯誤。 如需更多詳細資訊，請參閱下列檔案：
+透過學習本教學課程，您已瞭解如何使用&#x200B;**[!UICONTROL 監視]**&#x200B;儀表板來監視資料湖擷取率。 您也已瞭解如何識別在擷取期間導致資料流失敗的錯誤。 如需更多詳細資訊，請參閱下列檔案：
 
 * [正在監視身分資料](./monitor-identities.md)。
 * [正在監視設定檔資料](./monitor-profiles.md)。

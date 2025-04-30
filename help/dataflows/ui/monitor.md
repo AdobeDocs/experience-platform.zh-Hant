@@ -2,9 +2,9 @@
 title: 監視儀表板總覽
 description: 瞭解如何使用Adobe Experience Platform UI中的監控儀表板
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -63,12 +63,6 @@ ht-degree: 0%
 
 ![監控資料型別設定為[客戶與帳戶]。](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB 潛在客戶]
-
-選取&#x200B;**[!UICONTROL 潛在客戶]**&#x200B;以更新您的儀表板，並顯示指定期間內擷取到Experience Platform的潛在客戶資料量度。 **附註**：只有您[有權使用潛在客戶資料](../../rtcdp/partner-data/prospecting.md)，才能檢視潛在客戶資料型別活動。
-
-![監視資料型別設定為[潛在客戶]。](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB 帳戶設定檔擴充]
 
 選取&#x200B;**[!UICONTROL 帳戶設定檔擴充]**&#x200B;以更新您的儀表板，並在設定檔擴充資料上顯示量度。 **附註**：如果您有權使用[B2B資料](../../rtcdp/b2b-tutorial.md)，則只能檢視帳戶設定檔擴充量度。
@@ -81,11 +75,11 @@ ht-degree: 0%
 
 >[!BEGINTABS]
 
->[!TAB 來源]
+>[!TAB 資料湖]
 
-選取&#x200B;**[!UICONTROL 來源]**&#x200B;以檢視來源擷取率的量度。 如需詳細資訊，請閱讀[監視來源資料](monitor-sources.md)的指南。
+選取&#x200B;**[!UICONTROL 資料湖]**&#x200B;以檢視資料湖擷取速率的量度。 如需詳細資訊，請閱讀[監視資料湖擷取](monitor-sources.md)的指南。
 
-![已選取來源卡的UI中的監視儀表板。](../assets/ui/monitor-overview/sources.png)
+![已選取資料湖卡的UI中的監視儀表板。](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB 身分]
 
@@ -133,8 +127,12 @@ ht-degree: 0%
 
 閱讀本檔案後，您現在可以透過UI中的監控儀表板快速瀏覽。 如需如何監控特定Experience Platform服務的資料資訊，請閱讀以下檔案：
 
-* [監視來源資料](monitor-sources.md)。
+* [監視資料湖擷取](monitor-sources.md)。
 * [監視身分資料](monitor-identities.md)。
 * [監視設定檔資料](monitor-profiles.md)。
 * [監視對象資料](monitor-audiences.md)。
 * [監視目的地資料](monitor-destinations.md)。
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
