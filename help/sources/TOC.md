@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
+source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1075'
 ht-degree: 35%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 35%
       - [Amazon Redshift聯結器](connectors/databases/redshift.md)
       - [Azure HDInsights聯結器上的Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights聯結器上的Apache Spark](connectors/databases/spark.md)
+      - [Azure Databricks聯結器](connectors/databases/databricks.md)
       - [Azure Data Explorer聯結器](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics聯結器](connectors/databases/synapse-analytics.md)
       - [Azure資料表儲存體聯結器](connectors/databases/ats.md)
@@ -165,6 +166,7 @@ ht-degree: 35%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights上的Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights上的Apache Spark](tutorials/api/create/databases/spark.md)
+         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure 資料總管](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 資料表儲存體](tutorials/api/create/databases/ats.md)
