@@ -3,10 +3,10 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
+source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
 workflow-type: tm+mt
 source-wordcount: '2732'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->**動作專案**： Experience Platform ](/help/release-notes/latest/latest.md#destinations)的2024年9月[發行版本匯入了為匯出資料集資料流設定`endTime`日期的選項。 Adobe也針對2024年9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，引入了2025年5月1日的預設結束日期。
+>**動作專案**： Experience Platform ](/help/release-notes/latest/latest.md#destinations)的2024年9月[發行版本匯入了為匯出資料集資料流設定`endTime`日期的選項。 Adobe也針對2024年9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，引入了2025年9月1日的預設結束日期。
 >
->對於這些資料流中的任一資料流，您需要在結束日期之前手動更新資料流中的結束日期，否則您的匯出將在該日期停止。 使用Experience Platform UI檢視哪些資料流將設定在2025年5月1日停止。
+>對於這些資料流中的任一資料流，您需要在結束日期之前手動更新資料流中的結束日期，否則您的匯出將在該日期停止。 使用Experience Platform UI檢視哪些資料流將設定在2025年9月1日停止。
 >
 >請參閱[排程區段](#scheduling)，瞭解如何編輯資料集匯出資料流的結束日期。
 
@@ -158,7 +158,7 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="更新此資料流主體的結束日期"
->abstract="由於最近對此目的地進行更新，資料流現在需要結束日期。Adobe 已將預設結束日期設定為 2025 年 5 月 1 日。請更新至您想要的結束日期，否則資料匯出將在預設日期停止。"
+>abstract="由於最近對此目的地進行更新，資料流現在需要結束日期。Adobe已將預設結束日期設為2025年9月1日。 請更新至您需要的結束日期，否則資料匯出將在預設日期停止。"
 
 使用&#x200B;**[!UICONTROL 排程]**&#x200B;步驟來：
 
