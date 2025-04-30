@@ -2,9 +2,9 @@
 title: 使用流量服務API建立Salesforce Marketing Cloud基本連線
 description: 瞭解如何使用流量服務API，針對Experience Platform驗證您的Salesforce Marketing Cloud帳戶。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '544'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud]來源將於2025年6月底淘汰。
+>[!DNL Salesforce Marketing Cloud]來源將於2026年1月汰除。 新的來源將作為替代方案於今年晚些時候發行。 釋放新來源後，您必須在2026年1月底之前建立新的帳戶連線和資料流，以計畫移轉至新來源。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 

@@ -1,9 +1,9 @@
 ---
 title: Algolia使用者設定檔Source概觀
 description: 瞭解Adobe Experience Platform中的Algolia使用者設定檔來源
-hide: true
-hidefromtoc: true
-source-git-commit: 1bde4b831f1b79de1a8292ad5f221f522e871d08
+last-substantial-update: 2025-04-29T00:00:00Z
+exl-id: b35d4753-4c33-4074-9ed5-50f94dedd8a4
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%

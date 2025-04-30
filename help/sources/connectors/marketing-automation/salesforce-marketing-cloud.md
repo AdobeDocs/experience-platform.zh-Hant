@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Salesforce Marketing Cloud Source概觀
 description: 瞭解如何使用API或使用者介面將Salesforce Marketing Cloud連線至Adobe Experience Platform。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+last-substantial-update: 2025-04-29T00:00:00Z
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud]來源將於2025年6月底淘汰。
+>[!DNL Salesforce Marketing Cloud]來源將於2026年1月汰除。 新的來源將作為替代方案於今年晚些時候發行。 釋放新來源後，您必須在2026年1月底之前建立新的帳戶連線和資料流，以計畫移轉至新來源。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

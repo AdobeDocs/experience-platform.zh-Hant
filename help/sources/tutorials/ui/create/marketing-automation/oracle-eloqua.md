@@ -2,9 +2,9 @@
 title: 使用Experience Platform UI建立Oracle Eloqua來源連線
 description: 瞭解如何使用Adobe Experience Platform UI將Experience Platform連結至Oracle Eloqua。
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '575'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->[!DNL Oracle Eloqua]來源將於2025年6月底淘汰。
+>[!DNL Oracle Eloqua]來源將於2026年1月汰除。 新的來源將作為替代方案於今年晚些時候發行。 釋放新來源後，您必須在2026年1月底之前建立新的帳戶連線和資料流，以計畫移轉至新來源。
 
 本教學課程提供使用Adobe Experience Platform使用者介面建立[!DNL Oracle Eloqua]來源連線的步驟。
 

@@ -1,19 +1,17 @@
 ---
 title: 使用UI將Algolia使用者設定檔連結到Experience Platform
 description: 瞭解如何將Algolia使用者意圖連結至Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1136'
 ht-degree: 1%
 
 ---
 
 # 使用UI將[!DNL Algolia User Profiles]資料內嵌至Experience Platform
 
-閱讀本教學課程，瞭解如何使用使用者介面將付款資料從您的[!DNL Algolia User Profiles]帳戶擷取到Adobe Experience Platform。
+閱讀本教學課程，瞭解如何使用使用者介面將資料從您的[!DNL Algolia User Profiles]帳戶擷取到Adobe Experience Platform。
 
 ## 快速入門
 
