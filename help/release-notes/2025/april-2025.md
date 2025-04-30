@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2025 年 4 月)
 description: Adobe Experience Platform 2025 年 4 月版發行說明。
-source-git-commit: d2ee1adb031af83569f7b226a8881297423fc257
+exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
+source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1706'
 ht-degree: 29%
 
 ---
@@ -50,6 +51,7 @@ Experience League是全方位的學習平台，旨在協助您增強Adobe產品�
 | 目標 | 說明 |
 | --- | --- |
 | [Marketo Engage人員同步](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe已更新[!DNL Marketo Engage Person Sync]目的地，以修正身分對應中出現多封電子郵件時影響客戶的問題。 |
+| [(V2) Pega CDH即時對象連線](/help/destinations/catalog/personalization/pega-v2.md) | 當您在Pega帳戶中設定了多個Pega客戶決策中心應用程式時，請在Adobe Experience Platform中使用[!DNL (V2) Pega Customer Decision Hub Realtime Audience]目的地，將設定檔屬性和對象會籍資料傳送至Pega客戶決策中心，以進行次佳動作決策。 |
 
 **新功能或更新功能** {#destinations-new-updated-functionality}
 
