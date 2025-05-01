@@ -2,7 +2,7 @@
 title: 身分識別最佳化演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
 workflow-type: tm+mt
 source-wordcount: '1617'
 ht-degree: 4%
@@ -147,7 +147,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 
 ![錯誤電子郵件](../images/identity-settings/bad-email.png)
 
-### 匿名事件關聯
+## 匿名事件關聯
 
 ECID會儲存未驗證（匿名）的事件，而CRMID會儲存已驗證的事件。 在共用裝置的情況下，ECID （未驗證事件的持有者）會與&#x200B;**上次驗證的使用者**&#x200B;相關聯。
 
