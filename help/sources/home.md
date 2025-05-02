@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 02fafc830e964bbfa94c125c2006f4998d9d193d
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 3%
@@ -32,6 +32,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Expe
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 串流]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 串流]{type=Positive}
 - [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 批次]{type=Informative}
@@ -128,7 +129,6 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE 批次]{type=Informative}

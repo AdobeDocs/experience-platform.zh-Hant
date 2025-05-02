@@ -1,16 +1,22 @@
 ---
 title: Azure Databricks
 description: 瞭解將Azure Databricks連線至Experience Platform所需的先決條件步驟。
+badgeUltimate: label="Ultimate" type="Positive"
+badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 16de2879f5f5da533ce640d93871571f03aa74c2
+source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '593'
 ht-degree: 2%
 
 ---
 
 # [!DNL Azure Databricks]
+
+>[!IMPORTANT]
+>
+>[!DNL Azure Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 
 [!DNL Azure Databricks]是雲端型平台，專為資料分析、機器學習和AI而設計。 您可以使用[!DNL Databricks]與[!DNL Azure]整合，並提供整體環境，以大規模建置、部署及管理資料解決方案。
 
