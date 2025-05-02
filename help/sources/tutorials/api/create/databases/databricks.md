@@ -4,7 +4,7 @@ description: 瞭解如何使用API將Azure Databricks連線至Experience Platfor
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 ### 設定先決條件設定
 
-閱讀[[!DNL Databricks] 總覽](../../../../connectors/databases/databricks.md)以瞭解必須先完成先決條件設定的資訊，然後才能將您的帳戶連線到Experience Platform。
+請閱讀[[!DNL Databricks] 總覽](../../../../connectors/databases/databricks.md)，瞭解在您將帳戶連線至Experience Platform之前必須完成的先決條件設定。
 
 ### 收集必要的認證
 

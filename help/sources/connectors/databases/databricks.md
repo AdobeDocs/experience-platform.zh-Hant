@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 [!DNL Azure Databricks]是雲端型平台，專為資料分析、機器學習和AI而設計。 您可以使用[!DNL Databricks]與[!DNL Azure]整合，並提供整體環境，以大規模建置、部署及管理資料解決方案。
 
-您可以使用[!DNL Databricks]來源來連線您的帳戶，並將您的[!DNL Databricks]資料擷取到Adobe Experience Platform。
+使用[!DNL Databricks]來源連線您的帳戶並將您的[!DNL Databricks]資料擷取到Adobe Experience Platform。
 
 ## 先決條件
 
