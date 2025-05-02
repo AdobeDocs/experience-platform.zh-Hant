@@ -4,7 +4,7 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
+source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 92%
@@ -17,7 +17,7 @@ ht-degree: 92%
 
 ### 修正和改良
 
-* 修正Debugger無法運作DTM和Launch函式的問題。
+* 修正Debugger無法運作DTM和Tags功能的問題。
 * 修正Analytics處理後點選未出現在記錄中的問題。
 * 修正日文等非ASCII語言資料在記錄中無法正確顯示的問題。
 
