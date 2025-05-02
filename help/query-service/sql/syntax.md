@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案詳細說明並說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 1%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>在`SNAPSHOT`子句中使用`HEAD`或`TAIL`時，您必須以單引號(例如，&#39;HEAD&#39;、&#39;TAIL&#39;)括住它們。 不使用引號的情況下使用它們會導致語法錯誤。
 
 下表說明SNAPSHOT子句中每個語法選項的意義。
 
@@ -130,7 +134,7 @@ SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND 
 | `AS OF end_snapshot_id` | 會以指定的快照ID （含）讀取資料。 |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | 讀取指定的開始和結束快照ID之間的資料。 它不包括`start_snapshot_id`且包括`end_snapshot_id`。 |
 | `BETWEEN HEAD AND start_snapshot_id` | 將資料從開頭（第一個快照之前）讀取至指定的啟動快照識別碼（包含）。 請注意，這只會傳回`start_snapshot_id`中的列。 |
-| `BETWEEN end_snapshot_id AND TAIL` | 從指定的`end-snapshot_id`之後讀取資料到資料集結尾（不包括快照識別碼）。 這表示如果`end_snapshot_id`是資料集中的最後一個快照，則查詢將傳回零列，因為除了最後一個快照之外，沒有任何快照。 |
+| `BETWEEN end_snapshot_id AND TAIL` | 從指定的`end_snapshot_id`之後讀取資料到資料集結尾（不包括快照識別碼）。 這表示如果`end_snapshot_id`是資料集中的最後一個快照，則查詢將傳回零列，因為除了最後一個快照之外，沒有任何快照。 |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | 從`table_to_be_queried`讀取從指定的快照識別碼開始的資料，並將其與來自`table_to_be_joined`的資料聯結，因為它位於`your_chosen_snapshot_id`。 此聯結是以兩個要聯結之表格的ID欄中的相符ID為基礎。 |
 
 `SNAPSHOT`子句與資料表或資料表別名搭配使用，但不會在子查詢或檢視的頂端。 `SNAPSHOT`子句可在任何可套用資料表上`SELECT`查詢的位置運作。

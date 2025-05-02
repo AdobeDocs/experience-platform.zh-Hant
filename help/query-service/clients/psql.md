@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將PSQL連線至查詢服務
 description: 瞭解如何將PSQL使用者端連線至Adobe Experience Platform查詢服務，包括支援的PostgreSQL版本和設定指示。
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 74f4ac5a3ca4c06e81111ef453ae0effd21b3f16
+source-git-commit: f75ea97e8631984dcd1d4a7f8aff3c10cba7b11f
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 0%
@@ -29,7 +29,7 @@ PSQL是與PostgreSQL一併安裝在電腦上的命令列介面。 本文介紹�
 
 在&#x200B;**[!UICONTROL PSQL命令]**&#x200B;區段下，選取&#x200B;**[!UICONTROL 複製到剪貼簿]**&#x200B;圖示（![復製圖示](/help/images/icons/copy.png)）以複製命令字串。
 
-![反白顯示復本圖示的[查詢儀表板認證]索引標籤。](../images/clients/psql/connect-bi.png)
+![反白顯示復本圖示的[查詢儀表板認證]索引標籤。](../images/clients/psql/copy-credentials.png)
 
 將命令字串貼到您的終端機中，然後按鍵盤上的&#x200B;**Enter**。
 
