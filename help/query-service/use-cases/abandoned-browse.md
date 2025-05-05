@@ -59,7 +59,7 @@ order by price desc)D;
 
 下方所呈現的影片提供您的Experience Platform資料，並著重於[!DNL Query Service]和Adobe分析整合的整體真實使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454957?quality=12&learn=on&captions=chi_hant)
 
 ## [!DNL Query Service]的優點 {#benefits}
 

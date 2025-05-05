@@ -55,7 +55,7 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 觀看以下影片教學課程，逐步瞭解如何觸及及吸引潛在客戶受眾：
 
->[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452871/?learn=on&captions=chi_hant)
 
 ## 如何實現使用案例：逐步說明 {#step-by-step-instructions}
 

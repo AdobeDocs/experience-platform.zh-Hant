@@ -47,7 +47,7 @@ Adobe瞭解沒有一刀切的方法，可與資料和身分識別合作夥伴緊
 
 觀看下方的影片教學課程，逐步瞭解如何使用合作夥伴提供的屬性來補充第一方對象：
 
->[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452474/?learn=on&captions=chi_hant)
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 

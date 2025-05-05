@@ -26,7 +26,7 @@ ht-degree: 14%
 
 觀看此影片，瞭解在Journey Optimizer中建立沙箱、設定許可權及設定電子郵件、推播和簡訊通知的頻道介面所需的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449837?learn=on&captions=chi_hant)
 
 ## 建立開發沙箱 {#create-development-sandbox}
 

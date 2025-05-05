@@ -16,12 +16,12 @@ ht-degree: 1%
 
 ## 實作
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454284/?quality=12&learn=on&captions=chi_hant)
 
 ## 歷程設定
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453975/?quality=12&learn=on&captions=chi_hant)
 
 ## 對象和目的地設定
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452923/?quality=12&learn=on&captions=chi_hant)

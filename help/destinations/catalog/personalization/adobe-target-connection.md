@@ -33,7 +33,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 如需如何在Experience Platform中設定Adobe Target連線的簡短概觀，請觀看下方的影片。
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449804/?quality=12&learn=on&captions=chi_hant)
 
 ## 根據實施型別的支援使用案例 {#supported-use-cases}
 

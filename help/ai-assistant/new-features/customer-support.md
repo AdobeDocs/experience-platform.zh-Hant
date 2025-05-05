@@ -59,5 +59,5 @@ ht-degree: 0%
 
 如需詳細資訊，請觀看以下影片，瞭解如何使用客戶支援專用的AI助理進行順暢的疑難排解，而不需要離開您的工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443194?learn=on&captions=chi_hant)
 

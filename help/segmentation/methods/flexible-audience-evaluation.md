@@ -326,7 +326,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 下列影片示範如何在Experience Platform中存取和使用彈性的對象評估。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453651?&captions=chi_hant)
 
 ## 常見問題 {#faq}
 

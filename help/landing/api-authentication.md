@@ -366,7 +366,7 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 以下影片教學課程也提供上述步驟的逐步解說，說明如何將開發人員新增至產品設定檔，以及將API指派至角色：
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446409/?learn=on&captions=chi_hant)
 
 ## 其他資源 {#additional-resources}
 

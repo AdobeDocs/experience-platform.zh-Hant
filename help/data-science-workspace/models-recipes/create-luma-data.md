@@ -51,13 +51,13 @@ ht-degree: 0%
 
 為了建立模型，Experience Platform中必須有資料集，可用來對模型進行訓練和評分。 下列來自[Data Science Workspace課程](https://experienceleague.adobe.com/?lang=zh-hant&recommended=ExperiencePlatform-U-1-2021.1.dsw)的影片教學課程，將逐步引導您建立Luma結構描述及擷取購買傾向模型使用的資料。
 
->[!VIDEO](https://video.tv.adobe.com/v/333312)
+>[!VIDEO](https://video.tv.adobe.com/v/3447165?captions=chi_hant)
 
 ### 建立訓練、評分和評分結果資料集
 
 若要執行配方產生器筆記本或使用API來訓練和評分模型，您必須指定用於訓練/評分的資料集和結構描述。 以下影片教學課程會逐步引導您設定訓練、評分和評分結果資料集，以及Luma購買傾向模型中使用的評分結果結構描述。
 
->[!VIDEO](https://video.tv.adobe.com/v/333426)
+>[!VIDEO](https://video.tv.adobe.com/v/3447432?captions=chi_hant)
 
 ## 後續步驟
 

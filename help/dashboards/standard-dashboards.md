@@ -182,4 +182,4 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 若要加深您對Experience Platform中控制面板的瞭解，請觀看以下影片：
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422738?quality=12&learn=on&captions=chi_hant)

@@ -90,7 +90,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 觀看以下影片，瞭解更多有關AI Assistant操作深入分析的資訊：
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444043?learn=on&enablevpops&captions=chi_hant)
 
 ### 功能範圍 {#feature-scope}
 

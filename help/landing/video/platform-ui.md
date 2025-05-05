@@ -23,4 +23,4 @@ ht-degree: 0%
 >Experience Platform使用者介面經常更新，自從錄製此影片後，該介面可能已經變更。 如需最新資訊，請造訪[Adobe Experience Platform UI指南](../ui-guide.md)。
 
 
->[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430438?quality=12&learn=on&captions=chi_hant)

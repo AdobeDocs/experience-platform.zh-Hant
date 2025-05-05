@@ -18,4 +18,4 @@ ht-degree: 0%
 
 此影片會逐步解說高階架構圖表，其中說明Experience Platform的主要元件。
 
->[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422779?quality=12&learn=on&captions=chi_hant)

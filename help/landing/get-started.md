@@ -15,4 +15,4 @@ ht-degree: 0%
 
 本影片提供[!DNL Experience Platform]的快速簡介，並概述其解決的一些業務挑戰。
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428502?quality=12&learn=on&captions=chi_hant)

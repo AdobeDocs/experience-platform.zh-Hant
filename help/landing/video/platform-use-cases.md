@@ -23,4 +23,4 @@ ht-degree: 8%
 * 傳遞和跨頻道體驗
 * 客戶體驗應用程式開發
 
->[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430465?quality=12&learn=on&captions=chi_hant)

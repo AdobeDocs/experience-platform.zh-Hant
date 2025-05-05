@@ -24,4 +24,4 @@ ht-degree: 0%
 1. 增強即時體驗的交付與個人化
 1. 在治理、安全性和隱私權控制方面獲得信任
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428514?quality=12&learn=on&captions=chi_hant)

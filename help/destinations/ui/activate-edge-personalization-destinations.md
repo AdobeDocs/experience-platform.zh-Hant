@@ -39,11 +39,11 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 >
 >Experience Platform使用者介面經常更新，自從錄製此影片後，可能已經變更。 如需最新資訊，請參閱以下章節所述的設定步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449804/?quality=12&learn=on&captions=chi_hant)
 
 如需如何將對象和設定檔屬性共用至Adobe Target和自訂個人化目的地的簡短概觀，請觀看以下影片。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447366/?quality=12&learn=on&captions=chi_hant)
 
 ## 使用案例 {#use-cases}
 

@@ -64,7 +64,7 @@ ht-degree: 89%
 
 觀看下方的影片教學課程，逐步瞭解如何為未知訪客個人化網站上的體驗：
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449263/?learn=on&captions=chi_hant)
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 

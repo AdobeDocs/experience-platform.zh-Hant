@@ -53,7 +53,7 @@ ht-degree: 4%
 
 使用下列影片快速概略說明如何在Experience Platform中使用沙箱。
 
->[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430302/?quality=12&learn=on&captions=chi_hant)
 
 若要建立新沙箱，請選取畫面右上角的&#x200B;**[!UICONTROL 建立沙箱]**。
 

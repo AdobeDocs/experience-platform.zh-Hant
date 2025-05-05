@@ -247,4 +247,4 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 以下影片旨在協助您瞭解屬性型存取控制，並概述如何設定角色、資源和原則。
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451850?learn=on&captions=chi_hant)

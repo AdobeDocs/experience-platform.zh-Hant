@@ -45,7 +45,7 @@ Adobe已在Experience Platform之上建立多個應用程式。 您可以在他�
 
 以下影片說明以Experience Platform為基礎建立之每個應用程式的使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428525/?learn=on&captions=chi_hant)
 
 ## [!DNL Experience Platform] 教學課程
 

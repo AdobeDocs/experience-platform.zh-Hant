@@ -93,7 +93,7 @@ Marketo V2目的地的改良專案包括：
 >* 影片中叫用的兩個限制不再適用。 除了錄製影片時支援的對象成員資格資訊之外，您現在可以對應許多其他設定檔屬性欄位。 您也可以將尚未存在於Marketo靜態清單中的受眾成員匯出至Marketo，這些受眾成員將會新增至清單中。
 >* 在Marketo V1的啟動工作流程的&#x200B;**[!UICONTROL 排程對象步驟]**&#x200B;中，您需要手動新增&#x200B;**[!UICONTROL 對應ID]**，才能成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440169?quality=12&captions=chi_hant)
 
 ## 監視目的地 {#monitor-destination}
 

@@ -101,7 +101,7 @@ Identity Service提供下列作業，以達成其使命：
 
 以下影片旨在協助您瞭解身分和身分圖表。
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422770?quality=12&learn=on&captions=chi_hant)
 
 ## 瞭解Identity Service在Experience Platform基礎架構中的角色
 
