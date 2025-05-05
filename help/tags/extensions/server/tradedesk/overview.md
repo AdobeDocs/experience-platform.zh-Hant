@@ -39,7 +39,7 @@ ht-degree: 2%
 
 在下一個畫面中，輸入[!UICONTROL 廣告商ID]，並選擇性地輸入[!UICONTROL 商家識別碼]。 您可以將ID直接貼入這些輸入中，也可以改用資料元素。 這些將做為呼叫[!DNL The Trade Desk]即時轉換API事件時使用的預設值。 完成時選取&#x200B;**[!UICONTROL 儲存]**。
 
-若要瞭解如何建立資料元素，並使其可用於標籤屬性中的擴充功能，請依照[建立資料元素](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements)教學課程中的指示進行。
+若要瞭解如何建立資料元素，並使其可用於標籤屬性中的擴充功能，請依照[建立資料元素](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/data-collection/tags/create-data-elements)教學課程中的指示進行。
 
 ![含有[!UICONTROL 廣告商ID]和[!UICONTROL 商家識別碼]欄位的[!DNL The Trade Desk]延伸功能組態頁面已反白顯示。](../../../images/extensions/server/tradedesk/configure-extension.png)
 

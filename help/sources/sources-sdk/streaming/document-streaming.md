@@ -22,8 +22,8 @@ ht-degree: 0%
 
 * 您可以遵循的教學課程，為您的新來源建立檔案頁面；
 * 供您填寫新來源的檔案範本；
-* [使用Markdown撰寫技術檔案的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)；
-* [瞭解Adobe Markdown風格的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions)。
+* [使用Markdown撰寫技術檔案的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hant)；
+* [瞭解Adobe Markdown風格的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hant#custom-markdown-extensions)。
 
 ## 先決條件
 

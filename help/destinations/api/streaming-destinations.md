@@ -563,7 +563,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 除了設定檔屬性和步驟[啟用資料至您的新目的地](#activate-data)中的對象之外，[!DNL AWS Kinesis]和[!DNL Azure Event Hubs]中的匯出資料也會包含身分對應的相關資訊。 這代表匯出設定檔的身分(例如[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等)。 請參閱下列範例。
+> 除了設定檔屬性和步驟[啟用資料至您的新目的地](#activate-data)中的對象之外，[!DNL AWS Kinesis]和[!DNL Azure Event Hubs]中的匯出資料也會包含身分對應的相關資訊。 這代表匯出設定檔的身分(例如[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=zh-Hant)、行動ID、Google ID、電子郵件地址等)。 請參閱下列範例。
 
 ```json
 {

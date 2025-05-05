@@ -32,7 +32,7 @@ Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Des
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">說明所有組態選項</a></li>
                 <li> 目的地伺服器組態 — <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">伺服器規格</a>和<a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">範本規格</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">客戶資料欄位和其他目的地設定元件</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">範本化和巨集</a></li>
+                <li><a href="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">範本化和巨集</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Des
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">設定串流目的地的端對端指南</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">透過Pebble範本瞭解資料轉換</a>和<a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">檢視支援的範本功能</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">瞭解資料彙總原則</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">即時設定範例</a></li>
+                <li><a href="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">即時設定範例</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">測試您的串流目的地</a></li>
             </ul>
         </td>

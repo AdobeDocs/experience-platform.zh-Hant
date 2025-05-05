@@ -52,7 +52,7 @@ Adobe Experience Platform Segmentation Service支援所有Experience Data Model 
 
 外部受眾也可作為新區段定義的元件，將其屬性規則新增至新區段定義。
 
-目前僅Adobe Audience Manager支援作為外部對象，未來會啟用其他來源。 如需搭配Experience Platform使用Adobe Audience Manager對象的詳細資訊，請參閱Adobe Audience Manager檔案內的[對象共用指南](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)。
+目前僅Adobe Audience Manager支援作為外部對象，未來會啟用其他來源。 如需搭配Experience Platform使用Adobe Audience Manager對象的詳細資訊，請參閱Adobe Audience Manager檔案內的[對象共用指南](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant)。
 
 ### 區段定義共用
 

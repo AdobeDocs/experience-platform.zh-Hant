@@ -67,7 +67,7 @@ ht-degree: 2%
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
 | 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
-| [!DNL Federated Audience Composition] | ✓ | 透過[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)匯入到Experience Platform中的對象。 |
+| [!DNL Federated Audience Composition] | ✓ | 透過[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/start/audiences)匯入到Experience Platform中的對象。 |
 
 {style="table-layout:auto"}
 
@@ -140,7 +140,7 @@ ht-degree: 2%
 
 ![對象](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱[分段服務總覽](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments)。
+請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱[分段服務總覽](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=zh-Hant#evaluate-segments)。
 
 ## 資料使用與控管 {#data-usage-governance}
 

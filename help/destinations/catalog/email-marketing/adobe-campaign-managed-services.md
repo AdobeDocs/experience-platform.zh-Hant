@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->此整合適用於[Adobe Campaign 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)。
+>此整合適用於[Adobe Campaign 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=zh-Hant#release-8-4-1)。
 
 ## 概觀 {#overview}
 
-Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
+Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=zh-Hant)
 
 使用 Campaign 可以：
 
@@ -60,7 +60,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
   >
   >Adobe Campaign資料庫中已存在的設定檔可使用「設定檔屬性同步」。
 
-[進一步瞭解Adobe Campaign與Adobe Experience Platform的整合](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
+[進一步瞭解Adobe Campaign與Adobe Experience Platform的整合](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=zh-Hant)
 
 ## 支援的身分 {#supported-identities}
 
@@ -105,7 +105,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
 * **[!UICONTROL 選取執行個體]**：您的&#x200B;**[!DNL Campaign]**&#x200B;行銷執行個體。
-* **[!UICONTROL 目標對應]**：選取您在&#x200B;**[!DNL Adobe Campaign]**&#x200B;中使用的目標對應，以傳送傳遞。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)。
+* **[!UICONTROL 目標對應]**：選取您在&#x200B;**[!DNL Adobe Campaign]**&#x200B;中使用的目標對應，以傳送傳遞。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=zh-Hant)。
 * **[!UICONTROL 選取同步型別]**：
 
    * **[!UICONTROL 對象同步]**：使用此選項將Adobe Experience Platform對象傳送到Adobe Campaign。
@@ -130,7 +130,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
-讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)，以取得啟用此目的地的對象資料的相關指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant)，以取得啟用此目的地的對象資料的相關指示。
 
 ### 對應屬性和身分 {#map}
 

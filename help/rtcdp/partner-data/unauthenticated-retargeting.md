@@ -76,7 +76,7 @@ ht-degree: 0%
 
 請確定Adobe Experience Platform資料收集中的站外重新目標定位擴充功能已附加至有效的事件規則。 一般而言，應建立全域規則以觸發關鍵動作，例如`page load`或特定使用者互動。
 
-若要深入瞭解如何設定擴充功能，請閱讀[事件轉送](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started)檔案。
+若要深入瞭解如何設定擴充功能，請閱讀[事件轉送](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/event-forwarding/getting-started)檔案。
 
 ## 其他使用案例 {#other-use-cases}
 

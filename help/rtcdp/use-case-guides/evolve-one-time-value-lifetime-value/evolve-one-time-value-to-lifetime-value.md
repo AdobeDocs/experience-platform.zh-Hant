@@ -39,16 +39,16 @@ ht-degree: 26%
 >
 >確保您擁有所有這些區域所需的[屬性型存取控制權限](/help/access-control/abac/end-to-end-guide.md)，或要求系統管理員授予您必要的權限。
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)：整合跨資料來源的資料，以推動行銷活動。 然後，使用此資料來建立行銷活動客群，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。最後，Real-Time CDP也可用來啟用付費媒體目的地的受眾。
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=zh-Hant)：整合跨資料來源的資料，以推動行銷活動。 然後，使用此資料來建立行銷活動客群，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。最後，Real-Time CDP也可用來啟用付費媒體目的地的受眾。
    * [結構描述](/help/xdm/home.md)
    * [輪廓](/help/profile/home.md)
    * [資料集](/help/catalog/datasets/overview.md)
    * [客群](/help/segmentation/home.md)
    * [目標](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)：設計歷程、設定觸發器，並建立正確的訊息以回應您的訪客。
-   * [事件或客群觸發](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [對象和活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
-   * [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=zh-Hant)：設計歷程、設定觸發器，並建立正確的訊息以回應您的訪客。
+   * [事件或客群觸發](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=zh-Hant)
+   * [對象和活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=zh-Hant)
+   * [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=zh-Hant)
 
 ## Real-Time CDP和Journey Optimizer架構
 
@@ -268,9 +268,9 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 >
->法律規定必須讓客戶能夠取消訂閱來自品牌的通訊，以及確保遵循此選擇。 在[隱私權法規概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)中，了解更多有關適用法律。
+>法律規定必須讓客戶能夠取消訂閱來自品牌的通訊，以及確保遵循此選擇。 在[隱私權法規概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=zh-Hant)中，了解更多有關適用法律。
 
-請考慮實作下列[同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)，並在您聯絡訪客前詢問其同意：
+請考慮實作下列[同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=zh-Hant)，並在您聯絡訪客前詢問其同意：
 
 * 如果為 `consents.marketing.email.val = "Y"`，則可以發送電子郵件
 * 如果為 `consents.marketing.sms.val = "Y"`，則可以發送簡訊
@@ -298,7 +298,7 @@ ht-degree: 26%
 
 此使用案例需要您建立兩個受眾，以定義由個人資料存放區中的個人資料子集共用的特定屬性或行為，以區分可行銷的人員群組。 在Adobe Experience Platform中可以透過多種方式建立對象：
 
-* 如需如何建立對象的詳細資訊，請參閱[對象服務UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)。
+* 如需如何建立對象的詳細資訊，請參閱[對象服務UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=zh-Hant#create-audience)。
 * 如需如何構成[對象](/help/segmentation/home.md)的相關資訊，請閱讀[對象構成UI指南](/help/segmentation/ui/audience-composition.md)。
 * 如需如何透過Experience Platform衍生的區段定義來建立對象的詳細資訊，請參閱[對象產生器UI指南](/help/segmentation/ui/segment-builder.md)。
 
@@ -344,7 +344,7 @@ ht-degree: 26%
 >
 >[!DNL Adobe Journey Optimizer] 並不涵蓋圖中顯示的所有內容。所有[付費媒體廣告](/help/destinations/catalog/social/overview.md)都是在[!UICONTROL 目的地] [工作區](/help/destinations/ui/destinations-workspace.md)中建立。
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) 協助您向其客戶傳送連結的、情境式和個人化體驗。客戶歷程是客戶與品牌互動的整個過程。每個使用案例歷程都需要特定資訊。
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=zh-Hant) 協助您向其客戶傳送連結的、情境式和個人化體驗。客戶歷程是客戶與品牌互動的整個過程。每個使用案例歷程都需要特定資訊。
 
 若要完成此使用案例，您必須建立兩個個別的歷程：
 
@@ -367,15 +367,15 @@ ht-degree: 26%
 
 上方顯示的歷程遵循下列邏輯。
 
-1. 讀取對象：針對在上述對象區段中建立的第一個對象，使用[讀取對象活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en)。
+1. 讀取對象：針對在上述對象區段中建立的第一個對象，使用[讀取對象活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=zh-Hant)。
 
-2. 條件 — 偏好頻道：使用[條件活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html)來決定如何透過電子郵件、簡訊或推播通知聯絡客戶。 使用三個動作活動來建立三個分支。
+2. 條件 — 偏好頻道：使用[條件活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=zh-Hant)來決定如何透過電子郵件、簡訊或推播通知聯絡客戶。 使用三個動作活動來建立三個分支。
 
-3. 等候：使用[等待活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html)等候，直到您接聽購買。
+3. 等候：使用[等待活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=zh-Hant)等候，直到您接聽購買。
 
 4. 條件 — 過去7天內的購買訂閱？：使用條件活動來監聽過去七天內的產品購買。
 
-5. JourneyStepEventTracker — 未購買訂閱：對尚未購買訂閱的訪客使用[自訂動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html)，即使收到您的訊息。 作為歷程結束時的自訂條件的一部分，請建立`journey.feedback`事件，並將其新增到根據[!UICONTROL 歷程步驟事件]結構描述的資料集。 您將使用此事件來細分尚未購買訂閱的對象，以及透過付費媒體廣告定位的對象。
+5. JourneyStepEventTracker — 未購買訂閱：對尚未購買訂閱的訪客使用[自訂動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=zh-Hant)，即使收到您的訊息。 作為歷程結束時的自訂條件的一部分，請建立`journey.feedback`事件，並將其新增到根據[!UICONTROL 歷程步驟事件]結構描述的資料集。 您將使用此事件來細分尚未購買訂閱的對象，以及透過付費媒體廣告定位的對象。
 
 +++
 
@@ -436,7 +436,7 @@ ht-degree: 26%
 
 >[!ENDTABS]
 
-如需有關在[!DNL Adobe Journey Optimizer]中建立歷程的詳細資訊，請閱讀[開始使用歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)指南。
+如需有關在[!DNL Adobe Journey Optimizer]中建立歷程的詳細資訊，請閱讀[開始使用歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=zh-Hant)指南。
 
 ### 設定顯示付費媒體廣告的目的地 {#paid-media-ads}
 

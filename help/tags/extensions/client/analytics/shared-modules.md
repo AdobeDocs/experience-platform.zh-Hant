@@ -19,7 +19,7 @@ ht-degree: 70%
 
 ## [!DNL get-tracker]
 
-Adobe Analytics 必須先初始化追蹤器物件，才能傳送任何信標。初始化程序會先載入 [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)，接著建立追蹤器物件。
+Adobe Analytics 必須先初始化追蹤器物件，才能傳送任何信標。初始化程序會先載入 [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)，接著建立追蹤器物件。
 
 您可使用 `get-tracker` 共用模組，在追蹤器物件完全初始化後加以存取，如下所示：
 

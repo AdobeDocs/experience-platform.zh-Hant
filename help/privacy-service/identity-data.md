@@ -31,7 +31,7 @@ Adobe Experience Platform Identity Service維護全域定義和使用者定義�
 
 Adobe Experience Cloud [!DNL Identity Service]可作為[!DNL Experience Cloud]的共同識別架構，並為每個網站訪客指派不重複的永久ID。 [!DNL Experience Cloud] ID (ECID)透過使用第一方Cookie來追蹤客戶活動，可唯一識別多個應用程式中的裝置，並可讓您識別不同[!DNL Experience Cloud]應用程式中的相同網站訪客及其資料。 如需詳細資訊，請參閱[Experience Cloud識別服務總覽](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hant)。
 
-選擇加入服務是[!DNL Experience Cloud Identity Service]的擴充功能，可讓您在應用程式上設定通訊協定，讓訪客判斷您是否可以在訪客的裝置或瀏覽器上設定Cookie。 如需選擇加入服務的詳細資訊，包括如何設定應用程式的服務，請參閱[選擇加入服務檔案](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html)。
+選擇加入服務是[!DNL Experience Cloud Identity Service]的擴充功能，可讓您在應用程式上設定通訊協定，讓訪客判斷您是否可以在訪客的裝置或瀏覽器上設定Cookie。 如需選擇加入服務的詳細資訊，包括如何設定應用程式的服務，請參閱[選擇加入服務檔案](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=zh-Hant)。
 
 為您的網站訪客指派ECID後，您就可以利用Adobe[!DNL Privacy JavaScript Library]來擷取這些ID，以用於隱私權要求，如下節所述。
 

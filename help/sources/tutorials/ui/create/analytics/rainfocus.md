@@ -127,4 +127,4 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 * [在Adobe Developer入口網站中建立Adobe服務帳戶(JWT)](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [在API中建立結構描述](../../../../../xdm/tutorials/create-schema-api.md)
 * [在UI中建立結構](../../../../../xdm/tutorials/create-schema-ui.md)
-* [在UI中定義身分欄位](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+* [在UI中定義身分欄位](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=zh-Hant)

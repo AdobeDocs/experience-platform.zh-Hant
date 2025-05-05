@@ -481,7 +481,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-您可以在[設定檔計數Widget指南](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count)中找到此insight外觀和功能的完整資訊。
+您可以在[設定檔計數Widget指南](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=zh-Hant#profile-count)中找到此insight外觀和功能的完整資訊。
 
 如需有關此insight外觀和功能的資訊，請參閱[設定檔計數Widget檔案](../guides/profiles.md#profile-count)。
 

@@ -47,7 +47,7 @@ Adform可協助您：
 2. **CDP或連線SKU**：您必須擁有Adobe客戶資料平台(CDP) Prime、Ultimate SKU或連線SKU，才能啟用順暢的使用者端和伺服器端通訊。
 
 3. **Adobe Experience Platform Edge Network設定**：
-   * 確保已將Edge Network設定為支援即時事件轉送，以進行離站重新目標定位。 如需詳細資訊，請參閱Adobe的[事件轉送快速入門手冊](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started)。
+   * 確保已將Edge Network設定為支援即時事件轉送，以進行離站重新目標定位。 如需詳細資訊，請參閱Adobe的[事件轉送快速入門手冊](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/event-forwarding/getting-started)。
    * 此步驟對於有效率地將資料傳輸至Adform的伺服器端端點至關重要。
 
 這些先決條件設定完成之後，您就可以繼續設定和部署[!DNL Adform]擴充功能。

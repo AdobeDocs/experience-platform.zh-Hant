@@ -53,7 +53,7 @@ ht-degree: 2%
 
 ## 建立資料元素 {#create-data-elements}
 
-若要將資料傳送至[!DNL Snapchat] Conversions API擴充功能，請為每個資料引數建立[個資料元素](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element)。 請依照下列步驟操作：
+若要將資料傳送至[!DNL Snapchat] Conversions API擴充功能，請為每個資料引數建立[個資料元素](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element)。 請依照下列步驟操作：
 
 1. 導覽至您屬性的&#x200B;**[!UICONTROL 屬性資訊]**&#x200B;畫面中的&#x200B;**[!UICONTROL 製作]**>**[!UICONTROL 資料元素]**，然後選取&#x200B;**[!UICONTROL 新增資料元素]**。
 
@@ -79,7 +79,7 @@ ht-degree: 2%
 
 ## 建立規則以將轉換事件傳送至Snap {#create-snap-rules}
 
-[規則](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)是用來在Experience Platform中觸發擴充功能。 本節概述如何在事件轉送屬性中建立規則，以使用轉換API擴充功能將轉換事件傳送至Snap。
+[規則](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule)是用來在Experience Platform中觸發擴充功能。 本節概述如何在事件轉送屬性中建立規則，以使用轉換API擴充功能將轉換事件傳送至Snap。
 
 ### 建立新規則
 

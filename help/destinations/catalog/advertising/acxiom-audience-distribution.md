@@ -33,7 +33,7 @@ ht-degree: 6%
 ## 先決條件 {#prerequisites}
 
 * **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom's]使用條款合約，才能設定新的[!DNL Acxiom Audience Distribution]目的地。 執行銷售訂單完成後，您將會收到合約的連結。 在您簽署合約之前，您不會在Experience Platform目的地目錄中看到[!DNL Acxiom Audience Distribution]目的地卡片。 在您接受並簽署合約後，[!DNL Adobe]將完成您的上線程式，您將會看到[!DNL Acxiom Audience Distribution]目的地卡。
-* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[檢視組織ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)的詳細資訊，請參閱Experience Cloud *主題中的[!DNL Adobe's]*&#x200B;組織。
+* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[檢視組織ID](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)的詳細資訊，請參閱Experience Cloud *主題中的[!DNL Adobe's]*&#x200B;組織。
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -127,6 +127,6 @@ ht-degree: 6%
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
 
 

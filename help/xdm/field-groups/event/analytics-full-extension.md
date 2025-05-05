@@ -37,17 +37,17 @@ ht-degree: 5%
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions`擷取Analytics追蹤的自訂[維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html)。
+`customDimensions`擷取Analytics追蹤的自訂[維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=zh-Hant)。
 
 ![customDimensions欄位](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `eVars` | 物件 | 擷取最多250個轉換變數([eVars](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=zh-Hant))的物件。 此物件的屬性是以`eVar1`為`eVar250`的鍵值，而且只接受其資料型別的字串。 |
-| `hierarchies` | 物件 | 擷取最多五個自訂階層變數（[階層](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html)）的物件。 此物件的屬性是以`hier1`為`hier5`的鍵值，這些物件本身就是具有下列子屬性的物件：<ul><li>`delimiter`：用來產生`values`下所提供清單的原始分隔符號。</li><li>`values`：階層層級名稱的分隔清單，以字串表示。</li></ul> |
-| `listProps` | 物件 | 擷取最多75個[清單prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props)的物件。 此物件的屬性是以`prop1`為`prop75`的鍵值，這些物件本身就是具有下列子屬性的物件：<ul><li>`delimiter`：用來產生`values`下所提供清單的原始分隔符號。</li><li>`values`： prop的分隔值清單，以字串表示。</li></ul> |
-| `lists` | 物件 | 擷取最多三個[清單](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html)的物件。 此物件的屬性是以`list1`為`list3`的鍵值。 每個屬性都包含單一`list`陣列，內含[[!UICONTROL 機碼值組]](../../data-types/key-value-pair.md)資料型別。 |
-| `props` | 物件 | 擷取最多75個[prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html)的物件。 此物件的屬性是以`prop1`為`prop75`的鍵值，而且只接受其資料型別的字串。 |
+| `hierarchies` | 物件 | 擷取最多五個自訂階層變數（[階層](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=zh-Hant)）的物件。 此物件的屬性是以`hier1`為`hier5`的鍵值，這些物件本身就是具有下列子屬性的物件：<ul><li>`delimiter`：用來產生`values`下所提供清單的原始分隔符號。</li><li>`values`：階層層級名稱的分隔清單，以字串表示。</li></ul> |
+| `listProps` | 物件 | 擷取最多75個[清單prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=zh-Hant#list-props)的物件。 此物件的屬性是以`prop1`為`prop75`的鍵值，這些物件本身就是具有下列子屬性的物件：<ul><li>`delimiter`：用來產生`values`下所提供清單的原始分隔符號。</li><li>`values`： prop的分隔值清單，以字串表示。</li></ul> |
+| `lists` | 物件 | 擷取最多三個[清單](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=zh-Hant)的物件。 此物件的屬性是以`list1`為`list3`的鍵值。 每個屬性都包含單一`list`陣列，內含[[!UICONTROL 機碼值組]](../../data-types/key-value-pair.md)資料型別。 |
+| `props` | 物件 | 擷取最多75個[prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=zh-Hant)的物件。 此物件的屬性是以`prop1`為`prop75`的鍵值，而且只接受其資料型別的字串。 |
 | `postalCode` | 字串 | 使用者端提供的郵遞區號。 |
 | `stateProvince` | 字串 | 使用者端提供的州或省位置。 |
 
@@ -72,12 +72,12 @@ ht-degree: 5%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `browserIDStr` | 字串 | 所用瀏覽器的Adobe Analytics識別碼（亦稱為[瀏覽器型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)）。 |
-| `operatingSystemIDStr` | 字串 | 所使用作業系統的Adobe Analytics識別碼（亦稱為[作業系統型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)）。 |
+| `browserIDStr` | 字串 | 所用瀏覽器的Adobe Analytics識別碼（亦稱為[瀏覽器型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html?lang=zh-Hant)）。 |
+| `operatingSystemIDStr` | 字串 | 所使用作業系統的Adobe Analytics識別碼（亦稱為[作業系統型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html?lang=zh-Hant)）。 |
 
 ## 自訂事件欄位 {#events}
 
-Analytics擴充功能欄位群組提供10個物件欄位，每個欄位最多可擷取100個[自訂事件量度](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html)，總計為1000個。
+Analytics擴充功能欄位群組提供10個物件欄位，每個欄位最多可擷取100個[自訂事件量度](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=zh-Hant)，總計為1000個。
 
 每個頂層事件物件包含其各自範圍的個別事件物件。 例如，`event101to200`包含從`event101`輸入至`event200`的事件。
 

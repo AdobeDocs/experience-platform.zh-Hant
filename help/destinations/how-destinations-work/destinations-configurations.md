@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 各種目的地型別通用的匯出設定 {#common-settings-across-destination-types}
 
-目的地匯出行為在屬於目的地型別的目的地之間是一致的，這與&#x200B;*觸發目的地匯出的專案*&#x200B;和&#x200B;*目的地匯出專案中所包含的專案有關*。 目的地匯出是由目的地服務從[上游即時客戶設定檔服務](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram)收到的通知觸發。
+目的地匯出行為在屬於目的地型別的目的地之間是一致的，這與&#x200B;*觸發目的地匯出的專案*&#x200B;和&#x200B;*目的地匯出專案中所包含的專案有關*。 目的地匯出是由目的地服務從[上游即時客戶設定檔服務](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=zh-Hant#adobe-experience-platform-%26-applications-detailed-architecture-diagram)收到的通知觸發。
 
 目的地匯出中包含的內容會因目的地型別而略有不同。 深入瞭解每個目的地型別[&#128279;](/help/destinations/how-destinations-work/profile-export-behavior.md)的常見匯出行為模式。 目的地開發人員或Real-Time CDP使用者無法編輯這些設定。
 

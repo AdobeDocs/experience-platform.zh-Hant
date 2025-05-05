@@ -16,18 +16,18 @@ ht-degree: 0%
 >[!TIP]
 >
 >另請參閱Adobe貢獻者指南中的支援檔案：
->* [安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)。
+>* [安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=zh-Hant)
+>* [在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=zh-Hant)
+>* [重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=zh-Hant)。
 
 ## 連線至GitHub並設定您的本機編寫環境 {#set-up-environment}
 
 1. 在您的瀏覽器中，瀏覽至`https://github.com/AdobeDocs/experience-platform.en`
-2. 若要[分支](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)存放庫，請按一下&#x200B;**分支**，如下所示。 這會在您自己的GitHub帳戶中建立Experience Platform存放庫的復本。
+2. 若要[分支](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=zh-Hant#fork-the-repository)存放庫，請按一下&#x200B;**分支**，如下所示。 這會在您自己的GitHub帳戶中建立Experience Platform存放庫的復本。
 
    ![取用Adobe檔案存放庫](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. 將存放庫複製到本機電腦。 選取「**程式碼> HTTPS >使用GitHub Desktop**&#x200B;開啟」，如下所示。 確定您已安裝[GitHub Desktop](https://desktop.github.com/)。 如需進一步參考，請參閱Adobe貢獻者指南中的[建立存放庫的本機複製](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository)。
+3. 將存放庫複製到本機電腦。 選取「**程式碼> HTTPS >使用GitHub Desktop**&#x200B;開啟」，如下所示。 確定您已安裝[GitHub Desktop](https://desktop.github.com/)。 如需進一步參考，請參閱Adobe貢獻者指南中的[建立存放庫的本機複製](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=zh-Hant#create-a-local-clone-of-the-repository)。
 
    ![將Adobe檔案存放庫複製到本機環境](../assets/docs-framework/clone-local.png)
 
@@ -36,10 +36,10 @@ ht-degree: 0%
 ## 為您的目的地編寫檔案頁面 {#author-documentation}
 
 1. 您的檔案頁面是以[自助服務目的地範本](../docs-framework/self-service-template.md)為基礎。 下載[目的地範本](../assets/docs-framework/yourdestination-template.zip)。 解壓縮檔案`yourdestination-template.md`，並將檔案解壓縮至上述步驟4提及的目錄。  重新命名檔案`YOURDESTINATION.md`，其中YOURDESTINATION是您在Adobe Experience Platform中的目的地名稱。 例如，如果您的公司名為Moviestar，您可將您的檔案命名為`moviestar.md`。
-2. 使用您選擇的[文字編輯器](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors)開啟新檔案。 Adobe建議您使用[Visual Studio Code](https://code.visualstudio.com/)並安裝Adobe Markdown Authoring擴充功能。 若要安裝擴充功能，請開啟Visual Studio Code，選取畫面左側的&#x200B;**[!DNL Extensions]**&#x200B;索引標籤，然後搜尋`adobe markdown authoring`。 選取擴充功能並按一下&#x200B;**[!DNL Install]**。
+2. 使用您選擇的[文字編輯器](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=zh-Hant#understand-markdown-editors)開啟新檔案。 Adobe建議您使用[Visual Studio Code](https://code.visualstudio.com/)並安裝Adobe Markdown Authoring擴充功能。 若要安裝擴充功能，請開啟Visual Studio Code，選取畫面左側的&#x200B;**[!DNL Extensions]**&#x200B;索引標籤，然後搜尋`adobe markdown authoring`。 選取擴充功能並按一下&#x200B;**[!DNL Install]**。
    ![安裝Adobe Markdown Authoring擴充功能](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. 使用目的地的相關資訊編輯範本。 請依照範本中的指示操作。
-4. 對於您打算新增至檔案的任何熒幕擷取畫面或影像，請移至`GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`，其中`[...]`是您想要的目的地類別。 例如，如果您要將個人化目的地新增至Experience Platform，請選取「`personalization`」資料夾。 為您的目的地建立新資料夾，並將影像儲存於此處。 您必須從正在編寫的頁面連結至這些專案。 請參閱[如何連結至影像的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images)。
+4. 對於您打算新增至檔案的任何熒幕擷取畫面或影像，請移至`GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`，其中`[...]`是您想要的目的地類別。 例如，如果您要將個人化目的地新增至Experience Platform，請選取「`personalization`」資料夾。 為您的目的地建立新資料夾，並將影像儲存於此處。 您必須從正在編寫的頁面連結至這些專案。 請參閱[如何連結至影像的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=zh-Hant#link-to-images)。
 5. 準備就緒後，儲存您正在處理的檔案。
 
 ## 提交您的檔案以供檢閱 {#submit-review}
@@ -82,4 +82,4 @@ ht-degree: 0%
 
 >[!TIP]
 >
->若要新增影像和連結至您的檔案，以及有關Markdown的其他問題，請閱讀Adobe合作撰寫指南中的[使用Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)。
+>若要新增影像和連結至您的檔案，以及有關Markdown的其他問題，請閱讀Adobe合作撰寫指南中的[使用Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hant)。

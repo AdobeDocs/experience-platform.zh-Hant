@@ -19,8 +19,8 @@ ht-degree: 0%
 
 * [報告套裝資料概述的Adobe Analytics來源聯結器](../../sources/connectors/adobe-applications/mapping/analytics.md)。
 * [Analytics欄位對應檔案](../../sources/connectors/adobe-applications/mapping/analytics.md)提供擷取和對應Analytics資料以搭配Query Service使用的詳細資訊。
-* [Attribution IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [Adobe Analytics歸因面板指南](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
+* [Attribution IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=zh-Hant)
+* [Adobe Analytics歸因面板指南](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=zh-Hant)。
 
 在[視窗函式區段](../sql/adobe-defined-functions.md#window-functions)中可以找到`OVER()`函式內引數的說明。 [Adobe行銷與Commerce辭彙](https://business.adobe.com/glossary/index.html)可能也有用。
 

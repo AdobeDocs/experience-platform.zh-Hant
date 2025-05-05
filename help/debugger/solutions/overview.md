@@ -25,17 +25,17 @@ Adobe Experience Platform Web SDK 畫面會顯示 Adobe Experience Platform Web 
 
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
-[!UICONTROL Analytics]索引標籤提供您的[Adobe Analytics實作](https://experienceleague.adobe.com/docs/analytics/implementation/home.html)相關資訊。
+[!UICONTROL Analytics]索引標籤提供您的[Adobe Analytics實作](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=zh-Hant)相關資訊。
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 
-使用[!UICONTROL Target]畫面來檢視[Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html)要求或[mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E)回應詳細資料。
+使用[!UICONTROL Target]畫面來檢視[Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hant)要求或[mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html?lang=zh-Hant#section_256FCF7C14BB435BA2C68049EF0BA99E)回應詳細資料。
 
 如需詳細資訊，請參閱[使用Debugger for Target實作](./target.md)指南。
 
 ## [!UICONTROL Audience Manager] {#section-1d4484f8b46f457f859ba88039a9a585}
 
-使用[[!UICONTROL Audience Manager]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html)標籤檢視Adobe Audience Manager中[事件](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html)的詳細資料。 選取要展開的組織並顯示資訊。
+使用[[!UICONTROL Audience Manager]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=zh-Hant)標籤檢視Adobe Audience Manager中[事件](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html?lang=zh-Hant)的詳細資料。 選取要展開的組織並顯示資訊。
 
 ## [!UICONTROL Adobe Experience Platform標籤] {#section-ee80a9c509f2462c89c1e5bd8d05d7c8}
 
@@ -43,7 +43,7 @@ Adobe Experience Platform Web SDK 畫面會顯示 Adobe Experience Platform Web 
 
 ## [!UICONTROL Experience Cloud ID] {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
-使用[!UICONTROL Experience Cloud識別碼]索引標籤來檢視[Experience Cloud識別碼服務](https://experienceleague.adobe.com/docs/id-service/using/home.html)要求。
+使用[!UICONTROL Experience Cloud識別碼]索引標籤來檢視[Experience Cloud識別碼服務](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)要求。
 
 ## [!UICONTROL 動態標籤管理]
 

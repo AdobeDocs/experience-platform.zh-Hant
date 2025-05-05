@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-Adobe Experience Platform Web SDK可讓您在網頁應用程式的使用者端上收集[Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)資料。
+Adobe Experience Platform Web SDK可讓您在網頁應用程式的使用者端上收集[Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)資料。
 
-使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與Analytics共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手動將資料傳送至Analytics，則應啟用此選項。
+使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與Analytics共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hant)手動將資料傳送至Analytics，則應啟用此選項。
 
 >[!NOTE]
 >
@@ -227,7 +227,7 @@ Target Edge計算主張回應時，會檢查Analytics使用者端記錄是否已
 
 ### 表單式體驗撰寫器活動 {#form-based-composer}
 
-您可以使用Web SDK控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)活動的建議執行。
+您可以使用Web SDK控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)活動的建議執行。
 
 當您請求特定決定範圍的建議時，傳回的建議會包含其適當的Analytics代號。 最佳實務是鏈結Experience Platform Web SDK `sendEvent`命令並逐一檢視傳回的主張，以便在同時收集Analytics權杖時執行這些建議。
 
@@ -467,7 +467,7 @@ alloy("sendEvent", {
 
 ### 視覺化體驗撰寫器活動 {#visual-experience-composer-acitivties}
 
-Web SDK可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)編寫的選件。
+Web SDK可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)編寫的選件。
 
 >[!NOTE]
 >

@@ -67,6 +67,6 @@ ht-degree: 7%
 
 取得所有認證後，您就可以為[!DNL Content tagging]設定自訂背景工作。 下列檔案可協助您瞭解「擴充性架構」和環境設定。
 
-若要深入瞭解擴充性架構，請先閱讀[擴充性簡介](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)檔案。 本檔案會概述先決條件和布建需求。
+若要深入瞭解擴充性架構，請先閱讀[擴充性簡介](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=zh-Hant)檔案。 本檔案會概述先決條件和布建需求。
 
-若要深入瞭解如何設定[!DNL Content tagging]的環境，請先閱讀[設定開發人員環境](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html)的指南。 本檔案提供可讓您為Asset compute服務開發的設定指示。
+若要深入瞭解如何設定[!DNL Content tagging]的環境，請先閱讀[設定開發人員環境](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=zh-Hant)的指南。 本檔案提供可讓您為Asset compute服務開發的設定指示。

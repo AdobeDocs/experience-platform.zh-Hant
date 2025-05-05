@@ -30,7 +30,7 @@ Adobe Experience Platform是市面上功能最強大、最靈活、最開放的�
 
 [!DNL Experience Platform]檔案提供多種格式，適用於各種功能和應用程式。 若要進一步瞭解可用的檔案型別，請造訪[Experience Platform檔案總覽](documentation/overview.md)。
 
-若要開始瞭解特定[!DNL Experience Platform]服務的詳細資訊，請返回[檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html)並選取適當的指南。
+若要開始瞭解特定[!DNL Experience Platform]服務的詳細資訊，請返回[檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html?lang=zh-Hant)並選取適當的指南。
 
 ### 以[!DNL Experience Platform]為基礎的應用程式檔案
 
@@ -40,8 +40,8 @@ Adobe已在Experience Platform之上建立多個應用程式。 您可以在他�
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=zh-Hant)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=zh-Hant)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=zh-Hant)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=zh-Hant)
 
 以下影片說明以Experience Platform為基礎建立之每個應用程式的使用案例。
 

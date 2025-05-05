@@ -23,7 +23,7 @@ ht-degree: 65%
 
 **功能**：
 
-* 新增新功能，可讓使用者檢視及編輯[設定變數動作](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables)的JSON版本。 AdobeWeb SDK擴充功能也包含提供JSON以[填入Analytics變數](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types)的動作。 透過將JSON資料從AA擴充功能複製到Web SDK擴充功能，移轉客戶可輕鬆一次傳輸數個設定，而不必手動新增每個變數。
+* 新增新功能，可讓使用者檢視及編輯[設定變數動作](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables)的JSON版本。 AdobeWeb SDK擴充功能也包含提供JSON以[填入Analytics變數](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types)的動作。 透過將JSON資料從AA擴充功能複製到Web SDK擴充功能，移轉客戶可輕鬆一次傳輸數個設定，而不必手動新增每個變數。
 
 ## 2024年8月12日
 
@@ -61,7 +61,7 @@ ht-degree: 65%
 
 **錯誤修正**：
 
-* 針對具有錯誤高平均資訊量[使用者代理程式使用者端提示](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API的瀏覽器，新增其他錯誤處理功能。
+* 針對具有錯誤高平均資訊量[使用者代理程式使用者端提示](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=zh-Hant) API的瀏覽器，新增其他錯誤處理功能。
 * 已將[POST](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods/POST) Content-Type標頭變更為預設使用`x-www-form-urlencoded`。
 
 ## 2022年9月23日
@@ -218,7 +218,7 @@ ht-degree: 65%
 
 * 更新 Adobe Analytics 擴充功能，以支援 Audience Manager 的 DIL 9.2
 
-* 更新擴充功能以支援 [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
+* 更新擴充功能以支援 [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant#version-2.15.0)
 * 移除下列核取方塊，這是因為不再支援：「不要將目的地發佈IFRAME附加至DOM或引發目的地」
 
 ## 2019 年 6 月 4 日
@@ -227,7 +227,7 @@ ht-degree: 65%
 
 **功能**：
 
-* 將 Adobe Analytics 擴充功能更新為 [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0)，其中包括已知的 clearVars 問題的修正。
+* 將 Adobe Analytics 擴充功能更新為 [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant#version-2.14.0)，其中包括已知的 clearVars 問題的修正。
 * 新增 Exchange 連結至擴充功能。選取下拉式選單並選擇「擴充功能資訊」，即可取得 Exchange 清單
 
 **錯誤修正**：

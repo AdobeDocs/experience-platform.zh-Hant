@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform檔案最近已移至其他位置。 請花點時間檢閱新的導覽並更新任何現有的書籤。
 
-Adobe Experience Platform檔案適用於許多Experience Platform功能與服務。 若要存取Experience Platform檔案，請返回[檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html)，並選取您要檢視的指南。
+Adobe Experience Platform檔案適用於許多Experience Platform功能與服務。 若要存取Experience Platform檔案，請返回[檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html?lang=zh-Hant)，並選取您要檢視的指南。
 
 ## Experience Platform檔案型別
 

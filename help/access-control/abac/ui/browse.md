@@ -23,7 +23,7 @@ ht-degree: 2%
 * [沙箱](./sandboxes.md)
 * [使用者](./users.md)
 
-若要存取[!DNL Adobe Experience Platform]的屬性型存取控制許可權，您必須是擁有[!DNL Adobe Experience Platform]訂閱的組織管理員。 雖然Adobe支援組織有彈性的管理員階層，但您必須是[!DNL Adobe Experience Platform]的產品管理員才能設定許可權。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
+若要存取[!DNL Adobe Experience Platform]的屬性型存取控制許可權，您必須是擁有[!DNL Adobe Experience Platform]訂閱的組織管理員。 雖然Adobe支援組織有彈性的管理員階層，但您必須是[!DNL Adobe Experience Platform]的產品管理員才能設定許可權。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
 
 如果您沒有管理員許可權，請聯絡您的系統管理員以獲得存取權。
 

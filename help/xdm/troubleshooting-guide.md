@@ -92,7 +92,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### 如何為結構描述定義身分？
 
-在[!DNL Experience Platform]中，無論要解譯的資料來源為何，身分都會用來識別主旨（通常是個人）。 它們透過將關鍵欄位標籤為「身分」來定義在結構描述中。 身分識別常用的欄位包括電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
+在[!DNL Experience Platform]中，無論要解譯的資料來源為何，身分都會用來識別主旨（通常是個人）。 它們透過將關鍵欄位標籤為「身分」來定義在結構描述中。 身分識別常用的欄位包括電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID和其他唯一ID欄位。
 
 可使用API或使用者介面將欄位標示為身分。
 
@@ -140,7 +140,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### 我可以刪除已啟用設定檔的結構描述嗎？
 
-為即時客戶設定檔啟用結構描述後，您就無法再刪除它。 為設定檔啟用結構描述後，就無法停用或刪除它，也無法從結構描述中移除欄位。 因此，在為設定檔啟用結構描述之前，請務必仔細規劃及驗證該結構描述設定。 不過，您可以刪除已啟用設定檔的資料集。 您可在此找到資訊： <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+為即時客戶設定檔啟用結構描述後，您就無法再刪除它。 為設定檔啟用結構描述後，就無法停用或刪除它，也無法從結構描述中移除欄位。 因此，在為設定檔啟用結構描述之前，請務必仔細規劃及驗證該結構描述設定。 不過，您可以刪除已啟用設定檔的資料集。 您可在此找到資訊： <https://experienceleague.adobe.com/zh-hant/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 如果您不想再使用已啟用設定檔的結構描述，建議將結構描述重新命名為包含&#x200B;**不要使用**&#x200B;或&#x200B;**非使用中**。
 

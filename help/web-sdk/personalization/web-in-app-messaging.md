@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Web應用程式內傳訊功能是[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)功能，它會使用Web SDK來提供個人化內容。
 >
->如需如何設定網頁應用程式內傳訊活動的詳細指示，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html)。
+>如需如何設定網頁應用程式內傳訊活動的詳細指示，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=zh-Hant)。
 
 
 ## 先決條件 {#prerequisites}
@@ -184,5 +184,5 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
 在[網頁SDK組態](../commands/configure/overview.md)中，根據您的需求設定`personalizationStorageEnabled`選項：
 
-* `personalizationStorageEnabled: true`會以您在[Adobe Journey Optimizer行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp)中定義的頻率觸發應用程式內訊息。
+* `personalizationStorageEnabled: true`會以您在[Adobe Journey Optimizer行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=zh-Hant#configure-inapp)中定義的頻率觸發應用程式內訊息。
 * `personalizationStorageEnabled: false`會在每次頁面載入時觸發應用程式內訊息。

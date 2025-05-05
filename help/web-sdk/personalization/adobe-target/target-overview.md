@@ -11,25 +11,25 @@ ht-degree: 1%
 
 # 使用[!DNL Adobe Target]和[!DNL Web SDK]進行個人化
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Target]中管理的個人化體驗至Web Channel。 您可以使用稱為[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)的WYSIWYG編輯器，或是非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)，來建立、啟用及傳遞您的活動和個人化體驗。
+[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Target]中管理的個人化體驗至Web Channel。 您可以使用稱為[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant) (VEC)的WYSIWYG編輯器，或是非視覺化介面[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)，來建立、啟用及傳遞您的活動和個人化體驗。
 
 >[!IMPORTANT]
 >
->瞭解如何使用[將Target從at.js 2.x移轉至Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html)教學課程，將Target實作移轉至Experience Platform Web SDK。
+>瞭解如何使用[將Target從at.js 2.x移轉至Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=zh-Hant)教學課程，將Target實作移轉至Experience Platform Web SDK。
 >
->透過[使用Web SDK實作Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hant)教學課程，首次瞭解如何實作Target。 如需Target的特定資訊，請參閱教學課程中標題為[使用Experience Platform Web SDK設定Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的部分。
+>透過[使用Web SDK實作Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hant)教學課程，首次瞭解如何實作Target。 如需Target的特定資訊，請參閱教學課程中標題為[使用Experience Platform Web SDK設定Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=zh-Hant)的部分。
 
 
 下列功能已經過測試，目前在[!DNL Target]中支援：
 
-* [A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [A4T曝光和轉換報告](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
-* [Automated Personalization活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [體驗鎖定目標活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Recommendations活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
-* [原生目標印象和轉換報告](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
-* [VEC支援](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+* [A/B測試](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hant)
+* [A4T曝光和轉換報告](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hant)
+* [Automated Personalization活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant)
+* [體驗鎖定目標活動](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hant)
+* [多變數測試(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hant)
+* [Recommendations活動](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hant)
+* [原生目標印象和轉換報告](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=zh-Hant)
+* [VEC支援](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)
 
 ## [!DNL Web SDK]系統圖表
 
@@ -64,7 +64,7 @@ ht-degree: 1%
 
 若要搭配[!DNL Web SDK]實作使用VEC，請安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper擴充功能。
 
-如需詳細資訊，請參閱&#x200B;*Adobe Target指南*&#x200B;中的[視覺化體驗撰寫器Helper擴充功能](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)。
+如需詳細資訊，請參閱&#x200B;*Adobe Target指南*&#x200B;中的[視覺化體驗撰寫器Helper擴充功能](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=zh-Hant)。
 
 ## 呈現個人化內容
 
@@ -85,7 +85,7 @@ ht-degree: 1%
 * 流量來源
 * 時間段
 
-如需詳細資訊，請參閱&#x200B;*Adobe Target指南*&#x200B;中的[對象](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html)類別。
+如需詳細資訊，請參閱&#x200B;*Adobe Target指南*&#x200B;中的[對象](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=zh-Hant)類別。
 
 ### 回應Token
 

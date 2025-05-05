@@ -23,5 +23,5 @@ ht-degree: 0%
 使用或安裝Web SDK前，您必須符合下列要求：
 
 * 必須先設定Adobe Experience Platform中的架構。 這些設定包含任何必要的結構描述、身分和資料串流。
-* 您必須設定正確的許可權才能存取適當的工具。 例如，如果您的組織決定使用標籤擴充功能，您必須具備存取資料收集UI的正確許可權。 如需詳細資訊，請參閱[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)。
+* 您必須設定正確的許可權才能存取適當的工具。 例如，如果您的組織決定使用標籤擴充功能，您必須具備存取資料收集UI的正確許可權。 如需詳細資訊，請參閱[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=zh-Hant)。
 * 建議使用第一方網域(CNAME)。 如果您已有Adobe Analytics的CNAME，可以使用該名稱。 在開發環境中測試不需要使用CNAME，但Adobe建議在發佈至生產環境之前先使用一個。 如需詳細資訊，請參閱[第一方裝置識別碼](../identity/first-party-device-ids.md)。

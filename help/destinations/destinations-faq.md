@@ -199,7 +199,7 @@ Google要求對象名稱必須是唯一的。 如果您將相同的對象對應�
 +++回答
 否，[不需要Web SDK](../web-sdk/home.md)才能為[Adobe Target](catalog/personalization/adobe-target-connection.md)啟用對象。
 
-不過，如果使用[[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)來代替Web SDK，則僅支援下一次工作階段個人化。
+不過，如果使用[[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=zh-Hant)來代替Web SDK，則僅支援下一次工作階段個人化。
 
 針對[相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md)使用案例，您必須使用[網頁SDK](../web-sdk/home.md)或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)。 如需更多實作詳細資訊，請參閱有關[將對象啟用至邊緣目的地](ui/activate-edge-personalization-destinations.md)的檔案。
 +++
@@ -229,7 +229,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### 我可以在哪裡檢視Adobe Target中已啟用的屬性？
 
 +++回答
-在[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)和[HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html)選件中，屬性將可在Target中使用。
+在[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=zh-Hant)和[HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=zh-Hant)選件中，屬性將可在Target中使用。
 +++
 
 ### 我可以建立沒有資料串流的目的地，然後在稍後將資料串流新增到相同目的地嗎？

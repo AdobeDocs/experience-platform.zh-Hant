@@ -79,7 +79,7 @@ ht-degree: 1%
 
 *建立資料流之剩餘步驟的工作流程會模組化。 如果您想要針對來源發出任何特定的號召，請參閱下列其他資源區段。*
 
-依照本教學課程中的指示，您已建立與您的&#x200B;*YOURSOURCE*&#x200B;帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html)。
+依照本教學課程中的指示，您已建立與您的&#x200B;*YOURSOURCE*&#x200B;帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=zh-Hant)。
 
 ## 其他資源
 

@@ -13,29 +13,29 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->今後，此頁面將不再提供標記和事件轉送發行說明。請參閱最新的 [Adobe Experience Platform 發行說明](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection)，了解標記和事件轉送的更新詳情。
+>今後，此頁面將不再提供標記和事件轉送發行說明。請參閱最新的 [Adobe Experience Platform 發行說明](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=zh-Hant#data-collection)，了解標記和事件轉送的更新詳情。
 
 ## 2023 年 4 月 26 日
 
-* **OAuth JWT Secret**：[OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) 可讓客戶使用 Adob&#x200B;&#x200B;e 和 Google 服務權杖支援「事件轉送」中伺服器和伺服器的互動。
+* **OAuth JWT Secret**：[OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=zh-Hant) 可讓客戶使用 Adob&#x200B;&#x200B;e 和 Google 服務權杖支援「事件轉送」中伺服器和伺服器的互動。
 
 以下新擴充功能已發佈：
 
-* **[!DNL Pinterest Conversions API]擴充功能**：[[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Pinterest] (使用 [!DNL Pinterest Conversions API] 並以伺服器端事件的形式)。
+* **[!DNL Pinterest Conversions API]擴充功能**：[[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=zh-Hant) 事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Pinterest] (使用 [!DNL Pinterest Conversions API] 並以伺服器端事件的形式)。
 
 ## 2023 年 3 月 29 日
 
 **Quick Stark 工作流程 (Beta 版)**
 
 從「資料集合」首頁畫面存取「快速入門」下全新的快速入門工作流程！以下工作流程現已作為公共 Beta 版提供給客戶。
-* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**：事件轉送客戶可快速收集並轉送事件資料，並將其從伺服器端轉送到 Meta，僅需幾個簡單步驟即可實現廣告轉換。
+* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=zh-Hant#quick-start)**：事件轉送客戶可快速收集並轉送事件資料，並將其從伺服器端轉送到 Meta，僅需幾個簡單步驟即可實現廣告轉換。
 * **[行動 SDK](https://developer.adobe.com/client-sdks/documentation/)**：客戶只需幾個簡單的步驟即可快速實施行動 SDK 並驗證基本行動事件。
 
 新擴充功能已發佈：
 
-* **[!DNL Braze]事件轉送擴充功能**：[[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html)事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Braze] (使用 [!DNL Braze] User Track API 並以伺服器端事件的形式)。
-* **[Epsilon 事件 API] 事件轉送擴充功能**：[[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 擴充功能可讓您利用事件轉送在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取事件資訊並將其傳送到 [!DNL Epsilon] (使用 [!DNL Epsilon] Event API)。
-* **[!DNL Mixpanel]事件擴充功能**：[[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 擴充功能可讓客戶利用事件轉送在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取事件資訊並使用 Track Events API 將其傳送到 [!DNL Mixpanel]。
+* **[!DNL Braze]事件轉送擴充功能**：[[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=zh-Hant)事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Braze] (使用 [!DNL Braze] User Track API 並以伺服器端事件的形式)。
+* **[Epsilon 事件 API] 事件轉送擴充功能**：[[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=zh-Hant) 擴充功能可讓您利用事件轉送在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取事件資訊並將其傳送到 [!DNL Epsilon] (使用 [!DNL Epsilon] Event API)。
+* **[!DNL Mixpanel]事件擴充功能**：[[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=zh-Hant) 擴充功能可讓客戶利用事件轉送在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取事件資訊並使用 Track Events API 將其傳送到 [!DNL Mixpanel]。
 
 ## 2023 年 1 月 25 日
 

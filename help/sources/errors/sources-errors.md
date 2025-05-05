@@ -114,7 +114,7 @@ ht-degree: 90%
 | `1350-400` | 錯誤的請求 | 來源中沒有提供用於篩選的運運算元。 請提供具有適當運運算元的有效篩選要求，然後再試一次。 |
 | `1351-400` | 錯誤的請求 | 提供的運運算元{operator}不支援此聯結器的來源篩選。 請提供有效的運運算元，然後再試一次。 |
 | `1352-400` | 錯誤的請求 | 提供的運運算元{operator}無法對應到{ql}任何支援的原生運運算元。 請提供有效的運運算元，然後再試一次。 |
-| `1353-400` | 錯誤的請求 | {connectorType} 連接器尚不支援在來源進行篩選。請在文件中查看支援的連接器: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
+| `1353-400` | 錯誤的請求 | {connectorType} 連接器尚不支援在來源進行篩選。請在文件中查看支援的連接器: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=zh-Hant. |
 | `1354-400` | 錯誤的請求 | 查詢語言{ql}尚未支援來源處的篩選。 請提供有效的查詢語言，然後再試一次。 |
 | `1355-400` | 錯誤的請求 | 提供的篩選類型無效。支援的篩選類型為: PQL。請提供有效的篩選類型，然後再試一次。 |
 | `1356-400` | 錯誤的請求 | 提供的篩選類型無效。支持的篩選格式為: pql/json。請提供有效的篩選格式，然後再試一次。 |

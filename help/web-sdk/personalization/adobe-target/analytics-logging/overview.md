@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 登入Experience Platform Web SDK的Adobe Analytics for Target (A4T)登入
 
-使用Adobe Target進行個人化時，您可以選擇您要使用哪個系統進行效能測量。 每個[Target活動](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)可讓您在Target報告與Adobe Analytics報告之間選取。
+使用Adobe Target進行個人化時，您可以選擇您要使用哪個系統進行效能測量。 每個[Target活動](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=zh-Hant)可讓您在Target報告與Adobe Analytics報告之間選取。
 
 如果您正在使用Analytics報表，Adobe Target必須向Analytics傳達下列內容：
 
@@ -27,7 +27,7 @@ Adobe Experience Platform Web SDK支援兩種型別的Analytics Logging for Targ
 | 記錄方法 | 說明 |
 | --- | --- |
 | 伺服器端Analytics記錄 | 所有透過Edge Network傳送的Analytics點選，都會在伺服器端以Target詳細資料增加，不必經過點選拼接程式。 |
-| 使用者端分析記錄 | Target資料會傳回使用者端，可讓您使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手動增加資料並傳送至Analytics。 |
+| 使用者端分析記錄 | Target資料會傳回使用者端，可讓您使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hant)手動增加資料並傳送至Analytics。 |
 
 記錄方法取決於您是否已在設定的[資料流](../../../../datastreams/overview.md)上啟用Adobe Analytics：
 

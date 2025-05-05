@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 存取回應Token
 
-從Adobe Target傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，其為有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
+從Adobe Target傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)，其為有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
 
 若要存取任何個人化內容，請在傳送事件時提供回呼函式。 SDK收到來自伺服器的成功回應後，就會呼叫此回呼。 您的回撥將會提供`result`物件，其中可能包含包含任何傳回的個人化內容的`propositions`屬性。 以下是提供回呼函式的範例。
 

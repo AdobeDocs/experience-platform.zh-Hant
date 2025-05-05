@@ -159,12 +159,12 @@ Experience Platform UI的頂端導覽列會顯示您目前登入的組織，並�
 
 ### [!UICONTROL 同盟資料]
 
-**[!UICONTROL 模型]**&#x200B;區段可讓您設計和建立定義資料結構、關係和限制的資料模型和結構描述。 您可以在[同盟對象構成使用手冊](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas)中找到有關資料模型和結構描述的詳細資訊。
+**[!UICONTROL 模型]**&#x200B;區段可讓您設計和建立定義資料結構、關係和限制的資料模型和結構描述。 您可以在[同盟對象構成使用手冊](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/config/datamodel/schemas)中找到有關資料模型和結構描述的詳細資訊。
 
 **[!UICONTROL 稽核軌跡]**&#x200B;區段提供已即時對您的環境進行的所有動作和事件的詳細時間順序記錄。 您可以在[同盟對象組合使用手冊](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail)中找到更多有關稽核軌跡的資訊。
 
 
-**[!UICONTROL 同盟資料庫]**&#x200B;區段可讓您將Adobe Experience Platform連線至您的企業資料倉儲。 您可以在[同盟對象組合使用手冊](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db)中找到有關連線到同盟資料庫的詳細資訊。
+**[!UICONTROL 同盟資料庫]**&#x200B;區段可讓您將Adobe Experience Platform連線至您的企業資料倉儲。 您可以在[同盟對象組合使用手冊](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/config/federated-db)中找到有關連線到同盟資料庫的詳細資訊。
 
 ### [!UICONTROL Decisioning]
 

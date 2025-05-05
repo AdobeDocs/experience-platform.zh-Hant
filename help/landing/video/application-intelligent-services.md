@@ -20,8 +20,8 @@ ht-degree: 5%
 
 若要深入瞭解，請使用連結來瀏覽每個個別應用程式的檔案：
 
-* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html)
-* [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=zh-Hant)
+* [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html?lang=zh-Hant)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=zh-Hant)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=zh-Hant)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](../../rtcdp/overview.md)

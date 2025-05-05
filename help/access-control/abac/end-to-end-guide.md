@@ -67,7 +67,7 @@ Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICO
 >id="platform_permissions_labels_about"
 >title="什麼是標籤？"
 >abstract="根據適用於相關資料的使用情況和存取原則，使用標籤將資料集和欄位進行分類。Adobe Experience Platform 提供數個 Adobe 定義的<strong>核心</strong>資料使用標籤，涵蓋適用於資料治理的各種常見限制。例如 RHD (受監管的健康資料) 這種敏感資料 <strong>S</strong> 標籤，可以將關於受保護的健康資訊 (PHI) 的資料加以分類。您也可以定義符合本身組織需求的自訂標籤。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant#understanding-data-usage-labels" text="資料使用標籤概觀"
 
 角色是分類與您的Experience Platform執行個體互動的使用者型別的方法，也是存取控制原則的建置組塊。 角色具有一組指定的許可權，而您組織的成員可以根據他們需要的存取範圍，指派一或多個角色。
 
@@ -140,7 +140,7 @@ Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICO
 
 >[!NOTE]
 >
-> 使用[物件層級存取控制](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)，將在[!UICONTROL 許可權]工作區中建立的標籤（例如上方的區段標籤）指派給Adobe Journey Optimizer中的各種物件。
+> 使用[物件層級存取控制](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/access-control/object-based-access)，將在[!UICONTROL 許可權]工作區中建立的標籤（例如上方的區段標籤）指派給Adobe Journey Optimizer中的各種物件。
 
 ## 啟動存取控制原則 {#policy}
 
@@ -168,19 +168,19 @@ Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICO
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=zh-Hant" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=zh-Hant#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=zh-Hant#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"

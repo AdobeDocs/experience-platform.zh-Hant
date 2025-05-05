@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B版本中的結構描述
 description: 概述Adobe Real-time Customer Data Platform B2B Edition中Experience Data Model (XDM)結構描述的作用。
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt

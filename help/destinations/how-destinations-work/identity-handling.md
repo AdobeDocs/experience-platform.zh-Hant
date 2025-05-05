@@ -88,7 +88,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Audience Manager支援這些廣告目的地的絕大部分(這些目的地型別在Audience Manager中稱為以裝置為基礎的目的地)。 檢視Audience Manager[&#128279;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)中所有支援的以裝置為基礎的目的地的清單。 Experience Platform中只列出少數幾個。 如需在Experience Platform和Audience Manager之間共用資料的資訊，請閱讀[啟用從Experience Platform到Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data)的資料共用的區段。 目前沒有支援更多協力廠商Cookie目的地的計畫。
+>Audience Manager支援這些廣告目的地的絕大部分(這些目的地型別在Audience Manager中稱為以裝置為基礎的目的地)。 檢視Audience Manager[&#128279;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=zh-Hant)中所有支援的以裝置為基礎的目的地的清單。 Experience Platform中只列出少數幾個。 如需在Experience Platform和Audience Manager之間共用資料的資訊，請閱讀[啟用從Experience Platform到Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#enable-aep-to-aam-data)的資料共用的區段。 目前沒有支援更多協力廠商Cookie目的地的計畫。
 
 ## 企業目的地 {#enterprise-destinations}
 

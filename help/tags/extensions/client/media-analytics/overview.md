@@ -174,7 +174,7 @@ MA 擴充功能會將 `get-instance` 模組和 `media-heartbeat` 共用模組公
    ...
    ```
 
-1. 使用 Media Heartbeat 例項，並按照 [Media SDK JS 文件](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html)和 [JS API 文件](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) 中的說明來實作媒體追蹤功能。
+1. 使用 Media Heartbeat 例項，並按照 [Media SDK JS 文件](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=zh-Hant)和 [JS API 文件](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) 中的說明來實作媒體追蹤功能。
 
 >[!NOTE]
 >

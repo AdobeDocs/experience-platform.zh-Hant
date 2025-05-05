@@ -17,23 +17,23 @@ ht-degree: 0%
 
 ## 一般指引 {#general-guidance}
 
-* 填寫目的地檔案的[範本](./self-service-template.md)時，請參閱Adobe貢獻者指南，以取得有關[連結](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html)、[表格](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#tables)、[支援的Markdown語法](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)、[撰寫指引](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html)等專案的資訊。
+* 填寫目的地檔案的[範本](./self-service-template.md)時，請參閱Adobe貢獻者指南，以取得有關[連結](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=zh-Hant)、[表格](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hant#tables)、[支援的Markdown語法](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hant)、[撰寫指引](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=zh-Hant)等專案的資訊。
 * 請勿在產品檔案中包含觀察和估計。
 * 在Experience Platform檔案中，Adobe作者會使用&#x200B;**粗體格式**&#x200B;來參照使用者介面控制項，如下所示：
-   * 移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 檢視在[目的地教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination)中如何記錄使用者介面控制項的範例。
+   * 移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 檢視在[目的地教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#select-destination)中如何記錄使用者介面控制項的範例。
 
 ## 寫作風格
 
 >[!IMPORTANT]
 >
->開始編寫目的地檔案頁面之前，請先閱讀[Adobe檔案的撰寫指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html)。
+>開始編寫目的地檔案頁面之前，請先閱讀[Adobe檔案的撰寫指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=zh-Hant)。
 
 * 讓您的句子保持簡短，並快速切入正題。 如果您的句子超過20個字或使用了多個逗號，請考慮將其分成個別的句子。 長度超過20個字的句子對讀者來說特別具有挑戰性。
 * 不要過於客氣。 避免在技術檔案中使用「請」或「請……」。
 
 ## 連結 {#linking}
 
-請依照提供的檔案範本操作，不要編輯範本中現有的連結。 加入新連結時，請閱讀[在貢獻者指南的檔案](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html)中使用連結。
+請依照提供的檔案範本操作，不要編輯範本中現有的連結。 加入新連結時，請閱讀[在貢獻者指南的檔案](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=zh-Hant)中使用連結。
 
 ## 品牌指南 {#branding}
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ## 影像和熒幕擷取畫面 {#images-and-screenshots}
 
-* 如需[如何連結至影像](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images)的相關資訊，請參閱貢獻者指南。
+* 如需[如何連結至影像](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hant#images)的相關資訊，請參閱貢獻者指南。
 * 使用熒幕擷取畫面時，請確定您的熒幕擷取畫面足以擷取整個Experience Platform UI畫面。
 * 標示影像以反白顯示頁面上的特定控制項或標籤時，請嘗試遵循Experience Platform檔案團隊使用的標示樣式。 請注意[此熒幕擷圖](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency)中以設定檔為基礎如何反白顯示。
 * 請使用`png`格式影像。

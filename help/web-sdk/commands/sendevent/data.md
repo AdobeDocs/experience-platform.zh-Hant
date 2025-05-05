@@ -48,4 +48,4 @@ alloy("sendEvent", {
 
 ## 搭配Adobe Analytics使用`data`物件 {#analytics}
 
-您可以搭配Adobe Analytics使用`data`物件，將資料傳送至沒有XDM結構描述的報表套裝。 變數已設定為使用與[!DNL AppMeasurement]變數相同的語法，以簡化Web SDK的升級程式。 如需詳細資訊，請參閱Adobe Analytics實作指南中的[資料物件變數對應至Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)。
+您可以搭配Adobe Analytics使用`data`物件，將資料傳送至沒有XDM結構描述的報表套裝。 變數已設定為使用與[!DNL AppMeasurement]變數相同的語法，以簡化Web SDK的升級程式。 如需詳細資訊，請參閱Adobe Analytics實作指南中的[資料物件變數對應至Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/data-var-mapping)。

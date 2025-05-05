@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->本檔案適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
+>本檔案適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/multi-cloud)。
 >
 >AWS上的[客戶自控金鑰](../overview.md) (CMK)支援Privacy and Security Shield，但不適用於Healthcare Shield。 Azure上的CMK同時支援Privacy和Security Shield以及Healthcare Shield。
 
 使用本指南，透過Amazon Web Services (AWS)金鑰管理服務(KMS)建立、管理和控制Adobe Experience Platform的加密金鑰，來保護您的資料。 此整合可簡化法規遵循、透過自動化簡化作業，並免除維護您自己的關鍵管理基礎建設的必要性。
 
-如需Customer Journey Analytics的特定指示，請參閱[Customer Journey Analytics CMK檔案](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+如需Customer Journey Analytics的特定指示，請參閱[Customer Journey Analytics CMK檔案](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >

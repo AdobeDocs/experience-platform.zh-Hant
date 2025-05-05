@@ -21,11 +21,11 @@ ht-degree: 8%
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|--------------------------------------------------------------|
-| [[!UICONTROL 章節已完成]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-complete) | `isCompleted` | 布林值 | 章節是否已完成。 |
-| [[!UICONTROL 章節識別碼]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter) | `ID` | 字串 | 自動產生的章節識別碼。 |
-| [[!UICONTROL 章節長度或持續時間]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | 整數 | 章節長度 (秒數)。 |
-| [[!UICONTROL 章節名稱]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | 字串 | 章節和/或區段名稱。 |
-| [[!UICONTROL 章節位移]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | 整數 | 內容內從頭開始的章節位移（以秒為單位）。 |
-| [[!UICONTROL 章節位置]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | 整數 | 內容內的章節位置（索引、整數）。 |
-| [[!UICONTROL 章節已開始]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-start) | `isStarted` | 布林值 | 章節是否已開始。 |
-| [[!UICONTROL 章節時間已播放]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-time-spent) | `timePlayed` | 整數 | 章節逗留時間（秒數）。 |
+| [[!UICONTROL 章節已完成]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-complete) | `isCompleted` | 布林值 | 章節是否已完成。 |
+| [[!UICONTROL 章節識別碼]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter) | `ID` | 字串 | 自動產生的章節識別碼。 |
+| [[!UICONTROL 章節長度或持續時間]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-length) | `length` | 整數 | 章節長度 (秒數)。 |
+| [[!UICONTROL 章節名稱]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-name) | `friendlyName` | 字串 | 章節和/或區段名稱。 |
+| [[!UICONTROL 章節位移]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-offset) | `offset` | 整數 | 內容內從頭開始的章節位移（以秒為單位）。 |
+| [[!UICONTROL 章節位置]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-position) | `index` | 整數 | 內容內的章節位置（索引、整數）。 |
+| [[!UICONTROL 章節已開始]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-start) | `isStarted` | 布林值 | 章節是否已開始。 |
+| [[!UICONTROL 章節時間已播放]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-time-spent) | `timePlayed` | 整數 | 章節逗留時間（秒數）。 |

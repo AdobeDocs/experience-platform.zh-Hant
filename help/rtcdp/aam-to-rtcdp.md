@@ -17,7 +17,7 @@ ht-degree: 86%
 
 ## 1. 考慮 Audience Manager 中的資料架構
 
-由於您考慮從 Audience Manager 進化到 Real-Time CDP，現在是分析您的 [Audience Manager 區段](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html)並確定構成這些區段的是哪些[訊號](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html)、[特徵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html)和[規則](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section)的關鍵性時刻。
+由於您考慮從 Audience Manager 進化到 Real-Time CDP，現在是分析您的 [Audience Manager 區段](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=zh-Hant)並確定構成這些區段的是哪些[訊號](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=zh-Hant)、[特徵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=zh-Hant)和[規則](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=zh-Hant#segment-builder-section)的關鍵性時刻。
 
 此外，需考慮您目前在 Audience Manager 中使用的資料來源。
 
@@ -41,7 +41,7 @@ Adobe 建議您依照下列方式將區段分類：
 
 ## 4. 現在您在 Audience Manager 中已有哪些目的地可以開始移動到 Real-Time CDP？
 
-Adobe 強烈建議應將在 Audience Manager 中啟動至[以人物為基礎的目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)的區段透過 [!UICONTROL &#x200B; Audience Manager 來源連接器]推送至 Real-Time CDP，然後再透過 Real-Time CDP 啟動。
+Adobe 強烈建議應將在 Audience Manager 中啟動至[以人物為基礎的目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=zh-Hant)的區段透過 [!UICONTROL &#x200B; Audience Manager 來源連接器]推送至 Real-Time CDP，然後再透過 Real-Time CDP 啟動。
 
 Audience Manager 中提供的所有以人物為基礎的目標 - [Facebook](/help/destinations/catalog/social/facebook.md)、[[!UICONTROL Google 目標客戶比對]](/help/destinations/catalog/advertising/google-customer-match.md)、[LinkedIn](/help/destinations/catalog/social/linkedin.md) - 也可在 Real-Time CDP 中使用。
 

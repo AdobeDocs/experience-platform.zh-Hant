@@ -30,7 +30,7 @@ Adobe Campaign Managed Cloud Services來源可讓您將Adobe Campaign v8傳送�
 
 >[!IMPORTANT]
 >
->您必須能存取Adobe Campaign v8使用者端主控台，才能在Campaign中檢視記錄資料。 如需如何下載及安裝使用者端主控台的詳細資訊，請瀏覽[Campaign v8檔案](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html)。
+>您必須能存取Adobe Campaign v8使用者端主控台，才能在Campaign中檢視記錄資料。 如需如何下載及安裝使用者端主控台的詳細資訊，請瀏覽[Campaign v8檔案](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=zh-Hant)。
 
 透過使用者端主控台登入您的Campaign v8執行個體。 在[!DNL Explorer]標籤下，選取[!DNL Administration]，然後選取[!DNL Configuration]。 接著，選取[!DNL Data schemas]，然後套用`broadLog`篩選器以取得名稱或標籤。 在出現的清單中，選取名稱為`broadLogRcp`的收件者傳遞記錄來源結構描述。
 

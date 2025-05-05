@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Audience Manager 擴充啟用
 
-Audience Manager Expanded Activation以Adobe Experience Platform為基礎，可協助現有[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)使用者從Real-Time CDP啟用其對象至[social](../destinations/catalog/social/overview.md)和[advertising](../destinations/catalog/advertising/overview.md)目的地平台，例如[Facebook](../destinations/catalog/social/facebook.md)、[Google Ads](../destinations/catalog/advertising/google-ads-destination.md)等。
+Audience Manager Expanded Activation以Adobe Experience Platform為基礎，可協助現有[Audience Manager](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/aam-home)使用者從Real-Time CDP啟用其對象至[social](../destinations/catalog/social/overview.md)和[advertising](../destinations/catalog/advertising/overview.md)目的地平台，例如[Facebook](../destinations/catalog/social/facebook.md)、[Google Ads](../destinations/catalog/advertising/google-ads-destination.md)等。
 
 >[!IMPORTANT]
 >
@@ -37,8 +37,8 @@ Audience Manager Expanded Activation採用Adobe Experience Platform的概念和�
 
 若要透過[!DNL Expanded Activation]啟用對象，請確定您的Audience Manager對象是以&#x200B;**雜湊電子郵件地址**&#x200B;為基礎。 根據您的Audience Manager使用情況，有兩種方式可確保這一點：
 
-* 如果您使用[Audience Manager以人物為基礎的目的地](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview)功能，表示您已在Audience Manager中擷取雜湊電子郵件地址。 在此情況下，您不需要執行其他步驟。 您可以跳到[透過[展開啟用]啟用對象](activate-audiences.md)。
-* 如果您&#x200B;_不是_&#x200B;使用[Audience Manager People-based Destinations](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview)功能，您必須在Audience Manager中建立新的資料來源，並使用它來儲存雜湊電子郵件地址。 如需瞭解如何設定雜湊電子郵件工作流程的資料來源[，請參閱相關檔案](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails)。 在您於Audience Manager資料來源中內嵌雜湊電子郵件地址後，請閱讀有關[透過展開啟用啟用對象](activate-audiences.md)的檔案。
+* 如果您使用[Audience Manager以人物為基礎的目的地](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview)功能，表示您已在Audience Manager中擷取雜湊電子郵件地址。 在此情況下，您不需要執行其他步驟。 您可以跳到[透過[展開啟用]啟用對象](activate-audiences.md)。
+* 如果您&#x200B;_不是_&#x200B;使用[Audience Manager People-based Destinations](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview)功能，您必須在Audience Manager中建立新的資料來源，並使用它來儲存雜湊電子郵件地址。 如需瞭解如何設定雜湊電子郵件工作流程的資料來源[，請參閱相關檔案](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/features/data-sources/create-data-source-hashed-emails)。 在您於Audience Manager資料來源中內嵌雜湊電子郵件地址後，請閱讀有關[透過展開啟用啟用對象](activate-audiences.md)的檔案。
 
 ## 後續步驟 {#next-steps}
 

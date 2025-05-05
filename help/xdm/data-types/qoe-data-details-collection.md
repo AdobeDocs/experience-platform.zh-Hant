@@ -23,9 +23,9 @@ ht-degree: 6%
 
 | 顯示名稱 | 屬性 | 資料類型 | 必要 | 說明 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL 位元速率]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | 整數 | 無 | 位元速率值（以每秒位元組數為單位）。 |
-| [[!UICONTROL 掉格]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | 整數 | 無 | 播放期間掉格的總數。 |
-| 每秒[[!UICONTROL 個影格]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | 整數 | 無 | 目前的串流影格速率（以每秒的影格數為單位）。 |
-| [[!UICONTROL 開始時間]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | 整數 | 無 | 視訊載入與開始之間的持續時間（以秒為單位）。 |
+| [[!UICONTROL 位元速率]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=zh-Hant#average-bitrate) | `bitrate` | 整數 | 無 | 位元速率值（以每秒位元組數為單位）。 |
+| [[!UICONTROL 掉格]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=zh-Hant#dropped-frames) | `droppedFrames` | 整數 | 無 | 播放期間掉格的總數。 |
+| 每秒[[!UICONTROL 個影格]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=zh-Hant#frames-per-second) | `framesPerSecond` | 整數 | 無 | 目前的串流影格速率（以每秒的影格數為單位）。 |
+| [[!UICONTROL 開始時間]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=zh-Hant#time-to-start-1) | `timeToStart` | 整數 | 無 | 視訊載入與開始之間的持續時間（以秒為單位）。 |
 
 {style="table-layout:auto"}

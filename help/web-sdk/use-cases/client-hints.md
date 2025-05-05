@@ -119,11 +119,11 @@ Web SDK預設會停用高平均資訊量使用者端提示。 若要啟用它們
 
 ### 依賴高平均資訊量使用者端提示的Adobe Analytics報告 {#analytics}
 
-[作業系統](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)維度包含儲存為高平均資訊量使用者端提示的作業系統版本。 如果未啟用高平均資訊量使用者端提示，從Chromium瀏覽器收集點選的作業系統版本可能會不準確。
+[作業系統](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=zh-Hant)維度包含儲存為高平均資訊量使用者端提示的作業系統版本。 如果未啟用高平均資訊量使用者端提示，從Chromium瀏覽器收集點選的作業系統版本可能會不準確。
 
 ### 依賴高平均資訊量使用者端提示的Audience Manager特徵 {#aam}
 
-[!DNL Google]已更新[!DNL Chrome]瀏覽器功能，以將透過`User-Agent`標題收集的資訊減至最少。 因此，使用[DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant)的Audience Manager客戶將不再收到以[平台層級金鑰](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html)為基礎之特徵的可靠資訊。
+[!DNL Google]已更新[!DNL Chrome]瀏覽器功能，以將透過`User-Agent`標題收集的資訊減至最少。 因此，使用[DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant)的Audience Manager客戶將不再收到以[平台層級金鑰](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=zh-Hant)為基礎之特徵的可靠資訊。
 
 使用平台層級金鑰進行目標定位的Audience Manager客戶必須切換至[Experience PlatformWeb SDK](/help/web-sdk/home.md) (而非[DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant))，並啟用[高平均資訊量使用者端提示](#enabling-high-entropy-client-hints)以繼續接收可靠的特徵資料。
 

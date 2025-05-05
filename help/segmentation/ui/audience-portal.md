@@ -102,7 +102,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | ----- | ----------- |
 | [!UICONTROL 名稱] | 對象名稱。 |
 | [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
-| [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)和[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)。 |
+| [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)和[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)。 |
 | [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括`Draft`、`Inactive`和`Published`。 如需生命週期狀態的詳細資訊，包括不同狀態的意義，以及如何將對象移至不同生命週期狀態，請參閱分段常見問答集[&#128279;](../faq.md#lifecycle-status)的生命週期狀態區段。 |
 | [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括[!UICONTROL 批次]、[!UICONTROL 串流]、[!UICONTROL Edge]和[!UICONTROL 未排程]。 |
 | [!UICONTROL 上次更新者] | 上次更新對象的人員名稱。 |
@@ -138,7 +138,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![搜尋列已反白顯示。](../images/ui/audience-portal/browse-audience-search.png)
 
-如需[!DNL Unified Search]的詳細資訊，包括支援的功能，請閱讀[整合式搜尋檔案](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html)。
+如需[!DNL Unified Search]的詳細資訊，包括支援的功能，請閱讀[整合式搜尋檔案](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=zh-Hant)。
 
 #### 標記 {#tags}
 
@@ -203,7 +203,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 | 篩選器 | 說明 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)和[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)。 |
+| [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)和[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)。 |
 | [!UICONTROL 有任何標籤] | 可讓您依標籤篩選。 您可以在&#x200B;**[!UICONTROL 具有任何標籤]**&#x200B;和&#x200B;**[!UICONTROL 具有所有標籤]**&#x200B;之間選取。 選取&#x200B;**[!UICONTROL 具有任何標籤]**&#x200B;時，篩選的對象將包含您已新增的&#x200B;**任何**&#x200B;標籤。 選取&#x200B;**[!UICONTROL 具有所有標籤]**&#x200B;時，篩選的對象必須包含您已新增的&#x200B;**所有**&#x200B;標籤。 |
 | [!UICONTROL 生命週期狀態] | 可讓您根據對象的生命週期狀態進行篩選。 可用的選項包括[!UICONTROL 已刪除]、[!UICONTROL 草稿]、[!UICONTROL 非使用中]和[!UICONTROL 已發佈]。 |
 | [!UICONTROL 更新頻率] | 可讓您根據對象的更新頻率（評估方法）進行篩選。 可用的選項包括[!UICONTROL 批次]、[!UICONTROL 串流]和[!UICONTROL Edge] |

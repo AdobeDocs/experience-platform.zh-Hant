@@ -19,7 +19,7 @@ ht-degree: 6%
 
 ## 先決條件
 
-若要設定[!DNL Experience Platform]的存取控制，您必須擁有擁有[!DNL Experience Platform]產品整合之組織的管理員許可權。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
+若要設定[!DNL Experience Platform]的存取控制，您必須擁有擁有[!DNL Experience Platform]產品整合之組織的管理員許可權。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
 
 ## 可用的儀表板許可權 {#available-permissions}
 

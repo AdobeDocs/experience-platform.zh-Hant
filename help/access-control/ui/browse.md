@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # 選取產品設定檔以管理其存取控制許可權
 
-若要透過Adobe Admin Console設定[!DNL Experience Platform]的存取控制，您必須是擁有[!DNL Experience Platform]訂閱之組織的管理員。 雖然Adobe支援組織的彈性管理員階層，但您必須擁有系統管理員、產品管理員或產品設定檔管理員許可權，才能設定存取控制。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
+若要透過Adobe Admin Console設定[!DNL Experience Platform]的存取控制，您必須是擁有[!DNL Experience Platform]訂閱之組織的管理員。 雖然Adobe支援組織的彈性管理員階層，但您必須擁有系統管理員、產品管理員或產品設定檔管理員許可權，才能設定存取控制。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
 
 如果您沒有管理員許可權，請聯絡您的系統管理員以獲得存取權。
 

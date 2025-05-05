@@ -423,7 +423,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 在測試目的地的程式中，您必須使用Experience Platform UI來建立對象，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
 * [建立對象 — 檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
-* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)
 
 ## 步驟6：發佈您的目的地 {#publish-destination}
 

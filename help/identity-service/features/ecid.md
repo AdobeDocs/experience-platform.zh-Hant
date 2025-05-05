@@ -31,8 +31,8 @@ ECID為客戶身分識別奠定基礎。 使用[[!DNL Identity Service]](../home
 
 下列檔案提供進一步資源，讓您瞭解不同Experience Platform和Experience Cloud應用程式中的ECID：
 
-* 若要搭配網站實作使用ECID，請參閱[Experience Cloud Identity服務](https://experienceleague.adobe.com/docs/id-service/using/home.html)的檔案。
-* 若要瞭解ECID如何與應用程式和行動網站內容搭配使用，請參閱應用程式和行動網站之間[訪客追蹤的檔案](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios)。
+* 若要搭配網站實作使用ECID，請參閱[Experience Cloud Identity服務](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)的檔案。
+* 若要瞭解ECID如何與應用程式和行動網站內容搭配使用，請參閱應用程式和行動網站之間[訪客追蹤的檔案](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=zh-Hant#sdk-reference-ios)。
 * 如果您使用[標籤](../../tags/home.md)，部署這些工具會非常簡單且易於管理。
 * 請參閱[Privacy Service檔案](../../privacy-service/identity-data.md)，以取得有關使用ECID促進遵守GDPR等隱私權法規的資訊。
 * 如需有關具有Experience Platform內容的ECID的詳細資訊，請參閱[身分識別服務總覽](../home.md)和[身分識別名稱空間總覽](./namespaces.md)。

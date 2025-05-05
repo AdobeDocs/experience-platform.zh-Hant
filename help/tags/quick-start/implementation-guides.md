@@ -17,8 +17,8 @@ ht-degree: 0%
 
 以下是標籤和事件轉送的端對端實作指南清單。 這些指南是專為想要瞭解如何在其網站和行動應用程式中實施Adobe Experience Cloud產品的前端開發人員和技術行銷人員所設計。
 
-* [為網站實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
-* [實作Android應用程式的標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html)
-* [為iOS Objective-C應用程式實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-objective-c-apps/overview.html)
-* [為iOS Swift應用程式實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-swift-apps/overview.html)
-* [實作事件轉送(先前稱為Adobe Experience Platform Launch Server Side)](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/overview.html)
+* [為網站實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html?lang=zh-Hant)
+* [實作Android應用程式的標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html?lang=zh-Hant)
+* [為iOS Objective-C應用程式實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-objective-c-apps/overview.html?lang=zh-Hant)
+* [為iOS Swift應用程式實作標籤](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-swift-apps/overview.html?lang=zh-Hant)
+* [實作事件轉送(先前稱為Adobe Experience Platform Launch Server Side)](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/overview.html?lang=zh-Hant)

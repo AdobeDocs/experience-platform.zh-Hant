@@ -14,7 +14,7 @@ ht-degree: 89%
 
 >[!AVAILABILITY]
 >
->已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
 了解如何使用合作夥伴輔助的訪客識別為您的 Web 屬性訪客提供個人化的現場體驗。使用本教學課程了解 Experience Platform 和其他 Experience Cloud 解決方案中各種元素的實施順序，以便向經過身分驗證和未經身分驗證的訪客顯示個人化體驗。
 
@@ -73,7 +73,7 @@ ht-degree: 89%
 1. 作為&#x200B;**客戶**，您可授權&#x200B;**資料合作夥伴**&#x200B;有能力即時擷取對其他匿名網站訪客的分析。
 2. 作為&#x200B;**訪客**，您可在自己的屬性上部署用戶端資料庫，以呼叫&#x200B;**合作夥伴** API，且您可設定 Web SDK 或行動 SDK 並將合作夥伴提供的訊號發送到 Real-Time CDP。
 3. 瀏覽您的網站或應用程式時，**訪客**&#x200B;是由&#x200B;**合作夥伴**&#x200B;進行概率識別；合作夥伴會傳回屬性和 ID。
-4. Real-Time CDP 會執行邊緣分段來評估導入事件點擊，並持續從 [ECID 識別碼](https://experienceleague.adobe.com/docs/id-service/using/home.html)得到結果。
+4. Real-Time CDP 會執行邊緣分段來評估導入事件點擊，並持續從 [ECID 識別碼](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)得到結果。
 5. Adobe Target 使用邊緣分段輸出將體驗回供給&#x200B;**訪客**，讓他們的工作階段得到個人化體驗。
 6. 該事件將完整地保留下來，進行如分析和重新鎖定的下游工作流程。
 
@@ -157,7 +157,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 ![為您的新屬性填寫必填欄位。](/help/rtcdp/assets/partner-data/onsite-personalization/tag-property-fields.png)
 
-取得有關如何[建立標記屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)的完整資訊。
+取得有關如何[建立標記屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=zh-Hant)的完整資訊。
 
 接下來，您必須在屬性內安裝各種擴充功能。選取您的標記屬性，並導覽至[!UICONTROL 擴充功能]部分。
 
@@ -175,7 +175,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 在設定 Web SDK 螢幕中，向下導覽至&#x200B;**[!UICONTROL 資料流]**&#x200B;部分，並提供有關您正在使用的 Experience Platform 沙箱資訊。從下一個下拉式選單中，選取適當的沙箱以及在前面步驟中建立的資料流。您可以為所有其他環境選擇相同的沙箱和資料流數值。保持其他設定不變並選取「**[!UICONTROL 儲存]**」。
 
-取得[如何安裝 Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html)的完整資訊。
+取得[如何安裝 Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=zh-Hant)的完整資訊。
 
 #### 安裝 ID 服務擴充功能
 

@@ -61,7 +61,7 @@ Journey Optimizer網頁編輯器利用了名為&#x200B;_檢視_&#x200B;的概念
 
 若要完成一次性開發人員設定，需要執行下列步驟：
 
-1. 安裝[Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)，並檢查[Web Channel必要條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html)頁面。
+1. 安裝[Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)，並檢查[Web Channel必要條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=zh-Hant)頁面。
 
 2. 決定您要個人化之單頁應用程式中的所有XDM檢視。
 

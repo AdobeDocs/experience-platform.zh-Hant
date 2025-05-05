@@ -26,7 +26,7 @@ ht-degree: 1%
 
 這些變數稱為產品語法銷售變數。 如此即可收集資訊，例如依產品區分的「折扣金額」，或客戶搜尋結果中產品的「頁面位置」相關資訊。
 
-若要進一步瞭解如何使用產品語法，請參閱有關[使用產品語法實作eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax)的Adobe Analytics檔案。
+若要進一步瞭解如何使用產品語法，請參閱有關[使用產品語法實作eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=zh-Hant#implement-using-product-syntax)的Adobe Analytics檔案。
 
 以下各節概述存取[!DNL Analytics]資料集中的銷售變數所需的XDM欄位：
 
@@ -127,7 +127,7 @@ LIMIT 20
 | 內部搜尋：夏季襯衫 | 19.99 | 1 | 1 | 1 |
 | 內部搜尋：冬季帽子 | 12.99 | 1 | 1 | 1 |
 
-若要進一步瞭解如何使用轉換變數語法，請參閱有關[使用轉換變數語法實作eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax)的Adobe Analytics檔案。
+若要進一步瞭解如何使用轉換變數語法，請參閱有關[使用轉換變數語法實作eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=zh-Hant#implement-using-conversion-variable-syntax)的Adobe Analytics檔案。
 
 以下顯示的XDM欄位會在[!DNL Analytics]資料集中產生轉換變數語法：
 

@@ -26,8 +26,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 若要使用此API，您在Experience PlatformUI中必須有與目的地的現有連線。 閱讀[連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)以及[啟用設定檔和對象到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)以取得詳細資訊。
-> * 建立與目的地的連線後，在[瀏覽與目的地的連線時](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)，取得您應該用於此端點之API呼叫中的目的地執行個體識別碼。
+>* 若要使用此API，您在Experience PlatformUI中必須有與目的地的現有連線。 閱讀[連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)以及[啟用設定檔和對象到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=zh-Hant)以取得詳細資訊。
+> * 建立與目的地的連線後，在[瀏覽與目的地的連線時](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=zh-Hant)，取得您應該用於此端點之API呼叫中的目的地執行個體識別碼。
 >![UI影像如何取得目的地執行個體識別碼](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 開始使用目的地測試API操作 {#get-started}

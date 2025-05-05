@@ -24,7 +24,7 @@ ht-degree: 2%
 
 本教學課程需要您實際瞭解架構建立的需求。 繼續本指南之前，您應該先閱讀[建立和編輯結構描述的UI指南](./resources/schemas.md)。
 
-本指南說明如何使用機器學習(ML)演演算法建立結構描述，以從範例資料產生結構描述。 請參閱[手動結構描述建立工作流程手冊](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups)，以取得有關在結構描述編輯器中的[欄位式工作流程](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows)上建立結構描述或檔案的資訊，以增進您對結構描述建立程式的瞭解。
+本指南說明如何使用機器學習(ML)演演算法建立結構描述，以從範例資料產生結構描述。 請參閱[手動結構描述建立工作流程手冊](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups)，以取得有關在結構描述編輯器中的[欄位式工作流程](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/xdm/ui/field-based-workflows)上建立結構描述或檔案的資訊，以增進您對結構描述建立程式的瞭解。
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ ht-degree: 2%
 
 建立結構描述後，您可以視需要使用結構描述編輯器來進行進一步的修改。 您的新結構描述現在已準備好與您的資料來源整合，並用於資料分析。
 
-如需使用結構描述編輯器的詳細資訊，請參閱[編輯現有結構描述指南](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit)。
+如需使用結構描述編輯器的詳細資訊，請參閱[編輯現有結構描述指南](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/xdm/ui/resources/schemas#edit)。

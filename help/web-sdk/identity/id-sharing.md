@@ -53,7 +53,7 @@ Web SDK不需額外設定，即可接受查詢字串中的`ECID`值。
 
 行動裝置對網頁識別碼共用使用`adobe_mc`引數。 當`adobe_mc`引數存在且有效時，來自查詢字串的`ECID`會自動新增到對Edge Network發出的第一個要求中的身分對應。 所有後續Edge Network互動都會使用該`ECID`。
 
-有關如何將訪客ID從行動應用程式傳遞至WebView的詳細資訊，請參閱[處理WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation)的檔案。
+有關如何將訪客ID從行動應用程式傳遞至WebView的詳細資訊，請參閱[處理WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=zh-Hant#implementation)的檔案。
 
 ## 實作跨網域ID共用 {#cross-domain-sharing}
 

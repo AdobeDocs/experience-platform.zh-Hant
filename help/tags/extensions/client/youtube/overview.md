@@ -98,7 +98,7 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->對於無法對每個視訊元素使用多個eVar或prop的實作，可在Experience Platform中串連資料元素值，使用「分類規則產生器」工具剖析為分類報表(如[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)所述)，然後套用為Analysis Workspace中的區段。
+>對於無法對每個視訊元素使用多個eVar或prop的實作，可在Experience Platform中串連資料元素值，使用「分類規則產生器」工具剖析為分類報表(如[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=zh-Hant](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=zh-Hant)所述)，然後套用為Analysis Workspace中的區段。
 
 若要串連視訊資訊值，請建立名為「視訊中繼資料」的新資料元素，並將其設定為提取所有視訊資料元素（如上所列），接著將其彙整起來。 例如：
 

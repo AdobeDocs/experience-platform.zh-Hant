@@ -68,7 +68,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=zh-Hant)
 
 
 ### 設定網頁SDK
@@ -83,7 +83,7 @@ window.adobe.target.init(window, document, {
 
 ### 使用網頁SDK
 
-在Adobe Target的[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)中建立的內容，可由SDK自動擷取及轉譯。
+在Adobe Target的[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)中建立的內容，可由SDK自動擷取及轉譯。
 
 若要要求並自動轉譯Target選件，請使用`sendEvent`命令並將`renderDecisions`選項設定為`true`。 這麼做會強制SDK自動轉譯任何符合自動轉譯條件的個人化內容。
 
@@ -215,7 +215,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=zh-Hant)
 
 ### 使用網頁SDK
 
@@ -300,7 +300,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=zh-Hant)
 
 
 ### 使用網頁SDK
@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-從[專屬檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html)進一步瞭解`applyOffers`命令。
+從[專屬檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=zh-Hant)進一步瞭解`applyOffers`命令。
 
 
 ### 使用網頁SDK
@@ -490,7 +490,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=zh-Hant)
 
 ### 使用網頁SDK
 
@@ -665,7 +665,7 @@ alloy("sendEvent", {
 adobe.target.triggerView("homeView")
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=zh-Hant)
 
 
 ### 使用網頁SDK
@@ -691,7 +691,7 @@ alloy("sendEvent", {
 
 ## 如何運用回應Token
 
-從Adobe Target傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，其為有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
+從Adobe Target傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)，其為有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
 
 ### 使用at.js
 
@@ -705,7 +705,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)
 
 
 ### 使用網頁SDK
@@ -714,7 +714,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >確保您使用Experience Platform Web SDK 2.6.0版或更新版本。
 
-回應Token是`propositions`的一部分，在`sendEvent`命令的結果中顯示。 每個主張包含陣列`items`，而且如果在Target管理員UI中啟用回應Token，則每個專案都會填入`meta`物件。 [了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+回應Token是`propositions`的一部分，在`sendEvent`命令的結果中顯示。 每個主張包含陣列`items`，而且如果在Target管理員UI中啟用回應Token，則每個專案都會填入`meta`物件。 [了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)
 
 **範例**
 
@@ -880,7 +880,7 @@ Analytics裝載(`tnta` Token)應包含在使用[資料插入API](https://github.
 
 ![顯示Analytics伺服器端記錄工作流程的圖表](assets/a4t-server-side-atjs.png)
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=zh-Hant)
 
 ### 使用網頁SDK
 
@@ -964,7 +964,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=zh-Hant)
 
 ### 使用網頁SDK
 
@@ -1064,7 +1064,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=zh-Hant)
 
 
 ### 使用網頁SDK
@@ -1144,7 +1144,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=zh-Hant)
 
 ### 使用網頁SDK
 

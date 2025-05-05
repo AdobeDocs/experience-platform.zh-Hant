@@ -46,7 +46,7 @@ ht-degree: 8%
 - [資料集](../../catalog/datasets/overview.md)
 - [結構描述](../../xdm//home.md)
 - [客群](../../segmentation/home.md)
-- 來自Adobe Journey Optimizer的[歷程](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- 來自Adobe Journey Optimizer的[歷程](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
-> 上述步驟遵循Experience Platform使用者介面中的程式進行。 您可以透過各種端點使用API來遵循相同的步驟。 如需透過API提出每個要求的資訊，請參閱`sandboxes` [端點指南](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create)和`packages` [端點指南](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages)。
+> 上述步驟遵循Experience Platform使用者介面中的程式進行。 您可以透過各種端點使用API來遵循相同的步驟。 如需透過API提出每個要求的資訊，請參閱`sandboxes` [端點指南](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sandbox/api/sandboxes#create)和`packages` [端點指南](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sandbox/sandbox-tooling-api/packages)。
 
 ## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
 

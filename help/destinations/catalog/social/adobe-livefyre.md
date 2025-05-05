@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Adobe Livefyre可讓您發現、整理並發佈使用者產生的內容流到您的網站，以建立真實且高度個人化的體驗。
 
-Adobe Livefyre是Adobe Experience Platform中的社交擴充功能。 如需Adobe Livefyre的詳細資訊，請參閱[Livefyre實作指南](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html)。
+Adobe Livefyre是Adobe Experience Platform中的社交擴充功能。 如需Adobe Livefyre的詳細資訊，請參閱[Livefyre實作指南](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=zh-Hant)。
 
 此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 

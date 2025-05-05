@@ -236,7 +236,7 @@ AI助理會移除所有不必要的詳細資料，例如「專案名稱」或「
 * **已讀取的設定檔**
 * **資料集讀取**
 
-由於歷程非常靈活，而且可能涉及許多互連的物件，因此其[完整許可權](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions)會單獨記錄，並可能因您的特定使用案例而有所不同。
+由於歷程非常靈活，而且可能涉及許多互連的物件，因此其[完整許可權](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/access-control/privacy/high-low-permissions)會單獨記錄，並可能因您的特定使用案例而有所不同。
 
 ## 後續步驟
 

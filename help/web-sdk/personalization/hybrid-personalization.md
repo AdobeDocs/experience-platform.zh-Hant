@@ -39,7 +39,7 @@ Hybdrid個人化說明使用[Edge Network API](https://developer.adobe.com/data-
 1. Edge Network API會將個人化內容傳回至您的應用程式伺服器。
 1. 應用程式伺服器傳回HTML回應給使用者端瀏覽器，其中包含[身分識別與叢集Cookie](#cookies)。
 1. 在使用者端頁面上呼叫[!DNL Web SDK] `applyResponse`命令，傳入上一步驟之[!UICONTROL Edge Network API]回應的標題和內文。
-1. [!DNL Web SDK]會自動轉譯Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)選件和Journey Optimizer Web Channel專案，因為`renderDecisions`標幟已設為`true`。
+1. [!DNL Web SDK]會自動轉譯Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)選件和Journey Optimizer Web Channel專案，因為`renderDecisions`標幟已設為`true`。
 1. 透過`applyProposition`方法手動套用Target表單式[!DNL HTML]/[!DNL JSON]選件和Journey Optimizer程式碼式體驗，以根據主張中的個人化內容更新[!DNL DOM]。
 1. 對於Target表單式[!DNL HTML]/[!DNL JSON]選件和Journey Optimizer程式碼式體驗，必須手動傳送顯示事件，以指出已顯示傳回內容的時間。 這是透過`sendEvent`命令完成的。
 

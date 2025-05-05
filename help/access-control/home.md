@@ -17,7 +17,7 @@ Adobe Experience Platform的存取控制是透過[Adobe Experience Cloud](https:
 
 ## 存取控制階層與工作流程
 
-若要設定Experience Platform的存取控制，您必須對擁有Experience Platform產品的組織具有系統或產品管理員許可權。 可授予或撤銷許可權的最低角色為產品管理員。 可以管理許可權的其他管理員角色是系統管理員（無限制）。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
+若要設定Experience Platform的存取控制，您必須對擁有Experience Platform產品的組織具有系統或產品管理員許可權。 可授予或撤銷許可權的最低角色為產品管理員。 可以管理許可權的其他管理員角色是系統管理員（無限制）。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
 
 >[!NOTE]
 >

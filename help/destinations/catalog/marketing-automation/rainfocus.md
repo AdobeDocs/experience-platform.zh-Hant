@@ -158,4 +158,4 @@ ht-degree: 4%
 
 ## 其他資源 {#additional-resources}
 
-* [RainFocus串流Source聯結器](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [RainFocus串流Source聯結器](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sources/connectors/analytics/rainfocus)

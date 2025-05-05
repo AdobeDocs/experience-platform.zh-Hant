@@ -22,7 +22,7 @@ Customer AI與Adobe Experience Platform資料控管之間的整合，可讓您�
 
 在Experience Platform使用的資料集上建立的資料使用標籤和原則，可以在Customer AI設定工作流程中顯示。 這些標籤會阻止或警告使用已標籤欄位的使用者。
 
-此整合可讓您更有效率地管理合規性。 您組織中的資料管理員可以設定原則來限制使用。 因此，您可以使用符合資料管理員所定義原則的資料。 請閱讀[標籤和原則](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html)的相關檔案以深入瞭解。
+此整合可讓您更有效率地管理合規性。 您組織中的資料管理員可以設定原則來限制使用。 因此，您可以使用符合資料管理員所定義原則的資料。 請閱讀[標籤和原則](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=zh-Hant)的相關檔案以深入瞭解。
 
 ## 同意原則 {#consent-policy}
 
@@ -31,5 +31,5 @@ Customer AI會遵循您的同意偏好設定。 一旦您[設定並啟用您的�
 您可以在這裡深入瞭解此功能：
 
 [Customer AI快速入門](../../customer-ai/getting-started.md)
-[Adobe Experience Platform和應用程式](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
+[Adobe Experience Platform和應用程式](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=zh-Hant)
 [Adobe Experience Cloud架構圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=zh-Hant)

@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition中的存取控制
 description: 概述Adobe Real-time Customer Data Platform B2B Edition中存取控制的角色。
 feature: Access Control, Sandboxes
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '148'

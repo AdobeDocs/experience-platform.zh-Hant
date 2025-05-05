@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->在建立[!DNL Marketo Engage]來源連線和資料流之前，您必須先確定已在[!DNL Marketo]中對應您的Adobe組織ID [&#128279;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)。 此外，您也必須確定在建立來源連線和資料流之前，已完成[自動填入 [!DNL Marketo] B2B名稱空間和結構描述](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md)。
+>在建立[!DNL Marketo Engage]來源連線和資料流之前，您必須先確定已在[!DNL Marketo]中對應您的Adobe組織ID [&#128279;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=zh-Hant)。 此外，您也必須確定在建立來源連線和資料流之前，已完成[自動填入 [!DNL Marketo] B2B名稱空間和結構描述](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md)。
 
 本教學課程提供在UI中建立[!DNL Marketo Engage] （以下稱為「[!DNL Marketo]」）來源聯結器的步驟，以將B2B資料引進Adobe Experience Platform。
 

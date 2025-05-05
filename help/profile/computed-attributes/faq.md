@@ -99,4 +99,4 @@ ht-degree: 0%
 
 ## 如何將運算屬性用於Adobe Journey Optimizer？
 
-若要在歷程中使用計算屬性，您必須將`SystemComputedAttributes`欄位群組新增至Experience Platform資料來源。 如需設定Experience Platform資料來源的詳細資訊，請參閱[Adobe Experience Platform資料來源指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html)。
+若要在歷程中使用計算屬性，您必須將`SystemComputedAttributes`欄位群組新增至Experience Platform資料來源。 如需設定Experience Platform資料來源的詳細資訊，請參閱[Adobe Experience Platform資料來源指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=zh-Hant)。

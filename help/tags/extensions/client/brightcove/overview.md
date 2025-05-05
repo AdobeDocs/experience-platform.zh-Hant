@@ -100,7 +100,7 @@ Adobe Experience Platform中的每個標籤屬性都需要在「擴充功能」�
 
 >[!TIP]
 >
->若您不想為每個視訊元素布建多個eVar或prop，資料元素值會串連為替代方法。 接著，系統會使用「分類規則產生器」工具，將其剖析為分類報表。 如需詳細資訊，請參閱[分類規則產生器工具](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)檔案。 最後，這些區段可套用為Analysis Workspace中的區段。
+>若您不想為每個視訊元素布建多個eVar或prop，資料元素值會串連為替代方法。 接著，系統會使用「分類規則產生器」工具，將其剖析為分類報表。 如需詳細資訊，請參閱[分類規則產生器工具](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=zh-Hant)檔案。 最後，這些區段可套用為Analysis Workspace中的區段。
 >
 >若要這麼做，請建立「視訊中繼資料」之類的新資料元素，並將其設定為提取所有視訊資料元素（如上所列），接著將其串連。
 

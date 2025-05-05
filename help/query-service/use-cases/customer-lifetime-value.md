@@ -81,7 +81,7 @@ ht-degree: 0%
 * 啟用已排程區段的所有區段定義。
 * 啟用串流區段的指定區段定義。
 
-或者，您也可以參閱[區段產生器教學影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html)以取得詳細資訊。
+或者，您也可以參閱[區段產生器教學影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=zh-Hant)以取得詳細資訊。
 
 ## 為電子郵件行銷活動啟用對象 {#activate-audience-for-campaign}
 

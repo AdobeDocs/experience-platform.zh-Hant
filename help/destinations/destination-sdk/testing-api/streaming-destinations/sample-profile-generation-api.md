@@ -46,8 +46,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 若要使用此API，您在Experience Platform UI中必須有與目的地的現有連線。 閱讀[連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)以及[啟用設定檔和對象到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)以取得詳細資訊。
-> * 建立與目的地的連線後，在[瀏覽與目的地的連線時](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)，取得您應該用於此端點之API呼叫中的目的地執行個體識別碼。
+>* 若要使用此API，您在Experience Platform UI中必須有與目的地的現有連線。 閱讀[連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)以及[啟用設定檔和對象到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=zh-Hant)以取得詳細資訊。
+> * 建立與目的地的連線後，在[瀏覽與目的地的連線時](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=zh-Hant)，取得您應該用於此端點之API呼叫中的目的地執行個體識別碼。
 >![UI影像如何取得目的地執行個體識別碼](../../assets/testing-api/get-destination-instance-id.png)
 
 **API格式**
@@ -180,10 +180,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `segmentMembership` | 說明個人對象會籍的地圖物件。 如需`segmentMembership`的詳細資訊，請閱讀[對象成員資格詳細資料](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)。 |
+| `segmentMembership` | 說明個人對象會籍的地圖物件。 如需`segmentMembership`的詳細資訊，請閱讀[對象成員資格詳細資料](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=zh-Hant)。 |
 | `lastQualificationTime` | 此設定檔上次符合區段資格的時間戳記。 |
 | `xdm:status` | 字串欄位，指出是否已在目前請求中實現對象成員資格。 接受下列值： <ul><li>`realized`：設定檔是區段的一部分。</li><li>`exited`：設定檔正在退出對象，做為目前請求的一部分。</li></ul> |
-| `identityMap` | 描述個人各種身分值及其相關名稱空間的對應型別欄位。 如需`identityMap`的詳細資訊，請閱讀[結構描述組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap)。 |
+| `identityMap` | 描述個人各種身分值及其相關名稱空間的對應型別欄位。 如需`identityMap`的詳細資訊，請閱讀[結構描述組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant#identityMap)。 |
 
 {style="table-layout:auto"}
 

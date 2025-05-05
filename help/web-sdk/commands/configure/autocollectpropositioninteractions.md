@@ -47,7 +47,7 @@ ht-degree: 1%
 | 名稱 | 資料屬性 | 說明 |
 | --- | --- | --- |
 | [!DNL Label] | `data-aep-click-label` | 當標籤資料屬性存在於點按的元素上時，它會包含在傳送給[!DNL Edge Network]的互動詳細資訊中。 [!DNL Web SDK]會尋找以點選元素並向DOM樹狀結構行進開頭的標籤資料屬性。 [!DNL Web SDK]使用它找到的第一個標籤。 |
-| [!DNL Token] | `data-aep-click-token` | 在[Adobe Journey Optimizer程式碼型行銷活動](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)中運用決定原則時，請使用此Token。 您可以使用代號來區分點按了哪個決定原則專案。 當權杖資料屬性存在於點按的元素上時，它會包含在傳送給Edge Network的互動詳細資訊中。 [!DNL Web SDK]會尋找以點按並向DOM樹狀結構行進的元素開頭的語彙基元資料屬性。 [!DNL Web SDK]使用它找到的第一個權杖。 |
+| [!DNL Token] | `data-aep-click-token` | 在[Adobe Journey Optimizer程式碼型行銷活動](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/code-based-experience/get-started-code-based)中運用決定原則時，請使用此Token。 您可以使用代號來區分點按了哪個決定原則專案。 當權杖資料屬性存在於點按的元素上時，它會包含在傳送給Edge Network的互動詳細資訊中。 [!DNL Web SDK]會尋找以點按並向DOM樹狀結構行進的元素開頭的語彙基元資料屬性。 [!DNL Web SDK]使用它找到的第一個權杖。 |
 | [!DNL Interact ID] | `data-aep-interact-id` | 呈現主張時，[!DNL Web SDK]會自動將此唯一ID新增至容器元素。 網頁SDK使用此ID將[!DNL DOM]元素與主張建立關聯。 這是[!DNL Web SDK]所需的ID，因此您不應以任何方式加以變更。 您可以安全地忽略它。 |
 
 **範例**

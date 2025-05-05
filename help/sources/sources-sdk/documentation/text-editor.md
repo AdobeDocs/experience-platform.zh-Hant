@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe的投稿指南中的下列檔案可用來進一步支援您的說明檔案程式： <ul><li>[安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Adobe的投稿指南中的下列檔案可用來進一步支援您的說明檔案程式： <ul><li>[安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=zh-Hant)</li><li>[在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=zh-Hant)</li><li>[重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=zh-Hant)</li></ul>
 
 ## 先決條件
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如需詳細資訊，請參閱有關[在本機設定檔案](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository)的Git存放庫的教學課程。
+>如需詳細資訊，請參閱有關[在本機設定檔案](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=zh-Hant#create-a-local-clone-of-the-repository)的Git存放庫的教學課程。
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ## 為您的來源編寫檔案頁面
 
-將存放庫複製到本機電腦，並建立新分支後，您現在可以透過您選擇的[文字編輯器](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors)，開始為您的新來源編寫檔案頁面。
+將存放庫複製到本機電腦，並建立新分支後，您現在可以透過您選擇的[文字編輯器](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=zh-Hant#understand-markdown-editors)，開始為您的新來源編寫檔案頁面。
 
 Adobe建議您使用[Visual Studio Code](https://code.visualstudio.com/)，並安裝Adobe Markdown Authoring擴充功能。 若要安裝擴充功能，請啟動Visual Studio Code，然後從左側導覽區中選取&#x200B;**擴充功能**&#x200B;索引標籤。
 

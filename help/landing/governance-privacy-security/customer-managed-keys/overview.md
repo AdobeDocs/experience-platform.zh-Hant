@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform同時支援Microsoft Azure和Amazon Web Services (AWS)的客戶自控金鑰(CMK)。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 如果您的實作在AWS上執行，您可以選擇使用金鑰管理服務(KMS)進行Experience Platform資料加密。 如需支援之基礎結構的詳細資訊，請參閱[Experience Platform multi-cloud概述](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
+>Adobe Experience Platform同時支援Microsoft Azure和Amazon Web Services (AWS)的客戶自控金鑰(CMK)。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 如果您的實作在AWS上執行，您可以選擇使用金鑰管理服務(KMS)進行Experience Platform資料加密。 如需支援之基礎結構的詳細資訊，請參閱[Experience Platform multi-cloud概述](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/multi-cloud)。
 >
 >若要瞭解AWS KMS中加密金鑰的建立與管理，請參閱[AWS KMS資料加密指南](./aws/configure-kms.md)。 若為Azure實作，請參閱[Azure Key Vault設定指南](./azure/azure-key-vault-config.md)。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 若要在Adobe Experience Platform中檢視及存取[!UICONTROL 加密]區段，您必須已建立角色，並已將[!UICONTROL 管理客戶管理的金鑰]許可權指派給該角色。  任何具有[!UICONTROL 管理客戶受管理金鑰]許可權的使用者都可以為其組織啟用CMK。
 
-如需在Experience Platform中指派角色和許可權的詳細資訊，請參閱[設定許可權檔案](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)。
+如需在Experience Platform中指派角色和許可權的詳細資訊，請參閱[設定許可權檔案](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=zh-Hant)。
 
 ### Azure專屬必要條件
 
@@ -109,7 +109,7 @@ AWS託管的Experience Platform執行個體的設定程式一旦完成，所有�
 
 >[!TIP]
 >
->非主要（快取/暫時）資料的7天資料集到期有兩個使用案例特定例外。 如需這些功能的詳細資訊，請參閱其各自的檔案。<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=zh-Hant#message-preset-sms)</li><li>[Edge投影](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>非主要（快取/暫時）資料的7天資料集到期有兩個使用案例特定例外。 如需這些功能的詳細資訊，請參閱其各自的檔案。<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=zh-Hant#message-preset-sms)</li><li>[Edge投影](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=zh-Hant#edge-projections)</li></ul>
 
 ## 後續步驟
 

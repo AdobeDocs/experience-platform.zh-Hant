@@ -15,7 +15,7 @@ ht-degree: 62%
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
-本檔案涵蓋Adobe Experience Cloud Identity Service標籤擴充功能的發行說明。 如需Experience CloudIdentity服務本身的發行說明，請參閱[Identity服務檔案](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)。
+本檔案涵蓋Adobe Experience Cloud Identity Service標籤擴充功能的發行說明。 如需Experience CloudIdentity服務本身的發行說明，請參閱[Identity服務檔案](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=zh-Hant)。
 
 ## 2022 年 10 月 17 日
 

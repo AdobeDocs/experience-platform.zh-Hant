@@ -16,14 +16,14 @@ ht-degree: 0%
 >[!TIP]
 >
 >另請參閱Adobe貢獻者指南中的支援檔案：
->* [安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* [在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)。
+>* [安裝Git與Markdown編寫工具](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=zh-Hant)
+>* [在本機設定檔案的Git存放庫](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=zh-Hant)
+>* [重大變更的GitHub貢獻工作流程](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=zh-Hant)。
 
 ## 設定您的GitHub製作環境 {#set-up-environment}
 
 1. 在您的瀏覽器中，瀏覽至`https://github.com/AdobeDocs/experience-platform.en`。
-2. 若要[分支](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)存放庫，請按一下&#x200B;**分支**，如下所示。 這會在您自己的GitHub帳戶中建立Experience Platform存放庫的復本。
+2. 若要[分支](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=zh-Hant#fork-the-repository)存放庫，請按一下&#x200B;**分支**，如下所示。 這會在您自己的GitHub帳戶中建立Experience Platform存放庫的復本。
 
    ![分支Adobe檔案存放庫](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -46,7 +46,7 @@ ht-degree: 0%
    >
    >您可以隨時關閉瀏覽器視窗，稍後再重新開啟。 系統會自動儲存您的工作，當您重新開啟瀏覽器時，系統會在您等待您完成工作。
 3. 將內容從Markdown編輯器複製到GitHub的新檔案中。
-4. 對於您打算使用的任何熒幕擷取畫面或影像，請使用GitHub介面將檔案上傳到`experience-platform.en/help/destinations/assets/catalog/[...]`，其中`[...]`是您目的地所需的類別。 例如，如果您要將個人化目的地新增至Experience Platform，請選取`personalization`類別。 您需要從正在編寫的頁面連結到影像。 請參閱[如何連結至影像的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images)。
+4. 對於您打算使用的任何熒幕擷取畫面或影像，請使用GitHub介面將檔案上傳到`experience-platform.en/help/destinations/assets/catalog/[...]`，其中`[...]`是您目的地所需的類別。 例如，如果您要將個人化目的地新增至Experience Platform，請選取`personalization`類別。 您需要從正在編寫的頁面連結到影像。 請參閱[如何連結至影像的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=zh-Hant#link-to-images)。
 
    ![將影像上傳到GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -82,4 +82,4 @@ ht-degree: 0%
 
 >[!TIP]
 >
->若要新增影像和連結至您的檔案，以及有關Markdown的任何其他問題，請閱讀Adobe合作撰寫指南中的[使用Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)。
+>若要新增影像和連結至您的檔案，以及有關Markdown的任何其他問題，請閱讀Adobe合作撰寫指南中的[使用Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=zh-Hant)。

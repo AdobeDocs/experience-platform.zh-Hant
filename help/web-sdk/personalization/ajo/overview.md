@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 搭配[!DNL Experience Platform Web SDK]使用[!DNL Adobe Journey Optimizer]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Journey Optimizer]中管理的個人化體驗至Web Channel。 您可以使用WYSIWYG編輯器[!DNL Adobe Journey Optimizer] [Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)或非視覺化介面[程式碼型體驗管道](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)，來建立、啟用及傳遞您的[!DNL Journey Optimizer Web]行銷活動和個人化體驗。
+[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Journey Optimizer]中管理的個人化體驗至Web Channel。 您可以使用WYSIWYG編輯器[!DNL Adobe Journey Optimizer] [Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant)或非視覺化介面[程式碼型體驗管道](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/code-based-experience/get-started-code-based)，來建立、啟用及傳遞您的[!DNL Journey Optimizer Web]行銷活動和個人化體驗。
 
 >[!IMPORTANT]
 >
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 若要開始使用[!DNL Adobe Journey Optimizer]，請遵循下列步驟。
 
-1. 從[!DNL Adobe Journey Optimizer] [Web體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)瀏覽[必要條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites)，特別是：
+1. 從[!DNL Adobe Journey Optimizer] [Web體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant)瀏覽[必要條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant#prerequesites)，特別是：
    * 設定[!DNL Adobe Experience Cloud Visual Editing Helper]。
    * 在您的[資料流](../../../datastreams/overview.md)中啟用[!DNL Adobe Journey Optimizer]。
    * 啟用[!UICONTROL Edge上的Active-On合併原則]選項。
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## 建立Adobe Journey Optimizer網頁體驗 {#create-ajo-web-experiences}
 
-遵循[!DNL Adobe Journey Optimizer] [網頁體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)中的[網頁行銷活動製作](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign)指示，以建立[!DNL Journey Optimizer Web]個行銷活動和體驗。
+遵循[!DNL Adobe Journey Optimizer] [網頁體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant)中的[網頁行銷活動製作](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant#create-web-campaign)指示，以建立[!DNL Journey Optimizer Web]個行銷活動和體驗。
 
 ## 呈現個人化內容 {#rendering-personalized-content}
 

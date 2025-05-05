@@ -21,9 +21,9 @@ ht-degree: 11%
 
 | 顯示名稱 | 屬性 | 資料類型 | 必要 | 說明 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL 章節長度或持續時間]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | 整數 | 是 | 章節長度 (秒數)。 |
-| [[!UICONTROL 章節名稱]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | 字串 | 無 | 章節和/或區段名稱。 |
-| [[!UICONTROL 章節位移]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | 整數 | 是 | 內容內從頭開始的章節位移（以秒為單位）。 |
-| [[!UICONTROL 章節位置]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | 整數 | 是 | 內容內的章節位置（索引、整數）。 |
+| [[!UICONTROL 章節長度或持續時間]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-length) | `length` | 整數 | 是 | 章節長度 (秒數)。 |
+| [[!UICONTROL 章節名稱]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-name) | `friendlyName` | 字串 | 無 | 章節和/或區段名稱。 |
+| [[!UICONTROL 章節位移]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-offset) | `offset` | 整數 | 是 | 內容內從頭開始的章節位移（以秒為單位）。 |
+| [[!UICONTROL 章節位置]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=zh-Hant#chapter-position) | `index` | 整數 | 是 | 內容內的章節位置（索引、整數）。 |
 
 {style="table-layout:auto"}

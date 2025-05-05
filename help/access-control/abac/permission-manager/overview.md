@@ -24,7 +24,7 @@ ht-degree: 1%
 
 您可以藉由選取特定資源、動作和沙箱來縮小搜尋範圍。
 
-若要存取[!DNL Experience Platform]的[!UICONTROL 許可權管理員]，您必須是具有存取Experience Platform許可權之組織的管理員。 雖然Adobe允許在組織內自訂管理員階層，但您必須是[!DNL Adobe Experience Platform]的產品管理員。 如需詳細資訊，請參閱有關[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)的Adobe說明中心文章。
+若要存取[!DNL Experience Platform]的[!UICONTROL 許可權管理員]，您必須是具有存取Experience Platform許可權之組織的管理員。 雖然Adobe允許在組織內自訂管理員階層，但您必須是[!DNL Adobe Experience Platform]的產品管理員。 如需詳細資訊，請參閱有關[管理角色](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)的Adobe說明中心文章。
 
 使用您的[!DNL Adobe]認證登入[Adobe Experience Platform](https://experience.adobe.com/)。  登入後，您將會看到貴組織的&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面。 此頁面顯示貴組織訂閱的產品。 若要啟動以屬性為基礎的存取控制工作區以進行平台整合，請選取&#x200B;**[!UICONTROL 許可權]**。
 

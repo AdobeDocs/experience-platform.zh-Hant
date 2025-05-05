@@ -98,7 +98,7 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 >* 結構描述必須擴充&#x200B;**XDM ExperienceEvent類別。**
->* 您必須確保結構描述包含&#x200B;**主要身分**，且已為設定檔&#x200B;**啟用**。 如需詳細資訊，請閱讀[在UI中定義身分欄位的指南](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+>* 您必須確保結構描述包含&#x200B;**主要身分**，且已為設定檔&#x200B;**啟用**。 如需詳細資訊，請閱讀[在UI中定義身分欄位的指南](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=zh-Hant)
 >* 您可以將身分範例（電子郵件）取代為另一個適當的識別碼，例如sha256電子郵件或ECID。
 
 ### 在RainFocus中建立整合設定檔 {#create-an-integration-profile-in-rainfocus}
@@ -122,7 +122,7 @@ ht-degree: 4%
 
 提供認證後，請選取「**[!DNL Save]**」。您現在應該會在[!DNL RainFocus]儀表板中看到新的[!DNL Integration Profile]列出。
 
-選取您剛建立的[!DNL Integration Profile]，以檢視已設定的預先定義&#x200B;**推送型別**&#x200B;清單。 這些是將在發生時傳送給Experience Platform的[體驗事件](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)。
+選取您剛建立的[!DNL Integration Profile]，以檢視已設定的預先定義&#x200B;**推送型別**&#x200B;清單。 這些是將在發生時傳送給Experience Platform的[體驗事件](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=zh-Hant)。
 
 ![ RainFocus儀表板中預先定義的推播型別清單。](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 

@@ -59,7 +59,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 為了協助進行此程式，結構描述中的關鍵欄位可以標示為身分。 資料擷取後，這些欄位中的資料會插入該個人的&quot;[!UICONTROL 身分圖表]&quot;。 然後[[!DNL Real-Time Customer Profile]](../../profile/home.md)和其他Experience Platform服務即可存取圖表資料，以提供每個個別客戶的拼接檢視。
 
-通常標示為「[!UICONTROL 身分]」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 請考量您組織特定的任何唯一識別碼，因為這些識別碼可能是好的&quot;[!UICONTROL 身分]&quot;欄位。
+通常標示為「[!UICONTROL 身分]」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。 請考量您組織特定的任何唯一識別碼，因為這些識別碼可能是好的&quot;[!UICONTROL 身分]&quot;欄位。
 
 在結構描述規劃階段思考客戶身分非常重要，以協助確保資料彙集在一起，以儘可能建置最強大的設定檔。 若要進一步瞭解身分資訊如何協助您為客戶傳遞數位體驗，請參閱[身分識別服務概覽](../../identity-service/home.md)。 請參閱資料模型最佳實務檔案，以取得[建立結構描述](./best-practices.md#data-validation-fields)時使用身分的相關提示。
 

@@ -113,4 +113,4 @@ ht-degree: 1%
 
 本指南說明如何使用[!DNL Amazon] Conversions API擴充功能來設定轉換事件並傳送給[!DNL Amazon]。 如需[!DNL Adobe Experience Platform]中事件轉送功能的詳細資訊，請參閱[事件轉送概觀](../../../ui/event-forwarding/overview.md)
 
-如需使用Experience Platform Debugger和「事件轉送監視」工具對實作除錯的詳細資訊，請閱讀[Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)和[事件轉送中的監視活動](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/monitoring)。
+如需使用Experience Platform Debugger和「事件轉送監視」工具對實作除錯的詳細資訊，請閱讀[Adobe Experience Platform Debugger概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/debugger/home)和[事件轉送中的監視活動](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/event-forwarding/monitoring)。

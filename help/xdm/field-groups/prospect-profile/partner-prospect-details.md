@@ -13,7 +13,7 @@ ht-degree: 11%
 
 [!UICONTROL 夥伴潛在客戶詳細資料（範例）]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組。 [!UICONTROL 夥伴潛在客戶詳細資訊（範例）]提供了與潛在客戶設定檔相關的各種詳細資訊的範例架構。 此架構可簡化組織和管理各種潛在客戶相關資訊的程式。
 
-此欄位群組會在合作夥伴的內容中延伸[個別潛在客戶設定檔類別](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html)。
+此欄位群組會在合作夥伴的內容中延伸[個別潛在客戶設定檔類別](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=zh-Hant)。
 
 ![ [!UICONTROL 夥伴潛在客戶詳細資料（範例）]欄位群組的圖表。](../../images/field-groups/partner/partner-prospect-details-sample.png)
 

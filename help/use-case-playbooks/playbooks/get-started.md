@@ -95,7 +95,7 @@ Playbook執行個體的&#x200B;**許可權**
 
 ### 電子郵件頻道介面
 
-前往Journey Optimizer介面中的`Channels`。 設定行銷電子郵件和異動訊息的個別子網域和IP集區（如果尚未設定）。 這些最佳實務可確保異動訊息（例如訂單確認電子郵件）傳遞至您的客戶。 輸入名稱、電子郵件地址和其他設定。 選取頁面右上方的&#x200B;**提交**，以建立行銷管道表面。 閱讀有關[如何設定電子郵件通道介面](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html)的檔案。
+前往Journey Optimizer介面中的`Channels`。 設定行銷電子郵件和異動訊息的個別子網域和IP集區（如果尚未設定）。 這些最佳實務可確保異動訊息（例如訂單確認電子郵件）傳遞至您的客戶。 輸入名稱、電子郵件地址和其他設定。 選取頁面右上方的&#x200B;**提交**，以建立行銷管道表面。 閱讀有關[如何設定電子郵件通道介面](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=zh-Hant)的檔案。
 
 ### 簡訊頻道介面
 
@@ -111,7 +111,7 @@ Playbook執行個體的&#x200B;**許可權**
 
 接著，選取您在管道設定中檢視的管道、平台和應用程式。 選取&#x200B;**提交**&#x200B;以建立推播通道表面。
 
-閱讀有關[如何設定推播通道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html)的檔案。
+閱讀有關[如何設定推播通道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=zh-Hant)的檔案。
 
 ## 後續步驟 {#next-steps}
 

@@ -86,7 +86,7 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 * *不*&#x200B;可以存取Experience Platform或Real-time CDP並希望使用[!DNL Web SDK]的客戶將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述和資料串流。
 * 有權存取Experience Platform或Real-time CDP並希望使用[!DNL Web SDK]的客戶將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述、資料集、身分名稱空間和資料串流。
 
-如需設定這些許可權的詳細資訊，請參閱我們關於[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)的檔案。
+如需設定這些許可權的詳細資訊，請參閱我們關於[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=zh-Hant)的檔案。
 
 ## 哪些人應該使用網路SDK？
 
@@ -152,7 +152,7 @@ Web SDK需要存取[資料流設定](../datastreams/overview.md)和Experience Pl
 
 ## 什麼是CNAME或第一方網域，這為什麼重要？
 
-有關CNAME的詳細資訊，請參閱[Adobe檔案](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
+有關CNAME的詳細資訊，請參閱[Adobe檔案](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=zh-Hant)
 
 ## Adobe Experience Platform Web SDK是否使用Cookie？ 若是如此，會使用哪些Cookie？
 

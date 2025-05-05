@@ -22,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯受Offer Decisionin
 
 ## 術語
 
-使用Offer Decisioning時，請務必瞭解下列術語。 如需詳細資訊和檢視其他辭彙，請造訪[Offer Decisioning辭彙](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)。
+使用Offer Decisioning時，請務必瞭解下列術語。 如需詳細資訊和檢視其他辭彙，請造訪[Offer Decisioning辭彙](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=zh-Hant)。
 
 * **決定範圍：**&#x200B;對於Offer Decisioning，決定範圍是JSON的Base64編碼字串，包含您要優惠決定服務用來建議優惠的活動和位置ID。
 
@@ -81,7 +81,7 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯受Offer Decisionin
    * 透過標籤安裝SDK
 
       1. [建立標籤屬性](/help/tags/ui/administration/companies-and-properties.md)
-      1. [新增內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [新增內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=zh-Hant)
       1. 使用您從「資料流」下拉式選單中選取設定而建立的資料流，安裝並設定Experience Platform Web SDK擴充功能。 請參閱有關[擴充功能](/help/tags/ui/managing-resources/extensions/overview.md)的檔案。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -328,4 +328,4 @@ Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯受Offer Decisionin
 
 ## 限制
 
-行動Edge Network工作流程目前不支援部分優惠方案限制，例如上限。 此上限欄位值會指定某個優惠方案在所有使用者中顯示的次數。 如需詳細資訊，請參閱[優惠適用性規則和限制檔案](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)。
+行動Edge Network工作流程目前不支援部分優惠方案限制，例如上限。 此上限欄位值會指定某個優惠方案在所有使用者中顯示的次數。 如需詳細資訊，請參閱[優惠適用性規則和限制檔案](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html?lang=zh-Hant#eligibility)。

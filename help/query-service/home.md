@@ -34,7 +34,7 @@ RESTful API提供類似的體驗。 您可以使用查詢服務API以程式設�
 
 ## 查詢服務與Experience Platform服務 {#experience-platform-services}
 
-查詢服務會互動，並可與多個Experience Platform服務搭配使用。 若要充分利用Query Service的功能，您應該熟悉這些服務以及它們如何與Query Service互動。 [Experience Platform檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html)提供平台的功能摘要和連結。
+查詢服務會互動，並可與多個Experience Platform服務搭配使用。 若要充分利用Query Service的功能，您應該熟悉這些服務以及它們如何與Query Service互動。 [Experience Platform檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html?lang=zh-Hant)提供平台的功能摘要和連結。
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 

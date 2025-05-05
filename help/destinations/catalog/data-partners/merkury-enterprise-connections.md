@@ -39,8 +39,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->* 若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理目的地**、**啟用目的地**、**檢視設定檔**&#x200B;和&#x200B;**檢視區段** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**檢視身分圖表** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。\！[選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* 若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理目的地**、**啟用目的地**、**檢視設定檔**&#x200B;和&#x200B;**檢視區段** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**檢視身分圖表** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。\！[選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## 支援的身分 {#supported-identities}
 
@@ -62,7 +62,7 @@ ht-degree: 4%
 | **客群** | **支援** | **描述來源** |
 |---|---|---|      
 | 分段服務 | ✓ | 透過Experience Platform [[細分服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
-| 自訂上傳 | X | 對象[[已將]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)從CSV檔案匯入Experience Platform。 |
+| 自訂上傳 | X | 對象[[已將]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/ui/overview#import-audience)從CSV檔案匯入Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -72,8 +72,8 @@ ht-degree: 4%
 
 | **專案** | **類型** | **附註** |
 |---|---|---|  
-| 匯出類型 | **以設定檔為基礎** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[[目的地啟用工作流程]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 頻率 | **批次** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[[批次檔案型頻率目的地]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based)。 |
+| 匯出類型 | **以設定檔為基礎** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[[目的地啟用工作流程]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)的選取設定檔屬性畫面中所選。 |
+| 頻率 | **批次** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[[批次檔案型頻率目的地]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/destination-types#file-based)。 |
 
 {style="table-layout:auto"}
 
@@ -81,9 +81,9 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理和啟用資料集目的地** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理和啟用資料集目的地** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線到此目的地，請依照[[目的地設定教學課程]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
+若要連線到此目的地，請依照[[目的地設定教學課程]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/connect-destination)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標
 
@@ -128,7 +128,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 ## 啟用警示
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts)的指南。
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/alerts)的指南。
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**下一步**。
 
@@ -140,7 +140,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 >* 若要匯出身分，您需要&#x200B;**檢視身分圖表**&#x200B;存取控制許可權。
 
 
-讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
 
 ## 對應建議
 
@@ -169,7 +169,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 ## 資料使用與控管
 
-處理您的資料時，所有Adobe Experience Platform目的地都符合資料使用原則。 如需Adobe Experience Platform如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有Adobe Experience Platform目的地都符合資料使用原則。 如需Adobe Experience Platform如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
 
 ## 後續步驟
 

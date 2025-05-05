@@ -25,10 +25,10 @@ ht-degree: 2%
 
 >[!TIP]
 >
->您可以隱藏Media Edge API未使用的欄位。 隱藏這些欄位可讓結構描述更容易閱讀和理解，但並非必要。 這些欄位僅參考[!UICONTROL MediaAnalytics互動詳細資料]欄位群組中的欄位。 若要改善Experience Platform UI中的可讀性，請依照[Media Analytics檔案中有關如何隱藏未使用欄位的指示操作](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform)。
+>您可以隱藏Media Edge API未使用的欄位。 隱藏這些欄位可讓結構描述更容易閱讀和理解，但並非必要。 這些欄位僅參考[!UICONTROL MediaAnalytics互動詳細資料]欄位群組中的欄位。 若要改善Experience Platform UI中的可讀性，請依照[Media Analytics檔案中有關如何隱藏未使用欄位的指示操作](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html?lang=zh-Hant#set-up-the-schema-in-adobe-experience-platform)。
 
 <!-- 
 >[!NOTE]
 >
->Schemas contain fields that are not used in every context or situation. They provide a potential blueprint to map an object. Schemas displayed for the Media Edge API Collection or Reporting data types only portray the relevant fields. You can manually select and deselect the fields that you want to use if you intend to use a schema for the Media Edge API interaction. You can find instructions on [hiding unnecessary fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) in the guide to install Media Analytics with Experience Platform Edge.
+>Schemas contain fields that are not used in every context or situation. They provide a potential blueprint to map an object. Schemas displayed for the Media Edge API Collection or Reporting data types only portray the relevant fields. You can manually select and deselect the fields that you want to use if you intend to use a schema for the Media Edge API interaction. You can find instructions on [hiding unnecessary fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html?lang=zh-Hant#set-up-the-schema-in-adobe-experience-platform) in the guide to install Media Analytics with Experience Platform Edge.
  -->

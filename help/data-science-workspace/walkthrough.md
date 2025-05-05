@@ -22,7 +22,7 @@ ht-degree: 0%
 
 本檔案說明Adobe Experience Platform資料科學Workspace課程的預期學習結果。 若要檢視課程，您必須使用Adobe ID登入Experience League。
 
-[資料科學家適用的Data Science Workspace快速入門](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)課程是專為想要學習如何使用JupyterLab Notebooks以獲得見解和查詢資料、建立具有設定檔功能的資料集、發佈自動化機器學習模型，以及對Adobe和非Adobe應用程式啟用機器學習見解的資料科學家所設計。
+[資料科學家適用的Data Science Workspace快速入門](https://experienceleague.adobe.com/?lang=zh-hant&recommended=ExperiencePlatform-U-1-2021.1.dsw)課程是專為想要學習如何使用JupyterLab Notebooks以獲得見解和查詢資料、建立具有設定檔功能的資料集、發佈自動化機器學習模型，以及對Adobe和非Adobe應用程式啟用機器學習見解的資料科學家所設計。
 
 ## 課程必要條件
 

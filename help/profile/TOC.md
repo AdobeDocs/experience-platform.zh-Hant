@@ -50,7 +50,7 @@ ht-degree: 33%
    * [新增資料至即時客戶個人檔案](tutorials/add-profile-data.md)
    * [設定設定檔的資料集](tutorials/dataset-configuration.md)
    * [產生資料集重疊報告](tutorials/dataset-overlap-report.md)
-   * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+   * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant)
 * [隱私權請求處理](privacy.md)
 * [[!DNL Profile]疑難排解指南](troubleshooting.md)
 * [設定檔API參考](https://www.adobe.com/go/profile-apis-en)

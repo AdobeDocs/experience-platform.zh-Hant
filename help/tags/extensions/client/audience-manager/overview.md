@@ -51,7 +51,7 @@ ht-degree: 62%
 
 #### 使用 DIL Site Catalyst 模組
 
-[SiteCatalyst 模組](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_sc_init.html)與 DIL 搭配使用，將 Analytics 標籤元素傳送至 Audience Manager。
+[SiteCatalyst 模組](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/r_dil_sc_init.html)與 DIL 搭配使用，將 Analytics 標籤元素傳送至 Audience Manager。
 
 使用程式碼編輯器來設定 siteCatalyst.init 檔案。
 
@@ -59,15 +59,15 @@ ht-degree: 62%
 
 #### 使用 DIL Google Analytics 模組
 
-啟用 [Google Analytics 模組](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html)。
+啟用 [Google Analytics 模組](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/dil-google-universal-analytics.html)。
 
 #### DIL.create 初始化屬性
 
-新增 [DIL.create](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) 所使用的初始化屬性，以及新增 [visitorService 物件](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html)的命名空間子屬性。程式碼編輯器的程式碼註解已加入兩個範例使用案例。
+新增 [DIL.create](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/r_dil_create.html) 所使用的初始化屬性，以及新增 [visitorService 物件](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/r_dil_visitor_service.html)的命名空間子屬性。程式碼編輯器的程式碼註解已加入兩個範例使用案例。
 
 選取&#x200B;**[!UICONTROL 選擇專案]**&#x200B;以新增其他屬性。
 
-將游標停留在「i」圖示上，即可了解每個屬性的用途。您可以在 [Audience Manager DIL 文件](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)中找到屬性的詳細資訊。
+將游標停留在「i」圖示上，即可了解每個屬性的用途。您可以在 [Audience Manager DIL 文件](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/r_dil_create.html)中找到屬性的詳細資訊。
 
 完成擴充功能設定後，選取&#x200B;**[!UICONTROL 儲存]**。
 

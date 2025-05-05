@@ -27,7 +27,7 @@ ht-degree: 85%
 Category;Product;Quantity;Price;eventN=X|eventN2=X2;eVarN=merch_category|eVarN2=merch_category2
 ```
 
-如需完整文件，請造訪[產品](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html)。
+如需完整文件，請造訪[產品](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=zh-Hant)。
 
 ## 擴充功能說明
 

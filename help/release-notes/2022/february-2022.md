@@ -33,7 +33,7 @@ Adobe Experience Platform提供多個[!DNL dashboards]，您可以透過它們�
 
 | 功能 | 說明 |
 | --- | --- |
-| 新的標準目的地Widget | 下列標準Widget可讓您視覺化與目的地相關的不同量度。<ul><li>目的地最近啟用的區段。 此Widget會根據所選目的地，以遞減順序顯示最近啟用的前五個區段。</li><li>對象人數趨勢。 此Widget針對已對應至目的地帳戶的區段，描述一段時間內設定檔計數之間的關係。</li><li>依身分割槽分的未對應區段。 此Widget會依指定目的地和身分的遞減身分計數，列出前五個未對應的區段。</li><li>依身分割槽分的對應區段。 此Widget列出前五個對應區段。 區段會根據其各自符合從Widget下拉式選單中所選目的地ID的來源ID計數，從高到低排序。</li><li>通用對象。 此Widget提供在頁面上方所選目的地帳戶，以及在下拉式Widget中選取的目的地啟用的前五個區段清單。</li></ul> 如需可用標準Widget的詳細資訊，請參閱[目的地儀表板檔案。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets)。 |
+| 新的標準目的地Widget | 下列標準Widget可讓您視覺化與目的地相關的不同量度。<ul><li>目的地最近啟用的區段。 此Widget會根據所選目的地，以遞減順序顯示最近啟用的前五個區段。</li><li>對象人數趨勢。 此Widget針對已對應至目的地帳戶的區段，描述一段時間內設定檔計數之間的關係。</li><li>依身分割槽分的未對應區段。 此Widget會依指定目的地和身分的遞減身分計數，列出前五個未對應的區段。</li><li>依身分割槽分的對應區段。 此Widget列出前五個對應區段。 區段會根據其各自符合從Widget下拉式選單中所選目的地ID的來源ID計數，從高到低排序。</li><li>通用對象。 此Widget提供在頁面上方所選目的地帳戶，以及在下拉式Widget中選取的目的地啟用的前五個區段清單。</li></ul> 如需可用標準Widget的詳細資訊，請參閱[目的地儀表板檔案。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=zh-Hant#standard-widgets)。 |
 
 如需更多有關 [!DNL Dashboards] 的資訊，請參閱[[!DNL Dashboards] 概觀](../../dashboards/home.md)。
 

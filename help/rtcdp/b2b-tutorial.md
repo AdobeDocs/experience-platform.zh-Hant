@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Real-Time Customer Data Platform B2B edition快速入門
 description: 使用此範例情境作為設定Adobe Real-Time Customer Data Platform B2B edition實作的範例。
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -100,9 +100,9 @@ Bodea行銷人員會檢查所有欄位群組是否已適當對應，並透過初
 
 >[!NOTE]
 > 
->如需完成此作業的完整步驟，請參閱有關[將對象啟用至目的地](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html)的教學課程。
+>如需完成此作業的完整步驟，請參閱有關[將對象啟用至目的地](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=zh-Hant)的教學課程。
 
-Bodea行銷人員會將對象啟用至Marketo目的地，這可讓他們以靜態清單的形式，將對象資料從Experience Platform推送至Marketo Engage。 如需詳細資訊，請參閱[Marketo目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)的指南。
+Bodea行銷人員會將對象啟用至Marketo目的地，這可讓他們以靜態清單的形式，將對象資料從Experience Platform推送至Marketo Engage。 如需詳細資訊，請參閱[Marketo目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=zh-Hant)的指南。
 
 ## 後續步驟
 

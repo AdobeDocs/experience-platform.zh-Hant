@@ -47,8 +47,8 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | 擴充功能 | [!DNL Meta]轉換API增強功能 | [中繼轉換API](/help/tags/extensions/server/meta/overview.md)擴充功能有三個增強功能： <ul><li>與[[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)整合：可讓您共用pixelID並存取Conversions API與Adobe整合的Token，建立順暢的登入體驗。</li><li>與[[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)整合：可讓您傳送廣告給更有可能完成所需動作的使用者，並將動作連結回傳送的廣告。</li><li>與[[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha)整合：可讓您在CIP欄位中傳遞LiveRamp的RampID，而不需直接與合作夥伴或Meta共用PII。 </li></ul> |
 | 擴充功能 | [!DNL LinkedIn]轉換API | [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md)擴充功能可將Experience Platform事件資料轉送至LinkedIn，讓您評估LinkedIn行銷活動的效益。 |
 | Secret | [!DNL LinkedIn] OAuth 2密碼 | [[!DNL LinkedIn] OAuth 2密碼](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2)可讓您在事件轉送中將伺服器與伺服器的互動傳送至[!DNL LinkedIn]。 |
-| 事件轉送 | 更新標籤和事件轉送 | 若要在Experience Platform中保留[標籤](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)和[事件轉送](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)效能，僅會保留最新的開發和階段組建（成功和不成功）。 將移除所有不再使用的組建。 此外，已實施節流和速率限制，以確保少數大量的API使用不會降低其他人的API效能。 |
-| 擴充功能 | 元素、規則和擴充功能 | [元素、規則和擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html)現在會在程式庫輸出中排序，以確保相同程式庫的多個組建和部署之間更一致。 |
+| 事件轉送 | 更新標籤和事件轉送 | 若要在Experience Platform中保留[標籤](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hant)和[事件轉送](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=zh-Hant)效能，僅會保留最新的開發和階段組建（成功和不成功）。 將移除所有不再使用的組建。 此外，已實施節流和速率限制，以確保少數大量的API使用不會降低其他人的API效能。 |
+| 擴充功能 | 元素、規則和擴充功能 | [元素、規則和擴充功能](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=zh-Hant)現在會在程式庫輸出中排序，以確保相同程式庫的多個組建和部署之間更一致。 |
 
 如需有關資料收集的詳細資訊，請詳閱[資料收集概觀](../../tags/home.md)。
 

@@ -47,7 +47,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | --- | --- |
-| (Beta)資料集匯出 | [資料集匯出Beta功能](/help/destinations/ui/export-datasets.md)可讓您透過目標使用者介面，將第一代資料(如[Real-Time Customer Data Platform產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)中的定義)從Adobe Experience Platform匯出至您自己的外部客戶系統。 這可讓您使用無程式碼/低程式碼工作流程，將資料從Experience Platform取出至六個雲端儲存空間目的地（如下表所列），以用於分析和法規遵循使用案例。 |
+| (Beta)資料集匯出 | [資料集匯出Beta功能](/help/destinations/ui/export-datasets.md)可讓您透過目標使用者介面，將第一代資料(如[Real-Time Customer Data Platform產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)中的定義)從Adobe Experience Platform匯出至您自己的外部客戶系統。 這可讓您使用無程式碼/低程式碼工作流程，將資料從Experience Platform取出至六個雲端儲存空間目的地（如下表所列），以用於分析和法規遵循使用案例。 |
 | (Beta)增強的檔案匯出功能 | 現在，從Experience Platform匯出檔案時，您可以受益於增強的自訂功能： <br><ul><li>其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。</li><li>能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。</li><li>[能夠自訂轉存的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> <br>下表列出的六個新Beta版雲端儲存空間卡支援此功能。 |
 
 {style="table-layout:auto"}

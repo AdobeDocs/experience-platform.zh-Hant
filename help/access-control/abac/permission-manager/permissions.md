@@ -23,7 +23,7 @@ ht-degree: 7%
 >id="platform_permission_manager"
 >title="權限管理員"
 >abstract="使用頁面上的下拉式選單選擇器，可取得不同詳細程度等級之使用者和角色的存取層級報告。"
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=zh-Hant" text="Permission manager" -->
 
 使用下拉式清單，選取屬性&#x200B;**[!UICONTROL 使用者]**。
 

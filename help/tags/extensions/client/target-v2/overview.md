@@ -49,13 +49,13 @@ ht-degree: 60%
 
 #### GDPR 選擇加入
 
-啟用後，Adobe Target 提供選擇加入功能，以協助支援您的同意管理策略。選擇加入功能可讓客戶控制觸發 Target 標籤的方法和時機。如需有關 Adobe 選擇加入的詳細資訊，請參閱[隱私權與一般資料保護規則 (GDPR)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)。
+啟用後，Adobe Target 提供選擇加入功能，以協助支援您的同意管理策略。選擇加入功能可讓客戶控制觸發 Target 標籤的方法和時機。如需有關 Adobe 選擇加入的詳細資訊，請參閱[隱私權與一般資料保護規則 (GDPR)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=zh-Hant)。
 
 #### 逾時 (毫秒)
 
 如果未在定義的期間內收到 Target 的回應，則要求逾時，系統會顯示預設內容。在訪客工作階段期間會繼續嘗試其他要求。預設值為 3000 毫秒，可能與 Target 使用者介面中設定的「逾時」不同。
 
-如需「逾時」設定如何運作的詳細資訊，請參閱 [Adobe Target 說明](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html)。
+如需「逾時」設定如何運作的詳細資訊，請參閱 [Adobe Target 說明](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=zh-Hant)。
 
 ## Target 擴充功能動作類型
 
@@ -71,7 +71,7 @@ Target 擴充功能提供規則的「Then」部分中的下列動作：
 
 ### 使用裝置上決策載入Target
 
-將此動作新增至您的標籤規則，其中載入在您的規則內容中啟用[裝置上決策](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html)的Target是可行的。 這會載入已啟用裝置上決策的at.js程式庫至頁面。 在大部分實作中，您網站的每個頁面上都應載入 Target。Adobe建議，除非先前已有Target呼叫，否則應搭配裝置上決策動作使用「載入Target」 。 否則可能會發生 Analytics 呼叫延遲等問題。
+將此動作新增至您的標籤規則，其中載入在您的規則內容中啟用[裝置上決策](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=zh-Hant)的Target是可行的。 這會載入已啟用裝置上決策的at.js程式庫至頁面。 在大部分實作中，您網站的每個頁面上都應載入 Target。Adobe建議，除非先前已有Target呼叫，否則應搭配裝置上決策動作使用「載入Target」 。 否則可能會發生 Analytics 呼叫延遲等問題。
 
 >[!IMPORTANT]
 >
@@ -100,7 +100,7 @@ Target 擴充功能提供規則的「Then」部分中的下列動作：
 * **主體隱藏：**&#x200B;您可以啟用或停用此設定。預設值為 Enabled，表示 HTML BODY 隱藏。
 * **主體隱藏樣式：**&#x200B;預設值為 body{opacity:0}。此值可以變更為其他不同值，例如 body{display:none}。
 
-如需詳細資訊，請參閱 [Target 線上說明文件](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html)。
+如需詳細資訊，請參閱 [Target 線上說明文件](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=zh-Hant)。
 
 ### 觸發檢視
 
@@ -109,7 +109,7 @@ Target 擴充功能提供規則的「Then」部分中的下列動作：
 1. 指定必須觸發的檢視名稱。
 1. 透過勾選「頁面」核取方塊，指定檢視的觸發是否應歸因於報表的曝光。如果檢視與重新演算的元件相關聯，且不會歸因於報表的曝光，則取消勾選「頁面」核取方塊。
 
-有關觸發檢視的詳細資訊，請參閱[`triggerView()`說明文件](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html)。
+有關觸發檢視的詳細資訊，請參閱[`triggerView()`說明文件](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html?lang=zh-Hant)。
 
 ## Adobe Target 基本部署
 

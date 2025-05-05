@@ -16,7 +16,7 @@ Experience Platform Web SDK可透過Experience PlatformEdge Network傳送資料�
 
 * 將[**[!UICONTROL Adobe Analytics ExperienceEvent欄位群組]**](../../xdm/field-groups/event/analytics-full-extension.md)新增到您的結構描述，然後使用[`XDM`物件](../commands/sendevent/xdm.md)。
 * 使用[`data`物件](../commands/sendevent/data.md)傳送資料至Adobe Analytics而不使用XDM結構描述。
-* 使用自動產生的[內容資料變數](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata)和[處理規則](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about)。
+* 使用自動產生的[內容資料變數](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/vars/page-vars/contextdata)和[處理規則](https://experienceleague.adobe.com/zh-hant/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about)。
 
 ## 使用`XDM`物件 {#use-xdm-object}
 
@@ -24,10 +24,10 @@ Experience Platform Web SDK可透過Experience PlatformEdge Network傳送資料�
 
 您可透過下列兩種方式，透過Web SDK將資料傳送至Adobe Analytics：
 
-* [使用Web SDK標籤延伸功能將資料傳送至Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
-* [使用Web SDK JavaScript資料庫，將資料傳送至Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
+* [使用Web SDK標籤延伸功能將資料傳送至Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
+* [使用Web SDK JavaScript資料庫，將資料傳送至Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
 
-請參閱Adobe Analytics實作指南中的[XDM物件變數對應至Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping)，以取得XDM欄位的完整參考資料，以及它們如何對應至Analytics變數。
+請參閱Adobe Analytics實作指南中的[XDM物件變數對應至Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/xdm-var-mapping)，以取得XDM欄位的完整參考資料，以及它們如何對應至Analytics變數。
 
 ## 使用`data`物件 {#use-data-object}
 
@@ -35,14 +35,14 @@ Experience Platform Web SDK可透過Experience PlatformEdge Network傳送資料�
 
 根據您使用的是AppMeasurement或Analytics標籤擴充功能，請參閱下列指南以取得有關如何移轉至Web SDK的詳細資訊：
 
-* [從Adobe Analytics標籤擴充功能移轉至Web SDK標籤擴充功能](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
-* [從AppMeasurement移轉至Web SDK](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
+* [從Adobe Analytics標籤擴充功能移轉至Web SDK標籤擴充功能](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
+* [從AppMeasurement移轉至Web SDK](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
 
-如需資料物件欄位的完整參考資料，以及它們如何對應至Adobe Analytics變數，請參閱Adobe Analytics實作指南中有關[資料物件變數對應至Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping)的檔案。
+如需資料物件欄位的完整參考資料，以及它們如何對應至Adobe Analytics變數，請參閱Adobe Analytics實作指南中有關[資料物件變數對應至Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/data-var-mapping)的檔案。
 
 ## 使用上下文資料變數 {#use-context-data-variables}
 
-任何未自動對應的變數都可做為[內容資料變數](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata)。 您接著可以使用[處理規則](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about)，將內容資料變數對應至Analytics變數。 例如，如果您的自訂XDM結構描述如下所示：
+任何未自動對應的變數都可做為[內容資料變數](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/vars/page-vars/contextdata)。 您接著可以使用[處理規則](https://experienceleague.adobe.com/zh-hant/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about)，將內容資料變數對應至Analytics變數。 例如，如果您的自訂XDM結構描述如下所示：
 
 ```json
 {
@@ -84,7 +84,7 @@ a.x.objectarray.2.ad3 //600x50
 
 +++如何在Web SDK中區分頁面檢視呼叫和連結追蹤呼叫？
 
-Adobe Analytics中的AppMeasurement針對頁面檢視（[`t()`方法](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/t-method)）和連結追蹤呼叫（[`tl()`方法](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)）使用個別的方法呼叫。 Web SDK只提供用於傳送頁面檢視和連結追蹤的[`sendEvent`](../commands/sendevent/overview.md)命令。 您在事件中包含的資料會判斷它是Adobe Analytics中的[頁面檢視](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-views)或[頁面事件](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-events)。
+Adobe Analytics中的AppMeasurement針對頁面檢視（[`t()`方法](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/vars/functions/t-method)）和連結追蹤呼叫（[`tl()`方法](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/vars/functions/tl-method)）使用個別的方法呼叫。 Web SDK只提供用於傳送頁面檢視和連結追蹤的[`sendEvent`](../commands/sendevent/overview.md)命令。 您在事件中包含的資料會判斷它是Adobe Analytics中的[頁面檢視](https://experienceleague.adobe.com/zh-hant/docs/analytics/components/metrics/page-views)或[頁面事件](https://experienceleague.adobe.com/zh-hant/docs/analytics/components/metrics/page-events)。
 
 依預設，所有事件在Adobe Analytics中都會被視為頁面檢視。 如果您想要將Web SDK事件設定為Adobe Analytics連結追蹤呼叫，請設定下列欄位：
 
@@ -92,7 +92,7 @@ Adobe Analytics中的AppMeasurement針對頁面檢視（[`t()`方法](https://ex
 * **資料物件**： `data.__adobe.analytics.linkName`、`data.__adobe.analytics.linkType`和`data.__adobe.analytics.linkURL`
 * **內容資料**：不支援
 
-如需詳細資訊，請參閱Adobe Analytics實作指南中的[`tl()`方法](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method)。
+如需詳細資訊，請參閱Adobe Analytics實作指南中的[`tl()`方法](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/vars/functions/tl-method)。
 
 如果您在`configure`命令中啟用[`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md)，系統會為您填入這些欄位。
 

@@ -1114,7 +1114,7 @@ curl -X PATCH \
 
 結構描述用於將資料擷取至[!DNL Experience Platform]。 這些資料最終會跨多個服務使用，以建立個人的單一、統一檢視。 為協助進行此程式，可將關鍵欄位標示為「身分」，並在資料擷取後，將這些欄位中的資料插入該個人的「身分圖表」。 然後[[!DNL Real-Time Customer Profile]](../../profile/home.md)和其他[!DNL Experience Platform]服務就可以存取圖表資料，以提供每個個別客戶的拼接檢視。
 
-通常標示為「身分」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 請考量貴組織特有的任何唯一識別碼，因為這些識別碼可能是良好的身分欄位。
+通常標示為「身分」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。 請考量貴組織特有的任何唯一識別碼，因為這些識別碼可能是良好的身分欄位。
 
 身分描述項會指出`sourceSchema`的`sourceProperty`是應視為身分的唯一識別碼。
 

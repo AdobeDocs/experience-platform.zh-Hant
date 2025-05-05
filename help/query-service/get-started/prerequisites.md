@@ -14,7 +14,7 @@ ht-degree: 1%
 
 為您的組織布建Adobe Experience Platform後，您的管理員可以授與您存取權[!DNL Query Service]。 不過，您必須先將資料內嵌至Adobe Experience Platform，才能使用[!DNL Query Service]提供的所有功能。
 
-此[資料擷取教學課程影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)提供建立資料集、將資料集對應至結構描述、將資料新增至資料集，以及確認其擷取的概觀。 [內嵌概觀檔案](../../ingestion/home.md)可補充此內容，並提供更深入的資訊和其他學習資源的連結。
+此[資料擷取教學課程影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)提供建立資料集、將資料集對應至結構描述、將資料新增至資料集，以及確認其擷取的概觀。 [內嵌概觀檔案](../../ingestion/home.md)可補充此內容，並提供更深入的資訊和其他學習資源的連結。
 
 將資料內嵌至Adobe Experience Platform後，您就可以在Experience Platform UI[&#128279;](../ui/user-guide.md)中使用[!DNL Query Editor] 或[[!DNL Query Service] API](../api/getting-started.md)開始使用[!DNL Query Service]。 如需如何使用上述各工具的完整檔案，請參閱其各自章節。
 

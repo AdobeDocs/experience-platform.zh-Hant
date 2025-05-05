@@ -77,7 +77,7 @@ Privacy ServiceAPI檔案包含有關[可用的查詢引數篩選器](https://dev
 
 ## 存取要求資料 {#access-request-data}
 
-請求資料主體資訊時，每個服務都會以與其儲存和使用資料方式一致的格式傳回資料。 所有服務都完成要求後，工作詳細資料中會提供.ZIP封存檔案URL，以便下載此資料。 請參閱疑難排解指南，以取得有關[如何下載隱私權工作結果](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F)的資訊。
+請求資料主體資訊時，每個服務都會以與其儲存和使用資料方式一致的格式傳回資料。 所有服務都完成要求後，工作詳細資料中會提供.ZIP封存檔案URL，以便下載此資料。 請參閱疑難排解指南，以取得有關[如何下載隱私權工作結果](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=zh-Hant#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F)的資訊。
 
 以下是與資料封存管理相關的重要備註專案：
 

@@ -34,7 +34,7 @@ SendGrid使用API持有人權杖作為驗證機制，與SendGrid API通訊。
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-在啟用資料到SendGrid目的地之前，您必須在[!DNL Experience Platform]中建立[結構描述](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)、[資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)和[區段](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)。 另請參閱此頁面下方的[限制](#limits)區段。
+在啟用資料到SendGrid目的地之前，您必須在[!DNL Experience Platform]中建立[結構描述](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)、[資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)和[區段](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)。 另請參閱此頁面下方的[限制](#limits)區段。
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 
 ### 填寫目標詳細資訊 {#destination-details}
 
-在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
+在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL 名稱]**：您日後識別此目的地所使用的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的可選描述。

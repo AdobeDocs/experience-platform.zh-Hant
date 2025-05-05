@@ -23,7 +23,7 @@ Adobe Experience Platform提供了一套技術，可讓您從使用者端來源�
 
 資料收集著重於所擷取資料集的可發現性和可存取性，包含下列專案：
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
+* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=zh-Hant)
 * [標記](../tags/home.md)
 * [資料流](../datastreams/overview.md)
 * [事件轉送](../tags/ui/event-forwarding/overview.md)

@@ -15,7 +15,7 @@ ht-degree: 82%
 >
 >Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-此擴充功能旨在搭配 [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) 共同使用。更具體來說，這將會取代「pageTracker」處理程序和內嵌程式碼。完成設定後，此擴充功能會將 Asset 的&#x200B;*「曝光數」*&#x200B;和&#x200B;*「點擊次數」*&#x200B;量度傳送至 Adobe Analytics，再由系統匯入 AEM Asset Insights 報表。之後，您就可以使用 AEM Asset Insights 或 Adobe Analytics 專案工作區查看 Asset 量度的相關報表。
+此擴充功能旨在搭配 [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant) 共同使用。更具體來說，這將會取代「pageTracker」處理程序和內嵌程式碼。完成設定後，此擴充功能會將 Asset 的&#x200B;*「曝光數」*&#x200B;和&#x200B;*「點擊次數」*&#x200B;量度傳送至 Adobe Analytics，再由系統匯入 AEM Asset Insights 報表。之後，您就可以使用 AEM Asset Insights 或 Adobe Analytics 專案工作區查看 Asset 量度的相關報表。
 
 ## 擴充功能必備條件
 
@@ -37,7 +37,7 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
 ### Adobe Experience Manager (AEM)
 
-1. 啟用 [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。在AEM中，選取&#x200B;**[!UICONTROL 工具> Assets]**，然後開啟&#x200B;**[!UICONTROL Insights設定]**&#x200B;面板。
+1. 啟用 [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。在AEM中，選取&#x200B;**[!UICONTROL 工具> Assets]**，然後開啟&#x200B;**[!UICONTROL Insights設定]**&#x200B;面板。
 
 1. 停用 UUID 追蹤功能。
 
@@ -53,15 +53,15 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
 ### 將AEM與標籤整合
 
-透過Adobe I/O完成[Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)與Adobe Experience Manager的建議整合。
+透過Adobe I/O完成[Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=zh-Hant)與Adobe Experience Manager的建議整合。
 
-1. [使用Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html)連線AEM與標籤。
+1. [使用Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=zh-Hant)連線AEM與標籤。
 
-2. [建立Adobe Experience Platform Cloud Service設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html)。
+2. [建立Adobe Experience Platform Cloud Service設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=zh-Hant)。
 
 ### 在 AEM 中啟用 Asset Insight
 
-如需啟用 Asset Insights 的相關說明，請參閱 [Experience Manager 6.5 資產使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。
+如需啟用 Asset Insights 的相關說明，請參閱 [Experience Manager 6.5 資產使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。
 
 ### 啟用資產的 UUID 追蹤功能
 
@@ -132,7 +132,7 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
    * 瀏覽器的檢視區從未出現任何資產
 
-   * 頁面上的資產均未透過 AEM 啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。
+   * 頁面上的資產均未透過 AEM 啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。
 
 **點擊次數**
 
@@ -142,7 +142,7 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
 如果在系統產生的 Analytics 影像要求中 (顯示於下一頁)，`a.assets.idlist` 含有目的地頁面上顯示的資產 ID，且 `a.assets.clickedid` 列出訪客在原頁面上所選取資產的資產 ID，表示規則正確運作。
 
-如果影像要求中沒有 `a.assets.clickedid`，很可能是因為訪客選取的資產未在 AEM 中啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。
+如果影像要求中沒有 `a.assets.clickedid`，很可能是因為訪客選取的資產未在 AEM 中啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。
 
 **無目的地的點擊次數**
 
@@ -152,4 +152,4 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
 在產生的 Analytics 影像要求中，如果 `a.assets.clickedid` 內有資產 ID，表示規則正確運作。
 
-如果影像要求中沒有 `a.assets.clickedid`，很可能是因為訪客選取的資產未在 AEM 中啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。
+如果影像要求中沒有 `a.assets.clickedid`，很可能是因為訪客選取的資產未在 AEM 中啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。

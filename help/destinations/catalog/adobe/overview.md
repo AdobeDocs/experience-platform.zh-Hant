@@ -49,4 +49,4 @@ ht-degree: 7%
 
 使用Experience Platform受眾共用功能，將您的Experience Platform受眾共用至其他Adobe目的地。 如需詳細資訊(在Audience Manager檔案入口網站中開啟)，請參閱以下頁面：
 
-* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising Cloud和Adobe Target共用Experience Platform對象](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising Cloud和Adobe Target共用Experience Platform對象](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant)

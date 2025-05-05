@@ -25,7 +25,7 @@ ht-degree: 0%
 此工作流程示範仰賴多項Adobe Experience Platform服務。 如果您希望跟進，建議您充分瞭解下列功能和服務：
 
 * Experience Data Model (XDM)結構描述組合的[基本概念](../../xdm/schema/composition.md)
-* 如何[建立資料集並擷取資料](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
+* 如何[建立資料集並擷取資料](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)
 * 如何使用Adobe Analytics來源聯結器[內嵌資料](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=zh-Hant)
 * [區段](../../segmentation/home.md)
 * [目標](../../destinations/home.md)
