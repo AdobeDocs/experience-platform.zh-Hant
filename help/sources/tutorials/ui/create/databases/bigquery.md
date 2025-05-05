@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 使用現有帳戶 {#existing}
 
-若要使用現有帳戶，請選取您要連線的[!DNL Google BigQuery]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要連線的[!DNL Google BigQuery]帳戶，然後選取[下一步] **以繼續。**
 
 ![現有帳戶頁面，其中顯示現有帳戶的清單。](../../../../images/tutorials/create/google-big-query/existing.png)
 

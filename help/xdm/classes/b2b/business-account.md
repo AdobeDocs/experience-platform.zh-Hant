@@ -28,4 +28,4 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-請參閱Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)中[結構描述關聯性的指南，瞭解此類別與其他B2B類別在概念上的關聯性，以及如何在Adobe Experience Platform UI中建立這些關聯性。
+請參閱Real-Time CDP B2B Edition[&#128279;](../../tutorials/relationship-b2b.md)中結構描述關聯性的指南，瞭解此類別與其他B2B類別在概念上的關聯性，以及如何在Adobe Experience Platform UI中建立這些關聯性。

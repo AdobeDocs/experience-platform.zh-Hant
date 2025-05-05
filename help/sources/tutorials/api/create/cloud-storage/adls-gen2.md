@@ -39,7 +39,7 @@ ht-degree: 4%
 | `tenant` | 包含您應用程式的租使用者資訊。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 ADLS Gen2的連線規格識別碼為： `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`。 |
 
-如需這些值的詳細資訊，請參閱此ADLS Gen2檔案](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage)。[
+如需這些值的詳細資訊，請參閱此ADLS Gen2檔案[&#128279;](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage)。
 
 ### 使用Experience Platform API
 
@@ -109,4 +109,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程所述，您已使用API建立ADLS Gen2連線，且已取得唯一ID作為回應本文的一部分。 您可以使用此連線ID來使用Flow Service API](../../explore/cloud-storage.md) [探索雲端儲存空間。
+依照本教學課程所述，您已使用API建立ADLS Gen2連線，且已取得唯一ID作為回應本文的一部分。 您可以使用此連線ID來使用Flow Service API[&#128279;](../../explore/cloud-storage.md) 探索雲端儲存空間。

@@ -33,7 +33,7 @@ Adobe Experience Platform 現有功能的更新：
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 資料流程的透明度 | 您可以監視來源和目的地的資料流。 如需詳細資訊，請閱讀有關監視來源](../../dataflows/ui/monitor-sources.md)的[教學課程，或有關監視目的地](../../dataflows/ui/monitor-destinations.md)的[教學課程。 |
+| 資料流程的透明度 | 您可以監視來源和目的地的資料流。 如需詳細資訊，請閱讀有關監視來源[&#128279;](../../dataflows/ui/monitor-sources.md)的[教學課程，或有關監視目的地](../../dataflows/ui/monitor-destinations.md)的教學課程。 |
 
 若要深入瞭解資料流，請閱讀[資料流概觀](../../dataflows/home.md)。
 

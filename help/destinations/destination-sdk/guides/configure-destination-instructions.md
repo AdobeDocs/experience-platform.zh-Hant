@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-此頁面說明如何在目的地SDK](../functionality/configuration-options.md)的[設定選項以及其他Destination SDK功能和API參考檔案中使用資訊來設定[串流目的地](../../destination-types.md#streaming-destinations)。 這些步驟會依序排列如下。
+此頁面說明如何在目的地SDK[&#128279;](../functionality/configuration-options.md)的設定選項以及其他Destination SDK功能和API參考檔案中使用資訊來設定[串流目的地](../../destination-types.md#streaming-destinations)。 這些步驟會依序排列如下。
 
 ## 先決條件 {#prerequisites}
 

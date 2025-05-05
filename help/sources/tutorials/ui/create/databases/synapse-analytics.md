@@ -61,7 +61,7 @@ ht-degree: 2%
 
 ### 現有帳戶
 
-若要連線現有帳戶，請選取您要連線的[!DNL Synapse]帳戶，然後選取[下一步]**[!UICONTROL 以繼續。]**
+若要連線現有帳戶，請選取您要連線的[!DNL Synapse]帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 

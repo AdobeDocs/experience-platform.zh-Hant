@@ -37,7 +37,7 @@ Adobe Experience Platform Identity Service會透過決定性地連結個別人�
 
 ### Privacy Service中的單一身分刪除
 
-Privacy Service會根據一般資料保護規範(GDPR)和加州消費者隱私保護法(CCPA)等隱私權法規，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。 透過Privacy Service，您可以使用API或UI提交工作請求。 當Experience Platform收到來自Privacy Service的刪除請求時，Experience Platform會向Privacy Service傳送確認訊息，確認已收到請求並標籤要刪除受影響的資料。 個人身分的刪除是根據提供的名稱空間和/或ID值。 此外，刪除也會針對與指定組織相關聯的所有沙箱進行。 如需詳細資訊，請參閱在Identity Service](../privacy.md)中處理[隱私權要求的指南。
+Privacy Service會根據一般資料保護規範(GDPR)和加州消費者隱私保護法(CCPA)等隱私權法規，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。 透過Privacy Service，您可以使用API或UI提交工作請求。 當Experience Platform收到來自Privacy Service的刪除請求時，Experience Platform會向Privacy Service傳送確認訊息，確認已收到請求並標籤要刪除受影響的資料。 個人身分的刪除是根據提供的名稱空間和/或ID值。 此外，刪除也會針對與指定組織相關聯的所有沙箱進行。 如需詳細資訊，請參閱在Identity Service[&#128279;](../privacy.md)中處理隱私權要求的指南。
 
 下表提供Privacy Service中單一身分刪除的劃分資訊：
 
@@ -56,7 +56,7 @@ Privacy Service會根據一般資料保護規範(GDPR)和加州消費者隱私�
 
 ### 目錄服務中的資料集刪除
 
-您可以使用目錄服務來提交資料集刪除請求。 如需如何使用目錄服務刪除資料集的詳細資訊，請參閱使用目錄服務API](../../catalog/api/delete-object.md)刪除物件[的指南。 或者，您可以使用Experience Platform UI來提交資料集刪除請求。 如需詳細資訊，請閱讀[資料集使用手冊](../../catalog/datasets/user-guide.md#delete-a-dataset)。
+您可以使用目錄服務來提交資料集刪除請求。 如需如何使用目錄服務刪除資料集的詳細資訊，請參閱使用目錄服務API[&#128279;](../../catalog/api/delete-object.md)刪除物件的指南。 或者，您可以使用Experience Platform UI來提交資料集刪除請求。 如需詳細資訊，請閱讀[資料集使用手冊](../../catalog/datasets/user-guide.md#delete-a-dataset)。
 
 ### 資料衛生中的資料集有效期
 

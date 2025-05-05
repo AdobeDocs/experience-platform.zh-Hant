@@ -33,7 +33,7 @@ ht-degree: 3%
 
 您必須擁有有效的[!DNL Pinterest] [商業帳戶](https://help.pinterest.com/en/business/article/get-a-business-account)才能使用此延伸模組。 移至[[!DNL Pinterest] 註冊頁面](https://www.pinterest.com/business/create/)進行註冊並建立帳戶（如果尚未建立帳戶）。
 
-您也需要[!DNL Pinterest]開發人員帳戶，該帳戶需要與您的[!DNL Pinterest]企業帳戶相關聯。 若要將您的開發人員帳戶與您的企業帳戶建立關聯，請參閱[[!DNL Pinterest ] 開發人員帳戶](https://developers.pinterest.com/account-setup/)。
+您也需要[!DNL Pinterest]開發人員帳戶，該帳戶需要與您的[!DNL Pinterest]企業帳戶相關聯。 若要將您的開發人員帳戶與您的企業帳戶建立關聯，請參閱[[!DNL Pinterest &#x200B;] 開發人員帳戶](https://developers.pinterest.com/account-setup/)。
 
 ### 收集必要的設定詳細資料 {#configuration-details}
 

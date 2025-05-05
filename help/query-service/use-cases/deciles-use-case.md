@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 快速入門
 
-本指南需要您實際瞭解查詢服務](../best-practices/writing-queries.md)中的[查詢執行以及Adobe Experience Platform的下列元件：
+本指南需要您實際瞭解查詢服務[&#128279;](../best-practices/writing-queries.md)中的查詢執行以及Adobe Experience Platform的下列元件：
 
 * [即時客戶個人檔案總覽](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
 * [結構描述構成基本概念](../../xdm/schema/composition.md)：介紹體驗資料模型(XDM)結構描述，以及構成結構描述的建置區塊、原則和最佳實務。
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 ### 為即時客戶個人檔案啟用結構
 
-擷取到Experience Platform以供即時客戶設定檔使用的資料必須符合為設定檔](../../xdm/ui/resources/schemas.md)啟用的[體驗資料模型(XDM)結構描述。 若要為設定檔啟用結構描述，它必須實作XDM個別設定檔或XDM ExperienceEvent類別。
+擷取到Experience Platform以供即時客戶設定檔使用的資料必須符合為設定檔[&#128279;](../../xdm/ui/resources/schemas.md)啟用的體驗資料模型(XDM)結構描述。 若要為設定檔啟用結構描述，它必須實作XDM個別設定檔或XDM ExperienceEvent類別。
 
 [使用結構描述登入API](../../xdm/tutorials/create-schema-api.md)或[結構描述編輯器使用者介面](../../xdm/tutorials/create-schema-ui.md)，啟用您的結構描述以用於Real-time Customer Profile。  有關如何為設定檔啟用結構的詳細指示，請參閱其各自的檔案。
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 ### 建立身分名稱空間並將其標示為主要識別碼 {#identity-namespace}
 
-任何為搭配十等分使用而建立的結構描述都必須指派主要身分。 您可以在Adobe Experience Platform結構描述UI](../../xdm/ui/fields/identity.md#define-an-identity-field)中或透過[結構描述登入API](../../xdm/api/descriptors.md#create)定義身分欄位。[
+任何為搭配十等分使用而建立的結構描述都必須指派主要身分。 您可以在Adobe Experience Platform結構描述UI[&#128279;](../../xdm/ui/fields/identity.md#define-an-identity-field)中或透過[結構描述登入API](../../xdm/api/descriptors.md#create)定義身分欄位。
 
 查詢服務也可讓您直接透過SQL為臨時結構描述資料集欄位設定身分或主要身分。 如需詳細資訊，請參閱有關[在臨時結構描述身分中設定次要身分和主要身分的檔案](../data-governance/ad-hoc-schema-identities.md)。
 

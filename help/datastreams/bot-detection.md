@@ -59,7 +59,7 @@ ht-degree: 0%
 
 在「機器人偵測規則」頁面中，您可以使用下列功能來設定機器人偵測：
 
-* 使用[!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)。
+* 使用[[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)。
 * 建立您自己的機器人偵測規則。
 
 ### 使用IAB/ABC國際編目程式與機器人清單 {#iab-list}

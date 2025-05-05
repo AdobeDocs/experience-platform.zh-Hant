@@ -110,7 +110,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-若要存取Experience Platform中的特定功能，您還需要系統管理員授予您必要的屬性型存取控制許可權。 請參閱[取得必要的屬性型存取控制許可權](#get-abac-permissions)一節中的詳細資訊。
+>若要存取Experience Platform中的特定功能，您還需要系統管理員授予您必要的屬性型存取控制許可權。 請參閱[取得必要的屬性型存取控制許可權](#get-abac-permissions)一節中的詳細資訊。
 
 ![選取整合的產品設定檔。](./images/api-authentication/select-product-profiles.png)
 
@@ -149,7 +149,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 >[!TIP]
 >
-您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀有關[使用Postman驗證和測試API呼叫](#use-postman)的章節。
+>您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀有關[使用Postman驗證和測試API呼叫](#use-postman)的章節。
 
 ## 直接在API參考檔案中建立和擷取驗證認證 {#get-credentials-functionality}
 
@@ -169,17 +169,17 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 >[!TIP]
 >
-當您在Experience Platform API參考檔案中的不同端點頁面之間導覽時，頁面頂端憑證區塊仍會顯示。
+>當您在Experience Platform API參考檔案中的不同端點頁面之間導覽時，頁面頂端憑證區塊仍會顯示。
 
 ## [!BADGE 已棄用]{type=negative}產生JSON Web權杖(JWT) {#jwt}
 
 >[!WARNING]
 >
-不建議使用產生存取權杖的JWT方法。 所有新的整合都必須使用[OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server)來建立。 Adobe也要求您在2025年6月30日前將現有的整合移轉至OAuth方法，以便您的整合能繼續運作。 請參閱下列重要檔案：
+>不建議使用產生存取權杖的JWT方法。 所有新的整合都必須使用[OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server)來建立。 Adobe也要求您在2025年6月30日前將現有的整合移轉至OAuth方法，以便您的整合能繼續運作。 請參閱下列重要檔案：
 > 
-* [您的應用程式從JWT移轉至OAuth的移轉指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [使用OAuth的新舊應用程式實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [使用OAuth伺服器對伺服器認證方法的優點](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+>* [您的應用程式從JWT移轉至OAuth的移轉指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+>* [使用OAuth的新舊應用程式實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+>* [使用OAuth伺服器對伺服器認證方法的優點](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 檢視已棄用的資訊
 
@@ -187,9 +187,9 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 >[!IMPORTANT]
 >
-在本教學課程中，以下步驟會概述如何在Developer Console中產生JWT。 不過，此產生方法只應用於測試和評估目的。
+>在本教學課程中，以下步驟會概述如何在Developer Console中產生JWT。 不過，此產生方法只應用於測試和評估目的。
 >
-如要正常使用，必須自動產生JWT。 如需如何以程式設計方式產生JWT的詳細資訊，請參閱Adobe Developer上的[服務帳戶驗證指南](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/)。
+>如要正常使用，必須自動產生JWT。 如需如何以程式設計方式產生JWT的詳細資訊，請參閱Adobe Developer上的[服務帳戶驗證指南](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/)。
 
 在左側導覽中選取&#x200B;**[!UICONTROL 服務帳戶(JWT)]**，然後選取&#x200B;**[!UICONTROL 產生JWT]**。
 
@@ -227,7 +227,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 >[!NOTE]
 >
-您可以使用相同的API金鑰、使用者端密碼和JWT，為每個工作階段產生新的存取權杖。 這可讓您在應用程式中自動產生存取權杖。
+>您可以使用相同的API金鑰、使用者端密碼和JWT，為每個工作階段產生新的存取權杖。 這可讓您在應用程式中自動產生存取權杖。
 
 **回應**
 
@@ -290,7 +290,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 >[!IMPORTANT]
 >
-雖然上述呼叫足以測試您的存取認證，但請注意，您若沒有正確的屬性型存取控制許可權，將無法存取或修改數個資源。 閱讀以下&#x200B;**取得必要的屬性型存取控制許可權**&#x200B;章節中的詳細資訊。
+>雖然上述呼叫足以測試您的存取認證，但請注意，您若沒有正確的屬性型存取控制許可權，將無法存取或修改數個資源。 閱讀以下&#x200B;**取得必要的屬性型存取控制許可權**&#x200B;章節中的詳細資訊。
 
 ## 取得必要的屬性型存取控制許可權 {#get-abac-permissions}
 
@@ -330,7 +330,7 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 >[!NOTE]
 >
-只有系統管理員才能在「許可權」中檢視和管理API認證。
+>只有系統管理員才能在「許可權」中檢視和管理API認證。
 
 ### 將開發人員新增至產品設定檔 {#add-developers-to-product-profile}
 
@@ -360,7 +360,7 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 >[!NOTE]
 >
-只有系統管理員可以將API指派給Experience Platform UI中的角色。
+>只有系統管理員可以將API指派給Experience Platform UI中的角色。
 
 若要在Experience Platform API上使用及執行作業，系統管理員除了需要角色的指定許可權集之外，還需要新增API認證。 在章節中取得有關[管理角色](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role)的API認證的詳細資訊。
 

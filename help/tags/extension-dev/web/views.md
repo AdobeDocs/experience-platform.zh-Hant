@@ -172,7 +172,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 >[!NOTE]
 >
->若要下載適當的圖示，請瀏覽至Adobe Spectrum](https://spectrum.adobe.com/page/icons/)上的[圖示頁面，並搜尋「[!DNL Data]」。
+>若要下載適當的圖示，請瀏覽至Adobe Spectrum[&#128279;](https://spectrum.adobe.com/page/icons/)上的圖示頁面，並搜尋「[!DNL Data]」。
 
 使用者選取文字欄位旁的按鈕時，依[先前所述方式](#open-data-element)呼叫 `window.extensionBridge.openDataElementSelector`。這會顯示可供使用者選擇的使用者資料元素清單，而不是要求他們記住名稱並輸入百分比符號。使用者選取資料元素後，您將會收到兩側加上百分比符號的所選資料元素名稱 (除非您將 `tokenize` 選項設定為 `false`)。屆時，建議您將結果填入文字欄位中。
 

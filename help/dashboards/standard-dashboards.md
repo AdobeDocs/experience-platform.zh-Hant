@@ -140,7 +140,7 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 #### 儲存您的Widget {#save-widget}
 
-在Widget Composer中儲存時，會將Widget本機儲存至您的儀表板。 如果您想要儲存工作並在稍後繼續，請選取[儲存]。**** Widget名稱下方的勾號圖示表示已儲存Widget。 或者，當您滿意您的Widget時，選取&#x200B;**[!UICONTROL 儲存並關閉]**，讓其他所有可存取您控制面板的使用者都能使用此Widget。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以放棄您的工作並返回您的自訂儀表板。
+在Widget Composer中儲存時，會將Widget本機儲存至您的儀表板。 如果您想要儲存工作並在稍後繼續，請選取[儲存]。**&#x200B;** Widget名稱下方的勾號圖示表示已儲存Widget。 或者，當您滿意您的Widget時，選取&#x200B;**[!UICONTROL 儲存並關閉]**，讓其他所有可存取您控制面板的使用者都能使用此Widget。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以放棄您的工作並返回您的自訂儀表板。
 
 ![新Widget儲存確認。](./images/standard-dashboards/save-confirmation.png)
 

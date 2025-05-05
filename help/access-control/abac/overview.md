@@ -94,7 +94,7 @@ Experience Platform運用[Adobe Admin Console](https://adminconsole.adobe.com)�
 >總而言之，使用目的地和基於屬性的存取控制時，請記住以下含義：
 >
 >* 您只能啟用您有權在[對象入口網站](/help/segmentation/ui/audience-portal.md#browse)和[選取啟用工作流程的區段步驟](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments)中存取及檢視的對象。
->* 在啟動工作流程](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)的[對應步驟中，您只能檢視和選取您有存取許可權的欄位以進行啟動。
+>* 在啟動工作流程[&#128279;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)的對應步驟中，您只能檢視和選取您有存取許可權的欄位以進行啟動。
 >* 如果您想要在現有目的地啟用其他區段，而您無權存取對應至匯出之所有欄位，啟用工作流程將為您封鎖。
 
 如需[!DNL Destinations]的詳細資訊，請參閱[[!DNL Destinations] 概觀](../../destinations/home.md)。

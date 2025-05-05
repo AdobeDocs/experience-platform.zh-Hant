@@ -34,7 +34,7 @@ ht-degree: 3%
 | [!UICONTROL 未執行原因] | `notPerformedReason` | [[!UICONTROL 可程式碼參考]](../data-types/codeable-reference.md) | 未配發藥物的原因。 |
 | [!UICONTROL 備註] | `note` | [[!UICONTROL 註解]](../data-types/annotation.md)的陣列 | 有關分配的額外資訊。 |
 | [!UICONTROL 部分，共] | `partOf` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 觸發分配的程式或藥物請求。 |
-| [!UICONTROL 執行者] | `performer` | 物件陣列 | 表示執行分配事件的人員或人員。 如需詳細資訊，請參閱](#performer)下方的[區段。 |
+| [!UICONTROL 執行者] | `performer` | 物件陣列 | 表示執行分配事件的人員或人員。 如需詳細資訊，請參閱[&#128279;](#performer)下方的區段。 |
 | [!UICONTROL 數量] | `quantity` | [[!UICONTROL 簡單數量]](../data-types/simple-quantity.md) | 已分配的藥物量，包括測量單位。 |
 | [!UICONTROL 接收者] | `receiver` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 識別擷取藥物的人或藥物遞送的位置。 |
 | [!UICONTROL 主旨] | `subject` | [[!UICONTROL 參考]](../data-types/reference.md) | 代表接受藥物之人員或群組的資源連結。 |

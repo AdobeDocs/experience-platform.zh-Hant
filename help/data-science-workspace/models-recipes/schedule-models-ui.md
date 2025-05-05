@@ -31,7 +31,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]可讓您在機器學習�
 
 要完成此教學課程，您必須有權訪問 [!DNL Experience Platform]。 如果您無權存取 中的 [!DNL Experience Platform]組織，請在繼續操作前與系統管理員聯繫。
 
-此教學課程需要現有服務。 如果沒有可訪問的服務，可以按照將模型發佈為服務](./publish-model-service-ui.md)教學課程[創建一個。
+此教學課程需要現有服務。 如果沒有可訪問的服務，可以按照將模型發佈為服務[&#128279;](./publish-model-service-ui.md)教學課程創建一個。
 
 ## 設定排程評分 {#configure-scheduled-scoring}
 

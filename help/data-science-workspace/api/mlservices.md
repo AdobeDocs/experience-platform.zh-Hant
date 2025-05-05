@@ -22,7 +22,7 @@ ht-degree: 2%
 
 MLService是經過訓練的已發佈模型，讓您的組織能夠存取及重複使用先前開發的模型。 MLServices的主要功能是能依排程自動化訓練和評分。 排程的訓練回合有助於維護模型的效率和準確性，而排程的評分回合則可確保一致地產生新的見解。
 
-自動培訓和評分計劃使用開始時間戳、結束時間戳和表示為 [cron 運算式](https://en.wikipedia.org/wiki/Cron)的頻率進行定義。 可以在創建 MLS 服務](#create-an-mlservice)時[定義計劃，也可以通過更新現有 MLS 服務](#update-an-mlservice)來[應用計劃。
+自動培訓和評分計劃使用開始時間戳、結束時間戳和表示為 [cron 運算式](https://en.wikipedia.org/wiki/Cron)的頻率進行定義。 可以在創建 MLS 服務[&#128279;](#create-an-mlservice)時[定義計劃，也可以通過更新現有 MLS 服務](#update-an-mlservice)來應用計劃。
 
 ## 建立MLS服務 {#create-an-mlservice}
 

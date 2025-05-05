@@ -65,7 +65,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` 標籤**
 
 
-有一個非常重要的先決條件：您必須非同步載入標籤程式庫[](./asynchronous-deployment.md)。 無法同步載入標籤程式庫（這會導致主控台發生錯誤，且規則無法正確執行）。
+有一個非常重要的先決條件：您必須非同步載入標籤程式庫[&#128279;](./asynchronous-deployment.md)。 無法同步載入標籤程式庫（這會導致主控台發生錯誤，且規則無法正確執行）。
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 閱讀本檔案後，您現在應瞭解如何設定CSP標頭，以接受標籤程式庫檔案和內嵌指令碼。
 
-您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤等標籤管理系統搭配使用時有一些重大限制。 如需詳細資訊，請參閱Experience Platform](./sri.md)中[SRI相容性的指南。
+您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤等標籤管理系統搭配使用時有一些重大限制。 如需詳細資訊，請參閱Experience Platform[&#128279;](./sri.md)中SRI相容性的指南。

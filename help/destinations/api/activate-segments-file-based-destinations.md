@@ -87,7 +87,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ### API參考檔案 {#api-reference-documentation}
 
-在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe Developer網站](https://developer.adobe.com/experience-platform-apis/references/destinations/)上的[流量服務 — 目的地API檔案。 我們建議您同時使用本教學課程和API參考檔案。
+在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe Developer網站[&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/)上的流量服務 — 目的地API檔案。 我們建議您同時使用本教學課程和API參考檔案。
 
 ### 字彙 {#glossary}
 
@@ -4813,7 +4813,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-您可以在API參考檔案中找到有關資料流執行API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns)傳回的[各種引數的資訊。
+您可以在API參考檔案中找到有關資料流執行API[&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns)傳回的各種引數的資訊。
 
 ## API錯誤處理 {#api-error-handling}
 

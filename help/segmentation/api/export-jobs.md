@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->本指南涵蓋[!DNL Segmentation API]中匯出工作的使用。 如需有關如何管理[!DNL Real-Time Customer Profile]資料之匯出工作的資訊，請參閱設定檔API](../../profile/api/export-jobs.md)中[匯出工作的指南
+>本指南涵蓋[!DNL Segmentation API]中匯出工作的使用。 如需有關如何管理[!DNL Real-Time Customer Profile]資料之匯出工作的資訊，請參閱設定檔API[&#128279;](../../profile/api/export-jobs.md)中匯出工作的指南
 
 ## 快速入門
 

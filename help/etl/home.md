@@ -568,7 +568,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### 驗證結構描述相容的記錄
 
-寫入資料時，使用者可以選擇根據XDM結構描述中定義的驗證規則來驗證資料。 結構描述驗證的詳細資訊可在 [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)上的[ETL生態系統整合參考程式碼中找到。
+寫入資料時，使用者可以選擇根據XDM結構描述中定義的驗證規則來驗證資料。 結構描述驗證的詳細資訊可在 [!DNL GitHub][&#128279;](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)上的ETL生態系統整合參考程式碼中找到。
 
 如果您使用在[[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)上找到的參考實作，則可以使用系統屬性`-DenableSchemaValidation=true`在此實作中開啟結構描述驗證。
 

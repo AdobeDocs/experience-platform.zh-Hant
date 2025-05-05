@@ -366,7 +366,7 @@ curl -X POST \
 
 ## 將事件、條件和動作新增至規則 {#components}
 
-建立規則](#create)之後，您就可以新增事件、條件和動作（統稱為規則元件）來開始建立其邏輯。 [請參閱`/rule_components`端點指南中有關[建立規則元件](./rule-components.md#create)的章節，以瞭解如何在Reactor API中執行此作業。
+建立規則[&#128279;](#create)之後，您就可以新增事件、條件和動作（統稱為規則元件）來開始建立其邏輯。 請參閱`/rule_components`端點指南中有關[建立規則元件](./rule-components.md#create)的章節，以瞭解如何在Reactor API中執行此作業。
 
 ## 更新規則 {#update}
 

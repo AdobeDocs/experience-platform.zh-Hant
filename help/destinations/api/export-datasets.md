@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**動作專案**： Experience Platform ](/help/release-notes/latest/latest.md#destinations)的2024年9月[發行版本匯入了為匯出資料集資料流設定`endTime`日期的選項。 Adobe也針對2024年9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，引入了2025年9月1日的預設結束日期。
+>**動作專案**： Experience Platform [&#128279;](/help/release-notes/latest/latest.md#destinations)的2024年9月發行版本匯入了為匯出資料集資料流設定`endTime`日期的選項。 Adobe也針對2024年9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，引入了2025年9月1日的預設結束日期。
 >
 >對於這些資料流中的任一資料流，您需要在結束日期之前手動更新資料流中的結束日期，否則您的匯出將在該日期停止。 使用Experience Platform UI檢視哪些資料流將設定在2025年9月1日停止。
 >
@@ -42,7 +42,7 @@ ht-degree: 3%
 
 您可以匯出的資料集取決於Experience Platform應用程式(Real-Time CDP、Adobe Journey Optimizer)、層級(Prime或Ultimate)以及您購買的任何附加元件(例如：Data Distiller)。
 
-請參閱UI教學課程頁面](/help/destinations/ui/export-datasets.md#datasets-to-export)上的[表格，瞭解您可以匯出哪些資料集。
+請參閱UI教學課程頁面[&#128279;](/help/destinations/ui/export-datasets.md#datasets-to-export)上的表格，瞭解您可以匯出哪些資料集。
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -107,7 +107,7 @@ ht-degree: 3%
 
 ### API參考檔案 {#api-reference-documentation}
 
-在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe Developer網站](https://developer.adobe.com/experience-platform-apis/references/destinations/)上的[[!DNL Flow Service] - Destinations API檔案。 我們建議您同時使用本教學課程和API參考檔案。
+在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe Developer網站[&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/)上的[!DNL Flow Service] - Destinations API檔案。 我們建議您同時使用本教學課程和API參考檔案。
 
 ### 字彙 {#glossary}
 
@@ -2449,7 +2449,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-您可以在API參考檔案中找到有關資料流執行API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns)傳回的[各種引數的資訊。
+您可以在API參考檔案中找到有關資料流執行API[&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns)傳回的各種引數的資訊。
 
 ## 驗證資料集匯出成功 {#verify}
 
@@ -2485,7 +2485,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 ## 常見問題 {#faq}
 
-檢視關於資料集匯出的常見問題](/help/destinations/ui/export-datasets.md#faq)的[清單。
+檢視關於資料集匯出的常見問題[&#128279;](/help/destinations/ui/export-datasets.md#faq)的清單。
 
 ## 後續步驟 {#next-steps}
 

@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 先決條件
 
-若要使用此擴充功能，您必須擁有可存取[!DNL Event Hubs]的有效[!DNL Azure]帳戶。 在執行以下步驟之前，您也必須使用 [!DNL Azure] 入口網站](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create)來[建立事件中樞。
+若要使用此擴充功能，您必須擁有可存取[!DNL Event Hubs]的有效[!DNL Azure]帳戶。 在執行以下步驟之前，您也必須使用 [!DNL Azure] 入口網站[&#128279;](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create)來建立事件中樞。
 
 ## 安裝擴充功能
 

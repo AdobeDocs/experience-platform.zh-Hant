@@ -36,7 +36,7 @@ ht-degree: 4%
 | 授權測試URL | 將[!DNL Mailchimp]連線至Experience Platform時，會使用授權測試URL來驗證認證。 如果未提供，則會在來源連線建立步驟期間自動檢查認證。 |
 | 存取權杖 | 用來驗證來源的對應存取權杖。 這是OAuth型驗證的必要專案。 |
 
-如需使用OAuth 2向Experience Platform驗證您[!DNL Mailchimp]帳戶的詳細資訊，請參閱有關使用OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/)的此[[!DNL Mailchimp] 檔案。
+如需使用OAuth 2向Experience Platform驗證您[!DNL Mailchimp]帳戶的詳細資訊，請參閱有關使用OAuth 2[&#128279;](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/)的此[!DNL Mailchimp] 檔案。
 
 ### 基本驗證
 
@@ -60,7 +60,7 @@ ht-degree: 4%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Mailchimp Campaigns]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Mailchimp Campaigns]帳戶，然後選取[下一步] **以繼續。**
 
 ![現有](../../../../images/tutorials/create/mailchimp-campaigns/existing.png)
 

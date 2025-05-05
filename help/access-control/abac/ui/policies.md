@@ -142,7 +142,7 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 **[!UICONTROL 啟用自動包含]**&#x200B;對話方塊會出現，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL 啟用]**&#x200B;以完成組態設定。
 
-![啟用自動包含]對話方塊醒目提示[!UICONTROL 啟用]。](../../images/flac-ui/abac-policies-auto-include-enable.png)[!UICONTROL 
+![啟用自動包含]對話方塊醒目提示[!UICONTROL 啟用]。(../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >

@@ -31,7 +31,7 @@ Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠�
 
 若要接收資料流執行通知，您必須使用Adobe Developer Console註冊webhook以進行[!DNL Experience Platform]整合。
 
-請依照有關[訂閱[！DNL I/O Event]通知](../observability/alerts/subscribe.md)的教學課程，取得如何完成此作業的詳細步驟。
+請依照有關[訂閱[!DNL I/O Event]通知](../observability/alerts/subscribe.md)的教學課程，取得如何完成此作業的詳細步驟。
 
 >[!IMPORTANT]
 >

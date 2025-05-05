@@ -24,7 +24,7 @@ ht-degree: 7%
 | [!UICONTROL 通訊] | `communication` | 物件陣列 | 可用來與從業人員溝通的語言。 如需詳細資訊，請參閱下方的[區段](#communication) |
 | [!UICONTROL 識別碼] | `identifier` | [[!UICONTROL 識別碼]](../data-types/identifier.md)的陣列 | 適用於此角色中之人員的識別碼。 |
 | [!UICONTROL 名稱] | `name` | [[!UICONTROL 人類名稱]](../data-types/human-name.md)的陣列 | 與從業人員相關聯的名稱。 |
-| [!UICONTROL 資格] | `qualification` | 物件陣列 | 官方資格、認證、認證、培訓、授權或類似專案，授權或涉及從業人員提供的護理。 如需詳細資訊，請參閱](#qualification)下方的[區段。 |
+| [!UICONTROL 資格] | `qualification` | 物件陣列 | 官方資格、認證、認證、培訓、授權或類似專案，授權或涉及從業人員提供的護理。 如需詳細資訊，請參閱[&#128279;](#qualification)下方的區段。 |
 | [!UICONTROL 連絡人詳細資料] | `telecom` | [[!UICONTROL 聯絡點]](../data-types/contact-point.md)的陣列 | 從業者的聯絡詳細資訊。 |
 | [!UICONTROL 作用中] | `active` | 布林值 | 表示從業者記錄是否在使用中。 |
 | [!UICONTROL 出生日期] | `birthDate` | 日期 | 從業人員的出生日期。 |

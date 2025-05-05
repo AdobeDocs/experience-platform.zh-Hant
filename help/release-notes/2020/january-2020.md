@@ -54,7 +54,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何�
 | 新的 API 端點 | [!DNL Privacy Service] API的基礎路徑已從`/data/privacy/gdpr`更新為`/data/core/privacy/jobs`。 |
 | 新規定要提供 `regulation` 屬性 | 在 [!DNL Privacy Service] API 中建立新作業時，必須在請求承載中提供 `regulation` 屬性，以便指明是根據哪個規則追蹤該作業。接受的值為`gdpr`和`ccpa`。 |
 | 支援 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service]現在接受來自Adobe [!DNL Primetime Authentication]的存取/刪除要求，使用`primetimeAuthentication`作為其產品值。 |
-| Privacy Service UI增強功能 | GDPR和CCPA法規的個別工作追蹤頁面。 全新**法規型別**下拉式清單，可切換GDPR和CCPA的追蹤資料。 |
+| Privacy Service UI增強功能 | GDPR和CCPA法規的個別工作追蹤頁面。 全新&#x200B;**法規型別**&#x200B;下拉式清單，可切換GDPR和CCPA的追蹤資料。 |
 
 **已知問題**
 

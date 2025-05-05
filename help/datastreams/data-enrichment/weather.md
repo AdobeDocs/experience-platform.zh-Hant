@@ -11,7 +11,7 @@ ht-degree: 68%
 
 # 使用來自[!DNL The Weather Channel]的天氣資料增強資料彙集
 
-Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，將美國天氣的附加內容引進透過資料流收集的資料中。您可以在Experience Platform中使用此資料來分析、鎖定目標和建立對象。
+Adobe 已和 [[!DNL [The Weather Company]]](https://www.ibm.com/weather) 合作，將美國天氣的附加內容引進透過資料流收集的資料中。您可以在Experience Platform中使用此資料來分析、鎖定目標和建立對象。
 
 [!DNL The Weather Channel]提供三種型別的資料：
 

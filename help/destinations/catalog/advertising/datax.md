@@ -131,4 +131,4 @@ ht-degree: 3%
 
 ## 其他資源 {#additional-resources}
 
-如需詳細資訊，請參閱 [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/)上的[!DNL Yahoo/Verizon Media] [檔案。
+如需詳細資訊，請參閱 [!DNL DataX][&#128279;](https://developer.verizonmedia.com/datax/guide/)上的[!DNL Yahoo/Verizon Media] 檔案。

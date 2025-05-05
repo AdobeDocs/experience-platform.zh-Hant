@@ -40,7 +40,7 @@ Adobe Experience Platform可讓您為[潛在客戶設定檔](../../profile/ui/pr
 
 ![潛在客戶對象詳細資訊頁面已顯示。](../images/types/prospect/audience-details.png)
 
-如需對象詳細資訊頁面的詳細資訊，請參閱對象入口網站概觀](../ui/audience-portal.md#audience-details)的[對象詳細資訊區段。
+如需對象詳細資訊頁面的詳細資訊，請參閱對象入口網站概觀[&#128279;](../ui/audience-portal.md#audience-details)的對象詳細資訊區段。
 
 ## 建立客群 {#create}
 

@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->在建立[!DNL Marketo Engage]來源連線和資料流之前，您必須先確定已在[!DNL Marketo]中對應您的Adobe組織ID ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)。 [此外，您也必須確定在建立來源連線和資料流之前，已完成[自動填入 [!DNL Marketo] B2B名稱空間和結構描述](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md)。
+>在建立[!DNL Marketo Engage]來源連線和資料流之前，您必須先確定已在[!DNL Marketo]中對應您的Adobe組織ID [&#128279;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)。 此外，您也必須確定在建立來源連線和資料流之前，已完成[自動填入 [!DNL Marketo] B2B名稱空間和結構描述](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md)。
 
 本教學課程提供在UI中建立[!DNL Marketo Engage] （以下稱為「[!DNL Marketo]」）來源聯結器的步驟，以將B2B資料引進Adobe Experience Platform。
 
@@ -183,7 +183,7 @@ ht-degree: 2%
 
 ## 監視資料流
 
-建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請參閱有關UI](../../../../../dataflows/ui/monitor-sources.md)中[監視資料流的教學課程。
+建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請參閱有關UI[&#128279;](../../../../../dataflows/ui/monitor-sources.md)中監視資料流的教學課程。
 
 ## 刪除您的屬性
 
@@ -213,7 +213,7 @@ ht-degree: 2%
 
 #### 缺少主要身分
 
-如果缺少主要身分，資料流將無法儲存和擷取。 在嘗試設定資料流之前，請確定XDM結構描述](../../../../../xdm/tutorials/create-schema-ui.md)中有[主要身分。
+如果缺少主要身分，資料流將無法儲存和擷取。 在嘗試設定資料流之前，請確定XDM結構描述[&#128279;](../../../../../xdm/tutorials/create-schema-ui.md)中有主要身分。
 
 ![錯誤訊息顯示XDM結構描述中缺少主要身分。](../../../../images/tutorials/create/marketo/no-primary-identity.png)
 

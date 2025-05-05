@@ -58,7 +58,7 @@ ht-degree: 1%
 
 必須為每個身分識別值提供`identityIABConsent`屬性，以提供身分識別的TCF同意值。 這個屬性的值必須符合[[!UICONTROL 同意字串]資料型別](../../data-types/consent-string.md)。
 
-如需此欄位群組使用案例的詳細資訊，請參閱Experience Platform](../../../landing/governance-privacy-security/consent/iab/overview.md)中[IAB TCF 2.0支援指南。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
+如需此欄位群組使用案例的詳細資訊，請參閱Experience Platform[&#128279;](../../../landing/governance-privacy-security/consent/iab/overview.md)中IAB TCF 2.0支援指南。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
 
 * [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

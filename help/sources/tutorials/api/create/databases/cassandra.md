@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已使用[!DNL Flow Service] API建立[!DNL Cassandra]連線，並已取得連線的唯一ID值。 您可在下一個教學課程中使用此ID，瞭解如何使用Flow Service API](../../explore/database-nosql.md)來探索資料庫[。
+依照本教學課程中的指示，您已使用[!DNL Flow Service] API建立[!DNL Cassandra]連線，並已取得連線的唯一ID值。 您可在下一個教學課程中使用此ID，瞭解如何使用Flow Service API[&#128279;](../../explore/database-nosql.md)來探索資料庫。

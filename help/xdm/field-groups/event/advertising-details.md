@@ -17,9 +17,9 @@ ht-degree: 27%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `adAssetReference` | 物件 | 擷取有關廣告的資產資訊。 如需此物件結構的詳細資訊，請參閱](#adAssetReference)下方的[子區段。 |
-| `adAssetViewDetails` | 物件 | 擷取廣告播放的檢視細節。 如需此物件結構的詳細資訊，請參閱](#adAssetViewDetails)下方的[子區段。 |
-| `adViewability` | 物件 | 擷取一般使用者看到的曝光次數，例如播放器音量、資料庫版本、視窗狀態和廣告檢視區維度。 如需此物件結構的詳細資訊，請參閱](#adViewability)下方的[子區段。 |
+| `adAssetReference` | 物件 | 擷取有關廣告的資產資訊。 如需此物件結構的詳細資訊，請參閱[&#128279;](#adAssetReference)下方的子區段。 |
+| `adAssetViewDetails` | 物件 | 擷取廣告播放的檢視細節。 如需此物件結構的詳細資訊，請參閱[&#128279;](#adAssetViewDetails)下方的子區段。 |
+| `adViewability` | 物件 | 擷取一般使用者看到的曝光次數，例如播放器音量、資料庫版本、視窗狀態和廣告檢視區維度。 如需此物件結構的詳細資訊，請參閱[&#128279;](#adViewability)下方的子區段。 |
 | `clicks` | [[!UICONTROL 量值]](../../data-types/measure.md) | 廣告上的點按動作次數。 |
 | `completes` | [[!UICONTROL 量值]](../../data-types/measure.md) | 定時媒體資產觀看至結束的次數。 這並不一定表示使用者看完整段影片，他們有可能略過前面。 |
 | `conversions` | [[!UICONTROL 量值]](../../data-types/measure.md) | 預先定義的動作（或動作）觸發效能評估事件的次數。 |

@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ## 相容性模式 {#compatibility}
 
-[!DNL Experience Data Model] (XDM)是公開記錄的規格，由Adobe驅動，用於改善數位體驗的互通性、表現力和威力。 Adobe在GitHub](https://github.com/adobe/xdm/)上的[開放原始碼專案中維護原始程式碼和正式XDM定義。 這些定義會使用JSON-LD (連結資料的JavaScript物件標籤法)和JSON結構描述當作定義XDM結構描述的文法，以XDM標準標籤法撰寫。
+[!DNL Experience Data Model] (XDM)是公開記錄的規格，由Adobe驅動，用於改善數位體驗的互通性、表現力和威力。 Adobe在GitHub[&#128279;](https://github.com/adobe/xdm/)上的開放原始碼專案中維護原始程式碼和正式XDM定義。 這些定義會使用JSON-LD (連結資料的JavaScript物件標籤法)和JSON結構描述當作定義XDM結構描述的文法，以XDM標準標籤法撰寫。
 
 在公開存放庫中檢視正式XDM定義時，您可以看到標準XDM與您在Adobe Experience Platform中看到的不同。 您在[!DNL Experience Platform]中看到的稱為「相容性模式」，它提供標準XDM與其在[!DNL Experience Platform]中的使用方式之間的簡單對應。
 
@@ -75,52 +75,52 @@ ht-degree: 0%
   <tr>
   <td>
   <pre class=" language-json">
-{
-  "xdm：birthDate"： {
+&lbrace;
+  "xdm：birthDate"： &lbrace;
     "title"： "Birth Date"，
     "type"： "string"，
     "format"： "date"
-  }，
-  "xdm：birthDayAndMonth"： {
+  &rbrace;，
+  "xdm：birthDayAndMonth"： &lbrace;
     "title"： "Birth Date"，
     "type"： "string"，
     "pattern"： "[0-1][0-9]-[0-9][0-9]"
-  }，
-  "xdm：birthYear"： {
+  &rbrace;，
+  "xdm：birthYear"： &lbrace;
     "title"： "Birth year"，
     "type"： "integer"，
     "minimum"： 1，
     "maximum"： 32767
-  }
-}
+  &rbrace;
+&rbrace;
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-{
-  "birthDate"： {
+&lbrace;
+  "birthDate"： &lbrace;
     "title"： "Birth Date"，
     "type"： "string"，
     "format"： "date"，
     "meta：xdmField"： "xdm：birthDate"，
     "meta：xdmType"： "date"
-  }，
-  "birthDayAndMonth"： {
+  &rbrace;，
+  "birthDayAndMonth"： &lbrace;
     "title"： "Birth Date"，
     "type"： "string"，
     "pattern"： "[0-1][0-9]-[0-9][0-9]"，
     "meta：xdmField"： "xdm：birthDayAndMonth"，
     "meta：xdmType"： "string"
-  }，
-  "birthYear"： {
+  &rbrace;，
+  "birthYear"： &lbrace;
     "title"： "Birth year"，
     "type"： "integer"，
     "minimum"： 1，
     "maximum"：32767，
     "meta：xdmField"： "xdm：birthYear"，
     "meta：xdmType"： "short"
-  }
-}
+  &rbrace;
+&rbrace;
       </pre>
   </td>
   </tr>

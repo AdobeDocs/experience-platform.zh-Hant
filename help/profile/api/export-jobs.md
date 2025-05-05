@@ -20,7 +20,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->本指南涵蓋[!DNL Profile API]中匯出工作的使用。 如需有關如何管理Adobe Experience Platform Segmentation Service之匯出作業的資訊，請參閱Segmentation API](../../profile/api/export-jobs.md)中[匯出作業的指南。
+>本指南涵蓋[!DNL Profile API]中匯出工作的使用。 如需有關如何管理Adobe Experience Platform Segmentation Service之匯出作業的資訊，請參閱Segmentation API[&#128279;](../../profile/api/export-jobs.md)中匯出作業的指南。
 
 除了建立匯出作業之外，您也可以使用`/entities`端點（也稱為&quot;[!DNL Profile Access]&quot;）存取[!DNL Profile]資料。 如需詳細資訊，請參閱[實體端點指南](./entities.md)。 有關如何使用UI存取[!DNL Profile]資料的步驟，請參閱[使用手冊](../ui/user-guide.md)。
 
@@ -36,9 +36,9 @@ ht-degree: 2%
 
 匯出[!DNL Profile]資料時，必須先建立目標資料集。 請務必正確設定資料集，以確保匯出成功。
 
-重要考量事項之一是資料集所依據的結構描述（在以下API範例要求中為`schemaRef.id`）。 為了匯出設定檔資料，資料集必須以[!DNL XDM Individual Profile]聯合結構描述(`https://ns.adobe.com/xdm/context/profile__union`)為基礎。 聯合結構描述是系統產生的唯讀結構描述，可彙總共用相同類別的結構描述欄位。 在此案例中，這是[!DNL XDM Individual Profile]類別。 如需聯合檢視結構描述的詳細資訊，請參閱結構描述組合基本概念指南](../../xdm/schema/composition.md#union)中的[聯合區段。
+重要考量事項之一是資料集所依據的結構描述（在以下API範例要求中為`schemaRef.id`）。 為了匯出設定檔資料，資料集必須以[!DNL XDM Individual Profile]聯合結構描述(`https://ns.adobe.com/xdm/context/profile__union`)為基礎。 聯合結構描述是系統產生的唯讀結構描述，可彙總共用相同類別的結構描述欄位。 在此案例中，這是[!DNL XDM Individual Profile]類別。 如需聯合檢視結構描述的詳細資訊，請參閱結構描述組合基本概念指南[&#128279;](../../xdm/schema/composition.md#union)中的聯合區段。
 
-本教學課程後續步驟概述如何使用[!DNL Catalog] API建立參照[!DNL XDM Individual Profile]聯合結構描述的資料集。 您也可以使用[!DNL Experience Platform]使用者介面來建立參考聯合結構描述的資料集。 此UI教學課程匯出對象](../../segmentation/tutorials/create-dataset-export-segment.md)中概述了使用UI的步驟，但也適用於此處。 [完成後，您可以返回此教學課程，繼續進行[起始新匯出工作](#initiate)的步驟。
+本教學課程後續步驟概述如何使用[!DNL Catalog] API建立參照[!DNL XDM Individual Profile]聯合結構描述的資料集。 您也可以使用[!DNL Experience Platform]使用者介面來建立參考聯合結構描述的資料集。 此UI教學課程匯出對象[&#128279;](../../segmentation/tutorials/create-dataset-export-segment.md)中概述了使用UI的步驟，但也適用於此處。 完成後，您可以返回此教學課程，繼續進行[起始新匯出工作](#initiate)的步驟。
 
 如果您已有相容的資料集且知道其識別碼，您可以直接進行[起始新匯出工作](#initiate)的步驟。
 
@@ -492,4 +492,4 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs/726 \
 
 ### 匯出對象
 
-您也可以使用匯出作業端點來匯出對象，而非[!DNL Profile]資料。 如需詳細資訊，請參閱分段API](../../segmentation/api/export-jobs.md)中[匯出作業的指南。
+您也可以使用匯出作業端點來匯出對象，而非[!DNL Profile]資料。 如需詳細資訊，請參閱分段API[&#128279;](../../segmentation/api/export-jobs.md)中匯出作業的指南。

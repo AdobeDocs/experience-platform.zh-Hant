@@ -49,7 +49,7 @@ ht-degree: 3%
 | 使用者密碼 | API密碼可讓您的應用程式存取[!DNL Twitter] API。 如需指引，請參閱[API金鑰和秘密](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)上的[!DNL Twitter]檔案。 |
 | 權杖密碼 | 您應用程式的不到期權杖密碼，用於透過OAuth驗證[!DNL Twitter] API。 如需指引，請參閱有關[取得使用存取權杖](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)的[!DNL Twitter]檔案。 |
 | 存取權杖 | 您應用程式不會到期的存取權杖，用於透過OAuth驗證[!DNL Twitter] API。 如需指引，請參閱有關[取得使用存取權杖](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)的[!DNL Twitter]檔案。 |
-| 畫素ID | [!DNL Twitter] Pixel是在您的網站上實作的網站標籤，用來追蹤網站動作或轉換。 如需指引，請參閱有關網站](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)的[轉換追蹤的[!DNL Twitter]檔案。 |
+| 畫素ID | [!DNL Twitter] Pixel是在您的網站上實作的網站標籤，用來追蹤網站動作或轉換。 如需指引，請參閱有關網站[&#128279;](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)的轉換追蹤的[!DNL Twitter]檔案。 |
 
 ## 安裝並設定[!DNL Twitter]擴充功能 {#install}
 

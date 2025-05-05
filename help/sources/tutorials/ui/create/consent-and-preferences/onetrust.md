@@ -28,7 +28,7 @@ ht-degree: 2%
 
 您必須先擷取存取權杖，才能將[!DNL OneTrust Integration]連線至Experience Platform。 如需尋找存取Token的詳細指示，請參閱[[!DNL OneTrust Integration] OAuth 2指南](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token)。
 
-存取權杖到期後不會自動重新整理，因為[!DNL OneTrust]不支援系統間重新整理權杖。 因此，在連線過期之前，必須確定您的存取權杖已在連線中更新。 存取權杖的最大可設定存留期為一年。 若要深入瞭解如何更新您的存取權杖，請參閱有關管理您的OAuth 2.0使用者端認證](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials)的[[!DNL OneTrust] 檔案。
+存取權杖到期後不會自動重新整理，因為[!DNL OneTrust]不支援系統間重新整理權杖。 因此，在連線過期之前，必須確定您的存取權杖已在連線中更新。 存取權杖的最大可設定存留期為一年。 若要深入瞭解如何更新您的存取權杖，請參閱有關管理您的OAuth 2.0使用者端認證[&#128279;](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials)的[!DNL OneTrust] 檔案。
 
 ### 收集必要的認證
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL OneTrust Integration]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL OneTrust Integration]帳戶，然後選取[下一步] **以繼續。**
 
 ![來源工作流程中的現有帳戶驗證步驟。](../../../../images/tutorials/create/onetrust/existing.png)
 

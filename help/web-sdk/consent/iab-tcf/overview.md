@@ -86,4 +86,4 @@ Adobe Experience Platform Web SDK有收集體驗事件的[`sendEvent`](/help/web
 
 ## 後續步驟
 
-現在您已基本瞭解IAB透明與同意架構2.0，請參閱其中一份使用含標籤](./with-tags.md)的IAB TCF 2.0 [或不含標籤的[的指南](./without-tags.md)。
+現在您已基本瞭解IAB透明與同意架構2.0，請參閱其中一份使用含標籤[&#128279;](./with-tags.md)的IAB TCF 2.0 或不含標籤的[的指南](./without-tags.md)。

@@ -38,7 +38,7 @@ ht-degree: 0%
 >
 >如果您在與Adobe建議欄位群組不同的屬性中維持您的使用者同意，則必須選取這些屬性，而不是下列屬性。
 
-在細分](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation)檔案中的[處理同意上可找到更多資訊。
+在細分[&#128279;](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation)檔案中的處理同意上可找到更多資訊。
 
 ![含有[!UICONTROL 同意和偏好設定]屬性資料夾的區段產生器已反白顯示。](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 

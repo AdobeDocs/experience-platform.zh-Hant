@@ -13,7 +13,7 @@ ht-degree: 5%
 
 本檔案會示範如何將使用Data Distiller建立的已準備好的訓練資料集共用至雲端儲存位置，讓ML環境可讀取該位置來訓練和評分您的模型。 此處的範例將訓練資料集匯出至[資料登陸區域(DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)。 您可以視需要變更儲存目的地，以搭配機器學習環境使用。
 
-目的地](https://developer.adobe.com/experience-platform-apis/references/destinations/)的[流量服務是用來完成功能管道，方法是將已計算功能的資料集著陸至適當的雲端儲存位置。
+目的地[&#128279;](https://developer.adobe.com/experience-platform-apis/references/destinations/)的流量服務是用來完成功能管道，方法是將已計算功能的資料集著陸至適當的雲端儲存位置。
 
 ## 建立來源連線 {#create-source-connection}
 

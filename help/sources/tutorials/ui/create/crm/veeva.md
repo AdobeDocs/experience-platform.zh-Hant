@@ -54,7 +54,7 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Veeva CRM]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Veeva CRM]帳戶，然後選取[下一步] **以繼續。**
 
 ![現有](../../../../images/tutorials/create/veeva/existing.png)
 

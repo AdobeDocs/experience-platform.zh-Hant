@@ -49,7 +49,7 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 ### 設定銷售機會至帳戶比對服務 {#lead-to-account-matching-service}
 
-選取&#x200B;**[!UICONTROL 設定]**&#x200B;以從[!UICONTROL 帳戶設定]對話方塊設定銷售機會與帳戶比對服務。 如需有關如何設定銷售機會與帳戶比對的完整詳細資訊，請參閱[UI指南](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching)。 若要進一步瞭解銷售機會與帳戶的比對，請參閱Real-Time CDP B2B檔案](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)中的[銷售機會與帳戶的比對。
+選取&#x200B;**[!UICONTROL 設定]**&#x200B;以從[!UICONTROL 帳戶設定]對話方塊設定銷售機會與帳戶比對服務。 如需有關如何設定銷售機會與帳戶比對的完整詳細資訊，請參閱[UI指南](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching)。 若要進一步瞭解銷售機會與帳戶的比對，請參閱Real-Time CDP B2B檔案[&#128279;](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)中的銷售機會與帳戶的比對。
 
 ![設定反白的帳戶設定檔儀表板。](../images/account-profiles/settings.png)
 
@@ -157,7 +157,7 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 ### 新帳戶（依型別） {#accounts-by-type}
 
-依型別]的[!UICONTROL 新帳戶Widget會在環形圖內顯示單一量度中的帳戶總數。 環形圖說明構成此總計的不同帳戶型別的相對組成。 以色彩編碼的金鑰提供所有包含的帳戶型別的劃分。 當游標暫留在環圈圖的個別區段上時，每種型別的帳戶個別計數都會顯示在對話方塊中。
+依型別的新帳戶Widget會在環形圖內顯示單一量度中的帳戶總數。 環形圖說明構成此總計的不同帳戶型別的相對組成。 以色彩編碼的金鑰提供所有包含的帳戶型別的劃分。 當游標暫留在環圈圖的個別區段上時，每種型別的帳戶個別計數都會顯示在對話方塊中。
 
 ![依型別Widget的新帳戶。](../images/account-profiles/new-accounts-by-type.png)
 
@@ -173,13 +173,13 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 ### 按收入顯示的新商機 {#opportunities-by-revenue}
 
-按收入]列出的[!UICONTROL 新商機Widget使用長條圖來說明商機所產生的預估收入總額。 Widget最多可支援六個機會。
+按收入列出的新商機Widget使用長條圖來說明商機所產生的預估收入總額。 Widget最多可支援六個機會。
 
 若要檢視包含商機之特定收入總計的對話方塊，請使用游標暫留在個別長條上。
 
 ![依據收入Widget的新商機。](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### 按狀態與階段{#opportunities-by-status-&-stage}的新商機
+### 按狀態與階段的新商機{#opportunities-by-status-&-stage}
 
 此Widget使用長條圖來說明在行銷/銷售漏斗的所有階段中開啟或關閉的機會數量。 Widget會使用顏色來區分機會的階段。 以色彩編碼的索引鍵表示商機的可用階段。
 

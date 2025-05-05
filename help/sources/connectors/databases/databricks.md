@@ -163,4 +163,4 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ## 使用API連線[!DNL Databricks]至Experience Platform
 
-現在您已完成先決條件步驟，接下來可以使用API ](../../tutorials/api/create/databases/databricks.md)將您的 [!DNL Databricks] 帳戶連線至Experience Platform [，繼續參閱指南。
+現在您已完成先決條件步驟，接下來可以使用API [&#128279;](../../tutorials/api/create/databases/databricks.md)將您的 [!DNL Databricks] 帳戶連線至Experience Platform ，繼續參閱指南。

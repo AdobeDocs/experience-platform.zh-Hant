@@ -60,7 +60,7 @@ ht-degree: 2%
 
 ## 標籤群組
 
-Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https://docs.airship.com/guides/audience/tags/)，在實施上稍有差異。 此整合將使用者在Experience Platform區段](../../../xdm/field-groups/profile/segmentation.md)中的[成員資格狀態對應至[!DNL Airship]標籤是否存在或不存在。 例如，在`xdm:status`變更為`realized`的Experience Platform對象中，標籤已新增至此設定檔對應到的[!DNL Airship]頻道或具名使用者。 如果`xdm:status`變更為`exited`，標籤將會移除。
+Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https://docs.airship.com/guides/audience/tags/)，在實施上稍有差異。 此整合將使用者在Experience Platform區段[&#128279;](../../../xdm/field-groups/profile/segmentation.md)中的成員資格狀態對應至[!DNL Airship]標籤是否存在或不存在。 例如，在`xdm:status`變更為`realized`的Experience Platform對象中，標籤已新增至此設定檔對應到的[!DNL Airship]頻道或具名使用者。 如果`xdm:status`變更為`exited`，標籤將會移除。
 
 若要啟用這項整合，請在[!DNL Airship]中建立一個名為`adobe-segments`的&#x200B;*標籤群組*。
 

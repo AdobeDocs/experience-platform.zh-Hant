@@ -149,12 +149,12 @@ Magnite：批次目的地可以接收來自AdobeCDP的&#x200B;*任何*&#x200B;�
 
 ### 對應屬性和身分 {#map}
 
-在&#x200B;**[!UICONTROL Source欄位]**中，您可以為裝置選取任何屬性或身分。 在此範例中，我們已選取名為「DeviceId」的自訂IdentityMap
+在&#x200B;**[!UICONTROL Source欄位]**&#x200B;中，您可以為裝置選取任何屬性或身分。 在此範例中，我們已選取名為「DeviceId」的自訂IdentityMap
 ![將所需的資料欄位對應到device_id欄位](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-在&#x200B;**[!UICONTROL 目標欄位]**中：
+在&#x200B;**[!UICONTROL 目標欄位]**&#x200B;中：
 ![選取適當的裝置型別目標身分](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)如需詳細資訊，請參閱[支援的身分](#supported-identities)。
-在此範例中，我們已選取**[!UICONTROL 目標欄位]**： magnite_deviceId_CUSTOM，因為我們的&#x200B;**[!UICONTROL Source欄位]**&#x200B;已定義為自訂IdentityMap： DeviceID。
+在此範例中，我們已選取&#x200B;**[!UICONTROL 目標欄位]**： magnite_deviceId_CUSTOM，因為我們的&#x200B;**[!UICONTROL Source欄位]**&#x200B;已定義為自訂IdentityMap： DeviceID。
 
 >[!NOTE]
 >

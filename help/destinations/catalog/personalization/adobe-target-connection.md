@@ -71,7 +71,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 >[!IMPORTANT]
 >
->針對相同頁面和下一頁個人化使用案例&#x200B;*啟用*&#x200B;邊緣對象時，對象&#x200B;*必須*&#x200B;使用[active-on-edge合併原則](../../../segmentation/ui/segment-builder.md#merge-policies)。 [!DNL active-on-edge]合併原則可確保持續評估邊緣](../../../segmentation/methods/edge-segmentation.md)上的對象[，並可用於即時和下一頁個人化使用案例。  根據實作型別，閱讀關於[所有可用使用案例](#parameter)。
+>針對相同頁面和下一頁個人化使用案例&#x200B;*啟用*&#x200B;邊緣對象時，對象&#x200B;*必須*&#x200B;使用[active-on-edge合併原則](../../../segmentation/ui/segment-builder.md#merge-policies)。 [!DNL active-on-edge]合併原則可確保持續評估邊緣[&#128279;](../../../segmentation/methods/edge-segmentation.md)上的對象，並可用於即時和下一頁個人化使用案例。  根據實作型別，閱讀關於[所有可用使用案例](#parameter)。
 >如果您將使用不同合併原則的邊緣受眾對應至Adobe Target目的地，這些受眾將不會針對即時和下一頁使用案例進行評估。
 >依照[建立合併原則](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)上的指示進行，並確定啟用&#x200B;**[!UICONTROL Edge上主動式合併原則]**&#x200B;切換按鈕。
 
@@ -139,7 +139,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
 >[!NOTE]
 >
->使用具有屬性](../../ui/activate-edge-personalization-destinations.md)的[相同頁面和下一頁個人化的自訂Target工作區時，只有[選取的對象](../../ui/activate-edge-personalization-destinations.md#select-audiences)會傳送到選取的Target工作區。 [對應的屬性](../../ui/activate-edge-personalization-destinations.md#mapping)會傳送到預設的Target工作區。
+>使用具有屬性[&#128279;](../../ui/activate-edge-personalization-destinations.md)的相同頁面和下一頁個人化的自訂Target工作區時，只有[選取的對象](../../ui/activate-edge-personalization-destinations.md#select-audiences)會傳送到選取的Target工作區。 [對應的屬性](../../ui/activate-edge-personalization-destinations.md#mapping)會傳送到預設的Target工作區。
 ><br>
 >此行為將在未來的更新中變更。
 

@@ -59,7 +59,7 @@ Adobe Experience Platform Privacy Service的存取權可透過Adobe Admin Consol
 
 - **查詢引數：**&#x200B;使用特定篩選器來縮小結果的範圍，例如：資料範圍、規則型別和狀態（處理、完成等）。
 
-您可以透過Privacy ServiceUI檢視貴組織中所有目前隱私權工作的清單。 有關如何篩選工作請求清單的資訊，請參閱UI檔案](./ui/user-guide.md#job-requests)中的[管理隱私權工作。 或者，請參閱有關Privacy ServiceAPI](./api/privacy-jobs.md)中[使用/job端點的檔案。
+您可以透過Privacy ServiceUI檢視貴組織中所有目前隱私權工作的清單。 有關如何篩選工作請求清單的資訊，請參閱UI檔案[&#128279;](./ui/user-guide.md#job-requests)中的[管理隱私權工作。 或者，請參閱有關Privacy ServiceAPI](./api/privacy-jobs.md)中使用/job端點的檔案。
 
 Privacy ServiceAPI檔案包含有關[可用的查詢引數篩選器](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs)的詳細資料。
 

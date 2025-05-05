@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ![ [!UICONTROL IdentityMap]結構描述欄位群組](../../images/field-groups/identitymap.png)的圖表
 
-請參閱結構描述組合](../../schema/composition.md#identityMap)的[基本概念中的身分對應一節，以取得有關其使用案例的更多資訊，包括其優點和缺點。
+請參閱結構描述組合[&#128279;](../../schema/composition.md#identityMap)的基本概念中的身分對應一節，以取得有關其使用案例的更多資訊，包括其優點和缺點。
 
 **範例**
 

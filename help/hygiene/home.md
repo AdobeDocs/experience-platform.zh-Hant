@@ -52,7 +52,7 @@ Experience Platform UI中的[!UICONTROL 資料生命週期]工作區可讓您設
 | 設定檔計數已更新 | 30 小時 | 根據要刪除的資料集內容，如果某些設定檔的所有元件屬性都繫結到該資料集，則可能會從系統中將其移除。 資料集被刪除30小時後，整體設定檔計數中的任何變更都會反映在[儀表板widget](../dashboards/guides/profiles.md#profile-count-trend)和其他報表中。 |
 | 已更新對象 | 48 小時 | 更新所有受影響的設定檔後，所有相關的[對象](../segmentation/home.md)都會更新，以反映其新大小。 根據移除的資料集和您進行區段的屬性，每個對象的大小可能會因刪除而增加或減少。 |
 | 歷程和目的地已更新 | 50 小時 | [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html)、[行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)和[目的地](../destinations/home.md)已根據相關區段的變更進行更新。 |
-| 硬刪除完成 | 15 天 | 與資料集相關的所有資料都會從資料湖中硬刪除。 刪除資料集的資料生命週期工作](./ui/browse.md#view-details)的[狀態已更新，以反映此情況。 |
+| 硬刪除完成 | 15 天 | 與資料集相關的所有資料都會從資料湖中硬刪除。 刪除資料集的資料生命週期工作[&#128279;](./ui/browse.md#view-details)的狀態已更新，以反映此情況。 |
 
 {style="table-layout:auto"}
 

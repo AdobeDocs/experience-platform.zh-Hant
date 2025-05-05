@@ -89,7 +89,7 @@ Tags已開放幾近全自助的入口網站，擴充功能開發人員可透過�
 
 如果您在登入UI時無法建立任何新屬性，這表示您的帳戶不屬於具有「管理屬性」許可權的產品設定檔。
 
-請參閱[管理許可權](../collection/permissions.md)指南，瞭解如何在Adobe Admin Console中設定產品設定檔以授與「管理屬性」許可權。 如需關於標籤不同許可權的詳細資訊，請參閱標籤](./ui/administration/user-permissions.md)的[使用者許可權概觀。
+請參閱[管理許可權](../collection/permissions.md)指南，瞭解如何在Adobe Admin Console中設定產品設定檔以授與「管理屬性」許可權。 如需關於標籤不同許可權的詳細資訊，請參閱標籤[&#128279;](./ui/administration/user-permissions.md)的使用者許可權概觀。
 
 ## 若我有其他問題該怎麼辦？
 

@@ -38,8 +38,8 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 | Edge Network服務 | Edge區段 | 每秒要求數 |
 |---------|----------|---------|
-| [透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)自訂個人化目的地](../catalog/personalization/custom-personalization.md) | 是 | 1500 |
-| [透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)自訂個人化目的地](../catalog/personalization/custom-personalization.md) | 無 | 1500 |
+| [&#128279;](../catalog/personalization/custom-personalization.md)透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)自訂個人化目的地 | 是 | 1500 |
+| [&#128279;](../catalog/personalization/custom-personalization.md)透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)自訂個人化目的地 | 無 | 1500 |
 
 ## 步驟1：建立和設定資料流 {#create-datastream}
 
@@ -61,7 +61,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 在Edge上查詢設定檔屬性時，需要針對邊緣評估設定您的對象。
 
-確定您計畫啟用的對象已將[Edge上作用中合併原則](../../segmentation/ui/segment-builder.md#merge-policies)設定為預設值。 [!DNL Active-On-Edge]合併原則可確保持續評估邊緣](../../segmentation/methods/edge-segmentation.md)上的對象[，並可用於即時個人化使用案例。
+確定您計畫啟用的對象已將[Edge上作用中合併原則](../../segmentation/ui/segment-builder.md#merge-policies)設定為預設值。 [!DNL Active-On-Edge]合併原則可確保持續評估邊緣[&#128279;](../../segmentation/methods/edge-segmentation.md)上的對象，並可用於即時個人化使用案例。
 
 依照[建立合併原則](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)上的指示進行，並確定啟用&#x200B;**[!UICONTROL Edge上主動式合併原則]**&#x200B;切換按鈕。
 
@@ -85,7 +85,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 +++透過屬性連線啟用自訂Personalization的對象
 
-建立具有屬性&#x200B;]**的**[!UICONTROL &#x200B;自訂Personalization連線後，您就可以將設定檔資料傳送至Edge Network了。
+建立具有屬性&#x200B;**的**&#x200B;自訂Personalization連線後，您就可以將設定檔資料傳送至Edge Network了。
 
 >[!IMPORTANT]
 > 

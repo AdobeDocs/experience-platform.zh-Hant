@@ -58,7 +58,7 @@ Real-Time CDP B2B報告提供您帳戶設定檔資料以及帳戶與商機之間
 >
 >您可以自訂此SQL查詢，以傳回大致前五個產業。
 
-可摺疊的區段顯示依據產業]分析產生[!UICONTROL 新帳戶的SQL。
+可摺疊的區段顯示依據產業分析產生新帳戶的SQL。
 
 +++SQL查詢
 
@@ -97,9 +97,9 @@ LIMIT 5000;
 
 #### 新帳戶（依型別分類）使用案例 {#accounts-by-type}
 
-依型別]分析用於[!UICONTROL 新帳戶的邏輯會傳回依型別劃分帳戶的數值明細。 此深入分析可協助引導業務策略與營運，包括資源分配或行銷策略。 如需詳細資訊，請參閱依型別]的[[!UICONTROL 新帳戶Widget檔案](../guides/account-profiles.md#accounts-by-type)。
+依型別&rbrack;分析用於[!UICONTROL 新帳戶的邏輯會傳回依型別劃分帳戶的數值明細。 此深入分析可協助引導業務策略與營運，包括資源分配或行銷策略。 如需詳細資訊，請參閱依型別]的&lbrack;[[!UICONTROL 新帳戶Widget檔案]](../guides/account-profiles.md#accounts-by-type)。
 
-在下面的可摺疊區段中可看見依型別]分析產生[!UICONTROL 新帳戶的SQL。
+在下面的可摺疊區段中可看見依型別分析產生新帳戶的SQL。
 
 +++SQL查詢
 

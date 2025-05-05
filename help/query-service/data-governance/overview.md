@@ -97,7 +97,7 @@ Adobe Experience Platform中的存取控制可讓您使用[Adobe Admin Console](
 
 若要針對加速資料集建立欄位式存取限制，您可以使用查詢服務CTAS查詢來建立加速資料集，並根據現有的XDM結構描述或臨時結構描述來建構這些資料集。 然後，系統管理員可以[新增並編輯結構描述](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field)或[臨時結構描述](./ad-hoc-schema-labels.md#edit-governance-labels)的資料使用標籤。 您可以從[!UICONTROL 結構描述] UI中的[!UICONTROL 標籤]工作區，套用、建立及編輯結構描述的標籤。
 
-資料使用標籤也可以透過「資料集」UI直接套用或編輯至資料集](../../data-governance/labels/user-guide.md#add-labels)，或是從「存取控制」[!UICONTROL 標籤]工作區建立。 [如需詳細資訊，請參閱如何[建立新標籤](../../access-control/abac/ui/labels.md)的指南。
+資料使用標籤也可以透過「資料集」UI直接套用或編輯至資料集[&#128279;](../../data-governance/labels/user-guide.md#add-labels)，或是從「存取控制」[!UICONTROL 標籤]工作區建立。 如需詳細資訊，請參閱如何[建立新標籤](../../access-control/abac/ui/labels.md)的指南。
 
 接著，即可透過附加的資料使用標籤，以及套用至指派給使用者的角色之許可權集，來控制使用者對個別欄的存取權。
 
@@ -129,7 +129,7 @@ Adobe Experience Platform中的存取控制可讓您使用[Adobe Admin Console](
 
 為了提高安全性，Query Service為SSL連線提供原生支援，以加密使用者端/伺服器通訊。 Experience Platform支援各種SSL選項，以符合您的資料安全需求，並平衡加密和金鑰交換的處理額外負荷。
 
-如需詳細資訊，包括如何使用`verify-full` SSL引數值連線，請參閱第三方使用者端連線至查詢服務](../clients/ssl-modes.md)的可用[SSL選項指南。
+如需詳細資訊，包括如何使用`verify-full` SSL引數值連線，請參閱第三方使用者端連線至查詢服務[&#128279;](../clients/ssl-modes.md)的可用SSL選項指南。
 
 ### 加密和客戶管理金鑰(CMK) {#encryption-and-customer-managed-keys}
 
@@ -200,7 +200,7 @@ Experience Platform中的資料控管架構可讓您以統一方式，負責地�
 
 資料控管的查詢服務功能可簡化及簡化資料分類程式，以及遵守資料使用規範。 識別資料後，查詢服務可讓您在所有輸出資料集上配置主要身分。 您&#x200B;**必須**&#x200B;將身分新增至資料集，以方便資料隱私權請求並努力符合資料規範。
 
-結構描述資料欄位可以透過Experience Platform UI設定為身分欄位，而且查詢服務也可讓您使用SQL命令&#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table)來[標籤主要身分。 使用`ALTER TABLE`命令設定身分，在資料集是使用SQL建立的，而非透過Experience Platform UI直接從結構描述建立時，特別有用。 請參閱檔案，瞭解在使用標準結構描述時，如何[在UI](../../xdm/ui/fields/identity.md)中定義身分欄位。
+結構描述資料欄位可以透過Experience Platform UI設定為身分欄位，而且查詢服務也可讓您使用SQL命令&#39;ALTER TABLE&#39;[&#128279;](../sql/syntax.md#alter-table)來標籤主要身分。 使用`ALTER TABLE`命令設定身分，在資料集是使用SQL建立的，而非透過Experience Platform UI直接從結構描述建立時，特別有用。 請參閱檔案，瞭解在使用標準結構描述時，如何[在UI](../../xdm/ui/fields/identity.md)中定義身分欄位。
 
 ## 資料衛生 {#data-hygiene}
 

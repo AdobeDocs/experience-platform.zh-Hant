@@ -27,7 +27,7 @@ Experience Platform支援從串流應用程式擷取資料。 對串流提供者
 若要完成本指南中的步驟，您將需要：
 
 * 登入[Adobe Experience Platform](https://platform.adobe.com)並取得建立新串流來源連線的許可權。
-* 登入您的[[!DNL Braze] 儀表板](https://dashboard.braze.com/sign_in)、未使用的[Currences Connector授權](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)，以及建立聯結器的許可權。 如需詳細資訊，請閱讀設定 [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements)的[需求。
+* 登入您的[[!DNL Braze] 儀表板](https://dashboard.braze.com/sign_in)、未使用的[Currences Connector授權](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)，以及建立聯結器的許可權。 如需詳細資訊，請閱讀設定 [!DNL Currents][&#128279;](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements)的需求。
 
 ### 收集必要的認證
 
@@ -46,4 +46,4 @@ Experience Platform支援從串流應用程式擷取資料。 對串流提供者
 
 ## 後續步驟
 
-閱讀本檔案後，您已完成從[!DNL Braze Currents]帳戶將資料串流至Experience Platform所需的先決條件設定。 您現在可以使用使用者介面](../../tutorials/ui/create/marketing-automation/braze.md)在[連線 [!DNL Braze Currents] 至Experience Platform時繼續參閱指南。
+閱讀本檔案後，您已完成從[!DNL Braze Currents]帳戶將資料串流至Experience Platform所需的先決條件設定。 您現在可以使用使用者介面[&#128279;](../../tutorials/ui/create/marketing-automation/braze.md)在連線 [!DNL Braze Currents] 至Experience Platform時繼續參閱指南。

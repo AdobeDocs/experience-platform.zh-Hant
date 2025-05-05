@@ -21,11 +21,11 @@ ht-degree: 7%
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- | --- |
 | [!UICONTROL 位址] | `address` | [[!UICONTROL 位址]](../data-types/address.md)的陣列 | 患者的地址資訊。 |
-| [!UICONTROL 通訊] | `communication` | 物件陣列 | 一種語言，可用來與病人溝通有關其健康狀況。 如需詳細資訊，請參閱](#communication)下方的[區段。 |
-| [!UICONTROL 病人聯絡人] | `contact` | 物件陣列 | 患者的聯絡人，例如監護人、合作夥伴或朋友。 如需詳細資訊，請參閱](#contact)下方的[區段。 |
+| [!UICONTROL 通訊] | `communication` | 物件陣列 | 一種語言，可用來與病人溝通有關其健康狀況。 如需詳細資訊，請參閱[&#128279;](#communication)下方的區段。 |
+| [!UICONTROL 病人聯絡人] | `contact` | 物件陣列 | 患者的聯絡人，例如監護人、合作夥伴或朋友。 如需詳細資訊，請參閱[&#128279;](#contact)下方的區段。 |
 | [!UICONTROL 一般從業人員] | `generalPractioner` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 病人的主要照護提供者。 |
 | [!UICONTROL 識別碼] | `identifier` | [[!UICONTROL 識別碼]](../data-types/identifier.md)的陣列 | 適用於患者的識別碼。 |
-| [!UICONTROL 病人連結詳細資料] | `link` | 物件陣列 | 與同一個人相關的患者或相關人員資源的連結。 如需詳細資訊，請參閱](#link)下方的[區段。 |
+| [!UICONTROL 病人連結詳細資料] | `link` | 物件陣列 | 與同一個人相關的患者或相關人員資源的連結。 如需詳細資訊，請參閱[&#128279;](#link)下方的區段。 |
 | [!UICONTROL 管理組織] | `managingOrganization` | [[!UICONTROL 參考]](../data-types/reference.md) | 病人記錄的保管組織。 |
 | [!UICONTROL 婚姻狀況] | `maritalStatus` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 患者的婚姻狀況。 |
 | [!UICONTROL 名稱] | `name` | [[!UICONTROL 人類名稱]](../data-types/human-name.md)的陣列 | 與病人關聯的名稱。 |
@@ -67,7 +67,7 @@ ht-degree: 7%
 | [!UICONTROL 連絡組織] | `organization` | [[!UICONTROL 參考]](../data-types/reference.md) | 與聯絡人相關聯的組織。 |
 | [!UICONTROL 聯絡期間] | `period` | [[!UICONTROL 週期]](../data-types/period.md) | 連絡人過去或現在使用的時段。 |
 | [!UICONTROL 關聯性&#39;] | `relationship` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 病患與聯絡人之間的關係。 |
-| [!UICONTROL 連絡人詳細資料] | `telecom` | 物件陣列 | 聯絡人的聯絡詳細資料。 如需詳細資訊，請參閱](#telecom)下方的[區段。 |
+| [!UICONTROL 連絡人詳細資料] | `telecom` | 物件陣列 | 聯絡人的聯絡詳細資料。 如需詳細資訊，請參閱[&#128279;](#telecom)下方的區段。 |
 | [!UICONTROL 性別] | `gender` | 字串 | 個人的性別識別。 此屬性的值必須等於下列其中一個已知列舉值。 <li> `female` </li> <li> `male` </li> <li> `other` </li> <li> `unknown`</li> |
 
 ### `telecom` {#telecom}

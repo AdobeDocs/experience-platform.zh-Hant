@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 發生什麼事？
 
-Experience Platform](/help/release-notes/latest/latest.md#destinations)的2024年9月[日發行版本匯入了設定匯出資料集資料流`endTime`日期的選項。 Adobe也針對2024年9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，推出預設結束日期為2025年5月1日。 這些資料流目前顯示的訊息類似於以下所示的訊息。
+Experience Platform[&#128279;](/help/release-notes/latest/latest.md#destinations)的2024年9月日發行版本匯入了設定匯出資料集資料流`endTime`日期的選項。 Adobe也針對2024年9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，推出預設結束日期為2025年5月1日。 這些資料流目前顯示的訊息類似於以下所示的訊息。
 
 ![需要更新匯出資料集資料流結束日期的UI通知。](/help/destinations/assets/ui/export-datasets/update-end-date.png)
 

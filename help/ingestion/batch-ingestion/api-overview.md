@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 >[!NOTE]
 >
->請參閱附錄一節，以取得正確格式化的JSON資料檔](#data-transformation-for-batch-ingestion)的[範例。
+>請參閱附錄一節，以取得正確格式化的JSON資料檔[&#128279;](#data-transformation-for-batch-ingestion)的範例。
 
 **API格式**
 

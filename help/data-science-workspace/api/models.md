@@ -361,7 +361,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會返回包含包含轉碼資訊的 JSON 物件的有效負載。 這包括用於檢索特定轉碼模型](#retrieve-transcoded-model)的轉碼唯一標識碼 （`id`）。[
+成功的回應會返回包含包含轉碼資訊的 JSON 物件的有效負載。 這包括用於檢索特定轉碼模型[&#128279;](#retrieve-transcoded-model)的轉碼唯一標識碼 （`id`）。
 
 ```json
 {

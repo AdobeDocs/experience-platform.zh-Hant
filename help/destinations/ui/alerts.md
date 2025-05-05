@@ -87,7 +87,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 ![顯示資料流執行詳細資訊頁面的UI影像，錯誤區段上有醒目提示。](../assets/ui/alerts/dataflow-run-error.png)
 
-如需有關處理資料流錯誤的詳細資訊，請參閱UI](../../dataflows/ui/monitor-destinations.md)中[監視目的地資料流的指南。
+如需有關處理資料流錯誤的詳細資訊，請參閱UI[&#128279;](../../dataflows/ui/monitor-destinations.md)中監視目的地資料流的指南。
 
 ### 透過電子郵件接收警示 {#receiving-alerts-by-email}
 

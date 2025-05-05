@@ -16,4 +16,4 @@ ht-degree: 0%
 
 建立結構描述後，您可以將資料的結構對應至XDM，以便將其擷取至系統中。
 
-如需XDM以及如何在UI中管理結構描述的詳細資訊，請參閱[XDM檔案](../../xdm/home.md)。 如果您使用Real-Time Customer Experience Platform B2B edition，請參閱Real-Time CDP B2B edition](./b2b.md)中[結構描述的檔案，以瞭解XDM的B2B特定應用程式的資訊。
+如需XDM以及如何在UI中管理結構描述的詳細資訊，請參閱[XDM檔案](../../xdm/home.md)。 如果您使用Real-Time Customer Experience Platform B2B edition，請參閱Real-Time CDP B2B edition[&#128279;](./b2b.md)中結構描述的檔案，以瞭解XDM的B2B特定應用程式的資訊。

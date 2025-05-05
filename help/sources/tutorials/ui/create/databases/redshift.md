@@ -45,7 +45,7 @@ ht-degree: 2%
 
 接下來，您將進入來源工作流程的驗證步驟。 在這裡，您可以使用現有帳戶或建立新帳戶。
 
-若要使用現有的帳戶，請從帳戶目錄中選取[!DNL AWS Redshift]帳戶，然後選取[下一步]**[!UICONTROL 以繼續。]**
+若要使用現有的帳戶，請從帳戶目錄中選取[!DNL AWS Redshift]帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
 
 ![在此列出來源工作流程中現有的帳號。](../../../../images/tutorials/create/redshift/existing.png)
 

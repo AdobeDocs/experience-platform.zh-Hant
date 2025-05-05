@@ -35,7 +35,7 @@ ht-degree: 3%
 | 存取權杖 | 存取權杖是用來驗證您的[!DNL Square]帳戶（具有OAuth 2.0驗證）。 存取權杖可從[!DNL Square]取得。 |
 | 重新整理權杖 | 重新整理權杖會在您目前的存取權杖過期後，用來產生新的存取權杖。 可從[!DNL Square]取得重新整理權杖。 |
 
-如需這些認證以及如何取得認證的詳細資訊，請參閱OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens)上的[[!DNL Square] 檔案。
+如需這些認證以及如何取得認證的詳細資訊，請參閱OAuth[&#128279;](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens)上的[!DNL Square] 檔案。
 
 收集必要的認證後，您可以依照下列步驟將[!DNL Square]帳戶連結至Experience Platform。
 
@@ -53,7 +53,7 @@ ht-degree: 3%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Square]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Square]帳戶，然後選取[下一步] **以繼續。**
 
 ![現有](../../../../images/tutorials/create/square/existing.png)
 

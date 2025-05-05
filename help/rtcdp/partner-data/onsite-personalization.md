@@ -55,7 +55,7 @@ ht-degree: 89%
    * [結構描述](/help/xdm/home.md)
    * [資料使用情況標籤](/help/data-governance/labels/overview.md)
    * [資料集](/help/catalog/datasets/overview.md)
-*  Web 屬性個人化
+* Web 屬性個人化
    * [邊緣分段](/help/segmentation/methods/edge-segmentation.md)
    * [邊緣個人化目的地](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (或您選擇的個人化平台。本使用案例教學課程旨在重點介紹以 Adobe Target 作為個人化引擎)

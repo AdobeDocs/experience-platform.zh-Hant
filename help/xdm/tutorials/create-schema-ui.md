@@ -393,7 +393,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 ## 後續步驟和其他資源
 
-現在您已經完成撰寫結構描述，您可以在畫布中看到完整的結構描述。 選取「儲存」****&#x200B;並將結構描述儲存至[!DNL Schema Library]，以供[!DNL Schema Registry]存取。
+現在您已經完成撰寫結構描述，您可以在畫布中看到完整的結構描述。 選取「儲存」**&#x200B;**&#x200B;並將結構描述儲存至[!DNL Schema Library]，以供[!DNL Schema Registry]存取。
 
 您的新結構描述現在可用於將資料內嵌至[!DNL Experience Platform]。 請記住，一旦使用結構描述來擷取資料後，只能進行加總變更。 如需結構描述版本設定的詳細資訊，請參閱結構描述組合的[基本知識](../schema/composition.md)。
 

@@ -89,7 +89,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 ### 建立[!DNL Active-On-Edge]合併原則 {#create-merge-policy}
 
-建立目的地連線之後，您必須建立[!DNL Active-On-Edge]合併原則。 [!DNL Active-On-Edge]合併原則可確保在Edge](../../segmentation/methods/edge-segmentation.md)上持續評估對象[，並可用於即時和下一頁個人化使用案例。
+建立目的地連線之後，您必須建立[!DNL Active-On-Edge]合併原則。 [!DNL Active-On-Edge]合併原則可確保在Edge[&#128279;](../../segmentation/methods/edge-segmentation.md)上持續評估對象，並可用於即時和下一頁個人化使用案例。
 
 >[!IMPORTANT]
 >
@@ -126,7 +126,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
    ![在目錄中的目的地卡上反白顯示啟用對象控制項。](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] ****。
+1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
 
    ![在啟動工作流程中選取目的地步驟。](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 

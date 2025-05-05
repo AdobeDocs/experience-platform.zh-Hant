@@ -46,7 +46,7 @@ ht-degree: 3%
 
 接下來，您將進入來源工作流程的驗證步驟。 在這裡，您可以使用現有帳戶或建立新帳戶。
 
-若要使用現有的帳戶，請選取您要連線的[!DNL Snowflake]帳戶，然後選取[下一步]**[!UICONTROL 以繼續。]**
+若要使用現有的帳戶，請選取您要連線的[!DNL Snowflake]帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
 
 ![來源工作流程中的現有帳戶介面。](../../../../images/tutorials/create/snowflake/existing.png)
 

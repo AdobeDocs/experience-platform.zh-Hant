@@ -120,7 +120,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 * 若要瞭解根據Adobe標準[收集同意資料所需的結構描述欄位群組](../../landing/governance-privacy-security/consent/adobe/overview.md)，請參閱這些啟用設定檔的結構描述欄位群組的相關檔案。
    * [[!UICONTROL 同意和偏好設定詳細資料]](../../xdm/field-groups/profile/consents.md)
    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (若使用Experience Platform Web或Mobile SDK傳送同意訊號則為必要)
-* 若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md)中[同意處理的概述。
+* 若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱Experience Platform[&#128279;](../../landing/governance-privacy-security/consent/adobe/overview.md)中同意處理的概述。
 * 合併的資料治理和同意原則可用於根據其同意偏好設定和您建立的組織規則篩選要分段的設定檔。 若要瞭解如何建立和使用這些合併原則，請參閱[管理資料使用原則](../../data-governance/policies/user-guide.md#combine-policies)的使用手冊。
 
 ### 新增Widget {#add-widgets}
@@ -195,7 +195,7 @@ Adobe Experience Platform的所有新執行個體都會提供預設Widget載出�
 
 ## Customer AI Widget {#customer-ai-profiles-widgets}
 
-Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。Customer AI透過分析現有的消費者體驗事件資料來預測&#x200B;**流失或轉換傾向分數**&#x200B;來執行此操作。 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 分數](#customer-ai-distribution-of-scores)和[評分摘要](#customer-ai-scoring-summary)深入分析的[分佈會示範您對象中的部門。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
+Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。Customer AI透過分析現有的消費者體驗事件資料來預測&#x200B;**流失或轉換傾向分數**&#x200B;來執行此操作。 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 分數[&#128279;](#customer-ai-distribution-of-scores)和[評分摘要](#customer-ai-scoring-summary)深入分析的分佈會示範您對象中的部門。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
 
 * [[!UICONTROL Customer AI 評分摘要]](#customer-ai-scoring-summary)
 * [[!UICONTROL Customer AI 分數的分佈]](#customer-ai-distribution-of-scores)
@@ -207,7 +207,7 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 >title="分數分佈"
 >abstract="這個小工具會依傾向分數 (以 5% 的增量) 將設定檔總數的分佈視覺化。設定檔計數的分佈由 AI 模式和所選合併原則決定。您可以從小工具標題下的下拉選單中變更 AI 模式。"
 
-分數]的[!UICONTROL Customer AI分佈Widget會依傾向分數分類個人檔案總數。 設定檔計數的分佈取決於AI模型和所選的合併原則，然後以5%的增量進行視覺化，表示其傾向。 設定檔的計數會沿Y軸提供，而傾向分數則會沿X軸提供。
+分數的Customer AI分佈Widget會依傾向分數分類個人檔案總數。 設定檔計數的分佈取決於AI模型和所選的合併原則，然後以5%的增量進行視覺化，表示其傾向。 設定檔的計數會沿Y軸提供，而傾向分數則會沿X軸提供。
 
 >[!NOTE]
 >
@@ -285,13 +285,13 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 **[!UICONTROL 設定檔計數]** Widget會顯示拍攝快照時設定檔存放區中合併的設定檔總數。 此數字是已將選取的合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
 
-請參閱本檔案](#merge-policies)中先前關於合併原則的[一節，瞭解更多資訊。
+請參閱本檔案[&#128279;](#merge-policies)中先前關於合併原則的一節，瞭解更多資訊。
 
 >[!NOTE]
 >
 >基於多種原因，[!UICONTROL 設定檔計數]介面工具集可能會在UI的[!UICONTROL 設定檔]區段中，顯示與[!UICONTROL 瀏覽]索引標籤上顯示的設定檔計數不同的數字。 此差異最常見的原因是，[!UICONTROL 瀏覽]索引標籤會根據您組織的預設合併原則參考合併的設定檔總數，而[!UICONTROL 設定檔計數]介面工具會根據您選擇在儀表板中檢視的合併原則參考合併的設定檔總數。
 >
->另一個常見的原因是，擷取儀表板快照的時間與[!UICONTROL 瀏覽]索引標籤執行範例作業的時間不同。 您可以檢視Widget上的時間戳記，以檢視[!UICONTROL 設定檔計數]個Widget的上次更新時間。 若要進一步瞭解如何在[!UICONTROL 瀏覽]標籤上觸發範例工作，請參閱「即時客戶設定檔UI指南](../../profile/ui/user-guide.md#profile-count)」中的[設定檔計數區段。
+>另一個常見的原因是，擷取儀表板快照的時間與[!UICONTROL 瀏覽]索引標籤執行範例作業的時間不同。 您可以檢視Widget上的時間戳記，以檢視[!UICONTROL 設定檔計數]個Widget的上次更新時間。 若要進一步瞭解如何在[!UICONTROL 瀏覽]標籤上觸發範例工作，請參閱「即時客戶設定檔UI指南[&#128279;](../../profile/ui/user-guide.md#profile-count)」中的設定檔計數區段。
 
 ![反白設定檔計數Widget的Experience Platform設定檔儀表板。](../images/profiles/profile-count.png)
 
@@ -325,7 +325,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 **[!UICONTROL 設定檔計數變更趨勢]** Widget會顯示過去30天、90天或12個月每日新增至設定檔存放區的合併設定檔總數。 此數字會每天在擷取快照時更新，因此如果您要將設定檔擷取到Experience Platform，則要等到下次擷取快照時才會反映設定檔的數量。 新增的設定檔計數是選定的合併原則套用至設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
 
-若要深入瞭解，請參閱此檔案](#merge-policies)中先前合併原則的[一節。
+若要深入瞭解，請參閱此檔案[&#128279;](#merge-policies)中先前合併原則的一節。
 
 **[!UICONTROL 設定檔計數變更趨勢]** Widget會在Widget的右上角顯示「標題」按鈕。 若要開啟自動註解對話方塊，請選取&#x200B;**[!UICONTROL 註解]**。
 
@@ -354,7 +354,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 依身分割槽分的&#x200B;**[!UICONTROL 設定檔]** Widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 依身分割槽分的設定檔總數（也就是將每個名稱空間顯示的值相加）可能會高於合併的設定檔總數，因為一個設定檔可能會有多個相關聯的名稱空間。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。
 
-若要深入瞭解，請參閱此檔案](#merge-policies)中先前合併原則的[一節。
+若要深入瞭解，請參閱此檔案[&#128279;](#merge-policies)中先前合併原則的一節。
 
 ![設定檔總覽儀表板，其中醒目提示依身分割槽分的設定檔Widget。](../images/profiles/profiles-by-identity.png)
 

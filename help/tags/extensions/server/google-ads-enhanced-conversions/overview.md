@@ -104,7 +104,7 @@ ht-degree: 1%
 若要設定擴充功能，您必須填入兩個必填欄位：
 
 1. **[!UICONTROL 客戶識別碼]**：可唯一識別您[!DNL Google Ads]帳戶的識別碼。 若要尋找此值，請登入[!DNL Google Ads]並導覽至&#x200B;**[!DNL Help]** > **[!DNL Customer ID]**。
-2. **[!UICONTROL 存取Token資料元素]**：選取資料元素圖示（![資料元素圖示](/help/images/icons/database.png)），然後從功能表中選擇您在上一個步驟](#create-secret-data-element)中[設定的Google OAuth 2機密資料元素。
+2. **[!UICONTROL 存取Token資料元素]**：選取資料元素圖示（![資料元素圖示](/help/images/icons/database.png)），然後從功能表中選擇您在上一個步驟[&#128279;](#create-secret-data-element)中設定的Google OAuth 2機密資料元素。
 
 完成時，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以安裝擴充功能。
 
@@ -122,7 +122,7 @@ ht-degree: 1%
 | --- | --- |
 | 客戶ID | 您的[!DNL Google Ads]客戶識別碼。 預設為您在[安裝擴充功能](#install-enhanced-conversions)時輸入的客戶ID。 |
 | 轉換ID或轉換標籤 | 設定轉換追蹤時從[!DNL Google Ads]取得的追蹤值。 值以`AW-`開頭。<br><br>如需如何尋找這些值的詳細資訊，請參閱[[!DNL Google Ads] 檔案](https://support.google.com/tagmanager/answer/6105160?hl=en)。 |
-| 交易 ID | 選取一個資料元素，該資料元素具有使用[!DNL Google Global Site Tag]延伸從使用者端](#conversion-action-tags)傳送的相同交易ID值[。 |
+| 交易 ID | 選取一個資料元素，該資料元素具有使用[!DNL Google Global Site Tag]延伸從使用者端[&#128279;](#conversion-action-tags)傳送的相同交易ID值。 |
 
 **使用者識別**
 

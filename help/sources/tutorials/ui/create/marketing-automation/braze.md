@@ -26,7 +26,7 @@ ht-degree: 2%
 若要完成本指南中的步驟，您將需要：
 
 * 登入[Adobe Experience Platform](https://platform.adobe.com)並取得建立新串流來源連線的許可權。
-* 登入您的[[!DNL Braze] 儀表板](https://dashboard.braze.com/sign_in)、未使用的[Currences Connector授權](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)，以及建立聯結器的許可權。 如需詳細資訊，請閱讀設定 [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements)的[需求。
+* 登入您的[[!DNL Braze] 儀表板](https://dashboard.braze.com/sign_in)、未使用的[Currences Connector授權](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)，以及建立聯結器的許可權。 如需詳細資訊，請閱讀設定 [!DNL Currents][&#128279;](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements)的需求。
 
 ## 快速入門
 
@@ -94,7 +94,7 @@ ht-degree: 2%
 
 ### 收集必要的認證
 
-建立連線後，您必須收集下列認證值，然後在硬碟控制面板中提供，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀瀏覽至Currences](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents)的[!DNL Braze] [指南。
+建立連線後，您必須收集下列認證值，然後在硬碟控制面板中提供，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀瀏覽至Currences[&#128279;](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents)的[!DNL Braze] 指南。
 
 | 欄位 | 說明 |
 | --- | --- |

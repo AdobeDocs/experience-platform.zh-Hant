@@ -15,7 +15,7 @@ ht-degree: 1%
 
 查詢引數可讓您使用動態資料，因為它們會作為您在執行時新增值的預留位置。 這些預留位置值可以透過UI更新，並讓技術較差的使用者根據日期範圍更新深入分析。
 
-如果您不熟悉查詢引數，請參閱有關如何實作引數化查詢](../../../query-service/ui/parameterized-queries.md)的[指南檔案。
+如果您不熟悉查詢引數，請參閱有關如何實作引數化查詢[&#128279;](../../../query-service/ui/parameterized-queries.md)的指南檔案。
 
 ## 將日期篩選器套用至您的儀表板 {#apply-date-filter}
 

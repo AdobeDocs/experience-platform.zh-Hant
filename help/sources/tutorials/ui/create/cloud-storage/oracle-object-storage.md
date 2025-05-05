@@ -51,7 +51,7 @@ ht-degree: 1%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Oracle Object Storage]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Oracle Object Storage]帳戶，然後選取[下一步] **以繼續。**
 
 ![現有](../../../../images/tutorials/create/oracle-object-storage/existing.png)
 

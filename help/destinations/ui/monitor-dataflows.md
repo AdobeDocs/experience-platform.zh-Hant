@@ -18,4 +18,4 @@ ht-degree: 18%
 
 資料流可呈現資料處理作業在[!DNL Experience Platform]上行動資料的情形。 這些資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集，然後由[!DNL Identity Service]和[!DNL Real-Time Customer Profile]使用，最後啟用至目的地。
 
-若要深入瞭解監視目的地的資料流，請參閱UI](../../dataflows/ui/monitor-destinations.md)教學課程中的[監視目的地的資料流。
+若要深入瞭解監視目的地的資料流，請參閱UI[&#128279;](../../dataflows/ui/monitor-destinations.md)教學課程中的監視目的地的資料流。

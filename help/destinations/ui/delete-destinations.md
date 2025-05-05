@@ -36,7 +36,7 @@ ht-degree: 0%
 
    ![篩選目的地](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 在[名稱]資料行中選取![其他按鈕](/help/images/icons/more.png)按鈕，然後選取![刪除按鈕](/help/images/icons/delete.png) **[!UICONTROL 刪除]**以移除現有的目的地連線。
+3. 在[名稱]資料行中選取![其他按鈕](/help/images/icons/more.png)按鈕，然後選取![刪除按鈕](/help/images/icons/delete.png) **[!UICONTROL 刪除]**&#x200B;以移除現有的目的地連線。
    ![刪除目的地](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. 選取&#x200B;**[!UICONTROL 刪除]**&#x200B;以確認移除目的地連線。

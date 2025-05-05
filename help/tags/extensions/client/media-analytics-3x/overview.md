@@ -35,7 +35,7 @@ Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SD
 
 * **安裝：**&#x200B;若要安裝MA擴充功能，請開啟您的擴充功能屬性，選取&#x200B;**[!UICONTROL 擴充功能>目錄]**，將游標暫留在&#x200B;**[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]**&#x200B;擴充功能上，然後選取&#x200B;**[!UICONTROL 安裝]**。
 
-* **設定：**&#x200B;若要設定MA擴充功能，請開啟[!UICONTROL 擴充功能]標籤，將游標暫留在擴充功能上，然後選取[設定]]**：**[!UICONTROL 
+* **設定：**&#x200B;若要設定MA擴充功能，請開啟[!UICONTROL 擴充功能]標籤，將游標暫留在擴充功能上，然後選取[設定]&#x200B;**：**
 
 ![MA 擴充功能設定](../../../images/ext-ma-config.png)
 

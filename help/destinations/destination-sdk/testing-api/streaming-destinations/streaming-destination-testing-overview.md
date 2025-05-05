@@ -45,7 +45,7 @@ ht-degree: 0%
 回應包含目的地請求處理的結果。 此請求包含三個主要區段：
 * 由Adobe為目的地產生的請求。
 * 從您的目的地收到的回應。
-* 在要求中傳送的設定檔清單，無論設定檔是由您在要求](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)中新增的[，或是Adobe在[目的地測試要求的主體是空的](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles)時產生的。
+* 在要求中傳送的設定檔清單，無論設定檔是由您在要求[&#128279;](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)中新增的，或是Adobe在[目的地測試要求的主體是空的](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles)時產生的。
 
 >[!NOTE]
 >

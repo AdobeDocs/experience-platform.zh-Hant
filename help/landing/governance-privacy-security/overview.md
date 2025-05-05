@@ -58,9 +58,9 @@ Adobe Experience Platform Privacy Service提供RESTful API和使用者介面，�
 
 許多法律隱私權法規在資料收集、個人化和其他行銷使用案例方面，都引入了對主動和特定同意的需求。 為了滿足這些要求，Experience Platform可讓您擷取個別客戶設定檔中的同意資訊，並使用這些偏好設定作為決定因素，來決定如何將每個客戶的資料用於下游Experience Platform工作流程。
 
-若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱Experience Platform](./consent/adobe/overview.md)中[同意處理的概述。
+若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱Experience Platform[&#128279;](./consent/adobe/overview.md)中同意處理的概述。
 
-如需有關如何根據IAB透明與同意架構(TCF) 2.0處理客戶同意資料的資訊，請參閱Experience Platform](./consent/iab/overview.md)中[IAB TCF 2.0支援的概觀。
+如需有關如何根據IAB透明與同意架構(TCF) 2.0處理客戶同意資料的資訊，請參閱Experience Platform[&#128279;](./consent/iab/overview.md)中IAB TCF 2.0支援的概觀。
 
 ## 安全性 {#security}
 

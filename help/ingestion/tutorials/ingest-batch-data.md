@@ -94,9 +94,9 @@ Adobe Experience Platform可讓您輕鬆將資料匯入[!DNL Experience Platform
 
 ![啟用設定檔對話方塊](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
-按一下[啟用]****，切換將變成藍色，表示已開啟。
+按一下[啟用]&#x200B;**&#x200B;**，切換將變成藍色，表示已開啟。
 
-已為設定檔](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)啟用![
+已為設定檔![&#128279;](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)啟用
 
 ## 新增資料到資料集
 

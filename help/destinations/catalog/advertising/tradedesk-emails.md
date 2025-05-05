@@ -144,7 +144,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 1. 首先，選取&#x200B;**[!UICONTROL 資料]**&#x200B;標籤，並檢閱&#x200B;**[!UICONTROL 第一方]**&#x200B;區段。
 2. 向下捲動頁面，在&#x200B;**[!UICONTROL 匯入的資料]**&#x200B;下方，您會找到&#x200B;**[!UICONTROL Adobe 1PD磚]**。
-3. 按一下**[!UICONTROL Adobe 1PD]**圖磚，系統會列出所有啟用至廣告商[!DNL Trade Desk]目的地的對象。 您也可以使用搜尋功能。
+3. 按一下&#x200B;**[!UICONTROL Adobe 1PD]**&#x200B;圖磚，系統會列出所有啟用至廣告商[!DNL Trade Desk]目的地的對象。 您也可以使用搜尋功能。
 4. 來自Experience Platform的區段ID #將顯示為[!DNL Trade Desk] UI中的區段名稱。
 
 ## 資料使用與控管 {#data-usage-governance}

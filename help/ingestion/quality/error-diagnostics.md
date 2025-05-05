@@ -284,7 +284,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 >
 >如果無法使用錯誤診斷，則會改為顯示下列錯誤訊息：
 >
-```json
+>```json
 >{
 >       "errors": [{
 >               "code": "INGEST-1211-400",

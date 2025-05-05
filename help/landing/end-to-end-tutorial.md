@@ -88,7 +88,7 @@ Experience Platform可讓您從外部來源擷取資料，同時使用Experience
 
 或者，在建立一次性區段作業或進行中的排程後，您可以將結果匯出至目的地。 目的地是端點，例如外部服務上的Adobe應用程式，可在此啟用和傳送對象。 您可以在[目的地目錄](../destinations/catalog/overview.md)中找到可用目的地的完整清單。
 
-如需如何啟用資料至批次或電子郵件行銷目的地的說明，請參閱[如何使用Experience Platform UI](../destinations/ui/activate-batch-profile-destinations.md)啟用對象資料至批次設定檔匯出目的地的教學課程，以及如何使用流程服務API](../destinations/api/connect-activate-batch-destinations.md)連線至批次目的地和啟用資料的[指南。
+如需如何啟用資料至批次或電子郵件行銷目的地的說明，請參閱[如何使用Experience Platform UI](../destinations/ui/activate-batch-profile-destinations.md)啟用對象資料至批次設定檔匯出目的地的教學課程，以及如何使用流程服務API[&#128279;](../destinations/api/connect-activate-batch-destinations.md)連線至批次目的地和啟用資料的指南。
 
 ## 監視您的Experience Platform資料活動
 

@@ -62,7 +62,7 @@ ht-degree: 2%
 
 ### 現有帳戶 {#existing-account}
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Pinterest Ads]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Pinterest Ads]帳戶，然後選取[下一步] **以繼續。**
 
 ![來源工作流程的現有帳戶步驟。](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
 
@@ -109,7 +109,7 @@ ht-degree: 2%
 | `Day` | 1 |
 | `Hour` | 24 |
 
-如需排程[!DNL Pinterest Ads]資料流的詳細資訊，請閱讀 [!DNL Pinterest Ads] 總覽](../../../../connectors/advertising/pinterest-ads.md#guardrails)的[護欄區段。
+如需排程[!DNL Pinterest Ads]資料流的詳細資訊，請閱讀 [!DNL Pinterest Ads] 總覽[&#128279;](../../../../connectors/advertising/pinterest-ads.md#guardrails)的護欄區段。
 
 提供排程的值之後，請選取&#x200B;**[!UICONTROL 下一步]**。
 

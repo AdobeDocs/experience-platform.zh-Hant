@@ -85,7 +85,7 @@ ht-degree: 2%
 
 ### API參考檔案 {#api-reference-documentation}
 
-在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)上的[流程服務API檔案。 我們建議您同時使用本教學課程和API參考檔案。
+在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe I/O[&#128279;](https://www.adobe.io/experience-platform-apis/references/flow-service/)上的流程服務API檔案。 我們建議您同時使用本教學課程和API參考檔案。
 
 ## 取得可用目的地的清單 {#get-the-list-of-available-destinations}
 
@@ -531,8 +531,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | 提供批次目的地的基本連線名稱。 |
 | `description` | 您可以選擇提供基本連線的說明。 |
 | `connectionSpec.id` | 使用所需批次目的地的連線規格ID。 您在步驟[取得可用目的地的清單](#get-the-list-of-available-destinations)中取得此識別碼。 |
-| `auth.specname` | 表示目的地的驗證格式。 若要尋找您目的地的specName，請對連線規格端點](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行[GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.name`。 <br>例如，對於Adobe Campaign目的地，您可以使用任何`S3`、`SFTP with Password`或`SFTP with SSH Key`。 |
-| `params` | 根據您連線的目的地，您必須提供不同的必要驗證引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行[GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.spec.required`。 |
+| `auth.specname` | 表示目的地的驗證格式。 若要尋找您目的地的specName，請對連線規格端點[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.name`。 <br>例如，對於Adobe Campaign目的地，您可以使用任何`S3`、`SFTP with Password`或`SFTP with SSH Key`。 |
+| `params` | 根據您連線的目的地，您必須提供不同的必要驗證引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.spec.required`。 |
 
 {style="table-layout:auto"}
 
@@ -845,8 +845,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | 您可以選擇提供目標連線的說明。 |
 | `baseConnectionId` | 使用您在上述步驟中建立之基本連線的ID。 |
 | `connectionSpec.id` | 使用所需批次目的地的連線規格ID。 您在步驟[取得可用目的地的清單](#get-the-list-of-available-destinations)中取得此識別碼。 |
-| `params` | 視您連線的目的地而定，您必須為儲存位置提供不同的必要引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行[GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`targetSpec.spec.required`。 |
-| `params.mode` | 視您目的地支援的模式而定，您必須在此處提供不同的值。 若要找出您目的地所需的引數，請對連線規格端點](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行[GET呼叫，提供您所需目的地的連線規格。 在回應中尋找引數`targetSpec.spec.properties.mode.enum`，並選取所要的模式。 |
+| `params` | 視您連線的目的地而定，您必須為儲存位置提供不同的必要引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`targetSpec.spec.required`。 |
+| `params.mode` | 視您目的地支援的模式而定，您必須在此處提供不同的值。 若要找出您目的地所需的引數，請對連線規格端點[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行GET呼叫，提供您所需目的地的連線規格。 在回應中尋找引數`targetSpec.spec.properties.mode.enum`，並選取所要的模式。 |
 | `params.bucketName` | 對於S3連線，請提供要匯出檔案的儲存貯體名稱。 |
 | `params.path` | 對於S3連線，請在要匯出檔案的儲存位置中提供檔案路徑。 |
 | `params.format` | `CSV`是目前唯一支援的檔案匯出型別。 |

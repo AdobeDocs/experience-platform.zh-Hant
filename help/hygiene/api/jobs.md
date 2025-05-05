@@ -54,7 +54,7 @@ POST /jobs
 
 **要求**
 
-要求裝載的結構類似於Privacy Service API](../../privacy-service/api/privacy-jobs.md#access-delete)中[刪除要求的結構。 它包含`users`陣列，其物件代表要刪除其資料的使用者。
+要求裝載的結構類似於Privacy Service API[&#128279;](../../privacy-service/api/privacy-jobs.md#access-delete)中刪除要求的結構。 它包含`users`陣列，其物件代表要刪除其資料的使用者。
 
 ```shell
 curl -X POST \

@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Privacy Service]會根據一般資料保護規�
 
 >[!NOTE]
 >
->本指南僅涵蓋如何在Experience Platform中向Identity資料存放區提出隱私權請求。 如果您也計畫提出Experience Platform資料湖或[!DNL Real-Time Customer Profile]的隱私權請求，請參閱資料湖](../catalog/privacy.md)中[隱私權請求處理指南，以及本教學課程以外的[設定檔隱私權請求處理指南](../profile/privacy.md)。
+>本指南僅涵蓋如何在Experience Platform中向Identity資料存放區提出隱私權請求。 如果您也計畫提出Experience Platform資料湖或[!DNL Real-Time Customer Profile]的隱私權請求，請參閱資料湖[&#128279;](../catalog/privacy.md)中隱私權請求處理指南，以及本教學課程以外的[設定檔隱私權請求處理指南](../profile/privacy.md)。
 >
 >如需如何對其他Adobe Experience Cloud應用程式提出隱私權要求的步驟，請參閱[Privacy Service檔案](../privacy-service/experience-cloud-apps.md)。
 

@@ -55,7 +55,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提
 
 | 認證 | 說明 |
 | --- | --- |
-| 存取權杖 | 您使用者帳戶的[!DNL Pinterest Ads]存取權杖。 權杖的使用者帳戶必須是指定[!DNL Pinterest Ad]帳戶的擁有者，或擁有透過「業務存取」授予他們的一個必要角色：管理員、分析人員或促銷活動管理員。 如需存取權杖的詳細資訊，請參閱產生存取權杖](https://developers.pinterest.com/docs/getting-started/set-up-app/)的[[!DNL Pinterest] 指南。 |
+| 存取權杖 | 您使用者帳戶的[!DNL Pinterest Ads]存取權杖。 權杖的使用者帳戶必須是指定[!DNL Pinterest Ad]帳戶的擁有者，或擁有透過「業務存取」授予他們的一個必要角色：管理員、分析人員或促銷活動管理員。 如需存取權杖的詳細資訊，請參閱產生存取權杖[&#128279;](https://developers.pinterest.com/docs/getting-started/set-up-app/)的[!DNL Pinterest] 指南。 |
 | 廣告帳戶ID | 您事業單位的相關[!DNL Pinterest Ads]廣告帳戶ID。 有關擷取廣告帳戶ID的資訊。 造訪[[!DNL Pinterest] 在廣告管理員](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager)中尋找ID指南。 |
 | 行銷活動、廣告群組或廣告ID | 與您的廣告帳戶ID相對應的`campaign`、`ad group`或`ad` ID。 若要取得必要的ID，請瀏覽至&#x200B;**Pinterest Business Hub** > **廣告帳戶摘要** > **促銷活動** / **廣告群組** / **廣告**&#x200B;的[!DNL Pinterest]頁面，並複製每個名稱下方提及的必要ID。 |
 

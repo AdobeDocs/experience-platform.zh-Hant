@@ -94,7 +94,7 @@ v3.0.0
 
 * PDCL-6153：新增支援，可靠地提取快取自訂程式碼動作的完整合格URL。
 
-核心擴充功能v3.0.0與Turbine Web執行階段](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)中[v27.2.0的變更結合，如果使用者的公司支援Premium CDN，則使用者可在許多Adobe管理託管區域中載入其程式庫。
+核心擴充功能v3.0.0與Turbine Web執行階段[&#128279;](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)中v27.2.0的變更結合，如果使用者的公司支援Premium CDN，則使用者可在許多Adobe管理託管區域中載入其程式庫。
 
 此升級為選擇性升級，且回溯相容於沒有Premium CDN的使用者，且為公司啟用Premium CDN的客戶所強制。
 

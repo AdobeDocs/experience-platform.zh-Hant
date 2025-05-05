@@ -94,7 +94,7 @@ ht-degree: 0%
 | 設定區段 | 說明 |
 | --- | --- |
 | [!UICONTROL 伺服器事件引數] | 有關事件的一般資訊，包括發生時間和觸發事件的來源動作。 請參閱[!DNL Meta]開發人員檔案，以取得有關[!DNL Conversions API]所接受的[標準事件引數](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event)的詳細資訊。<br><br>如果您同時使用[!DNL Meta Pixel]和[!DNL Conversions API]來傳送事件，請確定每個事件都包含&#x200B;**[!UICONTROL 事件名稱]** (`event_name`)和&#x200B;**[!UICONTROL 事件識別碼]** (`event_id`)，因為這些值用於[事件重複資料刪除](#deduplication)。<br><br>您也可選擇&#x200B;**[!UICONTROL 啟用有限資料使用]**，協助遵守客戶選擇退出的規定。 如需此功能的詳細資訊，請參閱有關[資料處理選項](https://developers.facebook.com/docs/marketing-apis/data-processing-options/)的[!DNL Conversions API]檔案。 |
-| [!UICONTROL 客戶資訊引數] | 用於將事件歸因於客戶的使用者身分資料。 在將其中某些值傳送至API之前，必須先進行雜湊處理。<br><br>為確保良好的通用API連線及高事件比對品質(EMQ)，建議您連同伺服器事件一起傳送所有[接受的客戶資訊引數](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters)。 這些引數也應根據它們對EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965)的重要性和影響來排定[優先順序。 |
+| [!UICONTROL 客戶資訊引數] | 用於將事件歸因於客戶的使用者身分資料。 在將其中某些值傳送至API之前，必須先進行雜湊處理。<br><br>為確保良好的通用API連線及高事件比對品質(EMQ)，建議您連同伺服器事件一起傳送所有[接受的客戶資訊引數](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters)。 這些引數也應根據它們對EMQ[&#128279;](https://www.facebook.com/business/help/765081237991954?id=818859032317965)的重要性和影響來排定優先順序。 |
 | [!UICONTROL 自訂資料] | 用於廣告傳送最佳化的其他資料，以JSON物件的形式提供。 請參閱[[!DNL Conversions API] 檔案](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data)，以取得此物件所接受屬性的詳細資訊。<br><br>如果您要傳送購買事件，則必須使用此區段來提供必要的屬性`currency`和`value`。 |
 | [!UICONTROL 測試事件] | 此選項用於驗證您的組態是否造成[!DNL Meta]如預期般接收伺服器事件。 若要使用此功能，請選取&#x200B;**[!UICONTROL 以測試事件傳送]**&#x200B;核取方塊，然後在下列輸入中提供您選擇的測試事件程式碼。 在部署事件轉送規則後，如果您已正確設定擴充功能和動作，您應該會在[!DNL Meta Events Manager]的&#x200B;**[!DNL Test Events]**&#x200B;檢視中看到活動。 |
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 
 如果您從使用者端和伺服器傳送不同的事件型別，且兩者之間沒有重疊，則不需要重複資料刪除。 但是，如果任何單一事件由[!DNL Meta Pixel]和[!DNL Conversions API]共用，您必須確保這些多餘事件會刪除重複專案，以免您的報告受到負面影響。
 
-傳送共用事件時，請務必加入事件ID和名稱，以及您從使用者端和伺服器傳送的每個事件。 收到多個具有相同ID和名稱的事件時，[!DNL Meta]會自動使用數個策略來重複刪除這些事件，並保留最相關的資料。 如需此程式的詳細資訊，請參閱有關 [!DNL Meta Pixel] 和 [!DNL Conversions API] 事件](https://www.facebook.com/business/help/823677331451951?id=1205376682832142)的[重複資料刪除的[!DNL Meta]檔案。
+傳送共用事件時，請務必加入事件ID和名稱，以及您從使用者端和伺服器傳送的每個事件。 收到多個具有相同ID和名稱的事件時，[!DNL Meta]會自動使用數個策略來重複刪除這些事件，並保留最相關的資料。 如需此程式的詳細資訊，請參閱有關 [!DNL Meta Pixel] 和 [!DNL Conversions API] 事件[&#128279;](https://www.facebook.com/business/help/823677331451951?id=1205376682832142)的重複資料刪除的[!DNL Meta]檔案。
 
 ## 快速入門工作流程：中繼轉換API擴充功能(Beta) {#quick-start}
 
@@ -233,4 +233,4 @@ ht-degree: 0%
 * 連線尚未連線到[!DNL Conversions API]整合的任何其他[!DNL Pixels]。
 * 如果您只透過使用者端的[!DNL Meta Pixel]傳送某些事件，請一併從伺服器端傳送這些相同事件至[!DNL Conversions API]。
 
-如需有關如何有效實作整合的更多指引，請參閱 [!DNL Conversions API]](https://www.facebook.com/business/help/308855623839366?id=818859032317965)之[最佳實務的[!DNL Meta]檔案。 如需Adobe Experience Cloud中標籤與事件轉送的一般詳細資訊，請參閱[標籤總覽](../../../home.md)。
+如需有關如何有效實作整合的更多指引，請參閱 [!DNL Conversions API][&#128279;](https://www.facebook.com/business/help/308855623839366?id=818859032317965)之最佳實務的[!DNL Meta]檔案。 如需Adobe Experience Cloud中標籤與事件轉送的一般詳細資訊，請參閱[標籤總覽](../../../home.md)。

@@ -56,7 +56,7 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 ## 從資料容器存取資料資產
 
-只要適當地限定資料庫名稱，任何[!DNL PostgreSQL]使用者端都可以連線到您使用SHOW關鍵字建立的任何資料結構。 如需有關SHOW關鍵字的詳細資訊，請參閱SQL語法檔案](../sql/syntax.md#show)中的[SHOW區段。
+只要適當地限定資料庫名稱，任何[!DNL PostgreSQL]使用者端都可以連線到您使用SHOW關鍵字建立的任何資料結構。 如需有關SHOW關鍵字的詳細資訊，請參閱SQL語法檔案[&#128279;](../sql/syntax.md#show)中的SHOW區段。
 
 「all」是預設的資料庫名稱，其中包含沙箱中的每個資料庫和結構描述容器。 當您使用`dbname="all"`建立[!DNL PostgreSQL]連線時，可以存取您已建立的&#x200B;**任何**&#x200B;資料庫和結構描述，以邏輯方式組織您的資料。
 

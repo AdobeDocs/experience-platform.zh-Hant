@@ -47,7 +47,7 @@ Adobe Experience Platform [!DNL Query Service]可讓行銷人員使用標準SQL�
 
 這些資料集的命名慣例是&#x200B;**Profile-Snapshot-Export**，後面接著系統產生的隨機英數字值。 例如： `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`。
 
-若要瞭解每個設定檔快照集匯出資料集的完整結構描述，您可以在Experience PlatformUI中使用資料集檢視器](../catalog/datasets/user-guide.md)來預覽及探索資料集[。
+若要瞭解每個設定檔快照集匯出資料集的完整結構描述，您可以在Experience PlatformUI中使用資料集檢視器[&#128279;](../catalog/datasets/user-guide.md)來預覽及探索資料集。
 
 ![設定檔快照集匯出資料集的預覽。](images/query/profile-attribute.png)
 
@@ -70,7 +70,7 @@ Adobe Experience Platform [!DNL Query Service]可讓行銷人員使用標準SQL�
 
 此資料集的命名慣例是&#x200B;**Segmentdefinition-Snapshot-Export**，後面接著英數字值。 例如︰`Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-若要瞭解每個區段定義快照匯出資料集的完整結構描述，您可以在Experience PlatformUI中使用資料集檢視器](../catalog/datasets/user-guide.md)來預覽及探索資料集[。
+若要瞭解每個區段定義快照匯出資料集的完整結構描述，您可以在Experience PlatformUI中使用資料集檢視器[&#128279;](../catalog/datasets/user-guide.md)來預覽及探索資料集。
 
 ### 目的地中繼資料資料集
 
@@ -78,7 +78,7 @@ Adobe Experience Platform [!DNL Query Service]可讓行銷人員使用標準SQL�
 
 此資料集的命名慣例是&#x200B;**DIM_Destination**。
 
-若要瞭解DIM目的地資料集的完整結構描述，您可以在Experience PlatformUI中使用資料集檢視器](../catalog/datasets/user-guide.md)預覽及探索資料集[。
+若要瞭解DIM目的地資料集的完整結構描述，您可以在Experience PlatformUI中使用資料集檢視器[&#128279;](../catalog/datasets/user-guide.md)預覽及探索資料集。
 
 ![DIM_Destination資料集的預覽。](images/query/destinations-metadata.png)
 

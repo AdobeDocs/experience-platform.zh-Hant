@@ -226,6 +226,7 @@ ht-degree: 2%
      | `xdm: person.name.firstName` | 來自所需[!DNL Salesforce Marketing Cloud]資料延伸的`Attribute: First Name`。 | - |
 
    * 以下顯示使用這些對應的範例：
+
      ![Experience Platform UI熒幕擷圖範例顯示Target對應。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
 當您完成提供目的地連線的對應時，請選取&#x200B;**[!UICONTROL 下一步]**。
@@ -260,13 +261,13 @@ ht-degree: 2%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**以瀏覽目的地清單。
+1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**&#x200B;以瀏覽目的地清單。
    ![Experience Platform UI熒幕擷圖顯示瀏覽目的地。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
 
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL 已啟用]**。
    ![Experience Platform UI熒幕擷圖顯示目的地資料流執行。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。
@@ -292,7 +293,7 @@ ht-degree: 2%
    * 若要修正此錯誤，請確認您在啟動工作流程中提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;與[!DNL (API) Salesforce Marketing Cloud]目的地完全符合您在[!DNL Salesforce Marketing Cloud]中建立的屬性名稱。 如需相關指引，請參閱[在 [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field)內建立屬性。
 
 * 啟用區段時，您可能會收到錯誤訊息： `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * 若要修正此錯誤，請連絡您的[!DNL Salesforce Marketing Cloud]帳戶管理員，將[Experience Platform IP位址](/help/destinations/catalog/streaming/ip-address-allow-list.md)新增至您的[!DNL Salesforce Marketing Cloud]帳戶受信任的IP範圍。 如果您需要其他指引，請參閱Marketing Cloud](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&amp;type=5)檔案中的[!DNL Salesforce Marketing Cloud]個[允許清單的IP位址。
+   * 若要修正此錯誤，請連絡您的[!DNL Salesforce Marketing Cloud]帳戶管理員，將[Experience Platform IP位址](/help/destinations/catalog/streaming/ip-address-allow-list.md)新增至您的[!DNL Salesforce Marketing Cloud]帳戶受信任的IP範圍。 如果您需要其他指引，請參閱Marketing Cloud[&#128279;](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&amp;type=5)檔案中的[!DNL Salesforce Marketing Cloud]個允許清單的IP位址。
 
 ## 其他資源 {#additional-resources}
 
@@ -307,11 +308,11 @@ ht-degree: 2%
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2023 年 10 月 | 文件更新 | <ul><li>我們已更新(API) Salesforce Marketing Cloud](#prerequisites-destination)中的[必要條件，並一般移除檔案中屬性群組的不必要參考。</li> <li>更新檔案以指出只應在[!DNL Email Demographics]資料延伸內的[!DNL Salesforce Marketing Cloud]中建立對象狀態的屬性。</li> <li>我們已更新[對應考量事項和範例](#mapping-considerations-example)區段中的對應表格，`Email Addresses`資料延伸模組中`Email Address`屬性的對應標籤為必要，標示為IMPORTANT的圖說中曾提及此要求，但表格中省略。</li></ul> |
+| 2023 年 10 月 | 文件更新 | <ul><li>我們已更新(API) Salesforce Marketing Cloud[&#128279;](#prerequisites-destination)中的必要條件，並一般移除檔案中屬性群組的不必要參考。</li> <li>更新檔案以指出只應在[!DNL Email Demographics]資料延伸內的[!DNL Salesforce Marketing Cloud]中建立對象狀態的屬性。</li> <li>我們已更新[對應考量事項和範例](#mapping-considerations-example)區段中的對應表格，`Email Addresses`資料延伸模組中`Email Address`屬性的對應標籤為必要，標示為IMPORTANT的圖說中曾提及此要求，但表格中省略。</li></ul> |
 | 2023 年 4 月 | 文件更新 | <ul><li>我們已更正[ Salesforce Marketing Cloud (API) ](#prerequisites-destination)中「必要條件」區段中的陳述式及參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 區段先前錯誤地指出使用者需要訂閱Marketing Cloud **帳戶**&#x200B;參與才能繼續。</li> <li>我們已在[先決條件](#prerequisites)下新增一節，以將[角色和許可權](#prerequisites-roles-permissions)指派給[!DNL Salesforce]使用者，讓此目的地正常運作。 (PLATIR-26299)</li></ul> |
-| 2023 年 2 月 | 文件更新 | 我們已更新(API) Salesforce Marketing Cloud](#prerequisites-destination)中的[必要條件區段，加入參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 |
+| 2023 年 2 月 | 文件更新 | 我們已更新(API) Salesforce Marketing Cloud[&#128279;](#prerequisites-destination)中的必要條件區段，加入參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 |
 | 2023 年 2 月 | 功能更新 | 我們已修正目的地中不正確的設定導致將格式錯誤的JSON傳送至Salesforce的問題。 這會導致某些使用者在啟用時看到大量身分失敗。 (PLATIR-26299) |
-| 2023 年 1 月 | 文件更新 | <ul><li>我們更新了 [!DNL Salesforce]](#prerequisites-destination)中的[必要條件區段，指出必須在[!DNL Salesforce]端建立屬性。 本節現在包含如何執行此動作的詳細指示，以及命名[!DNL Salesforce]中屬性的最佳作法。 (PLATIR-25602)</li><li>我們新增了明確指示，說明如何在[對象排程](#schedule-segment-export-example)步驟中為每個已啟用的對象使用對應ID。 (PLATIR-25602)</li></ul> |
+| 2023 年 1 月 | 文件更新 | <ul><li>我們更新了 [!DNL Salesforce][&#128279;](#prerequisites-destination)中的必要條件區段，指出必須在[!DNL Salesforce]端建立屬性。 本節現在包含如何執行此動作的詳細指示，以及命名[!DNL Salesforce]中屬性的最佳作法。 (PLATIR-25602)</li><li>我們新增了明確指示，說明如何在[對象排程](#schedule-segment-export-example)步驟中為每個已啟用的對象使用對應ID。 (PLATIR-25602)</li></ul> |
 | 2022 年 10 月 | 首次發行 | 初始目的地版本和檔案發佈。 |
 
 {style="table-layout:auto"}

@@ -186,7 +186,7 @@ ht-degree: 1%
 
 >[!TAB 訂閱]
 
-在[!DNL Stripe]中，您可以使用&#x200B;**訂閱**&#x200B;以定期方式向客戶收費。 如需特定訂閱屬性的詳細資訊，請參閱訂閱](https://docs.stripe.com/api/subscriptions)的[[!DNL Stripe] API指南。
+在[!DNL Stripe]中，您可以使用&#x200B;**訂閱**&#x200B;以定期方式向客戶收費。 如需特定訂閱屬性的詳細資訊，請參閱訂閱[&#128279;](https://docs.stripe.com/api/subscriptions)的[!DNL Stripe] API指南。
 
 +++選取以檢視Stripe訂閱物件
 
@@ -328,7 +328,7 @@ ht-degree: 1%
 
 >[!TAB 退款]
 
-在[!DNL Stripe]中，您可以使用&#x200B;**退款**&#x200B;來退還先前建立的費用。 如需特定退款屬性的詳細資訊，請參閱退款](https://docs.stripe.com/api/refunds)的[[!DNL Stripe] API指南。
+在[!DNL Stripe]中，您可以使用&#x200B;**退款**&#x200B;來退還先前建立的費用。 如需特定退款屬性的詳細資訊，請參閱退款[&#128279;](https://docs.stripe.com/api/refunds)的[!DNL Stripe] API指南。
 
 +++選取以檢視Stripe退款物件
 
@@ -364,7 +364,7 @@ ht-degree: 1%
 
 >[!TAB 餘額交易]
 
-在[!DNL Stripe]中，**餘額交易**&#x200B;代表您[!DNL Stripe]帳戶之間的資金流動。 如需特定餘額交易屬性的詳細資訊，請參閱餘額交易](https://docs.stripe.com/api/balance_transactions)的[[!DNL Stripe] API指南。
+在[!DNL Stripe]中，**餘額交易**&#x200B;代表您[!DNL Stripe]帳戶之間的資金流動。 如需特定餘額交易屬性的詳細資訊，請參閱餘額交易[&#128279;](https://docs.stripe.com/api/balance_transactions)的[!DNL Stripe] API指南。
 
 +++選取以檢視「Stripe餘額異動」物件
 
@@ -432,7 +432,7 @@ ht-degree: 1%
 
 >[!TAB 價格]
 
-在[!DNL Stripe]中，**價格**&#x200B;代表重複購買與一次性購買產品的單位成本、貨幣以及選擇性帳單週期。 如需特定價格屬性的詳細資訊，請參閱價格](https://docs.stripe.com/api/prices)的[[!DNL Stripe] API指南。
+在[!DNL Stripe]中，**價格**&#x200B;代表重複購買與一次性購買產品的單位成本、貨幣以及選擇性帳單週期。 如需特定價格屬性的詳細資訊，請參閱價格[&#128279;](https://docs.stripe.com/api/prices)的[!DNL Stripe] API指南。
 
 +++選取以檢視「Stripe價格」物件
 

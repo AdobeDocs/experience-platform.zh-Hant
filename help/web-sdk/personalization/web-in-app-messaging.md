@@ -80,10 +80,10 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
      ![顯示動作設定畫面的影像。](assets/web-in-app-messaging/action-configuration.png)
 
-3. 在熒幕右側的&#x200B;**[!UICONTROL Personalization]**&#x200B;區段中，啟用&#x200B;**[!UICONTROL 呈現視覺個人化決策]**選項。
+3. 在熒幕右側的&#x200B;**[!UICONTROL Personalization]**&#x200B;區段中，啟用&#x200B;**[!UICONTROL 呈現視覺個人化決策]**&#x200B;選項。
    ![顯示個人化設定畫面的影像。](assets/web-in-app-messaging/render-visual-personalization.png)
 
-4. 在畫面右側的&#x200B;**[!UICONTROL 決定內容]**&#x200B;區段中，定義您用於行銷活動設定的&#x200B;**[!UICONTROL 索引鍵]**/**[!UICONTROL 值]**配對，以符合應用程式內訊息的資格。
+4. 在畫面右側的&#x200B;**[!UICONTROL 決定內容]**&#x200B;區段中，定義您用於行銷活動設定的&#x200B;**[!UICONTROL 索引鍵]**/**[!UICONTROL 值]**&#x200B;配對，以符合應用程式內訊息的資格。
    ![顯示個人化設定畫面的影像。](assets/web-in-app-messaging/decision-context.png)
 
 5. 選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以儲存您的設定。
@@ -121,11 +121,11 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
      ![顯示動作設定畫面的影像。](assets/web-in-app-messaging/manual-trigger-action.png)
 
-3. 在熒幕右側，啟用&#x200B;**[!UICONTROL 呈現視覺化個人化決定]**選項。
+3. 在熒幕右側，啟用&#x200B;**[!UICONTROL 呈現視覺化個人化決定]**&#x200B;選項。
    ![顯示個人化設定畫面的影像。](assets/web-in-app-messaging/manual-trigger-render.png)
 
 
-4. 在畫面右側的&#x200B;**[!UICONTROL 決定內容]**&#x200B;區段中，定義您用於行銷活動設定的&#x200B;**[!UICONTROL 索引鍵]**/**[!UICONTROL 值]**配對，以符合應用程式內訊息的資格。
+4. 在畫面右側的&#x200B;**[!UICONTROL 決定內容]**&#x200B;區段中，定義您用於行銷活動設定的&#x200B;**[!UICONTROL 索引鍵]**/**[!UICONTROL 值]**&#x200B;配對，以符合應用程式內訊息的資格。
    ![顯示個人化設定畫面的影像。](assets/web-in-app-messaging/manual-trigger-decision-context.png)
 
 5. 選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以儲存您的設定。

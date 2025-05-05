@@ -41,7 +41,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對一組資料使用標籤進行測試的行銷動作名稱。 您可以向行銷動作端點](./marketing-actions.md#list)發出[GET要求，以擷取可用的行銷動作清單。 |
+| `{MARKETING_ACTION_NAME}` | 針對一組資料使用標籤進行測試的行銷動作名稱。 您可以向行銷動作端點[&#128279;](./marketing-actions.md#list)發出GET要求，以擷取可用的行銷動作清單。 |
 | `{LABELS_LIST}` | 以逗號分隔的資料使用標簽名稱清單，用於測試行銷動作。 例如： `duleLabels=C1,C2,C3`<br><br>請注意，標簽名稱區分大小寫。 在`duleLabels`引數中列出這些專案時，請確定您使用正確的大小寫。 |
 
 **要求**
@@ -134,7 +134,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對一或多個資料集進行測試的行銷動作名稱。 您可以向行銷動作端點](./marketing-actions.md#list)發出[GET要求，以擷取可用的行銷動作清單。 |
+| `{MARKETING_ACTION_NAME}` | 針對一或多個資料集進行測試的行銷動作名稱。 您可以向行銷動作端點[&#128279;](./marketing-actions.md#list)發出GET要求，以擷取可用的行銷動作清單。 |
 
 **要求**
 
@@ -365,11 +365,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對資料集欄位子集進行測試的行銷動作名稱。 您可以向行銷動作端點](./marketing-actions.md#list)發出[GET要求，以擷取可用的行銷動作清單。 |
+| `{MARKETING_ACTION_NAME}` | 針對資料集欄位子集進行測試的行銷動作名稱。 您可以向行銷動作端點[&#128279;](./marketing-actions.md#list)發出GET要求，以擷取可用的行銷動作清單。 |
 
 **要求**
 
-下列要求會對屬於三個資料集的特定欄位集測試行銷動作`crossSiteTargeting`。 承載類似於僅涉及資料集](#datasets)的[評估請求，為要從中收集標籤的每個資料集新增特定欄位。
+下列要求會對屬於三個資料集的特定欄位集測試行銷動作`crossSiteTargeting`。 承載類似於僅涉及資料集[&#128279;](#datasets)的評估請求，為要從中收集標籤的每個資料集新增特定欄位。
 
 ```shell
 curl -X POST \
@@ -422,7 +422,7 @@ curl -X POST \
 
 成功的回應包含`violatedPolicies`陣列，其中包含對提供的資料集欄位執行行銷動作時所違反原則的詳細資料。 如果未違反任何原則，`violatedPolicies`陣列將是空的。
 
-將下列範例回應與僅涉及資料集](#datasets)的[回應進行比較，請注意，收集的標籤清單較短。 每個資料集的`discoveredLabels`也已減少，因為它們僅包含在要求內文中指定的欄位。 此外，先前違反的原則`Targeting Ads or Content`需要同時存在`C4 AND C6`個標籤，因此不再違反空的`violatedPolicies`陣列所指示的原則。
+將下列範例回應與僅涉及資料集[&#128279;](#datasets)的回應進行比較，請注意，收集的標籤清單較短。 每個資料集的`discoveredLabels`也已減少，因為它們僅包含在要求內文中指定的欄位。 此外，先前違反的原則`Targeting Ads or Content`需要同時存在`C4 AND C6`個標籤，因此不再違反空的`violatedPolicies`陣列所指示的原則。
 
 ```JSON
 {

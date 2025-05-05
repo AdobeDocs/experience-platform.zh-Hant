@@ -28,7 +28,7 @@ ht-degree: 1%
 
 要完成此教學課程，您必須有權訪問 [!DNL Experience Platform]。 如果您沒有[!DNL Experience Platform]中組織的存取權，請在繼續之前與您的系統管理員交談。
 
-該教學課程需要現存方式。 如果沒有配方，請在繼續之前，在UI](./import-packaged-recipe-ui.md)教學課程中追隨[匯入打包的方式。
+該教學課程需要現存方式。 如果沒有配方，請在繼續之前，在UI[&#128279;](./import-packaged-recipe-ui.md)教學課程中追隨匯入打包的方式。
 
 ## 建立模型
 
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->配置是唯一的，特定於其預期配方，這意味著零售銷售配方的配置不適用於產品Recommendations配方。 請參閱參考](#reference)部份，[了解零售銷售方式配置清單。
+>配置是唯一的，特定於其預期配方，這意味著零售銷售配方的配置不適用於產品Recommendations配方。 請參閱參考[&#128279;](#reference)部份，了解零售銷售方式配置清單。
 
 ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 

@@ -54,7 +54,7 @@ ht-degree: 0%
 
 如果您透過UI手動將資料擷取到Experience Platform，請參閱[計算欄位](../../data-prep/ui/mapping.md#calculated-fields)的指南，以瞭解如何建立計算欄位的特定步驟。
 
-如果您使用來源連線將資料串流至Experience Platform，您可以設定來源以改為利用計算欄位。 請參閱您特定來源](../../sources/home.md)的[檔案，瞭解設定連線時如何實作計算欄位的指示。
+如果您使用來源連線將資料串流至Experience Platform，您可以設定來源以改為利用計算欄位。 請參閱您特定來源[&#128279;](../../sources/home.md)的檔案，瞭解設定連線時如何實作計算欄位的指示。
 
 ## 相容的結構描述欄位群組 {#field-groups}
 

@@ -102,7 +102,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用 SQL 啟用輪廓的資料集 | [在 CTAS 查詢中使用 LABEL 使資料集「啟用輪廓」](../../query-service/sql/syntax.md#create-table-as-select)，或使用 ALTER 以更新要為輪廓啟用的現有資料集。您可以使用此擴充的SQL建構，針對即時客戶個人檔案業務使用案例的衍生資料集提供順暢的支援。 如需詳細資訊，請參閱衍生資料集檔案](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md)的[無縫SQL流程。 |
+| 使用 SQL 啟用輪廓的資料集 | [在 CTAS 查詢中使用 LABEL 使資料集「啟用輪廓」](../../query-service/sql/syntax.md#create-table-as-select)，或使用 ALTER 以更新要為輪廓啟用的現有資料集。您可以使用此擴充的SQL建構，針對即時客戶個人檔案業務使用案例的衍生資料集提供順暢的支援。 如需詳細資訊，請參閱衍生資料集檔案[&#128279;](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md)的無縫SQL流程。 |
 | 監視已排程查詢 | 使用[「已排程查詢」索引標籤](../../query-service/ui/monitor-queries.md)找到有關查詢執行的重要資訊並訂閱警示。監視查詢以獲取排程詳細資料、狀態，並在萬一查詢失敗時獲取錯誤訊息/代碼。 |
 | 切換自動完成功能 | 消除特定的中繼資料命令並[切換查詢編輯器自動完成功能](../../query-service/ui/user-guide.md#auto-complete)以縮短處理時間。本功能會在您編寫查詢時自動建議可能的 SQL 關鍵字和表格的詳細資料。 |
 | 資料集範例 | 指定查詢中的抽樣率並[使用資料集範例建立統一的隨機採樣](../../query-service/key-concepts/dataset-samples.md)，或根據特定標準建立條件式範例。 |
@@ -136,7 +136,7 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用 [!DNL Google PubSub] 指定訂閱層級的存取權 | 現在提供驗證時的訂閱 ID，即可定義使用 [!DNL Google PubSub] 來源時對特定主題訂閱的存取權。如需詳細資訊，請使用Flow Service API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md)或[Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md)閱讀[!DNL Google PubSub]驗證教學課程[。 |
+| 使用 [!DNL Google PubSub] 指定訂閱層級的存取權 | 現在提供驗證時的訂閱 ID，即可定義使用 [!DNL Google PubSub] 來源時對特定主題訂閱的存取權。如需詳細資訊，請使用Flow Service API[&#128279;](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md)或[Experience Platform UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md)閱讀[!DNL Google PubSub]驗證教學課程。 |
 | 從 [!DNL Marketo] 擷取自訂活動資料 | 您現在可以將自訂活動資料從您的 [!DNL Marketo] 執行個體帶到 Experience Platform。若要擷取自訂活動資料，您必須在 B2B 活動結構描述中設定自訂活動欄位並使用活動資料集建立資料流。資料流完成後，擷取的資料集即會同時包含您的 [!DNL Marketo] 執行個體中的標準和自訂活動。然後，您可以使用[查詢服務](../../query-service/home.md)來存取您在Experience Platform上的自訂活動記錄。 如需詳細資訊，請至「[建立自訂活動資料的資料流](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md)」詳閱指南。 |
 | 從 [!DNL Marketo] 排除無人申請的帳戶 | 您現在可以設定在建立公司資料的資料流時是否要從擷取中排除或包含無人申請的帳戶。如需詳細資訊，請至「[建立  [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md) 的來源連線和資料流」詳閱指南。 |
 

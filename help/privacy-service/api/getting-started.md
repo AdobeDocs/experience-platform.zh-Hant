@@ -64,7 +64,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-產品設定檔及其提供的精細許可權，由管理員透過Adobe Admin Console建立和管理。 如需詳細資訊，請參閱[Privacy Service許可權](../permissions.md)指南。
+>產品設定檔及其提供的精細許可權，由管理員透過Adobe Admin Console建立和管理。 如需詳細資訊，請參閱[Privacy Service許可權](../permissions.md)指南。
 
 完成後，選取&#x200B;**[!UICONTROL 儲存設定的API]**。
 

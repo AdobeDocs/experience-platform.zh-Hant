@@ -96,7 +96,7 @@ Experience Platform 目前支援三種評估客群的方式：串流分段、批
 >abstract="邊緣分段指在 Edge Network 上即時評估 Experience Platform 中區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="邊緣分段服務指南"
 
-Edge區段能在Edge Network](../landing/edge-and-hub-comparison.md)上即時評估Experience Platform中的區段[，啟用相同頁面和下一頁個人化使用案例。
+Edge區段能在Edge Network[&#128279;](../landing/edge-and-hub-comparison.md)上即時評估Experience Platform中的區段，啟用相同頁面和下一頁個人化使用案例。
 
 若要深入瞭解邊緣細分，請閱讀[邊緣細分概觀](./methods/edge-segmentation.md)。
 

@@ -36,7 +36,7 @@ ht-degree: 2%
 | 使用者名稱 | [!DNL Oracle Eloqua]伺服器的使用者名稱。 使用者名稱必須格式化為`siteName + \\ + username`，其中`siteName`是您用來登入[!DNL Oracle Eloqua]的公司名稱，`username`是您的使用者名稱。 例如，您的登入使用者名稱可以是： `Eloqua\Andy`。 **注意**：您必須在使用UI時使用單一反斜線(`\`)，因為Experience Platform UI會在輸入使用者名稱時自動新增額外的反斜線(`\`)。 |
 | 密碼 | 與您的[!DNL Oracle Eloqua]使用者名稱對應的密碼。 |
 
-如需[!DNL Oracle Eloqua]的驗證認證詳細資訊，請參閱驗證](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)的[[!DNL Oracle Eloqua] 指南。
+如需[!DNL Oracle Eloqua]的驗證認證詳細資訊，請參閱驗證[&#128279;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)的[!DNL Oracle Eloqua] 指南。
 
 收集必要的認證後，您可以依照下列步驟將[!DNL Oracle Eloqua]帳戶連結至Experience Platform。
 
@@ -54,7 +54,7 @@ ht-degree: 2%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Oracle Eloqua]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Oracle Eloqua]帳戶，然後選取[下一步] **以繼續。**
 
 ![現有](../../../../images/tutorials/create/oracle-eloqua/existing.png)
 

@@ -39,7 +39,7 @@ ht-degree: 2%
 | 使用者名稱 | 您的Oracle服務雲端使用者帳戶使用者名稱。 |
 | 密碼 | 您的Oracle Service Cloud帳戶密碼。 |
 
-如需驗證您的Oracle Service Cloud帳戶的詳細資訊，請參閱驗證](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html)的[[!DNL Oracle] 指南。
+如需驗證您的Oracle Service Cloud帳戶的詳細資訊，請參閱驗證[&#128279;](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html)的[!DNL Oracle] 指南。
 
 ## 連線您的Oracle Service Cloud帳戶
 

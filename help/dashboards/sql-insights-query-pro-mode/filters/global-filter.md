@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->確定您將全域篩選器對應至所有圖表。 這不是自動程式。 若要使用全域篩選，您必須在圖表的SQL中加入[查詢引數](../../../query-service/ui/parameterized-queries.md)、在Widget撰寫器中啟用全域篩選](#enable-global-filter)，以及在全域篩選對話方塊中為引數選取執行階段值](#select-global-filter)。 [[如需瞭解如何編輯SQL （如果需要合併查詢引數），請參閱查詢專家指南。
+>確定您將全域篩選器對應至所有圖表。 這不是自動程式。 若要使用全域篩選，您必須在圖表的SQL中加入[查詢引數](../../../query-service/ui/parameterized-queries.md)、在Widget撰寫器中啟用全域篩選[&#128279;](#enable-global-filter)，以及在全域篩選對話方塊中為引數選取執行階段值[&#128279;](#select-global-filter)。 如需瞭解如何編輯SQL （如果需要合併查詢引數），請參閱查詢專家指南。
 
 ![自訂儀表板，其新增篩選器及其下拉式功能表已反白顯示。](../../images/sql-insights-query-pro-mode/add-filter.png)
 

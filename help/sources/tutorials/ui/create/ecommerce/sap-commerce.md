@@ -155,7 +155,7 @@ ht-degree: 2%
 
 ### 現有帳戶 {#existing-account}
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL SAP Commerce]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL SAP Commerce]帳戶，然後選取[下一步] **以繼續。**
 
 ![用於將SAP Commerce帳戶與現有帳戶連線的Experience Platform UI熒幕擷取畫面](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 

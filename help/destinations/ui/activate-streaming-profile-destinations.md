@@ -45,7 +45,7 @@ ht-degree: 1%
 
    ![在目的地目錄標籤中反白啟用對象控制項的影像。](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] ****。
+1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
 
    ![影像顯示您可以連線到之兩個目的地的選取範圍。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 

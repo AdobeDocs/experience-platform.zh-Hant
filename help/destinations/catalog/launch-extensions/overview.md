@@ -29,7 +29,7 @@ Adobe Experience Platform提供Adobe新一代的標籤管理功能。 Experience
 
 [標籤擴充功能](../../../tags/home.md#extensions)是增強網站或行動應用程式功能的程式碼套件。 這可能包括傳送原始事件資料到[Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md)之類的目的地，但它們也可以執行其他功能。
 
-區分標籤和事件轉送擴充功能很重要。 Experience Platform目的地使用者介面中出現的擴充功能是&#x200B;*標籤擴充功能*。 請參閱事件轉送概觀，以取得關於標籤和事件轉送](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags)之間[差異的詳細資訊。
+區分標籤和事件轉送擴充功能很重要。 Experience Platform目的地使用者介面中出現的擴充功能是&#x200B;*標籤擴充功能*。 請參閱事件轉送概觀，以取得關於標籤和事件轉送[&#128279;](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags)之間差異的詳細資訊。
 
 
 

@@ -84,7 +84,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `relationships` | 依承載建立關係時必須提供的物件。 此物件中的每個索引鍵代表特定的關聯性型別。 在上述範例中，已建立`extension`和`rules`關係，這些關係是`rule_components`所特有的。 如需不同資源的相容關聯性型別的詳細資訊，請參閱資源](#relationship-requirements-by-resource)的[關聯性需求一節。 |
+| `relationships` | 依承載建立關係時必須提供的物件。 此物件中的每個索引鍵代表特定的關聯性型別。 在上述範例中，已建立`extension`和`rules`關係，這些關係是`rule_components`所特有的。 如需不同資源的相容關聯性型別的詳細資訊，請參閱資源[&#128279;](#relationship-requirements-by-resource)的關聯性需求一節。 |
 | `data` | 在`relationship`物件下提供的每個關聯性型別都必須包含`data`屬性，該屬性會參考關聯性建立時所使用之資源的`id`和`type`。 您可以將`data`屬性格式化為物件陣列，讓每個物件包含適用資源的`id`和`type`，藉此與相同型別的多個資源建立關係。 |
 | `id` | 資源的唯一ID。 每個`id`都必須隨附同層級`type`屬性，以表示相關資源的型別。 |
 | `type` | 同層級`id`欄位參考的資源型別。 接受的值包括`data_elements`、`rules`、`extensions`和`environments`。 |

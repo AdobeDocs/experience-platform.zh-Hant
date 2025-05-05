@@ -34,7 +34,7 @@ ht-degree: 0%
 * 使用測試目的地API端點對您的目的地執行HTTP呼叫後的測試結果。 請與Adobe共用對您的目的地端點發出的API呼叫，以及從您的目的地端點接收的API回應。
 * 一種熒幕錄製，可顯示某人連線至您的目的地並完成啟動步驟的使用者體驗。
 * 檔案型目的地的其他需求：
-   * 使用測試API共用要求與回應範例，以使用範例設定檔](../testing-api/batch-destinations/file-based-destination-testing-api.md)測試您的檔案型目的地[。
+   * 使用測試API共用要求與回應範例，以使用範例設定檔[&#128279;](../testing-api/batch-destinations/file-based-destination-testing-api.md)測試您的檔案型目的地。
    * 附加目的地產生的範例檔案，並匯出至儲存位置。
    * 提交一些形式的證明，證明您已成功將匯出的檔案從儲存位置擷取到系統中。
 * 證明您已使用[目的地發佈API](../publishing-api/create-publishing-request.md)提交目的地的目的地發佈要求。
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ### 測試API回應 {#testing-api-response-file-based}
 
-使用測試API來使用範例設定檔](../testing-api/batch-destinations/file-based-destination-testing-api.md)測試您的檔案型目的地[之後，加入請求和回應範例。
+使用測試API來使用範例設定檔[&#128279;](../testing-api/batch-destinations/file-based-destination-testing-api.md)測試您的檔案型目的地之後，加入請求和回應範例。
 
 ### 附加匯出的檔案 {#attach-exported-file}
 

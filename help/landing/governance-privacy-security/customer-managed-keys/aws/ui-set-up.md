@@ -220,7 +220,7 @@ AWS [!DNL Key Management Service]的已更新[!DNL Customer Managed Keys]工作�
 
 或者，如果您的金鑰用於其他服務，您可以直接從金鑰原則中移除Experience Platform的存取權。 在&#x200B;**[!DNL Key Policy]**&#x200B;區段中選取&#x200B;**[!UICONTROL 編輯]**。
 
-![在[金鑰原則]區段中反白顯示[編輯的AWS金鑰的詳細資訊區段。](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
+&lbrack;在[金鑰原則]區段中反白顯示![編輯的AWS金鑰的詳細資訊區段。](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
 **[!DNL Edit key policy]**&#x200B;頁面隨即顯示。 反白標示並刪除從Experience Platform UI複製的原則宣告，以移除客戶自控金鑰應用程式的許可權。 然後，選取&#x200B;**[!DNL Save changes]**&#x200B;以完成程式。
 

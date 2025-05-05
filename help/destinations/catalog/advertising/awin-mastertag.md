@@ -42,7 +42,7 @@ ht-degree: 3%
 
 工作流程會帶您前往資料收集UI以完成安裝。
 
-如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html)上的[Awin Advertiser Mastertag頁面。
+如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange[&#128279;](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html)上的Awin Advertiser Mastertag頁面。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱[新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的指南。
 

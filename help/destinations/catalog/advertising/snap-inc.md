@@ -110,7 +110,7 @@ ht-degree: 2%
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL 帳戶ID]**：與您要匯入對象之廣告帳戶相關聯的廣告帳戶ID。 如需如何尋找此專案的詳細資訊，請參閱Snapchat商務說明中心](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)上的[本檔案。
+* **[!UICONTROL 帳戶ID]**：與您要匯入對象之廣告帳戶相關聯的廣告帳戶ID。 如需如何尋找此專案的詳細資訊，請參閱Snapchat商務說明中心[&#128279;](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)上的本檔案。
 
 >[!IMPORTANT]
 > 

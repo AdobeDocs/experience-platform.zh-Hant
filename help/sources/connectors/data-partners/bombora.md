@@ -71,7 +71,7 @@ Experience Platform上的[!DNL Bombora]由[!DNL Google Cloud Storage]代管。 �
 | 祕密存取金鑰 | [!DNL Bombora]秘密存取金鑰。 這是40個字元、以Base64編碼的字串，驗證您的帳戶給Experience Platform是必要的。 |
 | 貯體名稱 | 將從其中提取資料的[!DNL Bombora]貯體。 |
 
-如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱 [!DNL Google Cloud Storage] 來源概觀](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)中的[先決條件指南。
+如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱 [!DNL Google Cloud Storage] 來源概觀[&#128279;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)中的先決條件指南。
 
 ## [!DNL Bombora]結構描述 {#schema}
 

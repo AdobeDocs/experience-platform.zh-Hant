@@ -33,7 +33,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->如果您不使用任何查詢引數來使用此端點，則不會傳回非作用中對象&#x200B;****。 不過，如果您將此端點與`property=audienceId`查詢引數搭配使用，將會傳回非作用中對象&#x200B;****。
+>如果您不使用任何查詢引數來使用此端點，則不會傳回非作用中對象&#x200B;**&#x200B;**。 不過，如果您將此端點與`property=audienceId`查詢引數搭配使用，將會傳回非作用中對象&#x200B;**&#x200B;**。
 
 擷取對象清單時，可以使用以下查詢引數：
 
@@ -550,7 +550,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `op` | 所執行的PATCH作業型別。 對於此端點，這個值為&#x200B;**一律為** `/add`。 |
-| `path` | 要更新的欄位路徑。 無法編輯系統產生的欄位，例如`id`、`audienceId`和`namespace` ****。 |
+| `path` | 要更新的欄位路徑。 無法編輯系統產生的欄位，例如`id`、`audienceId`和`namespace` **&#x200B;**。 |
 | `value` | 指派給`path`中指定的屬性的新值。 |
 
 +++

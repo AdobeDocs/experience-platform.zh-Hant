@@ -105,7 +105,7 @@ ht-degree: 0%
 
 ![資料流執行頁面的影像，其處理時間資料行已針對以檔案為基礎的目的地反白顯示。](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
-如需詳細資訊，請參閱監視檔案中關於批次（檔案型）目的地](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)的[資料流執行。
+如需詳細資訊，請參閱監視檔案中關於批次（檔案型）目的地[&#128279;](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)的資料流執行。
 
 ## [!UICONTROL 啟用資料] {#activation-data}
 
@@ -162,6 +162,6 @@ ht-degree: 0%
 
 ### 編輯匯出至批次目的地的多個對象的檔案名稱 {#bulk-edit-file-names}
 
-若要同時編輯多個對象的匯出檔案名稱，請選取所需的對象，然後選取[編輯檔案名稱]。**** 如需如何定義或編輯檔案名稱的詳細資訊，請閱讀如何[設定檔案名稱](../ui/activate-batch-profile-destinations.md#configure-file-names)區段。
+若要同時編輯多個對象的匯出檔案名稱，請選取所需的對象，然後選取[編輯檔案名稱]。**&#x200B;** 如需如何定義或編輯檔案名稱的詳細資訊，請閱讀如何[設定檔案名稱](../ui/activate-batch-profile-destinations.md#configure-file-names)區段。
 
 ![啟用資料熒幕醒目提示編輯多個對象檔案名稱的選項。](../assets/ui/details-page/bulk-edit-file-name.png)

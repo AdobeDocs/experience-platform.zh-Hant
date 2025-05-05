@@ -37,7 +37,7 @@ ht-degree: 3%
 使用此目的地將資料匯出Adobe Experience Platform之前，請務必先在[!DNL Pega Customer Decision Hub]中完成下列必要條件：
 
 * 在您的[!DNL Pega Customer Decision Hub]執行個體中設定[Adobe Experience Platform設定檔和對象成員資格整合元件](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)。
-* 在您的[!DNL Pega Customer Decision Hub]執行個體中使用使用者端認證](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)授與型別，設定OAuth 2.0 [使用者端註冊。
+* 在您的[!DNL Pega Customer Decision Hub]執行個體中使用使用者端認證[&#128279;](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)授與型別，設定OAuth 2.0 使用者端註冊。
 * 設定[!DNL Pega Customer Decision Hub]執行個體中Adobe對象成員資格資料流程的[即時執行資料流程](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)。
 
 ## 支援的身分 {#supported-identities}

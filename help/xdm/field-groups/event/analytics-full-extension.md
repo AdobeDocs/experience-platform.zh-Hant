@@ -27,11 +27,11 @@ ht-degree: 5%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `customDimensions` | 物件 | 擷取Analytics追蹤的自訂維度。 如需此物件內容的詳細資訊，請參閱](#custom-dimensions)下方的[子區段。 |
-| `endUser` | 物件 | 擷取觸發事件之一般使用者的網頁互動細節。 如需此物件內容的詳細資訊，請參閱](#end-user)下方的[子區段。 |
-| `environment` | 物件 | 擷取關於觸發事件的瀏覽器和作業系統的資訊。 如需此物件內容的詳細資訊，請參閱](#environment)下方的[子區段。 |
-| `event1to100`<br><br>`event101to200`<br><br>`event201to300`<br><br>`event301to400`<br><br>`event401to500`<br><br>`event501to100`<br><br>`event601to700`<br><br>`event701to800`<br><br>`event801to900`<br><br>`event901to1000` | 物件 | 欄位群組提供物件欄位，用以擷取最多1000個自訂事件。 如需這些欄位的詳細資訊，請參閱](#events)下方的[子區段。 |
-| `session` | 物件 | 擷取觸發事件的工作階段相關資訊。 如需此物件內容的詳細資訊，請參閱](#session)下方的[子區段。 |
+| `customDimensions` | 物件 | 擷取Analytics追蹤的自訂維度。 如需此物件內容的詳細資訊，請參閱[&#128279;](#custom-dimensions)下方的子區段。 |
+| `endUser` | 物件 | 擷取觸發事件之一般使用者的網頁互動細節。 如需此物件內容的詳細資訊，請參閱[&#128279;](#end-user)下方的子區段。 |
+| `environment` | 物件 | 擷取關於觸發事件的瀏覽器和作業系統的資訊。 如需此物件內容的詳細資訊，請參閱[&#128279;](#environment)下方的子區段。 |
+| `event1to100`<br><br>`event101to200`<br><br>`event201to300`<br><br>`event301to400`<br><br>`event401to500`<br><br>`event501to100`<br><br>`event601to700`<br><br>`event701to800`<br><br>`event801to900`<br><br>`event901to1000` | 物件 | 欄位群組提供物件欄位，用以擷取最多1000個自訂事件。 如需這些欄位的詳細資訊，請參閱[&#128279;](#events)下方的子區段。 |
+| `session` | 物件 | 擷取觸發事件的工作階段相關資訊。 如需此物件內容的詳細資訊，請參閱[&#128279;](#session)下方的子區段。 |
 
 {style="table-layout:auto"}
 

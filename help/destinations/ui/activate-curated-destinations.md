@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 
-使用Adobe Real-Time CDP與[!DNL LiveRamp]的整合，將對象啟用至使用[!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)啟用的精選目的地清單，包括連線電視和音訊目的地，例如下列目的地。
+使用Adobe Real-Time CDP與[!DNL LiveRamp]的整合，將對象啟用至使用[[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)啟用的精選目的地清單，包括連線電視和音訊目的地，例如下列目的地。
 
 >[!IMPORTANT]
 >

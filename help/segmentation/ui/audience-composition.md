@@ -129,7 +129,7 @@ ht-degree: 16%
 
 ![已選取[排除]選項。](../images/ui/audience-composition/add-exclude-block.png)
 
-已新增&#x200B;**[!UICONTROL 排除]**&#x200B;區塊。 選取此區塊時，右側欄中會顯示排除專案的詳細資料。 這包括區塊的標籤和排除型別。 您可以依對象](#exclude-audience)排除[，或依屬性](#exclude-attribute)排除[。
+已新增&#x200B;**[!UICONTROL 排除]**&#x200B;區塊。 選取此區塊時，右側欄中會顯示排除專案的詳細資料。 這包括區塊的標籤和排除型別。 您可以依對象[&#128279;](#exclude-audience)排除[，或依屬性](#exclude-attribute)排除。
 
 ![排除區塊，醒目顯示兩個可用的不同排除型別。](../images/ui/audience-composition/exclude.png)
 
@@ -143,7 +143,7 @@ ht-degree: 16%
 >
 >僅能使用使用「區段產生器」建立的&#x200B;**已發佈**&#x200B;對象。 使用對象構成和外部產生的對象建立的對象&#x200B;**無**&#x200B;可用。
 
-對象清單隨即顯示。 選取「新增&#x200B;****」，將您要排除的對象新增至排除區塊。
+對象清單隨即顯示。 選取「新增&#x200B;**&#x200B;**」，將您要排除的對象新增至排除區塊。
 
 ![會出現對象清單。 您可以從此對話方塊選取要新增的對象。](../images/ui/audience-composition/select-audience.png)
 

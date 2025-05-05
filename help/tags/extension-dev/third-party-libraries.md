@@ -84,7 +84,7 @@ firstScriptElement.parentNode.insertBefore(
 
 ## 標籤實作選項
 
-下一節會以先前所示的 Pinterest 基底程式碼為例，示範在擴充功能中載入廠商程式庫的各種方法。每個範例都涉及建立Web擴充功能](./web/action-types.md)的[動作型別，在您的網站上載入程式庫。
+下一節會以先前所示的 Pinterest 基底程式碼為例，示範在擴充功能中載入廠商程式庫的各種方法。每個範例都涉及建立Web擴充功能[&#128279;](./web/action-types.md)的動作型別，在您的網站上載入程式庫。
 
 >[!NOTE]
 >

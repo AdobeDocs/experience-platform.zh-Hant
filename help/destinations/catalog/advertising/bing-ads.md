@@ -42,7 +42,7 @@ ht-degree: 3%
 
 工作流程會帶您前往資料收集UI以完成安裝。
 
-如需擴充功能組態選項和安裝支援的相關資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html)上的[Bing Ads通用事件追蹤(UET)頁面。
+如需擴充功能組態選項和安裝支援的相關資訊，請參閱Adobe Exchange[&#128279;](https://exchange.adobe.com/experiencecloud.details.100154.html)上的Bing Ads通用事件追蹤(UET)頁面。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱[新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的指南。
 

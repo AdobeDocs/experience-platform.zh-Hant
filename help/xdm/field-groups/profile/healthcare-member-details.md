@@ -22,7 +22,7 @@ ht-degree: 3%
 | `homeAddress` | [[!UICONTROL 郵寄地址]](../../data-types/postal-address.md) | 人員的住家地址。 |
 | `homePhone` | [[!UICONTROL 電話號碼]](../../data-types/phone-number.md) | 個人的住家電話號碼。 |
 | `mailingAddress` | [[!UICONTROL 郵寄地址]](../../data-types/postal-address.md) | 個人的郵寄地址。 |
-| `memberDetails` | 物件 | 此物件包含有關個人醫療保健相關屬性和關係的詳細資訊。 如需物件結構的詳細資訊，請參閱](#memberDetails)下方的[子區段。 |
+| `memberDetails` | 物件 | 此物件包含有關個人醫療保健相關屬性和關係的詳細資訊。 如需物件結構的詳細資訊，請參閱[&#128279;](#memberDetails)下方的子區段。 |
 | `mobilePhone` | [[!UICONTROL 電話號碼]](../../data-types/phone-number.md) | 個人的行動電話號碼。 |
 | `person` | [[!UICONTROL 人員]](../../data-types/person.md) | 與個人的醫療保健會籍相關的個別執行者、聯絡人或擁有者。 |
 | `personalEmail` | [[!UICONTROL 電子郵件地址]](../../data-types/email-address.md) | 個人的個人電子郵件地址。 |

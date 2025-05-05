@@ -65,7 +65,7 @@ ht-degree: 1%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的&#x200B;*YOURSOURCE*&#x200B;帳戶，然後選取[下一步]**[!UICONTROL 以繼續。]**
+若要使用現有帳戶，請選取您要用來建立新資料流的&#x200B;*YOURSOURCE*&#x200B;帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
 
 ![現有](../assets/ui/existing.png)
 

@@ -18,7 +18,7 @@ Destination SDK支援多種前往目的地的授權方法。 其中一個選項�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -46,7 +46,7 @@ Destination SDK支援多種前往目的地的授權方法。 其中一個選項�
 
 >[!IMPORTANT]
 >
->只有在授權碼為](#authorization-code)授權型別的[OAuth 2中，才需要執行在您的系統中註冊Adobe Experience Platform的重新導向/回呼URL的步驟。 對於其他兩種支援的授權型別（密碼和使用者端認證），您可以略過此步驟。
+>只有在授權碼為[&#128279;](#authorization-code)授權型別的OAuth 2中，才需要執行在您的系統中註冊Adobe Experience Platform的重新導向/回呼URL的步驟。 對於其他兩種支援的授權型別（密碼和使用者端認證），您可以略過此步驟。
 
 在此步驟結束時，您應該會：
 * 使用者端ID；

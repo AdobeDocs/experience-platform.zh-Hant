@@ -49,7 +49,7 @@ ht-degree: 3%
 
 工作流程會逐步引導您完成安裝作業。
 
-如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)上的[確認數位意見回饋頁面。
+如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange[&#128279;](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)上的確認數位意見回饋頁面。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱標籤檔案中有關[新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的章節。
 

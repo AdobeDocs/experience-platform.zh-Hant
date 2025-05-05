@@ -28,7 +28,7 @@ ht-degree: 0%
 - 您只能對每個沙箱的&#x200B;**5**&#x200B;資料集套用客戶時間戳記排序。
 - 您&#x200B;**無法**&#x200B;在已啟用客戶時間戳記排序的資料集中，使用串流更新插入來傳送部分資料列更新。
 - `extSourceSystemAudit.lastUpdatedDate`欄位&#x200B;**必須**&#x200B;為[ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)格式。 使用ISO 8601格式時，它&#x200B;**必須**&#x200B;為格式`yyyy-MM-ddTHH:mm:ss.sssZ`的完整日期時間（例如`2028-11-13T15:06:49.001Z`）。
-- 所有擷取的資料列&#x200B;**必須**&#x200B;包含`extSourceSystemAudit.lastUpdatedDate`欄位做為最上層欄位群組。 這表示此欄位&#x200B;**不得**&#x200B;巢狀內嵌於XDM結構描述中。 如果此欄位遺失或格式不正確，將不會擷取格式錯誤的記錄&#x200B;****，而且將會傳送對應的錯誤訊息。
+- 所有擷取的資料列&#x200B;**必須**&#x200B;包含`extSourceSystemAudit.lastUpdatedDate`欄位做為最上層欄位群組。 這表示此欄位&#x200B;**不得**&#x200B;巢狀內嵌於XDM結構描述中。 如果此欄位遺失或格式不正確，將不會擷取格式錯誤的記錄&#x200B;**&#x200B;**，而且將會傳送對應的錯誤訊息。
 - 任何啟用客戶時間戳記排序&#x200B;**的資料集都必須**&#x200B;是沒有任何先前擷取資料的新資料集。
 - 對於任何給定的設定檔片段，只會擷取包含較新`extSourceSystemAudit.lastUpdatedDate`的列。 包含較舊或相同年齡之`extSourceSystemAudit.lastUpdatedDate`的資料列將被捨棄。
 

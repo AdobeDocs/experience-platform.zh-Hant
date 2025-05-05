@@ -147,4 +147,4 @@ Edge Network使用狀態管理通訊協定，將儲存層面委派給其使用�
 * 針對第一方Cookie (`kndcrt_*`)，`Secure`標幟只有在要求內容安全(HTTPS)且反向連結（[Referer HTTP標頭](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)）也是HTTPS時才設定。 如果反向連結不安全(HTTP)，則會省略`Secure`旗標，以允許Web SDK讀取它們。 無法從不安全的內容讀取安全的Cookie。
 * 第三方Cookie (demdex)一律會設定`Secure`標幟，因為所有要求都是HTTPS，因此要求內容是安全的，而且絕對不會從JavaScript讀取此Cookie。
 
-`Secure`旗標不存在於Cookie](#state-as-metadata)的[中繼資料表示中。 僅包含`SameSite`屬性。 在此情況下，只要有`SameSite`屬性出現，使用者端有責任正確設定`Secure`標幟。 具有`SameSite=None`的Cookie也必須指定`Secure`屬性，因為它們需要安全內容(HTTPS)。
+`Secure`旗標不存在於Cookie[&#128279;](#state-as-metadata)的中繼資料表示中。 僅包含`SameSite`屬性。 在此情況下，只要有`SameSite`屬性出現，使用者端有責任正確設定`Secure`標幟。 具有`SameSite=None`的Cookie也必須指定`Secure`屬性，因為它們需要安全內容(HTTPS)。

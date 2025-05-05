@@ -143,7 +143,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 ![Amazon DSP對象建立驗證](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
-[!DNL Amazon Marketing Cloud]**的**
+[!DNL Amazon Marketing Cloud]&#x200B;**的**
 
 在左側結構描述瀏覽器中，在&#x200B;**[!UICONTROL 已上傳的廣告商]** > **[!UICONTROL aep_audiences]**&#x200B;下尋找您的對象。 然後，您可以在AMC SQL編輯器中使用下列子句查詢您的對象：
 

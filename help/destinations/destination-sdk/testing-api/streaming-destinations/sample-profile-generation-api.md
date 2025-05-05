@@ -24,7 +24,7 @@ ht-degree: 1%
 >
 >使用此API端點可針對兩個不同的使用案例產生範例設定檔。 您可以：
 >* 產生設定檔，以使用&#x200B;*目的地ID*&#x200B;做為查詢引數，在[製作及測試訊息轉換範本](create-template.md)時使用。
->* 如果您的目的地設定正確](streaming-destination-testing-overview.md) — 使用&#x200B;*目的地執行個體識別碼*&#x200B;作為查詢引數，產生呼叫[測試時要使用的設定檔。
+>* 如果您的目的地設定正確[&#128279;](streaming-destination-testing-overview.md) — 使用&#x200B;*目的地執行個體識別碼*&#x200B;作為查詢引數，產生呼叫測試時要使用的設定檔。
 
 您可以根據Adobe XDM來源結構描述（用於測試您的目的地）或目的地支援的目標結構描述（用於製作範本）產生範例設定檔。 若要瞭解Adobe XDM來源結構描述與目標結構描述之間的差異，請閱讀[訊息格式](../../functionality/destination-server/message-format.md)文章的概述區段。
 

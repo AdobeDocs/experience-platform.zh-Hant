@@ -68,8 +68,8 @@ Adobe Campaign支援下列連線型別：
 在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
 
 * 針對&#x200B;**[!UICONTROL Amazon S3]**&#x200B;連線，您必須提供您的[!UICONTROL 存取金鑰識別碼]和[!UICONTROL 秘密存取金鑰]。
-* 針對使用密碼&#x200B;]**連線的**[!UICONTROL  SFTP，您必須提供[!UICONTROL 網域]、[!UICONTROL 連線埠]、[!UICONTROL 使用者名稱]以及[!UICONTROL 密碼]。
-* 針對具有SSH金鑰&#x200B;]**連線的**[!UICONTROL  SFTP，您必須提供[!UICONTROL 網域]、[!UICONTROL 連線埠]、[!UICONTROL 使用者名稱]和[!UICONTROL SSH金鑰]。
+* 針對使用密碼&#x200B;**連線的** SFTP，您必須提供[!UICONTROL 網域]、[!UICONTROL 連線埠]、[!UICONTROL 使用者名稱]以及[!UICONTROL 密碼]。
+* 針對具有SSH金鑰&#x200B;**連線的** SFTP，您必須提供[!UICONTROL 網域]、[!UICONTROL 連線埠]、[!UICONTROL 使用者名稱]和[!UICONTROL SSH金鑰]。
 * 對於&#x200B;**[!UICONTROL Azure Blob]**&#x200B;連線，您必須提供連線字串。
 * 您可以選擇附加RSA格式的公開金鑰，將PGP/GPG的加密新增至&#x200B;**[!UICONTROL 金鑰]**&#x200B;區段下的匯出檔案。 您的公開金鑰必須寫入為[!DNL Base64]編碼字串。
 * **[!UICONTROL 名稱]**：為您的目的地挑選相關名稱。

@@ -265,4 +265,4 @@ ht-degree: 8%
 >
 >上述作業的巢狀反複專案類似於： `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`。
 
-如需詳細資訊，請參閱 [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)中邏輯運運算元的[檔案
+如需詳細資訊，請參閱 [!DNL Data Prep][&#128279;](../../../../data-prep/functions.md##logical-operators)中邏輯運運算元的檔案

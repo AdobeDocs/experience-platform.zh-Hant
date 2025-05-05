@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 快速入門 {#get-started}
 
-本指南要求您已存取GitHub帳戶並註冊[!DNL GitHub Copilot]。 您可以[從GitHub網站](https://github.com/github-copilot/signup)註冊。 您也需要[!DNL VS Code]。 您可從其官方網站](https://code.visualstudio.com/download)下載[1}。 [!DNL VS Code] 
+本指南要求您已存取GitHub帳戶並註冊[!DNL GitHub Copilot]。 您可以[從GitHub網站](https://github.com/github-copilot/signup)註冊。 您也需要[!DNL VS Code]。 您可從其官方網站[&#128279;](https://code.visualstudio.com/download)下載1&rbrace;。 [!DNL VS Code] 
 
 安裝[!DNL VS Code]並啟動您的[!DNL Copilot]訂閱後，請取得Experience Platform的連線認證。 這些認證位於Experience Platform UI中[!UICONTROL 查詢]工作區的[!UICONTROL 認證]索引標籤中。 閱讀[的認證指南，瞭解如何在Experience Platform UI](../ui/credentials.md)中找到這些值。 如果您目前無法存取[!UICONTROL 查詢]工作區，請連絡組織管理員。
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 ## 快速入門：[!DNL GitHub Copilot] {#get-started-with-copilot}
 
-首先，確定您已安裝最新版本的[!DNL VS Code]。 過時的[!DNL VS Code]版本可能會使索引鍵[!DNL Copilot]功能無法如預期運作。 接下來，確定已啟用[!DNL Enable Auto Completions]設定。 如果[!DNL Copilot]已正確執行，**[!DNL Copilot]圖示** （![Copilot圖示](../images/clients/github-copilot/copilot-icon.png)）會顯示在您的狀態列中（如果有問題，則會改為顯示[!DNL Copilot]錯誤圖示）。 選取&#x200B;**[!DNL Copilot]圖示**&#x200B;以開啟[！DNL [!DNL GitHub Copilot]功能表]。 從&#x200B;**[！DNL [!DNL GitHub Copilot]功能表]**，選取&#x200B;**[!DNL Edit Settings]**
+首先，確定您已安裝最新版本的[!DNL VS Code]。 過時的[!DNL VS Code]版本可能會使索引鍵[!DNL Copilot]功能無法如預期運作。 接下來，確定已啟用[!DNL Enable Auto Completions]設定。 如果[!DNL Copilot]已正確執行，**[!DNL Copilot]圖示** （![Copilot圖示](../images/clients/github-copilot/copilot-icon.png)）會顯示在您的狀態列中（如果有問題，則會改為顯示[!DNL Copilot]錯誤圖示）。 選取&#x200B;**[!DNL Copilot]圖示**&#x200B;以開啟[!DNL [!DNL GitHub Copilot]功能表]。 從&#x200B;**[!DNL [!DNL GitHub Copilot]功能表]**，選取&#x200B;**[!DNL Edit Settings]**
 
 ![已顯示[!DNL GitHub Copilot Menu]並反白顯示[!DNL Copilot]圖示和[編輯設定]的[!DNL VS Code]編輯器。](../images/clients/github-copilot/github-copilot-menu.png)
 
@@ -119,7 +119,7 @@ ht-degree: 0%
 
 >[!TIP]
 >  
->如果未取得建議，請確定已以您檔案的語言](#get-started-with-copilot)啟用[[!DNL Copilot] 。
+>如果未取得建議，請確定已以您檔案的語言[&#128279;](#get-started-with-copilot)啟用[!DNL Copilot] 。
 
 ![ [!DNL VS Code]編輯器在部分輸入的程式碼旁顯示[!DNL GitHub Copilot]模糊的灰色文字建議，作為Ghost文字。](../images/clients/github-copilot/accept-partial-suggestions.png)
 

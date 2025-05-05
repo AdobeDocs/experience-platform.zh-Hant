@@ -17,7 +17,7 @@ ht-degree: 3%
 
 請參閱[檢視SQL檔案](../view-sql.md)，以取得有關如何直接透過Experience Platform UI調整您見解的SQL的詳細資訊。
 
-下列見解全部都可供您用作[設定檔儀表板](../guides/profiles.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
+下列見解全部都可供您用作[設定檔儀表板](../guides/profiles.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[&#128279;](../customize/custom-widgets.md)在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget的說明。
 
 ## 依合併原則區分的客群重疊 {#audience-overlap-by-merge-policy}
 

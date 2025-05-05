@@ -31,7 +31,7 @@ ht-degree: 0%
 
 1. 檢視上述建立或編輯的規則時，請選取現有動作或建立動作。
 1. 將[!UICONTROL 擴充功能]下拉式欄位設定為&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**，並將[!UICONTROL 動作型別]設定為&#x200B;**[!UICONTROL 套用主張]**&#x200B;或&#x200B;**[!UICONTROL 套用回應]**，視所要的行為而定。
-1. 設定動作的所需欄位，然後按一下[保留變更]。****
+1. 設定動作的所需欄位，然後按一下[保留變更]。**&#x200B;**
 
 ## 使用Web SDK JavaScript程式庫處理命令回應
 

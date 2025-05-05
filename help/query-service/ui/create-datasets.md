@@ -20,7 +20,7 @@ ht-degree: 0%
 
 若要從Adobe Experience Platform使用者介面(UI)建立資料集，請執行下列步驟：
 
-1. 使用連線的使用者端建立查詢並驗證輸出。 若要瞭解如何使用[!DNL Query Editor]撰寫查詢，請閱讀撰寫查詢的[!DNL Query Editor] UI指南[](./user-guide.md#writing-queries)。
+1. 使用連線的使用者端建立查詢並驗證輸出。 若要瞭解如何使用[!DNL Query Editor]撰寫查詢，請閱讀撰寫查詢的[!DNL Query Editor] UI指南[&#128279;](./user-guide.md#writing-queries)。
 
 2. 在Experience Platform UI中，依序導覽至&#x200B;**[!UICONTROL 查詢]**&#x200B;和&#x200B;**[!UICONTROL 範本]**&#x200B;標籤，並選取您已建立的查詢。 如需有關如何在Experience Platform UI中檢視為您的組織建立和儲存的查詢的詳細資訊，請閱讀[[!DNL Query Service] 總覽](./overview.md#browse)。
 

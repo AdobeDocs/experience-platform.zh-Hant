@@ -46,7 +46,7 @@ ht-degree: 3%
 
 您需要您的[!DNL HubSpot] `Access token`允許[!DNL HubSpot]目的地透過[!DNL HubSpot]帳戶內的[!DNL HubSpot]私人應用程式進行API呼叫。 當您[驗證目的地](#authenticate)時，`Access token`將用作`Bearer token`。
 
-如果您沒有私人應用程式，請依照檔案操作，在 [!DNL HubSpot]](https://developers.hubspot.com/docs/api/private-apps)中[建立私人應用程式。
+如果您沒有私人應用程式，請依照檔案操作，在 [!DNL HubSpot][&#128279;](https://developers.hubspot.com/docs/api/private-apps)中建立私人應用程式。
 
 >[!IMPORTANT]
 >
@@ -148,7 +148,7 @@ ht-degree: 3%
 `Email`識別是這個目的地的必要對應。 請依照下列步驟進行對應：
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**並選取身分。
+1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取身分。
    ![Experience Platform UI熒幕擷圖選取電子郵件作為來源屬性，以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;並選取`email`。
    ![Experience Platform UI熒幕擷圖選取電子郵件作為目標屬性，以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
@@ -165,7 +165,7 @@ ht-degree: 3%
 若要在XDM設定檔結構描述與[!DNL HubSpot]帳戶之間新增任何其他要更新的屬性，請重複下列步驟：
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**類別並選取XDM屬性。
+1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別並選取XDM屬性。
    ![Experience Platform UI熒幕擷圖選取名字作為來源屬性。](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別，並從自動從您的[!DNL HubSpot]帳戶填入的屬性清單中選取。 目的地使用[[!DNL HubSpot] 屬性](https://developers.hubspot.com/docs/api/crm/properties) API來擷取此資訊。 已擷取[!DNL HubSpot] [預設屬性](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties)及任何自訂屬性，以選取為目標欄位。
    ![Experience Platform UI熒幕擷取畫面選取「名字」做為Target屬性。](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
@@ -189,10 +189,10 @@ ht-degree: 3%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 登入[!DNL HubSpot]網站，然後導覽至&#x200B;**[!UICONTROL 連絡人]**頁面以檢查對象狀態。 此清單可設定為顯示以對象名稱建立之自訂屬性的欄，其值為對象狀態。
+1. 登入[!DNL HubSpot]網站，然後導覽至&#x200B;**[!UICONTROL 連絡人]**&#x200B;頁面以檢查對象狀態。 此清單可設定為顯示以對象名稱建立之自訂屬性的欄，其值為對象狀態。
    ![HubSpot UI熒幕擷圖顯示「連絡人」頁面，該頁面具有顯示對象名稱和儲存格對象狀態的欄標題](../../assets/catalog/crm/hubspot/contacts.png)
 
-1. 或者，您可以向下鑽研至個別&#x200B;**[!UICONTROL 人員]**頁面，並導覽至顯示對象名稱和對象狀態的屬性。
+1. 或者，您可以向下鑽研至個別&#x200B;**[!UICONTROL 人員]**&#x200B;頁面，並導覽至顯示對象名稱和對象狀態的屬性。
    ![HubSpot UI熒幕擷圖顯示「連絡人」頁面，該頁面具有顯示對象名稱和對象狀態的自訂屬性。](../../assets/catalog/crm/hubspot/contact.png)
 
 ## 資料使用與控管 {#data-usage-governance}
@@ -202,7 +202,7 @@ ht-degree: 3%
 ## 其他資源 {#additional-resources}
 
 [!DNL HubSpot]檔案中的其他實用資訊如下：
-* HubSpot ](https://developers.hubspot.com/docs/api/intro-to-auth)上的[驗證方法
+* HubSpot [&#128279;](https://developers.hubspot.com/docs/api/intro-to-auth)上的驗證方法
 * [連絡人](https://developers.hubspot.com/docs/api/crm/contacts)和[屬性](https://developers.hubspot.com/docs/api/crm/properties) API的[!DNL HubSpot]個API參考。
 
 ### Changelog

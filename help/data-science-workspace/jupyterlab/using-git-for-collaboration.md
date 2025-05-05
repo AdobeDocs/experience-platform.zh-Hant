@@ -28,13 +28,13 @@ ht-degree: 0%
 >
 > 您打算使用的 Git 伺服器需要可以通過互聯網訪問。
 
-[!DNL Data Science Workspace JupyterLab]環境是託管環境，未部署在公司防火牆內，因此您連接到的 Git 伺服器必須可從公共互聯網訪問。這可以是 GitHub](https://github.com/) 上的[公共或私有存放庫，也可以是您決定自行主機伺服器的其他[!DNL Git]執行個體。
+[!DNL Data Science Workspace JupyterLab]環境是託管環境，未部署在公司防火牆內，因此您連接到的 Git 伺服器必須可從公共互聯網訪問。這可以是 GitHub[&#128279;](https://github.com/) 上的公共或私有存放庫，也可以是您決定自行主機伺服器的其他[!DNL Git]執行個體。
 
 ## [!DNL Data Science Workspace JupyterLab Notebooks]連接到[!DNL Git]環境
 
 從啟動[!DNL Adobe Experience Platform]並瀏覽至[[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab)環境開始。
 
-在 內[!DNL JupyterLab]，選擇檔案&#x200B;]****[!UICONTROL &#x200B;然後將滑鼠懸停在新&#x200B;]**上**[!UICONTROL 。從顯示的下拉清單中，選擇 **[!UICONTROL 終端]**。
+在 內[!DNL JupyterLab]，選擇檔案&#x200B;**&#x200B;**&#x200B;[!UICONTROL &#x200B;然後將滑鼠懸停在新&#x200B;]&#x200B;**上**。從顯示的下拉清單中，選擇 **[!UICONTROL 終端]**。
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 

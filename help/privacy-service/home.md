@@ -62,7 +62,7 @@ Privacy Service提供RESTful API和使用者介面，協助您管理客戶資料
 
 視您的CRM系統所使用的[!DNL Experience Cloud]應用程式而定，您必須為每個客戶提供的身分值型別和數量會有所不同。 某些應用程式使用自己的內部客戶ID值(例如Adobe Target ID)，而其他解決方案則仰賴Adobe[!DNL Experience Cloud Identity Service] (ECID)的全域識別碼來追蹤所有[!DNL Experience Cloud]應用程式的客戶活動。 此外，電子郵件地址或電話號碼等一般個人資訊也可作為有效的身分資料。
 
-閱讀隱私權要求](./identity-data.md)的[身分資料檔案，以取得接受Privacy Service的身分資訊型別的詳細資訊。 本檔案也提供如何套用Adobe技術，以便在客戶與您的網站互動時，有效擷取適當的身分資訊，並將資料傳送至API請求中的Privacy Service的相關指引。
+閱讀隱私權要求[&#128279;](./identity-data.md)的身分資料檔案，以取得接受Privacy Service的身分資訊型別的詳細資訊。 本檔案也提供如何套用Adobe技術，以便在客戶與您的網站互動時，有效擷取適當的身分資訊，並將資料傳送至API請求中的Privacy Service的相關指引。
 
 ### 開始提出隱私權請求 {#requests}
 

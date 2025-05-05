@@ -52,7 +52,7 @@ ht-degree: 2%
 | `eventHubName` | 填寫您的[!DNL Azure Event Hub]名稱。 閱讀[Microsoft檔案](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)以瞭解[!DNL Event Hub]名稱的詳細資訊。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Event Hubs]連線規格識別碼為： `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`。 |
 
-如需有關[!DNL Event Hubs]的共用存取簽章(SAS)驗證的詳細資訊，請閱讀使用SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)的[[!DNL Azure] 指南。
+如需有關[!DNL Event Hubs]的共用存取簽章(SAS)驗證的詳細資訊，請閱讀使用SAS[&#128279;](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)的[!DNL Azure] 指南。
 
 >[!TAB 事件中心Azure Active Directory驗證]
 

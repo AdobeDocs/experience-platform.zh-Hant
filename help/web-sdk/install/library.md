@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 使用JavaScript程式庫安裝Web SDK
 
-若要不使用標籤擴充功能](extension.md)安裝Web SDK，替代方法是參考託管於CDN的JavaScript資料庫。 [您可以直接參考程式庫，或下載程式庫並在您自己的基礎架構中託管。 提供縮制和完整格式。
+若要不使用標籤擴充功能[&#128279;](extension.md)安裝Web SDK，替代方法是參考託管於CDN的JavaScript資料庫。 您可以直接參考程式庫，或下載程式庫並在您自己的基礎架構中託管。 提供縮制和完整格式。
 
 Web SDK程式庫可使用下列URL結構：
 

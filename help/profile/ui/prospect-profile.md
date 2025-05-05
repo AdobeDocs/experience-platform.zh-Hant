@@ -28,7 +28,7 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 >
 >雖然客戶設定檔和潛在客戶設定檔之間的大部分瀏覽功能相同，但您&#x200B;**無法**&#x200B;依據合併原則瀏覽潛在客戶設定檔。 這是因為潛在客戶設定檔是由系統設計的以時間為基礎的合併原則自動控管。 您可以在[合併原則概觀](../merge-policies/overview.md)中找到有關合併原則的更多資訊。
 
-如需有關瀏覽設定檔的詳細資訊，請參閱設定檔使用手冊](./user-guide.md#browse-identity)的[瀏覽區段。
+如需有關瀏覽設定檔的詳細資訊，請參閱設定檔使用手冊[&#128279;](./user-guide.md#browse-identity)的瀏覽區段。
 
 ## 潛在客戶設定檔詳細資訊 {#profile-details}
 
@@ -44,7 +44,7 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 ![潛在客戶設定檔詳細資訊頁面已顯示。](../images/prospect-profile/profile-details.png)
 
-如需這些標籤的詳細資訊，請參閱設定檔使用手冊](./user-guide.md#profile-detail)的[檢視設定檔詳細資訊區段。
+如需這些標籤的詳細資訊，請參閱設定檔使用手冊[&#128279;](./user-guide.md#profile-detail)的檢視設定檔詳細資訊區段。
 
 您也可以選取&#x200B;**[!UICONTROL 檢視JSON]**，檢視JSON格式的所有屬性。
 

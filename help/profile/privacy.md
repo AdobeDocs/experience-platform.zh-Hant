@@ -20,7 +20,7 @@ Adobe Experience Platform [!DNL Privacy Service]會根據一般資料保護規�
 
 >[!NOTE]
 >
->本指南僅涵蓋如何在Experience Platform中向設定檔資料存放區提出隱私權請求。 如果您也打算提出Experience Platform資料湖的隱私權請求，除了本教學課程外，另請參閱資料湖](../catalog/privacy.md)中[隱私權請求處理指南。
+>本指南僅涵蓋如何在Experience Platform中向設定檔資料存放區提出隱私權請求。 如果您也打算提出Experience Platform資料湖的隱私權請求，除了本教學課程外，另請參閱資料湖[&#128279;](../catalog/privacy.md)中隱私權請求處理指南。
 >
 >如需如何對其他Adobe Experience Cloud應用程式提出隱私權要求的步驟，請參閱[Privacy Service檔案](../privacy-service/experience-cloud-apps.md)。
 
@@ -186,7 +186,7 @@ curl -X POST \
 
 其中一個資料集使用`customer_id`作為其主要識別碼，而其他兩個資料集則使用`email_id`。 如果您只使用`email_id`做為使用者ID值來傳送隱私權要求（存取或刪除），則只會處理`firstName`、`lastName`和`mlScore`屬性，而`address`則不受影響。
 
-為確保您的隱私權請求可處理所有相關客戶屬性，您必須為可能儲存這些屬性的所有適用資料集提供主要身分值（每位客戶最多九個ID）。 如需通常標籤為身分的欄位詳細資訊，請參閱結構描述組合](../xdm/schema/composition.md#identity)的[基本概念中的身分欄位相關章節。
+為確保您的隱私權請求可處理所有相關客戶屬性，您必須為可能儲存這些屬性的所有適用資料集提供主要身分值（每位客戶最多九個ID）。 如需通常標籤為身分的欄位詳細資訊，請參閱結構描述組合[&#128279;](../xdm/schema/composition.md#identity)的基本概念中的身分欄位相關章節。
 
 ## 正在處理刪除請求 {#delete}
 

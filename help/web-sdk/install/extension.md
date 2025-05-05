@@ -22,7 +22,7 @@ Adobe提供專屬的標籤擴充功能，可用來實作和設定Web SDK。 此�
 1. 選取所需的標籤屬性，或建立標籤屬性。
 1. 導覽至&#x200B;**[!UICONTROL 擴充功能]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;索引標籤。
 1. 找到並安裝&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**&#x200B;擴充功能。
-1. 為每個環境選取適當的沙箱和資料流，然後按一下[儲存]。****
+1. 為每個環境選取適當的沙箱和資料流，然後按一下[儲存]。**&#x200B;**
 
 如需詳細資訊，請參閱有關如何[設定Web SDK標籤擴充功能](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)的檔案。
 

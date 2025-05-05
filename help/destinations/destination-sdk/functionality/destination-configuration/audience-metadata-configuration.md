@@ -28,7 +28,7 @@ Destination SDK提供的工具可讓您以程式設計方式在目標平台中�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 

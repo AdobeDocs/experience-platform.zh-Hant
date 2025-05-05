@@ -47,7 +47,7 @@ People受眾會使用客戶個人檔案資料來鎖定特定市場，讓您更�
 
 ![會顯示對象詳細資訊頁面，顯示有關人員對象的資訊。](../images/types/people/audience-details.png)
 
-如需對象詳細資訊頁面的詳細資訊，請參閱對象入口網站概觀](../ui/audience-portal.md#audience-details)的[對象詳細資訊區段。
+如需對象詳細資訊頁面的詳細資訊，請參閱對象入口網站概觀[&#128279;](../ui/audience-portal.md#audience-details)的對象詳細資訊區段。
 
 ## 建立客群 {#create}
 

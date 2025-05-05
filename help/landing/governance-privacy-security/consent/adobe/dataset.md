@@ -39,7 +39,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->本教學課程假設您知道Experience Platform中要用來擷取客戶屬性資訊的[!DNL Profile]結構描述。 無論您使用何種方法來收集同意資料，此結構描述都必須針對Real-time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile)啟用[。 此外，結構描述的主要身分不能是禁止用於興趣型廣告（例如電子郵件地址）的直接可識別欄位。 如果您不確定哪些欄位受到限制，請諮詢法律顧問。
+>本教學課程假設您知道Experience Platform中要用來擷取客戶屬性資訊的[!DNL Profile]結構描述。 無論您使用何種方法來收集同意資料，此結構描述都必須針對Real-time Customer Profile[&#128279;](../../../../xdm/ui/resources/schemas.md#profile)啟用。 此外，結構描述的主要身分不能是禁止用於興趣型廣告（例如電子郵件地址）的直接可識別欄位。 如果您不確定哪些欄位受到限制，請諮詢法律顧問。
 
 ## [!UICONTROL 同意和偏好設定詳細資料]欄位群組結構 {#structure}
 

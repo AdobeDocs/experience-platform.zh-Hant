@@ -42,7 +42,7 @@ ht-degree: 1%
 
 在您[驗證目的地組態](file-based-destination-testing-api.md)後，您可以對`authoring/testing/destinationInstance/`端點發出GET要求，並提供您正在測試的目的地的目的地執行個體ID，以及啟用的對象的資料流執行ID，以檢視詳細的啟用結果。
 
-您可以在目的地測試呼叫](file-based-destination-testing-api.md)的[回應中傳回的`results`屬性中找到您需要使用的完整API URL。
+您可以在目的地測試呼叫[&#128279;](file-based-destination-testing-api.md)的回應中傳回的`results`屬性中找到您需要使用的完整API URL。
 
 **API格式**
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | 查詢字串引數 | 說明 |
 | -------- | ----------- |
-| `flowRunIds` | 與已啟動受眾對應的流量執行ID。 您可以在目的地測試呼叫](file-based-destination-testing-api.md)的[回應中傳回的`results`屬性中找到資料流執行ID。 |
+| `flowRunIds` | 與已啟動受眾對應的流量執行ID。 您可以在目的地測試呼叫[&#128279;](file-based-destination-testing-api.md)的回應中傳回的`results`屬性中找到資料流執行ID。 |
 
 **要求**
 

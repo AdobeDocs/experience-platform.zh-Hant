@@ -22,14 +22,14 @@ ht-degree: 7%
 | --- | --- | --- | --- |
 | [!UICONTROL 餘額] | `balance` | 物件陣列 | 由財務系統計算與處理的帳戶餘額。 如需詳細資訊，請參閱下方的[區段](#balances)。 |
 | [!UICONTROL 記帳狀態] | `billingStatus` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 這會透過計費程式追蹤帳戶的生命週期。 它指出交易配置至帳戶時的處理方式。 |
-| [!UICONTROL 涵蓋範圍] | `coverage` | 物件陣列 | 負責支付此帳戶成本的一方，以及應依何種順序套用。 如需詳細資訊，請參閱](#coverage)下方的[區段。 |
+| [!UICONTROL 涵蓋範圍] | `coverage` | 物件陣列 | 負責支付此帳戶成本的一方，以及應依何種順序套用。 如需詳細資訊，請參閱[&#128279;](#coverage)下方的區段。 |
 | [!UICONTROL 貨幣] | `currency` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 帳戶的預設貨幣。 |
-| [!UICONTROL 診斷] | `diagnosis` | 物件陣列 | 與帳單相關的一組診斷會儲存在帳戶中，以便在處理之前適當地排序，以產生索賠。 如需詳細資訊，請參閱](#diagnosis)下方的[區段。 |
-| [!UICONTROL 擔保人] | `guarantor` | 物件陣列 | 若其他付款選項不足，則負責平衡科目的關係人。 如需詳細資訊，請參閱](#guarantor)下方的[區段。 |
+| [!UICONTROL 診斷] | `diagnosis` | 物件陣列 | 與帳單相關的一組診斷會儲存在帳戶中，以便在處理之前適當地排序，以產生索賠。 如需詳細資訊，請參閱[&#128279;](#diagnosis)下方的區段。 |
+| [!UICONTROL 擔保人] | `guarantor` | 物件陣列 | 若其他付款選項不足，則負責平衡科目的關係人。 如需詳細資訊，請參閱[&#128279;](#guarantor)下方的區段。 |
 | [!UICONTROL 識別碼] | `identifier` | [[!UICONTROL 識別碼]](../data-types/identifier.md)的陣列 | 用於參考帳戶的唯一識別碼。 不一定是供人類使用（例如信用卡號碼）。 |
 | [!UICONTROL 所有者] | `owner` | [[!UICONTROL 參考]](../data-types/reference.md) | 指示服務區域、醫院、部門等。 負責管理帳戶。 |
-| [!UICONTROL 程式] | `procedure` | 物件陣列 | 帳單的相關程式集合會儲存在帳戶中，以便能夠在處理產生索賠之前適當地排序。 如需詳細資訊，請參閱](#procedure)下方的[區段。 |
-| [!UICONTROL 相關帳戶] | `relatedAccount` | 物件陣列 | 與此帳戶相關的其他關聯帳戶。 如需詳細資訊，請參閱](#related-account)下方的[區段。 |
+| [!UICONTROL 程式] | `procedure` | 物件陣列 | 帳單的相關程式集合會儲存在帳戶中，以便能夠在處理產生索賠之前適當地排序。 如需詳細資訊，請參閱[&#128279;](#procedure)下方的區段。 |
+| [!UICONTROL 相關帳戶] | `relatedAccount` | 物件陣列 | 與此帳戶相關的其他關聯帳戶。 如需詳細資訊，請參閱[&#128279;](#related-account)下方的區段。 |
 | [!UICONTROL 服務期間] | `servicePeriod` | [[!UICONTROL 週期]](../data-types/period.md) | 與此帳戶相關聯之服務的日期範圍。 |
 | [!UICONTROL 主旨] | `subject` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 識別產生費用的實體。 雖然服務或商品的直接收件者可能是與主體相關的實體，但費用最終是由帳戶主體所產生。 |
 | [!UICONTROL 類型] | `type` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 分類帳戶以用於報告和搜尋目的。 |

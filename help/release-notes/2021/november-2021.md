@@ -62,7 +62,7 @@ Adobe Experience Platform 現有功能的更新：
 |-----------|--------------|
 | 標準B2B XDM類別 | Real-Time Customer Data Platform B2B edition提供數個標準XDM，可擷取基本B2B資料實體的詳細資訊，例如帳戶、機會、促銷活動等。 |
 
-請參閱Real-Time Customer Data Platform B2B edition](../../rtcdp/schemas/b2b.md)檔案中的[結構描述，以進一步瞭解如何擷取B2B資料實體。
+請參閱Real-Time Customer Data Platform B2B edition[&#128279;](../../rtcdp/schemas/b2b.md)檔案中的結構描述，以進一步瞭解如何擷取B2B資料實體。
 
 ### (Beta)透過臨機啟動API啟用批次目的地的受眾區段 {#ad-hoc-activation}
 

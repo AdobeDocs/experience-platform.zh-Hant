@@ -69,7 +69,7 @@ Experience Platform的存取控制是透過[Adobe Admin Console](https://adminco
 
 ### 相關的SQL深入分析許可權 {#sql-insights-permissions}
 
-若要在儀表板中建立資料Distiller [SQL深入分析](./data-distiller/sql-insights/overview.md)，必須在Admin Console中啟用下列許可權&#x200B;****。
+若要在儀表板中建立資料Distiller [SQL深入分析](./data-distiller/sql-insights/overview.md)，必須在Admin Console中啟用下列許可權&#x200B;**&#x200B;**。
 
 | 權限 | 函數 |
 |---|---|

@@ -775,7 +775,7 @@ ht-degree: 48%
    * [廣告](/help/destinations/catalog/advertising/overview.md)/[付費媒體和社交](/help/destinations/catalog/social/overview.md)
    * [行動](/help/destinations/catalog/mobile-engagement/overview.md)
    * [串流目的地](/help/destinations/catalog/streaming/http-destination.md)
-   * [使用Destination SDK建立的自訂目的地。](/help/destinations/destination-sdk/overview.md)。如果您是Real-Time CDP Ultimate客戶，也可以使用Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)建立私人[自訂目的地
+   * [使用Destination SDK建立的自訂目的地。](/help/destinations/destination-sdk/overview.md)。如果您是Real-Time CDP Ultimate客戶，也可以使用Destination SDK[&#128279;](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)建立私人自訂目的地
 
 ## 後續步驟 {#next-steps}
 

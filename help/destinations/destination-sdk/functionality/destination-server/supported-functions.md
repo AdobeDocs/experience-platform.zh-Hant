@@ -17,7 +17,7 @@ Experience PlatformDestination SDK使用[[!DNL Pebble] 範本](https://pebbletem
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 使用位置 {#where-to-use}
 
@@ -27,7 +27,7 @@ Experience PlatformDestination SDK使用[[!DNL Pebble] 範本](https://pebbletem
 
 ## 先決條件 {#prerequisites}
 
-若要瞭解此參考頁面中的概念和函式，請先閱讀[訊息格式](message-format.md)檔案。 您必須先瞭解Experience Platform中設定檔](message-format.md#profile-structure)的[結構，才能使用[!DNL Pebble]範本來轉換和匯出的資料。
+若要瞭解此參考頁面中的概念和函式，請先閱讀[訊息格式](message-format.md)檔案。 您必須先瞭解Experience Platform中設定檔[&#128279;](message-format.md#profile-structure)的結構，才能使用[!DNL Pebble]範本來轉換和匯出的資料。
 
 在繼續使用下列功能之前，請先檢閱[使用範本語言進行身分、屬性和對象成員資格轉換](message-format.md#using-templating)一節中的範本範例。 這裡的範例一開始非常簡單，複雜性也增加了。
 
@@ -36,7 +36,7 @@ Experience PlatformDestination SDK使用[[!DNL Pebble] 範本](https://pebbletem
 從[!DNL Pebble]標籤區段，Destination SDK僅支援：
 
 * [篩選器](https://pebbletemplates.io/wiki/tag/filter/)
-* ](https://pebbletemplates.io/wiki/tag/for/)的[
+* [&#128279;](https://pebbletemplates.io/wiki/tag/for/)的
 * [if](https://pebbletemplates.io/wiki/tag/if/)
 * [設定](https://pebbletemplates.io/wiki/tag/set/)
 

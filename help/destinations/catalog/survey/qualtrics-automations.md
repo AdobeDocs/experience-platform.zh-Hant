@@ -97,7 +97,7 @@ ht-degree: 3%
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL URL]**：在[JSON事件](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)中找到的URL會觸發您在Qualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About)中的[工作流程。 如需範例，請參閱下方的熒幕擷圖。
+* **[!UICONTROL URL]**：在[JSON事件](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About)中找到的URL會觸發您在Qualtrics[&#128279;](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About)中的工作流程。 如需範例，請參閱下方的熒幕擷圖。
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 

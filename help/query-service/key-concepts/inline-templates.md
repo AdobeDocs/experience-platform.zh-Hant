@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 先決條件
 
-UI和查詢服務API都支援內嵌範本。 在繼續本指南之前，請先閱讀有關如何透過API](../api/query-templates.md#create-a-query-template)或使用[查詢編輯器](../ui/user-guide.md#query-authoring)來[建立查詢範本的檔案。
+UI和查詢服務API都支援內嵌範本。 在繼續本指南之前，請先閱讀有關如何透過API[&#128279;](../api/query-templates.md#create-a-query-template)或使用[查詢編輯器](../ui/user-guide.md#query-authoring)來建立查詢範本的檔案。
 
 ## 內嵌範本語法 {#syntax}
 

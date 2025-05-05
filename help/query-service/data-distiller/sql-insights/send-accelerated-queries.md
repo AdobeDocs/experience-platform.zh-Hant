@@ -15,5 +15,5 @@ ht-degree: 0%
 
 如需如何查詢加速存放區的指示，請參閱[加速查詢端點](../../api/accelerated-queries.md)檔案。
 
-使用查詢加速存放區，您可以建立自訂資料模型和/或擴充現有的Adobe Real-time Customer Data Platform資料模型。 若要與報表/視覺化架構互動或內嵌您的報表深入分析，請參閱[query accelerated store報表深入分析指南](./reporting-insights-data-model.md)。 您也可以閱讀Real-time Customer Data Platform前瞻分析資料模型檔案，瞭解如何[自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報告](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)。 您可以使用[以屬性為基礎的存取控制功能](../../../access-control/abac/overview.md)，來控制加速存放區中資料集的限制等級。 檢視查詢服務](../../data-governance/overview.md#create-field-based-access-restrictions-on-accelerated-datasets)中的[資料控管
+使用查詢加速存放區，您可以建立自訂資料模型和/或擴充現有的Adobe Real-time Customer Data Platform資料模型。 若要與報表/視覺化架構互動或內嵌您的報表深入分析，請參閱[query accelerated store報表深入分析指南](./reporting-insights-data-model.md)。 您也可以閱讀Real-time Customer Data Platform前瞻分析資料模型檔案，瞭解如何[自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報告](../../../dashboards/data-models/cdp-insights-data-model-b2c.md)。 您可以使用[以屬性為基礎的存取控制功能](../../../access-control/abac/overview.md)，來控制加速存放區中資料集的限制等級。 檢視查詢服務[&#128279;](../../data-governance/overview.md#create-field-based-access-restrictions-on-accelerated-datasets)中的資料控管
 檔案以取得詳細資訊。

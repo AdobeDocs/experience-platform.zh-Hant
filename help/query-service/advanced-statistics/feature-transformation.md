@@ -54,7 +54,7 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 ## 手動特徵轉換 {#manual-transformations}
 
-若要在您的`CREATE MODEL`陳述式中定義自訂資料前置處理，請將`TRANSFORM`子句與任何數目的可用轉換函式結合使用。 這些手動前置處理函式也可以在`TRANSFORM`子句之外使用。 在](#available-transformations)下方的[轉換器區段中討論的所有轉換，都可以用來手動預先處理資料。
+若要在您的`CREATE MODEL`陳述式中定義自訂資料前置處理，請將`TRANSFORM`子句與任何數目的可用轉換函式結合使用。 這些手動前置處理函式也可以在`TRANSFORM`子句之外使用。 在[&#128279;](#available-transformations)下方的轉換器區段中討論的所有轉換，都可以用來手動預先處理資料。
 
 ### 主要特性 {#key-characteristics}
 

@@ -52,7 +52,7 @@ B2B類別及其屬性在區段工作區中會附加`B2B`標籤，以區別於Rea
 
 ![在分段工作區中使用區段產生器的來源金鑰範例](../assets/segmentation/source-key-segmentation-example.png)
 
-如需有關可用B2B類別的詳細資訊，請參閱Real-time Customer Data Platform B2B Edition檔案](../schemas/b2b.md)中的[結構描述。
+如需有關可用B2B類別的詳細資訊，請參閱Real-time Customer Data Platform B2B Edition檔案[&#128279;](../schemas/b2b.md)中的結構描述。
 
 以下使用案例提供有關哪些類別用於建立不同結構描述之間的關係以實現這些結果的資訊。 這些範例可用來協助您建立自己的受眾。
 

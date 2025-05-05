@@ -63,4 +63,4 @@ Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來�
 
 依照此教學課程，您已成功使用&#x200B;**[!UICONTROL 來源]**&#x200B;工作區刪除現有帳戶。
 
-如需有關如何使用[!DNL Flow Service] API以程式設計方式執行這些操作的步驟，請參閱有關使用流程服務API ](../../tutorials/api/delete.md)刪除連線的教學課程[
+如需有關如何使用[!DNL Flow Service] API以程式設計方式執行這些操作的步驟，請參閱有關使用流程服務API [&#128279;](../../tutorials/api/delete.md)刪除連線的教學課程

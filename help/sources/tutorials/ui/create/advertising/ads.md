@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[!DNL Google Ads]來源目前在UI中無法使用。 您可以使用API](../../../api/create/advertising/ads.md)繼續將您的[!DNL Google Ads]資料內嵌至Experience Platform [。
+>[!DNL Google Ads]來源目前在UI中無法使用。 您可以使用API[&#128279;](../../../api/create/advertising/ads.md)繼續將您的[!DNL Google Ads]資料內嵌至Experience Platform 。
 
 >[!NOTE]
 >

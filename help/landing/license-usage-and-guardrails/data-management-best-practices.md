@@ -146,7 +146,7 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 
 * 使用[授權使用量儀表板](../../dashboards/guides/license-usage.md)追蹤及監控客戶使用趨勢。 這可讓您搶先掌握可能出現的使用過量。
 * 識別細分和個人化使用案例所需的事件，以設定[擷取篩選器](#ingestion-filters)。 這可讓您僅傳送使用案例所需的重要事件。
-* 確保您只有區段和個人化使用案例所需的設定檔](#ingestion-filters)的[已啟用資料集。
+* 確保您只有區段和個人化使用案例所需的設定檔[&#128279;](#ingestion-filters)的已啟用資料集。
 * 設定[體驗事件有效期](#event-expirations)和[假名設定檔資料有效期](#pseudonymous-profile-expirations)，以取得高頻資料，例如Web資料。
 * 請定期檢查[設定檔組合報告](#profile-store-composition-reports)，以瞭解您的設定檔存放區組合。 這可讓您瞭解對授權使用量消耗貢獻最大的資料來源。
 

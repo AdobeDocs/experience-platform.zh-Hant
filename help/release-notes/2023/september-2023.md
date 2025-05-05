@@ -84,7 +84,7 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 功能 | 說明 |
 | --- | --- |
-| 適用於協力廠商資料的新合作夥伴生態系統標籤 | 提供適用於協力廠商擴充和潛在客戶的新資料使用標籤。 如需詳細資訊，請參閱合作夥伴生態系統標籤](../../data-governance/labels/reference.md#partner)上的[檔案。 |
+| 適用於協力廠商資料的新合作夥伴生態系統標籤 | 提供適用於協力廠商擴充和潛在客戶的新資料使用標籤。 如需詳細資訊，請參閱合作夥伴生態系統標籤[&#128279;](../../data-governance/labels/reference.md#partner)上的檔案。 |
 
 {style="table-layout:auto"}
 
@@ -133,7 +133,7 @@ Add these to release notes as they go out
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| Real-Time CDP中的資料匯出 | [資料集匯出](../../destinations/ui/export-datasets.md)功能現在已可供一般使用。 檢視您可根據所購買的Experience Platform應用程式](../../destinations/ui/export-datasets.md#datasets-to-export)匯出哪些資料集[，並檢查匯出資料集的[護欄](/help/destinations/guardrails.md#dataset-exports)。 |
+| Real-Time CDP中的資料匯出 | [資料集匯出](../../destinations/ui/export-datasets.md)功能現在已可供一般使用。 檢視您可根據所購買的Experience Platform應用程式[&#128279;](../../destinations/ui/export-datasets.md#datasets-to-export)匯出哪些資料集，並檢查匯出資料集的[護欄](/help/destinations/guardrails.md#dataset-exports)。 |
 | (Beta)支援匯出陣列型別物件 | 將原始值（字串、int或布林值）的陣列匯出為平面結構描述檔案，以匯出至雲端儲存空間目的地。 在[檔案](../../destinations/ui/export-arrays-maps-objects.md)中進一步瞭解此功能。 |
 | Destination SDK中的動態下拉式清單選擇器 | 透過Destination SDK建立目的地時，您現在可以使用[動態下拉式選取器](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors)，以從API擷取的值填入下拉式選取器的欄位。 |
 
@@ -174,7 +174,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 更新說明 |
 | --- | --- | --- |
-| 擴充功能 | [!UICONTROL AJO實體欄位] | 已將多變體]](https://github.com/adobe/xdm/pull/1774/files)的[[!UICONTROL 旗標新增至[!UICONTROL AJO實體欄位]，以識別變體是否為多變體。 |
+| 擴充功能 | [!UICONTROL AJO實體欄位] | 已將多變體[&#128279;](https://github.com/adobe/xdm/pull/1774/files)的旗標新增至[!UICONTROL AJO實體欄位]，以識別變體是否為多變體。 |
 | 資料類型 | [!UICONTROL 產品清單專案] | 已新增[[!UICONTROL 退貨專案]](https://github.com/adobe/xdm/pull/1773/files)以包含退貨商品授權資訊。 |
 | 資料類型 | 順序 | 已新增[[!UICONTROL 退貨資訊]](https://github.com/adobe/xdm/pull/1773/files)，以包含已簽發的RMA （退貨授權）。 |
 

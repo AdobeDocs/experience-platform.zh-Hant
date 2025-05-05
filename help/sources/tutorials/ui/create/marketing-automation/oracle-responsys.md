@@ -39,7 +39,7 @@ ht-degree: 2%
 | 用戶端 ID | [!DNL Oracle Responsys]執行個體的使用者端識別碼。 |
 | 用戶端密碼 | [!DNL Oracle Responsys]執行個體的使用者端密碼。 |
 
-如需[!DNL Oracle Responsys]的驗證認證詳細資訊，請參閱驗證](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm)的[[!DNL Oracle Responsys] 指南。
+如需[!DNL Oracle Responsys]的驗證認證詳細資訊，請參閱驗證[&#128279;](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm)的[!DNL Oracle Responsys] 指南。
 
 收集必要的認證後，您可以依照下列步驟將[!DNL Oracle Responsys]帳戶連結至Experience Platform。
 
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Oracle Responsys]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Oracle Responsys]帳戶，然後選取[下一步] **以繼續。**
 
 ![Oracle Responsys的現有帳戶驗證畫面。](../../../../images/tutorials/create/oracle-responsys/existing.png)
 

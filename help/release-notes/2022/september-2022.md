@@ -184,7 +184,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 | 資料類型 | [[!UICONTROL 興趣點詳細資料]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | 資料型別現在可以接受與地標關聯的中繼資料索引鍵/值組清單。 |
 | 資料類型 | [[!UICONTROL 主張動作]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields]已重新命名為[!UICONTROL 主張動作]。 |
 | 資料類型 | [[!UICONTROL 主張事件型別]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields]已重新命名為[!UICONTROL 主張動作]。 |
-| (多個) | (多個) | 已在所有B2B元件](https://github.com/adobe/xdm/pull/1617/files)上[穩定實驗屬性。 |
+| (多個) | (多個) | 已在所有B2B元件[&#128279;](https://github.com/adobe/xdm/pull/1617/files)上穩定實驗屬性。 |
 | (多個) | (多個) | Adobe Journey Optimizer實體已[穩定](https://github.com/adobe/xdm/pull/1625/files)。 |
 | (多個) | (多個) | 多個實驗元件中特定欄位的名稱空間已[更新，以保持一致性](https://github.com/adobe/xdm/pull/1626/files)。 |
 
@@ -231,7 +231,7 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| Audience Manager區段母體對即時客戶個人檔案的影響 | 當您使用Audience Manager來源首次將Audience Manager區段傳送至Experience Platform時，大量的Audience Manager區段母體的擷取會直接影響您的總設定檔計數。 這表示選取所有區段可能會導致設定檔計數超過您的授權使用權益。 如需詳細資訊，請閱讀[Audience Manager來源概觀](../../sources/connectors/adobe-applications/audience-manager.md)。 如需授權使用情況的詳細資訊，請使用授權使用儀表板](../../dashboards/guides/license-usage.md)，閱讀[上的檔案。 |
+| Audience Manager區段母體對即時客戶個人檔案的影響 | 當您使用Audience Manager來源首次將Audience Manager區段傳送至Experience Platform時，大量的Audience Manager區段母體的擷取會直接影響您的總設定檔計數。 這表示選取所有區段可能會導致設定檔計數超過您的授權使用權益。 如需詳細資訊，請閱讀[Audience Manager來源概觀](../../sources/connectors/adobe-applications/audience-manager.md)。 如需授權使用情況的詳細資訊，請使用授權使用儀表板[&#128279;](../../dashboards/guides/license-usage.md)，閱讀上的檔案。 |
 | 支援Adobe Campaign Managed Cloud Service | 使用Adobe Campaign Managed Cloud Service來源將您的Adobe Campaign v8.4傳遞和追蹤記錄資料匯入Experience Platform。 如需詳細資訊，請參閱[在UI](../../sources/tutorials/ui/create/adobe-applications/campaign.md)中建立Adobe Campaign Managed Cloud Service來源連線的指南。 |
 | 批次來源的隨選擷取的API支援 | 使用隨選擷取功能，透過[!DNL Flow Service] API為特定資料流建立臨機操作流程執行。 建立的流程執行必須設定為一次性內嵌。 如需詳細資訊，請參閱[使用API](../../sources/tutorials/api/on-demand-ingestion.md)建立隨選擷取的流程執行指南。 |
 | API支援重試批次來源的失敗資料流執行 | 使用`re-trigger`作業透過API重試失敗的資料流。 如需詳細資訊，請參閱[使用API](../../sources/tutorials/api/retry-flows.md)重試失敗的資料流執行指南。 |

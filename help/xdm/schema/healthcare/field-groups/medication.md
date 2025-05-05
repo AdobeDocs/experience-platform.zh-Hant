@@ -25,7 +25,7 @@ ht-degree: 6%
 | [!UICONTROL 定義] | `definition` | [[!UICONTROL 參考]](../data-types/reference.md) | 藥物定義。 |
 | [!UICONTROL 劑量表單] | `doseForm` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 說明藥物的劑型，如片劑或膠囊。 |
 | [!UICONTROL 識別碼] | `identifier` | [[!UICONTROL 識別碼]](../data-types/identifier.md)的陣列 | 適用於藥物的識別碼。 |
-| [!UICONTROL 成分] | `ingredient` | 物件陣列 | 描述藥物的成分資訊。 如需詳細資訊，請參閱](#ingredient)下方的[區段。 |
+| [!UICONTROL 成分] | `ingredient` | 物件陣列 | 描述藥物的成分資訊。 如需詳細資訊，請參閱[&#128279;](#ingredient)下方的區段。 |
 | [!UICONTROL 行銷授權持有者] | `marketingAuthorizationHolder` | [[!UICONTROL 參考]](../data-types/reference.md) | 擁有授權以行銷藥物的組織。 |
 | [!UICONTROL 總磁碟區] | `totalVolume` | [[!UICONTROL 數量]](../data-types/quantity.md) | 當產品代碼未推斷封裝大小時，藥物中提供的產品金額。 |
 | [!UICONTROL 狀態] | `status` | 字串 | 藥物狀態。 此屬性的值必須等於下列其中一個已知列舉值。 <li> `active` </li> <li> `inactive` </li> <li> `entered-in-error` </li> |

@@ -142,7 +142,7 @@ write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 
 >[!NOTE]
 >
->不&#x200B;****&#x200B;存儲數據的路徑。您必須商店其各自數據的對應路徑。
+>不&#x200B;**&#x200B;**&#x200B;存儲數據的路徑。您必須商店其各自數據的對應路徑。
 
 ### 寫入用戶空間
 

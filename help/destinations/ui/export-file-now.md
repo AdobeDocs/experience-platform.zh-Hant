@@ -28,7 +28,7 @@ ht-degree: 9%
 
 **[!UICONTROL 立即匯出檔案]**&#x200B;控制項可讓您匯出完整檔案，而不會中斷先前排程對象的目前匯出排程。 除了先前排程的匯出外，也會進行此匯出，不會變更對象的匯出頻率。 檔案匯出會即刻觸發，並從 Experience Platform 分段執行中獲取最新結果。
 
-您也可以將Experience Platform API用於此用途。 瞭解如何透過Ad Hoc Activation API](/help/destinations/api/ad-hoc-activation-api.md)將隨選對象[啟動至批次目的地。
+您也可以將Experience Platform API用於此用途。 瞭解如何透過Ad Hoc Activation API[&#128279;](/help/destinations/api/ad-hoc-activation-api.md)將隨選對象啟動至批次目的地。
 
 ## 先決條件 {#prerequisites}
 

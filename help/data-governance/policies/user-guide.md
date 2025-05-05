@@ -114,7 +114,7 @@ ht-degree: 16%
 
 ![](../images/policies/consent-policy-dialog.png)
 
-為了使用同意政策，您的設定檔資料中必須有同意屬性。 如需如何在聯合結構描述中包含必要屬性的詳細步驟，請參閱Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md)中的[同意處理指南。
+為了使用同意政策，您的設定檔資料中必須有同意屬性。 如需如何在聯合結構描述中包含必要屬性的詳細步驟，請參閱Experience Platform[&#128279;](../../landing/governance-privacy-security/consent/adobe/overview.md)中的同意處理指南。
 
 同意原則包含兩個邏輯元件：
 
@@ -145,7 +145,7 @@ ht-degree: 16%
 >title="Then 條件"
 >abstract="定義「If」條件後，使用「Then」部分從聯合結構描述中選擇至少一個同意屬性。此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。"
 
-在&#x200B;**[!UICONTROL Then]**&#x200B;區段下，從聯合結構描述中選取至少一個同意屬性。 這是必須存在的屬性，才能將設定檔納入此原則所控管的動作中。 您可以從清單中選擇其中一個提供的選項，或選取[檢視全部]，以直接從聯合結構描述中選擇屬性。****
+在&#x200B;**[!UICONTROL Then]**&#x200B;區段下，從聯合結構描述中選取至少一個同意屬性。 這是必須存在的屬性，才能將設定檔納入此原則所控管的動作中。 您可以從清單中選擇其中一個提供的選項，或選取[檢視全部]，以直接從聯合結構描述中選擇屬性。**&#x200B;**
 
 選取同意屬性時，請選擇您要此原則檢查的屬性值。
 

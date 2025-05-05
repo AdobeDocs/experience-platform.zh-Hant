@@ -42,7 +42,7 @@ ht-degree: 1%
 
 ![](../images/models-recipes/score/training_run_overview.png)
 
-選擇輸入評分資料集，然後選擇下一個&#x200B;****。
+選擇輸入評分資料集，然後選擇下一個&#x200B;**&#x200B;**。
 
 ![](../images/models-recipes/score/scoring_input.png)
 

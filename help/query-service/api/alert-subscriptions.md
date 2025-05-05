@@ -99,7 +99,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 >[!NOTE]
 >
->`alerts`陣列中的`alerts._links`物件已截斷，以保持簡潔。 在POST要求](#subscribe-users)的[回應中可以找到`alerts._links`物件的完整範例。
+>`alerts`陣列中的`alerts._links`物件已截斷，以保持簡潔。 在POST要求[&#128279;](#subscribe-users)的回應中可以找到`alerts._links`物件的完整範例。
 
 ```json
 {

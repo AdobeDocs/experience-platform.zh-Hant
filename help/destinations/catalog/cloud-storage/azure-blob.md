@@ -27,7 +27,7 @@ ht-degree: 7%
 ## 透過API或UI連線至您的[!UICONTROL Azure Blob]儲存體 {#connect-api-or-ui}
 
 * 若要使用Experience Platform使用者介面連線到您的[!UICONTROL Azure Blob]儲存位置，請閱讀以下章節： [連線到目的地](#connect)和[啟用對象到此目的地](#activate)。
-* 若要以程式設計方式連線至您的[!UICONTROL Azure Blob]儲存位置，請使用[流量服務API]教學課程](../../api/activate-segments-file-based-destinations.md)，讀取[將對象啟用至檔案型目的地。
+* 若要以程式設計方式連線至您的[!UICONTROL Azure Blob]儲存位置，請使用[流量服務API]教學課程[&#128279;](../../api/activate-segments-file-based-destinations.md)，讀取將對象啟用至檔案型目的地。
 
 ## 快速入門
 
@@ -66,8 +66,8 @@ ht-degree: 7%
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Experience Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
-* 如何使用流程服務API](/help/destinations/api/export-datasets.md)以程式設計方式[匯出資料集。
+* 如何使用Experience Platform使用者介面[&#128279;](/help/destinations/ui/export-datasets.md)匯出資料集。
+* 如何使用流程服務API[&#128279;](/help/destinations/api/export-datasets.md)以程式設計方式匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 

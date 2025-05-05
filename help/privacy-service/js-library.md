@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # Adobe隱私權JavaScript資料庫概述
 
-身為資料處理者，Adobe會根據貴公司的許可權和指示處理個人資料。 身為資料控管單位，您可以決定要由Adobe代表您處理和儲存哪些個人資料。 根據您選擇透過Adobe Experience Cloud解決方案傳送的資訊，Adobe可以儲存適用於隱私權法規的私人資訊，例如[!DNL General Data Protection Regulation] (GDPR)和[!DNL California Consumer Privacy Act] (CCPA)。 請參閱Adobe Experience Cloud](https://www.adobe.com/tw/privacy/marketing-cloud.html)中有關[隱私權的檔案，以取得有關Experience Cloud解決方案如何收集私人資料的詳細資訊。
+身為資料處理者，Adobe會根據貴公司的許可權和指示處理個人資料。 身為資料控管單位，您可以決定要由Adobe代表您處理和儲存哪些個人資料。 根據您選擇透過Adobe Experience Cloud解決方案傳送的資訊，Adobe可以儲存適用於隱私權法規的私人資訊，例如[!DNL General Data Protection Regulation] (GDPR)和[!DNL California Consumer Privacy Act] (CCPA)。 請參閱Adobe Experience Cloud[&#128279;](https://www.adobe.com/tw/privacy/marketing-cloud.html)中有關隱私權的檔案，以取得有關Experience Cloud解決方案如何收集私人資料的詳細資訊。
 
 **Adobe隱私權JavaScript資料庫**&#x200B;可讓資料控管單位自動擷取[!DNL Experience Cloud]解決方案針對特定網域產生的所有資料主體身分。 使用[Adobe Experience Platform Privacy Service](home.md)提供的API，這些身分識別就可以用來針對屬於這些資料主體的私人資料建立存取和刪除請求。
 

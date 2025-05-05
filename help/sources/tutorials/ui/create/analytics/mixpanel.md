@@ -49,7 +49,7 @@ ht-degree: 11%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Mixpanel]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Mixpanel]帳戶，然後選取[下一步] **以繼續。**
 
 ![現有](../../../../images/tutorials/create/mixpanel-export-events/existing.png)
 
@@ -99,7 +99,7 @@ ht-degree: 11%
 
 ![預覽資料集](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
 
-您可以根據[!DNL Mixpanel] > [!DNL Events]頁面上的資料來驗證此資料。 如需詳細資訊，請參閱有關事件](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-)的[[!DNL Mixpanel] 檔案。
+您可以根據[!DNL Mixpanel] > [!DNL Events]頁面上的資料來驗證此資料。 如需詳細資訊，請參閱有關事件[&#128279;](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-)的[!DNL Mixpanel] 檔案。
 
 ![mixpanel-events](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-events.png)
 

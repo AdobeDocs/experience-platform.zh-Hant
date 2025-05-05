@@ -31,10 +31,10 @@ ht-degree: 8%
 | [!UICONTROL 製造商] | `manufacturer` | [[!UICONTROL 可程式碼參考]](../data-types/codeable-reference.md) | 疫苗製造商。 |
 | [!UICONTROL 備註] | `note` | [[!UICONTROL 註解]](../data-types/annotation.md)的陣列 | 其他免疫接種注意事項。 |
 | [!UICONTROL 病人] | `patient` | [[!UICONTROL 參考]](../data-types/reference.md) | 誰已接受免疫。 |
-| [!UICONTROL 批次] | `performer` | 物件陣列 | 誰執行了免疫接種事件。 如需詳細資訊，請參閱](#performer)下方的[區段。 |
-| [!UICONTROL 方案資格] | `programEligibility` | 物件陣列 | 患者符合特定疫苗接種計畫的資格。 如需詳細資訊，請參閱](#program-eligibility)下方的[區段。 |
-| 已套用[!UICONTROL 通訊協定] | `protocolApplied` | 物件陣列 | 提供者提供的通訊協定。 如需詳細資訊，請參閱](#protocol-applied)下方的[區段。 |
-| [!UICONTROL 回應] | `reaction` | 物件陣列 | 免疫接種後的反應細節。 如需詳細資訊，請參閱](#reaction)下方的[區段。 |
+| [!UICONTROL 批次] | `performer` | 物件陣列 | 誰執行了免疫接種事件。 如需詳細資訊，請參閱[&#128279;](#performer)下方的區段。 |
+| [!UICONTROL 方案資格] | `programEligibility` | 物件陣列 | 患者符合特定疫苗接種計畫的資格。 如需詳細資訊，請參閱[&#128279;](#program-eligibility)下方的區段。 |
+| 已套用[!UICONTROL 通訊協定] | `protocolApplied` | 物件陣列 | 提供者提供的通訊協定。 如需詳細資訊，請參閱[&#128279;](#protocol-applied)下方的區段。 |
+| [!UICONTROL 回應] | `reaction` | 物件陣列 | 免疫接種後的反應細節。 如需詳細資訊，請參閱[&#128279;](#reaction)下方的區段。 |
 | [!UICONTROL 原因] | `reason` | [[!UICONTROL 可程式碼參考的陣列]](../data-types/codeable-reference.md) | 免疫接種的原因。 |
 | [!UICONTROL 路由] | `route` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 疫苗如何進入人體。 |
 | [!UICONTROL 網站] | `site` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 接種疫苗的身體網站 |

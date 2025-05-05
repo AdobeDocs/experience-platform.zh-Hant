@@ -50,7 +50,7 @@ ht-degree: 1%
 
 [排程評估](#scheduled-evaluation) （也稱為「排程分段」）可讓您建立在特定時間執行匯出工作的週期性排程，而[隨選評估](#on-demand-evaluation)涉及建立區段工作以立即建立對象。 各步驟概述如下。
 
-如果您尚未使用Segmentation API](./create-a-segment.md)教學課程完成[建立區段定義，或使用[區段產生器](../ui/segment-builder.md)建立區段定義，請先完成該步驟，再繼續本教學課程。
+如果您尚未使用Segmentation API[&#128279;](./create-a-segment.md)教學課程完成建立區段定義，或使用[區段產生器](../ui/segment-builder.md)建立區段定義，請先完成該步驟，再繼續本教學課程。
 
 ## 已排程的評估 {#scheduled-evaluation}
 
@@ -142,7 +142,7 @@ ht-degree: 1%
 
 ## 查詢設定檔
 
-如果您知道要存取的特定設定檔，可以使用[!DNL Real-Time Customer Profile] API來存取。 使用設定檔API](../../profile/api/entities.md)教學課程的[存取即時客戶設定檔資料中，提供了存取個別設定檔的完整步驟。
+如果您知道要存取的特定設定檔，可以使用[!DNL Real-Time Customer Profile] API來存取。 使用設定檔API[&#128279;](../../profile/api/entities.md)教學課程的存取即時客戶設定檔資料中，提供了存取個別設定檔的完整步驟。
 
 ## 匯出區段 {#export}
 
@@ -159,7 +159,7 @@ ht-degree: 1%
 
 匯出對象時，必須先建立目標資料集。 請務必正確設定資料集，以確保匯出成功。
 
-重要考量事項之一是資料集所依據的結構描述（在以下API範例要求中為`schemaRef.id`）。 為了匯出區段定義，資料集必須以[!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`)為基礎。 聯合結構描述是系統產生的唯讀結構描述，其彙總共用相同類別的結構描述（在此例中為XDM個別設定檔類別）的欄位。 如需聯合檢視結構描述的詳細資訊，請參閱結構描述登入開發人員指南](../../xdm/api/getting-started.md)的[即時客戶設定檔區段。
+重要考量事項之一是資料集所依據的結構描述（在以下API範例要求中為`schemaRef.id`）。 為了匯出區段定義，資料集必須以[!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`)為基礎。 聯合結構描述是系統產生的唯讀結構描述，其彙總共用相同類別的結構描述（在此例中為XDM個別設定檔類別）的欄位。 如需聯合檢視結構描述的詳細資訊，請參閱結構描述登入開發人員指南[&#128279;](../../xdm/api/getting-started.md)的即時客戶設定檔區段。
 
 建立必要資料集有兩個方法：
 

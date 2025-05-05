@@ -19,7 +19,7 @@ ht-degree: 0%
 
 若要使用副檔名，您必須擁有可存取[!DNL Ads Manager]的有效[!DNL Meta]帳戶。 具體來說，您必須[建立新的 [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755)並複製其[!DNL Pixel ID]，才能將擴充功能設定到您的帳戶。 如果您已有[!DNL Meta Pixel]，可以改用其ID。
 
-強烈建議將[!DNL Meta Pixel]與[!DNL Meta Conversions API]搭配使用，分別從使用者端和伺服器端共用及傳送相同的事件，因為這可能有助於復原[!DNL Meta Pixel]未擷取的事件。 如需如何在伺服器端實作中整合事件轉送](../../client/meta/overview.md)的步驟，請參閱[[!DNL Meta Conversions API] 擴充功能的指南。 請注意，您的組織必須擁有[事件轉送](../../../ui/event-forwarding/overview.md)的存取權，才能使用伺服器端擴充功能。
+強烈建議將[!DNL Meta Pixel]與[!DNL Meta Conversions API]搭配使用，分別從使用者端和伺服器端共用及傳送相同的事件，因為這可能有助於復原[!DNL Meta Pixel]未擷取的事件。 如需如何在伺服器端實作中整合事件轉送[&#128279;](../../client/meta/overview.md)的步驟，請參閱[!DNL Meta Conversions API] 擴充功能的指南。 請注意，您的組織必須擁有[事件轉送](../../../ui/event-forwarding/overview.md)的存取權，才能使用伺服器端擴充功能。
 
 ## 安裝擴充功能
 

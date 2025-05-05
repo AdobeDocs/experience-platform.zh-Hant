@@ -340,4 +340,4 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 若要進一步瞭解如何使用Adobe Experience Platform使用者介面，請參閱[分段使用手冊](./overview.md)。
 
-如需有關串流區段的常見問題，請參閱常見問題](../faq.md#streaming-segmentation)的[串流區段區段。
+如需有關串流區段的常見問題，請參閱常見問題[&#128279;](../faq.md#streaming-segmentation)的串流區段區段。

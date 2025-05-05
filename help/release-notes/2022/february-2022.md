@@ -46,7 +46,7 @@ Experience Platform提供了一套技術，可讓您收集使用者端客戶體�
 | 功能 | 說明 |
 | --- | --- |
 | 改善資料流設定的UI工作流程 | 更新在資料收集UI中建立新資料流的工作流程。 將服務新增至資料流時，只有您有權存取的服務會包含在選項清單中。 如需詳細資訊，請參閱[設定資料流](../../datastreams/overview.md)的指南。 |
-| 資料收集的資料準備 | 如果您使用Adobe Experience Platform Web SDK，現在可以運用資料準備功能，將您的資料對應至伺服器端的Experience Data Model (XDM)。 如需詳細資訊，請參閱資料串流指南中資料彙集](../../datastreams/data-prep.md)的[資料準備。 |
+| 資料收集的資料準備 | 如果您使用Adobe Experience Platform Web SDK，現在可以運用資料準備功能，將您的資料對應至伺服器端的Experience Data Model (XDM)。 如需詳細資訊，請參閱資料串流指南中資料彙集[&#128279;](../../datastreams/data-prep.md)的資料準備。 |
 | 第一方裝置 ID | 您現在可以在使用Adobe Experience Platform Web Edge Network收集客戶資料時，將自己的裝置ID傳送至Experience Platform SDK，針對第三方Cookie有效期限的最新瀏覽器限制提供因應措施。 如需詳細資訊，請參閱[第一方裝置識別碼](../../web-sdk/identity/first-party-device-ids.md)的指南。 |
 
 如需Experience Platform中資料收集的詳細資訊，請參閱[資料收集概觀](../../collection/home.md)。

@@ -15,7 +15,7 @@ ht-degree: 21%
 
 >[!AVAILABILITY]
 >
->帳戶對象只能在Real-Time Customer Data Platform的[B2B edition](../../rtcdp/overview.md#rtcdp-b2b)和Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p)的[B2P版本中使用。
+>帳戶對象只能在Real-Time Customer Data Platform的[B2B edition](../../rtcdp/overview.md#rtcdp-b2b)和Real-Time Customer Data Platform[&#128279;](../../rtcdp/overview.md#rtcdp-b2p)的B2P版本中使用。
 
 透過帳戶細分，Adobe Experience Platform可讓您從以人物為基礎的受眾到以帳戶為基礎的受眾，使用完整且精密的行銷細分體驗。
 
@@ -203,7 +203,7 @@ ht-degree: 21%
    - 這表示您的對象&#x200B;**不能**&#x200B;有超過五個規則組成您的對象。
 - 可使用的跨實體數目上限為&#x200B;**5**。
    - 跨實體是指您在對象內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。
-- 無法使用自訂實體&#x200B;****。
+- 無法使用自訂實體&#x200B;**&#x200B;**。
 - 單一欄位可以檢查的值數量上限為 **50**。
    - 例如，如果您有「城市名稱」欄位，您可以根據50個城市名稱檢查該值。
 - 帳戶對象&#x200B;**無法**&#x200B;使用`inSegment`個事件。

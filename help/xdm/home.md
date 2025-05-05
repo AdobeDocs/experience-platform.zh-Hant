@@ -67,7 +67,7 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 
 >[!NOTE]
 >
->沒有基於臨機行為的標準類別。 使用臨機結構描述的Experience Platform處理程式會自動產生臨機結構描述，但也可以使用結構描述登入API ](./tutorials/ad-hoc.md)以手動方式[建立它們。
+>沒有基於臨機行為的標準類別。 使用臨機結構描述的Experience Platform處理程式會自動產生臨機結構描述，但也可以使用結構描述登入API [&#128279;](./tutorials/ad-hoc.md)以手動方式建立它們。
 
 ### [!UICONTROL XDM 個別輪廓] {#xdm-individual-profile}
 
@@ -143,7 +143,7 @@ Adobe Experience Platform Data Science Workspace使用機器學習和人工智�
 
 現在您已更瞭解結構在Experience Platform中的角色，您已準備好開始撰寫自己的結構描述。
 
-若要瞭解構成要與Experience Platform搭配使用的結構描述的設計原則和最佳實務，請先閱讀結構描述構成的[基本知識](schema/composition.md)。 如需如何建立結構描述的逐步指示，請參閱使用API](tutorials/create-schema-api.md)建立結構描述[或使用使用者介面](tutorials/create-schema-ui.md)建立結構描述[的教學課程。
+若要瞭解構成要與Experience Platform搭配使用的結構描述的設計原則和最佳實務，請先閱讀結構描述構成的[基本知識](schema/composition.md)。 如需如何建立結構描述的逐步指示，請參閱使用API[&#128279;](tutorials/create-schema-api.md)建立結構描述[或使用使用者介面](tutorials/create-schema-ui.md)建立結構描述的教學課程。
 
 若要加深您對Experience Platform中[!DNL XDM System]的瞭解，請觀看下列影片：
 

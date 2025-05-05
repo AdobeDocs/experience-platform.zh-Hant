@@ -45,5 +45,5 @@ Experience Platform支援從協力廠商客戶成功應用程式擷取資料。 
 
 ## 使用UI連線[!DNL Zendesk]至Experience Platform
 
-* [在使用者介面中建立 [!DNL Zendesk ]來源連線](../../tutorials/ui/create/customer-success/zendesk.md)
+* [在使用者介面中建立 [!DNL Zendesk &#x200B;]來源連線](../../tutorials/ui/create/customer-success/zendesk.md)
 * [在UI中建立客戶成功來源連線的資料流](../../tutorials/ui/dataflow/customer-success.md)

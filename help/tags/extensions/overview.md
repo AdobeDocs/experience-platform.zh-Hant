@@ -28,4 +28,4 @@ ht-degree: 0%
 
 除了Adobe開發的擴充功能以外，目錄也包含協力廠商開發人員建立的擴充功能。
 
-Adobe無法為這些協力廠商擴充功能提供任何保證，因此擴充功能作者有責任為其擴充功能選擇授權和支援程式。 許多開發人員已選擇將其擴充功能套件的原始程式碼發佈到公共GitHub存放庫，方便使用者自行檢閱。 如需詳細資訊，請參閱GitHub](https://github.com/Connections-Developers)上的[Connections開發人員群組。
+Adobe無法為這些協力廠商擴充功能提供任何保證，因此擴充功能作者有責任為其擴充功能選擇授權和支援程式。 許多開發人員已選擇將其擴充功能套件的原始程式碼發佈到公共GitHub存放庫，方便使用者自行檢閱。 如需詳細資訊，請參閱GitHub[&#128279;](https://github.com/Connections-Developers)上的Connections開發人員群組。

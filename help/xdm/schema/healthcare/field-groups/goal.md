@@ -31,7 +31,7 @@ ht-degree: 5%
 | [!UICONTROL Source] | `source` | [[!UICONTROL 參考]](../data-types/reference.md) | 指示目標的來源，例如病人或從業人員。 |
 | [!UICONTROL 開始可程式碼的概念] | `startCodeableConcept` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 之後應說服目標的事件。 |
 | [!UICONTROL 主旨 |]`subject` | [[!UICONTROL 參考]](../data-types/reference.md) | 識別正在建立目標的患者、群組或組織。 |
-| [!UICONTROL Target] | `target` | 物件陣列 | 表示目標中特定步驟的時間表。 如需詳細資訊，請參閱](#target)下方的[區段。 |
+| [!UICONTROL Target] | `target` | 物件陣列 | 表示目標中特定步驟的時間表。 如需詳細資訊，請參閱[&#128279;](#target)下方的區段。 |
 | [!UICONTROL 連續] | `continous` | 布林值 | 表示達成目標後是否需要持續進行活動以維持目標目標。 |
 | [!UICONTROL 生命週期狀態] | `lifecycleStatus` | 字串 | 目標生命週期的狀態。 此屬性的值必須等於下列其中一個已知列舉值。 <li> `proposed` </li> <li> `planned` </li> <li> `accepted` </li> <li> `active` </li> <li> `on-hold` </li> <li> `completed` </li> <li> `cancelled` </li> <li> `entered-in-error` </li> <li> `rejected` </li> |
 | [!UICONTROL 開始日期] | `startDate` | 日期 | 開始追求目標的日期。 |

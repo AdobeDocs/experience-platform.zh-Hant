@@ -49,7 +49,7 @@ Experience Data Model (XDM)可在您業務需求有所變更時，彈性為您�
 
 ## 取消棄用欄位 {#undeprecate-fields}
 
-若要復原已棄用的欄位，請先依照上述說明顯示已棄用的欄位](#show-deprecated)，然後從編輯器的[!UICONTROL 結構]區段中選取已棄用的欄位。 [接著，從[!UICONTROL 欄位屬性]側邊欄選取&#x200B;**[!UICONTROL 取消棄用]**，接著選取&#x200B;**[!UICONTROL 儲存]**。
+若要復原已棄用的欄位，請先依照上述說明顯示已棄用的欄位[&#128279;](#show-deprecated)，然後從編輯器的[!UICONTROL 結構]區段中選取已棄用的欄位。 接著，從[!UICONTROL 欄位屬性]側邊欄選取&#x200B;**[!UICONTROL 取消棄用]**，接著選取&#x200B;**[!UICONTROL 儲存]**。
 
 ![結構描述編輯器，包含已棄用的欄位、取消棄用和醒目提示的儲存。](../images/tutorials/field-deprecation/undeprecate-single-field.png)
 

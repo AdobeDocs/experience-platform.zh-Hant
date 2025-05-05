@@ -24,7 +24,7 @@ ht-degree: 6%
 | [!UICONTROL 端點] | `endpoint` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 可存取組織所操作服務的技術端點。 |
 | [!UICONTROL 識別碼] | `indentifier` | [[!UICONTROL 識別碼]](../data-types/identifier.md)的陣列 | 用於跨多個不同系統識別組織的識別碼。 |
 | [!UICONTROL 組織的一部分] | `partOf` | [[!UICONTROL 參考]](../data-types/reference.md) | 此組織所屬的組織。 |
-| [!UICONTROL 資格] | `qualification` | 物件陣列 | 正式認證、認證、培訓、指派，以及授權及/或以其他方式認可組織提供照料的授權。 如需詳細資訊，請參閱](#qualification)下方的[區段。 |
+| [!UICONTROL 資格] | `qualification` | 物件陣列 | 正式認證、認證、培訓、指派，以及授權及/或以其他方式認可組織提供照料的授權。 如需詳細資訊，請參閱[&#128279;](#qualification)下方的區段。 |
 | [!UICONTROL 類型] | `type` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md)的陣列 | 組織型別。 |
 | [!UICONTROL 作用中] | `active` | 布林值 | 組織的記錄是否仍在使用中。 |
 | [!UICONTROL 別名] | `alias` | 字串陣列 | 組織稱為或過去稱為的替代名稱清單。 |

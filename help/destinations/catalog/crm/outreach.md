@@ -147,11 +147,12 @@ ht-degree: 2%
 1. 在[!UICONTROL 對應]步驟中，按一下&#x200B;**[!UICONTROL 新增對應]**。 您會在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷圖顯示如何新增對應](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
-1. 在[!UICONTROL 選取來源欄位]視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**類別並新增所需的對應。
+1. 在[!UICONTROL 選取來源欄位]視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;類別並新增所需的對應。
    ![Experience Platform UI熒幕擷圖顯示Source對應](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. 在[!UICONTROL 選取目標欄位]視窗中，選取您要將來源欄位對應到的目標欄位型別。
    * **[!UICONTROL 選取身分名稱空間]**：選取此選項可將您的來源欄位從清單對應至身分名稱空間。
+
      ![Experience Platform UI熒幕擷取畫面顯示使用ExpancationId的Target對應。](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * 在您的XDM設定檔結構描述與[!DNL Outreach]執行個體之間新增下列對應：
@@ -161,6 +162,7 @@ ht-degree: 2%
      | `Oid` | `OutreachId` | 是 |
 
    * **[!UICONTROL 選取自訂屬性]**：選取此選項可將您的來源欄位對應到您在[!UICONTROL 屬性名稱]欄位中定義的自訂屬性。 如需支援屬性的完整清單，請參閱[[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect)。
+
      ![Experience Platform UI熒幕擷圖顯示使用LastName的目標對應。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * 例如，根據您要更新的值，在您的XDM設定檔結構描述與[!DNL Outreach]執行個體之間新增下列對應：
@@ -171,6 +173,7 @@ ht-degree: 2%
      | `person.name.lastName` | `lastName` |
 
    * 以下顯示使用這些對應的範例：
+
      ![Experience Platform UI熒幕擷圖範例顯示Target對應。](../../assets/catalog/crm/outreach/mappings.png)
 
 ### 排程對象匯出和範例 {#schedule-segment-export-example}
@@ -198,13 +201,13 @@ ht-degree: 2%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**以瀏覽目的地清單。
+1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**&#x200B;以瀏覽目的地清單。
    ![Experience Platform UI熒幕擷圖顯示瀏覽目的地。](../../assets/catalog/crm/outreach/browse-destinations.png)
 
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL 已啟用]**。
    ![Experience Platform UI熒幕擷圖顯示所選目的地的目的地資料流執行。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
    ![Experience Platform UI熒幕擷圖顯示目的地啟用資料。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。

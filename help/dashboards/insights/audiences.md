@@ -17,7 +17,7 @@ ht-degree: 3%
 
 如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-下列深入分析都可供您用作[對象儀表板](../guides/audiences.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
+下列深入分析都可供您用作[對象儀表板](../guides/audiences.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[&#128279;](../customize/custom-widgets.md)在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget的說明。
 
 下列深入分析全都可供您用作[對象儀表板](../guides/audiences.md)或自訂儀表板的一部分。
 

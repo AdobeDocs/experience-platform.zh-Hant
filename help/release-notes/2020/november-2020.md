@@ -209,7 +209,7 @@ Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[
 | 功能 | 說明 |
 | ------- | ----------- |
 | 更新連線資訊 | 您現在可以使用[!DNL Flow Service] API和UI更新現有批次連線的名稱、說明和認證。 如需詳細資訊，請參閱有關[使用流程服務API更新連線](../../sources/tutorials/api/update.md)和[使用UI編輯帳戶詳細資料](../../sources/tutorials/ui/monitor.md)的教學課程。 |
-| 刪除連線 | 現在可以使用[!DNL Flow Service] API和UI刪除含有錯誤或變得不必要的批次連線。 如需詳細資訊，請參閱教學課程，瞭解如何使用[使用流程服務API刪除連線](../../sources/tutorials/api/delete.md)，以及使用UI](../../sources/tutorials/ui/delete-accounts.md)刪除帳戶[。 |
+| 刪除連線 | 現在可以使用[!DNL Flow Service] API和UI刪除含有錯誤或變得不必要的批次連線。 如需詳細資訊，請參閱教學課程，瞭解如何使用[使用流程服務API刪除連線](../../sources/tutorials/api/delete.md)，以及使用UI[&#128279;](../../sources/tutorials/ui/delete-accounts.md)刪除帳戶。 |
 | 階層對應 | 您可以在資料擷取程式期間預覽階層式來源檔案，例如JSON或Parquet。 如需詳細資訊，請參閱有關[在UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)中為雲端儲存聯結器設定資料流的教學課程。 |
 | API支援串流來源中的對應 | 您現在可以使用API來透過串流來源執行對應功能。 |
 | 雲端儲存空間來源的自訂分隔符號的API支援 | 您現在可以使用雲端儲存空間來源收集非CSV分隔的檔案。 您可以使用任何單一欄分隔符號（例如定位字元、逗號、垂直號、分號或雜湊）來收集任何格式的平面檔案。 |

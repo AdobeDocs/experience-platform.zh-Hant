@@ -330,5 +330,5 @@ curl -X GET \
 
 若要進一步瞭解如何使用Experience Platform使用者介面，請參閱[分段使用手冊](./overview.md)。
 
-如需邊緣劃分的相關常見問題，請參閱常見問題](../faq.md#edge-segmentation)的[邊緣劃分割槽段。
+如需邊緣劃分的相關常見問題，請參閱常見問題[&#128279;](../faq.md#edge-segmentation)的邊緣劃分割槽段。
 

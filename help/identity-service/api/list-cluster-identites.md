@@ -102,7 +102,7 @@ curl -X POST \
 }'
 ```
 
-使用XID呼叫&#x200B;****
+使用XID呼叫&#x200B;**&#x200B;**
 
 ```shell
 curl -X POST \
@@ -118,7 +118,7 @@ curl -X POST \
 }' | json_pp
 ```
 
-使用UID呼叫&#x200B;****
+使用UID呼叫&#x200B;**&#x200B;**
 
 ```shell
 curl -X POST \

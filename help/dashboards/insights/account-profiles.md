@@ -19,7 +19,7 @@ ht-degree: 0%
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-下列見解全部都可以用作[帳戶設定檔儀表板](../guides/account-profiles.md)或[自訂儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
+下列見解全部都可以用作[帳戶設定檔儀表板](../guides/account-profiles.md)或[自訂儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[&#128279;](../customize/custom-widgets.md)在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget的說明。
 
 ## 已新增的帳戶輪廓 {#account-profiles-added}
 

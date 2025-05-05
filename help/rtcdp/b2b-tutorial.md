@@ -64,7 +64,7 @@ Adobe Experience Platform可讓您自動產生B2B資料來源所需的結構描�
 > 
 >若要瞭解您的組織可以使用哪些來源聯結器，您可以在Experience Platform UI中檢視來源目錄。 若要存取目錄，請在左側導覽中選取&#x200B;**來源**，然後選取&#x200B;**目錄**。
 
-若要在Marketo帳戶與Experience Platform之間建立連線，您必須取得驗證認證。 如需詳細指示，請參閱取得Marketo來源聯結器驗證認證](../sources/connectors/adobe-applications/marketo/marketo-auth.md)的[指南。
+若要在Marketo帳戶與Experience Platform之間建立連線，您必須取得驗證認證。 如需詳細指示，請參閱取得Marketo來源聯結器驗證認證[&#128279;](../sources/connectors/adobe-applications/marketo/marketo-auth.md)的指南。
 
 取得驗證認證後，Bodea行銷人員會建立Marketo帳戶與其Experience Platform組織之間的連線。 請參閱檔案以取得有關[如何使用Experience Platform UI連線Marketo帳戶](../sources/tutorials/ui/create/adobe-applications/marketo.md)的說明。
 

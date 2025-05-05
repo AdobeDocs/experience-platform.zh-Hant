@@ -61,7 +61,7 @@ ht-degree: 2%
 
 ## 演算法
 
-首先，載入 DSWRetailSales *綱要中的培訓 資料集*。從這裡開始，使用梯度提升回歸器演演算法](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)訓練[模型。梯度提升使用的思想是，弱學習者（至少比隨機機會略好）可以形成一系列專注於改善前一個學習者弱點的學習者。 它們一起可用於創建強大的預測模型。
+首先，載入 DSWRetailSales *綱要中的培訓 資料集*。從這裡開始，使用梯度提升回歸器演演算法[&#128279;](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)訓練模型。梯度提升使用的思想是，弱學習者（至少比隨機機會略好）可以形成一系列專注於改善前一個學習者弱點的學習者。 它們一起可用於創建強大的預測模型。
 
 該過程涉及三個要素：損失函數、弱學習器和加法模型。
 

@@ -167,6 +167,7 @@ ht-degree: 2%
 
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選取您要將來源欄位對應到的目標欄位型別。
    * **[!UICONTROL 選取身分名稱空間]**：選取此選項可將您的來源欄位從清單對應至身分名稱空間。
+
      ![Experience Platform UI熒幕擷圖顯示連絡人的Target對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * 在您的XDM設定檔結構描述與[!DNL Dynamics 365]執行個體之間新增下列對應：
@@ -176,6 +177,7 @@ ht-degree: 2%
      | `contactid` | `contactid` | 是 |
 
    * **[!UICONTROL 選取自訂屬性]**：選取此選項可將您的來源欄位對應到您在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中定義的自訂屬性。 如需支援屬性的完整清單，請參閱[[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties)。
+
      ![Experience Platform UI熒幕擷圖顯示電子郵件的Target對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
@@ -212,13 +214,13 @@ ht-degree: 2%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**以瀏覽目的地清單。
+1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**&#x200B;以瀏覽目的地清單。
    ![Experience Platform UI熒幕擷圖顯示瀏覽目的地。](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
 
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL 已啟用]**。
    ![Experience Platform UI熒幕擷圖顯示目的地資料流執行。](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在對象內建立的計數。

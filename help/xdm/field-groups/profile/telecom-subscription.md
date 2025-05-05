@@ -25,10 +25,10 @@ ht-degree: 5%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `internetSubscription` | 物件陣列 | 說明資料上限、連線型別和速度詳細資訊等網際網路訂閱方案細節。 如需詳細資訊，請參閱](#internetSubscription)下方的[區段。 |
-| `landlineSubscription` | 物件陣列 | 說明有線電話訂閱方案詳細資料，包括選取的功能、分鐘數和撥接方案。 如需詳細資訊，請參閱](#landlineSubscription)下方的[區段。 |
-| `mediaSubscription` | 物件陣列 | 說明媒體訂閱計畫詳細資料，包括頻道數和包含的串流服務。 如需詳細資訊，請參閱](#mediaSubscription)下方的[區段。 |
-| `mobileSubscription` | 物件陣列 | 說明行動訂閱計畫詳細資料，包括線路數、資料費率、成本等。 如需詳細資訊，請參閱](#mobileSubscription)下方的[區段。 |
+| `internetSubscription` | 物件陣列 | 說明資料上限、連線型別和速度詳細資訊等網際網路訂閱方案細節。 如需詳細資訊，請參閱[&#128279;](#internetSubscription)下方的區段。 |
+| `landlineSubscription` | 物件陣列 | 說明有線電話訂閱方案詳細資料，包括選取的功能、分鐘數和撥接方案。 如需詳細資訊，請參閱[&#128279;](#landlineSubscription)下方的區段。 |
+| `mediaSubscription` | 物件陣列 | 說明媒體訂閱計畫詳細資料，包括頻道數和包含的串流服務。 如需詳細資訊，請參閱[&#128279;](#mediaSubscription)下方的區段。 |
+| `mobileSubscription` | 物件陣列 | 說明行動訂閱計畫詳細資料，包括線路數、資料費率、成本等。 如需詳細資訊，請參閱[&#128279;](#mobileSubscription)下方的區段。 |
 | `primarySubscriber` | [[!UICONTROL 人員]](../../data-types/person.md) | 說明訂閱的擁有者。 |
 | `bundleName` | 字串 | 擷取客戶註冊的任何型別訂閱套件組合的名稱，例如`Internet + Media`。 |
 | `primaryPartyID` | 字串 | 負責訂閱的主要人員識別碼，通常可能是他們的裝置電話號碼。 |

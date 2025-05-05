@@ -126,7 +126,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li><li>DEFAULT_DATE： **必要**&#x200B;如果提供的日期為Null，則傳回預設日期。</li></ul> | date(DATE， FORMAT， DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH：mm&quot;， now()) | `2019-10-23T11:24:00Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH：mm&quot;) | `2019-10-23T11:24:00Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | 「2019-10-23T11:24:00Z」 |
-| date_part | 擷取日期部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;{20&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | date_part&#x200B;(COMPONENT， DATE) | date_part(&quot;MM&quot;， date(&quot;2019-10-17 11:55:12&quot;) | 10 |
+| date_part | 擷取日期部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;&lbrace;20&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | date_part&#x200B;(COMPONENT， DATE) | date_part(&quot;MM&quot;， date(&quot;2019-10-17 11:55:12&quot;) | 10 |
 | set_date_part | 取代指定日期中的元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>值： **必要**&#x200B;為指定日期的元件設定的值。</li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | set_date_part&#x200B;(COMPONENT， VALUE， DATE) | set_date_part(&quot;m&quot;， 4， date(&quot;2016-11-09T11:44:44.797&quot;) | 「2016-04-09T11:44:44Z」 |
 | make_date_time | 從零件建立日期。 此函式也可以使用make_timestamp感生。 | <ul><li>YEAR： **必填**&#x200B;以四位數寫入的年份。</li><li>月份： **必要**&#x200B;月份。 允許的值為1到12。</li><li>日： **必要**&#x200B;日。 允許的值為1到31。</li><li>小時： **必要**&#x200B;小時。 允許的值為0到23。</li><li>MINUTE： **必要**&#x200B;分鐘。 允許值為0到59。</li><li>NANOSECOND： **必要**&#x200B;納秒的值。 允許的值為0到999999999。</li><li>時區： **必要**&#x200B;日期時間的時區。</li></ul> | make_date_time&#x200B;（年、月、日、小時、分鐘、秒、納秒、時區） | make_date_time&#x200B;（2019， 10， 17， 11， 55， 12， 999， &quot;美洲/洛杉磯&quot;） | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 將任何時區的日期轉換為UTC格式的日期。 | <ul><li>日期： **必要**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
@@ -387,9 +387,9 @@ address.line1 -> addr.addrLine1
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| [ | %5B |
+| &lbrack; | %5B |
 | | | %5C |
-| ] | %5D |
+| &rbrack; | %5D |
 | ^ | %5E |
 | 『 | %60 |
 | ~ | %7E |

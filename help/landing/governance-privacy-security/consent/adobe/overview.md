@@ -21,7 +21,7 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 
 >[!NOTE]
 >
->本檔案著重於使用Adobe標準處理同意資料。 如果您是依照IAB透明與同意架構(TCF) 2.0處理同意資料，請參閱Adobe Real-Time Customer Data Platform](../iab/overview.md)中[TCF 2.0支援指南。
+>本檔案著重於使用Adobe標準處理同意資料。 如果您是依照IAB透明與同意架構(TCF) 2.0處理同意資料，請參閱Adobe Real-Time Customer Data Platform[&#128279;](../iab/overview.md)中TCF 2.0支援指南。
 
 ## 先決條件
 
@@ -95,7 +95,7 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 
 如果您的行動應用程式需要客戶同意偏好設定，您可以整合Experience Platform Mobile SDK以擷取及更新同意設定，並在呼叫同意API時將其傳送至Experience Platform。
 
-請參閱Mobile SDK檔案，以瞭解[使用同意API設定同意行動擴充功能](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)和[](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)。 如需有關如何使用Mobile SDK處理隱私權問題的詳細資訊，請參閱[隱私權與GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)一節。
+請參閱Mobile SDK檔案，以瞭解[使用同意API設定同意行動擴充功能](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)和[&#128279;](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)。 如需有關如何使用Mobile SDK處理隱私權問題的詳細資訊，請參閱[隱私權與GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)一節。
 
 ### 直接擷取XDM相容的同意資料 {#batch}
 
@@ -129,4 +129,4 @@ Customer Journey Management can also send consent-change signals back to Experie
 
 本指南說明如何設定Experience Platform作業，以使用Adobe標準處理客戶同意資料，並在客戶設定檔中呈現這些屬性。 您現在可以將客戶同意偏好設定整合為區段資格及其他下游使用案例中的決定性因素。
 
-如需Experience Platform隱私權相關功能的詳細資訊，請參閱Experience Platform](../../overview.md)中[治理、隱私權及安全性的概觀。
+如需Experience Platform隱私權相關功能的詳細資訊，請參閱Experience Platform[&#128279;](../../overview.md)中治理、隱私權及安全性的概觀。

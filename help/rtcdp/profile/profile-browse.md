@@ -34,7 +34,7 @@ Real-Time CDP、B2B edition也可讓您從與個別客戶相關聯的企業來�
 
 ![](images/b2b-profile-detail.png)
 
-若要進一步瞭解Experience Platform UI中提供的設定檔詳細資料，請參閱設定檔儀表板檔案](../../dashboards/guides/profiles.md#browse-profiles)的[詳細資訊區段。
+若要進一步瞭解Experience Platform UI中提供的設定檔詳細資料，請參閱設定檔儀表板檔案[&#128279;](../../dashboards/guides/profiles.md#browse-profiles)的詳細資訊區段。
 
 ### 帳戶標籤
 

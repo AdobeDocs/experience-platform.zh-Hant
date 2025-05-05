@@ -30,7 +30,7 @@ ht-degree: 12%
 
 ### 文件
 
-* 若要開始記錄您的來源，請閱讀建立自助來原始檔](../documentation/doc-overview.md)的[總覽。
+* 若要開始記錄您的來源，請閱讀建立自助來原始檔[&#128279;](../documentation/doc-overview.md)的總覽。
 * 閱讀[使用GitHub網頁介面](../documentation/github.md)的指南，以瞭解如何使用GitHub建立檔案的步驟。
 * 閱讀[使用文字編輯器](../documentation/text-editor.md)的指南，瞭解如何使用本機電腦建立檔案的步驟。
 * [使用串流SDK API檔案範本在API中記錄您的來源](streaming-template-api.md)。

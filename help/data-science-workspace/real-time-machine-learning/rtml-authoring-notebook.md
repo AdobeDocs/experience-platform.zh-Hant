@@ -359,7 +359,7 @@ pprint(json.loads(dsl))
 
 >[!NOTE]
 >
->實時機器學習臨時部署到 Adobe Experience Platform 中心並由其管理。 有關更多詳細信息，造訪有關實時機器學習體系結構](./home.md#architecture)的[概述部分。
+>實時機器學習臨時部署到 Adobe Experience Platform 中心並由其管理。 有關更多詳細信息，造訪有關實時機器學習體系結構[&#128279;](./home.md#architecture)的概述部分。
 
 建立 DSL 圖形後，可以將圖形部署到 [!DNL Edge].
 

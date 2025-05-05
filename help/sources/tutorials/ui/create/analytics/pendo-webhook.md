@@ -49,7 +49,7 @@ ht-degree: 1%
 }
 ```
 
-如需詳細資訊，請閱讀webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks)的[[!DNL Pendo] 指南。
+如需詳細資訊，請閱讀webhooks[&#128279;](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks)的[!DNL Pendo] 指南。
 
 ### 為[!DNL Pendo]建立Experience Platform結構描述 {#create-platform-schema}
 
@@ -136,7 +136,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 ## 在[!DNL Pendo]中設定Webhook {#set-up-webhook}
 
-接著，在[[!DNL Pendo]](https://pendo.io/)登入您的帳戶並建立webhook。 如需有關如何使用[!DNL Pendo]使用者介面建立webhook的步驟，請參閱建立webhook](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4)的[[!DNL Pendo] 指南。
+接著，在[[!DNL Pendo]](https://pendo.io/)登入您的帳戶並建立webhook。 如需有關如何使用[!DNL Pendo]使用者介面建立webhook的步驟，請參閱建立webhook[&#128279;](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4)的[!DNL Pendo] 指南。
 
 建立webhook後，請瀏覽至[!DNL Pendo] webhook的設定頁面，並在[!DNL URL]欄位中輸入您的webhook URL。
 

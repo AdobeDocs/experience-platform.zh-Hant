@@ -46,7 +46,7 @@ ht-degree: 1%
 
 ### 現有帳戶
 
-若要連線現有帳戶，請選取您要連線的FTP或SFTP帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要連線現有帳戶，請選取您要連線的FTP或SFTP帳戶，然後選取[下一步] **以繼續。**
 
 ![Experience Platform UI上的現有SFTP帳戶清單。](../../../../images/tutorials/create/sftp/existing.png)
 

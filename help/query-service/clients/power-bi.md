@@ -77,7 +77,7 @@ ht-degree: 0%
 
 [!DNL Power BI]和其他協力廠商工具（例如[!DNL Tableau]）目前不允許使用者匯入巢狀物件，例如Experience Platform中的XDM物件。 若要解決此問題，[!DNL Power BI]可讓您使用自訂SQL來存取這些巢狀欄位，並建立資料的平面化檢視。 [!DNL Power BI]接著會將先前巢狀資料的這個平面化檢視載入為一般表格。
 
-從[!DNL PostgreSQL database]對話方塊中，選取&#x200B;**[!DNL Advanced options]**&#x200B;以在&#x200B;**[!DNL SQL statement]**&#x200B;區段中輸入自訂SQL查詢。 此自訂查詢可用來將JSON名稱值配對平面化為表格格式。 官方檔案也提供如何在進階選項](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options)中使用SQL陳述式[連線PowerBI的資訊。
+從[!DNL PostgreSQL database]對話方塊中，選取&#x200B;**[!DNL Advanced options]**&#x200B;以在&#x200B;**[!DNL SQL statement]**&#x200B;區段中輸入自訂SQL查詢。 此自訂查詢可用來將JSON名稱值配對平面化為表格格式。 官方檔案也提供如何在進階選項[&#128279;](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options)中使用SQL陳述式連線PowerBI的資訊。
 
 輸入自訂查詢後，選取&#x200B;**[!DNL OK]**&#x200B;以繼續連線資料庫。 請參閱上面的[驗證](#authentication)一節，以取得從工作流程的這個部分連線資料庫的指南。
 

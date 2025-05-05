@@ -53,7 +53,7 @@ Analytics分類來源聯結器會要求您的資料先移轉至Adobe Analytics�
 * **[!UICONTROL 資料型別]**：顯示選取的分類數目。
 * **[!UICONTROL 排程]**：顯示分類資料的同步處理頻率。 **注意**：分類資料每週都會更新。
 
-檢閱您的資料流後，請按一下[完成] ****，並等待一些時間來建立資料流。
+檢閱您的資料流後，請按一下[完成] **&#x200B;**，並等待一些時間來建立資料流。
 
 ![Adobe Analytics分類資料的檢閱頁面。](../../../../images/tutorials/create/classifications/review.png)
 

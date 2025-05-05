@@ -67,7 +67,7 @@ ht-degree: 0%
 
 ## 如何將身分與身分名稱空間建立關聯？
 
-身分欄位建立時，必須與現有的身分名稱空間相關聯。 任何新名稱空間都必須使用API](#how-do-i-create-a-custom-namespace-for-my-organization)建立[，才能與身分欄位建立關聯。
+身分欄位建立時，必須與現有的身分名稱空間相關聯。 任何新名稱空間都必須使用API[&#128279;](#how-do-i-create-a-custom-namespace-for-my-organization)建立，才能與身分欄位建立關聯。
 
 如需在使用API建立身分描述項時定義名稱空間的逐步指示，請參閱Schema Registry開發人員指南中[建立描述項](../xdm/tutorials/create-schema-ui.md)的相關章節。 若要在UI中將結構描述欄位標示為身分，請依照[結構描述編輯器教學課程](../xdm/tutorials/create-schema-api.md)中的步驟操作。
 

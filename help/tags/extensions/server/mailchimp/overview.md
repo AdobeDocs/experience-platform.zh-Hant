@@ -47,7 +47,7 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能�
 
 ### API金鑰
 
-若要尋找您帳戶的API金鑰，請在Mailchimp UI中選取您的設定檔圖示，然後選取&#x200B;**設定檔**。 您應該會看到`https://us11.admin.mailchimp.com/account/profile/`之類的URL，但首碼為&#x200B;****，而非`us11`。
+若要尋找您帳戶的API金鑰，請在Mailchimp UI中選取您的設定檔圖示，然後選取&#x200B;**設定檔**。 您應該會看到`https://us11.admin.mailchimp.com/account/profile/`之類的URL，但首碼為&#x200B;**&#x200B;**，而非`us11`。
 
 選取&#x200B;**額外專案**，然後選取&#x200B;**API金鑰**：
 

@@ -21,9 +21,9 @@ ht-degree: 7%
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- | --- |
 | [!UICONTROL 位址] | `address` | [[!UICONTROL 位址]](../data-types/address.md)的陣列 | 人員的一或多個地址。 |
-| [!UICONTROL 通訊] | `communication` | 物件陣列 | 可用於與個人溝通有關其健康狀況的語言。 如需詳細資訊，請參閱](#communication)下方的[區段。 |
+| [!UICONTROL 通訊] | `communication` | 物件陣列 | 可用於與個人溝通有關其健康狀況的語言。 如需詳細資訊，請參閱[&#128279;](#communication)下方的區段。 |
 | [!UICONTROL 識別碼] | `identifier` | [[!UICONTROL 識別碼]](../data-types/identifier.md)的陣列 | 適用於此人員的人類識別碼。 |
-| [!UICONTROL 個人連結詳細資料] | `link` | 物件陣列 | 與相同實際人員相關的資源連結。 如需詳細資訊，請參閱](#link)下方的[區段。 |
+| [!UICONTROL 個人連結詳細資料] | `link` | 物件陣列 | 與相同實際人員相關的資源連結。 如需詳細資訊，請參閱[&#128279;](#link)下方的區段。 |
 | [!UICONTROL 管理組織] | `managingOrganization` | [[!UICONTROL 參考]](../data-types/reference.md) | 病歷的保管組織。 |
 | [!UICONTROL 婚姻狀況] | `maritalStatus` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 個人的婚姻（或民事）狀況 |
 | [!UICONTROL 名稱] | `name` | [[!UICONTROL 人類名稱]](../data-types/human-name.md)的陣列 | 與個人相關聯的名稱。 |

@@ -16,7 +16,7 @@ ht-degree: 17%
 
 >[!AVAILABILITY]
 >
->>購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司，皆可透過Demandbase目的地啟用帳戶對象。
+>&#x200B;>購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司，皆可透過Demandbase目的地啟用帳戶對象。
 
 為您的Demandbase行銷活動啟用設定檔，以根據[帳戶對象](/help/segmentation/types/account-audiences.md)進行對象目標定位、個人化和隱藏。
 

@@ -166,7 +166,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->如果您想要從資料集中移除標籤，可以在資料集服務API](../labels/dataset-api.md#remove)上或使用[資料集UI](../labels/user-guide.md#remove-labels-from-a-dataset)執行[PUT要求。
+>如果您想要從資料集中移除標籤，可以在資料集服務API[&#128279;](../labels/dataset-api.md#remove)上或使用[資料集UI](../labels/user-guide.md#remove-labels-from-a-dataset)執行PUT要求。
 
 **API格式**
 

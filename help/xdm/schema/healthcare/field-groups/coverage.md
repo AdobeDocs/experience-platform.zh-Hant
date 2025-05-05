@@ -21,14 +21,14 @@ ht-degree: 6%
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- | --- |
 | [!UICONTROL 計畫受益人] | `beneficiary` | [[!UICONTROL 參考]](../data-types/reference.md) | 提供產品或服務時，享受保險保障的一方和患者。 |
-| [!UICONTROL 類別] | `class` | 物件陣列 | 包銷商特定分類器的套件。 如需詳細資訊，請參閱](#class)下方的[區段。 |
+| [!UICONTROL 類別] | `class` | 物件陣列 | 包銷商特定分類器的套件。 如需詳細資訊，請參閱[&#128279;](#class)下方的區段。 |
 | [!UICONTROL 連絡人] | `contract` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 構成此保險的保單。 |
-| [!UICONTROL 受益人成本] | `costToBeneficiary` | 物件陣列 | 表示成本類別和相關金額的代碼套裝，已在政策中詳細說明，可能包含在健康情況卡上。 如需詳細資訊，請參閱](#cost-to-beneficiary)下方的[區段。 |
-| [!UICONTROL 例外狀況] | `exception` | 物件陣列 | 表示病患成本及其有效期間例外或減少的代碼套裝。 如需詳細資訊，請參閱](#exception)下方的[區段。 |
+| [!UICONTROL 受益人成本] | `costToBeneficiary` | 物件陣列 | 表示成本類別和相關金額的代碼套裝，已在政策中詳細說明，可能包含在健康情況卡上。 如需詳細資訊，請參閱[&#128279;](#cost-to-beneficiary)下方的區段。 |
+| [!UICONTROL 例外狀況] | `exception` | 物件陣列 | 表示病患成本及其有效期間例外或減少的代碼套裝。 如需詳細資訊，請參閱[&#128279;](#exception)下方的區段。 |
 | [!UICONTROL 識別碼] | `identifier` | [[!UICONTROL 識別碼]](../data-types/identifier.md)的陣列 | 由保險公司所核發的保險範圍的識別碼。 |
 | [!UICONTROL 保險方案] | `insurancePlan` | [[!UICONTROL 參考]](../data-types/reference.md) | 保險計畫明細、福利及構成此保險範圍的成本。 |
 | [!UICONTROL 保險公司] | `insurer` | [[!UICONTROL 參考]](../data-types/reference.md) | 方案或計畫承保人、付款人或保險公司。 |
-| [!UICONTROL 付款者] | `paymentBy` | 物件陣列 | 付款方的連結，以及付款方所應承擔的責任（選擇性）。 如需詳細資訊，請參閱](#payment-by)下方的[區段。 |
+| [!UICONTROL 付款者] | `paymentBy` | 物件陣列 | 付款方的連結，以及付款方所應承擔的責任（選擇性）。 如需詳細資訊，請參閱[&#128279;](#payment-by)下方的區段。 |
 | [!UICONTROL 涵蓋範圍的開始和結束日期] | `period` | [[!UICONTROL 週期]](../data-types/period.md) | 有效涵蓋範圍的時段。 缺少開始日期表示開始日期不明，缺少結束日期表示承保範圍仍在進行中。 |
 | [!UICONTROL 原則持有者] | `policyHolder` | [[!UICONTROL 參考]](../data-types/reference.md) | 持有保單的一方。 |
 | [!UICONTROL 受益人關係] | `relationship` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 受益人與訂閱者的關係。 |

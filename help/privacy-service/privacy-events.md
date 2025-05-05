@@ -37,7 +37,7 @@ ht-degree: 2%
 
 若要接收[!DNL Privacy Service Events]，您必須使用Adobe Developer Console註冊webhook以進行[!DNL Privacy Service]整合。
 
-請依照有關[訂閱[！DNL I/O Event]通知](../observability/alerts/subscribe.md)的教學課程，取得如何完成此作業的詳細步驟。 請務必選擇&#x200B;**[!UICONTROL Privacy Service事件]**&#x200B;作為事件提供者，以存取上述事件。
+請依照有關[訂閱[!DNL I/O Event]通知](../observability/alerts/subscribe.md)的教學課程，取得如何完成此作業的詳細步驟。 請務必選擇&#x200B;**[!UICONTROL Privacy Service事件]**&#x200B;作為事件提供者，以存取上述事件。
 
 ## 接收[!DNL Privacy Service Event]個通知
 

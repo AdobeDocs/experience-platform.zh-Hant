@@ -61,7 +61,7 @@ ht-degree: 3%
 
 ### 現有帳戶
 
-若要連線現有帳戶，請選取您要連線的[!DNL Google Cloud Storage]帳戶，然後選取[下一步]**[!UICONTROL 以繼續。]**
+若要連線現有帳戶，請選取您要連線的[!DNL Google Cloud Storage]帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
 
 ![Experience Platform UI畫面顯示Google雲端儲存空間來源的現有帳戶頁面](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 

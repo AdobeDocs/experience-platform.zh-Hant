@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-本指南需要您實際瞭解資料生命週期工作區和[資料衛生API](./api/overview.md)。 在繼續本檔案之前，請先在UI](./ui/dataset-expiration.md)中或透過API熟悉[進階資料生命週期管理](./home.md)和[建立記錄刪除請求](./ui/record-delete.md)或[資料集有效期的指南。
+本指南需要您實際瞭解資料生命週期工作區和[資料衛生API](./api/overview.md)。 在繼續本檔案之前，請先在UI[&#128279;](./ui/dataset-expiration.md)中或透過API熟悉[進階資料生命週期管理](./home.md)和[建立記錄刪除請求](./ui/record-delete.md)或資料集有效期的指南。
 
 ## 工單建立准則 {#work-order-creation-guidelines}
 

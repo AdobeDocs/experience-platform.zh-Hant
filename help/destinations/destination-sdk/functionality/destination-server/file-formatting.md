@@ -35,7 +35,7 @@ Destination SDK支援一組彈性的功能，您可以根據整合需求進行�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -52,7 +52,7 @@ Destination SDK支援一組彈性的功能，您可以根據整合需求進行�
 
 >[!NOTE]
 >
->只有在匯出CSV檔案時才支援CSV選項。 設定新的目的地伺服器時，`fileConfigurations`區段不是強制性的。 如果您沒有在API呼叫中為CSV選項傳遞任何值，則會使用位於](#file-formatting-reference-and-example)下方[參考表格中的預設值。
+>只有在匯出CSV檔案時才支援CSV選項。 設定新的目的地伺服器時，`fileConfigurations`區段不是強制性的。 如果您沒有在API呼叫中為CSV選項傳遞任何值，則會使用位於[&#128279;](#file-formatting-reference-and-example)下方參考表格中的預設值。
 
 
 ## 使用者無法選取組態選項的CSV選項 {#file-configuration-templating-none}

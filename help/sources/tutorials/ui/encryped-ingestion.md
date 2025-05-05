@@ -161,7 +161,7 @@ ht-degree: 6%
 * [設定資料流的擷取排程](../ui/dataflow/batch/cloud-storage.md#schedule-ingestion-runs)
 * [檢閱您的資料流](../ui/dataflow/batch/cloud-storage.md#review-your-dataflow)
 
-您可以在資料流](../ui/update-dataflows.md)成功建立後，繼續[進行更新。
+您可以在資料流[&#128279;](../ui/update-dataflows.md)成功建立後，繼續進行更新。
 
 ## 後續步驟
 

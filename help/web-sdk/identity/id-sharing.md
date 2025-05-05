@@ -40,7 +40,7 @@ Adobe Experience Platform Web SDK支援訪客ID共用功能，可讓客戶在行
 
 ## 行動裝置對網頁ID共用 {#mobile-to-web}
 
-使用Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables)延伸模組[身分識別中的`getUrlVariables` API來擷取識別碼做為查詢引數，並在開啟[!DNL webViews]時將其附加至您的URL。
+使用Edge Network[&#128279;](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables)延伸模組身分識別中的`getUrlVariables` API來擷取識別碼做為查詢引數，並在開啟[!DNL webViews]時將其附加至您的URL。
 
 Web SDK不需額外設定，即可接受查詢字串中的`ECID`值。
 

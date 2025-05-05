@@ -45,7 +45,7 @@ ht-degree: 5%
 
 若要使用彈性的對象評估，您必須具備下列許可權：
 
-- **[!UICONTROL 評估區段給&#x200B;**[!DNL Profile Management]**區段下的對象]**。
+- **[!UICONTROL 評估區段給&#x200B;**&#x200B;[!DNL Profile Management]&#x200B;**區段下的對象]**。
 
 如需角色型存取控制的詳細資訊，請閱讀[存取控制總覽](../../access-control/home.md)。
 
@@ -318,7 +318,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 >
 >區段工作的狀態可能會在監視控制面板中報告為「已排入佇列」狀態。 您可以透過向`/segment/jobs`端點發出GET請求，在請求路徑中提供區段作業的ID，來檢視區段作業的最新狀態。 您可以在API標籤中找到有關使用此端點的更多資訊。
 >
->如果您執行彈性對象評估，並希望評估將對象啟用到目的地，您必須確保頻率設定為&#x200B;**[!UICONTROL 區段評估後]**。 針對已設定在區段評估](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動[的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
+>如果您執行彈性對象評估，並希望評估將對象啟用到目的地，您必須確保頻率設定為&#x200B;**[!UICONTROL 區段評估後]**。 針對已設定在區段評估[&#128279;](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
 
 >[!ENDTABS]
 

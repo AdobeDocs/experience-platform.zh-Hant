@@ -49,4 +49,4 @@ ht-degree: 0%
 
 按照本教學課程，您已成功使用目的地工作區刪除現有帳戶。
 
-如需有關如何使用[!DNL Flow Service] API以程式設計方式執行這些操作的步驟，請參閱有關使用流程服務API ](../api/delete-destination-account.md)刪除連線的教學課程[
+如需有關如何使用[!DNL Flow Service] API以程式設計方式執行這些操作的步驟，請參閱有關使用流程服務API [&#128279;](../api/delete-destination-account.md)刪除連線的教學課程

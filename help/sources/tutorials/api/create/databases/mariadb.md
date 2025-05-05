@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ### 使用 Experience Platform API
 
-有關如何成功調用 Experience Platform API 的資訊，請閱讀有關開始使用 Experience Platform API](../../../../../landing/api-guide.md) 指南[。
+有關如何成功調用 Experience Platform API 的資訊，請閱讀有關開始使用 Experience Platform API[&#128279;](../../../../../landing/api-guide.md) 指南。
 
 ## 連接到 [!DNL MariaDB] Azure 上的 Experience Platform {#azure}
 

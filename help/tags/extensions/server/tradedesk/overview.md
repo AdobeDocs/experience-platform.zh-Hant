@@ -114,6 +114,6 @@ ht-degree: 2%
 
 本指南說明如何使用[!DNL The Trade Desk] Real-Time Conversions API擴充功能，將伺服器端事件資料傳送至[!DNL The Trade Desk]。 在此，建議您建立可傳送特定轉換事件（如適用於每個行銷活動）的不同規則，以擴大整合範圍。 如需[!DNL Adobe Experience Platform]中事件轉送功能的詳細資訊，請閱讀[事件轉送概觀](../../../ui/event-forwarding/overview.md)。
 
-如需有關如何有效實作整合的更多指引，請參閱[!DNL The Trade Desk]有關 [!DNL The Trade Desk] 即時轉換API](https://www.facebook.com/business/help/308855623839366?id=818859032317965)的[最佳實務的檔案。
+如需有關如何有效實作整合的更多指引，請參閱[!DNL The Trade Desk]有關 [!DNL The Trade Desk] 即時轉換API[&#128279;](https://www.facebook.com/business/help/308855623839366?id=818859032317965)的最佳實務的檔案。
 
 如需使用Experience Platform偵錯工具與事件轉送監視工具對實作進行偵錯的詳細資訊，請閱讀[Adobe Experience Platform Debugger總覽](../../../../debugger/home.md)與[監視事件轉送中的活動](../../../ui/event-forwarding/monitoring.md)。

@@ -51,11 +51,11 @@ ht-degree: 16%
 
 ![可匯出醒目提示之設定檔對象的Amazon S3目的地頁面。](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
-1. 選取&#x200B;**[!UICONTROL 資料型別[潛在客戶]]**，接著選取您要匯出資料集的目的地連線，然後選取[下一步]]**。**[!UICONTROL 
+1. 選取&#x200B;**[!UICONTROL 資料型別[潛在客戶]]**，接著選取您要匯出資料集的目的地連線，然後選取[下一步]&#x200B;**。**
 
 >[!TIP]
 > 
->如果您想要設定新目的地以啟用潛在客戶對象，請選取[設定新目的地] ]**以觸發[連線到目的地] [工作流程。**(/help/destinations/ui/connect-destination.md)
+>如果您想要設定新目的地以啟用潛在客戶對象，請選取[設定新目的地] &rbrack;**以觸發[連線到目的地] &lbrack;工作流程。**(/help/destinations/ui/connect-destination.md)
 
 ![目標啟用工作流程中反白顯示潛在客戶控制項。](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 

@@ -102,7 +102,7 @@ ht-degree: 9%
 
 ## 匯出的資料 {#exported-data}
 
-如果您使用Adobe Experience Platform](../../../tags/home.md)中的[標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](../../../tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
+如果您使用Adobe Experience Platform[&#128279;](../../../tags/home.md)中的標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](../../../tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
 
 以下是`event.destinations`變數的範例值：
 
@@ -160,9 +160,9 @@ alloy("sendEvent", {
   });
 ```
 
-### 具有屬性]的[!UICONTROL 自訂Personalization的範例回應
+### 具有屬性的自訂Personalization的範例回應
 
-使用具有屬性&#x200B;]**的**[!UICONTROL &#x200B;自訂Personalization時，API回應將與以下範例類似。
+使用具有屬性&#x200B;**的**&#x200B;自訂Personalization時，API回應將與以下範例類似。
 
 **[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;與&#x200B;**[!UICONTROL 自訂Personalization]**&#x200B;之間的差異在於API回應中包含`attributes`區段。
 

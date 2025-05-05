@@ -27,7 +27,7 @@ ht-degree: 0%
 - **資料擷取**：請參閱[資料擷取總覽](../../ingestion/home.md)，瞭解資料如何擷取到Experience Platform的基礎知識，包括所涉及的各種方法和程式。
 - **批次擷取**：請參閱[批次擷取API總覽](../../ingestion/batch-ingestion/overview.md)，瞭解批次擷取的基本概念。 具體來說，什麼是「批次」，以及它在Experience Platform資料擷取流程中的運作方式。
 - **資料集中的系統中繼資料**：請參閱[目錄服務總覽](../../catalog/home.md)，瞭解如何使用系統中繼資料欄位來追蹤和查詢擷取的資料。
-- **Experience Data Model (XDM)**：請參閱[結構描述UI總覽](../../xdm/ui/overview.md)和結構描述組合的基本概念](../../xdm/schema/composition.md)，以瞭解XDM結構描述以及它們如何呈現和驗證擷取到Experience Platform的資料結構和格式。[
+- **Experience Data Model (XDM)**：請參閱[結構描述UI總覽](../../xdm/ui/overview.md)和結構描述組合的基本概念[&#128279;](../../xdm/schema/composition.md)，以瞭解XDM結構描述以及它們如何呈現和驗證擷取到Experience Platform的資料結構和格式。
 
 ## 存取資料集批次中繼資料 {#access-dataset-batch-metadata}
 
@@ -92,7 +92,7 @@ GROUP  BY _acp_system_metadata
 
 >[!TIP]
 >
->若要擷取與該批次ID相關聯的批次ID和查詢記錄，您必須先在Experience Platform中建立批次。 如果您想自行測試此程式，可將CSV資料內嵌至Experience Platform。 閱讀如何使用AI產生的建議](../../ingestion/tutorials/map-csv/recommendations.md)將CSV檔案[對應到現有XDM結構描述的指南。
+>若要擷取與該批次ID相關聯的批次ID和查詢記錄，您必須先在Experience Platform中建立批次。 如果您想自行測試此程式，可將CSV資料內嵌至Experience Platform。 閱讀如何使用AI產生的建議[&#128279;](../../ingestion/tutorials/map-csv/recommendations.md)將CSV檔案對應到現有XDM結構描述的指南。
 
 擷取批次後，您必須針對您擷取資料的資料集，導覽至[!UICONTROL 資料集活動標籤]。
 

@@ -107,7 +107,7 @@ Adobe Experience Platform提供一組強大的標準化[欄位群組](../schema/
 
 ![結構描述編輯器，在標示的標準物件旁有加號圖示。](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
-如需新增自訂欄位的詳細資訊，請參閱UI指南](./resources/schemas.md#custom-fields-for-standard-groups)中的[建立和編輯結構描述。
+如需新增自訂欄位的詳細資訊，請參閱UI指南[&#128279;](./resources/schemas.md#custom-fields-for-standard-groups)中的建立和編輯結構描述。
 
 ## 後續步驟
 

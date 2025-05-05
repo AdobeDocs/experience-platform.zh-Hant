@@ -222,6 +222,7 @@ ht-degree: 1%
      | `xdm: personalEmail.address` | `Attribute: Email` | 連絡人的電子郵件地址。 |
 
    * 以下顯示使用這些對應的範例：
+
      ![Experience Platform UI熒幕擷圖範例顯示Target對應。](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **使用銷售機會**
@@ -238,6 +239,7 @@ ht-degree: 1%
      | `xdm: personalEmail.address` | `Attribute: Email` | 潛在客戶的電子郵件地址。 |
 
    * 以下顯示使用這些對應的範例：
+
      ![Experience Platform UI熒幕擷圖範例顯示Target對應。](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 當您完成提供目的地連線的對應時，請選取&#x200B;**[!UICONTROL 下一步]**。
@@ -253,7 +255,7 @@ ht-degree: 1%
 以下顯示來自[!DNL Salesforce]的自訂欄位範例：
 ![[!DNL Salesforce]顯示自訂欄位的UI熒幕擷圖。](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
-以下顯示指示[!DNL Salesforce CRM] **[!UICONTROL 對應ID]**位置的範例：
+以下顯示指示[!DNL Salesforce CRM] **[!UICONTROL 對應ID]**&#x200B;位置的範例：
 ![Experience Platform UI熒幕擷圖範例，顯示排程對象匯出。](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 如上所示，[!DNL Salesforce] **[!UICONTROL 欄位名稱]**&#x200B;與[!DNL Salesforce CRM] **[!UICONTROL 對應ID]**&#x200B;中指定的值完全相符。
@@ -271,13 +273,13 @@ ht-degree: 1%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**以瀏覽目的地清單。
+1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**&#x200B;以瀏覽目的地清單。
    ![Experience Platform UI熒幕擷圖顯示瀏覽目的地。](../../assets/catalog/crm/salesforce/browse-destinations.png)
 
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL 已啟用]**。
    ![Experience Platform UI熒幕擷圖顯示目的地資料流執行。](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!UICONTROL 啟用資料]**標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!UICONTROL 啟用資料]**&#x200B;標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。
@@ -287,18 +289,22 @@ ht-degree: 1%
 
    **使用連絡人**
 
-   * 如果您已在您的Experience Platform區段中選取&#x200B;*連絡人*，請瀏覽至&#x200B;**[!DNL Apps]** > **[!DNL Contacts]**頁面。
+   * 如果您已在您的Experience Platform區段中選取&#x200B;*連絡人*，請瀏覽至&#x200B;**[!DNL Apps]** > **[!DNL Contacts]**&#x200B;頁面。
+
      ![Salesforce CRM熒幕擷圖顯示含有區段設定檔的「連絡人」頁面。](../../assets/catalog/crm/salesforce/contacts.png)
 
    * 選取&#x200B;*連絡人*&#x200B;並檢查欄位是否已更新。 您可以看到根據[對象排程](#schedule-segment-export-example)期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Salesforce CRM]中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
+
      ![Salesforce CRM熒幕擷取畫面顯示「連絡人詳細資料」頁面，且對象狀態已更新。](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **使用銷售機會**
 
-   * 如果您已在您的Experience Platform區段中選取&#x200B;*銷售機會*，請導覽至&#x200B;**[!DNL Apps]** > **[!DNL Leads]**頁面。
+   * 如果您已在您的Experience Platform區段中選取&#x200B;*銷售機會*，請導覽至&#x200B;**[!DNL Apps]** > **[!DNL Leads]**&#x200B;頁面。
+
      ![Salesforce CRM熒幕擷圖顯示具有區段設定檔的「銷售機會」頁面。](../../assets/catalog/crm/salesforce/leads.png)
 
    * 選取&#x200B;*銷售機會*&#x200B;並檢查欄位是否已更新。 您可以看到根據[對象排程](#schedule-segment-export-example)期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Salesforce CRM]中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
+
      ![Salesforce CRM熒幕擷圖顯示具有更新對象狀態的「銷售機會詳細資訊」頁面。](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## 資料使用與控管 {#data-usage-governance}

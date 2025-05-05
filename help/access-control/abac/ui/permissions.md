@@ -136,7 +136,7 @@ UI中的角色可使用下列篩選器：
 
 ![角色的API認證工作區中，[新增認證]選項已反白顯示。](../../images/flac-ui/flac-api-credentials.png)
 
-**[!UICONTROL 新增API認證]**&#x200B;對話方塊就會顯示。 從清單中選取API認證以新增至角色，然後選取[儲存] ****
+**[!UICONTROL 新增API認證]**&#x200B;對話方塊就會顯示。 從清單中選取API認證以新增至角色，然後選取[儲存] **&#x200B;**
 
 ![已選取[新增API認證]對話方塊，並反白顯示[儲存]選項。](../../images/flac-ui/flac-add-api-credentials.png)
 

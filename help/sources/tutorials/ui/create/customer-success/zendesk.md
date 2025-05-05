@@ -57,7 +57,7 @@ ht-degree: 7%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的&#x200B;*Zendesk*&#x200B;帳戶，然後選取[下一步]]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的&#x200B;*Zendesk*&#x200B;帳戶，然後選取[下一步]&#x200B;**以繼續。**
 
 ![現有](../../../../images/tutorials/create/zendesk/existing.png)
 

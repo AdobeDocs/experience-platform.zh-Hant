@@ -165,6 +165,7 @@ ht-degree: 4%
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * 具有上述對應的範例如下所示：
+
      ![具有屬性對應的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
@@ -200,7 +201,7 @@ ht-degree: 4%
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**&#x200B;並導覽至目的地清單。
-1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL 啟用資料]**標籤，然後選取對象名稱。
+1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL 啟用資料]**&#x200B;標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數與區段中的計數相對應。

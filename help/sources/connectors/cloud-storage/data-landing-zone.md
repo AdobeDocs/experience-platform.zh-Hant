@@ -117,7 +117,7 @@ curl -v -X PUT \
 
 >[!TIP]
 >
->雖然下列範例使用完整SAS URI連線至[!DNL Azure Blob]容器，但您可以使用其他方法和作業來進行驗證。 如需詳細資訊，請參閱Python v12 SDK](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)上的此[[!DNL Microsoft] 檔案。
+>雖然下列範例使用完整SAS URI連線至[!DNL Azure Blob]容器，但您可以使用其他方法和作業來進行驗證。 如需詳細資訊，請參閱Python v12 SDK[&#128279;](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)上的此[!DNL Microsoft] 檔案。
 
 ```py
 import os

@@ -39,7 +39,7 @@ Adobe已發行新的Pinterest目的地卡，此卡會利用Pinterest API v5，�
    ![僅篩選Pinterest帳戶](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
 2. 在&#x200B;**Pinterest**&#x200B;目的地上，選取三點符號……並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取編輯詳細資料](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. 選取&#x200B;**[!UICONTROL 重新連線OAuth]**並登入您的Pinterest帳戶。
+3. 選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並登入您的Pinterest帳戶。
    ![選取重新連線OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. 移至下節中的行動專案
 
@@ -47,7 +47,7 @@ Adobe已發行新的Pinterest目的地卡，此卡會利用Pinterest API v5，�
 
 然後，您需要啟用新&#x200B;**[!UICONTROL Pinterest]**&#x200B;卡的資料流。
 
-1. 移至&#x200B;**[!UICONTROL 目的地>瀏覽]**&#x200B;並在熒幕上使用篩選器以僅篩選&#x200B;**[!UICONTROL Pinterest]**目的地。
+1. 移至&#x200B;**[!UICONTROL 目的地>瀏覽]**&#x200B;並在熒幕上使用篩選器以僅篩選&#x200B;**[!UICONTROL Pinterest]**&#x200B;目的地。
    ![僅在「瀏覽」索引標籤中篩選Pinterest資料流程](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
 2. 選取超連結的連線名稱（以上熒幕擷圖範例中的「忠誠度促銷活動」）至&#x200B;**[!UICONTROL Pinterest]**&#x200B;目的地，並將&#x200B;**[!UICONTROL 啟用]**&#x200B;切換至&#x200B;**開啟**。
    ![開啟新連線，並關閉舊連線](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)

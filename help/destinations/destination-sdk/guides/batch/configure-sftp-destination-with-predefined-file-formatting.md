@@ -17,7 +17,7 @@ ht-degree: 0%
 
 此頁面顯示SFTP目的地可用的所有設定選項。 您可以編輯下列步驟中顯示的組態，或視需要刪除組態的特定部分。
 
-如需底下所用引數的詳細說明，請參閱Destinations SDK](../../functionality/configuration-options.md)中的[組態選項。
+如需底下所用引數的詳細說明，請參閱Destinations SDK[&#128279;](../../functionality/configuration-options.md)中的組態選項。
 
 ## 先決條件 {#prerequisites}
 

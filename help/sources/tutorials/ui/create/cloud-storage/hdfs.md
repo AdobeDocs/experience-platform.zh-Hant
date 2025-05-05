@@ -37,7 +37,7 @@ ht-degree: 2%
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| `url` | URL會定義匿名連線至HDFS所需的驗證引數。 如需有關如何取得此值的詳細資訊，請參閱下列有關HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html)的[HTTPS驗證的檔案。 |
+| `url` | URL會定義匿名連線至HDFS所需的驗證引數。 如需有關如何取得此值的詳細資訊，請參閱下列有關HDFS[&#128279;](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html)的HTTPS驗證的檔案。 |
 
 ## 連線您的HDFS帳戶
 

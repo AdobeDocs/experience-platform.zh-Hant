@@ -59,7 +59,7 @@ ht-degree: 0%
 
 如果要導入和打包方式以用於數據科學工作環境，則必須將源檔打包到存檔檔中。 [按照包源文件進入方式](./package-source-files-recipe.md)教學課程。本教學課程介紹如何將源文件打包到方式中，這是將方式導入數據科學工作環境的先決條件步驟。 教學課程完成後，會在 Azure 容器註冊表中提供 Docker 映射，以及相應的映射URL，換句話說，存檔文件。
 
-此存檔文件可用於在數據科學工作環境中創建方式，方法是使用 UI 工作流程](./import-packaged-recipe-ui.md) 或 [API 工作流程](./import-packaged-recipe-api.md)遵循[方式導入工作流程。
+此存檔文件可用於在數據科學工作環境中創建方式，方法是使用 UI 工作流程[&#128279;](./import-packaged-recipe-ui.md) 或 [API 工作流程](./import-packaged-recipe-api.md)遵循方式導入工作流程。
 
 ## 訓練和評估模型 {#train-and-evaluate-your-model}
 

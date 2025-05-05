@@ -44,7 +44,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->資料必須明確為[!DNL Profile]啟用&#x200B;****，資料才能顯示在此圖表上。 若要瞭解如何啟用[!DNL Profile]的串流資料，請閱讀[資料集使用手冊](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)。
+>資料必須明確為[!DNL Profile]啟用&#x200B;**&#x200B;**，資料才能顯示在此圖表上。 若要瞭解如何啟用[!DNL Profile]的串流資料，請閱讀[資料集使用手冊](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)。
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 

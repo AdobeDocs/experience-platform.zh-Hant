@@ -35,7 +35,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->如果來源和目的地結構描述都屬於相同類別，則不應該使用專用關聯性欄位&#x200B;****。 在此情況下，請使用聯合結構描述UI來檢視關係。 有關如何執行此動作的說明，請參閱聯合結構描述UI指南的[檢視關係](../../profile/ui/union-schema.md#view-relationships)區段。
+>如果來源和目的地結構描述都屬於相同類別，則不應該使用專用關聯性欄位&#x200B;**&#x200B;**。 在此情況下，請使用聯合結構描述UI來檢視關係。 有關如何執行此動作的說明，請參閱聯合結構描述UI指南的[檢視關係](../../profile/ui/union-schema.md#view-relationships)區段。
 
 本檔案提供在[!DNL Experience Platform]使用者介面中使用結構描述編輯器來定義兩個結構描述之間關係的教學課程。 如需使用API定義結構描述關係的步驟，請參閱有關[使用結構描述登入API定義關係的教學課程](relationship-api.md)。
 
@@ -73,7 +73,7 @@ ht-degree: 9%
 
 參考結構描述&quot;[!DNL Hotels]&quot;以自訂&quot;[!DNL Hotels]&quot;類別為基礎，並包含描述飯店的欄位。 為了參與關聯性，參考結構描述也必須定義主要身分並啟用[!UICONTROL 設定檔]。 在這種情況下，`_tenantId.hotelId`會使用自訂&quot;[!DNL Hotel ID]&quot;身分名稱空間，作為結構描述的主要身分。
 
-為設定檔](../images/tutorials/relationship/hotels.png)啟用![
+為設定檔![&#128279;](../images/tutorials/relationship/hotels.png)啟用
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ ht-degree: 9%
 
 ![反白顯示編輯關聯性的結構描述編輯器。](../images/tutorials/relationship/edit-relationship.png)
 
-[!UICONTROL 編輯關係]對話方塊就會顯示。 從此處，您可以依照定義關聯性欄位](#relationship-field)的[中概述的程式，或刪除關聯性。 選取&#x200B;**[!UICONTROL 刪除關係]**&#x200B;以移除與參考結構描述的關係。
+[!UICONTROL 編輯關係]對話方塊就會顯示。 從此處，您可以依照定義關聯性欄位[&#128279;](#relationship-field)的中概述的程式，或刪除關聯性。 選取&#x200B;**[!UICONTROL 刪除關係]**&#x200B;以移除與參考結構描述的關係。
 
 ![編輯關聯性對話方塊。](../images/tutorials/relationship/edit-relationship-dialog.png)
 

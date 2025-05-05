@@ -24,7 +24,7 @@ ht-degree: 3%
 | [!UICONTROL 類別] | `category` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md)的陣列 | 藥物請求的分類或群組。 |
 | [!UICONTROL 治療課程型別] | `courseOfTherapyType` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 對病人用藥管理的整體模式說明。 |
 | [!UICONTROL 裝置] | `device` | [[!UICONTROL 可程式碼參考的陣列]](../data-types/codeable-reference.md) | 用於藥物管理的裝置型別。 |
-| [!UICONTROL 分配要求] | `dispenseRequest` | 物件 | 表示分配要求的特定細節，通常稱為藥物訂單。 如需詳細資訊，請參閱](#dispense-request)下方的[區段。 |
+| [!UICONTROL 分配要求] | `dispenseRequest` | 物件 | 表示分配要求的特定細節，通常稱為藥物訂單。 如需詳細資訊，請參閱[&#128279;](#dispense-request)下方的區段。 |
 | [!UICONTROL 劑量指示] | `dosageInstructions` | [[!UICONTROL 劑量陣列]](../data-types/dosage.md) | 病人要如何使用藥物的具體指示。 |
 | [!UICONTROL 有效劑量期間] | `effectiveDosePeriod` | [[!UICONTROL 週期]](../data-types/period.md) | 接受藥物的時間。 有多個`dosageInstruction`行的地方（例如，當逐漸減少劑量時），這是劑量指示的最早日期和最晚日期。 |
 | [!UICONTROL 相遇] | `encounter` | [[!UICONTROL 參考]](../data-types/reference.md) | 建立請求時的遭遇。 |

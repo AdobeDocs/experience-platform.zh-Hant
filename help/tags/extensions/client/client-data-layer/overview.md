@@ -20,7 +20,7 @@ If you would like to have more details on development consideration, [please rea
 
 若要安裝擴充功能，請導覽至Experience PlatformUI或資料收集UI中的擴充功能目錄，然後選取「Adobe使用者端資料層」 。
 
-目錄](./images/catalog.png)中的![ACDL延伸檢視
+目錄![&#128279;](./images/catalog.png)中的ACDL延伸檢視
 
 <!-- (GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.

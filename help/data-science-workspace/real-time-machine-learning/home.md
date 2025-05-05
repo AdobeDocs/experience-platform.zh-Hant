@@ -49,7 +49,7 @@ Hub和[!DNL Edge]上的無縫計算組合可大幅減少傳統上用於提供相
 
 ### 部署
 
-將模型部署到 ，[!DNL Edge Network]以使用預測 API 終結點在服務庫中]創建即時機器學習服務[!UICONTROL 。
+將模型部署到 ，[!DNL Edge Network]以使用預測 API 終結點在服務庫中創建即時機器學習服務。
 
 ### 推斷
 
@@ -83,4 +83,4 @@ Hub和[!DNL Edge]上的無縫計算組合可大幅減少傳統上用於提供相
 
 ## 後續步驟
 
-您可以按照入門](./getting-started.md)指南開始[。本指南會逐步引導您設定建立Real-time Machine Learning模型的所有必要先決條件。
+您可以按照入門[&#128279;](./getting-started.md)指南開始。本指南會逐步引導您設定建立Real-time Machine Learning模型的所有必要先決條件。

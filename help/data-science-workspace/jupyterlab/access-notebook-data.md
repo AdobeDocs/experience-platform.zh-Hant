@@ -534,7 +534,7 @@ df1.show(10)
 
 您可以使用下列方法，在JupyterLab buy中自動產生上述範例：
 
-在JupyterLab的左側導覽區中選取「資料」圖示標籤（在下方反白顯示）。 **[!UICONTROL 資料集]**&#x200B;和&#x200B;**[!UICONTROL 結構描述]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL 資料集]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL 在筆記本中探索資料]**選項。 筆記本底部會顯示可執行程式碼專案。
+在JupyterLab的左側導覽區中選取「資料」圖示標籤（在下方反白顯示）。 **[!UICONTROL 資料集]**&#x200B;和&#x200B;**[!UICONTROL 結構描述]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL 資料集]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL 在筆記本中探索資料]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
 與
 - 使用&#x200B;**[!UICONTROL 瀏覽筆記本中的資料]**&#x200B;產生讀取儲存格。
 - 使用&#x200B;**[!UICONTROL 在Notebook]**&#x200B;中寫入資料，以產生寫入儲存格。
@@ -641,7 +641,7 @@ timedf.show()
 
 ## 後續步驟
 
-本檔案說明使用JupyterLab Notebook存取資料集的一般准則。 如需查詢資料集的更深入範例，請瀏覽JupyterLab Notebooks](./query-service.md)檔案中的[查詢服務。 如需有關如何探索及視覺化資料集的詳細資訊，請瀏覽檔案： [使用筆記本分析資料](./analyze-your-data.md)。
+本檔案說明使用JupyterLab Notebook存取資料集的一般准則。 如需查詢資料集的更深入範例，請瀏覽JupyterLab Notebooks[&#128279;](./query-service.md)檔案中的查詢服務。 如需有關如何探索及視覺化資料集的詳細資訊，請瀏覽檔案： [使用筆記本分析資料](./analyze-your-data.md)。
 
 ## [!DNL Query Service]的可選SQL標幟 {#optional-sql-flags-for-query-service}
 

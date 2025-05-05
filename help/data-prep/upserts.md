@@ -64,7 +64,7 @@ ht-degree: 0%
 
 * 身分資料集必須具有關聯的結構描述做為[!DNL Profile]資料集。 結構描述不相符可能會導致不一致的系統行為。
 * 不過，您必須確保身分資料集與[!DNL Profile]資料集不同。 如果資料集相同，則會覆寫資料而非更新資料。
-* 雖然必須為[!DNL Profile]啟用初始資料集，但身分資料集&#x200B;**不應為[!DNL Profile]啟用**。 否則，也會覆寫資料，而非更新資料。 但是，應該為[!DNL Identity Service]啟用身分資料集&#x200B;****。
+* 雖然必須為[!DNL Profile]啟用初始資料集，但身分資料集&#x200B;**不應為[!DNL Profile]啟用**。 否則，也會覆寫資料，而非更新資料。 但是，應該為[!DNL Identity Service]啟用身分資料集&#x200B;**&#x200B;**。
 
 #### 與身分資料集相關聯之結構描述中的必填欄位 {#identity-dataset-required-fileds}
 

@@ -67,8 +67,7 @@ curl -X GET \
 根據您的提供者，成功的請求會傳回以下內容：
 
 >[!BEGINTABS]
-
->在Azure]上的[!TAB 回應
+>[!TAB 在Azure上的 回應]
 
 ```json
 {
@@ -83,7 +82,7 @@ curl -X GET \
 | `containerTTL` | 登陸區域內套用至您資料的到期時間（以天為單位）。 指定登陸區域中的任何專案都會在七天後刪除。 |
 
 
->在AWS上[!TAB 回應]
+>[!TAB 在AWS上 回應]
 
 ```json
 {
@@ -131,8 +130,7 @@ curl -X GET \
 根據您的提供者，成功的請求會傳回以下內容：
 
 >[!BEGINTABS]
-
->在Azure]上的[!TAB 回應
+>[!TAB 在Azure上的 回應]
 
 ```json
 {
@@ -152,7 +150,7 @@ curl -X GET \
 | `SASUri` | 您的[!DNL Data Landing Zone]的共用存取權簽章URI。 此字串是[!DNL Data Landing Zone]的URI組合，您要對其驗證以及它對應的SAS權杖。 |
 | `expiryDate` | 您的SAS Token到期的日期。 您必須在到期日之前重新整理您的權杖，才能繼續在您的應用程式中使用它來上傳資料到[!DNL Data Landing Zone]。 如果您未在所述的到期日之前手動重新整理權杖，則會在執行GET認證呼叫時自動重新整理並提供新權杖。 |
 
->在AWS上[!TAB 回應]
+>[!TAB 在AWS上 回應]
 
 ```json
 {

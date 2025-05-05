@@ -40,7 +40,7 @@ ht-degree: 1%
 | `password` | 您的Oracle Service Cloud帳戶密碼。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 Oracle Service Cloud的連線規格ID是： `ba5126ec-c9ac-11eb-b8bc-0242ac130003`。 |
 
-如需驗證您的Oracle Service Cloud帳戶的詳細資訊，請參閱驗證](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html)的[[!DNL Oracle] 指南。
+如需驗證您的Oracle Service Cloud帳戶的詳細資訊，請參閱驗證[&#128279;](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html)的[!DNL Oracle] 指南。
 
 ### 使用Experience Platform API
 

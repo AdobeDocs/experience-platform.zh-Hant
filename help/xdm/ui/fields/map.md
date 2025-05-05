@@ -23,7 +23,7 @@ Adobe Experience Platform可讓您完全自訂自訂Experience Data Model (XDM)�
 
 ![反白顯示[!UICONTROL 對應值型別]下拉式清單的結構描述編輯器。](../../images/ui/fields/special/map-value-type.png)
 
-設定好子欄位後，您必須將其指派給欄位群組。 使用&#x200B;**[!UICONTROL 欄位群組]**&#x200B;下拉式功能表或搜尋欄位，然後選取&#x200B;**[!UICONTROL 套用]**。 您可以使用相同的程式繼續將欄位新增至物件，或選取[儲存]以確認您的設定。****
+設定好子欄位後，您必須將其指派給欄位群組。 使用&#x200B;**[!UICONTROL 欄位群組]**&#x200B;下拉式功能表或搜尋欄位，然後選取&#x200B;**[!UICONTROL 套用]**。 您可以使用相同的程式繼續將欄位新增至物件，或選取[儲存]以確認您的設定。**&#x200B;**
 
 ![正在套用的欄位群組選擇和設定的錄製。](../../images/ui/fields/special/assign-to-field-group.gif)
 

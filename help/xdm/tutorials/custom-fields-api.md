@@ -142,7 +142,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`number`型別用於任何數值型別，可以是整數或浮點數，而[`integer`型別](#integer)則專門用於整數數字。 如需每種型別使用案例的詳細資訊，請參閱數值型別](https://json-schema.org/understanding-json-schema/reference/numeric.html)的[JSON結構描述檔案。
+>`number`型別用於任何數值型別，可以是整數或浮點數，而[`integer`型別](#integer)則專門用於整數數字。 如需每種型別使用案例的詳細資訊，請參閱數值型別[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html)的JSON結構描述檔案。
 
 ## [!UICONTROL 整數] {#integer}
 
@@ -158,7 +158,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->雖然`integer`型別是專門參照整數型別，但[`number`型別](#number)用於任何數值型別，可以是整數或浮點數。 如需每種型別使用案例的詳細資訊，請參閱數值型別](https://json-schema.org/understanding-json-schema/reference/numeric.html)的[JSON結構描述檔案。
+>雖然`integer`型別是專門參照整數型別，但[`number`型別](#number)用於任何數值型別，可以是整數或浮點數。 如需每種型別使用案例的詳細資訊，請參閱數值型別[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html)的JSON結構描述檔案。
 
 您可以將`minimum`和`maximum`屬性新增至定義，選擇性地限制整數的範圍。 結構描述產生器UI支援的其他數位型別只有`integer`個具有特定`minimum`和`maximum`限制條件的型別，例如[[!UICONTROL Long]](#long)、[[!UICONTROL Short]](#short)和[[!UICONTROL Byte]](#byte)。
 

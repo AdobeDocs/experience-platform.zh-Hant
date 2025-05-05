@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 方式建立
 
-配方创建從打包源文件以版本編號存檔文件開始。 來源文件定義了用于解決手頭特定問題的機器學習邏輯和算法，並用R，PySpark或Scala編寫 [!DNL Python]。 構建的存檔檔採用 Docker 映像的形式。 建置後，封裝封存檔案會匯入至[!DNL Data Science Workspace]，以使用API](./import-packaged-recipe-api.md)在UI](./import-packaged-recipe-ui.md)或[中建立配方[。
+配方创建從打包源文件以版本編號存檔文件開始。 來源文件定義了用于解決手頭特定問題的機器學習邏輯和算法，並用R，PySpark或Scala編寫 [!DNL Python]。 構建的存檔檔採用 Docker 映像的形式。 建置後，封裝封存檔案會匯入至[!DNL Data Science Workspace]，以使用API[&#128279;](./import-packaged-recipe-api.md)在UI[&#128279;](./import-packaged-recipe-ui.md)或中建立配方。
 
 ### 基於Docker的模型編寫 {#docker-based-model-authoring}
 
@@ -48,7 +48,7 @@ Docker映像可讓開發人員將應用計畫與其所需的所有部分（例�
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-此時會開啟「 **[!UICONTROL 設定]** 頁面」。 提供適當的 **[!UICONTROL 配方名稱]**，例如「零售銷售方式」 並可選擇提供描述或文檔URL。 完成後，按兩下一個&#x200B;****。
+此時會開啟「 **[!UICONTROL 設定]** 頁面」。 提供適當的 **[!UICONTROL 配方名稱]**，例如「零售銷售方式」 並可選擇提供描述或文檔URL。 完成後，按兩下一個&#x200B;**&#x200B;**。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 

@@ -42,7 +42,7 @@ ht-degree: 1%
 | `clientSecret` | [!DNL Oracle Responsys]執行個體的使用者端密碼。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Oracle Responsys]來源的連線規格識別碼值固定為： `ff4274f2-c9a9-11eb-b8bc-0242ac130003`。 |
 
-如需[!DNL Oracle Responsys]的驗證認證詳細資訊，請參閱驗證](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm)的[[!DNL Oracle Responsys] 指南。
+如需[!DNL Oracle Responsys]的驗證認證詳細資訊，請參閱驗證[&#128279;](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm)的[!DNL Oracle Responsys] 指南。
 
 ### 使用Experience Platform API
 

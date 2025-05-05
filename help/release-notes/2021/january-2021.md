@@ -78,7 +78,7 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 | ------- | ----------- |
 | Adobe Audience Manager來源聯結器增強功能 | 您現在可以從Audience Manager篩選及選取個別第一方區段，以擷取至Experience Platform，並篩選掉第一方特徵。 如需詳細資訊，請參閱有關[建立Audience Manager來源聯結器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的教學課程。 |
 | [!DNL Google BigQuery]來源聯結器增強功能 | 您現在可以使用[!DNL BigQuery]來源聯結器在一次資料流執行中擷取大於10GB的檔案。 如需詳細資訊，請參閱[[!DNL BigQuery] 來源聯結器總覽](../../sources/connectors/databases/bigquery.md)。 |
-| 支援雲端儲存的複雜資料型別 | 使用雲端儲存空間來源聯結器時，您現在可以內嵌複雜的資料型別，例如JSON檔案中的陣列。 如需詳細資訊，請參閱在UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)中建立雲端儲存體資料流[或使用 [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md)建立[的教學課程。 |
+| 支援雲端儲存的複雜資料型別 | 使用雲端儲存空間來源聯結器時，您現在可以內嵌複雜的資料型別，例如JSON檔案中的陣列。 如需詳細資訊，請參閱在UI[&#128279;](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)中建立雲端儲存體資料流[或使用 [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md)建立的教學課程。 |
 | 支援[!DNL Microsoft Dynamics]來源的服務主體金鑰式驗證 | 您現在可以使用服務主要金鑰來驗證您的[!DNL Dynamics]帳戶，作為密碼式驗證的替代方案。 如需詳細資訊，請參閱[[!DNL Dynamics] 來源聯結器總覽](../../sources/connectors/crm/ms-dynamics.md)。 |
 | 雲端儲存空間來源中的自訂分隔符號的UI支援 | 您現在可以設定自訂欄分隔符號，例如逗號(`,`)、定位字元(`\t`)或垂直號(`|`)，以收集使用者介面中的分隔檔案。 如需詳細資訊，請參閱有關[使用雲端儲存空間來源聯結器](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)建立資料流的教學課程 |
 

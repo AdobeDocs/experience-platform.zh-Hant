@@ -24,7 +24,7 @@ Adobe Experience Platform Web SDK會使用Cookie將[Adobe Experience Cloud ID (E
 
 ## 先決條件 {#prerequisites}
 
-開始之前，請確定您已熟悉身分識別資料在Web SDK中的運作方式，包括ECID和`identityMap`。 如需詳細資訊，請參閱網頁SDK](./overview.md)中[身分資料的概觀。
+開始之前，請確定您已熟悉身分識別資料在Web SDK中的運作方式，包括ECID和`identityMap`。 如需詳細資訊，請參閱網頁SDK[&#128279;](./overview.md)中身分資料的概觀。
 
 ## 第一方裝置ID格式需求 {#formatting-requirements}
 
@@ -166,7 +166,7 @@ DNS中的[!DNL CNAME]記錄可讓您建立從某個網域名稱到另一個網�
 >
 >此功能需要您啟用[第一方資料收集](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en)。
 
-**步驟 2.為您的資料流啟用**[!UICONTROL &#x200B;第一方ID Cookie ]**功能**
+**步驟 2.為您的資料流啟用**&#x200B;[!UICONTROL &#x200B;第一方ID Cookie &#x200B;]&#x200B;**功能**
 
 設定CNAME之後，您必須為資料流啟用&#x200B;**[!UICONTROL 第一方ID Cookie]**&#x200B;選項。 此設定可告知Edge Network在查詢第一方裝置ID時參考指定的Cookie，而不是在[身分對應](#identityMap)中查詢此值。
 

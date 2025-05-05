@@ -32,7 +32,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
->每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買&#x200B;**AdobeHealthcare Shield**&#x200B;或&#x200B;**AdobePrivacy &amp; Security Shield**&#x200B;的組織每個月最多可提交600,000個身分記錄刪除。<br>透過UI](../ui/record-delete.md)的單一[記錄刪除請求可讓您一次提交10,000個ID。 用於刪除記錄的API方法允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
+>每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買&#x200B;**AdobeHealthcare Shield**&#x200B;或&#x200B;**AdobePrivacy &amp; Security Shield**&#x200B;的組織每個月最多可提交600,000個身分記錄刪除。<br>透過UI[&#128279;](../ui/record-delete.md)的單一記錄刪除請求可讓您一次提交10,000個ID。 用於刪除記錄的API方法允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
 
 **API格式**
 

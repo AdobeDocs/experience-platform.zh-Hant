@@ -51,7 +51,7 @@ Experience Platform可內嵌來自外部來源的資料，同時允許您使用E
    * 請依照有關[更新您的連線規格](./api/update-connection-specs.md)的教學課程進行。
    * 請依照教學課程中的指示[將新的連線規格ID新增至流程規格](./api/update-flow-specs.md)
    * [送出您的新來源](./api/submit.md)。
-* 若要更深入瞭解連線規格的結構和屬性，請閱讀自助來源(批次SDK)](./config/config.md)的[組態選項指南。
+* 若要更深入瞭解連線規格的結構和屬性，請閱讀自助來源(批次SDK) [&#128279;](./config/config.md)的組態選項指南。
    * 請閱讀[設定驗證規格](./config/authspec.md)的指南，以更清楚瞭解您可以用於來源的不同驗證型別。
    * 請閱讀[設定來源規格](./config/sourcespec.md)的指南，以瞭解可針對來源設定的不同分頁型別、排程格式和自訂結構描述的相關資訊。
    * 請閱讀[設定瀏覽規格](./config/explorespec.md)的指南，瞭解如何定義瀏覽和檢查來源中所含物件所需的引數。

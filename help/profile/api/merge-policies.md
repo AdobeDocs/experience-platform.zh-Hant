@@ -368,7 +368,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `start` | 頁面位移 — 指定要擷取之資料的起始ID。 預設值： 0 |
 | `version` | 如果您要使用特定版本的合併原則，請指定此專案。 依預設，將會使用最新版本。 |
 
-如需`schema.name`、`identityGraph.type`和`attributeMerge.type`的詳細資訊，請參閱本指南前面提供的合併原則](#components-of-merge-policies)的[元件。
+如需`schema.name`、`identityGraph.type`和`attributeMerge.type`的詳細資訊，請參閱本指南前面提供的合併原則[&#128279;](#components-of-merge-policies)的元件。
 
 
 **要求**
@@ -510,7 +510,7 @@ curl -X POST \
 | `isActiveOnEdge` | 指定此合併原則在Edge上是否有效。 |
 | `default` | 指定此合併原則是否為結構描述的預設值。 |
 
-如需詳細資訊，請參閱合併原則](#components-of-merge-policies)的[元件。
+如需詳細資訊，請參閱合併原則[&#128279;](#components-of-merge-policies)的元件。
 
 **回應**
 
@@ -592,7 +592,7 @@ curl -X PATCH \
 | `path` | 要更新的欄位路徑。 接受的值為：「/name」、「/identityGraph.type」、「/attributeMerge.type」、「/schema.name」、「/version」、「/default」、「/isActiveOnEdge」 |
 | `value` | 要設定指定欄位的值。 |
 
-如需詳細資訊，請參閱合併原則](#components-of-merge-policies)的[元件。
+如需詳細資訊，請參閱合併原則[&#128279;](#components-of-merge-policies)的元件。
 
 
 **回應**
@@ -688,7 +688,7 @@ curl -X PUT \
 | `isActiveOnEdge` | 指定此合併原則在Edge上是否有效。 |
 | `default` | 指定此合併原則是否為結構描述的預設值。 |
 
-如需詳細資訊，請參閱合併原則](#components-of-merge-policies)的[元件。
+如需詳細資訊，請參閱合併原則[&#128279;](#components-of-merge-policies)的元件。
 
 **回應**
 
@@ -731,7 +731,7 @@ curl -X PUT \
 
 >[!NOTE]
 >
->如果合併原則已將`isActiveOnEdge`設定為true，則無法刪除合併原則&#x200B;****。 使用[PATCH](#edit-individual-merge-policy-fields)或[PUT](#overwrite-a-merge-policy)端點更新合併原則，然後再刪除它。
+>如果合併原則已將`isActiveOnEdge`設定為true，則無法刪除合併原則&#x200B;**&#x200B;**。 使用[PATCH](#edit-individual-merge-policy-fields)或[PUT](#overwrite-a-merge-policy)端點更新合併原則，然後再刪除它。
 
 **API格式**
 

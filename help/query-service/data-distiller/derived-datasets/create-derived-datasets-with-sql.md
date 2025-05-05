@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 成功執行此陳述式會傳回建立的欄位群組ID。 例如 `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-如需其他方法的詳細資訊，請參閱檔案，瞭解如何在結構描述編輯器](../../../xdm/ui/resources/field-groups.md#create)中[建立新欄位群組[結構描述登入API](../../../xdm/api/field-groups.md#create)。
+如需其他方法的詳細資訊，請參閱檔案，瞭解如何在結構描述編輯器[&#128279;](../../../xdm/ui/resources/field-groups.md#create)中建立新欄位群組[結構描述登入API](../../../xdm/api/field-groups.md#create)。
 
 ### 放置欄位群組
 

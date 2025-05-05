@@ -21,7 +21,7 @@ ht-degree: 1%
 從這裡開始，然後按照下面的連結來瞭解Real-Time CDP各種服務和區域的所有護欄：
 
 * [資料擷取的護欄](/help/ingestion/guardrails.md)
-*  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)的[護欄
+* [!DNL Edge Network API][&#128279;](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)的護欄
 * [ [!DNL Real-Time Customer Profile] 資料和分段的護欄](/help/profile/guardrails.md)
 * [ [!DNL Identity Service] 資料的護欄](/help/identity-service/guardrails.md)
 * [ [!DNL Query Service]的護欄](/help/query-service/guardrails.md)

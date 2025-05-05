@@ -128,7 +128,7 @@ Real-Time CDP、B2B edition可讓您為想要檢視的帳戶輸入&#x200B;**[!UI
 >
 >[!UICONTROL 人員]索引標籤會顯示與該帳戶相關聯的最多25人清單。 若帳戶擁有超過25個關聯人員，則系統顯示25筆記錄的隨機抽樣。
 
-除了顯示連絡人資訊的快照之外，列出的每個人員也包含&#x200B;**[!UICONTROL 設定檔ID]**，這是一個可點按的連結，可讓您探索該個人的即時客戶設定檔。 若要進一步瞭解如何檢視與您的帳戶相關的個別客戶設定檔，請瀏覽指南，以在B2B edition的Real-Time CDP中瀏覽設定檔[](../profile/profile-browse.md)。
+除了顯示連絡人資訊的快照之外，列出的每個人員也包含&#x200B;**[!UICONTROL 設定檔ID]**，這是一個可點按的連結，可讓您探索該個人的即時客戶設定檔。 若要進一步瞭解如何檢視與您的帳戶相關的個別客戶設定檔，請瀏覽指南，以在B2B edition的Real-Time CDP中瀏覽設定檔[&#128279;](../profile/profile-browse.md)。
 
 ![人員索引標籤](images/b2b-account-people.png)
 

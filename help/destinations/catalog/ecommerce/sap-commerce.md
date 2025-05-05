@@ -83,7 +83,7 @@ ht-degree: 3%
 
 若要建立自訂參考，請登入您的[!DNL SAP Subscription Billing]帳戶，並導覽至&#x200B;**[主要資料和組態]** > **[自訂參考]**&#x200B;頁面。 接著，選取「**[!UICONTROL 建立]**」，為Experience Platform中選取的每個對象新增參考。 在後續[排程對象匯出和範例](#schedule-segment-export-example)步驟中，您將需要這些參考欄位名稱。
 
-以下顯示如何在[!DNL SAP Subscription Billing]內建立自訂&#x200B;**[!UICONTROL 參考型別]**的範例：
+以下顯示如何在[!DNL SAP Subscription Billing]內建立自訂&#x200B;**[!UICONTROL 參考型別]**&#x200B;的範例：
 ![顯示在SAP訂閱帳單中建立自訂參考的位置的影像。](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
 如需其他指南，請參閱[!DNL SAP Subscription Billing] [自訂參考資料](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27)檔案。
@@ -215,7 +215,7 @@ ht-degree: 3%
 
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
-1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**類別並選取XDM屬性。
+1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別並選取XDM屬性。
    ![Experience Platform UI熒幕擷圖選取姓氏作為來源屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取自訂屬性]**&#x200B;類別，並從客戶[結構描述](https://api.sap.com/api/BusinessPartner_APIs/schema)屬性清單中輸入[!DNL SAP Subscription Billing]屬性的名稱。
    ![Experience Platform UI熒幕擷取畫面，其中lastName定義為target屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
@@ -281,7 +281,7 @@ ht-degree: 3%
 
 執行[排程對象匯出](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟時，您必須手動將Experience Platform對象對應到[!DNL SAP Subscription Billing]中的[屬性](#prerequisites-attribute)。
 
-以下顯示反白顯示[!DNL SAP Commerce] **[!UICONTROL 對應ID]**位置的排程對象匯出步驟範例：
+以下顯示反白顯示[!DNL SAP Commerce] **[!UICONTROL 對應ID]**&#x200B;位置的排程對象匯出步驟範例：
 ![來自Experience Platform的影像，顯示填入對應ID的排程對象匯出。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 若要這麼做，請選取每個區段，然後在[!DNL SAP Commerce] **[!UICONTROL 對應ID]**&#x200B;目的地聯結器欄位中，輸入來自[!DNL SAP Subscription Billing]的自訂參考名稱。 如需建立自訂參考的指引，請參閱[在 [!DNL SAP Subscription Billing]](#prerequisites-custom-reference)中建立自訂參考區段。
@@ -296,7 +296,7 @@ ht-degree: 3%
 以下顯示來自[!DNL SAP Subscription Billing]的範例&#x200B;**[!UICONTROL 參考型別]**：
 ![顯示在SAP訂閱帳單中建立自訂參考的位置的影像。](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-已選取某個對象，並反白顯示其對應的[!DNL SAP Commerce] **[!UICONTROL 對應ID]**的「排程」對象匯出步驟的範例如下：
+已選取某個對象，並反白顯示其對應的[!DNL SAP Commerce] **[!UICONTROL 對應ID]**&#x200B;的「排程」對象匯出步驟的範例如下：
 ![來自Experience Platform的影像，顯示填入對應ID的排程對象匯出。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
 如圖所示，**[!UICONTROL 對應ID]**&#x200B;欄位中的值應完全符合[!DNL SAP Subscription Billing] **[!UICONTROL 參考型別]**&#x200B;值。
@@ -314,7 +314,7 @@ ht-degree: 3%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-登入[!DNL SAP Subscription Billing]帳戶，然後導覽至&#x200B;**[!UICONTROL 連絡人]**頁面以檢查對象狀態。 清單可設定為顯示自訂參考的欄，並顯示對應的對象狀態。
+登入[!DNL SAP Subscription Billing]帳戶，然後導覽至&#x200B;**[!UICONTROL 連絡人]**&#x200B;頁面以檢查對象狀態。 清單可設定為顯示自訂參考的欄，並顯示對應的對象狀態。
 ![SAP訂閱帳單影像，顯示客戶概觀頁面，其欄標題顯示對象名稱和儲存格對象狀態](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## 資料使用與控管 {#data-usage-governance}

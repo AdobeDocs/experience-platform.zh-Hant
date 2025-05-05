@@ -144,7 +144,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 ![選取核取方塊](./images/data-preparation/set_primary_identity.png)
 
-接下來，您必須從下拉式清單中的預先定義名稱空間清單中提供&#x200B;**[!UICONTROL 身分識別名稱空間]**。 在此範例中，由於正在使用Adobe Audience Manager ID `mcid.id`，因此已選取ECID名稱空間。 選取[套用]****&#x200B;以確認更新，然後在右上角選取[儲存]****&#x200B;以儲存對結構描述的變更。
+接下來，您必須從下拉式清單中的預先定義名稱空間清單中提供&#x200B;**[!UICONTROL 身分識別名稱空間]**。 在此範例中，由於正在使用Adobe Audience Manager ID `mcid.id`，因此已選取ECID名稱空間。 選取[套用]&#x200B;**&#x200B;**&#x200B;以確認更新，然後在右上角選取[儲存]&#x200B;**&#x200B;**&#x200B;以儲存對結構描述的變更。
 
 ![儲存變更](./images/data-preparation/select_namespace.png)
 
@@ -173,7 +173,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 }
 ```
 
-如需`xdm:channel`每個必要子欄位的完整資訊，請參閱[體驗管道結構描述](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md)規格。 如需某些範例對應，請參閱下方](#example-channels)的[表格。
+如需`xdm:channel`每個必要子欄位的完整資訊，請參閱[體驗管道結構描述](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md)規格。 如需某些範例對應，請參閱下方[&#128279;](#example-channels)的表格。
 
 #### 管道對應範例 {#example-channels}
 

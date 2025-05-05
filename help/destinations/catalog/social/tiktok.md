@@ -32,7 +32,7 @@ ht-degree: 3%
 
 您必須擁有[!DNL Admin]或[!DNL Operator]許可權，才能存取您要傳送對象的TikTok Ads Manager帳戶。 如需更多說明，請參閱[TikTok說明中心](https://ads.tiktok.com/help/article/add-users-tiktok-business-center)。
 
-在將資料傳送至您的TikTok Ads Manager帳戶之前，您需要授予Adobe Experience Platform許可權以存取`Audience Management`的廣告帳戶。 在Experience Platform使用者介面中輸入您的廣告管理員ID](#authenticate)，並在重新導向至您的TikTok廣告管理員帳戶後授與許可權，即可提供此許可權。[
+在將資料傳送至您的TikTok Ads Manager帳戶之前，您需要授予Adobe Experience Platform許可權以存取`Audience Management`的廣告帳戶。 在Experience Platform使用者介面中輸入您的廣告管理員ID[&#128279;](#authenticate)，並在重新導向至您的TikTok廣告管理員帳戶後授與許可權，即可提供此許可權。
 
 ## 支援的身分 {#supported-identities}
 

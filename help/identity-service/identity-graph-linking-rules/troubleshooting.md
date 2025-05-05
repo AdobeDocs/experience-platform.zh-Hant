@@ -273,7 +273,7 @@ ORDER BY timestamp desc
    * 您的所有設定檔中沒有單一名稱空間。
    * 發生[「擱置識別碼」](./implementation-guide.md#dangling-loginid-scenario)個狀況。 在此案例中，Identity Service無法判斷暫留ID是否與圖形中的任何個人實體相關聯。
 
-您也可以在UI](./graph-simulation.md)中使用[圖形模擬工具來模擬事件，並設定您自己的唯一名稱空間和名稱空間優先順序設定。 這麼做有助於您基本瞭解身分最佳化演演算法應該如何運作。
+您也可以在UI[&#128279;](./graph-simulation.md)中使用圖形模擬工具來模擬事件，並設定您自己的唯一名稱空間和名稱空間優先順序設定。 這麼做有助於您基本瞭解身分最佳化演演算法應該如何運作。
 
 如果您的模擬結果與圖形行為預期相符，則可以檢查您的[身分設定](./identity-settings-ui.md)是否與您在模擬中設定的設定相符。
 

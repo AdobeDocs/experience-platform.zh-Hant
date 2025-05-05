@@ -52,7 +52,7 @@ b2b.companyName、b2b.companyWebsite和b2b.personKey.sourceKey屬性可位於B2B
 
 workEmail屬性可作為B2B人員結構描述中的頂層欄位群組找到。
 
-顯示workEmail](/help/rtcdp/accounts/images/b2b-person-workemail.png)的![B2B人員結構描述
+顯示workEmail![&#128279;](/help/rtcdp/accounts/images/b2b-person-workemail.png)的B2B人員結構描述
 
 只有在符合分數超過內部信賴臨界值時，才會最符合設定檔。 結果會儲存在現有帳戶個人關係XDM的新系統資料集中。
 
@@ -74,4 +74,4 @@ workEmail屬性可作為B2B人員結構描述中的頂層欄位群組找到。
 
 您可以透過控制面板監控任何銷售線索與帳戶比對工作的工作狀態和相關測量結果。
 
-請參閱檔案以取得有關潛在客戶與帳戶相符](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)的[監視工作的詳細資訊。
+請參閱檔案以取得有關潛在客戶與帳戶相符[&#128279;](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)的監視工作的詳細資訊。

@@ -186,4 +186,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已使用[!DNL Flow Service] API建立[!DNL SFTP]連線，並已取得連線的唯一ID值。 您可以使用此連線ID來使用Flow Service API](../../explore/cloud-storage.md) [探索雲端儲存空間。
+依照本教學課程中的指示，您已使用[!DNL Flow Service] API建立[!DNL SFTP]連線，並已取得連線的唯一ID值。 您可以使用此連線ID來使用Flow Service API[&#128279;](../../explore/cloud-storage.md) 探索雲端儲存空間。

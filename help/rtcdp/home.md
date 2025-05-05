@@ -17,7 +17,7 @@ ht-degree: 15%
 
 ## 新增功能？ {#whats-new}
 
-瞭解Real-Time CDP產品和檔案的最新增強功能。 如需功能、改進項目與修正的完整清單，請參閱詳細的[發行說明](/help/release-notes/latest/latest.md)。請造訪每月發行說明](/help/release-notes/latest/latest.md#documentation-updates)的[檔案更新區段，隨時掌握檔案的最新變更。
+瞭解Real-Time CDP產品和檔案的最新增強功能。 如需功能、改進項目與修正的完整清單，請參閱詳細的[發行說明](/help/release-notes/latest/latest.md)。請造訪每月發行說明[&#128279;](/help/release-notes/latest/latest.md#documentation-updates)的檔案更新區段，隨時掌握檔案的最新變更。
 
 >[!BEGINTABS]
 
@@ -47,7 +47,7 @@ ht-degree: 15%
 
 >[!TAB 資料匯出]
 
-資料集匯出功能現已正式推出。 檢視您可根據所購買的Experience Platform應用程式](../destinations/ui/export-datasets.md#datasets-to-export)匯出哪些資料集[，並檢查匯出資料集的[護欄](/help/destinations/guardrails.md#dataset-exports)。
+資料集匯出功能現已正式推出。 檢視您可根據所購買的Experience Platform應用程式[&#128279;](../destinations/ui/export-datasets.md#datasets-to-export)匯出哪些資料集，並檢查匯出資料集的[護欄](/help/destinations/guardrails.md#dataset-exports)。
 
 [![影像](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 

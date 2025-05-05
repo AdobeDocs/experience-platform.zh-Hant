@@ -70,8 +70,8 @@ ht-degree: 0%
 
 1. [根據您組織的原則設定 [!DNL Azure] 金鑰儲存庫](./azure/azure-key-vault-config.md)，然後[產生加密金鑰](./azure/azure-key-vault-config.md#generate-a-key)以與Adobe共用。
 1. 透過[API呼叫](./azure/api-set-up.md#register-app)或[UI](./azure/ui-set-up.md#register-app)與您的[!DNL Azure]租使用者設定CMK App。
-1. 將您的加密金鑰ID傳送到Adobe，並啟動該功能的啟用程式（在UI](./azure/ui-set-up.md#send-to-adobe)中[或使用[API呼叫](./azure/api-set-up.md#send-to-adobe)）。
-1. 檢查組態的狀態，以確認UI](./azure/ui-set-up.md#check-status)中的[或使用[API呼叫](./azure/api-set-up.md#check-status)是否已啟用CMK。
+1. 將您的加密金鑰ID傳送到Adobe，並啟動該功能的啟用程式（在UI[&#128279;](./azure/ui-set-up.md#send-to-adobe)中或使用[API呼叫](./azure/api-set-up.md#send-to-adobe)）。
+1. 檢查組態的狀態，以確認UI[&#128279;](./azure/ui-set-up.md#check-status)中的或使用[API呼叫](./azure/api-set-up.md#check-status)是否已啟用CMK。
 
 完成Azure代管的Experience Platform執行個體的設定程式後，所有沙箱上線到Experience Platform的所有資料都將使用您的[!DNL Azure]金鑰設定進行加密。 若要使用CMK，您將善用[!DNL Microsoft Azure]功能，這些功能可能是其[公開預覽方案](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/)的一部分。
 

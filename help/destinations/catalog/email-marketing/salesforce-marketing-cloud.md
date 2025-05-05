@@ -62,12 +62,12 @@ ht-degree: 2%
 
 在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
 
-* 對於使用密碼&#x200B;]**連線的**[!UICONTROL  SFTP，您必須提供：
+* 對於使用密碼&#x200B;**連線的** SFTP，您必須提供：
    * **[!UICONTROL 網域]**：您SFTP帳戶的IP位址或網域名稱；
    * **[!UICONTROL 連線埠]**：您的SFTP儲存位置所使用的連線埠；
    * **[!UICONTROL 使用者名稱]**：要登入SFTP儲存位置的使用者名稱；
    * **[!UICONTROL 密碼]**：登入SFTP儲存位置的密碼。
-* 針對使用SSH金鑰&#x200B;]**連線的**[!UICONTROL  SFTP，您必須提供：
+* 針對使用SSH金鑰&#x200B;**連線的** SFTP，您必須提供：
    * **[!UICONTROL 網域]**：您SFTP帳戶的IP位址或網域名稱；
    * **[!UICONTROL 連線埠]**：您的SFTP儲存位置所使用的連線埠；
    * **[!UICONTROL 使用者名稱]**：要登入SFTP儲存位置的使用者名稱；

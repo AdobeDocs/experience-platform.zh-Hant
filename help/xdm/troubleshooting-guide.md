@@ -15,7 +15,7 @@ ht-degree: 0%
 
 本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model] (XDM)和XDM系統的常見問題解答，包括常見錯誤的疑難排解指南。 有關其他Experience Platform服務的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-**[!DNL Experience Data Model](XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取[!DNL Experience Platform]內的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
+**[!DNL Experience Data Model] (XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取[!DNL Experience Platform]內的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
 ## 常見問題集
 
@@ -69,7 +69,7 @@ XDM對於此資料型別的使用有下列限制：
 - 多實體分段只能根據對應索引鍵而不是值來定義。
 - 帳戶對象不支援地圖。
 
-如需詳細資訊，請參閱對應物件](./ui/fields/map.md#restrictions)的[使用限制。
+如需詳細資訊，請參閱對應物件[&#128279;](./ui/fields/map.md#restrictions)的使用限制。
 
 >[!NOTE]
 >
@@ -136,7 +136,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### 將Adobe Analytics資料匯入為來源時，是否針對設定檔啟用自動建立的結構描述？
 
-結構描述不會自動為即時客戶設定檔啟用。 您需要根據為設定檔啟用的結構描述，為設定檔明確啟用資料集。 請參閱檔案以瞭解啟用資料集以用於Real-Time Customer Profile](../catalog/datasets/user-guide.md#enable-profile)所需的[步驟和要求。
+結構描述不會自動為即時客戶設定檔啟用。 您需要根據為設定檔啟用的結構描述，為設定檔明確啟用資料集。 請參閱檔案以瞭解啟用資料集以用於Real-Time Customer Profile[&#128279;](../catalog/datasets/user-guide.md#enable-profile)所需的步驟和要求。
 
 ### 我可以刪除已啟用設定檔的結構描述嗎？
 

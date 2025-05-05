@@ -35,8 +35,8 @@ Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)目的地可讓您與�
 
 * DSP帳戶層級和促銷活動層級設定可啟用與[!DNL LiveRamp RampID]的對象共用，這會將客戶資料轉譯為[!DNL RampIDs]以建立可定位的區段。 您的DSP帳戶團隊將執行此設定。 [!DNL RampID]可透過DSP與[!DNL LiveRamp]之間的合作關係使用，而且您不需要自己的[!DNL LiveRamp]成員資格即可使用。
 * Experience Platform帳戶的Experience Cloud組織ID。 您可以在[!DNL Real-Time CDP]使用者設定檔頁面上找到您的識別碼。
-* DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)中用於接收促銷活動啟用對象的[[!DNL Real-Time CDP] 來源。 您的DSP帳戶團隊將使用您的Experience Cloud組織ID建立來源。
-* DSP帳戶或廣告商的來源金鑰，是在DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)中建立[[!DNL Real-Time CDP] 來源時產生的。 您的DSP帳戶團隊將會與您共用此金鑰。 您將在Experience Platform中使用它來建立與Advertising Cloud DSP目的地的目的地連線，如下文[所述](#authenticate)。
+* DSP[&#128279;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)中用於接收促銷活動啟用對象的[!DNL Real-Time CDP] 來源。 您的DSP帳戶團隊將使用您的Experience Cloud組織ID建立來源。
+* DSP帳戶或廣告商的來源金鑰，是在DSP[&#128279;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)中建立[!DNL Real-Time CDP] 來源時產生的。 您的DSP帳戶團隊將會與您共用此金鑰。 您將在Experience Platform中使用它來建立與Advertising Cloud DSP目的地的目的地連線，如下文[所述](#authenticate)。
 * 由電子郵件或雜湊電子郵件組成的客戶資料。
 
 ## 支援的身分 {#supported-identities}
@@ -72,7 +72,7 @@ Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 深入�
 
 若要連線到目的地，請在[!UICONTROL 連線型別]區段中提供下列引數，然後選取&#x200B;**[!UICONTROL 連線到目的地]**：
 
-* **[!UICONTROL 帳戶或廣告商金鑰]**：在DSP使用者介面](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)中建立[[!DNL Real-Time CDP] 來源時，會產生此[!UICONTROL Source金鑰]。 您的DSP帳戶團隊會在建立來源後，與您共用此金鑰。
+* **[!UICONTROL 帳戶或廣告商金鑰]**：在DSP使用者介面[&#128279;](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)中建立[!DNL Real-Time CDP] 來源時，會產生此[!UICONTROL Source金鑰]。 您的DSP帳戶團隊會在建立來源後，與您共用此金鑰。
 
 ![連線型別欄位](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

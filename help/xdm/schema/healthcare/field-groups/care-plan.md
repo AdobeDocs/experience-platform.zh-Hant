@@ -20,7 +20,7 @@ ht-degree: 4%
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- | --- |
-| [!UICONTROL 活動] | `activity` | 物件陣列 | 識別已發生或計畫作為計畫的一部分發生的動作。 如需詳細資訊，請參閱](#activity)下方的[區段。 |
+| [!UICONTROL 活動] | `activity` | 物件陣列 | 識別已發生或計畫作為計畫的一部分發生的動作。 如需詳細資訊，請參閱[&#128279;](#activity)下方的區段。 |
 | [!UICONTROL 個地址] | `addresses` | [[!UICONTROL 可程式碼參考的陣列]](../data-types/codeable-reference.md) | 識別照護計畫處理的條件或疑慮。 |
 | [!UICONTROL 根據] | `basedOn` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 由此照護計畫全部或部分履行的較高層級要求資源。 |
 | [!UICONTROL 服務團隊] | `careTeam` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 識別預期將參與此計畫所設想的照護的所有人員和組織。 |

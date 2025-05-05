@@ -39,7 +39,7 @@ ht-degree: 1%
 | `password` | 與您的[!DNL Oracle Eloqua]使用者名稱對應的密碼。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Oracle Eloqua]來源的連線規格識別碼值固定為： `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`。 |
 
-如需[!DNL Oracle Eloqua]的驗證認證詳細資訊，請參閱驗證](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)的[[!DNL Oracle Eloqua] 指南。
+如需[!DNL Oracle Eloqua]的驗證認證詳細資訊，請參閱驗證[&#128279;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)的[!DNL Oracle Eloqua] 指南。
 
 ### 使用Experience Platform API
 

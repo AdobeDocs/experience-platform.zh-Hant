@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Privacy Service]會根據法律和組織隱私�
 
 >[!NOTE]
 >
->本指南僅涵蓋如何在Experience Platform中提出資料湖的隱私權請求。 如果您也打算向即時客戶設定檔資料存放區提出隱私權請求，除了本教學課程外，另請參閱有關為設定檔](../profile/privacy.md)處理[隱私權請求的指南。
+>本指南僅涵蓋如何在Experience Platform中提出資料湖的隱私權請求。 如果您也打算向即時客戶設定檔資料存放區提出隱私權請求，除了本教學課程外，另請參閱有關為設定檔[&#128279;](../profile/privacy.md)處理隱私權請求的指南。
 >
 >如需如何對其他Adobe Experience Cloud應用程式提出隱私權要求的步驟，請參閱[Privacy Service檔案](../privacy-service/experience-cloud-apps.md)。
 
@@ -206,13 +206,13 @@ curl -X POST \
 
 當[!DNL Experience Platform]收到來自[!DNL Privacy Service]的刪除請求時，[!DNL Experience Platform]會傳送確認給[!DNL Privacy Service]，確認已收到該請求且受影響的資料已標示為刪除。 這些記錄接著會在七天內從資料湖中移除。 在這七天期間，資料會軟刪除，因此無法由任何[!DNL Experience Platform]服務存取。
 
-如果您也將`ProfileService`或`identity`包含在隱私權請求中，則會分別處理其相關資料。 如需詳細資訊，請參閱有關設定檔](../profile/privacy.md#delete)的[刪除請求處理的章節。
+如果您也將`ProfileService`或`identity`包含在隱私權請求中，則會分別處理其相關資料。 如需詳細資訊，請參閱有關設定檔[&#128279;](../profile/privacy.md#delete)的刪除請求處理的章節。
 
 ## 後續步驟
 
 閱讀本檔案後，您便可瞭解處理Data Lake隱私權請求的重要概念。 建議您繼續閱讀本指南提供的檔案，以加深您對如何管理身分資料和建立隱私權工作的瞭解。
 
-如需處理[!DNL Profile]存放區之隱私權要求的步驟，請參閱即時客戶設定檔](../profile/privacy.md)的[隱私權要求處理檔案。
+如需處理[!DNL Profile]存放區之隱私權要求的步驟，請參閱即時客戶設定檔[&#128279;](../profile/privacy.md)的隱私權要求處理檔案。
 
 ## 附錄
 

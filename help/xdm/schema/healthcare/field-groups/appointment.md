@@ -28,12 +28,12 @@ ht-degree: 5%
 | [!UICONTROL 識別碼] | `identifier` | [[!UICONTROL 識別碼]](../data-types/identifier.md)的陣列 | 連結至約會的不重複識別碼清單。 這些識別碼是根據商業規則指派的，或是不適合連至約會的直接URL連結時指派的。 |
 | [!UICONTROL 備註] | `note` | [[!UICONTROL 註解]](../data-types/annotation.md)的陣列 | 關於約會的其他附註或註解。 |
 | [!UICONTROL 原始約會] | `originatingAppointment` | [[!UICONTROL 參考]](../data-types/reference.md) | 週期性相關約會集中的原始約會。 |
-| [!UICONTROL 參與者] | `participant` | 物件陣列 | 參與約會的參與者清單。 如需詳細資訊，請參閱](#participant)下方的[區段。 |
+| [!UICONTROL 參與者] | `participant` | 物件陣列 | 參與約會的參與者清單。 如需詳細資訊，請參閱[&#128279;](#participant)下方的區段。 |
 | [!UICONTROL 病人指示] | `patientInstruction` | [[!UICONTROL 可程式碼參考的陣列]](../data-types/reference.md) | 和約會相關的診斷。 |
 | [!UICONTROL 先前的約會] | `previousAppointment` | [[!UICONTROL 參考]](../data-types/reference.md) | 一系列相關約會中的前一個約會。 |
 | [!UICONTROL 優先順序] | `priority` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 預約的優先順序，當需要重新排定預約的優先順序時，可用來做出明智的決策。 iCal Standard將`0`指定為未定義，`1`指定為最高優先順序，`9`指定為最低優先順序。 |
 | [!UICONTROL 原因] | `reason` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md)的陣列 | 排定約會的原因，通常是條件或程式。 |
-| [!UICONTROL 週期性範本] | `recurrenceTemplate` | 物件陣列 | 包含用於建立週期性約會的週期性模式或範本的詳細資料。  如需詳細資訊，請參閱](#recurrence)下方的[區段。 |
+| [!UICONTROL 週期性範本] | `recurrenceTemplate` | 物件陣列 | 包含用於建立週期性約會的週期性模式或範本的詳細資料。  如需詳細資訊，請參閱[&#128279;](#recurrence)下方的區段。 |
 | [!UICONTROL 取代] | `replaces` | [[!UICONTROL 參考]](../data-types/reference.md)的陣列 | 此約會正在取代的約會。 如果有取消，可以在參考資源的`cancellationReason`屬性中找到取消的詳細資料。 |
 | [!UICONTROL 要求的期間] | `requestedPeriod` | [[!UICONTROL 週期]](../data-types/period.md)的陣列 | 偏好排程約會的一組日期範圍（可能包括時間）。 |
 | [!UICONTROL 服務類別] | `serviceCategory` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md)的陣列 | 在約會期間要執行之服務的廣泛分類。 |
@@ -81,10 +81,10 @@ ht-degree: 5%
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- | --- |
-| [!UICONTROL 每月範本] | `monthlyTemplate` | 物件陣列 | 每月週期性約會的相關資訊。 如需詳細資訊，請參閱](#monthly-template)下方的[區段。 |
+| [!UICONTROL 每月範本] | `monthlyTemplate` | 物件陣列 | 每月週期性約會的相關資訊。 如需詳細資訊，請參閱[&#128279;](#monthly-template)下方的區段。 |
 | [!UICONTROL 週期型別] | `recurrenceType` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 約會序列應該遞回的頻率，例如每週、每月或每年。 |
 | [!UICONTROL 時區] | `timezone` | [[!UICONTROL 可程式碼概念]](../data-types/codeable-concept.md) | 週期性約會的時區。 |
-| [!UICONTROL 每週範本] | `weeklyTemplate` | 物件陣列 | 每週週期性約會的相關資訊。 如需詳細資訊，請參閱](#weekly-template)下方的[區段。 |
+| [!UICONTROL 每週範本] | `weeklyTemplate` | 物件陣列 | 每週週期性約會的相關資訊。 如需詳細資訊，請參閱[&#128279;](#weekly-template)下方的區段。 |
 | [!UICONTROL 每年範本] | `yearlyTemplate` | 物件 | 每年週期性約會的相關資訊。 包含一個屬性`yearInterval`，其整數值表示約會每隔n年發生。 |
 | [!UICONTROL 排除日期] | `excludingDate` | 日期陣列 | 任何應從週期中排除的日期，例如假日。 |
 | [!UICONTROL 排除週期識別碼] | `excludingRecurrenceId` | 整數陣列 | 任何應從週期中排除的週期ID。 這是`excludingDate`的替代方法，您指示要排除的約會`reccurenceID`。 |

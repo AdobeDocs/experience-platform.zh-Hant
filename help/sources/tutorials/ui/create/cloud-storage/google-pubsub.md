@@ -73,7 +73,7 @@ ht-degree: 1%
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL PubSub]帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL PubSub]帳戶，然後選取[下一步] **以繼續。**
 
 ![來源工作流程中的現有帳戶選擇。](../../../../images/tutorials/create/google-pubsub/existing.png)
 
@@ -108,7 +108,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->指派給[!DNL PubSub]專案的主體（角色）會繼承[!DNL PubSub]專案內建立的所有主題和訂閱。 如果您希望主參與者（角色）能夠存取特定主題，則也必須將該主參與者（角色）新增到主題的對應訂閱中。 如需詳細資訊，請閱讀有關存取控制](<https://cloud.google.com/pubsub/docs/access-control>)的[[!DNL PubSub] 檔案。
+>指派給[!DNL PubSub]專案的主體（角色）會繼承[!DNL PubSub]專案內建立的所有主題和訂閱。 如果您希望主參與者（角色）能夠存取特定主題，則也必須將該主參與者（角色）新增到主題的對應訂閱中。 如需詳細資訊，請閱讀有關存取控制[&#128279;](<https://cloud.google.com/pubsub/docs/access-control>)的[!DNL PubSub] 檔案。
 
 ## 選取資料
 

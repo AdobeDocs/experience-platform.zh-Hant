@@ -39,7 +39,7 @@ ht-degree: 6%
 
    ![啟用目的地目錄中醒目提示的控制項。](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] ****。
+1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
 
    ![選取目的地步驟中反白顯示的目的地連線。](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 

@@ -63,7 +63,7 @@ Experience Platform會使用加密的金鑰連線至您的SFTP網站。 正確�
 >
 >標籤組建的結構已隨著時間而改變。 它們在內部使用符號連結(symlink)來維持回溯相容性，以便舊版內嵌程式碼繼續與最新的組建結構搭配使用。 您的SFTP伺服器必須支援使用symlink，才能當做標籤組建的有效目的地。
 
-如需更多詳細資訊，請參閱以下Medium文章，瞭解如何設定SFTP伺服器以傳遞組建](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6)。[
+如需更多詳細資訊，請參閱以下Medium文章，瞭解如何設定SFTP伺服器以傳遞組建[&#128279;](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6)。
 
 ## 建立 SFTP 主機 {#create}
 

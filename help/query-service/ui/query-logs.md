@@ -33,7 +33,7 @@ Adobe Experience Platform會維護透過API和UI發生的所有查詢事件的�
 
 ![搜尋列與管理資料行表格下拉式清單反白顯示的查詢記錄工作區。](../images/ui/query-log/customize-logs.png)
 
-每個記錄資料表資料行](./overview.md#log)的[描述可在查詢服務概觀的[記錄]區段中找到。
+每個記錄資料表資料行[&#128279;](./overview.md#log)的描述可在查詢服務概觀的[記錄]區段中找到。
 
 ## 探索記錄檔資料
 

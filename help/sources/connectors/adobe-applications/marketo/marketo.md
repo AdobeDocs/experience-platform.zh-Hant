@@ -85,7 +85,7 @@ XDM是公開記錄的規格，提供通用結構和定義，可讓您從協力�
 
 下列檔案提供有關建立[!DNL Marketo Engage]來源連線的進一步資訊：
 
-* 如需如何將[!DNL Marketo Engage]資料連線至Experience Platform的詳細資訊，請參閱在UI](../../../tutorials/ui/create/adobe-applications/marketo.md)中建立[來源連線的教學課程。 [!DNL Marketo Engage] 
+* 如需如何將[!DNL Marketo Engage]資料連線至Experience Platform的詳細資訊，請參閱在UI[&#128279;](../../../tutorials/ui/create/adobe-applications/marketo.md)中建立來源連線的教學課程。 [!DNL Marketo Engage] 
    * 如需如何設定結構描述和內嵌自訂活動資料的詳細資訊，請閱讀有關[為 [!DNL Marketo Engage] 自訂活動資料建立來源連線和資料流的教學課程](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
    * 如需有關如何將ECID對應從[!DNL Person]資料集移轉至[!DNL Activity]資料集的資訊，請參閱[ECID對應移轉指南](./migration.md)。
 * 如需搭配[!DNL Marketo Engage]使用B2B名稱空間和結構描述的基礎設定資訊，請閱讀[B2B名稱空間和結構描述](./marketo-namespaces.md)的檔案。

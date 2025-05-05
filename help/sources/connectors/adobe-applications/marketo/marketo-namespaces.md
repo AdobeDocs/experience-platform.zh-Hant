@@ -125,4 +125,4 @@ Experience Platform使用結構描述，以一致且可重複使用的方式說�
 
 ## 後續步驟
 
-若要瞭解如何將您的[!DNL Marketo]資料連線到Experience Platform，請參閱有關在UI中建立Marketo來源聯結器的教學課程[](../../../tutorials/ui/create/adobe-applications/marketo.md)。
+若要瞭解如何將您的[!DNL Marketo]資料連線到Experience Platform，請參閱有關在UI中建立Marketo來源聯結器的教學課程[&#128279;](../../../tutorials/ui/create/adobe-applications/marketo.md)。

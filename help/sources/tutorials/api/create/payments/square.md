@@ -38,7 +38,7 @@ ht-degree: 4%
 | `refreshToken` | 重新整理權杖會在您目前的存取權杖過期後，用來產生新的存取權杖。 可從[!DNL Square]取得重新整理權杖。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Square]的連線規格識別碼為： `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` |
 
-如需這些認證以及如何取得認證的詳細資訊，請參閱OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens)上的[[!DNL Square] 檔案。
+如需這些認證以及如何取得認證的詳細資訊，請參閱OAuth[&#128279;](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens)上的[!DNL Square] 檔案。
 
 ### 使用Experience Platform API
 
@@ -110,4 +110,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已使用[!DNL Flow Service] API建立[!DNL Square]連線，並已取得連線的唯一ID值。 您可在下一個教學課程中使用此ID，瞭解如何使用Flow Service API](../../explore/payments.md)來探索[付款應用程式。
+依照本教學課程中的指示，您已使用[!DNL Flow Service] API建立[!DNL Square]連線，並已取得連線的唯一ID值。 您可在下一個教學課程中使用此ID，瞭解如何使用Flow Service API[&#128279;](../../explore/payments.md)來探索付款應用程式。

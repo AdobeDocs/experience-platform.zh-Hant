@@ -26,7 +26,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -71,7 +71,7 @@ Adobe使用類似[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本�
 |---|---|---|
 | `httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 支援的方法： `GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
 | `templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
-| `value` | 字串 | *必要。*&#x200B;此字串是範本的字元逸出版本，可將Experience Platform傳送的HTTP要求格式化為您目的地預期的格式。 <br>如需如何撰寫範本的詳細資訊，請使用範本](message-format.md#using-templating)閱讀[上的區段。 <br>如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 <br>如需簡單轉換的範例，請參閱[設定檔屬性](message-format.md#attributes)轉換。 |
+| `value` | 字串 | *必要。*&#x200B;此字串是範本的字元逸出版本，可將Experience Platform傳送的HTTP要求格式化為您目的地預期的格式。 <br>如需如何撰寫範本的詳細資訊，請使用範本[&#128279;](message-format.md#using-templating)閱讀上的區段。 <br>如需字元逸出的詳細資訊，請參閱[RFC JSON標準第7節](https://tools.ietf.org/html/rfc8259#section-7)。 <br>如需簡單轉換的範例，請參閱[設定檔屬性](message-format.md#attributes)轉換。 |
 | `contentType` | 字串 | *必要。*&#x200B;您的伺服器接受的內容型別。 視轉換範本產生的輸出型別而定，這可以是任何支援的[HTTP應用程式內容型別](https://www.iana.org/assignments/media-types/media-types.xhtml#application)。 在大多數情況下，這個值應該設定為`application/json`。 |
 
 {style="table-layout:auto"}

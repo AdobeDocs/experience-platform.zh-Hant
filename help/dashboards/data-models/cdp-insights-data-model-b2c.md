@@ -100,7 +100,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 依身分割槽分的[!UICONTROL 設定檔] Widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 如需詳細資訊，請參閱[[!UICONTROL 依身分割槽分的設定檔] Widget檔案](../guides/profiles.md#profiles-by-identity)。
 
-可摺疊的區段顯示依身分]介面產生[!UICONTROL 設定檔的SQL。
+可摺疊的區段顯示依身分介面產生設定檔的SQL。
 
 +++SQL查詢
 
@@ -122,9 +122,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### 依身分使用案例區分的單一身分設定檔 {#single-identity-profiles-by-identity}
 
-依身分]用於[!UICONTROL 單一身分設定檔的邏輯Widget可說明僅以單一唯一識別碼識別的設定檔總數。 如需詳細資訊，請參閱依身分Widget檔案的[單一身分設定檔](../guides/profiles.md#single-identity-profiles-by-identity)。
+依身分用於單一身分設定檔的邏輯Widget可說明僅以單一唯一識別碼識別的設定檔總數。 如需詳細資訊，請參閱依身分Widget檔案的[單一身分設定檔](../guides/profiles.md#single-identity-profiles-by-identity)。
 
-可摺疊的區段顯示透過身分]介面產生[!UICONTROL 單一身分設定檔的SQL。
+可摺疊的區段顯示透過身分介面產生單一身分設定檔的SQL。
 
 +++SQL查詢
 
@@ -291,9 +291,9 @@ LIMIT
 
 #### 依對象使用案例的身分割槽分的設定檔 {#audience-profiles-by-identity}
 
-依身分]設定檔中的[!UICONTROL 設定檔所使用的邏輯，會針對指定對象，提供設定檔存放區中所有合併設定檔的身分劃分。 如需詳細資訊，請參閱[[!UICONTROL 依身分割槽分的設定檔] Widget檔案](../guides/audiences.md#profiles-by-identity)。
+依身分設定檔中的設定檔所使用的邏輯，會針對指定對象，提供設定檔存放區中所有合併設定檔的身分劃分。 如需詳細資訊，請參閱[[!UICONTROL 依身分割槽分的設定檔] Widget檔案](../guides/audiences.md#profiles-by-identity)。
 
-可摺疊的區段顯示依身分]介面產生[!UICONTROL 設定檔的SQL。
+可摺疊的區段顯示依身分介面產生設定檔的SQL。
 
 +++SQL查詢
 
@@ -327,7 +327,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### 身分重疊（設定檔）使用案例 {#profiles-identity-overlap}
 
-[!UICONTROL 身分重疊] Widget中使用的邏輯會顯示您&#x200B;**設定檔存放區**&#x200B;中包含兩個所選身分的設定檔重疊。 如需詳細資訊，請參閱[!UICONTROL 設定檔]儀表板檔案](../guides/profiles.md#identity-overlap)的[[!UICONTROL 身分重疊] Widget區段。
+[!UICONTROL 身分重疊] Widget中使用的邏輯會顯示您&#x200B;**設定檔存放區**&#x200B;中包含兩個所選身分的設定檔重疊。 如需詳細資訊，請參閱[!UICONTROL 設定檔]儀表板檔案[&#128279;](../guides/profiles.md#identity-overlap)的[!UICONTROL 身分重疊] Widget區段。
 
 可摺疊的區段顯示產生[!UICONTROL 身分重疊] Widget的SQL。
 
@@ -396,7 +396,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 #### 身分重疊（對象）使用案例 {#audiences-identity-overlap}
 
-在[!UICONTROL 對象]儀表板[!UICONTROL 身分重疊]介面工具中使用的邏輯可說明包含特定對象之兩個所選身分的設定檔重疊。 如需詳細資訊，請參閱[!UICONTROL 對象]儀表板檔案](../guides/audiences.md#identity-overlap)的[[!UICONTROL 身分重疊] Widget區段。
+在[!UICONTROL 對象]儀表板[!UICONTROL 身分重疊]介面工具中使用的邏輯可說明包含特定對象之兩個所選身分的設定檔重疊。 如需詳細資訊，請參閱[!UICONTROL 對象]儀表板檔案[&#128279;](../guides/audiences.md#identity-overlap)的[!UICONTROL 身分重疊] Widget區段。
 
 可摺疊的區段顯示產生[!UICONTROL 身分重疊] Widget的SQL。
 

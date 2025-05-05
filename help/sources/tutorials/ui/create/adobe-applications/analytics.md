@@ -28,7 +28,7 @@ ht-degree: 3%
 * **標準屬性**：標準屬性是Adobe預先定義的任何屬性。 它們對所有客戶都包含相同涵義，並且可在[!DNL Analytics]來源資料和[!DNL Analytics]結構描述欄位群組中使用。
 * **自訂屬性**：自訂屬性是[!DNL Analytics]中自訂變數階層中的任何屬性。 自訂屬性用於Adobe Analytics實作，將特定資訊擷取至報表套裝，各報表套裝的屬性使用方式可能有所不同。 自訂屬性包括eVar、prop和清單。 如需有關eVar的詳細資訊，請參閱下列[[!DNL Analytics] 轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)檔案。
 * **自訂欄位群組中的任何屬性**：源自客戶建立的欄位群組的屬性都是使用者定義的，且不屬於標準或自訂屬性。
-* **易記名稱**：易記名稱是[!DNL Analytics]實作中自訂變數的人工標籤。 如需易記名稱的詳細資訊，請參閱下列有關轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)的[[!DNL Analytics] 檔案。
+* **易記名稱**：易記名稱是[!DNL Analytics]實作中自訂變數的人工標籤。 如需易記名稱的詳細資訊，請參閱下列有關轉換變數[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)的[!DNL Analytics] 檔案。
 
 ## 建立與Adobe Analytics的來源連線
 
@@ -67,7 +67,7 @@ ht-degree: 3%
 >
 >只有在沒有資料衝突(例如兩個具有不同含義的自訂屬性（eVar、清單和prop）)時，才能為即時客戶個人檔案啟用多個報表套裝的資料。
 
-若要建立[!DNL Analytics]來源連線，請選取報告套裝，然後選取[下一步] ]**以繼續。**[!UICONTROL 
+若要建立[!DNL Analytics]來源連線，請選取報告套裝，然後選取[下一步] **以繼續。**
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 

@@ -191,7 +191,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 ### 接受傳入摘要
 
-若要檢視傳入摘要，請從[!UICONTROL 摘要]頁面的標頭中選取&#x200B;**[!UICONTROL 已接收]**，然後從清單中選取您要檢視的摘要。 若要接受摘要，請選取設定檔&#x200B;]**的**[!UICONTROL &#x200B;啟用，並等待一段時間讓狀態從[!UICONTROL 擱置中]更新為[!UICONTROL 已啟用]。
+若要檢視傳入摘要，請從[!UICONTROL 摘要]頁面的標頭中選取&#x200B;**[!UICONTROL 已接收]**，然後從清單中選取您要檢視的摘要。 若要接受摘要，請選取設定檔&#x200B;**的**&#x200B;啟用，並等待一段時間讓狀態從[!UICONTROL 擱置中]更新為[!UICONTROL 已啟用]。
 
 ![已接收.png](./images/received.png)
 

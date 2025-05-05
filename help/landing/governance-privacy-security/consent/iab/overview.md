@@ -245,7 +245,7 @@ TCF 2.0也要求資料來源在將資料傳送至目的地之前，必須先檢�
 
 >[!NOTE]
 >
->任何與Adobe Audience Manager共用的區段都會包含與其Experience Platform對應區段相同的TCF 2.0同意值。 由於[!DNL Audience Manager]與Experience Platform (565)共用相同的廠商ID，因此需要相同的用途和廠商許可權。 如需詳細資訊，請參閱適用於IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=zh-Hant)的[Adobe Audience Manager外掛程式上的檔案。
+>任何與Adobe Audience Manager共用的區段都會包含與其Experience Platform對應區段相同的TCF 2.0同意值。 由於[!DNL Audience Manager]與Experience Platform (565)共用相同的廠商ID，因此需要相同的用途和廠商許可權。 如需詳細資訊，請參閱適用於IAB TCF[&#128279;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=zh-Hant)的Adobe Audience Manager外掛程式上的檔案。
 
 ## 測試您的實作 {#test-implementation}
 

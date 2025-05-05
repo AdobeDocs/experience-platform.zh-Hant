@@ -23,7 +23,7 @@ ht-degree: 0%
   ],
 ```
 
-如需底下所用引數的詳細說明，請參閱Destinations SDK](../../functionality/configuration-options.md)中的[組態選項。
+如需底下所用引數的詳細說明，請參閱Destinations SDK[&#128279;](../../functionality/configuration-options.md)中的組態選項。
 
 ## 先決條件 {#prerequisites}
 

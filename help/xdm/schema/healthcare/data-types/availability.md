@@ -20,8 +20,8 @@ ht-degree: 9%
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- | --- |
-| [!UICONTROL 可用時間] | `availableTime` | 物件陣列 | 專案可用的時間。 如需詳細資訊，請參閱](#available-time)下方的[區段。 |
-| [!UICONTROL 無法使用時間] | `notAvailableTime` | 字串 | 無法使用專案的時間，並提供原因。 如需詳細資訊，請參閱](#not-available-time)下方的[區段。 |
+| [!UICONTROL 可用時間] | `availableTime` | 物件陣列 | 專案可用的時間。 如需詳細資訊，請參閱[&#128279;](#available-time)下方的區段。 |
+| [!UICONTROL 無法使用時間] | `notAvailableTime` | 字串 | 無法使用專案的時間，並提供原因。 如需詳細資訊，請參閱[&#128279;](#not-available-time)下方的區段。 |
 
 如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 

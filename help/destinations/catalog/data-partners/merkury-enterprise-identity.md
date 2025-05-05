@@ -125,7 +125,7 @@ ht-degree: 3%
 >
 >選取CSV選項時，將會顯示分隔符號、引號字元、逸出字元、空值、空值、壓縮格式以及包含資訊清單檔案選項，請洽詢您的Merkury團隊，以取得您帳戶的適當設定。
 
-csv選項](../../assets/catalog/data-partners/merkury-identity/media/image8.png)的![影像
+csv選項![&#128279;](../../assets/catalog/data-partners/merkury-identity/media/image8.png)的影像
 
 ### 現有帳戶
 

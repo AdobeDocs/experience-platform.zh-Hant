@@ -20,7 +20,7 @@ ht-degree: 5%
 Experience Platform Debugger可搭配其他Adobe啟用解決方案使用，以執行下列作業：
 
 1. 使用[標籤](../tags/home.md)插入會在您的頁面上啟用[Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=zh-Hant)產品的程式碼。
-1. 使用Experience Platform Debugger中的[**[!UICONTROL Auditor ]**索引標籤](./auditor/overview.md)來測試您的實作。
+1. 使用Experience Platform Debugger中的[**[!UICONTROL Auditor &#x200B;]**&#x200B;索引標籤](./auditor/overview.md)來測試您的實作。
 1. 在Experience Platform Debugger中使用事件型和解決方案專用工具，針對Auditor發現的問題偵錯，或檢查實作的其他相關資訊。
 
 >[!NOTE]

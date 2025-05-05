@@ -28,7 +28,7 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-最後，您必須為API權杖建立事件轉送密碼。 將密碼型別設定為&#x200B;**[!UICONTROL Token]**，並將值設定為您從Zendesk設定收集的API Token。 如需設定密碼的詳細資訊，請參閱事件轉送](../../../ui/event-forwarding/secrets.md)中[密碼的檔案。
+最後，您必須為API權杖建立事件轉送密碼。 將密碼型別設定為&#x200B;**[!UICONTROL Token]**，並將值設定為您從Zendesk設定收集的API Token。 如需設定密碼的詳細資訊，請參閱事件轉送[&#128279;](../../../ui/event-forwarding/secrets.md)中密碼的檔案。
 
 ## 安裝擴充功能 {#install}
 
@@ -66,7 +66,7 @@ ht-degree: 4%
 
 ### `event`個金鑰
 
-`event`是JSON物件，代表使用者觸發的事件。 請參閱事件](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)的[解剖結構上的Zendesk檔案，以瞭解`event`物件所擷取屬性的詳細資訊。
+`event`是JSON物件，代表使用者觸發的事件。 請參閱事件[&#128279;](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)的解剖結構上的Zendesk檔案，以瞭解`event`物件所擷取屬性的詳細資訊。
 
 當對應至資料元素時，可在`event`物件中參考下列索引鍵：
 
@@ -86,7 +86,7 @@ ht-degree: 4%
 
 ### `profile`個金鑰
 
-`profile`是JSON物件，代表觸發事件的使用者。 如需有關`profile`物件所擷取屬性的詳細資訊，請參閱個人資料](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)的[解剖結構上的Zendesk檔案。
+`profile`是JSON物件，代表觸發事件的使用者。 如需有關`profile`物件所擷取屬性的詳細資訊，請參閱個人資料[&#128279;](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)的解剖結構上的Zendesk檔案。
 
 當對應至資料元素時，可在`profile`物件中參考下列索引鍵：
 

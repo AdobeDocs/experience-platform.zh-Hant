@@ -26,7 +26,7 @@ ht-degree: 0%
 1. 選取所需的標籤屬性。
 1. 導覽至&#x200B;**[!UICONTROL 擴充功能]**，然後按一下[!UICONTROL Adobe Experience Platform Web SDK]卡片上的&#x200B;**[!UICONTROL 設定]**。
 1. 向下捲動至[!UICONTROL Personalization]區段，然後選取按鈕&#x200B;**[!UICONTROL 提供預先隱藏樣式]**。
-1. 此按鈕會開啟含有CSS編輯器的模型視窗。 插入所需的CSS選取器和宣告區塊，然後按一下[儲存]以關閉模型視窗。****
+1. 此按鈕會開啟含有CSS編輯器的模型視窗。 插入所需的CSS選取器和宣告區塊，然後按一下[儲存]以關閉模型視窗。**&#x200B;**
 1. 按一下擴充功能設定下的&#x200B;**[!UICONTROL [儲存]**]，然後發佈您的變更。
 
 ## 使用Web SDK JavaScript程式庫預先隱藏樣式

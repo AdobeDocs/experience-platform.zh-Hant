@@ -103,13 +103,13 @@ Safari預設會在Safari &lt; 12中停用第三方Cookie。 由於您的[!DNL Ju
 !pip install {LIBRARY_NAME}
 ```
 
-如需預先安裝的[!DNL Python]程式庫的完整清單，請參閱JupyterLab使用手冊](./jupyterlab/overview.md#supported-libraries)的[附錄區段。
+如需預先安裝的[!DNL Python]程式庫的完整清單，請參閱JupyterLab使用手冊[&#128279;](./jupyterlab/overview.md#supported-libraries)的附錄區段。
 
 ## 我可以安裝自訂PySpark程式庫嗎？
 
 很遺憾，您無法為PySpark核心安裝其他程式庫。 不過，您可以聯絡Adobe客戶服務代表，為您安裝自訂PySpark程式庫。
 
-如需預先安裝的PySpark程式庫清單，請參閱JupyterLab使用手冊](./jupyterlab/overview.md#supported-libraries)的[附錄區段。
+如需預先安裝的PySpark程式庫清單，請參閱JupyterLab使用手冊[&#128279;](./jupyterlab/overview.md#supported-libraries)的附錄區段。
 
 ## 可以為[!DNL JupyterLab] [!DNL Spark]或PySpark核心設定[!DNL Spark]叢集資源嗎？
 

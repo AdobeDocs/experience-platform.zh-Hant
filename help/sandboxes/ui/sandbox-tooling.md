@@ -157,7 +157,7 @@ ht-degree: 7%
 
 若要使用現有物件，請選取相依物件旁的鉛筆圖示。
 
-![封裝物件與相依性]頁面會顯示包含在封裝中的資產清單。](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)[!UICONTROL 
+![封裝物件與相依性]頁面會顯示包含在封裝中的資產清單。(../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
 隨即顯示建立新或使用現有專案的選項。 選取&#x200B;**[!UICONTROL 使用現有的]**。
 
@@ -169,7 +169,7 @@ ht-degree: 7%
 
 您返回到[!UICONTROL 封裝物件和相依性]頁面。 從這裡，選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成封裝匯入。
 
-![封裝物件和相依性[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示[!UICONTROL 完成]。](../images/ui/sandbox-tooling/finish-object-dependencies.png)]
+![封裝物件和相依性[[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示[!UICONTROL 完成]。]](../images/ui/sandbox-tooling/finish-object-dependencies.png)]
 
 ## 匯出和匯入整個沙箱
 

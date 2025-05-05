@@ -40,7 +40,7 @@ disable additional URLs for a while
 若要使用計算欄位進行資料轉換：
 
 1. [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地。 連線到所需的雲端目的地時，將&#x200B;**[!UICONTROL 匯出陣列、對應、物件]** [選項關閉](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)。
-2. 進行雲端儲存空間目的地](/help/destinations/ui/activate-batch-profile-destinations.md)的[啟動步驟，並前往[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。
+2. 進行雲端儲存空間目的地[&#128279;](/help/destinations/ui/activate-batch-profile-destinations.md)的啟動步驟，並前往[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。
 
 ## 如何使用計算欄位 {#how-to-export-calculated-fields}
 
@@ -105,7 +105,7 @@ disable additional URLs for a while
 
 ## 用來執行資料轉換的函式範例 {#examples}
 
-如需上述部分函式，請參閱以下章節中的範例和進一步資訊。 如需列出的其餘函式，請參閱「資料準備」區段](/help/data-prep/functions.md)中的[一般函式檔案。
+如需上述部分函式，請參閱以下章節中的範例和進一步資訊。 如需列出的其餘函式，請參閱「資料準備」區段[&#128279;](/help/data-prep/functions.md)中的一般函式檔案。
 
 ### `array_to_string`函式以匯出陣列 {#array-to-string-function-export-arrays}
 

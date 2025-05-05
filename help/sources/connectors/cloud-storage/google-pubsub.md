@@ -31,7 +31,7 @@ Adobe Experience Platform為[!DNL AWS]、[!DNL Google Cloud Platform]和[!DNL Az
 * 一方面，服務帳戶是&#x200B;**主參與者** — 您可以授與服務帳戶對[!DNL Google Cloud]資源的存取權。 例如，您可以在指定專案上授與服務帳戶運算管理員角色`(roles/compute.admin)`。 如此一來，服務帳戶就能在該特定專案中管理運算引擎資源。
 * 另一方面，服務帳戶也是資源 — 您可以授予其他主體存取服務帳戶的許可權。 例如，您可以授與使用者服務帳戶上的服務帳戶使用者角色`(roles/iam.serviceAccountUser)`，讓使用者將該服務帳戶附加至資源。 或者，您可以授與使用者服務帳戶管理員角色`(roles/iam.serviceAccountAdmin)`，讓使用者完成檢視、編輯、停用和刪除服務帳戶等工作。
 
-如需針對使用案例決定正確驗證型別的詳細資訊，請閱讀驗證方法](https://cloud.google.com/docs/authentication)的[[!DNL Google] 指南。
+如需針對使用案例決定正確驗證型別的詳細資訊，請閱讀驗證方法[&#128279;](https://cloud.google.com/docs/authentication)的[!DNL Google] 指南。
 
 請依照下列步驟建立服務帳戶：
 

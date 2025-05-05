@@ -24,7 +24,7 @@ ht-degree: 3%
 
 ### Authentication
 
-閱讀 [!DNL Snowflake] 串流資料](../../../../connectors/databases/snowflake-streaming.md)的[必要條件設定指南，瞭解從[!DNL Snowflake]擷取串流資料至Experience Platform前，您需要完成的步驟相關資訊。
+閱讀 [!DNL Snowflake] 串流資料[&#128279;](../../../../connectors/databases/snowflake-streaming.md)的必要條件設定指南，瞭解從[!DNL Snowflake]擷取串流資料至Experience Platform前，您需要完成的步驟相關資訊。
 
 ## 使用[!DNL Snowflake Streaming]來源將[!DNL Snowflake]資料串流到Experience Platform
 
@@ -78,7 +78,7 @@ ht-degree: 3%
 >
 >* 時間戳記欄必須存在於您的來源表格中，才能建立串流資料流。 Experience Platform需要時間戳記才能知道何時會擷取資料，以及何時會串流增量資料。 您可以回溯性地為現有連線新增時間戳記欄，並建立新的資料流。
 >
->* 確保範例來源資料檔中的資料欄位大小寫符合[!DNL Snowflake]對於識別碼大小寫解決的指引。 如需詳細資訊，請閱讀識別碼大小寫](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing)上的[[!DNL Snowflake] 檔案。
+>* 確保範例來源資料檔中的資料欄位大小寫符合[!DNL Snowflake]對於識別碼大小寫解決的指引。 如需詳細資訊，請閱讀識別碼大小寫[&#128279;](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing)上的[!DNL Snowflake] 檔案。
 
 [!UICONTROL 選取資料]步驟隨即顯示。 在此步驟中，您必須選取要匯入Experience Platform的資料、設定時間戳記和時區，並提供用於擷取原始資料的範例來源資料檔案。
 
@@ -184,4 +184,4 @@ ht-degree: 3%
 
 ### 刪除您的資料流
 
-您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI](../../delete.md)中刪除資料流[。
+您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[&#128279;](../../delete.md)中刪除資料流。

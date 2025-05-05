@@ -22,7 +22,7 @@ ht-degree: 1%
 此教學課程需要您實際瞭解[!DNL Experience Platform]的下列元件：
 
 * [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
-   * 您至少必須瞭解XDM](../../../xdm/home.md#data-behaviors)中[行為的概念，才能決定要將資料對應至[!UICONTROL 設定檔]類別（記錄行為）或[!UICONTROL ExperienceEvent]類別（時間序列行為）。
+   * 您至少必須瞭解XDM[&#128279;](../../../xdm/home.md#data-behaviors)中行為的概念，才能決定要將資料對應至[!UICONTROL 設定檔]類別（記錄行為）或[!UICONTROL ExperienceEvent]類別（時間序列行為）。
 * [批次擷取](../../batch-ingestion/overview.md)： [!DNL Experience Platform]從使用者提供的資料檔擷取資料的方法。
 * [Adobe Experience Platform資料準備](../../batch-ingestion/overview.md)：功能套件，可讓您對應及轉換擷取的資料，以符合XDM結構描述。 有關[資料準備函式](../../../data-prep/functions.md)的檔案與結構描述對應特別相關。
 

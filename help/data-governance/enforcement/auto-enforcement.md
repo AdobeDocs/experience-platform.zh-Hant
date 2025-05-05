@@ -122,7 +122,7 @@ ht-degree: 0%
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-將對象啟用至目的地時，您可以在[!UICONTROL 啟用目的地]工作流程](#pre-activation-evaluation)的[檢閱階段中，瞭解您的[同意原則](../policies/user-guide.md)如何影響對象的觸及範圍。
+將對象啟用至目的地時，您可以在[!UICONTROL 啟用目的地]工作流程[&#128279;](#pre-activation-evaluation)的檢閱階段中，瞭解您的[同意原則](../policies/user-guide.md)如何影響對象的觸及範圍。
 
 >[!NOTE]
 >

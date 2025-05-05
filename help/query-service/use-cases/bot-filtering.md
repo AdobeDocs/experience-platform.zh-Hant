@@ -23,7 +23,7 @@ ht-degree: 5%
 
 在此過程中，您需要訓練機器學習模型，本檔案假設您具備一或多個機器學習環境的工作知識。
 
-此範例使用[!DNL Jupyter Notebook]作為開發環境。 雖然有許多可用選項，但建議使用[!DNL Jupyter Notebook]，因為它是運算需求低的開放原始碼Web應用程式。 可從官方網站](https://jupyter.org/)下載[。
+此範例使用[!DNL Jupyter Notebook]作為開發環境。 雖然有許多可用選項，但建議使用[!DNL Jupyter Notebook]，因為它是運算需求低的開放原始碼Web應用程式。 可從官方網站[&#128279;](https://jupyter.org/)下載。
 
 ## 使用[!DNL Query Service]定義機器人活動的臨界值
 

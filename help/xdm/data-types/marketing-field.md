@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >此資料型別旨在使用[[!UICONTROL 同意和偏好設定]欄位群組](../field-groups/profile/consents.md)做為基準，用來自訂您組織的同意結構描述的結構。
 >
->如果您需要特定行銷偏好設定欄位的`subscriptions`對應，則必須改用具有訂閱資料型別](./marketing-field-subscriptions.md)的[行銷欄位。
+>如果您需要特定行銷偏好設定欄位的`subscriptions`對應，則必須改用具有訂閱資料型別[&#128279;](./marketing-field-subscriptions.md)的行銷欄位。
 
 ![](../images/data-types/marketing-field.png)
 
