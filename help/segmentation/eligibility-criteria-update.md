@@ -3,17 +3,17 @@ title: 分段適用性標準更新
 description: 瞭解分段適用性標準更新，這些更新會影響可使用串流和邊緣分段來評估的對象型別。
 hide: true
 hidefromtoc: true
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
+source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # 分段適用性標準更新
 
-自2024年9月24日起，將進行兩項會影響細分資格的更新。
+自2025年5月23日起，將進行兩項會影響細分資格的更新。
 
 1. 串流和邊緣細分查詢型別
 2. 串流和邊緣細分合併原則
