@@ -2,7 +2,7 @@
 title: 驗證及存取Reactor API
 description: 瞭解如何開始使用Reactor API，包括產生所需存取憑證的步驟。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 31e52dce23c558aaba822fe27d2e58ed6a7ce18d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 3%
@@ -16,6 +16,8 @@ ht-degree: 3%
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
+* `Accept: application/vnd.api+json;revision=1`
+* `Content-Type: application/vnd.api+json`
 
 本指南說明如何使用Adobe Developer Console收集這些標題的值，以便您開始呼叫Reactor API。
 
@@ -51,7 +53,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**&#x200B;方法，因為這是日後唯一支援的方法。 **[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將持續運作，Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在[!BADGE 已棄用]一節中取得詳細資訊{type=negative}[在Experience Platform API驗證教學課程中產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt)。
+>選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**&#x200B;方法，因為這是日後唯一支援的方法。 **[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將持續運作，Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在Experience Platform API驗證教學課程的[!BADGE 已棄用]{type=negative} [產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt)一節中取得詳細資訊。
 
 選取&#x200B;**「下一步」**&#x200B;以繼續。
 
