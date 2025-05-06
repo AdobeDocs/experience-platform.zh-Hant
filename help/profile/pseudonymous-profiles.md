@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 假名設定檔資料有效期
 description: 本檔案提供在Adobe Experience Platform中設定假名設定檔資料到期日的一般指引。
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
+source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1264'
 ht-degree: 4%
 
 ---
@@ -43,8 +43,9 @@ ht-degree: 4%
 >
 >- 管理設定檔設定
 >- 檢視設定檔
+>- 檢視身分識別名稱空間
 >
->**管理設定檔設定**&#x200B;許可權可讓您設定資料有效期，而&#x200B;**檢視設定檔**&#x200B;許可權則可讓您檢視資料有效期。
+>**管理設定檔設定**&#x200B;許可權可讓您設定資料有效期，**檢視設定檔**&#x200B;許可權可讓您檢視資料有效期，**檢視身分名稱空間**&#x200B;許可權可讓您檢視可用的身分名稱空間。
 >
 >您可以在[存取控制總覽](../access-control/home.md#permissions)中找到Experience Platform內許可權的詳細資訊。
 
