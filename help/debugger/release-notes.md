@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
+source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 92%
+source-wordcount: '864'
+ht-degree: 91%
 
 ---
 
 # Adobe Experience Platform Debugger 發行說明
+
+## 1.6.4版 — 2025年5月6日
+
+### 修正和改良
+
+* 修正無法登入的問題。
 
 ## 1.6.3版 — 2025年4月30日
 
@@ -31,7 +37,7 @@ ht-degree: 92%
 
 ### 修正和改良
 
-* 已修正讓使用者無法將新標記內嵌程式碼新增至沒有程式碼頁面的問題。
+* 已修正讓使用者無法將新標記嵌入程式碼新增至沒有程式碼頁面的問題。
 
 ## 版本 1.6.0 - 2024 年 7 月 11 日
 
