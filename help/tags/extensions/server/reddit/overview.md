@@ -15,7 +15,7 @@ Reddit是一個擁有多元化使用者基礎的社群媒體平台，非常適�
 
 使用[[!DNL Reddit] Conversions API擴充功能](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API)，將Adobe Experience Platform Edge Network中擷取的使用者互動事件傳送至[!DNL Reddit Ads]。 使用此擴充功能協助您的品牌觸及超過3.79億每週活躍使用者的受眾，並更能瞭解使用者行為和執行鎖定目標的廣告。
 
-閱讀本指南，瞭解如何在事件轉送[規則](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules)中安裝、設定和使用[!DNL Reddit] Conversions API擴充功能。
+閱讀本指南，瞭解如何在事件轉送[規則](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/ui/rules)中安裝、設定和使用[!DNL Reddit] Conversions API擴充功能。
 
 ## 主要優點 {#benefits}
 
@@ -42,7 +42,7 @@ Reddit是一個擁有多元化使用者基礎的社群媒體平台，非常適�
 
 請依照下列步驟安裝和設定[!DNL Reddit] Conversions API擴充功能：
 
-1. 在Experience Platform資料收集UI中，從左側導覽選取[!UICONTROL 擴充功能]以存取[!UICONTROL 擴充功能]目錄。 然後[建立新的事件轉送屬性](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties)或選取現有的屬性。
+1. 在Experience Platform資料收集UI中，從左側導覽選取[!UICONTROL 擴充功能]以存取[!UICONTROL 擴充功能]目錄。 然後[建立新的事件轉送屬性](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/event-forwarding/overview#properties)或選取現有的屬性。
 2. 在左側導覽面板中導覽至&#x200B;**[!UICONTROL 擴充功能]**。 選取&#x200B;**[!UICONTROL 目錄]**，然後選取&#x200B;**[!DNL Reddit]**&#x200B;副檔名。
    ![反白顯示Reddit擴充功能的Adobe Experience Platform擴充功能目錄。](../../../images/extensions/server/reddit/reddit-extension.png)
 3. 提供下列設定詳細資料：
@@ -55,7 +55,7 @@ Reddit是一個擁有多元化使用者基礎的社群媒體平台，非常適�
 
 在您設定資料元素後，請建立事件轉送規則，以判斷將事件傳送至[!DNL Reddit Ads]的時間和方式。
 
-1. 導覽至事件轉送屬性中的&#x200B;**規則**，並建立新的[規則](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules)。
+1. 導覽至事件轉送屬性中的&#x200B;**規則**，並建立新的[規則](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/ui/rules)。
 2. 在&#x200B;**動作**&#x200B;底下，新增動作並將擴充功能設為&#x200B;**[!DNL Reddit CAPI]**。
 3. 將&#x200B;**動作型別**&#x200B;設定為&#x200B;**傳送事件**。
    ![Reddit Conversions API擴充功能的事件轉送規則設定介面，並反白顯示擴充功能和動作型別欄位。](../../../images/extensions/server/reddit/reddit-rule.png)
