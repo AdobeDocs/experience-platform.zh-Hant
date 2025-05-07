@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1886'
 ht-degree: 6%
 
 ---
@@ -113,7 +113,7 @@ ht-degree: 6%
 
 如果您的系統傳送兩個人員識別碼，則實作可能會讓單一人員名稱空間需求失效。 例如，如果webSDK實作中的identityMap包含CRMID、customerID和ECID名稱空間，就無法保證每個單一事件都會包含CRMID和customerID。
 
-理想情況下，您應該傳送類似下列的裝載：
+您應該&#x200B;**不**&#x200B;傳送如下裝載：
 
 ```json
 {
