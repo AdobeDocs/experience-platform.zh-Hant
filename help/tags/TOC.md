@@ -6,9 +6,9 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3bd3ef14cd0bd2c079c1c881a70865b067f28341
+source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '780'
 ht-degree: 36%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 36%
       * [SFTP主機](./ui/publishing/hosts/sftp-host.md)
    * 環境 {#environments}
       * [概觀](./ui/publishing/environments.md)
-      * [使用 Adobe Experience Platform Debugger 測試內嵌程式碼](./ui/publishing/embed-code-testing.md)
+      * [使用 Adobe Experience Platform Debugger 測試嵌入程式碼](./ui/publishing/embed-code-testing.md)
    * [組建](./ui/publishing/builds.md)
    * [程式庫](./ui/publishing/libraries.md)
    * [自行託管程式庫](./ui/publishing/hosts/self-hosting-libraries.md)
@@ -200,7 +200,7 @@ ht-degree: 36%
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [工作階段攝影機](https://exchange.adobe.com/apps/ec/100517)
       * [儲存扳手](https://exchange.adobe.com/apps/ec/102990)
-      * [依回圈水平線的標籤](https://exchange.adobe.com/apps/ec/106092)
+      * 依回圈水平線的[標籤](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium集合](https://exchange.adobe.com/apps/ec/104217)
       * [Tealium資料擴充](https://exchange.adobe.com/apps/ec/104217)
       * [TMMData Foundation平台](https://exchange.adobe.com/apps/ec/100148)
@@ -219,46 +219,48 @@ ht-degree: 36%
          * [概觀](./extensions/server/cloud-connector/overview.md)
          * [發行說明](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
-         * [概述](./extensions/server/adform/overview.md)
+         * [概觀](./extensions/server/adform/overview.md)
       * [!DNL Amazon] {#amazon}
-         * [概述](./extensions/server/amazon/overview.md)
+         * [概觀](./extensions/server/amazon/overview.md)
       * [!DNL AWS] {#aws}
-         * [概述](./extensions/server/aws/overview.md)
+         * [概觀](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
-         * [概述](./extensions/server/braze/overview.md)
-      * [適用於Google Analytics的雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
+         * [概觀](./extensions/server/braze/overview.md)
+      * 適用於Google Analytics的[雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
       * 核心 {#core}
          * [概觀](./extensions/server/core/overview.md)
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
       * Google Ads增強型轉換 {#google-ads-enhanced-conversions}
          * [概觀](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
-         * [概述](./extensions/server/google-cloud-platform/overview.md)
+         * [概觀](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
-         * [概述](./extensions/server/linkedin/overview.md)
+         * [概觀](./extensions/server/linkedin/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
-         * [概述](./extensions/server/mailchimp/overview.md)
+         * [概觀](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
-         * [概述](./extensions/server/meta/overview.md)
+         * [概觀](./extensions/server/meta/overview.md)
       * [!DNL Microsoft Azure] {#azure}
-         * [概述](./extensions/server/azure/overview.md)
+         * [概觀](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
-         * [概述](./extensions/server/mixpanel/overview.md)
+         * [概觀](./extensions/server/mixpanel/overview.md)
       * [Pega客戶決策中心](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
-         * [概述](./extensions/server/pinterest/overview.md)
+         * [概觀](./extensions/server/pinterest/overview.md)
+      * [!DNL Reddit] {#reddit}
+         * [概觀](./extensions/server/reddit/overview.md)
       * [!DNL Snapchat] {#snap}
-         * [概述](./extensions/server/snap/overview.md)
+         * [概觀](./extensions/server/snap/overview.md)
       * [!DNL Snowflake] {#snowflake}
-         * [概述](./extensions/server/snowflake/overview.md)
+         * [概觀](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
-         * [概述](./extensions/server/splunk/overview.md)
+         * [概觀](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
-         * [概述](./extensions/server/twitter/overview.md)
+         * [概觀](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok]網頁事件API {#tiktok}
-         * [概述](./extensions/server/tiktok/overview.md)
+         * [概觀](./extensions/server/tiktok/overview.md)
       * [!DNL The Trade Desk] {#thetradedesk}
-         * [概述](./extensions/server/tradedesk/overview.md)
+         * [概觀](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk]事件API {#zendesk}
          * [概觀](./extensions/server/zendesk/overview.md)
 * 擴充功能開發 {#extension-dev}
