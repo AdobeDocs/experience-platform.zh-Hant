@@ -43,11 +43,12 @@ Reddit是一個擁有多元化使用者基礎的社群媒體平台，非常適�
 請依照下列步驟安裝和設定[!DNL Reddit] Conversions API擴充功能：
 
 1. 在Experience Platform資料收集UI中，從左側導覽選取[!UICONTROL 擴充功能]以存取[!UICONTROL 擴充功能]目錄。 然後[建立新的事件轉送屬性](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties)或選取現有的屬性。
-2. 在左側導覽面板中導覽至&#x200B;**[!UICONTROL 擴充功能]**。 選取&#x200B;**[!UICONTROL 目錄]**，然後選取&#x200B;**[!DNL Reddit]**副檔名。
+2. 在左側導覽面板中導覽至&#x200B;**[!UICONTROL 擴充功能]**。 選取&#x200B;**[!UICONTROL 目錄]**，然後選取&#x200B;**[!DNL Reddit]**&#x200B;副檔名。
    ![反白顯示Reddit擴充功能的Adobe Experience Platform擴充功能目錄。](../../../images/extensions/server/reddit/reddit-extension.png)
 3. 提供下列設定詳細資料：
    - **畫素識別碼**：輸入您的[!DNL Reddit Ads]畫素識別碼。
    - **轉換存取權杖**：輸入在您的[!DNL Reddit Ads]帳戶中產生的權杖，並在完成時選取&#x200B;**[!UICONTROL 儲存]**。
+
      ![ Reddit Conversions API擴充功能的設定詳細資料，包括畫素ID和轉換存取權杖的欄位。](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## 設定事件轉送規則 {#config-rule}
