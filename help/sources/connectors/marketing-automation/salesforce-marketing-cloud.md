@@ -4,9 +4,9 @@ title: Salesforce Marketing Cloud Source概觀
 description: 瞭解如何使用API或使用者介面將Salesforce Marketing Cloud連線至Adobe Experience Platform。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-04-29T00:00:00Z
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: ce96dbc64845fddb40ebee709828c56d51a6c6ba
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,11 @@ Experience Platform支援從協力廠商行銷自動化系統擷取資料。 對
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
+
+>[!WARNING]
+>
+>如果您未將必要的IP位址新增至允許清單，您的[!DNL Salesforce Marketing Cloud]帳戶將不會連線至Experience Platform。
 
 ## 使用API連線[!DNL Salesforce Marketing Cloud]至Experience Platform
 
