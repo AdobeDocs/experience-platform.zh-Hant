@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；資料位置；資料位置；資料管理；資料管理；譜系；譜系；資料型別；資料型別；資料型別；資料型別
 solution: Experience Platform
 title: 資料集概述
-description: 本文件提供 Experience Platform 資料集的高層級總覽。
+description: 本文件提供 Experience Platform 資料集的高層級概觀。
 user-guide-description: 透過本指南取得Experience Platform資料集的高層級總覽。 在此處瞭解如何建立資料集、強制執行資料限制，以及將資料擷取到資料集中。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
