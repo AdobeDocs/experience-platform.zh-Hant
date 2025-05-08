@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
+source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1958'
 ht-degree: 6%
 
 ---
@@ -160,6 +160,8 @@ ht-degree: 6%
 ![呈現範例圖形的圖形模擬UI。](../images/implementation/example-graph.png)
 
 >[!TAB 已驗證的事件，沒有任何人員識別碼]
+
+在此範例中，您可以假設在John （一般使用者）瀏覽您的網站且進行驗證時，已將以下事件傳送至Experience Platform。 然而，儘管已通過驗證，Experience Platform仍無法識別John，因為事件中缺少人員識別碼。 因此，此事件會解譯為匿名使用者瀏覽Adobe商業網站，而不是將其辨識為專門與John相關聯的線上活動。
 
 ```json
 {
