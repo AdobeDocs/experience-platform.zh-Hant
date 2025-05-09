@@ -2,9 +2,9 @@
 title: 使用TTL管理Data Lake中的體驗事件資料集保留
 description: 瞭解如何使用存留時間(TTL)設定和Adobe Experience Platform API，評估、設定和管理Data Lake中的體驗事件資料集保留。 本指南說明TTL資料列層級的有效期限如何支援資料保留原則、最佳化儲存效率，以及確保有效的資料生命週期管理。 此外，還提供使用案例和最佳實務，協助您有效套用TTL。
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
+source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
 workflow-type: tm+mt
-source-wordcount: '2456'
+source-wordcount: '2452'
 ht-degree: 0%
 
 ---
@@ -301,11 +301,11 @@ curl -X PATCH \
 ### 我可以套用保留原則規則到哪些型別的資料集？
 
 +++回答
-您可以套用TTL型保留原則至使用時間序列結構描述的任何資料集。 這包括以標準XDM ExperienceEvent類別為基礎的資料集，以及擴充XDM時間序列類別的自訂結構描述。
+您可以套用TTL型保留原則至任何使用時間序列行為的資料集。 這包括以標準XDM ExperienceEvent類別為基礎的資料集，以及用來擷取時間序列資料的自訂結構描述。
 
 列層級的有效期需要下列技術條件：
 
-- 結構描述必須擴充XDM時間序列基底類別。
+- 結構描述在設計上必須用來擷取時間序列資料。
 - 結構描述必須包含用於評估到期時間的時間戳記欄位。
 - 資料集應儲存事件層級的資料，通常使用或擴充XDM ExperienceEvent類別。
 - 資料集必須在目錄服務中註冊，因為TTL設定是透過`extensions.adobe_lakeHouse.rowExpiration`套用。
