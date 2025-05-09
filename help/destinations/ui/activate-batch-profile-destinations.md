@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
 source-wordcount: '4596'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 11%
 
    ![啟用目錄頁面中反白顯示的對象控制項。](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
+1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] ****。
 
    ![醒目提示核取方塊以選取一或多個要啟用對象的目標位置。](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
@@ -87,12 +87,12 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_weekly_messaging"
 >title="每週匯出"
->abstract="<sup>*</sup>選取開始日期，在選取的結束日期之前，後續的匯出將發生在一週的該日。"
+>abstract="<sup>*</sup>選取開始日期，而後續匯出將在那一週的那一天進行，直到選取的結束日期為止。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
 >title="每月匯出"
->abstract="<sup>*</sup>選取開始日期，後續的匯出將在該月的該日期進行，直到選取的結束日期為止。 對於少於30或31天的月份，匯出會發生在當月的最後一天。"
+>abstract="<sup>*</sup>選取開始日期，而後續匯出將在那個月的那一天進行，直到選取的結束日期為止。對於少於 30 或 31 天的月份，匯出將在該月的最後一天進行。"
 
 [!DNL Adobe Experience Platform]會將電子郵件行銷和雲端儲存空間的資料匯出為[不同的檔案型別](#supported-file-formats-export)。 在&#x200B;**[!UICONTROL 排程]**&#x200B;頁面中，您可以設定排程和要匯出之每個對象的檔案名稱。
 
@@ -120,7 +120,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >id="platform_destinations_activate_exportoptions"
 >title="檔案匯出選項 "
 >abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有設定檔的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合對象資格的設定檔。<br> 第一個增量檔案匯出包括符合對象資格的所有設定檔，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的設定檔。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#export-incremental-files" text="匯出增量檔案"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -141,7 +141,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
    * **[!UICONTROL 一次]**：排程一次隨選完整檔案匯出。
    * **[!UICONTROL 每日]**：排程每天一次在您指定的時間匯出完整檔案。
    * **[!UICONTROL 每週]**：選取開始日期，後續的匯出將發生在一週的該日，直到選取的結束日期為止。
-   * **[!UICONTROL 每月]**：選取開始日期，後續的匯出會在該月的該日期發生，直到選取的結束日期為止。 對於少於30或31天的月份，匯出會發生在當月的最後一天。
+   * **[!UICONTROL 每月]**：選取開始日期，後續的匯出會在該月的該日期發生，直到選取的結束日期為止。 對於少於 30 或 31 天的月份，匯出將在該月的最後一天進行。
 
 2. 使用&#x200B;**[!UICONTROL 時間]**&#x200B;切換功能來選取匯出應該在對象評估後立即執行，還是在指定的時間依排程執行。 選取&#x200B;**[!UICONTROL 已排程]**&#x200B;選項時，您可以使用選取器來選取一天中應該進行匯出時的時間（格式為[!DNL UTC]）。
 
@@ -154,7 +154,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![影像在批次目的地的啟動流程中，醒目提示「區段之後」評估選項。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-使用&#x200B;**[!UICONTROL 已排程]**&#x200B;選項，讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
+使用**[!UICONTROL 已排程]**&#x200B;選項，讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
 
    ![影像在批次目的地的啟動流程中醒目提示「已排程」選項，並顯示時間選擇器。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -450,7 +450,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 ### 具有相同時間戳記之設定檔的重複資料刪除行為 {#deduplication-same-timestamp}
 
-將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
+將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
 
 #### 主要考量事項
 
@@ -508,7 +508,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 * 如果選取`segmentMembership.seg_namespace.seg_id.status`欄位，匯出的檔案會在初始完整快照中包含&#x200B;**[!UICONTROL Active]**&#x200B;成員，並在後續的增量匯出中包含&#x200B;**[!UICONTROL Active]**&#x200B;和&#x200B;**[!UICONTROL Expired]**&#x200B;成員。
 * 如果未選取`segmentMembership.seg_namespace.seg_id.status`欄位，則匯出的檔案在初始完整快照和後續的增量匯出中僅包含&#x200B;**[!UICONTROL Active]**&#x200B;成員。
 
-深入瞭解檔案型目的地[&#128279;](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)的設定檔匯出行為。
+深入瞭解檔案型目的地](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)的[設定檔匯出行為。
 
 #### 目前無法選取身分名稱空間進行匯出
 
