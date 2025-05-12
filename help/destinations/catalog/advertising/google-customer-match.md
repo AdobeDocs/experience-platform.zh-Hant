@@ -3,9 +3,9 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物和Gmail）聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2360'
 ht-degree: 2%
 
 ---
@@ -58,11 +58,15 @@ Experience Platform中的某些目的地對於傳送到目的地平台或從目�
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取此目標身分。 |
-| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取此目標身分。 |
-| phone_sha256_e.164 | E164格式的電話號碼，使用SHA256演演算法雜湊 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| user_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
+| `GAID` | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取此目標身分。 |
+| `IDFA` | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取此目標身分。 |
+| `phone_sha256_e.164` | E164格式的電話號碼，使用SHA256演演算法雜湊 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| `email_lc_sha256` | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| `user_id` | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
+| `address_info_first_name` | 使用者的名字 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`搭配使用。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 |
+| `address_info_last_name` | 使用者的姓氏 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_country_code`和`address_info_postal_code`搭配使用。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 |
+| `address_info_country_code` | 使用者地址國家/地區代碼 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_last_name`和`address_info_postal_code`搭配使用。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 <br><br>接受的格式：小寫、雙字母國碼，格式為[ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)。 |
+| `address_info_postal_code` | 使用者地址郵遞區號 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_last_name`和`address_info_country_code`搭配使用。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 |
 
 {style="table-layout:auto"}
 
@@ -227,6 +231,10 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ## 監視目的地 {#monitor-destination}
 
 連線到目的地並建立目的地資料流後，您可以使用Real-Time CDP中的[監視功能](/help/dataflows/ui/monitor-destinations.md)來取得每次資料流執行中在您的目的地啟用的設定檔記錄的廣泛資訊。
+
+>[!IMPORTANT]
+>
+>當您對應四個與位址相關的目標身分（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`及`address_info_postal_code`）時，它們會在資料流監視頁面中計為每個設定檔的個別身分。
 
 ## 驗證對象啟用是否成功 {#verify-activation}
 
