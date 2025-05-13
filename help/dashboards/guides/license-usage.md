@@ -310,7 +310,7 @@ ht-degree: 38%
 | [!UICONTROL 設定檔豐富度（Pack數目）] | 對於每個額外的輪廓豐富度套組，每個輪廓的授權總資料量將增加 25KB。 |
 | [!UICONTROL 查詢服務計算時數] | 在執行批次查詢時，查詢服務引擎讀取、處理資料並將資料寫入資料湖所花費的時間量測量。 |
 | [!UICONTROL 串流區段數Pack] | 當新資料透過串流資料流進入細分服務時，套組便會更新人員輪廓的細分群體會籍。細分群體會籍是根據目前的人員輪廓屬性和目前的事件值進行評估，而不考慮歷史行為。串流細分是一項共用功能。 |
-| [!UICONTROL 資料磁碟區總數] | 可用於參與工作流程中的即時客戶個人檔案的總資料量。 總資料量使用下列公式計算： **總資料量=可定址對象×平均設定檔豐富度**。 此量度反映僅儲存在設定檔存放區的資料，並排除資料湖儲存。 它提供與設定檔參與相關之資料的更聚焦檢視。 如需瞭解詳細資訊，請參閱關於總資料量](../../landing/license-usage-and-guardrails/total-data-volume.md)的[常見問題。 |
+| [!UICONTROL 資料磁碟區總數] | 可用於參與工作流程中的即時客戶個人檔案的總資料量。 總資料量使用下列公式計算： **總資料量=可定址對象×平均設定檔豐富度**。 此量度反映僅儲存在設定檔存放區的資料，並排除資料湖儲存。 它提供與設定檔參與相關之資料的更聚焦檢視。 如需瞭解詳細資訊，請參閱關於總資料量[&#128279;](../../landing/license-usage-and-guardrails/total-data-volume.md)的常見問題。 |
 | [!UICONTROL 資料輸出總量] | 從Adobe Experience Platform匯出至第三方資料倉儲的累積年度資料量。 |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
