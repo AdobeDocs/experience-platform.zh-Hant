@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務認證指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: c8c04d79584093c8d13ffa205849e78ab04c0fc1
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1885'
 ht-degree: 2%
 
 ---
@@ -46,11 +46,11 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 >
 >![反白顯示「隱私權與安全性」、「驗證設定」和「最長工作階段壽命」的Admin Console設定標籤。](../images/ui/credentials/max-session-life.png)
 >
->請參閱Adobe說明檔案，以取得有關Admin Console所提供的[進階設定](https://helpx.adobe.com/tw/enterprise/using/authentication-settings.html#advanced-settings)的詳細資訊。
+>請參閱Adobe說明檔案，以取得有關Admin Console所提供的[進階設定](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings)的詳細資訊。
 
 ### 連線至查詢工作階段中的Customer Journey Analytics資料 {#connect-to-customer-journey-analytics}
 
-使用Customer Journey Analytics BI擴充功能搭配Power BI或Tableau，使用SQL存取您的Customer Journey Analytics [資料檢視](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-dataviews/data-views)。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
+使用Customer Journey Analytics BI擴充功能搭配Power BI或Tableau，使用SQL存取您的Customer Journey Analytics [資料檢視](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views)。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
 
 請參閱檔案以瞭解如何[將Query Service連線至各種案頭使用者端應用程式](../clients/overview.md)，例如[Power BI](../clients/power-bi.md)或[Tableau](../clients/tableau.md)
 
@@ -68,9 +68,14 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 您也可以直接從Query Editor或Postgres CLI存取您的Customer Journey Analytics資料。 若要這麼做，請在撰寫查詢時參考`cja`資料庫。 請參閱查詢編輯器[查詢撰寫指南](./user-guide.md#query-authoring)，以取得如何撰寫、執行和儲存查詢的詳細資訊。
 
-如需使用SQL存取Customer Journey Analytics資料檢視的完整指示，請參閱[BI擴充功能指南](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-dataviews/bi-extension)。
+如需使用SQL存取Customer Journey Analytics資料檢視的完整指示，請參閱[BI擴充功能指南](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension)。
 
 ## 不會到期的認證 {#non-expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_migratenonexpiringcredentials"
+>title="移轉至OAuth伺服器對伺服器認證"
+>abstract="由於JWT憑證將在2025年6月30日之後停止運作，因此需要進行此移轉。 大約需要30到40秒，並且啟動後無法取消。 所有現有工作和整合在移轉後仍可使用OAuth。 您可以離開此畫面並隨時返回以檢查狀態。"
 
 您可以使用不會到期的認證來設定與外部使用者端之間更永久的連線。
 
