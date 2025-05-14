@@ -4,9 +4,9 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的分析，或針對從Experience Platform匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
+source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2692'
 ht-degree: 8%
 
 ---
@@ -71,13 +71,11 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 
 如果您想要搭配[!DNL HTTP API]個目的地使用[!DNL mTLS]，您放入[目的地詳細資料](#destination-details)頁面的伺服器位址必須停用[!DNL TLS]通訊協定，而且只能啟用[!DNL mTLS]。 如果端點上仍啟用[!DNL TLS] 1.2通訊協定，則不會傳送使用者端驗證的憑證。 這表示若要搭配您的[!DNL HTTP API]目的地使用[!DNL mTLS]，您的「接收」伺服器端點必須是僅限[!DNL mTLS]啟用的連線端點。
 
-### 下載憑證 {#certificate}
+### 擷取及檢查憑證詳細資料 {#certificate}
 
-如果您要檢查[!DNL Common Name] (CN)和[!DNL Subject Alternative Names] (SAN)以進行其他協力廠商驗證，可以下載以下憑證：
+如果您要檢查[!DNL Common Name] (CN)和[!DNL Subject Alternative Names] (SAN)等憑證詳細資料以進行其他協力廠商驗證，請使用API來擷取憑證，並從回應中擷取這些欄位。
 
-* [HTTP API mTLS公開憑證](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-您也可以向MTLS端點發出GET要求，以安全地擷取公開憑證。 如需詳細資訊，請參閱[公用憑證端點檔案](../../../data-governance/mtls-api/public-certificate-endpoint.md)。
+如需詳細資訊，請參閱[公用憑證端點檔案](../../../data-governance/mtls-api/public-certificate-endpoint.md)。
 
 ## IP位址允許清單 {#ip-address-allowlist}
 

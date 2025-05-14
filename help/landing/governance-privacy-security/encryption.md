@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的資料加密
 description: 瞭解如何在Adobe Experience Platform中加密傳輸和待用資料。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f6eaba4c0622318ba713c562ba0a4c20bba02338
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -48,14 +48,22 @@ Experience Platform與任何外部元件之間傳輸的所有資料都是使用H
 
 >[!NOTE]
 >
->您有責任保持公開憑證為最新狀態。 請務必定期檢閱憑證，尤其是在憑證到期日臨近時。 您應該將此頁面加入書籤，以便在您的環境中儲存最新的復本。
+>您有責任確保您的系統使用有效的公開憑證。 定期檢閱您的憑證，尤其是在到期日臨近時。 使用API在憑證過期之前擷取和更新憑證。
 
-如果您要檢查CN或SAN以進行其他協力廠商驗證，可以在這裡下載相關憑證：
+不再提供公開mTLS憑證的直接下載連結。 請改用[公用憑證端點](../../data-governance/mtls-api/public-certificate-endpoint.md)來擷取憑證。 這是存取目前公開憑證唯一支援的方法。 這可確保您一律收到整合適用的有效最新憑證。
 
-- [Adobe Journey Optimizer公開憑證](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
-- [目的地服務公用憑證](../images/governance-privacy-security/encryption/destinations-public-cert.pem)。
+依賴憑證式加密的整合必須更新其工作流程，以支援使用API的自動化憑證擷取。 依賴靜態連結或手動更新可能會導致使用過期或撤銷的憑證，進而導致整合失敗。
 
-您也可以向MTLS端點發出GET要求，以安全地擷取公開憑證。 如需詳細資訊，請參閱[公用憑證端點檔案](../../data-governance/mtls-api/public-certificate-endpoint.md)。
+#### 憑證生命週期自動化 {#certificate-lifecycle-automation}
+
+Adobe現在自動化mTLS整合的憑證生命週期，以提高可靠性並防止服務中斷。 公開憑證為：
+
+- 在到期前60天重新發行。
+- 過期30天前撤銷。
+
+這些間隔會根據[不斷發展的CA/B論壇指導方針](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days)而持續縮短，其目的是將憑證存留期減少到最多47天。
+
+如果您先前使用此頁面上的連結來下載憑證，請更新您的程式，以專門透過API擷取憑證。
 
 ## 靜態資料 {#at-rest}
 
