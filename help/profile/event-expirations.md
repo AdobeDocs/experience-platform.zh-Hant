@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 體驗事件有效期
 description: 本文提供在Adobe Experience Platform資料集中設定個別體驗事件到期時間的一般指引。
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,10 @@ ht-degree: 0%
 ## 常見問題 {#faq}
 
 下節列出有關體驗事件資料到期的常見問題：
+
+### 我可以設定體驗事件資料有效期限的最短期間是多久？
+
+體驗事件資料到期的最短持續時間為&#x200B;**一天**。
 
 ### 體驗事件資料到期與假名設定檔資料到期有何不同？
 
