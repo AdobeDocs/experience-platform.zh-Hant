@@ -2,7 +2,7 @@
 title: 在結構描述登入API中定義XDM欄位
 description: 瞭解如何在Schema Registry API中建立自訂Experience Data Model (XDM)資源時定義不同的欄位。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 0%
@@ -142,7 +142,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`number`型別用於任何數值型別，可以是整數或浮點數，而[`integer`型別](#integer)則專門用於整數數字。 如需每種型別使用案例的詳細資訊，請參閱數值型別[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html)的JSON結構描述檔案。
+>`number`型別用於任何數值型別，可以是整數或浮點數，而[`integer`型別](#integer)則專門用於整數數字。 如需每種型別使用案例的詳細資訊，請參閱數值型別](https://json-schema.org/understanding-json-schema/reference/numeric.html)的[JSON結構描述檔案。
 
 ## [!UICONTROL 整數] {#integer}
 
@@ -158,7 +158,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->雖然`integer`型別是專門參照整數型別，但[`number`型別](#number)用於任何數值型別，可以是整數或浮點數。 如需每種型別使用案例的詳細資訊，請參閱數值型別[&#128279;](https://json-schema.org/understanding-json-schema/reference/numeric.html)的JSON結構描述檔案。
+>雖然`integer`型別是專門參照整數型別，但[`number`型別](#number)用於任何數值型別，可以是整數或浮點數。 如需每種型別使用案例的詳細資訊，請參閱數值型別](https://json-schema.org/understanding-json-schema/reference/numeric.html)的[JSON結構描述檔案。
 
 您可以將`minimum`和`maximum`屬性新增至定義，選擇性地限制整數的範圍。 結構描述產生器UI支援的其他數位型別只有`integer`個具有特定`minimum`和`maximum`限制條件的型別，例如[[!UICONTROL Long]](#long)、[[!UICONTROL Short]](#short)和[[!UICONTROL Byte]](#byte)。
 
@@ -188,7 +188,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 短整數] {#short}
 
-與透過結構描述產生器UI建立的[!UICONTROL Short]欄位等同的是[`integer`型別欄位](#integer)，具有特定`minimum`和`maximum`值（分別為`-32768`和`32768`）。
+與透過結構描述產生器UI建立的[!UICONTROL Short]欄位等同的是[`integer`型別欄位](#integer)，具有特定`minimum`和`maximum`值（分別為`-32768`和`32767`）。
 
 ```json
 "sampleField": {
@@ -196,13 +196,13 @@ ht-degree: 0%
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
 ## [!UICONTROL 位元組] {#byte}
 
-與透過結構描述產生器UI建立的[!UICONTROL 位元組]欄位相當的是[`integer`型別欄位](#integer)，具有特定的`minimum`和`maximum`值（分別為`-128`和`128`）。
+與透過結構描述產生器UI建立的[!UICONTROL 位元組]欄位相當的是[`integer`型別欄位](#integer)，具有特定的`minimum`和`maximum`值（分別為`-128`和`127`）。
 
 ```json
 "sampleField": {
@@ -210,7 +210,7 @@ ht-degree: 0%
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 
