@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1691'
 ht-degree: 5%
 
 ---
@@ -120,20 +120,20 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 
 如果您先前已建立採用此類別的結構描述，則新新增的欄位會自動出現在這些結構描述中。
 
-## 編輯類別(#edit-a-class)
+## 編輯類別 {#edit-a-class}
 
 >[!NOTE]
 >
 >只有貴組織定義的自訂類別才能完全編輯和自訂。 對於由Adobe定義的核心類別，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
 >
->儲存自訂類別並用於資料擷取後，之後只能對其執行附加變更。 如需詳細資訊，請參閱結構描述演化[&#128279;](../../schema/composition.md#evolution)的規則。
+>儲存自訂類別並用於資料擷取後，之後只能對其執行附加變更。 如需詳細資訊，請參閱結構描述演化](../../schema/composition.md#evolution)的[規則。
 
 您可以透過架構工作流程編輯類別，方法是編輯擴充類別的現有架構，或手動建立架構。 無法直接編輯類別。 從[!UICONTROL 結構描述]工作區的[!UICONTROL 瀏覽]索引標籤中，選取現有類別或&#x200B;**[!UICONTROL 建立結構描述]**。
 
 ![結構描述編輯器含有現有的類別和[!UICONTROL 建立結構描述]已反白顯示。](../../images/ui/resources/classes/edit-class-options.png)
 
 如果您選擇建立新的結構描述，請參閱[建立結構描述](#create-schema)一節以取得詳細資料。 當您完成建立結構描述後（或選取現有結構描述後），會出現結構描述編輯器。 若要更新現有的類別欄位，請從結構描述結構中選取該欄位。 欄位的資訊將顯示在右側邊欄中。 確定[!UICONTROL 指派給]
-已選取選項&#x200B;**[!UICONTROL 類別]**，否則您的更新將不會影響類別。
+已選取選項**[!UICONTROL 類別]**，否則您的更新將不會影響類別。
 
 ![結構描述編輯器已選取並反白欄位，且右邊欄已顯示，反白顯示[!UICONTROL 指派給]。](../../images/ui/resources/classes/edit-existing-field.png)
 
