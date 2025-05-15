@@ -2,9 +2,9 @@
 description: 瞭解您需要將IP位址新增到允許清單才能成功使用Adobe Experience Platform來源。
 title: 來源的IP位址允許清單
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -292,4 +292,8 @@ ht-degree: 0%
 
 您必須將以下IP位址新增至允許清單，才能將您的來源連線至AWS上的Experience：
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
