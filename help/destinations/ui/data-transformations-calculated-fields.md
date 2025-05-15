@@ -3,9 +3,9 @@ title: 使用計算欄位對匯出到雲端儲存目標的資料執行轉換
 type: Tutorial
 description: 瞭解如何使用計算欄位功能，對匯出至雲端儲存空間的資料執行轉換
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
+source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1625'
 ht-degree: 8%
 
 ---
@@ -16,15 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="新增計算欄位"
 >abstract="<p>使用「**新增計算欄位**」控制項對匯出到雲端儲存目標的資料執行各種資料轉換。例如，您可以對資料進行雜湊、將陣列串連成字串等等。"
-
-<!--
-
-disable additional URLs for a while
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=zh-Hant#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=zh-Hant#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="範例"
 
 >[!AVAILABILITY]
 >
@@ -40,7 +32,7 @@ disable additional URLs for a while
 若要使用計算欄位進行資料轉換：
 
 1. [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地。 連線到所需的雲端目的地時，將&#x200B;**[!UICONTROL 匯出陣列、對應、物件]** [選項關閉](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)。
-2. 進行雲端儲存空間目的地[&#128279;](/help/destinations/ui/activate-batch-profile-destinations.md)的啟動步驟，並前往[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。
+2. 進行雲端儲存空間目的地](/help/destinations/ui/activate-batch-profile-destinations.md)的[啟動步驟，並前往[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。
 
 ## 如何使用計算欄位 {#how-to-export-calculated-fields}
 
@@ -53,6 +45,10 @@ disable additional URLs for a while
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="新增計算欄位已停用"
 >abstract="此控制項已停用，因為您在設定此目標連線時，將「**匯出陣列、對應、物件**」切換為「*開啟*」。若要使用計算欄位和其中可用的函數，請將「**匯出陣列、對應、物件**」切換為「*關閉*」，再設定新的目標連線。"
+
+>[!IMPORTANT]
+>
+>無論何時使用計算欄位，除了套用的任何資料轉換函式之外，您還必須使用`array_to_string`函式將欄位串連到字串中。
 
 在雲端儲存體目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL 新增計算欄位]**。
 
@@ -105,7 +101,7 @@ disable additional URLs for a while
 
 ## 用來執行資料轉換的函式範例 {#examples}
 
-如需上述部分函式，請參閱以下章節中的範例和進一步資訊。 如需列出的其餘函式，請參閱「資料準備」區段[&#128279;](/help/data-prep/functions.md)中的一般函式檔案。
+如需上述部分函式，請參閱以下章節中的範例和進一步資訊。 如需列出的其餘函式，請參閱「資料準備」區段](/help/data-prep/functions.md)中的[一般函式檔案。
 
 ### `array_to_string`函式以匯出陣列 {#array-to-string-function-export-arrays}
 
