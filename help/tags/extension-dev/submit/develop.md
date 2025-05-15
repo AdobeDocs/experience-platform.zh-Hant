@@ -2,10 +2,10 @@
 title: 開發擴充功能
 description: 本檔案提供標籤擴充功能開發程式的一般概覽，以及進一步說明檔案的連結，以取得更詳細的程式。
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 21%
+source-wordcount: '462'
+ht-degree: 31%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 標籤擴充功能應視為具有自身需求的（小型）產品。 判斷Adobe Experience Platform使用者將如何使用您的擴充功能，可協助您將功能分類為您的擴充功能所應提供的事件型別、條件型別、動作型別和資料元素型別。
 
@@ -24,7 +24,7 @@ ht-degree: 21%
 計畫就緒後，這些指南將可協助您了解擴充功能的開發流程：
 
 * 左側導覽中的[快速入門手冊](../getting-started.md)和位於&#x200B;**擴充功能開發**&#x200B;下的其他檔案，是瞭解擴充功能的絕佳參考資料。 其中包含擴充功能的功能、如何儲存使用者資訊以及在擴充功能與Adobe Experience Platform之間加以傳遞、如何將程式碼整合至程式庫中，以及在執行階段如何在瀏覽器中解譯和使用擴充功能程式碼的詳細資訊。
-* [擴充功能教學課程影片](https://youtu.be/rxjtC9o4rl0)是絕佳的起點。
+<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
 * [擴充功能簡介](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) YouTube 播放清單會逐步說明建立擴充功能套件的程序。
 * [了解 JSON 結構描述](https://spacetelescope.github.io/understanding-json-schema/index.html#)文章。
 * [JSON Lint/驗證器](https://jsonlint.com/)。
@@ -53,6 +53,6 @@ GitHub上有範例擴充功能，可供檢閱或作為起始專案：
 
 ## Slack 工作區
 
-您可以使用此[要求表單](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)來要求擴充功能作者相互支援的Slack社群工作區存取權。
+您可以要求存取Slack社群工作區，擴充功能作者可使用此[要求表單](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)互相支援。
 
 **請注意**：雖然此Slack工作區中有Adobe的成員，但這項社群資源並非由Adobe贊助或主導。
