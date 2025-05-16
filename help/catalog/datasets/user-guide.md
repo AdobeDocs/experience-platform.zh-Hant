@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4143'
 ht-degree: 4%
 
 ---
@@ -54,6 +54,10 @@ ht-degree: 4%
 >title="資料集保留"
 >abstract="資料湖保留會針對不同服務中的資料儲存時間長度以及何時刪除資料等設定規則。此設定可確保遵循法規、管理儲存成本以及維護資料品質。"
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_orchestratedCampaigns_toggle"
+>title="協調的行銷活動"
+>abstract="啟用此切換即可允許在Adobe Journey Optimizer協調的行銷活動中使用選取的資料集。 資料集必須使用關聯式結構描述，而且每個結構描述只能建立一個資料集。"
 
 在[!DNL Experience Platform] UI中，選取左側導覽中的&#x200B;**[!UICONTROL 資料集]**&#x200B;以開啟&#x200B;**[!UICONTROL 資料集]**&#x200B;儀表板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資料，包括其名稱、資料集所遵守的結構描述，以及最近一次擷取執行的狀態。
 
@@ -216,7 +220,7 @@ ht-degree: 4%
 
 ![顯示[設定資料保留]對話方塊及[體驗事件]分佈圖。](../images/datasets/user-guide/visual-forecast.png)
 
-若您對組態感到滿意，請選取[儲存]，確認您的設定。**&#x200B;**
+若您對組態感到滿意，請選取[儲存]，確認您的設定。****
 
 >[!IMPORTANT]
 >
@@ -224,7 +228,7 @@ ht-degree: 4%
 
 設定保留設定後，請使用監視UI來確認系統已執行您的變更。 監控UI可集中檢視所有資料集的資料保留活動。 從該位置，您可以追蹤工作執行、檢閱刪除了多少資料，並確保您的保留原則如預期般運作。 此可見度可支援治理、法規遵循及有效率的資料生命週期管理。
 
-若要瞭解如何使用監視儀表板在Experience Platform UI中追蹤來源資料流，請參閱UI[&#128279;](../../dataflows/ui/monitor-sources.md)檔案中的監視來源資料流。
+若要瞭解如何使用監視儀表板在Experience Platform UI中追蹤來源資料流，請參閱UI](../../dataflows/ui/monitor-sources.md)檔案中的[監視來源資料流。
 
 <!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
 
@@ -315,7 +319,7 @@ Beta版使用者可以使用四個新的資料行，以更清楚瞭解您的資�
 
 若要根據資料集是否已為設定檔啟用來篩選資料集，請從篩選選項中選取[!UICONTROL 是]核取方塊。
 
-[包含在設定檔]區段中的![[!UICONTROL 資料集工作區的篩選選項已反白顯示。]](../images/datasets/user-guide/included-in-profile.png)
+![包含在設定檔]區段中的[!UICONTROL 資料集工作區的篩選選項已反白顯示。](../images/datasets/user-guide/included-in-profile.png)
 
 ### 依標籤篩選資料集 {#filter-by-tag}
 
