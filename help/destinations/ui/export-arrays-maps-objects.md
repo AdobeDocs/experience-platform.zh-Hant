@@ -3,9 +3,9 @@ title: 從Real-Time CDP匯出陣列、地圖和物件
 type: Tutorial
 description: 瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至雲端儲存空間目標。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1077'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >將陣列和其他複雜物件匯出至雲端儲存空間的功能通常適用於下列目的地： [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)、[[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)、[[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)、[[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md)、[[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md)、[[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md)。
 >
->此外，您可以將對應型別欄位匯出至下列目的地： [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、[Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、[Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)。
+>此外，您可以將對應型別欄位匯出至下列目的地： [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、[Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)。
 
 
 瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 此外，您可以將對應型別欄位匯出至[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)和有限的[邊緣個人化目的地](/help/destinations/destination-types.md#edge-personalization-destinations)。 請參閱本檔案以瞭解匯出工作流程、此功能啟用的使用案例和已知限制。 檢視下表以瞭解每種目的地型別可用的功能。
@@ -28,7 +28,7 @@ ht-degree: 13%
 | 現有自訂合作夥伴建置的雲端儲存空間目的地(透過Destination SDK建置的自訂檔案型目的地) | 無 |
 | 企業目的地(Amazon Kinesis、Azure事件中樞、HTTP API) | 部分。 您可以在啟動工作流程的對應步驟中選取和匯出對應型別物件。 |
 | 串流目的地(例如：Facebook、Braze、Google Customer Match等) | 無 |
-| Edge個人化目標(Adobe Target) | 部分。 您可以在啟動工作流程的對應步驟中選取和匯出對應型別物件。 |
+| Edge個人化目的地 | 無 |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ ht-degree: 13%
 
 取得本節中有關功能的最重要資訊，然後繼續參閱檔案中的其他章節，以取得詳細資訊。
 
-* 對於雲端儲存空間目的地，匯出陣列、地圖和物件的功能取決於您選取的&#x200B;**匯出陣列、地圖、物件**&#x200B;切換。 請在頁面[&#128279;](#export-arrays-maps-objects-toggle)的下一頁閱讀更多相關資訊。
+* 對於雲端儲存空間目的地，匯出陣列、地圖和物件的功能取決於您選取的&#x200B;**匯出陣列、地圖、物件**&#x200B;切換。 請在頁面](#export-arrays-maps-objects-toggle)的下一頁閱讀更多相關資訊[。
 * 您可以匯出陣列、地圖和物件至`JSON`和`Parquet`檔案中的雲端儲存體目的地。 對於Enterprise和Edge個人化目的地，匯出的資料型別為`JSON`。 支援人員和潛在客戶對象，但不支援帳戶對象。
 * 針對以檔案為基礎的雲端儲存目的地，您&#x200B;*可以*&#x200B;將陣列、對應和物件匯出至CSV檔案，但僅透過使用計算欄位功能並使用`array_to_string`功能將它們串連到字串中。
 
