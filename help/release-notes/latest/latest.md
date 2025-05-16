@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明 (2025 年 4 月)
 description: Adobe Experience Platform 2025 年 4 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2069'
 ht-degree: 98%
 
 ---
@@ -30,7 +30,6 @@ Adobe Experience Platform 現有功能和文件的更新：
 - [體驗資料模型](#xdm)
 - [身分識別服務](#identity)
 - [查詢服務](#query-service)
-- [即時客戶輪廓](#profile)
 - [沙箱](#sandboxes)
 - [來源](#sources)
 - [使用案例教戰手冊](#use-case-playbooks)
@@ -129,18 +128,6 @@ Adobe Experience Platform 身分識別服務可在裝置及系統間進行身分
 | 使用 CREATE TABLE 和 INSERT INTO 儲存模型預測輸出 | [使用 CREATE TABLE AS SELECT 將選取的預測輸出儲存至新表格，或使用 INSERT INTO SELECT 插入現有表格](../../query-service/advanced-statistics/models.md#predict)。若已啟用增強欄選擇功能，則功能向量和機率等中繼結果也可以與最終預測一起保留。如需使用範例，請參閱 [SQL 語法文件](../../query-service/sql/syntax.md#create-table-as-select)。 |
 
 若需更多有關 [!DNL Query Service] 的資訊，請參閱 [[!DNL Query Service] 概觀](../../query-service/home.md)。
-
-## 即時客戶輪廓 {#profile}
-
-Adobe Experience Platform 可讓您為客戶提供協調一致且相關的體驗，無論他們何時何地與您的品牌互動。即時客戶輪廓會合併來自多個管道的資料 (包括線上、離線、CRM 和協力廠商資料)，讓您可以掌握每位個別客戶的全貌。「輪廓」可讓您將客戶資料合併為統一視圖，以針對每次客戶互動留下可做為行動依據、並附有時間戳記的說明。
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 匿名輪廓資料期限 | 在「輪廓」儀表板中管理您的匿名輪廓資料期限。若要了解更多有關此功能和匿名輪廓的資訊，請閱讀[匿名輪廓資料期限指南](../../profile/pseudonymous-profiles.md)。 |
-
-{style="table-layout:auto"}
-
-若要了解更多有關即時客戶輪廓的資訊，請閱讀[輪廓概觀](../../profile/home.md)
 
 ## 沙箱 {#sandboxes}
 
