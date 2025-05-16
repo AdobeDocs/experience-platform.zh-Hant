@@ -3,9 +3,9 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物和Gmail）聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
+source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2410'
 ht-degree: 2%
 
 ---
@@ -136,6 +136,12 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取總覽](../../../ingestion/batch-ingestion/overview.md)和[串流擷取總覽](../../../ingestion/streaming-ingestion/overview.md)。
 
 如果您選擇自行雜湊電子郵件地址，請務必遵守Google的要求，如上述連結所述。
+
+### 滿足欄位雜湊需求 {#address-field-hashing}
+
+將位址相關欄位對應至[!DNL Google Customer Match]時，Experience Platform **會在傳送至Google之前，自動雜湊** `address_info_first_name`和`address_info_last_name`值。 此自動雜湊是遵守Google安全性和隱私權需求所需。
+
+請&#x200B;**不要**&#x200B;提供`address_info_first_name`或`address_info_last_name`的預先雜湊值。 如果您提供已雜湊的值，比對程式將會失敗。
 
 ### 使用自訂名稱空間 {#custom-namespaces}
 
