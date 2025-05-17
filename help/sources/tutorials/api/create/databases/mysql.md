@@ -1,52 +1,180 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；MySQL；mysql
-solution: Experience Platform
-title: 使用Flow Service API建立 [!DNL MySQL] 基本連線
-type: Tutorial
-description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至MySQL。
+title: 使用流程服務API連線MySQL至Experience Platform
+description: 瞭解如何使用API將MySQL資料庫連結至Experience Platform。
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 5%
+source-wordcount: '597'
+ht-degree: 4%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL MySQL]基本連線
+# 使用[!DNL Flow Service] API連線[!DNL MySQL]至Experience Platform
 
-基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
-
-本教學課程將逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL MySQL]建立基礎連線的步驟。
+閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)將您的[!DNL MySQL]帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL MySQL]。
 
 ### 收集必要的認證
 
-為了讓[!DNL Flow Service]與您的[!DNL MySQL]儲存裝置連線，您必須提供下列連線屬性的值：
-
-| 認證 | 說明 |
-| ---------- | ----------- |
-| `connectionString` | 與您的帳戶相關聯的[!DNL MySQL]連線字串。 [!DNL MySQL]連線字串模式為： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL MySQL]的連線規格識別碼為`26d738e0-8963-47ea-aadf-c60de735468a`。 |
-
-如需有關取得連線字串的詳細資訊，請參閱此[[!DNL MySQL] 檔案](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)。
+閱讀[[!DNL MySQL] 總覽](../../../../connectors/databases/mysql.md#prerequisites)以取得驗證的相關資訊。
 
 ### 使用Experience Platform API
 
-如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
+閱讀[Experience Platform API快速入門](../../../../../landing/api-guide.md)的指南，瞭解如何成功呼叫Experience Platform API。
 
-## 建立基礎連線
+## 在Azure上連線[!DNL MySQL]至Experience Platform {#azure}
 
-基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+請閱讀下列步驟，以瞭解如何在Azure上將您的[!DNL MySQL]帳戶連線至Experience Platform。
 
-若要建立基底連線ID，請在提供您的[!DNL MySQL]驗證認證作為要求引數的一部分時，對`/connections`端點提出POST要求。
+### 在Azure上的Experience Platform上為[!DNL MySQL]建立基礎連線 {#azure-base}
+
+基礎連線會將您的來源連結至Experience Platform，以儲存驗證詳細資料、連線狀態和唯一ID。 使用此ID來瀏覽來源檔案並識別要擷取的特定專案，包括其資料型別和格式。
+
+**API格式**
+
+```https
+POST /connections
+```
+
+若要建立基底連線ID，請對`/connections`端點提出POST要求，並提供您的[!DNL MySQL]驗證認證作為要求引數的一部分。
+
+>[!BEGINTABS]
+
+>[!TAB 以連線字串為基礎的驗證]
+
+**要求**
+
+下列要求會使用以連線字串為基礎的驗證，為[!DNL MySQL]建立基礎連線。
+
++++檢視請求範例
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "MySQL Base Connection to Experience Platform",
+      "description": "Via Connection String,
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
+          }
+      },
+      "connectionSpec": {
+          "id": "26d738e0-8963-47ea-aadf-c60de735468a",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `auth.params.connectionString` | 與您的帳戶相關聯的[!DNL MySQL]連線字串。 [!DNL MySQL]連線字串模式為： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`。 |
+| `connectionSpec.id` | [!DNL MySQL]連線規格識別碼： `26d738e0-8963-47ea-aadf-c60de735468a`。 |
+
++++
+
+**回應**
+
+成功的回應會傳回新建立的基礎連線的詳細資料，包括其唯一識別碼(`id`)。
+
++++檢視回應範例
+
+```json
+{
+    "id": "1a444165-3439-4c16-8441-653439dc166a",
+    "etag": "\"5b04c219-0000-0200-0000-5e179c8f0000\""
+}
+```
+
++++
+
+>[!TAB 基本驗證]
+
+**要求**
+
+下列要求使用基本驗證建立[!DNL MySQL]來源的基本連線。
+
++++檢視請求範例
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "MySQL Base Connection to Experience Platform",
+      "description": "Via Basic Authentication",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "database": "{DATABASE}",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "sslMode": "{SSLMODE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "26d738e0-8963-47ea-aadf-c60de735468a",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `auth.params.server` | [!DNL MySQL]資料庫的名稱或IP。 |
+| `auth.params.database` | 資料庫的名稱。 |
+| `auth.params.username` | 與您的資料庫對應的使用者名稱。 |
+| `auth.params.password` | 與資料庫對應的密碼。 |
+| `auth.params.sslMode` | 資料傳輸期間加密資料的方法。 |
+| `connectionSpec.id` | [!DNL MySQL]連線規格識別碼為： `26d738e0-8963-47ea-aadf-c60de735468a`。 |
+
++++
+
+**回應**
+
+成功的回應會傳回新建立的基礎連線的詳細資料，包括其唯一識別碼(`id`)。
+
++++檢視回應範例
+
+```json
+{
+    "id": "025d4158-4113-403b-b551-e81724d3880c",
+    "etag": "\"ae004437-0000-0200-0000-67ee107e0000\""
+}
+```
+
++++
+
+>[!ENDTABS]
+
+## 將[!DNL MySQL]連線至Amazon Web Services上的Experience Platform {#aws}
+
+>[!AVAILABILITY]
+>
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../../../landing/multi-cloud.md)。
+
+請閱讀下列步驟，以瞭解如何在AWS上將您的[!DNL MySQL]帳戶連結至Experience Platform。
+
+### 在AWS上的Experience Platform上為[!DNL MySQL]建立基礎連線 {#aws-base}
 
 **API格式**
 
@@ -56,52 +184,64 @@ POST /connections
 
 **要求**
 
-下列要求會建立[!DNL MySQL]的基礎連線：
+下列要求會建立[!DNL MySQL]的基礎連線，以連線至AWS上的Experience Platform。
+
++++檢視請求範例
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "[!DNL MySQL] Test Connection",
-        "description": "[!DNL MySQL] Test Connection",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
-            }
-        },
-        "connectionSpec": {
-            "id": "26d738e0-8963-47ea-aadf-c60de735468a",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "MySQL on Experience Platform AWS",
+      "description": "MySQL on Experience Platform AWS",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "database": "{DATABASE}",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "sslMode": "{SSLMODE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "26d738e0-8963-47ea-aadf-c60de735468a",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 屬性 | 說明 |
-| --------- | ----------- |
-| `auth.params.connectionString` | 與您的帳戶相關聯的[!DNL MySQL]連線字串。 [!DNL MySQL]連線字串模式為： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`。 |
-| `connectionSpec.id` | [!DNL MySQL]連線規格識別碼： `26d738e0-8963-47ea-aadf-c60de735468a`。 |
+| --- | --- |
+| `auth.params.server` | [!DNL MySQL]資料庫的名稱或IP。 |
+| `auth.params.database` | 資料庫的名稱。 |
+| `auth.params.username` | 與您的資料庫對應的使用者名稱。 |
+| `auth.params.password` | 與資料庫對應的密碼。 |
+| `auth.params.sslMode` | 資料傳輸期間加密資料的方法。 |
+| `connectionSpec.id` | [!DNL MySQL]連線規格識別碼為： `26d738e0-8963-47ea-aadf-c60de735468a`。 |
+
++++
 
 **回應**
 
-成功的回應會傳回新建立的基礎連線的詳細資料，包括其唯一識別碼(`id`)。 在下個教學課程中探索您的資料庫時，需要此ID。
+成功的回應會傳回新建立的基礎連線的詳細資料，包括其唯一識別碼(`id`)。
+
++++檢視回應範例
 
 ```json
 {
-    "id": "1a444165-3439-4c16-8441-653439dc166a",
-    "etag": "\"5b04c219-0000-0200-0000-5e179c8f0000\""
+    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
+    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
 }
 ```
 
-## 後續步驟
++++
 
-依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL MySQL]基本連線。 您可以在下列教學課程中使用此基本連線ID：
+## 建立[!DNL MySQL]資料的資料流
 
-* [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
-* [使用 [!DNL Flow Service] API建立資料流以將資料庫資料帶入Experience Platform](../../collect/database-nosql.md)
-
+現在您已經成功連線[!DNL MySQL]資料庫，您現在可以[建立資料流，並將資料庫中的資料擷取到Experience Platform](../../collect/database-nosql.md)。

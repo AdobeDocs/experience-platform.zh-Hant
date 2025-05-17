@@ -1,35 +1,67 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；MySQL；mysql；My sql；My SQL
-solution: Experience Platform
 title: MySQL Source Connector概述
 description: 瞭解如何使用API或使用者介面將MySQL連線至Adobe Experience Platform。
+last-substantial-update: 2025-05-17T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 7a5dae76c5b58b302b4f3295efc17f40dbb9b18b
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
 
-# MySQL聯結器
+# [!DNL MySQL]
 
-Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+[!DNL MySQL]是用來儲存和管理結構化資料的開放原始碼關聯式資料庫管理系統。 它將資料組織成表格，並使用SQL （結構化查詢語言）來查詢和更新資訊。 [!DNL MySQL]廣泛用於Web應用程式，支援多種平台，並以其速度、可靠性和易用性而聞名。 從小型網站到大型企業系統，適合所有用途。
 
-[!DNL Experience Platform]支援從協力廠商資料庫擷取資料。 [!DNL Experience Platform]可以連線到不同型別的資料庫，例如關聯式、NoSQL或資料倉儲。 支援的資料庫提供者包括MySQL。
+您可以使用[!DNL MySQL]來源來連線您的帳戶，並將資料從您的[!DNL MySQL]資料庫擷取到Adobe Experience Platform。
 
-## IP位址允許清單
+## 先決條件 {#prerequisites}
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+請先閱讀下列章節，完成先決條件設定，然後再將[!DNL MySQl]帳戶連線至Experience Platform。
 
-以下檔案提供如何使用API或使用者介面將MySQL連線至[!DNL Experience Platform]的相關資訊：
+### IP位址允許清單
 
-## 使用API連線MySQL至[!DNL Experience Platform]
+在Azure或Amazon Web Services (AWS)上將來源連線至Experience Platform之前，您必須將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址指南，以連線至Azure和AWS上的Experience Platform ](../../ip-address-allow-list.md)以取得詳細資訊。
 
-- [使用Flow Service API建立MySQL基本連線](../../tutorials/api/create/databases/mysql.md)
+### 在Azure上驗證Experience Platform {#azure}
+
+您可以使用帳戶金鑰驗證或基本驗證，將您的[!DNL MySQL]資料庫連線至Azure上的Experience Platform。
+
+>[!BEGINTABS]
+
+>[!TAB 帳戶金鑰驗證]
+
+提供下列認證的值，以使用帳戶金鑰驗證將您的[!DNL MySQL]資料庫連線至Experience Platform。
+
+| 認證 | 說明 |
+| --- | --- |
+| `connectionString` | 與您的帳戶相關聯的[!DNL MySQL]連線字串。 [!DNL MySQL]連線字串模式為： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`。 |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL MySQL]的連線規格識別碼為`26d738e0-8963-47ea-aadf-c60de735468a`。 |
+
+如需詳細資訊，請閱讀有關連線字串](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)的[[!DNL MySQL] 檔案。
+
+>[!TAB 基本驗證]
+
+提供下列認證的值，以使用基本驗證將您的[!DNL MySQL]資料庫連線至Experience Platform。
+
+| 認證 | 說明 |
+| --- | --- |
+| `server` | [!DNL MySQL]資料庫的名稱或IP位址。 |
+| `database` | 您要連線的[!DNL MySQL]資料庫名稱。 |
+| `username` | 與您的[!DNL MySQL]資料庫驗證相關聯的使用者名稱。 |
+| `password` | 與您的[!DNL MySQL]資料庫驗證關聯的密碼。 |
+| `sslMode` | 要套用至您連線的[!DNL Secure Sockets Layer] (SSL)方法。 可用的值包括： <ul><li>`DISABLED`：使用此選項來停用SSL。 如果您的伺服器需要SSL設定，則連線將會失敗</li><li>`PREFERRED`：使用此選項可偏好SSL連線，因為伺服器支援這些連線。 此選項也允許非SSL連線。</li><li>`REQUIRED`：使用此選項讓SSL連線成為必要。 如果伺服器不支援SSL，連線將會失敗。</li><li>`Verify-Ca`：如果伺服器不支援SSL，在連線失敗時使用此選項來驗證伺服器憑證。</li><li>`Verify Identity`：如果伺服器不支援SSL，在連線失敗時，使用此選項以主機的名稱驗證伺服器憑證。</li></ul> |
+
+>[!ENDTABS]
+
+## 使用API連線[!DNL MySQL]至Experience Platform
+
+- [使用流程服務API連線您的 [!DNL MySQL] 資料庫](../../tutorials/api/create/databases/mysql.md)
 - [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 - [使用流程服務API為資料庫來源建立資料流](../../tutorials/api/collect/database-nosql.md)
 
-## 使用UI連線MySQL至[!DNL Experience Platform]
+## 使用UI連線MySQL至Experience Platform
 
-- [在使用者介面中建立MySQL來源連線](../../tutorials/ui/create/databases/mysql.md)
+- [使用UI將您的 [!DNL MySQL] 資料庫連線到Experience Platform](../../tutorials/ui/create/databases/mysql.md)
 - [在UI中建立資料庫來源連線的資料流](../../tutorials/ui/dataflow/databases.md)
