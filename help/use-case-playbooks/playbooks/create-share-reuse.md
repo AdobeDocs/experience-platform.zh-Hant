@@ -19,7 +19,7 @@ ht-degree: 81%
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
->title="建立實例"
+>title="建立執行個體"
 >abstract="產生資產清單 (例如旅程、對象、結構描述或目的地) 以在旅程或啟動情境中使用。"
 
 在建立教戰手冊執行個體之前，請先探索可用的教戰手冊，以[選擇正確的教戰手冊](/help/use-case-playbooks/playbooks/choose.md)。 當您準備好繼續使用教戰手冊並建立執行個體時，請選取&#x200B;**[!UICONTROL 建立執行個體]**&#x200B;以繼續使用教戰手冊並產生技術資產。

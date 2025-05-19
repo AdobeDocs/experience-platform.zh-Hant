@@ -28,7 +28,7 @@ ht-degree: 10%
 * [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
 * [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 使用監控儀表板來擷取資料湖
+## 使用監視儀表板進行資料湖攝取
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -122,7 +122,7 @@ ht-degree: 10%
 
 如果您的資料流執行報告錯誤，您可以向下捲動到頁面底部，使用[!UICONTROL 資料流執行錯誤]介面。
 
-使用[!UICONTROL 記錄失敗]區段來檢視因錯誤而未擷取的記錄上的量度。 若要檢視完整的錯誤報告，請選取&#x200B;**[!UICONTROL 預覽錯誤診斷]**。 若要下載錯誤診斷與檔案資訊清單的復本，請選取[下載]，然後複製要與[!DNL Data Access] API一起使用的範例API呼叫。**&#x200B;**
+使用[!UICONTROL 記錄失敗]區段來檢視因錯誤而未擷取的記錄上的量度。 若要檢視完整的錯誤報告，請選取&#x200B;**[!UICONTROL 預覽錯誤診斷]**。 若要下載錯誤診斷與檔案資訊清單的復本，請選取[下載]，然後複製要與[!DNL Data Access] API一起使用的範例API呼叫。****
 
 >[!NOTE]
 >

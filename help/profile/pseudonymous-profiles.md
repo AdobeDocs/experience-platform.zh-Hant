@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
 source-wordcount: '1264'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
->title="匿名設定檔資料到期"
->abstract="假名設定檔資料到期日代表假名設定檔在移除前將保留在Adobe Experience Platform中的天數。 此值必須設定為至少1。 請注意，移除假名設定檔最多可能需要三天時間。"
+>title="匿名輪廓資料期限"
+>abstract="匿名設定檔資料到期，代表匿名設定檔在移除之前保留在 Adobe Experience Platform 中的天數。此值必須至少設定為 1。請注意，移除匿名設定檔可能需要最多三天的時間。"
 
 如果設定檔符合下列條件，則會視為假名資料的有效期：
 
