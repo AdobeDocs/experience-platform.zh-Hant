@@ -2,10 +2,10 @@
 title: 資料管理授權權益最佳實務
 description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳做法及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 3%
+source-wordcount: '2338'
+ht-degree: 1%
 
 ---
 
@@ -15,13 +15,34 @@ Adobe Experience Platform是一個開放系統，可將您的資料轉換為健�
 
 Experience Platform提供可建立設定檔數量及可匯入資料量的授權。 因為有引入任何資料來源、數量或歷史記錄的容量，所以可能會隨著資料數量的增加而超過您的授權權利。
 
-本文件會概述可遵循的最佳做法以及可用來將 Adobe Experience Platform 的授權權益管理得更好的工具。
+請閱讀本指南，瞭解可遵循的最佳實務和可用工具，以便透過Experience Platform更好地管理您的授權權益。
 
-## 瞭解Adobe Experience Platform資料儲存
+## 功能摘要 {#summary-of-features}
 
-Experience Platform主要由兩個資料存放庫組成： [!DNL data lake]和設定檔存放區。
+使用本檔案概述的最佳實務和工具，在Experience Platform中更好地管理您的授權權益使用情況。 此檔案會隨著其他功能的發行而更新，以協助為所有Experience Platform客戶提供可見度和控制力。
 
-**[!DNL data lake]**&#x200B;主要用途如下：
+下表概述您目前可使用的功能清單，以便更妥善管理您的授權使用權益。
+
+| 功能 | 說明 |
+| --- | --- |
+| [資料集UI — 體驗事件資料保留](../../catalog/datasets/user-guide.md#data-retention-policy) | 為Data Lake和設定檔存放區中的資料設定固定的保留期間。 在設定的保留期間結束時，會刪除記錄。 |
+| [啟用/停用即時客戶個人檔案的資料集](../../catalog/datasets/user-guide.md) | 啟用或停用將資料集擷取至Real-Time Customer Profile。 |
+| 設定檔存放區中的[體驗事件有效期](../../profile/event-expirations.md) | 為擷取到啟用設定檔的資料集中的所有事件套用到期時間。 請聯絡您的Adobe客戶團隊或客戶服務，以啟用此功能。 |
+| [Adobe Analytics資料準備篩選器](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | 套用[!DNL Kafka]篩選器以從擷取中排除不必要的資料。 |
+| [Adobe Audience Manager來源聯結器篩選器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | 套用Audience Manager來源連線篩選器，從擷取中排除不必要的資料。 |
+| [事件轉寄資料篩選器](../../tags/ui/event-forwarding/overview.md) | 套用伺服器端[!DNL Kafka]篩選器以從擷取中排除不必要的資料。  如需其他資訊，請參閱[標籤規則](../../tags/ui/managing-resources/rules.md)的相關檔案。 |
+| [授權使用儀表板UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | 針對授權權益監控貴組織對Experience Platform產品的使用量。 存取每日使用快照、預測性趨勢和詳細的沙箱層級資料，以支援主動式授權管理。 |
+| [資料集重疊報告API](../../profile/tutorials/dataset-overlap-report.md) | 輸出對可定址對象貢獻最大的資料集。 |
+| [身分重疊報表API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | 輸出對可定址對象貢獻最大的身分名稱空間。 |
+| [假名設定檔資料有效期](../../profile/pseudonymous-profiles.md) | 設定假名設定檔的資料到期時間，並自動從設定檔存放區中移除資料。 |
+
+{style="table-layout:auto"}
+
+## 瞭解Experience Platform資料儲存
+
+Experience Platform主要由兩個資料存放庫組成：資料湖和個人資料存放區。
+
+資料湖主要用途如下：
 
 * 充當將資料上線到Experience Platform中的中繼區域；
 * 充當所有Experience Platform資料的長期資料儲存體；
@@ -40,9 +61,9 @@ Experience Platform主要由兩個資料存放庫組成： [!DNL data lake]和�
 
 當您授權Experience Platform時，會根據SKU提供您不同的授權使用權益：
 
-**[!DNL Addressable Audience]** - Experience Platform合約允許的客戶設定檔總數，包括已知和假名設定檔。
+**[!DNL Addressable Audience]**： Experience Platform合約允許的客戶設定檔總數，包括已知和假名設定檔。
 
-**[!DNL Total Data Volume]** — 可在參與工作流程中使用的Adobe Experience Platform設定檔服務資料總數。
+**[!DNL Total Data Volume]**：可用於參與工作流程中Real-time Customer Profile的資料總數。
 
 這些量度的可用性，以及每個量度的特定定義，會因貴組織已購買的授權而有所不同。
 
@@ -123,7 +144,7 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 
 {style="table-layout:auto"}
 
-#### 設定檔存放區構成報表
+### 設定檔存放區構成報表
 
 有許多報表可協助您瞭解設定檔存放區的組成。 這些報表可協助您針對如何以及在何處設定體驗事件有效期，做出明智的決策，以便更佳地最佳化您的授權使用情況：
 
@@ -132,13 +153,17 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### 假名設定檔資料有效期 {#pseudonymous-profile-expirations}
+### 假名設定檔資料有效期 {#pseudonymous-profile-expirations}
 
-此功能可讓您從設定檔存放區中自動移除過時的假名設定檔。 如需有關此功能的詳細資訊，請閱讀[假名設定檔資料到期總覽](../../profile/pseudonymous-profiles.md)。
+使用假名設定檔資料到期功能，從設定檔存放區中自動移除對您的使用案例不再有效或實用的資料。 假名設定檔資料到期會移除事件和設定檔記錄。 因此，此設定將會減少「可定址對象」數量。 如需有關此功能的詳細資訊，請閱讀[假名設定檔資料到期總覽](../../profile/pseudonymous-profiles.md)。
 
-#### 體驗事件期限 {#event-expirations}
+### 資料集UI — 體驗事件資料集保留 {#data-retention}
 
-此功能可讓您從已啟用設定檔的資料集中自動移除行為資料，該資料不再對您的使用案例有用。 如需此程式在資料集啟用後如何運作的詳細資訊，請參閱[體驗事件有效期](../../profile/event-expirations.md)的概觀。
+設定資料集到期日和保留設定，以對Data Lake和設定檔存放區中的資料強制執行固定保留期。 保留期間結束後，資料會遭到刪除。 Experience Event資料到期僅會移除事件，不會移除設定檔類別資料，這會減少授權使用量度中的[總資料量](total-data-volume.md)。 如需詳細資訊，請閱讀[設定資料保留原則](../../catalog/datasets/user-guide.md#data-retention-policy)的指南。
+
+### 設定檔體驗事件有效期 {#event-expirations}
+
+設定到期時間，當行為資料對您的使用案例失去價值時，從已啟用設定檔的資料集中自動移除行為資料。 如需詳細資訊，請閱讀[體驗活動有效期](../../profile/event-expirations.md)的概觀。
 
 ## 授權使用合規性最佳實務摘要 {#best-practices}
 
@@ -146,25 +171,7 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 
 * 使用[授權使用量儀表板](../../dashboards/guides/license-usage.md)追蹤及監控客戶使用趨勢。 這可讓您搶先掌握可能出現的使用過量。
 * 識別細分和個人化使用案例所需的事件，以設定[擷取篩選器](#ingestion-filters)。 這可讓您僅傳送使用案例所需的重要事件。
-* 確保您只有區段和個人化使用案例所需的設定檔[&#128279;](#ingestion-filters)的已啟用資料集。
-* 設定[體驗事件有效期](#event-expirations)和[假名設定檔資料有效期](#pseudonymous-profile-expirations)，以取得高頻資料，例如Web資料。
+* 確保您只有區段和個人化使用案例所需的設定檔](#ingestion-filters)的[已啟用資料集。
+* 設定[體驗事件有效期](../../catalog/datasets/user-guide.md#data-retention-policy)和[假名設定檔資料有效期](../../profile/pseudonymous-profiles.md)，以取得高頻資料，例如Web資料。
+* 為資料湖中的體驗事件資料集](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md)設定[存留時間(TTL)保留原則，以自動移除過時的記錄，並根據您的授權權益最佳化儲存空間使用量。
 * 請定期檢查[設定檔組合報告](#profile-store-composition-reports)，以瞭解您的設定檔存放區組合。 這可讓您瞭解對授權使用量消耗貢獻最大的資料來源。
-
-## 功能摘要和可用性 {#feature-summary}
-
-本檔案概述的最佳實務和工具可協助您更妥善管理Adobe Experience Platform中的授權權益使用情況。 此檔案將會隨著其他功能的發行而更新，以協助讓所有Experience Platform客戶瞭解和控制內容。
-
-下表概述您目前可使用的功能清單，以便更妥善管理您的授權使用權益。
-
-| 功能 | 說明 |
-| --- | --- |
-| [啟用/停用設定檔](../../catalog/datasets/user-guide.md)的資料集 | 啟用或停用將資料集擷取至Real-Time Customer Profile。 |
-| [體驗活動有效期](../../profile/event-expirations.md) | 為擷取到啟用設定檔的資料集中的所有事件套用到期時間。 請聯絡您的Adobe客戶團隊或客戶服務，以啟用此功能。 |
-| [Adobe Analytics資料準備篩選器](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 套用[!DNL Kafka]篩選器以從擷取中排除不必要的資料 |
-| [Adobe Audience Manager來源聯結器篩選器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | 套用Audience Manager來源連線篩選器，從擷取中排除不必要的資料 |
-| [事件轉寄資料篩選器](../../tags/ui/event-forwarding/overview.md) | 套用伺服器端[!DNL Kafka]篩選器以從擷取中排除不必要的資料。  如需其他資訊，請參閱[標籤規則](../../tags/ui/managing-resources/rules.md)的相關檔案。 |
-| [授權使用儀表板UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | 檢視貴組織用於Experience Platform的授權相關資料快照 |
-| [資料集重疊報告API](../../profile/tutorials/dataset-overlap-report.md) | 輸出對可定址對象貢獻最大的資料集 |
-| [身分重疊報表API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | 輸出對可定址對象貢獻最大的身分名稱空間 |
-
-{style="table-layout:auto"}
