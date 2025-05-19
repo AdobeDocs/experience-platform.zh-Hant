@@ -78,7 +78,7 @@ ht-degree: 7%
 
 請觀看下方的影片，瞭解本頁所述工作流程的端對端說明、使用匯出資料集功能的好處，以及一些建議的使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448829?captions=chi_hant)
 
 ## 支援的目的地 {#supported-destinations}
 
