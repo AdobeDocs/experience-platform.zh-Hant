@@ -143,7 +143,7 @@ Query Editor支援引數化查詢，可讓您將變數插入到SQL陳述式中�
 | **[!UICONTROL 上次執行時間戳記]** | 執行查詢時的最新時間戳記。 此欄著重顯示查詢是否已根據其目前排程執行。 |
 | **[!UICONTROL 上次執行狀態]** | 最近查詢執行的狀態。 三個狀態值為： `successful` `failed`或`in progress`。 |
 
-請參閱檔案，以取得如何透過Query Service UI](./monitor-queries.md)監視[查詢的詳細資訊。
+請參閱檔案，以取得如何透過Query Service UI[&#128279;](./monitor-queries.md)監視查詢的詳細資訊。
 
 ## 範本 {#browse}
 

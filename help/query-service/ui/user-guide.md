@@ -141,7 +141,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 >[!NOTE]
 >
->[!UICONTROL 檢視排程]、[!UICONTROL 新增排程]和[!UICONTROL 刪除查詢]選項只有在查詢已儲存為範本後才能使用。 [!UICONTROL 新增排程]選項會從查詢編輯器將您直接帶至排程產生器。 [!UICONTROL 檢視排程]選項會直接帶您進入該查詢的排程詳細目錄。 請參閱查詢排程檔案，瞭解如何在UI](./query-schedules.md#create-schedule)中[建立查詢排程。
+>[!UICONTROL 檢視排程]、[!UICONTROL 新增排程]和[!UICONTROL 刪除查詢]選項只有在查詢已儲存為範本後才能使用。 [!UICONTROL 新增排程]選項會從查詢編輯器將您直接帶至排程產生器。 [!UICONTROL 檢視排程]選項會直接帶您進入該查詢的排程詳細目錄。 請參閱查詢排程檔案，瞭解如何在UI[&#128279;](./query-schedules.md#create-schedule)中建立查詢排程。
 
 ![查詢詳細資料面板反白顯示的查詢編輯器。](../images/ui/query-editor/query-details.png)
 
@@ -177,7 +177,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >排定的查詢若連續執行10次失敗，就會自動置於[!UICONTROL 隔離]狀態。 具有此狀態的查詢需要您的介入，才能進行任何進一步的執行。 如需詳細資訊，請參閱[隔離的查詢](./monitor-queries.md#quarantined-queries)檔案。
 
-請參閱查詢排程檔案，瞭解如何在UI](./query-schedules.md)中[建立查詢排程。 或者，若要瞭解如何使用API新增排程，請閱讀[排程查詢端點指南](../api/scheduled-queries.md)。
+請參閱查詢排程檔案，瞭解如何在UI[&#128279;](./query-schedules.md)中建立查詢排程。 或者，若要瞭解如何使用API新增排程，請閱讀[排程查詢端點指南](../api/scheduled-queries.md)。
 
 任何排定的查詢都會新增到[!UICONTROL 排定的查詢]索引標籤的清單中。 您可以從該工作區透過UI監視所有已排程查詢工作的狀態。 在[!UICONTROL 已排程的查詢]索引標籤上，您可以找到有關查詢執行的重要資訊並訂閱警示。 可用的資訊包括狀態、排程詳細資料，以及執行失敗時的錯誤訊息/代碼。 如需詳細資訊，請參閱[監視排程查詢檔案](./monitor-queries.md)。
 
