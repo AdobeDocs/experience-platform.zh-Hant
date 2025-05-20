@@ -257,7 +257,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 以下影片旨在協助您瞭解沙箱工具，並概述如何建立新套件、發佈套件和匯入套件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446101/?learn=on&captions=chi_hant)
 
 ## 後續步驟
 
