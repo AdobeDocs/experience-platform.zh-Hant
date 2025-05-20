@@ -5,10 +5,10 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 27%
+source-wordcount: '409'
+ht-degree: 26%
 
 ---
 
@@ -110,6 +110,7 @@ ht-degree: 27%
    - [查詢記錄](ui/query-logs.md)
    - [監視已排程查詢](ui/monitor-queries.md)
    - [認證指南](ui/credentials.md)
+   - [將JWT移轉至OAuth認證](ui/migrate-jwt-to-oauth.md)
    - [從查詢結果產生輸出資料集](ui/create-datasets.md)
 - 查詢服務API {#api}
    - [快速入門](api/getting-started.md)
