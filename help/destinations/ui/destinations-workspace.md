@@ -3,10 +3,10 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 0%
+source-wordcount: '1300'
+ht-degree: 1%
 
 ---
 
@@ -69,9 +69,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**&#x200B;控制項，將對象或資料集匯出至該目的地。
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**&#x200B;控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**&#x200B;控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
+> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制項，將對象或資料集匯出至該目的地。
+> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
+> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
 
 ![帳戶標籤](../assets/ui/workspace/destination-account-options.png)
 
@@ -82,6 +82,7 @@ ht-degree: 0%
 | [!UICONTROL 使用者名稱] | 您在[連線目的地工作流程](../catalog/email-marketing/overview.md#connect-destination)中選取的使用者名稱。 |
 | [!UICONTROL 連線] | 代表與針對目的地建立的基本資訊相連結的唯一成功目的地資料流數目。 |
 | [!UICONTROL 授權日期] | 授權連線到此目的地的日期。 |
+| [!UICONTROL 到期日] | 此目的地的連線授權到期的日期。 <br>**重要**：此資料行目前僅適用於[Facebook](../catalog/social/facebook.md)連線。 |
 
 {style="table-layout:auto"}
 
@@ -91,19 +92,21 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![啟用對象控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**&#x200B;控制項，將對象或資料集匯出至該目的地。
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**&#x200B;控制項來[移除](delete-destinations.md)與目的地的現有連線。
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png)**[!UICONTROL 監視控制項中的檢視&#x200B;]**&#x200B;控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
-> * 選取[!UICONTROL 名稱]資料欄中的省略符號(`...`)，並使用![訂閱警示](/help/images/icons/alert-add.png)**[!UICONTROL 訂閱警示&#x200B;]**&#x200B;控制項訂閱目的地資料流警示。 您可以訂閱警報，以接收有關流程執行的狀態、成功或失敗的訊息。 如需有關目的地資料流警示的詳細資訊，請參閱[訂閱內文中目的地警示](alerts.md)。
+> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![啟用對象控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**控制項，將對象或資料集匯出至該目的地。
+> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**控制項來[移除](delete-destinations.md)與目的地的現有連線。
+> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png)**[!UICONTROL 監視控制項中的檢視&#x200B;]**控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
+> * 選取[!UICONTROL 名稱]資料欄中的省略符號(`...`)，並使用![訂閱警示](/help/images/icons/alert-add.png)**[!UICONTROL 訂閱警示&#x200B;]**控制項訂閱目的地資料流警示。 您可以訂閱警報，以接收有關流程執行的狀態、成功或失敗的訊息。 如需有關目的地資料流警示的詳細資訊，請參閱[訂閱內文中目的地警示](alerts.md)。
 
 ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 
 | 元素 | 說明 |
 |---------|----------|
 | 名稱 | 您為此目的地的啟用流程提供的名稱。 相同資料行包含兩個控制項： [!UICONTROL 啟動]和[!UICONTROL 刪除目的地]。 |
+| 資料類型 | 目的地連線支援的資料型別。 支援的資料型別： <ul><li>**[!UICONTROL 客戶]**</li><li>**[!UICONTROL 潛在客戶]**</li><li>**[!UICONTROL 帳戶]**</li><li>**[!UICONTROL 資料集]**</li></ul> |
 | [!UICONTROL 上次資料流執行狀態] | 上次資料流執行的狀態。 如需資料流執行的詳細資訊，請參閱[檢視目的地詳細資料](destination-details-page.md)。 |
 | [!UICONTROL 上次資料流執行日期] | 上次資料流執行的時間和日期。 如需資料流執行的詳細資訊，請參閱[檢視目的地詳細資料](destination-details-page.md)。 |
 | [!UICONTROL 目標] | 您為啟動流程選取的目的地平台。 |
+| [!UICONTROL 帳戶到期日] | 此目的地的連線授權到期的日期。 <br>**重要**：此資料行目前僅適用於[Facebook](../catalog/social/facebook.md)連線。 |
 | [!UICONTROL 連線型別] | 代表與儲存貯體或目的地的連線型別。 <ul><li>針對電子郵件行銷目的地：可以是S3、FTP或[!DNL Azure Blob]。</li><li>針對即時廣告目的地：伺服器對伺服器。</li><li>適用於串流目的地：可以是[!DNL Azure Event Hubs]或[!DNL Amazon Kinesis]。</li></ul> |
 | [!UICONTROL 使用者名稱] | 您為目的地流程選取的帳戶認證。 |
 | [!UICONTROL 啟用資料] | 表示正在啟用至此目的地的對象數量。 選取此控制項以進一步瞭解啟用的對象。 請參閱目的地詳細資訊頁面中的[啟用資料](/help/destinations/ui/destination-details-page.md#activation-data)，瞭解啟用對象的詳細資訊。 |

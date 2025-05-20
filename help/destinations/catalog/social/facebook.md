@@ -3,9 +3,9 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: Facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2137'
 ht-degree: 6%
 
 ---
@@ -157,14 +157,22 @@ ht-degree: 6%
 
 ### 重新整理驗證認證 {#refresh-authentication-credentials}
 
-Facebook權杖每60天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。
+
+您可以從&#x200B;**[!UICONTROL 帳戶]**&#x200B;或&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤中的&#x200B;**[!UICONTROL 帳戶到期日]**&#x200B;欄監視您的權杖到期日。
+
+在[瀏覽]索引標籤中的![Facebook帳戶權杖到期日資料行](../../assets/catalog/social/facebook/account-expiration-browse.png)
+
+在[帳戶]索引標籤中的![Facebook帳戶Token到期日資料行](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+
+若要避免權杖過期導致啟動資料流中斷，請執行以下步驟以重新驗證：
 
 1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
 2. （選用）使用頁面上可用的篩選器，以僅顯示Facebook帳戶。
    ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的Facebook認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Facebook認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
