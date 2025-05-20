@@ -2,10 +2,10 @@
 description: 瞭解如何使用監視儀表板來監視擷取到Data Lake中的資料。
 title: 監視資料湖擷取
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
+source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 10%
+source-wordcount: '1458'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 10%
 >
 >監控儀表板目前不支援串流來源，例如[HTTP API來源](../../sources/connectors/streaming/http.md)。 目前，您只能使用儀表板來監視批次來源。
 
-請閱讀本檔案，瞭解如何使用監視儀表板在Experience Platform UI中監視資料湖擷取。
+您可以使用Adobe Experience Platform使用者介面中的監視儀表板，擷取有關資料湖中的資料擷取和資料保留流程的量度。 使用介面中的圖表來監視一段時間內的擷取和保留趨勢，並彙總所有來源資料流程的效能。
+
+閱讀本檔案以瞭解如何使用監視儀表板來監視Data Lake中的所有資料處理，包括擷取和保留。
 
 ## 快速入門 {#get-started}
 
@@ -60,6 +62,7 @@ ht-degree: 10%
 | --- | --- |
 | 已收到的記錄 | 從指定來源接收的記錄總數。 |
 | 已擷取的記錄 | 擷取到Data Lake的記錄總數。 |
+| 刪除的記錄 | 由於資料湖保留設定或變更資料擷取作業而刪除的記錄總數。 |
 | 略過的記錄 | 略過的記錄總數。 略過的記錄是指由於不需要擷取而被略過的欄位。 例如，如果您建立的來源資料流已啟用部分擷取，您可以設定可接受的錯誤率臨界值。 在擷取程式期間，擷取將會略過非必要欄位的記錄，例如身分欄位，只要這些欄位在錯誤臨界值內。 |
 | 失敗的記錄 | 因錯誤而無法擷取的記錄總數。 |
 | 擷取率 | 根據接收的記錄總數所擷取的記錄百分比。 |
@@ -79,7 +82,19 @@ ht-degree: 10%
 
 {style="table-layout:auto"}
 
+若要自訂欄顯示，請選取欄設定圖示![欄圖示](/help/images/icons/column-settings.png)。
+
+![已選取資料行設定圖示的監視儀表板。](../assets/ui/monitor-sources/edit-columns.png)
+
+接著，使用&#x200B;*[!UICONTROL 自訂表格]*&#x200B;視窗來選取您想要儀表板顯示的欄。 完成後，選取&#x200B;**[!UICONTROL 套用]**。
+
+![監視儀表板中的自訂資料行快顯視窗。](../assets/ui/monitor-sources/customize-table.png)
+
 若要監視在特定資料流中擷取的資料，請選取來源旁的篩選圖示![篩選](/help/images/icons/filter-add.png)。
+
+>[!TIP]
+>
+>您可以使用監視儀表板來監視使用資料保留原則刪除之記錄的資料刪除度量。 如需資料保留的詳細資訊，請閱讀[設定資料保留原則](../../catalog/datasets/user-guide.md#data-retention-policy)的指南。
 
 ![選取指定來源旁的篩選圖示，以監視特定資料流。](../assets/ui/monitor-sources/monitor-dataflow.png)
 
@@ -122,7 +137,7 @@ ht-degree: 10%
 
 如果您的資料流執行報告錯誤，您可以向下捲動到頁面底部，使用[!UICONTROL 資料流執行錯誤]介面。
 
-使用[!UICONTROL 記錄失敗]區段來檢視因錯誤而未擷取的記錄上的量度。 若要檢視完整的錯誤報告，請選取&#x200B;**[!UICONTROL 預覽錯誤診斷]**。 若要下載錯誤診斷與檔案資訊清單的復本，請選取[下載]，然後複製要與[!DNL Data Access] API一起使用的範例API呼叫。**&#x200B;**
+使用[!UICONTROL 記錄失敗]區段來檢視因錯誤而未擷取的記錄上的量度。 若要檢視完整的錯誤報告，請選取&#x200B;**[!UICONTROL 預覽錯誤診斷]**。 若要下載錯誤診斷與檔案資訊清單的復本，請選取[下載]，然後複製要與[!DNL Data Access] API一起使用的範例API呼叫。****
 
 >[!NOTE]
 >
