@@ -2,9 +2,9 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 654a1c696d88d9e1748787402a1a50c8e232df57
+source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
 workflow-type: tm+mt
-source-wordcount: '2513'
+source-wordcount: '2678'
 ht-degree: 7%
 
 ---
@@ -56,11 +56,10 @@ ht-degree: 7%
 | [!DNL Adobe Journey Optimizer] | 合併原則 | | 歷程中使用的合併原則可以復製為相依物件。 在目標沙箱中，您&#x200B;**無法**&#x200B;建立新的合併原則，您只能使用現有的合併原則。 |
 | [!DNL Adobe Journey Optimizer] | 歷程 | 歷程中使用的下列物件會復製為相依物件。 在匯入工作流程期間，您可以選取&#x200B;**[!UICONTROL 建立新的]**&#x200B;或&#x200B;**[!UICONTROL 使用現有的]**： <ul><li>客群</li><li>結構描述</li><li>自訂動作</li><li>活動</li><li>片段</li><li>內容範本</li><li>畫布詳細資訊</li></ul> | <ul><li>**[!UICONTROL 自訂動作]**：將歷程複製到另一個沙箱時，在匯入程式中選取&#x200B;**[!UICONTROL 使用現有]**&#x200B;時，您選取的現有自訂動作&#x200B;**必須**&#x200B;與來源自訂動作相同。 如果兩者不同，新歷程將有無法解決的錯誤。</li><li>將會複製歷程中使用的事件和事件詳細資訊。 它一律會在目標沙箱中建立新版本。</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 動作 | | 歷程中使用的電子郵件和推播訊息可以復製為相依物件。 用於訊息個人化的歷程欄位中使用的管道動作活動不會檢查完整性。 不會複製內容區塊。<br><br>可以複製歷程中使用的更新設定檔動作。 自訂動作可獨立新增至套件。 歷程中使用的動作詳細資料也會複製。 它一律會在目標沙箱中建立新版本。 |
+| [!DNL Adobe Journey Optimizer] | 自訂動作 |  | 自訂動作可獨立新增至套件。 將自訂動作指派給歷程後，就無法再編輯它。 若要更新自訂動作，您應： <ul><li>在移轉歷程之前移動自訂動作</li><li>更新移轉後自訂動作的設定（例如請求標頭、查詢引數和驗證）</li><li>使用您在第一個步驟中新增的自訂動作移轉歷程物件</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 內容範本 | | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer行銷活動和歷程中重複使用自訂內容。 |
 | [!DNL Adobe Journey Optimizer] | 片段 | 所有巢狀片段。 | 片段可以復製為歷程物件的相依物件。 片段是可重複使用的元件，可在各個Journey Optimizer促銷活動和歷程的一封或多封電子郵件中參考。 |
-| [!DNL Adobe Journey Optimizer] | 行銷活動 | | 行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些項目不會複製，例如決定項目、資料使用標籤及語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱] |
-
-<!-- | [!DNL Adobe Journey Optimizer] | Campaigns | The following objects used in the campaign are copied as dependent objects: <ul><li>Campaigns</li><li>Audiences</li><li>Schemas</li><li>Content templates</li><li>Fragments</li><li>Message/Content</li><li>Channel configuration</li><li>Unified decision objects</li><li>Experiment settings/variants</li></ul>| Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as decision items, data usage labels, and language settings. For a complete list of objects that cannot be copied, refer the [exporting objects to another sandbox](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide. | -->
+| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
 
 不會複製曲面（例如預設集）。 系統會根據訊息型別和表面名稱，自動選取目標沙箱上最接近的相符專案。 如果在目標沙箱上找不到表面，則表面複製將失敗，導致訊息複製失敗，因為訊息需要表面才能用於設定。 在這種情況下，至少需要為訊息的正確通道建立一個表面，副本才能運作。
 
@@ -157,7 +156,7 @@ ht-degree: 7%
 
 若要使用現有物件，請選取相依物件旁的鉛筆圖示。
 
-![封裝物件與相依性]頁面會顯示包含在封裝中的資產清單。(../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![封裝物件與相依性]頁面會顯示包含在封裝中的資產清單。](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)[!UICONTROL 
 
 隨即顯示建立新或使用現有專案的選項。 選取&#x200B;**[!UICONTROL 使用現有的]**。
 
@@ -169,7 +168,7 @@ ht-degree: 7%
 
 您返回到[!UICONTROL 封裝物件和相依性]頁面。 從這裡，選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成封裝匯入。
 
-![封裝物件和相依性[[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示[!UICONTROL 完成]。]](../images/ui/sandbox-tooling/finish-object-dependencies.png)]
+![封裝物件和相依性[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示[!UICONTROL 完成]。](../images/ui/sandbox-tooling/finish-object-dependencies.png)]
 
 ## 匯出和匯入整個沙箱
 
@@ -258,7 +257,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 以下影片旨在協助您瞭解沙箱工具，並概述如何建立新套件、發佈套件和匯入套件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3446101/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 後續步驟
 
