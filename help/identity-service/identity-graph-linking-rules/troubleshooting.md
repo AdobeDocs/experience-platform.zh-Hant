@@ -2,22 +2,14 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '3375'
+source-wordcount: '3285'
 ht-degree: 0%
 
 ---
 
 # [!DNL Identity Graph Linking Rules]的疑難排解指南
-
->[!AVAILABILITY]
->
->身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
->
->* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
->* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
->* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
 
 當您測試及驗證[!DNL Identity Graph Linking Rules]時，您可能會遇到一些與資料擷取和圖表行為相關的問題。 閱讀本檔案以瞭解如何疑難排解您在使用[!DNL Identity Graph Linking Rules]時可能會遇到的一些常見問題。
 
@@ -273,7 +265,7 @@ ORDER BY timestamp desc
    * 您的所有設定檔中沒有單一名稱空間。
    * 發生[「擱置識別碼」](./implementation-guide.md#dangling-loginid-scenario)個狀況。 在此案例中，Identity Service無法判斷暫留ID是否與圖形中的任何個人實體相關聯。
 
-您也可以在UI[&#128279;](./graph-simulation.md)中使用圖形模擬工具來模擬事件，並設定您自己的唯一名稱空間和名稱空間優先順序設定。 這麼做有助於您基本瞭解身分最佳化演演算法應該如何運作。
+您也可以在UI](./graph-simulation.md)中使用[圖形模擬工具來模擬事件，並設定您自己的唯一名稱空間和名稱空間優先順序設定。 這麼做有助於您基本瞭解「身分最佳化演演算法」應有的行為。
 
 如果您的模擬結果與圖形行為預期相符，則可以檢查您的[身分設定](./identity-settings-ui.md)是否與您在模擬中設定的設定相符。
 
@@ -328,7 +320,7 @@ ORDER BY timestamp desc
 
 本節概述有關[!DNL Identity Graph Linking Rules]常見問題的解答清單。
 
-## 身分識別最佳化演算法 {#identity-optimization-algorithm}
+## 身分最佳化演演算法 {#identity-optimization-algorithm}
 
 請閱讀本節，瞭解有關[身分最佳化演演算法](./identity-optimization-algorithm.md)的常見問題解答。
 
@@ -389,7 +381,7 @@ ORDER BY timestamp desc
 
 ### 此功能如何與每個圖表50個身分的身分圖表護欄搭配運作？ 名稱空間優先順序是否會影響此系統定義的護欄？
 
-身分最佳化演演算法將先套用，以確保個人實體表示。 之後，如果圖表嘗試超過[身分圖表護欄](../guardrails.md) （每個圖表50個身分），則會套用此邏輯。 名稱空間優先順序不會影響50身分/圖表護欄的刪除邏輯。
+將先套用身分最佳化演演算法，以確保個人實體表示。 之後，如果圖表嘗試超過[身分圖表護欄](../guardrails.md) （每個圖表50個身分），則會套用此邏輯。 名稱空間優先順序不會影響50身分/圖表護欄的刪除邏輯。
 
 ## 測試
 

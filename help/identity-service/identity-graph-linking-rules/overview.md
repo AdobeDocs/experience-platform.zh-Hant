@@ -2,10 +2,10 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 6%
+source-wordcount: '1547'
+ht-degree: 4%
 
 ---
 
@@ -14,33 +14,89 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="身分識別圖連結規則"
->abstract="若要防止這些不必要的合併，您可以使用透過身分識別圖連結規則提供的設定，並為您的使用者提供準確的個人化。"
+>abstract="為避免這些不想要的合併，您可以使用透過身分圖表連結規則提供的設定，並允許使用者進行精確的個人化。"
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
->
->* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
->* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
->* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
+>如果您有現有的沙箱，在啟用身分設定後，需要取消收合的圖形（「已修正」），請聯絡您的Adobe帳戶團隊。
 
 透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 若要防止這些不想要的合併，您可以使用透過[!DNL Identity Graph Linking Rules]提供的設定，並允許使用者進行精確的個人化。
-
-觀看下列影片以取得使用[!DNL Identity Graph Linking Rules]的其他資訊：
-
->[!VIDEO](https://video.tv.adobe.com/v/3448283/?learn=on&enablevpops&captions=chi_hant)
 
 ## 快速入門
 
 下列檔案是瞭解[!DNL Identity Graph Linking Rules]的必要條件。
 
-* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [命名空間優先順序](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)
+
+## 視訊程式庫
+
+觀看以下影片，瞭解身分圖表連結規則的一些基本層面。
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="身分圖表連結規則：概觀" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="身分圖表連結規則：概觀"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="身分圖表連結規則：概觀">身分圖表連結規則：概觀</a>
+                    </p>
+                    <p class="is-size-6">觀看此影片以概略瞭解身分圖表連結規則，並瞭解如何使用此功能來避免圖表摺疊。</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                  </a>
+                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">讀取</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="身分圖表連結規則：身分設定" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="身分圖表連結規則：身分設定"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="身分圖表連結規則：身分設定">身分圖表連結規則：身分設定</a>
+                    </p>
+                    <p class="is-size-6">觀看此影片，瞭解如何設定身分設定，並為Real-Time CDP、Adobe Journey Optimizer和Customer Journey Analytics等Adobe Experience Platform應用程式建立高品質的身分圖表和客戶設定檔。</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                  </a>
+                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">讀取</span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
 
 ## 圖表收合案例 {#graph-collapse-scenarios}
 
@@ -59,7 +115,7 @@ ht-degree: 6%
 | --- | --- |
 | 家用電腦和平板電腦 | 丈夫和妻子都登入各自的銀行帳戶。 |
 | 公用資訊站 | 在機場登入的旅行者，會使用他們的忠誠度身份證來登記行李和列印登機牌。 |
-| 客服中心 | 客服中心人員代表客戶致電客戶支援以解決問題，登入單一裝置。 |
+| 呼叫中心 | 客服中心人員代表客戶致電客戶支援以解決問題，登入單一裝置。 |
 
 ![某些共用裝置的圖表。](../images/identity-settings/shared-devices.png)
 
@@ -107,12 +163,12 @@ ht-degree: 6%
 | 術語 | 說明 |
 | --- | --- |
 | 唯一命名空間 | 唯一名稱空間是身分識別名稱空間，在身分識別圖形的上下文中已設定為不同。 您可以使用UI將名稱空間設定為唯一。 一旦名稱空間定義為唯一，圖表就只能有一個包含該名稱空間的身分。 |
-| 命名空間優先順序 | 名稱空間優先順序是指名稱空間彼此相比的相對重要性。 名稱空間優先順序可透過UI設定。 您可以在指定的身分圖表中排列名稱空間。 啟用後，名稱優先順序將用於各種情境，例如身分最佳化演演算法的輸入以及確定體驗事件片段的主要身分。 |
-| 身分識別最佳化演算法 | 身分最佳化演演算法可確保透過設定唯一名稱空間和名稱空間優先順序所建立的准則，在指定的身分圖形中強制執行。 |
+| 命名空間優先順序 | 名稱空間優先順序是指名稱空間彼此相比的相對重要性。 名稱空間優先順序可透過UI設定。 您可以在指定的身分圖表中排列名稱空間。 啟用後，名稱優先順序將用於各種情境，例如身分最佳化演演算法的輸入以及判斷體驗事件片段的主要身分。 |
+| 身分最佳化演演算法 | 身分最佳化演演算法可確保透過設定唯一名稱空間和名稱空間優先順序所建立的准則，在指定的身分圖形中強制執行。 |
 
 ### 唯一命名空間 {#unique-namespace}
 
-您可以使用身分設定UI工作區將名稱空間設定為唯一。 如此一來，會通知身分最佳化演演算法，給定圖形可能只有一個包含該唯一名稱空間的身分。 這可防止將兩個不同的人員識別碼合併到同一個圖表中。
+您可以使用身分設定UI工作區將名稱空間設定為唯一。 如此一來，會通知身分最佳化演演算法，指定圖表可能只有一個包含該唯一名稱空間的身分。 這可防止將兩個不同的人員識別碼合併到同一個圖表中。
 
 請考量下列情況：
 
@@ -139,7 +195,7 @@ ht-degree: 6%
 
 唯一的名稱空間和名稱空間優先順序都可在身分設定UI工作區中設定。 不過，其設定的效果會有所不同：
 
-| | 身分識別服務 | 即時客戶設定檔 |
+| | 身分識別服務 | 即時客戶輪廓 |
 | --- | --- | --- |
 | 唯一命名空間 | 在Identity Service中，身分最佳化演演算法會參考唯一的名稱空間，以判斷要內嵌至指定身分圖表的身分資料。 | 不重複名稱空間不會影響即時客戶個人檔案。 |
 | 命名空間優先順序 | 在Identity Service中，對於擁有多個圖層的圖形，名稱空間優先順序將決定適當的連結是否已移除。 | 在設定檔中擷取體驗事件時，具有最高優先順序的名稱空間會成為設定檔片段的主要身分。 |
@@ -157,7 +213,7 @@ ht-degree: 6%
 
 如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
-* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)

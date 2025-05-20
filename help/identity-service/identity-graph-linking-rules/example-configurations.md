@@ -2,9 +2,9 @@
 title: Graph設定範例
 description: 瞭解使用身分圖表連結規則和身分資料時，可能會遇到的常見圖表情境。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '2849'
+source-wordcount: '2759'
 ht-degree: 6%
 
 ---
@@ -15,14 +15,6 @@ ht-degree: 6%
 >id="platform_identities_algorithmconfiguration"
 >title="演算法設定"
 >abstract="設定適合您所攝取身分的唯一命名空間和命名空間優先順序。"
-
->[!AVAILABILITY]
->
->身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
->
->* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
->* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
->* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
 
 >[!NOTE]
 >
@@ -771,7 +763,7 @@ CRMID: Tom, ECID: 111
 如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
 * [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
-* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [命名空間優先順序](./namespace-priority.md)

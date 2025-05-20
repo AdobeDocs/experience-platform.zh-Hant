@@ -5,29 +5,29 @@ breadcrumb-title: Experience Platform Identity Service 指南
 user-guide-description: 跨裝置和系統橋接客戶身分識別，以提供個人化的數位體驗。
 feature: Identities
 role: Admin,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 38%
+ht-degree: 33%
 
 ---
 
 
 # Adobe Experience Platform Identity Service {#identity}
 
-- [身分識別服務總覽](home.md)
+- [身分識別服務概觀](home.md)
 - [Identity Service和即時客戶個人檔案](identity-and-profile.md)
 - 功能 {#features}
    - [身分識別命名空間](./features/namespaces.md)
    - [身分連結邏輯](./features/identity-linking-logic.md)
    - [身分圖表檢視器](./features/identity-graph-viewer.md)
    - [Identity Service中的刪除](./features/deletion.md)
-   - 身分識別圖連結規則 {#identity-graph-linking-rules}
+   - 身分圖表連結規則 {#identity-graph-linking-rules}
       - [功能概觀](./identity-graph-linking-rules/overview.md)
-      - [身分識別最佳化演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [身分最佳化演演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [身分圖表連結規則的實作指南](./identity-graph-linking-rules/implementation-guide.md)
       - [圖表設定範例](./identity-graph-linking-rules/example-configurations.md)
-      - [身分圖表連結規則的疑難排解](./identity-graph-linking-rules/troubleshooting.md)
+      - [身分圖表連結規則疑難排解](./identity-graph-linking-rules/troubleshooting.md)
       - [命名空間優先順序](./identity-graph-linking-rules/namespace-priority.md)
       - [圖表模擬UI](./identity-graph-linking-rules/graph-simulation.md)
       - [身分設定UI](./identity-graph-linking-rules/identity-settings-ui.md)

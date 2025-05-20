@@ -1,30 +1,22 @@
 ---
-title: 身分識別最佳化演算法
+title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1527'
 ht-degree: 4%
 
 ---
 
-# 身分識別最佳化演算法 {#identity-optimization-algorithm}
+# 身分最佳化演演算法 {#identity-optimization-algorithm}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
 >title="唯一命名空間"
 >abstract="一個圖不能有兩個具有唯一命名空間的身分識別。若圖表試圖超出此限制時，將會保留最新的連結並移除最舊的連結。"
 
->[!AVAILABILITY]
->
->身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
->
->* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
->* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
->* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
-
-身分最佳化演演算法是Identity Service上的圖表演演算法，可協助確保身分圖表代表單一人員，因此可防止即時客戶設定檔上不想要的身分合併。
+身分最佳化演演算法是Identity Service上的圖表演演算法，可協助確保身分圖表代表單一人員，因此可防止即時客戶個人檔案中不需要的身分合併。
 
 ## 輸入引數 {#input-parameters}
 
@@ -68,7 +60,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 
 ## 身分最佳化演演算法詳細資料
 
-違反唯一名稱空間限制時，身分最佳化演演算法會「重播」連結，並從頭開始重建圖形。
+違反唯一名稱空間限制時，「身分最佳化演演算法」會「重播」連結，並從頭重建圖形。
 
 * 連結會依下列順序排序：
    * 最新事件。
@@ -100,7 +92,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 
 * `timestamp=1`： Jane使用筆記型電腦登入您的電子商務網站。 Jane由CRMID和電子郵件代表，而她所使用筆記型電腦上的網頁瀏覽器則由ECID代表。
 * `timestamp=2`： John使用相同的筆記型電腦登入您的電子商務網站。 John由他的CRMID和電子郵件代表，而他使用的網頁瀏覽器已由ECID代表。 由於相同的ECID連結至兩個不同的圖表，Identity Service可得知此裝置（筆記型電腦）為共用裝置。
-* 不過，由於唯一的名稱空間設定為最多一個CRMID名稱空間和每個圖表一個電子郵件名稱空間，身分最佳化演演算法會將圖表分割為兩個。
+* 然而，由於唯一的名稱空間設定為最多一個CRMID名稱空間和每個圖表一個電子郵件名稱空間，身分最佳化演演算法隨後將圖表分割為兩個。
    * 最後，由於John是最後驗證的使用者，因此代表筆記型電腦的ECID仍會連結至他的圖表，而非Jane&#39;s。
 
 ![共用裝置案例一](../images/identity-settings/shared-device-case-one.png)

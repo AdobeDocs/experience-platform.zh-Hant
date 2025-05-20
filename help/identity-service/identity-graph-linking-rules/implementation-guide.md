@@ -1,23 +1,15 @@
 ---
 title: 身分圖表連結規則的實作指南
-description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
+description: 瞭解使用Identity Graph連結規則設定實作資料時應遵循的建議步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1864'
 ht-degree: 6%
 
 ---
 
-# 身分圖表連結規則的實作指南
-
->[!AVAILABILITY]
->
->身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
->
->* **啟用需求**：在您設定並儲存[!DNL Identity Settings]之前，此功能將保持非使用中狀態。 若沒有此設定，系統將繼續正常運作，且行為不會有任何變更。
->* **重要附註**：在此「有限可用性」階段期間，Edge區段可能會產生非預期的區段會籍結果。 不過，串流和批次區段將如預期運作。
->* **後續步驟**：如需如何在生產沙箱中啟用此功能的詳細資訊，請聯絡您的Adobe客戶團隊。
+# [!DNL Identity Graph Linking Rules]的實作指南
 
 >[!IMPORTANT]
 >
@@ -203,7 +195,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 接下來，導覽至Identity Service UI工作區中的[圖形模擬工具](./graph-simulation.md)。 您可以使用圖表模擬工具來模擬使用各種不同唯一名稱空間和名稱空間優先順序設定所建立的身分圖表。
 
-透過建立不同的設定，您可以使用圖表模擬工具來學習和更好地瞭解身分最佳化演演算法和特定設定如何影響您的圖表行為。
+透過建立不同的設定，您可以使用圖表模擬工具來瞭解並更瞭解身分最佳化演演算法和特定設定如何影響您的圖表行為。
 
 ## 設定身分設定 {#identity-settings}
 
@@ -300,7 +292,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
 * [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
-* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [命名空間優先順序](./namespace-priority.md)

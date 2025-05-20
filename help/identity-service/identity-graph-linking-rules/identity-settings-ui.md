@@ -2,22 +2,18 @@
 title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 13%
+source-wordcount: '627'
+ht-degree: 2%
 
 ---
 
 # 身分設定UI
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->身分圖表連結規則目前處於「有限可用性」，可供開發沙箱中的所有客戶存取。
->
->* **啟用要求**：此功能將維持非使用中，直到您設定並儲存 [!DNL Identity Settings] 為止。如果沒有此設定，系統將繼續正常運作，且行為不會發生任何變更。
->* **重要說明**：在此限量開放階段，邊緣分段可能會產生非預期的分段會籍結果。但是，串流和批次分段將按預期運作。
->* **後續步驟**：如需有關如何在生產沙箱中啟用此功能的資訊，請聯絡您的 Adobe 帳戶團隊。
+>如果您有現有的沙箱，在啟用身分設定後，需要取消收合的圖形（「已修正」），請聯絡您的Adobe帳戶團隊。
 
 身分設定是Adobe Experience Platform Identity Service UI中的功能，可用來指定唯一的名稱空間及設定名稱空間優先順序。
 
@@ -28,7 +24,7 @@ ht-degree: 13%
 開始使用身分設定前，請先閱讀下列檔案：
 
 * [[!DNL Identity Graph Linking Rules]](./overview.md)
-* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [命名空間優先順序](./namespace-priority.md)
@@ -90,7 +86,7 @@ ht-degree: 13%
 如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
 * [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
-* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
