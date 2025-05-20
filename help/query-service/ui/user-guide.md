@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務所提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發目的，以及非互動式查詢來填入Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bf9de8c5358f1ab90dd5d70b0607dcfba7d1e2f5
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '3360'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 >[!NOTE]
 >
->[!UICONTROL 檢視排程]、[!UICONTROL 新增排程]和[!UICONTROL 刪除查詢]選項只有在查詢已儲存為範本後才能使用。 [!UICONTROL 新增排程]選項會從查詢編輯器將您直接帶至排程產生器。 [!UICONTROL 檢視排程]選項會直接帶您進入該查詢的排程詳細目錄。 請參閱查詢排程檔案，瞭解如何在UI[&#128279;](./query-schedules.md#create-schedule)中建立查詢排程。
+>[!UICONTROL 檢視排程]、[!UICONTROL 新增排程]和[!UICONTROL 刪除查詢]選項只有在查詢已儲存為範本後才能使用。 [!UICONTROL 新增排程]選項會從查詢編輯器將您直接帶至排程產生器。 [!UICONTROL 檢視排程]選項會直接帶您進入該查詢的排程詳細目錄。 請參閱查詢排程檔案，瞭解如何在UI](./query-schedules.md#create-schedule)中[建立查詢排程。
 
 ![查詢詳細資料面板反白顯示的查詢編輯器。](../images/ui/query-editor/query-details.png)
 
@@ -177,7 +177,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >排定的查詢若連續執行10次失敗，就會自動置於[!UICONTROL 隔離]狀態。 具有此狀態的查詢需要您的介入，才能進行任何進一步的執行。 如需詳細資訊，請參閱[隔離的查詢](./monitor-queries.md#quarantined-queries)檔案。
 
-請參閱查詢排程檔案，瞭解如何在UI[&#128279;](./query-schedules.md)中建立查詢排程。 或者，若要瞭解如何使用API新增排程，請閱讀[排程查詢端點指南](../api/scheduled-queries.md)。
+請參閱查詢排程檔案，瞭解如何在UI](./query-schedules.md)中[建立查詢排程。 或者，若要瞭解如何使用API新增排程，請閱讀[排程查詢端點指南](../api/scheduled-queries.md)。
 
 任何排定的查詢都會新增到[!UICONTROL 排定的查詢]索引標籤的清單中。 您可以從該工作區透過UI監視所有已排程查詢工作的狀態。 在[!UICONTROL 已排程的查詢]索引標籤上，您可以找到有關查詢執行的重要資訊並訂閱警示。 可用的資訊包括狀態、排程詳細資料，以及執行失敗時的錯誤訊息/代碼。 如需詳細資訊，請參閱[監視排程查詢檔案](./monitor-queries.md)。
 
@@ -234,11 +234,69 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >主控台只會顯示因執行查詢而產生的錯誤。 它不會顯示查詢執行前發生的查詢驗證錯誤。
 
-### 查詢結果 {#query-results}
+## 查詢結果 {#query-results}
 
 完成查詢後，結果會顯示在&#x200B;**[!UICONTROL 主控台]**&#x200B;標籤旁的&#x200B;**[!UICONTROL 結果]**&#x200B;標籤中。 此檢視顯示您查詢的表格輸出，根據您選擇的[結果計數](#result-count)顯示50到1000列結果。 此檢視可讓您驗證您的查詢是否產生預期的輸出。 若要使用您的查詢產生資料集，請移除傳回資料列的限制，然後使用`CREATE TABLE tablename AS SELECT`執行查詢，以使用輸出產生資料集。 請參閱[產生資料集教學課程](./create-datasets.md)，瞭解如何從查詢編輯器中的查詢結果產生資料集的指示。
 
 ![查詢編輯器主控台的[結果]索引標籤顯示查詢執行的結果。](../images/ui/query-editor/query-results.png)
+
+### 下載查詢結果 {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>下載功能僅適用於擁有Data Distiller附加元件的客戶。 若要進一步瞭解Data Distiller，請聯絡您的Adobe代表。
+
+執行成功的查詢後，請下載CSV、XLSX或JSON格式的結果，以用於離線分析、報表或試算表工作流程。 此功能透過啟用對離線分析、報告和Excel型程式的查詢結果的立即存取權，簡化了行銷和分析團隊的工作流程。
+
+若要下載您的查詢結果，請選取[查詢編輯器] **[!UICONTROL [結果]]**&#x200B;索引標籤右上角的&#x200B;**[!UICONTROL [下載]]**。 然後從下拉式功能表中選擇&#x200B;**[!UICONTROL CSV]**、**[!UICONTROL XLSX]**&#x200B;或&#x200B;**[!UICONTROL JSON]**。 檔案會自動下載到您的本機電腦。 選擇適合您使用案例的格式、CSV用於輕量型匯出、XLSX用於格式化試算表，或JSON用於結構化資料處理。
+
+>[!NOTE]
+>
+>如果&#x200B;**[!UICONTROL 下載]**&#x200B;按鈕遺失，請檢查您的查詢結果。 只有在傳回記錄時，按鈕才會出現。 如果未傳回任何記錄，則&#x200B;**[!UICONTROL 結果]**&#x200B;索引標籤會顯示「沒有結果」訊息，且下載選項已停用。
+
+![下載時查詢編輯器的結果索引標籤，以及反白顯示的下拉式功能表。](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>在Excel中開啟CSV檔案時，您可能會看到下列警告： <br>「可能的資料遺失。 如果以逗號分隔(.csv)格式儲存此活頁簿，部分功能可能會遺失。 若要保留這些功能，請以Excel檔案格式儲存。」<br>此外，請注意日期和時間格式可能因檔案型別而異。 CSV檔案會保留查詢結果中所顯示的格式，而XLSX檔案則可以在Excel中自動套用當地語系化格式。 如果出現此警告，您可以安全地繼續。 若要保留Excel專用格式，請改以XLSX儲存檔案。
+
+### 以全熒幕檢視結果 {#view-results}
+
+執行成功的查詢後，在&#x200B;**[!UICONTROL 結果]**&#x200B;索引標籤中選取&#x200B;**[!UICONTROL 檢視結果]**&#x200B;以開啟您結果的清單化全熒幕檢視。
+
+使用全熒幕預覽可輕鬆掃描寬表格，並檢查列層級的詳細資料，而不需水準捲動。 全熒幕檢視會以可調整大小的網格顯示輸出，讓您更輕鬆地檢視大型資料集及跨欄掃描。
+
+>[!NOTE]
+>
+>預覽是唯讀的，不會修改您的查詢或資料集。
+
+![已選取檢視結果的全熒幕預覽對話方塊。](../images/ui/overview/view-results-fullscreen.png)
+
+### 複製結果 {#copy-results}
+
+使用查詢編輯器中的增強型複製功能，將查詢結果復製為逗號分隔值(CSV)，並將其貼到試算表工具（如Excel）中，以立即驗證或報告。 此功能可改善可讀性、保留格式並簡化工作流程，而不需依賴協力廠商工具。
+
+您可以從[!UICONTROL 結果]標籤或全熒幕結果預覽中複製查詢結果。 從&#x200B;**[!UICONTROL 結果]**&#x200B;索引標籤中，選取復製圖示(![復製圖示。](../../images/icons/copy.png))以複製所有查詢結果到剪貼簿。 若要啟用復製圖示，請先選取一列。 您可以選取個別列，或使用頂端的核取方塊來一次選取所有列。
+
+![查詢編輯器的結果索引標籤，反白顯示復本圖示。](../images/ui/overview/query-editor-copy-icon.png)
+
+或者，選取&#x200B;**[!UICONTROL 檢視結果]**&#x200B;以開啟全熒幕預覽。 在此對話方塊中，選取個別列，或使用左上角的核取方塊來選取所有列，然後選取復製圖示（![復製圖示）。](../../images/icons/copy.png))以複製選取的資料。
+
+![全熒幕預覽對話方塊，其中已選取結果列，且復本圖示反白顯示。](../images/ui/overview/results-copy.png)
+
+### 舊版結果表格（可用性限制） {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>舊版結果表格只能透過功能標幟選取使用者，可能不會顯示在您目前的查詢編輯器體驗中。 如果您的團隊仰賴拖曳選取工作流程，請聯絡Adobe代表以要求存取權。
+
+舊版查詢編輯器適用於依賴彈性手動資料工作流程（例如QA或試算表式稽核）的使用者。
+
+它支援以瀏覽器為基礎的原生拖曳選取範圍，因此您可以使用標準的選取行為，反白及複製輸出的任何部分（包括個別儲存格或區塊）。 這與使用結構化列選取和專用複製動作的增強型表格形成對比。
+
+複製的資料以定位點分隔，因此當您貼到Excel等工具時，欄會保持對齊和可讀取。 在標題列上拖曳選取時，也會包含欄標題。
+
+![在舊版編輯器中顯示結果，並反白顯示簡單的拖曳選取結果。](../images/ui/query-editor/legacy-results-table.png)
 
 ## 範例 {#examples}
 

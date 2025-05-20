@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務UI指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
+source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
 workflow-type: tm+mt
-source-wordcount: '2767'
+source-wordcount: '2467'
 ht-degree: 1%
 
 ---
@@ -104,49 +104,23 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 
 ![查詢編輯器工作區。](../images/ui/overview/query-editor.png)
 
-### 下載查詢結果 {#download-query-results}
+### 關於結果標籤 {#results-tab}
 
->[!AVAILABILITY]
->
->下載功能僅適用於擁有Data Distiller附加元件的客戶。 若要進一步瞭解Data Distiller，請聯絡您的Adobe代表。
+[!UICONTROL Result]索引標籤會顯示查詢執行後的表格輸出。 使用此標籤來檢閱結果、驗證輸出，以及直接在介面中採取後續動作。 從這個檢視，您可以：
 
-您現在可以直接從「查詢編輯器」使用者介面下載查詢結果。 成功執行查詢後，您可以下載CSV、XLSX或JSON檔案格式的輸出。 此功能透過啟用對離線分析、報告和Excel型程式的查詢結果的立即存取權，簡化了行銷和分析團隊的工作流程。
+- 以CSV、XLSX或JSON格式下載結果以供離線分析。 檢視[下載查詢結果](./user-guide.md#download-query-results)。
+- 以全熒幕檢視結果，以可調整大小的格線版面配置檢查大型表格或寬資料集。 以全熒幕檢視[結果](./user-guide.md#view-results)。
+- 以CSV格式將結果複製到剪貼簿，以快速貼入試算表應用程式。 檢視[複製結果](./user-guide.md#copy-results)。
 
-若要下載您的查詢結果，請選取[查詢編輯器] **[!UICONTROL [結果]]**&#x200B;索引標籤右上角的&#x200B;**[!UICONTROL [下載]]**。 然後從下拉式功能表中選擇&#x200B;**[!UICONTROL CSV]**、**[!UICONTROL XLSX]**&#x200B;或&#x200B;**[!UICONTROL JSON]**。 檔案會自動下載到您的本機電腦。
+這些功能的設計可支援順暢的資料驗證、報告和共用工作流程，而且完全無須離開查詢編輯器。
 
->[!NOTE]
->
->**[!UICONTROL 下載]**&#x200B;按鈕只有在查詢傳回結果時才會出現。 如果未傳回任何記錄，則&#x200B;**[!UICONTROL 結果]**&#x200B;索引標籤會顯示「沒有結果」訊息，且下載選項已停用。
+### 參數化查詢 {#parameterized-queries}
 
-![下載時查詢編輯器的結果索引標籤，以及反白顯示的下拉式功能表。](../images/ui/overview/download-results.png)
+Query Editor支援引數化查詢，可讓您將變數插入到SQL陳述式中，並在執行階段動態指派值。 此功能有助於簡化可重複使用的查詢，並改善工作流程的彈性。
 
->[!NOTE]
->
->在Excel中開啟CSV檔案時，您可能會看到下列警告： <br>「可能的資料遺失。 如果以逗號分隔(.csv)格式儲存此活頁簿，部分功能可能會遺失。 若要保留這些功能，請以Excel檔案格式儲存。」<br>此外，請注意日期和時間格式可能因檔案型別而異。 CSV檔案會保留查詢結果中所顯示的格式，而XLSX檔案則可以在Excel中自動套用當地語系化格式。
+您可以在寫入查詢時定義引數，然後在執行查詢之前，透過[!UICONTROL 查詢引數]索引標籤指派值。 引數化查詢對於排程查詢或跨組織共用的查詢範本特別有用。
 
-### 以全熒幕檢視結果 {#view-results}
-
-執行成功的查詢後，在&#x200B;**[!UICONTROL 結果]**&#x200B;索引標籤中選取&#x200B;**[!UICONTROL 檢視結果]**&#x200B;以開啟您結果的清單化全熒幕檢視。
-
-全熒幕檢視會以可調整大小的網格顯示輸出，讓您更輕鬆地檢視大型資料集及跨欄掃描。 在分析寬表格或檢閱列層級詳細資料時，此預覽模式特別實用。
-
->[!NOTE]
->
->預覽是唯讀的，不會修改您的查詢或資料集。
-
-![已選取檢視結果的全熒幕預覽對話方塊。](../images/ui/overview/view-results-fullscreen.png)
-
-### 複製結果 {#copy-results}
-
-使用查詢編輯器中的增強型複製功能，以逗號分隔值(CSV)形式快速複製查詢結果。 輕鬆將複製的資料貼到Excel等試算表應用程式中，以便進一步分析。 此功能可改善可讀性、保留格式，並簡化驗證和報表工作流程，而不需依賴協力廠商工具。
-
-您可以從[!UICONTROL 結果]標籤或全熒幕結果預覽中複製查詢結果。 從&#x200B;**[!UICONTROL 結果]**&#x200B;索引標籤中，選取復製圖示(![復製圖示。](../../images/icons/copy.png))以複製所有查詢結果到剪貼簿。 在「查詢編輯器結果」標籤中，選取個別列，或使用核取方塊欄標題選取所有列。 選取單列以啟用復製圖示。
-
-![查詢編輯器的結果索引標籤，反白顯示復本圖示。](../images/ui/overview/query-editor-copy-icon.png)
-
-或者，選取&#x200B;**[!UICONTROL 檢視結果]**&#x200B;以開啟全熒幕預覽。 在此對話方塊中，選取個別列，或使用左上角的核取方塊來選取所有列，然後選取復製圖示（![復製圖示）。](../../images/icons/copy.png))以複製選取的資料。
-
-![全熒幕預覽對話方塊，其中已選取結果列，且復本圖示反白顯示。](../images/ui/overview/results-copy.png)
+若要瞭解如何定義和使用引數，請參閱查詢編輯器中的[引數化查詢](./parameterized-queries.md)。
 
 ## 排定的查詢 {#scheduled-queries}
 
@@ -169,7 +143,7 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 | **[!UICONTROL 上次執行時間戳記]** | 執行查詢時的最新時間戳記。 此欄著重顯示查詢是否已根據其目前排程執行。 |
 | **[!UICONTROL 上次執行狀態]** | 最近查詢執行的狀態。 三個狀態值為： `successful` `failed`或`in progress`。 |
 
-請參閱檔案，以取得如何透過Query Service UI[&#128279;](./monitor-queries.md)監視查詢的詳細資訊。
+請參閱檔案，以取得如何透過Query Service UI](./monitor-queries.md)監視[查詢的詳細資訊。
 
 ## 範本 {#browse}
 
