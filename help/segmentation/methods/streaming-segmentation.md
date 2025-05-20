@@ -3,22 +3,108 @@ solution: Experience Platform
 title: 串流分段指南
 description: 瞭解串流細分是什麼、如何建立使用串流細分評估的受眾，以及如何檢視使用串流細分建立的受眾。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 1%
+source-wordcount: '2013'
+ht-degree: 2%
 
 ---
 
 # 串流分段指南
 
+>[!BEGINSHADEBOX]
+
+>[!NOTE]
+>
+>串流細分資格標準已於2025年5月20日更新。
+
++++資格更新
+
+>[!IMPORTANT]
+>
+>目前使用串流或邊緣區段評估的所有現有區段定義仍會繼續依原樣運作，除非加以編輯或更新。
+
+## 規則集 {#ruleset}
+
+任何符合下列規則集的&#x200B;**新區段或編輯的**&#x200B;區段定義都將&#x200B;**不再使用**&#x200B;串流或邊緣區段進行評估。 相反地，將會使用批次區段來評估這些區段。
+
+- 時間超過24小時的單一事件
+   - 使用過去3天內檢視過網頁的所有設定檔啟用對象。
+- 沒有時間範圍的單一事件
+   - 使用所有檢視了網頁的設定檔來啟用對象。
+
+## 時間段 {#time-window}
+
+為了使用串流細分評估對象，它&#x200B;**必須**&#x200B;限制在24小時時間範圍內。
+
+## 在串流對象中包含批次資料 {#include-batch-data}
+
+在此更新之前，您可以建立結合批次和串流資料來源的串流對象定義。 不過，透過最新更新，使用批次和串流資料來源建立對象時，將會使用批次細分進行評估。
+
+如果您需要使用符合更新後規則集的串流或邊緣細分來評估區段定義，您需要明確建立批次和串流規則集，並使用區段區段將它們合併。 此批次規則集&#x200B;**必須**&#x200B;以設定檔結構描述為基礎。
+
+例如，假設您有兩個對象，其中一個對象容納設定檔結構描述資料，另一個則容納體驗事件結構描述資料：
+
+| 客群 | 結構描述 | Source型別 | 查詢定義 | 客群 ID |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| 加州居民 | 輪廓 | 批次 | 住家地址在加利福尼亞州 | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| 最近結帳 | 體驗事件 | 串流 | 在過去24小時內至少有一個結帳 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+如果您想在串流對象中使用批次元件，必須使用區段參考批次對象。
+
+因此，將兩個對象結合在一起的規則集範例如下所示：
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+將使用串流細分來評估產生的對象&#x200B;**，因為它透過參考批次對象元件來運用批次對象的成員資格。
+
+不過，如果您想要結合兩個對象與事件資料，您&#x200B;**無法**&#x200B;只結合這兩個事件。 您需要建立兩個對象，然後建立另一個使用`inSegment`來參照這兩個對象的對象。
+
+例如，假設您有兩個對象，這兩個對象都會容納體驗事件結構描述資料：
+
+| 客群 | 結構描述 | Source型別 | 查詢定義 | 客群 ID |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| 最近的放棄 | 體驗事件 | 批次 | 過去24小時內至少有一個放棄事件 | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| 最近結帳 | 體驗事件 | 串流 | 在過去24小時內至少有一個結帳 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+在此情況下，您需要建立第三個對象，如下所示：
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
+>[!IMPORTANT]
+>
+>所有符合規則集的現有區段定義都將繼續使用串流或邊緣區段進行評估，直到編輯為止。
+>
+>此外，目前符合其他串流或邊緣區段評估標準的所有現有區段定義，仍將使用串流或邊緣區段進行評估。
+
+## 合併原則 {#merge-policy}
+
+任何符合串流或邊緣分段&#x200B;**資格的**&#x200B;新或已編輯&#x200B;**區段定義，都必須**&#x200B;位於「Edge上的&#39;a5&#39;5c用」合併原則上。
+
+如果沒有作用中的合併原則集，您需要[設定您的合併原則](../../profile/merge-policies/ui-guide.md#configure)，並將它設定為在Edge上作用中。
+
+
++++
+
+>[!ENDSHADEBOX]
+
 串流細分是近乎即時評估Adobe Experience Platform中的受眾，同時專注於資料豐富度的能力。
 
 有了串流區隔，當串流資料進入Experience Platform時，對象資格就會立即生效，無需排程及執行區隔工作。 這可讓您在資料傳入Experience Platform時評估資料，讓對象成員資格自動保持在最新狀態。
 
-## 合格的查詢型別 {#query-types}
+## 合格的規則集 {#rulesets}
 
-如果查詢符合下表所列的任何條件，將有資格進行串流分段。
+>[!IMPORTANT]
+>
+>為了使用串流分段，您&#x200B;**必須**&#x200B;使用「在Edge上有效」的合併原則。 如需合併原則的詳細資訊，請閱讀[合併原則概觀](../../profile/merge-policies/overview.md)。
+
+如果規則集符合下表所列的任何條件，就符合串流區段的資格。
 
 >[!NOTE]
 >
@@ -29,33 +115,70 @@ ht-degree: 1%
 | 少於24小時時間範圍內的單一事件 | 任何會參照少於24小時之時間範圍內的單一傳入事件的區段定義。 | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內單一事件的範例。](../images/methods/streaming/single-event.png) |
 | 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 | `homeAddress.country.equals("US", false)` | ![顯示的設定檔屬性範例。](../images/methods/streaming/profile-attribute.png) |
 | 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內具有設定檔屬性的單一事件範例。](../images/methods/streaming/single-event-with-profile-attribute.png) |
-| 區段區段 | 包含一或多個批次或串流區段的任何區段定義。 **注意：**&#x200B;如果使用區段區段，則設定檔取消資格將&#x200B;**每24小時發生一次**。 | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![將顯示區段範例。](../images/methods/streaming/segment-of-segments.png) |
-| 具有設定檔屬性的多個事件 | 任何在過去24小時&#x200B;**內參考多個事件**&#x200B;且（選擇性）具有一或多個設定檔屬性的區段定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示具有設定檔屬性的多個事件範例。](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
+| 24小時相對時間範圍內的多個事件 | 任何在過去24小時&#x200B;**內參考多個事件**&#x200B;且（選擇性）具有一或多個設定檔屬性的區段定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示具有設定檔屬性的多個事件範例。](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 在下列情況下，區段定義將&#x200B;**不**&#x200B;適用於串流分段：
 
 - 區段定義包含Adobe Audience Manager (AAM)區段或特徵。
 - 區段定義包括多個實體（多實體查詢）。
 - 區段定義包含單一事件和`inSegment`事件的組合。
-   - 但是，如果`inSegment`事件中包含的區段定義僅為設定檔，則區段定義&#x200B;**將**&#x200B;啟用串流分段。
+   - 例如，在單一規則集中鏈結下列專案： `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`。
 - 區段定義會使用「忽略年份」作為其時間限制的一部分。
 
 請注意下列適用於串流細分查詢的准則：
 
 | 查詢型別 | 方針 |
 | ---------- | -------- |
-| 單一事件查詢 | 回顧期間沒有限制。 |
+| 單一事件規則集 | 回顧期間限製為&#x200B;**一天**。 |
 | 使用事件歷史記錄進行查詢 | <ul><li>回顧期間限製為&#x200B;**一天**。</li><li>事件之間必須有嚴格的時間排序條件&#x200B;**且**。</li><li>支援至少具有一個否定事件的查詢。 不過，整個事件&#x200B;**不可**&#x200B;為否定。</li></ul> |
 
 如果區段定義經過修改，使其不再符合串流區段的條件，則區段定義會自動從「串流」切換為「批次」。
 
 此外，區段取消資格（類似於區段資格）會即時發生。 因此，如果對象不再符合區段的資格，則會立即取消資格。 例如，如果區段定義要求「過去三小時內購買紅鞋子的所有使用者」，三小時後，所有最初符合區段定義資格的設定檔都將不合格。
 
+### 合併對象 {#combine-audiences}
+
+若要合併來自批次和串流來源的資料，您必須將批次和串流元件分隔為個別的對象。
+
+例如，我們考慮以下兩個範例對象：
+
+| 客群 | 結構描述 | Source型別 | 查詢定義 | 客群 ID |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| 加州居民 | 輪廓 | 批次 | 住家地址在加利福尼亞州 | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| 最近結帳 | 體驗事件 | 串流 | 在過去24小時內至少有一個結帳 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+如果您想在串流對象中使用批次元件，必須使用區段參考批次對象。
+
+因此，將兩個對象結合在一起的規則集範例如下所示：
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+將使用串流細分來評估產生的對象&#x200B;**，因為它透過參考批次對象元件來運用批次對象的成員資格。
+
+不過，如果您想要結合兩個對象與事件資料，您&#x200B;**無法**&#x200B;只結合這兩個事件。 您需要建立兩個對象，然後建立另一個使用`inSegment`來參照這兩個對象的對象。
+
+例如，假設您有兩個對象，這兩個對象都會容納體驗事件結構描述資料：
+
+| 客群 | 結構描述 | Source型別 | 查詢定義 | 客群 ID |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| 最近的放棄 | 體驗事件 | 批次 | 過去24小時內至少有一個放棄事件 | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| 最近結帳 | 體驗事件 | 串流 | 在過去24小時內至少有一個結帳 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+在此情況下，您需要建立第三個對象，如下所示：
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
 ## 建立客群 {#create-audience}
 
 您可以使用Segmentation Service API或透過UI中的對象入口網站，建立使用串流細分來評估的對象。
 
-如果區段定義符合[合格的查詢型別](#eligible-query-types)之一，則可以啟用串流功能。
+如果區段定義符合[合格的規則集](#eligible-rulesets)之一，則可啟用串流功能。
 
 >[!BEGINTABS]
 
@@ -166,7 +289,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ![「建立對象」彈出視窗中會醒目顯示「建置規則」按鈕。](../images/methods/streaming/select-build-rules.png)
 
-在區段產生器中，建立符合[合格查詢型別](#eligible-query-types)之一的區段定義。 如果區段定義符合串流區段的資格，您就可以選取&#x200B;**[!UICONTROL 串流]**&#x200B;作為&#x200B;**[!UICONTROL 評估方法]**。
+在區段產生器中，建立符合其中一個[合格規則集](#eligible-rulesets)的區段定義。 如果區段定義符合串流區段的資格，您就可以選取&#x200B;**[!UICONTROL 串流]**&#x200B;作為&#x200B;**[!UICONTROL 評估方法]**。
 
 ![會顯示區段定義。 評估型別已反白顯示，顯示可以使用串流區段來評估區段定義。](../images/methods/streaming/streaming-evaluation-method.png)
 
@@ -340,4 +463,4 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 若要進一步瞭解如何使用Adobe Experience Platform使用者介面，請參閱[分段使用手冊](./overview.md)。
 
-如需有關串流區段的常見問題，請參閱常見問題[&#128279;](../faq.md#streaming-segmentation)的串流區段區段。
+如需有關串流區段的常見問題，請參閱常見問題](../faq.md#streaming-segmentation)的[串流區段區段。
