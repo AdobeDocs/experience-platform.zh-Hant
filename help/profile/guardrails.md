@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: 了解設定檔資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cfc221250a9c8f91b16aa1d4572263ecaf4eeccc
 workflow-type: tm+mt
-source-wordcount: '2617'
+source-wordcount: '2622'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 >[!IMPORTANT]
 >
->除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 本檔案提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。 檢閱下列護欄時，系統假設您已正確地模型化資料。 如果您有任何關於如何模型化資料的問題，請聯絡您的客戶服務代表。
 
@@ -98,7 +98,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 | 最大設定檔片段大小 | 50MB | 系統強制的護欄 | **單一設定檔片段的大小上限為50MB。任何大於50MB的[設定檔片段](#profile-fragments)的**&#x200B;分段、匯出和查詢可能會失敗。 |
 | 最大設定檔儲存大小 | 50MB | 效能護欄 | **儲存的設定檔大小上限為50MB。**&#x200B;將新的[設定檔片段](#profile-fragments)加入大於50MB的設定檔將會影響系統效能。 例如，設定檔可包含50MB的單一片段，或可包含多個資料集的多個片段，合併總大小為50MB。 嘗試儲存單一片段大於50MB的設定檔，或多個片段合併大小總計超過50MB的設定檔，將會影響系統效能。 |
 | 每天擷取的設定檔或ExperienceEvent批次數量 | 90 | 效能護欄 | **每天擷取的Profile或ExperienceEvent批次數量上限為90。**&#x200B;這表示每天擷取的Profile和ExperienceEvent批次總數不能超過90。 擷取其他批次將會影響系統效能。 |
-| 每個設定檔記錄的ExperienceEvents數目 | 5000 | 效能護欄 | **每個設定檔記錄的ExperienceEvents數目上限為5000。超過5000個ExperienceEvents的**&#x200B;設定檔&#x200B;**不會**&#x200B;考慮用於分段。 |
+| 每個設定檔記錄的ExperienceEvents數目 | 5000 | 效能護欄 | **每個設定檔記錄的ExperienceEvents數目上限為5000。超過5000個ExperienceEvents的**&#x200B;設定檔在與區段搭配使用時，只會使用&#x200B;**latest** 5000 ExperienceEvents。 |
 
 {style="table-layout:auto"}
 
@@ -125,7 +125,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 | 所有沙箱的串流輸送量 | 1500 RPS | 效能護欄 | 串流細分支援每秒1500個傳入事件的峰值。 串流區段最多可能需要5分鐘，才能讓設定檔符合區段會籍資格。 深入瞭解[串流對象](/help/segmentation/methods/streaming-segmentation.md)。 |
 | 每個沙箱的批次對象 | 4000 | 效能護欄 | 每個沙箱最多可以有4000個&#x200B;**作用中**&#x200B;批次對象。 只要每個&#x200B;**個別**&#x200B;沙箱中的批次對象少於4000個，您每個組織可以有超過4000個批次對象。 嘗試建立其他批次對象可能會影響系統效能。 |
 | 每個沙箱的帳戶對象 | 50 | 系統強制的護欄 | 您最多可以在沙箱中建立50個帳戶對象。 當您在沙箱中達到50個對象後，嘗試建立新帳戶對象時，**[!UICONTROL 建立對象]**&#x200B;控制項會停用。 深入瞭解[帳戶對象](/help/segmentation/types/account-audiences.md)。 |
-| 每個沙箱的已發佈組合 | 10 | 效能護欄 | 一個沙箱中最多可以有10個已發佈的組合。 進一步瞭解UI指南[&#128279;](/help/segmentation/ui/audience-composition.md)中的對象構成。 |
+| 每個沙箱的已發佈組合 | 10 | 效能護欄 | 一個沙箱中最多可以有10個已發佈的組合。 進一步瞭解UI指南](/help/segmentation/ui/audience-composition.md)中的[對象構成。 |
 | 最大對象人數 | 30% | 效能護欄 | 建議的對象最大成員資格為系統中設定檔總數的30%。 您可以建立具有超過30%設定檔的對象為成員，或是多個大型對象，但會影響系統效能。 |
 | 彈性的對象評估執行 | 每年50個（生產沙箱）<br/>100個（開發沙箱） | 系統強制的護欄 | 您每年每個&#x200B;**生產**&#x200B;沙箱最多可執行50次彈性對象評估。 您每年每個&#x200B;**開發**&#x200B;沙箱最多可執行100次彈性對象評估。 |
 | 彈性的對象評估執行 | 每天2個 | 系統強制的護欄 | 每個沙箱每天最多執行2次。 |
@@ -188,7 +188,7 @@ Dimension實體提供查詢資料，可協助並簡化多實體區段定義，�
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=zh-Hant#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
