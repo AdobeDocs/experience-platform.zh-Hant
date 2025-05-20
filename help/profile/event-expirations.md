@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 體驗事件有效期
 description: 本文提供在Adobe Experience Platform資料集中設定個別體驗事件到期時間的一般指引。
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
+source-git-commit: 05479dcfd1a375b3589ce212168f324aa72af4ba
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 在Adobe Experience Platform中，您可以為擷取到為[即時客戶個人檔案](./home.md)啟用的資料集內的所有Experience事件設定到期時間。 這可讓您自動從設定檔存放區中移除對您的使用案例不再有效或實用的資料。
 
-無法透過Experience Platform UI或API設定體驗事件有效期。 反之，您必須聯絡支援人員，才能在必要資料集上啟用體驗事件有效期。
+若要瞭解如何在資料集中管理您的體驗事件有效期，請閱讀[資料集UI指南](../catalog/datasets/user-guide.md#data-retention-policy)。
 
 >[!IMPORTANT]
 >
