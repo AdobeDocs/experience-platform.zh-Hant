@@ -5,9 +5,9 @@ feature: Customer AI
 title: 使用預測分數建立客戶區段
 description: 預測執行完成時，個人檔案會自動使用預測傾向分數。 使用Customer AI分數擴充設定檔可建立客戶區段，以根據其傾向分數尋找對象。 本節提供使用「區段產生器」建立區段的步驟。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 在Experience Platform UI中，按一下左側導覽中的&#x200B;**[!UICONTROL 區段]**，然後按一下&#x200B;**[!UICONTROL 建立區段]**。
 
-![](../images/user-guide/segments_new.png)
+![Experience Platform UI中「區段」頁面的熒幕擷圖，顯示建立新區段的選項。](../images/user-guide/segments_new.png)
 
 **區段產生器**&#x200B;會出現。 從左側&#x200B;**[!UICONTROL 欄位]**&#x200B;欄位和&#x200B;**[!UICONTROL 屬性]**&#x200B;標籤下，按一下名為&#x200B;**[!UICONTROL XDM個人設定檔]**&#x200B;的資料夾，然後按一下具有您組織名稱空間的資料夾。 名為&#x200B;**[!UICONTROL Customer AI]**&#x200B;的資料夾包含預測執行的結果，並以分數所屬的執行個體命名。 按一下執行個體資料夾以存取其所需執行個體的結果。
 

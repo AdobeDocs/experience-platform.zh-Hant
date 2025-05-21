@@ -6,9 +6,9 @@ title: Customer AI的資料需求
 topic-legacy: Getting started
 description: 進一步瞭解Customer AI使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2551'
+source-wordcount: '2552'
 ht-degree: 1%
 
 ---
@@ -49,8 +49,8 @@ Customer AI的運作方式是藉由分析以下資料集來預測流失率（客
 
 - 使用[Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)的Adobe Analytics資料
 - 使用[Adobe Audience Manager來源聯結器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的Audience Manager資料
-- [體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=zh-Hant)
-- [取用者體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=zh-Hant#cee-schema)
+- [體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [取用者體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 如果每個資料集共用相同的身分型別（名稱空間）（例如ECID），您可以新增來自不同來源的多個資料集。 如需新增多個資料集的詳細資訊，請瀏覽[Customer AI使用手冊](../customer-ai/user-guide/configure.md)。
 
@@ -213,7 +213,7 @@ Customer AI會針對視為符合資格的個別設定檔產生數個屬性。 �
 
 您可以在Experience Platform **資料集**&#x200B;工作區中找到輸出資料集。 所有Customer AI輸出資料集都以名稱&#x200B;**Customer AI分數 — NAME_OF_APP**&#x200B;開頭。 同樣地，所有的Customer AI輸出結構描述都以名稱&#x200B;**Customer AI結構描述 — Name_of_app**&#x200B;開頭。
 
-![Customer AI中的輸出資料集名稱](./images/user-guide/cai-schema-name-of-app.png)
+![Customer AI中輸出資料集的命名慣例。](./images/user-guide/cai-schema-name-of-app.png)
 
 下表說明可在Customer AI輸出中找到的各種屬性：
 

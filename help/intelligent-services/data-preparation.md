@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 準備資料以用於Intelligent Services
 description: 為了讓智慧型服務從行銷事件資料中探索見解，資料必須在語義上豐富並維護標準結構。 Intelligent Services使用Experience Data Model (XDM)結構描述來達成此目的。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2951'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ CEE結構描述，像所有XDM ExperienceEvent結構描述一樣，會在事件�
 
 [!DNL Intelligent Services]會利用此結構描述中的數個關鍵欄位，從行銷事件資料產生深入分析，所有這些可在根層級找到，並展開以顯示其必要的子欄位。
 
-![](./images/data-preparation/schema-expansion.gif)
+![在Adobe Experience Platform UI中展開結構描述的示範，顯示導覽和子欄位詳細資訊。](./images/data-preparation/schema-expansion.gif)
 
 和所有XDM結構描述一樣，CEE結構描述欄位群組是可擴充的。 換言之，其他欄位可新增至CEE欄位群組，而不同的變數可視需要包含在多個結構描述中。
 
@@ -134,19 +134,19 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 若要設定主要身分，請從&#x200B;**[!UICONTROL 結構描述]**&#x200B;標籤瀏覽到您的結構描述，然後選取結構描述名稱超連結以開啟&#x200B;**[!DNL Schema Editor]**。
 
-![瀏覽至結構描述](./images/data-preparation/navigate_schema.png)
+![導覽至Adobe Experience Platform UI中的結構描述。](./images/data-preparation/navigate_schema.png)
 
 接下來，導覽至您要作為主要身分的欄位，然後選取該欄位。 會開啟該欄位的&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;功能表。
 
-![選取欄位](./images/data-preparation/find_field.png)
+![在Adobe Experience Platform UI中選取所需欄位的程式。](./images/data-preparation/find_field.png)
 
 在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;功能表中，向下捲動直到您找到&#x200B;**[!UICONTROL 身分]**&#x200B;核取方塊為止。 核取此方塊後，會顯示將選取的身分設定為&#x200B;**[!UICONTROL 主要身分]**&#x200B;的選項。 也請選取此方塊。
 
-![選取核取方塊](./images/data-preparation/set_primary_identity.png)
+![在Adobe Experience Platform UI中設定主要身分的核取方塊。](./images/data-preparation/set_primary_identity.png)
 
-接下來，您必須從下拉式清單中的預先定義名稱空間清單中提供&#x200B;**[!UICONTROL 身分識別名稱空間]**。 在此範例中，由於正在使用Adobe Audience Manager ID `mcid.id`，因此已選取ECID名稱空間。 選取[套用]&#x200B;**&#x200B;**&#x200B;以確認更新，然後在右上角選取[儲存]&#x200B;**&#x200B;**&#x200B;以儲存對結構描述的變更。
+接下來，您必須從下拉式清單中的預先定義名稱空間清單中提供&#x200B;**[!UICONTROL 身分識別名稱空間]**。 在此範例中，由於正在使用Adobe Audience Manager ID `mcid.id`，因此已選取ECID名稱空間。 選取[套用]****&#x200B;以確認更新，然後在右上角選取[儲存]****&#x200B;以儲存對結構描述的變更。
 
-![儲存變更](./images/data-preparation/select_namespace.png)
+![下拉式功能表，顯示Adobe Experience Platform UI中選取的ECID名稱空間。](./images/data-preparation/select_namespace.png)
 
 #### xdm：timestamp {#timestamp}
 
@@ -160,7 +160,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 此欄位代表與ExperienceEvent相關的行銷管道。 欄位包含有關頻道型別、媒體型別和位置型別的資訊。
 
-![](./images/data-preparation/channel.png)
+![顯示xdm：channel欄位結構的圖表，包括type、mediaType和mediaAction等子欄位。](./images/data-preparation/channel.png)
 
 **範例結構描述**
 
@@ -173,7 +173,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 }
 ```
 
-如需`xdm:channel`每個必要子欄位的完整資訊，請參閱[體驗管道結構描述](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md)規格。 如需某些範例對應，請參閱下方[&#128279;](#example-channels)的表格。
+如需`xdm:channel`每個必要子欄位的完整資訊，請參閱[體驗管道結構描述](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md)規格。 如需某些範例對應，請參閱下方](#example-channels)的[表格。
 
 #### 管道對應範例 {#example-channels}
 
@@ -198,7 +198,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 此欄位是一系列專案，代表客戶選取的產品，包括產品SKU、名稱、價格和數量。
 
-![](./images/data-preparation/productListItems.png)
+![xdm：productListItems欄位，包括SKU、名稱、currencyCode、數量和priceTotal等子欄位。](./images/data-preparation/productListItems.png)
 
 **範例結構描述**
 
@@ -227,7 +227,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 此欄位包含有關ExperienceEvent的商務特定資訊，包括採購單編號和付款資訊。
 
-![](./images/data-preparation/commerce.png)
+![ xdm：commerce欄位的結構，包括子欄位，例如，訂單、購買和付款。](./images/data-preparation/commerce.png)
 
 **範例結構描述**
 
@@ -265,7 +265,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 此欄位代表與ExperienceEvent相關的網頁詳細資訊，例如互動、頁面詳細資訊和反向連結。
 
-![](./images/data-preparation/web.png)
+![xdm：web欄位，包括webPageDetails和webReferrer等子欄位。](./images/data-preparation/web.png)
 
 **範例結構描述**
 
@@ -295,7 +295,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 此欄位包含與使用接觸點啟用的行銷活動相關的資訊。
 
-![](./images/data-preparation/marketing.png)
+![ xdm：marketing欄位的結構，包括trackingCode、campaignGroup和campaignName等子欄位。](./images/data-preparation/marketing.png)
 
 **範例結構描述**
 
@@ -367,5 +367,5 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 當您成功將客戶體驗資料填入資料集後，您就可以使用[!DNL Intelligent Services]來產生深入分析。 請參閱下列檔案以開始使用：
 
-* [Attribution AI 概述](./attribution-ai/overview.md)
-* [Customer AI 概述](./customer-ai/overview.md)
+* [Attribution AI 概觀](./attribution-ai/overview.md)
+* [Customer AI 概觀](./customer-ai/overview.md)

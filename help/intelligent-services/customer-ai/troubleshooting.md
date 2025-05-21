@@ -6,9 +6,9 @@ title: Customer AI錯誤疑難排解
 description: 尋找Customer AI中常見錯誤的答案。
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1780'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 當模型訓練、評分和設定失敗時，Customer AI會顯示錯誤。 在&#x200B;**[!UICONTROL 服務執行個體]**&#x200B;區段中，**[!UICONTROL 上次執行狀態]**&#x200B;的資料行會顯示下列其中一個訊息： **[!UICONTROL 成功]**、**[!UICONTROL 訓練問題]**&#x200B;以及&#x200B;**[!UICONTROL 失敗]**。
 
-![上次執行狀態](./images/errors/last-run-status.png)
+![顯示成功、訓練問題或失敗的上次執行狀態。](./images/errors/last-run-status.png)
 
 如果顯示&#x200B;**[!UICONTROL 失敗]**&#x200B;或&#x200B;**[!UICONTROL 訓練問題]**，您可以選取執行狀態以開啟側面板。 側面板包含您的&#x200B;**[!UICONTROL 上次執行狀態]**&#x200B;和&#x200B;**[!UICONTROL 上次執行詳細資料]**。 **[!UICONTROL 上次執行詳細資料]**&#x200B;包含執行失敗原因的資訊。 如果Customer AI無法提供您錯誤的詳細資訊，請聯絡支援人員並提供錯誤代碼。
 
@@ -27,13 +27,13 @@ ht-degree: 1%
 
 由於Google Chrome的無痕模式安全性設定有所更新，導致Google Chrome無痕模式中的載入錯誤出現。 Chrome正在積極處理此問題，以使experience.adobe.com成為信任的網域。
 
-![錯誤影像](./images/errors/error.PNG){width=500}
+![顯示Customer AI錯誤訊息範例的錯誤影像。](./images/errors/error.PNG){width=500}
 
 ### 建議的修正
 
 若要解決此問題，您需要將experience.adobe.com新增為可隨時使用Cookie的網站。 首先瀏覽至&#x200B;**chrome://settings/cookies**。 接著，向下捲動至&#x200B;**自訂行為**&#x200B;區段，接著選取「永遠可以使用Cookie的網站」旁的&#x200B;**新增**&#x200B;按鈕。 在出現的彈出視窗中，複製並貼上`[*.]experience.adobe.com`，然後選取&#x200B;**在此網站上包含第三方Cookie**&#x200B;核取方塊。 完成後，請選取&#x200B;**新增**&#x200B;並重新載入無痕的Customer AI。
 
-![建議的修正](./images/errors/cookies2.gif)
+![顯示將experience.adobe.com新增為網站步驟的動畫，此網站一律可以在Chrome設定中使用Cookie。](./images/errors/cookies2.gif)
 
 ## 模型品質不良
 

@@ -5,9 +5,9 @@ feature: Customer AI
 title: 在Customer AI中下載分數
 description: Customer AI可讓您以Parquet檔案格式下載分數。
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -31,11 +31,11 @@ Customer AI可讓您以Parquet檔案格式下載分數。 本教學課程要求�
 
 在用於Customer AI深入分析的服務執行個體中，按一下右上方導覽列中的&#x200B;*更多動作*&#x200B;下拉式清單，然後選取&#x200B;**[!UICONTROL 存取分數]**。
 
-![更多動作](../images/insights/more-actions.png)
+![顯示[存取分數]選項的其他動作下拉式功能表。](../images/insights/more-actions.png)
 
 隨即顯示新對話方塊，其中包含下載分數檔案的連結，以及目前執行個體的資料集ID。 將資料集ID複製到剪貼簿，然後繼續下一個步驟。
 
-![資料集識別碼](../images/download-scores/access-scores.png)
+![存取分數對話方塊，顯示目前執行個體的資料集識別碼。](../images/download-scores/access-scores.png)
 
 ## 擷取您的批次識別碼 {#retrieve-your-batch-id}
 
@@ -114,7 +114,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 ## 使用您的批次ID擷取下一個API呼叫 {#retrieve-the-next-api-call-with-your-batch-id}
 
-取得批次ID後，您就可以向`/batches`提出新的GET請求。 該請求會傳回用作下一個API請求的連結。
+取得批次ID後，您就可以對`/batches`提出新的GET請求。 該請求會傳回用作下一個API請求的連結。
 
 **API格式**
 
@@ -168,7 +168,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 ## 擷取您的檔案 {#retrieving-your-files}
 
-使用您在上一步中取得的`href`值作為API呼叫，提出新的GET要求以擷取您的檔案目錄。
+使用您在上一步中取得的`href`值作為API呼叫，提出新的GET請求以擷取您的檔案目錄。
 
 **API格式**
 
@@ -236,12 +236,11 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 | --------- | ----------- |
 | `_links.self.href` | 用來下載目錄中檔案的GET要求URL。 |
 
-
 複製`data`陣列中任何檔案物件的`href`值，然後繼續下一個步驟。
 
 ## 下載您的檔案資料
 
-若要下載您的檔案資料，請對在先前步驟[擷取您的檔案](#retrieving-your-files)中複製的`"href"`值發出GET要求。
+若要下載您的檔案資料，請對您在上一個步驟[擷取您的檔案](#retrieving-your-files)中複製的`"href"`值發出GET請求。
 
 >[!NOTE]
 >
@@ -271,13 +270,13 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->在發出GET請求之前，請確定您位於要儲存檔案的正確目錄或資料夾中。
+>發出GET請求之前，請確認您位於正確的目錄或資料夾中，且您的檔案儲存至該目錄或資料夾。
 
 **回應**
 
 回應會將您要求的檔案下載到目前目錄中。 在此範例中，檔案名稱為「filename.parquet」。
 
-![終端機](../images/download-scores/response.png)
+![顯示成功API呼叫的終端機回應範例。](../images/download-scores/response.png)
 
 ## 下載使用Customer AI設定的區段 {#segment}
 
