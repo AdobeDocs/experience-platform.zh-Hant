@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2355'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 2%
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.27.0版 — 2025年5月20日
+
+**修正和改良**
+
+- 修正未正確套用自訂樣式的應用程式內訊息問題。
+- 已變更事件記錄的格式。 這會導致刪除舊的歷史記錄資料時，重新顯示應用程式內訊息和內容卡。
+- 修正在SPA使用案例中重新套用主張的問題。
+- 已修正對陰影DOM元素進行點選追蹤的問題。
 
 ## 2.26.0版 — 2025年3月5日
 
