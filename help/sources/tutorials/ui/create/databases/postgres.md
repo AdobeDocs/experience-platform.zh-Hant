@@ -2,9 +2,9 @@
 title: 使用UI連線PostgreSQL至Experience Platform
 description: 瞭解如何使用Experience Platform使用者介面中的來源工作區將您的PostgreSQL資料庫連結至Experience Platform。
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: 8cabf1cb86993fdde37d0b9d957f6c8ec23bb237
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -43,19 +43,20 @@ ht-degree: 0%
 
 在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 在&#x200B;*[!UICONTROL 類別]*&#x200B;面板中選取適當的類別或者，使用搜尋列導覽至您要使用的特定來源。
 
-若要使用[!DNL PostgreSQL]，請選取&#x200B;*[!UICONTROL 資料庫]*&#x200B;下的&#x200B;**[!UICONTROL PostgreSQL]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 設定]**。
+若要使用[!DNL PostgreSQL]，請選取&#x200B;*[!UICONTROL 資料庫]*&#x200B;下的&#x200B;**[!UICONTROL PostgreSQL DB]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 設定]**。
 
 >[!TIP]
 >
 >當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
+![已選取PostgreSQL來源卡的來源目錄。](../../../../images/tutorials/create/postgresql/catalog.png)
 
 
 ## 使用現有帳戶 {#existing}
 
 若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後選取您要使用的[!DNL PostgreSQL]帳戶。
 
-![來源工作流程的現有帳戶介面。](../../../../images/tutorials/create/postgresql/catalog.png)
+![來源工作流程的現有帳戶介面。](../../../../images/tutorials/create/postgresql/existing.png)
 
 ## 建立新帳戶 {#create}
 
@@ -63,7 +64,7 @@ ht-degree: 0%
 
 若要建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後提供名稱並選擇性地為您的帳戶新增說明。
 
-![來源工作流程中的新帳戶介面已提供帳戶名稱和選擇性說明。](../../../../images/tutorials/create/postgresql/existing.png)
+![來源工作流程中的新帳戶介面已提供帳戶名稱和選擇性說明。](../../../../images/tutorials/create/postgresql/new.png)
 
 ### 在Azure上連線到Experience Platform {#azure}
 
@@ -93,7 +94,7 @@ ht-degree: 0%
 
 若要建立新的[!DNL PostgreSQL]帳戶並連線至AWS上的Experience Platform，請確定您位於VA6沙箱，然後提供驗證所需的[認證](../../../../connectors/databases/postgres.md#aws)。
 
-![來源工作流程中的新帳戶介面可連線至AWS。](../../../../images/tutorials/create/postgresql/basic-auth.png)
+![來源工作流程中的新帳戶介面可連線至AWS。](../../../../images/tutorials/create/postgresql/aws.png)
 
 ## 為您的[!DNL PostgreSQL]資料建立資料流
 

@@ -2,9 +2,9 @@
 title: 使用流程服務API連線MariaDB至Experience Platform
 description: 瞭解如何使用API將您的MariaDB帳戶連結至Experience Platform。
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
-source-git-commit: d5d47f9ca3c01424660fe33f8310586a70a32875
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '474'
 ht-degree: 2%
 
 ---
@@ -24,17 +24,17 @@ ht-degree: 2%
 
 ### 收集必要的認證
 
-[[!DNL MariaDB] 有關身份驗證的資訊，請閱讀概述](../../../../connectors/databases/mariadb.md#prerequisites)。
+閱讀[[!DNL MariaDB] 總覽](../../../../connectors/databases/mariadb.md#prerequisites)以取得驗證的相關資訊。
 
-### 使用 Experience Platform API
+### 使用Experience Platform API
 
-有關如何成功調用 Experience Platform API 的資訊，請閱讀有關開始使用 Experience Platform API[&#128279;](../../../../../landing/api-guide.md) 指南。
+閱讀[Experience Platform API快速入門](../../../../../landing/api-guide.md)的指南，瞭解如何成功呼叫Experience Platform API。
 
-## 連接到 [!DNL MariaDB] Azure 上的 Experience Platform {#azure}
+## 將[!DNL MariaDB]連線至Experience Platform
 
-有關如何將帳戶連接到 [!DNL MariaDB] Azure 上的Experience Platform的信息，請閱讀以下步驟。
+請閱讀下列步驟，以瞭解如何將[!DNL MariaDB]帳戶連線至Experience Platform。
 
-### 在Azure上的Experience Platform上為[!DNL MariaDB]建立基礎連線 {#azure-base}
+### 建立[!DNL MariaDB]的基礎連線
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
@@ -106,9 +106,9 @@ curl -X POST \
 
 **要求**
 
-以下請求使用基本身份驗證為源創建 [!DNL MariaDB] 基本連接。
+下列要求使用基本驗證建立[!DNL MariaDB]來源的基本連線。
 
-+++檢視 請求範例
++++檢視請求範例
 
 ```shell
 curl -X POST \
@@ -165,82 +165,6 @@ curl -X POST \
 +++
 
 >[!ENDTABS]
-
-## 將[!DNL MariaDB]連線至Amazon Web Services上的Experience Platform {#aws}
-
->[!AVAILABILITY]
->
->本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../../../landing/multi-cloud.md)。
-
-請閱讀下列步驟，以瞭解如何在AWS上將您的[!DNL MariaDB]帳戶連結至Experience Platform。
-
-### 建立 AWS 上 On Experience Platform 的基本 [!DNL MariaDB] 連接 {#aws-base}
-
-**API 格式**
-
-```https
-POST /connections
-```
-
-**要求**
-
-下列要求會建立[!DNL MariaDB]的基礎連線，以連線至AWS上的Experience Platform。
-
-+++檢視請求範例
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "MariaDB on Experience Platform AWS",
-      "description": "MariaDB on Experience Platform AWS",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-          "version": "1.0"
-      }
-  }'
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `auth.params.server` | [!DNL MariaDB]資料庫的名稱或IP。 |
-| `auth.params.database` | 資料庫的名稱。 |
-| `auth.params.username` | 與您的資料庫對應的使用者名稱。 |
-| `auth.params.password` | 與資料庫對應的密碼。 |
-| `auth.params.sslMode` | 資料傳輸期間加密資料的方法。 |
-| `connectionSpec.id` | [!DNL MariaDB]連線規格識別碼為： `3000eb99-cd47-43f3-827c-43caf170f015`。 |
-
-+++
-
-**回應**
-
-成功的回應會傳回新建立的基礎連線的詳細資料，包括其唯一識別碼(`id`)。
-
-+++檢視回應範例
-
-```json
-{
-    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
-    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
-}
-```
-
-+++
 
 
 ## 後續步驟

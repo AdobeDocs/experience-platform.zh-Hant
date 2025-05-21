@@ -3,9 +3,9 @@ title: MariaDB Source Connector概述
 description: 瞭解如何使用API或使用者介面將MariaDB連線至Adobe Experience Platform。
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Experience Platform支援從協力廠商資料庫擷取資料。 [!DNL Experienc
 
 ### IP位址允許清單
 
-在Azure或Amazon Web Services (AWS)上將來源連線至Experience Platform之前，您必須將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址指南，以連線至Azure和AWS上的Experience Platform ](../../ip-address-allow-list.md)以取得詳細資訊。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
 
-### 在Azure上驗證Experience Platform {#azure}
+### 向Experience Platform進行驗證
 
-您必須提供下列認證的值，才能將[!DNL MariaDB]連線至Azure上的Experience Platform。
+您必須提供下列認證的值，才能將[!DNL MariaDB]連線至Experience Platform。
 
 >[!BEGINTABS]
 
@@ -58,26 +58,6 @@ Experience Platform支援從協力廠商資料庫擷取資料。 [!DNL Experienc
 如需有關取得連線字串的詳細資訊，請參閱此[[!DNL MariaDB] 檔案](https://mariadb.com/kb/en/about-mariadb-connector-odbc/)。
 
 >[!ENDTABS]
-
-### 在Amazon Web Services (AWS)上驗證Experience Platform {#aws}
-
->[!AVAILABILITY]
->
->本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
-
-您必須提供下列認證的值，才能將[!DNL MariaDB]連線至AWS上的Experience Platform。
-
-| 認證 | 說明 |
-| --- | --- |
-| `server` | [!DNL MariaDB]資料庫的名稱或IP。 |
-| `username` | 資料庫的名稱。 |
-| `port` | 您要連線的通訊端點的連線埠號碼。 |
-| `password` | 與您的資料庫對應的使用者名稱。 |
-| `database` | 與資料庫對應的密碼。 |
-| `sslMode` | 資料傳輸期間加密資料的方法。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL MariaDB]的連線規格識別碼為`3000eb99-cd47-43f3-827c-43caf170f015`。 **注意**：只有在透過[!DNL Flow Service] API連線時才需要此認證。 |
-
-如需有關取得連線字串的詳細資訊，請參閱此[[!DNL MariaDB] 檔案](https://mariadb.com/kb/en/about-mariadb-connector-odbc/)。
 
 ## 使用API連線[!DNL MariaDB]至Experience Platform
 

@@ -2,9 +2,9 @@
 title: 使用UI連線MariaDB至Experience Platform
 description: 瞭解如何使用Experience Platform使用者介面中的來源工作區，將您的MariaDB帳戶連結至Experience Platform。
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -54,9 +54,9 @@ ht-degree: 0%
 
 ![來源工作流程中的新帳戶介面已提供帳戶名稱和選擇性說明。](../../../../images/tutorials/create/maria-db/new.png)
 
-### 在Azure上連線到Experience Platform {#azure}
+### 連線至Experience Platform
 
-您可以使用帳戶金鑰或基本驗證，將您的[!DNL MariaDB]帳戶連線至Azure上的Experience Platform。
+您可以使用帳戶金鑰或基本驗證將您的[!DNL MariaDB]帳戶連線至Experience Platform。
 
 >[!BEGINTABS]
 
@@ -73,17 +73,5 @@ ht-degree: 0%
 ![來源工作流程中的新帳戶介面已選取「基本驗證」。](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
-
-### 在Amazon Web Services (AWS)上連線至Experience Platform {#aws}
-
->[!AVAILABILITY]
->
->本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../../../landing/multi-cloud.md)。
-
-若要建立新的[!DNL MariaDB]帳戶並連線至AWS上的Experience Platform，請確定您位於VA6沙箱，然後提供驗證所需的[認證](../../../../connectors/databases/mariadb.md#aws)。
-
-![來源工作流程中的新帳戶介面可連線至AWS。](../../../../images/tutorials/create/maria-db/basic-auth.png)
-
-## 後續步驟
 
 依照本教學課程中的指示，您已建立與[!DNL MariaDB]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入Experience Platform](../../dataflow/databases.md)。

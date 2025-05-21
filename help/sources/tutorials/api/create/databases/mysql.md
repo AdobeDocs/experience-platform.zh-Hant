@@ -2,9 +2,9 @@
 title: 使用流程服務API連線MySQL至Experience Platform
 description: 瞭解如何使用API將MySQL資料庫連結至Experience Platform。
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '607'
 ht-degree: 4%
 
 ---
@@ -124,11 +124,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "DISABLED"
           }
       },
       "connectionSpec": {
@@ -202,11 +203,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -222,7 +224,7 @@ curl -X POST \
 | `auth.params.database` | 資料庫的名稱。 |
 | `auth.params.username` | 與您的資料庫對應的使用者名稱。 |
 | `auth.params.password` | 與資料庫對應的密碼。 |
-| `auth.params.sslMode` | 資料傳輸期間加密資料的方法。 |
+| `auth.params.sslMode` | 根據您的伺服器支援，控制SSL是否強制執行的布林值。 此設定預設為`false`。 |
 | `connectionSpec.id` | [!DNL MySQL]連線規格識別碼為： `26d738e0-8963-47ea-aadf-c60de735468a`。 |
 
 +++

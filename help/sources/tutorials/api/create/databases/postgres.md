@@ -2,14 +2,14 @@
 title: 使用流程服務API連線PostgreSQL至Experience Platform
 description: 瞭解如何使用API將您的 [!DNL PostgreSQL] 資料庫連線到Experience Platform。
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: 5348158f6de9fea1a9fe186a14409afb7e7a376e
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL PostgreSQL]基本連線
+# 使用[!DNL Flow Service] API連線[!DNL PostgreSQL]至Experience Platform
 
 閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)將您的[!DNL PostgreSQL]資料庫連線至Adobe Experience Platform。
 
@@ -135,12 +135,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "Allow"
           }
       },
       "connectionSpec": {
@@ -217,12 +217,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -239,7 +239,7 @@ curl -X POST \
 | `auth.params.database` | [!DNL PostgreSQL]資料庫的名稱。 |
 | `auth.params.username` | 與您的[!DNL PostgreSQL]資料庫驗證相關聯的使用者名稱。 |
 | `auth.params.password` | 與您的[!DNL PostgreSQL]資料庫驗證關聯的密碼。 |
-| `auth.params.sslMode` | 資料傳輸期間加密資料的方法。 可用的值包括： `Disable`、`Allow`、`Prefer`、`Verify Ca`和`Verify Full`。 |
+| `sslMode` | 根據您的伺服器支援，控制SSL是否強制執行的布林值。 此設定預設為`false`。 |
 | `connectionSpec.id` | [!DNL PostgreSQL]連線規格識別碼： `74a1c565-4e59-48d7-9d67-7c03b8a13137`。 |
 
 +++
