@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
+source-git-commit: b423e51e3e048a5dd7c2c15f80c8c1fcf5c2657b
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2722'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->**動作專案**： Experience Platform [&#128279;](/help/release-notes/latest/latest.md#destinations)的2024年9月發行版本匯入了為匯出資料集資料流設定`endTime`日期的選項。 Adobe也針對2024年9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，引入了2025年9月1日的預設結束日期。
+>**動作專案**： Experience Platform ](/help/release-notes/latest/latest.md#destinations)的2024年9月[發行版本匯入了為匯出資料集資料流設定`endTime`日期的選項。 Adobe也針對2024年9月版本&#x200B;*之前建立*&#x200B;的所有資料集匯出資料流，引入了2025年9月1日的預設結束日期。
 >
 >對於這些資料流中的任一資料流，您需要在結束日期之前手動更新資料流中的結束日期，否則您的匯出將在該日期停止。 使用Experience Platform UI檢視哪些資料流將設定在2025年9月1日停止。
 >
@@ -50,16 +50,16 @@ ht-degree: 7%
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=zh-Hant#profile-attribute-datasets">系統產生的設定檔快照集資料集</a>。</li></td>
+    <td><ul><li>在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">系統產生的設定檔快照集資料集</a>。</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=zh-Hant#datasets"> Adobe Journey Optimizer</a>檔案。</td>
+    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>檔案。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=zh-Hant#datasets"> Adobe Journey Optimizer</a>檔案。</td>
+    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>檔案。</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ ht-degree: 7%
 
 請觀看下方的影片，瞭解本頁所述工作流程的端對端說明、使用匯出資料集功能的好處，以及一些建議的使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3448829?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -187,7 +187,7 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 3. 使用&#x200B;**[!UICONTROL 日期]**&#x200B;選擇器來選擇匯出發生的間隔。
 
-4. 選取[儲存]以儲存排程，並繼續[檢閱]步驟。**&#x200B;**&#x200B;**&#x200B;**
+4. 選取[儲存]以儲存排程，並繼續[檢閱]步驟。********
 
 >[!NOTE]
 > 
@@ -280,7 +280,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 ## 資料集匯出權益 {#licensing-entitlement}
 
-請參閱產品說明檔案，瞭解您每年每個Experience Platform應用程式有權匯出多少資料。 例如，您可以在[這裡](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)檢視Real-Time CDP產品說明。
+請參閱產品說明檔案，瞭解您每年每個Experience Platform應用程式有權匯出多少資料。 例如，您可以在[這裡](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)檢視Real-Time CDP產品說明。
 
 請注意，不同應用程式的資料匯出許可權並非累加。 例如，這表示如果您購買Real-Time CDP Ultimate和Adobe Journey Optimizer Ultimate，則根據產品說明，設定檔匯出權利將是兩個權利中較大的一個權利。 您的大量權益的計算方式為：取用您的授權設定檔總數，然後乘以Real-Time CDP Prime的500 KB或Real-Time CDP Ultimate的700 KB，以判斷您有權取得的資料量。
 
@@ -294,7 +294,6 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 * 即使是小型資料集，Experience Platform也可以匯出多個檔案。 資料集匯出是針對系統間整合而設計，並針對效能而最佳化，因此匯出的檔案數量無法自訂。
 * 匯出的檔案名稱目前無法自訂。
-* 透過API建立的資料集目前無法匯出。
 * UI目前不會阻止您刪除匯出至目的地的資料集。 請勿刪除匯出至目的地的資料集。 [請先從目的地資料流移除資料集](#remove-dataset)，然後再刪除它。
 * 資料集匯出的監控量度目前與設定檔匯出的數字混合在一起，因此不能反映真正的匯出數字。
 * 時間戳記超過365天的資料會從資料集匯出中排除。 如需詳細資訊，請檢視排程資料集匯出的[護欄](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
