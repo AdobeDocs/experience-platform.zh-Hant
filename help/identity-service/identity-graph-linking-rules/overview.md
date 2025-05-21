@@ -44,7 +44,7 @@ ht-degree: 4%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3448283/?learn=on&enablevpops&captions=chi_hant" title="身分圖表連結規則：概觀" target="_blank" rel="referrer">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="身分圖表連結規則：概觀" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="身分圖表連結規則：概觀"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -53,12 +53,12 @@ ht-degree: 4%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3448283/?learn=on&enablevpops&captions=chi_hant" target="_blank" rel="referrer" title="身分圖表連結規則：概觀">身分圖表連結規則：概觀</a>
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="身分圖表連結規則：概觀">身分圖表連結規則：概觀</a>
                     </p>
                     <p class="is-size-6">觀看此影片以概略瞭解身分圖表連結規則，並瞭解如何使用此功能來避免圖表摺疊。</p>
                 </div>
                 <div style="display: flex; flex-direction; row;">
-                  <a href="https://video.tv.adobe.com/v/3448283/?learn=on&enablevpops&captions=chi_hant" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                   </a>
                   <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -73,7 +73,7 @@ ht-degree: 4%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="身分圖表連結規則：身分設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441091/?format=jpeg&nocache=1732633205785&captions=chi_hant" alt="身分圖表連結規則：身分設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="身分圖表連結規則：身分設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

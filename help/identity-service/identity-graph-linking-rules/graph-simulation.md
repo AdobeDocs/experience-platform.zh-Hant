@@ -20,7 +20,7 @@ ht-degree: 2%
 
 請觀看下列影片，瞭解在Identity Service UI工作區中使用[!DNL Graph Simulation]介面的其他資訊：
 
->[!VIDEO](https://video.tv.adobe.com/v/3444054/?learn=on&enablevpops&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 閱讀本檔案以瞭解如何使用[!DNL Graph Simulation]來更瞭解身分圖表行為以及圖表演演算法如何運作。
 
