@@ -2,9 +2,9 @@
 title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
+source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '644'
 ht-degree: 2%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 2%
 >如果您有現有的沙箱，在啟用身分設定後，需要取消收合的圖形（「已修正」），請聯絡您的Adobe帳戶團隊。
 
 身分設定是Adobe Experience Platform Identity Service UI中的功能，可用來指定唯一的名稱空間及設定名稱空間優先順序。
+
+請觀看下列影片，瞭解在Identity Service UI工作區中使用[!DNL Graph Simulation]介面的其他資訊：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
 
 請閱讀本指南，瞭解如何在UI中設定身分設定。
 

@@ -2,10 +2,10 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
+source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
 workflow-type: tm+mt
-source-wordcount: '1547'
-ht-degree: 4%
+source-wordcount: '1570'
+ht-degree: 7%
 
 ---
 
@@ -38,14 +38,24 @@ ht-degree: 4%
 
 觀看以下影片，瞭解身分圖表連結規則的一些基本層面。
 
+<!-- CARDS
+{target = _blank}
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+
+    {description = Learn how to use the graph simulator to test out identity graph linking rules.}
+
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+    {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
+-->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules overview">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3448283/?learn=on&enablevpops&captions=chi_hant" title="身分圖表連結規則：概觀" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="身分圖表連結規則：概觀"
+                    <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="身分識別圖連結規則概觀" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="身分識別圖連結規則概觀"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -53,27 +63,22 @@ ht-degree: 4%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3448283/?learn=on&enablevpops&captions=chi_hant" target="_blank" rel="referrer" title="身分圖表連結規則：概觀">身分圖表連結規則：概觀</a>
+                        <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" title="身分識別圖連結規則概觀">身分識別圖連結規則概觀</a>
                     </p>
-                    <p class="is-size-6">觀看此影片以概略瞭解身分圖表連結規則，並瞭解如何使用此功能來避免圖表摺疊。</p>
+                    <p class="is-size-6">概略了解身分識別圖連結規則如何協助資料架構者維護準確的客戶設定檔，並防止圖表崩潰。</p>
                 </div>
-                <div style="display: flex; flex-direction; row;">
-                  <a href="https://video.tv.adobe.com/v/3448283/?learn=on&enablevpops&captions=chi_hant" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
-                  </a>
-                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">讀取</span>
-                  </a>
-                </div>
+                <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                </a>
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules - Graph Simulation">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="身分圖表連結規則：身分設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441091/?format=jpeg&nocache=1732633205785&captions=chi_hant" alt="身分圖表連結規則：身分設定"
+                    <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="身分圖表連結規則 — 圖表模擬" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="身分圖表連結規則 — 圖表模擬"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -81,22 +86,42 @@ ht-degree: 4%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="身分圖表連結規則：身分設定">身分圖表連結規則：身分設定</a>
+                        <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="身分圖表連結規則 — 圖表模擬">身分識別圖連結規則 - 圖表模擬</a>
                     </p>
-                    <p class="is-size-6">觀看此影片，瞭解如何設定身分設定，並為Real-Time CDP、Adobe Journey Optimizer和Customer Journey Analytics等Adobe Experience Platform應用程式建立高品質的身分圖表和客戶設定檔。</p>
+                    <p class="is-size-6">瞭解如何使用圖表模擬器來測試身分圖表連結規則。</p>
                 </div>
-                <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
-                  </a>
-                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
-                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">讀取</span>
-                  </a>
-                </div>            
+                <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity graph linking rules - Identity settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="身分圖表連結規則 — 身分設定" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="身分圖表連結規則 — 身分設定"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="身分圖表連結規則 — 身分設定">身分圖表連結規則 — 身分設定</a>
+                    </p>
+                    <p class="is-size-6">瞭解如何啟用及設定身分圖表連結規則，以建置準確的客戶設定檔</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
+                </a>
             </div>
         </div>
     </div>
 </div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
 
 ## 圖表收合案例 {#graph-collapse-scenarios}
 
