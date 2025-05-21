@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
+source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
 workflow-type: tm+mt
-source-wordcount: '4143'
-ht-degree: 4%
+source-wordcount: '4237'
+ht-degree: 5%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="協調的行銷活動"
->abstract="啟用此切換即可允許在Adobe Journey Optimizer協調的行銷活動中使用選取的資料集。 資料集必須使用關聯式結構描述，而且每個結構描述只能建立一個資料集。"
+>abstract="啟用此切換按鈕，允許在 Adobe Journey Optimizer 協調的行銷活動中使用所選資料集。資料集必須使用關聯式結構描述，而且每個結構描述只能建立一個資料集。"
 
 在[!DNL Experience Platform] UI中，選取左側導覽中的&#x200B;**[!UICONTROL 資料集]**&#x200B;以開啟&#x200B;**[!UICONTROL 資料集]**&#x200B;儀表板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資料，包括其名稱、資料集所遵守的結構描述，以及最近一次擷取執行的狀態。
 
@@ -100,7 +100,7 @@ ht-degree: 4%
 * [[!UICONTROL 管理資料並存取標籤]](#manage-and-enforce-data-governance)
 * [[!UICONTROL 啟用統一的設定檔]](#enable-profile)
 * [[!UICONTROL 管理標籤]](#manage-tags)
-* [(Beta) [!UICONTROL 設定資料保留原則]](#data-retention-policy)
+* [[!UICONTROL 設定資料保留原則]](#data-retention-policy)
 * [[!UICONTROL 移至資料夾]](#move-to-folders)
 * [[!UICONTROL 刪除]](#delete)。
 
@@ -174,13 +174,15 @@ ht-degree: 4%
 
 如需如何分類商業物件以便輕鬆探索和分類的詳細資訊，請參閱[管理中繼資料分類](../../administrative-tags/ui/managing-tags.md)的指南。 本指南說明具有適當許可權的使用者如何在Experience Platform UI中建立預先定義的標籤、將其指派給類別，以及管理所有相關的CRUD作業。
 
-### (Beta)設定資料保留政策 {#data-retention-policy}
-
->[!AVAILABILITY]
-> 
->資料保留設定目前為測試版，僅適用於&#x200B;**有限版本**&#x200B;中的特定組織。 您的UI可能無法反映下列功能。
+### 設定資料保留原則 {#data-retention-policy}
 
 使用[!UICONTROL 資料集]工作區的[!UICONTROL 瀏覽]索引標籤中的內嵌動作功能表，管理資料集到期日和保留設定。 您可以使用此功能來設定資料在資料湖和個人資料存放區中保留的時間長度。 到期日是根據資料擷取至Experience Platform的時間和您設定的保留期間而定。
+
+>[!IMPORTANT]
+>
+>若要套用或更新ExperienceEvent資料集的保留規則，您的使用者角色必須包含&#x200B;**管理資料集**&#x200B;許可權。 此角色型存取控制可確保只有授權的使用者才能修改資料集保留設定。
+>
+>如需在Adobe Experience Platform中指派許可權的詳細資訊，請參閱[存取控制總覽](../../access-control/home.md#platform-permissions)。
 
 >[!TIP]
 >
@@ -216,33 +218,35 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->體驗事件分佈圖是資料集專屬圖表，僅反映所選資料集的資料。
+>體驗事件分佈圖是所選資料集專屬的圖表，僅反映其資料。 它僅適用於儲存在Data Lake中的資料。
 
 ![顯示[設定資料保留]對話方塊及[體驗事件]分佈圖。](../images/datasets/user-guide/visual-forecast.png)
 
-若您對組態感到滿意，請選取[儲存]，確認您的設定。**&#x200B;**
+若您對組態感到滿意，請選取[儲存]，確認您的設定。****
 
 >[!IMPORTANT]
 >
 >套用資料保留規則後，任何超過到期值定義天數的資料都會永久刪除且無法復原。
 
-設定保留設定後，請使用監視UI來確認系統已執行您的變更。 監控UI可集中檢視所有資料集的資料保留活動。 從該位置，您可以追蹤工作執行、檢閱刪除了多少資料，並確保您的保留原則如預期般運作。 此可見度可支援治理、法規遵循及有效率的資料生命週期管理。
+設定保留設定後，請使用監視UI來確認系統已執行您的變更。 監控UI可集中檢視所有資料集的資料保留活動。 從該位置，您可以追蹤工作執行、檢閱刪除了多少資料，並確保您的保留原則如預期般運作。
 
-若要瞭解如何使用監視儀表板在Experience Platform UI中追蹤來源資料流，請參閱UI[&#128279;](../../dataflows/ui/monitor-sources.md)檔案中的監視來源資料流。
+若要探索保留原則如何套用至不同的服務，請參閱個人檔案中[體驗事件資料集保留的專用指南](../../profile/event-expirations.md)以及資料湖中[體驗事件資料集保留的專用指南](./experience-event-dataset-retention-ttl-guide.md)。 此可見度可支援治理、法規遵循及有效率的資料生命週期管理。
+
+若要瞭解如何使用監視儀表板在Experience Platform UI中追蹤來源資料流，請參閱UI](../../dataflows/ui/monitor-sources.md)檔案中的[監視來源資料流。
 
 <!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
 
 如需定義資料集到期日範圍的規則，以及設定資料保留原則的最佳實務的詳細資訊，請參閱[常見問題頁面](../catalog-faq.md)。
 
-#### (Beta)提升保留期和儲存量度的可見度 {#retention-and-storage-metrics}
+#### 提升保留期和儲存量度的可見度 {#retention-and-storage-metrics}
 
-Beta版使用者可以使用四個新的資料行，以更清楚瞭解您的資料管理： **[!UICONTROL 資料湖儲存]**、**[!UICONTROL 資料湖保留]**、**[!UICONTROL 設定檔儲存]**&#x200B;和&#x200B;**[!UICONTROL 設定檔保留]**。 這些量度會顯示您的資料在資料湖和設定檔服務中使用的儲存空間及其保留期。
+四個新欄可讓您更清楚地瞭解資料管理： **[!UICONTROL 資料湖儲存]**、**[!UICONTROL 資料湖保留]**、**[!UICONTROL 設定檔儲存]**&#x200B;和&#x200B;**[!UICONTROL 設定檔保留]**。 這些量度會顯示您的資料在資料湖和設定檔服務中使用的儲存空間及其保留期。
 
-如此提升的可見度，讓您能夠做出明智的決策，並更有效地管理儲存成本。 依儲存大小排序資料集，以識別目前沙箱中最大的資料集。 這些見解也支援更好的控管，並有助於您瞭解資料生命週期和權益使用情況。
+如此提升的可見度，讓您能夠做出明智的決策，並更有效地管理儲存成本。 依儲存大小排序資料集，以識別目前沙箱中最大的資料集。 這些見解支援資料管理最佳實務，並幫助確保符合您的授權權益。
 
 ![資料集工作區的[瀏覽]索引標籤，其中四個新的儲存和保留資料行已反白顯示。](../images/datasets/user-guide/storage-and-retention-columns.png)
 
-下表概略說明測試版提供的新保留率和儲存量度。 它詳細說明了每欄的用途，以及支援管理資料保留和儲存的方式。
+下表提供新保留率和儲存量度的概觀。 它詳細說明了每欄的用途，以及支援管理資料保留和儲存的方式。
 
 | 欄標題 | 說明 |
 |---|---|
@@ -252,6 +256,8 @@ Beta版使用者可以使用四個新的資料行，以更清楚瞭解您的資�
 | [!UICONTROL 設定檔保留] | 設定檔資料集的目前保留期。 您可以更新此值以控制設定檔資料保留的時間長度。 |
 
 {style="table-layout:auto"}
+
+若要根據儲存和保留量度的深入分析採取行動，請參閱[資料管理授權權益最佳實務指南](../../landing/license-usage-and-guardrails/data-management-best-practices.md)。 用它來管理您擷取和保留的資料、套用篩選器和到期規則，以及控制資料成長，以保持在您的授權使用限制之內。
 
 ### 移至資料夾 {#move-to-folders}
 
@@ -319,7 +325,7 @@ Beta版使用者可以使用四個新的資料行，以更清楚瞭解您的資�
 
 若要根據資料集是否已為設定檔啟用來篩選資料集，請從篩選選項中選取[!UICONTROL 是]核取方塊。
 
-[包含在設定檔]區段中的![[!UICONTROL 資料集工作區的篩選選項已反白顯示。]](../images/datasets/user-guide/included-in-profile.png)
+![包含在設定檔]區段中的[!UICONTROL 資料集工作區的篩選選項已反白顯示。](../images/datasets/user-guide/included-in-profile.png)
 
 ### 依標籤篩選資料集 {#filter-by-tag}
 
