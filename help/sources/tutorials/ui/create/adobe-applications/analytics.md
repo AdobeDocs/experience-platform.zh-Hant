@@ -26,7 +26,7 @@ ht-degree: 3%
 請務必瞭解本檔案中使用的下列重要用語：
 
 * **標準屬性**：標準屬性是Adobe預先定義的任何屬性。 它們對所有客戶都包含相同涵義，並且可在Analytics來源資料和Analytics結構描述欄位群組中取得。
-* **自訂屬性**：自訂屬性是Analytics中自訂變數階層中的任何屬性。 自訂屬性用於Adobe Analytics實作，將特定資訊擷取至報表套裝，各報表套裝的屬性使用方式可能有所不同。 自訂屬性包括eVar、prop和清單。 如需有關eVar的詳細資訊，請參閱下列有關轉換變數](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)的[Analytics檔案。
+* **自訂屬性**：自訂屬性是Analytics中自訂變數階層中的任何屬性。 自訂屬性用於Adobe Analytics實作，將特定資訊擷取至報表套裝，各報表套裝的屬性使用方式可能有所不同。 自訂屬性包括eVar、prop和清單。 如需有關eVar的詳細資訊，請參閱下列有關轉換變數[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)的Analytics檔案。
 * **自訂欄位群組中的任何屬性**：源自客戶建立的欄位群組的屬性都是使用者定義的，且不屬於標準或自訂屬性。
 
 ## 瀏覽來源目錄
@@ -121,7 +121,7 @@ Experience Platform會自動偵測您的對應是否有任何名稱衝突。 如
 * **[!UICONTROL 新增對應]**：若要新增來源欄位與目標欄位對應，請選取&#x200B;**[!UICONTROL 新增對應]**。
 * **[!UICONTROL 新增計算欄位]**：如有需要，您可以選取&#x200B;**[!UICONTROL 新增計算欄位]**，為您的對應建立新的計算欄位。
 * **[!UICONTROL 匯入對應]**：您可以使用「資料準備」的匯入對應功能，減少資料擷取程式的手動設定時間，並限制錯誤。 選取&#x200B;**[!UICONTROL 匯入對應]**&#x200B;以從現有流程或匯出的檔案匯入對應。 如需詳細資訊，請閱讀[匯入和匯出對應指南](../../../../../data-prep/ui/mapping.md#import-mapping)。
-* **[!UICONTROL 下載範本]**：您也可以下載對應的CSV復本，並在本機裝置設定對應。 選取[下載]範本&#x200B;]**以下載您對應的CSV復本。**[!UICONTROL &#x200B;您必須確保僅使用來源檔案和目標結構描述中提供的欄位。
+* **[!UICONTROL 下載範本]**：您也可以下載對應的CSV復本，並在本機裝置設定對應。 選取[下載]範本&#x200B;**以下載您對應的CSV復本。**&#x200B;您必須確保僅使用來源檔案和目標結構描述中提供的欄位。
 
 請參閱下列檔案以取得有關「資料準備」的詳細資訊。
 
