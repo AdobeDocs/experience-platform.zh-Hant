@@ -2,10 +2,10 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45f22addbff9ec81d64e9e756e4c27e8af4b477d
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 8%
 ## 透過API或UI連線至SFTP {#connect-api-or-ui}
 
 * 若要使用Experience Platform使用者介面連線至您的SFTP儲存位置，請閱讀以下章節： [連線至目的地](#connect)和[啟用對象至此目的地](#activate)。
-* 若要以程式設計方式連線至您的SFTP儲存位置，請使用「流程服務API」教學課程[&#128279;](../../api/activate-segments-file-based-destinations.md)，讀取將對象啟用至檔案型目的地。
+* 若要以程式設計方式連線至您的SFTP儲存位置，請使用「流程服務API」教學課程](../../api/activate-segments-file-based-destinations.md)，讀取[將對象啟用至檔案型目的地。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -61,14 +61,26 @@ ht-degree: 8%
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Experience Platform使用者介面[&#128279;](/help/destinations/ui/export-datasets.md)匯出資料集。
-* 如何使用流程服務API[&#128279;](/help/destinations/api/export-datasets.md)以程式設計方式匯出資料集。
+* 如何使用Experience Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
+* 如何使用流程服務API](/help/destinations/api/export-datasets.md)以程式設計方式[匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 
 匯出&#x200B;*對象資料*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.csv`、`parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱對象啟動教學課程中的[匯出支援的檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export)一節。
 
 匯出&#x200B;*資料集*&#x200B;時，Experience Platform會在您提供的儲存位置中建立`.parquet`或`.json`檔案。 如需檔案的詳細資訊，請參閱匯出資料集教學課程中的[驗證資料集匯出成功](../../ui/export-datasets.md#verify)區段。
+
+## SFTP伺服器連線需求 {#sftp-connection-requirements}
+
+為確保資料匯出成功，您必須設定目標SFTP伺服器，以允許足夠的同時連線數量。 如果SFTP伺服器限制同時連線的數量，您可能會遇到匯出作業失敗的情況，尤其是同時匯出多個對象或資料集時。
+
+**建議**
+為獲得最佳效能，您的SFTP伺服器應該允許每個要匯出的對象或資料集至少有一個並行連線。 伺服器至少應支援同時排程匯出的對象或資料集總數的30%。
+
+**範例**\
+如果您排程同時為100個對象或資料集匯出，您的SFTP伺服器應允許至少30個同時連線。
+
+正確設定SFTP伺服器的連線限制，有助於防止匯出失敗，並確保從Adobe Experience Platform傳送可靠的資料。
 
 ## 連線到目標 {#connect}
 
@@ -90,7 +102,7 @@ ht-degree: 8%
 >title="私密 SSH 金鑰"
 >abstract="私密 SSH 金鑰必須為 RSA 格式、Base64 編碼的字串，並且不得受密碼保護。"
 
-如果您選取使用密碼&#x200B;**驗證型別的** SFTP來連線至您的SFTP位置：
+如果您選取使用密碼&#x200B;]**驗證型別的**[!UICONTROL  SFTP來連線至您的SFTP位置：
 
 ![使用密碼的SFTP目的地基本驗證。](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
