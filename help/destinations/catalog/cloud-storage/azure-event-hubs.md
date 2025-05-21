@@ -4,9 +4,9 @@ title: Azure事件中樞連線
 description: 建立與您的 [!DNL Azure Event Hubs] 儲存裝置的即時輸出連線，以從Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2084'
 ht-degree: 5%
 
 ---
@@ -147,7 +147,7 @@ Experience Platform會最佳化[!DNL Azure Event Hubs]目的地的設定檔匯�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和受眾可作為目的地匯出的提示。 這表示如果任何對應的對象變更狀態（從`null`變更為`realized`或從`realized`變更為`exiting`）或更新任何對應的屬性，將會啟動目的地匯出。</li><li>由於身分目前無法對應至[!DNL Azure Event Hubs]目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含啟動資料流中對應的對象，在資格或對象退出事件後，設定檔的狀態已針對該對象變更。 請注意，如果其他未對應的對象與啟動資料流中對應的對象屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則符合設定檔資格的其他未對應對象可以屬於目的地匯出的一部分。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援[!DNL Azure Event Hubs]目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至[!DNL Azure Event Hubs]目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援[!DNL Azure Event Hubs]目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 

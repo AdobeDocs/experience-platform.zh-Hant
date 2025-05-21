@@ -2,9 +2,9 @@
 title: 設定檔匯出行為
 description: 瞭解在Experience Platform目的地支援的不同整合模式之間，設定檔匯出行為有何不同。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
+source-git-commit: ede6f3ed4518babddb537a62cdb16915e2d37310
 workflow-type: tm+mt
-source-wordcount: '2939'
+source-wordcount: '2935'
 ht-degree: 0%
 
 ---
@@ -27,26 +27,26 @@ Experience Platform目的地會將資料匯出至API型整合，做為HTTPS呼�
 
 設定檔在傳送到目的地API端點之前，會彙總為HTTPS訊息。
 
-以具有&#x200B;*[可設定彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;原則的[Facebook目的地](/help/destinations/catalog/social/facebook.md)為例 — 資料會以彙總方式傳送，其中目的地服務會擷取設定檔服務上游的所有傳入資料，並依下列其中一個專案彙總，然後再將資料傳送至Facebook：
+以具有&#x200B;*[可設定彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;原則的[Facebook目的地](/help/destinations/catalog/social/facebook.md)為例 — 資料會以彙總方式傳送，其中目的地服務會擷取設定檔服務的所有傳入資料，並依下列其中一個專案彙總，然後再將資料傳送至Facebook：
 
 * 記錄數（最多10,000筆）或
 * 時間視窗間隔（300秒）
 
-首次符合上述臨界值的任何一項，都會觸發匯出至Facebook的作業。 因此，在[!DNL Facebook Custom Audiences]儀表板中，您可能會看到以10,000筆記錄增量從Experience Platform傳入的受眾。 您可能會每2-3分鐘看到10,000筆記錄，因為資料的處理與彙總速度比300秒匯出間隔還快，而且傳送速度也更快，所以在處理所有記錄之前，大約每2-3分鐘就會傳送一次。 如果記錄不足以組成10,000個批次，則符合時間範圍臨界值時將會傳送目前的記錄數，因此您也可能會看到傳送至Facebook的較小批次。
+系統會先符合上述任一臨界值，再觸發匯出至Facebook的作業。 因此，在[!DNL Facebook Custom Audiences]儀表板中，您可能會看到以10,000筆記錄增量從Experience Platform傳入的受眾。 您可能會每2-3分鐘看到10,000筆記錄，因為資料的處理與彙總速度比300秒匯出間隔還快，而且傳送速度也更快，所以在處理所有記錄之前，大約每2-3分鐘就會傳送一次。 如果沒有足夠的記錄來組成10,000個批次，則當達到時間範圍臨界值時，將會傳送目前的記錄數，因此您也可能看到傳送到Facebook的較小批次。
 
-再舉一例，考慮具有`maxUsersPerRequest: 10`的&#x200B;*[最大努力彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;原則的[HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md)。 這表示在為此目的地觸發HTTP呼叫之前，最多會彙總10個設定檔，但Experience Platform會在目的地服務收到來自上游服務的更新重新評估資訊時，立即嘗試將設定檔分派至目的地。
+再舉一例，考慮具有`maxUsersPerRequest: 10`的&#x200B;*[最大努力彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;原則的[HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md)。 也就是說，在向此目的地引發HTTP呼叫之前，最多會彙總10個設定檔，但Experience Platform會在目的地服務收到來自上游服務的更新重新評估資訊時，立即嘗試將設定檔分派至目的地。
 
-可設定彙總原則，而目的地開發人員可決定如何設定彙總原則，以最符合下游API端點的速率限制。 在Destination SDK檔案中閱讀有關[彙總原則](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)的詳細資訊。
+可設定彙總原則，而目的地開發人員可決定如何設定彙總原則，以最符合下游API端點的速率限制。 在Destination SDK檔案中進一步瞭解[彙總原則](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)。
 
 ## 串流設定檔匯出（企業）目的地 {#streaming-profile-destinations}
 
 >[!IMPORTANT]
 >
-> 僅[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶可使用企業目的地。
+> 只有[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶可使用企業目的地。
 
-Experience Platform中的[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)是Amazon Kinesis、Azure事件中樞及HTTP API。
+Experience Platform中的[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)是Amazon Kinesis、Azure事件中樞和HTTP API。
 
-Experience Platform會最佳化將設定檔匯出至您企業目的地的行為，以便僅在對象資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至您的API端點。 在下列情況下，設定檔會匯出至您的目的地：
+Experience Platform會最佳化將設定檔匯出至您企業目的地的行為，以便在對象資格或其他重大事件後發生設定檔的相關更新時，僅將資料匯出至您的API端點。 在下列情況下，設定檔會匯出至您的目的地：
 
 * 設定檔更新是由對應到目的地的至少一個對象的[對象成員資格](/help/xdm/field-groups/profile/segmentation.md)中的變更所決定。 例如，設定檔已符合對應至目的地的其中一個對象的資格，或已退出對應至目的地的其中一個對象。
 * 設定檔更新是由[身分對應](/help/xdm/field-groups/profile/identitymap.md)中的變更所決定。 例如，已符合對應至目的地之其中一個對象資格的設定檔，已在身分對應屬性中新增身分。
@@ -62,7 +62,7 @@ Experience Platform會最佳化將設定檔匯出至您企業目的地的行為�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和受眾可作為目的地匯出的提示。 這表示如果任何對應的對象變更狀態（從`null`變更為`realized`或從`realized`變更為`exiting`）或更新任何對應的屬性，將會啟動目的地匯出。</li><li>由於身分目前無法對應至企業目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含啟動資料流中對應的對象，在資格或對象退出事件後，設定檔的狀態已針對該對象變更。 請注意，如果其他未對應的對象與啟動資料流中對應的對象屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則符合設定檔資格的其他未對應對象可以屬於目的地匯出的一部分。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援企業目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至企業目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援企業目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -88,7 +88,7 @@ Experience Platform會最佳化將設定檔匯出至您企業目的地的行為�
 
 ## 串流API型目的地 {#streaming-api-based-destinations}
 
-適用於串流目的地(例如Facebook、Trade Desk)和其他以API為基礎的整合，其設定檔匯出行為與前述企業目的地的行為非常類似。
+適用於串流目的地（例如Facebook、Trade Desk）和其他以API為基礎的整合，其設定檔匯出行為與前述企業目的地的行為非常類似。
 
 串流目的地的範例是屬於目錄中[社交和廣告類別](/help/destinations/destination-types.md#categories)的目的地。
 
@@ -109,7 +109,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和受眾可作為目的地匯出的提示。 這表示如果任何對應的對象變更狀態（從`null`變更為`realized`或從`realized`變更為`exiting`）或更新任何對應的屬性，將會啟動目的地匯出。</li><li>身分對應中的變更定義為針對設定檔的[身分圖表](/help/identity-service/features/identity-graph-viewer.md)新增/移除的身分識別，適用於對應為匯出的身分名稱空間。</li><li>屬性的變更定義為對應到目的地的屬性的任何更新。</li></ul> | <ul><li>對應到目的地且已變更的對象將包含在`segmentMembership`物件中。 在某些情況下，它們可能會使用多個呼叫匯出。 此外，在某些情況下，某些未變更的對象可能也會包含在呼叫中。 在任何情況下，僅會匯出對應的對象。</li><li>名稱空間中所有對應至`identityMap`物件中目的地的身分也包括在內。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>身分對應中的變更定義為針對設定檔的[身分圖表](/help/identity-service/features/identity-graph-viewer.md)新增/移除的身分識別，適用於對應為匯出的身分名稱空間。</li><li>屬性的變更定義為對應到目的地的屬性的任何更新。</li></ul> | <ul><li>對應到目的地且已變更的區段將包含在`segmentMembership`物件中。 在某些情況下，它們可能會使用多個呼叫匯出。 此外，在某些情況下，某些尚未變更的區段可能也會包含在呼叫中。 在任何情況下，僅會匯出對應的區段。</li><li>名稱空間中所有對應至`identityMap`物件中目的地的身分也包括在內。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -131,7 +131,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 ## 批次（以檔案為基礎）目的地 {#file-based-destinations}
 
-將設定檔匯出至Experience Platform中的[檔案型目的地](/help/destinations/destination-types.md#file-based)時，有三種排程型別（如下所列）和兩種檔案匯出選項（完整或增量檔案）可供您使用。 所有這些設定都是在對象層級上設定，即使有多個對象對應至單一目的地資料流亦然。
+將設定檔匯出至Experience Platform中的[檔案型目的地](/help/destinations/destination-types.md#file-based)時，您可使用三種排程型別（如下所列）和兩種檔案匯出選項（完整或增量檔案）。 所有這些設定都是在對象層級上設定，即使有多個對象對應至單一目的地資料流亦然。
 
 * 排程的匯出：設定目的地、新增一或多個區段、選取是否要匯出完整或增量檔案，以及選取每天設定時間或每天幾次應匯出檔案。 例如，下午5點的匯出時間表示任何符合對象資格的設定檔都會在下午5點匯出。
 * 區段評估後：每日對象評估工作執行後會立即觸發匯出。 這表示檔案中匯出的設定檔編號儘可能接近區段的最新評估母體。
