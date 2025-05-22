@@ -1,17 +1,17 @@
 ---
-title: 使用NPM套件安裝Web SDK
-description: 使用NPM套件來安裝和參考Web SDK程式庫。
+title: 使用NPM套件安裝網頁SDK
+description: 使用NPM套件來安裝和參考網頁SDK程式庫。
 exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 8b6c958613923127880263679ce00ce359151300
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-# 使用NPM套件安裝Web SDK
+# 使用NPM套件安裝網頁SDK
 
-Adobe Experience Platform Web SDK可作為[NPM套件](https://www.npmjs.com)使用。 安裝NPM套件可讓您控制Adobe Experience Platform Web SDK JavaScript程式庫的建置流程。 NPM套件會公開要在瀏覽器中執行的EcmaScript 5版模組或EcmaScript 2015版(ES6)模組。
+Adobe Experience Platform Web SDK是以[NPM套件](https://www.npmjs.com)的形式提供。 安裝NPM套件可讓您控制Adobe Experience Platform Web SDK JavaScript程式庫的建置流程。 NPM套件會公開要在瀏覽器中執行的EcmaScript 5版模組或EcmaScript 2015版(ES6)模組。
 
 ```bash
 npm install @adobe/alloy
@@ -24,7 +24,7 @@ Adobe Experience Platform Web SDK的NPM套件會公開`createInstance`函式。 
 ```js
 import { createInstance } from "@adobe/alloy";
 const alloy = createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
 
@@ -37,6 +37,6 @@ alloy("sendEvent", { ... });
 ```js
 var alloyLibrary = require("@adobe/alloy");
 var alloy = alloyLibrary.createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
