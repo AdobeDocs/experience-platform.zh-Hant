@@ -3,9 +3,9 @@ title: 使用網頁SDK和Edge Network API的混合個人化
 description: 本文示範如何使用網頁SDK搭配Edge Network API，在網頁屬性上部署混合式個人化。
 keywords: 個人化；混合；伺服器api；伺服器端；混合實作；
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '1200'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Hybdrid個人化說明使用[Edge Network API](https://developer.adobe.com/data-
 1. Edge Network API會將個人化內容傳回至您的應用程式伺服器。
 1. 應用程式伺服器傳回HTML回應給使用者端瀏覽器，其中包含[身分識別與叢集Cookie](#cookies)。
 1. 在使用者端頁面上呼叫[!DNL Web SDK] `applyResponse`命令，傳入上一步驟之[!UICONTROL Edge Network API]回應的標題和內文。
-1. [!DNL Web SDK]會自動轉譯Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)選件和Journey Optimizer Web Channel專案，因為`renderDecisions`標幟已設為`true`。
+1. [!DNL Web SDK]會自動轉譯Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)選件和Journey Optimizer Web Channel專案，因為`renderDecisions`標幟已設為`true`。
 1. 透過`applyProposition`方法手動套用Target表單式[!DNL HTML]/[!DNL JSON]選件和Journey Optimizer程式碼式體驗，以根據主張中的個人化內容更新[!DNL DOM]。
 1. 對於Target表單式[!DNL HTML]/[!DNL JSON]選件和Journey Optimizer程式碼式體驗，必須手動傳送顯示事件，以指出已顯示傳回內容的時間。 這是透過`sendEvent`命令完成的。
 
@@ -61,6 +61,39 @@ Cookie可用來儲存使用者身分和叢集資訊。  使用混合實作時，
 | 擷取主張的互動請求 | 應用程式伺服器 |
 | 傳送顯示通知的互動請求 | 應用程式伺服器 |
 
+
+## 建立Edge Network地區主機 {#regional-host}
+
+若要建立Edge Network區域主機，請先從`kndctr_<orgId>_AdobeOrg_cluster` Cookie讀取位置提示，其可具有下列值：
+
+* `va6`
+* `or2`
+* `irl1`
+* `ind1`
+* `sgp3`
+* `jpn3`
+* `aus3`
+
+範例：`kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_cluster: va6`
+
+Edge Network區域主機使用以下格式： `<location_hint>.server.adobedc.net`，而且可以有下列值：
+
+* `va6.server.adobedc.net`
+* `or2.server.adobedc.net`
+* `irl1.server.adobedc.net`
+* `ind1.server.adobedc.net`
+* `sgp3.server.adobedc.net`
+* `jpn3.server.adobedc.net`
+* `aus3.server.adobedc.net`
+
+透過使用這些特定主機，系統會將請求導向至使用者之前造訪過的Edge Network相同位置，且當使用者資料存在時，系統可提供最佳體驗。
+
+如果沒有位置提示（亦即沒有Cookie），請使用預設主機： `server.adobedc.net`。
+
+>[!TIP]
+>
+>作為最佳實務，您應使用允許位置的清單。 如此可防止位置提示因透過使用者端Cookie提供而變得模糊。
+
 ## 分析影響 {#analytics}
 
 實施混合個人化時，您必須特別注意，才不會在Analytics中多次計算頁面點選。
@@ -74,8 +107,7 @@ Cookie可用來儲存使用者身分和叢集資訊。  使用混合實作時，
 
 如此一來，伺服器端要求不會註冊任何Analytics事件，但使用者端要求會註冊。 如此一來，Analytics請求就會被精確計算。
 
-
-## 伺服器端要求 {#server-side-request}
+## 建立伺服器端請求 {#server-side-request}
 
 以下範例請求說明您的應用程式伺服器可用來擷取個人化內容的Edge Network API請求。
 
@@ -145,16 +177,16 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
       "state":{
          "domain":"localhost",
          "cookiesEnabled":true,
-         "entries":[
-            {
-               "key":"kndctr_XXX_AdobeOrg_identity",
-               "value":"abc123"
-            },
-            {
-               "key":"kndctr_XXX_AdobeOrg_cluster",
-               "value":"or2"
-            }
-         ]
+         "entries": [{
+           "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_identity",
+           "value":"CiY0NzE0NzkwMTUyMzYzMzI4NDAxMjc3NDcwNzA2NTcxMjI3OTI1NVIRCJ_S-uCRMRABGAEqBElSTDHwAZ_S-uCRMQ=="
+         }, {
+           "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_consent",
+           "value": "general=in"
+         }, {
+            "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_cluster",
+            "value": "va6"
+         }]
       }
    }
 }'
@@ -165,10 +197,57 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 | `dataStreamId` | `String` | 可以。 | 您用來將互動傳遞至Edge Network的資料串流的ID。 請參閱[資料串流總覽](../../datastreams/overview.md)，瞭解如何設定資料串流。 |
 | `requestId` | `String` | 無 | 關聯內部伺服器請求的隨機ID。 如果未提供任何專案，Edge Network將會產生一個專案，並在回應中傳回。 |
 
+### Proxy標題 {#proxy-headers}
+
+正確處理請求需要下列標頭。
+
+* `Referer`
+* `X-Forwarded-For`
+* `X-Forwarded-Proto`
+* `X-Forwarded-Host`
+
+請確定已正確設定這些專案，以指向實際的使用者端資訊。 例如，`X-Forwarded-For`標頭應包含使用者端IP，才能進行適當的地理位置。
+
+### User-Agent標題 {#user-agent-headers}
+
+使用下列使用者代理標題正確處理請求。
+
+**預設**
+
+* `User-Agent`
+
+**低平均資訊量（必要）：**
+
+* `Sec-CH-UA`
+* `Sec-CH-UA-Mobile`
+* `Sec-CH-UA-Platform`
+
+**高平均資訊量（選擇性）：**
+
+* `Sec-CH-UA-Platform-Version`
+* `Sec-CH-UA-Arch`
+* `Sec-CH-UA-Model`
+* `Sec-CH-UA-Bitness`
+* `Sec-CH-UA-WoW64`
+
+必須傳送要求，如[Edge Network API規格](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)中所示。 若您的使用案例需要，請參閱[個人化檔案](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization/)。
+
 ### 伺服器端回應 {#server-response}
 
-以下範例回應顯示Edge Network API回應的外觀。
+Edge Network回應將包含`state:store`個指示，這些指示應轉換成`Set-Cookie`標頭。 這些檔案會儲存在瀏覽器中，以供網頁SDK實作使用。
 
+Cookie應設定在頂層網域上，以便隨著要求一起傳送給伺服器實施以及使用者端。 （或至少是兩個實作所使用的通用子網域）
+
+範例：
+
+* 伺服器端呼叫使用`api.example.com`
+* 使用者端呼叫使用`adobe.example.com`
+
+Cookie應設定在`.example.com`，以便在這兩種情況下共用。
+
+伺服器端回應會以稱為`Handles`的片段組織，這些片段會根據資料流設定產生。 例如，即時個人化引擎傳回`personalization:decisions`控制代碼，而即時啟用引擎產生`activation:pull`控制代碼。
+
+以下範例回應顯示Edge Network API回應的外觀。
 
 ```json
 {
@@ -200,6 +279,8 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
    ]
 }
 ```
+
+
 
 ## 使用者端請求 {#client-request}
 
