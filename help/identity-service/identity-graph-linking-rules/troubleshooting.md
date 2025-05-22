@@ -2,9 +2,9 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '3285'
+source-wordcount: '3295'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 下圖是資料如何流入Adobe Experience Platform和應用程式的簡化表示。 使用此圖表作為參考，協助您更清楚瞭解此頁面的內容。
 
-![識別服務中資料擷取的流程圖表。](../images/troubleshooting/dataflow_in_identity.png)
+![資料擷取在Identity Service中的流程圖表。](../images/troubleshooting/dataflow_in_identity.png "識別服務中資料擷取的流程圖表。"){zoomable="yes"}
 
 請務必注意下列因素：
 
@@ -265,7 +265,7 @@ ORDER BY timestamp desc
    * 您的所有設定檔中沒有單一名稱空間。
    * 發生[「擱置識別碼」](./implementation-guide.md#dangling-loginid-scenario)個狀況。 在此案例中，Identity Service無法判斷暫留ID是否與圖形中的任何個人實體相關聯。
 
-您也可以在UI[&#128279;](./graph-simulation.md)中使用圖形模擬工具來模擬事件，並設定您自己的唯一名稱空間和名稱空間優先順序設定。 這麼做有助於您基本瞭解「身分最佳化演演算法」應有的行為。
+您也可以在UI](./graph-simulation.md)中使用[圖形模擬工具來模擬事件，並設定您自己的唯一名稱空間和名稱空間優先順序設定。 這麼做有助於您基本瞭解「身分最佳化演演算法」應有的行為。
 
 如果您的模擬結果與圖形行為預期相符，則可以檢查您的[身分設定](./identity-settings-ui.md)是否與您在模擬中設定的設定相符。
 

@@ -2,10 +2,10 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用Identity Graph連結規則設定實作資料時應遵循的建議步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 6%
+source-wordcount: '1955'
+ht-degree: 5%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 6%
 
 如果沒有能代表您個人識別碼的唯一名稱空間，您最終可能會看到將不同的個人識別碼連結至相同ECID的圖表。 在此範例中，B2BCRM和B2CCRM會同時連結至相同的ECID。 此圖表建議Tom使用其B2C登入帳戶與Summer共用裝置（使用她的B2B登入帳戶）。 但是，系統將識別這是一個設定檔（圖形摺疊）。
 
-![兩個人員識別碼連結至相同ECID的圖表案例。](../images/graph-examples/multi_namespaces.png)
+![兩個人員識別碼連結至相同ECID的圖表案例。](../images/graph-examples/multi_namespaces.png "兩個人員識別碼連結至相同ECID的圖表案例。"){zoomable="yes"}
 
 +++
 
@@ -49,7 +49,7 @@ ht-degree: 6%
 
 指定唯一的名稱空間（在此案例中是CRMID，而不是兩個完全不同的名稱空間），Identity Service就能夠識別上次與ECID建立關聯的人員識別碼。 在此範例中，由於存在唯一的CRMID，Identity Service能夠識別「共用裝置」情境，其中兩個實體共用相同裝置。
 
-![共用裝置圖表情境，其中兩個人員識別碼連結至相同的ECID，但舊連結被移除。](../images/graph-examples/crmid_only_multi.png)
+![共用裝置圖表情境，其中兩個人員識別碼連結至相同的ECID，但舊連結被移除。](../images/graph-examples/crmid_only_multi.png "共用裝置圖表情境，其中兩個人員識別碼連結至相同的ECID，但舊連結被移除。"){zoomable="yes"}
 
 +++
 
@@ -149,7 +149,7 @@ ht-degree: 6%
 
 在圖表模擬中，此內嵌看起來可能像這樣：
 
-![呈現範例圖形的圖形模擬UI。](../images/implementation/example-graph.png)
+![圖形模擬UI呈現範例圖形。](../images/implementation/example-graph.png "呈現範例圖形的圖形模擬UI。"){zoomable="yes"}
 
 >[!TAB 已驗證的事件，沒有任何人員識別碼]
 
@@ -201,7 +201,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 一旦您知道您想要圖形的行為方式，請瀏覽至Identity Service UI工作區中的[身分設定UI](./identity-settings-ui.md)。 若要存取身分設定UI，請從左側導覽選取&#x200B;**[!UICONTROL 身分]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 
-![身分瀏覽頁面中反白顯示設定按鈕。](../images/implementation/settings.png)
+![身分瀏覽頁面中反白顯示設定按鈕。](../images/implementation/settings.png "身分瀏覽頁面中反白顯示設定按鈕。"){zoomable="yes"}
 
 使用身分設定UI來指定您唯一的名稱空間，並依優先順序設定您的名稱空間。 套用完設定後，您必須至少等待六個小時才能繼續內嵌資料，因為新設定至少需要六個小時才能反映在Identity Service中。
 
@@ -249,11 +249,11 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 選取省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 檢視更多]**&#x200B;以取得進一步資訊，並驗證沒有收合的圖形。
 
-![身分識別服務UI工作區中的身分識別儀表板。](../images/implementation/identity_dashboard.png)
+![Identity Service UI工作區中的身分儀表板。](../images/implementation/identity_dashboard.png "身分識別服務UI工作區中的身分識別儀表板。"){zoomable="yes"}
 
 使用顯示的視窗來檢視收合圖形的資訊。 在此範例中，電子郵件和電話都標示為唯一的名稱空間，因此您的沙箱中沒有收合的圖表。
 
-![具有多重身分之圖形的快顯視窗。](../images/implementation/graphs.png)
+![具有多個身分的圖形的快顯視窗。](../images/implementation/graphs.png "具有多重身分之圖形的快顯視窗。"){zoomable="yes"}
 
 ## 附錄 {#appendix}
 
@@ -269,13 +269,13 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 在此範例中，`{loginID: ID_C}`懸空且未連結至CRMID。 因此，此loginID應關聯的個人實體變得模稜兩可。
 
-![具有「懸浮」登入ID情境的圖表範例。](../images/graph-examples/dangling_example.png)
+![具有「懸浮」登入ID情境的圖表範例。](../images/graph-examples/dangling_example.png "具有懸浮loginID案例的圖表範例。"){zoomable="yes"}
 
 >[!TAB loginID已連結至CRMID]
 
 在此範例中，`{loginID: ID_C}`連結至`{CRMID: Tom}`。 因此，系統能夠識別此loginID與Tom相關聯。
 
-![LoginID已連結至CRMID。](../images/graph-examples/id_c_tom.png)
+![LoginID已連結至CRMID。](../images/graph-examples/id_c_tom.png "LoginID已連結至CRMID。"){zoomable="yes"}
 
 >[!TAB loginID已連結至另一個CRMID]
 
@@ -283,7 +283,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 此範例也顯示Tom和Summer是共用裝置的不同個人實體，以`{ECID: 111}`表示。
 
-![LoginID已連結至另一個CRMID。](../images/graph-examples/id_c_summer.png)
+![LoginID已連結至另一個CRMID。](../images/graph-examples/id_c_summer.png "LoginID已連結至另一個CRMID。"){zoomable="yes"}
 
 >[!ENDTABS]
 

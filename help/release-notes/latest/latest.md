@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明 (2025 年 5 月)
 description: Adobe Experience Platform 2025 年 5 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8f1538efc96c8dc47a505511ec7f064b07f124c8
+source-git-commit: ad9ec9c3177c25e2207b67b4c939c3f6fa97883f
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1171'
 ht-degree: 51%
 
 ---
@@ -84,7 +84,7 @@ Adobe Experience Platform 身分識別服務可在裝置及系統間進行身分
 
 | 功能 | 說明 |
 | --- | --- |
-| 介紹[!DNL Identity Graph Linking Rules] | [!DNL Identity Graph Linking Rules]的設計目的是透過防止圖表摺疊，協助您維護個人化行銷的精確客戶設定檔。<ul><li>使用[圖形模擬工具](../../identity-service/identity-graph-linking-rules/graph-simulation.md)測試及驗證您的設定。</li><li>請參閱[身分識別儀表板](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs)，以監視組織中任何圖形摺疊的執行個體。</li><li>若要開始使用，請閱讀[[!DNL Identity Graph Linking Rules] 實作指南](../../identity-service/identity-graph-linking-rules/implementation-guide.md)。</li></ul> **注意**：在您手動設定身分設定之前，您的資料將會變更。 |
+| [!DNL Identity Graph Linking Rules] | [!DNL Identity Graph Linking Rules]現已正式可用。 [!DNL Identity Graph Linking Rules]防止「圖表摺疊」，確保跨Experience Platform和應用程式進行個人化行銷時，有清楚且準確的客戶設定檔。 主要功能包括：<ul><li>[圖表模擬工具](../../identity-service/identity-graph-linking-rules/graph-simulation.md)：探索演演算法並測試身分設定組態。</li><li> [身分設定](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md)：設定唯一的名稱空間並設定優先順序。</li><li>[身分儀表板](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs)：監檢視形並驗證身分設定。</li></ul> **注意**：在您手動設定身分設定之前，您的資料不會有任何變更。 |
 
 {style="table-layout:auto"}
 

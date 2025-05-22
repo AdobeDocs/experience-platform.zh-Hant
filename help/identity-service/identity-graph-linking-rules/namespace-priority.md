@@ -2,9 +2,9 @@
 title: 命名空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 579489e711858c3e80ca5d14eb4ad9187ecf80f8
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2120'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 2%
 >
 >* 分層圖表是指具有多重連結層級的身分圖表。 檢視下方影像以取得含有三個圖層的圖形範例。
 
-![圖表層的圖表](../images/namespace-priority/graph-layers.png)
+![圖表層圖表](../images/namespace-priority/graph-layers.png "圖表層圖表"){zoomable="yes"}
 
 ### 名稱空間的語意意義
 
@@ -65,9 +65,9 @@ ht-degree: 2%
 
 ## 名稱空間優先順序使用方式
 
-目前，名稱空間優先順序會影響即時客戶個人檔案的系統行為。 下圖說明了此概念。 如需詳細資訊，請閱讀[Adobe Experience Platform和應用程式架構圖](https://experienceleague.adobe.com/zh-hant/docs/blueprints-learn/architecture/architecture-overview/platform-applications)的指南。
+目前，名稱空間優先順序會影響即時客戶個人檔案的系統行為。 下圖說明了此概念。 如需詳細資訊，請閱讀[Adobe Experience Platform和應用程式架構圖](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications)的指南。
 
-![名稱空間優先順序應用程式範圍的圖表](../images/namespace-priority/application-scope.png)
+![名稱空間優先順序應用程式範圍的圖表。](../images/namespace-priority/application-scope.png "名稱空間優先順序應用程式範圍的圖表。"){zoomable="yes"}
 
 ## Identity服務：身分最佳化演演算法
 
@@ -120,7 +120,7 @@ ht-degree: 2%
 
 ## 細分服務：區段會籍中繼資料儲存
 
-![區塊會籍儲存的圖表](../images/namespace-priority/segment-membership-storage.png)
+![區段成員資格儲存的圖表。](../images/namespace-priority/segment-membership-storage.png "區塊會籍儲存的圖表。"){zoomable="yes"}
 
 對於指定的合併設定檔，區段會籍會根據具有最高名稱空間優先順序的身分來儲存。
 
@@ -204,17 +204,17 @@ ht-degree: 2%
 
 #### 邊緣分段
 
-在指定的事件中，請確定所有代表個人實體的名稱空間都包含在`identityMap`中，因為會忽略以XDM欄位[&#128279;](../../xdm/ui/fields/identity.md)傳送的身分，且不會用於區段會籍中繼資料儲存。
+在指定的事件中，請確定所有代表個人實體的名稱空間都包含在`identityMap`中，因為會忽略以XDM欄位](../../xdm/ui/fields/identity.md)傳送的[身分，且不會用於區段會籍中繼資料儲存。
 
 * **事件適用性**：此行為僅適用於直接傳送至Edge Network的事件(例如WebSDK和Mobile SDK)。 從[Experience Platform中心](../../landing/edge-and-hub-comparison.md)擷取的事件（例如透過HTTP API來源、其他串流來源及批次來源擷取的事件）不受此限制。
 * **Edge分段特殊性**：此行為是邊緣分段所特有的。 批次和串流區段是集線器上評估的獨立服務，不會遵循相同程式。 如需詳細資訊，請參閱[邊緣分段指南](../../segmentation/methods/edge-segmentation.md)。
-* 如需詳細資訊，請閱讀[Adobe Experience Platform和應用程式架構圖](https://experienceleague.adobe.com/zh-hant/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)和[Edge Network與集線器比較](../../landing/edge-and-hub-comparison.md)頁面。
+* 如需詳細資訊，請閱讀[Adobe Experience Platform和應用程式架構圖](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)和[Edge Network與集線器比較](../../landing/edge-and-hub-comparison.md)頁面。
 
 #### Edge Network應用程式
 
 若要確保Edge Network上的應用程式能立即存取Edge設定檔，請確定您的事件包含CRMID上的`primary=true`。 這可確保立即可用，而無需等待來自中樞的身分圖表更新。
 
 * Edge Network上的應用程式(例如Adobe Target、Offer Decisioning和自訂Personalization目的地)將繼續取決於事件中的主要身分，以從Edge設定檔存取設定檔。
-* 閱讀[Experience Platform Web SDK &amp; Edge Network架構圖](https://experienceleague.adobe.com/zh-hant/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)，瞭解Edge Network行為的詳細資訊。
-* 如需如何在Web SDK[&#128279;](../../web-sdk/identity/overview.md)上設定主要身分的詳細資訊，請閱讀有關[資料元素型別](../../tags/extensions/client/web-sdk/data-element-types.md)和Web SDK中的身分資料的檔案。
+* 閱讀[Experience Platform Web SDK &amp; Edge Network架構圖](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)，瞭解Edge Network行為的詳細資訊。
+* 如需如何在Web SDK](../../web-sdk/identity/overview.md)上設定主要身分的詳細資訊，請閱讀有關[資料元素型別](../../tags/extensions/client/web-sdk/data-element-types.md)和[Web SDK中的身分資料的檔案。
 * 確認ECID包含在體驗事件中。 如果ECID遺失，則會將其新增至具有`primary=true`的事件裝載，這可能會導致未預期的結果。
