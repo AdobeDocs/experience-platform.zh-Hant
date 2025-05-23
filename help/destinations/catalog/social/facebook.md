@@ -3,16 +3,24 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: Facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
 workflow-type: tm+mt
-source-wordcount: '2137'
-ht-degree: 6%
+source-wordcount: '2843'
+ht-degree: 5%
 
 ---
 
 # [!DNL Facebook]個連線
 
 ## 概觀 {#overview}
+
+>[!IMPORTANT]
+>
+>* 從2025年5月23日開始並持續整個2025年6月，您可能會在目的地目錄中暫時看到兩個&#x200B;**[!DNL Facebook Custom Audience]**&#x200B;目的地卡片，持續時間長達數小時。 這是因為內部升級至目的地服務，並支援新欄位，以改進目標定位並與Facebook屬性上的設定檔進行比對。 如需新位址相關欄位的詳細資訊，請參閱[支援的身分](#supported-identities)區段。
+>* 如果您看到標示為&#x200B;**[!UICONTROL （新） Facebook自訂對象]**&#x200B;的卡片，請將此卡片用於新的啟用資料流程。 您的現有資料流將會自動更新，因此您不需要採取任何動作。 在此期間您對現有資料流所做的任何變更，都將在升級後保留。 升級完成後，**[!UICONTROL （新） Facebook自訂對象]**&#x200B;目的地卡片將重新命名為&#x200B;**[!DNL Facebook Custom Audience]**。
+>* 如果您使用[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
+>   * 流程規格 ID：`bb181d00-58d7-41ba-9c15-9689fdc831d3`
+>   * 連線規格 ID：`c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 為您的[!DNL Facebook]行銷活動啟用設定檔，以根據雜湊電子郵件進行對象目標定位、個人化和隱藏。
 
@@ -42,11 +50,20 @@ ht-degree: 6%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
-| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
+| `GAID` | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
+| `IDFA` | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
+| `phone_sha256` | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| `email_lc_sha256` | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| `extern_id` | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
+| `gender` | 性別 | 接受的值： <ul><li>男性`m`</li><li>女性`f`</li></ul> Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
+| `date_of_birth` | 出生日期 | 接受的格式： `yyyy-MM-DD`。 <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
+| `last_name` | 姓氏 | 接受的格式：小寫、僅限`a-z`個字元、無標點符號。 對於特殊字元使用UTF-8編碼。  <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
+| `first_name` | 名字 | 接受的格式：小寫、僅限`a-z`個字元、無標點符號、無空格。 對於特殊字元使用UTF-8編碼。  <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
+| `first_name_initial` | 名字初始 | 接受的格式：小寫，僅限`a-z`個字元。 對於特殊字元使用UTF-8編碼。  <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
+| `state` | 狀態 | 使用小寫的[2字元ANSI縮寫代碼](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code)。 對於非美國州，請使用小寫字元、無標點符號、無特殊字元及無空格。  <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
+| `city` | 城市 | 接受的格式：小寫、僅限`a-z`個字元、無標點符號、無特殊字元、無空格。  <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
+| `zip` | 郵遞區號 | 接受的格式：小寫，無空格。 若是美國郵遞區號，僅使用前5位數。 在英國，請使用`Area/District/Sector`格式。  <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
+| `country` | 國家/地區 | 接受的格式： [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)格式的小寫、雙字母國碼。  <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
 
 ## 支援的對象 {#supported-audiences}
 
@@ -93,6 +110,12 @@ ht-degree: 6%
 [!DNL Facebook]要求未明確傳送任何個人識別資訊(PII)。 因此，啟用至[!DNL Facebook]的對象可以從&#x200B;*雜湊*&#x200B;識別碼中中斷連線，例如電子郵件地址或電話號碼。
 
 根據您擷取至Adobe Experience Platform的ID型別，您必須遵守其對應的要求。
+
+## 最大化對象匹配率 {#match-rates}
+
+若要在[!DNL Facebook]中達到最高的對象符合率，強烈建議使用`phone_sha256`和`email_lc_sha256`目標身分。
+
+這些識別碼是[!DNL Facebook]用來跨其平台比對對象的主要識別碼。 確保您的來源資料正確對應到這些目標身分識別，並遵守[!DNL Facebook's]雜湊需求。
 
 ## 電話號碼雜湊需求 {#phone-number-hashing-requirements}
 
@@ -172,7 +195,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
    ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的Facebook認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Facebook認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
