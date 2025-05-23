@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 串流分段指南
 description: 瞭解串流細分是什麼、如何建立使用串流細分評估的受眾，以及如何檢視使用串流細分建立的受眾。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
+source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -140,6 +140,8 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 若要合併來自批次和串流來源的資料，您必須將批次和串流元件分隔為個別的對象。
 
+### 設定檔屬性和體驗事件 {#profile-and-event}
+
 例如，我們考慮以下兩個範例對象：
 
 | 客群 | 結構描述 | Source型別 | 查詢定義 | 客群 ID |
@@ -159,7 +161,9 @@ WHEN(<= 24 hours before now)])
 
 將使用串流細分來評估產生的對象&#x200B;**，因為它透過參考批次對象元件來運用批次對象的成員資格。
 
-不過，如果您想要結合兩個對象與事件資料，您&#x200B;**無法**&#x200B;只結合這兩個事件。 您需要建立兩個對象，然後建立另一個使用`inSegment`來參照這兩個對象的對象。
+### 多個體驗事件 {#two-events}
+
+如果您想要結合多個對象與事件資料，您&#x200B;**不能**&#x200B;只結合這些事件。 您必須為每個事件建立對象，然後建立另一個使用`inSegment`來參照所有對象的對象。
 
 例如，假設您有兩個對象，這兩個對象都會容納體驗事件結構描述資料：
 
@@ -463,4 +467,4 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 若要進一步瞭解如何使用Adobe Experience Platform使用者介面，請參閱[分段使用手冊](./overview.md)。
 
-如需有關串流區段的常見問題，請參閱常見問題[&#128279;](../faq.md#streaming-segmentation)的串流區段區段。
+如需有關串流區段的常見問題，請參閱常見問題](../faq.md#streaming-segmentation)的[串流區段區段。
