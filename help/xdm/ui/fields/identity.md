@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中定義身分欄位
 description: 瞭解如何在Experience Platform使用者介面中定義身分欄位。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '665'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->如果已設定主要身分欄位，您可以依照上述步驟變更架構中的主要身分欄位。 不過，您必須停用設定檔中的任何關聯資料集，然後重新啟用，變更才會生效。
+>一旦在即時客戶設定檔中啟用結構描述並擷取資料後，**您就無法變更主要身分欄位**。 嘗試這樣做會導致驗證錯誤。 如果您需要使用不同的主要身分，則必須使用更新的身分設定建立新的結構描述和新資料集。
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ ht-degree: 6%
 本指南說明如何在UI中定義身分欄位。 使用此結構描述擷取資料時，您的客戶身分圖表將會更新，以反映結構描述的身分欄位。 請參閱[身分圖表檢視器](../../../identity-service/features/identity-graph-viewer.md)上的指南，瞭解如何在UI中探索您組織的私人圖表。
 
 請參閱[在UI](./overview.md#special)中定義欄位的概觀，瞭解如何在[!DNL Schema Editor]中定義其他XDM欄位型別。
-

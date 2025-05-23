@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 結構描述組合基本概念
 description: 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4373'
+source-wordcount: '4350'
 ht-degree: 8%
 
 ---
@@ -55,24 +55,24 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 >title="結構描述中的身分識別"
 >abstract="身分識別是結構描述中的重要欄位，可用於識別主題，例如電子郵件地址或行銷 ID。這些欄位用於為每個人建構身分識別圖並建立客戶設定檔。如需進一步了解結構描述中的身分識別，請查看此文件。"
 
-結構用於擷取資料至Experience Platform。 此資料可用於多項服務，以建立個別實體的單一、統一檢視。 因此，在為客戶身分設計結構時，重要的是考慮哪些欄位可用於識別主旨，無論資料來自何處。
+結構描述會定義擷取至Experience Platform的資料結構。 該資料可支援Platform內的多項服務，並協助建立每個人的單一、統一檢視。 因此，在設計結構描述時，請仔細考慮要標籤為身分的欄位，這些欄位控制如何在資料集中拼接設定檔。
 
 為了協助進行此程式，結構描述中的關鍵欄位可以標示為身分。 資料擷取後，這些欄位中的資料會插入該個人的&quot;[!UICONTROL 身分圖表]&quot;。 然後[[!DNL Real-Time Customer Profile]](../../profile/home.md)和其他Experience Platform服務即可存取圖表資料，以提供每個個別客戶的拼接檢視。
 
-通常標示為「[!UICONTROL 身分]」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。 請考量您組織特定的任何唯一識別碼，因為這些識別碼可能是好的&quot;[!UICONTROL 身分]&quot;欄位。
+通常標示為「[!UICONTROL 身分]」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 請考量您組織特定的任何唯一識別碼，因為這些識別碼可能是好的&quot;[!UICONTROL 身分]&quot;欄位。
 
-在結構描述規劃階段思考客戶身分非常重要，以協助確保資料彙集在一起，以儘可能建置最強大的設定檔。 若要進一步瞭解身分資訊如何協助您為客戶傳遞數位體驗，請參閱[身分識別服務概覽](../../identity-service/home.md)。 請參閱資料模型最佳實務檔案，以取得[建立結構描述](./best-practices.md#data-validation-fields)時使用身分的相關提示。
+若要進一步瞭解身分資訊如何協助您為客戶傳遞數位體驗，請參閱[身分識別服務概覽](../../identity-service/home.md)。 請參閱資料模型最佳實務檔案，以取得[建立結構描述](./best-practices.md#data-validation-fields)時使用身分的相關提示。
 
 有兩種方式可將身分資料傳送至Experience Platform：
 
 1. 透過[結構描述編輯器UI](../ui/fields/identity.md)或使用[結構描述登入API](../api/descriptors.md#create)，將身分描述項新增至個別欄位
-1. 使用[`identityMap`欄位](#identityMap)
+2. 使用[`identityMap`欄位](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap`是對應型別欄位，說明個人的各種身分值及其關聯的名稱空間。 此欄位可用於提供結構描述的身分資訊，而非在結構描述本身的結構中定義身分值。
 
-使用`identityMap`的主要缺點是，身分會內嵌在資料中，因此變得較不顯眼。 如果您要擷取原始資料，則應在實際結構描述結構中定義個別身分欄位。
+使用`identityMap`的主要缺點是身分值是巢狀的，且在需要最上層身分欄位的工具中可能較難使用，例如區段產生器或某些協力廠商整合。
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 }
 ```
 
-如上述範例所示，`identityMap`物件中的每個索引鍵都代表一個身分名稱空間。 每個索引鍵的值是一個物件陣列，代表個別名稱空間的識別值(`id`)。 請參閱[!DNL Identity Service]檔案以取得Adobe應用程式可辨識的標準身分名稱空間[&#128279;](../../identity-service/troubleshooting-guide.md#standard-namespaces)清單。
+如上述範例所示，`identityMap`物件中的每個索引鍵都代表一個身分名稱空間。 每個索引鍵的值是一個物件陣列，代表個別名稱空間的識別值(`id`)。 請參閱[!DNL Identity Service]檔案以取得Adobe應用程式可辨識的標準身分名稱空間](../../identity-service/troubleshooting-guide.md#standard-namespaces)清單。[
 
 >[!NOTE]
 >
@@ -129,7 +129,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 | 支援的變更 | 重大變更（不支援） |
 | --- | --- |
-| <ul><li>將新欄位新增至資源</li><li>將必填欄位設為選用</li><li>引入新的必填欄位*</li><li>變更資源的顯示名稱和說明</li><li>啟用結構描述以參與設定檔</li></ul> | <ul><li>移除先前定義的欄位</li><li>重新命名或重新定義現有欄位</li><li>移除或限制先前支援的欄位值</li><li>將現有欄位移至樹狀結構中的其他位置</li><li>刪除結構描述</li><li>停用參與設定檔的結構描述</li></ul> |
+| <ul><li>將新欄位新增至資源</li><li>將必填欄位設為選用</li><li>引入新的必填欄位*</li><li>變更資源的顯示名稱和說明</li><li>啟用結構描述以參與設定檔</li></ul> | <ul><li>移除先前定義的欄位</li><li>重新命名或重新定義現有欄位</li><li>移除或限制先前支援的欄位值</li><li>將現有欄位移至樹狀結構中的其他位置</li><li>刪除結構描述</li><li>停用參與設定檔的結構描述</li><li>在已啟用設定檔且已擷取資料的結構描述上變更主要身分欄位</li></ul> |
 
 \**請參考下節以取得有關[設定新必要欄位](#post-ingestion-required-fields).*&#x200B;的重要考量
 
@@ -322,7 +322,7 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 
 若要使用UI開始撰寫結構描述，請連同[結構描述編輯器教學課程](../tutorials/create-schema-ui.md)一起建立本檔案中提及的「忠誠會員」結構描述。
 
-若要開始使用[!DNL Schema Registry] API，請先閱讀[Schema Registry API開發人員指南](../api/getting-started.md)。 閱讀開發人員指南後，請依照教學課程中概述的步驟，使用Schema Registry API建立結構描述[&#128279;](../tutorials/create-schema-api.md)。
+若要開始使用[!DNL Schema Registry] API，請先閱讀[Schema Registry API開發人員指南](../api/getting-started.md)。 閱讀開發人員指南後，請依照教學課程中概述的步驟，使用Schema Registry API建立結構描述[](../tutorials/create-schema-api.md)。
 
 ## 附錄
 
