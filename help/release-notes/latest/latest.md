@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 5 月)
 description: Adobe Experience Platform 2025 年 5 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ad9ec9c3177c25e2207b67b4c939c3f6fa97883f
+source-git-commit: 3f143c34d31483e91e176b1c69d82db38a8bc6b5
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 51%
+source-wordcount: '1333'
+ht-degree: 45%
 
 ---
 
@@ -68,6 +68,7 @@ Adobe Experience Platform 現有功能和文件的更新：
 
 | 功能 | 說明 |
 | --- | --- |
+| [Facebook自訂對象](../../destinations/catalog/social/facebook.md)升級並支援與位址相關的識別碼 | 從2025年5月23日開始並持續整個2025年6月，您可能會在目的地目錄中暫時看到兩個&#x200B;**[!DNL Facebook Custom Audience]**&#x200B;目的地卡片，持續時間長達數小時。 這是因為內部升級至目的地服務，並支援新欄位，以改進目標定位並與Facebook屬性上的設定檔進行比對。 如需新位址相關欄位的詳細資訊，請參閱[支援的身分](#supported-identities)區段。 <br><br>如果您看到標示為&#x200B;**[!UICONTROL （新） Facebook自訂對象]**&#x200B;的卡片，請將此卡片用於新的啟用資料流程。 您的現有資料流將會自動更新，因此您不需要採取任何動作。 在此期間您對現有資料流所做的任何變更，都將在升級後保留。 升級完成後，**[!UICONTROL （新） Facebook自訂對象]**&#x200B;目的地卡片將重新命名為&#x200B;**[!DNL Facebook Custom Audience]**。 <br><br>如果您使用[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值： <ul><li>流程規格 ID：`bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>連線規格 ID：`c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
 | [Google客戶符合](../../destinations/catalog/advertising/google-customer-match.md)的其他識別碼支援 | Google客戶比對目的地現在支援對應位址相關欄位，以改善Google平台中的比對率。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 |
 | [Facebook](../../destinations/catalog/social/facebook.md)連線的帳戶到期資料行 | 您現在可以在[瀏覽](../../destinations/ui/destinations-workspace.md#browse)和[帳戶](../../destinations/ui/destinations-workspace.md#accounts)索引標籤中看到Facebook帳戶權杖到期日。 |
 | 匯出API建立的資料集 | 您現在可以匯出API建立的資料集。 先前只有在UI中建立的資料集才可供匯出的限制已解除。 深入瞭解[匯出資料集](../../destinations/ui/export-datasets.md)。 |
