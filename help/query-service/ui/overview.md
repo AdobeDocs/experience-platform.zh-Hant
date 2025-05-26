@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢服務UI指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
+source-git-commit: 0553b8bc62d54c3ab98c60b16840ce730d9ed5c0
 workflow-type: tm+mt
 source-wordcount: '2467'
 ht-degree: 1%
@@ -143,7 +143,7 @@ Query Editor支援引數化查詢，可讓您將變數插入到SQL陳述式中�
 | **[!UICONTROL 上次執行時間戳記]** | 執行查詢時的最新時間戳記。 此欄著重顯示查詢是否已根據其目前排程執行。 |
 | **[!UICONTROL 上次執行狀態]** | 最近查詢執行的狀態。 三個狀態值為： `successful` `failed`或`in progress`。 |
 
-請參閱檔案，以取得如何透過Query Service UI[&#128279;](./monitor-queries.md)監視查詢的詳細資訊。
+請參閱檔案，以取得如何透過Query Service UI](./monitor-queries.md)監視[查詢的詳細資訊。
 
 ## 範本 {#browse}
 
@@ -176,7 +176,7 @@ Query Editor支援引數化查詢，可讓您將變數插入到SQL陳述式中�
 | **[!UICONTROL 使用者端]** | 用於查詢的使用者端。 |
 | **[!UICONTROL 建立者：]** | 建立查詢的人員的名稱。 |
 
->
+>[!NOTE]
 >
 >選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))從查詢記錄檔的任一列瀏覽至查詢編輯器。 已預先填入查詢，以方便編輯。
 
