@@ -222,7 +222,7 @@ ht-degree: 5%
 
 ![顯示[設定資料保留]對話方塊及[體驗事件]分佈圖。](../images/datasets/user-guide/visual-forecast.png)
 
-若您對組態感到滿意，請選取[儲存]，確認您的設定。****
+若您對組態感到滿意，請選取[儲存]，確認您的設定。**&#x200B;**
 
 >[!IMPORTANT]
 >
@@ -232,7 +232,7 @@ ht-degree: 5%
 
 若要探索保留原則如何套用至不同的服務，請參閱個人檔案中[體驗事件資料集保留的專用指南](../../profile/event-expirations.md)以及資料湖中[體驗事件資料集保留的專用指南](./experience-event-dataset-retention-ttl-guide.md)。 此可見度可支援治理、法規遵循及有效率的資料生命週期管理。
 
-若要瞭解如何使用監視儀表板在Experience Platform UI中追蹤來源資料流，請參閱UI](../../dataflows/ui/monitor-sources.md)檔案中的[監視來源資料流。
+若要瞭解如何使用監視儀表板在Experience Platform UI中追蹤來源資料流，請參閱UI[&#128279;](../../dataflows/ui/monitor-sources.md)檔案中的監視來源資料流。
 
 <!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
 
@@ -325,7 +325,7 @@ ht-degree: 5%
 
 若要根據資料集是否已為設定檔啟用來篩選資料集，請從篩選選項中選取[!UICONTROL 是]核取方塊。
 
-![包含在設定檔]區段中的[!UICONTROL 資料集工作區的篩選選項已反白顯示。](../images/datasets/user-guide/included-in-profile.png)
+[包含在設定檔]區段中的![[!UICONTROL 資料集工作區的篩選選項已反白顯示。]](../images/datasets/user-guide/included-in-profile.png)
 
 ### 依標籤篩選資料集 {#filter-by-tag}
 
