@@ -1,10 +1,10 @@
 ---
 keywords: 事件轉送擴充功能；twitter；twitter事件轉送擴充功能
-title: twitter事件轉送擴充功能
-description: 此Adobe Experience Platform事件轉送擴充功能可讓您將事件擷取至Twitter中，以滿足您的業務需求。
+title: Twitter事件轉送擴充功能
+description: 此Adobe Experience Platform事件轉送擴充功能可讓您將事件擷取至Twitter，以滿足您的業務需求。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 3%
@@ -15,13 +15,13 @@ ht-degree: 3%
 
 [[!DNL Twitter]](https://twitter.com/i/flow/login)是線上社群媒體和社交網路服務，使用者可在該服務上張貼及互動280個字元的訊息（稱為推文）。 使用者可以使用瀏覽器、行動前端軟體，或透過其[API](https://developer.twitter.com/en/docs/twitter-api)以程式設計方式與Twitter互動
 
-[!DNL Twitter] Web Conversions API [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能可讓您運用Adobe Experience PlatformEdge Network中擷取的資料，並將其傳送給[!DNL Twitter]。 本檔案說明擴充功能的使用案例、安裝方式，以及如何將其功能整合至您的事件轉送[規則](../../../ui/managing-resources/rules.md)。
+[!DNL Twitter] Web Conversions API [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能可讓您運用Adobe Experience Platform Edge Network中擷取的資料，並將其傳送至[!DNL Twitter]。 本檔案說明擴充功能的使用案例、安裝方式，以及如何將其功能整合至您的事件轉送[規則](../../../ui/managing-resources/rules.md)。
 
 [!DNL Twitter]需要[OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a)才能使用[!DNL Twitter] [!DNL Web Conversions] API進行驗證。
 
 ## 使用案例
 
-如果您想要使用[!DNL Twitter]中Edge Network的資料，以利用其客戶分析和目標定位功能，應使用此擴充功能。
+如果您想要在[!DNL Twitter]中使用Edge Network的資料，以利用其客戶分析和目標定位功能，應使用此擴充功能。
 
 例如，以組織中的行銷團隊為例。 團隊從他們的網站擷取使用者互動事件資料，做為他們網站的事件資料，並使用這個事件轉送擴充功能將其載入到[!DNL Twitter]中。
 
@@ -41,15 +41,15 @@ ht-degree: 3%
 
 ### 收集必要的設定詳細資料 {#configuration-details}
 
-若要將Experience Platform連線到[!DNL Twitter]，需要下列輸入：
+若要將Experience Platform連線至[!DNL Twitter]，需要下列輸入：
 
 | 金鑰型別 | 說明 |
 | --- | --- |
-| 使用者金鑰 | 用&#x200B;於存取[!DNL Twitter] API的應用程式API金鑰。 如需指引，請參閱[API金鑰和秘密](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)上的[!DNL Twitter]檔案。 | |
+| 使用者金鑰 | 用&#x200B;於存取[!DNL Twitter] API的應用程式API金鑰。 如需指引，請參閱[API金鑰和秘密](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)上的[!DNL Twitter]檔案。 |
 | 使用者密碼 | API密碼可讓您的應用程式存取[!DNL Twitter] API。 如需指引，請參閱[API金鑰和秘密](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret)上的[!DNL Twitter]檔案。 |
 | 權杖密碼 | 您應用程式的不到期權杖密碼，用於透過OAuth驗證[!DNL Twitter] API。 如需指引，請參閱有關[取得使用存取權杖](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)的[!DNL Twitter]檔案。 |
 | 存取權杖 | 您應用程式不會到期的存取權杖，用於透過OAuth驗證[!DNL Twitter] API。 如需指引，請參閱有關[取得使用存取權杖](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)的[!DNL Twitter]檔案。 |
-| 畫素ID | [!DNL Twitter] Pixel是在您的網站上實作的網站標籤，用來追蹤網站動作或轉換。 如需指引，請參閱有關網站[&#128279;](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)的轉換追蹤的[!DNL Twitter]檔案。 |
+| 畫素ID | [!DNL Twitter] Pixel是在您的網站上實作的網站標籤，用來追蹤網站動作或轉換。 如需指引，請參閱有關網站](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)的[轉換追蹤的[!DNL Twitter]檔案。 |
 
 ## 安裝並設定[!DNL Twitter]擴充功能 {#install}
 

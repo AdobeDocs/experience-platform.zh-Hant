@@ -2,10 +2,10 @@
 title: 在事件轉送中設定秘密
 description: 瞭解如何在UI中設定秘密，以驗證用於事件轉送屬性中的端點。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 3%
+source-wordcount: '2577'
+ht-degree: 2%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 3%
 
 | 密碼型別 | 說明 |
 | --- | --- |
+| [!UICONTROL Amazon OAuth 2] | 啟用[!DNL Amazon]服務的安全驗證。 系統安全地儲存權杖，並以指定的間隔處理其更新。 |
 | [!UICONTROL Google OAuth 2] | 包含數個屬性以支援[OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)驗證規格，以便用於[Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)和[Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)。 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
 | [!UICONTROL HTTP] | 包含使用者名稱和密碼的兩個字串屬性。 |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
@@ -44,7 +45,7 @@ ht-degree: 3%
 >id="platform_eventforwarding_secrets_environments"
 >title="密碼環境"
 >abstract="為了讓密碼可供事件轉送使用，必須將其指派給現有環境。如果您沒有為事件轉送屬性建立任何環境，則必須進行設定才能繼續。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant" text="環境概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="環境概觀"
 
 若要建立密碼，請在左側導覽中選取&#x200B;**[!UICONTROL 事件轉送]**，然後開啟您想要新增密碼的事件轉送屬性。 接著，在左側導覽中選取&#x200B;**[!UICONTROL 密碼]**，接著選取&#x200B;**[!UICONTROL 建立新密碼]**。
 
@@ -77,7 +78,8 @@ ht-degree: 3%
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
-* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[！UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[！UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -186,7 +188,7 @@ ht-degree: 3%
 
 此時會出現彈出視窗，通知您需要透過[!DNL LinkedIn]手動授權密碼。 選取&#x200B;**[!UICONTROL 使用[!DNL LinkedIn]]**&#x200B;建立並授權密碼以繼續。
 
-![[!DNL LinkedIn]授權彈出視窗醒目提示[!UICONTROL 使用[!DNL LinkedIn]]建立和授權密碼。](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![LinkedIn授權彈出視窗會醒目提示「使用LinkedIn建立並授權密碼」按鈕。](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 會出現一個對話方塊，提示您輸入您的[!DNL LinkedIn]認證。 依照提示操作，授予資料的事件轉送存取權。
 
@@ -209,6 +211,22 @@ ht-degree: 3%
 ![ [!DNL LinkedIn]密碼的[!UICONTROL 密碼]索引標籤醒目提示[!UICONTROL 需要驗證]。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 會出現一個對話方塊，提示您輸入[!DNL LinkedIn]認證。 依照提示重新授權您的密碼。
+
+### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
+
+若要建立[!DNL Amazon] OAuth 2密碼，請從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL [!DNL Amazon]OAuth 2]**。 接著，選取&#x200B;**[!UICONTROL 建立密碼]**。
+
+![反白顯示[!UICONTROL 型別]欄位的[!UICONTROL 建立密碼]索引標籤。](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+
+此時會出現彈出視窗，通知您需要透過[!DNL Amazon]手動授權密碼。 選取&#x200B;**[!UICONTROL 使用[!DNL Amazon]]**&#x200B;建立並授權密碼以繼續。
+
+![Amazon授權彈出視窗中醒目提示「使用Amazon建立並授權密碼」按鈕。](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+
+會出現一個對話方塊，提示您輸入您的[!DNL Amazon]認證。 依照提示操作，授予資料的事件轉送存取權。
+
+授權程式完成後，您將返回&#x200B;**[!UICONTROL 密碼]**&#x200B;標籤，您可以在其中檢視新建立的密碼。 您可以在此處檢視密碼的狀態和到期日。
+
+![醒目提示新建立密碼的[!UICONTROL 密碼]標籤。](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## 編輯密碼
 
