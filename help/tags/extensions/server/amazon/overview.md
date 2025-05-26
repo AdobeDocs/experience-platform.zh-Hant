@@ -32,7 +32,7 @@ ht-degree: 2%
 | --- | --- |
 | 帳戶 ID | [!DNL Amazon]帳戶的唯一帳戶識別碼。 |
 | 實體ID | 與廣告商帳戶相關聯之設定檔的識別碼。 這可以在Campaign Manager入口網站URL中找到，其前置詞為`entity`。 |
-| 存取權杖 | 您應用程式不會到期的存取權杖，用於透過OAuth驗證[!DNL Amazon] API。 如需指引，請參閱有關驗證](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html)的[Amazon API檔案。 |
+| 存取權杖 | 您應用程式不會到期的存取權杖，用於透過OAuth驗證[!DNL Amazon] API。 如需指引，請參閱有關驗證[&#128279;](https://developer.amazon.com/docs/app-porting/device-messaging-fit-obtain-api-key.html)的Amazon API檔案。 |
 
 ## 安裝並設定[!DNL Amazon]擴充功能 {#install-configure}
 
