@@ -2,10 +2,10 @@
 title: Cloud Connector擴充功能概述
 description: 瞭解Adobe Experience Platform中的Cloud Connector事件轉送擴充功能。
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 83%
+source-wordcount: '1715'
+ht-degree: 68%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 雲端聯結器事件轉送擴充功能可讓您建立自訂HTTP請求，以將資料傳送至目的地或從目的地擷取資料。 Cloud Connector 擴充功能就像 Adobe Experience Platform Edge Network 的郵差一樣，可將資料傳送至尚未具備專屬擴充功能的端點。
 
@@ -125,3 +125,41 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
+
+## 在事件轉送規則中使用相互傳輸層安全性[!DNL mTLS] {#mtls-rules}
+
+[!DNL mTLS]憑證是數位認證，可證明安全通訊中的伺服器或使用者端身分。 當您使用[!DNL mTLS]服務API時，這些憑證可協助您驗證並加密Adobe Experience Platform事件轉送的互動。 此過程不僅可保護您的資料，還可確保每個連線都來自信任的合作夥伴。
+
+### 安裝Adobe Cloud Connector擴充功能 {#install}
+
+若要安裝擴充功能，[請建立事件轉送屬性](../../../ui/event-forwarding/overview.md#properties)，或選取要編輯的現有屬性。
+
+在左側面板中選取&#x200B;**[!UICONTROL 擴充功能]**。 在&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤中，選取&#x200B;**[!UICONTROL Adobe Cloud Connector]** Real-Time Conversions API卡片，然後選取&#x200B;**[!UICONTROL 安裝]**。
+
+![顯示[!DNL Adobe Cloud Connector]擴充卡醒目提示安裝的擴充功能目錄。](../../../images/extensions/server/cloud-connector/install-extension.png)
+
+### 設定事件轉送規則 {#rule}
+
+>[!NOTE]
+>
+>若要設定使用[!DNL mTLS]的規則，您必須有Adobe Cloud Connector 1.2.4版或更新版本。
+
+安裝擴充功能後，您可以建立使用[!DNL mTLS]的事件轉送規則，並將其新增至程式庫。
+
+在您的事件轉送屬性中建立新的事件轉送[規則](../../../ui/managing-resources/rules.md)。 提供規則的名稱，然後在&#x200B;**[!UICONTROL 動作]**&#x200B;下新增動作，並將擴充功能設為&#x200B;**[!UICONTROL Adobe Cloud Connector]**。 接著，選取&#x200B;**[!UICONTROL 動作型別]**&#x200B;的&#x200B;**[!UICONTROL 擷取呼叫]**。
+
+![「事件轉送屬性規則」檢視中，醒目顯示新增事件轉送規則動作設定所需的欄位。](../../../images/extensions/server/cloud-connector/event-action.png)
+
+進行選取後，會出現其他控制項，以設定[!DNL mTLS]請求的方法和目的地。 若要在環境中啟用使用中憑證，請選取&#x200B;**[!UICONTROL 在[!DNL mTLS]]**&#x200B;中啟用，然後選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以儲存規則。
+
+![事件轉送屬性規則檢視，包含其他控制欄位並醒目提示變更。](../../../images/extensions/server/cloud-connector/save-rule.png)
+
+您的新規則現已準備就緒。 選取&#x200B;**[!UICONTROL 儲存至程式庫]**，然後選取&#x200B;**[!UICONTROL 組建]**&#x200B;以進行部署。 [!DNL mTLS]要求現在已啟用，並可在您的程式庫中使用。
+
+![事件轉送規則，其中的save to library and build已反白顯示。](../../../images/extensions/server/cloud-connector/save-build.png)
+
+## 後續步驟
+
+本指南說明如何在事件轉送中設定mTLS規則。 如需為環境設定mTLS的詳細資訊，請參閱[相互傳輸層安全性 [!DNL mTLS] 指南](../cloud-connector/mtls.md)。
+
+如需Experience Platform中事件轉送功能的詳細資訊，請參閱[事件轉送概觀](../../../ui/event-forwarding/overview.md)。
