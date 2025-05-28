@@ -1,14 +1,15 @@
 ---
 title: 相互傳輸層安全性(mTLS)概觀
 description: 瞭解如何使用mTLS安全地擷取Adobe為事件轉送所發行的公開憑證。
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
+source-git-commit: ab16cc3f70ec54460c7c4834e665c828d75d4d9e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 1%
+source-wordcount: '638'
+ht-degree: 2%
 
 ---
 
-# 相互傳輸層安全性[!DNL mTLS]概述
+# 相互傳輸層安全性([!DNL mTLS])總覽
 
 繫結[!UICONTROL 環境UI]中的相互傳輸層安全性([!DNL mTLS])憑證，以取得您擴充功能的安全性。 [!DNL mTLS]憑證是數位認證，可證明安全通訊中的伺服器或使用者端身分。 當您使用[!DNL mTLS]服務API時，這些憑證可協助您驗證並加密Adobe Experience Platform事件轉送的互動。 此過程不僅可保護您的資料，還可確保每個連線都來自信任的合作夥伴。
 
@@ -48,14 +49,14 @@ ht-degree: 1%
 
 將顯示以下憑證詳細資料：
 
-| 環境 | 說明 |
+| 欄位名稱 | 說明 |
 | --- | --- |
 | 憑證 | 憑證的詳細資訊，包括：<ul><li>**名稱**：憑證的名稱。</li><li>**建立日期**：憑證建立的日期。</li><li>**狀態**：憑證的目前狀態：<ul><li>**目前**：憑證正在使用中。</li><li>**已過時**：憑證不在使用中，但尚未過期。 您仍可選取它來使用。</li><li>**已過期**：憑證已過期、變成灰色，且不再可供使用。</li></ul></ul> |
 | 過期 | 憑證到期的日期。 |
 | Variable Name | 憑證的變數名稱。 |
 | 狀態 | 憑證的目前狀態：<ul><li>**已解壓縮**：憑證已成功部署且作用中。</li><li>**正在部署**：正在部署憑證。</li><li>**需要部署**：當選取過時的憑證時，會出現此狀態。</li></ul> |
 
-![編輯開發環境頁面，醒目提示[!UICONTROL 憑證]詳細資料。](../../../images/extensions/server/cloud-connector/create-environment.png)
+![編輯開發環境頁面，醒目提示[!UICONTROL 憑證]詳細資料。](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### 選取並部署過時的憑證 {#deploy-obsolete-certificate}
 
