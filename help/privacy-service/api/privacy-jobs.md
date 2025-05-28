@@ -5,14 +5,20 @@ title: 隱私權工作API端點
 description: 瞭解如何使用Privacy Service API管理Experience Cloud應用程式的隱私權工作。
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
+source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1861'
 ht-degree: 1%
 
 ---
 
 # 隱私權工作端點
+
+>[!IMPORTANT]
+>
+>為了支援不斷增加的美國州隱私權法，Privacy Service正在變更其`regulation_type`值。 使用包含從&#x200B;**2025年6月12日**&#x200B;開始之狀態縮寫（例如`ucpa_ut_usa`）的新值。 較舊的值（例如，`ucpa_usa`）在&#x200B;**2025年7月28日**&#x200B;之後停止運作。
+>
+>在此期限之前更新您的整合，以避免請求失敗。
 
 本文介紹如何使用API呼叫處理隱私權工作。 具體來說，它涵蓋[!DNL Privacy Service] API中`/job`端點的使用。 閱讀本指南之前，請參閱[快速入門手冊](./getting-started.md)以取得成功呼叫API所需瞭解的重要資訊，包括必要的標頭以及如何讀取範例API呼叫。
 
@@ -22,7 +28,7 @@ ht-degree: 1%
 
 ## 列出所有工作 {#list}
 
-您可以透過向`/jobs`端點發出GET要求，檢視組織內所有可用隱私權工作的清單。
+您可以透過向`/jobs`端點發出GET請求，檢視組織內所有可用隱私權工作的清單。
 
 **API格式**
 
@@ -42,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | 參數 | 說明 |
 | --- | --- |
-| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>如需上述值所代表隱私權法規的詳細資訊，請參閱[支援法規](../regulations/overview.md)的概觀。 |
+| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>如需上述值所代表隱私權法規的詳細資訊，請參閱[支援法規](../regulations/overview.md)的概觀。 |
 | `{PAGE}` | 要顯示的資料頁（使用0編號）。 預設值為 `0`。 |
 | `{SIZE}` | 每個頁面上顯示的結果數。 預設值為`100`，最大值為`1000`。 超過最大值會導致API傳回400程式碼錯誤。 |
 | `{status}` | 預設行為是包含所有狀態。 如果您指定狀態型別，請求只會傳回符合該狀態型別的隱私權工作。 接受的值包括： <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -76,15 +82,15 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->Privacy Service僅適用於資料主體和消費者權利要求。 不支援或允許將Privacy Service用於資料清理或維護的任何其他用途。 Adobe有法定義務須及時履行。 因此，不允許在Privacy Service上進行負載測試，因為這是僅限生產的環境，且會為有效隱私權請求建立不必要的待處理專案。
+>Privacy Service僅適用於資料主體和消費者權利要求。 不支援或允許將Privacy Service用於資料清理或維護的任何其他用途。 Adobe有法定義務須及時履行。 因此，不允許在Privacy Service上進行載入測試，因為這是僅限生產的環境，且會為有效隱私權請求建立不必要的待處理專案。
 >
->現已設定每日硬性上傳限制，以協助防止濫用服務。 發現濫用系統的使用者將會停用其服務的存取權。 隨後將與他們舉行會議，討論他們的動作，並討論可接受的Privacy Service用途。
+>現已設定每日硬性上傳限制，以協助防止濫用服務。 發現濫用系統的使用者將會停用其服務的存取權。 隨後將與他們舉行會議，討論他們的動作，並討論Privacy Service的可接受用途。
 
 建立新工作請求之前，您必須先收集有關您要存取、刪除或選擇退出銷售的資料主體的識別資訊。 擁有必要的資料後，必須在POST要求的裝載中提供該資料給`/jobs`端點。
 
 >[!NOTE]
 >
->相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 請參閱[Privacy Service和Experience Cloud應用程式](../experience-cloud-apps.md)的指南，以取得應用程式所需識別碼的詳細資訊。 如需決定要將哪些ID傳送至[!DNL Privacy Service]的更一般指引，請參閱隱私權要求[&#128279;](../identity-data.md)中身分資料的檔案。
+>相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 請參閱[Privacy Service和Experience Cloud應用程式](../experience-cloud-apps.md)的指南，以取得應用程式所需識別碼的詳細資訊。 如需決定要將哪些ID傳送至[!DNL Privacy Service]的更一般指引，請參閱隱私權要求](../identity-data.md)中[身分資料的檔案。
 
 [!DNL Privacy Service] API支援兩種針對個人資料的工作請求：
 
@@ -234,7 +240,7 @@ curl -X POST \
 
 ## 檢查工作的狀態 {#check-status}
 
-您可以在`/jobs`端點的GET要求路徑中包含特定工作的`jobId`，以擷取其相關資訊，例如其目前處理狀態。
+您可以在GET要求到`/jobs`端點的路徑中包含特定工作的`jobId`，以擷取其相關資訊，例如其目前處理狀態。
 
 >[!IMPORTANT]
 >
@@ -369,4 +375,4 @@ curl -X GET \
 
 ## 後續步驟
 
-您現在知道如何使用[!DNL Privacy Service] API建立及監控隱私權工作。 如需有關如何使用使用者介面執行相同工作的資訊，請參閱[Privacy ServiceUI概觀](../ui/overview.md)。
+您現在知道如何使用[!DNL Privacy Service] API建立及監控隱私權工作。 如需有關如何使用使用者介面執行相同工作的資訊，請參閱[Privacy Service UI總覽](../ui/overview.md)。
