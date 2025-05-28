@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
 workflow-type: tm+mt
-source-wordcount: '2652'
+source-wordcount: '2677'
 ht-degree: 24%
 
 ---
@@ -12,6 +12,13 @@ ht-degree: 24%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/web-sdk/release-notes.md)。
+
+
+## 2.30.1版 — 2025年5月27日
+
+**修正和改良**
+
+- 修正組織未設定預設沙箱時，更新變數檢視當機的問題。
 
 ## 2.30.0版 — 2025年5月21日
 
