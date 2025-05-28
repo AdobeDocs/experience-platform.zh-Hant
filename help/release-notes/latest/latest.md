@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明 (2025 年 5 月)
 description: Adobe Experience Platform 2025 年 5 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1530'
 ht-degree: 44%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 44%
 
 Adobe Experience Platform 現有功能和文件的更新：
 
+- [AI 助理](#ai-assistant)
 - [目錄服務](#catalog-service)
 - [資料準備](#data-prep)
 - [目標](#destinations)
@@ -33,6 +34,18 @@ Adobe Experience Platform 現有功能和文件的更新：
 - [沙箱](#sandboxes)
 - [細分服務](#segmentation-service)
 - [來源](#sources)
+
+## AI 助理 {#ai-assistant}
+
+Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加速 Adobe 應用程式中的工作流程。您可以使用 AI 助理增進產品知識、疑難排解問題，或搜尋資訊和尋找營運深入分析。AI 助理支援 Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer 和 Customer Journey Analytics。
+
+**更新的功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 產品支援代理程式正式發行 | 您現在可以使用AI Assistant中的產品支援代理程式，順暢地進行疑難排解，而不需要離開您的工作流程。 您組織中的支援管理員現在可以使用產品支援代理程式建立客戶支援票證，以及您與AI助理互動時的內容和工作階段詳細資訊。 <br><br>產品支援代理程式的存取權到2025年11月30日為止。 您必須聯絡Adobe客戶代表以授權產品支援代理，並在此日期之後繼續使用功能。 如需詳細資訊，請閱讀[產品支援代理程式檔案](../../ai-assistant/new-features/customer-support.md)。 |
+
+如需詳細資訊，請閱讀 [AI 助理概觀](../../ai-assistant/landing.md)。
 
 ## 目錄服務 {#catalog-service}
 
