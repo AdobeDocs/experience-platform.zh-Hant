@@ -2,9 +2,9 @@
 title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
+source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '665'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules]現已正式可用。 如果您有現有的沙箱，在啟用身分設定後，需要取消收合的圖形（「已修正」），請聯絡Adobe支援。
+>[!DNL Identity Graph Linking Rules]現已正式可用。 如果您有現有的沙箱，在啟用身分設定後，需要取消收合的圖形（「已修正」），請聯絡您的Adobe帳戶團隊或Adobe支援。
 
 身分設定是Adobe Experience Platform Identity Service UI中的功能，可用來指定唯一的名稱空間及設定名稱空間優先順序。
 
@@ -82,6 +82,8 @@ ht-degree: 2%
 >* 最後一個步驟是另一個確認訊息，指出只有在儲存您的設定&#x200B;**後更新圖形時，現有圖形才會受到圖形演演算法**&#x200B;的影響，而且即使名稱空間優先順序變更後，即時客戶設定檔上的事件片段主要身分也不會更新。
 >
 >* 您的新設定或更新設定最多需要&#x200B;**24小時**&#x200B;才能生效。 若要確認，請輸入您的沙箱名稱，然後選取&#x200B;**[!UICONTROL 確認]**。
+>
+>* 在您儲存身分設定之前，您的資料不會有任何變更。
 
 ![確認視窗會顯示有關處理設定前延遲6小時的警告。](../images/rules/complete.png)
 
