@@ -171,5 +171,5 @@ Experience Platform中的![Algolia設定檔欄位群組設定](../../../images/e
 
 - [[!DNL Algolia] 深入分析API檔案](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] 事件檔案](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] 事件轉送檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
+- [[!DNL Adobe Experience Platform] 事件轉送檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=zh-Hant)
 - [[!DNL Algolia] AI功能總覽](https://www.algolia.com/products/ai-search/)
