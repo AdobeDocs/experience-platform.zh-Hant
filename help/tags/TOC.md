@@ -200,7 +200,7 @@ ht-degree: 36%
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [工作階段攝影機](https://exchange.adobe.com/apps/ec/100517)
       * [儲存扳手](https://exchange.adobe.com/apps/ec/102990)
-      * 依回圈水平線的[標籤](https://exchange.adobe.com/apps/ec/106092)
+      * [依回圈水平線的標籤](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium集合](https://exchange.adobe.com/apps/ec/104217)
       * [Tealium資料擴充](https://exchange.adobe.com/apps/ec/104217)
       * [TMMData Foundation平台](https://exchange.adobe.com/apps/ec/100148)
@@ -229,7 +229,7 @@ ht-degree: 36%
          * [概觀](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [概觀](./extensions/server/braze/overview.md)
-      * 適用於Google Analytics的[雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
+      * [適用於Google Analytics的雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
       * 核心 {#core}
          * [概觀](./extensions/server/core/overview.md)
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
