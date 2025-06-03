@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 2%
@@ -95,7 +95,7 @@ curl -X GET \
 **API格式**
 
 ```http
-GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh
 ```
 
 **要求**
@@ -105,7 +105,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 +++檢視請求範例
 
 ```shell
-curl -X GET \
+curl -X POST \
   'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_databricks_source&action=refresh' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -163,4 +163,4 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ## 使用API連線[!DNL Databricks]至Experience Platform
 
-現在您已完成先決條件步驟，接下來可以使用API [&#128279;](../../tutorials/api/create/databases/databricks.md)將您的 [!DNL Databricks] 帳戶連線至Experience Platform ，繼續參閱指南。
+現在您已完成先決條件步驟，接下來可以使用API ](../../tutorials/api/create/databases/databricks.md)將您的 [!DNL Databricks] 帳戶連線至Experience Platform [，繼續參閱指南。
