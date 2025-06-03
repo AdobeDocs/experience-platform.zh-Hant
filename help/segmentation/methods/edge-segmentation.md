@@ -2,9 +2,9 @@
 title: Edge分段指南
 description: 瞭解如何使用邊緣細分即時評估Experience Platform中的對象，啟用相同頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1116'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,6 @@ Edge區段能在Adobe Experience Platform中即時評估[邊緣](../../landing/e
 | 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 | `homeAddress.country.equals("US", false)` | ![顯示的設定檔屬性範例。](../images/methods/edge/profile-attribute.png) |
 | 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內具有設定檔屬性的單一事件範例。](../images/methods/edge/single-event-with-profile-attribute.png) |
 | 區段區段 | 包含一或多個批次或邊緣區段的任何區段定義。 **注意：**&#x200B;如果使用區段區段，則設定檔取消資格將&#x200B;**每24小時發生一次**。 | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![將顯示區段範例。](../images/methods/edge/segment-of-segments.png) |
-| 具有設定檔屬性的多個事件 | 任何在過去24小時&#x200B;**內參考多個事件**&#x200B;且（選擇性）具有一或多個設定檔屬性的區段定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示具有設定檔屬性的多個事件範例。](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
 此外，區段定義&#x200B;**必須**&#x200B;繫結至邊緣上作用中的合併原則。 如需有關合併原則的詳細資訊，請參閱[合併原則指南](../../profile/api/merge-policies.md)。
 
@@ -330,5 +329,5 @@ curl -X GET \
 
 若要進一步瞭解如何使用Experience Platform使用者介面，請參閱[分段使用手冊](./overview.md)。
 
-如需邊緣劃分的相關常見問題，請參閱常見問題[&#128279;](../faq.md#edge-segmentation)的邊緣劃分割槽段。
+如需邊緣劃分的相關常見問題，請參閱常見問題](../faq.md#edge-segmentation)的[邊緣劃分割槽段。
 
