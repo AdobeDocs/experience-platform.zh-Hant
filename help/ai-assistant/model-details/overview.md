@@ -1,29 +1,29 @@
 ---
-title: Adobe Experience Platform中AI模型透明度的模型卡
-description: 瞭解Adobe Experience Platform中的模型卡。
+title: Adobe Experience Platform中AI模型透明度的模型詳細資料
+description: 瞭解Adobe Experience Platform中的模型詳細資料。
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: dddd699f231d54ee44b33f86a5c9e59c0aedc30c
+source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform中AI模型透明度的模型卡
+# Adobe Experience Platform中AI模型透明度的模型詳細資料
 
-AI模型卡是AI模型透明度傳達的標準格式。 模型卡提供關於建置指定AI工具的基礎模型的全面資訊。 模型卡片包含AI工具的目的、訓練資料、效能量度、限制和道德考量等資訊。 您可以使用模型卡提供的透明度，以更清楚瞭解模型的功能和限制，並更好地促進負責任和公平地使用AI。
+AI模型細節是AI模型透明度傳達的標準格式。 模型詳細資訊提供關於建立指定AI工具的基礎模型的全面資訊。 模型詳細資訊包括AI工具的目的、訓練資料、效能量度、限制和道德考量等資訊。 您可以使用模型詳細資料提供的透明度，以更清楚瞭解模型的功能和限制，並更好地促進負責任和公平地使用AI。
 
-模型卡是公開的，旨在改善現有和潛在客戶對Adobe使用的AI模型的瞭解。 模型卡通常是靜態的。 但是，AI模型的幾個方面會隨著時間而改變，包括譜系、偏誤和其他透明度屬性。
+模型詳細資訊是公開的，旨在改善現有和潛在客戶對Adobe使用的AI模型的瞭解。 模型詳細資訊通常是靜態的。 但是，AI模型的幾個方面會隨著時間而改變，包括譜系、偏誤和其他透明度屬性。
 
-閱讀本檔案以瞭解Adobe Experience Platform中的模型卡。
+請閱讀本檔案，瞭解Adobe Experience Platform中的模型詳細資訊。
 
-## 模型卡片區段 {#model-card-sections}
+## 模型詳細資訊區段 {#model-detail-sections}
 
-模型卡由各種不同的區段組成，每個區段都著重於AI模型的特定方面。
+模型細節由各種不同的區段組成，每個區段都專注於AI模型的特定方面。
 
-請閱讀下列內容，以取得有關型號卡片不同區段的指南，包括解決問題的資訊。
+請閱讀下列內容，以取得有關模型詳細資訊不同區段的指南，包括解決問題所需的資訊。
 
 ### 模型概覽 {#model-overview}
 
