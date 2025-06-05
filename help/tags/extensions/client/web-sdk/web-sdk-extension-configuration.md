@@ -42,7 +42,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 >[!IMPORTANT]
 >
 >停用Web SDK元件可能會破壞您現有的實作。 每次停用元件時，請務必徹底測試實作，以確保所需的所有功能皆如預期般運作。
->>停用元件時，無法再編輯該元件的設定。
+>&#x200B;>停用元件時，無法再編輯該元件的設定。
 
 若要使用Web SDK標籤擴充功能建立自訂Web SDK組建，請遵循下列步驟。
 
@@ -117,9 +117,10 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 * **[!UICONTROL 使用第三方Cookie]**：啟用此選項時，Web SDK會嘗試將使用者識別碼儲存在第三方Cookie中。 如果成功，則會在使用者瀏覽多個網域時將其識別為單一使用者，而不是在每個網域上將其識別為個別使用者。 如果已啟用此選項，如果瀏覽器不支援第三方Cookie或使用者已設定不允許第三方Cookie，則SDK可能仍無法將使用者識別碼儲存在第三方Cookie中。 在此情況下，SDK只會將識別碼儲存在第一方網域中。
 
   >[!IMPORTANT]
-  >>第三方Cookie與Web SDK中的[第一方裝置識別碼](../../../../web-sdk/identity/first-party-device-ids.md)功能不相容。
-  >>您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
+  >&#x200B;>第三方Cookie與Web SDK中的[第一方裝置識別碼](../../../../web-sdk/identity/first-party-device-ids.md)功能不相容。
+  >&#x200B;>您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
   >
+
 ## 設定個人化設定 {#personalization}
 
 此區段可讓您設定在載入個人化內容時如何隱藏頁面的某些部分。 這可確保您的訪客只會看到個人化頁面。
@@ -140,7 +141,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 
 >[!IMPORTANT]
 >
-使用預先隱藏程式碼片段時，Adobe建議使用與[預先隱藏樣式](#prehiding-style)所用的規則相同的[!DNL CSS]規則。
+>使用預先隱藏程式碼片段時，Adobe建議使用與[預先隱藏樣式](#prehiding-style)所用的規則相同的[!DNL CSS]規則。
 
 ## 設定資料收集設定 {#data-collection}
 
@@ -161,7 +162,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 * **[!UICONTROL 收集外部連結點按次數]**：啟用外部連結收集的核取方塊。
 * **[!UICONTROL 收集下載連結點按次數]**：啟用收集下載連結的核取方塊。
 * **[!UICONTROL 下載連結限定詞]**：將連結URL限定為下載連結的規則運算式。
-* **[!UICONTROL 篩選點選屬性]**：回呼函式，可在集合前評估及修改點選相關屬性。 此函式在事件傳送callback]前的[!UICONTROL On之前執行。
+* **[!UICONTROL 篩選點選屬性]**：回呼函式，可在集合前評估及修改點選相關屬性。 此函式在事件傳送callback前的On之前執行。
 * **內容設定**：自動收集訪客資訊，這些資訊會為您填入特定XDM欄位。 您可以選擇&#x200B;**[!UICONTROL 所有預設內容資訊]**&#x200B;或&#x200B;**[!UICONTROL 特定內容資訊]**。 它等同於JavaScript資料庫中的[`context`](/help/web-sdk/commands/configure/context.md)標籤。
    * **[!UICONTROL 網頁]**：收集目前頁面的相關資訊。
    * **[!UICONTROL 裝置]**：收集使用者裝置的相關資訊。
@@ -171,7 +172,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 
 >[!TIP]
 >
-**[!UICONTROL 在連結點選前開啟]**&#x200B;欄位是已棄用的回呼，只對已設定它的屬性可見。 它等同於JavaScript資料庫中的[`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md)標籤。 使用&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼來篩選或調整點選資料，或使用&#x200B;**[!UICONTROL 在事件傳送回呼前開啟]**&#x200B;來篩選或調整傳送至Adobe的整體裝載。 如果&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼和&#x200B;**[!UICONTROL 在連結點選前開啟]**&#x200B;回呼都已設定，則只有&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼執行。
+>**[!UICONTROL 在連結點選前開啟]**&#x200B;欄位是已棄用的回呼，只對已設定它的屬性可見。 它等同於JavaScript資料庫中的[`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md)標籤。 使用&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼來篩選或調整點選資料，或使用&#x200B;**[!UICONTROL 在事件傳送回呼前開啟]**&#x200B;來篩選或調整傳送至Adobe的整體裝載。 如果&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼和&#x200B;**[!UICONTROL 在連結點選前開啟]**&#x200B;回呼都已設定，則只有&#x200B;**[!UICONTROL 篩選點選屬性]**&#x200B;回呼執行。
 
 ## 設定媒體收集設定 {#media-collection}
 
@@ -205,7 +206,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 
 >[!IMPORTANT]
 >
-資料流覆寫必須根據環境進行設定。 開發、測試和生產環境都有不同的覆寫。 您可以使用下方畫面中顯示的專用選項，複製設定值。
+>資料流覆寫必須根據環境進行設定。 開發、測試和生產環境都有不同的覆寫。 您可以使用下方畫面中顯示的專用選項，複製設定值。
 
 ![影像顯示使用網頁SDK標籤延伸功能頁面的Datastream設定覆寫。](assets/datastream-overrides.png)
 
