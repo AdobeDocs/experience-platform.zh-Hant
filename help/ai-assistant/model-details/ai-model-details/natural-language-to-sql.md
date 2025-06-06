@@ -4,9 +4,9 @@ description: 瞭解AI Assistant Natural Language to SQL AI模型。
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## 模型評估 {#model-evaluation}
 
-* **評估量度和程式**：使用正確性評估模型。 例如，在所有[!DNL NL2SQL]個要求中，有多少要求會產生正確的SQL結果。 評估程式是以規則為基礎的比對（SQL標準化，然後是直接SQL字串比對）、以LLM為基礎的SQL求解器以及人力評估的組合。
+* **評估量度和程式**：模型是透過檢視[!DNL NL2SQL]個要求並評估多少個要求產生正確的SQL結果來評估的。 評估程式是以規則為基礎的比對（SQL標準化，然後是直接SQL字串比對）、以LLM為基礎的SQL求解器以及人力評估的組合。
 * **評估資料與預先處理**：我們使用開放集進行回歸測試，而且我們也有每週的註解專案，透過抽樣的實際客戶流量來監視模型的效能。
 
 ## 模型部署 {#model-deployment}
 
 * **模型監視**：基底模型由[!DNL Azure]代管。
-* **模型更新**：模型會透過問題庫擴充每週定期更新。 模型也會視需要透過新的提示策略和指示更新。
+* **模型更新**： Adobe Experience Platform AI Assistant Operational Insights Natural Language to SQL Model會透過問題庫擴充定期（每週）更新。 模型也會視需要透過新的提示策略和指示更新。
 
 ## 公平性和偏差 {#fairness-and-bias}
 
