@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 2 月)
 description: Adobe Experience Platform 2025 年 2 月版發行說明。
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 97%
+source-wordcount: '1677'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform 現有功能和文件的更新：
 - [目錄服務](#catalog-service)
 - [資料準備](#data-prep)
 - [目標](#destinations)
-- [分段服務](#segmentation)
+- [細分服務](#segmentation)
 - [來源](#sources)
 - [文件更新](#documentation-updates)
    - [Edge Network 與中心網路的比較](#edge)
@@ -54,7 +54,7 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 | 功能 | 說明 |
 | --- | --- |
-| 新的 API 端點 | 透過新的[目錄服務 API /v2/dataSets/{DATASET_ID} 端點](../../catalog/api/update-object.md#patch-v2-notation)，更有效地管理 Adobe Experience Platform 資料集中繼資料。系統會自動建立缺少的路徑級別，藉以節省時間、減少手動步驟，並將錯誤情況降至最低，讓您能夠輕鬆地更新複雜、深度巢狀的資料集屬性。 |
+| 新的 API 端點 | 使用新的[目錄服務API /v2/dataSets/{DATASET_ID}端點](../../catalog/api/update-object.md#patch-v2-notation)，更有效地管理您的Adobe Experience Platform資料集中繼資料。 系統會自動建立缺少的路徑級別，藉以節省時間、減少手動步驟，並將錯誤情況降至最低，讓您能夠輕鬆地更新複雜、深度巢狀的資料集屬性。 |
 
 {style="table-layout:auto"}
 
@@ -76,9 +76,9 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 ## 目標 (於 2 月 20 日更新) {#destinations}
 
-[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
-**新目標或更新的目標** {#new-updated-destinations}
+**全新或已更新的目標** {#new-updated-destinations}
 
 | 目標 | 說明 |
 | --- | --- |
@@ -90,7 +90,7 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 {style="table-layout:auto"}
 
-**新功能或更新的功能** {#destinations-new-updated-functionality}
+**全新或更新版功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | --- | --- |
@@ -109,21 +109,21 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 如需更多資訊，請閱讀[目標概觀](../../destinations/home.md)。
 
-## 分段服務 {#segmentation-service}
+## 細分服務 {#segmentation-service}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，進而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 持續性分割 | 對象構成現在支援持續分割。 您可以透過將身分名稱空間新增到分割區塊，讓分割對象在依設定檔分割時保持穩定。 如需有關此功能的詳細資訊，請參閱[對象組合檔案](../../segmentation/ui/audience-composition.md)。 |
+| 持續分割 | 客群構成現在支援持續分割。在您的分割區塊中加入身分識別命名空間，則在依照輪廓分割時，分割客群可以保持不變。如需有關這個功能的詳細資訊，請參閱[客群構成文件](../../segmentation/ui/audience-composition.md)。 |
 
-如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[細分概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
+Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證，並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間，並管理資料攝取輸送量。
 
 使用 Experience Platform 中的來源，即可從 Adobe 應用程式或第三方資料來源攝取資料。
 
@@ -132,6 +132,7 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 | 功能 | 說明 |
 | --- | --- |
 | 支援 [!DNL Microsoft Dynamics] 視圖 | 您現在可以在使用 [!DNL Microsoft Dynamics] 來源時攝取 `"entityType": "view"`。如需詳細資訊，請閱讀[將 [!DNL Microsoft Dynamics] 來源連線至 Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md) 的指南。 |
+| 加入允許清單的新IP位址 | 您必須將下列IP位址新增至允許清單，才能成功使用Experience Platform來源。<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> <br></br>如需詳細資訊，請閱讀[來源IP位址允許清單指南](../../sources/ip-address-allow-list.md)。 |
 
 {style="table-layout:auto"}
 
