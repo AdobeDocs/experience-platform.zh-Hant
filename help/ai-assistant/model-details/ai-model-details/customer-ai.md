@@ -4,7 +4,7 @@ description: 瞭解用於Customer AI的AI模型。
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 8230c71c9b7896dfb71506632754d48583d0dc21
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 * **訓練資料與預先處理**：每個客戶的訓練資料集都是直接從他們在Adobe Experience Platform中的資料取得。 這包括收集並儲存在Adobe Experience Platform執行個體中的客戶歷史互動、異動記錄、行為參與記錄及人口統計資訊。 資料集會利用客戶特定資料，涵蓋他們選擇的時間範圍，擷取他們獨特的季節性趨勢和參與模式。 使用前，每個客戶的資料集都會根據資料特性進行預先處理，包括遺漏值處理、分類編碼、功能縮放、極端值偵測和功能工程，以確保特定使用案例的最佳品質和可用性。
    * 用於培訓的消費者資料不會跨客戶使用。
 * **訓練規格**：模型使用[!DNL GBM] （已針對結構化資料最佳化）來運用[!DNL LightGBM]。 它接受有關歷史客戶事件序列的培訓，以識別預測性行為模式。
-* **訓練架構**：模型是使用[!DNL LightGBM]和[!DNL scikit-learn]開發，並接受過Adobe AI雲端基礎結構訓練。
+* **訓練架構**：模型是使用[!DNL LightGBM]和[!DNL scikit-learn]開發，並託管在Adobe AI雲端基礎結構上。
 * **訓練基礎結構**： [!DNL Databricks]叢集。
 
 ## 模型評估 {#model-evaluation}
