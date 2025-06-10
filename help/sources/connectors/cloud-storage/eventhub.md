@@ -32,7 +32,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 ### 增加[!DNL Event Hubs]和Experience Platform上的平行程度
 
-平行度是指在多個處理單元上同時執行相同工作，以提高速度和效能。 您可以透過增加分割或為您的[!DNL Event Hubs]帳戶取得更多處理單位來增加[!DNL Event Hubs]端的平行程度。 如需詳細資訊，請參閱有關縮放](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability)的[[!DNL Event Hubs] 檔案。
+平行度是指在多個處理單元上同時執行相同工作，以提高速度和效能。 您可以透過增加分割或為您的[!DNL Event Hubs]帳戶取得更多處理單位來增加[!DNL Event Hubs]端的平行程度。 如需詳細資訊，請參閱有關縮放[&#128279;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability)的[!DNL Event Hubs] 檔案。
 
 若要提高Experience Platform端的擷取速度，Experience Platform必須增加來源聯結器中要從[!DNL Event Hubs]分割區讀取的工作數量。 增加[!DNL Event Hubs]端的平行程度後，請聯絡您的Adobe代表，以根據新分割來縮放Experience Platform工作。 目前，此程式尚未自動化。
 
