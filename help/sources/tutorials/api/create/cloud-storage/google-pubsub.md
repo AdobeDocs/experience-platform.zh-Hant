@@ -3,9 +3,9 @@ title: 使用流量服務API建立Google PubSub Source連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Google PubSub帳戶。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1181'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->指派給[!DNL PubSub]專案的主體（角色）會繼承[!DNL PubSub]專案內建立的所有主題和訂閱。 如果您希望主參與者（角色）能夠存取特定主題，則也必須將該主參與者（角色）新增到主題的對應訂閱中。 如需詳細資訊，請閱讀有關存取控制[&#128279;](<https://cloud.google.com/pubsub/docs/access-control>)的[!DNL PubSub] 檔案。
+>指派給[!DNL PubSub]專案的主體（角色）會繼承[!DNL PubSub]專案內建立的所有主題和訂閱。 如果您希望主參與者（角色）能夠存取特定主題，則也必須將該主參與者（角色）新增到主題的對應訂閱中。 如需詳細資訊，請閱讀有關存取控制](<https://cloud.google.com/pubsub/docs/access-control>)的[[!DNL PubSub] 檔案。
 
 **API格式**
 
@@ -257,6 +257,10 @@ curl -X POST \
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+>[!NOTE]
+>
+>在您建立或更新串流資料流後，需要短暫暫停資料擷取5分鐘，以防止任何可能的資料遺失或資料中斷情況。
 
 ## 後續步驟
 

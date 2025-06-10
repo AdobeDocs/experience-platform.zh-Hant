@@ -3,9 +3,9 @@ title: Azure事件中樞Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Azure事件中樞連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 ### 增加[!DNL Event Hubs]和Experience Platform上的平行程度
 
-平行度是指在多個處理單元上同時執行相同工作，以提高速度和效能。 您可以透過增加分割或為您的[!DNL Event Hubs]帳戶取得更多處理單位來增加[!DNL Event Hubs]端的平行程度。 如需詳細資訊，請參閱有關縮放[&#128279;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability)的[!DNL Event Hubs] 檔案。
+平行度是指在多個處理單元上同時執行相同工作，以提高速度和效能。 您可以透過增加分割或為您的[!DNL Event Hubs]帳戶取得更多處理單位來增加[!DNL Event Hubs]端的平行程度。 如需詳細資訊，請參閱有關縮放](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability)的[[!DNL Event Hubs] 檔案。
 
 若要提高Experience Platform端的擷取速度，Experience Platform必須增加來源聯結器中要從[!DNL Event Hubs]分割區讀取的工作數量。 增加[!DNL Event Hubs]端的平行程度後，請聯絡您的Adobe代表，以根據新分割來縮放Experience Platform工作。 目前，此程式尚未自動化。
 
@@ -122,6 +122,10 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 如需網路規則集的詳細資訊，請參閱下列[[!DNL Event Hubs] 檔案](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)。
 
 ## 將[!DNL Event Hubs]連線至Experience Platform
+
+>[!NOTE]
+>
+>在您建立或更新串流資料流後，需要短暫暫停資料擷取5分鐘，以防止任何可能的資料遺失或資料中斷情況。
 
 以下檔案提供如何使用API或使用者介面將[!DNL Event Hubs]連線至Experience Platform的資訊：
 

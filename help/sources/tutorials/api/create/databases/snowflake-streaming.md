@@ -3,9 +3,9 @@ title: 將您的Snowflake串流帳戶連線至Adobe Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Snowflake串流。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '880'
 ht-degree: 4%
 
 ---
@@ -212,6 +212,10 @@ curl -X POST \
 ```
 
 ## 建立資料流
+
+>[!NOTE]
+>
+>在您建立或更新串流資料流後，需要短暫暫停資料擷取5分鐘，以防止任何可能的資料遺失或資料中斷情況。
 
 若要建立資料流以將資料從導覽[!DNL Snowflake]帳戶串流到Experience Platform，您必須在提供下列值時對`/flows`端點進行POST要求：
 

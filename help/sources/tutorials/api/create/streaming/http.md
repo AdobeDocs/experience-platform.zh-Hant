@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流量服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API使用HTTP API來源為原始資料和XDM資料建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1684'
 ht-degree: 3%
 
 ---
@@ -457,6 +457,10 @@ curl -X POST \
 ```
 
 ## 建立資料流
+
+>[!NOTE]
+>
+>在您建立或更新串流資料流後，需要短暫暫停資料擷取5分鐘，以防止任何可能的資料遺失或資料中斷情況。
 
 建立來源和目標連線後，您現在可以建立資料流。 資料流負責從來源排程及收集資料。 您可以對`/flows`端點執行POST要求，以建立資料流。
 

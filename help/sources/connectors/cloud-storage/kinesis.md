@@ -3,9 +3,9 @@ title: Amazon Kinesis Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Amazon Kinesis連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -90,6 +90,10 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 如需疊代器型別的詳細資訊，請參閱下列[[!DNL Kinesis] 檔案](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax)。
 
 ## 將[!DNL Amazon Kinesis]連線至[!DNL Experience Platform]
+
+>[!NOTE]
+>
+>在您建立或更新串流資料流後，需要短暫暫停資料擷取5分鐘，以防止任何可能的資料遺失或資料中斷情況。
 
 以下檔案提供如何使用API或使用者介面將[!DNL Amazon Kinesis]連線到[!DNL Experience Platform]的資訊：
 

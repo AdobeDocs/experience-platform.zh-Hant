@@ -4,9 +4,9 @@ description: 瞭解如何建立來源連線和資料流，以將串流資料從�
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -86,6 +86,10 @@ Experience Platform支援從[!DNL Snowflake]資料庫串流資料。
       * `TIMESTAMP_TZ`不能用於時間戳記資料行或對應中。
 
 ## 後續步驟
+
+>[!NOTE]
+>
+>在您建立或更新串流資料流後，需要短暫暫停資料擷取5分鐘，以防止任何可能的資料遺失或資料中斷情況。
 
 下列教學課程提供如何使用API將您的[!DNL Snowflake]串流來源連線至Experience Platform的步驟：
 

@@ -5,9 +5,9 @@ title: 使用流量服務API為原始資料建立串流資料流
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料，以及使用來源聯結器和API將其帶入Experience Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1208'
 ht-degree: 2%
 
 ---
@@ -415,6 +415,10 @@ curl -X GET \
 
 ## 建立資料流
 
+>[!NOTE]
+>
+>在您建立或更新串流資料流後，需要短暫暫停資料擷取5分鐘，以防止任何可能的資料遺失或資料中斷情況。
+
 收集串流資料的最後一步是建立資料流。 到現在為止，您已準備下列必要值：
 
 - [Source連線ID](#source)
@@ -569,4 +573,4 @@ curl -X POST \
 依照本教學課程指示，您已建立資料流以從串流聯結器收集串流資料。 下游Experience Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 - [即時客戶輪廓概觀](../../../../profile/home.md)
-- [資料科學工作區總覽](../../../../data-science-workspace/home.md)
+- [資料科學工作區概觀](../../../../data-science-workspace/home.md)
