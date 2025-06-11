@@ -3,9 +3,9 @@ title: Adobe Experience Platform 發行說明 (2025 年 5 月)
 description: Adobe Experience Platform 2025 年 5 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1530'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 | 功能 | 說明 |
 | --- | --- |
-| 產品支援代理程式正式發行 | 您現在可以使用AI Assistant中的產品支援代理程式，順暢地進行疑難排解，而不需要離開您的工作流程。 您組織中的支援管理員現在可以使用產品支援代理程式建立客戶支援票證，以及您與AI助理互動時的內容和工作階段詳細資訊。 <br><br>產品支援代理程式的存取權到2025年11月30日為止。 您必須聯絡Adobe客戶代表以授權產品支援代理，並在此日期之後繼續使用功能。 如需詳細資訊，請閱讀[產品支援代理程式檔案](../../ai-assistant/new-features/customer-support.md)。 |
+| 產品支援代理人的一般可用性 | 您現在可以使用 AI 助理中的產品支援代理人來順暢地進行疑難排解，而無需離開您的工作流程。您組織中的支援管理員現在可以使用產品支援代理人來建立客戶支援票證，其中包含您與 AI 助理互動中的情境和工作階段詳細資料。<br><br>產品支援代理人的存取權可使用至 2025 年 11 月 30 日。您必須聯絡 Adobe 客戶代表以授權產品支援代理人，並在此日期之後繼續使用該功能。如需詳細資訊，請參閱[產品支援代理人文件](../../ai-assistant/new-features/customer-support.md)。 |
 
 如需詳細資訊，請閱讀 [AI 助理概觀](../../ai-assistant/landing.md)。
 
@@ -81,8 +81,8 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 | 功能 | 說明 |
 | --- | --- |
-| [Facebook自訂對象](../../destinations/catalog/social/facebook.md)升級並支援與位址相關的識別碼 | 從2025年5月23日開始並持續整個2025年6月，您可能會在目的地目錄中暫時看到兩個&#x200B;**[!DNL Facebook Custom Audience]**&#x200B;目的地卡片，持續時間長達數小時。 這是因為內部升級至目的地服務，並支援新欄位，以改進目標定位並與Facebook屬性上的設定檔進行比對。 如需新位址相關欄位的詳細資訊，請參閱[支援的身分](#supported-identities)區段。 <br><br>如果您看到標示為&#x200B;**[!UICONTROL （新） Facebook自訂對象]**&#x200B;的卡片，請將此卡片用於新的啟用資料流程。 您的現有資料流將會自動更新，因此您不需要採取任何動作。 在此期間您對現有資料流所做的任何變更，都將在升級後保留。 升級完成後，**[!UICONTROL （新） Facebook自訂對象]**&#x200B;目的地卡片將重新命名為&#x200B;**[!DNL Facebook Custom Audience]**。 <br><br>如果您使用[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值： <ul><li>流程規格 ID：`bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>連線規格 ID：`c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
-| [Google Customer Match + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities)目的地的行動廣告ID支援 | 您現在可以根據行動廣告ID （例如[!DNL GAID]和[!DNL IDFA]），在[Google Customer Match + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities)目的地啟用對象。 |
+| [Facebook 自訂廣告受眾](../../destinations/catalog/social/facebook.md)升級及對位址相關識別碼的支援 | 自 2025 年 5 月 23 日起至整個 2025 年 6 月，您可能會在目的地目錄中暫時看到兩張 **[!DNL Facebook Custom Audience]** 目的地卡片，最長可持續幾個小時。這是由於目的地服務的內部升級以及為了支援新欄位，以便改善目標選擇並與 Facebook 屬性上的個人檔案相符。如需有關新的位址相關欄位的詳細資料，請參閱[支援的身分識別](#supported-identities)一節。<br><br>如果您看到標有「**[!UICONTROL (新) Facebook 自訂廣告受眾]**」的卡片，請將此卡片用於新的啟用資料流。您現有的資料流將會自動更新，因此您無需採取任何動作。在此期間對現有資料流所做的任何變更，都將在升級後予以保留。升級完成後，「**[!UICONTROL (新) Facebook 自訂廣告受眾]**」目的地卡片將會重新命名為 **[!DNL Facebook Custom Audience]**。<br><br>如果您是使用 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 來建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值： <ul><li>流程規格 ID：`bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>連線規格 ID：`c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
+| 對 [Google 目標客戶比對 + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) 目的地的行動廣告 ID 支援 | 您現在可以根據行動廣告 ID (例如 [!DNL GAID] 和 [!DNL IDFA])，針對 [Google 目標客戶比對 + Display &amp; Video 360](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) 目的地來啟用客群。 |
 | 為 [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) 提供更多識別碼支援 | Google Customer Match 的目標現在支援地址相關欄位的對應，以提高 Google 平台的匹配率。<br><br>為確保 Google 對地址進行匹配，您必須對應所有四個地址欄位 (`address_info_first_name`、`address_info_last_name`、`address_info_country_code` 和 `address_info_postal_code`)，並確保在所匯出的輪廓中這些欄位均未缺少資料。<br>如果任何欄位未對應或缺少資料，Google 將不會對該地址進行匹配。 |
 | [Facebook](../../destinations/catalog/social/facebook.md) 連線的帳戶到期欄 | 現在您可以在「[瀏覽](../../destinations/ui/destinations-workspace.md#browse)」和「[帳戶](../../destinations/ui/destinations-workspace.md#accounts)」標籤中查看 Facebook 帳戶權杖到期的日期。 |
 | 匯出由 API 建立的資料集 | 現在您可以匯出由 API 建立的資料集。現已取消先前唯有在 UI 中建立的資料集才可以匯出的限制。閱讀關於[匯出資料集](../../destinations/ui/export-datasets.md)的詳細資訊。 |
