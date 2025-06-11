@@ -55,7 +55,7 @@ ht-degree: 9%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="身分識別圖連結規則概觀" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="身分識別圖連結規則概觀"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448283/?format=jpeg&nocache=1747851655227&captions=chi_hant" alt="身分識別圖連結規則概觀"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ ht-degree: 9%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="身分圖表連結規則 — 圖表模擬" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="身分圖表連結規則 — 圖表模擬"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444054/?format=jpeg&nocache=1747851655237&captions=chi_hant" alt="身分圖表連結規則 — 圖表模擬"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
