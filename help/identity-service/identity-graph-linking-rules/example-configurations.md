@@ -1,15 +1,17 @@
 ---
-title: Graph設定範例
-description: 瞭解使用身分圖表連結規則和身分資料時，可能會遇到的常見圖表情境。
+title: 身分圖表連結規則設定指南
+description: 瞭解您可以使用身分圖表連結規則來設定的不同實作型別。
+hide: true
+hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cd9104e253cda4ce9a004f7931b9c38907874941
+source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
 workflow-type: tm+mt
-source-wordcount: '3316'
-ht-degree: 5%
+source-wordcount: '1934'
+ht-degree: 7%
 
 ---
 
-# 圖表設定範例 {#examples-of-graph-configurations}
+# [!DNL Identity Graph Linking Rules]設定指南 {#configurations-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
@@ -21,740 +23,547 @@ ht-degree: 5%
 >* &quot;CRMID&quot;和&quot;loginID&quot;均為自訂名稱空間。 在此檔案中，「CRMID」是人員識別碼，而「loginID」是與指定人員相關聯的登入識別碼。
 >* 若要模擬本檔案中概述的範例圖表情境，您必須先建立兩個自訂名稱空間，一個具有身分符號「CRMID」，另一個具有身分符號「loginID」。 身分符號區分大小寫。
 
-本檔案概述您在使用[!DNL Identity Graph Linking Rules]和身分資料時可能遇到的常見案例的圖表設定範例。
+閱讀本檔案以瞭解您可以使用[!DNL Identity Graph Linking Rules]設定的不同實作型別。
 
-## 僅限CRMID
+客戶圖表案例可以分組為三個不同的類別。
 
-這是簡單實施情境的範例，其中擷取線上事件（CRMID和ECID），並僅針對CRMID儲存離線事件（設定檔記錄）。
+* **基本**： [基本實作](#basic-implementations)包含最常包含簡單實作的圖形。 這些實施傾向於以單一跨裝置名稱空間（例如CRMID）為中心。 雖然基本實作相當簡單明瞭，但圖形摺疊仍可能發生，通常是由於&#x200B;**共用裝置**&#x200B;的情況。
+* **中繼**： [中繼實作](#intermediate-implementations)包含數個變數，例如&#x200B;**多個跨裝置名稱空間**、**非唯一身分**&#x200B;和&#x200B;**多個唯一名稱空間**。
+* **進階**： [進階實作](#advanced-implementations)涉及複雜的多層圖表情境。 對於進階實作，必須建立正確的名稱空間優先順序，以確保移除適當的連結，進而防止圖表摺疊。
 
-**實作：**
+## 快速入門
 
-| 使用的名稱空間 | Web行為收集方法 |
-| --- | --- |
-| CRMID、ECID | Web SDK |
+在參閱下列檔案之前，請確定您已熟悉Identity Service和[!DNL Identity Graph Linking Rules]的幾個重要概念。
 
-**事件：**
+* [身分識別服務概觀](../home.md)
+* [[!DNL Identity Graph Linking Rules] 概觀](../identity-graph-linking-rules/namespace-priority.md)
+* [命名空間優先順序](namespace-priority.md)
+* [唯一命名空間](overview.md#unique-namespace)
+* [圖表模擬](graph-simulation.md)
 
-您可以將下列事件複製到文字模式，以在圖表模擬中建立此案例：
+## 基本實施 {#basic-implementations}
 
-```shell
-CRMID: Tom, ECID: 111
+請閱讀本節，瞭解[!DNL Identity Graph Linking Rules]的基本實作。
+
+### 使用案例：使用一個跨裝置名稱空間的簡單實施
+
+一般而言，Adobe客戶會有一個跨裝置名稱空間，用於其所有屬性，包括Web、行動和應用程式。 由於零售、電信和金融服務業的客戶使用此型別的實作，此系統與產業和地理位置無關。
+
+一般而言，使用者會以跨裝置名稱空間（通常是CRMID）表示，因此CRMID應分類為唯一名稱空間。 擁有電腦和[!DNL iPhone]且未共用其裝置的一般使用者可能會有如下的身分圖表。
+
+假設您是一家名為&#x200B;**ACME**&#x200B;的電子商務公司的資料架構師。 John和Jane是您的客戶。 他們是住在加州聖荷西的最終使用者。 他們共用一部桌上型電腦，並使用此電腦來瀏覽您的網站。 同樣地，John和Jane也共用一個[!DNL iPad]，並偶爾使用此[!DNL iPad]瀏覽網際網路，包括您的網站。
+
+**文字模式**
+
+```json
+CRMID: John, ECID: 123
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**演演算法組態：**
+**演演算法組態（身分設定）**
 
-您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
+在模擬圖形之前，先在圖形模擬介面中設定下列設定。
 
-| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
-| ---| --- | --- | --- |
-| 1 | CRMID | 跨裝置 | 是 |
-| 2 | ECID | COOKIE | 無 |
+| 顯示名稱 | 身分識別符號 | 身分識別類型 | 在每個圖表中唯一 | 命名空間優先順序 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | 跨裝置 | ✔️ | 1 |
+| ECID | ECID | COOKIE | | 2 |
+| IDFA | IDFA | 裝置 | | 3 |
 
-**即時客戶個人檔案的主要身分選擇：**
+**模擬圖形**
 
-在此設定的內容中，主要身分的定義如下：
++++選取以檢視模擬圖形
 
-| 驗證狀態 | 事件中的名稱空間 | 主要身分識別 |
-| --- | --- | --- |
-| 已驗證 | CRMID、ECID | CRMID |
-| 未驗證 | ECID | ECID |
+在此圖表中，John （一般使用者）由CRMID表示。 {ECID： 123}代表John在其個人電腦上用來造訪您的電子商務平台的網頁瀏覽器。 {ECID： 999}代表他在[!DNL iPhone]上使用的瀏覽器，{IDFA: a-b-c}代表他的[!DNL iPhone]。
 
-**圖表範例**
+![具有一個跨裝置名稱空間的簡單實作……](../images/configs/basic/simple-implementation.png)
+
++++
+
+### 練習
+
+在圖形模擬中模擬以下設定。 您可以建立自己的事件，或使用文字模式複製並貼上。
 
 >[!BEGINTABS]
 
->[!TAB 理想的單人圖表]
+>[!TAB 共用裝置（電腦）]
 
-以下是理想的單人圖表範例，其中CRMID是唯一的，且有最高優先順序。
+**共用裝置（電腦）**
 
-![理想單一人員圖表的模擬範例，其中CRMID是唯一的，且有最高優先順序。](../images/graph-examples/crmid_only_single.png "理想單一人員圖表的模擬範例，其中CRMID是唯一的，且有最高優先順序。"){zoomable="yes"}
+**文字模式：**
 
->[!TAB 多人圖表]
-
-以下是多人圖表的範例。 此範例會顯示「共用裝置」情境，其中包含兩個CRMID，而含有已建立舊連結的CRMID則會被移除。
-
-![多人圖表的模擬範例。 此範例顯示共用裝置情境，其中包含兩個CRMID，且已建立的舊連結會被移除。](../images/graph-examples/crmid_only_multi.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
+
+**模擬圖形**
+
++++選取以檢視模擬圖形
+
+在此圖表中，John和Jane由他們各自的CRMID表示：
+
+* {CRMID: John}
+* {CRMID: Jane}
+
+桌上型電腦上同時用來造訪電子商務平台的瀏覽器由{ECID： 111}表示。 在此圖表案例中，Jane是最後驗證的一般使用者，因此，{ECID： 111}與{CRMID: John}之間的連結已移除。
+
+![共用裝置(PC)的模擬圖形。](../images/configs/basic/shared-device-pc.png)
+
++++
+
+>[!TAB 共用裝置（行動裝置）]
+
+**共用裝置（行動裝置）**
+
+**文字模式：**
+
+```json
+CRMID: John, ECID: 111, IDFA: a-b-c
+CRMID: Jane, ECID: 111, IDFA: a-b-c
+```
+
+**模擬圖形**
+
++++選取以檢視模擬圖形
+
+在此圖表中，John和Jane都由各自的CRMID表示。 他們使用的瀏覽器由{ECID： 111}表示，他們共用的[!DNL iPad]由{IDFA: a-b-c}表示。 在此圖表情境中，Jane是最後驗證的使用者，因此會移除從{ECID： 111}和{IDFA: a-b-c}到{CRMID: John}的連結。
+
+![共用裝置（行動裝置）的模擬圖形。](../images/configs/basic/shared-device-mobile.png)
+
++++
 
 >[!ENDTABS]
 
-## 使用雜湊電子郵件的CRMID
+## 中繼實施 {#intermediate-implementations}
 
-此情境中，CRMID會內嵌並代表線上（體驗事件）和離線（設定檔記錄）資料。 此案例也涉及雜湊電子郵件的擷取，其代表CRM記錄資料集中與CRMID一起傳送的另一個名稱空間。
+閱讀本節以瞭解[!DNL Identity Graph Linking Rules]的中繼實作。
 
->[!IMPORTANT]
+### 使用案例：您的資料包含非唯一身分
+
+>[!TIP]
 >
->**務必一律為每個使用者傳送CRMID**。 若未這麼做，可能會導致「擱置」登入ID案例，此案例假設單一人員實體與其他人員共用裝置。
+>* **非唯一識別**&#x200B;是與非唯一名稱空間關聯的識別。
+>
+>* 在下列範例中，`CChash`是代表雜湊信用卡號碼的自訂名稱空間。
 
-**實作：**
+您是資料架構師，為發行信用卡的商業銀行工作。 您的行銷團隊已表示他們要將過去的信用卡交易歷史記錄納入設定檔。 此身分圖表可能如下所示。
 
-| 使用的名稱空間 | Web行為收集方法 |
-| --- | --- |
-| CRMID、Email_LC_SHA256、ECID | Web SDK |
+**文字模式：**
 
-**事件：**
-
-您可以將下列事件複製到文字模式，以在圖表模擬中建立此案例：
-
-```shell
-CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
-CRMID: Summer, ECID: 222
+```json
+CRMID: John, CChash: 1111-2222 
+CRMID: John, CChash: 3333-4444 
+CRMID: John, ECID: 123 
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**演演算法組態：**
+**演演算法組態（身分設定）**
 
-您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
+在模擬圖形之前，先在圖形模擬介面中設定下列設定。
 
-| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
-| ---| --- | --- | --- |
-| 1 | CRMID | 跨裝置 | 是 |
-| 2 | 電子郵件 (SHA256，小寫) | 電子郵件 | 無 |
-| 3 | ECID | COOKIE | 無 |
+| 顯示名稱 | 身分識別符號 | 身分識別類型 | 在每個圖表中唯一 | 命名空間優先順序 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | 跨裝置 | ✔️ | 1 |
+| Cchash | Cchash | 跨裝置 | | 2 |
+| ECID | ECID | COOKIE | | 3 |
+| IDFA | IDFA | 裝置 | | 4 |
 
-**設定檔的主要身分選擇：**
+**模擬圖形**
 
-在此設定的內容中，主要身分的定義如下：
++++選取以檢視模擬圖形
 
-| 驗證狀態 | 事件中的名稱空間 | 主要身分識別 |
-| --- | --- | --- |
-| 已驗證 | CRMID、ECID | CRMID |
-| 未驗證 | ECID | ECID |
+![模擬圖形的影像](../images/configs/basic/simple-implementation-non-unique.png)
 
-**圖表範例**
++++
+
+我們不保證這些信用卡號碼或任何其他非唯一名稱空間會一律與單一使用者相關聯。 兩個一般使用者可能會以相同的信用卡註冊，因為可能會有非唯一的預留位置值遭到錯誤擷取。 簡言之，不保證非唯一名稱空間不會導致圖表摺疊。
+
+為解決此問題，Identity Service會移除最舊的連結，並保留最新的連結。 這可確保圖形中只有一個CRMID，從而防止圖形摺疊。
+
+### 練習
+
+在圖形模擬中模擬以下設定。 您可以建立自己的事件，或使用文字模式複製並貼上。
 
 >[!BEGINTABS]
 
->[!TAB 理想的單人圖表]
+>[!TAB 兩個擁有相同信用卡的使用者]
 
-以下是一組理想的單一人員圖表範例，其中每個CRMID都與各自的雜湊電子郵件名稱空間和ECID相關聯。
+兩個不同的一般使用者使用相同的信用卡註冊您的電子商務網站。 您的行銷團隊想要確保信用卡僅與單一設定檔相關聯，以防止圖表摺疊。
 
-![在此範例中，會產生兩個個別的圖形，每個圖形代表一個單一人員實體。](../images/graph-examples/crmid_hashed_single.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
+**文字模式：**
 
->[!TAB 多人圖表：共用裝置]
-
-以下是多人圖表情境的範例，其中裝置由兩個人共用。
-
-![在此範例中，模擬圖表顯示「共用裝置」情境，因為Tom和Summer都與相同的ECID相關聯。](../images/graph-examples/crmid_hashed_shared_device.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 1111-2222
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:456
 ```
 
->[!TAB 多人圖表：非唯一電子郵件]
+**模擬圖形**
 
-以下為多人圖表案例的範例，其中電子郵件不是唯一的，且與兩個不同的CRMID相關聯。
++++選取以檢視模擬圖形
 
-![此情境類似於「共用裝置」情境。 但是，這些個人實體不會共用ECID，而是會與相同的電子郵件帳戶建立關聯。 「多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。&quot;](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
+![兩個使用者使用相同信用卡註冊的圖表。](../images/configs/intermediate/graph-with-same-credit-card.png)
 
-**圖形模擬事件輸入**
++++
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+>[!TAB 無效的信用卡號碼]
+
+由於資料不乾淨，Experience Platform中擷取的信用卡號碼無效。
+
+**文字模式：**
+
+```json
+CRMID: John, CChash: undefined
+CRMID: Jane, CChash: undefined
+CRMID: Jack, CChash: undefined
+CRMID: Jill, CChash: undefined
 ```
+
+**模擬圖形**
+
++++選取以檢視模擬圖形
+
+![雜湊問題導致信用卡無效的圖表。](../images/configs/intermediate/graph-with-invalid-credit-card.png)
+
++++
 
 >[!ENDTABS]
 
-## 使用雜湊電子郵件、雜湊電話、GAID和IDFA的CRMID
+### 使用案例：您的資料包含雜湊和未雜湊CRMID
 
-此案例與上一個案例類似。 不過，在此案例中，雜湊電子郵件和電話會標示為身分識別，以便在[[!DNL Segment Match]](../../segmentation/ui/segment-match/overview.md)中使用。
+您同時擷取非雜湊（離線） CRMID和雜湊（線上） CRMID。 他們希望非雜湊和雜湊CRMID之間有直接的關係。 當一般使用者使用已驗證的帳戶瀏覽時，雜湊CRMID將會與裝置ID （以ECID在Identity Service上表示）一起傳送。
 
->[!IMPORTANT]
->
->**務必一律為每個使用者傳送CRMID**。 若未這麼做，可能會導致「擱置」登入ID案例，此案例假設單一人員實體與其他人員共用裝置。
+**演演算法組態（身分設定）**
 
-**實作：**
+在模擬圖形之前，先在圖形模擬介面中設定下列設定。
 
-| 使用的名稱空間 | Web行為收集方法 |
-| --- | --- |
-| CRMID、Email_LC_SHA256、Phone_SHA256、GAID、IDFA、ECID | Web SDK |
+| 顯示名稱 | 身分識別符號 | 身分識別類型 | 在每個圖表中唯一 | 命名空間優先順序 |
+| --- | --- | --- | --- | --- | 
+| CRMID | CRMID | 跨裝置 | ✔️ | 1 |
+| CRMIDhash | CRMIDhash | 跨裝置 | ✔️ | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**事件：**
 
-您可以將下列事件複製到文字模式，以在圖表模擬中建立此案例：
+**練習**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-```
-
-**演演算法組態：**
-
-您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
-
-| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
-| ---| --- | --- | --- |
-| 1 | CRMID | 跨裝置 | 是 |
-| 2 | 電子郵件 (SHA256，小寫) | 電子郵件 | 無 |
-| 3 | 電話 (SHA256) | 電話 | 無 |
-| 4 | Google廣告ID (GAID) | 裝置 | 無 |
-| 5 | Apple IDFA (Apple的ID) | 裝置 | 無 |
-| 6 | ECID | COOKIE | 無 |
-
-**設定檔的主要身分選擇：**
-
-在此設定的內容中，主要身分的定義如下：
-
-| 驗證狀態 | 事件中的名稱空間 | 主要身分識別 |
-| --- | --- | --- |
-| 已驗證 | CRMID、IDFA、ECID | CRMID |
-| 已驗證 | CRMID、GAID、ECID | CRMID |
-| 已驗證 | CRMID、ECID | CRMID |
-| 未驗證 | GAID、ECID | GAID |
-| 未驗證 | IDFA、ECID | IDFA |
-| 未驗證 | ECID | ECID |
-
-**圖表範例**
+在圖形模擬中模擬以下設定。 您可以建立自己的事件，或使用文字模式複製並貼上。
 
 >[!BEGINTABS]
 
->[!TAB 理想的單人圖表]
+>[!TAB 案例1：共用裝置]
 
-以下是理想的單一人員圖表案例，雜湊電子郵件和雜湊電話會標示為身分識別，以便在[!DNL Segment Match]中使用。 在此案例中，圖表會分割為兩個，以代表不同的個人實體。
+John和Jane共用一個裝置。
 
-![理想的單一人員圖表情境。](../images/graph-examples/crmid_hashed_single_seg_match.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
+**文字模式：**
 
->[!TAB 多人圖表：共用裝置，共用電腦]
-
-以下是多人圖表情境，其中裝置（電腦）由兩個人共用。 在此案例中，共用電腦由`{ECID: 111}`表示，且連結至`{CRMID: Summer}`，因為該連結是最近建立的連結。 `{CRMID: Tom}`已移除，因為`{CRMID: Tom}`與`{ECID: 111}`之間的連結較舊，而且CRMID是此組態中指定的唯一名稱空間。
-
-![兩人共用電腦的多人圖表情境。](../images/graph-examples/shared_device_shared_computer.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CRMIDhash: John
+CRMID: Jane, CRMIDhash: Jane
+CRMIDhash: John, ECID: 111 
+CRMIDhash: Jane, ECID: 111
 ```
 
->[!TAB 多人圖表：共用裝置、android行動裝置]
+![預留位置](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
-以下是多人圖表情境，其中一個Android裝置由兩個人共用。 在此案例中，CRMID設定為唯一的名稱空間，因此`{CRMID: Tom, GAID: B-B-B, ECID:444}`的較新連結會取代較舊的`{CRMID: Summer, GAID: B-B-B, ECID:444}`。
+>[!TAB 案例2：錯誤的資料]
 
-![多人圖表情境，其中兩個使用者共用Android行動裝置。](../images/graph-examples/shared_device_android.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
+由於雜湊程式發生錯誤，系統會產生非唯一的雜湊CRMID，並傳送至Identity Service。
 
-**圖形模擬事件輸入**
+**文字模式：**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Tom, ECID: 444, GAID: B-B-B
+```json
+CRMID: John, CRMIDhash: aaaa
+CRMID: Jane, CRMIDhash: aaaa
 ```
 
->[!TAB 多人圖表：共用裝置、apple行動裝置、無ECID重設]
+![共用裝置圖表在雜湊處理過程中發生錯誤，導致非唯一的雜湊CRMID。](../images/configs/intermediate/hashing-error.png)
 
-以下是兩人共用Apple裝置的多人圖表情境。 在此案例中，IDFA為共用狀態，但ECID不會重設。
+>[!ENDTABS]
+<!-- 
+### Use case: You are using Real-Time CDP and Adobe Commerce
 
-![多人圖表情境，其中兩個使用者共用一個Apple行動裝置。](../images/graph-examples/shared_device_apple_no_reset.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
+You have two types of end-users:
 
-**圖形模擬事件輸入**
+* **Members**: An end-user who is assigned a CRMID and has an email account registered to your system.
+* **Guests**: An end-user who is not a member. They do not have an assigned CRMID and their email accounts are not registered to your system.
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 222, IDFA: A-A-A
+In this scenario, your customers are sending data from Adobe Commerce to Real-Time CDP.
+
+**Exercise**
+
+Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device between two members]
+
+In this scenario, two members share the same device to browse an e-commerce website.
+
+**Text mode**
+
+```json
+CRMID: John, Email: john@g
+CRMID: Jane, Email: jane@g
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB 多人圖表：共用裝置、apple、ECID重設]
+![A graph that displays two authenticated members who share a device.](../images/configs/intermediate/shared-device-two-members.png)
 
-以下是兩人共用Apple裝置的多人圖表情境。 此情境中，ECID會重設，但IDFA會維持不變。
+>[!TAB Shared device between two guests]
 
-![多人圖表情境，其中兩個使用者共用一個Apple行動裝置，但ECID已重設。](../images/graph-examples/shared_device_apple_with_reset.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
+In this scenario, two guests share the same device to browse an e-commerce website.
 
-**圖形模擬事件輸入**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 555, IDFA: A-A-A
+```json
+Email: john@g, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
->[!TAB 多人圖表：非唯一電話]
+![A graph that displays two guests who share a device.](../images/configs/intermediate/shared-device-two-guests.png)
 
-以下是多人圖表情境，兩個人共用相同的電話號碼。
+>[!TAB Shared device between a member and a guest]
 
-![電話名稱空間不是唯一的多人圖表案例。](../images/graph-examples/non_unique_phone.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
+In this scenario, a member and a guest share the same device to browse an e-commerce website.
 
-**圖形模擬事件輸入**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Phone_SHA256: 123-4567
+```json
+CRMID: John, Email: john@g
+CRMID: John, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
-在此範例中，`{Phone_SHA256}`也標籤為唯一的名稱空間。 因此，圖表不能有多個名稱空間為`{Phone_SHA256}`的身分。 在此案例中，`{Phone_SHA256: 765-4321}`已從`{CRMID: Summer}`和`{Email_LC_SHA256: ddeeff}`取消連結，因為它是較舊的連結，
+![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
-![Phone_SHA256為唯一的多人圖表情境。](../images/graph-examples/unique_phone.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
+>[!ENDTABS] -->
 
->[!TAB 多人圖表：非唯一電子郵件]
+### 使用案例：您的資料包含三個不重複的名稱空間
 
-以下是多人圖表情境，其中電子郵件由兩個人共用。
+您的客戶會依下列方式定義單一人員實體：
 
-![電子郵件不是唯一的多人圖表情境](../images/graph-examples/non_unique_email.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
+* 具有指派CRMID的一般使用者。
+* 與雜湊電子郵件地址相關聯的一般使用者，以便設定檔可以啟動至支援雜湊電子郵件的目的地（例如，[!DNL Facebook]）。
+* 與電子郵件地址有關聯的一般使用者，讓支援人員可以使用所述電子郵件地址在Real-Time CDP上查詢其設定檔。
 
-**圖形模擬事件輸入**
+| 顯示名稱 | 身分識別符號 | 身分識別類型 | 在每個圖表中唯一 | 命名空間優先順序 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | 跨裝置 | ✔️ | 1 |
+| 電子郵件 | 電子郵件 | 電子郵件 | ✔️ | 2 |
+| Email_LC_SHA256 | Email_LC_SHA256 | 電子郵件 | ✔️ | 3 |
+| ECID | ECID | COOKIE | | 4 |
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Email_LC_SHA256: aabbcc
+在圖表模擬工具中模擬下列設定。 您可以建立自己的事件，或使用文字模式複製並貼上。
+
+>[!BEGINTABS]
+
+>[!TAB 兩名使用者登入]
+
+在此案例中，John和Jane都會登入電子商務網站。
+
+**文字模式**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash 
+CRMID: Jane, Email: jane@g, Email_LC_SHA256: jane_hash 
+CRMID: John, ECID: 111 
+CRMID: Jane, ECID: 111
 ```
+
+![顯示使用相同裝置登入您網站之兩個使用者的圖表。](../images/configs/intermediate/two-end-users-log-ing.png)
+
+>[!TAB 一般使用者變更其電子郵件]
+
+**文字模式**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
+CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
+```
+
+![顯示已變更電子郵件之一般使用者的圖表。](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
-## 具有多個登入ID的單一CRMID （簡單版本）
+## 進階實施 {#advanced-implementations}
 
-此情境中，單一CRMID代表個人實體。 不過，個人實體可能擁有多個登入識別碼：
+進階實施涉及複雜的多層圖表情境。 這些型別的實作包括使用&#x200B;**名稱空間優先順序**，以識別必須移除的正確連結，以防止圖表摺疊。
 
-* 指定的個人實體可以有不同的帳戶型別（個人與企業、州別帳戶、品牌帳戶等）
-* 指定的個人實體可針對任意數量的帳戶使用不同的電子郵件地址。
+**名稱空間優先順序**&#x200B;是根據名稱空間重要性排列名稱空間的中繼資料。 如果圖表包含兩個身分，每個都有不同的唯一名稱空間，Identity Service會使用名稱空間優先順序來決定要移除的連結。 如需詳細資訊，請閱讀名稱空間優先順序](../identity-graph-linking-rules/namespace-priority.md)的[檔案。
 
->[!IMPORTANT]
->
->**務必一律為每個使用者傳送CRMID**。 若未這麼做，可能會導致「擱置」登入ID案例，此案例假設單一人員實體與其他人員共用裝置。
+在複雜的圖表情境中，名稱空間優先順序扮演關鍵角色。 圖表可以有多個層 — 一個使用者可以與多個登入ID相關聯，並且這些登入ID可以進行雜湊處理。 此外，不同的ECID可以連結至不同的登入ID。 為了確保移除正確層中的正確連結，您的名稱空間優先順序設定必須正確。
 
-**實作：**
+閱讀本節以瞭解[!DNL Identity Graph Linking Rules]的進階實作。
 
-| 使用的名稱空間 | Web行為收集方法 |
-| --- | --- |
-| CRMID、loginID、ECID | Web SDK |
+### 使用案例：您需要多個業務線的支援
 
-**事件：**
+您的一般使用者有兩個不同的帳戶：個人帳戶和商務帳戶。 每個帳戶都由不同的ID識別。 在此案例中，典型的圖表將如下所示：
 
-您可以將下列事件複製到文字模式，以在圖表模擬中建立此案例：
+**文字模式***
 
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JohnPersonal, ECID: 222
+loginID: JohnBusiness, ECID: 222
 ```
 
-**演演算法組態：**
+**演演算法組態（身分設定）**
 
-您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
+在模擬圖形之前，先在圖形模擬介面中設定下列設定。
 
-| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
-| ---| --- | --- | --- |
-| 1 | CRMID | 跨裝置 | 是 |
-| 2 | loginID | 跨裝置 | 無 |
-| 3 | ECID | COOKIE | 無 |
+| 顯示名稱 | 身分識別符號 | 身分識別類型 | 在每個圖表中唯一 | 命名空間優先順序 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | 跨裝置 | ✔️ | 1 |
+| loginID | loginID | 跨裝置 | | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**設定檔的主要身分選擇：**
+**模擬圖形**
 
-在此設定的內容中，主要身分的定義如下：
++++選取以檢視模擬圖形
 
-| 驗證狀態 | 事件中的名稱空間 | 主要身分識別 |
-| --- | --- | --- |
-| 已驗證 | loginID， ECID | loginID |
-| 已驗證 | loginID， ECID | loginID |
-| 已驗證 | CRMID、loginID、ECID | CRMID |
-| 已驗證 | CRMID、ECID | CRMID |
-| 未驗證 | ECID | ECID |
+![具有商務和個人電子郵件之一般使用者的身分圖表。](../images/configs/advanced/advanced.png)
 
-**圖表範例**
++++
+
+
+**練習**
+
+在圖形模擬中模擬以下設定。 您可以建立自己的事件，或使用文字模式複製並貼上。
 
 >[!BEGINTABS]
 
->[!TAB 理想的單人情境]
+>[!TAB 共用裝置]
 
-以下是單一CRMID和多個loginID的單一人員圖表案例。
+**文字模式**
 
-![包含單一CRMID與多個loginID的圖表情境。](../images/graph-examples/single_crmid.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
-
->[!TAB 多人圖表情境：共用裝置]
-
-以下是多人圖表情境，其中裝置由兩個人共用。 在此案例中，`{ECID:111}`同時與`{loginID:ID_A}`和`{loginID:ID_C}`連結，且已建立的`{ECID:111, loginID:ID_A}`舊連結已移除。
-
-![多人共用裝置情境。](../images/graph-examples/single_crmid_shared_device.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: JaneBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 111
 ```
 
->[!TAB 多人圖表情境：錯誤的資料]
+![進階共用裝置的圖表。](../images/configs/advanced/advanced-shared-device.png)
 
-以下為涉及不良資料的多人圖表情境。 在此案例中，`{loginID:ID_D}`錯誤地連結到兩個完全不同的使用者，而且已刪除具有舊時間戳記的連結，而改用最近建立的連結。
+>[!TAB 傳送到Real-Time CDP的資料不正確]
 
-![包含錯誤資料的多人圖表情境。](../images/graph-examples/single_crmid_bad_data.png "多人圖表的模擬範例。 此範例顯示共用裝置情境，其中存在兩個CRMID，且已建立的舊連結被移除。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_D
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: error
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: error
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 222
 ```
 
->[!TAB &#39;Dangling&#39;登入ID]
-
-下圖會模擬「懸浮」登入ID案例。 在此範例中，兩個不同的loginID已繫結至相同的ECID。 但是，`{loginID:ID_C}`未連結至CRMID。 因此，Identity Service無法偵測這兩個loginID代表兩個不同的實體。
-
-![擱置的登入ID案例。](../images/graph-examples/dangling_example.png "擱置的登入ID案例。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-loginID: ID_C, ECID: 111
-```
+![顯示傳送錯誤資料至Real-Time CDP案例的圖表。](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
-## 具有多個登入ID的單一CRMID （複雜版本）
+### 使用案例：您有需要多個名稱空間的複雜實施
 
-此情境中，單一CRMID代表個人實體。 不過，個人實體可能擁有多個登入識別碼：
+您是一家媒體和娛樂公司，您的使用者擁有以下優勢：
+* A CRMID
+* 熟客方案ID
+此外，您的一般使用者可在電子商務網站上購物，此資料會繫結至其電子郵件地址。 協力廠商資料庫提供者也擴充了使用者資料，並成批傳送給Experience Platform。
 
-* 指定的個人實體可以有不同的帳戶型別（個人與企業、州別帳戶、品牌帳戶等）
-* 指定的個人實體可針對任意數量的帳戶使用不同的電子郵件地址。
+**文字模式**
 
->[!IMPORTANT]
->
->**務必一律為每個使用者傳送CRMID**。 若未這麼做，可能會導致「擱置」登入ID案例，此案例假設單一人員實體與其他人員共用裝置。
-
-**實作：**
-
-| 使用的名稱空間 | Web行為收集方法 |
-| --- | --- |
-| CRMID、Email_LC_SHA256、Phone_SHA256、loginID、ECID | Adobe Analytics來源聯結器。<br> **注意：**&#x200B;依預設，AAID在Identity Service中會遭到封鎖，因此，在使用Analytics來源時，您必須將ECID置於比AAID更高的優先順序。 如需詳細資訊，請參閱[實作指南](./implementation-guide.md#ingest-your-data)。</br> |
-
-**事件：**
-
-您可以將下列事件複製到文字模式，以在圖表模擬中建立此案例：
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+Email: john@g, orderID: aaa
+CRMID: John, thirdPartyID: xyz
+CRMID: John, ECID: 111
 ```
 
-**演演算法組態：**
+**演演算法組態（身分設定）**
 
-您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
+在模擬圖形之前，先在圖形模擬介面中設定下列設定。
 
-| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
-| ---| --- | --- | --- | 
-| 1 | CRMID | 跨裝置 | 是 |
-| 2 | Email_LC_SHA256 | 電子郵件 | 無 |
-| 3 | Phone_SHA256 | 電話 | 無 |
-| 4 | loginID | 跨裝置 | 無 |
-| 5 | ECID | COOKIE | 無 |
-| 6 | AAID | COOKIE | 無 |
+| 顯示名稱 | 身分識別符號 | 身分識別類型 | 在每個圖表中唯一 | 命名空間優先順序 |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | 跨裝置 | ✔️ | 1 |
+| loyaltyID | loyaltyID | 跨裝置 | | 2 |
+| 電子郵件 | 電子郵件 | 電子郵件 | | 3 |
+| thirdPartyID | thirdPartyID | 跨裝置 | | 4 |
+| orderID | orderID | 跨裝置 | | 5 |
+| ECID | ECID | COOKIE | | 6 |
 
-**設定檔的主要身分選擇：**
+**練習**
 
-在此設定的內容中，主要身分的定義如下：
-
-| 驗證狀態 | 事件中的名稱空間 | 主要身分識別 |
-| --- | --- | --- |
-| 已驗證 | loginID， ECID | loginID |
-| 已驗證 | loginID， ECID | loginID |
-| 已驗證 | CRMID、loginID、ECID | CRMID |
-| 已驗證 | CRMID、ECID | CRMID |
-| 未驗證 | ECID | ECID |
-
-**圖表範例**
+在圖形模擬中模擬以下設定。 您可以建立自己的事件，或使用文字模式複製並貼上。
 
 >[!BEGINTABS]
 
->[!TAB 理想的單人圖表]
+>[!TAB 共用裝置]
 
-以下範例是兩個單一人員圖表，各自有一個CRMID和多個登入ID。
+**文字模式**
 
-![包含一個CRMID和多個登入ID的單一人員圖表。](../images/graph-examples/complex_single_person.png "包含一個CRMID與多個loginID的單一人員圖表。"){zoomable="yes"}
-
->[!TAB 多人圖表：共用裝置1]
-
-以下是多人共用裝置案例，`{ECID:111}`同時連結至`{loginID:ID_A}`和`{loginID:ID_C}`。 在此情況下，較早建立的連結會被移除，而改用較新建立的連結。
-
-![多人共用裝置圖表情境。](../images/graph-examples/complex_shared_device_one.png "多人共用裝置圖表情境。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa 
+CRMID: John, thirdPartyID: xyz 
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB 多人圖表：共用裝置2]
+![共用裝置的複雜圖表範例。](../images/configs/advanced/complex-shared-device.png)
 
-在這種情況下，loginID和CRMID都會以體驗事件的形式傳送，而不是只傳送loginID。
+>[!TAB 一般使用者變更其電子郵件地址]
 
-![多人共用裝置圖表情境，其中登入ID和CRMID都會以體驗事件的形式傳送。](../images/graph-examples/complex_shared_device_two.png "多人共用裝置圖表情境，其中登入ID和CRMID都會以體驗事件傳送。"){zoomable="yes"}
+**文字模式**
 
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, loginID: ID_C, ECID: 111
-loginID: ID_A, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: John, loyaltyID: John, Email: john@y
 ```
 
->[!TAB 多人圖表：錯誤的登入ID資料]
+![顯示電子郵件變更後身分行為的圖表。](../images/configs/advanced/complex-email-change.png)
 
-在此案例中，`{loginID:ID_C}`同時連結至`{CRMID:Tom}`和`{CRMID:Summer}`，因此被視為不良資料，因為理想的圖表案例不應將相同的loginID連結至兩個不同的使用者。 在此情況下，會移除已建立的舊連結，而改用最近建立的連結。
+>[!TAB thirdPartyID關聯變更]
 
-![涉及錯誤登入資料的多人圖表情境。](../images/graph-examples/complex_bad_data.png "涉及錯誤登入資料的多人圖表情境。"){zoomable="yes"}
+**文字模式**
 
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_C
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+CRMID: John, thirdPartyID: xyz
+CRMID: Jane, thirdPartyID: xyz
 ```
 
->[!TAB 多人圖表：非唯一電子郵件]
+![在第三方ID關聯發生變更時，顯示身分行為的圖表。](../images/configs/advanced/complex-third-party-change.png)
 
-在此案例中，非唯一電子郵件正在與兩個不同的CRMID連結，因此，已建立的舊連結會被移除，而改用最近建立的連結。
+>[!TAB 非唯一的orderID]
 
-![涉及非唯一電子郵件的多人圖表情境。](../images/graph-examples/complex_non_unique_email.png "涉及非唯一電子郵件的多人圖表情境。"){zoomable="yes"}
+**文字模式**
 
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa
+Email: jane@g, orderID: aaa
 ```
 
->[!TAB 多人圖表：非唯一電話]
+![顯示指定非唯一訂單ID之身分行為的圖形。](../images/configs/advanced/complex-non-unique.png)
 
-在此案例中，非唯一電話號碼與兩個不同的CRMID連結，已建立的舊連結會被移除，而採用最近建立的連結。
+>[!TAB 錯誤的忠誠度ID]
 
-![涉及非唯一電話號碼的多人圖表情境。](../images/graph-examples/complex_non_unique_phone.png "涉及非唯一電話號碼的多人圖表情境。"){zoomable="yes"}
+**文字模式**
 
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, Phone_SHA256: 111-1111
-CRMID: Summer, Phone_SHA256: 111-1111
+```json
+CRMID: John, loyaltyID: aaa, Email: john@g
+CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
->[!ENDTABS]
-
-## 在其他Adobe Commerce中的使用情況
-
-本節中的圖表設定範例概述了Adobe Commerce的使用案例。 以下範例著重於具有兩種使用者型別的零售客戶：
-
-* 註冊使用者（建立帳戶的使用者）
-* 訪客使用者（只有電子郵件地址的使用者）
-
->[!IMPORTANT]
->
->**務必一律為每個使用者傳送CRMID**。 若未這麼做，可能會導致「擱置」登入ID案例，此案例假設單一人員實體與其他人員共用裝置。
-
-**實作：**
-
-| 使用的名稱空間 | Web行為收集方法 |
-| --- | --- |
-| CRMID、電子郵件、ECID | Web SDK |
-
-**事件：**
-
-您可以將下列事件複製到文字模式，以在圖表模擬中建立此案例：
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-```
-
-**演演算法組態：**
-
-您可以透過為演演算法設定下列設定，在圖表模擬中建立此情境：
-
-| 優先順序 | 顯示名稱 | 身分識別類型 | 在每個圖表中唯一 |
-| ---| --- | --- | --- | 
-| 1 | CRMID | 跨裝置 | 是 |
-| 2 | 電子郵件 | 電子郵件 | 是 |
-| 5 | ECID | COOKIE | 無 |
-
-**設定檔的主要身分選擇：**
-
-在此設定的內容中，主要身分的定義如下：
-
-| 使用者活動 | 事件中的名稱空間 | 主要身分識別 |
-| --- | --- | --- |
-| 已驗證的瀏覽 | CRMID、ECID | CRMID |
-| 訪客簽出 | 電子郵件、ECID | 電子郵件 |
-| 未驗證的瀏覽 | ECID | ECID |
-
->[!WARNING]
->
->註冊的使用者必須在他們的設定檔中同時使用CRMID和電子郵件，以下圖表情境才能運作。
-
-**圖表範例**
-
->[!BEGINTABS]
-
->[!TAB 理想的單人圖表]
-
-以下是理想的單人圖表範例。
-
-![理想的單人圖表範例，具有一個電子郵件名稱空間。](../images/graph-examples/single_person_email.png "理想的單人圖表範例，具有一個電子郵件名稱空間。"){zoomable="yes"}
-
->[!TAB 多人圖表]
-
-以下是多人圖表的範例，其中兩位註冊使用者使用同一部裝置進行瀏覽。
-
-![多人圖表情境，其中兩個註冊的使用者使用同一部裝置瀏覽。](../images/graph-examples/two_registered_users.png "多人圖表情境，其中兩個註冊的使用者使用相同的裝置進行瀏覽。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Summer, Email: summer@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
-```
-
-在此案例中，註冊使用者和訪客使用者共用相同的裝置。
-
-![已註冊的使用者和訪客共用相同裝置的多人圖表範例。](../images/graph-examples/one_guest.png "已註冊的使用者和訪客共用相同裝置的多人圖表範例。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-在此案例中，註冊使用者和訪客使用者會共用裝置。 但是，由於CRMID不包含對應的電子郵件名稱空間，因此會發生實施錯誤。 在此案例中，Tom是註冊使用者，而Summer是訪客使用者。 與上一個案例不同，這兩個實體會合併，因為這兩個人員實體之間沒有共同的電子郵件名稱空間。
-
-![多人圖表範例，其中註冊的使用者和訪客共用相同的裝置，但是，由於CRMID不包含電子郵件名稱空間，因此會發生實作錯誤。](../images/graph-examples/no_email_namespace_in_crmid.png "多人圖表範例，其中註冊的使用者和訪客共用相同的裝置，但是，由於CRMID不包含電子郵件名稱空間，因此會發生實作錯誤。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-此情境中，兩名訪客使用者共用同一部裝置。
-
-![多人圖表情境，其中兩個訪客使用者共用相同的裝置。](../images/graph-examples/two_guests.png){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-在此案例中，訪客使用者會簽出專案，然後使用相同的裝置進行註冊。
-
-![訪客使用者購買和專案，然後註冊帳戶的圖表情境。](../images/graph-examples/guest_purchase.png "訪客使用者購買和專案，然後註冊帳戶的圖表情境。"){zoomable="yes"}
-
-**圖形模擬事件輸入**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: tom@acme.com, CRMID: Tom
-CRMID: Tom, ECID: 111
-```
+![在錯誤忠誠度識別碼下顯示身分行為的圖表。](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
 
@@ -763,7 +572,7 @@ CRMID: Tom, ECID: 111
 如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
 * [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [命名空間優先順序](./namespace-priority.md)

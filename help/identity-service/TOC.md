@@ -5,10 +5,10 @@ breadcrumb-title: Experience Platform Identity Service 指南
 user-guide-description: 跨裝置和系統橋接客戶身分識別，以提供個人化的數位體驗。
 feature: Identities
 role: Admin,Developer
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 33%
+source-wordcount: '144'
+ht-degree: 36%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 33%
    - [Identity Service中的刪除](./features/deletion.md)
    - 身分圖表連結規則 {#identity-graph-linking-rules}
       - [功能概觀](./identity-graph-linking-rules/overview.md)
-      - [身分最佳化演演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [身分識別最佳化演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [身分圖表連結規則的實作指南](./identity-graph-linking-rules/implementation-guide.md)
-      - [圖表設定範例](./identity-graph-linking-rules/example-configurations.md)
+      - [Configurations指南](./identity-graph-linking-rules/example-configurations.md)
       - [身分圖表連結規則疑難排解](./identity-graph-linking-rules/troubleshooting.md)
       - [命名空間優先順序](./identity-graph-linking-rules/namespace-priority.md)
       - [圖表模擬UI](./identity-graph-linking-rules/graph-simulation.md)
