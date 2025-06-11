@@ -5,7 +5,7 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '1446'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="圖表模擬"
->abstract="模擬圖表，瞭解Identity服務如何連結身分，以及身分最佳化演演算法如何運作。"
+>abstract="模擬圖表，用於了解身分識別服務如何連結身分，以及身分識別最佳化演算法如何運作。"
 
 [!DNL Graph Simulation]是Identity Service UI中的工具，可用於模擬指定特定身分組合下身分圖表的行為方式，以及設定[身分最佳化演演算法](./identity-optimization-algorithm.md)的方式。
 
 請觀看下列影片，瞭解在Identity Service UI工作區中使用[!DNL Graph Simulation]介面的其他資訊：
 
->[!VIDEO](https://video.tv.adobe.com/v/3444054/?learn=on&enablevpops&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 閱讀本檔案以瞭解如何使用[!DNL Graph Simulation]來更瞭解身分圖表行為以及圖表演演算法如何運作。
 
@@ -177,7 +177,7 @@ ht-degree: 2%
 閱讀本檔案後，您現在已瞭解如何使用[!DNL Graph Simulation]工具，以更清楚瞭解在指定一組特定規則和設定時，身分資料的處理方式。 如需詳細資訊，請閱讀下列檔案：
 
 * [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [圖表設定範例](./example-configurations.md)
