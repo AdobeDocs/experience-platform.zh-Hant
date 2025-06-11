@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；存取控制；adobe admin console
 solution: Experience Platform
-title: 存取控制概覽
+title: 存取控制概觀
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，將使用者與許可權和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 6a466770495b226f890ab67b21c5cb027fd46e02
 workflow-type: tm+mt
-source-wordcount: '3818'
+source-wordcount: '3851'
 ht-degree: 0%
 
 ---
 
-# 存取控制概覽
+# 存取控制概觀
 
 Adobe Experience Platform的存取控制是透過[Adobe Experience Cloud](https://experience.adobe.com/)中的&#x200B;**[!UICONTROL 許可權]**&#x200B;提供。 此功能利用角色和原則，將使用者與許可權和沙箱連結。
 
 ## 存取控制階層與工作流程
 
-若要設定Experience Platform的存取控制，您必須對擁有Experience Platform產品的組織具有系統或產品管理員許可權。 可授予或撤銷許可權的最低角色為產品管理員。 可以管理許可權的其他管理員角色是系統管理員（無限制）。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
+若要設定Experience Platform的存取控制，您必須對擁有Experience Platform產品的組織具有系統或產品管理員許可權。 可授予或撤銷許可權的最低角色為產品管理員。 可以管理許可權的其他管理員角色是系統管理員（無限制）。 如需詳細資訊，請參閱[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)上的Adobe說明中心文章。
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Adobe Mix Modeler] | [!UICONTROL 檢視Adobe Mix Modeler模型設定] | 以唯讀方式存取模型設定。 |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL 管理Adobe Mix Modeler模型計畫設定] | 檢視與修改計畫組態的功能。 |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL 檢視Adobe Mix Modeler模型計畫設定] | 計畫組態的唯讀存取權。 |
-| [!DNL AI Assistant] | [!UICONTROL 啟用AI小幫手] | 能夠提出[[!DNL [AI assistant]]](../ai-assistant/access.md)個問題。 |
+| [!DNL AI Assistant] | [!UICONTROL 啟用AI小幫手] | 能夠提出[!DNL [AI assistant]](../ai-assistant/access.md)個問題。 |
 | [!DNL AI Assistant] | [!UICONTROL 檢視營運分析] | 存取以取得[操作性深入分析](../ai-assistant/home.md##operational-insights)查詢的回應。 |
 | [!DNL AI Assistant] | [!UICONTROL 產生內容] | 讓使用者能夠使用[!DNL AI Assistant]產生內容。 |
 | [!DNL AI Assistant] | [!UICONTROL 管理品牌套件] | 讓使用者能夠使用[!DNL AI Assistant]建立品牌指引。 |
@@ -193,10 +193,11 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Customer Managed Keys] | [!UICONTROL 管理客戶管理的金鑰] | 存取以檢視及設定客戶自控金鑰。 |
 | [!DNL Dashboards] | [!UICONTROL 檢視授權使用量儀表板] | 唯讀存取權，可檢視授權使用儀表板。 |
 | [!DNL Dashboards] | [!UICONTROL 管理標準儀表板] | 新增尚未在Data Warehouse的自訂屬性。 |
-| [!DNL Dashboards] | [!UICONTROL 檢視標準儀表板] | 唯讀存取權，可檢視授權使用儀表板。 |
+| [!DNL Dashboards] | [!UICONTROL 檢視標準儀表板] | 對「設定檔」、「目的地」和「區段」控制面板的唯讀存取權。 也可讓您存取左側導覽中的儀表板，以及儀表板詳細目錄和整合索引標籤。 |
 | [!DNL Dashboards] | [!UICONTROL 管理自訂儀表板] | 存取以建立或編輯控制面板。 |
 | [!DNL Dashboards] | [!UICONTROL 檢視自訂儀表板] | 對使用者定義控制面板的唯讀存取權。 |
 | [!DNL Dashboards] | [!UICONTROL 管理報表排程] | 建立排程的功能。 |
+| [!DNL Dashboards] | [!UICONTROL 匯出儀表板資料] | 控制使用者從查詢專業模式儀表板匯出表格資料的能力。 |
 | [!DNL Data Collection] | [!UICONTROL 管理資料串流] | 讀取、建立和編輯資料串流的存取權。 |
 | [!DNL Data Collection] | [!UICONTROL 檢視資料串流] | 資料串流的唯讀存取權。 |
 | [!DNL Data Governance] | [!UICONTROL 管理使用標籤] | 存取讀取、建立和刪除使用標籤。 |
