@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Salesforce Service Cloud；salesforce service cloud
-solution: Experience Platform
 title: Salesforce Service Cloud Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Salesforce Service Cloud連線至Adobe Experience Platform。
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-# [!DNL Salesforce Service Cloud]聯結器
+# [!DNL Salesforce Service Cloud]
+
+>[!WARNING]
+>
+>[!DNL Salesforce Service Cloud]來源的基本驗證將在2026年1月被取代。 您必須移至OAuth 2使用者端認證驗證，才能繼續使用該來源，並將資料從您的[!DNL Salesforce Service Cloud]帳戶擷取至Experience Platform。
 
 Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

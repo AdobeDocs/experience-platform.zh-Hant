@@ -2,9 +2,9 @@
 title: Salesforce Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 1665c15c39667521bb74cca216694cf6b46bf26b
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >您現在可以在Amazon Web Services (AWS)上執行Adobe Experience Platform時使用[!DNL Salesforce]來源。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+
+>[!WARNING]
+>
+>[!DNL Salesforce]來源的基本驗證將在2026年1月被取代。 您必須移至OAuth 2使用者端認證驗證，才能繼續使用該來源，並將資料從您的[!DNL Salesforce]帳戶擷取至Experience Platform。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
@@ -209,7 +213,7 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 請參閱下列內容，以取得有關[!DNL Salesforce]資料集與Experience Platform之間的欄位對應規則的詳細資訊：
 
-- [連絡人](../adobe-applications/mapping/salesforce.md#contact)
+- [聯絡人](../adobe-applications/mapping/salesforce.md#contact)
 - [銷售機會](../adobe-applications/mapping/salesforce.md#lead)
 - [帳戶](../adobe-applications/mapping/salesforce.md#account)
 - [機會](../adobe-applications/mapping/salesforce.md#opportunity)
@@ -249,7 +253,7 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 | `TENANT_ID` | ID，用來確保您建立的資源已正確命名且包含在您的組織內。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | 您對其進行API呼叫的URL端點。 此值是固定的，且一律設為： `http://platform.adobe.io/`。 | `http://platform.adobe.io/` |
 | `munchkinId` | 您的[!DNL Marketo]帳戶的唯一識別碼。 如需如何擷取`munchkinId`的詳細資訊，請參閱[驗證您的 [!DNL Marketo] 執行個體](../adobe-applications/marketo/marketo-auth.md)的教學課程。 | `123-ABC-456` |
-| `sfdc_org_id` | 您的[!DNL Salesforce]帳戶的組織識別碼。 請參閱下列[[!DNL Salesforce] 指南](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1)，以取得您[!DNL Salesforce]組織ID的詳細資訊。 | `00D4W000000FgYJUA0` |
+| `sfdc_org_id` | 您的[!DNL Salesforce]帳戶的組織識別碼。 請參閱下列[[!DNL Salesforce] 指南](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1)，以取得您[!DNL Salesforce]組織ID的詳細資訊。 | `00D4W000000FgYJUA0` |
 | `has_abm` | 表示您是否訂閱[!DNL Marketo Account-Based Marketing]的布林值。 | `false` |
 | `has_msi` | 表示您是否訂閱[!DNL Marketo Sales Insight]的布林值。 | `false` |
 

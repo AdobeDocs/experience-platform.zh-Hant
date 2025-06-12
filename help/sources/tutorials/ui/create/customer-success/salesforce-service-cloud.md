@@ -2,10 +2,10 @@
 title: 使用Salesforce使用者介面連線您的Experience Platform服務雲端帳戶
 description: 瞭解如何使用使用者介面連線您的Salesforce Service Cloud帳戶，並將您的客戶成功資料匯入Experience Platform。
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 3%
+source-wordcount: '880'
+ht-degree: 2%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 3%
 如果您已有有效的[!DNL Salesforce Service Cloud]連線，可以略過本檔案的其餘部分，並繼續進行教學課程： [設定資料流以取得客戶成功](../../dataflow/customer-success.md)
 
 ### 收集必要的認證
+
+>[!WARNING]
+>
+>[!DNL Salesforce Service Cloud]來源的基本驗證將在2026年1月被取代。 您必須移至OAuth 2使用者端認證驗證，才能繼續使用該來源，並將資料從您的[!DNL Salesforce Service Cloud]帳戶擷取至Experience Platform。
 
 [!DNL Salesforce Service Cloud]來源支援基本驗證和OAuth2使用者端認證。
 
@@ -55,7 +59,7 @@ ht-degree: 3%
 | 用戶端密碼 | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce Service Cloud]識別您的應用程式，以代表您的帳戶運作。 |
 | API版本 | 您正在使用的[!DNL Salesforce Service Cloud]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，Experience Platform會自動使用最新可用版本。 |
 
-如需針對[!DNL Salesforce Service Cloud]使用OAuth的詳細資訊，請參閱OAuth授權流程[&#128279;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5)的[!DNL Salesforce Service Cloud] 指南。
+如需針對[!DNL Salesforce Service Cloud]使用OAuth的詳細資訊，請參閱OAuth授權流程](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)的[[!DNL Salesforce Service Cloud] 指南。
 
 >[!ENDTABS]
 

@@ -3,9 +3,9 @@ title: 使用流量服務API連線Snowflake至Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Snowflake。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1251'
 ht-degree: 3%
 
 ---
@@ -36,6 +36,10 @@ ht-degree: 3%
 請閱讀下列步驟，以瞭解如何在Azure上將您的[!DNL Snowflake]來源連線至Experience Platform。
 
 ### 收集必要的認證
+
+>[!WARNING]
+>
+>[!DNL Snowflake]來源的基本驗證（或帳戶金鑰驗證）將於2025年11月被取代。 您必須移至金鑰組型驗證，才能繼續使用該來源，並將資料庫中的資料擷取至Experience Platform。 如需有關棄用的詳細資訊，請閱讀[[!DNL Snowflake] 減少認證洩露風險的最佳實務指南](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)。
 
 您必須提供下列認證屬性的值，才能驗證您的[!DNL Snowflake]來源。
 

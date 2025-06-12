@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何使用Snowflake UI建立Adobe Experience Platform來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1210'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 3%
 閱讀本指南，瞭解如何使用使用者介面將您的[!DNL Snowflake]帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
+
+>[!WARNING]
+>
+>[!DNL Snowflake]來源的基本驗證（或帳戶金鑰驗證）將於2025年11月被取代。 您必須移至金鑰組型驗證，才能繼續使用該來源，並將資料庫中的資料擷取至Experience Platform。 如需有關棄用的詳細資訊，請閱讀[[!DNL Snowflake] 減少認證洩露風險的最佳實務指南](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)。
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
@@ -46,7 +50,7 @@ ht-degree: 3%
 
 接下來，您將進入來源工作流程的驗證步驟。 在這裡，您可以使用現有帳戶或建立新帳戶。
 
-若要使用現有的帳戶，請選取您要連線的[!DNL Snowflake]帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
+若要使用現有的帳戶，請選取您要連線的[!DNL Snowflake]帳戶，然後選取[下一步]**[!UICONTROL 以繼續。]**
 
 ![來源工作流程中的現有帳戶介面。](../../../../images/tutorials/create/snowflake/existing.png)
 
