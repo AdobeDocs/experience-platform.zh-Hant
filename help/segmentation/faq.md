@@ -2,9 +2,9 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 92b70dc6d6085067f11d43436bc74d64bce72dd0
 workflow-type: tm+mt
-source-wordcount: '4842'
+source-wordcount: '4837'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 外部產生的對象中的所有其他資料都視為&#x200B;**裝載屬性**。 這些屬性&#x200B;**只能**&#x200B;在啟用期間用於個人化和擴充，而且&#x200B;**不**&#x200B;附加至設定檔。 不過，這些屬性會儲存在資料湖中。
 
-雖然在使用「區段產生器」建立對象時，可參考外部產生的對象，但無法使用個別設定檔屬性&#x200B;**&#x200B;**。
+雖然在使用「區段產生器」建立對象時，可參考外部產生的對象，但無法使用個別設定檔屬性&#x200B;****。
 
 ### 我可以協調外部產生的受眾資料與Experience Platform中的現有設定檔嗎？
 
@@ -120,7 +120,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 | 啟用管道 | 來自CSV自訂上傳的對象 | 來自對象構成的對象 |
 | --- | --- | --- |
-| Real-Time CDP目的地 | 裝載屬性和對象都可以啟動。 | 只能啟用對象。 無法啟動擴充屬性&#x200B;**&#x200B;**。 |
+| Real-Time CDP目的地 | 裝載屬性和對象都可以啟動。 | 只能啟用對象。 無法啟動擴充屬性&#x200B;****。 |
 | Adobe Journey Optimizer行銷活動 | 無法啟用對象和裝載屬性。 | 對象和擴充屬性皆可啟動。 |
 
 ## 生命週期狀態 {#lifecycle-states}
@@ -388,7 +388,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 在批次區段工作流程中，串流資料最多可能需要三個小時才能使用。
 
-例如，如果批次細分工作在下午9點執行，則保證包含串流擷取的資料&#x200B;**直到下午6點**。 包含下午6點之後但晚上9點之前&#x200B;**&#x200B;**&#x200B;串流擷取的資料。
+例如，如果批次細分工作在下午9點執行，則保證包含串流擷取的資料&#x200B;**直到下午6點**。 包含下午6點之後但晚上9點之前&#x200B;****&#x200B;串流擷取的資料。
 
 ## 邊緣分段 {#edge-segmentation}
 
@@ -430,4 +430,4 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 ### 資料串流是否有任何限制？
 
-為了將串流資料用於串流分段，串流中的事件之間必須&#x200B;**有**&#x200B;個間距。 如果在同一秒內有太多事件串流傳入，Experience Platform會將這些事件視為機器人產生的資料，系統便會捨棄這些事件。 最佳做法是事件資料之間應至少有&#x200B;**至少** 5秒鐘，以確保資料正確使用。
+使用邊緣或串流區段時，請確定每個設定檔的事件都已隔開。 如果在同一秒內有太多事件串流傳入，Experience Platform會將這些事件視為機器人產生的資料，系統便會捨棄這些事件。 最佳做法是事件資料之間應至少有&#x200B;**至少** 5秒鐘，以確保資料正確使用。

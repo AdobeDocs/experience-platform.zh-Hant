@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 串流分段指南
 description: 瞭解串流細分是什麼、如何建立使用串流細分評估的受眾，以及如何檢視使用串流細分建立的受眾。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 2%
@@ -169,7 +169,7 @@ WHEN(<= 24 hours before now)])
 
 | 客群 | 結構描述 | Source型別 | 查詢定義 | 客群 ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| 最近的放棄 | 體驗事件 | 批次 | 過去24小時內至少有一個放棄事件 | `7deb246a-49b4-4687-95f9-6316df049948` |
+| 最近的放棄 | 體驗事件 | 批次 | 在過去48小時內至少有一個放棄事件 | `7deb246a-49b4-4687-95f9-6316df049948` |
 | 最近結帳 | 體驗事件 | 串流 | 在過去24小時內至少有一個結帳 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 在此情況下，您需要建立第三個對象，如下所示：
@@ -467,4 +467,4 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 若要進一步瞭解如何使用Adobe Experience Platform使用者介面，請參閱[分段使用手冊](./overview.md)。
 
-如需有關串流區段的常見問題，請參閱常見問題[&#128279;](../faq.md#streaming-segmentation)的串流區段區段。
+如需有關串流區段的常見問題，請參閱常見問題](../faq.md#streaming-segmentation)的[串流區段區段。
