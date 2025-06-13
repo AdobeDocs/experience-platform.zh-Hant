@@ -4,9 +4,9 @@ description: 瞭解您可以使用身分圖表連結規則來設定的不同實�
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
+source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1999'
 ht-degree: 7%
 
 ---
@@ -43,6 +43,10 @@ ht-degree: 7%
 
 ## 基本實施 {#basic-implementations}
 
+>[!TIP]
+>
+>您必須為「CRMID」建立自訂跨裝置名稱空間，以完成下列基本實作練習。
+
 請閱讀本節，瞭解[!DNL Identity Graph Linking Rules]的基本實作。
 
 ### 使用案例：使用一個跨裝置名稱空間的簡單實施
@@ -72,15 +76,11 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **模擬圖形**
 
-+++選取以檢視模擬圖形
-
-在此圖表中，John （一般使用者）由CRMID表示。 {ECID： 123}代表John在其個人電腦上用來造訪您的電子商務平台的網頁瀏覽器。 {ECID： 999}代表他在[!DNL iPhone]上使用的瀏覽器，{IDFA: a-b-c}代表他的[!DNL iPhone]。
+在此圖表中，John （一般使用者）由CRMID表示。 `{ECID: 123}`代表John在其個人電腦上用來造訪您的電子商務平台的網頁瀏覽器。 `{ECID: 999}`代表他在[!DNL iPhone]上使用的瀏覽器，`{IDFA: a-b-c}`代表他的[!DNL iPhone]。
 
 ![具有一個跨裝置名稱空間的簡單實作……](../images/configs/basic/simple-implementation.png)
 
-+++
-
-### 練習
+**練習**
 
 在圖形模擬中模擬以下設定。 您可以建立自己的事件，或使用文字模式複製並貼上。
 
@@ -99,18 +99,14 @@ CRMID: Jane, ECID: 111
 
 **模擬圖形**
 
-+++選取以檢視模擬圖形
-
 在此圖表中，John和Jane由他們各自的CRMID表示：
 
-* {CRMID: John}
-* {CRMID: Jane}
+* `{CRMID: John}`
+* `{CRMID: Jane}`
 
-桌上型電腦上同時用來造訪電子商務平台的瀏覽器由{ECID： 111}表示。 在此圖表案例中，Jane是最後驗證的一般使用者，因此，{ECID： 111}與{CRMID: John}之間的連結已移除。
+桌上型電腦上同時用來造訪您的電子商務平台的瀏覽器由`{ECID: 111}`表示。 在此圖表案例中，Jane是最後驗證的使用者，因此`{ECID: 111}`與`{CRMID: John}`之間的連結已移除。
 
 ![共用裝置(PC)的模擬圖形。](../images/configs/basic/shared-device-pc.png)
-
-+++
 
 >[!TAB 共用裝置（行動裝置）]
 
@@ -125,13 +121,9 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 **模擬圖形**
 
-+++選取以檢視模擬圖形
-
-在此圖表中，John和Jane都由各自的CRMID表示。 他們使用的瀏覽器由{ECID： 111}表示，他們共用的[!DNL iPad]由{IDFA: a-b-c}表示。 在此圖表情境中，Jane是最後驗證的使用者，因此會移除從{ECID： 111}和{IDFA: a-b-c}到{CRMID: John}的連結。
+在此圖表中，John和Jane都由各自的CRMID表示。 他們使用的瀏覽器由`{ECID: 111}`表示，他們共用的[!DNL iPad]由`{IDFA: a-b-c}`表示。 在此圖表情境中，Jane是最後驗證的使用者，因此會移除從`{ECID: 111}`和`{IDFA: a-b-c}`到`{CRMID: John}`的連結。
 
 ![共用裝置（行動裝置）的模擬圖形。](../images/configs/basic/shared-device-mobile.png)
-
-+++
 
 >[!ENDTABS]
 
@@ -145,9 +137,9 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 >
 >* **非唯一識別**&#x200B;是與非唯一名稱空間關聯的識別。
 >
->* 在下列範例中，`CChash`是代表雜湊信用卡號碼的自訂名稱空間。
+>* 您必須為「CRMID」和「CChash」建立自訂跨裝置名稱空間，以完成下列中繼實作練習。 「CCHash」是自訂名稱空間，代表雜湊信用卡號碼。
 
-您是資料架構師，為發行信用卡的商業銀行工作。 您的行銷團隊已表示他們要將過去的信用卡交易歷史記錄納入設定檔。 此身分圖表可能如下所示。
+假設您是一位資料架構師，為一家發行信用卡的商業銀行工作。 您的行銷團隊已表示他們要將過去的信用卡交易歷史記錄納入設定檔。 此身分圖表可能如下所示。
 
 **文字模式：**
 
@@ -171,21 +163,32 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **模擬圖形**
 
-+++選取以檢視模擬圖形
-
 ![模擬圖形的影像](../images/configs/basic/simple-implementation-non-unique.png)
-
-+++
 
 我們不保證這些信用卡號碼或任何其他非唯一名稱空間會一律與單一使用者相關聯。 兩個一般使用者可能會以相同的信用卡註冊，因為可能會有非唯一的預留位置值遭到錯誤擷取。 簡言之，不保證非唯一名稱空間不會導致圖表摺疊。
 
 為解決此問題，Identity Service會移除最舊的連結，並保留最新的連結。 這可確保圖形中只有一個CRMID，從而防止圖形摺疊。
 
-### 練習
+**練習**
 
 在圖形模擬中模擬以下設定。 您可以建立自己的事件，或使用文字模式複製並貼上。
 
 >[!BEGINTABS]
+
+>[!TAB 共用裝置]
+
+**文字模式：**
+
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 3333-4444
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:123
+```
+
+**模擬圖形**
+
+![具有雜湊的中繼共用裝置圖表。](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB 兩個擁有相同信用卡的使用者]
 
@@ -202,11 +205,7 @@ CRMID: Jane, ECID:456
 
 **模擬圖形**
 
-+++選取以檢視模擬圖形
-
 ![兩個使用者使用相同信用卡註冊的圖表。](../images/configs/intermediate/graph-with-same-credit-card.png)
-
-+++
 
 >[!TAB 無效的信用卡號碼]
 
@@ -223,17 +222,17 @@ CRMID: Jill, CChash: undefined
 
 **模擬圖形**
 
-+++選取以檢視模擬圖形
-
 ![雜湊問題導致信用卡無效的圖表。](../images/configs/intermediate/graph-with-invalid-credit-card.png)
-
-+++
 
 >[!ENDTABS]
 
 ### 使用案例：您的資料包含雜湊和未雜湊CRMID
 
-您同時擷取非雜湊（離線） CRMID和雜湊（線上） CRMID。 他們希望非雜湊和雜湊CRMID之間有直接的關係。 當一般使用者使用已驗證的帳戶瀏覽時，雜湊CRMID將會與裝置ID （以ECID在Identity Service上表示）一起傳送。
+>[!TIP]
+>
+>您必須為「CRMID」和「CRMIDhash」建立自訂跨裝置名稱空間，以完成下列中繼實作練習。
+
+您同時擷取非雜湊（離線） CRMID和雜湊（線上） CRMID。 未雜湊與雜湊CRMID兩者間會有直接關係，這是預期的結果。 當一般使用者使用已驗證的帳戶瀏覽時，雜湊CRMID將會與裝置ID （以ECID在Identity Service上表示）一起傳送。
 
 **演演算法組態（身分設定）**
 
@@ -252,7 +251,7 @@ CRMID: Jill, CChash: undefined
 
 >[!BEGINTABS]
 
->[!TAB 案例1：共用裝置]
+>[!TAB 共用裝置]
 
 John和Jane共用一個裝置。
 
@@ -265,9 +264,9 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![預留位置](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![使用雜湊CRMID的共用裝置圖表](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
->[!TAB 案例2：錯誤的資料]
+>[!TAB 錯誤的資料]
 
 由於雜湊程式發生錯誤，系統會產生非唯一的雜湊CRMID，並傳送至Identity Service。
 
@@ -360,7 +359,7 @@ Email: jane@g, ECID: 111
 
 >[!BEGINTABS]
 
->[!TAB 兩名使用者登入]
+>[!TAB 共用裝置]
 
 在此案例中，John和Jane都會登入電子商務網站。
 
@@ -392,13 +391,17 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 進階實施涉及複雜的多層圖表情境。 這些型別的實作包括使用&#x200B;**名稱空間優先順序**，以識別必須移除的正確連結，以防止圖表摺疊。
 
-**名稱空間優先順序**&#x200B;是根據名稱空間重要性排列名稱空間的中繼資料。 如果圖表包含兩個身分，每個都有不同的唯一名稱空間，Identity Service會使用名稱空間優先順序來決定要移除的連結。 如需詳細資訊，請閱讀名稱空間優先順序[&#128279;](../identity-graph-linking-rules/namespace-priority.md)的檔案。
+**名稱空間優先順序**&#x200B;是根據名稱空間重要性排列名稱空間的中繼資料。 如果圖表包含兩個身分，每個都有不同的唯一名稱空間，Identity Service會使用名稱空間優先順序來決定要移除的連結。 如需詳細資訊，請閱讀名稱空間優先順序](../identity-graph-linking-rules/namespace-priority.md)的[檔案。
 
 在複雜的圖表情境中，名稱空間優先順序扮演關鍵角色。 圖表可以有多個層 — 一個使用者可以與多個登入ID相關聯，並且這些登入ID可以進行雜湊處理。 此外，不同的ECID可以連結至不同的登入ID。 為了確保移除正確層中的正確連結，您的名稱空間優先順序設定必須正確。
 
 閱讀本節以瞭解[!DNL Identity Graph Linking Rules]的進階實作。
 
 ### 使用案例：您需要多個業務線的支援
+
+>[!TIP]
+>
+>您必須為「CRMID」和「loginID」建立自訂跨裝置名稱空間，以完成下方的進階實作練習。
 
 您的一般使用者有兩個不同的帳戶：個人帳戶和商務帳戶。 每個帳戶都由不同的ID識別。 在此案例中，典型的圖表將如下所示：
 
@@ -469,9 +472,15 @@ loginID: JanePersonal, ECID: 222
 
 ### 使用案例：您有需要多個名稱空間的複雜實施
 
+>[!TIP]
+>
+>您必須為「CRMID」、「loyaltyID」、「thirdPartyID」和「orderID」建立自訂跨裝置名稱空間，以完成下方的進階實作練習。
+
 您是一家媒體和娛樂公司，您的使用者擁有以下優勢：
+
 * A CRMID
 * 熟客方案ID
+
 此外，您的一般使用者可在電子商務網站上購物，此資料會繫結至其電子郵件地址。 協力廠商資料庫提供者也擴充了使用者資料，並成批傳送給Experience Platform。
 
 **文字模式**
