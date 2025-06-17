@@ -3,9 +3,9 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: Facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
+source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2690'
 ht-degree: 5%
 
 ---
@@ -13,14 +13,6 @@ ht-degree: 5%
 # [!DNL Facebook]個連線
 
 ## 概觀 {#overview}
-
->[!IMPORTANT]
->
->* 從2025年5月23日開始並持續整個2025年6月，您可能會在目的地目錄中暫時看到兩個&#x200B;**[!DNL Facebook Custom Audience]**&#x200B;目的地卡片，持續時間長達數小時。 這是因為內部升級至目的地服務，並支援新欄位，以改進目標定位並與Facebook屬性上的設定檔進行比對。 如需新位址相關欄位的詳細資訊，請參閱[支援的身分](#supported-identities)區段。
->* 如果您看到標示為&#x200B;**[!UICONTROL （新） Facebook自訂對象]**&#x200B;的卡片，請將此卡片用於新的啟用資料流程。 您的現有資料流將會自動更新，因此您不需要採取任何動作。 在此期間您對現有資料流所做的任何變更，都將在升級後保留。 升級完成後，**[!UICONTROL （新） Facebook自訂對象]**&#x200B;目的地卡片將重新命名為&#x200B;**[!DNL Facebook Custom Audience]**。
->* 如果您使用[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
->   * 流程規格 ID：`bb181d00-58d7-41ba-9c15-9689fdc831d3`
->   * 連線規格 ID：`c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 為您的[!DNL Facebook]行銷活動啟用設定檔，以根據雜湊電子郵件進行對象目標定位、個人化和隱藏。
 
@@ -146,8 +138,8 @@ ht-degree: 5%
 >[!NOTE]
 >
 >來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
-> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
-> **[!UICONTROL 套用轉換]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
+>> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
+>> **[!UICONTROL 套用轉換]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
 
 ![套用對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -195,7 +187,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
    ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的Facebook認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Facebook認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
