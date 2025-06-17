@@ -2,10 +2,10 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
+source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
 workflow-type: tm+mt
-source-wordcount: '2678'
-ht-degree: 7%
+source-wordcount: '3414'
+ht-degree: 5%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 7%
 | [!DNL Adobe Journey Optimizer] | 自訂動作 |  | 自訂動作可獨立新增至套件。 將自訂動作指派給歷程後，就無法再編輯它。 若要更新自訂動作，您應： <ul><li>在移轉歷程之前移動自訂動作</li><li>更新移轉後自訂動作的設定（例如請求標頭、查詢引數和驗證）</li><li>使用您在第一個步驟中新增的自訂動作移轉歷程物件</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 內容範本 | | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer行銷活動和歷程中重複使用自訂內容。 |
 | [!DNL Adobe Journey Optimizer] | 片段 | 所有巢狀片段。 | 片段可以復製為歷程物件的相依物件。 片段是可重複使用的元件，可在各個Journey Optimizer促銷活動和歷程的一封或多封電子郵件中參考。 |
-| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
 
 不會複製曲面（例如預設集）。 系統會根據訊息型別和表面名稱，自動選取目標沙箱上最接近的相符專案。 如果在目標沙箱上找不到表面，則表面複製將失敗，導致訊息複製失敗，因為訊息需要表面才能用於設定。 在這種情況下，至少需要為訊息的正確通道建立一個表面，副本才能運作。
 
@@ -156,7 +156,7 @@ ht-degree: 7%
 
 若要使用現有物件，請選取相依物件旁的鉛筆圖示。
 
-![封裝物件與相依性]頁面會顯示包含在封裝中的資產清單。(../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![封裝物件與相依性]頁面會顯示包含在封裝中的資產清單。](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)[!UICONTROL 
 
 隨即顯示建立新或使用現有專案的選項。 選取&#x200B;**[!UICONTROL 使用現有的]**。
 
@@ -168,7 +168,7 @@ ht-degree: 7%
 
 您返回到[!UICONTROL 封裝物件和相依性]頁面。 從這裡，選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成封裝匯入。
 
-![封裝物件和相依性[[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示[!UICONTROL 完成]。]](../images/ui/sandbox-tooling/finish-object-dependencies.png)]
+![封裝物件和相依性[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示[!UICONTROL 完成]。](../images/ui/sandbox-tooling/finish-object-dependencies.png)]
 
 ## 匯出和匯入整個沙箱
 
@@ -253,11 +253,99 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 匯入完成時，會在Experience Platform UI中收到通知。 您可以從警示圖示存取這些通知。 如果工作失敗，您可以從這裡導覽至疑難排解。
 
+## 透過沙箱工具傳輸沙箱間的反複物件設定更新 {#move-configs}
+
+您可以使用沙箱工具在不同沙箱之間傳輸物件設定。 先前，您必須手動重新建立或重新匯入物件（例如結構描述、欄位群組和資料型別）的設定更新，才能傳輸到其他沙箱。 透過此功能，您可以使用沙箱工具來加速工作流程，並透過在不同沙箱之間順暢傳輸您的設定更新來減少潛在的錯誤。
+
+![顯示如何在沙箱之間移動更新的圖表。](../images/ui/sandbox-tooling/move-updates-diagram.png)
+
+>[!TIP]
+>
+> 嘗試在不同沙箱之間傳輸物件設定之前，請確定您具備以下先決條件。
+>
+>- 存取沙箱工具的適當許可權。
+>- 在您的來源沙箱中新建立或更新後的物件（例如結構描述）。
+
+>[!BEGINSHADEBOX]
+
+### 支援的更新作業物件型別
+
+以下是支援更新的物件型別：
+
+- 結構描述
+- 欄位群組
+- 資料類型
+
+| 支援的更新 | 不支援的更新 |
+| --- | --- |
+| <ul><li>將新欄位/欄位群組新增至資源。</li><li>將必填欄位設為選用。</li><li>引入新的必填欄位。</li><li>引入新的關係欄位。</li><li>引入新的身分欄位。</li><li>變更資源的顯示名稱和說明。</li></ul> | <ul><li>移除先前定義的欄位。</li><li>在針對Real-time Customer Profile啟用結構描述時，重新定義現有欄位。</li><li>移除或限制先前支援的欄位值。</li><li>將現有欄位移動到結構樹中的不同位置 — 這將在目標沙箱中建立一個新欄位，但不會移除上一個欄位。</li><li>啟用或停用結構描述以參與設定檔 — 比較時將略過此操作。</li><li>存取控制標籤。</li></ul> |
+
+>[!ENDSHADEBOX]
+
+請依照下列步驟瞭解如何使用沙箱工具來將您的物件設定傳輸到不同的沙箱。
+
+### 先前匯入的物件
+
+如果您的使用案例涉及來源沙箱中需要設定更新的現有物件，請在已封裝並匯入其他沙箱後，按照以下步驟操作。
+
+首先，更新來源沙箱中的物件。 例如，導覽至&#x200B;**[!UICONTROL 結構描述]**&#x200B;工作區，選取您的結構描述，然後新增欄位群組。
+
+![具有更新結構描述的結構描述工作區。](../images/ui/sandbox-tooling/update-schema.png)
+
+更新結構描述後，請導覽至&#x200B;**[!UICONTROL 沙箱]**，選取&#x200B;**[!UICONTROL 封裝]**，然後找出您現有的封裝。
+
+![已選取套件的沙箱工具介面](../images/ui/sandbox-tooling/select-package.png)
+
+使用套件介面來驗證您的變更。 選取&#x200B;**[!UICONTROL 檢查更新]**&#x200B;以檢視封裝中成品的任何變更。 接著，選取&#x200B;**[!UICONTROL 檢視diff]**&#x200B;以接收針對成品進行的所有變更的詳細摘要。
+
+![已選取包含檢視差異按鈕的封裝介面。](../images/ui/sandbox-tooling/view-diff.png)
+
+[!UICONTROL 檢視diff]介面出現。 如需來源和目標成品的相關資訊，以及套用至這些成品的變更，請參閱此收費專案。
+
+![變更摘要。](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+在此步驟中，您也可以選取[!UICONTROL 使用AI摘要]，以取得所有變更的逐步摘要。
+
+![已啟用AI的摘要。](../images/ui/sandbox-tooling/ai-summary.png)
+
+準備就緒後，請選取&#x200B;**[!UICONTROL 更新封裝]**，然後在出現的快顯視窗中選取&#x200B;**[!UICONTROL 確認]**。 工作完成後，您可以重新整理頁面，並選取&#x200B;**[!UICONTROL 檢視歷程記錄]**&#x200B;以驗證封裝的版本。
+
+![確認視窗。](../images/ui/sandbox-tooling/confirm-changes.png)
+
+若要匯入您的變更，請導覽回[!UICONTROL 套件]目錄，並選取套件旁邊的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 匯入套件]**。 Experience Platform自動選取[!UICONTROL 更新現有物件]。 驗證變更，然後選取&#x200B;**[!UICONTROL 完成]**。
+
+>[!NOTE]
+>
+>在此工作流程中，所有相依物件都會自動更新到目標沙箱中。
+
+![匯入目標介面。](../images/ui/sandbox-tooling/import-objective.png)
+
+若要進一步驗證匯入程式，請導覽至您的目標沙箱，並從該沙箱中手動檢視更新的物件。
+
+### 在目標沙箱中手動建立的物件
+
+如果您的使用案例涉及將設定變更套用至在不同沙箱中手動建立的物件，請按照以下步驟操作。
+
+首先，使用更新後的物件建立並發佈新套件。
+
+接下來，將您的套件匯入至目標沙箱，其中包含您也要更新的物件。 在匯入程式期間，選取&#x200B;**[!UICONTROL 更新現有物件]**，然後使用物件導覽器手動選取要套用更新的目標物件。
+
+>[!NOTE]
+>
+>- 可選擇在不同的沙箱中為相依物件選取目標對應。 如果未選取任何專案，則會建立新的專案。
+>- 對於身分名稱空間，如果需要在目標沙箱中重複使用現有身分，系統會自動偵測是否需要建立新身分。
+
+![要更新的目標物件的匯入目標介面（含預留位置）。](../images/ui/sandbox-tooling/update-existing-objects.png)
+
+識別要更新的目標物件之後，請選取&#x200B;**[!UICONTROL 完成]**。
+
+![選取的目標物件。](../images/ui/sandbox-tooling/add-updated-objects.png)
+
 ## 教學課程影片
 
 以下影片旨在協助您瞭解沙箱工具，並概述如何建立新套件、發佈套件和匯入套件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3446101/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 後續步驟
 
