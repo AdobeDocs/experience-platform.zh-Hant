@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 中的 AI 助理指南
 user-guide-description: 了解如何使用 AI 助理來加快 Adobe Experience Platform 和 Real-Time Customer Data Platform 的工作流程。
 description: 本檔案列出Adobe Experience Platform中AI助理的目錄。
 role: Admin,User,Developer,Leader
-source-git-commit: c5ca8c8e13c5bf889a8ed4d67f00e955aea56e75
+source-git-commit: 4aa2e4fb17d1c6ab9997ab7d0fbe7f5f5d0e5ad7
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 30%
+source-wordcount: '116'
+ht-degree: 31%
 
 ---
 
@@ -29,8 +29,7 @@ ht-degree: 30%
    * [用於建立受眾的XDM欄位探索](./new-features/xdm-field-discovery.md)
 * 模型詳細資料 {#model-details}
    * [模型詳細資料概觀](./model-details/overview.md)
-   * AI模型詳細資料 {#ai-model-details}
-      * [AI Assistant Natural Operational Insights Language to SQL](./model-details/ai-model-details/natural-language-to-sql.md)
-      * [傳送時間最佳化](./model-details/ai-model-details/send-time-optimization.md)
+   * [AI Assistant Natural Operational Insights Language to SQL](./model-details/natural-language-to-sql.md)
+   * [傳送時間最佳化](./model-details/send-time-optimization.md)
 * [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
 

@@ -4,9 +4,9 @@ description: 瞭解您可以使用身分圖表連結規則來設定的不同實�
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
+source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1951'
 ht-degree: 7%
 
 ---
@@ -17,11 +17,6 @@ ht-degree: 7%
 >id="platform_identities_algorithmconfiguration"
 >title="演算法設定"
 >abstract="設定適合您所攝取身分的唯一命名空間和命名空間優先順序。"
-
->[!NOTE]
->
->* &quot;CRMID&quot;和&quot;loginID&quot;均為自訂名稱空間。 在此檔案中，「CRMID」是人員識別碼，而「loginID」是與指定人員相關聯的登入識別碼。
->* 若要模擬本檔案中概述的範例圖表情境，您必須先建立兩個自訂名稱空間，一個具有身分符號「CRMID」，另一個具有身分符號「loginID」。 身分符號區分大小寫。
 
 閱讀本檔案以瞭解您可以使用[!DNL Identity Graph Linking Rules]設定的不同實作型別。
 
@@ -43,9 +38,9 @@ ht-degree: 7%
 
 ## 基本實施 {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->您必須為「CRMID」建立自訂跨裝置名稱空間，以完成下列基本實作練習。
+>若要完成下列實作，您必須使用身分符號（區分大小寫）建立自訂名稱空間： `CRMID`。
 
 請閱讀本節，瞭解[!DNL Identity Graph Linking Rules]的基本實作。
 
@@ -90,7 +85,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 **共用裝置（電腦）**
 
-**文字模式：**
+**文字模式**
 
 ```json
 CRMID: John, ECID: 111
@@ -112,7 +107,7 @@ CRMID: Jane, ECID: 111
 
 **共用裝置（行動裝置）**
 
-**文字模式：**
+**文字模式**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -129,19 +124,23 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 ## 中繼實施 {#intermediate-implementations}
 
+>[!TIP]
+>
+>**非唯一識別**&#x200B;是與非唯一名稱空間關聯的識別。
+
 閱讀本節以瞭解[!DNL Identity Graph Linking Rules]的中繼實作。
 
 ### 使用案例：您的資料包含非唯一身分
 
->[!TIP]
+>[!NOTE]
 >
->* **非唯一識別**&#x200B;是與非唯一名稱空間關聯的識別。
->
->* 您必須為「CRMID」和「CChash」建立自訂跨裝置名稱空間，以完成下列中繼實作練習。 「CCHash」是自訂名稱空間，代表雜湊信用卡號碼。
+>若要完成下列實作，您必須使用身分符號（區分大小寫）建立下列自訂名稱空間：
+>* `CRMID`
+>* `CCHash` （這是代表雜湊信用卡號碼的自訂名稱空間。）
 
 假設您是一位資料架構師，為一家發行信用卡的商業銀行工作。 您的行銷團隊已表示他們要將過去的信用卡交易歷史記錄納入設定檔。 此身分圖表可能如下所示。
 
-**文字模式：**
+**文字模式**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -177,7 +176,7 @@ CRMID: John, ECID: 999, IDFA: a-b-c
 
 >[!TAB 共用裝置]
 
-**文字模式：**
+**文字模式**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -194,7 +193,7 @@ CRMID: Jane, ECID:123
 
 兩個不同的一般使用者使用相同的信用卡註冊您的電子商務網站。 您的行銷團隊想要確保信用卡僅與單一設定檔相關聯，以防止圖表摺疊。
 
-**文字模式：**
+**文字模式**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -211,7 +210,7 @@ CRMID: Jane, ECID:456
 
 由於資料不乾淨，Experience Platform中擷取的信用卡號碼無效。
 
-**文字模式：**
+**文字模式**
 
 ```json
 CRMID: John, CChash: undefined
@@ -228,9 +227,11 @@ CRMID: Jill, CChash: undefined
 
 ### 使用案例：您的資料包含雜湊和未雜湊CRMID
 
->[!TIP]
+>[!NOTE]
 >
->您必須為「CRMID」和「CRMIDhash」建立自訂跨裝置名稱空間，以完成下列中繼實作練習。
+>若要完成下列實作，您必須使用身分符號（區分大小寫）建立自訂名稱空間：
+>* `CRMID`
+>* `CRMIDhash`
 
 您同時擷取非雜湊（離線） CRMID和雜湊（線上） CRMID。 未雜湊與雜湊CRMID兩者間會有直接關係，這是預期的結果。 當一般使用者使用已驗證的帳戶瀏覽時，雜湊CRMID將會與裝置ID （以ECID在Identity Service上表示）一起傳送。
 
@@ -255,7 +256,7 @@ CRMID: Jill, CChash: undefined
 
 John和Jane共用一個裝置。
 
-**文字模式：**
+**文字模式**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -270,7 +271,7 @@ CRMIDhash: Jane, ECID: 111
 
 由於雜湊程式發生錯誤，系統會產生非唯一的雜湊CRMID，並傳送至Identity Service。
 
-**文字模式：**
+**文字模式**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -342,6 +343,10 @@ Email: jane@g, ECID: 111
 
 ### 使用案例：您的資料包含三個不重複的名稱空間
 
+>[!NOTE]
+>
+>若要完成下列實作，您必須使用身分符號（區分大小寫）建立自訂名稱空間： `CRMID`。
+
 您的客戶會依下列方式定義單一人員實體：
 
 * 具有指派CRMID的一般使用者。
@@ -391,7 +396,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 進階實施涉及複雜的多層圖表情境。 這些型別的實作包括使用&#x200B;**名稱空間優先順序**，以識別必須移除的正確連結，以防止圖表摺疊。
 
-**名稱空間優先順序**&#x200B;是根據名稱空間重要性排列名稱空間的中繼資料。 如果圖表包含兩個身分，每個都有不同的唯一名稱空間，Identity Service會使用名稱空間優先順序來決定要移除的連結。 如需詳細資訊，請閱讀名稱空間優先順序[&#128279;](../identity-graph-linking-rules/namespace-priority.md)的檔案。
+**名稱空間優先順序**&#x200B;是根據名稱空間重要性排列名稱空間的中繼資料。 如果圖表包含兩個身分，每個都有不同的唯一名稱空間，Identity Service會使用名稱空間優先順序來決定要移除的連結。 如需詳細資訊，請閱讀名稱空間優先順序](../identity-graph-linking-rules/namespace-priority.md)的[檔案。
 
 在複雜的圖表情境中，名稱空間優先順序扮演關鍵角色。 圖表可以有多個層 — 一個使用者可以與多個登入ID相關聯，並且這些登入ID可以進行雜湊處理。 此外，不同的ECID可以連結至不同的登入ID。 為了確保移除正確層中的正確連結，您的名稱空間優先順序設定必須正確。
 
@@ -399,13 +404,15 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 ### 使用案例：您需要多個業務線的支援
 
->[!TIP]
+>[!NOTE]
 >
->您必須為「CRMID」和「loginID」建立自訂跨裝置名稱空間，以完成下方的進階實作練習。
+>若要完成下列實作，您必須使用身分符號（區分大小寫）建立自訂名稱空間：
+>* `CRMID`
+>* `loginID`
 
 您的一般使用者有兩個不同的帳戶：個人帳戶和商務帳戶。 每個帳戶都由不同的ID識別。 在此案例中，典型的圖表將如下所示：
 
-**文字模式***
+**文字模式**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -427,12 +434,7 @@ loginID: JohnBusiness, ECID: 222
 
 **模擬圖形**
 
-+++選取以檢視模擬圖形
-
 ![具有商務和個人電子郵件之一般使用者的身分圖表。](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **練習**
 
@@ -457,6 +459,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB 傳送到Real-Time CDP的資料不正確]
 
+**文字模式**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -472,9 +476,12 @@ loginID: JanePersonal, ECID: 222
 
 ### 使用案例：您有需要多個名稱空間的複雜實施
 
->[!TIP]
+>[!NOTE]
 >
->您必須為「CRMID」、「loyaltyID」、「thirdPartyID」和「orderID」建立自訂跨裝置名稱空間，以完成下方的進階實作練習。
+>若要完成下列實作，您必須使用身分符號（區分大小寫）建立自訂名稱空間：
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 您是一家媒體和娛樂公司，您的使用者擁有以下優勢：
 
@@ -499,8 +506,8 @@ CRMID: John, ECID: 111
 | 顯示名稱 | 身分識別符號 | 身分識別類型 | 在每個圖表中唯一 | 命名空間優先順序 |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | 跨裝置 | ✔️ | 1 |
-| loyaltyID | loyaltyID | 跨裝置 | | 2 |
-| 電子郵件 | 電子郵件 | 電子郵件 | | 3 |
+| loyaltyID | loyaltyID | 跨裝置 | ✔️ | 2 |
+| 電子郵件 | 電子郵件 | 電子郵件 | ✔️ | 3 |
 | thirdPartyID | thirdPartyID | 跨裝置 | | 4 |
 | orderID | orderID | 跨裝置 | | 5 |
 | ECID | ECID | COOKIE | | 6 |

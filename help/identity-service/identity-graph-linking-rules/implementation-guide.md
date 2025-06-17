@@ -2,10 +2,10 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用Identity Graph連結規則設定實作資料時應遵循的建議步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
+source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
 workflow-type: tm+mt
-source-wordcount: '1955'
-ht-degree: 5%
+source-wordcount: '1956'
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 5%
 
 #### 單一人員名稱空間需求 {#single-person-namespace-requirement}
 
-您必須確保每個設定檔中一律存在具有最高優先順序的唯一名稱空間。 如此可讓Identity Service偵測指定圖表中的適當人員識別碼。
+您必須確保每個已知設定檔中一律存在具有最高優先順序的唯一名稱空間。 如此可讓Identity Service偵測指定圖表中的適當人員識別碼。
 
 +++選取此選項可檢視沒有單一人員識別碼名稱空間的圖表範例
 
@@ -292,7 +292,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 如需[!DNL Identity Graph Linking Rules]的詳細資訊，請閱讀下列檔案：
 
 * [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [身分識別最佳化演算法](./identity-optimization-algorithm.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [命名空間優先順序](./namespace-priority.md)
