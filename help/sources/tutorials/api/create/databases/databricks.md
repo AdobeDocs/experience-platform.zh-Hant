@@ -4,10 +4,10 @@ description: 瞭解如何使用API將Azure Databricks連線至Experience Platfor
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 2%
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
@@ -47,6 +47,8 @@ ht-degree: 2%
 | `accessToken` | 驗證您[!DNL Databricks]帳戶的存取Token。 您可以使用[!DNL Databricks]工作區產生存取權杖。 |
 | `database` | 三角湖中的資料庫名稱。 |
 | `connectionSpec.Id` | 連線規格ID會傳回來源的連線器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Databricks]的連線規格識別碼為`e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`。 |
+
+如需詳細資訊，請閱讀 [[!DNL Azure Databricks]  概觀](../../../../connectors/databases/databricks.md)。
 
 ## 建立基礎連線
 

@@ -3,11 +3,11 @@ title: Azure Databricks
 description: 瞭解將Azure Databricks連線至Experience Platform所需的先決條件步驟。
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
+source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >* [!DNL Azure Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 >
->* [!DNL Azure Databricks]來源是測試版。 閱讀來源概觀中的[條款與條件](../../home.md#terms-and-conditions)，瞭解使用Beta標籤來源的相關資訊。
+>* [!DNL Azure Databricks]來源是測試版。 閱讀來源概觀中的[條款與條件](../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
 [!DNL Azure Databricks]是雲端型平台，專為資料分析、機器學習和AI而設計。 您可以使用[!DNL Databricks]與[!DNL Azure]整合，並提供整體環境，以大規模建置、部署及管理資料解決方案。
 
@@ -161,6 +161,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![Azure上的Databricks UI。](../../images/tutorials/create/databricks/databricks-ui.png)
 
-## 使用API連線[!DNL Databricks]至Experience Platform
+## 將[!DNL Databricks]連線至Experience Platform
 
-現在您已完成先決條件步驟，接下來可以使用API [&#128279;](../../tutorials/api/create/databases/databricks.md)將您的 [!DNL Databricks] 帳戶連線至Experience Platform ，繼續參閱指南。
+現在您已完成先決條件步驟，您可以繼續並將[!DNL Databricks]帳戶連線至Experience Platform：
+
+* [透過API連線](../../tutorials/api/create/databases/databricks.md)
+* [透過UI中的來源工作區連線](../../tutorials/ui/create/databases/databricks.md)
