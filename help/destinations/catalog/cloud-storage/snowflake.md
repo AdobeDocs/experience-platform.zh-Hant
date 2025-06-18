@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 6%
+source-wordcount: '1054'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,27 @@ ht-degree: 6%
 
 ## 概觀 {#overview}
 
-使用私人清單將資料匯出至您的Snowflake帳戶。
+使用Snowflake目的地聯結器將資料匯出至Adobe的Snowflake執行個體，然後透過[私人清單](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about)與您的執行個體共用。
+
+請閱讀下列章節，瞭解Snowflake目的地的運作方式，以及資料在Adobe和Snowflake之間的傳輸方式。
+
+### Snowflake資料共用如何運作 {#data-sharing}
+
+此目的地使用[!DNL Snowflake]資料共用，這表示不會將任何資料實際匯出或傳輸至您自己的Snowflake執行個體。 Adobe會改為授予您在Adobe的Snowflake環境中託管之即時表格的唯讀存取權。 您可以直接從Snowflake帳戶查詢此共用表格，但您不是該表格的擁有者，且無法在指定的保留期間之後修改或保留該表格。 Adobe可完全管理共用表格的生命週期和結構。
+
+第一次從Adobe的Snowflake執行個體將資料分享給您的執行個體時，系統會提示您接受Adobe的私人清單。
+
+### 資料保留和存留時間(TTL) {#ttl}
+
+透過這項整合共用的所有資料都具有七天的固定存留時間(TTL)。 上次匯出七天後，無論資料流是否仍在作用中，共用表格都會自動過期且無法存取。 如果您需要保留資料超過7天，則必須在TTL到期之前，將內容複製到您自己的Snowflake執行個體中擁有的表格中。
+
+### 對象更新行為 {#audience-update-behavior}
+
+如果您的對象是以[批次模式](../../../segmentation/methods/batch-segmentation.md)評估，則共用表格中的資料每24小時會重新整理一次。 這表示對象會籍的變更與這些變更反映在共用表格中之間，最多可能延遲24小時。
+
+### 增量匯出邏輯 {#incremental-export}
+
+當資料流首次針對對象執行時，會執行回填並共用所有目前符合資格的設定檔。 初次回填之後，共用表格只會反映漸進式更新。 這表示在對象中新增或移除的設定檔。 此方法可確保有效率的更新，並持續讓共用表格保持最新狀態。
 
 ## 先決條件 {#prerequisites}
 
@@ -67,13 +87,20 @@ ht-degree: 6%
 
 ### 填寫目標詳細資訊 {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_snowflake_accountID"
+>title="輸入您的Snowflake帳戶ID"
+>abstract="如果您的帳戶已連結至組織，請使用此格式： `OrganizationName.AccountName`<br><br>如果您的帳戶未連結至組織，請使用此格式： `AccountName`"
+
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
 ![顯示如何填寫目的地詳細資料的熒幕擷圖範例](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL Snowflake帳戶識別碼]**：您的Snowflake帳戶識別碼。 範例：`adobe-123456`。
+* **[!UICONTROL Snowflake帳戶識別碼]**：您的Snowflake帳戶識別碼。 根據您的帳戶是否連結至組織，使用下列帳戶ID格式：
+   * 如果您的帳戶連結至組織： `OrganizationName.AccountName`。
+   * 如果您的帳戶未連結至組織： `AccountName`。
 * **[!UICONTROL 帳戶確認]**：開啟Snowflake帳戶ID確認，確認您的帳戶ID正確且屬於您。
 
 >[!IMPORTANT]
