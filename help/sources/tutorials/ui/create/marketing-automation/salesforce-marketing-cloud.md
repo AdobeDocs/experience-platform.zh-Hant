@@ -2,10 +2,10 @@
 title: 透過UI將您的Salesforce Marketing Cloud帳戶連線至Experience Platform
 description: 瞭解如何透過UI將您的Salesforce Marketing Cloud帳戶連結至Experience Platform。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: 0c6a51d06e57eb6de063a350bd4b17022555a0b4
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 2%
+source-wordcount: '576'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 >
 >[!DNL Salesforce Marketing Cloud]來源將於2026年1月汰除。 新的來源將作為替代方案於今年晚些時候發行。 釋放新來源後，您必須在2026年1月底之前建立新的帳戶連線和資料流，以計畫移轉至新來源。
 
-本教學課程提供如何透過UI將您的[!DNL Salesforce Marketing Cloud]帳戶連線至Adobe Experience Platform的步驟。
+閱讀本指南，瞭解如何使用Experience Platform使用者介面中的來源工作區將您的[!DNL Salesforce Marketing Cloud]帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
 
@@ -30,46 +30,51 @@ ht-degree: 2%
 
 ### 收集必要的認證
 
-若要在Experience Platform上存取您的[!DNL Salesforce Marketing Cloud]帳戶，您必須提供下列值：
+閱讀[[!DNL Salesforce Marketing Cloud] 總覽](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#prerequisites)以取得驗證的相關資訊。
 
-| 認證 | 說明 |
-| ---------- | ----------- |
-| Host | 應用程式的主機伺服器。 這通常是您的子網域。 **注意：**&#x200B;輸入`host`值時，您必須指定`{subdomain}.rest.marketingcloudapis.com`。 例如，如果您的主機URL是`https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`，則必須輸入`acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`作為主機值。 |
-| 用戶端 ID | 與您的[!DNL Salesforce Marketing Cloud]應用程式關聯的使用者端識別碼。 |
-| 用戶端密碼 | 與您的[!DNL Salesforce Marketing Cloud]應用程式關聯的使用者端密碼。 |
-
-如需[!DNL Salesforce Marketing Cloud]驗證的詳細資訊，請瀏覽[[!DNL Salesforce] 驗證檔案](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm)。
-
-## 連線您的[!DNL Salesforce Marketing Cloud]帳戶
+## 瀏覽來源目錄
 
 >[!IMPORTANT]
 >
 >[!DNL Salesforce Marketing Cloud]來源整合目前不支援自訂物件擷取。
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]顯示Experience Platform支援的各種來源。
 
-您可以從類別清單中選取適當的類別。 您也可以使用搜尋列來篩選特定來源。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 選擇類別或使用搜尋列來尋找您的來源。
 
-在[!UICONTROL 行銷自動化]類別下，選取&#x200B;**[!UICONTROL Salesforce Marketing Cloud]**，然後選取&#x200B;**[!UICONTROL 設定]**。
+若要連線到[!DNL Salesforce Marketing Cloud]，請移至&#x200B;*[!UICONTROL 行銷自動化]*&#x200B;類別，選取&#x200B;**[!UICONTROL Salesforce Marketing Cloud]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 設定]**。
 
-![已選取Salesforce Marketing Cloud來源的來源目錄。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+>[!TIP]
+>
+>當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
-**[!UICONTROL 連線至Salesforce Marketing Cloud]**&#x200B;頁面隨即顯示。 您可以在此頁面上建立新帳戶或使用現有帳戶。
+![已選取Salesforce Marketing Cloud來源卡的來源目錄。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-### 新帳戶
+## 使用現有帳戶 {#existing}
 
-若要建立新帳戶，請選取「**[!UICONTROL 新帳戶]**」，並提供您帳戶的名稱、選擇性說明，以及與您[!DNL Salesforce Marketing Cloud]帳戶對應的驗證認證。
+若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後選取您要使用的[!DNL Salesforce Marketing Cloud]帳戶。
 
-完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**，然後等待一段時間以建立新連線。
+![來源工作流程中已選取「現有帳戶」的現有帳戶介面。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
-![新帳戶介面，您可在此介面驗證Salesforce Marketing Cloud的新帳戶。](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+## 建立新帳戶 {#new}
 
-### 現有帳戶
+您可以使用[!DNL Salesforce Marketing Cloud]來源連線至[!DNL Azure]或[!DNL Amazon Web Services] (AWS)上的Experience Platform。
 
-如果您已有現有的帳戶，請選取&#x200B;**[!UICONTROL 現有的帳戶]**，然後從顯示的清單中選取您要使用的帳戶。
+### 在[!DNL Azure]上連線到Experience Platform {#azure}
 
-![您可以從現有Salesforce Marketing Cloud帳戶清單中選取的現有帳戶介面。](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+若要在[!DNL Azure]上連線至Experience Platform，請提供帳戶名稱、選擇性說明以及您的[帳戶驗證認證](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#azure)。 完成後，請選取&#x200B;**[!UICONTROL 連線到來源]**，並等待一段時間以建立連線。
 
-## 後續步驟
+![來源工作流程中的新帳戶介面，用於連線至Azure上的Experience Platform。](../../../../images/tutorials/create/salesforce-marketing-cloud/new-azure.png)
 
-依照本教學課程中的指示，您已建立[!DNL Salesforce Marketing Cloud]帳戶與Experience Platform之間的連線。 您現在可以繼續進行下一個教學課程，並[建立資料流，將您的行銷自動化資料匯入Experience Platform](../../dataflow/marketing-automation.md)。
+### 在Amazon Web Services (AWS)上連線至Experience Platform {#aws}
+
+>[!AVAILABILITY]
+>
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../../../landing/multi-cloud.md)。
+
+若要在[!DNL AWS]上連線至Experience Platform，請確定您位於VA6沙箱，並提供帳戶名稱、選擇性說明以及您的[帳戶驗證認證](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#aws)。 完成後，請選取&#x200B;**[!UICONTROL 連線到來源]**，並等待一段時間以建立連線。
+
+![來源工作流程中的新帳戶介面，用於連線至AWS上的Experience Platform](../../../../images/tutorials/create/salesforce-marketing-cloud/new-aws.png)
+
+## 建立[!DNL Salesforce Marketing Cloud]資料的資料流
+
+現在您已成功連線您的[!DNL Salesforce Marketing Cloud]，您現在可以[建立資料流，並將行銷自動化提供者的資料擷取到Experience Platform](../../dataflow/marketing-automation.md)。
