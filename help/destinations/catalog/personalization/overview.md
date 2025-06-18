@@ -3,9 +3,9 @@ keywords: 個人化；Personalization
 title: Personalization目的地概觀
 description: Personalization平台會從個人行為收集資料和深入分析。 這些平台可協助行銷人員導覽匿名資料，根據先前的活動或作為具有類似習慣的受眾的一部分為潛在客戶提供優惠或廣告。
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: 33b9dda43f8f0b19a184f0fa3fa2c1cffdb7acf6
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '158'
 ht-degree: 8%
 
 ---
@@ -24,6 +24,7 @@ Personalization平台會從個人行為收集資料和深入分析。 這些平�
 
 * [Adobe Target](adobe-target-connection.md)
 * [Adobe Commerce](adobe-commerce.md)
+* [阿爾戈利亞](algolia.md)
 * [自訂個人化連線](custom-personalization.md)
 * [Pega客戶決策中心連線](pega.md)
 * [(V2) Pega客戶決策中心連線](pega.md)

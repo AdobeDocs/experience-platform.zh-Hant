@@ -1,7 +1,7 @@
 ---
 title: 阿爾戈利亞
 description: 使用此聯結器來啟用演演算法的對象以進行個人化，並用於各種搜尋和推薦。 接著，您可以使用Algoria使用者設定檔來源聯結器，將設定檔匯入Real-Time CDP，以建立豐富的受眾。
-source-git-commit: 2205ba48a6c17b8f34c4796c1777bfc53a6a7fe5
+source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->[!DNL Algolia]目的地聯結器和檔案頁面是由Algolia Integration Services團隊建立和維護的。 如需查詢或更新要求，請透過[adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com)聯絡他們。
+>[!DNL Algolia]目的地聯結器和檔案頁面是由Algolia Integration Services團隊建立和維護的。 如需查詢或更新要求，請透過[adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com)聯絡他們。
 
 使用[!DNL Algolia]目的地連線將Adobe Experience Platform對象傳送至Algolia以進行個人化搜尋和建議。 您必須先設定[[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md)來源聯結器，才能使用[!DNL Algolia]目的地聯結器。 在來源聯結器設定教學課程中，您將建立Algoria使用者權杖身分。 當您設定目的地聯結器時，對應需要此身分。
 
@@ -119,9 +119,9 @@ ht-degree: 3%
 >[!IMPORTANT]
 > 
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出身分，您需要檢視身分圖表[存取控制許可權](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。
+>* 若要匯出身分，您需要檢視身分圖表[存取控制許可權](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。
 
-閱讀[將設定檔和對象啟用至串流對象匯出目的地](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)，以瞭解啟用此目的地對象的指示。
+閱讀[將設定檔和對象啟用至串流對象匯出目的地](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)，以瞭解啟用此目的地對象的指示。
 
 ### 對應屬性和身分 {#mapping-attributes-identities}
 
