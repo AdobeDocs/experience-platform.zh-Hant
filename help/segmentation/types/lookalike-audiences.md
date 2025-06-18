@@ -3,18 +3,26 @@ solution: Experience Platform
 title: 相似的對象
 description: 瞭解如何使用Adobe Experience Platform中的相似受眾鎖定新的高價值受眾。
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2299'
 ht-degree: 9%
 
 ---
 
 # 相似受眾指南
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >相似見解和相似對象僅可在&#x200B;**B2C版本**&#x200B;中使用。
+
+>[!IMPORTANT]
+>
+>系統會自動針對使用率低的環境停用相似見解和相似對象。 低使用率的定義是過去三個月未檢視相似見解，或過去六個月未建立新的相似對象。
+>
+>如果您的環境已停用相似見解，您可以傳送電子郵件給Adobe客戶服務團隊，包括您的組織ID和訊息中的環境詳細資訊，以請求存取權。
+>
+>收到Adobe客戶服務的確認後，您環境中的所有沙箱都會啟用相似的深入分析和對象。
 
 在Adobe Experience Platform中，相似的受眾會針對您的每個受眾提供智慧型深入分析，運用機器學習式的深入分析，透過您的行銷活動識別及鎖定高價值客戶。
 
@@ -33,7 +41,7 @@ ht-degree: 9%
 
 為了使用相似見解，基礎對象&#x200B;**必須**&#x200B;符合以下資格條件：
 
-- 必須在Experience Platform中建立基礎對象&#x200B;**&#x200B;**。
+- 必須在Experience Platform中建立基礎對象&#x200B;****。
    - 外部產生的對象&#x200B;**不**&#x200B;符合相似深入分析的資格。
 - 基礎對象&#x200B;**必須**&#x200B;使用預設的合併原則。
 - 基礎對象&#x200B;**必須**&#x200B;不使用資料控管所限制的欄位。
@@ -75,7 +83,9 @@ ht-degree: 9%
 
 附加元件套件將在稍後推出，將生產沙箱的權利增加每個套件20個相似受眾。
 
-若要確認您是否有相似對象的存取權，請聯絡您的Adobe代表。
+## 存取 {#access}
+
+若要確認您是否有相似對象的存取權，請選取對象入口網站中的任何對象，並檢查&#x200B;**[!UICONTROL 相似見解]**&#x200B;索引標籤是否可見。
 
 ## 檢視相似見解 {#view}
 
@@ -118,7 +128,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="影響因素"
 >abstract="影響因素包括屬性、事件和對象會籍；這些因素是說明設定檔與基礎對象成員之相似度的重要依據。資料使用標籤和原則可用來排除某些資料，使其不被視為相似對象模式中的影響因素。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=zh-Hant#exclude" text="排除資料"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="排除資料"
 
 影響因素區段會顯示影響所選基本對象相似模型的前100個因素。 這些影響因子是個人資料屬性、體驗事件和對象會籍，在說明基本對象的相似之處時是最重要的。 瞭解主要影響因素，可讓您針對此對象以及您從中建立的任何相似對象，更妥善地個人化您的行銷內容。 請注意，不會顯示影響相似模型的所有影響因素。
 
@@ -179,7 +189,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 
 ![「相似對象」區段已反白顯示。](../images/types/lookalike/select-laa.png)
 
-對象詳細資訊頁面隨即顯示。 如需此頁面的詳細資訊，請參閱對象入口網站概觀[&#128279;](../ui/audience-portal.md#audience-details)的對象詳細資訊區段。
+對象詳細資訊頁面隨即顯示。 如需此頁面的詳細資訊，請參閱對象入口網站概觀](../ui/audience-portal.md#audience-details)的[對象詳細資訊區段。
 
 ![顯示相似對象的詳細資料。](../images/types/lookalike/laa-details.png)
 
