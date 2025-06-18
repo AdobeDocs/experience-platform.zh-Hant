@@ -79,7 +79,7 @@ GRANT SELECT ON SCHEMA::dbo TO {APP_ID};
 | 服務主體金鑰 | 與服務主體關聯的使用者端密碼或密碼。 |
 | 連線規格ID | **連線規格**&#x200B;提供資料來源的聯結器屬性。 這包含驗證規格等詳細資訊，以及建立&#x200B;**基底**&#x200B;和&#x200B;**來源**&#x200B;連線的需求。 針對[!DNL Azure Synapse Analytics]，連線規格ID為： `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`。 **注意：**&#x200B;只有在透過API連線時才需要此認證。 |
 
-如需詳細資訊，請閱讀有關管理 [!DNL Azure Synapse Analytics]](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-service-identity)的身分的[[!DNL Azure] 檔案。
+如需詳細資訊，請閱讀有關管理 [!DNL Azure Synapse Analytics][&#128279;](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-service-identity)的身分的[!DNL Azure] 檔案。
 
 >[!ENDTABS]
 
