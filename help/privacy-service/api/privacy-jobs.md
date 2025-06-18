@@ -5,7 +5,7 @@ title: 隱私權工作API端點
 description: 瞭解如何使用Privacy Service API管理Experience Cloud應用程式的隱私權工作。
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
+source-git-commit: c2394035dd6bd4fe6dbb443e4db13934a27066a6
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 1%
@@ -48,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | 參數 | 說明 |
 | --- | --- |
-| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>如需上述值所代表隱私權法規的詳細資訊，請參閱[支援法規](../regulations/overview.md)的概觀。 |
+| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa_de_usa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25_qc_can`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>如需上述值所代表隱私權法規的詳細資訊，請參閱[支援法規](../regulations/overview.md)的概觀。 |
 | `{PAGE}` | 要顯示的資料頁（使用0編號）。 預設值為 `0`。 |
 | `{SIZE}` | 每個頁面上顯示的結果數。 預設值為`100`，最大值為`1000`。 超過最大值會導致API傳回400程式碼錯誤。 |
 | `{status}` | 預設行為是包含所有狀態。 如果您指定狀態型別，請求只會傳回符合該狀態型別的隱私權工作。 接受的值包括： <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -90,7 +90,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 請參閱[Privacy Service和Experience Cloud應用程式](../experience-cloud-apps.md)的指南，以取得應用程式所需識別碼的詳細資訊。 如需決定要將哪些ID傳送至[!DNL Privacy Service]的更一般指引，請參閱隱私權要求[&#128279;](../identity-data.md)中身分資料的檔案。
+>相容的Adobe Experience Cloud應用程式使用不同的值來識別資料主體。 請參閱[Privacy Service和Experience Cloud應用程式](../experience-cloud-apps.md)的指南，以取得應用程式所需識別碼的詳細資訊。 如需決定要將哪些ID傳送至[!DNL Privacy Service]的更一般指引，請參閱隱私權要求](../identity-data.md)中[身分資料的檔案。
 
 [!DNL Privacy Service] API支援兩種針對個人資料的工作請求：
 

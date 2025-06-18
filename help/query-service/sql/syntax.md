@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案詳細說明並說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4686'
 ht-degree: 1%
 
 ---
@@ -335,6 +335,10 @@ AS SELECT * FROM movie_review_e2e_DND;
 ## 插入到
 
 `INSERT INTO`命令的定義如下：
+
+>[!IMPORTANT]
+>
+>查詢服務支援使用ITAS引擎的&#x200B;**僅附加作業**。 `INSERT INTO`是唯一支援的資料操作命令，**更新**&#x200B;和&#x200B;**刪除**&#x200B;作業無法使用。 若要反映資料中的變更，請插入代表所需狀態的新記錄。
 
 ```sql
 INSERT INTO table_name select_query
