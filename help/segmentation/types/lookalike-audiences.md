@@ -41,7 +41,7 @@ ht-degree: 9%
 
 為了使用相似見解，基礎對象&#x200B;**必須**&#x200B;符合以下資格條件：
 
-- 必須在Experience Platform中建立基礎對象&#x200B;****。
+- 必須在Experience Platform中建立基礎對象&#x200B;**&#x200B;**。
    - 外部產生的對象&#x200B;**不**&#x200B;符合相似深入分析的資格。
 - 基礎對象&#x200B;**必須**&#x200B;使用預設的合併原則。
 - 基礎對象&#x200B;**必須**&#x200B;不使用資料控管所限制的欄位。
@@ -189,7 +189,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 
 ![「相似對象」區段已反白顯示。](../images/types/lookalike/select-laa.png)
 
-對象詳細資訊頁面隨即顯示。 如需此頁面的詳細資訊，請參閱對象入口網站概觀](../ui/audience-portal.md#audience-details)的[對象詳細資訊區段。
+對象詳細資訊頁面隨即顯示。 如需此頁面的詳細資訊，請參閱對象入口網站概觀[&#128279;](../ui/audience-portal.md#audience-details)的對象詳細資訊區段。
 
 ![顯示相似對象的詳細資料。](../images/types/lookalike/laa-details.png)
 
