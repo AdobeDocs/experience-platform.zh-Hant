@@ -3,9 +3,9 @@ title: 彈性的對象評估指南
 description: 瞭解如何使用彈性的對象評估，以應要求執行批次細分工作。
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
+source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 5%
 
 若要使用彈性的對象評估，您必須具備下列許可權：
 
-- **[!UICONTROL 評估區段給&#x200B;**&#x200B;[!DNL Profile Management]&#x200B;**區段下的對象]**。
+- **[!UICONTROL 評估區段給&#x200B;**[!DNL Profile Management]**區段下的對象]**。
 
 如需角色型存取控制的詳細資訊，請閱讀[存取控制總覽](../../access-control/home.md)。
 
@@ -318,7 +318,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 >
 >區段工作的狀態可能會在監視控制面板中報告為「已排入佇列」狀態。 您可以透過向`/segment/jobs`端點發出GET請求，在請求路徑中提供區段作業的ID，來檢視區段作業的最新狀態。 您可以在API標籤中找到有關使用此端點的更多資訊。
 >
->如果您執行彈性對象評估，並希望評估將對象啟用到目的地，您必須確保頻率設定為&#x200B;**[!UICONTROL 區段評估後]**。 針對已設定在區段評估[&#128279;](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
+>如果您執行彈性對象評估，並希望評估將對象啟用到目的地，您必須確保頻率設定為&#x200B;**[!UICONTROL 區段評估後]**。 針對已設定在區段評估](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動[的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
 
 >[!ENDTABS]
 
@@ -326,7 +326,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 下列影片示範如何在Experience Platform中存取和使用彈性的對象評估。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453651?&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 常見問題 {#faq}
 
@@ -396,3 +396,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 +++
 
+### 使用彈性的對象評估來評估主要對象時，是否需要評估所有相依對象？
+
++++ 回答
+
+不可以。 彈性的對象評估會自動評估所有相依對象。 例如，如果對象A相依於對象B，您只需要評估對象B。彈性的對象評估會自動評估對象A，然後評估對象B。
+
++++
