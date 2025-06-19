@@ -1,38 +1,80 @@
 ---
-title: 工單API端點
+title: 記錄刪除請求（工單端點）
 description: 資料衛生API中的/workorder端點可讓您以程式設計方式管理身分的刪除任務。
-badgeBeta: label="Beta" type="Informative"
 role: Developer
-badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: bf819d506b0ee6f3aba6850f598ee46f16695dfa
+source-git-commit: d569b1d04fa76e0a0e48364a586e8a1a773b9bf2
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 1%
+source-wordcount: '1505'
+ht-degree: 2%
 
 ---
 
-# 工單端點 {#work-order-endpoint}
+# 記錄刪除請求（工單端點） {#work-order-endpoint}
 
 資料衛生API中的`/workorder`端點可讓您以程式設計方式管理Adobe Experience Platform中的記錄刪除請求。
 
 >[!IMPORTANT]
 > 
->「記錄刪除」功能目前在Beta中，僅可在&#x200B;**限定的版本**&#x200B;中使用。 並非所有客戶都可使用。 記錄刪除請求僅適用於有限版本中的組織。
->
 >記錄刪除旨在用於資料清理、匿名資料移除或資料最小化。 它們&#x200B;**不**&#x200B;用於資料主體權利要求（法規遵循），因為與一般資料保護規範(GDPR)等隱私權法規相關。 對於所有規範使用案例，請改用[Adobe Experience Platform Privacy Service](../../privacy-service/home.md)。
 
 ## 快速入門
 
-本指南中使用的端點屬於資料衛生API。 在繼續之前，請先檢閱[總覽](./overview.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的端點屬於資料衛生API。 在繼續之前，請先檢閱[總覽](./overview.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及有關成功呼叫任何Experience Platform API所需標題的重要資訊。
+
+## 配額與處理時間表 {#quotas}
+
+記錄刪除請求受到每日和每月識別碼提交限制的約束，此限制取決於您組織的授權權益。 這些限制同時適用於UI和API型刪除請求。
+
+>[!NOTE]
+>
+>您每天最多可以提交&#x200B;**1,000,000個識別碼**，但前提是剩餘的每月配額允許。 如果您的每月上限少於100萬，則每日提交內容不能超過該上限。
+
+### 依產品的每月提交權利 {#quota-limits}
+
+下表概述產品和權益層級的識別碼提交限制。 對於每種產品，每月上限是兩個值中較小者：固定的識別碼上限，或與授權資料量繫結的百分比型臨界值。
+
+| 產品 | 權益說明 | 每月上限（以較小者為準） |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP或Adobe Journey Optimizer | 不含Privacy and Security Shield或Healthcare Shield附加元件 | 2,000,000個識別碼或可定址對象的5% |
+| Real-Time CDP或Adobe Journey Optimizer | 搭配Privacy and Security Shield或Healthcare Shield附加元件 | 15,000,000個識別碼或10%的可定址對象 |
+| Customer Journey Analytics | 不含Privacy and Security Shield或Healthcare Shield附加元件 | 每百萬個CJA權益列有2,000,000個識別碼或100個識別碼 |
+| Customer Journey Analytics | 搭配Privacy and Security Shield或Healthcare Shield附加元件 | 每百萬個CJA權益列有15,000,000個識別碼或200個識別碼 |
+
+>[!NOTE]
+>
+> 根據組織的實際可定址對象或CJA列權益，大多陣列織的每月限制會較低。
+
+配額在每個日曆月的第一天重設。 未使用的配額&#x200B;**不會**&#x200B;延續。
+
+>[!NOTE]
+>
+>配額是以貴組織針對&#x200B;**已提交識別碼**&#x200B;的每月授權為基礎。 系統護欄不會強制執行這些動作，但可加以監控和檢閱。
+>
+>記錄刪除是&#x200B;**共用服務**。 您的每月上限反映了Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analytics和任何適用的Shield附加元件的最高權益。
+
+### 處理識別碼提交的時間表 {#sla-processing-timelines}
+
+提交後，記錄刪除請求會根據您的權益層級排入佇列並進行處理。
+
+| 產品與權益說明 | 佇列持續時間 | 最大處理時間(SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| 不含Privacy and Security Shield或Healthcare Shield附加元件 | 最多15天 | 30 天 |
+| 搭配Privacy and Security Shield或Healthcare Shield附加元件 | 通常為24小時 | 15 天 |
+
+如果您的組織需要更高的限制，請聯絡您的Adobe代表以要求軟體權利檔案審查。
+
+>[!TIP]
+>
+>若要檢查您目前的配額使用量或權利階層，請參閱[配額參考指南](../api/quota.md)。
 
 ## 建立記錄刪除請求 {#create}
 
-您可以向`/workorder`端點發出POST要求，從單一資料集或所有資料集中刪除一或多個身分。
+您可以對`/workorder`端點發出POST要求，從單一資料集或所有資料集中刪除一或多個身分。
 
->[!IMPORTANT]
-> 
->每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買&#x200B;**AdobeHealthcare Shield**&#x200B;或&#x200B;**AdobePrivacy &amp; Security Shield**&#x200B;的組織每個月最多可提交600,000個身分記錄刪除。<br>透過UI[&#128279;](../ui/record-delete.md)的單一記錄刪除請求可讓您一次提交10,000個ID。 用於刪除記錄的API方法允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
+>[!TIP]
+>
+>透過API提交的每個記錄刪除請求最多可包含&#x200B;**100,000個身分**。 為了最大化效率，請根據請求提交儘可能多的身分，並避免低容量提交，例如單一ID工單。
 
 **API格式**
 
@@ -130,7 +172,7 @@ curl -X POST \
 
 ## 擷取記錄刪除的狀態 {#lookup}
 
-在您[建立記錄刪除請求](#create)之後，您可以使用GET請求檢查其狀態。
+在您[建立記錄刪除請求](#create)後，您可以使用GET請求檢查其狀態。
 
 **API格式**
 
@@ -207,7 +249,7 @@ curl -X GET \
 
 ## 更新記錄刪除請求
 
-您可以藉由提出PUT要求來更新記錄刪除的`displayName`和`description`。
+您可以透過提出PUT請求來更新記錄刪除的`displayName`和`description`。
 
 **API格式**
 

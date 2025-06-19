@@ -3,9 +3,9 @@ title: 配額API端點
 description: 資料衛生API中的/quota端點可讓您根據貴組織每個工作型別的每月配額限制，監控進階資料生命週期管理的使用情況。
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 48a83e2b615fc9116a93611a5e6a8e7f78cb4dee
+source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 1%
 
 ---
@@ -14,10 +14,7 @@ ht-degree: 1%
 
 資料衛生API中的`/quota`端點可讓您根據貴組織每種工作型別的配額限制，監控進階資料生命週期管理的使用情況。
 
-配額會以下列方式針對每個資料生命週期工作型別強制執行：
-
-* 記錄刪除和更新限製為每月特定數量的請求。
-* 資料集過期時間對同時作用中的工作數量有固定限制，無論何時執行過期。
+會追蹤每個資料生命週期工作型別的配額使用量。 您的實際配額限制取決於貴組織的權益，並可定期審查。 資料集過期時間受同時作用中工作數量的嚴格限制。
 
 ## 快速入門
 
@@ -25,7 +22,15 @@ ht-degree: 1%
 
 * 相關檔案的連結
 * 閱讀本檔案中範例API呼叫的指南
-* 關於呼叫任何Experience PlatformAPI所需標題的重要資訊
+* 關於呼叫任何Experience Platform API所需標題的重要資訊
+
+## 配額與處理時間表 {#quotas}
+
+記錄刪除請求受配額和服務層級預期的約束，這些預期取決於您的授權權利。 這些限制同時適用於UI和API型刪除請求。
+
+>[!TIP]
+> 
+>本檔案說明如何根據軟體權利檔案限制查詢您的使用情況。 如需配額層、記錄刪除許可權和SLA行為的完整說明，請參閱[UI型記錄刪除](../ui/record-delete.md#quotas)或[API型記錄刪除](./workorder.md#quotas)檔案。
 
 ## 清單配額 {#list}
 
@@ -70,13 +75,13 @@ curl -X GET \
       "name": "dailyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
       "consumed": 0,
-      "quota": 600000
+      "quota": 1000000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
       "consumed": 841,
-      "quota": 600000
+      "quota": 2000000
     },
     {
       "name": "monthlyUpdatedFieldIdentitiesQuota",
@@ -89,7 +94,5 @@ curl -X GET \
 ```
 
 | 屬性 | 說明 |
-| --- | --- |
+| -------- | ------- |
 | `quotas` | 列出每個資料生命週期工作型別的配額資訊。 每個配額物件都包含下列屬性：<ul><li>`name`：資料生命週期工作型別：<ul><li>`expirationDatasetQuota`：資料集有效期</li><li>`deleteIdentityWorkOrderDatasetQuota`：記錄刪除</li></ul></li><li>`description`：資料生命週期工作型別的說明。</li><li>`consumed`：此型別在目前期間執行的作業數目。 物件名稱表示配額期間。</li><li>`quota`：貴組織此工作型別的配額。 對於記錄刪除和更新，配額表示每個月期間可以執行的工作數量。 對於資料集有效期，配額代表可以在任何指定時間同時作用的工作數量。</li></ul> |
-
-{style="table-layout:auto"}
