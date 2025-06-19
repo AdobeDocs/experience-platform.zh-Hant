@@ -3,7 +3,7 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: Facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
+source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 5%
@@ -138,8 +138,8 @@ ht-degree: 5%
 >[!NOTE]
 >
 >來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
->&#x200B;> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
->&#x200B;> **[!UICONTROL 套用轉換]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
+>> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
+>> **[!UICONTROL 套用轉換]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
 
 ![套用對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -187,7 +187,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
    ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的Facebook認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Facebook認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
