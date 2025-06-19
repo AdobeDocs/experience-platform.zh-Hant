@@ -4,9 +4,9 @@ description: 瞭解如何使用Azure建立新的企業帳戶，或使用現有�
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,14 @@ ht-degree: 0%
 
 在左側導覽中選取&#x200B;**[!DNL Networking]**。 在&#x200B;**[!DNL Firewalls and virtual networks]**&#x200B;底下，選取核取方塊&#x200B;**[!DNL Allow trusted Microsoft services to bypass this firewall]**，然後選取&#x200B;**[!DNL Apply]**。
 
+>[!NOTE]
+>
+>如果您的金鑰儲存庫使用受限制的網路存取，Adobe建議您新增下列靜態IP位址： `20.88.123.53`。 新增此IP位址可讓Adobe服務更有效率地監控連線，並在偵測到存取問題時提供平台內警報。
+>
+>若要進一步瞭解何時允許列出Adobe的IP位址、警示如何運作以及如何回應金鑰存取失敗通知，請參閱[設定Azure CMK的警示和IP存取](./alerts-and-ip-access.md)。
+>
+>如果您的金鑰儲存庫已設定為允許公用網路存取，則不需要執行進一步的動作。
+
 ![反白顯示[!DNL Microsoft Azure]的[!DNL Networking]索引標籤（包含[!DNL Networking]和[!DNL Allow trusted Microsoft surfaces to bypass this firewall]例外狀況）。](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### 產生金鑰 {#generate-a-key}
@@ -69,7 +77,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->記住您為金鑰提供的名稱，因為傳送金鑰至Adobe是必要的。
+>請記住您為金鑰提供的名稱，因為將金鑰傳送至Adobe是必要的。
 
 使用剩餘的控制項來設定您想要產生或匯入的金鑰。 完成後，選取&#x200B;**[!DNL Create]**。
 
