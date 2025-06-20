@@ -1,9 +1,10 @@
 ---
 title: Algoria標籤擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Algolia標籤擴充功能。
-source-git-commit: 5b488a596472fe61b487f75ad62d741237caa820
+exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
+source-git-commit: 605f89a09f58568c2ec2492f788bedbe610292ae
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -79,9 +80,18 @@ ht-degree: 2%
 | 屬性 | 說明 |
 | --- | --- |
 | [!UICONTROL 事件名稱] | 事件名稱，可用來進一步調整此點按事件。 |
-| 事件詳細資料資料元素 | 將擷取事件詳細資料的資料元素，包括`indexName`、`objectIDs`以及選擇性的`queryID`、`position`。 如果同時包含`queryID`和`position`，則事件會在搜尋&#x200B;*後分類為*&#x200B;已點按物件ID，否則會將其視為&#x200B;*已點按物件ID*&#x200B;事件。 如果資料元素未提供索引Name，則會在傳送事件時使用預設的Index Name。 |
+| 事件詳細資料資料元素 | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （選擇性）</li><li>`position` （選擇性）</li></ul> |
+
+>[!NOTE]
+>
+>如果同時包含`queryID`和`position`，則事件在搜尋&#x200B;**後會分類為**&#x200B;已點按物件ID。 否則，它被分類為&#x200B;**點選物件識別碼**事件。
+>><br><br>
+>>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
 
 ![](../../../images/extensions/client/algolia/clicked.png)
+
+如需事件類別的詳細資訊，請參閱搜尋後的[點選物件識別碼](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)
+和[已點按物件識別碼](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/)參考線。
 
 ### 已轉換 {#converted}
 
@@ -90,9 +100,17 @@ ht-degree: 2%
 | 屬性 | 說明 |
 | --- | --- |
 | 活動名稱 | 將用於進一步調整此&#x200B;**轉換**&#x200B;事件的事件名稱。 |
-| 事件詳細資料資料元素 | 將擷取事件詳細資料的資料元素，包括`indexName`、`objectId`以及選擇性的`queryId`。 如果資料元素包含`queryId`，則事件會在搜尋後分類為&#x200B;*已轉換*，否則會將其視為&#x200B;*已轉換*&#x200B;事件類別。 如果資料元素未提供索引Name，則會在傳送事件時使用預設的Index Name。 |
+| 事件詳細資料資料元素 | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （選擇性）</li></ul> |
+
+>[!NOTE]
+>
+>如果資料元素包含`queryId`，則事件在搜尋後會分類為&#x200B;**已轉換**。 否則，它將被分類為&#x200B;**已轉換**事件。
+>><br><br>
+>>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
 
 ![](../../../images/extensions/client/algolia/converted.png)
+
+如需事件類別的詳細資訊，請參閱搜尋後的[轉換的物件識別碼](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/)和[轉換的物件識別碼](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/)指南。
 
 ### 已新增至購物車 {#added-to-cart}
 
@@ -101,32 +119,60 @@ ht-degree: 2%
 | 屬性 | 說明 |
 | --- | --- |
 | 活動名稱 | 將用於進一步調整此&#x200B;**轉換**&#x200B;事件的事件名稱。 |
-| 事件詳細資料資料元素 | 將擷取事件詳細資料的資料元素，包括`indexName`、`objectId`以及選擇性的`queryId`、`objectData`。 如果資料元素包含`queryId`，則事件會在搜尋&#x200B;*後分類為*&#x200B;已新增至Cart物件ID，否則會將其視為&#x200B;*已新增至Cart物件ID*&#x200B;事件類別。 如果資料元素未提供索引Name，則會在傳送事件時使用預設的Index Name。 |
+| 事件詳細資料資料元素 | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` （選擇性）</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` （選擇性）</li></ul>。 |
 | 貨幣 | 指定貨幣型別，例如`USD`。 |
+
+>[!NOTE]
+>
+>如果資料元素包含`queryId`，則事件將會分類為&#x200B;**，在搜尋**&#x200B;後新增到購物車物件ID。 否則，它將分類為&#x200B;**新增到購物車物件識別碼**事件。
+>><br><br>
+>>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
+>><br><br>
+>>如果預設資料元素不符合您的需求，可以建立自訂的單一資料元素以傳回所需的事件詳細資訊。
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
+如需事件類別的詳細資訊，請參閱[搜尋後新增到購物車物件ID](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/)和[新增到購物車物件ID](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/)指南。
+
 ### 已購買 {#purchased}
 
-將&#x200B;**[!UICONTROL 新增至購物車]**&#x200B;動作新增至您的標籤規則，以將已購買的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL Purchased]**&#x200B;作為[!UICONTROL 動作型別]。
+將&#x200B;**[!UICONTROL Purchased]**&#x200B;動作新增至您的標籤規則，以將購買的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL Purchased]**&#x200B;作為[!UICONTROL 動作型別]。
 
 | 屬性 | 說明 |
 | --- | --- |
 | 活動名稱 | 將用於進一步調整此&#x200B;**購買**&#x200B;事件的事件名稱。 |
-| 事件詳細資料資料元素 | 將擷取事件詳細資料的資料元素，包括`indexName`、`objectId`以及選擇性的`queryId`。 如果資料元素包含`queryId`，則事件在搜尋後會分類為&#x200B;*已購買物件ID*，否則會將其視為&#x200B;*已購買物件ID*&#x200B;事件類別。 如果資料元素未提供索引Name，則會在傳送事件時使用預設的Index Name。 |
+| 事件詳細資料資料元素 | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` （選擇性）</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` （選擇性）</li></ul>。 |
+| 貨幣 | 指定貨幣型別，例如`USD`。 |
+
+>[!NOTE]
+>
+>如果資料元素包含`queryId`，則搜尋後事件將被分類為&#x200B;**已購買的物件ID**。 否則會分類為&#x200B;**已購買物件識別碼**事件。
+>><br><br>
+>>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
+>><br><br>
+>>如果預設資料元素不符合您的需求，可以建立自訂的單一資料元素以傳回所需的事件詳細資訊。
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
+如需事件類別的詳細資訊，請參閱搜尋後的[購買物件ID](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/)
+和[已購買的物件識別碼](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/)參考線。
+
 ### 已檢視 {#viewed}
 
-將&#x200B;**[!UICONTROL 新增至購物車]**&#x200B;動作新增至您的標籤規則，以將已購買的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algoria]**&#x200B;做為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL 已檢視]**&#x200B;做為[!UICONTROL 動作型別]。
-
-![](../../../images/extensions/client/algolia/viewed.png)
+將&#x200B;**[!UICONTROL 已檢視]**&#x200B;動作新增至您的標籤規則，以將購買的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algoria]**&#x200B;做為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL 已檢視]**&#x200B;做為[!UICONTROL 動作型別]。
 
 | 屬性 | 說明 |
 | --- | --- |
 | 活動名稱 | 將用於進一步調整此&#x200B;**檢視**&#x200B;事件的事件名稱。 |
-| 事件詳細資料資料元素 | 將擷取事件詳細資料（包括`indexName`和`objectId`）的資料元素。 如果`indexName`無法使用，則傳送事件時將使用預設索引名稱。 |
+| 事件詳細資料資料元素 | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+
+>[!NOTE]
+>
+>如果資料元素未提供`indexName`，則在傳送事件時將使用&#x200B;**預設索引名稱**。
+
+![](../../../images/extensions/client/algolia/viewed.png)
+
+如需檢視事件的詳細資訊，請參閱[已檢視物件識別碼](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/)指南。
 
 ## [!DNL Algolia]個Insights延伸資料元素 {#data-elements}
 
@@ -148,10 +194,10 @@ DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨�
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs,
-    positions
+  queryID,
+  indexName,
+  objectIDs,
+  positions
 }
 ```
 
@@ -186,9 +232,9 @@ DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨�
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -211,9 +257,9 @@ DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨�
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -228,6 +274,7 @@ DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨�
 * [[!DNL Algolia] 啟動擴充功能GitHub存放庫](https://github.com/algolia/algolia-launch-extension)
 * [InstantSearch.js檔案](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
 * [[!DNL Algolia] 深入分析API檔案](https://www.algolia.com/doc/rest-api/insights/)
+* [Algoria Launch擴充功能程式碼存放庫](https://github.com/algolia/algolia-launch-extension)
 
 ## 後續步驟 {#next-steps}
 
