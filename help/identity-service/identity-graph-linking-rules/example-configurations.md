@@ -11,7 +11,7 @@ ht-degree: 7%
 
 ---
 
-# [!DNL Identity Graph Linking Rules]設定指南 {#configurations-guide}
+# [!DNL Identity Graph Linking Rules] 設定指南 {#configurations-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
@@ -396,7 +396,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 
 進階實施涉及複雜的多層圖表情境。 這些型別的實作包括使用&#x200B;**名稱空間優先順序**，以識別必須移除的正確連結，以防止圖表摺疊。
 
-**名稱空間優先順序**&#x200B;是根據名稱空間重要性排列名稱空間的中繼資料。 如果圖表包含兩個身分，每個都有不同的唯一名稱空間，Identity Service會使用名稱空間優先順序來決定要移除的連結。 如需詳細資訊，請閱讀名稱空間優先順序[&#128279;](../identity-graph-linking-rules/namespace-priority.md)的檔案。
+**名稱空間優先順序**&#x200B;是根據名稱空間重要性排列名稱空間的中繼資料。 如果圖表包含兩個身分，每個都有不同的唯一名稱空間，Identity Service會使用名稱空間優先順序來決定要移除的連結。 如需詳細資訊，請閱讀名稱空間優先順序](../identity-graph-linking-rules/namespace-priority.md)的[檔案。
 
 在複雜的圖表情境中，名稱空間優先順序扮演關鍵角色。 圖表可以有多個層 — 一個使用者可以與多個登入ID相關聯，並且這些登入ID可以進行雜湊處理。 此外，不同的ECID可以連結至不同的登入ID。 為了確保移除正確層中的正確連結，您的名稱空間優先順序設定必須正確。
 
