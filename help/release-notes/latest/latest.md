@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: fb34e033c90c269742a2045025bf0c964b513679
 workflow-type: tm+mt
 source-wordcount: '1665'
-ht-degree: 45%
+ht-degree: 95%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 45%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/releases/pre-release-notes)
->- [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [聯合客群構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**發行日期： 2025年6月18日**
+**發行日期：2025 年 6 月 18 日**
 
-Adobe Experience Platform中的新功能及現有功能更新：
+Adobe Experience Platform 全新功能及現有功能更新：
 
 - [存取控制](#access-control)
 - [進階資料生命週期管理](#advanced-data-lifecycle-management)
@@ -35,20 +35,20 @@ Adobe Experience Platform中的新功能及現有功能更新：
 - [聯合客群構成](#fac)
 - [隱私權服務](#privacy-service)
 - [沙箱](#sandboxes)
-- [區段](#segmentation-service)
+- [分段](#segmentation-service)
 - [來源](#sources)
 
 ## 存取控制 {#access-control}
 
-Experience Platform運用[Adobe Admin Console](https://adminconsole.adobe.com)產品設定檔來連結具有許可權和沙箱的使用者。 許可權可控制各種Experience Platform功能的存取權，包括資料模型製作、設定檔管理和沙箱管理。
+Experience Platform 運用 [Adobe Admin Console](https://adminconsole.adobe.com) 產品輪廓將使用者與權限和沙箱連結。透過權限來控制對各項 Experience Platform 功能的存取權，包括資料建模、輪廓管理和沙箱管理。
 
 **主要功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 匯出儀表板資料許可權 | 儀表板中的&#x200B;**[!UICONTROL 下載CSV]**&#x200B;和&#x200B;**[!UICONTROL 以電子郵件傳送]**&#x200B;選項現在需要&#x200B;**[!UICONTROL 匯出儀表板資料]**&#x200B;許可權。 此許可權可確保只有授權的使用者才能匯出清單化insight資料，支援更嚴格的控管和資料存取控制原則。 如需詳細資訊，請參閱存取控制指南[&#128279;](../../access-control/home.md#permissions)的許可權區段。 |
+| 匯出儀表板資料權限 | 儀表板中的「**[!UICONTROL 下載 CSV]**」和「**[!UICONTROL 以電子郵件傳送]**」選項，現在皆須取得&#x200B;**[!UICONTROL 匯出儀表板資料]**&#x200B;權限。此權限確保僅有經過授權的使用者可以匯出表格式的洞察資料，進而支援更嚴格的控管與資料存取控制原則。請參閱[存取控制指南中的權限區段](../../access-control/home.md#permissions)，以了解更多資訊。 |
 
-如需詳細資訊，請參閱[存取控制總覽](../../access-control/home.md)。
+如需更多資訊，請參閱[存取控制概觀](../../access-control/home.md)。
 
 ## 進階資料生命週期管理 {#advanced-data-lifecycle-management}
 
@@ -58,9 +58,9 @@ Experience Platform 提供一套資料檢疫功能，可讓您以程式化方式
 
 | 新文件 | 說明 |
 | --- | --- |
-| 記錄刪除一般可用性 | 您現在可以使用UI或API根據身分欄位刪除個別記錄。 此功能允許從單一資料集或所有資料集中進行刪除，有助於減少儲存、強制執行治理並改善資料衛生。 數量限制與權利要求適用。 如需詳細資訊，請參閱[刪除記錄指南](../../hygiene/ui/record-delete.md)。 |
+| 記錄刪除功能現已正式推出 | 您現在可以使用 UI 或 API，根據身分識別欄位刪除個別記錄。此功能可以刪除單一資料集或所有資料集中的資料，有助於減少儲存用量、加強治理及提升資料衛生。此功能具有資料量限制與權限要求。請參閱[刪除記錄指南](../../hygiene/ui/record-delete.md)以了解更多資訊。 |
 
-如需詳細資訊，請閱讀[進階資料生命週期管理概觀](../../hygiene/home.md)。
+如需詳細資訊，請參閱[進階資料生命週期管理概觀](../../hygiene/home.md)。
 
 ## 目錄服務 {#catalog-service}
 
@@ -70,7 +70,7 @@ Experience Platform 提供一套資料檢疫功能，可讓您以程式化方式
 
 | 功能 | 說明 |
 | --- | --- |
-| 改善資料集預覽：更快的導覽和更清晰的深入分析 | 快速預覽資料集資料、檢視基礎SQL查詢，以及使用改良的篩選和更清晰的結構可見度探索最多100列，所有這些都在熟悉的資料集預覽體驗中。 如需詳細資訊，請參閱[資料集使用手冊](../../catalog/datasets/user-guide.md#preview)。 |
+| 改進資料集預覽功能：導覽更快速且洞察更清晰 | 您可以在熟悉的資料集預覽體驗中，快速預覽資料集資料、檢視基礎 SQL 查詢，並透過強化的篩選功能和更清晰的結構可見度，探索多達 100 行的資料。請參閱[資料集使用手冊](../../catalog/datasets/user-guide.md#preview)，以了解更多資訊。 |
 
 {style="table-layout:auto"}
 
@@ -82,9 +82,9 @@ Experience Platform 提供多個儀表板，您可以透過這些儀表板，檢
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 以電子郵件匯出選項傳送 | 您現在可以從Query Pro模式儀表板匯出最多10,000筆記錄，方法是從&#x200B;**[!UICONTROL 檢視更多]**&#x200B;選單中選取&#x200B;**[!UICONTROL 以電子郵件傳送]**。 此選項會將下載連結安全地傳送至與Adobe相關的電子郵件，以供進行較大規模的匯出。 如需詳細資訊，請參閱[檢視更多指南](../../dashboards/sql-insights-query-pro-mode/view-more.md#export)。 |
+| 「以電子郵件傳送」匯出選項 | 您現在可以從「**[!UICONTROL 檢視更多]**」選單中選取「**[!UICONTROL 以電子郵件傳送]**」，從 Query Pro 模式的儀表板匯出最多 10,000 筆記錄。此選項可安全地將下載連結傳送至與 Adobe 關聯的電子郵件，以便進行大規模匯出。請參閱[檢視更多指南](../../dashboards/sql-insights-query-pro-mode/view-more.md#export)，以了解更多資訊。 |
 
-如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂小工具，請先閱讀[儀表板概觀](../../dashboards/home.md)。
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂小工具，請先參閱[儀表板概觀](../../dashboards/home.md)。
 
 ## 資料治理 {#data-governance}
 
@@ -94,8 +94,8 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 功能 | 說明 |
 | --- | --- |
-| Azure CMK警報和IP允許清單設定 | 您現在可以在Azure Key Vault中將Adobe的靜態IP位址加入允許清單，以確保在啟用網路限制時能夠繼續存取。 這有助於防止因金鑰存取受限而中斷Platform服務。 |
-| CMK組態警示和解決方案 | Experience Platform現在會在Adobe服務無法存取您的Azure Key Vault （例如，由於已移除IP允許清單專案或停用的金鑰）時觸發警報。 新的指南可協助您瞭解每個警示並採取更正動作。 |
+| Azure CMK 警示和 IP 允許清單設定 | 您現在可以將 Adobe 的靜態 IP 位址新增至 Azure Key Vault 的允許清單中，以確保在啟用網路限制時仍可持續存取。這樣有助於避免因金鑰存取限制而導致 Platform 服務中斷。 |
+| CMK 設定警示和解決方法 | 現在，當 Adobe 服務失去對 Azure Key Vault 的存取權時 (例如，由於刪除 IP 允許清單項目或停用金鑰)，Experience Platform 將會觸發警示。全新指南可協助您了解每種警示並採取修正動作。 |
 
 如需詳細資訊，請閱讀[資料治理概觀](../../data-governance/home.md)。
 
@@ -107,7 +107,7 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 目標 | 說明 |
 | --- | --- |
-| [[!DNL Algolia]](../../destinations/catalog/personalization/algolia.md)個連線 | 使用[!DNL Algolia]目的地，從首頁跨網站傳送一致的個人化內容以進行搜尋。 從多個資料來源建立豐富的受眾，並在各種管道中共用受眾，以改進目標定位策略和行銷活動個人化。 |
+| [[!DNL Algolia]](../../destinations/catalog/personalization/algolia.md) 連線 | 使用 [!DNL Algolia] 目標，在整個網站中從首頁到搜尋頁面，皆提供一致的個人化服務。使用多個資料來源來建立豐富的客群，並透過各種管道共用，藉此改善目標市場選擇的策略和個人化行銷活動的成效。 |
 
 **全新或更新版功能**
 
@@ -115,12 +115,12 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 | --- | --- |
 | [Google Customer Match + DV360](../../destinations/catalog/advertising/google-customer-match-dv360.md)一般可用性 | Google Customer Match + DV360目的地現在可供所有Experience Platform使用者使用。 檔案現在包含[!DNL Adobe]與[!DNL Google]廣告帳戶之間[帳戶連結](../../destinations/catalog/advertising/google-customer-match-dv360.md#linking)的詳細指引。 |
 | 適用於串流目的地的[對象層級監視](../../dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) | 對象層級監控現在可用於以下目的地： <ul><li>[[!DNL (API) Oracle Eloqua] 連線](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)</li><li>[[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)</li><li>[[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)</li><li>[[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)</li><li>[[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)</li><li>[[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)</li><li>[[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)</li><li>[[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)</li><li>[[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)</li><li>[[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)</li><li>[[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)</li><li>[[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)</li><li>[[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)</li><li>[[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)</li><li>[[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)</li><li>[[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)</li><li>[[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)</li><li>[[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)</li></ul> |
-| 其他識別碼支援[Facebook](../../destinations/catalog/social/facebook.md#supported-identities)目的地 | [!DNL Facebook]目的地現在支援新位址相關欄位的對應，以改進目標定位並與Facebook屬性上的設定檔進行比對。 如需新位址相關欄位的詳細資訊，請參閱[支援的身分](../../destinations/catalog/social/facebook.md#supported-identities)區段。<br> 顯示Facebook其他欄位的![平台UI影像。](../2025/assets/june/facebook-destination-fields.png "顯示Facebook其他欄位的Platform UI影像。"){width="200" align="center" zoomable="yes"} |
-| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md)目的地升級 | 自2025年6月19日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL Braze]**&#x200B;卡片。 這是因為目標服務內部升級所致。現有的[!DNL Braze]目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Braze]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Braze]**&#x200B;的新卡片。 <br>使用目錄中的&#x200B;**[!UICONTROL Braze]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何使用中的資料流至&#x200B;**[!UICONTROL （已棄用）Braze]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。 <br> 如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值： <ul><li>流程規格 ID：`cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`</li><li>連線規格 ID：`ab957205-5a78-4393-b901-b930ed548220`</li></ul> |
+| 為 [Facebook](../../destinations/catalog/social/facebook.md#supported-identities) 目標提供額外的識別碼支援 | [!DNL Facebook] 目標現在支援對應新的位址相關欄位，藉此提升目標市場選擇的成效，並與 Facebook 屬性的輪廓相符。如需新位址相關欄位的詳細資訊，請參閱[支援的身分](../../destinations/catalog/social/facebook.md#supported-identities)區段。<br> 顯示Facebook其他欄位的![平台UI影像。](../2025/assets/june/facebook-destination-fields.png "顯示Facebook其他欄位的Platform UI影像。"){width="200" align="center" zoomable="yes"} |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) 目標升級 | 從 2025 年 6 月 19 日起，您可以看到兩張 **[!DNL Braze]** 卡片在目標目錄中並列顯示。這是因為目標服務內部升級所致。現有的 [!DNL Braze] 目標連接器已重新命名為 **[!UICONTROL (已停止使用) Braze]**，並提供名為 **[!UICONTROL Braze]** 的全新卡片。<br>使用目錄中的 **[!UICONTROL Braze]** 連線處理新的啟用資料流。如果您有任何傳送至 **[!UICONTROL (已停止使用) Braze]** 目標的使用中資料流，該資料流將自動更新，因此您無需採取任何動作。<br> 如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值： <ul><li>流程規格 ID：`cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`</li><li>連線規格 ID：`ab957205-5a78-4393-b901-b930ed548220`</li></ul> |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀[目標概觀](../../destinations/home.md)。
+如需詳細資訊，請參閱[目標概觀](../../destinations/home.md)。
 
 ## 聯合客群構成 {#fac}
 
@@ -128,9 +128,9 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 新功能 | 說明 |
 | ----------- | ----------- |
-| Adobe Healthcare Shield客戶一般可用性 | 同盟受眾構成將可供Adobe Healthcare Shield客戶在6月底前建立、擴充受眾及擴充設定檔使用案例。 如需同盟對象構成的隱私權與安全措施的詳細資訊，請閱讀[同盟對象構成概觀中的隱私權與安全性](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/start/privacy-security)。 如需有關Experience Platform產品一般HIPAA相容性的詳細資訊，請閱讀[HIPAA和Adobe產品和服務總覽](https://www.adobe.com/trust/compliance/hipaa-ready.html)。 |
+| Adobe Healthcare Shield 客戶功能現已正式推出 | 在 6 月底以前，Adobe Healthcare Shield 客戶將可以使用聯合客群構成來建立客群、擴充客群以及處理輪廓擴充使用案例。如需有關聯合客群構成的隱私權與安全性措施的詳細資訊，請參閱[聯合客群構成概觀中的隱私權與安全性](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security)。如需有關 Experience Platform 產品整體的 HIPAA 合規性詳細資訊，請參閱 [HIPAA 和 Adobe 產品與服務概觀](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html)。 |
 
-如需詳細資訊，請閱讀[聯合客群構成文件](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)。
+如需詳細資訊，請參閱[聯合客群構成文件](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)。
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -140,19 +140,19 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 功能 | 說明 |
 | --- | ---|
-| 支援田納西州和明尼蘇達州隱私權法 | Privacy Service現在支援田納西資訊保護法(`tipa_tn_usa`)和明尼蘇達消費者資料隱私法(`mcdpa_mn_usa`)。 您可以依照這些新的州級法規，處理存取和刪除要求。 如需詳細資訊，請參閱[法規總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/privacy/regulations/overview)。 |
+| 支援田納西州和明尼蘇達州隱私權法 | 隱私權服務現在支援田納西州資訊保護法 (`tipa_tn_usa`) 和明尼蘇達州消費者資料隱私權法 (`mcdpa_mn_usa`)。您可以依據這些新的州級法規處理存取與刪除要求。請參閱[法規概觀](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview)，以了解更多詳細資訊。 |
 
-參閱 [Privacy Service 概觀](../../privacy-service/home.md)可了解更多有關該服務的資訊。
+請參閱[隱私權服務概觀](../../privacy-service/home.md)，以了解更多有關該服務的資訊。
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗應用程式。公司通常會同時執行多個數位體驗應用程式，而且需要滿足這些應用程式的開發、測試和部署需求，同時確保營運合規性。
+Adobe Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗應用程式。公司經常並行執行多個數位體驗應用程式，不但要顧及這些應用程式的開發、測試和部署等需求，也必須確保營運合規性。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 物件設定更新移轉 | 您現在可以在初始復寫後，跨沙箱移轉反複物件組態更新。 此增強功能支援開發工作流程，其中設定需要更新並在不同環境傳播，而無需重新建立整個沙箱設定。 如需詳細資訊，請閱讀[跨沙箱傳輸設定更新](../../sandboxes/ui/sandbox-tooling.md#move-configs)的指南。 |
+| 物件設定更新遷移 | 現在，您在完成初始複寫後，可以在沙箱之間遷移重複執行的物件設定更新。此強化功能支援開發工作流程，可在不同環境之間更新與傳播設定，且無須重新建立整個沙箱設定。如需更多資訊，請參閱[在沙箱之間遷移設定更新](../../sandboxes/ui/sandbox-tooling.md#move-configs)。 |
 
 {style="table-layout:auto"}
 
@@ -166,7 +166,7 @@ Adobe Experience Platform 旨在協助您在全球各地打造更豐富的數位
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 相似的深入分析可用性更新 | 系統會自動針對使用率低的環境停用相似見解和相似對象。 低使用率的定義是過去三個月未檢視相似見解，或過去六個月未建立新的相似對象。 您可以在[相似對象指南](../../segmentation/types/lookalike-audiences.md)中找到有關這項變更的詳細資訊。 |
+| 相似洞察可用性更新 | 針對使用率較低的環境，將會自動停用相似洞察和相似客群。使用率低的定義為過去三個月內未檢視過相似洞察，或過去六個月內未建立新的相似客群。更多與此變更相關的資訊，請參閱[相似客群指南](../../segmentation/types/lookalike-audiences.md)。 |
 
 ## 來源 {#sources}
 
@@ -176,10 +176,10 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!DNL Azure Databricks]的[!BADGE Beta]{type=Informative} UI支援 | 您現在可以在UI中使用來源工作區將您的[!DNL Azure Databricks]帳戶連線至Experience Platform。 如需詳細資訊，請閱讀[在UI](../../sources/connectors/databases/databricks.md)中連線 [!DNL Databricks] 至Experience Platform的指南。 |
-| 支援[!DNL Azure Synapse Analytics]的新驗證型別 | 除了現有的連線字串驗證之外，[!DNL Azure Synapse Analytics]現在也將支援服務主要驗證。 如需詳細資訊，請閱讀[[!DNL Azure Synapse Analytics] 驗證概觀](../../sources/connectors/databases/synapse-analytics.md) |
-| [!DNL Salesforce]基本驗證淘汰 | [Salesforce CRM](../../sources/connectors/crm/salesforce.md)和[Salesforce Service Cloud](../../sources/connectors/customer-success/salesforce-service-cloud.md)的基本驗證將於2026年1月終止。 客戶必須移轉至OAuth 2.0驗證以維持連線。 此變更會同時影響來源聯結器，並確保增強安全性並符合Salesforce的驗證標準。 |
+| [!DNL Azure Databricks] 的 [!BADGE Beta]{type=Informative} UI 支援 | 您現在可以使用 UI 中的來源工作區，將您的 [!DNL Azure Databricks] 帳戶連接至 Experience Platform。請參閱[在 UI 中將  [!DNL Databricks]  連結至 Experience Platform](../../sources/connectors/databases/databricks.md) 的指南，以了解更多資訊。 |
+| 支援新的 [!DNL Azure Synapse Analytics] 驗證類型 | 除了現有的連線字串驗證外，[!DNL Azure Synapse Analytics] 現在亦支援服務主體驗證。如需更多資訊，請參閱 [[!DNL Azure Synapse Analytics]  驗證概觀](../../sources/connectors/databases/synapse-analytics.md)。 |
+| [!DNL Salesforce] 基本驗證停止使用 | [Salesforce CRM](../../sources/connectors/crm/salesforce.md) 和 [Salesforce Service Cloud](../../sources/connectors/customer-success/salesforce-service-cloud.md) 的基本驗證將於 2026 年 1 月之前停止使用。為維持連線，客戶必須遷移至 OAuth 2.0 驗證。此變更會影響兩個來源連接器，並能提升安全性，且符合 Salesforce 的驗證標準。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+如需更多資訊，請參閱[來源概觀](../../sources/home.md)。
