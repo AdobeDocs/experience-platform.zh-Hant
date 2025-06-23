@@ -18,9 +18,9 @@ ht-degree: 95%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [聯合客群構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/releases/pre-release-notes)
+>- [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/latest)
 
 **發行日期：2025 年 6 月 18 日**
 
@@ -128,9 +128,9 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 新功能 | 說明 |
 | ----------- | ----------- |
-| Adobe Healthcare Shield 客戶功能現已正式推出 | 在 6 月底以前，Adobe Healthcare Shield 客戶將可以使用聯合客群構成來建立客群、擴充客群以及處理輪廓擴充使用案例。如需有關聯合客群構成的隱私權與安全性措施的詳細資訊，請參閱[聯合客群構成概觀中的隱私權與安全性](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security)。如需有關 Experience Platform 產品整體的 HIPAA 合規性詳細資訊，請參閱 [HIPAA 和 Adobe 產品與服務概觀](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html)。 |
+| Adobe Healthcare Shield 客戶功能現已正式推出 | 在 6 月底以前，Adobe Healthcare Shield 客戶將可以使用聯合客群構成來建立客群、擴充客群以及處理輪廓擴充使用案例。如需有關聯合客群構成的隱私權與安全性措施的詳細資訊，請參閱[聯合客群構成概觀中的隱私權與安全性](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/start/privacy-security)。如需有關 Experience Platform 產品整體的 HIPAA 合規性詳細資訊，請參閱 [HIPAA 和 Adobe 產品與服務概觀](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html)。 |
 
-如需詳細資訊，請參閱[聯合客群構成文件](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)。
+如需詳細資訊，請參閱[聯合客群構成文件](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)。
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -140,7 +140,7 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 功能 | 說明 |
 | --- | ---|
-| 支援田納西州和明尼蘇達州隱私權法 | 隱私權服務現在支援田納西州資訊保護法 (`tipa_tn_usa`) 和明尼蘇達州消費者資料隱私權法 (`mcdpa_mn_usa`)。您可以依據這些新的州級法規處理存取與刪除要求。請參閱[法規概觀](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview)，以了解更多詳細資訊。 |
+| 支援田納西州和明尼蘇達州隱私權法 | 隱私權服務現在支援田納西州資訊保護法 (`tipa_tn_usa`) 和明尼蘇達州消費者資料隱私權法 (`mcdpa_mn_usa`)。您可以依據這些新的州級法規處理存取與刪除要求。請參閱[法規概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/privacy/regulations/overview)，以了解更多詳細資訊。 |
 
 請參閱[隱私權服務概觀](../../privacy-service/home.md)，以了解更多有關該服務的資訊。
 
