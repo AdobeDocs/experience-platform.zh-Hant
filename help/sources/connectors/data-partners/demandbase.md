@@ -2,12 +2,12 @@
 title: Demandbase方法
 description: 瞭解Experience Platform上的Demandbase意圖來源。
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
-badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 先決條件 {#prerequisites}
 
-請閱讀以下部分，了解連接到 [!DNL Demandbase] Experience Platform 之前的先決條件步驟。
+在連線[!DNL Demandbase]至Experience Platform之前，請閱讀下列章節中的先決條件步驟。
 
 ### IP位址允許清單
 
@@ -54,7 +54,7 @@ Experience Platform上的[!DNL Demandbase]由[!DNL Google Cloud Storage]代管�
 | 貯體名稱 | 將從其中提取資料的[!DNL Demandbase]貯體。 |
 | 檔案夾路徑 | 您要提供存取權的資料夾路徑。 |
 
-如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱 [!DNL Google Cloud Storage] 來源概觀[&#128279;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)中的先決條件指南。
+如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱 [!DNL Google Cloud Storage] 來源概觀](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)中的[先決條件指南。
 
 ## [!DNL Demandbase]結構描述
 
@@ -68,9 +68,10 @@ Experience Platform上的[!DNL Demandbase]由[!DNL Google Cloud Storage]代管�
 | `domain` | STRING | TRUE | 是 | 顯示意圖的已識別帳戶網域。 |
 | `start_date` | 日期 | TRUE | 是 | 期間中發生意圖活動的開始日期。 |
 | `end_date` | 日期 | TRUE | 是 | 期間中發生意圖活動的結束日期。 |
-| `duration_type` | STRING | TRUE | 是的 | 持續時間的類型。 通常，此值可以是每天、每周或每月，具體取決於所選的匯總持續時間。 對於此資料範例，此值為 `week`。 |
+| `duration_type` | STRING | TRUE | 是 | 持續時間的型別。 一般而言，此值可為每日、每週或每月，視所選的彙總期間而定。 對於此資料範例，此值為`week`。 |
 | `keyword_set_id` | STRING | TRUE | 是 | 關鍵字集識別碼。 每個特定客戶的情況都是獨一無二。 |
 | `keyword_set` | STRING | TRUE | 是 | 關鍵字集名稱。 |
+| `keyword` | STRING | TRUE | | 意圖關鍵字。 |
 | `is_trending` | STRING | TRUE | | 指定趨勢的目前狀態。 趨勢狀態是指相對於前七週的平均值，在上週以意圖活動中的高載來測量。 |
 | `intent_strength` | 列舉[字串] | TRUE | | 意圖強度的量化量度。 接受的值包括： `HIGH`、`MED`和`LOW`。 |
 | `num_people_researching` | 整數 | TRUE | | 過去七天屬於`company_id`且正在研究關鍵字的人員計數。 |
@@ -138,10 +139,10 @@ Experience Platform上的[!DNL Demandbase]由[!DNL Google Cloud Storage]代管�
 
 +++回答
 
-解決方案取決於特定問題：
+解決方法取決於特定問題：
 
-* **Experience Platform**&#x200B;中的公司域不正確或缺失：如果問題源於帳戶數據中的公司域值不正確，請更新 Experience Platform 中的公司域字段，以確保準確匹配。
-* **數據流**&#x200B;中的欄位映射不正確：如果問題是由於數據流中的公司域欄位路徑不正確造成的，請更新數據流配置以引用正確的欄位路徑。
+* **Experience Platform中的公司網域不正確或遺失**：如果問題是因為帳戶資料中的公司網域值不正確，請更新Experience Platform中的公司網域欄位，以確保正確比對。
+* **資料流中的欄位對應不正確**：如果問題是因為資料流中的公司網域欄位路徑不正確，請更新資料流設定以參考正確的欄位路徑。
 
 +++
 
@@ -175,9 +176,9 @@ Experience Platform上的[!DNL Demandbase]由[!DNL Google Cloud Storage]代管�
 
 ### 什麼是網域比對程式？
 
-+++答案
++++回答
 
-Experience Platform 中的域匹配基於已清理的域字段值的完全匹配。 Experience Platform 會自動移除前綴 （例如 HTTPs：/<span>/www.） 並保留頂級域 （例如 adobe.com）。 匹配需要精確的域值，不支援模糊匹配或子域。
+Experience Platform中的網域比對是根據已清除網域欄位值的精確比對。 Experience Platform會自動移除首碼(例如https:/<span>/www.)，並保留最上層網域(例如adobe.com)。 相符專案需要精確的網域值，不支援模糊相符或子網域。
 
 +++
 
