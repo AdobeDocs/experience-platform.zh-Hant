@@ -2,9 +2,9 @@
 title: 在使用者介面中建立SFTP Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立SFTP來源連線。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '662'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 ### 現有帳戶
 
-若要連線現有帳戶，請選取您要連線的FTP或SFTP帳戶，然後選取[下一步] **以繼續。**
+若要連線現有帳戶，請選取您要連線的FTP或SFTP帳戶，然後選取[下一步] ]**以繼續。**[!UICONTROL 
 
 ![Experience Platform UI上的現有SFTP帳戶清單。](../../../../images/tutorials/create/sftp/existing.png)
 
@@ -56,7 +56,7 @@ ht-degree: 1%
 >
 >* 建立後，您無法變更[!DNL SFTP]基本連線的驗證型別。 若要變更驗證型別，您必須建立新的基礎連線。
 >
->* SFTP支援RSA或DSA型別OpenSSH金鑰。 確定您的金鑰檔案內容以`"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`開頭並以`"-----END [RSA/DSA] PRIVATE KEY-----"`結尾。 如果私密金鑰檔案是PPK格式檔案，請使用PuTTY工具從PPK轉換為OpenSSH格式。
+>* SFTP支援`ed25519`、`RSA`或`DSA`型別OpenSSH金鑰。 確定您的金鑰檔案內容以`"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`開頭並以`"-----END [RSA/DSA] PRIVATE KEY-----"`結尾。 如果私密金鑰檔案是PPK格式檔案，請使用PuTTY工具從PPK轉換為OpenSSH格式。
 
 如果您正在建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後為您新的[!DNL SFTP]帳戶提供名稱和選擇性說明。
 

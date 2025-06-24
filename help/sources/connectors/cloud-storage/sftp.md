@@ -2,9 +2,9 @@
 title: SFTP Source聯結器概述
 description: 瞭解如何使用API或使用者介面將SFTP伺服器連線至Adobe Experience Platform。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -183,7 +183,7 @@ more ~/.ssh/authorized_keys
 | `port` | 您正在連線的[!DNL SFTP]伺服器連線埠。 如果未提供，則值預設為`22`。 |
 | `username` | 可存取您[!DNL SFTP]伺服器的使用者名稱。 |
 | `password` | [!DNL SFTP]伺服器的密碼。 |
-| `privateKeyContent` | Base64編碼SSH私密金鑰內容。 OpenSSH金鑰的型別必須分類為RSA或DSA。 |
+| `privateKeyContent` | Base64編碼的SSH私密金鑰內容。 支援的OpenSSH金鑰型別為`ed25519`、`RSA`和`DSA`。 |
 | `passPhrase` | 如果金鑰檔案或金鑰內容受密語保護，則將私密金鑰解密的密語或密碼。 如果PrivateKeyContent受密碼保護，此引數必須搭配PrivateKeyContent的密碼短語作為值使用。 |
 | `maxConcurrentConnections` | 此引數可讓您指定Experience Platform在連線至您的SFTP伺服器時，將建立的同時連線數目上限。 您必須將此值設定為小於SFTP設定的限制。 **注意**：為現有SFTP帳戶啟用此設定時，只會影響未來的資料流，不會影響現有的資料流。 |
 | `folderPath` | 您要提供存取權的資料夾路徑。 [!DNL SFTP]來源，您可以提供資料夾路徑，以指定使用者對您所選子資料夾的存取權。 |
