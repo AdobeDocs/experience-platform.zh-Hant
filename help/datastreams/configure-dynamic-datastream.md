@@ -83,7 +83,7 @@ ht-degree: 3%
 
    ![顯示動態設定規則之資料串流使用者介面的影像。](assets/configure-dynamic-datastream/enable-service.png)
 
-1. 設定完規則後，選取[儲存]。****
+1. 設定完規則後，選取[儲存]。**&#x200B;**
 
 ## 規則優先順序的考量事項 {#considerations}
 
