@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: c193a6aa45d179acdf655a70987875bf0da51b2b
+source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1160'
 ht-degree: 3%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 3%
 | 護欄 | 限制 | 限制型別 |
 |---------|------------|------|
 | Experience Platform服務的每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
+| 事件轉送的每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
 | Adobe Analytics每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
 | Adobe Target每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
 | Adobe Audience Manager每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
@@ -82,7 +83,7 @@ ht-degree: 3%
 
    ![顯示動態設定規則之資料串流使用者介面的影像。](assets/configure-dynamic-datastream/enable-service.png)
 
-1. 設定完規則後，選取[儲存]。**&#x200B;**
+1. 設定完規則後，選取[儲存]。****
 
 ## 規則優先順序的考量事項 {#considerations}
 
