@@ -2,14 +2,14 @@
 title: Amazon S3連線
 description: 建立與您的Amazon Web Services (AWS) S3儲存區的即時輸出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 16%
+source-wordcount: '1818'
+ht-degree: 13%
 
 ---
 
-# [!DNL Amazon S3]個連線 {#s3-connection}
+# [!DNL Amazon S3] 連線 {#s3-connection}
 
 ## 目的地變更記錄檔 {#changelog}
 
@@ -28,7 +28,7 @@ ht-degree: 16%
 ## 透過API或UI連線至您的[!DNL Amazon S3]儲存空間 {#connect-api-or-ui}
 
 * 若要使用Experience Platform使用者介面連線至您的[!DNL Amazon S3]儲存位置，請閱讀以下章節： [連線至目的地](#connect)及[啟用對象至此目的地](#activate)。
-* 若要以程式設計方式連線至您的[!DNL Amazon S3]儲存位置，請閱讀如何使用「流程服務API」教學課程[&#128279;](../../api/activate-segments-file-based-destinations.md)，將對象啟用至檔案型目的地的指南。
+* 若要以程式設計方式連線至您的[!DNL Amazon S3]儲存位置，請閱讀如何使用「流程服務API」教學課程](../../api/activate-segments-file-based-destinations.md)，將對象[啟用至檔案型目的地的指南。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -58,8 +58,8 @@ ht-degree: 16%
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Experience Platform使用者介面[&#128279;](/help/destinations/ui/export-datasets.md)匯出資料集。
-* 如何使用流程服務API[&#128279;](/help/destinations/api/export-datasets.md)以程式設計方式匯出資料集。
+* 如何使用Experience Platform使用者介面](/help/destinations/ui/export-datasets.md)匯出資料集[。
+* 如何使用流程服務API](/help/destinations/api/export-datasets.md)以程式設計方式[匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 
@@ -87,7 +87,7 @@ ht-degree: 16%
 * 存取金鑰和機密金鑰驗證
 * 假定角色驗證
 
-#### 存取金鑰和機密金鑰驗證
+#### 使用S3存取金鑰和秘密金鑰進行驗證
 
 當您想要輸入Amazon S3存取金鑰和秘密金鑰，以允許Experience Platform將資料匯出至Amazon S3屬性時，請使用此驗證方法。
 
@@ -98,21 +98,103 @@ ht-degree: 16%
 
   ![顯示UI中格式正確的PGP金鑰範例的影像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### 假定角色 {#assumed-role-authentication}
+#### 使用S3角色進行驗證 {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="假定角色驗證"
 >abstract="如果您不想與 Adobe 共用帳戶金鑰和祕密金鑰，請使用此驗證類型。否則，Experience Platform 會使用基於角色的存取連線到您的 Amazon S3 位置。貼上您在 AWS 中為 Adobe 使用者建立之角色的 ARN。該模式類似於 `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
-![選取假定的角色驗證時，必要欄位的影像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 如果您不想與 Adobe 共用帳戶金鑰和祕密金鑰，請使用此驗證類型。Experience Platform會改用角色型存取來連線至您的Amazon S3位置。
 
-若要這麼做，您需要在AWS主控台中建立具有[正確必要許可權](#minimum-permissions-iam-user)的Adobe假設使用者，以寫入您的Amazon S3貯體。 使用Adobe帳戶&#x200B;**[!UICONTROL 670664943635]**&#x200B;在AWS中建立&#x200B;**[!UICONTROL 信任的實體]**。 如需詳細資訊，請參閱有關建立角色的[AWS檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)。
+![選取假定的角色驗證時，必要欄位的影像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**：貼上您在AWS中為Adobe使用者建立之角色的ARN。 模式類似於`arn:aws:iam::800873819705:role/destinations-role-customer`。
+* **[!DNL Role]**：貼上您在AWS中為Adobe使用者建立之角色的ARN。 模式類似於`arn:aws:iam::800873819705:role/destinations-role-customer`。 請參閱下列步驟，以取得如何正確設定S3存取許可權的詳細指引。
 * **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，將加密新增至匯出的檔案。 在下圖中檢視格式正確的加密金鑰範例。
+
+若要這麼做，您需要在AWS主控台中為Adobe建立假定角色，具有[寫入您的Amazon S3貯體的正確必要許可權](#minimum-permissions-iam-user)。
+
+**建立具有必要許可權的原則**
+
+1. 開啟AWS Console，然後前往「IAM >原則>建立原則」
+2. 選取「原則編輯器> JSON」 ，然後在底下新增許可權。
+
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "VisualEditor0",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:DeleteObject",
+                   "s3:GetBucketLocation",
+                   "s3:ListMultipartUploadParts"
+               ],
+               "Resource": "arn:aws:s3:::bucket/folder/*"
+           },
+           {
+               "Sid": "VisualEditor1",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:ListBucket"
+               ],
+               "Resource": "arn:aws:s3:::bucket"
+           }
+       ]
+   }
+   ```
+
+3. 在下一個頁面，輸入您原則的名稱，並儲存以供參考。 在下一步中建立角色時，您將需要此原則名稱。
+
+**在您的S3客戶帳戶中建立使用者角色**
+
+1. 開啟AWS Console，然後前往「IAM >角色>建立新角色」
+2. 選取&#x200B;**信任的實體型別** > **AWS帳戶**
+3. 選取&#x200B;**一個AWS帳戶** > **另一個AWS帳戶**，並輸入Adobe帳戶ID： `670664943635`
+4. 使用先前建立的原則新增許可權
+5. 輸入角色名稱（例如，`destinations-role-customer`）。 角色名稱應視為機密名稱，類似於密碼。 其長度最多可為64個字元，並且可以包含英數字元和下列特殊字元： `+=,.@-_`。 然後確認：
+   * Adobe帳戶識別碼`670664943635`存在於&#x200B;**[!UICONTROL 選取受信任實體]**&#x200B;區段中
+   * 先前建立的原則存在於&#x200B;**[!UICONTROL 許可權原則摘要]**&#x200B;中
+
+**提供Adobe的角色以假設**
+
+在AWS中建立角色後，您需要為Adobe提供角色ARN。 ARN遵循此模式： `arn:aws:iam::800873819705:role/destinations-role-customer`
+
+在AWS主控台中建立角色後，您可在首頁面上找到ARN。 建立目的地時，您將使用此ARN。
+
+**驗證角色許可權和信任關係**
+
+確保您的角色具有下列設定：
+
+* **許可權**：角色應該具有存取S3的許可權（完整存取許可權或以上&#x200B;**建立具有必要許可權的原則**&#x200B;步驟中提供的最低許可權）
+* **信任關係**：角色的信任關係中應該有根Adobe帳戶(`670664943635`)
+
+**替代：限製為特定Adobe使用者（選用）**
+
+如果您不想允許整個Adobe帳戶，您可以限制僅存取特定Adobe使用者。 要執行此操作，請使用以下設定編輯信任原則：
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+如需詳細資訊，請參閱有關建立角色的[AWS檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)。
+
+
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -125,7 +207,7 @@ ht-degree: 16%
 >id="platform_destinations_connect_s3_folderpath"
 >title="檔案夾路徑"
 >abstract="必須僅包含字元 A-Z、a-z、0-9，並且可以包含以下特殊字元：`/!-_.'()"^[]+$%.*"`。若要為每個對象檔案建立一個檔案夾，請將巨集 `/%SEGMENT_NAME%` 或 `/%SEGMENT_ID%` 或 `/%SEGMENT_NAME%/%SEGMENT_ID%` 插入文字欄位。只能將巨集插入檔案夾路徑的末尾。檢視文件中的巨集範例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=zh-Hant#use-macros" text="使用巨集在您的儲存位置建立檔案夾"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="使用巨集在您的儲存位置建立檔案夾"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
