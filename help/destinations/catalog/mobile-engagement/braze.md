@@ -4,23 +4,14 @@ title: 硬式連線
 description: Braze是全方位的客戶參與平台，可在客戶與所喜愛品牌之間提供相關且令人難忘的體驗。
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 37e78035f2656a3693a771ab5a9622f5446a4c9d
+source-git-commit: 2440a4d4ec5d572d1d44228fe99914a01e19d60d
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 3%
+source-wordcount: '1123'
+ht-degree: 2%
 
 ---
 
-# [!DNL Braze]個連線
-
->[!IMPORTANT]
->
->* 自2025年6月19日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL Braze]**&#x200B;卡片。 這是因為目標服務內部升級所致。現有的[!DNL Braze]目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Braze]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Braze]**&#x200B;的新卡片。
->* 使用目錄中的&#x200B;**[!UICONTROL Braze]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何使用中的資料流至&#x200B;**[!UICONTROL （已棄用）Braze]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。
->* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
->   * 流程規格 ID：`cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`
->   * 連線規格 ID：`ab957205-5a78-4393-b901-b930ed548220`
-
+# [!DNL Braze] 連線
 
 ## 概觀 {#overview}
 
@@ -90,7 +81,7 @@ ht-degree: 3%
 
 * **[!UICONTROL 硬碟帳戶Token]**：這是您的[!DNL Braze] [!DNL API]金鑰。 您可以在這裡找到有關如何取得[!DNL API]金鑰的詳細說明： [REST API金鑰概述](https://www.braze.com/docs/api/api_key/)。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
