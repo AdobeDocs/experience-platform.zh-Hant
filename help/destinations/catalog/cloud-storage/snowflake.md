@@ -8,7 +8,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
 source-wordcount: '1054'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -85,12 +85,12 @@ ht-degree: 4%
 
 ![顯示如何驗證目的地](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)的範例熒幕擷圖
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
->title="輸入您的Snowflake帳戶ID"
->abstract="如果您的帳戶已連結至組織，請使用此格式： `OrganizationName.AccountName`<br><br>如果您的帳戶未連結至組織，請使用此格式： `AccountName`"
+>title="輸入您的 Snowflake 帳戶 ID"
+>abstract="如果您的帳戶已連結到組織，請使用此格式：`OrganizationName.AccountName`<br><br> 如果您的帳戶未連結到組織，請使用此格式：`AccountName`"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 

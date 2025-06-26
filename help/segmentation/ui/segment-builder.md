@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
 workflow-type: tm+mt
 source-wordcount: '5195'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -268,7 +268,7 @@ ht-degree: 8%
 
 | 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
 | --------------- | ----------- | ------------------- | ------- |
-| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;**&#x200B;**。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -324,7 +324,7 @@ ht-degree: 8%
 >[!NOTE]
 >
 >使用「之後」時間限制時，後一個事件發生的次數可能會超過時間限制內所列的時間量。 >
->&#x200B;>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
+>>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
 >
 >此外，這兩個時間限制可以相互協調使用。
 >
@@ -380,25 +380,25 @@ ht-degree: 8%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
->title="合格的輪廓"
->abstract="合格的設定檔會指出符合區段定義規則的實際設定檔數。 此數字會在區段評估工作執行後，每24小時更新一次。"
+>title="合格的設定檔"
+>abstract="合格的設定檔表示符合區段定義規則的設定檔實際數量。執行區段評估工作之後，此數字每 24 小時更新一次。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
->title="預估的輪廓"
->abstract="預估的設定檔會根據範例工作，指出符合區段定義規則的大約設定檔數。 這表示範例資料投影在較大的設定檔集上，導致預估數字可能與合格的設定檔實際數字不同。 預估的設定檔範例具有95%信賴區間。 <br><br>此數字會在範例工作更新時更新，當客戶資料變更超過5%或上次範例工作超過7天時就會更新。"
+>title="預估的設定檔"
+>abstract="預估的設定檔是指根據範例工作，會符合區段定義規則的設定檔大約數量。這表示樣本資料是以更大的設定檔集進行預計，因此會產生可能與合格設定檔實際數量不同的預估數量。預估的設定檔樣本具有 95% 的信賴區間。<br><br>此數字會在樣本工作更新時一併更新，更新條件包括客戶資料變更超過 5%，或上一個樣本工作距今已超過 7 天。"
 
 建立區段定義時，工作區右側的&#x200B;**[!UICONTROL 對象屬性]**&#x200B;區段會顯示結果區段定義的大小預估值，好讓您在建立對象本身之前根據需要調整區段定義。
 
-**[!UICONTROL 合格的設定檔]**&#x200B;表示符合區段定義規則的&#x200B;**實際**&#x200B;個設定檔數目。 此數字會在區段評估工作執行後，每24小時更新一次。
+**[!UICONTROL 合格的設定檔]**&#x200B;表示符合區段定義規則的&#x200B;**實際**&#x200B;個設定檔數目。 執行區段評估工作之後，此數字每 24 小時更新一次。
 
 合格設定檔的時間戳記表示最近的&#x200B;**批次**&#x200B;區段評估工作，且對於使用串流或邊緣區段評估的區段定義顯示為&#x200B;**not**。 如果您編輯區段定義，則在下次執行區段評估工作之前，合格設定檔的數量將保持不變。
 
-根據&#x200B;**範例工作**，**[!UICONTROL 預估的設定檔]**&#x200B;表示&#x200B;**大約**&#x200B;個設定檔數目。 這表示範例資料投影在較大的設定檔集上，導致預估數字可能與合格的設定檔實際數字不同。 預估的設定檔範例具有95%信賴區間。
+根據&#x200B;**範例工作**，**[!UICONTROL 預估的設定檔]**&#x200B;表示&#x200B;**大約**&#x200B;個設定檔數目。 這表示樣本資料是以更大的設定檔集進行預計，因此會產生可能與合格設定檔實際數量不同的預估數量。預估的設定檔範例具有95%信賴區間。
 
 當範例作業更新時，此數字也會更新；當客戶資料變更超過5%或最後一個範例作業超過7天時，就會發生此情況。」
 
