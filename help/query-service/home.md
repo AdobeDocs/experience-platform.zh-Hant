@@ -17,7 +17,7 @@ Adobe Experience Platform會擷取各種來源的資料。 行銷人員的主要
 
 您可以使用查詢服務來連線線上到離線客戶歷程，並瞭解您品牌的全頻道歸因。 以下影片說明體驗企業如何使用查詢服務來處理主要使用案例，以及查詢服務的運作方式。
 
->[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3464269?quality=12&learn=on&captions=chi_hant)
 
 ## 使用查詢服務 {#usage}
 
