@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 4 月)
 description: Adobe Experience Platform 2023 年 4 月版發行說明。
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 97%
+source-wordcount: '2010'
+ht-degree: 96%
 
 ---
 
@@ -22,10 +22,10 @@ Adobe Experience Platform 現有功能的更新：
 - [儀表板](#dashboards)
 - [資料準備](#data-prep)
 - [資料集合](#data-collection)
-- [目的地](#destinations)
+- [目標](#destinations)
 - [體驗資料模式](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
-- [即時客戶輪廓](#profile)
+- [即時客戶設定檔](#profile)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
@@ -60,7 +60,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 ## 資料集合 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目標。
+Adobe Experience Platform 提供了一套技術，可讓您收集用戶端的客戶體驗資料，並將其傳送到 Adobe Experience Platform Edge Network，然後在其中擴充及轉換資料，再分送至 Adobe 或非 Adobe 目標。
 
 **新功能或更新功能**
 
@@ -68,16 +68,16 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | --- | --- |
 | 資料流的 IP 位址模糊化 | 您現在可以在[資料流設定 UI](../../datastreams/configure.md) 中定義部分或完整的資料流層級 IP 模糊化選項。<br><br>該資料流層級 IP 模糊化設定會優先於在 Adob&#x200B;&#x200B;e Target 和 Audience Manager 中設定的任何 IP 模糊化。<br><br>傳送到 Adob&#x200B;&#x200B;e Analytics 的資料不會受資料流層級 [!UICONTROL IP 模糊化]設定的影響。Adobe Analytics 目前會接收未模糊化的 IP 位址。若要讓 Analytics 接收模糊化的 IP 位址，您必須在 Adob&#x200B;&#x200B;e Analytics 中單獨設定 IP 模糊化。此行為會在未來版本中更新。<br><br>如需有關 IP 模糊化的更多詳細資料以及如何進行設定的說明，請參閱[資料流設定文件](../../datastreams/configure.md#advanced-options)。 |
 | [資料流設定覆寫](../../datastreams/overrides.md) | 您現在可以定義資料流的其他設定選項，您可將這些選項用於覆寫特定的設定，例如事件資料集、Target 屬性權杖、ID 同步容器以及 Analytics 報表套裝。<br><br>覆寫資料流設定的流程包含兩個步驟： <ol><li>首先，您必須在[資料流設定頁面](../../datastreams/configure.md)中定義您的資料流設定覆寫。</li><li>接著，您必須透過 Web SDK 命令或使用 Web SDK [標記擴充功能](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)將覆寫傳送至 Edge Network。</li></ol> |
-| OAuth JWT Secret | 此 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=zh-Hant) 可讓客戶使用 Adob&#x200B;&#x200B;e 和 Google 服務權杖支援「事件轉送」中伺服器和伺服器的互動。 |
-| [!DNL Pinterest Conversions API] 擴充功能 | 此 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=zh-Hant)  事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Pinterest] (使用 [!DNL Pinterest Conversions API] 並以伺服器端事件的形式)。 |
+| OAuth JWT Secret | 此 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) 可讓客戶使用 Adob&#x200B;&#x200B;e 和 Google 服務權杖支援「事件轉送」中伺服器和伺服器的互動。 |
+| [!DNL Pinterest Conversions API] 擴充功能 | 此 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html)  事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Pinterest] (使用 [!DNL Pinterest Conversions API] 並以伺服器端事件的形式)。 |
 
 {style="table-layout:auto"}
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
-**新目標** {#new-destinations}
+**新目的地** {#new-destinations}
 
 | 目標 | 說明 |
 | ----------- | ----------- |
@@ -85,7 +85,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 {style="table-layout:auto"}
 
-**新功能或更新的功能** {#destinations-new-updated-functionality}
+**全新或更新版功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | ----------- | ----------- |
@@ -109,13 +109,13 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶入 Adobe Experience Platform 的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併為單一常用表述，以更快速、更整合的方式提供分析洞察。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 顯示名稱切換 | 結構描述編輯器現在可提供切換功能，在原始欄位名稱和人類更易於理解的顯示名稱之間進行變更。<br>![顯示名稱切換反白顯示的結構描述編輯器。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "結構描述編輯器顯示名稱切換"){width="100" zoomable="yes"}<br>這種靈活性可提高欄位易尋性和結構描述的編輯。標準欄位群組的顯示名稱由系統產生，但如有必要，也可透過 UI 自訂。若要了解詳細資訊，請閱讀[顯示名稱切換文件](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=zh-Hant#display-name-toggle)。 |
+| 顯示名稱切換 | 結構描述編輯器現在可提供切換功能，在原始欄位名稱和人類更易於理解的顯示名稱之間進行變更。<br>![顯示名稱切換反白顯示的結構描述編輯器。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "結構描述編輯器顯示名稱切換"){width="100" zoomable="yes"}<br>這種靈活性可提高欄位易尋性和結構描述的編輯。標準欄位群組的顯示名稱由系統產生，但如有必要，也可透過 UI 自訂。若要了解詳細資訊，請閱讀[顯示名稱切換文件](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle)。 |
 
 {style="table-layout:auto"}
 
@@ -143,7 +143,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 ## Real-Time Customer Data Platform
 
-建置在 Experience Platform、Real-Time Customer Data Platform ([!DNL Real-Time CDP]) 上有助於公司匯集已知和未知的資料，以使用整個客戶歷程中的智慧型決策啟動客戶輪廓。[!DNL Real-Time CDP] 會結合多個企業資料來源以即時建立客戶輪廓。然後，根據這些輪廓建置的區段即可傳送到下游目的地，以便在所有管道和裝置上提供一對一的個人化客戶體驗。
+建置在 Experience Platform、Real-Time Customer Data Platform ([!DNL Real-Time CDP]) 上有助於公司匯集已知和未知的資料，以使用整個客戶歷程中的智慧型決策啟動客戶設定檔。[!DNL Real-Time CDP] 會結合多個企業資料來源以即時建立客戶設定檔。然後，根據這些輪廓建置的區段即可傳送到下游目的地，以便在所有管道和裝置上提供一對一的個人化客戶體驗。
 
 **新功能**
 
@@ -156,7 +156,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 ## 即時客戶輪廓 {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶輪廓，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 輪廓可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 可讓您為客戶提供協調一致且相關的體驗，無論他們何時何地與您的品牌互動。即時客戶輪廓會合併來自多個管道的資料 (包括線上、離線、CRM 和協力廠商資料)，讓您可以掌握每位個別客戶的全貌。設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 **更新的功能**
 
@@ -168,7 +168,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，進而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能或更新功能**
 
@@ -184,7 +184,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 Adobe Experience Platform可從外部來源擷取資料，並允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
 **更新的功能**
 
@@ -193,8 +193,7 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 | 用於篩選 Salesforce CRM 來源之列層級資料的 API 支援。 | 使用邏輯和比較運算子篩選 Salesforce CRM 來源的列層級資料。如需詳細資訊，請至「[使用 API 篩選來源的資料](../../sources/tutorials/api/filter.md)」詳閱指南。 |
 | Shopify Streaming 推出 Beta 版 | 此 [Shopify Streaming 來源](../../sources/connectors/ecommerce/shopify-streaming.md)現在推出 Beta 版。使用 Shopify Streaming 來源將資料從您的 Shopify 合作夥伴帳戶串流至 Experience Platform。 |
 | OneTrust Integration 正式推出 | 此 [OneTrust Integration 來源](../../sources/connectors/consent-and-preferences/onetrust.md)現在正式推出。使用 OneTrust Integration 來源將同意和偏好資料從您的 OneTrust Integration 帳戶帶到 Experience Platform。 |
-| Oracle Service Cloud 正式推出 | 此 [Oracle Service Cloud 來源](../../sources/connectors/customer-success/oracle-service-cloud.md)現在正式推出。使用 Oracle Service Cloud 來源將您的 Oracle Service Cloud 資料帶到 Experience Platform。 |
 
 {style="table-layout:auto"}
 
-若要了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+若要深入了解來源，請閱讀[來源概觀](../../sources/home.md)。

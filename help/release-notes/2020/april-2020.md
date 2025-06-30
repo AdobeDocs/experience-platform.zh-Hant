@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: 發行說明；
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '972'
 ht-degree: 28%
 
 ---
@@ -48,7 +48,7 @@ Adobe Experience Platform 的新功能：
 
 標準化和互通性是[!DNL Experience Platform]背後的重要概念。 由Adobe驅動的[!DNL Experience Data Model] (XDM)致力於標準化客戶體驗資料並定義客戶體驗管理的結構描述。
 
-XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
+XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析洞察、透過區段定義客戶客群，並基於個人化目的使用客戶屬性。
 
 **新功能**
 
@@ -104,7 +104,7 @@ Real-Time CDP現在支援五十個以上的[!DNL Experience Cloud Launch]擴充�
 
 ## [!DNL Privacy Service] {#privacy}
 
-新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。 Adobe Experience Platform [!DNL Privacy Service] 提供 RESTful API 和使用者介面，協助您管理這些來自客戶的資料請求。透過 [!DNL Privacy Service]，您可以提交請求來存取和刪除 Adobe Experience Cloud 應用程式中的私人或個人客戶資料，從而促進法律和組織隱私法規的自動化合規。
+新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。 Adobe Experience Platform [!DNL Privacy Service] 提供 RESTful API 和使用者介面，協助您管理這些來自客戶的資料請求。透過 [!DNL Privacy Service]，您可以提交請求來存取和刪除 Adobe Experience Cloud 應用程式中的私人或個人客戶資料，進而促進法律和組織隱私法規的自動化合規。
 
 **新功能**
 
@@ -124,14 +124,13 @@ Real-Time CDP現在支援五十個以上的[!DNL Experience Cloud Launch]擴充�
 
 Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Experience Platform]服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
+[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證，並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間，並管理資料攝取輸送量。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 資料庫的API和UI支援 | [!DNL Apache Spark] （在HDInsights上）、[!DNL Azure Synapse Analytics]、[!DNL Azure Table Storage]、[!DNL Hive] （在HDInsights上）和[!DNL Phoenix]的新來源聯結器。 |
-| 支付型應用程式的API和UI支援 | [!DNL PayPal]的新來源聯結器。 |
+| 資料庫的API和UI支援 | [!DNL Apache Spark] （在HDInsights）、[!DNL Azure Synapse Analytics]、[!DNL Azure Table Storage]和[!DNL Hive]的新來源聯結器。 |
 | 通訊協定型應用程式的API和UI支援 | [!DNL Generic OData]的新來源聯結器。 |
 
 **已知問題**

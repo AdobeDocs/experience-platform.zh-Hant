@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用流程服務API來探索付款系統
 description: 本教學課程使用流程服務API來探索付款應用程式。
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '567'
 ht-degree: 12%
 
 ---
@@ -28,7 +28,10 @@ ht-degree: 12%
 
 ### 收集必要的認證
 
-本教學課程需要您與您要擷取資料的第三方支付應用程式建立有效的連線。 有效的連線涉及您應用程式的連線規格ID和連線ID。 您可以在[將付款來源連線至Experience Platform](../../api/create/payments/paypal.md)教學課程中，找到有關建立付款連線及擷取這些值的詳細資訊。
+您必須與支付應用程式有使用中的連線，才能探索您來源的檔案和檔案結構。 如需詳細資訊，請閱讀下列檔案：
+
+* [[!DNL Square]](../create/payments/square.md)
+* [[!DNL Stripe]](../create/payments/stripe.md)
 
 ### 讀取範例 API 呼叫
 
@@ -83,29 +86,29 @@ curl -X GET \
 [
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans",
-        "path": "PayPal.Billing_Plans",
+        "name": "Stripe.Billing_Plans",
+        "path": "Stripe.Billing_Plans",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition",
-        "path": "PayPal.Billing_Plans_Payment_Definition",
+        "name": "Stripe.Billing_Plans_Payment_Definition",
+        "path": "Stripe.Billing_Plans_Payment_Definition",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
-        "path": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
+        "name": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
+        "path": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Catalog_Products",
-        "path": "PayPal.Catalog_Products",
+        "name": "Stripe.Catalog_Products",
+        "path": "Stripe.Catalog_Products",
         "canPreview": true,
         "canFetchSchema": true
     }

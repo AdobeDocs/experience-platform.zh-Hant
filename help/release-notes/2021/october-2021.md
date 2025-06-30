@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2021 年 10 月)
 description: Adobe Experience Platform 2021 年 10 月版發行說明。
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 25%
+source-wordcount: '433'
+ht-degree: 27%
 
 ---
 
@@ -53,12 +53,11 @@ Adobe Experience Platform 現有功能的更新：
 
 Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Experience Platform服務來建構、加標籤及增強這些資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
+Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證，並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間，並管理資料攝取輸送量。
 
 | 功能 | 說明 |
 | --- | --- |
 | [!DNL Amazon S3]個來源增強功能 | 您現在可以使用`s3SessionToken`引數，使用暫時性安全性認證將您的[!DNL Amazon S3]帳戶連線至Experience Platform。 此Token可讓您向不受信任環境中的使用者提供對您[!DNL Amazon S3]資源的短期暫時存取權。 如需詳細資訊，請參閱[[!DNL Amazon S3] 文件](../../sources/connectors/cloud-storage/s3.md#prerequisites)。 |
 | [!DNL Generic REST API] (Beta) | 您現在可以使用[[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md)建立[!DNL Generic REST API]來源連線，將一般REST應用程式的資料帶入Experience Platform。 如需詳細資訊，請參閱[[!DNL Generic REST API] 概觀](../../sources/connectors/protocols/generic-rest.md)。 |
-| [!DNL Zoho CRM] (Beta) | 您現在可以使用[[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md)或[使用者介面](../../sources/tutorials/ui/create/crm/zoho.md)建立[!DNL Zoho CRM]來源連線，將您的[!DNL Zoho CRM]帳戶中的資料帶到Experience Platform。 如需詳細資訊，請參閱[[!DNL Zoho CRM] 概觀](../../sources/connectors/crm/zoho.md)。 |
 
 若要深入瞭解來源，請參閱[來源概觀](../../sources/home.md)。

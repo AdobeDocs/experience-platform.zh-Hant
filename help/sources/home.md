@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1554'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Expe
 
 ## 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 串流]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 批次]{type=Informative}
@@ -112,13 +112,11 @@ CRM系統提供的資料可協助建立客戶關係，進而建立忠誠度並�
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 批次]{type=Informative}
 - [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE 批次]{type=Informative}
 
 ### 客戶成功 {#customer-success}
 
 Experience Platform支援從協力廠商客戶成功應用程式擷取資料。 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE 批次]{type=Informative}
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE 批次]{type=Informative}
@@ -131,7 +129,6 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE 批次]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 批次]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 批次]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 批次]{type=Informative}
@@ -139,7 +136,6 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 - [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE 批次]{type=Informative}
 - [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE 批次]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 批次]{type=Informative}
 
@@ -181,15 +177,11 @@ Experience Platform支援從協力廠商行銷自動化系統擷取資料。 如
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE 批次]{type=Informative}
 - [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE 批次]{type=Informative}
-<!-- 
-- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
--->
 
 ### 付款 {#payments}
 
 Experience Platform支援從協力廠商支付系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE 批次]{type=Informative}
 
