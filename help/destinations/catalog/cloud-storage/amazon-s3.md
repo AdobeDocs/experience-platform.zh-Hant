@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 13%
 ## 透過API或UI連線至您的[!DNL Amazon S3]儲存空間 {#connect-api-or-ui}
 
 * 若要使用Experience Platform使用者介面連線至您的[!DNL Amazon S3]儲存位置，請閱讀以下章節： [連線至目的地](#connect)及[啟用對象至此目的地](#activate)。
-* 若要以程式設計方式連線至您的[!DNL Amazon S3]儲存位置，請閱讀如何使用「流程服務API」教學課程[&#128279;](../../api/activate-segments-file-based-destinations.md)，將對象啟用至檔案型目的地的指南。
+* 若要以程式設計方式連線至您的[!DNL Amazon S3]儲存位置，請閱讀如何使用「流程服務API」教學課程[，將對象](../../api/activate-segments-file-based-destinations.md)啟用至檔案型目的地的指南。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -58,8 +58,8 @@ ht-degree: 13%
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Experience Platform使用者介面[&#128279;](/help/destinations/ui/export-datasets.md)匯出資料集。
-* 如何使用流程服務API[&#128279;](/help/destinations/api/export-datasets.md)以程式設計方式匯出資料集。
+* 如何使用Experience Platform使用者介面[匯出資料集](/help/destinations/ui/export-datasets.md)。
+* 如何使用流程服務API[以程式設計方式](/help/destinations/api/export-datasets.md)匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 
@@ -98,7 +98,7 @@ ht-degree: 13%
 
   ![顯示UI中格式正確的PGP金鑰範例的影像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### 使用S3角色進行驗證 {#assumed-role-authentication}
+#### 使用 S3 假定角色進行驗證 {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
@@ -207,7 +207,7 @@ ht-degree: 13%
 >id="platform_destinations_connect_s3_folderpath"
 >title="檔案夾路徑"
 >abstract="必須僅包含字元 A-Z、a-z、0-9，並且可以包含以下特殊字元：`/!-_.'()"^[]+$%.*"`。若要為每個對象檔案建立一個檔案夾，請將巨集 `/%SEGMENT_NAME%` 或 `/%SEGMENT_ID%` 或 `/%SEGMENT_NAME%/%SEGMENT_ID%` 插入文字欄位。只能將巨集插入檔案夾路徑的末尾。檢視文件中的巨集範例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=zh-Hant#use-macros" text="使用巨集在您的儲存位置建立檔案夾"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="使用巨集在您的儲存位置建立檔案夾"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -236,7 +236,7 @@ ht-degree: 13%
 
 ### 必要的[!DNL Amazon S3]許可權 {#required-s3-permission}
 
-若要成功連線並匯出資料至您的[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Experience Platform]建立識別與存取管理(IAM)使用者，並為下列動作指派許可權：
+若要成功連線並匯出資料至您的[!DNL Amazon S3]儲存位置，請在[!DNL Experience Platform]中為[!DNL Amazon S3]建立識別與存取管理(IAM)使用者，並為下列動作指派許可權：
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
