@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 6 月)
 description: Adobe Experience Platform 2025 年 6 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fb34e033c90c269742a2045025bf0c964b513679
-workflow-type: ht
+source-git-commit: c78dc0e83976499403e066b314a0889df803c976
+workflow-type: tm+mt
 source-wordcount: '1665'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -177,7 +177,7 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | 功能 | 說明 |
 | --- | --- |
 | [!DNL Azure Databricks] 的 [!BADGE Beta]{type=Informative} UI 支援 | 您現在可以使用 UI 中的來源工作區，將您的 [!DNL Azure Databricks] 帳戶連接至 Experience Platform。請參閱[在 UI 中將  [!DNL Databricks]  連結至 Experience Platform](../../sources/connectors/databases/databricks.md) 的指南，以了解更多資訊。 |
-| 支援新的 [!DNL Azure Synapse Analytics] 驗證類型 | 除了現有的連線字串驗證外，[!DNL Azure Synapse Analytics] 現在亦支援服務主體驗證。如需更多資訊，請參閱 [[!DNL Azure Synapse Analytics]  驗證概觀](../../sources/connectors/databases/synapse-analytics.md)。 |
+| 支援新的 [!DNL Azure Synapse Analytics] 驗證類型 | 除了現有的連線字串驗證外，[!DNL Azure Synapse Analytics] 現在亦支援服務主體驗證。如需詳細資訊，請閱讀[[!DNL Azure Synapse Analytics] 驗證概觀](../../sources/connectors/databases/synapse-analytics.md)。 |
 | [!DNL Salesforce] 基本驗證停止使用 | [Salesforce CRM](../../sources/connectors/crm/salesforce.md) 和 [Salesforce Service Cloud](../../sources/connectors/customer-success/salesforce-service-cloud.md) 的基本驗證將於 2026 年 1 月之前停止使用。為維持連線，客戶必須遷移至 OAuth 2.0 驗證。此變更會影響兩個來源連接器，並能提升安全性，且符合 Salesforce 的驗證標準。 |
 
 {style="table-layout:auto"}

@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: f02c76c646bb9966b345940e30e37ac52e636cfa
+source-git-commit: c8befc7379da491f6de78a89c9f14a0b123b3fb8
 workflow-type: tm+mt
-source-wordcount: '4421'
+source-wordcount: '4494'
 ht-degree: 3%
 
 ---
@@ -67,8 +67,8 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 管理對象所屬的資料夾。 如需有關此功能的詳細資訊，請閱讀[篩選和標籤](#manage-audiences)的章節。 |
 | [!UICONTROL 副本] | 細分服務 | 複製選取的對象。 您可以在[區段常見問答集](../faq.md#copy)中找到有關此函式的詳細資訊。 |
 | [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請閱讀[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 |
-| [!UICONTROL 發佈] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[&#128279;](../faq.md#lifecycle-states)的生命週期狀態區段。 |
-| [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 請注意，為了停用對象，在&#x200B;**任何**&#x200B;目的地(包括非Experience Platform目的地)中無法&#x200B;**&#x200B;**&#x200B;啟用，或是&#x200B;**任何**&#x200B;其他對象的一部分。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[&#128279;](../faq.md#lifecycle-states)的生命週期狀態區段。 |
+| [!UICONTROL 發佈] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[的](../faq.md#lifecycle-states)生命週期狀態區段。 |
+| [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 請注意，為了停用對象，在&#x200B;**任何**&#x200B;目的地(包括非Experience Platform目的地)中無法&#x200B;****&#x200B;啟用，或是&#x200B;**任何**&#x200B;其他對象的一部分。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[的](../faq.md#lifecycle-states)生命週期狀態區段。 |
 | [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 不能刪除下游目的地中使用的對象或是其他對象&#x200B;**中的相依對象**。 如需有關刪除對象的詳細資訊，請參閱[區段常見問題集](../faq.md#lifecycle-states)。 |
 | [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱[沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md)。 |
 
@@ -78,11 +78,11 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 頁面頂端有選項，可新增所有對象至排程、匯入對象、建立新對象和檢視對象評估的摘要。
 
-切換&#x200B;**[!UICONTROL 排程所有對象]**&#x200B;將會啟用排程分段。 如需排程區段的詳細資訊，請參閱本使用手冊[&#128279;](#scheduled-segmentation)的排程區段區段。
+切換&#x200B;**[!UICONTROL 排程所有對象]**&#x200B;將會啟用排程分段。 如需排程區段的詳細資訊，請參閱本使用手冊[的](#scheduled-segmentation)排程區段區段。
 
-選取&#x200B;**[!UICONTROL 匯入對象]**&#x200B;將可讓您匯入外部產生的對象。 若要深入瞭解匯入對象，請閱讀使用手冊[&#128279;](#import-audience)中有關匯入對象的章節。
+選取&#x200B;**[!UICONTROL 匯入對象]**&#x200B;將可讓您匯入外部產生的對象。 若要深入瞭解匯入對象，請閱讀使用手冊[中有關](#import-audience)匯入對象的章節。
 
-選取&#x200B;**[!UICONTROL 建立對象]**&#x200B;可讓您建立對象。 若要深入瞭解如何建立對象，請參閱使用手冊[&#128279;](#create-audience)中有關建立對象的章節。
+選取&#x200B;**[!UICONTROL 建立對象]**&#x200B;可讓您建立對象。 若要深入瞭解如何建立對象，請參閱使用手冊[中有關](#create-audience)建立對象的章節。
 
 ![對象瀏覽頁面上的頂端導覽列會醒目提示。 此列包含建立對象的按鈕和匯入對象的按鈕。](../images/ui/audience-portal/browse-audiences-top.png)
 
@@ -102,13 +102,13 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | ----- | ----------- |
 | [!UICONTROL 名稱] | 對象名稱。 |
 | [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
-| [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)和[Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)。 |
-| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括`Draft`、`Inactive`和`Published`。 如需生命週期狀態的詳細資訊，包括不同狀態的意義，以及如何將對象移至不同生命週期狀態，請參閱分段常見問答集[&#128279;](../faq.md#lifecycle-status)的生命週期狀態區段。 |
+| [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)和[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)。 |
+| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括`Draft`、`Inactive`和`Published`。 如需生命週期狀態的詳細資訊，包括不同狀態的意義，以及如何將對象移至不同生命週期狀態，請參閱分段常見問答集[的](../faq.md#lifecycle-status)生命週期狀態區段。 |
 | [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括[!UICONTROL 批次]、[!UICONTROL 串流]、[!UICONTROL Edge]和[!UICONTROL 未排程]。 |
 | [!UICONTROL 上次更新者] | 上次更新對象的人員名稱。 |
 | [!UICONTROL 已建立] | 建立對象的日期和時間(UTC)。 |
 | [!UICONTROL 上次更新時間] | 上次更新對象的日期和時間(UTC)。 |
-| [!UICONTROL 標記] | 屬於對象的使用者定義標籤。 有關這些標籤的詳細資訊可在標籤[&#128279;](#tags)的區段中找到。 |
+| [!UICONTROL 標記] | 屬於對象的使用者定義標籤。 有關這些標籤的詳細資訊可在標籤[的](#tags)區段中找到。 |
 | [!UICONTROL 說明] | 對象的說明。 |
 | [!UICONTROL 建立者：] | 建立對象的人員名稱。 |
 | [!UICONTROL 存取標籤] | 對象的存取權標籤。 存取標籤可讓您根據套用至該資料的使用原則來分類資料集和欄位。 這些標籤可隨時套用，提供您選擇控管資料方式的靈活性。 如需存取標籤的詳細資訊，請閱讀[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 |
@@ -138,7 +138,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![搜尋列已反白顯示。](../images/ui/audience-portal/browse-audience-search.png)
 
-如需[!DNL Unified Search]的詳細資訊，包括支援的功能，請閱讀[整合式搜尋檔案](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=zh-Hant)。
+如需[!DNL Unified Search]的詳細資訊，包括支援的功能，請閱讀[整合式搜尋檔案](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html)。
 
 #### 標記 {#tags}
 
@@ -173,7 +173,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!NOTE]
 >
->只有在您位於其他資料夾中時，才能建立資料夾。 這表示如果您在左側導覽列上選取&#x200B;**[!UICONTROL 所有對象]**，則您&#x200B;**無法**&#x200B;建立資料夾。
+>只有在您位於其他資料夾中時，才能建立資料夾。 這表示如果您在左側導覽列上選取&#x200B;**所有對象**，則您&#x200B;**[!UICONTROL 無法]**&#x200B;建立資料夾。
 
 此時會出現彈出視窗，讓您為新建立的資料夾命名。 在命名資料夾後選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以完成資料夾的建立。 請注意，父資料夾的名稱&#x200B;**必須**&#x200B;是唯一的。
 
@@ -183,7 +183,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![已針對特定對象選取[!UICONTROL 移至資料夾]按鈕。](../images/ui/audience-portal/browse-move-to-folder.png)
 
-出現&#x200B;**將對象移至資料夾**&#x200B;彈出視窗。 選取您要移動對象的資料夾，然後選取[儲存]。**&#x200B;**
+出現&#x200B;**將對象移至資料夾**&#x200B;彈出視窗。 選取您要移動對象的資料夾，然後選取[儲存]。****
 
 ![顯示「將對象移至資料夾」彈出視窗。 將移動對象的資料夾反白顯示。](../images/ui/audience-portal/move-to-folder.png)
 
@@ -203,7 +203,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 | 篩選器 | 說明 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)和[Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)。 |
+| [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)和[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)。 |
 | [!UICONTROL 有任何標籤] | 可讓您依標籤篩選。 您可以在&#x200B;**[!UICONTROL 具有任何標籤]**&#x200B;和&#x200B;**[!UICONTROL 具有所有標籤]**&#x200B;之間選取。 選取&#x200B;**[!UICONTROL 具有任何標籤]**&#x200B;時，篩選的對象將包含您已新增的&#x200B;**任何**&#x200B;標籤。 選取&#x200B;**[!UICONTROL 具有所有標籤]**&#x200B;時，篩選的對象必須包含您已新增的&#x200B;**所有**&#x200B;標籤。 |
 | [!UICONTROL 生命週期狀態] | 可讓您根據對象的生命週期狀態進行篩選。 可用的選項包括[!UICONTROL 已刪除]、[!UICONTROL 草稿]、[!UICONTROL 非使用中]和[!UICONTROL 已發佈]。 |
 | [!UICONTROL 更新頻率] | 可讓您根據對象的更新頻率（評估方法）進行篩選。 可用的選項包括[!UICONTROL 批次]、[!UICONTROL 串流]和[!UICONTROL Edge] |
@@ -303,7 +303,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | 資料集名稱 | 對象所擷取的資料集名稱。 您可以選取資料集名稱，以取得資料集的詳細資訊。 若要深入瞭解資料集，請閱讀[資料集UI指南](../../catalog/datasets/user-guide.md)。 |
 | 資料集批次 | 對象所擷取的資料集ID。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
 | 輪廓批次 | 在Experience Platform上建立設定檔的批次識別碼。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
-| 結構描述 | 對象所屬的結構描述名稱。 您可以選取結構描述的名稱，以檢視有關結構描述結構的資訊並套用資料使用標籤。 如需詳細資訊，請閱讀結構描述指南[&#128279;](../../xdm/tutorials/labels.md)的管理資料使用標籤。 |
+| 結構描述 | 對象所屬的結構描述名稱。 您可以選取結構描述的名稱，以檢視有關結構描述結構的資訊並套用資料使用標籤。 如需詳細資訊，請閱讀結構描述指南[的](../../xdm/tutorials/labels.md)管理資料使用標籤。 |
 | 已擷取的記錄 | 擷取到資料集中的記錄數。 |
 | 失敗的記錄 | 無法擷取到資料集中的記錄數。 |
 | 新的輪廓片段 | 已建立的新設定檔數。 |
@@ -404,6 +404,11 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ## 匯入對象 {#import-audience}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_importaudience_dataexpiration"
+>title="資料到期"
+>abstract="對象會籍到期的天數。 此值可以設定從1天到180天。"
+
 >[!IMPORTANT]
 >
 >為了匯入外部產生的對象，您&#x200B;**必須**&#x200B;擁有下列許可權： [!UICONTROL 檢視區段]、[!UICONTROL 管理區段]以及[!UICONTROL 匯入對象]。 如需這些許可權的詳細資訊，請閱讀[存取控制總覽](../../access-control/home.md#permissions)。
@@ -434,7 +439,9 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![顯示[!UICONTROL 對象詳細資料]頁面。](../images/ui/audience-portal/import-audience-audience-details.png)
 
-您也可以選擇向外部產生的對象新增一些額外詳細資訊，包括提供ID、定義其合併原則或編輯其欄資料型別。
+您也可以選擇向外部產生的對象新增一些額外詳細資訊，包括提供外部ID、定義其合併原則、編輯其欄資料型別或套用自訂資料有效期。
+
++++ 自訂外部對象ID
 
 >[!NOTE]
 >
@@ -442,6 +449,12 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 >
 > - **必須**&#x200B;以字母（a-z或A-Z）、底線(_)或美元符號($)開頭。
 > - 所有後續字元都可由英數字元(a-z、A-Z、0-9)、底線(_)或美元符號($)組成。
+
++++
+
+>[!NOTE]
+>
+>自訂資料到期設定設定檔將&#x200B;**保留**&#x200B;在對象成員資格中的天數。 資料到期過後，設定檔將退出對象成員資格。 此值可以設定在1到180天之間。
 
 填寫您的對象詳細資料後，選取&#x200B;**[!UICONTROL 下一步]**。
 
