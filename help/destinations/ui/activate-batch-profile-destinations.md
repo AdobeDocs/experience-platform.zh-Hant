@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
+source-git-commit: 13adf42a23458d10e217d216d8fe79e8ce33376d
 workflow-type: tm+mt
-source-wordcount: '4596'
+source-wordcount: '4595'
 ht-degree: 13%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 13%
 
    ![啟用目錄頁面中反白顯示的對象控制項。](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
+1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] ****。
 
    ![醒目提示核取方塊以選取一或多個要啟用對象的目標位置。](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
@@ -120,7 +120,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >id="platform_destinations_activate_exportoptions"
 >title="檔案匯出選項 "
 >abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有設定檔的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合對象資格的設定檔。<br> 第一個增量檔案匯出包括符合對象資格的所有設定檔，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的設定檔。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#export-incremental-files" text="匯出增量檔案"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -154,7 +154,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![影像在批次目的地的啟動流程中，醒目提示「區段之後」評估選項。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-使用&#x200B;**[!UICONTROL 已排程]**&#x200B;選項，讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
+使用**[!UICONTROL 已排程]**&#x200B;選項，讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
 
    ![影像在批次目的地的啟動流程中醒目提示「已排程」選項，並顯示時間選擇器。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -348,7 +348,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_1@example.com"
@@ -382,7 +382,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_2@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_2@example.com"
@@ -425,7 +425,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 | 電子郵件* | 個人電子郵件 | 名字 | 姓氏 |
 |---|---|---|---|
-| johndoe_2@example.com | johndoe@example.com | John | D |
+| johndoe@example.com | johndoe@example.com | John | D |
 | doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### 重複資料刪除使用案例3：根據單一設定檔屬性重複資料刪除 {#deduplication-use-case-3}
@@ -450,7 +450,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 ### 具有相同時間戳記之設定檔的重複資料刪除行為 {#deduplication-same-timestamp}
 
-將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
+將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
 
 #### 主要考量事項
 
@@ -508,7 +508,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 * 如果選取`segmentMembership.seg_namespace.seg_id.status`欄位，匯出的檔案會在初始完整快照中包含&#x200B;**[!UICONTROL Active]**&#x200B;成員，並在後續的增量匯出中包含&#x200B;**[!UICONTROL Active]**&#x200B;和&#x200B;**[!UICONTROL Expired]**&#x200B;成員。
 * 如果未選取`segmentMembership.seg_namespace.seg_id.status`欄位，則匯出的檔案在初始完整快照和後續的增量匯出中僅包含&#x200B;**[!UICONTROL Active]**&#x200B;成員。
 
-深入瞭解檔案型目的地[&#128279;](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)的設定檔匯出行為。
+深入瞭解檔案型目的地[的](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)設定檔匯出行為。
 
 #### 目前無法選取身分名稱空間進行匯出
 
@@ -554,9 +554,10 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 >
 >由於已知的限制，您目前無法使用&#x200B;**[!UICONTROL 選取欄位]**&#x200B;視窗將`segmentMembership.seg_namespace.seg_id.status`新增至您的檔案匯出。 相反地，您必須手動將值`xdm: segmentMembership.seg_namespace.seg_id.status`貼到結構描述欄位中，如下所示。
 >
->![熒幕錄製，顯示啟動工作流程對應步驟中的對象成員資格因應措施。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![熒幕錄製，顯示啟動工作流程對應步驟中的對象成員資格因應措施。](../assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 視是否選取`segmentMembership.seg_namespace.seg_id.status`而定，檔案匯出會依下列方式而有所不同：
+
 * 如果選取`segmentMembership.seg_namespace.seg_id.status`欄位，匯出的檔案會在初始完整快照中包含&#x200B;**[!UICONTROL Active]**&#x200B;成員，並在後續的增量匯出中包含&#x200B;**[!UICONTROL Active]**&#x200B;和&#x200B;**[!UICONTROL Expired]**&#x200B;成員。
 * 如果未選取`segmentMembership.seg_namespace.seg_id.status`欄位，則匯出的檔案在初始完整快照和後續的增量匯出中僅包含&#x200B;**[!UICONTROL Active]**&#x200B;成員。
 
@@ -569,7 +570,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 >[!IMPORTANT]
 >
->只有當您在[對象選取](#select-audiences)步驟期間選取&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;對象時，才會顯示此步驟。
+>只有當您在&#x200B;**[!UICONTROL 對象選取]**&#x200B;步驟期間選取[自訂上傳](#select-audiences)對象時，才會顯示此步驟。
 
 擴充屬性對應至Experience Platform中擷取的自訂上傳對象，做為&#x200B;**[!UICONTROL 自訂上傳]**。 在此步驟中，您可以為每個選取的外部對象選取要匯出至目的地的屬性。
 
@@ -632,7 +633,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 ## 驗證受眾啟用 {#verify}
 
-將對象匯出至雲端儲存空間目的地時，Adobe Experience Platform會在您提供的儲存位置中建立`.csv`、`.json`或`.parquet`檔案。 預期會根據您在工作流程中設定的排程，在您的儲存位置中建立新檔案。 預設檔案格式如下所示，但您可以[編輯檔案名稱的元件](#file-names)：
+將對象匯出至雲端儲存空間目的地時，Adobe Experience Platform會在您提供的儲存位置中建立`.csv`、`.json`或`.parquet`檔案。 預期會根據您在工作流程中設定的排程，在您的儲存位置中建立新檔案。 預設檔案格式如下所示，但您可以[編輯檔案名稱的元件](#configure-file-names)：
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 例如，如果您選取每日匯出頻率，您連續三天收到的檔案可能會如下所示：
