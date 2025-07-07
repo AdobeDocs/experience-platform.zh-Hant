@@ -2,9 +2,9 @@
 title: 使用TTL管理Data Lake中的體驗事件資料集保留
 description: 瞭解如何使用存留時間(TTL)設定和Adobe Experience Platform API，評估、設定和管理Data Lake中的體驗事件資料集保留。 本指南說明TTL資料列層級的有效期限如何支援資料保留原則、最佳化儲存效率，以及確保有效的資料生命週期管理。 此外，還提供使用案例和最佳實務，協助您有效套用TTL。
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
+source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2458'
 ht-degree: 0%
 
 ---
@@ -178,7 +178,7 @@ curl -X GET \
 GET /dataSets/{DATASET_ID}
 ```
 
-此呼叫傳回`extensions.adobe_lakeHouse.rowExpiration`區段中目前的`ttlValue` （如果已設定）。
+此呼叫傳回`ttlValue`區段中目前的`extensions.adobe_lakeHouse.rowExpiration` （如果已設定）。
 
 **要求**
 
@@ -333,7 +333,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### 我可以為資料湖和設定檔服務設定不同的保留原則嗎？
 
 +++回答
-可以，您可以為Data Lake和Profile服務設定不同的保留原則。 不過，設定檔的保留期間不得短於資料湖的保留期間。
+可以，您可以為Data Lake和Profile服務設定不同的保留原則。 設定檔存放區的保留期間可能會短於或長於資料湖保留期間，具體取決於您組織的需求。
 +++
 
 ### 如何檢查我目前的資料集使用情形？
