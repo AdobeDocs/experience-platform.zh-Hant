@@ -1,9 +1,10 @@
 ---
 title: CMK警示解決方式參考
 description: 識別、疑難排解及解決Adobe Experience Platform中客戶自控金鑰(CMK)設定錯誤所觸發的常見警報。 使用本指南來遵循清楚的逐步指示，並還原安全的金鑰存取。
-source-git-commit: 0d9cc046956dd380bb8816f0d8bf497bbad6140b
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
+source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,7 @@ ht-degree: 0%
 
 ## 金鑰存取已停用 {#key-access-disabled}
 
-此警報表示Adobe Experience Platform無法存取已設定的CMK，因為金鑰已停用或因相關金鑰設定問題而無法存取。
-
->[!IMPORTANT]
->
->在此情況下，Adobe CMK會將存取失敗視為故意移除，並根據您的SLA清除與組織相關的所有資料。
+此警報表示Adobe Experience Platform無法存取已設定的CMK，因為金鑰已停用或因其設定而無法存取。 在這種情況下，系統會將狀況視為有意移除關鍵存取權。
 
 ### 發生時間
 
