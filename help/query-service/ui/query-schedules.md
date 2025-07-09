@@ -25,8 +25,8 @@ ht-degree: 0%
 
 有關建立和設定技術帳戶的其他指引，請參閱：
 
-- [Developer Console安裝程式](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)：設定Adobe Developer Console及取得OAuth憑證的逐步指示。
-- [端對端技術帳戶設定](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)：在Adobe Experience Platform中建立和設定技術帳戶的完整逐步解說。
+- [Developer Console安裝程式](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)：設定Adobe Developer Console及取得OAuth憑證的逐步指示。
+- [端對端技術帳戶設定](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorial-comprehensive-technical/setup)：在Adobe Experience Platform中建立和設定技術帳戶的完整逐步解說。
 
 如果您只使用查詢服務UI，請確保您擁有必要許可權，或請和管理技術帳戶的管理員進行協調。 任何已排程的查詢都會新增到[!UICONTROL 已排程的查詢]索引標籤的清單中，您可以在此監視所有已排程查詢工作的狀態、排程詳細資料和錯誤訊息，以及訂閱警示。 如需有關監視和管理查詢的詳細資訊，請參閱[監視排定的查詢檔案](./monitor-queries.md)。
 

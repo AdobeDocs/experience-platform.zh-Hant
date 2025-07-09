@@ -26,7 +26,7 @@ ht-degree: 2%
 >
 >管理排程查詢時的重要考量：<ul><li>如果用來建立已排程查詢的帳戶（技術或使用者）失去存取權或許可權，則已排程查詢將失敗。</li><li>透過API或UI刪除之前，必須先停用排定的查詢。</li><li>不支援無限期排程而不指定結束日期；必須一律指定結束日期。</li></ul>
 
-如需帳戶需求、許可權設定及管理排程查詢的詳細指引，請參閱[查詢排程檔案](../ui/query-schedules.md#technical-account-user-requirements)。 如需建立和設定技術帳戶的逐步指示，請參閱[Developer Console設定](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)和[端對端技術帳戶設定](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)。
+如需帳戶需求、許可權設定及管理排程查詢的詳細指引，請參閱[查詢排程檔案](../ui/query-schedules.md#technical-account-user-requirements)。 如需建立和設定技術帳戶的逐步指示，請參閱[Developer Console設定](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)和[端對端技術帳戶設定](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorial-comprehensive-technical/setup)。
 
 ## API呼叫範例
 
