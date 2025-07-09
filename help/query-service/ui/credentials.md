@@ -172,7 +172,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 >[!NOTE]
 >
 >使用不會到期的認證連線到主機時，除了密碼和使用者名稱外，仍需使用[!UICONTROL 即將到期的認證]區段中列出的所有引數。
->>輸入使用者名稱與密碼的格式使用冒號分隔值，如本範例`username:{your_username}`和`password:{password_string}`所示。
+>&#x200B;>輸入使用者名稱與密碼的格式使用冒號分隔值，如本範例`username:{your_username}`和`password:{password_string}`所示。
 
 | 參數 | 說明 | 範例 |
 |---|---|---|
