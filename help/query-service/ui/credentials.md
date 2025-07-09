@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務認證指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 264d3b12d8fd3bd100018513af1576b3de1cbb33
+source-git-commit: 60b9fd250ba1a3e2da374681b78f0375f75dc87e
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1959'
 ht-degree: 5%
 
 ---
@@ -46,11 +46,11 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 >
 >![反白顯示「隱私權與安全性」、「驗證設定」和「最長工作階段壽命」的Admin Console設定標籤。](../images/ui/credentials/max-session-life.png)
 >
->請參閱Adobe說明檔案，以取得有關Admin Console所提供的[進階設定](https://helpx.adobe.com/tw/enterprise/using/authentication-settings.html#advanced-settings)的詳細資訊。
+>請參閱Adobe說明檔案，以取得有關Admin Console所提供的[進階設定](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings)的詳細資訊。
 
 ### 連線至查詢工作階段中的Customer Journey Analytics資料 {#connect-to-customer-journey-analytics}
 
-使用Customer Journey Analytics BI擴充功能搭配Power BI或Tableau，使用SQL存取您的Customer Journey Analytics [資料檢視](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-dataviews/data-views)。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
+使用Customer Journey Analytics BI擴充功能搭配Power BI或Tableau，使用SQL存取您的Customer Journey Analytics [資料檢視](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views)。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
 
 請參閱檔案以瞭解如何[將Query Service連線至各種案頭使用者端應用程式](../clients/overview.md)，例如[Power BI](../clients/power-bi.md)或[Tableau](../clients/tableau.md)
 
@@ -68,7 +68,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 您也可以直接從Query Editor或Postgres CLI存取您的Customer Journey Analytics資料。 若要這麼做，請在撰寫查詢時參考`cja`資料庫。 請參閱查詢編輯器[查詢撰寫指南](./user-guide.md#query-authoring)，以取得如何撰寫、執行和儲存查詢的詳細資訊。
 
-如需使用SQL存取Customer Journey Analytics資料檢視的完整指示，請參閱[BI擴充功能指南](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-dataviews/bi-extension)。
+如需使用SQL存取Customer Journey Analytics資料檢視的完整指示，請參閱[BI擴充功能指南](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension)。
 
 ## 不會到期的認證 {#non-expiring-credentials}
 
@@ -98,9 +98,9 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 5. [將使用者新增為產品設定檔管理員](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html)，以允許為任何使用中的產品設定檔建立帳戶。
 6. [將使用者新增為產品設定檔開發人員](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)，以建立整合。
 
-若要深入瞭解如何指派許可權，請閱讀有關[存取控制](../../access-control/home.md)的檔案。
+完成這些步驟後，您將在[Adobe Developer Console](https://developer.adobe.com/console/)中設定必要的許可權，以便產生OAuth伺服器對伺服器認證，並使用到期或不到期的認證功能。
 
-現在，所有必要的許可權已在Adobe Developer Console中設定，讓使用者能使用即將到期的認證功能。
+如需指派許可權的詳細資訊，請參閱[存取控制檔案](../../access-control/home.md)。
 
 ### 產生認證 {#generate-credentials}
 
@@ -172,15 +172,15 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 >[!NOTE]
 >
 >使用不會到期的認證連線到主機時，除了密碼和使用者名稱外，仍需使用[!UICONTROL 即將到期的認證]區段中列出的所有引數。
->輸入使用者名稱與密碼的格式使用冒號分隔值，如本範例`username:{your_username}`和`password:{password_string}`所示。
+>>輸入使用者名稱與密碼的格式使用冒號分隔值，如本範例`username:{your_username}`和`password:{password_string}`所示。
 
 | 參數 | 說明 | 範例 |
 |---|---|---|
-| **伺服器/主機** | 您連線的伺服器/主機名稱。 <ul><li>此值同時用於即將到期的認證和不即將到期的認證，並且採用`server.adobe.io`的形式。 在[!UICONTROL 即將到期的認證]區段的&#x200B;**[!UICONTROL 主機]**&#x200B;下找到值。</ul></li> | `acme.platform.adobe.io` |
-| **連線埠** | 您連線的伺服器/主機連線埠。 <ul><li>此值同時用於即將到期的認證和不即將到期的認證，可以在[!UICONTROL 即將到期的認證]區段的&#x200B;**[!UICONTROL 連線埠]**&#x200B;下找到。</ul></li> | `80` |
-| **資料庫** | 您正在連線的資料庫。 <ul><li>此值同時用於到期認證和不到期認證，並且可在[!UICONTROL 到期認證]區段的&#x200B;**[!UICONTROL 資料庫]**&#x200B;下找到。 </ul></li> | `prod:all` |
+| **伺服器/主機** | 您連線的伺服器/主機名稱。 <ul><li>此值同時用於即將到期的認證和不即將到期的認證，並且採用`server.adobe.io`的形式。 在&#x200B;**[!UICONTROL 即將到期的認證]**&#x200B;區段的[!UICONTROL 主機]下找到值。</ul></li> | `acme.platform.adobe.io` |
+| **連線埠** | 您連線的伺服器/主機連線埠。 <ul><li>此值同時用於即將到期的認證和不即將到期的認證，可以在&#x200B;**[!UICONTROL 即將到期的認證]**&#x200B;區段的[!UICONTROL 連線埠]下找到。</ul></li> | `80` |
+| **資料庫** | 您正在連線的資料庫。 <ul><li>此值同時用於到期認證和不到期認證，並且可在&#x200B;**[!UICONTROL 到期認證]**&#x200B;區段的[!UICONTROL 資料庫]下找到。 </ul></li> | `prod:all` |
 | **使用者名稱** | 連線到外部使用者端的使用者使用者名稱。 <ul><li>此值會用於即將到期的認證和不即將到期的認證。 它採用`@AdobeOrg`之前的英數字串形式。 此值位於&#x200B;**[!UICONTROL 使用者名稱]**&#x200B;下。</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **密碼** | 連線到外部使用者端的使用者密碼。 <ul><li>如果您正在使用即將到期的認證，可在[!UICONTROL 即將到期的認證]區段的&#x200B;**[!UICONTROL 密碼]**&#x200B;下找到此認證。</li><li>如果您使用不會到期的認證，此值是來自technicalAccountID的串連引數，以及從設定JSON檔案取得的認證。 密碼值的格式為： `{technicalAccountId}:{credential}`。</li></ul> | <ul><li>即將到期的認證密碼超過一千個字元的英數字串。 將不會提供範例。</li><li>不會到期的認證密碼如下： <br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **密碼** | 連線到外部使用者端的使用者密碼。 <ul><li>如果您正在使用即將到期的認證，可在&#x200B;**[!UICONTROL 即將到期的認證]**&#x200B;區段的[!UICONTROL 密碼]下找到此認證。</li><li>如果您使用不會到期的認證，此值是來自technicalAccountID的串連引數，以及從設定JSON檔案取得的認證。 密碼值的格式為： `{technicalAccountId}:{credential}`。</li></ul> | <ul><li>即將到期的認證密碼超過一千個字元的英數字串。 將不會提供範例。</li><li>不會到期的認證密碼如下： <br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 

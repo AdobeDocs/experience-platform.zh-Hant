@@ -5,18 +5,32 @@ title: 排程端點
 description: 以下章節會逐步說明您可以使用查詢服務API為已排程查詢進行的各種API呼叫。
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
+source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1410'
 ht-degree: 2%
 
 ---
 
 # 排程端點
 
+瞭解如何使用查詢服務排程API，以程式設計方式建立、管理和監視排程查詢，並提供詳細資訊和範例。
+
+## 需求和先決條件
+
+您可以使用技術帳戶（透過OAuth伺服器對伺服器憑證驗證）或個人使用者帳戶（使用者權杖）來建立排程查詢。 但是，Adobe強烈建議使用技術帳戶來確保排程查詢執行不中斷、安全，尤其是對於長期或生產工作負載。
+
+如果撤銷使用者存取權或停用其帳戶，使用個人使用者帳戶建立的查詢將會失敗。 技術帳戶可提升穩定性，因為技術帳戶不會與個別使用者的就業狀態或存取權繫結。
+
+>[!IMPORTANT]
+>
+>管理排程查詢時的重要考量：<ul><li>如果用來建立已排程查詢的帳戶（技術或使用者）失去存取權或許可權，則已排程查詢將失敗。</li><li>透過API或UI刪除之前，必須先停用排定的查詢。</li><li>不支援無限期排程而不指定結束日期；必須一律指定結束日期。</li></ul>
+
+如需帳戶需求、許可權設定及管理排程查詢的詳細指引，請參閱[查詢排程檔案](../ui/query-schedules.md#technical-account-user-requirements)。 如需建立和設定技術帳戶的逐步指示，請參閱[Developer Console設定](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)和[端對端技術帳戶設定](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)。
+
 ## API呼叫範例
 
-現在您已瞭解要使用哪些標頭，您已準備好開始呼叫[!DNL Query Service] API。 以下章節逐步解說您可以使用[!DNL Query Service] API進行的各種API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
+設定必要的驗證標頭（請參閱[API驗證指南](../../landing/api-authentication.md)）之後，您就可以開始呼叫[!DNL Query Service] API。 以下章節示範各種具有一般格式的API呼叫，範例要求包括必要的標題和範例回應。
 
 ### 擷取排定的查詢清單
 
@@ -39,7 +53,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定排序結果時所依據的欄位。 支援的欄位是`created`和`updated`。 例如，`orderby=created`將依建立的遞增順序來排序結果。 在建立之前(`orderby=-created`)新增`-`將會依建立的遞減順序排序專案。 |
+| `orderby` | 指定排序結果時所依據的欄位。 支援的欄位是`created`和`updated`。 例如，`orderby=created`將依建立的遞增順序來排序結果。 在建立之前(`-`)新增`orderby=-created`將會依建立的遞減順序排序專案。 |
 | `limit` | 指定頁面大小限制，以控制頁面中包含的結果數量。 （*預設值： 20*） |
 | `start` | 指定ISO格式時間戳記來排序結果。 如果未指定開始日期，API呼叫會先傳回最舊建立的排程查詢，然後繼續列出最近的結果。<br> ISO時間戳記允許在日期和時間有不同的詳細程度等級。 基本ISO時間戳記採用`2020-09-07`格式，以表示日期2020年9月7日。 更複雜的範例將寫為`2022-11-05T08:15:30-05:00`，並對應至2022年11月5日美國東部標準時間上午8:15:30。 可以為時區提供UTC時差，並在字尾加上「Z」(`2020-01-01T01:01:01Z`)表示。 如果未提供時區，則預設為零。 |
 | `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位是`created`、`templateId`和`userId`。 支援的運運算元清單為`>` （大於）、`<` （小於）和`==` （等於）。 例如，`userId==6ebd9c2d-494d-425a-aa91-24033f3abeec`會傳回所有已排程的查詢，其中使用者ID是指定的。 |

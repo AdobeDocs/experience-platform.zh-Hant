@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2181'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,24 @@ ht-degree: 0%
 >
 >您只能將排程新增至已建立並儲存的查詢。
 
-任何排定的查詢都會新增到[!UICONTROL 排定的查詢]索引標籤的清單中。 您可以從該工作區透過UI監視所有已排程查詢工作的狀態。 在[!UICONTROL 已排程的查詢]索引標籤上，您可以找到有關查詢執行的重要資訊並訂閱警示。 可用的資訊包括狀態、排程詳細資料，以及執行失敗時的錯誤訊息/代碼。 如需詳細資訊，請參閱[監視排程查詢檔案](./monitor-queries.md)。
+## 已排程查詢的帳戶需求 {#technical-account-user-requirements}
+
+為協助排程查詢可靠地執行，Adobe建議管理員布建技術帳戶（使用OAuth伺服器對伺服器認證）以建立排程查詢。 排定的查詢也可以使用個人使用者帳戶建立，但如果該使用者的存取權被移除或停用，則以這種方式建立的查詢將停止執行。
+
+如需設定技術帳戶和指派必要許可權的詳細資訊，請參閱[認證指南必要條件](./credentials.md#prerequisites)和[API驗證](../../landing/api-authentication.md)。
+
+有關建立和設定技術帳戶的其他指引，請參閱：
+
+- [Developer Console安裝程式](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)：設定Adobe Developer Console及取得OAuth憑證的逐步指示。
+- [端對端技術帳戶設定](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)：在Adobe Experience Platform中建立和設定技術帳戶的完整逐步解說。
+
+如果您只使用查詢服務UI，請確保您擁有必要許可權，或請和管理技術帳戶的管理員進行協調。 任何已排程的查詢都會新增到[!UICONTROL 已排程的查詢]索引標籤的清單中，您可以在此監視所有已排程查詢工作的狀態、排程詳細資料和錯誤訊息，以及訂閱警示。 如需有關監視和管理查詢的詳細資訊，請參閱[監視排定的查詢檔案](./monitor-queries.md)。
 
 此工作流程涵蓋查詢服務UI中的排程程式。 若要瞭解如何使用API新增排程，請參閱[排程查詢端點指南](../api/scheduled-queries.md)。
+
+>[!NOTE]
+>
+>使用技術帳戶以確保排程查詢即使使用者離開組織或其角色變更也能繼續執行。 儘可能選擇一個技術帳戶，以實現不中斷的查詢自動化。
 
 ## 建立查詢排程 {#create-schedule}
 
@@ -45,7 +60,7 @@ ht-degree: 0%
 
 ### 新增排程詳細資料 {#schedule-details}
 
-便會顯示「排程詳細資訊」頁面。 您可以在此頁面上編輯排定查詢的各種詳細資訊。 詳細資料包括排定的查詢[&#128279;](#scheduled-query-frequency)執行的頻率與工作日、開始與結束日期、要匯出結果的資料集，以及[查詢狀態警示](#alerts-for-query-status)。
+便會顯示「排程詳細資訊」頁面。 您可以在此頁面上編輯排定查詢的各種詳細資訊。 詳細資料包括排定的查詢[執行的](#scheduled-query-frequency)頻率與工作日、開始與結束日期、要匯出結果的資料集，以及[查詢狀態警示](#alerts-for-query-status)。
 
 >[!IMPORTANT]
 >
@@ -109,7 +124,7 @@ ht-degree: 0%
 | `success` | 此警報會在排定的查詢執行成功完成時通知您，表示查詢執行時沒有任何錯誤。 |
 | `failed` | 排定的查詢執行發生錯誤或無法成功執行時，就會觸發此警報。 它有助於您及時識別並解決問題。 |
 | `quarantine` | 當排程的查詢執行進入隔離狀態時，此警報便會啟動。 在查詢[註冊隔離功能](#quarantine)後，任何連續執行失敗的排程查詢都會自動進入[!UICONTROL 隔離]狀態。 然後，隔離的查詢需要您的干預，才能進行任何進一步的執行。 注意：您必須為隔離功能註冊查詢，才能訂閱隔離警報。 |
-| `delay` | 此警示會通知您排定的查詢執行結果[&#128279;](./monitor-queries.md#query-run-delay)是否有延遲超過指定的臨界值。 您可以設定自訂時間，在該期間查詢執行時觸發警報，而不完成或失敗。 預設行為會在查詢開始處理後設定150分鐘的警報。 |
+| `delay` | 此警示會通知您排定的查詢執行結果[是否有](./monitor-queries.md#query-run-delay)延遲超過指定的臨界值。 您可以設定自訂時間，在該期間查詢執行時觸發警報，而不完成或失敗。 預設行為會在查詢開始處理後設定150分鐘的警報。 |
 
 >[!NOTE]
 >
@@ -163,7 +178,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >運算時數資料可從2024年8月15日取得。 此日期之前的資料會顯示為「無法使用」。
-
 
 如需有關如何透過UI監視所有查詢工作狀態的完整資訊，請參閱[監視器排程查詢指南](./monitor-queries.md#inline-actions)。
 
