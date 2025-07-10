@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 132024313dbe0d83c9af22d30927a01e32c9d94f
+source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
 workflow-type: tm+mt
-source-wordcount: '4237'
+source-wordcount: '4551'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 * [資料集](overview.md)： [!DNL Experience Platform]中資料持續性的儲存和管理建構。
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
-   * [結構描述編輯器](../../xdm/tutorials/create-schema-ui.md)：瞭解如何在[!DNL Experience Platform]使用者介面中使用[!DNL Schema Editor]建置您自己的自訂XDM結構描述。
+   * [結構描述編輯器](../../xdm/tutorials/create-schema-ui.md)：瞭解如何在[!DNL Schema Editor]使用者介面中使用[!DNL Experience Platform]建置您自己的自訂XDM結構描述。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：確保遵守使用客戶資料的相關法規、限制和政策。
 
@@ -108,11 +108,13 @@ ht-degree: 5%
 
 ### 預覽資料集 {#preview}
 
-您可以從[!UICONTROL 瀏覽]索引標籤的內嵌選項以及[!UICONTROL 資料集活動]檢視，預覽資料集範例資料。 從[!UICONTROL 瀏覽]索引標籤，選取您要預覽的資料集名稱旁的省略符號(...)。 選單清單中的選項隨即顯示。 接著，從可用選項清單中選取&#x200B;**[!UICONTROL 預覽資料集]**。 如果資料集空白，預覽連結會停用，並改為表示無法預覽。
+您可以從[!UICONTROL 瀏覽]索引標籤的內嵌選項以及[!UICONTROL 資料集活動]檢視，預覽資料集範例資料。 新的資料集預覽視窗已推出，並包含其他導覽和內容增強功能。
+
+從[!UICONTROL 瀏覽]索引標籤，選取您要預覽的資料集名稱旁的省略符號(...)。 選項清單隨即顯示。 接著，從可用選項中選取[!UICONTROL 預覽資料集]。 如果資料集空白，預覽連結會停用，並指示預覽無法使用。
 
 ![資料集工作區的「瀏覽」索引標籤中，針對所選的資料集反白顯示省略符號和預覽資料集選項。](../images/datasets/user-guide/preview-dataset-option.png)
 
-這將會開啟預覽視窗，其中資料集的結構描述階層檢視會顯示在右側。
+這樣會開啟預覽視窗，其中資料集的階層架構檢視會顯示在左側。
 
 >[!NOTE]
 >
@@ -124,7 +126,45 @@ ht-degree: 5%
 
 ![預覽資料集按鈕已反白顯示。](../images/datasets/user-guide/select-preview.png)
 
-若要以更穩健的方法存取您的資料，[!DNL Experience Platform]可提供下游服務，例如[!DNL Query Service]和[!DNL JupyterLab]，以探索和分析資料。 如需詳細資訊，請參閱下列檔案：
+資料集預覽視窗提供簡化的介面，方便您探索及驗證資料集。
+
+#### 資料集預覽視窗 {#dataset-preview-window}
+
+下列動畫顯示資料集預覽視窗及其導覽和資料探索功能：
+
+![顯示資料集預覽視窗的熒幕錄製。 記錄會醒目提示物件瀏覽器側邊欄、資料型別指示器、SQL查詢顯示和格式化資料表。](../images/datasets/user-guide/dataset-preview-demo.gif)
+
+資料集預覽視窗包含：
+
+* 左側物件瀏覽器側邊欄，用於導覽和篩選資料集欄位。
+* 資料集結構中每個欄名稱旁顯示的資料型別指標，可用於快速insight。
+* SQL查詢會顯示在視窗頂端，顯示用來產生資料集的查詢。
+* 格式化表格檢視，最多可在右下角區域顯示100列，以有效檢閱資料。
+* 資料Distiller使用者可直接導覽至「查詢編輯器」，並預先填入SQL查詢以供進一步探索或修改。
+
+這些功能支援快速導覽、結構描述瞭解和透明資料集驗證。
+
+從內嵌動作或&#x200B;**[!UICONTROL 資料集活動]**&#x200B;畫面選取[!UICONTROL 預覽資料集]以開啟預覽視窗。
+
+>[!NOTE]
+>
+>預覽視窗會顯示最多100列的範例。 不含資料的欄位會從檢視中排除。
+
+#### 進階查詢編輯器捷徑 {#query-editor-shortcut}
+
+如果您的組織有Data Distiller授權，您可以直接從資料集預覽視窗存取進階查詢編輯器。
+
+>[!AVAILABILITY]
+>
+>只有具備必要Data Distiller授權的使用者才能存取此功能。 如果您的組織沒有Data Distiller，則不會顯示[!UICONTROL 進階查詢編輯器]選項。
+
+在預覽視窗的右上角選取&#x200B;**[!UICONTROL 進階查詢編輯器]**&#x200B;以開啟查詢編輯器。 目前的預覽查詢已預先載入，並準備好執行或進一步分析。
+
+![資料集預覽視窗在右上角顯示進階查詢編輯器按鈕。](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+
+此捷徑可讓您順暢地從預覽範例資料移至在Query Service中執行和修訂查詢，而不需要重新輸入SQL或內容。
+
+如需其他資料存取和分析，請使用下游服務，例如[!DNL Query Service]和[!DNL JupyterLab]。 如需詳細資訊，請參閱下列檔案：
 
 * [查詢服務總覽](../../query-service/home.md)
 * [JupyterLab 使用手冊](../../data-science-workspace/jupyterlab/overview.md)
@@ -222,7 +262,7 @@ ht-degree: 5%
 
 ![顯示[設定資料保留]對話方塊及[體驗事件]分佈圖。](../images/datasets/user-guide/visual-forecast.png)
 
-若您對組態感到滿意，請選取[儲存]，確認您的設定。**&#x200B;**
+若您對組態感到滿意，請選取[儲存]，確認您的設定。****
 
 >[!IMPORTANT]
 >
@@ -232,7 +272,7 @@ ht-degree: 5%
 
 若要探索保留原則如何套用至不同的服務，請參閱個人檔案中[體驗事件資料集保留的專用指南](../../profile/event-expirations.md)以及資料湖中[體驗事件資料集保留的專用指南](./experience-event-dataset-retention-ttl-guide.md)。 此可見度可支援治理、法規遵循及有效率的資料生命週期管理。
 
-若要瞭解如何使用監視儀表板在Experience Platform UI中追蹤來源資料流，請參閱UI[&#128279;](../../dataflows/ui/monitor-sources.md)檔案中的監視來源資料流。
+若要瞭解如何使用監視儀表板在Experience Platform UI中追蹤來源資料流，請參閱UI[檔案中的](../../dataflows/ui/monitor-sources.md)監視來源資料流。
 
 <!-- Improve the link above. I cannot link to a 100% appropriate document yet. -->
 
@@ -315,7 +355,7 @@ ht-degree: 5%
 
 ### 顯示系統資料集 {#show-system-datasets}
 
-依預設，只會顯示您擷取資料的資料集。 如果您想要檢視系統產生的資料集，請選取[!UICONTROL 顯示系統資料集]區段中的&#x200B;**[!UICONTROL 是]**&#x200B;核取方塊。 系統產生的資料集僅用於處理其他元件。 例如，系統產生的設定檔匯出資料集可用來處理設定檔控制面板。
+依預設，只會顯示您擷取資料的資料集。 如果您想要檢視系統產生的資料集，請選取&#x200B;**[!UICONTROL 顯示系統資料集]**&#x200B;區段中的[!UICONTROL 是]核取方塊。 系統產生的資料集僅用於處理其他元件。 例如，系統產生的設定檔匯出資料集可用來處理設定檔控制面板。
 
 ![含有[!UICONTROL 顯示系統資料集]區段的資料集工作區的篩選選項已反白顯示。](../images/datasets/user-guide/show-system-datasets.png)
 
@@ -325,7 +365,7 @@ ht-degree: 5%
 
 若要根據資料集是否已為設定檔啟用來篩選資料集，請從篩選選項中選取[!UICONTROL 是]核取方塊。
 
-[包含在設定檔]區段中的![[!UICONTROL 資料集工作區的篩選選項已反白顯示。]](../images/datasets/user-guide/included-in-profile.png)
+![包含在設定檔[!UICONTROL 區段中的]資料集工作區的篩選選項已反白顯示。](../images/datasets/user-guide/included-in-profile.png)
 
 ### 依標籤篩選資料集 {#filter-by-tag}
 
