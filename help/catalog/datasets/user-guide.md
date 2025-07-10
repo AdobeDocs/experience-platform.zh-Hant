@@ -262,7 +262,7 @@ ht-degree: 5%
 
 ![顯示[設定資料保留]對話方塊及[體驗事件]分佈圖。](../images/datasets/user-guide/visual-forecast.png)
 
-若您對組態感到滿意，請選取[儲存]，確認您的設定。****
+若您對組態感到滿意，請選取[儲存]，確認您的設定。**&#x200B;**
 
 >[!IMPORTANT]
 >
