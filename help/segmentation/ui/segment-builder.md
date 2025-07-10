@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
+source-git-commit: 152ec3ca36a69bea79b8ed3c33dd21bd9479171f
 workflow-type: tm+mt
-source-wordcount: '5195'
-ht-degree: 11%
+source-wordcount: '5128'
+ht-degree: 10%
 
 ---
 
@@ -50,15 +50,15 @@ ht-degree: 11%
 >
 >如果屬性符合下列條件，則會顯示摘要資料：屬性的所有值都在100個字元以內，而且屬性的唯一值在3000個以內。
 >
->但是，如果屬性是透過關聯性連結至設定檔的多實體資料，則&#x200B;**不會**&#x200B;有摘要資料。 例如，如果您有名為`Vehicle`的自訂結構描述，則`Vehicle`結構描述中的&#x200B;**屬性**&#x200B;將&#x200B;**沒有**&#x200B;摘要資料。
+>但是，如果屬性是透過關聯性連結至設定檔的多實體資料，則&#x200B;**不會**&#x200B;有摘要資料。 例如，如果您有名為`Vehicle`的自訂結構描述，則&#x200B;**結構描述中的**&#x200B;屬性`Vehicle`將&#x200B;**沒有**&#x200B;摘要資料。
 
-您可以在[!DNL Segment Builder]工作區左側的&#x200B;**[!UICONTROL 欄位]**&#x200B;區段中看到這些建置區塊。 **[!UICONTROL 欄位]**&#x200B;包含每個主要建置區塊的標籤：「[!UICONTROL 屬性]」、「[!UICONTROL 事件]」和「[!UICONTROL 對象]」。
+您可以在&#x200B;**[!UICONTROL 工作區左側的]**&#x200B;欄位[!DNL Segment Builder]區段中看到這些建置區塊。 **[!UICONTROL 欄位]**&#x200B;包含每個主要建置區塊的標籤：「[!UICONTROL 屬性]」、「[!UICONTROL 事件]」和「[!UICONTROL 對象]」。
 
 ![區段產生器的欄位區段已反白顯示。](../images/ui/segment-builder/segment-fields.png)
 
 ### 屬性
 
-**[!UICONTROL 屬性]**&#x200B;索引標籤可讓您瀏覽屬於[!DNL XDM Individual Profile]類別的[!DNL Profile]屬性。 每個資料夾都可以展開以顯示其他屬性，其中每個屬性都是一個可拖曳至工作區中央規則產生器畫布的圖磚。 本指南稍後會更詳細地討論[規則產生器畫布](#rule-builder-canvas)。
+**[!UICONTROL 屬性]**&#x200B;索引標籤可讓您瀏覽屬於[!DNL Profile]類別的[!DNL XDM Individual Profile]屬性。 每個資料夾都可以展開以顯示其他屬性，其中每個屬性都是一個可拖曳至工作區中央規則產生器畫布的圖磚。 本指南稍後會更詳細地討論[規則產生器畫布](#rule-builder-canvas)。
 
 ![區段產生器欄位的屬性區段會醒目提示。](../images/ui/segment-builder/attributes.png)
 
@@ -78,7 +78,7 @@ ht-degree: 11%
 
 ![區段產生器UI的事件區段已反白顯示。](../images/ui/segment-builder/events.png)
 
-依預設，只會顯示資料存放區中填入的結構欄位。 這包括[!UICONTROL 事件型別]。 如果「[!UICONTROL 事件型別]」清單未顯示，或您只能選取「[!UICONTROL 任何]」作為「[!UICONTROL 事件型別]」，請選取「**[!UICONTROL 欄位]**」旁的&#x200B;**齒輪圖示**，然後在「**[!UICONTROL 可用欄位]**」下選取「**[!UICONTROL 顯示完整XDM結構描述]**」。 再次選取&#x200B;**齒輪圖示**&#x200B;以返回&#x200B;**[!UICONTROL 欄位]**&#x200B;標籤，您現在應該能夠檢視多個「[!UICONTROL 事件型別]」和結構描述欄位，無論它們是否包含資料。
+依預設，只會顯示資料存放區中填入的結構欄位。 這包括[!UICONTROL 事件型別]。 如果「[!UICONTROL 事件型別]」清單未顯示，或您只能選取「[!UICONTROL 任何]」作為「[!UICONTROL 事件型別]」，請選取「**欄位**」旁的&#x200B;**[!UICONTROL 齒輪圖示]**，然後在「**[!UICONTROL 可用欄位]**」下選取「**[!UICONTROL 顯示完整XDM結構描述]**」。 再次選取&#x200B;**齒輪圖示**&#x200B;以返回&#x200B;**[!UICONTROL 欄位]**&#x200B;標籤，您現在應該能夠檢視多個「[!UICONTROL 事件型別]」和結構描述欄位，無論它們是否包含資料。
 
 ![選項按鈕可讓您在只顯示含有資料的欄位或顯示所有XDM欄位之間選擇，反白顯示。](../images/ui/segment-builder/show-populated.png)
 
@@ -192,7 +192,7 @@ ht-degree: 11%
 
 您可以從&#x200B;**[!UICONTROL 對象]**&#x200B;標籤將對象拖放到規則產生器畫布上，以參考新區段定義中的對象成員資格。 這可讓您在新的區段定義規則中，以屬性的形式包含或排除對象成員資格。
 
-針對使用[!DNL Segment Builder]建立的[!DNL Experience Platform]個對象，您可以選擇將對象轉換為用於該對象區段定義的規則集。 此轉換會建立規則邏輯的副本，之後可加以修改而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存對區段定義所做的任何最近變更。
+針對使用[!DNL Experience Platform]建立的[!DNL Segment Builder]個對象，您可以選擇將對象轉換為用於該對象區段定義的規則集。 此轉換會建立規則邏輯的副本，之後可加以修改而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存對區段定義所做的任何最近變更。
 
 >[!NOTE]
 >
@@ -268,7 +268,7 @@ ht-degree: 11%
 
 | 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
 | --------------- | ----------- | ------------------- | ------- |
-| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;**&#x200B;**。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -324,7 +324,7 @@ ht-degree: 11%
 >[!NOTE]
 >
 >使用「之後」時間限制時，後一個事件發生的次數可能會超過時間限制內所列的時間量。 >
->&#x200B;>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
+>>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
 >
 >此外，這兩個時間限制可以相互協調使用。
 >
@@ -340,7 +340,7 @@ ht-degree: 11%
 
 ![新增容器按鈕會反白顯示，讓您新增一個容器，做為第一個容器的子系。](../images/ui/segment-builder/add-container.png)
 
-新容器會顯示為第一個容器的子系，但您可以拖曳並移動容器來調整階層。 容器的預設行為是&quot;[!UICONTROL 包含]&quot;所提供的屬性、事件或對象。 您可以選取圖磚左上角的&#x200B;**[!UICONTROL 包含]**，並選取[!UICONTROL 排除]，將規則設定為符合容器條件的「[!UICONTROL 排除]」設定檔。
+新容器會顯示為第一個容器的子系，但您可以拖曳並移動容器來調整階層。 容器的預設行為是&quot;[!UICONTROL 包含]&quot;所提供的屬性、事件或對象。 您可以選取圖磚左上角的[!UICONTROL 包含]，並選取&#x200B;**[!UICONTROL 排除]**，將規則設定為符合容器條件的「[!UICONTROL 排除]」設定檔。
 
 您也可以擷取子容器，並在內嵌新增至父容器中，方法是選取子容器上的「解除容器包裝」。 選取子容器右上角的省略符號(...)以存取此選項。
 
@@ -380,7 +380,7 @@ ht-degree: 11%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
@@ -390,7 +390,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="預估的設定檔"
->abstract="預估的設定檔是指根據範例工作，會符合區段定義規則的設定檔大約數量。這表示樣本資料是以更大的設定檔集進行預計，因此會產生可能與合格設定檔實際數量不同的預估數量。預估的設定檔樣本具有 95% 的信賴區間。<br><br>此數字會在樣本工作更新時一併更新，更新條件包括客戶資料變更超過 5%，或上一個樣本工作距今已超過 7 天。"
+>abstract="預估的設定檔會根據範例工作，指出符合區段定義規則的大約設定檔數。"
 
 建立區段定義時，工作區右側的&#x200B;**[!UICONTROL 對象屬性]**&#x200B;區段會顯示結果區段定義的大小預估值，好讓您在建立對象本身之前根據需要調整區段定義。
 
@@ -398,9 +398,12 @@ ht-degree: 11%
 
 合格設定檔的時間戳記表示最近的&#x200B;**批次**&#x200B;區段評估工作，且對於使用串流或邊緣區段評估的區段定義顯示為&#x200B;**not**。 如果您編輯區段定義，則在下次執行區段評估工作之前，合格設定檔的數量將保持不變。
 
-根據&#x200B;**範例工作**，**[!UICONTROL 預估的設定檔]**&#x200B;表示&#x200B;**大約**&#x200B;個設定檔數目。 這表示樣本資料是以更大的設定檔集進行預計，因此會產生可能與合格設定檔實際數量不同的預估數量。預估的設定檔範例具有95%信賴區間。
+根據&#x200B;**[!UICONTROL 範例工作]**，**預估的設定檔**&#x200B;表示&#x200B;**大約**&#x200B;個設定檔數目。 這表示樣本資料是以更大的設定檔集進行預計，因此會產生可能與合格設定檔實際數量不同的預估數量。預估的設定檔範例具有95%信賴區間。
 
-當範例作業更新時，此數字也會更新；當客戶資料變更超過5%或最後一個範例作業超過7天時，就會發生此情況。」
+此數字在兩種情況下更新：
+
+1. 客戶資料變更超過5%，或最後一個範例工作超過七天。
+2. 對象的規則已修改或移除。
 
 選取資訊泡泡可提供錯誤臨界值和最近的範例作業時間。
 
@@ -424,7 +427,7 @@ ht-degree: 11%
 
 [!UICONTROL 評估方法資格]彈出視窗即會顯示。 此彈出視窗會顯示可用的評估方法，包括批次、串流和邊緣。 彈出視窗會顯示哪些評估方法符合資格和不符合資格。 根據您在區段定義中使用的引數，它可能不符合某些評估方法的資格。 如需每個評估方法需求的詳細資訊，請閱讀[串流區段](../methods/streaming-segmentation.md#query-types)或[邊緣區段](../methods/edge-segmentation.md#query-types)概述。
 
-完成建立區段定義後，您也可以變更區段定義的評估方法。 如果您將評估方法從Edge或串流變更為「批次」，您將&#x200B;**無法**&#x200B;將其變更回Edge或串流。 在彈出視窗中選取&#x200B;**[!UICONTROL 儲存]**&#x200B;後，對評估方法的變更將&#x200B;**僅**&#x200B;生效。 取消對話方塊將&#x200B;**保留**&#x200B;原始的評估方法。
+完成建立區段定義後，您也可以變更區段定義的評估方法。 如果您將評估方法從Edge或串流變更為「批次」，您將&#x200B;**無法**&#x200B;將其變更回Edge或串流。 在彈出視窗中選取&#x200B;**儲存**&#x200B;後，對評估方法的變更將&#x200B;**[!UICONTROL 僅]**&#x200B;生效。 取消對話方塊將&#x200B;**保留**&#x200B;原始的評估方法。
 
 ![評估方法適用性快顯視窗會出現。 這會顯示哪些評估方法符合區段定義，且不符合區段定義。](../images/ui/segment-builder/select-evaluation-method.png)
 
