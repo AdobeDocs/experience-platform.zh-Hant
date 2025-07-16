@@ -4,10 +4,10 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的分析，或針對從Experience Platform匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
 workflow-type: tm+mt
-source-wordcount: '2690'
-ht-degree: 8%
+source-wordcount: '2746'
+ht-degree: 7%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 8%
 
 HTTP API目的地是[!DNL Adobe Experience Platform]串流目的地，可協助您將設定檔資料傳送至第三方HTTP端點。
 
-若要將設定檔資料傳送至HTTP端點，您必須先在[!DNL Adobe Experience Platform]中[連線至目的地](#connect-destination)。
+若要將設定檔資料傳送至HTTP端點，您必須先在[中](#connect-destination)連線至目的地[!DNL Adobe Experience Platform]。
 
 ## 使用案例 {#use-cases}
 
@@ -45,7 +45,7 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
+| ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-segment-streaming-destinations.md#mapping)的對應畫面中所選。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
@@ -58,6 +58,7 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 * 您必須有支援REST API的HTTP端點。
 * 您的HTTP端點必須支援Experience Platform設定檔結構描述。 HTTP API目的地不支援轉換至第三方裝載結構描述。 如需Experience Platform輸出結構描述的範例，請參閱[匯出的資料](#exported-data)區段。
 * 您的HTTP端點必須支援標頭。
+* 您的HTTP端點必須在2秒內回應，以確保資料處理正確並避免逾時錯誤。
 
 >[!TIP]
 >
@@ -67,9 +68,9 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 
 您可以使用[!DNL Mutual Transport Layer Security] ([!DNL mTLS])來確保與您的HTTP API目的地連線的輸出連線中的增強安全性。
 
-[!DNL mTLS]是相互驗證的端對端安全性方法，可確保共用資訊的雙方在共用資料之前，都是聲稱的身分。 與[!DNL TLS]相比，[!DNL mTLS]包含額外的步驟，其中伺服器也會要求使用者端的憑證，並在其結尾加以驗證。
+[!DNL mTLS]是相互驗證的端對端安全性方法，可確保共用資訊的雙方在共用資料之前，都是聲稱的身分。 與[!DNL mTLS]相比，[!DNL TLS]包含額外的步驟，其中伺服器也會要求使用者端的憑證，並在其結尾加以驗證。
 
-如果您想要搭配[!DNL HTTP API]個目的地使用[!DNL mTLS]，您放入[目的地詳細資料](#destination-details)頁面的伺服器位址必須停用[!DNL TLS]通訊協定，而且只能啟用[!DNL mTLS]。 如果端點上仍啟用[!DNL TLS] 1.2通訊協定，則不會傳送使用者端驗證的憑證。 這表示若要搭配您的[!DNL HTTP API]目的地使用[!DNL mTLS]，您的「接收」伺服器端點必須是僅限[!DNL mTLS]啟用的連線端點。
+如果您想要搭配[!DNL mTLS]個目的地使用[!DNL HTTP API]，您放入[目的地詳細資料](#destination-details)頁面的伺服器位址必須停用[!DNL TLS]通訊協定，而且只能啟用[!DNL mTLS]。 如果端點上仍啟用[!DNL TLS] 1.2通訊協定，則不會傳送使用者端驗證的憑證。 這表示若要搭配您的[!DNL mTLS]目的地使用[!DNL HTTP API]，您的「接收」伺服器端點必須是僅限[!DNL mTLS]啟用的連線端點。
 
 ### 擷取及檢查憑證詳細資料 {#certificate}
 
@@ -166,7 +167,7 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL 使用者端密碼]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
 * **[!UICONTROL 使用者端認證型別]**：選取端點支援的OAuth2使用者端認證授權型別：
    * **[!UICONTROL 已編碼的內文表單]**：在此案例中，[!DNL client ID]和[!DNL client secret]包含在傳送至您目的地的要求&#x200B;*內文中*。 如需範例，請參閱[支援的驗證型別](#supported-authentication-types)區段。
-   * **[!UICONTROL 基本授權]**：在此情況下，[!DNL client ID]和[!DNL client secret]在經過base64編碼並傳送至您的目的地之後，會包含在`Authorization`標頭&#x200B;*中的*。 如需範例，請參閱[支援的驗證型別](#supported-authentication-types)區段。
+   * **[!UICONTROL 基本授權]**：在此情況下，[!DNL client ID]和[!DNL client secret]在經過base64編碼並傳送至您的目的地之後，會包含在&#x200B;*標頭`Authorization`中的*。 如需範例，請參閱[支援的驗證型別](#supported-authentication-types)區段。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -363,3 +364,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 在95%的時間中，Experience Platform會嘗試針對每個資料流向HTTP目的地的成功傳送訊息，以每秒少於10,000個要求的速率，提供少於10分鐘的輸送量延遲。
 
 如果對您的HTTP API目的地的請求失敗，Experience Platform會儲存失敗的請求並重試兩次，以將請求傳送至您的端點。
+
+## 疑難排解 {#troubleshooting}
+
+若要確保可靠的資料傳送並避免逾時問題，請依照[先決條件](#prerequisites)區段中的指定，確定您的HTTP端點在2秒內回應Experience Platform要求。 需要更長時間的回應會導致逾時錯誤。
