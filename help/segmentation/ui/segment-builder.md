@@ -268,7 +268,7 @@ ht-degree: 10%
 
 | 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
 | --------------- | ----------- | ------------------- | ------- |
-| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;**&#x200B;**。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -324,7 +324,7 @@ ht-degree: 10%
 >[!NOTE]
 >
 >使用「之後」時間限制時，後一個事件發生的次數可能會超過時間限制內所列的時間量。 >
->>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
+>&#x200B;>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
 >
 >此外，這兩個時間限制可以相互協調使用。
 >
