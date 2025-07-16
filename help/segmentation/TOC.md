@@ -5,10 +5,10 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置客群。
 feature: Segments
 role: User
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 42%
+source-wordcount: '208'
+ht-degree: 41%
 
 ---
 
@@ -17,12 +17,14 @@ ht-degree: 42%
 
 - [Segmentation Service概述](home.md)
 - [區段資料型別](data-types.md)
-- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant#segmentation-guardrails)
+- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - 分段API {#api}
    - [概觀](api/overview.md)
    - [快速入門](api/getting-started.md)
+   - [建立對象中繼資料](api/create-audience.md)
    - [客群](api/audiences.md)
    - [匯出工作](api/export-jobs.md)
+   - [外部對象](api/external-audiences.md)
    - [預覽和預估](api/previews-and-estimates.md)
    - [排程](api/schedules.md)
    - [區段定義](api/segment-definitions.md)
