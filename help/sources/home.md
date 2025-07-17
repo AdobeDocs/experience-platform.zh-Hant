@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
+source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 3%
+source-wordcount: '1640'
+ht-degree: 8%
 
 ---
 
@@ -26,19 +26,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Expe
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## 進階企業原始碼 {#advanced-enterprise-sources}
-
-下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
-
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 串流]{type=Positive}
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 串流]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 串流]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 串流]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 批次]{type=Informative}
+>[!BEGINSHADEBOX]
 
 ## Adobe建置和合作夥伴建置的來源 {#adobe-and-partner-built-sources}
 
@@ -46,157 +34,239 @@ Experience Platform來源目錄中的部分聯結器是由Adobe建置和維護�
 
 對於合作夥伴編寫和維護的聯結器，這表示聯結器的問題可能需要由合作夥伴團隊解決（聯絡方法提供在檔案頁面的附註中）。 如需Adobe編寫和維護的聯結器發生問題，請聯絡您的Adobe代表或客戶服務。
 
-## 來源類別
+>[!ENDSHADEBOX]
 
-Experience Platform中的來源分為下列類別：
+## 來源目錄
+
+請閱讀下列章節，以取得來源目錄中的所有可用來源清單。
 
 ### Adobe 應用程式 {#adobe-applications}
 
-Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe Audience Manager)擷取資料。 如需詳細資訊，請參閱下列相關檔案：
+Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe Audience Manager)擷取資料。 如需詳細資訊，請閱讀下列相關檔案：
 
-- [Adobe Audience Manager來源概觀](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [在UI中建立Adobe Audience Manager來源連線](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics分類資料來源概觀](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics分類資料](connectors/adobe-applications/classifications.md)
    - [在UI中建立Adobe Analytics分類資料來源連線](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics報表套裝資料來源概觀](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics報表套裝資料](connectors/adobe-applications/analytics.md)
    - [在UI中建立Adobe Analytics來源連線](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Campaign Managed Cloud Services來源概觀](connectors/adobe-applications/campaign.md)
+- [Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [在UI中建立Adobe Campaign Managed Cloud Services來源連線](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Adobe Commerce來源概觀](connectors/adobe-applications/commerce.md)
-- [Adobe資料收集來源概觀](connectors/adobe-applications/data-collection.md)
+- [Adobe Commerce](connectors/adobe-applications/commerce.md)
+- [Adobe 資料彙集](connectors/adobe-applications/data-collection.md)
    - [在UI中建立客戶屬性來源連線](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage]來源總覽](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [在使用者介面中建立 [!DNL Marketo Engage] 來源連線](./tutorials/ui/create/adobe-applications/marketo.md)
    - [為自訂活動資料建立 [!DNL Marketo Engage] 來源連線和資料流](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
+### 進階企業原始碼 {#advanced-enterprise-sources}
+
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+
+| 來源 | 類別 | 擷取型別 | 雲端 |
+| --- | --- | --- | --- |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | 雲端儲存空間 | 串流 | Azure、AWS |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | 資料庫 | 批次 | Azure、AWS |
+| [[!DNL Azure Databricks]](connectors/databases/databricks.md) | 資料庫 | 批次 | Azure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | 雲端儲存空間 | 串流 | Azure、AWS |
+| [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | 資料庫 | 批次 | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | 資料庫 | 批次 | Azure |
+| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | 雲端儲存空間 | 串流 | Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | 資料庫 | 串流 | Azure、AWS |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | 資料庫 | 批次 | Azure、AWS |
+
+{style="table-layout:auto"}
+
 ### Advertising {#advertising}
 
-Experience Platform支援從協力廠商廣告系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+您可以使用以下來源將廣告資料擷取至Experience Platform。
 
-- [Google廣告](connectors/advertising/ads.md) [!BADGE 批次]{type=Informative}
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [Google廣告](connectors/advertising/ads.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### Analytics {#analytics}
 
-Experience Platform支援從協力廠商分析平台擷取資料。 如需詳細資訊，請閱讀下列相關檔案：
+您可以使用下列來源將分析資料擷取至Experience Platform。
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE 串流]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE 串流]{type=Positive}
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | 批次 | Azure |
+| [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | 串流 | Azure |
+| [[!DNL RainFocus]](connectors/analytics/rainfocus.md) | 串流 | Azure |
+
+{style="table-layout:auto"}
 
 ### 雲端儲存空間 {#cloud-storage}
 
 雲端儲存空間來源可將您自己的資料帶入Experience Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會使用使用者介面整合到來源工作流程中。 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE 批次]{type=Informative}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE 批次]{type=Informative}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE 批次]{type=Informative}
+您可以使用以下來源將雲端儲存空間資料擷取至Experience Platform。
+
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | 批次 | Azure |
+| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | 批次 | Azure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | 批次 | Azure、AWS |
+| [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | 批次 | Azure |
+| [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | 批次 | Azure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | 批次 | Azure、AWS |
+| [[!DNL FTP]](connectors/cloud-storage/ftp.md) | 批次 | Azure |
+| [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | 批次 | Azure |
+| [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | 批次 | Azure |
+| [[!DNL SFTP]](connectors/cloud-storage/sftp.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### 同意與偏好設定 {#consent}
 
-Experience Platform支援從第三方同意和偏好設定管理平台擷取資料。 如需詳細資訊，請參閱下列相關檔案：
+您可以使用以下來源將同意和偏好設定資料擷取至Experience Platform。
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE 批次]{type=Informative}
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### 客戶關係管理(CRM) {#customer-relationship-management}
 
 CRM系統提供的資料可協助建立客戶關係，進而建立忠誠度並提升客戶保留率。 Experience Platform支援從[!DNL Microsoft Dynamics 365]和[!DNL Salesforce]擷取CRM資料。 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 批次]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE 批次]{type=Informative}
+您可以使用以下來源將CRM資料擷取至Experience Platform。
+
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | 批次 | Azure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | 批次 | Azure、AWS |
+| [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | 批次 | Azure |
+| [[!DNL Veeva CRM]](connectors/crm/veeva.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### 客戶成功 {#customer-success}
 
-Experience Platform支援從協力廠商客戶成功應用程式擷取資料。 如需詳細資訊，請參閱下列相關檔案：
+您可以使用以下來源將客戶成功資料擷取至Experience Platform。
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE 批次]{type=Informative}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE 批次]{type=Informative}
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | 批次 | Azure |
+| [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | 批次 | Azure |
+| [[!DNL Zendesk]](connectors/customer-success/zendesk.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### 資料庫 {#database}
 
 Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 批次]{type=Informative}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 批次]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 批次]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 批次]{type=Informative}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE 批次]{type=Informative}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 批次]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 批次]{type=Informative}
+您可以使用下列來源將資料從資料庫擷取至Experience Platform。
+
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | 批次 | Azure |
+| [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | 批次 | Azure |
+| [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) | 批次 | Azure |
+| [[!DNL Azure Table Storage]](connectors/databases/ats.md) | 批次 | Azure |
+| [[!DNL GreenPlum]](connectors/databases/greenplum.md) | 批次 | Azure |
+| [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) | 批次 | Azure |
+| [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | 批次 | Azure |
+| [[!DNL MariaDB]](connectors/databases/mariadb.md) | 批次 | Azure |
+| [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | 批次 | Azure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | 批次 | Azure、AWS |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | 批次 | Azure |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | 批次 | Azure、AWS |
+| [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### 資料與身分識別合作夥伴 {#data-partner}
 
-Experience Platform支援從資料和身分識別合作夥伴擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+您可以使用下列來源將資料和身分識別合作夥伴資料擷取至Experience Platform。
 
-- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE 批次]{type=Informative}
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | 批次 | Azure |
+| [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | 批次 | Azure |
+| [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) | 批次 | Azure |
+| [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) | 批次 | Azure |
+| [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) | 批次 | Azure |
+| [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### 電子商務 {#ecommerce}
 
-Experience Platform支援從協力廠商電子商務系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+您可以使用以下來源將電子商務資料內嵌至Experience Platform。
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE 串流]{type=Positive}
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | 批次 | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify.md) | 批次 | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) | 串流 | Azure |
+
+{style="table-layout:auto"}
 
 ### 本機系統 {#local-system}
 
-Experience Platform支援從本機系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+您可以使用下列來源將資料從本機系統擷取至Experience Platform。
 
-- [本機檔案上傳](connectors/local-system/local-file-upload.md)
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [本機檔案上傳](connectors/local-system/local-file-upload.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### 行銷自動化 {#marketing-automation}
 
-Experience Platform支援從協力廠商行銷自動化系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+您可以使用下列來源將行銷自動化資料擷取至Experience Platform。
 
-- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE 串流]{type=Positive}
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE 串流]{type=Positive}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE 串流]{type=Positive}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE 批次]{type=Informative}
-- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE 批次]{type=Informative}
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL Braze]](connectors/marketing-automation/braze.md) | 串流 | Azure |
+| [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | 串流 | Azure |
+| [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | 串流 | Azure |
+| [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | 批次 | Azure |
+| [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | 批次 | Azure |
+| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | 批次 | Azure |
+| [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | 批次 | Azure |
+| [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | 批次 | Azure |
+| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | 批次 | Azure、AWS |
+
+{style="table-layout:auto"}
 
 ### 付款 {#payments}
 
-Experience Platform支援從協力廠商支付系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+您可以使用以下來源將付款資料擷取至Experience Platform。
 
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE 批次]{type=Informative}
+| 來源 | 擷取型別 | 雲端 |
+| --- | --- | --- |
+| [[!DNL Square]](connectors/payments/square.md) | 批次 | Azure |
+| [[!DNL Stripe]](connectors/payments/stripe.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ### 串流 {#streaming}
 
-Experience Platform支援從串流來源擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+您可以使用以下來源將資料串流至Experience Platform。
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE 串流]{type=Positive}
+| 來源 | 擷取型別 | 雲端支援 |
+| --- | --- | --- |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | 串流 | Azure、AWS |
+
+{style="table-layout:auto"}
 
 ### 通訊協定 {#protocols}
 
-Experience Platform支援從協力廠商通訊協定系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
+您可以使用以下來源將通訊協定資料擷取至Experience Platform。
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE 批次]{type=Informative}
+| 來源 | 擷取型別 | 雲端支援 |
+| --- | --- | --- |
+| [[!DNL Generic OData]](connectors/protocols/odata.md) | 批次 | Azure |
+| [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | 批次 | Azure |
+
+{style="table-layout:auto"}
 
 ## 資料擷取中來源的存取控制
 
