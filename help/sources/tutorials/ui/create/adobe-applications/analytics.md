@@ -2,9 +2,9 @@
 title: 將Adobe Analytics連線至Experience Platform
 description: 瞭解如何將Adobe Analytics報表套裝資料帶入Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 086777a09eec17c94a7e0a5d2db58e4a1f6b523f
+source-git-commit: d6a290b9891b3507d531a595a5428955c7e9ee90
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2750'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 請務必瞭解本檔案中使用的下列重要用語：
 
 * **標準屬性**：標準屬性是Adobe預先定義的任何屬性。 它們對所有客戶都包含相同涵義，並且可在Analytics來源資料和Analytics結構描述欄位群組中取得。
-* **自訂屬性**：自訂屬性是Analytics中自訂變數階層中的任何屬性。 自訂屬性用於Adobe Analytics實作，將特定資訊擷取至報表套裝，各報表套裝的屬性使用方式可能有所不同。 自訂屬性包括eVar、prop和清單。 如需有關eVar的詳細資訊，請參閱下列有關轉換變數[&#128279;](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=zh-Hant)的Analytics檔案。
+* **自訂屬性**：自訂屬性是Analytics中自訂變數階層中的任何屬性。 自訂屬性用於Adobe Analytics實作，將特定資訊擷取至報表套裝，各報表套裝的屬性使用方式可能有所不同。 自訂屬性包括eVar、prop和清單。 如需有關eVar的詳細資訊，請參閱下列有關轉換變數[的](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)Analytics檔案。
 * **自訂欄位群組中的任何屬性**：源自客戶建立的欄位群組的屬性都是使用者定義的，且不屬於標準或自訂屬性。
 
 ## 瀏覽來源目錄
@@ -121,7 +121,7 @@ Experience Platform會自動偵測您的對應是否有任何名稱衝突。 如
 * **[!UICONTROL 新增對應]**：若要新增來源欄位與目標欄位對應，請選取&#x200B;**[!UICONTROL 新增對應]**。
 * **[!UICONTROL 新增計算欄位]**：如有需要，您可以選取&#x200B;**[!UICONTROL 新增計算欄位]**，為您的對應建立新的計算欄位。
 * **[!UICONTROL 匯入對應]**：您可以使用「資料準備」的匯入對應功能，減少資料擷取程式的手動設定時間，並限制錯誤。 選取&#x200B;**[!UICONTROL 匯入對應]**&#x200B;以從現有流程或匯出的檔案匯入對應。 如需詳細資訊，請閱讀[匯入和匯出對應指南](../../../../../data-prep/ui/mapping.md#import-mapping)。
-* **[!UICONTROL 下載範本]**：您也可以下載對應的CSV復本，並在本機裝置設定對應。 選取[下載]範本&#x200B;**以下載您對應的CSV復本。**&#x200B;您必須確保僅使用來源檔案和目標結構描述中提供的欄位。
+* **[!UICONTROL 下載範本]**：您也可以下載對應的CSV復本，並在本機裝置設定對應。 選取[下載]範本&#x200B;**[!UICONTROL 以下載您對應的CSV復本。]**&#x200B;您必須確保僅使用來源檔案和目標結構描述中提供的欄位。
 
 請參閱下列檔案以取得有關「資料準備」的詳細資訊。
 
@@ -287,6 +287,10 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ## 刪除您的資料流 {#delete-dataflow}
 
+>[!NOTE]
+>
+>您無法停用Analytics資料流。 若要停止Analytics資料流，您必須&#x200B;**刪除**&#x200B;整個資料流。
+
 若要刪除您的Analytics資料流，請從來源工作區的頂端標題中選取&#x200B;**[!UICONTROL 資料流]**。 使用資料流頁面來找出您要刪除的Analytics資料流，然後選取它旁邊的省略符號(`...`)。 接下來，使用下拉式功能表並選取&#x200B;**[!UICONTROL 刪除]**。
 
 * 刪除即時Analytics資料流也會刪除其基礎資料集。
@@ -307,5 +311,5 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >
 > 下列影片中顯示的[!DNL Experience Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/3430259?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
