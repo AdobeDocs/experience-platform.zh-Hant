@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 13adf42a23458d10e217d216d8fe79e8ce33376d
+source-git-commit: 00cec76319c1209e4527e31fad36992b7e778367
 workflow-type: tm+mt
-source-wordcount: '4595'
+source-wordcount: '4644'
 ht-degree: 13%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 13%
 
    ![啟用目錄頁面中反白顯示的對象控制項。](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
+1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] ****。
 
    ![醒目提示核取方塊以選取一或多個要啟用對象的目標位置。](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
@@ -120,7 +120,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >id="platform_destinations_activate_exportoptions"
 >title="檔案匯出選項 "
 >abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有設定檔的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合對象資格的設定檔。<br> 第一個增量檔案匯出包括符合對象資格的所有設定檔，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的設定檔。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#export-incremental-files" text="匯出增量檔案"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -143,6 +143,18 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
    * **[!UICONTROL 每週]**：選取開始日期，後續的匯出將發生在一週的該日，直到選取的結束日期為止。
    * **[!UICONTROL 每月]**：選取開始日期，後續的匯出會在該月的該日期發生，直到選取的結束日期為止。 對於少於 30 或 31 天的月份，匯出將在該月的最後一天進行。
 
+   >[!NOTE]
+   >
+   > 目前只有下列以檔案為基礎的雲端儲存空間目的地才支援每週和每月排程選項，而且只有在啟用[人員對象](../../segmentation/types/overview.md#people-audience)和[潛在對象](../../segmentation/types/overview.md#prospect-audience)時才支援。
+   > 
+   > * [Amazon S3](../catalog/cloud-storage/amazon-s3.md)
+   > * [Azure Blob儲存體](../catalog/cloud-storage/azure-blob.md)
+   > * [資料登陸區域](../catalog/cloud-storage/data-landing-zone.md)
+   > * [Google雲端儲存空間](../catalog/cloud-storage/google-cloud-storage.md)
+   > * [SFTP](../catalog/cloud-storage/sftp.md)
+   > 
+   > 每週和每月排程選項不適用於其他目的地型別。
+
 2. 使用&#x200B;**[!UICONTROL 時間]**&#x200B;切換功能來選取匯出應該在對象評估後立即執行，還是在指定的時間依排程執行。 選取&#x200B;**[!UICONTROL 已排程]**&#x200B;選項時，您可以使用選取器來選取一天中應該進行匯出時的時間（格式為[!DNL UTC]）。
 
    使用&#x200B;**[!UICONTROL 區段評估之後]**&#x200B;選項，讓啟動工作在每日Experience Platform批次分段工作完成後立即執行。 此選項可確保當啟動工作執行時，最新的設定檔會匯出至您的目的地。 這可能會導致根據您的動作，一天匯出對象多次。
@@ -154,7 +166,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![影像在批次目的地的啟動流程中，醒目提示「區段之後」評估選項。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-使用&#x200B;**[!UICONTROL 已排程]**&#x200B;選項，讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
+使用**[!UICONTROL 已排程]**&#x200B;選項，讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
 
    ![影像在批次目的地的啟動流程中醒目提示「已排程」選項，並顯示時間選擇器。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -450,7 +462,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 ### 具有相同時間戳記之設定檔的重複資料刪除行為 {#deduplication-same-timestamp}
 
-將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
+將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
 
 #### 主要考量事項
 
