@@ -3,13 +3,13 @@ title: 外部對象API端點
 description: 瞭解如何使用外部對象API，以從Adobe Experience Platform建立、更新、啟用和刪除外部對象。
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2405'
 ht-degree: 4%
 
 ---
-
 
 # 外部受眾端點
 
@@ -381,7 +381,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ais/external-audience/60ccea95
 **API格式**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **要求**
@@ -391,7 +391,7 @@ POST /external-audience/{AUDIENCE_ID}/run
 +++ 開始受眾擷取的範例要求。
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 +++
 
 ## 擷取特定對象擷取狀態 {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>若要使用下列端點，您必須同時擁有外部對象的`audienceId`和擷取回合ID的`runId`。 您可從對`audienceId`端點的成功呼叫中取得您的`GET /external-audiences/operations/{OPERATION_ID}`，並從`runId`端點的先前成功呼叫中取得您的`POST /external-audience/{AUDIENCE_ID}/runs`。
 
 您可以在提供對象和執行ID的同時，透過向以下端點發出GET請求來擷取對象擷取狀態。
 
@@ -514,9 +518,13 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 +++
 
-## 列出對象擷取狀態 {#list-ingestion-statuses}
+## 列出對象擷取執行 {#list-ingestion-runs}
 
-您可以在提供對象ID時，透過向下列端點發出GET請求來擷取所選外部對象的所有擷取狀態。 可以包含多個引數，以&amp;符號(`&`)分隔。
+>[!NOTE]
+>
+>若要使用下列端點，您必須擁有外部對象的`audienceId`。 您可從對`audienceId`端點的成功呼叫取得您的`GET /external-audiences/operations/{OPERATION_ID}`。
+
+您可以在提供對象ID時，透過向下列端點發出GET請求來擷取所選外部對象的所有擷取執行。 可以包含多個引數，以&amp;符號(`&`)分隔。
 
 **API格式**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | 參數 | 說明 | 範例 |
 | --------- | ----------- | ------- |
 | `limit` | 回應中傳回的專案數上限。 此值的範圍介於1到40之間。 預設的限制設為20。 | `limit=30` |
-| `sortBy` | 傳回專案的排序順序。 您可以依`name`或`ingestionTime`排序。 此外，您可以新增`-`符號來依&#x200B;**遞減**&#x200B;順序排序，而非&#x200B;**遞增**&#x200B;順序。 依預設，專案會依`ingestionTime`遞減排序。 | `sortBy=name` |
-| `property` | 此篩選器可決定要顯示哪些對象擷取執行。 您可以篩選下列屬性： <ul><li>`name`：可讓您依對象名稱篩選。 如果使用此屬性，您可以使用`=`、`!=`、`=contains`或`!=contains`來比較。 </li><li>`ingestionTime`：可讓您依據擷取時間篩選。 如果使用此屬性，您可以使用`>=`或`<=`來比較。</li><li>`status`：可讓您依據擷取回合的狀態進行篩選。 如果使用此屬性，您可以使用`=`、`!=`、`=contains`或`!=contains`來比較。 </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | 傳回專案的排序順序。 您可以依`name`或`createdAt`排序。 此外，您可以新增`-`符號來依&#x200B;**遞減**&#x200B;順序排序，而非&#x200B;**遞增**&#x200B;順序。 依預設，專案會依`createdAt`遞減排序。 | `sortBy=name` |
+| `property` | 此篩選器可決定要顯示哪些對象擷取執行。 您可以篩選下列屬性： <ul><li>`name`：可讓您依對象名稱篩選。 如果使用此屬性，您可以使用`=`、`!=`、`=contains`或`!=contains`來比較。 </li><li>`createdAt`：可讓您依據擷取時間篩選。 如果使用此屬性，您可以使用`>=`或`<=`來比較。</li><li>`status`：可讓您依據擷取回合的狀態進行篩選。 如果使用此屬性，您可以使用`=`、`!=`、`=contains`或`!=contains`來比較。 </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **要求**
 
-以下請求會擷取外部對象的所有擷取狀態。
+以下請求會擷取外部對象的所有擷取執行。
 
-+++ 取得對象擷取狀態清單的範例要求。
++++ 取得對象擷取執行清單的範例要求。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定外部對象的擷取狀態清單。
+成功的回應會傳回HTTP狀態200，其中包含指定外部對象的擷取執行清單。
 
-+++ 擷取對象擷取狀態清單時的範例回應。
++++ 擷取對象擷取執行清單時的範例回應。
 
 ```json
 {
@@ -573,19 +581,7 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 +++
 
 ## 刪除外部對象 {#delete-audience}
+
+>[!NOTE]
+>
+>若要使用下列端點，您必須擁有外部對象的`audienceId`。 您可從對`audienceId`端點的成功呼叫取得您的`GET /external-audiences/operations/{OPERATION_ID}`。
 
 您可以在提供對象ID時，透過向下列端點發出DELETE請求來刪除外部對象。
 
