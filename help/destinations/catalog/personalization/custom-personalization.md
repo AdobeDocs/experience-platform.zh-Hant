@@ -3,9 +3,9 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者設定檔對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '960'
 ht-degree: 9%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 若要保護此資料，您必須在為屬性式個人化設定&#x200B;**[!UICONTROL 自訂Personalization]**&#x200B;目的地時，使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)中進行。
+>設定檔屬性可能包含敏感資料。 若要保護此資料，您必須在為屬性式個人化設定[自訂Personalization](https://developer.adobe.com/data-collection-apis/docs/)目的地時，使用&#x200B;**[!UICONTROL Edge Network API]**。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)中進行。
 >
 ><br>您可以新增伺服器端整合，利用您已在網頁或行動SDK實作中使用的相同資料流，透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)擷取設定檔屬性。
 >
@@ -39,7 +39,7 @@ ht-degree: 9%
 
 * 如果您想要從網站收集資料，請使用[Adobe Experience Platform Web SDK](/help/web-sdk/home.md)。
 * 如果您想要從行動應用程式收集資料，請使用[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)。
-* 如果您未使用[網頁SDK](/help/web-sdk/home.md)或[行動SDK](https://developer.adobe.com/client-sdks/documentation/)，或您想要根據設定檔屬性個人化使用者體驗，請使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)。
+* 如果您未使用[網頁SDK](https://developer.adobe.com/data-collection-apis/docs/)或[行動SDK](/help/web-sdk/home.md)，或您想要根據設定檔屬性個人化使用者體驗，請使用[Edge Network API](https://developer.adobe.com/client-sdks/documentation/)。
 
 >[!IMPORTANT]
 >
@@ -67,9 +67,9 @@ ht-degree: 9%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="關於資料流 ID"
+>title="關於資料串流"
 >abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含對象。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 > 
@@ -84,7 +84,7 @@ ht-degree: 9%
 * **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 * **[!UICONTROL 描述]**：輸入目的地的描述。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
 * **[!UICONTROL 整合別名]**：此值會作為JSON物件名稱傳送到Experience Platform Web SDK。
-* **[!UICONTROL 資料串流ID]**：這會決定要在頁面的回應中包含對象的資料收集資料串流。 下拉選單僅顯示已啟用目的地設定的資料流。如需詳細資訊，請參閱[設定資料串流](../../../datastreams/overview.md)。
+* **[!UICONTROL 資料串流]**：這會決定頁面回應中要包含對象的資料收集資料串流。 下拉選單僅顯示已啟用目的地設定的資料流。如需詳細資訊，請參閱[設定資料串流](../../../datastreams/overview.md)。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -102,7 +102,7 @@ ht-degree: 9%
 
 ## 匯出的資料 {#exported-data}
 
-如果您使用Adobe Experience Platform[&#128279;](../../../tags/home.md)中的標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](../../../tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
+如果您使用Adobe Experience Platform[中的](../../../tags/home.md)標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](../../../tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
 
 以下是`event.destinations`變數的範例值：
 
@@ -160,9 +160,9 @@ alloy("sendEvent", {
   });
 ```
 
-### 具有屬性的自訂Personalization的範例回應
+### 具有屬性[!UICONTROL 的]自訂Personalization的範例回應
 
-使用具有屬性&#x200B;**的**&#x200B;自訂Personalization時，API回應將與以下範例類似。
+使用具有屬性&#x200B;**[!UICONTROL 的]**&#x200B;自訂Personalization時，API回應將與以下範例類似。
 
 **[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;與&#x200B;**[!UICONTROL 自訂Personalization]**&#x200B;之間的差異在於API回應中包含`attributes`區段。
 
