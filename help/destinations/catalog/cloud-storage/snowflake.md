@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
+source-git-commit: dca3762169d2a469948ee7e877213697f4c444b6
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1126'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 6%
 
 ## 概觀 {#overview}
 
-使用Snowflake目的地聯結器將資料匯出至Adobe的Snowflake執行個體，然後透過[私人清單](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about)與您的執行個體共用。
+使用Snowflake目的地聯結器將資料匯出至Adobe的Snowflake執行個體，然後Adobe會透過[私人清單](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about)與您共用。
 
 請閱讀下列章節，瞭解Snowflake目的地的運作方式，以及資料在Adobe和Snowflake之間的傳輸方式。
 
@@ -29,6 +29,8 @@ ht-degree: 6%
 此目的地使用[!DNL Snowflake]資料共用，這表示不會將任何資料實際匯出或傳輸至您自己的Snowflake執行個體。 Adobe會改為授予您在Adobe的Snowflake環境中託管之即時表格的唯讀存取權。 您可以直接從Snowflake帳戶查詢此共用表格，但您不是該表格的擁有者，且無法在指定的保留期間之後修改或保留該表格。 Adobe可完全管理共用表格的生命週期和結構。
 
 第一次從Adobe的Snowflake執行個體將資料分享給您的執行個體時，系統會提示您接受Adobe的私人清單。
+
+![熒幕擷圖顯示Snowflake私人清單接受畫面](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
 
 ### 資料保留和存留時間(TTL) {#ttl}
 
@@ -51,12 +53,12 @@ ht-degree: 6%
 
 ## 支援的對象 {#supported-audiences}
 
-本節說明您可以將哪些型別的對象匯出至此目的地。
+本節說明您可以將哪些型別的對象匯出至此目的地。 以下兩個表格指出此聯結器支援的對象，依&#x200B;_對象來源_&#x200B;和包含在對象&#x200B;_中的_&#x200B;設定檔型別：
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| 所有其他受眾來源 | ✓ | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
