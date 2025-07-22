@@ -3,9 +3,9 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟用警示，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,11 @@ ht-degree: 0%
 
 ## 驗證目標 {#authenticate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="帳戶名稱"
+>abstract="輸入名稱，協助您日後輕鬆識別此目的地帳戶。 如果您有多個連線連線到相同的目的地型別，這會特別有用。"
+
 連線到目的地的第一個步驟是驗證到目的地平台。
 
 根據您連線到的目的地，您可能會被帶往目的地合作夥伴的頁面進行驗證，或者系統可能會要求您直接在Experience Platform工作流程中輸入驗證認證。 以下是驗證[!DNL Amazon S3]目的地所需的輸入範例。 每個目的地檔案頁面都會提供必要輸入的詳細指示（例如，請參閱[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate)和[[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)的驗證區段）。
@@ -67,7 +72,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->下列影像僅供說明之用。 目的地連線的詳細資料因目的地而異。 如需您目的地的連線詳細資訊，請閱讀每個[目的地目錄](../catalog/overview.md)頁面中的&#x200B;**連線到目的地**&#x200B;區段（例如，[[!DNL Google Customer Match]](../catalog/advertising/google-customer-match.md#connect)、[[!DNL Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md#connect)或[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)）。
+>下列影像僅供說明之用。 目的地連線的詳細資料因目的地而異。 如需您目的地的連線詳細資訊，請閱讀每個&#x200B;**目的地目錄**&#x200B;頁面中的[連線到目的地](../catalog/overview.md)區段（例如，[[!DNL Google Customer Match]](../catalog/advertising/google-customer-match.md#connect)、[[!DNL Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md#connect)或[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)）。
 
 **[!DNL Amazon S3]必要和選用的輸入引數**
 
