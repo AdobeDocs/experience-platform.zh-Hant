@@ -2,10 +2,10 @@
 title: SFTP 主機
 description: 瞭解如何在Adobe Experience Platform中設定標籤，以將程式庫組建傳送至自行託管的安全SFTP伺服器。
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 10%
+source-wordcount: '815'
+ht-degree: 11%
 
 ---
 
@@ -37,33 +37,17 @@ Experience Platform會使用加密的金鑰連線至您的SFTP網站。 正確�
 
 ### 將Experience Platform IP位址加入允許清單
 
->[!IMPORTANT]
->
-> 在2025年6月23日，Adobe Launch將更新用來支援SFTP主機型別和回撥API功能的外部IP位址。 若要繼續使用其中一項功能，請確定您的防火牆規則允許來自新IP位址的流量。
->
-> 為了保持存取不中斷，我們建議現在新增新的IP，並在2025年6月23日之後移除舊的IP。
->
->**舊IP位址：**
-> * `184.72.239.68`
-> * `23.20.85.113`
-> * `54.226.193.184`
->
->**新IP位址：**
-> * `34.227.138.75 `
-> * `44.194.43.191`
-> * `3.215.163.18`
-
 您可能需要核准一組IP位址，以便在公司防火牆內使用，以允許Experience Platform連線您的SFTP伺服器並與其連線。 這些IP位址包括：
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >
 >標籤組建的結構已隨著時間而改變。 它們在內部使用符號連結(symlink)來維持回溯相容性，以便舊版內嵌程式碼繼續與最新的組建結構搭配使用。 您的SFTP伺服器必須支援使用symlink，才能當做標籤組建的有效目的地。
 
-如需更多詳細資訊，請參閱以下Medium文章，瞭解如何設定SFTP伺服器以傳遞組建[&#128279;](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6)。
+如需更多詳細資訊，請參閱以下Medium文章，瞭解如何設定SFTP伺服器以傳遞組建[。](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6)
 
 ## 建立 SFTP 主機 {#create}
 
