@@ -3,9 +3,9 @@ title: Google Customer Match +顯示器和視訊360連線
 description: 透過Google Customer Match + Display & Video 360目的地聯結器，您可以使用Experience Platform的線上和離線資料，透過Google所擁有和營運的屬性(例如搜尋、購物、Gmail和YouTube)聯絡並重新與客戶互動。
 badge: 有限可用性
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: efdec64dee4c5857d0df008c2d1242674f9d0b49
+source-git-commit: 16192df76b618ed1d516b78f9c3191027140b8d3
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2384'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->**Google Customer Match + DV360聯結器可用性有限**<br>&#x200B;隨著我們與Google整合的整個成熟度生命週期，我們看到資料指出實作中的弱點，需要修正才能更廣泛地採用。 基於這些考量，Adobe已將此目的地的可見度降低為有限數量的客戶。 我們正在與Google進行主動式對話，以改善產品體驗。 我們明白這可能是一個令人失望的消息，但我們相信這是確保客戶獲得高品質、可靠體驗的負責任方法。</br>
+>**Google Customer Match + Display &amp; Video 360聯結器可用性有限**<br>&#x200B;隨著我們與Google整合的整個成熟度生命週期，我們看到資料指出實作中的弱點，需要修正才能更廣泛地採用。 基於這些考量，Adobe已將此目的地的可見度降低為有限數量的客戶。 我們正在與Google進行主動式對話，以改善產品體驗。 我們明白這可能是一個令人失望的消息，但我們相信這是確保客戶獲得高品質、可靠體驗的負責任方法。</br>
 
 使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail][!DNL Google Display Network]清單。
 
@@ -29,12 +29,12 @@ ht-degree: 5%
 >[!IMPORTANT]
 >
 > Google正在發佈[Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)和[Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)的變更，以支援歐盟（[歐盟使用者同意政策](https://digital-markets-act.ec.europa.eu/index_en)）中[數位市場法](https://www.google.com/about/company/user-consent-policy/) (DMA)所定義的法規遵循與同意相關需求。 自2024年3月6日起，將開始強制執行同意要求的這些變更。
-> &#x200B;><br/>
-> &#x200B;>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
-> &#x200B;><br/>
-> &#x200B;>已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
-> &#x200B;><br/>
-> &#x200B;>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
+> ><br/>
+> >為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
+> ><br/>
+> >已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
+> ><br/>
+> >未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
 ## 使用此目的地的時間
 
@@ -107,16 +107,16 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe已將Google合作夥伴帳戶ID從`6219889373`更新為`4641108541`。
+>對於曾參與此聯結器的Beta版計畫的客戶： Adobe已將Google合作夥伴帳戶ID從`6219889373`更新為`4641108541`。
 >
->**如果您的Google帳戶目前連結至舊的Adobe合作夥伴帳戶ID (`6219889373`)，請遵循下列步驟：**
+>**如果您是Google Customer Match + Display &amp; Video 360聯結器測試版計畫的成員，且您的Google帳戶目前連結至舊的Adobe合作夥伴帳戶ID (`6219889373`)，請遵循下列步驟：**
 >
 >1. 從舊的Google合作夥伴帳戶ID (`6219889373`)取消連結您的Adobe帳戶
 >2. 將您的Google帳戶連結至新的Adobe合作夥伴帳戶ID (`4641108541`)
 >3. 從您現有的資料流移除所有對象
 >4. 建立新的資料流並對應您的對象
 >
->如果您的Google帳戶已連結至新的Adobe合作夥伴帳戶ID (`4641108541`)，則不需要採取任何動作。
+>如果您的Google帳戶已連結至新的Adobe合作夥伴帳戶ID (`4641108541`)，則您無需採取任何動作即可使用此聯結器。
 
 **對於具有管理員帳戶的組織：**
 
