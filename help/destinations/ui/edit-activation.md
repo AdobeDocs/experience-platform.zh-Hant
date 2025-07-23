@@ -4,9 +4,9 @@ title: 編輯啟動資料流
 type: Tutorial
 description: 請依照本文的步驟，在Adobe Experience Platform中編輯現有的啟用資料流。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
+source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,8 @@ ht-degree: 0%
 * [編輯對應的屬性和身分](#edit-mapped-attributes)
 * [編輯啟用排程和匯出頻率](#edit-schedule-frequency)
 * [新增其他資料集](#add-datasets)至啟用工作流程
+* [套用存取標籤](#apply-access-labels)至匯出的資料
 * [編輯啟動資料流程的名稱和說明](#edit-names-descriptions)
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## 瀏覽啟動資料流 {#browse-activation-dataflows}
 
@@ -100,25 +99,21 @@ ht-degree: 0%
 * [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) (例如，Amazon S3或Oracle Eloqua)；
 * [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) (例如HTTP API或Amazon Kinesis)。
 
-
-
 ## 將資料集新增至啟用資料流 {#add-datasets}
 
 在右側邊欄中選取「**[!UICONTROL 匯出資料集]**」，以選取其他要匯出至目的地的資料集。 此選項會帶您前往[資料集匯出工作流程](export-datasets.md)。
 
 >[!NOTE]
 >
->此選項僅對支援資料集匯出[&#128279;](export-datasets.md#supported-destinations)的目的地可見。
+>此選項僅對支援資料集匯出[的](export-datasets.md#supported-destinations)目的地可見。
 
 ![Experience Platform UI影像顯示「匯出資料集」資料流執行選項。](../assets/ui/edit-activation/export-datasets.png)
 
+## 套用存取標籤 {#apply-access-labels}
 
+選取&#x200B;**[!UICONTROL 套用存取權標籤]**&#x200B;以編輯匯出資料的資料使用標籤。 請參閱[資料使用標籤檔案](../../data-governance/labels/overview.md)以瞭解更多資訊。
 
-<!-- ## Apply access labels {#apply-access-labels}
-
-Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
-
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![Experience Platform UI影像顯示「匯出資料集」資料流執行選項。](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## 編輯啟動資料流名稱和說明 {#edit-names-descriptions}
 
