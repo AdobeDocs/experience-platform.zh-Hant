@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將取自多個企業來源的已知和匿名資料匯整起來，並藉此建立客戶設定檔，利用這些設定檔建立客群，以及對協力廠商目標啟動這些客群。
 role: Admin
-source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
+source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 63%
+source-wordcount: '311'
+ht-degree: 62%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 63%
       * [使用案例範例](./b2b-use-case.md)
       * [端對端教學課程](./b2b-tutorial.md)
       * [Real-Time CDP B2B 版本指南護欄](b2b-guardrails.md)
+      * [Real-Time CDP B2B edition架構升級](b2b-architecture-upgrade.md)
 * Audience Manager和Real-Time CDP {#evolution}
    * [Audience Manager 的發展](aam-to-rtcdp.md)
 * 帳戶輪廓 {#account}
@@ -46,12 +47,12 @@ ht-degree: 63%
    * [Real-Time CDP B2B 版本中的目的地](destinations/b2b.md)
 * 護欄 {#guardrails}
    * [Real-Time CDP護欄概觀](guardrails/overview.md)
-   * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [[!DNL Edge Network API]的護欄](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
-   * [[!DNL Real-Time Customer Profile] 資料與分段的護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [[!DNL Identity Service] 資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [[!DNL Query Service]的護欄](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=zh-Hant){target="_blank"}
+   * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ [!DNL Edge Network API]的](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}護欄
+   * [資料與分段的 [!DNL Real-Time Customer Profile] 護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
+   * [資料的 [!DNL Identity Service] 護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [ [!DNL Query Service]的](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}護欄
+   * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * 身分識別 {#identity}
    * [身分識別和身分識別命名空間](profile/identities-overview.md)
 * 合併原則 {#merge-policies}
