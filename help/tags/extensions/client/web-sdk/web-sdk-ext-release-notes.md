@@ -2,17 +2,29 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2677'
+source-wordcount: '2733'
 ht-degree: 24%
 
 ---
 
-# Adobe Experience Platform Web SDK擴充功能發行說明
+
+# Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/web-sdk/release-notes.md)。
 
+## 2.31.0版 — 2025年7月24日
+
+**新功能**
+
+- 包含[2.28.0](../../../../web-sdk/release-notes.md#2-28-0)版的Adobe Experience Platform Web SDK。
+
+**修正和改良**
+
+- 修正透過資料元素啟用資料流覆寫時擲回錯誤的問題。
+- 修正空白`idSyncContainerId`覆寫會造成錯誤的問題。
+- 解析媒體資料元素時，現在包含事件物件。
 
 ## 2.30.1版 — 2025年5月27日
 
@@ -120,15 +132,15 @@ ht-degree: 24%
 **新功能**
 
 - 新增擴充功能組態中[`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media)元件的支援。
-- 已新增[!DNL Streaming Media Collection]功能的[`Send Media Event`](action-types.md#send-media-event)動作。
-- 已新增[!DNL Streaming Media Collection]功能的[`Media: Quality of Experience`](data-element-types.md#quality-experience)資料元素。
+- 已新增[`Send Media Event`](action-types.md#send-media-event)功能的[!DNL Streaming Media Collection]動作。
+- 已新增[`Media: Quality of Experience`](data-element-types.md#quality-experience)功能的[!DNL Streaming Media Collection]資料元素。
 
 包含2.20.0版的Adobe Experience Platform Web SDK。
 
 **修正和改良**
 
 - 修正搜尋[更新變數](action-types.md#update-variable)動作中的資料元素時發生的錯誤。
-- 已從建議用於`sendEvent`動作的事件型別中移除[!UICONTROL 媒體]事件型別。
+- 已從建議用於[!UICONTROL 動作的事件型別中移除]媒體`sendEvent`事件型別。
 
 ## 2.22.0版 — 2024年5月3日
 
@@ -207,7 +219,7 @@ ht-degree: 24%
 
 - 包含2.16.0版的Adobe Experience Platform Web SDK。
 - 已新增對[資料流組態覆寫](/help/datastreams/overrides.md)的支援。
-- 在`sendEvent`命令的`datasetId`選項中新增淘汰通知。
+- 在`datasetId`命令的`sendEvent`選項中新增淘汰通知。
 
 **修正和改良**
 
@@ -392,7 +404,7 @@ ht-degree: 24%
    - 移除 `getDecisions` 命令。
    - `sendEvent` 命令新增「`scopes`」選項。決策會以 `sendEvent` 所解析的 Promise 傳回。
    - 新增內建 `__view__` 範圍，系統會傳回頁面/檢視範圍產品建議（例如Target中的VEC選件）。
-唯有`renderDecisions`設為false，決策才會從`sendEvent`命令傳回。
+唯有`sendEvent`設為false，決策才會從`renderDecisions`命令傳回。
    - 新增 `Decisions Received` 事件，決策可供使用時就會觸發。
 - 整合單一伺服器呼叫中的多個個人化通知。
 - 修正每次參考資料元素時，「事件合併 ID」都會重設的問題。

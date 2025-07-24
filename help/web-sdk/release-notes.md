@@ -3,18 +3,31 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2438'
 ht-degree: 2%
 
 ---
 
 
-# 發行說明
+# Web SDK發行說明
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.28.0版 — 2025年7月24日
+
+**新功能**
+
+- 新增Adobe Journey Optimizer取消資格規則的支援。
+
+**修正和改良**
+
+- 修正[Media Analytics追蹤器](commands/getmediaanalyticstracker.md)中媒體物件的`length`屬性不正確接受無效資料型別的錯誤。
+- 改善[身分管理](identity/overview.md)錯誤處理，以便在身分查詢失敗時正確處理Promise拒絕。
+- 解決具有HTML內容專案的[個人化內容](personalization/rendering-personalization-content.md)無法呈現的問題，並出現與遺失`renderStatusHandler`相關的錯誤。
+- 修正Activity Map [URL集合](commands/configure/clickcollectionenabled.md)以正確處理非HTTP URL。
 
 ## 2.27.0版 — 2025年5月20日
 
@@ -30,11 +43,11 @@ ht-degree: 2%
 **新功能**
 
 - 您現在可以使用Web SDK NPM套件建立自訂Web SDK組建，並僅選取您需要的程式庫元件。 這可讓程式庫大小得以縮小，並最佳化載入時間。 請參閱有關如何使用NPM套件[建立自訂Web SDK組建的檔案](install/create-custom-build.md)。
-- [`getIdentity`](commands/getidentity.md)命令現在會自動直接從`kndctr`身分Cookie讀取ECID。 如果您使用`ECID`名稱空間呼叫`getIdentity`，而且已有身分Cookie，Web SDK將不再向Edge Network要求取得身分。 現在會從Cookie讀取身分識別。
+- [`getIdentity`](commands/getidentity.md)命令現在會自動直接從`kndctr`身分Cookie讀取ECID。 如果您使用`getIdentity`名稱空間呼叫`ECID`，而且已有身分Cookie，Web SDK將不再向Edge Network要求取得身分。 現在會從Cookie讀取身分識別。
 
 **修正和改良**
 
-- 修正傳送`collect`呼叫後，`getIdentity`命令未傳回身分的問題。
+- 修正傳送`getIdentity`呼叫後，`collect`命令未傳回身分的問題。
 - 修正個人化重新導向導致內容在重新導向發生前忽隱忽現的問題。
 
 ## 2.25.0版 — 2025年1月23日
@@ -73,13 +86,13 @@ ht-degree: 2%
    - `Privacy`已重新命名為`Consent`
 - 修正透過[`applyPropositions`](../web-sdk/commands/applypropositions.md)轉譯預設內容專案時發生的錯誤。
 - 修正Adobe Target移動和調整動作大小時的CSS錯誤。
-- 已從[`sendEvent`](../web-sdk/commands/sendevent/overview.md)回應中移除`machineLearning`金鑰。
+- 已從`machineLearning`回應中移除[`sendEvent`](../web-sdk/commands/sendevent/overview.md)金鑰。
 
 ## 2.23.0版 — 2024年9月19日
 
 **新功能**
 
-- 新增在[getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library)命令中要求[CORE ID](identity/overview.md#tracking-coreid-web-sdk)的支援。
+- 新增在[getIdentity](identity/overview.md#tracking-coreid-web-sdk)命令中要求[CORE ID](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library)的支援。
 
 **修正和改良**
 
@@ -234,7 +247,7 @@ ht-degree: 2%
 
 **修正和改良**
 
-- 已更新Cookie設定以在[!DNL HTTPS]頁面上使用`sameSite="none"`和`secure`標幟。
+- 已更新Cookie設定以在`sameSite="none"`頁面上使用`secure`和[!DNL HTTPS]標幟。
 - 修正使用`eq`虛擬選取器時，個人化內容未正確套用的問題。
 - 修正`localTimezoneOffset`無法通過Experience Platform驗證的問題。
 
@@ -277,7 +290,7 @@ ht-degree: 2%
 
 ## 2.6.2版 — 2021年8月4日
 
-- 修正了即使未存取`result.decisions`屬性，`result.decisions` （由`sendEvent`命令提供）棄用的警告仍會記錄到主控台的問題。 存取`result.decisions`屬性時不會記錄任何警告，但該屬性仍被取代。
+- 修正了即使未存取`result.decisions`屬性，`sendEvent` （由`result.decisions`命令提供）棄用的警告仍會記錄到主控台的問題。 存取`result.decisions`屬性時不會記錄任何警告，但該屬性仍被取代。
 
 ## 2.6.1版 — 2021年7月29日
 
@@ -291,13 +304,13 @@ ht-degree: 2%
 
 - 新增重新導向個人化選件的支援。
 - 自動收集的檢視區寬度和高度如果是負值，將不再傳送至伺服器。
-- 當從`onBeforeEventSend`回呼傳回`false`以取消事件時，現在會記錄訊息。
+- 當從`false`回呼傳回`onBeforeEventSend`以取消事件時，現在會記錄訊息。
 - 修正將用於單一事件的特定XDM資料片段包含於多個事件中的問題。
 
 ## 2.4.0版 — 2021年3月
 
 - SDK現在可以安裝為[NPM套件](/help/web-sdk/install/npm.md)。
-- 新增在[設定預設同意](/help/web-sdk/commands/configure/defaultconsent.md)時對`out`選項的支援，在收到同意之前會捨棄所有事件（現有的`pending`選項會將事件排入佇列，並在收到同意後傳送這些事件）。
+- 新增在`out`設定預設同意[時對](/help/web-sdk/commands/configure/defaultconsent.md)選項的支援，在收到同意之前會捨棄所有事件（現有的`pending`選項會將事件排入佇列，並在收到同意後傳送這些事件）。
 - [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md)回呼現在可用來防止傳送事件。
 - 現在傳送有關個人化內容呈現或點按的事件時，會使用XDM結構描述欄位群組，而非`meta.personalization`。
 - [`getIdentity`](/help/web-sdk/commands/getidentity.md)命令現在會連同身分一併傳回邊緣區域ID。
@@ -313,7 +326,7 @@ ht-degree: 2%
 - 新增Nonce支援，以允許更嚴格的內容安全性原則。
 - 新增對單頁應用程式的個人化支援。
 - 改善與其他可能覆寫`window.console` API的頁面上JavaScript程式碼的相容性。
-- 錯誤修正： `documentUnloading`設為`true`或自動追蹤連結點選時，未使用`sendBeacon`。
+- 錯誤修正： `sendBeacon`設為`documentUnloading`或自動追蹤連結點選時，未使用`true`。
 - 錯誤修正：如果錨點元素包含HTML內容，系統不會自動追蹤連結。
 - 錯誤修正：某些包含唯讀`message`屬性的瀏覽器錯誤未適當處理，導致向客戶公開不同的錯誤。
 - 錯誤修正：如果iframe的SDKHTML頁面來自與上層視窗的HTML頁面不同的子網域，則在iframe內執行iframe會導致錯誤。
@@ -328,6 +341,6 @@ ht-degree: 2%
 - 移除`syncIdentity`命令，並支援在`sendEvent`命令中傳遞這些ID。
 - 支援IAB 2.0同意標準。
 - 支援在`setConsent`命令中傳遞其他ID。
-- 支援覆寫`sendEvent`命令中的`datasetId`。
+- 支援覆寫`datasetId`命令中的`sendEvent`。
 - 支援監視掛接（[瞭解詳情](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
 - 傳遞實作詳細資料內容資料中的`environment: browser`。
