@@ -3,9 +3,9 @@ title: TikTok連線
 description: 使用您的資料在TikTok上建立自訂對象，以便透過廣告促銷活動進行目標定位。 這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: c1f54e02bbc4affb775b3dc9e95f3852dc5a8e39
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1144'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 為協助您更清楚瞭解如何使用TikTok目的地，以下是Adobe Experience Platform客戶的範例使用案例。
 
-### 使用實例 {#use-case-1}
+### 使用案例 {#use-case-1}
 
 運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服飾品牌可以從他們自己的CRM擷取電子郵件地址到Adobe Experience Platform，從他們自己的離線資料建立對象，並將這些對象傳送到TikTok以在其客戶的社群媒體摘要中顯示廣告。
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 您必須擁有[!DNL Admin]或[!DNL Operator]許可權，才能存取您要傳送對象的TikTok Ads Manager帳戶。 如需更多說明，請參閱[TikTok說明中心](https://ads.tiktok.com/help/article/add-users-tiktok-business-center)。
 
-在將資料傳送至您的TikTok Ads Manager帳戶之前，您需要授予Adobe Experience Platform許可權以存取`Audience Management`的廣告帳戶。 在Experience Platform使用者介面中輸入您的廣告管理員ID[&#128279;](#authenticate)，並在重新導向至您的TikTok廣告管理員帳戶後授與許可權，即可提供此許可權。
+在將資料傳送至您的TikTok Ads Manager帳戶之前，您需要授予Adobe Experience Platform許可權以存取`Audience Management`的廣告帳戶。 在Experience Platform使用者介面中輸入您的廣告管理員ID[，並在重新導向至您的TikTok廣告管理員帳戶後授與許可權，即可提供此許可權。](#authenticate)
 
 ## 支援的身分 {#supported-identities}
 
@@ -40,8 +40,8 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
-| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
+| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 Adobe Experience Platform同時支援純文字和SHA256雜湊GAID值。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 Adobe Experience Platform同時支援純文字和SHA256雜湊IDFA值。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | 電話號碼 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform支援純文字和SHA256雜湊電話號碼，且必須採用E.164格式。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | 電子郵件 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
@@ -84,7 +84,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 ![TikTok許可權選取專案](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "用於選取許可權的TikTok UI影像")
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
