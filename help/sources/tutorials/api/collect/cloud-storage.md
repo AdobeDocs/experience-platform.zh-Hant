@@ -5,9 +5,9 @@ title: 使用流量服務API為雲端儲存空間來源建立資料流
 type: Tutorial
 description: 本教學課程涵蓋從第三方雲端儲存空間擷取資料，以及使用來源聯結器和API將資料帶入Experience Platform的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1792'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 ## 建立來源連線 {#source}
 
-您可以透過向[!DNL Flow Service] API的`sourceConnections`端點發出POST要求來建立來源連線，同時提供您的基本連線ID、您要擷取的來源檔案的路徑，以及來源對應的連線規格ID。
+您可以透過向`sourceConnections` API的[!DNL Flow Service]端點發出POST要求來建立來源連線，同時提供您的基本連線ID、您要擷取的來源檔案的路徑，以及來源對應的連線規格ID。
 
 建立來源連線時，您還必須定義資料格式屬性的列舉值。
 
@@ -81,7 +81,8 @@ curl -X POST \
       },
       "params": {
           "path": "/acme/summerCampaign/account.csv",
-          "type": "file"
+          "type": "file",
+          "cdcEnabled": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -100,6 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | （選用）定義要擷取的壓縮檔案型別的屬性。 支援的壓縮檔案型別為： `bzip2`、`gzip`、`deflate`、`zipDeflate`、`tarGzip`和`tar`。 **注意**： `compressionType`屬性只能在擷取分隔檔案或JSON檔案時使用。 |
 | `params.path` | 您存取之來源檔案的路徑。 此引數指向個別檔案或整個資料夾。  **注意**：您可以使用星號來取代檔案名稱，以指定整個資料夾的擷取。 例如： `/acme/summerCampaign/*.csv`將會內嵌整個`/acme/summerCampaign/`資料夾。 |
 | `params.type` | 您正在擷取的來源資料檔案的檔案型別。 使用型別`file`來擷取個別檔案，並使用型別`folder`來擷取整個資料夾。 |
+| `params.cdcEnabled` | 表示是否啟用變更記錄擷取的布林值。 下列雲端儲存空間來源支援此屬性： <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> 如需詳細資訊，請閱讀在來源[中使用](../change-data-capture.md)變更資料擷取的指南。 |
 | `connectionSpec.id` | 與您特定的雲端儲存空間來源相關聯的連線規格ID。 如需連線規格ID的清單，請參閱[附錄](#appendix)。 |
 
 **回應**
@@ -271,7 +273,7 @@ curl -X POST \
 
 為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
+若要建立對應集，請在提供您的目標XDM結構描述`mappingSets`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`$id`端點提出POST要求。
 
 >[!TIP]
 >
@@ -683,7 +685,7 @@ curl -X POST \
 依照本教學課程所述，您已建立來源聯結器，以排程方式從雲端儲存空間收集資料。 下游Experience Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 - [即時客戶輪廓概觀](../../../../profile/home.md)
-- [資料科學工作區總覽](../../../../data-science-workspace/home.md)
+- [資料科學工作區概觀](../../../../data-science-workspace/home.md)
 
 ## 附錄 {#appendix}
 

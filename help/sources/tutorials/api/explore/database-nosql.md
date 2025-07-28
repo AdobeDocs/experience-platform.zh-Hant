@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；協力廠商資料庫；資料庫流程服務
-solution: Experience Platform
 title: 使用流程服務API探索資料庫
 description: 本教學課程使用流程服務API來探索協力廠商資料庫的內容和檔案結構。
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 46e1a62e558a209ffed4a693cfd71ad5e76d7d98
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 9%
+source-wordcount: '386'
+ht-degree: 6%
 
 ---
 
@@ -19,38 +17,18 @@ ht-degree: 9%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [來源](../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線至協力廠商資料庫。
 
-### 收集必要的認證
+### 使用Experience Platform API
 
-本教學課程需要您與要擷取資料的第三方資料庫建立有效的連線。 有效的連線涉及資料庫的連線規格ID和連線ID。 有關建立資料庫連線及擷取這些值的詳細資訊，請參閱[來源聯結器概觀](./../../../home.md#database)。
-
-### 讀取範例 API 呼叫
-
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
-
-### 收集所需標頭的值
-
-若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程後，將會提供所有E[!DNL xperience Experience Platform] API呼叫中每個必要標頭的值，如下所示：
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {ORG_ID}`
-
-[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Experience Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
-
-* `Content-Type: application/json`
+如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../landing/api-guide.md)指南。
 
 ## 探索您的資料表
 
-使用資料庫的連線ID，您可以執行GET請求來探索資料表格。 使用以下呼叫來尋找您要檢查或擷取至[!DNL Experience Platform]的資料表的路徑。
+使用資料庫的連線ID，您可以執行GET請求來探索資料表格。 使用以下呼叫來尋找您要檢查或擷取至Experience Platform的表格路徑。
 
 **API格式**
 
@@ -75,7 +53,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會從資料庫傳回資料表陣列。 尋找您要帶入[!DNL Experience Platform]的資料表並記下其`path`屬性，因為您必須在下個步驟中提供它以檢查其結構。
+成功的回應會從資料庫傳回資料表陣列。 尋找您要帶入Experience Platform的表格並記下其`path`屬性，因為您必須在下一個步驟中提供它以檢查其結構。
 
 ```json
 [
@@ -146,10 +124,14 @@ curl -X GET \
                 }
             }
         ]
+    },
+    "data": [],
+    "cdcMetadata": {
+      "columnDetected": true
     }
 }
 ```
 
 ## 後續步驟
 
-依照本教學課程，您已探索您的資料庫、找到您要擷取至[!DNL Experience Platform]的表格路徑，並取得有關其結構的資訊。 您可以在下一個教學課程中使用此資訊，從資料庫[收集資料並將其帶入Experience Platform](../collect/database-nosql.md)。
+按照本教學課程，您已探索您的資料庫、找到您要擷取至Experience Platform的表格路徑，並取得有關其結構的資訊。 您可以在下一個教學課程中使用此資訊，從資料庫[收集資料並將其帶入Experience Platform](../collect/database-nosql.md)。
