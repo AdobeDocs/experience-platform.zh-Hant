@@ -5,10 +5,10 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
+source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 35%
+source-wordcount: '1047'
+ht-degree: 34%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 35%
       - [SFTP聯結器](connectors/cloud-storage/sftp.md)
       - [Amazon S3和Azure Blob聯結器](connectors/cloud-storage/blob-s3.md)
    - 同意與偏好設定 {#consent}
+      - [Didomi](connectors/consent-and-preferences/didomi.md)
       - [OneTrust 整合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics 連接器](connectors/crm/ms-dynamics.md)
@@ -264,6 +265,7 @@ ht-degree: 35%
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3和Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - 同意與偏好設定 {#consent}
+         - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
          - [OneTrust 整合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
