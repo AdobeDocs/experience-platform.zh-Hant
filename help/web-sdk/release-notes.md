@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2438'
+source-wordcount: '2486'
 ht-degree: 2%
 
 ---
@@ -28,6 +28,10 @@ ht-degree: 2%
 - 改善[身分管理](identity/overview.md)錯誤處理，以便在身分查詢失敗時正確處理Promise拒絕。
 - 解決具有HTML內容專案的[個人化內容](personalization/rendering-personalization-content.md)無法呈現的問題，並出現與遺失`renderStatusHandler`相關的錯誤。
 - 修正Activity Map [URL集合](commands/configure/clickcollectionenabled.md)以正確處理非HTTP URL。
+
+**已知問題**
+
+- 使用[的](/help/web-sdk/install/create-custom-build.md)自訂組建`npx @adobe/alloy`程式目前在2.28.0版中無法如預期運作。所有元件都包含在產生的組建中，無論選取的模組為何。 此問題不會影響CDN上可用的標準JavaScript檔案。 正在進行修正。
 
 ## 2.27.0版 — 2025年5月20日
 

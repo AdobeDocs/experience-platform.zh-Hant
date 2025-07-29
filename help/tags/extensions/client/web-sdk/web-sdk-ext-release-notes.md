@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2733'
-ht-degree: 24%
+source-wordcount: '2801'
+ht-degree: 23%
 
 ---
 
@@ -25,6 +25,11 @@ ht-degree: 24%
 - 修正透過資料元素啟用資料流覆寫時擲回錯誤的問題。
 - 修正空白`idSyncContainerId`覆寫會造成錯誤的問題。
 - 解析媒體資料元素時，現在包含事件物件。
+
+**已知問題**
+
+- 在v2.31.0發行後，發現[自訂元件組建](/help/web-sdk/install/create-custom-build.md)程式有問題。 當自訂組建繼續運作時，目前所有元件都包含在組建中，因此無論元件選取為何，都會產生完整大小的套件。 正在開發此問題的修正。 如果您仰賴自訂元件選擇來將建置大小減至最低，建議您等待未來版本。
+
 
 ## 2.30.1版 — 2025年5月27日
 
