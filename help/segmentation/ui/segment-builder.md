@@ -131,7 +131,7 @@ ht-degree: 10%
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="外部對象"
 >abstract="透過「對象」索引標籤匯入的對象，現在會自動透過Audience Portal顯示。 可立即使用從Audience Manager、Customer Journey Analytics、區段比對和其他自訂整合擷取的對象，而不需先在區段產生器中設定。 自2025年9月1日起，所有對象都將僅透過整合搜尋擷取，先前的工作流程將不再受支援。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
 >
@@ -386,7 +386,7 @@ ht-degree: 10%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
