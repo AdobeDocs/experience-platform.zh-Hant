@@ -4,9 +4,9 @@ title: 編輯啟動資料流
 type: Tutorial
 description: 請依照本文的步驟，在Adobe Experience Platform中編輯現有的啟用資料流。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
+source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 0%
 * [編輯對應的屬性和身分](#edit-mapped-attributes)
 * [編輯啟用排程和匯出頻率](#edit-schedule-frequency)
 * [新增其他資料集](#add-datasets)至啟用工作流程
+* [編輯您啟動資料流程的行銷動作](#edit-marketing-actions)
 * [套用存取標籤](#apply-access-labels)至匯出的資料
 * [編輯啟動資料流程的名稱和說明](#edit-names-descriptions)
 
@@ -108,6 +109,23 @@ ht-degree: 0%
 >此選項僅對支援資料集匯出[的](export-datasets.md#supported-destinations)目的地可見。
 
 ![Experience Platform UI影像顯示「匯出資料集」資料流執行選項。](../assets/ui/edit-activation/export-datasets.png)
+
+## [!BADGE Beta]{type=Informative}編輯行銷動作 {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>此功能目前在&#x200B;**beta**&#x200B;中。 若要要求存取權，請聯絡您的Adobe代表。
+
+您可以新增或移除最初連線至目的地時設定的行銷動作。
+
+選取右側邊欄中的&#x200B;**[!UICONTROL 編輯行銷動作]**，以開啟行銷動作選取畫面。
+
+![Experience Platform UI影像顯示[編輯行銷動作]選項。](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+選取適用的行銷動作，然後選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以套用變更。
+
+![Experience Platform UI影像顯示編輯行銷動作畫面。](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+
 
 ## 套用存取標籤 {#apply-access-labels}
 
