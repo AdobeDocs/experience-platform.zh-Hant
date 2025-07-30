@@ -1,13 +1,13 @@
 ---
 title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 21%
+source-wordcount: '1528'
+ht-degree: 20%
 
 ---
 
@@ -15,11 +15,15 @@ ht-degree: 21%
 
 >[!AVAILABILITY]
 >
->帳戶對象只能在Real-Time Customer Data Platform的[B2B edition](../../rtcdp/overview.md#rtcdp-b2b)和Real-Time Customer Data Platform[&#128279;](../../rtcdp/overview.md#rtcdp-b2p)的B2P版本中使用。
+>帳戶對象只能在Real-Time Customer Data Platform的[B2B edition](../../rtcdp/overview.md#rtcdp-b2b)和Real-Time Customer Data Platform[的](../../rtcdp/overview.md#rtcdp-b2p)B2P版本中使用。
 
 透過帳戶細分，Adobe Experience Platform可讓您從以人物為基礎的受眾到以帳戶為基礎的受眾，使用完整且精密的行銷細分體驗。
 
 帳戶對象可用於作為以帳戶為基礎的目的地的輸入，讓您在下游服務中鎖定這些帳戶內的人員。 例如，您可以使用以帳戶為基礎的受眾來擷取&#x200B;**不**&#x200B;擁有任何職銜為首席營運官(COO)或首席行銷官(CMO)之人員的聯絡資訊的所有帳戶記錄。
+
+>[!NOTE]
+>
+>做為B2B架構升級的一部分，現在會精確計算具有B2B實體之對象的對象人數預估值。 這些預估可在預覽期間取得，並為涉及複雜B2B關係的對象提供更準確且可靠的深入分析。 <br>如需詳細資訊，請閱讀[Real-Time CDP B2B edition架構升級概觀](../../rtcdp/b2b-architecture-upgrade.md)。
 
 ## 術語 {#terminology}
 
@@ -49,7 +53,7 @@ ht-degree: 21%
 >
 >帳戶對象是使用&#x200B;**批次**&#x200B;細分評估，每24小時評估一次。
 
-若要建立帳戶對象，請在[!UICONTROL 瀏覽]頁面上選取&#x200B;**[!UICONTROL 建立對象]**。
+若要建立帳戶對象，請在&#x200B;**[!UICONTROL 瀏覽]**&#x200B;頁面上選取[!UICONTROL 建立對象]。
 
 ![帳戶對象瀏覽頁面會醒目顯示[!UICONTROL 建立對象]按鈕。](../images/types/account/select-create-audience.png)
 
@@ -87,7 +91,7 @@ ht-degree: 21%
 
 | 選項 | 說明 |
 | ------ | ----------- |
-| 直接關係 | 帳戶和個人之間的直接連線。 這會指定每個人員透過人員結構描述上`personComponents`陣列中的`accountID`值陣列所連結的帳戶。 此路徑是最常使用的路徑。 |
+| 直接關係 | 帳戶和個人之間的直接連線。 這會指定每個人員透過人員結構描述上`accountID`陣列中的`personComponents`值陣列所連結的帳戶。 此路徑是最常使用的路徑。 |
 | 帳戶 — 個人關係 | 帳戶和個人之間的關係，由`accountPersonRelation`物件定義。 此路徑也可讓每個人連線至多個帳戶。 當您的組織從您的來源資料中定義明確的關係表時，就會使用它。 |
 | 機會 — 個人關係 | 機會和個人之間的關係，由`opportunityPersonRelation`物件定義。 這會將個人從機會個人連結至帳戶，將個人連結至帳戶。 這可讓您說明哪些公司已將人員附加至商機。 |
 
@@ -126,8 +130,8 @@ ht-degree: 21%
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="回顧期間上限錯誤"
->abstract="體驗事件的回顧期間上限為 30 天。"
+>title="回顧時間範圍"
+>abstract="使用回顧視窗可檢視個人層級事件的完整記錄。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -196,18 +200,19 @@ ht-degree: 21%
 
 使用帳戶對象時，對象&#x200B;**必須**&#x200B;符合下列限制：
 
-- 體驗事件的回顧期間上限為&#x200B;**30天**。
 - 巢狀容器的最大深度為&#x200B;**5**。
    - 這表示建立對象時，**不能**&#x200B;有超過五個巢狀容器。
 - 單一容器內的規則數目上限為&#x200B;**5**。
    - 這表示您的對象&#x200B;**不能**&#x200B;有超過五個規則組成您的對象。
 - 可使用的跨實體數目上限為&#x200B;**5**。
    - 跨實體是指您在對象內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。
-- 無法使用自訂實體&#x200B;**&#x200B;**。
 - 單一欄位可以檢查的值數量上限為 **50**。
    - 例如，如果您有「城市名稱」欄位，您可以根據50個城市名稱檢查該值。
-- 帳戶對象&#x200B;**無法**&#x200B;使用`inSegment`個事件。
 - 帳戶對象&#x200B;**不能**&#x200B;使用循序事件。
 - 帳戶對象&#x200B;**無法**&#x200B;使用地圖。
 - 巢狀陣列深度上限為 **5**。
 - 巢狀物件的數量上限為&#x200B;**10**。
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->

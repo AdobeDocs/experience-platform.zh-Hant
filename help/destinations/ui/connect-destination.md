@@ -6,7 +6,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="帳戶名稱"
->abstract="輸入名稱，協助您日後輕鬆識別此目的地帳戶。 如果您有多個連線連線到相同的目的地型別，這會特別有用。"
+>abstract="輸入名稱以便日後協助您輕鬆識別此目標帳戶。如果您有多個連線連至同一目標類型，則這個做法特別實用。"
 
 連線到目的地的第一個步驟是驗證到目的地平台。
 
