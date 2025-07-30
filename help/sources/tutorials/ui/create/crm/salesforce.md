@@ -2,16 +2,16 @@
 title: 使用Salesforce使用者介面連線您的Experience Platform帳戶
 description: 瞭解如何使用使用者介面連線您的Salesforce帳戶並將CRM資料帶入Experience Platform。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1003'
 ht-degree: 2%
 
 ---
 
 # 使用使用者介面將您的[!DNL Salesforce]帳戶連線至Experience Platform
 
-本教學課程提供如何使用Experience Platform使用者介面連線您的[!DNL Salesforce]帳戶及將CRM資料帶入Adobe Experience Platform的步驟。
+閱讀本指南，瞭解如何使用Experience Platform使用者介面連線您的[!DNL Salesforce]帳戶並將CRM資料匯入Adobe Experience Platform。
 
 ## 快速入門
 
@@ -58,8 +58,9 @@ ht-degree: 2%
 | 用戶端 ID | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce]識別您的應用程式，以代表您的帳戶運作。 |
 | 用戶端密碼 | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce]識別您的應用程式，以代表您的帳戶運作。 |
 | API版本 | 您正在使用的[!DNL Salesforce]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，Experience Platform將自動使用最新可用版本。 |
+| 包含已刪除的物件 | 布林值，用來判斷是否包含軟性刪除的記錄。 若設為True，軟刪除的記錄可包含在您的[!DNL Salesforce]查詢中，並從您的帳戶擷取到Experience Platform如果未指定您的設定，此值預設為`false`。 |
 
-如需針對[!DNL Salesforce]使用OAuth的詳細資訊，請參閱OAuth授權流程[&#128279;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)的[!DNL Salesforce] 指南。
+如需針對[!DNL Salesforce]使用OAuth的詳細資訊，請參閱OAuth授權流程[[!DNL Salesforce] 的](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)指南。
 
 >[!ENDTABS]
 
@@ -67,13 +68,13 @@ ht-degree: 2%
 
 ## 連線您的[!DNL Salesforce]帳戶
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側功能表導覽至&#x200B;**[!UICONTROL 來源]**&#x200B;以開啟[!UICONTROL 來源]工作區。 使用左側的目錄來瀏覽類別，或使用搜尋列來快速尋找您要連線的來源。
 
-在&#x200B;*[!UICONTROL CRM]*&#x200B;類別下選取&#x200B;**[!DNL Salesforce]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
+在&#x200B;**[!DNL Salesforce]** CRM *[!UICONTROL 類別下選取]*，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
 >[!TIP]
 >
->當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL 新增資料]**。
+>在來源目錄中，若未連線任何帳戶，您將會看到&#x200B;**[!UICONTROL 設定]**，若帳戶已驗證，您將會看到&#x200B;**[!UICONTROL 新增資料]**。
 
 ![已選取Salesforce來源卡的Experience Platform UI上的來源目錄。](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -116,10 +117,11 @@ ht-degree: 2%
 * 用戶端 ID
 * 用戶端密碼
 * API版本
+* 包含刪除物件
 
 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**。
 
-![用於建立Salesforce帳戶的OAuth介面。](../../../../images/tutorials/create/salesforce/oauth2.png)
+![用於建立Salesforce帳戶的OAuth介面。](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 

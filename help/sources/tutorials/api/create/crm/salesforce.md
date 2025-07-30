@@ -2,16 +2,16 @@
 title: 使用流量服務API連線Salesforce至Experience Platform
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Salesforce帳戶。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1175'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Flow Service] API連線[!DNL Salesforce]至Experience Platform
+# 使用[!DNL Salesforce] API連線[!DNL Flow Service]至Experience Platform
 
-閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)將您的[!DNL Salesforce]來源帳戶連結至Adobe Experience Platform。
+閱讀本指南，瞭解如何使用[!DNL Salesforce]API[[!DNL Flow Service] 將您的](https://developer.adobe.com/experience-platform-apis/references/flow-service/)來源帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
 
@@ -63,13 +63,14 @@ ht-degree: 2%
 | `clientId` | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce]識別您的應用程式，以代表您的帳戶運作。 |
 | `clientSecret` | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce]識別您的應用程式，以代表您的帳戶運作。 |
 | `apiVersion` | 您正在使用的[!DNL Salesforce]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，Experience Platform將自動使用最新可用版本。 此值是OAuth2使用者端認證驗證的必要專案。 |
+| `includeDeletedObjects` | 布林值，用來判斷是否包含軟性刪除的記錄。 若設為True，軟刪除的記錄可包含在您的[!DNL Salesforce]查詢中，並從您的帳戶擷取到Experience Platform中。 如果您未指定設定，此值預設為`false`。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Salesforce]的連線規格識別碼為： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
 
-如需針對[!DNL Salesforce]使用OAuth的詳細資訊，請參閱OAuth授權流程[&#128279;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)的[!DNL Salesforce] 指南。
+如需針對[!DNL Salesforce]使用OAuth的詳細資訊，請參閱OAuth授權流程[[!DNL Salesforce] 的](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)指南。
 
 >[!ENDTABS]
 
-### 在[!DNL Azure]上的Experience Platform中為[!DNL Salesforce]建立基底連線
+### 在[!DNL Salesforce]上的Experience Platform中為[!DNL Azure]建立基底連線
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
@@ -162,7 +163,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -178,6 +180,7 @@ curl -X POST \
 | `auth.params.clientId` | 與您的[!DNL Salesforce]帳戶相關聯的使用者端ID。 |
 | `auth.params.clientSecret` | 與您的[!DNL Salesforce]帳戶相關聯的使用者端密碼。 |
 | `auth.params.apiVersion` | 您正在使用的[!DNL Salesforce]執行個體的REST API版本。 |
+| `auth.params.includeDeletedObjects` | 布林值，用來判斷是否包含軟性刪除的記錄。 |
 | `connectionSpec.id` | [!DNL Salesforce]連線規格識別碼： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
 
 +++
@@ -395,7 +398,7 @@ curl -X GET \
 
 ## 後續步驟
 
-依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Salesforce]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
+依照此教學課程，您已使用[!DNL Salesforce] API建立[!DNL Flow Service]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
 * [使用 [!DNL Flow Service] API建立資料流以將CRM資料帶入Experience Platform](../../collect/crm.md)
