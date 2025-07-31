@@ -3,22 +3,30 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0954b5f22d609b0b12352de70f6c618cc88757c8
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 3%
+source-wordcount: '1026'
+ht-degree: 4%
 
 ---
 
-# [!DNL The Trade Desk]個連線
+# [!DNL The Trade Desk] 連線
 
 ## 概觀 {#overview}
+
+>[!IMPORTANT]
+>
+>* 自2025年7月31日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL The Trade Desk]**&#x200B;卡片。 這是因為目標服務內部升級所致。現有的&#x200B;**[!DNL The Trade Desk]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用）交易台]**&#x200B;以及名稱為&#x200B;**[!UICONTROL 交易台]**&#x200B;的新卡片現在可供您使用。
+>* 使用目錄中的新&#x200B;**[!UICONTROL 交易台]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何使用中的資料流至&#x200B;**[!UICONTROL （已棄用）交易台]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。
+>* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
+>   * 流程規格 ID：`86134ea1-b014-49e8-8bd3-689f4ce70578`
+>   * 連線規格 ID：`1029798b-a97f-4c21-81b2-e0301471166e`
 
 使用此目的地聯結器將設定檔資料傳送至[!DNL The Trade Desk]。 此聯結器會將資料傳送至[!DNL The Trade Desk]第一方端點。 Adobe Experience Platform與[!DNL The Trade Desk]之間的整合不支援匯出資料至[!DNL The Trade Desk]第三方端點。
 
 [!DNL The Trade Desk]是廣告購買者的自助服務平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 
-若要將設定檔資料傳送至[!DNL Trade Desk]，您必須先連線至目的地，如本頁面的下列章節所述。
+若要將設定檔資料傳送至[!DNL The Trade Desk]，您必須先連線至目的地，如本頁面的下列章節所述。
 
 ## 使用案例 {#use-cases}
 
@@ -28,11 +36,16 @@ ht-degree: 3%
 
 [!DNL The Trade Desk]支援根據下表所示的身分啟用對象。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-| 身分識別 | 說明 |
-|---|---|
-| GAID | [!DNL Google Advertising ID] |
-| IDFA | [!DNL Apple ID for Advertisers] |
-| 交易台ID | Trade Desk平台中的廣告商ID |
+以下是[!DNL The Trade Desk]目的地支援的身分。 這些身分識別可用來啟動[!DNL The Trade Desk]的對象。
+
+下表中的所有身分都是強制對應。
+
+| 目標身分 | 說明 | 考量事項 |
+|---|---|---|
+| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
+| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
+| ECID | Experience Cloud ID | 此身分是整合正常運作的必要條件，但不會用於對象啟用。 |
+| 交易台ID | [!DNL The Trade Desk]平台中的廣告商ID | 根據Trade Desk的專屬ID啟用對象時，請使用此身分識別。 |
 
 {style="table-layout:auto"}
 
@@ -62,7 +75,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
@@ -78,14 +91,15 @@ ht-degree: 3%
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL 帳戶識別碼]**：您的[!DNL Trade Desk] [!UICONTROL 帳戶識別碼]。
-* **[!UICONTROL 伺服器位置]**：請詢問您的[!DNL Trade Desk]代表您應該使用哪個區域伺服器。 以下是您可選擇使用的地區伺服器：
-   * **[!UICONTROL 歐洲]**
-   * **[!UICONTROL 新加坡]**
+* **[!UICONTROL 帳戶識別碼]**：您的[!DNL The Trade Desk] [!UICONTROL 帳戶識別碼]。
+* **[!UICONTROL 伺服器位置]**：請詢問您的[!DNL The Trade Desk]代表您應該使用哪個區域伺服器。 以下是您可選擇使用的地區伺服器：
+
+   * **[!UICONTROL APAC]**
+   * **[!UICONTROL 中國]**
    * **[!UICONTROL 東京]**
-   * **[!UICONTROL 北美東部]**
-   * **[!UICONTROL 北美西部]**
-   * **[!UICONTROL 拉丁美洲]**
+   * **[!UICONTROL 英國/歐盟]**
+   * **[!UICONTROL 美國東岸]**
+   * **[!UICONTROL 美國西海岸]**
 
 ### 啟用警示 {#enable-alerts}
 
@@ -106,10 +120,19 @@ ht-degree: 3%
 
 對應對象時，Adobe建議您使用Experience Platform對象名稱或較短的形式，以方便使用。 不過，您目的地中的對象ID或名稱不需要符合Experience Platform帳戶中的對象ID。 您在對應欄位中插入的任何值都會反映在目的地中。
 
-如果您使用多個裝置對應(Cookie ID、[!DNL IDFA]、[!DNL GAID])，請務必針對所有三個對應使用相同的對應值。 [!DNL The Trade Desk]會將所有資料彙總至單一區段，並包含裝置層級的劃分。
+### 強制對應 {#mandatory-mappings}
 
-![區段對應ID](../../assets/common/segment-mapping-id.png)
+[支援的身分](#supported-identities)區段中說明的所有目標身分都是強制性的，必須在對象啟用程式期間進行對應。 其中包括：
+
+* **GAID** (Google Advertising ID)
+* **IDFA** (廣告商的Apple ID)
+* **ECID** (Experience Cloud ID)
+* **交易台ID**
+
+如果無法對應所有必要的身分，將無法成功將對象啟用至[!DNL The Trade Desk]。 每個身分在整合中都有不同的用途，而目的地若要正常運作，則全部為必填。
+
+![顯示必要對應的熒幕擷圖](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
 ## 匯出的資料 {#exported-data}
 
-若要確認資料是否已成功匯出至[!DNL The Trade Desk]目的地，請檢查您的[!DNL Trade Desk]帳戶。 如果成功啟用，系統會將對象填入您的帳戶。
+若要確認資料是否已成功匯出至[!DNL The Trade Desk]目的地，請檢查您的[!DNL The Trade Desk]帳戶。 如果成功啟用，系統會將對象填入您的帳戶。
