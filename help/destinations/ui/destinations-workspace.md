@@ -3,9 +3,9 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a0326a6d616937552d7f8ff7001808bbfb69bd62
+source-git-commit: 80ceb279e943037fb4507419b7818575b4a84fe5
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1384'
 ht-degree: 1%
 
 ---
@@ -69,14 +69,15 @@ ht-degree: 1%
 
 >[!TIP]
 >
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**&#x200B;控制項，將對象或資料集匯出至該目的地。
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**&#x200B;控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**&#x200B;控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制項，將對象或資料集匯出至該目的地。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
 
 ![帳戶標籤](../assets/ui/workspace/destination-account-options.png)
 
 | 元素 | 說明 |
 |---|---|
+| [!UICONTROL 名稱] | [設定](connect-destination.md#authenticate)目的地時，您指派給目的地帳戶的名稱。 |
 | [!UICONTROL 目標] | 您已為其設定連線的目的地聯結器。 |
 | [!UICONTROL 連線型別] | 代表與儲存貯體或目的地的帳戶連線型別。 根據目的地，驗證選項為： <ul><li>針對電子郵件行銷目標：可以是S3、FTP或Azure Blob。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>對於Amazon S3雲端儲存目的地：存取金鑰 </li><li>對於SFTP雲端儲存目標： SFTP的基本驗證</li><li>OAuth 1或OAuth 2驗證</li><li>持有人權杖驗證</li></ul> |
 | [!UICONTROL 使用者名稱] | 您在[連線目的地工作流程](../catalog/email-marketing/overview.md#connect-destination)中選取的使用者名稱。 |
@@ -93,7 +94,7 @@ ht-degree: 1%
 >[!TIP]
 >
 > * 選取`...`名稱[!UICONTROL 欄中的省略符號(])，並使用![啟用對象控制項](/help/images/icons/data-add.png) **[!UICONTROL 啟用對象控制項]**&#x200B;將對象或資料集匯出至該目的地。
-> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![編輯目的地控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯目的地&#x200B;]**&#x200B;控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
+> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![編輯目的地控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯目的地&#x200B;]**控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
 > * 選取`...`名稱[!UICONTROL 欄中的省略符號(])，並使用![編輯行銷動作控制項](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL 編輯行銷動作]**&#x200B;控制項變更為[變更所選目的地的行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。
 > * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png) **[!UICONTROL 刪除]**&#x200B;控制項來[移除](delete-destinations.md)與目的地的現有連線。
 > * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png) **[!UICONTROL 監視控制項中的檢視]**&#x200B;控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。

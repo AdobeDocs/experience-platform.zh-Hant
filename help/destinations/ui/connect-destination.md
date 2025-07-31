@@ -3,10 +3,10 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟用警示，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
+source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 3%
+source-wordcount: '1280'
+ht-degree: 2%
 
 ---
 
@@ -54,15 +54,24 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="帳戶名稱"
->abstract="輸入名稱以便日後協助您輕鬆識別此目標帳戶。如果您有多個連線連至同一目標類型，則這個做法特別實用。"
+>abstract="輸入名稱以便日後協助您輕鬆識別此目標帳戶。如果您有多個連線連線到同一個目的地，這會特別有用。"
 
 連線到目的地的第一個步驟是驗證到目的地平台。
 
-根據您連線到的目的地，您可能會被帶往目的地合作夥伴的頁面進行驗證，或者系統可能會要求您直接在Experience Platform工作流程中輸入驗證認證。 以下是驗證[!DNL Amazon S3]目的地所需的輸入範例。 每個目的地檔案頁面都會提供必要輸入的詳細指示（例如，請參閱[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate)和[[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)的驗證區段）。
+根據您連線到的目的地，您可能會被帶往目的地合作夥伴的頁面進行驗證，或者系統可能會要求您直接在Experience Platform工作流程中輸入驗證認證。
+
+設定新的目的地連線時，您必須提供&#x200B;**[!UICONTROL 帳戶名稱]**，以及選擇性的&#x200B;**[!UICONTROL 描述]**。 這些欄位適用於所有目的地。
+
+* **[!UICONTROL 帳戶名稱]**：輸入可協助您日後輕鬆識別此目的地帳戶的名稱。 如果您有多個連線連線到同一個目的地，這會特別有用。
+* **[!UICONTROL 描述]** （選擇性）：新增任何可協助您或您的團隊區分帳戶的其他詳細資料，例如連線的目的或相關的業務內容。
+
+在這些欄位中提供清楚的描述性資訊，可讓您在啟用對象時，更輕鬆地管理和選取正確的目的地帳戶。
+
+以下是驗證[!DNL Amazon S3]目的地所需的輸入範例。 每個目的地檔案頁面都會提供必要輸入的詳細指示（例如，請參閱[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate)和[[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)的驗證區段）。
 
 **[!DNL Amazon S3]必要和選用的驗證引數**
 
-![此影像顯示驗證Amazon S3目的地時的必要和選用輸入引數。](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
+![此影像顯示驗證Amazon S3目的地時的必要和選用輸入引數。](../assets/ui/connect-destinations/s3-new-acc.png)
 
 ## 設定連線引數 {#set-up-connection-parameters}
 
