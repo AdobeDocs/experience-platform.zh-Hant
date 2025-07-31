@@ -1,12 +1,11 @@
 ---
 title: Real-Time CDP B2B edition的架構升級
 description: 請閱讀本檔案，瞭解有關Real-Time CDP B2B edition的完整架構升級資訊。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-hide: true
-hidefromtoc: true
-source-git-commit: 78444555178773a8305ba27aaaf7998fe279a71d
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+exl-id: d958a947-e195-4dd4-a04c-63ad82829728
+source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->本檔案概述Real-Time CDP B2B和B2P版本的架構升級。 **此時您無需採取任何動作**。 請參閱本檔案以瞭解升級如何影響Adobe Experience Platform現有功能的資訊。 如有任何問題，請聯絡您的Adobe客戶團隊。
+>本檔案概述Real-Time CDP B2B和B2P版本的架構升級。 大部分客戶不需升級即可執行升級作業。 但是，有些對象無法自動升級。 Adobe將直接與您合作以解決這些情況。 請參閱本檔案以瞭解升級如何影響Adobe Experience Platform現有功能的資訊。 如有任何問題，請聯絡您的Adobe客戶團隊。
 
 Adobe重新設計了Real-Time CDP B2B和B2P版本，以強化擴充性、效能和可靠性，同時支援更進階的B2B使用案例。 為確保所有客戶都能受益於這些改善專案，Adobe會將所有現有的B2B和B2P客戶升級至新架構。
 
@@ -52,19 +51,6 @@ Adobe重新設計了Real-Time CDP B2B和B2P版本，以強化擴充性、效能�
 
 如需詳細資訊，請參閱[帳戶對象](../segmentation/types/account-audiences.md)的相關檔案。
 
-### 帳戶對象中個人層級事件的完整回顧
-
-帳戶對象現在可以運用個人層級事件的完整記錄，並將回顧期間擴充至先前的30天以外。
-
-透過此升級，您現在可以：
-
-* 根據相關個人層級事件的完整歷史記錄，建立更完整的對象。
-* 運用長期行為資料，實現更豐富、更準確的對象定義。
-* 根據隨時間變化的深入參與模式來識別高價值帳戶。
-* 支援需要從歷史動作中獲得深入分析的使用案例，例如涉及長銷售週期或延遲購買訊號的案例。
-
-如需詳細資訊，請參閱[帳戶對象](../segmentation/types/account-audiences.md)的相關檔案。
-
 ## 升級至現有功能
 
 下列功能已更新為B2B架構升級的一部分。
@@ -73,16 +59,33 @@ Adobe重新設計了Real-Time CDP B2B和B2P版本，以強化擴充性、效能�
 
 隨著新架構升級，包含B2B屬性的單一多實體對象無法再使用體驗事件篩選器。
 
-若要達到相同的對象邏輯，請使用區段方法：
+若要達到相同的對象邏輯，您可以使用區段產生器來[新增對象和參考對象](../segmentation/ui/segment-builder.md#adding-audiences)
 
-1. 建立體驗事件對象：個別定義行為條件。 例如：「過去三天造訪定價頁面的使用者。」
-2. 建立具有B2B屬性的多實體對象：參考體驗事件對象，作為此對象條件的一部分。 例如：「身為帳戶屬於&#x200B;**&#39;財務&#39;**&#x200B;產業之任何機會的&#x200B;**&#39;決策者&#39;**&#x200B;的人員，以及過去三天造訪定價頁面之人員對象的成員。
+例如：
 
-升級完成後，任何具有B2B屬性和體驗事件的新多實體對象都必須使用區段方法建立。 此外，您必須驗證對象成員資格，以確保預期行為。
+* 建立體驗事件對象
+   * 分別定義行為條件。 例如：「過去三天造訪定價頁面的使用者。」
+* 建立具有B2B屬性的多實體對象。
+   * 在這裡，您可以參考體驗事件對象，作為此對象條件的一部分。 例如：「身為帳戶屬於&#x200B;**&#39;財務&#39;**&#x200B;產業之任何機會的&#x200B;**&#39;決策者&#39;**&#x200B;的人員，以及過去三天造訪定價頁面之人員對象的成員。
+
+升級完成後，必須使用[segment-of-segment](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types)方法建立任何具有B2B屬性和體驗事件的新多實體對象。
+
+>[!TIP]
+>
+>區段&#x200B;**的**&#x200B;區段是包含一或多個批次或邊緣區段的任何區段定義。 **注意**：如果您使用區段區段，設定檔取消資格將&#x200B;**每24小時發生一次**。
 
 ### B2B對象中的實體解析度和時間優先順序合併
 
-作為架構升級的一部分，Adobe已推出帳戶和機會的實體解決方案，每天都會執行。 此增強功能可讓Experience Platform識別和合併代表相同真實世界實體的多項記錄，進而改善資料一致性，並啟用更準確的受眾細分。
+作為架構升級的一環，Adobe推出客戶與商機的實體解決方案。 實體解析度是以確定性ID比對為基礎，並以最新資料為基礎。 實體解析工作會在批次細分期間每日執行，然後再評估具有B2B屬性的多實體對象。
+
+>[!BEGINSHADEBOX]
+
+#### 實體解析如何運作？
+
+* **在**&#x200B;之前：若使用資料通用編號系統(DUNS)編號做為額外身分識別，且帳戶的DUNS編號已在來源系統（如CRM）中更新，則帳戶ID會連結到舊和新的DUNS編號。
+* **在**&#x200B;之後：如果將DUNS號碼當做其他身分識別使用，且帳戶的DUNS號碼已在來源系統（如CRM）中更新，則帳戶ID只會連結到新的DUNS號碼，因此能更準確地反映帳戶的目前狀態。
+
+>[!ENDSHADEBOX]
 
 透過此升級，您現在可以：
 
@@ -94,8 +97,6 @@ Adobe重新設計了Real-Time CDP B2B和B2P版本，以強化擴充性、效能�
 ### 支援多實體B2B對象中的合併原則
 
 具有B2B屬性的多實體對象現在支援單一合併原則（您設定的預設合併原則），而不是多個合併原則。
-
-先前依賴非預設合併原則的對象可能會產生不同的結果。 若要瞭解對象構成的潛在變更，請檢閱並測試依賴非預設合併原則的任何對象。 此外，監控啟用結果，以偵測由於合併原則變更而導致對象組成的任何轉變。
 
 如需詳細資訊，請參閱Real-Time CDP B2B edition [的](./segmentation/b2b.md)分段使用案例指南。
 
@@ -127,25 +128,25 @@ Adobe重新設計了Real-Time CDP B2B和B2P版本，以強化擴充性、效能�
 
 現在，您只能在帳戶和機會結構描述完成每日實體解析程式後，將其擷取為查詢維度實體。 在下一個實體解析週期完成之前（通常每24小時），新擷取的記錄將無法用於設定檔擴充或區段定義。
 
-建議您檢閱需要即時存取帳戶和機會資料的任何使用案例。 此外，若您設計或更新工作流程需仰賴查閱式細分或透過帳戶和機會實體進行個人化，則建議您針對最多24小時的延遲期間進行規劃。
+<!-- ### Deprecation of audience creation via API for B2B entities
 
-### 取代透過B2B實體的API建立對象
+Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
-不建議透過API使用B2B實體建立對象。 受影響的B2B實體清單包括：
-
-* 帳戶
-* 機會
-* 帳戶 — 個人關係
-* 機會 — 個人關係
+* Account
+* Opportunity
+* Account-Person Relation
+* Opportunity-Person Relation
 * Campaign
-* 促銷活動會員
-* 行銷清單
-* 行銷清單成員
+* Campaign Member
+* Marketing List
+* Marketing List Member
 
-如需詳細資訊，請參閱[區段定義端點API指南](../segmentation/api/segment-definitions.md)。
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
 
 ### 沙箱工具中多實體對象匯入的變更
 
-隨著架構升級，您將無法再匯入具有B2B屬性和體驗事件的多實體對象（如果在升級前匯出）。 這些對象將無法匯入，且無法自動轉換為新架構。 若要解決此限制，您必須重新匯出這些對象，然後使用沙箱工具將其匯入各自的目標沙箱。
+在架構升級後，如果在升級前發佈包含這些對象的套件，您將無法再匯入具有B2B屬性和體驗事件的多實體對象。 這些對象將無法匯入，且無法自動轉換為新架構。 若要解決此限制，您必須使用更新的對象建立新套件，然後使用沙箱工具將其匯入各自的目標沙箱。
+
+開發沙箱將升級至新架構。 可以自動更新的對象將會升級；無法停用的對象將會升級。 已停用的對象必須在升級後重新建立。
 
 如需詳細資訊，請參閱[沙箱工具手冊](../sandboxes/ui/sandbox-tooling.md)。
