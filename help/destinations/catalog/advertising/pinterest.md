@@ -1,15 +1,15 @@
 ---
-title: pinterest客戶清單連線
+title: Pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人，或已在Pinterest上與您的內容互動的人中建立對象。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '808'
 ht-degree: 3%
 
 ---
 
-# [!DNL Pinterest Customer List]個連線
+# [!DNL Pinterest Customer List] 連線
 
 ## 概觀 {#overview}
 
@@ -26,15 +26,15 @@ ht-degree: 3%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Pinterest Customer List]目的地支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
+[!DNL Pinterest Customer List]目的地支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
 
 在目的地啟用工作流程的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中，將所需的身分對應到目標欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時區分和解析。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | 將&#x200B;*GAID*&#x200B;來源身分名稱空間對應到目標身分欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時區分和解析。 |
-| IDFA | [!DNL Apple ID for Advertisers] | 將&#x200B;*IDFA*&#x200B;來源識別名稱空間對應到目標識別欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時區分和解析。 |
-| EMAIL | 電子郵件地址（純文字或使用SHA256演演算法雜湊） | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 <br>將&#x200B;*Email*&#x200B;或&#x200B;*Email_LC_SHA256*&#x200B;來源身分名稱空間對應到目標身分欄位&#x200B;*pinterest_audience*。 |
+| GAID | [!DNL Google Advertising ID] | 將&#x200B;*GAID*&#x200B;來源識別名稱空間對應到目標識別欄位&#x200B;*pinterest_audience*。 |
+| IDFA | [!DNL Apple ID for Advertisers] | 將&#x200B;*IDFA*&#x200B;來源識別名稱空間對應到目標識別欄位&#x200B;*pinterest_audience*。 |
+| EMAIL | 電子郵件地址（純文字或使用SHA256演演算法雜湊） | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 <br>將&#x200B;*Email*&#x200B;或&#x200B;*Email_LC_SHA256*&#x200B;來源身分名稱空間對應到目標身分識別欄位&#x200B;*pinterest_audience*。 |
 
 {style="table-layout:auto"}
 
@@ -45,7 +45,7 @@ ht-degree: 3%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有Pinterest客戶清單目的地所使用識別碼（名稱、電話號碼或其他）的對象所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -75,14 +75,14 @@ ht-degree: 3%
 
 ### 重新整理驗證認證 {#refresh-authentication-credentials}
 
-pinterest Token每30天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+Pinterest Token每30天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
 
 1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
 2. （選用）使用頁面上可用的篩選器，僅顯示Pinterest帳戶。
    ![篩選以僅顯示Pinterest帳戶](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的Pinterest認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Pinterest認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -95,7 +95,7 @@ pinterest Token每30天過期一次。 代號過期後，將資料匯出至目�
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

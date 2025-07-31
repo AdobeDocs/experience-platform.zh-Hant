@@ -5,7 +5,7 @@ title: 透過臨機啟動API將對象啟動至批次目的地
 description: 本文說明透過臨機啟動API啟動對象的端對端工作流程，包括在啟動前進行的細分工作。
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -50,7 +50,7 @@ IT管理員可使用Experience Platform隨選啟用API來隨選匯出對象，�
 
 * 目前，每個隨選啟動工作最多可啟動80個對象。 嘗試為每個工作啟用超過80個對象會導致工作失敗。 未來版本可能會對此行為有所變更。
 * 臨機啟動工作無法與排程的[對象匯出工作](../../segmentation/api/export-jobs.md)並行執行。 在執行臨機啟動工作之前，請確定已排程的對象匯出工作已完成。 如需如何監視啟用流程狀態的資訊，請參閱[目的地資料流程監視](../../dataflows/ui/monitor-destinations.md)。 例如，如果您的啟動資料流顯示&#x200B;**[!UICONTROL 正在處理]**&#x200B;狀態，請等待它完成後再執行臨機操作啟動工作。
-* 請勿對每個對象執行多個同時的臨機啟動工作。
+* 請勿對每個對象同時執行多個臨機操作啟用工作。
 
 ## 分段考量事項 {#segmentation-considerations}
 
@@ -245,7 +245,7 @@ Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則�
 
 | 錯誤訊息 | 解決方法 |
 |---------|----------|
-| 已對執行識別碼為`flow run ID`的訂單`dataflow ID`的對象`segment ID`執行中 | 此錯誤訊息表示對象目前正在進行臨機啟動流程。 再次觸發啟動工作前，請等候工作完成。 |
+| 已對執行識別碼為`segment ID`的訂單`dataflow ID`的對象`flow run ID`執行中 | 此錯誤訊息表示對象目前正在進行臨機啟動流程。 再次觸發啟動工作前，請等候工作完成。 |
 | 區段`<segment name>`不是此資料流的一部分或超出排程範圍！ | 此錯誤訊息指出您選取要啟用的對象未對應至資料流，或是為對象設定的啟用排程已過期或尚未開始。 檢查對象是否確實對應至資料流，並確認對象啟用排程與目前日期重疊。 |
 
 ## 相關資訊 {#related-information}

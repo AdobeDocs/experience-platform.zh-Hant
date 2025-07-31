@@ -1,19 +1,19 @@
 ---
 title: 監控Adobe Experience Platform Web SDK的鉤點
 description: 瞭解如何使用Adobe Experience Platform Web SDK提供的監視鉤點來偵錯實作並擷取Web SDK記錄。
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
 
 ---
 
-
 # 監控Web SDK的鉤點
 
-Adobe Experience Platform Web SDK包含監視掛接，可用來監視各種系統事件。 這些工具對於開發您自己的偵錯工具以及擷取Web SDK記錄很有用。
+Adobe Experience Platform Web SDK包含監視鉤點，您可以使用這些鉤點來監視各種系統事件。 這些工具對於開發您自己的偵錯工具以及擷取Web SDK記錄檔相當實用。
 
-不論您是否啟用[偵錯](commands/configure/debugenabled.md)，Web SDK都會觸發監視功能。
+無論您是否啟用[偵錯](commands/configure/debugenabled.md)，Web SDK都會觸發監視功能。
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
@@ -29,11 +29,11 @@ onInstanceCreated(data) {
 | 參數 | 類型 | 說明 |
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
-| `data.instance` | 函數 | 用來呼叫Web SDK命令的執行個體函式。 |
+| `data.instance` | 函數 | 用來呼叫網頁SDK命令的例項函式。 |
 
 ## `onInstanceConfigured` {#onInstanceConfigured}
 
-成功解析[`configure`](commands/configure/overview.md)命令時，Web SDK會觸發此回呼函式。 如需函式引數的詳細資訊，請參閱下列範例。
+成功解析[`configure`](commands/configure/overview.md)命令時，此回呼函式會由Web SDK觸發。 如需函式引數的詳細資訊，請參閱下列範例。
 
 ```js
  onInstanceConfigured(data) {
@@ -45,7 +45,7 @@ onInstanceCreated(data) {
 | 參數 | 類型 | 說明 |
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
-| `data.config` | 物件 | 包含您用於Web SDK執行個體的設定的物件。 這些是傳遞至[`configure`](commands/configure/overview.md)命令的選項，並新增所有預設值。 |
+| `data.config` | 物件 | 包含您用於網頁SDK執行個體的設定的物件。 這些是傳遞至[`configure`](commands/configure/overview.md)命令的選項，並新增所有預設值。 |
 
 ## `onBeforeCommand` {#onBeforeCommand}
 
@@ -63,7 +63,7 @@ onBeforeCommand(data) {
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
 | `data.commandName` | 字串 | 執行此函式之前的Web SDK命令名稱。 |
-| `data.options` | 物件 | 包含傳遞至Web SDK命令之選項的物件。 |
+| `data.options` | 物件 | 包含傳遞至網頁SDK命令的選項的物件。 |
 
 ## `onCommandResolved` {#onCommandResolved}
 
@@ -81,9 +81,9 @@ onCommandResolved(data) {
 | 參數 | 類型 | 說明 |
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
-| `data.commandName` | 字串 | 已執行Web SDK命令的名稱。 |
-| `data.options` | 物件 | 包含傳遞至Web SDK命令之選項的物件。 |
-| `data.result` | 物件 | 包含Web SDK命令結果的物件。 |
+| `data.commandName` | 字串 | 已執行的網頁SDK命令的名稱。 |
+| `data.options` | 物件 | 包含傳遞至網頁SDK命令的選項的物件。 |
+| `data.result` | 物件 | 包含網頁SDK命令結果的物件。 |
 
 ## `onCommandRejected` {#onCommandRejected}
 
@@ -101,8 +101,8 @@ onCommandRejected(data) {
 | 參數 | 類型 | 說明 |
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
-| `data.commandName` | 字串 | 已執行Web SDK命令的名稱。 |
-| `data.options` | 物件 | 包含傳遞至Web SDK命令之選項的物件。 |
+| `data.commandName` | 字串 | 已執行的網頁SDK命令的名稱。 |
+| `data.options` | 物件 | 包含傳遞至網頁SDK命令的選項的物件。 |
 | `data.error` | 物件 | 一個物件，其中包含從瀏覽器的網路呼叫（`fetch`，大多數情況下）傳回的錯誤訊息，以及命令被拒絕的原因。 |
 
 ## `onBeforeNetworkRequest` {#onBeforeNetworkRequest}
@@ -121,7 +121,7 @@ onBeforeNetworkRequest(data) {
 | 參數 | 類型 | 說明 |
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
-| `data.requestId` | 字串 | Web SDK產生的用於啟用偵錯的`requestId`。 |
+| `data.requestId` | 字串 | Web SDK產生的`requestId`可啟用偵錯。 |
 | `data.url` | 字串 | 請求的URL。 |
 | `data.payload` | 物件 | 網路要求裝載物件將轉換為JSON格式，並透過`POST`方法在要求內文中傳送。 |
 
@@ -145,7 +145,7 @@ onNetworkResponse(data) {
 | 參數 | 類型 | 說明 |
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
-| `data.requestId` | 字串 | Web SDK產生的用於啟用偵錯的`requestId`。 |
+| `data.requestId` | 字串 | Web SDK產生的`requestId`可啟用偵錯。 |
 | `data.url` | 字串 | 請求的URL。 |
 | `data.payload` | 物件 | 將轉換成JSON格式，並透過`POST`方法以要求內文傳送的裝載物件。 |
 | `data.body` | 字串 | 字串格式的回應內文。 |
@@ -170,7 +170,7 @@ onNetworkError(data) {
 | 參數 | 類型 | 說明 |
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
-| `data.requestId` | 字串 | Web SDK產生的用於啟用偵錯的`requestId`。 |
+| `data.requestId` | 字串 | Web SDK產生的`requestId`可啟用偵錯。 |
 | `data.url` | 字串 | 請求的URL。 |
 | `data.payload` | 物件 | 將轉換成JSON格式，並透過`POST`方法以要求內文傳送的裝載物件。 |
 | `data.error` | 物件 | 一個物件，其中包含從瀏覽器的網路呼叫（`fetch`，大多數情況下）傳回的錯誤訊息，以及命令被拒絕的原因。 |
@@ -214,7 +214,7 @@ onBeforeLog(data) {
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
 | `data.componentName` | 字串 | 產生記錄訊息的元件名稱。 |
 | `data.payload` | 物件 | 將轉換成JSON格式，並透過`POST`方法以要求內文傳送的裝載物件。 |
-| `data.status` | 字串 | `personalization`元件會通知Web SDK轉譯的狀態。  支援的值： <ul><li>`rendering-started`：表示Web SDK即將呈現主張。 在Web SDK開始轉譯決定範圍或檢視之前，您可以在`data`物件中看到即將由`personalization`元件轉譯的建議以及範圍名稱。</li><li>`no-offers`：表示未收到要求之引數的裝載。</li> <li>`rendering-failed`：表示Web SDK無法轉譯主張。</li><li>`rendering-succeeded`：表示已針對決定範圍完成轉譯。</li> <li>`rendering-redirect`：表示Web SDK將會轉譯重新導向主張。</li></ul> |
+| `data.status` | 字串 | `personalization`元件會通知網頁SDK轉譯的狀態。  支援的值： <ul><li>`rendering-started`：表示網頁SDK即將呈現主張。 在Web SDK開始轉譯決定範圍或檢視之前，您可以在`data`物件中看到即將由`personalization`元件轉譯的主張和範圍名稱。</li><li>`no-offers`：表示未收到要求之引數的裝載。</li> <li>`rendering-failed`：表示Web SDK無法轉譯主張。</li><li>`rendering-succeeded`：表示已針對決定範圍完成轉譯。</li> <li>`rendering-redirect`：表示Web SDK將會轉譯重新導向主張。</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
@@ -232,11 +232,11 @@ onContentHiding(data) {
 |---------|----------|----------|
 | `data.instanceName` | 字串 | 儲存Web SDK執行個體的全域變數名稱。 |
 | `data.componentName` | 字串 | 產生記錄訊息的元件名稱。 |
-| `data.status` | 字串 | `personalization`元件會通知Web SDK轉譯的狀態。 支援的值： <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
+| `data.status` | 字串 | `personalization`元件會通知網頁SDK轉譯的狀態。 支援的值： <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## 如何在使用NPM套件時指定監視掛接 {#specify-monitoris-npm}
+## 如何在使用NPM套件時指定監視掛接 {#specify-monitoring-npm}
 
-如果您是透過[NPM套件](install/npm.md)使用Web SDK，您可以在`createInstasnce`函式中指定監視掛接，如下所示。
+如果您透過[NPM套件](install/npm.md)使用Web SDK，可以在`createInstance`函式中指定監視掛接，如下所示。
 
 ```js
 var monitor = {
@@ -255,9 +255,9 @@ alloy("sendEvent", { ... });
 
 Web SDK會在名為`__alloyMonitors`的全域變數中尋找物件陣列。
 
-若要擷取所有Web SDK事件，您必須先定義監視鉤點，才能將Web SDK程式碼載入您的頁面。 每個監視方法都會擷取Web SDK事件。
+若要擷取所有Web SDK事件，您必須先定義監視鉤點，才能在頁面上載入Web SDK程式碼。 每個監視方法都會擷取網站SDK事件。
 
-您可以在頁面上載入&#x200B;*Web SDK程式碼之後定義監視鉤點*，但在頁面載入之前觸發的任何鉤點將&#x200B;*不會*&#x200B;擷取。
+您可以在頁面上載入&#x200B;*Web SDK程式碼後*&#x200B;定義監視鉤點，但在頁面載入前觸發的任何鉤點將&#x200B;*不會*&#x200B;擷取。
 
 定義監視掛接物件時，您只需要定義要為其定義特殊邏輯的方法。
 例如，如果您只關心`onContentRendering`，您可以只定義該方法。 您不需要一次使用所有監視鉤點。

@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK的單頁應用程式實作
 description: 瞭解如何使用Adobe Target建立Adobe Experience Platform Web SDK的單頁應用程式(SPA)實作。
 keywords: target；adobe target；xdm檢視；檢視；單頁應用程式；SPA；SPA生命週期；使用者端；AB測試；AB；體驗鎖定目標；XT；VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Adobe Experience Platform Web SDK提供豐富的功能，讓貴公司能以新�
 
 ![瀏覽器視窗中單頁應用程式的範例影像。](assets/use-case-1.png)
 
-若要在整個主網站上執行A/B測試，必須在將XDM `viewName`設為`home`的情況下叫用`sendEvent()`：
+若要在整個主網站上執行A/B測試，必須在將XDM `sendEvent()`設為`viewName`的情況下叫用`home`：
 
 ```jsx
 function onViewChange() { 
@@ -288,6 +288,6 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->在選取&#x200B;**快速運送**&#x200B;選項按鈕之前，「checkout-express」檢視不會出現在「修改」面板中。 這是因為選取&#x200B;**快速運送**&#x200B;選項按鈕時會執行`sendEvent()`函式，因此，在選取選項按鈕之前，VEC不會察覺「checkout-express」檢視。
+>在選取&#x200B;**快速運送**&#x200B;選項按鈕之前，「checkout-express」檢視不會出現在「修改」面板中。 這是因為選取`sendEvent()`快速運送&#x200B;**選項按鈕時會執行**&#x200B;函式，因此，在選取選項按鈕之前，VEC不會察覺「checkout-express」檢視。
 
 ![視覺化體驗撰寫器顯示傳遞偏好設定選擇器。](assets/vec-delivery-preference.png)

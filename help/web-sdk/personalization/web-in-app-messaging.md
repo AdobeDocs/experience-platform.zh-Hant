@@ -2,7 +2,7 @@
 title: 在Web SDK中設定網頁應用程式內傳訊支援
 description: 瞭解如何設定Web SDK標籤擴充功能以支援Web應用程式內傳訊。
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Web應用程式內傳訊功能是[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)功能，它會使用Web SDK來提供個人化內容。
 >
->如需如何設定網頁應用程式內傳訊活動的詳細指示，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=zh-Hant)。
+>如需如何設定網頁應用程式內傳訊活動的詳細指示，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html)。
 
 
 ## 先決條件 {#prerequisites}
@@ -80,10 +80,10 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
      ![顯示動作設定畫面的影像。](assets/web-in-app-messaging/action-configuration.png)
 
-3. 在熒幕右側的&#x200B;**[!UICONTROL Personalization]**&#x200B;區段中，啟用&#x200B;**[!UICONTROL 呈現視覺個人化決策]**&#x200B;選項。
+3. 在熒幕右側的&#x200B;**[!UICONTROL Personalization]**&#x200B;區段中，啟用&#x200B;**[!UICONTROL 呈現視覺個人化決策]**選項。
    ![顯示個人化設定畫面的影像。](assets/web-in-app-messaging/render-visual-personalization.png)
 
-4. 在畫面右側的&#x200B;**[!UICONTROL 決定內容]**&#x200B;區段中，定義您用於行銷活動設定的&#x200B;**[!UICONTROL 索引鍵]**/**[!UICONTROL 值]**&#x200B;配對，以符合應用程式內訊息的資格。
+4. 在畫面右側的&#x200B;**[!UICONTROL 決定內容]**&#x200B;區段中，定義您用於行銷活動設定的&#x200B;**[!UICONTROL 索引鍵]**/**[!UICONTROL 值]**配對，以符合應用程式內訊息的資格。
    ![顯示個人化設定畫面的影像。](assets/web-in-app-messaging/decision-context.png)
 
 5. 選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以儲存您的設定。
@@ -105,7 +105,7 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
 1. **[!UICONTROL 延伸模組]**： [!UICONTROL 核心]
 2. **[!UICONTROL 事件型別]**： [!UICONTROL 按一下]
-3. 為頁面上的特定元素設定觸發條件，識別碼為您選擇的CSS選取器。
+3. 為頁面上的特定元素設定觸發器，由您選擇的CSS選取器識別。
 
    ![顯示事件設定畫面的影像。](assets/web-in-app-messaging/event-configuration-manual.png)
 
@@ -121,11 +121,11 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
      ![顯示動作設定畫面的影像。](assets/web-in-app-messaging/manual-trigger-action.png)
 
-3. 在熒幕右側，啟用&#x200B;**[!UICONTROL 呈現視覺化個人化決定]**&#x200B;選項。
+3. 在熒幕右側，啟用&#x200B;**[!UICONTROL 呈現視覺化個人化決定]**選項。
    ![顯示個人化設定畫面的影像。](assets/web-in-app-messaging/manual-trigger-render.png)
 
 
-4. 在畫面右側的&#x200B;**[!UICONTROL 決定內容]**&#x200B;區段中，定義您用於行銷活動設定的&#x200B;**[!UICONTROL 索引鍵]**/**[!UICONTROL 值]**&#x200B;配對，以符合應用程式內訊息的資格。
+4. 在畫面右側的&#x200B;**[!UICONTROL 決定內容]**&#x200B;區段中，定義您用於行銷活動設定的&#x200B;**[!UICONTROL 索引鍵]**/**[!UICONTROL 值]**配對，以符合應用程式內訊息的資格。
    ![顯示個人化設定畫面的影像。](assets/web-in-app-messaging/manual-trigger-decision-context.png)
 
 5. 選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以儲存您的設定。
@@ -184,5 +184,5 @@ Web應用程式內傳訊支援兩種型別的觸發器：
 
 在[網頁SDK組態](../commands/configure/overview.md)中，根據您的需求設定`personalizationStorageEnabled`選項：
 
-* `personalizationStorageEnabled: true`會以您在[Adobe Journey Optimizer行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=zh-Hant#configure-inapp)中定義的頻率觸發應用程式內訊息。
+* `personalizationStorageEnabled: true`會以您在[Adobe Journey Optimizer行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp)中定義的頻率觸發應用程式內訊息。
 * `personalizationStorageEnabled: false`會在每次頁面載入時觸發應用程式內訊息。

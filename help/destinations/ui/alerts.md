@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；警報；目的地
 description: 您可以在建立資料流時訂閱警報，以接收有關流程執行的狀態、成功或失敗的警報訊息。
 title: 訂閱內容感知目的地警示
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 8%
@@ -38,7 +38,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 >
 >您必須啟用Experience Platform帳戶的即時電子郵件通知，才能接收資料流程的電子郵件式警報通知。
 
-您可以在[目的地連線](connect-destination.md)工作流程的[!UICONTROL 設定新目的地]步驟期間，為資料流程啟用警示。
+您可以在[!UICONTROL 目的地連線]工作流程的[設定新目的地](connect-destination.md)步驟期間，為資料流程啟用警示。
 
 ![顯示目的地警示區段的UI影像。](../assets/ui/alerts/destination-alerts.png)
 
@@ -87,7 +87,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 ![顯示資料流執行詳細資訊頁面的UI影像，錯誤區段上有醒目提示。](../assets/ui/alerts/dataflow-run-error.png)
 
-如需有關處理資料流錯誤的詳細資訊，請參閱UI[&#128279;](../../dataflows/ui/monitor-destinations.md)中監視目的地資料流的指南。
+如需有關處理資料流錯誤的詳細資訊，請參閱UI[中](../../dataflows/ui/monitor-destinations.md)監視目的地資料流的指南。
 
 ### 透過電子郵件接收警示 {#receiving-alerts-by-email}
 

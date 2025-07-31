@@ -3,7 +3,7 @@ title: 比較at.js與Experience Platform Web SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 2%
@@ -68,7 +68,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
 ### 設定網頁SDK
@@ -83,7 +83,7 @@ window.adobe.target.init(window, document, {
 
 ### 使用網頁SDK
 
-在Adobe Target的[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)中建立的內容，可由SDK自動擷取及轉譯。
+在Adobe Target的[視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)中建立的內容，可由SDK自動擷取及轉譯。
 
 若要要求並自動轉譯Target選件，請使用`sendEvent`命令並將`renderDecisions`選項設定為`true`。 這麼做會強制SDK自動轉譯任何符合自動轉譯條件的個人化內容。
 
@@ -215,11 +215,11 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 ### 使用網頁SDK
 
-在`decisionScopes`下執行具有特殊領域的`sendEvent`命令： `__view__`。 我們使用此範圍當作訊號，從Target擷取所有頁面載入活動，並預先擷取所有檢視。 Web SDK也會嘗試評估所有VEC檢視型活動。 Web SDK目前不支援停用檢視預先擷取。
+在`sendEvent`下執行具有特殊領域的`decisionScopes`命令： `__view__`。 我們使用此範圍當作訊號，從Target擷取所有頁面載入活動，並預先擷取所有檢視。 Web SDK也會嘗試評估所有VEC檢視型活動。 Web SDK目前不支援停用檢視預先擷取。
 
 若要存取任何個人化內容，您可以提供回呼函式，SDK從伺服器收到成功回應後，就會呼叫此函式。 系統會為您的回呼提供結果物件，其中可能包含包含任何傳回之個人化內容的建議屬性。
 
@@ -300,7 +300,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
 ### 使用網頁SDK
@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-從[專屬檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=zh-Hant)進一步瞭解`applyOffers`命令。
+從`applyOffers`專屬檔案[進一步瞭解](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html)命令。
 
 
 ### 使用網頁SDK
@@ -453,7 +453,7 @@ alloy("applyPropositions", {
 });
 ```
 
-從[專屬檔案](../../personalization/rendering-personalization-content.md#applypropositions)進一步瞭解`applyPropositions`命令。
+從`applyPropositions`專屬檔案[進一步瞭解](../../personalization/rendering-personalization-content.md#applypropositions)命令。
 
 ## 如何追蹤事件
 
@@ -490,7 +490,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### 使用網頁SDK
 
@@ -499,7 +499,7 @@ adobe.target.sendNotifications({
 * `decisioning.propositionDisplay`：代表Target活動的轉譯。
 * `decisioning.propositionInteract`：代表使用者與活動的互動，例如滑鼠點按。
 
-`_experience.decisioning.propositions` XDM欄位群組是物件陣列。 每個物件的屬性衍生自`sendEvent`命令中傳回的`result.propositions`： `{ id, scope, scopeDetails }`
+`_experience.decisioning.propositions` XDM欄位群組是物件陣列。 每個物件的屬性衍生自`result.propositions`命令中傳回的`sendEvent`： `{ id, scope, scopeDetails }`
 
 **範例1 — 呈現活動後追蹤`decisioning.propositionDisplay`事件**
 
@@ -665,12 +665,12 @@ alloy("sendEvent", {
 adobe.target.triggerView("homeView")
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
 ### 使用網頁SDK
 
-若要觸發或表示單頁應用程式檢視變更，請在`sendEvent`命令的`xdm`選項下設定`web.webPageDetails.viewName`屬性。 Web SDK將會檢查檢視快取，如果`sendEvent`中指定的`viewName`有選件，它將會執行這些選件並傳送顯示通知事件。
+若要觸發或表示單頁應用程式檢視變更，請在`web.webPageDetails.viewName`命令的`xdm`選項下設定`sendEvent`屬性。 Web SDK將會檢查檢視快取，如果`viewName`中指定的`sendEvent`有選件，它將會執行這些選件並傳送顯示通知事件。
 
 **範例**
 
@@ -691,7 +691,7 @@ alloy("sendEvent", {
 
 ## 如何運用回應Token
 
-從Adobe Target傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)，其為有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
+從Adobe Target傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，其為有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
 
 ### 使用at.js
 
@@ -705,7 +705,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
 ### 使用網頁SDK
@@ -714,7 +714,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >確保您使用Experience Platform Web SDK 2.6.0版或更新版本。
 
-回應Token是`propositions`的一部分，在`sendEvent`命令的結果中顯示。 每個主張包含陣列`items`，而且如果在Target管理員UI中啟用回應Token，則每個專案都會填入`meta`物件。 [了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)
+回應Token是`propositions`的一部分，在`sendEvent`命令的結果中顯示。 每個主張包含陣列`items`，而且如果在Target管理員UI中啟用回應Token，則每個專案都會填入`meta`物件。 [了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 **範例**
 
@@ -880,7 +880,7 @@ Analytics裝載(`tnta` Token)應包含在使用[資料插入API](https://github.
 
 ![顯示Analytics伺服器端記錄工作流程的圖表](assets/a4t-server-side-atjs.png)
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### 使用網頁SDK
 
@@ -895,7 +895,7 @@ Web SDK也支援：
 
 ![顯示Analytics使用者端記錄工作流程的圖表](assets/analytics-disabled-datastream-config.png)
 
-客戶有權存取需要使用[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)與Analytics共用的Analytics權杖(`tnta`)
+客戶有權存取需要使用`tnta`資料插入API[與Analytics共用的Analytics權杖(](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md))
 以鏈結`sendEvent`命令的方式加入，並逐一檢視產生的主張陣列。
 
 **範例**
@@ -964,7 +964,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### 使用網頁SDK
 
@@ -1064,7 +1064,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
 ### 使用網頁SDK
@@ -1123,7 +1123,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-或者，有方法可在`targetPageParams`或`targetPageParamsAll`中設定`mbox3rdPartyId`。
+或者，有方法可在`mbox3rdPartyId`或`targetPageParams`中設定`targetPageParamsAll`。
 在`targetPageParams`中設定時，會以`target-global-mbox` （也稱為`pag-lLoad`）的要求傳送它。
 建議將使用`targetPageParamsAll`設定，因為它將在每個目標請求中傳送。
 使用`targetPageParamsAll`的優點在於您可以在頁面上定義一次`mbox3rdPartyId`，這將確保所有目標請求都有正確的`mbox3rdPartyId`。
@@ -1144,7 +1144,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=zh-Hant)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### 使用網頁SDK
 
@@ -1233,7 +1233,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-注意：強烈建議確保`mboxes`陣列中的每個`mbox`都有自己的索引。 通常第一個mbox有`index=0`、下一個`index=1`等。
+注意：強烈建議確保`mbox`陣列中的每個`mboxes`都有自己的索引。 通常第一個mbox有`index=0`、下一個`index=1`等。
 
 ### 使用網頁SDK
 

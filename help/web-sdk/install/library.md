@@ -1,19 +1,19 @@
 ---
-title: 使用JavaScript程式庫安裝Web SDK
-description: 使用獨立的CDN檔案參考Web SDK程式庫。
+title: 使用JavaScript程式庫安裝網頁SDK
+description: 使用獨立的CDN檔案來參考網頁SDK資料庫。
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 9876390f7ba34c312f2ce4c00fe39e3ea1ef1ace
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# 使用JavaScript程式庫安裝Web SDK
+# 使用JavaScript程式庫安裝網頁SDK
 
-若要不使用標籤擴充功能[&#128279;](extension.md)安裝Web SDK，替代方法是參考託管於CDN的JavaScript資料庫。 您可以直接參考程式庫，或下載程式庫並在您自己的基礎架構中託管。 提供縮制和完整格式。
+不使用[使用標籤擴充功能](extension.md)安裝Web SDK的替代方式，是參考託管於CDN的JavaScript資料庫。 您可以直接參考程式庫，或下載程式庫並在您自己的基礎架構中託管。 提供縮制和完整格式。
 
-Web SDK程式庫可使用下列URL結構：
+可使用下列URL結構存取Web SDK資料庫：
 
 * **已縮制**： `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js`
 * **完整**： `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
@@ -22,7 +22,7 @@ Web SDK程式庫可使用下列URL結構：
 
 ## 新增程式碼
 
-在HTML的`<head>`標籤中儘可能高地新增下列程式碼區塊：
+在HTML的`<head>`標籤中，儘量新增下列程式碼區塊：
 
 ```html
 <script>
@@ -34,4 +34,4 @@ Web SDK程式庫可使用下列URL結構：
 <script src="https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js" async></script>
 ```
 
-此程式碼以非同步方式建立`alloy`物件，可讓您呼叫任何Web SDK命令。 如果您想要同步載入Web SDK，可以移除程式碼區塊最後一行中的`async`屬性。 移除`async`屬性會封鎖HTML檔案的其餘部分，使其無法由瀏覽器剖析及轉譯，直到程式庫載入及執行為止。 通常不建議在向使用者顯示主要內容之前再延遲一次，但根據您組織的需求，這可能有意義。
+此程式碼以非同步方式建立`alloy`物件，可讓您呼叫任何Web SDK命令。 如果您想要同步載入Web SDK，可以移除程式碼區塊最後一行中的`async`屬性。 移除`async`屬性會封鎖瀏覽器剖析及轉譯其餘的HTML檔案，直到程式庫載入及執行為止。 通常不建議在向使用者顯示主要內容之前再延遲一次，但可視您組織的需求而定。

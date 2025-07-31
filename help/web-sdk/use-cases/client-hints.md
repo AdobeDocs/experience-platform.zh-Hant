@@ -1,11 +1,11 @@
 ---
 title: 使用者代理使用者端提示
-description: 瞭解使用者代理程式使用者端提示在Web SDK中的運作方式。 使用者端提示可讓網站擁有者存取使用者代理字串中提供的大部分相同資訊，但採用更能保護隱私的方式來存取這些資訊。
+description: 瞭解使用者代理程式使用者端提示在網路SDK中的運作方式。 使用者端提示可讓網站擁有者存取使用者代理字串中提供的大部分相同資訊，但採用更能保護隱私的方式來存取這些資訊。
 keywords: 使用者代理；使用者端提示；字串；使用者代理字串；低平均資訊量；高平均資訊量
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 3%
 
 ---
@@ -86,7 +86,7 @@ Adobe Experience Cloud解決方案以各種方式利用使用者代理字串。
 
 低平均資訊量使用者端提示包含無法用於指紋識別使用者的基本資訊。 瀏覽器品牌、平台和請求是否來自行動裝置等資訊。
 
-Web SDK預設會啟用低平均資訊量使用者端提示，並在每個請求時傳遞。
+Web SDK中預設會啟用低平均資訊量使用者端提示，並在每個請求中傳遞。
 
 | HTTP標頭 | JavaScript | 預設包含在使用者代理中 | 預設包含在使用者端提示中 |
 |---|---|---|---|
@@ -109,27 +109,27 @@ Web SDK預設會啟用低平均資訊量使用者端提示，並在每個請求�
 | 瀏覽器版本 | 瀏覽器的重要版本。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 系統不會自動收集精確的瀏覽器版本。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | 是 | 無 |
 
 
-Web SDK預設會停用高平均資訊量使用者端提示。 若要啟用它們，您必須手動設定Web SDK以請求高平均資訊量使用者端提示。
+Web SDK中的高平均資訊量使用者端提示預設為停用。 若要啟用這些提示，您必須手動設定網頁SDK以請求高平均資訊量使用者端提示。
 
 ## 高平均資訊量使用者端提示對Experience Cloud解決方案的影響 {#impact-in-experience-cloud-solutions}
 
 有些Adobe Experience Cloud解決方案在產生報表時會依賴高平均資訊量使用者端提示中包含的資訊。
 
-如果您未在環境中啟用高平均資訊量使用者端提示，下面說明的Adobe Analytics和Audience Manager報表與特徵將無法運作。
+如果您未在環境中啟用高平均資訊量使用者端提示，下面說明的Adobe Analytics和Audience Manager報表和特徵將無法運作。
 
 ### 依賴高平均資訊量使用者端提示的Adobe Analytics報告 {#analytics}
 
-[作業系統](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=zh-Hant)維度包含儲存為高平均資訊量使用者端提示的作業系統版本。 如果未啟用高平均資訊量使用者端提示，從Chromium瀏覽器收集點選的作業系統版本可能會不準確。
+[作業系統](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)維度包含儲存為高平均資訊量使用者端提示的作業系統版本。 如果未啟用高平均資訊量使用者端提示，從Chromium瀏覽器收集點選的作業系統版本可能會不準確。
 
 ### 依賴高平均資訊量使用者端提示的Audience Manager特徵 {#aam}
 
-[!DNL Google]已更新[!DNL Chrome]瀏覽器功能，以將透過`User-Agent`標題收集的資訊減至最少。 因此，使用[DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant)的Audience Manager客戶將不再收到以[平台層級金鑰](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=zh-Hant)為基礎之特徵的可靠資訊。
+[!DNL Google]已更新[!DNL Chrome]瀏覽器功能，以將透過`User-Agent`標題收集的資訊減至最少。 因此，使用[DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant)的Audience Manager客戶將不再收到以[平台層級索引鍵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html)為基礎之特徵的可靠資訊。
 
-使用平台層級金鑰進行目標定位的Audience Manager客戶必須切換至[Experience PlatformWeb SDK](/help/web-sdk/home.md) (而非[DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant))，並啟用[高平均資訊量使用者端提示](#enabling-high-entropy-client-hints)以繼續接收可靠的特徵資料。
+使用平台層級金鑰進行目標定位的Audience Manager客戶必須切換至[Experience Platform Web SDK](/help/web-sdk/home.md) (而非[DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant))，並啟用[高平均資訊量使用者端提示](#enabling-high-entropy-client-hints)以繼續接收可靠的特徵資料。
 
 ## 啟用高平均資訊量使用者端提示 {#enabling-high-entropy-client-hints}
 
-若要在您的Web SDK部署上啟用高平均資訊量使用者端提示，您必須在「[`context`](/help/web-sdk/commands/configure/context.md)」欄位中包含額外的「`highEntropyUserAgentHints`」內容選項。
+若要在網頁SDK部署上啟用高平均資訊量使用者端提示，您必須在「`highEntropyUserAgentHints`」欄位中包含其他[`context`](/help/web-sdk/commands/configure/context.md)內容選項。
 
 例如，若要從Web屬性擷取高平均資訊量使用者端提示，您的設定將如下所示：
 
