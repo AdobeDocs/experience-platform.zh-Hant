@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 7 月)
 description: Adobe Experience Platform 2025 年 7 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2a8d5576ea937cdda70f10218b5eec35613fd264
+source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
 workflow-type: tm+mt
-source-wordcount: '1623'
-ht-degree: 25%
+source-wordcount: '1457'
+ht-degree: 23%
 
 ---
 
@@ -29,7 +29,6 @@ Adobe Experience Platform 全新功能及現有功能更新：
 - [容量](#capacity)
 - [目標](#destinations)
 - [資料攝取](#data-ingestion)
-- [查詢服務]&#x200B;(#query-service
 - [Real-Time CDP B2B 版本](#b2b)
 - [沙箱](#sandboxes)
 - [細分服務](#segmentation-service)
@@ -84,19 +83,6 @@ Experience Platform提供完整的資料擷取架構，可同時支援來自各�
 | 支援監控串流設定檔擷取 | 現在提供串流設定檔擷取的即時監視，可提供輸送量、延遲和資料品品質度的透明度。 這支援主動式警報和可操作的深入分析，以協助資料工程師識別容量違規和擷取問題。 如需詳細資訊，請閱讀[監視串流設定檔擷取](../../dataflows/ui/monitor-streaming-profile.md)的指南。 |
 
 如需詳細資訊，請閱讀[資料擷取概觀](../../ingestion/home.md)。
-
-## 查詢服務 {#query-service}
-
-「查詢服務」可讓您使用標準 SQL，在 Adobe Experience Platform 資料湖查詢資料。您可以順暢無礙地合併資料集，並根據查詢結果建立新資料集，以支援報表產出、啟用資料科學工作流程，或協助攝取至即時客戶輪廓。例如，您可以合併客戶交易資料與行為資料，以找出高價值客群進行精準行銷活動。
-
-**新功能或更新功能**
-
-| 功能 | 說明 |
-|--------|-------------|
-| 支援不會到期的認證密碼字元限制 | Data Distiller現在支援[具有特定字元限制的不到期認證](../../query-service/ui/credentials.md#non-expiring-credentials)。 雖然密碼至少需要一個數字、一個小寫字母、一個大寫字母和一個特殊字元，但美元符號($)不受支援。 建議的特殊字元包括`!, @, #, ^, or &`。 |
-| 改善跨環境的效能一致性 | 資料Distiller [現在在開發和生產沙箱](../../query-service/troubleshooting-guide.md#data-distiller)之間的效能是一致的，在兩個環境中都有類似的後端資源可用。 耗用的運算時數可能會因處理時的資料量和可用的後端運算資源而有所不同。 |
-
-若需更多有關 [!DNL Query Service] 的資訊，請參閱 [[!DNL Query Service] 概觀](../../query-service/home.md)。
 
 ## Real-Time CDP B2B 版本 {#b2b}
 

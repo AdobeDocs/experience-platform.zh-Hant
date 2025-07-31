@@ -2,9 +2,9 @@
 title: 建立全域篩選器
 description: 瞭解如何使用自訂全域套用的篩選器來篩選您的資料深入分析。
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 473aaa8dedd549cf524d77c9b0a37d71b4688805
+source-git-commit: 60b0c73766c89b98685810b4f58cfe1a40316dc9
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,23 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->確定您將全域篩選器對應至所有圖表。 這不是自動程式。 若要使用全域篩選，您必須在圖表的SQL中加入[查詢引數](../../../query-service/ui/parameterized-queries.md)、在Widget撰寫器中啟用全域篩選[&#128279;](#enable-global-filter)，以及在全域篩選對話方塊中為引數選取執行階段值[&#128279;](#select-global-filter)。 如需瞭解如何編輯SQL （如果需要合併查詢引數），請參閱查詢專家指南。
+>確定您將全域篩選器對應至所有圖表。 這不是自動程式。 若要使用全域篩選，您必須在圖表的SQL中加入[查詢引數](../../../query-service/ui/parameterized-queries.md)、在Widget撰寫器中啟用全域篩選[，以及在全域篩選對話方塊中為引數選取執行階段值](#enable-global-filter)。 [](#select-global-filter)如需瞭解如何編輯SQL （如果需要合併查詢引數），請參閱查詢專家指南。
 
 ![自訂儀表板，其新增篩選器及其下拉式功能表已反白顯示。](../../images/sql-insights-query-pro-mode/add-filter.png)
 
 您可以使用自訂的全域篩選器，快速變更SQL提供的深入分析。
 
-[!UICONTROL 建立全域篩選器]對話方塊開啟。 建立全域篩選會遵循與使用SQL建立深入分析相同的程式。 首先，選取要查詢的資料庫（見解資料模型），然後在查詢編輯器中輸入自訂SQL，最後選取執行圖示（![執行圖示。](/help/images/icons/play.png)）。
+[!UICONTROL 建立全域篩選器]對話方塊開啟。 建立全域篩選會遵循與使用SQL建立insight相同的程式。 首先，選取要查詢的資料庫（見解資料模型），然後在查詢編輯器中輸入自訂SQL，最後選取執行圖示（![執行圖示。](/help/images/icons/play.png)）。
 
 >[!IMPORTANT]
 >
 >建立全域篩選時，您必須包含ID和值。 範例值可讓您執行SQL陳述式並建立圖表。 請注意，構成陳述式時提供的範例值，會由您在執行階段為日期或全域篩選選取的實際值取代。
 
 成功執行查詢後，「結果」索引標籤會顯示結果。 選取&#x200B;**[!UICONTROL 下一步]**。
+
+>[!NOTE]
+>
+>查詢結果預設限製為100列。 若要傳回更多資料列，請將LIMIT子句新增至具有所需資料列計數的SQL查詢。 若要擷取所有列並移除預設限制，請在查詢中使用LIMIT 0。
 
 ![此[!UICONTROL 建立全域篩選對話方塊]包含資料集下拉式功能表、執行圖示和「下一步」反白顯示。](../../images/sql-insights-query-pro-mode/global-filter.png)
 
@@ -41,7 +45,7 @@ ht-degree: 0%
 
 ![ [!UICONTROL 建立全域篩選對話方塊]，其中的Select和篩選標籤文字輸入反白顯示。](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
-## 為每個深入分析啟用全域篩選器 {#enable-global-filter}
+## 為每個insight啟用全域篩選器 {#enable-global-filter}
 
 >[!TIP]
 >
@@ -53,7 +57,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->確定每個分析的SQL中都包含全域篩選引數。
+>確認每個insight的SQL中都包含全域篩選引數。
 
 ## 選取全域篩選器 {#select-global-filter}
 
@@ -63,6 +67,6 @@ ht-degree: 0%
 
 ## 清除全域篩選器 {#clear-global-filter}
 
-若要清除所有自訂全域篩選器，請從[!UICONTROL 篩選器]對話方塊中選取&#x200B;**[!UICONTROL 全部清除]**。
+若要清除所有自訂全域篩選器，請從&#x200B;**[!UICONTROL 篩選器]**&#x200B;對話方塊中選取[!UICONTROL 全部清除]。
 
 ![以「全部清除」反白的「篩選器」對話方塊。](../../images/sql-insights-query-pro-mode/clear-all.png)

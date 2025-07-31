@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
+source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
 workflow-type: tm+mt
-source-wordcount: '4551'
+source-wordcount: '4482'
 ht-degree: 5%
 
 ---
@@ -108,25 +108,26 @@ ht-degree: 5%
 
 ### 預覽資料集 {#preview}
 
-您可以從[!UICONTROL 瀏覽]索引標籤的內嵌選項以及[!UICONTROL 資料集活動]檢視，預覽資料集範例資料。 新的資料集預覽視窗已推出，並包含其他導覽和內容增強功能。
+您可以從[!UICONTROL 瀏覽]標籤的內嵌選項或[!UICONTROL 資料集活動]檢視，預覽任何資料集的最多100列範例資料。
 
-從[!UICONTROL 瀏覽]索引標籤，選取您要預覽的資料集名稱旁的省略符號(...)。 選項清單隨即顯示。 接著，從可用選項中選取[!UICONTROL 預覽資料集]。 如果資料集空白，預覽連結會停用，並指示預覽無法使用。
+從[!UICONTROL 瀏覽]索引標籤中，選取資料集名稱旁的省略符號(...)，然後選擇[!UICONTROL 預覽資料集]。 如果資料集為空，則會停用預覽選項。 或者，從&#x200B;**[!UICONTROL 資料集活動]**&#x200B;畫面，選取畫面右上角附近的&#x200B;**[!UICONTROL 預覽資料集]**。
 
 ![資料集工作區的「瀏覽」索引標籤中，針對所選的資料集反白顯示省略符號和預覽資料集選項。](../images/datasets/user-guide/preview-dataset-option.png)
 
-這樣會開啟預覽視窗，其中資料集的階層架構檢視會顯示在左側。
+這會開啟預覽視窗，資料集的階層架構檢視會顯示在左側。
 
 >[!NOTE]
 >
->檢視左側的架構圖表只會顯示包含資料的欄位。 沒有資料的欄位會自動隱藏，以簡化UI並專注於相關資訊。
+>左側的架構圖表僅顯示包含資料的欄位。 沒有資料的欄位會自動隱藏，以簡化UI並專注於相關資訊。
 
 ![會顯示資料集預覽對話方塊，其中包含資料集的結構相關資訊以及範例值。](../images/datasets/user-guide/preview-dataset.png)
 
-或者，從&#x200B;**[!UICONTROL 資料集活動]**&#x200B;畫面，選取畫面右上角附近的&#x200B;**[!UICONTROL 預覽資料集]**，以預覽最多100列的資料。
+或者，在&#x200B;**[!UICONTROL 資料集活動]**&#x200B;畫面中，選取&#x200B;**[!UICONTROL 預覽資料集]**&#x200B;以開啟預覽視窗，並檢閱資料集結構和值的範例。
 
 ![預覽資料集按鈕已反白顯示。](../images/datasets/user-guide/select-preview.png)
 
-資料集預覽視窗提供簡化的介面，方便您探索及驗證資料集。
+資料集預覽視窗可讓您快速探索及驗證資料集的結構和資料。
+
 
 #### 資料集預覽視窗 {#dataset-preview-window}
 
@@ -137,34 +138,25 @@ ht-degree: 5%
 資料集預覽視窗包含：
 
 * 左側物件瀏覽器側邊欄，用於導覽和篩選資料集欄位。
-* 資料集結構中每個欄名稱旁顯示的資料型別指標，可用於快速insight。
+* 資料集結構中insight每個欄名稱旁的資料型別指標。
 * SQL查詢會顯示在視窗頂端，顯示用來產生資料集的查詢。
-* 格式化表格檢視，最多可在右下角區域顯示100列，以有效檢閱資料。
-* 資料Distiller使用者可直接導覽至「查詢編輯器」，並預先填入SQL查詢以供進一步探索或修改。
+* 格式化表格檢視，最多可檢視100列，以有效檢閱資料。
 
-這些功能支援快速導覽、結構描述瞭解和透明資料集驗證。
-
-從內嵌動作或&#x200B;**[!UICONTROL 資料集活動]**&#x200B;畫面選取[!UICONTROL 預覽資料集]以開啟預覽視窗。
-
->[!NOTE]
->
->預覽視窗會顯示最多100列的範例。 不含資料的欄位會從檢視中排除。
+這些功能可協助您有效率地導覽、瞭解結構描述詳細資料和驗證範例資料。
 
 #### 進階查詢編輯器捷徑 {#query-editor-shortcut}
 
-如果您的組織有Data Distiller授權，您可以直接從資料集預覽視窗存取進階查詢編輯器。
+如果您的組織有Data Distiller授權，您可以直接從資料集預覽視窗存取[!UICONTROL 進階查詢編輯器]。 使用此捷徑可順暢地從預覽範例資料移至查詢服務中的執行和修訂查詢。
 
 >[!AVAILABILITY]
 >
->只有具備必要Data Distiller授權的使用者才能存取此功能。 如果您的組織沒有Data Distiller，則不會顯示[!UICONTROL 進階查詢編輯器]選項。
+>[!UICONTROL 進階查詢編輯器]的存取權僅限於具有Data Distiller SKU授權的組織。 如果您的組織沒有所需的授權，此選項不會出現在資料集預覽視窗中。
 
-在預覽視窗的右上角選取&#x200B;**[!UICONTROL 進階查詢編輯器]**&#x200B;以開啟查詢編輯器。 目前的預覽查詢已預先載入，並準備好執行或進一步分析。
+在預覽視窗的右上角選取[!UICONTROL 進階查詢編輯器]，以使用目前預先載入並執行的SQL查詢開啟查詢服務。 您可以繼續分析或修改SQL，而不需要重新輸入查詢。
 
-![資料集預覽視窗在右上角顯示進階查詢編輯器按鈕。](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+![資料集預覽視窗在右上角顯示[進階查詢編輯器]按鈕。](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-此捷徑可讓您順暢地從預覽範例資料移至在Query Service中執行和修訂查詢，而不需要重新輸入SQL或內容。
-
-如需其他資料存取和分析，請使用下游服務，例如[!DNL Query Service]和[!DNL JupyterLab]。 如需詳細資訊，請參閱下列檔案：
+如需其他分析，請使用下游服務，例如[!DNL Query Service]和[!DNL JupyterLab]。 如需詳細資訊，請參閱下列檔案：
 
 * [查詢服務總覽](../../query-service/home.md)
 * [JupyterLab 使用手冊](../../data-science-workspace/jupyterlab/overview.md)
@@ -262,7 +254,7 @@ ht-degree: 5%
 
 ![顯示[設定資料保留]對話方塊及[體驗事件]分佈圖。](../images/datasets/user-guide/visual-forecast.png)
 
-若您對組態感到滿意，請選取[儲存]，確認您的設定。**&#x200B;**
+若您對組態感到滿意，請選取[儲存]，確認您的設定。****
 
 >[!IMPORTANT]
 >

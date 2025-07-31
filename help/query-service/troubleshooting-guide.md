@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務和資料Distiller常見問題
 description: 本檔案包含和查詢服務及資料Distiller相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5186'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Query Service可協助您快速獲得見解，而Data Distiller則可進行深�
 ### 我可以將[!DNL Postman]用於查詢服務API嗎？
 
 +++回答
-可以，您可以使用[!DNL Postman] （免費的協力廠商應用程式）將所有Adobe API服務視覺化並與其互動。 請觀看[[!DNL Postman] 設定指南](https://video.tv.adobe.com/v/28832)，瞭解如何在Adobe Developer Console中設定專案及取得與[!DNL Postman]搭配使用所需的所有認證的逐步指示。 請參閱有關啟動、執行和共用 [!DNL Postman] 集合[&#128279;](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)的指南的官方檔案。
+可以，您可以使用[!DNL Postman] （免費的協力廠商應用程式）將所有Adobe API服務視覺化並與其互動。 請觀看[[!DNL Postman] 設定指南](https://video.tv.adobe.com/v/28832)，瞭解如何在Adobe Developer Console中設定專案及取得與[!DNL Postman]搭配使用所需的所有認證的逐步指示。 請參閱有關啟動、執行和共用[集合 [!DNL Postman] 的](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)指南的官方檔案。
 +++
 
 ### 透過UI從查詢傳回的最大列數是否有限制？
@@ -91,7 +91,7 @@ Query Service可協助您快速獲得見解，而Data Distiller則可進行深�
 +++回答
 如果查詢逾時，建議使用下列一或多個解決方案。
 
-- [將查詢轉換為CTAS查詢](./sql/syntax.md#create-table-as-select)並排程執行。 排程執行可透過UI[&#128279;](./ui/user-guide.md#scheduled-queries)或[API](./api/scheduled-queries.md#create)完成。
+- [將查詢轉換為CTAS查詢](./sql/syntax.md#create-table-as-select)並排程執行。 排程執行可透過UI[或](./ui/user-guide.md#scheduled-queries)API[完成](./api/scheduled-queries.md#create)。
 - 套用其他[篩選條件](https://spark.apache.org/docs/latest/api/sql/index.html#filter)，對較小的資料區塊執行查詢。
 - [執行EXPLAIN命令](./sql/syntax.md#explain)以收集更多詳細資料。
 - 檢閱資料集中的資料統計資料。
@@ -160,7 +160,7 @@ Query Service可協助您快速獲得見解，而Data Distiller則可進行深�
 
 ![上方導覽列的下拉式功能表，包含[說明及支援]、[企業支援]及[連絡我們]等標示專案。](./images/troubleshooting/help-and-support.png)
 
-會顯示包含[!UICONTROL 說明與支援]區段的下拉式橫幅。 選取&#x200B;**[!UICONTROL 連絡我們]**&#x200B;以開啟Adobe客戶服務虛擬助理，或選取&#x200B;**[!UICONTROL 企業支援]**&#x200B;以取得大型組織的專屬說明。
+會顯示包含[!UICONTROL 說明與支援]區段的下拉式橫幅。 選取&#x200B;**[!UICONTROL 連絡我們]**&#x200B;以開啟Adobe客戶服務虛擬助理，或選取&#x200B;**[!UICONTROL 企業支援]**以取得大型組織的專屬說明。
 +++
 
 ### 如果前一個工作未成功完成，該如何實作循序工作序列，而不執行後續工作？
@@ -293,13 +293,13 @@ SELECT count(1) FROM myTableName
 ### 查詢服務支援哪些協助程式函式？
 
 +++回答
-Query Service提供數種內建的SQL Helper函式，以擴充SQL功能。 請參閱檔案，以取得查詢服務[&#128279;](./sql/spark-sql-functions.md)所支援SQL函式的完整清單。
+Query Service提供數種內建的SQL Helper函式，以擴充SQL功能。 請參閱檔案，以取得查詢服務[所支援](./sql/spark-sql-functions.md)SQL函式的完整清單。
 +++
 
 ### 是否支援所有原生[!DNL Spark SQL]函式，或使用者是否僅限使用Adobe提供的包裝函式[!DNL Spark SQL]函式？
 
 +++回答
-尚未在資料湖資料上測試所有開放原始碼[!DNL Spark SQL]函式。 測試並確認後，會將其新增至支援清單。 請參考支援的 [!DNL Spark SQL] 函式[&#128279;](./sql/spark-sql-functions.md)的清單，以檢查特定函式。
+尚未在資料湖資料上測試所有開放原始碼[!DNL Spark SQL]函式。 測試並確認後，會將其新增至支援清單。 請參考支援的[函式 [!DNL Spark SQL] 的](./sql/spark-sql-functions.md)清單，以檢查特定函式。
 +++
 
 ### 使用者可以定義自己的使用者定義函式(UDF)來用於其他查詢嗎？
@@ -313,7 +313,7 @@ Query Service提供數種內建的SQL Helper函式，以擴充SQL功能。 請�
 +++回答
 首先，檢查記錄檔以找出錯誤的詳細資料。 有關[在記錄檔](#error-logs)中尋找錯誤的常見問題集區段，提供如何執行此動作的詳細資訊。
 
-您也應該檢視檔案以瞭解如何在UI[&#128279;](./ui/user-guide.md#scheduled-queries)中及透過[API](./api/scheduled-queries.md)執行已排程的查詢。
+您也應該檢視檔案以瞭解如何在UI[中及透過](./ui/user-guide.md#scheduled-queries)API[執行](./api/scheduled-queries.md)已排程的查詢。
 
 請注意，使用[!DNL Query Editor]時，您只能將排程新增至已建立並儲存的查詢。 這不適用於[!DNL Query Service] API。
 +++
@@ -396,7 +396,7 @@ SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
 2021-08-30 15:00:00
 ```
 
-再舉一例，如果特定時間戳記是`Asia/Seoul`時區的`2021-07-14 12:40:00.0`，則傳回的UTC時間戳記將是`2021-07-14 03:40:00.0`
+再舉一例，如果特定時間戳記是`2021-07-14 12:40:00.0`時區的`Asia/Seoul`，則傳回的UTC時間戳記將是`2021-07-14 03:40:00.0`
 
 查詢服務UI中提供的主控台輸出是較易讀取的格式：
 
@@ -406,7 +406,7 @@ SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
 
 #### 從UTC時間戳記轉換
 
-`from_utc_timestamp()`方法會從您當地時區&#x200B;**的時間戳記中解譯指定的引數**，並以UTC格式提供所需區域的對等時間戳記。 在以下範例中，該小時是使用者的當地時區中下午2:40。 以變數傳遞的首爾時區比當地時區早九小時。
+`from_utc_timestamp()`方法會從您當地時區&#x200B;**的時間戳記中解譯指定的引數**，並以UTC格式提供所需區域的對等時間戳記。 在以下範例中，小時是使用者的當地時區中的2:40PM。 以變數傳遞的首爾時區比當地時區早九小時。
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -464,7 +464,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ### 我是否應該使用萬用字元（例如*）來取得資料集中的所有列？
 
 +++回答
-您無法使用萬用字元從資料列取得所有資料，因為查詢服務應視為&#x200B;**欄位存放區**，而不是傳統的資料列式存放區系統。
+您無法使用萬用字元從資料列取得所有資料，因為查詢服務應視為**欄位存放區**，而不是傳統的資料列式存放區系統。
 +++
 
 ### 我是否應該在SQL查詢中使用`NOT IN`？
@@ -472,7 +472,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 +++回答
 `NOT IN`運運算元通常用於擷取在其他資料表或SQL陳述式中找不到的資料列。 如果比較的資料行接受`NOT NULL`，或您有大量的記錄，此運運算元可能會降低效能並傳回非預期的結果。
 
-您可以使用`NOT EXISTS`或`LEFT OUTER JOIN`，而不使用`NOT IN`。
+您可以使用`NOT IN`或`NOT EXISTS`，而不使用`LEFT OUTER JOIN`。
 
 例如，如果您已建立下清單格：
 
@@ -647,6 +647,14 @@ Data Distiller電腦時數的授權使用儀表板每天更新四次，每六小
 後端基礎架構持續改善，以最佳化運算時數使用率和處理時間。 因此，隨著效能增強功能的實施，您可能會注意到隨著時間的推移而發生的變更。
 +++
 
+### 資料Distiller在開發沙箱和生產沙箱之間的效能是否有所不同？
+
++++回答
+當您在開發和生產沙箱中執行查詢時，可以預期類似的效能。 這兩種環境的設計目的都是為了提供相同等級的處理能力。 不過，計算時數的差異可能會發生，具體取決於您處理的資料量以及執行查詢時的整體系統活動。
+
+在Experience Platform UI的[授權使用量儀表板](../dashboards/guides/license-usage.md)中追蹤您的計算小時使用量。
++++
+
 ## 查詢UI
 
 ### 嘗試連線到查詢服務時，「建立查詢」卡住「正在初始化連線……」。 如何修正問題？
@@ -744,7 +752,7 @@ INSERT INTO查詢稱為ITAS查詢。 請注意，CREATE TABLE查詢稱為CTAS查
 ### 是否有方法可以連線一次查詢服務，以便與協力廠商工具繼續使用？
 
 +++回答
-可以，協力廠商案頭使用者端可透過一次性設定不會到期的憑證來連線至查詢服務。 未過期的認證可由授權的使用者產生，並透過自動下載至其本機電腦的JSON檔案接收。 在檔案中可找到有關如何建立和下載不會到期的認證[&#128279;](./ui/credentials.md#non-expiring-credentials)的完整指南。
+可以，協力廠商案頭使用者端可透過一次性設定不會到期的憑證來連線至查詢服務。 未過期的認證可由授權的使用者產生，並透過自動下載至其本機電腦的JSON檔案接收。 在檔案中可找到有關如何建立和下載不會到期的認證[的完整](./ui/credentials.md#non-expiring-credentials)指南。
 +++
 
 ### 為什麼我的不會到期的認證無法運作？
@@ -752,6 +760,12 @@ INSERT INTO查詢稱為ITAS查詢。 請注意，CREATE TABLE查詢稱為CTAS查
 +++回答
 不會到期的認證值是來自`technicalAccountID`的串連引數，以及來自組態JSON檔案的`credential`的串連引數。 密碼值的格式為： `{{technicalAccountId}:{credential}}`。
 請參閱檔案，以取得關於如何[使用認證](./ui/credentials.md#using-credentials-to-connect-to-external-clients)連線到外部使用者端的詳細資訊。
++++
+
+### 對於不會到期的認證密碼的特殊字元是否有任何限制？
+
++++回答
+是。 當您設定不會到期的認證密碼時，必須至少包含一個數字、一個小寫字母、一個大寫字母和一個特殊字元。 不支援美元符號($)。 請改用特殊字元，例如！、@、#、^或&amp;。
 +++
 
 ### 我可以連線到查詢服務編輯器的協力廠商SQL編輯器有哪一種？
@@ -763,7 +777,7 @@ INSERT INTO查詢稱為ITAS查詢。 請注意，CREATE TABLE查詢稱為CTAS查
 ### 我可以將Power BI工具連線到查詢服務嗎？
 
 +++回答
-是，您可以將Power BI連線至查詢服務。 請參閱檔案，以取得有關將Power BI案頭應用程式連線至查詢服務[&#128279;](./clients/power-bi.md)的指示。
+是，您可以將Power BI連線至查詢服務。 請參閱檔案，以取得有關將Power BI案頭應用程式連線至查詢服務[的](./clients/power-bi.md)指示。
 +++
 
 ### 儀表板在連線至查詢服務時為何需要很長時間才能載入？
