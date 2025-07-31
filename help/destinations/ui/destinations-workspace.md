@@ -69,9 +69,9 @@ ht-degree: 1%
 
 >[!TIP]
 >
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制項，將對象或資料集匯出至該目的地。
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**&#x200B;控制項，將對象或資料集匯出至該目的地。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**&#x200B;控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**&#x200B;控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
 
 ![帳戶標籤](../assets/ui/workspace/destination-account-options.png)
 
@@ -94,7 +94,7 @@ ht-degree: 1%
 >[!TIP]
 >
 > * 選取`...`名稱[!UICONTROL 欄中的省略符號(])，並使用![啟用對象控制項](/help/images/icons/data-add.png) **[!UICONTROL 啟用對象控制項]**&#x200B;將對象或資料集匯出至該目的地。
-> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![編輯目的地控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯目的地&#x200B;]**控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
+> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![編輯目的地控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯目的地&#x200B;]**&#x200B;控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
 > * 選取`...`名稱[!UICONTROL 欄中的省略符號(])，並使用![編輯行銷動作控制項](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL 編輯行銷動作]**&#x200B;控制項變更為[變更所選目的地的行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。
 > * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png) **[!UICONTROL 刪除]**&#x200B;控制項來[移除](delete-destinations.md)與目的地的現有連線。
 > * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png) **[!UICONTROL 監視控制項中的檢視]**&#x200B;控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
