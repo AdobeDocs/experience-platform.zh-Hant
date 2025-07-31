@@ -2,9 +2,9 @@
 title: 沙箱工具套件API端點
 description: 沙箱工具API中的/packages端點可讓您以程式設計方式管理Adobe Experience Platform中的套件。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
+source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2933'
 ht-degree: 8%
 
 ---
@@ -60,7 +60,7 @@ curl -X POST \
 | `packageType` | 封裝型別是&#x200B;**PARTIAL**，表示您在封裝中包含特定成品。 | 字串 | 是 |
 | `sourceSandbox` | 套件的來源沙箱。 | 物件 | 無 |
 | `expiry` | 定義封裝到期日期的時間戳記。 預設值是從建立日期算起的90天。 回應到期欄位將會是epoch UTC時間。 | 字串（UTC時間戳記格式） | 無 |
-| `artifacts` | 要匯出至封裝的成品清單。 當`packageType`為`FULL`時，`artifacts`值應為&#x200B;**null**&#x200B;或&#x200B;**empty**。 | 陣列 | 無 |
+| `artifacts` | 要匯出至封裝的成品清單。 當`artifacts`為&#x200B;**時，**&#x200B;值應為&#x200B;**null**&#x200B;或`packageType`empty`FULL`。 | 陣列 | 無 |
 
 **回應**
 
@@ -100,11 +100,11 @@ curl -X POST \
 
 ## 更新套件 {#update}
 
-您可以對`/packages`端點發出PUT要求，以更新套件。
+使用沙箱工具API中的`/packages`端點來更新套件。
 
 ### 將成品新增至封裝 {#add-artifacts}
 
-若要新增成品至封裝，您必須提供`id`並包含`action`的&#x200B;**ADD**。
+若要新增成品至封裝，您必須提供`id`並包含&#x200B;**的** ADD`action`。
 
 **API格式**
 
@@ -139,14 +139,14 @@ curl -X PUT \
 | `id` | 要更新之封裝的ID。 | 字串 | 是 |
 | `action` | 若要將成品加入封裝中，動作值應該是&#x200B;**ADD**。 只有&#x200B;**PARTIAL**&#x200B;封裝型別支援此動作。 | 字串 | 是 |
 | `artifacts` | 要新增到封裝中的成品清單。 如果清單為&#x200B;**null**&#x200B;或&#x200B;**empty**，則不會變更封裝。 成品在新增至封裝之前，會先去除重複專案。 如需支援的成品完整清單，請參閱下表。 | 陣列 | 無 |
-| `expiry` | 定義封裝到期日期的時間戳記。 若承載中未指定到期，則預設值是從呼叫PUT API後的90天。 回應到期欄位將會是epoch UTC時間。 | 字串（UTC時間戳記格式） | 無 |
+| `expiry` | 定義封裝到期日期的時間戳記。 若裝載中未指定到期，預設值是從呼叫PUT API後的90天。 回應到期欄位將會是epoch UTC時間。 | 字串（UTC時間戳記格式） | 無 |
 
 目前支援的成品型別如下。
 
 | 成品 | 平台 | 物件 | 部分流量 | 完整沙箱 |
 | --- | --- | --- | --- | --- |
 | `JOURNEY` | Adobe Journey Optimizer | 歷程 | 是 | 無 |
-| `ID_NAMESPACE` | 客戶資料平台 | 身分 | 是 | 是 |
+| `ID_NAMESPACE` | 客戶資料平台 | 身分識別 | 是 | 是 |
 | `REGISTRY_DATATYPE` | 客戶資料平台 | 資料類型 | 是 | 是 |
 | `REGISTRY_CLASS` | 客戶資料平台 | 類別 | 是 | 是 |
 | `REGISTRY_MIXIN` | 客戶資料平台 | 欄位群組 | 是 | 是 |
@@ -198,7 +198,7 @@ curl -X PUT \
 
 ### 從封裝中刪除成品 {#delete-artifacts}
 
-若要從封裝中刪除成品，您必須為`action`提供`id`並包含&#x200B;**DELETE**。
+若要從封裝中刪除成品，您必須為`id`提供&#x200B;**並包含** DELETE`action`。
 
 **API格式**
 
@@ -230,7 +230,7 @@ curl -X PUT \
 | 屬性 | 說明 | 類型 | 強制 |
 | --- | --- | --- | --- |
 | `id` | 要更新之封裝的ID。 | 字串 | 是 |
-| `action` | 若要從封裝中刪除成品，動作值應為&#x200B;**DELETE**。 只有&#x200B;**PARTIAL**&#x200B;封裝型別支援此動作。 | 字串 | 是 |
+| `action` | 若要從封裝中刪除成品，動作值應該是&#x200B;**DELETE**。 只有&#x200B;**PARTIAL**&#x200B;封裝型別支援此動作。 | 字串 | 是 |
 | `artifacts` | 要從封裝中刪除的成品清單。 如果清單為&#x200B;**null**&#x200B;或&#x200B;**empty**，則不會變更封裝。 | 陣列 | 無 |
 
 **回應**
@@ -273,7 +273,7 @@ curl -X PUT \
 >
 >**UPDATE**&#x200B;動作用於更新封裝的封裝中繼資料欄位，而&#x200B;**無法**&#x200B;用於新增/刪除封裝的成品。
 
-若要更新封裝中的中繼資料欄位，您必須提供`id`並包含`action`的&#x200B;**UPDATE**。
+若要更新封裝中的中繼資料欄位，您必須提供`id`並包含&#x200B;**的** UPDATE`action`。
 
 **API格式**
 
@@ -345,7 +345,7 @@ curl -X PUT \
 
 ## 刪除套裝 {#delete}
 
-若要刪除封裝，請向`/packages`端點發出DELETE要求，並指定您要刪除之封裝的識別碼。
+若要刪除套件，請向`/packages`端點發出DELETE要求，並指定您要刪除之套件的識別碼。
 
 **API格式**
 
@@ -380,9 +380,9 @@ curl -X DELETE \
 }
 ```
 
-## Publish a套件 {#publish}
+## 發佈套件 {#publish}
 
-為了啟用將套件匯入沙箱，您必須發佈它。 指定您要發佈的封裝ID時，向`/packages`端點發出GET要求。
+為了啟用將套件匯入沙箱，您必須發佈它。 指定您要發佈的套件ID時，向`/packages`端點發出GET要求。
 
 **API格式**
 
@@ -433,7 +433,7 @@ curl -X GET \
 
 ## 查詢封裝 {#look-up-package}
 
-您可以向`/packages`端點發出GET要求，在要求路徑中包含封裝的對應ID，以查詢個別封裝。
+您可以透過向`/packages`端點發出GET請求來查詢個別套件，端點在請求路徑中包含套件的對應ID。
 
 **API格式**
 
@@ -501,7 +501,7 @@ curl -X GET \
 
 ## 列出封裝 {#list-packages}
 
-您可以透過向`/packages`端點發出GET要求，列出您組織中的所有封裝。
+您可以透過向`/packages`端點發出GET請求來列出您組織中的所有套件。
 
 **API格式**
 
@@ -820,7 +820,7 @@ curl -X POST \
 
 ## 列出所有相依物件 {#dependent-objects}
 
-指定封裝識別碼時，藉由向`/packages`端點發出POST要求，列出封裝中匯出物件的所有相依物件。
+指定封裝的識別碼時，透過對`/packages`端點發出POST要求，列出封裝中匯出物件的所有相依物件。
 
 **API格式**
 
@@ -900,7 +900,7 @@ curl -X POST \
 
 ## 檢查以角色為基礎的許可權，以匯入所有封裝成品 {#role-based-permissions}
 
-您可以檢查您是否具有匯入套件成品的許可權，方法是在指定套件識別碼和目標沙箱名稱時，向`/packages`端點發出GET要求。
+您可以檢查您是否具有匯入套件成品的許可權，方法是在指定套件識別碼和目標沙箱名稱時，對`/packages`端點發出GET請求。
 
 **API格式**
 
@@ -1165,7 +1165,7 @@ curl -X GET \
 
 ### 傳送共用要求 {#send-request}
 
-透過向`/handshake/bulkCreate`端點發出POST要求，傳送要求給目標夥伴組織以進行共用核准。 這是共用私人套件之前的必要專案。
+透過向`/handshake/bulkCreate`端點發出POST請求，將請求傳送到目標夥伴組織以共用核准。 這是共用私人套件之前的必要專案。
 
 **API格式**
 
@@ -1223,7 +1223,7 @@ curl -X POST \
             "modifiedByName": "{MODIFIED_BY}",
             "modifiedByIMSOrgId": "{ORG_ID}",
             "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "{LINKIND_ID}"
+            "linkingId": "{LINKING_ID}"
         }
     },
     "failedRequests": {}
@@ -1232,7 +1232,7 @@ curl -X POST \
 
 ### 核准已接收的共用要求 {#approve-requests}
 
-藉由向`/handshake/action`端點發出POST要求，核准來自目標夥伴組織的共用要求。 核准後，來源合作夥伴組織可以共用私人套件。
+藉由對`/handshake/action`端點發出POST要求，核准來自目標夥伴組織的共用要求。 核准後，來源合作夥伴組織可以共用私人套件。
 
 **API格式**
 
@@ -1300,7 +1300,7 @@ curl -X POST  \
 
 ### 列出傳出/傳入的共用要求 {#outgoing-and-incoming-requests}
 
-透過向`handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`端點發出GET要求，列出傳出和傳入的共用要求。
+藉由對`handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING`端點發出GET要求，列出傳出和傳入的共用要求。
 
 **API格式**
 
@@ -1374,7 +1374,7 @@ curl -X GET \
 
 ### 新共用要求 {#share-request}
 
-擷取已發佈來源組織的套件，並透過向`/transfer`端點發出POST請求來與目標組織共用，同時提供套件ID和目標組織的ID。
+擷取已發佈來源組織的套件，並透過向`/transfer`端點發出POST要求來與目標組織共用，同時提供套件ID和目標組織的ID。
 
 **API格式**
 
@@ -1434,7 +1434,7 @@ curl -X POST \
 
 ### 依ID擷取共用要求 {#fetch-transfer-by-id}
 
-提供傳輸ID時，透過向`/transfer/{TRANSFER_ID}`端點發出GET要求來擷取共用要求的詳細資料。
+在提供傳輸ID時，透過向`/transfer/{TRANSFER_ID}`端點發出GET要求來擷取共用要求的詳細資料。
 
 **API格式**
 
@@ -1481,7 +1481,7 @@ curl -X GET \
 
 ### 擷取共用清單 {#transfers-list}
 
-藉由向`/transfer/list?{QUERY_PARAMETERS}`端點發出GET要求，並視需要變更查詢引數，擷取傳輸要求清單。
+向`/transfer/list?{QUERY_PARAMETERS}`端點發出GET要求，並視需要變更查詢引數，以擷取傳輸要求清單。
 
 **API格式**
 
@@ -1557,7 +1557,7 @@ curl -X GET \
 
 ### 將套件可用性從私人更新為公開 {#update-availability}
 
-透過向`/packages/update`端點發出GET要求，將封裝從私用變更為公用。 依預設，會建立具有私人可用性的套件。
+透過向`/packages/update`端點發出GET要求，將套件從私用變更為公用。 依預設，會建立具有私人可用性的套件。
 
 **API格式**
 
@@ -1684,7 +1684,7 @@ curl -X POST \
 
 ### 列出公用套件 {#list-public-packages}
 
-透過向`/transfer/list?{QUERY_PARAMS}`端點發出GET要求，擷取具有公開可見性的封裝清單。
+透過向`/transfer/list?{QUERY_PARAMS}`端點發出GET要求，擷取具有公開可見性的套件清單。
 
 **API格式**
 
@@ -1935,7 +1935,7 @@ curl -X GET \
 
 ## 複製封裝裝載(#package-payload)
 
-您可以透過向`/packages/payload`端點發出GET要求來複製公用封裝的裝載，端點在要求路徑中包含封裝的對應ID。
+您可以透過向`/packages/payload`端點發出GET請求，複製公用套件的裝載，端點在請求路徑中包含套件的對應ID。
 
 **API格式**
 
@@ -1975,5 +1975,497 @@ curl -X GET \
 {
     "imsOrgId": "{ORG_ID}",
     "packageId": "{PACKAGE_ID}"
+}
+```
+
+## 移轉物件組態更新
+
+使用沙箱工具API中的/packages端點來移轉物件設定更新。
+
+### 更新作業(#update-operations)
+
+提供套件ID，對`/packages/{packageId}/version/compare`端點發出POST要求，將指定的或最新版本的套件快照集與來源沙箱的目前狀態或先前匯入套件的目標沙箱進行比較。
+
+***API格式***
+
+```http
+PATCH /packages/{packageId}/version/compare
+```
+
+| 屬性 | 說明 | 類型 | 必要 |
+| --- | --- | --- | --- |
+| `packageId` | 套件的ID。 | 字串 | 是 |
+
+**要求**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/compare/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "triggerNew": true,
+      "targetSandbox": "{SANDBOX_NAME}"
+  }'
+```
+
+| 屬性 | 說明 | 類型 | 必要 |
+| --- | --- | --- | --- |
+| `triggerNew` | 此旗標可觸發新的差異計算工作，即使已有作用中或完成的工作存在。 | 布林值 | 無 |
+| `targetSandbox` | 代表必須用來計算差異的目標沙箱名稱。 如果未指定，會將來源沙箱當作目標沙箱。 | 字串 | 無 |
+
+**回應**
+
+先前完成之工作的成功回應會傳回工作物件與先前計算的差異結果。 新完成的作業會傳回JobId。
+
++++檢視回應（已提交的工作）
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "c4b7d07ae4c646279e2070a31c50bd5c",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "SUCCESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "deltaPackageVersion": {
+            "packageId": "{PACKAGE_ID}",
+            "currentVersion": 0,
+            "validated": false,
+            "rootArtifacts": [
+                {
+                    "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de",
+                    "type": "REGISTRY_SCHEMA",
+                    "found": false,
+                    "count": 0
+                }
+            ],
+            "eximGraphDelta": {
+                "vertices": [],
+                "pluginDeltas": [
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 2_1738766274074",
+                                "newValue": "Custom FieldGroup 2"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 4_1738766274074",
+                                "newValue": "Custom FieldGroup 4"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "importReplacementMap": {
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+            "5a45f8cd309d5ed5797be9a0af65e89152a51d57a6c74b52": "4ae041fa182d6faf2e7c56463399170d913138a7c5712909",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/b2b7705e770a35341b8bc5ec5e3644d9c7387266777fe4ba": "https://ns.adobe.com/sandboxtoolingstage/schemas/838c4e21ad81543ac14238ac1756012f7f98f0e0bec6b425",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de": "https://ns.adobe.com/sandboxtoolingstage/schemas/9a55692d527169d0239e126137a694ed9db2406c9bcbd06a",
+            "8f45c79235c91e7f0c09af676a77d170a34b5ee0ad5de72c": "65d755cc3300674c3cfcec620c59876af07f046884afd359",
+            "f04b8e461396ff426f8ba8dc5544f799bf287baa8e0fa5c": "b6fa821ada8cb97cac384f0b0354bbe74209ec97fb6a83a3",
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+            "c8304f3cb7986e8c9b613cd8d832125bd867fb4a5aedf67a": "4d21e9bf89ce0042b52d7d41ff177a7697d695e2617d1fc1"
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
++++檢視回應（新提交的工作）
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "aa5cfacf35a8478c8cf44a675fab1c30 ",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "IN_PROGRESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
+### 更新套件版本(#package-versioning)
+
+提供套件ID，向`/packages/{packageId}/version/save`端點發出GET請求，使用每個物件的來源沙箱中最新快照集將套件升級為新版本。
+
+***API格式***
+
+```http
+PATCH /packages/{packageId}/version/save
+```
+
+| 屬性 | 說明 | 類型 | 必要 |
+| --- | --- | --- | --- |
+| `packageId` | 套件的ID。 | 字串 | 是 |
+
+**要求**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**回應**
+
+成功的回應會傳回版本升級的工作狀態。
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Version Job Package: {JOB_ID}",
+    "description": null,
+    "visibility": "TENANT",
+    "requestType": "VERSION",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPGRADE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### 擷取套件版本記錄(#package-version-history)
+
+透過向`/packages/{packageId}/history`端點發出GET請求並提供套件ID，擷取套件的版本設定歷史記錄，包括時間戳記和修飾元。
+
+***API格式***
+
+```http
+PATCH /packages/{packageId}/history
+```
+
+| 屬性 | 說明 | 類型 | 必要 |
+| --- | --- | --- | --- |
+| `packageId` | 套件的ID。 | 字串 | 是 |
+
+**要求**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**回應**
+
+成功的回應會傳回套件的版本記錄。
+
+```json
+[
+    {
+        "id": "cb68591a1ed941e191e7f52e33637a26",
+        "version": 0,
+        "createdDate": 1739516784000,
+        "modifiedDate": 1739516784000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 3
+    },
+    {
+        "id": "e26189e6e4df476bb66c3fc3e66a1499",
+        "version": 0,
+        "createdDate": 1739343268000,
+        "modifiedDate": 1739343268000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 2
+    },
+    {
+        "id": "11af34c0eee449ac84ef28c66d9383e3",
+        "version": 0,
+        "createdDate": 1739343073000,
+        "modifiedDate": 1739343073000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 1
+    }
+]
+```
+
+### 提交更新工作(#submit-update)
+
+藉由提供套件ID向`/packages/{packageId}/import`端點發出PATCH要求，將新的更新推播至目標沙箱物件。
+
+***API格式***
+
+```http
+PATCH /packages/{packageId}/import
+```
+
+| 屬性 | 說明 | 類型 | 必要 |
+| --- | --- | --- | --- |
+| `packageId` | 套件的ID。 | 字串 | 是 |
+
+**要求**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "id": "50fd94f8072b4f248737a2b57b41058f",
+      "name": "Test Update",
+      "destinationSandbox": {
+        "name": "test-sandbox-sbt",
+        "imsOrgId": "{ORG_ID}"
+      },
+      "overwriteMappings": {
+        "https://ns.adobe.com/sandboxtoolingstage/schemas/327a48c83a5359f8160420a00d5a07f0ba8631a1fd466f9e" : {
+            "id" : "https://ns.adobe.com/sandboxtoolingstage/schemas/e346bb2cd7b26576cb51920d214aebbd42940a9bf94a75cd",
+            "type" : "REGISTRY_SCHEMA"
+        }
+      }
+  }'
+```
+
+**回應**
+
+成功的回應會傳回更新的作業ID。
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Update Job Name",
+    "description": "Update Job Description",
+    "visibility": "TENANT",
+    "requestType": "IMPORT",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPDATE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "amanda-1",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### 停用套件(#disable-update)的更新和覆寫
+
+透過向`/packages/{packageId}/?{QUERY_PARAMS}`端點發出GET請求，並提供套件ID，停用不支援這些套件的更新和覆寫。
+
+***API格式***
+
+```http
+PATCH /packages/{packageId}?{QUERY_PARAMS}
+```
+
+| 屬性 | 說明 | 類型 | 必要 |
+| --- | --- | --- | --- |
+| `packageId` | 套件的ID。 | 字串 | 是 |
+| {QUERY_PARAM} | getCapabilites查詢引數。 這應該設定為`true`或`false` | 布林值 | 是 |
+
+**要求**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**回應**
+
+成功的回應會傳回套件功能的清單。
+
+```json
+{
+    "id": "80230dde96574a828191144709bb9b51",
+    "version": 3,
+    "createdDate": 1749808582000,
+    "modifiedDate": 1749808648000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "Ankit_Primary_Descriptor_Test",
+    "description": "RestPackage",
+    "imsOrgId": "{ORG_ID}",
+    "clientId": "usecasebuilder",
+    "packageType": "PARTIAL",
+    "expiry": 1757584598000,
+    "publishDate": 1749808648000,
+    "status": "PUBLISHED",
+    "packageVisibility": "PRIVATE",
+    "latestPackageVersion": 0,
+    "packageAccessType": "TENANT",
+    "artifactsList": [
+        {
+            "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/1c767056056de64d8030380d1b9f570d26bc15501a1e0e95",
+            "altId": null,
+            "type": "REGISTRY_SCHEMA",
+            "found": false,
+            "count": 0
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "atul-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "packageCapabilities": {
+        "capabilities": [
+            "VERSIONABLE"
+        ]
+    }
 }
 ```
