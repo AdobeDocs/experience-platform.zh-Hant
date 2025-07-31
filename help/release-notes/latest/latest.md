@@ -1,14 +1,12 @@
 ---
 title: Adobe Experience Platform 發行說明 (2025 年 7 月)
 description: Adobe Experience Platform 2025 年 7 月版發行說明。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
+source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
 workflow-type: tm+mt
-source-wordcount: '1457'
-ht-degree: 23%
+source-wordcount: '1573'
+ht-degree: 22%
 
 ---
-
 
 # Adobe Experience Platform 發行說明
 
@@ -34,6 +32,7 @@ Adobe Experience Platform 全新功能及現有功能更新：
 - [細分服務](#segmentation-service)
 - [來源](#sources)
 
+
 ## 容量 {#capacity}
 
 >[!AVAILABILITY]
@@ -53,6 +52,7 @@ Adobe Experience Platform 全新功能及現有功能更新：
 | 目標 | 說明 |
 | --- | --- |
 | [Google Customer Match + Display &amp; Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md)連線的可用性有限 | 在6月對所有客戶進行短暫的開放使用後，Adobe已將此整合恢復為有限可用。 目前，此目的地的存取權僅限於已啟用的客戶，而Adobe和Google會努力解決實作問題。 如果您有興趣在更廣泛的推出恢復後使用此整合，請聯絡您的Adobe代表以表達您的意圖。 |
+| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md)內部升級 | 自2025年7月31日起，您可以在目的地目錄中並排看到兩張[!DNL The Trade Desk]卡片。 這是因為目標服務內部升級所致。<br><br>現有的[!DNL The Trade Desk]目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用）交易台]**&#x200B;以及名稱為&#x200B;**[!UICONTROL 交易台]**&#x200B;的新卡片現已可用。 使用目錄中的新&#x200B;**[!UICONTROL 交易台]**&#x200B;連線，以取得新的啟用資料流程。 <br><br>如果您有任何使用中的資料流至&#x200B;**[!UICONTROL （已棄用）交易台]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。 <br><br>如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：<ul><li>流程規格 ID：`86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>連線規格 ID：`1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **全新或更新版功能**
 
@@ -144,3 +144,4 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | 支援[!DNL Salesforce]中記錄的軟刪除 | [!DNL Salesforce]來源現在支援透過選用的`includeDeletedObjects`引數包含軟性刪除的記錄。 若設為True，客戶可以在其[!DNL Salesforce]查詢中包含軟性刪除記錄，並將這些記錄帶入Experience Platform。 如需詳細資訊，請閱讀 [[!DNL Salesforce]  來源文件](../../sources/connectors/crm/salesforce.md)。 |
 
 如需更多資訊，請參閱[來源概觀](../../sources/home.md)。
+
