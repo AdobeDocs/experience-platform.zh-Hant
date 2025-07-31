@@ -1,15 +1,13 @@
 ---
 title: 授權使用量和容量
 description: 瞭解您在Adobe Experience Platform中的授權使用量和容量限制。
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 6%
 
 ---
-
 
 # 授權使用和容量
 
