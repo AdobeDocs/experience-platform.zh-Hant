@@ -4,9 +4,9 @@ title: 使用流程服務API編輯目的地連線
 type: Tutorial
 description: 瞭解如何使用流量服務API編輯目的地連線的各種元件。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1622'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-> 本教學課程中說明的編輯作業目前僅透過「流量服務API」支援。
+> Experience Platform UI也支援本教學課程中所述的編輯操作。 請參閱教學課程，瞭解如何[在UI](/help/destinations/ui/edit-destination.md)中編輯目的地。
 
 ## 快速入門 {#get-started}
 
@@ -177,15 +177,15 @@ curl -X GET \
 
 目標連線的元件會依目的地而有所不同。 例如，對於[!DNL Amazon S3]目的地，您可以更新檔案匯出的貯體和路徑。 若為[!DNL Pinterest]目的地，您可以更新您的[!DNL Pinterest Advertiser ID]，若為[!DNL Google Customer Match]，您可以更新[!DNL Pinterest Account ID]。
 
-若要更新目標連線的元件，請對`/targetConnections/{TARGET_CONNECTION_ID}`端點執行`PATCH`要求，同時提供您的目標連線ID、版本以及您要使用的新值。 請記住，您在上一個步驟中取得目標連線ID，當時您檢查到所要目的地的現有資料流。
+若要更新目標連線的元件，請對`PATCH`端點執行`/targetConnections/{TARGET_CONNECTION_ID}`要求，同時提供您的目標連線ID、版本以及您要使用的新值。 請記住，您在上一個步驟中取得目標連線ID，當時您檢查到所要目的地的現有資料流。
 
 >[!IMPORTANT]
 >
->發出`PATCH`請求時需要`If-Match`標頭。 此標頭的值是您要更新之目標連線的唯一版本。 每次成功更新資料流、目標連線等流程實體時，etag值都會隨之更新。
+>發出`If-Match`請求時需要`PATCH`標頭。 此標頭的值是您要更新之目標連線的唯一版本。 每次成功更新資料流、目標連線等流程實體時，etag值都會隨之更新。
 >
 > 若要取得etag值的最新版本，請對`/targetConnections/{TARGET_CONNECTION_ID}`端點執行GET要求，其中`{TARGET_CONNECTION_ID}`是您要更新的目標連線ID。
 >
-> 提出`PATCH`請求時，請務必將`If-Match`標頭的值括在雙引號中，如下例所示。
+> 提出`If-Match`請求時，請務必將`PATCH`標頭的值括在雙引號中，如下例所示。
 
 以下是一些為不同型別的目的地更新目標連線規格中引數的範例。 但更新任何目的地引數的一般規則如下：
 
@@ -205,7 +205,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 **要求**
 
-下列要求會更新[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)目的地連線的`bucketName`和`path`引數。
+下列要求會更新`bucketName`目的地連線的`path`和[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)引數。
 
 ```shell
 curl -X PATCH \
@@ -288,7 +288,7 @@ curl -X PATCH \
 
 **要求**
 
-下列要求會更新[[!DNL Pinterest] 目的地連線](/help/destinations/catalog/advertising/pinterest.md#parameters)的`advertiserId`引數。
+下列要求會更新`advertiserId`目的地連線[[!DNL Pinterest] 的](/help/destinations/catalog/advertising/pinterest.md#parameters)引數。
 
 ```shell
 curl -X PATCH \
@@ -334,17 +334,17 @@ curl -X PATCH \
 
 當您想要更新目的地的認證時，請編輯基本連線。 基礎連線的元件會因目的地而異。 例如，對於[!DNL Amazon S3]目的地，您可以將存取金鑰和秘密金鑰更新至您的[!DNL Amazon S3]位置。
 
-若要更新基底連線的元件，請在提供您的基底連線ID、版本以及您要使用的新值時，對`/connections`端點執行`PATCH`要求。
+若要更新基底連線的元件，請在提供您的基底連線ID、版本以及您要使用的新值時，對`PATCH`端點執行`/connections`要求。
 
 請記住，當您在[先前的步驟](#look-up-dataflow-details)中檢查到引數`baseConnection`所需目的地的現有資料流時，已取得您的基礎連線ID。
 
 >[!IMPORTANT]
 >
->發出`PATCH`請求時需要`If-Match`標頭。 此標頭的值是您要更新的基礎連線的唯一版本。 每次成功更新資料流、基本連線等流程實體時，etag值都會隨之更新。
+>發出`If-Match`請求時需要`PATCH`標頭。 此標頭的值是您要更新的基礎連線的唯一版本。 每次成功更新資料流、基本連線等流程實體時，etag值都會隨之更新。
 >
 > 若要取得最新版Etag值，請對`/connections/{BASE_CONNECTION_ID}`端點執行GET要求，其中`{BASE_CONNECTION_ID}`是您要更新的基本連線ID。
 >
-> 提出`PATCH`請求時，請務必將`If-Match`標頭的值括在雙引號中，如下例所示。
+> 提出`If-Match`請求時，請務必將`PATCH`標頭的值括在雙引號中，如下例所示。
 
 以下是一些範例，說明如何為不同型別的目的地更新基本連線規格中的引數。 但更新任何目的地引數的一般規則如下：
 
@@ -364,7 +364,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 **要求**
 
-下列要求會更新[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)目的地連線的`accessId`和`secretKey`引數。
+下列要求會更新`accessId`目的地連線的`secretKey`和[[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)引數。
 
 ```shell
 curl -X PATCH \

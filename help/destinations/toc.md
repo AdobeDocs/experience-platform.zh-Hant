@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: c3f570ad3fcae50f2381e344bb88d8a9cace57be
+source-git-commit: bef5176048bad269c9e32e56d1e331a93eb80e13
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1298'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 5%
    * [刪除目的地帳戶](./api/delete-destination-account.md)
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
    * [匯出資料集](/help/destinations/api/export-datasets.md)
-   * [排序及篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=zh-Hant#use-cases)
+   * [排序及篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI 指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
@@ -52,6 +52,7 @@ ht-degree: 5%
       * [匯出陣列、對應及物件](/help/destinations/ui/export-arrays-maps-objects.md)
       * [對匯出至雲端儲存空間的資料執行轉換](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)
+   * [(Beta)編輯目的地](./ui/edit-destination.md)
    * [更新目的地帳戶](./ui/update-accounts.md)
    * [刪除目的地帳戶](./ui/delete-destination-account.md)
    * [編輯啟動資料流](./ui/edit-activation.md)
@@ -67,7 +68,7 @@ ht-degree: 5%
       * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage人員同步連線](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant)
+      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [同盟對象組合連線](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising目的地{#advertising}
       * [(Beta) Acxiom對象分佈](./catalog/advertising/acxiom-audience-distribution.md)

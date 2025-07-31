@@ -3,9 +3,9 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: a0326a6d616937552d7f8ff7001808bbfb69bd62
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
@@ -69,9 +69,9 @@ ht-degree: 1%
 
 >[!TIP]
 >
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**&#x200B;控制項，將對象或資料集匯出至該目的地。
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**&#x200B;控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**&#x200B;控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制項，將對象或資料集匯出至該目的地。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
 
 ![帳戶標籤](../assets/ui/workspace/destination-account-options.png)
 
@@ -92,16 +92,18 @@ ht-degree: 1%
 
 >[!TIP]
 >
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![啟用對象控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**&#x200B;控制項，將對象或資料集匯出至該目的地。
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**&#x200B;控制項來[移除](delete-destinations.md)與目的地的現有連線。
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png)**[!UICONTROL 監視控制項中的檢視&#x200B;]**&#x200B;控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
-> * 選取[!UICONTROL 名稱]資料欄中的省略符號(`...`)，並使用![訂閱警示](/help/images/icons/alert-add.png)**[!UICONTROL 訂閱警示&#x200B;]**&#x200B;控制項訂閱目的地資料流警示。 您可以訂閱警報，以接收有關流程執行的狀態、成功或失敗的訊息。 如需有關目的地資料流警示的詳細資訊，請參閱[訂閱內文中目的地警示](alerts.md)。
+> * 選取`...`名稱[!UICONTROL 欄中的省略符號(])，並使用![啟用對象控制項](/help/images/icons/data-add.png) **[!UICONTROL 啟用對象控制項]**&#x200B;將對象或資料集匯出至該目的地。
+> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![編輯目的地控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯目的地&#x200B;]**控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
+> * 選取`...`名稱[!UICONTROL 欄中的省略符號(])，並使用![編輯行銷動作控制項](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL 編輯行銷動作]**&#x200B;控制項變更為[變更所選目的地的行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。
+> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png) **[!UICONTROL 刪除]**&#x200B;控制項來[移除](delete-destinations.md)與目的地的現有連線。
+> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png) **[!UICONTROL 監視控制項中的檢視]**&#x200B;控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
+> * 選取`...`名稱[!UICONTROL 資料欄中的省略符號(])，並使用![訂閱警示](/help/images/icons/alert-add.png) **[!UICONTROL 訂閱警示]**&#x200B;控制項訂閱目的地資料流警示。 您可以訂閱警報，以接收有關流程執行的狀態、成功或失敗的訊息。 如需有關目的地資料流警示的詳細資訊，請參閱[訂閱內文中目的地警示](alerts.md)。
 
 ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 
 | 元素 | 說明 |
 |---------|----------|
-| 名稱 | 您為此目的地的啟用流程提供的名稱。 相同資料行包含兩個控制項： [!UICONTROL 啟動]和[!UICONTROL 刪除目的地]。 |
+| 名稱 | 您為此目的地的啟用流程提供的名稱。 |
 | 資料類型 | 目的地連線支援的資料型別。 支援的資料型別： <ul><li>**[!UICONTROL 客戶]**</li><li>**[!UICONTROL 潛在客戶]**</li><li>**[!UICONTROL 帳戶]**</li><li>**[!UICONTROL 資料集]**</li></ul> |
 | [!UICONTROL 上次資料流執行狀態] | 上次資料流執行的狀態。 如需資料流執行的詳細資訊，請參閱[檢視目的地詳細資料](destination-details-page.md)。 |
 | [!UICONTROL 上次資料流執行日期] | 上次資料流執行的時間和日期。 如需資料流執行的詳細資訊，請參閱[檢視目的地詳細資料](destination-details-page.md)。 |
@@ -112,6 +114,7 @@ ht-degree: 1%
 | [!UICONTROL 啟用資料] | 表示正在啟用至此目的地的對象數量。 選取此控制項以進一步瞭解啟用的對象。 請參閱目的地詳細資訊頁面中的[啟用資料](/help/destinations/ui/destination-details-page.md#activation-data)，瞭解啟用對象的詳細資訊。 |
 | [!UICONTROL 已建立] | 至目的地的啟動流程建立日期和UTC時間。 選取上/下箭頭符號，依最新先或最舊先排序啟動流程。 |
 | [!UICONTROL 狀態] | `Enabled`或`Disabled`。 表示資料是否正在啟用至此目的地。 |
+| [!UICONTROL 存取標籤] | 顯示已新增至此目的地資料流的任何存取標籤。 深入瞭解[將存取標籤套用至目的地資料流](/help/access-control/abac/apply-access-labels-destinations.md)。 |
 
 按一下目的地列，即可在右側欄中顯示目的地的詳細資訊，例如目的地ID、說明、啟用的對象數量等。
 
