@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
+source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
 workflow-type: tm+mt
-source-wordcount: '2801'
+source-wordcount: '2825'
 ht-degree: 23%
 
 ---
@@ -13,6 +13,11 @@ ht-degree: 23%
 # Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/web-sdk/release-notes.md)。
+
+## 2.31.1版 — 2025年7月31日
+
+- 修正無法執行自訂組建的問題。
+- 包含[2.28.1](../../../../web-sdk/release-notes.md#2-28-1)版的Adobe Experience Platform Web SDK。
 
 ## 2.31.0版 — 2025年7月24日
 
