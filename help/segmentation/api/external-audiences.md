@@ -1,12 +1,10 @@
 ---
 title: 外部對象API端點
 description: 瞭解如何使用外部對象API，以從Adobe Experience Platform建立、更新、啟用和刪除外部對象。
-hide: true
-hidefromtoc: true
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
+source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2219'
 ht-degree: 4%
 
 ---
@@ -528,24 +526,23 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **API格式**
 
-下列端點支援數個查詢引數，以協助篩選結果。 雖然這些引數是選用的，但強烈建議使用這些引數來協助您聚焦於結果。
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**查詢引數**
+<!-- **Query parameters**
 
-+++ 可用查詢引數的清單。
++++ A list of available query parameters. 
 
-| 參數 | 說明 | 範例 |
+| Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `limit` | 回應中傳回的專案數上限。 此值的範圍介於1到40之間。 預設的限制設為20。 | `limit=30` |
-| `sortBy` | 傳回專案的排序順序。 您可以依`name`或`createdAt`排序。 此外，您可以新增`-`符號來依&#x200B;**遞減**&#x200B;順序排序，而非&#x200B;**遞增**&#x200B;順序。 依預設，專案會依`createdAt`遞減排序。 | `sortBy=name` |
-| `property` | 此篩選器可決定要顯示哪些對象擷取執行。 您可以篩選下列屬性： <ul><li>`name`：可讓您依對象名稱篩選。 如果使用此屬性，您可以使用`=`、`!=`、`=contains`或`!=contains`來比較。 </li><li>`createdAt`：可讓您依據擷取時間篩選。 如果使用此屬性，您可以使用`>=`或`<=`來比較。</li><li>`status`：可讓您依據擷取回合的狀態進行篩選。 如果使用此屬性，您可以使用`=`、`!=`、`=contains`或`!=contains`來比較。 </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **要求**
 
@@ -594,19 +591,23 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | 屬性 | 類型 | 說明 |
 | -------- | ---- | ----------- |
 | `runs` | 物件 | 一個物件，其中包含屬於對象的擷取執行清單。 您可以在[擷取擷取狀態區段](#retrieve-ingestion-status)中找到有關這個物件的詳細資訊。 |
-| `_page` | 物件 | 包含結果清單分頁資訊的物件。 |
 
 +++
 
