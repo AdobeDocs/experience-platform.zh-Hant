@@ -4,14 +4,18 @@ title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
+source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1558'
 ht-degree: 2%
 
 ---
 
 # 區段定義端點
+
+>[!WARNING]
+>
+>不建議使用分段服務API以B2B實體建立對象。 您無法再使用下列B2B實體建立對象：帳戶、帳戶 — 個人關係、促銷活動、促銷活動成員、行銷清單、行銷清單成員、商機和機會 — 個人關係。
 
 Adobe Experience Platform可讓您建立區段定義，以從一組設定檔中定義一組特定屬性或行為。 區段定義是封裝以[!DNL Profile Query Language] (PQL)撰寫的查詢的物件。 區段定義會套用至設定檔，以建立對象。 此物件（區段定義）也稱為PQL述詞。 PQL述詞會根據與您提供給[!DNL Real-Time Customer Profile]的任何記錄或時間序列資料相關的條件，定義區段定義的規則。 請參閱[PQL指南](../pql/overview.md)，以取得有關寫入PQL查詢的詳細資訊。
 
@@ -338,7 +342,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 擷取特定區段定義 {#get}
 
-您可以向`/segment/definitions`端點發出GET要求，並提供您要在要求路徑中擷取的區段定義ID，以擷取特定區段定義的詳細資訊。
+您可以向`/segment/definitions`端點發出GET要求，並提供您要在要求路徑中擷取的區段定義ID，藉此擷取特定區段定義的詳細資訊。
 
 **API格式**
 
@@ -427,7 +431,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 
 ## 大量擷取區段定義 {#bulk-get}
 
-您可以向`/segment/definitions/bulk-get`端點發出POST要求，並在要求內文中提供區段定義的`id`值，以擷取多個指定區段定義的詳細資訊。
+您可以對`/segment/definitions/bulk-get`端點發出POST要求，並在要求內文中提供區段定義的`id`值，以擷取多個指定區段定義的詳細資訊。
 
 **API格式**
 
@@ -570,7 +574,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 ## 刪除特定區段定義 {#delete}
 
-您可以向`/segment/definitions`端點發出DELETE要求，並在要求路徑中提供您要刪除之區段定義的識別碼，以要求刪除特定區段定義。
+您可以向`/segment/definitions`端點發出DELETE要求，並在要求路徑中提供您要刪除之區段定義的ID，藉此要求刪除特定區段定義。
 
 >[!NOTE]
 >
@@ -606,7 +610,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 ## 更新特定區段定義
 
-您可以對`/segment/definitions`端點發出PATCH要求，並在要求路徑中提供您要更新之區段定義的識別碼，以更新特定區段定義。
+您可以對`/segment/definitions`端點發出PATCH要求，並在要求路徑中提供您要更新之區段定義的ID，以更新特定區段定義。
 
 **API格式**
 
@@ -709,7 +713,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 ## 轉換區段定義
 
-您可以透過向`/segment/conversion`端點發出POST要求，將`pql/text`與`pql/json`或`pql/json`之間的區段定義轉換為`pql/text`。
+您可以透過對`pql/text`端點發出POST要求，將`pql/json`與`pql/json`或`pql/text`之間的區段定義轉換為`/segment/conversion`。
 
 **API格式**
 

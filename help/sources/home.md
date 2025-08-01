@@ -2,18 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；來源聯結器；來源聯結器；來源；資料來源；資料來源；資料來源連線
 solution: Experience Platform
 title: Source聯結器概觀
-description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+description: Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1640'
-ht-degree: 8%
+source-wordcount: '1642'
+ht-degree: 12%
 
 ---
 
 # Source聯結器概觀
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源 (如 Adobe 應用程式、雲端型的儲存空間、資料庫和其他許多來源) 內嵌資料。 
+Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源 (如 Adobe 應用程式、雲端型儲存空間、資料庫和其他許多來源) 擷取資料。 
 
 [!DNL Flow Service]用於收集及集中來自Experience Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，可讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證協力廠商系統、設定擷取執行時間，以及管理資料擷取輸送量。
 
@@ -61,7 +61,7 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
@@ -126,6 +126,7 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 | 來源 | 擷取型別 | 雲端 |
 | --- | --- | --- |
+| [[!DNL Didomi]](../sources/connectors/consent-and-preferences/didomi.md) | 串流 | Azure |
 | [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | 批次 | Azure |
 
 {style="table-layout:auto"}

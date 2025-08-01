@@ -2,9 +2,9 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
+source-git-commit: a3db2b69400a43abe399f90036041aaeaf0bd0a0
 workflow-type: tm+mt
-source-wordcount: '3414'
+source-wordcount: '3496'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,17 @@ ht-degree: 5%
 沙箱工具功能可讓您將[!DNL Adobe Real-Time Customer Data Platform]和[!DNL Adobe Journey Optimizer]物件匯出至封裝。
 
 ### 即時客戶資料平台物件 {#real-time-cdp-objects}
+
+>[!BEGINSHADEBOX]
+
+### 多實體對象匯入的變更
+
+透過[B2B架構升級](../../rtcdp/b2b-architecture-upgrade.md)，如果在升級前已發佈包含這些對象的套件，您將無法再匯入具有B2B屬性和體驗事件的多實體對象。 這些對象將無法匯入，且無法自動轉換為新架構。
+
+若要解決此限制，您必須使用更新的對象建立新套件，然後使用沙箱工具將其匯入各自的目標沙箱。
+
+
+>[!ENDSHADEBOX]
 
 下表列出目前沙箱工具支援的[!DNL Adobe Real-Time Customer Data Platform]物件：
 
@@ -54,12 +65,12 @@ ht-degree: 5%
 | [!DNL Adobe Journey Optimizer] | 客群 | | 對象可以復製為歷程物件的相依物件。 您可以選取建立新受眾或重複使用目標沙箱中的現有受眾。 |
 | [!DNL Adobe Journey Optimizer] | 結構描述 | | 歷程中使用的結構描述可以復製為相依物件。 您可以選取建立新結構描述，或重複使用目標沙箱中的現有結構描述。 |
 | [!DNL Adobe Journey Optimizer] | 合併原則 | | 歷程中使用的合併原則可以復製為相依物件。 在目標沙箱中，您&#x200B;**無法**&#x200B;建立新的合併原則，您只能使用現有的合併原則。 |
-| [!DNL Adobe Journey Optimizer] | 歷程 | 歷程中使用的下列物件會復製為相依物件。 在匯入工作流程期間，您可以選取&#x200B;**[!UICONTROL 建立新的]**&#x200B;或&#x200B;**[!UICONTROL 使用現有的]**： <ul><li>客群</li><li>結構描述</li><li>自訂動作</li><li>活動</li><li>片段</li><li>內容範本</li><li>畫布詳細資訊</li></ul> | <ul><li>**[!UICONTROL 自訂動作]**：將歷程複製到另一個沙箱時，在匯入程式中選取&#x200B;**[!UICONTROL 使用現有]**&#x200B;時，您選取的現有自訂動作&#x200B;**必須**&#x200B;與來源自訂動作相同。 如果兩者不同，新歷程將有無法解決的錯誤。</li><li>將會複製歷程中使用的事件和事件詳細資訊。 它一律會在目標沙箱中建立新版本。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 歷程 | 歷程中使用的下列物件會復製為相依物件。 在匯入工作流程期間，您可以選擇&#x200B;**[!UICONTROL 建立新的]**&#x200B;或&#x200B;**[!UICONTROL 使用現有的]**： <ul><li>客群</li><li>畫布詳細資訊</li><li>內容範本</li><li>自訂動作</li><li>資料來源</li><li>活動</li><li>欄位群組</li><li>片段</li><li>結構描述</li></ul> | 當您在匯入程式期間選取&#x200B;**[!UICONTROL 使用現有]**&#x200B;將歷程複製到另一個沙箱時，您選擇的現有自訂動作&#x200B;**必須**&#x200B;與來源自訂動作完全相符。 如果兩者不相符，新歷程將產生無法解決的錯誤。<br>系統複製歷程中使用的事件和事件詳細資訊，並在目標沙箱中建立新版本。 |
 | [!DNL Adobe Journey Optimizer] | 動作 | | 歷程中使用的電子郵件和推播訊息可以復製為相依物件。 用於訊息個人化的歷程欄位中使用的管道動作活動不會檢查完整性。 不會複製內容區塊。<br><br>可以複製歷程中使用的更新設定檔動作。 自訂動作可獨立新增至套件。 歷程中使用的動作詳細資料也會複製。 它一律會在目標沙箱中建立新版本。 |
 | [!DNL Adobe Journey Optimizer] | 自訂動作 |  | 自訂動作可獨立新增至套件。 將自訂動作指派給歷程後，就無法再編輯它。 若要更新自訂動作，您應： <ul><li>在移轉歷程之前移動自訂動作</li><li>更新移轉後自訂動作的設定（例如請求標頭、查詢引數和驗證）</li><li>使用您在第一個步驟中新增的自訂動作移轉歷程物件</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 內容範本 | | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer行銷活動和歷程中重複使用自訂內容。 |
 | [!DNL Adobe Journey Optimizer] | 片段 | 所有巢狀片段。 | 片段可以復製為歷程物件的相依物件。 片段是可重複使用的元件，可在各個Journey Optimizer促銷活動和歷程的一封或多封電子郵件中參考。 |
-| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
 
 不會複製曲面（例如預設集）。 系統會根據訊息型別和表面名稱，自動選取目標沙箱上最接近的相符專案。 如果在目標沙箱上找不到表面，則表面複製將失敗，導致訊息複製失敗，因為訊息需要表面才能用於設定。 在這種情況下，至少需要為訊息的正確通道建立一個表面，副本才能運作。
 
@@ -126,7 +137,7 @@ ht-degree: 5%
 >
 >發佈後，無法變更套件的內容。 為避免相容性問題，請確保已選取所有必要的資產。 如果必須進行變更，您必須建立新封裝。
 
-您會回到[!UICONTROL 沙箱]環境中的&#x200B;**[!UICONTROL 套件]**&#x200B;索引標籤，您可以在其中看到新發佈的套件。
+您會回到&#x200B;**[!UICONTROL 沙箱]**&#x200B;環境中的[!UICONTROL 套件]索引標籤，您可以在其中看到新發佈的套件。
 
 ![醒目提示新發佈封裝的沙箱封裝清單。](../images/ui/sandbox-tooling/published-packages.png)
 
@@ -156,7 +167,7 @@ ht-degree: 5%
 
 若要使用現有物件，請選取相依物件旁的鉛筆圖示。
 
-![封裝物件與相依性]頁面會顯示包含在封裝中的資產清單。(../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![封裝物件與相依性[!UICONTROL 頁面會顯示包含在封裝中的資產清單。]](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
 隨即顯示建立新或使用現有專案的選項。 選取&#x200B;**[!UICONTROL 使用現有的]**。
 
@@ -168,7 +179,7 @@ ht-degree: 5%
 
 您返回到[!UICONTROL 封裝物件和相依性]頁面。 從這裡，選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成封裝匯入。
 
-![封裝物件和相依性[[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示[!UICONTROL 完成]。]](../images/ui/sandbox-tooling/finish-object-dependencies.png)]
+![封裝物件和相依性[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示]完成[!UICONTROL 。]](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## 匯出和匯入整個沙箱
 
@@ -187,7 +198,7 @@ ht-degree: 5%
 
 ![ [!UICONTROL 沙箱] **[!UICONTROL 封裝]**&#x200B;索引標籤醒目提示[!UICONTROL 建立封裝]。](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-在[!UICONTROL 建立封裝]對話方塊中，選取[!UICONTROL 封裝]的&#x200B;**[!UICONTROL 整個沙箱]**。 為您的新封裝提供[!UICONTROL 封裝名稱]，並從下拉式清單中選取&#x200B;**[!UICONTROL 沙箱]**。 最後，選取&#x200B;**[!UICONTROL 建立]**&#x200B;以確認您的專案。
+在&#x200B;**[!UICONTROL 建立封裝]**&#x200B;對話方塊中，選取[!UICONTROL 封裝]的[!UICONTROL 整個沙箱]。 為您的新封裝提供[!UICONTROL 封裝名稱]，並從下拉式清單中選取&#x200B;**[!UICONTROL 沙箱]**。 最後，選取&#x200B;**[!UICONTROL 建立]**&#x200B;以確認您的專案。
 
 ![ [!UICONTROL 建立封裝]對話方塊顯示已完成的欄位並醒目提示[!UICONTROL 建立]。](../images/ui/sandbox-tooling/create-package-dialog.png)
 
@@ -195,7 +206,7 @@ ht-degree: 5%
 
 ![醒目提示新發佈封裝的沙箱封裝清單。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-您會回到[!UICONTROL 沙箱]環境中的&#x200B;**[!UICONTROL 套件]**&#x200B;索引標籤，您可以在其中看到新發佈的套件。
+您會回到&#x200B;**[!UICONTROL 沙箱]**&#x200B;環境中的[!UICONTROL 套件]索引標籤，您可以在其中看到新發佈的套件。
 
 ### 匯入整個沙箱套件 {#import-entire-sandbox-package}
 
@@ -345,7 +356,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 以下影片旨在協助您瞭解沙箱工具，並概述如何建立新套件、發佈套件和匯入套件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3446101/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 後續步驟
 

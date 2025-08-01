@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platform可讓您使用RESTful API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用設定檔API存取實體（通常稱為「設定檔」）。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 3%
+source-wordcount: '1933'
+ht-degree: 2%
 
 ---
 
@@ -23,6 +23,25 @@ Adobe Experience Platform可讓您使用RESTful API或使用者介面存取[!DNL
 ## 快速入門
 
 本指南中使用的API端點是[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)的一部分。 繼續之前，請先檢閱[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何[!DNL Experience Platform] API所需必要標題的重要資訊。
+
+>[!BEGINSHADEBOX]
+
+## 實體解析度
+
+作為架構升級的一部分，Adobe引入帳戶和機會的實體解決方案，使用根據最新資料的確定性ID比對。 實體解析工作會在批次細分期間每日執行，然後再評估具有B2B屬性的多實體對象。
+
+此增強功能可讓Experience Platform識別並統一代表相同實體的多個記錄，進而改善資料一致性，並啟用更準確的受眾細分。
+
+以前，「帳戶」和「機會」依賴身分圖表式的解析，此解析會連結身分，包括所有歷史擷取。 在新的實體解析方法中，身分僅會根據最新資料連結
+
+### 實體解析如何運作？
+
+- **在**&#x200B;之前：若使用資料通用編號系統(DUNS)編號做為額外身分識別，且帳戶的DUNS編號已在來源系統（如CRM）中更新，則帳戶ID會連結到舊和新的DUNS編號。
+- **在**&#x200B;之後：如果將DUNS號碼當做其他身分識別使用，且帳戶的DUNS號碼已在來源系統（如CRM）中更新，則帳戶ID只會連結到新的DUNS號碼，因此能更準確地反映帳戶的目前狀態。
+
+更新後，[!DNL Profile Access] API現在會在實體解析作業週期完成後反映最新的合併設定檔檢視。 此外，一致的資料提供分段、啟用和分析等使用案例，並改善資料準確性和一致性。
+
+>[!ENDSHADEBOX]
 
 ## 擷取實體 {#retrieve-entity}
 

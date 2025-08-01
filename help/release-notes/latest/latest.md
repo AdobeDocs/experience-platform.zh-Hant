@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform 發行說明 (2025 年 7 月)
 description: Adobe Experience Platform 2025 年 7 月版發行說明。
-source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: ba475df04342424dc0b22cb1d3d429d12701dbd1
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 22%
@@ -144,4 +145,3 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | 支援[!DNL Salesforce]中記錄的軟刪除 | [!DNL Salesforce]來源現在支援透過選用的`includeDeletedObjects`引數包含軟性刪除的記錄。 若設為True，客戶可以在其[!DNL Salesforce]查詢中包含軟性刪除記錄，並將這些記錄帶入Experience Platform。 如需詳細資訊，請閱讀 [[!DNL Salesforce]  來源文件](../../sources/connectors/crm/salesforce.md)。 |
 
 如需更多資訊，請參閱[來源概觀](../../sources/home.md)。
-

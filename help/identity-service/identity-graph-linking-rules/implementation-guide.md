@@ -2,7 +2,7 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用Identity Graph連結規則設定實作資料時應遵循的建議步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 6%
@@ -203,7 +203,11 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 ![身分瀏覽頁面中反白顯示設定按鈕。](../images/implementation/settings.png "身分瀏覽頁面中反白顯示設定按鈕。"){zoomable="yes"}
 
-使用身分設定UI來指定您唯一的名稱空間，並依優先順序設定您的名稱空間。 套用完設定後，您必須至少等待六個小時才能繼續內嵌資料，因為新設定至少需要六個小時才能反映在Identity Service中。
+使用身分設定UI來指定您唯一的名稱空間，並依優先順序設定您的名稱空間。
+
+>[!IMPORTANT]
+>
+>套用完設定後，您必須至少等待24小時，才能繼續內嵌資料，因為新設定至少需要24小時，才能反映在Identity Service中。
 
 如需詳細資訊，請閱讀[身分設定UI指南](./identity-settings-ui.md)。
 
