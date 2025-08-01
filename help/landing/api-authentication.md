@@ -52,7 +52,7 @@ ht-degree: 2%
 
 ### 取得開發人員存取權 {#gain-developer-access}
 
-請聯絡貴組織的Admin Console管理員，將您作為開發人員新增至Experience Platform產品設定檔。 請參閱Admin Console檔案以取得如何[管理產品設定檔的開發人員存取權](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)的特定指示。
+請聯絡貴組織的Admin Console管理員，將您作為開發人員新增至Experience Platform產品設定檔。 請參閱Admin Console檔案以取得如何[管理產品設定檔的開發人員存取權](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)的特定指示。
 
 一旦指派您為開發人員，您就可以開始在[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)中建立整合。 這些整合是從外部應用程式和服務到Adobe API的管道。
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 
 您的Admin Console管理員必須將您作為使用者新增至相同的產品設定檔。 透過使用者存取權，您可以在UI中檢視您執行的API作業的結果。
 
-如需詳細資訊，請參閱[在Admin Console中管理使用者群組](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)的指南。
+如需詳細資訊，請參閱[在Admin Console中管理使用者群組](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)的指南。
 
 ## 產生API金鑰（使用者端ID）和組織ID {#generate-credentials}
 
