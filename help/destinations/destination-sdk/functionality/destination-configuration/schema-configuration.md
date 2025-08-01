@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定合作夥伴結構。
 title: 合作夥伴結構描述設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
+source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1910'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Experience Platform使用結構描述，以一致且可重複使用的方式說�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -47,7 +47,7 @@ Experience Platform使用結構描述，以一致且可重複使用的方式說�
 
 Destination SDK支援多個結構描述設定：
 
-* 靜態結構描述是透過`schemaConfig`區段中的`profileFields`陣列來定義。 在靜態結構描述中，您定義應顯示在`profileFields`陣列中Experience Platform UI的每個目標屬性。 如果您需要更新結構描述，您必須[更新目的地組態](../../authoring-api/destination-configuration/update-destination-configuration.md)。
+* 靜態結構描述是透過`profileFields`區段中的`schemaConfig`陣列來定義。 在靜態結構描述中，您定義應顯示在`profileFields`陣列中Experience Platform UI的每個目標屬性。 如果您需要更新結構描述，您必須[更新目的地組態](../../authoring-api/destination-configuration/update-destination-configuration.md)。
 * 動態結構描述會使用稱為[動態結構描述伺服器](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers)的其他目的地伺服器型別，以動態擷取支援的目標屬性，並根據您自己的API產生結構描述。 動態結構描述不使用`profileFields`陣列。 如果您需要更新結構描述，則無需[更新目的地組態](../../authoring-api/destination-configuration/update-destination-configuration.md)。 而是由動態結構描述伺服器從您的API擷取更新的結構描述。
 * 在架構設定中，您可以選擇新增必要（或預先定義）的對應。 使用者可以在Experience Platform UI中檢視這些對應，但在設定與目的地的連線時無法修改這些對應。 例如，您可以強制電子郵件位址列位一律傳送到目的地。
 
@@ -104,9 +104,9 @@ Destination SDK支援多個結構描述設定：
 | `useCustomerSchemaForAttributeMapping` | 布林值 | 選填 | 啟用或停用客戶結構描述中的屬性對應到您在`profileFields`陣列中定義的屬性。 <ul><li>如果設為`true`，使用者只會在對應欄位中看到來源欄。 `profileFields`不適用於此情況。</li><li>如果設為`false`，使用者可以從其結構描述將來源屬性對應到您在`profileFields`陣列中定義的屬性。</li></ul> 預設值為 `false`。 |
 | `profileRequired` | 布林值 | 選填 | 如果使用者應該能夠從Experience Platform將設定檔屬性對應到您目的地平台上的自訂屬性，請使用`true`。 |
 | `segmentRequired` | 布林值 | 必要 | Destination SDK需要此引數，且應一律設為`true`。 |
-| `identityRequired` | 布林值 | 必要 | 若使用者應能將Experience Platform中的[身分型別](identity-namespace-configuration.md)對應到您在`profileFields`陣列中定義的屬性，則設為`true`。 |
+| `identityRequired` | 布林值 | 必要 | 若使用者應能將Experience Platform中的`true`身分型別[對應到您在](identity-namespace-configuration.md)陣列中定義的屬性，則設為`profileFields`。 |
 | `segmentNamespaceAllowList` | 陣列 | 選填 | 允許使用者僅將對象從陣列中定義的對象名稱空間對應到目的地。 <br><br>在大多數情況下不建議使用此引數。 請改用`"segmentNamespaceDenyList":[]`以允許將所有型別的對象匯出至您的目的地。 <br><br>如果您的設定中同時缺少`segmentNamespaceAllowList`和`segmentNamespaceDenyList`，使用者將只能匯出源自[分段服務](../../../../segmentation/home.md)的對象。 <br><br>`segmentNamespaceAllowList`與`segmentNamespaceDenyList`互斥。 |
-| `segmentNamespaceDenyList` | 陣列 | 選填 | 限制使用者將對象從陣列中定義的對象名稱空間對應到目的地。 <br><br>Adobe建議設定`"segmentNamespaceDenyList":[]`，允許匯出所有對象，無論其來源為何。 <br><br>如果您的設定中同時缺少`segmentNamespaceAllowed`和`segmentNamespaceDenyList`，使用者將只能匯出源自[分段服務](../../../../segmentation/home.md)的對象。 <br><br>`segmentNamespaceAllowList`與`segmentNamespaceDenyList`互斥。 |
+| `segmentNamespaceDenyList` | 陣列 | 選填 | 限制使用者將對象從陣列中定義的對象名稱空間對應到目的地。 <br><br>Adobe建議設定`"segmentNamespaceDenyList":[]`，允許匯出所有對象，無論其來源為何。 <br><br>**重要：**&#x200B;若您在`segmentNamespaceDenyList`中未指定`schemaConfig`且未使用`segmentNamespaceAllowList`，則系統會自動將`segmentNamespaceDenyList`設定為`[]`。 這可防止日後失去自訂對象。 為安全起見，Adobe建議在您的設定中明確設定`"segmentNamespaceDenyList":[]`。 <br><br>`segmentNamespaceAllowList`與`segmentNamespaceDenyList`互斥。 |
 
 {style="table-layout:auto"}
 
@@ -148,13 +148,13 @@ Destination SDK支援建立動態合作夥伴方案。 相對於靜態結構描�
 
 | 參數 | 類型 | 必要/選用 | 說明 |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | 字串 | 必要 | 指示[!DNL Experience Platform]客戶如何連線至您的目的地。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。<br> <ul><li>如果Experience Platform客戶透過[此處](customer-authentication.md)說明的任何驗證方法登入您的系統，請使用`CUSTOMER_AUTHENTICATION`。 </li><li> 如果Adobe與您的目的地之間有全域驗證系統，且[!DNL Experience Platform]客戶不需要提供任何驗證認證即可連線至您的目的地，請使用`PLATFORM_AUTHENTICATION`。 在此情況下，您必須使用認證API [建立認證物件](../../credentials-api/create-credential-configuration.md)。 </li><li>如果不需要驗證即可將資料傳送至您的目的地平台，請使用`NONE`。 </li></ul> |
+| `dynamicEnum.authenticationRule` | 字串 | 必要 | 指示[!DNL Experience Platform]客戶如何連線至您的目的地。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。<br> <ul><li>如果Experience Platform客戶透過`CUSTOMER_AUTHENTICATION`此處[說明的任何驗證方法登入您的系統，請使用](customer-authentication.md)。 </li><li> 如果Adobe與您的目的地之間有全域驗證系統，且`PLATFORM_AUTHENTICATION`客戶不需要提供任何驗證認證即可連線至您的目的地，請使用[!DNL Experience Platform]。 在此情況下，您必須使用認證API [建立認證物件](../../credentials-api/create-credential-configuration.md)。 </li><li>如果不需要驗證即可將資料傳送至您的目的地平台，請使用`NONE`。 </li></ul> |
 | `dynamicEnum.destinationServerId` | 字串 | 必要 | 動態結構描述伺服器的`instanceId`。 此目的地伺服器包含Experience Platform將呼叫以擷取動態結構描述的API端點。 |
 | `dynamicEnum.value` | 字串 | 必要 | 動態架構的名稱，如動態架構伺服器設定中所定義。 |
 | `dynamicEnum.responseFormat` | 字串 | 必要 | 定義動態結構描述時一律設為`SCHEMA`。 |
 | `profileRequired` | 布林值 | 選填 | 如果使用者應該能夠從Experience Platform將設定檔屬性對應到您目的地平台上的自訂屬性，請使用`true`。 |
 | `segmentRequired` | 布林值 | 必要 | Destination SDK需要此引數，且應一律設為`true`。 |
-| `identityRequired` | 布林值 | 必要 | 若使用者應能將Experience Platform中的[身分型別](identity-namespace-configuration.md)對應到您在`profileFields`陣列中定義的屬性，則設為`true`。 |
+| `identityRequired` | 布林值 | 必要 | 若使用者應能將Experience Platform中的`true`身分型別[對應到您在](identity-namespace-configuration.md)陣列中定義的屬性，則設為`profileFields`。 |
 
 {style="table-layout:auto"}
 
