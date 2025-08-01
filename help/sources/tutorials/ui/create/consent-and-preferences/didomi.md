@@ -2,15 +2,20 @@
 title: 將Didomi連線至Experience Platform
 description: 瞭解如何使用UI將您的Didomi帳戶連結至Experience Platform。
 last-substantial-update: 2025-07-29T00:00:00Z
+badge: Beta
 exl-id: 1374574f-c8ba-4cf5-bad0-94a884f5c0a6
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1164'
 ht-degree: 3%
 
 ---
 
 # 將[!DNL Didomi]連線至Experience Platform
+
+>[!AVAILABILITY]
+>
+>[!DNL Didomi]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
 請閱讀本指南，瞭解如何使用UI中的來源工作區將您的[!DNL Didomi]帳戶連結至Adobe Experience Platform。
 
