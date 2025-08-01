@@ -8,7 +8,7 @@ feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2508'
+source-wordcount: '2507'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 ### 取得開發人員存取權 {#gain-developer-access}
 
-請聯絡貴組織的Admin Console管理員，將您作為開發人員新增至Experience Platform產品設定檔。 請參閱Admin Console檔案以取得如何[管理產品設定檔的開發人員存取權](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)的特定指示。
+請聯絡貴組織的Admin Console管理員，將您作為開發人員新增至Experience Platform產品設定檔。 請參閱Admin Console檔案以取得如何[管理產品設定檔的開發人員存取權](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)的特定指示。
 
 一旦指派您為開發人員，您就可以開始在[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)中建立整合。 這些整合是從外部應用程式和服務到Adobe API的管道。
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 
 您的Admin Console管理員必須將您作為使用者新增至相同的產品設定檔。 透過使用者存取權，您可以在UI中檢視您執行的API作業的結果。
 
-如需詳細資訊，請參閱[在Admin Console中管理使用者群組](https://helpx.adobe.com/tw/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)的指南。
+如需詳細資訊，請參閱[在Admin Console中管理使用者群組](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)的指南。
 
 ## 產生API金鑰（使用者端ID）和組織ID {#generate-credentials}
 
@@ -100,7 +100,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**[!UICONTROL OAuth Server-to-Server]**&#x200B;方法是日後唯一支援的權杖產生方法。 先前支援的&#x200B;**[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時，無法選取以進行新整合。 雖然使用JWT驗證方法的現有整合可繼續運作至2025年6月30日，Adobe強烈建議您在該日期之前將現有整合移轉至新的[!UICONTROL OAuth伺服器對伺服器]方法。 在[!BADGE 已棄用]一節中取得詳細資訊{type=negative}[產生JSON Web權杖(JWT)](#jwt)。
+>**[!UICONTROL OAuth Server-to-Server]**&#x200B;方法是日後唯一支援的權杖產生方法。 先前支援的&#x200B;**[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時，無法選取以進行新整合。 雖然使用JWT驗證方法的現有整合可繼續運作至2025年6月30日，Adobe強烈建議您在該日期之前將現有整合移轉至新的[!UICONTROL OAuth伺服器對伺服器]方法。 在[!BADGE 已棄用]{type=negative} [產生JSON Web權杖(JWT)](#jwt)一節中取得詳細資訊。
 
 ![選取Experience Platform API的OAuth伺服器對伺服器驗證方法。](./images/api-authentication/oauth-authentication-method.png)
 
@@ -177,9 +177,9 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 >
 >不建議使用產生存取權杖的JWT方法。 所有新的整合都必須使用[OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server)來建立。 Adobe也要求您在2025年6月30日前將現有的整合移轉至OAuth方法，以便您的整合能繼續運作。 請參閱下列重要檔案：
 > 
->* [您的應用程式從JWT移轉至OAuth的移轉指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
->* [使用OAuth的新舊應用程式實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
->* [使用OAuth伺服器對伺服器認證方法的優點](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+> * [您的應用程式從JWT移轉至OAuth的移轉指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+> * [使用OAuth的新舊應用程式實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+> * [使用OAuth伺服器對伺服器認證方法的優點](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 檢視已棄用的資訊
 
@@ -209,7 +209,7 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 **要求**
 
-以下請求會根據承載中提供的認證產生新的`{ACCESS_TOKEN}`。 此端點僅接受表單資料作為其裝載，因此必須向其指定`multipart/form-data`的`Content-Type`標頭。
+以下請求會根據承載中提供的認證產生新的`{ACCESS_TOKEN}`。 此端點僅接受表單資料作為其裝載，因此必須向其指定`Content-Type`的`multipart/form-data`標頭。
 
 ```shell
 curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
@@ -221,7 +221,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `{API_KEY}` | 您在[先前的步驟](#api-ims-secret)中擷取的`{API_KEY}` （[!UICONTROL 使用者端識別碼]）。 |
+| `{API_KEY}` | 您在`{API_KEY}`先前的步驟[!UICONTROL 中擷取的] （[使用者端識別碼](#api-ims-secret)）。 |
 | `{SECRET}` | 您在[先前步驟](#api-ims-secret)中擷取的使用者端密碼。 |
 | `{JWT}` | 您在[先前步驟](#jwt)產生的JWT。 |
 
@@ -241,8 +241,8 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `token_type` | 型別 of 正在傳回權杖。 對於存取權杖，此值一律為`bearer`。 |
-| `access_token` | 產生的`{ACCESS_TOKEN}`。 所有Experience Platform API呼叫都需要以這個值做為`Authentication`標題，且前置詞為`Bearer`。 |
+| `token_type` | 傳回的權杖型別。 對於存取權杖，此值一律為`bearer`。 |
+| `access_token` | 產生的`{ACCESS_TOKEN}`。 所有Experience Platform API呼叫都需要以這個值做為`Bearer`標題，且前置詞為`Authentication`。 |
 | `expires_in` | 存取Token過期前的剩餘毫秒數。 此值達到0後，必須產生新的存取權杖才能繼續使用Experience Platform API。 |
 
 +++
@@ -360,13 +360,13 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 >[!NOTE]
 >
->只有系統管理員可以將API指派給Experience Platform UI中的角色。
+> 只有系統管理員可以將API指派給Experience Platform UI中的角色。
 
 若要在Experience Platform API上使用及執行作業，系統管理員除了需要角色的指定許可權集之外，還需要新增API認證。 在章節中取得有關[管理角色](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role)的API認證的詳細資訊。
 
 以下影片教學課程也提供上述步驟的逐步解說，說明如何將開發人員新增至產品設定檔，以及將API指派至角色：
 
->[!VIDEO](https://video.tv.adobe.com/v/3446409/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## 其他資源 {#additional-resources}
 
