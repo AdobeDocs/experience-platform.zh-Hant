@@ -312,7 +312,7 @@ Query Service為跨產業和業務案例的各種使用案例提供解決方案�
 >
 >影片中描述的UI已過時，但工作流程中使用的邏輯保持不變。
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3470202?quality=12&learn=on&captions=chi_hant)
 
 ## 後續步驟
 
