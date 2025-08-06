@@ -3,24 +3,16 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 0954b5f22d609b0b12352de70f6c618cc88757c8
+source-git-commit: 92ba27aeb35685741151a618e64c78b4c8318865
 workflow-type: tm+mt
-source-wordcount: '1026'
-ht-degree: 4%
+source-wordcount: '910'
+ht-degree: 3%
 
 ---
 
 # [!DNL The Trade Desk] 連線
 
 ## 概觀 {#overview}
-
->[!IMPORTANT]
->
->* 自2025年7月31日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL The Trade Desk]**&#x200B;卡片。 這是因為目標服務內部升級所致。現有的&#x200B;**[!DNL The Trade Desk]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用）交易台]**&#x200B;以及名稱為&#x200B;**[!UICONTROL 交易台]**&#x200B;的新卡片現在可供您使用。
->* 使用目錄中的新&#x200B;**[!UICONTROL 交易台]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何使用中的資料流至&#x200B;**[!UICONTROL （已棄用）交易台]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。
->* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
->   * 流程規格 ID：`86134ea1-b014-49e8-8bd3-689f4ce70578`
->   * 連線規格 ID：`1029798b-a97f-4c21-81b2-e0301471166e`
 
 使用此目的地聯結器將設定檔資料傳送至[!DNL The Trade Desk]。 此聯結器會將資料傳送至[!DNL The Trade Desk]第一方端點。 Adobe Experience Platform與[!DNL The Trade Desk]之間的整合不支援匯出資料至[!DNL The Trade Desk]第三方端點。
 
@@ -75,7 +67,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
