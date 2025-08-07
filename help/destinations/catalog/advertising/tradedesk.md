@@ -3,9 +3,9 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 92ba27aeb35685741151a618e64c78b4c8318865
+source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '1017'
 ht-degree: 3%
 
 ---
@@ -13,6 +13,23 @@ ht-degree: 3%
 # [!DNL The Trade Desk] 連線
 
 ## 概觀 {#overview}
+
+
+>[!IMPORTANT]
+>
+> 自2025年7月起進行[內部升級](../../../release-notes/2025/july-2025.md#destinations)至目的地服務後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少至**，人數為[!DNL The Trade Desk]人。
+> > 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 如需詳細資訊，請參閱此頁面中的[必要對應](#mandatory-mappings)區段。
+>
+>**變更內容：**
+>
+>* ECID (Experience Cloud ID)對應現在是所有設定檔啟用的&#x200B;**必要**。
+>* 沒有ECID對應的設定檔將會從現有的啟用資料流中&#x200B;**捨棄**。
+>
+>**您需要執行的動作：**
+>
+>* 檢閱您的對象資料，以確認設定檔具有有效的ECID值。
+>* 監視您的啟用量度，以驗證預期的設定檔計數。
+
 
 使用此目的地聯結器將設定檔資料傳送至[!DNL The Trade Desk]。 此聯結器會將資料傳送至[!DNL The Trade Desk]第一方端點。 Adobe Experience Platform與[!DNL The Trade Desk]之間的整合不支援匯出資料至[!DNL The Trade Desk]第三方端點。
 
@@ -67,7 +84,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
@@ -121,7 +138,7 @@ ht-degree: 3%
 * **ECID** (Experience Cloud ID)
 * **交易台ID**
 
-如果無法對應所有必要的身分，將無法成功將對象啟用至[!DNL The Trade Desk]。 每個身分在整合中都有不同的用途，而目的地若要正常運作，則全部為必填。
+無法對應所有必要的身分，導致您無法完成啟動工作流程。 每個身分在整合中都有不同的用途，而目的地若要正常運作，則全部為必填。
 
 ![顯示必要對應的熒幕擷圖](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
