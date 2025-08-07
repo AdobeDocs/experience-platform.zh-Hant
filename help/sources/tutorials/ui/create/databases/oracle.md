@@ -1,69 +1,73 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Oracle DB；oracle db
-solution: Experience Platform
-title: 在使用者介面中建立Oracle DB Source連線
-type: Tutorial
-description: 瞭解如何使用Adobe Experience Platform UI建立Oracle DB來源連線。
+title: 使用UI將Oracle DB連線到Experience Platform
+description: 瞭解如何使用UI將您的Oracle DB執行個體連線到Experience Platform。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 2%
+source-wordcount: '463'
+ht-degree: 0%
 
 ---
 
 # 在使用者介面中建立[!DNL Oracle DB]來源連線
 
-Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用[!DNL Experience Platform]使用者介面建立[!DNL Oracle DB]來源聯結器的步驟。
+閱讀本指南，瞭解如何使用Adobe Experience Platform使用者介面中的來源工作區將您的[!DNL Oracle DB]執行個體連結至Experience Platform。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
    * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-如果您已經有有效的[!DNL Oracle DB]連線，您可以略過本檔案的其餘部分，並繼續進行有關[設定資料流](../../dataflow/databases.md)的教學課程。
+如果您已有[!DNL Oracle DB]連線，可以略過本檔案的其餘部分，並繼續進行有關[設定資料流](../../dataflow/databases.md)的教學課程。
 
 ### 收集必要的認證
 
-若要在[!DNL Experience Platform]上存取您的[!DNL Oracle DB]帳戶，您必須提供下列值：
+閱讀[[!DNL Oracle DB] 總覽](../../../../connectors/databases/oracle.md#prerequisites)以取得驗證的相關資訊。
 
-| 認證 | 說明 |
-| ---------- | ----------- |
-| `connectionString` | 用來連線到[!DNL Oracle DB]的連線字串。 [!DNL Oracle DB]連線字串模式為： `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`。 |
-| `connectionSpec.id` | 建立連線所需的唯一識別碼。 [!DNL Oracle DB]的連線規格識別碼為`d6b52d86-f0f8-475f-89d4-ce54c8527328`。 |
+## 瀏覽來源目錄
 
-如需開始使用的詳細資訊，請參閱[此Oracle檔案](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)。
+在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 選擇類別或使用搜尋列來尋找您的來源。
 
-## 連線您的[!DNL Oracle DB]帳戶
+若要連線到[!DNL Oracle DB]，請移至&#x200B;*[!UICONTROL 資料庫]*&#x200B;類別，選取&#x200B;**[!UICONTROL Oracle DB]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 設定]**。
 
-收集必要的認證後，您可以依照下列步驟連結[!DNL Oracle DB]帳戶以連線至[!DNL Experience Platform]。
+>[!TIP]
+>
+>來源顯示&#x200B;**[!UICONTROL 為新連線設定]**，如果帳戶已存在，則顯示&#x200B;**[!UICONTROL 新增資料]**。
 
-登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列中選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;**[!UICONTROL 來源]**&#x200B;工作區。 **[!UICONTROL 目錄]**&#x200B;畫面會顯示您可以建立帳戶的各種來源。
+![已選取「Oracle DB」的來源目錄。](../../../../images/tutorials/create/oracle/catalog.png)
 
-您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+## 使用現有帳戶 {#existing}
 
-在&#x200B;**[!UICONTROL 資料庫]**&#x200B;類別下，選取&#x200B;**[!UICONTROL Oracle DB]**。 如果這是您第一次使用此聯結器，請選取&#x200B;**[!UICONTROL 設定]**。 否則，請選取&#x200B;**[!UICONTROL 新增資料]**&#x200B;以建立新的[!DNL Oracle DB]聯結器。
+若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後選取您要使用的[!DNL Oracle DB]帳戶。
 
-![目錄](../../../../images/tutorials/create/oracle/catalog.png)
+![來源工作流程中已選取「現有帳戶」的現有帳戶介面。](../../../../images/tutorials/create/oracle/existing.png)
 
-**[!UICONTROL 連線至Oracle DB]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+## 建立新帳戶 {#new}
 
-### 新帳戶
+若要建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後提供名稱並選擇性地為您的帳戶新增說明。
 
-如果您正在使用新認證，請選取&#x200B;**[!UICONTROL 新帳戶]**。 在出現的輸入表單上，提供名稱、選擇性說明和您的[!DNL Oracle DB]認證。 完成時，請選取&#x200B;**[!UICONTROL 連線]**，然後等待一段時間以建立新連線。
+### 在Azure上連線到Experience Platform {#azure}
 
-![連線](../../../../images/tutorials/create/oracle/new.png)
+您可以使用連線字串將您的[!DNL Oracle DB]資料庫連線到Azure上的Experience Platform。
 
-### 現有帳戶
+若要使用連線字串驗證，請提供您的[連線字串](../../../../connectors/databases/oracle.md#azure)，並選取&#x200B;**[!UICONTROL 連線到來源]**。
 
-若要連線現有帳戶，請選取您要連線的[!DNL Oracle DB]帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
+![來源工作流程中的新帳戶介面已選取「連線字串驗證」。](../../../../images/tutorials/create/oracle/azure.png)
 
-![現有](../../../../images/tutorials/create/oracle/existing.png)
+### 在Amazon Web Services (AWS)上連線至Experience Platform {#aws}
 
-## 後續步驟
+>[!AVAILABILITY]
+>
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../../../landing/multi-cloud.md)。
 
-依照本教學課程中的指示，您已建立與[!DNL Oracle DB]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流以將資料帶入 [!DNL Experience Platform]](../../dataflow/databases.md)。
+若要建立新的[!DNL Oracle DB]帳戶並連線至AWS上的Experience Platform，請確定您位於VA6沙箱，然後提供驗證所需的[認證](../../../../connectors/databases/oracle.md#aws)。
+
+![來源工作流程中的新帳戶介面可連線至AWS。](../../../../images/tutorials/create/oracle/aws.png)
+
+## 建立[!DNL Oracle DB]資料的資料流
+
+現在您已經成功連線[!DNL Oracle DB]資料庫，您現在可以[建立資料流，並將資料庫中的資料擷取到Experience Platform](../../dataflow/databases.md)。
