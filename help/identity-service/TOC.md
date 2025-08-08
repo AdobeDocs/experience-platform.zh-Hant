@@ -1,7 +1,7 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Experience Platform Identity Service 指南
+user-guide-title: Adobe Experience Platform 身分識別服務
+breadcrumb-title: Experience Platform 身分識別服務指南
 user-guide-description: 跨裝置和系統橋接客戶身分識別，以提供個人化的數位體驗。
 feature: Identities
 role: Admin,Developer
@@ -13,7 +13,7 @@ ht-degree: 36%
 ---
 
 
-# Adobe Experience Platform Identity Service {#identity}
+# Adobe Experience Platform 身分識別服務 {#identity}
 
 - [身分識別服務概觀](home.md)
 - [Identity Service和即時客戶個人檔案](identity-and-profile.md)
