@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1643'
+source-wordcount: '1644'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | 資料庫 | 批次 | Azure |
 | [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | 雲端儲存空間 | 串流 | Azure、AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | 資料庫 | 批次 | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | 資料庫 | 批次 | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | 資料庫 | 批次 | Azure、AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | 雲端儲存空間 | 串流 | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | 資料庫 | 串流 | Azure、AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | 資料庫 | 批次 | Azure、AWS |

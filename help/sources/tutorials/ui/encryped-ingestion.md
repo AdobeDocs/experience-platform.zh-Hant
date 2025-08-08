@@ -1,20 +1,15 @@
 ---
 title: 將加密資料內嵌在來源UI Workspace中
 description: 瞭解如何將加密資料內嵌在來源UI工作區中。
-badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1436'
 ht-degree: 6%
 
 ---
 
 # 將加密資料內嵌在來源UI中
-
->[!AVAILABILITY]
->
->Beta版支援來源UI中的加密資料擷取。 功能和檔案可能會有所變更。
 
 您可以使用雲端儲存批次來源，將加密的資料檔案和資料夾擷取到Adobe Experience Platform。 透過加密的資料擷取，您可以運用非對稱加密機制，將批次資料安全地傳輸至Experience Platform。 支援的非對稱加密機製為PGP和GPG。
 
@@ -161,7 +156,7 @@ ht-degree: 6%
 * [設定資料流的擷取排程](../ui/dataflow/batch/cloud-storage.md#schedule-ingestion-runs)
 * [檢閱您的資料流](../ui/dataflow/batch/cloud-storage.md#review-your-dataflow)
 
-您可以在資料流[&#128279;](../ui/update-dataflows.md)成功建立後，繼續進行更新。
+您可以在資料流[成功建立後，繼續](../ui/update-dataflows.md)進行更新。
 
 ## 後續步驟
 
