@@ -5,7 +5,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
@@ -20,16 +20,16 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="串流輸送量"
->abstract="串流輸送量值會測量生產及開發沙箱中，每秒用於串流擷取至設定檔服務的合併尖峰傳入事件。"
+>abstract="串流輸送量值用以測量在生產與開發沙箱中，將串流攝取傳入輪廓服務時，每秒最高的合併傳入事件數。"
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="串流客群計數"
->abstract="每個沙箱的串流客群數量上限。此數量包含您沙箱中擁有的邊緣客群數量。"
+>abstract="每個沙箱的串流客群數量上限。此數值包括沙箱中的邊緣客群數量。"
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
->title="Edge對象"
+>title="邊緣客群"
 >abstract="每個沙箱的邊緣客群數量上限。"
 
 目前，容量支援下列服務：

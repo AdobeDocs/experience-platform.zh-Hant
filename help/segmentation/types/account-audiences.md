@@ -1,13 +1,13 @@
 ---
 title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
 source-wordcount: '1528'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -130,8 +130,8 @@ ht-degree: 20%
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="回顧時間範圍"
->abstract="使用回顧視窗可檢視個人層級事件的完整記錄。"
+>title="回顧視窗"
+>abstract="使用回顧視窗檢視人員層級事件的完整歷史記錄。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
