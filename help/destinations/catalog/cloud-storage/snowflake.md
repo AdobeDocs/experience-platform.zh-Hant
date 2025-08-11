@@ -1,18 +1,16 @@
 ---
-title: Snowflake連線
+title: Snowflake串流連線
 description: 使用私人清單將資料匯出至您的Snowflake帳戶。
-hide: true
-hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: dca3762169d2a469948ee7e877213697f4c444b6
+source-git-commit: b5f28a2df411d3aa99bc2714a4e2bb569c16dda1
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1128'
 ht-degree: 6%
 
 ---
 
-# Snowflake連線 {#snowflake-destination}
+# Snowflake串流連線 {#snowflake-destination}
 
 >[!IMPORTANT]
 >
