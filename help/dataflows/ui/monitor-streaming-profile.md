@@ -2,10 +2,10 @@
 title: 監視串流設定檔攝取
 description: 瞭解如何使用監控儀表板來監控串流設定檔擷取
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
+source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 20%
+source-wordcount: '1967'
+ht-degree: 19%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
+>串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
 
 ## 監視串流設定檔攝取的量度 {#streaming-profile-metrics}
 
@@ -191,12 +191,34 @@ ht-degree: 20%
 * **季節性帳戶**：識別由週期性行銷活動或產業特定週期驅動的尖峰流量期間。
 * **預測未來需求**：根據過去的季節性趨勢、計畫的行銷活動或主要事件，估計即將到來的流量和參與量。
 
-| 貢獻因數 | 內容 | 對使用案例的影響 | 最佳作法 |
+| 貢獻因數 | 內容 | 對使用案例的影響 | 最佳做法 |
 | --- | --- | --- | --- |
 | 批次至串流轉換 | 批次工作負荷轉換為串流可大幅增加輸送量，進而影響效能和資源配置。 例如，在沒有速率限制的事件之後執行大量設定檔更新。 | 不需要低延遲處理時，批次使用案例就不需要串流策略。 | 評估使用案例需求。 針對批次傳出行銷，請考慮使用[批次擷取](../../ingestion/batch-ingestion/overview.md)而非串流，以更有效率地管理資料擷取。 |
 | 不必要的資料擷取 | 個人化不需要擷取資料可增加輸送量，而不會增加值，進而浪費資源。 例如，不論相關性為何，都將所有Analytics流量擷取至設定檔。 | 過多的不相關資料會產生雜訊，使得識別具影響力的資料點變得更困難。 在定義和管理對象和設定檔時，這也會造成摩擦。 | 僅擷取使用案例所需的資料。 請確定您篩選掉不必要的資料。<ul><li>**Adobe Analytics**：使用[資料列層級篩選](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)來最佳化您的資料輸入。</li><li>**來源**：使用[[!DNL Flow Service] API來篩選所支援來源（如](../../sources/tutorials/api/filter.md)和[!DNL Snowflake]）的資料列層級資料[!DNL Google BigQuery]。</li></li>**Edge資料流**：設定[動態資料流](../../datastreams/configure-dynamic-datastream.md)，對來自WebSDK的流量執行列層級篩選。</li></ul> |
 
 {style="table-layout:auto"}
+
+### 常見問題 {#faq}
+
+請閱讀本節，以取得有關監控串流設定檔擷取的常見問題解答。
+
+#### 為什麼我的量度在容量和監控儀表板之間對於請求輸送量看起來不同？
+
++++回答
+
+[!UICONTROL 監視]儀表板會顯示擷取和處理的即時量度。 這些數字是活動時記錄的精確量度。 相反地，[!UICONTROL 容量]儀表板使用平滑機制來計算輸送量。 此機制有助於減少短暫的尖峰，使其不立即符合違規資格，並確保容量警報聚焦於持續趨勢，而非短暫的爆發。
+
+由於平滑機制，您可能會注意到：
+
+* [!UICONTROL 監視]中的小尖峰未出現在[!UICONTROL 容量]中。
+* [!UICONTROL 容量]中的值略低於相同時間戳記的[!UICONTROL 監視]。
+
+這兩個儀表板雖然準確，但設計用於不同的目的。
+
+* [!UICONTROL 正在監視]：詳細的、逐一的作業可見度。
+* [!UICONTROL 容量]：識別使用與違規模式的策略檢視。
+
++++
 
 ## 後續步驟 {#next-steps}
 
