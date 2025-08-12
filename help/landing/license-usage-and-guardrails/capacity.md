@@ -2,14 +2,28 @@
 title: 授權使用量和容量
 description: 瞭解您在Adobe Experience Platform中的授權使用量和容量限制。
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
+source-git-commit: b65765d8e93b13fbb3c2a3e44f47725b936223eb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 11%
+source-wordcount: '1537'
+ht-degree: 6%
 
 ---
 
+
 # 授權使用和容量
+
+>[!AVAILABILITY]
+>
+>若要使用此功能，您必須具備下列許可權：
+>
+>- **檢視授權使用量儀表板**
+>   - 此許可權可讓您&#x200B;**檢視**&#x200B;容量首頁。
+>- **管理沙箱**
+>   - 此許可權可讓您&#x200B;**編輯**&#x200B;您的容量配置。
+>
+>在[存取控制總覽](/help/access-control/home.md#permissions)中可以找到Experience Platform內許可權的更多資訊
+>
+>此外，如果您已購買「高輸送量串流分段」，您將&#x200B;**無法**&#x200B;使用容量來配置您的容量。 若要更新容量，請聯絡Adobe客戶服務。
 
 在Adobe Experience Platform中，容量可讓您知道您的組織是否已超過任何護欄，並提供有關如何解決這些問題的資訊。
 
@@ -53,7 +67,108 @@ Experience Platform會以15分鐘滾動間隔計算沙箱的輸送量。 此輸�
 
 如果您的使用量超過授權容量的100%，則會視為違反您的容量。 此時，您將會遇到效能延遲，而且您的服務等級目標(SLT)將&#x200B;**無法**&#x200B;保證。
 
-## 常見問題
+## 存取 {#access}
+
+若要存取容量概觀，請選取&#x200B;**[!UICONTROL 授權使用情況]**，然後選取&#x200B;**[!UICONTROL 容量]**。
+
+![已反白顯示存取[容量]區段的方法。](/help/landing/images/capacity/access-capacity.png)
+
+此時會顯示「產能概觀」頁面，顯示包括警示歷史記錄以及組織產能詳細資訊的資訊。
+
+![「容量概觀」頁面會完整顯示，並顯示警示歷程記錄和容量詳細資料區段。](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+
+### 警報歷史記錄 {#alert-history}
+
+**[!UICONTROL 警示歷史記錄]**&#x200B;區段會顯示貴組織內最近的容量違規。
+
+![顯示警示歷程記錄區段。](/help/landing/images/capacity/alert-history.png)
+
+| 欄名稱 | 說明 |
+| ----------- | ----------- |
+| 沙箱 | 發生容量違規的沙箱名稱。 |
+| 警報 | 沙箱中已破壞的容量。 |
+| 時間戳記 | 發生違規的資料和時間。 |
+
+若要檢視貴組織警示的完整歷史記錄，請選取![三個點圖示](/help/images/icons/more.png)，接著選取&#x200B;**[!UICONTROL 全部檢視]**。
+
+![顯示組織的完整警示歷史記錄。](/help/landing/images/capacity/full-alert-history.png)
+
+### 容量詳細資料 {#capacity-details}
+
+容量詳細資訊區段概述有關您組織容量的資訊。 在此區段中，您可以篩選每個沙箱並變更回顧期間。
+
+![回顧期間的沙箱選擇器和日期選擇器會醒目提示。](/help/landing/images/capacity/filter-sandbox-and-date.png)
+
+目前，這會顯示串流輸送量、串流對象和邊緣對象的容量資訊。
+
+#### 串流輸送量 {#streaming-throughput}
+
+串流輸送量區段會顯示有關整個組織沙箱的串流輸送量的資訊。 串流輸送量值會測量每秒將內嵌串流至設定檔服務的合併尖峰傳入事件。
+
+![顯示容量詳細資訊頁面中的串流輸送量區段。](/help/landing/images/capacity/streaming-throughput-section.png)
+
+| 欄名稱 | 說明 |
+| ----------- | ----------- |
+| 沙箱 | 沙箱的名稱。 |
+| 服務 | 沙箱使用的服務。 目前，唯一支援的值是設定檔。 |
+| 使用量（尖峰） | 在選取的回顧期間內，沙箱中資料的尖峰串流輸送量。 |
+| 容量 | 沙箱的最大尖峰串流輸送量。 |
+| 違規 | 如果發生違規，則為串流輸送量的違規型別。 |
+| 建議的動作 | 說明緩解違規的建議動作的欄。 |
+
+您可以選取個別沙箱，以檢視沙箱的串流輸送量的更詳細檢視。
+
+![在串流處理量區段中反白顯示沙箱。](/help/landing/images/capacity/select-sandbox.png)
+
+此時會顯示「串流輸送量詳細資訊」頁面。 您可以看到顯示與容量限制比較的請求輸送量的圖形、沙箱及其輸送量的清單，以及配置組織容量的按鈕。
+
+![顯示串流處理量頁面，顯示所選沙箱的串流處理量的詳細資訊。](/help/landing/images/capacity/streaming-capacity-allocation.png)
+
+若要更新組織的串流輸送量容量，請選取&#x200B;**[!UICONTROL 配置容量]**。
+
+![串流輸送量詳細資訊頁面中會醒目顯示[配置容量]按鈕。](/help/landing/images/capacity/select-allocate.png)
+
+配置頁面隨即顯示。 在此頁面中，您可以設定不同沙箱的容量。 所有容量的總和&#x200B;**必須**&#x200B;等於組織的容量總計。
+
+![顯示容量配置頁面。](/help/landing/images/capacity/allocate-capacity.png)
+
+>[!NOTE]
+>
+>您只能以&#x200B;**100**&#x200B;的順序設定新容量。 例如，您可以將沙箱的新容量值設為300或500，但您&#x200B;**無法**&#x200B;將此值設為450。
+>
+>如果值的順序不是100，則會相應地向上或向下舍入。
+
+更新容量配置後，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以完成更新。 請注意，變更最多可能需要10分鐘的時間才會反映在您的組織上。
+
+#### 客群計數 {#audience-count}
+
+**[!UICONTROL 串流對象計數]**&#x200B;和&#x200B;**[!UICONTROL Edge對象計數]**&#x200B;區段會顯示沙箱中的串流和邊緣對象數量，以及沙箱中允許的最大串流和邊緣對象數量。
+
+![顯示[對象計數]區段。](/help/landing/images/capacity/audience-count.png)
+
+| 欄名稱 | 說明 |
+| ----------- | ----------- |
+| 沙箱 | 沙箱的名稱。 |
+| 服務 | 用於沙箱的服務。 |
+| 使用方式 | 沙箱中列出型別的對象數。 |
+| 容量 | 沙箱中允許之所列型別的對象最大數量。 |
+
+## 串流輸送量最佳實務 {#suggestions}
+
+您可以採用下列其中一種建議來解決串流輸送量違規：
+
+1. 增加沙箱的已分配容量。
+2. 識別[監視儀表板](/help/dataflows/ui/monitor-streaming-profile.md)中的高輸送量資料流，並視需要對這些資料流套用節流或篩選。
+3. 透過使用批次擷取來減少延遲使用案例，讓您的擷取最佳化。
+
+此外，您可以檢視資料流，瞭解是否能將資料策略最佳化。
+
+| 貢獻因數 | 內容 | 對使用案例的影響 | 最佳做法 |
+| --- | --- | --- | --- |
+| 批次至串流轉換 | 批次工作負荷轉換為串流可大幅增加輸送量，進而影響效能和資源配置。 例如，在沒有速率限制的事件之後執行大量設定檔更新。 | 不需要低延遲處理時，批次使用案例就不需要串流策略。 | 評估使用案例需求。 針對批次傳出行銷，請考慮使用[批次擷取](/help/ingestion/batch-ingestion/overview.md)而非串流，以更有效率地管理資料擷取。 |
+| 不必要的資料擷取 | 個人化不需要擷取資料可增加輸送量，而不會增加值，進而浪費資源。 例如，不論相關性為何，都將所有Analytics流量擷取至設定檔。 | 過多的不相關資料會產生雜訊，使得識別具影響力的資料點變得更困難。 在定義和管理對象和設定檔時，這也會造成摩擦。 | 僅擷取使用案例所需的資料。 請確定您篩選掉不必要的資料。<ul><li>**Adobe Analytics**：使用[資料列層級篩選](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)來最佳化您的資料輸入。</li><li>**來源**：使用[[!DNL Flow Service] API來篩選所支援來源（如](/help/sources/tutorials/api/filter.md)和[!DNL Snowflake]）的資料列層級資料[!DNL Google BigQuery]。</li></li>**Edge資料流**：設定[動態資料流](/help/datastreams/configure-dynamic-datastream.md)，對來自WebSDK的流量執行列層級篩選。</li></ul> |
+
+## 常見問題 {#faq}
 
 以下章節概述有關容量功能的常見問題。
 
