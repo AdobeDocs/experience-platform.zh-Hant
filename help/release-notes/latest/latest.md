@@ -3,9 +3,9 @@ title: Adobe Experience Platform 發行說明 (2025 年 7 月)
 description: Adobe Experience Platform 2025 年 7 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1574'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Adobe Experience Platform 的新功能及現有功能更新：
 | 目標 | 說明 |
 | --- | --- |
 | [Google 目標客戶比對 + Display &amp; Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 連線功能限量開放使用 | 在 6 月短暫提供給所有客戶後，Adobe 已將此整合功能調整為限量開放使用。目前，僅有已啟用此功能的客戶才能存取此目標，同時 Adobe 和 Google 正在努力解決實施問題。如果您有興趣在繼續擴大推出後使用此整合功能，請聯絡您的 Adobe 代表並表達您的意願。 |
-| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md)內部升級 | 自2025年7月31日起，您可以在目的地目錄中並排看到兩張[!DNL The Trade Desk]卡片。 這是因為目標服務內部升級所致。<br><br>現有的[!DNL The Trade Desk]目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用）交易台]**&#x200B;以及名稱為&#x200B;**[!UICONTROL 交易台]**&#x200B;的新卡片現已可用。 使用目錄中的新&#x200B;**[!UICONTROL 交易台]**&#x200B;連線，以取得新的啟用資料流程。 <br><br>如果您有任何使用中的資料流至&#x200B;**[!UICONTROL （已棄用）交易台]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。 <br><br>如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：<ul><li>流程規格 ID：`86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>連線規格 ID：`1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
+| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) 內部升級 | 從 2025 年 7 月 31 日起，您可以在目標目錄中看到兩張 [!DNL The Trade Desk] 卡片並排顯示。這是因為目標服務進行內部升級所致。<br><br>現有的 [!DNL The Trade Desk] 目標連接器已重新命名為 **[!UICONTROL (Deprecated) The Trade Desk]**，並提供名為 **[!UICONTROL The Trade Desk]** 的全新卡片。使用目錄中新的 **[!UICONTROL The Trade Desk]** 連線，獲得全新的啟用資料流。<br><br>如果您有任何傳送至 **[!UICONTROL (Deprecated) The Trade Desk]** 目標的使用中資料流，此資料流將自動更新，您無需採取任何動作。<br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>連線規格 ID：`1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **全新或更新版功能**
 
@@ -62,8 +62,8 @@ Adobe Experience Platform 的新功能及現有功能更新：
 | 目標連線的帳戶名稱與說明 | 現在，您可以在連線至目標時[新增帳戶名稱與說明](/help/destinations/ui/connect-destination.md)，從而更有效地管理具有多個帳戶的目標。 |
 | 加強邊緣目標的資料流資訊 | 我們已改善 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-v2.md) 及[自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)目標的右側邊欄資訊，以顯示資料流名稱，讓您更清楚檢視相關聯的資料流設定，且有助於在檢閱現有資料流時減少混淆。目標設定畫面中的「**[!UICONTROL 資料流 ID]**」選擇器已更新為「**[!UICONTROL 資料流]**」，讓使用者介面資訊更清楚。 |
 | 目標選擇中的行銷動作可見度 | 行銷動作現在顯示於目標工作區之「**[[!UICONTROL 瀏覽]](/help/destinations/ui/destinations-workspace.md#browse)**」索引標籤的右側邊欄中，以及「**[[!UICONTROL 資料流執行]](/help/dataflows/ui/monitor-destinations.md)**」頁面上，無需導覽至檢視頁面，即可立即清楚檢視行銷動作的變更。此增強功能可讓您在目標設定期間更輕鬆驗證行銷動作設定，藉此提升使用者體驗。 |
-| [!BADGE 限量測試版]{type=Informative} 編輯目標的行銷動作 | 您現在可以[編輯現有目的地的行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。 此功能目前在限量測試版中提供。若要要求存取此功能，請聯絡您的 Adobe 代表。 |
-| [!BADGE 限量測試版]{type=Informative} 編輯目標 | 您現在可以在目的地組態[建立後](/help/destinations/ui/edit-destination.md)編輯它。 此功能目前在限量測試版中提供。若要要求存取此功能，請聯絡您的 Adobe 代表。 |
+| [!BADGE 限量測試版]{type=Informative} 編輯目標的行銷動作 | 您現在可以針對現有目標[編輯行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。此功能目前在限量測試版中提供。若要要求存取此功能，請聯絡您的 Adobe 代表。 |
+| [!BADGE 限量測試版]{type=Informative} 編輯目標 | 建立目標設定後，您現在可以[編輯目標設定](/help/destinations/ui/edit-destination.md)。此功能目前在限量測試版中提供。若要要求存取此功能，請聯絡您的 Adobe 代表。 |
 
 **修正**
 
@@ -135,13 +135,13 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 
 | 來源 | 說明 |
 | --- | --- |
-| [!BADGE 的]{type=Informative}Beta[!DNL Didomi]支援(串流SDK) | 使用 [!DNL Didomi] 來源，從 [!DNL Didomi] 攝取同意與偏好管理資料，從而支援隱私權法規遵循和經過同意的行銷策略。請閱讀 [[!DNL Didomi] 來源概觀](../../sources/connectors/consent-and-preferences/didomi.md)，以了解有關如何設定的資訊。如需有關建立來源連線的步驟，請閱讀 [[!DNL Didomi] 來源連線指南](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md)。 |
+| [!BADGE Beta]{type=Informative} 支援 [!DNL Didomi] (串流 SDK) | 使用 [!DNL Didomi] 來源，從 [!DNL Didomi] 攝取同意與偏好管理資料，從而支援隱私權法規遵循和經過同意的行銷策略。請閱讀 [[!DNL Didomi] 來源概觀](../../sources/connectors/consent-and-preferences/didomi.md)，以了解有關如何設定的資訊。如需有關建立來源連線的步驟，請閱讀 [[!DNL Didomi] 來源連線指南](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md)。 |
 
 **全新或更新版功能**
 
 | 功能 | 說明 |
 | --- | --- |
 | 支援使用 [!DNL Flow Service] API，在所選來源中變更資料擷取 | 您現在可以建立資料流，使用來源連接器來啟用變更資料擷取，從而進行增量攝取。此功能可讓客戶使用變更資料類型進行增量攝取，從而提高資料新鮮度並減少處理的額外負荷。如需詳細資訊，請閱讀[針對來源使用變更資料擷取](../../sources/tutorials/api/change-data-capture.md) |
-| 支援[!DNL Salesforce]中記錄的軟刪除 | [!DNL Salesforce]來源現在支援透過選用的`includeDeletedObjects`引數包含軟性刪除的記錄。 若設為True，客戶可以在其[!DNL Salesforce]查詢中包含軟性刪除記錄，並將這些記錄帶入Experience Platform。 如需詳細資訊，請閱讀 [[!DNL Salesforce]  來源文件](../../sources/connectors/crm/salesforce.md)。 |
+| 支援 [!DNL Salesforce] 的記錄軟刪除 | [!DNL Salesforce] 來源現在支援透過選用的 `includeDeletedObjects` 參數包含軟刪除的記錄。當設定為 true 時，客戶可以在其 [!DNL Salesforce] 查詢中包括軟刪除的記錄，並將這些記錄引入 Experience Platform。如需詳細資訊，請閱讀 [[!DNL Salesforce]  來源文件](../../sources/connectors/crm/salesforce.md)。 |
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
