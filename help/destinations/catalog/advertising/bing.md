@@ -3,20 +3,42 @@ keywords: 廣告；bing；
 title: Microsoft Bing連線
 description: 透過Microsoft Bing連線目的地，您可以在整個Microsoft Advertising網路（包括顯示廣告、搜尋和原生）中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 10%
+source-wordcount: '981'
+ht-degree: 9%
 
 ---
 
-# [!DNL Microsoft Bing]個連線 {#bing-destination}
+# [!DNL Microsoft Bing] 連線 {#bing-destination}
 
 ## 概觀 {#overview}
 
+
+>[!IMPORTANT]
+>
+>* 自2025年8月11日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL Microsoft Bing]**&#x200B;卡片。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Microsoft Bing]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;的新卡片。
+>* 使用目錄中的新&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何前往&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**&#x200B;目的地的作用中資料流，資料流會自動更新，因此您不需要採取任何動作。
+>* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
+>   * 流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
+>   * 連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>
+> 此升級後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少到**，人數為[!DNL Microsoft Bing]。
+> > 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 如需詳細資訊，請參閱此頁面中的[必要對應](#mandatory-mappings)區段。
+>
+>**變更內容：**
+>
+>* ECID (Experience Cloud ID)對應現在是所有設定檔啟用的&#x200B;**必要**。
+>* 沒有ECID對應的設定檔將會從現有的啟用資料流中&#x200B;**捨棄**。
+>
+>**您需要執行的動作：**
+>
+>* 檢閱您的對象資料，以確認設定檔具有有效的ECID值。
+>* 監視您的啟用量度，以驗證預期的設定檔計數。
+
 使用[!DNL Microsoft Bing]目的地將設定檔資料傳送至整個[!DNL Microsoft Advertising Network]，包括[!DNL Display Advertising]、[!DNL Search]和[!DNL Native]。
 
-[!DNL Microsoft Bing]目的地會在Microsoft中建立&#x200B;*[!DNL Custom Audiences]*。 如[Microsoft Advertising檔案](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500)所列，這些在[!DNL Microsoft Search Network]和[!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic])中均可用。
+[!DNL Microsoft Bing]目的地會在Microsoft中建立&#x200B;*[!DNL Custom Audiences]*。 如[!DNL Microsoft Search Network]Microsoft Advertising檔案[!DNL Audience Network]所列，這些在[!DNL Native]和[!DNL Display] ([!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))中均可用。
 
 若要將設定檔資料傳送至[!DNL Microsoft Bing]，您必須先連線至目的地。
 
@@ -31,6 +53,7 @@ ht-degree: 10%
 | 身分識別 | 說明 |
 |---|---|
 | MAID | MICROSOFT ADVERTISING ID |
+| ECID | Experience Cloud ID。 此身分是整合正常運作的必要條件，但不會用於對象啟用。 |
 
 {style="table-layout:auto"}
 
@@ -62,7 +85,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=zh-Hant)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步會移轉到Experience Platform。
 
 設定目的地時，您必須提供下列資訊：
 
@@ -76,7 +99,7 @@ ht-degree: 10%
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。
 
-### 填寫目標詳細資訊 {#parameters}
+### 填寫目標詳細資料 {#parameters}
 
 在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
 
@@ -106,6 +129,15 @@ ht-degree: 10%
 在[對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling)步驟中，您必須在[!UICONTROL 對應ID]欄位中手動對應對象名稱。 這可確保對象中繼資料正確傳遞至[!DNL Bing]。
 
 ![顯示對象排程畫面的UI影像，其中包含如何將對象名稱對應至Bing對應ID的範例。](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### 強制對應 {#mandatory-mappings}
+
+[支援的身分](#supported-identities)區段中說明的所有目標身分都是強制性的，必須在對象啟用程式期間進行對應。 其中包括：
+
+* **MAID** (Microsoft Advertising ID)
+* **ECID** (Experience Cloud ID)
+
+無法對應所有必要的身分，導致您無法完成啟動工作流程。 每個身分在整合中都有不同的用途，而目的地若要正常運作，則全部為必填。
 
 ## 匯出的資料 {#exported-data}
 
