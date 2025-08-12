@@ -2,9 +2,9 @@
 title: Adobe Content Analytics擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Content Analytics標籤擴充功能。
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45ce2b0ff57155dccef2f7c94390a6ddff5c17cd
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -19,28 +19,26 @@ ht-degree: 0%
 
 ## 安裝Adobe Content Analytics標籤擴充功能 {#install}
 
->[!NOTE]
->
->Adobe Content Analytics標籤擴充功能會作為標籤屬性的一部分自動安裝，在使用[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}時自動建立。
+Adobe Content Analytics標籤擴充功能會作為標籤屬性的一部分自動安裝，在使用[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)時自動建立標籤屬性。
 
+<!--
+### Manual installation
 
-### 手動安裝
+In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-若是手動設定，Adobe Content Analytics標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參閱有關[建立標籤屬性](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/implement-in-websites/configure-tags/create-a-property)的檔案。
+After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
 
-建立屬性之後，或選取使用[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/content-analytics/configuration/guided)建立的屬性時，請開啟屬性並選取左側列的&#x200B;**[!UICONTROL 擴充功能]**&#x200B;標籤。
+Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the **[!DNL Adobe Content Analytics]** extension and select **[!UICONTROL Install]**.
 
-選取&#x200B;**[!UICONTROL 目錄]**&#x200B;索引標籤。 從可用的擴充功能清單中，尋找&#x200B;**[!DNL Adobe Content Analytics]**&#x200B;擴充功能，然後選取&#x200B;**[!UICONTROL 安裝]**。
+![Image showing the Tags UI with the Web SDK extension selected](assets/aca-tag-install.png)
 
-![影像顯示已選取Web SDK擴充功能的Tags UI](assets/aca-tag-install.png)
-
-選取&#x200B;**[!UICONTROL 安裝]**&#x200B;之後，您必須設定Adobe Content Analytics標籤延伸並儲存設定。
-
+After selecting **[!UICONTROL Install]**, you must configure the Adobe Content Analytics tag extension and save the configuration.
+-->
 
 <!--
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
@@ -52,7 +50,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## 設定資料串流
 
-[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/content-analytics/configuration/guided)會自動選取&#x200B;**[!UICONTROL 沙箱]**&#x200B;和&#x200B;**[!UICONTROL 生產資料流]**&#x200B;的適當值。 您可以選擇設定其他&#x200B;**[!UICONTROL 中繼資料流]**&#x200B;和&#x200B;**[!UICONTROL 開發資料流]**。
+[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)會自動選取&#x200B;**[!UICONTROL 沙箱]**&#x200B;和&#x200B;**[!UICONTROL 生產資料流]**&#x200B;的適當值。 您可以選擇設定其他&#x200B;**[!UICONTROL 中繼資料流]**&#x200B;和&#x200B;**[!UICONTROL 開發資料流]**。
 
 ![此影像顯示標籤UI中Adobe Content Analytics標籤擴充功能的「資料串流」設定](assets/aca-tag-datastreams.png)
 
@@ -63,7 +61,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 >當您設定另一個沙箱和資料串流時，請確保
 >
 >* 選取的沙箱尚未與其他Content Analytics設定建立關聯，並且
->* 任何選取的資料流都會將Experience Platform服務設定為已啟用的Content Analytics體驗事件資料集。
+>* 任何選取的資料流都會將Experience Platform服務設定為已啟用Content Analytics體驗事件資料集。
 
 請參閱[資料串流](../../../../datastreams/overview.md)指南，瞭解如何設定資料串流。
 
@@ -83,7 +81,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## 設定事件篩選
 
-在&#x200B;**[!UICONTROL 事件篩選]**&#x200B;區段中，您可以修改規則運算式，以便在為Content Analytics收集資料時篩選&#x200B;**[!UICONTROL 頁面URL]**&#x200B;和&#x200B;**[!UICONTROL Assets URL]**。 您在[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/content-analytics/configuration/guided)中定義的規則運算式會自動填入。
+在&#x200B;**[!UICONTROL 事件篩選]**&#x200B;區段中，您可以修改規則運算式，以便在為Content Analytics收集資料時篩選&#x200B;**[!UICONTROL 頁面URL]**&#x200B;和&#x200B;**[!UICONTROL Assets URL]**。 您在[Content Analytics引導式設定精靈](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided)中定義的規則運算式會自動填入。
 
 ![此影像顯示標籤UI中Adobe Content Analytics標籤擴充功能的事件篩選設定](assets/aca-tag-eventfiltering.png)
 
@@ -95,5 +93,5 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 您可以使用&#x200B;**[!UICONTROL 測試Regex]**，在&#x200B;**[!UICONTROL 規則運算式測試器]**&#x200B;中測試您的規則運算式。
 
-![在標籤UI中顯示Adobe Content Analytics標籤擴充功能之規則運算式測試器的影像](assets/aca-tag-regextester.png)
+![在標籤UI中顯示Adobe Content Analytics標籤延伸模組規則運算式測試器的影像](assets/aca-tag-regextester.png)
 
