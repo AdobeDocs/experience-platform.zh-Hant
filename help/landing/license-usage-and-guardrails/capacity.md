@@ -2,7 +2,7 @@
 title: 授權使用量和容量
 description: 瞭解您在Adobe Experience Platform中的授權使用量和容量限制。
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: b65765d8e93b13fbb3c2a3e44f47725b936223eb
+source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%
@@ -59,7 +59,7 @@ ht-degree: 6%
 
 對象容量處於&#x200B;**沙箱**&#x200B;層級。 這表示，對於您組織內的每個沙箱，您可以擁有500個串流對象，其中150個可以是Edge對象。
 
-輸送量容量為&#x200B;**組織**&#x200B;層級，可分配給您個別的沙箱。 例如，使用串流分段輸送量的1500 rps，您可以將生產沙箱設定為1500 rps，將開發沙箱設定為150 rps。
+輸送量容量為&#x200B;**組織**&#x200B;層級，可分配給您個別的沙箱。 例如，使用串流分段輸送量的1500 rps，您可以將生產沙箱設定為1350 rps，將開發沙箱設定為150 rps。
 
 Experience Platform會以15分鐘滾動間隔計算沙箱的輸送量。 此輸送量以即時測量，每60秒會重新整理資料一次。
 

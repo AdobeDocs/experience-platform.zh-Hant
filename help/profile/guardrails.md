@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: 了解設定檔資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1536201961211aeb747e418794196c146d86e869
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '2636'
+source-wordcount: '2649'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 >[!IMPORTANT]
 >
->除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 本檔案提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。 檢閱下列護欄時，系統假設您已正確地模型化資料。 如果您有任何關於如何模型化資料的問題，請聯絡您的客戶服務代表。
 
@@ -125,7 +125,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 | 所有沙箱的串流輸送量 | 1500 RPS | 效能護欄 | 串流區段支援生產及開發沙箱中每秒1500個傳入事件的合併峰值。 串流區段最多可能需要5分鐘，才能讓設定檔符合區段會籍資格。 深入瞭解[串流對象](/help/segmentation/methods/streaming-segmentation.md)。 |
 | 每個沙箱的批次對象 | 4000 | 效能護欄 | 每個沙箱最多可以有4000個&#x200B;**作用中**&#x200B;批次對象。 只要每個&#x200B;**個別**&#x200B;沙箱中的批次對象少於4000個，您每個組織可以有超過4000個批次對象。 嘗試建立其他批次對象可能會影響系統效能。 |
 | 每個沙箱的帳戶對象 | 50 | 系統強制的護欄 | 您最多可以在沙箱中建立50個帳戶對象。 當您在沙箱中達到50個對象後，嘗試建立新帳戶對象時，**[!UICONTROL 建立對象]**&#x200B;控制項會停用。 深入瞭解[帳戶對象](/help/segmentation/types/account-audiences.md)。 |
-| 每個沙箱的已發佈組合 | 10 | 效能護欄 | 一個沙箱中最多可以有10個已發佈的組合。 進一步瞭解UI指南[中的](/help/segmentation/ui/audience-composition.md)對象構成。 |
+| 每個沙箱的已發佈組合 | 10 | 效能護欄 | 一個沙箱中最多可以有10個已發佈的組合。 進一步瞭解UI指南[中的](/help/segmentation/ui/audience-composition.md)對象構成。 **注意**：使用同盟對象組合建立的組合&#x200B;**不**&#x200B;計入此護欄。 |
 | 最大對象人數 | 30% | 效能護欄 | 建議的對象最大成員資格為系統中設定檔總數的30%。 您可以建立具有超過30%設定檔的對象為成員，或是多個大型對象，但會影響系統效能。 |
 | 彈性的對象評估執行 | 每年50個（生產沙箱）<br/>100個（開發沙箱） | 系統強制的護欄 | 您每年每個&#x200B;**生產**&#x200B;沙箱最多可執行50次彈性對象評估。 您每年每個&#x200B;**開發**&#x200B;沙箱最多可執行100次彈性對象評估。 |
 | 彈性的對象評估執行 | 每天2個 | 系統強制的護欄 | 每個沙箱每天最多執行2次。 |
@@ -188,7 +188,7 @@ Dimension實體提供查詢資料，可協助並簡化多實體區段定義，�
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=zh-Hant#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
