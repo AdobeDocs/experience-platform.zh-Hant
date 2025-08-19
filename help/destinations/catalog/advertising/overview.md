@@ -3,9 +3,9 @@ keywords: 廣告目的地；目的地；平台目的地
 title: Advertising目的地概觀
 description: 將Adobe Experience Platform連線至第三方廣告平台(例如DSP、廣告網路、SSP)，並在這些平台上共用假名對象。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a0c1ddc5bcdd8b89e7605491441d56199f301e9e
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '286'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,8 @@ ht-degree: 1%
 
 ### 連線
 
-* [(Beta) Acxiom對象分佈](acxiom-audience-distribution.md)
+* [(Beta) Acxiom對象分佈](acxiom-audience-connection.md)
+* [(Beta) Acxiom Real ID受眾連線](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising Cloud連線](adobe-advertising-cloud-connection.md)
 * [Amazon Ads連線](amazon-ads.md)
 * [Bombora連線](bombora.md)
