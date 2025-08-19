@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
+source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '631'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 擷取您的Experience Platform [!DNL Azure Blob Storage]認證，讓您的[!DNL Databricks]帳戶稍後可以存取。
 
-若要擷取您的認證，請向[!DNL Connectors] API的`/credentials`端點發出GET請求。
+若要擷取您的認證，請向`/credentials` API的[!DNL Connectors]端點發出GET請求。
 
 **API格式**
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應提供您的認證(`containerName`、`SASToken`、`storageAccountName`)，以供稍後在[!DNL Databricks]的[!DNL Apache Spark]設定中使用。
+成功的回應提供您的認證(`containerName`、`SASToken`、`storageAccountName`)，以供稍後在[!DNL Apache Spark]的[!DNL Databricks]設定中使用。
 
 +++檢視回應範例
 
@@ -76,7 +76,7 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `containerName` | [!DNL Azure Blob Storage]容器的名稱。 稍後當您完成[!DNL Databricks]的[!DNL Apache Spark]設定時，將會使用此值。 |
+| `containerName` | [!DNL Azure Blob Storage]容器的名稱。 稍後當您完成[!DNL Apache Spark]的[!DNL Databricks]設定時，將會使用此值。 |
 | `SASToken` | 您的[!DNL Azure Blob Storage]的共用存取權簽章權杖。 此字串包含授權請求所需的所有資訊。 |
 | `storageAccountName` | 儲存體帳戶的名稱。 |
 | `SASUri` | 您的[!DNL Azure Blob Storage]的共用存取權簽章URI。 此字串是[!DNL Azure Blob Storage]的URI組合，您要對其驗證以及它對應的SAS權杖。 |
@@ -160,6 +160,12 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | SAS 權杖 | 您的[!DNL Azure Blob Storage]的共用存取權簽章權杖。 您可以擷取[!DNL Azure Blob Storage]認證以取得此值。 |
 
 ![Azure上的Databricks UI。](../../images/tutorials/create/databricks/databricks-ui.png)
+
+如果未提供，則流程執行中的複製活動會失敗並傳回下列錯誤：
+
+```shell
+Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
 
 ## 將[!DNL Databricks]連線至Experience Platform
 
