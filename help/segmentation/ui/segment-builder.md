@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
+source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
 workflow-type: tm+mt
-source-wordcount: '5188'
-ht-degree: 11%
+source-wordcount: '5174'
+ht-degree: 10%
 
 ---
 
@@ -274,7 +274,7 @@ ht-degree: 11%
 
 | 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
 | --------------- | ----------- | ------------------- | ------- |
-| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;**&#x200B;**。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -330,7 +330,7 @@ ht-degree: 11%
 >[!NOTE]
 >
 >使用「之後」時間限制時，後一個事件發生的次數可能會超過時間限制內所列的時間量。 >
->&#x200B;>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
+>>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
 >
 >此外，這兩個時間限制可以相互協調使用。
 >
@@ -375,28 +375,28 @@ ht-degree: 11%
 
 ![合併原則選擇器會反白顯示。 這可讓您選擇要為區段定義選取的合併原則。](../images/ui/segment-builder/merge-policy-selector.png)
 
-## 區段定義屬性 {#segment-properties}
+## 客群屬性 {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="區段定義屬性"
->abstract="區段定義屬性區段會顯示結果區段定義的大小預估值，顯示合格的設定檔數與設定檔總數的比較。這可讓您在建立對象本身之前，視需要調整區段定義。"
+>title="客群屬性"
+>abstract="對象屬性區段會顯示產生的對象規模的預估值，顯示合格的設定檔數量與設定檔總數的比較。 這可讓您在建立受眾本身之前，視需要調整受眾。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="合格的設定檔"
->abstract="合格的設定檔表示符合區段定義規則的設定檔實際數量。執行區段評估工作之後，此數字每 24 小時更新一次。"
+>abstract="合格的設定檔會指出符合對象規則的實際設定檔數量。 執行區段評估工作之後，此數字每 24 小時更新一次。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="預估的設定檔"
->abstract="預估的設定檔是指根據範例工作，會符合區段定義規則的設定檔大約數量。"
+>abstract="預估的設定檔會根據範例工作，指出符合對象規則的大約設定檔數。"
 
 建立區段定義時，工作區右側的&#x200B;**[!UICONTROL 對象屬性]**&#x200B;區段會顯示結果區段定義的大小預估值，好讓您在建立對象本身之前根據需要調整區段定義。
 
@@ -404,22 +404,22 @@ ht-degree: 11%
 
 合格設定檔的時間戳記表示最近的&#x200B;**批次**&#x200B;區段評估工作，且對於使用串流或邊緣區段評估的區段定義顯示為&#x200B;**not**。 如果您編輯區段定義，則在下次執行區段評估工作之前，合格設定檔的數量將保持不變。
 
-根據&#x200B;**[!UICONTROL 範例工作]**，**預估的設定檔**&#x200B;表示&#x200B;**大約**&#x200B;個設定檔數目。 這表示樣本資料是以更大的設定檔集進行預計，因此會產生可能與合格設定檔實際數量不同的預估數量。預估的設定檔範例具有95%信賴區間。
+根據&#x200B;**[!UICONTROL 範例工作]**，**預估的設定檔**&#x200B;表示設定檔的大致範圍&#x200B;**為**。 這表示樣本資料是以更大的設定檔集進行預計，因此會產生可能與合格設定檔實際數量不同的預估數量。預估的設定檔範例具有95%信賴區間。
 
 此數字在兩種情況下更新：
 
-1. 客戶資料變更超過5%，或最後一個範例工作超過七天。
+1. 客戶資料變更超過3%，或最後一個範例工作超過三天。
 2. 對象的規則已修改或移除。
 
-選取資訊泡泡可提供錯誤臨界值和最近的範例作業時間。
+選取資訊泡泡圖會提供上次執行範例工作的日期和時間。
 
 ![對象屬性區段中會強調顯示合格的設定檔和預估的設定檔。](../images/ui/segment-builder/audience-estimates.png)
 
-**[!UICONTROL 對象屬性]**&#x200B;區段也是您可以指定區段定義的重要資訊，包括其名稱、說明和評估型別。 區段定義名稱是用來在組織所定義的區段定義中識別您的區段定義，因此應該是描述性、簡潔且唯一的。
+**[!UICONTROL 對象屬性]**&#x200B;區段也可讓您指定對象的重要資訊，包括其名稱、說明和評估型別。 名稱是用來在您的組織所定義的區段定義中識別您的區段定義，因此應是描述性、簡潔及唯一的。
 
-當您繼續建置區段定義時，可以選取&#x200B;**[!UICONTROL 檢視設定檔]**，以檢視對象的分頁預覽。
+當您繼續建立對象時，可以選取&#x200B;**[!UICONTROL 檢視設定檔]**&#x200B;來檢視對象的編頁預覽。
 
-![區段定義屬性區段會反白顯示。 區段定義屬性包含但不限於區段定義名稱、說明和評估方法。](../images/ui/segment-builder/segment-properties.png)
+![對象屬性區段會醒目提示。 對象屬性包含但不限於名稱、說明和評估方法。](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -453,4 +453,4 @@ ht-degree: 11%
 - 啟用已排程區段的所有區段定義。
 - 啟用串流區段的指定區段定義。
 
-若要深入瞭解[!DNL Segmentation Service]，請繼續閱讀檔案，並觀看相關影片以補充您的學習。 若要進一步瞭解[!DNL Segmentation Service] UI的其他部分，請閱讀[[!DNL Segmentation Service] 使用手冊](./overview.md)
+若要深入瞭解[!DNL Segmentation Service]，請繼續閱讀檔案，並觀看相關影片以補充您的學習。 若要進一步瞭解[!DNL Segmentation Service] UI的其他部分，請閱讀[[!DNL Segmentation Service] 使用手冊](./overview.md)。
