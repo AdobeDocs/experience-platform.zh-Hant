@@ -33,8 +33,8 @@ ht-degree: 3%
 ## 先決條件 {#prerequisites}
 
 * **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom Real ID Audience Connection]使用條款合約，才能設定新的[!DNL Acxiom's]目的地。 執行銷售訂單完成後，您將會收到合約的連結。 在您簽署合約之前，不會在Experience Platform目的地目錄中看到[!DNL Acxiom Real ID Audience Connection]目的地卡片。 在您接受並簽署合約後，[!DNL Adobe]將完成您的上線程式，您將會看到[!DNL Acxiom Real ID Audience Connection]目的地卡。
-* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
-* **取得[!DNL Acxiom's Real ID]產品的授權：**&#x200B;取得授權後，請在Real-Time CDP中提供Acxiom的真實ID。 如需詳細資訊，請參閱[Acxiom資料增強功能](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)。
+* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
+* **取得[!DNL Acxiom's Real ID]產品的授權：**&#x200B;取得授權後，請在Real-Time CDP中提供Acxiom的真實ID。 如需詳細資訊，請參閱[Acxiom資料增強功能](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)。
 
 
 ## 支援的身分 {#supported-identities}
@@ -53,7 +53,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------------|----------------|----------------|
 | 細分服務 | ✓ | 透過Experience Platform [細分服務](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience)至Experience Platform。 |
+| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/ui/audience-portal#import-audience)至Experience Platform。 |
 
 
 ## 支援的目的地 {#supported-destinations}
@@ -89,10 +89,10 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->* 若要啟用資料，您需要&#x200B;**檢視目的地**、**啟用目的地**、**檢視設定檔**&#x200B;和&#x200B;**檢視區段** ![存取控制許可權](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。 閱讀![存取控制總覽](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出身分，您需要&#x200B;**檢視身分圖表** ![存取控制許可權](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。
+>* 若要啟用資料，您需要&#x200B;**檢視目的地**、**啟用目的地**、**檢視設定檔**&#x200B;和&#x200B;**檢視區段** ![存取控制許可權](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。 閱讀![存取控制總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出身分，您需要&#x200B;**檢視身分圖表** ![存取控制許可權](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。
 
-讀取![啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
+讀取![啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
 
 >[!NOTE]
 >
@@ -129,7 +129,7 @@ ht-degree: 3%
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
 
 ## 疑難排解 {#troubleshooting}
 
