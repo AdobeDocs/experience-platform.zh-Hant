@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
+source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
 workflow-type: tm+mt
-source-wordcount: '4482'
+source-wordcount: '4497'
 ht-degree: 5%
 
 ---
@@ -237,6 +237,8 @@ ht-degree: 5%
 >[!NOTE]
 > 
 >資料湖的最短保留時間為30天。 設定檔服務的最短保留期間為一天。
+>
+>此外，您只能每30天更新一次設定檔服務的保留期間。
 
 為了支援透明度和監視，已為&#x200B;**最近**&#x200B;和&#x200B;**下一個**&#x200B;資料保留工作執行提供時間戳記。 時間戳記可協助您瞭解上次資料清理何時發生，以及排程下次清理的時間。
 
@@ -254,7 +256,7 @@ ht-degree: 5%
 
 ![顯示[設定資料保留]對話方塊及[體驗事件]分佈圖。](../images/datasets/user-guide/visual-forecast.png)
 
-若您對組態感到滿意，請選取[儲存]，確認您的設定。**&#x200B;**
+若您對組態感到滿意，請選取[儲存]，確認您的設定。****
 
 >[!IMPORTANT]
 >

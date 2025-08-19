@@ -2,9 +2,9 @@
 title: 使用TTL管理Data Lake中的體驗事件資料集保留
 description: 瞭解如何使用存留時間(TTL)設定和Adobe Experience Platform API，評估、設定和管理Data Lake中的體驗事件資料集保留。 本指南說明TTL資料列層級的有效期限如何支援資料保留原則、最佳化儲存效率，以及確保有效的資料生命週期管理。 此外，還提供使用案例和最佳實務，協助您有效套用TTL。
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
+source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 0%
 
 ---
@@ -333,7 +333,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### 我可以為資料湖和設定檔服務設定不同的保留原則嗎？
 
 +++回答
+
+>[!NOTE]
+>
+>設定檔服務的保留期間只能每30天更新一次。
+
 可以，您可以為Data Lake和Profile服務設定不同的保留原則。 設定檔存放區的保留期間可能會短於或長於資料湖保留期間，具體取決於您組織的需求。
+
 +++
 
 ### 如何檢查我目前的資料集使用情形？
@@ -366,13 +372,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 
 ### 我可以在資料湖體驗事件資料集上設定的最低TTL是多少？
 
-+++回答
++++回答 
 資料湖體驗事件資料集的最低TTL為30天。 資料湖在初始擷取與處理期間充當處理備份與復原系統。 因此，資料必須在擷取之後在資料湖中保留至少30天，才能過期。
 +++
 
 ### 如果需要保留某些Data Lake欄位的時間超過TTL原則所允許的時間，該怎麼辦？
 
-+++回答
++++回答 
 使用Data Distiller可保留超出資料集TTL的特定欄位，同時保持在您的使用率限制以內。 建立只定期將必要欄位寫入衍生資料集的工作。 此工作流程可確保遵循較短的TTL，同時保留重要資料以供長期使用。
 
 如需詳細資訊，請參閱[使用SQL建立衍生資料集指南](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md)。

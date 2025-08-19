@@ -3,9 +3,9 @@ keywords: 目錄服務；問題；常見問題；faq；資料集常見問題
 title: 常見問題
 description: 關於Adobe Experience Platform目錄服務和資料集的最常見問題解答。
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 38f63f1fc985601c53925a529e603f47dc7fb58b
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '487'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,10 @@ ht-degree: 1%
 ### 我可以為Data Lake和Profile Service設定不同的保留原則嗎？
 
 +++回答
+
+>[!NOTE]
+>
+>設定檔服務的保留期間只能每30天更新一次。
 
 可以，您可以對Data Lake和Profile Service套用不同的保留政策。
 
