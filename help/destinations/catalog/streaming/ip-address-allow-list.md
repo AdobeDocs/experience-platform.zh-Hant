@@ -4,35 +4,51 @@ title: 串流目的地的IP位址允許清單
 type: Documentation
 description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP REST API端點、Amazon Kinesis或Azure事件中樞執行個體。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 5c67466f5321038e75d22e216a8be2e745adac49
+source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
 
-# 串流目的地的IP位址允許清單 {#ip-address-allowlist}
+
+# 適用於串流API型目的地的IP位址允許清單 {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobe建議您將此頁面加入書籤，每三個月重新造訪一次，以檢查最新IP位址。 Adobe不提供新IP範圍的通知。
-> * 此處記錄的IP清單&#x200B;*不*&#x200B;適用於您使用[[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md)建置的任何目的地。
 
 ## 概觀 {#overview}
 
-此處記錄的IP範圍適用於以下目的地：
+此頁面記錄的IP範圍適用於下列目的地：
 
-* [HTTP API目的地](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [進階企業目的地](../../destination-types.md#advanced-enterprise-destinations)： [HTTP API目的地](./http-destination.md)，[[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)，[[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [串流對象匯出目的地](../../destination-types.md#streaming-destinations)，例如[Pega CDH即時對象](/help/destinations/catalog/personalization/pega-v2.md)、與[Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)和[Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)的API型整合
+* 透過[Destination SDK](../../destination-sdk/getting-started.md)建置的公用或私人目的地
 
 從Experience Platform到這些目的地的傳出流量一律會通過此頁面上列出的IP。
 
-此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP端點[!DNL Amazon Kinesis]或[!DNL Azure Event Hubs]執行個體。 如果您的HTTP端點位於企業防火牆之後，或您的公司安全和法規遵循標準需要將IP範圍清單加入允許清單，則此功能特別實用。
+此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform將資料匯出至上方列出的目的地。 如果您的HTTP端點位於企業防火牆之後，或您的公司安全和法規遵循標準需要將IP範圍清單加入允許清單，則此功能特別實用。
 
 您可以透過網路防火牆定義網路存取控制。 透過指定適當的IP範圍，您可以允許資料傳輸服務的流量。
 
-Adobe建議您先將下列IP範圍新增至允許清單，然後再使用本頁面上所述的目標。 使用這些串流目的地時，如果無法將您專屬區域的IP範圍新增到允許清單，可能會導致錯誤或效能不佳。
+## 何時允許列出此頁面中的IP {#when-to-allowlist}
+
+如果您的組織原則要求您允許列出傳入流量的IP，則您必須先將以下類別的IP範圍新增到允許清單，才能使用此頁面上的上述目的地：
+
+1. 所有[全域IP位址](#global)
+2. 除了全域IP位址之外，從頁面上更下方的清單中，新增與您布建之區域相對應的IP位址。 使用這些串流目的地時，如果無法將您專屬區域的IP範圍新增到允許清單，可能會導致錯誤或效能不佳。
+
+## 全域IP位址 {#global}
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`
+
+除了這些全域IP位址之外，您還必須從以下清單中列出您的組織布建所在區域的IP位址。
 
 ## VA7：美國和美洲客戶 {#us-americas}
 
@@ -209,3 +225,4 @@ Adobe建議您先將下列IP範圍新增至允許清單，然後再使用本頁�
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`
+
