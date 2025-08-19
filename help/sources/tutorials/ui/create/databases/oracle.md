@@ -2,14 +2,14 @@
 title: 使用UI將Oracle DB連線到Experience Platform
 description: 瞭解如何使用UI將您的Oracle DB執行個體連線到Experience Platform。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
-# 在使用者介面中建立[!DNL Oracle DB]來源連線
+# 使用UI連線[!DNL Oracle DB]至Experience Platform
 
 閱讀本指南，瞭解如何使用Adobe Experience Platform使用者介面中的來源工作區將您的[!DNL Oracle DB]執行個體連結至Experience Platform。
 
