@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform 發行說明 (2025 年 7 月)
-description: Adobe Experience Platform 2025 年 7 月版發行說明。
+title: Adobe Experience Platform 發行說明 (2025 年 8 月)
+description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
-workflow-type: ht
-source-wordcount: '1574'
-ht-degree: 100%
+source-git-commit: af669d58ac4031354e477954a8a733cf0bd7a64b
+workflow-type: tm+mt
+source-wordcount: '1436'
+ht-degree: 38%
 
 ---
 
@@ -21,87 +21,118 @@ ht-degree: 100%
 >- [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/latest)
 
-**發行日期：2025 年 7 月 29 日**
+**發行日期： 2025年8月19日**
 
 Adobe Experience Platform 的新功能及現有功能更新：
 
-- [容量](#capacity)
+- [警報](#alerts)
+- [目錄服務](#catalog-service)
 - [目標](#destinations)
-- [資料攝取](#data-ingestion)
-- [Real-Time CDP B2B Edition](#b2b)
+- [體驗資料模式 (XDM)](#xdm)
+- [即時客戶輪廓](#profile)
 - [沙箱](#sandboxes)
 - [細分服務](#segmentation-service)
 - [來源](#sources)
 
+## 警報 {#alerts}
 
-## 容量 {#capacity}
+Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型警報。您可以透過 Experience Platform 使用者介面中的「[!UICONTROL 警報]」標籤訂閱不同的警報規則，而且可以選擇在使用者介面本身內或透過電子郵件通知接收警報訊息。
 
->[!AVAILABILITY]
->
->此功能適用情況視您所在區域而定。對於美洲地區使用者，此功能將從 8 月 11 日開始提供。對於歐洲地區使用者，此功能將從 8 月 25 日開始提供。對於亞洲地區使用者，此功能將從 9 月 8 日開始提供。
+**新功能**
 
-「容量」可針對您組織的[護欄](../../rtcdp/guardrails/overview.md)提供完整檢視，並建議如何在沙箱層級分配容量，以解決潛在的容量違規。透過此版本，您可以同時檢視串流攝取和串流細分的容量。
+| 功能 | 說明 |
+| --- | --- |
+| 串流輸送量容量警報 | 三個新警報可讓使用者訂閱及設定警報，主動管理及監控串流輸送量容量的效能。 新警報包括串流吞吐量達到80%、90%或超出容量限制時。 如需詳細資訊，請閱讀[容量警示規則](../../observability/alerts/rules.md#capacity)指南。 |
 
-如需詳細資訊，請閱讀[容量概觀](../../landing/license-usage-and-guardrails/capacity.md)。
+如需有關警示的詳細資訊，請參閱[[!DNL Observability Insights] 概觀](../../observability/home.md)。
+
+## 目錄服務 {#catalog-service}
+
+目錄服務是 Adobe Experience Platform 內部的資料位置和譜系記錄系統。雖然攝取至 Experience Platform 中的所有資料都會以檔案及目錄形式儲存在資料湖中，但是為了查詢和監控目的，目錄也會保留這些檔案及目錄的中繼資料與說明。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 即時客戶個人檔案的資料保留 | 您只能&#x200B;**每30天**&#x200B;更新一次即時客戶設定檔的資料保留期。 |
+
+如需目錄服務的詳細資訊，請閱讀[目錄服務概觀](../../catalog/home.md)。
 
 ## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+[!DNL Destinations]是預先建立的與目的地平台的整合，可讓您從Experience Platform順暢地啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+
+>[!IMPORTANT]
+>
+>**資料集匯出排程延伸**
+>
+>如果您的組織在2024年11月之前建立了資料集匯出資料流，這些資料流將在&#x200B;**2025年9月1日**&#x200B;停止運作。 如果您需要資料流在2025年9月1日之後繼續匯出資料，您必須依照[本指南](../../destinations/ui/dataset-expiration-update.md)中的步驟，為您要匯出資料集的每個目的地擴充其排程。
+
+>[!IMPORTANT]
+>
+>**API型目的地需要IP允許清單更新**
+>
+>由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;****：
+>
+>**必要的IP位址：**
+>
+>```
+>3.209.222.108
+>3.211.230.204
+>35.169.227.49
+>66.117.18.133
+>66.117.18.134
+>66.117.18.135
+>```
+>
+>**此變更適用於下列目的地型別：**
+>
+>- [串流對象匯出目的地](../../destinations/destination-types.md#streaming-destinations) ([Pega CDH即時對象](/help/destinations/catalog/personalization/pega-v2.md)，與[Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)和[Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)的API型整合)
+>- 透過[Destination SDK](../../destinations/destination-sdk/getting-started.md)建置的公用或私人目的地
+>
+>**需要動作：**&#x200B;如果您已與Adobe合作將任何IP位址加入允許清單至API型串流目的地，您必須將上述IP位址新增至允許清單，以確保資料流不會中斷至以API型為基礎的目的地。
+
+**新目的地**
+
+| 目標 | 說明 |
+| --- | --- |
+| [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md)目的地 | 使用[!DNL Acxiom Real ID Audience Connection]目的地來增強具有[!DNL Acxiom's] [真實識別碼](https://www.acxiom.com/real-id/real-id/)技術的對象，並啟用多個平台的對象，例如[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]等。 |
 
 **已更新的目標**
 
 | 目標 | 說明 |
 | --- | --- |
-| [Google 目標客戶比對 + Display &amp; Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 連線功能限量開放使用 | 在 6 月短暫提供給所有客戶後，Adobe 已將此整合功能調整為限量開放使用。目前，僅有已啟用此功能的客戶才能存取此目標，同時 Adobe 和 Google 正在努力解決實施問題。如果您有興趣在繼續擴大推出後使用此整合功能，請聯絡您的 Adobe 代表並表達您的意願。 |
-| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) 內部升級 | 從 2025 年 7 月 31 日起，您可以在目標目錄中看到兩張 [!DNL The Trade Desk] 卡片並排顯示。這是因為目標服務進行內部升級所致。<br><br>現有的 [!DNL The Trade Desk] 目標連接器已重新命名為 **[!UICONTROL (Deprecated) The Trade Desk]**，並提供名為 **[!UICONTROL The Trade Desk]** 的全新卡片。使用目錄中新的 **[!UICONTROL The Trade Desk]** 連線，獲得全新的啟用資料流。<br><br>如果您有任何傳送至 **[!UICONTROL (Deprecated) The Trade Desk]** 目標的使用中資料流，此資料流將自動更新，您無需採取任何動作。<br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>連線規格 ID：`1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
+| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 自2025年8月11日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL Microsoft Bing]**&#x200B;卡片。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Microsoft Bing]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;的新卡片。 使用目錄中的新&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何前往&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**&#x200B;目的地的作用中資料流，資料流會自動更新，因此您不需要採取任何動作。 <br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 此升級後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少到**，人數為[!DNL Microsoft Bing]。 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 |
 
 **全新或更新版功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 目標連線的帳戶名稱與說明 | 現在，您可以在連線至目標時[新增帳戶名稱與說明](/help/destinations/ui/connect-destination.md)，從而更有效地管理具有多個帳戶的目標。 |
-| 加強邊緣目標的資料流資訊 | 我們已改善 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-v2.md) 及[自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)目標的右側邊欄資訊，以顯示資料流名稱，讓您更清楚檢視相關聯的資料流設定，且有助於在檢閱現有資料流時減少混淆。目標設定畫面中的「**[!UICONTROL 資料流 ID]**」選擇器已更新為「**[!UICONTROL 資料流]**」，讓使用者介面資訊更清楚。 |
-| 目標選擇中的行銷動作可見度 | 行銷動作現在顯示於目標工作區之「**[[!UICONTROL 瀏覽]](/help/destinations/ui/destinations-workspace.md#browse)**」索引標籤的右側邊欄中，以及「**[[!UICONTROL 資料流執行]](/help/dataflows/ui/monitor-destinations.md)**」頁面上，無需導覽至檢視頁面，即可立即清楚檢視行銷動作的變更。此增強功能可讓您在目標設定期間更輕鬆驗證行銷動作設定，藉此提升使用者體驗。 |
-| [!BADGE 限量測試版]{type=Informative} 編輯目標的行銷動作 | 您現在可以針對現有目標[編輯行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。此功能目前在限量測試版中提供。若要要求存取此功能，請聯絡您的 Adobe 代表。 |
-| [!BADGE 限量測試版]{type=Informative} 編輯目標 | 建立目標設定後，您現在可以[編輯目標設定](/help/destinations/ui/edit-destination.md)。此功能目前在限量測試版中提供。若要要求存取此功能，請聯絡您的 Adobe 代表。 |
+| 增強目的地的搜尋、篩選和標籤功能 | 透過[瀏覽](../../destinations/ui/destinations-workspace.md#browse)和[帳戶](../../destinations/ui/destinations-workspace.md#accounts)索引標籤的增強搜尋、篩選和標籤功能，改善您的目的地管理工作流程。 您現在可以依名稱搜尋特定的資料流和帳戶，依各種條件進行篩選，包括目的地平台、狀態和日期，以及建立自訂標籤來組織您的目的地。 欄排序也可用於關鍵欄位，例如上次資料流執行時間，讓您更容易識別和管理您的目的地連線。 |
 
-**修正**
+## 體驗資料模型 (XDM，Experience Data Model) {#xdm}
 
-| 問題 | 說明 |
-| --- | --- |
-| 類別捲動功能 | 已修正在目標與來源目錄中，滑鼠停留時無法正常捲動類別側邊選單的問題，以提升使用者瀏覽目標類別的導覽可用性。 |
-
-如需詳細資訊，請閱讀[目標概觀](../../destinations/home.md)。
-
-## 資料攝取 {#ingestion}
-
-Experience Platform 提供完整的資料攝取框架，支援來自多種來源的批次與串流資料攝取。
+XDM是開放原始碼規格，針對匯入Experience Platform的資料提供通用結構和定義（結構描述）。 若遵守 XDM 標準，即可將所有客戶體驗資料合併為單一常用表述，以更快速、更整合的方式提供分析洞察。您可以從客戶行為中獲得有價值的分析洞察、透過區段定義客戶客群，並基於個人化目的使用客戶屬性。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 支援監視串流設定檔攝取 | 現在已可對串流設定檔攝取進行即時監視，使輸送量、延遲和資料品質量度一目了然。此功能支援主動警示和可操作的洞察，可協助資料工程師識別容量違規和攝取問題。請閱讀有關[監視串流設定檔攝取](../../dataflows/ui/monitor-streaming-profile.md)的指南以了解詳細資訊。 |
+| 以模型為基礎的結構描述 | 使用以模型為基礎的結構描述簡化資料模型。 您現在可以更輕鬆地建立方案，其中包含完整的作法範例和指引。 此功能目前可供Campaign Orchestration授權持有人使用，並會在GA擴充至Data Distiller客戶，讓資料模型更容易存取且更有效率。 |
 
-如需詳細資訊，請閱讀[資料攝取概觀](../../ingestion/home.md)。
+如需詳細資訊，請閱讀[XDM總覽](../../xdm/home.md)。
 
-## Real-Time CDP B2B Edition {#b2b}
+## 即時客戶輪廓 {#profile}
 
-Real-Time CDP B2B Edition 提供全面的 B2B 客戶資料管理功能，使組織能夠建置統一的客戶設定檔、建立複雜的 B2B 客群，並在各種行銷管道中啟用資料。
+即時客戶設定檔可將所有管道的資料合併為單一設定檔，藉此提供每個客戶的統一可操作檢視。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
-| ------- | ----------- |
-| B2B 架構升級 | Experience Platform 將升級至新的 B2B 架構，為具有 B2B 屬性的多實體客群帶來重大的功能提升。此升級會整合合併原則支援、提高客群計數的準確性，並改善實體解析功能。請閱讀 [Real-Time CDP B2B Edition 架構升級概觀](../../rtcdp/b2b-architecture-upgrade.md)以全面了解變更的詳情。 |
-| 多實體客群的合併原則整合 | 具有 B2B 屬性的多實體客群現在僅支援單一合併原則 (預設合併原則)，而非支援多重合併原則。此變更可確保客群構成的一致性，並簡化合併邏輯管理。如需詳細資訊，請閱讀[合併原則概觀](../../profile/merge-policies/overview.md)。 |
-| 強化 B2B 實體的客群計數 | 現在，可依據即時細分結果，準確估計包含 B2B 實體 (如帳戶和機會) 之客群的規模。這項改進功能可為需要複雜 B2B 關係的客群提供更準確且更可靠的估計值。 |
-| 客群會籍的帳戶快照 | 快照匯出現已包含帳戶實體的客群會籍詳細資訊，從而可讓您存取帳戶層級的客群狀態、時間戳記和會籍指標。這使設定檔 (人員) 與帳戶細分模型之間提供同等的功能。 |
-| 針對多實體客群的沙箱工具變更 | 不再支援匯入具有 B2B 實體和移轉前匯出之體驗事件的多實體客群。這些客群將無法通過匯入驗證，且無法自動轉換至全新架構。移轉後，必須先重新匯出客群才能匯入目標沙箱。如需詳細資訊，請閱讀[沙箱工具支援物件指南](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling)。 |
-| B2B 實體 API 棄用 | 適用於 B2B 實體 (帳戶人員關係、機會人員關係、行銷活動、行銷活動成員、行銷清單和行銷清單成員) 的 [!DNL Profile Access] API 查詢操作現已棄用。此外，適用於 B2B 實體 (帳戶、帳戶人員關係、機會、機會人員關係、行銷活動、行銷活動成員、行銷清單和行銷清單成員) 的 [!DNL Profile Access] API 刪除操作也已棄用。如需詳細資訊，請閱讀[實體端點 API 指南](../../profile/api/entities.md)。 |
-| 實體解析的身分識別命名空間更新 | 帳戶和機會實體現在會根據時間優先順序，與特定的身分識別命名空間進行合併 (帳戶使用 `b2b_account`、機會使用 `b2b_opportunity`)。所有其他實體皆採用以時間優先順序為基礎的合併方式，與合併的主要身分識別重疊進行統一。如需有關實體解析的詳細資訊，請閱讀[實體端點 API 指南](../../profile/api/entities.md)。 |
+| --- | --- |
+| 增強實體API中的查閱功能 | 實體API現在支援下列專案： <ul><li>人員（設定檔）</li><li>體驗事件</li><li>帳戶</li><li>機會</li></ul> 此更新簡化API使用方式，並有助於確保最佳效能和可靠性。 如果您先前曾使用其他實體型別（包括聯結表格和自訂多實體型別）的查詢，現在就是檢閱API使用情況並利用改良體驗的絕佳機會。 如需詳細資訊，請參閱[Real-Time CDB B2B edition架構升級指南](../../rtcdp/b2b-architecture-upgrade.md)。 |
 
-如需詳細資訊，請閱讀 [Real-Time CDP B2B Edition 概觀](../../rtcdp/b2b-overview.md)。
+如需即時客戶個人檔案的詳細資訊，請閱讀[個人檔案總覽](../../profile/home.md)。
 
 ## 沙箱 {#sandboxes}
 
@@ -111,7 +142,8 @@ Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗
 
 | 功能 | 說明 |
 | --- | --- |
-| 多實體客群匯入的變更 | 沙箱工具已更新，以支援新的 B2B 架構升級。包含 B2B 實體和體驗事件的多實體客群必須在架構升級後重新匯出，接著才能透過沙箱工具匯入目標沙箱。匯入升級前的版本將無法通過驗證。如需詳細資訊，請閱讀[沙箱工具支援物件指南](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling)。 |
+| 匯入工作流程中的相依性物件去重複化 | 沙箱工具現在一律會在偵測到相同名稱的物件時重複使用現有的物件，以避免物件擴散。 此變更會套用至下列物件： <ul><li>結構描述</li><li>欄位群組</li><li>客群</li><li>`decisioning_ranking`</li><li>`decisioning_rules`</li></ul> 如需詳細資訊，請閱讀[沙箱工具支援物件指南](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling)。 |
+| 針對跨組織套件共用的完整沙箱支援 | 沙箱工具現在支援跨組織套件共用中的&#x200B;**整個沙箱**&#x200B;型別。 您現在可以跨組織共用整個沙箱和多物件套件。 如需詳細資訊，請閱讀[沙箱工具支援物件指南](../../sandboxes/ui/sharing-packages-across-orgs.md)。 |
 
 如需有關沙箱的詳細資訊，請閱讀[沙箱概觀](../../sandboxes/home.md)。
 
@@ -123,25 +155,19 @@ Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 外部客群 API | 您可以使用外部客群 API，以程式化方式將外部產生的客群匯入 Adobe Experience Platform。如需詳細資訊，請閱讀[外部客群端點指南](../../segmentation/api/external-audiences.md)。 |
+| 對象估計 | 對象預估現在會在區段產生器中自動產生。 此值會在您修改對象時更新，且一律會反映最新的對象規則。 此外，估計值現在會顯示為&#x200B;**範圍**，這是根據取樣資料的信賴區間而定。 |
 
-如需有關細分的詳細資訊，請閱讀[細分服務概觀](../../segmentation/home.md)。
+如需詳細資訊，請閱讀 [[!DNL Segmentation Service]  概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
 Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證，並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間，並管理資料攝取輸送量。
 
-**新的來源**
-
-| 來源 | 說明 |
-| --- | --- |
-| [!BADGE Beta]{type=Informative} 支援 [!DNL Didomi] (串流 SDK) | 使用 [!DNL Didomi] 來源，從 [!DNL Didomi] 攝取同意與偏好管理資料，從而支援隱私權法規遵循和經過同意的行銷策略。請閱讀 [[!DNL Didomi] 來源概觀](../../sources/connectors/consent-and-preferences/didomi.md)，以了解有關如何設定的資訊。如需有關建立來源連線的步驟，請閱讀 [[!DNL Didomi] 來源連線指南](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md)。 |
-
 **全新或更新版功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 支援使用 [!DNL Flow Service] API，在所選來源中變更資料擷取 | 您現在可以建立資料流，使用來源連接器來啟用變更資料擷取，從而進行增量攝取。此功能可讓客戶使用變更資料類型進行增量攝取，從而提高資料新鮮度並減少處理的額外負荷。如需詳細資訊，請閱讀[針對來源使用變更資料擷取](../../sources/tutorials/api/change-data-capture.md) |
-| 支援 [!DNL Salesforce] 的記錄軟刪除 | [!DNL Salesforce] 來源現在支援透過選用的 `includeDeletedObjects` 參數包含軟刪除的記錄。當設定為 true 時，客戶可以在其 [!DNL Salesforce] 查詢中包括軟刪除的記錄，並將這些記錄引入 Experience Platform。如需詳細資訊，請閱讀 [[!DNL Salesforce]  來源文件](../../sources/connectors/crm/salesforce.md)。 |
+| 在UI中支援[!BADGE 的]{type=Informative}Beta[!DNL Azure Private Links] | 您現在可以將[!DNL Azure Private Links]用於UI中選定的來源群組。 使用此功能可建立您的來源可連線的私人端點。 透過私用端點，您可以設定繞過公用網際網路的連線和資料流程，為您提供增強的安全性和網路隔離功能，以隔離敏感資料。 下列來源支援[!DNL Azure Private Links]： <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> 如需詳細資訊，請閱讀[[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md)上的指南。 |
+| [!DNL Azure Blob Storage]的增強驗證 | 您現在可以使用以服務主體為基礎的驗證，將您的[!DNL Azure Blob Storage]來源連線至Experience Platform。 使用以服務主體為基礎的驗證來增強安全性、更輕鬆的認證輪換，以及更精細的帳戶存取控制。 如需詳細資訊，請閱讀 [[!DNL Azure Blob Storage]  概觀](../../sources/connectors/cloud-storage/blob.md)。 |
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
