@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
-source-git-commit: 6b99f9f0bef18b8a4d04a18f817e300cc4c5d9a3
+exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
+source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 38%
+source-wordcount: '1448'
+ht-degree: 37%
 
 ---
 
@@ -72,7 +73,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 >
 >**API型目的地需要IP允許清單更新**
 >
->由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;**&#x200B;**：
+>由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;****：
 >
 >**必要的IP位址：**
 >
@@ -109,7 +110,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 
 | 功能 | 說明 |
 | --- | --- |
-| 增強目的地的搜尋、篩選和標籤功能 | 透過[瀏覽](../../destinations/ui/destinations-workspace.md#browse)和[帳戶](../../destinations/ui/destinations-workspace.md#accounts)索引標籤的增強搜尋、篩選和標籤功能，改善您的目的地管理工作流程。 您現在可以依名稱搜尋特定的資料流和帳戶，依各種條件進行篩選，包括目的地平台、狀態和日期，以及建立自訂標籤來組織您的目的地。 欄排序也可用於關鍵欄位，例如上次資料流執行時間，讓您更容易識別和管理您的目的地連線。 |
+| 增強目的地的搜尋、篩選和標籤功能 | 透過[瀏覽](../../destinations/ui/destinations-workspace.md#browse)和[帳戶](../../destinations/ui/destinations-workspace.md#accounts)索引標籤的增強搜尋、篩選和標籤功能，改善您的目的地管理工作流程。 <br>您現在可以依名稱搜尋特定的資料流和帳戶、依各種條件篩選（包括目的地平台、狀態和日期），以及建立自訂標籤來組織您的目的地。 欄排序也可用於關鍵欄位，例如上次資料流執行時間，讓您更容易識別和管理您的目的地連線。<br> ![在[瀏覽]索引標籤中搜尋目的地資料流的動畫示範](../../destinations/assets/ui/workspace/search.gif) |
 
 ## 體驗資料模型 (XDM，Experience Data Model) {#xdm}
 
