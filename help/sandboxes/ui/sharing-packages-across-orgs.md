@@ -1,9 +1,10 @@
 ---
 title: 使用沙箱工具跨組織共用套件
 description: 瞭解如何使用Adobe Experience Platform中的沙箱工具來跨不同組織共用套件。
-source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
+exl-id: 02826a8d-f01d-44cb-9ae0-0fcde24de83e
+source-git-commit: 3183d265eda36df9b08d920ba731bd9e63d150cc
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -72,17 +73,34 @@ ht-degree: 0%
 >
 >只能共用狀態為&#x200B;**已發佈**&#x200B;的封裝。
 
-若要與核准的合作夥伴組織共用封裝，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 封裝]**&#x200B;標籤。 接著，選取封裝旁邊的省略符號(`...`)，然後從下拉式功能表中選取&#x200B;**[!UICONTROL 共用封裝]**。
+#### 共用多物件封裝 {#multi-object-packages}
+
+若要與核准的夥伴組織共用多物件套件，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 套件]**&#x200B;標籤。 接著，選取封裝旁邊的省略符號(`...`)，然後從下拉式功能表中選取&#x200B;**[!UICONTROL 共用封裝]**。
 
 ![顯示下拉式功能表的套件清單，並反白顯示[共用]套件。](../images/ui/sandbox-tooling/private-share-package.png)
 
-在&#x200B;**[!UICONTROL 共用封裝]**&#x200B;對話方塊中，從&#x200B;**[!UICONTROL 共用設定]**&#x200B;下拉式清單中選取要共用的封裝，然後選取&#x200B;**[!UICONTROL 確認]**。
+在&#x200B;**[!UICONTROL 共用封裝]**&#x200B;對話方塊中，從&#x200B;**[!UICONTROL 共用設定]**&#x200B;下拉式清單中選取要共用封裝的組織，然後選取&#x200B;**[!UICONTROL 確認]**。
 
 >[!TIP]
 >
 >您可以選取多個組織。 選取的組織會顯示在[!UICONTROL 共用設定]下拉式清單下。
 
 ![共用套件對話方塊，其中的[共用]設定和[確認]已反白顯示。](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+#### 共用整個沙箱套件 {#entire-sandbox-packages}
+
+若要與核准的合作夥伴組織共用整個沙箱套件，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 套件]**&#x200B;標籤。 接著，選取封裝旁邊的省略符號(`...`)，然後從下拉式功能表中選取&#x200B;**[!UICONTROL 共用封裝]**。
+
+![顯示套件清單的[套件]索引標籤，顯示下拉式功能表。](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+
+在&#x200B;**[!UICONTROL 共用封裝]**&#x200B;對話方塊中，從&#x200B;**[!UICONTROL 共用設定]**&#x200B;下拉式清單中選取要共用封裝的組織，然後選取&#x200B;**[!UICONTROL 確認]**。
+
+>[!TIP]
+>
+>您可以選取多個組織。 選取的組織會顯示在[!UICONTROL 共用設定]下拉式清單下。
+
+![共用套件對話方塊，其中的[共用]設定和[確認]已反白顯示。](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+
 
 ## 公用套件 {#public-packages}
 
