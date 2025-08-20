@@ -4,10 +4,10 @@ description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platfor
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 32%
+source-wordcount: '1624'
+ht-degree: 29%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 32%
 為了提高系統中所執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些記錄形成了稽核軌跡，可以幫助對Experience Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和監管要求。
 
 基本上，稽核記錄會告知&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;動作，以及&#x200B;**何時**。 記錄中記錄的每個動作都包含中繼資料，其指出動作型別、日期和時間、執行動作之使用者的電子郵件ID，以及與動作型別相關的其他屬性。
+
+當使用者執行動作時，會記錄兩種型別的稽核事件。 核心事件擷取動作[!UICONTROL 允許]或[!UICONTROL 拒絕]的授權結果，而增強型事件則擷取執行結果[!UICONTROL 成功]或[!UICONTROL 失敗]。 多個增強型事件可連結至相同的核心事件。 例如，啟用目的地時，核心事件會記錄[!UICONTROL 目的地更新]動作的授權，而增強型事件會記錄多個[!UICONTROL 區段啟用]動作。
 
 >[!NOTE]
 >
@@ -89,7 +91,7 @@ ht-degree: 32%
 
 稽核記錄會保留365天，之後會從系統中刪除。 如果您需要超過365天的資料，您應定期匯出記錄檔，以符合內部原則需求。
 
-請求稽核記錄的方法會變更允許的時段以及您可存取的記錄數。 [匯出記錄檔](#export-audit-logs)可讓您回到365天（以90天為間隔），最多為10,000筆記錄，其中作為Experience Platform中的[活動記錄檔UI](#filter-audit-logs)，會顯示過去90天，最多為1000筆記錄。
+請求稽核記錄的方法會變更允許的時段以及您可存取的記錄數。 [匯出記錄檔](#export-audit-logs)可讓您回到365天（以90天為間隔），最多可回到10,000個稽核記錄檔（核心或增強型），其中Experience Platform中的[活動記錄檔UI](#filter-audit-logs)會顯示過去90天，最多可達1000個核心事件，每個事件都有對應的增強型事件。
 
 從清單中選取一個事件以在右邊欄中查看其詳細資料。
 
@@ -101,7 +103,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->Experience Platform UI只會顯示過去90天的記錄（最多1000筆記錄），無論套用的篩選器為何。 如果您需要超過該天的記錄（最多365天），您需要[匯出稽核記錄](#export-audit-logs)。
+>Experience Platform UI只會顯示過去90天最多1000個核心事件，每個事件都有對應的增強事件，無論套用的篩選器為何。 如果您需要超過該天的記錄（最多365天），您需要[匯出稽核記錄](#export-audit-logs)。
 
 ![已反白篩選活動記錄檔的[稽核]儀表板。](../../images/audit-logs/filters.png)
 
@@ -112,7 +114,7 @@ ht-degree: 32%
 | [!UICONTROL 類別] | 使用下拉式功能表，依[類別](#category)篩選顯示的結果。 |
 | [!UICONTROL 動作] | 依動作篩選。 每項服務的可用動作會顯示在資源表格中。 |
 | [!UICONTROL 使用者] | 輸入完整的使用者識別碼（例如，`johndoe@acme.com`）以依使用者篩選。 |
-| [!UICONTROL 狀態] | 依由於缺少[存取控制](../../../access-control/home.md)許可權而允許（完成）或拒絕動作進行篩選。 |
+| [!UICONTROL 狀態] | 依結果篩選稽核事件：成功、失敗、允許或拒絕，因為缺少[存取控制](../../../access-control/home.md)許可權。 對於已執行的動作，核心事件顯示[!UICONTROL 允許]或[!UICONTROL 拒絕]。 當核心事件是[!UICONTROL 允許]時，它可能已附加一或多個顯示&#x200B;**[!UICONTROL 成功]**&#x200B;或&#x200B;**[!UICONTROL 失敗]**&#x200B;的增強型事件。 例如，成功的動作在核心事件上顯示[!UICONTROL 允許]，在附加的增強事件上顯示[!UICONTROL 成功]。 |
 | [!UICONTROL 日期] | 選取開始日期和/或結束日期，以定義篩選結果的日期範圍。 可匯出回顧期間為90天的資料（例如，2021-12-15至2022-03-15）。 這可能因事件型別而異。 |
 
 若要移除濾鏡，請針對有問題的濾鏡選取藥丸圖示上的「X」，或選取&#x200B;**[!UICONTROL 全部清除]**&#x200B;以移除所有濾鏡。
@@ -137,7 +139,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->可在90天間隔內要求記錄檔，最多可達365天過去。 不過，單一匯出期間可傳回的最大記錄數量為10,000。
+>可在90天間隔內要求記錄檔，最多可達365天過去。 然而，單一匯出期間可傳回的最大記錄數量為10,000個稽核事件（核心或增強功能）。
 
 ![反白顯示[!UICONTROL 下載記錄]的稽核儀表板。](../../images/audit-logs/download.png)
 
@@ -167,7 +169,7 @@ ht-degree: 32%
 
 ## 管理Adobe Admin Console的稽核記錄
 
-若要瞭解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[檔案](https://helpx.adobe.com/tw/enterprise/using/audit-logs.html)。
+若要瞭解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[檔案](https://helpx.adobe.com/enterprise/using/audit-logs.html)。
 
 ## 後續步驟和其他資源
 

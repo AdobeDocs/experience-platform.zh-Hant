@@ -4,10 +4,10 @@ description: 瞭解如何使用稽核查詢API匯出Experience Platform中的稽
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 3%
+source-wordcount: '168'
+ht-degree: 2%
 
 ---
 
@@ -43,4 +43,4 @@ curl -X POST \
 
 **回應**
 
-結果會產生CSV檔案以供匯出。 成功的回應會傳回HTTP 307，但沒有回應內文。 `Location`回應標頭中提供匯出檔案的連結。
+結果會產生CSV檔案以供匯出，每個專案代表核心或增強稽核事件。 成功的回應會傳回HTTP 307，但沒有回應內文。 `Location`回應標頭中提供匯出檔案的連結。
