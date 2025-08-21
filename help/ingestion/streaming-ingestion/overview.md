@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 串流擷取概觀
 description: Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從使用者端和伺服器端裝置傳送資料至Experience Platform。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 1%
+source-wordcount: '419'
+ht-degree: 2%
 
 ---
 
-# 串流擷取總覽
+# 串流擷取概觀
 
 Adobe Experience Platform的串流擷取為使用者提供從使用者端和伺服器端裝置即時傳送資料到[!DNL Experience Platform]的方法。
 
@@ -39,7 +39,7 @@ Adobe Experience Platform可讓您為每個個別客戶產生[!DNL Real-Time Cus
 
 >[!IMPORTANT]
 >
->串流擷取的護欄會在組織層級進行計算，而非沙箱層級。 這表示您的每個沙箱資料使用量都會與對應至您整個組織的授權使用量權利總數繫結。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需授權使用權益的詳細資訊，請閱讀[資料管理最佳實務指南](../../landing/license-usage-and-guardrails/data-management-best-practices.md)。
+>串流擷取的護欄會繫結至與整個組織對應的授權使用權益總計。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需授權使用權益的詳細資訊，請閱讀[資料管理最佳實務指南](../../landing/license-usage-and-guardrails/data-management-best-practices.md)。 若要瞭解如何設定串流輸送量的限制，請閱讀[容量概觀](../../landing/license-usage-and-guardrails/capacity.md)。
 
 | 目標 | 預期延遲 |
 | --------- | ---------------- |

@@ -2,7 +2,7 @@
 title: 授權使用量和容量
 description: 瞭解您在Adobe Experience Platform中的授權使用量和容量限制。
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
+source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%
@@ -103,7 +103,7 @@ Experience Platform會以15分鐘滾動間隔計算沙箱的輸送量。 此輸�
 
 #### 串流輸送量 {#streaming-throughput}
 
-串流輸送量區段會顯示有關整個組織沙箱的串流輸送量的資訊。 串流輸送量值會測量每秒將內嵌串流至設定檔服務的合併尖峰傳入事件。
+串流輸送量區段會顯示有關您組織沙箱中的串流輸送量的資訊。 串流輸送量值會測量每秒將內嵌串流至設定檔服務的合併尖峰傳入事件。
 
 ![顯示容量詳細資訊頁面中的串流輸送量區段。](/help/landing/images/capacity/streaming-throughput-section.png)
 
