@@ -1,17 +1,16 @@
 ---
-title: 來源中的私人連結支援
+title: 在API中使用來源的Azure私人連結
 description: 瞭解如何建立並使用Adobe Experience Platform來源的私人連結
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
-ht-degree: 5%
+source-wordcount: '1380'
+ht-degree: 3%
 
 ---
 
-# 來源中的私人連結支援
+# 對API中的來源使用[!DNL Azure Private Link]
 
 >[!AVAILABILITY]
 >
@@ -22,11 +21,13 @@ ht-degree: 5%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-閱讀本指南，瞭解如何透過私人連結建立與Azure型來源的私人端點連線，並為您的資料提供更安全的傳輸機制。
+您可以使用[!DNL Azure Private Link]功能來建立Adobe Experience Platform來源要連線的私人端點。 使用私人IP位址將您的來源安全地連線到虛擬網路，消除對公用IP的需求，並減少您的攻擊面。簡化網路設定，不需要複雜的防火牆或網路位址轉譯設定，同時確保資料流量僅能到達核准的服務。
+
+請閱讀本指南，瞭解如何使用API來建立和使用私有端點。
 
 ## 快速入門
 
-本指南需要您深入了解下列 Adobe Experience Platform 元件：
+本指南需要您深入瞭解下列Experience Platform元件：
 
 * [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一[!DNL Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
@@ -75,9 +76,9 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 您的私人端點的名稱。 |
-| `subscriptionId` | 與您的[!DNL Azure]訂閱相關聯的識別碼。 如需詳細資訊，請參閱[的[!DNL Azure]指南，從 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)擷取您的訂閱和租使用者ID。 |
-| `resourceGroupName` | [!DNL Azure]上資源群組的名稱。 資源群組包含[!DNL Azure]解決方案的相關資源。 如需詳細資訊，請閱讀[管理資源群組](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)的[!DNL Azure]指南。 |
-| `resourceName` | 資源的名稱。 在[!DNL Azure]中，資源是指虛擬機器器、網頁應用程式和資料庫等執行個體。 如需詳細資訊，請閱讀[上的[!DNL Azure]指南，瞭解 [!DNL Azure] 資源管理員](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)。 |
+| `subscriptionId` | 與您的[!DNL Azure]訂閱相關聯的識別碼。 如需詳細資訊，請參閱[!DNL Azure]的[指南，從 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)擷取您的訂閱和租使用者ID。 |
+| `resourceGroupName` | [!DNL Azure]上資源群組的名稱。 資源群組包含[!DNL Azure]解決方案的相關資源。 如需詳細資訊，請閱讀[!DNL Azure]管理資源群組[的](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)指南。 |
+| `resourceName` | 資源的名稱。 在[!DNL Azure]中，資源是指虛擬機器器、網頁應用程式和資料庫等執行個體。 如需詳細資訊，請閱讀[!DNL Azure]上的[指南，瞭解 [!DNL Azure] 資源管理員](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)。 |
 | `fqdns` | 您來源的完整網域名稱。 只有在使用[!DNL Snowflake]來源時，才需要此屬性。 |
 | `connectionSpec.id` | 您使用之來源的連線規格ID。 |
 | `connectionSpec.version` | 您正在使用的連線規格ID版本。 |
@@ -110,9 +111,9 @@ curl -X POST \
 | --- | --- |
 | `id` | 您新建立的私人端點的識別碼。 |
 | `name` | 您的私人端點的名稱。 |
-| `subscriptionId` | 與您的[!DNL Azure]訂閱相關聯的識別碼。 如需詳細資訊，請參閱[的[!DNL Azure]指南，從 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)擷取您的訂閱和租使用者ID。 |
-| `resourceGroupName` | [!DNL Azure]上資源群組的名稱。 資源群組包含[!DNL Azure]解決方案的相關資源。 如需詳細資訊，請閱讀[管理資源群組](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)的[!DNL Azure]指南。 |
-| `resourceName` | 資源的名稱。 在[!DNL Azure]中，資源是指虛擬機器器、網頁應用程式和資料庫等執行個體。 如需詳細資訊，請閱讀[上的[!DNL Azure]指南，瞭解 [!DNL Azure] 資源管理員](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)。 |
+| `subscriptionId` | 與您的[!DNL Azure]訂閱相關聯的識別碼。 如需詳細資訊，請參閱[!DNL Azure]的[指南，從 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)擷取您的訂閱和租使用者ID。 |
+| `resourceGroupName` | [!DNL Azure]上資源群組的名稱。 資源群組包含[!DNL Azure]解決方案的相關資源。 如需詳細資訊，請閱讀[!DNL Azure]管理資源群組[的](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)指南。 |
+| `resourceName` | 資源的名稱。 在[!DNL Azure]中，資源是指虛擬機器器、網頁應用程式和資料庫等執行個體。 如需詳細資訊，請閱讀[!DNL Azure]上的[指南，瞭解 [!DNL Azure] 資源管理員](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)。 |
 | `fqdns` | 您來源的完整網域名稱。 只有在使用[!DNL Snowflake]來源時，才需要此屬性。 |
 | `connectionSpec.id` | 您使用之來源的連線規格ID。 |
 | `connectionSpec.version` | 您正在使用的連線規格ID版本。 |
@@ -526,7 +527,7 @@ curl -X DELETE \
 
 ### 建立與私人端點的連線 {#create-base-connection}
 
-若要在Experience Platform中建立與私人端點的連線，請對[!DNL Flow Service] API的`/connections`端點提出POST要求。
+若要在Experience Platform中建立與私人端點的連線，請對`/connections` API的[!DNL Flow Service]端點提出POST要求。
 
 **API格式**
 

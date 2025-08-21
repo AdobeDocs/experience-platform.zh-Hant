@@ -2,9 +2,9 @@
 title: 使用流量服務API連線Azure Blob儲存至Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Azure Blob。
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '657'
 ht-degree: 3%
 
 ---
@@ -169,7 +169,7 @@ curl -X POST \
 | `serviceEndpoint` | [!DNL Azure Blob Storage]帳戶的端點URL。 通常格式為： `https://{ACCOUNT_NAME}.blob.core.windows.net`。 |
 | `servicePrincipalId` | 用於驗證的Azure Active Directory (AAD)服務主體的使用者端/應用程式ID。 |
 | `servicePrincipalKey` | 與Azure服務主體關聯的使用者端密碼或密碼。 |
-| `accountKind` | [!DNL Azure Blob Storage]帳戶的型別。 通用值包括`StorageV2`、`BlobStorage`或`Storage`。 |
+| `accountKind` | [!DNL Azure Blob Storage]帳戶的型別。 通用值包括`Storage` （一般用途V1）、`StorageV2` （一般用途V2）、`BlobStorage`和`BlockBlobStorage`。 |
 | `tenant` | 註冊服務主體的Azure Active Directory (AAD)租使用者ID。 |
 | `container` | 儲存資料檔的[!DNL Azure Blob Storage]容器名稱。 |
 | `folderPath` | 指定容器內檔案所在的路徑。 |
@@ -190,4 +190,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已使用API建立[!DNL Blob]連線，且已取得唯一ID作為回應本文的一部分。 您可以使用此連線ID來使用Flow Service API[&#128279;](../../explore/cloud-storage.md)探索雲端儲存空間。
+依照本教學課程，您已使用API建立[!DNL Blob]連線，且已取得唯一ID作為回應本文的一部分。 您可以使用此連線ID來使用Flow Service API[ ](../../explore/cloud-storage.md)探索雲端儲存空間。

@@ -2,9 +2,9 @@
 title: Azure Blob Source聯結器總覽
 description: 瞭解如何將您的Azure Blob帳戶連結至Experience Platform
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: f659d78eebc1c5e74021f9a41a2a489389a6588e
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 0%
 | 認證 | 說明 |
 | --- | --- |
 | `serviceEndpoint` | [!DNL Azure Blob Storage]帳戶的端點URL。 通常格式為： `https://{ACCOUNT_NAME}.blob.core.windows.net`。 |
-| `accountKind` | [!DNL Azure Blob Storage]帳戶的型別。 通用值包括`StorageV2`、`BlobStorage`或`Storage`。 |
+| `accountKind` | [!DNL Azure Blob Storage]帳戶的型別。 通用值包括`Storage` （一般用途V1）、`StorageV2` （一般用途V2）、`BlobStorage`和`BlockBlobStorage`。 |
 | `servicePrincipalId` | 用於驗證的Azure Active Directory (AAD)服務主體的使用者端/應用程式ID。 |
 | `servicePrincipalKey` | 與Azure服務主體關聯的使用者端密碼或密碼。 |
 | `tenant` | 註冊服務主體的Azure Active Directory (AAD)租使用者ID。 |
