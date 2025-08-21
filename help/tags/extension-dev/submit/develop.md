@@ -2,10 +2,10 @@
 title: 開發擴充功能
 description: 本檔案提供標籤擴充功能開發程式的一般概覽，以及進一步說明檔案的連結，以取得更詳細的程式。
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
+source-git-commit: 73452d0735c6a040ddd25b4cd00cec4b91eaf7ae
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 31%
+source-wordcount: '447'
+ht-degree: 29%
 
 ---
 
@@ -24,8 +24,6 @@ ht-degree: 31%
 計畫就緒後，這些指南將可協助您了解擴充功能的開發流程：
 
 * 左側導覽中的[快速入門手冊](../getting-started.md)和位於&#x200B;**擴充功能開發**&#x200B;下的其他檔案，是瞭解擴充功能的絕佳參考資料。 其中包含擴充功能的功能、如何儲存使用者資訊以及在擴充功能與Adobe Experience Platform之間加以傳遞、如何將程式碼整合至程式庫中，以及在執行階段如何在瀏覽器中解譯和使用擴充功能程式碼的詳細資訊。
-<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
-* [擴充功能簡介](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) YouTube 播放清單會逐步說明建立擴充功能套件的程序。
 * [了解 JSON 結構描述](https://spacetelescope.github.io/understanding-json-schema/index.html#)文章。
 * [JSON Lint/驗證器](https://jsonlint.com/)。
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome 擴充功能可醒目提示及列印 JSON 和 JSONP。
