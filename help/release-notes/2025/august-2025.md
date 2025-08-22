@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
+source-git-commit: cb32846bcbd917f267cba587b60dc323f6bc7d96
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1470'
 ht-degree: 37%
 
 ---
@@ -73,7 +73,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 >
 >**API型目的地需要IP允許清單更新**
 >
->由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;**&#x200B;**：
+>由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;****：
 >
 >**必要的IP位址：**
 >
@@ -103,7 +103,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 
 | 目標 | 說明 |
 | --- | --- |
-| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 自2025年8月11日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL Microsoft Bing]**&#x200B;卡片。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Microsoft Bing]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;的新卡片。 使用目錄中的新&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何前往&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**&#x200B;目的地的作用中資料流，資料流會自動更新，因此您不需要採取任何動作。 <br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 此升級後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少到**，人數為[!DNL Microsoft Bing]。 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 |
+| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 從2025年8月11日開始，您可能會在目的地目錄中看到兩張&#x200B;**[!DNL Microsoft Bing]**&#x200B;卡片並排。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Microsoft Bing]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;的新卡片。 <br>升級已完成，且已棄用的卡片已從目的地目錄中移除。 使用目錄中的&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何作用中資料流至&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。 <br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 此升級後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少到**，人數為[!DNL Microsoft Bing]。 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 |
 
 
 **全新或更新版功能**
