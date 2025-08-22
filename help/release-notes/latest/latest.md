@@ -72,7 +72,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 >
 >**API型目的地需要IP允許清單更新**
 >
->由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;****：
+>由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;**&#x200B;**：
 >
 >**必要的IP位址：**
 >
