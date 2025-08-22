@@ -3,20 +3,28 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 2%
+source-wordcount: '1082'
+ht-degree: 4%
 
 ---
 
-# [!DNL Airship Tags]個連線 {#airship-tags-destination}
+# [!DNL Airship Tags] 連線 {#airship-tags-destination}
 
 ## 概觀
 
+>[!IMPORTANT]
+>
+>* 自2025年8月21日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL Airship Tags]**&#x200B;卡片。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Airship Tags]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用）飛艇標籤]**，現在您可以使用名稱為&#x200B;**[!UICONTROL 飛艇標籤]**&#x200B;的新卡片。
+>* 使用目錄中的新&#x200B;**[!UICONTROL 飛艇標籤]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何有效資料流至&#x200B;**[!UICONTROL （已棄用）飛艇標籤]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。
+>* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
+>   * 流程規格 ID：`0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * 連線規格 ID：`aec13e22-8226-4b5d-9961-6baa35b251d2`
+
 [!DNL Airship]是領先的客戶參與平台，可在客戶生命週期的每個階段協助您為使用者提供有意義、個人化的全通路訊息。
 
-此整合會將Adobe Experience Platform對象資料作為[標籤](https://docs.airship.com/guides/audience/tags/)傳遞至[!DNL Airship]，以用於鎖定或觸發。
+此整合會將Adobe Experience Platform對象資料作為[!DNL Airship]標籤[傳遞至](https://docs.airship.com/guides/audience/tags/)，以用於鎖定或觸發。
 
 若要深入瞭解[!DNL Airship]，請參閱[飛艇檔案](https://docs.airship.com)。
 
@@ -34,7 +42,7 @@ ht-degree: 2%
 
 >[!TIP]
 > 
->如果您尚未透過[此註冊連結](https://go.airship.eu/accounts/register/plan/starter/)建立[!DNL Airship]帳戶。
+>如果您尚未透過[!DNL Airship]此註冊連結[建立](https://go.airship.eu/accounts/register/plan/starter/)帳戶。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -60,9 +68,9 @@ ht-degree: 2%
 
 ## 標籤群組
 
-Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https://docs.airship.com/guides/audience/tags/)，在實施上稍有差異。 此整合將使用者在Experience Platform區段[&#128279;](../../../xdm/field-groups/profile/segmentation.md)中的成員資格狀態對應至[!DNL Airship]標籤是否存在或不存在。 例如，在`xdm:status`變更為`realized`的Experience Platform對象中，標籤已新增至此設定檔對應到的[!DNL Airship]頻道或具名使用者。 如果`xdm:status`變更為`exited`，標籤將會移除。
+Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https://docs.airship.com/guides/audience/tags/)，在實施上稍有差異。 此整合將使用者在Experience Platform區段[中的](../../../xdm/field-groups/profile/segmentation.md)成員資格狀態對應至[!DNL Airship]標籤是否存在或不存在。 例如，在`xdm:status`變更為`realized`的Experience Platform對象中，標籤已新增至此設定檔對應到的[!DNL Airship]頻道或具名使用者。 如果`xdm:status`變更為`exited`，標籤將會移除。
 
-若要啟用這項整合，請在[!DNL Airship]中建立一個名為`adobe-segments`的&#x200B;*標籤群組*。
+若要啟用這項整合，請在&#x200B;*中建立一個名為*&#x200B;的[!DNL Airship]標籤群組`adobe-segments`。
 
 >[!IMPORTANT]
 >
@@ -72,7 +80,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 ## 產生持有人權杖
 
-移至[飛艇儀表板](https://go.airship.com)中的&#x200B;**[!UICONTROL 設定]** &quot; **[!UICONTROL API和整合]**，然後在左側功能表中選取&#x200B;**[!UICONTROL 代號]**。
+移至&#x200B;**[!UICONTROL 飛艇儀表板]**&#x200B;中的&#x200B;**[!UICONTROL 設定]** &quot; [API和整合](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL 代號]**。
 
 按一下&#x200B;**[!UICONTROL 建立Token]**。
 
@@ -108,7 +116,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 * **[!UICONTROL 持有人權杖]**：您從[!DNL Airship]儀表板產生的持有人權杖。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -132,7 +140,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 ## 對應考量事項 {#mapping-considerations}
 
-[!DNL Airship]標籤可在代表裝置執行個體(例如iPhone)的頻道上設定，或可對映所有使用者裝置至共同識別碼（例如客戶ID）的具名使用者上設定。 如果您的結構描述中有純文字（未雜湊）電子郵件地址作為主要身分，請在&#x200B;**[!UICONTROL Source屬性]**&#x200B;中選取電子郵件欄位，並對應至&#x200B;**[!UICONTROL 目標身分]**&#x200B;下右側欄中的[!DNL Airship]具名使用者，如下所示。
+[!DNL Airship]標籤可在代表裝置執行個體(例如iPhone)的頻道上設定，或可對映所有使用者裝置至共同識別碼（例如客戶ID）的具名使用者上設定。 如果您的結構描述中有純文字（未雜湊）電子郵件地址作為主要身分，請在&#x200B;**[!UICONTROL Source屬性]**&#x200B;中選取電子郵件欄位，並對應至[!DNL Airship]目標身分&#x200B;**[!UICONTROL 下右側欄中的]**&#x200B;具名使用者，如下所示。
 
 ![具名使用者對應](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
