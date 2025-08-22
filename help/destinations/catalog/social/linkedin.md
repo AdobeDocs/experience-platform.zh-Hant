@@ -3,14 +3,14 @@ keywords: linkedin連線；linkedin連線；linkedin目的地；linkedin；
 title: Linkedin相符受眾連線
 description: 根據雜湊電子郵件，為您的LinkedIn行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1220'
 ht-degree: 3%
 
 ---
 
-# [!DNL LinkedIn Matched Audiences]個連線
+# [!DNL LinkedIn Matched Audiences] 連線
 
 ## 概觀 {#overview}
 
@@ -88,7 +88,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 >[!NOTE]
 >
 >來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
-> 屬性來源資料不會自動雜湊。
+>> 屬性來源資料不會自動雜湊。
 > 
 > 在[身分對應](../../ui/activate-segment-streaming-destinations.md#mapping)步驟中，當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
 > 
@@ -121,14 +121,16 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 ### 重新整理驗證認證 {#refresh-authentication-credentials}
 
-LinkedIn權杖每60天過期。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+LinkedIn權杖每60天過期。 您可以從&#x200B;**[!UICONTROL 帳戶]**&#x200B;或&#x200B;**[[!UICONTROL 瀏覽]](../../ui/destinations-workspace.md#accounts)**&#x200B;索引標籤中的&#x200B;**[[!UICONTROL 帳戶到期日]](../../ui/destinations-workspace.md#browse)**&#x200B;欄監視您的權杖到期日。
+
+代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
 
 1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
 2. （選用）使用頁面上可用的篩選器，僅顯示LinkedIn帳戶。
    ![篩選以僅顯示LinkedIn帳戶](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的LinkedIn認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的LinkedIn認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]

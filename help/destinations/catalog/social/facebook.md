@@ -3,20 +3,20 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: Facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 5%
 
 ---
 
-# [!DNL Facebook]個連線
+# [!DNL Facebook] 連線
 
 ## 概觀 {#overview}
 
 為您的[!DNL Facebook]行銷活動啟用設定檔，以根據雜湊電子郵件進行對象目標定位、個人化和隱藏。
 
-您可以將此目的地用於[!DNL Custom Audiences]所支援之[!DNL Facebook's]系列應用程式的對象目標定位，包括[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]和[!DNL Messenger]。 在[!DNL Facebook Ads Manager]中的版位層級會指出您選擇針對哪個應用程式執行行銷活動。
+您可以將此目的地用於[!DNL Facebook's]所支援之[!DNL Custom Audiences]系列應用程式的對象目標定位，包括[!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]和[!DNL Messenger]。 在[!DNL Facebook Ads Manager]中的版位層級會指出您選擇針對哪個應用程式執行行銷活動。
 
 在Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/social/facebook/catalog.png)
 
@@ -118,7 +118,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->無法在[!DNL Facebook]中啟用擷取至`Phone`名稱空間的電話號碼。
+>無法在`Phone`中啟用擷取至[!DNL Facebook]名稱空間的電話號碼。
 
 ## 電子郵件雜湊需求 {#email-hashing-requirements}
 
@@ -138,8 +138,8 @@ ht-degree: 5%
 >[!NOTE]
 >
 >來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
->&#x200B;> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
->&#x200B;> **[!UICONTROL 套用轉換]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
+>> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
+>> **[!UICONTROL 套用轉換]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
 
 ![套用對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -174,7 +174,7 @@ ht-degree: 5%
 
 Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。
 
-您可以從&#x200B;**[!UICONTROL 帳戶]**&#x200B;或&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤中的&#x200B;**[!UICONTROL 帳戶到期日]**&#x200B;欄監視您的權杖到期日。
+您可以從&#x200B;**[!UICONTROL 帳戶]**&#x200B;或&#x200B;**[[!UICONTROL 瀏覽]](../../ui/destinations-workspace.md#accounts)**&#x200B;索引標籤中的&#x200B;**[[!UICONTROL 帳戶到期日]](../../ui/destinations-workspace.md#browse)**&#x200B;欄監視您的權杖到期日。
 
 在[瀏覽]索引標籤中的![Facebook帳戶權杖到期日資料行](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
@@ -187,7 +187,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
    ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的Facebook認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Facebook認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -242,7 +242,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
 
 如需啟用此目的地的對象的指示，請參閱[啟用串流對象匯出目的地的對象資料](../../ui/activate-segment-streaming-destinations.md)。
 
-在&#x200B;**[!UICONTROL 區段排程]**&#x200B;步驟中，將對象傳送至[!DNL Facebook Custom Audiences]時，您必須提供[!UICONTROL 對象來源]。
+在&#x200B;**[!UICONTROL 區段排程]**&#x200B;步驟中，將對象傳送至[!UICONTROL 時，您必須提供]對象來源[!DNL Facebook Custom Audiences]。
 
 ![Facebook啟用步驟中顯示的對象來源下拉式清單。](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -253,17 +253,17 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
 選取來源欄位：
 
 * 如果您使用的電子郵件地址未進行雜湊處理，請選取`Email`名稱空間作為來源身分。
-* 如果您根據[!DNL Facebook] [電子郵件雜湊需求](#email-hashing-requirements)將資料擷取的客戶電子郵件地址雜湊至[!DNL Experience Platform]，請選取`Email_LC_SHA256`名稱空間作為來源身分。
+* 如果您根據`Email_LC_SHA256` [!DNL Experience Platform]電子郵件雜湊需求[!DNL Facebook]將資料擷取的客戶電子郵件地址雜湊至[，請選取](#email-hashing-requirements)名稱空間作為來源身分。
 * 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`名稱空間作為來源身分。 [!DNL Experience Platform]將雜湊電話號碼以符合[!DNL Facebook]要求。
-* 如果您根據[!DNL Facebook] [電話號碼雜湊需求](#phone-number-hashing-requirements)，將資料擷取中的電話號碼雜湊至[!DNL Experience Platform]，請選取`Phone_SHA256`名稱空間作為來源身分。
-* 如果您的資料包含[!DNL Apple]個裝置識別碼，請選取`IDFA`名稱空間作為來源識別碼。
-* 如果您的資料包含[!DNL Android]個裝置識別碼，請選取`GAID`名稱空間作為來源識別碼。
+* 如果您根據`Phone_SHA256` [!DNL Experience Platform]電話號碼雜湊需求[!DNL Facebook]，將資料擷取中的電話號碼雜湊至[，請選取](#phone-number-hashing-requirements)名稱空間作為來源身分。
+* 如果您的資料包含`IDFA`個裝置識別碼，請選取[!DNL Apple]名稱空間作為來源識別碼。
+* 如果您的資料包含`GAID`個裝置識別碼，請選取[!DNL Android]名稱空間作為來源識別碼。
 * 如果您的資料包含其他型別的識別碼，請選取`Custom`名稱空間作為來源識別碼。
 
 選取目標欄位：
 
-* 當來源名稱空間為`Email`或`Email_LC_SHA256`時，請選取`Email_LC_SHA256`名稱空間作為目標身分。
-* 當來源名稱空間為`PHONE_E.164`或`Phone_SHA256`時，請選取`Phone_SHA256`名稱空間作為目標身分。
+* 當來源名稱空間為`Email_LC_SHA256`或`Email`時，請選取`Email_LC_SHA256`名稱空間作為目標身分。
+* 當來源名稱空間為`Phone_SHA256`或`PHONE_E.164`時，請選取`Phone_SHA256`名稱空間作為目標身分。
 * 當來源名稱空間為`IDFA`或`GAID`時，請選取`IDFA`或`GAID`名稱空間作為目標身分。
 * 當您的來源名稱空間是自訂名稱空間時，請選取`Extern_ID`名稱空間作為目標身分。
 
@@ -277,7 +277,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
 
 ## 匯出的資料 {#exported-data}
 
-對於[!DNL Facebook]，成功啟用表示將在[[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/)中以程式設計方式建立[!DNL Facebook]自訂對象。 當使用者符合或不符合啟用的對象的資格時，將會新增及移除對象成員資格。
+對於[!DNL Facebook]，成功啟用表示將在[!DNL Facebook][[!DNL Facebook Ads Manager]中以程式設計方式建立](https://www.facebook.com/adsmanager/manage/)自訂對象。 當使用者符合或不符合啟用的對象的資格時，將會新增及移除對象成員資格。
 
 >[!TIP]
 >
@@ -295,8 +295,8 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
 
 >[!IMPORTANT]
 >
->請確定您接受`business ID 206617933627973`底下的[!DNL Facebook Custom Audience Terms of Service]，如[帳戶必要條件](#facebook-account-prerequisites)區段中的URL範本所示。
+>請確定您接受[!DNL Facebook Custom Audience Terms of Service]底下的`business ID 206617933627973`，如[帳戶必要條件](#facebook-account-prerequisites)區段中的URL範本所示。
 
-如果您在遵循[Facebook帳戶必要條件](#facebook-account-prerequisites)中的步驟之後收到`400 Bad Request`錯誤訊息，請等幾天讓[!DNL Facebook]許可權生效。
+如果您在遵循`400 Bad Request`Facebook帳戶必要條件[中的步驟之後收到](#facebook-account-prerequisites)錯誤訊息，請等幾天讓[!DNL Facebook]許可權生效。
 
 

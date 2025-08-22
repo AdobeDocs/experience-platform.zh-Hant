@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: cb32846bcbd917f267cba587b60dc323f6bc7d96
+source-git-commit: d2b605925a8fd7ea06f198ba8a9f85747a2e585b
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 37%
+source-wordcount: '1643'
+ht-degree: 33%
 
 ---
 
@@ -73,7 +73,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 >
 >**API型目的地需要IP允許清單更新**
 >
->由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;**&#x200B;**：
+>由於已升級為串流目的地匯出引擎，使用API型目的地[IP允許清單](../../destinations/catalog/streaming/ip-address-allow-list.md)的組織必須在2025年9月15日之前，將下列IP位址新增至其允許清單&#x200B;****：
 >
 >**必要的IP位址：**
 >
@@ -98,13 +98,14 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 | 目標 | 說明 |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md)目的地 | 使用[!DNL Acxiom Real ID Audience Connection]目的地來增強具有[!DNL Acxiom's] [真實識別碼](https://www.acxiom.com/real-id/real-id/)技術的對象，並啟用多個平台的對象，例如[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]等。 |
+| 增強的[[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)目的地 | 增強的[[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)目的地是現有[[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)聯結器的升級版本。 除了舊版聯結器的現有對象同步功能之外，這個新的聯結器還引進了設定檔同步功能，提供與[!DNL Marketo Engage]更緊密的整合。 <br> [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)聯結器將於&#x200B;**2026年3月**&#x200B;日淘汰。 若要確保順利轉換至新的&#x200B;**[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)**&#x200B;目的地，請檢閱下列要點和必要的動作： <ul><li>現有&#x200B;**[!UICONTROL （舊版） (V2) Marketo Engage]**&#x200B;的所有使用者必須在2026年3月前移轉至新的&#x200B;**[!UICONTROL Marketo Engage]**&#x200B;目的地。</li><li> **現有的資料流將不會自動移轉。**&#x200B;您必須[設定與新](../../destinations/ui/connect-destination.md)Marketo Engage **[!UICONTROL 目的地的新連線]**，並在那裡啟用您的對象。</li></ul> |
 
 **已更新的目標**
 
 | 目標 | 說明 |
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 從2025年8月11日開始，您可能會在目的地目錄中看到兩張&#x200B;**[!DNL Microsoft Bing]**&#x200B;卡片並排。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Microsoft Bing]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;的新卡片。 <br>升級已完成，且已棄用的卡片已從目的地目錄中移除。 使用目錄中的&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何作用中資料流至&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。 <br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 此升級後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少到**，人數為[!DNL Microsoft Bing]。 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 |
-
+| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md)和[LinkedIn相符對象](../../destinations/catalog/social/linkedin-b2b.md)目的地的驗證到期詳細資料 | [!DNL LinkedIn]目的地的驗證到期資訊現在會直接顯示在Experience Platform介面中，因此您可以檢視您的驗證將於何時到期並續約，以免對資料流造成任何中斷。 您可以從&#x200B;**[!UICONTROL 帳戶]**&#x200B;或&#x200B;**[[!UICONTROL 瀏覽]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;索引標籤中的&#x200B;**[[!UICONTROL 帳戶到期日]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;欄監視您的權杖到期日。 |
 
 **全新或更新版功能**
 

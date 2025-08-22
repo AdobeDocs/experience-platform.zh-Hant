@@ -3,9 +3,9 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 73d84174a9960e180a81c3db938f3f18f68f3beb
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '2235'
+source-wordcount: '2240'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 0%
 > ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 > 
 > * 選取`...`名稱[!UICONTROL 欄中的省略符號(])，並使用![啟用對象控制項](/help/images/icons/data-add.png) **[!UICONTROL 啟用對象控制項]**&#x200B;將對象或資料集匯出至該目的地。
-> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![編輯目的地控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯目的地&#x200B;]**&#x200B;控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
+> * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![編輯目的地控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯目的地&#x200B;]**控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
 > * 選取`...`名稱[!UICONTROL 欄中的省略符號(])，並使用![編輯行銷動作控制項](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL 編輯行銷動作]**&#x200B;控制項變更為[變更所選目的地的行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。
 > * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png) **[!UICONTROL 刪除]**&#x200B;控制項來[移除](delete-destinations.md)與目的地的現有連線。
 > * 選取`...`名稱[!UICONTROL 資料行中的省略符號(])，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png) **[!UICONTROL 監視控制項中的檢視]**&#x200B;控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
@@ -129,7 +129,6 @@ ht-degree: 0%
 
 ![瀏覽標籤中的目的地篩選器](../assets/ui/workspace/destination-filters.png)
 
-
 * **[!UICONTROL 目的地平台]**：依特定目的地平台（例如[!DNL Amazon S3]、[!DNL Facebook Custom Audience]、[!DNL LinkedIn Matched Audience]等）篩選資料流程。 您可以同時選取多個平台。
 * **[!UICONTROL 具有任何標籤]**：已指派特定標籤的篩選資料流。 這可幫助您根據自訂標籤來組織和尋找資料流。
 * **[!UICONTROL 狀態]**：依資料流的作業狀態篩選資料流：
@@ -162,7 +161,7 @@ ht-degree: 0%
 標籤可協助您整理和分類目的地資料流，以便更輕鬆管理。 您可以在個別資料流中新增和移除標籤，以根據您的業務需求將其分組。
 
 若要新增標籤至資料流，請在`...`名稱&#x200B;**[!UICONTROL 欄中選取省略符號(]**)，然後從內容功能表中選取&#x200B;**[!UICONTROL 管理標籤]**。
-在&#x200B;**[!UICONTROL 標籤]**&#x200B;欄位中輸入新標籤的名稱，並選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以套用您的變更。
+在**[!UICONTROL 標籤]**&#x200B;欄位中輸入新標籤的名稱，並選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以套用您的變更。
 
 ![管理標籤對話方塊，顯示標籤選取和建立選項](../assets/ui/workspace/tags.gif)
 
@@ -183,9 +182,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**&#x200B;控制項，將對象或資料集匯出至該目的地。
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**&#x200B;控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
-> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**&#x200B;控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制項，將對象或資料集匯出至該目的地。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
+> * 選取`...`Platform[!UICONTROL 資料行中的省略符號(])，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
 
 ![帳戶標籤](../assets/ui/workspace/accounts-tab.png)
 
@@ -197,7 +196,7 @@ ht-degree: 0%
 | [!UICONTROL 使用者名稱] | 您在[連線目的地工作流程](../catalog/email-marketing/overview.md#connect-destination)中選取的使用者名稱。 |
 | [!UICONTROL 連線] | 代表與針對目的地建立的基本資訊相連結的唯一成功目的地資料流數目。 |
 | [!UICONTROL 授權日期] | 授權連線到此目的地的日期。 |
-| [!UICONTROL 到期日] | 此目的地的連線授權到期的日期。 <br>**重要**：此資料行目前僅適用於[Facebook](../catalog/social/facebook.md)連線。 |
+| [!UICONTROL 到期日] | 此目的地的連線授權到期的日期。 <br>**重要**：此資料行目前僅適用於[Facebook](../catalog/social/facebook.md)、[LinkedIn](../catalog/social/linkedin.md)和[LinkedIn相符對象](../catalog/social/linkedin-b2b.md)連線。 |
 
 {style="table-layout:auto"}
 
