@@ -1,23 +1,25 @@
 ---
 title: Marketo Engage目的地
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商業的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化並管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
-exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c57a519b5a230dc62699808cf5c020d48cc79083
+source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '949'
 ht-degree: 1%
 
 ---
 
-# Marketo Engage目的地 {#beta-marketo-engage-destination}
+# （舊版） (V2) Marketo Engage目的地 {#beta-marketo-engage-destination}
 
 ## 目的地變更記錄檔 {#changelog}
 
 >[!IMPORTANT]
 >
->隨著[增強型Marketo V2目的地聯結器](/help/release-notes/2022/july-2022.md#destinations)的發行，您現在會在目的地目錄中看到兩個Marketo卡片。
->* 如果您已經啟用資料至&#x200B;**[!UICONTROL Marketo V1]**&#x200B;目的地：請在2023年2月前建立新的資料流至&#x200B;**[!UICONTROL Marketo V2]**&#x200B;目的地，並刪除現有資料流至&#x200B;**[!UICONTROL Marketo V1]**&#x200B;目的地。 自該日期起，**[!UICONTROL Marketo V1]**&#x200B;目的地卡片將會移除。
->* 如果您尚未建立任何資料流至&#x200B;**[!UICONTROL Marketo V1]**&#x200B;目的地，請使用新的&#x200B;**[!UICONTROL Marketo V2]**&#x200B;卡片來連線並匯出資料至Marketo。
+>**[!UICONTROL （舊版） (V2) Marketo Engage]**&#x200B;將於2026年3月&#x200B;**日**&#x200B;棄用。
+>
+>若要確保順利轉換至新的&#x200B;**[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**&#x200B;目的地，請檢閱下列要點和必要的動作：
+>
+>* 現有&#x200B;**[!UICONTROL （舊版） (V2) Marketo Engage]**&#x200B;的所有使用者必須在2026年3月前移轉至新的&#x200B;**[!UICONTROL Marketo Engage]**&#x200B;目的地。
+>* **現有的資料流將不會自動移轉。**&#x200B;您必須[設定與新](../../ui/connect-destination.md)Marketo Engage **[!UICONTROL 目的地的新連線]**，並在那裡啟用您的對象。
 
 ![並排檢視中兩個Marketo目的地卡片的影像。](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -80,7 +82,7 @@ Marketo V2目的地的改良專案包括：
 >* 若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-如需如何設定目的地及啟用對象的詳細指示，請參閱Marketo檔案中的[將Adobe Experience Platform對象推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=zh-Hant)。
+如需如何設定目的地及啟用對象的詳細指示，請參閱Marketo檔案中的[將Adobe Experience Platform對象推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html)。
 
 以下影片也會示範設定Marketo目的地和啟用對象的步驟。
 
@@ -93,7 +95,7 @@ Marketo V2目的地的改良專案包括：
 >* 影片中叫用的兩個限制不再適用。 除了錄製影片時支援的對象成員資格資訊之外，您現在可以對應許多其他設定檔屬性欄位。 您也可以將尚未存在於Marketo靜態清單中的受眾成員匯出至Marketo，這些受眾成員將會新增至清單中。
 >* 在Marketo V1的啟動工作流程的&#x200B;**[!UICONTROL 排程對象步驟]**&#x200B;中，您需要手動新增&#x200B;**[!UICONTROL 對應ID]**，才能成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440169?quality=12&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## 監視目的地 {#monitor-destination}
 
@@ -104,4 +106,3 @@ Marketo V2目的地的改良專案包括：
 ## 資料使用與控管 {#data-usage-governance}
 
 處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請參閱[資料控管概觀](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)。
-

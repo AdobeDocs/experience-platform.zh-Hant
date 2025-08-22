@@ -1,25 +1,35 @@
 ---
 title: Marketo Engage人員同步
-description: 使用Marketo Engage「人員同步」聯結器將個人對象的更新串流到Marketo Engage中的對應記錄。
+description: 使用Marketo Engage Person Sync聯結器將個人對象的更新串流至Marketo Engage中的對應記錄。
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
+source-git-commit: 88864353d4872d62258914d6490b90331692fa96
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 3%
+source-wordcount: '1124'
+ht-degree: 5%
 
 ---
-
 
 # Marketo Engage人員同步連線 {#marketo-engage-person-sync}
 
 >[!IMPORTANT]
 >
->此目的地聯結器為測試版，僅供特定客戶使用。 若要要求存取權，請聯絡您的Adobe代表。
+>此目標連接器為測試版，僅供精選客戶使用。如欲請求存取權，請和您的 Adobe 代表聯絡。
+
+>[!IMPORTANT]
+>
+>**[!UICONTROL Marketo Engage人員同步]**&#x200B;目的地卡將於&#x200B;**2026年3月**&#x200B;日淘汰。
+>
+>若要確保順利轉換至新的&#x200B;**[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**&#x200B;目的地，請檢閱下列要點和必要的動作：
+>
+>* **[!UICONTROL Marketo Engage Person Sync]**&#x200B;目的地的所有使用者都必須在2026年3月前移轉至新的&#x200B;**[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**&#x200B;目的地。
+>* **現有的資料流將不會自動移轉。**&#x200B;您必須[設定與新](marketo-engage-connection.md#connect-to-the-destination)Marketo Engage **[!UICONTROL 目的地的新連線]**，並在那裡啟用您的對象。
+
 
 ## 概觀 {#overview}
 
-使用Marketo Engage「人員同步」聯結器將個人受眾的更新串流到您Marketo Engage例項中的對應記錄。
+使用Marketo Engage Person Sync聯結器將個人受眾的更新串流至Marketo Engage例項中的對應記錄。
 
 >[!IMPORTANT]
 > 
@@ -37,7 +47,7 @@ ht-degree: 3%
 
 ### 支援的屬性 {#supported-attributes}
 
-您可以將屬性從「Experience Platform」對應至貴組織在Marketo中可以存取的任何屬性。 在Marketo中，您可以使用[Describe API](https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/describeUsingGET_6)要求來擷取貴組織有權存取的屬性欄位。
+您可以將屬性從Experience Platform對應至貴組織在Marketo中可存取的任何屬性。 在Marketo中，您可以使用[Describe API](https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/describeUsingGET_6)要求來擷取貴組織有權存取的屬性欄位。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -45,8 +55,8 @@ ht-degree: 3%
 
 | 對象來源 | 支援 | 說明 |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 分段服務 | ✓ (A) | 透過Experience Platform[細分服務](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
-| 自訂上傳 | ✓ (A) | 對象已從CSV檔案匯入Experience Platform。 |
+| 細分服務 | ✓ | 透過Experience Platform [細分服務](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
+| 自訂上傳 | ✓ | 對象已從CSV檔案匯入至Experience Platform。 |
 
 ## 匯出型別和頻率 {#export-type-and-frequency}
 
@@ -54,7 +64,7 @@ ht-degree: 3%
 
 | 項目 | 類型 | 附註 |
 | ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 匯出頻率 | 串流 | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | 串流 | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -64,22 +74,22 @@ ht-degree: 3%
 >
 >* 若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。
 
-如果貴公司可存取多個組織，請務必在Marketo Engage和Real-Time CDP(您可在此處設定與Marketo的目的地聯結器)中使用相同的組織。  如果您已設定目的地，您可以選取要搭配新設定使用的現有Marketo帳戶。  如果沒有，請按一下「聯結器至目的地」提示，此提示可讓您設定所要目的地的名稱、說明和Marketo Munchkin ID。  您可以在管理員 — >Munchkin功能表中找到您的Marketo執行個體的Munchkin ID。
+如果貴公司可存取多個組織，請務必在Marketo Engage和Real-Time CDP中使用相同的組織，以便在其中設定Marketo的目的地聯結器。  如果您已設定目的地，您可以選取要搭配新設定使用的現有Marketo帳戶。  如果沒有，請按一下「聯結器至目的地」提示，此提示可讓您設定所要目的地的名稱、說明和Marketo Munchkin ID。  您可以在管理員 — >Munchkin功能表中找到您的Marketo執行個體的Munchkin ID。
 
 >[!IMPORTANT]
 >
->設定目的地的使用者必須在Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
+>設定目的地的使用者必須在Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
 
 ![連線到目的地](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
 * **[!UICONTROL Munchkin ID]**： Munchkin ID是特定Marketo執行個體的唯一識別碼。
-* **[!UICONTROL 資料分割]**：Marketo Engage中的概念，用來依業務關係區分潛在客戶記錄
+* **[!UICONTROL 資料分割]**： Marketo Engage中的概念，用來依業務考量區分潛在客戶記錄
 * **[!UICONTROL 第一個可搜尋的欄位]**：要取消重複的欄位。 欄位必須出現在輸入的每個潛在客戶記錄中。 預設為電子郵件
 * **[!UICONTROL 第一個可搜尋的欄位]**：要取消重複的次要欄位。 欄位必須出現在輸入的每個潛在客戶記錄中。 選填
 
-選取執行個體後，您還需要選取要與組態整合的Lead Partition。 [潛在客戶分割](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)是Marketo Engage中的概念，用於依業務考量（例如品牌或銷售區域）來區分潛在客戶記錄。 如果您的Marketo訂閱沒有工作區與分割區功能，或是您的訂閱中尚未建立其他分割區，則只有預設分割區可用。 單一設定只能更新存在於其設定分割中的潛在客戶記錄。
+選取執行個體後，您還需要選取要與組態整合的Lead Partition。 [潛在客戶分割](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)是Marketo Engage中的概念，用於依業務考量（例如品牌或銷售區域）來區分潛在客戶記錄。 如果您的Marketo訂閱沒有工作區與分割區功能，或是您的訂閱中尚未建立其他分割區，則只有預設分割區可用。 單一設定只能更新存在於其設定分割中的潛在客戶記錄。
 
 >[!IMPORTANT]
 > 
@@ -111,7 +121,7 @@ ht-degree: 3%
 
 ## 欄位對應 {#field-mapping}
 
-為了將特定人員屬性的變更傳送至Marketo Engage，該欄位必須從Real-Time CDP欄位對應至Marketo欄位。
+若要將特定人員屬性的變更傳送至Marketo Engage，該欄位必須從Real-Time CDP欄位對應至Marketo欄位。
 
 ![欄位對應](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
@@ -135,7 +145,7 @@ Experience Platform資料型別和Marketo資料型別可透過下列方式對應
 
 {style="table-layout:auto"}
 
-在某些情況下，最好允許整合功能設定欄位值（如果沒有欄位的話），同時防止整合功能更新已經有值的欄位。  如果您需要防止目的地聯結器覆寫Marketo Engage執行個體中的現有值，可以在Marketo執行個體的「管理員 — >欄位管理」區段中設定欄位以封鎖更新，並切換Adobe Experience Platform來源型別。
+在某些情況下，最好允許整合功能設定欄位值（如果沒有欄位的話），同時防止整合功能更新已經有值的欄位。  如果您需要防止目的地聯結器覆寫Marketo Engage執行個體中的現有值，可以在Marketo執行個體的管理員 — >欄位管理區段中設定欄位以封鎖更新，並切換Adobe Experience Platform來源型別。
 
 ![封鎖欄位更新](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
 
