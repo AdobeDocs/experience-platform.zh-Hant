@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ## 先決條件 {#prerequisites}
 
-設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
+設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
 
 ## 支援的身分 {#supported-identities}
 
@@ -144,7 +144,7 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo重複資料刪除欄�
    * **[!UICONTROL 僅設定檔]**：當您想要讓Marketo銷售機會設定檔與Experience Platform的最新資訊保持最新狀態時，請選取此選項。
    * **[!UICONTROL 僅限對象]**：如果您要將對象成員新增至Marketo清單，但不更新其設定檔資訊，請選取此選項。
 * **[!UICONTROL 資料分割]**： *資料分割選擇只有在選擇&#x200B;**[!UICONTROL 僅設定檔]**&#x200B;或&#x200B;**[!UICONTROL 對象和設定檔]**&#x200B;同步型別*&#x200B;時才可用。 選取與您所選工作區相關聯的Marketo分割區ID。 這可讓您指定Marketo中的哪個銷售機會分割區會接收匯出的資料。 如果您未選擇特定的資料分割，您的資料將會傳送到Marketo中的&#x200B;**[!UICONTROL 預設]**&#x200B;資料分割。
-* **[!UICONTROL Marketo重複資料刪除欄位]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
+* **[!UICONTROL Marketo重複資料刪除欄位]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/zh-hant/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
 
   >[!NOTE]
   >
