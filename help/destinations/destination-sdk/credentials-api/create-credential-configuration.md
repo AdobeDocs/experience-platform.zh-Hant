@@ -2,10 +2,10 @@
 description: 此頁面是用來建立認證設定Adobe Experience Platform Destination SDK的API呼叫範例。
 title: 建立認證設定
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 5%
+source-wordcount: '586'
+ht-degree: 6%
 
 ---
 
@@ -21,17 +21,17 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->在大多數情況下，您&#x200B;***不***&#x200B;需要使用`/credentials` API端點。 您可以改為透過`/destinations`端點的`customerAuthenticationConfigurations`引數來設定您目的地的驗證資訊。
+>在大多數情況下，您&#x200B;***不***&#x200B;需要使用`/credentials` API端點。 您可以改為透過`customerAuthenticationConfigurations`端點的`/destinations`引數來設定您目的地的驗證資訊。
 > 
 >閱讀[客戶驗證組態](../functionality/destination-configuration/customer-authentication.md)，以取得支援的驗證型別的詳細資訊。
 
 只有在Adobe和您的目的地平台之間有全域驗證系統，且[!DNL Experience Platform]客戶不需要提供任何驗證認證即可連線至您的目的地時，才使用此API端點來建立認證設定。 在此情況下，您必須使用`/credentials` API端點建立認證組態。
 
-使用全域驗證系統時，在[建立新的目的地組態](../authoring-api/destination-configuration/create-destination-configuration.md)時，您必須在[目的地傳遞](../functionality/destination-configuration/destination-delivery.md)組態中設定`"authenticationRule":"PLATFORM_AUTHENTICATION"`。
+使用全域驗證系統時，在`"authenticationRule":"PLATFORM_AUTHENTICATION"`建立新的目的地組態[時，您必須在](../functionality/destination-configuration/destination-delivery.md)目的地傳遞[組態中設定](../authoring-api/destination-configuration/create-destination-configuration.md)。 接著，您必須建立[認證設定](../credentials-api/create-credential-configuration.md)，並在`authenticationId`目的地傳遞[設定的](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication)引數中傳遞認證物件識別碼。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 認證API操作快速入門 {#get-started}
 
@@ -39,7 +39,7 @@ ht-degree: 5%
 
 ## 建立認證設定 {#create}
 
-您可以對`/authoring/credentials`端點發出`POST`要求，以建立新的認證組態。
+您可以對`POST`端點發出`/authoring/credentials`要求，以建立新的認證組態。
 
 **API格式**
 
@@ -57,7 +57,7 @@ POST /authoring/credentials
 
 **建立基本認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -133,7 +133,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 **建立SSH認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -170,7 +170,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 **建立[!DNL Azure Data Lake Storage]認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -211,7 +211,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 **建立[!DNL Azure Blob Storage]認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \

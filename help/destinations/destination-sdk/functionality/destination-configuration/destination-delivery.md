@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定目的地傳送設定，以指出匯出的資料前往何處，以及在資料著陸位置使用什麼驗證規則。
 title: 目的地傳遞
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '641'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -48,8 +48,9 @@ ht-degree: 2%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `authenticationRule` | 字串 | 指示[!DNL Experience Platform]應該如何連線到您的目的地。 支援的值：<ul><li>`CUSTOMER_AUTHENTICATION`：如果Experience Platform客戶透過[此處](customer-authentication.md)說明的任何驗證方法登入您的系統，請使用此選項。</li><li>`PLATFORM_AUTHENTICATION`：如果Adobe與您的目的地之間有全域驗證系統，且[!DNL Experience Platform]客戶不需要提供任何驗證認證即可連線至您的目的地，請使用此選項。 在此情況下，您必須使用[認證API](../../credentials-api/create-credential-configuration.md)設定來建立認證物件。 </li><li>`NONE`：如果不需要驗證即可將資料傳送至您的目的地平台，請使用此選項。 </li></ul> |
-| `destinationServerId` | 字串 | 您要匯出資料的[目的地伺服器](../../authoring-api/destination-server/create-destination-server.md)的`instanceId`。 |
+| `authenticationRule` | 字串 | 指示[!DNL Experience Platform]應該如何連線到您的目的地。 支援的值：<ul><li>`CUSTOMER_AUTHENTICATION`：如果Experience Platform客戶透過[此處](customer-authentication.md)說明的任何驗證方法登入您的系統，請使用此選項。</li><li>`PLATFORM_AUTHENTICATION`：如果Adobe與您的目的地之間有全域驗證系統，且[!DNL Experience Platform]客戶不需要提供任何驗證認證即可連線至您的目的地，請使用此選項。 在此情況下，您必須使用[認證API](../../credentials-api/create-credential-configuration.md)設定來建立認證物件，並將`authenticationId`引數設定為認證物件識別碼值。</li><li>`NONE`：如果不需要驗證即可將資料傳送至您的目的地平台，請使用此選項。 </li></ul> |
+| `authenticationId` | 字串 | 用於驗證的認證物件組態識別碼的`instanceId`。 只有在您需要指定特定認證組態時，才需要使用此引數。 |
+| `destinationServerId` | 字串 | 您要匯出資料的`instanceId`目的地伺服器[的](../../authoring-api/destination-server/create-destination-server.md)。 |
 | `deliveryMatchers.type` | 字串 | <ul><li>設定檔案型目的地的目的地傳遞時，請一律將此項設為`SOURCE`。</li><li>設定串流目的地的目的地傳遞時，`deliveryMatchers`區段不是必要的。</li></ul> |
 | `deliveryMatchers.value` | 字串 | <ul><li>設定檔案型目的地的目的地傳遞時，請一律將此項設為`batch`。</li><li>設定串流目的地的目的地傳遞時，`deliveryMatchers`區段不是必要的。</li></ul> |
 
@@ -94,6 +95,32 @@ ht-degree: 2%
          ],
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"{{destinationServerId}}"
+      }
+   ]
+}
+```
+
+>[!ENDSHADEBOX]
+
+## 平台驗證設定 {#platform-authentication}
+
+使用`PLATFORM_AUTHENTICATION`時，您必須指定`authenticationId`引數，將目的地組態連結至認證組態。
+
+1. 在您的目的地組態中將`destinationDelivery.authenticationRule`設定為`"PLATFORM_AUTHENTICATION"`
+2. [建立認證物件](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md)。
+3. 將`authenticationId`引數設定為認證物件的`instanceId`值。
+
+**具有PLATFORM_AUTHENTICATION的設定範例：**
+
+>[!BEGINSHADEBOX]
+
+```json
+{
+   "destinationDelivery":[
+      {
+         "authenticationRule":"PLATFORM_AUTHENTICATION",
+         "authenticationId":"<string-here>",
+         "destinationServerId":"<string-here>"
       }
    ]
 }

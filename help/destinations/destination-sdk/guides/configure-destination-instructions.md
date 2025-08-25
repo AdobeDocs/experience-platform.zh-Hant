@@ -2,9 +2,9 @@
 description: 本頁面列出及說明使用Destination SDK設定串流目的地的步驟。
 title: 使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-此頁面說明如何在目的地SDK[&#128279;](../functionality/configuration-options.md)的設定選項以及其他Destination SDK功能和API參考檔案中使用資訊來設定[串流目的地](../../destination-types.md#streaming-destinations)。 這些步驟會依序排列如下。
+此頁面說明如何在目的地SDK[的](../functionality/configuration-options.md)設定選項以及其他Destination SDK功能和API參考檔案中使用資訊來設定[串流目的地](../../destination-types.md#streaming-destinations)。 這些步驟會依序排列如下。
 
 ## 先決條件 {#prerequisites}
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 步驟1：建立伺服器和範本設定 {#create-server-template-configuration}
 
-開始於[使用`/destinations-server`端點建立伺服器和範本組態](../authoring-api/destination-server/create-destination-server.md)。
+開始於[使用](../authoring-api/destination-server/create-destination-server.md)端點建立伺服器和範本組態`/destinations-server`。
 
 以下是設定範例。 請注意，`requestBody.value`引數中的訊息轉換範本會在步驟3 [建立轉換範本](#create-transformation-template)中處理。
 
@@ -275,7 +275,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 如果您在目的地設定中選取`"authenticationRule": "CUSTOMER_AUTHENTICATION"`，且目的地支援OAuth 2驗證方法，請閱讀[OAuth 2驗證](../functionality/destination-configuration/oauth2-authorization.md)。
 
-若您選取`"authenticationRule": "PLATFORM_AUTHENTICATION"`，則必須建立[認證組態](../credentials-api/create-credential-configuration.md)。
+如果您選取`"authenticationRule": "PLATFORM_AUTHENTICATION"`，則必須建立[認證組態](../credentials-api/create-credential-configuration.md)，並在`authenticationId`目的地傳遞[組態的](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication)引數中傳遞認證物件識別碼。
 
 ## 步驟6：測試您的目的地 {#test-destination}
 
@@ -284,7 +284,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 在測試目的地的程式中，您必須使用Experience Platform UI來建立區段，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
 * [建立對象檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
-* [建立對象視訊逐步說明](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)
+* [建立對象視訊逐步說明](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 步驟7：發佈您的目的地 {#publish-destination}
 

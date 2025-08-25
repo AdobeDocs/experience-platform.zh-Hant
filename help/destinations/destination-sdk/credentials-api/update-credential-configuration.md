@@ -2,10 +2,10 @@
 description: 此頁面是透過Adobe Experience Platform Destination SDK更新現有認證設定的API呼叫範例。
 title: 更新認證設定
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 5%
+source-wordcount: '610'
+ht-degree: 7%
 
 ---
 
@@ -21,17 +21,17 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->在大多數情況下，您&#x200B;***不***&#x200B;需要使用`/credentials` API端點。 您可以改為透過`/destinations`端點的`customerAuthenticationConfigurations`引數來設定您目的地的驗證資訊。
+>在大多數情況下，您&#x200B;***不***&#x200B;需要使用`/credentials` API端點。 您可以改為透過`customerAuthenticationConfigurations`端點的`/destinations`引數來設定您目的地的驗證資訊。
 > 
 >閱讀[客戶驗證組態](../functionality/destination-configuration/customer-authentication.md)，以取得支援的驗證型別的詳細資訊。
 
 只有在Adobe和您的目的地平台之間有全域驗證系統，且[!DNL Experience Platform]客戶不需要提供任何驗證認證即可連線至您的目的地時，才使用此API端點來建立認證設定。 在此情況下，您必須使用`/credentials` API端點建立認證組態。
 
-使用全域驗證系統時，在[建立新的目的地組態](../authoring-api/destination-configuration/create-destination-configuration.md)時，您必須在[目的地傳遞](../functionality/destination-configuration/destination-delivery.md)組態中設定`"authenticationRule":"PLATFORM_AUTHENTICATION"`。
+使用全域驗證系統時，在`"authenticationRule":"PLATFORM_AUTHENTICATION"`建立新的目的地組態[時，您必須在](../functionality/destination-configuration/destination-delivery.md)目的地傳遞[組態中設定](../authoring-api/destination-configuration/create-destination-configuration.md)。 接著，您必須建立[認證設定](../credentials-api/create-credential-configuration.md)，並在`authenticationId`目的地傳遞[設定的](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication)引數中傳遞認證物件識別碼。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 認證API操作快速入門 {#get-started}
 
@@ -39,7 +39,7 @@ ht-degree: 5%
 
 ## 更新認證設定 {#update}
 
-您可以藉由使用更新的承載對`/authoring/credentials`端點發出`PUT`要求，來更新[現有](create-credential-configuration.md)認證設定。
+您可以藉由使用更新的承載對[端點發出](create-credential-configuration.md)要求，來更新`PUT`現有`/authoring/credentials`認證設定。
 
 若要取得現有的認證組態及其對應的`{INSTANCE_ID}`，請參閱有關[擷取認證組態](retrieve-credential-configuration.md)的文章。
 
@@ -63,7 +63,7 @@ PUT /authoring/credentials/{INSTANCE_ID}
 
 **更新基本認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -102,7 +102,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **更新[!DNL Amazon S3]認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -139,7 +139,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **更新[!DNL SSH]認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -176,7 +176,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **更新[!DNL Azure Data Lake Storage]認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -200,8 +200,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | -------- | ----------- | ----------- |
 | `url` | 字串 | 授權提供者的URL |
 | `tenant` | 字串 | Azure Data Lake Storage租使用者 |
-| `servicePrincipalId` | 字串 | [!DNL Azure Data Lake Storage]的[!DNL Azure Service Principal] ID |
-| `servicePrincipalKey` | 字串 | [!DNL Azure Data Lake Storage]的[!DNL Azure Service Principal Key] |
+| `servicePrincipalId` | 字串 | [!DNL Azure Service Principal]的[!DNL Azure Data Lake Storage] ID |
+| `servicePrincipalKey` | 字串 | [!DNL Azure Service Principal Key]的[!DNL Azure Data Lake Storage] |
 
 {style="table-layout:auto"}
 
@@ -217,7 +217,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **更新[!DNL Azure Blob]認證組態**
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \

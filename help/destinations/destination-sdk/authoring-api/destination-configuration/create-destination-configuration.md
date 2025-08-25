@@ -2,9 +2,9 @@
 description: 瞭解如何建構API呼叫，以透過Adobe Experience Platform Destination SDK建立目的地設定。
 title: 建立目的地設定
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1213'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 目的地設定API操作快速入門 {#get-started}
 
@@ -54,7 +54,7 @@ POST /authoring/destinations
 
 請注意，您不需要將所有引數新增至API呼叫，而且裝載可以根據您的API需求自訂。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -203,21 +203,21 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | 字串 | 將自訂欄位呈現為下拉式功能表，並列出使用者可用的選項。 <br/><br/>如需這些設定的詳細資訊，請參閱[客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)。 |
 | `customerDataFields.default` | 字串 | 從`enum`清單定義預設值。 |
 | `customerDataFields.pattern` | 字串 | 如有需要，強制自訂欄位使用模式。 使用規則運算式強制執行模式。 例如，如果您的客戶ID不包含數字或底線，請在此欄位中輸入`^[A-Za-z]+$`。 <br/><br/>如需這些設定的詳細資訊，請參閱[客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)。 |
-| `uiAttributes.documentationLink` | 字串 | 請參閱您目的地的[目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=zh-Hant#catalog)中的檔案頁面。 使用`https://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是您目的地的名稱。 對於名為Moviestar的目的地，您可以使用`https://www.adobe.com/go/destinations-moviestar-en`。 請注意，此連結只有在Adobe將您的目的地設定為上線並發佈檔案後才能運作。 <br/><br/>如需這些設定的詳細資訊，請參閱[UI屬性](../../functionality/destination-configuration/ui-attributes.md)。 ![Experience Platform UI影像顯示檔案連結。](../../assets/authoring-api/destination-configuration/documentation-url.png "檔案URL"){width="100" zoomable="yes"} |
-| `uiAttributes.category` | 字串 | 是指在Adobe Experience Platform中指派給您的目的地的類別。 如需詳細資訊，請閱讀[目的地類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=zh-Hant#destination-categories)。 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 <br/><br/>如需這些設定的詳細資訊，請參閱[UI屬性](../../functionality/destination-configuration/ui-attributes.md)。 |
+| `uiAttributes.documentationLink` | 字串 | 請參閱您目的地的[目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog)中的檔案頁面。 使用`https://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是您目的地的名稱。 對於名為Moviestar的目的地，您可以使用`https://www.adobe.com/go/destinations-moviestar-en`。 請注意，此連結只有在Adobe將您的目的地設定為上線並發佈檔案後才能運作。 <br/><br/>如需這些設定的詳細資訊，請參閱[UI屬性](../../functionality/destination-configuration/ui-attributes.md)。 ![Experience Platform UI影像顯示檔案連結。](../../assets/authoring-api/destination-configuration/documentation-url.png "檔案URL"){width="100" zoomable="yes"} |
+| `uiAttributes.category` | 字串 | 是指在Adobe Experience Platform中指派給您的目的地的類別。 如需詳細資訊，請閱讀[目的地類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories)。 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 <br/><br/>如需這些設定的詳細資訊，請參閱[UI屬性](../../functionality/destination-configuration/ui-attributes.md)。 |
 | `uiAttributes.connectionType` | 字串 | 連線的型別（視目的地而定）。 支援的值： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | 字串 | 是指目的地支援的資料匯出型別。 針對以API為基礎的整合設定為`Streaming`，或當您匯出檔案至目的地時設定為`Batch`。 |
 | `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指出客戶是否可將標準設定檔屬性對應至您正在設定的身分。 |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 表示客戶是否可將屬於[自訂名稱空間](/help/identity-service/features/namespaces.md#manage-namespaces)的身分對應到您正在設定的身分。 |
 | `identityNamespaces.externalId.transformation` | 字串 | _未顯示在範例組態中_。 例如，當[!DNL Experience Platform]客戶將純電子郵件地址作為屬性且您的平台僅接受雜湊電子郵件時使用。 您可以在此處提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後進行雜湊）。 |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 指出客戶可以將哪些[標準身分名稱空間](/help/identity-service/features/namespaces.md#standard) （例如IDFA）對應到您正在設定的身分。 <br>當您使用`acceptedGlobalNamespaces`時，可以使用`"requiredTransformation":"sha256(lower($))"`來小寫和雜湊電子郵件地址或電話號碼。 |
-| `destinationDelivery.authenticationRule` | 字串 | 指示[!DNL Experience Platform]客戶如何連線至您的目的地。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。<br> <ul><li>如果Experience Platform客戶透過使用者名稱和密碼、持有人權杖或其他驗證方法登入您的系統，請使用`CUSTOMER_AUTHENTICATION`。 例如，如果您也在`customerAuthenticationConfigurations`中選取`authType: OAUTH2`或`authType:BEARER`，則應該選取此選項。 </li><li> 如果Adobe與您的目的地之間有全域驗證系統，且[!DNL Experience Platform]客戶不需要提供任何驗證認證即可連線至您的目的地，請使用`PLATFORM_AUTHENTICATION`。 在此情況下，您必須使用[認證API](../../credentials-api/create-credential-configuration.md)設定來建立認證物件。 </li><li>如果不需要驗證即可將資料傳送至您的目的地平台，請使用`NONE`。 </li></ul> |
-| `destinationDelivery.destinationServerId` | 字串 | [目的地伺服器範本](../destination-server/create-destination-server.md)的`instanceId`用於此目的地。 |
+| `destinationDelivery.authenticationRule` | 字串 | 指示[!DNL Experience Platform]客戶如何連線至您的目的地。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。<br> <ul><li>如果Experience Platform客戶透過使用者名稱和密碼、持有人權杖或其他驗證方法登入您的系統，請使用`CUSTOMER_AUTHENTICATION`。 例如，如果您也在`authType: OAUTH2`中選取`authType:BEARER`或`customerAuthenticationConfigurations`，則應該選取此選項。 </li><li> 如果Adobe與您的目的地之間有全域驗證系統，且`PLATFORM_AUTHENTICATION`客戶不需要提供任何驗證認證即可連線至您的目的地，請使用[!DNL Experience Platform]。 在此情況下，您必須使用[認證API](../../credentials-api/create-credential-configuration.md)設定來建立認證物件，並在`authenticationId`目的地傳遞[設定的](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication)引數中傳遞認證物件的ID。 </li><li>如果不需要驗證即可將資料傳送至您的目的地平台，請使用`NONE`。 </li></ul> |
+| `destinationDelivery.destinationServerId` | 字串 | `instanceId`目的地伺服器範本[的](../destination-server/create-destination-server.md)用於此目的地。 |
 | `backfillHistoricalProfileData` | 布林值 | 控制將受眾啟動至目的地時，是否匯出歷史設定檔資料。 一律設定為`true`。 |
 | `segmentMappingConfig.mapUserInput` | 布林值 | 控制使用者是否輸入目的地啟用工作流程中的對象對應ID。 |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目的地啟用工作流程中的對象對應ID是否為Experience Platform對象ID。 |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目的地啟用工作流程中的對象對應ID是否為Experience Platform對象名稱。 |
-| `segmentMappingConfig.audienceTemplateId` | 字串 | 用於此目的地的[對象中繼資料範本](../../metadata-api/create-audience-template.md)的`instanceId`。 |
+| `segmentMappingConfig.audienceTemplateId` | 字串 | 用於此目的地的`instanceId`對象中繼資料範本[的](../../metadata-api/create-audience-template.md)。 |
 | `schemaConfig.profileFields` | 陣列 | 當您新增預先定義的`profileFields`時（如上述組態所示），使用者可以選擇將Experience Platform屬性對應至您目的地端的預先定義屬性。 |
 | `schemaConfig.profileRequired` | 布林值 | 如果使用者應該能夠從Experience Platform將設定檔屬性對應到您目的地端的自訂屬性，請使用`true`，如上面的設定範例所示。 |
 | `schemaConfig.segmentRequired` | 布林值 | 一律使用`segmentRequired:true`。 |

@@ -2,9 +2,9 @@
 description: 本頁面列出並說明使用Destination SDK設定檔案型目的地的步驟。
 title: 使用Destination SDK設定以檔案為基礎的目的地
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-此頁面說明如何在目的地SDK[&#128279;](../functionality/configuration-options.md)的設定選項以及其他Destination SDK功能和API參考檔案中使用資訊來設定[檔案型目的地](../../destination-types.md#file-based)。 這些步驟會依序排列如下。
+此頁面說明如何在目的地SDK[的](../functionality/configuration-options.md)設定選項以及其他Destination SDK功能和API參考檔案中使用資訊來設定[檔案型目的地](../../destination-types.md#file-based)。 這些步驟會依序排列如下。
 
 ## 先決條件 {#prerequisites}
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 步驟1：建立伺服器和檔案組態 {#create-server-file-configuration}
 
-開始於[使用`/destinations-server`端點建立伺服器和檔案組態](../authoring-api/destination-server/create-destination-server.md)。
+開始於[使用](../authoring-api/destination-server/create-destination-server.md)端點建立伺服器和檔案組態`/destinations-server`。
 
 以下顯示[!DNL Amazon S3]目的地的設定範例。 如需有關設定中所使用欄位以及設定其他型別的檔案型目的地的詳細資訊，請參閱其對應的[伺服器設定](../functionality/destination-server/server-specs.md)。
 
@@ -413,8 +413,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [使用SSH金鑰進行SFTP驗證](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [使用密碼的SFTP驗證](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* 若您選取`"authenticationRule": "PLATFORM_AUTHENTICATION"`，請參閱[認證組態API檔案](../credentials-api/create-credential-configuration.md#when-to-use)。
-
+* 如果您選取`"authenticationRule": "PLATFORM_AUTHENTICATION"`，則必須建立[認證組態](../credentials-api/create-credential-configuration.md)，並在`authenticationId`目的地傳遞[組態的](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication)引數中傳遞認證物件識別碼。
 
 ## 步驟5：測試您的目的地 {#test-destination}
 
@@ -423,7 +422,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 在測試目的地的程式中，您必須使用Experience Platform UI來建立對象，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
 * [建立對象 — 檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
-* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)
+* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 步驟6：發佈您的目的地 {#publish-destination}
 

@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定合作夥伴結構。
 title: 合作夥伴結構描述設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1924'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Experience Platform使用結構描述，以一致且可重複使用的方式說�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -148,7 +148,7 @@ Destination SDK支援建立動態合作夥伴方案。 相對於靜態結構描�
 
 | 參數 | 類型 | 必要/選用 | 說明 |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | 字串 | 必要 | 指示[!DNL Experience Platform]客戶如何連線至您的目的地。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。<br> <ul><li>如果Experience Platform客戶透過`CUSTOMER_AUTHENTICATION`此處[說明的任何驗證方法登入您的系統，請使用](customer-authentication.md)。 </li><li> 如果Adobe與您的目的地之間有全域驗證系統，且`PLATFORM_AUTHENTICATION`客戶不需要提供任何驗證認證即可連線至您的目的地，請使用[!DNL Experience Platform]。 在此情況下，您必須使用認證API [建立認證物件](../../credentials-api/create-credential-configuration.md)。 </li><li>如果不需要驗證即可將資料傳送至您的目的地平台，請使用`NONE`。 </li></ul> |
+| `dynamicEnum.authenticationRule` | 字串 | 必要 | 指示[!DNL Experience Platform]客戶如何連線至您的目的地。 接受的值為`CUSTOMER_AUTHENTICATION`、`PLATFORM_AUTHENTICATION`、`NONE`。<br> <ul><li>如果Experience Platform客戶透過`CUSTOMER_AUTHENTICATION`此處[說明的任何驗證方法登入您的系統，請使用](customer-authentication.md)。 </li><li> 如果Adobe與您的目的地之間有全域驗證系統，且`PLATFORM_AUTHENTICATION`客戶不需要提供任何驗證認證即可連線至您的目的地，請使用[!DNL Experience Platform]。 在此情況下，您必須使用認證API [建立認證物件](../../credentials-api/create-credential-configuration.md)，並在`authenticationId`目的地傳遞[設定的](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication)引數中傳遞認證物件的ID。 </li><li>如果不需要驗證即可將資料傳送至您的目的地平台，請使用`NONE`。 </li></ul> |
 | `dynamicEnum.destinationServerId` | 字串 | 必要 | 動態結構描述伺服器的`instanceId`。 此目的地伺服器包含Experience Platform將呼叫以擷取動態結構描述的API端點。 |
 | `dynamicEnum.value` | 字串 | 必要 | 動態架構的名稱，如動態架構伺服器設定中所定義。 |
 | `dynamicEnum.responseFormat` | 字串 | 必要 | 定義動態結構描述時一律設為`SCHEMA`。 |
