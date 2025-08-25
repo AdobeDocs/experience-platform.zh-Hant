@@ -4,9 +4,9 @@ title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
+source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->不建議使用分段服務API以B2B實體建立對象。 您無法再使用下列B2B實體建立對象：帳戶、帳戶 — 個人關係、促銷活動、促銷活動成員、行銷清單、行銷清單成員、商機和機會 — 個人關係。
+>不建議使用分段服務API以B2B實體建立對象。 您無法再使用下列B2B實體建立對象：帳戶、帳戶 — 個人關係、促銷活動、促銷活動成員、行銷清單、行銷清單成員、商機和機會 — 個人關係。 如需詳細資訊，請閱讀[Real-Time CDP B2B edition架構升級](../../rtcdp/b2b-architecture-upgrade.md)的指南。
 
 Adobe Experience Platform可讓您建立區段定義，以從一組設定檔中定義一組特定屬性或行為。 區段定義是封裝以[!DNL Profile Query Language] (PQL)撰寫的查詢的物件。 區段定義會套用至設定檔，以建立對象。 此物件（區段定義）也稱為PQL述詞。 PQL述詞會根據與您提供給[!DNL Real-Time Customer Profile]的任何記錄或時間序列資料相關的條件，定義區段定義的規則。 請參閱[PQL指南](../pql/overview.md)，以取得有關寫入PQL查詢的詳細資訊。
 
