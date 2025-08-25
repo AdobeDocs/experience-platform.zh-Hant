@@ -2,10 +2,10 @@
 title: 網頁擴充功能中的檢視
 description: 瞭解如何在Adobe Experience Platform Web擴充功能中定義程式庫模組的檢視。
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 73%
+source-wordcount: '2148'
+ht-degree: 70%
 
 ---
 
@@ -68,15 +68,22 @@ window.extensionBridge.register({
 將檢視載入iframe之後，標籤就會呼叫`init`方法。 此方法之中會傳入單一引數 (`info`)，而該引數必須是包含下列屬性的物件：
 
 | 屬性 | 說明 |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | 一個物件，其中包含先前從這個檢視儲存的設定。如果 `settings` 為 `null`，表示使用者建立了初始設定，而非載入已儲存的版本。如果 `settings` 是物件，則您應使用該物件來填入檢視，因為使用者選擇編輯先前保存的設定。 |
 | `extensionSettings` | 從擴充功能組態檢視儲存的設定。在不是擴充功能組態檢視的檢視中存取擴充功能設定時，此屬性可能有其效用。如果目前的檢視是擴充功能組態檢視，請使用`settings`。 |
 | `propertySettings` | 包含屬性設定的物件。如需此物件所含內容的詳細資訊，請參閱 [Turbine 物件指南](../turbine.md#property-settings)。 |
 | `tokens` | 包含 API 代號的物件。若要從檢視內存取 Adobe API，通常需要在 `tokens.imsAccess` 下方使用 IMS 代號。此代號將僅供Adobe開發的擴充功能使用。 如果您是Adobe員工，負責展現Adobe所製作的某項擴充功能，請[傳送電子郵件給資料收集工程團隊](mailto:reactor@adobe.com)，並提供擴充功能的名稱，以便我們將其新增至允許清單。 |
-| `company` | 包含單一屬性`orgId`的物件，其本身代表您的Adobe Experience Cloud ID （24個字元的英數字串）。 |
+| `company` | 包含`orgId` (您的24字元Adobe Experience Cloud ID)、`id` （貴公司在Reactor API中的唯一識別碼）和`tenantId` (Adobe Identity Management系統內組織的唯一識別碼)的物件。 |
 | `schema` | [JSON 結構描述](https://json-schema.org/)格式的物件。此物件將來自[擴充功能資訊清單](../manifest.md)，可能有助於驗證您的表單。 |
+| `apiEndpoints` | 包含`reactor`的物件，其中包含對Reactor API網址的參照。 |
+| `userConsentPermissions` | 一個物件，其中包含來自Adobe [產品使用資料](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)的同意標幟。 使用儲存在`globalDataCollectionAndUsage`標幟中的以瞭解您的擴充功能是否允許收集&#x200B;*任何*&#x200B;客戶資料。 |
+| `preferredLanguages` | 語言字串陣列。 |
 
 您的檢視應使用這項資訊來呈現和管理其表單。您可能只需處理 `info.settings`，但仍會提供另一項資訊以備不時之需。
+
+>[!IMPORTANT]
+>
+>若要讓您的擴充功能符合GDPR規定，請確定您使用`userConsentPermissions.globalDataCollectionAndUsage`標幟來判斷是否允許您的擴充功能收集有關使用者的資料。
 
 ### [!DNL validate]
 
@@ -172,7 +179,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 >[!NOTE]
 >
->若要下載適當的圖示，請瀏覽至Adobe Spectrum[&#128279;](https://spectrum.adobe.com/page/icons/)上的圖示頁面，並搜尋「[!DNL Data]」。
+>若要下載適當的圖示，請瀏覽至Adobe Spectrum[上的](https://spectrum.adobe.com/page/icons/)圖示頁面，並搜尋「[!DNL Data]」。
 
 使用者選取文字欄位旁的按鈕時，依[先前所述方式](#open-data-element)呼叫 `window.extensionBridge.openDataElementSelector`。這會顯示可供使用者選擇的使用者資料元素清單，而不是要求他們記住名稱並輸入百分比符號。使用者選取資料元素後，您將會收到兩側加上百分比符號的所選資料元素名稱 (除非您將 `tokenize` 選項設定為 `false`)。屆時，建議您將結果填入文字欄位中。
 
