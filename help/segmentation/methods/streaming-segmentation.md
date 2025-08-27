@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 串流分段指南
 description: 瞭解串流細分是什麼、如何建立使用串流細分評估的受眾，以及如何檢視使用串流細分建立的受眾。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
 workflow-type: tm+mt
-source-wordcount: '2022'
-ht-degree: 2%
+source-wordcount: '2051'
+ht-degree: 3%
 
 ---
 
@@ -38,6 +38,10 @@ ht-degree: 2%
 為了使用串流細分評估對象，它&#x200B;**必須**&#x200B;限制在24小時時間範圍內。
 
 ## 在串流對象中包含批次資料 {#include-batch-data}
+
+>[!NOTE]
+>
+>若要在使用批次資料時保持串流細分的準確性，請確定批次資料僅&#x200B;**保留在批次對象中**&#x200B;並在串流對象中引用。
 
 在此更新之前，您可以建立結合批次和串流資料來源的串流對象定義。 不過，透過最新更新，使用批次和串流資料來源建立對象時，將會使用批次細分進行評估。
 
@@ -102,7 +106,7 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 >[!IMPORTANT]
 >
->為了使用串流分段，您&#x200B;**必須**&#x200B;使用「在Edge上有效」的合併原則。 如需合併原則的詳細資訊，請閱讀[合併原則概觀](../../profile/merge-policies/overview.md)。
+>為了使用串流分段，您&#x200B;**必須**&#x200B;使用「在Edge上有效」的合併原則。 如需有關合併原則的詳細資訊，請參閱[合併原則概觀](../../profile/merge-policies/overview.md)。
 
 如果規則集符合下表所列的任何條件，就符合串流區段的資格。
 
@@ -467,4 +471,4 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 若要進一步瞭解如何使用Adobe Experience Platform使用者介面，請參閱[分段使用手冊](./overview.md)。
 
-如需有關串流區段的常見問題，請參閱常見問題[&#128279;](../faq.md#streaming-segmentation)的串流區段區段。
+如需有關串流區段的常見問題，請參閱常見問題[的](../faq.md#streaming-segmentation)串流區段區段。

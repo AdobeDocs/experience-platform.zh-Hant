@@ -2,9 +2,9 @@
 title: Edge分段指南
 description: 瞭解如何使用邊緣細分即時評估Experience Platform中的對象，啟用相同頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
+source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1148'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,8 @@ Edge區段能在Adobe Experience Platform中即時評估[邊緣](../../landing/e
 >[!NOTE]
 >
 >如果查詢符合下表中的任何查詢型別，則會自動使用邊緣分段進行評估。 系統會根據查詢運算式自動判斷此能力。
+>
+>此外，如果對象&#x200B;**僅**&#x200B;包含設定檔屬性，則會每天評估一次。 如果您想要即時評估對象，則需要將事件資料新增至對象。
 
 | 查詢型別 | 詳細資料 | 查詢 | 範例 |
 | ---------- | ------- | ----- | ------- |
@@ -329,5 +331,5 @@ curl -X GET \
 
 若要進一步瞭解如何使用Experience Platform使用者介面，請參閱[分段使用手冊](./overview.md)。
 
-如需邊緣劃分的相關常見問題，請參閱常見問題[&#128279;](../faq.md#edge-segmentation)的邊緣劃分割槽段。
+如需邊緣劃分的相關常見問題，請參閱常見問題[的](../faq.md#edge-segmentation)邊緣劃分割槽段。
 
