@@ -5,18 +5,14 @@ type: Documentation
 description: Adobe Experience Platform可讓您使用RESTful API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用設定檔API存取實體（通常稱為「設定檔」）。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 2%
 
 ---
 
 # 實體端點（設定檔存取）
-
->[!IMPORTANT]
->
->不建議使用個人資料存取API進行ExperienceEvent查閱。 請針對需要查詢ExperienceEvents的使用案例使用運算屬性等功能。 如需此變更的詳細資訊，請聯絡Adobe客戶服務。
 
 Adobe Experience Platform可讓您使用RESTful API或使用者介面存取[!DNL Real-Time Customer Profile]資料。 本指南會概述如何使用API存取實體（通常稱為「設定檔」）。 如需使用[!DNL Experience Platform] UI存取設定檔的詳細資訊，請參閱[設定檔使用手冊](../ui/user-guide.md)。
 
@@ -44,6 +40,12 @@ Adobe Experience Platform可讓您使用RESTful API或使用者介面存取[!DNL
 >[!ENDSHADEBOX]
 
 ## 擷取實體 {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>不再支援透過API查詢下列B2B實體： **帳戶 — 個人關係、機會 — 個人關係、行銷活動、行銷活動成員、行銷清單及行銷清單成員**。
+>
+>不支援這些實體。 如果您有現有的整合或工作流程仰賴存取這些實體，請更新以使用支援的實體型別，以確保功能可繼續使用。
 
 您可以透過向`/access/entities`端點發出GET請求以及所需的查詢引數來擷取設定檔實體。
 
@@ -1202,6 +1204,19 @@ curl -X GET \
 +++
 
 ## 刪除實體 {#delete-entity}
+
+>[!IMPORTANT]
+>
+>下列B2B實體的刪除請求已被取代：
+>
+>- 帳戶
+>- 帳戶 — 個人關係
+>- 機會
+>- 機會 — 個人關係
+>- Campaign
+>- 促銷活動會員
+>- 行銷清單
+>- 行銷清單成員
 
 您可以透過向`/access/entities`端點發出DELETE請求以及所需的查詢引數，從設定檔存放區中刪除實體。
 
