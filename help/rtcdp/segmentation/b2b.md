@@ -2,16 +2,20 @@
 title: Real-Time Customer Data Platform B2B edition的區段使用案例
 description: 各種可用Adobe Real-Time Customer Data Platform B2B edition使用案例的概觀。
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d819a7e72e873ef3a47f9bb7946e242cb5fb7a8a
+source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
 
 # Real-Time Customer Data Platform B2B edition的分段使用案例
+
+>[!IMPORTANT]
+>
+>不再支援包含參考B2B實體的體驗事件（例如行銷活動和行銷清單）的受眾。 如需詳細資訊，請閱讀[Real-Time CDP B2B edition架構升級](../../rtcdp/b2b-architecture-upgrade.md)的概觀。
 
 本檔案提供Adobe Real-Time Customer Data Platform B2B edition中的區段定義範例，並說明如何結合常見B2B使用案例的各種屬性型別。 若要瞭解目的地如何適合您的B2B工作流程，請參閱[端對端教學課程](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data)。
 
