@@ -4,7 +4,7 @@ title: 使用區段服務API建立區段定義
 type: Tutorial
 description: 按照本教學課程瞭解如何使用Adobe Experience Platform Segmentation Service API開發、測試、預覽和儲存區段定義。
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 6%
@@ -29,7 +29,7 @@ ht-degree: 6%
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[疑難排解指南中](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例API呼叫[!DNL Experience Platform]一節。
 
 ### 收集所需標頭的值
 
@@ -55,7 +55,7 @@ ht-degree: 6%
 
 區段的第一個步驟是定義區段定義。 區段定義是封裝以[!DNL Profile Query Language] (PQL)撰寫的查詢的物件。 此物件也稱為PQL述詞。 PQL述詞會根據與您提供給[!DNL Real-Time Customer Profile]的任何記錄或時間序列資料相關的條件，定義區段定義的規則。 請參閱[PQL指南](../pql/overview.md)，以取得有關寫入PQL查詢的詳細資訊。
 
-您可以對[!DNL Segmentation] API中的`/segment/definitions`端點發出POST要求，以建立新的區段定義。 下列範例概述如何格式化定義要求，包括要成功定義區段定義所需的資訊。
+您可以對`/segment/definitions` API中的[!DNL Segmentation]端點發出POST要求，以建立新的區段定義。 下列範例概述如何格式化定義要求，包括要成功定義區段定義所需的資訊。
 
 如需如何定義區段定義的詳細說明，請參閱[區段定義開發人員指南](../api/segment-definitions.md#create)。
 
@@ -76,8 +76,8 @@ ht-degree: 6%
 
 範例的觸發方式取決於所使用的擷取型別：
 
-- 對於串流資料工作流程，會每小時進行一次檢查，以判斷是否符合增加或減少5%的臨界值。 如果達到此臨界值，則會自動觸發範例工作以更新計數。
-- 對於批次擷取，在成功將批次擷取到設定檔存放區後15分鐘內，如果符合5%增加或減少臨界值，則會執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例作業，以及依資料集和身分名稱空間列出設定檔分佈。
+- 對於串流資料工作流程，會每小時進行一次檢查，以判斷是否符合增加或減少3%的臨界值。 如果達到此臨界值，則會自動觸發範例工作以更新計數。
+- 對於批次擷取，在成功將批次擷取到設定檔存放區後15分鐘內，如果符合3%增加或減少臨界值，則會執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例作業，以及依資料集和身分名稱空間列出設定檔分佈。
 
 範例大小取決於設定檔存放區中的實體總數。 下表顯示這些範例大小：
 
