@@ -1,16 +1,18 @@
 ---
-title: 在API中使用來源的Azure私人連結
+title: API來源的私人連結支援
 description: 瞭解如何建立並使用Adobe Experience Platform來源的私人連結
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1661'
 ht-degree: 3%
 
 ---
 
-# 對API中的來源使用[!DNL Azure Private Link]
+# API來源的私人連結支援
 
 >[!AVAILABILITY]
 >
@@ -21,7 +23,7 @@ ht-degree: 3%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-您可以使用[!DNL Azure Private Link]功能來建立Adobe Experience Platform來源要連線的私人端點。 使用私人IP位址將您的來源安全地連線到虛擬網路，消除對公用IP的需求，並減少您的攻擊面。簡化網路設定，不需要複雜的防火牆或網路位址轉譯設定，同時確保資料流量僅能到達核准的服務。
+您可以使用私人連結功能來建立Adobe Experience Platform來源要連線的私人端點。 使用私人IP位址將您的來源安全地連線到虛擬網路，消除對公共IP的需求，並減少您的攻擊面。 不需要複雜的防火牆或網路位址轉譯組態，同時確保資料流量僅能到達核准的服務，藉此簡化網路設定。
 
 請閱讀本指南，瞭解如何使用API來建立和使用私有端點。
 

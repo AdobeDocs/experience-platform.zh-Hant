@@ -1,16 +1,18 @@
 ---
-title: 在UI中使用來源的Azure私人連結
+title: UI對來源的私人連結支援
 description: 瞭解如何在Experience Platform UI中使用來源的Azure私人連結。
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: b88cf63e907b3f127f83304aa95f82300b47ce0b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
-# 在UI中使用來源的[!DNL Azure Private Link]
+# UI對來源的私人連結支援
 
 >[!AVAILABILITY]
 >
@@ -21,13 +23,13 @@ ht-degree: 0%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-您可以使用[!DNL Azure Private Link]功能來建立Adobe Experience Platform來源要連線的私人端點。 使用私人IP位址將您的來源安全地連線到虛擬網路，消除對公用IP的需求，並減少您的攻擊面。簡化網路設定，不需要複雜的防火牆或網路位址轉譯設定，同時確保資料流量僅能到達核准的服務。
+您可以使用私人連結功能來建立您的Adobe Experience Platform來源要連線的私人端點。 使用私人IP位址將您的來源安全地連線到虛擬網路，消除對公共IP的需求，並減少您的攻擊面。 不需要複雜的防火牆或網路位址轉譯組態，同時確保資料流量僅能到達核准的服務，藉此簡化網路設定。
 
 請閱讀本指南，瞭解如何在Experience Platform UI中使用來源工作區來建立和使用私人端點。
 
 ## 建立私人端點
 
-若要開始使用[!DNL Azure Private Link]，請瀏覽至Experience Platform UI的&#x200B;*[!UICONTROL 來源]*&#x200B;目錄，然後從來源工作區的索引標籤功能表中選取&#x200B;**[!UICONTROL 私人端點]**。
+若要開始使用私人連結，請導覽至Experience Platform UI的&#x200B;*[!UICONTROL 來源]*&#x200B;目錄，然後從來源工作區的索引標籤功能表中選取&#x200B;**[!UICONTROL 私人端點]**。
 
 ![具有「私人端點」的來源目錄。](../../images/tutorials/private-links/catalog.png)
 
