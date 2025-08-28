@@ -1,15 +1,16 @@
 ---
-title: 建立資料流以將資料從CRM擷取到Experience Platform
+title: 建立資料流以將Source資料擷取至Experience Platform
 description: 瞭解如何使用流量服務API來建立資料流，並將來源資料擷取到Experience Platform。
-exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+hide: true
+hidefromtoc: true
+source-git-commit: 4e9448170a6c3eb378e003bcd7520cb0e573e408
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2137'
 ht-degree: 2%
 
 ---
 
-# 建立資料流以將資料從CRM擷取到Experience Platform
+# 建立資料流以從來源擷取資料
 
 閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)建立資料流並將資料擷取到Adobe Experience Platform。
 
@@ -29,9 +30,9 @@ ht-degree: 2%
 
 如需如何成功呼叫Experience Platform API的詳細資訊，請閱讀[Experience Platform API快速入門](../../../../landing/api-guide.md)的指南。
 
-### 建立基礎連線 {#base}
+### 建立基礎連線
 
-若要成功建立來源的資料流，您需要已完整驗證的來源帳戶及其對應的基本連線ID。 如果您沒有此ID，請造訪[來源目錄](../../../home.md)，尋找您可建立基礎連線的來源清單。
+您必須擁有已完整驗證的來源帳戶及其對應的基本連線ID，才能成功為您的來源建立資料流。 如果您沒有此ID，請造訪[來源目錄](../../../home.md)，以取得您可用來建立基礎連線的來源清單。
 
 ### 建立目標XDM結構描述 {#target-schema}
 
@@ -106,7 +107,7 @@ curl -X POST \
 
 +++
 
-## 建立來源連線 {#source}
+## 建立來源連線
 
 來源連線會定義如何將資料從外部來源帶入Experience Platform。 它同時指定來源系統和傳入資料的格式，並且會參考包含驗證詳細資訊的基礎連線。 每個來源連線都是您組織專屬的。
 
@@ -133,8 +134,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "description": "A source connection for ACME contact data",
     "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "A source connection for ACME contact data",
     "data": {
       "format": "tabular"
     },
@@ -164,7 +165,8 @@ curl -X POST \
             "format": "date-time"
           }
         }
-      ]
+      ],
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -181,6 +183,7 @@ curl -X POST \
 | `data.format` | 資料的格式。 針對以資料表為基礎的來源（例如資料庫、CRM和行銷自動化提供者），將此值設定為`tabular`。 |
 | `params.tableName` | 來源帳戶中您要擷取至Experience Platform的表格名稱。 |
 | `params.columns` | 您要擷取至Experience Platform的特定資料表欄。 |
+| `params.cdcEnabled` | 表示是否啟用變更記錄擷取的布林值。 下列資料庫來源支援此屬性： <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 如需詳細資訊，請閱讀在來源[中使用](../change-data-capture.md)變更資料擷取的指南。 |
 | `connectionSpec.id` | 您使用之來源的連線規格ID。 |
 
 **回應**
@@ -194,9 +197,9 @@ curl -X POST \
 }
 ```
 
-## 建立目標連線 {#target}
+## 建立目標連線 {#target-connection}
 
-目標連線代表與擷取資料著陸目的地之間的連線。 若要建立目標連線，您必須提供與Data Lake關聯的固定連線規格ID。 此連線規格識別碼為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
+目標連線代表與擷取資料著陸目的地之間的連線。 若要建立目標連線，您必須提供與Data Lake相關聯的固定連線規格ID。 此連線規格識別碼為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
 
 **API格式**
 
@@ -314,7 +317,7 @@ curl -X POST \
 }
 ```
 
-## 擷取資料流規格 {#flow-specs}
+## 擷取資料流規格
 
 建立資料流之前，必須先擷取與來源對應的資料流規格。 若要擷取此資訊，請向`/flowSpecs` API的[!DNL Flow Service]端點提出GET要求。
 
@@ -342,7 +345,7 @@ curl -X GET \
 
 成功的回應會傳回負責將資料從來源帶入Experience Platform的資料流規格的詳細資料。 回應包含建立新資料流所需的唯一流程規格`id`。
 
-為確保您使用正確的資料流規格，請檢查回應中的`items.sourceConnectionSpecIds`陣列。 確認您來源的連線規格ID已包含在此清單中。
+為確保您使用正確的資料流規格，請檢查回應中的`items.sourceConnectionSpecIds`陣列。 確認您來源的連線規格ID包含在此清單中。
 
 +++選取以檢視
 
@@ -631,16 +634,16 @@ curl -X GET \
 
 +++
 
-## 建立資料流 {#dataflow}
+## 建立資料流
 
 資料流是已設定的管道，可跨Experience Platform服務傳輸資料。 它定義如何從外部來源（例如資料庫、雲端儲存空間或API）擷取、處理資料，以及將其路由到目標資料集。 然後，身分服務、即時客戶個人檔案和目的地等服務會使用這些資料集來啟用和分析。
 
 若要建立資料流，您必須擁有下列專案的值：
 
-* [Source連線ID](#source)
-* [目標連線ID](#target)
-* [對應 ID](#mapping)
-* [資料流規格ID](#flow-specs)
+* Source連線ID
+* 目標連線ID
+* 對應 ID
+* 資料流規格ID
 
 在此步驟中，您可以在`scheduleParams`中使用下列引數來設定資料流程的擷取排程：
 
@@ -739,7 +742,7 @@ curl -X POST \
 }
 ```
 
-### 使用UI驗證API工作流程 {#validate-in-ui}
+### 使用UI驗證API工作流程
 
 您可以使用Experience Platform使用者介面來驗證資料流的建立。 導覽至Experience Platform UI中的&#x200B;*[!UICONTROL 來源]*&#x200B;目錄，然後從標題標籤中選取&#x200B;**[!UICONTROL 資料流程]**。 接下來，使用[!UICONTROL 資料流名稱]欄，並找出您使用[!DNL Flow Service] API建立的資料流。
 
