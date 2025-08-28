@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 80%
+source-wordcount: '1448'
+ht-degree: 78%
 
 ---
 
@@ -29,7 +29,6 @@ Adobe Experience Platform 的新功能及現有功能更新：
 - [目錄服務](#catalog-service)
 - [目標](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
-- [即時客戶輪廓](#profile)
 - [沙箱](#sandboxes)
 - [細分服務](#segmentation-service)
 - [來源](#sources)
@@ -125,17 +124,21 @@ XDM 是一種開放原始碼的規格，可為帶入 Experience Platform 的資�
 
 如需詳細資訊，請詳讀 [XDM 概觀](../../xdm/home.md)。
 
-## 即時客戶輪廓 {#profile}
+<!--
 
-即時客戶輪廓將所有通道的資料整合成單一輪廓，提供每位客戶的統一、可操作視圖。
+## Real-Time Customer Profile {#profile}
 
-**新功能或更新功能**
+Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
 
-| 功能 | 說明 |
+**New or updated features**
+
+| Feature | Description |
 | --- | --- |
-| 增強實體 API 的查找功能 | 實體 API 現在支援以下內容： <ul><li>人物 (輪廓)</li><li>體驗事件</li><li>帳戶</li><li>機會</li></ul> 此更新簡化 API 的使用情況，有助於確保最佳效能和可靠性。如果您之前曾使用其他實體類型 (包括連接表格和自訂多實體類型) 的查找功能，現在是您審閱 API 使用情況並利用已改善之體驗的大好機會。如需更多資訊，請詳閱 [Real-Time CDB B2B Edition 架構升級指南](../../rtcdp/b2b-architecture-upgrade.md)。 |
+| Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
-如需有關即時客戶輪廓的更多資訊，請閱讀[輪廓概觀](../../profile/home.md)。
+For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## 沙箱 {#sandboxes}
 
