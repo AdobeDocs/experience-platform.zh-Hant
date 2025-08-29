@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
+source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 78%
+source-wordcount: '1339'
+ht-degree: 85%
 
 ---
 
@@ -42,9 +42,9 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 串流輸送量容量警報 | 使用者可以訂閱和設定三種新警報，以便主動管理和監控串流輸送量容量的效能。新警報包括當串流輸送量達到 80%、90% 或超過容量限制時所發出的警報。如需更多詳細資訊，請詳閱[容量警報規則](../../observability/alerts/rules.md#capacity)指南。 |
+| 串流輸送量容量警報 | 使用者可以訂閱和設定三種新警報，以便主動管理和監控串流輸送量容量的效能。新警報包括當串流輸送量達到 80%、90% 或超過容量限制時所發出的警報。如需詳細資訊，請閱讀[容量警報規則](../../observability/alerts/rules.md#capacity)指南。 |
 
-如需更多有關警報的詳細資訊，請詳閱[[!DNL Observability Insights] 概觀](../../observability/home.md)。
+如需有關警報的詳細資訊，請閱讀[[!DNL Observability Insights] 概觀](../../observability/home.md)。
 
 ## 目錄服務 {#catalog-service}
 
@@ -56,7 +56,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 | --- | --- |
 | 即時客戶輪廓的資料保留 | 您&#x200B;**僅能**&#x200B;每 30 天更新一次即時客戶輪廓的資料保留期間。 |
 
-如需更多有關目錄服務的詳細資訊，請詳閱[目錄服務概觀](../../catalog/home.md)。
+如需有關目錄服務的詳細資訊，請閱讀[目錄服務概觀](../../catalog/home.md)。
 
 ## 目標 {#destinations}
 
@@ -97,7 +97,6 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 | 目標 | 說明 |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md)目標 | 使用 [!DNL Acxiom Real ID Audience Connection] 目標搭配 [!DNL Acxiom's][Real ID](https://www.acxiom.com/real-id/real-id/) 技術來強化客群，並在多個平台上 (例如 [!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast] 等) 啟用客群。 |
-| 增強的[[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)目的地 | 增強的[[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)目的地是現有[[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)聯結器的升級版本。 除了舊版聯結器的現有對象同步功能之外，這個新的聯結器還引進了設定檔同步功能，提供與[!DNL Marketo Engage]更緊密的整合。 <br> [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)聯結器將於&#x200B;**2026年3月**&#x200B;日淘汰。 若要確保順利轉換至新的&#x200B;**[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)**&#x200B;目的地，請檢閱下列要點和必要的動作： <ul><li>現有&#x200B;**[!UICONTROL （舊版） (V2) Marketo Engage]**&#x200B;的所有使用者必須在2026年3月前移轉至新的&#x200B;**[!UICONTROL Marketo Engage]**&#x200B;目的地。</li><li> **現有的資料流將不會自動移轉。**&#x200B;您必須[設定與新](../../destinations/ui/connect-destination.md)Marketo Engage **[!UICONTROL 目的地的新連線]**，並在那裡啟用您的對象。</li></ul> |
 
 **已更新的目標**
 
@@ -160,9 +159,9 @@ Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 客群預估 | 客戶細分工具中現在會自動產生客群預估。只要您修改客群，此值便會更新，而且永遠反映最新的客群規則。此外，此預估現在以&#x200B;**範圍**&#x200B;的形式顯示，並以抽樣資料的信賴區間為基礎。 |
+| 客群預估 | 客戶細分工具中現在會自動產生客群預估。只要您修改客群，此值便會更新，而且會隨時反映最新的客群規則。此外，此預估現在以&#x200B;**範圍**&#x200B;的形式顯示，並以抽樣資料的信賴區間為基礎。 |
 
-如需更多詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
+如需詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
@@ -172,11 +171,13 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 
 | 功能 | 說明 |
 | --- | --- |
-| 增強 [!DNL Azure Blob Storage] 驗證 | 您現在可以使用服務主體式驗證，將您的 [!DNL Azure Blob Storage] 來源連接至 Experience Platform。使用服務主體式驗證，可以增強安全性、更輕鬆地進行認證輪換，並對您的帳戶進行更精細的存取控制。如需更多詳細資訊，請閱讀[[!DNL Azure Blob Storage] 概觀](../../sources/connectors/cloud-storage/blob.md)。 |
+| 增強 [!DNL Azure Blob Storage] 驗證 | 您現在可以使用服務主體式驗證，將您的 [!DNL Azure Blob Storage] 來源連接至 Experience Platform。使用服務主體式驗證，可以增強安全性、更輕鬆地進行認證輪換，並對您的帳戶進行更精細的存取控制。如需詳細資訊，請閱讀[[!DNL Azure Blob Storage] 概觀](../../sources/connectors/cloud-storage/blob.md)。 |
 
-如需更多詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
 
 <!--
 | [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
 | [!BADGE Beta]{type=Informative} Support for [!DNL Azure Private Links] in the UI | You can now use [!DNL Azure Private Links] for a select group of sources in the UI. Use this feature to create a private endpoint that which your source can connect to. With private endpoints, you can set up connections and dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. Support for [!DNL Azure Private Links] is available to the following following sources: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> For more information, read the guide on [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
+
+| Enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destination  | The enhanced [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destination is an upgraded version of the existing [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) connector. This new connector brings profile sync capabilities in addition to the existing audience sync capabilities from the legacy connector, providing a tighter integration with [!DNL Marketo Engage]. <br> The [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) connector will be deprecated in **March 2026**. To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)** destination, review the following key points and required actions: <ul><li>All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.</li><li> **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../destinations/ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.</li></ul>|
 -->
