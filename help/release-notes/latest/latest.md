@@ -41,9 +41,9 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 
 | 功能 | 說明 |
 | --- | --- |
-| 串流輸送量容量警報 | 使用者可以訂閱和設定三種新警報，以便主動管理和監控串流輸送量容量的效能。新警報包括當串流輸送量達到 80%、90% 或超過容量限制時所發出的警報。如需更多詳細資訊，請詳閱[容量警報規則](../../observability/alerts/rules.md#capacity)指南。 |
+| 串流輸送量容量警報 | 使用者可以訂閱和設定三種新警報，以便主動管理和監控串流輸送量容量的效能。新警報包括當串流輸送量達到 80%、90% 或超過容量限制時所發出的警報。如需詳細資訊，請閱讀[容量警報規則](../../observability/alerts/rules.md#capacity)指南。 |
 
-如需更多有關警報的詳細資訊，請詳閱[[!DNL Observability Insights] 概觀](../../observability/home.md)。
+如需有關警報的詳細資訊，請閱讀[[!DNL Observability Insights] 概觀](../../observability/home.md)。
 
 ## 目錄服務 {#catalog-service}
 
@@ -55,7 +55,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 | --- | --- |
 | 即時客戶輪廓的資料保留 | 您&#x200B;**僅能**&#x200B;每 30 天更新一次即時客戶輪廓的資料保留期間。 |
 
-如需更多有關目錄服務的詳細資訊，請詳閱[目錄服務概觀](../../catalog/home.md)。
+如需有關目錄服務的詳細資訊，請閱讀[目錄服務概觀](../../catalog/home.md)。
 
 ## 目標 {#destinations}
 
@@ -161,9 +161,9 @@ Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 客群預估 | 客戶細分工具中現在會自動產生客群預估。只要您修改客群，此值便會更新，而且永遠反映最新的客群規則。此外，此預估現在以&#x200B;**範圍**&#x200B;的形式顯示，並以抽樣資料的信賴區間為基礎。 |
+| 客群預估 | 客戶細分工具中現在會自動產生客群預估。只要您修改客群，此值便會更新，而且會隨時反映最新的客群規則。此外，此預估現在以&#x200B;**範圍**&#x200B;的形式顯示，並以抽樣資料的信賴區間為基礎。 |
 
-如需更多詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
+如需詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
@@ -173,9 +173,9 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 
 | 功能 | 說明 |
 | --- | --- |
-| 增強 [!DNL Azure Blob Storage] 驗證 | 您現在可以使用服務主體式驗證，將您的 [!DNL Azure Blob Storage] 來源連接至 Experience Platform。使用服務主體式驗證，可以增強安全性、更輕鬆地進行認證輪換，並對您的帳戶進行更精細的存取控制。如需更多詳細資訊，請閱讀[[!DNL Azure Blob Storage] 概觀](../../sources/connectors/cloud-storage/blob.md)。 |
+| 增強 [!DNL Azure Blob Storage] 驗證 | 您現在可以使用服務主體式驗證，將您的 [!DNL Azure Blob Storage] 來源連接至 Experience Platform。使用服務主體式驗證，可以增強安全性、更輕鬆地進行認證輪換，並對您的帳戶進行更精細的存取控制。如需詳細資訊，請閱讀[[!DNL Azure Blob Storage] 概觀](../../sources/connectors/cloud-storage/blob.md)。 |
 
-如需更多詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
 
 <!---
 
