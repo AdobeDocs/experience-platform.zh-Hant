@@ -2,10 +2,10 @@
 title: 建立資料流以將資料從CRM擷取到Experience Platform
 description: 瞭解如何使用流量服務API來建立資料流，並將來源資料擷取到Experience Platform。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 2%
+source-wordcount: '2112'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 本指南需要您深入瞭解下列Experience Platform元件：
 
-* [批次擷取](../../../../ingestion/batch-ingestion/overview.md)：探索如何以批次方式有效上傳大量資料。
+* [批次擷取](../../../../ingestion/batch-ingestion/overview.md)：瞭解如何快速有效率地批次上傳大量資料。
 * [目錄服務](../../../../catalog/datasets/overview.md)：在Experience Platform中組織和追蹤您的資料集。
 * [資料準備](../../../../data-prep/home.md)：轉換並對應您的傳入資料，以符合您的結構描述需求。
 * [資料流](../../../../dataflows/home.md)：設定並管理將您的資料從來源移至目的地的管道。
@@ -31,13 +31,13 @@ ht-degree: 2%
 
 ### 建立基礎連線 {#base}
 
-若要成功建立來源的資料流，您需要已完整驗證的來源帳戶及其對應的基本連線ID。 如果您沒有此ID，請造訪[來源目錄](../../../home.md)，尋找您可建立基礎連線的來源清單。
+若要為來源建立資料流，您需要已完整驗證的來源帳戶及其對應的基本連線ID。 如果您沒有此ID，請造訪[來源目錄](../../../home.md)，尋找您可建立基礎連線的來源清單。
 
 ### 建立目標XDM結構描述 {#target-schema}
 
 Experience Data Model (XDM)結構描述提供一種標準化方式，可在Experience Platform中組織和描述客戶體驗資料。 若要將來源資料內嵌至Experience Platform，您必須先建立目標XDM結構描述，定義您要內嵌的資料結構和型別。 此結構描述可作為您擷取之資料將存放的Experience Platform資料集的藍圖。
 
-可透過對[結構描述登入API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)執行POST要求來建立目標XDM結構描述。 如需建立目標XDM結構描述相關步驟的詳細資訊，請參閱下列指南：
+可透過對[結構描述登入API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)執行POST要求來建立目標XDM結構描述。 如需如何建立目標XDM架構的詳細步驟，請閱讀以下指南：
 
 * [使用API建立結構描述](../../../../xdm/api/schemas.md)。
 * [使用UI建立結構描述](../../../../xdm/tutorials/create-schema-ui.md)。
@@ -46,7 +46,7 @@ Experience Data Model (XDM)結構描述提供一種標準化方式，可在Exper
 
 ### 建立目標資料集 {#target-dataset}
 
-資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功擷取至Experience Platform的資料會以資料集的形式儲存在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
+資料集是資料集合的儲存和管理結構，通常會像有欄（結構描述）和列（欄位）的表格一樣結構。 成功擷取至Experience Platform的資料會以資料集的形式儲存在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
 
 您可以對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)發出POST要求，同時在承載中提供目標結構描述的ID，藉此建立目標資料集。 如需如何建立目標資料集的詳細步驟，請參閱[使用API建立資料集](../../../../catalog/api/create-dataset.md)的指南。
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **要求**
 
-以下範例說明如何建立已啟用即時客戶設定檔擷取的目標資料集。 在此請求中，`unifiedProfile`屬性設定為`true` （在`tags`物件下），以告知Experience Platform將此資料集納入即時客戶設定檔中。
+以下範例說明如何建立已啟用即時客戶設定檔擷取的目標資料集。 在此請求中，`unifiedProfile`屬性設定為`true` （在`tags`物件下），以告知Experience Platform將資料集納入即時客戶設定檔中。
 
 ```shell
 curl -X POST \
@@ -92,11 +92,11 @@ curl -X POST \
 | --- | --- |
 | `name` | 目標資料集的描述性名稱。 使用清晰且唯一的名稱，以便在未來操作中更容易識別和管理您的資料集。 |
 | `schemaRef.id` | 目標XDM結構描述的ID。 |
-| `tags.unifiedProfile` | 布林值，通知Experience Platform資料是否應擷取至即時客戶個人檔案。 |
+| `tags.unifiedProfile` | 布林值，通知Experience Platform資料是否應擷取到即時客戶個人檔案中。 |
 
 **回應**
 
-成功回應會傳回您的目標資料集ID。 稍後需要此ID才能建立目標連線。
+成功回應會傳回目標資料集的ID。 稍後建立目標連線時需要此ID。
 
 ```json
 [
@@ -243,7 +243,7 @@ curl -X POST \
 
 ## 對應 {#mapping}
 
-接下來，您必須將來源資料對應至目標資料集所固定的目標結構描述。 若要建立對應，請向`mappingSets`API[[!DNL Data Prep] 的](https://developer.adobe.com/experience-platform-apis/references/data-prep/)端點發出POST要求，提供您的目標XDM結構描述ID以及您要建立之對應集的詳細資料。
+接著，將來源資料對應至目標資料集所固定的目標結構描述。 若要建立對應，請對`mappingSets`API[[!DNL Data Prep] 的](https://developer.adobe.com/experience-platform-apis/references/data-prep/)端點提出POST要求。 包含您的目標XDM結構描述ID和您要建立之對應集的詳細資訊。
 
 **API格式**
 
@@ -635,7 +635,7 @@ curl -X GET \
 
 資料流是已設定的管道，可跨Experience Platform服務傳輸資料。 它定義如何從外部來源（例如資料庫、雲端儲存空間或API）擷取、處理資料，以及將其路由到目標資料集。 然後，身分服務、即時客戶個人檔案和目的地等服務會使用這些資料集來啟用和分析。
 
-若要建立資料流，您必須擁有下列專案的值：
+若要建立資料流，您必須提供下列專案的值：
 
 * [Source連線ID](#source)
 * [目標連線ID](#target)
@@ -647,8 +647,8 @@ curl -X GET \
 | 排程引數 | 說明 |
 | --- | --- |
 | `startTime` | 資料流應該開始的Epoch時間（以秒為單位）。 |
-| `frequency` | 擷取頻率。 設定頻率以指出資料流執行的頻率。 您可以將頻率設為： <ul><li>`once`：將頻率設為`once`以建立一次性內嵌。 建立一次性擷取資料流時，無法使用間隔和回填的設定。 依預設，排程頻率會設定為一次。</li><li>`minute`：將頻率設為`minute`，排程您的資料流以每分鐘擷取資料。</li><li>`hour`：將頻率設為`hour`，排程您的資料流以每小時擷取資料。</li><li>`day`：將頻率設為`day`，排程您的資料流每天擷取資料。</li><li>`week`：將頻率設為`week`，排程資料流每週擷取資料。</li></ul> |
-| `interval` | 連續內嵌之間的間隔（除`once`外的所有頻率均需要）。 設定間隔設定，以建立每次擷取之間的時間範圍。 例如，如果您將頻率設為「天」，並將間隔設為15，則您的資料流將每隔15天執行一次。 您不能將間隔設定為零。 每個頻率的最小接受間隔值如下：<ul><li>`once`：不適用</li><li>`minute`： 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
+| `frequency` | 擷取頻率。 設定頻率以指出資料流執行的頻率。 您可以將頻率設為： <ul><li>`once`：將頻率設為`once`以建立一次性內嵌。 間隔和回填設定不適用於一次性內嵌工作。 依預設，排程頻率會設定為一次。</li><li>`minute`：將頻率設為`minute`，排程您的資料流以每分鐘擷取資料。</li><li>`hour`：將頻率設為`hour`，排程您的資料流以每小時擷取資料。</li><li>`day`：將頻率設為`day`，排程您的資料流每天擷取資料。</li><li>`week`：將頻率設為`week`，排程資料流每週擷取資料。</li></ul> |
+| `interval` | 連續內嵌之間的間隔（除`once`外的所有頻率均需要）。 設定間隔設定，以建立每次擷取之間的時間範圍。 例如，如果您的頻率設定為天，間隔為15，則資料流將每15天執行一次。 您不能將間隔設定為零。 每個頻率的最小接受間隔值如下：<ul><li>`once`：不適用</li><li>`minute`： 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
 | `backfill` | 指示是否要擷取`startTime`之前的歷史資料。 |
 
 {style="table-layout:auto"}
@@ -723,7 +723,7 @@ curl -X POST \
 | `transformations.params.mappingId` | 在先前步驟中產生的對應ID。 |
 | `scheduleParams.startTime` | 資料流的開始時間（以Epoch時間表示） （自Unix Epoch以來的秒數）。 決定資料流何時開始其首次執行。 |
 | `scheduleParams.frequency` | 資料流執行的頻率。 可接受的值包括： `once`、`minute`、`hour`、`day`或`week`。 |
-| `scheduleParams.interval` | 根據選取的頻率，連續資料流執行之間的間隔。 必須是非零整數。 例如，間隔`15`的頻率`minute`表示資料流每15分鐘執行一次。 |
+| `scheduleParams.interval` | 根據選取的頻率，連續資料流執行之間的間隔。 必須是非零整數。 例如，如果您的頻率設定為分鐘，而間隔為15，則資料流將每15分鐘執行一次。 |
 | `scheduleParams.backfill` | 布林值（`true`或`false`），可決定是否要在首次建立資料流時擷取歷史資料（回填）。 |
 
 {style="table-layout:auto"}
@@ -755,11 +755,11 @@ curl -X POST \
 
 ### 監視資料流
 
-建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請瀏覽有關[監視帳戶和資料流](../../../../dataflows/ui/monitor-sources.md)的教學課程。
+建立資料流後，您可以直接在Experience Platform UI中監視其效能。 這包括追蹤擷取率、成功量度和發生的任何錯誤。 如需如何監視資料流的詳細資訊，請瀏覽有關[監視帳戶和資料流](../../../../dataflows/ui/monitor-sources.md)的教學課程。
 
 ### 更新您的資料流
 
-若要更新資料流排程、對應和一般資訊的設定，請瀏覽有關[更新來源資料流](../../api/update-dataflows.md)的教學課程。
+若要更新資料流排程、對應或一般資訊的設定，請瀏覽有關[更新來源資料流](../../api/update-dataflows.md)的教學課程。
 
 ## 刪除您的資料流
 

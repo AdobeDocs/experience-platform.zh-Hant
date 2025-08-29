@@ -3,20 +3,20 @@ title: 使用流程服務API建立資料庫來源的資料流
 type: Tutorial
 description: 瞭解如何使用流量服務API建立資料流，並將資料庫中的資料擷取到Experience Platform中。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 2%
 
 ---
 
 # 使用[!DNL Flow Service] API建立資料庫來源的資料流
 
-閱讀本教學課程，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)建立資料流，並將資料從資料庫擷取到Adobe Experience Platform。
+閱讀本教學課程，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)建立資料流，並將資料從資料庫擷取到Adobe Experience Platform中。
 
 >[!NOTE]
 >
->* 為了建立資料流，您必須擁有包含資料庫來源的有效基底連線ID。 如果您沒有此ID，請造訪[來源目錄](../../../home.md#database)，以取得可建立基礎連線的資料庫來源清單。
+>* 為了建立資料流，您必須擁有包含資料庫來源的有效基底連線ID。 如果您沒有此ID，請造訪[來源目錄](../../../home.md#database)以檢視可建立基礎連線的資料庫來源清單。
 >* 為了讓Experience Platform擷取資料，所有表格型批次來源的時區都必須設定為UTC。 [[!DNL Snowflake] 來源](../../../connectors/databases/snowflake.md)唯一支援的時間戳記是UTC時間的TIMESTAMP_NTZ。
 
 ## 快速入門
