@@ -103,8 +103,8 @@ conversionDetails物件會擷取廣告轉換的追蹤資訊，包括追蹤程式
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `trackingCode` | 字串 | 事件的轉換追蹤程式碼。 如需可能的格式清單，請參閱[AMO ID格式](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats)。 |
-| `trackingIdentities` | 字串 | 事件的EF ID，或追蹤身分詳細資訊。 如需可能格式的清單，請參閱[EF ID格式](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats)。 |
+| `trackingCode` | 字串 | 事件的轉換追蹤程式碼。 如需可能的格式清單，請參閱[AMO ID格式](https://experienceleague.adobe.com/zh-hant/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats)。 |
+| `trackingIdentities` | 字串 | 事件的EF ID，或追蹤身分詳細資訊。 如需可能格式的清單，請參閱[EF ID格式](https://experienceleague.adobe.com/zh-hant/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats)。 |
 | `conversionProperties` | 物件 | 轉換屬性的對應，以索引鍵值配對字串的陣列表示（例如`subscriptions=253`）。 |
 
 ## `fees` {#fees}
