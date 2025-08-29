@@ -3,7 +3,7 @@ title: Audiences API端點
 description: 使用Adobe Experience Platform Segmentation Service API中的受眾端點，以程式設計方式建立、管理和更新您組織的受眾。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 2%
@@ -33,11 +33,11 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->如果您不使用任何查詢引數來使用此端點，則不會傳回非作用中對象&#x200B;**&#x200B;**。 不過，如果您將此端點與`property=audienceId`查詢引數搭配使用，將會傳回非作用中對象&#x200B;**&#x200B;**。
+>如果您不使用任何查詢引數來使用此端點，則不會傳回非作用中對象&#x200B;****。 不過，如果您將此端點與`property=audienceId`查詢引數搭配使用，將會傳回非作用中對象&#x200B;****。
 
 擷取對象清單時，可以使用以下查詢引數：
 
-| 查詢引數 | 說明 | 範例 |
+| 查詢參數 | 說明 | 範例 |
 | --------------- | ----------- | ------- |
 | `start` | 指定傳回對象的開始位移。 | `start=5` |
 | `limit` | 指定每頁傳回的最大對象數。 | `limit=10` |
@@ -67,7 +67,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 成功的回應會傳回HTTP狀態200，其中包含貴組織中建立為JSON的對象清單。
 
-+++此範例回應包含屬於您組織的最後兩個已建立對象
++++包含屬於您組織的最後兩個建立對象的範例回應
 
 ```json
 {
@@ -166,7 +166,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -438,7 +443,7 @@ PUT /audiences/{AUDIENCE_ID}
 
 **要求**
 
-+++更新整個對象的範例要求。
++++更新整個對象的範例請求。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -550,7 +555,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `op` | 所執行的PATCH作業型別。 對於此端點，這個值為&#x200B;**一律為** `/add`。 |
-| `path` | 要更新的欄位路徑。 無法編輯系統產生的欄位，例如`id`、`audienceId`和`namespace` **&#x200B;**。 |
+| `path` | 要更新的欄位路徑。 無法編輯系統產生的欄位，例如`id`、`audienceId`和`namespace` ****。 |
 | `value` | 指派給`path`中指定的屬性的新值。 |
 
 +++
