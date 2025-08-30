@@ -2,8 +2,8 @@
 title: Bombora Intent
 description: 瞭解Experience Platform上的Bombora Intent來源。
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B版" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="B2P版" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B版" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
+badgeB2P: label="B2P版" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
 source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
