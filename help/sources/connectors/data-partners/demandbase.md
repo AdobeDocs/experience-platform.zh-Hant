@@ -2,12 +2,12 @@
 title: Demandbase方法
 description: 瞭解Experience Platform上的Demandbase意圖來源。
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
-badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -54,31 +54,39 @@ Experience Platform上的[!DNL Demandbase]由[!DNL Google Cloud Storage]代管�
 | 貯體名稱 | 將從其中提取資料的[!DNL Demandbase]貯體。 |
 | 檔案夾路徑 | 您要提供存取權的資料夾路徑。 |
 
-如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱 [!DNL Google Cloud Storage] 來源概觀[&#128279;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)中的先決條件指南。
+如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱[來源概觀 [!DNL Google Cloud Storage] 中的](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)先決條件指南。
 
 ## [!DNL Demandbase]結構描述
 
 請閱讀本節，以瞭解[!DNL Demandbase]結構描述和資料結構的相關資訊。
 
-[!DNL Demandbase]結構描述稱為&#x200B;**公司意圖每週**。 這是指定帳戶與關鍵字的每週意圖資訊（匿名B2B購買者研究與內容使用）。 資料為parquet格式。
+[!DNL Demandbase]結構描述稱為&#x200B;**B2B Demandbase帳戶意圖**。 這是指定帳戶與關鍵字的每週意圖資訊（匿名B2B購買者研究與內容使用）。 資料為parquet格式。
 
-| 欄位名稱 | 資料類型 | 必要 | 商務金鑰 | 附註 |
-| --- | --- | --- | --- | --- |
-| `company_id` | STRING | TRUE | 是 | 標準公司ID。 |
-| `domain` | STRING | TRUE | 是 | 顯示意圖的已識別帳戶網域。 |
-| `start_date` | 日期 | TRUE | 是 | 期間中發生意圖活動的開始日期。 |
-| `end_date` | 日期 | TRUE | 是 | 期間中發生意圖活動的結束日期。 |
-| `duration_type` | STRING | TRUE | 是 | 持續時間的型別。 一般而言，此值可為每日、每週或每月，視所選的彙總期間而定。 對於此資料範例，此值為`week`。 |
-| `keyword_set_id` | STRING | TRUE | 是 | 關鍵字集識別碼。 每個特定客戶的情況都是獨一無二。 |
-| `keyword_set` | STRING | TRUE | 是 | 關鍵字集名稱。 |
-| `keyword` | STRING | TRUE | | 意圖關鍵字。 |
-| `is_trending` | STRING | TRUE | | 指定趨勢的目前狀態。 趨勢狀態是指相對於前七週的平均值，在上週以意圖活動中的高載來測量。 |
-| `intent_strength` | 列舉[字串] | TRUE | | 意圖強度的量化量度。 接受的值包括： `HIGH`、`MED`和`LOW`。 |
-| `num_people_researching` | 整數 | TRUE | | 過去七天屬於`company_id`且正在研究關鍵字的人員計數。 |
-| `num_trending_days` | 整數 | TRUE | | 關鍵字在指定期間內趨勢化的天數。 |
-| `trending_score` | 整數 | TRUE | | 趨勢分數。 |
-| `record_id` | STRING | TRUE | | 唯一的主要記錄ID。 |
-| `partition_date` | 日期 | TRUE | | 快照的日曆日期。 這會在每週的週末完成。 |
+* 類別 — XDM [!DNL Demandbase Account Intent]
+* 名稱空間 — B2B [!DNL Demandbase Account Intent]
+* 主要身分 — `intentID`
+* 關係 — B2B帳戶
+
+| 欄位名稱 | 資料類型 | 說明 |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | 物件 | 此欄位包含來自外部來源的系統稽核資訊。 |
+| `_id` | STRING | 這是紀錄的唯一系統識別碼。 |
+| `accountDomain` | STRING | 此欄位包含帳戶網域。 |
+| `accountID` | STRING | 這是與此意圖記錄相關聯的B2B帳戶ID。 |
+| `demandbaseAccountID` | STRING | 這是公司[!DNL Demandbase]中的識別碼。 |
+| `durationType` | STRING | 此欄位會指定意圖有效期間型別，例如「週」。 |
+| `endDate` | 日期 | 這是意圖有效期的結束日期。 |
+| `intentID` | STRING | 這是系統產生的目的記錄唯一值。 |
+| `intentStrength` | STRING | 此欄位會指定意圖有效期間型別，例如&quot;DAY&quot;、&quot;WEEK&quot;或&quot;MONTH&quot;。 |
+| `isTrending` | 布林值 | 此欄位指出關鍵字是否為趨勢，可能的值為低、Medium或高。 |
+| `keyword` | STRING | 此欄位包含表示來自[!DNL Demandbase]意向的關鍵字或片語。 |
+| `keywordSetID` | STRING | 這是關鍵字集的識別碼。 |
+| `keywordSetName` | STRING | 這是關鍵字集的名稱。 |
+| `numTrendingDays` | 整數 | 此欄位指出關鍵字已進行趨勢分析的天數。 |
+| `partitionDate` | 日期 | 這是記錄的分割日期。 |
+| `peopleResearchingCount` | 整數 | 此欄位表示研究關鍵字的人數。 |
+| `startDate` | 日期 | 這是意圖有效期的開始日期。 |
+| `trendingScore` | 整數 | 此欄位包含關鍵字的趨勢分數。 |
 
 {style="table-layout:auto"}
 

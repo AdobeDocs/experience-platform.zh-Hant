@@ -2,19 +2,19 @@
 title: Bombora Intent
 description: 瞭解Experience Platform上的Bombora Intent來源。
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
-badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
+badgeB2B: label="B2B版" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P版" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
 
 # [!DNL Bombora Intent]
 
-[!DNL Bombora]是全方位的受眾解決方案，專門處理B2B意圖資料。 [!DNL Bombora Intent]是Adobe Experience Platform來源，可用來將您的[!DNL Bombora]帳戶連線至Experience Platform並整合您的帳戶意圖資料。
+[!DNL Bombora] 是一個專門研究 B2B 意圖數據的綜合受眾解決方案。 [!DNL Bombora Intent] 是Adobe Experience Platform來源，可用來將帳戶連線 [!DNL Bombora] 至Experience Platform並整合帳戶意圖資料。
 
 透過[!DNL Bombora Intent]來源，您可以整合[!DNL Bombora's]公司突增意圖資料，以識別積極研究您產品或服務的帳戶。 使用[!DNL Bombora]優先處理市場內帳戶，以建立精確區段並執行超目標的ABM行銷活動，確保您的行銷工作聚焦於最有可能轉換的帳戶。 此外，您也可以運用意圖導向的策略，將廣告支出最佳化、提高參與度，並大幅提高ROI。
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 在命名您的雲端儲存空間檔案或目錄時，必須考慮下列限制：
 
 * 目錄和檔案元件名稱不能超過255個字元。
-* 目錄和檔案名稱不能以正斜線(`/`)結尾。 如果提供，則會自動移除。
+* 目錄和檔案名稱不能以正斜線 （）`/` 結尾。 如果提供，它將被自動刪除。
 * 必須正確逸出下列保留的URL字元： `! ' ( ) ; @ & = + $ , % # [ ]`
 * 不允許下列字元： `" \ / : | < > * ?`。
 * 不允許非法URL路徑字元。 類似`\uE000`的程式碼點雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的規則，請參閱[RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt)和[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
@@ -67,28 +67,37 @@ Experience Platform上的[!DNL Bombora]由[!DNL Google Cloud Storage]代管。 �
 
 | 認證 | 說明 |
 | --- | --- |
-| 存取金鑰 ID | [!DNL Bombora]存取金鑰識別碼。 這是61個字元的英數字串，需要它才能向Experience Platform驗證您的帳戶。 |
+| 存取金鑰 ID | [!DNL Bombora]存取金鑰 ID。這是61個字元的英數字串，需要它才能向Experience Platform驗證您的帳戶。 |
 | 祕密存取金鑰 | [!DNL Bombora]秘密存取金鑰。 這是40個字元、以Base64編碼的字串，驗證您的帳戶給Experience Platform是必要的。 |
 | 貯體名稱 | 將從其中提取資料的[!DNL Bombora]貯體。 |
 
-如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱 [!DNL Google Cloud Storage] 來源概觀[&#128279;](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)中的先決條件指南。
+如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱[來源概觀 [!DNL Google Cloud Storage] 中的](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)先決條件指南。
 
 ## [!DNL Bombora]結構描述 {#schema}
 
 請閱讀本節，以瞭解[!DNL Bombora]結構描述和資料結構的相關資訊。
 
-[!DNL Bombora]結構描述稱為&#x200B;**帳戶意圖每週**。 這是指定帳戶和主題的每週意圖資訊（匿名B2B購買者研究和內容使用）。 資料為parquet格式。
+[!DNL Bombora]結構描述稱為&#x200B;**B2B Bombra帳戶意圖**。 這是指定帳戶和主題的每週意圖資訊（匿名B2B購買者研究和內容使用）。 資料為parquet格式。
 
-| 欄位名稱 | 資料類型 | 必要 | 商務金鑰 | 附註 |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | STRING | TRUE | 是 | 公司的正式名稱。 |
-| `Domain` | STRING | TRUE | 是 | 顯示意圖的已識別帳戶的網域。 |
-| `Topic_Id` | STRING | TRUE | 是 | [!DNL Bombora]主題識別碼。 |
-| `Topic_Name` | STRING | TRUE | | [!DNL Bombora]主題名稱。 |
-| `Cluster_Name` | STRING | TRUE | | 指定主題[!DNL Bombora]上的叢集名稱。 |
-| `Cluster_Id` | STRING | TRUE | | 與指定主題相關聯的叢集ID。 |
-| `Composite_Score` | 整數 | TRUE | | 複合分數代表指定主題在指定時段內的消耗模式。 複合分數是介於0到100之間測量，其中100代表最高可能分數，0代表最低可能分數。 超過60的複合分數表示某個網域對特定主題的興趣增加。 這也稱為「突波」。 |
-| `Partition_Date` | 日期 | TRUE | | 快照的日曆日期。 這會在每週的週末以`mm/dd/yyyy`格式完成。 |
+* 類別 — XDM [!DNL Bombora Account Intent]
+* 命名空間 - B2B [!DNL Bombora Account Intent]
+* 主要身分 — `intentID`
+* 關係 — B2B帳戶
+
+| 欄位名稱 | 資料類型 | 說明 |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | 物體 | 系統會使用此欄位來進行來源系統審核。 |
+| `_id` | 繩子 | 系統會使用此欄位作為唯一識別碼。 |
+| `accountDomain` | STRING | 此欄位包含帳戶網域。 |
+| `accountID` | STRING | 此欄位包含與此意圖記錄相關聯的B2B帳戶ID。 |
+| `bomboraAccountName` | STRING | 此欄位包含公司在Bombora的ID。 |
+| `clusterID` | STRING | 此欄位包含叢集識別碼。 |
+| `clusterName` | STRING | 此欄位包含叢集名稱。 |
+| `compositeScore` | 整數 | 此欄位包含意圖的複合分數。 |
+| `intentID` | STRING | 此欄位包含系統產生的唯一值。 |
+| `partitionDate` | 日期 | 此欄位包含分割日期。 這會在每週的週末以`mm/dd/yyyy`格式完成。 |
+| `topicID` | STRING | 此欄位包含來自Bombora的意圖主題ID。 |
+| `topicName` | STRING | 此欄位包含Bombora的意圖主題名稱。 |
 
 {style="table-layout:auto"}
 
@@ -98,11 +107,11 @@ Experience Platform上的[!DNL Bombora]由[!DNL Google Cloud Storage]代管。 �
 
 ## 在使用者介面中將您的[!DNL Bombora]帳戶連線至Experience Platform
 
-完成先決條件設定後，請閱讀有關[將您的 [!DNL Bombora] 帳戶連線至Experience Platform](../../tutorials/ui/create/data-partners/bombora.md)的教學課程，以開始整合。
+完成先決條件設定後，請閱讀有關將帳戶連線[至Experience Platform [!DNL Bombora] 的](../../tutorials/ui/create/data-partners/bombora.md)教學課程，以開始整合。
 
 ## 常見問題 {#faq}
 
-請閱讀本節，瞭解有關[!DNL Bombora]來源的常見問題解答。
+閱讀本節，以取得有關來源的 [!DNL Bombora] 常見問題解答。
 
 ### 我是否需要與[!DNL Bombora]的現有合約，才能在Real-Time CDP B2B edition中使用其帳戶意圖資料？
 
@@ -152,7 +161,7 @@ Experience Platform上的[!DNL Bombora]由[!DNL Google Cloud Storage]代管。 �
 解決方法取決於特定問題：
 
 * **Experience Platform中的公司網域不正確或遺失**：如果問題是因為帳戶資料中的公司網域值不正確，請更新Experience Platform中的公司網域欄位，以確保正確比對。
-* **資料流中的欄位對應不正確**：如果問題是因為資料流中的公司網域欄位路徑不正確，請更新資料流設定以參考正確的欄位路徑。
+* **資料流**&#x200B;中的欄位對應不正確：如果問題是由於資料流中的公司網域欄位路徑不正確，請更新資料流設定以參考正確的欄位路徑。
 
 +++
 
@@ -168,15 +177,15 @@ Experience Platform上的[!DNL Bombora]由[!DNL Google Cloud Storage]代管。 �
 
 +++回答
 
-`accountOrganization.domain`欄位用於比對帳戶。 如果您的組織使用不同的自訂欄位來儲存網站名稱，請確定您提供正確的欄位路徑，以精確對應。
+此 `accountOrganization.domain` 欄位用於比對帳戶。 如果您的組織使用不同的自訂欄位來儲存網站名稱，請確保您提供正確的欄位路徑以進行準確的對應。
 
 +++
 
 ### 在Experience Platform中更新公司網域時會發生什麼事？
 
-+++回答
++++答
 
-更新公司網域時，新網域值將會在下次資料流執行中套用。 這可確保：
+更新公司網域時，新的網域值將會套用在下一次資料流執行中。 這可確保：
 
 * 未來意圖資料擷取會使用更新的網域進行帳戶比對。
 * 任何先前不符的意圖訊號現在可能會正確與預期帳戶對齊。
