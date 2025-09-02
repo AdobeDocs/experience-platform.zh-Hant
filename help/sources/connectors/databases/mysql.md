@@ -3,9 +3,9 @@ title: MySQL Source Connector概述
 description: 瞭解如何使用API或使用者介面將MySQL連線至Adobe Experience Platform。
 last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ### IP位址允許清單
 
-在Azure或Amazon Web Services (AWS)上將來源連線至Experience Platform之前，您必須將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址指南，以連線至Azure和AWS上的Experience Platform ](../../ip-address-allow-list.md)以取得詳細資訊。
+在Azure或Amazon Web Services (AWS)上將來源連線至Experience Platform之前，您必須將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Azure和AWS上的Experience Platform ](../../ip-address-allow-list.md)的指南。
 
 ### 在Azure上驗證Experience Platform {#azure}
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 | `connectionString` | 與您的帳戶相關聯的[!DNL MySQL]連線字串。 [!DNL MySQL]連線字串模式為： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL MySQL]的連線規格識別碼為`26d738e0-8963-47ea-aadf-c60de735468a`。 |
 
-如需詳細資訊，請閱讀有關連線字串[&#128279;](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)的[!DNL MySQL] 檔案。
+如需詳細資訊，請閱讀有關連線字串[[!DNL MySQL] 的](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)檔案。
 
 >[!TAB 基本驗證]
 

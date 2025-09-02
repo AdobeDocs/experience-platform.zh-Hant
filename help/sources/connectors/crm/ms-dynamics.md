@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Microsoft Dynamics Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Microsoft Dynamics連線至Adobe Experience Platform。
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 3%
+source-wordcount: '284'
+ht-degree: 2%
 
 ---
 
-# Microsoft Dynamics 連接器
+# [!DNL Microsoft Dynamics]來源
 
-Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+[!DNL Microsoft Dynamics]是一套商務應用程式，可用來更有效地管理您的作業。 無論您是監督客戶關係、財務或供應鏈，[!DNL Microsoft Dynamics]都能提供您工具，讓您簡化工作流程，並做出更明智的決定。 此平台可支援企業資源規劃和客戶關係管理(CRM)，讓您在整合的系統中統一您的業務流程。
 
-[!DNL Experience Platform]支援從協力廠商CRM系統擷取資料。 CRM提供者的支援包括[!DNL Microsoft Dynamics]。
+您可以使用[!DNL Microsoft Dynamics]來源將您[!DNL Microsoft Dynamics]帳戶的資料擷取至Adobe Experience Platform。
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請閱讀[允許列出IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南。
 
 ## 從[!DNL Microsoft Dynamics]到XDM的欄位對應
 
@@ -27,7 +27,7 @@ Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠�
 
 請參閱下列內容，以取得有關[!DNL Microsoft Dynamics]資料集與Experience Platform之間的欄位對應規則的詳細資訊：
 
-- [連絡人](../adobe-applications/mapping/dynamics.md#contacts)
+- [聯絡人](../adobe-applications/mapping/dynamics.md#contacts)
 - [銷售機會](../adobe-applications/mapping/dynamics.md#leads)
 - [帳戶](../adobe-applications/mapping/dynamics.md#accounts)
 - [機會](../adobe-applications/mapping/dynamics.md#opportunities)
