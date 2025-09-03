@@ -1,43 +1,43 @@
 ---
-title: Acxiom對象分佈
-description: 使用 [!DNL Acxiom Audience Distribution] 目的地以 [!DNL Acxiom's Real ID] 技術增強受眾，並啟用多個平台的受眾，例如 [!DNL Altice]、 [!DNL Ampersand]、 [!DNL Comcast]等。
+title: Acxiom對象連線
+description: 使用 [!DNL Acxiom Audience Connection] 目的地以 [!DNL Acxiom's Real ID] 技術增強受眾，並啟用多個平台的受眾，例如 [!DNL Altice]、 [!DNL Ampersand]、 [!DNL Comcast]等。
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
 workflow-type: tm+mt
 source-wordcount: '927'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# [!DNL Acxiom Audience Distribution]目的地
+# [!DNL Acxiom Audience Connection]目標
 
 >[!NOTE]
 >
->[!DNL Acxiom Audience Distribution]目的地是測試版。 此目的地聯結器和檔案頁面是由[!DNL Acxiom]團隊建立和維護。 若有任何查詢或更新要求，請直接在[這裡](mailto:acxiom-adobe-help@acxiom.com)聯絡Acxiom。
+>[!DNL Acxiom Audience Connection]目的地是測試版。 此目的地聯結器和檔案頁面是由[!DNL Acxiom]團隊建立和維護。 若有任何查詢或更新要求，請直接在[這裡](mailto:acxiom-adobe-help@acxiom.com)聯絡Acxiom。
 
-使用[!DNL Acxiom Audience Distribution]目的地來增強具有[!DNL Acxiom's] [真實識別碼™](https://www.acxiom.com/real-id/real-id/)技術的對象，並啟用多個平台的對象，例如[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]等。
+使用[!DNL Acxiom Audience Connection]目的地來增強具有[!DNL Acxiom's] [真實識別碼™](https://www.acxiom.com/real-id/real-id/)技術的對象，並啟用多個平台的對象，例如[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]等。
 
-本教學課程提供使用[!DNL Acxiom Audience Distribution]使用者介面建立[!DNL Adobe Experience Platform]目的地聯結器的指示。 此聯結器用於建立受眾，並將受眾發佈至選取的目的地。
+本教學課程提供使用[!DNL Acxiom Audience Connection]使用者介面建立[!DNL Adobe Experience Platform]目的地聯結器的指示。 此聯結器用於建立受眾，並將受眾發佈至選取的目的地。
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Acxiom Audience Distribution]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此聯結器解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Acxiom Audience Connection]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此聯結器解決的範例使用案例。
 
 ### 將對象從Experience Platform傳送至您的Acxiom帳戶 {#send-audiences}
 
 如果您是行銷專業人員，想要將對象從[!DNL Experience Platform]傳送至您的[!DNL Acxiom]帳戶，以進行跨管道贏取，請使用此目的地聯結器。
 
-例如，某個全球金融服務品牌的行銷營運部門對於透過多個廣告平台進行跨頻道客戶贏取感興趣。 他們可以使用[!DNL Acxiom Audience Distribution]目的地聯結器將對象從[!DNL Experience Platform]傳送至[!DNL Acxiom]、使用[!DNL Acxiom's Real ID]技術增強對象，以及將對象啟用至多個平台，例如[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]等。
+例如，某個全球金融服務品牌的行銷營運部門對於透過多個廣告平台進行跨頻道客戶贏取感興趣。 他們可以使用[!DNL Acxiom Audience Connection]目的地聯結器將對象從[!DNL Experience Platform]傳送至[!DNL Acxiom]、使用[!DNL Acxiom's Real ID]技術增強對象，以及將對象啟用至多個平台，例如[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]等。
 
 ## 先決條件 {#prerequisites}
 
-* **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom Audience Distribution]使用條款合約，才能設定新的[!DNL Acxiom's]目的地。 執行銷售訂單完成後，您將會收到合約的連結。 在您簽署合約之前，不會在Experience Platform目的地目錄中看到[!DNL Acxiom Audience Distribution]目的地卡片。 在您接受並簽署合約後，[!DNL Adobe]將完成您的上線程式，您將會看到[!DNL Acxiom Audience Distribution]目的地卡。
-* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
+* **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom Audience Connection]使用條款合約，才能設定新的[!DNL Acxiom's]目的地。 執行銷售訂單完成後，您將會收到合約的連結。 在您簽署合約之前，不會在Experience Platform目的地目錄中看到[!DNL Acxiom Audience Connection]目的地卡片。 在您接受並簽署合約後，[!DNL Adobe]將完成您的上線程式，您將會看到[!DNL Acxiom Audience Connection]目的地卡。
+* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
 
 ## 支援的目的地 {#supported-destinations}
 
-[!DNL Acxiom Audience Distribution]目的地目前支援下列平台的對象啟用。<br>
+[!DNL Acxiom Audience Connection]目的地目前支援下列平台的對象啟用。<br>
 
 * [!DNL Altice]
 * [!DNL Ampersand]
@@ -49,11 +49,11 @@ ht-degree: 6%
 
 ## 連線到目標 {#connect}
 
-為了您的方便，系統會在幕後自動處理對[!DNL Acxiom's Audience Distribution]目的地的驗證。
+為了您的方便，系統會在幕後自動處理對[!DNL Acxiom's Audience Connection]目的地的驗證。
 
 ## 目的地特定設定 {#destination-settings}
 
-有些[!DNL Acxiom Audience Distribution]目的地需要其他資訊。 以下各節提供如何設定這些選項的詳細指引。
+有些[!DNL Acxiom Audience Connection]目的地需要其他資訊。 以下各節提供如何設定這些選項的詳細指引。
 
 ### [!DNL LG Ads] {#lg-ads}
 
@@ -74,13 +74,13 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->[!DNL Acxiom Audience Distribution]目的地僅支援完整檔案匯出。
+>[!DNL Acxiom Audience Connection]目的地僅支援完整檔案匯出。
 
 ### 對應屬性和身分 {#map}
 
-若要讓[!DNL Acxiom Audience Distribution]目的地正確接收對象資料，您必須從Experience Platform將來源欄位對應至正確的[!DNL Acxiom Audience Distribution]目標欄位。
+若要讓[!DNL Acxiom Audience Connection]目的地正確接收對象資料，您必須從Experience Platform將來源欄位對應至正確的[!DNL Acxiom Audience Connection]目標欄位。
 
-[!DNL Acxiom Audience Distribution]僅允許對應到以下目標欄位。 下表所述的目標欄位必須以下列順序對應。
+[!DNL Acxiom Audience Connection]僅允許對應到以下目標欄位。 下表所述的目標欄位必須以下列順序對應。
 
 | 欄位名稱 | 說明 | 必填 | 欄位順序 | 最大長度 |
 |---|---|---|---|---|          
@@ -105,7 +105,7 @@ ht-degree: 6%
 
 ### 審閱 {#review}
 
-完成上述所有步驟後，您就有機會先檢閱目的地連線狀態和對象詳細資訊，然後再啟用（發佈）該功能。 您選取的對象將顯示在清單底部。 每個對象都會是對[!DNL Acxiom Audience Distribution] API的個別呼叫。
+完成上述所有步驟後，您就有機會先檢閱目的地連線狀態和對象詳細資訊，然後再啟用（發佈）該功能。 您選取的對象將顯示在清單底部。 每個對象都會是對[!DNL Acxiom Audience Connection] API的個別呼叫。
 
 如果您對結果滿意，請選取&#x200B;**[!UICONTROL 完成]**&#x200B;以啟用您的目的地。
 
@@ -128,4 +128,4 @@ ht-degree: 6%
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
