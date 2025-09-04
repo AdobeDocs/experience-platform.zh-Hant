@@ -2,20 +2,15 @@
 title: PathFactory Source概觀
 description: 瞭解如何使用API或使用者介面將PathFactory連線至Adobe Experience Platform。
 last-substantial-update: 2024-04-30T00:00:00Z
-badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '449'
 ht-degree: 3%
 
 ---
 
 # [!DNL PathFactory]
-
->[!NOTE]
->
->[!DNL PathFactory]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
 [[!DNL PathFactory]](https://www.pathfactory.com/)提供雲端型平台，可協助企業管理內容歷程，並透過智慧型內容深入分析促進參與。 本指南詳細說明如何運用PathFactory的聯結器將資料從PathFactory整合到Experience Platform中，以最佳化資料擷取。
 
@@ -37,7 +32,7 @@ ht-degree: 3%
 
 * **一個[PathFactory帳戶]**。
    * 如果您還沒有有效的帳戶，請連絡[[!DNL PathFactory]](https://www.pathfactory.com/portal/company/contactus.shtml)。
-* **任何[!DNL PathFactory]產品的使用中訂閱**。
+* **任何**&#x200B;產品的使用中訂閱[!DNL PathFactory]。
 * **使用者名稱、密碼和網域**。
    * 需要這些認證才能存取您的[!DNL PathFactory]帳戶及其資料。
 * **存取Token**&#x200B;和&#x200B;**API端點**。
@@ -68,5 +63,5 @@ ht-degree: 3%
 以下檔案提供如何使用API或使用者介面將[!DNL PathFactory]連線至Experience Platform的資訊：
 
 * [使用API建立來源連線和資料流，將 [!DNL PathFactory] 資料匯入Experience Platform](../../tutorials/api/create/marketing-automation/pathfactory.md)。
-* [使用UI](../../tutorials/ui/create/marketing-automation/pathfactory.md)將您的 [!DNL PathFactory] 帳戶連線至Experience Platform。
+* [使用UI [!DNL PathFactory] 將您的](../../tutorials/ui/create/marketing-automation/pathfactory.md)帳戶連線至Experience Platform。
 * [使用UI](../../tutorials/ui/dataflow/marketing-automation.md)為來源連線建立資料流。

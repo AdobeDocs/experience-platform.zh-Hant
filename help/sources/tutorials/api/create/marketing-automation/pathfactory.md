@@ -1,20 +1,19 @@
 ---
 title: 使用Flow Service API建立PathFactory基本連線
 description: 瞭解如何使用流量服務API針對Experience Platform驗證您的PathFactory帳戶。
-badge: Beta
 exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL PathFactory]基本連線
+# 使用[!DNL PathFactory] API建立[!DNL Flow Service]基本連線
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
-閱讀本檔案以瞭解如何使用[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)為[!DNL PathFactory]建立基礎連線。
+閱讀本檔案以瞭解如何使用[!DNL PathFactory]API[[!DNL Flow Service] 為](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)建立基礎連線。
 
 ## 快速入門
 
@@ -27,7 +26,7 @@ ht-degree: 2%
 
 如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
-以下章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL PathFactory]。
+以下章節提供您需瞭解的其他資訊，才能使用[!DNL PathFactory] API成功連線到[!DNL Flow Service]。
 
 ### 收集必要的認證 {#gather-credentials}
 
@@ -47,7 +46,7 @@ ht-degree: 2%
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL PathFactory]驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的`/connections`驗證認證作為要求內文的一部分時，對[!DNL PathFactory]端點提出POST要求。
 
 **API格式**
 
@@ -104,7 +103,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL PathFactory]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
+依照此教學課程，您已使用[!DNL PathFactory] API建立[!DNL Flow Service]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
 * [使用 [!DNL Flow Service] API建立資料流以將行銷自動化資料帶入Experience Platform](../../collect/marketing-automation.md)

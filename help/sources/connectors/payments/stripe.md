@@ -1,20 +1,15 @@
 ---
 title: Stripe
-description: 瞭解如何將Stripe帳戶的付款資料擷取至Adobe Experience Platform
-badge: Beta
+description: 瞭解如何將Stripe帳戶中的付款資料擷取至Adobe Experience Platform
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '791'
 ht-degree: 1%
 
 ---
 
 # [!DNL Stripe]
-
->[!NOTE]
->
->[!DNL Stripe]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
 數千家不同規模的企業透過線上及親身使用[!DNL Stripe]接受付款、產生新的收入來源，並透過Adobe Experience Platform、Adobe Commerce和[!DNL Magento Open Source]協助進行全球擴張。
 
@@ -22,11 +17,11 @@ ht-degree: 1%
 
 >[!TIP]
 >
->有關Experience Platform上[!DNL Stripe]來源的問題，請透過adobe-partnership<span>@stripe.com聯絡[!DNL Stripe]。
+>如需Experience Platform上[!DNL Stripe]來源的相關問題，請透過adobe-partnership[!DNL Stripe]@stripe.com聯絡<span>。
 
 >[!BEGINSHADEBOX]
 
-[!DNL Stripe]來源的&#x200B;**範例使用案例**
+**來源的[!DNL Stripe]範例使用案例**
 
 您的企業可讓客戶在您的線上商店購買專案，並可選擇&#x200B;**立即購買**&#x200B;及&#x200B;**稍後付款** （使用[!DNL Klarna]、[!DNL Afterpay]、[!DNL Affirm]或[!DNL Zip]）。
 
@@ -38,24 +33,24 @@ ht-degree: 1%
 
 ## 先決條件 {#prerequisites}
 
-下列章節提供您在將[!DNL Stripe]帳戶連線至Experience Platform之前必須完成的先決條件設定資訊。
+下列章節提供您在將[!DNL Stripe]帳戶連線至Experience Platform之前必須完成的必要條件設定資訊。
 
 ### 擷取您的存取權杖
 
-* 使用您的[!DNL Stripe]電子郵件地址和密碼登入[[!DNL Stripe] 儀表板](https://dashboard.stripe.com/login)。
+* 使用您的[[!DNL Stripe] 電子郵件地址和密碼登入](https://dashboard.stripe.com/login)儀表板[!DNL Stripe]。
 * 在[!DNL Developers]儀表板中，選取&#x200B;**[!DNL API keys for developers]**。
 * 在&#x200B;**API金鑰**&#x200B;標籤下，選取&#x200B;**[!DNL Reveal test key]**&#x200B;以顯示您的存取權杖。
-* 您現在可以在使用[!DNL Flow Service] API或Experience PlatformUI連線您的[!DNL Stripe]帳戶以進行Experience Platform時，使用此權杖作為存取權杖。
+* 您現在可以使用[!DNL Stripe] API或Experience Platform UI，將您的[!DNL Flow Service]帳戶連線至Experience Platform時，將此權杖當做存取權杖。
 
 ### 收集必要的認證
 
-為了將您的[!DNL Stripe]帳戶連線到Experience Platform，您必須提供下列驗證認證的值：
+若要將您的[!DNL Stripe]帳戶連線至Experience Platform，您必須提供下列驗證認證的值：
 
 >[!BEGINTABS]
 
 >[!TAB API]
 
-使用[!DNL Flow Service] API連線您的[!DNL Stripe]帳戶時，您必須提供下列認證。
+使用[!DNL Stripe] API連線您的[!DNL Flow Service]帳戶時，您必須提供下列認證。
 
 | 認證 | 說明 |
 | --- | --- |
@@ -93,7 +88,7 @@ ht-degree: 1%
 
 在[!DNL Stripe]中，**費用**&#x200B;代表嘗試將資金移入您的[!DNL Stripe]。 如需特定收費屬性的詳細資訊，請參閱[[!DNL Stripe] API收費指南](https://docs.stripe.com/api/charges)。
 
-+++選取以檢視Stripe費用物件
++++選取以檢視Stripe費用物件  
 
 ```json
 {
@@ -186,7 +181,7 @@ ht-degree: 1%
 
 >[!TAB 訂閱]
 
-在[!DNL Stripe]中，您可以使用&#x200B;**訂閱**&#x200B;以定期方式向客戶收費。 如需特定訂閱屬性的詳細資訊，請參閱訂閱[&#128279;](https://docs.stripe.com/api/subscriptions)的[!DNL Stripe] API指南。
+在[!DNL Stripe]中，您可以使用&#x200B;**訂閱**&#x200B;以定期方式向客戶收費。 如需特定訂閱屬性的詳細資訊，請參閱訂閱[[!DNL Stripe] 的](https://docs.stripe.com/api/subscriptions)API指南。
 
 +++選取以檢視Stripe訂閱物件
 
@@ -328,7 +323,7 @@ ht-degree: 1%
 
 >[!TAB 退款]
 
-在[!DNL Stripe]中，您可以使用&#x200B;**退款**&#x200B;來退還先前建立的費用。 如需特定退款屬性的詳細資訊，請參閱退款[&#128279;](https://docs.stripe.com/api/refunds)的[!DNL Stripe] API指南。
+在[!DNL Stripe]中，您可以使用&#x200B;**退款**&#x200B;來退還先前建立的費用。 如需特定退款屬性的詳細資訊，請參閱退款[[!DNL Stripe] 的](https://docs.stripe.com/api/refunds)API指南。
 
 +++選取以檢視Stripe退款物件
 
@@ -364,9 +359,9 @@ ht-degree: 1%
 
 >[!TAB 餘額交易]
 
-在[!DNL Stripe]中，**餘額交易**&#x200B;代表您[!DNL Stripe]帳戶之間的資金流動。 如需特定餘額交易屬性的詳細資訊，請參閱餘額交易[&#128279;](https://docs.stripe.com/api/balance_transactions)的[!DNL Stripe] API指南。
+在[!DNL Stripe]中，**餘額交易**&#x200B;代表您[!DNL Stripe]帳戶之間的資金流動。 如需特定餘額交易屬性的詳細資訊，請參閱餘額交易[[!DNL Stripe] 的](https://docs.stripe.com/api/balance_transactions)API指南。
 
-+++選取以檢視「Stripe餘額異動」物件
++++選取以檢視Stripe餘額交易物件
 
 ```json
 {
@@ -394,7 +389,7 @@ ht-degree: 1%
 
 在[!DNL Stripe]中，**個客戶**&#x200B;代表您企業的指定客戶。 如需特定客戶屬性的詳細資訊，請參閱客戶的[[!DNL Stripe] API指南](https://docs.stripe.com/api/customers)，瞭解特定客戶屬性的詳細資訊。
 
-+++選取以檢視StripeCustomer物件
++++選取以檢視Stripe客戶物件
 
 ```json
 {
@@ -432,9 +427,9 @@ ht-degree: 1%
 
 >[!TAB 價格]
 
-在[!DNL Stripe]中，**價格**&#x200B;代表重複購買與一次性購買產品的單位成本、貨幣以及選擇性帳單週期。 如需特定價格屬性的詳細資訊，請參閱價格[&#128279;](https://docs.stripe.com/api/prices)的[!DNL Stripe] API指南。
+在[!DNL Stripe]中，**價格**&#x200B;代表重複購買與一次性購買產品的單位成本、貨幣以及選擇性帳單週期。 如需特定價格屬性的詳細資訊，請參閱價格[[!DNL Stripe] 的](https://docs.stripe.com/api/prices)API指南。
 
-+++選取以檢視「Stripe價格」物件
++++選取以檢視Stripe價格物件
 
 ```json
 {
@@ -475,13 +470,13 @@ ht-degree: 1%
 
 使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-### 設定Experience Platform的許可權
+### 在Experience Platform上設定許可權
 
 您必須同時為您的帳戶啟用&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;許可權，才能將您的[!DNL Stripe]帳戶連線至Experience Platform。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀[存取控制UI指南](../../../access-control/ui/overview.md)。
 
 ## 後續步驟
 
-完成先決條件設定後，您可以繼續連線並擷取[!DNL Stripe]資料以Experience Platform。 請閱讀下列指南，瞭解如何使用API或使用者介面將[!DNL Stripe]付款資料擷取到Experience Platform：
+完成先決條件設定後，您就可以繼續連線，並將[!DNL Stripe]資料擷取到Experience Platform。 請閱讀下列指南，瞭解如何使用API或使用者介面將[!DNL Stripe]付款資料擷取到Experience Platform：
 
-* [使用流程服務API](../../tutorials/api/create/payments/stripe.md)，從您的Stripe帳戶擷取付款資料以Experience Platform。
-* [使用使用者介面](../../tutorials/ui/create/payments/stripe.md)從您的Stripe帳戶擷取付款資料以Experience Platform。
+* [使用流量服務API](../../tutorials/api/create/payments/stripe.md)，將付款資料從您的Stripe帳戶擷取到Experience Platform。
+* [使用使用者介面](../../tutorials/ui/create/payments/stripe.md)將付款資料從您的Stripe帳戶擷取到Experience Platform。

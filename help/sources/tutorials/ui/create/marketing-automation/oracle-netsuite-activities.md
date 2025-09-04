@@ -1,22 +1,15 @@
 ---
 title: 在使用者介面中建立 [!DNL Oracle NetSuite Activities] 來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Oracle NetSuite活動來源連線。
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '607'
 ht-degree: 2%
 
 ---
 
 # 在使用者介面中建立[!DNL Oracle NetSuite Activities]來源連線
-
->[!NOTE]
->
->[!DNL Oracle NetSuite Activities]來源是測試版。 如需使用Beta版標示來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
 請閱讀下列教學課程，瞭解如何在UI中將[!DNL Oracle NetSuite Activities]帳戶中的事件資料引進Adobe Experience Platform。
 
@@ -51,7 +44,7 @@ ht-degree: 2%
 
 ### 現有帳戶 {#existing-account}
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Oracle NetSuite Activities]帳戶，然後選取[下一步] **以繼續。**
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL Oracle NetSuite Activities]帳戶，然後選取[下一步] **[!UICONTROL 以繼續。]**
 
 ![Experience Platform UI熒幕擷圖可將Oracle NetSuite活動帳戶與現有帳戶連線](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
@@ -77,7 +70,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 >
 >顯示的欄位取決於您的[!DNL Oracle NetSuite]帳戶有權存取的訂閱。 例如，如果您無權存取帳單，則看不到與帳單相關的欄位。
 
-### 正在安排 {#scheduling}
+### 排程 {#scheduling}
 
 排程[!DNL Oracle NetSuite Activities]資料流進行內嵌時，您必須選取下列頻率和間隔設定：
 

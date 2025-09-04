@@ -3,20 +3,16 @@ title: 使用API將付款資料從您的 [!DNL Stripe] 帳戶擷取至Experience
 description: 瞭解如何使用流量服務API，將付款資料從您的Stripe帳戶擷取到Experience Platform
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2006'
 ht-degree: 1%
 
 ---
 
 # 使用API從您的[!DNL Stripe]帳戶擷取付款資料至Experience Platform
 
->[!NOTE]
->
->[!DNL Stripe]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
-
-閱讀下列教學課程，瞭解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將付款資料從[!DNL Stripe]擷取到Adobe Experience Platform。
+閱讀下列教學課程，瞭解如何使用[!DNL Stripe]API[[!DNL Flow Service] 將付款資料從](https://www.adobe.io/experience-platform-apis/references/flow-service/)擷取到Adobe Experience Platform。
 
 ## 快速入門
 
@@ -41,7 +37,7 @@ ht-degree: 1%
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 您可以使用基本連線ID從來源內部探索及導覽檔案。 此外，您可以識別要擷取的特定專案，包括有關這些專案的資料型別和格式的詳細資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL Stripe]驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的`/connections`驗證認證作為要求內文的一部分時，對[!DNL Stripe]端點提出POST要求。
 
 **API格式**
 
@@ -407,7 +403,7 @@ curl -X GET \
 
 ### 建立來源連線 {#source-connection}
 
-您可以對[!DNL Flow Service] API的`/sourceConnections`端點發出POST要求，以建立來源連線。 來源連線由連線ID、來源資料檔案的路徑以及連線規格ID組成。
+您可以對`/sourceConnections` API的[!DNL Flow Service]端點發出POST要求，以建立來源連線。 來源連線由連線ID、來源資料檔案的路徑以及連線規格ID組成。
 
 **API格式**
 
@@ -880,7 +876,7 @@ curl -X POST \
 | `transformations.params.mappingId` | 在先前步驟中產生的[對應ID](#mapping)。 |
 | `transformations.params.mappingVersion` | 對應ID的對應版本。 此值預設為`0`。 |
 | `scheduleParams.startTime` | 您的資料流將開始的時間。 您必須以Unix時間戳記的格式提供開始時間值。 |
-| `scheduleParams.frequency` | 資料流收集資料的頻率。 您可以將擷取頻率設定為：  <ul><li>**一次**：將您的頻率設定為`once`以建立一次性內嵌。 建立一次性擷取資料流時，無法使用間隔和回填的設定。 依預設，排程頻率會設定為一次。</li><li>**分鐘**：將頻率設為`minute`，排程您的資料流以每分鐘擷取資料。</li><li>**小時**：將頻率設為`hour`，排程您的資料流以每小時為基礎擷取資料。</li><li>**天**：將您的頻率設為`day`，排程您的資料流每天擷取資料。</li><li>**周**：將頻率設為`week`，排程您的資料流每週擷取資料。</li></ul> |
+| `scheduleParams.frequency` | 資料流收集資料的頻率。 您可以將擷取頻率設定為：  <ul><li>**一次**：將您的頻率設定為`once`以建立一次性內嵌。 建立一次性擷取資料流時，無法使用間隔和回填的設定。 依預設，排程頻率會設定為一次。</li><li>**分鐘**：將頻率設為`minute`，排程您的資料流以每分鐘擷取資料。</li><li>**小時**:Set&#x200B;您的頻率到`hour`，以排程您的資料流每小時擷取資料。</li><li>**天**：將您的頻率設為`day`，排程您的資料流每天擷取資料。</li><li>**周**：將頻率設為`week`，排程您的資料流每週擷取資料。</li></ul> |
 | `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 例如，如果您將頻率設為「天」，並將間隔設為15，則您的資料流將每隔15天執行一次。 間隔值應為非零整數。 每個頻率的最小接受間隔值如下：<ul><li>**一次**：不適用</li><li>**分鐘**： 15</li><li>**小時**： 1</li><li>**天**： 1</li><li>**周**： 1</li></ul> |
 
 **回應**
@@ -904,11 +900,11 @@ curl -X POST \
 
 ### 更新您的資料流
 
-在提供資料流ID的同時，向[!DNL Flow Service] API的/flows端點發出PATCH請求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`If-Match`標頭中提供資料流的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
+在提供資料流ID的同時，向[!DNL Flow Service] API的/flows端點發出PATCH請求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`etag`標頭中提供資料流的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
 
 ### 更新您的帳戶
 
-在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`If-Match`標頭中提供來源帳戶的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
+在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`etag`標頭中提供來源帳戶的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
 
 ### 刪除您的資料流
 

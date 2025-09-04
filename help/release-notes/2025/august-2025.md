@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 97%
+source-wordcount: '1432'
+ht-degree: 92%
 
 ---
 
@@ -171,6 +171,9 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 
 | 功能 | 說明 |
 | --- | --- |
+| [!DNL Oracle NetSuite] 來源正式推出 | [!DNL Oracle NetSuite]來源現在已可供一般使用。 您現在可以將[!DNL Oracle NetSuite]帳戶連線至Experience Platform，以擷取活動和實體資料以進行統一分析和啟用。 如需詳細資訊，請閱讀[[!DNL Oracle NetSuite] 概觀](../../sources/connectors/marketing-automation/oracle-netsuite.md)。 |
+| [!DNL PathFactory] 來源正式推出 | [!DNL PathFactory]來源現在已可供一般使用。 您可以將[!DNL PathFactory]帳戶連線至Experience Platform，以擷取訪客、工作階段和頁面檢視資料，以進行整合式分析和啟用。 如需詳細資訊，請閱讀[[!DNL PathFactory] 概觀](../../sources/connectors/marketing-automation/pathfactory.md)。 |
+| [!DNL Stripe] 來源正式推出 | [!DNL Stripe]來源現在已可供一般使用。 您可以將[!DNL Stripe]帳戶連線至Experience Platform，以擷取付款和交易資料，以進行統一分析和啟用。 如需詳細資訊，請閱讀[[!DNL Stripe] 概觀](../../sources/connectors/payments/stripe.md)。 |
 | 增強 [!DNL Azure Blob Storage] 驗證 | 您現在可以使用服務主體式驗證，將您的 [!DNL Azure Blob Storage] 來源連接至 Experience Platform。使用服務主體式驗證，可以增強安全性、更輕鬆地進行認證輪換，並對您的帳戶進行更精細的存取控制。如需詳細資訊，請閱讀[[!DNL Azure Blob Storage] 概觀](../../sources/connectors/cloud-storage/blob.md)。 |
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
