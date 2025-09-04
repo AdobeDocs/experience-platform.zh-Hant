@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
+source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2573'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 2%
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.29.0版 — 2025年9月4日
+
+**新特性**
+
+- 新增對Adobe Journey Analytics收集Adobe廣告資料的支援
+- 新增可在使用者設定檔中記錄推播訂閱詳細資料的支援。
+
+**修正和改良**
+
+- 修正合併而非取代設定覆寫區段的問題。
+- 修正連結集合以連結名稱傳送整個檔案內容的情況。
+- 修正無法重新呈現某些主張的問題。
 
 ## 2.28.1版 — 2025年7月31日
 

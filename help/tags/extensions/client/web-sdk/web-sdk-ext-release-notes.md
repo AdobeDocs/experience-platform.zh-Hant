@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
+source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 23%
+source-wordcount: '2947'
+ht-degree: 22%
 
 ---
 
@@ -13,6 +13,18 @@ ht-degree: 23%
 # Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/web-sdk/release-notes.md)。
+
+## 2.32.0版 — 2025年9月4日
+
+**新功能**
+
+- 包含[2.29.0](../../../../web-sdk/release-notes.md#2-29-0)版的Adobe Experience Platform Web SDK。
+- 新增Adobe Advertising作為新自訂建置元件的支援。 在擴充功能設定和傳送事件呼叫中設定。
+- 新增在「設定檔」中記錄推播訂閱詳細資料的支援。 這是透過新動作「推送訂閱詳細資料」
+
+**修正和改良**
+
+- 改善在結構描述或沙箱無法使用時的XDM資料元素編輯。 您現在可以編輯XDM物件與變數資料元素，即使找不到其參照的結構描述或無法存取沙箱亦然。 這可解決組織移轉至新資料中心時經常發生的問題，其中結構描述ID可能會變更，且先前導致編輯介面顯示錯誤並變得無法使用。
 
 ## 2.31.1版 — 2025年7月31日
 
@@ -34,7 +46,6 @@ ht-degree: 23%
 **已知問題**
 
 - 在v2.31.0發行後，發現[自訂元件組建](/help/web-sdk/install/create-custom-build.md)程式有問題。 當自訂組建繼續運作時，目前所有元件都包含在組建中，因此無論元件選取為何，都會產生完整大小的套件。 正在開發此問題的修正。 如果您仰賴自訂元件選擇來將建置大小減至最低，建議您等待未來版本。
-
 
 ## 2.30.1版 — 2025年5月27日
 
