@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
+source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
 workflow-type: tm+mt
-source-wordcount: '1339'
-ht-degree: 85%
+source-wordcount: '1321'
+ht-degree: 97%
 
 ---
 
@@ -101,14 +101,14 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 
 | 目標 | 說明 |
 | --- | --- |
-| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 從2025年8月11日開始，您可能會在目的地目錄中看到兩張&#x200B;**[!DNL Microsoft Bing]**&#x200B;卡片並排。 這是因為目標服務進行內部升級所致。現有的 **[!DNL Microsoft Bing]** 目標連接器已重新命名為 **[!UICONTROL (已棄用) Microsoft Bing]**，而您現在可以使用名為 **[!UICONTROL Microsoft Bing]** 的全新卡片。<br>升級已完成，且已棄用的卡片已從目的地目錄中移除。 使用目錄中的&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何作用中資料流至&#x200B;**[!UICONTROL （已棄用） Microsoft Bing]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。 <br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 進行此一升級後，在傳送至 [!DNL Microsoft Bing] 的資料流中，**已啟用輪廓的數量可能會下降**。此一下降是因為所有傳送到此目標平台的啟用資料流，都必須滿足 **ECID 對應要求**。 |
-| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md)和[LinkedIn相符對象](../../destinations/catalog/social/linkedin-b2b.md)目的地的驗證到期詳細資料 | [!DNL LinkedIn]目的地的驗證到期資訊現在會直接顯示在Experience Platform介面中，因此您可以檢視您的驗證將於何時到期並續約，以免對資料流造成任何中斷。 您可以從&#x200B;**[!UICONTROL 帳戶]**&#x200B;或&#x200B;**[[!UICONTROL 瀏覽]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;索引標籤中的&#x200B;**[[!UICONTROL 帳戶到期日]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;欄監視您的權杖到期日。 |
+| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 從 2025 年 8 月 11 日起，在短期間，您可以看到兩張 **[!DNL Microsoft Bing]** 卡片在目標目錄中並排顯示。這是因為目標服務進行內部升級所致。現有的 **[!DNL Microsoft Bing]** 目標連接器已重新命名為 **[!UICONTROL (已棄用) Microsoft Bing]**，而您現在可以使用名為 **[!UICONTROL Microsoft Bing]** 的全新卡片。<br> 升級已經完成，並且已經從目標目錄移除棄用的卡片。請在目錄中使用 **[!UICONTROL Microsoft Bing]** 連線來建立新的啟用資料流。如果您已經有任何傳送至 **[!UICONTROL (已棄用) Microsoft Bing]** 目標的使用中資料流，該資料流將自動更新，您無需採取任何行動。<br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 進行此一升級後，在傳送至 [!DNL Microsoft Bing] 的資料流中，**已啟用輪廓的數量可能會下降**。此一下降是因為所有傳送到此目標平台的啟用資料流，都必須滿足 **ECID 對應要求**。 |
+| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) 和 [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) 目標的驗證過期詳細資料 | [!DNL LinkedIn] 目標的驗證過期資訊現在可直接在 Experience Platform 介面中查看，因此您可以查看驗證的過期時間，並在其對資料流造成任何中斷之前進行續訂。您可以在&#x200B;**[!UICONTROL 帳戶過期日期]**&#x200B;欄 (在&#x200B;**[[!UICONTROL 「帳戶」]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;或&#x200B;**[[!UICONTROL 「瀏覽」]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;索引標籤中) 監視您的權杖過期日。 |
 
 **全新或更新版功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 增強目標的搜尋、篩選及標記功能 | 增強「[瀏覽](../../destinations/ui/destinations-workspace.md#browse)」和「[帳戶](../../destinations/ui/destinations-workspace.md#accounts)」索引標籤當中的搜尋、篩選及標記功能，藉此改善目標管理工作流程。<br>您現在可以依名稱搜尋特定的資料流和帳戶、依各種條件篩選（包括目的地平台、狀態和日期），以及建立自訂標籤來組織您的目的地。 欄排序也可用於關鍵欄位，例如上次資料流執行時間，讓您更容易識別和管理您的目的地連線。<br> ![在[瀏覽]索引標籤中搜尋目的地資料流的動畫示範](../../destinations/assets/ui/workspace/search.gif) |
+| 增強目標的搜尋、篩選及標記功能 | 增強「[瀏覽](../../destinations/ui/destinations-workspace.md#browse)」和「[帳戶](../../destinations/ui/destinations-workspace.md#accounts)」索引標籤當中的搜尋、篩選及標記功能，藉此改善目標管理工作流程。<br> 您現在可以透過名稱搜尋特定的資料流和帳戶，根據目標平台、狀態及日期等各種條件進行篩選，以及建立自訂標記來組織您的目標。您也可以針對關鍵欄位 (例如上個資料流執行時間) 進行欄排序，可以更輕鬆地識別和管理目標連線。<br> ![在「瀏覽」索引標籤中搜尋目標資料流的動畫示範](../../destinations/assets/ui/workspace/search.gif) |
 
 
 ## 體驗資料模型 (XDM) {#xdm}
@@ -160,7 +160,7 @@ Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 客群預估 | 客戶細分工具中現在會自動產生客群預估。只要您修改客群，此值便會更新，而且會隨時反映最新的客群規則。此外，此預估現在以&#x200B;**範圍**&#x200B;的形式顯示，並以抽樣資料的信賴區間為基礎。 |
+| 客群預估 | 對象預估現在會顯示為&#x200B;**範圍**，這是根據取樣資料的信賴區間而定。 若要深入瞭解預估值，請閱讀[區段產生器指南](/help/segmentation/ui/segment-builder.md#audience-properties)。 |
 
 如需詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
 
