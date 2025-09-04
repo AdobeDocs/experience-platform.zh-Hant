@@ -1,0 +1,85 @@
+---
+title: pushNotifications
+description: 設定Web SDK的推播通知，以啟用瀏覽器式的推播訊息。
+source-git-commit: 9c3f19cc2b32ab70869584b620f5a55d5b808751
+workflow-type: tm+mt
+source-wordcount: '394'
+ht-degree: 2%
+
+---
+
+
+# `pushNotifications` {#push-notifications}
+
+>[!AVAILABILITY]
+>
+> Web SDK的推播通知目前在&#x200B;**測試版**&#x200B;中。 功能和檔案可能會變更。
+
+`pushNotifications`屬性可讓您設定Web應用程式的推播通知。 此功能可讓您的網頁應用程式接收從伺服器推播的訊息，即使網站目前未載入瀏覽器或瀏覽器未執行亦然。
+
+## 先決條件 {#prerequisites}
+
+在設定推播通知之前，請確定您擁有：
+
+1. **使用者許可權**：使用者必須明確授與通知許可權
+2. **Service worker**：必須有Registered Service Worker才能執行推播通知
+3. **VAPID金鑰**：產生VAPID （自願應用程式伺服器識別）金鑰以進行安全通訊
+
+## 產生VAPID金鑰 {#generate-vapid-keys}
+
+若要產生VAPID金鑰，請安裝`web-push` NPM套件並執行：
+
+```bash
+npm install web-push -g
+web-push generate-vapid-keys
+```
+
+這會產生公開和私密金鑰組。 在您的Web SDK設定中使用公開金鑰，並將私密金鑰儲存在Adobe Journey Optimizer推播通知頻道中。
+
+## 使用Web SDK標籤擴充功能設定推播通知 {#configure-push-notifications-tag-extension}
+
+請依照下列步驟啟用和設定推播通知：
+
+1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
+1. 導覽至&#x200B;**[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**。
+1. 選取所需的標籤屬性。
+1. 導覽至&#x200B;**[!UICONTROL 擴充功能]**，然後按一下&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**&#x200B;卡片上的[!UICONTROL 設定]。
+1. 從「自訂建置元件」區段&#x200B;**啟用推播通知**。
+1. 向下捲動以找到[!UICONTROL 推播通知]區段。
+1. 在&#x200B;**[!UICONTROL VAPID公開金鑰]**&#x200B;欄位中輸入您的VAPID公開金鑰。
+1. 按一下&#x200B;**[!UICONTROL 儲存]**，然後發佈您的變更。
+
+>[!NOTE]
+>
+> 推播通知必須在標籤擴充功能設定中明確啟用。 此功能預設為停用。
+
+## 使用Web SDK JavaScript資料庫設定推播通知 {#configure-push-notifications-javascript}
+
+執行`pushNotifications`命令時設定`configure`物件：
+
+```js
+alloy("configure", {
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  pushNotifications: {
+    vapidPublicKey:
+      "BEl62iUYgUivElbkzaBgNL3r3vOAhvJyFXjS6FjjRRojYD4NElJkLBJKZvS3xAAh4_gE3WnMaZNu_KGP4jAQlJz",
+  },
+});
+```
+
+## 屬性 {#properties}
+
+| 屬性 | 類型 | 必要 | 說明 |
+| ------ | ------ | -------- | ----- |
+| `vapidPublicKey` | 字串 | 是 | 用於推送訂閱的VAPID公開金鑰。 必須是Base64編碼的字串。 |
+
+## 重要考量 {#important-considerations}
+
+- **安全性**：推送訂閱繫結至訂閱期間使用的特定VAPID公開金鑰。 如果您變更VAPID金鑰，現有訂閱會自動取消訂閱，並使用新金鑰重新建立。
+- **快取**： Web SDK會將目前的ECID和訂閱詳細資料與快取的值比較，以自動管理訂閱更新。 只有在偵測到變更時，才會傳送訂閱資料。
+- **Service Worker需求**：推播通知需要註冊的Service Worker。 確保您的Service Worker已正確設定為處理推送事件。
+
+## 後續步驟 {#next-steps}
+
+設定推播通知後，使用[`sendPushSubscription`](../sendPushSubscription.md)命令向Adobe Experience Platform註冊推播訂閱。
