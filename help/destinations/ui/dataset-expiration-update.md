@@ -3,9 +3,9 @@ title: 為2024年11月之前建立的資料流延長資料集匯出排程
 description: 瞭解如何為2024年11月之前建立的資料集匯出資料流（將於2025年9月1日停止運作）延長匯出排程。
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
+source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,9 @@ ht-degree: 0%
    >
    >使用目錄左側的&#x200B;**[!UICONTROL 資料型別]**&#x200B;篩選器，依&#x200B;**[!UICONTROL 資料集]**&#x200B;篩選可用的目的地。
 
-3. 選取&#x200B;**[!UICONTROL 資料集]**&#x200B;資料型別以僅顯示具有資料集匯出的資料流。
+3. 選取&#x200B;**[!UICONTROL 資料集]**資料型別以僅顯示具有資料集匯出的資料流。
    ![熒幕擷圖顯示如何依資料型別篩選資料流程。](/help/destinations/assets/ui/export-datasets/dataset-type.png)
-4. 選取&#x200B;**[!UICONTROL 已建立]**&#x200B;欄標題，並選擇&#x200B;**[!UICONTROL 遞增排序]**&#x200B;以檢視較舊的資料流。
+4. 選取&#x200B;**[!UICONTROL 已建立]**&#x200B;欄標題，並選擇&#x200B;**[!UICONTROL 遞增排序]**以檢視較舊的資料流。
    ![顯示如何遞增排序資料流程的熒幕擷圖。](/help/destinations/assets/ui/export-datasets/sort-ascending.png)
 5. 識別您要保留在2024年11月之前建立的資料流。
 
@@ -66,10 +66,10 @@ ht-degree: 0%
 對於要保留的每個資料流，您需要存取匯出資料集工作流程以修改排程。
 
 1. 在&#x200B;**[!UICONTROL 名稱]**&#x200B;欄中選取資料流名稱。 這會將您帶往&#x200B;**[!UICONTROL 資料流執行]**&#x200B;頁面。
-2. 在此頁面中，選取&#x200B;**[!UICONTROL 匯出資料集]**&#x200B;選項。
+2. 在此頁面中，選取&#x200B;**[!UICONTROL 匯出資料集]**選項。
    ![在資料流執行頁面中顯示匯出資料集選項的熒幕擷圖。](/help/destinations/assets/ui/export-datasets/export-datasets-option.png)
 3. 在&#x200B;**[!UICONTROL 選取資料集]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 下一步]**。 您不需要將任何新資料集新增到資料流。
-4. 這會將您帶往&#x200B;**[!UICONTROL 排程]**&#x200B;頁面，您也可以在此看到通知資料集匯出到期日的通知。
+4. 這會將您帶往&#x200B;**[!UICONTROL 排程]**頁面，您也可以在此看到通知資料集匯出到期日的通知。
    ![資料集匯出資料流，其中包含到期通知](/help/destinations/assets/ui/export-datasets/dataset-export-notification.png)
 
 ## 步驟3：擴充匯出排程 {#extend-export-schedule}
@@ -87,8 +87,6 @@ ht-degree: 0%
 
 ## 如果我錯過2025年9月1日的最後期限，會發生什麼事？ {#missed-deadline}
 
-如果您的資料集匯出資料流於2025年9月1日到期，而您尚未延長其排程，則您有&#x200B;**30天的寬限期**，您可聯絡Adobe以重新啟用資料流，而不會遺失任何資料。 這包括9月1日至您聯絡Adobe之日期間未匯出的資料。
+如果您的資料集匯出資料流在2025年9月1日到期，而您仍想要擴充資料流，請依照上述各節中的步驟來擴充其排程。
 
->[!IMPORTANT]
->
->雖然Adobe提供此寬限期，我們強烈建議您在截止日期2025年9月1日之前延長排程，以確保資料匯出不會受到干擾，並避免任何服務中斷。
+如果您在30天內延長匯出排程（或更短時間，如果匯出資料集[上的](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md)存留時間集少於30天），您仍然可以回填未在9月1日與重新啟用匯出日期之間匯出的資料。 設定新的結束時間時，請先匯出&#x200B;*非*&#x200B;完整檔案。 相反，匯出將從9月1日停止的地方逐步繼續。
