@@ -4,10 +4,10 @@ description: 使用Marketo Engage Person Sync聯結器將個人對象的更新�
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 88864353d4872d62258914d6490b90331692fa96
+source-git-commit: 7d9f06f77f2265f3ae62542fd7fc1bd09d34d078
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 5%
+source-wordcount: '1127'
+ht-degree: 9%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->**[!UICONTROL Marketo Engage人員同步]**&#x200B;目的地卡將於&#x200B;**2026年3月**&#x200B;日淘汰。
+>**[!UICONTROL Marketo Engage人員同步]**&#x200B;目的地卡將於&#x200B;**2025年10月**&#x200B;淘汰。
 >
->若要確保順利轉換至新的&#x200B;**[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**&#x200B;目的地，請檢閱下列要點和必要的動作：
+>為了確保順利轉換至新的 **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** 目標，請審閱下列要點與必要動作：
 >
->* **[!UICONTROL Marketo Engage Person Sync]**&#x200B;目的地的所有使用者都必須在2026年3月前移轉至新的&#x200B;**[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**&#x200B;目的地。
->* **現有的資料流將不會自動移轉。**&#x200B;您必須[設定與新](marketo-engage-connection.md#connect-to-the-destination)Marketo Engage **[!UICONTROL 目的地的新連線]**，並在那裡啟用您的對象。
+>* 所有使用者必須&#x200B;**停止使用Marketo Engage人員同步處理目的地**，並在2025年10月前移轉至新的&#x200B;**[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**&#x200B;目的地。
+>* **現有的資料流將不會自動移轉。** 您必須[設定新連線](marketo-engage-connection.md#connect-to-the-destination)至新的 **[!UICONTROL Marketo Engage]** 目標並在那裡啟動客群。
 
 
 ## 概觀 {#overview}
@@ -78,7 +78,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->設定目的地的使用者必須在Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
+>設定目的地的使用者必須在Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
 
 ![連線到目的地](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -89,7 +89,7 @@ ht-degree: 5%
 * **[!UICONTROL 第一個可搜尋的欄位]**：要取消重複的欄位。 欄位必須出現在輸入的每個潛在客戶記錄中。 預設為電子郵件
 * **[!UICONTROL 第一個可搜尋的欄位]**：要取消重複的次要欄位。 欄位必須出現在輸入的每個潛在客戶記錄中。 選填
 
-選取執行個體後，您還需要選取要與組態整合的Lead Partition。 [潛在客戶分割](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)是Marketo Engage中的概念，用於依業務考量（例如品牌或銷售區域）來區分潛在客戶記錄。 如果您的Marketo訂閱沒有工作區與分割區功能，或是您的訂閱中尚未建立其他分割區，則只有預設分割區可用。 單一設定只能更新存在於其設定分割中的潛在客戶記錄。
+選取執行個體後，您還需要選取要與組態整合的Lead Partition。 [潛在客戶分割](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)是Marketo Engage中的概念，用於依業務考量（例如品牌或銷售區域）來區分潛在客戶記錄。 如果您的Marketo訂閱沒有工作區與分割區功能，或是您的訂閱中尚未建立其他分割區，則只有預設分割區可用。 單一設定只能更新存在於其設定分割中的潛在客戶記錄。
 
 >[!IMPORTANT]
 > 
