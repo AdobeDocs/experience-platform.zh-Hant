@@ -32,7 +32,7 @@ ht-degree: 6%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Twitter Custom Audiences]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
+[!DNL Twitter Custom Audiences]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
