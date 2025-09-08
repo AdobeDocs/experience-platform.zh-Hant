@@ -3,16 +3,25 @@ keywords: linkedin連線；linkedin連線；linkedin目的地；linkedin；
 title: Linkedin相符受眾連線
 description: 根據雜湊電子郵件，為您的LinkedIn行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
+source-git-commit: 13b95db846d70c36233cf8ded491d19e1c93e4c0
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 3%
+source-wordcount: '1329'
+ht-degree: 6%
 
 ---
 
 # [!DNL LinkedIn Matched Audiences] 連線
 
 ## 概觀 {#overview}
+
+>[!IMPORTANT]
+>
+>* 自2025年9月9日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL LinkedIn Matched Audiences]**&#x200B;卡片。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL LinkedIn Matched Audiences]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） LinkedIn相符對象]**，現在您可以使用名稱為&#x200B;**[!UICONTROL LinkedIn相符對象]**&#x200B;的新卡片。
+>* 使用目錄中的新&#x200B;**[!UICONTROL LinkedIn相符對象]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何作用中資料流至&#x200B;**[!UICONTROL （已棄用） LinkedIn相符對象]**&#x200B;目的地，這些資料流會自動更新，因此您不需要採取任何動作。
+>* 新的&#x200B;**[!UICONTROL LinkedIn相符對象]**&#x200B;連線不再支援[!DNL IDFA]身分。
+>* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
+>   * 流程規格 ID：`963604d1-811d-4ce4-ac66-1fc78bde7c42`
+>   * 連線規格 ID：`393a7ce1-e527-4fdb-8d99-0b11dc910279`
 
 根據雜湊電子郵件和行動ID，為您的[!DNL LinkedIn]行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 
@@ -31,7 +40,6 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取此目標身分。 |
-| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取此目標身分。 |
 | email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[ID符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
 {style="table-layout:auto"}
@@ -88,7 +96,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 >[!NOTE]
 >
 >來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
->&#x200B;> 屬性來源資料不會自動雜湊。
+>> 屬性來源資料不會自動雜湊。
 > 
 > 在[身分對應](../../ui/activate-segment-streaming-destinations.md#mapping)步驟中，當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
 > 
@@ -121,7 +129,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 ### 重新整理驗證認證 {#refresh-authentication-credentials}
 
-LinkedIn權杖每60天過期。 您可以從&#x200B;**[!UICONTROL 帳戶]**&#x200B;或&#x200B;**[[!UICONTROL 瀏覽]](../../ui/destinations-workspace.md#accounts)**&#x200B;索引標籤中的&#x200B;**[[!UICONTROL 帳戶到期日]](../../ui/destinations-workspace.md#browse)**&#x200B;欄監視您的權杖到期日。
+LinkedIn權杖每60天過期。 您可以在&#x200B;**[!UICONTROL 帳戶過期日期]**&#x200B;欄 (在&#x200B;**[[!UICONTROL 「帳戶」]](../../ui/destinations-workspace.md#accounts)**&#x200B;或&#x200B;**[[!UICONTROL 「瀏覽」]](../../ui/destinations-workspace.md#browse)**&#x200B;索引標籤中) 監視您的權杖過期日。
 
 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
 
@@ -130,7 +138,7 @@ LinkedIn權杖每60天過期。 您可以從&#x200B;**[!UICONTROL 帳戶]**&#x20
    ![篩選以僅顯示LinkedIn帳戶](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的LinkedIn認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的LinkedIn認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
