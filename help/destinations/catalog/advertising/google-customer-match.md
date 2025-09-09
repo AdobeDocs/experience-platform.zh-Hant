@@ -3,24 +3,24 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物和Gmail）聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
+source-git-commit: 4541e812ac1f44b5374b81685c1e41cb7f00993f
 workflow-type: tm+mt
-source-wordcount: '2410'
-ht-degree: 2%
+source-wordcount: '2451'
+ht-degree: 8%
 
 ---
 
-# [!DNL Google Customer Match]個連線
+# [!DNL Google Customer Match] 連線
 
 >[!IMPORTANT]
 >
-> Google正在發佈[Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)和[Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)的變更，以支援歐盟（[歐盟使用者同意政策](https://www.google.com/about/company/user-consent-policy/)）中[數位市場法](https://digital-markets-act.ec.europa.eu/index_en) (DMA)所定義的法規遵循與同意相關需求。 自2024年3月6日起，將開始強制執行同意要求的這些變更。
-><br/>
->為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
-><br/>
->已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
-><br/>
->未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/ui/segment-builder.md)中的[區段定義](../../../segmentation/home.md#segment-definitions)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
+> Google正在發佈[Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)和[Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)的變更，以支援歐盟（[歐盟使用者同意政策](https://digital-markets-act.ec.europa.eu/index_en)）中[數位市場法](https://www.google.com/about/company/user-consent-policy/) (DMA)所定義的法規遵循與同意相關需求。 自2024年3月6日起，將開始強制執行同意要求的這些變更。
+> ><br/>
+> >為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
+> ><br/>
+> >已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
+> ><br/>
+> >未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)可讓您使用線上和離線資料，透過Google所擁有和運作的屬性（例如： [!DNL Search]、[!DNL Shopping]和[!DNL Gmail]），聯絡及重新與您的客戶互動。
 
@@ -63,10 +63,10 @@ Experience Platform中的某些目的地對於傳送到目的地平台或從目�
 | `phone_sha256_e.164` | E164格式的電話號碼，使用SHA256演演算法雜湊 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | `email_lc_sha256` | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | `user_id` | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
-| `address_info_first_name` | 使用者的名字 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`搭配使用。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 |
-| `address_info_last_name` | 使用者的姓氏 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_country_code`和`address_info_postal_code`搭配使用。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 |
-| `address_info_country_code` | 使用者地址國家/地區代碼 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_last_name`和`address_info_postal_code`搭配使用。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 <br><br>接受的格式：小寫、雙字母國碼，格式為[ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)。 |
-| `address_info_postal_code` | 使用者地址郵遞區號 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_last_name`和`address_info_country_code`搭配使用。 <br><br>為確保Google符合位址，您必須對應全部四個位址欄位（`address_info_first_name`、`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`），並確定這些欄位在匯出的設定檔中都沒有遺漏資料。 <br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 |
+| `address_info_first_name` | 使用者的名字 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_last_name`、`address_info_country_code`和`address_info_postal_code`搭配使用。 <br><br>為確保 Google 對地址進行匹配，您必須對應所有四個地址欄位 (`address_info_first_name`、`address_info_last_name`、`address_info_country_code` 和 `address_info_postal_code`)，並確保在所匯出的輪廓中這些欄位均未缺少資料。<br>如果任何欄位未對應或缺少資料，Google 將不會對該地址進行匹配。 |
+| `address_info_last_name` | 使用者的姓氏 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_country_code`和`address_info_postal_code`搭配使用。 <br><br>為確保 Google 對地址進行匹配，您必須對應所有四個地址欄位 (`address_info_first_name`、`address_info_last_name`、`address_info_country_code` 和 `address_info_postal_code`)，並確保在所匯出的輪廓中這些欄位均未缺少資料。<br>如果任何欄位未對應或缺少資料，Google 將不會對該地址進行匹配。 |
+| `address_info_country_code` | 使用者地址國家/地區代碼 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_last_name`和`address_info_postal_code`搭配使用。 <br><br>為確保 Google 對地址進行匹配，您必須對應所有四個地址欄位 (`address_info_first_name`、`address_info_last_name`、`address_info_country_code` 和 `address_info_postal_code`)，並確保在所匯出的輪廓中這些欄位均未缺少資料。<br>如果有任何欄位未對應或包含遺漏的資料，Google將不會符合位址。 <br><br>接受的格式：小寫、雙字母國碼，格式為[ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)。 |
+| `address_info_postal_code` | 使用者地址郵遞區號 | 當您想要將郵寄地址資料傳送到目的地時，此目標身分應該與`address_info_first_name`、`address_info_last_name`和`address_info_country_code`搭配使用。 <br><br>為確保 Google 對地址進行匹配，您必須對應所有四個地址欄位 (`address_info_first_name`、`address_info_last_name`、`address_info_country_code` 和 `address_info_postal_code`)，並確保在所匯出的輪廓中這些欄位均未缺少資料。<br>如果任何欄位未對應或缺少資料，Google 將不會對該地址進行匹配。 |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Experience Platform中的某些目的地對於傳送到目的地平台或從目�
 
 在Experience Platform中設定[!DNL Google Customer Match]目的地之前，請確定您已閱讀並遵守Google有關使用[!DNL Customer Match]的原則(如[Google支援檔案](https://support.google.com/google-ads/answer/6299717)中所述)。
 
-接下來，確定您的[!DNL Google]帳戶已設定為[!DNL Standard]或更高的許可權等級。 如需詳細資訊，請參閱[Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)。
+接下來，確定您的[!DNL Google]帳戶已設定為[!DNL Standard]或更高的許可權等級。 如需詳細資訊，請參閱[Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)。
 
 ### 允許清單 {#allowlist}
 
@@ -119,7 +119,7 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 >[!NOTE]
 >
->無法在[!DNL Google Customer Match]中啟用擷取至`Phone`名稱空間的電話號碼。
+>無法在`Phone`中啟用擷取至[!DNL Google Customer Match]名稱空間的電話號碼。
 
 ### 電子郵件雜湊需求 {#hashing-requirements}
 
@@ -180,9 +180,13 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 * **[!UICONTROL 描述]**：提供此目的地連線的描述
 * **[!UICONTROL 帳戶ID]**：您的[Google Ads客戶識別碼](https://support.google.com/google-ads/answer/1704344?hl=en)。 ID的格式為xxx-xxx-xxxx。 如果您使用[!DNL Google Ads Manager Account (My Client Center)]，請勿使用您的管理員帳戶ID。 請改用[Google Ads客戶ID](https://support.google.com/google-ads/answer/1704344?hl=en)。
 
+>[!NOTE]
+>
+>在OAuth2連線程式期間，您可能會看到「Marketo測試」顯示為Google OAuth專案名稱。 這是正常行為，因為Adobe會使用此專案名稱進行Google Customer Match整合。 這不會影響您的目的地設定。
+
 >[!IMPORTANT]
 >
-> * 預設會為[!DNL Google Customer Match]目的地選取&#x200B;**[!UICONTROL 與PII]**&#x200B;結合行銷動作，且無法移除。
+> * 預設會為&#x200B;**[!UICONTROL 目的地選取]**&#x200B;與PII[!DNL Google Customer Match]結合行銷動作，且無法移除。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -199,7 +203,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 如需啟用此目的地的對象的指示，請參閱[啟用串流對象匯出目的地的對象資料](../../ui/activate-segment-streaming-destinations.md)。
 
-在&#x200B;**[!UICONTROL 區段排程]**&#x200B;步驟中，傳送[!DNL IDFA]或[!DNL GAID]對象至[!DNL Google Customer Match]時，您必須提供[!UICONTROL 應用程式ID]。
+在&#x200B;**[!UICONTROL 區段排程]**&#x200B;步驟中，傳送[!UICONTROL 或]對象至[!DNL IDFA]時，您必須提供[!DNL GAID]應用程式ID[!DNL Google Customer Match]。
 
 ![啟用工作流程區段排程步驟中反白顯示的Google客戶比對應用程式ID欄位。](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -212,17 +216,17 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 選取來源欄位：
 
 * 如果您使用的電子郵件地址未進行雜湊處理，請選取`Email`名稱空間作為來源身分。
-* 如果您根據[!DNL Google Customer Match] [電子郵件雜湊需求](#hashing-requirements)將資料擷取的客戶電子郵件地址雜湊至[!DNL Experience Platform]，請選取`Email_LC_SHA256`名稱空間作為來源身分。
+* 如果您根據`Email_LC_SHA256` [!DNL Experience Platform]電子郵件雜湊需求[!DNL Google Customer Match]將資料擷取的客戶電子郵件地址雜湊至[，請選取](#hashing-requirements)名稱空間作為來源身分。
 * 如果您的資料包含非雜湊電話號碼，請選取`PHONE_E.164`名稱空間作為來源身分。 [!DNL Experience Platform]將雜湊電話號碼以符合[!DNL Google Customer Match]要求。
-* 如果您根據[!DNL Facebook] [電話號碼雜湊需求](#phone-number-hashing-requirements)，將資料擷取中的電話號碼雜湊至[!DNL Experience Platform]，請選取`Phone_SHA256_E.164`名稱空間作為來源身分。
-* 如果您的資料包含[!DNL Apple]個裝置識別碼，請選取`IDFA`名稱空間作為來源識別碼。
-* 如果您的資料包含[!DNL Android]個裝置識別碼，請選取`GAID`名稱空間作為來源識別碼。
+* 如果您根據`Phone_SHA256_E.164` [!DNL Experience Platform]電話號碼雜湊需求[!DNL Facebook]，將資料擷取中的電話號碼雜湊至[，請選取](#phone-number-hashing-requirements)名稱空間作為來源身分。
+* 如果您的資料包含`IDFA`個裝置識別碼，請選取[!DNL Apple]名稱空間作為來源識別碼。
+* 如果您的資料包含`GAID`個裝置識別碼，請選取[!DNL Android]名稱空間作為來源識別碼。
 * 如果您的資料包含其他型別的識別碼，請選取`Custom`名稱空間作為來源識別碼。
 
 選取目標欄位：
 
-* 當來源名稱空間為`Email`或`Email_LC_SHA256`時，請選取`Email_LC_SHA256`名稱空間作為目標身分。
-* 當來源名稱空間為`PHONE_E.164`或`Phone_SHA256_E.164`時，請選取`Phone_SHA256_E.164`名稱空間作為目標身分。
+* 當來源名稱空間為`Email_LC_SHA256`或`Email`時，請選取`Email_LC_SHA256`名稱空間作為目標身分。
+* 當來源名稱空間為`Phone_SHA256_E.164`或`PHONE_E.164`時，請選取`Phone_SHA256_E.164`名稱空間作為目標身分。
 * 當來源名稱空間為`IDFA`或`GAID`時，請選取`IDFA`或`GAID`名稱空間作為目標身分。
 * 當您的來源名稱空間是自訂名稱空間時，請選取`User_ID`名稱空間作為目標身分。
 
@@ -256,4 +260,4 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-當客戶帳戶不符合[必要條件](#google-account-prerequisites)時，就會發生此錯誤。 若要修正此問題，請連絡Google，並確認您的帳戶已加入允許清單，且已設定為[!DNL Standard]或更高的許可權等級。 如需詳細資訊，請參閱[Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)。
+當客戶帳戶不符合[必要條件](#google-account-prerequisites)時，就會發生此錯誤。 若要修正此問題，請連絡Google，並確認您的帳戶已加入允許清單，且已設定為[!DNL Standard]或更高的許可權等級。 如需詳細資訊，請參閱[Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)。
