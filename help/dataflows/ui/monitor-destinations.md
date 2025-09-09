@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
+source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3623'
 ht-degree: 10%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 10%
 
 每個個別資料流執行會顯示下列詳細資訊：
 
-- **[!UICONTROL 資料流執行開始]**：資料流執行開始的時間。 對於串流資料流執行，Experience Platform會以每小時量度的形式，根據資料流執行的開始擷取量度。 這表示對於串流資料流執行，如果資料流執行在例如晚上10:30開始，量度會在UI中將開始時間顯示為晚上10:00。
+- **[!UICONTROL 資料流執行開始]**：資料流執行開始的時間。 對於串流資料流執行，Experience Platform會以每小時量度的形式，根據資料流執行的開始擷取量度。 這表示對於串流資料流執行，如果資料流執行開始於（例如）10:30PM，則量度在UI中將開始時間顯示為晚上10:00。
 - **[!UICONTROL 處理時間]**：資料流執行處理所花的時間。
    - 對於&#x200B;**[!UICONTROL 已完成]**&#x200B;個執行，處理時間量度一律顯示一個小時。
    - 針對仍處於&#x200B;**[!UICONTROL 處理]**&#x200B;狀態的資料流執行，擷取所有量度的視窗會保持開啟超過一小時，以處理對應至資料流執行的所有量度。 例如，上午9:30開始的資料流執行可能會維持處理狀態1小時30分鐘，以擷取及處理所有量度。 接著，在處理視窗關閉且資料流執行更新為&#x200B;**已完成**&#x200B;的狀態後，顯示的處理時間就會變更為一小時。
@@ -125,7 +125,7 @@ ht-degree: 10%
 
 串流目的地的對象層級監控目前僅適用於下列目的地：
 
-- [[!DNL (API) Oracle Eloqua]個連線](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+- [[!DNL (API) Oracle Eloqua] 連線](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
@@ -159,7 +159,7 @@ ht-degree: 10%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -327,11 +327,27 @@ ht-degree: 10%
 >
 >- 對象層級檢視目前適用於下列目的地。 已計畫推出更多串流目的地。
 >
->   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
->   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL (API) Oracle Eloqua] 連線](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+>   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+>   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+>   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+>   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+>   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+>   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+>   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+>   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+>   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - 批次（以檔案為基礎）目的地
 > 
 >- 對於批次目的地，目前僅針對成功的資料流執行記錄對象層級量度。 失敗的資料流執行和排除的記錄不會記錄這些事件。 對於串流目的地的資料流執行，會擷取並顯示已啟用和排除的記錄的量度。
