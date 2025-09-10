@@ -3,24 +3,16 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
+source-git-commit: 5a2f1c87381c39d6d15f569523cfb3b00d02b34b
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 4%
+source-wordcount: '970'
+ht-degree: 2%
 
 ---
 
 # [!DNL Airship Tags] 連線 {#airship-tags-destination}
 
 ## 概觀
-
->[!IMPORTANT]
->
->* 自2025年8月21日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL Airship Tags]**&#x200B;卡片。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Airship Tags]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用）飛艇標籤]**，現在您可以使用名稱為&#x200B;**[!UICONTROL 飛艇標籤]**&#x200B;的新卡片。
->* 使用目錄中的新&#x200B;**[!UICONTROL 飛艇標籤]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何有效資料流至&#x200B;**[!UICONTROL （已棄用）飛艇標籤]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。
->* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
->   * 流程規格 ID：`0c7e71c8-4d60-4685-a216-77f57e37b04a`
->   * 連線規格 ID：`aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship]是領先的客戶參與平台，可在客戶生命週期的每個階段協助您為使用者提供有意義、個人化的全通路訊息。
 
