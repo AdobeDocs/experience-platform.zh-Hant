@@ -2,9 +2,9 @@
 title: 設定網頁SDK標籤擴充功能
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 57b29c396531ee18c79fad7cce068ff3adf5f2a2
+source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
 workflow-type: tm+mt
-source-wordcount: '2965'
+source-wordcount: '3095'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ## 安裝網頁SDK標籤擴充功能 {#install}
 
-Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參閱有關[建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=zh-Hant)的檔案。
+Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參閱有關[建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)的檔案。
 
 建立屬性之後，請開啟屬性並選取左側列的&#x200B;**[!UICONTROL 擴充功能]**&#x200B;標籤。
 
@@ -42,13 +42,14 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 >[!IMPORTANT]
 >
 >停用Web SDK元件可能會破壞您現有的實作。 每次停用元件時，請務必徹底測試實作，以確保所需的所有功能皆如預期般運作。
->&#x200B;>停用元件時，無法再編輯該元件的設定。
+>>停用元件時，無法再編輯該元件的設定。
 
 若要使用Web SDK標籤擴充功能建立自訂Web SDK組建，請遵循下列步驟。
 
 1. 在標籤延伸設定頁面中，展開&#x200B;**[!UICONTROL 自訂組建元件]**&#x200B;區段。
 1. 根據您的需求啟用或停用元件。 您可以從下列元件中選取：
    * **[!UICONTROL 活動收集器]**：此元件可啟用自動連結收集和Activity Map追蹤。
+   * **[!UICONTROL Advertising]**：此元件包含Adobe Advertising所需的所有JavaScript程式碼。 它也會在[!UICONTROL Adobe Advertising執行個體]區段中新增[!UICONTROL SDK]設定，並在標籤規則中新增[!UICONTROL Advertising]設定，以定義如何將廣告資料用於歸因測量。
    * **[!UICONTROL 對象]**：此元件可啟用Audience Manager整合，包括URL和Cookie型目的地，以及ID同步。
    * **[!UICONTROL 同意]**：此元件會啟用同意整合。 停用此元件會停用下列元素：
       * [設定同意](action-types.md#set-consent)動作型別
@@ -75,6 +76,11 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 * **[!UICONTROL 名稱]**： Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個體。 此名稱可用來透過標籤設定，將資料傳送至多個組織。 執行個體名稱預設為`alloy`。 不過，您可將執行個體名稱變更為任何有效的JavaScript物件名稱。
 * **[!UICONTROL IMS組織ID]**：您要在Adobe傳送資料的組織ID。 大部分時間都會使用自動填入的預設值。 頁面上有多個例項時，請找到您要傳送資料的第二個組織，以該組織的值填入此欄位。
 * **[!UICONTROL Edge網域]**：擴充功能傳送及接收資料的網域。 Adobe建議對此擴充功能使用第一方網域(CNAME)。 預設的第三方網域適用於開發環境，但不適用於生產環境。若需設定第一方 CNAME 的相關說明，請參閱[此處](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
+* **[!UICONTROL Adobe Advertising]**：在選取`Advertising`元件時可用。 僅具有Adobe Advertising DSP的組織的設定：
+   * **[!UICONTROL Adobe Advertising DSP]**：啟用瀏覽追蹤。
+   * **[!UICONTROL 廣告商]**：啟用[!UICONTROL Adobe Advertising DSP]時可用。 要為其啟用閱覽追蹤的廣告商。
+   * **[!UICONTROL ID5合作夥伴識別碼]**：選擇性。 啟用[!UICONTROL Adobe Advertising DSP]時可用。 您組織的ID5合作夥伴ID。 此設定可讓Web SDK收集ID5通用ID。
+   * **[!UICONTROL RampID JavaScript路徑]**：選擇性。 啟用[!UICONTROL Adobe Advertising DSP]時可用。 您組織的[!DNL LiveRamp RampID] JavaScript程式碼的路徑(`ats.js`)。  此設定允許Web SDK收集[!DNL RampID]通用ID。
 
 ## 設定資料流設定 {#datastreams}
 
@@ -113,21 +119,20 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 
 ![此影像顯示標籤UI中Web SDK標籤擴充功能的身分設定](assets/web-sdk-ext-identity.png)
 
-* **[!UICONTROL 從VisitorAPI移轉ECID]**：此選項預設為啟用。 啟用此功能後，SDK可以讀取`AMCV`和`s_ecid` Cookie，並設定[!DNL Visitor.js]使用的`AMCV` Cookie。 移轉至Web SDK時，此功能很重要，因為有些頁面可能仍在使用[!DNL Visitor.js]。 此選項可讓SDK繼續使用相同的[!DNL ECID]，這樣就不會將使用者識別為兩個不同的使用者。
+* **[!UICONTROL 從VisitorAPI移轉ECID]**：此選項預設為啟用。 啟用此功能後，SDK可以讀取`AMCV`和`s_ecid` Cookie，並設定`AMCV`使用的[!DNL Visitor.js] Cookie。 移轉至Web SDK時，此功能很重要，因為有些頁面可能仍在使用[!DNL Visitor.js]。 此選項可讓SDK繼續使用相同的[!DNL ECID]，這樣就不會將使用者識別為兩個不同的使用者。
 * **[!UICONTROL 使用第三方Cookie]**：啟用此選項時，Web SDK會嘗試將使用者識別碼儲存在第三方Cookie中。 如果成功，則會在使用者瀏覽多個網域時將其識別為單一使用者，而不是在每個網域上將其識別為個別使用者。 如果已啟用此選項，如果瀏覽器不支援第三方Cookie或使用者已設定不允許第三方Cookie，則SDK可能仍無法將使用者識別碼儲存在第三方Cookie中。 在此情況下，SDK只會將識別碼儲存在第一方網域中。
 
   >[!IMPORTANT]
-  >&#x200B;>第三方Cookie與Web SDK中的[第一方裝置識別碼](../../../../web-sdk/identity/first-party-device-ids.md)功能不相容。
-  >&#x200B;>您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
+  >>第三方Cookie與Web SDK中的[第一方裝置識別碼](../../../../web-sdk/identity/first-party-device-ids.md)功能不相容。
+  >>您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
   >
-
 ## 設定個人化設定 {#personalization}
 
 此區段可讓您設定在載入個人化內容時如何隱藏頁面的某些部分。 這可確保您的訪客只會看到個人化頁面。
 
 ![此影像顯示標籤使用者介面中Web SDK標籤擴充功能的個人化設定](assets/web-sdk-ext-personalization.png)
 
-* **[!UICONTROL 將Target從at.js移轉至Web SDK]**：使用此選項可讓[!DNL Web SDK]讀取及寫入at.js `1.x`或`2.x`資料庫所使用的舊版`mbox`和`mboxEdgeCluster` Cookie。 這可協助您在從使用Web SDK的頁面移動到使用at.js `1.x`或`2.x`資料庫的頁面時保留訪客設定檔，反之亦然。
+* **[!UICONTROL 將Target從at.js移轉至Web SDK]**：使用此選項可讓[!DNL Web SDK]讀取及寫入at.js `mbox`或`mboxEdgeCluster`資料庫所使用的舊版`1.x`和`2.x` Cookie。 這可協助您在從使用Web SDK的頁面移動到使用at.js `1.x`或`2.x`資料庫的頁面時保留訪客設定檔，反之亦然。
 
 ### 預先隱藏樣式 {#prehiding-style}
 
@@ -141,7 +146,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 
 >[!IMPORTANT]
 >
->使用預先隱藏程式碼片段時，Adobe建議使用與[預先隱藏樣式](#prehiding-style)所用的規則相同的[!DNL CSS]規則。
+>使用預先隱藏程式碼片段時，Adobe建議使用與[!DNL CSS]預先隱藏樣式[所用的規則相同的](#prehiding-style)規則。
 
 ## 設定資料收集設定 {#data-collection}
 
@@ -162,7 +167,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 * **[!UICONTROL 收集外部連結點按次數]**：啟用外部連結收集的核取方塊。
 * **[!UICONTROL 收集下載連結點按次數]**：啟用收集下載連結的核取方塊。
 * **[!UICONTROL 下載連結限定詞]**：將連結URL限定為下載連結的規則運算式。
-* **[!UICONTROL 篩選點選屬性]**：回呼函式，可在集合前評估及修改點選相關屬性。 此函式在事件傳送callback前的On之前執行。
+* **[!UICONTROL 篩選點選屬性]**：回呼函式，可在集合前評估及修改點選相關屬性。 此函式在事件傳送callback[!UICONTROL 前的]On之前執行。
 * **內容設定**：自動收集訪客資訊，這些資訊會為您填入特定XDM欄位。 您可以選擇&#x200B;**[!UICONTROL 所有預設內容資訊]**&#x200B;或&#x200B;**[!UICONTROL 特定內容資訊]**。 它等同於JavaScript資料庫中的[`context`](/help/web-sdk/commands/configure/context.md)標籤。
    * **[!UICONTROL 網頁]**：收集目前頁面的相關資訊。
    * **[!UICONTROL 裝置]**：收集使用者裝置的相關資訊。
@@ -206,7 +211,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 
 >[!IMPORTANT]
 >
->資料流覆寫必須根據環境進行設定。 開發、測試和生產環境都有不同的覆寫。 您可以使用下方畫面中顯示的專用選項，複製設定值。
+> 資料流覆寫必須根據環境進行設定。 開發、測試和生產環境都有不同的覆寫。 您可以使用下方畫面中顯示的專用選項，複製設定值。
 
 ![影像顯示使用網頁SDK標籤延伸功能頁面的Datastream設定覆寫。](assets/datastream-overrides.png)
 
