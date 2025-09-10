@@ -2,7 +2,7 @@
 title: Edge分段指南
 description: 瞭解如何使用邊緣細分即時評估Experience Platform中的對象，啟用相同頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
+source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 1%
@@ -31,10 +31,10 @@ Edge區段能在Adobe Experience Platform中即時評估[邊緣](../../landing/e
 
 | 查詢型別 | 詳細資料 | 查詢 | 範例 |
 | ---------- | ------- | ----- | ------- |
-| 少於24小時時間範圍內的單一事件 | 任何會參照少於24小時之時間範圍內的單一傳入事件的區段定義。 | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內單一事件的範例。](../images/methods/edge/single-event.png) |
-| 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 | `homeAddress.country.equals("US", false)` | ![顯示的設定檔屬性範例。](../images/methods/edge/profile-attribute.png) |
-| 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內具有設定檔屬性的單一事件範例。](../images/methods/edge/single-event-with-profile-attribute.png) |
-| 區段區段 | 包含一或多個批次或邊緣區段的任何區段定義。 **注意：**&#x200B;如果使用區段區段，則設定檔取消資格將&#x200B;**每24小時發生一次**。 | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![將顯示區段範例。](../images/methods/edge/segment-of-segments.png) |
+| 少於24小時時間範圍內的單一事件 | 任何會參照少於24小時之時間範圍內的單一傳入事件的區段定義。 | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內單一事件的範例。](../images/methods/edge/single-event.png){zoomable="yes"} |
+| 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 | `homeAddress.country.equals("US", false)` | ![顯示的設定檔屬性範例。](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內具有設定檔屬性的單一事件範例。](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| 區段區段 | 包含一或多個批次或邊緣區段的任何區段定義。 **注意：**&#x200B;如果使用區段區段，則設定檔取消資格將&#x200B;**每24小時發生一次**。 | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![將顯示區段範例。](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
 此外，區段定義&#x200B;**必須**&#x200B;繫結至邊緣上作用中的合併原則。 如需有關合併原則的詳細資訊，請參閱[合併原則指南](../../profile/api/merge-policies.md)。
 
@@ -153,15 +153,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 在對象入口網站中，選取&#x200B;**[!UICONTROL 建立對象]**。
 
-![對象入口網站中會醒目顯示[建立對象]按鈕。](../images/methods/edge/select-create-audience.png)
+![對象入口網站中會醒目顯示[建立對象]按鈕。](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 彈出視窗隨即顯示。 選取&#x200B;**[!UICONTROL 建置規則]**&#x200B;以輸入區段產生器。
 
-![「建立對象」彈出視窗中會醒目顯示「建置規則」按鈕。](../images/methods/edge/select-build-rules.png)
+![「建立對象」彈出視窗中會醒目顯示「建置規則」按鈕。](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
 在區段產生器中，建立符合[合格查詢型別](#eligible-query-types)之一的區段定義。 如果區段定義符合邊緣區段的資格，您就可以選取&#x200B;**[!UICONTROL Edge]**&#x200B;作為&#x200B;**[!UICONTROL 評估方法]**。
 
-![會顯示區段定義。 評估型別已反白顯示，顯示可以使用邊緣區段來評估區段定義。](../images/methods/edge/edge-evaluation-method.png)
+![會顯示區段定義。 評估型別已反白顯示，顯示可以使用邊緣區段來評估區段定義。](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
 若要深入瞭解如何建立區段定義，請參閱[區段產生器指南](../ui/segment-builder.md)
 
@@ -297,11 +297,11 @@ curl -X GET \
 
 您可以使用Audience Portal中的篩選條件，擷取貴組織內為邊緣細分啟用的所有對象。 選取![篩選器圖示](../../images/icons/filter.png)圖示以顯示篩選器清單。
 
-![對象入口網站中會醒目顯示篩選圖示。](../images/methods/filter-audiences.png)
+![對象入口網站中會醒目顯示篩選圖示。](../images/methods/filter-audiences.png){zoomable="yes"}
 
 在可用的篩選器內，移至&#x200B;**更新頻率**&#x200B;並選取「Edge」。 使用此篩選器會顯示貴組織中使用邊緣細分評估的所有對象。
 
-![已選取Edge更新頻率，顯示組織中使用邊緣細分評估的所有對象。](../images/methods/edge/filter-edge.png)
+![已選取Edge更新頻率，顯示組織中使用邊緣細分評估的所有對象。](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
 若要進一步瞭解如何在Experience Platform中檢視對象，請參閱[對象入口網站指南](../ui/audience-portal.md)。
 
@@ -321,7 +321,7 @@ curl -X GET \
 
 **[!UICONTROL 新對象已更新]**&#x200B;量度以折線圖表示，該折線圖顯示透過邊緣細分的對象人數變化。 您可以調整下拉式清單以顯示過去24小時、上週或過去30天。
 
-![已醒目提示一段時間的設定檔卡片。](../images/methods/edge/profiles-over-time.png)
+![已醒目提示一段時間的設定檔卡片。](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
 如需對象詳細資料的詳細資訊，請參閱[對象入口網站概觀](../ui/audience-portal.md#audience-details)。
 
