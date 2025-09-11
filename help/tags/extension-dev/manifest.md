@@ -2,10 +2,10 @@
 title: 擴充功能資訊清單
 description: 瞭解如何設定JSON資訊清單檔案，以通知Adobe Experience Platform如何正確使用您的擴充功能。
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
 workflow-type: tm+mt
-source-wordcount: '2606'
-ht-degree: 67%
+source-wordcount: '2652'
+ht-degree: 66%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 67%
 擴充功能資訊清單必須包含下列項目：
 
 | 屬性 | 說明 |
-| --- | --- |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name` | 擴充功能的名稱。它必須與其他所有擴充功能不同，且必須符合[命名規則](#naming-rules)。 **標籤會使用此識別碼作為識別碼，在發佈擴充功能後不應加以變更。** |
 | `platform` | 擴充功能的平台。目前唯一接受的值是 `web`。 |
 | `version` | 擴充功能的版本。此版本必須依循 [semver](https://semver.org/) 版本設定格式。這與 [npm 版本欄位](https://docs.npmjs.com/files/package.json#version)一致。 |
@@ -30,6 +30,7 @@ ht-degree: 67%
 | `description` | 擴充功能的說明。將顯示給Experience Platform使用者。 如果您的擴充功能允許使用者在其網站上實作您的產品，請說明您的產品有何行為。名稱中無需提及&quot;tags&quot;或&quot;Extension&quot;；使用者很清楚他們看到的就是tag extension。 |
 | `iconPath` *(選用)* | 針對擴充功能顯示的圖示相對路徑。 此路徑不應以斜線開頭。它必須參考副檔名為 `.svg` 的 SVG 檔案。SVG應為正方形，且可由Experience Platform調整。 |
 | `author` | 「作者」是一個物件，應具有如下結構： <ul><li>`name`：擴充功能作者的名稱。或者，可在此處使用公司名稱。</li><li>`url` *(選用)*：一個 URL，您可在其中找到更多關於擴充功能作者的資訊。</li><li>`email` *(選用)*：擴充功能作者的電子郵件地址。</li></ul>這與 [npm 作者欄位](https://docs.npmjs.com/files/package.json#people-fields-author-contributors)規則一致。 |
+| `releaseNotesUrl` *(選用)* | 擴充功能發行說明的URL （如果您有發佈此資訊的位置）。 此URL將用於Adobe標籤UI中，以在擴充功能安裝和升級期間顯示此連結。 此屬性僅支援Web和Edge擴充功能。 |
 | `exchangeUrl` *(公開擴充功能的必要項目)* | 您在 Adobe Exchange 上的擴充功能清單的 URL。其格式必須符合 `https://www.adobeexchange.com/experiencecloud.details.######.html`。 |
 | `viewBasePath` | 包含您所有檢視和檢視相關資源 (HTML、JavaScript、CSS 和影像) 之子目錄的相對路徑。Experience Platform會在網頁伺服器上託管此目錄，並從中載入iframe內容。 這是必要欄位，且不應以斜線開頭。例如，如果您所有的檢視都包含在 `src/view/` 中，則 `viewBasePath` 的值將是 `src/view/`。 |
 | `hostedLibFiles` *(選用)* | 我們有許多使用者偏好將所有標籤相關檔案託管在自己的伺服器上。 這樣可讓使用者更能確保檔案在執行階段的可用性，且能夠輕易掃描程式碼中潛藏的安全性弱點。如果擴充功能的程式庫部分在執行階段需要載入 JavaScript 檔案，建議您使用此屬性列出這些檔案。列出的檔案會與標籤執行階段程式庫一併託管。 您的擴充功能將可透過使用 [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file) 方法擷取的 URL 來載入檔案。<br><br>此選項包含一個陣列，內含需要託管的第三方程式庫檔案的相對路徑。 |
@@ -74,20 +75,20 @@ ht-degree: 67%
       <td><code>schema</code></td>
       <td><a href="https://json-schema.org/">JSON 結構描述</a>的物件，說明從擴充功能組態檢視中儲存的有效物件格式。由於您是組態檢視的開發人員，因此需負責確保任何儲存的設定物件皆與此結構描述相符。當使用者嘗試使用Experience Platform服務儲存資料時，此結構描述也將用於驗證。<br><br>以下是範例結構描述物件：
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       我們建議使用 <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
     </tr>
@@ -134,20 +135,20 @@ ht-degree: 67%
       <td><code>schema</code></td>
       <td><a href="https://json-schema.org/">JSON 結構描述</a>的物件，說明使用者可儲存的有效設定物件格式。設定通常會由使用者透過資料收集使用者介面來設定和儲存。 在這些情況下，擴充功能的檢視可採取必要步驟來驗證使用者提供的設定。另一方面，有些使用者會選擇不藉助於任何使用者介面，而直接使用標籤API。 此結構描述的目的是讓Experience Platform能正確驗證使用者儲存的設定物件（不論是否使用使用者介面）的格式，與將在執行階段依據設定物件執行動作的程式庫模組相容。<br><br>以下是範例結構描述物件：<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       我們建議使用 <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
     </tr>
