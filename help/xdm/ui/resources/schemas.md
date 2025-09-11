@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
 workflow-type: tm+mt
-source-wordcount: '4078'
-ht-degree: 1%
+source-wordcount: '4178'
+ht-degree: 2%
 
 ---
 
@@ -83,7 +83,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->一旦結構描述已儲存並用於資料擷取中，就只能對其執行加總變更。 如需詳細資訊，請參閱結構描述演化[&#128279;](../../schema/composition.md#evolution)的規則。
+>一旦結構描述已儲存並用於資料擷取中，就只能對其執行加總變更。 如需詳細資訊，請參閱結構描述演化[的](../../schema/composition.md#evolution)規則。
 
 若要編輯現有結構描述，請選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，然後選取您要編輯的結構描述名稱。 您也可以使用搜尋列來縮小可用選項清單的範圍。
 
@@ -167,27 +167,43 @@ ht-degree: 1%
 
 ### 移除從欄位群組新增的欄位 {#remove-fields}
 
-將欄位群組新增到結構描述後，您可以移除任何不需要的欄位。
+將欄位群組新增到結構描述後，您可以從欄位群組中全域移除欄位，或在目前結構描述中本機隱藏欄位。 瞭解這些動作之間的差異至關重要，以避免意外的結構描述變更。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->從欄位群組中移除欄位只會影響正在處理的結構描述，不會影響欄位群組本身。 如果您移除一個結構描述中的欄位，這些欄位仍然可在採用相同欄位群組的所有其他結構描述中使用。
+>選取&#x200B;**[!UICONTROL 移除]**&#x200B;會從欄位群組本身刪除欄位，影響使用該欄位群組的&#x200B;*所有*結構描述。
+>>除非您想要&#x200B;**從包含欄位群組**&#x200B;的每個結構描述中移除欄位，否則請勿使用此選項。
 
-在下列範例中，已將標準欄位群組&#x200B;**[!UICONTROL 人口統計詳細資料]**&#x200B;新增到結構描述。 若要移除單一欄位（例如`taxId`），請選取畫布中的欄位，然後在右側邊欄中選取&#x200B;**[!UICONTROL 移除]**。
+若要從欄位群組刪除欄位，請在畫布中選取該欄位，然後在右側邊欄中選取&#x200B;**[!UICONTROL 移除]**。 此範例顯示來自`taxId`人口統計詳細資料&#x200B;**[!UICONTROL 群組的]**&#x200B;欄位。
 
-![反白顯示[!UICONTROL 移除]的[!DNL Schema Editor]。 此動作移除單一欄位。](../../images/ui/resources/schemas/remove-single-field.png)
+![反白顯示[!DNL Schema Editor]移除[!UICONTROL 的]。 此動作移除單一欄位。](../../images/ui/resources/schemas/remove-single-field.png)
 
-如果您想要移除多個欄位，可以整體管理欄位群組。 在畫布中選取屬於群組的欄位，然後在右側邊欄中選取&#x200B;**[!UICONTROL 管理相關欄位]**。
+若要隱藏結構描述中的多個欄位，而不將其從欄位群組本身移除，請使用&#x200B;**[!UICONTROL 管理相關欄位]**&#x200B;選項。 從畫布的群組選取任何欄位，然後在右側邊欄中選取&#x200B;**[!UICONTROL 管理相關欄位]**。
 
-![標示有[!UICONTROL 管理相關欄位]的[!DNL Schema Editor]。](../../images/ui/resources/schemas/manage-related-fields.png)
+![標示有[!DNL Schema Editor]管理相關欄位[!UICONTROL 的]。](../../images/ui/resources/schemas/manage-related-fields.png)
 
-會出現一個對話方塊，顯示相關欄位群組的結構。 在此，您可以使用提供的核取方塊來選取或取消選取所需的欄位。 在您滿意後，請選取&#x200B;**[!UICONTROL 確認]**。
+會出現一個對話方塊，顯示欄位群組的結構。 使用核取方塊來選取或取消選取您要包含的欄位。
 
 ![包含所選欄位和[!UICONTROL 確認]的[!UICONTROL 管理相關欄位]對話方塊已強調顯示。](../../images/ui/resources/schemas/select-fields.png)
 
-畫布會重新出現，架構結構中只會顯示選取的欄位。
+選取&#x200B;**[!UICONTROL 確認]**&#x200B;以更新畫布並反映您選取的欄位。
+
 
 ![欄位已新增](../../images/ui/resources/schemas/fields-added.png)
+
+### 移除或棄用欄位時的欄位行為 {#field-removal-deprecation-behavior}
+
+請使用下表來瞭解每個動作的範圍。
+
+| 動作 | 僅適用於目前的結構描述 | 修改欄位群組 | 影響其他結構描述 | 說明 |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **移除欄位** | 無 | 是 | 是 | 從欄位群組中刪除欄位。 這會將其從使用該群組的所有結構描述中移除。 |
+| **管理相關欄位** | 是 | 無 | 無 | 僅隱藏目前結構描述中的欄位。 欄位群組保持不變。 |
+| **棄用欄位** | 無 | 是 | 是 | 在欄位群組中將此欄位標示為已棄用。 任何結構描述中都不再提供此功能。 |
+
+>[!NOTE]
+>
+>記錄型和事件型結構描述中的這種行為都是一致的。
 
 ### 新增自訂欄位至欄位群組 {#add-fields}
 
