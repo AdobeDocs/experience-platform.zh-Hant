@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e274dda06c678bdbd230bc2f06204724bac633e8
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2301'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 ## 傳送事件 {#send-event}
 
-傳送事件至Experience Platform，讓Experience Platform可以收集您傳送的資料，並對該資訊採取行動。 您想要傳送的任何資料可在&#x200B;**[!UICONTROL XDM資料]**&#x200B;欄位中傳送。 使用符合[!DNL XDM]結構描述結構的[!DNL JSON]物件。 可以在您的頁面上或透過&#x200B;**[!UICONTROL 自訂程式碼]** **[!UICONTROL 資料元素]**&#x200B;建立此物件。
+傳送事件至Experience Platform，讓Experience Platform可以收集您傳送的資料，並對該資訊採取行動。 您想要傳送的任何資料可在&#x200B;**[!UICONTROL XDM資料]**&#x200B;欄位中傳送。 使用符合[!DNL JSON]結構描述結構的[!DNL XDM]物件。 可以在您的頁面上或透過&#x200B;**[!UICONTROL 自訂程式碼]** **[!UICONTROL 資料元素]**&#x200B;建立此物件。
 
 **[!UICONTROL 傳送事件]**&#x200B;動作型別支援下列欄位和設定。 這些欄位都是選用欄位。
 
@@ -110,9 +110,9 @@ ht-degree: 1%
 
 ![Experience Platform Tags UI影像顯示「傳送事件」動作型別的資料元素設定。](assets/data.png)
 
-* **[!UICONTROL 型別]**：此欄位可讓您指定將記錄在XDM結構描述中的事件型別。 如需詳細資訊，請參閱`sendEvent`命令中的[`type`](/help/web-sdk/commands/sendevent/type.md)。
+* **[!UICONTROL 型別]**：此欄位可讓您指定將記錄在XDM結構描述中的事件型別。 如需詳細資訊，請參閱[`type`](/help/web-sdk/commands/sendevent/type.md)命令中的`sendEvent`。
 * **[!UICONTROL XDM]**：
-* **[!UICONTROL 資料]**：使用此欄位來傳送不符合XDM結構描述的資料。 如果您嘗試更新Adobe Target設定檔或傳送Target Recommendations屬性，此欄位會很有用。 如需詳細資訊，請參閱`sendEvent`命令中的[`data`](/help/web-sdk/commands/sendevent/data.md)。
+* **[!UICONTROL 資料]**：使用此欄位來傳送不符合XDM結構描述的資料。 如果您嘗試更新Adobe Target設定檔或傳送Target Recommendations屬性，此欄位會很有用。 如需詳細資訊，請參閱[`data`](/help/web-sdk/commands/sendevent/data.md)命令中的`sendEvent`。
 * **[!UICONTROL 包含已演算的主張]**：啟用此選項可包含所有已演算，但尚未傳送顯示事件的主張。 將此與&#x200B;**[!UICONTROL 搭配使用。自動傳送已停用的顯示事件]**。 此設定會使用演算後主張的相關資訊更新`_experience.decisioning` XDM欄位。
 * **[!UICONTROL 檔案將解除安裝]**：啟用此選項，確保即使使用者離開頁面進行導覽，事件仍可到達伺服器。 這可讓事件連線至伺服器，但會忽略回應。
 * **[!UICONTROL 合併ID]**： **此欄位已棄用**。 這會填入`eventMergeId` XDM欄位。
@@ -122,13 +122,28 @@ ht-degree: 1%
 ![Experience Platform Tags UI影像顯示「傳送事件」動作型別的Personalization設定。](assets/personalization-settings.png)
 
 * **[!UICONTROL 範圍]**：選取您想要明確要求個人化要求的範圍(Adobe Target [!DNL mboxes])。 您可以手動輸入範圍，或提供資料元素來輸入範圍。
-* **[!UICONTROL 介面]**：設定網頁上可用於個人化的網頁介面。 如需詳細資訊，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant)。
+* **[!UICONTROL 介面]**：設定網頁上可用於個人化的網頁介面。 如需詳細資訊，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)。
 * **呈現視覺個人化決定：**&#x200B;如果您想要在頁面上呈現個人化內容，請勾選&#x200B;**[!UICONTROL 呈現視覺個人化決定]**&#x200B;核取方塊。 如有需要，您也可以指定決定範圍及/或曲面。 如需呈現個人化內容的詳細資訊，請參閱[個人化檔案](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content)。
 * **[!UICONTROL 要求預設個人化]**：使用此區段來控制是否要求全頁範圍（全域mbox）和預設表面（根據目前URL的網頁表面）。 依預設，這會在頁面載入的前`sendEvent`個呼叫期間自動要求。 您可以從下列選項中選擇：
    * **[!UICONTROL 自動]**：這是預設行為。 只有在尚未要求預設個人化時，才會要求此專案。 這對應至Web SDK命令中未設定的`requestDefaultPersonalization`。
    * **[!UICONTROL 已啟用]**：明確要求頁面範圍和預設表面。 這會更新SPA檢視快取。 這對應至`requestDefaultPersonalization`設定為`true`。
    * **[!UICONTROL 已停用]**：明確隱藏頁面範圍與預設表面的要求。 這對應至`requestDefaultPersonalization`設定為`false`。
 * **[!UICONTROL 決定內容]**：這是鍵值對應，用於評估裝置上決策的Adobe Journey Optimizer規則集。 您可以手動或透過資料元素提供決定內容。
+
+### Advertising {#advertising}
+
+當您為Web SDK自訂組建元件選取&#x200B;**[!UICONTROL Advertising]**&#x200B;元件時，`sendEvent`動作的規則設定會包含[!UICONTROL Advertising]區段，該區段會定義如何將廣告資料用於歸因測量。 當規則包含一系列多個動作時，此設定會很有幫助。
+
+![Experience Platform Tags UI影像顯示「傳送事件」動作型別的Advertising設定。](assets/send-event-advertising.png)
+
+**[!UICONTROL 要求預設Advertising資料]**&#x200B;區段提供下列選項：
+
+* **[!UICONTROL 自動]**：此事件時可用的任何廣告資料都會自動新增至XDM。
+* **[!UICONTROL 等待]**：延遲執行此呼叫，直到擷取及解析廣告資料為止。 然後，將資料新增到XDM。
+* **[!UICONTROL 已停用]**：請勿將廣告資料新增至XDM。 請將此用於不適用於Customer Journey Analytics或Adobe Analytics的任何請求。
+* **[!UICONTROL 提供資料元素]**：使用資料元素在頁面載入期間包含或排除廣告資料。 資料元素的解析值可以包含`automatic`、`wait`和`disabled`。
+
+如果您未使用規則來設定`sendEvent`動作，則廣告資料會以個別廣告擴充事件的形式傳送。
 
 ### 資料流設定覆寫 {#datastream-overrides}
 
