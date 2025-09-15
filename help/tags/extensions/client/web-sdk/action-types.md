@@ -122,7 +122,7 @@ ht-degree: 1%
 ![Experience Platform Tags UI影像顯示「傳送事件」動作型別的Personalization設定。](assets/personalization-settings.png)
 
 * **[!UICONTROL 範圍]**：選取您想要明確要求個人化要求的範圍(Adobe Target [!DNL mboxes])。 您可以手動輸入範圍，或提供資料元素來輸入範圍。
-* **[!UICONTROL 介面]**：設定網頁上可用於個人化的網頁介面。 如需詳細資訊，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)。
+* **[!UICONTROL 介面]**：設定網頁上可用於個人化的網頁介面。 如需詳細資訊，請參閱[Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant)。
 * **呈現視覺個人化決定：**&#x200B;如果您想要在頁面上呈現個人化內容，請勾選&#x200B;**[!UICONTROL 呈現視覺個人化決定]**&#x200B;核取方塊。 如有需要，您也可以指定決定範圍及/或曲面。 如需呈現個人化內容的詳細資訊，請參閱[個人化檔案](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content)。
 * **[!UICONTROL 要求預設個人化]**：使用此區段來控制是否要求全頁範圍（全域mbox）和預設表面（根據目前URL的網頁表面）。 依預設，這會在頁面載入的前`sendEvent`個呼叫期間自動要求。 您可以從下列選項中選擇：
    * **[!UICONTROL 自動]**：這是預設行為。 只有在尚未要求預設個人化時，才會要求此專案。 這對應至Web SDK命令中未設定的`requestDefaultPersonalization`。
