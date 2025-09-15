@@ -2,14 +2,14 @@
 title: Verizon MediaYahoo DataX連線
 description: DataX是彙總的Verizon Media/Yahoo基礎架構，其中託管各種元件，讓Verizon Media/Yahoo能夠以安全、自動化及可擴充的方式與外部合作夥伴交換資料。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 65809628e8535027edb08e54e84b308777036ab2
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 3%
 
 ---
 
-# [!DNL Verizon Media/Yahoo DataX]個連線
+# [!DNL Verizon Media/Yahoo DataX] 連線
 
 ## 概觀 {#overview}
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->此目的地聯結器和檔案頁面是由[!DNL Verizon Media/Yahoo]的[!DNL DataX]團隊建立和維護。 若有任何查詢或更新要求，請直接透過[dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)聯絡他們
+>此目的地聯結器和檔案頁面是由[!DNL Verizon Media/Yahoo]的[!DNL DataX]團隊建立和維護。 若有任何查詢或更新要求，請直接透過[dataoperations@yahooinc.com](mailto:dataoperations@yahooinc.com)聯絡他們
 
 ## 先決條件 {#prerequisites}
 
@@ -48,7 +48,7 @@ ht-degree: 3%
 }
 ```
 
-在[!DNL DataX]開發人員檔案中進一步瞭解[分類中繼資料](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/)。
+在[開發人員檔案中進一步瞭解](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/)分類中繼資料[!DNL DataX]。
 
 ## 比率限制和護欄 {#rate-limits-guardrails}
 
@@ -56,7 +56,7 @@ ht-degree: 3%
 >
 >將超過100個對象啟用至[!DNL Verizon Media/Yahoo DataX]時，您可能會收到來自目的地的速率限制錯誤。 將對象啟用至此目的地時，請嘗試在一個啟用資料流中啟用少於100個對象。 如果您需要啟用更多區段，請在相同帳戶上建立新目的地。
 
-根據[DataX檔案](https://developer.verizonmedia.com/datax/guide/rate-limits/)中概述的分類法和對象貼文配額限制，[!DNL DataX]是速率限制。
+根據[!DNL DataX]DataX檔案[中概述的分類法和對象貼文配額限制，](https://developer.verizonmedia.com/datax/guide/rate-limits/)是速率限制。
 
 
 | 錯誤碼 | 錯誤訊息 | 說明 |
@@ -67,7 +67,7 @@ ht-degree: 3%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Verizon Media]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
+[!DNL Verizon Media]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
@@ -131,4 +131,4 @@ ht-degree: 3%
 
 ## 其他資源 {#additional-resources}
 
-如需詳細資訊，請參閱 [!DNL DataX][&#128279;](https://developer.verizonmedia.com/datax/guide/)上的[!DNL Yahoo/Verizon Media] 檔案。
+如需詳細資訊，請參閱[!DNL Yahoo/Verizon Media][上的 [!DNL DataX] ](https://developer.verizonmedia.com/datax/guide/)檔案。
