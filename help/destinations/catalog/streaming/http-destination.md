@@ -4,9 +4,9 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的分析，或針對從Experience Platform匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
+source-git-commit: 6d8386b4d9ed64128c8d9a9537610f0fd07d74cd
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2852'
 ht-degree: 7%
 
 ---
@@ -205,7 +205,7 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL 標頭]**：依照以下格式，輸入任何要包含在目的地呼叫中的自訂標頭： `header1:value1,header2:value2,...headerN:valueN`。
 * **[!UICONTROL HTTP端點]**：您要傳送設定檔資料的HTTP端點的URL。
 * **[!UICONTROL 查詢引數]**：您可以選擇將查詢引數新增至HTTP端點URL。 將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。
-* **[!UICONTROL 包含區段名稱]**：如果要讓資料匯出包含您匯出的對象名稱，請切換選項。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL 包含區段名稱]**：如果要讓資料匯出包含您匯出的對象名稱，請切換選項。 **注意**：只有對應到目的地的區段才會包含區段名稱。 匯出中出現的未對應區段不包括`name`欄位。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 * **[!UICONTROL 包含區段時間戳記]**：若要讓資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 
 ### 啟用警示 {#enable-alerts}
@@ -245,7 +245,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至HTTP API目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至HTTP API目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。<br> **重要**：啟用&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;選項時，只有對應到目的地的區段才會包含區段名稱。 匯出中顯示的未對應區段不會包含`name`欄位，即使該選項已啟用亦然。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -333,10 +333,16 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
             "mappingCreatedAt": 1649856570000,
             "mappingUpdatedAt": 1649856570000,
             "name": "First name equals John"
+          },
+          "354e086f-2e11-49a2-9e39-e5d9a76be683": {
+            "lastQualificationTime": "2020-04-15T02:41:50+0000",
+            "status": "realized"
           }
         }
       }
 ```
+
+**注意**：在此範例中，第一個區段(`5b998cb9-9488-4ec3-8d95-fa8338ced490`)已對應到目的地，並包含`name`欄位。 第二個區段(`354e086f-2e11-49a2-9e39-e5d9a76be683`)未對應到目的地，而且不包含`name`欄位，即使已啟用&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;選項也是如此。
 
 +++
 
