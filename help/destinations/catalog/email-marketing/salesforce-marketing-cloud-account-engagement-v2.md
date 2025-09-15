@@ -4,7 +4,7 @@ description: 瞭解如何使用(V2) Salesforce Marketing Cloud Account Engagemen
 badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 21ca268d3ade99cf46b6c511360084297e8163d3
+source-git-commit: d1405237698271607fa672ccae1ac731d66df263
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 3%
@@ -22,9 +22,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 > 
-> 這是[Salesforce Marketing Cloud帳戶參與](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)目的地的V2版本。 此版本會取代先前的目的地，目前是在Alpha版本中。
-> &#x200B;> <br>
-> &#x200B;> 如果您目前正在使用舊版[Salesforce Marketing Cloud帳戶參與](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)目的地，您必須在&#x200B;**2026年1月**&#x200B;前移轉至此V2版本。 2026年1月後，Adobe將淘汰舊版，不再提供使用。
+> 這是[Salesforce Marketing Cloud帳戶參與](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)目的地的V2版本。 此版本會取代先前的目的地，目前是在Alpha版本中。
+> > <br>
+> > 如果您目前正在使用舊版[Salesforce Marketing Cloud帳戶參與](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)目的地，您必須在&#x200B;**2026年1月**&#x200B;前移轉至此V2版本。 2026年1月後，Adobe將淘汰舊版，不再提供使用。
 
 
 ## 使用案例 {#use-cases}
@@ -193,7 +193,7 @@ Salesforce Marketing Cloud帳戶參與目的地支援下表描述的目標屬性
 1. 導覽至您選取的其中一個對象。 選取 **[!DNL Activation data]** 索引標籤。**[!UICONTROL 對應ID]**&#x200B;欄會顯示在[!DNL Marketing Cloud Account Engagement Prospects]頁面中產生的自訂欄位名稱。
    ![Experience Platform UI熒幕擷圖範例，顯示所選區段的對應ID。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. 登入[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否新增/更新了對象中的潛在客戶。 或者，您也可以存取[[!DNL Account Engagement]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**&#x200B;頁面。
+1. 登入[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否新增/更新了對象中的潛在客戶。 或者，您也可以存取[[!DNL Account Engagement]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**頁面。
    ![顯示[潛在客戶]頁面的Salesforce UI熒幕擷圖。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. 若要檢查潛在客戶是否已更新，請選取潛在客戶並驗證自訂潛在客戶欄位是否已使用Experience Platform對象狀態進行更新。

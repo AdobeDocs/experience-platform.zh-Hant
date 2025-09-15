@@ -5,9 +5,9 @@ title: 使用流程服務API連線到批次目的地並啟用資料
 description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地，並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 81641f707dbd9fb2952589506bc42c3dd6cd83b3
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '3416'
+source-wordcount: '3450'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 2%
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Real-Time Customer Profile]資料在[!DNL Adobe Experience Platform]中建立對象。
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Adobe Experience Platform]資料在[!DNL Real-Time Customer Profile]中建立對象。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 以下小節提供您需要瞭解的其他資訊，以便在Experience Platform中啟用批次目的地的資料。
@@ -57,11 +57,11 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->[!DNL Amazon S3]連線的認證`accessId`、`secretKey`與[!DNL Adobe Campaign]的[!DNL Amazon S3]連線的`accessId`、`secretKey`相同。
+>`accessId`連線的認證`secretKey`、[!DNL Amazon S3]與`accessId`的`secretKey`連線的[!DNL Amazon S3]、[!DNL Adobe Campaign]相同。
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[疑難排解指南中](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例API呼叫[!DNL Experience Platform]一節。
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
@@ -85,7 +85,7 @@ ht-degree: 2%
 
 ### API參考檔案 {#api-reference-documentation}
 
-在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe I/O[&#128279;](https://www.adobe.io/experience-platform-apis/references/flow-service/)上的流程服務API檔案。 我們建議您同時使用本教學課程和API參考檔案。
+在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱Adobe I/O[上的](https://www.adobe.io/experience-platform-apis/references/flow-service/)流程服務API檔案。 我們建議您同時使用本教學課程和API參考檔案。
 
 ## 取得可用目的地的清單 {#get-the-list-of-available-destinations}
 
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-成功回應傳回新建立的來源連線至[!DNL Profile store]的唯一識別碼(`id`)。 這可確認您已成功連線至您的[!DNL Experience Platform]資料。 將此值依後續步驟的需要儲存。
+成功回應傳回新建立的來源連線至`id`的唯一識別碼([!DNL Profile store])。 這可確認您已成功連線至您的[!DNL Experience Platform]資料。 將此值依後續步驟的需要儲存。
 
 ```json
 {
@@ -531,8 +531,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | 提供批次目的地的基本連線名稱。 |
 | `description` | 您可以選擇提供基本連線的說明。 |
 | `connectionSpec.id` | 使用所需批次目的地的連線規格ID。 您在步驟[取得可用目的地的清單](#get-the-list-of-available-destinations)中取得此識別碼。 |
-| `auth.specname` | 表示目的地的驗證格式。 若要尋找您目的地的specName，請對連線規格端點[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.name`。 <br>例如，對於Adobe Campaign目的地，您可以使用任何`S3`、`SFTP with Password`或`SFTP with SSH Key`。 |
-| `params` | 根據您連線的目的地，您必須提供不同的必要驗證引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.spec.required`。 |
+| `auth.specname` | 表示目的地的驗證格式。 若要尋找您目的地的specName，請對連線規格端點[執行](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.name`。 <br>例如，對於Adobe Campaign目的地，您可以使用任何`S3`、`SFTP with Password`或`SFTP with SSH Key`。 |
+| `params` | 根據您連線的目的地，您必須提供不同的必要驗證引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點[執行](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.spec.required`。 |
 
 {style="table-layout:auto"}
 
@@ -591,18 +591,21 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -638,7 +641,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -674,7 +678,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -710,12 +715,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -751,12 +758,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -792,12 +801,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -832,6 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -845,11 +857,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | 您可以選擇提供目標連線的說明。 |
 | `baseConnectionId` | 使用您在上述步驟中建立之基本連線的ID。 |
 | `connectionSpec.id` | 使用所需批次目的地的連線規格ID。 您在步驟[取得可用目的地的清單](#get-the-list-of-available-destinations)中取得此識別碼。 |
-| `params` | 視您連線的目的地而定，您必須為儲存位置提供不同的必要引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`targetSpec.spec.required`。 |
-| `params.mode` | 視您目的地支援的模式而定，您必須在此處提供不同的值。 若要找出您目的地所需的引數，請對連線規格端點[&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)執行GET呼叫，提供您所需目的地的連線規格。 在回應中尋找引數`targetSpec.spec.properties.mode.enum`，並選取所要的模式。 |
+| `params` | 視您連線的目的地而定，您必須為儲存位置提供不同的必要引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點[執行](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`targetSpec.spec.required`。 |
+| `params.mode` | 視您目的地支援的模式而定，您必須在此處提供不同的值。 若要找出您目的地所需的引數，請對連線規格端點[執行](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET呼叫，提供您所需目的地的連線規格。 在回應中尋找引數`targetSpec.spec.properties.mode.enum`，並選取所要的模式。 |
 | `params.bucketName` | 對於S3連線，請提供要匯出檔案的儲存貯體名稱。 |
 | `params.path` | 對於S3連線，請在要匯出檔案的儲存位置中提供檔案路徑。 |
 | `params.format` | `CSV`是目前唯一支援的檔案匯出型別。 |
+| `params.includeFileManifest` | *選擇性*。 設定為`true`以啟用目的地的資訊清單檔案產生。 啟用時，資訊清單檔案會與匯出的資料檔案一起建立，提供有關匯出檔案的中繼資料。 檢視[範例資訊清單檔案](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)。 |
 
 {style="table-layout:auto"}
 
@@ -936,7 +949,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應傳回新建立的資料流和`etag`的識別碼(`id`)。 視需要在下一個步驟記下這兩個值，以啟動對象並匯出資料檔案。
+成功的回應傳回新建立的資料流和`id`的識別碼(`etag`)。 視需要在下一個步驟記下這兩個值，以啟動對象並匯出資料檔案。
 
 ```json
 {
@@ -1040,7 +1053,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | 強制。 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 |
 | `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
 | `frequency` | 強制。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`、`DAILY`、`WEEKLY`或`MONTHLY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |
-| `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`frequency`選取器中選取`"DAILY_FULL_EXPORT"`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日Experience Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新狀態，端視批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
+| `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`"DAILY_FULL_EXPORT"`選取器中選取`frequency`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日Experience Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新狀態，端視批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
 | `endDate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>在選取`"exportMode":"DAILY_FULL_EXPORT"`和`"frequency":"ONCE"`時不適用。 <br>設定對象成員停止匯出至目的地的日期。 |
 | `startTime` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
 

@@ -4,9 +4,9 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '4911'
+source-wordcount: '4986'
 ht-degree: 3%
 
 ---
@@ -4752,6 +4752,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >[!ENDSHADEBOX]
 
 ### 將檔案資訊清單產生新增至現有目的地 {#add-file-manifest}
+
+資訊清單JSON檔案包含有關匯出位置、匯出大小等的資訊。 資訊清單的命名格式為`manifest-<<destinationId>>-<<dataflowRunId>>.json`。 檢視[範例資訊清單檔案](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)。 資訊清單檔案包含下列欄位：
+
+* `flowRunId`：產生匯出檔案的[資料流執行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)。
+* `scheduledTime`：檔案匯出的時間(UTC)。
+* `exportResults.sinkPath`：存放匯出檔案之存放位置中的路徑。
+* `exportResults.name`：匯出的檔案名稱。
+* `size`：匯出的檔案大小（位元組）。
 
 若要將檔案資訊清單產生新增至現有的目的地，您必須使用`PATCH`作業更新目標連線引數。 這樣可為您的目的地產生資訊清單檔案，提供有關匯出檔案的中繼資料。
 
