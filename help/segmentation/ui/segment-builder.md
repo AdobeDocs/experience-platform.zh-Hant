@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
 source-wordcount: '5248'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -130,7 +130,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="外部客群"
->abstract="透過客群索引標籤匯入的客群，現在會自動透過客群入口網站顯示。這包括從Audience Manager、Customer Journey Analytics、區段比對和其他自訂整合擷取的對象。<br/><br/>到2025年9月底，將僅透過整合搜尋擷取對象，不再支援先前的工作流程。 轉換服務時，區段比對僅對少數指定客戶可用。 在服務完全淘汰之前，仍可依請求啟用新「區段比對」客戶的存取權。<br/><br/>針對持續的資料共同作業使用案例，Adobe建議移至Collaboration，這是長期支援的解決方案。"
+>abstract="透過客群索引標籤匯入的客群，現在會自動透過客群入口網站顯示。這包括從 Audience Manager、Customer Journey Analytics、區段比對和其他自訂整合中擷取的客群。<br/><br/>在 2025 年 9 月之後，客群將僅能透過 Unified Search 進行擷取，並且不再支援先前的工作流程。在我們轉換服務期間，區段比對僅對少數指定客戶繼續開放。在服務完全淘汰之前，仍可根據要求為新的區段比對客戶啟用存取權。<br/><br/>對於正在進行的資料協作使用案例，Adobe 建議改用 Collaboration，這是長期支援的解決方案。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
@@ -274,7 +274,7 @@ ht-degree: 10%
 
 | 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
 | --------------- | ----------- | ------------------- | ------- |
-| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;**&#x200B;**。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -330,7 +330,7 @@ ht-degree: 10%
 >[!NOTE]
 >
 >使用「之後」時間限制時，後一個事件發生的次數可能會超過時間限制內所列的時間量。 >
->&#x200B;>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
+>>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
 >
 >此外，這兩個時間限制可以相互協調使用。
 >
@@ -386,7 +386,7 @@ ht-degree: 10%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估值"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
