@@ -2,10 +2,10 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
+source-git-commit: c592d007932835f5263d7f78b2e8155790313840
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 43%
+source-wordcount: '1217'
+ht-degree: 45%
 
 ---
 
@@ -46,9 +46,8 @@ Adobe Experience Platform AI Assistant是一種對話式體驗，可用來加速
 
 | 功能 | 說明 |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator是您Experience Cloud應用程式的智慧型助理。 當您提出問題或要求協助時，Agent Orchestrator會自動致電專業代理商，為您提供正確的答案。 Agent Orchestrator會記住您的交談記錄，讓您在不重複內容的情況下自然建立先前的問題，並結合來自多個代理程式的深入分析，以清楚且統一的回應向您呈現。 您可以透過AI Assistant對話介面使用Agent Orchestrator功能。 |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator是支援AI Assistant的智慧層。 當您提出問題或要求協助時，Agent Orchestrator會自動致電專業代理商，為您提供正確的答案。 Agent Orchestrator會記住您的交談記錄，讓您在不重複內容的情況下自然建立先前的問題，並結合來自多個代理程式的深入分析，以清楚且統一的回應向您呈現。 |
 | Audience Agent | Audience Agent可讓您檢視對象的相關深入分析，包括偵測對象人數的重大變更、偵測重複的對象、探索您的對象詳細目錄，以及擷取對象人數。 |
-| 欄位探索代理程式 | 欄位探索代理程式可協助使用者自動探索並瞭解其結構描述和資料集中的資料欄位。 此智慧型代理程式會分析您的資料結構，並提供有關欄位使用、關係的深入分析，以及最佳化的建議。 |
 
 如需詳細資訊，請閱讀 [AI 助理概觀](../ai-assistant/home.md)。
 
