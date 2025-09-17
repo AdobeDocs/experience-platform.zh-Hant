@@ -3,9 +3,9 @@ title: 檔案式雲端儲存目的地的IP位址允許清單
 type: Documentation
 description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform將資料匯出至雲端儲存空間目的地。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
+source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '305'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->此頁面上記錄的IP範圍&#x200B;*不*&#x200B;支援下列以檔案為基礎的雲端儲存體目的地： [!UICONTROL Azure Blob]、[!UICONTROL Azure Data Lake Storage Gen2]和[!UICONTROL 資料登陸區域]。
+>此頁面上記錄的IP範圍&#x200B;*不*&#x200B;支援下列以檔案為基礎的雲端儲存空間目的地： [!UICONTROL Azure Blob]、[!UICONTROL Azure Data Lake Storage Gen2]、[!UICONTROL 資料登陸區域]以及託管於Microsoft Azure上的SFTP伺服器。
 
 ## 概觀 {#overview}
 
