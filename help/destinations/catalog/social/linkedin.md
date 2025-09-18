@@ -3,25 +3,16 @@ keywords: linkedin連線；linkedin連線；linkedin目的地；linkedin；
 title: Linkedin相符受眾連線
 description: 根據雜湊電子郵件，為您的LinkedIn行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 13b95db846d70c36233cf8ded491d19e1c93e4c0
+source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 6%
+source-wordcount: '1234'
+ht-degree: 5%
 
 ---
 
 # [!DNL LinkedIn Matched Audiences] 連線
 
 ## 概觀 {#overview}
-
->[!IMPORTANT]
->
->* 自2025年9月9日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL LinkedIn Matched Audiences]**&#x200B;卡片。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL LinkedIn Matched Audiences]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） LinkedIn相符對象]**，現在您可以使用名稱為&#x200B;**[!UICONTROL LinkedIn相符對象]**&#x200B;的新卡片。
->* 使用目錄中的新&#x200B;**[!UICONTROL LinkedIn相符對象]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何作用中資料流至&#x200B;**[!UICONTROL （已棄用） LinkedIn相符對象]**&#x200B;目的地，這些資料流會自動更新，因此您不需要採取任何動作。
->* 新的&#x200B;**[!UICONTROL LinkedIn相符對象]**&#x200B;連線不再支援[!DNL IDFA]身分。
->* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
->   * 流程規格 ID：`963604d1-811d-4ce4-ac66-1fc78bde7c42`
->   * 連線規格 ID：`393a7ce1-e527-4fdb-8d99-0b11dc910279`
 
 根據雜湊電子郵件和行動ID，為您的[!DNL LinkedIn]行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 
@@ -36,6 +27,11 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 ## 支援的身分 {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences]支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
+
+>[!IMPORTANT]
+>
+>從2025年9月開始，[!DNL LinkedIn Matched Audiences]目的地不再支援[!DNL IDFA] （廣告商識別碼）身分。  這項變更是因為LinkedIn的需求，與任何Experience Platform目的地服務升級無關。
+
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
@@ -96,7 +92,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 >[!NOTE]
 >
 >來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
->&#x200B;> 屬性來源資料不會自動雜湊。
+>> 屬性來源資料不會自動雜湊。
 > 
 > 在[身分對應](../../ui/activate-segment-streaming-destinations.md#mapping)步驟中，當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
 > 
@@ -138,7 +134,7 @@ LinkedIn權杖每60天過期。 您可以在&#x200B;**[!UICONTROL 帳戶過期�
    ![篩選以僅顯示LinkedIn帳戶](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的LinkedIn認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的LinkedIn認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]

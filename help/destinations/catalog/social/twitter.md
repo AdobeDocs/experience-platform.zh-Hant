@@ -2,24 +2,16 @@
 title: Twitter自訂對象連線
 description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 5b529a1af62c2745c3226029de1a1ff508bddfc7
+source-git-commit: ee7e85afd48f7b1c40f0152ad76c8c718b8f1432
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 6%
+source-wordcount: '855'
+ht-degree: 5%
 
 ---
 
 # [!DNL Twitter Custom Audiences] 連線
 
 ## 概觀 {#overview}
-
->[!IMPORTANT]
->
->* 自2025年9月9日起，您可以在目的地目錄中並排看到兩張&#x200B;**[!DNL Twitter Custom Audiences]**&#x200B;卡片。 這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Twitter Custom Audiences]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL （已棄用） Twitter自訂對象]**，而名稱為&#x200B;**[!UICONTROL Twitter自訂對象]**&#x200B;的新卡片現在可供您使用。
->* 使用目錄中的新&#x200B;**[!UICONTROL Twitter自訂對象]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何作用中資料流至&#x200B;**[!UICONTROL （已棄用） Twitter自訂對象]**&#x200B;目的地，資料流會自動更新，因此您不需要採取任何動作。
->* 如果您是透過[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)建立資料流，您必須將[!DNL flow spec ID]和[!DNL connection spec ID]更新為下列值：
->   * 流程規格 ID：`903da9e4-7cf5-442a-9498-a237e4f064f9`
->   * 連線規格 ID：`9eb18875-a095-4b89-854e-39b9e29ccd41`
 
 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再行銷活動。
 
@@ -32,7 +24,7 @@ ht-degree: 6%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Twitter Custom Audiences]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
+[!DNL Twitter Custom Audiences]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
