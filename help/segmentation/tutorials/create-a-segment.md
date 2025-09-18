@@ -4,7 +4,7 @@ title: 使用區段服務API建立區段定義
 type: Tutorial
 description: 按照本教學課程瞭解如何使用Adobe Experience Platform Segmentation Service API開發、測試、預覽和儲存區段定義。
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 6%
@@ -72,7 +72,7 @@ ht-degree: 6%
 
 ### 如何產生預估值
 
-為即時客戶個人檔案啟用的資料會擷取到Experience Platform中，並儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過5%，則會觸發取樣工作以更新計數。 如果設定檔計數未變更超過5%，則取樣工作每週都會自動執行。
+為即時客戶個人檔案啟用的資料會擷取到Experience Platform中，並儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過3%，則會觸發取樣工作以更新計數。 如果設定檔計數不會變更超過3%，則取樣工作每週都會自動執行。
 
 範例的觸發方式取決於所使用的擷取型別：
 
