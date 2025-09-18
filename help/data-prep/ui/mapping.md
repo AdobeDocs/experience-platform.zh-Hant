@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；對應csv；對應csv檔
 title: 資料準備UI指南
 description: 瞭解如何在Experience Platform UI中使用資料準備函式，將CSV檔案對應至XDM結構描述。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 閱讀本指南，瞭解如何在Adobe Experience Platform使用者介面中使用[資料準備](../home.md)對應函式，將CSV檔案對應至[體驗資料模型(XDM)結構描述](../../xdm/home.md)。
 
-## 開始使用
+## 快速入門
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 >[!BEGINTABS]
 
->[!TAB 從流程匯入對應]
+>[!TAB 從流程]匯入對應
 
 如果您有多個資料流是根據類似的來源檔案和目標結構描述，那麼您可以匯入現有的對應，並將其重複用於新的資料流。
 
@@ -138,7 +138,7 @@ ht-degree: 0%
 
 ![此上載範本視窗會顯示下載和上載轉存的對應csv檔案的選項。](../images/ui/mapping/upload_template.png)
 
-+++選取此選項可檢視匯出的對應檔案範例
++++選取以檢視匯出的對應檔案的範例
 
 ![對應範本的已下載csv檔案。](../images/ui/mapping/mapping_csv_file.png)
 
@@ -151,6 +151,10 @@ ht-degree: 0%
 >[!ENDTABS]
 
 完成對應後，您現在可以選取&#x200B;**[!UICONTROL 完成]**，然後繼續下一個步驟以完成您的資料流。
+
+>[!TIP]
+>
+>完成建立對應後，請等候最多10分鐘再開始資料擷取。 此等待期可確保您的新對應完全儲存並可在系統中使用。
 
 ![具有完整對應集的對應介面。](../images/ui/mapping/completed_mappings.png)
 
