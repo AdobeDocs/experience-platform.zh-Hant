@@ -1,11 +1,11 @@
 ---
 title: 產品支援代理
-description: 瞭解如何使用AI Assistant中的產品支援代理程式來簡化疑難排解和客戶支援票證歸檔流程。
+description: 了解如何使用 AI 助理中的產品支援代理人，簡化疑難排解和客戶支援服務單歸檔流程。
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
 source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
 source-wordcount: '402'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -62,5 +62,5 @@ ht-degree: 0%
 
 如需詳細資訊，請觀看以下影片，瞭解如何使用產品支援代理程式進行順暢的疑難排解，而不需要離開您的工作流程。
 
->[!VIDEO](https://video.tv.adobe.com/v/3443194?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
 
