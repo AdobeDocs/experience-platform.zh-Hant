@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 6e76b7a594cb8482b3e33edbf6776ba3b03e6fb9
+source-git-commit: 66a1c323eaf930b4b9204d9e898bbe8356a9b1e5
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1317'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 5%
    * [刪除目的地帳戶](./api/delete-destination-account.md)
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
    * [匯出資料集](/help/destinations/api/export-datasets.md)
-   * [排序及篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=zh-Hant#use-cases)
+   * [排序及篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI 指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
@@ -70,7 +70,7 @@ ht-degree: 5%
       * [（舊版） (V2) Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage人員同步連線](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant)
+      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [同盟對象組合連線](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising目的地{#advertising}
       * [(Beta) Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
@@ -196,7 +196,6 @@ ht-degree: 5%
       * [Moengage連線](./catalog/mobile-engagement/moengage.md)
    * Personalization目的地 {#personalization}
       * [Personalization目的地概觀](./catalog/personalization/overview.md)
-      * [（可用性限制）對象分析](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce連線](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target連線](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)

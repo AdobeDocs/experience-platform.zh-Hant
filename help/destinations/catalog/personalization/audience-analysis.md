@@ -1,18 +1,20 @@
 ---
 title: Audience Analysis目的地
 description: 在Customer Journey Analytics中檢視客戶符合資格的對象。
-badgeLimitedAvailability: label="可用性限制" type="Informative"
+badgeLimitedAvailability: label="有限可用性" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+hide: true
+hidefromtoc: true
+source-git-commit: 4bd94c292a13a80405a3d726295ebd6eaf86aaaa
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '799'
 ht-degree: 3%
 
 ---
 
 # Audience Analysis目的地
 
-[!UICONTROL Audience Analysis]目的地可讓您將Adobe Experience Platform對象資料擴充至[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=zh-Hant)報表中作為維度使用。
+[!UICONTROL Audience Analysis]目的地可讓您將Adobe Experience Platform對象資料擴充至[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)報表中作為維度使用。
 
 >[!AVAILABILITY]
 >
@@ -80,7 +82,7 @@ Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help
 * **[!UICONTROL 資料串流ID]**：您要與合格對象擴充的資料串流ID。 您可以在[資料串流管理員](/help/datastreams/overview.md)中取得此識別碼。
 * **[!UICONTROL 整合別名]**：整合別名。
 
-### 警示
+### 警報
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
