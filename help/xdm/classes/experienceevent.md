@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent類別
 description: 瞭解XDM ExperienceEvent類別和事件資料模型化的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f00b195567c22f69c05909e76906c8770da4b9d0
 workflow-type: tm+mt
-source-wordcount: '2766'
+source-wordcount: '2777'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `_id`<br>**（必要）** | 體驗事件類別`_id`欄位可唯一識別擷取至Adobe Experience Platform的個別事件。 此欄位用於追蹤個別事件的唯一性、防止資料重複，以及在下游服務中查詢該事件。<br><br>在偵測到重複事件的地方，Experience Platform應用程式和服務可能會以不同的方式處理重複。 例如，如果設定檔存放區中已存在具有相同`_id`的事件，則會捨棄設定檔服務中的重複事件。<br><br>在某些情況下，`_id`可以是[通用唯一識別碼(UUID)](https://datatracker.ietf.org/doc/html/rfc4122)或[全域唯一識別碼(GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果您要從來源連線串流資料，或直接從Parquet檔案擷取資料，您應該串連特定欄位組合，讓事件具有唯一性，以產生此值。 可串連的事件範例包括主要ID、時間戳記、事件型別等。 串連值必須是`uri-reference`格式字串，這表示必須移除任何冒號字元。 之後，應該使用SHA-256或您選擇的其他演演算法來雜湊串連值。<br><br>請務必注意，**此欄位不代表與個人相關的身分**，而是資料本身的記錄。 與個人相關的身分資料應委派給相容欄位群組所提供的[身分欄位](../schema/composition.md#identity)。 |
+| `_id`<br>**（必要）** | 體驗事件類別`_id`欄位可唯一識別擷取至Adobe Experience Platform的個別事件。 此欄位用於追蹤個別事件的唯一性、防止資料重複，以及在下游服務中查詢該事件。<br><br>在偵測到重複事件的地方，Experience Platform應用程式和服務可能會以不同的方式處理重複。 例如，如果設定檔存放區中已存在具有相同`_id`的事件，則會捨棄設定檔服務中的重複事件。 不過，這些事件仍會記錄在資料湖中。<br><br>在某些情況下，`_id`可以是[通用唯一識別碼(UUID)](https://datatracker.ietf.org/doc/html/rfc4122)或[全域唯一識別碼(GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果您要從來源連線串流資料，或直接從Parquet檔案擷取資料，您應該串連特定欄位組合，讓事件具有唯一性，以產生此值。 可串連的事件範例包括主要ID、時間戳記、事件型別等。 串連值必須是`uri-reference`格式字串，這表示必須移除任何冒號字元。 之後，應該使用SHA-256或您選擇的其他演演算法來雜湊串連值。<br><br>請務必注意，**此欄位不代表與個人相關的身分**，而是資料本身的記錄。 與個人相關的身分資料應委派給相容欄位群組所提供的[身分欄位](../schema/composition.md#identity)。 |
 | `eventMergeId` | 如果使用[Adobe Experience Platform Web SDK](/help/web-sdk/home.md)來擷取資料，這表示所擷取批次中造成建立記錄的ID。 此欄位在資料擷取時由系統自動填入。 不支援在網頁SDK實作的內容之外使用此欄位。 |
 | `eventType` | 指出事件型別或類別的字串。 如果您想要將相同結構描述和資料集中的不同事件型別區分開來，例如將產品檢視事件與零售公司的加入購物車事件區分開來，則可以使用此欄位。<br><br>此屬性的標準值在[附錄區段](#eventType)中提供，包括預期使用案例的說明。 此欄位是可延伸的列舉，這表示您也可以使用自己的事件型別字串來分類您正在追蹤的事件。<br><br>`eventType`限制您在應用程式上每個點選只能使用單一事件，因此您必須使用計算欄位，讓系統知道哪個事件最重要。 如需詳細資訊，請參閱[計算欄位](#calculated)的最佳實務一節。 |
 | `producedBy` | 說明事件製作者或來源的字串值。 如有需要，此欄位可用於篩選掉某些事件產生者，以用於分段目的。<br><br>在[附錄區段](#producedBy)中提供了這個屬性的某些建議值。 此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生器。 |
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 如果您透過UI手動將資料擷取到Experience Platform，請參閱[計算欄位](../../data-prep/ui/mapping.md#calculated-fields)的指南，以瞭解如何建立計算欄位的特定步驟。
 
-如果您使用來源連線將資料串流至Experience Platform，您可以設定來源以改為利用計算欄位。 請參閱您特定來源[&#128279;](../../sources/home.md)的檔案，瞭解設定連線時如何實作計算欄位的指示。
+如果您使用來源連線將資料串流至Experience Platform，您可以設定來源以改為利用計算欄位。 請參閱您特定來源[的](../../sources/home.md)檔案，瞭解設定連線時如何實作計算欄位的指示。
 
 ## 相容的結構描述欄位群組 {#field-groups}
 
@@ -155,7 +155,7 @@ Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配�
 | `media.adSkip` | 此事件會在廣告被略過時發出訊號。 |
 | `media.adStart` | 此事件代表廣告開始。 |
 | `media.bitrateChange` | 這個事件會在位元速率發生變更時發出訊號。 |
-| `media.bufferStart` | 緩衝開始時會傳送`media.bufferStart`事件型別。 沒有特定的`bufferResume`事件型別；在`bufferStart`事件後傳送`play`事件時，緩衝會被視為已繼續。 |
+| `media.bufferStart` | 緩衝開始時會傳送`media.bufferStart`事件型別。 沒有特定的`bufferResume`事件型別；在`play`事件後傳送`bufferStart`事件時，緩衝會被視為已繼續。 |
 | `media.chapterComplete` | 此事件代表章節結束。 |
 | `media.chapterSkip` | 當使用者向前或向後跳到另一個區段或章節時，就會觸發此事件。 |
 | `media.chapterStart` | 此事件代表章節開始。 |
@@ -163,7 +163,7 @@ Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配�
 | `media.error` | 此事件代表媒體播放期間發生錯誤。 |
 | `media.pauseStart` | 此事件會追蹤`pauseStart`事件何時發生。 當使用者起始媒體播放暫停的動作時，就會觸發此事件。 沒有繼續事件型別。 在`pauseStart`之後傳送播放事件時會推斷為繼續。 |
 | `media.ping` | `media.ping`事件型別用於表示持續播放狀態。 針對主要內容，在播放期間必須每10秒傳送此事件，從播放開始後的10秒開始。 對於廣告內容，在廣告追蹤期間必須每秒傳送一次。 Ping事件不應在要求內文中包含引數對應。 |
-| `media.play` | 當播放器從其他狀態(例如`buffering,` `paused` （當使用者繼續時）或`error` （當復原時）)轉換為`playing`狀態時（包括自動播放等情況），會傳送`media.play`事件型別。 此事件由播放器的`on('Playing')`回呼觸發。 |
+| `media.play` | 當播放器從其他狀態(例如`media.play` `playing` （當使用者繼續時）或`buffering,` （當復原時）)轉換為`paused`狀態時（包括自動播放等情況），會傳送`error`事件型別。 此事件由播放器的`on('Playing')`回呼觸發。 |
 | `media.sessionComplete` | 到達主要內容的結尾時，會傳送此事件。 |
 | `media.sessionEnd` | `media.sessionEnd`事件型別會通知Media Analytics後端，在使用者放棄檢視且不太可能返回時立即關閉工作階段。 如果未傳送此事件，工作階段將在閒置10分鐘或播放點未移動30分鐘後逾時。 將會忽略任何使用該工作階段ID的後續媒體呼叫。 |
 | `media.sessionStart` | `media.sessionStart`事件型別會隨工作階段起始呼叫傳送。 在收到回應時，將會從Location標題擷取工作階段ID，並使用於對收集伺服器的所有後續事件呼叫。 |
