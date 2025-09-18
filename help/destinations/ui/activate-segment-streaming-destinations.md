@@ -39,7 +39,7 @@ ht-degree: 6%
 
    ![啟用目的地目錄中醒目提示的控制項。](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] ****。
+1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
 
    ![選取目的地步驟中反白顯示的目的地連線。](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
@@ -64,7 +64,7 @@ ht-degree: 6%
 >此步驟僅適用於部分受眾串流目的地。 如果您的目的地沒有&#x200B;**[!UICONTROL 對應]**&#x200B;步驟，請跳至[對象排程](#scheduling)。
 >
 >將對象啟用至串流目的地時，除了目標設定檔屬性之外，您還必須對應&#x200B;*至少一個目標身分名稱空間*。 否則，不會將對象啟動至目的地平台。
->> ![顯示強制身分名稱空間對應的對應步驟影像。](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>&#x200B;> ![顯示強制身分名稱空間對應的對應步驟影像。](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 有些對象串流目的地會要求您選取來源屬性或身分名稱空間，以將目的地中的身分對應為目標身分。
