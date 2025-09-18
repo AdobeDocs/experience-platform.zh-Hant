@@ -3,7 +3,7 @@ title: 啟用串流目的地的受眾資料
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的受眾對應至串流目的地來啟用這些受眾。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 595856842a3890426bb196218bd8be4e321ff8aa
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 6%
@@ -17,7 +17,7 @@ ht-degree: 6%
 > 
 > * 若要啟用對象並啟用工作流程的[對應步驟](#mapping)，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;以及&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。
 > * 若要在不進行工作流程的[對應步驟](#mapping)的情況下啟用對象，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用沒有對應的區段]**、**[!UICONTROL 檢視設定檔]**&#x200B;以及&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+> * 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 > 
 > 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
@@ -39,7 +39,7 @@ ht-degree: 6%
 
    ![啟用目的地目錄中醒目提示的控制項。](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
+1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] ****。
 
    ![選取目的地步驟中反白顯示的目的地連線。](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
@@ -64,7 +64,7 @@ ht-degree: 6%
 >此步驟僅適用於部分受眾串流目的地。 如果您的目的地沒有&#x200B;**[!UICONTROL 對應]**&#x200B;步驟，請跳至[對象排程](#scheduling)。
 >
 >將對象啟用至串流目的地時，除了目標設定檔屬性之外，您還必須對應&#x200B;*至少一個目標身分名稱空間*。 否則，不會將對象啟動至目的地平台。
-> ![顯示強制身分名稱空間對應的對應步驟影像。](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>> ![顯示強制身分名稱空間對應的對應步驟影像。](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 有些對象串流目的地會要求您選取來源屬性或身分名稱空間，以將目的地中的身分對應為目標身分。
@@ -93,7 +93,7 @@ ht-degree: 6%
 
 1. 若要新增更多對應，請重複步驟1至5。
 
-### 套用轉換  {#apply-transformation}
+### 套用轉換 {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
@@ -129,13 +129,13 @@ ht-degree: 6%
 
      ![醒目提示的對象來源下拉式清單。](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
-   * 啟用[!DNL IDFA]或[!DNL GAID]對象時，部分目的地會要求您輸入&#x200B;**[!UICONTROL 應用程式識別碼]**。 如果您的目的地不包含此欄位，請略過此步驟。
+   * 啟用&#x200B;**[!UICONTROL 或]**&#x200B;對象時，部分目的地會要求您輸入[!DNL IDFA]應用程式識別碼[!DNL GAID]。 如果您的目的地不包含此欄位，請略過此步驟。
 
      ![反白顯示應用程式ID下拉式清單。](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以移至[!UICONTROL 檢閱]頁面。
 
-## 審核 {#review}
+## 審閱 {#review}
 
 在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或選取&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 

@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 66a1c323eaf930b4b9204d9e898bbe8356a9b1e5
+source-git-commit: 845074cccf96e0513b8f099a2e932de966551f10
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1322'
 ht-degree: 5%
 
 ---
@@ -22,6 +22,7 @@ ht-degree: 5%
    * [目的地中可設定的和常用的匯出設定](./how-destinations-work/destinations-configurations.md)
    * [不同目的地型別的設定檔匯出行為](./how-destinations-work/profile-export-behavior.md)
    * [目的地啟用工作流程中的身分處理](./how-destinations-work/identity-handling.md)
+   * [串流目的地的對象生命週期](./how-destinations-work/audience-lifecycle-streaming-destinations.md)
 * API教學課程 {#api}
    * [使用流程服務API啟用檔案型目的地的資料](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [使用流量服務API連線到串流目的地並啟用資料](./api/streaming-destinations.md)
@@ -32,7 +33,7 @@ ht-degree: 5%
    * [刪除目的地帳戶](./api/delete-destination-account.md)
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
    * [匯出資料集](/help/destinations/api/export-datasets.md)
-   * [排序及篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=zh-Hant#use-cases)
+   * [排序及篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI 指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
@@ -70,7 +71,7 @@ ht-degree: 5%
       * [（舊版） (V2) Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage人員同步連線](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant)
+      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [同盟對象組合連線](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising目的地{#advertising}
       * [(Beta) Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
