@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1432'
-ht-degree: 92%
+source-wordcount: '1485'
+ht-degree: 96%
 
 ---
 
@@ -104,6 +104,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 從 2025 年 8 月 11 日起，在短期間，您可以看到兩張 **[!DNL Microsoft Bing]** 卡片在目標目錄中並排顯示。這是因為目標服務進行內部升級所致。現有的 **[!DNL Microsoft Bing]** 目標連接器已重新命名為 **[!UICONTROL (已棄用) Microsoft Bing]**，而您現在可以使用名為 **[!UICONTROL Microsoft Bing]** 的全新卡片。<br> 升級已經完成，並且已經從目標目錄移除棄用的卡片。請在目錄中使用 **[!UICONTROL Microsoft Bing]** 連線來建立新的啟用資料流。如果您已經有任何傳送至 **[!UICONTROL (已棄用) Microsoft Bing]** 目標的使用中資料流，該資料流將自動更新，您無需採取任何行動。<br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 進行此一升級後，在傳送至 [!DNL Microsoft Bing] 的資料流中，**已啟用輪廓的數量可能會下降**。此一下降是因為所有傳送到此目標平台的啟用資料流，都必須滿足 **ECID 對應要求**。 |
 | [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) 和 [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) 目標的驗證過期詳細資料 | [!DNL LinkedIn] 目標的驗證過期資訊現在可直接在 Experience Platform 介面中查看，因此您可以查看驗證的過期時間，並在其對資料流造成任何中斷之前進行續訂。您可以在&#x200B;**[!UICONTROL 帳戶過期日期]**&#x200B;欄 (在&#x200B;**[[!UICONTROL 「帳戶」]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;或&#x200B;**[[!UICONTROL 「瀏覽」]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;索引標籤中) 監視您的權杖過期日。 |
+| [LinkedIn符合的對象](../../destinations/catalog/social/linkedin-b2b.md) [!DNL IDFA]身分支援移除 | 從2025年9月開始，您無法再將[!DNL IDFA]對應為目標身分，因為[!DNL IDFA]目的地不再支援[!DNL LinkedIn Matched Audiences]。 如需詳細資訊，請參閱[!DNL LinkedIn Matched Audiences]整合[檔案](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes)。 這項變更是因為LinkedIn的需求，與任何Experience Platform目的地服務升級無關。 |
 
 **全新或更新版功能**
 
@@ -159,7 +160,7 @@ Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 客群預估 | 對象預估現在會顯示為&#x200B;**範圍**，這是根據取樣資料的信賴區間而定。 若要深入瞭解預估值，請閱讀[區段產生器指南](/help/segmentation/ui/segment-builder.md#audience-properties)。 |
+| 客群預估 | 客群預估現在以&#x200B;**範圍**&#x200B;的形式顯示，並以抽樣資料的信賴區間為基礎。若要深入了解預估，請參閱[客戶細分工具指南](/help/segmentation/ui/segment-builder.md#audience-properties)。 |
 
 如需詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
 
@@ -171,9 +172,9 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!DNL Oracle NetSuite] 來源正式推出 | [!DNL Oracle NetSuite]來源現在已可供一般使用。 您現在可以將[!DNL Oracle NetSuite]帳戶連線至Experience Platform，以擷取活動和實體資料以進行統一分析和啟用。 如需詳細資訊，請閱讀[[!DNL Oracle NetSuite] 概觀](../../sources/connectors/marketing-automation/oracle-netsuite.md)。 |
-| [!DNL PathFactory] 來源正式推出 | [!DNL PathFactory]來源現在已可供一般使用。 您可以將[!DNL PathFactory]帳戶連線至Experience Platform，以擷取訪客、工作階段和頁面檢視資料，以進行整合式分析和啟用。 如需詳細資訊，請閱讀[[!DNL PathFactory] 概觀](../../sources/connectors/marketing-automation/pathfactory.md)。 |
-| [!DNL Stripe] 來源正式推出 | [!DNL Stripe]來源現在已可供一般使用。 您可以將[!DNL Stripe]帳戶連線至Experience Platform，以擷取付款和交易資料，以進行統一分析和啟用。 如需詳細資訊，請閱讀[[!DNL Stripe] 概觀](../../sources/connectors/payments/stripe.md)。 |
+| [!DNL Oracle NetSuite] 來源正式推出 | [!DNL Oracle NetSuite] 來源現已全面提供。您現在可以將 [!DNL Oracle NetSuite] 帳戶連接至 Experience Platform，以收集活動和實體資料，用於進行統一分析和啟動。如需詳細資訊，請閱讀 [[!DNL Oracle NetSuite]  概觀](../../sources/connectors/marketing-automation/oracle-netsuite.md)。 |
+| [!DNL PathFactory] 來源正式推出 | [!DNL PathFactory] 來源現已全面提供。您現在可以將 [!DNL PathFactory] 帳戶連接至 Experience Platform，以收集訪客、工作階段及頁面瀏覽量資料，用於進行統一分析與啟用。如需詳細資訊，請閱讀 [[!DNL PathFactory]  概觀](../../sources/connectors/marketing-automation/pathfactory.md)。 |
+| [!DNL Stripe] 來源正式推出 | [!DNL Stripe] 來源現已全面提供。您現在可以 [!DNL Stripe] 帳戶連接至 Experience Platform，以收集付款和交易資料，用於進行統一分析和啟動。如需詳細資訊，請閱讀[[!DNL Stripe] 概觀](../../sources/connectors/payments/stripe.md)。 |
 | 增強 [!DNL Azure Blob Storage] 驗證 | 您現在可以使用服務主體式驗證，將您的 [!DNL Azure Blob Storage] 來源連接至 Experience Platform。使用服務主體式驗證，可以增強安全性、更輕鬆地進行認證輪換，並對您的帳戶進行更精細的存取控制。如需詳細資訊，請閱讀[[!DNL Azure Blob Storage] 概觀](../../sources/connectors/cloud-storage/blob.md)。 |
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
