@@ -5,10 +5,10 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 45%
+source-wordcount: '703'
+ht-degree: 48%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 45%
    * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位型別限制](schema/field-constraints.md)
    * [XDM中的名稱空間](./schema/namespaces.md)
-   * 產業資料模型{#industries}
+   * 產業資料模型 {#industries}
       * [概觀](./schema/industries/overview.md)
       * [零售](./schema/industries/retail.md)
       * [金融服務](./schema/industries/financial.md)
@@ -33,7 +33,7 @@ ht-degree: 45%
       * [醫療保健V2](./schema/healthcare/healthcare-v2.md)
       * 類別 {#classes}
          * [位置](./schema/healthcare/classes/location.md)
-      * 欄位群組{#field-groups}
+      * 欄位群組 {#field-groups}
          * [帳戶](./schema/healthcare/field-groups/account.md)
          * [約會](./schema/healthcare/field-groups/appointment.md)
          * [服務計畫](./schema/healthcare/field-groups/care-plan.md)
@@ -48,7 +48,7 @@ ht-degree: 45%
          * [患者](./schema/healthcare/field-groups/patient.md)
          * [實踐者](./schema/healthcare/field-groups/practioner.md)
          * [排程](./schema/healthcare/field-groups/schedule.md)
-      * 資料型別{#data-types}
+      * 資料類型 {#data-types}
          * [地址](./schema/healthcare/data-types/address.md)
          * [註解](./schema/healthcare/data-types/annotation.md)
          * [可用性](./schema/healthcare/data-types/availability.md)
@@ -84,7 +84,7 @@ ht-degree: 45%
    * [潛在客戶](./classes/prospect.md)
    * [提供者](./classes/provider.md)
    * [區段定義](./classes/segment-definition.md)
-   * B2B類別{#b2b}
+   * B2B 類別 {#b2b}
       * [XDM 企業帳戶](./classes/b2b/business-account.md)
       * [XDM 商業帳戶個人關係](./classes/b2b/business-account-person-relation.md)
       * [XDM 商業活動](./classes/b2b/business-campaign.md)
@@ -93,8 +93,8 @@ ht-degree: 45%
       * [XDM 商業機會個人關係](./classes/b2b/business-opportunity-person-relation.md)
       * [XDM 業務行銷清單](./classes/b2b/business-marketing-list.md)
       * [XDM 業務行銷清單會員](./classes/b2b/business-marketing-list-members.md)
-* 欄位群組{#field-groups}
-   * XDM個別設定檔{#profile}
+* 欄位群組 {#field-groups}
+   * XDM 個人輪廓 {#profile}
       * [同意和偏好設定](./field-groups/profile/consents.md)
       * [人口統計細節](./field-groups/profile/demographic-details.md)
       * [醫療保健會員詳細資訊](./field-groups/profile/healthcare-member-details.md)
@@ -108,10 +108,11 @@ ht-degree: 45%
       * [工作聯絡詳細資訊](./field-groups/profile/work-contact-details.md)
       * [XDM 商業人士要素](./field-groups/profile/business-person-components.md)
       * [XDM 商業人士細節](./field-groups/profile/business-person-details.md)
-   * XDM個別潛在客戶設定檔{#prospect-profile}
+   * XDM個別潛在客戶設定檔 {#prospect-profile}
       * [合作夥伴潛在客戶詳細資訊（範例）](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics完整擴充功能](./field-groups/event/analytics-full-extension.md)
+      * [Adobe Advertising Cloud完整擴充功能](./field-groups/event/advertising-full-extension.md)
       * [廣告細節](./field-groups/event/advertising-details.md)
       * [應用程式詳細資料](./field-groups/event/application-details.md)
       * [餘額轉帳](./field-groups/event/balance-transfers.md)
@@ -136,23 +137,23 @@ ht-degree: 45%
       * [升級細節](./field-groups/event/upgrade-details.md)
       * [追加銷售細節](./field-groups/event/upsell-details.md)
       * [網頁詳細資訊](./field-groups/event/web-details.md)
-   * XDM商業活動{#b2b-campaign}
+   * XDM 商業活動 {#b2b-campaign}
       * [XDM 商業促銷活動細節](./field-groups/b2b-campaign/details.md)
-   * XDM商業活動會員{#b2b-campaign-members}
+   * XDM 商業活動會員 {#b2b-campaign-members}
       * [XDM商業活動會員細節](./field-groups/b2b-campaign-members/details.md)
-   * 藥物{#medication}
+   * 藥物 {#medication}
       * [醫療保健藥物](./field-groups/medication/healthcare-medication.md)
-   * 計畫{#plan}
+   * 計畫 {#plan}
       * [醫療保健計畫詳細資料](./field-groups/plan/healthcare-plan-details.md)
-   * 產品{#product}
+   * 產品 {#product}
       * [產品目錄](./field-groups/product/product-catalog.md)
       * [產品類別](./field-groups/product/product-category.md)
-   * 提供者{#provider}
+   * 提供者 {#provider}
       * [醫療保健提供者](./field-groups/provider/healthcare-provider.md)
-   * 已共用{#shared}
+   * 已共用 {#shared}
       * [外部來源系統稽核詳細資料](./field-groups/shared/external-source-system-audit-details.md)
    * [欄位群組名稱更新](./field-groups/name-updates.md)
-* 資料型別{#data-types}
+* 資料類型 {#data-types}
    * [帳戶詳細資料](./data-types/account-details.md)
    * [廣告插播](./data-types/ad-break.md)
    * [地址](./data-types/address.md)
@@ -203,7 +204,7 @@ ht-degree: 45%
    * [媒體收集詳細資料](./data-types/media-collection-details.md)
    * [媒體事件資訊](./data-types/media-event-information.md)
    * [媒體報告細節](./data-types/media-reporting-details.md)
-   * [順序](./data-types/order.md)
+   * [訂單](./data-types/order.md)
    * [POI詳細資料](./data-types/poi-details.md)
    * [POI互動](./data-types/poi-interaction.md)
    * [付款項目](./data-types/payment-item.md)
@@ -233,12 +234,12 @@ ht-degree: 45%
 * [!UICONTROL 結構描述] UI {#ui}
    * [概觀](./ui/overview.md)
    * [探索XDM資源](./ui/explore.md)
-   * 建立和編輯資源{#resources}
+   * 建立和編輯資源 {#resources}
       * [結構描述](./ui/resources/schemas.md)
       * [類別](./ui/resources/classes.md)
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
-   * 定義欄位{#fields}
+   * 定義欄位 {#fields}
       * [概觀](./ui/fields/overview.md)
       * [陣列欄位](./ui/fields/array.md)
       * [列舉欄位](./ui/fields/enum.md)
