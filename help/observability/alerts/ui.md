@@ -4,10 +4,10 @@ title: 警報UI指南
 description: 瞭解如何在Experience Platform使用者介面中管理警報。
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 57261ca37bf10e394f47ea4bb3c01856a18b197d
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 7%
+source-wordcount: '814'
+ht-degree: 8%
 
 ---
 
@@ -29,11 +29,11 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ![可用的警示清單會顯示在[!UICONTROL 瀏覽]索引標籤中。](../images/alerts/ui/rules.png)
 
-從清單中選取規則，即可在右側邊欄中檢視其說明和設定引數，包括臨界值和嚴重度。
+從清單中選取規則，以在右側邊欄中檢視其說明及其設定引數，包括臨界值和嚴重性。
 
-![在右側邊欄顯示詳細資訊的醒目提示規則。](../images/alerts/ui/rule-details.png)
+![醒目提示的警示規則，在右側邊欄中顯示詳細資料。](../images/alerts/ui/rule-details.png)
 
-選取規則名稱旁邊的省略符號(**...**)，下拉式清單會顯示啟用或停用警示（視其目前狀態而定）以及訂閱或取消訂閱警示電子郵件通知的控制項。
+選取規則名稱旁的省略符號 （**...**），下拉式清單會顯示控制項，以啟用或停用警示 （視其目前狀態而定），以及訂閱或取消訂閱警示的電子郵件通知。
 
 ![選取的省略符號會顯示下拉式功能表。](../images/alerts/ui/disable-subscribe.png)
 
@@ -69,15 +69,15 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ## 啟用電子郵件警示 {#enable-email}
 
-警示通知可以直接傳送到您的電子郵件。
+警報通知可以直接發送到您的電子郵件。
 
-選取位於右上角功能區的鈴鐺圖示（![鈴鐺圖示](/help/images/icons/bell.png)）以顯示通知和公告。 在出現的下拉式清單中，選取Cog圖示（![Cog圖示](/help/images/icons/settings.png)）以存取Experience Cloud偏好設定頁面。
+選取位於右側頂端功能區中的鈴鐺圖示 （![鈴鐺圖示](/help/images/icons/bell.png)） 以顯示通知和公告。 在顯示的下拉式清單中，選取齒輪圖示 （![齒輪圖示](/help/images/icons/settings.png)） 以存取 Experience Cloud 偏好設定頁面。
 
-![醒目提示鈴鐺圖示和齒輪圖示的警示清單。](../images/alerts/ui/edit-preferences.png)
+![顯示的警示清單，醒目提示鈴鐺圖示和齒輪圖示。](../images/alerts/ui/edit-preferences.png)
 
-顯示&#x200B;**設定檔**&#x200B;頁面。 選取左側導覽中的&#x200B;**[!UICONTROL 通知]**&#x200B;以存取電子郵件警示偏好設定。
+隨即顯示 [設定檔] **** 頁面。選取 **[!UICONTROL 左側導覽中的 通知]** 以存取電子郵件警示偏好設定。
 
-![設定檔頁面在左側導覽中醒目提示[!UICONTROL 通知]。](../images/alerts/ui/profile.png)
+![在左側導覽中醒目提示 [!UICONTROL 的「設定檔] 」頁面。](../images/alerts/ui/profile.png)
 
 捲動至頁面底部的&#x200B;**電子郵件**&#x200B;區段，並選取&#x200B;**[!UICONTROL 即時通知]**
 
@@ -96,10 +96,12 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 | 目的地流程執行延遲 | 延遲臨界值 |
 | 身分識別服務資料流執行延遲 | 延遲臨界值 |
 | 輪廓資料流執行延遲 | 延遲臨界值 |
+| 超出輪廓串流攝取失敗率 | 錯誤臨界值 |
+| 已超過設定檔串流擷取略過率 | 錯誤臨界值 |
 | 來源資料流執行延遲 | 延遲臨界值 |
+| 超出來源攝取錯誤率 | 錯誤臨界值 |
 | 查詢執行延遲 | 延遲臨界值 |
 | 超出啟用略過率 | 錯誤臨界值 |
-| 超出來源攝取錯誤率 | 錯誤臨界值 |
 
 選取規則名稱旁邊的省略符號(**...**)，下拉式清單會顯示控制項。 選取&#x200B;**[!UICONTROL 編輯]**。
 
@@ -109,11 +111,11 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ![自訂警示頁面醒目提示[!UICONTROL 閾值]和[!UICONTROL 確認]選項。](../images/alerts/ui/threshold-update.png)
 
-您返回到&#x200B;**[!UICONTROL 警示]**&#x200B;頁面。 若要檢視警示的臨界值設定，請從清單中選取規則。 您可以在右側邊欄中看到警報的臨界值設定，包括狀態和嚴重度等詳細資訊。
+您會回到警示&#x200B;****&#x200B;頁面。若要檢視警示的臨界值設定，請從清單中選取規則。 您可以在右側邊欄中看到警示的臨界值設定，包括狀態和嚴重性等詳細資料。
 
-![醒目提示的警示會在右側邊欄顯示詳細資料，並醒目提示[!UICONTROL 臨界值]。](../images/alerts/ui/threshold-view.png)
+![醒目提示，在右側邊欄中顯示詳細資料，並醒 [!UICONTROL 目提示 臨界值]。](../images/alerts/ui/threshold-view.png)
 
-## 檢視警示歷史記錄 {#alert-history}
+## 檢視警示歷程記錄 {#alert-history}
 
 **[!UICONTROL 歷史記錄]**&#x200B;索引標籤顯示貴組織收到警示的歷史記錄，包括觸發警示、觸發日期和解決日期（如果適用）的規則。
 
