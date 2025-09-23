@@ -1,16 +1,20 @@
 ---
 title: 使用流量服務API連線Capillity至Experience Platform
 description: 瞭解如何使用API將Capillity連線至Experience Platform。
-hide: true
-hidefromtoc: true
-source-git-commit: 7119ca51e0a4db09c8adb68bcde41ab3837439d1
+badge: Beta
+exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 1%
+source-wordcount: '1150'
+ht-degree: 2%
 
 ---
 
 # 使用[!DNL Capillary Streaming Events] API連線[!DNL Flow Service]至Experience Platform
+
+>[!AVAILABILITY]
+>
+>[!DNL Capillary Streaming Events]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
 閱讀本指南，瞭解如何使用[!DNL Capillary Streaming Events]和[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)，將資料從您的[!DNL Capillary]帳戶串流至Adobe Experience Platform。
 
@@ -39,7 +43,7 @@ ht-degree: 1%
 4. 建立&#x200B;**目標連線**&#x200B;以確保您的資料登陸到資料湖。
 5. 使用「資料準備」建立對應，將您的[!DNL Capillary]來源欄位對應到正確的XDM欄位。
 6. 使用您的`sourceConnectionId`、`targetConnectionId`和`mappingID`建立資料流
-7. 使用單一範例設定檔/交易事件進行eTest以驗證您的資料流。
+7. 使用單一範例設定檔/交易事件進行測試，以驗證您的資料流。
 
 >[!ENDSHADEBOX]
 
@@ -230,9 +234,9 @@ curl -X POST \
 
 >[!ENDTABS]
 
-### 支援的事件
+<!--### Supported Events
 
-[!DNL Capillary]來源支援下列事件：
+The [!DNL Capillary] source supports the following events:
 
 * `pointsIssued`
 * `tierDowngraded`
@@ -247,8 +251,7 @@ curl -X POST \
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### 歷史資料移轉
 
@@ -319,11 +322,15 @@ curl -X POST \
 
 | 來源結構描述 | 目標結構描述 |
 |------------------------------|-------------------------------|
-| `identityMap.email.id` | `xdm:identityMap.email` |
-| `loyalty.points` | `xdm:loyaltyPoints` |
-| `loyalty.tier` | `xdm:loyaltyTier` |
+| `identityMap.email.id` | `xdm:identityMap.email[0].id` |
+| `loyalty.points` | `xdm:loyalty.points` |
+| `loyalty.tier` | `xdm:loyalty.tier` |
 | `commerce.order.priceTotal` | `xdm:commerce.order.priceTotal` |
 | `productLineItems.SKU` | `xdm:productListItems.SKU` |
+
+>[!TIP]
+>
+>當您準備好對應您的資料時，可以下載[和](../../../../images/tutorials/create/capillary/mappings.zip)的[!DNL Capillary]事件和設定檔對應[將檔案匯入到「資料準備」](../../../../../data-prep/ui/mapping.md#import-mapping)。
 
 ### 建立資料流 {#flow}
 

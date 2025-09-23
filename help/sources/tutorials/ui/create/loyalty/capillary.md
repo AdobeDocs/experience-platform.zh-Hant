@@ -1,16 +1,20 @@
 ---
 title: 使用UI將Capillary連線至Experience Platform
 description: 瞭解如何使用UI將Capillity連線至Experience Platform
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+badge: Beta
+exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '827'
 ht-degree: 5%
 
 ---
 
-# 使用UI連線[!DNL Capillary]至Experience Platform
+# 使用UI連線[!DNL Capillary Streaming Events]至Experience Platform
+
+>[!AVAILABILITY]
+>
+>[!DNL Capillary Streaming Events]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
 閱讀本指南，瞭解如何使用Experience Platform使用者介面中的來源工作區將您的[!DNL Capillary]資料庫連線至Adobe Experience Platform。
 
@@ -74,19 +78,23 @@ ht-degree: 5%
 | --- | --- |
 | 資料流名稱 | 資料流的名稱。  依預設，這將使用正在匯入的檔案名稱。 |
 | 說明 | （選用）資料流的簡短說明。 |
-| 警報 | Experience Platform可產生使用者可訂閱的事件型警報，這些選項都是執行中的資料流以觸發這些警報。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
+| 警報 | Experience Platform可產生使用者可訂閱的事件型警報，這些選項可讓執行中的資料流觸發這些警報。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 對應
 
-在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。  如需詳細資訊，請閱讀UI[中的](../../../../../data-prep/ui/mapping.md)對應指南。
+在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。 如需詳細資訊，請閱讀UI[中的](../../../../../data-prep/ui/mapping.md)對應指南。
+
+>[!TIP]
+>
+>當您準備好對應您的資料時，可以下載[和](../../../../images/tutorials/create/capillary/mappings.zip)的[!DNL Capillary]事件和設定檔對應[將檔案匯入到「資料準備」](../../../../../data-prep/ui/mapping.md#import-mapping)。
 
 ![毛細管的對應介面。](../../../../images/tutorials/create/capillary/mappings.png)
 
 ## 審閱
 
-*[!UICONTROL 檢閱]*&#x200B;步驟隨即顯示，可讓您在建立資料流之前先檢閱資料流的詳細資訊。 詳細資料分為以下類別：
+*[!UICONTROL 檢閱]*&#x200B;步驟隨即顯示，可讓您在建立資料流之前先檢閱資料流的詳細資訊。 詳細資料會分組到以下類別中：
 
 * **[!UICONTROL 連線]**：顯示帳戶名稱、來源平台和來源名稱。
 * **[!UICONTROL 指派資料集和對應欄位]**：顯示目標資料集和資料集所遵守的結構描述。

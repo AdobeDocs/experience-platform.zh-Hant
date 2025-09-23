@@ -1,16 +1,21 @@
 ---
 title: Capillary Streaming Events概述
 description: 瞭解如何將資料從Capillary串流至Experience Platform。
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+last-substantial-update: 2025-09-23T00:00:00Z
+badge: Beta
+exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '295'
 ht-degree: 4%
 
 ---
 
 # [!DNL Capillary Streaming Events]
+
+>[!AVAILABILITY]
+>
+>[!DNL Capillary Streaming Events]來源是測試版。 閱讀來源概觀中的[條款與條件](../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
 [!DNL Capillary Technologies]是領先的忠誠度和參與平台，受到全球300多個品牌的信任。 使用[!DNL Capillary Streaming Events]來源讓您的企業可以順暢地從[!DNL Capillary]將客戶設定檔、忠誠度資料和交易事件串流到Adobe Experience Platform。 連線您的[!DNL Capillary]來源以啟用即時個人化、進階對象細分和全通路行銷活動策劃。
 
