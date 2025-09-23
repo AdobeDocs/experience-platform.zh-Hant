@@ -3,10 +3,10 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
 workflow-type: tm+mt
-source-wordcount: '2219'
-ht-degree: 3%
+source-wordcount: '1990'
+ht-degree: 4%
 
 ---
 
@@ -38,43 +38,15 @@ ht-degree: 3%
 
 ![設定檔儀表板已顯示。](../../dashboards/images/profiles/dashboard-overview.png)
 
-## [!UICONTROL 瀏覽]索引標籤量度
+## [!UICONTROL 瀏覽]索引標籤
 
-選取「**[!UICONTROL 瀏覽]**」標籤，以顯示與您組織設定檔資料相關的數個量度。 您也可以使用此標籤來瀏覽使用合併原則或身分的設定檔存放區，如本指南下一節所述。
+在&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤上，您可以選取切換按鈕，在&#x200B;**卡片**&#x200B;檢視或&#x200B;**圖形**&#x200B;檢視中檢視您的設定檔。
 
-**[!UICONTROL 瀏覽]**&#x200B;索引標籤的右側是[設定檔計數](#profile-count)，以及依名稱空間[列出的](#profiles-by-namespace)設定檔。
+![卡片與圖表檢視切換會反白顯示。](../images/user-guide/card-graph-view.png)
 
->[!NOTE]
->
->這些設定檔量度可能與[設定檔儀表板](#profile-dashboard)上顯示的量度不同，因為它們是使用您組織的預設合併原則來評估。 如需有關使用合併原則的詳細資訊，包括如何定義預設的合併原則，請參閱[合併原則概觀](../merge-policies/overview.md)。
+此外，您可以使用合併原則來瀏覽設定檔，或使用身分名稱空間和值來查詢特定設定檔。
 
-除了這些量度之外，本節還提供上次更新日期和時間，以顯示上次評估量度的時間。
-
-![設定檔量度會顯示並反白顯示。](../images/user-guide/browse-metrics.png)
-
-### 設定檔計數 {#profile-count}
-
-在您組織的預設合併原則已與設定檔片段合併，以針對每個個別客戶形成單一設定檔後，設定檔計數會顯示貴組織在Experience Platform中的設定檔總數。 換言之，您的組織可能擁有與單一客戶相關的多個設定檔片段，該客戶會跨不同管道與您的品牌互動，但這些片段會合併在一起（根據預設合併原則），且會傳回「1」設定檔計數，因為這些片段都與同一個人相關。
-
-設定檔計數也包含具有屬性的設定檔（記錄資料），以及僅包含時間序列（事件）資料(例如Adobe Analytics設定檔)的設定檔。 設定檔計數會定期更新，以提供Experience Platform中最新的設定檔總數。
-
-#### 更新設定檔計數量度
-
-當將記錄擷取至[!DNL Profile]存放區增加或減少計數超過3%時，就會觸發工作以更新計數。 對於串流資料工作流程，會每小時進行一次檢查，以判斷是否符合增加或減少3%的臨界值。 如果有，則會自動觸發工作以更新設定檔計數。 對於批次擷取，在成功將批次擷取到設定檔存放區後15分鐘內，如果符合3%增加或減少臨界值，則會執行工作以更新設定檔計數。
-
-### [!UICONTROL 依名稱空間區分的設定檔] {#profiles-by-namespace}
-
-依名稱空間&#x200B;**[!UICONTROL 的]**&#x200B;設定檔量度會顯示您的設定檔存放區中所有合併設定檔的名稱空間總數和劃分。 依名稱空間區分的設定檔總數（也就是將每個名稱空間顯示的值加在一起），一律會高於設定檔計數量度，因為一個設定檔可能會有多個相關聯的名稱空間。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。
-
-#### 正在依名稱空間[!UICONTROL 量度更新]設定檔
-
-與[設定檔計數](#profile-count)量度類似，當記錄擷取至[!DNL Profile]存放區增加或減少計數超過5%時，就會觸發工作以更新名稱空間量度。 對於串流資料工作流程，會每小時進行一次檢查，以判斷是否符合增加或減少5%的臨界值。 如果有，則會自動觸發工作以更新設定檔計數。 對於批次擷取，在成功將批次擷取到[!DNL Profile]存放區後15分鐘內，如果符合5%的增加或減少臨界值，則會執行工作以更新量度。
-
-## 使用[!UICONTROL 瀏覽]索引標籤檢視設定檔
-
-在&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤上，您可以使用合併原則來檢視範例設定檔，或使用身分名稱空間和值來查詢特定設定檔。
-
-![顯示屬於組織的設定檔。](../images/user-guide/none-selected.png)
+![顯示屬於組織的設定檔。](../images/user-guide/profile-browse.png)
 
 ### 依[!UICONTROL 合併原則]瀏覽
 
@@ -94,7 +66,7 @@ ht-degree: 3%
 
 若要檢視其中一個範例設定檔的詳細資料，請選取&#x200B;**[!UICONTROL 設定檔識別碼]**。 如需詳細資訊，請參閱本指南稍後關於[檢視設定檔詳細資料](#profile-detail)的章節。
 
-![顯示符合合併原則的範例設定檔。](../images/user-guide/sample-profiles.png)
+![顯示符合合併原則的範例設定檔。](../images/user-guide/profile-browse-table.png)
 
 若要進一步瞭解合併原則及其在Experience Platform中的角色，請參閱[合併原則概觀](../merge-policies/overview.md)。
 
@@ -120,13 +92,13 @@ ht-degree: 3%
 >
 >此值專屬於個別客戶設定檔，且必須是所提供名稱空間的有效專案。 例如，選取身分名稱空間「電子郵件」需要有效電子郵件地址形式的身分值。
 
-![您要篩選的身分值已反白顯示。](../images/user-guide/filter-identity-value.png)
+![您要篩選的身分值已反白顯示。](../images/user-guide/browse-identity.png)
 
-輸入值之後，選取&#x200B;**[!UICONTROL 檢視]**&#x200B;並傳回符合值的單一設定檔。 選取&#x200B;**[!UICONTROL 設定檔識別碼]**&#x200B;以檢視設定檔詳細資料。
+輸入值之後，選取&#x200B;**[!UICONTROL 檢視]**&#x200B;並傳回符合值的單一設定檔。 選取&#x200B;**[!UICONTROL 設定檔識別碼]**&#x200B;以檢視設定檔。
 
 ![符合身分值的設定檔會反白顯示。](../images/user-guide/filtered-identity-value.png)
 
-## 檢視設定檔詳細資訊 {#profile-detail}
+## 檢視設定檔 {#view-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
@@ -135,17 +107,55 @@ ht-degree: 3%
 
 選取&#x200B;**[!UICONTROL 設定檔識別碼]**&#x200B;後，**[!UICONTROL 詳細資料]**&#x200B;索引標籤會開啟。 **[!UICONTROL 詳細資料]**&#x200B;標籤上顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成個別客戶的單一檢視。 這包括基本屬性、連結的身分和管道偏好設定等客戶細節。
 
+此外，您可以檢視有關設定檔的其他詳細資料，例如其[屬性](#attributes)、[事件](#events)和[對象會籍](#audience-membership)。
+
+### 詳細資訊標籤 {#profile-detail}
+
+**[!UICONTROL 詳細資料]**&#x200B;索引標籤提供有關所選設定檔的更多詳細資訊，並分為四個部分：客戶設定檔深入分析、AI insight Widget、可自訂的Widget和自動分類的Widget。
+
+![設定檔詳細資訊頁面已顯示。](../images/user-guide/profile-details.png)
+
+此外，您可以切換是否顯示AI產生的深入分析、顯示與邊緣比較的中樞詳細資訊，以及在圖形檢視中檢視詳細資訊。
+
+![上方列出的切換(AI產生的深入分析、Hub或Edge資料，以及卡片或圖表檢視)會醒目提示。](../images/user-guide/profile-toggles.png)
+
+#### 客戶輪廓深入分析 {#customer-profile-insights}
+
+**[!UICONTROL 客戶設定檔深入分析]**&#x200B;區段會顯示設定檔屬性的簡短簡介。 這包括設定檔ID、電子郵件、電話號碼、性別、出生日期，以及設定檔的身分和對象會籍。
+
+![顯示客戶設定檔深入分析區段。](../images/user-guide/customer-profile-insights.png)
+
+#### AI 洞察小工具 {#ai-insight-widgets}
+
+**[!UICONTROL AI insight Widget]**&#x200B;區段會顯示AI產生的小工具。 這些介面工具會根據設定檔資料，包括人口統計（例如年齡、性別或位置）、使用者行為（例如購買記錄、網站活動或社群媒體參與）以及心理變數（例如興趣、偏好或生活方式選擇），提供對設定檔的快速深入分析。 所有AI Widget都使用設定檔中已&#x200B;**存在**&#x200B;的資料。
+
+![顯示AI insight Widget區段。](../images/user-guide/ai-insight-widgets.png)
+
+#### 可自訂的小工具 {#customizable-widgets}
+
+**[!UICONTROL 可自訂的Widget]**&#x200B;區段會顯示您可自訂以符合業務需求的Widget。 您可以將屬性群組至個別的Widget、移除不要的Widget，或調整Widget的配置。
+
 顯示的預設欄位也可以在組織層級變更以顯示偏好的設定檔屬性。 若要深入瞭解如何自訂這些欄位，包括新增和移除屬性以及調整儀表板面板大小的逐步指示，請閱讀[設定檔詳細資料自訂指南](profile-customization.md)。
 
-![[詳細資料]索引標籤會反白顯示。 顯示設定檔詳細資料。](../images/user-guide/profile-detail-row-name.png)
+![顯示可自訂的Widget區段。](../images/user-guide/customizable-widgets.png)
 
 您也可以選擇在檢視屬性名稱作為其顯示名稱與其欄位路徑名稱之間切換。 若要在這兩個顯示之間切換，請選取&#x200B;**[!UICONTROL 顯示顯示名稱]**&#x200B;切換按鈕。
 
-![顯示名稱切換會反白顯示，顯示名稱會顯示在屬性下方。](../images/user-guide/profile-detail.png)
+![顯示名稱切換已反白顯示。](../images/user-guide/show-display-names.png)
 
-若要檢視與個別客戶設定檔相關的額外資訊，請選取其他任一可用頁標。 這些標籤包含屬性、事件和對象成員資格標籤，會顯示設定檔目前符合資格的對象。
+#### 自動分類的小工具 {#auto-classified-widgets}
 
-### 屬性標籤
+**[!UICONTROL 自動分類Widget]**&#x200B;區段顯示的Widget可運用聯合結構描述來判斷屬性所屬的來源欄位群組，提供更清楚的資料來源內容。 您可以使用搜尋列更輕鬆地在Widget中尋找關鍵字。
+
+這些Widget會結合事件資料（與體驗事件Widget）和屬性資料，好讓您可以統一檢視您的設定檔。 您可以使用這些Widget來探索設定檔資料的結構，以更妥善地建構您的[可自訂的Widget](#customizable-widgets)。
+
+>[!NOTE]
+>
+>如果有多個來源欄位群組，Widget只會使用&#x200B;**一個**&#x200B;可用選項。
+
+![顯示自動分類的Widget區段。](../images/user-guide/auto-classified-widgets.png)
+
+### 屬性標籤 {#attributes}
 
 **[!UICONTROL 屬性]**&#x200B;索引標籤提供清單檢視，在套用指定的合併原則之後，彙總與單一設定檔相關的所有屬性。
 
@@ -159,7 +169,7 @@ ht-degree: 3%
 
 如需邊緣設定檔的詳細資訊，請閱讀[邊緣設定檔檔案](../edge-profiles.md)。
 
-### 事件標籤
+### 事件標籤 {#events}
 
 **[!UICONTROL Events]**&#x200B;索引標籤包含來自與客戶相關聯的100個最新ExperienceEvents的資料。 此資料可能包括電子郵件開啟、購物車活動和頁面檢視。 為任何個別事件選取「**[!UICONTROL 檢視全部]**」，可提供額外的欄位和值做為事件的一部分擷取。
 
@@ -167,7 +177,7 @@ ht-degree: 3%
 
 ![[事件]索引標籤會反白顯示。 顯示設定檔事件。](../images/user-guide/events.png)
 
-### 對象成員資格標籤
+### 對象成員資格標籤 {#audience-membership}
 
 **[!UICONTROL 對象成員資格]**&#x200B;標籤會顯示清單，其中包含個別客戶設定檔目前所屬對象的名稱和說明。 當設定檔符合對象資格或過期時，此清單會自動更新。 設定檔目前符合資格的受眾總數會顯示在索引標籤的右側。
 
