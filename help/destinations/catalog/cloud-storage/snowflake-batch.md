@@ -1,24 +1,24 @@
 ---
-title: Snowflake串流連線
+title: Snowflake批次連線
 description: 使用私人清單將資料匯出至您的Snowflake帳戶。
 badgeBeta: label="Beta" type="Informative"
-exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+badgeUltimate: label="Ultimate" type="Positive"
+source-git-commit: 3500e5ba00727c6299331cff79c56a99009cfd37
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 5%
+source-wordcount: '1642'
+ht-degree: 3%
 
 ---
 
-# Snowflake串流連線 {#snowflake-destination}
+# Snowflake批次連線 {#snowflake-destination}
 
 >[!IMPORTANT]
 >
->此目標連接器為測試版，僅供精選客戶使用。如欲請求存取權，請和您的 Adobe 代表聯絡。
+>此目的地聯結器為測試版，僅供Real-Time CDP Ultimate客戶使用。 功能和檔案可能會有所變更。
 
 ## 概觀 {#overview}
 
-使用Snowflake目的地聯結器將資料匯出至Adobe的Snowflake執行個體，然後Adobe會透過[私人清單](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about)與您共用。
+使用此目的地，將對象資料傳送至Snowflake帳戶中的動態表格。 動態表格不需要實體資料復本，即可讓您存取資料。
 
 請閱讀下列章節，瞭解Snowflake目的地的運作方式，以及資料在Adobe和Snowflake之間的傳輸方式。
 
@@ -26,29 +26,35 @@ ht-degree: 5%
 
 此目的地使用[!DNL Snowflake]資料共用，這表示不會將任何資料實際匯出或傳輸至您自己的Snowflake執行個體。 Adobe會改為授予您在Adobe的Snowflake環境中託管之即時表格的唯讀存取權。 您可以直接從Snowflake帳戶查詢此共用表格，但您不是該表格的擁有者，且無法在指定的保留期間之後修改或保留該表格。 Adobe可完全管理共用表格的生命週期和結構。
 
-第一次從Adobe的Snowflake執行個體將資料分享給您的執行個體時，系統會提示您接受Adobe的私人清單。
+第一次從Adobe設定資料流至Snowflake帳戶後，系統會提示您接受來自Adobe的私人清單。
 
-![熒幕擷圖顯示Snowflake私人清單接受畫面](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![熒幕擷圖顯示Snowflake私人清單接受畫面](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
 
 ### 資料保留和存留時間(TTL) {#ttl}
 
-透過這項整合共用的所有資料都具有七天的固定存留時間(TTL)。 上次匯出七天後，無論資料流是否仍在作用中，共用表格都會自動過期且無法存取。 如果您需要保留資料超過7天，則必須在TTL到期之前，將內容複製到您自己的Snowflake執行個體中擁有的表格中。
+透過這項整合共用的所有資料都具有七天的固定存留時間(TTL)。 上次匯出後七天，無論資料流是否仍在作用中，動態表格都會自動過期且無法存取。 如果您需要保留資料超過7天，則必須在TTL到期之前，將內容複製到您自己的Snowflake執行個體中擁有的表格中。
+
+>[!IMPORTANT]
+>
+>刪除Experience Platform中的資料流會導致動態表格從您的Snowflake帳戶中消失。
 
 ### 對象更新行為 {#audience-update-behavior}
 
 如果您的對象是以[批次模式](../../../segmentation/methods/batch-segmentation.md)評估，則共用表格中的資料每24小時會重新整理一次。 這表示對象會籍的變更與這些變更反映在共用表格中之間，最多可能延遲24小時。
 
-### 增量匯出邏輯 {#incremental-export}
+### 批次資料共用邏輯 {#batch-data-sharing}
 
-當資料流首次針對對象執行時，會執行回填並共用所有目前符合資格的設定檔。 初次回填之後，共用表格只會反映漸進式更新。 這表示在對象中新增或移除的設定檔。 此方法可確保有效率的更新，並持續讓共用表格保持最新狀態。
+當資料流首次針對對象執行時，會執行回填並共用所有目前符合資格的設定檔。 在此初始回填之後，目的地會定期提供完整對象成員資格的快照。 每個快照都會取代共用表格中的先前資料，確保您一律可以看到對象的最新完整檢視，而不會有歷史資料。
 
 ## 串流與批次資料共用 {#batch-vs-streaming}
 
-Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](snowflake.md)和[Snowflake批次](../cloud-storage/snowflake-batch.md)。
+Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](/help/destinations/catalog/cloud-storage/snowflake.md)和[Snowflake批次](snowflake-batch.md)。
 
-下表會概述每種資料共用方法最適合的案例，協助您決定要使用哪個目的地。
+雖然這兩個目的地都會以零副本方式讓您存取Snowflake中的資料，但就每個聯結器的使用案例而言，還是有一些建議的最佳作法。
 
-|  | 需要時選擇[Snowflake批次](../cloud-storage/snowflake-batch.md) | 視需要選擇[Snowflake串流](snowflake.md) |
+下表會概述每種資料共用方法最適合的案例，協助您決定要使用哪個聯結器。
+
+|  | 需要時選擇[Snowflake批次](snowflake-batch.md) | 視需要選擇[Snowflake串流](/help/destinations/catalog/cloud-storage/snowflake.md) |
 |--------|-------------------|----------------------|
 | **更新頻率** | 定期快照 | 即時持續更新 |
 | **資料簡報** | 取代先前資料的完整受眾快照 | 根據設定檔變更的增量更新 |
@@ -56,26 +62,19 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 | **資料管理** | 一律檢視最新的完整快照 | 根據對象成員資格變更的增量更新 |
 | **範例情境** | 業務報告、資料分析、ML模型訓練 | 行銷活動隱藏、即時個人化 |
 
-如需批次資料共用的詳細資訊，請參閱[Snowflake批次連線](../cloud-storage/snowflake-batch.md)檔案。
+如需串流資料共用的詳細資訊，請參閱[Snowflake串流連線](../cloud-storage/snowflake.md)檔案。
 
 ## 使用案例 {#use-cases}
 
-串流資料共用適用於設定檔變更成員資格或其他屬性時，您需要立即更新的情況。 這對於需要即時回應的使用案例至關重要，例如：
+批次資料共用最適合您需要對象完整快照且不需要即時更新的情況，例如：
 
-* **行銷活動隱藏**：立即隱藏已執行特定動作（例如註冊服務或購買）之使用者的行銷活動
-* **即時個人化**：在設定檔屬性變更時（例如當使用者造訪網站、檢視產品頁面或將專案新增至購物車時），立即更新使用者體驗
-* **立即動作案例**：根據即時資料執行快速抑制和重新鎖定目標，以減少延遲，並確保行銷活動更相關且更及時
-* **效率與細微差別**：可快速回應使用者行為變更，讓行銷工作更有效率，更細微差別
-* **即時客戶歷程最佳化**：在區段會籍或設定檔屬性變更時，立即更新客戶體驗
+* **分析工作負載**：執行需要完整檢視對象成員資格的資料分析、報告或商業智慧工作時
+* **機器學習工作流程**：用於訓練ML模型或執行可受益於完整對象快照的預測性分析
+* **資料倉儲**：當您需要在自己的Snowflake執行個體中維護最新的對象資料復本時
+* **定期報告**：對於需要最新對象狀態而沒有歷史變更追蹤的定期業務報告
+* **ETL處理序**：需要以批次轉換或處理對象資料時
 
-串流資料共用會根據區段變更、身分對應變更或屬性變更提供持續更新，因此適合延遲嚴重且需要立即更新的情況。
-
-## 先決條件 {#prerequisites}
-
-設定Snowflake連線之前，請確定您符合下列先決條件：
-
-* 您有權存取[!DNL Snowflake]帳戶。
-* 您的Snowflake帳戶已訂閱私人清單。 您或您公司中擁有Snowflake帳戶管理員許可權的人員可以設定此專案。
+批次資料共用可提供完整的快照，簡化資料管理，無需手動管理增量更新或合併變更。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -88,6 +87,17 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 {style="table-layout:auto"}
 
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | ✓ | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
@@ -95,7 +105,7 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有[!DNL Snowflake]目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 批次]** | 此目的地會透過Snowflake資料共用提供完整對象會籍的定期快照。 每個快照都會取代先前的資料，確保您一律擁有對象的最新完整檢視。 |
 
 {style="table-layout:auto"}
 
@@ -109,20 +119,20 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**，並提供帳戶名稱，以及帳戶描述（選擇性）。
 
-![顯示如何驗證目的地](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)的範例熒幕擷圖
+![顯示如何驗證目的地](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)的範例熒幕擷圖
 
 ### 填寫目標詳細資料 {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_accountID"
+>id="platform_destinations_snowflake_batch_accountID"
 >title="輸入您的 Snowflake 帳戶 ID"
 >abstract="如果您的帳戶已連結到組織，請使用此格式：`OrganizationName.AccountName`<br><br> 如果您的帳戶未連結到組織，請使用此格式：`AccountName`"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![顯示如何填寫目的地詳細資料的熒幕擷圖範例](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![顯示如何填寫目的地詳細資料的熒幕擷圖範例](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
@@ -148,19 +158,37 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
-閱讀[將設定檔和對象啟用至串流對象匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)，以瞭解啟用此目的地對象的指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](/help/destinations/ui/activate-batch-profile-destinations.md)，以取得啟用此目的地對象的指示。
 
 ### 對應屬性 {#map}
 
-Snowflake目的地支援將設定檔屬性對應至自訂屬性。
+您可以將身分和設定檔屬性匯出至此目的地。
 
-![Experience Platform使用者介面影像，顯示Snowflake目的地的對應畫面。](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Experience Platform使用者介面影像，顯示Snowflake目的地的對應畫面。](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png)
+
+您可以使用[計算欄位控制項](../../ui/data-transformations-calculated-fields.md)來匯出及執行陣列上的作業。
 
 系統會自動使用您在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中提供的屬性名稱，在Snowflake中建立目標屬性。
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
-請檢查您的Snowflake帳戶，確認資料已正確匯出。
+資料會透過動態表格分段至您的Snowflake帳戶。 請檢查您的Snowflake帳戶，確認資料已正確匯出。
+
+### 資料結構 {#data-structure}
+
+動態表格包含下列資料欄：
+
+* **TS**：代表每個資料列上次更新的時間戳記資料行
+* **對應屬性**：您在啟動工作流程期間選取的每個對應屬性都會在Snowflake中以欄標題表示
+* **對象成員資格**：對應到資料流的任何對象成員資格會透過對應儲存格中的`active`專案表示
+
+![熒幕擷圖顯示具有動態資料表資料的Snowflake介面](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
+
+## 已知限制 {#known-limitations}
+
+### 多重合併原則
+
+單一資料流不支援具有多個合併原則的對象。 不同的合併原則會產生不同的快照，實際上，與某個對象相關的資料會被來自另一個對象的資料覆寫，而不是兩者都按預期匯出的資料。
 
 ## 資料使用與控管 {#data-usage-governance}
 
