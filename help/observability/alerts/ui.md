@@ -75,7 +75,7 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ![顯示的警示清單，醒目提示鈴鐺圖示和齒輪圖示。](../images/alerts/ui/edit-preferences.png)
 
-隨即顯示 [設定檔] **** 頁面。選取 **[!UICONTROL 左側導覽中的 通知]** 以存取電子郵件警示偏好設定。
+隨即顯示 [設定檔] **&#x200B;**&#x200B;頁面。選取 **[!UICONTROL 左側導覽中的 通知]** 以存取電子郵件警示偏好設定。
 
 ![在左側導覽中醒目提示 [!UICONTROL 的「設定檔] 」頁面。](../images/alerts/ui/profile.png)
 
@@ -111,7 +111,7 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ![自訂警示頁面醒目提示[!UICONTROL 閾值]和[!UICONTROL 確認]選項。](../images/alerts/ui/threshold-update.png)
 
-您會回到警示&#x200B;****&#x200B;頁面。若要檢視警示的臨界值設定，請從清單中選取規則。 您可以在右側邊欄中看到警示的臨界值設定，包括狀態和嚴重性等詳細資料。
+您會回到警示&#x200B;**&#x200B;**&#x200B;頁面。若要檢視警示的臨界值設定，請從清單中選取規則。 您可以在右側邊欄中看到警示的臨界值設定，包括狀態和嚴重性等詳細資料。
 
 ![醒目提示，在右側邊欄中顯示詳細資料，並醒 [!UICONTROL 目提示 臨界值]。](../images/alerts/ui/threshold-view.png)
 
