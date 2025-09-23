@@ -1,21 +1,15 @@
 ---
 title: Acxiom 潛在客戶資料匯入
 description: 了解如何使用 UI 將 Acxiom 潛在客戶資料連接到 Adobe Experience Platform 和 Adobe Real-Time Customer Data Platform。
-last-substantial-update: 2024-02-21T00:00:00Z
-badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1844'
 ht-degree: 5%
 
 ---
 
 # 在UI中建立[!DNL Acxiom Prospecting Data Import]來源連線和資料流
-
->[!NOTE]
->
->[!DNL Acxiom Prospecting Data Import]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
 [!DNL Acxiom]針對Adobe Real-Time Customer Data Platform的潛在客戶資料匯入是提供儘可能有效率潛在客戶對象的程式。 [!DNL Acxiom]透過安全匯出取得Real-Time CDP第一方資料，並透過獲獎的衛生和身分解析系統執行該資料。 這會產生資料檔案，以用作隱藏清單。 然後，此資料檔案會與「Acxiom全域」資料庫進行比對，如此即可針對匯入量身打造潛在客戶清單。
 
@@ -141,11 +135,11 @@ ht-degree: 5%
 | --- | --- |
 | 資料流名稱 | 資料流的名稱。  依預設，這將使用正在匯入的檔案名稱。 |
 | 說明 | （選用）資料流的簡短說明。 |
-| 警示 | Experience Platform可產生使用者可訂閱的事件型警報，這些選項都是執行中的資料流以觸發這些警報。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
+| 警報 | Experience Platform可產生使用者可訂閱的事件型警報，這些選項都是執行中的資料流以觸發這些警報。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
 
 ## 對應
 
-在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。  如需詳細資訊，請閱讀UI[&#128279;](../../../../../data-prep/ui/mapping.md)中的對應指南
+在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。  如需詳細資訊，請閱讀UI[中的](../../../../../data-prep/ui/mapping.md)對應指南
 
 ![對應介面。](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
@@ -179,7 +173,7 @@ ht-degree: 5%
 
 ### 監視資料流
 
-建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI[&#128279;](../../monitor.md)中監視帳戶和資料流的教學課程。
+建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI[中](../../monitor.md)監視帳戶和資料流的教學課程。
 
 ### 更新您的資料流
 
@@ -187,7 +181,7 @@ ht-degree: 5%
 
 ### 刪除您的資料流
 
-您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[&#128279;](../../delete.md)中刪除資料流。
+您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[中刪除資料流](../../delete.md)。
 
 ## 其他資源 {#additional-resources}
 

@@ -1,22 +1,17 @@
 ---
 title: Acxiom 資料內嵌
-description: 瞭解如何將 [!DNL Acxiom] 資料擷取至Real-time Customer Data Platform、豐富第一方設定檔，以及改善對象和跨行銷管道啟用。
-badge: Beta
+description: 瞭解如何將 [!DNL Acxiom] 資料擷取至Real-Time Customer Data Platform、豐富第一方設定檔，以及改善對象和跨行銷管道啟用。
 exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 2%
+source-wordcount: '461'
+ht-degree: 1%
 
 ---
 
 # [!DNL Acxiom Data Ingestion]
 
->[!NOTE]
->
->[!DNL Acxiom Prospecting Data Import]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
-
-使用[!DNL Acxiom Data Ingestion]來源將[!DNL Acxiom]資料擷取至Real-time Customer Data Platform並擴充第一方設定檔。 接著，您可以使用富[!DNL Acxiom]的第一方設定檔來改善對象，並跨行銷管道啟用。
+使用[!DNL Acxiom Data Ingestion]來源將[!DNL Acxiom]資料擷取至Real-Time Customer Data Platform並擴充第一方設定檔。 接著，您可以使用富[!DNL Acxiom]的第一方設定檔來改善對象，並跨行銷管道啟用。
 
 ![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
@@ -24,7 +19,7 @@ ht-degree: 2%
 
 ## 先決條件 {#prerequisites}
 
-為了將您的[!DNL Acxiom Data Ingestion]帳戶連線到Experience Platform，您必須提供下列驗證認證的值：
+若要將您的[!DNL Acxiom Data Ingestion]帳戶連線至Experience Platform，您必須提供下列驗證認證的值：
 
 | 認證 | 說明 |
 | --- | --- |
@@ -35,9 +30,9 @@ ht-degree: 2%
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+您必須先將您所在地區的必要IP位址新增至允許清單，才能使用來源聯結器。 如果您未新增這些IP位址，來源聯結器可能會無法正常運作或產生錯誤。 如需詳細指示及允許的IP位址清單，請閱讀[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-### 設定Experience Platform的許可權
+### 在Experience Platform上設定許可權
 
 您必須同時為您的帳戶啟用&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;許可權，才能將您的[!DNL Acxiom Data Ingestion]帳戶連線至Experience Platform。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀[存取控制UI指南](../../../access-control/ui/overview.md)。
 
@@ -54,4 +49,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-閱讀本檔案後，您已完成將[!DNL Acxiom]帳戶中的資料帶入Experience Platform所需的先決條件設定。 您現在可以在[使用使用者介面](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md)連線 [!DNL Acxiom Data Ingestion] 以Experience Platform時繼續參閱指南。
+閱讀本檔案後，您已完成所需的先決條件設定，以將資料從[!DNL Acxiom]帳戶帶入Experience Platform。 您現在可以使用使用者介面[在 [!DNL Acxiom Data Ingestion] 連線](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md)至Experience Platform時繼續參閱指南。

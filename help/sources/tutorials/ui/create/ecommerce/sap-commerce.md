@@ -1,20 +1,15 @@
 ---
 title: 在使用者介面中建立SAP Commerce來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立SAP Commerce來源連線。
-badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '959'
 ht-degree: 2%
 
 ---
 
 # 在使用者介面中建立[!DNL SAP Commerce]來源連線
-
->[!NOTE]
->
->[!DNL SAP Commerce]來源是測試版。 如需使用Beta版標示來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
 下列教學課程會逐步引導您完成建立[!DNL SAP Commerce]來源連線的步驟，以使用Adobe Experience Platform使用者介面匯入[[!DNL SAP] 訂閱帳單](https://www.sap.com/products/financial-management/subscription-billing.html)聯絡人和客戶資料。
 
@@ -155,7 +150,7 @@ ht-degree: 2%
 
 ### 現有帳戶 {#existing-account}
 
-若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL SAP Commerce]帳戶，然後選取[下一步] **以繼續。**
+若要使用現有帳戶，請選取您要用來建立新資料流的[!DNL SAP Commerce]帳戶，然後選取[下一步] **[!UICONTROL 以繼續。]**
 
 ![用於將SAP Commerce帳戶與現有帳戶連線的Experience Platform UI熒幕擷取畫面](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
@@ -208,7 +203,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 >[!TAB 客戶]
 
-針對客戶資料，[!DNL SAP Commerce]使用[!DNL SAP Business Partners] API的[客戶](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)和[客戶聯絡人關係](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts)端點來擷取資料
+針對客戶資料，[!DNL SAP Commerce]使用[ API的](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)客戶[和](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts)客戶聯絡人關係[!DNL SAP Business Partners]端點來擷取資料
 
 以下是為客戶資料的[!DNL SAP Commerce]資料流對應設定的範例：
 
@@ -232,7 +227,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 >[!TAB 連絡人]
 
-針對連絡人資料，[!DNL SAP Commerce]使用[!DNL SAP Business Partners] API的[連絡人](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)端點來擷取資料。
+針對連絡人資料，[!DNL SAP Commerce]使用[ API的](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)連絡人[!DNL SAP Business Partners]端點來擷取資料。
 
 下列是連絡人資料[!DNL SAP Commerce]資料流的對應設定範例：
 

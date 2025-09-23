@@ -1,26 +1,21 @@
 ---
 title: Acxiom 潛在客戶資料匯入
 description: 了解如何使用 UI 將 Acxiom 潛在客戶資料連接到 Adobe Experience Platform 和 Adobe Real-Time Customer Data Platform。
-badge: Beta
 exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '544'
 ht-degree: 5%
 
 ---
 
 # [!DNL Acxiom Prospecting Data Import]
 
->[!NOTE]
->
->[!DNL Acxiom Prospecting Data Import]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
-
 Adobe Experience Platform支援從資料合作夥伴應用程式擷取資料。 資料與身分識別合作夥伴的支援包括[!DNL Acxiom Prospecting Data Import]。
 
-[!DNL Acxiom]針對Adobe Real-time Customer Data Platform的潛在客戶資料匯入是提供儘可能有效率潛在客戶對象的程式。 [!DNL Acxiom]透過安全匯出取得Real-Time CDP第一方資料，並透過獲獎的衛生和身分解析系統執行該資料。 產生可用作隱藏清單的資料檔案。 然後，此資料檔案會與[!DNL Acxiom Global]資料庫進行比對，如此即可自訂潛在客戶清單以進行匯入。
+[!DNL Acxiom]針對Adobe Real-Time Customer Data Platform的潛在客戶資料匯入是提供儘可能有效率潛在客戶對象的程式。 [!DNL Acxiom]透過安全匯出取得Real-Time CDP第一方資料，並透過獲獎的衛生和身分解析系統執行該資料。 產生可用作隱藏清單的資料檔案。 然後，此資料檔案會與[!DNL Acxiom Global]資料庫進行比對，如此即可自訂潛在客戶清單以進行匯入。
 
-您可以使用[!DNL Acxiom]來源，以[!DNL Amazon S3]做為拖放點，從[!DNL Acxiom]潛在客戶服務擷取及對應回應。
+您可以使用[!DNL Acxiom]來源，以[!DNL Acxiom]做為拖放點，從[!DNL Amazon S3]潛在客戶服務擷取及對應回應。
 
 ![acxiom-propositing-workflow](../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/acxiom-prospecting.png)
 
@@ -39,9 +34,9 @@ Adobe Experience Platform支援從資料合作夥伴應用程式擷取資料。 
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+您必須先將您所在地區的必要IP位址新增至允許清單，才能使用來源聯結器。 如果您未新增這些IP位址，來源聯結器可能會無法正常運作或產生錯誤。 如需詳細指示及允許的IP位址清單，請閱讀[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-### 設定Experience Platform的許可權
+### 在Experience Platform上設定許可權
 
 您必須同時為您的帳戶啟用&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;許可權，才能將您的[!DNL Acxiom Prospecting Data Import]帳戶連線至Experience Platform。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀[存取控制UI指南](../../../access-control/abac/ui/permissions.md)。
 
@@ -58,4 +53,4 @@ Adobe Experience Platform支援從資料合作夥伴應用程式擷取資料。 
 
 ## 後續步驟
 
-閱讀本檔案後，您已完成將[!DNL Acxiom]帳戶中的資料帶入Experience Platform所需的先決條件設定。 您現在可以在[使用使用者介面](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)連線 [!DNL Acxiom Prospecting Data Import] 以Experience Platform時繼續參閱指南。
+閱讀本檔案後，您已完成所需的先決條件設定，以將資料從[!DNL Acxiom]帳戶帶入Experience Platform。 您現在可以使用使用者介面[在 [!DNL Acxiom Prospecting Data Import] 連線](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)至Experience Platform時繼續參閱指南。

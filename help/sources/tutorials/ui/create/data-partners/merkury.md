@@ -1,21 +1,15 @@
 ---
 title: 在UI中建立Merkury Enterprise Identity Resolution Source連線與資料流
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury企業身分識別來源連線。
-last-substantial-update: 2023-12=12
-badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2128'
 ht-degree: 1%
 
 ---
 
 # 在UI中建立[!DNL Merkury Enterprise Identity Resolution]來源連線和資料流
-
->[!NOTE]
->
->[!DNL Merkury Enterprise Identity Resolution]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
 本教學課程提供使用Adobe Experience Platform使用者介面建立[!DNL Merkury Enterprise Identity Resolution]來源連線和資料流的步驟。
 
@@ -145,7 +139,7 @@ ht-degree: 1%
 
 ### 啟用設定檔和錯誤診斷
 
-+++選取此選項可檢視步驟，以啟用錯誤診斷和設定檔擷取
++++選取以檢視步驟，以啟用錯誤診斷與設定檔擷取
 
 接著，選取「**[!UICONTROL 設定檔資料集]**」切換功能，啟用您的資料集以建立即時客戶設定檔。 這可讓您建立實體屬性和行為的整體檢視。 來自所有啟用設定檔的資料集的資料將會包含在設定檔中，當您儲存資料流時，將會套用變更。
 
@@ -155,7 +149,7 @@ ht-degree: 1%
 
 ### 啟用警示
 
-+++選取此選項可檢視啟用警示的步驟
++++選取以檢視啟用警示的步驟
 
 您可以啟用警報以接收有關資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱來源警示](../../alerts.md)的指南。
 
@@ -210,7 +204,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 * **[!UICONTROL 指派資料集與對應欄位]**：顯示要將來源資料擷取到哪個資料集，包括資料集所堅持的結構描述。
 * **[!UICONTROL 排程]**：顯示內嵌排程的有效期間、頻率和間隔。
 
-檢閱您的資料流後，請按一下[完成] **&#x200B;**，並等待一些時間來建立資料流。
+檢閱您的資料流後，請按一下[完成] ****，並等待一些時間來建立資料流。
 
 ![檢閱頁面。](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
 
@@ -220,7 +214,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 ### 監視資料流
 
-建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI[&#128279;](../../monitor.md)中監視帳戶和資料流的教學課程。
+建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI[中](../../monitor.md)監視帳戶和資料流的教學課程。
 
 ### 更新您的資料流
 
@@ -228,4 +222,4 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 ### 刪除您的資料流
 
-您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[&#128279;](../../delete.md)中刪除資料流。
+您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[中刪除資料流](../../delete.md)。

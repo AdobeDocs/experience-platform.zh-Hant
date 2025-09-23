@@ -1,21 +1,15 @@
 ---
 title: Merkury Enterprise Identity Resolution Source概觀
 description: 瞭解如何使用使用者介面將Merkury企業身分識別解析連線至Adobe Experience Platform。
-last-substantial-update: 2023-12-12T00:00:00Z
-badge: Beta
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # [!DNL Merkury Enterprise Identity Resolution]
-
->[!NOTE]
->
->[!DNL Merkury Enterprise Identity Resolution]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
 Adobe Experience Platform支援從資料合作夥伴應用程式擷取資料。 資料合作夥伴的支援包括[!DNL Merkury Enterprise Identity Resolution]。
 
@@ -33,7 +27,7 @@ Adobe Experience Platform支援從資料合作夥伴應用程式擷取資料。 
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+您必須先將您所在地區的必要IP位址新增至允許清單，才能使用來源聯結器。 如果您未新增這些IP位址，來源聯結器可能會無法正常運作或產生錯誤。 如需詳細指示及允許的IP位址清單，請閱讀[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
 ## 檔案和目錄的命名限制
 
@@ -59,4 +53,4 @@ Adobe Experience Platform支援從資料合作夥伴應用程式擷取資料。 
 
 ## 後續步驟
 
-閱讀本檔案後，您已完成將[!DNL Merkury]帳戶中的資料帶入Experience Platform所需的先決條件設定。 您現在可以在[使用使用者介面](../../tutorials/ui/create/data-partners/merkury.md)連線 [!DNL Merkury] 以Experience Platform時繼續參閱指南。
+閱讀本檔案後，您已完成將[!DNL Merkury]帳戶中的資料帶入Experience Platform所需的先決條件設定。 您現在可以使用使用者介面[在 [!DNL Merkury] 連線](../../tutorials/ui/create/data-partners/merkury.md)至Experience Platform時繼續參閱指南。

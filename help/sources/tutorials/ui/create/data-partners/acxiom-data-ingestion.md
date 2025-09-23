@@ -1,21 +1,15 @@
 ---
 title: Acxiom 資料內嵌
 description: 使用Acxiom資料擷取將Acxiom資料擷取至Real-Time CDP，讓第一方設定檔更為豐富。 使用您的Acxiom擴充第一方設定檔來改善對象並跨行銷管道啟用。
-last-substantial-update: 2024-03-19T00:00:00Z
-badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1817'
 ht-degree: 3%
 
 ---
 
 # 在UI中建立[!DNL Acxiom Data Ingestion]來源連線和資料流
-
->[!NOTE]
->
->[!DNL Acxiom Data Ingestion]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
 使用[!DNL Acxiom Data Ingestion]來源將[!DNL Acxiom]資料擷取至Real-Time Customer Data Platform並擴充第一方設定檔。 接著，您可以使用富[!DNL Acxiom]的第一方設定檔來改善對象，並跨行銷管道啟用。
 
@@ -125,7 +119,7 @@ ht-degree: 3%
 
 >[!ENDTABS]
 
-+++選取步驟以啟用設定檔擷取、錯誤診斷及部分擷取。
++++選取以啟用設定檔擷取、錯誤診斷及部分擷取的步驟。
 
 如果您的資料集已啟用即時客戶個人檔案，那麼在此步驟中，您可以切換&#x200B;**[!UICONTROL 個人檔案資料集]**&#x200B;以啟用您的資料以進行個人檔案擷取。 您也可以使用此步驟來啟用&#x200B;**[!UICONTROL 錯誤診斷]**&#x200B;和&#x200B;**[!UICONTROL 部分擷取]**。
 
@@ -144,11 +138,11 @@ ht-degree: 3%
 | --- | --- |
 | 資料流名稱 | 資料流的名稱。  依預設，這將使用正在匯入的檔案名稱。 |
 | 說明 | （選用）資料流的簡短說明。 |
-| 警示 | Experience Platform可產生使用者可訂閱的事件型警報，這些選項都是執行中的資料流以觸發這些警報。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
+| 警報 | Experience Platform可產生使用者可訂閱的事件型警報，這些選項都是執行中的資料流以觸發這些警報。  如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
 
 ## 對應
 
-在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。  如需詳細資訊，請閱讀UI[&#128279;](../../../../../data-prep/ui/mapping.md)中的對應指南
+在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。  如需詳細資訊，請閱讀UI[中的](../../../../../data-prep/ui/mapping.md)對應指南
 
 ![對應介面。](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-mapping.png)
 
@@ -182,7 +176,7 @@ ht-degree: 3%
 
 ### 監視資料流
 
-建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI[&#128279;](../../../../../dataflows/ui/monitor-sources.md)中監視帳戶和資料流的教學課程。
+建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI[中](../../../../../dataflows/ui/monitor-sources.md)監視帳戶和資料流的教學課程。
 
 ### 更新您的資料流
 
@@ -190,7 +184,7 @@ ht-degree: 3%
 
 ### 刪除您的資料流
 
-您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[&#128279;](../../delete.md)中刪除資料流。
+您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[中刪除資料流](../../delete.md)。
 
 ## 其他資源 {#additional-resources}
 
