@@ -204,7 +204,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 * **[!UICONTROL 指派資料集與對應欄位]**：顯示要將來源資料擷取到哪個資料集，包括資料集所堅持的結構描述。
 * **[!UICONTROL 排程]**：顯示內嵌排程的有效期間、頻率和間隔。
 
-檢閱您的資料流後，請按一下[完成] ****，並等待一些時間來建立資料流。
+檢閱您的資料流後，請按一下[完成] **&#x200B;**，並等待一些時間來建立資料流。
 
 ![檢閱頁面。](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
 
