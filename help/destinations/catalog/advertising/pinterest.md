@@ -84,7 +84,7 @@ Pinterest Token每30天過期一次。 您可以在&#x200B;**[!UICONTROL 帳戶�
    ![篩選以僅顯示Pinterest帳戶](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Pinterest認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的Pinterest認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
