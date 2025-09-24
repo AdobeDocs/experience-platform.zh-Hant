@@ -2,10 +2,10 @@
 title: Pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人，或已在Pinterest上與您的內容互動的人中建立對象。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b35687350dbbcebfc86acc90852d86870292142
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 3%
+source-wordcount: '829'
+ht-degree: 6%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Pinterest Customer List]目的地支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
+[!DNL Pinterest Customer List]目的地支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
 
 在目的地啟用工作流程的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中，將所需的身分對應到目標欄位&#x200B;*pinterest_audience*。 身分識別會在資料擷取至Pinterest時區分和解析。
 
@@ -75,14 +75,16 @@ ht-degree: 3%
 
 ### 重新整理驗證認證 {#refresh-authentication-credentials}
 
-Pinterest Token每30天過期一次。 代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
+Pinterest Token每30天過期一次。 您可以在&#x200B;**[!UICONTROL 帳戶過期日期]**&#x200B;欄 (在&#x200B;**[[!UICONTROL 「帳戶」]](../../ui/destinations-workspace.md#accounts)**&#x200B;或&#x200B;**[[!UICONTROL 「瀏覽」]](../../ui/destinations-workspace.md#browse)**&#x200B;索引標籤中) 監視您的權杖過期日。
+
+代號過期後，將資料匯出至目的地時即停止運作。 若要避免出現這種情況，請執行以下步驟來重新驗證：
 
 1. 導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**
 2. （選用）使用頁面上可用的篩選器，僅顯示Pinterest帳戶。
    ![篩選以僅顯示Pinterest帳戶](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**&#x200B;並使用您的Pinterest認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL 重新連線OAuth]**並使用您的Pinterest認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
