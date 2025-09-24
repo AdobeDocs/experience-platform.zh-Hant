@@ -1,7 +1,6 @@
 ---
-title: Adobe Experience Platform 發行說明 (2025 年 8 月)
-description: Adobe Experience Platform 2025 年 8 月版發行說明。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform 發行說明 (2025 年 9 月)
+description: Adobe Experience Platform 2025 年 9 月版發行說明。
 source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
 workflow-type: tm+mt
 source-wordcount: '1402'
@@ -92,6 +91,7 @@ XDM 是一種開放原始碼的規格，可為帶入 Experience Platform 的資�
 | 以模型為基礎的結構描述 | 使用基於模型的結構描述來簡化資料建模。您現在可以利用全方位的操作範例和指南，更輕鬆地建立結構描述。此功能目前可供Campaign Orchestration授權持有人使用，並會在GA擴充至Data Distiller客戶，讓資料模型更容易存取且更有效率。 此功能包含對時間序列資料和變更資料擷取功能的支援。 |
 
 如需詳細資訊，請詳讀 [XDM 概觀](../../xdm/home.md)。
+
 <!--
 
 | Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
