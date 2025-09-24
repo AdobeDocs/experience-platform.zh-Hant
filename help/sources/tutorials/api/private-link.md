@@ -1,13 +1,10 @@
 ---
 title: API來源的私人連結支援
 description: 瞭解如何建立並使用Adobe Experience Platform來源的私人連結
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1515'
 ht-degree: 3%
 
 ---
@@ -16,23 +13,36 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->此功能處於「有限可用性」，目前僅受以下來源支援：
+>下列來源支援此功能：
 >
->* [[!DNL Azure Blob]](../../connectors/cloud-storage/blob.md)
->* [[!DNL Azure Data Lake Gen2]](../../connectors/cloud-storage/adls-gen2.md)
+>* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
+>* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>私人連結支援目前僅適用於已購買Adobe Healthcare Shield或Adobe Privacy &amp; Security Shield的組織。
 
 您可以使用私人連結功能來建立Adobe Experience Platform來源要連線的私人端點。 使用私人IP位址將您的來源安全地連線到虛擬網路，消除對公共IP的需求，並減少您的攻擊面。 不需要複雜的防火牆或網路位址轉譯組態，同時確保資料流量僅能到達核准的服務，藉此簡化網路設定。
 
 請閱讀本指南，瞭解如何使用API來建立和使用私有端點。
 
+>[!BEGINSHADEBOX]
+
+## 私人連結支援的授權使用權益
+
+來源中私人連結支援的授權使用權益量度如下：
+
+* 客戶有權透過支援的來源（[!DNL Azure Blob Storage]、[!DNL ADLS Gen2]和[!DNL Azure File Storage]），跨所有沙箱和組織每年進行最多2 TB的資料傳輸。
+* 每個組織最多可以有10個端點用於所有生產沙箱。
+* 每個組織最多可以為所有開發沙箱擁有1個端點。
+
+>[!ENDSHADEBOX]
+
 ## 快速入門
 
 本指南需要您深入瞭解下列Experience Platform元件：
 
-* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
-* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一[!DNL Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
+* [來源](../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
@@ -67,7 +77,6 @@ curl -X POST \
       "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
       "resourceGroupName": "acme-sources-experience-platform",
       "resourceName": "acmeexperienceplatform",
-      "fqdns": [],
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
@@ -81,7 +90,6 @@ curl -X POST \
 | `subscriptionId` | 與您的[!DNL Azure]訂閱相關聯的識別碼。 如需詳細資訊，請參閱[!DNL Azure]的[指南，從 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)擷取您的訂閱和租使用者ID。 |
 | `resourceGroupName` | [!DNL Azure]上資源群組的名稱。 資源群組包含[!DNL Azure]解決方案的相關資源。 如需詳細資訊，請閱讀[!DNL Azure]管理資源群組[的](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)指南。 |
 | `resourceName` | 資源的名稱。 在[!DNL Azure]中，資源是指虛擬機器器、網頁應用程式和資料庫等執行個體。 如需詳細資訊，請閱讀[!DNL Azure]上的[指南，瞭解 [!DNL Azure] 資源管理員](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)。 |
-| `fqdns` | 您來源的完整網域名稱。 只有在使用[!DNL Snowflake]來源時，才需要此屬性。 |
 | `connectionSpec.id` | 您使用之來源的連線規格ID。 |
 | `connectionSpec.version` | 您正在使用的連線規格ID版本。 |
 
@@ -100,7 +108,6 @@ curl -X POST \
   "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
   "resourceGroupName": "acme-sources-experience-platform",
   "resourceName": "acmeexperienceplatform",
-  "fqdns": [],
   "connectionSpec": {
       "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
       "version": "1.0"
@@ -116,7 +123,6 @@ curl -X POST \
 | `subscriptionId` | 與您的[!DNL Azure]訂閱相關聯的識別碼。 如需詳細資訊，請參閱[!DNL Azure]的[指南，從 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)擷取您的訂閱和租使用者ID。 |
 | `resourceGroupName` | [!DNL Azure]上資源群組的名稱。 資源群組包含[!DNL Azure]解決方案的相關資源。 如需詳細資訊，請閱讀[!DNL Azure]管理資源群組[的](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)指南。 |
 | `resourceName` | 資源的名稱。 在[!DNL Azure]中，資源是指虛擬機器器、網頁應用程式和資料庫等執行個體。 如需詳細資訊，請閱讀[!DNL Azure]上的[指南，瞭解 [!DNL Azure] 資源管理員](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)。 |
-| `fqdns` | 您來源的完整網域名稱。 只有在使用[!DNL Snowflake]來源時，才需要此屬性。 |
 | `connectionSpec.id` | 您使用之來源的連線規格ID。 |
 | `connectionSpec.version` | 您正在使用的連線規格ID版本。 |
 | `state` | 您的私人端點的目前狀態。 有效狀態包括： <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
@@ -543,7 +549,7 @@ POST /connections/
 
 **要求**
 
-下列要求會建立[!DNL Snowflake]的已驗證基底連線，同時使用私用端點。
+下列要求會建立[!DNL Azure Blob Storage]的已驗證基底連線，同時使用私用端點。
 
 +++選取以檢視請求範例
 
@@ -556,8 +562,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection",
-      "description": "A base connection for a Snowflake source that uses a private link.",
+      "name": "Azure Blob Storage base connection",
+      "description": "A base connection for a Azure Blob Storage source that uses a private link.",
       "auth": {
           "specName": "ConnectionString",
           "params": {
@@ -566,7 +572,7 @@ curl -X POST \
           }
       },
       "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
       }
   }'
@@ -577,10 +583,10 @@ curl -X POST \
 | `name` | 基礎連線的名稱。 |
 | `description` | （選用）提供連線其他資訊的說明。 |
 | `auth.specName` | 用來將您的來源連線至Experience Platform的驗證。 |
-| `auth.params.connectionString` | [!DNL Snowflake]連線字串。 如需詳細資訊，請閱讀[[!DNL Snowflake] API驗證指南](../api/create/databases/snowflake.md)。 |
+| `auth.params.connectionString` | [!DNL Azure Blob Storage]連線字串。 如需詳細資訊，請閱讀[[!DNL Azure Blob Storage] API驗證指南](../api/create/cloud-storage/blob.md)。 |
 | `auth.params.usePrivateLink` | 布林值，判斷您是否使用私人端點。 如果您使用私人端點，請將此值設為`true`。 |
-| `connectionSpec.id` | [!DNL Snowflake]的連線規格ID。 |
-| `connectionSpec.version` | 您的[!DNL Snowflake]連線規格ID的版本。 |
+| `connectionSpec.id` | [!DNL Azure Blob Storage]的連線規格ID。 |
+| `connectionSpec.version` | 您的[!DNL Azure Blob Storage]連線規格ID的版本。 |
 
 +++
 
@@ -830,24 +836,32 @@ curl -X GET \
 
 請閱讀本節，以瞭解在API中使用[!DNL Azure]私人連結的其他資訊。
 
-### 設定您的[!DNL Snowflake]帳戶以連線至私人連結
+### 核准[!DNL Azure Blob]和[!DNL Azure Data Lake Gen2]的私人端點
 
-您必須完成下列先決條件步驟，才能將[!DNL Snowflake]來源與私人連結搭配使用。
+若要核准[!DNL Azure Blob]和[!DNL Azure Data Lake Gen2]來源的私人端點要求，請登入[!DNL Azure Portal]。 在左側導覽中選取&#x200B;**[!DNL Data storage]**，然後前往&#x200B;**[!DNL Security + networking]**&#x200B;標籤並選擇&#x200B;**[!DNL Networking]**。 接下來，選取「**[!DNL Private endpoints]**」以檢視與您帳戶相關聯的私人端點清單及其目前的連線狀態。 若要核准擱置的要求，請選取所要的端點，然後按一下&#x200B;**[!DNL Approve]**。
 
-首先，您必須在[!DNL Snowflake]中提出支援票證，並要求&#x200B;**帳戶中**&#x200B;區域的[!DNL Azure]端點服務資源識別碼[!DNL Snowflake]。 請依照下列步驟提出[!DNL Snowflake]票證：
+![含有擱置中私人端點清單的Azure入口網站。](../../images/tutorials/private-links/azure.png)
 
-1. 導覽至[[!DNL Snowflake] UI](https://app.snowflake.com)並使用您的電子郵件帳戶登入。 在此步驟中，您必須確保在設定檔設定中驗證您的電子郵件。
-2. 選取您的&#x200B;**使用者功能表**，然後選取&#x200B;**支援**&#x200B;以存取[!DNL Snowflake]支援。
-3. 若要建立支援案例，請選取&#x200B;**[!DNL + Support Case]**。 然後，填寫包含相關詳細資訊的表單並附加任何必要的檔案。
-4. 完成後，提交案例。
+<!--
 
-端點資源ID的格式如下：
+### Configure your [!DNL Snowflake] account to connect to private links
+
+You must complete the following prerequisite steps in order to use the [!DNL Snowflake] source with private links.
+
+First, you must raise a support ticket in [!DNL Snowflake] and request for the **endpoint service resource ID** of the [!DNL Azure] region of your [!DNL Snowflake] account. Follow the steps below to raise a [!DNL Snowflake] ticket:
+
+1. Navigate to the [[!DNL Snowflake] UI](https://app.snowflake.com) and sign in with your email account. During this step, you must ensure that your email is verified in profile settings.
+2. Select your **user menu** and then select **support** to access [!DNL Snowflake] support.
+3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
+4. When finished, submit the case.
+
+The endpoint resource ID is formatted as follows:
 
 ```shell
 subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
 ```
 
-+++選取以檢視範例
++++Select to view example
 
 ```shell
 /subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
@@ -855,14 +869,14 @@ subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/
 
 +++
 
-| 參數 | 說明 | 範例 |
+| Parameter | Description | Example |
 | --- | --- | --- |
-| `{SUBSCRIPTION_ID}` | 識別您[!DNL Azure]訂閱的唯一識別碼。 | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
-| `{REGION}` | 您的[!DNL Azure]帳戶的[!DNL Snowflake]地區。 | `azwestus2` |
+| `{SUBSCRIPTION_ID}` | The unique ID that identifies your [!DNL Azure] subscription. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | The [!DNL Azure] region of your [!DNL Snowflake] account. | `azwestus2` |
 
-### 擷取您的私人連結設定詳細資料
+### Retrieve your private link configuration details
 
-若要擷取您的私人連結設定詳細資料，您必須在[!DNL Snowflake]中執行下列命令：
+To retrieve your private link configuration details, you must run the following command in [!DNL Snowflake]:
 
 ```sql
 USE ROLE accountadmin;
@@ -870,21 +884,21 @@ SELECT key, value::varchar
 FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
 ```
 
-接著，擷取下列屬性的值：
+Next, retrieve values for the following properties:
 
 * `privatelink-account-url`
 * `regionless-privatelink-account-url`
 * `privatelink_ocsp-url`
 
-擷取值後，您可以進行下列呼叫來建立[!DNL Snowflake]的私人連結。
+Once you have retrieved the values, you can make the following call to create a private link for [!DNL Snowflake].
 
-**要求**
+**Request**
 
-下列要求會建立[!DNL Snowflake]的私人端點：
+The following request creates a private endpoint for [!DNL Snowflake]:
 
 >[!BEGINTABS]
 
->[!TAB 範本]
+>[!TAB Template]
 
 ```shell
 curl -X POST \
@@ -911,7 +925,7 @@ curl -X POST \
   }'
 ```
 
->[!TAB 範例]
+>[!TAB Example]
 
 ```shell
 curl -X POST \
@@ -938,11 +952,6 @@ curl -X POST \
   }'
 ```
 
-
 >[!ENDTABS]
 
-### 核准[!DNL Azure Blob]和[!DNL Azure Data Lake Gen2]的私人端點
-
-若要核准[!DNL Azure Blob]和[!DNL Azure Data Lake Gen2]來源的私人端點要求，請登入[!DNL Azure Portal]。 在左側導覽中選取&#x200B;**[!DNL Data storage]**，然後前往&#x200B;**[!DNL Security + networking]**&#x200B;標籤並選擇&#x200B;**[!DNL Networking]**。 接下來，選取「**[!DNL Private endpoints]**」以檢視與您帳戶相關聯的私人端點清單及其目前的連線狀態。 若要核准擱置的要求，請選取所要的端點，然後按一下&#x200B;**[!DNL Approve]**。
-
-![含有擱置中私人端點清單的Azure入口網站。](../../images/tutorials/private-links/azure.png)
+-->

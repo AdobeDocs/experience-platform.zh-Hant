@@ -1,13 +1,10 @@
 ---
 title: UI對來源的私人連結支援
 description: 瞭解如何在Experience Platform UI中使用來源的Azure私人連結。
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -16,16 +13,29 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->此功能為測試版，目前僅支援下列來源：
+>下列來源支援此功能：
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>私人連結支援目前僅適用於已購買Adobe Healthcare Shield或Adobe Privacy &amp; Security Shield的組織。
 
 您可以使用私人連結功能來建立您的Adobe Experience Platform來源要連線的私人端點。 使用私人IP位址將您的來源安全地連線到虛擬網路，消除對公共IP的需求，並減少您的攻擊面。 不需要複雜的防火牆或網路位址轉譯組態，同時確保資料流量僅能到達核准的服務，藉此簡化網路設定。
 
 請閱讀本指南，瞭解如何在Experience Platform UI中使用來源工作區來建立和使用私人端點。
+
+>[!BEGINSHADEBOX]
+
+## 私人連結支援的授權使用權益
+
+來源中私人連結支援的授權使用權益量度如下：
+
+* 客戶有權透過支援的來源（[!DNL Azure Blob Storage]、[!DNL ADLS Gen2]和[!DNL Azure File Storage]），跨所有沙箱和組織每年進行最多2 TB的資料傳輸。
+* 每個組織最多可以有10個端點用於所有生產沙箱。
+* 每個組織最多可以為所有開發沙箱擁有1個端點。
+
+>[!ENDSHADEBOX]
 
 ## 建立私人端點
 
@@ -45,7 +55,6 @@ ht-degree: 0%
 | `subscriptionId` | 與您的[!DNL Azure]訂閱相關聯的識別碼。 如需詳細資訊，請參閱[!DNL Azure]的[指南，從 [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id)擷取您的訂閱和租使用者ID。 |
 | `resourceGroupName` | [!DNL Azure]上資源群組的名稱。 資源群組包含[!DNL Azure]解決方案的相關資源。 如需詳細資訊，請閱讀[!DNL Azure]管理資源群組[的](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)指南。 |
 | `resourceGroup` | 資源的名稱。 在[!DNL Azure]中，資源是指虛擬機器器、網頁應用程式和資料庫等執行個體。 如需詳細資訊，請閱讀[!DNL Azure]上的[指南，瞭解 [!DNL Azure] 資源管理員](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)。 |
-| `fqdns` | 您來源的完整網域名稱。 **注意**：只有在使用[!DNL Snowflake]來源時，才需要此屬性。 |
 
 {style="table-layout:auto"}
 
