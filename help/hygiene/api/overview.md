@@ -3,9 +3,9 @@ title: 資料衛生API指南
 description: 瞭解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '432'
 ht-degree: 6%
 
 ---
@@ -43,9 +43,6 @@ ht-degree: 6%
 ## 記錄刪除
 
 >[!IMPORTANT]
->
->記錄刪除請求僅適用於已購買&#x200B;**Adobe Healthcare Shield**&#x200B;的組織。
->
 >
 >記錄刪除旨在用於資料清理、匿名資料移除或資料最小化。 它們&#x200B;**不**&#x200B;用於資料主體權利要求（法規遵循），因為與一般資料保護規範(GDPR)等隱私權法規相關。 對於所有規範使用案例，請改用[Adobe Experience Platform Privacy Service](../../privacy-service/home.md)。
 

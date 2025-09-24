@@ -4,7 +4,8 @@ solution: Experience Platform
 title: 以模型為基礎的結構描述
 description: 瞭解Adobe Experience Platform中以模型為基礎的結構描述（也稱為關聯式結構描述），包括功能、必填欄位、關係和限制。
 badge: 有限可用性
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -37,7 +38,7 @@ ht-degree: 0%
 
 ## 以模型為基礎的結構描述與標準XDM結構描述有何不同
 
-Experience Platform中的標準XDM結構描述會遵循下列三種資料行為之一：記錄、時間序列或臨機。 如需定義和詳細資訊，請參閱[XDM資料行為](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/xdm/home#data-behaviors)。
+Experience Platform中的標準XDM結構描述會遵循下列三種資料行為之一：記錄、時間序列或臨機。 如需定義和詳細資訊，請參閱[XDM資料行為](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors)。
 
 在傳統模型中，記錄和時間序列結構描述參與[聯合結構描述](../api/unions.md) （另請參閱[聯合結構描述UI指南](../../profile/ui/union-schema.md)）。 這些結構描述會隨著共用[欄位群組](./composition.md#field-group)的更新而自動演化，且自訂欄位必須巢狀置於租使用者名稱空間下。 此模型雖然功能強大，但可能會拖慢上線速度、產生包含未使用欄位且過於複雜的結構描述，並需要額外的資料對應或轉換。 這些因素會增加學習曲線以及持續的維護工作。
 
@@ -71,7 +72,7 @@ Experience Platform中的標準XDM結構描述會遵循下列三種資料行為�
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[ !UICOTRNOL 版本識別項]&quot;和&quot;[ !UICOTRNOL 時間戳記識別項]&quot;。
+>在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[!UICONTROL 版本識別項]&quot;和&quot;[!UICONTROL 時間戳記識別項]&quot;。
 
 **範例（單一欄位）：**
 
@@ -210,4 +211,3 @@ Should these be `@type: "xdm:descriptorRelationship",` This could be a copy-past
 * 關係限於一對一和多對一。
 * 可用性取決於您的授權或功能啟用。
 * 時間序列結構需要複合主索引鍵。
-

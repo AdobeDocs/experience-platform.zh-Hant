@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 描述項API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述項。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 1%
@@ -525,7 +525,7 @@ API支援兩種模式：
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，版本描述項顯示為&quot;[ !UICOTRNOL 版本識別碼]&quot;。
+>在UI結構描述編輯器中，版本描述項顯示為&quot;[!UICONTROL 版本識別碼]&quot;。
 
 版本描述項(`xdm:descriptorVersion`)會指定一個欄位，以偵測並防止順序錯亂的變更事件發生衝突。
 
@@ -547,7 +547,7 @@ API支援兩種模式：
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，時間戳記描述項會顯示為&quot;[ !UICOTRNOL 時間戳記識別碼]&quot;。
+>在UI結構描述編輯器中，時間戳記描述項會顯示為&quot;[!UICONTROL 時間戳記識別碼]&quot;。
 
 時間戳記描述項(`xdm:descriptorTimestamp`)指定日期 — 時間欄位做為具有`"meta:behaviorType": "time-series"`的結構描述的時間戳記。
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 結構描述API端點
 description: 結構描述登入API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM結構描述。
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 3%
@@ -302,7 +302,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[ !UICOTRNOL 版本識別項]&quot;和&quot;[ !UICOTRNOL 時間戳記識別項]&quot;。
+>在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[!UICONTROL 版本識別項]&quot;和&quot;[!UICONTROL 時間戳記識別項]&quot;。
 
 <!-- >[!AVAILABILITY]
 >
