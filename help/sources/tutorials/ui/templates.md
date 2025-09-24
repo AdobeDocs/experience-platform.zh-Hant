@@ -3,9 +3,9 @@ description: 瞭解如何在Adobe Experience Platform UI中使用範本，以加
 title: 使用 UI 中的範本建立來源資料流
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2314'
 ht-degree: 10%
 
 ---
@@ -51,7 +51,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 >id="platform_sources_templates_accounttype"
 >title="選取商業類型"
 >abstract="為您的使用案例選取適合的商業類型。您的存取權限可能會依據您的即時客戶資料平台訂閱帳戶而不同。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant" text="Real-Time CDP 概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP 概觀"
 
 在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區，並檢視Experience Platform中可用的來源目錄。
 
@@ -65,6 +65,12 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 * **瀏覽範本**：來源範本會為您自動建立具有對應規則的結構描述、身分、資料集和資料流程。 您可以視需要自訂這些資產。
 * **使用我現有的資產**：使用您建立的現有資料集和結構描述擷取您的資料。 如有需要，您也可以建立新資料集和結構描述。
+
+>[!NOTE]
+>
+>使用需要變更資料擷取工作流程或支援多個資料模型的來源時，範本可以自動產生以模型為基礎的結構描述。 這些結構啟用Data Mirror的即時資料同步功能。\
+>使用範本搭配模型架構時，自動產生的資產將包含所需的主索引鍵、版本識別碼和時間戳記識別碼欄位。\
+>如需詳細資訊，請參閱[Data Mirror概觀](../../../xdm/data-mirror/overview.md)和[模型架構技術參考](../../../xdm/schema/model-based.md)。
 
 若要使用自動產生的資產，請選取&#x200B;**[!UICONTROL 瀏覽範本]**，然後選取&#x200B;**[!UICONTROL 選取]**。
 
@@ -123,7 +129,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 | 帳戶 | 「帳戶」範本會擷取商業帳戶細節，例如，公司第一方資訊、地點和帳單資訊。 |
 | 行銷活動成員 | 「促銷活動成員」範本擷取個別銷售機會或聯絡人與特定[!DNL Salesforce]促銷活動之間的關係。 |
 | 行銷活動 | Campaigns範本會擷取商業帳戶詳細資訊，例如，公司名字資訊、地點和帳單資訊。 |
-| 連絡人 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
+| 聯絡人 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
 | 銷售機會 | 潛在客戶範本會擷取潛在客戶的屬性，例如人口統計細節、聯絡資訊和相關業務實體。 |
 | 機會 | 此商機範本會擷取商業商機細節，例如，型別、銷售階段和相關帳戶。 |
 | 機會聯絡人角色 | 「商機聯絡人角色」範本會擷取與特定商機相關聯之潛在客戶的角色相關詳細資訊。 |
@@ -137,7 +143,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 | [!DNL Salesforce]個B2C範本 | 說明 |
 | --- | --- |
-| 聯絡 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
+| 聯絡人 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
 | 銷售機會 | 潛在客戶範本會擷取潛在客戶的屬性，例如人口統計細節、聯絡資訊和相關業務實體。 |
 
 {style="table-layout:auto"}
@@ -151,7 +157,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 | --- | --- |
 | 帳戶 | 「帳戶」範本會擷取商業帳戶細節，例如，公司第一方資訊、地點和帳單資訊。 |
 | 行銷活動 | Campaigns範本會擷取商業帳戶詳細資訊，例如，公司名字資訊、地點和帳單資訊。 |
-| 連絡人 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
+| 聯絡人 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
 | 銷售機會 | 潛在客戶範本會擷取潛在客戶的屬性，例如人口統計細節、聯絡資訊和相關業務實體。 |
 | 行銷清單 | 行銷清單範本會擷取為行銷活動或其他銷售目的而建立的現有或潛在客戶群組。 |
 | 行銷清單成員 | 行銷清單成員會擷取行銷清單中任一客戶記錄型別的詳細資訊，例如銷售機會、帳戶或聯絡人。 |
@@ -167,7 +173,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 | [!DNL Microsoft Dynamics]個B2C範本 | 說明 |
 | --- | --- |
-| 聯絡 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
+| 聯絡人 | 連絡人範本會擷取連絡人的屬性，例如人口統計細節、連絡人資訊和相關商業實體。 |
 | 銷售機會 | 潛在客戶範本會擷取潛在客戶的屬性，例如人口統計細節、聯絡資訊和相關業務實體。 |
 
 {style="table-layout:auto"}

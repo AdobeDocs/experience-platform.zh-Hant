@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1696'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
@@ -306,7 +306,11 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 - 將標籤套用至結構描述欄位，以定義對貴組織中特定結構描述欄位的存取權。 建立對特定結構描述欄位的存取權後，使用者將只能為他們有權存取的欄位建立對應。
 - 沒有適當角色的使用者將無法使用包含無法存取之結構描述欄位的對應來建立或更新資料流程。 此外，未經授權的使用者無法更新、刪除、啟用或停用具有無法存取之結構描述欄位的現有資料流。
-- 此外，資料流在其對應、目標資料集和目標連線中，必須有完全相同的結構描述ID和版本。
+- 此外，資料流在其對應、目標資料集和目標連線中，必須有完全相同的結構描述ID和版本。 這同時適用於標準XDM結構描述和模型型結構描述。
+
+>[!NOTE]
+>
+>基於模型的結構描述還有其他需求，包括主索引鍵和版本識別碼欄位。 如需詳細資訊，請參閱[模型架構概述](../xdm/schema/model-based.md)。
 
 如需屬性型存取控制的詳細資訊，請閱讀[屬性型存取控制總覽](../access-control/abac/overview.md)。
 

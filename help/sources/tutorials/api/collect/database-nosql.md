@@ -3,9 +3,9 @@ title: 使用流程服務API建立資料庫來源的資料流
 type: Tutorial
 description: 瞭解如何使用流量服務API建立資料流，並將資料庫中的資料擷取到Experience Platform中。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1489'
 ht-degree: 2%
 
 ---
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | 資料庫來源的連線ID。 |
 | `params.tableName` | 來源檔案的路徑。 |
-| `params.cdcEnabled` | 表示是否啟用變更記錄擷取的布林值。 下列資料庫來源支援此屬性： <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 如需詳細資訊，請閱讀在來源[中使用](../change-data-capture.md)變更資料擷取的指南。 |
+| `params.cdcEnabled` | 表示是否啟用變更記錄擷取的布林值。 搭配以模型為基礎的結構描述使用時，變更資料擷取會追蹤插入、更新和刪除動作，以將目標資料集與來源保持同步。 下列資料庫來源支援此屬性： <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> 如需此功能的概述，請參閱[Data Mirror概述](../../../../xdm/data-mirror/overview.md)。 如需實作詳細資料，請參閱來源指南[中的](../change-data-capture.md)變更資料擷取[以模型為基礎的結構描述技術參考](../../../../xdm/schema/model-based.md)。 |
 | `connectionSpec.id` | 資料庫來源的連線規格ID。 如需資料庫規格ID的清單，請參閱[附錄](#appendix)。 |
 
 **回應**

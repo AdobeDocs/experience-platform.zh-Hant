@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM系統概覽
 description: 標準化和互通性是Adobe Experience Platform背後的重要概念。 體驗資料模型(XDM)採用Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7527732c91e55f6ffaefbf98c37a2c4aad3aa3b9
 workflow-type: tm+mt
-source-wordcount: '2135'
-ht-degree: 4%
+source-wordcount: '2452'
+ht-degree: 3%
 
 ---
 
@@ -67,7 +67,7 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 
 >[!NOTE]
 >
->沒有基於臨機行為的標準類別。 使用臨機結構描述的Experience Platform處理程式會自動產生臨機結構描述，但也可以使用結構描述登入API [&#128279;](./tutorials/ad-hoc.md)以手動方式建立它們。
+>沒有基於臨機行為的標準類別。 使用臨機結構描述的Experience Platform處理程式會自動產生臨機結構描述，但也可以使用結構描述登入API [以手動方式](./tutorials/ad-hoc.md)建立它們。
 
 ### [!UICONTROL XDM 個別輪廓] {#xdm-individual-profile}
 
@@ -105,6 +105,40 @@ Experience Platform與結構無關，這表示符合XDM標準的任何結構都�
 
 如需詳細資訊，請參閱[目錄服務總覽](../catalog/home.md)。 如需有關Adobe Experience Platform資料擷取的詳細資訊，請參閱[資料擷取總覽](../ingestion/home.md)。
 
+### Data Mirror和模型架構 {#model-based-schemas}
+
+>[!AVAILABILITY]
+>
+>Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和模型型結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+
+Data Mirror是Adobe Experience Platform的一項功能，可啟用使用模型架構的進階資料庫同步。 如需Data Mirror功能和使用案例的完整總覽，請參閱[Data Mirror總覽](./data-mirror/overview.md)。
+
+Data Mirror透過模型架構運作，這些架構是針對結構化的關聯式資料模式而設計。 它們會強制主索引鍵、支援版本識別碼，並使用主索引鍵和外索引鍵定義架構到架構的關係。 與標準XDM結構描述不同，它們不需要類別或欄位群組，並針對變更資料擷取擷取工作流程進行最佳化。
+
+如需有關如何定義結構描述對結構描述關係的詳細資訊，請參閱[描述項端點檔案](./api/descriptors.md)。
+
+您有以下需求時，請使用Data Mirror：
+
+* 同步來自外部系統(如Snowflake、Databricks或BigQuery)的資料變更
+* 在擷取期間保留資料庫關係並強制執行資料完整性
+* 支援進階分析和歷程協調
+* 啟用包含更新插入和刪除的精確變更追蹤
+
+若要建立以模型為基礎的結構描述，請在建立結構描述時選取&#x200B;**[!UICONTROL 以模型為基礎的]**。 以模型為基礎的結構描述不使用類別或欄位群組。 反之，您可以手動定義結構或上傳DDL檔案。 以模型為基礎的結構描述需要主索引鍵、版本識別碼，以及（如果適用）時間戳記識別碼欄位。 然後，您可以設定其他欄位並定義與其他結構描述的關係。
+
+>[!NOTE]
+>
+>擷取期間使用的控制欄（例如用於變更資料擷取工作流程的`_change_request_type`）在擷取時讀取，並且不會儲存在結構描述中或對應到XDM欄位。 關聯式結構描述可提供適當的Experience Platform權益和功能啟用。
+
+如需詳細步驟和使用案例指引，請參閱：
+
+* [Data Mirror概觀](./data-mirror/overview.md) — 功能、使用案例和實作規劃
+* [以模型為基礎的結構描述技術參考](./schema/model-based.md) — 技術規格和限制
+* [UI教學課程](./ui/resources/schemas.md#create-model-based-schema)
+* [api教學課程](./api/schemas.md#create-model-based-schema)
+* [描述項（識別碼）檔案](./api/descriptors.md#relationship-descriptor)
+* [啟用變更資料擷取](../sources/tutorials/api/change-data-capture.md)
+
 ### 查詢服務 {#query-service}
 
 您可以使用標準SQL來查詢Experience Platform資料，以透過Adobe Experience Platform查詢服務支援許多不同的使用案例。
@@ -113,7 +147,7 @@ Experience Platform與結構無關，這表示符合XDM標準的任何結構都�
 
 如需服務的詳細資訊，請參閱[查詢服務總覽](../query-service/home.md)。
 
-### 即時客戶設定檔 {#real-time-customer-profile}
+### 即時客戶輪廓 {#real-time-customer-profile}
 
 即時客戶設定檔提供集中式消費者設定檔，用於針對性和個人化的體驗管理。 每個設定檔都包含跨所有系統彙總的資料，並包含涉及設定檔主旨之事件的可行時間戳記帳戶。 這些事件可能在您搭配Experience Platform使用的任何系統中發生。
 
@@ -143,7 +177,7 @@ Adobe Experience Platform Data Science Workspace使用機器學習和人工智�
 
 現在您已更瞭解結構在Experience Platform中的角色，您已準備好開始撰寫自己的結構描述。
 
-若要瞭解構成要與Experience Platform搭配使用的結構描述的設計原則和最佳實務，請先閱讀結構描述構成的[基本知識](schema/composition.md)。 如需如何建立結構描述的逐步指示，請參閱使用API[&#128279;](tutorials/create-schema-api.md)建立結構描述[或使用使用者介面](tutorials/create-schema-ui.md)建立結構描述的教學課程。
+若要瞭解構成要與Experience Platform搭配使用的結構描述的設計原則和最佳實務，請先閱讀結構描述構成的[基本知識](schema/composition.md)。 如需如何建立結構描述的逐步指示，請參閱使用API[建立結構描述](tutorials/create-schema-api.md)或使用使用者介面[建立結構描述](tutorials/create-schema-ui.md)的教學課程。
 
 若要加深您對Experience Platform中[!DNL XDM System]的瞭解，請觀看下列影片：
 

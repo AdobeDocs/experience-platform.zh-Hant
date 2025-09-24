@@ -4,24 +4,24 @@ solution: Experience Platform
 title: 結構描述API端點
 description: 結構描述登入API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM結構描述。
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 2%
+source-wordcount: '2095'
+ht-degree: 3%
 
 ---
 
 # 結構描述端點
 
-結構描述可視為您要擷取至Adobe Experience Platform的資料的藍圖。 每個結構描述都由一個類別和零個或多個結構描述欄位群組組成。 [!DNL Schema Registry] API中的`/schemas`端點可讓您以程式設計方式管理體驗應用程式中的結構描述。
+結構描述可視為您要擷取至Adobe Experience Platform的資料的藍圖。 每個結構描述都由一個類別和零個或多個結構描述欄位群組組成。 `/schemas` API中的[!DNL Schema Registry]端點可讓您以程式設計方式管理體驗應用程式中的結構描述。
 
 ## 快速入門
 
-本指南中使用的API端點是[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的API端點是[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ## 擷取結構描述清單 {#list}
 
-您可以分別向`/global/schemas`或`/tenant/schemas`發出GET要求，列出`global`或`tenant`容器下的所有結構描述。
+您可以分別向`global`或`tenant`發出GET要求，列出`/global/schemas`或`/tenant/schemas`容器下的所有結構描述。
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 **要求**
 
-下列要求會使用`orderby`查詢引數，依結果的`title`屬性排序結果，從`tenant`容器擷取結構描述清單。
+下列要求會使用`tenant`查詢引數，依結果的`orderby`屬性排序結果，從`title`容器擷取結構描述清單。
 
 ```shell
 curl -X GET \
@@ -99,7 +99,7 @@ curl -X GET \
 
 ## 查詢結構描述 {#lookup}
 
-您可以透過在路徑中包含結構描述ID的GET請求來查詢特定結構描述。
+您可以發出GET請求，在路徑中包含結構描述的ID，藉此查詢特定的結構描述。
 
 **API格式**
 
@@ -109,7 +109,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 容納您要擷取之結構描述的容器： `global` (針對Adobe建立的結構描述)或`tenant` （針對貴組織擁有的結構描述）。 |
+| `{CONTAINER_ID}` | 容納您要擷取之結構描述的容器： `global`用於Adobe建立的結構描述，或`tenant`用於您組織擁有的結構描述。 |
 | `{SCHEMA_ID}` | 您要查閱之結構描述的`meta:altId`或URL編碼的`$id`。 |
 
 {style="table-layout:auto"}
@@ -128,7 +128,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於請求中傳送的`Accept`標頭。 所有查詢請求都要求在`Accept`標頭中包含`version`。 下列`Accept`標頭可供使用：
+回應格式取決於請求中傳送的`Accept`標頭。 所有查詢請求都要求在`version`標頭中包含`Accept`。 下列`Accept`標頭可供使用：
 
 | `Accept`標題 | 說明 |
 | ------- | ------------ |
@@ -137,7 +137,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-notext+json; version=1` | 含有`$ref`和`allOf`的原始，沒有標題或說明。 |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref`和`allOf`已解決，無標題或說明。 |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | 已解決`$ref`和`allOf`，包含描述元。 |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref`和`allOf`已解決，有標題和說明。 已棄用的欄位以`deprecated`的`meta:status`屬性表示。 |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref`和`allOf`已解決，有標題和說明。 已棄用的欄位以`meta:status`的`deprecated`屬性表示。 |
 
 {style="table-layout:auto"}
 
@@ -198,6 +198,8 @@ curl -X GET \
 
 架構構成程式從指派類別開始。 類別會定義資料的主要行為方面（記錄或時間序列），以及描述將擷取之資料所需的最少欄位。
 
+如需有關建立不含類別或欄位群組的結構描述（稱為模型型結構描述）的指示，請參閱[建立模型型結構描述](#create-model-based-schema)區段。
+
 >[!NOTE]
 >
 >以下範例呼叫只是如何在API中建立結構描述的基準範例，具有類別的最低構成需求，但沒有欄位群組。 如需有關如何在API中建立結構描述的完整步驟，包括如何使用欄位群組和資料型別指派欄位，請參閱[結構描述建立教學課程](../tutorials/create-schema-api.md)。
@@ -210,7 +212,7 @@ POST /tenant/schemas
 
 **要求**
 
-要求必須包含參考類別`$id`的`allOf`屬性。 此屬性會定義結構描述將實作的「基底類別」。 在此範例中，基底類別是先前建立的「屬性資訊」類別。
+要求必須包含參考類別`allOf`的`$id`屬性。 此屬性會定義結構描述將實作的「基底類別」。 在此範例中，基底類別是先前建立的「屬性資訊」類別。
 
 ```SHELL
 curl -X POST \
@@ -275,13 +277,199 @@ curl -X POST \
 }
 ```
 
-執行GET要求給[列出租使用者容器中的所有結構描述](#list)，現在會包含新的結構描述。 您可以使用URL編碼的`$id` URI執行[查詢(GET)要求](#lookup)，以直接檢視新的結構描述。
+執行GET要求以[列出租使用者容器中的所有結構描述](#list)現在將包含新的結構描述。 您可以使用URL編碼的[ URI執行](#lookup)查詢(GET)要求`$id`，以直接檢視新的結構描述。
 
 若要將其他欄位新增至結構描述，您可以執行[PATCH作業](#patch)，將欄位群組新增至結構描述的`allOf`和`meta:extends`陣列。
 
+## 建立基於模型的結構描述 {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和模型型結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+
+對`/schemas`端點發出POST要求，以建立模型型結構描述。 以模型為基礎的結構描述會儲存結構化的關聯式樣式資料&#x200B;**，但不包含**&#x200B;類別或欄位群組。 直接在結構描述上定義欄位，並使用邏輯行為標籤將結構描述識別為以模型為基礎。
+
+>[!IMPORTANT]
+>
+>若要建立以模型為基礎的結構描述，請將`meta:extends`設為`"https://ns.adobe.com/xdm/data/adhoc-v2"`。 這是&#x200B;**邏輯行為識別碼** （不是實體行為或類別）。 在&#x200B;**中**&#x200B;不`allOf`參考類別或欄位群組，並且&#x200B;**不**&#x200B;在`meta:extends`中包含類別或欄位群組。
+
+請先使用`POST /tenant/schemas`建立結構描述。 然後使用[描述項API (`POST /tenant/descriptors`)](../api/descriptors.md)新增必要的描述項：
+
+- [主索引鍵描述項](../api/descriptors.md#primary-key-descriptor)：主索引鍵欄位必須位於&#x200B;**根層級**&#x200B;且&#x200B;**標示為必要**。
+- [版本描述項](../api/descriptors.md#version-descriptor)： **必要** （當主索引鍵存在時）。
+- [關聯描述項](../api/descriptors.md#relationship-descriptor)：選擇性，定義聯結；內嵌時未強制使用基數。
+- [時間戳記描述項](../api/descriptors.md#timestamp-descriptor)：對於時間序列結構描述，主索引鍵必須是包含時間戳記欄位的&#x200B;**複合**&#x200B;索引鍵。
+
+>[!NOTE]
+>
+>在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[!UICOTRNOL 版本識別項]&quot;和&quot;[!UICOTRNOL 時間戳記識別項]&quot;。
+
+<!-- >[!AVAILABILITY]
+>
+>Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+
+>[!CAUTION]
+>
+>以模型為基礎的結構描述&#x200B;**與聯合結構描述**&#x200B;不相容。 使用以模型為基礎的結構描述時，請勿將`union`標籤套用至`meta:immutableTags`。 UI已封鎖此設定，但API目前並未封鎖此設定。 如需聯合結構描述行為的詳細資訊，請參閱[聯合端點指南](./unions.md)。
+
+**API格式**
+
+```http
+POST /tenant/schemas
+```
+
+**要求**
+
+```shell
+curl --request POST \
+  --url https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+  "title": "marketing.customers",
+  "type": "object",
+  "description": "Schema of the Marketing Customers table.",
+  "definitions": {
+    "customFields": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/customFields",
+      "meta:xdmType": "object"
+    }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record"
+}
+'
+```
+
+### 要求內文屬性
+
+| 屬性 | 類型 | 說明 |
+| ------------------------------- | ------ | --------------------------------------------------------- |
+| `title` | 字串 | 結構描述的顯示名稱。 |
+| `description` | 字串 | 結構描述用途的簡短說明。 |
+| `type` | 字串 | 模型架構必須是`"object"`。 |
+| `definitions` | 物件 | 包含定義結構描述欄位的根層級物件。 |
+| `definitions.<name>.properties` | 物件 | 欄位名稱和資料型別。 |
+| `allOf` | 陣列 | 參考根層級物件定義（例如，`#/definitions/marketing_customers`）。 |
+| `meta:extends` | 陣列 | 必須包含`"https://ns.adobe.com/xdm/data/adhoc-v2"`，才能將結構描述識別為以模型為基礎。 |
+| `meta:behaviorType` | 字串 | 設定為`"record"`。 只有在啟用且適當的情況下才使用`"time-series"`。 |
+
+>[!IMPORTANT]
+>
+>模型型結構描述的結構描述進化遵循與標準結構描述相同的加法規則。 您可以使用PATCH請求新增欄位。 只有在未將資料擷取到資料集時，才允許重新命名或移除欄位等變更。
+
+**回應**
+
+成功的要求傳回&#x200B;**HTTP 201 （已建立）**&#x200B;和已建立的結構描述。
+
+>[!NOTE]
+>
+>以模型為基礎的結構描述不會繼承預先內建的欄位（例如，id、時間戳記或eventType）。 在結構描述中明確定義所有必填欄位。
+
+**範例回應**
+
+```json
+{
+  "$id": "https://ns.adobe.com/<TENANT_ID>/schemas/<SCHEMA_UUID>",
+  "meta:altId": "_<SCHEMA_ALT_ID>",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "marketing.customers",
+  "description": "Schema of the Marketing Customers table.",
+  "type": "object",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record",
+  "meta:containerId": "tenant"
+}
+```
+
+### 回應內文屬性
+
+| 屬性 | 類型 | 說明 |
+| ------------------- | ------ | -------------------------- |
+| `$id` | 字串 | 已建立綱要的唯一URL。 用於後續API呼叫。 |
+| `meta:altId` | 字串 | 結構描述的替代識別碼。 |
+| `meta:resourceType` | 字串 | 資源型別（一律為`"schemas"`）。 |
+| `version` | 字串 | 建立時指派的結構描述版本。 |
+| `title` | 字串 | 結構描述的顯示名稱。 |
+| `description` | 字串 | 結構描述用途的簡短說明。 |
+| `type` | 字串 | 結構描述型別。 |
+| `definitions` | 物件 | 定義架構中所使用的可重複使用物件或欄位群組。 這通常包括主要資料結構，並在`allOf`陣列中參考以定義結構描述根。 |
+| `allOf` | 陣列 | 透過參考一或多個定義（例如，`#/definitions/marketing_customers`）來指定結構描述的根物件。 |
+| `meta:extends` | 陣列 | 將結構描述識別為以模型為基礎(`adhoc-v2`)。 |
+| `meta:behaviorType` | 字串 | 行為型別（`record`或`time-series`，啟用時）。 |
+| `meta:containerId` | 字串 | 儲存結構描述的容器（例如，`tenant`）。 |
+
+若要在建立模型式結構描述後新增欄位，請提出[PATCH要求](#patch)。 以模型為基礎的結構描述不會繼承或自動演化。 只有在未將資料擷取到資料集時，才允許重新命名或刪除欄位等結構變更。 一旦資料存在，則僅支援&#x200B;**加總變更** （例如新增欄位）。
+
+您可以新增根級欄位（在根定義或根`properties`內），但無法移除、重新命名或變更現有欄位的型別。
+
+>[!CAUTION]
+>
+>使用結構描述初始化資料集後，結構描述演化會受到限制。 請事先謹慎規劃欄位名稱和型別，因為一旦擷取資料，就無法刪除或修改欄位。
+
 ## 更新結構 {#put}
 
-您可以透過PUT操作取代整個結構描述，基本上是重寫資源。 透過PUT要求更新結構描述時，本文必須包含在POST要求中[建立新結構描述](#create)時所需的所有欄位。
+您可以透過PUT作業取代整個結構描述，基本上就是重新寫入資源。 透過PUT要求更新結構描述時，本文必須包含在POST要求中[建立新結構描述](#create)時所需的所有欄位。
 
 >[!NOTE]
 >
@@ -362,13 +550,13 @@ curl -X PUT \
 
 ## 更新結構描述的一部分 {#patch}
 
-您可以使用PATCH請求來更新結構描述的一部分。 [!DNL Schema Registry]支援所有標準JSON修補程式操作，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH請求更新結構描述的一部分。 [!DNL Schema Registry]支援所有標準JSON修補程式操作，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
 
 >[!NOTE]
 >
 >如果您想要以新值取代整個資源，而非更新個別欄位，請參閱[使用PUT作業取代結構描述](#put)一節。
 
-最常見的PATCH作業之一是將先前定義的欄位群組新增到結構描述，如以下範例所示。
+PATCH最常見的操作之一，是將先前定義的欄位群組新增到結構描述，如下列範例所示。
 
 **API格式**
 
@@ -414,7 +602,7 @@ curl -X PATCH\
 
 **回應**
 
-回應顯示兩個作業都已成功執行。 欄位群組`$id`已新增至`meta:extends`陣列，而且欄位群組`$id`的參考(`$ref`)現在出現在`allOf`陣列中。
+回應顯示兩個作業都已成功執行。 欄位群組`$id`已新增至`meta:extends`陣列，而且欄位群組`$ref`的參考(`$id`)現在出現在`allOf`陣列中。
 
 ```JSON
 {
@@ -455,7 +643,7 @@ curl -X PATCH\
 
 ## 啟用結構以用於Real-Time Customer Profile {#union}
 
-為了讓結構描述參與[即時客戶設定檔](../../profile/home.md)，您必須將`union`標籤新增至結構描述的`meta:immutableTags`陣列。 您可以透過向相關結構描述發出PATCH請求來達到此目的。
+為了讓結構描述參與[即時客戶設定檔](../../profile/home.md)，您必須將`union`標籤新增至結構描述的`meta:immutableTags`陣列。 您可以向相關結構描述發出PATCH要求來達到此目的。
 
 >[!IMPORTANT]
 >

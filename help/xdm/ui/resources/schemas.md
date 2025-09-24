@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '4178'
-ht-degree: 2%
+source-wordcount: '4873'
+ht-degree: 1%
 
 ---
 
@@ -27,15 +27,96 @@ ht-degree: 2%
 
 ## 建立新結構描述 {#create}
 
+在[!UICONTROL 結構描述]工作區中，選取右上角的&#x200B;**[!UICONTROL 建立結構描述]**。 「選取結構描述型別」下拉式功能表出現，其中包含[!UICONTROL 標準]或[!UICONTROL 以模型為基礎的]結構描述的選項。
+
+![反白顯示[!UICONTROL 建立結構描述]的結構描述工作區，並顯示](../../images/ui/resources/schemas/create-schema.png)的「選取結構描述型別」下拉式清單。
+
+## 建立基於模型的結構描述 {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和模型型結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+
+選取&#x200B;**[!UICONTROL 以模型為基礎的]**，以定義結構化、以模型為基礎的樣式結構描述，並對記錄進行微調控制。 以模型為基礎的結構描述透過主要和外部索引鍵支援主索引鍵強制、記錄層級版本設定和結構描述層級關係。 它們也針對使用變更資料擷取的增量擷取進行最佳化，並支援用於Campaign Orchestration、Data Distiller和B2B實作的多種資料模型。
+
+若要深入瞭解，請參閱[Data Mirror](../../data-mirror/overview.md)或[模型架構](../../schema/model-based.md)概觀。
+
+### 手動建立 {#create-manually}
+
+>[!AVAILABILITY]
+>
+>DDL檔案上傳僅適用於Adobe Journey Optimizer Orchestrated行銷活動授權持有者。 您的UI外觀可能會有所不同。
+
+**[!UICONTROL 建立以模型為基礎的結構描述]**&#x200B;對話方塊就會顯示。 您可以選擇&#x200B;**[!UICONTROL 手動建立]**&#x200B;或[**[!UICONTROL 上傳DDL檔案]**](#upload-ddl-file)來定義結構描述結構。
+
+在&#x200B;**[!UICONTROL 建立模型型結構描述]**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 手動建立]**，然後選取&#x200B;**[!UICONTROL 下一步]**。
+
+![已選取[手動建立]並反白顯示[下一步]的[建立模型型結構描述]對話方塊。](../../images/ui/resources/schemas/relational-dialog.png)
+
+**[!UICONTROL 以模型為基礎的結構描述詳細資料]**&#x200B;頁面就會顯示。 輸入結構描述顯示名稱和選擇性說明，然後選取&#x200B;**[!UICONTROL 完成]**&#x200B;以建立結構描述。
+
+![含有[!UICONTROL 結構描述顯示名稱]、[!UICONTROL 描述]和[!UICONTROL 完成]的模型型結構描述詳細資料檢視已反白顯示。](../../images/ui/resources/schemas/relational-details.png)
+
+結構描述編輯器開啟，並顯示用於定義結構描述結構的空白畫布。 您可以照常新增欄位。
+
+#### 新增版本識別碼欄位 {#add-version-identifier}
+
+若要啟用版本追蹤並支援變更資料擷取，您必須在結構描述中指定版本識別碼欄位。 在架構編輯器中，選取加號(![A加號圖示。結構描述名稱旁的](/help/images/icons/plus.png))圖示以新增欄位。
+
+輸入欄位名稱，例如`updateSequence`，然後選擇&#x200B;**[!UICONTROL 日期時間]**&#x200B;或&#x200B;**[!UICONTROL 數字]**&#x200B;的資料型別。
+
+在右邊欄中，啟用&#x200B;**[!UICONTROL 版本識別碼]**&#x200B;核取方塊，然後選取&#x200B;**[!UICONTROL 套用]**&#x200B;以確認欄位。
+
+![已新增包含名為`updateSequence`之DateTime欄位的結構描述編輯器，且已選取[版本識別碼]核取方塊。](../../images/ui/resources/schemas/add-version-identifier.png)
+
+>[!IMPORTANT]
+>
+>模型架構必須包含版本識別碼欄位，以支援記錄層級更新和變更資料擷取擷取。
+
+若要定義關係，請在結構描述編輯器中選取&#x200B;**[!UICONTROL 新增關係]**，以建立結構描述層級的主索引鍵/外部索引鍵關係。 如需詳細資訊，請參閱有關[新增結構描述層級關係](../../tutorials/relationship-ui.md#relationship-field)的教學課程。
+
+接下來，繼續進行[定義主索引鍵](../fields/identity.md#define-a-identity-field)，並視需要[新增其他欄位](#add-field-groups)。 如需如何在Experience Platform來源中啟用變更資料擷取的指引，請參閱[變更資料擷取擷取指南](../../../sources/tutorials/api/change-data-capture.md)。
+
 >[!NOTE]
 >
->本節說明如何在UI中手動建立新結構描述。 如果您正在將CSV資料擷取至Experience Platform，您可以使用機器學習(ML)演演算法，從範例CSV資料&#x200B;**產生結構描述**。 此工作流程會比對您的資料格式，並根據CSV檔案的結構和內容自動建立新結構描述。 如需此工作流程的詳細資訊，請參閱[ML輔助結構描述建立指南](../ml-assisted-schema-creation.md)。
+>儲存後，[!UICONTROL 結構描述屬性]側邊欄中的[!UICONTROL Type]欄位會指出這是[!UICONTROL 以模型為基礎的]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
+>>![結構描述編輯器畫布顯示空白的模型型結構描述結構，其中反白顯示模型型別。](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
-在[!UICONTROL 結構描述]工作區中，選取右上角的&#x200B;**[!UICONTROL 建立結構描述]**。
+### 上傳DDL檔案 {#upload-ddl-file}
 
-![反白顯示[!UICONTROL 建立結構描述]的結構描述工作區。](../../images/ui/resources/schemas/create-schema.png)
+>[!AVAILABILITY]
+>
+>DDL檔案上傳僅適用於Adobe Journey Optimizer Orchestrated行銷活動授權持有者。
 
-[!UICONTROL 建立結構描述]對話方塊就會顯示。 在此對話方塊中，您可以選擇透過新增欄位和欄位群組來手動建立結構描述，或者您可以上傳CSV檔案並使用ML演演算法來產生結構描述。 從對話方塊中選取結構描述建立工作流程。
+使用此工作流程透過上傳DDL檔案來定義結構描述。 在&#x200B;**[!UICONTROL 建立模型架構]**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 上傳DDL檔案]**，然後從您的系統拖曳本機DDL檔案或選取&#x200B;**[!UICONTROL 選擇檔案]**。 Experience Platform會驗證結構，如果檔案上傳成功，會顯示綠色核取記號。 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以確認上傳。
+
+![已選取[!UICONTROL 上傳DDL檔案]且[!UICONTROL 下一步]反白顯示的建立模型架構對話方塊。](../../images/ui/resources/schemas/upload-ddl-file.png)
+
+[!UICONTROL 選取要匯入的實體和欄位]對話方塊會出現，讓您預覽結構描述。 檢閱結構描述結構，並使用選項按鈕和核取方塊來確保每個實體都有指定的主索引鍵和版本識別碼。
+
+>[!IMPORTANT]
+>
+>資料表結構必須包含&#x200B;**主索引鍵**&#x200B;和&#x200B;**版本識別碼**，例如日期時間或數字型別的`updateSequence`欄位。
+>
+>對於變更資料擷取擷取，也需要名稱為`_change_request_type`且型別為String的特殊資料行，才能啟用增量處理。 此欄位指出資料變更的型別(例如，`u` （更新插入）或`d` （刪除）)。
+
+雖然在內嵌期間是必要的，但控制項資料行（例如`_change_request_type`）並未儲存在結構描述中，也不會出現在最終的結構描述結構中。 如果一切看起來都正確，請選取&#x200B;**[!UICONTROL 完成]**&#x200B;以建立結構描述。
+
+>[!NOTE]
+>
+>DDL上傳支援的檔案大小上限為10MB。
+
+![顯示已匯入欄位且已反白顯示[!UICONTROL 完成]的模型型結構描述檢視表。](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+結構會在結構編輯器中開啟，您可以在儲存前調整結構。
+
+接下來，繼續進行[新增其他欄位](#add-field-groups)，並視需要[新增其他結構描述層級關係](../../tutorials/relationship-ui.md#relationship-field)。
+
+如需如何在Experience Platform來源中啟用變更資料擷取的指引，請參閱[變更資料擷取擷取指南](../../../sources/tutorials/api/change-data-capture.md)。
+
+## 標準結構描述建立 {#standard-based-creation}
+
+如果您從「選取結構描述型別」下拉式選單中選取「標準結構描述型別」，[!UICONTROL 建立結構描述]對話方塊就會顯示。 在此對話方塊中，您可以選擇透過新增欄位和欄位群組來手動建立結構描述，或者您可以上傳CSV檔案並使用ML演演算法來產生結構描述。 從對話方塊中選取結構描述建立工作流程。
 
 ![使用工作流程選項建立結構描述對話方塊並選取反白顯示。](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
@@ -172,7 +253,7 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >選取&#x200B;**[!UICONTROL 移除]**&#x200B;會從欄位群組本身刪除欄位，影響使用該欄位群組的&#x200B;*所有*結構描述。
->&#x200B;>除非您想要&#x200B;**從包含欄位群組**&#x200B;的每個結構描述中移除欄位，否則請勿使用此選項。
+>>除非您想要&#x200B;**從包含欄位群組**&#x200B;的每個結構描述中移除欄位，否則請勿使用此選項。
 
 若要從欄位群組刪除欄位，請在畫布中選取該欄位，然後在右側邊欄中選取&#x200B;**[!UICONTROL 移除]**。 此範例顯示來自`taxId`人口統計詳細資料&#x200B;**[!UICONTROL 群組的]**&#x200B;欄位。
 

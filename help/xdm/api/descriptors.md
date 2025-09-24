@@ -4,26 +4,41 @@ solution: Experience Platform
 title: 描述項API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述項。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2888'
 ht-degree: 1%
 
 ---
 
 # 描述項端點
 
-結構描述會定義資料實體的靜態檢視，但不會提供這些結構描述（例如資料集）所依據的資料如何彼此關聯的特定詳細資訊。 Adobe Experience Platform可讓您使用描述項描述這些關係以及有關結構描述的其他可解譯的中繼資料。
+結構描述會定義資料實體的結構，但不會指定從這些結構描述建立的任何資料集如何彼此關聯。 在Adobe Experience Platform中，您可以使用描述元來說明這些關係，並將解譯性中繼資料新增到結構描述。
 
-結構描述項是租使用者層級的中繼資料，這表示它們對於您的組織都是唯一的，並且所有描述項作業都在租使用者容器中進行。
+描述項是套用至Adobe Experience Platform中結構描述的租使用者層級中繼資料物件。 它們定義結構關係、索引鍵和行為欄位（例如時間戳記或版本設定），這些欄位會影響到下游資料的驗證、連結或解譯方式。
 
-每個結構描述可以套用一或多個結構描述項實體。 每個結構描述描述項實體都包含描述項`@type`及其適用的`sourceSchema`。 套用後，這些描述項將套用至使用結構描述建立的所有資料集。
+結構描述可以有一或多個描述項。 每個描述項都定義了`@type`以及它適用的`sourceSchema`。 描述項會自動套用至從該結構描述建立的所有資料集。
 
-[!DNL Schema Registry] API中的`/descriptors`端點可讓您以程式設計方式管理體驗應用程式中的描述項。
+在Adobe Experience Platform中，描述項是將行為規則或結構含義新增到結構描述的中繼資料。
+描述項有多種型別，包括：
+
+- [身分描述項](#identity-descriptor) — 將欄位標示為身分
+- [主索引鍵描述項](#primary-key-descriptor) — 強制唯一性
+- [關聯性描述項](#relationship-descriptor) — 定義外部索引鍵聯結
+- [替代顯示資訊描述項](#friendly-name) — 讓您重新命名UI中的欄位
+- [版本](#version-descriptor)和[時間戳記](#timestamp-descriptor)描述項 — 追蹤事件順序和變更偵測
+
+`/descriptors` API中的[!DNL Schema Registry]端點可讓您以程式設計方式管理體驗應用程式中的描述項。
 
 ## 快速入門
 
 本指南中使用的端點是[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
+
+除了標準描述項之外，[!DNL Schema Registry]還支援模型架構的描述項型別，例如&#x200B;**主索引鍵**、**版本**&#x200B;和&#x200B;**時間戳記**。 這些會強制唯一性、控制版本化，並在架構層級定義時間序列欄位。 如果您不熟悉以模型為基礎的結構描述，請先檢閱[Data Mirror概觀](../data-mirror/overview.md)和[以模型為基礎的結構描述技術參考](../schema/model-based.md)，然後再繼續。
+
+>[!IMPORTANT]
+>
+>如需所有描述項型別的詳細資訊，請參閱[附錄](#defining-descriptors)。
 
 ## 擷取描述項清單 {#list}
 
@@ -47,11 +62,11 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-回應格式取決於請求中傳送的`Accept`標頭。 請注意，`/descriptors`端點使用與[!DNL Schema Registry] API中所有其他端點不同的`Accept`標頭。
+回應格式取決於請求中傳送的`Accept`標頭。 請注意，`/descriptors`端點使用與`Accept` API中所有其他端點不同的[!DNL Schema Registry]標頭。
 
 >[!IMPORTANT]
 >
->描述項需要以`xdm`取代`xed`的唯一的`Accept`標頭，並提供描述項唯一的`link`選項。 以下範例呼叫中已包含適當的`Accept`標頭，但請特別注意，以確保在使用描述項時使用正確的標頭。
+>描述項需要以`Accept`取代`xed`的唯一的`xdm`標頭，並提供描述項唯一的`link`選項。 以下範例呼叫中已包含適當的`Accept`標頭，但請特別注意，以確保在使用描述項時使用正確的標頭。
 
 | `Accept`標題 | 說明 |
 | -------|------------ |
@@ -86,7 +101,7 @@ curl -X GET \
 
 ## 查詢描述項 {#lookup}
 
-如果您想要檢視特定描述項的詳細資訊，可以使用其`@id`來查詢(GET)個別描述項。
+若要檢視特定描述項的詳細資料，請使用其`@id`傳送GET要求。
 
 **API格式**
 
@@ -281,9 +296,9 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
 
-若要確認描述項已刪除，您可以對描述項`@id`執行[查詢要求](#lookup)。 回應傳回HTTP狀態404 （找不到），因為描述項已從[!DNL Schema Registry]中移除。
+若要確認描述項已刪除，您可以對描述項[執行](#lookup)查詢要求`@id`。 回應傳回HTTP狀態404 （找不到），因為描述項已從[!DNL Schema Registry]中移除。
 
-## 附錄
+## 附錄 {#appendix}
 
 下節提供有關在[!DNL Schema Registry] API中使用描述項的其他資訊。
 
@@ -299,9 +314,9 @@ curl -X DELETE \
 >
 >您無法標籤租使用者名稱空間物件，因為系統會將該標籤套用至該沙箱中的每個自訂欄位。 反之，您必須在該物件下指定需要加上標籤的分葉節點。
 
-#### 身分描述項
+#### 身分描述項 {#identity-descriptor}
 
-身分描述項會指出「[!UICONTROL sourceSchema]」的「[!UICONTROL sourceProperty]」是[Adobe Experience Platform Identity Service](../../identity-service/home.md)所說明的[!DNL Identity]欄位。
+身分描述項會指出「[!UICONTROL sourceSchema]」的「[!UICONTROL sourceProperty]」是[!DNL Identity]Experience Platform Identity Service[所說明的](../../identity-service/home.md)欄位。
 
 ```json
 {
@@ -323,7 +338,7 @@ curl -X DELETE \
 | `xdm:sourceVersion` | 來源結構描述的主要版本。 |
 | `xdm:sourceProperty` | 將成為身分的特定屬性的路徑。 路徑應該以「/」開頭，而不是以開頭。 不要在路徑中包含「properties」（例如，使用「/personalEmail/address」而非「/properties/personalEmail/properties/address」） |
 | `xdm:namespace` | 身分名稱空間的`id`或`code`值。 可使用[[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service)找到名稱空間清單。 |
-| `xdm:property` | 視使用的`xdm:namespace`而定，`xdm:id`或`xdm:code`。 |
+| `xdm:property` | 視使用的`xdm:id`而定，`xdm:code`或`xdm:namespace`。 |
 | `xdm:isPrimary` | 選用的布林值。 為true時，將欄位指示為主要身分。 結構描述只能包含一個主要身分。 |
 
 {style="table-layout:auto"}
@@ -371,21 +386,36 @@ curl -X DELETE \
 
 #### 關係描述項 {#relationship-descriptor}
 
-關聯性描述項描述兩個不同結構描述之間的關係，以`sourceProperty`和`destinationProperty`中描述的屬性作為索引鍵。 如需詳細資訊，請參閱有關[定義兩個結構描述](../tutorials/relationship-api.md)之間關係的教學課程。
+關聯性描述項描述兩個不同結構描述之間的關係，以`xdm:sourceProperty`和`xdm:destinationProperty`中描述的屬性作為索引鍵。 如需詳細資訊，請參閱有關[定義兩個結構描述](../tutorials/relationship-api.md)之間關係的教學課程。
+
+使用這些屬性來宣告來源欄位（外部索引鍵）與目的地欄位（[主索引鍵](#primary-key-descriptor)或候選索引鍵）的關聯方式。
+
+>[!TIP]
+>
+>**外部索引鍵**&#x200B;是來源結構描述中的欄位（由`xdm:sourceProperty`定義），它參考另一個結構描述中的索引鍵欄位。 **候選索引鍵**&#x200B;是目的地結構描述中唯一識別記錄的任何欄位（或欄位集），可用來取代主索引鍵。
+
+API支援兩種模式：
+
+- `xdm:descriptorOneToOne`：標準1:1關聯性。
+- `xdm:descriptorRelationship`：新工作和模型型結構描述的一般模式（支援基數、命名和非主索引鍵目標）。
+
+##### 一對一關係（標準結構描述）
+
+在維護已依賴`xdm:descriptorOneToOne`的現有標準結構描述整合時，請使用此專案。
 
 ```json
 {
   "@type": "xdm:descriptorOneToOne",
-  "xdm:sourceSchema":
-    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
   "xdm:sourceVersion": 1,
   "xdm:sourceProperty": "/parentField/subField",
-  "xdm:destinationSchema": 
-    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
   "xdm:destinationVersion": 1,
   "xdm:destinationProperty": "/parentField/subField"
 }
 ```
+
+下表說明定義一對一關係描述項所需的欄位。
 
 | 屬性 | 說明 |
 | --- | --- |
@@ -397,7 +427,143 @@ curl -X DELETE \
 | `xdm:destinationVersion` | 參考結構描述的主要版本。 |
 | `xdm:destinationProperty` | （選用）參照結構描述中目標欄位的路徑。 如果省略此屬性，則任何包含相符參考身分描述項的欄位都會推斷目標欄位（請參閱下文）。 |
 
-{style="table-layout:auto"}
+##### 一般關係（以模型為基礎的結構描述，以及新專案的建議使用）
+
+請將此描述項用於所有新實作和模型型結構描述。 它可讓您定義關係的基數（例如一對一或多對一）、指定關係名稱，以及連結至非主索引鍵（非主索引鍵）的目的地欄位。
+
+下列範例顯示如何定義一般關係描述項。
+
+**最小範例：**
+
+這個最小範例僅包含定義兩個結構描述之間多對一關係的必填欄位。
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:sourceVersion": 1,
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:cardinality": "M:1"
+}
+```
+
+**所有選擇性欄位的範例：**
+
+此範例包含所有選擇性欄位，例如關係名稱、顯示標題和明確的非主索引鍵目的地欄位。
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:destinationProperty": "/customer_id",
+  "xdm:sourceToDestinationName": "CampaignToCustomer",
+  "xdm:destinationToSourceName": "CustomerToCampaign",
+  "xdm:sourceToDestinationTitle": "Customer campaigns",
+  "xdm:destinationToSourceTitle": "Campaign customers",
+  "xdm:cardinality": "M:1"
+}
+```
+
+##### 選擇關係描述項
+
+使用下列准則來決定要套用的關係描述項：
+
+| 狀況 | 要使用的描述項 |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| 新的工作或模型架構 | `xdm:descriptorRelationship` |
+| 標準結構描述中的現有1:1對應 | 繼續使用`xdm:descriptorOneToOne`，除非您只需要`xdm:descriptorRelationship`支援的功能。 |
+| 需要多對一或選用的基數(`1:1`， `1:0`， `M:1`， `M:0`) | `xdm:descriptorRelationship` |
+| UI/下游可讀性需要關係名稱或標題 | `xdm:descriptorRelationship` |
+| 需要不是身分的目的地目標 | `xdm:descriptorRelationship` |
+
+>[!NOTE]
+>
+>對於標準結構描述中的現有`xdm:descriptorOneToOne`描述項，除非您需要非主要身分目的地目標、自訂命名或擴充基數選項等功能，否則請繼續使用它們。
+
+##### 功能比較
+
+下表比較兩種描述項型別的功能：
+
+| 功能 | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship` |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------ |
+| 基數 | 1:1 | 1:1， 1:0， M:1， M:0 （資訊） |
+| 目的地目標 | 身分/明確欄位 | 預設主索引鍵，或透過`xdm:destinationProperty`的非主索引鍵 |
+| 命名欄位 | 不支援 | `xdm:sourceToDestinationName`、`xdm:destinationToSourceName`和標題 |
+| 關聯式符合 | 有限 | 模型型結構描述的主要模式 |
+
+##### 限制和驗證
+
+定義一般關係描述項時，請遵循下列需求和建議：
+
+- 對於以模型為基礎的結構描述，請將來源欄位（外部索引鍵）放置在根層級。 這是目前擷取的技術限制，並非最佳實務建議。
+- 確保來源和目的地欄位的資料型別相容（數值、日期、布林值、字串）。
+- 請記住，基數僅供參考；儲存不會強制執行。 以`<source>:<destination>`格式指定基數。 接受的值為： `1:1`、`1:0`、`M:1`或`M:0`。
+
+#### 主索引鍵描述項 {#primary-key-descriptor}
+
+主索引鍵描述項(`xdm:descriptorPrimaryKey`)在結構描述中的一或多個欄位上強制唯一性和非null限制。
+
+```json
+{
+  "@type": "xdm:descriptorPrimaryKey",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": ["/orderId", "/orderLineId"]
+}
+```
+
+| 屬性 | 說明 |
+| -------------------- | ----------------------------------------------------------------------------- |
+| `@type` | 必須為`xdm:descriptorPrimaryKey`。 |
+| `xdm:sourceSchema` | 結構描述的`$id` URI。 |
+| `xdm:sourceProperty` | 主鍵欄位的JSON指標。 使用複合鍵的陣列。 對於時間序列結構描述，複合金鑰必須包含時間戳記欄位，以確保事件記錄之間的唯一性。 |
+
+#### 版本描述項 {#version-descriptor}
+
+>[!NOTE]
+>
+>在UI結構描述編輯器中，版本描述項顯示為&quot;[!UICOTRNOL 版本識別碼]&quot;。
+
+版本描述項(`xdm:descriptorVersion`)會指定一個欄位，以偵測並防止順序錯亂的變更事件發生衝突。
+
+```json
+{
+  "@type": "xdm:descriptorVersion",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/versionNumber"
+}
+```
+
+| 屬性 | 說明 |
+| -------------------- | ------------------------------------------------------------- |
+| `@type` | 必須為`xdm:descriptorVersion`。 |
+| `xdm:sourceSchema` | 結構描述的`$id` URI。 |
+| `xdm:sourceProperty` | 版本欄位的JSON指標。 必須標籤為`required`。 |
+
+#### 時間戳記描述項 {#timestamp-descriptor}
+
+>[!NOTE]
+>
+>在UI結構描述編輯器中，時間戳記描述項會顯示為&quot;[!UICOTRNOL 時間戳記識別碼]&quot;。
+
+時間戳記描述項(`xdm:descriptorTimestamp`)指定日期 — 時間欄位做為具有`"meta:behaviorType": "time-series"`的結構描述的時間戳記。
+
+```json
+{
+  "@type": "xdm:descriptorTimestamp",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/eventTime"
+}
+```
+
+| 屬性 | 說明 |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `@type` | 必須為`xdm:descriptorTimestamp`。 |
+| `xdm:sourceSchema` | 結構描述的`$id` URI。 |
+| `xdm:sourceProperty` | JSON時間戳記欄位指標。 必須標示為`required`且型別為`date-time`。 |
 
 ##### B2B關係描述項 {#B2B-relationship-descriptor}
 
@@ -427,7 +593,7 @@ Real-Time CDP B2B edition引進了定義結構描述之間關係的替代方式�
 | `xdm:sourceProperty` | 來源結構描述中定義關係的欄位路徑。 開頭應為&quot;/&quot;，結尾應為&quot;/&quot;。 請勿在路徑中包含「properties」（例如，「/personalEmail/address」而非「/properties/personalEmail/properties/address」）。 |
 | `xdm:destinationSchema` | 此描述項正在定義關聯性的參考結構描述的`$id` URI。 |
 | `xdm:destinationVersion` | 參考結構描述的主要版本。 |
-| `xdm:destinationProperty` | （選用）參照結構描述中目標欄位的路徑，該路徑必須是結構描述的主要ID。 如果省略此屬性，則任何包含相符參考身分描述項的欄位都會推斷目標欄位（請參閱下文）。 |
+| `xdm:destinationProperty` | （選用）參照結構描述中目標欄位的路徑。 這必須解析為結構描述的主要ID，或解析為另一個具有相容資料型別的欄位至`xdm:sourceProperty`。 如果省略，此關係可能無法如預期運作。 |
 | `xdm:destinationNamespace` | 參照結構描述中的主要ID名稱空間。 |
 | `xdm:destinationToSourceTitle` | 從參考結構描述到來源結構描述的關係顯示名稱。 |
 | `xdm:sourceToDestinationTitle` | 從來源結構描述到參考結構描述的關係顯示名稱。 |
@@ -461,7 +627,7 @@ Real-Time CDP B2B edition引進了定義結構描述之間關係的替代方式�
 
 #### 已棄用的欄位描述項
 
-您可以將設定為`deprecated`的`meta:status`屬性新增至有問題的欄位，以[棄用自訂XDM資源](../tutorials/field-deprecation-api.md#custom)中的欄位。 不過，如果您想要取代結構描述中標準XDM資源提供的欄位，您可以將取代的欄位描述項指派給相關結構描述，以取得相同的效果。 使用[正確的`Accept`標頭](../tutorials/field-deprecation-api.md#verify-deprecation)，您就可以在API中查詢結構描述時，檢視該結構描述已棄用的標準欄位。
+您可以將設定為[的](../tutorials/field-deprecation-api.md#custom)屬性新增至有問題的欄位，以`meta:status`棄用自訂XDM資源`deprecated`中的欄位。 不過，如果您想要取代結構描述中標準XDM資源提供的欄位，您可以將取代的欄位描述項指派給相關結構描述，以取得相同的效果。 使用[正確的`Accept`標頭](../tutorials/field-deprecation-api.md#verify-deprecation)，您就可以在API中查詢結構描述時，檢視該結構描述已棄用的標準欄位。
 
 ```json
 {

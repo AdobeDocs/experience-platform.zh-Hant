@@ -5,9 +5,9 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
+source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '708'
 ht-degree: 48%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 48%
    * [資料建模的最佳做法](schema/best-practices.md)
    * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位型別限制](schema/field-constraints.md)
+   * [以模型為基礎的結構描述](./schema/model-based.md)
    * [XDM中的名稱空間](./schema/namespaces.md)
    * 產業資料模型 {#industries}
       * [概觀](./schema/industries/overview.md)
@@ -73,6 +74,8 @@ ht-degree: 48%
          * [時間](./schema/healthcare/data-types/timing.md)
          * [虛擬服務](./schema/healthcare/data-types/virtual-service-detail.md)
    * [XDM欄位字典](schema/field-dictionary.md)
+* Data Mirror {#data-mirror}
+   * [概觀](./data-mirror/overview.md)
 * 類別 {#classes}
    * [XDM 個人輪廓](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
