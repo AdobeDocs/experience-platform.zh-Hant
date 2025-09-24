@@ -3,9 +3,9 @@ title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域，以啟用受眾及匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4eef1804d6974fd54f5e74e0efe62257190f408b
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '2019'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案強�
 ## 透過API或UI連線至您的[!UICONTROL 資料登陸區域]儲存空間 {#connect-api-or-ui}
 
 * 若要使用Experience Platform使用者介面連線至您的[!UICONTROL 資料登陸區域]儲存位置，請閱讀以下章節： [連線至目的地](#connect)和[啟用對象至此目的地](#activate)。
-* 若要以程式設計方式連線至您的[!UICONTROL 資料登陸區域]儲存位置，請使用「流程服務API」教學課程[&#128279;](../../api/activate-segments-file-based-destinations.md)，讀取將對象啟用至檔案型目的地。
+* 若要以程式設計方式連線至您的[!UICONTROL 資料登陸區域]儲存位置，請使用「流程服務API」教學課程[，讀取](../../api/activate-segments-file-based-destinations.md)將對象啟用至檔案型目的地。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -58,8 +58,8 @@ Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案強�
 
 此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 如何使用Experience Platform使用者介面[&#128279;](/help/destinations/ui/export-datasets.md)匯出資料集。
-* 如何使用流程服務API[&#128279;](/help/destinations/api/export-datasets.md)以程式設計方式匯出資料集。
+* 如何使用Experience Platform使用者介面[匯出資料集](/help/destinations/ui/export-datasets.md)。
+* 如何使用流程服務API[以程式設計方式](/help/destinations/api/export-datasets.md)匯出資料集。
 
 ## 匯出資料的檔案格式 {#file-format}
 
@@ -71,7 +71,7 @@ Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案強�
 
 >[!AVAILABILITY]
 >
->本節適用於在Microsoft Azure上執行的Experience Platform實作。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/multi-cloud)。
+>本節適用於在Microsoft Azure上執行的Experience Platform實作。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
 您可以透過[!DNL Azure Storage Explorer]或命令列介面讀取及寫入檔案到容器。
 
@@ -91,7 +91,7 @@ Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案強�
 
 ![選取在Azure UI中反白顯示的連線方法。](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
-選取您的連線方法後，您必須提供與[!DNL Data Landing Zone]容器相對應的&#x200B;**顯示名稱**&#x200B;和&#x200B;**[!DNL Blob]容器SAS URL**。
+選取您的連線方法後，您必須提供與&#x200B;**容器相對應的**&#x200B;顯示名稱&#x200B;**[!DNL Blob]和**&#x200B;容器SAS URL[!DNL Data Landing Zone]。
 
 >[!BEGINSHADEBOX]
 
@@ -148,7 +148,7 @@ curl -X GET \
 
 ### 更新[!DNL Data Landing Zone]認證 {#update-dlz-credentials}
 
-您也可以視需要重新整理您的認證。 您可以對[!DNL Connectors] API的`/credentials`端點發出POST要求，以更新您的`SASToken`。
+您也可以視需要重新整理您的認證。 您可以對`SASToken` API的`/credentials`端點發出POST要求，以更新您的[!DNL Connectors]。
 
 **API格式**
 
@@ -200,7 +200,7 @@ curl -X POST \
 
 ![顯示在Azure UI中的設定摘要。](/help/sources/images/tutorials/create/dlz/summary.png)
 
-成功連線會以您的[!DNL Data Landing Zone]容器更新您的[!DNL Azure Storage Explorer] UI。
+成功連線會以您的[!DNL Azure Storage Explorer]容器更新您的[!DNL Data Landing Zone] UI。
 
 ![在Azure UI中反白顯示的DLZ使用者容器摘要。](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 >[!AVAILABILITY]
 >
->本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/multi-cloud)。
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
 執行以下作業，以取得您在AWS上布建之[!DNL Data Landing Zone]執行個體的認證。 然後，使用所選的使用者端連線至您的[!DNL Data Landing Zone]執行個體。
 
@@ -282,16 +282,18 @@ curl --request GET \
 > 
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線到此目的地，請依照[目的地組態教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
+若要連線到此目的地，請依照[目的地組態教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-確定您已依照[必要條件](#prerequisites)一節中的說明將[!DNL Data Landing Zone]容器連線至[!DNL Azure Storage Explorer]。 因為[!DNL Data Landing Zone]是Adobe布建的存放裝置，您不需要在Experience Platform UI中執行任何進一步的步驟，即可對目的地進行驗證。
+確定您已依照[!DNL Data Landing Zone]必要條件[!DNL Azure Storage Explorer]一節中的說明將[容器連線至](#prerequisites)。 因為[!DNL Data Landing Zone]是Adobe布建的存放裝置，您不需要在Experience Platform UI中執行任何進一步的步驟，即可對目的地進行驗證。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
+* **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，將加密新增至匯出的檔案。 在下圖中檢視格式正確的加密金鑰範例。
+  ![顯示UI中格式正確的PGP金鑰範例的影像。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 * **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 * **[!UICONTROL 描述]**：選擇性。 例如，您可以提及要將此目的地用於哪個行銷活動。
 * **[!UICONTROL 資料夾路徑]**：輸入目的地資料夾的路徑，此資料夾將裝載匯出的檔案。
@@ -319,9 +321,9 @@ curl --request GET \
 
 請參閱[啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)，以取得啟用對象至此目的地的指示。
 
-### 正在安排
+### 排程
 
-在&#x200B;**[!UICONTROL 排程]**&#x200B;步驟中，您可以[為您的[!DNL Data Landing Zone]目的地設定匯出排程](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)，也可以[設定匯出檔案的名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
+在&#x200B;**[!UICONTROL 排程]**&#x200B;步驟中，您可以[為您的](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)目的地設定匯出排程[!DNL Data Landing Zone]，也可以[設定匯出檔案的名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
 
 ### 對應屬性和身分 {#map}
 
