@@ -525,7 +525,7 @@ API支援兩種模式：
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，版本描述項顯示為&quot;[!UICOTRNOL 版本識別碼]&quot;。
+>在UI結構描述編輯器中，版本描述項顯示為&quot;[ !UICOTRNOL 版本識別碼]&quot;。
 
 版本描述項(`xdm:descriptorVersion`)會指定一個欄位，以偵測並防止順序錯亂的變更事件發生衝突。
 
@@ -547,7 +547,7 @@ API支援兩種模式：
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，時間戳記描述項會顯示為&quot;[!UICOTRNOL 時間戳記識別碼]&quot;。
+>在UI結構描述編輯器中，時間戳記描述項會顯示為&quot;[ !UICOTRNOL 時間戳記識別碼]&quot;。
 
 時間戳記描述項(`xdm:descriptorTimestamp`)指定日期 — 時間欄位做為具有`"meta:behaviorType": "time-series"`的結構描述的時間戳記。
 

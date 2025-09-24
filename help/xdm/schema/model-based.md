@@ -71,7 +71,7 @@ Experience Platform中的標準XDM結構描述會遵循下列三種資料行為�
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[!UICOTRNOL 版本識別項]&quot;和&quot;[!UICOTRNOL 時間戳記識別項]&quot;。
+>在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[ !UICOTRNOL 版本識別項]&quot;和&quot;[ !UICOTRNOL 時間戳記識別項]&quot;。
 
 **範例（單一欄位）：**
 
