@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 43%
+source-wordcount: '1480'
+ht-degree: 40%
 
 ---
 
@@ -90,12 +90,9 @@ XDM 是一種開放原始碼的規格，可為帶入 Experience Platform 的資�
 | 功能 | 說明 |
 | ------- | ----------- |
 | 以模型為基礎的結構描述 | 使用基於模型的結構描述來簡化資料建模。您現在可以利用全方位的操作範例和指南，更輕鬆地建立結構描述。此功能目前可供Campaign Orchestration授權持有人使用，並會在GA擴充至Data Distiller客戶，讓資料模型更容易存取且更有效率。 此功能包含對時間序列資料和變更資料擷取功能的支援。 |
+| Data Mirror | 使用模型型結構描述，將資料列層級變更從雲端資料倉儲(例如Snowflake、Databricks、BigQuery)擷取到Adobe Experience Platform。 Data Mirror會直接將現有資料庫結構映象至資料湖，藉此消除上游ETL並保留關係、版本設定和刪除專案。 時間系列和記錄事件結構描述行為，以及變更資料擷取功能全都受到支援。 此功能目前可供Campaign Orchestration授權持有人使用，並將在這個有限版本中進一步擴展，包括Customer Journey Analytics客戶。 如需詳細資訊，請參閱[Data Mirror檔案](../../xdm/data-mirror/overview.md)。 請聯絡您的Adobe代表以取得存取權。 |
 
 如需詳細資訊，請詳讀 [XDM 概觀](../../xdm/home.md)。
-<!--
-
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
--->
 
 ## 即時客戶輪廓 {#profile}
 
@@ -138,7 +135,10 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | --- | --- |
 | 正式發行的新來源 | 以下來源現在為「一般可用性」：有幾個來源聯結器已從Beta更新為GA： <ul><li>[Acxiom資料擷取](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom潛在客戶資料擷取](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>。這些來源現在已完全受支援，並準備好用於生產。 |
 | [!DNL Snowflake]金鑰組驗證支援 | 增強Snowflake連線的安全性，並支援金鑰組驗證。 基本驗證（使用者名稱/密碼）將於2025年11月前淘汰，因此建議客戶遷移到金鑰組驗證以提高安全性。 如需詳細資訊，請閱讀[[!DNL Snowflake] 文件](../../sources/connectors/databases/snowflake.md)。 |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | 使用[[!DNL Capillary Streaming Events] 來源](../../sources/connectors/loyalty/capillary.md)將[!DNL Capillary]帳戶的忠誠度資料串流至Experience Platform。 |
 | 來源中一般提供的私人連結支援 | 您現在可以為選取的來源群組使用&#x200B;**私人連結**。 使用此功能來建立您的來源可以連接的私人端點。您可以利用私人端點來設定繞過公共網際網路的連線和資料流，為敏感資料提供強化的安全性和網路隔離。下列來源支援私人連結： <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>。如需詳細資訊，請參閱在API[中建立私人連結](../../sources/tutorials/api/private-link.md)以及在UI[中建立](../../sources/tutorials/ui/private-link.md)的指南。 |
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->

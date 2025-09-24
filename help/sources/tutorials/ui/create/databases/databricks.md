@@ -1,24 +1,25 @@
 ---
-title: 使用UI將Azure Databricks連線至Experience Platform
-description: 瞭解如何使用使用者介面將Azure Databricks連線至Experience Platform。
+title: 使用UI將資料庫連線至Experience Platform
+description: 瞭解如何使用使用者介面將Databricks連線至Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2bd16d5a55c5bbeedbc6a6012d9f0229eee8433a
+exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '481'
 ht-degree: 4%
 
 ---
 
-# 在UI中連線[!DNL Azure Databricks]至Experience Platform
+# 在UI中連線[!DNL Databricks]至Experience Platform
 
 >[!AVAILABILITY]
 >
->* [!DNL Azure Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
+>* [!DNL Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 >
->* [!DNL Azure Databricks]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
+>* [!DNL Databricks]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
-請閱讀本指南，瞭解如何使用UI中的來源工作區將您的[!DNL Azure Databricks]帳戶連結至Adobe Experience Platform。
+請閱讀本指南，瞭解如何使用UI中的來源工作區將您的[!DNL Databricks]帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
 
@@ -29,22 +30,22 @@ ht-degree: 4%
 
 ### 收集必要的認證
 
-提供下列認證的值，以便將[!DNL Azure Databricks]連線至Experience Platform。
+提供下列認證的值，以便將[!DNL Databricks]連線至Experience Platform。
 
 | 認證 | 說明 |
 | --- | --- |
-| 網域 | [!DNL Azure Databricks]工作區的URL。 例如 `https://adb-1234567890123456.7.azuredatabricks.net`。 |
-| 叢集ID | [!DNL Azure Databricks]中叢集的識別碼。 此叢集必須是現有的叢集，而且應該是互動式叢集。 |
-| 存取權杖 | 驗證您[!DNL Azure Databricks]帳戶的存取Token。 您可以使用[!DNL Azure Databricks]工作區產生存取權杖。 |
+| 網域 | [!DNL Databricks]工作區的URL。 例如 `https://adb-1234567890123456.7.azuredatabricks.net`。 |
+| 叢集ID | [!DNL Databricks]中叢集的識別碼。 此叢集必須是現有的叢集，而且應該是互動式叢集。 |
+| 存取權杖 | 驗證您[!DNL Databricks]帳戶的存取Token。 您可以使用[!DNL Databricks]工作區產生存取權杖。 |
 | 資料庫 | 三角湖中的資料庫名稱。 |
 
-如需詳細資訊，請閱讀 [[!DNL Azure Databricks]  概觀](../../../../connectors/databases/databricks.md)。
+如需詳細資訊，請閱讀 [[!DNL Databricks]  概觀](../../../../connectors/databases/databricks.md)。
 
 ## 瀏覽來源目錄
 
 在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 選擇類別或使用搜尋列來尋找您的來源。
 
-若要連線到[!DNL Azure Databricks]，請移至&#x200B;*[!UICONTROL 資料庫]*&#x200B;類別，選取&#x200B;**[!UICONTROL Azure Databricks]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 設定]**。
+若要連線到[!DNL Databricks]，請移至&#x200B;*[!UICONTROL 資料庫]*&#x200B;類別，選取&#x200B;**[!UICONTROL Azure Databricks]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 設定]**。
 
 >[!TIP]
 >

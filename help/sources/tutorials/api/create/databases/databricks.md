@@ -1,25 +1,25 @@
 ---
-title: 使用流量服務API將Azure資料庫連線至Experience Platform
-description: 瞭解如何使用API將Azure Databricks連線至Experience Platform。
+title: 使用流量服務API將資料庫連線至Experience Platform
+description: 瞭解如何使用API將Databricks連結至Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '532'
 ht-degree: 3%
 
 ---
 
-# 使用[!DNL Flow Service] API連線[!DNL Azure Databricks]至Experience Platform
+# 使用[!DNL Databricks] API連線[!DNL Flow Service]至Experience Platform
 
 >[!AVAILABILITY]
 >
->* [!DNL Azure Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
+>* [!DNL Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 >
->* [!DNL Azure Databricks]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
+>* [!DNL Databricks]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
-閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)將您的[!DNL Azure Databricks]帳戶連結至Adobe Experience Platform。
+閱讀本指南，瞭解如何使用[!DNL Databricks]API[[!DNL Flow Service] 將您的](https://developer.adobe.com/experience-platform-apis/references/flow-service/)帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
 
@@ -48,7 +48,7 @@ ht-degree: 3%
 | `database` | 三角湖中的資料庫名稱。 |
 | `connectionSpec.Id` | 連線規格ID會傳回來源的連線器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Databricks]的連線規格識別碼為`e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`。 |
 
-如需詳細資訊，請閱讀 [[!DNL Azure Databricks]  概觀](../../../../connectors/databases/databricks.md)。
+如需詳細資訊，請閱讀 [[!DNL Databricks]  概觀](../../../../connectors/databases/databricks.md)。
 
 ## 建立基礎連線
 

@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1069'
 ht-degree: 34%
 
 ---
@@ -363,7 +363,7 @@ ht-degree: 34%
    - [訂閱來源警示](tutorials/ui/alerts.md)
    - [將資料流儲存為草稿](tutorials/ui/draft.md)
    - [將存取權標籤套用至資料流](tutorials/ui/labels.md)
-   - [建立Azure私人端點](tutorials/ui/private-link.md)
+   - [建立私人端點](tutorials/ui/private-link.md)
 - 自助來源(批次SDK) {#sdk}
    - [概觀](sources-sdk/overview.md)
    - 設定您的連線規格 {#config}
