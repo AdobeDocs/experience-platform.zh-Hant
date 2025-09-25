@@ -4,9 +4,9 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的分析，或針對從Experience Platform匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 6d8386b4d9ed64128c8d9a9537610f0fd07d74cd
+source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2977'
 ht-degree: 7%
 
 ---
@@ -245,7 +245,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至HTTP API目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。<br> **重要**：啟用&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;選項時，只有對應到目的地的區段才會包含區段名稱。 匯出中顯示的未對應區段不會包含`name`欄位，即使該選項已啟用亦然。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至HTTP API目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>**注意**： HTTP API目的地的匯出行為已在2025年9月版本中更新。 以下醒目提示的新行為目前僅適用於在此版本之後建立的新HTTP API目的地。 針對現有HTTP API目的地，您可以繼續使用舊的匯出行為，或聯絡Adobe以移轉至僅匯出對應受眾的新行為。 所有組織將於2026年逐漸移轉至新行為。<br><br> <span class="preview"> **新的匯出行為**：對應到目的地且已變更的區段將包含在segmentMembership物件中。 在某些情況下，它們可能會使用多個呼叫匯出。 此外，在某些情況下，某些尚未變更的區段可能也會包含在呼叫中。 在任何情況下，只會匯出資料流中對應的區段。</span></li><br>**舊行為**： `segmentMembership`物件包含對應到啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已變更。 如果符合設定檔資格的其他未對應區段與啟動資料流中所對應的區段屬於相同的[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以屬於目的地匯出的一部分。<br> **重要**：啟用&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;選項時，只有對應到目的地的區段才會包含區段名稱。 匯出中顯示的未對應區段不會包含`name`欄位，即使該選項已啟用亦然。 <li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -253,9 +253,11 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 ![ HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-設定檔匯出至目的地的方式，可由符合或結束&#x200B;*三個對應區段*&#x200B;之一的設定檔來決定。 不過，在資料匯出中，`segmentMembership`物件（請參閱下方的[匯出的資料](#exported-data)區段）可能會顯示其他未對應的對象，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段的資格，但同時也是&#x200B;**觀看的「回到未來」**&#x200B;電影和&#x200B;**科幻迷**&#x200B;區段的成員，則其他這兩個對象也將出現在資料匯出的`segmentMembership`物件中，即使這些對象未對應到資料流中，前提是這些對象與&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段共用相同的合併原則。
+設定檔匯出至目的地的方式，可由符合或結束&#x200B;*三個對應區段*&#x200B;之一的設定檔來決定。 在資料匯出中，在`segmentMembership`物件（請參閱下方的[匯出的資料](#exported-data)區段）中，如果該特定設定檔是其他對應對象的成員，並且這些對應對象與觸發匯出的對象共用相同的合併原則，則其他對應對象可能會出現。 如果設定檔符合&#x200B;**具有DeLorean Cars的客戶**&#x200B;區段的資格，並且也是&#x200B;**基本網站作用中和City - Dallas**&#x200B;區段的成員，則另外兩個對象也會出現在資料匯出的`segmentMembership`物件中，因為這些對象會對應到資料流中，前提是這些對象與&#x200B;**具有DeLorean Cars的客戶**&#x200B;區段共用相同的合併原則。
 
 從設定檔屬性的角度來看，對上述四個對應屬性所做的任何變更將決定目的地匯出，而且設定檔上存在的四個對應屬性中的任何一個都會出現在資料匯出中。
+
+>[!ENDSHADEBOX]
 
 ## 歷史資料回填 {#historical-data-backfill}
 

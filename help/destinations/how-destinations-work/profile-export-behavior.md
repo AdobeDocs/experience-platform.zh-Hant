@@ -2,9 +2,9 @@
 title: 設定檔匯出行為
 description: 瞭解在Experience Platform目的地支援的不同整合模式之間，設定檔匯出行為有何不同。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: ede6f3ed4518babddb537a62cdb16915e2d37310
+source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '3068'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,8 @@ Experience Platform中有多種目的地型別，如下圖所示。 關於會觸
 
 >[!IMPORTANT]
 >
->本檔案頁面僅說明圖表底部反白連線的設定檔匯出行為。
+>* 請注意2025年9月推出的[企業目的地](#enterprise-behavior)匯出行為變更
+>* 本檔案頁面僅說明圖表底部反白連線的設定檔匯出行為。
 
 ![目的地圖表型別](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
@@ -27,14 +28,14 @@ Experience Platform目的地會將資料匯出至API型整合，做為HTTPS呼�
 
 設定檔在傳送到目的地API端點之前，會彙總為HTTPS訊息。
 
-以具有&#x200B;*[可設定彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;原則的[Facebook目的地](/help/destinations/catalog/social/facebook.md)為例 — 資料會以彙總方式傳送，其中目的地服務會擷取設定檔服務的所有傳入資料，並依下列其中一個專案彙總，然後再將資料傳送至Facebook：
+以具有[可設定彙總](/help/destinations/catalog/social/facebook.md)原則的&#x200B;*[Facebook目的地](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;為例 — 資料會以彙總方式傳送，其中目的地服務會擷取設定檔服務的所有傳入資料，並依下列其中一個專案彙總，然後再將資料傳送至Facebook：
 
 * 記錄數（最多10,000筆）或
 * 時間視窗間隔（300秒）
 
 系統會先符合上述任一臨界值，再觸發匯出至Facebook的作業。 因此，在[!DNL Facebook Custom Audiences]儀表板中，您可能會看到以10,000筆記錄增量從Experience Platform傳入的受眾。 您可能會每2-3分鐘看到10,000筆記錄，因為資料的處理與彙總速度比300秒匯出間隔還快，而且傳送速度也更快，所以在處理所有記錄之前，大約每2-3分鐘就會傳送一次。 如果沒有足夠的記錄來組成10,000個批次，則當達到時間範圍臨界值時，將會傳送目前的記錄數，因此您也可能看到傳送到Facebook的較小批次。
 
-再舉一例，考慮具有`maxUsersPerRequest: 10`的&#x200B;*[最大努力彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*&#x200B;原則的[HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md)。 也就是說，在向此目的地引發HTTP呼叫之前，最多會彙總10個設定檔，但Experience Platform會在目的地服務收到來自上游服務的更新重新評估資訊時，立即嘗試將設定檔分派至目的地。
+再舉一例，考慮具有[的](/help/destinations/catalog/streaming/http-destination.md)最大努力彙總&#x200B;*[原則的](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* HTTP API目的地`maxUsersPerRequest: 10`。 也就是說，在向此目的地引發HTTP呼叫之前，最多會彙總10個設定檔，但Experience Platform會在目的地服務收到來自上游服務的更新重新評估資訊時，立即嘗試將設定檔分派至目的地。
 
 可設定彙總原則，而目的地開發人員可決定如何設定彙總原則，以最符合下游API端點的速率限制。 在Destination SDK檔案中進一步瞭解[彙總原則](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)。
 
@@ -56,13 +57,13 @@ Experience Platform會最佳化將設定檔匯出至您企業目的地的行為�
 
 請注意，無論變更位於何處，所有對映屬性都會匯出為設定檔。 因此，在上述範例中，將會匯出這五個新設定檔的所有對應屬性，即使屬性本身並未變更亦然。
 
-### 決定資料匯出的因素及匯出中包含的因素
+### 決定資料匯出的因素及匯出中包含的因素 {#enterprise-behavior}
 
 關於為特定設定檔匯出的資料，請務必瞭解&#x200B;*決定匯出至您企業目的地*&#x200B;的資料以及&#x200B;*匯出中包含哪些資料的兩個不同概念*。
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至企業目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援企業目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至企業目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>**注意**：企業目的地的匯出行為已在2025年9月版本中更新。 以下醒目提示的新行為目前僅適用於在此版本之後建立的新企業目的地。 針對現有企業目的地，您可以繼續使用舊的匯出行為，或聯絡Adobe以移轉至僅匯出對應對象的新行為。 所有組織將於2026年逐漸移轉至新行為。<br><br> <span class="preview"> **新的匯出行為**：對應到目的地且已變更的區段將包含在`segmentMembership`物件中。 在某些情況下，它們可能會使用多個呼叫匯出。 此外，在某些情況下，某些尚未變更的區段可能也會包含在呼叫中。 在任何情況下，只會匯出資料流中對應的區段。</span></li><br>**舊行為**： `segmentMembership`物件包含對應到啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已變更。 如果符合設定檔資格的其他未對應區段與啟動資料流中所對應的區段屬於相同的[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以屬於目的地匯出的一部分。<li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援企業目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -76,7 +77,8 @@ Experience Platform會最佳化將設定檔匯出至您企業目的地的行為�
 
 ![企業目的地資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-設定檔匯出至目的地的方式，可由符合或結束&#x200B;*三個對應區段*&#x200B;之一的設定檔來決定。 但是，在資料匯出中，`segmentMembership`物件可能會顯示其他未對應的對象，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合&#x200B;**擁有DeLorean Cars的客戶**&#x200B;對象的資格，但同時也是&#x200B;**觀看的「回到未來」電影**&#x200B;和&#x200B;**科幻迷**&#x200B;區段的成員，則另外兩個對象也將出現在資料匯出的`segmentMembership`物件中，即使這些對象未對應到資料流中，前提是這些對象與&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段共用相同的合併原則。
+設定檔匯出至目的地的方式，可由符合或結束&#x200B;*三個對應區段*&#x200B;之一的設定檔來決定。 在資料匯出中，`segmentMembership`物件可能會顯示其他對應的對象，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合&#x200B;**具有DeLorean Cars的客戶**&#x200B;對象的資格，並且也是&#x200B;**基本網站作用中和City - Dallas**&#x200B;區段的成員，則另外兩個對象也會出現在資料匯出的`segmentMembership`物件中，因為這些對象會對應到資料流中，前提是這些對象與&#x200B;**具有DeLorean Cars的客戶**&#x200B;區段共用相同的合併原則。
+
 
 從設定檔屬性的角度來看，對上述四個對應屬性所做的任何變更將決定目的地匯出，而且設定檔上存在的四個對應屬性中的任何一個都會出現在資料匯出中。
 
@@ -103,7 +105,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 請注意，無論變更位於何處，所有對映屬性都會匯出為設定檔。 因此，在上述範例中，將會匯出這五個新設定檔的所有對應屬性，即使屬性本身並未變更亦然。
 
-### 決定資料匯出的因素及匯出中包含的因素
+### 決定資料匯出的因素及匯出中包含的因素 {#streaming-behavior}
 
 針對指定設定檔匯出的資料，請務必了解決定匯出至串流API目的地的資料以及匯出中包含哪些資料的兩個不同概念。
 
@@ -161,7 +163,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 * 設定檔&#x200B;*符合或不符合區段資格時，會包含在增量檔案匯出中的*。
 * 將新電話號碼新增至身分圖表時，增量檔案匯出中包含設定檔&#x200B;**。
-* 在設定檔上更新任何對應XDM欄位（例如`xdm: loyalty.points`、`xdm: loyalty.tier`、`xdm: personalEmail.address`）的值時，增量檔案匯出中不會包含設定檔&#x200B;**。
+* 在設定檔上更新任何對應XDM欄位（例如&#x200B;*、*、`xdm: loyalty.points`）的值時，增量檔案匯出中不會包含設定檔`xdm: loyalty.tier``xdm: personalEmail.address`。
 * 每當`segmentMembership.status` XDM欄位在目的地啟用工作流程中對應時，退出對象&#x200B;*的設定檔也會包含在匯出的增量檔案中*，其狀態為`exited`。
 
 >[!ENDSHADEBOX]
