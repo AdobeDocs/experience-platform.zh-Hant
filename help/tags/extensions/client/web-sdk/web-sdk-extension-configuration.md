@@ -2,9 +2,9 @@
 title: 設定網頁SDK標籤擴充功能
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3107'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ## 安裝網頁SDK標籤擴充功能 {#install}
 
-Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參閱有關[建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=zh-Hant)的檔案。
+Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參閱有關[建立標籤屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)的檔案。
 
 建立屬性之後，請開啟屬性並選取左側列的&#x200B;**[!UICONTROL 擴充功能]**&#x200B;標籤。
 
@@ -42,7 +42,7 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 >[!IMPORTANT]
 >
 >停用Web SDK元件可能會破壞您現有的實作。 每次停用元件時，請務必徹底測試實作，以確保所需的所有功能皆如預期般運作。
->&#x200B;>停用元件時，無法再編輯該元件的設定。
+>>停用元件時，無法再編輯該元件的設定。
 
 若要使用Web SDK標籤擴充功能建立自訂Web SDK組建，請遵循下列步驟。
 
@@ -60,7 +60,8 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
    * **[!UICONTROL Media Analytics橋接器]**：此元件會使用Media Analytics介面啟用Edge Network串流媒體。 停用此元件會停用下列元素：
       * [取得Media Analytics追蹤器](action-types.md#get-media-analytics-tracker)動作型別
    * **[!UICONTROL Personalization]**：此元件可啟用Adobe Target與Adobe Journey Optimizer的整合。 停用此元件會停用下列元素：
-      * [套用主張動作](action-types.md)型別
+      * [套用主張](action-types.md#apply-propositions)動作型別
+   * **[!UICONTROL 推播通知]**：此元件會啟用Adobe Journey Optimizer的Web推播通知。
    * **[!UICONTROL 規則引擎]**：此元件會啟用Adobe Journey Optimizer裝置上決策。 停用此元件會停用下列元素：
       * [評估規則集](action-types.md#evaluate-rulesets)動作型別
       * [訂閱規則集專案](event-types.md#subscribe-ruleset-items)事件型別
@@ -123,10 +124,9 @@ Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身�
 * **[!UICONTROL 使用第三方Cookie]**：啟用此選項時，Web SDK會嘗試將使用者識別碼儲存在第三方Cookie中。 如果成功，則會在使用者瀏覽多個網域時將其識別為單一使用者，而不是在每個網域上將其識別為個別使用者。 如果已啟用此選項，如果瀏覽器不支援第三方Cookie或使用者已設定不允許第三方Cookie，則SDK可能仍無法將使用者識別碼儲存在第三方Cookie中。 在此情況下，SDK只會將識別碼儲存在第一方網域中。
 
   >[!IMPORTANT]
-  >&#x200B;>第三方Cookie與Web SDK中的[第一方裝置識別碼](../../../../web-sdk/identity/first-party-device-ids.md)功能不相容。
-  >&#x200B;>您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
+  >>第三方Cookie與Web SDK中的[第一方裝置識別碼](../../../../web-sdk/identity/first-party-device-ids.md)功能不相容。
+  >>您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
   >
-
 ## 設定個人化設定 {#personalization}
 
 此區段可讓您設定在載入個人化內容時如何隱藏頁面的某些部分。 這可確保您的訪客只會看到個人化頁面。

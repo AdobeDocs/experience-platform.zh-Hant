@@ -1,9 +1,9 @@
 ---
 title: pushNotifications
 description: 設定Web SDK的推播通知，以啟用瀏覽器式的推播訊息。
-source-git-commit: 9c3f19cc2b32ab70869584b620f5a55d5b808751
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 >
 > Web SDK的推播通知目前在&#x200B;**測試版**&#x200B;中。 功能和檔案可能會變更。
 
-`pushNotifications`屬性可讓您設定Web應用程式的推播通知。 此功能可讓您的網頁應用程式接收從伺服器推播的訊息，即使網站目前未載入瀏覽器或瀏覽器未執行亦然。
+`pushNotifications`屬性可讓您設定Web應用程式的推播通知。 此功能可讓您的網頁應用程式接收從伺服器推送的訊息，即使網站目前未載入瀏覽器亦然。
 
 ## 先決條件 {#prerequisites}
 
@@ -24,6 +24,8 @@ ht-degree: 2%
 1. **使用者許可權**：使用者必須明確授與通知許可權
 2. **Service worker**：必須有Registered Service Worker才能執行推播通知
 3. **VAPID金鑰**：產生VAPID （自願應用程式伺服器識別）金鑰以進行安全通訊
+4. **應用程式ID**：將VAPID金鑰儲存在Adobe Journey Optimizer ->管道 — >推送設定 — >推送認證時所使用的應用程式ID
+5. **追蹤資料集ID**：名稱為「AJO推播追蹤體驗事件資料集」的系統資料集ID。 從Adobe Journey Optimizer ->資料集取得此專案
 
 ## 產生VAPID金鑰 {#generate-vapid-keys}
 
@@ -36,6 +38,21 @@ web-push generate-vapid-keys
 
 這會產生公開和私密金鑰組。 在您的Web SDK設定中使用公開金鑰，並將私密金鑰儲存在Adobe Journey Optimizer推播通知頻道中。
 
+## 安裝Service Worker JavaScript
+
+Service Worker程式碼需要從與網站相同的網域提供。 從Adobe的CDN下載Service Worker程式碼，然後從您自己的伺服器託管JavaScript檔案。 可使用以下URL結構取得Web SDK服務背景工作程式碼：
+
+- **已縮制**： `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.min.js`
+- **完整**： `https://cdn1.adoberesources.net/alloy/[VERSION]/alloyServiceWorker.js`
+
+以下是如何安裝Service Worker的範例：
+
+```html
+<script>
+  navigator.serviceWorker.register("/alloyServiceWorker.js", { scope: "/" });
+</script>
+```
+
 ## 使用Web SDK標籤擴充功能設定推播通知 {#configure-push-notifications-tag-extension}
 
 請依照下列步驟啟用和設定推播通知：
@@ -44,9 +61,11 @@ web-push generate-vapid-keys
 1. 導覽至&#x200B;**[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**。
 1. 選取所需的標籤屬性。
 1. 導覽至&#x200B;**[!UICONTROL 擴充功能]**，然後按一下&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**&#x200B;卡片上的[!UICONTROL 設定]。
-1. 從「自訂建置元件」區段&#x200B;**啟用推播通知**。
+1. 從&#x200B;**[!UICONTROL 自訂組建元件]**&#x200B;區段，啟用&#x200B;**[!UICONTROL 推播通知]**。
 1. 向下捲動以找到[!UICONTROL 推播通知]區段。
 1. 在&#x200B;**[!UICONTROL VAPID公開金鑰]**&#x200B;欄位中輸入您的VAPID公開金鑰。
+1. 在&#x200B;**[!UICONTROL 應用程式識別碼]**&#x200B;欄位中輸入您的應用程式識別碼。
+1. 在&#x200B;**[!UICONTROL 追蹤資料集ID]**&#x200B;欄位中輸入您的追蹤資料集ID。
 1. 按一下&#x200B;**[!UICONTROL 儲存]**，然後發佈您的變更。
 
 >[!NOTE]
@@ -64,6 +83,8 @@ alloy("configure", {
   pushNotifications: {
     vapidPublicKey:
       "BEl62iUYgUivElbkzaBgNL3r3vOAhvJyFXjS6FjjRRojYD4NElJkLBJKZvS3xAAh4_gE3WnMaZNu_KGP4jAQlJz",
+    applicationId: "my-app-id",
+    trackingDatasetId: "4dc19305cdd27e03dd9a6bbe",
   },
 });
 ```
@@ -71,8 +92,10 @@ alloy("configure", {
 ## 屬性 {#properties}
 
 | 屬性 | 類型 | 必要 | 說明 |
-| ------ | ------ | -------- | ----- |
+|---------|----|---------|-----------|
 | `vapidPublicKey` | 字串 | 是 | 用於推送訂閱的VAPID公開金鑰。 必須是Base64編碼的字串。 |
+| `applicationId` | 字串 | 是 | 與此VAPID公開金鑰關聯的應用程式ID。 |
+| `trackingDatasetId` | 字串 | 是 | 用於推播通知追蹤的系統資料集ID。 |
 
 ## 重要考量 {#important-considerations}
 
