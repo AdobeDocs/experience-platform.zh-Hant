@@ -2,10 +2,10 @@
 title: 核心擴充功能的發行說明
 description: Adobe Experience Platform核心擴充功能最新發行說明。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
+source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 47%
+source-wordcount: '1723'
+ht-degree: 46%
 
 ---
 
@@ -14,6 +14,15 @@ ht-degree: 47%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## 2025年9月25日
+
+v3.4.4
+
+* 將`releaseNotesUrl`欄位新增至extension.json，並將此頁面當做值。
+* 稽核相依性。
+* 移除Yarn，讓建置流程與其他開放原始碼存放庫一致。
+
 
 ## 2025年5月8日
 
@@ -102,7 +111,7 @@ v3.0.0
 
 * PDCL-6153：新增支援，可靠地提取快取自訂程式碼動作的完整合格URL。
 
-核心擴充功能v3.0.0與Turbine Web執行階段[&#128279;](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)中v27.2.0的變更結合，如果使用者的公司支援Premium CDN，則使用者可在許多Adobe管理託管區域中載入其程式庫。
+核心擴充功能v3.0.0與Turbine Web執行階段[中](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)v27.2.0的變更結合，如果使用者的公司支援Premium CDN，則使用者可在許多Adobe管理託管區域中載入其程式庫。
 
 此升級為選擇性升級，且回溯相容於沒有Premium CDN的使用者，且為公司啟用Premium CDN的客戶所強制。
 
