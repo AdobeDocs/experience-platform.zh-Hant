@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
+source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
-source-wordcount: '1674'
-ht-degree: 11%
+source-wordcount: '1696'
+ht-degree: 12%
 
 ---
 
@@ -61,7 +61,7 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
@@ -219,18 +219,15 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 
 {style="table-layout:auto"}
 
-<!--
-### Loyalty {#loyalty}
+### 忠誠度 {#loyalty}
 
-You can use the following sources to ingest data loyalty to Experience Platform.
+您可以使用以下來源將資料忠誠度擷取至Experience Platform。
 
-| Source | Ingestion type | Cloud |
+| 來源 | 擷取型別 | 雲端 |
 | --- | --- | --- |
-| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | 串流 | Azure |
 
-| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
-
--->
+{style="table-layout:auto"}
 
 ### 行銷自動化 {#marketing-automation}
 
@@ -246,6 +243,7 @@ You can use the following sources to ingest data loyalty to Experience Platform.
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | 批次 | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | 批次 | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | 批次 | Azure |
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | 串流 | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | 批次 | Azure、AWS |
 
 {style="table-layout:auto"}

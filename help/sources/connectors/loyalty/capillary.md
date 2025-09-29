@@ -1,11 +1,9 @@
 ---
 title: Capillary Streaming Events概述
 description: 瞭解如何將資料從Capillary串流至Experience Platform。
-hide: true
-hidefromtoc: true
 badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
-source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
+source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 4%
