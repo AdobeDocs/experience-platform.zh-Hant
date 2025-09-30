@@ -3,9 +3,9 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
+source-git-commit: f078d7b20bc16bf1a6cca065e5e6fba85d9d0648
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1066'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 > 自2025年7月起進行[內部升級](../../../release-notes/2025/july-2025.md#destinations)至目的地服務後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少至**，人數為[!DNL The Trade Desk]人。
-> &#x200B;> 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 如需詳細資訊，請參閱此頁面中的[必要對應](#mandatory-mappings)區段。
+> > 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 如需詳細資訊，請參閱此頁面中的[必要對應](#mandatory-mappings)區段。
 >
 >**變更內容：**
 >
@@ -84,7 +84,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
@@ -131,16 +131,33 @@ ht-degree: 3%
 
 ### 強制對應 {#mandatory-mappings}
 
-[支援的身分](#supported-identities)區段中說明的所有目標身分都是強制性的，必須在對象啟用程式期間進行對應。 其中包括：
+在[支援的身分](#supported-identities)區段中描述的所有目標身分，都必須在對象啟用工作流程的對應步驟中進行對應。 其中包括：
 
-* **GAID** (Google Advertising ID)
-* **IDFA** (廣告商的Apple ID)
-* **ECID** (Experience Cloud ID)
-* **交易台ID**
-
-無法對應所有必要的身分，導致您無法完成啟動工作流程。 每個身分在整合中都有不同的用途，而目的地若要正常運作，則全部為必填。
+* [!DNL GAID] (Google Advertising ID)
+* [!DNL IDFA] (廣告商的Apple ID)
+* [!DNL ECID] (Experience Cloud ID)
+* [!DNL The Trade Desk ID]
 
 ![顯示必要對應的熒幕擷圖](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
+
+對應所有目標身分可確保啟用可以使用任何存在的身分正確分割並傳遞設定檔。 這並不表示所有身分都必須出現在每個設定檔上。
+
+若要成功匯出至交易台，設定檔必須包含：
+
+* [!DNL ECID]，和
+* 至少一個： [!DNL GAID]、[!DNL IDFA]或[!DNL The Trade Desk ID]
+
+範例：
+
+* 僅限[!DNL ECID]：未匯出
+* [!DNL ECID] + [!DNL The Trade Desk ID]：已匯出
+* [!DNL ECID] + [!DNL IDFA]：已匯出
+* [!DNL ECID] + [!DNL GAID]：已匯出
+* [!DNL IDFA] + [!DNL The Trade Desk ID] （無[!DNL ECID]）：未匯出
+
+>[!NOTE]
+> 
+>在[2025年7月](/help/release-notes/2025/july-2025.md#destinations)升級到目的地服務後，[!DNL ECID]對應已強制執行。 遺失[!DNL ECID]的設定檔現在會如預期般捨棄，其啟用計數可能會比舊版行為低。
 
 ## 匯出的資料 {#exported-data}
 
