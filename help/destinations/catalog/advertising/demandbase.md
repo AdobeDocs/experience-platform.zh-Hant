@@ -1,14 +1,14 @@
 ---
 title: Demandbase連線
 description: 使用此目標來啟用 Account-Based Marketing (ABM) 使用案例的帳戶客群。透過 DemandBase 的 B2B Demand Side Platform (DSP) 向目標帳戶中的相關人物誌和角色投放廣告。還可以利用 Demandbase 第三方資料來擴充目標帳戶，以用於行銷和銷售中的其他下游使用案例。
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
-badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
+source-git-commit: 39012e2308af57af7c9193bdc4894f8f2e358606
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 17%
+source-wordcount: '762'
+ht-degree: 16%
 
 ---
 
@@ -16,15 +16,15 @@ ht-degree: 17%
 
 >[!AVAILABILITY]
 >
->&#x200B;>購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司，皆可透過Demandbase目的地啟用帳戶對象。
+>購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司，皆可透過Demandbase目的地啟用帳戶對象。
 
 為您的Demandbase行銷活動啟用設定檔，以根據[帳戶對象](/help/segmentation/types/account-audiences.md)進行對象目標定位、個人化和隱藏。
 
-## 使用實例 {#use-case}
+## 使用案例 {#use-case}
 
 使用此目標來啟用 Account-Based Marketing (ABM) 使用案例的帳戶客群。透過 DemandBase 的 B2B Demand Side Platform (DSP) 向目標帳戶中的相關人物誌和角色投放廣告。還可以利用 Demandbase 第三方資料來擴充目標帳戶，以用於行銷和銷售中的其他下游使用案例。
 
-例如，運用Demandbase的廣告技術DSP，針對關鍵客戶中的特定角色或角色，以創造漏斗頂端的銷售機會，或建立並擴大購買群組。 使用Demandbase目的地來探索其他使用案例，以有效鎖定您的帳戶。
+例如，運用Demandbase的廣告技術DSP，針對關鍵客戶中的特定角色或funnel頂級銷售機會開發，或建立並擴大購買群組。 使用Demandbase目的地來探索其他使用案例，以有效鎖定您的帳戶。
 
 透過這項整合，您也可以使用即時帳戶資訊查詢來個人化網站體驗，以最佳化參與情形。
 
@@ -73,7 +73,7 @@ ht-degree: 17%
 
 * **[!UICONTROL 持有人權杖]**：填入持有人權杖以驗證目的地。 檢視[必要條件](#prerequisites)以取得權杖的相關資訊。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -85,7 +85,7 @@ ht-degree: 17%
 
 現在您已準備好在Demandbase中啟用對象。
 
-## 啟動此目標的客群 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -93,6 +93,20 @@ ht-degree: 17%
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 閱讀[啟用帳戶對象](/help/destinations/ui/activate-account-audiences.md)以取得啟用此目的地的帳戶對象的指示。
+
+### 強制對應 {#mandatory-mappings}
+
+將對象啟用至[!DNL Demandbase]目的地時，您必須在對應步驟中設定下列必要欄位對應：
+
+| 來源欄位 | 目標欄位 | 說明 |
+|--------------|--------------|-------------|
+| `xdm: accountName` | `xdm: accountName` | 帳戶的名稱 |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | 帳戶組織的電子郵件網域 |
+| `xdm: accountKey.sourceKey` | `Identity: primaryId` | 帳戶的主要識別碼 |
+
+![Demandbase對應](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+
+目的地需要這些對應才能正常運作，您必須先設定這些對應，才能繼續啟用工作流程。
 
 ## 其他附註和重要圖說文字 {#additional-notes}
 
