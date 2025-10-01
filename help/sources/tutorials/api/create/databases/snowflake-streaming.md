@@ -3,21 +3,21 @@ title: 將您的Snowflake串流帳戶連線至Adobe Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Snowflake串流。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: a4a464f1f3b61311754a39f2a6e6a4ef21af3ab0
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
 
-# 使用[!DNL Flow Service] API將[!DNL Snowflake]資料串流到Experience Platform
+# 使用[!DNL Snowflake] API將[!DNL Flow Service]資料串流到Experience Platform
 
 >[!IMPORTANT]
 >
 >
 > 已購買Real-Time Customer Data Platform Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
 
-本教學課程提供如何使用[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)將資料從您的[!DNL Snowflake]帳戶連線並串流到Adobe Experience Platform的步驟。
+本教學課程提供如何使用[!DNL Snowflake]API[[!DNL Flow Service] 將資料從您的](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)帳戶連線並串流到Adobe Experience Platform的步驟。
 
 ## 快速入門
 
@@ -26,17 +26,19 @@ ht-degree: 4%
 * [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-有關[!DNL Snowflake]串流來源的先決條件設定和資訊。 請閱讀[[!DNL Snowflake] 串流來源概觀](../../../../connectors/databases/snowflake-streaming.md)。
-
 ### 使用Experience Platform API
 
 如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
+
+### 收集必要的認證
+
+閱讀[[!DNL Snowflake] 總覽](../../../../connectors/databases/snowflake-streaming.md#prerequisites)以取得驗證的相關資訊。
 
 ## 建立基礎連線 {#create-a-base-connection}
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL Snowflake]驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的`/connections`驗證認證作為要求內文的一部分時，對[!DNL Snowflake]端點提出POST要求。
 
 **API格式**
 
@@ -156,7 +158,7 @@ curl -X GET \
 
 來源連線會建立和管理與擷取資料的外部來源的連線。
 
-若要建立來源連線，請對[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
+若要建立來源連線，請對`/sourceConnections` API的[!DNL Flow Service]端點提出POST要求。
 
 **API格式**
 
@@ -290,7 +292,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照此教學課程，您已使用[!DNL Flow Service] API為[!DNL Snowflake]資料建立串流資料流。 如需Adobe Experience Platform來源的其他資訊，請瀏覽下列檔案：
+依照此教學課程，您已使用[!DNL Snowflake] API為[!DNL Flow Service]資料建立串流資料流。 如需Adobe Experience Platform來源的其他資訊，請瀏覽下列檔案：
 
 * [來源概觀](../../../../home.md)
 * [使用API監視您的資料流](../../monitor.md)
