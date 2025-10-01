@@ -4,10 +4,10 @@ type: Tutorial
 description: 瞭解如何使用Snowflake UI建立Adobe Experience Platform來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 3%
+source-wordcount: '1250'
+ht-degree: 2%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 3%
 
 在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在&#x200B;*[!UICONTROL 資料庫]*&#x200B;類別下選取&#x200B;**[!DNL Snowflake]**，然後選取&#x200B;**[!UICONTROL 設定]**。
+在&#x200B;**[!DNL Snowflake]**&#x200B;資料庫&#x200B;*[!UICONTROL 類別下選取]*，然後選取&#x200B;**[!UICONTROL 設定]**。
 
 >[!TIP]
 >
@@ -50,7 +50,7 @@ ht-degree: 3%
 
 接下來，您將進入來源工作流程的驗證步驟。 在這裡，您可以使用現有帳戶或建立新帳戶。
 
-若要使用現有的帳戶，請選取您要連線的[!DNL Snowflake]帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
+若要使用現有的帳戶，請選取您要連線的[!DNL Snowflake]帳戶，然後選取[下一步]**[!UICONTROL 以繼續。]**
 
 ![來源工作流程中的現有帳戶介面。](../../../../images/tutorials/create/snowflake/existing.png)
 
@@ -94,7 +94,7 @@ ht-degree: 3%
 | --- | --- |
 | 帳戶 | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如： `orgname-account_name`。 閱讀[擷取 [!DNL Snowflake] 帳戶識別碼](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier)的指南，以取得其他指引。 如需詳細資訊，請參閱[[!DNL Snowflake] 文件](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)，以瞭解詳情。 |
 | 使用者名稱 | 您[!DNL Snowflake]帳戶的使用者名稱。 |
-| 私密金鑰 | 您[!DNL Snowflake]帳戶的[!DNL Base64-]編碼私密金鑰。 您可以產生加密或未加密的私密金鑰。 如果您使用加密的私密金鑰，則在對Experience Platform進行驗證時，也必須提供私密金鑰複雜密碼。 如需詳細資訊，請參閱[擷取 [!DNL Snowflake] 私密金鑰](../../../../connectors/databases/snowflake.md)的指南。 |
+| 私密金鑰 | 您[!DNL Base64-]帳戶的[!DNL Snowflake]編碼私密金鑰。 您可以產生加密或未加密的私密金鑰。 如果您使用加密的私密金鑰，則在對Experience Platform進行驗證時，也必須提供私密金鑰複雜密碼。 如需詳細資訊，請參閱[擷取 [!DNL Snowflake] 私密金鑰](../../../../connectors/databases/snowflake.md)的指南。 |
 | 私密金鑰複雜密碼 | 私密金鑰複雜密碼是附加的安全性層級，在使用加密的私密金鑰進行驗證時必須使用此層級。 如果您使用未加密的私密金鑰，則不需要提供複雜密碼。 |
 | 資料庫 | 包含您要擷取至Experience Platform之資料的[!DNL Snowflake]資料庫。 |
 | 倉儲 | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料帶到Experience Platform時必須個別存取。 |
@@ -111,17 +111,25 @@ ht-degree: 3%
 
 若要建立新[!DNL Snowflake]帳戶並連線至AWS上的Experience Platform，請確定您位於VA6沙箱，然後提供驗證所需的認證。
 
+>[!BEGINTABS]
+
+>[!TAB 金鑰組驗證]
+
+若要使用金鑰組連線，請選取&#x200B;**[!UICONTROL 金鑰組驗證]**，提供您的驗證認證，然後選取&#x200B;**[!UICONTROL 連線到來源]**。 如需這些認證的詳細資訊，請閱讀[[!DNL Snowflake] 批次總覽](../../../../connectors/databases/snowflake.md#gather-required-credentials)。
+
+![金鑰組驗證的新帳戶建立步驟。](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+
+>[!TAB 基本驗證]
+
+>[!WARNING]
+>
+>[!DNL Snowflake]來源的基本驗證（或帳戶金鑰驗證）將於2025年11月被取代。 您必須移至金鑰組型驗證，才能繼續使用該來源，並將資料庫中的資料擷取至Experience Platform。 如需有關棄用的詳細資訊，請閱讀[[!DNL Snowflake] 減少認證洩露風險的最佳實務指南](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)。
+
+若要使用使用者名稱和密碼組合連線，請選取&#x200B;**[!UICONTROL 基本驗證]**，提供您的驗證認證，然後選取&#x200B;**[!UICONTROL 連線到來源]**。 如需這些認證的詳細資訊，請閱讀[[!DNL Snowflake] 批次總覽](../../../../connectors/databases/snowflake.md#gather-required-credentials)。
+
 ![來源工作流程中的新帳戶步驟，您可在此將Snowflake連線至AWS上的Experience Platform。](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
-| 認證 | 說明 |
-| --- | --- |
-| Host | 您的[!DNL Snowflake]帳戶連線到的主機URL。 |
-| 連接埠 | [!DNL Snowflake]透過網際網路連線到伺服器時使用的連線埠號碼。 |
-| 使用者名稱 | 與您的[!DNL Snowflake]帳戶相關聯的使用者名稱。 |
-| 密碼 | 與您的[!DNL Snowflake]帳戶關聯的密碼。 |
-| 資料庫 | 將從其中提取資料的[!DNL Snowflake]資料庫。 |
-| 結構描述 | 與您的[!DNL Snowflake]資料庫關聯的結構描述名稱。 您必須確保您要授與資料庫存取權的使用者也擁有此綱要的存取權。 |
-| 倉儲 | 您正在使用的[!DNL Snowflake]倉儲。 |
+>[!ENDTABS]
 
 ### 略過範例資料預覽 {#skip-preview-of-sample-data}
 
