@@ -3,9 +3,9 @@ keywords: 廣告目的地；目的地；平台目的地
 title: Advertising目的地概觀
 description: 將Adobe Experience Platform連線至第三方廣告平台(例如DSP、廣告網路、SSP)，並在這些平台上共用假名對象。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: a0c1ddc5bcdd8b89e7605491441d56199f301e9e
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '283'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,6 @@ ht-degree: 1%
 * [DoubleClick Floodlight擴充功能](doubleclick-floodlight.md)
 * [Facebook Pixel擴充功能](facebook-pixel.md)
 * [Flashtalking OneTag擴充功能](flashtalking.md)
-* [Google Ads擴充功能](google-ads-extension.md)
 * [Google gtag擴充功能](gtag-advertising.md)
 * [LinkedIn Insight標籤擴充功能](linkedin.md)
 * [Pinterest轉換追蹤擴充功能](pinterest-extension.md)
