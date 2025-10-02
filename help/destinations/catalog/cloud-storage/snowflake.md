@@ -2,11 +2,12 @@
 title: Snowflake串流連線
 description: 使用私人清單將資料匯出至您的Snowflake帳戶。
 badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+source-git-commit: eed90a5ce988acafface0bac9191f1b3ae28f90c
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 5%
+source-wordcount: '1442'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->此目標連接器為測試版，僅供精選客戶使用。如欲請求存取權，請和您的 Adobe 代表聯絡。
+>此目的地聯結器為測試版，僅供Real-Time CDP Ultimate客戶使用。 功能和檔案可能會有所變更。
 
 ## 概觀 {#overview}
 
