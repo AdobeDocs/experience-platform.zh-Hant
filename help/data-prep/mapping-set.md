@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 對應集概述
 description: 瞭解如何搭配Adobe Experience Platform資料準備使用對應集。
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ ht-degree: 0%
 ## 設定對應來源
 
 在對映中，`source`可以是欄位、運算式或靜態值。 根據給定的來源型別，可以透過多種方式擷取值。
+
+>[!TIP]
+>
+>儲存對應後，請等候最多10分鐘再開始資料擷取，以確保完全儲存對應。
 
 ### 欄位資料中的欄位
 
