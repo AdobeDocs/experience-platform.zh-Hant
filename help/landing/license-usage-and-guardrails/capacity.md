@@ -2,9 +2,9 @@
 title: 授權使用量和容量
 description: 瞭解您在Adobe Experience Platform中的授權使用量和容量限制。
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 568a0ba7707402496167145ce2673181b240496e
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1603'
 ht-degree: 6%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 6%
    - 在這500個串流對象中，邊緣對象的最大數量為150個
 - 串流擷取的初始合併輸送量為每秒1500筆記錄(rps)
    - 此合併的串流輸送量會測量每秒的合併尖峰傳入事件，以將擷取串流到您生產和開發沙箱中的即時客戶個人檔案。
-   - 您可以購買額外的串流細分支援，最高可達每秒13,500筆記錄。 如需有關購買額外權益的詳細資訊，請參閱[Real-Time CDP產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
+   - 您可以購買額外的串流細分支援，最高可達每秒13,500筆記錄。 如需有關購買額外權益的詳細資訊，請參閱[Real-Time CDP產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
 
 對象容量處於&#x200B;**沙箱**&#x200B;層級。 這表示，對於您組織內的每個沙箱，您可以擁有500個串流對象，其中150個可以是Edge對象。
 
@@ -69,7 +69,7 @@ Experience Platform會以15分鐘滾動間隔計算沙箱的輸送量。 此輸�
 
 如果您的使用量超過授權容量的100%，則會視為違反您的容量。 此時，您將會遇到效能延遲，而且您的服務等級目標(SLT)將&#x200B;**無法**&#x200B;保證。
 
-## 存取 {#access}
+## 存取權 {#access}
 
 若要存取容量概觀，請選取&#x200B;**[!UICONTROL 授權使用情況]**，然後選取&#x200B;**[!UICONTROL 容量]**。
 
@@ -169,6 +169,12 @@ Experience Platform會以15分鐘滾動間隔計算沙箱的輸送量。 此輸�
 | --- | --- | --- | --- |
 | 批次至串流轉換 | 批次工作負荷轉換為串流可大幅增加輸送量，進而影響效能和資源配置。 例如，在沒有速率限制的事件之後執行大量設定檔更新。 | 不需要低延遲處理時，批次使用案例就不需要串流策略。 | 評估使用案例需求。 針對批次傳出行銷，請考慮使用[批次擷取](/help/ingestion/batch-ingestion/overview.md)而非串流，以更有效率地管理資料擷取。 |
 | 不必要的資料擷取 | 個人化不需要擷取資料可增加輸送量，而不會增加值，進而浪費資源。 例如，不論相關性為何，都將所有Analytics流量擷取至設定檔。 | 過多的不相關資料會產生雜訊，使得識別具影響力的資料點變得更困難。 在定義和管理對象和設定檔時，這也會造成摩擦。 | 僅擷取使用案例所需的資料。 請確定您篩選掉不必要的資料。<ul><li>**Adobe Analytics**：使用[資料列層級篩選](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)來最佳化您的資料輸入。</li><li>**來源**：使用[[!DNL Flow Service] API來篩選所支援來源（如](/help/sources/tutorials/api/filter.md)和[!DNL Snowflake]）的資料列層級資料[!DNL Google BigQuery]。</li></li>**Edge資料流**：設定[動態資料流](/help/datastreams/configure-dynamic-datastream.md)，對來自WebSDK的流量執行列層級篩選。</li></ul> |
+
+## 影片概觀 {#video}
+
+下列影片提供容量概觀。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## 常見問題 {#faq}
 

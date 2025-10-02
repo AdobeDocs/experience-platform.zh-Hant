@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 9 月)
 description: Adobe Experience Platform 2025 年 9 月版發行說明。
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1415'
-ht-degree: 99%
+source-wordcount: '1422'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe Experience Platform Agent Orchestrator 是 Adobe Experience Platform 全�
 
 | 功能 | 說明 |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator 是 Adobe Experience Platform 全新的代理層。Experience Platform Agent Orchestrator 是為了善用平台豐富的資料和客戶知識而設計，其支援專門打造的專家 Adobe Experience Platform Agents 背後運作的智慧和推理能力，使其能夠快速且大規模地執行複雜的決策和解決問題的任務，且全程皆有人工監督。當您透過像 AI 助理這樣的對話式介面，用自然語言提出問題或要求協助時，Agent Orchestrator 會自動調用專門的代理人，為您取得正確的答案。Agent Orchestrator 會記住您的對話記錄，讓您可以不必複述相關背景資訊，即可自然地在先前問題的基礎上繼續提問，並且結合來自多個代理人的洞察，為您提供清楚且統一的回答。如需詳細資訊，請參閱 [Agent Orchestrator 文件](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)。 |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator 是 Adobe Experience Platform 全新的代理層。Experience Platform Agent Orchestrator 是為了善用平台豐富的資料和客戶知識而設計，其支援專門打造的專家 Adobe Experience Platform Agents 背後運作的智慧和推理能力，使其能夠快速且大規模地執行複雜的決策和解決問題的任務，且全程皆有人工監督。當您透過像 AI 助理這樣的對話式介面，用自然語言提出問題或要求協助時，Agent Orchestrator 會自動調用專門的代理，為您取得正確的答案。Agent Orchestrator 會記住您的對話記錄，讓您可以不必複述相關背景資訊，即可自然地在先前問題的基礎上繼續提問，並且結合來自多個代理的洞察，為您提供清楚且統一的回答。如需詳細資訊，請參閱 [Agent Orchestrator 文件](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)。 |
 | Audience 代理 | 透過 Audience 代理，您可以檢視關於客群的洞察，包括偵測客群人數的重大變更、偵測重複的客群、探索您的客群清單，以及取得客群人數。如需詳細資訊，請參閱 [Audience 代理文件](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/audience)。 |
 
 如需詳細資訊，請參閱 [Agent Orchestrator 文件](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/home)。
@@ -106,7 +106,7 @@ Adobe Experience Platform 可讓您為客戶提供協調一致且相關的體驗
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 輪廓檢視器增強功能 | 2025 年 9 月版本包含以下輪廓檢視器增強功能。 <ul><li>**合併檢視**：屬性、事件和洞察已經合併至單一視圖。</li><li>**AI 生成的洞察**：現在，輪廓詳細資訊頁面會顯示 AI 生成的洞察，讓您了解利用輪廓產生的詳細資料。這些洞察可能包括傾向分數和趨勢分析等資訊。</li><li>**樣式更新**：輪廓詳細資料頁面已經更新其視覺外觀。</li><li>**瀏覽**：您現在可以利用互動式卡片輪播，透過搜尋和自訂功能來探索各個輪廓。</li></ul> |
+| [!BADGE Alpha]{type=Informative}此功能目前在Alpha中。 輪廓檢視器增強功能 | 2025 年 9 月版本包含以下輪廓檢視器增強功能。 <ul><li>**合併檢視**：屬性、事件和洞察已經合併至單一視圖。</li><li>**AI 生成的洞察**：現在，輪廓詳細資訊頁面會顯示 AI 生成的洞察，讓您了解利用輪廓產生的詳細資料。這些洞察可能包括傾向分數和趨勢分析等資訊。</li><li>**樣式更新**：輪廓詳細資料頁面已經更新其視覺外觀。</li><li>**瀏覽**：您現在可以利用互動式卡片輪播，透過搜尋和自訂功能來探索各個輪廓。</li></ul> |
 
 如需詳細資訊，請閱讀[即時客戶輪廓概觀](../../profile/home.md)。
 
