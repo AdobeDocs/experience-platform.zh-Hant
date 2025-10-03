@@ -2,9 +2,9 @@
 title: 在UI中定義對應欄位
 description: 瞭解如何在Experience Platform使用者介面中定義對應欄位。
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c0421974493884488e4d639278106835ad1d8b1b
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform可讓您完全自訂自訂Experience Data Model (XDM)類別、結構描述欄位群組和資料型別的結構。
 
-您也可以在結構描述編輯器中定義對應欄位，以模型化和動態資料結構，或儲存索引鍵值配對的集合。
+您也可以在架構編輯器中定義對應欄位，以使用彈性的動態索引鍵儲存索引鍵值配對集合。
 
 在Experience Platform使用者介面(UI)中定義新欄位時，請使用&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單，然後從清單中選取&#x200B;**[!UICONTROL 地圖]**。
 
@@ -23,7 +23,7 @@ Adobe Experience Platform可讓您完全自訂自訂Experience Data Model (XDM)�
 
 ![反白顯示[!UICONTROL 對應值型別]下拉式清單的結構描述編輯器。](../../images/ui/fields/special/map-value-type.png)
 
-設定好子欄位後，您必須將其指派給欄位群組。 使用&#x200B;**[!UICONTROL 欄位群組]**&#x200B;下拉式功能表或搜尋欄位，然後選取&#x200B;**[!UICONTROL 套用]**。 您可以使用相同的程式繼續將欄位新增至物件，或選取[儲存]以確認您的設定。**&#x200B;**
+設定好子欄位後，您必須將其指派給欄位群組。 使用&#x200B;**[!UICONTROL 欄位群組]**&#x200B;下拉式功能表或搜尋欄位，然後選取&#x200B;**[!UICONTROL 套用]**。 您可以使用相同的程式繼續將欄位新增至物件，或選取[儲存]以確認您的設定。****
 
 ![正在套用的欄位群組選擇和設定的錄製。](../../images/ui/fields/special/assign-to-field-group.gif)
 
@@ -36,6 +36,8 @@ XDM對於此資料型別的使用有下列限制：
 * 對應型別必須包含`additionalProperties.type`欄位，描述可能放置在對應中的值： `string`或`integer`。
 * 多實體分段只能根據對應索引鍵而不是值來定義。
 * 帳戶對象不支援地圖。
+* 自訂XDM物件中定義的對映僅限為單一層級。 無法建立巢狀對應。 此限制不適用於標準XDM物件中定義的對應。
+* 不支援對應陣列。
 
 請確定您只在絕對必要時才使用對應型別欄位，因為這些欄位具有下列效能缺陷：
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找有關Experience Data Model (XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2378'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model] (XDM)和XDM系統的常見問題解答，包括常見錯誤的疑難排解指南。 有關其他Experience Platform服務的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-**[!DNL Experience Data Model] (XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取[!DNL Experience Platform]內的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
+**[!DNL Experience Data Model](XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取&#x200B;**[!DNL Schema Library]**&#x200B;內的[!DNL Experience Platform]。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
 ## 常見問題集
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 所有[!DNL Schema Registry]資源（結構描述、欄位群組、資料型別、類別）都有一個URI做為唯一ID，以供參考和查詢。 在API中檢視結構描述時，您可以在頂層`$id`和`meta:altId`屬性中找到它。
 
-如需詳細資訊，請參閱[!DNL Schema Registry] API指南中的[資源識別](api/getting-started.md#resource-identification)區段。
+如需詳細資訊，請參閱[ API指南中的](api/getting-started.md#resource-identification)資源識別[!DNL Schema Registry]區段。
 
 ### 長欄位型別的大小上限是多少？
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 如需欄位型別的詳細資訊，請參閱有關[XDM欄位型別限制](./schema/field-constraints.md)的檔案。
 
-### 什麼是meta：AltId？
+### 什麼是meta:AltId？
 
 `meta:altId`是結構描述的唯一識別碼。 `meta:altId`提供易於參考的ID以用於API呼叫。 此ID可避免在每次與JSON URI格式搭配使用時進行編碼/解碼。
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -63,13 +63,15 @@ ht-degree: 0%
 
 XDM對於此資料型別的使用有下列限制：
 
-- 對應型別必須是型別物件。
+- 對應型別必須屬於型別`object`。
 - 對應型別不得有已定義的屬性（換言之，它們會定義「空白」物件）。
-- 對應型別必須包含additionalProperties.type欄位，以說明可放置在對應中的值（字串或整數）。
+- 對應型別必須包含`additionalProperties.type`欄位，描述可能放置在對應中的值： `string`或`integer`。
 - 多實體分段只能根據對應索引鍵而不是值來定義。
 - 帳戶對象不支援地圖。
+- 自訂XDM物件中定義的對映僅限為單一層級。 無法建立巢狀對應。 此限制不適用於標準XDM物件中定義的對應。
+- 不支援對應陣列。
 
-如需詳細資訊，請參閱對應物件[&#128279;](./ui/fields/map.md#restrictions)的使用限制。
+如需詳細資訊，請參閱對應物件[的](./ui/fields/map.md#restrictions)使用限制。
 
 >[!NOTE]
 >
@@ -92,7 +94,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### 如何為結構描述定義身分？
 
-在[!DNL Experience Platform]中，無論要解譯的資料來源為何，身分都會用來識別主旨（通常是個人）。 它們透過將關鍵欄位標籤為「身分」來定義在結構描述中。 身分識別常用的欄位包括電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID和其他唯一ID欄位。
+在[!DNL Experience Platform]中，無論要解譯的資料來源為何，身分都會用來識別主旨（通常是個人）。 它們透過將關鍵欄位標籤為「身分」來定義在結構描述中。 身分識別常用的欄位包括電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
 
 可使用API或使用者介面將欄位標示為身分。
 
@@ -102,7 +104,7 @@ XDM對於此資料型別的使用有下列限制：
 
 身分描述項是由POST要求建立到/descriptors端點。 如果成功，您將會收到HTTP Status 201 （已建立）以及包含新描述項詳細資訊的回應物件。
 
-如需在API中建立身分描述項的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中[描述項](api/descriptors.md)章節的檔案。
+如需在API中建立身分描述項的詳細資訊，請參閱[開發人員指南中](api/descriptors.md)描述項[!DNL Schema Registry]章節的檔案。
 
 ### 在UI中定義身分
 
@@ -120,27 +122,27 @@ XDM對於此資料型別的使用有下列限制：
 
 ### 如何啟用結構描述以用於[!DNL Real-Time Customer Profile]？
 
-透過在結構描述的`meta:immutableTags`屬性中新增「union」標籤，結構描述可以用於[[!DNL Real-Time Customer Profile]](../profile/home.md)。 可以使用API或使用者介面啟用結構描述以搭配[!DNL Profile]使用。
+透過在結構描述的[[!DNL Real-Time Customer Profile]](../profile/home.md)屬性中新增「union」標籤，結構描述可以用於`meta:immutableTags`。 可以使用API或使用者介面啟用結構描述以搭配[!DNL Profile]使用。
 
 ### 使用API啟用[!DNL Profile]的現有結構描述
 
 發出PATCH請求以更新結構描述，並將`meta:immutableTags`屬性新增為包含「union」值的陣列。 如果更新成功，回應將顯示更新的結構描述，其中現在包含聯合標籤。
 
-如需使用API啟用結構描述以在[!DNL Real-Time Customer Profile]中使用的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南的[聯合](./api/unions.md)檔案。
+如需使用API啟用結構描述以在[!DNL Real-Time Customer Profile]中使用的詳細資訊，請參閱[開發人員指南的](./api/unions.md)聯合[!DNL Schema Registry]檔案。
 
 ### 使用UI啟用[!DNL Profile]的現有結構描述
 
 在[!DNL Experience Platform]中，選取左側導覽的&#x200B;**[!UICONTROL 結構描述]**，然後從結構描述清單中選取您要啟用的結構描述名稱。 然後，在編輯器的右側&#x200B;**[!UICONTROL 結構描述屬性]**&#x200B;下，選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;以將其開啟。
 
-如需詳細資訊，請參閱[!UICONTROL 結構描述編輯器]教學課程中[用於即時客戶個人檔案](./tutorials/create-schema-ui.md#profile)的相關章節。
+如需詳細資訊，請參閱[結構描述編輯器](./tutorials/create-schema-ui.md#profile)教學課程中[!UICONTROL 用於即時客戶個人檔案]的相關章節。
 
 ### 將Adobe Analytics資料匯入為來源時，是否針對設定檔啟用自動建立的結構描述？
 
-結構描述不會自動為即時客戶設定檔啟用。 您需要根據為設定檔啟用的結構描述，為設定檔明確啟用資料集。 請參閱檔案以瞭解啟用資料集以用於Real-Time Customer Profile[&#128279;](../catalog/datasets/user-guide.md#enable-profile)所需的步驟和要求。
+結構描述不會自動為即時客戶設定檔啟用。 您需要根據為設定檔啟用的結構描述，為設定檔明確啟用資料集。 請參閱檔案以瞭解啟用資料集以用於Real-Time Customer Profile[所需的](../catalog/datasets/user-guide.md#enable-profile)步驟和要求。
 
 ### 我可以刪除已啟用設定檔的結構描述嗎？
 
-為即時客戶設定檔啟用結構描述後，您就無法再刪除它。 為設定檔啟用結構描述後，就無法停用或刪除它，也無法從結構描述中移除欄位。 因此，在為設定檔啟用結構描述之前，請務必仔細規劃及驗證該結構描述設定。 不過，您可以刪除已啟用設定檔的資料集。 您可在此找到資訊： <https://experienceleague.adobe.com/zh-hant/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+為即時客戶設定檔啟用結構描述後，您就無法再刪除它。 為設定檔啟用結構描述後，就無法停用或刪除它，也無法從結構描述中移除欄位。 因此，在為設定檔啟用結構描述之前，請務必仔細規劃及驗證該結構描述設定。 不過，您可以刪除已啟用設定檔的資料集。 您可在此找到資訊： <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 如果您不想再使用已啟用設定檔的結構描述，建議將結構描述重新命名為包含&#x200B;**不要使用**&#x200B;或&#x200B;**非使用中**。
 
@@ -156,7 +158,7 @@ XDM對於此資料型別的使用有下列限制：
 
 聯合結構是唯讀的，由系統自動產生。 無法直接編輯它們。 在實作特定類別的結構描述中新增「聯合」標籤時，會為該類別建立聯合結構描述。
 
-如需XDM中聯合的詳細資訊，請參閱[!DNL Schema Registry] API指南中的[聯合](./api/unions.md)區段。
+如需XDM中聯合的詳細資訊，請參閱[ API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
 
 ### 如何格式化資料檔以將資料擷取至我的結構描述？
 
@@ -202,7 +204,7 @@ XDM對於此資料型別的使用有下列限制：
 >- `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >- `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-如需在API中建構查閱路徑的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中的[容器](./api/getting-started.md#container)和[資源識別](api/getting-started.md#resource-identification)區段。
+如需在API中建構查閱路徑的詳細資訊，請參閱[開發人員指南中的](./api/getting-started.md#container)容器[和](api/getting-started.md#resource-identification)資源識別[!DNL Schema Registry]區段。
 
 ### 標題不是唯一的
 
@@ -294,7 +296,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### [!DNL Real-Time Customer Profile]個錯誤
 
-下列錯誤訊息與啟用[!DNL Real-Time Customer Profile]的結構描述相關作業。 如需詳細資訊，請參閱[!DNL Schema Registry] API指南中的[聯合](./api/unions.md)區段。
+下列錯誤訊息與啟用[!DNL Real-Time Customer Profile]的結構描述相關作業。 如需詳細資訊，請參閱[ API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
 
 #### 必須有參考身分描述項
 
