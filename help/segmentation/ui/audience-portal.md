@@ -68,7 +68,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | [!UICONTROL 副本] | 細分服務 | 複製選取的對象。 您可以在[區段常見問答集](../faq.md#copy)中找到有關此函式的詳細資訊。 |
 | [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請閱讀[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 |
 | [!UICONTROL 發佈] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[的](../faq.md#lifecycle-states)生命週期狀態區段。 |
-| [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 請注意，為了停用對象，在&#x200B;**任何**&#x200B;目的地(包括非Experience Platform目的地)中無法&#x200B;****&#x200B;啟用，或是&#x200B;**任何**&#x200B;其他對象的一部分。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[的](../faq.md#lifecycle-states)生命週期狀態區段。 |
+| [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 請注意，為了停用對象，在&#x200B;**任何**&#x200B;目的地(包括非Experience Platform目的地)中無法&#x200B;**&#x200B;**&#x200B;啟用，或是&#x200B;**任何**&#x200B;其他對象的一部分。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[的](../faq.md#lifecycle-states)生命週期狀態區段。 |
 | [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 不能刪除下游目的地中使用的對象或是其他對象&#x200B;**中的相依對象**。 如需有關刪除對象的詳細資訊，請參閱[區段常見問題集](../faq.md#lifecycle-states)。 |
 | [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱[沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md)。 |
 
@@ -183,7 +183,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![已針對特定對象選取[!UICONTROL 移至資料夾]按鈕。](../images/ui/audience-portal/browse-move-to-folder.png)
 
-出現&#x200B;**將對象移至資料夾**&#x200B;彈出視窗。 選取您要移動對象的資料夾，然後選取[儲存]。****
+出現&#x200B;**將對象移至資料夾**&#x200B;彈出視窗。 選取您要移動對象的資料夾，然後選取[儲存]。**&#x200B;**
 
 ![顯示「將對象移至資料夾」彈出視窗。 將移動對象的資料夾反白顯示。](../images/ui/audience-portal/move-to-folder.png)
 
