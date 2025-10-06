@@ -5,10 +5,10 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置客群。
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 41%
+source-wordcount: '207'
+ht-degree: 43%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 41%
 
 - [Segmentation Service概述](home.md)
 - [區段資料型別](data-types.md)
-- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant#segmentation-guardrails)
+- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - 分段API {#api}
    - [概觀](api/overview.md)
    - [快速入門](api/getting-started.md)
    - [建立對象中繼資料](api/create-audience.md)
    - [客群](api/audiences.md)
    - [匯出工作](api/export-jobs.md)
-   - [外部對象](api/external-audiences.md)
+   - [外部客群](api/external-audiences.md)
    - [預覽和預估](api/previews-and-estimates.md)
    - [排程](api/schedules.md)
    - [區段定義](api/segment-definitions.md)
@@ -62,7 +62,7 @@ ht-degree: 41%
    - [多實體分段](tutorials/multi-entity-segmentation.md)
    - [接受同意](tutorials/consents.md)
    - [評估區段定義](tutorials/evaluate-a-segment.md)
-   - [匯入和使用外部對象](tutorials/using-external-audiences.md)
+   - [建立外部對象](tutorials/create-external-audience.md)
    - [建立資料集以匯出資料](tutorials/create-dataset-export-segment.md)
    - [強制對象遵守資料使用規範](tutorials/governance.md)
 - Profile Query Language {#pql}

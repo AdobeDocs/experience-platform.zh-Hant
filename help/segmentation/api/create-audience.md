@@ -3,17 +3,17 @@ title: 建立對象API端點
 description: 瞭解如何使用API為外部對象建立中繼資料。
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '246'
 ht-degree: 6%
 
 ---
 
-
 # 建立對象端點
 
-POST `/audiences`端點可用於建立外部對象的中繼資料。 如果受眾擷取是在另一個服務中進行管理（例如批次擷取），您應使用此端點。
+POST `/audiences`端點可用於建立外部對象的中繼資料，如此可讓對象顯示在對象入口網站中。 如果受眾擷取是在另一個服務中進行管理（例如批次擷取），您應使用此端點。
 
 ## 快速入門
 
