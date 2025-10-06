@@ -1,13 +1,13 @@
 ---
 title: Demandbase People連線
 description: 使用此目的地來啟用您的對象，並透過Demandbase第三方資料擴充對象，以用於行銷和銷售中的其他下游使用案例。
-source-git-commit: df2cb1edbf998082fca961e6d9bb567a1ad3b7e6
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '819'
 ht-degree: 3%
 
 ---
-
 
 # Demandbase People連線 {#demandbase-people}
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >若您需要[啟用帳戶對象](../../ui/activate-account-audiences.md)的B2B使用案例，請改用[Demandbase](demandbase.md)目的地聯結器。
 
-## 使用實例 {#use-case}
+## 使用案例 {#use-case}
 
 行銷人員可使用Adobe Real-Time CDP建立第一方聯絡人名單並在Demandbase中加以啟用，以便在其需求端平台(DSP)和其他管道（例如LinkedIn）間最佳化和協調參與。
 
@@ -80,7 +80,7 @@ Demandbase在啟用後會最佳化廣告傳送，調整目標定位策略以最�
 
 * **[!UICONTROL 持有人權杖]**：填入持有人權杖以驗證目的地。 檢視[必要條件](#prerequisites)以取得權杖的相關資訊。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -99,6 +99,21 @@ Demandbase在啟用後會最佳化廣告傳送，調整目標定位策略以最�
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 閱讀[將設定檔和對象啟用至串流對象匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)，以瞭解啟用此目的地對象的指示。
+
+### 強制對應 {#mandatory-mappings}
+
+將對象啟用至[!DNL Demandbase People]目的地時，您必須在對應步驟中設定下列必要欄位對應：
+
+| 來源欄位 | 目標欄位 | 說明 |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | 適用於個人的唯一識別碼 |
+| `xdm: person.name.lastName` | `xdm: lastName` | 人員的姓氏 |
+| `xdm: person.name.firstName` | `xdm: firstName` | 人員的名字 |
+| `xdm: workEmail.address` | `Identity: email` | 個人的工作電子郵件地址 |
+
+![Demandbase人物對應](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+目的地需要這些對應才能正常運作，您必須先設定這些對應，才能繼續啟用工作流程。
 
 ## 其他附註和重要圖說文字 {#additional-notes}
 
