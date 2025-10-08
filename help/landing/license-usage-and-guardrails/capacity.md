@@ -175,7 +175,7 @@ Experience Platform會以15分鐘滾動間隔計算沙箱的輸送量。 此輸�
 
 下列影片提供容量概觀。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475284/?learn=on&enablevpops&captions=chi_hant)
 
 ## 常見問題 {#faq}
 
