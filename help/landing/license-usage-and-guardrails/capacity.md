@@ -58,7 +58,7 @@ ht-degree: 6%
    - 在這500個串流對象中，邊緣對象的最大數量為150個
 - 串流擷取的初始合併輸送量為每秒1500筆記錄(rps)
    - 此合併的串流輸送量會測量每秒的合併尖峰傳入事件，以將擷取串流到您生產和開發沙箱中的即時客戶個人檔案。
-   - 您可以購買額外的串流細分支援，最高可達每秒13,500筆記錄。 如需有關購買額外權益的詳細資訊，請參閱[Real-Time CDP產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
+   - 您可以購買額外的串流細分支援，最高可達每秒13,500筆記錄。 如需有關購買額外權益的詳細資訊，請參閱[Real-Time CDP產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
 
 對象容量處於&#x200B;**沙箱**&#x200B;層級。 這表示，對於您組織內的每個沙箱，您可以擁有500個串流對象，其中150個可以是Edge對象。
 
