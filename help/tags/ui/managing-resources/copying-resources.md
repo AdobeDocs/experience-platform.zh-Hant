@@ -2,10 +2,10 @@
 title: 複製資源
 description: 瞭解如何使用Adobe Experience Platform中現有標籤資源的設定來建立新的標籤資源。
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 79%
+source-wordcount: '835'
+ht-degree: 74%
 
 ---
 
@@ -42,6 +42,10 @@ ht-degree: 79%
 ## 複製屬性
 
 當您製作屬性的完整副本時，您應了解關於這個程序的幾件事情。
+
+>[!IMPORTANT]
+>
+>使用資料元素更新變數型別的資源，在複製後需要額外的步驟。 編輯每個更新變數動作、編輯資料或XDM物件中的任何值，並儲存變更。 然後，發佈的程式庫應該會如預期般運作。 如果您對此程式有任何疑問，請聯絡技術支援。
 
 * 會複製與原始屬性一模一樣的設定 (網域、進階設定等)
 * 會將原始屬性內的規則、資料元素、擴充功能複製到新的目標屬性。不會複製適配器、環境、資料庫。
