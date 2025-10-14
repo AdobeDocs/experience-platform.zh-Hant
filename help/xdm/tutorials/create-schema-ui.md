@@ -102,7 +102,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 新的對話方塊隨即出現，顯示可用欄位群組的清單。 每個欄位群組僅供特定類別使用，因此對話方塊僅列出與您選取的類別（在此例中為[!DNL XDM Individual Profile]類別）相容的欄位群組。 如果您使用標準XDM類別，欄位群組清單將會根據使用人氣聰明地排序。
 
-![ [!UICONTROL 新增欄位群組]對話方塊。](../images/tutorials/create-schema/field-group-popularity.png)
+![&#x200B; [!UICONTROL 新增欄位群組]對話方塊。](../images/tutorials/create-schema/field-group-popularity.png)
 
 您可以選取左側邊欄中的其中一個篩選器，將標準欄位群組清單縮小至特定[產業](../schema/industries/overview.md)，例如零售、金融服務及醫療保健。
 
@@ -146,7 +146,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 在本教學課程中，請從清單中選取標準欄位群組&#x200B;**[!UICONTROL 個人聯絡人詳細資料]**&#x200B;和&#x200B;**[!UICONTROL 熟客方案詳細資料]**，然後選取&#x200B;**[!UICONTROL 新增欄位群組]**&#x200B;以將其新增至結構描述。
 
-![ [!UICONTROL 新增欄位群組]對話方塊已選取兩個新欄位群組，且[!UICONTROL 新增欄位群組]已反白顯示。](../images/tutorials/create-schema/more-field-groups.png)
+![&#x200B; [!UICONTROL 新增欄位群組]對話方塊已選取兩個新欄位群組，且[!UICONTROL 新增欄位群組]已反白顯示。](../images/tutorials/create-schema/more-field-groups.png)
 
 畫布會重新出現，新增的欄位群組列在&#x200B;**[!UICONTROL 構成]**&#x200B;區段的&#x200B;**[!UICONTROL 欄位群組]**&#x200B;下，它們的複合欄位會新增到結構描述結構中。
 

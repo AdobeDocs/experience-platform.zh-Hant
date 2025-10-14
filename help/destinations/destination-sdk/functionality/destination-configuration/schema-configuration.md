@@ -205,7 +205,7 @@ Destination SDK支援建立動態合作夥伴方案。 相對於靜態結構描�
 
 因此，Experience Platform UI中的&#x200B;**[!UICONTROL Source欄位]**&#x200B;和&#x200B;**[!UICONTROL 目標欄位]**&#x200B;區段都會呈現灰色。
 
-![ UI啟用流程中所需對應的影像。](../../assets/functionality/destination-configuration/required-mappings-2.png)
+![&#x200B; UI啟用流程中所需對應的影像。](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
 >[!TAB 必要的目的地對應]
 
@@ -235,7 +235,7 @@ Destination SDK支援建立動態合作夥伴方案。 相對於靜態結構描�
 
 因此，Experience Platform UI中的&#x200B;**[!UICONTROL Target欄位]**&#x200B;區段會呈現灰色，而&#x200B;**[!UICONTROL Source欄位]**&#x200B;區段則會作用中，使用者可以與其互動。 **[!UICONTROL 必要索引鍵]**&#x200B;和&#x200B;**[!UICONTROL 重複資料刪除索引鍵]**&#x200B;選項作用中，使用者無法變更它們。
 
-![ UI啟用流程中所需對應的影像。](../../assets/functionality/destination-configuration/required-mappings-1.png)
+![&#x200B; UI啟用流程中所需對應的影像。](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 >[!ENDTABS]
 

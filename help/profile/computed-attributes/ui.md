@@ -30,7 +30,7 @@ ht-degree: 6%
 
 在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 計算屬性]**，以檢視貴組織可用的計算屬性清單。 這包括計算屬性的名稱、說明、上次評估日期和上次評估狀態的相關資訊。
 
-![ [!UICONTROL 設定檔]區段和[!UICONTROL 計算屬性]標籤會反白顯示，顯示使用者如何存取計算屬性瀏覽頁面。](./images/ui/browse.png)
+![&#x200B; [!UICONTROL 設定檔]區段和[!UICONTROL 計算屬性]標籤會反白顯示，顯示使用者如何存取計算屬性瀏覽頁面。](./images/ui/browse.png)
 
 若要選取顯示哪些欄位，您可以選取![設定欄圖示](/help/images/icons/column-settings.png)來新增或移除您要顯示的欄位。
 
@@ -71,7 +71,7 @@ ht-degree: 6%
 | [!UICONTROL 欄位名稱] | 用來參照其他下游服務中計算屬性的名稱。 此名稱會自動衍生自顯示名稱，並以camelCase寫入。 |
 | [!UICONTROL 說明] | 您嘗試建立的計算屬性說明。 |
 
-![ [!UICONTROL 建立計算屬性]頁面的[!UICONTROL 基本資訊]區段已反白顯示。](./images/ui/basic-information.png)
+![&#x200B; [!UICONTROL 建立計算屬性]頁面的[!UICONTROL 基本資訊]區段已反白顯示。](./images/ui/basic-information.png)
 
 新增計算屬性詳細資料後，您就可以開始定義規則。
 

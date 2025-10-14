@@ -345,7 +345,7 @@ ht-degree: 0%
 
 **合併原則**：合併原則是Experience Platform用來判斷如何將來自多個來源的客戶資料片段合併以建立個別設定檔的規則。 當發生資料衝突時，合併原則會決定哪些資料應優先納入設定檔中。
 
-**MHMDAa**： [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true)增強消費者有關其健康資料的隱私權。 它規定健康資料的披露、消費者同意和刪除權利，並禁止在未經授權的情況下銷售健康資料。 此外，該法令規定，在醫療保健設施周圍使用地理圍欄是非法的。
+**MHMDAa**： [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true)增強消費者有關其健康資料的隱私權。 它規定健康資料的披露、消費者同意和刪除權利，並禁止在未經授權的情況下銷售健康資料。 此外，該法令規定，在醫療保健設施周圍使用地理圍欄是非法的。
 
 **Mixin**：請參閱「結構描述欄位群組」。
 

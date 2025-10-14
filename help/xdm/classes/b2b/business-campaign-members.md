@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM商業促銷活動成員]是標準的體驗資料模型(XDM)類別，可描述與商業促銷活動相關聯的聯絡人或銷售機會。
 
-![ XDM商業促銷活動成員類別在UI中的結構](../../images/classes/b2b/business-campaign-members.png)
+![&#x200B; XDM商業促銷活動成員類別在UI中的結構](../../images/classes/b2b/business-campaign-members.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

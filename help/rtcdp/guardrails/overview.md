@@ -22,9 +22,9 @@ ht-degree: 1%
 
 * [資料擷取的護欄](/help/ingestion/guardrails.md)
 * [!DNL Edge Network API][&#128279;](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)的護欄
-* [ [!DNL Real-Time Customer Profile] 資料和分段的護欄](/help/profile/guardrails.md)
-* [ [!DNL Identity Service] 資料的護欄](/help/identity-service/guardrails.md)
-* [ [!DNL Query Service]的護欄](/help/query-service/guardrails.md)
+* [&#x200B; [!DNL Real-Time Customer Profile] 資料和分段的護欄](/help/profile/guardrails.md)
+* [&#x200B; [!DNL Identity Service] 資料的護欄](/help/identity-service/guardrails.md)
+* [&#x200B; [!DNL Query Service]的護欄](/help/query-service/guardrails.md)
 * [透過目的地啟用資料的護欄](/help/destinations/guardrails.md)
 * [Real-Time CDP B2B的護欄](/help/rtcdp/b2b-guardrails.md)
 

@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL XDM業務行銷清單]是一個標準的體驗資料模型(XDM)類別，可擷取行銷清單的最低要求屬性。行銷清單可讓您優先處理最可能購買您產品的潛在客戶。
 
-![ XDM商業行銷清單類別在UI中的結構](../../images/classes/b2b/business-marketing-list.png)
+![&#x200B; XDM商業行銷清單類別在UI中的結構](../../images/classes/b2b/business-marketing-list.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

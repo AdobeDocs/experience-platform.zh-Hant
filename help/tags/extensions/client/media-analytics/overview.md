@@ -53,7 +53,7 @@ Media Analytics (MA) 擴充功能新增核心的 JavaScript Media SDK (Media 2.x
 | Export APIs to Window Object | 啟用或停用將 Media Analytics API 匯出至全域範圍 |
 | Variable Name | 用來匯出 `window` 物件下 Media Analytics API 的變數 |
 
-**提醒：** MA 擴充功能需有 [ Analytics](../analytics/overview.md) 和 [Experience Cloud ID](../id-service/overview.md) 擴充功能，才能正常運作。您也必須將這些擴充功能新增至擴充功能屬性並加以設定。
+**提醒：** MA 擴充功能需有 [&#x200B; Analytics](../analytics/overview.md) 和 [Experience Cloud ID](../id-service/overview.md) 擴充功能，才能正常運作。您也必須將這些擴充功能新增至擴充功能屬性並加以設定。
 
 ## 使用 MA 擴充功能
 

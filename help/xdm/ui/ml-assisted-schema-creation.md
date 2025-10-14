@@ -40,7 +40,7 @@ ht-degree: 2%
 
 [!UICONTROL 建立結構描述]對話方塊就會顯示。 選取&#x200B;**[ML輔助]**&#x200B;結構描述建立選項，接著選取&#x200B;**[!UICONTROL 選取]**&#x200B;以確認您的選擇。
 
-![ [!UICONTROL 建立結構描述]對話方塊，並反白顯示[!UICONTROL ML — 輔助]。](../images/ui/ml-schema-creation/use-sample-csv.png)
+![&#x200B; [!UICONTROL 建立結構描述]對話方塊，並反白顯示[!UICONTROL ML — 輔助]。](../images/ui/ml-schema-creation/use-sample-csv.png)
 
 ### 選取基底類別 {#select-base-class}
 

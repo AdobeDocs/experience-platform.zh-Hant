@@ -71,7 +71,7 @@ Web SDK會使用Cookie指派及追蹤[!DNL ECIDs]，並有多種可用方法來�
 根據您的使用案例，有兩種方法可以存取[!DNL ECID]：
 
 * [透過「資料準備」擷取 [!DNL ECID] 以收集資料](#retrieve-ecid-data-prep)：建議您使用此方法。
-* [透過`getIdentity()`命令擷取 [!DNL ECID] ](#retrieve-ecid-getidentity)：只有在您需要使用者端的[!DNL ECID]資訊時，才使用此方法。
+* [透過`getIdentity()`命令擷取 [!DNL ECID] &#x200B;](#retrieve-ecid-getidentity)：只有在您需要使用者端的[!DNL ECID]資訊時，才使用此方法。
 
 ### 透過資料收集的資料準備擷取[!DNL ECID] {#retrieve-ecid-data-prep}
 

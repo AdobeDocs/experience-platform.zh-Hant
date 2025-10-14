@@ -35,7 +35,7 @@ XDM提供標準欄位群組和資料型別的強大集合，旨在擷取不同�
 
 在Experience Platform UI中建構結構描述時，列出的欄位群組會顯示人氣量度。 此量度取決於其他Experience Platform使用者在其結構描述中使用欄位群組的頻率。 數字越高，欄位群組就越受歡迎。 依預設，會顯示從最受歡迎到最不受歡迎的結果，讓您隨時掌握業界的資料模型化趨勢。
 
-![ [!UICONTROL 新增欄位群組]對話方塊的人氣欄。](./images/overview/popularity.png)
+![&#x200B; [!UICONTROL 新增欄位群組]對話方塊的人氣欄。](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 

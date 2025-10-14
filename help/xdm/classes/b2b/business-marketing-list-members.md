@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM業務行銷清單成員]是一個標準的體驗資料模型(XDM)類別，可描述與行銷清單相關聯的成員、個人或聯絡人。
 
-![ XDM業務行銷清單成員類別在UI中的結構](../../images/classes/b2b/business-marketing-list-members.png)
+![&#x200B; XDM業務行銷清單成員類別在UI中的結構](../../images/classes/b2b/business-marketing-list-members.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

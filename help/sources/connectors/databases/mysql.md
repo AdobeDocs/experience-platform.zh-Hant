@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ### IP位址允許清單
 
-在Azure或Amazon Web Services (AWS)上將來源連線至Experience Platform之前，您必須將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Azure和AWS上的Experience Platform ](../../ip-address-allow-list.md)的指南。
+在Azure或Amazon Web Services (AWS)上將來源連線至Experience Platform之前，您必須將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Azure和AWS上的Experience Platform &#x200B;](../../ip-address-allow-list.md)的指南。
 
 ### 在Azure上驗證Experience Platform {#azure}
 

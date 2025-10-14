@@ -55,9 +55,9 @@ ht-degree: 2%
 
 [!DNL Salesforce]需要此值才能正確讀取和解讀來自Experience Platform的對象，並在[!DNL Salesforce Marketing Cloud]內更新其對象狀態。 如果您需要對象狀態的指引，請參閱[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的Experience Platform檔案。
 
-對於您從Experience Platform啟動至[!DNL Salesforce]的每個對象，您必須在[!DNL Salesforce Marketing Cloud]內將型別`Text`的屬性連結至[!DNL Email Demographics]資料延伸模組。 使用[!DNL Salesforce Marketing Cloud] [!DNL Contact Builder]建立屬性。 如需建立屬性的相關指引，請參閱[!DNL Salesforce Marketing Cloud]檔案，以便[建立屬性](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US)。
+對於您從Experience Platform啟動至[!DNL Salesforce]的每個對象，您必須在[!DNL Salesforce Marketing Cloud]內將型別`Text`的屬性連結至[!DNL Email Demographics]資料延伸模組。 使用[!DNL Salesforce Marketing Cloud] [!DNL Contact Builder]建立屬性。 如需建立屬性的相關指引，請參閱[!DNL Salesforce Marketing Cloud]檔案，以便[建立屬性](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US)。
 
-在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟期間，[!DNL (API) Salesforce Marketing Cloud]目標欄位會使用屬性欄位名稱。 您可以根據業務需求定義最多4000個字元的欄位字元。 如需屬性型別的其他資訊，請參閱[!DNL Salesforce Marketing Cloud] [資料延伸模組資料型別](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5)檔案頁面。
+在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟期間，[!DNL (API) Salesforce Marketing Cloud]目標欄位會使用屬性欄位名稱。 您可以根據業務需求定義最多4000個字元的欄位字元。 如需屬性型別的其他資訊，請參閱[!DNL Salesforce Marketing Cloud] [資料延伸模組資料型別](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5)檔案頁面。
 
 [!DNL Salesforce Marketing Cloud]中的資料設計工具畫面範例顯示如下，您將在其中新增屬性：
 ![Salesforce Marketing Cloud UI資料設計工具。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-data-designer.png)
@@ -96,7 +96,7 @@ ht-degree: 2%
 若要限制存取層級，您也可以使用精細的許可權覆寫個別存取權。
 ![Salesforce Marketing Cloud UI顯示具有精細許可權的電子郵件資料延伸模組。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
-如需詳細指引，請參閱[[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5)及[[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5)頁面。
+如需詳細指引，請參閱[[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_marketing_cloud_roles.htm&type=5)及[[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_roles.htm&type=5)頁面。
 
 #### 收集[!DNL Salesforce Marketing Cloud]認證 {#gather-credentials}
 
@@ -118,7 +118,7 @@ ht-degree: 2%
    * [API總覽](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)頁面詳細說明其他限制。
    * 請參閱[這裡](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits)以取得整理這些詳細資料的頁面。
 * 每個物件&#x200B;*允許的*&#x200B;自訂欄位計數會依您的Salesforce版本而有所不同。
-   * 如需其他指引，請參閱[!DNL Salesforce] [檔案](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&amp;type=5)。
+   * 如需其他指引，請參閱[!DNL Salesforce] [檔案](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5)。
    * 如果您已經達到[!DNL Salesforce Marketing Cloud]內每個物件&#x200B;*允許的*&#x200B;自訂欄位所定義的限制，您將需要
       * 在[!DNL Salesforce Marketing Cloud]中新增屬性之前，請先移除較舊的屬性。
       * 在[對象排程](#schedule-segment-export-example)步驟期間，更新或移除Experience Platform目的地中任何使用這些較舊屬性名稱作為&#x200B;**[!UICONTROL 對應ID]**&#x200B;所提供值的已啟用對象。
@@ -129,7 +129,7 @@ ht-degree: 2%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| contactKey | [!DNL Salesforce Marketing Cloud]連絡人金鑰。 如需其他指南，請參閱[!DNL Salesforce Marketing Cloud] [檔案](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5)。 | 強制 |
+| contactKey | [!DNL Salesforce Marketing Cloud]連絡人金鑰。 如需其他指南，請參閱[!DNL Salesforce Marketing Cloud] [檔案](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5)。 | 強制 |
 
 ## 支援的對象 {#supported-audiences}
 
@@ -293,7 +293,7 @@ ht-degree: 2%
    * 若要修正此錯誤，請確認您在啟動工作流程中提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;與[!DNL (API) Salesforce Marketing Cloud]目的地完全符合您在[!DNL Salesforce Marketing Cloud]中建立的屬性名稱。 如需相關指引，請參閱[在 [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field)內建立屬性。
 
 * 啟用區段時，您可能會收到錯誤訊息： `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * 若要修正此錯誤，請連絡您的[!DNL Salesforce Marketing Cloud]帳戶管理員，將[Experience Platform IP位址](/help/destinations/catalog/streaming/ip-address-allow-list.md)新增至您的[!DNL Salesforce Marketing Cloud]帳戶受信任的IP範圍。 如果您需要其他指引，請參閱Marketing Cloud[&#128279;](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&amp;type=5)檔案中的[!DNL Salesforce Marketing Cloud]個允許清單的IP位址。
+   * 若要修正此錯誤，請連絡您的[!DNL Salesforce Marketing Cloud]帳戶管理員，將[Experience Platform IP位址](/help/destinations/catalog/streaming/ip-address-allow-list.md)新增至您的[!DNL Salesforce Marketing Cloud]帳戶受信任的IP範圍。 如果您需要其他指引，請參閱Marketing Cloud[&#128279;](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&type=5)檔案中的[!DNL Salesforce Marketing Cloud]個允許清單的IP位址。
 
 ## 其他資源 {#additional-resources}
 
@@ -309,7 +309,7 @@ ht-degree: 2%
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
 | 2023 年 10 月 | 文件更新 | <ul><li>我們已更新(API) Salesforce Marketing Cloud[&#128279;](#prerequisites-destination)中的必要條件，並一般移除檔案中屬性群組的不必要參考。</li> <li>更新檔案以指出只應在[!DNL Email Demographics]資料延伸內的[!DNL Salesforce Marketing Cloud]中建立對象狀態的屬性。</li> <li>我們已更新[對應考量事項和範例](#mapping-considerations-example)區段中的對應表格，`Email Addresses`資料延伸模組中`Email Address`屬性的對應標籤為必要，標示為IMPORTANT的圖說中曾提及此要求，但表格中省略。</li></ul> |
-| 2023 年 4 月 | 文件更新 | <ul><li>我們已更正[ Salesforce Marketing Cloud (API) ](#prerequisites-destination)中「必要條件」區段中的陳述式及參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 區段先前錯誤地指出使用者需要訂閱Marketing Cloud **帳戶**&#x200B;參與才能繼續。</li> <li>我們已在[先決條件](#prerequisites)下新增一節，以將[角色和許可權](#prerequisites-roles-permissions)指派給[!DNL Salesforce]使用者，讓此目的地正常運作。 (PLATIR-26299)</li></ul> |
+| 2023 年 4 月 | 文件更新 | <ul><li>我們已更正[&#x200B; Salesforce Marketing Cloud (API) &#x200B;](#prerequisites-destination)中「必要條件」區段中的陳述式及參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 區段先前錯誤地指出使用者需要訂閱Marketing Cloud **帳戶**&#x200B;參與才能繼續。</li> <li>我們已在[先決條件](#prerequisites)下新增一節，以將[角色和許可權](#prerequisites-roles-permissions)指派給[!DNL Salesforce]使用者，讓此目的地正常運作。 (PLATIR-26299)</li></ul> |
 | 2023 年 2 月 | 文件更新 | 我們已更新(API) Salesforce Marketing Cloud[&#128279;](#prerequisites-destination)中的必要條件區段，加入參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 |
 | 2023 年 2 月 | 功能更新 | 我們已修正目的地中不正確的設定導致將格式錯誤的JSON傳送至Salesforce的問題。 這會導致某些使用者在啟用時看到大量身分失敗。 (PLATIR-26299) |
 | 2023 年 1 月 | 文件更新 | <ul><li>我們更新了 [!DNL Salesforce][&#128279;](#prerequisites-destination)中的必要條件區段，指出必須在[!DNL Salesforce]端建立屬性。 本節現在包含如何執行此動作的詳細指示，以及命名[!DNL Salesforce]中屬性的最佳作法。 (PLATIR-25602)</li><li>我們新增了明確指示，說明如何在[對象排程](#schedule-segment-export-example)步驟中為每個已啟用的對象使用對應ID。 (PLATIR-25602)</li></ul> |

@@ -54,7 +54,7 @@ ht-degree: 1%
 
 完成資料流設定後，選取&#x200B;**[!UICONTROL 下一步]**。
 
-![ [!UICONTROL 資料流詳細資料]區段已完成。](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
+![&#x200B; [!UICONTROL 資料流詳細資料]區段已完成。](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## 選取資料
 

@@ -124,7 +124,7 @@ ht-degree: 4%
 
 選取您剛建立的[!DNL Integration Profile]，以檢視已設定的預先定義&#x200B;**推送型別**&#x200B;清單。 這些是將在發生時傳送給Experience Platform的[體驗事件](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=zh-Hant)。
 
-![ RainFocus儀表板中預先定義的推播型別清單。](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
+![&#x200B; RainFocus儀表板中預先定義的推播型別清單。](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 
 若要擷取範例JSON裝載的復本，請選取&#x200B;**[!DNL Sample JSON Payload]**。 接著，反白並複製範例JSON裝載，然後&#x200B;**將其儲存在副檔名為.json**&#x200B;的新檔案中。 這稍後將用於[對應組態](../../tutorials/ui/create/analytics/rainfocus.md#mapping)的Experience Platform。
 

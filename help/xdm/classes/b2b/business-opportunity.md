@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL XDM商業機會]是一個標準的體驗資料模型(XDM)類別，可擷取商業機會的最低要求屬性。
 
-![ XDM商業機會類別在UI中的結構](../../images/classes/b2b/business-opportunity.png)
+![&#x200B; XDM商業機會類別在UI中的結構](../../images/classes/b2b/business-opportunity.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

@@ -13,7 +13,7 @@ ht-degree: 14%
 
 [!UICONTROL 設定檔夥伴擴充（範例）]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組。 使用此欄位群組可為客戶設定檔提供與合作夥伴驅動之擴充功能相關的其他資料。
 
-![ [!UICONTROL 設定檔夥伴擴充（範例）]欄位群組的圖表。](../../images/field-groups/profile-partner-enrichment-sample.png)
+![&#x200B; [!UICONTROL 設定檔夥伴擴充（範例）]欄位群組的圖表。](../../images/field-groups/profile-partner-enrichment-sample.png)
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 |-----------------------------|------------------------|-----------|----------------------------------|

@@ -112,7 +112,7 @@ AWS KMS僅於特定地區提供。 請確定您在支援KMS的區域中作業。
 
 當您對設定感到滿意時，請選取&#x200B;**[!DNL Next]**&#x200B;以繼續工作流程。
 
-![ Configure金鑰工作流程的第二步，並醒目提示別名、說明、標籤和下一步。](../../../images/governance-privacy-security/key-management-service/add-labels.png)
+![&#x200B; Configure金鑰工作流程的第二步，並醒目提示別名、說明、標籤和下一步。](../../../images/governance-privacy-security/key-management-service/add-labels.png)
 
 ## 定義主要管理許可權 {#define-key-admins}
 

@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM商業帳戶]是標準的體驗資料模型(XDM)類別，可擷取商業帳戶的最低要求屬性。
 
-![ XDM商業帳戶類別在UI中的結構](../../images/classes/b2b/business-account.png)
+![&#x200B; XDM商業帳戶類別在UI中的結構](../../images/classes/b2b/business-account.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

@@ -42,7 +42,7 @@ ht-degree: 1%
 
 安裝擴充功能後，請建立新的事件轉送[規則](../../../ui/managing-resources/rules.md)，並視需要設定其條件。 設定規則的動作時，請選取&#x200B;**[!UICONTROL Google Cloud Platform]**&#x200B;擴充功能，然後針對動作型別選取&#x200B;**[!UICONTROL 將資料傳送至Cloud Pub/Sub]**。
 
-![ [!UICONTROL Google Cloud Platform]的動作設定檢視（反白顯示動作）和[!UICONTROL 將資料傳送到Cloud Pub/Sub]。](../../../images/extensions/server/google-cloud-platform/event-action.png)
+![&#x200B; [!UICONTROL Google Cloud Platform]的動作設定檢視（反白顯示動作）和[!UICONTROL 將資料傳送到Cloud Pub/Sub]。](../../../images/extensions/server/google-cloud-platform/event-action.png)
 
 | 輸入 | 說明 |
 | --- | --- |

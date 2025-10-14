@@ -180,7 +180,7 @@ ht-degree: 5%
 
 **[!UICONTROL 欄位群組]**&#x200B;對話方塊會顯示物件可用的欄位群組清單。 選取所需的欄位群組，然後選取&#x200B;**[!UICONTROL 儲存]**。
 
-![ [!UICONTROL 欄位群組]對話方塊上顯示的欄位清單，醒目顯示[!UICONTROL 儲存]選取專案。](../images/ui/sandbox-tooling/field-group-list.png)
+![&#x200B; [!UICONTROL 欄位群組]對話方塊上顯示的欄位清單，醒目顯示[!UICONTROL 儲存]選取專案。](../images/ui/sandbox-tooling/field-group-list.png)
 
 您返回到[!UICONTROL 封裝物件和相依性]頁面。 從這裡，選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成封裝匯入。
 
@@ -201,11 +201,11 @@ ht-degree: 5%
 
 若要匯出整個沙箱，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 套件]**&#x200B;索引標籤，並選取&#x200B;**[!UICONTROL 建立套件]**。
 
-![ [!UICONTROL 沙箱] **[!UICONTROL 封裝]**&#x200B;索引標籤醒目提示[!UICONTROL 建立封裝]。](../images/ui/sandbox-tooling/create-sandbox-package.png)
+![&#x200B; [!UICONTROL 沙箱] **[!UICONTROL 封裝]**&#x200B;索引標籤醒目提示[!UICONTROL 建立封裝]。](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
 在&#x200B;**[!UICONTROL 建立封裝]**&#x200B;對話方塊中，選取[!UICONTROL 封裝]的[!UICONTROL 整個沙箱]。 為您的新封裝提供[!UICONTROL 封裝名稱]，並從下拉式清單中選取&#x200B;**[!UICONTROL 沙箱]**。 最後，選取&#x200B;**[!UICONTROL 建立]**&#x200B;以確認您的專案。
 
-![ [!UICONTROL 建立封裝]對話方塊顯示已完成的欄位並醒目提示[!UICONTROL 建立]。](../images/ui/sandbox-tooling/create-package-dialog.png)
+![&#x200B; [!UICONTROL 建立封裝]對話方塊顯示已完成的欄位並醒目提示[!UICONTROL 建立]。](../images/ui/sandbox-tooling/create-package-dialog.png)
 
 已成功建立封裝，請選取&#x200B;**[!UICONTROL 發佈]**&#x200B;以發佈封裝。
 

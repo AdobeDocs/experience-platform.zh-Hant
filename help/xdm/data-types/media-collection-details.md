@@ -18,7 +18,7 @@ ht-degree: 1%
 >媒體收集欄位會擷取資料，並將其傳送至其他Adobe服務以供進一步處理。 Adobe服務會使用媒體報表欄位來分析使用者傳送的「媒體收集」欄位。 系統會計算此資料以及其他特定使用者量度，並據此回報。
 
 +++選取以顯示[!UICONTROL 媒體收集詳細資料]資料型別的圖表。
-![ [!UICONTROL 媒體集合詳細資訊]資料型別的圖表。](../images/data-types/media-collection-details.png)
+![&#x200B; [!UICONTROL 媒體集合詳細資訊]資料型別的圖表。](../images/data-types/media-collection-details.png)
 +++
 
 | 顯示名稱 | 屬性 | 以下專案所需的事件： | 資料類型 | 說明 |

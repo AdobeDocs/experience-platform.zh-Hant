@@ -50,7 +50,7 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 可用欄位群組清單已根據其建立方式預先進行篩選。預設設定會顯示Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL 標準]選項會顯示Adobe建立的實體，而[!UICONTROL 自訂]選項則會顯示貴組織內建立的實體。
 
-![ [!UICONTROL 結構描述]工作區的[!UICONTROL 欄位群組]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![&#x200B; [!UICONTROL 結構描述]工作區的[!UICONTROL 欄位群組]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 編輯現有欄位群組 {#edit}
 

@@ -87,7 +87,7 @@ ht-degree: 0%
 
 您的[!DNL VS Code]工作區出現，並附上[!DNL GitHub Copilot]的建議。
 
-![ [!DNL VS Code].](../images/clients/github-copilot/connected.png)中的連線SQL工作階段
+![&#x200B; [!DNL VS Code].](../images/clients/github-copilot/connected.png)中的連線SQL工作階段
 
 ## [!DNL GitHub Copilot]快速指南
 
@@ -121,7 +121,7 @@ ht-degree: 0%
 >  
 >如果未取得建議，請確定已以您檔案的語言[&#128279;](#get-started-with-copilot)啟用[!DNL Copilot] 。
 
-![ [!DNL VS Code]編輯器在部分輸入的程式碼旁顯示[!DNL GitHub Copilot]模糊的灰色文字建議，作為Ghost文字。](../images/clients/github-copilot/accept-partial-suggestions.png)
+![&#x200B; [!DNL VS Code]編輯器在部分輸入的程式碼旁顯示[!DNL GitHub Copilot]模糊的灰色文字建議，作為Ghost文字。](../images/clients/github-copilot/accept-partial-suggestions.png)
 
 ### 替代建議 {#alternative-suggestions}
 

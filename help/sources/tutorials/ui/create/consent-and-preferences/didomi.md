@@ -100,7 +100,7 @@ ht-degree: 3%
 
 對應是專門用來將&#x200B;**用途資料**&#x200B;從[!DNL Didomi]傳輸到Experience Platform資料集。 這些目的代表使用者的同意選擇（例如，針對分析、個人化、廣告等），而且是此整合中唯一接受的對應欄位。
 
-使用從[ webhook設定下載的](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file)範例webhook裝載[!DNL Didomi]，將每個[!DNL Didomi]用途對應到Adobe資料集中的適當欄位。
+使用從[&#x200B; webhook設定下載的](../../../../connectors/consent-and-preferences/didomi.md#download-the-sample-payload-file)範例webhook裝載[!DNL Didomi]，將每個[!DNL Didomi]用途對應到Adobe資料集中的適當欄位。
 
 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
 

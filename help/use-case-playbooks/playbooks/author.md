@@ -64,7 +64,7 @@ ht-degree: 0%
 
 中繼資料產生後，選取&#x200B;**[!UICONTROL 編輯歷程圖]**&#x200B;以視需要調整歷程圖中的步驟。
 
-![ 「編輯歷程圖」按鈕可修改歷程圖中的步驟。](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
+![&#x200B; 「編輯歷程圖」按鈕可修改歷程圖中的步驟。](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![歷程地圖編輯器介面，讓您在擷取行動手冊中繼資料後調整步驟。](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 

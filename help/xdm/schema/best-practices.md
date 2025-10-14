@@ -219,7 +219,7 @@ Experience Platform提供幾個現成的XDM結構描述欄位群組，用於擷�
 
 例如，您可以使用[[!UICONTROL Adobe Analytics ExperienceEvent範本]欄位群組](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)，將[!DNL Analytics]特定欄位對應到您的XDM結構描述。 根據您使用的Adobe應用程式，您應在結構中使用這些Adobe提供的欄位群組。
 
-![ [!UICONTROL Adobe Analytics ExperienceEvent範本]的結構描述圖表。](../images/best-practices/analytics-field-group.png)
+![&#x200B; [!UICONTROL Adobe Analytics ExperienceEvent範本]的結構描述圖表。](../images/best-practices/analytics-field-group.png)
 
 Adobe應用程式欄位群組會透過使用`identityMap`欄位自動指派預設主要身分，該欄位是系統產生的唯讀物件，可對應個別客戶的標準身分值。
 

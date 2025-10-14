@@ -13,7 +13,7 @@ ht-degree: 7%
 
 [!UICONTROL 機器人偵測]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組。 欄位群組提供機器人產生流量的相關資訊。
 
-![ [!UICONTROL 機器人偵測]欄位群組的圖表。](../../images/field-groups/bot-detection-information.png)
+![&#x200B; [!UICONTROL 機器人偵測]欄位群組的圖表。](../../images/field-groups/bot-detection-information.png)
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 |----------------------------|-----------------|-----------|---------------------------------------------------------|

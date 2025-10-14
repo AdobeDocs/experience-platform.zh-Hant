@@ -59,7 +59,7 @@ ht-degree: 0%
 
 安裝[!UICONTROL Meta Conversions API]擴充功能時，會出現在Facebook和Instagram中進行驗證的對話方塊提示。
 
-![ [!UICONTROL Meta Conversions API擴充功能]安裝頁面醒目提示[!UICONTROL 連線至Meta]。](../../../images/extensions/server/meta/mbe-extension-install.png)
+![&#x200B; [!UICONTROL Meta Conversions API擴充功能]安裝頁面醒目提示[!UICONTROL 連線至Meta]。](../../../images/extensions/server/meta/mbe-extension-install.png)
 
 在Facebook和Instagram中驗證的對話方塊提示也會顯示在事件轉送的快速啟動工作流程UI中。
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 與事件品質比對分數(EMQ)的整合可讓您藉由顯示EMQ分數，輕鬆檢視實作的成效。 此整合可儘量減少上下文切換，並幫助您提高中繼轉換API實施的成功率。 這些事件分數會顯示在[!UICONTROL Meta Conversions API擴充功能]設定畫面中。
 
-![ [!UICONTROL Meta Conversions API擴充功能]設定頁面醒目提示[!UICONTROL 檢視EMQ分數]。](../../../images/extensions/server/meta/emq-score.png)
+![&#x200B; [!UICONTROL Meta Conversions API擴充功能]設定頁面醒目提示[!UICONTROL 檢視EMQ分數]。](../../../images/extensions/server/meta/emq-score.png)
 
 ## 與LiveRamp (Alpha)整合 {#alpha}
 

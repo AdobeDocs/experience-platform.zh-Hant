@@ -40,7 +40,7 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 
 系統會根據類別的建立方式自動篩選類別清單。 預設設定會顯示Adobe定義的類別。 您還可以篩選清單以顯示您的組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL 標準]選項會顯示Adobe建立的實體，而[!UICONTROL 自訂]選項則會顯示貴組織內建立的實體。
 
-![ [!UICONTROL 結構描述]工作區的[!UICONTROL 類別]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/classes/standard-and-custom-classes.png)
+![&#x200B; [!UICONTROL 結構描述]工作區的[!UICONTROL 類別]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
 >[!TIP]
 >

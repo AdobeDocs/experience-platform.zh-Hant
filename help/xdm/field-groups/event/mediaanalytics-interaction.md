@@ -13,7 +13,7 @@ ht-degree: 2%
 
 [!UICONTROL MediaAnalytics互動詳細資料]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組。 使用此欄位群組來擷取豐富的資料欄位，這些欄位可全面監視和分析各種平台或管道上與媒體內容的互動。
 
-![ [!UICONTROL MediaAnalytics互動詳細資料]結構描述欄位群組的結構描述圖表。](../../images/field-groups/mediaanalytics-interaction.png)
+![&#x200B; [!UICONTROL MediaAnalytics互動詳細資料]結構描述欄位群組的結構描述圖表。](../../images/field-groups/mediaanalytics-interaction.png)
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 |---| --- | --- | --- |

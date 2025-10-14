@@ -195,7 +195,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 出現[!UICONTROL Confirm要求]對話方塊，表示刪除後無法復原身分。 選取&#x200B;**[!UICONTROL 提交]**&#x200B;以確認您要刪除其資料的身分清單。
 
-![ [!UICONTROL 確認要求]對話方塊。](../images/ui/record-delete/confirm-request.png)
+![&#x200B; [!UICONTROL 確認要求]對話方塊。](../images/ui/record-delete/confirm-request.png)
 
 提交要求後，工作單即建立並顯示在[!UICONTROL 資料生命週期]工作區的[!UICONTROL 記錄]索引標籤上。 從這裡，您可以在工單處理請求時監視工單的狀態。
 
@@ -203,7 +203,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 >
 >如需記錄刪除執行後如何處理的詳細資訊，請參閱[時間表與透明度](../home.md#record-delete-transparency)的概觀區段。
 
-![ [!UICONTROL 資料生命週期]工作區的[!UICONTROL 記錄]索引標籤中反白顯示新要求。](../images/ui/record-delete/request-log.png)
+![&#x200B; [!UICONTROL 資料生命週期]工作區的[!UICONTROL 記錄]索引標籤中反白顯示新要求。](../images/ui/record-delete/request-log.png)
 
 ## 從以模型為基礎的資料集中刪除記錄 {#model-based-record-delete}
 

@@ -57,7 +57,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 最近專案會列出組織中最近的變更。 在以下範例中，最新變更與資料集、來源、對象和目的地有關。
 
-![ Experience Platform UI首頁中的「最近使用的專案」區段。](assets/platform-home/recent-items.png)
+![&#x200B; Experience Platform UI首頁中的「最近使用的專案」區段。](assets/platform-home/recent-items.png)
 
 * **最近的資料集**： **[!UICONTROL 最近的資料集]**&#x200B;卡片會顯示組織內建立的五個最近的資料集。 建立新資料集時會更新此清單。 選取資料集以檢視該專案的詳細資料，或針對資料集清單選取&#x200B;**[!UICONTROL 全部檢視]**。 從那裡，您可以選取特定來源以取得詳細資訊。 如需資料集的詳細資訊，請參閱[資料集總覽](../catalog/datasets/overview.md)。
 * **最近的來源**： **[!UICONTROL 最近的來源]**&#x200B;量度卡片會顯示組織內建立的五個最近的來源。 此清單會在建立新來源時更新。 選取來源以檢視該專案的詳細資料，或選取&#x200B;**[!UICONTROL 檢視全部]**&#x200B;以取得來源清單。 從那裡，您可以選取特定來源以取得詳細資訊。 如需來源的詳細資訊，請參閱[來源概觀](../sources/home.md)。
@@ -68,7 +68,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 最後，資源Widget提供您可參考的其他檔案資源。 這些功能包括：
 
-![ Experience Platform UI首頁中的資源區段。](assets/platform-home/resources.png)
+![&#x200B; Experience Platform UI首頁中的資源區段。](assets/platform-home/resources.png)
 
 * [了解結構描述](../xdm/schema/composition.md)
 * [正在連接來源](../sources/home.md)

@@ -73,7 +73,7 @@ ht-degree: 17%
 
 若要編輯資料集層級的資料使用標籤，請先選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))的資料集名稱。
 
-![ [!UICONTROL 資料集]工作區的[!UICONTROL 資料控管]索引標籤，其編輯鉛筆圖示已反白顯示。](../images/labels/dataset-level-edit.png)
+![&#x200B; [!UICONTROL 資料集]工作區的[!UICONTROL 資料控管]索引標籤，其編輯鉛筆圖示已反白顯示。](../images/labels/dataset-level-edit.png)
 
 **[!UICONTROL 編輯治理標籤]**&#x200B;對話方塊開啟。 在對話方塊中，勾選您要套用至資料集的標籤旁的方塊。 請記住，這些標籤將由資料集內的所有欄位繼承。 當您勾選每個方塊時，**[!UICONTROL 套用的標籤]**&#x200B;標題會更新，並顯示您選擇的標籤。 選取想要的標籤之後，請選取&#x200B;**[!UICONTROL 儲存變更]**。
 
@@ -81,7 +81,7 @@ ht-degree: 17%
 
 **[!UICONTROL 資料控管]**&#x200B;工作區會重新出現，顯示您已在資料表初始資料列中的資料集層級套用的標籤。 您也可以看到標籤（以個別卡片表示），這些標籤會繼承至資料集中的每個欄位。
 
-![ [!UICONTROL 資料集]工作區的[!UICONTROL 資料控管]索引標籤已套用資料集層級標籤，且已繼承的資料集歸檔標籤已反白顯示。](../images/labels/applied-dataset-labels.png)
+![&#x200B; [!UICONTROL 資料集]工作區的[!UICONTROL 資料控管]索引標籤已套用資料集層級標籤，且已繼承的資料集歸檔標籤已反白顯示。](../images/labels/applied-dataset-labels.png)
 
 ### 從資料集中移除標籤 {#remove-labels-from-a-dataset}
 

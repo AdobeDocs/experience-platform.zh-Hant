@@ -227,7 +227,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 此欄位包含有關ExperienceEvent的商務特定資訊，包括採購單編號和付款資訊。
 
-![ xdm：commerce欄位的結構，包括子欄位，例如，訂單、購買和付款。](./images/data-preparation/commerce.png)
+![&#x200B; xdm：commerce欄位的結構，包括子欄位，例如，訂單、購買和付款。](./images/data-preparation/commerce.png)
 
 **範例結構描述**
 
@@ -295,7 +295,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 此欄位包含與使用接觸點啟用的行銷活動相關的資訊。
 
-![ xdm：marketing欄位的結構，包括trackingCode、campaignGroup和campaignName等子欄位。](./images/data-preparation/marketing.png)
+![&#x200B; xdm：marketing欄位的結構，包括trackingCode、campaignGroup和campaignName等子欄位。](./images/data-preparation/marketing.png)
 
 **範例結構描述**
 

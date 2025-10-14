@@ -50,7 +50,7 @@ ht-degree: 0%
 
 右側面板會更新，以顯示資料傳送方式的設定選項。 具體來說，您必須將[資料元素](../../../ui/managing-resources/data-elements.md)指派給代表您[!DNL Event Hub]組態的各種屬性。
 
-![ UI中顯示的[!UICONTROL 傳送資料至Kinesis資料流]動作型別的組態選項。](../../../images/extensions/server/aws/data-stream-details.png)
+![&#x200B; UI中顯示的[!UICONTROL 傳送資料至Kinesis資料流]動作型別的組態選項。](../../../images/extensions/server/aws/data-stream-details.png)
 
 **[!UICONTROL Kinesis資料流詳細資料]**
 

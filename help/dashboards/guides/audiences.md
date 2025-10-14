@@ -191,7 +191,7 @@ Adobe提供多個標準Widget，您可用來視覺化與對象相關的不同量
 
 此Widget也包含自動[!UICONTROL 註解]功能，其中機器學習模型會分析圖表和對象資料，並自動產生註解以說明主要趨勢和重要事件。 選取&#x200B;**[!UICONTROL 註解]**&#x200B;以開啟自動註解對話方塊。
 
-![ [!UICONTROL 對象]總覽會顯示對象人數趨勢Widget。](../images/audiences/audience-size-trend-captions.png)
+![&#x200B; [!UICONTROL 對象]總覽會顯示對象人數趨勢Widget。](../images/audiences/audience-size-trend-captions.png)
 
 自動註解對話方塊隨即開啟，提供您資料的深入分析。
 

@@ -13,7 +13,7 @@ ht-degree: 5%
 
 [!UICONTROL XDM商業促銷活動詳細資料]是[[!UICONTROL XDM商業促銷活動]類別](../../classes/b2b/business-campaign.md)的標準結構描述欄位群組，可擷取商業促銷活動的詳細資訊。
 
-![ XDM商業活動詳細資訊欄位群組在UI中的結構](../../images/field-groups/b2b/business-campaign-details.png)
+![&#x200B; XDM商業活動詳細資訊欄位群組在UI中的結構](../../images/field-groups/b2b/business-campaign-details.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

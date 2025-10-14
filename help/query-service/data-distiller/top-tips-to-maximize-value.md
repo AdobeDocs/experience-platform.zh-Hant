@@ -77,7 +77,7 @@ RFM模型使用三個關鍵引數，根據交易行為來細分客戶。
 
 上傳檔案後，資料預覽會顯示在UI底部。 選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成上傳。
 
-![ 「從CSV檔案建立資料集」工作流程的「新增資料」區段，其中資料預覽和「完成」都反白顯示。](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
+![&#x200B; 「從CSV檔案建立資料集」工作流程的「新增資料」區段，其中資料預覽和「完成」都反白顯示。](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 隨即顯示「luma_web_data」資料集的資料集活動檢視。 手動上傳CSV檔案
 已擷取為批次，並由[!UICONTROL 批次ID]識別。 右側的面板會將表格名稱顯示為`luma_web_data`。
@@ -335,7 +335,7 @@ AS
 
 結果看起來類似下列影像，但檢視ID不同。
 
-![ &#39;rfm_scores&#39;檢視的[查詢結果]對話方塊。](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
+![&#x200B; &#39;rfm_scores&#39;檢視的[查詢結果]對話方塊。](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### 模型RFM區段 {#model-rfm-segments}
 

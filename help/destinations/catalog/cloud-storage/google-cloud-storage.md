@@ -64,7 +64,7 @@ ht-degree: 2%
 
 **[!UICONTROL 設定]**&#x200B;頁面隨即顯示。 從這裡，您可以檢視有關您的[!DNL Google]專案ID的資訊，以及有關您的[!DNL Google Cloud Storage]帳戶的詳細資料。 若要存取互通性設定，請從頂端標頭選取&#x200B;**[!UICONTROL 互通性]**。
 
-![ Google Cloud Platform儀表板中反白顯示的[互通性]索引標籤。](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![&#x200B; Google Cloud Platform儀表板中反白顯示的[互通性]索引標籤。](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 **[!UICONTROL 互通性]**&#x200B;頁面包含驗證、存取金鑰以及與您的服務帳戶關聯的預設專案的資訊。 若要為您的服務帳戶產生新的存取金鑰ID和機密存取金鑰，請選取&#x200B;**[!UICONTROL 為服務帳戶建立金鑰]**。
 

@@ -203,7 +203,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 >[!TAB 客戶]
 
-針對客戶資料，[!DNL SAP Commerce]使用[ API的](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)客戶[和](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts)客戶聯絡人關係[!DNL SAP Business Partners]端點來擷取資料
+針對客戶資料，[!DNL SAP Commerce]使用[&#x200B; API的](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers)客戶[和](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts)客戶聯絡人關係[!DNL SAP Business Partners]端點來擷取資料
 
 以下是為客戶資料的[!DNL SAP Commerce]資料流對應設定的範例：
 
@@ -227,7 +227,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 >[!TAB 連絡人]
 
-針對連絡人資料，[!DNL SAP Commerce]使用[ API的](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)連絡人[!DNL SAP Business Partners]端點來擷取資料。
+針對連絡人資料，[!DNL SAP Commerce]使用[&#x200B; API的](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts)連絡人[!DNL SAP Business Partners]端點來擷取資料。
 
 下列是連絡人資料[!DNL SAP Commerce]資料流的對應設定範例：
 

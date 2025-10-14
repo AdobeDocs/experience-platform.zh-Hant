@@ -43,7 +43,7 @@ ht-degree: 0%
 
 最後，選取&#x200B;**[!UICONTROL 選取]**&#x200B;以返回您的儀表板檢視。
 
-![ [!UICONTROL 建立全域篩選對話方塊]，其中的Select和篩選標籤文字輸入反白顯示。](../../images/sql-insights-query-pro-mode/global-filter-label.png)
+![&#x200B; [!UICONTROL 建立全域篩選對話方塊]，其中的Select和篩選標籤文字輸入反白顯示。](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
 ## 為每個insight啟用全域篩選器 {#enable-global-filter}
 

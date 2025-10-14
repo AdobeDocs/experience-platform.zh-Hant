@@ -29,7 +29,7 @@ ht-degree: 0%
 
 選取服務後會顯示&#x200B;**[!DNL Key vaults]**&#x200B;頁面。 從此處選取&#x200B;**[!DNL Create]**。
 
-![ [!DNL Microsoft Azure]中的[!DNL Key vaults]儀表板已反白顯示[!DNL Create]。](../../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
+![&#x200B; [!DNL Microsoft Azure]中的[!DNL Key vaults]儀表板已反白顯示[!DNL Create]。](../../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
 
 使用提供的表單，填寫「金鑰儲存庫」的基本詳細資訊，包括名稱和指定的資源群組。
 

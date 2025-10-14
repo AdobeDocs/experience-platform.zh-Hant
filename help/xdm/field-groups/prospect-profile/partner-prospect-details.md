@@ -15,7 +15,7 @@ ht-degree: 11%
 
 此欄位群組會在合作夥伴的內容中延伸[個別潛在客戶設定檔類別](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=zh-Hant)。
 
-![ [!UICONTROL 夥伴潛在客戶詳細資料（範例）]欄位群組的圖表。](../../images/field-groups/partner/partner-prospect-details-sample.png)
+![&#x200B; [!UICONTROL 夥伴潛在客戶詳細資料（範例）]欄位群組的圖表。](../../images/field-groups/partner/partner-prospect-details-sample.png)
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 |---------------------------------------|-----------------------------|-----------|--------------------------------------------------|

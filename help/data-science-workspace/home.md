@@ -199,4 +199,4 @@ Adobe Experience Platform中的所有資料都符合標準化的XDM結構，不�
 
 下列影片是設計用來支援您對[!DNL Data Science Workspace]的理解。
 
->[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&enable10seconds=on&speedcontrol=on)

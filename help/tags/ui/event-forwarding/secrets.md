@@ -155,7 +155,7 @@ ht-degree: 2%
 
 完成後，選取&#x200B;**[!UICONTROL 建立密碼]**&#x200B;以儲存密碼。
 
-![ [!UICONTROL 建立密碼]索引標籤醒目提示[!UICONTROL 建立密碼]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![&#x200B; [!UICONTROL 建立密碼]索引標籤醒目提示[!UICONTROL 建立密碼]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
@@ -204,11 +204,11 @@ ht-degree: 2%
 
 在需要重新授權的機密之前三個月，當您導覽屬性的任何頁面時，將會開始顯示快顯視窗。 選取&#x200B;**[!UICONTROL 按一下這裡以移至您的秘密]**。
 
-![ [!UICONTROL 屬性概述]索引標籤醒目提示密碼重新授權快顯視窗。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+![&#x200B; [!UICONTROL 屬性概述]索引標籤醒目提示密碼重新授權快顯視窗。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
 
 您被重新導向至[!UICONTROL 密碼]標籤。 此頁面上列出的秘密會經過篩選，僅顯示需要重新授權的秘密。 針對您需要重新授權的密碼選取&#x200B;**[!UICONTROL 需要驗證]**。
 
-![ [!DNL LinkedIn]密碼的[!UICONTROL 密碼]索引標籤醒目提示[!UICONTROL 需要驗證]。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![&#x200B; [!DNL LinkedIn]密碼的[!UICONTROL 密碼]索引標籤醒目提示[!UICONTROL 需要驗證]。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 會出現一個對話方塊，提示您輸入[!DNL LinkedIn]認證。 依照提示重新授權您的密碼。
 

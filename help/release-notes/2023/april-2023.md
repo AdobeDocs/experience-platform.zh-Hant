@@ -134,7 +134,7 @@ XDM 是一種開放原始碼的規格，可為帶入 Adobe Experience Platform �
 | 欄位群組 | [[!UICONTROL Adobe 統一輪廓服務帳戶聯合擴充功能]](https://github.com/adobe/xdm/pull/1696/files) | 新增即時客戶輪廓的帳戶擴充功能欄位群組，讓使用者可在帳戶聯合上新增區段會籍。 |
 | 結構描述 | [[!UICONTROL 已計算的屬性系統結構描述]](https://github.com/adobe/xdm/pull/1696/files) | 即時客戶輪廓所使用的已計算的屬性欄位群組已更新為系統唯讀全域結構描述。 |
 | 欄位群組 | 多個 | 已將幾個事件新增為[[!UICONTROL 時間序列結構描述]](https://github.com/adobe/xdm/pull/1718/files)的欄位。 |
-| 欄位群組 | 輪廓忠誠度詳細資料 | [已修正 ](https://github.com/adobe/xdm/pull/1717/files)`xdm:upgradeDate` 的標題，從「方案名稱」變成「升級日期」。 |
+| 欄位群組 | 輪廓忠誠度詳細資料 | [已修正 &#x200B;](https://github.com/adobe/xdm/pull/1717/files)`xdm:upgradeDate` 的標題，從「方案名稱」變成「升級日期」。 |
 | 欄位群組 | 多個 | [[!UICONTROL 決策項目]](https://github.com/adobe/xdm/pull/1714/files)中有幾個欄位已更新，移除了雙重巢狀階層。 |
 
 {style="table-layout:auto"}

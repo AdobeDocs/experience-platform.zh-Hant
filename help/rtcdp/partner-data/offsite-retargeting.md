@@ -69,7 +69,7 @@ ht-degree: 1%
 
 使用搜尋列，您可以尋找並新增您在站上個人化使用案例[&#128279;](#get-data-in)期間建立的「合作夥伴ID」事件到計算的屬性畫布。
 
-![ [!UICONTROL 事件]索引標籤和搜尋列已反白顯示。](../assets/offsite-retargeting/ca-add-partner-id.png)
+![&#x200B; [!UICONTROL 事件]索引標籤和搜尋列已反白顯示。](../assets/offsite-retargeting/ca-add-partner-id.png)
 
 將「合作夥伴ID」事件新增至定義後，請將事件篩選條件設為&#x200B;**[!UICONTROL 存在]**，將事件篩選條件設為新增合作夥伴ID的&#x200B;**[!UICONTROL 最近]**&#x200B;值，且回顧期間為24小時。
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 會出現對話方塊，要求您選擇[!UICONTROL 撰寫對象]與[!UICONTROL 建置規則]。 選取&#x200B;**[!UICONTROL 建置規則]**，然後選取&#x200B;**[!UICONTROL 建立]**。
 
-![ [!UICONTROL 建置規則]按鈕已反白顯示。](../assets/offsite-retargeting/select-build-rule.png)
+![&#x200B; [!UICONTROL 建置規則]按鈕已反白顯示。](../assets/offsite-retargeting/select-build-rule.png)
 
 便會顯示「區段產生器」頁面。 在此頁面上，您可以使用元件來建立您的對象。
 
@@ -155,7 +155,7 @@ ht-degree: 1%
 
 **[!UICONTROL 選取屬性]**&#x200B;頁面就會顯示。 在此頁面上，您可以選取要連同已啟用的對象一起匯出哪些屬性。 您至少會想要包含合作夥伴ID，因為這樣可讓您識別要重新定位的訪客。 選取&#x200B;**[!UICONTROL 新增對應]**&#x200B;並搜尋計算屬性。 新增必要的屬性後，選取&#x200B;**[!UICONTROL 下一步]**。
 
-![ [!UICONTROL 新增對應]按鈕和計算屬性都會反白顯示。](../assets/offsite-retargeting/add-new-mapping.png)
+![&#x200B; [!UICONTROL 新增對應]按鈕和計算屬性都會反白顯示。](../assets/offsite-retargeting/add-new-mapping.png)
 
 **[!UICONTROL 檢閱]**&#x200B;頁面隨即顯示。 您可以在此頁面檢閱對象啟用的詳細資訊。 如果您對提供的詳細資料感到滿意，請選取&#x200B;**[!UICONTROL 完成]**。
 

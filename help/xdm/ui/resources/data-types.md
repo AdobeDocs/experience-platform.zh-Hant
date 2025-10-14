@@ -51,7 +51,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 從&#x200B;**[!UICONTROL 資料型別]**&#x200B;索引標籤中，選取&#x200B;**[!UICONTROL 建立資料型別]**。
 
-![ [!UICONTROL 結構描述]工作區[!UICONTROL 資料型別]索引標籤，其中[!UICONTROL 建立資料型別]已反白顯示。](../../images/ui/resources/data-types/create.png)
+![&#x200B; [!UICONTROL 結構描述]工作區[!UICONTROL 資料型別]索引標籤，其中[!UICONTROL 建立資料型別]已反白顯示。](../../images/ui/resources/data-types/create.png)
 
 [!DNL Schema Editor]隨即顯示，顯示畫布中新資料型別的目前結構。 在編輯器的右側，您可以為資料型別提供顯示名稱和可選說明。 請確定您為您的資料型別提供唯一且簡潔的名稱，因為這是將資料型別新增至結構描述時識別資料型別的方式。
 
@@ -65,7 +65,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 可用資料類型清單已根據其建立方式預先進行篩選。選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL 標準]選項會顯示Adobe建立的實體，而[!UICONTROL 自訂]選項則會顯示貴組織內建立的實體。
 
-![ [!UICONTROL 結構描述]工作區的[!UICONTROL 資料型別]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+![&#x200B; [!UICONTROL 結構描述]工作區的[!UICONTROL 資料型別]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
 ### 編輯現有的資料型別 {#edit}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 在右側邊欄中選取資料型別的名稱，以在[!DNL Schema Editor]中開啟其結構。
 
-![ [!UICONTROL 結構描述]工作區的[!UICONTROL 資料型別]索引標籤，資料型別為[!UICONTROL 自訂]且資料型別為[!UICONTROL 名稱]，已強調顯示。](../../images/ui/resources/data-types/edit.png)
+![&#x200B; [!UICONTROL 結構描述]工作區的[!UICONTROL 資料型別]索引標籤，資料型別為[!UICONTROL 自訂]且資料型別為[!UICONTROL 名稱]，已強調顯示。](../../images/ui/resources/data-types/edit.png)
 
 ## 新增欄位至資料型別 {#add-fields}
 

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [!UICONTROL IdentityMap]是[[!UICONTROL XDM ExperienceEvent]類別](../../classes/experienceevent.md)的標準結構描述欄位群組，以及[[!UICONTROL XDM個人設定檔]類別](../../classes/individual-profile.md)的相容欄位群組。 欄位群組提供單一對應欄位，其中包含一組由名稱空間輸入的使用者身分。
 
-![ [!UICONTROL IdentityMap]結構描述欄位群組](../../images/field-groups/identitymap.png)的圖表
+![&#x200B; [!UICONTROL IdentityMap]結構描述欄位群組](../../images/field-groups/identitymap.png)的圖表
 
 請參閱結構描述組合[&#128279;](../../schema/composition.md#identityMap)的基本概念中的身分對應一節，以取得有關其使用案例的更多資訊，包括其優點和缺點。
 

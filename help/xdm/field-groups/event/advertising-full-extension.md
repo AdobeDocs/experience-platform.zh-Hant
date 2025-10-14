@@ -27,7 +27,7 @@ ht-degree: 7%
 
 欄位群組提供單一`_experience`物件給結構描述，其本身包含單一`adcloud`物件。
 
-![ [!DNL Advertising Cloud]欄位群組的頂層欄位](../../images/field-groups/advertising-full-extension/full-schema.png " [!DNL Advertising Cloud] 欄位群組的頂層欄位")
+![&#x200B; [!DNL Advertising Cloud]欄位群組的頂層欄位](../../images/field-groups/advertising-full-extension/full-schema.png " [!DNL Advertising Cloud] 欄位群組的頂層欄位")
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

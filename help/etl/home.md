@@ -286,7 +286,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 ### 預覽資料
 
-ETL應用程式可提供預覽資料的功能（[ ETL工作流程](./workflow.md)中的「圖8」）。 資料存取API提供數個選項來預覽資料。
+ETL應用程式可提供預覽資料的功能（[&#x200B; ETL工作流程](./workflow.md)中的「圖8」）。 資料存取API提供數個選項來預覽資料。
 
 您可以在[資料存取教學課程](../data-access/tutorials/dataset-data.md)中找到其他資訊，包括使用資料存取API預覽資料的逐步指南。
 
@@ -454,7 +454,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 ### 從資料集取得「fileDescription」
 
-作為轉換後資料輸出的目的地元件，資料工程師將會選擇輸出資料集（[ ETL工作流程](workflow.md)中的「圖12」）。 XDM結構描述與輸出資料集相關聯。 要寫入的資料將由資料探索API中資料集實體的「fileDescription」屬性識別。 您可以使用資料集識別碼(`{DATASET_ID}`)擷取此資訊。 JSON回應中的「fileDescription」屬性將提供要求的資訊。
+作為轉換後資料輸出的目的地元件，資料工程師將會選擇輸出資料集（[&#x200B; ETL工作流程](workflow.md)中的「圖12」）。 XDM結構描述與輸出資料集相關聯。 要寫入的資料將由資料探索API中資料集實體的「fileDescription」屬性識別。 您可以使用資料集識別碼(`{DATASET_ID}`)擷取此資訊。 JSON回應中的「fileDescription」屬性將提供要求的資訊。
 
 **API格式**
 

@@ -17,7 +17,7 @@ ht-degree: 12%
 
 [!UICONTROL XDM商業帳戶個人關係]是標準的體驗資料模型(XDM)類別，可擷取與商業帳戶相關聯之個人的最低要求屬性。
 
-![ XDM商業帳戶個人關係類別在UI中的結構](../../images/classes/b2b/business-account-person-relation.png)
+![&#x200B; XDM商業帳戶個人關係類別在UI中的結構](../../images/classes/b2b/business-account-person-relation.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

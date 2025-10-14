@@ -41,7 +41,7 @@ ht-degree: 2%
 
 環境已成功建立，並且您返回到&#x200B;**[!UICONTROL 環境]**&#x200B;標籤，該標籤顯示您的新環境。
 
-![ [!UICONTROL 環境]標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![&#x200B; [!UICONTROL 環境]標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 ## 檢視環境憑證詳細資訊 {#view-certificate}
 
@@ -62,7 +62,7 @@ ht-degree: 2%
 
 若要使用過時的憑證，請導覽至「事件轉送」屬性左側面板中的「**[!UICONTROL 環境]**」標籤，然後選取環境以檢視其詳細資料。
 
-![ [!UICONTROL 環境]標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![&#x200B; [!UICONTROL 環境]標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 從&#x200B;**[!UICONTROL 憑證]**&#x200B;下拉式清單中，選取過時的憑證，然後選取&#x200B;**[!UICONTROL 儲存]**。
 

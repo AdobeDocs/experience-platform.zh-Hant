@@ -64,7 +64,7 @@ ht-degree: 3%
 
 在下一個畫面中，輸入您先前在[設定詳細資料](#configuration-details)區段中收集的[!UICONTROL 廣告帳戶ID]和[!UICONTROL 轉換存取權杖]。 完成後，請選取&#x200B;**[!UICONTROL 儲存]**。
 
-![ [!DNL Pinterest] [!UICONTROL 設定]畫面醒目提示[!UICONTROL Ads帳戶ID]與[!UICONTROL 轉換存取權杖]輸入欄位。](../../../images/extensions/server/pinterest/input.png)
+![&#x200B; [!DNL Pinterest] [!UICONTROL 設定]畫面醒目提示[!UICONTROL Ads帳戶ID]與[!UICONTROL 轉換存取權杖]輸入欄位。](../../../images/extensions/server/pinterest/input.png)
 
 ## 設定事件轉送規則 {#config-rule}
 
@@ -161,11 +161,11 @@ ht-degree: 3%
 
 如果事件集合和[!DNL Experience Platform]整合成功，您將會在[!DNL Pinterest] UI中看到事件。
 
-![ [!DNL Pinterest]事件管理員](../../../images/extensions/server/pinterest/event-history.png)
+![&#x200B; [!DNL Pinterest]事件管理員](../../../images/extensions/server/pinterest/event-history.png)
 
 您可以進一步鑽研並檢視[!DNL Pinterest]事件資料分佈。
 
-![ [!DNL Pinterest]資料分佈](../../../images/extensions/server/pinterest/event-history-distribution.png)
+![&#x200B; [!DNL Pinterest]資料分佈](../../../images/extensions/server/pinterest/event-history-distribution.png)
 
 ## 後續步驟
 

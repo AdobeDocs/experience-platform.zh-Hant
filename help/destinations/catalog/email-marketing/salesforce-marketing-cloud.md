@@ -112,4 +112,4 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## 設定將資料匯入[!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-將[!DNL Experience Platform]連線到您的[!DNL SFTP]儲存體後，您必須設定從儲存位置匯入到[!DNL Salesforce Marketing Cloud]的資料匯入。 若要瞭解如何完成此作業，請參閱[從[!DNL Salesforce Help Center]中的檔案](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5)將訂閱者匯入Marketing Cloud。
+將[!DNL Experience Platform]連線到您的[!DNL SFTP]儲存體後，您必須設定從儲存位置匯入到[!DNL Salesforce Marketing Cloud]的資料匯入。 若要瞭解如何完成此作業，請參閱[從[!DNL Salesforce Help Center]中的檔案](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5)將訂閱者匯入Marketing Cloud。

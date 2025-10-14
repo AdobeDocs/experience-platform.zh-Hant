@@ -17,7 +17,7 @@ ht-degree: 0%
 
 您的Experience Platform執行個體上可用的所有儀表板清單會顯示在[!UICONTROL 瀏覽]標籤下。 這包括貴組織建立並已透過協力廠商應用程式設定的整合儀表板。
 
-![ UI儀表板區段內的「瀏覽」標籤。](./images/inventory/browse-tab.png)
+![&#x200B; UI儀表板區段內的「瀏覽」標籤。](./images/inventory/browse-tab.png)
 
 您可以從清單中選取圖示板的名稱，以檢視個別圖示板。
 

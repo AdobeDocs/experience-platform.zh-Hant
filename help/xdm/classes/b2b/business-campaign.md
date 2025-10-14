@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL XDM商業促銷活動]是一個標準的體驗資料模型(XDM)類別，可擷取商業促銷活動的最低要求屬性。
 
-![ XDM商業促銷活動類別在UI中的結構](../../images/classes/b2b/business-campaign.png)
+![&#x200B; XDM商業促銷活動類別在UI中的結構](../../images/classes/b2b/business-campaign.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |

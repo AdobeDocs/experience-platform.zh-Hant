@@ -153,7 +153,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >[!UICONTROL 以CTAS]執行選項只有在查詢有&#x200B;**未**&#x200B;排程時才可用。
 
-![ [!UICONTROL 輸入輸出資料集詳細資料]對話方塊。](../images/ui/query-editor/output-dataset-details.png)
+![&#x200B; [!UICONTROL 輸入輸出資料集詳細資料]對話方塊。](../images/ui/query-editor/output-dataset-details.png)
 
 在您執行&#x200B;**[!UICONTROL 以CTAS]**&#x200B;身分執行動作後，會彈出一則確認訊息，通知您動作成功。 此快顯訊息包含一個連結，提供導覽至查詢記錄工作區的一個便利方式。 如需查詢記錄檔的詳細資訊，請參閱[查詢記錄檔](./query-logs.md)。
 

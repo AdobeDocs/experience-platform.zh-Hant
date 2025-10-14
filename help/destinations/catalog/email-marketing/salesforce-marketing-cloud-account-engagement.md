@@ -44,9 +44,9 @@ ht-degree: 2%
 
 訂閱[Marketing Cloud帳戶參與](https://www.salesforce.com/products/marketing-cloud/marketing-automation/)產品的[!DNL Marketing Cloud Account Engagement]帳戶是繼續的必要專案。
 
-您的[!DNL Salesforce]帳戶應該有[!DNL Salesforce] `Account Engagement Administrator role`。 這是[建立自訂潛在客戶欄位](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&amp;type=5)的必要專案。
+您的[!DNL Salesforce]帳戶應該有[!DNL Salesforce] `Account Engagement Administrator role`。 這是[建立自訂潛在客戶欄位](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5)的必要專案。
 
-最後，您的帳戶應該也能夠存取[[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&amp;type=5)。
+最後，您的帳戶應該也能夠存取[[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5)。
 
 如果您沒有帳戶，或帳戶缺少[!DNL Marketing Cloud Account Engagement]訂閱或[!DNL Account Engagement Administrator role]，請連絡[[!DNL Salesforce] 支援](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10)或您的[!DNL Salesforce]帳戶管理員。
 
@@ -68,7 +68,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->如果您的[!DNL Salesforce]帳戶管理員已限制受信任IP範圍的存取權，您必須連絡他們，才能取得[Experience Platform IP的](/help/destinations/catalog/streaming/ip-address-allow-list.md)加入允許清單。 如需其他指引，請參閱[!DNL Salesforce] [限制連線應用程式的受信任IP範圍存取](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5)檔案。
+>如果您的[!DNL Salesforce]帳戶管理員已限制受信任IP範圍的存取權，您必須連絡他們，才能取得[Experience Platform IP的](/help/destinations/catalog/streaming/ip-address-allow-list.md)加入允許清單。 如需其他指引，請參閱[!DNL Salesforce] [限制連線應用程式的受信任IP範圍存取](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5)檔案。
 
 ## 支援的身分 {#supported-identities}
 

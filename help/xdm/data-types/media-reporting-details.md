@@ -22,7 +22,7 @@ ht-degree: 1%
 >以下提及的欄位不會直接用來建立請求。 相反地，傳送至Adobe Experience Platform或Adobe Analytics的欄位集合會從您的請求資料中組合，然後由伺服器基礎架構匯入或處理量度。 雖然Experience Platform會收集您各種型別的使用者事件，但系統傳回給您的報告著重於特定事件，例如`media.sessionStart`、`media.adStart`和`media.sessionComplete`。 這表示雖然您在收集期間傳輸12種型別的事件，但您的報表只會顯示以下所列五個事件的劃分。
 
 +++選取此選項可顯示[!UICONTROL 媒體報告詳細資料]資料型別的圖表。
-![ [!UICONTROL 媒體報告詳細資料]資料型別的圖表。](../images/data-types/media-reporting-details.png)
+![&#x200B; [!UICONTROL 媒體報告詳細資料]資料型別的圖表。](../images/data-types/media-reporting-details.png)
 +++
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
