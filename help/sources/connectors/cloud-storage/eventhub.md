@@ -3,9 +3,9 @@ title: Azure事件中樞Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Azure事件中樞連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 02c777b5db9734cf45b35f131d83c35c5ce670fb
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -32,18 +32,20 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 ### 增加[!DNL Event Hubs]和Experience Platform上的平行程度
 
-平行度是指在多個處理單元上同時執行相同工作，以提高速度和效能。 您可以透過增加分割或為您的[!DNL Event Hubs]帳戶取得更多處理單位來增加[!DNL Event Hubs]端的平行程度。 如需詳細資訊，請參閱有關縮放[&#128279;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability)的[!DNL Event Hubs] 檔案。
+平行度是指在多個處理單元上同時執行相同工作，以提高速度和效能。 您可以透過增加分割或為您的[!DNL Event Hubs]帳戶取得更多處理單位來增加[!DNL Event Hubs]端的平行程度。 如需詳細資訊，請參閱有關縮放[[!DNL Event Hubs] 的](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability)檔案。
 
 若要提高Experience Platform端的擷取速度，Experience Platform必須增加來源聯結器中要從[!DNL Event Hubs]分割區讀取的工作數量。 增加[!DNL Event Hubs]端的平行程度後，請聯絡您的Adobe代表，以根據新分割來縮放Experience Platform工作。 目前，此程式尚未自動化。
 
 ## 使用虛擬網路連線至[!DNL Event Hubs]至Experience Platform
 
-您可以設定虛擬網路，在啟用防火牆測量時，將[!DNL Event Hubs]連線至Experience Platform。 若要設定虛擬網路，請前往此[[!DNL Event Hubs] 網路規則集檔案](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)，然後遵循下列步驟：
+Experience Platform支援透過虛擬網路連線到[!DNL Event Hubs]。 這可讓您透過安全的私人連線（而非公用網際網路）傳輸資料。 您可以允許列出Experience Platform VNet，安全地路由[!DNL Event Hubs]流量，使其通過[!DNL Azure]私人主幹，同時維護您現有的防火牆保護。
+
+若要設定虛擬網路，請前往此[[!DNL Event Hubs] 網路規則集檔案](https://learn.microsoft.com/en-us/azure/event-hubs/network-security)，然後遵循下列步驟：
 
 * 從REST API面板選取&#x200B;**試用**；
 * 在相同瀏覽器中使用您的認證驗證您的[!DNL Azure]帳戶；
 * 選取您要帶到Experience Platform的[!DNL Event Hubs]名稱空間、資源群組和訂閱，然後選取&#x200B;**執行**；
-* 在出現的JSON內文中，在`properties`內的`virtualNetworkRules`下新增下列Experience Platform子網路：
+* 在出現的JSON內文中，在`virtualNetworkRules`內的`properties`下新增下列Experience Platform子網路：
 
 
 >[!IMPORTANT]
