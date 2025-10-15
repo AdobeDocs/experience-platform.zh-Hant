@@ -2,10 +2,10 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
+source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 33%
+source-wordcount: '1008'
+ht-degree: 31%
 
 ---
 
@@ -57,7 +57,9 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 | 目標 | 說明 |
 | --- | --- |
 | [!DNL AdForm] | 使用此目的地將Adobe Real-Time CDP對象傳送至[!DNL AdForm]，以根據Experience Cloud ID (ECID)和[!DNL AdForm]的ID Fusion來啟用。 [!DNL AdForm]的ID Fusion是一項ID解析服務，可讓您根據Experience Cloud ID (ECID)啟用第一方對象。 |
-| `Amazon Ads` | 我們已新增其他個人識別碼支援，例如`firstName`、`lastName`、`street`、`city`、`state`、`zip`和`country`。 將這些欄位對應為目標身分可以提高對象符合率。 |
+| [!DNL Amazon Ads] | 我們已新增其他個人識別碼支援，例如`firstName`、`lastName`、`street`、`city`、`state`、`zip`和`country`。 將這些欄位對應為目標身分可以提高對象符合率。 |
+| [!DNL Snowflake Batch] （可用性限制） | 建立即時[!DNL Snowflake]資料共用，以直接將每日對象更新作為共用表格傳到您的帳戶。 這項整合目前適用於VA7區域中布建的客戶組織。 |
+| [!DNL Snowflake Streaming] （可用性限制） | 建立即時[!DNL Snowflake]資料共用，以直接將串流對象更新作為共用表格傳送到您的帳戶。 這項整合目前適用於VA7區域中布建的客戶組織。 |
 
 **全新或更新版功能**
 
