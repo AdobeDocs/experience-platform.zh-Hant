@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 呈現個人化內容
 
-Adobe Experience Platform Web SDK支援從Adobe個人化解決方案擷取個人化內容，包括[Adobe Target](https://business.adobe.com/products/target/adobe-target.html)、[Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant)和[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant)。
+Adobe Experience Platform Web SDK支援從Adobe個人化解決方案擷取個人化內容，包括[Adobe Target](https://business.adobe.com/tw/products/target/adobe-target.html)、[Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant)和[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant)。
 
 此外，Web SDK可透過Adobe Experience Platform個人化目標(例如[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md)和[自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md))，提供相同頁面和下一頁個人化功能。 若要瞭解如何設定Experience Platform以進行相同頁面和下一頁個人化，請參閱[專屬指南](../../destinations/ui/activate-edge-personalization-destinations.md)。
 

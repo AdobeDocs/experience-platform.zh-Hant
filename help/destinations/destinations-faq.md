@@ -265,7 +265,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### [!DNL Adobe Target]和[!DNL Custom Personalization]目的地[!DNL HIPAA]是否相容？
 
 +++回答
-[!DNL Adobe Target]與[[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html)不符合[!DNL HIPPA]。 客戶透過[!DNL Adobe Target]或[!DNL Custom Personalization]目的地使用邊緣個人化之前，應先和自己的法律團隊確認[!DNL HIPPA]自訂最佳化通道的整備程度。
+[!DNL Adobe Target]與[[!DNL Adobe Healthcare Shield]](https://business.adobe.com/tw/solutions/industries/healthcare.html)不符合[!DNL HIPPA]。 客戶透過[!DNL Adobe Target]或[!DNL Custom Personalization]目的地使用邊緣個人化之前，應先和自己的法律團隊確認[!DNL HIPPA]自訂最佳化通道的整備程度。
 
 若是需要大規模套用同意原則管理的使用案例，客戶必須購買[!DNL Adobe Privacy & Security Shield]。 [!DNL Adobe Privacy & Security Shield]功能是以進階功能套件形式銷售，不得另行購買。
 
