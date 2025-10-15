@@ -4,9 +4,9 @@ title: Azure事件中樞連線
 description: 建立與您的 [!DNL Azure Event Hubs] 儲存裝置的即時輸出連線，以從Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
+source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2077'
 ht-degree: 5%
 
 ---
@@ -147,7 +147,7 @@ Experience Platform會最佳化[!DNL Azure Event Hubs]目的地的設定檔匯�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至[!DNL Azure Event Hubs]目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>**注意**： Azure事件中樞目的地的匯出行為已更新為2025年9月版本。 以下醒目提示的新行為目前僅適用於在此版本之後建立的新Azure事件中樞目的地。 對於現有的Azure事件中樞目的地，您可以繼續使用舊的匯出行為，或聯絡Adobe以移轉至僅匯出對應對象的新行為。 所有組織將於2026年逐漸移轉至新行為。<br><br> <span class="preview"> **新的匯出行為**：對應到目的地且已變更的區段將包含在segmentMembership物件中。 在某些情況下，它們可能會使用多個呼叫匯出。 此外，在某些情況下，某些尚未變更的區段可能也會包含在呼叫中。 在任何情況下，只會匯出資料流中對應的區段。</span></li><br>**舊行為**： `segmentMembership`物件包含對應到啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已變更。 如果符合設定檔資格的其他未對應區段與啟動資料流中所對應的區段屬於相同的[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以屬於目的地匯出的一部分。 <li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援[!DNL Azure Event Hubs]目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至[!DNL Azure Event Hubs]目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援[!DNL Azure Event Hubs]目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
