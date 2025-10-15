@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
 workflow-type: tm+mt
-source-wordcount: '1508'
-ht-degree: 92%
+source-wordcount: '1614'
+ht-degree: 86%
 
 ---
 
@@ -104,6 +104,12 @@ Adobe Experience Platform 可讓您為客戶提供協調一致且相關的體驗
 | ------- | ----------- |
 | [!BADGE Alpha]{type=Informative}設定檔檢視器增強功能 | 2025 年 9 月版本包含以下輪廓檢視器增強功能。 <ul><li>**合併檢視**：屬性、事件和洞察已經合併至單一視圖。</li><li>**AI 生成的洞察**：現在，輪廓詳細資訊頁面會顯示 AI 生成的洞察，讓您了解利用輪廓產生的詳細資料。這些洞察可能包括傾向分數和趨勢分析等資訊。</li><li>**樣式更新**：輪廓詳細資料頁面已經更新其視覺外觀。</li><li>**瀏覽**：您現在可以利用互動式卡片輪播，透過搜尋和自訂功能來探索各個輪廓。</li></ul> |
 
+**重要更新**
+
+| 更新 | 說明 |
+| ------ | ----------- |
+| 設定檔刪除API淘汰 | [設定檔刪除API](/help/profile/api/entities.md#delete-entity)將於2025年10月底前被取代。 若要執行記錄刪除作業，您可以改用[資料生命週期記錄刪除API工作流程](/help/hygiene/api/workorder.md)或[資料生命週期記錄刪除UI工作流程](/help/hygiene/ui/record-delete.md)。 資料生命週期工作流程提供端對端生命週期追蹤，以及您可檢視及管理的每月配額。 <br/><br/>在端點被取代之後，目前使用此端點的任何使用者都可以繼續存取此端點。 我們將另行宣佈終止服務。 如有任何問題，請聯絡Adobe客戶服務。 |
+
 如需詳細資訊，請閱讀[即時客戶輪廓概觀](../../profile/home.md)。
 
 ## 細分服務 {#segmentation-service}
@@ -137,6 +143,6 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | [!DNL Snowflake]金鑰對驗證支援 | 支援金鑰對驗證，增強 Snowflake 連線的安全性。基本驗證 (使用者名稱/密碼) 將於 2025 年 11 月前棄用，因此建議客戶改為使用金鑰對驗證以提高安全性。如需詳細資訊，請閱讀 [[!DNL Snowflake]  文件](../../sources/connectors/databases/snowflake.md)。 |
 | [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | 使用 [[!DNL Capillary Streaming Events]  來源](../../sources/connectors/loyalty/capillary.md)將忠誠度資料從您的 [!DNL Capillary] 帳戶串流至 Experience Platform。 |
 | [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | 使用[[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md)將[!DNL Relay Network]整合中的事件資料串流至Experience Platform。 |
-| 正式發行在來源中支援私人連結的功能 | 您現在可以針對特定一組來源使用&#x200B;**私人連結**。使用此功能來建立您的來源可以連接的私人端點。您可以利用私人端點來設定繞過公共網際網路的連線和資料流，為敏感資料提供強化的安全性和網路隔離。對於以下來源均支援使用私人連結： <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. 如需詳細資訊，請參閱在 [API](../../sources/tutorials/api/private-link.md) 和 [&#x200B; UI](../../sources/tutorials/ui/private-link.md) 中建立私人連結的指南。 |
+| 正式發行在來源中支援私人連結的功能 | 您現在可以針對特定一組來源使用&#x200B;**私人連結**。使用此功能來建立您的來源可以連接的私人端點。您可以利用私人端點來設定繞過公共網際網路的連線和資料流，為敏感資料提供強化的安全性和網路隔離。對於以下來源均支援使用私人連結： <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. 如需詳細資訊，請參閱在 [API](../../sources/tutorials/api/private-link.md) 和 [ UI](../../sources/tutorials/ui/private-link.md) 中建立私人連結的指南。 |
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。

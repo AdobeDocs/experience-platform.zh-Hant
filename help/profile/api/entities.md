@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform可讓您使用RESTful API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用設定檔API存取實體（通常稱為「設定檔」）。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
+source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '2141'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,10 @@ GET /access/entities?{QUERY_PARAMETERS}
 - `schema.name`：實體的XDM結構描述的名稱。 在此使用案例中，`schema.name=_xdm.context.profile`。
 - `entityId`：您嘗試擷取的實體識別碼。
 - `entityIdNS`：您嘗試擷取的實體的名稱空間。 如果`entityId`是&#x200B;**而非** XID，則必須提供此值。
+
+此外，下列查詢引數的使用方式為&#x200B;*強烈建議*：
+
+- `mergePolicyId`：您要用來篩選資料的合併原則識別碼。 如果未指定合併原則，則會使用您組織的預設合併原則。
 
 附錄的[查詢引數](#query-parameters)區段中提供了有效引數的完整清單。
 
@@ -180,6 +184,10 @@ GET /access/entities?{QUERY_PARAMETERS}
 - `entityId`：您嘗試擷取的實體識別碼。
 - `entityIdNS`：您嘗試擷取的實體的名稱空間。 如果`entityId`是&#x200B;**而非** XID，則必須提供此值。
 
+此外，下列查詢引數的使用方式為&#x200B;*強烈建議*：
+
+- `mergePolicyId`：您要用來篩選資料的合併原則識別碼。 如果未指定合併原則，則會使用您組織的預設合併原則。
+
 附錄的[查詢引數](#query-parameters)區段中提供了有效引數的完整清單。
 
 **要求**
@@ -271,6 +279,10 @@ GET /access/entities?{QUERY_PARAMETERS}
 - `schema.name`：實體的XDM結構描述的名稱。 在此使用案例中，`schema.name=_xdm.context.opportunity`。
 - `entityId`：您嘗試擷取的實體識別碼。
 - `entityIdNS`：您嘗試擷取的實體的名稱空間。 如果`entityId`是&#x200B;**而非** XID，則必須提供此值。
+
+此外，下列查詢引數的使用方式為&#x200B;*強烈建議*：
+
+- `mergePolicyId`：您要用來篩選資料的合併原則識別碼。 如果未指定合併原則，則會使用您組織的預設合併原則。
 
 附錄的[查詢引數](#query-parameters)區段中提供了有效引數的完整清單。
 
@@ -1207,7 +1219,9 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->下列B2B實體的刪除請求已被取代：
+>刪除實體端點將於2025年10月底前淘汰。 若要執行記錄刪除作業，您可以改用[資料生命週期記錄刪除API工作流程](/help/hygiene/api/workorder.md)或[資料生命週期記錄刪除UI工作流程](/help/hygiene/ui/record-delete.md)。
+>
+>此外，下列B2B實體的刪除請求已遭取代：
 >
 >- 帳戶
 >- 帳戶 — 個人關係
@@ -1276,7 +1290,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 | `relatedEntityId` | 如果`schema.name`是`_xdm.context.experienceevent`，此值&#x200B;**必須**&#x200B;指定相關設定檔實體的識別碼。 此值遵循與`entityId`相同的規則。 | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | 如果`schema.name`是「_xdm.context.experienceevent」，此值必須為`relatedEntityId`中指定的實體指定身分名稱空間。 | `relatedEntityIdNS=CRMID` |
 | `fields` | 篩選回應中傳回的資料。 使用此專案來指定要包含在擷取之資料中的結構描述欄位值。 針對多個欄位，請使用逗號分隔值，且中間不應有空格。 | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | 識別用來控管傳回資料的合併原則。 如果未在呼叫中指定，則會使用您組織對該結構描述的預設值。 如果尚未設定預設合併原則，預設值為無設定檔合並且無身分拼接。 | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `mergePolicyId` | *Recommended*&#x200B;識別用來管理傳回資料的合併原則。 如果未在呼叫中指定，則會使用您組織對該結構描述的預設值。 如果您請求的結構描述尚未定義預設合併原則，則API會傳回HTTP 422錯誤狀態碼。 | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | 依時間戳記所擷取實體的排序順序。 這會寫入為`(+/-)timestamp`，預設為`+timestamp`。 | `orderby=-timestamp` |
 | `startTime` | 指定篩選實體的開始時間（毫秒）。 | `startTime=1539838505` |
 | `endTime` | 指定篩選實體的結束時間（毫秒）。 | `endTime=1539838510` |
