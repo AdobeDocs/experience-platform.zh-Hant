@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1065'
 ht-degree: 34%
 
 ---
@@ -181,8 +181,6 @@ ht-degree: 34%
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
-      - 忠誠度 {#loyalty}
-         - [毛細管串流事件](tutorials/api/create/loyalty/capillary.md)
       - 行銷自動化 {#marketing-automation}
          - [查特利奧](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)

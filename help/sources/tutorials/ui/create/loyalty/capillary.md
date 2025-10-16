@@ -3,10 +3,10 @@ title: 使用UI將Capillary連線至Experience Platform
 description: 瞭解如何使用UI將Capillity連線至Experience Platform
 badge: Beta
 exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: 428aed259343f56a2bf493b40ff2388340fffb7b
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 5%
+source-wordcount: '855'
+ht-degree: 4%
 
 ---
 
@@ -27,6 +27,10 @@ ht-degree: 5%
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
+>[!NOTE]
+>
+>閱讀[[!DNL Capillary Streaming Events] 總覽](../../../../connectors/loyalty/capillary.md)，瞭解[!DNL Capillary]來源所需的設定資訊。
+
 ## 瀏覽來源目錄
 
 在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 在&#x200B;*[!UICONTROL 類別]*&#x200B;面板中選取適當的類別或者，使用搜尋列導覽至您要使用的特定來源。
@@ -42,6 +46,10 @@ ht-degree: 5%
 ## 選取資料
 
 接下來，使用&#x200B;*[!UICONTROL 選取資料]*&#x200B;介面上傳範例JSON檔案以定義您的來源結構描述。 在此步驟中，您可以使用預覽介面來檢視裝載的檔案結構。 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
+
+>[!TIP]
+>
+>您可以下載[的](../../../../images/tutorials/create/capillary/schemas.zip)事件和設定檔結構描述[!DNL Capillary]，以便在資料選取介面中使用。
 
 ![來源工作流程的選取資料步驟](../../../../images/tutorials/create/capillary/select-data.png)
 
