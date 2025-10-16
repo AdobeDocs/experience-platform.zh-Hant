@@ -2,31 +2,27 @@
 title: 使用API將Google Ads連線至Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連結至Google Ads。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a0977e98219797eda14dd8d7ddb6cf3f1410cef0
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '457'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API連線[!DNL Google Ads]至Experience Platform
-
->[!NOTE]
->
->[!DNL Google Ads]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+# 使用[!DNL Google Ads] API連線[!DNL Flow Service]至Experience Platform
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
-閱讀本教學課程，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)將您的[!DNL Google Ads]帳戶連結至Adobe Experience Platform。
+閱讀本教學課程，瞭解如何使用[!DNL Google Ads]API[[!DNL Flow Service] 將您的](https://developer.adobe.com/experience-platform-apis/references/flow-service/)帳戶連結至Adobe Experience Platform。
 
-## 開始使用
+## 快速入門
 
 本指南需要您深入瞭解下列Experience Platform元件：
 
 * [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL Google Ads]。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Google Ads] API成功連線到[!DNL Flow Service]。
 
 ### 使用Experience Platform API
 
@@ -72,7 +68,7 @@ curl -X POST \
               "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "googleAdsApiVersion": "v17"
+              "googleAdsApiVersion": "v19"
 
           }
       },
@@ -91,7 +87,7 @@ curl -X POST \
 | `auth.params.refreshToken` | 您[!DNL Google Ads]帳戶的重新整理權杖。 |
 | `auth.params.clientID` | 您[!DNL Google Ads]帳戶的使用者端識別碼。 |
 | `auth.params.clientSecret` | 您[!DNL Google Ads]帳戶的使用者端密碼。 |
-| `auth.params.googleAdsApiVersion` | 您正在使用的[!DNL Google Ads] API版本。 Experience Platform上最新支援的版本是`v17`。 |
+| `auth.params.googleAdsApiVersion` | 您正在使用的[!DNL Google Ads] API版本。 Experience Platform目前支援版本`v19`和更新版本。 請確定您使用其中一個支援的版本，以確保相容性。 |
 | `connectionSpec.id` | [!DNL Google Ads]連線規格識別碼： `d771e9c1-4f26-40dc-8617-ce58c4b53702`。 |
 
 **回應**
@@ -107,7 +103,7 @@ curl -X POST \
 
 ## 建立資料流以擷取廣告資料
 
-依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Google Ads]基本連線，並將您的[!DNL Google Ads]帳戶連線至Experience Platform。 您可以在下列教學課程中使用此基本連線ID：
+依照此教學課程，您已使用[!DNL Google Ads] API建立[!DNL Flow Service]基本連線，並將您的[!DNL Google Ads]帳戶連線至Experience Platform。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
 * [使用 [!DNL Flow Service] API建立資料流以將廣告資料帶入Experience Platform](../../collect/advertising.md)

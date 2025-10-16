@@ -2,10 +2,10 @@
 title: Google Ads Source概觀
 description: 瞭解如何使用API或使用者介面將Google Ads連結至Adobe Experience Platform。
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: a0977e98219797eda14dd8d7ddb6cf3f1410cef0
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >[!DNL Google Ads]來源是測試版。 如需使用Beta標籤聯結器的詳細資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提供者的支援包括[!DNL Google Ads]。
 
@@ -23,7 +23,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提
 
 ### IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
 
 ### 在Experience Platform上設定許可權
 
@@ -41,8 +41,8 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 對廣告提
 | `refreshToken` | 重新整理權杖是[!DNL OAuth2]驗證的一部分。 此權杖可讓您在存取權杖過期後重新產生存取權杖。 |
 | `clientId` | 使用者端ID與使用者端密碼搭配使用，是[!DNL OAuth2]驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Google]識別您的應用程式來代表您的帳戶運作。 |
 | `clientSecret` | 使用者端密碼會與使用者端ID搭配使用，作為[!DNL OAuth2]驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Google]識別您的應用程式來代表您的帳戶運作。 |
-| `googleAdsApiVersion` | [!DNL Google Ads]目前支援的API版本。 雖然最新版本為`v18`，但Experience Platform上支援的最新版本為`v17`。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Google Ads]的連線規格識別碼為： `d771e9c1-4f26-40dc-8617-ce58c4b53702`。 如果您使用[!DNL Flow Service] API連線您的[!DNL Google Ads]帳戶，則需要此值。 |
+| `googleAdsApiVersion` | [!DNL Google Ads]目前支援的API版本。 雖然最新的[!DNL Google Ads] API版本是v21，但Experience Platform目前支援版本v19及更新版本。 請確定您使用其中一個支援的版本，以確保相容性。 |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Google Ads]的連線規格識別碼為： `d771e9c1-4f26-40dc-8617-ce58c4b53702`。 如果您使用[!DNL Google Ads] API連線您的[!DNL Flow Service]帳戶，則需要此值。 |
 
 ## 將[!DNL Google Ads]連線至Experience Platform
 
