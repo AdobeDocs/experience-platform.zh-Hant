@@ -21,7 +21,7 @@ ht-degree: 2%
 >
 >本文檔適用於先前有權使用數據科學工作環境的現有客戶。
 
-此教學課程提供所有其他[!DNL Adobe Experience Platform][!DNL Data Science Workspace]教程所需的先決条件和資產。完成後，[!DNL Experience Platform]上的零售銷售結構描述和資料集將可供您和組織成員使用。
+此教學課程提供所有其他[!DNL Adobe Experience Platform]&#x200B;[!DNL Data Science Workspace]教程所需的先決条件和資產。完成後，[!DNL Experience Platform]上的零售銷售結構描述和資料集將可供您和組織成員使用。
 
 ## 快速入門
 

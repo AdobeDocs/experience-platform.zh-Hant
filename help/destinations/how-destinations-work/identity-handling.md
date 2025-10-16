@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 以檔案為基礎的目的地 {#file-based}
 
-對於[基於文件的目標](/help/destinations/destination-types.md#file-based)（例如 SFTP、大多數電子郵件行銷目標（例如[!DNL Amazon S3][!DNL Adobe Campaign]、[!DNL Oracle Eloqua]、）、[!DNL Salesforce Marketing Cloud]，其中大多數目標中的標識設置都是打開的，這意味著您無需在批處理啟用 工作流程的“[選擇屬性](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)”步驟中選擇任何標識。
+對於[基於文件的目標](/help/destinations/destination-types.md#file-based)（例如 SFTP、大多數電子郵件行銷目標（例如[!DNL Amazon S3]&#x200B;[!DNL Adobe Campaign]、[!DNL Oracle Eloqua]、）、[!DNL Salesforce Marketing Cloud]，其中大多數目標中的標識設置都是打開的，這意味著您無需在批處理啟用 工作流程的“[選擇屬性](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)”步驟中選擇任何標識。
 
 如果您選擇將身份添加到文件匯出中，請注意，在匯出中只能選擇身份命名空間[&#128279;](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer)中的單個身份。選擇要匯出的標識時，將自動選擇該標識作為 [必需屬性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) 和 [重複資料刪除 - 重複密鑰](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)。
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 ## 基於 API 的流式處理目標 {#streaming-destinations}
 
-[&#128279;](/help/destinations/destination-sdk/overview.md)使用目標 SDK 構建的[基於 API 的流式處理目標](/help/destinations/destination-types.md#streaming-destination)（例如[!DNL Facebook]、[!DNL Google Customer Match][!DNL Pinterest]、、等[!DNL Braze]）僅支援用於導出的特定 ID。有關可匯出到每個目標的特定標識的詳細資訊，請閱讀&#x200B;*每個目標文檔頁面中的受支持標識*&#x200B;部分（例如，請參閱[目標頁面中的[!DNL Pinterest]受支持標識部分](/help/destinations/catalog/advertising/pinterest.md)）。
+[&#128279;](/help/destinations/destination-sdk/overview.md)使用目標 SDK 構建的[基於 API 的流式處理目標](/help/destinations/destination-types.md#streaming-destination)（例如[!DNL Facebook]、[!DNL Google Customer Match]&#x200B;[!DNL Pinterest]、、等[!DNL Braze]）僅支援用於導出的特定 ID。有關可匯出到每個目標的特定標識的詳細資訊，請閱讀&#x200B;*每個目標文檔頁面中的受支持標識*&#x200B;部分（例如，請參閱[目標頁面中的[!DNL Pinterest]受支持標識部分](/help/destinations/catalog/advertising/pinterest.md)）。
 
 但是請注意，您可以彈性地使用來自[私人圖形](/help/profile/merge-policies/overview.md#id-stitching)或屬性中的資料做為身分。 這表示您可以將XDM屬性對應至目的地所需的身分欄位。 請參閱以下的[!DNL Pinterest]目的地範例，其中XDM屬性`personalEmail.address`對應到必要的[!DNL Pinterest]身分`pinterest_audience`。
 

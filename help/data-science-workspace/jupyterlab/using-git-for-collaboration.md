@@ -12,7 +12,7 @@ ht-degree: 0%
 
 ---
 
-# 共同使用[!DNL JupyterLab][!DNL Git]
+# 共同使用[!DNL JupyterLab]&#x200B;[!DNL Git]
 
 >[!NOTE]
 >
