@@ -2,9 +2,9 @@
 title: UI中來源資料流程的隨選擷取
 description: 瞭解如何使用Experience Platform使用者介面，依需求為您的來源連線建立資料流程。
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fabacf273fb5774ddcee42d0cdcf12281eb0216b
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 **什麼是資料流執行？**
 
-流程執行代表資料流執行的例項。 例如，如果資料流排程在每小時的上午9:00、上午10:00及上午11:00執行，則您會有三個資料流執行個體。 流程執行是您的特定組織所專屬。
+流程執行代表資料流執行的例項。 例如，如果資料流排程在早上9:00、10:00、11:00 AM每小時執行，則您會有三個資料流執行個體。 流程執行是您的特定組織所專屬。
 
 >[!ENDSHADEBOX]
 
@@ -58,6 +58,10 @@ ht-degree: 0%
 ![隨選擷取的排程設定視窗。](../../images/tutorials/on-demand/configure-schedule.png)
 
 選取您的資料流名稱以檢視您的資料流活動。 您將在這裡看到已處理的資料流執行清單。 您可以重新執行資料流執行的個別反複專案，無論它們失敗還是成功。 對於失敗的執行反複專案，您可以在診斷並解決建立過程中可能遇到的任何錯誤之後，使用&#x200B;**[!UICONTROL 重試]**&#x200B;來再次啟動執行。
+
+>[!TIP]
+>
+>重試資料流執行只會處理時間戳記在原始執行範圍內的檔案。
 
 ![所選資料流的已處理資料流執行清單。](../../images/tutorials/on-demand/processed.png)
 
