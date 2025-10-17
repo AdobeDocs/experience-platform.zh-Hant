@@ -91,7 +91,7 @@ Adobe Experience Platform標籤現在支援&#x200B;**[!UICONTROL 使用授權]**
 
 在&#x200B;**[!UICONTROL 授權使用方式]**&#x200B;對話方塊中選取&#x200B;**[!UICONTROL 確定]**。
 
-![ [!UICONTROL 授權使用方式]對話方塊，醒目提示[!UICONTROL 確定]](../images/shared-extensions/confirmation.png)
+![&#x200B; [!UICONTROL 授權使用方式]對話方塊，醒目提示[!UICONTROL 確定]](../images/shared-extensions/confirmation.png)
 
 您會回到[!UICONTROL 使用授權]索引標籤，您可以在其中看到擴充功能現在顯示&#x200B;**已核准**&#x200B;狀態。
 
@@ -99,7 +99,7 @@ Adobe Experience Platform標籤現在支援&#x200B;**[!UICONTROL 使用授權]**
 
 在核准授權後，即可在您的目錄中取得擴充功能，並可像任何其他擴充功能一樣安裝及使用。 共用擴充功能會顯示&#x200B;***接收***&#x200B;徽章，表示它是其他組織與您共用的擴充功能。
 
-![ [!UICONTROL 目錄]索引標籤顯示具有「接收」徽章的共用擴充功能](../images/shared-extensions/receiving-badge.png)
+![&#x200B; [!UICONTROL 目錄]索引標籤顯示具有「接收」徽章的共用擴充功能](../images/shared-extensions/receiving-badge.png)
 
 ## 撤銷授權
 
