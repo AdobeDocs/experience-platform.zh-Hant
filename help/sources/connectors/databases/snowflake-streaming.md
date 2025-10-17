@@ -3,9 +3,9 @@ title: Snowflake串流Source聯結器概觀
 description: 瞭解如何建立來源連線和資料流，以將串流資料從您的Snowflake執行個體擷取到Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
+source-git-commit: 1d0cc448293ab3cad6ccb971bb2edc86c1b01a5c
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1510'
 ht-degree: 3%
 
 ---
@@ -157,6 +157,25 @@ MIIE6T...
 >您必須在倉儲的進階設定組態中啟用自動恢復和自動暫停。
 
 如需角色與許可權管理的詳細資訊，請參閱[[!DNL Snowflake] API參考](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>)。
+
+## 將Unix時間轉換為日期欄位
+
+[!DNL Snowflake Streaming]會剖析並寫入` DATE`欄位，做為自Unix紀元以來的天數(1970-01-01)。 例如，`DATE`值為0表示1970年1月1日，而值為1表示1970年1月2日。 因此，在準備檔案以在[!DNL Snowflake Streaming]來源中建立對應時，請確定`DATE`資料行以整數表示。
+
+您可以使用[資料準備資料和時間函式](../../../data-prep/functions.md#date-and-time-functions)，將Unix時間轉換為可擷取至Experience Platform的日期欄位。 例如：
+
+```shell
+dformat({DATE_COLUMN} * 86400000, "yyyy-MM-dd")
+```
+
+在此函式中：
+
+* `{DATE_COLUMN}`是包含epoch日整數的日期欄。
+* 乘以86400000可將epoch天數轉換為毫秒。
+* &#39;yyyy-MM-dd&#39;指定需要的日期格式。
+
+此轉換可確保資料集中的日期可正確呈現。
+
 
 ## 限制和常見問答 {#limitations-and-frequently-asked-questions}
 
