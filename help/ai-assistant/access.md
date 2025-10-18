@@ -62,7 +62,7 @@ ht-degree: 0%
 
 觀看以下影片，瞭解如何為組織和使用者設定AI助理的存取權。
 
->[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475930/?captions=chi_hant&learn=on)
 
 ## 後續步驟
 

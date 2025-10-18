@@ -234,8 +234,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3436470/?learn=on" title="取得AI助理的存取權" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3436470/?format=jpeg&nocache=1732633204686" alt="取得AI助理的存取權"
+                    <a href="https://video.tv.adobe.com/v/3475930/?captions=chi_hant&learn=on" title="取得AI助理的存取權" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475930/?captions=chi_hant&format=jpeg&nocache=1732633204686" alt="取得AI助理的存取權"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -243,12 +243,12 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" title="取得AI助理的存取權">存取AI小幫手</a>
+                        <a href="https://video.tv.adobe.com/v/3475930/?captions=chi_hant&learn=on" target="_blank" rel="referrer" title="取得AI助理的存取權">存取AI小幫手</a>
                     </p>
                     <p class="is-size-6">觀看此影片以瞭解如何使用[!DNL Permissions]介面取得AI助理的存取權。</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3475930/?captions=chi_hant&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                   </a>
                   <a href="./access.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -271,8 +271,8 @@ For more information about AI Assistant, read the [security fact sheet for AI As
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3438032/?learn=on" title="縮短上線時間" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3438032/?format=jpeg&nocache=1732633205780" alt="縮短上線時間"
+                    <a href="https://video.tv.adobe.com/v/3475941/?captions=chi_hant&learn=on" title="縮短上線時間" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475941/?captions=chi_hant&format=jpeg&nocache=1732633205780" alt="縮短上線時間"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -280,11 +280,11 @@ For more information about AI Assistant, read the [security fact sheet for AI As
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" title="縮短上線時間">縮短上線時間</a>
+                        <a href="https://video.tv.adobe.com/v/3475941/?captions=chi_hant&learn=on" target="_blank" rel="referrer" title="縮短上線時間">縮短上線時間</a>
                     </p>
                     <p class="is-size-6">觀看此影片瞭解如何使用AI Assistant產品知識縮短上線時間。</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3475941/?captions=chi_hant&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">觀看</span>
                 </a>
             </div>

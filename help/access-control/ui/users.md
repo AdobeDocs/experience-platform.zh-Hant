@@ -29,7 +29,7 @@ ht-degree: 0%
 
 以下影片旨在協助您瞭解如何管理產品設定檔的管理員。
 
->[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475952/?captions=chi_hant&learn=on)
 
 ## 後續步驟
 

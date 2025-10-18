@@ -61,7 +61,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 觀看以下影片，瞭解有關AI Assistant產品知識的其他資訊：
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475941/?captions=chi_hant&learn=on)
 
 ### 運作深入分析 {#operational-insights}
 
