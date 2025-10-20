@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
+source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1073'
 ht-degree: 34%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 34%
       - [本機檔案上傳聯結器](connectors/local-system/local-file-upload.md)
    - 忠誠度 {#loyalty}
       - [毛細管串流事件](connectors/loyalty/capillary.md)
+      - [Talon.One](connectors/loyalty/talon-one.md)
    - 行銷自動化 {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [查特利奧](connectors/marketing-automation/chatlio-webhook.md)
@@ -315,6 +316,8 @@ ht-degree: 34%
          - [本機檔案上傳](tutorials/ui/create/local-system/local-file-upload.md)
       - 忠誠度 {#loyalty}
          - [毛細管串流事件](tutorials/ui/create/loyalty/capillary.md)
+         - [Talon.One串流事件](tutorials/ui/create/loyalty/talon-one-streaming.md)
+         - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
       - 行銷自動化 {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [查特利奧](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
