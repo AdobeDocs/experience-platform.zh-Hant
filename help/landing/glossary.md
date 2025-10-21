@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform字彙表
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '8009'
+source-wordcount: '8170'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 **屬性**：屬性是代表設定檔的指定特性。
 
-**屬性合併**：使用Real-Time Customer Profile API定義合併原則時，`attributeMerge`物件會指出當資料衝突時，合併原則會優先處理設定檔屬性的方式。 這等同於在Experience Platform UI中定義合併原則時選取[!UICONTROL 合併方法]。
+**屬性合併**：使用Real-Time Customer Profile API定義合併原則時，`attributeMerge`物件會指出當資料衝突時，合併原則會優先處理設定檔屬性的方式。 這等同於在Experience Platform UI中定義合併原則時選取[!UICONTROL Merge method]。
 
 **Attribution AI**： [!DNL Attribution AI]是一項由Adobe Sensei提供支援的Intelligent Service，可在整個客戶生命週期中提供演演算法多管道歸因功能。
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 **類別**：在Experience Data Model (XDM)中，類別會定義用於建立結構描述的最小欄位集，並定義結構描述所代表之商業物件的基本行為。
 
-**使用者端**：使用者端是透過[!DNL PostgreSQL]通訊協定或HTTP API連線至[!DNL Query Service]的外部工具或應用程式。
+**使用者端**：使用者端是透過[!DNL Query Service]通訊協定或HTTP API連線至[!DNL PostgreSQL]的外部工具或應用程式。
 
 **集合**：在[!DNL Offer Decisioning]中，集合是優惠方案的子集，根據行銷人員定義的預先定義條件，例如優惠方案類別。
 
@@ -281,7 +281,7 @@ ht-degree: 0%
 
 **身分(「I」)標籤**：身分(「I」)資料使用標籤可用來分類可識別或聯絡特定人員的資料。
 
-**身分圖表**：身分圖表是存在於個別客戶的拼接與連結身分之間的關係對應。 每個身分圖表會隨著客戶活動以幾近即時的方式更新。 您資料中身分關係的通用結構由[!UICONTROL 私人圖表]表示，它是每個個別身分圖表的結構藍圖。
+**身分圖表**：身分圖表是存在於個別客戶的拼接與連結身分之間的關係對應。 每個身分圖表會隨著客戶活動以幾近即時的方式更新。 [!UICONTROL Private Graph]代表您資料中身分關係的通用結構，可作為每個身分圖表的結構藍圖。
 
 **身分名稱空間**：身分名稱空間會定義識別碼的內容，例如電子郵件地址或CRM ID。
 
@@ -351,6 +351,8 @@ ht-degree: 0%
 
 **模組**：在標籤的內容中，模組是擴充功能提供的可執行JavaScript片段，在使用者端環境中執行動作時不需要建立規則。
 
+**MODPA**： 2024年的[!DNL Maryland Online Data Privacy Act] (MODPA)授予馬里蘭州居民的權利，包括存取、更正、刪除和資料可攜性。 居民可以選擇退出目標定位廣告、個人資料銷售和設定檔分析。 控管單位必須提供隱私權通知，並針對高風險處理作業進行資料保護評估。 MODPA禁止在精神或生殖衛生設施周圍設定地理圍欄，因此脫穎而出。 此法律適用於處理來自超過35,000名消費者的資料的實體，或適用於處理來自超過10,000名消費者的資料並透過銷售該資料獲得超過20%收入的實體。 由馬里蘭州總檢察長強制執行。
+
 ## N
 
 **[!DNL New Zealand Privacy Act]**： [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/)控制機構如何收集、使用、揭露、儲存及存取紐西蘭公民與組織的個人資訊。 2020年，最新版本的法案大幅更新這些隱私權法律，包括新罪行、增加罰款、強制通知資料洩露行為，以及增加隱私權專員的權力。
@@ -377,17 +379,15 @@ ht-degree: 0%
 
 ## P
 
-**部分擷取**：部分擷取可擷取指定錯誤臨界值內的批次資料有效記錄。 可以在[!UICONTROL 監視]或[!UICONTROL 來源]資料流執行總覽中下載或存取失敗記錄的錯誤診斷。
+**部分擷取**：部分擷取可擷取指定錯誤臨界值內的批次資料有效記錄。 可以在[!UICONTROL Monitoring]或[!UICONTROL Sources]資料流執行總覽中下載或存取失敗記錄的錯誤診斷。
 
 **Parquet檔案**： Parquet檔案是含有複雜巢狀資料結構的欄位式儲存檔案格式。 需要Parquet檔案才能新增資料以填入結構描述資料集。
 
 **PDPA**：推出[[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act)是為了保護泰文資料擁有者不會非法收集、使用或公開其個人資料。 受歐盟GDPR啟發，該法規授予泰國公民請求存取或刪除其儲存的個人資料的權利。
 
-<!-- Not yet released
-**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
--->
-
 **個人化優惠方案**：個人化優惠方案是根據適用性規則和限制而自訂的行銷訊息。
+
+**PIPA** （南韓）： [[!DNL Personal Information Protection Act] (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG)會規範南韓居民個人資料的處理和保護。 PIPA授予取得資訊、存取、取得復本，以及要求更正、刪除或暫停處理的權利。 個人資訊控制者必須指定收集目的、在必要的最低限度內合法處理資料，並確保資料準確性。 PIPA也建立了個人資訊保護委員會，以調查及執行個人資料保護規範。
 
 **位置**：位置是為一般使用者所顯示產品建議的所在位置和/或內容。
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權法規概述
 description: 本檔案概述Adobe Experience Cloud支援的各種隱私權法規。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: c2394035dd6bd4fe6dbb443e4db13934a27066a6
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '2087'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->為了支援不斷增加的美國州隱私權法，Privacy Service正在變更其`regulation_type`值。 使用包含從&#x200B;**2025年6月12日**&#x200B;開始之狀態縮寫（例如`ucpa_ut_usa`）的新值。 較舊的值（例如，`ucpa_usa`）在&#x200B;**2025年7月28日**&#x200B;之後停止運作。
+>為了支援不斷增加的美國州隱私權法，Privacy Service正在變更其`regulation_type`值。 使用包含從`ucpa_ut_usa`2025年6月12日&#x200B;**開始之狀態縮寫（例如**）的新值。 較舊的值（例如，`ucpa_usa`）在&#x200B;**2025年7月28日**&#x200B;之後停止運作。
 >
 >在此期限之前更新您的整合，以避免請求失敗。
 
@@ -39,12 +39,14 @@ ht-degree: 0%
 | MCDPA （明尼蘇達） | `mcdpa_mn_usa` | [[!DNL Minnesota Consumer Data Privacy Act (MCDPA)]](https://www.house.mn.gov/comm/docs/C6hTV3TEt0W2vuhEMtczrQ.pdf)提供明尼蘇達州居民存取、更正、刪除及取得其個人資料復本的權利。 它也會授予您選擇退出個人資料銷售、目標定位廣告和設定檔的權利，以推進產生法律或類似重大影響的決策。 此法案強制資料控管單位有義務提供明確的隱私權通知、進行資料保護評估，以及維護合理的資料安全實務。 執法權授予明尼蘇達州司法部長。 |
 | MCDPA （蒙大拿州） | `mcdpa_mt_usa` | [[!DNL Montana Consumer Data Privacy Act]](https://legiscan.com/MT/text/SB384/id/2791095)讓住戶有權瞭解企業收集、共用和銷售哪些個人資料，以及其使用目的。 它也會授予消費者更正、刪除或取得所收集資料副本的能力。 此法律適用於處理超過50,000名蒙大拿州消費者的資料的企業。 此法案強調保護敏感的個人資料，包括生物測定和遺傳資訊。 |
 | MHMDA （華盛頓州） | `mhmda_wa_usa` | [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true)增強消費者有關其健康情況資料的隱私權。 它規定健康資料的披露、消費者同意和刪除權利，並禁止在未經授權的情況下銷售健康資料。 此外，該法令規定，在醫療保健設施周圍使用地理圍欄是非法的。 |
+| MODPA （馬里蘭州） | `modpa_md_usa` | [[!DNL Maryland Online Data Privacy Act]](https://mgaleg.maryland.gov/2024RS/bills/sb/sb0541e.pdf)授予Maryland居民的權利，包括存取、更正、刪除和資料可攜性。 居民可以選擇退出目標定位廣告、個人資料銷售和設定檔分析。 控管單位必須提供隱私權通知，並針對高風險處理作業進行資料保護評估。 MODPA禁止在精神或生殖衛生設施周圍設定地理圍欄，因此脫穎而出。 此法律適用於處理來自超過35,000名消費者的資料的實體，或適用於處理來自超過10,000名消費者的資料並透過銷售該資料獲得超過20%收入的實體。 由馬里蘭州總檢察長強制執行。 |
 | NDPA （內布拉斯加州） | `ndpa_ne_usa` | [[!DNL Nebraska Data Protection Act]](https://nebraskalegislature.gov/FloorDocs/108/PDF/Slip/LB1074.pdf)為內布拉斯加人提供其個人資料的權利，例如存取、更正、刪除以及選擇退出銷售。 此法案適用於符合資料處理和個人資訊銷售收入特定臨界值的企業。 此外，企業也必須實施合理的資料安全實務，並提供30天強制治癒期，以便在受到處罰前解決法規遵循問題。 |
 | 紐西蘭[!DNL Privacy Act] | `nzpa_nzl` | [紐西蘭 [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/)控制機構如何收集、使用、揭露、儲存和存取紐西蘭公民和組織的個人資訊。 2020年，最新版本的法案大幅更新了這些隱私權法律。 更新內容包括新罪、增加罰款、強制通知資料洩露，以及增加隱私權專員的權力。 |
 | NHDPA （新罕布希爾州） | `nhpa_nh_usa` | [[!DNL New Hampshire Privacy Act]](https://www.doj.nh.gov/sites/g/files/ehbemt721/files/inline-documents/sonh/data-privacy-faqs-revised_0.pdf)建立與資料存取、刪除和可攜性相關的消費者權利，以保護新罕布希爾州居民的個人資訊。 它要求組織公開其資料收集和分享做法，並允許消費者選擇退出資料銷售。 此法案適用於符合特定資料處理臨界值的企業。 |
 | NJDPA （新澤西州） | `njdpa_nj_usa` | [[!DNL New Jersey Data Protection Act]](https://pub.njleg.state.nj.us/Bills/2022/S0500/332_R6.PDF)提供存取、更正和刪除其資訊的權利，授予New Jersey居民控制其個人資料的權利。 其中包括資料銷售和針對性廣告的選擇退出機制。 該法案涵蓋處理大量消費者資料的企業，並要求資料使用透明。 |
 | OCPA （俄勒岡州） | `ocpa_or_usa` | [[!DNL Oregon Consumer Privacy Act]](https://olis.oregonlegislature.gov/liz/2023R1/Downloads/PublicTestimonyDocument/59856#:~:text=The%20Act%20requires%20controllers%20to,data%3B%20and%20%E2%80%A2%20Contact%20information.) (OCPA)為奧勒岡州居民提供對其個人資料的基本權利，並對處理此類資料的企業施加義務。 消費者有權知道、更正、刪除和取得其資料的副本，以及選擇退出針對性廣告或銷售的資料處理。 此法案要求對敏感資料加強保護、同意資料處理超出指定目的，並強制資料控管單位發出全面的隱私權通知。 |
 | PDPA （泰國） | `pdpa_tha` | 推出[[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act)是為了保護泰文資料擁有者不會非法收集、使用或公開其個人資料。 受歐盟GDPR啟發，該法規授予泰國公民請求存取或刪除其儲存的個人資料的權利。 |
+| PIPA （韓國） | `pipa_kor` | [[!DNL Personal Information Protection Act (PIPA)]](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG)會規範南韓居民個人資料的處理和保護。 PIPA授予住戶知情權、存取權、取得副本的權利，以及要求更正、刪除或暫停處理的權利。 個人資訊控制者必須指定收集目的、在必要的最低限度內合法處理資料，並確保資料準確性。 PIPA也建立了個人資訊保護委員會，以調查及執行個人資料保護規範。 |
 | ql25 （魁北克） | `ql25_qc_can` | [[!DNL Quebec Law 25]](https://www.canlii.org/en/qc/laws/astat/sq-2021-c-25/latest/sq-2021-c-25.html) (QL25)強化了魁北克居民的隱私權，以符合全球標準。 此法案強制明確同意、資料最小化，以及居民存取、更正、刪除和傳輸其個人資料的權利。 組織也必須指定隱私權官員、進行隱私權影響評估，並通知違規行為。 法律強制的合規期限，以及違規行為適用的重大處罰。 |
 | TDPSA （德克薩斯州） | `tdpsa_tx_usa` | [[!DNL Texas Data Privacy and Security Act]](https://capitol.texas.gov/BillLookup/Text.aspx?LegSess=88R&Bill=HB4) (TDPSA)規範德克薩斯州消費者個人資料的收集、使用、處理和處理。 自2024年7月1日起，該條款授予居民存取、更正、刪除和取得其資料副本的權利，以及選擇退出目標廣告和資料銷售的權利。 此法律適用於在德克薩斯州經營業務或生產德克薩斯居民消費的產品/服務的實體，不包括小型企業和某些其他組織。 違反規定者可能受到民事處罰。 |
 | TIPA （田納西州） | `tipa_tn_usa` | [[!DNL Tennessee Information Protection Act (TIPA)]](https://www.capitol.tn.gov/Bills/113/Bill/HB1181.pdf)授與田納西州居民存取、更正、刪除及取得其個人資料復本的權利。 它也會提供選擇退出個人資訊、目標定位廣告和特定型別設定檔銷售的權利。 此法律適用於符合資料處理和收入特定臨界值的企業，而且需要明確的隱私權通知、資料最小化以及合理的安全實務。 執法權授予田納西州司法部長。 |
