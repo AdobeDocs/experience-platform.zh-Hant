@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: 0a9782b6018e5c5405c79ce37d969754d7b99fd6
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1712'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 此頁面提供啟動行為的預設使用量和速率限制。 檢閱下列護欄時，假設您已正確[連線至目的地](/help/destinations/ui/connect-destination.md)。
 
@@ -105,7 +105,7 @@ ht-degree: 2%
 
 ### 資料集匯出 {#dataset-exports}
 
-目前支援&#x200B;**[!UICONTROL 先完整再遞增]** [模式](/help/destinations/ui/export-datasets.md#scheduling)的資料集匯出。 本章節&#x200B;*中說明的護欄適用於資料集匯出工作流程設定後發生的第一個完整匯出*。
+目前在&#x200B;**[!UICONTROL First Full and then Incremental]** [模式](/help/destinations/ui/export-datasets.md#scheduling)中支援資料集匯出。 本章節&#x200B;*中說明的護欄適用於資料集匯出工作流程設定後發生的第一個完整匯出*。
 
 <!--
 
@@ -121,11 +121,9 @@ ht-degree: 2%
 
 資料集匯出護欄適用於從Experience Platform匯出的兩種資料集，如下所述：
 
-**以XDM體驗事件結構描述為基礎的資料集**
-如果是以XDM體驗事件結構描述為基礎的資料集，資料集結構描述會包含最上層*timestamp*&#x200B;欄。 資料會以僅附加的方式內嵌。
+**以XDM體驗事件結構描述為基礎的資料集，以及以任何其他結構描述為基礎的資料集**
 
-**以XDM個別設定檔結構描述為基礎的資料集**
-在以XDM個別設定檔結構描述為基礎的資料集的情況下，資料集結構描述不包含頂層*時間戳記*&#x200B;欄。 資料會以更新插入的方式內嵌。
+如果是以XDM體驗事件結構為基礎的資料集，資料集結構描述會包含頂層時間戳記欄。 資料會以僅附加的方式內嵌。 在使用任何其他結構描述的資料集的情況下，資料集結構描述可能包含時間戳記欄，而且會以更新插入的方式擷取資料。
 
 以下軟性護欄適用於從Experience Platform匯出的所有資料集。 也請檢閱下方針對不同資料集和壓縮型別的硬護欄。
 
@@ -146,7 +144,7 @@ ht-degree: 2%
 | 資料集類型 | 護欄 | 護欄型別 | 說明 |
 ---------|----------|---------|-------|
 | 以&#x200B;**XDM體驗事件結構描述**&#x200B;為基礎的資料集 | 過去365天的資料 | 系統強制的護欄 | 系統會匯出上一個日曆年的資料。 |
-| 以&#x200B;**XDM個別設定檔結構描述**&#x200B;為基礎的資料集 | 在資料流中所有匯出的檔案有100億筆記錄 | 系統強制的護欄 | 壓縮的JSON或Parquet檔案的資料集記錄計數必須少於十億，未壓縮的Parquet檔案的資料集記錄計數必須少於一百萬個，否則匯出會失敗。 如果資料集大於允許的臨界值，請縮小您嘗試匯出的資料集大小。 |
+| 以&#x200B;**XDM體驗事件結構描述**&#x200B;以外的任何結構描述為基礎的資料集 | 在資料流中所有匯出的檔案有100億筆記錄 | 系統強制的護欄 | 壓縮的JSON或Parquet檔案的資料集記錄計數必須少於十億，未壓縮的Parquet檔案的資料集記錄計數必須少於一百萬個，否則匯出會失敗。 如果資料集大於允許的臨界值，請縮小您嘗試匯出的資料集大小。 |
 
 {style="table-layout:auto"}
 
@@ -169,7 +167,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 -->
 
-深入瞭解[匯出資料集](/help/destinations/ui/export-datasets.md)。
+閱讀關於[匯出資料集](/help/destinations/ui/export-datasets.md)的詳細資訊。
 
 
 ### Destination SDK護欄 {#destination-sdk-guardrails}
@@ -198,7 +196,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=zh-Hant#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
