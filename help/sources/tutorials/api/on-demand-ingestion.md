@@ -3,20 +3,24 @@ keywords: Experience Platform；首頁；熱門主題；流程服務；
 title: 使用流程服務API建立隨選擷取的流程執行
 description: 瞭解如何使用流程服務API建立隨選擷取的流程執行
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '823'
 ht-degree: 1%
 
 ---
 
 # 使用[!DNL Flow Service] API建立隨選擷取的資料流執行
 
-流程執行代表流程執行的例項。 例如，如果排程在早上9:00、上午10:00及上午11:00每小時執行流程，則您會有三個流程執行個體。 流程執行是您的特定組織所專屬。
+流程執行代表流程執行的例項。 例如，如果流程排程在早上9:00、早上10:00及晚上11:00每小時執行，則您會有三個流程執行個體。 流程執行是您的特定組織所專屬。
 
 隨選擷取可讓您建立針對指定資料流執行的流程。 這可讓您的使用者根據指定的引數建立流程執行，並建立擷取週期，而不使用服務權杖。 僅批次來源支援隨選擷取。
 
 本教學課程涵蓋如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)隨選擷取和建立資料流執行的步驟。
+
+>[!TIP]
+>
+>重試資料流執行只會處理時間戳記在原始執行範圍內的檔案。
 
 ## 快速入門
 
