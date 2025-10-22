@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權法規概述
 description: 本檔案概述Adobe Experience Cloud支援的各種隱私權法規。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2086'
 ht-degree: 0%
 
 ---
