@@ -1,9 +1,10 @@
 ---
 title: Adform
 description: Adform是程式化媒體購買和銷售解決方案的領先供應商。 將Adform連線至Adobe Experience Platform後，您就可以根據Experience Cloud ID (ECID)，透過Adform啟用第一方對象。
-source-git-commit: 823b2142366ac218ad93279de5f31d60bdc07bbf
+last-substantial-update: 2025-10-22T00:00:00Z
+source-git-commit: f7fd7a83f6d047877697b72e78ac0d4b08c0ff00
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '972'
 ht-degree: 3%
 
 ---
@@ -27,16 +28,16 @@ Adform是程式化媒體購買和銷售解決方案的領先供應商。 將Adfo
 
 使用此目的地將Adobe Real-Time CDP對象傳送至Adform，以根據Experience Cloud ID (ECID)和Adform的ID Fusion進行啟用。 Adform的ID Fusion是Adform的ID解析服務，可讓您根據Experience Cloud ID (ECID)啟用第一方對象。
 
-一個常見案例是根據Experience Cloud ID (ECID)重新鎖定網站或應用程式的網站訪客。 您只需要透過隨時可用的[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform) Adform擴充功能，將Experience Cloud ID (ECID)傳送至Adform。 之後您可以透過Adform目的地與Adform共用對象，以進行啟用 — 僅根據Experience Cloud ID (ECID)。
+一個常見案例是根據Experience Cloud ID (ECID)重新鎖定網站或應用程式的網站訪客。 您只需要透過隨時可用的[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform擴充功能，將Experience Cloud ID (ECID)傳送至Adform。 之後您可以透過Adform目的地與Adform共用對象，以進行啟用 — 僅根據Experience Cloud ID (ECID)。
 
 ## 先決條件 {#prerequisites}
 
 * 您必須是現有Adform客戶才能使用此目的地。
 * 您需要擁有Adform對象基礎資料連線認證。
    * 如果您沒有Adform對象基礎資料連線認證，請聯絡您的Adform代表。
-* 若要正確同步，您必須從實體與Adform網站追蹤建立[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform)連線。
+* 若要正確同步，您必須從實體與Adform網站追蹤建立[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)連線。
    * 如果您沒有從實體到Adform網站追蹤的事件串流或使用者端連線，請聯絡您的Adform代表。
-   * Adform提供[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)和[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform)的Adobe Experience Cloud擴充功能。
+   * Adform提供[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)和[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)的Adobe Experience Cloud擴充功能。
 
 
 ## 支援的身分 {#supported-identities}
@@ -66,8 +67,8 @@ Adform支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，其中包含&#x200B;*YourDestination*&#x200B;目的地中使用的識別碼（名稱、電話號碼或其他）。 |
-| 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
+| 匯出類型 | **[!UICONTROL Segment export]** | 您正在匯出區段（對象）的所有成員，其中包含&#x200B;*YourDestination*&#x200B;目的地中使用的識別碼（名稱、電話號碼或其他）。 |
+| 匯出頻率 | **[!UICONTROL Batch]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
 
 {style="table-layout:auto"}
 
@@ -75,19 +76,19 @@ Adform支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請填寫必填欄位並選取&#x200B;**[!UICONTROL Connect to destination]**。
 
 ![驗證到目的地](../../assets/catalog/advertising/adform/authenticate-destination.png)
 
-* **[!UICONTROL 帳戶名稱]**：輸入帳戶名稱，以便日後識別此目的地連線。
-* **[!UICONTROL S3存取金鑰識別碼]**：填入Adform提供的S3存取金鑰。
-* **[!UICONTROL S3秘密存取金鑰]**：填入Adform提供的S3秘密存取金鑰。
+* **[!UICONTROL Account name]**：輸入帳號名稱，以便日後識別此目的地連線。
+* **[!UICONTROL S3 Access Key ID]**：填入Adform提供的S3存取金鑰。
+* **[!UICONTROL S3 Secret Access Key]**：填入Adform提供的S3秘密存取金鑰。
 
 ### 填寫目標詳細資料 {#destination-details}
 
@@ -95,22 +96,22 @@ Adform支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 ![填寫目的地詳細資料](../../assets/catalog/advertising/adform/configure-destination-details.png)
 
-* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL 提供者名稱]**：您的Adform帳戶名稱，由Adform提供。
+* **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+* **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL Provider Name]**：您的Adform帳戶名稱，由Adform提供。
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 讀取[啟用批次設定檔匯出目的地的對象資料](/help/destinations/ui/activate-batch-profile-destinations.md)，以取得啟用此目的地的對象區段的指示。
 
