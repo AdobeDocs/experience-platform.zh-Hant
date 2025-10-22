@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## 關聯式結構描述與標準XDM結構描述的差異
 
-Experience Platform中的標準XDM結構描述會遵循下列三種資料行為之一：記錄、時間序列或臨機。 如需定義和詳細資訊，請參閱[XDM資料行為](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors)。
+Experience Platform中的標準XDM結構描述會遵循下列三種資料行為之一：記錄、時間序列或臨機。 如需定義和詳細資訊，請參閱[XDM資料行為](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/xdm/home#data-behaviors)。
 
 在傳統模型中，記錄和時間序列結構描述參與[聯合結構描述](../api/unions.md) （另請參閱[聯合結構描述UI指南](../../profile/ui/union-schema.md)）。 這些結構描述會隨著共用[欄位群組](./composition.md#field-group)的更新而自動演化，且自訂欄位必須巢狀置於租使用者名稱空間下。 此模型雖然功能強大，但可能會拖慢上線速度、產生包含未使用欄位且過於複雜的結構描述，並需要額外的資料對應或轉換。 這些因素會增加學習曲線以及持續的維護工作。
 
