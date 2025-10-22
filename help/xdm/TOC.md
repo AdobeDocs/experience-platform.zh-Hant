@@ -5,10 +5,10 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 48%
+source-wordcount: '707'
+ht-degree: 20%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 48%
    * [資料建模的最佳做法](schema/best-practices.md)
    * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位型別限制](schema/field-constraints.md)
-   * [以模型為基礎的結構描述](./schema/model-based.md)
+   * [關聯式結構描述](./schema/relational.md)
    * [XDM中的名稱空間](./schema/namespaces.md)
    * 產業資料模型 {#industries}
       * [概觀](./schema/industries/overview.md)
@@ -47,7 +47,7 @@ ht-degree: 48%
          * [藥物請求](./schema/healthcare/field-groups/medication-request.md)
          * [組織](./schema/healthcare/field-groups/organization.md)
          * [患者](./schema/healthcare/field-groups/patient.md)
-         * [實踐者](./schema/healthcare/field-groups/practioner.md)
+         * [從業人員](./schema/healthcare/field-groups/practioner.md)
          * [排程](./schema/healthcare/field-groups/schedule.md)
       * 資料類型 {#data-types}
          * [地址](./schema/healthcare/data-types/address.md)
@@ -82,67 +82,67 @@ ht-degree: 48%
    * [藥物](./classes/medication.md)
    * [付款人](./classes/payer.md)
    * [計畫](./classes/plan.md)
-   * [政策](./classes/policy.md)
+   * [原則](./classes/policy.md)
    * [產品](./classes/product.md)
    * [潛在客戶](./classes/prospect.md)
    * [提供者](./classes/provider.md)
    * [區段定義](./classes/segment-definition.md)
    * B2B 類別 {#b2b}
-      * [XDM 企業帳戶](./classes/b2b/business-account.md)
-      * [XDM 商業帳戶個人關係](./classes/b2b/business-account-person-relation.md)
-      * [XDM 商業活動](./classes/b2b/business-campaign.md)
-      * [XDM 商業活動會員](./classes/b2b/business-campaign-members.md)
-      * [XDM 商業機會](./classes/b2b/business-opportunity.md)
-      * [XDM 商業機會個人關係](./classes/b2b/business-opportunity-person-relation.md)
-      * [XDM 業務行銷清單](./classes/b2b/business-marketing-list.md)
-      * [XDM 業務行銷清單會員](./classes/b2b/business-marketing-list-members.md)
+      * [XDM商業帳戶](./classes/b2b/business-account.md)
+      * [XDM商業帳戶個人關係](./classes/b2b/business-account-person-relation.md)
+      * [XDM商業活動](./classes/b2b/business-campaign.md)
+      * [XDM商業活動會員](./classes/b2b/business-campaign-members.md)
+      * [XDM商業機會](./classes/b2b/business-opportunity.md)
+      * [XDM商業機會個人關係](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM業務行銷清單](./classes/b2b/business-marketing-list.md)
+      * [XDM業務行銷清單成員](./classes/b2b/business-marketing-list-members.md)
 * 欄位群組 {#field-groups}
    * XDM 個人輪廓 {#profile}
       * [同意和偏好設定](./field-groups/profile/consents.md)
       * [人口統計細節](./field-groups/profile/demographic-details.md)
       * [醫療保健會員詳細資訊](./field-groups/profile/healthcare-member-details.md)
-      * [IAB TCF 2.0 同意](./field-groups/profile/iab.md)
-      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [IAB TCF 2.0同意](./field-groups/profile/iab.md)
+      * [身分對應](./field-groups/profile/identitymap.md)
       * [熟客方案細節](./field-groups/profile/loyalty-details.md)
       * [個人聯絡詳細資訊](./field-groups/profile/personal-contact-details.md)
       * [設定檔合作夥伴擴充（範例）](./field-groups/profile/profile-partner-enrichment.md)
       * [區塊會籍細節](./field-groups/profile/segmentation.md)
       * [電信訂閱](./field-groups/profile/telecom-subscription.md)
       * [工作聯絡詳細資訊](./field-groups/profile/work-contact-details.md)
-      * [XDM 商業人士要素](./field-groups/profile/business-person-components.md)
-      * [XDM 商業人士細節](./field-groups/profile/business-person-details.md)
+      * [XDM商業人士要素](./field-groups/profile/business-person-components.md)
+      * [XDM商業人士細節](./field-groups/profile/business-person-details.md)
    * XDM個別潛在客戶設定檔 {#prospect-profile}
       * [合作夥伴潛在客戶詳細資訊（範例）](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics完整擴充功能](./field-groups/event/analytics-full-extension.md)
       * [Adobe Advertising Cloud完整擴充功能](./field-groups/event/advertising-full-extension.md)
-      * [廣告細節](./field-groups/event/advertising-details.md)
+      * [Advertising詳細資料](./field-groups/event/advertising-details.md)
       * [應用程式詳細資料](./field-groups/event/application-details.md)
       * [餘額轉帳](./field-groups/event/balance-transfers.md)
       * [機器人偵測](./field-groups/event/bot-detection-information.md)
-      * [促銷活動的行銷細節](./field-groups/event/campaign-marketing-details.md)
+      * [行銷活動行銷細節](./field-groups/event/campaign-marketing-details.md)
       * [卡片動作](./field-groups/event/card-actions.md)
-      * [管道詳細資訊](./field-groups/event/channel-details.md)
-      * [商業細節](./field-groups/event/commerce-details.md)
+      * [管道詳細資料](./field-groups/event/channel-details.md)
+      * [Commerce詳細資料](./field-groups/event/commerce-details.md)
       * [存款細節](./field-groups/event/deposit-details.md)
       * [裝置折舊換新細節](./field-groups/event/device-trade-in-details.md)
       * [餐飲預訂](./field-groups/event/dining-reservation.md)
-      * [一般使用者 ID 詳細資料](./field-groups/event/enduserids.md)
-      * [環境細節](./field-groups/event/environment-details.md)
+      * [一般使用者ID詳細資訊](./field-groups/event/enduserids.md)
+      * [環境詳細資訊](./field-groups/event/environment-details.md)
       * [航班預訂](./field-groups/event/flight-reservation.md)
-      * [IAB TCF 2.0 同意](./field-groups/event/iab.md)
+      * [IAB TCF 2.0同意](./field-groups/event/iab.md)
       * [住宿預訂](./field-groups/event/lodging-reservation.md)
       * [MediaAnalytics互動細節](./field-groups/event/mediaanalytics-interaction.md)
       * [報價請求細節](./field-groups/event/quote-request-details.md)
-      * [預訂的詳細資訊](./field-groups/event/reservation-details.md)
+      * [預訂詳細資料](./field-groups/event/reservation-details.md)
       * [Sitetool詳細資料](./field-groups/event/sitetool-details.md)
       * [支援網站搜尋](./field-groups/event/support-site-search.md)
-      * [升級細節](./field-groups/event/upgrade-details.md)
+      * [升級詳細資料](./field-groups/event/upgrade-details.md)
       * [追加銷售細節](./field-groups/event/upsell-details.md)
       * [網頁詳細資訊](./field-groups/event/web-details.md)
-   * XDM 商業活動 {#b2b-campaign}
-      * [XDM 商業促銷活動細節](./field-groups/b2b-campaign/details.md)
-   * XDM 商業活動會員 {#b2b-campaign-members}
+   * XDM商業活動 {#b2b-campaign}
+      * [XDM商業活動細節](./field-groups/b2b-campaign/details.md)
+   * XDM商業活動會員 {#b2b-campaign-members}
       * [XDM商業活動會員細節](./field-groups/b2b-campaign-members/details.md)
    * 藥物 {#medication}
       * [醫療保健藥物](./field-groups/medication/healthcare-medication.md)
@@ -154,7 +154,7 @@ ht-degree: 48%
    * 提供者 {#provider}
       * [醫療保健提供者](./field-groups/provider/healthcare-provider.md)
    * 已共用 {#shared}
-      * [外部來源系統稽核詳細資料](./field-groups/shared/external-source-system-audit-details.md)
+      * [外部Source系統稽核詳細資料](./field-groups/shared/external-source-system-audit-details.md)
    * [欄位群組名稱更新](./field-groups/name-updates.md)
 * 資料類型 {#data-types}
    * [帳戶詳細資料](./data-types/account-details.md)
@@ -165,7 +165,7 @@ ht-degree: 48%
    * [Advertising Pod詳細資料集合](./data-types/advertising-pod-details-collection.md)
    * [Advertising Pod詳細資料報表](./data-types/advertising-pod-details-reporting.md)
    * [應用程式](./data-types/application.md)
-   * [B2B 來源](./data-types/b2b-source.md)
+   * [B2B Source](./data-types/b2b-source.md)
    * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資訊](./data-types/browser-details.md)
    * [購物車](./data-types/cart.md)
@@ -184,19 +184,19 @@ ht-degree: 48%
    * [環境](./data-types/environment.md)
    * [錯誤詳細資料集合](./data-types/error-details-collection.md)
    * [體驗管道](./data-types/experience-channel.md)
-   * [外部來源系統稽核屬性](./data-types/external-source-system-audit-attributes.md)
+   * [外部Source系統稽核屬性](./data-types/external-source-system-audit-attributes.md)
    * [財務帳戶](./data-types/financial-account.md)
    * [一般同意欄位](./data-types/consent-field.md)
    * [訂閱通用的行銷偏好設定欄位](./data-types/marketing-field-subscriptions.md)
    * [通用的行銷偏好設定欄位](./data-types/marketing-field.md)
-   * [通用的個人化偏好設定欄位](./data-types/personalization-field.md)
-   * [地理圈](./data-types/geo-circle.md)
+   * [一般Personalization喜好設定欄位](./data-types/personalization-field.md)
+   * [地理圓形](./data-types/geo-circle.md)
    * [地理座標](./data-types/geo-coordinates.md)
    * [地理形狀](./data-types/geo-shape.md)
    * [地理互動細節](./data-types/geo-interaction-details.md)
    * [地理](./data-types/geo.md)
    * [身分識別](./data-types/identity.md)
-   * [實作細節](./data-types/implementation-details.md)
+   * [實作詳細資料](./data-types/implementation-details.md)
    * [曝光數](./data-types/impressions.md)
    * [內部網站搜尋](./data-types/internal-site-search.md)
    * [索引鍵值配對](./data-types/key-value-pair.md)
@@ -210,7 +210,7 @@ ht-degree: 48%
    * [訂單](./data-types/order.md)
    * [POI詳細資料](./data-types/poi-details.md)
    * [POI互動](./data-types/poi-interaction.md)
-   * [付款項目](./data-types/payment-item.md)
+   * [付款專案](./data-types/payment-item.md)
    * [個人名稱](./data-types/person-name.md)
    * [人員](./data-types/person.md)
    * [電話號碼](./data-types/phone-number.md)
@@ -227,14 +227,14 @@ ht-degree: 48%
    * [搜尋](./data-types/search.md)
    * [工作階段詳細資料集合](./data-types/session-details-collection.md)
    * [工作階段詳細資料報告](./data-types/session-details-reporting.md)
-   * [配送](./data-types/shipping.md)
+   * [送貨](./data-types/shipping.md)
    * [訂閱](./data-types/subscription.md)
    * [電信訂閱](./data-types/telecom-subscription.md)
    * [交易](./data-types/transaction.md)
    * [Web資訊](./data-types/web-information.md)
    * [網路互動](./data-types/web-interaction.md)
    * [網頁細節](./data-types/webpage-details.md)
-* [!UICONTROL 結構描述] UI {#ui}
+* [!UICONTROL Schemas] UI {#ui}
    * [概觀](./ui/overview.md)
    * [探索XDM資源](./ui/explore.md)
    * 建立和編輯資源 {#resources}

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 結構描述API端點
 description: 結構描述登入API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM結構描述。
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2122'
 ht-degree: 3%
 
 ---
@@ -198,7 +198,7 @@ curl -X GET \
 
 架構構成程式從指派類別開始。 類別會定義資料的主要行為方面（記錄或時間序列），以及描述將擷取之資料所需的最少欄位。
 
-如需有關建立不含類別或欄位群組的結構描述（稱為模型型結構描述）的指示，請參閱[建立模型型結構描述](#create-model-based-schema)區段。
+如需有關建立不含類別或欄位群組的結構描述（稱為關聯式結構描述）的指示，請參閱[建立關聯式結構描述](#create-relational-schema)區段。
 
 >[!NOTE]
 >
@@ -277,21 +277,25 @@ curl -X POST \
 }
 ```
 
-執行GET要求以[列出租使用者容器中的所有結構描述](#list)現在將包含新的結構描述。 您可以使用URL編碼的[&#x200B; URI執行](#lookup)查詢(GET)要求`$id`，以直接檢視新的結構描述。
+執行GET要求以[列出租使用者容器中的所有結構描述](#list)現在將包含新的結構描述。 您可以使用URL編碼的[ URI執行](#lookup)查詢(GET)要求`$id`，以直接檢視新的結構描述。
 
 若要將其他欄位新增至結構描述，您可以執行[PATCH作業](#patch)，將欄位群組新增至結構描述的`allOf`和`meta:extends`陣列。
 
-## 建立基於模型的結構描述 {#create-model-based-schema}
+## 建立關聯式結構描述 {#create-relational-schema}
 
 >[!AVAILABILITY]
 >
->Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和模型型結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+>Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
 
-對`/schemas`端點發出POST要求，以建立模型型結構描述。 以模型為基礎的結構描述會儲存結構化的關聯式樣式資料&#x200B;**，但不包含**&#x200B;類別或欄位群組。 直接在結構描述上定義欄位，並使用邏輯行為標籤將結構描述識別為以模型為基礎。
+>[!NOTE]
+>
+>關聯式結構描述先前在Adobe Experience Platform API檔案的舊版本中稱為模型式結構描述。 功能保持不變 — 只是術語發生了更改，以清楚明瞭。
+
+對`/schemas`端點發出POST要求，以建立關聯式結構描述。 關聯式結構描述儲存結構化的關聯式樣式資料&#x200B;**，但不含**&#x200B;類別或欄位群組。 直接在結構描述上定義欄位，並使用邏輯行為標籤將結構描述識別為關聯式。
 
 >[!IMPORTANT]
 >
->若要建立以模型為基礎的結構描述，請將`meta:extends`設為`"https://ns.adobe.com/xdm/data/adhoc-v2"`。 這是&#x200B;**邏輯行為識別碼** （不是實體行為或類別）。 在&#x200B;**中**&#x200B;不`allOf`參考類別或欄位群組，並且&#x200B;**不**&#x200B;在`meta:extends`中包含類別或欄位群組。
+>若要建立關聯式結構描述，請將`meta:extends`設定為`"https://ns.adobe.com/xdm/data/adhoc-v2"`。 這是&#x200B;**邏輯行為識別碼** （不是實體行為或類別）。 在&#x200B;**中**&#x200B;不`allOf`參考類別或欄位群組，並且&#x200B;**不**&#x200B;在`meta:extends`中包含類別或欄位群組。
 
 請先使用`POST /tenant/schemas`建立結構描述。 然後使用[描述項API (`POST /tenant/descriptors`)](../api/descriptors.md)新增必要的描述項：
 
@@ -302,15 +306,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[!UICONTROL 版本識別項]&quot;和&quot;[!UICONTROL 時間戳記識別項]&quot;。
-
-<!-- >[!AVAILABILITY]
->
->Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+>在UI結構描述編輯器中，版本描述項和時間戳記描述項分別顯示為&quot;[!UICONTROL Version identifier]&quot;和&quot;[!UICONTROL Timestamp identifier]&quot;。
 
 >[!CAUTION]
 >
->以模型為基礎的結構描述&#x200B;**與聯合結構描述**&#x200B;不相容。 使用以模型為基礎的結構描述時，請勿將`union`標籤套用至`meta:immutableTags`。 UI已封鎖此設定，但API目前並未封鎖此設定。 如需聯合結構描述行為的詳細資訊，請參閱[聯合端點指南](./unions.md)。
+>關聯式結構描述&#x200B;**與聯合結構描述**&#x200B;不相容。 使用關聯式結構描述時，請勿將`union`標籤套用至`meta:immutableTags`。 UI已封鎖此設定，但API目前並未封鎖此設定。 如需聯合結構描述行為的詳細資訊，請參閱[聯合端點指南](./unions.md)。
 
 **API格式**
 
@@ -377,16 +377,16 @@ curl --request POST \
 | ------------------------------- | ------ | --------------------------------------------------------- |
 | `title` | 字串 | 結構描述的顯示名稱。 |
 | `description` | 字串 | 結構描述用途的簡短說明。 |
-| `type` | 字串 | 模型架構必須是`"object"`。 |
+| `type` | 字串 | 關聯式結構描述必須是`"object"`。 |
 | `definitions` | 物件 | 包含定義結構描述欄位的根層級物件。 |
 | `definitions.<name>.properties` | 物件 | 欄位名稱和資料型別。 |
 | `allOf` | 陣列 | 參考根層級物件定義（例如，`#/definitions/marketing_customers`）。 |
-| `meta:extends` | 陣列 | 必須包含`"https://ns.adobe.com/xdm/data/adhoc-v2"`，才能將結構描述識別為以模型為基礎。 |
+| `meta:extends` | 陣列 | 必須包含`"https://ns.adobe.com/xdm/data/adhoc-v2"`，才能將結構描述識別為關聯式。 |
 | `meta:behaviorType` | 字串 | 設定為`"record"`。 只有在啟用且適當的情況下才使用`"time-series"`。 |
 
 >[!IMPORTANT]
 >
->模型型結構描述的結構描述進化遵循與標準結構描述相同的加法規則。 您可以使用PATCH請求新增欄位。 只有在未將資料擷取到資料集時，才允許重新命名或移除欄位等變更。
+>關聯式綱要的綱要演化遵循與標準綱要相同的加法規則。 您可以使用PATCH請求新增欄位。 只有在未將資料擷取到資料集時，才允許重新命名或移除欄位等變更。
 
 **回應**
 
@@ -394,7 +394,7 @@ curl --request POST \
 
 >[!NOTE]
 >
->以模型為基礎的結構描述不會繼承預先內建的欄位（例如，id、時間戳記或eventType）。 在結構描述中明確定義所有必填欄位。
+>關聯式結構描述不會繼承預先內建的欄位（例如id、時間戳記或eventType）。 在結構描述中明確定義所有必填欄位。
 
 **範例回應**
 
@@ -455,11 +455,11 @@ curl --request POST \
 | `type` | 字串 | 結構描述型別。 |
 | `definitions` | 物件 | 定義架構中所使用的可重複使用物件或欄位群組。 這通常包括主要資料結構，並在`allOf`陣列中參考以定義結構描述根。 |
 | `allOf` | 陣列 | 透過參考一或多個定義（例如，`#/definitions/marketing_customers`）來指定結構描述的根物件。 |
-| `meta:extends` | 陣列 | 將結構描述識別為以模型為基礎(`adhoc-v2`)。 |
+| `meta:extends` | 陣列 | 識別關聯式結構描述(`adhoc-v2`)。 |
 | `meta:behaviorType` | 字串 | 行為型別（`record`或`time-series`，啟用時）。 |
 | `meta:containerId` | 字串 | 儲存結構描述的容器（例如，`tenant`）。 |
 
-若要在建立模型式結構描述後新增欄位，請提出[PATCH要求](#patch)。 以模型為基礎的結構描述不會繼承或自動演化。 只有在未將資料擷取到資料集時，才允許重新命名或刪除欄位等結構變更。 一旦資料存在，則僅支援&#x200B;**加總變更** （例如新增欄位）。
+若要在關聯式結構描述建立後新增欄位，請發出[PATCH要求](#patch)。 關聯式結構描述不會繼承或自動演化。 只有在未將資料擷取到資料集時，才允許重新命名或刪除欄位等結構變更。 一旦資料存在，則僅支援&#x200B;**加總變更** （例如新增欄位）。
 
 您可以新增根級欄位（在根定義或根`properties`內），但無法移除、重新命名或變更現有欄位的型別。
 

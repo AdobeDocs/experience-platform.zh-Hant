@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 9 月)
 description: Adobe Experience Platform 2025 年 9 月版發行說明。
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
+source-git-commit: 96b9fcd8bfb4ff62eb9d4adce2e486782d918344
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 92%
+source-wordcount: '1524'
+ht-degree: 85%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platform Agent Orchestrator 是 Adobe Experience Platform 全�
 
 ## 警報 {#alerts}
 
-Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型警報。您可以透過 Experience Platform 使用者介面中的「[!UICONTROL 警報]」標籤訂閱不同的警報規則，而且可以選擇在使用者介面本身內或透過電子郵件通知接收警報訊息。
+Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型警報。您可以透過Experience Platform使用者介面中的[!UICONTROL Alerts]標籤訂閱不同的警示規則，也可以選擇在UI本身或透過電子郵件通知接收警示訊息。
 
 **新功能**
 
@@ -70,14 +70,14 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md)連接器 | 新的 [!DNL Snowflake Batch] 連接器現已可用，在特定使用案例中可用作串流連接器的替代選擇。 |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) 加密支援 | 您現在可以附加 RSA 格式的公開金鑰，將所匯出的檔案加密，讓您的敏感資訊獲得與其他雲端儲存目標相同等級的安全性。 |
-| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 目標的驗證過期詳細資料 | [!DNL Pinterest] 目標的驗證過期資訊現在可直接在 Experience Platform 介面中查看，因此您可以查看驗證的過期時間，並在其對資料流造成任何中斷之前進行續訂。您可以在&#x200B;**[!UICONTROL 帳戶過期日期]**&#x200B;欄 (在&#x200B;**[[!UICONTROL 「帳戶」]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;或&#x200B;**[[!UICONTROL 「瀏覽」]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;索引標籤中) 監視您的權杖過期日。 |
+| [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 目標的驗證過期詳細資料 | [!DNL Pinterest] 目標的驗證過期資訊現在可直接在 Experience Platform 介面中查看，因此您可以查看驗證的過期時間，並在其對資料流造成任何中斷之前進行續訂。您可以從&#x200B;**[!UICONTROL Account expiration date]**&#x200B;或&#x200B;**[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;索引標籤中的&#x200B;**[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;欄監視權杖到期日。 |
 
 **全新或更新版功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 增強 Experience Platform UI 中的目標管理功能 | 透過在「[[!UICONTROL 瀏覽]](../../destinations/ui/destinations-workspace.md#browse)」和「[[!UICONTROL 帳戶]](../../destinations/ui/destinations-workspace.md#accounts)」索引標籤提供的全新排序功能，改善您的目標管理工作流程。現在，當帳戶驗證即將到期時，您也會看到視覺指示器。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| 永久性欄寬設定 | 現在，當您導覽離開某個頁面然後再返回時，欄寬設定維持不變。例如，如果在「[[!UICONTROL 瀏覽]](../../destinations/ui/destinations-workspace.md#browse)」索引標籤中調整欄寬，當您導覽離開然後再返回該索引標籤時，自訂欄寬將維持不變。 |
+| 增強 Experience Platform UI 中的目標管理功能 | 透過[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)和[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)標籤的新排序功能改善您的目的地管理工作流程。 現在，當帳戶驗證即將到期時，您也會看到視覺指示器。<br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| 永久性欄寬設定 | 現在，當您導覽離開某個頁面然後再返回時，欄寬設定維持不變。例如，如果您調整[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)索引標籤中的欄寬，當您導覽離開並返回該索引標籤時，自訂欄寬將保持不變。 |
 
 如需詳細資訊，請閱讀[目標概觀](../../destinations/home.md)。
 
@@ -89,13 +89,13 @@ XDM 是一種開放原始碼的規格，可為帶入 Experience Platform 的資�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 基於模型的結構描述 | 使用基於模型的結構描述來簡化資料建模。您現在可以利用全方位的操作範例和指南，更輕鬆地建立結構描述。目前，行銷活動協調的授權持有者可以使用這項功能，且將在正式發佈時擴大開放予資料蒸餾器客戶使用，降低使用資料建模功能的門檻並提高效率。此功能也支援時間序列資料以及變更資料擷取功能。 |
+| 關聯式結構描述 | 使用關聯式結構描述（先前稱為模型型結構描述）簡化資料模型。 您現在可以利用全方位的操作範例和指南，更輕鬆地建立結構描述。目前，行銷活動協調的授權持有者可以使用這項功能，且將在正式發佈時擴大開放予資料蒸餾器客戶使用，降低使用資料建模功能的門檻並提高效率。此功能也支援時間序列資料以及變更資料擷取功能。 |
 
 如需詳細資訊，請詳讀 [XDM 概觀](../../xdm/home.md)。
 
 <!--
 
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
+| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using relational schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
 -->
 
 ## 即時客戶輪廓 {#profile}
@@ -147,6 +147,6 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | [!DNL Snowflake]金鑰對驗證支援 | 支援金鑰對驗證，增強 Snowflake 連線的安全性。基本驗證 (使用者名稱/密碼) 將於 2025 年 11 月前棄用，因此建議客戶改為使用金鑰對驗證以提高安全性。如需詳細資訊，請閱讀 [[!DNL Snowflake]  文件](../../sources/connectors/databases/snowflake.md)。 |
 | [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | 使用 [[!DNL Capillary Streaming Events]  來源](../../sources/connectors/loyalty/capillary.md)將忠誠度資料從您的 [!DNL Capillary] 帳戶串流至 Experience Platform。 |
 | [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | 使用[[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md)將[!DNL Relay Network]整合中的事件資料串流至Experience Platform。 |
-| 正式發行在來源中支援私人連結的功能 | 您現在可以針對特定一組來源使用&#x200B;**私人連結**。使用此功能來建立您的來源可以連接的私人端點。您可以利用私人端點來設定繞過公共網際網路的連線和資料流，為敏感資料提供強化的安全性和網路隔離。對於以下來源均支援使用私人連結： <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. 如需詳細資訊，請參閱在 [API](../../sources/tutorials/api/private-link.md) 和 [&#x200B; UI](../../sources/tutorials/ui/private-link.md) 中建立私人連結的指南。 |
+| 正式發行在來源中支援私人連結的功能 | 您現在可以針對特定一組來源使用&#x200B;**私人連結**。使用此功能來建立您的來源可以連接的私人端點。您可以利用私人端點來設定繞過公共網際網路的連線和資料流，為敏感資料提供強化的安全性和網路隔離。對於以下來源均支援使用私人連結： <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. 如需詳細資訊，請參閱在 [API](../../sources/tutorials/api/private-link.md) 和 [ UI](../../sources/tutorials/ui/private-link.md) 中建立私人連結的指南。 |
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。

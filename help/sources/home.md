@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1666'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
@@ -282,15 +282,15 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 
 ## 資料擷取中來源的存取控制
 
-資料內嵌來源的許可權可在Adobe Admin Console中管理。 您可以透過特定產品設定檔中的&#x200B;**[!UICONTROL 許可權]**&#x200B;索引標籤來存取許可權。 從&#x200B;**[!UICONTROL 編輯許可權]**&#x200B;面板，您可以透過&#x200B;**[!UICONTROL 資料擷取]**&#x200B;功能表專案來存取與來源相關的許可權。 **[!UICONTROL 檢視來源]**&#x200B;許可權會授予&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤中可用來源的唯讀存取權，以及&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤中經過驗證的來源，而&#x200B;**[!UICONTROL 管理來源]**&#x200B;許可權會授與讀取、建立、編輯和停用來源的完整存取權。
+資料內嵌來源的許可權可在Adobe Admin Console中管理。 您可以透過特定產品設定檔中的&#x200B;**[!UICONTROL Permissions]**&#x200B;索引標籤來存取許可權。 從&#x200B;**[!UICONTROL Edit Permissions]**&#x200B;面板，您可以透過&#x200B;**[!UICONTROL data ingestion]**&#x200B;功能表專案存取與來源相關的許可權。 **[!UICONTROL View Sources]**&#x200B;許可權授予&#x200B;**[!UICONTROL Catalog]**&#x200B;標籤中可用來源的唯讀存取權以及&#x200B;**[!UICONTROL Browse]**&#x200B;標籤中驗證的來源，而&#x200B;**[!UICONTROL Manage Sources]**&#x200B;許可權則授與讀取、建立、編輯和停用來源的完整存取權。
 
 下表概述UI根據這些許可權的不同組合時的行為方式：
 
 | 許可權層級 | 說明 |
 | ---- | ----|
-| **[!UICONTROL 檢視來源]**&#x200B;於 | 授予「目錄」標籤中每個來源型別以及「瀏覽」、「帳戶」和「資料流」標籤的來源的唯讀存取權。 |
-| **[!UICONTROL 管理來源]**&#x200B;於 | 除了&#x200B;**[!UICONTROL 檢視來源]**&#x200B;中包含的功能外，還授與&#x200B;**[!UICONTROL 目錄]**&#x200B;中&#x200B;**[!UICONTROL 連線Source]**&#x200B;選項的存取權，以及&#x200B;**[!UICONTROL 瀏覽]**&#x200B;中&#x200B;**[!UICONTROL 選取資料]**&#x200B;選項的存取權。 **[!UICONTROL 管理來源]**&#x200B;也可讓您啟用或停用&#x200B;**[!UICONTROL DataFlows]**&#x200B;並編輯其排程。 |
-| **[!UICONTROL 關閉檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 關閉管理來源]** | 撤銷對來源的所有存取權。 |
+| **[!UICONTROL View Sources]**&#x200B;於 | 授予「目錄」標籤中每個來源型別以及「瀏覽」、「帳戶」和「資料流」標籤的來源的唯讀存取權。 |
+| **[!UICONTROL Manage Sources]**&#x200B;於 | 除了&#x200B;**[!UICONTROL View Sources]**&#x200B;中包含的函式之外，還授予&#x200B;**[!UICONTROL Connect Source]**&#x200B;中&#x200B;**[!UICONTROL Catalog]**&#x200B;選項的存取權以及&#x200B;**[!UICONTROL Select Data]**&#x200B;中&#x200B;**[!UICONTROL Browse]**&#x200B;選項的存取權。 **[!UICONTROL Manage Sources]**&#x200B;也可讓您啟用或停用&#x200B;**[!UICONTROL DataFlows]**&#x200B;並編輯其排程。 |
+| **[!UICONTROL View Sources]**&#x200B;關閉，**[!UICONTROL Manage Sources]**&#x200B;關閉 | 撤銷對來源的所有存取權。 |
 
 如需透過「Adobe許可權」授與之可用許可權的詳細資訊，請參閱[存取控制總覽](../access-control/home.md)。
 
@@ -308,11 +308,11 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 - 將標籤套用至結構描述欄位，以定義對貴組織中特定結構描述欄位的存取權。 建立對特定結構描述欄位的存取權後，使用者將只能為他們有權存取的欄位建立對應。
 - 沒有適當角色的使用者將無法使用包含無法存取之結構描述欄位的對應來建立或更新資料流程。 此外，未經授權的使用者無法更新、刪除、啟用或停用具有無法存取之結構描述欄位的現有資料流。
-- 此外，資料流在其對應、目標資料集和目標連線中，必須有完全相同的結構描述ID和版本。 這同時適用於標準XDM結構描述和模型型結構描述。
+- 此外，資料流在其對應、目標資料集和目標連線中，必須有完全相同的結構描述ID和版本。 這同時適用於標準XDM方案和關聯式方案。
 
 >[!NOTE]
 >
->基於模型的結構描述還有其他需求，包括主索引鍵和版本識別碼欄位。 如需詳細資訊，請參閱[模型架構概述](../xdm/schema/model-based.md)。
+>關聯式結構描述還有其他需求，包括主索引鍵和版本識別碼欄位。 如需詳細資訊，請參閱[關聯式結構描述概觀](../xdm/schema/relational.md)。
 
 如需屬性型存取控制的詳細資訊，請閱讀[屬性型存取控制總覽](../access-control/abac/overview.md)。
 

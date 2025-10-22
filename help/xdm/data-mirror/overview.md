@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform；資料映象；模型架構；關聯架構；變更資料擷取；資料庫同步；主索引鍵；關係
+keywords: Experience Platform；資料映象；關聯式架構；變更資料擷取；資料庫同步；主索引鍵；關係
 solution: Experience Platform
 title: Data Mirror概觀
-description: 瞭解Data Mirror如何使用具有強制唯一性、關係和版本設定的模型型結構描述，將外部資料庫的列層級變更擷取到Adobe Experience Platform。
+description: 瞭解Data Mirror如何使用具有強制唯一性、關係和版本設定的關聯式結構描述，將外部資料庫的列層級變更擷取到Adobe Experience Platform。
 badge: 有限可用性
-source-git-commit: 6ce214073f625a253fcc5bb14dfdb6a4a61e6e7b
+exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -15,9 +16,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和模型型結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+>Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
 
-Data Mirror是一項Adobe Experience Platform功能，可讓您使用模型型架構，將外部資料庫的列層級變更擷取到Data Lake。 它保留資料關係、強制執行唯一性，並支援版本化，而不需要上游擷取、轉換、載入(ETL)程式。
+>[!NOTE]
+>
+>關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。 功能保持不變。
+
+Data Mirror是Adobe Experience Platform的一項功能，可讓您使用關聯式結構描述，將外部資料庫的列層級變更擷取到Data Lake。 它保留資料關係、強制執行唯一性，並支援版本化，而不需要上游擷取、轉換、載入(ETL)程式。
 
 使用Data Mirror將外部系統（例如[!DNL Snowflake]、[!DNL Databricks]或[!DNL BigQuery]）的插入、更新及刪除（可變資料）直接同步到Experience Platform中。 這有助於您在將資料帶入Platform時，保留現有的資料庫模型結構和資料完整性。
 
@@ -33,7 +38,7 @@ Data Mirror提供下列資料庫同步處理的基本功能：
 
 使用Data Mirror直接從來源系統擷取變更、強制執行結構描述完整性，並讓資料可用於分析、歷程協調及合規性工作流程。 Data Mirror可免除複雜的上游ETL程式，並透過啟用現有資料庫模型的直接映象來加速實作。
 
-透過Data Mirror實施以模型為基礎的結構描述時，針對刪除和資料衛生需求進行規劃。 在部署之前，所有應用程式都必須考慮刪除作業如何影響相關資料集、法規遵循工作流程和下游流程。
+透過Data Mirror實施關聯式結構描述時，針對刪除和資料衛生需求進行規劃。 在部署之前，所有應用程式都必須考慮刪除作業如何影響相關資料集、法規遵循工作流程和下游流程。
 
 ## 先決條件 {#prerequisites}
 
@@ -42,12 +47,12 @@ Data Mirror提供下列資料庫同步處理的基本功能：
 * [在Experience Platform UI](../ui/resources/schemas.md)或[API](../api/schemas.md)中建立結構描述
 * [設定雲端來源連線](../../sources/home.md#cloud-storage)
 * [套用變更資料擷取概念](../../sources/tutorials/api/change-data-capture.md) （更新插入、刪除）
-* 區分[標準](../schema/composition.md)和[模型架構](../schema/model-based.md)
+* 區分[標準](../schema/composition.md)和[關聯式結構描述](../schema/relational.md)
 * [使用描述項定義結構關係](../api/descriptors.md)
 
 ### 實作需求
 
-您的Platform執行個體和來源資料必須符合Data Mirror正常運作的特定要求。 Data Mirror需要&#x200B;**以模型為基礎的結構描述**，這些結構描述是具有強制條件約束的彈性資料結構。 目前Data Mirror主要處理以模型為基礎的結構描述，不過透過即將推出的B2B自訂物件功能（計畫於2025年10月推出）支援與標準XDM結構描述的整合。
+您的Platform執行個體和來源資料必須符合Data Mirror正常運作的特定要求。 Data Mirror需要&#x200B;**關聯式結構描述**，這些結構描述是具有強制條件約束的彈性資料結構。
 
 在所有結構描述中包含&#x200B;**主索引鍵和版本描述項**。 如果您使用時間序列結構描述，也需要&#x200B;**時間戳記描述項**。
 
@@ -61,17 +66,17 @@ Data Mirror提供下列資料庫同步處理的基本功能：
 
 ### 定義您的結構描述結構
 
-使用必要的描述元（定義結構描述行為和限制的中繼資料）建立[以模型為基礎的結構描述](../schema/model-based.md)。 透過UI或直接透過API，選擇適合您團隊工作流程的方法。
+使用必要的描述元（定義結構描述行為和限制的中繼資料）建立[關聯式結構描述](../schema/relational.md)。 透過UI或直接透過API，選擇適合您團隊工作流程的方法。
 
-* **UI方法**： [在結構描述編輯器中建立以模型為基礎的結構描述](../ui/resources/schemas.md#create-model-based-schema)
-* **API方法**： [透過結構描述登入API建立結構描述](../api/schemas.md#create-model-based-schema)
+* **UI方法**： [在結構描述編輯器中建立關聯式結構描述](../ui/resources/schemas.md#create-relational-schema)
+* **API方法**： [透過結構描述登入API建立結構描述](../api/schemas.md#create-relational-schema)
 
 ### 對應關係並定義資料管理
 
 使用關係描述元定義資料集之間的連線。 跨資料集管理關係並維護資料品質。 這些工作可確保一致的聯結，並支援符合資料衛生要求。
 
 * **結構描述關係**： [使用描述項定義資料集之間的關係](../api/descriptors.md)
-* **記錄衛生**： [管理精確度記錄刪除](../../hygiene/ui/record-delete.md#model-based-record-delete)
+* **記錄衛生**： [根據關聯式結構描述管理資料集的Precision記錄刪除](../../hygiene/ui/record-delete.md#relational-record-delete)
 
 ### 設定您的來源連線
 
@@ -93,7 +98,7 @@ Data Mirror提供下列資料庫同步處理的基本功能：
 
 ### 關聯式資料模型
 
-在Data Mirror中使用[以模型為基礎的結構描述](../schema/model-based.md) （也稱為關聯式結構描述）來表示實體、處理列層級的插入、更新及刪除，以及維護資料來源中存在的主要和外部索引鍵關係。 此方法將關聯式資料模型原則帶入Experience Platform，並確保資料集之間的結構一致性。
+在Data Mirror中使用[關聯式結構描述](../schema/relational.md)來表示實體、處理列層級的插入、更新及刪除，以及維護資料來源中存在的主要和外部索引鍵關係。 此方法將關聯式資料模型原則帶入Experience Platform，並確保資料集之間的結構一致性。
 
 ### 倉儲到湖同步
 
@@ -121,11 +126,11 @@ Data Mirror提供下列資料庫同步處理的基本功能：
 
 ### 資料刪除和衛生需求
 
-所有使用以模型為基礎的結構描述和Data Mirror的應用程式都必須瞭解資料刪除的關聯。 以模型為基礎的結構描述可讓您精確刪除記錄層級，進而影響跨連線資料集的相關資料。 無論您的特定使用案例為何，這些刪除功能都會影響資料完整性、法規遵循和下游應用程式行為。 在實作之前，請檢閱[資料衛生需求](../../hygiene/ui/record-delete.md#model-based-record-delete)，並規劃刪除案例。
+所有使用關聯式結構描述和Data Mirror的應用程式都必須瞭解資料刪除的關聯。 關聯式結構描述可啟用精確的記錄層級刪除功能，進而影響跨連線資料集的相關資料。 無論您的特定使用案例為何，這些刪除功能都會影響資料完整性、法規遵循和下游應用程式行為。 檢閱以關聯式結構描述[為基礎的資料集的](../../hygiene/ui/record-delete.md#relational-record-delete)資料衛生要求，並在實作前規劃刪除案例。
 
 ### 結構描述行為選擇
 
-以模型為基礎的結構描述預設為&#x200B;**記錄行為**，可擷取實體狀態（客戶、帳戶等）。 若您需要&#x200B;**時間序列行為**&#x200B;來追蹤事件，您必須明確設定它。
+關聯式結構描述預設為&#x200B;**記錄行為**，可擷取實體狀態（客戶、帳戶等）。 若您需要&#x200B;**時間序列行為**&#x200B;來追蹤事件，您必須明確設定它。
 
 ### 擷取方法比較
 
@@ -146,8 +151,8 @@ Data Mirror使用描述項支援&#x200B;**一對一**&#x200B;和&#x200B;**多對
 檢閱本概述後，您應該能夠判斷Data Mirror是否符合您的使用案例，並瞭解實作的需求。 若要開始使用：
 
 1. **資料架構師**&#x200B;應該評估您的資料模型，以確保它支援主索引鍵、版本設定和變更追蹤功能。
-2. **商務關係人**&#x200B;應確認您的授權包含模型架構支援和必要的Experience Platform版本。
+2. **商務關係人**&#x200B;應確認您的授權包含關聯式結構描述支援和必要的Experience Platform版本。
 3. **結構描述設計工具**&#x200B;應該規劃您的結構描述結構，以識別必要的描述元、欄位關係和資料治理需求。
 4. **實作團隊**&#x200B;應該根據您的來源系統、即時需求和作業工作流程，選擇擷取方法。
 
-如需實作詳細資料，請參閱[模型架構檔案](../schema/model-based.md)。
+如需實作詳細資料，請參閱[關聯式結構描述檔案](../schema/relational.md)。

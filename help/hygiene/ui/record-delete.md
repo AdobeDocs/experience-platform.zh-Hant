@@ -2,16 +2,16 @@
 title: 記錄刪除請求（UI工作流程）
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
+source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
 workflow-type: tm+mt
-source-wordcount: '2420'
-ht-degree: 5%
+source-wordcount: '2383'
+ht-degree: 6%
 
 ---
 
 # 記錄刪除請求（UI工作流程） {#record-delete}
 
-使用[[!UICONTROL 資料生命週期]工作區](./overview.md)，根據其主要身分刪除Adobe Experience Platform中的記錄。 這些記錄可以與個別消費者或包含在身分圖表中的任何其他實體繫結。
+使用[[!UICONTROL Data Lifecycle]工作區](./overview.md)，根據其主要身分刪除Adobe Experience Platform中的記錄。 這些記錄可以與個別消費者或包含在身分圖表中的任何其他實體繫結。
 
 >[!IMPORTANT]
 >
@@ -31,35 +31,35 @@ ht-degree: 5%
 
 ## 建立請求 {#create-request}
 
-若要啟動程式，請在Experience Platform UI的左側導覽中選取&#x200B;**[!UICONTROL 資料生命週期]**。 [!UICONTROL 資料生命週期要求]工作區會出現。 接著，從工作區的首頁面選取&#x200B;**[!UICONTROL 建立請求]**。
+若要開始此程式，請在Experience Platform UI的左側導覽中選取&#x200B;**[!UICONTROL Data Lifecycle]**。 [!UICONTROL Data lifecycle requests]工作區會出現。 接著，從工作區的首頁面選取&#x200B;**[!UICONTROL Create request]**。
 
-![已選取[!UICONTROL 建立要求]的[!UICONTROL 資料生命週期要求]工作區。](../images/ui/record-delete/create-request-button.png)
+![已選取[!UICONTROL Data lifecycle requests]的[!UICONTROL Create request]工作區。](../images/ui/record-delete/create-request-button.png)
 
-此時會出現請求建立工作流程。 依預設，**[!UICONTROL 要求的動作]**&#x200B;區段底下會選取&#x200B;**[!UICONTROL 刪除記錄]**&#x200B;選項。 保留選取此選項。
+此時會出現請求建立工作流程。 依預設，**[!UICONTROL Delete record]**&#x200B;區段底下會選取&#x200B;**[!UICONTROL Requested Action]**&#x200B;選項。 保留選取此選項。
 
 >[!IMPORTANT]
 > 
 >為了提高效率並降低資料集操作的成本，已移至Delta格式的組織可以刪除Identity Service、即時客戶設定檔和資料湖中的資料。 此型別的使用者稱為差異移轉使用者。 已進行差異移轉的組織之使用者，可選擇從單一或所有資料集中刪除記錄。 來自未曾進行差異移轉之組織的使用者，無法從單一資料集或所有資料集中選擇性地刪除記錄，如下圖所示。 在此情況下，請繼續前往指南的[提供身分](#provide-identities)區段。
 
-![已選取並反白具有[!UICONTROL 刪除記錄]選項的請求建立工作流程。](../images/ui/record-delete/delete-record.png)
+![已選取並反白顯示[!UICONTROL Delete record]選項的請求建立工作流程。](../images/ui/record-delete/delete-record.png)
 
 ## 選取資料集 {#select-dataset}
 
 下一步是決定您要從單一資料集還是所有資料集中刪除記錄。 根據您組織的設定，可能無法使用資料集選擇選項。 如果沒有看到此選項，請繼續前往指南的[提供身分](#provide-identities)區段。
 
-在&#x200B;**[!UICONTROL 記錄詳細資料]**&#x200B;區段中，選取選擇鈕來選擇特定資料集或所有資料集。
+在&#x200B;**[!UICONTROL Record Details]**&#x200B;區段中，選取選項按鈕以選擇特定資料集或所有資料集。
 
-若要從特定資料集刪除，請選取&#x200B;**[!UICONTROL 選取資料集]**，然後選取資料庫圖示（![資料庫圖示](/help/images/icons/database.png)）。 在出現的對話方塊中，選擇資料集並選取&#x200B;**[!UICONTROL 完成]**&#x200B;以進行確認。
+若要從特定資料集刪除，請選取&#x200B;**[!UICONTROL Select dataset]**，然後選取資料庫圖示（![資料庫圖示](/help/images/icons/database.png)）。 在出現的對話方塊中，選擇資料集並選取&#x200B;**[!UICONTROL Done]**&#x200B;進行確認。
 
-![已選取資料集並醒目提示[!UICONTROL 完成]的[!UICONTROL 選取資料集]對話方塊。](../images/ui/record-delete/select-dataset.png)
+![已選取資料集並醒目提示[!UICONTROL Select dataset]的[!UICONTROL Done]對話方塊。](../images/ui/record-delete/select-dataset.png)
 
-若要從所有資料集中刪除，請選取&#x200B;**[!UICONTROL 所有資料集]**。 此選項會增加操作的範圍，並需要您提供所有相關身分型別。
+若要從所有資料集中刪除，請選取&#x200B;**[!UICONTROL All datasets]**。 此選項會增加操作的範圍，並需要您提供所有相關身分型別。
 
-![已選取[!UICONTROL 所有資料集]選項的[!UICONTROL 選取資料集]對話方塊。](../images/ui/record-delete/all-datasets.png)
+![已選取[!UICONTROL Select dataset]選項的[!UICONTROL All datasets]對話方塊。](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->選取&#x200B;**[!UICONTROL 所有資料集]**&#x200B;會將作業展開至您組織中的所有資料集。 每個資料集都可以使用不同的主要身分型別。 您必須提供&#x200B;**所有必要的身分型別**，以確保正確比對。
+>選取&#x200B;**[!UICONTROL All datasets]**&#x200B;會將作業展開至您組織中的所有資料集。 每個資料集都可以使用不同的主要身分型別。 您必須提供&#x200B;**所有必要的身分型別**，以確保正確比對。
 >
 >如果缺少任何身分型別，刪除期間可能會略過某些記錄。 這可能會減慢處理速度，並導致&#x200B;**部分結果**。
 
@@ -86,7 +86,7 @@ Experience Platform中的每個資料集僅支援一個主要身分型別。
 
 >[!TIP]
 >
->如果您不知道特定資料集的身分名稱空間，可以在Experience Platform UI中找到。 在&#x200B;**[!UICONTROL 資料集]**&#x200B;工作區中，從清單中選取有問題的資料集。 在資料集的詳細資訊頁面上，將滑鼠移至右側邊欄中資料集的結構描述名稱上。 身分名稱空間會與結構描述名稱和說明一起顯示。
+>如果您不知道特定資料集的身分名稱空間，可以在Experience Platform UI中找到。 在&#x200B;**[!UICONTROL Datasets]**&#x200B;工作區中，從清單中選取有問題的資料集。 在資料集的詳細資訊頁面上，將滑鼠移至右側邊欄中資料集的結構描述名稱上。 身分名稱空間會與結構描述名稱和說明一起顯示。
 >
 >![已選取資料集的資料集控制面板，並從資料集詳細資料面板開啟結構描述對話方塊。 資料集的主要ID已反白顯示。](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -97,7 +97,7 @@ Experience Platform中的每個資料集僅支援一個主要身分型別。
 
 ### 上傳JSON檔案 {#upload-json}
 
-若要上傳JSON檔案，您可以將檔案拖放至提供的區域，或選取&#x200B;**[!UICONTROL 選擇檔案]**&#x200B;以瀏覽並從本機目錄中選取。
+若要上傳JSON檔案，您可以將檔案拖放至提供的區域，或選取&#x200B;**[!UICONTROL Choose files]**&#x200B;瀏覽並從本機目錄中選取。
 
 ![要求建立工作流程，其中包含反白顯示的選擇檔案和拖放介面以上傳JSON檔案。](../images/ui/record-delete/upload-json.png)
 
@@ -125,15 +125,15 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 ### 手動輸入身分 {#manual-identity}
 
-若要手動輸入身分，請選取&#x200B;**[!UICONTROL 新增身分]**。
+若要手動輸入身分，請選取&#x200B;**[!UICONTROL Add identity]**。
 
-![要求建立工作流程中反白顯示[!UICONTROL 新增身分]選項。](../images/ui/record-delete/add-identity.png)
+![要求建立工作流程中反白了[!UICONTROL Add identity]選項。](../images/ui/record-delete/add-identity.png)
 
-顯示的控制項可讓您一次輸入一個身分。 在&#x200B;**[!UICONTROL 身分名稱空間]**&#x200B;下，使用下拉式功能表選取身分型別。 在&#x200B;**[!UICONTROL 主要身分值]**&#x200B;下，提供記錄的身分名稱空間值。
+顯示的控制項可讓您一次輸入一個身分。 在&#x200B;**[!UICONTROL identity namespace]**&#x200B;底下，使用下拉式功能表來選取身分型別。 在&#x200B;**[!UICONTROL Primary Identity Value]**&#x200B;底下，提供記錄的身分名稱空間值。
 
 ![已手動新增包含身分欄位的要求建立工作流程。](../images/ui/record-delete/identity-added.png)
 
-若要新增更多身分，請選取加號圖示(![A加號圖示。](/help/images/icons/tree-expand-all.png))，或選取&#x200B;**[!UICONTROL 新增身分]**。
+若要新增更多身分，請選取加號圖示(![A加號圖示。](/help/images/icons/tree-expand-all.png))，或選取&#x200B;**[!UICONTROL Add identity]**。
 
 ![要求建立工作流程中會顯示加號圖示和醒目提示的新增身分圖示。](../images/ui/record-delete/more-identities.png)
 
@@ -185,29 +185,33 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 ## 提交請求 {#submit}
 
-完成新增身分到要求之後，在&#x200B;**[!UICONTROL 要求設定]**&#x200B;下，在選取&#x200B;**[!UICONTROL 提交]**&#x200B;之前，提供要求的名稱和選擇性描述。
+完成新增身分到要求之後，請在&#x200B;**[!UICONTROL Request settings]**&#x200B;底下提供要求的名稱和選擇性描述，然後再選取&#x200B;**[!UICONTROL Submit]**。
 
 >[!TIP]
 >
 >您可以透過UI提交每個請求最多10,000個身分。 若要提交較大的磁碟區（每個請求最多100,000個ID），請使用[API方法](../api/workorder.md#create)。
 
-![要求設定的[!UICONTROL 名稱]和[!UICONTROL 描述]欄位，並反白顯示[!UICONTROL 提交]。](../images/ui/record-delete/submit.png)
+![要求設定的[!UICONTROL Name]和[!UICONTROL Description]欄位中反白顯示[!UICONTROL Submit]。](../images/ui/record-delete/submit.png)
 
-出現[!UICONTROL Confirm要求]對話方塊，表示刪除後無法復原身分。 選取&#x200B;**[!UICONTROL 提交]**&#x200B;以確認您要刪除其資料的身分清單。
+[!UICONTROL Confirm request]對話方塊似乎表示刪除後無法復原身分。 選取&#x200B;**[!UICONTROL Submit]**&#x200B;以確認您要刪除其資料的身分清單。
 
-![&#x200B; [!UICONTROL 確認要求]對話方塊。](../images/ui/record-delete/confirm-request.png)
+![ [!UICONTROL Confirm request]對話方塊。](../images/ui/record-delete/confirm-request.png)
 
-提交要求後，工作單即建立並顯示在[!UICONTROL 資料生命週期]工作區的[!UICONTROL 記錄]索引標籤上。 從這裡，您可以在工單處理請求時監視工單的狀態。
+提交請求後，工作單即建立並顯示在[!UICONTROL Record]工作區的[!UICONTROL Data Lifecycle]標籤上。 從這裡，您可以在工單處理請求時監視工單的狀態。
 
 >[!NOTE]
 >
 >如需記錄刪除執行後如何處理的詳細資訊，請參閱[時間表與透明度](../home.md#record-delete-transparency)的概觀區段。
 
-![&#x200B; [!UICONTROL 資料生命週期]工作區的[!UICONTROL 記錄]索引標籤中反白顯示新要求。](../images/ui/record-delete/request-log.png)
+![反白顯示新請求的[!UICONTROL Record]工作區的[!UICONTROL Data Lifecycle]索引標籤。](../images/ui/record-delete/request-log.png)
 
-## 從以模型為基礎的資料集中刪除記錄 {#model-based-record-delete}
+## 根據關聯式結構描述從資料集中刪除記錄 {#relational-record-delete}
 
-如果您要刪除的資料集是模型型結構描述，請檢閱下列考量事項，以確保系統正確移除記錄，且不會因Experience Platform與來源系統之間的不相符而重新擷取記錄。
+如果您要刪除的資料集是根據關聯式結構描述，請檢閱下列考量事項，以確保正確移除記錄，且不會因為Experience Platform與來源系統之間的不相符而重新內嵌。
+
+>[!NOTE]
+>
+>關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。 功能與刪除行為維持不變。
 
 ### 記錄刪除行為
 
@@ -224,22 +228,22 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 ### 變更資料擷取和控制欄
 
-使用具有變更資料擷取之原始碼的模型架構在辨別刪除與更新插入時，可以使用`_change_request_type`控制欄。 擷取期間，會從資料集中刪除標示為`d`的記錄，而標示為`u`或未標示欄的記錄則被視為更新插入。 `_change_request_type`欄僅在擷取時讀取，不會儲存在目標結構描述中或對應到XDM欄位。
+將來源與變更資料擷取搭配使用的關聯式結構描述，可在區分刪除與更新插入時使用`_change_request_type`控制欄。 擷取期間，會從資料集中刪除標示為`d`的記錄，而標示為`u`或未標示欄的記錄則被視為更新插入。 `_change_request_type`欄僅在擷取時讀取，不會儲存在目標結構描述中或對應到XDM欄位。
 
 >[!NOTE]
 >
 >透過資料生命週期UI刪除記錄不會影響來源系統。 若要從這兩個位置移除資料，請在Experience Platform和來源中將其刪除。
 
-### 以模型為基礎的結構描述的其他刪除方法
+### 關聯式結構描述的其他刪除方法
 
-除了標準記錄刪除工作流程，基於模型的結構描述還支援特定使用案例的其他方法：
+除了標準記錄刪除工作流程，關聯式結構描述還支援特定使用案例的其他方法：
 
 * **安全複製資料集方法**：將變更套用到生產資料之前，請先複製生產資料集並將刪除套用到副本以進行受控測試或調解。
 * **僅刪除批次上傳**：當您需要移除特定記錄而不影響其他資料時，請上傳僅包含目標衛生刪除操作的檔案。
 
 ### 衛生操作的描述項支援 {#descriptor-support}
 
-模型架構描述項為精準衛生操作提供必要的中繼資料：
+關聯式結構描述項提供精確衛生操作的基本中繼資料：
 
 * **主要索引鍵描述項**：識別目標更新或刪除的唯一記錄，確保正確的記錄受到影響。
 * **版本描述項**：確保以正確的時間順序套用刪除和更新，防止不循序的操作。
@@ -249,7 +253,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 >
 >衛生程式會在資料集層級運作。 對於啟用設定檔的資料集，可能需要額外的設定檔工作流程來維護即時客戶設定檔的一致性。
 
-### 基於模型的綱要的排程保留
+### 關聯式結構描述的排程保留
 
 若要根據資料年齡而非特定身分來自動衛生，請參閱[管理體驗事件資料集保留(TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md)，以瞭解資料湖中排程的資料列層級保留。
 
@@ -257,7 +261,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 >
 >只有使用時間序列行為的資料集才支援列層級的有效期。
 
-### 刪除模型記錄的最佳實務
+### 關聯式記錄刪除的最佳實務
 
 為避免無意中再次擷取並維持跨系統的資料一致性，請遵循以下最佳實務：
 
@@ -265,8 +269,9 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 * **監視變更資料擷取流程**：在刪除Platform中的記錄之後，監視資料流程並確認來源系統是否移除相同的記錄或包含`_change_request_type = 'd'`的記錄。
 * **清理來源**：對於使用完整重新整理擷取的來源，或那些不支援透過變更資料擷取進行刪除的來源，請直接從來源系統刪除記錄，以避免重新擷取。
 
-如需結構描述需求的詳細資訊，請參閱[以模型為基礎的結構描述項需求](../../xdm/schema/model-based.md#model-based-schemas)。\
-若要瞭解變更資料擷取如何與來源搭配運作，請參閱[在來源中啟用變更資料擷取](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas)。
+如需結構描述需求的詳細資訊，請參閱[關聯式結構描述項需求](../../xdm/schema/relational.md#relational-schemas)。
+
+若要瞭解變更資料擷取如何與來源搭配運作，請參閱[在來源中啟用變更資料擷取](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas)。
 
 ## 後續步驟
 

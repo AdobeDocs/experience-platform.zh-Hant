@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統概覽
 description: 標準化和互通性是Adobe Experience Platform背後的重要概念。 體驗資料模型(XDM)採用Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 7527732c91e55f6ffaefbf98c37a2c4aad3aa3b9
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2440'
 ht-degree: 3%
 
 ---
@@ -35,13 +35,13 @@ XDM提供標準欄位群組和資料型別的強大集合，旨在擷取不同�
 
 在Experience Platform UI中建構結構描述時，列出的欄位群組會顯示人氣量度。 此量度取決於其他Experience Platform使用者在其結構描述中使用欄位群組的頻率。 數字越高，欄位群組就越受歡迎。 依預設，會顯示從最受歡迎到最不受歡迎的結果，讓您隨時掌握業界的資料模型化趨勢。
 
-![&#x200B; [!UICONTROL 新增欄位群組]對話方塊的人氣欄。](./images/overview/popularity.png)
+![ [!UICONTROL Add field group]對話方塊的人氣資料行。](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
 Experience Platform提供使用者介面和RESTful API，您可以從中檢視和管理Experience Platform **[!DNL Schema Library]**&#x200B;中所有結構描述相關的資源。 [!DNL Schema Library]包含Adobe為您提供的標準XDM元件，以及來自您使用之應用程式的Experience Platform合作夥伴和廠商的資源。
 
-您也可以使用Experience Platform UI中的[!DNL Schema Registry API]或[!UICONTROL 結構描述]工作區，建立和管理貴組織專屬的新結構描述和資源。
+您也可以使用[!DNL Schema Registry API]或Experience Platform UI中的[!UICONTROL Schemas]工作區，建立和管理貴組織專屬的新結構描述和資源。
 
 如需如何在Experience Platform中管理方案和與之互動的詳細資訊，請參閱下列檔案：
 
@@ -69,15 +69,15 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 >
 >沒有基於臨機行為的標準類別。 使用臨機結構描述的Experience Platform處理程式會自動產生臨機結構描述，但也可以使用結構描述登入API [以手動方式](./tutorials/ad-hoc.md)建立它們。
 
-### [!UICONTROL XDM 個別輪廓] {#xdm-individual-profile}
+### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
-[!UICONTROL XDM個人設定檔]是以記錄為基礎的類別，可形成已識別和部分識別之主體屬性的單一表示法。 高度識別的設定檔可用於個人通訊或目標參與。 高度識別的設定檔可包含詳細的個人資訊，例如，姓名、性別、出生日期、地點，以及聯絡資訊，包括電話號碼和電子郵件地址。
+[!UICONTROL XDM Individual Profile]是以記錄為基礎的類別，可構成已識別與部分識別之主體屬性的單一表示法。 高度識別的設定檔可用於個人通訊或目標參與。 高度識別的設定檔可包含詳細的個人資訊，例如，姓名、性別、出生日期、地點，以及聯絡資訊，包括電話號碼和電子郵件地址。
 
 較少識別的設定檔可能僅由匿名行為訊號（如瀏覽器Cookie）組成。 在這種情況下，會使用稀疏設定檔資料來建立資訊庫，匿名設定檔的興趣和偏好設定會在該資訊庫中整理和儲存。 隨著主體註冊接收通知、訂閱、購買等，這些識別碼可能會隨著時間變得更詳細。 設定檔屬性的這種增加最終可能會導致識別的主題，並允許更高程度的目標參與。
 
 隨著個人檔案持續成長，會成為個人個人資訊、身分資訊、聯絡詳細資料和通訊偏好設定的健全存放庫。
 
-請參閱[[!UICONTROL XDM個別設定檔]參考指南](./classes/individual-profile.md)，以取得有關類別所提供的欄位結構和使用案例的詳細資訊。
+請參閱[[!UICONTROL XDM Individual Profile]參考指南](./classes/individual-profile.md)，以取得有關類別所提供的欄位結構和使用案例的詳細資訊。
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
@@ -89,7 +89,7 @@ XDM ExperienceEvent是一種以時間序列為基礎的類別，用於在事件�
 
 ![一段時間內以體驗事件視覺化的客戶歷程資訊圖。](images/overview/experience-event-journey.png)
 
-請參閱[[!UICONTROL XDM ExperienceEvent]參考指南](./classes/experienceevent.md)，以取得有關類別所提供欄位結構和使用案例的詳細資訊。
+請參閱[[!UICONTROL XDM ExperienceEvent]參考指南](./classes/experienceevent.md)，以取得有關類別所提供的欄位結構和使用案例的詳細資訊。
 
 ## XDM結構描述和Experience Platform服務 {#schemas-and-platform-services}
 
@@ -105,15 +105,19 @@ Experience Platform與結構無關，這表示符合XDM標準的任何結構都�
 
 如需詳細資訊，請參閱[目錄服務總覽](../catalog/home.md)。 如需有關Adobe Experience Platform資料擷取的詳細資訊，請參閱[資料擷取總覽](../ingestion/home.md)。
 
-### Data Mirror和模型架構 {#model-based-schemas}
+### Data Mirror和關聯式結構描述 {#relational-schemas}
 
 >[!AVAILABILITY]
 >
->Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和模型型結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+>Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
 
-Data Mirror是Adobe Experience Platform的一項功能，可啟用使用模型架構的進階資料庫同步。 如需Data Mirror功能和使用案例的完整總覽，請參閱[Data Mirror總覽](./data-mirror/overview.md)。
+>[!NOTE]
+>
+>關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。 功能保持不變，只是術語有所變更，以求清晰明瞭。
 
-Data Mirror透過模型架構運作，這些架構是針對結構化的關聯式資料模式而設計。 它們會強制主索引鍵、支援版本識別碼，並使用主索引鍵和外索引鍵定義架構到架構的關係。 與標準XDM結構描述不同，它們不需要類別或欄位群組，並針對變更資料擷取擷取工作流程進行最佳化。
+Data Mirror是Adobe Experience Platform的一項功能，可讓您使用關聯式架構進行進階資料庫同步。 如需Data Mirror功能和使用案例的完整總覽，請參閱[Data Mirror總覽](./data-mirror/overview.md)。
+
+Data Mirror透過關聯式結構描述運作，這些結構描述是針對結構化、關聯式樣式的資料模式而設計。 它們會強制主索引鍵、支援版本識別碼，並使用主索引鍵和外索引鍵定義架構到架構的關係。 與標準XDM結構描述不同，它們不需要類別或欄位群組，並針對變更資料擷取擷取工作流程進行最佳化。
 
 如需有關如何定義結構描述對結構描述關係的詳細資訊，請參閱[描述項端點檔案](./api/descriptors.md)。
 
@@ -124,7 +128,7 @@ Data Mirror透過模型架構運作，這些架構是針對結構化的關聯式
 * 支援進階分析和歷程協調
 * 啟用包含更新插入和刪除的精確變更追蹤
 
-若要建立以模型為基礎的結構描述，請在建立結構描述時選取&#x200B;**[!UICONTROL 以模型為基礎的]**。 以模型為基礎的結構描述不使用類別或欄位群組。 反之，您可以手動定義結構或上傳DDL檔案。 以模型為基礎的結構描述需要主索引鍵、版本識別碼，以及（如果適用）時間戳記識別碼欄位。 然後，您可以設定其他欄位並定義與其他結構描述的關係。
+若要建立關聯式結構描述，請在建立結構描述時選取&#x200B;**[!UICONTROL Relational]**。 關聯式結構描述不使用類別或欄位群組。 反之，您可以手動定義結構或上傳DDL檔案。 關聯式結構描述需要主索引鍵、版本識別碼，以及時間戳記識別碼欄位（如果適用）。 然後，您可以設定其他欄位並定義與其他結構描述的關係。
 
 >[!NOTE]
 >
@@ -133,9 +137,9 @@ Data Mirror透過模型架構運作，這些架構是針對結構化的關聯式
 如需詳細步驟和使用案例指引，請參閱：
 
 * [Data Mirror概觀](./data-mirror/overview.md) — 功能、使用案例和實作規劃
-* [以模型為基礎的結構描述技術參考](./schema/model-based.md) — 技術規格和限制
-* [UI教學課程](./ui/resources/schemas.md#create-model-based-schema)
-* [api教學課程](./api/schemas.md#create-model-based-schema)
+* [關聯式結構描述技術參考](./schema/relational.md) — 技術規格和限制
+* [UI教學課程](./ui/resources/schemas.md#create-relational-schema)
+* [api教學課程](./api/schemas.md#create-relational-schema)
 * [描述項（識別碼）檔案](./api/descriptors.md#relationship-descriptor)
 * [啟用變更資料擷取](../sources/tutorials/api/change-data-capture.md)
 
@@ -151,13 +155,13 @@ Data Mirror透過模型架構運作，這些架構是針對結構化的關聯式
 
 即時客戶設定檔提供集中式消費者設定檔，用於針對性和個人化的體驗管理。 每個設定檔都包含跨所有系統彙總的資料，並包含涉及設定檔主旨之事件的可行時間戳記帳戶。 這些事件可能在您搭配Experience Platform使用的任何系統中發生。
 
-即時客戶設定檔會使用以[!UICONTROL XDM Individual Profile]和[!UICONTROL XDM ExperienceEvent]類別為基礎的結構描述格式化資料，並根據該資料回應查詢。
+Real-Time Customer Profile會使用以[!UICONTROL XDM Individual Profile]和[!UICONTROL XDM ExperienceEvent]類別為基礎的結構描述格式化資料，並根據該資料回應查詢。
 
 系統會維護每個客戶設定檔的一個例項，將資料合併在一起，形成個人的「單一信任來源」。 此統一資料使用所謂的「聯合結構描述」（有時稱為「聯合檢視」）來表示。 聯合結構描述會將實施相同類別的所有結構描述的欄位彙總到單一結構描述中。 使用UI或API構成結構描述時，您可以啟用結構描述以與即時客戶個人檔案搭配使用，並標籤它以包含在聯合中。 然後，標籤的結構描述將參與要提供給設定檔的結構描述定義。
 
-由於[!UICONTROL XDM個人設定檔]和[!UICONTROL XDM ExperienceEvent]資料已擷取到資料湖，即時客戶設定檔會擷取任何已啟用以供使用的資料。 內嵌的互動和詳細資訊越多，個別設定檔就越健全。
+由於[!UICONTROL XDM Individual Profile]和[!UICONTROL XDM ExperienceEvent]資料已擷取至資料湖，即時客戶設定檔會擷取任何已啟用供其使用的資料。 內嵌的互動和詳細資訊越多，個別設定檔就越健全。
 
-[!UICONTROL XDM個人設定檔]資料可協助在任何管道或Adobe產品整合中告知並啟用動作。 如果搭配豐富的行為和互動資料歷史，這些資料可用於推動機器學習。 即時客戶設定檔API也可用來擴充協力廠商解決方案、CRM和專有解決方案的功能。
+[!UICONTROL XDM Individual Profile]資料可協助在任何管道或Adobe產品整合中告知並啟用動作。 如果搭配豐富的行為和互動資料歷史，這些資料可用於推動機器學習。 即時客戶設定檔API也可用來擴充協力廠商解決方案、CRM和專有解決方案的功能。
 
 如需詳細資訊，請參閱[即時客戶個人檔案總覽](../profile/home.md)。
 
@@ -167,7 +171,7 @@ Data Mirror透過模型架構運作，這些架構是針對結構化的關聯式
 >
 >Data Science Workspace已無法購買。 本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
-Adobe Experience Platform Data Science Workspace使用機器學習和人工智慧，從Experience Platform中儲存的資料中獲得深入分析。 資料科學Workspace可讓資料科學家根據有關客戶及其活動的[!UICONTROL XDM個人設定檔]和[!UICONTROL XDM ExperienceEvent]資料來建置配方。 這些配方有助於進行預測，例如購買傾向和建議個人可能會讚賞和使用的選件。
+Adobe Experience Platform Data Science Workspace使用機器學習和人工智慧，從Experience Platform中儲存的資料中獲得深入分析。 資料科學Workspace可讓資料科學家根據有關客戶及其活動的[!UICONTROL XDM Individual Profile]和[!UICONTROL XDM ExperienceEvent]資料來建置配方。 這些配方有助於進行預測，例如購買傾向和建議個人可能會讚賞和使用的選件。
 
 藉由資料科學Workspace，資料科學家可以輕鬆建立由機器學習提供支援的智慧型服務API。 這些服務可與其他Adobe解決方案(包括Adobe Target和Adobe Analytics Cloud)搭配使用，協助您自動化個人化、鎖定目標的數位體驗。
 

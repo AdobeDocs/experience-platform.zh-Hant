@@ -2,9 +2,9 @@
 title: 在API中啟用來源連線的變更資料擷取
 description: 瞭解如何在API中為來源連線啟用變更資料擷取
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -17,32 +17,36 @@ Experience Platform目前支援&#x200B;**增量資料副本**，此副本會定�
 
 相對地，變更資料擷取會擷取並近乎即時地套用插入、更新及刪除。 此完整的變更追蹤功能可確保資料集與來源系統保持完全一致，並提供完整的變更記錄，超出增量副本所支援的範圍。 不過，刪除作業需要特別考量，因為它們會影響使用目標資料集的所有應用程式。
 
-Experience Platform中的變更資料擷取需要&#x200B;**[Data Mirror](../../../xdm/data-mirror/overview.md)**&#x200B;搭配[以模型為基礎的結構描述](../../../xdm/schema/model-based.md) （也稱為關聯結構描述）。 您可以透過兩種方式將變更資料提供給Data Mirror：
+Experience Platform中的變更資料擷取需要&#x200B;**[Data Mirror](../../../xdm/data-mirror/overview.md)**&#x200B;搭配[關聯式結構描述](../../../xdm/schema/relational.md)。 您可以透過兩種方式將變更資料提供給Data Mirror：
 
 * **[手動變更追蹤](#file-based-sources)**：針對未原生產生變更資料擷取記錄的來源，在您的資料集中包含`_change_request_type`欄
 * **[原始變更資料擷取匯出](#database-sources)**：使用直接從來源系統匯出的變更資料擷取記錄
 
-兩種方法都需要使用具有模型架構的Data Mirror來保留關係並強制實施唯一性。
+兩種方法都需要使用關聯式結構的Data Mirror來保留關係並強制實施唯一性。
 
-## Data Mirror搭配模型架構
+## Data Mirror搭配關聯式結構描述
 
 >[!AVAILABILITY]
 >
->Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和模型型結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+>Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+
+>[!NOTE]
+>
+>關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。 其功能和變更資料擷取功能保持不變。
 
 >[!NOTE]
 >
 >**協調的行銷活動使用者**：使用本檔案中說明的Data Mirror功能，使用維護參考完整性的客戶資料。 即使您的來源未使用變更資料擷取格式，Data Mirror仍支援關聯式功能，例如主索引鍵強制、記錄層級更新插入和結構描述關係。 這些功能可確保跨連線資料集建立一致且可靠的資料模型。
 
-Data Mirror使用基於模型的結構描述來擴充變更資料擷取及啟用進階資料庫同步功能。 如需Data Mirror的概觀，請參閱[Data Mirror概觀](../../../xdm/data-mirror/overview.md)。
+Data Mirror使用關聯式結構描述來擴充變更資料擷取及啟用進階資料庫同步功能。 如需Data Mirror的概觀，請參閱[Data Mirror概觀](../../../xdm/data-mirror/overview.md)。
 
-基於模型的結構描述會擴充Experience Platform，強制執行主索引鍵的唯一性、追蹤列層級的變更，以及定義結構描述層級的關係。 透過變更資料擷取，它們直接在資料湖中套用插入、更新及刪除，減少擷取、轉換、載入(ETL)或手動調解的需求。
+關聯式結構描述可擴充Experience Platform以強制執行主鍵唯一性、追蹤列層級變更及定義結構描述層級關係。 透過變更資料擷取，它們直接在資料湖中套用插入、更新及刪除，減少擷取、轉換、載入(ETL)或手動調解的需求。
 
-如需詳細資訊，請參閱[模型架構概觀](../../../xdm/schema/model-based.md)。
+如需詳細資訊，請參閱[關聯式結構描述概觀](../../../xdm/schema/relational.md)。
 
-### 變更資料擷取的模型架構需求
+### 變更資料擷取的關聯式結構描述需求
 
-在使用模型架構進行變更資料擷取之前，請設定下列識別碼：
+在將關聯式綱要用於變更資料擷取之前，請設定下列識別碼：
 
 * 以主索引鍵唯一識別每個記錄。
 * 使用版本識別碼依序套用更新。
@@ -59,9 +63,9 @@ Data Mirror使用基於模型的結構描述來擴充變更資料擷取及啟用
 
 ### 工作流程 {#workflow}
 
-若要啟用以模型為基礎之綱要的變更資料擷取：
+若要啟用關聯式綱要的變更資料擷取：
 
-1. 建立以模型為基礎的結構描述。
+1. 建立關聯式結構描述。
 2. 新增必要的描述項：
    * [主索引鍵描述項](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [版本描述項](../../../xdm/api/descriptors.md#version-descriptor)
@@ -76,13 +80,13 @@ Data Mirror使用基於模型的結構描述來擴充變更資料擷取及啟用
 
 >[!IMPORTANT]
 >
->**需要資料刪除計畫**。 所有使用模型架構的應用程式都必須先瞭解刪除的含意，才能實作變更資料擷取。 規劃刪除作業如何影響相關資料集、法規遵循需求和下游流程。 如需指引，請參閱[資料衛生考量事項](../../../hygiene/ui/record-delete.md#model-based-record-delete)。
+>**需要資料刪除計畫**。 所有使用關聯式結構描述的應用程式都必須先瞭解刪除的含義，才能實作變更資料擷取。 規劃刪除作業如何影響相關資料集、法規遵循需求和下游流程。 如需指引，請參閱[資料衛生考量事項](../../../hygiene/ui/record-delete.md#relational-record-delete)。
 
 ## 提供檔案型來源的變更資料 {#file-based-sources}
 
 >[!IMPORTANT]
 >
->檔案型變更資料擷取需要具備模型架構的Data Mirror。 在依照下列檔案格式設定步驟進行之前，請確定您已完成本檔案先前說明的[Data Mirror設定工作流程](#workflow)。 以下步驟說明如何格式化資料檔案以包含Data Mirror將處理的變更追蹤資訊。
+>檔案式變更資料擷取需要搭配關聯式結構描述的Data Mirror。 在依照下列檔案格式設定步驟進行之前，請確定您已完成本檔案先前說明的[Data Mirror設定工作流程](#workflow)。 以下步驟說明如何格式化資料檔案以包含Data Mirror將處理的變更追蹤資訊。
 
 針對檔案型來源（[!DNL Amazon S3]、[!DNL Azure Blob]、[!DNL Google Cloud Storage]和[!DNL SFTP]），請在您的檔案中包含`_change_request_type`欄。
 
@@ -115,7 +119,7 @@ Data Mirror使用基於模型的結構描述來擴充變更資料擷取及啟用
 
 ### [!DNL Azure Databricks]
 
-若要搭配[!DNL Azure Databricks]使用變更資料擷取，您必須在來源資料表中啟用&#x200B;**變更資料摘要**，並在Experience Platform中使用模型架構設定Data Mirror。
+若要搭配[!DNL Azure Databricks]使用變更資料擷取，您必須在來源資料表中啟用&#x200B;**變更資料摘要**，並在Experience Platform中透過relational schema設定Data Mirror。
 
 使用下列命令來啟用表格上的變更資料摘要：
 
@@ -152,7 +156,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 ### [!DNL Data Landing Zone]
 
-若要搭配[!DNL Data Landing Zone]使用變更資料擷取，您必須在來源資料表中啟用&#x200B;**變更資料摘要**，並在Experience Platform中使用模型架構設定Data Mirror。
+若要搭配[!DNL Data Landing Zone]使用變更資料擷取，您必須在來源資料表中啟用&#x200B;**變更資料摘要**，並在Experience Platform中透過relational schema設定Data Mirror。
 
 請閱讀下列檔案，以瞭解如何為[!DNL Data Landing Zone]來源連線啟用變更資料擷取的步驟：
 
@@ -161,11 +165,11 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 ### [!DNL Google BigQuery]
 
-若要搭配[!DNL Google BigQuery]使用變更資料擷取，您必須在來源表格中啟用變更歷史記錄，並在Experience Platform中以model-based schema設定Data Mirror。
+若要搭配[!DNL Google BigQuery]使用變更資料擷取，您必須在來源表格中啟用變更歷史記錄，並在Experience Platform中以relational schema設定Data Mirror。
 
 若要在您的[!DNL Google BigQuery]來源連線中啟用變更記錄，請瀏覽至[!DNL Google BigQuery]主控台中的[!DNL Google Cloud]頁面，並將`enable_change_history`設定為`TRUE`。 此屬性可啟用資料表變更記錄。
 
-如需詳細資訊，請閱讀[&#x200B; [!DNL GoogleSQL]中](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)資料定義語言陳述式的指南。
+如需詳細資訊，請閱讀[ [!DNL GoogleSQL]中](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)資料定義語言陳述式的指南。
 
 請閱讀下列檔案，以瞭解如何為[!DNL Google BigQuery]來源連線啟用變更資料擷取的步驟：
 
@@ -174,7 +178,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 ### [!DNL Snowflake]
 
-若要搭配[!DNL Snowflake]使用變更資料擷取，您必須在來源資料表中啟用&#x200B;**變更追蹤**，並在Experience Platform中透過model-based schema設定Data Mirror。
+若要搭配[!DNL Snowflake]使用變更資料擷取，您必須在來源資料表中啟用&#x200B;**變更追蹤**，並在Experience Platform中透過relational schema設定Data Mirror。
 
 在[!DNL Snowflake]中，使用`ALTER TABLE`並設定`CHANGE_TRACKING`為`TRUE`來啟用變更追蹤。
 

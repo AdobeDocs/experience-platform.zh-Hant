@@ -5,9 +5,9 @@ title: 在UI中使用資料庫Source建立資料流
 type: Tutorial
 description: 資料流是排程的工作，會從來源擷取資料並擷取資料至Experience Platform資料集。 本教學課程提供如何使用Experience Platform UI為資料庫來源建立資料流的步驟。
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1653'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 新增資料
 
-建立資料庫來源帳戶之後，會出現&#x200B;**[!UICONTROL 新增資料]**&#x200B;步驟，提供介面供您探索資料庫來源帳戶的表格階層。
+建立資料庫來源帳戶之後，會顯示&#x200B;**[!UICONTROL Add data]**&#x200B;步驟，提供介面供您探索資料庫來源帳戶的表格階層。
 
 * 介面的左半部分是瀏覽器，顯示帳戶中包含的資料表清單。 介面也包含搜尋選項，可讓您快速識別要使用的來源資料。
 * 介面的右半部分是預覽面板，可讓您預覽最多100列的資料。
@@ -44,33 +44,33 @@ ht-degree: 1%
 >
 >搜尋來源資料選項適用於除Adobe Analytics、[!DNL Amazon Kinesis]和[!DNL Azure Event Hubs]之外的所有資料表來源。
 
-找到來源資料後，請選取資料表，然後選取&#x200B;**[!UICONTROL 下一步]**。
+找到來源資料後，請選取資料表，然後選取&#x200B;**[!UICONTROL Next]**。
 
 ![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## 提供資料流詳細資訊
 
-[!UICONTROL 資料流詳細資料]頁面可讓您選取要使用現有資料集還是新資料集。 在此過程中，您也可以設定[!UICONTROL 設定檔資料集]、[!UICONTROL 錯誤診斷]、[!UICONTROL 部分擷取]和[!UICONTROL 警報]的設定。
+[!UICONTROL Dataflow detail]頁面可讓您選取您要使用現有的資料集還是新的資料集。 在此程式中，您也可以設定[!UICONTROL Profile dataset]、[!UICONTROL Error diagnostics]、[!UICONTROL Partial ingestion]和[!UICONTROL Alerts]的設定。
 
 ![資料流詳細資料](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
 ### 使用現有的資料集
 
-若要將資料內嵌到現有的資料集中，請選取&#x200B;**[!UICONTROL 現有的資料集]**。 您可以使用[!UICONTROL 進階搜尋]選項或捲動下拉式選單中的現有資料集清單，來擷取現有資料集。 選取資料集後，請為資料流提供名稱和說明。
+若要將資料內嵌至現有的資料集，請選取&#x200B;**[!UICONTROL Existing dataset]**。 您可以使用[!UICONTROL Advanced search]選項或捲動下拉式選單中的現有資料集清單，來擷取現有資料集。 選取資料集後，請為資料流提供名稱和說明。
 
 ![現有的資料集](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
 
 ### 使用新資料集
 
-若要擷取到新的資料集，請選取&#x200B;**[!UICONTROL 新的資料集]**，然後提供輸出資料集名稱和選用的說明。 接下來，使用[!UICONTROL 進階搜尋]選項，或捲動下拉式選單中的現有結構描述清單，選取要對應的結構描述。 選取結構描述後，請為資料流提供名稱和說明。
+若要擷取至新的資料集，請選取&#x200B;**[!UICONTROL New dataset]**，然後提供輸出資料集名稱和選用的說明。 接下來，使用[!UICONTROL Advanced search]選項或捲動下拉式選單中的現有結構描述清單，選取要對應的結構描述。 選取結構描述後，請為資料流提供名稱和說明。
 
 ![新資料集](../../../images/tutorials/dataflow/table-based/new-dataset.png)
 
 ### 啟用[!DNL Profile]和錯誤診斷
 
-接著，選取「**[!UICONTROL 設定檔資料集]**」切換按鈕，啟用[!DNL Profile]的資料集。 這可讓您建立實體屬性和行為的整體檢視。 來自所有已啟用[!DNL Profile]的資料集的資料將包含在[!DNL Profile]中，而變更會在您儲存資料流時套用。
+接著，選取&#x200B;**[!UICONTROL Profile dataset]**&#x200B;切換以啟用[!DNL Profile]的資料集。 這可讓您建立實體屬性和行為的整體檢視。 來自所有已啟用[!DNL Profile]的資料集的資料將包含在[!DNL Profile]中，而變更會在您儲存資料流時套用。
 
-[!UICONTROL 錯誤診斷]可針對資料流中發生的任何錯誤記錄產生詳細的錯誤訊息，而[!UICONTROL 部分擷取]可讓您擷取包含錯誤的資料，最多可擷取到您手動定義的特定臨界值。 如需詳細資訊，請參閱[部分批次擷取總覽](../../../../ingestion/batch-ingestion/partial.md)。
+[!UICONTROL Error diagnostics]可針對資料流中發生的任何錯誤記錄產生詳細的錯誤訊息，而[!UICONTROL Partial ingestion]可讓您內嵌包含錯誤的資料，最多可達您手動定義的特定臨界值。 如需詳細資訊，請參閱[部分批次擷取總覽](../../../../ingestion/batch-ingestion/partial.md)。
 
 ![設定檔和錯誤](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
 
@@ -78,33 +78,33 @@ ht-degree: 1%
 
 您可以啟用警報以接收有關資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱來源警示](../alerts.md)的指南。
 
-當您完成提供詳細資料給資料流時，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供詳細資料給資料流時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ![個警示](../../../images/tutorials/dataflow/table-based/alerts.png)
 
 ## 將資料欄位對應至XDM結構描述
 
-[!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
+[!UICONTROL Mapping]步驟隨即顯示，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
 Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../data-prep/ui/mapping.md)。
 
 >[!NOTE]
 >
->對應到以模型為基礎的結構描述時，請確定來源資料包含必填欄位，例如主索引鍵和版本識別碼，或時間序列結構描述的時間戳記識別碼， 。
+>對應到關聯式結構描述時，請確保來源資料包含必填欄位，例如主索引鍵和版本識別碼，或時間序列結構描述的時間戳記識別碼， 。
 
 控制項資料行（例如`_change_request_type`）用於變更資料擷取，會在擷取期間讀取，但不會儲存在目標結構描述中。
 
-以模型為基礎的結構描述也支援使用主要和外部索引鍵對應的資料集之間的關係。
+關聯式結構描述也支援使用主索引鍵和外部索引鍵對應的資料集之間的關係。
 
-如需詳細資訊，請參閱[Data Mirror概觀](../../../../xdm/data-mirror/overview.md)和[模型架構技術參考](../../../../xdm/schema/model-based.md)。
+如需詳細資訊，請參閱[Data Mirror概觀](../../../../xdm/data-mirror/overview.md)和[關聯式結構描述技術參考](../../../../xdm/schema/relational.md)。
 
-成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
+成功對應來源資料後，請選取&#x200B;**[!UICONTROL Next]**。
 
 ![對應](../../../images/tutorials/dataflow/table-based/mapping.png)
 
 ## 排程內嵌執行
 
-[!UICONTROL 排程]步驟隨即顯示，允許您設定擷取排程，以使用已設定的對應自動擷取選取的來源資料。 根據預設，排程設定為`Once`。 若要調整您的擷取頻率，請選取&#x200B;**[!UICONTROL 頻率]**，然後從下拉式選單中選取選項。
+[!UICONTROL Scheduling]步驟會出現，允許您設定擷取排程，以使用設定的對應自動擷取所選的來源資料。 根據預設，排程設定為`Once`。 若要調整您的擷取頻率，請選取&#x200B;**[!UICONTROL Frequency]**，然後從下拉式選單中選取選項。
 
 >[!TIP]
 >
@@ -124,19 +124,19 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 | 間隔 | 選取頻率後，您就可以設定間隔設定，以建立每次擷取之間的時間範圍。 例如，如果您將頻率設為「天」，並將間隔設為15，則您的資料流將每隔15天執行一次。 您不能將間隔設定為零。 每個頻率的最小接受間隔值如下：<ul><li>**一次**：不適用</li><li>**分鐘**： 15</li><li>**小時**： 1</li><li>**天**： 1</li><li>**周**： 1</li></ul> |
 | 開始時間 | 預計執行的時間戳記，以UTC時區顯示。 |
 | 回填 | 回填會決定最初要擷取的資料。 如果已啟用回填，則會在第一次排程擷取期間擷取指定路徑中的所有目前檔案。 如果停用回填，則只會擷取在第一次內嵌執行到開始時間之間載入的檔案。 將不會擷取在開始時間之前載入的檔案。 |
-| 載入增量資料者： | 一個選項，其中包含一組型別、日期或時間的篩選來源結構描述欄位。 您為&#x200B;**[!UICONTROL 依]**&#x200B;載入增量資料所選取的欄位必須有UTC時區的日期時間值，才能正確載入增量資料。 所有以表格為基礎的批次來源都會挑選增量資料，方法是比較差異欄時間戳記值與對應的流程執行視窗UTC時間，然後複製來源中的資料（如果在UTC時間視窗中找到任何新資料）。 |
+| 載入增量資料者： | 一個選項，其中包含一組型別、日期或時間的篩選來源結構描述欄位。 您為&#x200B;**[!UICONTROL Load incremental data by]**&#x200B;選取的欄位必須有UTC時區的日期時間值，才能正確載入增量資料。 所有以表格為基礎的批次來源都會挑選增量資料，方法是比較差異欄時間戳記值與對應的流程執行視窗UTC時間，然後複製來源中的資料（如果在UTC時間視窗中找到任何新資料）。 |
 
 ![回填](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## 檢閱您的資料流
 
-**[!UICONTROL 檢閱]**&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
+**[!UICONTROL Review]**&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
 
-* **[!UICONTROL 連線]**：顯示來源型別、所選來源檔案的相關路徑，以及該來源檔案中的欄數。
-* **[!UICONTROL 指派資料集與對應欄位]**：顯示來源資料將擷取到的資料集，以及關聯的結構描述。 如果您使用以模型為基礎的結構描述，請確認必填欄位（例如主索引鍵和版本識別碼）已正確對應。 此外，請確定已正確設定任何變更資料擷取控制欄。 使用模型架構的資料集支援多個資料模型，並啟用[變更資料擷取工作流程](../../api/change-data-capture.md)。
-* **[!UICONTROL 排程]**：顯示內嵌排程的有效期間、頻率和間隔。
+* **[!UICONTROL Connection]**：顯示來源型別、所選來源檔案的相關路徑，以及該來源檔案中的欄數。
+* **[!UICONTROL Assign dataset & map fields]**：顯示要擷取來源資料的資料集以及相關結構描述。 如果您使用關聯式結構描述，請確認必填欄位（例如主索引鍵和版本識別碼）已正確對應。 此外，請確定已正確設定任何變更資料擷取控制欄。 使用關聯式結構描述的資料集支援多個資料模型，並啟用[變更資料擷取工作流程](../../api/change-data-capture.md)。
+* **[!UICONTROL Scheduling]**：顯示內嵌排程的有效期間、頻率和間隔。
 
-檢閱您的資料流後，請選取&#x200B;**[!UICONTROL 完成]**，並等待一些時間來建立資料流。
+檢閱您的資料流後，請選取「**[!UICONTROL Finish]**」並允許一段時間以建立資料流。
 
 ![檢閱](../../../images/tutorials/dataflow/table-based/review.png)
 
@@ -146,7 +146,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 ## 刪除您的資料流
 
-您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流程的詳細資訊，請參閱有關[在UI](../delete.md)中刪除資料流程的教學課程。
+您可以刪除不再需要的資料流，或是使用&#x200B;**[!UICONTROL Delete]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL Dataflows]**&#x200B;功能錯誤建立的資料流。 如需有關如何刪除資料流程的詳細資訊，請參閱有關[在UI](../delete.md)中刪除資料流程的教學課程。
 
 ## 後續步驟
 

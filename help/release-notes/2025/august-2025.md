@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2025 年 8 月)
 description: Adobe Experience Platform 2025 年 8 月版發行說明。
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
+source-git-commit: ba16b870b49ccd13cf927b9460e81976d8be0048
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 96%
+source-wordcount: '1474'
+ht-degree: 88%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform 的新功能及現有功能更新：
 
 ## 警報 {#alerts}
 
-Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型警報。您可以透過 Experience Platform 使用者介面中的「[!UICONTROL 警報]」標籤訂閱不同的警報規則，而且可以選擇在使用者介面本身內或透過電子郵件通知接收警報訊息。
+Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型警報。您可以透過Experience Platform使用者介面中的[!UICONTROL Alerts]標籤訂閱不同的警示規則，也可以選擇在UI本身或透過電子郵件通知接收警示訊息。
 
 **新功能**
 
@@ -102,8 +102,8 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 
 | 目標 | 說明 |
 | --- | --- |
-| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 從 2025 年 8 月 11 日起，在短期間，您可以看到兩張 **[!DNL Microsoft Bing]** 卡片在目標目錄中並排顯示。這是因為目標服務進行內部升級所致。現有的 **[!DNL Microsoft Bing]** 目標連接器已重新命名為 **[!UICONTROL (已棄用) Microsoft Bing]**，而您現在可以使用名為 **[!UICONTROL Microsoft Bing]** 的全新卡片。<br> 升級已經完成，並且已經從目標目錄移除棄用的卡片。請在目錄中使用 **[!UICONTROL Microsoft Bing]** 連線來建立新的啟用資料流。如果您已經有任何傳送至 **[!UICONTROL (已棄用) Microsoft Bing]** 目標的使用中資料流，該資料流將自動更新，您無需採取任何行動。<br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 進行此一升級後，在傳送至 [!DNL Microsoft Bing] 的資料流中，**已啟用輪廓的數量可能會下降**。此一下降是因為所有傳送到此目標平台的啟用資料流，都必須滿足 **ECID 對應要求**。 |
-| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) 和 [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) 目標的驗證過期詳細資料 | [!DNL LinkedIn] 目標的驗證過期資訊現在可直接在 Experience Platform 介面中查看，因此您可以查看驗證的過期時間，並在其對資料流造成任何中斷之前進行續訂。您可以在&#x200B;**[!UICONTROL 帳戶過期日期]**&#x200B;欄 (在&#x200B;**[[!UICONTROL 「帳戶」]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;或&#x200B;**[[!UICONTROL 「瀏覽」]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;索引標籤中) 監視您的權杖過期日。 |
+| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) 內部升級 | 從 2025 年 8 月 11 日起，在短期間，您可以看到兩張 **[!DNL Microsoft Bing]** 卡片在目標目錄中並排顯示。這是因為目標服務進行內部升級所致。現有的&#x200B;**[!DNL Microsoft Bing]**&#x200B;目的地聯結器已重新命名為&#x200B;**[!UICONTROL (Deprecated) Microsoft Bing]**，現在您可以使用名稱為&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;的新卡片。 <br> 升級已經完成，並且已經從目標目錄移除棄用的卡片。使用目錄中的&#x200B;**[!UICONTROL Microsoft Bing]**&#x200B;連線，以取得新的啟用資料流程。 如果您有任何前往&#x200B;**[!UICONTROL (Deprecated) Microsoft Bing]**&#x200B;目的地的作用中資料流，資料流將會自動更新，因此您不需要採取任何動作。 <br><br>如果您透過 [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 建立資料流，則您必須將 [!DNL flow spec ID] 和 [!DNL connection spec ID] 更新為下列值：<ul><li>流程規格 ID：`8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>連線規格 ID：`dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> 進行此一升級後，在傳送至 [!DNL Microsoft Bing] 的資料流中，**已啟用輪廓的數量可能會下降**。此一下降是因為所有傳送到此目標平台的啟用資料流，都必須滿足 **ECID 對應要求**。 |
+| [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) 和 [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) 目標的驗證過期詳細資料 | [!DNL LinkedIn] 目標的驗證過期資訊現在可直接在 Experience Platform 介面中查看，因此您可以查看驗證的過期時間，並在其對資料流造成任何中斷之前進行續訂。您可以從&#x200B;**[!UICONTROL Account expiration date]**&#x200B;或&#x200B;**[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;索引標籤中的&#x200B;**[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;欄監視權杖到期日。 |
 | [LinkedIn符合的對象](../../destinations/catalog/social/linkedin-b2b.md) [!DNL IDFA]身分支援移除 | 從2025年9月開始，您無法再將[!DNL IDFA]對應為目標身分，因為[!DNL IDFA]目的地不再支援[!DNL LinkedIn Matched Audiences]。 如需詳細資訊，請參閱[!DNL LinkedIn Matched Audiences]整合[檔案](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes)。 這項變更是因為LinkedIn的需求，與任何Experience Platform目的地服務升級無關。 |
 
 **全新或更新版功能**
@@ -120,7 +120,7 @@ XDM 是一種開放原始碼的規格，可為帶入 Experience Platform 的資�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 基於模型的結構描述 | 使用基於模型的結構描述來簡化資料建模。您現在可以利用全方位的操作範例和指南，更輕鬆地建立結構描述。目前，行銷活動協調的授權持有者可以使用這項功能，而且將在正式發佈時擴大開放予資料蒸餾器客戶使用，讓資料建模功能更容易取用且效率更高。 |
+| 關聯式結構描述 | 使用關聯式結構描述（先前稱為模型型結構描述）簡化資料模型。 您現在可以利用全方位的操作範例和指南，更輕鬆地建立結構描述。目前，行銷活動協調的授權持有者可以使用這項功能，而且將在正式發佈時擴大開放予資料蒸餾器客戶使用，讓資料建模功能更容易取用且效率更高。 |
 
 如需詳細資訊，請詳讀 [XDM 概觀](../../xdm/home.md)。
 

@@ -5,7 +5,7 @@ title: 使用流量服務API為雲端儲存空間來源建立資料流
 type: Tutorial
 description: 本教學課程涵蓋從第三方雲端儲存空間擷取資料，以及使用來源聯結器和API將資料帶入Experience Platform的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 2%
@@ -101,7 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | （選用）定義要擷取的壓縮檔案型別的屬性。 支援的壓縮檔案型別為： `bzip2`、`gzip`、`deflate`、`zipDeflate`、`tarGzip`和`tar`。 **注意**： `compressionType`屬性只能在擷取分隔檔案或JSON檔案時使用。 |
 | `params.path` | 您存取之來源檔案的路徑。 此引數指向個別檔案或整個資料夾。  **注意**：您可以使用星號來取代檔案名稱，以指定整個資料夾的擷取。 例如： `/acme/summerCampaign/*.csv`將會內嵌整個`/acme/summerCampaign/`資料夾。 |
 | `params.type` | 您正在擷取的來源資料檔案的檔案型別。 使用型別`file`來擷取個別檔案，並使用型別`folder`來擷取整個資料夾。 |
-| `params.cdcEnabled` | 表示是否啟用變更記錄擷取的布林值。 搭配以模型為基礎的結構描述使用時，變更資料擷取依賴於`_change_request_type`控制項資料行(`u` — upsert， `d` — delete)，該資料行會在擷取期間評估，但不會儲存在目標結構描述中。 下列雲端儲存空間來源支援此屬性： <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>如需此功能的概述，請參閱[Data Mirror概述](../../../../xdm/data-mirror/overview.md)。 如需實作詳細資訊，請閱讀在來源[中使用](../change-data-capture.md)變更資料擷取的指南以及[模型架構技術參考](../../../../xdm/schema/model-based.md)。 |
+| `params.cdcEnabled` | 表示是否啟用變更記錄擷取的布林值。 搭配關聯式結構描述使用時，變更資料擷取依賴於`_change_request_type`控制項資料行(`u` — upsert， `d` — delete)，該資料行會在擷取期間評估，但不會儲存在目標結構描述中。 下列雲端儲存空間來源支援此屬性： <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>如需此功能的概述，請參閱[Data Mirror概述](../../../../xdm/data-mirror/overview.md)。 如需實作詳細資訊，請閱讀在來源[中使用](../change-data-capture.md)變更資料擷取的指南[關聯式結構描述技術參考](../../../../xdm/schema/relational.md)。 |
 | `connectionSpec.id` | 與您特定的雲端儲存空間來源相關聯的連線規格ID。 如需連線規格ID的清單，請參閱[附錄](#appendix)。 |
 
 **回應**

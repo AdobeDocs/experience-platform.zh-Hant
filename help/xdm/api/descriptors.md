@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 描述項API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述項。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2916'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,11 @@ ht-degree: 1%
 
 本指南中使用的端點是[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
-除了標準描述項之外，[!DNL Schema Registry]還支援模型架構的描述項型別，例如&#x200B;**主索引鍵**、**版本**&#x200B;和&#x200B;**時間戳記**。 這些會強制唯一性、控制版本化，並在架構層級定義時間序列欄位。 如果您不熟悉以模型為基礎的結構描述，請先檢閱[Data Mirror概觀](../data-mirror/overview.md)和[以模型為基礎的結構描述技術參考](../schema/model-based.md)，然後再繼續。
+除了標準描述項之外，[!DNL Schema Registry]還支援關聯式結構描述的描述項型別，例如&#x200B;**主索引鍵**、**版本**&#x200B;和&#x200B;**時間戳記**。 這些會強制唯一性、控制版本化，並在架構層級定義時間序列欄位。 如果您不熟悉關聯式結構描述，請先檢閱[Data Mirror概觀](../data-mirror/overview.md)和[關聯式結構描述技術參考](../schema/relational.md)，然後再繼續。
+
+>[!NOTE]
+>
+>在Adobe Experience Platform檔案的舊版本中，關聯式結構描述先前稱為以模型為基礎的結構描述。 描述項功能和API端點維持不變。 僅更新術語，以求清晰明瞭。
 
 >[!IMPORTANT]
 >
@@ -316,7 +320,7 @@ curl -X DELETE \
 
 #### 身分描述項 {#identity-descriptor}
 
-身分描述項會指出「[!UICONTROL sourceSchema]」的「[!UICONTROL sourceProperty]」是[!DNL Identity]Experience Platform Identity Service[所說明的](../../identity-service/home.md)欄位。
+身分描述項會訊號&quot;[!UICONTROL sourceProperty]&quot;的&quot;[!UICONTROL sourceSchema]&quot;是[!DNL Identity]Experience Platform Identity Service[所說明的](../../identity-service/home.md)欄位。
 
 ```json
 {
@@ -397,7 +401,7 @@ curl -X DELETE \
 API支援兩種模式：
 
 - `xdm:descriptorOneToOne`：標準1:1關聯性。
-- `xdm:descriptorRelationship`：新工作和模型型結構描述的一般模式（支援基數、命名和非主索引鍵目標）。
+- `xdm:descriptorRelationship`：新工作和關聯式結構描述的一般模式（支援基數、命名和非主索引鍵目標）。
 
 ##### 一對一關係（標準結構描述）
 
@@ -427,9 +431,9 @@ API支援兩種模式：
 | `xdm:destinationVersion` | 參考結構描述的主要版本。 |
 | `xdm:destinationProperty` | （選用）參照結構描述中目標欄位的路徑。 如果省略此屬性，則任何包含相符參考身分描述項的欄位都會推斷目標欄位（請參閱下文）。 |
 
-##### 一般關係（以模型為基礎的結構描述，以及新專案的建議使用）
+##### 一般關係（關聯式結構描述及建議新專案使用）
 
-請將此描述項用於所有新實作和模型型結構描述。 它可讓您定義關係的基數（例如一對一或多對一）、指定關係名稱，以及連結至非主索引鍵（非主索引鍵）的目的地欄位。
+請將此描述項用於所有新實作和關聯式結構描述。 它可讓您定義關係的基數（例如一對一或多對一）、指定關係名稱，以及連結至非主索引鍵（非主索引鍵）的目的地欄位。
 
 下列範例顯示如何定義一般關係描述項。
 
@@ -474,7 +478,7 @@ API支援兩種模式：
 
 | 狀況 | 要使用的描述項 |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| 新的工作或模型架構 | `xdm:descriptorRelationship` |
+| 新工作或關聯式結構描述 | `xdm:descriptorRelationship` |
 | 標準結構描述中的現有1:1對應 | 繼續使用`xdm:descriptorOneToOne`，除非您只需要`xdm:descriptorRelationship`支援的功能。 |
 | 需要多對一或選用的基數(`1:1`， `1:0`， `M:1`， `M:0`) | `xdm:descriptorRelationship` |
 | UI/下游可讀性需要關係名稱或標題 | `xdm:descriptorRelationship` |
@@ -493,13 +497,13 @@ API支援兩種模式：
 | 基數 | 1:1 | 1:1， 1:0， M:1， M:0 （資訊） |
 | 目的地目標 | 身分/明確欄位 | 預設主索引鍵，或透過`xdm:destinationProperty`的非主索引鍵 |
 | 命名欄位 | 不支援 | `xdm:sourceToDestinationName`、`xdm:destinationToSourceName`和標題 |
-| 關聯式符合 | 有限 | 模型型結構描述的主要模式 |
+| 關聯式符合 | 有限 | 關聯式結構描述的主要模式 |
 
 ##### 限制和驗證
 
 定義一般關係描述項時，請遵循下列需求和建議：
 
-- 對於以模型為基礎的結構描述，請將來源欄位（外部索引鍵）放置在根層級。 這是目前擷取的技術限制，並非最佳實務建議。
+- 對於關聯式結構描述，請將來源欄位（外部索引鍵）放置在根層級。 這是目前擷取的技術限制，並非最佳實務建議。
 - 確保來源和目的地欄位的資料型別相容（數值、日期、布林值、字串）。
 - 請記住，基數僅供參考；儲存不會強制執行。 以`<source>:<destination>`格式指定基數。 接受的值為： `1:1`、`1:0`、`M:1`或`M:0`。
 
@@ -525,7 +529,7 @@ API支援兩種模式：
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，版本描述項顯示為&quot;[!UICONTROL 版本識別碼]&quot;。
+>在UI結構描述編輯器中，版本描述項顯示為「[!UICONTROL Version identifier]」。
 
 版本描述項(`xdm:descriptorVersion`)會指定一個欄位，以偵測並防止順序錯亂的變更事件發生衝突。
 
@@ -547,7 +551,7 @@ API支援兩種模式：
 
 >[!NOTE]
 >
->在UI結構描述編輯器中，時間戳記描述項會顯示為&quot;[!UICONTROL 時間戳記識別碼]&quot;。
+>在UI結構描述編輯器中，時間戳記描述項會顯示為「[!UICONTROL Timestamp identifier]」。
 
 時間戳記描述項(`xdm:descriptorTimestamp`)指定日期 — 時間欄位做為具有`"meta:behaviorType": "time-series"`的結構描述的時間戳記。
 
