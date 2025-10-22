@@ -82,7 +82,7 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | 功能 | 說明 |
 | --- | --- |
 | Adobe Analytics來源的資料集建立變更 | 在Adobe Analytics和Experience Platform之間的資料流建立程式中，會透過目錄服務建立資料集。 此資料集可當作資料著陸的容器。 目前，此程式涉及的資料來源ID會從Analytics報表套裝提取、傳送至「目錄服務」，然後與新建立的資料集建立關聯。 變更後，在資料集建立期間將無法再使用提供DataSource ID的選項。 因此，Analytics來源建立的新資料集在目錄服務中不會再有與其關聯的資料來源ID。 此變更僅適用於中繼資料，不會以任何方式變更資料集中的資料儲存。 不過，請務必注意，目錄服務所提供的資料來源ID將無法再用於Adobe Analytics新建立的資料集。 閱讀[Adobe Analytics來原始檔](../../sources/connectors/adobe-applications/analytics.md)，瞭解有關Adobe Analytics來源聯結器的詳細資訊。 |
-| [!DNL Google Ads]來源的一般可用性（僅限API） | [來源的 [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md)API版本現在為「一般可用性」。 已更新API檔案，以反映最新版本現在為`v21`，且Experience Platform支援所有版本v19及更高版本。 [ UI版本](../../sources/tutorials/ui/create/advertising/ads.md)仍保留在Beta版中，僅支援一次性內嵌。 若要使用增量資料擷取，請使用API路由。 |
+| [!DNL Google Ads]來源的一般可用性（僅限API） | [來源的 [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md)API版本現在為「一般可用性」。 已更新API檔案，以反映最新版本現在為`v21`，且Experience Platform支援所有版本v19及更高版本。 [&#x200B; UI版本](../../sources/tutorials/ui/create/advertising/ads.md)仍保留在Beta版中，僅支援一次性內嵌。 若要使用增量資料擷取，請使用API路由。 |
 | [!DNL Azure Event Hubs]虛擬網路支援 | Adobe現在明確支援與[[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md)的虛擬網路連線，可透過私人網路而不是公用網路傳輸資料。 客戶可允許列出Experience Platform VNet，以透過Azure私人骨幹私下路由事件中樞流量，為資料擷取工作流程提供增強的安全性和合規性。 |
 
 {style="table-layout:auto"}
