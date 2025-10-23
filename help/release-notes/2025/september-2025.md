@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2025 年 9 月)
 description: Adobe Experience Platform 2025 年 9 月版發行說明。
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: 96b9fcd8bfb4ff62eb9d4adce2e486782d918344
+source-git-commit: 1e1e91a4006a55a94c64bbc8e89ff3e2e58c4918
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 85%
@@ -68,7 +68,7 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 
 | 目標 | 說明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md)連接器 | 新的 [!DNL Snowflake Batch] 連接器現已可用，在特定使用案例中可用作串流連接器的替代選擇。 |
+| [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/warehouses/snowflake-batch.md)連接器 | 新的 [!DNL Snowflake Batch] 連接器現已可用，在特定使用案例中可用作串流連接器的替代選擇。 |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) 加密支援 | 您現在可以附加 RSA 格式的公開金鑰，將所匯出的檔案加密，讓您的敏感資訊獲得與其他雲端儲存目標相同等級的安全性。 |
 | [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) 目標的驗證過期詳細資料 | [!DNL Pinterest] 目標的驗證過期資訊現在可直接在 Experience Platform 介面中查看，因此您可以查看驗證的過期時間，並在其對資料流造成任何中斷之前進行續訂。您可以從&#x200B;**[!UICONTROL Account expiration date]**&#x200B;或&#x200B;**[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)**&#x200B;索引標籤中的&#x200B;**[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)**&#x200B;欄監視權杖到期日。 |
 
@@ -147,6 +147,6 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | [!DNL Snowflake]金鑰對驗證支援 | 支援金鑰對驗證，增強 Snowflake 連線的安全性。基本驗證 (使用者名稱/密碼) 將於 2025 年 11 月前棄用，因此建議客戶改為使用金鑰對驗證以提高安全性。如需詳細資訊，請閱讀 [[!DNL Snowflake]  文件](../../sources/connectors/databases/snowflake.md)。 |
 | [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | 使用 [[!DNL Capillary Streaming Events]  來源](../../sources/connectors/loyalty/capillary.md)將忠誠度資料從您的 [!DNL Capillary] 帳戶串流至 Experience Platform。 |
 | [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | 使用[[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md)將[!DNL Relay Network]整合中的事件資料串流至Experience Platform。 |
-| 正式發行在來源中支援私人連結的功能 | 您現在可以針對特定一組來源使用&#x200B;**私人連結**。使用此功能來建立您的來源可以連接的私人端點。您可以利用私人端點來設定繞過公共網際網路的連線和資料流，為敏感資料提供強化的安全性和網路隔離。對於以下來源均支援使用私人連結： <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. 如需詳細資訊，請參閱在 [API](../../sources/tutorials/api/private-link.md) 和 [&#x200B; UI](../../sources/tutorials/ui/private-link.md) 中建立私人連結的指南。 |
+| 正式發行在來源中支援私人連結的功能 | 您現在可以針對特定一組來源使用&#x200B;**私人連結**。使用此功能來建立您的來源可以連接的私人端點。您可以利用私人端點來設定繞過公共網際網路的連線和資料流，為敏感資料提供強化的安全性和網路隔離。對於以下來源均支援使用私人連結： <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. 如需詳細資訊，請參閱在 [API](../../sources/tutorials/api/private-link.md) 和 [ UI](../../sources/tutorials/ui/private-link.md) 中建立私人連結的指南。 |
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。

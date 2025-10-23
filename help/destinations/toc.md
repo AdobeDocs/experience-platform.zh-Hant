@@ -5,7 +5,7 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 73241750bdb310abf28cd4b1bcb4ba3ec43a6f39
+source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
 workflow-type: tm+mt
 source-wordcount: '1325'
 ht-degree: 5%
@@ -33,7 +33,7 @@ ht-degree: 5%
    * [刪除目的地帳戶](./api/delete-destination-account.md)
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
    * [匯出資料集](/help/destinations/api/export-datasets.md)
-   * [排序及篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=zh-Hant#use-cases)
+   * [排序及篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI 指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
@@ -71,7 +71,7 @@ ht-degree: 5%
       * [（舊版） (V2) Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage人員同步連線](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant)
+      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [同盟對象組合連線](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising目的地{#advertising}
       * [(Beta) Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
@@ -146,8 +146,6 @@ ht-degree: 5%
       * [資料登陸區域](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [sftp連線](./catalog/cloud-storage/sftp.md)
-      * [(Beta) Snowflake串流連線](./catalog/cloud-storage/snowflake.md)
-      * [(Beta) Snowflake批次連線](./catalog/cloud-storage/snowflake-batch.md)
       * [檔案式雲端儲存目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 客戶關係管理(CRM)目的地 {#crm}
       * [Hubspot連線](./catalog/crm/hubspot.md)
@@ -237,6 +235,9 @@ ht-degree: 5%
       * [Medallia連線](./catalog/voice/medallia-connector.md)
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [交談URL收件匣擴充功能](./catalog/voice/talkurl.md)
+   * 倉儲目的地 {#warehouse}
+      * [Snowflake批次連線](./catalog/warehouses/snowflake-batch.md)
+      * [Snowflake串流連線](./catalog/warehouses/snowflake.md)
 * Destination SDK {#destination-sdk}
    * [概觀](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)

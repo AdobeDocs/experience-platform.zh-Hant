@@ -3,9 +3,9 @@ keywords: 目錄；目錄
 title: 目的地目錄概觀
 description: 目的地目錄會提供準備好接收資料的可用目的地清單。 這些目的地包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -27,15 +27,15 @@ ht-degree: 0%
 
 您可以在Adobe Experience Platform中將資料啟用至不同的目的地類別。 以下連結提供有關每個目的地類別的詳細資訊：
 
-- [Adobe[!UICONTROL 目的地]總覽](adobe/overview.md)
-- [[!UICONTROL Advertising] [!UICONTROL 目的地]總覽](advertising/overview.md)
-- [[!UICONTROL Analytics] [!UICONTROL 目的地]總覽](analytics/overview.md)
-- [[!UICONTROL 雲端儲存空間] [!UICONTROL 目的地]總覽](cloud-storage/overview.md)
-- [[!UICONTROL 資料管理平台] (DMP) [!UICONTROL 目的地]總覽](data-management/overview.md)
-- [[!UICONTROL 電子郵件行銷] [!UICONTROL 目的地]總覽](email-marketing/overview.md)
-- [[!UICONTROL 行動參與] [!UICONTROL 目的地]總覽](mobile-engagement/overview.md)
-- [[!UICONTROL Personalization] [!UICONTROL 目的地]總覽](personalization/overview.md)
-- [[!UICONTROL 社交] [!UICONTROL 目的地]總覽](social/overview.md)
-- [[!UICONTROL 串流] [!UICONTROL 目的地] （連結至HTTP目的地）](streaming/http-destination.md)
-- [[!UICONTROL 調查] [!UICONTROL 目的地]總覽](survey/overview.md)
-- [[!UICONTROL 客戶的聲音] [!UICONTROL 目的地]總覽](voice/overview.md)
+- [Adobe [!UICONTROL destinations]總覽](adobe/overview.md)
+- [[!UICONTROL Advertising] [!UICONTROL destinations]總覽](advertising/overview.md)
+- [[!UICONTROL Analytics] [!UICONTROL destinations]總覽](analytics/overview.md)
+- [[!UICONTROL Cloud storage] [!UICONTROL destinations]總覽](cloud-storage/overview.md)
+- [[!UICONTROL Data Management Platform] (DMP) [!UICONTROL destinations]總覽](data-management/overview.md)
+- [[!UICONTROL Email marketing] [!UICONTROL destinations]總覽](email-marketing/overview.md)
+- [[!UICONTROL Mobile engagement] [!UICONTROL destinations]總覽](mobile-engagement/overview.md)
+- [[!UICONTROL Personalization] [!UICONTROL destinations]總覽](personalization/overview.md)
+- [[!UICONTROL Social] [!UICONTROL destinations]總覽](social/overview.md)
+- [[!UICONTROL Streaming] [!UICONTROL destinations] （連結至HTTP目的地）](streaming/http-destination.md)
+- [[!UICONTROL Survey] [!UICONTROL destinations]總覽](survey/overview.md)
+- [[!UICONTROL Voice of the Customer] [!UICONTROL destinations]總覽](voice/overview.md)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: c024637ab73a3a1c3d2512f9879303b4e4d830a9
+source-git-commit: a4db84f5918e99b3c6dd63ff5a25063b89be2ba7
 workflow-type: tm+mt
 source-wordcount: '3484'
 ht-degree: 10%
@@ -137,7 +137,7 @@ ht-degree: 10%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -329,8 +329,8 @@ ht-degree: 10%
 >   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
 >   - [[!DNL Salesforce Marketing Cloud] (API)](../../destinations/catalog/email-marketing/salesforce-marketing-cloud.md)
 >   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/warehouses/snowflake-batch.md)
 >   - [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md)
->   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
 >   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
 >   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - 批次（以檔案為基礎）目的地
