@@ -6,7 +6,7 @@ description: 瞭解如何使用資料使用標籤來協助強制執行Adobe Expe
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '786'
 ht-degree: 16%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
 >title="控制敏感和受保護資料的存取權"
->abstract="<h2>說明</h2><p>控制特定資料屬性和/或區段的存取權，使您能夠為操作 Experience Platform 使用案例的各種角色和團隊設計靈活的工作流程。</p>"
+>abstract="<h2>說明</h2><p>控制特定資料屬性和/或區段的存取權，使您能夠為操作 Experience Platform 使用案例的各種人物誌和團隊設計靈活的工作流程。</p>"
 
 Adobe Experience Platform可讓您將資料使用標籤套用至資料集和欄位，並根據相關的[資料治理原則](../policies/overview.md)和[存取控制原則](../../access-control/abac/ui/policies.md)對每個資料集和欄位進行分類。
 
@@ -44,7 +44,7 @@ Adobe Experience Platform可讓您將資料使用標籤套用至資料集和欄�
 
 [!DNL Experience Platform]能夠與Adobe Audience Manager共用區段。 套用至Audience Manager區段的任何資料匯出控制項都會轉譯為[!DNL Experience Platform]資料控管所識別的同等標籤和行銷動作。
 
-如需瞭解特定資料匯出控制項如何對應至[!DNL Experience Platform]中的資料使用標籤，請參閱[Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aam-data-export-control-in-aep)。
+如需瞭解特定資料匯出控制項如何對應至[!DNL Experience Platform]中的資料使用標籤，請參閱[Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
 
 ## 管理 [!DNL Experience Platform] 中的資料使用標籤 {#manage-labels}
 
@@ -57,7 +57,7 @@ Adobe Experience Platform可讓您將資料使用標籤套用至資料集和欄�
 
 ### 使用UI
 
-[!DNL Experience Platform] UI中的&#x200B;**[!UICONTROL 原則]**&#x200B;工作區可讓您檢視和管理組織的核心和自訂標籤。 您可以使用&#x200B;**[!UICONTROL 結構描述]**&#x200B;工作區來[將標籤套用至您的Experience Data Model (XDM)結構描述](../../xdm/tutorials/labels.md)，或透過閱讀資料使用標籤使用者指南，瞭解如何[在&#x200B;**[!UICONTROL 原則]** UI](./user-guide.md)中建立和管理自訂標籤。
+**[!UICONTROL Policies]** UI中的[!DNL Experience Platform]工作區可讓您檢視和管理組織的核心和自訂標籤。 您可以使用&#x200B;**[!UICONTROL Schemas]**&#x200B;工作區來[將標籤套用至您的Experience Data Model (XDM)結構描述](../../xdm/tutorials/labels.md)，或透過閱讀資料使用標籤使用手冊，瞭解如何[在&#x200B;**[!UICONTROL Policies]** UI](./user-guide.md)中建立和管理自訂標籤。
 
 >[!IMPORTANT]
 >
@@ -65,7 +65,7 @@ Adobe Experience Platform可讓您將資料使用標籤套用至資料集和欄�
 
 ### 使用API
 
-[原則服務API](https://www.adobe.io/experience-platform-apis/references/policy-service/)中的`/labels`端點可讓您以程式設計方式管理資料使用標籤，包括建立自訂標籤。 如需詳細資訊，請參閱[標籤端點指南](../api/labels.md)。
+`/labels`原則服務API[中的](https://www.adobe.io/experience-platform-apis/references/policy-service/)端點可讓您以程式設計方式管理資料使用標籤，包括建立自訂標籤。 如需詳細資訊，請參閱[標籤端點指南](../api/labels.md)。
 
 [資料集服務API](https://www.adobe.io/experience-platform-apis/references/dataset-service/)用於管理資料集和欄位的標籤。 如需詳細資訊，請參閱[管理資料集標籤](./dataset-api.md)的指南。
 
