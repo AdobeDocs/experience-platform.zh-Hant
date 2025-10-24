@@ -56,7 +56,7 @@ ht-degree: 3%
 若要將存取權標籤套用至特定資料流：
 
 1. 導覽至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**，並找出您要限制使用者存取的目的地資料流。
-1. 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯詳細資料控制項](/help/images/icons/key.png) **[!UICONTROL Apply access labels]**控制項來新增標籤並管理資料流的現有標籤。
+1. 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯詳細資料控制項](/help/images/icons/key.png) **[!UICONTROL Apply access labels]**&#x200B;控制項來新增標籤並管理資料流的現有標籤。
    ![在目的地工作區的瀏覽檢視中選取[套用存取標籤]。](/help/access-control/images/olac/apply-access-labels.png)
 1. 選取您要新增至目的地資料流的標籤，並選取&#x200B;**[!UICONTROL Save]**。
    ![選取中應套用至目的地資料流的存取權標籤。](/help/access-control/images/olac/view-access-labels.png)
