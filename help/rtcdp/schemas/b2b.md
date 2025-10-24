@@ -2,7 +2,7 @@
 title: Real-Time Customer Data Platform B2B edition中的結構描述
 description: 概述Experience Data Model (XDM)結構描述在Adobe Real-Time Customer Data Platform B2B edition中的角色。
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 0191fc8419c696d8cd114a5eb575b8cc0a815a72
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ Adobe Real-Time Customer Data Platform B2B edition提供數個標準[體驗資�
 
 >[!IMPORTANT]
 >
->B2B結構描述可用於Experience Platform應用程式(例如，[Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition))。 <br/>但是，您必須擁有Real-Time CDP B2B edition的存取權，才能讓（設定檔中的） B2B結構描述參與[即時客戶設定檔](../../profile/home.md)。
+>B2B結構描述可用於Experience Platform應用程式(例如，[Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition))。 <br/>但是，您必須擁有Real-Time CDP B2B edition的存取權，才能讓（設定檔中的） B2B結構描述參與[即時客戶設定檔](../../profile/home.md)。
 
 Real-Time CDP B2B edition提供下列標準類別：
 
