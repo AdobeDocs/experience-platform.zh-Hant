@@ -2,7 +2,7 @@
 title: Identity Service連結邏輯
 description: 瞭解Identity Service如何連結不同的身分，以建立客戶的完整檢視。
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -23,10 +23,6 @@ ht-degree: 3%
 * **設定檔記錄**：這些身分通常來自CRM系統。
 * **體驗事件**：這些身分識別通常來自WebSDK實作或Adobe Analytics來源。
 
->[!IMPORTANT]
->
->Identity Service區分大小寫。 例如，**abc<span>@gmail.com**&#x200B;和&#x200B;**ABC<span>@GMAIL.COM**&#x200B;會被視為兩個個別的電子郵件身分識別。
-
 ## 建立連結的語意意義
 
 身分代表真實世界的實體。 如果在兩個身分之間建立了連結，則表示兩個身分會彼此相關聯。 以下範例說明此概念：
@@ -44,6 +40,7 @@ ht-degree: 3%
 
 * 身分名稱空間是指定的身分值目標的前後關聯。 常見的身分識別名稱空間範例包括CRMID、電子郵件和電話。
 * 身分值是代表真實世界實體的字串。 例如：「julien<span>@acme.com」可以是電子郵件名稱空間的身分值，而555-555-1234可以是電話名稱空間的對應身分值。
+* Identity Service區分大小寫。 例如，**julien<span>@gmail.com**&#x200B;和&#x200B;**JULIEN<span>@GMAIL.COM**&#x200B;會被視為兩個個別的電子郵件身分識別。
 
 >[!TIP]
 >
