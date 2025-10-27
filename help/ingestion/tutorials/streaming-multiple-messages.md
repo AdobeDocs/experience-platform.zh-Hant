@@ -5,9 +5,9 @@ title: 在單一HTTP要求中傳送多則訊息
 type: Tutorial
 description: 本檔案提供的教學課程，說明如何使用串流擷取，在單一HTTP請求中傳送多則訊息至Adobe Experience Platform。
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31c00e69dd92f7c3232e09f02da36c60cd8cf486
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1483'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 以下範例說明如何在單一HTTP請求中，將多則訊息傳送至特定資料集。 在訊息標題中插入資料集ID，讓該訊息直接內嵌到其中。
 
-您可以使用[!DNL Experience Platform] UI或API中的清單操作，取得現有資料集的識別碼。 您可以在[Experience Platform](https://platform.adobe.com)上找到資料集ID，方法是前往&#x200B;**[!UICONTROL 資料集]**&#x200B;索引標籤，按一下您想要ID的資料集，然後從&#x200B;**[!UICONTROL 資訊]**&#x200B;索引標籤上的資料集ID欄位複製字串。 如需有關如何使用API擷取資料集的資訊，請參閱[目錄服務總覽](../../catalog/home.md)。
+您可以使用[!DNL Experience Platform] UI或API中的清單操作，取得現有資料集的識別碼。 您可以在[Experience Platform](https://platform.adobe.com)上找到資料集ID，方法是前往&#x200B;**[!UICONTROL Datasets]**&#x200B;索引標籤，按一下您要該ID的資料集，然後從&#x200B;**[!UICONTROL Info]**&#x200B;索引標籤上的資料集ID欄位複製字串。 如需有關如何使用API擷取資料集的資訊，請參閱[目錄服務總覽](../../catalog/home.md)。
 
 您可以建立新的資料集，而不使用現有的資料集。 如需使用API建立資料集的詳細資訊，請參閱[使用API建立資料集](../../catalog/api/create-dataset.md)教學課程。
 
@@ -68,7 +68,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -78,7 +78,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -127,7 +127,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -137,7 +137,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -244,7 +244,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -254,7 +254,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -303,7 +303,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -314,7 +314,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
         "datasetId": "{DATASET_ID}",
@@ -324,7 +324,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -373,7 +373,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
       "header": {
         "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-          "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+          "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
@@ -383,7 +383,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -498,7 +498,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
         "xdmMeta": {
           "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
           }
         },
         "xdmEntity": {
@@ -508,7 +508,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
     },
 ```
 
-第三個訊息因標頭中使用無效的組織ID而失敗。 組織必須符合您嘗試張貼到的{CONNECTION_ID}。 若要判斷哪一個組織識別碼符合您正在使用的串流連線，您可以使用[[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)執行`GET inlet`要求。 如需如何擷取先前建立的串流連線的範例，請參閱[擷取串流連線](./create-streaming-connection.md#get-data-collection-url)。
+第三個訊息因標頭中使用無效的組織ID而失敗。 組織必須符合您嘗試張貼到的{CONNECTION_ID}。 若要判斷哪一個組織識別碼符合您正在使用的串流連線，您可以使用`GET inlet`[[!DNL Streaming Ingestion API]執行](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)要求。 如需如何擷取先前建立的串流連線的範例，請參閱[擷取串流連線](./create-streaming-connection.md#get-data-collection-url)。
 
 第四則訊息失敗，因為它未遵循預期的XDM結構描述。 要求標頭和內文中包含的`xdmSchema`不符合`{DATASET_ID}`的XDM結構描述。 更正訊息標頭與內文中的結構描述，可讓結構描述通過DCCS驗證，並成功傳送至[!DNL Experience Platform]。 訊息本文也必須更新以符合`{DATASET_ID}`的XDM結構描述，才能在[!DNL Experience Platform]上傳遞串流驗證。 如需有關成功串流至Experience Platform的訊息有何動作的詳細資訊，請參閱本教學課程的[確認已擷取的訊息](#confirm-messages-ingested)區段。
 
@@ -523,7 +523,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 通過DCCS驗證的訊息會串流至[!DNL Experience Platform]。 在[!DNL Experience Platform]，批次訊息在被擷取到[!DNL Data Lake]之前，會先透過串流驗證進行測試。 批次的狀態（無論是否成功）會顯示在`{DATASET_ID}`所指定的資料集中。
 
-您可以使用[Experience Platform UI](https://platform.adobe.com)檢視成功串流至[!DNL Experience Platform]的批次訊息的狀態，方法是前往&#x200B;**[!UICONTROL 資料集]**&#x200B;標籤，按一下您要串流至的資料集，然後檢查&#x200B;**[!UICONTROL 資料集活動]**&#x200B;標籤。
+您可以使用[!DNL Experience Platform]Experience Platform UI[檢視成功串流至](https://platform.adobe.com)的批次訊息的狀態，方法是前往&#x200B;**[!UICONTROL Datasets]**&#x200B;標籤，按一下您要串流至的資料集，然後檢查&#x200B;**[!UICONTROL Dataset Activity]**&#x200B;標籤。
 
 在[!DNL Experience Platform]上通過串流驗證的批次訊息已擷取到[!DNL Data Lake]。 然後這些訊息便可用於分析或匯出。
 
