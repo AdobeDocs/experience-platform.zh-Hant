@@ -1,8 +1,8 @@
 ---
 title: Adform
 description: Adform是程式化媒體購買和銷售解決方案的領先供應商。 將Adform連線至Adobe Experience Platform後，您就可以根據Experience Cloud ID (ECID)，透過Adform啟用第一方對象。
-last-substantial-update: 2025-10-22T00:00:00Z
-source-git-commit: f7fd7a83f6d047877697b72e78ac0d4b08c0ff00
+last-substantial-update: 2025-10-23T00:00:00Z
+source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 3%
@@ -28,16 +28,16 @@ Adform是程式化媒體購買和銷售解決方案的領先供應商。 將Adfo
 
 使用此目的地將Adobe Real-Time CDP對象傳送至Adform，以根據Experience Cloud ID (ECID)和Adform的ID Fusion進行啟用。 Adform的ID Fusion是Adform的ID解析服務，可讓您根據Experience Cloud ID (ECID)啟用第一方對象。
 
-一個常見案例是根據Experience Cloud ID (ECID)重新鎖定網站或應用程式的網站訪客。 您只需要透過隨時可用的[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform) Adform擴充功能，將Experience Cloud ID (ECID)傳送至Adform。 之後您可以透過Adform目的地與Adform共用對象，以進行啟用 — 僅根據Experience Cloud ID (ECID)。
+一個常見案例是根據Experience Cloud ID (ECID)重新鎖定網站或應用程式的網站訪客。 您只需要透過隨時可用的[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform擴充功能，將Experience Cloud ID (ECID)傳送至Adform。 之後您可以透過Adform目的地與Adform共用對象，以進行啟用 — 僅根據Experience Cloud ID (ECID)。
 
 ## 先決條件 {#prerequisites}
 
 * 您必須是現有Adform客戶才能使用此目的地。
 * 您需要擁有Adform對象基礎資料連線認證。
    * 如果您沒有Adform對象基礎資料連線認證，請聯絡您的Adform代表。
-* 若要正確同步，您必須從實體與Adform網站追蹤建立[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform)連線。
+* 若要正確同步，您必須從實體與Adform網站追蹤建立[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)連線。
    * 如果您沒有從實體到Adform網站追蹤的事件串流或使用者端連線，請聯絡您的Adform代表。
-   * Adform提供[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)和[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform)的Adobe Experience Cloud擴充功能。
+   * Adform提供[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)和[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)的Adobe Experience Cloud擴充功能。
 
 
 ## 支援的身分 {#supported-identities}

@@ -1,9 +1,10 @@
 ---
 title: Snowflake串流連線
 description: 建立即時Snowflake資料共用，以直接將串流對象更新作為共用表格傳送到您的帳戶。
+last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 59df2c6a0fb5d9dbdd10b52d82fb6b94f5083c3a
+source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 3%
