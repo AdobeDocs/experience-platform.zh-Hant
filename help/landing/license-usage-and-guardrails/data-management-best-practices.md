@@ -2,9 +2,9 @@
 title: 資料管理授權權益最佳實務
 description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳做法及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
+source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
 workflow-type: tm+mt
-source-wordcount: '2338'
+source-wordcount: '2957'
 ht-degree: 1%
 
 ---
@@ -171,7 +171,103 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 
 * 使用[授權使用量儀表板](../../dashboards/guides/license-usage.md)追蹤及監控客戶使用趨勢。 這可讓您搶先掌握可能出現的使用過量。
 * 識別細分和個人化使用案例所需的事件，以設定[擷取篩選器](#ingestion-filters)。 這可讓您僅傳送使用案例所需的重要事件。
-* 確保您只有區段和個人化使用案例所需的設定檔[&#128279;](#ingestion-filters)的已啟用資料集。
+* 確保您只有區段和個人化使用案例所需的設定檔[的](#ingestion-filters)已啟用資料集。
 * 設定[體驗事件有效期](../../catalog/datasets/user-guide.md#data-retention-policy)和[假名設定檔資料有效期](../../profile/pseudonymous-profiles.md)，以取得高頻資料，例如Web資料。
-* 為資料湖中的體驗事件資料集[&#128279;](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md)設定存留時間(TTL)保留原則，以自動移除過時的記錄，並根據您的授權權益最佳化儲存空間使用量。
+* 為資料湖中的體驗事件資料集[設定](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md)存留時間(TTL)保留原則，以自動移除過時的記錄，並根據您的授權權益最佳化儲存空間使用量。
 * 請定期檢查[設定檔組合報告](#profile-store-composition-reports)，以瞭解您的設定檔存放區組合。 這可讓您瞭解對授權使用量消耗貢獻最大的資料來源。
+
+## 使用案例：授權使用合規性
+
+### 為何考慮此使用案例
+
+透過確保資料湖和設定檔儲存的&#x200B;**授權使用規定**&#x200B;合規性，您就可以放心地避免使用過量、最佳化成本，並調整資料保留政策以符合您的業務需求。
+
+### 必要條件和規劃
+
+在您的計畫處理中，考量下列必要條件：
+
+* **存取和許可權**：
+   * 確定您擁有&#x200B;**管理資料集**&#x200B;使用體驗事件TTL的許可權。
+   * 確定您有&#x200B;**管理設定檔設定**&#x200B;可使用假名設定檔TTL。
+* **瞭解資料保留原則**：
+   * 有關資料保留和法規遵循的組織政策
+   * 資料分析和細分回顧期間的業務需求
+
+### 您將使用的UI功能、Experience Platform元件和Experience Cloud產品
+
+若要成功實作此使用案例，您必須使用Adobe Experience Platform的多個區域。 請確定您擁有這些區域必要的屬性型存取控制許可權，或要求系統管理員授與這些許可權。
+
+* 授權使用情況儀表板 — 在沙箱層級檢視您目前的權益使用情況。
+* 資料集管理 — 監控及管理資料集層級的保留政策。
+* 對象（即時客戶個人檔案） — 確保細分規則回顧視窗與資料保留視窗一致。
+* 監視和警報 — 追蹤更新並接收資料集保留操作的深入分析。
+
+### 如何實現使用案例：逐步說明
+
+請閱讀以下章節，包含進一步檔案的連結，以完成上述高階概觀中的每個步驟。
+
+**檢查您目前的授權使用量**
+
+首先，導覽至&#x200B;**授權使用儀表板**，並在沙箱層級檢閱您的軟體權利檔案使用情況。
+
+>[!BEGINTABS]
+
+>[!TAB 生產沙箱]
+
+使用[!UICONTROL Metrics]介面檢視您的授權使用量度。 此介面預設會顯示您生產沙箱的資訊。
+
+![針對生產沙箱顯示授權使用量度的授權使用儀表板UI。](../images/data-management/prod-sandbox.png)
+
+>[!TAB 開發沙箱]
+
+選取[!UICONTROL Development]以檢視與您的開發沙箱相關的授權使用量度。
+
+![授權使用儀表板UI顯示開發沙箱的授權使用量度。](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
+
+如需詳細資訊，請使用授權使用儀表板[閱讀有關](../../dashboards/guides/license-usage.md)的檔案。
+
+**分析資料集層級的儲存使用量**
+
+使用&#x200B;**資料集瀏覽檢視**，檢閱資料湖和即時客戶個人檔案的資料集使用量度。 選取&#x200B;**[!UICONTROL Data Lake Storage]**&#x200B;或&#x200B;**[!UICONTROL Profile Storage]**&#x200B;的欄標題，然後從彈出式面板中選取&#x200B;**[!UICONTROL Sort Descending]**。
+
+>[!BEGINTABS]
+
+>[!TAB 資料湖儲存空間]
+
+Data Lake中的資料集是依儲存大小排序。 使用此功能來識別資料湖中儲存空間最大的消費者。
+
+![資料湖中的資料集從最大到最小排序。](../images/data-management/data-lake-storage.png)
+
+>[!TAB 設定檔儲存空間]
+
+設定檔中的資料集會依儲存大小排序。 使用此功能來識別設定檔中儲存空間的最大消費者。
+
+![設定檔中的資料集從最大到最小排序。](../images/data-management/profile-storage.png)
+
+>[!ENDTABS]
+
+**評估並設定保留規則**
+
+接著，根據Analytics和Segmentation的授許可權制和業務需求，判斷資料集是否有適當的保留政策。 若要檢視資料集的保留原則，請選取資料集旁的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL Set data retention policy]**。
+
+![包含資料集選項的快顯面板，包括「設定資料保留原則」](../images/data-management/set-retention-policy.png)
+
+*[!UICONTROL Set dataset retention]*&#x200B;介面出現。 使用此介面為您的資料集設定保留政策。 您也可以用它來檢視資料集在資料湖或設定檔中消耗多少儲存空間。
+
+![「設定資料集保留」介面。](../images/data-management/dataset-retention.png)
+
+您可以使用影響預測器，進一步分析資料集的保留影響。 選取&#x200B;**[!UICONTROL View ExperienceEvent data distribution]**&#x200B;以檢視顯示保留期間和設定為到期之儲存空間總百分比的圖表。
+
+完成後，選取&#x200B;**[!UICONTROL Save]**
+
+![資料集保留介面中的影響預測器。](../images/data-management/impact-forecaster.png)
+
+**驗證保留變更**
+
+套用保留原則後，您就可以使用下列工具來驗證變更：
+
+* 在資料集瀏覽檢視中[資料集使用量度](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics)。
+* [監視儀表板](../../dataflows/ui/monitor.md)可檢視和分析保留的影響。
+* [授權使用儀表板](../../dashboards/guides/license-usage.md)可檢視每日快照、預測趨勢和沙箱層級的深入分析。
