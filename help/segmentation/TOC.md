@@ -5,9 +5,9 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置客群。
 feature: Segments
 role: User
-source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
+source-git-commit: 0f1ccaf9ea698737eccc25cec6f5b46b7184fc11
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '210'
 ht-degree: 43%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 43%
 
 - [Segmentation Service概述](home.md)
 - [區段資料型別](data-types.md)
-- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant#segmentation-guardrails)
+- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - 分段API {#api}
    - [概觀](api/overview.md)
    - [快速入門](api/getting-started.md)
@@ -35,6 +35,7 @@ ht-degree: 43%
    - [受眾控制面板](ui/audience-dashboard.md)
    - [Audience Portal](ui/audience-portal.md)
    - [客群構成](ui/audience-composition.md)
+   - [對象構成增強功能](ui/composition-enchancements.md)
    - [客戶細分工具](ui/segment-builder.md)
    - [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)
    - [忽略年份時間限制更新](ui/ignore-year.md)
