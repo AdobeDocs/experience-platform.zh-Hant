@@ -4,9 +4,9 @@ title: 預覽範例狀態（設定檔預覽） API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分佈，並產生顯示資料集重疊、身分重疊和未拼接設定檔的報告。
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2904'
 ht-degree: 1%
 
 ---
@@ -37,12 +37,12 @@ Adobe Experience Platform可讓您從多個來源擷取客戶資料，以便為�
 
 ## 如何觸發範例作業
 
-啟用即時客戶個人檔案的資料擷取到[!DNL Experience Platform]後，會儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過5%，則會觸發取樣工作以更新計數。 範例的觸發方式取決於所使用的擷取型別：
+啟用即時客戶個人檔案的資料擷取到[!DNL Experience Platform]後，會儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過3%，則會觸發取樣工作以更新計數。 範例的觸發方式取決於所使用的擷取型別：
 
-* 對於&#x200B;**串流資料工作流程**，會每小時進行一次檢查，以判斷是否已達到5%的增加或減少臨界值。 如果有，則會自動觸發範例工作以更新計數。
-* 對於&#x200B;**批次擷取**，在成功將批次擷取到設定檔存放區後15分鐘內，如果符合5%的增加或減少臨界值，則會執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例作業，以及依資料集和身分名稱空間列出設定檔分佈。
+* 對於&#x200B;**串流資料工作流程**，會每小時進行一次檢查，以判斷是否已達到3%的增加或減少臨界值。 如果有，則會自動觸發範例工作以更新計數。
+* 對於&#x200B;**批次擷取**，在成功將批次擷取到設定檔存放區後15分鐘內，如果符合3%的增加或減少臨界值，則會執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例作業，以及依資料集和身分名稱空間列出設定檔分佈。
 
-在Experience Platform UI的[!UICONTROL 設定檔]區段中，也可使用名稱空間量度的設定檔計數和設定檔。 如需有關如何使用UI存取設定檔資料的資訊，請瀏覽[[!DNL Profile] UI指南](../ui/user-guide.md)。
+在Experience Platform UI的[!UICONTROL Profiles]區段中，也可使用依名稱空間量度的設定檔計數和設定檔。 如需有關如何使用UI存取設定檔資料的資訊，請瀏覽[[!DNL Profile] UI指南](../ui/user-guide.md)。
 
 ## 檢視上一個範例狀態 {#view-last-sample-status}
 
@@ -195,9 +195,9 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `sampleCount` | 使用此資料集ID的取樣合併設定檔總數。 |
-| `samplePercentage` | `sampleCount`佔抽樣合併設定檔總數（在[上次樣本狀態](#view-last-sample-status)中傳回的`numRowsToRead`值）的百分比，以十進位格式表示。 |
+| `samplePercentage` | `sampleCount`佔抽樣合併設定檔總數（在`numRowsToRead`上次樣本狀態[中傳回的](#view-last-sample-status)值）的百分比，以十進位格式表示。 |
 | `fullIDsCount` | 具有此資料集ID的合併設定檔總數。 |
-| `fullIDsPercentage` | `fullIDsCount`佔合併的設定檔總數（在[最後一個範例狀態](#view-last-sample-status)中傳回的`totalRows`值）的百分比，以十進位格式表示。 |
+| `fullIDsPercentage` | `fullIDsCount`佔合併的設定檔總數（在`totalRows`最後一個範例狀態[中傳回的](#view-last-sample-status)值）的百分比，以十進位格式表示。 |
 | `name` | 資料集的名稱，在資料集建立期間提供。 |
 | `description` | 資料集的說明，在資料集建立期間提供。 |
 | `value` | 資料集的識別碼。 |
@@ -294,12 +294,12 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `sampleCount` | 名稱空間中取樣合併的設定檔總數。 |
-| `samplePercentage` | `sampleCount`以抽樣合併設定檔的百分比表示（在[上次樣本狀態](#view-last-sample-status)中傳回的`numRowsToRead`值），以十進位格式表示。 |
+| `samplePercentage` | `sampleCount`以抽樣合併設定檔的百分比表示（在`numRowsToRead`上次樣本狀態[中傳回的](#view-last-sample-status)值），以十進位格式表示。 |
 | `reportTimestamp` | 報表的時間戳記。 如果在請求期間提供了`date`引數，則傳回的報告會用於提供的日期。 如果未提供`date`引數，則會傳回最近的報告。 |
 | `fullIDsFragmentCount` | 名稱空間中的設定檔片段總數。 |
 | `fullIDsCount` | 名稱空間中合併的設定檔總數。 |
-| `fullIDsPercentage` | `fullIDsCount`佔合併的設定檔總數的百分比（在[最後一個範例狀態](#view-last-sample-status)中傳回的`totalRows`值），以十進位格式表示。 |
-| `code` | 名稱空間的`code`。 使用[Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)處理名稱空間時，可找到此專案，在Experience Platform UI中也稱為[!UICONTROL Identity符號]。 若要深入瞭解，請造訪[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
+| `fullIDsPercentage` | `fullIDsCount`佔合併的設定檔總數的百分比（在`totalRows`最後一個範例狀態[中傳回的](#view-last-sample-status)值），以十進位格式表示。 |
+| `code` | 名稱空間的`code`。 使用[Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)處理名稱空間時，可找到此專案，在Experience Platform UI中也稱為[!UICONTROL Identity symbol]。 若要深入瞭解，請造訪[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
 | `value` | 名稱空間的`id`值。 使用[Identity Service API](../../identity-service/api/list-namespaces.md)處理名稱空間時，可以找到此專案。 |
 
 ## 產生資料集重疊報告
@@ -445,7 +445,7 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `data` | `data`物件包含以逗號分隔的清單，具有身分名稱空間程式碼及其個別設定檔計數的唯一組合。 |
-| 名稱空間程式碼 | `code`是每個身分名稱空間名稱的簡短形式。 可使用[Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)找到每個`code`與其`name`的對應。 在Experience Platform UI中，`code`也稱為[!UICONTROL 身分符號]。 若要深入瞭解，請造訪[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
+| 名稱空間程式碼 | `code`是每個身分名稱空間名稱的簡短形式。 可使用`code`Adobe Experience Platform Identity Service API`name`找到每個[與其](../../identity-service/api/list-namespaces.md)的對應。 在Experience Platform UI中，`code`也稱為[!UICONTROL Identity symbol]。 若要深入瞭解，請造訪[身分名稱空間概觀](../../identity-service/features/namespaces.md)。 |
 | `reportTimestamp` | 報表的時間戳記。 如果在請求期間提供了`date`引數，則傳回的報告會用於提供的日期。 如果未提供`date`引數，則會傳回最近的報告。 |
 
 ### 解譯身分名稱空間重疊報表
@@ -554,7 +554,7 @@ curl -X GET \
 | `unstitchedProfiles` | 包含依時段劃分之未拼接設定檔的物件。 「未拼接設定檔」報表提供7、30、60、90和120天時間週期的設定檔劃分。 |
 | `countOfProfiles` | 時段內未拼接設定檔的計數，或名稱空間未拼接設定檔的計數。 |
 | `eventsAssociated` | 時間範圍的ExperienceEvents數或名稱空間的事件數。 |
-| `nsDistribution` | 包含個別身分名稱空間的物件，會針對每個名稱空間分配未拼接的設定檔和事件。 注意：加總`nsDistribution`物件中每個身分名稱空間的總和`countOfProfiles`等於該時段的`countOfProfiles`。 每個名稱空間的`eventsAssociated`和每個時段的總數`eventsAssociated`也是相同的。 |
+| `nsDistribution` | 包含個別身分名稱空間的物件，會針對每個名稱空間分配未拼接的設定檔和事件。 注意：加總`countOfProfiles`物件中每個身分名稱空間的總和`nsDistribution`等於該時段的`countOfProfiles`。 每個名稱空間的`eventsAssociated`和每個時段的總數`eventsAssociated`也是相同的。 |
 | `reportTimestamp` | 報表的時間戳記。 |
 
 ### 解譯未拼接的設定檔報告
