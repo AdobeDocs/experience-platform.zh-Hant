@@ -5,10 +5,10 @@ breadcrumb-title: 資料治理指南
 user-guide-description: 透過使用標籤、行銷動作和治理原則，強制執行資料使用限制。
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6e9ea451eafd08a72a5f26dabe229fdb7c6c909d
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 47%
+source-wordcount: '105'
+ht-degree: 50%
 
 ---
 
@@ -17,16 +17,17 @@ ht-degree: 47%
 
 * [資料治理概觀](home.md)
 * [端對端指南](./e2e.md)
-* 資料使用標籤{#labels}
+* 資料使用情況標籤 {#labels}
    * [概觀](labels/overview.md)
    * [標籤字彙表](labels/reference.md)
    * [在UI中管理標籤](labels/user-guide.md)
    * [使用API管理資料集的標籤](labels/dataset-api.md)
-* 資料使用原則{#policies}
+* 資料使用原則 {#policies}
    * [概觀](policies/overview.md)
    * [在UI中管理原則](policies/user-guide.md)
    * [在API中建立原則](policies/create.md)
-* 原則執行{#enforcement}
+   * [同意原則規則建置參考](policies/consent-policy-rule-building-reference.md)
+* 原則執行 {#enforcement}
    * [概觀](enforcement/overview.md)
    * [自動強制執行](enforcement/auto-enforcement.md)
    * [API型強制執行](enforcement/api-enforcement.md)
