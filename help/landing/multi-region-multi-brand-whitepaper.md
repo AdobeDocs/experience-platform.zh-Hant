@@ -77,13 +77,13 @@ Experience Platform的一項重要架構原則是，根據治理政策和要求�
 
 假設資料工程師不需要存取所有Experience Platform和平台型應用程式功能。 他們通常負責建立資料定義（結構描述）、設定資料來源以擷取資料，以及建立資料集。 但是，他們可能與為個人化客戶體驗建立和啟用對象的角色不同。 針對此角色，建立角色、新增適當許可權，並僅授予所需功能的存取權。 相較之下，行銷人員角色不會建立方案和擷取資料，而是專注於建立和啟用對象以啟用個人化客戶體驗。
 
-如有需要，請考慮新增精細的存取控制，以限制對整合客戶設定檔上特定欄位的存取，並具有以屬性為基礎的存取控制/欄位層級存取控制功能。 這些是Experience Platform中的治理機制，可讓您根據預先定義的標籤限制資料屬性的存取權。 透過欄位層級存取控制，可以控管個人識別資料，並限制所有Experience Platform和應用程式工作流程的存取。 如需存取控制功能的詳細資訊，請參閱[存取控制檔案](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home)。
+如有需要，請考慮新增精細的存取控制，以限制對整合客戶設定檔上特定欄位的存取，並具有以屬性為基礎的存取控制/欄位層級存取控制功能。 這些是Experience Platform中的治理機制，可讓您根據預先定義的標籤限制資料屬性的存取權。 透過欄位層級存取控制，可以控管個人識別資料，並限制所有Experience Platform和應用程式工作流程的存取。 如需存取控制功能的詳細資訊，請參閱[存取控制檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home)。
 
 ![CDP存取控制，設定角色許可權](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **使用開發沙箱的開發生命週期**
 
-開發沙箱在所有功能方面的行為與生產沙箱相同。 不同之處在於，它將有一些合約護欄，可讓您保持在授許可權制內。 它專門設計為使用非生產設定檔進行開發和測試，支援最多10%的授權設定檔承諾（在所有授權開發沙箱中累積測量）。 如需其他詳細資訊和護欄，請參閱[沙箱概觀檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sandbox/home)和[產品說明頁面](https://helpx.adobe.com/legal/product-descriptions.html)以瞭解權益詳細資訊。
+開發沙箱在所有功能方面的行為與生產沙箱相同。 不同之處在於，它將有一些合約護欄，可讓您保持在授許可權制內。 它專門設計為使用非生產設定檔進行開發和測試，支援最多10%的授權設定檔承諾（在所有授權開發沙箱中累積測量）。 如需其他詳細資訊和護欄，請參閱[沙箱概觀檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sandbox/home)和[產品說明頁面](https://helpx.adobe.com/tw/legal/product-descriptions.html)以瞭解權益詳細資訊。
 
 在開發和測試生命週期中，您可以有多個開發沙箱（在此企業範例中最多可有4個，因為我們正在使用一個生產沙箱）。
 
@@ -99,7 +99,7 @@ Experience Platform的一項重要架構原則是，根據治理政策和要求�
 
 您可以選擇使用Experience Platform API來自動化沙箱部署和設定工作。 API允許重複工作的程式化控制，例如匯出、匯入或修改沙箱設定，如果您偏好自動化工作流程，可提供彈性。
 
-如需沙箱工具的其他詳細資訊，請參閱[沙箱工具檔案](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling)。
+如需沙箱工具的其他詳細資訊，請參閱[沙箱工具檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sandbox/ui/sandbox-tooling)。
 
 | ![CDP — 建立封裝](./images/whitepaper/create-package.png) | ![CDP-List封裝](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,7 +226,7 @@ Experience Platform的一項重要架構原則是，根據治理政策和要求�
 
 此區段共用服務可讓兩名或多名使用者以安全、受規管且有利於隱私權的方式交換區段資料。
 
-如需區段比對功能的詳細資訊，請參閱[區段比對檔案](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview)。
+如需區段比對功能的詳細資訊，請參閱[區段比對檔案](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/ui/segment-match/overview)。
 
 ### 3. 適用於全球營運、地區及特定品牌的各種方法
 
