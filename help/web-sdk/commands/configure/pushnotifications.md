@@ -1,9 +1,9 @@
 ---
 title: pushNotifications
 description: 設定Web SDK的推播通知，以啟用瀏覽器式的推播訊息。
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
@@ -58,15 +58,15 @@ Service Worker程式碼需要從與網站相同的網域提供。 從Adobe的CDN
 請依照下列步驟啟用和設定推播通知：
 
 1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
-1. 導覽至&#x200B;**[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**。
+1. 導覽至&#x200B;**[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**。
 1. 選取所需的標籤屬性。
-1. 導覽至&#x200B;**[!UICONTROL 擴充功能]**，然後按一下&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**&#x200B;卡片上的[!UICONTROL 設定]。
-1. 從&#x200B;**[!UICONTROL 自訂組建元件]**&#x200B;區段，啟用&#x200B;**[!UICONTROL 推播通知]**。
-1. 向下捲動以找到[!UICONTROL 推播通知]區段。
-1. 在&#x200B;**[!UICONTROL VAPID公開金鑰]**&#x200B;欄位中輸入您的VAPID公開金鑰。
-1. 在&#x200B;**[!UICONTROL 應用程式識別碼]**&#x200B;欄位中輸入您的應用程式識別碼。
-1. 在&#x200B;**[!UICONTROL 追蹤資料集ID]**&#x200B;欄位中輸入您的追蹤資料集ID。
-1. 按一下&#x200B;**[!UICONTROL 儲存]**，然後發佈您的變更。
+1. 導覽至&#x200B;**[!UICONTROL Extensions]**，然後按一下&#x200B;**[!UICONTROL Configure]**&#x200B;卡片上的[!UICONTROL Adobe Experience Platform Web SDK]。
+1. 從&#x200B;**[!UICONTROL Custom build components]**&#x200B;區段，啟用&#x200B;**[!UICONTROL Push notifications]**。
+1. 向下捲動以找出[!UICONTROL Push Notifications]區段。
+1. 在&#x200B;**[!UICONTROL VAPID Public Key]**&#x200B;欄位中輸入您的VAPID公開金鑰。
+1. 在&#x200B;**[!UICONTROL Application ID]**&#x200B;欄位中輸入您的應用程式識別碼。
+1. 在&#x200B;**[!UICONTROL Tracking Dataset ID]**&#x200B;欄位中輸入您的追蹤資料集ID。
+1. 按一下&#x200B;**[!UICONTROL Save]**，然後發佈您的變更。
 
 >[!NOTE]
 >
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## 後續步驟 {#next-steps}
 
-設定推播通知後，使用[`sendPushSubscription`](../sendPushSubscription.md)命令向Adobe Experience Platform註冊推播訂閱。
+設定推播通知後，使用[`sendPushSubscription`](../sendpushsubscription.md)命令向Adobe Experience Platform註冊推播訂閱。
