@@ -2,7 +2,7 @@
 title: 使用SQL建立衍生資料集
 description: 瞭解如何使用SQL建立為設定檔啟用的衍生資料集，以及如何將資料集用於即時客戶設定檔和分段服務。
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Created Table DataSet Id
 (1 row)
 ```
 
-在`CREATE TABLE`命令上使用`label='PROFILE'`來建立啟用設定檔的資料集。 `upsert`功能預設為開啟。 可以使用`ALTER`命令覆寫`upsert`功能，如下列範例所示。
+在`label='PROFILE'`命令上使用`CREATE TABLE`來建立啟用設定檔的資料集。 `upsert`功能預設為開啟。 可以使用`upsert`命令覆寫`ALTER`功能，如下列範例所示。
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
@@ -167,7 +167,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ```sql
        name          |        dataSetId         |     dataSet    | description | labels 
----------------------+--------------------------+----------------+-------------+----------
+|---------------------+--------------------------+----------------+-------------+----------
  luma_midvalues      | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues     | 5c86b896b3c162151785b43c | Luma midValues |             | false
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >如果陳述式中未提供`label`旗標，或欄位群組已存在，則透過SQL建立欄位群組將會失敗。
->請確定查詢包含`IF NOT EXISTS`子句，以避免查詢失敗，因為欄位群組已經存在。
+>>請確定查詢包含`IF NOT EXISTS`子句，以避免查詢失敗，因為欄位群組已經存在。
 
 真實世界的範例看起來可能類似於下面所示的範例。
 
@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 成功執行此陳述式會傳回建立的欄位群組ID。 例如 `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-如需其他方法的詳細資訊，請參閱檔案，瞭解如何在結構描述編輯器[&#128279;](../../../xdm/ui/resources/field-groups.md#create)中建立新欄位群組[結構描述登入API](../../../xdm/api/field-groups.md#create)。
+如需其他方法的詳細資訊，請參閱檔案，瞭解如何在結構描述編輯器[中](../../../xdm/ui/resources/field-groups.md#create)建立新欄位群組[結構描述登入API](../../../xdm/api/field-groups.md#create)。
 
 ### 放置欄位群組
 
@@ -227,7 +227,7 @@ DROP FIELDGROUP field_group_for_test123;
 
 ```sql
        name                      |        fieldgroupId                             |     owner      |
----------------------------------+-------------------------------------------------+-----------------
+|---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
  AJO Classification Fields       | _experience.journeyOrchestration.classification | Luma midValues |

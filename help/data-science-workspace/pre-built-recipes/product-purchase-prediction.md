@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 產品購買預測配方
 description: 「產品購買預測」配方可讓您預測特定客戶購買事件型別（例如，產品購買）的可能性。
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '415'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -24,6 +24,7 @@ ht-degree: 5%
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
 以下檔案將回答下列問題：
+
 * 這是專為誰打造的配方？
 * 這個配方有什麼作用？
 
@@ -60,7 +61,7 @@ ht-degree: 5%
 | totalPrice2 | 數字 |
 
 
-## 演算法
+## 演演算法
 
 首先，載入&#x200B;*ProductPrediction*&#x200B;結構描述中的訓練資料集。 從此處，模型已使用[隨機森林分類器](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)進行訓練。 隨機森林分類器是一種整合演演算法，它參考將多個演演算法結合以獲得改進預測效能的演演算法。 演演算法背後的想法是隨機森林分類器會建立多個決策樹並合併它們，以建立更準確且穩定的預測。
 

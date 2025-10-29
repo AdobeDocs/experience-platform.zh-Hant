@@ -3,10 +3,10 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1964'
-ht-degree: 2%
+source-wordcount: '1885'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,9 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 >[!IMPORTANT]
 > 
-> * 若要啟用資料並啟用工作流程的[對應步驟](#mapping)，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;以及&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。
-> * 若要在不進行工作流程的[對應步驟](#mapping)的情況下啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用沒有對應的區段]**、**[!UICONTROL 檢視設定檔]**&#x200B;以及&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料並啟用工作流程的[對應步驟](#mapping)，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。
+>* 若要在不執行工作流程的[對應步驟](#mapping)的情況下啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 > 
 > 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
@@ -39,11 +39,11 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 >
 >Experience Platform使用者介面經常更新，自從錄製此影片後，可能已經變更。 如需最新資訊，請參閱以下章節所述的設定步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3449804/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 如需如何將對象和設定檔屬性共用至Adobe Target和自訂個人化目的地的簡短概觀，請觀看以下影片。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447366/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## 使用案例 {#use-cases}
 
@@ -55,7 +55,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 ### 相同頁面個人化 {#same-page}
 
-使用者造訪您網站的頁面。 您可以使用目前的頁面瀏覽資訊（例如反向連結URL、瀏覽器語言、內嵌的產品資訊），針對非Adobe平台（例如，[!DNL Pega]、[!DNL Optimizely]或其他）使用[自訂個人化](../catalog/personalization/custom-personalization.md)連線，來選取下一個動作或決定（例如個人化）。
+使用者造訪您網站的頁面。 您可以使用目前的頁面瀏覽資訊（例如反向連結URL、瀏覽器語言、內嵌的產品資訊），針對非Adobe平台（例如，[、](../catalog/personalization/custom-personalization.md)或其他）使用[!DNL Pega]自訂個人化[!DNL Optimizely]連線，來選取下一個動作或決定（例如個人化）。
 
 ### 下一頁個人化 {#next-page}
 
@@ -77,7 +77,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 設定個人化目的地的第一個步驟，是為Experience Platform Web SDK設定資料流。 這是在資料收集UI中完成。
 
-設定資料串流時，在&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;底下，確定已選取&#x200B;**[!UICONTROL Edge分段]**&#x200B;和&#x200B;**[!UICONTROL Personalization目的地]**。
+設定資料串流時，在&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;底下，確定已同時選取&#x200B;**[!UICONTROL Edge Segmentation]**&#x200B;和&#x200B;**[!UICONTROL Personalization Destinations]**。
 
 >[!TIP]
 >
@@ -89,19 +89,19 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 ### 建立[!DNL Active-On-Edge]合併原則 {#create-merge-policy}
 
-建立目的地連線之後，您必須建立[!DNL Active-On-Edge]合併原則。 [!DNL Active-On-Edge]合併原則可確保在Edge[&#128279;](../../segmentation/methods/edge-segmentation.md)上持續評估對象，並可用於即時和下一頁個人化使用案例。
+建立目的地連線之後，您必須建立[!DNL Active-On-Edge]合併原則。 [!DNL Active-On-Edge]合併原則可確保在Edge[上持續評估對象](../../segmentation/methods/edge-segmentation.md)，並可用於即時和下一頁個人化使用案例。
 
 >[!IMPORTANT]
 >
 >目前，邊緣目的地僅支援啟用使用[Edge上主動合併原則](../../segmentation/ui/segment-builder.md#merge-policies)設定為預設的受眾。 如果您將使用不同合併原則的對象對應至邊緣目的地，則不會評估這些對象。
 
-依照[建立合併原則](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)上的指示進行，並確定啟用&#x200B;**[!UICONTROL Edge上主動式合併原則]**&#x200B;切換按鈕。
+依照[建立合併原則](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)上的指示進行，並確定啟用&#x200B;**[!UICONTROL Active-On-Edge Merge Policy]**&#x200B;切換按鈕。
 
 ### 在Experience Platform中建立新受眾 {#create-audience}
 
 建立[!DNL Active-On-Edge]合併原則後，您必須在Experience Platform中建立新的對象。
 
-依照[對象產生器](../../segmentation/ui/segment-builder.md)指南建立新對象，並確定[將您在上一步建立的[!DNL Active-On-Edge]合併原則指派給它](../../segmentation/ui/segment-builder.md#merge-policies)。
+依照[對象產生器](../../segmentation/ui/segment-builder.md)指南建立新對象，並確定[將您在上一步建立的](../../segmentation/ui/segment-builder.md#merge-policies)合併原則指派給它[!DNL Active-On-Edge]。
 
 ### 建立目的地連線 {#connect-destination}
 
@@ -118,15 +118,15 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 完成必要條件後，您現在可以選取要用於相同頁面和下一頁個人化的邊緣個人化目的地。
 
-1. 移至&#x200B;**[!UICONTROL 連線>目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
+1. 移至&#x200B;**[!UICONTROL Connections > Destinations]**，然後選取&#x200B;**[!UICONTROL Catalog]**&#x200B;標籤。
 
    在Experience Platform UI中反白顯示![目的地目錄索引標籤。](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. 在您想要啟用對象的個人化目的地對應卡片上，選取「**[!UICONTROL 啟用對象]**」，如下圖所示。
+1. 在對應至您要啟用對象之個人化目的地的卡片上選取&#x200B;**[!UICONTROL Activate audiences]**，如下圖所示。
 
    ![在目錄中的目的地卡上反白顯示啟用對象控制項。](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. 選取您想要用來啟用對象的目的地連線，然後選取[下一步] **&#x200B;**。
+1. 選取您想要用來啟用對象的目的地連線，然後選取「**[!UICONTROL Next]**」。
 
    ![在啟動工作流程中選取目的地步驟。](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
@@ -134,14 +134,14 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 ## 選取您的對象 {#select-audiences}
 
-使用對象名稱左邊的核取方塊來選取您要啟用至目的地的對象，然後選取&#x200B;**[!UICONTROL 下一步]**。
+使用對象名稱左側的核取方塊來選取您要啟用至目的地的對象，然後選取&#x200B;**[!UICONTROL Next]**。
 
-若要選取您要啟用至目的地的對象，請使用對象名稱左邊的核取方塊，然後選取&#x200B;**[!UICONTROL 下一步]**。
+若要選取您要啟用至目的地的對象，請使用對象名稱左邊的核取方塊，然後選取&#x200B;**[!UICONTROL Next]**。
 
 您可以根據對象的來源，從多種對象型別中進行選取：
 
-* **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-* **[!UICONTROL 自訂上傳]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Experience Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
+* **[!UICONTROL Segmentation Service]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
+* **[!UICONTROL Custom upload]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Experience Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
 * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
 ![選取啟用工作流程的對象步驟，並反白數個對象。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 為了保護此資料，**[!UICONTROL 自訂Personalization]**&#x200B;目的地在設定以屬性為基礎的個人化目的地時，需要您使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)中進行。
+>設定檔屬性可能包含敏感資料。 為了保護此資料，**[!UICONTROL Custom Personalization]**&#x200B;目的地要求您在設定以屬性為基礎的個人化目的地時使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/)中進行。
 >
 ><br>如果您已使用Web SDK或Mobile SDK進行整合，您可以新增伺服器端整合，透過Edge Network API擷取屬性。
 >
@@ -164,13 +164,13 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 ### 選取來源屬性 {#select-source-attributes}
 
-若要新增來源屬性，請在&#x200B;**[!UICONTROL Source欄位]**&#x200B;欄位上選取&#x200B;**[!UICONTROL 新增欄位]**&#x200B;控制項，然後搜尋或導覽至您想要的XDM屬性欄位，如下所示。
+若要新增來源屬性，請在&#x200B;**[!UICONTROL Add new field]**&#x200B;欄上選取&#x200B;**[!UICONTROL Source field]**&#x200B;控制項，然後搜尋或導覽至您想要的XDM屬性欄位，如下所示。
 
 ![熒幕錄製，顯示如何在對應步驟中選取目標屬性。](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### 選取目標屬性 {#select-target-attributes}
 
-若要新增目標屬性，請選取&#x200B;**[!UICONTROL 目標欄位]**&#x200B;欄位上的&#x200B;**[!UICONTROL 新增欄位]**&#x200B;控制項，並輸入您要對應來源屬性的自訂屬性名稱。
+若要新增目標屬性，請在&#x200B;**[!UICONTROL Add new field]**&#x200B;欄上選取&#x200B;**[!UICONTROL Target field]**&#x200B;控制項，然後輸入您要對應來源屬性的自訂屬性名稱。
 
 >[!NOTE]
 >
@@ -180,31 +180,31 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 ## 排程對象匯出 {#scheduling}
 
-依預設，[!UICONTROL 對象排程]頁面僅顯示您目前啟用流程中選擇的新選取對象。
+依預設，[!UICONTROL Audience schedule]頁面只會顯示您在目前啟用流程中選擇的新選取對象。
 
-若要檢視所有啟用至您目的地的對象，請使用篩選選項並停用&#x200B;**[!UICONTROL 僅顯示新對象]**&#x200B;篩選器。
+若要檢視所有啟用至您目的地的對象，請使用篩選選項並停用&#x200B;**[!UICONTROL Show new audiences only]**&#x200B;篩選。
 
 ![所有對象篩選器皆強調顯示。](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
-在&#x200B;**[!UICONTROL 對象排程]**&#x200B;頁面上，選取每個對象，然後使用&#x200B;**[!UICONTROL 開始日期]**&#x200B;和&#x200B;**[!UICONTROL 結束日期]**&#x200B;選取器來設定傳送資料至目的地的時間間隔。
+在&#x200B;**[!UICONTROL Audience schedule]**&#x200B;頁面上，選取每個對象，然後使用&#x200B;**[!UICONTROL Start date]**&#x200B;及&#x200B;**[!UICONTROL End date]**&#x200B;選取器來設定傳送資料至目的地的時間間隔。
 
 ![啟動工作流程中強調開始和結束日期的對象排程步驟。](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
-選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以移至[!UICONTROL 檢閱]頁面。
+選取&#x200B;**[!UICONTROL Next]**&#x200B;以移至[!UICONTROL Review]頁面。
 
-## 審核 {#review}
+## 審閱 {#review}
 
-在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或選取&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
+在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到選取範圍的摘要。 選取&#x200B;**[!UICONTROL Cancel]**&#x200B;以中斷流程，**[!UICONTROL Back]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 
 ![檢閱步驟中的選擇摘要。](../assets/ui/activate-edge-personalization-destinations/review.png)
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
+如果您的組織已購買&#x200B;**Adobe Healthcare Shield**&#x200B;或&#x200B;**Adobe Privacy &amp; Security Shield**，請選取「**[!UICONTROL View applicable consent policies]**」以檢視已套用的同意政策，以及因這些政策而包含在啟用中的設定檔數目。 如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 
-在&#x200B;**[!UICONTROL 檢閱]**&#x200B;步驟中，Experience Platform也會檢查是否有任何資料使用原則違規。 以下是違反原則的範例。 在解決違規之前，您無法完成對象啟用工作流程。 如需有關如何解決原則違規的資訊，請參閱資料治理檔案一節中的關於[資料使用原則違規](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)。
+在&#x200B;**[!UICONTROL Review]**&#x200B;步驟中，Experience Platform也會檢查是否有任何資料使用原則違規。 以下是違反原則的範例。 在解決違規之前，您無法完成對象啟用工作流程。 如需有關如何解決原則違規的資訊，請參閱資料治理檔案一節中的關於[資料使用原則違規](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation)。
 
 ![資料原則違規的範例。](../assets/common/data-policy-violation.png)
 
@@ -214,7 +214,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 ![熒幕錄製，顯示稽核步驟中可用的對象篩選器。](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
-如果您對您的選擇感到滿意，並且未偵測到任何原則違規，請選取[完成] **[!UICONTROL 以確認您的選擇，並開始將資料傳送到目的地。]**
+如果您對您的選擇感到滿意，並且未偵測到任何原則違規，請選取&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選擇，並開始將資料傳送到目的地。
 
 <!--
 

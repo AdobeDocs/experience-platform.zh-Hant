@@ -3,7 +3,7 @@ keywords: 雲端儲存空間目的地；雲端儲存空間
 title: 雲端儲存空間目的地概觀
 description: Adobe Experience Platform可將您的對象以資料檔案的形式傳送至您的Amazon S3、AWS Kinesis、Azure事件中樞或SFTP雲端儲存位置。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 6%
@@ -46,7 +46,7 @@ Adobe Experience Platform支援將資料匯出至下列雲端儲存空間目的�
 
 ![如何使用巨集在您的儲存空間中建立資料夾](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-下列範例參考識別碼為`25768be6-ebd5-45cc-8913-12fb3f348615`的範例對象`Luxury Audience`。
+下列範例參考識別碼為`Luxury Audience`的範例對象`25768be6-ebd5-45cc-8913-12fb3f348615`。
 
 **巨集1：`%SEGMENT_NAME%`**
 
@@ -73,6 +73,7 @@ Adobe Experience Platform支援將資料匯出至下列雲端儲存空間目的�
 ## 資料匯出型別 {#export-type}
 
 雲端儲存空間目的地支援下列匯出型別：
+
 * **設定檔匯出**。 這表示您正在匯出對象中個人的詳細資訊。 這些是個人化所需的詳細資料，可包含屬性、事件、對象會籍等。
 * **資料集匯出**。 此功能可讓您將整個資料集匯出至雲端儲存目的地。 [閱讀更多](/help/destinations/ui/export-datasets.md)有關此功能的資訊。
 

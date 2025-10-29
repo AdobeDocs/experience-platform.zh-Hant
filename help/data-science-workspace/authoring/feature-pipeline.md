@@ -4,7 +4,7 @@ title: 使用模型製作SDK建立功能管道
 type: Tutorial
 description: Adobe Experience Platform可讓您建置和建立自訂功能管道，以透過Sensei Machine Learning Framework執行階段大規模執行功能工程。 本檔案說明在特徵配管中找到的各種類別，並提供逐步教學課程，說明如何在PySpark中使用「模型製作」SDK建立自訂特徵配管。
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%
@@ -40,6 +40,7 @@ Adobe Experience Platform可讓您建置和建立自訂功能管道，以透過S
 ## 快速入門
 
 若要在任何組織中執行配方，必須執行下列步驟：
+
 - 輸入資料集。
 - 資料集的結構描述。
 - 轉換的結構描述和以該結構描述為基礎的空白資料集。
@@ -404,7 +405,7 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 建立功能管線引擎 {#create-engine-api}
 
-取得Docker影像位置後，您就可以執行POST到`/engines`，使用[!DNL Sensei Machine Learning] API [建立功能管道引擎](../api/engines.md#feature-pipeline-docker)。 成功建立功能管道引擎可為您提供引擎唯一識別碼(`id`)。 在繼續之前，請務必儲存此值。
+取得Docker影像位置後，您就可以執行POST到[，使用](../api/engines.md#feature-pipeline-docker) API [!DNL Sensei Machine Learning]建立功能管道引擎`/engines`。 成功建立功能管道引擎可為您提供引擎唯一識別碼(`id`)。 在繼續之前，請務必儲存此值。
 
 ### 建立MLInstance {#create-mlinstance}
 
@@ -416,7 +417,7 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 指定實驗執行功能管道工作 {#specify-feature-pipeline-task}
 
-建立實驗後，您必須將實驗的模式變更為`featurePipeline`。 若要變更模式，請使用您的`EXPERIMENT_ID`進行額外的POST至[`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)，並在內文傳送`{ "mode":"featurePipeline"}`以指定功能管道實驗執行。
+建立實驗後，您必須將實驗的模式變更為`featurePipeline`。 若要變更模式，請使用您的[`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)進行額外的POST至`EXPERIMENT_ID`，並在內文傳送`{ "mode":"featurePipeline"}`以指定功能管道實驗執行。
 
 完成後，請向`/experiments/{EXPERIMENT_ID}`發出GET要求以[擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。
 

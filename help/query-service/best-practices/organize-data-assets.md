@@ -2,7 +2,7 @@
 title: 查詢服務中資料資產組織的最佳實務
 description: 本檔案概述整理資料的邏輯方法，以方便使用查詢服務。
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -56,9 +56,9 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 
 ## 從資料容器存取資料資產
 
-只要適當地限定資料庫名稱，任何[!DNL PostgreSQL]使用者端都可以連線到您使用SHOW關鍵字建立的任何資料結構。 如需有關SHOW關鍵字的詳細資訊，請參閱SQL語法檔案[&#128279;](../sql/syntax.md#show)中的SHOW區段。
+只要適當地限定資料庫名稱，任何[!DNL PostgreSQL]使用者端都可以連線到您使用SHOW關鍵字建立的任何資料結構。 如需有關SHOW關鍵字的詳細資訊，請參閱SQL語法檔案[中的](../sql/syntax.md#show)SHOW區段。
 
-「all」是預設的資料庫名稱，其中包含沙箱中的每個資料庫和結構描述容器。 當您使用`dbname="all"`建立[!DNL PostgreSQL]連線時，可以存取您已建立的&#x200B;**任何**&#x200B;資料庫和結構描述，以邏輯方式組織您的資料。
+「all」是預設的資料庫名稱，其中包含沙箱中的每個資料庫和結構描述容器。 當您使用[!DNL PostgreSQL]建立`dbname="all"`連線時，可以存取您已建立的&#x200B;**任何**&#x200B;資料庫和結構描述，以邏輯方式組織您的資料。
 
 列出`dbname="all"`下的所有資料庫，會顯示三個可用的資料庫。
 
@@ -66,7 +66,7 @@ ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 databaseB
 databaseC
@@ -78,26 +78,26 @@ databaseC
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
 ```
 
-當您使用`dbname="databaseA"`建立[!DNL PostgreSQL]連線時，您可以存取與該特定資料庫相關聯的任何結構描述，如下列範例所示。
+當您使用[!DNL PostgreSQL]建立`dbname="databaseA"`連線時，您可以存取與該特定資料庫相關聯的任何結構描述，如下列範例所示。
 
 ```sql
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
  
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 ```
@@ -108,20 +108,20 @@ databaseA      | schema2
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 
 
 SHOW tables;
 name       | type
-----------------------
+|----------------------
 dataset1| table
 dataset2| table
 dataset3| table
@@ -129,7 +129,7 @@ dataset3| table
 
 ## 從資料容器更新或移除資料資產
 
-隨著您組織（或沙箱）中的資料資產量增加，有必要從資料容器更新或移除資料資產。 透過使用點標籤法參考適當的資料庫和結構描述名稱，可以從組織容器中移除個別資產。 第一個範例中新增至`databaseA.schema1`的資料表和檢視（`t1`和`v1`），會使用下列範例中的語法移除。
+隨著您組織（或沙箱）中的資料資產量增加，有必要從資料容器更新或移除資料資產。 透過使用點標籤法參考適當的資料庫和結構描述名稱，可以從組織容器中移除個別資產。 第一個範例中新增至`t1`的資料表和檢視（`v1`和`databaseA.schema1`），會使用下列範例中的語法移除。
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;

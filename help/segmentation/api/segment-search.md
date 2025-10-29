@@ -3,9 +3,9 @@ title: 區段搜尋API端點
 description: Adobe Experience Platform Segmentation Service API中，區段搜尋是用來搜尋各種資料來源包含的欄位，並近乎即時地傳回。 本指南提供的資訊可協助您更清楚瞭解區段搜尋，且包含使用API執行基本動作的範例API呼叫。
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1178'
 ht-degree: 2%
 
 ---
@@ -223,9 +223,11 @@ curl -X GET \
 
 ## 附錄 {#appendix}
 
-以下幾節提供有關搜尋詞如何運作的額外資訊。 搜尋查詢的寫入方式如下： `s={FieldName}:{SearchExpression}`。 舉例來說，若要搜尋名為AAM或[!DNL Platform]的區段定義，您可以使用下列搜尋查詢： `s=segmentName:AAM%20OR%20Platform`。
+以下幾節提供有關搜尋詞如何運作的額外資訊。 搜尋查詢的寫入方式如下： `s={FieldName}:{SearchExpression}`。 因此，舉例來說，若要搜尋名為AAM或[!DNL Platform]的區段定義，您可以使用下列搜尋查詢： `s=segmentName:AAM%20OR%20Platform`。
 
-> 為符合最佳實務，搜尋運算式應該使用HTML編碼，如上顯示的範例。
+>[!NOTE]
+>
+>為達到最佳實務，搜尋運算式應使用HTML編碼，如上述範例所示。
 
 ### 搜尋欄位 {#search-fields}
 
@@ -244,7 +246,9 @@ curl -X GET \
 
 下表列出使用區段搜尋API時，搜尋查詢運作方式的詳細資訊。
 
-> 下列範例以非HTML編碼格式顯示，以便更清楚明瞭。 為求最佳實務，請HTML將搜尋運算式編碼。
+>[!NOTE]
+>
+>下列範例以非HTML編碼格式顯示，以更清楚明瞭。 為求最佳實務，HTML會對您的搜尋運算式進行編碼。
 
 | 搜尋運算式範例 | 說明 |
 | ------------------------- | ----------- |

@@ -4,7 +4,7 @@ title: Experience Platform中的一般協助工具功能
 type: Documentation
 description: 進一步瞭解Adobe Experience Platform支援的一般協助工具功能，包括鍵盤導覽、調色盤和對比以及輔助技術支援。
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
@@ -24,6 +24,7 @@ Adobe Experience Platform致力為每個人提供無障礙和包容的功能，�
 Experience Platform致力於支援完整的鍵盤協助功能。
 
 以下是可輔助協助工具的導覽元素：
+
 * Tab鍵可在UI元素、區段和功能表群組之間移動。
 * 方向鍵可在功能表群組中移動，將焦點設定為個別作用中的元素。
 * Shift + Tab鍵會向後移動並經過Tab鍵順序。

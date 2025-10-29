@@ -4,9 +4,9 @@ solution: Experience Platform
 title: JupyterLab UI概述
 description: JupyterLab是Project Jupyter的網頁型使用者介面，並緊密整合至Adobe Experience Platform。 它提供互動式開發環境，讓資料科學家能夠使用Jupyter Notebooks、程式碼和資料。 本檔案概述JupyterLab及其功能，以及執行常見動作的指示。
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1831'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 本檔案提供[!DNL JupyterLab]及其功能的概觀，以及執行一般動作的指示。
 
-## [!DNL Experience Platform]上的[!DNL JupyterLab]
+## [!DNL JupyterLab]上的[!DNL Experience Platform]
 
 Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自訂的筆記型電腦擴充功能、預先安裝的程式庫，以及Adobe主題的介面。
 
@@ -33,7 +33,7 @@ Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自
 | --- | --- |
 | **核心** | 核心提供筆記型電腦和其他[!DNL JupyterLab]前端以不同程式語言執行和內部檢查程式碼的能力。 [!DNL Experience Platform]提供額外的核心以支援[!DNL Python]、R、PySpark和[!DNL Spark]中的開發。 如需詳細資訊，請參閱[核心](#kernels)區段。 |
 | **資料存取** | 直接從[!DNL JupyterLab]存取現有的資料集，並完全支援讀取和寫入功能。 |
-| **[!DNL Experience Platform]服務整合** | 內建整合可讓您直接從[!DNL JupyterLab]內使用其他[!DNL Experience Platform]服務。 在[與其他Experience Platform服務](#service-integration)的整合的區段中，提供支援整合的完整清單。 |
+| **[!DNL Experience Platform]服務整合** | 內建整合可讓您直接從[!DNL Experience Platform]內使用其他[!DNL JupyterLab]服務。 在[與其他Experience Platform服務](#service-integration)的整合的區段中，提供支援整合的完整清單。 |
 | **驗證** | 除了<a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab的內建安全性模型</a>之外，您應用程式與Experience Platform之間的所有互動(包括Experience Platform服務對服務通訊)都會透過<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>加密及驗證。 |
 | **開發程式庫** | 在[!DNL Experience Platform]中，[!DNL JupyterLab]提供[!DNL Python]、R和PySpark的預先安裝程式庫。 如需支援的資料庫完整清單，請參閱[附錄](#supported-libraries)。 |
 | **程式庫控制器** | 當預先安裝的程式庫無法滿足您的需求時，可以為Python和R安裝其他程式庫，並暫時儲存在隔離的容器中，以保持[!DNL Experience Platform]的完整性並保持您的資料安全。 如需詳細資訊，請參閱[核心](#kernels)區段。 |
@@ -44,7 +44,7 @@ Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自
 
 ## 與其他[!DNL Experience Platform]服務整合 {#service-integration}
 
-標準化和互通性是[!DNL Experience Platform]背後的重要概念。 將[!DNL Experience Platform]上的[!DNL JupyterLab]整合為內嵌IDE，可讓您與其他[!DNL Experience Platform]服務互動，讓您充分利用[!DNL Experience Platform]的潛力。 下列[!DNL Experience Platform]服務可在[!DNL JupyterLab]中使用：
+標準化和互通性是[!DNL Experience Platform]背後的重要概念。 將[!DNL JupyterLab]上的[!DNL Experience Platform]整合為內嵌IDE，可讓您與其他[!DNL Experience Platform]服務互動，讓您充分利用[!DNL Experience Platform]的潛力。 下列[!DNL Experience Platform]服務可在[!DNL JupyterLab]中使用：
 
 * **[!DNL Catalog Service]：**&#x200B;存取及探索具有讀寫功能的資料集。
 * **[!DNL Query Service]：**&#x200B;使用SQL存取及探索資料集，在處理大量資料時可提供較低的資料存取間接費用。
@@ -53,7 +53,7 @@ Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自
 
 >[!NOTE]
 >
->[!DNL JupyterLab]上的某些[!DNL Experience Platform]服務整合僅限特定核心。 如需詳細資訊，請參閱[核心](#kernels)的章節。
+>[!DNL Experience Platform]上的某些[!DNL JupyterLab]服務整合僅限特定核心。 如需詳細資訊，請參閱[核心](#kernels)的章節。
 
 ## 主要功能與常見操作
 
@@ -68,7 +68,7 @@ Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自
 
 ### 存取[!DNL JupyterLab] {#access-jupyterlab}
 
-在[Adobe Experience Platform](https://platform.adobe.com)中，從左側導覽欄選取&#x200B;**[!UICONTROL 筆記本]**。 留出時間讓[!DNL JupyterLab]完全初始化。
+在[Adobe Experience Platform](https://platform.adobe.com)中，從左側導覽欄選取&#x200B;**[!UICONTROL Notebooks]**。 留出時間讓[!DNL JupyterLab]完全初始化。
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -112,7 +112,7 @@ Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自
 
 ### [!DNL Python]/R中的GPU和記憶體伺服器組態
 
-在[!DNL JupyterLab]中，選取右上角的齒輪圖示以開啟&#x200B;*Notebook伺服器組態*。 您可以開啟GPU，並使用滑桿分配所需的記憶體容量。 您可以配置的記憶體數量取決於貴組織已布建的記憶體數量。 選取&#x200B;**[!UICONTROL 更新設定]**&#x200B;以儲存。
+在[!DNL JupyterLab]中，選取右上角的齒輪圖示以開啟&#x200B;*Notebook伺服器組態*。 您可以開啟GPU，並使用滑桿分配所需的記憶體容量。 您可以配置的記憶體數量取決於貴組織已布建的記憶體數量。 選取要儲存的&#x200B;**[!UICONTROL Update configs]**。
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自
 
 ### 終止並重新啟動[!DNL JupyterLab]
 
-在[!DNL JupyterLab]中，您可以終止工作階段以防止使用其他資源。 從選取&#x200B;**電源圖示** ![電源圖示](/help/images/icons/power.png)開始，然後從似乎要終止工作階段的彈出視窗中選取&#x200B;**[!UICONTROL 關機]**。 筆記本工作階段會在12小時沒有活動後自動終止。
+在[!DNL JupyterLab]中，您可以終止工作階段以防止使用其他資源。 從選取&#x200B;**電源圖示** ![電源圖示](/help/images/icons/power.png)開始，然後從顯示終止工作階段的彈出視窗中選取&#x200B;**[!UICONTROL Shut Down]**。 筆記本工作階段會在12小時沒有活動後自動終止。
 
-若要重新啟動[!DNL JupyterLab]，請選取電源圖示左邊的&#x200B;**重新啟動圖示** ![重新啟動圖示](/help/images/icons/restart.png)，然後從顯示的彈出視窗中選取&#x200B;**[!UICONTROL 重新啟動]**。
+若要重新啟動[!DNL JupyterLab]，請選取電源圖示左邊的&#x200B;**重新啟動圖示** ![重新啟動圖示](/help/images/icons/restart.png)，然後從顯示的彈出視窗中選取&#x200B;**[!UICONTROL Restart]**。
 
 ![終止jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -178,7 +178,7 @@ Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自
 | 入門者 | 預先填入的筆記型電腦，示範使用範例資料進行資料探索。 |
 | 零售銷售 | 使用範例資料預先填入的筆記本，其中包含[零售銷售方式](../pre-built-recipes/retail-sales.md)。 |
 | 配方產生器 | 用來在[!DNL JupyterLab]中建立配方的筆記本範本。 其中預先填入程式碼和註解，以示範和說明配方建立流程。 如需詳細逐步解說，請參閱[筆記本到配方教學課程](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en)。 |
-| [!DNL Query Service] | 預先填入的筆記本，以示範直接在[!DNL JupyterLab]中使用[!DNL Query Service]，並提供大規模分析資料的範例工作流程。 |
+| [!DNL Query Service] | 預先填入的筆記本，以示範直接在[!DNL Query Service]中使用[!DNL JupyterLab]，並提供大規模分析資料的範例工作流程。 |
 | XDM事件 | 預先填寫的筆記型電腦，示範有關後值體驗事件資料的資料探索，重點放在資料結構中的共同功能。 |
 | XDM查詢 | 預先填寫的筆記本，示範有關體驗事件資料的範例企業查詢。 |
 | 彙總 | 預先填入的筆記型電腦，展示將大量資料彙總成可管理之較小區塊的範例工作流程。 |
@@ -264,6 +264,7 @@ Experience Platform的JupyterLab整合伴隨著架構變更、設計考量、自
 ![範例](../images/jupyterlab/user-guide/libraries.PNG)
 
 此外，以下相依性已使用但未列出：
+
 * CUDA 11.2
 * CUDNN 8.1
 

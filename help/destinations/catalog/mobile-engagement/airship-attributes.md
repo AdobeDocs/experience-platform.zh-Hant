@@ -3,14 +3,14 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1002'
 ht-degree: 2%
 
 ---
 
-# [!DNL Airship Attributes]個連線 {#airship-attributes-destination}
+# [!DNL Airship Attributes] 連線 {#airship-attributes-destination}
 
 ## 概觀 {#overview}
 
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->如果您尚未透過[此註冊連結](https://go.airship.eu/accounts/register/plan/starter/)建立[!DNL Airship]帳戶。
+>如果您尚未透過[!DNL Airship]此註冊連結[建立](https://go.airship.eu/accounts/register/plan/starter/)帳戶。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -51,9 +51,9 @@ ht-degree: 2%
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分，視您的欄位對應而定。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+|---------|----------|---------|
+| 匯出類型 | **[!UICONTROL Profile-based]** | 您正在匯出區段的所有成員，以及所需的結構欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分，視您的欄位對應而定。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -65,13 +65,13 @@ Adobe Experience Platform設定檔屬性與[!DNL Airship]屬性類似，並可�
 
 ## 產生持有人權杖 {#bearer-token}
 
-移至[飛艇儀表板](https://go.airship.com)中的&#x200B;**[!UICONTROL 設定]** &quot; **[!UICONTROL API和整合]**，然後在左側功能表中選取&#x200B;**[!UICONTROL 代號]**。
+移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[ &quot; ](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
 
-按一下&#x200B;**[!UICONTROL 建立Token]**。
+按一下「**[!UICONTROL Create Token]**」。
 
 為您的Token提供好記的名稱，例如「Adobe屬性目的地」，然後為角色選取「完全存取」。
 
-按一下&#x200B;**[!UICONTROL 建立Token]**，並將詳細資料儲存為機密檔案。
+按一下&#x200B;**[!UICONTROL Create Token]**&#x200B;並將詳細資料儲存為機密檔案。
 
 ## 使用案例 {#use-cases}
 
@@ -89,42 +89,42 @@ Adobe Experience Platform設定檔屬性與[!DNL Airship]屬性類似，並可�
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請填寫必填欄位並選取&#x200B;**[!UICONTROL Connect to destination]**。
 
-* **[!UICONTROL 持有人權杖]**：您從[!DNL Airship]儀表板產生的持有人權杖。
+* **[!UICONTROL Bearer token]**：您從[!DNL Airship]儀表板產生的持有人權杖。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-* **[!UICONTROL 名稱]**：輸入可協助您識別此目的地的名稱。
-* **[!UICONTROL 描述]**：輸入此目的地的描述。
-* **[!UICONTROL 網域]**：選取美國或歐盟資料中心，視哪個[!DNL Airship]資料中心套用至此目的地而定。
+* **[!UICONTROL Name]**：輸入可協助您識別此目的地的名稱。
+* **[!UICONTROL Description]**：輸入此目的地的描述。
+* **[!UICONTROL Domain]**：選取美國或歐盟資料中心，視哪個[!DNL Airship]資料中心套用至此目的地而定。
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 如需啟用此目的地的對象的指示，請參閱[啟用串流對象匯出目的地的對象資料](../../ui/activate-segment-streaming-destinations.md)。
 
 ## 對應考量事項 {#mapping-considerations}
 
-[!DNL Airship]屬性可以在代表裝置執行個體(例如iPhone)的頻道上設定，或是可將使用者的所有裝置對應到共同識別碼（例如客戶ID）的具名使用者上設定。 如果您的結構描述中有純文字（未雜湊）電子郵件地址作為主要身分，請在&#x200B;**[!UICONTROL Source屬性]**&#x200B;中選取電子郵件欄位，並對應至&#x200B;**[!UICONTROL 目標身分]**&#x200B;下右側欄中的[!DNL Airship]具名使用者，如下所示。
+[!DNL Airship]屬性可以在代表裝置執行個體(例如iPhone)的頻道上設定，或是可將使用者的所有裝置對應到共同識別碼（例如客戶ID）的具名使用者上設定。 如果您的結構描述中有純文字（未雜湊）電子郵件地址作為主要身分，請在&#x200B;**[!UICONTROL Source Attributes]**&#x200B;中選取電子郵件欄位，並將對應到[!DNL Airship]下右側欄中的&#x200B;**[!UICONTROL Target Identities]**&#x200B;具名使用者，如下所示。
 
 ![具名使用者對應](../../assets/catalog/mobile-engagement/airship/mapping.png)
 

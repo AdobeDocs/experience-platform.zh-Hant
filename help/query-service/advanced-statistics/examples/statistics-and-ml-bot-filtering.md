@@ -1,7 +1,8 @@
 ---
 title: 使用統計和機器學習進行機器人篩選
 description: 瞭解如何使用Data Distiller統計資料和機器學習來識別和篩選機器人活動，以確保準確分析並改善資料完整性。
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 可透過偵測特定時間間隔內使用者動作的尖峰來識別機器人活動。 例如，單一使用者在短時間內執行過多點按可能表示機器人行為。 機器人篩選使用的兩個關鍵屬性為：
 
-- **ECID (Experience Cloud訪客識別碼)：**&#x200B;可識別訪客的通用、永續性識別碼。
+- **ECID (Experience Cloud訪客ID)：**&#x200B;可識別訪客的永久通用ID。
 - **時間戳記：**&#x200B;網站上發生活動的時間和日期。
 
 以下範例示範如何使用SQL和機器學習技術來識別、調整及預測機器人活動。 使用這些方法可改善資料完整性並確保分析可操作性。
@@ -117,7 +118,7 @@ FROM (
 )
 ```
 
-陳述式使用`mcid`值和網頁聯結來自`table_count_1_min`、`table_count_5_mins`和`table_count_30_mins`的資料。 然後它會合併多個時間間隔內每個使用者的點按計數，以提供使用者活動的完整檢視。 最後，標幟邏輯接著會識別一分鐘內超過50次點按的使用者，並將其標示為機器人(`isBot = 1`)。
+陳述式使用`table_count_1_min`值和網頁聯結來自`table_count_5_mins`、`table_count_30_mins`和`mcid`的資料。 然後它會合併多個時間間隔內每個使用者的點按計數，以提供使用者活動的完整檢視。 最後，標幟邏輯接著會識別一分鐘內超過50次點按的使用者，並將其標示為機器人(`isBot = 1`)。
 
 ### 輸出資料集結構
 
@@ -179,7 +180,7 @@ root
 1. 若要在數值、字串及布林資料行中填入Null值，請分別使用`numeric_imputer`、`string_imputer`及`boolean_imputer`函式。 此步驟可確保機器學習演演算法處理資料時不會發生錯誤。
 2. 套用特徵轉換來準備要建模的資料。 套用`binarized`、`quantile_discretizer`或`string_indexer`以分類或標準化資料行。 接著，將輸入程式（`numeric_imputer`和`string_imputer`）的輸出輸入到後續的轉換器，如`string_indexer`或`quantile_discretizer`，以建立有意義的功能。
 3. 使用`vector_assembler`函式將轉換的資料行合併成單一功能資料行。 然後使用`min_max_scaler`來縮放功能，將值標準化以獲得更好的模型效能。 注意：在SQL範例中，TRANSFORM子句中提及的最後一個轉換會變成機器學習模型所使用的特徵資料行。
-4. 在OPTIONS子句中指定模型型別和任何其他超引數。 例如，在此選擇`decision_tree_classifier`，因為這是分類問題。 已調整(`MAX_DEPTH=4`)其他引數（例如`max_depth`）以調整模型，以獲得更好的效能。
+4. 在OPTIONS子句中指定模型型別和任何其他超引數。 例如，在此選擇`decision_tree_classifier`，因為這是分類問題。 已調整(`max_depth`)其他引數（例如`MAX_DEPTH=4`）以調整模型，以獲得更好的效能。
 5. 結合特徵並標籤輸出資料。 使用SELECT子句指定要訓練的資料集。 此子句應包含功能資料行(`count_per_id`、`web`、`id`)和標籤資料行(`isBot`)，以指出動作是否可能是機器人。
 
 您的陳述式可能如下列範例所示。
@@ -209,7 +210,7 @@ SELECT count_per_id, isBot, web, id FROM analytics_events_clicks_count_criteria;
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ FROM   model_evaluate(bot_filtering_model, 1,
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ FROM model_predict(bot_filtering_model, 1,
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

@@ -2,7 +2,7 @@
 title: 資料集範例
 description: 查詢服務範例資料集可讓您對巨量資料執行探索性查詢，並大幅減少處理時間，但代價是查詢準確性。 本指南提供如何管理範例以進行近似查詢處理的資訊
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -18,12 +18,12 @@ Adobe Experience Platform查詢服務提供範例資料集，作為其近似查�
 為協助您管理近似查詢處理的範例，查詢服務支援對資料集範例執行下列操作：
 
 - [資料集範例](#dataset-samples)
-   - [快速入門 {#get-started}](#getting-started-get-started)
-   - [建立統一的隨機資料集範例{#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [選擇性地指定篩選條件{#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [檢視範例清單{#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
-   - [查詢範例資料集{#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
-   - [刪除資料集範例{#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
+   - [快速入門](#getting-started-get-started)
+   - [建立統一的隨機資料集範例](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [選擇性地指定篩選條件](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [檢視範例清單](#view-the-list-of-samples-view-list-of-samples)
+   - [查詢範例資料集](#query-the-sample-dataset-query-sample-datasets)
+   - [刪除資料集範例](#delete-dataset-samples-delete-a-sample)
 
 ## 快速入門 {#get-started}
 
@@ -83,7 +83,7 @@ SELECT sample_meta('example_dataset_name')
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```

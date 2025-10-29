@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform；訓練和評估；資料科學Workspace；熱門主題；Sensei機器學習API
+keywords: Experience Platform；訓練和評估；資料科學Workspace；熱門主題；Sensei Machine Learning API
 solution: Experience Platform
 title: 使用Sensei Machine Learning API訓練和評估模型
 type: Tutorial
 description: 本教學課程將說明如何使用Sensei機器學習API呼叫來建立、訓練和評估模型。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 1%
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 依照[使用API](./import-packaged-recipe-api.md)匯入封裝的配方以建立引擎，使用API訓練和評估模型需要此引擎。
 
-請依照[Experience PlatformAPI驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)中的說明開始進行API呼叫。
+請依照[Experience Platform API驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)中的指示開始進行API呼叫。
 
 在教學課程中，您現在應該具備下列值：
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 ### 建立MLInstance
 
-您可以使用以下請求來建立MLInstance。 您將使用從[使用API](./import-packaged-recipe-ui.md)匯入封裝配方來建立引擎時傳回的`{ENGINE_ID}`。
+您可以使用以下請求來建立MLInstance。 您將使用從`{ENGINE_ID}`使用API[匯入封裝配方來建立引擎時傳回的](./import-packaged-recipe-ui.md)。
 
 **要求**
 
@@ -355,7 +355,7 @@ curl -X POST \
 }
 ```
 
-您將會收到下列回應，讓您知道`tasks`下的`{EXPERIMENT_RUN_ID}`和組態。
+您將會收到下列回應，讓您知道`{EXPERIMENT_RUN_ID}`下的`tasks`和組態。
 
 **回應**
 
@@ -438,6 +438,7 @@ GET呼叫將在`state`引數中提供狀態，如下所示：
 `{EXPERIMENT_ID}`：代表實驗執行所在實驗的ID。
 
 除了`DONE`狀態之外，其他狀態包括：
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`
@@ -493,7 +494,7 @@ curl -X GET \
 
 ### 停止並刪除排程的實驗
 
-如果您想要在排程的Experiment `endTime`之前停止執行，這可透過查詢`{EXPERIMENT_ID}`的DELETE要求來完成
+如果您想要在排程的Experiment `endTime`之前停止執行，這可透過查詢`{EXPERIMENT_ID}`的DELETE請求來完成
 
 **要求**
 

@@ -3,14 +3,14 @@ keywords: crm；CRM；CRM目的地；外聯；外聯crm目的地
 title: 外展連線
 description: 外展目的地可讓您匯出帳戶資料，並在外展內根據您的業務需求啟用資料。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
 
-# [!DNL Outreach]個連線
+# [!DNL Outreach] 連線
 
 ## 概觀 {#overview}
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[外展更新資源API](https://api.outreach.io/api/v2/docs#update-an-existing-resource)，可讓您更新與[!DNL Outreach]中潛在客戶相對應的對象中的身分。
 
-[!DNL Outreach]使用具有授權授權的OAuth 2作為驗證機制，與[!DNL Outreach] [!DNL Update Resource API]通訊。 在[向目的地驗證](#authenticate)區段中，進一步說明如何向您的[!DNL Outreach]執行個體進行驗證。
+[!DNL Outreach]使用具有授權授權的OAuth 2作為驗證機制，與[!DNL Outreach] [!DNL Update Resource API]通訊。 在[!DNL Outreach]向目的地驗證[區段中，進一步說明如何向您的](#authenticate)執行個體進行驗證。
 
 ## 使用案例 {#use-cases}
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL Outreach]目的地之前，您必須在[!DNL Experience Platform]中建立[結構描述](/help/xdm/schema/composition.md)、[資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)和[區段](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)。
+在啟用資料到[!DNL Outreach]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱Adobe關於[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的檔案。
 
@@ -82,9 +82,9 @@ ht-degree: 2%
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li> 您正在匯出區段的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 根據[對象排程](#schedule-segment-export-example)步驟期間提供的[!UICONTROL 對應ID]值，[!DNL Outreach]中的每個區段狀態都會以來自Experience Platform的對應對象狀態更新。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li> 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
+|---------|----------|---------|
+| 匯出類型 | **[!UICONTROL Profile-based]** | <ul><li> 您正在匯出區段的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 根據[!DNL Outreach]對象排程[!UICONTROL Mapping ID]步驟期間提供的[值，](#schedule-segment-export-example)中的每個區段狀態都會以Experience Platform中對應的對象狀態更新。</li></ul> |
+| 匯出頻率 | **[!UICONTROL Streaming]** | <ul><li> 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,15 +92,15 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
-> 若要連線到目的地，您需要&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+> 若要連線到目的地，您需要&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-在&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**&#x200B;內，搜尋[!DNL Outreach]。 或者，您可以在CRM類別下找到它。
+在&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;內搜尋[!DNL Outreach]。 或者，您可以在CRM類別下找到它。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請選取&#x200B;**[!UICONTROL Connect to destination]**。
 
 ![Experience Platform UI熒幕擷圖顯示如何驗證至外展活動。](../../assets/catalog/crm/outreach/authenticate-destination.png)
 
@@ -112,31 +112,31 @@ ht-degree: 2%
 
 ![外展UI熒幕擷圖顯示輸入密碼步驟以驗證外展的欄位。](../../assets/catalog/crm/outreach/authenticate-destination-login-password.png)
 
-* **[!UICONTROL 使用者名稱]**：您的[!DNL Outreach]帳戶電子郵件。
-* **[!UICONTROL 密碼]**：您的[!DNL Outreach]帳戶密碼。
+* **[!UICONTROL Username]**：您的[!DNL Outreach]帳戶電子郵件。
+* **[!UICONTROL Password]**：您的[!DNL Outreach]帳戶密碼。
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**已連線**&#x200B;狀態。 然後您可以繼續下一步驟。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![Experience Platform UI熒幕擷圖顯示如何填寫外展目的地詳細資訊。](../../assets/catalog/crm/outreach/destination-details.png)
 
-* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
+* **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+* **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 閱讀[將設定檔和對象啟用至串流對象匯出目的地](../../ui/activate-segment-streaming-destinations.md)，以瞭解啟用此目的地對象的指示。
 
@@ -144,15 +144,14 @@ ht-degree: 2%
 
 若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Outreach]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL Outreach]目的地欄位，請遵循下列步驟：
 
-1. 在[!UICONTROL 對應]步驟中，按一下&#x200B;**[!UICONTROL 新增對應]**。 您會在畫面上看到新的對應列。
+1. 在[!UICONTROL Mapping]步驟中，按一下&#x200B;**[!UICONTROL Add new mapping]**。 您會在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷圖顯示如何新增對應](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
-1. 在[!UICONTROL 選取來源欄位]視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;類別並新增所需的對應。
+1. 在[!UICONTROL Select source field]視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**類別並新增所需的對應。
    ![Experience Platform UI熒幕擷圖顯示Source對應](../../assets/catalog/crm/outreach/source-mapping.png)
 
-1. 在[!UICONTROL 選取目標欄位]視窗中，選取您要將來源欄位對應到的目標欄位型別。
-   * **[!UICONTROL 選取身分名稱空間]**：選取此選項可將您的來源欄位從清單對應至身分名稱空間。
-
+1. 在[!UICONTROL Select target field]視窗中，選取您要將來源欄位對應到的目標欄位型別。
+   * **[!UICONTROL Select identity namespace]**：選取此選項，從清單將您的來源欄位對應到身分名稱空間。
      ![Experience Platform UI熒幕擷取畫面顯示使用ExpancationId的Target對應。](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * 在您的XDM設定檔結構描述與[!DNL Outreach]執行個體之間新增下列對應：
@@ -161,8 +160,7 @@ ht-degree: 2%
      |---|---|---|
      | `Oid` | `OutreachId` | 是 |
 
-   * **[!UICONTROL 選取自訂屬性]**：選取此選項可將您的來源欄位對應到您在[!UICONTROL 屬性名稱]欄位中定義的自訂屬性。 如需支援屬性的完整清單，請參閱[[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect)。
-
+   * **[!UICONTROL Select custom attributes]**：選取此選項以將您的來源欄位對應到您在[!UICONTROL Attribute name]欄位中定義的自訂屬性。 如需支援屬性的完整清單，請參閱[[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect)。
      ![Experience Platform UI熒幕擷圖顯示使用LastName的目標對應。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * 例如，根據您要更新的值，在您的XDM設定檔結構描述與[!DNL Outreach]執行個體之間新增下列對應：
@@ -173,18 +171,17 @@ ht-degree: 2%
      | `person.name.lastName` | `lastName` |
 
    * 以下顯示使用這些對應的範例：
-
      ![Experience Platform UI熒幕擷圖範例顯示Target對應。](../../assets/catalog/crm/outreach/mappings.png)
 
 ### 排程對象匯出和範例 {#schedule-segment-export-example}
 
 * 執行[排程對象匯出](../../ui/activate-segment-streaming-destinations.md)步驟時，您必須手動將Experience Platform對象對應到[!DNL Outreach]中的自訂欄位屬性。
 
-* 若要這麼做，請選取每個區段，然後輸入對應的數值，該值對應至&#x200B;**[!UICONTROL 對應ID]**&#x200B;欄位中[!DNL Outreach]的&#x200B;*自訂欄位`N`標籤*&#x200B;欄位。
+* 若要這麼做，請選取每個區段，然後輸入對應於&#x200B;*欄位中`N`之*&#x200B;自訂欄位[!DNL Outreach]標籤&#x200B;**[!UICONTROL Mapping ID]**&#x200B;欄位的數值。
 
   >[!IMPORTANT]
   >
-  > * 在[!UICONTROL 對應ID]內使用的數值&#x200B;*(`N`)*&#x200B;應該與尾碼為[!DNL Outreach]內數值的自訂屬性金鑰相符。 範例： *自訂欄位`N`標籤*。
+  > * 在&#x200B;*內使用的數值`N`(*)[!UICONTROL Mapping ID]應該與尾碼為[!DNL Outreach]內數值的自訂屬性金鑰相符。 範例： *自訂欄位`N`標籤*。
   > * 您只需要指定數值，不需要指定整個自訂欄位標籤。
   > * [!DNL Outreach]支援最多150個自訂標籤欄位。
   > * 如需詳細資訊，請參閱[[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect)。
@@ -201,19 +198,19 @@ ht-degree: 2%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 選取&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**&#x200B;以瀏覽目的地清單。
+1. 選取「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」以導覽至目的地清單。
    ![Experience Platform UI熒幕擷圖顯示瀏覽目的地。](../../assets/catalog/crm/outreach/browse-destinations.png)
 
-1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL 已啟用]**。
+1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![Experience Platform UI熒幕擷圖顯示所選目的地的目的地資料流執行。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
    ![Experience Platform UI熒幕擷圖顯示目的地啟用資料。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。
    ![Experience Platform UI熒幕擷圖顯示區段摘要。](../../assets/catalog/crm/outreach/segment.png)
 
-1. 登入[!DNL Outreach]網站，然後導覽至[!DNL Apps] > [!DNL Contacts]頁面，並檢查是否已新增對象的設定檔。 您可以看到根據[對象排程](#schedule-segment-export-example)步驟期間提供的[!UICONTROL 對應ID]值，[!DNL Outreach]中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
+1. 登入[!DNL Outreach]網站，然後導覽至[!DNL Apps] > [!DNL Contacts]頁面，並檢查是否已新增對象的設定檔。 您可以看到根據[!DNL Outreach]對象排程[!UICONTROL Mapping ID]步驟期間提供的[值，](#schedule-segment-export-example)中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
 
 ![外展UI熒幕擷圖顯示「外展潛在客戶」頁面，其中包含更新的對象狀態。](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
@@ -227,7 +224,7 @@ ht-degree: 2%
 
 ![Experience Platform UI熒幕擷圖顯示「錯誤請求錯誤」。](../../assets/catalog/crm/outreach/error.png)
 
-若要修正此錯誤，請確認您在Experience Platform中為[!DNL Outreach]對象提供的[!UICONTROL 對應ID]有效且存在於[!DNL Outreach]中。
+若要修正此錯誤，請確認您在Experience Platform中為[!UICONTROL Mapping ID]對象提供的[!DNL Outreach]有效且存在於[!DNL Outreach]中。
 
 ## 其他資源 {#additional-resources}
 

@@ -5,9 +5,9 @@ title: 使用JupyterLab Notebooks建立模型
 type: Tutorial
 description: 本教學課程將逐步引導您完成使用JupyterLab Notebooks配方產生器範本建立配方所需的步驟。
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -35,23 +35,23 @@ ht-degree: 0%
 
 ## 開始使用[!DNL JupyterLab]筆記本環境
 
-從頭開始建立配方可以在[!DNL Data Science Workspace]內完成。 若要開始，請導覽至[Adobe Experience Platform](https://platform.adobe.com)，然後選取左側的&#x200B;**[!UICONTROL 筆記本]**&#x200B;索引標籤。 若要建立新的筆記本，請從[!DNL JupyterLab Launcher]選取「配方產生器」範本。
+從頭開始建立配方可以在[!DNL Data Science Workspace]內完成。 若要開始，請導覽至[Adobe Experience Platform](https://platform.adobe.com)並選取左側的&#x200B;**[!UICONTROL Notebooks]**&#x200B;索引標籤。 若要建立新的筆記本，請從[!DNL JupyterLab Launcher]選取「配方產生器」範本。
 
-[!UICONTROL 配方產生器]筆記本可讓您在筆記本內執行訓練和評分回合。 這可讓您在執行訓練和評分資料的實驗之間，靈活地變更其`train()`和`score()`方法。 當您對訓練和評分的輸出感到滿意後，就可以建立配方，並使用配方來模型化功能，進而將其發佈為模型。
+[!UICONTROL Recipe Builder]筆記本可讓您在筆記本內執行訓練和評分回合。 這可讓您在執行訓練和評分資料的實驗之間，靈活地變更其`train()`和`score()`方法。 當您對訓練和評分的輸出感到滿意後，就可以建立配方，並使用配方來模型化功能，進而將其發佈為模型。
 
 >[!NOTE]
 >
->[!UICONTROL 配方產生器]筆記本支援使用所有檔案格式，但目前建立配方功能僅支援[!DNL Python]。
+>[!UICONTROL Recipe Builder]筆記本支援使用所有檔案格式，但目前建立配方功能僅支援[!DNL Python]。
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-當您從啟動器選取[!UICONTROL 配方產生器]筆記本時，會在新索引標籤中開啟筆記本。
+當您從啟動器選取[!UICONTROL Recipe Builder]筆記本時，會在新索引標籤中開啟筆記本。
 
-在頂端的新筆記本標籤中，載入包含三個額外動作的工具列 — **[!UICONTROL 訓練]**、**[!UICONTROL 分數]**&#x200B;和&#x200B;**[!UICONTROL 建立配方]**。 這些圖示只會顯示在[!UICONTROL 配方產生器]筆記本中。 在記事本中建置您的配方後，[在訓練與評分割槽段](#training-and-scoring)中提供這些動作的詳細資訊。
+在頂端的新筆記本標籤中，工具列載入了包含三個其他動作的專案 — **[!UICONTROL Train]**、**[!UICONTROL Score]**&#x200B;和&#x200B;**[!UICONTROL Create Recipe]**。 這些圖示只會顯示在[!UICONTROL Recipe Builder]筆記本中。 在記事本中建置您的配方後，[在訓練與評分割槽段](#training-and-scoring)中提供這些動作的詳細資訊。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## 開始使用[!UICONTROL 配方產生器]筆記本
+## 開始使用[!UICONTROL Recipe Builder]筆記本
 
 在提供的資產資料夾中為Luma傾向模型`propensity_model.ipynb`。 使用JupyterLab中的上傳筆記本選項，上傳提供的型號並開啟筆記本。
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 下列影片教學課程說明Luma傾向性模型筆記本：
 
->[!VIDEO](https://video.tv.adobe.com/v/3452503?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### 需求檔案 {#requirements-file}
 
@@ -99,7 +99,7 @@ data_access_sdk_python
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-在&#x200B;**[結構描述](https://platform.adobe.com/schema)**&#x200B;和&#x200B;**[資料集](https://platform.adobe.com/dataset/overview)**&#x200B;索引標籤下的[Adobe Experience Platform](https://platform.adobe.com/)中可以找到相同的資訊。
+在[結構描述](https://platform.adobe.com/)**[和](https://platform.adobe.com/schema)資料集****[索引標籤下的](https://platform.adobe.com/dataset/overview)Adobe Experience Platform**&#x200B;中可以找到相同的資訊。
 
 競爭後，您的訓練和評分設定應類似於以下熒幕擷圖：
 
@@ -123,7 +123,7 @@ data_access_sdk_python
 
 ### 正在載入資料 {#loading-data}
 
-此步驟使用[熊貓資料流](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 可以使用[!DNL Experience Platform] SDK (`platform_sdk`)從[!DNL Adobe Experience Platform]中的檔案載入資料，或是使用熊貓`read_csv()`或`read_json()`函式的外部來源載入資料。
+此步驟使用[熊貓資料流](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)。 可以使用[!DNL Adobe Experience Platform] SDK ([!DNL Experience Platform])從`platform_sdk`中的檔案載入資料，或是使用熊貓`read_csv()`或`read_json()`函式的外部來源載入資料。
 
 - [[!DNL Experience Platform SDK]](#platform-sdk)
 - [外部來源](#external-sources)
@@ -139,16 +139,17 @@ data_access_sdk_python
 ### 外部來源 {#external-sources}
 
 本節說明如何將JSON或CSV檔案匯入熊貓物件。 熊貓資料庫的官方檔案可在以下網址找到：
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
-首先，以下是匯入CSV檔案的範例。 `data`引數是CSV檔案的路徑。 此變數是從[上一節](#configuration-files)中的`configProperties`匯入。
+首先，以下是匯入CSV檔案的範例。 `data`引數是CSV檔案的路徑。 此變數是從`configProperties`上一節[中的](#configuration-files)匯入。
 
 ```PYTHON
 df = pd.read_csv(data)
 ```
 
-您也可以從JSON檔案匯入。 `data`引數是CSV檔案的路徑。 此變數是從[上一節](#configuration-files)中的`configProperties`匯入。
+您也可以從JSON檔案匯入。 `data`引數是CSV檔案的路徑。 此變數是從`configProperties`上一節[中的](#configuration-files)匯入。
 
 ```PYTHON
 df = pd.read_json(data)
@@ -162,7 +163,7 @@ df = pd.read_json(data)
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
-然後，您可以使用`load()`方法，從設定(`recipe.conf`)檔案中所設定的`trainingDataSetId`抓取訓練資料集。
+然後，您可以使用`load()`方法，從設定(`trainingDataSetId`)檔案中所設定的`recipe.conf`抓取訓練資料集。
 
 ```PYTHON
 def load(config_properties):
@@ -178,6 +179,7 @@ def load(config_properties):
 >[!NOTE]
 >
 >如[組態檔區段](#configuration-files)中所述，當您使用`client_context = get_client_context(config_properties)`從Experience Platform存取資料時，已為您設定下列組態引數：
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -205,7 +207,7 @@ def load(config_properties):
 
 ## 評分資料載入器 {#scoring-data-loader}
 
-載入資料以進行評分的程式與載入訓練資料類似。 仔細檢視程式碼，您會發現除了`dataset_reader`中的`scoringDataSetId`以外，其他所有專案都相同。 這是因為訓練和評分都使用相同的Luma資料來源。
+載入資料以進行評分的程式與載入訓練資料類似。 仔細檢視程式碼，您會發現除了`scoringDataSetId`中的`dataset_reader`以外，其他所有專案都相同。 這是因為訓練和評分都使用相同的Luma資料來源。
 
 如果您想要使用不同的資料檔案進行訓練和評分，訓練和評分資料載入器是分開的。 這可讓您執行其他預先處理，例如視需要將您的訓練資料對應至您的評分資料。
 
@@ -249,7 +251,7 @@ def load(config_properties):
 
 ## 資料儲存器檔案 {#data-saver-file}
 
-`datasaver.py`檔案包含`save()`函式，用來在測試評分時儲存您的預測。 `save()`函式接受您的預測，並使用[!DNL Experience Platform Catalog] API，將資料寫入您在`scoring.conf`檔案中指定的`scoringResultsDataSetId`。 您可以
+`datasaver.py`檔案包含`save()`函式，用來在測試評分時儲存您的預測。 `save()`函式接受您的預測，並使用[!DNL Experience Platform Catalog] API，將資料寫入您在`scoringResultsDataSetId`檔案中指定的`scoring.conf`。 您可以
 
 ![資料儲存器](../images/jupyterlab/create-recipe/data_saver.png)
 
@@ -257,7 +259,7 @@ def load(config_properties):
 
 當您完成筆記本的變更並想要訓練您的配方時，您可以選取列頂端的關聯按鈕，以在儲存格中建立訓練回合。 選取按鈕後，訓練指令碼的命令和輸出記錄會顯示在記事本中（在`evaluator.py`儲存格下）。 Conda會先安裝所有相依性，然後開始培訓。
 
-請注意，您必須至少執行一次訓練，才能執行評分。 選取&#x200B;**[!UICONTROL 執行評分]**&#x200B;按鈕將會在訓練期間產生的已訓練模型上評分。 評分指令碼會顯示在`datasaver.py`下方。
+請注意，您必須至少執行一次訓練，才能執行評分。 選取&#x200B;**[!UICONTROL Run Scoring]**&#x200B;按鈕將會在訓練期間產生的已訓練模型上計分。 評分指令碼會顯示在`datasaver.py`下方。
 
 為了偵錯，如果您想要檢視隱藏的輸出，請將`debug`新增到輸出儲存格的結尾並重新執行。
 
@@ -265,15 +267,15 @@ def load(config_properties):
 
 ## 建立配方 {#create-recipe}
 
-當您編輯完配方並滿意訓練/評分輸出時，您可以選取右上方的&#x200B;**[!UICONTROL 建立配方]**，從筆記本建立配方。
+當您完成編輯配方並對訓練/評分輸出感到滿意時，您可以選取右上角的&#x200B;**[!UICONTROL Create Recipe]**，從記事本中建立配方。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-選取&#x200B;**[!UICONTROL 建立配方]**&#x200B;後，系統會提示您輸入配方名稱。 此名稱代表在[!DNL Experience Platform]上建立的實際配方。
+選取&#x200B;**[!UICONTROL Create Recipe]**&#x200B;後，系統會提示您輸入配方名稱。 此名稱代表在[!DNL Experience Platform]上建立的實際配方。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-一旦您選取&#x200B;**[!UICONTROL 確定]**，配方建立程式就會開始。 這可能需要一些時間，並且會顯示進度列來取代建立配方按鈕。 完成後，您可以選取&#x200B;**[!UICONTROL 檢視配方]**&#x200B;按鈕，帶您進入&#x200B;**[!UICONTROL ML模型]**&#x200B;下的&#x200B;**[!UICONTROL 配方]**&#x200B;標籤
+一旦您選取&#x200B;**[!UICONTROL Ok]**，配方建立程式就會開始。 這可能需要一些時間，並且會顯示進度列來取代建立配方按鈕。 完成後，您可以選取「**[!UICONTROL View Recipes]**」按鈕，帶您前往「**[!UICONTROL Recipes]**」下的「**[!UICONTROL ML Models]**」標籤
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -285,6 +287,6 @@ def load(config_properties):
 
 ## 後續步驟 {#next-steps}
 
-完成此教學課程後，您已瞭解如何在[!UICONTROL 配方產生器]筆記本中建立機器學習模型。 您也已瞭解如何練習將筆記本設為配方工作流程。
+完成本教學課程後，您已瞭解如何在[!UICONTROL Recipe Builder]筆記本中建立機器學習模型。 您也已瞭解如何練習將筆記本設為配方工作流程。
 
 若要繼續瞭解如何使用[!DNL Data Science Workspace]中的資源，請造訪[!DNL Data Science Workspace]配方和模型下拉式清單。

@@ -2,9 +2,9 @@
 title: 上傳並實作擴充功能的端對端測試
 description: 瞭解如何在Adobe Experience Platform中驗證、上傳和測試您的擴充功能。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2344'
 ht-degree: 22%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 22%
 
 上傳之前，請先驗證是否有任何必要欄位或設定需完成。例如，檢閱您的[擴充功能資訊清單](../manifest.md)、[擴充功能組態](../configuration.md)、[檢視](../web/views.md)以及[程式庫模組](../web/format.md) （最少）是良好的作法。
 
-您的標誌檔案就是明確的範例：請在您的`extension.json`檔案中新增`"iconPath": "example.svg",`行，並將該標誌影像檔案加入您的專案中。 這是會針對擴充功能顯示之圖示的相對路徑。 此路徑不應以斜線開頭。它必須參考副檔名為 `.svg` 的 SVG 檔案。SVG在呈現為正方形時應該會正常顯示，並可依使用者介面進行調整。 如需詳細資訊，請參閱[如何縮放SVG文章](https://css-tricks.com/scale-svg/)。
+您的標誌檔案就是明確的範例：請在您的`"iconPath": "example.svg",`檔案中新增`extension.json`行，並將該標誌影像檔案加入您的專案中。 這是會針對擴充功能顯示之圖示的相對路徑。 此路徑不應以斜線開頭。它必須參考副檔名為 `.svg` 的 SVG 檔案。SVG在呈現為正方形時應該會正常顯示，並可依使用者介面進行調整。 如需詳細資訊，請參閱[如何縮放SVG文章](https://css-tricks.com/scale-svg/)。
 
 >[!NOTE]
 >
@@ -63,10 +63,10 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > 依預設，Uploader會預期伺服器對伺服器Oauth流程的Adobe I/O認證。 舊版`jwt-auth`認證
-> 可藉由執行`npx @adobe/reactor-uploader@v5.2.0`使用，直到2025年1月1日停止使用。 必要的引數
-> 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)找到。
+> > 可藉由執行`npx @adobe/reactor-uploader@v5.2.0`使用，直到2025年1月1日停止使用。 必要的引數
+> > 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)找到。
 
-上傳程式僅需要您輸入幾項資訊。 可以從Adobe I/O主控台擷取`clientId`和`clientSecret`。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/tw/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL 檢視]**。
+上傳程式僅需要您輸入幾項資訊。 可以從Adobe I/O主控台擷取`clientId`和`clientSecret`。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/tw/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL View]**。
 
 - 您的`clientId`是什麼？ 請從I/O主控台複製並貼上。
 - 您的`clientSecret`是什麼？ 請從I/O主控台複製並貼上。
@@ -82,11 +82,11 @@ npx @adobe/reactor-uploader
 >
 >如果您預計要經常執行上傳程式，則每次都輸入這些資訊可能會造成負擔。 您也可以從命令列將這些資訊作為引數傳入。 如需詳細資訊，請查看 NPM 文件的[命令列引數](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments)一節。
 
-如果您想要直接使用API管理擴充功能的上傳，請在API檔案中參閱[建立](../../api/endpoints/extension-packages.md/#create)或[更新](../../api/endpoints/extension-packages.md#update)擴充功能套件的範例呼叫，以取得詳細資訊。
+如果您想要直接使用API管理擴充功能的上傳，請在API檔案中參閱[建立](../../api/endpoints/extension-packages.md#create)或[更新](../../api/endpoints/extension-packages.md#update)擴充功能套件的範例呼叫，以取得詳細資訊。
 
 ## 建立開發屬性 {#property}
 
-登入UI並在左側導覽中選取&#x200B;**[!UICONTROL 標籤]**&#x200B;之後，會顯示[!UICONTROL 屬性]畫面。 屬性是一個容器，內含您要部署的標記，可用於一或多個網站。
+登入UI並在左側導覽中選取&#x200B;**[!UICONTROL Tags]**&#x200B;之後，會顯示[!UICONTROL Properties]畫面。 屬性是一個容器，內含您要部署的標記，可用於一或多個網站。
 
 ![](../images/getting-started/properties-screen.png)
 

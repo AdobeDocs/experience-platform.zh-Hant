@@ -2,7 +2,7 @@
 title: 在臨時資料集中設定主要身分
 description: Adobe Experience Platform查詢服務可讓您直接透過SQL ALTER TABLE命令，為臨機操作結構描述資料集欄位設定身分或主要身分。 本檔案說明如何使用ALTER TABLE指令來設定主要身分或次要身分。
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Adobe Experience Platform查詢服務可讓您使用SQL `ALTER TABLE`命令的�
 
 若要將資料集資料行標示為主要或次要身分，必須瞭解`ALTER TABLE` SQL命令，並充分瞭解資料隱私權需求。 在繼續本檔案之前，請先檢閱下列檔案：
 
-* [&#x200B; `ALTER TABLE`命令的SQL語法指南](../sql/syntax.md)。
+* [ `ALTER TABLE`命令的SQL語法指南](../sql/syntax.md)。
 * [資料控管概觀](../../data-governance/home.md)以取得詳細資訊。
 
 ## 新增限制 {#add-constraints}
@@ -44,7 +44,7 @@ ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
 
 **範例**
 
-下列範例移除在現有`t1`資料表中必須將`c1`資料行標示為主要身分的要求。
+下列範例移除在現有`c1`資料表中必須將`t1`資料行標示為主要身分的要求。
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
@@ -68,7 +68,7 @@ ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 
 ```console
  tableName | columnName | datatype | namespace | ifPrimary
------------+------------+----------+-----------+----------
+|-----------+------------+----------+-----------+----------
 (0 rows)
 ```
 

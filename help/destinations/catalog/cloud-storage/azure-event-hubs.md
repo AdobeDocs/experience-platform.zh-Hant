@@ -4,9 +4,9 @@ title: Azure事件中樞連線
 description: 建立與您的 [!DNL Azure Event Hubs] 儲存裝置的即時輸出連線，以從Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2022'
 ht-degree: 5%
 
 ---
@@ -51,9 +51,9 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+|---------|----------|---------|
+| 匯出類型 | **[!UICONTROL Profile-based]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 連線到這個目的地時，您必須提供下列資訊：
 
@@ -75,22 +75,22 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 
 ![顯示Azure事件中樞標準驗證詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
 
-如果您選取&#x200B;**[!UICONTROL 標準驗證]**&#x200B;型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL 連線至目的地]**：
+如果您選取&#x200B;**[!UICONTROL Standard authentication]**&#x200B;型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL Connect to destination]**：
 
-* **[!UICONTROL SAS金鑰名稱]**：授權規則的名稱，也稱為SAS金鑰名稱。
-* **[!UICONTROL SAS金鑰]**：事件中樞名稱空間的主要金鑰。 `sasPolicy`對應的`sasKey`必須已設定&#x200B;**管理**&#x200B;許可權，才能填入事件中樞清單。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解如何使用SAS金鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* **[!UICONTROL 名稱空間]**：填入您的[!DNL Azure Event Hubs]名稱空間。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)名稱空間。
+* **[!UICONTROL SAS Key Name]**：授權規則的名稱，也稱為SAS金鑰名稱。
+* **[!UICONTROL SAS Key]**：事件中樞名稱空間的主索引鍵。 `sasPolicy`對應的`sasKey`必須已設定&#x200B;**管理**&#x200B;許可權，才能填入事件中樞清單。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解如何使用SAS金鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* **[!UICONTROL Namespace]**：填入您的[!DNL Azure Event Hubs]名稱空間。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)名稱空間。
 
 #### 共用存取簽章(SAS)驗證 {#sas-authentication}
 
 ![顯示Azure事件中樞標準驗證詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
-如果您選取&#x200B;**[!UICONTROL 標準驗證]**&#x200B;型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL 連線至目的地]**：
+如果您選取&#x200B;**[!UICONTROL Standard authentication]**&#x200B;型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL Connect to destination]**：
 
-* **[!UICONTROL SAS金鑰名稱]**：授權規則的名稱，也稱為SAS金鑰名稱。
-* **[!UICONTROL SAS金鑰]**：事件中樞名稱空間的主要金鑰。 `sasPolicy`對應的`sasKey`必須已設定&#x200B;**管理**&#x200B;許可權，才能填入事件中樞清單。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解如何使用SAS金鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* **[!UICONTROL 名稱空間]**：填入您的[!DNL Azure Event Hubs]名稱空間。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)名稱空間。
-* **[!UICONTROL 事件中心名稱]**：填入您的[!DNL Azure Event Hub]名稱。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)名稱。
+* **[!UICONTROL SAS Key Name]**：授權規則的名稱，也稱為SAS金鑰名稱。
+* **[!UICONTROL SAS Key]**：事件中樞名稱空間的主索引鍵。 `sasPolicy`對應的`sasKey`必須已設定&#x200B;**管理**&#x200B;許可權，才能填入事件中樞清單。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解如何使用SAS金鑰驗證](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* **[!UICONTROL Namespace]**：填入您的[!DNL Azure Event Hubs]名稱空間。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)名稱空間。
+* **[!UICONTROL Event Hub Name]**：填入您的[!DNL Azure Event Hub]名稱。 在[!DNL Azure Event Hubs]Microsoft檔案[中瞭解](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)名稱。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -108,23 +108,23 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 
 ![顯示Azure事件中樞目的地詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
-* **[!UICONTROL 名稱]**：填寫與[!DNL Azure Event Hubs]的連線名稱。
-* **[!UICONTROL 描述]**：提供連線的描述。  範例：「優質層級客戶」、「對風箏衝浪感興趣的客戶」。
+* **[!UICONTROL Name]**：填寫與[!DNL Azure Event Hubs]的連線名稱。
+* **[!UICONTROL Description]**：提供連線的說明。  範例：「優質層級客戶」、「對風箏衝浪感興趣的客戶」。
 * **[!UICONTROL eventHubName]**：為您[!DNL Azure Event Hubs]目的地的資料流提供名稱。
-* **[!UICONTROL 包含區段名稱]**：如果要讓資料匯出包含您匯出的對象名稱，請切換選項。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
-* **[!UICONTROL 包含區段時間戳記]**：若要讓資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 目前匯出至Azure事件中樞目的地時不支援[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。 [閱讀全文](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
 如需啟用此目的地對象的指示，請參閱[啟用串流設定檔匯出目的地的對象資料](../../ui/activate-streaming-profile-destinations.md)。
@@ -224,7 +224,7 @@ Experience Platform會最佳化[!DNL Azure Event Hubs]目的地的設定檔匯�
 }
 ```
 
-根據您在&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;和&#x200B;**[!UICONTROL 包含區段時間戳記]**&#x200B;選項的連線目的地流程中選取的UI設定，以下是匯出資料的更多範例：
+根據您在&#x200B;**[!UICONTROL Include Segment Names]**&#x200B;和&#x200B;**[!UICONTROL Include Segment Timestamps]**&#x200B;選項的連線目的地流程中選取的UI設定，以下是匯出資料的更多範例：
 
 +++ 下列資料匯出範例包含`segmentMembership`區段中的對象名稱
 

@@ -5,9 +5,9 @@ title: 使用筆記型電腦分析資料
 type: Tutorial
 description: 本教學課程著重於如何使用內建於Data Science Workspace的Jupyter Notebooks，存取、探索及視覺化您的資料。
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 本節會探索先前內嵌至零售銷售綱要的資料。
 
-資料科學Workspace可讓使用者透過[!DNL JupyterLab]平台建立[!DNL Jupyter Notebooks]，以便建立和編輯機器學習工作流程。 [!DNL JupyterLab]是伺服器使用者端共同作業工具，可讓使用者透過網頁瀏覽器編輯筆記本檔案。 這些筆記本可以包含可執行程式碼和RTF元素。 為了我們的目的，我們將使用Markdown進行分析描述，以及可執行的[!DNL Python]程式碼來執行資料探索和分析。
+資料科學Workspace可讓使用者透過[!DNL Jupyter Notebooks]平台建立[!DNL JupyterLab]，以便建立和編輯機器學習工作流程。 [!DNL JupyterLab]是伺服器使用者端共同作業工具，可讓使用者透過網頁瀏覽器編輯筆記本檔案。 這些筆記本可以包含可執行程式碼和RTF元素。 為了我們的目的，我們將使用Markdown進行分析描述，以及可執行的[!DNL Python]程式碼來執行資料探索和分析。
 
 ### 選擇您的工作區
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ### 建立新的筆記本
 
-在[!DNL Adobe Experience Platform] UI中，選取頂端功能表中的[!UICONTROL Data Science]，帶您前往Data Science Workspace。 從此頁面，選取[!DNL JupyterLab]以開啟[!DNL JupyterLab]啟動器。 您應該會看到類似此的頁面。
+在[!DNL Adobe Experience Platform] UI中，選取頂端功能表中的[!UICONTROL Data Science]，帶您前往資料科學Workspace。 從此頁面，選取[!DNL JupyterLab]以開啟[!DNL JupyterLab]啟動器。 您應該會看到類似此的頁面。
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 針對本節，我們使用「零售業」資料集，此資料集與「零售業」範例筆記本中使用的資料集相同。
 
-在Jupyter Notebook中，您可以從左側的&#x200B;**資料**&#x200B;標籤![資料標籤](../images/jupyterlab/analyze-data/dataset-tab.png)存取您的資料。 選取索引標籤後，會提供兩個資料夾。 選取&#x200B;**[!UICONTROL 資料集]**&#x200B;資料夾。
+在Jupyter Notebook中，您可以從左側的&#x200B;**資料**&#x200B;標籤![資料標籤](../images/jupyterlab/analyze-data/dataset-tab.png)存取您的資料。 選取索引標籤後，會提供兩個資料夾。 選取&#x200B;**[!UICONTROL Datasets]**&#x200B;資料夾。
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
@@ -120,6 +120,7 @@ df.head()
 ### 探索您的資料
 
 現在我們可以存取您的資料了，接下來讓我們使用統計和視覺效果來關注資料本身。 我們使用的資料集是零售資料集，提供指定日期45個不同商店的其他資訊。 指定`date`和`store`的某些特性包括：
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -161,6 +162,7 @@ df.describe()
 #### 資料視覺效果
 
 現在我們知道資料框架值了，我們想透過視覺效果來補充這些值，讓事情變得更清晰、更易於識別模式。 將結果傳送給對象時，圖表也很有用。 有些[!DNL Python]資料庫適合用於視覺化，包括：
+
 - [Matplotlib](https://matplotlib.org/)
 - [熊貓](https://pandas.pydata.org/)
 - [海港](https://seaborn.pydata.org/)
@@ -201,6 +203,7 @@ df.describe()
 ## 後續步驟
 
 本教學課程說明如何在資料科學Workspace中建立新的Jupyter Notebook，以及如何從外部和從[!DNL Adobe Experience Platform]存取資料。 具體來說，我們已進行下列步驟：
+
 - 建立新的Jupyter Notebook
 - 存取資料集和結構描述
 - 探索資料集

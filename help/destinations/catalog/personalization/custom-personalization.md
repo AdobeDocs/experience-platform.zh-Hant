@@ -3,9 +3,9 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者設定檔對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '923'
 ht-degree: 9%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 9%
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2023 年 5 月 | 功能和檔案更新 | 自2023年5月起，**[!UICONTROL 自訂個人化]**&#x200B;連線支援[屬性式個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes)，通常可供所有客戶使用。 |
+| 2023 年 5 月 | 功能和檔案更新 | 自2023年5月起，**[!UICONTROL Custom personalization]**&#x200B;連線支援[屬性式個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes)，通常可供所有客戶使用。 |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 若要保護此資料，您必須在為屬性式個人化設定[自訂Personalization](https://developer.adobe.com/data-collection-apis/docs/)目的地時，使用&#x200B;**[!UICONTROL Edge Network API]**。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)中進行。
+>設定檔屬性可能包含敏感資料。 若要保護此資料，您必須在為屬性式個人化設定[目的地時，使用](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)中進行。
 >
 ><br>您可以新增伺服器端整合，利用您已在網頁或行動SDK實作中使用的相同資料流，透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)擷取設定檔屬性。
 >
@@ -59,9 +59,9 @@ ht-degree: 9%
 ## 匯出型別和頻率 {#export-type-frequency}
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
+|---------|----------|---------|
 | 匯出類型 | **[!DNL Profile request]** | 您正在請求已對應至單一設定檔之自訂個人化目的地的所有對象。 可以為不同的[Adobe資料收集資料串流](../../../datastreams/overview.md)設定不同的自訂個人化目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 ## 連線到目標 {#connect}
 
@@ -69,11 +69,11 @@ ht-degree: 9%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流"
 >abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含對象。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。
 
@@ -81,22 +81,22 @@ ht-degree: 9%
 
 在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
 
-* **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
-* **[!UICONTROL 描述]**：輸入目的地的描述。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
-* **[!UICONTROL 整合別名]**：此值會作為JSON物件名稱傳送到Experience Platform Web SDK。
-* **[!UICONTROL 資料串流]**：這會決定頁面回應中要包含對象的資料收集資料串流。 下拉選單僅顯示已啟用目的地設定的資料流。如需詳細資訊，請參閱[設定資料串流](../../../datastreams/overview.md)。
+* **[!UICONTROL Name]**：填寫此目的地的偏好名稱。
+* **[!UICONTROL Description]**：輸入目的地的說明。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
+* **[!UICONTROL Integration alias]**：此值會以JSON物件名稱的形式傳送到Experience Platform Web SDK。
+* **[!UICONTROL Datastream]**：這會決定頁面回應中將包含哪些資料收集資料串流中的對象。 下拉選單僅顯示已啟用目的地設定的資料流。如需詳細資訊，請參閱[設定資料串流](../../../datastreams/overview.md)。
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 閱讀[啟用設定檔與對象邊緣個人化目的地](../../ui/activate-edge-personalization-destinations.md)，以取得啟用此目的地的對象的指示。
 
@@ -160,11 +160,11 @@ alloy("sendEvent", {
   });
 ```
 
-### 具有屬性[!UICONTROL 的]自訂Personalization的範例回應
+### [!UICONTROL Custom Personalization With Attributes]的範例回應
 
-使用具有屬性&#x200B;**[!UICONTROL 的]**&#x200B;自訂Personalization時，API回應將與以下範例類似。
+使用&#x200B;**[!UICONTROL Custom Personalization With Attributes]**&#x200B;時，API回應將與以下範例類似。
 
-**[!UICONTROL 具有屬性的自訂Personalization]**&#x200B;與&#x200B;**[!UICONTROL 自訂Personalization]**&#x200B;之間的差異在於API回應中包含`attributes`區段。
+**[!UICONTROL Custom Personalization With Attributes]**&#x200B;與&#x200B;**[!UICONTROL Custom Personalization]**&#x200B;之間的差異在於API回應中包含`attributes`區段。
 
 ```json
 [

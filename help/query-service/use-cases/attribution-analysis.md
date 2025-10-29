@@ -2,7 +2,7 @@
 title: 歸因分析
 description: 本檔案說明如何使用查詢服務，根據首次接觸與上次接觸的行銷歸因模型，建立行銷成效測量技術。
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 * [報告套裝資料概述的Adobe Analytics來源聯結器](../../sources/connectors/adobe-applications/mapping/analytics.md)。
 * [Analytics欄位對應檔案](../../sources/connectors/adobe-applications/mapping/analytics.md)提供擷取和對應Analytics資料以搭配Query Service使用的詳細資訊。
-* [Attribution IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=zh-Hant)
-* [Adobe Analytics歸因面板指南](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=zh-Hant)。
+* [Attribution IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Adobe Analytics歸因面板指南](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
 
-在[視窗函式區段](../sql/adobe-defined-functions.md#window-functions)中可以找到`OVER()`函式內引數的說明。 [Adobe行銷與Commerce辭彙](https://business.adobe.com/glossary/index.html)可能也有用。
+在`OVER()`視窗函式區段[中可以找到](../sql/adobe-defined-functions.md#window-functions)函式內引數的說明。 [Adobe行銷與Commerce辭彙](https://business.adobe.com/glossary/index.html)可能也有用。
 
 對於下列每一個使用案例，都會提供引數化SQL查詢範例作為範本供您自訂。 在您想要評估的SQL範例中，只要看到`{ }`，就提供引數。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Experience CloudID (ECID)也稱為MCID，並將繼續用於名稱空間。
+>Experience Cloud ID (ECID)也稱為MCID，並將繼續用於名稱空間。
 
 **查詢語法**
 
@@ -102,7 +102,7 @@ LIMIT 10
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:06:12.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:02.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:07:55.0 |              | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0) 
@@ -149,7 +149,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:06:12.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:06:12.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:02.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:07:55.0 |              | (Paid Last,em:946426,2017-12-18 07:07:02.0,1.0)
@@ -200,7 +200,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id               |       timestamp       | trackingCode |                   first_touch                   
-----------------------------------+-----------------------+--------------+-------------------------------------------------
+|----------------------------------+-----------------------+--------------+-------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -251,7 +251,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -302,7 +302,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingCode |                   last_touch                   
------------------------------------+-----------------------+--------------+------------------------------------------------
+|-----------------------------------+-----------------------+--------------+------------------------------------------------
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
@@ -351,7 +351,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
------------------------------------+-----------------------+--------------+-------------------------------------------------
+|-----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)

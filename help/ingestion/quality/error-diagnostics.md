@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 正在擷取資料擷取錯誤診斷
 description: 本檔案提供有關監視批次擷取、管理部分批次擷取錯誤的資訊，以及部分批次擷取型別的參考。
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '976'
-ht-degree: 8%
+ht-degree: 12%
 
 ---
 
@@ -26,11 +26,11 @@ Adobe Experience Platform提供兩種上傳和擷取資料的方法。 您可以
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [!DNL Experience Platform] 疑難排解指南中的[如何讀取範例 API 呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了對 [!DNL Experience Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **回應**
 
-成功的回應將傳回包含`path`個物件的JSON物件，詳細說明診斷的儲存位置。 回應將傳回[JSON行](https://jsonlines.readthedocs.io/en/latest/)格式的`path`物件。
+成功的回應將傳回包含`path`個物件的JSON物件，詳細說明診斷的儲存位置。 回應將傳回`path`JSON行[格式的](https://jsonlines.readthedocs.io/en/latest/)物件。
 
 ```json
 {"path": "F1.json"}
@@ -214,7 +214,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | 由於剖析、轉換或驗證而無法處理的列數。 此值可以透過從`outputRecordCount`中減去`inputRecordCount`而衍生。 此值會在所有批次上產生，無論是否啟用`errorDiagnostics`。 |
+| `metrics.failedRecordCount` | 由於剖析、轉換或驗證而無法處理的列數。 此值可以透過從`inputRecordCount`中減去`outputRecordCount`而衍生。 此值會在所有批次上產生，無論是否啟用`errorDiagnostics`。 |
 
 **回應發生錯誤**
 
@@ -277,8 +277,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | 由於剖析、轉換或驗證而無法處理的列數。 此值可以透過從`outputRecordCount`中減去`inputRecordCount`而衍生。 此值會在所有批次上產生，無論是否啟用`errorDiagnostics`。 |
-| `errors.recordCount` | 指定的錯誤碼失敗的列數。 如果啟用`errorDiagnostics`，則此值只會&#x200B;**產生**。 |
+| `metrics.failedRecordCount` | 由於剖析、轉換或驗證而無法處理的列數。 此值可以透過從`inputRecordCount`中減去`outputRecordCount`而衍生。 此值會在所有批次上產生，無論是否啟用`errorDiagnostics`。 |
+| `errors.recordCount` | 指定的錯誤碼失敗的列數。 如果啟用&#x200B;**，則此值只會**&#x200B;產生`errorDiagnostics`。 |
 
 >[!NOTE]
 >

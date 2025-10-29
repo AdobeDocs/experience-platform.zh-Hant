@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupyterlab Notebook中的資料存取
 description: 本指南著重於說明如何使用Jupyter Notebooks (內建於Data Science Workspace)來存取您的資料。
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3346'
+source-wordcount: '3274'
 ht-degree: 3%
 
 ---
@@ -154,13 +154,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### 寫入Python中的資料集 {#write-python}
 
-若要寫入JupyterLab筆記本的資料集，請在JupyterLab的左側導覽中選取「資料」圖示標籤（以下反白顯示）。 **[!UICONTROL 資料集]**&#x200B;和&#x200B;**[!UICONTROL 結構描述]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL 資料集]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL 在筆記本中寫入資料]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
+若要寫入JupyterLab筆記本的資料集，請在JupyterLab的左側導覽中選取「資料」圖示標籤（以下反白顯示）。 **[!UICONTROL Datasets]**&#x200B;和&#x200B;**[!UICONTROL Schemas]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL Datasets]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL Write Data in Notebook]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- 使用&#x200B;**[!UICONTROL 在Notebook]**&#x200B;中寫入資料，以使用您選取的資料集產生寫入儲存格。
-- 使用&#x200B;**[!UICONTROL 在筆記本中探索資料]**，以使用您選取的資料集產生讀取儲存格。
-- 使用&#x200B;**[!UICONTROL Notebook]**&#x200B;中的查詢資料，以使用您選取的資料集產生基本查詢儲存格。
+- 使用&#x200B;**[!UICONTROL Write Data in Notebook]**&#x200B;產生含您選取資料集的寫入儲存格。
+- 使用&#x200B;**[!UICONTROL Explore Data in Notebook]**&#x200B;產生具有您選取資料集的讀取儲存格。
+- 使用&#x200B;**[!UICONTROL Query Data in Notebook]**&#x200B;產生基本查詢儲存格，其中包含您選取的資料集。
 
 或者，您可以複製並貼上下列程式碼儲存格。 取代`{DATASET_ID}`和`{PANDA_DATAFRAME}`。
 
@@ -173,17 +173,17 @@ dataset_writer = DatasetWriter(get_platform_sdk_client_context(), dataset)
 write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 ```
 
-### 在[!DNL Python]中使用[!DNL Query Service]查詢資料 {#query-data-python}
+### 在[!DNL Query Service]中使用[!DNL Python]查詢資料 {#query-data-python}
 
-[!DNL Experience Platform]上的[!DNL JupyterLab]可讓您在[!DNL Python]筆記本中使用SQL，透過[Adobe Experience Platform查詢服務](https://www.adobe.com/go/query-service-home-en)存取資料。 透過[!DNL Query Service]存取資料對於處理大型資料集很有用，因為其執行時間較長。 請注意，使用[!DNL Query Service]查詢資料的處理時間限製為10分鐘。
+[!DNL JupyterLab]上的[!DNL Experience Platform]可讓您在[!DNL Python]筆記本中使用SQL，透過[Adobe Experience Platform查詢服務](https://www.adobe.com/go/query-service-home-en)存取資料。 透過[!DNL Query Service]存取資料對於處理大型資料集很有用，因為其執行時間較長。 請注意，使用[!DNL Query Service]查詢資料的處理時間限製為10分鐘。
 
-在[!DNL JupyterLab]中使用[!DNL Query Service]之前，請確定您瞭解[[!DNL Query Service] SQL語法](https://www.adobe.com/go/query-service-sql-syntax-en)。
+在[!DNL Query Service]中使用[!DNL JupyterLab]之前，請確定您瞭解[[!DNL Query Service] SQL語法](https://www.adobe.com/go/query-service-sql-syntax-en)。
 
-使用[!DNL Query Service]查詢資料需要您提供目標資料集的名稱。 您可以使用&#x200B;**[!UICONTROL 資料總管]**&#x200B;尋找所需的資料集，以產生必要的程式碼儲存格。 以滑鼠右鍵按一下資料集清單，然後按一下&#x200B;**[!UICONTROL 在筆記本中查詢資料]**，以在您的筆記本中產生兩個程式碼儲存格。 這兩個儲存格將於下文詳細說明。
+使用[!DNL Query Service]查詢資料需要您提供目標資料集的名稱。 您可以使用&#x200B;**[!UICONTROL Data explorer]**&#x200B;尋找所需的資料集，以產生必要的程式碼儲存格。 以滑鼠右鍵按一下資料集清單，然後按一下&#x200B;**[!UICONTROL Query Data in Notebook]**&#x200B;以在您的記事本中產生兩個程式碼儲存格。 這兩個儲存格將於下文詳細說明。
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
-為了在[!DNL JupyterLab]中利用[!DNL Query Service]，您必須先建立您正在處理的[!DNL Python]筆記本與[!DNL Query Service]之間的連線。 這可以透過執行第一個產生的儲存格來達成。
+為了在[!DNL Query Service]中利用[!DNL JupyterLab]，您必須先建立您正在處理的[!DNL Python]筆記本與[!DNL Query Service]之間的連線。 這可以透過執行第一個產生的儲存格來達成。
 
 ```python
 qs_connect()
@@ -214,7 +214,7 @@ FROM {table_name}
 
 ### 篩選[!DNL ExperienceEvent]資料 {#python-filter}
 
-若要存取和篩選[!DNL Python]筆記本中的[!DNL ExperienceEvent]資料集，您必須提供資料集(`{DATASET_ID}`)的識別碼，以及使用邏輯運運算元定義特定時間範圍的篩選規則。 定義時間範圍時，會忽略任何指定的分頁，並考量整個資料集。
+若要存取和篩選[!DNL ExperienceEvent]筆記本中的[!DNL Python]資料集，您必須提供資料集(`{DATASET_ID}`)的識別碼，以及使用邏輯運運算元定義特定時間範圍的篩選規則。 定義時間範圍時，會忽略任何指定的分頁，並考量整個資料集。
 
 篩選運運算元的清單說明如下：
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### 寫入R中的資料集 {#write-r}
 
-若要寫入JupyterLab筆記本的資料集，請在JupyterLab的左側導覽中選取「資料」圖示標籤（以下反白顯示）。 **[!UICONTROL 資料集]**&#x200B;和&#x200B;**[!UICONTROL 結構描述]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL 資料集]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL 在筆記本中寫入資料]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
+若要寫入JupyterLab筆記本的資料集，請在JupyterLab的左側導覽中選取「資料」圖示標籤（以下反白顯示）。 **[!UICONTROL Datasets]**&#x200B;和&#x200B;**[!UICONTROL Schemas]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL Datasets]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL Write Data in Notebook]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- 使用&#x200B;**[!UICONTROL 在Notebook]**&#x200B;中寫入資料，以使用您選取的資料集產生寫入儲存格。
-- 使用&#x200B;**[!UICONTROL 在筆記本中探索資料]**，以使用您選取的資料集產生讀取儲存格。
+- 使用&#x200B;**[!UICONTROL Write Data in Notebook]**&#x200B;產生含您選取資料集的寫入儲存格。
+- 使用&#x200B;**[!UICONTROL Explore Data in Notebook]**&#x200B;產生具有您選取資料集的讀取儲存格。
 
 或者，您可以複製並貼上下列程式碼儲存格：
 
@@ -372,7 +372,7 @@ spark = SparkSession.builder.getOrCreate()
 
 **說明**
 
-用於從[!DNL PySpark]筆記本（[!DNL Python] 3核心）讀取或寫入資料集的自訂[!DNL Data Science Workspace]魔術命令。
+用於從[!DNL Data Science Workspace]筆記本（[!DNL PySpark] 3核心）讀取或寫入資料集的自訂[!DNL Python]魔術命令。
 
 | 名稱 | 說明 | 必填 |
 | --- | --- | --- |
@@ -402,10 +402,10 @@ spark = SparkSession.builder.getOrCreate()
 
 您可以使用下列方法，在JupyterLab buy中自動產生上述範例：
 
-在JupyterLab的左側導覽區中選取「資料」圖示標籤（在下方反白顯示）。 **[!UICONTROL 資料集]**&#x200B;和&#x200B;**[!UICONTROL 結構描述]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL 資料集]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL 在筆記本中寫入資料]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
+在JupyterLab的左側導覽區中選取「資料」圖示標籤（在下方反白顯示）。 **[!UICONTROL Datasets]**&#x200B;和&#x200B;**[!UICONTROL Schemas]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL Datasets]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL Write Data in Notebook]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
 
-- 使用&#x200B;**[!UICONTROL 瀏覽筆記本中的資料]**&#x200B;產生讀取儲存格。
-- 使用&#x200B;**[!UICONTROL 在Notebook]**&#x200B;中寫入資料，以產生寫入儲存格。
+- 使用&#x200B;**[!UICONTROL Explore Data in Notebook]**&#x200B;產生讀取儲存格。
+- 使用&#x200B;**[!UICONTROL Write Data in Notebook]**&#x200B;產生寫入儲存格。
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -534,10 +534,12 @@ df1.show(10)
 
 您可以使用下列方法，在JupyterLab buy中自動產生上述範例：
 
-在JupyterLab的左側導覽區中選取「資料」圖示標籤（在下方反白顯示）。 **[!UICONTROL 資料集]**&#x200B;和&#x200B;**[!UICONTROL 結構描述]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL 資料集]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL 在筆記本中探索資料]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
+在JupyterLab的左側導覽區中選取「資料」圖示標籤（在下方反白顯示）。 **[!UICONTROL Datasets]**&#x200B;和&#x200B;**[!UICONTROL Schemas]**&#x200B;目錄出現。 選取&#x200B;**[!UICONTROL Datasets]**&#x200B;並按一下滑鼠右鍵，然後從您要使用之資料集的下拉式選單中選取&#x200B;**[!UICONTROL Explore Data in Notebook]**&#x200B;選項。 筆記本底部會顯示可執行程式碼專案。
+
 與
-- 使用&#x200B;**[!UICONTROL 瀏覽筆記本中的資料]**&#x200B;產生讀取儲存格。
-- 使用&#x200B;**[!UICONTROL 在Notebook]**&#x200B;中寫入資料，以產生寫入儲存格。
+
+- 使用&#x200B;**[!UICONTROL Explore Data in Notebook]**&#x200B;產生讀取儲存格。
+- 使用&#x200B;**[!UICONTROL Write Data in Notebook]**&#x200B;產生寫入儲存格。
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
@@ -641,7 +643,7 @@ timedf.show()
 
 ## 後續步驟
 
-本檔案說明使用JupyterLab Notebook存取資料集的一般准則。 如需查詢資料集的更深入範例，請瀏覽JupyterLab Notebooks[&#128279;](./query-service.md)檔案中的查詢服務。 如需有關如何探索及視覺化資料集的詳細資訊，請瀏覽檔案： [使用筆記本分析資料](./analyze-your-data.md)。
+本檔案說明使用JupyterLab Notebook存取資料集的一般准則。 如需查詢資料集的更深入範例，請瀏覽JupyterLab Notebooks[檔案中的](./query-service.md)查詢服務。 如需有關如何探索及視覺化資料集的詳細資訊，請瀏覽檔案： [使用筆記本分析資料](./analyze-your-data.md)。
 
 ## [!DNL Query Service]的可選SQL標幟 {#optional-sql-flags-for-query-service}
 

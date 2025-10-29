@@ -5,10 +5,10 @@ title: 使用流量服務API從第三方雲端儲存系統擷取Parquet資料
 type: Tutorial
 description: 本教學課程使用流程服務API來逐步引導您完成從協力廠商雲端儲存系統中擷取Apache Parquet資料的步驟。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 9%
+source-wordcount: '1072'
+ht-degree: 13%
 
 ---
 
@@ -29,11 +29,11 @@ ht-degree: 9%
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [!DNL Experience Platform] 疑難排解指南中的[如何讀取範例 API 呼叫](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了對 [!DNL Experience Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -259,7 +259,10 @@ curl -X POST \
 
 若要將外部資料擷取到[!DNL Experience Platform]，必須先取得[!DNL Experience Platform]資料集基礎連線。
 
-若要建立資料集基礎連線，請依照[資料集基礎連線教學課程](./create-dataset-base-connection.md)中概述的步驟操作。
+<!--
+broken link. this file not in TOC.
+To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](./create-dataset-base-connection.md).
+-->
 
 繼續依照開發人員指南中概述的步驟進行，直到您建立資料集基礎連線為止。 取得並儲存唯一識別碼(`$id`)，然後繼續將它當做建立目標連線的下一個步驟中的基礎連線ID。
 
@@ -430,4 +433,4 @@ curl -X POST \
 依照本教學課程所述，您已建立來源聯結器，以依排程從您的協力廠商雲端儲存系統收集Parquet資料。 下游[!DNL Experience Platform]服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 - [即時客戶輪廓概觀](../../../profile/home.md)
-- [資料科學工作區總覽](../../../data-science-workspace/home.md)
+- [資料科學工作區概觀](../../../data-science-workspace/home.md)

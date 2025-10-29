@@ -4,9 +4,10 @@ description: 瞭解如何使用(V2) Salesforce Marketing Cloud Account Engagemen
 badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: d1405237698271607fa672ccae1ac731d66df263
+exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1742'
 ht-degree: 3%
 
 ---
@@ -23,8 +24,8 @@ ht-degree: 3%
 >[!IMPORTANT]
 > 
 > 這是[Salesforce Marketing Cloud帳戶參與](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)目的地的V2版本。 此版本會取代先前的目的地，目前是在Alpha版本中。
-> &#x200B;> <br>
-> &#x200B;> 如果您目前正在使用舊版[Salesforce Marketing Cloud帳戶參與](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)目的地，您必須在&#x200B;**2026年1月**&#x200B;前移轉至此V2版本。 2026年1月後，Adobe將淘汰舊版，不再提供使用。
+> > <br>
+> > 如果您目前正在使用舊版[Salesforce Marketing Cloud帳戶參與](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)目的地，您必須在&#x200B;**2026年1月**&#x200B;前移轉至此V2版本。 2026年1月後，Adobe將淘汰舊版，不再提供使用。
 
 
 ## 使用案例 {#use-cases}
@@ -65,7 +66,7 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | --- | --- |
-| **[!UICONTROL 帳戶參與業務單位識別碼]** | 您的[!DNL Salesforce]帳戶參與業務單位識別碼。 請參閱Salesforce [檔案](https://help.salesforce.com/s/articleView?id=000381973&type=1)以瞭解如何尋找ID。 |
+| **[!UICONTROL Account Engagement Business Unit ID]** | 您的[!DNL Salesforce]帳戶參與業務單位識別碼。 請參閱Salesforce [檔案](https://help.salesforce.com/s/articleView?id=000381973&type=1)以瞭解如何尋找ID。 |
 
 {style="table-layout:auto"}
 
@@ -88,9 +89,9 @@ ht-degree: 3%
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li>此目的地支援使用Salesforce Import API v5批次匯出設定檔資料。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 批次]** | <ul><li>**初始匯出**：對應後立即完整匯出</li><li>**後續匯出**：每3小時遞增匯出一次</li><li>此排程已修正，無法在Alpha中自訂</li></ul> |
+|---------|----------|---------|
+| 匯出類型 | **[!UICONTROL Profile-based]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li>此目的地支援使用Salesforce Import API v5批次匯出設定檔資料。</li></ul> |
+| 匯出頻率 | **[!UICONTROL Batch]** | <ul><li>**初始匯出**：對應後立即完整匯出</li><li>**後續匯出**：每3小時遞增匯出一次</li><li>此排程已修正，無法在Alpha中自訂</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -98,48 +99,48 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請選取&#x200B;**[!UICONTROL Connect to destination]**。
 
 ![Salesforce Marketing Cloud帳戶參與V2目的地連線工作流程](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/connect-to-destination.png "Salesforce Marketing Cloud帳戶參與V2目的地連線工作流程")
 
-系統會將您重新導向至[!DNL Salesforce]登入頁面。 輸入您的[!DNL Marketing Cloud Account Engagement]帳戶認證，並選取&#x200B;**[!UICONTROL 登入]**。
+系統會將您重新導向至[!DNL Salesforce]登入頁面。 輸入您的[!DNL Marketing Cloud Account Engagement]帳戶認證並選取&#x200B;**[!UICONTROL Log In]**。
 
 ![Salesforce登入頁面](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce登入頁面。")
 
-接著，選取「**[!UICONTROL 允許]**」以授與&#x200B;**Adobe Experience Platform**&#x200B;應用程式的許可權以存取您的[!DNL Salesforce Marketing Cloud Account Engagement]帳戶。 *您只需要執行此動作一次*。
+接著，選取「**[!UICONTROL Allow]**」以授與&#x200B;**Adobe Experience Platform**&#x200B;應用程式的許可權以存取您的[!DNL Salesforce Marketing Cloud Account Engagement]帳戶。 *您只需要執行此動作一次*。
 
 ![Salesforce應用程式熒幕擷取畫面確認快顯視窗，可授予Experience Platform應用程式存取Marketing Cloud帳戶參與專案的許可權。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
-如果提供的詳細資料有效，UI會顯示訊息： *您已成功連線至(V2) Salesforce Marketing Cloud帳戶參與帳戶*&#x200B;以及帶有綠色勾號的&#x200B;**[!UICONTROL 已連線]**&#x200B;狀態。
+如果提供的詳細資料有效，UI會顯示訊息： *您已成功連線至(V2) Salesforce Marketing Cloud帳戶參與帳戶*&#x200B;和具有綠色勾號的&#x200B;**[!UICONTROL Connected]**&#x200B;狀態。
 
 ### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL 帳戶參與業務單位識別碼]**：您的[!DNL Salesforce] `Account Engagement Business Unit ID`。
-* **[!UICONTROL 帳戶參與API]**：選取您要使用Account Engagement API的生產端點(`https://pi.pardot.com`)或示範端點(`https://pi.demo.pardot.com`)。
-* **[!UICONTROL 帳戶參與行銷活動ID]**：每個[!DNL Account Engagement]潛在客戶都必須與行銷活動建立關聯。 如果您未設定行銷活動ID，則當您的Salesforce帳戶中存在預設值時，帳戶參與將嘗試自動指派一個ID。
+* **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+* **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL Account Engagement Business Unit ID]**：您的[!DNL Salesforce] `Account Engagement Business Unit ID`。
+* **[!UICONTROL Account Engagement API]**：選取您要使用Account Engagement API的生產(`https://pi.pardot.com`)或示範(`https://pi.demo.pardot.com`)端點。
+* **[!UICONTROL Account Engagement Campaign ID]**：每個[!DNL Account Engagement]潛在客戶都必須與行銷活動建立關聯。 如果您未設定行銷活動ID，則當您的Salesforce帳戶中存在預設值時，帳戶參與將嘗試自動指派一個ID。
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 讀取[啟用批次設定檔匯出目的地的對象資料](/help/destinations/ui/activate-batch-profile-destinations.md)，以取得啟用此目的地對象的指示。
 
@@ -171,7 +172,7 @@ Salesforce Marketing Cloud帳戶參與目的地支援下表描述的目標屬性
 
 開始對應資料之前，請檢閱下列必要的欄位對應。
 
-| 目標欄位 | 類型 | 必要 | 何時使用 |
+| 目標欄位 | 類型 | 必要 | 使用時機 |
 |---|---|---|---|
 | `email` | 屬性 | 永遠必要 | 潛在客戶的電子郵件地址。 這是當您沒有`matchId`或`matchSalesforceId`時，在帳戶參與中尋找及比對潛在客戶記錄的主要識別碼。<br> **注意：**&#x200B;如果帳戶參與有「允許多個潛在客戶使用相同的電子郵件地址」功能，僅依賴電子郵件可能會導致模稜兩可，因為同一電子郵件中有多個潛在客戶。 在這種情況下，「帳戶參與」通常預設為使用最近的活動來更新潛在客戶。 |
 | `matchId` | 身分識別 | 這三個身分中至少需要一個身分 | 「帳戶參與」為每個潛在客戶記錄產生的唯一識別碼。 若您已有帳戶參與潛在客戶ID，且想確保將更新套用至正確潛在客戶，尤其是有多個潛在客戶共用相同電子郵件地址時，請使用此選項。 |
@@ -180,9 +181,9 @@ Salesforce Marketing Cloud帳戶參與目的地支援下表描述的目標屬性
 
 請依照下列步驟對應正確的欄位。
 
-1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您會在畫面上看到新的對應列。
-1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別並選取XDM屬性，或選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取身分。
-1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取身分，或選擇&#x200B;**[!UICONTROL 選取自訂屬性]**&#x200B;類別，並從標準帳戶參與潛在客戶欄位清單中指定。
+1. 在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**。 您會在畫面上看到新的對應列。
+1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**&#x200B;類別並選取XDM屬性，或選擇&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;並選取身分。
+1. 在&#x200B;**[!UICONTROL Select target field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;並選取身分，或選擇&#x200B;**[!UICONTROL Select custom attributes]**&#x200B;類別，並從標準帳戶參與潛在客戶欄位清單中指定。
 
 ![將XDM欄位和身分對應到Salesforce Marketing Cloud帳戶參與V2欄位](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/mapping.png "將XDM欄位和身分對應到Salesforce Marketing Cloud帳戶參與V2欄位的範例")
 
@@ -190,10 +191,10 @@ Salesforce Marketing Cloud帳戶參與目的地支援下表描述的目標屬性
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 導覽至您選取的其中一個對象。 選取 **[!DNL Activation data]** 索引標籤。**[!UICONTROL 對應ID]**&#x200B;欄會顯示在[!DNL Marketing Cloud Account Engagement Prospects]頁面中產生的自訂欄位名稱。
+1. 導覽至您選取的其中一個對象。 選取 **[!DNL Activation data]** 索引標籤。**[!UICONTROL Mapping ID]**&#x200B;欄會顯示在[!DNL Marketing Cloud Account Engagement Prospects]頁面中產生的自訂欄位名稱。
    ![Experience Platform UI熒幕擷圖範例，顯示所選區段的對應ID。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. 登入[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否新增/更新了對象中的潛在客戶。 或者，您也可以存取[[!DNL Account Engagement]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**&#x200B;頁面。
+1. 登入[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否新增/更新了對象中的潛在客戶。 或者，您也可以存取[[!DNL Account Engagement]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**頁面。
    ![顯示[潛在客戶]頁面的Salesforce UI熒幕擷圖。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. 若要檢查潛在客戶是否已更新，請選取潛在客戶並驗證自訂潛在客戶欄位是否已使用Experience Platform對象狀態進行更新。

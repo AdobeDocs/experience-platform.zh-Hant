@@ -4,9 +4,9 @@ title: Amazon Kinesis連線
 description: 建立與您的Amazon Kinesis儲存空間的即時輸出連線，以從Adobe Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1944'
 ht-degree: 5%
 
 ---
@@ -51,9 +51,9 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+|---------|----------|---------|
+| 匯出類型 | **[!UICONTROL Profile-based]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -106,18 +106,18 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 連線到這個目的地時，您必須提供下列資訊：
 
 ### 驗證資訊 {#authentication-information}
 
-輸入下列欄位並選取&#x200B;**[!UICONTROL 連線到目的地]**：
+輸入下列欄位並選取&#x200B;**[!UICONTROL Connect to destination]**：
 
 ![顯示Amazon Kinesis驗證詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]存取金鑰和秘密金鑰**：在[!DNL Amazon Web Services]中，產生`access key - secret access key`配對，以授予Experience Platform存取您的[!DNL Amazon Kinesis]帳戶。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
-* **[!UICONTROL 區域]**：指出資料流要傳送到哪個[!DNL Amazon Web Services]區域。
+* **[!UICONTROL Region]**：指出資料要串流到哪個[!DNL Amazon Web Services]區域。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -135,11 +135,11 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 
 ![顯示Amazon Kinesis目的地詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
-* **[!UICONTROL 名稱]**：提供您與[!DNL Amazon Kinesis]的連線名稱
-* **[!UICONTROL 描述]**：提供您與[!DNL Amazon Kinesis]的連線描述。
-* **[!UICONTROL 資料流]**：提供您[!DNL Amazon Kinesis]帳戶中現有資料流的名稱。 Experience Platform會將資料匯出至此資料流。
-* **[!UICONTROL 包含區段名稱]**：如果要讓資料匯出包含您匯出的對象名稱，請切換選項。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
-* **[!UICONTROL 包含區段時間戳記]**：若要讓資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL Name]**：提供您連線至[!DNL Amazon Kinesis]的名稱
+* **[!UICONTROL Description]**：提供您連線至[!DNL Amazon Kinesis]的說明。
+* **[!UICONTROL Stream]**：提供您[!DNL Amazon Kinesis]帳戶中現有資料流的名稱。 Experience Platform會將資料匯出至此資料流。
+* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 
 <!--
 
@@ -153,13 +153,13 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 目前匯出至Amazon Kinesis目的地時不支援[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。 [閱讀全文](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
 如需啟用此目的地對象的指示，請參閱[啟用串流設定檔匯出目的地的對象資料](../../ui/activate-streaming-profile-destinations.md)。
@@ -259,7 +259,7 @@ Experience Platform會最佳化[!DNL Amazon Kinesis]目的地的設定檔匯出�
 }
 ```
 
-根據您在&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;和&#x200B;**[!UICONTROL 包含區段時間戳記]**&#x200B;選項的連線目的地流程中選取的UI設定，以下是匯出資料的更多範例：
+根據您在&#x200B;**[!UICONTROL Include Segment Names]**&#x200B;和&#x200B;**[!UICONTROL Include Segment Timestamps]**&#x200B;選項的連線目的地流程中選取的UI設定，以下是匯出資料的更多範例：
 
 +++ 下列資料匯出範例包含`segmentMembership`區段中的對象名稱
 

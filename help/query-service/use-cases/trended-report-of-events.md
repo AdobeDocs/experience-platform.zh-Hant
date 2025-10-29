@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服
 title: 建立事件的趨勢報表
 description: 瞭解如何使用體驗事件來撰寫查詢，以建立指定日期範圍內事件的趨勢報表（依日期分組）。
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -47,7 +47,7 @@ ORDER BY Day ASC, pageViews DESC;
 
 ```console
      Day     | pageViews |   A    |   B   |    C    | viewedParkas
--------------+-----------+--------+-------+---------+--------------
+|-------------+-----------+--------+-------+---------+--------------
  2019-03-01  |   55317.0 | 8503.0 | 804.0 | 1578.0  |           73
  2019-03-02  |   55302.0 | 8600.0 | 854.0 | 1528.0  |           86
  2019-03-03  |   54613.0 | 8162.0 | 795.0 | 1568.0  |          100

@@ -1,13 +1,13 @@
 ---
 title: 在Reactor API中共用私人擴充功能套件
 description: 瞭解如何授權其他企業在Reactor API中共用私人擴充功能套件。
-source-git-commit: ea9a2bb00d3ce59e28ea4cda0d30945e77aa95cb
+exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 2%
 
 ---
-
 
 # 共用私人擴充功能套件
 
@@ -66,7 +66,7 @@ curl -X POST \
 
 ## 核准授權 {#approve-authorization}
 
-若要核准授權，您必須擁有`manage_properties`許可權。 身為授權公司，您需要傳送PATCH要求給擴充套件使用授權，包括授權的`ID`，並將狀態設定為`approved`。
+若要核准授權，您必須擁有`manage_properties`許可權。 身為授權公司，您需要傳送PATCH要求給擴充功能套件使用授權，包括授權的`ID`，並將狀態設定為`approved`。
 
 **API格式**
 
@@ -94,10 +94,10 @@ curl -X PATCH \
   -d '{
         "data": {
           "attributes": {
-	          "state": "approved"
-	        },
-	        "id": ":extension_package_usage_authorization_id",
-	        "type": "extension_package_usage_authorizations"
+            "state": "approved"
+            },
+            "id": ":extension_package_usage_authorization_id",
+            "type": "extension_package_usage_authorizations"
         }
       }
 ```

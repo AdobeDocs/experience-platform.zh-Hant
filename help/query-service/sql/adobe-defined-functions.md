@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；adobe定義的函式；sql；
 solution: Experience Platform
-title: 查詢服務中的Adobe定義SQL函式
-description: 本檔案提供Adobe Experience Platform查詢服務中可用的Adobe定義函式的資訊。
+title: 查詢服務中的Adobe定義的SQL函式
+description: 本檔案提供Adobe Experience Platform查詢服務中可用Adobe定義函式的資訊。
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 2%
@@ -13,13 +13,13 @@ ht-degree: 2%
 
 # 查詢服務中的Adobe定義的SQL函式
 
-Adobe定義的函式（此處稱為ADF）是Adobe Experience Platform查詢服務中預先建立的函式，可協助對[!DNL Experience Event]資料執行常見的業務相關工作。 這些包括[工作階段化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=zh-Hant)和[歸因](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=zh-Hant)的功能，就像在Adobe Analytics中找到的那些功能。
+Adobe定義的函式（此處稱為ADF）是Adobe Experience Platform查詢服務中預先建立的函式，可協助對[!DNL Experience Event]資料執行常見的業務相關工作。 這些包括[工作階段化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)和[歸因](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)的功能，就像在Adobe Analytics中找到的那些功能。
 
 本檔案提供[!DNL Query Service]中可用之Adobe定義函式的資訊。
 
 >[!NOTE]
 >
->Experience CloudID (ECID)也稱為MCID，並將繼續用於名稱空間。
+>Experience Cloud ID (ECID)也稱為MCID，並將繼續用於名稱空間。
 
 ## 視窗函式 {#window-functions}
 
@@ -47,7 +47,7 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 此分組或資料工作階段化有助於關聯事件，以發掘更多有關客戶體驗的內容。
 
-如需Adobe Analytics中工作階段化的詳細資訊，請參閱有關[內容感知工作階段](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=zh-Hant)的檔案。
+如需Adobe Analytics中工作階段化的詳細資訊，請參閱有關[內容感知工作階段](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)的檔案。
 
 **查詢語法**
 
@@ -60,7 +60,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
 | `{EXPIRATION_IN_SECONDS}` | 事件之間符合目前工作階段結束和新工作階段開始所需的秒數。 |
 
-在[視窗函式區段](#window-functions)中可以找到`OVER()`函式內引數的說明。
+在`OVER()`視窗函式區段[中可以找到](#window-functions)函式內引數的說明。
 
 **範例查詢**
 
@@ -82,7 +82,7 @@ LIMIT 10
 
 ```console
                 id                |       timestamp       |      session       
-----------------------------------+-----------------------+--------------------
+|----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
@@ -124,7 +124,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
 | `{TEST_EXPRESSION}` | 您要檢查資料欄位的運算式。 例如 `application.launches > 0`。 |
 
-在[視窗函式區段](#window-functions)中可以找到`OVER()`函式內引數的說明。
+在`OVER()`視窗函式區段[中可以找到](#window-functions)函式內引數的說明。
 
 **範例查詢**
 
@@ -147,7 +147,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isLaunch |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
@@ -189,7 +189,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | 在資料集中找到的時間戳記欄位。 |
 | `{TEST_EXPRESSION}` | 您要檢查資料欄位的運算式。 例如 `application.launches > 0`。 |
 
-在[視窗函式區段](#window-functions)中可以找到`OVER()`函式內引數的說明。
+在`OVER()`視窗函式區段[中可以找到](#window-functions)函式內引數的說明。
 
 **範例查詢**
 
@@ -212,7 +212,7 @@ SELECT
 
 ```console
                 id                |       timestamp       | isExit   |      session       
-----------------------------------+-----------------------+----------+--------------------
+|----------------------------------+-----------------------+----------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
@@ -262,7 +262,7 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | （選用）目前事件之外的事件數。 預設值為1。 |
 | `{IGNORE_NULLS}` | （選擇性）指示是否應忽略null `{KEY}`值的布林值。 預設值為`false`。 |
 
-在[視窗函式區段](#window-functions)中可以找到`OVER()`函式內引數的說明。
+在`OVER()`視窗函式區段[中可以找到](#window-functions)函式內引數的說明。
 
 **範例查詢**
 
@@ -281,7 +281,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
------------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -313,7 +313,7 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{SHIFT}` | （選用）目前事件之外的事件數。 預設值為1。 |
 | `{IGNORE_NULLS}` | （選擇性）指示是否應忽略null `{KEY}`值的布林值。 預設值為`false`。 |
 
-在[視窗函式區段](#window-functions)中可以找到`OVER()`函式內引數的說明。
+在`OVER()`視窗函式區段[中可以找到](#window-functions)函式內引數的說明。
 
 **範例查詢**
 
@@ -333,7 +333,7 @@ LIMIT 10
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
------------------------------------+-----------------------+-------------------------------------+---------------------------------------
+|-----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
@@ -371,7 +371,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | 限定上一個事件的運算式。 |
 | `{TIME_UNIT}` | 輸出單位。 可能的值包括天、小時、分鐘和秒。 預設值為seconds。 |
 
-在[視窗函式區段](#window-functions)中可以找到`OVER()`函式內引數的說明。
+在`OVER()`視窗函式區段[中可以找到](#window-functions)函式內引數的說明。
 
 **範例查詢**
 
@@ -401,7 +401,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_since_registration 
------------------------------------+------------------------------------
+|-----------------------------------+------------------------------------
                                    |                                   
  Account Registration|Confirmation |                                0.0
  Seasonal                          |                   5.47029702970297
@@ -433,7 +433,7 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | 限定下一個事件的運算式。 |
 | `{TIME_UNIT}` | （選用）輸出單位。 可能的值包括天、小時、分鐘和秒。 預設值為seconds。 |
 
-在[視窗函式區段](#window-functions)中可以找到`OVER()`函式內引數的說明。
+在`OVER()`視窗函式區段[中可以找到](#window-functions)函式內引數的說明。
 
 **範例查詢**
 
@@ -463,7 +463,7 @@ LIMIT 10
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
------------------------------------+------------------------------------------
+|-----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
  Men                               |                       -9.465295629820051
  Equipment                         |                       -9.682098765432098
@@ -481,10 +481,10 @@ LIMIT 10
 
 ## 後續步驟
 
-使用此處說明的函式，您可以撰寫查詢來使用[!DNL Query Service]存取您自己的[!DNL Experience Event]資料集。 如需在[!DNL Query Service]中編寫查詢的詳細資訊，請參閱有關[建立查詢](../best-practices/writing-queries.md)的檔案。
+使用此處說明的函式，您可以撰寫查詢來使用[!DNL Experience Event]存取您自己的[!DNL Query Service]資料集。 如需在[!DNL Query Service]中編寫查詢的詳細資訊，請參閱有關[建立查詢](../best-practices/writing-queries.md)的檔案。
 
 ## 其他資源
 
-以下影片說明如何在Adobe Experience Platform介面和PSQL使用者端中執行查詢。 此外，影片也使用涉及XDM物件中個別屬性的範例、使用Adobe定義的函式以及使用CREATE TABLE AS SELECT (CTAS)。
+以下影片說明如何在Adobe Experience Platform介面和PSQL使用者端中執行查詢。 此外，影片中也會使用範例，說明XDM物件中的個別屬性、使用Adobe定義的函式，以及使用CREATE TABLE AS SELECT (CTAS)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3470202?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

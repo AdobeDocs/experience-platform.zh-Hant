@@ -4,16 +4,16 @@ title: 從一系列教戰手冊中進行選擇
 description: 瞭解如何為您的使用案例選擇正確的教戰手冊，以啟用教戰手冊。
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 88%
+source-wordcount: '738'
+ht-degree: 83%
 
 ---
 
 # 從一系列教戰手冊中進行選擇
 
-若要使用教戰手冊，請從左側導覽選取&#x200B;**[!UICONTROL 教戰手冊]**。 瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
+若要使用行動手冊，請從左側導覽選取&#x200B;**[!UICONTROL Playbooks]**。 瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
 
 ## 搜尋和篩選 {#search-and-filter}
 
@@ -35,13 +35,13 @@ ht-degree: 88%
 
 ## 檢視教戰手冊並產生資產 {#view-playbook-generate-assets}
 
-在決定教戰手冊並建立其執行個體之前，您應該檢查教戰手冊以確保符合您的需求。為了有助於您更清楚了解其中所包含的使用案例，所有教戰手冊都包含下列清單中的章節。當您準備就緒要繼續進行並產生資產時，請選取「**[!UICONTROL 建立執行個體]**」。
+在決定教戰手冊並建立其執行個體之前，您應該檢查教戰手冊以確保符合您的需求。為了有助於您更清楚了解其中所包含的使用案例，所有教戰手冊都包含下列清單中的章節。當您準備好繼續並產生資產時，請選取「**[!UICONTROL Create Instance]**」。
 
 ### 思維導圖 {#mindmap}
 
-使用教戰手冊中的思維導圖章節來了解教戰手冊可協助您解決的工作流程的步驟。從在使用案例中設定為目標的角色的觀點，將所有產生的物件能如何協助您實現使用案例的流程視覺化。
+使用教戰手冊中的思維導圖章節來了解教戰手冊可協助您解決的工作流程的步驟。從在使用案例中設定為目標的人物誌的觀點，將所有產生的物件能如何協助您實現使用案例的流程視覺化。
 
-思維導圖首先會定義使用者歷程中接觸到的人，並在每個步驟說明 Adob&#x200B;&#x200B;e 是否傳遞了某些內容 (例如新訊息或提醒)，或者目標角色是否採取了某些行動而觸發了下一則訊息或事件。
+思維導圖首先會定義使用者歷程中接觸到的人，並在每個步驟說明 Adob&#x200B;&#x200B;e 是否傳遞了某些內容 (例如新訊息或提醒)，或者目標人物誌是否採取了某些行動而觸發了下一則訊息或事件。
 
 ![已反白顯示教戰手冊思維導圖。](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
 
@@ -55,10 +55,10 @@ ht-degree: 88%
 檢查摘要章節以了解從教戰手冊建立執行個體後會產生哪些資產。為每個教戰手冊產生的資產都是根據該教戰手冊啟用的使用案例訂製的。如需摘要章節中的所有項目，可在下面取得詳細資訊。
 
 | 項目 | 說明 |
----------|----------|
-| **[!UICONTROL 目標客群]** | 說明您指望透過此使用案例教戰手冊接觸到的角色。 |
-| **[!UICONTROL 行銷管道]** | 說明用於接觸教戰手冊中目標角色的管道。 |
-| **[!UICONTROL 技術資產]** | 您建立教戰手冊的執行個體後所產生之技術資產的清單。依使用案例而定，產生的資產會因教戰手冊而有所不同。部分教戰手冊可能會產生結構描述、區段和歷程。其他則可能會產生目的地。如需如何才能使用和重複使用產生的資產的詳細資訊，請在有關建立和重複使用執行個體的指南中進一步參閱「[了解產生的資產](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets)」一節。 |
+|---------|----------|
+| **[!UICONTROL Target audience]** | 說明您指望透過此使用案例教戰手冊接觸到的人物誌。 |
+| **[!UICONTROL Marketing Channels]** | 說明用於接觸教戰手冊中目標人物誌的管道。 |
+| **[!UICONTROL Technical assets]** | 您建立教戰手冊的執行個體後所產生之技術資產的清單。依使用案例而定，產生的資產會因教戰手冊而有所不同。部分教戰手冊可能會產生結構描述、區段和歷程。其他則可能會產生目的地。如需如何才能使用和重複使用產生的資產的詳細資訊，請在有關建立和重複使用執行個體的指南中進一步參閱「[了解產生的資產](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets)」一節。 |
 
 {style="table-layout:auto"}
 
@@ -70,11 +70,11 @@ ht-degree: 88%
 
 | 項目 | 說明 |
 |---------|----------|
-| **[!UICONTROL 名稱]** | 根據教戰手冊建立的執行個體的名稱。您可以自訂執行個體的名稱和說明。如需詳細資訊，請閱讀「[如何編輯執行個體中繼資料](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata)」一節。 |
-| **[!UICONTROL 狀態]** | 顯示執行個體的狀態。**[!UICONTROL 已提交的]**&#x200B;執行個體即可供使用。 |
-| **[!UICONTROL 已建立]** | 顯示建立執行個體的時間。 |
-| **[!UICONTROL 建立者]** | 顯示建立執行個體的人。 |
-| **[!UICONTROL 上次修改日期]** | 顯示上次修改執行個體的時間。 |
+| **[!UICONTROL Name]** | 根據教戰手冊建立的執行個體的名稱。您可以自訂執行個體的名稱和說明。如需詳細資訊，請閱讀「[如何編輯執行個體中繼資料](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata)」一節。 |
+| **[!UICONTROL Status]** | 顯示執行個體的狀態。**[!UICONTROL submitted]**&#x200B;執行個體已可供使用。 |
+| **[!UICONTROL Created]** | 顯示建立執行個體的時間。 |
+| **[!UICONTROL Created By]** | 顯示建立執行個體的人。 |
+| **[!UICONTROL Last Modified]** | 顯示上次修改執行個體的時間。 |
 
 {style="table-layout:auto"}
 
@@ -82,4 +82,4 @@ ht-degree: 88%
 
 ## 後續步驟 - 建立教戰手冊執行個體 {#next-steps-create-instance}
 
-當您準備好繼續使用教戰手冊並建立執行個體時，請選取&#x200B;**[!UICONTROL 建立執行個體]**&#x200B;以繼續使用教戰手冊並產生技術資產。如需進一步的資訊，請至「[如何建立、共用和重複使用教戰手冊執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md)」詳閱指南。
+當您準備好繼續使用行動手冊並建立執行個體時，請選取「**[!UICONTROL Create Instance]**」以繼續使用行動手冊並產生技術資產。 如需進一步的資訊，請至「[如何建立、共用和重複使用教戰手冊執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md)」詳閱指南。

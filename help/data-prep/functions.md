@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '6028'
-ht-degree: 2%
+source-wordcount: '6009'
+ht-degree: 1%
 
 ---
 
@@ -63,8 +63,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ltrim | 移除字串開頭的空格。 | <ul><li>字串： **必要**&#x200B;您要移除空白字元的字串。</li></ul> | ltrim(STRING) | ltrim(&quot; hello&quot;) | &quot;hello&quot; |
 | rtrim | 移除字串結尾的空格。 | <ul><li>字串： **必要**&#x200B;您要移除空白字元的字串。</li></ul> | rtrim(STRING) | rtrim(「hello 」) | &quot;hello&quot; |
 | trim | 移除字串開頭和結尾的空格。 | <ul><li>字串： **必要**&#x200B;您要移除空白字元的字串。</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;hello&quot; |
-| 等於 | 比較兩個字串以確認是否相等。 此函式區分大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;。equals(&#x200B;STRING2) | &quot;string1&quot;。 &#x200B;equals&#x200B;(&quot;STRING1&quot;) | 假 |
-| equalsIgnoreCase | 比較兩個字串以確認是否相等。 此函式&#x200B;**不區分**&#x200B;大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;。equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;。 &#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | 真 |
+| 等於 | 比較兩個字串以確認是否相等。 此函式區分大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;。equals(&#x200B;STRING2) | &quot;string1&quot;。 &#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
+| equalsIgnoreCase | 比較兩個字串以確認是否相等。 此函式&#x200B;**不區分**&#x200B;大小寫。 | <ul><li>STRING1： **必要**&#x200B;您要比較的第一個字串。</li><li>STRING2： **必要**&#x200B;您要比較的第二個字串。</li></ul> | STRING1&#x200B;。equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;。 &#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | 根據規則運算式，從輸入字串中擷取群組。 | <ul><li>字串： **必要**&#x200B;您正在擷取群組的字串。</li><li>REGEX： **必要**&#x200B;您希望群組比對的規則運算式。</li></ul> | extract_regex(STRING， REGEX) | extract_regex&#x200B;(&quot;E259，E259B_009,1_1&quot;&#x200B;， &quot;([^，]+)，[^，]*，([^，]+)&quot;) | [「E259，E259B_009,1_1」、「E259」、「1_1」] |
-| matches_regex | 檢查字串是否符合輸入的規則運算式。 | <ul><li>字串： **必要**&#x200B;您正在檢查的字串符合規則運算式。</li><li>REGEX： **必要**&#x200B;您要比較的規則運算式。</li></ul> | matches_regex(STRING， REGEX) | matches_regex(&quot;E259，E259B_009,1_1&quot;， &quot;([^，]+)，[^，]*，([^，]+)&quot;) | 真 |
+| matches_regex | 檢查字串是否符合輸入的規則運算式。 | <ul><li>字串： **必要**&#x200B;您正在檢查的字串符合規則運算式。</li><li>REGEX： **必要**&#x200B;您要比較的規則運算式。</li></ul> | matches_regex(STRING， REGEX) | matches_regex(&quot;E259，E259B_009,1_1&quot;， &quot;([^，]+)，[^，]*，([^，]+)&quot;) | true |
 
 {style="table-layout:auto"}
 
@@ -105,7 +105,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_host | 傳回指定URL的主機。 如果輸入無效，則會傳回null。 | <ul><li>URL： **必要**&#x200B;需要擷取主機的URL。</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(&quot;https://platform&#x200B;.adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | 傳回指定URL的連線埠。 如果輸入無效，則會傳回null。 | <ul><li>URL： **必要**&#x200B;需要擷取連線埠的URL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/&#x200B;joe/employee.csv&quot;) | 22 |
 | get_url_path | 傳回指定URL的路徑。 依預設，會傳回完整路徑。 | <ul><li>URL： **必要**&#x200B;需要從中擷取路徑的URL。</li><li>FULL_PATH： *Optional*&#x200B;判斷是否傳回完整路徑的布林值。 若設為false，則僅傳迴路徑的結尾。</li></ul> | get_url_path&#x200B;(URL， FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com//&#x200B;home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B;employee.csv&quot; |
-| get_url_query_str | 傳回指定URL的查詢字串，作為查詢字串名稱和查詢字串值的對應。 | <ul><li>URL： **必要**&#x200B;您嘗試從中取得查詢字串的URL。</li><li>錨點： **必要**&#x200B;決定要如何處理查詢字串中的錨點。 可以是下列三個值之一：「保留」、「移除」或「附加」。<br><br>如果值為「保留」，則錨點會附加至傳回的值。<br>如果值為「remove」，則會從傳回的值中移除錨點。<br>如果值為「附加」，則錨點會以個別值的形式傳回。</li></ul> | get_url_query_str&#x200B;(URL， ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there？name=&#x200B;ferret#nose&quot;， &quot;retain&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B; &#x200B; &#x200B; &#x200B; &#x200B;/over/there？name=ferret#nose&quot;， &quot;remove&quot;)<br>get_url_query_str(&quot;foo://example.com：8042/over/there？name=ferret#nose&quot;， &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | 傳回指定URL的查詢字串，作為查詢字串名稱和查詢字串值的對應。 | <ul><li>URL： **必要**&#x200B;您嘗試從中取得查詢字串的URL。</li><li>錨點： **必要**&#x200B;決定要如何處理查詢字串中的錨點。 可以是下列三個值之一：「保留」、「移除」或「附加」。<br><br>如果值為「保留」，則錨點會附加至傳回的值。<br>如果值為「remove」，則會從傳回的值中移除錨點。<br>如果值為「附加」，則錨點會以個別值的形式傳回。</li></ul> | get_url_query_str&#x200B;(URL， ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042/over&#x200B;/there？name=&#x200B;ferret#nose&quot;， &quot;retain&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042/over&#x200B; &#x200B; &#x200B; &#x200B; &#x200B;/there？name=ferret#nose&quot;， &quot;remove&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there？name=ferret#nose&quot;， &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 | get_url_encoded | 此函式以URL作為輸入，並使用ASCII字元取代或編碼特殊字元。 如需特殊字元的詳細資訊，請參閱本檔案附錄中的[特殊字元清單](#special-characters)。 | <ul><li>URL： **必要**&#x200B;您要取代或編碼為ASCII字元的輸入URL （含特殊字元）。</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>：//example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
 | get_url_decoded | 此函式以URL作為輸入，並將ASCII字元解碼為特殊字元。  如需特殊字元的詳細資訊，請參閱本檔案附錄中的[特殊字元清單](#special-characters)。 | <ul><li>URL： **必要**&#x200B;您要解碼成特殊字元的輸入URL （含ASCII字元）。</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>：//example.com/partneralliance_asia-pacific_2022 |
 
@@ -115,7 +115,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->請向左/向右捲動以檢視表格的完整內容。 在[資料格式處理指南](./data-handling.md#dates)的日期區段中，可以找到有關`date`函式的詳細資訊。
+>請向左/向右捲動以檢視表格的完整內容。 在`date`資料格式處理指南[的日期區段中，可以找到有關](./data-handling.md#dates)函式的詳細資訊。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -123,10 +123,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 時間戳記 | 擷取目前的Unix時間。 | | timestamp() | timestamp() | 1571850624571 |
 | 格式 | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期： **必要**&#x200B;您要格式化的輸入日期（ZonedDateTime物件）。</li><li>格式： **必要**&#x200B;您想要將日期變更為的格式。</li></ul> | format（日期，格式） | 格式(2019-10-23T11:24:00+00:00， &quot;`yyyy-MM-dd HH:mm:ss`&quot;) | `2019-10-23 11:24:35` |
 | dformat | 根據指定格式將時間戳記轉換為日期字串。 | <ul><li>時間戳記： **必要**&#x200B;您要格式化的時間戳記。 這是以毫秒為單位寫入。</li><li>格式： **必要**&#x200B;您要時間戳記變成的格式。</li></ul> | dformat(TIMESTAMP， FORMAT) | dformat(1571829875000， &quot;`yyyy-MM-dd'T'HH:mm:ss.SSSX`&quot;) | `2019-10-23T11:24:35.000Z` |
-| 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li><li>DEFAULT_DATE： **必要**&#x200B;如果提供的日期為Null，則傳回預設日期。</li></ul> | date(DATE， FORMAT， DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH：mm&quot;， now()) | `2019-10-23T11:24:00Z` |
-| 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH：mm&quot;) | `2019-10-23T11:24:00Z` |
+| 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li><li>DEFAULT_DATE： **必要**&#x200B;如果提供的日期為Null，則傳回預設日期。</li></ul> | date(DATE， FORMAT， DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH:mm&quot;， now()) | `2019-10-23T11:24:00Z` |
+| 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | 「2019-10-23T11:24:00Z」 |
-| date_part | 擷取日期部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;&lbrace;20&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | date_part&#x200B;(COMPONENT， DATE) | date_part(&quot;MM&quot;， date(&quot;2019-10-17 11:55:12&quot;) | 10 |
+| date_part | 擷取日期部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;{20&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | date_part&#x200B;(COMPONENT， DATE) | date_part(&quot;MM&quot;， date(&quot;2019-10-17 11:55:12&quot;) | 10 |
 | set_date_part | 取代指定日期中的元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>值： **必要**&#x200B;為指定日期的元件設定的值。</li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | set_date_part&#x200B;(COMPONENT， VALUE， DATE) | set_date_part(&quot;m&quot;， 4， date(&quot;2016-11-09T11:44:44.797&quot;) | 「2016-04-09T11:44:44Z」 |
 | make_date_time | 從零件建立日期。 此函式也可以使用make_timestamp感生。 | <ul><li>YEAR： **必填**&#x200B;以四位數寫入的年份。</li><li>月份： **必要**&#x200B;月份。 允許的值為1到12。</li><li>日： **必要**&#x200B;日。 允許的值為1到31。</li><li>小時： **必要**&#x200B;小時。 允許的值為0到23。</li><li>MINUTE： **必要**&#x200B;分鐘。 允許值為0到59。</li><li>NANOSECOND： **必要**&#x200B;納秒的值。 允許的值為0到999999999。</li><li>時區： **必要**&#x200B;日期時間的時區。</li></ul> | make_date_time&#x200B;（年、月、日、小時、分鐘、秒、納秒、時區） | make_date_time&#x200B;（2019， 10， 17， 11， 55， 12， 999， &quot;美洲/洛杉磯&quot;） | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 將任何時區的日期轉換為UTC格式的日期。 | <ul><li>日期： **必要**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
@@ -142,11 +142,11 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | 檢查物件是否為空白。 | <ul><li>輸入： **必要**&#x200B;您嘗試檢查的物件是空的。</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | 假 |
+| is_empty | 檢查物件是否為空白。 | <ul><li>輸入： **必要**&#x200B;您嘗試檢查的物件是空的。</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
 | arrays_to_object | 建立物件清單。 | <ul><li>INPUT： **必要**&#x200B;索引鍵和陣列配對的群組。</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | 根據指定的平面索引鍵/值配對建立物件。 | <ul><li>INPUT： **必要**&#x200B;索引鍵/值配對的平面清單。</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;， &quot;John&quot;， &quot;lastName&quot;， &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | 從輸入字串建立物件。 | <ul><li>字串： **必要**&#x200B;正在剖析以建立物件的字串。</li><li>VALUE_DELIMITER： *Optional*&#x200B;將欄位與值分開的分隔符號。 預設分隔字元為`:`。</li><li>FIELD_DELIMITER： *Optional*&#x200B;分隔欄位值配對的分隔符號。 預設分隔字元為`,`。</li></ul> | str_to_object&#x200B;(STRING， VALUE_DELIMITER， FIELD_DELIMITER) **注意**：您可以使用`get()`函式搭配`str_to_object()`來擷取字串中索引鍵的值。 | <ul><li>範例#1： str_to_object(&quot;firstName - John ； lastName - ； - 123 345 7890&quot;， &quot;-&quot;， &quot;；&quot;)</li><li>範例#2： str_to_object(&quot;firstName - John ； lastName - ； phone - 123 456 7890&quot;， &quot;-&quot;， &quot;；&quot;)。get(&quot;firstName&quot;)</li></ul> | <ul><li>範例#1：`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>範例#2： &quot;John&quot;</li></ul> |
-| contains_key | 檢查物件是否存在於來源資料中。 **注意：**&#x200B;此函式會取代已棄用的`is_set()`函式。 | <ul><li>INPUT： **必要**&#x200B;要檢查的路徑是否存在於來源資料中。</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | 真 |
+| contains_key | 檢查物件是否存在於來源資料中。 **注意：**&#x200B;此函式會取代已棄用的`is_set()`函式。 | <ul><li>INPUT： **必要**&#x200B;要檢查的路徑是否存在於來源資料中。</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
 | 無效 | 將屬性的值設定為`null`。 當您不想將欄位複製到目標結構描述時，就應該使用此專案。 | | nullify() | nullify() | `null` |
 | get_keys | 剖析索引鍵/值配對並傳回所有索引鍵。 | <ul><li>物件： **必要**&#x200B;將從中擷取金鑰的物件。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;： &quot;Pride and Impance&quot;， &quot;book2&quot;： &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | 根據指定的索引鍵，剖析索引鍵/值配對並傳回字串的值。 | <ul><li>字串： **必要**&#x200B;您要剖析的字串。</li><li>索引鍵： **必要**&#x200B;必須擷取值的索引鍵。</li><li>VALUE_DELIMITER： **必要**&#x200B;分隔欄位與值的分隔符號。 若提供`null`或空字串，則此值為`:`。</li><li>FIELD_DELIMITER： *Optional*&#x200B;分隔欄位和值配對的分隔符號。 若提供`null`或空字串，則此值為`,`。</li></ul> | get_values(STRING， KEY， VALUE_DELIMITER， FIELD_DELIMITER) | get_values(\&quot;firstName - John ， lastName - Cena ， phone - 555 420 8692\&quot;， \&quot;firstName\&quot;， \&quot;-\&quot;， \&quot;，\&quot;) | John |
@@ -181,7 +181,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | [!BADGE 僅目的地]{type=Informative} array_to_string | 使用指定的分隔符號聯結陣列中元素的字串表示法。 如果陣列是多維度的，則會在聯結前將其平面化。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>SEPARATOR： **必要**&#x200B;用來聯結陣列中元素的分隔符號。</li><li>ARRAY： **必要**&#x200B;要聯結的陣列（平面化之後）。</li></ul> | array_to_string(SEPARATOR， ARRAY) | `array_to_string(";", ["Hello", "world"])` | 「Hello；world」 |
 | [!BADGE 僅目的地]{type=Informative} filterArray* | 根據述詞篩選指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要篩選的陣列</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | filterArray(ARRAY， PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5， 7] |
 | [!BADGE 僅目的地]{type=Informative} transformArray* | 根據述詞轉換指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要轉換的陣列。</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | transformArray(ARRAY， PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6， 7， 8] |
-| [!BADGE 只限目的地]{type=Informatic} flattenArray* | 將指定的（多維）陣列平面化為一維陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要平面化的陣列。</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;， &#39;b&#39;]， [&#39;c&#39;， &#39;d&#39;]]， [[&#39;e&#39;]， [&#39;f&#39;]]]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
+| [!BADGE 只適用於]{type=Informative}FlattenArray* | 將指定的（多維）陣列平面化為一維陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要平面化的陣列。</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;， &#39;b&#39;]， [&#39;c&#39;， &#39;d&#39;]]， [[&#39;e&#39;]， [&#39;f&#39;]]]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -248,7 +248,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | 從給定的字串將JSON內容還原序列化。 | <ul><li>字串： **必要**&#x200B;要還原序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | &#x200B; json_to_object({&quot;info&quot;：{&quot;firstName&quot;：&quot;John&quot;，&quot;lastName&quot;： &quot;Doe&quot;}}) | 代表JSON的物件。 |
+| json_to_object | 從給定的字串將JSON內容還原序列化。 | <ul><li>字串： **必要**&#x200B;要還原序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | `json_to_object&#x200B;({"info":{"firstName":"John","lastName": "Doe"}})` | 代表JSON的物件。 |
 
 {style="table-layout:auto"}
 
@@ -299,8 +299,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| aa_get_event_id | 從Analytics事件字串中擷取事件ID。 | <ul><li>EVENT_STRING： **必要**&#x200B;逗號分隔的Analytics事件字串。</li><li>EVENT_NAME： **必要**&#x200B;要擷取的事件名稱和ID。</li></ul> | aa_get_event_id(EVENT_STRING， EVENT_NAME) | aa_get_event_id(&quot;event101=5：123456，scOpen&quot;， &quot;event101&quot;) | 123456 |
-| aa_get_event_value | 從Analytics事件字串中擷取事件值。 如果未指定事件值，則會傳回1。 | <ul><li>EVENT_STRING： **必要**&#x200B;逗號分隔的Analytics事件字串。</li><li>EVENT_NAME： **必要**&#x200B;要從中擷取值的事件名稱。</li></ul> | aa_get_event_value(EVENT_STRING， EVENT_NAME) | aa_get_event_value(&quot;event101=5：123456，scOpen&quot;， &quot;event101&quot;) | 5 |
+| aa_get_event_id | 從Analytics事件字串中擷取事件ID。 | <ul><li>EVENT_STRING： **必要**&#x200B;逗號分隔的Analytics事件字串。</li><li>EVENT_NAME： **必要**&#x200B;要擷取的事件名稱和ID。</li></ul> | aa_get_event_id(EVENT_STRING， EVENT_NAME) | aa_get_event_id(&quot;event101=5:123456，scOpen&quot;， &quot;event101&quot;) | 123456 |
+| aa_get_event_value | 從Analytics事件字串中擷取事件值。 如果未指定事件值，則會傳回1。 | <ul><li>EVENT_STRING： **必要**&#x200B;逗號分隔的Analytics事件字串。</li><li>EVENT_NAME： **必要**&#x200B;要從中擷取值的事件名稱。</li></ul> | aa_get_event_value(EVENT_STRING， EVENT_NAME) | aa_get_event_value(&quot;event101=5:123456，scOpen&quot;， &quot;event101&quot;) | 5 |
 | aa_get_product_categories | 從Analytics產品字串中擷取產品類別。 | <ul><li>PRODUCTS_STRING： **必要** Analytics產品字串。</li></ul> | aa_get_product_categories(PRODUCTS_STRING) | aa_get_product_categories（&quot;；範例產品1；1；3.50，範例類別2；範例產品2；1；5.99&quot;） | [null，&quot;Example category 2&quot;] |
 | aa_get_product_names | 從Analytics產品字串中擷取產品名稱。 | <ul><li>PRODUCTS_STRING： **必要** Analytics產品字串。</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names（&quot;；範例產品1；1；3.50，範例類別2；範例產品2；1；5.99&quot;） | [&quot;Example product 1&quot;，&quot;Example product 2&quot;] |
 | aa_get_product_quantities | 從Analytics產品字串中擷取數量。 | <ul><li>PRODUCTS_STRING： **必要** Analytics產品字串。</li></ul> | aa_get_product_quantices(PRODUCTS_STRING) | aa_get_product_quantices（&quot;；範例產品1；1；3.50，範例類別2；範例產品2&quot;） | [&quot;1&quot;，空值] |
@@ -346,7 +346,7 @@ address -> addr
 address.line1 -> addr.addrLine1
 ```
 
-在上述範例中，`city`和`state`屬性也會在執行階段自動擷取，因為`address`物件已對應至`addr`。 如果您要在XDM結構中建立`line2`屬性，而您的輸入資料也在`address`物件中包含`line2`，則它也會自動內嵌，而無需手動變更對應。
+在上述範例中，`city`和`state`屬性也會在執行階段自動擷取，因為`address`物件已對應至`addr`。 如果您要在XDM結構中建立`line2`屬性，而您的輸入資料也在`line2`物件中包含`address`，則它也會自動內嵌，而無需手動變更對應。
 
 若要確保自動對應能夠運作，必須符合下列先決條件：
 
@@ -387,9 +387,9 @@ address.line1 -> addr.addrLine1
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5D |
+| ] | %5D |
 | ^ | %5E |
 | 『 | %60 |
 | ~ | %7E |

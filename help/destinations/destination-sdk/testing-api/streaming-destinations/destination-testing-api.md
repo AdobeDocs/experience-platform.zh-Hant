@@ -2,7 +2,7 @@
 description: 瞭解如何使用目的地測試API來測試您的串流目的地是否正確設定，以及驗證流向您設定之目的地的資料流程的完整性。
 title: 使用範例設定檔測試您的串流目的地
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 此頁面列出並描述您可以使用`/authoring/testing/destinationInstance/` API端點執行的所有API作業，以測試您的目的地是否正確設定，以及驗證資料流至您設定之目的地的完整性。 如需此端點支援功能的說明，請閱讀[測試您的目的地組態](streaming-destination-testing-overview.md)。
 
-您向測試端點提出請求，無論是否將設定檔新增至呼叫。 如果您未在請求上傳送任何設定檔，Adobe會在內部為您產生這些設定檔，並將其新增至請求中。
+您向測試端點提出請求，無論是否將設定檔新增至呼叫。 如果您未在請求中傳送任何設定檔，Adobe會在內部為您產生這些設定檔，並將其新增至請求中。
 
 您可以使用[範例設定檔產生API](sample-profile-generation-api.md)來建立設定檔，以用於目的地測試API的要求。
 
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 若要使用此API，您在Experience PlatformUI中必須有與目的地的現有連線。 閱讀[連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)以及[啟用設定檔和對象到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=zh-Hant)以取得詳細資訊。
-> * 建立與目的地的連線後，在[瀏覽與目的地的連線時](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=zh-Hant)，取得您應該用於此端點之API呼叫中的目的地執行個體識別碼。
->![UI影像如何取得目的地執行個體識別碼](../../assets/testing-api/get-destination-instance-id.png)
+>* 若要使用此API，您在Experience Platform UI中必須有與目的地的現有連線。 閱讀[連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)以及[啟用設定檔和對象到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)以取得詳細資訊。
+>* 建立與目的地的連線後，在[瀏覽與目的地的連線時](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)，取得您應該用於此端點之API呼叫中的目的地執行個體識別碼。
+>  >![UI影像如何取得目的地執行個體識別碼](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 開始使用目的地測試API操作 {#get-started}
 
@@ -326,4 +326,4 @@ Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則�
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道如何測試您的目的地。 您現在可以使用Adobe[自助式檔案程式](../../docs-framework/documentation-instructions.md)，為您的目的地建立檔案頁面。
+閱讀本檔案後，您現在知道如何測試您的目的地。 您現在可以使用Adobe [自助服務檔案程式](../../docs-framework/documentation-instructions.md)，為您的目的地建立檔案頁面。

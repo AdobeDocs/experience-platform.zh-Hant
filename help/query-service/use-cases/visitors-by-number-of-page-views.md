@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服
 title: 依訪客的頁面檢視次數列出訪客
 description: 瞭解如何撰寫查詢，這些查詢使用體驗事件來擷取按頁面檢視次陣列織的訪客清單。
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
@@ -34,7 +34,7 @@ LIMIT 10;
 
 ```console
                id                  | pageViews
------------------------------------+-----------
+|-----------------------------------+-----------
  457C3510571E5930-69AA721C4CBF9339 |     706.0
  776F85658792C017-6491FE6570382A01 |     700.0
  6BEC9C6AB52E779F-28F5B023113F2C85 |     654.0

@@ -2,9 +2,9 @@
 title: 發行擴充功能
 description: 瞭解如何在Adobe Experience Platform中私下或公開發佈標籤擴充功能。
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 2152cf98d9809654cca7abd7b8469a72e8387b2a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '478'
 ht-degree: 25%
 
 ---
@@ -37,11 +37,11 @@ npx @adobe/reactor-releaser
 `npx`可讓您下載並執行npm套件，而無需在機器上實際安裝。 這是執行發行者的最簡單方法。
 
 >[!NOTE]
-> 根據預設，發行者需要伺服器對伺服器Oauth流程的Adobe I/O認證。 舊版`jwt-auth`認證
-> 可藉由執行`npx @adobe/reactor-releaser@v3.1.3`使用，直到2025年1月1日停止使用。 必要的引數
-> 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)找到。
+> 根據預設，發行者需要伺服器對伺服器Oauth流程的Adobe I/O憑證。 舊版`jwt-auth`認證
+> > 可藉由執行`npx @adobe/reactor-releaser@v3.1.3`使用，直到2025年1月1日停止使用。 必要的引數
+> > 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)找到。
 
-發行者僅需要您輸入幾項資訊。 可以從Adobe I/O主控台擷取`clientId`和`clientSecret`。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL 檢視]**。
+發行者僅需要您輸入幾項資訊。 可以從Adobe I/O主控台擷取`clientId`和`clientSecret`。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL View]**。
 
 - 您的`clientId`是什麼？ 請從I/O主控台複製並貼上。
 - 您的`clientSecret`是什麼？ 請從I/O主控台複製並貼上。
@@ -49,7 +49,7 @@ npx @adobe/reactor-releaser
 發行者將會從您的擴充功能資訊清單中讀取`name`和`platform`欄位，並在API中查詢Development可用性中是否有相符的擴充功能套件。
 發行者接著會要求您確認，其是否找到您要發行以供私人使用的正確擴充功能套件。
 
-如果您想要直接使用API以私密可用性發行擴充功能，請參閱API檔案中[私密發行擴充功能套件](../../api/endpoints/extension-packages.md/#private-release)的範例呼叫，以取得詳細資訊。
+如果您想要直接使用API以私密可用性發行擴充功能，請參閱API檔案中[私密發行擴充功能套件](/help/tags/api/endpoints/extension-packages.md#private-release)的範例呼叫，以取得詳細資訊。
 
 ## 公開發行
 

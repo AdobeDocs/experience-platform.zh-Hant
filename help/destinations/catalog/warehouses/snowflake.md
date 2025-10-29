@@ -4,7 +4,7 @@ description: 建立即時Snowflake資料共用，以直接將串流對象更新�
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 3%
@@ -96,7 +96,7 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
+|---------|----------|---------|
 | 匯出類型 | **[!UICONTROL Audience export]** | 您正在匯出具有[!DNL Snowflake]目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
 | 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 

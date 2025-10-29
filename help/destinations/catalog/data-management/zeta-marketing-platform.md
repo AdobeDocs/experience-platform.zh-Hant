@@ -4,9 +4,9 @@ description: Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專�
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1327'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 > Zeta Marketing Platform目的地需要您將來源身分名稱空間對應到ZMP `uid`目標身分。 這有助於Zeta行銷平台專門區分每個設定檔。
 
 | 目標身分 | 說明 | 考量事項 | 附註 |
----------|----------|----------|----------|
+|---------|----------|----------|----------|
 | uid | ZMP用來區別客戶個人檔案的唯一ID | 強制 | 如果您想要使用唯一的設定檔的電子郵件地址來識別它們，請選擇`Email`標準身分名稱空間。 或者，如果客戶設定檔沒有電子郵件，您可以選擇將自訂名稱空間對應到`uid`。 |
 | email_md5_id | 電子郵件MD5代表每個客戶設定檔 | 選填 | 當您想要使用電子郵件MD5值唯一識別客戶設定檔時，請選擇此目標身分。 電子郵件地址在Experience Platform中必須已採用MD5格式，因為Experience Platform無法將純文字轉換為MD5。 在此案例中，將`uid` （必要）設為相同的電子郵件MD5值或其他適當的身分名稱空間。 |
 
@@ -76,8 +76,8 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據區段評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+|---------|----------|---------|
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 一旦根據區段評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -85,39 +85,40 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請填寫必填欄位並選取&#x200B;**[!UICONTROL Connect to destination]**。
 
-* **[!UICONTROL 使用者名稱]**： `api`
-* **[!UICONTROL 密碼]**：您的ZMP REST API金鑰。 您可以登入您的ZMP帳戶並瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以找到您的REST API金鑰。 如需詳細資訊，請參閱[ZMP檔案](https://knowledgebase.zetaglobal.com/kb/integrations)。
+* **[!UICONTROL Username]**：`api`
+* **[!UICONTROL Password]**：您的ZMP REST API金鑰。 您可以登入您的ZMP帳戶並瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以找到您的REST API金鑰。 如需詳細資訊，請參閱[ZMP檔案](https://knowledgebase.zetaglobal.com/kb/integrations)。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
 ![顯示ZMP組態的影像](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
-* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL ZMP帳戶網站ID]**：您要將對象傳送至的ZMP **網站ID**。 您可以瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以檢視您的網站ID。 在[這裡](https://knowledgebase.zetaglobal.com/kb/integrations)可找到更多資訊。
-* **[!UICONTROL ZMP區段]**：您ZMP網站ID帳戶中要與Experience Platform對象一起更新的客戶清單區段。
+
+* **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+* **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL ZMP Account Site Id]**：您的ZMP **網站ID**，您要將對象傳送至此處。 您可以瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以檢視您的網站ID。 在[這裡](https://knowledgebase.zetaglobal.com/kb/integrations)可找到更多資訊。
+* **[!UICONTROL ZMP Segment]**：您ZMP網站ID帳戶中要與Experience Platform對象一起更新的客戶清單區段。
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 管理目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL Manage Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 閱讀[啟用串流區段匯出目的地的設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md)，以取得啟用此目的地的對象區段的指示。
 
@@ -126,10 +127,12 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 以下是將設定檔匯出至[!DNL Zeta Marketing Platform]時的正確身分對應範例。
 
 選取來源欄位：
-* 選取在Adobe Experience Platform和[!DNL Zeta Marketing Platform]中唯一識別設定檔的來源識別名稱空間（自訂或標準，例如`Email`）。
+
+* 選取在Adobe Experience Platform和`Email`中唯一識別設定檔的來源識別名稱空間（自訂或標準，例如[!DNL Zeta Marketing Platform]）。
 * 選取需要匯出到[!DNL Zeta Marketing Platform]並更新的任何XDM來源設定檔屬性。
 
 選取目標欄位：
+
 * （必要）選取`uid`作為您對應來源身分名稱空間的目標身分。
 * （選擇性）選取`email_md5_id`作為目標身分，您將代表電子郵件md5值的來源身分名稱空間對應至該身分。 電子郵件地址在Experience Platform中必須已採用MD5格式，因為Experience Platform無法將純文字轉換為MD5
 * 視需要選取任何其他目標對應。

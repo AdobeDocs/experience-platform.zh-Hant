@@ -1,9 +1,10 @@
 ---
 title: (V2) Pega CDH即時受眾連線
 description: 在Adobe Experience Platform中使用Pega客戶決定中心即時對象目的地，將設定檔屬性和對象成員資格資料傳送至Pega客戶決定中心，以做出次優決策。
-source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
+exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1000'
 ht-degree: 3%
 
 ---
@@ -36,9 +37,9 @@ ht-degree: 3%
 
 使用此目的地將資料匯出Adobe Experience Platform之前，請務必先在[!DNL Pega Customer Decision Hub]中完成下列必要條件：
 
-* 在您的[!DNL Pega Customer Decision Hub]執行個體中設定[Adobe Experience Platform設定檔和對象成員資格整合元件](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)。
-* 在您的[!DNL Pega Customer Decision Hub]執行個體中使用使用者端認證[&#128279;](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)授與型別，設定OAuth 2.0 使用者端註冊。
-* 設定[!DNL Pega Customer Decision Hub]執行個體中Adobe對象成員資格資料流程的[即時執行資料流程](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)。
+* 在您的[執行個體中設定](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform設定檔和對象成員資格整合元件[!DNL Pega Customer Decision Hub]。
+* 在您的[執行個體中使用使用者端認證](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)授與型別，設定OAuth 2.0 [!DNL Pega Customer Decision Hub]使用者端註冊。
+* 設定[執行個體中Adobe對象成員資格資料流程的](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)即時執行資料流程[!DNL Pega Customer Decision Hub]。
 
 ## 支援的身分 {#supported-identities}
 
@@ -55,9 +56,9 @@ ht-degree: 3%
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 匯出具有識別碼(*CustomerID*)、屬性（姓氏、名字、位置等）與對象成員資格資料之對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地永遠是以API為基礎的連線。 在Experience Platform中更新設定檔後，根據對象評估，聯結器會立即將更新傳送至下游的目的地平台。 如需詳細資訊，請參閱[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+|---------|----------|---------|
+| 匯出類型 | **[!UICONTROL Profile-based]** | 匯出具有識別碼(*CustomerID*)、屬性（姓氏、名字、位置等）與對象成員資格資料之對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地永遠是以API為基礎的連線。 在Experience Platform中更新設定檔後，根據對象評估，聯結器會立即將更新傳送至下游的目的地平台。 如需詳細資訊，請參閱[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -71,37 +72,37 @@ ht-degree: 3%
 
 ![UI熒幕的影像，您可在此使用OAuth 2搭配使用者端憑證驗證，連線至Pega CDH目的地](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
-填寫下列欄位並選取&#x200B;**[!UICONTROL 連線到目的地]**：
+填寫下列欄位並選取&#x200B;**[!UICONTROL Connect to destination]**：
 
-* **[!UICONTROL 存取權杖URL]**： [!DNL Pega Customer Decision Hub]執行個體上的OAuth 2存取權杖URL。
-* **[!UICONTROL 使用者端識別碼]**：您在[!DNL Pega Customer Decision Hub]執行個體中產生的OAuth 2 [!DNL client ID]。
-* **[!UICONTROL 使用者端密碼]**：您在[!DNL Pega Customer Decision Hub]執行個體中產生的OAuth 2 [!DNL client secret]。
+* **[!UICONTROL Access Token URL]**：您[!DNL Pega Customer Decision Hub]執行個體上的OAuth 2存取權杖URL。
+* **[!UICONTROL Client ID]**：您在[!DNL client ID]執行個體中產生的OAuth 2 [!DNL Pega Customer Decision Hub]。
+* **[!UICONTROL Client Secret]**：您在[!DNL client secret]執行個體中產生的OAuth 2 [!DNL Pega Customer Decision Hub]。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目標詳細資料 {#destination-details}
 
 建立與[!DNL Pega Customer Decision Hub]的驗證連線後，請提供目的地的下列資訊：
 
 ![顯示Pega CDH目的地詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/personalization/pega/pega-connect-destination-v2.png)
 
-若要設定目的地的詳細資料，請填寫必填欄位，然後選取&#x200B;**[!UICONTROL 下一步]**。
+若要設定目的地的詳細資料，請填寫必填欄位，然後選取&#x200B;**[!UICONTROL Next]**。
 
-* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL Pega CDH主機名稱]**：設定檔要匯出為JSON資料的Pega客戶決策中心主機名稱。
-* **[!UICONTROL 應用程式別名]**：您為客戶Decision Hub帳戶設定的應用程式別名。 如需詳細資訊，請參閱[在您的[!DNL Pega Customer Decision Hub]執行個體中新增應用程式URL別名](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html)。
+* **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+* **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL Pega CDH Host Name]**：設定檔要匯出為JSON資料的Pega客戶決策中心主機名稱。
+* **[!UICONTROL Application alias]**：您為客戶Decision Hub帳戶設定的應用程式別名。 如需詳細資訊，請參閱[在您的](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html)執行個體中新增應用程式URL別名[!DNL Pega Customer Decision Hub]。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 如需啟用此目的地對象的指示，請參閱[啟用串流設定檔匯出目的地的對象資料](../../ui/activate-streaming-profile-destinations.md)。
 
 ### 對應 {#mapping}
 
-在[!UICONTROL 對應]步驟中，從聯合結構描述以及任何其他要匯出至目的地的XDM欄位中選取唯一識別碼。
+在[!UICONTROL Mapping]步驟中，從聯合結構描述以及任何其他要匯出至目的地的XDM欄位中選取唯一識別碼。
 
 ### 對應範例：在[!DNL Pega Customer Decision Hub]中啟用設定檔更新 {#mapping-example}
 
