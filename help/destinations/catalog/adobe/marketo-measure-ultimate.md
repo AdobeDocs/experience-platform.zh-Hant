@@ -78,7 +78,7 @@ Marketo Measure （前身為Bizible）為行銷人員提供insight，讓行銷�
 
 ## 驗證資料匯出 {#exported-data}
 
-若要驗證資料集匯出是否成功，您可以檢查資料集是否已成功匯入[Snowflake資料倉儲](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html)。
+若要驗證資料集匯出是否成功，您可以檢查資料集是否已成功匯入[Snowflake資料倉儲](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=zh-Hant)。
 
 ## 資料使用與控管 {#data-usage-governance}
 

@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 呈現個人化內容
 
-Adobe Experience Platform Web SDK支援從Adobe個人化解決方案擷取個人化內容，包括[Adobe Target](https://business.adobe.com/products/target/adobe-target.html)、[Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant)和[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant)。
+Adobe Experience Platform Web SDK支援從Adobe個人化解決方案擷取個人化內容，包括[Adobe Target](https://business.adobe.com/tw/products/target/adobe-target.html)、[Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant)和[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant)。
 
 此外，Web SDK可透過Adobe Experience Platform個人化目標(例如[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md)和[自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md))，提供相同頁面和下一頁個人化功能。 若要瞭解如何設定Experience Platform以進行相同頁面和下一頁個人化，請參閱[專屬指南](../../destinations/ui/activate-edge-personalization-destinations.md)。
 
-在Adobe Target的[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)和Adobe Journey Optimizer的[Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)中建立的內容，可由SDK自動擷取及轉譯。 在Adobe Target的[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)、Adobe Journey Optimizer的[程式碼式體驗管道](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)或Offer Decisioning中建立的內容，無法由SDK自動轉譯。 您必須改用SDK來要求此內容，然後自行手動轉譯內容。
+在Adobe Target的[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hant)和Adobe Journey Optimizer的[Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant)中建立的內容，可由SDK自動擷取及轉譯。 在Adobe Target的[表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hant)、Adobe Journey Optimizer的[程式碼式體驗管道](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/code-based-experience/get-started-code-based)或Offer Decisioning中建立的內容，無法由SDK自動轉譯。 您必須改用SDK來要求此內容，然後自行手動轉譯內容。
 
 ## 自動呈現內容 {#automatic}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### 使用案例2：沒有選擇器的演算主張
 
-此使用案例適用於使用[!DNL Target Form-based Experience Composer]或Adobe Journey Optimizer的[程式碼型體驗管道](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)所編寫的體驗。
+此使用案例適用於使用[!DNL Target Form-based Experience Composer]或Adobe Journey Optimizer的[程式碼型體驗管道](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/code-based-experience/get-started-code-based)所編寫的體驗。
 
 您必須在`applyPropositions`呼叫中提供選取器、動作和範圍。
 

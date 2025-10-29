@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ## 先決條件 {#prerequisites}
 
-* 設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
+* 設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
 * 設定此目的地時，將只能使用相同Adobe Real-Time CDP組織上的Marketo Engage執行個體。
 * 只有在Adobe Admin Console中管理使用者的Marketo Engage執行個體才能使用此目的地。
 
@@ -146,7 +146,7 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo deduplication field]**
    * **[!UICONTROL Profile only]**：當您想要讓Marketo銷售機會設定檔與Experience Platform的最新資訊保持最新狀態時，請選取此選項。
    * **[!UICONTROL Audience only]**：當您想要將對象成員新增至Marketo清單，但不更新其設定檔資訊時，請選取此選項。
 * **[!UICONTROL Partition]**： *只有在選擇&#x200B;**[!UICONTROL Profile only]**&#x200B;或&#x200B;**[!UICONTROL Audience and profile]**&#x200B;同步處理型別*&#x200B;時，才能選擇磁碟分割。 選取與您所選工作區相關聯的Marketo分割區ID。 這可讓您指定Marketo中的哪個銷售機會分割區會接收匯出的資料。 如果您未選擇特定的資料分割，您的資料將會傳送到Marketo中的&#x200B;**[!UICONTROL Default]**&#x200B;資料分割。
-* **[!UICONTROL Marketo deduplication field]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
+* **[!UICONTROL Marketo deduplication field]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/zh-hant/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
 
   >[!NOTE]
   >

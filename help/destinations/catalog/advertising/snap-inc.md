@@ -140,7 +140,7 @@ ht-degree: 2%
 
 ![對象](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱[分段服務總覽](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments)。
+請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱[分段服務總覽](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=zh-Hant#evaluate-segments)。
 
 ## 資料使用與控管 {#data-usage-governance}
 
