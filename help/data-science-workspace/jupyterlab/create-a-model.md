@@ -99,7 +99,7 @@ data_access_sdk_python
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-在[結構描述](https://platform.adobe.com/)**[和](https://platform.adobe.com/schema)資料集****[索引標籤下的](https://platform.adobe.com/dataset/overview)Adobe Experience Platform**&#x200B;中可以找到相同的資訊。
+在[結構描述](https://platform.adobe.com/)**[和](https://platform.adobe.com/schema)資料集**&#x200B;**[索引標籤下的](https://platform.adobe.com/dataset/overview)Adobe Experience Platform**&#x200B;中可以找到相同的資訊。
 
 競爭後，您的訓練和評分設定應類似於以下熒幕擷圖：
 

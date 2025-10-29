@@ -135,10 +135,10 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. 完成對應後，選取&#x200B;**[!UICONTROL Next]**以進入檢閱畫面。
+1. 完成對應後，選取&#x200B;**[!UICONTROL Next]**&#x200B;以進入檢閱畫面。
    ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
-1. 選取&#x200B;**[!UICONTROL Finish]**以完成設定。
+1. 選取&#x200B;**[!UICONTROL Finish]**&#x200B;以完成設定。
    ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
 可為[SendGrid行銷連絡人>新增或更新連絡人API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)設定的支援屬性對應完整清單如下。
@@ -166,7 +166,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. 監視對象摘要，並檢查與資料集中建立的計數對應的設定檔計數。

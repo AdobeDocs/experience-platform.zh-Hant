@@ -154,16 +154,16 @@ ht-degree: 3%
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」並導覽至目的地清單。
-1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**標籤，然後選取對象名稱。
+1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**&#x200B;標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數與區段中的計數相對應。
    ![Experience Platform UI熒幕擷圖範例，顯示區段。](../../assets/catalog/crm/zendesk/segment.png)
 
-1. 登入[!DNL Zendesk]網站，然後導覽至&#x200B;**[!UICONTROL Contacts]**&#x200B;頁面，以檢查是否已新增對象中的設定檔。 此清單可設定為顯示使用audience**[!UICONTROL Mapping ID]**和對象狀態所建立之其他欄位的欄。
+1. 登入[!DNL Zendesk]網站，然後導覽至&#x200B;**[!UICONTROL Contacts]**&#x200B;頁面，以檢查是否已新增對象中的設定檔。 此清單可設定為顯示使用audience&#x200B;**[!UICONTROL Mapping ID]**&#x200B;和對象狀態所建立之其他欄位的欄。
    ![Zendesk UI熒幕擷圖顯示「連絡人」頁面，其中包含以對象名稱建立的其他欄位。](../../assets/catalog/crm/zendesk/contacts.png)
 
-1. 或者，您可以向下鑽研至個別&#x200B;**[!UICONTROL Person]**&#x200B;頁面，並檢查顯示對象名稱和對象狀態的&#x200B;**[!UICONTROL Additional fields]**區段。
+1. 或者，您可以向下鑽研至個別&#x200B;**[!UICONTROL Person]**&#x200B;頁面，並檢查顯示對象名稱和對象狀態的&#x200B;**[!UICONTROL Additional fields]**&#x200B;區段。
    ![顯示「人員」頁面的Zendesk UI熒幕擷圖，其他欄位區段顯示對象名稱和對象狀態。](../../assets/catalog/crm/zendesk/contact.png)
 
 ## 資料使用與控管 {#data-usage-governance}

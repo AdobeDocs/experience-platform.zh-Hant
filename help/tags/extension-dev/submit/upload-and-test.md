@@ -63,8 +63,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > 依預設，Uploader會預期伺服器對伺服器Oauth流程的Adobe I/O認證。 舊版`jwt-auth`認證
-> > 可藉由執行`npx @adobe/reactor-uploader@v5.2.0`使用，直到2025年1月1日停止使用。 必要的引數
-> > 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)找到。
+> &#x200B;> 可藉由執行`npx @adobe/reactor-uploader@v5.2.0`使用，直到2025年1月1日停止使用。 必要的引數
+> &#x200B;> 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)找到。
 
 上傳程式僅需要您輸入幾項資訊。 可以從Adobe I/O主控台擷取`clientId`和`clientSecret`。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/tw/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL View]**。
 

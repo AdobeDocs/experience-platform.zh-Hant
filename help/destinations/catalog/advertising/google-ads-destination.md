@@ -77,7 +77,7 @@ ht-degree: 2%
 >[!NOTE]
 >
 >在Experience Platform中設定第一個[!DNL Google Ads]目的地前，必須先加入允許清單。 在建立目的地之前，請確定[!DNL Google]已完成下述允許清單程式。
->>此規則的例外情況適用於[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html)客戶。 如果您已經在Audience Manager中建立了與此Google目的地的連線，則不需要再次進行允許清單程式，您可以繼續後續步驟。
+>&#x200B;>此規則的例外情況適用於[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html)客戶。 如果您已經在Audience Manager中建立了與此Google目的地的連線，則不需要再次進行允許清單程式，您可以繼續後續步驟。
 
 在Experience Platform中建立[!DNL Google Ads]目的地之前，您必須先聯絡[!DNL Google]，才能Adobe加入允許的資料提供者清單，並將您的帳戶新增至允許清單。 請連絡[!DNL Google]並提供下列資訊：
 

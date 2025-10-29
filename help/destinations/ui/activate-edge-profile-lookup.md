@@ -167,7 +167,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 >[!IMPORTANT]
 >
 >設定檔屬性可能包含敏感資料。 若要保護此資料，您必須透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)擷取設定檔屬性。 此外，您必須透過Edge Network API [互動式資料收集端點](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)擷取設定檔屬性，才能驗證API呼叫。
->><br>如果您不遵循上述要求，個人化將僅以對象成員資格為基礎，而且您將無法取得設定檔屬性。
+>&#x200B;><br>如果您不遵循上述要求，個人化將僅以對象成員資格為基礎，而且您將無法取得設定檔屬性。
 
 您在[步驟1](#create-datastream)中設定的資料流現在已準備好接受傳入的事件資料並以邊緣設定檔資訊回應。
 

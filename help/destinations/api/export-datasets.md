@@ -1632,7 +1632,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >如需有關如何取得所需目標引數的資訊，請參閱[目的地檔案頁面的](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)填寫目的地詳細資料[!DNL Amazon S3]區段。
->>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
+>&#x200B;>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
@@ -1685,7 +1685,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >如需有關如何取得所需目標引數的資訊，請參閱[目的地檔案頁面的](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details)填寫目的地詳細資料[!DNL Azure Blob Storage]區段。
->>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
+>&#x200B;>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
@@ -1739,7 +1739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >有關如何取得必要目標引數的資訊，請參閱Azure [目的地檔案頁面的](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)填寫目的地詳細資料[!DNL Data Lake Gen 2(ADLS Gen2)]區段。
->>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
+>&#x200B;>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
@@ -1791,7 +1791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >如需有關如何取得所需目標引數的資訊，請參閱[目的地檔案頁面的](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details)填寫目的地詳細資料[!DNL Data Landing Zone]區段。
->>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
+>&#x200B;>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
@@ -1843,7 +1843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >如需有關如何取得所需目標引數的資訊，請參閱[目的地檔案頁面的](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)填寫目的地詳細資料[!DNL Google Cloud Storage]區段。
->>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
+>&#x200B;>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
@@ -1897,7 +1897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >如需有關如何取得所需目標引數的資訊，請參閱SFTP目的地檔案頁面的[填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details)區段。
->>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
+>&#x200B;>如需`datasetFileType`的其他支援值，請參閱API參考檔案。
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 

@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >如果陳述式中未提供`label`旗標，或欄位群組已存在，則透過SQL建立欄位群組將會失敗。
->>請確定查詢包含`IF NOT EXISTS`子句，以避免查詢失敗，因為欄位群組已經存在。
+>&#x200B;>請確定查詢包含`IF NOT EXISTS`子句，以避免查詢失敗，因為欄位群組已經存在。
 
 真實世界的範例看起來可能類似於下面所示的範例。
 

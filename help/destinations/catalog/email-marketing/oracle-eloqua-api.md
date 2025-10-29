@@ -15,7 +15,7 @@ ht-degree: 4%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)可讓行銷人員規劃及執行行銷活動，同時為其潛在客戶提供個人化的客戶體驗。 透過整合式銷售機會管理和輕鬆建立行銷活動，可協助行銷人員在買家歷程中的適當時間，與適當的對象互動，並可優雅地擴充，以涵蓋多個管道，包括電子郵件、顯示搜尋、視訊和行動裝置。 銷售團隊可以更快完成更多交易，透過即時insight提高行銷ROI。
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[ REST API中的](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)更新連絡人[!DNL Oracle Eloqua]作業，可讓您&#x200B;**將對象內的身分識別**&#x200B;更新為[!DNL Oracle Eloqua]。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[&#x200B; REST API中的](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)更新連絡人[!DNL Oracle Eloqua]作業，可讓您&#x200B;**將對象內的身分識別**&#x200B;更新為[!DNL Oracle Eloqua]。
 
 [!DNL Oracle Eloqua]使用[基本驗證](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)與[!DNL Oracle Eloqua] REST API通訊。 [!DNL Oracle Eloqua]向目的地驗證[區段中進一步說明如何向您的](#authenticate)執行個體進行驗證。
 
@@ -35,7 +35,7 @@ ht-degree: 4%
 
 若要將資料從Experience Platform匯出至您的[!DNL Oracle Eloqua]帳戶，您需要有[!DNL Oracle Eloqua]帳戶。
 
-此外，您至少需要&#x200B;*執行個體的*「進階使用者 — 行銷許可權」[!DNL Oracle Eloqua]。 請參閱&#x200B;*安全使用者存取*&#x200B;頁面上的[「安全性群組」](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)區段以取得指引。 目的地需要在叫用[ API時，以程式設計方式](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)決定您的基底URL[!DNL Oracle Eloqua]的存取權。
+此外，您至少需要&#x200B;*執行個體的*「進階使用者 — 行銷許可權」[!DNL Oracle Eloqua]。 請參閱&#x200B;*安全使用者存取*&#x200B;頁面上的[「安全性群組」](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)區段以取得指引。 目的地需要在叫用[&#x200B; API時，以程式設計方式](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)決定您的基底URL[!DNL Oracle Eloqua]的存取權。
 
 #### 收集[!DNL Oracle Eloqua]認證 {#gather-credentials}
 
@@ -201,7 +201,7 @@ ht-degree: 4%
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」並導覽至目的地清單。
-1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**標籤，然後選取對象名稱。
+1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**&#x200B;標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數與區段中的計數相對應。

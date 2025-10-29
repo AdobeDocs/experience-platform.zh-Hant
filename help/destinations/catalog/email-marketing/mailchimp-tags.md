@@ -189,7 +189,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 登入您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後導覽至&#x200B;**[!DNL Audience]** > **[!DNL All Contacts]**頁面，並檢查對象中的連絡人是否已新增，以及對象中的連絡人是否已使用對象名稱進行更新。
+1. 登入您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後導覽至&#x200B;**[!DNL Audience]** > **[!DNL All Contacts]**&#x200B;頁面，並檢查對象中的連絡人是否已新增，以及對象中的連絡人是否已使用對象名稱進行更新。
    ![顯示「對象」頁面的Mailchimp UI熒幕擷圖。](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## 資料使用與控管 {#data-usage-governance}

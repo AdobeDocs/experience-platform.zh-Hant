@@ -17,7 +17,7 @@ Adobe Experience Platform查詢服務可讓您使用SQL `ALTER TABLE`命令的�
 
 若要將資料集資料行標示為主要或次要身分，必須瞭解`ALTER TABLE` SQL命令，並充分瞭解資料隱私權需求。 在繼續本檔案之前，請先檢閱下列檔案：
 
-* [ `ALTER TABLE`命令的SQL語法指南](../sql/syntax.md)。
+* [&#x200B; `ALTER TABLE`命令的SQL語法指南](../sql/syntax.md)。
 * [資料控管概觀](../../data-governance/home.md)以取得詳細資訊。
 
 ## 新增限制 {#add-constraints}

@@ -147,7 +147,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >在刪除目的地帳戶之前，您必須刪除任何傳送到目的地帳戶的現有資料流。
->>若要刪除現有的資料流，請參閱以下頁面：
+>&#x200B;>若要刪除現有的資料流，請參閱以下頁面：
 >
 >* [使用Experience Platform UI](../ui/delete-destinations.md)刪除現有的資料流；
 >* [使用流程服務API](delete-destination-dataflow.md)刪除現有的資料流。
