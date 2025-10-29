@@ -487,4 +487,4 @@ LIMIT 10
 
 以下影片說明如何在Adobe Experience Platform介面和PSQL使用者端中執行查詢。 此外，影片中也會使用範例，說明XDM物件中的個別屬性、使用Adobe定義的函式，以及使用CREATE TABLE AS SELECT (CTAS)。
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3470202?captions=chi_hant&quality=12&learn=on)

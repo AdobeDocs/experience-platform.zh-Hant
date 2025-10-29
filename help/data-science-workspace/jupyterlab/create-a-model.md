@@ -69,7 +69,7 @@ ht-degree: 0%
 
 下列影片教學課程說明Luma傾向性模型筆記本：
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452503?captions=chi_hant)
 
 ### 需求檔案 {#requirements-file}
 
