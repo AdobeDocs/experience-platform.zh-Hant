@@ -11,7 +11,7 @@ ht-degree: 99%
 
 # 天氣資料欄位對應
 
-Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，將美國天氣的附加內容引進透過資料流收集的資料中。您可以在 Experience Platform 中使用此資料進行分析、目標定位和區段建立。
+Adobe 已和 [[!DNL [The Weather Company]]](https://www.ibm.com/weather) 合作，將美國天氣的附加內容引進透過資料流收集的資料中。您可以在 Experience Platform 中使用此資料進行分析、目標定位和區段建立。
 
 此頁面會列出可用於擴充客群資料的所有可用欄位。
 
@@ -110,7 +110,7 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 | [!DNL Day 1 Forecast Night Snow Range] | 一天的天氣預報。夜間的天氣資訊。潛在大量降雪 (1-3 英吋、3-6 英吋等)。 | `weather.forecast.day01Forecast.night.snowRange` |
 | [!DNL Day 1 Forecast Night Temperature Celsius] | 一天的天氣預報。夜間的天氣資訊。以定義的測量單位表示的溫度。範圍：-140 到 140。溫度 (攝氏度數) | `weather.forecast.day01Forecast.night.temperature.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Fahrenheit] | 一天的天氣預報。夜間的天氣資訊。以定義的測量單位表示的溫度。範圍：-140 到 140。溫度 (華氏度數) | `weather.forecast.day01Forecast.night.temperature.fahrenheit` |
-| [!DNL  Day 1 Forecast Night Temperature Heat Index Celsius] | 一天的天氣預報。夜間的天氣資訊。根據溫度和濕度，人體所感受到的溫度。溫度 (攝氏度數) | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
+| [!DNL &#x200B; Day 1 Forecast Night Temperature Heat Index Celsius] | 一天的天氣預報。夜間的天氣資訊。根據溫度和濕度，人體所感受到的溫度。溫度 (攝氏度數) | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Heat Index Fahrenheit] | 一天的天氣預報。夜間的天氣資訊。根據溫度和濕度，人體所感受到的溫度。溫度 (華氏度數) | `weather.forecast.day01Forecast.night.temperatureHeatIndex.fahrenheit` |
 | [!DNL Day 1 Forecast Night Temperature Wind Chill Celsius] | 一天的天氣預報。夜間的天氣資訊。根據溫度和風速，人體所感受到的溫度。溫度 (攝氏度數) | `weather.forecast.day01Forecast.night.temperatureWindChill.celsius` |
 | [!UICONTROL Day 1 Forecast Night Temperature Wind Chill Fahrenheit] | 一天的天氣預報。夜間的天氣資訊。根據溫度和風速，人體所感受到的溫度。溫度 (華氏度數) | `weather.forecast.day01Forecast.night.temperatureWindChill.fahrenheit` |

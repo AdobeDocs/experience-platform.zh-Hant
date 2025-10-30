@@ -33,7 +33,7 @@ ht-degree: 3%
 
 您必須擁有有效的[!DNL Pinterest] [商業帳戶](https://help.pinterest.com/en/business/article/get-a-business-account)才能使用此延伸模組。 移至[[!DNL Pinterest] 註冊頁面](https://www.pinterest.com/business/create/)進行註冊並建立帳戶（如果尚未建立帳戶）。
 
-您也需要[!DNL Pinterest]開發人員帳戶，該帳戶需要與您的[!DNL Pinterest]企業帳戶相關聯。 若要將您的開發人員帳戶與您的企業帳戶建立關聯，請參閱[[!DNL Pinterest ] 開發人員帳戶](https://developers.pinterest.com/account-setup/)。
+您也需要[!DNL Pinterest]開發人員帳戶，該帳戶需要與您的[!DNL Pinterest]企業帳戶相關聯。 若要將您的開發人員帳戶與您的企業帳戶建立關聯，請參閱[[!DNL Pinterest &#x200B;] 開發人員帳戶](https://developers.pinterest.com/account-setup/)。
 
 ### 收集必要的設定詳細資料 {#configuration-details}
 
@@ -64,7 +64,7 @@ ht-degree: 3%
 
 在下一個畫面中，輸入您先前在[!UICONTROL Ads Account Id]組態詳細資料[!UICONTROL Conversion Access Token]區段中收集的[和](#configuration-details)。 完成後，選取「**[!UICONTROL Save]**」。
 
-![ [!DNL Pinterest] [!UICONTROL Configure]畫面醒目提示[!UICONTROL Ads Account Id]和[!UICONTROL Conversion Access Token]輸入欄位。](../../../images/extensions/server/pinterest/input.png)
+![&#x200B; [!DNL Pinterest] [!UICONTROL Configure]畫面醒目提示[!UICONTROL Ads Account Id]和[!UICONTROL Conversion Access Token]輸入欄位。](../../../images/extensions/server/pinterest/input.png)
 
 ## 設定事件轉送規則 {#config-rule}
 
@@ -161,11 +161,11 @@ ht-degree: 3%
 
 如果事件集合和[!DNL Experience Platform]整合成功，您將會在[!DNL Pinterest] UI中看到事件。
 
-![ [!DNL Pinterest]事件管理員](../../../images/extensions/server/pinterest/event-history.png)
+![&#x200B; [!DNL Pinterest]事件管理員](../../../images/extensions/server/pinterest/event-history.png)
 
 您可以進一步鑽研並檢視[!DNL Pinterest]事件資料分佈。
 
-![ [!DNL Pinterest]資料分佈](../../../images/extensions/server/pinterest/event-history-distribution.png)
+![&#x200B; [!DNL Pinterest]資料分佈](../../../images/extensions/server/pinterest/event-history-distribution.png)
 
 ## 後續步驟
 

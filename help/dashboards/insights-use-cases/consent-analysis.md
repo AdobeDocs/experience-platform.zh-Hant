@@ -134,7 +134,7 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 - 選取[!UICONTROL Marks]下拉式功能表，並將圖表型別變更為[!UICONTROL Line]。
 - 搜尋[!UICONTROL Attributes]的`[!UICONTROL segment_name]`，然後使用+圖示從下拉式功能表中新增`segment_name`做為[!UICONTROL Filter]。 [!UICONTROL Filter: Segment_name]對話方塊隨即顯示。 選取先前建立且與同意相關的對象。 在此範例中，選取&#x200B;**[!UICONTROL Users Consented to Calls]**、**[!UICONTROL Users Consented to SMS]**&#x200B;和&#x200B;**[!UICONTROL Users Consented to Email]**，然後選取&#x200B;**[!UICONTROL Apply]**。
 - 搜尋[!UICONTROL Attributes]中的`[!UICONTROL segment_name]`，然後從下拉式選單中選取+圖示將`segment_name`新增為[!UICONTROL Color]。
-- 開啟[ [!UICONTROL Properties]面板](../standard-dashboards.md#widget-properties)並提供適當的[!UICONTROL Widget title]和[!UICONTROL Axis label]。
+- 開啟[&#x200B; [!UICONTROL Properties]面板](../standard-dashboards.md#widget-properties)並提供適當的[!UICONTROL Widget title]和[!UICONTROL Axis label]。
   ![含有屬性圖示和Widget標題的Widget Composer已反白顯示。](../images/standard-dashboards/properties-panel.png)
 - 選取&#x200B;**[!UICONTROL Save and close]**&#x200B;以確認您的設定。
 

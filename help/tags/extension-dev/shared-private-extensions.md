@@ -91,7 +91,7 @@ Adobe Experience Platform標籤現在支援&#x200B;**[!UICONTROL Usage Authoriza
 
 在&#x200B;**[!UICONTROL OK]**&#x200B;對話方塊中選取&#x200B;**[!UICONTROL Authorization Usages]**。
 
-![ [!UICONTROL Authorization Usages]對話方塊，醒目提示[!UICONTROL OK]](../images/shared-extensions/confirmation.png)
+![&#x200B; [!UICONTROL Authorization Usages]對話方塊，醒目提示[!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
 您會回到[!UICONTROL Usage Authorizations]索引標籤，您可以在其中看到擴充功能現在顯示&#x200B;**已核准**&#x200B;狀態。
 
