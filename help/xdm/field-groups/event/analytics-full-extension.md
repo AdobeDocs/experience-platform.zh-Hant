@@ -2,14 +2,14 @@
 title: Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組
 description: 瞭解Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組。
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '793'
 ht-degree: 5%
 
 ---
 
-# [!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]結構描述欄位群組
+# [!UICONTROL Adobe Analytics ExperienceEvent Full Extension]結構描述欄位群組
 
 [!UICONTROL Adobe Analytics ExperienceEvent Full Extension]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，可擷取Adobe Analytics所收集的一般量度。
 
@@ -27,27 +27,27 @@ ht-degree: 5%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `customDimensions` | 物件 | 擷取Analytics追蹤的自訂維度。 如需此物件內容的詳細資訊，請參閱[&#128279;](#custom-dimensions)下方的子區段。 |
-| `endUser` | 物件 | 擷取觸發事件之一般使用者的網頁互動細節。 如需此物件內容的詳細資訊，請參閱[&#128279;](#end-user)下方的子區段。 |
-| `environment` | 物件 | 擷取關於觸發事件的瀏覽器和作業系統的資訊。 如需此物件內容的詳細資訊，請參閱[&#128279;](#environment)下方的子區段。 |
-| `event1to100`<br><br>`event101to200`<br><br>`event201to300`<br><br>`event301to400`<br><br>`event401to500`<br><br>`event501to100`<br><br>`event601to700`<br><br>`event701to800`<br><br>`event801to900`<br><br>`event901to1000` | 物件 | 欄位群組提供物件欄位，用以擷取最多1000個自訂事件。 如需這些欄位的詳細資訊，請參閱[&#128279;](#events)下方的子區段。 |
-| `session` | 物件 | 擷取觸發事件的工作階段相關資訊。 如需此物件內容的詳細資訊，請參閱[&#128279;](#session)下方的子區段。 |
+| `customDimensions` | 物件 | 擷取Analytics追蹤的自訂維度。 如需此物件內容的詳細資訊，請參閱[下方的](#custom-dimensions)子區段。 |
+| `endUser` | 物件 | 擷取觸發事件之一般使用者的網頁互動細節。 如需此物件內容的詳細資訊，請參閱[下方的](#end-user)子區段。 |
+| `environment` | 物件 | 擷取關於觸發事件的瀏覽器和作業系統的資訊。 如需此物件內容的詳細資訊，請參閱[下方的](#environment)子區段。 |
+| `event1to100`<br><br>`event101to200`<br><br>`event201to300`<br><br>`event301to400`<br><br>`event401to500`<br><br>`event501to100`<br><br>`event601to700`<br><br>`event701to800`<br><br>`event801to900`<br><br>`event901to1000` | 物件 | 欄位群組提供物件欄位，用以擷取最多1000個自訂事件。 如需這些欄位的詳細資訊，請參閱[下方的](#events)子區段。 |
+| `session` | 物件 | 擷取觸發事件的工作階段相關資訊。 如需此物件內容的詳細資訊，請參閱[下方的](#session)子區段。 |
 
 {style="table-layout:auto"}
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions`擷取Analytics追蹤的自訂[維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=zh-Hant)。
+`customDimensions`擷取Analytics追蹤的自訂[維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html)。
 
 ![customDimensions欄位](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `eVars` | 物件 | 擷取最多250個轉換變數([eVars](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=zh-Hant))的物件。 此物件的屬性是以`eVar1`為`eVar250`的鍵值，而且只接受其資料型別的字串。 |
-| `hierarchies` | 物件 | 擷取最多五個自訂階層變數（[階層](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=zh-Hant)）的物件。 此物件的屬性是以`hier1`為`hier5`的鍵值，這些物件本身就是具有下列子屬性的物件：<ul><li>`delimiter`：用來產生`values`下所提供清單的原始分隔符號。</li><li>`values`：階層層級名稱的分隔清單，以字串表示。</li></ul> |
-| `listProps` | 物件 | 擷取最多75個[清單prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=zh-Hant#list-props)的物件。 此物件的屬性是以`prop1`為`prop75`的鍵值，這些物件本身就是具有下列子屬性的物件：<ul><li>`delimiter`：用來產生`values`下所提供清單的原始分隔符號。</li><li>`values`： prop的分隔值清單，以字串表示。</li></ul> |
-| `lists` | 物件 | 擷取最多三個[清單](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=zh-Hant)的物件。 此物件的屬性是以`list1`為`list3`的鍵值。 每個屬性都包含單一`list`陣列，內含[[!UICONTROL 機碼值組]](../../data-types/key-value-pair.md)資料型別。 |
-| `props` | 物件 | 擷取最多75個[prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=zh-Hant)的物件。 此物件的屬性是以`prop1`為`prop75`的鍵值，而且只接受其資料型別的字串。 |
+| `hierarchies` | 物件 | 擷取最多五個自訂階層變數（[階層](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html)）的物件。 此物件的屬性是以`hier1`為`hier5`的鍵值，這些物件本身就是具有下列子屬性的物件：<ul><li>`delimiter`：用來產生`values`下所提供清單的原始分隔符號。</li><li>`values`：階層層級名稱的分隔清單，以字串表示。</li></ul> |
+| `listProps` | 物件 | 擷取最多75個[清單prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props)的物件。 此物件的屬性是以`prop1`為`prop75`的鍵值，這些物件本身就是具有下列子屬性的物件：<ul><li>`delimiter`：用來產生`values`下所提供清單的原始分隔符號。</li><li>`values`： prop的分隔值清單，以字串表示。</li></ul> |
+| `lists` | 物件 | 擷取最多三個[清單](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html)的物件。 此物件的屬性是以`list1`為`list3`的鍵值。 每個屬性都包含單一`list`陣列，內含[[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md)個資料型別。 |
+| `props` | 物件 | 擷取最多75個[prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html)的物件。 此物件的屬性是以`prop1`為`prop75`的鍵值，而且只接受其資料型別的字串。 |
 | `postalCode` | 字串 | 使用者端提供的郵遞區號。 |
 | `stateProvince` | 字串 | 使用者端提供的州或省位置。 |
 
@@ -61,7 +61,7 @@ ht-degree: 5%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `firstWeb` | [[!UICONTROL 網頁資訊]](../../data-types/web-information.md) | 和來自此一般使用者的第一個體驗事件的網頁、連結及反向連結相關的資訊。 |
+| `firstWeb` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | 和來自此一般使用者的第一個體驗事件的網頁、連結及反向連結相關的資訊。 |
 | `firstTimestamp` | 整數 | 此一般使用者的第一個ExperienceEvent的Unix時間戳記。 |
 
 ## `environment` {#environment}
@@ -72,12 +72,12 @@ ht-degree: 5%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `browserIDStr` | 字串 | 所用瀏覽器的Adobe Analytics識別碼（亦稱為[瀏覽器型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html?lang=zh-Hant)）。 |
-| `operatingSystemIDStr` | 字串 | 所使用作業系統的Adobe Analytics識別碼（亦稱為[作業系統型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html?lang=zh-Hant)）。 |
+| `browserIDStr` | 字串 | 所用瀏覽器的Adobe Analytics識別碼（亦稱為[瀏覽器型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)）。 |
+| `operatingSystemIDStr` | 字串 | 所使用作業系統的Adobe Analytics識別碼（亦稱為[作業系統型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)）。 |
 
 ## 自訂事件欄位 {#events}
 
-Analytics擴充功能欄位群組提供10個物件欄位，每個欄位最多可擷取100個[自訂事件量度](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=zh-Hant)，總計為1000個。
+Analytics擴充功能欄位群組提供10個物件欄位，每個欄位最多可擷取100個[自訂事件量度](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html)，總計為1000個。
 
 每個頂層事件物件包含其各自範圍的個別事件物件。 例如，`event101to200`包含從`event101`輸入至`event200`的事件。
 
@@ -93,8 +93,8 @@ Analytics擴充功能欄位群組提供10個物件欄位，每個欄位最多可
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `search` | [[!UICONTROL 搜尋]](../../data-types/search.md) | 擷取與工作階段專案的網頁或行動搜尋相關的資訊。 |
-| `web` | [[!UICONTROL 網頁資訊]](../../data-types/web-information.md) | 擷取有關工作階段專案的連結點按次數、網頁詳細資料、反向連結資訊和瀏覽器詳細資訊。 |
+| `search` | [[!UICONTROL Search]](../../data-types/search.md) | 擷取與工作階段專案的網頁或行動搜尋相關的資訊。 |
+| `web` | [[!UICONTROL Web Information]](../../data-types/web-information.md) | 擷取有關工作階段專案的連結點按次數、網頁詳細資料、反向連結資訊和瀏覽器詳細資訊。 |
 | `depth` | 整數 | 一般使用者目前的作業階段深度（例如頁碼）。 |
 | `num` | 整數 | 一般使用者目前的作業階段編號。 |
 | `timestamp` | 整數 | 工作階段專案的Unix時間戳記。 |

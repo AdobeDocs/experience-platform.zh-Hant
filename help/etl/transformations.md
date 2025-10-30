@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；ETL；ETL轉換；ETL轉換
+keywords: Experience Platform；首頁；熱門主題；etl；ETL轉換；ETL轉換
 solution: Experience Platform
 title: 範例ETL轉換
 description: 本文會示範下列範例轉換，供擷取、轉換、載入(ETL)開發人員使用。
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 2%
+source-wordcount: '452'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 ### 範例檔案
 
-可從公用ETL參考[!DNL GitHub]存放庫取得範例CSV和JSON檔案，存放庫由Adobe維護：
+範例的CSV和JSON檔案可從由Adobe維護的公用ETL參考[!DNL GitHub]存放庫取得：
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### 對應
 
 下表列出CRM資料的對應需求，並包含下列轉換：
+
 - `identityMap`屬性的身分資料行
 - 從出生日期(DOB)到年和月 — 日
 - 字串加倍或短整數。
@@ -54,15 +55,15 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 | 性別 | person.gender | 將性別轉換為對應的person.gender列舉值 |
 | DOB | person.birthDayAndMonth： &quot;MM-DD&quot;<br/>person.birthDate： &quot;YYYY-MM-DD&quot;<br/>person.birthYear： YYYY | 將birthDayAndMonth轉換為string<br/>將birthDate轉換為string<br/>將birthYear轉換為short int |
 | EMAIL | personalEmail.address | 復製為字串 |
-| CRMID | identityMap.CRMID[{&quot;id&quot;：x， primary：false}] | 復製為字串至identityMap中的CRMID陣列，並將「主要」設為false |
-| ECID | identityMap.ECID[{&quot;id&quot;：x，主要： false}] | 將字串形式複製至identityMap中ECID陣列的第一個專案，並將Primary設為false |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;：x， primary：true}] | 復製為字串至identityMap中的LOYALTYID陣列，並將Primary設為true |
-| ECID2 | identityMap.ECID[{&quot;id&quot;：x， primary：false}] | 將字串形式複製至identityMap中ECID陣列的第二個專案，並將Primary設為false |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x，主要:false}] | 復製為字串至identityMap中的CRMID陣列，並將「主要」設為false |
+| ECID | identityMap.ECID[{&quot;id&quot;:x，主要： false}] | 將字串形式複製至identityMap中ECID陣列的第一個專案，並將Primary設為false |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x，主要:true}] | 復製為字串至identityMap中的LOYALTYID陣列，並將Primary設為true |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x，主要:false}] | 將字串形式複製至identityMap中ECID陣列的第二個專案，並將Primary設為false |
 | 電話 | homePhone.number | 復製為字串 |
 | 街道 | homeAddress.street1 | 復製為字串 |
 | 城市 | homeAddress.city | 復製為字串 |
 | 狀態 | homeAddress.stateProvince | 復製為字串 |
-| 國家/地區 | homeAddress.country | 復製為字串 |
+| 國家 | homeAddress.country | 復製為字串 |
 | ZIP | homeAddress.postalCode | 復製為字串 |
 | LAT | homeAddress.latitude | 轉換為雙精度 |
 | 長 | homeAddress.longitude | 轉換為雙精度 |
@@ -284,9 +285,9 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 | 身分欄位 | identityMap欄位 | 資料類型 |
 | -------------- | ----------------- | --------- |
-| 身分[0].id | identityMap[電子郵件][{"id"}] | 復製為字串 |
-| 身分[1].id | identityMap[CRMID][{"id"}] | 復製為字串 |
-| 身分[2].id | identityMap[LOYALTYID][{"id"}] | 復製為字串 |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | 復製為字串 |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | 復製為字串 |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | 復製為字串 |
 
 ### 輸出XDM
 

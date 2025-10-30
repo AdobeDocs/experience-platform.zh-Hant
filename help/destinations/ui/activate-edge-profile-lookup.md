@@ -3,9 +3,9 @@ title: 即時查詢邊緣設定檔屬性
 description: 瞭解如何使用自訂Personalization目的地和Edge Network API即時查詢邊緣設定檔屬性
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1839'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 >
 >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-    ![Experience Platform UI影像顯示資料流設定畫面。](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+![顯示資料流設定畫面的Experience Platform UI影像。](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## 步驟2：設定您的對象以進行邊緣評估 {#audience-edge-evaluation}
@@ -125,8 +125,6 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
      ![顯示如何在對應步驟](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)中選取XDM屬性的熒幕錄製
 
-
-
 當您完成對應設定檔屬性時，請選取&#x200B;**[!UICONTROL Next]**。
 
 在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到選取範圍的摘要。 選取&#x200B;**[!UICONTROL Cancel]**&#x200B;以中斷流程，**[!UICONTROL Back]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選擇並開始將設定檔資料傳送至Edge Network。
@@ -167,7 +165,8 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 >[!IMPORTANT]
 >
 >設定檔屬性可能包含敏感資料。 若要保護此資料，您必須透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/getting-started/)擷取設定檔屬性。 此外，您必須透過Edge Network API [互動式資料收集端點](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/)擷取設定檔屬性，才能驗證API呼叫。
->&#x200B;><br>如果您不遵循上述要求，個人化將僅以對象成員資格為基礎，而且您將無法取得設定檔屬性。
+>
+>如果您不遵循上述要求，個人化將僅以對象成員資格為基礎，而且您將無法取得設定檔屬性。
 
 您在[步驟1](#create-datastream)中設定的資料流現在已準備好接受傳入的事件資料並以邊緣設定檔資訊回應。
 

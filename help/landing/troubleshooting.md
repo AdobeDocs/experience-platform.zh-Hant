@@ -9,7 +9,7 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 4%
@@ -68,16 +68,20 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 [Postman](https://www.postman.com/)是視覺化呼叫RESTful API的實用工具。 [Experience Platform API快速入門手冊](api-guide.md)包含匯入Postman集合的影片和指示。 此外，也提供每項服務的Postman集合清單。
 
-## [!DNL Experience Platform]的系統需求為何？{#what-are-the-system-requirements-for-platform}
+## [!DNL Experience Platform]的系統需求為何？ {#what-are-the-system-requirements-for-platform}
 
 根據您使用的是UI還是API，以下系統需求適用：
 
 **針對以UI為基礎的作業：**
+
 - 現代的標準網路瀏覽器。 雖然建議使用最新版[!DNL Chrome]，但亦支援[!DNL Firefox]、[!DNL Internet Explorer]和Safari的最新和舊版主要版本。
+
    - 每次發行新的主要版本時，[!DNL Experience Platform]會開始支援最新版本，而不再支援第三個最新版本。
+
 - 所有瀏覽器都必須啟用Cookie和JavaScript。
 
 **對於API和開發人員互動：**
+
 - 要為REST、串流和Webhook整合開發的開發環境。
 
 ## 錯誤與疑難排解 {#errors-and-troubleshooting}
@@ -94,7 +98,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 | 401 | 驗證失敗 | 請求未通過驗證檢查。 您的存取權杖可能遺失或無效。 如需詳細資訊，請參閱下方的[OAuth權杖錯誤](#oauth-token-is-missing)區段。 |
 | 403 | 禁止 | 已找到資源，但您沒有正確的認證可檢視該資源。 <br>發生此錯誤的可能原因是，您可能沒有存取或編輯資源所需的[存取控制許可權](/help/access-control/home.md)。 閱讀如何[取得必要的屬性型存取控制許可權](/help/landing/api-authentication.md#get-abac-permissions)，以使用Experience Platform API。 </p> |
 | 404 | 找不到 | 在伺服器上找不到要求的資源。 資源可能已被刪除，或輸入的路徑不正確。 |
-| 500 | 內部伺服器錯誤 | 這是伺服器端錯誤。 如果您同時進行多個呼叫，可能會達到API限制，且需要篩選結果。 （如需瞭解詳細資訊，請參閱[篩選資料](../catalog/api/filter-data.md)上的[!DNL Catalog Service] API開發人員指南子指南。） 請稍候片刻，然後再嘗試您的請求，如果問題仍然存在，請聯絡您的管理員。 |
+| 500 | 內部伺服器錯誤 | 這是伺服器端錯誤。 如果您同時進行多個呼叫，可能會達到API限制，且需要篩選結果。 （如需瞭解詳細資訊，請參閱[!DNL Catalog Service]篩選資料[上的](../catalog/api/filter-data.md) API開發人員指南子指南。） 請稍候片刻，然後再嘗試您的請求，如果問題仍然存在，請聯絡您的管理員。 |
 
 ## 請求標頭錯誤 {#request-header-errors}
 
@@ -144,7 +148,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 當提供的API金鑰標頭(`x-api-key`)的值無效時，會顯示此錯誤訊息。 在重試之前，請確定您已正確輸入金鑰。 如果您不知道您的API金鑰，可以在[Adobe I/O主控台](https://console.adobe.io)中找到：在&#x200B;**整合**&#x200B;索引標籤中，瀏覽至&#x200B;**總覽**&#x200B;區段以取得特定整合，以便在&#x200B;**使用者端認證**&#x200B;下找到API金鑰。
 
-### 標頭遺失 {#missing-header}
+### 缺少標頭 {#missing-header}
 
 ```json
 {
@@ -164,7 +168,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 }
 ```
 
-當使用者或Adobe I/O整合（由`Authorization`標頭中的[存取權杖](#how-do-i-get-an-access-token)識別）無權呼叫`x-gw-ims-org-id`標頭中提供的組織的[!DNL Experience Platform] API時，此錯誤訊息便會顯示。 在重試之前，請確定已在標頭中為您的組織提供正確的ID。 如果您不知道組織ID，可以在[Adobe I/O主控台](https://console.adobe.io)中找到：在&#x200B;**整合**&#x200B;索引標籤中，瀏覽至&#x200B;**總覽**&#x200B;區段以取得特定整合，以便在&#x200B;**使用者端認證**&#x200B;下找到組織ID。
+當使用者或Adobe I/O整合（由[標頭中的](#how-do-i-get-an-access-token)存取權杖`Authorization`識別）無權呼叫[!DNL Experience Platform]標頭中提供的組織的`x-gw-ims-org-id` API時，此錯誤訊息便會顯示。 在重試之前，請確定已在標頭中為您的組織提供正確的ID。 如果您不知道組織ID，可以在[Adobe I/O主控台](https://console.adobe.io)中找到：在&#x200B;**整合**&#x200B;索引標籤中，瀏覽至&#x200B;**總覽**&#x200B;區段以取得特定整合，以便在&#x200B;**使用者端認證**&#x200B;下找到組織ID。
 
 ### 重新整理etag錯誤 {#refresh-etag-error}
 
@@ -201,6 +205,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 ```
 
 此錯誤訊息會在以下兩種情況之一中顯示：
+
 - 在API要求中傳遞不正確或格式錯誤的組織ID標頭(`x-gw-ims-org-id`)時。 在重試之前，請確定已包含您組織的正確ID。
 - 當您的帳戶（由提供的驗證憑證表示）未與Experience Platform的產品設定檔建立關聯時。 依照Experience Platform API驗證教學課程中[產生存取認證](./api-authentication.md#authentication-for-each-session)上的步驟操作，將Experience Platform新增至您的帳戶並相應地更新您的驗證認證。
 
@@ -208,14 +213,14 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 以下是[!DNL Experience Platform] API的疑難排解指南和API參考檔案清單。 每個疑難排解指南都會提供常見問題的解答，以及個別[!DNL Experience Platform]服務特定問題的解決方案。 API參考檔案提供每個服務所有可用端點的完整指南，並顯示您可能收到的範例要求內文、回應和錯誤代碼。
 
-| 服務 | API參考 | 疑難排解 |
+| 服務 | API 參考 | 疑難排解 |
 | --- | --- | --- |
 | 存取控制 | [存取控制API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [存取控制疑難排解指南](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform資料擷取 | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [批次擷取疑難排解指南](../ingestion/batch-ingestion/troubleshooting.md) |
 | Adobe Experience Platform資料擷取 | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [串流擷取疑難排解指南](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform資料科學Workspace | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | [[!DNL Data Science Workspace] 疑難排解指南](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform資料控管 | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
-| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] 疑難排解指南](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform 身分識別服務 | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] 疑難排解指南](../identity-service/troubleshooting-guide.md) |
 | Adobe Experience Platform查詢服務 | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] 疑難排解指南](../query-service/troubleshooting-guide.md) |
 | Adobe Experience Platform區段 | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |

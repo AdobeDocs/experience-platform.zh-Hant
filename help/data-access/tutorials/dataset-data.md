@@ -5,10 +5,10 @@ title: 使用資料存取API檢視資料集資料
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform的資料存取API，尋找、存取及下載儲存在資料集中的資料。 本檔案會介紹資料存取API的一些獨特功能，例如分頁和部分下載。
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1365'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [!DNL Experience Platform] 疑難排解指南中的[如何讀取範例 API 呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集所需標頭的值
 
@@ -416,7 +416,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## 下載檔案的部分內容 {#download-partial-file-contents}
 
-若要從檔案下載特定範圍的位元組，請在向[!DNL Data Access] API發出的`GET /files/{FILE_ID}`要求期間指定範圍標頭。 如果未指定範圍，API預設會下載整個檔案。
+若要從檔案下載特定範圍的位元組，請在向`GET /files/{FILE_ID}` API發出的[!DNL Data Access]要求期間指定範圍標頭。 如果未指定範圍，API預設會下載整個檔案。
 
 [上一節](#retrieve-the-metadata-of-a-file)中的HEAD範例提供特定檔案的大小（位元組）。
 
@@ -428,7 +428,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{FILE_ID} ` | 檔案的識別碼。 |
+| `{FILE_ID}` | 檔案的識別碼。 |
 | `{FILE_NAME}` | 檔案名稱（例如profiles.parquet） |
 
 **要求**

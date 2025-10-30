@@ -2,9 +2,9 @@
 title: 在UI中將轉送連線至Experience Platform
 description: 瞭解如何使用Adobe Experience Platform UI建立轉送聯結器自訂來源連線。
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '544'
 ht-degree: 1%
 
 ---
@@ -25,19 +25,19 @@ ht-degree: 1%
 
 ## 連線您的[!DNL Relay Connector]來源
 
-在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。 您可以從畫面左側的目錄中選取適當的類別，或使用搜尋選項來尋找特定來源。
+在Experience Platform UI中，從左側導覽列選取「**[!UICONTROL Sources]**」以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示您可以建立帳戶的各種來源。 您可以從畫面左側的目錄中選取適當的類別，或使用搜尋選項來尋找特定來源。
 
-在&#x200B;*[!UICONTROL 行銷自動化]*&#x200B;類別下，選取[!DNL Relay Connector]來源卡片並選取&#x200B;**[!UICONTROL 新增資料]**。
+在&#x200B;*[!UICONTROL Marketing automation]*&#x200B;類別下，選取[!DNL Relay Connector]來源卡片並選取&#x200B;**[!UICONTROL Add data]**。
 
 >[!TIP]
 >
->當不存在已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 帳戶通過驗證後，此選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
+>當不存在已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL Set up]**&#x200B;選項。 帳戶通過驗證後，此選項會變更為&#x200B;**[!UICONTROL Add data]**。
 
 ![來源工作區的目錄頁面。](../../../../images/tutorials/create/relay-connector/relay-source.jpg)
 
 ### 選取資料
 
-**[!UICONTROL 連線轉送聯結器來源]**&#x200B;介面出現。 使用&#x200B;*[!UICONTROL 選取資料]*&#x200B;介面來瀏覽或指定來源資料結構描述。 或者，您可以上傳範例JSON檔案來定義來源結構描述。
+**[!UICONTROL Connect Relay Connector source]**&#x200B;介面出現。 使用&#x200B;*[!UICONTROL Select data]*&#x200B;介面瀏覽或指定來源資料結構描述。 或者，您可以上傳範例JSON檔案來定義來源結構描述。
 
 >[!NOTE]
 >
@@ -45,13 +45,13 @@ ht-degree: 1%
 
 ![選取的資料介面](../../../../images/tutorials/create/relay-connector/upload-data.jpg)
 
-上傳資料後，您可以使用[!UICONTROL 預覽範例資料]區段來預覽資料。
+上傳資料後，您可以使用[!UICONTROL Preview sample data]區段來預覽資料。
 
 ![已上傳的資料。](../../../../images/tutorials/create/relay-connector/uploaded-data.jpg)
 
 ### 資料流詳細資料
 
-接著，使用&#x200B;*[!UICONTROL 資料流詳細資料]*&#x200B;介面為您的資料流提供&#x200B;**名稱**&#x200B;和&#x200B;**選擇性描述**。 此外，請選取您要使用的&#x200B;**[!UICONTROL 目標資料集]**。 您可以建立新資料集或使用現有資料集。
+接下來，使用&#x200B;*[!UICONTROL Dataflow details]*&#x200B;介面為您的資料流提供&#x200B;**名稱**&#x200B;和&#x200B;**選擇性描述**。 此外，請選取您要使用的&#x200B;**[!UICONTROL Target dataset]**。 您可以建立新資料集或使用現有資料集。
 
 ![資料流詳細資料介面。](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
@@ -81,5 +81,5 @@ ht-degree: 1%
 
 ## 其他資源
 
-* [使用Flow Service API建立新的連線規格](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [使用UI連線到您的來源](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [使用Flow Service API建立新的連線規格](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [使用UI連線到您的來源](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

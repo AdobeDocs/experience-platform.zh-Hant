@@ -4,7 +4,7 @@ title: 區段匯出作業API端點
 description: 匯出作業是用來將受眾區段成員保留至資料集的非同步程式。 您可以使用Adobe Experience Platform Segmentation Service API中的/export/jobs端點，以程式設計方式擷取、建立和取消匯出作業。
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->本指南涵蓋[!DNL Segmentation API]中匯出工作的使用。 如需有關如何管理[!DNL Real-Time Customer Profile]資料之匯出工作的資訊，請參閱設定檔API[&#128279;](../../profile/api/export-jobs.md)中匯出工作的指南
+>本指南涵蓋[!DNL Segmentation API]中匯出工作的使用。 如需有關如何管理[!DNL Real-Time Customer Profile]資料之匯出工作的資訊，請參閱設定檔API[中](../../profile/api/export-jobs.md)匯出工作的指南
 
 ## 快速入門
 
@@ -297,7 +297,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `filter.segmentQualificationTime` | 根據區段資格時間進行篩選。 可提供開始時間及/或結束時間。 |
 | `filter.segmentQualificationTime.startTime` | 指定狀態的區段ID的區段資格開始時間。 若未提供，區段ID資格的開始時間將沒有篩選器。 時間戳記必須以[RFC 3339](https://tools.ietf.org/html/rfc3339)格式提供。 |
 | `filter.segmentQualificationTime.endTime` | 指定狀態的區段ID的區段資格結束時間。 若未提供，區段ID資格的結束時間將沒有篩選器。 時間戳記必須以[RFC 3339](https://tools.ietf.org/html/rfc3339)格式提供。 |
-| `filter.fromIngestTimestamp ` | 限制匯出的設定檔，以僅包含在此時間戳記之後更新的設定檔。 時間戳記必須以[RFC 3339](https://tools.ietf.org/html/rfc3339)格式提供。 <ul><li>**個設定檔**&#x200B;的`fromIngestTimestamp` （如果提供）：包含合併更新時間戳記大於指定時間戳記的所有合併設定檔。 支援`greater_than`運算元。</li><li>**個事件**&#x200B;的`fromIngestTimestamp`：在此時間戳記之後擷取的所有事件，都會匯出為對應的結果設定檔結果。 這不是事件時間本身，而是事件的擷取時間。</li> |
+| `filter.fromIngestTimestamp` | 限制匯出的設定檔，以僅包含在此時間戳記之後更新的設定檔。 時間戳記必須以[RFC 3339](https://tools.ietf.org/html/rfc3339)格式提供。 <ul><li>`fromIngestTimestamp`個設定檔&#x200B;**的** （如果提供）：包含合併更新時間戳記大於指定時間戳記的所有合併設定檔。 支援`greater_than`運算元。</li><li>`fromIngestTimestamp`個事件&#x200B;**的**：在此時間戳記之後擷取的所有事件，都會匯出為對應的結果設定檔結果。 這不是事件時間本身，而是事件的擷取時間。</li> |
 | `filter.emptyProfiles` | 布林值，指示是否篩選空白設定檔。 設定檔可包含設定檔記錄、ExperienceEvent記錄，或同時包含兩者。 沒有設定檔記錄且只有ExperienceEvent記錄的設定檔稱為「emptyProfiles」。 若要匯出設定檔存放區中的所有設定檔，包括「emptyProfiles」，請將`emptyProfiles`的值設定為`true`。 如果`emptyProfiles`設為`false`，則只會匯出存放區中具有設定檔記錄的設定檔。 根據預設，如果未包含`emptyProfiles`屬性，則只會匯出包含設定檔記錄的設定檔。 |
 | `additionalFields.eventList` | 提供下列一或多個設定，控制為子或關聯物件匯出的時間序列事件欄位：<ul><li>`fields`：控制要匯出的欄位。</li><li>`filter`：指定限制關聯物件所含結果的條件。 需要匯出所需的最小值，通常是日期。</li><li>`filter.fromIngestTimestamp`：將時間序列事件篩選為提供的時間戳記之後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li><li>`filter.toIngestTimestamp`：將時間戳記篩選為提供的時間戳記之前所擷取的日期。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
 | `destination` | **（必要）**&#x200B;有關匯出資料的資訊：<ul><li>`datasetId`： **（必要）**&#x200B;要匯出資料之資料集的識別碼。</li><li>`segmentPerBatch`： *（選擇性）*&#x200B;布林值，若未提供，預設值為「false」。 若值為「false」，則會將所有區段ID匯出至單一批次ID。 若值為「true」，會將一個區段ID匯出為一個批次ID。 請注意，將該值設為「true」可能會影響批次匯出效能。</li></ul> |
@@ -402,7 +402,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 ## 擷取特定匯出作業 {#get}
 
-您可以向`/export/jobs`端點發出GET要求，並在要求路徑中提供您要擷取之匯出作業的識別碼，以擷取特定匯出作業的詳細資訊。
+您可以向`/export/jobs`端點發出GET請求，並在請求路徑中提供您要擷取之匯出作業的識別碼，藉此擷取特定匯出作業的詳細資訊。
 
 **API格式**
 
@@ -506,7 +506,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 
 ## 取消或刪除特定匯出工作 {#delete}
 
-您可以向`/export/jobs`端點發出DELETE要求，並在要求路徑中提供您要刪除之匯出作業的識別碼，以要求刪除指定的匯出作業。
+您可以向`/export/jobs`端點發出DELETE請求，並在請求路徑中提供您要刪除之匯出作業的識別碼，以請求刪除指定的匯出作業。
 
 **API格式**
 

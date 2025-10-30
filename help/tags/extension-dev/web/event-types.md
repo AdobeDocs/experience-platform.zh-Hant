@@ -2,10 +2,10 @@
 title: Web擴充功能的事件型別
 description: 瞭解如何在Adobe Experience Platform中為Web擴充功能定義事件型別程式庫模組。
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 28%
+ht-degree: 32%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 在標籤規則中，事件是必須發生的活動，才會引發規則。 例如，網頁擴充功能可提供「手勢」事件型別，來監視應發生的特定滑鼠或觸控手勢。 一旦該手勢發生，事件邏輯就會引發規則。
 
@@ -23,11 +23,11 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->本檔案假設您熟悉程式庫模組，以及如何將這些模組整合在Web擴充功能中。 回到本指南之前，請先參閱[程式庫模組格式化](./format.md)概述文件，概略了解其實作方式。
+>本檔案假設您熟悉程式庫模組，以及如何將這些模組整合在Web擴充功能中。 回到本指南之前，請先參閱[程式庫模組格式化](./format.md)概觀文件，概略了解其實作方式。
 
 事件型別由擴充功能定義，通常包含下列專案：
 
-1. 顯示於Experience PlatformUI和資料收集UI中的[檢視](./views.md)，可讓使用者修改事件的設定。
+1. 顯示於Experience Platform UI和資料收集UI中的[檢視](./views.md)，可讓使用者修改事件的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用以解譯設定及監視應發生的特定活動。
 
 `module.exports`同時接受`settings`和`trigger`引數。 這可啟用事件型別的自訂。

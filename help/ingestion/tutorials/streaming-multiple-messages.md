@@ -5,7 +5,7 @@ title: 在單一HTTP要求中傳送多則訊息
 type: Tutorial
 description: 本檔案提供的教學課程，說明如何使用串流擷取，在單一HTTP請求中傳送多則訊息至Adobe Experience Platform。
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 31c00e69dd92f7c3232e09f02da36c60cd8cf486
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 1%
@@ -219,6 +219,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 下列範例說明批次包含有效及無效訊息時發生的情況。
 
 請求承載是代表XDM結構描述中事件的JSON物件陣列。 請注意，必須符合下列條件才能成功驗證訊息：
+
 - 訊息標頭中的`imsOrgId`欄位必須符合入口定義。 如果要求裝載未包含`imsOrgId`欄位，[!DNL Data Collection Core Service] (DCCS)會自動新增欄位。
 - 訊息的標頭應參考在[!DNL Experience Platform] UI中建立的現有XDM結構描述。
 - `datasetId`欄位需要參考[!DNL Experience Platform]中的現有資料集，而且其結構描述需要符合要求內文中所包含每個訊息中`header`物件所提供的結構描述。

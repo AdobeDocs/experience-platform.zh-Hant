@@ -2,10 +2,10 @@
 title: Adobe Analytics Source聯結器的對應欄位
 description: 使用Adobe Analytics Source Connector將Analytics欄位對應到XDM欄位。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 316879afe8c94657156c768cdc14d4710da9fd35
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3914'
-ht-degree: 6%
+source-wordcount: '3854'
+ht-degree: 5%
 
 ---
 
@@ -23,10 +23,10 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | 字串 | 視訊的易記（人類看得懂的）名稱。 |
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | 字串 | 媒體作者的名稱。 |
-| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | 字串 | 完成音樂錄製或影片的唱片藝術家或群體的名稱。 |
-| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | 字串 | 音樂錄製或影片所屬的唱片名稱。 |
-| `videolength` | `mediaReporting.sessionDetails.length ` | 整數 | 視訊的長度或執行階段。 |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | 字串 |
+| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | 字串 | 執行音樂錄製或影片的唱片藝術家或群體的名稱。 |
+| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | 字串 | 音樂錄製或影片所屬的專輯名稱。 |
+| `videolength` | `mediaReporting.sessionDetails.length` | 整數 | 視訊的長度或執行階段。 |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | 字串 |  |
 | `video` | `mediaReporting.sessionDetails.name` | 字串 | 視訊的ID。 |
 | `videoshow` | `mediaReporting.sessionDetails.show` | 字串 | 計畫或系列的名稱。 只有在節目為一系列當中的一部分時，才需要節目/系列名稱。 |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | 字串 | 串流媒體的型別，例如「視訊」或「音訊」。 |
@@ -34,12 +34,12 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | 字串 | 集數。 |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | 字串[] | 視訊型別。 |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | 字串 | 個別播放所獨有的內容資料流例項的識別碼。 |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | 字串 | 視訊播放器的名稱。 |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | 字串 | 視訊播放器的名稱。 |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | 字串 | 播放內容的分發管道。 |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | 字串 | 用於內容的串流傳遞型別。 所有視訊檢視會自動將此設為「視訊」。 建議的值包括：VOD、即時、線性、UGC、DVOD、Radio、Podcast、Audiobook和Song。 |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | 字串 | 網路或頻道名稱。 |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | 字串 | 摘要型別。 這可代表實際的摘要相關資料（例如「East HD」或「SD」），或是摘要的來源（例如URL）。 |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | 字串 |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | 字串 |  |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | 布林值 | 布林值，指出視訊是否已啟動。 一旦使用者選取播放按鈕，即使有前段廣告、緩衝、錯誤等，也會計算此次數。 |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | 布林值 | 布林值，指出媒體的第一個影格是否已開始。 如果使用者在任何廣告或緩衝時間期間中斷，「內容開始」不符合資格。 |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | 整數 | 主要內容上`type=PLAY`之所有事件的持續時間（秒）。 |
@@ -57,7 +57,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | 整數 | 使用者暫停播放的總持續時間（秒）。 |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | 字串 | 透過MVPD驗證提供的Adobe識別碼。 |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | 字串 | 定義使用者已透過Adobe驗證取得授權。 |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | 定義廣播或播放內容的當天時間。 |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | 定義內容播出或播放的當天時間。 |  |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | 布林值 | 布林值，會標籤在超過30分鐘的緩衝、暫停或延遲期間後繼續進行的每次播放。 |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | 布林值 | 表示至少已檢視一個影格的布林值。 此影格不一定要是第一個影格。 |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | 字串 | 紀錄標籤的名稱。 |
@@ -133,7 +133,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | 數字 | 平均位元速率（以每秒位元組數為單位，須為整數）。 此度量的計算方式為播放工作階段期間發生、與播放期間相關的所有位元速率值的加權平均。 |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | 布林值 | 布林值，指出發生位元速率變更的串流數量。 只有在播放工作階段期間發生至少一個位元速率變更事件時，此量度才會設為true。 |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | 整數 |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | 整數 |  |
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | 字串 | 位元速率變更的數量。 此值的計算方式為播放工作階段期間發生的所有位元速率變更事件的總數。 |
 | `videoqoetimetostartevar` | `mediaReporting.qoeDataDetails.timeToStart` | 整數 | 在視訊載入和視訊開始之間傳遞的持續時間（以秒為單位）。 |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | 布林值 | 表示捨棄時間格的資料流數目的布林值。 只有在播放工作階段期間發生至少一個掉格時，此度量才會設為true。 |
@@ -155,7 +155,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 
 ### 直接對應欄位
 
-+++選取此選項可檢視已棄用的直接對應欄位表格
++++選取此項可檢視已棄用的直接對應欄位表格
 
 | 資料摘要 | XDM欄位 | XDM型別 | 說明 |
 | --- | --- | --- | --- |
@@ -182,7 +182,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | 字串 | 用來填入郵遞區號維度的變數。 |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | 字串 | 列出所有接受的語言，如Accept-Language HTTP標頭所示。 |
 | `homepage` | `web.webPageDetails.isHomePage` | 布林值 | 已不再使用。 指出目前的URL是否為瀏覽器的首頁。 |
-| `ipv6` | `environment.ipV6` | 字串 |
+| `ipv6` | `environment.ipV6` | 字串 |  |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | 字串 | 瀏覽器支援的JavaScript版本。 |
 | `user_agent` | `environment.browserDetails.userAgent` | 字串 | 在HTTP標頭中傳送的使用者代理字串。 |
 | `mobileappid` | `application.name` | 字串 | 行動應用程式ID，以下列格式儲存： `[AppName][BundleVersion]`。 |
@@ -196,21 +196,21 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | 數字 | 行動服務主要信標。 |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | 數字 | 行動服務次要信標。 |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | 字串 | 行動服務信標UUID。 |
-| `mobileinstalls` | `application.firstLaunches` | 物件 | 這會在安裝或重新安裝後首次執行時觸發 | {id （字串），值（數字）} |
-| `mobileupgrades` | `application.upgrades` | 物件 | 報告應用程式升級次數。 在升級或版本編號變更後首次執行時觸發。 | {id （字串），值（數字）} |
-| `mobilelaunches` | `application.launches` | 物件 | 應用程式的啟動次數。 | {id （字串），值（數字）} |
-| `mobilecrashes` | `application.crashes` | 物件 |  | {id （字串），值（數字）} |
-| `mobilemessageclicks` | `directMarketing.clicks` | 物件 |  | {id （字串），值（數字）} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | 物件 | | {id （字串），值（數字）} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | 物件 | | {id （字串），值（數字）} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | 物件 | 視訊品質開始時間。 | {id （字串），值（數字）} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | 物件 | | {id （字串），值（數字）} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | 物件 | 視訊品質緩衝計數 | {id （字串），值（數字）} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | 物件 | 視訊品質緩衝時間 | {id （字串），值（數字）} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | 物件 | 視訊品質變更計數 | {id （字串），值（數字）} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | 物件 | 視訊品質平均位元速率 | {id （字串），值（數字）} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | 物件 | 視訊品質錯誤計數 | {id （字串），值（數字）} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | 物件 | | {id （字串），值（數字）} |
+| `mobileinstalls` | `application.firstLaunches` | 物件 | 這會在安裝或重新安裝後第一次執行時觸發`{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | 物件 | 報告應用程式升級次數。 在升級或版本編號變更後首次執行時觸發。 | `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | 物件 | 應用程式的啟動次數。 `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | 物件 | `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | 物件 | `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | 物件 | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | 物件 | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | 物件 | 視訊品質開始時間。`{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | 物件 | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | 物件 | 視訊品質緩衝計數`{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | 物件 | 視訊品質緩衝時間`{id (string), value (number)}` |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | 物件 | 視訊品質變更計數`{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | 物件 | 視訊品質平均位元速率`{id (string), value (number)}` |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | 物件 | 視訊品質錯誤計數`{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | 物件 | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 

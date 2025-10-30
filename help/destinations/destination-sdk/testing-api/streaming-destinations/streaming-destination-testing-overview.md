@@ -2,7 +2,7 @@
 description: 瞭解如何使用目的地測試API，在發佈之前先測試您的串流目的地設定。
 title: 串流目的地測試API概覽
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -25,10 +25,12 @@ ht-degree: 0%
 使用目的地測試工具，將訊息傳送至您在[伺服器設定](../../authoring-api/destination-server/create-destination-server.md)中提供的夥伴端點，以測試您的目的地設定。
 
 在使用工具之前，請確定：
+
 * 依照[目的地設定工作流程](../../authoring-api/destination-configuration/create-destination-configuration.md)中概述的步驟設定您的目的地，並且
 * 建立與您的目的地的連線，如[如何取得目的地執行個體識別碼](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id)所詳述。
 
 使用此工具，在設定目的地後，您可以：
+
 * 測試您的目的地是否已正確設定；
 * 驗證資料流至您設定之目的地的完整性。
 
@@ -43,9 +45,10 @@ ht-degree: 0%
 如果您未在請求中新增任何設定檔，Adobe會在內部為您產生這些設定檔，並將其新增至請求中。 如果您想要產生設定檔以在此要求中使用，請參閱[範例設定檔產生API參考](../../testing-api/streaming-destinations/sample-profile-generation-api.md)。 您必須根據來源XDM結構描述產生設定檔，如[API參考](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema)所示。 請注意，來源結構描述是您使用之沙箱的[聯合結構描述](../../../../profile/ui/union-schema.md)。
 
 回應包含目的地請求處理的結果。 此請求包含三個主要區段：
-* 由Adobe為目的地產生的請求。
+
+* Adobe為目的地產生的請求。
 * 從您的目的地收到的回應。
-* 在要求中傳送的設定檔清單，無論設定檔是由您在要求[&#128279;](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)中新增的，或是Adobe在[目的地測試要求的主體是空的](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles)時產生的。
+* 在要求中傳送的設定檔清單，無論設定檔是您[在要求中新增](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)，或是Adobe產生（若[目的地測試要求的內文是空的](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles)）。
 
 >[!NOTE]
 >
@@ -232,4 +235,4 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 後續步驟
 
-測試目的地並確認設定正確後，請使用[目的地發佈API](../../publishing-api/create-publishing-request.md)將您的設定提交給Adobe進行檢閱。
+在測試您的目的地並確認已正確設定後，請使用[目的地發佈API](../../publishing-api/create-publishing-request.md)將您的設定提交至Adobe以供檢閱。

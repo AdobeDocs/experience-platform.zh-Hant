@@ -2,7 +2,7 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK建立對象範本的API呼叫範例。
 title: 建立對象範本
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 對象範本API操作快速入門 {#get-started}
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 ## 建立對象範本 {#create}
 
-您可以對`/authoring/audience-templates`端點發出`POST`要求，以建立新的對象範本。
+您可以對`POST`端點發出`/authoring/audience-templates`要求，以建立新的對象範本。
 
 **API格式**
 
@@ -37,7 +37,7 @@ ht-degree: 3%
 POST /authoring/audience-templates
 ```
 
-+++要求
++++請求
 
 以下請求會建立新的受眾範本，由承載中提供的引數設定。 以下承載包含`/authoring/audience-templates`端點接受的所有引數。 請注意，您不需要在呼叫上新增所有引數，而且可以根據您的API需求自訂範本。
 

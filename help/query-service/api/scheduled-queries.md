@@ -5,9 +5,9 @@ title: 排程端點
 description: 以下章節會逐步說明您可以使用查詢服務API為已排程查詢進行的各種API呼叫。
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1409'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 >
 >管理排程查詢時的重要考量：<ul><li>如果用來建立已排程查詢的帳戶（技術或使用者）失去存取權或許可權，則已排程查詢將失敗。</li><li>透過API或UI刪除之前，必須先停用排定的查詢。</li><li>不支援無限期排程而不指定結束日期；必須一律指定結束日期。</li></ul>
 
-如需帳戶需求、許可權設定及管理排程查詢的詳細指引，請參閱[查詢排程檔案](../ui/query-schedules.md#technical-account-user-requirements)。 如需建立和設定技術帳戶的逐步指示，請參閱[Developer Console設定](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)和[端對端技術帳戶設定](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorial-comprehensive-technical/setup)。
+如需帳戶需求、許可權設定及管理排程查詢的詳細指引，請參閱[查詢排程檔案](../ui/query-schedules.md#technical-account-user-requirements)。 如需建立和設定技術帳戶的逐步指示，請參閱[Developer Console設定](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)和[端對端技術帳戶設定](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)。
 
 ## API呼叫範例
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | 依定義的排程執行的SQL查詢。 |
 | `query.name` | 排定的查詢名稱。 |
 | `query.description` | 排程查詢的選擇性說明。 |
-| `schedule.schedule` | 查詢的cron排程。 請參閱[Crontab.guru](https://crontab.guru/)，以取得建立、驗證和瞭解cron運算式的互動式方式。 在此範例中，「30 * * * *」表示查詢將每小時在30分鐘標籤處執行。<br><br>或者，您可以使用下列簡寫運算式：<ul><li>`@once`：查詢只執行一次。</li><li>`@hourly`：查詢會在每小時的開頭執行。 這相當於cron運算式`0 * * * *`。</li><li>`@daily`：查詢每天午夜執行一次。 這相當於cron運算式`0 0 * * *`。</li><li>`@weekly`：查詢每週執行一次、星期日、午夜。 這相當於cron運算式`0 0 * * 0`。</li><li>`@monthly`：查詢每個月執行一次，於當月的第一天午夜執行。 這相當於cron運算式`0 0 1 * *`。</li><li>`@yearly`：查詢每年執行一次，於1月1日午夜。 這相當於cron運算式`0 0 1 1 *`。 |
+| `schedule.schedule` | 查詢的cron排程。 請參閱[Crontab.guru](https://crontab.guru/)，以取得建立、驗證和瞭解cron運算式的互動式方式。 在此範例中，「`30 * * * *`」表示查詢將每小時在30分鐘標籤處執行。<br><br>或者，您可以使用下列簡寫運算式：<ul><li>`@once`：查詢只執行一次。</li><li>`@hourly`：查詢會在每小時的開頭執行。 這相當於cron運算式`0 * * * *`。</li><li>`@daily`：查詢每天午夜執行一次。 這相當於cron運算式`0 0 * * *`。</li><li>`@weekly`：查詢每週執行一次、星期日、午夜。 這相當於cron運算式`0 0 * * 0`。</li><li>`@monthly`：查詢每個月執行一次，於當月的第一天午夜執行。 這相當於cron運算式`0 0 1 * *`。</li><li>`@yearly`：查詢每年執行一次，於1月1日午夜。 這相當於cron運算式`0 0 1 1 *`。 |
 | `schedule.startDate` | 您排程查詢的開始日期，以UTC時間戳記寫入。 |
 
 **回應**

@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書供應商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的鑰匙式整合。 使用Adobe Experience Platform中的Amazon Ads目的地，使用者能在Amazon DSP上定義用於鎖定和啟用的廣告商對象。
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 6afb8d56b8af8e5b0450f769414d3afcac1d58eb
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '1977'
 ht-degree: 2%
 
 ---
@@ -55,15 +55,15 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| `firstName` | 使用者的名字 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL 套用轉換]。 |
-| `lastName` | 使用者的姓氏 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL 套用轉換]。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| `firstName` | 使用者的名字 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL Apply transformation]。 |
+| `lastName` | 使用者的姓氏 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL Apply transformation]。 |
 | `street` | 使用者的街道層級地址 | 僅支援SHA256雜湊輸入。 在雜湊處理前進行標準化。 請&#x200B;**不要**&#x200B;啟用Adobe端轉換。 |
-| `city` | 使用者的城市 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL 套用轉換]。 |
-| `state` | 使用者的州或省 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL 套用轉換]。 |
-| `zip` | 使用者的郵遞區號 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL 套用轉換]。 |
-| `country` | 使用者的國家/地區 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL 套用轉換]。 |
+| `city` | 使用者的城市 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL Apply transformation]。 |
+| `state` | 使用者的州或省 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL Apply transformation]。 |
+| `zip` | 使用者的郵遞區號 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL Apply transformation]。 |
+| `country` | 使用者的國家/地區 | 支援純文字或SHA256。 如果使用純文字，請在Adobe UI中啟用[!UICONTROL Apply transformation]。 |
 
 {style="table-layout:auto"}
 
@@ -73,8 +73,8 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 | 項目 | 類型 | 附註 |
 | ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有&#x200B;*[!DNL Amazon Ads]*&#x200B;目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL Audience export]** | 您正在匯出具有&#x200B;*[!DNL Amazon Ads]*&#x200B;目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -82,13 +82,13 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請填寫必填欄位並選取&#x200B;**[!UICONTROL Connect to destination]**。
 
 系統會將您帶往[!DNL Amazon Ads]連線介面，讓您先選取要連線的廣告商帳戶。 連線後，系統會將您重新導向回Adobe Experience Platform，並顯示您選取的廣告商帳戶ID，其中包含新的連線。 在目的地設定畫面上選取適當的廣告商帳戶以繼續。
 
@@ -96,17 +96,17 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL Amazon Ads連線]**：選取用於目的地的目標[!DNL Amazon Ads]帳戶識別碼。
+* **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+* **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL Amazon Ads Connection]**：選取用於目的地的目標[!DNL Amazon Ads]帳戶識別碼。
 
 >[!NOTE]
 >
 >儲存目的地設定後，您將無法變更[!DNL Amazon Ads]廣告商ID，即使您透過Amazon帳戶重新驗證亦然。 若要使用其他[!DNL Amazon Ads]廣告商ID，您必須建立新的目的地連線。 已設定與ADSP整合的廣告商，如果他們想要將其對象傳送至AMC或其他ADSP帳戶，則必須建立新的目的地流程。
 
-* **[!UICONTROL 廣告商地區]**：選取您的廣告商所在的適當地區。 如需各個區域支援之市場環境的詳細資訊，請瀏覽[Amazon Ads檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)。
+* **[!UICONTROL Advertiser Region]**：選取您的廣告商所在的適當地區。 如需各個區域支援之市場環境的詳細資訊，請瀏覽[Amazon Ads檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)。
 
-* **[!UICONTROL Amazon Ads同意訊號]**：確認透過此連線傳送的所有資料都已同意使用個人資料做廣告用途。 「GRANTED」表示Amazon同意將客戶的個人資料用於廣告。 允許值為「GRANTED」和「DENIED」。 任何透過連線傳送的記錄若有「DENIED」，將會遭拒，以便在Amazon Ads中進一步使用。
+* **[!UICONTROL Amazon Ads Consent Signal]**：確認透過此連線傳送的所有資料都已同意使用個人資料做廣告用途。 「GRANTED」表示Amazon同意將客戶的個人資料用於廣告。 允許值為「GRANTED」和「DENIED」。 任何透過連線傳送的記錄若有「DENIED」，將會遭拒，以便在Amazon Ads中進一步使用。
 
 ![設定新的目的地](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
@@ -114,14 +114,14 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 閱讀[將設定檔和對象啟用至串流對象匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)，以瞭解啟用此目的地對象的指示。
 
@@ -154,13 +154,13 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 適用於Amazon DSP **的**
 
-導覽至您的&#x200B;**[!UICONTROL 廣告商ID]** > **[!UICONTROL 對象]** > **[!UICONTROL 廣告商對象]**。 若您的對象已成功建立且符合對象成員的最小數量，您將會看到`Active`的狀態。 您可以在Amazon DSP使用者介面右側的預測觸及面板中，找到有關您對象人數和觸及率的其他詳細資訊。
+導覽至您的&#x200B;**[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]**。 若您的對象已成功建立且符合對象成員的最小數量，您將會看到`Active`的狀態。 您可以在Amazon DSP使用者介面右側的預測觸及面板中，找到有關您對象人數和觸及率的其他詳細資訊。
 
 ![Amazon DSP對象建立驗證](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **的[!DNL Amazon Marketing Cloud]**
 
-在左側結構描述瀏覽器中，在&#x200B;**[!UICONTROL 已上傳的廣告商]** > **[!UICONTROL aep_audiences]**&#x200B;下尋找您的對象。 然後，您可以在AMC SQL編輯器中使用下列子句查詢您的對象：
+在左側結構描述瀏覽器中，在&#x200B;**[!UICONTROL Advertiser Uploaded]** > **[!UICONTROL aep_audiences]**&#x200B;下尋找您的對象。 然後，您可以在AMC SQL編輯器中使用下列子句查詢您的對象：
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
@@ -185,7 +185,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
 | 2025 年 10 月 | 新增對其他身分欄位的支援 | 新增其他個人識別碼支援，例如`firstName`、`lastName`、`street`、`city`、`state`、`zip`和`country`。 對應這些欄位可改善對象符合率。 |
-| 2025 年 2 月 | 新增新增&#x200B;**[!UICONTROL Amazon Ads同意訊號]**&#x200B;以匯出資料流程的需求，並將目的地從Beta版升級為一般可用。 |
+| 2025 年 2 月 | 新增將&#x200B;**[!UICONTROL Amazon Ads Consent Signal]**&#x200B;新增至匯出資料流的要求，並將目的地從Beta版升級為一般可用。 |  |
 | 2024 年 5 月 | 功能和檔案更新 | 已新增對應選項，以便將`countryCode`引數匯出至Amazon Ads。 使用 `countryCode` (在[對應步驟](#map)中) 來提高您與 Amazon 的身分識別符合率。 |
 | 2024 年 3 月 | 功能和檔案更新 | 新增匯出對象以在[!DNL Amazon Marketing Cloud] (AMC)中使用的選項。 |
 | 2023 年 5 月 | 功能和檔案更新 | <ul><li>已在[目的地連線工作流程](#destination-details)中新增對廣告商區域選取的支援。</li><li>更新說明檔案，反映新增廣告商地區選擇。 如需選取正確廣告商地區的詳細資訊，請參閱[Amazon檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)。</li></ul> |

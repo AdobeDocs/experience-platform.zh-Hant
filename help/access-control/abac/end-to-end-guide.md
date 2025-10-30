@@ -4,10 +4,10 @@ title: 屬性型存取控制端對端指南
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的端對端指南
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 7%
+source-wordcount: '1522'
+ht-degree: 8%
 
 ---
 
@@ -36,30 +36,30 @@ ht-degree: 7%
 
 您是醫療保健提供者，且想設定對組織中資源的存取權。
 
-* 您的內部行銷團隊應該能夠存取&#x200B;**[!UICONTROL PHI/監管健康資料]**&#x200B;資料。
-* 您的外部機構應該無法存取&#x200B;**[!UICONTROL PHI/規範健康情況資料]**&#x200B;資料。
+* 您的內部行銷團隊應該能夠存取&#x200B;**[!UICONTROL PHI/ Regulated Health Data]**&#x200B;資料。
+* 您的外部機構應該無法存取&#x200B;**[!UICONTROL PHI/ Regulated Health Data]**&#x200B;資料。
 
 為此，您必須設定角色、資源和原則。
 
 您將會：
 
 * [為您的使用者標示角色](#label-roles)：以醫療保健提供者（ACME業務群組）為例，其行銷群組與外部代理合作。
-* [為資源（結構描述欄位和對象）加上標籤](#label-resources)：將&#x200B;**[!UICONTROL PHI/監管健康情況資料]**&#x200B;標籤指派給結構描述資源和對象。
+* [為資源（結構描述欄位和對象）加上標籤](#label-resources)：將&#x200B;**[!UICONTROL PHI/ Regulated Health Data]**&#x200B;標籤指派給結構描述資源和對象。
 * [啟用會將它們連結在一起的原則](#policy)：啟用預設原則，將您資源上的標籤連結到您角色中的標籤，以防止存取結構描述欄位和對象。 之後，擁有相符標籤的使用者將獲得結構欄位和所有沙箱之區段的存取權。
 
 ## 權限
 
-[!UICONTROL 許可權]是Experience Cloud的區域，管理員可在此定義使用者角色和原則，以管理產品應用程式內功能和物件的許可權。
+[!UICONTROL Permissions]是Experience Cloud的區域，管理員可在此定義使用者角色和原則，以管理產品應用程式內功能和物件的許可權。
 
-透過[!UICONTROL 許可權]，您可以建立和管理角色，並為這些角色指派所需的資源許可權。 [!UICONTROL 許可權]也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。
+透過[!UICONTROL Permissions]，您可以建立和管理角色，並為這些角色指派所需的資源許可權。 [!UICONTROL Permissions]也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。
 
 如果您沒有管理員許可權，請聯絡系統管理員以獲得存取權。
 
-一旦您擁有管理員許可權，請前往[Adobe Experience Cloud](https://experience.adobe.com/)並使用您的Adobe憑證登入。 登入後，會針對您擁有管理員許可權的組織顯示&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面。 此頁面顯示貴組織訂閱的產品，以及新增使用者和管理員至組織的其他控制項。 選取「**[!UICONTROL 許可權]**」以開啟Experience Platform整合的工作區。
+一旦您擁有管理員許可權，請前往[Adobe Experience Cloud](https://experience.adobe.com/)並使用您的Adobe憑證登入。 登入後，會針對您擁有管理員許可權的組織顯示&#x200B;**[!UICONTROL Overview]**&#x200B;頁面。 此頁面顯示貴組織訂閱的產品，以及新增使用者和管理員至組織的其他控制項。 選取&#x200B;**[!UICONTROL Permissions]**&#x200B;以開啟您的Experience Platform整合工作區。
 
 ![影像顯示正在Adobe Experience Cloud中選取的許可權產品](../images/flac-ui/flac-select-product.png)
 
-Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL 總覽]**&#x200B;頁面上開啟。
+Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL Overview]**&#x200B;頁面上開啟。
 
 ## 將標籤套用至角色 {#label-roles}
 
@@ -67,19 +67,19 @@ Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICO
 >id="platform_permissions_labels_about"
 >title="什麼是標籤？"
 >abstract="根據適用於相關資料的使用情況和存取原則，使用標籤將資料集和欄位進行分類。Adobe Experience Platform 提供數個 Adobe 定義的<strong>核心</strong>資料使用標籤，涵蓋適用於資料治理的各種常見限制。例如 RHD (受監管的健康資料) 這種敏感資料 <strong>S</strong> 標籤，可以將關於受保護的健康資訊 (PHI) 的資料加以分類。您也可以定義符合本身組織需求的自訂標籤。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant#understanding-data-usage-labels" text="資料使用標籤概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤概觀"
 
 角色是分類與您的Experience Platform執行個體互動的使用者型別的方法，也是存取控制原則的建置組塊。 角色具有一組指定的許可權，而您組織的成員可以根據他們需要的存取範圍，指派一或多個角色。
 
-若要開始，請從左側導覽選取&#x200B;**[!UICONTROL 角色]**，然後選取&#x200B;**[!UICONTROL ACME業務群組]**。
+若要開始，請從左側導覽選取&#x200B;**[!UICONTROL Roles]**，然後選取&#x200B;**[!UICONTROL ACME Business Group]**。
 
 ![影像顯示角色中正在選取的ACME業務群組](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-接著，選取&#x200B;**[!UICONTROL 標籤]**，然後選取&#x200B;**[!UICONTROL 新增標籤]**。
+接著，選取&#x200B;**[!UICONTROL Labels]**，然後選取&#x200B;**[!UICONTROL Add Labels]**。
 
 ![影像顯示[標籤]索引標籤上正在選取的加入標籤](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-貴組織中的所有標籤清單隨即顯示。 選取&#x200B;**[!UICONTROL RHD]**&#x200B;以新增&#x200B;**[!UICONTROL PHI/規範健康情況資料]**&#x200B;的標籤，然後選取&#x200B;**[!UICONTROL 儲存]**。
+貴組織中的所有標籤清單隨即顯示。 選取&#x200B;**[!UICONTROL RHD]**&#x200B;以新增&#x200B;**[!UICONTROL PHI/Regulated Health Data]**&#x200B;的標籤，然後選取&#x200B;**[!UICONTROL Save]**。
 
 ![顯示正在選取及儲存之RHD標籤的影像](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -95,15 +95,15 @@ Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICO
 
 ![顯示從應用程式切換器的下拉式功能表中選取Experience Platform的影像](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
-從左側導覽選取&#x200B;**[!UICONTROL 結構描述]**，然後從出現的結構描述清單中選取&#x200B;**[!UICONTROL ACME Healthcare]**。
+在左側導覽中選取&#x200B;**[!UICONTROL Schemas]**，然後從出現的結構描述清單中選取&#x200B;**[!UICONTROL ACME Healthcare]**。
 
 ![影像顯示正在從[結構描述]索引標籤中選取的ACME Healthcare結構描述](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-接著，選取&#x200B;**[!UICONTROL 標籤]**&#x200B;以檢視顯示與結構描述關聯之欄位的清單。 從這裡，您可以一次將標籤指派給一或多個欄位。 選取&#x200B;**[!UICONTROL 血糖]**&#x200B;和&#x200B;**[!UICONTROL InsulinLevel]**&#x200B;欄位，然後選取&#x200B;**[!UICONTROL 套用存取權和資料治理標籤]**。
+接著，選取&#x200B;**[!UICONTROL Labels]**&#x200B;以檢視顯示與結構描述關聯欄位的清單。 從這裡，您可以一次將標籤指派給一或多個欄位。 選取&#x200B;**[!UICONTROL BloodGlucose]**&#x200B;及&#x200B;**[!UICONTROL InsulinLevel]**&#x200B;欄位，然後選取&#x200B;**[!UICONTROL Apply access and data governance labels]**。
 
 ![影像顯示正在選取的血糖和InsulinLevel，並套用正在選取的存取權和資料治理標籤](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-**[!UICONTROL 編輯標籤]**&#x200B;對話方塊會顯示，讓您選擇要套用至結構描述欄位的標籤。 針對此使用案例，請選取&#x200B;**[!UICONTROL PHI/規範健康情況資料]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL 儲存]**。
+**[!UICONTROL Edit labels]**&#x200B;對話方塊會顯示，讓您選擇要套用至結構描述欄位的標籤。 針對此使用案例，選取&#x200B;**[!UICONTROL PHI/ Regulated Health Data]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL Save]**。
 
 ![顯示正在選取及儲存之RHD標籤的影像](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
@@ -119,46 +119,46 @@ Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICO
 
 當您完成標示結構描述欄位後，您現在可以開始標示對象。
 
-從&#x200B;**[!UICONTROL 客戶]**&#x200B;區段下方的左側導覽列中選取&#x200B;**[!UICONTROL 對象]**。 隨即顯示貴組織中可用的對象清單。 在此範例中，下列兩個對象將加上標籤，因為它們包含敏感的健康資料：
+從&#x200B;**[!UICONTROL Audiences]**&#x200B;區段下的左側導覽中選取&#x200B;**[!UICONTROL Customers]**。 隨即顯示貴組織中可用的對象清單。 在此範例中，下列兩個對象將加上標籤，因為它們包含敏感的健康資料：
 
 * 血糖>100
 * 胰島素&lt;50
 
-選取&#x200B;**[!UICONTROL 血糖>100]** （依對象名稱，而非核取方塊）以開始標示對象。
+選取&#x200B;**[!UICONTROL Blood Glucose >100]** （依對象名稱，而非核取方塊）以開始標籤對象。
 
 ![顯示從[對象]索引標籤中選取的血糖> 100的影像](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
-區段&#x200B;**[!UICONTROL 詳細資料]**&#x200B;畫面隨即顯示。 選取&#x200B;**[!UICONTROL 管理存取權]**。
+區段&#x200B;**[!UICONTROL Details]**&#x200B;畫面隨即顯示。 選擇「**[!UICONTROL Manage Access]**」。
 
 ![影像顯示管理存取的選取專案](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-**[!UICONTROL 套用存取權和資料控管標籤]**&#x200B;對話方塊會出現，可讓您選擇要套用至對象的標籤。 針對此使用案例，請選取&#x200B;**[!UICONTROL PHI/規範健康情況資料]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL 儲存]**。
+**[!UICONTROL Apply access and data governance labels]**&#x200B;對話方塊會顯示，讓您選擇要套用至對象的標籤。 針對此使用案例，選取&#x200B;**[!UICONTROL PHI/ Regulated Health Data]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL Save]**。
 
 ![影像顯示選取的RHD標籤並儲存選取的專案](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
-使用&#x200B;**[!UICONTROL 胰島素&lt;50]**&#x200B;重複上述步驟。
+對&#x200B;**[!UICONTROL Insulin <50]**&#x200B;重複上述步驟。
 
 >[!NOTE]
 >
-> 使用[!UICONTROL 物件層級存取控制]，將在[許可權](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/access-control/object-based-access)工作區中建立的標籤（例如上方的區段標籤）指派給Adobe Journey Optimizer中的各種物件。
+> 使用[!UICONTROL Permissions]物件層級存取控制[，將在](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)工作區中建立的標籤（例如上方的區段標籤）指派給Adobe Journey Optimizer中的各種物件。
 
 ## 啟動存取控制原則 {#policy}
 
 預設存取控制原則將運用標籤來定義哪些使用者角色擁有特定Experience Platform資源的存取權。 在此範例中，如果使用者不在結構欄位中具有對應標籤的角色中，其存取結構欄位和對象將在所有沙箱中遭到拒絕。
 
-若要啟用存取控制原則，請從左側導覽選取[!UICONTROL 許可權]，然後選取&#x200B;**[!UICONTROL 原則]**。
+若要啟用存取控制原則，請從左側導覽選取[!UICONTROL Permissions]，然後選取&#x200B;**[!UICONTROL Policies]**。
 
 ![顯示的原則清單](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-接著，選取`...`Default-Field-Level-Access-Control-Policy **[!UICONTROL 旁的省略符號(]**)，下拉式清單會顯示要編輯、啟用、刪除或複製角色的控制項。 從下拉式清單中選取&#x200B;**[!UICONTROL 啟動]**。
+接著，選取`...`旁邊的省略符號(**[!UICONTROL Default-Field-Level-Access-Control-Policy]**)，下拉式清單會顯示要編輯、啟動、刪除或複製角色的控制項。 從下拉式清單中選取&#x200B;**[!UICONTROL Activate]**。
 
 ![啟動原則的下拉式清單](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-啟動原則對話方塊會出現，提示您確認啟動。 選取&#x200B;**[!UICONTROL 確認]**。
+啟動原則對話方塊會出現，提示您確認啟動。 選擇「**[!UICONTROL Confirm]**」。
 
 ![啟用原則對話方塊](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-收到啟用原則的確認，並返回[!UICONTROL 原則]頁面。
+收到啟用原則的確認，並返回[!UICONTROL Policies]頁面。
 
 ![啟用原則確認](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
@@ -168,19 +168,19 @@ Experience Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICO
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=zh-Hant" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=zh-Hant#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=zh-Hant#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
@@ -237,7 +237,7 @@ Select **[!UICONTROL The following being false]** and then select **[!UICONTROL 
 
 Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
+![Image showing the Policy being activated](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
 
 ## 後續步驟
 
@@ -247,4 +247,4 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 以下影片旨在協助您瞭解屬性型存取控制，並概述如何設定角色、資源和原則。
 
->[!VIDEO](https://video.tv.adobe.com/v/3451850?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)

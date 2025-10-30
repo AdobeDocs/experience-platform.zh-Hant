@@ -2,7 +2,7 @@
 description: 此頁面提供使用Destination SDK創作產品化目的地以供檢閱所需的所有資訊。
 title: 提交產品化目的地以供檢閱
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 0%
@@ -263,6 +263,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 目的地目錄包含每個目的地卡片的標誌。 在您的提交電子郵件中，加入含有目的地標誌的影像。
 
 影像需求如下：
+
 * **格式**： `SVG`
 * **大小**：小於2MB
 

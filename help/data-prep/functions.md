@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '6009'
 ht-degree: 1%
@@ -126,7 +126,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li><li>DEFAULT_DATE： **必要**&#x200B;如果提供的日期為Null，則傳回預設日期。</li></ul> | date(DATE， FORMAT， DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH:mm&quot;， now()) | `2019-10-23T11:24:00Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li><li>格式： **必要**&#x200B;代表來源日期格式的字串。**注意：**&#x200B;這並&#x200B;**不**&#x200B;代表您要將日期字串轉換成的格式。 </li></ul> | 日期（日期，格式） | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必要**&#x200B;代表日期的字串。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | 「2019-10-23T11:24:00Z」 |
-| date_part | 擷取日期部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;&lbrace;20&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | date_part&#x200B;(COMPONENT， DATE) | date_part(&quot;MM&quot;， date(&quot;2019-10-17 11:55:12&quot;) | 10 |
+| date_part | 擷取日期部分。 支援下列元件值： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;{20&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | date_part&#x200B;(COMPONENT， DATE) | date_part(&quot;MM&quot;， date(&quot;2019-10-17 11:55:12&quot;) | 10 |
 | set_date_part | 取代指定日期中的元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>值： **必要**&#x200B;為指定日期的元件設定的值。</li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | set_date_part&#x200B;(COMPONENT， VALUE， DATE) | set_date_part(&quot;m&quot;， 4， date(&quot;2016-11-09T11:44:44.797&quot;) | 「2016-04-09T11:44:44Z」 |
 | make_date_time | 從零件建立日期。 此函式也可以使用make_timestamp感生。 | <ul><li>YEAR： **必填**&#x200B;以四位數寫入的年份。</li><li>月份： **必要**&#x200B;月份。 允許的值為1到12。</li><li>日： **必要**&#x200B;日。 允許的值為1到31。</li><li>小時： **必要**&#x200B;小時。 允許的值為0到23。</li><li>MINUTE： **必要**&#x200B;分鐘。 允許值為0到59。</li><li>NANOSECOND： **必要**&#x200B;納秒的值。 允許的值為0到999999999。</li><li>時區： **必要**&#x200B;日期時間的時區。</li></ul> | make_date_time&#x200B;（年、月、日、小時、分鐘、秒、納秒、時區） | make_date_time&#x200B;（2019， 10， 17， 11， 55， 12， 999， &quot;美洲/洛杉磯&quot;） | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 將任何時區的日期轉換為UTC格式的日期。 | <ul><li>日期： **必要**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
@@ -154,8 +154,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | map_has_keys | 如果提供一個或多個輸入鍵，則函式傳回true。 如果提供字串陣列作為輸入，則函式在找到的第一個鍵上傳回true。 | <ul><li>對應： **必要**&#x200B;輸入對應資料</li><li>索引鍵： **必要**&#x200B;索引鍵可以是單一字串或字串陣列。 如果提供任何其他基本型別（資料/數字），則會將其視為字串。</li></ul> | map_has_keys(MAP， KEY) | 如需程式碼範例，請參閱[附錄](#map_has_keys)。 | |
 | add_to_map | 接受至少兩個輸入。 可提供任意數量的地圖作為輸入。 「資料準備」會傳回單一對應，其中包含來自所有輸入的所有索引鍵/值組。 如果一個或多個索引鍵重複（在相同對應中或跨對應），資料準備會去除重複的索引鍵，因此第一個索引鍵/值組會按照它們在輸入中傳遞的順序持續存在。 | 對應： **必要**&#x200B;輸入對應資料。 | add_to_map(MAP 1， MAP 2， MAP 3， ...) | 如需程式碼範例，請參閱[附錄](#add_to_map)。 | |
 | object_to_map （語法1） | 使用此函式來建立對應資料型別。 | <ul><li>索引鍵： **必要**&#x200B;索引鍵必須是字串。 如果提供其他任何基本值（例如整數或日期），則會自動轉換為字串並視為字串。</li><li>ANY_TYPE： **必要**&#x200B;參考任何支援的XDM資料型別，但Map除外。</li></ul> | object_to_map(KEY， ANY_TYPE， KEY， ANY_TYPE， ... ) | 如需程式碼範例，請參閱[附錄](#object_to_map)。 | |
-| object_to_map （語法2） | 使用此函式來建立對應資料型別。 | <ul><li>物件： **必要**&#x200B;您可以提供內送物件或物件陣列，並以索引鍵指向物件內的屬性。</li></ul> | object_to_map(OBJECT) | 如需程式碼範例，請參閱[附錄](#object_to_map)。 |
-| object_to_map （語法3） | 使用此函式來建立對應資料型別。 | <ul><li>物件： **必要**&#x200B;您可以提供內送物件或物件陣列，並以索引鍵指向物件內的屬性。</li></ul> | object_to_map(OBJECT_ARRAY， ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | 如需程式碼範例，請參閱[附錄](#object_to_map)。 |
+| object_to_map （語法2） | 使用此函式來建立對應資料型別。 | <ul><li>物件： **必要**&#x200B;您可以提供內送物件或物件陣列，並以索引鍵指向物件內的屬性。</li></ul> | object_to_map(OBJECT) | 如需程式碼範例，請參閱[附錄](#object_to_map)。 |  |
+| object_to_map （語法3） | 使用此函式來建立對應資料型別。 | <ul><li>物件： **必要**&#x200B;您可以提供內送物件或物件陣列，並以索引鍵指向物件內的屬性。</li></ul> | object_to_map(OBJECT_ARRAY， ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | 如需程式碼範例，請參閱[附錄](#object_to_map)。 |  |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | upsert_array_replace | 此函式用於取代陣列中的元素。 此函式僅&#x200B;**適用於更新期間**。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必要**&#x200B;要取代設定檔中陣列的陣列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123， 456] |
 | [!BADGE 僅目的地]{type=Informative} array_to_string | 使用指定的分隔符號聯結陣列中元素的字串表示法。 如果陣列是多維度的，則會在聯結前將其平面化。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>SEPARATOR： **必要**&#x200B;用來聯結陣列中元素的分隔符號。</li><li>ARRAY： **必要**&#x200B;要聯結的陣列（平面化之後）。</li></ul> | array_to_string(SEPARATOR， ARRAY) | `array_to_string(";", ["Hello", "world"])` | 「Hello；world」 |
 | [!BADGE 僅目的地]{type=Informative} filterArray* | 根據述詞篩選指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要篩選的陣列</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | filterArray(ARRAY， PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5， 7] |
-| [!BADGE 僅目的地]{type=Informative} transformArray* | 根據述詞轉換指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要轉換的陣列。</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | transformArray(ARRAY， PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6， 7， 8] |
+| [!BADGE 僅目的地]{type=Informative} transformArray* | 根據述詞轉換指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要轉換的陣列。</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | transformArray(ARRAY， PREDICATE) | `transformArray([5, 6, 7], x -> x + 1)` | [6， 7， 8] |
 | [!BADGE 只適用於]{type=Informative}FlattenArray* | 將指定的（多維）陣列平面化為一維陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-maps-objects.md)。 | <ul><li>陣列： **必要**&#x200B;要平面化的陣列。</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;， &#39;b&#39;]， [&#39;c&#39;， &#39;d&#39;]]， [[&#39;e&#39;]， [&#39;f&#39;]]]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
 
 {style="table-layout:auto"}
@@ -193,7 +193,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| array_to_map | 此函式以物件陣列和索引鍵作為輸入，並傳回索引鍵欄位的對應，其中值為索引鍵，而陣列元素為值。 | <ul><li>INPUT： **必要**&#x200B;您要尋找的第一個非null物件的物件陣列。</li><li>索引鍵： **必要**&#x200B;索引鍵必須是物件陣列中的欄位名稱，而且物件必須是值。</li></ul> | array_to_map（OBJECT[]輸入，索引鍵） | 如需程式碼範例，請閱讀[附錄](#object_to_map)。 |
+| array_to_map | 此函式以物件陣列和索引鍵作為輸入，並傳回索引鍵欄位的對應，其中值為索引鍵，而陣列元素為值。 | <ul><li>INPUT： **必要**&#x200B;您要尋找的第一個非null物件的物件陣列。</li><li>索引鍵： **必要**&#x200B;索引鍵必須是物件陣列中的欄位名稱，而且物件必須是值。</li></ul> | array_to_map（OBJECT[]輸入，索引鍵） | 如需程式碼範例，請閱讀[附錄](#object_to_map)。 |  |
 | object_to_map | 此函式將物件當作引數，並傳回機碼值組的對應。 | <ul><li>INPUT： **必要**&#x200B;您要尋找的第一個非null物件的物件陣列。</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address)，其中輸入為&quot; + &quot;address： {line1 ： \&quot;345 park ave\&quot;，line2： \&quot;bldg 2\&quot;，City ： \&quot;san jose\&quot;，State ： \&quot;CA\&quot;，type： \&quot;office\&quot;}&quot; | 傳回具有給定欄位名稱和值配對的對應，如果輸入為null，則傳回null。 例如︰`"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
 | to_map | 此函式接受索引鍵值配對清單並傳回索引鍵值配對的對應。 | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;， \&quot;John\&quot;， \&quot;lastName\&quot;， \&quot;Doe\&quot;)&quot; | 傳回具有給定欄位名稱和值配對的對應，如果輸入為null，則傳回null。 例如︰`"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
@@ -261,7 +261,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 產生偽隨機識別碼。 | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
-| `fpid_to_ecid ` | 此函式接受FPID字串並將其轉換為ECID，以便用於Adobe Experience Platform和Adobe Experience Cloud應用程式。 | <ul><li>字串： **必要**&#x200B;要轉換為ECID的FPID字串。</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
+| `fpid_to_ecid` | 此函式接受FPID字串並將其轉換為ECID，以便用於Adobe Experience Platform和Adobe Experience Cloud應用程式。 | <ul><li>字串： **必要**&#x200B;要轉換為ECID的FPID字串。</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
@@ -387,9 +387,9 @@ address.line1 -> addr.addrLine1
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5D |
+| ] | %5D |
 | ^ | %5E |
 | 『 | %60 |
 | ~ | %7E |

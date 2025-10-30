@@ -5,7 +5,7 @@ title: 使用串流獲取API串流時間序列資料
 type: Tutorial
 description: 本教學課程將協助您開始使用串流獲取API，這是Adobe Experience Platform資料獲取服務API的一部分。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 2%
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->{&#x200B;0}身分名稱空間程式碼&#x200B;**&#x200B;**
+>{&#x200B;0}身分名稱空間程式碼&#x200B;****
 >
 > 請確定程式碼有效 — 上述範例使用「電子郵件」，這是標準身分名稱空間。 在[Identity Service常見問題集](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)中可找到其他常用的標準身分名稱空間。
 >
@@ -402,7 +402,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 先前建立的串流連線的`inletId`。 |
 | `xactionId` | 在伺服器端為您剛傳送的記錄產生的唯一識別碼。 此ID可協助Adobe透過各種系統和偵錯追蹤此紀錄的生命週期。 |
-| `receivedTimeMs`：時間戳記（以毫秒為單位的epoch），顯示收到要求的時間。 |
+| `receivedTimeMs`：時間戳記（以毫秒為單位的epoch），顯示收到要求的時間。 |  |
 | `syncValidation.status` | 由於已新增查詢引數`syncValidation=true`，因此會顯示這個值。 如果驗證成功，狀態將會是`pass`。 |
 
 ## 擷取新擷取的時間序列資料

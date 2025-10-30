@@ -1,9 +1,9 @@
 ---
 title: pushNotifications
 description: 設定Web SDK的推播通知，以啟用瀏覽器式的推播訊息。
-source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## 後續步驟 {#next-steps}
 
-設定推播通知後，使用[`sendPushSubscription`](../sendpushsubscription.md)命令向Adobe Experience Platform註冊推播訂閱。
+設定推送通知後，請使用[sendPushSubscription](../sendpushsubscription.md)命令向Adobe Experience Platform註冊推送訂閱。

@@ -2,7 +2,7 @@
 title: 目的地中可設定的和常用的匯出設定
 description: 瞭解目的地中哪些匯出設定可在目的地層級設定，哪些是固定的且無法編輯。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 0%
@@ -23,16 +23,16 @@ ht-degree: 0%
 
 ## 各種目的地型別通用的匯出設定 {#common-settings-across-destination-types}
 
-目的地匯出行為在屬於目的地型別的目的地之間是一致的，這與&#x200B;*觸發目的地匯出的專案*&#x200B;和&#x200B;*目的地匯出專案中所包含的專案有關*。 目的地匯出是由目的地服務從[上游即時客戶設定檔服務](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=zh-Hant#adobe-experience-platform-%26-applications-detailed-architecture-diagram)收到的通知觸發。
+目的地匯出行為在屬於目的地型別的目的地之間是一致的，這與&#x200B;*觸發目的地匯出的專案*&#x200B;和&#x200B;*目的地匯出專案中所包含的專案有關*。 目的地匯出是由目的地服務從[上游即時客戶設定檔服務](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram)收到的通知觸發。
 
-目的地匯出中包含的內容會因目的地型別而略有不同。 深入瞭解每個目的地型別[&#128279;](/help/destinations/how-destinations-work/profile-export-behavior.md)的常見匯出行為模式。 目的地開發人員或Real-Time CDP使用者無法編輯這些設定。
+目的地匯出中包含的內容會因目的地型別而略有不同。 深入瞭解每個目的地型別[的](/help/destinations/how-destinations-work/profile-export-behavior.md)常見匯出行為模式。 目的地開發人員或Real-Time CDP使用者無法編輯這些設定。
 
 ## 目的地開發人員可自訂的匯出設定 {#customizable-settings-by-destination-developers}
 
-目的地開發人員可以使用[Destination SDK](/help/destinations/destination-sdk/overview.md)來建立自訂或產品化（私人或公用）目的地。 Destination SDK可讓開發人員根據其API端點和檔案接收系統的下游功能，以極為靈活的方式設定目的地。 根據下游功能，目的地開發人員在使用Destination SDK設定目的地時，有下列可用的設定選項：
+目的地開發人員可使用[Destination SDK](/help/destinations/destination-sdk/overview.md)建立自訂或產品化（私人或公用）目的地。 Destination SDK可讓開發人員根據其API端點和檔案接收系統的下游功能，以極為靈活地設定目的地。 根據下游功能，目的地開發人員在使用Destination SDK設定目的地時，有下列可用的設定選項：
 
 * 決定哪些屬性和身分可以從Experience Platform匯出至目的地。 同時決定要成功匯出資料，其目的地需要哪些身分。
-* 設定彙總原則，以決定彙總要傳送給API整合的HTTP訊息時，Experience Platform應等待多久。 目的地開發人員可設定不同的彙總型別，以決定傳出HTTP訊息中應包含多少設定檔，以及Experience Platform應等待多久才傳送HTTP訊息。 在Destination SDK檔案中尋找可提供給目的地開發人員的[彙總原則設定選項](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)的詳細資訊。
+* 設定彙總原則，以決定Experience Platform在彙總要傳送給API整合的HTTP訊息時應等候多久。 目的地開發人員可設定不同的彙總型別，以判斷傳出HTTP訊息中應包含多少設定檔，以及Experience Platform應等候多久才傳送HTTP訊息。 在Destination SDK檔案中尋找目的地開發人員可用的有關[彙總原則設定選項](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)的詳細資訊。
 * 判斷HTTP訊息匯出是否應該包含符合區段資格和/或從區段移除的設定檔。
 * 決定匯出檔案時，使用者應該可以使用哪些檔案名稱和檔案格式設定。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 例如，針對[串流目的地](/help/destinations/destination-types.md#streaming-destinations)，目的地開發人員可設定其目的地接受哪些身分，並且只會在啟動工作流程的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中向使用者顯示這些身分，如下所示：
 
-![在啟動工作流程的對映步驟中，針對目標欄位選取的身分進行熒幕錄製。](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![在啟動工作流程的對應步驟中，針對目標欄位選取的身分進行熒幕錄製。](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 同樣地，對於[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)，目的地開發人員可以決定要為其目的地提供哪些[檔案名稱附加選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)，或要為其提供哪些[檔案格式選項](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)，而且使用者只能從這些選項中進行選取，如下所示：
 
@@ -64,6 +64,6 @@ ht-degree: 0%
 
 閱讀本檔案後，您現在瞭解哪些目的地的匯出設定是各目的地型別通用的匯出設定、開發人員可在個別目的地層級進行設定，以及使用者可在啟動工作流程中編輯哪些設定。
 
-接著，您可以閱讀有關每個目的地型別[&#128279;](/help/destinations/how-destinations-work/profile-export-behavior.md)的常見匯出行為模式的詳細資訊。
+接著，您可以閱讀有關每個目的地型別[的](/help/destinations/how-destinations-work/profile-export-behavior.md)常見匯出行為模式的詳細資訊。
 
-目的地開發人員可以[開始使用](/help/destinations/destination-sdk/getting-started.md)Destination SDK。 對於想要啟用資料的使用者，您可以簽出[目錄](/help/destinations/catalog/overview.md)中的所有可用目的地。
+目的地開發人員可以[開始使用Destination SDK](/help/destinations/destination-sdk/getting-started.md)。 對於想要啟用資料的使用者，您可以簽出[目錄](/help/destinations/catalog/overview.md)中的所有可用目的地。

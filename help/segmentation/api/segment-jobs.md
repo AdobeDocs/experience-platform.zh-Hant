@@ -4,7 +4,7 @@ title: 區段作業API端點
 description: Adobe Experience Platform Segmentation Service API中的區段作業端點可讓您以程式設計方式管理組織的區段作業。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 2%
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | 指定傳回之區段作業的開始位移。 | `start=1` |
 | `limit` | 指定每頁傳回的區段工作數。 | `limit=20` |
 | `status` | 根據狀態篩選結果。 支援的值為NEW、QUEUED、PROCESSING、SUCCEEDED、FAILED、CANCELING、CANCELED | `status=NEW` |
-| `sort` | 已傳回區段作業的訂單。 是以`[attributeName]:[desc|asc]`格式撰寫。 | `sort=creationTime:desc` |
+| `sort` | 已傳回區段作業的訂單。 是以`[attributeName]:[desc|asc]`格式寫入。`sort=creationTime:desc` |
 | `property` | 篩選區段作業，並取得指定篩選器的完全相符專案。 它可採用下列其中一種格式撰寫： <ul><li>`[jsonObjectPath]==[value]` — 篩選物件金鑰</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` — 在陣列中篩選</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
@@ -70,7 +70,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 >
 >下列回應已因空間而截斷，且僅會顯示第一個傳回的工作。
 
-+++ 擷取區段作業清單時的範例回應。
++++ 擷取區段作業清單時的範例回應。 
 
 ```json
 {

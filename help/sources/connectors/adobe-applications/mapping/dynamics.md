@@ -2,7 +2,7 @@
 title: Microsoft Dynamics對應欄位
 description: 下表包含Microsoft Dynamics來源欄位與其對應XDM欄位之間的對應。
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 8%
@@ -13,48 +13,48 @@ ht-degree: 8%
 
 下表包含[!DNL Microsoft Dynamics]來源欄位與其對應的Experience Data Model (XDM)欄位之間的對應。
 
-## 連絡人 {#contacts}
+## 聯絡人 {#contacts}
 
 | 來源欄位 | 目標XDM欄位 | 附註 |
 | --- | --- | --- |
-| `address1_addressid` | `workAddress._id` |
-| `address1_city` | `workAddress.city` |
-| `address1_country` | `workAddress.country` |
-| `address1_county` | `workAddress.stateProvince` |
-| `address1_latitude` | `workAddress._schema.latitude` |
-| `address1_line1` | `workAddress.street1` |
-| `address1_line2` | `workAddress.street2` |
-| `address1_line3` | `workAddress.street3` |
-| `address1_longitude` | `workAddress._schema.longitude` |
-| `address1_postalcode` | `workAddress.postalCode` |
-| `address1_postofficebox` | `workAddress.postOfficeBox` |
-| `address1_stateorprovince` | `workAddress.state` |
-| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |
-| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
-| `birthdate` | `person.birthDate` |
-| `"Dynamics"` | `b2b.personKey.sourceType` |
+| `address1_addressid` | `workAddress._id` |  |
+| `address1_city` | `workAddress.city` |  |
+| `address1_country` | `workAddress.country` |  |
+| `address1_county` | `workAddress.stateProvince` |  |
+| `address1_latitude` | `workAddress._schema.latitude` |  |
+| `address1_line1` | `workAddress.street1` |  |
+| `address1_line2` | `workAddress.street2` |  |
+| `address1_line3` | `workAddress.street3` |  |
+| `address1_longitude` | `workAddress._schema.longitude` |  |
+| `address1_postalcode` | `workAddress.postalCode` |  |
+| `address1_postofficebox` | `workAddress.postOfficeBox` |  |
+| `address1_stateorprovince` | `workAddress.state` |  |
+| `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |  |
+| `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |  |
+| `birthdate` | `person.birthDate` |  |
+| `"Dynamics"` | `b2b.personKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | 將自動取代`"${CRM_ORG_ID}"`的值。 |
-| `contactid` | `b2b.personKey.sourceID` |
+| `contactid` | `b2b.personKey.sourceID` |  |
 | `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | 主要身分。 將自動取代`"${CRM_ORG_ID}"`的值。 |
-| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
-| `department` | `extendedWorkDetails.departments` |
-| `fullname` | `person.name.fullName` |
-| `suffix` | `person.name.suffix` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |
-| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |
-| `createdon` | `extSourceSystemAudit.createdDate` |
+| `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |  |
+| `department` | `extendedWorkDetails.departments` |  |
+| `fullname` | `person.name.fullName` |  |
+| `suffix` | `person.name.suffix` |  |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey", concat(parentcustomerid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourceAccountKey` |  |
+| `iif(parentcustomerid != null && parentcustomerid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", parentcustomerid, "sourceKey",  concat(parentcustomerid, "@${CRM_ORG_ID}.Dynamics")), null)` | `b2b.accountKey` |  |
+| `createdon` | `extSourceSystemAudit.createdDate` |  |
 | `emailaddress1` | `workEmail.address` | 次要識別碼。 |
-| `emailaddress2` | `personalEmail.address` |
-| `emailaddress1` | `personComponents.workEmail.address` |
-| `firstname` | `person.name.firstName` |
-| `fullname` | `person.name.fullName` |
-| `lastname` | `person.name.lastName` |
-| `jobtitle` | `extendedWorkDetails.jobTitle` |
-| `middlename` | `person.name.middleName` |
-| `mobilephone` | `mobilePhone.number` |
-| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
-| `salutation` | `person.name.courtesyTitle` |
-| `telephone1` | `workPhone.number` |
+| `emailaddress2` | `personalEmail.address` |  |
+| `emailaddress1` | `personComponents.workEmail.address` |  |
+| `firstname` | `person.name.firstName` |  |
+| `fullname` | `person.name.fullName` |  |
+| `lastname` | `person.name.lastName` |  |
+| `jobtitle` | `extendedWorkDetails.jobTitle` |  |
+| `middlename` | `person.name.middleName` |  |
+| `mobilephone` | `mobilePhone.number` |  |
+| `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |  |
+| `salutation` | `person.name.courtesyTitle` |  |
+| `telephone1` | `workPhone.number` |  |
 
 {style="table-layout:auto"}
 
@@ -240,7 +240,7 @@ ht-degree: 8%
 
 例如，`genderCode`欄位包含兩個選項：
 
-| 值 | 標籤 |
+| 價值 | 標籤 |
 | --- | --- |
 | 1 | `male` |
 | 2 | `female` |
@@ -253,7 +253,7 @@ ht-degree: 8%
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-在此案例中，如果索引鍵在選項中找到，則值對應到索引鍵；如果存在`default`但找不到索引鍵，則值為`default`。 如果選項為`null`或沒有`default`且找不到金鑰，則值對應至`null`。
+在此案例中，如果索引鍵在選項中找到，則值對應到索引鍵；如果存在`default`但找不到索引鍵，則值為`default`。 如果選項為`null`或沒有`null`且找不到金鑰，則值對應至`default`。
 
 #### 使用計算欄位
 
@@ -265,4 +265,4 @@ ht-degree: 8%
 >
 >上述作業的巢狀反複專案類似於： `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`。
 
-如需詳細資訊，請參閱 [!DNL Data Prep][&#128279;](../../../../data-prep/functions.md##logical-operators)中邏輯運運算元的檔案
+如需詳細資訊，請參閱[中邏輯運運算元的 [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)檔案

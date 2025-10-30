@@ -5,7 +5,7 @@ title: 使用JupyterLab Notebooks建立模型
 type: Tutorial
 description: 本教學課程將逐步引導您完成使用JupyterLab Notebooks配方產生器範本建立配方所需的步驟。
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 0%
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 下列影片教學課程說明Luma傾向性模型筆記本：
 
->[!VIDEO](https://video.tv.adobe.com/v/3452503?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### 需求檔案 {#requirements-file}
 
@@ -93,13 +93,13 @@ data_access_sdk_python
 
 組態檔`training.conf`和`scoring.conf`是用來指定您要用來訓練和評分以及新增超引數的資料集。 培訓和評分有不同的設定。
 
-為了讓模型執行訓練，您必須提供`trainingDataSetId`、`ACP_DSW_TRAINING_XDM_SCHEMA`和`tenantId`。 此外，若要評分，您必須提供`scoringDataSetId`、`tenantId`和`scoringResultsDataSetId `。
+為了讓模型執行訓練，您必須提供`trainingDataSetId`、`ACP_DSW_TRAINING_XDM_SCHEMA`和`tenantId`。 此外，若要評分，您必須提供`scoringDataSetId`、`tenantId`和`scoringResultsDataSetId`。
 
 若要尋找資料集和結構描述ID，請前往左側導覽列（資料夾圖示下）之Notebooks內的資料標籤![資料標籤](../images/jupyterlab/create-recipe/dataset-tab.png)。 需要提供三個不同的資料集ID。 `scoringResultsDataSetId`是用來儲存模型評分結果，且應為空白資料集。 這些資料集先前是在[必要資產](#assets)步驟中建立的。
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
-在[結構描述](https://platform.adobe.com/)**[和](https://platform.adobe.com/schema)資料集**&#x200B;**[索引標籤下的](https://platform.adobe.com/dataset/overview)Adobe Experience Platform**&#x200B;中可以找到相同的資訊。
+在[結構描述](https://platform.adobe.com/)**[和](https://platform.adobe.com/schema)資料集****[索引標籤下的](https://platform.adobe.com/dataset/overview)Adobe Experience Platform**&#x200B;中可以找到相同的資訊。
 
 競爭後，您的訓練和評分設定應類似於以下熒幕擷圖：
 

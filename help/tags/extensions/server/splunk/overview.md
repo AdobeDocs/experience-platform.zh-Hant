@@ -2,9 +2,9 @@
 title: Splunk擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Splunk擴充功能。
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '958'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Splunk使用持有人權杖作為驗證機制，與Splunk事件收集器API通�
 
 行銷團隊可在下列使用案例中使用此擴充功能：
 
-| 使用實例 | 說明 |
+| 使用案例 | 說明 |
 | --- | --- |
 | 客戶行為分析 | 組織可以從其網站擷取客戶互動事件資料，並將相關事件轉送至Splunk。 行銷與分析團隊可以在Splunk平台內執行後續分析，以瞭解關鍵使用者的互動和行為。 Splunk平台可用來產生圖表、儀表板或其他視覺效果，以告知業務利害關係人。 |
 | 在大型資料集上可擴充的搜尋 | 組織可以從網站擷取交易或對話輸入作為事件資料，並將事件轉送到Splunk。 然後，Analytics團隊可以利用Splunk的可擴充索引功能，篩選及處理大型資料集，以獲得任何業務分析並做出明智決策。 |
@@ -61,13 +61,13 @@ Splunk使用持有人權杖作為驗證機制，與Splunk事件收集器API通�
 
 在UI中選取的Splunk擴充功能的![設定按鈕](../../../images/extensions/server/splunk/configure.png)
 
-針對&#x200B;**[!UICONTROL HTTP事件收集器URL]**，請輸入您的Splunk平台執行個體位址和連線埠。 在&#x200B;**[!UICONTROL 存取Token]**&#x200B;下，輸入您的[!DNL Event Collector Token]值。 完成後，選取&#x200B;**[!UICONTROL 儲存]**。
+針對&#x200B;**[!UICONTROL HTTP Event Collector URL]**，輸入您的Splunk平台執行個體位址和連線埠。 在&#x200B;**[!UICONTROL Access Token]**&#x200B;底下，輸入您的[!DNL Event Collector Token]值。 完成後，選取&#x200B;**[!UICONTROL Save]**。
 
 ![組態選項已在UI中填寫](../../../images/extensions/server/splunk/input.png)
 
 ## 設定事件轉送規則 {#config_rule}
 
-開始建立新的事件轉送規則[規則](../../../ui/managing-resources/rules.md)，並視需要設定其條件。 選取規則的動作時，請選取[!UICONTROL Splunk]擴充功能，然後選取[!UICONTROL 建立事件]動作型別。 似乎有其他控制項可進一步設定Splunk事件。
+開始建立新的事件轉送規則[規則](../../../ui/managing-resources/rules.md)，並視需要設定其條件。 選取規則的動作時，請選取[!UICONTROL Splunk]擴充功能，然後選取[!UICONTROL Create Event]動作型別。 似乎有其他控制項可進一步設定Splunk事件。
 
 ![定義動作組態](../../../images/extensions/server/splunk/action-configurations.png)
 
@@ -75,13 +75,13 @@ Splunk使用持有人權杖作為驗證機制，與Splunk事件收集器API通�
 
 | 欄位名稱 | 說明 |
 | --- | --- |
-| [!UICONTROL 事件&#x200B;]<br><br>**（必要）** | 指定您要如何提供事件資料。 事件資料可以指派給HTTP請求中JSON物件內的`event`索引鍵，也可以是原始文字。 `event`金鑰與JSON事件封包內的中繼資料金鑰位於相同層級。 在`event`鍵值大括弧內，資料可以採行您所需的任何形式（例如字串、數字、其他JSON物件等）。 |
-| [!UICONTROL 主機] | 您傳送資料之來源使用者端的主機名稱。 |
-| [!UICONTROL Source型別] | 要指派給事件資料的來源型別。 |
+| [!UICONTROL Event]<br><br>**（必要）** | 指定您要如何提供事件資料。 事件資料可以指派給HTTP請求中JSON物件內的`event`索引鍵，也可以是原始文字。 `event`金鑰與JSON事件封包內的中繼資料金鑰位於相同層級。 在`event`鍵值大括弧內，資料可以採行您所需的任何形式（例如字串、數字、其他JSON物件等）。 |
+| [!UICONTROL Host] | 您傳送資料之來源使用者端的主機名稱。 |
+| [!UICONTROL Source Type] | 要指派給事件資料的來源型別。 |
 | [!UICONTROL Source] | 要指派給事件資料的來源值。 例如，如果您從正在開發的應用程式傳送資料，請將此索引鍵設為應用程式的名稱。 |
-| [!UICONTROL 索引] | 事件資料索引的名稱。 如果權杖設定了索引引數，您在此指定的索引必須在允許的索引清單中。 |
-| [!UICONTROL 時間] | 事件時間。 預設時間格式為UNIX時間（格式為`<sec>.<ms>`），取決於您的當地時區。 例如，`1433188255.500`表示紀元後1433188255秒和500毫秒，或2015年6月1日星期一晚上7:50:55 GMT。 |
-| [!UICONTROL 欄位] | 指定原始JSON物件或包含要在索引時間定義的明確自訂欄位的一組索引鍵/值組。  `fields`金鑰不適用於原始資料。<br><br>包含`fields`屬性的要求必須傳送至`/collector/event`端點，否則將不會編制索引。 如需詳細資訊，請參閱有關[索引欄位擷取](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC)的Splunk檔案。 |
+| [!UICONTROL Index] | 事件資料索引的名稱。 如果權杖設定了索引引數，您在此指定的索引必須在允許的索引清單中。 |
+| [!UICONTROL Time] | 事件時間。 預設時間格式為UNIX時間（格式為`<sec>.<ms>`），取決於您的當地時區。 例如，`1433188255.500`表示紀元後1433188255秒和500毫秒，或2015年6月1日星期一晚上7:50:55 GMT。 |
+| [!UICONTROL Fields] | 指定原始JSON物件或包含要在索引時間定義的明確自訂欄位的一組索引鍵/值組。  `fields`金鑰不適用於原始資料。<br><br>包含`fields`屬性的要求必須傳送至`/collector/event`端點，否則將不會編制索引。 如需詳細資訊，請參閱有關[索引欄位擷取](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC)的Splunk檔案。 |
 
 ### 驗證Splunk中的資料 {#validate}
 

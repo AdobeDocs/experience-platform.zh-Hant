@@ -5,7 +5,7 @@ title: 使用流量服務API為Advertising來源建立資料流
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商廣告應用程式擷取資料，以及使用來源聯結器和Flow Service API將其擷取至Experience Platform的步驟。
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1351'
 ht-degree: 2%
@@ -209,7 +209,7 @@ curl -X POST \
 
 為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
+若要建立對應集，請在提供您的目標XDM結構描述`mappingSets`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`$id`端點提出POST要求。
 
 **API格式**
 
@@ -693,4 +693,4 @@ curl -X POST \
 依照本教學課程所述，您已建立來源聯結器，以依排程從廣告系統收集資料。 下游Experience Platform服務（例如[!DNL Real-Time Customer Profile]和[!DNL Data Science Workspace]）現在可以使用內送資料。 如需更多詳細資訊，請參閱下列檔案：
 
 * [即時客戶輪廓概觀](../../../../profile/home.md)
-* [資料科學工作區總覽](../../../../data-science-workspace/home.md)
+* [資料科學工作區概觀](../../../../data-science-workspace/home.md)

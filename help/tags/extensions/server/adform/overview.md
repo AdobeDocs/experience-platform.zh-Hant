@@ -3,10 +3,11 @@ keywords: adform整合； adform；
 title: Adform整合以進行未經驗證的重新目標定位
 description: 此Adobe Experience Platform整合可讓您根據ECID重新鎖定使用者。
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 23da6e12b1f5bdc37240d7aa11a44e040b29e3f7
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '726'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -47,7 +48,7 @@ Adform可協助您：
 2. **CDP或連線SKU**：您必須擁有Adobe客戶資料平台(CDP) Prime、Ultimate SKU或連線SKU，才能啟用順暢的使用者端和伺服器端通訊。
 
 3. **Adobe Experience Platform Edge Network設定**：
-   * 確保已將Edge Network設定為支援即時事件轉送，以進行離站重新目標定位。 如需詳細資訊，請參閱Adobe的[事件轉送快速入門手冊](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/event-forwarding/getting-started)。
+   * 確保已將Edge Network設定為支援即時事件轉送，以進行離站重新目標定位。 如需詳細資訊，請參閱Adobe的[事件轉送快速入門手冊](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started)。
    * 此步驟對於有效率地將資料傳輸至Adform的伺服器端端點至關重要。
 
 這些先決條件設定完成之後，您就可以繼續設定和部署[!DNL Adform]擴充功能。
@@ -105,6 +106,7 @@ Adform可協助您：
 ## 驗證和部署
 
 請確認擴充功能已安裝且設定正確，且已對應所有必要的資料元素，包括：
+
 * [ECID](/help/identity-service/features/ecid.md)
 * 頁面名稱
 * 轉介URL

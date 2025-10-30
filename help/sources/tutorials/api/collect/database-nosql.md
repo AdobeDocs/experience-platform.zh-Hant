@@ -3,7 +3,7 @@ title: 使用流程服務API建立資料庫來源的資料流
 type: Tutorial
 description: 瞭解如何使用流量服務API建立資料流，並將資料庫中的資料擷取到Experience Platform中。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 2%

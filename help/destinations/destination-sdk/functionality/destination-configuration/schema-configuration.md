@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定合作夥伴結構。
 title: 合作夥伴結構描述設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1912'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Experience Platform使用結構描述，以一致且可重複使用的方式說�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -167,6 +167,7 @@ Destination SDK支援建立動態合作夥伴方案。 相對於靜態結構描�
 >[!NOTE]
 >
 >目前支援下列必要對應的組合：
+>
 >* 您可以設定必要來源欄位和必要目的地欄位。 在此情況下，使用者無法編輯或選取兩個欄位中的任何一個，並且只能檢視選取專案。
 >* 您只能設定必要的目的地欄位。 在此情況下，使用者可選取來源欄位，以對應至目的地。
 >
@@ -203,9 +204,9 @@ Destination SDK支援建立動態合作夥伴方案。 相對於靜態結構描�
 
 {style="table-layout:auto"}
 
-因此，Experience Platform UI中的&#x200B;**[!UICONTROL Source欄位]**&#x200B;和&#x200B;**[!UICONTROL 目標欄位]**&#x200B;區段都會呈現灰色。
+因此，Experience Platform UI中的&#x200B;**[!UICONTROL Source field]**&#x200B;和&#x200B;**[!UICONTROL Target field]**&#x200B;區段都會呈現灰色。
 
-![&#x200B; UI啟用流程中所需對應的影像。](../../assets/functionality/destination-configuration/required-mappings-2.png)
+![ UI啟用流程中所需對應的影像。](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
 >[!TAB 必要的目的地對應]
 
@@ -233,9 +234,9 @@ Destination SDK支援建立動態合作夥伴方案。 相對於靜態結構描�
 
 {style="table-layout:auto"}
 
-因此，Experience Platform UI中的&#x200B;**[!UICONTROL Target欄位]**&#x200B;區段會呈現灰色，而&#x200B;**[!UICONTROL Source欄位]**&#x200B;區段則會作用中，使用者可以與其互動。 **[!UICONTROL 必要索引鍵]**&#x200B;和&#x200B;**[!UICONTROL 重複資料刪除索引鍵]**&#x200B;選項作用中，使用者無法變更它們。
+因此，Experience Platform UI中的&#x200B;**[!UICONTROL Target field]**&#x200B;區段會呈現灰色，而&#x200B;**[!UICONTROL Source field]**&#x200B;區段則會作用中，使用者可以與其互動。 **[!UICONTROL Mandatory key]**&#x200B;和&#x200B;**[!UICONTROL Deduplication key]**&#x200B;選項為作用中，使用者無法變更它們。
 
-![&#x200B; UI啟用流程中所需對應的影像。](../../assets/functionality/destination-configuration/required-mappings-1.png)
+![ UI啟用流程中所需對應的影像。](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 >[!ENDTABS]
 

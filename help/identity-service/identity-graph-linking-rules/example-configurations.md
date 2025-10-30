@@ -2,7 +2,7 @@
 title: 身分圖表連結規則設定指南
 description: 瞭解您可以使用身分圖表連結規則來設定的不同實作型別。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -407,6 +407,7 @@ CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
 >[!NOTE]
 >
 >若要完成下列實作，您必須使用身分符號（區分大小寫）建立自訂名稱空間：
+>
 >* `CRMID`
 >* `loginID`
 

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 24%
+source-wordcount: '887'
+ht-degree: 26%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform 現有功能的更新：
 
 標準化和互通性是[!DNL Experience Platform]背後的重要概念。 由Adobe驅動的[!DNL Experience Data Model] (XDM)致力於標準化客戶體驗資料並定義客戶體驗管理的結構描述。
 
-XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
+XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析洞察、透過區段定義客戶客群，並基於個人化目的使用客戶屬性。
 
 **新功能**
 
@@ -44,7 +44,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何�
 
 ## [!DNL Privacy Service] {#privacy}
 
-新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。 Adobe Experience Platform [!DNL Privacy Service] 提供 RESTful API 和使用者介面，協助您管理這些來自客戶的資料請求。透過 [!DNL Privacy Service]，您可以提交請求來存取和刪除 Adobe Experience Cloud 應用程式中的私人或個人客戶資料，從而促進法律和組織隱私法規的自動化合規。
+新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。 Adobe Experience Platform [!DNL Privacy Service] 提供 RESTful API 和使用者介面，協助您管理這些來自客戶的資料請求。透過 [!DNL Privacy Service]，您可以提交請求來存取和刪除 Adobe Experience Cloud 應用程式中的私人或個人客戶資料，進而促進法律和組織隱私法規的自動化合規。
 
 **新功能**
 
@@ -54,7 +54,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何�
 | 新的 API 端點 | [!DNL Privacy Service] API的基礎路徑已從`/data/privacy/gdpr`更新為`/data/core/privacy/jobs`。 |
 | 新規定要提供 `regulation` 屬性 | 在 [!DNL Privacy Service] API 中建立新作業時，必須在請求承載中提供 `regulation` 屬性，以便指明是根據哪個規則追蹤該作業。接受的值為`gdpr`和`ccpa`。 |
 | 支援 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service]現在接受來自Adobe [!DNL Primetime Authentication]的存取/刪除要求，使用`primetimeAuthentication`作為其產品值。 |
-| Privacy Service UI增強功能 | GDPR和CCPA法規的個別工作追蹤頁面。 全新&#x200B;**法規型別**&#x200B;下拉式清單，可切換GDPR和CCPA的追蹤資料。 |
+| Privacy Service UI增強功能 | GDPR和CCPA法規的個別工作追蹤頁面。 新的&#x200B;**監管類型**&#x200B;下拉式選單可在 GDPR 和 CCPA 追蹤資料之間切換。 |
 
 **已知問題**
 
@@ -66,7 +66,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何�
 
 Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[!DNL Experience Platform]服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
+[!DNL Experience Platform]提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您進行驗證，並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間，並管理資料攝取輸送量。
 
 **新功能**
 
@@ -81,7 +81,7 @@ Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[
 | 類別 | 權限 | 說明 |
 |--- | --- | ---|
 | 資料攝取 | 管理來源 | 讀取、建立、編輯和停用來源的存取權。 |
-| 資料攝取 | 檢視來源 | 以唯讀方式存取&#x200B;**[!UICONTROL 目錄]**&#x200B;索引標籤中的可用來源，以及&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤中的已驗證來源。 |
+| 資料攝取 | 檢視來源 | 對&#x200B;**[!UICONTROL Catalog]**&#x200B;索引標籤中的可用來源及&#x200B;**[!UICONTROL Browse]**&#x200B;索引標籤中的已驗證來源具有唯讀存取權。 |
 
 **已知問題**
 
@@ -104,7 +104,7 @@ Adobe Experience Platform可從外部來源擷取資料，同時允許您使用[
 | 類別 | 權限 | 說明 |
 |--- | --- | ---|
 | 目標 | 管理目的地 | 讀取、建立、編輯和停用目的地的存取權。 |
-| 目標 | 檢視目的地 | 以唯讀方式存取&#x200B;**[!UICONTROL 目錄]**&#x200B;索引標籤中的可用目的地，以及&#x200B;**瀏覽**&#x200B;索引標籤中的已驗證目的地。 |
+| 目標 | 檢視目的地 | 以唯讀方式存取&#x200B;**[!UICONTROL Catalog]**&#x200B;索引標籤中的可用目的地，以及&#x200B;**瀏覽**&#x200B;索引標籤中的已驗證目的地。 |
 | 目標 | 啟用目的地 | 啟用目的地資料的功能。 此許可權需要將「管理目的地」或「檢視目的地」新增至產品設定檔。 |
 
 **已知問題**

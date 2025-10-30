@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；擷取的資料；疑難排解；faq；擷取；批次擷取；批次擷取；
+keywords: Experience Platform；首頁；熱門主題；擷取資料；疑難排解；faq；擷取；批次擷取；批次擷取；
 solution: Experience Platform
 title: 批次擷取疑難排解指南
 description: 本檔案可協助回答有關Adobe Experience Platform批次資料擷取API的常見問題。
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 1%
@@ -186,7 +186,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 作用中/成功 | x | 已成功將批次從階段提升到主階段，現在可用於下游消耗。 **注意：**&#x200B;作用中及成功可互換使用。 |
 | 已封存 | | 批次已封存到冷儲存。 |
 | 失敗/失敗 | | 因設定錯誤和/或資料錯誤而導致的終端機狀態。 系統會記錄可操作錯誤及批次，讓使用者端修正並重新提交資料。 **注意：**&#x200B;失敗和失敗可互換使用。 |
-| 停用中 | x | 批次已成功提升，但已還原或已過期。 該批次將無法再用於下游使用，但基礎資料將保留在主版中，直到其被保留、封存或以其他方式刪除。 |
+| 非使用中 | x | 批次已成功提升，但已還原或已過期。 該批次將無法再用於下游使用，但基礎資料將保留在主版中，直到其被保留、封存或以其他方式刪除。 |
 | 載入中 | | 使用者端目前正在寫入批次的資料。 此時批次&#x200B;**尚未**&#x200B;準備好進行升級。 |
 | 已載入 | | 使用者端已完成批次資料的寫入。 批次已準備好進行升級。 |
 | 已保留 | | 資料已從Master和Adobe Data Lake的指定封存中取出。 |
@@ -272,4 +272,4 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 200 | 該批次已接受處理，並將轉換為最終狀態，例如「作用中」或「失敗」。 提交之後，可以使用`GetBatch`端點監視批次。 |
 | 400 | 錯誤請求。 如果批次中有遺漏或重疊的區塊，則會傳回。 |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

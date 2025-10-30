@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；流程服務；
 title: 使用流程服務API建立隨選擷取的流程執行
 description: 瞭解如何使用流程服務API建立隨選擷取的流程執行
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 1%

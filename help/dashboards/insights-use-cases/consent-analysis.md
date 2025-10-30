@@ -2,9 +2,9 @@
 title: 同意分析和追蹤
 description: 瞭解如何建立同意分析儀表板，以追蹤使用者同意在一段時間內的趨勢。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1805'
 ht-degree: 0%
 
 ---
@@ -24,43 +24,43 @@ ht-degree: 0%
 
 ## 建立同意的對象 {#create-consent-audiences}
 
-若要建立同意儀表板，您必須先建立同意聯絡的所有設定檔對象。 若要導覽至Real-Time Customer Data Platform區段產生器，請在Experience Platform UI的左側導覽中選取&#x200B;**[!UICONTROL 對象]**。 從[!UICONTROL 對象]儀表板的[!UICONTROL 客戶]索引標籤中，選取檢視右上角的&#x200B;**[!UICONTROL 建立對象]**，然後選取&#x200B;**[!UICONTROL 建置規則]**。
+若要建立同意儀表板，您必須先建立同意聯絡的所有設定檔對象。 若要導覽至「Real-Time Customer Data Platform區段產生器」，請在Experience Platform UI的左側導覽中選取「**[!UICONTROL Audiences]**」。 從[!UICONTROL Customer]儀表板的[!UICONTROL Audiences]索引標籤中，選取檢視右上角的&#x200B;**[!UICONTROL Create audience]**，然後選取&#x200B;**[!UICONTROL Build rules]**。
 
-![具有[!UICONTROL 客戶]、[!UICONTROL 受眾]和[!UICONTROL 建立區段]的[!UICONTROL 受眾]儀表板已強調顯示。](../images/insights-use-cases/consent-analysis/create-audience.png)
+![反白顯示[!UICONTROL Audiences]、[!UICONTROL Customer]和[!UICONTROL Audiences]的[!UICONTROL Create segment]儀表板。](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-「區段產生器」隨即顯示。 接著，從可用選項中選取&#x200B;**[!UICONTROL XDM個別設定檔]**。 請參閱檔案以取得有關[規則產生器畫布](../../segmentation/ui/segment-builder.md#rule-builder-canvas)的詳細資訊。
+「區段產生器」隨即顯示。 接著，從可用選項中選取&#x200B;**[!UICONTROL XDM Individual Profile]**。 請參閱檔案以取得有關[規則產生器畫布](../../segmentation/ui/segment-builder.md#rule-builder-canvas)的詳細資訊。
 
-![含有[!UICONTROL XDM個別設定檔]屬性資料夾的區段產生器已反白顯示。](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
+![標示[!UICONTROL XDM Individual Profile]屬性資料夾的區段產生器。](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
-從可用選項中找出您的同意屬性。 選取&#x200B;**[!UICONTROL 同意和偏好設定]**。
+從可用選項中找出您的同意屬性。 選擇「**[!UICONTROL Consents and Preferences]**」。
 
 >[!NOTE]
 >
 >如果您在與Adobe建議欄位群組不同的屬性中維持您的使用者同意，則必須選取這些屬性，而不是下列屬性。
 
-在細分[&#128279;](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation)檔案中的處理同意上可找到更多資訊。
+在細分[檔案中的](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation)處理同意上可找到更多資訊。
 
-![含有[!UICONTROL 同意和偏好設定]屬性資料夾的區段產生器已反白顯示。](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
+![標示[!UICONTROL Consent and Preferences]屬性資料夾的區段產生器。](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
-會顯示各種同意和偏好設定選項。 由於此示範著重於同意透過各種行銷管道聯絡，因此請選取&#x200B;**[!UICONTROL 行銷偏好設定]**。
+會顯示各種同意和偏好設定選項。 由於此示範著重於同意透過各種行銷管道聯絡，因此請選取「**[!UICONTROL Marketing Preferences]**」。
 
-![反白顯示[!UICONTROL 行銷偏好設定]資料夾的區段產生器。](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
+![反白顯示[!UICONTROL Marketing Preferences]資料夾的區段產生器。](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
 隨即顯示行銷偏好設定清單。 雖然此範例使用案例聚焦於電子郵件、簡訊和呼叫，但您也可以為任何其他組合或整個選項建立深入分析。 針對每個管道，執行下列步驟以建立對象。
 
-若要開始設定對象，請選取&#x200B;**[!UICONTROL 接收簡訊]** / **[!UICONTROL 接收電子郵件]** / **[!UICONTROL 接收通話]**。
+若要開始設定對象，請選取&#x200B;**[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]**。
 
 ![行銷的可用連絡人管道會在對象產生器中強調顯示。](../images/insights-use-cases/consent-analysis/channels.png)
 
-[!UICONTROL Subscriptions]資料夾隨即顯示。 從可用的選項中，選取&#x200B;**[!UICONTROL 選擇值]**&#x200B;屬性並拖曳至中央窗格，然後從下拉式清單中選取所需的值。 在此情況下，請選取&#x200B;**是（選擇加入）**。 接著，根據您的業務需求為對象命名，並提供好記的說明。
+[!UICONTROL Subscriptions]資料夾隨即顯示。 從可用的選項中，選取&#x200B;**[!UICONTROL Choice Value]**&#x200B;屬性並將其拖曳至中央窗格，然後從下拉式清單中選取所需的值。 在此情況下，請選取&#x200B;**是（選擇加入）**。 接著，根據您的業務需求為對象命名，並提供好記的說明。
 
 >[!NOTE]
 >
 >建議您建立的對象數量存在軟性限制。 如需詳細資訊，請參閱[分段護欄檔案](../../profile/guardrails.md#segmentation-guardrails)。
 
-![區段產生器中反白顯示[!UICONTROL 是（選擇加入）]值的[!UICONTROL 選擇值]屬性。 對象的名稱和說明也會反白顯示。](../images/insights-use-cases/consent-analysis/choice-value.png)
+![區段產生器中反白顯示[!UICONTROL Choice Value]值的[!UICONTROL Yes (opt-in)]屬性。 對象的名稱和說明也會反白顯示。](../images/insights-use-cases/consent-analysis/choice-value.png)
 
-建立必要的對象後，它們會列在[!UICONTROL 對象] [!UICONTROL 瀏覽]索引標籤中。
+建立必要的對象後，它們會列在[!UICONTROL Audiences] [!UICONTROL Browse]標籤中。
 
 >[!NOTE]
 >
@@ -72,13 +72,13 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 ## 客群重疊 {#audience-overlap}
 
-若要檢閱任何兩個同意對象之間的重疊，請將[!UICONTROL 依合併原則的對象重疊]新增到您的設定檔儀表板，並在下拉式選單中選取所需的對象。 如需有關insight的詳細資訊，請參閱檔案，瞭解如何將Widget [*依合併原則所重疊的對象*](../guides/profiles.md#audience-overlap-by-merge-policy)&#x200B;新增到您的儀表板。
+若要檢視任何兩個同意對象之間的重疊，請將[!UICONTROL Audience overlap by merge policy]新增到您的設定檔儀表板，並在下拉式選單中選取所需的對象。 如需有關insight的詳細資訊，請參閱檔案，瞭解如何將Widget [*依合併原則所重疊的對象*](../guides/profiles.md#audience-overlap-by-merge-policy)&#x200B;新增到您的儀表板。
 
 <!-- Image needs updating to night mode -->
 
 ![包含受眾重疊的設定檔控制面板（由醒目提示的合併原則Widget）。 Widget會視覺化兩個同意對象之間的重疊。](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
 
-您可以在「對象」儀表板的「對象重疊」報表中，檢視使用者同意接收所有其他對象之來電的所有對象重疊。 若要檢視同意對象的重疊，請先導覽至[!UICONTROL 對象] [!UICONTROL 概述]標籤。 您可以從此將[!UICONTROL 對象重疊報表] Widget新增至「對象」儀表板。 建立Widget後，從頁面頂端的對象概觀下拉式選單中選取&#x200B;**[!UICONTROL 使用者同意呼叫]**&#x200B;對象。 接著，在對象重疊報表Widget中選取「**[!UICONTROL 檢視更多]**」，最多可檢視50個最上層重疊，以及有關所選區段的最少重疊50個。
+您可以在「對象」儀表板的「對象重疊」報表中，檢視使用者同意接收所有其他對象之來電的所有對象重疊。 若要檢視同意對象的重疊，請先導覽至[!UICONTROL Audiences] [!UICONTROL Overview]標籤。 從那裡，您可以將[!UICONTROL Audience overlap report] Widget新增到「對象」儀表板。 建立Widget後，從頁面頂端的對象概觀下拉式選單中選取&#x200B;**[!UICONTROL User consented to calls]**&#x200B;對象。 接著，在對象重疊報表Widget中選取&#x200B;**[!UICONTROL View more]**，以檢視最多50個最上層重疊，以及與所選區段相關的最少重疊50個。
 
 <!-- Image needs updating to night mode -->
 
@@ -92,7 +92,7 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 ## 客群人數趨勢 {#audience-size-trends}
 
-當您建立以同意為基礎的受眾時，會自動顯示自您建立受眾日期起最多12個月的趨勢。 若要掌握您客戶同意的完整功能趨勢，請將下列Widget新增至[!UICONTROL 區段] [!UICONTROL 概觀]頁面。 這些見解提供強大的方式，可追蹤您的同意如何隨著時間改變。 它們甚至會與您平行執行的任何行銷活動建立關聯，而這些行銷活動可能會對同意產生正面或負面的影響。 為這些Widget提供的說明適用於同意使用案例。
+當您建立以同意為基礎的受眾時，會自動顯示自您建立受眾日期起最多12個月的趨勢。 若要擁有客戶同意的完整功能趨勢，請將下列Widget新增至[!UICONTROL Segments] [!UICONTROL Overview]頁面。 這些見解提供強大的方式，可追蹤您的同意如何隨著時間改變。 它們甚至會與您平行執行的任何行銷活動建立關聯，而這些行銷活動可能會對同意產生正面或負面的影響。 為這些Widget提供的說明適用於同意使用案例。
 
 - [對象人數趨勢](../guides/audiences.md#audience-size-trend)：此Widget提供方法來追蹤您個別同意在一段時間內的變化。
 - [對象人數變更趨勢](../guides/audiences.md#audience-size-change-trend)：此Widget會追蹤您客戶同意的每日變更情況。 例如，如果客戶同意的計數下降100,000，則您可瞭解每天發生的變更。
@@ -104,7 +104,7 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 ## 對象總覽儀表板 {#audiences-overview-dashboard}
 
-在您建立同意相關的對象（例如「同意使用簡訊的使用者」）後，您可以新增適當的介面工具至對象總覽儀表板，檢視有關對象的重要個人化同意資訊。 導覽至[!UICONTROL 對象] [!UICONTROL 總覽]，並從Widget資料庫新增您選擇的Widget。 您可使用[!UICONTROL 修改儀表板]功能，調整新增至儀表板檢視的任何Widget大小並移動。 您的個人化檢視可以包含深入分析，例如一段時間內的趨勢（最長12個月）、與其他對象的重疊，以及對象的身分組成。 範例檢視顯示如下。
+在您建立同意相關的對象（例如「同意使用簡訊的使用者」）後，您可以新增適當的介面工具至對象總覽儀表板，檢視有關對象的重要個人化同意資訊。 導覽至[!UICONTROL Audiences] [!UICONTROL Overview]，並從Widget資料庫新增您選擇的Widget。 您可使用[!UICONTROL Modify dashboard]功能調整新增至儀表板檢視的任何Widget大小及移動它。 您的個人化檢視可以包含深入分析，例如一段時間內的趨勢（最長12個月）、與其他對象的重疊，以及對象的身分組成。 範例檢視顯示如下。
 
 ![具有使用者同意簡訊受眾的受眾儀表板，在全域受眾下拉式選單中反白顯示。](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
@@ -112,11 +112,11 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 您也可以使用使用者定義的儀表板，建置您自己的Widget。 建立您自己的Widget可讓您完全控制Widget的型別，並讓您直接在Adobe Real-Time CDP中靈活新增篩選器及其他專案。
 
-例如，如果您想在同一張圖表顯示多個同意對象的趨勢，以便檢視每個同意偏好設定隨著時間的變化。 這類視覺效果可在使用者定義控制面板中以最少的步驟和一次性設定完成。 首先，在左側導覽中選取&#x200B;**[!UICONTROL 儀表板]**。 [!UICONTROL 儀表板]工作區會出現。 然後選取&#x200B;**[!UICONTROL 建立儀表板]**。 有關如何[建立控制面板和自訂Widget](../standard-dashboards.md)的完整說明，請參閱使用者定義控制面板指南。
+例如，如果您想在同一張圖表顯示多個同意對象的趨勢，以便檢視每個同意偏好設定隨著時間的變化。 這類視覺效果可在使用者定義控制面板中以最少的步驟和一次性設定完成。 首先，在左側導覽中選取&#x200B;**[!UICONTROL Dashboards]**。 [!UICONTROL Dashboards]工作區會出現。 然後選取&#x200B;**[!UICONTROL Create dashboard]**。 有關如何[建立控制面板和自訂Widget](../standard-dashboards.md)的完整說明，請參閱使用者定義控制面板指南。
 
 ![反白顯示包含控制面板和「建立」控制面板的工作區。](../images/standard-dashboards/create-dashboard.png)
 
-當您在Widget撰寫器中[選取您的資料模型](../standard-dashboards.md#select-data-model)時，請依序選取`CDPInsights`及&#x200B;**[!UICONTROL 下一步]**。 [!UICONTROL 選取資料表]對話方塊就會顯示。
+當您在Widget撰寫器中[選取您的資料模型](../standard-dashboards.md#select-data-model)時，請依序選取`CDPInsights`及&#x200B;**[!UICONTROL Next]**。 [!UICONTROL Select table]對話方塊隨即顯示。
 
 ![反白顯示CDPInsights模型的[選取資料模型]對話方塊。](../images/standard-dashboards/select-data-model-dialog.png)
 
@@ -126,17 +126,17 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 在Widget撰寫器中填入您所選表格的資料後，請執行下列步驟：
 
-- [搜尋`[!UICONTROL date]`的[!UICONTROL 屬性]](../standard-dashboards.md#add-filter-attributes)，然後使用+圖示將`[!UICONTROL date]`屬性從下拉式功能表新增至X軸。
+- [搜尋[!UICONTROL Attributes]](../standard-dashboards.md#add-filter-attributes)的`[!UICONTROL date]`，然後使用+圖示將`[!UICONTROL date]`屬性從下拉式功能表新增到X軸。
   ![加圖示和下拉式功能表反白顯示的Widget Composer。](../images/standard-dashboards/attributes-dropdown.png)
-- 搜尋[!UICONTROL 屬性]以尋找`[!UICONTROL count_of_profiles]`，然後使用+圖示將`[!UICONTROL count_of_profiles]`屬性從下拉式功能表新增至Y軸。
-- 選取[!UICONTROL Y軸]欄位中的`...` （橢圓）圖示，然後從下拉式選單中選取[!UICONTROL SUM]彙總函式。
-  ![Widget撰寫器的「同意」功能會對Widget進行趨勢分析，並反白顯示資料模型、表格及Y軸下拉式功能表和SUM功能。](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
-- 選取[!UICONTROL 標籤]下拉式功能表，並將圖表型別變更為[!UICONTROL 線]。
-- 搜尋`[!UICONTROL segment_name]`的[!UICONTROL 屬性]，然後使用+圖示將`segment_name`新增為下拉式功能表中的[!UICONTROL 篩選器]。 [!UICONTROL 篩選器：區段名稱]對話方塊就會顯示。 選取先前建立且與同意相關的對象。 在此範例中，選取&#x200B;**[!UICONTROL 同意撥打電話的使用者]**、**[!UICONTROL 同意簡訊的使用者]**&#x200B;和&#x200B;**[!UICONTROL 同意傳送電子郵件的使用者]**，接著選取&#x200B;**[!UICONTROL 套用]**。
-- 搜尋`[!UICONTROL segment_name]`的[!UICONTROL 屬性]，然後從下拉式選單中選取+圖示，將`segment_name`新增為[!UICONTROL 色彩]。
-- 開啟[[!UICONTROL 屬性]面板](../standard-dashboards.md#widget-properties)，並提供適當的[!UICONTROL Widget標題]和[!UICONTROL 軸標籤]。
+- 搜尋[!UICONTROL Attributes]中的`[!UICONTROL count_of_profiles]`，然後使用+圖示將`[!UICONTROL count_of_profiles]`屬性從下拉式功能表中新增到Y軸。
+- 在`...`欄位中選取[!UICONTROL Y-axis] （省略符號）圖示，然後從下拉式選單中選取[!UICONTROL SUM]彙總函式。
+  ![Widget Composer同意將趨勢化Widget，並反白顯示資料模型、表格和Y軸下拉式功能表及SUM功能。](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+- 選取[!UICONTROL Marks]下拉式功能表，並將圖表型別變更為[!UICONTROL Line]。
+- 搜尋[!UICONTROL Attributes]的`[!UICONTROL segment_name]`，然後使用+圖示從下拉式功能表中新增`segment_name`做為[!UICONTROL Filter]。 [!UICONTROL Filter: Segment_name]對話方塊隨即顯示。 選取先前建立且與同意相關的對象。 在此範例中，選取&#x200B;**[!UICONTROL Users Consented to Calls]**、**[!UICONTROL Users Consented to SMS]**&#x200B;和&#x200B;**[!UICONTROL Users Consented to Email]**，然後選取&#x200B;**[!UICONTROL Apply]**。
+- 搜尋[!UICONTROL Attributes]中的`[!UICONTROL segment_name]`，然後從下拉式選單中選取+圖示將`segment_name`新增為[!UICONTROL Color]。
+- 開啟[ [!UICONTROL Properties]面板](../standard-dashboards.md#widget-properties)並提供適當的[!UICONTROL Widget title]和[!UICONTROL Axis label]。
   ![含有屬性圖示和Widget標題的Widget Composer已反白顯示。](../images/standard-dashboards/properties-panel.png)
-- 選取&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以確認您的設定。
+- 選取&#x200B;**[!UICONTROL Save and close]**&#x200B;以確認您的設定。
 
 >[!TIP]
 >

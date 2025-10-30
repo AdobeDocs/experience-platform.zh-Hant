@@ -2,10 +2,10 @@
 title: AEM資產分析擴充功能概觀
 description: 瞭解Adobe Experience Platform中的AEM Asset Insights標籤擴充功能。
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 82%
+source-wordcount: '1046'
+ht-degree: 87%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 82%
 >
 >Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-此擴充功能旨在搭配 [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant) 共同使用。更具體來說，這將會取代「pageTracker」處理程序和內嵌程式碼。完成設定後，此擴充功能會將 Asset 的&#x200B;*「曝光數」*&#x200B;和&#x200B;*「點擊次數」*&#x200B;量度傳送至 Adobe Analytics，再由系統匯入 AEM Asset Insights 報表。之後，您就可以使用 AEM Asset Insights 或 Adobe Analytics 專案工作區查看 Asset 量度的相關報表。
+此擴充功能旨在搭配 [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) 共同使用。更具體來說，這將會取代「pageTracker」處理程序和嵌入程式碼。完成設定後，此擴充功能會將 Asset 的&#x200B;*「曝光數」*&#x200B;和&#x200B;*「點擊次數」*&#x200B;量度傳送至 Adobe Analytics，再由系統匯入 AEM Asset Insights 報表。之後，您就可以使用 AEM Asset Insights 或 Adobe Analytics 專案工作區查看 Asset 量度的相關報表。
 
 ## 擴充功能必備條件
 
@@ -28,22 +28,23 @@ Analytics 中的 AEM Asset 報表包含三個 AEM 維度：
 * 已點擊資產
 
 此外還有兩個量度：
+
 * 資產曝光數
 * 資產點擊次數
 
-必須以Analytics管理員身分啟用這些報表(選取&#x200B;**[!UICONTROL Analytics] > [!UICONTROL 管理員] > [!UICONTROL 報表套裝] > `<report suite>` > [!UICONTROL 編輯設定] > [!UICONTROL AEM] > [!UICONTROL AEM Assets報表]**)，才能使用此擴充功能填入這些報表。
+若要使用此擴充功能填入報表，必須先以 Analytics 管理員身分啟用報表 (依序選取「**[!UICONTROL Analytics]> [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Edit Settings] > [!UICONTROL AEM] >[!UICONTROL AEM Assets Reporting]**」)。
 
 Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必須安裝至相同的Web屬性。
 
 ### Adobe Experience Manager (AEM)
 
-1. 啟用 [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。在AEM中，選取&#x200B;**[!UICONTROL 工具> Assets]**，然後開啟&#x200B;**[!UICONTROL Insights設定]**&#x200B;面板。
+1. 啟用 [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。進入 AEM 後選取「**[!UICONTROL Tools > Assets]**」，接著開啟「**[!UICONTROL Insights Configuration]**」面板。
 
 1. 停用 UUID 追蹤功能。
 
    >[!IMPORTANT]
    >
-   >如果勾選AEM資產組態設定&#x200B;**[!UICONTROL 停用UUID追蹤]**，此擴充功能會&#x200B;*無*&#x200B;功能。 這項設定預設為未勾選。
+   >如果您已勾選 AEM Asset 組態設定「**[!UICONTROL Disable UUID Tracking]**」，此擴充功能會&#x200B;*無法*&#x200B;運作。這項設定預設為未勾選。
 
    ![停用 UUID 追蹤功能](images/disableassets.jpg)
 
@@ -53,15 +54,15 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
 ### 將AEM與標籤整合
 
-透過Adobe I/O完成[Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=zh-Hant)與Adobe Experience Manager的建議整合。
+透過Adobe I/O完成[Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)與Adobe Experience Manager的建議整合。
 
-1. [使用Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=zh-Hant)連線AEM與標籤。
+1. [使用Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html)連線AEM與標籤。
 
-2. [建立Adobe Experience Platform Cloud Service設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=zh-Hant)。
+2. [建立Adobe Experience Platform Cloud Service設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html)。
 
 ### 在 AEM 中啟用 Asset Insight
 
-如需啟用 Asset Insights 的相關說明，請參閱 [Experience Manager 6.5 資產使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。
+如需啟用 Asset Insights 的相關說明，請參閱 [Experience Manager 6.5 資產使用手冊](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。
 
 ### 啟用資產的 UUID 追蹤功能
 
@@ -132,7 +133,7 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
    * 瀏覽器的檢視區從未出現任何資產
 
-   * 頁面上的資產均未透過 AEM 啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。
+   * 頁面上的資產均未透過 AEM 啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。
 
 **點擊次數**
 
@@ -142,7 +143,7 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
 如果在系統產生的 Analytics 影像要求中 (顯示於下一頁)，`a.assets.idlist` 含有目的地頁面上顯示的資產 ID，且 `a.assets.clickedid` 列出訪客在原頁面上所選取資產的資產 ID，表示規則正確運作。
 
-如果影像要求中沒有 `a.assets.clickedid`，很可能是因為訪客選取的資產未在 AEM 中啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。
+如果影像要求中沒有 `a.assets.clickedid`，很可能是因為訪客選取的資產未在 AEM 中啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。
 
 **無目的地的點擊次數**
 
@@ -152,4 +153,4 @@ Adobe Experience Platform的&quot;*Adobe Analytics*&quot;標籤擴充功能必�
 
 在產生的 Analytics 影像要求中，如果 `a.assets.clickedid` 內有資產 ID，表示規則正確運作。
 
-如果影像要求中沒有 `a.assets.clickedid`，很可能是因為訪客選取的資產未在 AEM 中啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=zh-Hant)。
+如果影像要求中沒有 `a.assets.clickedid`，很可能是因為訪客選取的資產未在 AEM 中啟用 [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)。

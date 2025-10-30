@@ -5,7 +5,7 @@ title: 使用流程服務API建立付款來源的資料流
 type: Tutorial
 description: 本教學課程涵蓋從支付應用程式擷取資料，以及使用來源聯結器和API將其擷取至Experience Platform的步驟。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 2%
@@ -212,7 +212,7 @@ curl -X POST \
 
 為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請在提供您的目標XDM結構描述`$id`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`mappingSets`端點提出POST要求。
+若要建立對應集，請在提供您的目標XDM結構描述`mappingSets`和您要建立的對應集詳細資料時，對[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)的`$id`端點提出POST要求。
 
 **API格式**
 

@@ -2,9 +2,9 @@
 title: Google資料層擴充功能
 description: 瞭解Adobe Experience Platform中的Google Client Data Layer標籤擴充功能。
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Google資料層擴充功能可讓您在標籤實作中使用Google資料層。 此擴充功能可獨立使用，或同時與Google解決方案和Google的開放原始碼[資料層協助程式庫](https://github.com/google/data-layer-helper)搭配使用。
 
-Helper Library提供與Adobe Client Data Layer (ACDL)類似的事件導向功能。 Google Data Layer擴充功能的資料元素、規則和動作，提供與[ACDL擴充功能](../client-data-layer/overview.md)類似的功能。
+協助程式庫提供與Adobe Client Data Layer (ACDL)類似的事件導向功能。 Google Data Layer擴充功能的資料元素、規則和動作，提供與[ACDL擴充功能](../client-data-layer/overview.md)類似的功能。
 
 ## 安裝
 
-若要安裝擴充功能，請導覽至資料收集UI中的擴充功能目錄，並選取&#x200B;**[!UICONTROL Google資料層]**。
+若要安裝擴充功能，請導覽至資料收集UI中的擴充功能目錄，然後選取「**[!UICONTROL Google Data Layer]**」。
 
 安裝後，擴充功能就會在每次載入Adobe Experience Platform Tags程式庫時，建立或存取資料層。
 
@@ -36,6 +36,7 @@ Helper Library提供與Adobe Client Data Layer (ACDL)類似的事件導向功能
 >[!NOTE]
 >
 >在Adobe Experience Platform Tags中使用事件導向的資料層時，單字&#x200B;_event_&#x200B;會多載。 _事件_&#x200B;可以是：
+>
 > - Adobe Experience Platform Tags事件（程式庫已載入等）。
 > - JavaScript事件。
 > - 使用&#x200B;_event_&#x200B;關鍵字推送至資料層的資料。
@@ -49,7 +50,7 @@ Helper Library提供與Adobe Client Data Layer (ACDL)類似的事件導向功能
 
 ### Google事件型別
 
-Google支援兩種推播事件的方式：使用`push()`方法的Google Tag Manager，以及使用`gtag()`方法的Google Analytics4。
+Google支援兩種推播事件的方式：使用`push()`方法的Google Tag Manager，以及使用`gtag()`方法的Google Analytics 4。
 
 1.2.1之前的Google Data Layer擴充功能版本僅支援`push()`建立的事件，如本頁面的程式碼範例所示。
 

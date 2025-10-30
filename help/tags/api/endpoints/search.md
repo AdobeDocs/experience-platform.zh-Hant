@@ -2,7 +2,7 @@
 title: 搜尋端點
 description: 瞭解如何在Reactor API中呼叫/search端點。
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 1%
@@ -33,8 +33,9 @@ Reactor API中的`/search`端點提供尋找符合所需條件（以查詢表示
 >[!IMPORTANT]
 >
 >搜尋功能具有下列警告和例外：
+>
 >* 中繼無法搜尋，且未在搜尋結果中傳回。
->* 擴充功能套件委派的結構描述欄位（動作、條件等） 可做為文字搜尋，而非巢狀資料結構搜尋。
+>* 擴充功能套件委派（動作、條件等）的結構描述欄位可當作文字搜尋，而非巢狀資料結構搜尋。
 >* 範圍查詢目前僅支援整數。
 
 如需如何使用此功能的詳細資訊，請參閱[搜尋指南](../guides/search.md)。
@@ -226,7 +227,7 @@ curl -X POST \
 
 下表劃分常見欄位型別的比對慣例：
 
-| 欄位型別 | 比對慣例 |
+| 欄位類型 | 比對慣例 |
 | --- | --- |
 | 字串 | 含有部分詞語分析的文字，不區分大小寫 |
 | 列舉值 | 完全相符，區分大小寫 |

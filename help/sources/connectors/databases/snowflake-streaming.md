@@ -3,7 +3,7 @@ title: Snowflake串流Source聯結器概觀
 description: 瞭解如何建立來源連線和資料流，以將串流資料從您的Snowflake執行個體擷取到Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 3%
@@ -160,7 +160,7 @@ MIIE6T...
 
 ## 將Unix時間轉換為日期欄位
 
-[!DNL Snowflake Streaming]會剖析並寫入` DATE`欄位，做為自Unix紀元以來的天數(1970-01-01)。 例如，`DATE`值為0表示1970年1月1日，而值為1表示1970年1月2日。 因此，在準備檔案以在[!DNL Snowflake Streaming]來源中建立對應時，請確定`DATE`資料行以整數表示。
+[!DNL Snowflake Streaming]會剖析並將`DATE`欄位寫入為自Unix紀元以來的天數(1970-01-01)。 例如，`DATE`值為0表示1970年1月1日，而值為1表示1970年1月2日。 因此，在準備檔案以在[!DNL Snowflake Streaming]來源中建立對應時，請確定`DATE`資料行以整數表示。
 
 您可以使用[資料準備資料和時間函式](../../../data-prep/functions.md#date-and-time-functions)，將Unix時間轉換為可擷取至Experience Platform的日期欄位。 例如：
 

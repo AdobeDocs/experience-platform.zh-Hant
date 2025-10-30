@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: 發行說明；
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 28%
@@ -18,9 +18,11 @@ ht-degree: 28%
 **發行日期： 2020年4月8日**
 
 Adobe Experience Platform 的新功能：
+
 * [[!DNL Intelligent Services]](#intelligent)
 
 更新現有功能：
+
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [資料治理](#governance)
 * [[!DNL Destinations]](#destinations)
@@ -78,7 +80,7 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 功能 | 說明 |
 | -----------| ---------- |
-| 管理 UI 中的資料使用原則 | 現在可以在[!DNL Experience Platform] UI的&#x200B;**原則**&#x200B;工作區中管理資料使用原則。 如需詳細資訊，請參閱[原則使用手冊](../../data-governance/policies/user-guide.md)。 |
+| 管理 UI 中的資料使用原則 | 現在可以在&#x200B;**UI的**&#x200B;原則[!DNL Experience Platform]工作區中管理資料使用原則。 如需詳細資訊，請參閱[原則使用手冊](../../data-governance/policies/user-guide.md)。 |
 
 **已知問題**
 

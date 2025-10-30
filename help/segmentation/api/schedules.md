@@ -4,9 +4,9 @@ title: 排程API端點
 description: 排程是一種工具，可用於每天自動執行一次批次分段工作。
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2088'
 ht-degree: 2%
 
 ---
@@ -110,7 +110,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 | `children.type` | 字串形式的作業型別。 兩種支援的型別為「batch_segmentation」和「export」。 |
 | `children.properties` | 包含與排程相關之其他屬性的物件。 |
 | `children.properties.segments` | 使用`["*"]`可確保包含所有區段。 |
-| `children.schedule` | 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時的期間內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「0 0 1 * *」表示此排程每天凌晨1:00執行。 |
+| `children.schedule` | 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時的期間內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「`0 0 1 * *`」表示此排程將在每天凌晨1:00執行。 |
 | `children.state` | 包含排程狀態的字串。 兩種支援的狀態為「作用中」和「非作用中」。 依預設，狀態會設為「非使用中」。 |
 
 +++
@@ -127,7 +127,7 @@ POST /config/schedules
 
 **要求**
 
-+++ 建立排程的範例請求。
++++ 建立排程的範例請求。 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **必要。**&#x200B;作為字串的工作型別。 兩種支援的型別為「batch_segmentation」和「export」。 |
 | `properties` | **必要。**&#x200B;包含與排程相關之其他屬性的物件。 |
 | `properties.segments` | **當`type`等於「batch_segmentation」時為必要。**&#x200B;使用`["*"]`可確保包含所有區段。 |
-| `schedule` | *選擇性。*&#x200B;包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時的期間內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「0 0 1 * *」表示此排程每天凌晨1:00執行。 <br><br>如果未提供此字串，將自動產生系統產生的排程。 |
+| `schedule` | *選擇性。*&#x200B;包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時的期間內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「`0 0 1 * *`」表示此排程將在每天凌晨1:00執行。 <br><br>如果未提供此字串，將自動產生系統產生的排程。 |
 | `state` | *選擇性。*&#x200B;包含排程狀態的字串。 兩種支援的狀態為「作用中」和「非作用中」。 依預設，狀態會設為「非使用中」。 |
 
 +++
@@ -209,7 +209,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **要求**
 
-+++ 擷取排程的範例要求。
++++ 擷取排程的範例要求。 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
@@ -257,14 +257,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 | `type` | 字串形式的作業型別。 兩個支援的型別為`batch_segmentation`和`export`。 |
 | `properties` | 包含與排程相關之其他屬性的物件。 |
 | `properties.segments` | 使用`["*"]`可確保包含所有區段。 |
-| `schedule` | 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「0 0 1 * *」表示此排程每天凌晨1:00執行。 |
+| `schedule` | 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「`0 0 1 * *`」表示此排程將在每天凌晨1:00執行。 |
 | `state` | 包含排程狀態的字串。 兩個支援的狀態是`active`和`inactive`。 依預設，狀態設定為`inactive`。 |
 
 +++
 
 ## 更新特定排程的詳細資料 {#update}
 
-您可以向`/config/schedules`端點發出PATCH要求，並在要求路徑中提供您嘗試更新的排程識別碼，以更新特定排程。
+您可以對`/config/schedules`端點發出PATCH要求，並在要求路徑中提供您嘗試更新的排程識別碼，以更新特定排程。
 
 PATCH要求可讓您更新個別排程的[狀態](#update-state)或[cron排程](#update-schedule)。
 
@@ -354,7 +354,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 ## 刪除特定排程
 
-您可以向`/config/schedules`端點發出DELETE要求，並在要求路徑中提供您要刪除之排程的ID，以要求刪除特定排程。
+您可以向`/config/schedules`端點發出DELETE請求，並在請求路徑中提供您要刪除之排程的ID，以請求刪除特定排程。
 
 **API格式**
 
@@ -405,10 +405,10 @@ cron運算式是包含6或7個欄位的字串。 運算式看起來類似下列�
 | 秒 | 是 | 0-59 | `, - * /` |
 | 分鐘 | 是 | 0-59 | `, - * /` |
 | 小時 | 是 | 0-23 | `, - * /` |
-| 當月日期 | 是 | 1-31 | `, - * ? / L W` |
-| 月 | 是 | 1-12， JAN-DEC | `, - * /` |
-| 星期幾 | 是 | 1-7，星期六 | `, - * ? / L #` |
-| 年 | 無 | 空白，1970-2099 | `, - * /` |
+| 當月的第幾天 | 是 | 1-31 | `, - * ? / L W` |
+| Month | 是 | 1-12， JAN-DEC | `, - * /` |
+| 星期 | 是 | 1-7，星期六 | `, - * ? / L #` |
+| Year | 無 | 空白，1970-2099 | `, - * /` |
 
 >[!NOTE]
 >
@@ -434,10 +434,10 @@ cron運算式是包含6或7個欄位的字串。 運算式看起來類似下列�
 | 運算式 | 說明 |
 | ---------- | ----------- |
 | `0 0 13 * * ?` | 事件將於每天下午1點引發。 |
-| `0 30 9 * * ? 2022` | 該活動將在2022年的每日上午9:30引發。 |
-| `0 * 18 * * ?` | 此事件會每分鐘引發一次，從下午6點開始，到每天下午6:59結束。 |
+| `0 30 9 * * ? 2022` | 此事件將在2022年的每天的9:30AM引發。 |
+| `0 * 18 * * ?` | 此事件會每分鐘引發一次，從下午6點開始，到每天6:59PM結束。 |
 | `0 0/10 17 * * ?` | 事件會每10分鐘引發一次，從下午5點開始，一直到下午6點結束。 |
-| `0 13,38 5 ? 6 WED` | 事件將於每週三6月凌晨5:13及5:38引發。 |
-| `0 30 12 ? * 4#3` | 事件將於每月第三個星期三中午12:30引發。 |
-| `0 30 12 ? * 6L` | 事件將於每月最後一個星期五中午12:30引發。 |
-| `0 45 11 ? * MON-THU` | 事件將於每個星期一、星期二、星期三和星期四上午11:45引發。 |
+| `0 13,38 5 ? 6 WED` | 事件將於六月的每個星期三在5:13AM和5:38AM引發。 |
+| `0 30 12 ? * 4#3` | 事件將於每月第三個星期三的12:30PM引發。 |
+| `0 30 12 ? * 6L` | 事件將於每月最後一個星期五的12:30PM引發。 |
+| `0 45 11 ? * MON-THU` | 事件將於每個星期一、星期二、星期三和星期四的11:45AM引發。 |

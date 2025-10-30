@@ -1,8 +1,8 @@
 ---
-title: Adobe使用者端資料層延伸
+title: Adobe使用者端資料層擴充功能
 description: 瞭解Adobe Experience Platform中的Adobe Client Data Layer標籤擴充功能。
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -11,16 +11,16 @@ ht-degree: 0%
 
 # Adobe使用者端資料層擴充功能
 
-本檔案提供如何使用Adobe Client Data Layer擴充功能的範例和最佳作法。
+本檔案提供如何使用Adobe使用者端資料層擴充功能的範例和最佳作法。
 
 <!-- (Missing document?)
 If you would like to have more details on development consideration, [please reach this page](./dev.md). -->
 
 ## 安裝
 
-若要安裝擴充功能，請導覽至Experience PlatformUI或資料收集UI中的擴充功能目錄，然後選取「Adobe使用者端資料層」 。
+若要安裝擴充功能，請導覽至Experience Platform UI或資料收集UI中的擴充功能目錄，然後選取Adobe Client Data Layer 。
 
-目錄![&#128279;](./images/catalog.png)中的ACDL延伸檢視
+目錄![中的](./images/catalog.png)ACDL延伸檢視
 
 <!-- (GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.
@@ -51,12 +51,12 @@ This installation will not be supported on our end.<br>
 
 監聽器會追蹤下列範例推送事件：
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 監聽器不會追蹤下列範例推送事件：
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### 聆聽所有事件
 
@@ -64,8 +64,8 @@ This installation will not be supported on our end.<br>
 
 監聽器會追蹤下列範例推送事件：
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 監聽器不會追蹤下列範例推送事件：
 
@@ -91,7 +91,7 @@ This installation will not be supported on our end.<br>
 
 ### 重設資料層
 
-此擴充功能提供您重設資料層長度的方法，可協助您將單頁應用程式(SPA)的大小維持在有限範圍內。
+擴充功能提供您重設資料層長度的方法，可協助您將單頁應用程式(SPA)的大小維持在有限範圍內。
 
 不過，目前不可能完全移除先前在推送方法期間設定的資訊。
 

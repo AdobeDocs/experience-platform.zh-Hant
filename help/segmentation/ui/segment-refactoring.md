@@ -4,9 +4,9 @@ title: 重構分段時間限制UI指南
 description: 區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 9%
 
 ---
@@ -38,6 +38,6 @@ ht-degree: 9%
 
 ![畫布層級時間限制已反白顯示。](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-若要在卡片層級套用時間限制，請選取您要套用時間限制的特定卡片。 **[!UICONTROL 事件規則]**&#x200B;容器隨即顯示。 您現在可以選取要套用至卡片的時間限制。
+若要在卡片層級套用時間限制，請選取您要套用時間限制的特定卡片。 **[!UICONTROL Event Rules]**&#x200B;容器隨即顯示。 您現在可以選取要套用至卡片的時間限制。
 
 ![卡片層級時間限制已反白顯示。](../images/ui/segment-refactoring/card-time-constraint.png)

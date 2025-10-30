@@ -4,9 +4,9 @@ feature: Attribution AI
 title: 歸因人工智慧的輸入和輸出
 description: 以下檔案概述Attribution AI中使用的不同輸入和輸出。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2467'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ Attribution AI的運作方式是分析以下資料集以計算演演算法分數
 
 | 建議的欄 | 需要 |
 | --- | --- |
-| 主要身分欄位 | 接觸點/轉換 |
+| 主要身分識別欄位 | 接觸點/轉換 |
 | 時間戳記 | 接觸點/轉換 |
 | 頻道。_type | 接觸點 |
 | Channel.mediaAction | 接觸點 |
@@ -64,6 +64,7 @@ Attribution AI的運作方式是分析以下資料集以計算演演算法分數
 >[!IMPORTANT]
 >
 > Attribution AI運作所需的最低資料量如下：
+>
 > - 您需要提供至少3個月（90天）的資料，才能執行良好的模型。
 > - 您至少需要1000次轉換。
 
@@ -102,9 +103,10 @@ Attribution AI會儘可能以最精細的層級輸出歸因分數，因此您可
 
 >[!NOTE]
 >
-> 只有符合下列其中一項，您才能從分數輸出資料集的輸入資料集中看到任何想要的報告欄：
-> - 報表欄會包含在設定頁面中，做為接觸點或轉換定義設定的一部分。
-> - 報告欄包含在其他分數資料集欄中。
+>只有符合下列其中一項，您才能從分數輸出資料集的輸入資料集中看到任何想要的報告欄：
+>
+>- 報表欄會包含在設定頁面中，做為接觸點或轉換定義設定的一部分。
+>- 報告欄包含在其他分數資料集欄中。
 
 下表概述原始分數範例輸出中的結構描述欄位：
 
@@ -137,18 +139,18 @@ Attribution AI會儘可能以最精細的層級輸出歸因分數，因此您可
 | identity （物件） | False | 包含用來建置模型的使用者詳細資訊，例如`id`和`namespace`。 |
 | id （字串） | True | 使用者的身分識別碼，例如Cookie ID、Adobe Analytics ID (AAID)或Experience Cloud ID （ECID，也稱為MCID或訪客ID）等。<br> **範例：** 17348762725408656344688320891369597404 |
 | 名稱空間（字串） | True | 用來建置路徑進而建置模型的身分名稱空間。<br> **範例：** aaid |
-| 接觸點詳細資料（物件陣列） | True | 導致轉換的接觸點詳細資訊清單，排序依據： | 接觸點發生次數或時間戳記。 |
+| 接觸點詳細資料（物件陣列） | True | 導致轉換的接觸點詳細資訊清單，依接觸點出現次數或時間戳記排序。 |
 | 接觸點名稱（字串） | True | 安裝期間設定的接觸點名稱。<br> **範例：** PAID_SEARCH_CLICK |
 | 分數（物件） | True | 以此分數表示的接觸點對此轉換的貢獻。 如需此物件產生之分數的詳細資訊，請參閱[彙總歸因分數](#aggregated-attribution-scores)區段。 |
 | 接觸點（物件） | True | 接觸點中繼資料。 如需此物件產生之分數的詳細資訊，請參閱[彙總分數](#aggregated-scores)區段。 |
 
 ### 檢視原始分數路徑(UI) {#raw-score-path}
 
-您可以在UI中檢視原始分數的路徑。 首先，在Experience Platform UI中選取&#x200B;**[!UICONTROL 結構描述]**，然後從&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤中搜尋並選取您的Attribution AI分數結構描述。
+您可以在UI中檢視原始分數的路徑。 首先，在Experience Platform UI中選取&#x200B;**[!UICONTROL Schemas]**，然後從&#x200B;**[!UICONTROL Browse]**&#x200B;索引標籤中搜尋並選取您的Attribution AI分數結構描述。
 
 ![挑選您的結構描述](./images/input-output/schemas_browse.png)
 
-接著，在UI的&#x200B;**[!UICONTROL 結構]**&#x200B;視窗中選取欄位，**[!UICONTROL 欄位屬性]**&#x200B;索引標籤會開啟。 在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;中，是對應至您原始分數的路徑欄位。
+接下來，在UI的&#x200B;**[!UICONTROL Structure]**&#x200B;視窗中選取欄位，**[!UICONTROL Field properties]**&#x200B;索引標籤隨即開啟。 **[!UICONTROL Field properties]**&#x200B;內為對應至您原始分數的路徑欄位。
 
 ![挑選結構描述](./images/input-output/field_properties.png)
 

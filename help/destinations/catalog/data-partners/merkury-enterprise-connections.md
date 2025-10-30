@@ -3,9 +3,9 @@ title: Mercury Enterprise連線目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise連線目的地連線。
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1370'
 ht-degree: 4%
 
 ---
@@ -39,8 +39,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->* 若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理目的地**、**啟用目的地**、**檢視設定檔**&#x200B;和&#x200B;**檢視區段** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**檢視身分圖表** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。\！[選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* 若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理目的地**、**啟用目的地**、**檢視設定檔**&#x200B;和&#x200B;**檢視區段** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**檢視身分圖表** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。\！[選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## 支援的身分 {#supported-identities}
 
@@ -49,8 +49,8 @@ ht-degree: 4%
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 | ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 
 {style="table-layout:auto"}
@@ -61,8 +61,8 @@ ht-degree: 4%
 
 | **客群** | **支援** | **描述來源** |
 |---|---|---|      
-| 分段服務 | ✓ | 透過Experience Platform [[細分服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
-| 自訂上傳 | X | 對象[[已將]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/ui/overview#import-audience)從CSV檔案匯入Experience Platform。 |
+| 細分服務 | ✓ | 透過Experience Platform [[細分服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
+| 自訂上傳 | X | 對象[從CSV檔案匯入](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -72,8 +72,8 @@ ht-degree: 4%
 
 | **專案** | **類型** | **附註** |
 |---|---|---|  
-| 匯出類型 | **以設定檔為基礎** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[[目的地啟用工作流程]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 頻率 | **批次** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[[批次檔案型頻率目的地]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/destination-types#file-based)。 |
+| 匯出類型 | **以設定檔為基礎** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[[目的地啟用工作流程]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)的選取設定檔屬性畫面中所選。 |
+| 頻率 | **批次** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[[批次檔案型頻率目的地]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based)。 |
 
 {style="table-layout:auto"}
 
@@ -81,9 +81,9 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理和啟用資料集目的地** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理和啟用資料集目的地** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線到此目的地，請依照[[目的地設定教學課程]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/connect-destination)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
+若要連線到此目的地，請依照[[目的地設定教學課程]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標
 
@@ -102,7 +102,7 @@ ht-degree: 4%
 
 ![新目的地建立畫面](../../assets/catalog/data-partners/merkury-connections/media/image4.png)
 
-### 填寫目標詳細資訊
+### 填寫目標詳細資料
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -128,7 +128,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 ## 啟用警示
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/alerts)的指南。
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts)的指南。
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**下一步**。
 
@@ -140,7 +140,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 >* 若要匯出身分，您需要&#x200B;**檢視身分圖表**&#x200B;存取控制許可權。
 
 
-讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
 
 ## 對應建議
 
@@ -150,7 +150,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 | 目標欄位 | Source說明 |
 |---|---|
-| ID | 透過[!DNL Merkury Enterprise Identity] Source聯結器將[!DNL Merkury]資料對應至Experience Platform的身分欄位 |
+| ID | 透過[!DNL Merkury] Source聯結器將[!DNL Merkury Enterprise Identity]資料對應至Experience Platform的身分欄位 |
 | Input_First_Name | Experience Platform中的`person.name.firstName`值。 |
 | Input_Last_Name | Experience Platform中的`person.name.lastName`值。 |
 | Input_Address_Line_1 | Experience Platform中的`mailingAddress.street`值。 |
@@ -169,7 +169,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 ## 資料使用與控管
 
-處理您的資料時，所有Adobe Experience Platform目的地都符合資料使用原則。 如需Adobe Experience Platform如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有Adobe Experience Platform目的地都符合資料使用原則。 如需Adobe Experience Platform如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
 
 ## 後續步驟
 

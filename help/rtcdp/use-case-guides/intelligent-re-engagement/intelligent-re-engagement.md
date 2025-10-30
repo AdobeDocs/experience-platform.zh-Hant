@@ -3,10 +3,10 @@ title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3896'
-ht-degree: 48%
+source-wordcount: '3871'
+ht-degree: 45%
 
 ---
 
@@ -36,18 +36,18 @@ ht-degree: 48%
 
 完成實施使用案例的步驟後，您將運用下列Real-Time CDP和Adobe Journey Optimizer功能（依使用順序列出）。 確保您擁有所有這些區域所需的[屬性型存取控制權限](/help/access-control/home.md)，或要求系統管理員授予您必要的權限。
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=zh-Hant)- 整合跨資料來源的資料，以推動行銷活動。然後，使用此資料來建立行銷活動客群，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。CDP 也用於跨電子郵件和網頁啟動客群 (透過 [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)- 整合跨資料來源的資料，以推動行銷活動。然後，使用此資料來建立行銷活動客群，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。CDP 也用於跨電子郵件和網頁啟動客群 (透過 [!DNL Adobe Target]).
    * [結構描述](/help/xdm/home.md)
    * [輪廓](/help/profile/home.md)
    * [資料集](/help/catalog/datasets/overview.md)
    * [客群](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=zh-Hant)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [目標](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=zh-Hant) — 協助您為客戶提供連線、情境式和個人化的體驗。
-   * [事件或客群觸發](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=zh-Hant)
-   * [客群/事件](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=zh-Hant)
-   * [歷程動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=zh-Hant)
+   * [事件或客群觸發](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [客群/事件](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
+   * [歷程動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## 如何實現使用案例 {#achieve-use-case-instruction}
 
@@ -59,7 +59,7 @@ ht-degree: 48%
 
 放棄的產品瀏覽情境會鎖定網站和行動應用程式上放棄的產品瀏覽。 當已檢視產品但未購買或未新增到購物車時，就會觸發此情境。 在此範例中，如果過去24小時內沒有清單新增，則會在3天後觸發品牌參與度。<p>![客戶智慧型放棄產品瀏覽案例高階視覺概觀。](../intelligent-re-engagement/images/re-engagement-journey.png "客戶智慧型放棄產品瀏覽案例高階視覺概觀。"){width="1920" zoomable="yes"}</p>
 
-1. 您建立結構描述和資料集，然後為[!UICONTROL 設定檔]啟用。
+1. 您建立結構描述和資料集，然後為[!UICONTROL Profile]啟用。
 2. 您可以透過網頁SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您從輪廓清單建立重點客群，以檢查&#x200B;**使用者**&#x200B;在過去三天是否有進行參與行動。
@@ -71,10 +71,10 @@ ht-degree: 48%
 
 放棄購物車情況適用於產品已放入購物車但尚未在網站和行動應用程式上購買的情況。 此外，付費媒體行銷活動可以使用此方法開始和停止。<p>![客戶放棄的購物車案例高階視覺化概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶放棄的購物車案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
-1. 您建立結構描述和資料集，為[!UICONTROL 設定檔]啟用。
+1. 您建立結構描述和資料集，為[!UICONTROL Profile]啟用。
 2. 您可以透過網頁SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
-4. 您從輪廓清單建立重點客群，以檢查&#x200B;**客戶**&#x200B;是否已將商品放入購物車但尚未完成購買。**[!UICONTROL 新增到購物車]**&#x200B;事件會啟動計時器；計時器會等待 30 分鐘，然後檢查是否有購買。如果沒有購買，那麼會將&#x200B;**客戶**&#x200B;新增到&#x200B;**[!UICONTROL 捨棄購物車]**&#x200B;客群。
+4. 您從輪廓清單建立重點客群，以檢查&#x200B;**客戶**&#x200B;是否已將商品放入購物車但尚未完成購買。**[!UICONTROL Add to cart]**&#x200B;事件會啟動等待30分鐘的計時器，然後檢查是否購買。 如果尚未購買，則會將&#x200B;**客戶**&#x200B;新增至&#x200B;**[!UICONTROL Abandon Cart]**&#x200B;對象。
 5. 您在 [!DNL Adobe Journey Optimizer] 中建立一個廢棄購物車歷程。
 6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將客群啟動到所需付費媒體目的地。
 7. [!DNL Adobe Journey Optimizer] 檢查是否同意並發送設定的各種動作。
@@ -83,7 +83,7 @@ ht-degree: 48%
 
 訂購確認案例聚焦於透過網站和行動應用程式進行的產品購買。<p>![客戶訂單確認案例高階視覺化概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png "客戶訂單確認案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
-1. 您建立結構描述和資料集，然後為[!UICONTROL 設定檔]啟用。
+1. 您建立結構描述和資料集，然後為[!UICONTROL Profile]啟用。
 2. 您可以透過網頁SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics Source Connector，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您在 [!DNL Adobe Journey Optimizer] 中建立一個確認歷程。
@@ -95,7 +95,7 @@ ht-degree: 48%
 
 ### 建立方案並指定欄位群組 {#schema-design}
 
-體驗資料模型 (XDM) 資源是在 [!DNL Adobe Experience Platform] 內的[!UICONTROL 結構描述] 工作區中接受管理。您可以檢視及探索[!DNL Adobe]提供的核心資源（例如欄位群組），並為您的組織建立自訂資源和結構描述。
+在[!UICONTROL Schemas]的[!DNL Adobe Experience Platform]工作區中管理Experience Data Model (XDM)資源。 您可以檢視及探索[!DNL Adobe]提供的核心資源（例如欄位群組），並為您的組織建立自訂資源和結構描述。
 
 如需有關建立[結構描述](/help/xdm/home.md)的詳細資訊，請參閱[建立結構描述教學課程。](/help/xdm/tutorials/create-schema-ui.md)和[使用XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html)為您的客戶體驗資料建立模型。
 
@@ -105,9 +105,9 @@ ht-degree: 48%
 
 此結構描述是用來安排和參考構成客戶資訊的輪廓資料。此資料通常會透過您的CRM或類似系統擷取至[!DNL Adobe Experience Platform]，且為參考用於個人化、行銷同意和增強受眾功能的客戶詳細資料所必需。
 
-客戶屬性結構描述以 [[!UICONTROL XDM 個人輪廓]](/help/xdm/classes/individual-profile.md)類別表示，其中包括以下欄位群組：
+客戶屬性結構描述以[[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md)類別表示，包括下列欄位群組：
 
-+++個人聯絡詳細資料 (欄位群組)
++++個人聯絡詳細資訊（欄位群組）
 
 [個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人輪廓類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
 
@@ -118,13 +118,13 @@ ht-degree: 48%
 
 +++
 
-+++外部來源系統稽核詳細資料 (欄位群組)
++++外部Source系統稽核詳細資料（欄位群組）
 
 [外部來源系統稽核屬性](/help/xdm/data-types/external-source-system-audit-attributes.md)是一種標準的體驗資料模式 (XDM) 資料類型，用於擷取外部來源系統的稽核詳細資料。
 
 +++
 
-+++同意和偏好設定欄位群組 (欄位群組)
++++同意和偏好設定欄位群組（欄位群組）
 
 [同意和偏好設定](/help/xdm/field-groups//profile/consents.md)欄位群組提供單一物件型別欄位，同意以擷取同意和偏好設定資訊。
 
@@ -139,15 +139,15 @@ ht-degree: 48%
 
 +++
 
-+++輪廓測試詳細資料 (欄位群組)
++++設定檔測試詳細資訊（欄位群組）
 
-此欄位群組可讓您使用測試設定檔，在發佈歷程之前測試歷程。 如需建立測試設定檔的詳細資訊，請閱讀[建立測試設定檔教學課程](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=zh-Hant)和[測試歷程教學課程](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=zh-Hant)。
+此欄位群組可讓您使用測試設定檔，在發佈歷程之前測試歷程。 如需建立測試設定檔的詳細資訊，請閱讀[建立測試設定檔教學課程](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html)和[測試歷程教學課程](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html)。
 
 +++
 
 #### 客戶數位交易結構描述
 
-此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會透過[網頁SDK](/help/web-sdk/home.md)擷取至[!DNL Adobe Experience Platform]，且為參考各種用來觸發歷程、詳細線上客戶分析、增強受眾功能和個人化傳訊的瀏覽和轉換事件所必需。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會透過[!DNL Adobe Experience Platform]網頁SDK[擷取至](/help/web-sdk/home.md)，且為參考各種用來觸發歷程、詳細線上客戶分析、增強受眾功能和個人化傳訊的瀏覽和轉換事件所必需。
 
 客戶數位交易結構描述以[[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)類別表示。
 
@@ -163,7 +163,7 @@ ht-degree: 48%
 
 +++
 
-+++一般使用者 ID 詳細資料 (欄位群組)
++++一般使用者ID詳細資訊（欄位群組）
 
 [一般使用者ID詳細資料](/help/xdm/field-groups/event/enduserids.md)欄位群組是用來說明個人在多個Adobe應用程式中的身分資訊。
 
@@ -178,7 +178,7 @@ ht-degree: 48%
 
 +++
 
-+++商務詳細資料 (欄位群組)
++++Commerce詳細資料（欄位群組）
 
 [Commerce詳細資料](/help/xdm/field-groups/event/commerce-details.md)欄位群組是用來描述商業資料，例如產品資訊（SKU、名稱、數量）以及標準購物車作業（訂購、結帳、捨棄）。
 
@@ -197,7 +197,7 @@ ht-degree: 48%
 
 +++
 
-+++外部來源系統稽核詳細資料 (欄位群組)
++++外部Source系統稽核詳細資料（欄位群組）
 
 外部來源系統稽核屬性是一種標準體驗資料模式 (XDM) 的資料類型，這模式會擷取外部來源系統的稽核詳細資料。
 
@@ -221,7 +221,7 @@ ht-degree: 48%
 
 +++
 
-+++商務詳細資料 (欄位群組)
++++Commerce詳細資料（欄位群組）
 
 [Commerce詳細資料](/help/xdm/field-groups/event/commerce-details.md)欄位群組是用來描述商業資料，例如產品資訊（SKU、名稱、數量）以及標準購物車作業（訂購、結帳、捨棄）。
 
@@ -240,7 +240,7 @@ ht-degree: 48%
 
 +++
 
-+++個人聯絡詳細資料 (欄位群組)
++++個人聯絡詳細資訊（欄位群組）
 
 [個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人輪廓類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
 
@@ -251,7 +251,7 @@ ht-degree: 48%
 
 +++
 
-+++外部來源系統稽核詳細資料 (欄位群組)
++++外部Source系統稽核詳細資料（欄位群組） 
 
 外部來源系統稽核屬性是一種標準體驗資料模式 (XDM) 的資料類型，此模式會擷取外部來源系統的稽核詳細資料。
 
@@ -265,7 +265,7 @@ ht-degree: 48%
 
 此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此結構描述類似於Customer Digital Transactions結構描述，但不同之處在於，此結構描述是要在[Web SDK](/help/web-sdk/home.md)不是資料收集的選項時使用；因此，當您利用[!DNL Adobe Analytics Source Connector]將您的線上資料傳送至[!DNL Adobe Experience Platform]作為主要或次要資料流時，需要此結構描述。
 
-[!DNL Adobe] Web聯結器結構描述由[[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)類別表示。
+[!DNL Adobe] Web聯結器結構描述以[[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md)類別表示。
 
 +++XDM ExperienceEvent （類別）
 
@@ -279,7 +279,7 @@ ht-degree: 48%
 
 +++
 
-+++Adobe Analytics ExperienceEvent 範本 (欄位群組)
++++Adobe Analytics ExperienceEvent範本（欄位組）
 
 [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md)欄位群組會擷取Adobe Analytics所收集的一般量度。
 
@@ -294,7 +294,7 @@ ht-degree: 48%
 
 +++
 
-+++外部來源系統稽核詳細資料 (欄位群組)
++++外部Source系統稽核詳細資料（欄位群組）
 
 外部來源系統稽核屬性是一種標準體驗資料模式 (XDM) 的資料類型，此模式會擷取外部來源系統的稽核詳細資料。
 
@@ -314,11 +314,11 @@ ht-degree: 48%
 
 >[!IMPORTANT]
 >
->法律規定必須讓客戶能夠取消訂閱來自品牌的通訊，以及確保遵循此選擇。 在[隱私權法規概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=zh-Hant)中，了解更多有關適用法律。
+>法律規定必須讓客戶能夠取消訂閱來自品牌的通訊，以及確保遵循此選擇。 在[隱私權法規概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)中，了解更多有關適用法律。
 
 #### 同意原則
 
-建立重新參與路徑時，請考慮新增下列[同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=zh-Hant)：
+建立重新參與路徑時，請考慮新增下列[同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)：
 
 * 如果為 `consents.marketing.email.val = "Y"`，則可以發送電子郵件
 * 如果為 `consents.marketing.sms.val = "Y"`，則可以發送簡訊
@@ -342,13 +342,13 @@ ht-degree: 48%
 * 限制跨站台目標定位
 * 限制將直接可識別資料與匿名資料相結合
 
-### 建立對象 {#create-audience}
+### 建立客群 {#create-audience}
 
 重新參與案例使用受眾來定義個人資料存放區中個人資料子集共用的特定屬性或行為，以便區分可行銷人群組和您的客戶群。 可以在[!DNL Adobe Experience Platform]中以多種方式建立對象。
 
-如需如何建立對象的詳細資訊，請參閱[對象服務UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=zh-Hant#create-audience)。
+如需如何建立對象的詳細資訊，請參閱[對象服務UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)。
 
-如需深入了解如何直接組成[客群](/help/segmentation/home.md)，請參閱[客群組成 UI 指南](/help/segmentation/ui/audience-composition.md)。
+如需深入了解如何直接組成[客群](/help/segmentation/home.md)，請參閱[客群構成 UI 指南](/help/segmentation/ui/audience-composition.md)。
 
 如需如何透過Experience Platform衍生的對象定義來建立對象的詳細資訊，請參閱[對象產生器UI指南](/help/segmentation/ui/segment-builder.md)。
 
@@ -358,7 +358,7 @@ ht-degree: 48%
 
 建立此客群是為了加強經典的「購物車放棄」情境。雖然購物車放棄通常是著重在購物車新增但在特定時間內未接著購買的情形，但此類客群尋求較早參與，特別是在特定時間內於您網站上可能瀏覽過特定產品但未加入購物車且沒有後續活動的人。此客群有助於讓符合此納入標準的客戶「優先考慮」您的品牌，也可運用在數位屬性可能不同於傳統電子商務模式的客戶。
 
-+++放棄的產品檢視，過去三天無參與
++++過去三天未參與放棄的產品檢視
 
 以下事件適用於放棄的產品瀏覽情境，即使用者於線上檢視產品，且未在接下來的3天內參與（網站造訪、應用程式造訪、線上購買、離線購買及加入購物車事件）。
 
@@ -371,7 +371,7 @@ ht-degree: 48%
 
 +++
 
-+++過去三天有參與的產品檢視
++++過去三天參與的產品檢視
 
 以下事件適用於放棄的產品瀏覽情境，即使用者於線上檢視產品，並在隨後3天內參與（網站造訪、應用程式造訪、線上購買、離線購買及新增至購物車事件）。
 
@@ -383,7 +383,7 @@ ht-degree: 48%
 * `Timestamp: > 4 days`
 +++
 
-+++過去一天內的參與串流
++++前一天中的參與串流
 
 以下事件適用於放棄的產品瀏覽情境，即使用者在過去1天內參與其中（網站造訪、應用程式造訪、線上購買、離線購買及加入購物車事件）。
 
@@ -414,7 +414,7 @@ ht-degree: 48%
 設定此客群時需要以下欄位和條件：
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now AND <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now`
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
@@ -434,9 +434,9 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] 並不涵蓋圖中顯示的所有內容。所有[付費媒體廣告](/help/destinations/catalog/social/overview.md)均在[!UICONTROL 目的地]中建立。
+>[!DNL Adobe Journey Optimizer] 並不涵蓋圖中顯示的所有內容。所有[付費媒體廣告](/help/destinations/catalog/social/overview.md)都是在[!UICONTROL Destinations]中建立。
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=zh-Hant) 協助您向其客戶傳送連結的、情境式和個人化體驗。客戶歷程是客戶與品牌互動的整個過程。每個使用案例歷程需要特定的資訊。以下列出每個歷程所需的精確資料。
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) 協助您向其客戶傳送連結的、情境式和個人化體驗。客戶歷程是客戶與品牌互動的整個過程。每個使用案例歷程需要特定的資訊。以下列出每個歷程所需的精確資料。
 
 >[!BEGINTABS]
 
@@ -444,9 +444,9 @@ ht-degree: 48%
 
 放棄的產品瀏覽情境會鎖定網站和行動應用程式上放棄的產品瀏覽。<p>![客戶放棄的產品瀏覽案例高階視覺化概觀。](../intelligent-re-engagement/images/re-engagement-journey.png "客戶放棄的產品瀏覽案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
-+++事件
++++活動
 
-事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀[一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=zh-Hant)。
+事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀[一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html)。
 
 * 事件 1：產品檢視
    * 結構描述：客戶數位交易
@@ -534,7 +534,7 @@ ht-degree: 48%
 
 +++
 
-+++Journey Canvas金鑰邏輯
++++歷程畫布金鑰邏輯
 
 歷程畫布關鍵邏輯需要您識別特定事件，並設定要在事件發生後發生的動作。
 
@@ -569,9 +569,9 @@ ht-degree: 48%
 
 捨棄的購物車案例會鎖定已放入購物車但尚未在網站和行動應用程式上購買的產品。<p>![客戶放棄的購物車案例高階視覺化概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶放棄的購物車案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
-+++事件
++++活動
 
-事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀[一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=zh-Hant)。
+事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀[一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html)。
 
 * 事件 2：加入購物車
    * 結構描述：客戶數位交易
@@ -666,7 +666,7 @@ ht-degree: 48%
 
 +++
 
-+++Journey Canvas金鑰邏輯
++++歷程畫布金鑰邏輯
 
 歷程畫布關鍵邏輯需要您識別特定事件，並設定要在事件發生後發生的動作。
 
@@ -702,9 +702,9 @@ ht-degree: 48%
 
 訂購確認案例聚焦於透過網站和行動應用程式進行的產品購買。<p>![客戶訂單確認案例高階視覺化概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png "客戶訂單確認案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
-+++事件
++++活動
 
-事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀[一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=zh-Hant)。
+事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀[一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html)。
 
 * 事件 4：網上購買
    * 結構描述：客戶數位交易
@@ -734,7 +734,7 @@ ht-degree: 48%
 
 +++
 
-+++Journey Canvas金鑰邏輯
++++歷程畫布金鑰邏輯
 
 歷程畫布關鍵邏輯需要您識別特定事件，並設定要在事件發生後發生的動作。
 
@@ -755,7 +755,7 @@ ht-degree: 48%
 
 >[!ENDTABS]
 
-如需深入了解如何在 [!DNL Adobe Journey Optimizer] 建立歷程，請參閱[歷程快速入門指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=zh-Hant)。
+如需深入了解如何在 [!DNL Adobe Journey Optimizer] 建立歷程，請參閱[歷程快速入門指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)。
 
 ### 在目的地設定付費媒體廣告 {#paid-media-ads}
 
@@ -775,7 +775,7 @@ ht-degree: 48%
    * [廣告](/help/destinations/catalog/advertising/overview.md)/[付費媒體和社交](/help/destinations/catalog/social/overview.md)
    * [行動](/help/destinations/catalog/mobile-engagement/overview.md)
    * [串流目的地](/help/destinations/catalog/streaming/http-destination.md)
-   * [使用Destination SDK建立的自訂目的地。](/help/destinations/destination-sdk/overview.md)。如果您是Real-Time CDP Ultimate客戶，也可以使用Destination SDK[&#128279;](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)建立私人自訂目的地
+   * [使用Destination SDK建立的自訂目的地。](/help/destinations/destination-sdk/overview.md)。如果您是Real-Time CDP Ultimate客戶，也可以使用Destination SDK[建立私人](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)自訂目的地
 
 ## 後續步驟 {#next-steps}
 

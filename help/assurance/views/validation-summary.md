@@ -2,10 +2,10 @@
 title: 驗證編輯器檢視
 description: 本指南會詳細介紹 Adob​​e Experience Platform Assurance 中驗證編輯器檢視的資訊。
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 100%
+source-wordcount: '496'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 ## 開始使用驗證編輯器
 
-[設定 Assurance](../tutorials/implement-assurance.md) (在「**[!UICONTROL 首頁]**」檢視中) 後，選取「**[!UICONTROL 驗證編輯器]**」。
+在[設定Assurance](../tutorials/implement-assurance.md)後，在&#x200B;**[!UICONTROL Home]**&#x200B;檢視上，選取&#x200B;**[!UICONTROL Validation Editor]**。
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -23,11 +23,11 @@ ht-degree: 100%
 
 此功能可讓您為 Adob&#x200B;&#x200B;e Experience Platform Assurance 工作階段建立、編輯或刪除驗證函數。
 
-1. 選取「**[!UICONTROL 建立新的驗證]**」。
+1. 選擇「**[!UICONTROL Create a New Validation]**」。
 2. 輸入&#x200B;**名稱**&#x200B;以識別驗證，然後提供&#x200B;**類別**&#x200B;和&#x200B;**說明**。
 3. 在編輯器中編輯程式碼，以驗證 Assurance 工作階段的事件。
 
-函數測試完成後，請選取「**[!UICONTROL 發佈]**」，即可儲存您的驗證。
+完成功能測試後，請選取&#x200B;**[!UICONTROL Publish]**&#x200B;以儲存您的驗證。
 
 ### 事件定義
 
@@ -57,7 +57,7 @@ ht-degree: 100%
 | :--- | :--- | :--- |
 | `message` | 字串 | 要在摘要結果中顯示的驗證訊息。 |
 | `events` | 陣列 | 要報告為相符或不相符的事件 uuid 陣列。 |
-| `links` | 陣列 | `ValidationResultLink`參照文件和其他資源之物件`{( type: 'doc'|'product', url: String )}`陣列 |
+| `links` | 陣列 | `ValidationResultLink`物件的陣列，可參考檔案和其他資源`{( type: 'doc'`&amp;amp；vert；`'product', url: String )}` |
 | `result` | 字串 | 這是驗證結果，並且應該是以下列舉字串之一：&quot;matched&quot;、&quot;not matched&quot;、&quot;unknown&quot; |
 
 ## 檢視驗證結果

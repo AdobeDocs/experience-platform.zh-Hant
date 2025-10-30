@@ -5,10 +5,10 @@ title: 查詢API端點
 description: 以下小節會逐步解說您可以在查詢服務API中使用/queries端點進行的呼叫。
 role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 ## API呼叫範例
 
-以下章節逐步說明您可以在[!DNL Query Service] API中使用`/queries`端點進行的呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
+以下章節逐步說明您可以在`/queries` API中使用[!DNL Query Service]端點進行的呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
 
 ### 擷取查詢清單
 
@@ -37,10 +37,10 @@ GET /queries?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定排序結果時所依據的欄位。 支援的欄位是`created`和`updated`。 例如，`orderby=created`將依建立的遞增順序來排序結果。 在建立之前(`orderby=-created`)新增`-`將會依建立的遞減順序排序專案。 |
+| `orderby` | 指定排序結果時所依據的欄位。 支援的欄位是`created`和`updated`。 例如，`orderby=created`將依建立的遞增順序來排序結果。 在建立之前(`-`)新增`orderby=-created`將會依建立的遞減順序排序專案。 |
 | `limit` | 指定頁面大小限制，以控制頁面中包含的結果數量。 （*預設值： 20*） |
 | `start` | 指定ISO格式時間戳記來排序結果。 如果未指定開始日期，API呼叫會先傳回最舊建立的查詢，然後繼續列出最近的結果。<br> ISO時間戳記允許在日期和時間有不同的詳細程度等級。 基本ISO時間戳記採用`2020-09-07`格式，以表示日期2020年9月7日。 更複雜的範例將寫為`2022-11-05T08:15:30-05:00`，並對應至2022年11月5日美國東部標準時間上午8:15:30。 可以為時區提供UTC時差，並在字尾加上「Z」(`2020-01-01T01:01:01Z`)表示。 如果未提供時區，則預設為零。 |
-| `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須** HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位是`created`、`updated`、`state`和`id`。 支援的運運算元清單為`>` （大於）、`<` （小於）、`>=` （大於或等於）、`<=` （小於或等於）、`==` （等於）、`!=` （不等於）和`~` （包含）。 例如，`id==6ebd9c2d-494d-425a-aa91-24033f3abeec`會傳回所有具有指定ID的查詢。 |
+| `property` | 根據欄位篩選結果。 篩選器&#x200B;**必須**&#x200B;為HTML逸出。 逗號可用來組合多組篩選器。 支援的欄位是`created`、`updated`、`state`和`id`。 支援的運運算元清單為`>` （大於）、`<` （小於）、`>=` （大於或等於）、`<=` （小於或等於）、`==` （等於）、`!=` （不等於）和`~` （包含）。 例如，`id==6ebd9c2d-494d-425a-aa91-24033f3abeec`會傳回所有具有指定ID的查詢。 |
 | `excludeSoftDeleted` | 指示是否應包含已軟刪除的查詢。 例如，`excludeSoftDeleted=false`將&#x200B;**包含**&#x200B;個軟刪除的查詢。 （*布林值，預設值： true*） |
 | `excludeHidden` | 指示是否應顯示非使用者導向的查詢。 將此值設定為false將&#x200B;**包含**&#x200B;非使用者導向的查詢，例如CURSOR定義、FETCH或中繼資料查詢。 （*布林值，預設值： true*） |
 | `isPrevLink` | `isPrevLink`查詢引數用於分頁。 API呼叫的結果使用其`created`時間戳記和`orderby`屬性排序。 瀏覽結果頁面時，向後分頁時，`isPrevLink`設為true。 這會反轉查詢的順序。 請參閱「下一個」和「上一個」連結作為範例。 |
@@ -329,7 +329,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `op` | 要對資源執行的作業型別。 接受的值為`cancel`和`soft_delete`。 若要取消查詢，您必須使用值`cancel `設定op引數。 請注意，軟刪除作業會停止在GET請求時傳回查詢，但不會將其從系統中刪除。 |
+| `op` | 要對資源執行的作業型別。 接受的值為 `cancel` 和 `soft_delete`。若要取消查詢，您必須使用值`cancel`設定op引數。 請注意，軟刪除作業會停止在GET請求上傳回查詢，但不會從系統中刪除查詢。 |
 
 **回應**
 

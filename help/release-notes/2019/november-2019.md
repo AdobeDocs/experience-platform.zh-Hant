@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1889'
 ht-degree: 8%
@@ -17,11 +17,13 @@ ht-degree: 8%
 **發行日期： 2019年11月18日**
 
 Adobe Experience Platform 的新功能：
+
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
 更新現有功能：
+
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Real-Time Customer Profile]](#profile)
@@ -119,7 +121,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]可讓資料科學家透�
 
 標準化和互通性是[!DNL Experience Platform]背後的重要概念。 由Adobe驅動的[!DNL Experience Data Model] (XDM)致力於標準化客戶體驗資料並定義客戶體驗管理的結構描述。
 
-XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
+XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何應用程式提供通用結構和定義，以便與Adobe Experience Platform上的服務通訊。 只要遵循XDM標準，所有客戶體驗資料都能整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶行為中獲得有價值的分析洞察、透過區段定義客戶客群，並基於個人化目的使用客戶屬性。
 
 **新功能**
 
@@ -140,7 +142,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的效能。 它為任何�
 
 ## [!DNL Real-Time Customer Profile] {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過[!DNL Real-Time Customer Profile]，您可以看到結合來自多個管道（包括線上、離線、CRM和第三方資料）之資料的每個個別客戶的整體檢視。 [!DNL Profile]可讓您將不同的客戶資料合併成統一的檢視表，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 可讓您為客戶提供協調一致且相關的體驗，無論他們何時何地與您的品牌互動。透過[!DNL Real-Time Customer Profile]，您可以看到結合來自多個管道（包括線上、離線、CRM和第三方資料）之資料的每個個別客戶的整體檢視。 [!DNL Profile]可讓您將不同的客戶資料合併成統一的檢視表，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 | 功能 | 說明 |
 | -----------| ---------- |
@@ -148,7 +150,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 | 清理指定資料集的資料 | 使用者現在可以使用[!DNL Profile]系統作業API，刪除指定資料集或批次的資料。 |
 | Edge [!DNL Profile]查詢增強功能 | 應用程式現在可以使用指定設定檔的任何身分來查詢Edge [!DNL Profile]。 |
 | 為每個投影設定合併原則 | 應用程式現在可以設定每個投影的合併原則，以產生由特定合併原則所控管的資料檢視。 |
-| 計算屬性 | 計算屬性會根據其他值、計算和運算式自動計算欄位值。 運算屬性會在設定檔層級上操作，以根據傳入事件、傳入事件和設定檔資料，或傳入事件、設定檔資料和歷史事件來彙總值，例如「總購買」、「期限值」或「漏斗狀態」。 |
+| 計算屬性 | 計算屬性會根據其他值、計算和運算式自動計算欄位值。 運算屬性會在設定檔層級上操作，以根據傳入事件、傳入事件和設定檔資料，或傳入事件、設定檔資料和歷史事件來彙總值，例如「總購買」、「期限值」或「funnel狀態」。 |
 
 **錯誤修正**
 
@@ -164,7 +166,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RESTful API，可讓您從[!DNL Real-Time Customer Profile]資料建立區段並產生對象。 這些區段是在[!DNL Experience Platform]上集中設定和維護，讓任何Adobe應用程式都能輕鬆存取。
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，進而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 | 功能 | 說明 |
 | -----------| ---------- |

@@ -2,9 +2,9 @@
 title: 目的地概觀
 description: 目的地是預先建立的與目的地平台的整合，可無縫地從Adobe Experience Platform啟用資料。 您可以使用Adobe Experience Platform中的「目的地」，針對跨頻道行銷活動、電子郵件行銷活動、鎖定特定目標的廣告和許多其他使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1296'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 ![目的地概觀橫幅。](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+**[!DNL Destinations]** 是預先建立的目標平台整合功能，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -61,12 +61,12 @@ Experience Platform中的目標功能可與Adobe Experience Platform存取控制
 
 | 許可權層級 | 說明 |
 | ---- | ---- |
-| **[!UICONTROL 檢視目的地]** | 若要存取Experience Platform UI中的目的地索引標籤，您需要&#x200B;**[!UICONTROL 檢視目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
-| **[!UICONTROL 檢視目的地]**，**[!UICONTROL 管理目的地]** | 若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
-| **[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** | 若要將對象啟用至目的地並啟用工作流程的[對應步驟](ui/activate-batch-profile-destinations.md#mapping)，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;以及&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
-| **[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用沒有對應的區段]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** | 若要在沒有工作流程[對應步驟](ui/activate-batch-profile-destinations.md#mapping)存取權的情況下，從現有資料流新增或移除對象，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用沒有對應的區段]**、**[!UICONTROL 檢視設定檔]**&#x200B;以及&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
-| **[!UICONTROL 檢視目的地]**，**[!UICONTROL 管理和啟用資料集目的地]** | 若要將資料集匯出至目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
-| **[!UICONTROL 檢視身分圖表]** | 若要將&#x200B;*身分*&#x200B;匯出至目的地，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]** | 若要存取Experience Platform UI中的目的地索引標籤，您需要&#x200B;**[!UICONTROL View Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
+| **[!UICONTROL View Destinations]**、**[!UICONTROL Manage Destinations]** | 若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
+| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** | 若要將對象啟用至目的地並啟用工作流程的[對應步驟](ui/activate-batch-profile-destinations.md#mapping)，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
+| **[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** | 若要在現有資料流中新增或移除對象，而不需要存取工作流程的[對應步驟](ui/activate-batch-profile-destinations.md#mapping)，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segments without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
+| **[!UICONTROL View Destinations]**、**[!UICONTROL Manage and Activate Dataset Destinations]** | 若要將資料集匯出至目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 |
+| **[!UICONTROL View Identity Graph]** | 若要將&#x200B;*身分*&#x200B;匯出至目的地，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 ## 從目的地移除設定檔 {#profile-removal}
 
-從啟動至目的地的對象中移除設定檔時，該設定檔也會從目的地平台中的對應對象中移除。 例如，如果從先前啟動至LinkedIn的對象中移除設定檔，則會從關聯的[!UICONTROL LinkedIn相符對象]中移除該設定檔。
+從啟動至目的地的對象中移除設定檔時，該設定檔也會從目的地平台中的對應對象中移除。 例如，如果從先前啟動至LinkedIn的對象中移除設定檔，該設定檔將會從關聯的[!UICONTROL LinkedIn Matched Audience]中移除。
 
 從目的地移除設定檔（也稱為取消細分）的步調與細分相同。 從Experience Platform的對象中移除設定檔後，下一個前往目的地的排程資料流就會反映該變更，並從目的地對象中移除設定檔。
 
@@ -118,7 +118,7 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 * [電子郵件行銷目的地](./catalog/email-marketing/overview.md)
 * [社交目的地](./catalog/social/overview.md)
 
-如需對象啟動工作流程中資料原則違規的詳細資訊，請參閱下列指南中的&#x200B;**[!UICONTROL 檢閱]**&#x200B;步驟：
+如需對象啟動工作流程中資料原則違規的詳細資訊，請參閱下列指南中的&#x200B;**[!UICONTROL Review]**&#x200B;步驟：
 
 * [啟用受眾資料至串流受眾匯出目的地](./ui/activate-segment-streaming-destinations.md#review)
 * [啟用受眾資料至串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md#review)

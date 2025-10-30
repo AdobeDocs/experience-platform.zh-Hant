@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Adobe Audience Manager Source聯結器的對應欄位
 description: 瞭解如何將Adobe Audience Manager資料（即時、已上線和設定檔資料）對應至Audience Manager來源聯結器的對應體驗資料模型(XDM)欄位。
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
-# Audience Manager欄位對應
+# Audience Manager欄位對映
 
 下表包含Adobe Audience Manager資料（即時、已上線和設定檔資料）中的欄位與其對應的XDM欄位之間的對應。
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 | `requestIds[]` | `ExperienceEvent.endUserIds` - *僅適用於endUserIds中存在的名稱空間，且只有第一個值。* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds - *僅適用於存在於endUserIds中的名稱空間，且只有第一個值。* |
-| `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+| `trait[]` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
 | `timestamps` | `ExperienceEvent.timeStamp` |

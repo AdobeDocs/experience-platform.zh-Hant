@@ -2,7 +2,7 @@
 title: 在Reactor API中分頁回應
 description: 瞭解在Reactor API中列出資源時，如何分頁結果。
 exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 在Reactor API中分頁回應
 
-Reactor API傳回的回應會分頁。 預設頁面大小為25個元素。 分頁的詳細資訊會在API回應物件的`meta.pagination `區段中報告：
+Reactor API傳回的回應會分頁。 預設頁面大小為25個元素。 分頁的詳細資訊會在API回應物件的`meta.pagination`區段中報告：
 
 ```json
 "meta": {

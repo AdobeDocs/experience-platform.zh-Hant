@@ -2,9 +2,9 @@
 title: 監視串流設定檔攝取
 description: 瞭解如何使用監控儀表板來監控串流設定檔擷取
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1932'
 ht-degree: 19%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 19%
 
 >[!NOTE]
 >
->串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
+>串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
 
 ## 監視串流設定檔攝取的量度 {#streaming-profile-metrics}
 
@@ -91,7 +91,7 @@ ht-degree: 19%
 | 請求輸送量 | 此量度表示每秒進入攝取系統的事件數量。 | 沙箱/資料流 | 每60秒重新整理資料即可即時監控。 |
 | 處理輸送量 | 此量度表示系統每秒成功攝取的事件數量。 | 沙箱/資料流 | 每60秒重新整理資料即可即時監控。 |
 | P95 攝取延遲 | 此量度測量從事件到達 Experience Platform 到成功攝取進入設定檔存放區為止，其延遲時間的第 95 個百分位數。 | 沙箱/資料流 | 每60秒重新整理資料即可即時監控。 |
-| 最大輸送量 | 此量度代表每秒進入串流設定檔擷取的傳入要求數上限 | <ul><li>沙箱/資料流</li><li>資料流執行</li></ul> |
+| 最大輸送量 | 此量度代表每秒進入串流設定檔擷取的傳入要求數上限 | <ul><li>沙箱/資料流</li><li>資料流執行</li></ul> |  |
 | 已攝取的記錄 | 此量度表示在設定的時間範圍內，已攝取至設定檔存放區的記錄總數。 | <ul><li>沙箱/資料流</li><li>資料流執行</li></ul> | <ul><li>沙箱/資料流：即時監視，每60秒重新整理一次資料。</li><li>資料流執行：在15分鐘內分組。</li></ul> |
 | 攝取失敗的記錄 | 此量度表示在設定的時間範圍內，因錯誤而未能攝取至設定檔存放區的記錄總數。 | <ul><li>沙箱/資料流</li><li>資料流執行</li></ul> | <ul><li>沙箱/資料流：即時監視，每60秒重新整理一次資料。</li><li>資料流執行：在15分鐘內分組。</li></ul> |
 | 略過的記錄 | 此量度表示在設定的時間範圍內，由於設定或容量違規而捨棄的記錄總數。 | <ul><li>沙箱/資料流</li><li>資料流執行</li></ul> | <ul><li>沙箱/資料流：即時監視，每60秒重新整理一次資料。</li><li>資料流執行：在15分鐘內分組。</li></ul> |
@@ -101,31 +101,31 @@ ht-degree: 19%
 
 ## 使用監控儀表板來擷取串流設定檔
 
-若要存取串流設定檔擷取的監控儀表板，請移至Experience Platform UI，從左側導覽選取&#x200B;**[!UICONTROL 監控]**，然後選取&#x200B;**[!UICONTROL 端對端串流]**。
+若要存取串流設定檔擷取的監控儀表板，請前往Experience Platform UI，從左側導覽選取「**[!UICONTROL Monitoring]**」，然後選取「**[!UICONTROL Streaming end-to-end]**」。
 
 ![串流設定檔擷取的監視儀表板。](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-請參閱&#x200B;*[!UICONTROL 設定檔]*&#x200B;量度卡片之儀表板的頂端標頭。 使用此顯示畫面來檢視已擷取、失敗和略過的記錄資訊，以及要求輸送量和延遲的目前狀態資訊。
+請參閱&#x200B;*[!UICONTROL Profile]*&#x200B;量度卡片控制面板頂端的標題。 使用此顯示畫面來檢視已擷取、失敗和略過的記錄資訊，以及要求輸送量和延遲的目前狀態資訊。
 
 ![設定檔卡片。](../assets/ui/streaming-profiles/profile-card.png)
 
 接著，使用介面檢視串流設定檔擷取量度的詳細資訊。 使用行事曆功能在不同的時間範圍之間切換。 您可以從下列預先設定的時間視窗中選取：
 
-* [!UICONTROL 最近6小時]
-* [!UICONTROL 最近12小時]
-* [!UICONTROL 最近24小時]
-* [!UICONTROL 最近7天]
-* [!UICONTROL 最近30天]
+* [!UICONTROL Last 6 hours]
+* [!UICONTROL Last 12 hours]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
 或者，您也可以使用行事曆手動設定自己的時間範圍。
 
-您可以在監控儀表板中使用三種不同的量度類別來串流設定檔擷取： [!UICONTROL 輸送量]、[!UICONTROL 擷取]和[!UICONTROL 延遲]。
+您可以在監控儀表板中使用三種不同的量度類別來串流設定檔擷取： [!UICONTROL Throughput]、[!UICONTROL Ingestion]和[!UICONTROL Latency]。
 
 >[!BEGINTABS]
 
 >[!TAB 輸送量]
 
-選取&#x200B;**[!UICONTROL 輸送量]**&#x200B;以檢視Experience Platform在設定的期間內處理的資料量相關資訊。 請參考此量度以評估系統的效率和容量。
+選取「**[!UICONTROL Throughput]**」以檢視Experience Platform在設定的時間內處理的資料量相關資訊。 請參考此量度以評估系統的效率和容量。
 
 ![顯示設定為「輸送量」的儀表板。](../assets/ui/streaming-profiles/throughput.png)
 
@@ -135,7 +135,7 @@ ht-degree: 19%
 
 >[!TAB 內嵌]
 
-**內嵌**：選取&#x200B;**[!UICONTROL 內嵌]**&#x200B;以檢視沙箱中內嵌工作的相關資訊。 這些內嵌工作會以三種不同的量度來測量。
+**內嵌**：選取&#x200B;**[!UICONTROL Ingestion]**&#x200B;以檢視您沙箱中內嵌工作的相關資訊。 這些內嵌工作會以三種不同的量度來測量。
 
 ![顯示設定為「內嵌」的儀表板。](../assets/ui/streaming-profiles/ingestion.png)
 
@@ -145,7 +145,7 @@ ht-degree: 19%
 
 >[!TAB 延遲]
 
-選取&#x200B;**[!UICONTROL 延遲]**&#x200B;以檢視Experience Platform在指定期間內回應要求或完成作業所花費的時間的相關資訊。
+選取「**[!UICONTROL Latency]**」以檢視Experience Platform回應要求或在指定期間內完成作業所花費的時間的相關資訊。
 
 ![顯示設定為「延遲」的儀表板。](../assets/ui/streaming-profiles/latency.png)
 
@@ -155,7 +155,7 @@ ht-degree: 19%
 
 資料流表格會針對即時客戶個人檔案列出所有串流擷取活動及其對應的量度集。 每個資料流都會與其對應的資料集一起列出。
 
-如果您正接近沙箱層級容量的限制，您可以參考[!UICONTROL 最大輸送量]欄，以識別對您的耗用量比率有貢獻的任何現有資料流。 閱讀[最佳實務區段](#best-practices)，以取得資料流管理最佳實務的詳細資訊。
+如果您正接近沙箱層級容量的限制，您可以參考[!UICONTROL Max throughput]欄以識別對您的耗用率有貢獻的任何現有資料流。 閱讀[最佳實務區段](#best-practices)，以取得資料流管理最佳實務的詳細資訊。
 
 若要監視在特定資料流中擷取的資料，請選取資料流名稱旁的篩選圖示![篩選](/help/images/icons/filter-add.png)。
 
@@ -206,17 +206,17 @@ ht-degree: 19%
 
 +++回答
 
-[!UICONTROL 監視]儀表板會顯示擷取和處理的即時量度。 這些數字是活動時記錄的精確量度。 相反地，[!UICONTROL 容量]儀表板使用平滑機制來計算輸送量。 此機制有助於減少短暫的尖峰，使其不立即符合違規資格，並確保容量警報聚焦於持續趨勢，而非短暫的爆發。
+[!UICONTROL Monitoring]儀表板會顯示擷取和處理的即時量度。 這些數字是活動時記錄的精確量度。 相反地，[!UICONTROL Capacity]儀表板使用平滑機制來計算輸送量。 此機制有助於減少短暫的尖峰，使其不立即符合違規資格，並確保容量警報聚焦於持續趨勢，而非短暫的爆發。
 
 由於平滑機制，您可能會注意到：
 
-* [!UICONTROL 監視]中的小尖峰未出現在[!UICONTROL 容量]中。
-* [!UICONTROL 容量]中的值略低於相同時間戳記的[!UICONTROL 監視]。
+* 未出現在[!UICONTROL Monitoring]中的[!UICONTROL Capacity]小尖峰。
+* [!UICONTROL Capacity]中的值比相同時間戳記的[!UICONTROL Monitoring]略低。
 
 這兩個儀表板雖然準確，但設計用於不同的目的。
 
-* [!UICONTROL 正在監視]：詳細的、逐一的作業可見度。
-* [!UICONTROL 容量]：識別使用與違規模式的策略檢視。
+* [!UICONTROL Monitoring]：詳細的逐一操作可見度。
+* [!UICONTROL Capacity]：識別使用與違規模式的策略檢視。
 
 +++
 

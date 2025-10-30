@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 連線 {#connections}
 
-在Adobe Experience Platform擷取事件資料中，**[!UICONTROL 設定檔匯出]**、**[!UICONTROL 串流對象匯出]**&#x200B;和&#x200B;**[!DNL Edge Personalization]**&#x200B;目的地，將其與其他資料來源結合，以形成[即時客戶設定檔](../profile/home.md)、套用細分，並將對象和合格的設定檔匯出到目的地。
+Adobe Experience Platform擷取事件資料中的&#x200B;**[!UICONTROL Profile Export]**、**[!UICONTROL Streaming Audience Export]**&#x200B;和&#x200B;**[!DNL Edge Personalization]**&#x200B;目的地，將其與其他資料來源結合，以形成[即時客戶設定檔](../profile/home.md)、套用細分，並將對象和合格的設定檔匯出到目的地。
 
 ## 設定檔匯出目的地 {#profile-export}
 

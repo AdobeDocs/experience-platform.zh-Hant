@@ -1,8 +1,8 @@
 ---
-description: 此頁面說明Destination SDK支援的各種OAuth 2授權流程，並提供為目的地設定OAuth 2授權的指示。
+description: 本頁說明Destination SDK支援的各種OAuth 2授權流程，並提供為目的地設定OAuth 2授權的指示。
 title: OAuth 2授權
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 2%
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 Destination SDK支援多種前往目的地的授權方法。 其中一個選項是使用[OAuth 2授權架構](https://tools.ietf.org/html/rfc6749)驗證您的目的地。
 
-此頁面說明Destination SDK支援的各種OAuth 2授權流程，並提供為目的地設定OAuth 2授權的指示。
+本頁說明Destination SDK支援的各種OAuth 2授權流程，並提供為目的地設定OAuth 2授權的指示。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -46,20 +46,21 @@ Destination SDK支援多種前往目的地的授權方法。 其中一個選項�
 
 >[!IMPORTANT]
 >
->只有在授權碼為[&#128279;](#authorization-code)授權型別的OAuth 2中，才需要執行在您的系統中註冊Adobe Experience Platform的重新導向/回呼URL的步驟。 對於其他兩種支援的授權型別（密碼和使用者端認證），您可以略過此步驟。
+>只有在授權碼為[授權型別的](#authorization-code)OAuth 2中，才需要執行在您的系統中註冊Adobe Experience Platform的重新導向/回呼URL的步驟。 對於其他兩種支援的授權型別（密碼和使用者端認證），您可以略過此步驟。
 
 在此步驟結束時，您應該會：
+
 * 使用者端ID；
 * 使用者端密碼；
 * Adobe的回呼URL （用於授權代碼授權）。
 
-### 您在Destination SDK中需要做什麼 {#to-do-in-destination-sdk}
+### 在Destination SDK中需要採取哪些行動 {#to-do-in-destination-sdk}
 
-若要在Experience Platform中為您的目的地設定OAuth 2授權，您必須將您的OAuth 2詳細資料新增至[目的地組態](../../authoring-api/destination-configuration/create-destination-configuration.md) （在`customerAuthenticationConfigurations`引數下）。 如需詳細範例，請參閱[客戶驗證](../../functionality/destination-configuration/customer-authentication.md)。 本頁面進一步說明會根據您的OAuth 2授權授予型別，說明您需要將哪些欄位新增至設定範本。
+若要在Experience Platform中為您的目的地設定OAuth 2授權，您必須將您的OAuth 2詳細資料新增至[目的地組態](../../authoring-api/destination-configuration/create-destination-configuration.md) （在`customerAuthenticationConfigurations`引數底下）。 如需詳細範例，請參閱[客戶驗證](../../functionality/destination-configuration/customer-authentication.md)。 本頁面進一步說明會根據您的OAuth 2授權授予型別，說明您需要將哪些欄位新增至設定範本。
 
 ## 支援的OAuth 2授權型別 {#oauth2-grant-types}
 
-Experience Platform支援下表中的三個OAuth 2授權型別。 如果您有自訂OAuth 2設定，Adobe可以透過整合中的自訂欄位提供支援。 如需詳細資訊，請參閱各授權型別的章節。
+Experience Platform支援下表中的三種OAuth 2授予型別。 如果您有自訂OAuth 2設定，Adobe可透過您整合中的自訂欄位提供支援。 如需詳細資訊，請參閱各授權型別的章節。
 
 >[!IMPORTANT]
 >
@@ -74,11 +75,12 @@ Experience Platform支援下表中的三個OAuth 2授權型別。 如果您有�
 
 {style="table-layout:auto"}
 
-上表列出標準OAuth 2流程中使用的欄位。 除了這些標準欄位之外，不同的合作夥伴整合可能需要額外的輸入和輸出。 Adobe已為Destination SDK設計了彈性的OAuth 2授權架構，可以處理上述標準欄位模式的變異，同時支援自動重新產生無效輸出的機制，例如過期的存取權杖。
+上表列出標準OAuth 2流程中使用的欄位。 除了這些標準欄位之外，不同的合作夥伴整合可能需要額外的輸入和輸出。 Adobe為Destination SDK設計了彈性的OAuth 2授權架構，能處理上述標準欄位模式的變異，同時支援自動重新產生無效輸出的機制，例如過期的存取權杖。
 
 在任何情況下，輸出都包含存取權杖，Experience Platform會使用該權杖來驗證和維護對您目的地的授權。
 
 Adobe為OAuth 2授權設計的系統：
+
 * 支援所有三個OAuth 2授權，並解決其中的任何變數，例如其他資料欄位、非標準API呼叫等。
 * 支援具有不同期限值（90天、30分鐘或您指定的任何其他期限值）的存取權杖。
 * 支援具有或不具有重新整理權杖的OAuth 2授權流程。
@@ -123,14 +125,14 @@ Adobe為OAuth 2授權設計的系統：
 | `refreshTokenUrl` | 字串 | *選擇性。*&#x200B;您這邊的URL，這會產生重新整理Token。 通常`refreshTokenUrl`與`accessTokenUrl`相同。 |
 | `clientId` | 字串 | 系統指派給Adobe Experience Platform的使用者端ID。 |
 | `clientSecret` | 字串 | 您的系統指派給Adobe Experience Platform的使用者端密碼。 |
-| `scope` | 字串清單 | *選擇性*。 設定存取Token允許Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
+| `scope` | 字串清單 | *選擇性*。 設定存取Token可讓Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
 
 {style="table-layout:auto"}
 
 ## 具有密碼授予的OAuth 2
 
-針對OAuth 2密碼授予（讀取[RFC標準規格](https://tools.ietf.org/html/rfc6749#section-4.3)），Experience Platform需要使用者的使用者名稱與密碼。 在授權流程中，Experience Platform會將這些認證交換為存取權杖，以及選擇性地交換重新整理權杖。
-Adobe會使用以下標準輸入來簡化目的地設定，並具備覆寫值的功能：
+針對OAuth 2密碼授予（閱讀[RFC標準規格](https://tools.ietf.org/html/rfc6749#section-4.3)），Experience Platform需要使用者的使用者名稱和密碼。 在授權流程中，Experience Platform會將這些憑證交換為存取權杖，以及視需要交換重新整理權杖。
+Adobe運用下列標準輸入來簡化目的地設定，並具備覆寫值的功能：
 
 | OAuth 2授予 | 輸入 | 輸出 |
 |---------|----------|---------|
@@ -140,7 +142,7 @@ Adobe會使用以下標準輸入來簡化目的地設定，並具備覆寫值的
 
 >[!NOTE]
 >
-> 您不需要在下列組態中新增`username`和`password`的任何引數。 當您在目的地組態中新增`"grant": "OAUTH2_PASSWORD"`時，當使用者驗證您的目的地時，系統會要求使用者在Experience Platform使用者介面中提供使用者名稱和密碼。
+> 您不需要在下列組態中新增`username`和`password`的任何引數。 當您在目的地設定中新增`"grant": "OAUTH2_PASSWORD"`時，當使用者驗證您的目的地時，系統會要求使用者在Experience Platform UI中提供使用者名稱和密碼。
 
 若要為目的地設定此授權方法，請在您[建立目的地組態](../../authoring-api/destination-configuration/create-destination-configuration.md)時，在組態中新增下列行：
 
@@ -166,7 +168,7 @@ Adobe會使用以下標準輸入來簡化目的地設定，並具備覆寫值的
 | `accessTokenUrl` | 字串 | 您這邊的URL會核發存取權杖，並可選擇重新整理權杖。 |
 | `clientId` | 字串 | 系統指派給Adobe Experience Platform的使用者端ID。 |
 | `clientSecret` | 字串 | 您的系統指派給Adobe Experience Platform的使用者端密碼。 |
-| `scope` | 字串清單 | *選擇性*。 設定存取Token允許Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
+| `scope` | 字串清單 | *選擇性*。 設定存取Token可讓Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
 
 {style="table-layout:auto"}
 
@@ -208,13 +210,13 @@ Adobe會使用以下標準輸入來簡化目的地設定，並具備覆寫值的
 | `refreshTokenUrl` | 字串 | *選擇性。*&#x200B;您這邊的URL，這會產生重新整理Token。 通常`refreshTokenUrl`與`accessTokenUrl`相同。 |
 | `clientId` | 字串 | 系統指派給Adobe Experience Platform的使用者端ID。 |
 | `clientSecret` | 字串 | 您的系統指派給Adobe Experience Platform的使用者端密碼。 |
-| `scope` | 字串清單 | *選擇性*。 設定存取Token允許Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
+| `scope` | 字串清單 | *選擇性*。 設定存取Token可讓Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
 
 {style="table-layout:auto"}
 
 ## 自訂您的OAuth 2設定 {#customize-configuration}
 
-上節所述的設定描述了標準OAuth 2授權。 不過，由Adobe設計的系統提供彈性，讓您可以將自訂引數用於OAuth 2授權中的任何變數。 若要自訂標準OAuth 2設定，請使用`authenticationDataFields`引數，如下列範例所示。
+上節所述的設定描述了標準OAuth 2授權。 不過，由Adobe設計的系統提供彈性，讓您可以在OAuth 2授權中，針對任何變數使用自訂引數。 若要自訂標準OAuth 2設定，請使用`authenticationDataFields`引數，如下列範例所示。
 
 ### 範例1：使用`authenticationDataFields`擷取來自授權回應的資訊 {#example-1}
 
@@ -366,7 +368,7 @@ Adobe會使用以下標準輸入來簡化目的地設定，並具備覆寫值的
 | `authenticationDataFields.type` | 字串 | 定義自訂資料欄位的型別。 <br>接受的值： `string`、`boolean`、`integer` |
 | `authenticationDataFields.isRequired` | 布林值 | 指定在授權流程中是否需要自訂資料欄位。 |
 | `authenticationDataFields.format` | 字串 | 當您選取`"format":"password"`時，Adobe會加密授權資料欄位的值。 與`"fieldType": "CUSTOMER"`一起使用時，當使用者在欄位中輸入時，這也會隱藏UI中的輸入。 |
-| `authenticationDataFields.fieldType` | 字串 | 指出當合作夥伴（您）或使用者在Experience Platform中設定您的目的地時，輸入是否來自他們。 |
+| `authenticationDataFields.fieldType` | 字串 | 指出在Experience Platform中設定您的目的地時，輸入來自合作夥伴（您）還是使用者。 |
 | `authenticationDataFields.value` | 字串。 布林值。 整數 | 自訂資料欄位的值。 值與從`authenticationDataFields.type`選擇的型別相符。 |
 | `authenticationDataFields.authenticationResponsePath` | 字串 | 指出您正在參照的API回應路徑欄位。 |
 
@@ -451,38 +453,38 @@ Adobe設計的系統可重新整理過期的存取權杖，而不需要使用者
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `accessTokenRequest.destinationServerType` | 字串 | 使用`URL_BASED`。 |
-| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | 字串 | <ul><li>如果您對`accessTokenRequest.urlBasedDestination.url.value`中的值使用範本，請使用`PEBBLE_V1`。</li><li> 如果欄位`accessTokenRequest.urlBasedDestination.url.value`中的值是常數，請使用`NONE`。 </li></li> |
+| `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | 字串 | <ul><li>如果您對`PEBBLE_V1`中的值使用範本，請使用`accessTokenRequest.urlBasedDestination.url.value`。</li><li> 如果欄位`NONE`中的值是常數，請使用`accessTokenRequest.urlBasedDestination.url.value`。 </li></li> |
 | `accessTokenRequest.urlBasedDestination.url.value` | 字串 | Experience Platform要求存取權杖的URL。 |
-| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | 字串 | <ul><li>如果您對`accessTokenRequest.httpTemplate.requestBody.value`中的值使用範本，請使用`PEBBLE_V1`。</li><li> 如果欄位`accessTokenRequest.httpTemplate.requestBody.value`中的值是常數，請使用`NONE`。 </li></li> |
+| `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | 字串 | <ul><li>如果您對`PEBBLE_V1`中的值使用範本，請使用`accessTokenRequest.httpTemplate.requestBody.value`。</li><li> 如果欄位`NONE`中的值是常數，請使用`accessTokenRequest.httpTemplate.requestBody.value`。 </li></li> |
 | `accessTokenRequest.httpTemplate.requestBody.value` | 字串 | 使用範本化語言來自訂HTTP請求中的欄位以存取權杖端點。 有關如何使用範本化來自訂欄位的資訊，請參閱[範本化慣例](#templating-conventions)區段。 |
 | `accessTokenRequest.httpTemplate.httpMethod` | 字串 | 指定用來呼叫存取權杖端點的HTTP方法。 在大多數情況下，這個值為`POST`。 |
 | `accessTokenRequest.httpTemplate.contentType` | 字串 | 指定存取權杖端點之HTTP呼叫的內容型別。 <br>例如： `application/x-www-form-urlencoded`或`application/json`。 |
 | `accessTokenRequest.httpTemplate.headers` | 字串 | 指定是否應將任何標頭新增至存取權杖端點的HTTP呼叫。 |
-| `accessTokenRequest.responseFields.templatingStrategy` | 字串 | <ul><li>如果您對`accessTokenRequest.responseFields.value`中的值使用範本，請使用`PEBBLE_V1`。</li><li> 如果欄位`accessTokenRequest.responseFields.value`中的值是常數，請使用`NONE`。 </li></li> |
+| `accessTokenRequest.responseFields.templatingStrategy` | 字串 | <ul><li>如果您對`PEBBLE_V1`中的值使用範本，請使用`accessTokenRequest.responseFields.value`。</li><li> 如果欄位`NONE`中的值是常數，請使用`accessTokenRequest.responseFields.value`。 </li></li> |
 | `accessTokenRequest.responseFields.value` | 字串 | 使用範本化語言從存取權杖端點存取HTTP回應中的欄位。 有關如何使用範本化來自訂欄位的資訊，請參閱[範本化慣例](#templating-conventions)區段。 |
 | `accessTokenRequest.validations.name` | 字串 | 表示您為此驗證提供的名稱。 |
-| `accessTokenRequest.validations.actualValue.templatingStrategy` | 字串 | <ul><li>如果您對`accessTokenRequest.validations.actualValue.value`中的值使用範本，請使用`PEBBLE_V1`。</li><li> 如果欄位`accessTokenRequest.validations.actualValue.value`中的值是常數，請使用`NONE`。 </li></li> |
+| `accessTokenRequest.validations.actualValue.templatingStrategy` | 字串 | <ul><li>如果您對`PEBBLE_V1`中的值使用範本，請使用`accessTokenRequest.validations.actualValue.value`。</li><li> 如果欄位`NONE`中的值是常數，請使用`accessTokenRequest.validations.actualValue.value`。 </li></li> |
 | `accessTokenRequest.validations.actualValue.value` | 字串 | 使用範本化語言來存取HTTP回應中的欄位。 有關如何使用範本化來自訂欄位的資訊，請參閱[範本化慣例](#templating-conventions)區段。 |
-| `accessTokenRequest.validations.expectedValue.templatingStrategy` | 字串 | <ul><li>如果您對`accessTokenRequest.validations.expectedValue.value`中的值使用範本，請使用`PEBBLE_V1`。</li><li> 如果欄位`accessTokenRequest.validations.expectedValue.value`中的值是常數，請使用`NONE`。 </li></li> |
+| `accessTokenRequest.validations.expectedValue.templatingStrategy` | 字串 | <ul><li>如果您對`PEBBLE_V1`中的值使用範本，請使用`accessTokenRequest.validations.expectedValue.value`。</li><li> 如果欄位`NONE`中的值是常數，請使用`accessTokenRequest.validations.expectedValue.value`。 </li></li> |
 | `accessTokenRequest.validations.expectedValue.value` | 字串 | 使用範本化語言來存取HTTP回應中的欄位。 有關如何使用範本化來自訂欄位的資訊，請參閱[範本化慣例](#templating-conventions)區段。 |
 
 {style="table-layout:auto"}
 
 ## 範本化慣例 {#templating-conventions}
 
-根據您的授權自訂，您可能需要存取授權回應中的資料欄位，如上一節所示。 若要這麼做，請熟悉Adobe使用的[Pebble範本語言](https://pebbletemplates.io/)，並參考下列範本設定慣例來自訂您的OAuth 2實作。
+根據您的授權自訂，您可能需要存取授權回應中的資料欄位，如上一節所示。 若要這麼做，請熟悉Adobe使用的[Pebble範本語言](https://pebbletemplates.io/)，並參考下列範本慣例來自訂您的OAuth 2實作。
 
 
 | 前置詞 | 說明 | 範例 |
 |---------|----------|---------|
-| authData | 存取任何合作夥伴或客戶資料欄位的值。 | ``{{ authData.accessToken }}`` |
-| response.body | HTTP回應內文 | ``{{ response.body.access_token }}`` |
-| response.status | HTTP回應狀態 | ``{{ response.status }}`` |
-| response.headers | HTTP回應標題 | ``{{ response.headers.server[0] }}`` |
-| userContext | 存取有關目前授權嘗試的資訊 | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authorization attempt `</li></ul> |
+| authData | 存取任何合作夥伴或客戶資料欄位的值。 | `{{ authData.accessToken }}` |
+| response.body | HTTP回應內文 | `{{ response.body.access_token }}` |
+| response.status | HTTP回應狀態 | `{{ response.status }}` |
+| response.headers | HTTP回應標題 | `{{ response.headers.server[0] }}` |
+| userContext | 存取有關目前授權嘗試的資訊 | <ul><li>`{{ userContext.sandboxName }}`</li><li>`{{ userContext.sandboxId }}`</li><li>`{{ userContext.imsOrgId }}`</li><li>`{{ userContext.client }} // the client executing the authorization attempt`</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文章，您現在已瞭解Adobe Experience Platform支援的OAuth 2授權模式，知道如何使用OAuth 2授權支援設定您的目的地。 接下來，您可以使用Destination SDK設定您的OAuth 2支援目的地。 閱讀[使用Destination SDK設定您的目的地](../../guides/configure-destination-instructions.md)，以瞭解後續步驟。
+閱讀本文章，您現在已瞭解Adobe Experience Platform支援的OAuth 2授權模式，知道如何使用OAuth 2授權支援設定您的目的地。 接下來，您可以使用Destination SDK設定您的OAuth 2支援目的地。 閱讀[使用Destination SDK設定您的目的地](../../guides/configure-destination-instructions.md)以瞭解後續步驟。

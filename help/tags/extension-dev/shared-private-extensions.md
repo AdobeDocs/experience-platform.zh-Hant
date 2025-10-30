@@ -1,26 +1,26 @@
 ---
 title: 共用的私人擴充功能套件
 description: 瞭解如何在Adobe Experience Platform Tags中共用私人擴充功能套件。
-source-git-commit: f45f58b4679b619708204cdb0c18174a4836ce8d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
 # 共用的私人擴充功能套件
 
-Adobe Experience Platform標籤現在支援&#x200B;**[!UICONTROL 使用授權]**，這是一項強大的功能，可讓您安全地與信任的合作夥伴共用私人擴充功能套件，而不需在擴充功能目錄中公開提供。 此功能可在組織之間建立安全的橋樑，讓您能夠運用彼此的自訂擴充功能程式碼，同時維護隱私權並控制專屬解決方案。
+Adobe Experience Platform標籤現在支援&#x200B;**[!UICONTROL Usage Authorizations]**，這項強大的功能可讓您安全地與信任的合作夥伴共用私人擴充功能套件，而不需在擴充功能目錄中公開提供。 此功能可在組織之間建立安全的橋樑，讓您能夠運用彼此的自訂擴充功能程式碼，同時維護隱私權並控制專屬解決方案。
 
 ## 與其他組織共用擴充功能套件
 
 >[!NOTE]
 >
->擴充功能套件必須有私人或公用版本，才能透過[!UICONTROL 使用授權]共用。 標示為開發可用性的版本不符合共用資格，且不會出現在授權下拉式清單中。 即使已共用較舊的版本（例如1.0.0），亦適用。 較新版本（例如1.0.1）必須至少設為私人，接收組織才能授權或安裝這些版本。
+>擴充功能套件必須有私用或公用版本，才能透過[!UICONTROL Usage Authorizations]共用。 標示為開發可用性的版本不符合共用資格，且不會出現在授權下拉式清單中。 即使已共用較舊的版本（例如1.0.0），亦適用。 較新版本（例如1.0.1）必須至少設為私人，接收組織才能授權或安裝這些版本。
 >
 >如果您稍後選擇將這些套件公開，所有關於共用私人擴充功能套件的指引也適用。 有關可見性、版本設定、安全性、相容性、支援和檔案的相同考量事項，無論套件的可用性狀態為何，都仍然適用。
 
-公用和私用擴充功能套件都可以透過[!UICONTROL 使用授權]共用，不過開發可用性中的擴充功能無法具有與其關聯的授權。
+公用和私用擴充功能套件都可以透過[!UICONTROL Usage Authorizations]共用，不過開發可用性中的擴充功能無法具有與其關聯的授權。
 
 組織通常會根據獨特的業務需求開發專門的擴充功能。 這些擴充功能可能包含不應公開使用的專有邏輯、自訂整合或敏感設定。 使用授權可透過啟用以下功能來解決此挑戰：
 
@@ -38,40 +38,40 @@ Adobe Experience Platform標籤現在支援&#x200B;**[!UICONTROL 使用授權]**
 
 ## 建立擴充功能套件使用授權
 
-若要共用擴充功能，請導覽至資料收集UI，然後從左側導覽中選取&#x200B;**[!UICONTROL 標籤]**。 從這裡，選取現有屬性或建立新屬性。
+若要共用擴充功能，請導覽至資料收集UI，然後從左側導覽中選取&#x200B;**[!UICONTROL Tags]**。 從這裡，選取現有屬性或建立新屬性。
 
-選取或建立所需的屬性後，在左側導覽中選取&#x200B;**[!UICONTROL 擴充功能]**，然後選取&#x200B;**[!UICONTROL 使用授權]**&#x200B;索引標籤。
+選取或建立所需的屬性後，在左側導覽中選取「**[!UICONTROL Extensions]**」，然後選取「**[!UICONTROL Usage Authorizations]**」標籤。
 
 在這裡，您會看到現有共用授權的清單，這些授權分為兩個類別：
 
 - **與此組織共用**：其他組織與您共用的擴充功能。
 - **與其他組織共用**：您與其他組織共用的擴充功能。
 
-選取&#x200B;**[!UICONTROL 新增授權]**。
+選擇「**[!UICONTROL Add Authorization]**」。
 
-![顯示與此組織共用的擴充功能清單的[!UICONTROL 使用授權]標籤，醒目提示[!UICONTROL 新增授權]](../images/shared-extensions/add-authorization.png)
+![此[!UICONTROL Usage Authorizations]標籤顯示與此組織共用的擴充功能清單，醒目提示[!UICONTROL Add Authorization]](../images/shared-extensions/add-authorization.png)
 
 >[!IMPORTANT]
 >
 >您必須取得目標組織的&#x200B;**`Organization ID`**&#x200B;組織擁有者。 無法依名稱搜尋組織。
 
-在下拉式清單中，從可用的擴充功能中選取您要共用的&#x200B;**[!UICONTROL 擴充功能]**。 清單會顯示貴組織擁有的擴充功能及其可用性狀態。 最新版本為&#x200B;**開發**&#x200B;可用性的擴充功能將不會出現在此清單中。
+在下拉式清單中，從可用的擴充功能中選取您要共用的&#x200B;**[!UICONTROL Extension]**。 清單會顯示貴組織擁有的擴充功能及其可用性狀態。 最新版本為&#x200B;**開發**&#x200B;可用性的擴充功能將不會出現在此清單中。
 
-接下來，輸入接收組織的ID，然後選取&#x200B;**[!UICONTROL 儲存]**。
+接下來，輸入接收組織的ID，然後選取&#x200B;**[!UICONTROL Save]**。
 
-![此[!UICONTROL 建立擴充功能套件使用授權]頁面顯示選取的擴充功能以及輸入的Adobe組織識別碼，並醒目提示[!UICONTROL 儲存]](../images/shared-extensions/save-authorization.png)
+![顯示所選擴充功能和Adobe組織ID的[!UICONTROL Create extension package usage authorization]頁面已輸入，並醒目提示[!UICONTROL Save]](../images/shared-extensions/save-authorization.png)
 
-您會回到[!UICONTROL 使用授權]標籤，您可以在與其他組織的&#x200B;**[!UICONTROL 共用]**&#x200B;清單中看到擴充功能。 狀態將顯示&#x200B;**等待核准**，直到接收組織核准授權為止，屆時它將會更新為&#x200B;**已核准**。
+您會回到[!UICONTROL Usage Authorizations]標籤，您可以在其中看到&#x200B;**[!UICONTROL Shared with other orgs]**&#x200B;清單中的副檔名。 狀態將顯示&#x200B;**等待核准**，直到接收組織核准授權為止，屆時它將會更新為&#x200B;**已核准**。
 
-![顯示與其他組織共用的擴充功能清單的[!UICONTROL 使用授權]標籤，強調新授權](../images/shared-extensions/new-authorization.png)
+![此[!UICONTROL Usage Authorizations]標籤顯示與其他組織共用的擴充功能清單，並醒目提示新授權](../images/shared-extensions/new-authorization.png)
 
 >[!TIP]
 >
->您也可以直接從&#x200B;**[!UICONTROL 擴充功能目錄]**&#x200B;共用擴充功能，方法是選取擴充功能卡上的功能表(⋯)，然後從功能表選取共用選項。
+>您也可以直接從&#x200B;**[!UICONTROL Extension Catalog]**&#x200B;共用擴充功能，方法是選取擴充功能卡上的功能表(⋯)，然後從功能表選取共用選項。
 
 當授權作用中時，共用擴充功能會在目錄中顯示&#x200B;***共用***&#x200B;徽章，表示正在與其他組織共用。
 
-![顯示具有徽章之共用擴充功能的[!UICONTROL 目錄]標籤](../images/shared-extensions/sharing-badge.png)
+![顯示具有徽章之共用擴充功能的[!UICONTROL Catalog]標籤](../images/shared-extensions/sharing-badge.png)
 
 ## 授權及管理共用擴充功能
 
@@ -79,37 +79,39 @@ Adobe Experience Platform標籤現在支援&#x200B;**[!UICONTROL 使用授權]**
 >
 >作為接收組織，您只能核准或拒絕共用擴充功能。 您無法管理或修改授權詳細資料，因為這些詳細資料是由共用組織所控制。
 
-若要授權貴組織的共用擴充功能，請導覽至資料收集UI，並從左側導覽中選取&#x200B;**[!UICONTROL 標籤]**，然後選取屬性。 接著，在左側導覽中選取「**[!UICONTROL 擴充功能]**」，然後選取「**[!UICONTROL 使用授權]**」標籤。
+若要授權貴組織的共用擴充功能，請導覽至資料收集UI，並從左側導覽中選取「**[!UICONTROL Tags]**」，然後選取屬性。 接著，在左側導覽中選取「**[!UICONTROL Extensions]**」，然後選取「**[!UICONTROL Usage Authorizations]**」標籤。
 
-您可以在&#x200B;**與此組織共用**&#x200B;區段中看到共用擴充功能的清單，包括那些&#x200B;**[!UICONTROL 等待核准中]**。 選取您要核准的延伸模組，然後選取&#x200B;**[!UICONTROL 核准]**。
+您可以在&#x200B;**區段中看到共用擴充功能的清單，包括那些**&#x200B;等待核准的&#x200B;**[!UICONTROL Shared with this org]**。 選取您要核准的副檔名，然後選取&#x200B;**[!UICONTROL Approve]**。
 
-![此[!UICONTROL 使用授權]標籤會顯示與此組織共用的擴充功能清單，以及正在等待核准的已選取擴充功能，並醒目顯示[!UICONTROL 核准]](../images/shared-extensions/approve-authorization.png)
+![此[!UICONTROL Usage Authorizations]標籤顯示與此組織共用的擴充功能清單，其擴充功能正在等待核准中選取，並醒目顯示[!UICONTROL Approve]](../images/shared-extensions/approve-authorization.png)
 
 >[!NOTE]
 >
->如果您的組織不再需要共用擴充功能，您也可以在&#x200B;**[!UICONTROL 使用授權]**&#x200B;標籤中拒絕要求。
+>如果您的組織不再需要共用擴充功能，您也可以在&#x200B;**[!UICONTROL Usage Authorizations]**&#x200B;標籤內拒絕要求。
 
-在&#x200B;**[!UICONTROL 授權使用方式]**&#x200B;對話方塊中選取&#x200B;**[!UICONTROL 確定]**。
+在&#x200B;**[!UICONTROL OK]**&#x200B;對話方塊中選取&#x200B;**[!UICONTROL Authorization Usages]**。
 
-![&#x200B; [!UICONTROL 授權使用方式]對話方塊，醒目提示[!UICONTROL 確定]](../images/shared-extensions/confirmation.png)
+![ [!UICONTROL Authorization Usages]對話方塊，醒目提示[!UICONTROL OK]](../images/shared-extensions/confirmation.png)
 
-您會回到[!UICONTROL 使用授權]索引標籤，您可以在其中看到擴充功能現在顯示&#x200B;**已核准**&#x200B;狀態。
+您會回到[!UICONTROL Usage Authorizations]索引標籤，您可以在其中看到擴充功能現在顯示&#x200B;**已核准**&#x200B;狀態。
 
-![此[!UICONTROL 使用授權]標籤會顯示與此組織共用的擴充功能清單，並醒目提示狀態為「已核准」的擴充功能](../images/shared-extensions/approved-authorization.png)
+![此[!UICONTROL Usage Authorizations]標籤會顯示與此組織共用的擴充功能清單，並醒目提示狀態為「已核准」的擴充功能](../images/shared-extensions/approved-authorization.png)
 
 在核准授權後，即可在您的目錄中取得擴充功能，並可像任何其他擴充功能一樣安裝及使用。 共用擴充功能會顯示&#x200B;***接收***&#x200B;徽章，表示它是其他組織與您共用的擴充功能。
 
-![&#x200B; [!UICONTROL 目錄]索引標籤顯示具有「接收」徽章的共用擴充功能](../images/shared-extensions/receiving-badge.png)
+![顯示「接收」徽章之共用擴充功能的[!UICONTROL Catalog]標籤](../images/shared-extensions/receiving-badge.png)
 
 ## 撤銷授權
 
 作為擁有權組織，您可以隨時刪除授權，無論其目前狀態（「等待核准」、「已拒絕」或「已核准」）為何。
 
 **如果您的擴充功能從未公開：**
+
 - 接收組織已安裝的任何私人版本，都會繼續顯示在其已安裝的擴充功能清單中。
 - 如果接收組織從未安裝您的擴充功能，該擴充功能就不會再出現在介面中的任何位置。
 
 **如果您的擴充功能已公開：**
+
 - 接收組織安裝的任何私人版本都會顯示在已安裝的擴充功能清單中。
 - 如果他們從未安裝您的私人版本，他們仍會在目錄中看到最新的公開版本，並且可以安裝。
 - 如有需要，他們也可以將您的私人版本降級為最新的公開版本。

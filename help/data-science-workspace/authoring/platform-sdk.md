@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Adobe Experience Platform SDK製作模型
 description: 本教學課程提供在Python和R中將data_access_sdk_python轉換為新Python平台_sdk的相關資訊。
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---
@@ -161,7 +161,7 @@ df2
 | 小於(`<`) | `lt()` |
 | 小於或等於(`<=`) | `le()` |
 | 和(`&`) | `And()` |
-| 或(`|`) | `Or()` |
+| 或(&amp;amp；vert； ) | `Or()` |
 
 ## 依選取的欄篩選 {#filter-by-selected-columns}
 
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 後續步驟
 
-設定`platform_sdk`資料載入器後，資料會進行準備，然後分割為`train`和`val`資料集。 若要瞭解資料準備和功能工程，請造訪教學課程中關於使用[!DNL JupyterLab]筆記本建立配方的[資料準備和功能工程](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)一節。
+設定`platform_sdk`資料載入器後，資料會進行準備，然後分割為`train`和`val`資料集。 若要瞭解資料準備和功能工程，請造訪教學課程中關於使用[筆記本建立配方的](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)資料準備和功能工程[!DNL JupyterLab]一節。

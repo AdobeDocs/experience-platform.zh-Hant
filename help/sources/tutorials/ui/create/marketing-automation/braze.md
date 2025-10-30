@@ -4,10 +4,10 @@ description: 瞭解如何使用Adobe Experience Platform UI為您的Braze帳戶�
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '971'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 若要完成本指南中的步驟，您將需要：
 
 * 登入[Adobe Experience Platform](https://platform.adobe.com)並取得建立新串流來源連線的許可權。
-* 登入您的[[!DNL Braze] 儀表板](https://dashboard.braze.com/sign_in)、未使用的[Currences Connector授權](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)，以及建立聯結器的許可權。 如需詳細資訊，請閱讀設定 [!DNL Currents][&#128279;](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements)的需求。
+* 登入您的[[!DNL Braze] 儀表板](https://dashboard.braze.com/sign_in)、未使用的[Currences Connector授權](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)，以及建立聯結器的許可權。 如需詳細資訊，請閱讀設定[ [!DNL Currents]的](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements)需求。
 
 ## 快速入門
 
@@ -47,19 +47,19 @@ ht-degree: 2%
 >
 >如果您是第一次建立[!DNL Braze Currents]連線，則必須建立體驗資料模型(XDM)結構描述。 如果您已建立[!DNL Braze Currents]的結構描述，則可以略過此步驟，並繼續[將您的帳戶連線至Experience Platform](#connect)。
 
-在Experience Platform UI中，使用左側導覽，然後選取「**[!UICONTROL 結構描述]**」以存取[!UICONTROL 結構描述]工作區。 接著，選取&#x200B;**[!UICONTROL 建立結構描述]**，然後選取&#x200B;**[!UICONTROL 體驗事件]**。 若要繼續，請選取&#x200B;**[!UICONTROL 下一步]**。
+在Experience Platform UI中，使用左側導覽，然後選取「**[!UICONTROL Schemas]**」以存取[!UICONTROL Schemas]工作區。 接著，選取&#x200B;**[!UICONTROL Create schema]**，然後選取&#x200B;**[!UICONTROL Experience Event]**。 若要繼續，請選取&#x200B;**[!UICONTROL Next]**。
 
 ![已完成的結構描述。](../../../../images/tutorials/create/braze/schema.png)
 
-提供結構描述的名稱和說明。 然後，使用[!UICONTROL 構成]面板來設定結構描述屬性。 在[!UICONTROL 欄位群組]下，選取&#x200B;**[!UICONTROL 新增]**&#x200B;並新增[!UICONTROL Braze Currences使用者事件]欄位群組。 完成後，選取&#x200B;**[!UICONTROL 儲存]**。
+提供結構描述的名稱和說明。 然後，使用[!UICONTROL Composition]面板來設定結構描述屬性。 在[!UICONTROL Field groups]下，選取&#x200B;**[!UICONTROL Add]**&#x200B;並新增[!UICONTROL Braze Currents User Event]欄位群組。 完成後，選取&#x200B;**[!UICONTROL Save]**。
 
 如需結構描述的詳細資訊，請參閱[在UI](../../../../../xdm/tutorials/create-schema-ui.md)中建立結構描述的指南。
 
 ## 將您的[!DNL Braze]帳戶連線至Experience Platform {#connect}
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取[!UICONTROL Sources]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在&#x200B;*行銷自動化*&#x200B;類別下，選取&#x200B;**[!UICONTROL 硬碟電流]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
+在&#x200B;*行銷自動化*&#x200B;類別下，選取&#x200B;**[!UICONTROL Braze Currents]**，然後選取&#x200B;**[!UICONTROL Add data]**。
 
 ![已選取「硬碟電流」來源的Experience Platform UI上的來源目錄。](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -78,29 +78,29 @@ ht-degree: 2%
 
 在來源資料中，*id*&#x200B;將錯誤對應到&#x200B;*_braze.appID*。 您必須在結構描述的根層級將目標對應欄位變更為&#x200B;*_id*。 接下來，確定&#x200B;*properties.is_amp*&#x200B;對應至&#x200B;*_braze.messaging.email.isAMP*。
 
-接著，刪除&#x200B;*time*&#x200B;到&#x200B;*timestamp*&#x200B;的對應，然後選取新增(`+`)圖示，然後選取&#x200B;**[!UICONTROL 新增計算欄位]**。 在提供的方塊中，輸入&#x200B;*time \* 1000*&#x200B;並選取&#x200B;**[!UICONTROL 儲存]**。
+接著，刪除&#x200B;*time*&#x200B;到&#x200B;*timestamp*&#x200B;的對應，然後選取新增(`+`)圖示，再選取&#x200B;**[!UICONTROL Add calculated field]**。 在提供的方塊中，輸入&#x200B;*time \* 1000*&#x200B;並選取&#x200B;**[!UICONTROL Save]**。
 
-新增新的計算欄位後，選取新的來源欄位旁的&#x200B;**[!UICONTROL 對應目標欄位]**，並將其對應到結構描述根層級的&#x200B;*時間戳記*。 然後您應該選取&#x200B;**[!UICONTROL 驗證]**，以確保您沒有其他錯誤。
+新增新的計算欄位後，選取新來源欄位旁的&#x200B;**[!UICONTROL Map target field]**，並將其對應到結構描述根層級的&#x200B;*時間戳記*。 然後，您應該選取「**[!UICONTROL Validate]**」以確保您沒有其他錯誤。
 
 >[!IMPORTANT]
 >
 >銅製時間戳記不是以毫秒表示，而是以秒表示。 為了準確反映Experience Platform中的時間戳記，您需要建立以毫秒為單位的計算欄位。 計算「時間* 1000」將正確地轉換為毫秒，適合對應到Experience Platform內的時間戳記欄位。
 >
->![正在建立時間戳記](../../../../images/tutorials/create/braze/create-calculated-field.png)的計算欄位
+>![正在建立時間戳記的計算欄位](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![沒有錯誤的對應。](../../../../images/tutorials/create/braze/completed_mapping.png)
 
-完成後，選取&#x200B;**[!UICONTROL 下一步]**。 使用檢閱頁面確認資料流的詳細資料，然後選取&#x200B;**[!UICONTROL 完成]**。
+完成後，選取&#x200B;**[!UICONTROL Next]**。 使用檢閱頁面確認資料流的詳細資料，然後選取&#x200B;**[!UICONTROL Finish]**。
 
 ### 收集必要的認證
 
-建立連線後，您必須收集下列認證值，然後在硬碟控制面板中提供，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀瀏覽至Currences[&#128279;](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents)的[!DNL Braze] 指南。
+建立連線後，您必須收集下列認證值，然後在硬碟控制面板中提供，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀瀏覽至Currences[!DNL Braze]的[ ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents)指南。
 
 | 欄位 | 說明 |
 | --- | --- |
 | 用戶端 ID | 與您的Experience Platform來源相關聯的使用者端ID。 |
 | 使用者端密碼 | 與您的Experience Platform來源相關聯的使用者端密碼。 |
-| 租用戶 ID | 與您的Experience Platform來源相關聯的租使用者ID。 |
+| 租使用者ID | 與您的Experience Platform來源相關聯的租使用者ID。 |
 | 沙箱名稱 | 與您的Experience Platform來源關聯的沙箱。 |
 | 資料流 ID | 與您的Experience Platform來源相關聯的資料流ID。 |
 | 串流端點 | 與您的Experience Platform來源相關聯的串流端點。 **注意**： [!DNL Braze]會自動將此轉換為批次串流端點。 |

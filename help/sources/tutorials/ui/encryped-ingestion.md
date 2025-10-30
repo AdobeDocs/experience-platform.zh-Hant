@@ -2,9 +2,9 @@
 title: 將加密資料內嵌在來源UI Workspace中
 description: 瞭解如何將加密資料內嵌在來源UI工作區中。
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1414'
 ht-degree: 6%
 
 ---
@@ -51,19 +51,19 @@ ht-degree: 6%
 
 >[!ENDSHADEBOX]
 
-在Experience Platform UI中，導覽至來源工作區，然後從頂端標題中選取[!UICONTROL 索引鍵配對]。
+在Experience Platform UI中，導覽至來源工作區，然後從頂端標題選取「[!UICONTROL Key Pairs]」。
 
 ![已選取「索引鍵配對」標頭的來源目錄。](../../images/tutorials/edi/catalog.png)
 
-系統會將您帶到一個頁面，其中顯示貴組織中現有加密金鑰組的清單。 此頁面提供指定金鑰的標題、ID、型別、加密演演算法、到期日和狀態的資訊。 若要建立新的金鑰組，請選取&#x200B;**[!UICONTROL 建立金鑰]**。
+系統會將您帶到一個頁面，其中顯示貴組織中現有加密金鑰組的清單。 此頁面提供指定金鑰的標題、ID、型別、加密演演算法、到期日和狀態的資訊。 若要建立新的金鑰組，請選取&#x200B;**[!UICONTROL Create Key]**。
 
 ![已選取「加密金鑰」作為金鑰型別，並選取「建立金鑰」按鈕的「金鑰組」頁面。](../../images/tutorials/edi/encryption_key_page.png)
 
-接著，選擇您要建立的金鑰型別。 若要建立加密金鑰，請選取&#x200B;**[!UICONTROL 加密金鑰]**，然後選取&#x200B;**[!UICONTROL 繼續]**。
+接著，選擇您要建立的金鑰型別。 若要建立加密金鑰，請選取&#x200B;**[!UICONTROL Encryption Key]**，然後選取&#x200B;**[!UICONTROL Continue]**。
 
 ![已選取加密金鑰的金鑰建立視窗。](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-提供加密金鑰的標題和複雜密碼。 複雜密碼是加密金鑰的額外保護層。 建立後，Experience Platform會將複雜密碼與公開金鑰儲存在不同的安全儲存庫中。 您必須提供非空白字串作為複雜密碼。 完成後，選取&#x200B;**[!UICONTROL 建立]**。
+提供加密金鑰的標題和複雜密碼。 複雜密碼是加密金鑰的額外保護層。 建立後，Experience Platform會將複雜密碼與公開金鑰儲存在不同的安全儲存庫中。 您必須提供非空白字串作為複雜密碼。 完成後，選取&#x200B;**[!UICONTROL Create]**。
 
 ![提供標題和密碼的加密金鑰建立視窗。](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -71,7 +71,7 @@ ht-degree: 6%
 
 ![顯示您新建立之加密金鑰組相關資訊的視窗。](../../images/tutorials/edi/encryption_key_details.png)
 
-若要檢視現有加密金鑰的相關資訊，請選取金鑰標題旁的省略符號(`...`)。 選取&#x200B;**[!UICONTROL 金鑰詳細資料]**&#x200B;以檢視公開金鑰和金鑰識別碼。 或者，如果您要刪除加密金鑰，請選取&#x200B;**[!UICONTROL 刪除]**。
+若要檢視現有加密金鑰的相關資訊，請選取金鑰標題旁的省略符號(`...`)。 選取&#x200B;**[!UICONTROL Key details]**&#x200B;以檢視公開金鑰和金鑰識別碼。 或者，如果您要刪除加密金鑰，請選取&#x200B;**[!UICONTROL Delete]**。
 
 ![顯示加密金鑰清單的金鑰組頁面。 選取「acme-encryption-key」旁邊的省略符號，下拉式清單會顯示檢視金鑰詳細資料或刪除金鑰的選項。](../../images/tutorials/edi/configuration_options.png)
 
@@ -90,11 +90,11 @@ ht-degree: 6%
 
 >[!ENDSHADEBOX]
 
-若要建立簽署驗證金鑰，請從金鑰型別選取視窗中選取&#x200B;**[!UICONTROL 簽署驗證金鑰]**，然後選取&#x200B;**[!UICONTROL 繼續]**。
+若要建立簽署驗證金鑰，請從金鑰型別選取視窗中選取&#x200B;**[!UICONTROL Sign Verification Key]**，然後選取&#x200B;**[!UICONTROL Continue]**。
 
 ![選取簽章驗證金鑰的金鑰型別選取視窗。](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
-接下來，提供標題和[!DNL Base64]編碼的PGP金鑰作為您的公開金鑰，然後選取&#x200B;**[!UICONTROL 建立]**。
+接下來，提供標題和[!DNL Base64]編碼的PGP金鑰作為您的公開金鑰，然後選取&#x200B;**[!UICONTROL Create]**。
 
 ![建立簽署驗證金鑰視窗。](../../images/tutorials/edi/create_sign_verification_key.png)
 
@@ -127,15 +127,15 @@ ht-degree: 6%
 * [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
 * [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-使用您選擇的雲端儲存空間來源進行驗證。 在工作流程的資料選取步驟中，選取要擷取的加密檔案或資料夾，然後啟用&#x200B;**[!UICONTROL 檔案是否已加密]**&#x200B;切換按鈕。
+使用您選擇的雲端儲存空間來源進行驗證。 在工作流程的資料選取步驟中，選取您要擷取的加密檔案或資料夾，然後啟用&#x200B;**[!UICONTROL Is the file encrypted]**&#x200B;切換按鈕。
 
 ![來源工作流程的「選取資料」步驟，其中選取要擷取的加密資料檔案。](../../images/tutorials/edi/select_data.png)
 
 接著，從來源資料中選取範例檔案。 由於您的資料已加密，Experience Platform將需要範例檔案來建立可對應至您的來源資料的XDM結構描述。
 
-![「此檔案是否已加密？」 啟用切換並選取「選取範例檔案」按鈕。](../../images/tutorials/edi/select_sample_file.png)
+![「此檔案是否已加密？」 啟用切換並選取[選取範例檔案]按鈕](../../images/tutorials/edi/select_sample_file.png)。
 
-選取範例檔案後，請設定資料的設定，例如其對應的資料格式、分隔符號和壓縮型別。 允許預覽介面完全呈現一段時間，然後選取&#x200B;**[!UICONTROL 儲存]**。
+選取範例檔案後，請設定資料的設定，例如其對應的資料格式、分隔符號和壓縮型別。 允許預覽介面完全呈現一段時間，然後選取&#x200B;**[!UICONTROL Save]**。
 
 ![已選取要擷取的樣本，且檔案預覽已完整載入。](../../images/tutorials/edi/file_preview.png)
 
@@ -147,7 +147,7 @@ ht-degree: 6%
 
 ![與您的簽章驗證加密對應的金鑰識別碼簽章驗證金鑰標題。](../../images/tutorials/edi/custom_key_id.png)
 
-完成時，選取&#x200B;**[!UICONTROL 下一步]**。
+完成時，請選取&#x200B;**[!UICONTROL Next]**。
 
 完成來源工作流程中的其餘步驟，以完成資料流程的建立。
 

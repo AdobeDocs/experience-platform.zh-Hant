@@ -5,10 +5,10 @@ title: 串流擷取驗證
 type: Tutorial
 description: 串流內嵌可讓您使用串流端點即時將資料上傳到Adobe Experience Platform。 串流獲取API支援兩種驗證模式 — 同步和非同步。
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '906'
-ht-degree: 11%
+ht-degree: 15%
 
 ---
 
@@ -25,11 +25,11 @@ ht-degree: 11%
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [!DNL Experience Platform] 疑難排解指南中的[如何讀取範例 API 呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了對 [!DNL Experience Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人`{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
@@ -50,6 +50,7 @@ ht-degree: 11%
 ### 驗證涵蓋範圍
 
 [!DNL Streaming Validation Service]涵蓋下列領域的驗證：
+
 - Range
 - 是否存在
 - 列舉
