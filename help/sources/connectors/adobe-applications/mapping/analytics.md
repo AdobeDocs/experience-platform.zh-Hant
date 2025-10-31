@@ -2,9 +2,9 @@
 title: Adobe Analytics Source聯結器的對應欄位
 description: 使用Adobe Analytics Source Connector將Analytics欄位對應到XDM欄位。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
-source-wordcount: '3854'
+source-wordcount: '3838'
 ht-degree: 5%
 
 ---
@@ -197,7 +197,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | 數字 | 行動服務次要信標。 |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | 字串 | 行動服務信標UUID。 |
 | `mobileinstalls` | `application.firstLaunches` | 物件 | 這會在安裝或重新安裝後第一次執行時觸發`{id (string), value (number)}` |
-| `mobileupgrades` | `application.upgrades` | 物件 | 報告應用程式升級次數。 在升級或版本編號變更後首次執行時觸發。 | `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | 物件 | 報告應用程式升級次數。 在升級或版本編號變更後首次執行時觸發。`{id (string), value (number)}` |
 | `mobilelaunches` | `application.launches` | 物件 | 應用程式的啟動次數。 `{id (string), value (number)}` |
 | `mobilecrashes` | `application.crashes` | 物件 | `{id (string), value (number)}` |
 | `mobilemessageclicks` | `directMarketing.clicks` | 物件 | `{id (string), value (number)}` |
@@ -224,13 +224,13 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 
 | 資料摘要 | XDM欄位 | XDM型別 | 說明 |
 | --- | --- | --- | --- |
-| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | 物件 | 自訂Analytics prop，設定為清單prop。 它包含分隔的值清單。 | {} |
-| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | 物件 | 由階層變數使用。 它包含分隔的值清單。 | {values (array)， delimiter (string)} |
-| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | 陣列 | 自訂Analytics清單。 包含分隔的值清單。 | {value (string)， key (string)} |
+| `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | 物件 | 自訂Analytics prop，設定為清單prop。 它包含分隔的值清單。`{}` |
+| `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | 物件 | 由階層變數使用。 它包含分隔的值清單。`{values (array), delimiter (string)}` |
+| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | 陣列 | 自訂Analytics清單。 包含分隔的值清單。 `{value (string), key (string)}` |
 | `m_color` | `device.colorDepth` | 整數 | 色彩深度ID，以c_color欄的值為基礎。 |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | 布林值 | Cookie支援維度中使用的變數。 |
-| `m_event_list` | `commerce.purchases`，<br/>`commerce.productViews`，<br/>`commerce.productListOpens`，<br/>`commerce.checkouts`，<br/>`commerce.productListAdds`，<br/>`commerce.productListRemovals`，<br/>`commerce.productListViews` | 物件 | 點選時觸發的標準商務事件。 | {id （字串），值（數字）} |
-| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | 物件 | 點選時觸發的自訂事件。 | {id （物件），值（物件）} |
+| `m_event_list` | `commerce.purchases`，<br/>`commerce.productViews`，<br/>`commerce.productListOpens`，<br/>`commerce.checkouts`，<br/>`commerce.productListAdds`，<br/>`commerce.productListRemovals`，<br/>`commerce.productListViews` | 物件 | 點選時觸發的標準商務事件。`{id (string), value (number)}` |
+| `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | 物件 | 點選時觸發的自訂事件。`{id (Object), value (Object)}` |
 | `m_geo_country` | `placeContext.geo.countryCode` | 字串 | 根據IP的點選來源國家/地區縮寫。 |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | 數字 | |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | 數字 | |

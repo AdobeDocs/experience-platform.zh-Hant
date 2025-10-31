@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Marketo Engage Source的對應欄位
 description: 下表包含Marketo資料集中欄位與其對應XDM欄位之間的對應。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 5%
@@ -66,7 +66,7 @@ ht-degree: 5%
 | 在(7， 8， 9， 10， 11， 27)中的activityTypeId時為primaryAttributeValueId | 7， 8， 9， 10， 11， 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 →訊息已封鎖</li><li>Source上已封鎖1003 →垃圾訊息</li><li>1004 →封郵件上的垃圾訊息</li><li>2003 →電子郵件地址無效</li><li>2001 →電子郵件地址錯誤</li><li>*` &rarr;`個未知的退信原因</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 →訊息未接受</li><li>3001 →信箱已滿</li><li>3004 →發生逾時</li><li>4003 → DNS失敗</li><li>4002 →訊息太大</li><li>4006 →原則違規</li><li>4999 →暫時性失敗</li><li>收到9999 →錯誤回應</li><li>*→不明原因的軟退信</li></ul></li></ul> | 8， 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 →訊息已封鎖</li><li>Source上已封鎖1003 →垃圾訊息</li><li>1004 →封郵件上的垃圾訊息</li><li>2003 →電子郵件地址無效</li><li>2001 →電子郵件地址錯誤</li><li> `&rarr;`個未知的退信原因</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 →訊息未接受</li><li>3001 →信箱已滿</li><li>3004 →發生逾時</li><li>4003 → DNS失敗</li><li>4002 →訊息太大</li><li>4006 →原則違規</li><li>4999 →暫時性失敗</li><li>收到9999 →錯誤回應</li><li> →軟退信的未知原因</li></ul></li></ul> | 8， 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |
