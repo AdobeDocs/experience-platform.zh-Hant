@@ -2,20 +2,20 @@
 title: 使用流量服務API連線Salesforce Marketing Cloud至Experience Platform
 description: 瞭解如何使用API將您的Salesforce Marketing Cloud帳戶連結至Experience Platform。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API連線[!DNL Salesforce Marketing Cloud]至Experience Platform
+# 使用[!DNL Salesforce Marketing Cloud] API連線[!DNL Flow Service]至Experience Platform
 
 >[!WARNING]
 >
 >[!DNL Salesforce Marketing Cloud]來源將於2026年1月汰除。 新的來源將作為替代方案於今年晚些時候發行。 釋放新來源後，您必須在2026年1月底之前建立新的帳戶連線和資料流，以計畫移轉至新來源。
 
-閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)將您的[!DNL Salesforce Marketing Cloud]帳戶連結至Adobe Experience Platform。
+閱讀本指南，瞭解如何使用[!DNL Salesforce Marketing Cloud]API[[!DNL Flow Service] 將您的](https://developer.adobe.com/experience-platform-apis/references/flow-service/)帳戶連結至Adobe Experience Platform。
 
 ## 快速入門
 
@@ -24,14 +24,14 @@ ht-degree: 1%
 * [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL Azure Synapse Analytics]。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Azure Synapse Analytics] API成功連線到[!DNL Flow Service]。
 
 
 ### 使用Experience Platform API
 
 如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
-以下章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL Salesforce Marketing Cloud]。
+以下章節提供您需瞭解的其他資訊，才能使用[!DNL Salesforce Marketing Cloud] API成功連線到[!DNL Flow Service]。
 
 ### 收集必要的認證
 
@@ -101,7 +101,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `auth.params.host` |
+| `auth.params.host` |  |
 | `auth.params.clientId` | 與您的[!DNL Salesforce Marketing Cloud]應用程式關聯的使用者端識別碼。 |
 | `auth.params.clientSecret` | 與您的[!DNL Salesforce Marketing Cloud]應用程式關聯的使用者端密碼。 |
 | `connectionSpec.id` | [!DNL Salesforce Marketing Cloud]連線規格識別碼： `ea1c2a08-b722-11eb-8529-0242ac130003`。 |

@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來
 title: 設定自助來源驗證規格(批次SDK)
 description: 本檔案提供使用自助來源(批次SDK)所需準備的設定概述。
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 3%
@@ -116,20 +116,20 @@ OAuth 2重新整理程式碼可產生暫時存取權杖和重新整理權杖，�
 | --- | --- | --- |
 | `authSpec.name` | 顯示支援的驗證型別名稱。 | `oAuth2-refresh-code` |
 | `authSpec.type` | 定義來源支援的驗證型別。 | `oAuth2-refresh-code` |
-| `authSpec.spec` | 包含驗證結構、資料型別和屬性的相關資訊。 |
+| `authSpec.spec` | 包含驗證結構、資料型別和屬性的相關資訊。 |  |
 | `authSpec.spec.$schema` | 定義用於驗證的結構描述。 | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | 定義結構描述的資料型別。 | `object` |
-| `authSpec.spec.properties` | 包含用於驗證的認證的相關資訊。 |
-| `authSpec.spec.properties.description` | 顯示認證的簡短說明。 |
+| `authSpec.spec.properties` | 包含用於驗證的認證的相關資訊。 |  |
+| `authSpec.spec.properties.description` | 顯示認證的簡短說明。 |  |
 | `authSpec.spec.properties.type` | 定義認證的資料型別。 | `string` |
-| `authSpec.spec.properties.clientId` | 與您的應用程式相關聯的使用者端ID。 使用者端ID會與您的使用者端密碼搭配使用，以擷取您的存取權杖。 |
-| `authSpec.spec.properties.clientSecret` | 與您的應用程式關聯的使用者端密碼。 使用者端密碼會與使用者端ID搭配使用，以擷取您的存取權杖。 |
-| `authSpec.spec.properties.accessToken` | 存取權杖會授權您安全存取應用程式。 |
-| `authSpec.spec.properties.refreshToken` | 當存取權杖過期時，重新整理權杖會用來產生新的存取權杖。 |
-| `authSpec.spec.properties.expirationDate` | 定義存取Token的到期日。 |
-| `authSpec.spec.properties.refreshTokenUrl` | 用來擷取重新整理權杖的URL。 |
-| `authSpec.spec.properties.accessTokenUrl` | 用來擷取重新整理權杖的URL。 |
-| `authSpec.spec.properties.requestParameterOverride` | 可讓您指定認證引數以在驗證時覆寫。 |
+| `authSpec.spec.properties.clientId` | 與您的應用程式相關聯的使用者端ID。 使用者端ID會與您的使用者端密碼搭配使用，以擷取您的存取權杖。 |  |
+| `authSpec.spec.properties.clientSecret` | 與您的應用程式關聯的使用者端密碼。 使用者端密碼會與使用者端ID搭配使用，以擷取您的存取權杖。 |  |
+| `authSpec.spec.properties.accessToken` | 存取權杖會授權您安全存取應用程式。 |  |
+| `authSpec.spec.properties.refreshToken` | 當存取權杖過期時，重新整理權杖會用來產生新的存取權杖。 |  |
+| `authSpec.spec.properties.expirationDate` | 定義存取Token的到期日。 |  |
+| `authSpec.spec.properties.refreshTokenUrl` | 用來擷取重新整理權杖的URL。 |  |
+| `authSpec.spec.properties.accessTokenUrl` | 用來擷取重新整理權杖的URL。 |  |
+| `authSpec.spec.properties.requestParameterOverride` | 可讓您指定認證引數以在驗證時覆寫。 |  |
 | `authSpec.spec.required` | 顯示驗證所需的認證。 | `accessToken` |
 
 {style="table-layout:auto"}
@@ -173,13 +173,13 @@ OAuth 2重新整理程式碼可產生暫時存取權杖和重新整理權杖，�
 | --- | --- | --- |
 | `authSpec.name` | 顯示支援的驗證型別名稱。 | `Basic Authentication` |
 | `authSpec.type` | 定義來源支援的驗證型別。 | `BasicAuthentication` |
-| `authSpec.spec` | 包含驗證結構、資料型別和屬性的相關資訊。 |
+| `authSpec.spec` | 包含驗證結構、資料型別和屬性的相關資訊。 |  |
 | `authSpec.spec.$schema` | 定義用於驗證的結構描述。 | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | 定義結構描述的資料型別。 | `object` |
-| `authSpec.spec.description` | 顯示您驗證型別的特定進一步資訊。 |
-| `authSpec.spec.properties` | 包含用於驗證的認證的相關資訊。 |
-| `authSpec.spec.properties.username` | 與您的應用程式相關聯的帳戶使用者名稱。 |
-| `authSpec.spec.properties.password` | 與您的應用程式關聯的帳戶密碼。 |
+| `authSpec.spec.description` | 顯示您驗證型別的特定進一步資訊。 |  |
+| `authSpec.spec.properties` | 包含用於驗證的認證的相關資訊。 |  |
+| `authSpec.spec.properties.username` | 與您的應用程式相關聯的帳戶使用者名稱。 |  |
+| `authSpec.spec.properties.password` | 與您的應用程式關聯的帳戶密碼。 |  |
 | `authSpec.spec.required` | 指定在Experience Platform中輸入必填欄位。 | `username` |
 
 {style="table-layout:auto"}

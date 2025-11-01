@@ -2,9 +2,9 @@
 title: Adobe Analytics Source聯結器的對應欄位
 description: 使用Adobe Analytics Source Connector將Analytics欄位對應到XDM欄位。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3832'
 ht-degree: 5%
 
 ---
@@ -242,7 +242,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `m_page_type` | `web.webPageDetails.isErrorPage` | 布林值 | 用來填入找不到頁面維度的變數。 此變數應為空白或包含「ErrorPage」。 |
 | `m_pagename_no_url` | `web.webPageDetails.name` | 數字 | 頁面名稱（若有設定）。 若未指定頁面，此值會留空。 |
 | `m_paid_search` | `search.isPaid` | 布林值 | 如果點選符合付費搜尋偵測，則會設定此旗標。 |
-| `m_product_list` | `productListItems[].items` | 陣列 | 產品清單，透過產品變數傳入。 | {SKU （字串），數量（整數），價格總計（數字）} |
+| `m_product_list` | `productListItems[].items` | 陣列 | 產品清單，透過產品變數傳入。`{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | 字串 | 表示點選的反向連結型別的數值ID。<br/>`1`：網站內<br/>`2`：其他網站<br/>`3`：搜尋引擎<br/>`4`：硬碟<br/>`5`： USENET<br/>`6`：已輸入/建立書籤（無反向連結）<br/>`7`：電子郵件<br/>`8`：無JavaScript<br/>`9`：社交網路 |
 | `m_search_engine` | `search.searchEngine` | 字串 | 表示將訪客反向連結至您網站的搜尋引擎數值ID。 |
 | `post_currency` | `commerce.order.currencyCode` | 字串 | 交易期間使用的貨幣代碼。 |

@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
 solution: Experience Platform
 title: 使用Flow Service API建立新的連線規格
 description: 以下檔案提供如何使用「流程服務API」建立連線規格，以及透過「自助式來源」整合新來源的步驟。
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '773'
 ht-degree: 2%
 
 ---
 
 # 使用[!DNL Flow Service] API建立新的連線規格
 
-連線對規格代表來源的結構。 它包含有關來源驗證需求的資訊，定義如何探索和檢查來源資料，並提供有關給定來源屬性的資訊。 [!DNL Flow Service] API中的`/connectionSpecs`端點可讓您以程式設計方式管理組織內的連線規格。
+連線對規格代表來源的結構。 它包含有關來源驗證需求的資訊，定義如何探索和檢查來源資料，並提供有關給定來源屬性的資訊。 `/connectionSpecs` API中的[!DNL Flow Service]端點可讓您以程式設計方式管理組織內的連線規格。
 
-以下檔案提供如何使用[!DNL Flow Service] API建立連線規格，以及透過自助來源（批次SDK）整合新來源的步驟。
+以下檔案提供如何使用[!DNL Flow Service] API建立連線規格，以及透過自助來源(批次SDK)整合新來源的步驟。
 
 ## 快速入門
 
-繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 ## 收整合品
 
-若要使用自助來源建立新的批次來源，您必須先協調Adobe、請求私人Git存放庫，並對齊有關來源的標籤、說明、類別和圖示詳細資訊的Adobe。
+若要使用自助來源建立新的批次來源，您必須先協調Adobe、請求私人Git存放庫，並在與來源標籤、說明、類別和圖示相關的詳細資訊上與Adobe保持一致。
 
 提供後，您必須建構您的私人Git存放庫，如下所示：
 
@@ -39,9 +39,9 @@ ht-degree: 2%
 | 成品（檔案名稱） | 說明 | 範例 |
 | --- | --- | --- |
 | {your_source} | 來源的名稱。 此資料夾應在您的私人Git存放庫中包含與您的來源相關的所有成品。 | `mailchimp-members` |
-| {your_source}-category.txt | 來源所屬的類別，格式為文字檔。 自助來源（批次SDK）支援的可用來源類別清單包括： <ul><li>Advertising</li><li>Analytics</li><li>同意與偏好設定</li><li>CRM</li><li>客戶成功</li><li>資料庫</li><li>e-Commerce</li><li>行銷自動化</li><li>付款</li><li>通訊協定</li></ul> **注意**：如果您認為您的來源不符合上述任何類別，請聯絡您的Adobe代表進行討論。 | `mailchimp-members-category.txt`在檔案內，請指定您來源的類別，例如： `marketingAutomation`。 |
+| {your_source}-category.txt | 來源所屬的類別，格式為文字檔。 自助來源(批次SDK)支援的可用來源類別清單包括： <ul><li>Advertising</li><li>Analytics</li><li>同意與偏好設定</li><li>CRM</li><li>客戶成功</li><li>資料庫</li><li>e-Commerce</li><li>行銷自動化</li><li>付款</li><li>通訊協定</li></ul> **注意**：如果您認為您的來源不符合上述任何類別，請聯絡您的Adobe代表進行討論。 | `mailchimp-members-category.txt`在檔案內，請指定您來源的類別，例如： `marketingAutomation`。 |
 | {your_source}-description.txt | 來源的簡短說明。 | [!DNL Mailchimp Members]是行銷自動化來源，可用來將[!DNL Mailchimp Members]資料帶入Experience Platform。 |
-| {your_source}-icon.svg | 用來在Experience Platform來源目錄中表示來源的影像。 此圖示必須是SVG檔案。 |
+| {your_source}-icon.svg | 用來在Experience Platform來源目錄中代表您來源的影像。 此圖示必須是SVG檔案。 |  |
 | {your_source}-label.txt | 您應顯示在Experience Platform來源目錄中的來源名稱。 | Mailchimp 會員 |
 | {your_source}-connectionSpec.json | 包含您來源之連線規格的JSON檔案。 一開始不需要這個檔案，因為當您完成本指南時，會填入您的連線規格。 | `mailchimp-members-connectionSpec.json` |
 
@@ -51,7 +51,7 @@ ht-degree: 2%
 >
 >在連線規格的測試期間，您可以在連線規格中使用`text`取代索引鍵值。
 
-將必要的檔案新增至私人Git存放庫後，您必須建立提取請求(PR)以供Adobe檢閱。 您的PR獲得核准並合併後，系統就會提供您的ID，供連線規格參考來源的標籤、說明和圖示。
+將必要的檔案新增至私人Git存放庫後，您必須建立提取請求(PR)供Adobe檢閱。 您的PR獲得核准並合併後，系統就會提供您的ID，供連線規格參考來源的標籤、說明和圖示。
 
 接下來，請依照下列步驟設定您的連線規格。 如需可新增至來源的不同功能（例如進階排程、自訂結構描述或不同分頁型別）的其他指引，請檢閱[設定來源規格](../config/sourcespec.md)的指南。
 
@@ -452,7 +452,7 @@ ht-degree: 2%
 * [設定您的來源規格](../config/sourcespec.md)
 * [設定您的瀏覽規格](../config/explorespec.md)
 
-更新您的規格資訊後，您可以透過向[!DNL Flow Service] API的`/connectionSpecs`端點發出POST請求來提交新的連線規格。
+更新您的規格資訊後，您可以透過向`/connectionSpecs` API的[!DNL Flow Service]端點發出POST請求來提交新的連線規格。
 
 **API格式**
 

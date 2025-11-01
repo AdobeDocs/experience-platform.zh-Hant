@@ -4,9 +4,9 @@ description: 瞭解如何使用使用者介面將Didomi連線至Adobe Experience
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Adobe Experience Platform支援透過來源聯結器系統，從各種外部系�
 
 ### 在Experience Platform上設定許可權
 
-您必須同時為您的帳戶啟用&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;許可權，才能將您的[!DNL Didomi]帳戶連線至Experience Platform。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀[存取控制UI指南](../../../access-control/ui/overview.md)。
+您必須同時為帳戶啟用&#x200B;**[!UICONTROL View Sources]**&#x200B;和&#x200B;**[!UICONTROL Manage Sources]**&#x200B;許可權，才能將您的[!DNL Didomi]帳戶連線至Experience Platform。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀[存取控制UI指南](../../../access-control/ui/overview.md)。
 
 ### 收集Adobe API認證
 
@@ -51,9 +51,9 @@ Adobe Experience Platform支援透過來源聯結器系統，從各種外部系�
 
 **Experience Data Model (XDM)結構描述**&#x200B;定義了您將從[!DNL Didomi]傳送到Experience Platform的資料結構（例如使用者ID、同意目的）。
 
-若要建立結構描述，請在Experience Platform UI的左側導覽中選取[!UICONTROL 結構描述]，然後選取&#x200B;**[!UICONTROL 建立結構描述]**。 接著，選取&#x200B;**[!UICONTROL 標準]**&#x200B;作為結構描述型別，然後選取&#x200B;**[!UICONTROL 手動]**&#x200B;以手動建立欄位。 選取結構描述的基底類別，並提供結構描述的名稱。
+若要建立結構描述，請在Experience Platform UI的左側導覽中選取[!UICONTROL Schemas]，然後選取&#x200B;**[!UICONTROL Create schema]**。 接著，選取&#x200B;**[!UICONTROL Standard]**&#x200B;作為結構描述型別，然後選取&#x200B;**[!UICONTROL Manual]**&#x200B;以手動建立欄位。 選取結構描述的基底類別，並提供結構描述的名稱。
 
-建立後，新增任何必填欄位以更新結構。 請確定至少一個欄位是[!UICONTROL 身分]欄位，以通知Experience Platform您的主要身分值。 最後，請確定您已啟用[!UICONTROL 設定檔]切換功能，才能成功儲存資料。
+建立後，新增任何必填欄位以更新結構。 確保至少一個欄位是[!UICONTROL Identity]欄位，以通知Experience Platform您的主要身分值。 最後，請確定您已啟用[!UICONTROL Profile]切換功能，以便成功儲存您的資料。
 
 ![create-schema](../../images/tutorials/create/didomi/create-schema.png)
 
@@ -67,7 +67,7 @@ Adobe Experience Platform支援透過來源聯結器系統，從各種外部系�
 
 Experience Platform中的&#x200B;**資料集**&#x200B;是用來根據您定義的結構描述儲存傳入的資料。
 
-若要建立資料集，請在Experience Platform UI的左側導覽中選取[!UICONTROL 資料集]，然後選取&#x200B;**[!UICONTROL 建立資料集]**。 接著，選取&#x200B;**[!UICONTROL 從結構描述建立資料集]**，然後選取要與新資料集建立關聯的結構描述。
+若要建立資料集，請在Experience Platform UI的左側導覽中選取「[!UICONTROL Datasets]」，然後選取「**[!UICONTROL Create dataset]**」。 接著，選取&#x200B;**[!UICONTROL Create dataset from schema]**，然後選取要與新資料集建立關聯的結構描述。
 
 ![建立資料集](../../images/tutorials/create/didomi/create-dataset.png)
 
@@ -82,7 +82,7 @@ Experience Platform中的&#x200B;**資料集**&#x200B;是用來根據您定義�
 | 欄位 | 說明 | 範例 |
 | --- | --- | --- | 
 | 用戶端密碼 | 與您的Adobe API認證相關聯的秘密金鑰。 | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
-| API金鑰 | 用於驗證Adobe服務請求的公開API金鑰。 |
+| API金鑰 | 用於驗證Adobe服務請求的公開API金鑰。 |  |
 | 授權型別 | 應用程式從授權伺服器取得存取權杖的方法。 將此值設定為`client_credentials`。 | `client_credentials` |
 | 範圍 | 授權範圍會定義應用程式向API提供者請求的特定許可權或存取層級。 | `openid,AdobeID,read_organizations,additional_info.projectedProductContext,session` |
 | 驗證標頭 | Adobe權杖請求所需的其他標頭。 | `{"Content-type": "application/x-www-form-urlencoded"}` |
@@ -93,7 +93,7 @@ Experience Platform中的&#x200B;**資料集**&#x200B;是用來根據您定義�
 
 接下來，為您的[!DNL webhook]設定下列選項。
 
-| 欄位 | 說明 | 值 |
+| 欄位 | 說明 | 價值 |
 | ---| --- | --- | 
 | 請求標頭 | [!DNL webhook]的自訂標頭。 確定您包含`x-adobe-flow-id`。 您可以在建立[資料流後](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url)擷取此值。 | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | Flatten | 必須檢查此屬性，因為它確保[!DNL webhook]資料會以一般物件傳送。 | 啟用 |

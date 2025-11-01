@@ -2,10 +2,10 @@
 title: B2B名稱空間和結構描述
 description: 本檔案提供建立B2B來源聯結器時所需的自訂名稱空間概觀。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 923e56098361b4ef42cbbc2395b748033c0e7b94
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '1500'
-ht-degree: 8%
+ht-degree: 6%
 
 ---
 
@@ -110,21 +110,21 @@ Experience Platform使用結構描述，以一致且可重複使用的方式說�
 
 | 結構描述名稱 | 基底類別 | 欄位群組 | 結構描述中的[!DNL Profile] | 主要身分識別 | 主要身分識別命名空間 | 次要身分 | 次要身分名稱空間 | 關係 | 附註 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| B2B 帳戶 | [XDM商業帳戶](../../../../xdm/classes/b2b/business-account.md) | XDM 商業帳戶細節 | 啟用 | 基底類別中的`accountKey.sourceKey` | B2B 帳戶 | 基底類別中的`extSourceSystemAudit.externalKey.sourceKey` | B2B 帳戶 | <ul><li>XDM商業帳戶詳細資料欄位群組中的`accountParentKey.sourceKey`</li><li>目的地屬性： `/accountKey/sourceKey`</li><li>型別：一對一</li><li>參考結構描述：B2B帳戶</li><li>名稱空間： B2B帳戶</li></ul> |
-| B2B人員 | [XDM 個別輪廓](../../../../xdm/classes/individual-profile.md) | <ul><li>XDM 商業人士細節</li><li>XDM 商業人士要素</li><li>IdentityMap</li><li>同意和偏好設定詳細資料</li></ul> | 啟用 | XDM商業人士詳細資料欄位群組中的`b2b.personKey.sourceKey` | B2B人員 | <ol><li>`extSourceSystemAudit.externalKey.sourceKey`個XDM商業人士詳細資料欄位群組</li><li>`workEmail.address`個XDM商業人士詳細資料欄位群組</ol></li> | <ol><li>B2B人員</li><li>電子郵件</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey`個XDM商業人士元件欄位群組</li><li>型別：多對一</li><li>參考結構描述：B2B帳戶</li><li>名稱空間： B2B帳戶</li><li>目的地屬性： accountKey.sourceKey</li><li>來自目前結構描述的關係名稱：帳戶</li><li>來自參照結構描述的關係名稱：人員</li></ul> |
-| B2B 機會 | [XDM商機](../../../../xdm/classes/b2b/business-opportunity.md) | XDM 商業機會詳細資訊 | 啟用 | 基底類別中的`opportunityKey.sourceKey` | B2B 機會 | 基底類別中的`extSourceSystemAudit.externalKey.sourceKey` | B2B 機會 | <ul><li>基底類別中的`accountKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B帳戶</li><li>名稱空間： B2B帳戶</li><li>目的地屬性： `accountKey.sourceKey`</li><li>來自目前結構描述的關係名稱：帳戶</li><li>參考結構描述中的關係名稱：機會</li></ul> |
-| B2B機會個人關係 | [XDM商業機會個人關係](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) | None | 啟用 | 基底類別中的`opportunityPersonKey.sourceKey` | B2B機會個人關係 | | | **第一關聯性**<ul><li>基底類別中的`personKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B人員</li><li>名稱空間： B2B人員</li><li>目的地屬性： b2b.personKey.sourceKey</li><li>來自目前結構描述的關係名稱： Person</li><li>參考結構描述中的關係名稱：機會</li></ul>**第二個關聯性**<ul><li>基底類別中的`opportunityKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B機會 </li><li>名稱空間： B2B機會 </li><li>目的地屬性： `opportunityKey.sourceKey`</li><li>來自目前結構描述的關係名稱：機會</li><li>來自參照結構描述的關係名稱：人員</li></ul> |
-| B2B 行銷活動 | [XDM商業活動](../../../../xdm/classes/b2b/business-campaign.md) | XDM 商業促銷活動細節 | 啟用 | 基底類別中的`campaignKey.sourceKey` | B2B 行銷活動 | | |
-| B2B 行銷活動會員 | [XDM商業活動會員](../../../../xdm/classes/b2b/business-campaign-members.md) | XDM 商業活動會員細節 | 啟用 | 基底類別中的`ccampaignMemberKey.sourceKey` | B2B 行銷活動會員 | | | **第一關聯性**<ul><li>基底類別中的`personKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B人員</li><li>名稱空間： B2B人員</li><li>目的地屬性： `b2b.personKey.sourceKey`</li><li>來自目前結構描述的關係名稱： Person</li><li>來自參考結構描述的關係名稱：行銷活動</li></ul>**第二個關聯性**<ul><li>基底類別中的`campaignKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B行銷活動</li><li>名稱空間： B2B行銷活動</li><li>目的地屬性： `campaignKey.sourceKey`</li><li>來自目前結構的關係名稱：行銷活動</li><li>來自參照結構描述的關係名稱：人員</li></ul> |
+| B2B 帳戶 | [XDM商業帳戶](../../../../xdm/classes/b2b/business-account.md) | XDM商業帳戶細節 | 啟用 | 基底類別中的`accountKey.sourceKey` | B2B 帳戶 | 基底類別中的`extSourceSystemAudit.externalKey.sourceKey` | B2B 帳戶 | <ul><li>XDM商業帳戶詳細資料欄位群組中的`accountParentKey.sourceKey`</li><li>目的地屬性： `/accountKey/sourceKey`</li><li>型別：一對一</li><li>參考結構描述：B2B帳戶</li><li>名稱空間： B2B帳戶</li></ul> |  |
+| B2B人員 | [XDM 個別輪廓](../../../../xdm/classes/individual-profile.md) | <ul><li>XDM商業人士細節</li><li>XDM商業人士要素</li><li>身分對應</li><li>同意和偏好設定詳細資料</li></ul> | 啟用 | XDM商業人士詳細資料欄位群組中的`b2b.personKey.sourceKey` | B2B人員 | <ol><li>`extSourceSystemAudit.externalKey.sourceKey`個XDM商業人士詳細資料欄位群組</li><li>`workEmail.address`個XDM商業人士詳細資料欄位群組</ol></li> | <ol><li>B2B人員</li><li>電子郵件</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey`個XDM商業人士元件欄位群組</li><li>型別：多對一</li><li>參考結構描述：B2B帳戶</li><li>名稱空間： B2B帳戶</li><li>目的地屬性： accountKey.sourceKey</li><li>來自目前結構描述的關係名稱：帳戶</li><li>來自參照結構描述的關係名稱：人員</li></ul> |  |
+| B2B 機會 | [XDM商機](../../../../xdm/classes/b2b/business-opportunity.md) | XDM商業機會詳細資料 | 啟用 | 基底類別中的`opportunityKey.sourceKey` | B2B 機會 | 基底類別中的`extSourceSystemAudit.externalKey.sourceKey` | B2B 機會 | <ul><li>基底類別中的`accountKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B帳戶</li><li>名稱空間： B2B帳戶</li><li>目的地屬性： `accountKey.sourceKey`</li><li>來自目前結構描述的關係名稱：帳戶</li><li>參考結構描述中的關係名稱：機會</li></ul> |  |
+| B2B機會個人關係 | [XDM商業機會個人關係](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) | None | 啟用 | 基底類別中的`opportunityPersonKey.sourceKey` | B2B機會個人關係 | | | **第一關聯性**<ul><li>基底類別中的`personKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B人員</li><li>名稱空間： B2B人員</li><li>目的地屬性： b2b.personKey.sourceKey</li><li>來自目前結構描述的關係名稱： Person</li><li>參考結構描述中的關係名稱：機會</li></ul>**第二個關聯性**<ul><li>基底類別中的`opportunityKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B機會 </li><li>名稱空間： B2B機會 </li><li>目的地屬性： `opportunityKey.sourceKey`</li><li>來自目前結構描述的關係名稱：機會</li><li>來自參照結構描述的關係名稱：人員</li></ul> |  |
+| B2B 行銷活動 | [XDM商業活動](../../../../xdm/classes/b2b/business-campaign.md) | XDM商業活動細節 | 啟用 | 基底類別中的`campaignKey.sourceKey` | B2B 行銷活動 | | |  |
+| B2B 行銷活動會員 | [XDM商業活動會員](../../../../xdm/classes/b2b/business-campaign-members.md) | XDM商業活動會員細節 | 啟用 | 基底類別中的`ccampaignMemberKey.sourceKey` | B2B 行銷活動會員 | | | **第一關聯性**<ul><li>基底類別中的`personKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B人員</li><li>名稱空間： B2B人員</li><li>目的地屬性： `b2b.personKey.sourceKey`</li><li>來自目前結構描述的關係名稱： Person</li><li>來自參考結構描述的關係名稱：行銷活動</li></ul>**第二個關聯性**<ul><li>基底類別中的`campaignKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B行銷活動</li><li>名稱空間： B2B行銷活動</li><li>目的地屬性： `campaignKey.sourceKey`</li><li>來自目前結構的關係名稱：行銷活動</li><li>來自參照結構描述的關係名稱：人員</li></ul> |  |
 | B2B 行銷清單 | [XDM業務行銷清單](../../../../xdm/classes/b2b/business-marketing-list.md) | None | 啟用 | 基底類別中的`marketingListKey.sourceKey` | B2B 行銷清單 | None | None | None | 靜態清單未從[!DNL Salesforce]同步，因此沒有次要識別碼。 |
 | B2B 行銷清單成員 | [XDM業務行銷清單成員](../../../../xdm/classes/b2b/business-marketing-list-members.md) | None | 啟用 | 基底類別中的`marketingListMemberKey.sourceKey` | B2B 行銷清單成員 | None | None | **第一關聯性**<ul><li>基底類別中的`PersonKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B人員</li><li>名稱空間： B2B人員</li><li>目的地屬性： `b2b.personKey.sourceKey`</li><li>來自目前結構描述的關係名稱： Person</li><li>來自參考結構描述的關係名稱：行銷清單</li></ul>**第二個關聯性**<ul><li>基底類別中的`marketingListKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B行銷清單</li><li>名稱空間： B2B行銷清單</li><li>目的地屬性： `marketingListKey.sourceKey`</li><li>來自目前結構的關係名稱：行銷清單</li><li>來自參照結構描述的關係名稱：人員</li></ul> | 靜態清單成員未從[!DNL Salesforce]同步，因此沒有次要身分。 |
-| B2B帳戶個人關係 | [XDM商業帳戶個人關係](../../../../xdm/classes/b2b/business-account-person-relation.md) | 身分識別對應 | 啟用 | 基底類別中的`accountPersonKey.sourceKey` | B2B帳戶個人關係 | None | None | **第一關聯性**<ul><li>基底類別中的`personKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B人員</li><li>名稱空間： B2B人員</li><li>目的地屬性： `b2b.personKey.SourceKey`</li><li>來自目前結構描述的關係名稱：人員</li><li>來自參照結構描述的關係名稱：帳戶</li></ul>**第二個關聯性**<ul><li>基底類別中的`accountKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B帳戶</li><li>名稱空間： B2B帳戶</li><li>目的地屬性： `accountKey.sourceKey`</li><li>來自目前結構描述的關係名稱：帳戶</li><li>來自參照結構描述的關係名稱：人員</li></ul> |
+| B2B帳戶個人關係 | [XDM商業帳戶個人關係](../../../../xdm/classes/b2b/business-account-person-relation.md) | 身分識別對應 | 啟用 | 基底類別中的`accountPersonKey.sourceKey` | B2B帳戶個人關係 | None | None | **第一關聯性**<ul><li>基底類別中的`personKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B人員</li><li>名稱空間： B2B人員</li><li>目的地屬性： `b2b.personKey.SourceKey`</li><li>來自目前結構描述的關係名稱：人員</li><li>來自參照結構描述的關係名稱：帳戶</li></ul>**第二個關聯性**<ul><li>基底類別中的`accountKey.sourceKey`</li><li>型別：多對一</li><li>參考結構描述：B2B帳戶</li><li>名稱空間： B2B帳戶</li><li>目的地屬性： `accountKey.sourceKey`</li><li>來自目前結構描述的關係名稱：帳戶</li><li>來自參照結構描述的關係名稱：人員</li></ul> |  |
 
 {style="table-layout:auto"}
 
 ## 後續步驟
 
-若要瞭解如何將您的[!DNL Marketo]資料連線到Experience Platform，請參閱有關在UI中建立Marketo來源聯結器的教學課程[&#128279;](../../../tutorials/ui/create/adobe-applications/marketo.md)。
+若要瞭解如何將您的[!DNL Marketo]資料連線到Experience Platform，請參閱有關在UI中建立Marketo來源聯結器的教學課程[](../../../tutorials/ui/create/adobe-applications/marketo.md)。
 
 <!--
 

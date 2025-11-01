@@ -1,13 +1,13 @@
 ---
 title: 使用NPM套件建立自訂Web SDK組建
 description: 建立僅包含所需模組的自訂Web SDK組建。
-source-git-commit: 0f77023b07102ac2bc812034afacb1522ef209e5
+exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 6%
 
 ---
-
 
 # 建立自訂網頁SDK組建
 
@@ -40,7 +40,7 @@ Experience Platform Web SDK資料庫包含多個模組，用於各種功能，�
 | 活動收集器 | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | 不適用 | 媒體 |
 | 客群 | 不適用 | 不適用 | 小 |
 | 內容 | [`context`](../commands/configure/context.md) | 不適用 | 小 |
-| 規則引擎 | `personalizationStorageEnabled` | | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | 媒體 |
+| 規則引擎 | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | 媒體 |
 | 事件合併 | 不適用 | `createEventMergeId` | 小 |
 | Media Analytics Bridge | 不適用 | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | 大 |
 | 個人化 | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | 不適用 | 大 |
@@ -71,4 +71,3 @@ Experience Platform Web SDK資料庫包含多個模組，用於各種功能，�
 1. 在您確認位置後，就會產生並儲存您的自訂組建。
 
    ![顯示自訂組建儲存位置的終端機影像。](../assets/custom-build/saved.png)
-

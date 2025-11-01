@@ -2,9 +2,9 @@
 title: 使用流量服務API將資料登陸區域連線至Adobe Experience Platform
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至資料登陸區域。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1417'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!DNL Data Landing Zone]是安全的雲端型檔案儲存裝置，可將檔案帶入Adobe Experience Platform。 資料會在七天後自動從[!DNL Data Landing Zone]中刪除。
 
-本教學課程將逐步帶您瞭解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)建立[!DNL Data Landing Zone]來源連線的步驟。 此教學課程也提供如何擷取您的[!DNL Data Landing Zone]以及檢視和重新整理認證的說明。
+本教學課程將逐步帶您瞭解如何使用[!DNL Data Landing Zone]API[[!DNL Flow Service] 建立](https://www.adobe.io/experience-platform-apis/references/flow-service/)來源連線的步驟。 此教學課程也提供如何擷取您的[!DNL Data Landing Zone]以及檢視和重新整理認證的說明。
 
 ## 快速入門
 
@@ -28,15 +28,15 @@ ht-degree: 3%
 
 本教學課程也要求您閱讀[Experience Platform API快速入門](../../../../../landing/api-guide.md)的指南，瞭解如何驗證Experience Platform API並解譯檔案中提供的範例呼叫。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功建立[!DNL Data Landing Zone]來源連線。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Data Landing Zone] API成功建立[!DNL Flow Service]來源連線。
 
 ## 擷取可用的登陸區域
 
 >[!IMPORTANT]
 >
->您必須擁有&#x200B;**[!UICONTROL 管理來源]**&#x200B;存取控制許可權，才能使用[!DNL Data Landing Zone] API並擷取`type=user_drop_zone`。 如需詳細資訊，請閱讀[存取控制總覽](../../../../../access-control/home.md)，或連絡您的產品管理員以取得必要的許可權。
+>您必須擁有&#x200B;**[!UICONTROL Manage Sources]**&#x200B;存取控制許可權，才能使用[!DNL Data Landing Zone] API並擷取`type=user_drop_zone`。 如需詳細資訊，請閱讀[存取控制總覽](../../../../../access-control/home.md)，或連絡您的產品管理員以取得必要的許可權。
 
-使用API存取[!DNL Data Landing Zone]的第一步是向[!DNL Connectors] API的`/landingzone`端點發出GET要求，同時提供`type=user_drop_zone`作為要求標頭的一部分。
+使用API存取[!DNL Data Landing Zone]的第一步是向`/landingzone` API的[!DNL Connectors]端點發出GET要求，同時提供`type=user_drop_zone`作為要求標頭的一部分。
 
 **API格式**
 
@@ -67,7 +67,8 @@ curl -X GET \
 根據您的提供者，成功的請求會傳回以下內容：
 
 >[!BEGINTABS]
->[!TAB 在Azure上的 回應]
+
+>在Azure[!TAB 上的]回應
 
 ```json
 {
@@ -82,7 +83,7 @@ curl -X GET \
 | `containerTTL` | 登陸區域內套用至您資料的到期時間（以天為單位）。 指定登陸區域中的任何專案都會在七天後刪除。 |
 
 
->[!TAB 在AWS上 回應]
+>在AWS上[!TAB 回應]
 
 ```json
 {
@@ -103,7 +104,7 @@ curl -X GET \
 
 ## 擷取[!DNL Data Landing Zone]認證
 
-若要擷取[!DNL Data Landing Zone]的認證，請向[!DNL Connectors] API的`/credentials`端點提出GET請求。
+若要擷取[!DNL Data Landing Zone]的認證，請向`/credentials` API的[!DNL Connectors]端點提出GET請求。
 
 **API格式**
 
@@ -130,7 +131,8 @@ curl -X GET \
 根據您的提供者，成功的請求會傳回以下內容：
 
 >[!BEGINTABS]
->[!TAB 在Azure上的 回應]
+
+>在Azure[!TAB 上的]回應
 
 ```json
 {
@@ -150,7 +152,7 @@ curl -X GET \
 | `SASUri` | 您的[!DNL Data Landing Zone]的共用存取權簽章URI。 此字串是[!DNL Data Landing Zone]的URI組合，您要對其驗證以及它對應的SAS權杖。 |
 | `expiryDate` | 您的SAS Token到期的日期。 您必須在到期日之前重新整理您的權杖，才能繼續在您的應用程式中使用它來上傳資料到[!DNL Data Landing Zone]。 如果您未在所述的到期日之前手動重新整理權杖，則會在執行GET認證呼叫時自動重新整理並提供新權杖。 |
 
->[!TAB 在AWS上 回應]
+>在AWS上[!TAB 回應]
 
 ```json
 {
@@ -285,7 +287,7 @@ public class Main {
 
 ## 更新[!DNL Data Landing Zone]認證
 
-您可以對[!DNL Connectors] API的`/credentials`端點發出POST要求，以更新您的`SASToken`。
+您可以對`SASToken` API的`/credentials`端點發出POST要求，以更新您的[!DNL Connectors]。
 
 **API格式**
 
@@ -328,7 +330,7 @@ curl -X POST \
 
 ## 探索登陸區域檔案結構和內容
 
-您可以向[!DNL Flow Service] API的`connectionSpecs`端點發出GET要求，以探索您登陸區域的檔案結構和內容。
+您可以向`connectionSpecs` API的[!DNL Flow Service]端點發出GET要求，以探索您登陸區域的檔案結構和內容。
 
 **API格式**
 
@@ -393,7 +395,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | 參數 | 說明 | 範例 |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | 對應至[!DNL Data Landing Zone]的連線規格識別碼。 此固定ID為： `26f526f2-58f4-4712-961d-e41bf1ccc0e8`。 |
+| `{CONNECTION_SPEC_ID}` | 對應至[!DNL Data Landing Zone]的連線規格識別碼。 此固定ID為： `26f526f2-58f4-4712-961d-e41bf1ccc0e8`。 |  |
 | `{OBJECT_TYPE}` | 您要存取的物件型別。 | `file` |
 | `{OBJECT}` | 您要存取之物件的路徑和名稱。 | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | 檔案的型別。 | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -617,7 +619,7 @@ curl -X GET \
 
 來源連線會建立和管理與擷取資料的外部來源的連線。 來源連線包含資料來源、資料格式以及建立資料流所需的來源連線ID等資訊。 租使用者和組織專屬的來源連線例項。
 
-若要建立來源連線，請對[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
+若要建立來源連線，請對`/sourceConnections` API的[!DNL Flow Service]端點提出POST要求。
 
 
 **API格式**
