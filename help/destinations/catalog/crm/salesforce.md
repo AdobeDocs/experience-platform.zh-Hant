@@ -255,7 +255,7 @@ ht-degree: 1%
 以下顯示來自[!DNL Salesforce]的自訂欄位範例：
 ![[!DNL Salesforce]顯示自訂欄位的UI熒幕擷圖。](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
-以下顯示指示[!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**位置的範例：
+以下顯示指示[!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**&#x200B;位置的範例：
 ![Experience Platform UI熒幕擷圖範例，顯示排程對象匯出。](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 如上所示，[!DNL Salesforce] **[!UICONTROL Field Name]**&#x200B;與[!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**&#x200B;中指定的值完全相符。
@@ -279,7 +279,7 @@ ht-degree: 1%
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![Experience Platform UI熒幕擷圖顯示目的地資料流執行。](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!UICONTROL Activation data]**標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!UICONTROL Activation data]**&#x200B;標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。
@@ -289,7 +289,7 @@ ht-degree: 1%
 
    **使用連絡人**
 
-   * 如果您已在您的Experience Platform區段中選取&#x200B;*連絡人*，請瀏覽至&#x200B;**[!DNL Apps]** > **[!DNL Contacts]**頁面。
+   * 如果您已在您的Experience Platform區段中選取&#x200B;*連絡人*，請瀏覽至&#x200B;**[!DNL Apps]** > **[!DNL Contacts]**&#x200B;頁面。
      ![Salesforce CRM熒幕擷圖顯示含有區段設定檔的「連絡人」頁面。](../../assets/catalog/crm/salesforce/contacts.png)
 
    * 選取&#x200B;*連絡人*&#x200B;並檢查欄位是否已更新。 您可以看到根據[!DNL Salesforce CRM]對象排程&#x200B;**[!UICONTROL Mapping ID]**&#x200B;期間提供的[值，](#schedule-segment-export-example)中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
@@ -297,7 +297,7 @@ ht-degree: 1%
 
    **使用銷售機會**
 
-   * 如果您已在您的Experience Platform區段中選取&#x200B;*銷售機會*，請導覽至&#x200B;**[!DNL Apps]** > **[!DNL Leads]**頁面。
+   * 如果您已在您的Experience Platform區段中選取&#x200B;*銷售機會*，請導覽至&#x200B;**[!DNL Apps]** > **[!DNL Leads]**&#x200B;頁面。
      ![Salesforce CRM熒幕擷圖顯示具有區段設定檔的「銷售機會」頁面。](../../assets/catalog/crm/salesforce/leads.png)
 
    * 選取&#x200B;*銷售機會*&#x200B;並檢查欄位是否已更新。 您可以看到根據[!DNL Salesforce CRM]對象排程&#x200B;**[!UICONTROL Mapping ID]**&#x200B;期間提供的[值，](#schedule-segment-export-example)中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
