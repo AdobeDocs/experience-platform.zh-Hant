@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來
 title: 設定自助服務來源的來源規格(批次SDK)
 description: 本檔案提供使用自助來源(批次SDK)所需準備的設定概述。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 1%
+source-wordcount: '2107'
+ht-degree: 0%
 
 ---
 
@@ -231,6 +231,7 @@ Source規格包含來源的特定資訊，包括與來源類別、測試版狀�
 | --- | --- | --- |
 | `sourceSpec.attributes` | 包含UI或API專屬來源的資訊。 |  |
 | `sourceSpec.attributes.uiAttributes` | 顯示UI專屬來源的相關資訊。 |  |
+| `sourceSpec.attributes.uiAttributes.isPreview` | 表示來源是否顯示為預覽（而非生產/一般可用性）的布林值屬性。 | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | 一個布林值屬性，可指出來源是否需要來自客戶的更多意見回饋才能新增至其功能。 | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | 定義來源的類別。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | 定義在Experience Platform UI中用於呈現來源的圖示。 | `mailchimp-icon.svg` |
