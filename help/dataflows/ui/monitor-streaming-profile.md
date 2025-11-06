@@ -2,16 +2,16 @@
 title: 監視串流設定檔攝取
 description: 瞭解如何使用監控儀表板來監控串流設定檔擷取
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
-source-wordcount: '1932'
-ht-degree: 19%
+source-wordcount: '1835'
+ht-degree: 18%
 
 ---
 
 # 監視串流設定檔攝取
 
-您可以使用Adobe Experience Platform UI中的監控儀表板，對組織內的串流設定檔擷取進行即時監控。 使用此功能來存取與串流資料相關的輸送量、延遲和資料品品質度的更高透明度。 此外，此功能用於主動警報和擷取可操作的深入分析，以協助識別潛在的容量違規和資料擷取問題。
+您可以使用Adobe Experience Platform UI中的監控儀表板，對組織內的串流設定檔擷取進行即時監控。 使用此功能來存取與串流資料相關的輸送量和資料品品質度的更高透明度。 此外，此功能用於主動警報和擷取可操作的深入分析，以協助識別潛在的容量違規和資料擷取問題。
 
 請閱讀以下指南，瞭解如何使用監控儀表板追蹤組織中串流設定檔擷取工作的速率和量度。
 
@@ -21,19 +21,19 @@ ht-degree: 19%
 
 * [資料流](../home.md)：資料流代表跨Experience Platform傳輸資訊的資料工作。 它們可在各種服務中進行設定，以促進資料從來源聯結器移動至目標資料集以及身分服務、即時客戶設定檔和目的地。
 * [即時客戶個人檔案](../../profile/home.md)：即時客戶個人檔案將來自多個來源（線上、離線、CRM和協力廠商）的資料合併成針對每個客戶的單一可操作的檢視，以實現跨所有接觸點的一致和個人化體驗。
-* [串流擷取](../../ingestion/streaming-ingestion/overview.md)： Experience Platform的串流擷取可讓使用者即時從使用者端和伺服器端裝置傳送資料至Experience Platform。Experience Platform可讓您為每個個別客戶產生即時客戶設定檔，藉此促進協調、一致和相關體驗。&#x200B;URL在儘可能縮短延遲的情況下建立這些設定檔時，串流擷取會發揮關鍵作用。
+* [串流擷取](../../ingestion/streaming-ingestion/overview.md)： Experience Platform的串流擷取可讓使用者即時從使用者端和伺服器端裝置傳送資料至Experience Platform。Experience Platform可讓您為每個個別客戶產生即時客戶設定檔，藉此促進協調、一致和相關體驗。.
 * [容量](../../landing/license-usage-and-guardrails/capacity.md)：在Experience Platform中，容量可讓您知道您的組織是否超過您的護欄，並提供如何修正這些問題的資訊。
 
 >[!NOTE]
 >
->串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
+>串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
 
 ## 監視串流設定檔攝取的量度 {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="監視串流設定檔攝取"
->abstract="串流設定檔的監視儀表板顯示有關輸送量、攝取率及延遲的資訊。使用此儀表板來檢視、了解及分析送入 Experience Platform 的串流設定檔的資料處理量度。"
+>abstract="串流設定檔的監控儀表板會顯示輸送量和擷取率的相關資訊。 使用此儀表板來檢視、了解及分析送入 Experience Platform 的串流設定檔的資料處理量度。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -90,7 +90,6 @@ ht-degree: 19%
 | --- | --- | --- | --- |
 | 請求輸送量 | 此量度表示每秒進入攝取系統的事件數量。 | 沙箱/資料流 | 每60秒重新整理資料即可即時監控。 |
 | 處理輸送量 | 此量度表示系統每秒成功攝取的事件數量。 | 沙箱/資料流 | 每60秒重新整理資料即可即時監控。 |
-| P95 攝取延遲 | 此量度測量從事件到達 Experience Platform 到成功攝取進入設定檔存放區為止，其延遲時間的第 95 個百分位數。 | 沙箱/資料流 | 每60秒重新整理資料即可即時監控。 |
 | 最大輸送量 | 此量度代表每秒進入串流設定檔擷取的傳入要求數上限 | <ul><li>沙箱/資料流</li><li>資料流執行</li></ul> |  |
 | 已攝取的記錄 | 此量度表示在設定的時間範圍內，已攝取至設定檔存放區的記錄總數。 | <ul><li>沙箱/資料流</li><li>資料流執行</li></ul> | <ul><li>沙箱/資料流：即時監視，每60秒重新整理一次資料。</li><li>資料流執行：在15分鐘內分組。</li></ul> |
 | 攝取失敗的記錄 | 此量度表示在設定的時間範圍內，因錯誤而未能攝取至設定檔存放區的記錄總數。 | <ul><li>沙箱/資料流</li><li>資料流執行</li></ul> | <ul><li>沙箱/資料流：即時監視，每60秒重新整理一次資料。</li><li>資料流執行：在15分鐘內分組。</li></ul> |
@@ -105,7 +104,7 @@ ht-degree: 19%
 
 ![串流設定檔擷取的監視儀表板。](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-請參閱&#x200B;*[!UICONTROL Profile]*&#x200B;量度卡片控制面板頂端的標題。 使用此顯示畫面來檢視已擷取、失敗和略過的記錄資訊，以及要求輸送量和延遲的目前狀態資訊。
+請參閱&#x200B;*[!UICONTROL Profile]*&#x200B;量度卡片控制面板頂端的標題。 使用此顯示畫面來檢視已擷取、失敗和略過的記錄資訊，以及要求輸送量的目前狀態資訊。
 
 ![設定檔卡片。](../assets/ui/streaming-profiles/profile-card.png)
 
@@ -119,7 +118,7 @@ ht-degree: 19%
 
 或者，您也可以使用行事曆手動設定自己的時間範圍。
 
-您可以在監控儀表板中使用三種不同的量度類別來串流設定檔擷取： [!UICONTROL Throughput]、[!UICONTROL Ingestion]和[!UICONTROL Latency]。
+您可以在監控儀表板中使用兩種不同的量度類別來串流設定檔擷取： [!UICONTROL Throughput]和[!UICONTROL Ingestion]。
 
 >[!BEGINTABS]
 
@@ -142,12 +141,6 @@ ht-degree: 19%
 * **擷取的記錄**：在指定期間內建立的記錄總數。 此量度代表沙箱中的成功資料擷取流程。
 * **略過的記錄數**：因錯誤而未擷取的記錄總數。
 * **略過的記錄數**：因違反容量限制而捨棄的記錄總數。
-
->[!TAB 延遲]
-
-選取「**[!UICONTROL Latency]**」以檢視Experience Platform回應要求或在指定期間內完成作業所花費的時間的相關資訊。
-
-![顯示設定為「延遲」的儀表板。](../assets/ui/streaming-profiles/latency.png)
 
 >[!ENDTABS]
 
