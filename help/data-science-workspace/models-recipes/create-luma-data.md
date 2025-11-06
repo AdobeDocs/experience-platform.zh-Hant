@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### 建立Luma Web資料結構描述並擷取資料
 
-為了建立模型，Experience Platform中必須有資料集，可用來對模型進行訓練和評分。 下列來自[Data Science Workspace課程](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)的影片教學課程，將逐步引導您建立Luma結構描述及擷取購買傾向模型使用的資料。
+為了建立模型，Experience Platform中必須有資料集，可用來對模型進行訓練和評分。 下列來自[Data Science Workspace課程](https://experienceleague.adobe.com/?lang=zh-hant&recommended=ExperiencePlatform-U-1-2021.1.dsw)的影片教學課程，將逐步引導您建立Luma結構描述及擷取購買傾向模型使用的資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
