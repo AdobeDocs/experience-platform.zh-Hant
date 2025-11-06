@@ -5,9 +5,9 @@ title: 建立Luma網頁結構描述和資料集
 type: Tutorial
 description: 本教學課程提供Luma示範傾向模型所需的必要條件和資產。
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 219305a71c70a5bbec2fad591c166761e3aaa9ee
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 下載資產 {#assets}
 
-以下教學課程使用自訂Luma購買傾向模型。 繼續之前，[下載必要的資產](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip資料夾。 此資料夾包含：
+以下教學課程使用自訂Luma購買傾向模型。 繼續之前，[下載必要的資產](../assets/DSW-course-sample-assets.7z) zip資料夾。 此資料夾包含：
 
 - 購買傾向性機型筆記型電腦
 - 用來將資料內嵌至訓練和評分資料集（Luma網路資料的子集）的筆記本
@@ -49,15 +49,15 @@ ht-degree: 0%
 
 ### 建立Luma Web資料結構描述並擷取資料
 
-為了建立模型，Experience Platform中必須有資料集，可用來對模型進行訓練和評分。 下列來自[Data Science Workspace課程](https://experienceleague.adobe.com/?lang=zh-hant&recommended=ExperiencePlatform-U-1-2021.1.dsw)的影片教學課程，將逐步引導您建立Luma結構描述及擷取購買傾向模型使用的資料。
+為了建立模型，Experience Platform中必須有資料集，可用來對模型進行訓練和評分。 下列來自[Data Science Workspace課程](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)的影片教學課程，將逐步引導您建立Luma結構描述及擷取購買傾向模型使用的資料。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447165?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/333312)
 
 ### 建立訓練、評分和評分結果資料集
 
 若要執行配方產生器筆記本或使用API來訓練和評分模型，您必須指定用於訓練/評分的資料集和結構描述。 以下影片教學課程會逐步引導您設定訓練、評分和評分結果資料集，以及Luma購買傾向模型中使用的評分結果結構描述。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447432?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/333426)
 
 ## 後續步驟
 
