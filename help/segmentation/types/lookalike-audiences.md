@@ -3,18 +3,14 @@ solution: Experience Platform
 title: 相似的對象
 description: 瞭解如何使用Adobe Experience Platform中的相似受眾鎖定新的高價值受眾。
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
+source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2250'
 ht-degree: 9%
 
 ---
 
 # 相似受眾指南
-
->[!AVAILABILITY]
->
->相似見解和相似對象僅可在&#x200B;**B2C版本**&#x200B;中使用。
 
 >[!IMPORTANT]
 >
@@ -41,7 +37,7 @@ ht-degree: 9%
 
 為了使用相似見解，基礎對象&#x200B;**必須**&#x200B;符合以下資格條件：
 
-- 必須在Experience Platform中建立基礎對象&#x200B;**&#x200B;**。
+- 必須在Experience Platform中建立基礎對象&#x200B;****。
    - 外部產生的對象&#x200B;**不**&#x200B;符合相似深入分析的資格。
 - 基礎對象&#x200B;**必須**&#x200B;使用預設的合併原則。
 - 基礎對象&#x200B;**必須**&#x200B;不使用資料控管所限制的欄位。
@@ -83,17 +79,17 @@ ht-degree: 9%
 
 附加元件套件將在稍後推出，將生產沙箱的權利增加每個套件20個相似受眾。
 
-## 存取 {#access}
+## 存取權 {#access}
 
-若要確認您是否有相似對象的存取權，請選取對象入口網站中的任何對象，並檢查&#x200B;**[!UICONTROL 相似見解]**&#x200B;索引標籤是否可見。
+若要確認您是否有相似對象的存取權，請在對象入口網站中選取任何對象，並檢查&#x200B;**[!UICONTROL Look-alike insights]**&#x200B;標籤是否顯示。
 
 ## 檢視相似見解 {#view}
 
-相似的深入分析內建有對象詳細資訊頁面。 若要檢視對象的相似見解，請在左側導覽列中選取&#x200B;**[!UICONTROL 對象]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**，以及您要檢視其見解的對象。
+相似的深入分析內建有對象詳細資訊頁面。 若要檢視對象的相似見解，請在左側導覽列中選取&#x200B;**[!UICONTROL Audiences]**，然後選取&#x200B;**[!UICONTROL Browse]**，並選取您要檢視見解的對象。
 
 ![「對象」按鈕已反白顯示，且基本對象也用於相似建模。](../images/types/lookalike/browse.png)
 
-對象詳細資訊頁面隨即顯示。 選取&#x200B;**[!UICONTROL 相似見解]**&#x200B;索引標籤以檢視對象的相似見解。 顯示&#x200B;**[!UICONTROL 相似見解]**&#x200B;頁面。 此頁面有三個主要元素 — 相似性和觸及圖、相似對象和影響因素。
+對象詳細資訊頁面隨即顯示。 選取「**[!UICONTROL Look-alike insights]**」標籤以檢視對象的相似見解。 顯示&#x200B;**[!UICONTROL Look-alike insights]**&#x200B;頁面。 此頁面有三個主要元素 — 相似性和觸及圖、相似對象和影響因素。
 
 ![相似見解索引標籤會醒目提示，顯示基本對象的相似見解。](../images/types/lookalike/look-alike-insights.png)
 
@@ -104,7 +100,7 @@ ht-degree: 9%
 >title="相似度與觸及"
 >abstract="相似度與觸及圖表會繪製相似對象 (由超過指定相似度分數的設定檔組成) 的預期觸及範圍。您可以將游標停留在圖表中的特定一點，以顯示目前醒目標示的點的相似度百分比和預期的設定檔數量。"
 
-相似性和觸及區段會顯示圖表，其中繪製由超過指定相似度分數的設定檔所組成的相似對象預期觸及範圍。 相似性分數代表基礎對象設定檔與相似分析設定檔之間的&#x200B;**距離**&#x200B;相似性。
+相似性和觸及區段會顯示圖表，其中繪製由超過指定相似度分數的設定檔所組成的相似對象預期觸及範圍。 相似度分數代表基礎對象設定檔與相似insight設定檔之間的&#x200B;**距離**&#x200B;相似度。
 
 ![相似性和觸及圖表已反白顯示。](../images/types/lookalike/similarity-and-reach.png)
 
@@ -128,7 +124,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="影響因素"
 >abstract="影響因素包括屬性、事件和對象會籍；這些因素是說明設定檔與基礎對象成員之相似度的重要依據。資料使用標籤和原則可用來排除某些資料，使其不被視為相似對象模式中的影響因素。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=zh-Hant#exclude" text="排除資料"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="排除資料"
 
 影響因素區段會顯示影響所選基本對象相似模型的前100個因素。 這些影響因子是個人資料屬性、體驗事件和對象會籍，在說明基本對象的相似之處時是最重要的。 瞭解主要影響因素，可讓您針對此對象以及您從中建立的任何相似對象，更妥善地個人化您的行銷內容。 請注意，不會顯示影響相似模型的所有影響因素。
 
@@ -146,7 +142,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 | ----- | ----------- |
 | 類型 | 影響因子衍生自的資料型別。 這可以是設定檔屬性、體驗事件或對象成員資格。 |
 | 索引鍵 | 資料欄位的名稱。 針對對象成員資格型別的索引鍵，此值代表資料來源對象的&#x200B;**名稱空間**。 可能的值包括`ups` （分段服務）和`AO` （對象協調流程）。 對於其他型別的索引鍵，此值表示XDM欄位路徑。 例如，如果公司Luma有一個名為income的自訂欄位，則金鑰將是`_luma.income` |
-| 值 | 該值會依其代表的影響因素而有所不同。 對於設定檔屬性或體驗事件，此欄位代表資料欄位的值或值範圍，其指出與基本對象成員的相似度。 值範圍是以`[A -> B]`的格式寫入，其中`A`代表較低範圍，而`B`代表較高範圍。 若為對象會籍，此欄位為對象名稱。 |
+| 價值 | 該值會依其代表的影響因素而有所不同。 對於設定檔屬性或體驗事件，此欄位代表資料欄位的值或值範圍，其指出與基本對象成員的相似度。 值範圍是以`[A -> B]`的格式寫入，其中`A`代表較低範圍，而`B`代表較高範圍。 若為對象會籍，此欄位為對象名稱。 |
 | 重要性 | 影響因子的相對重要性層級。 這可以是高、中或低。 |
 
 ## 建立相似的受眾 {#create}
@@ -155,17 +151,17 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 >
 >您&#x200B;**無法**&#x200B;使用相似對象作為其他相似對象的基本對象。 也就是說，您&#x200B;**無法**&#x200B;建立鏈結式相似對象。
 
-若要建立相似受眾，您必須選取要為其建立相似受眾基礎的受眾。 若要存取您的可用對象清單，請選取左側導覽列中的&#x200B;**[!UICONTROL 對象]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**。 對象清單隨即顯示。 在此頁面中，您可以選取要當作基本對象使用的對象。
+若要建立相似受眾，您必須選取要為其建立相似受眾基礎的受眾。 若要存取您的可用對象清單，請在左側導覽列中選取&#x200B;**[!UICONTROL Audiences]**，然後選取&#x200B;**[!UICONTROL Browse]**。 對象清單隨即顯示。 在此頁面中，您可以選取要當作基本對象使用的對象。
 
 ![「對象」按鈕已反白顯示，且基本對象也用於相似建模。](../images/types/lookalike/browse.png)
 
-在對象詳細資訊頁面上，選取&#x200B;**[!UICONTROL 建立相似對象]**&#x200B;以開始建立相似對象的程式。
+在對象詳細資訊頁面上，選取「**[!UICONTROL Create look-alike audience]**」以開始建立相似對象的程式。
 
-![已反白顯示[!UICONTROL 建立相似對象]按鈕。](../images/types/lookalike/create-look-alike-audience.png)
+![已反白顯示[!UICONTROL Create look-alike audience]按鈕。](../images/types/lookalike/create-look-alike-audience.png)
 
-**[!UICONTROL 建立相似對象]**&#x200B;彈出視窗會出現。 您可以在此頁面上設定相似對象的相似度百分比。
+**[!UICONTROL Create a look-alike audience]**&#x200B;彈出視窗會出現。 您可以在此頁面上設定相似對象的相似度百分比。
 
-![顯示[!UICONTROL 建立相似對象]彈出視窗。](../images/types/lookalike/create-audience.png)
+![顯示[!UICONTROL Create a look-alike audience]彈出視窗。](../images/types/lookalike/create-audience.png)
 
 您可以透過三種不同方式設定此相似性百分比：
 
@@ -175,21 +171,21 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 
 您也可以更新相似對象的相關詳細資訊，包括其名稱和說明。 依預設，系統會根據基本對象名稱及先前指定的相似度百分比，產生相似對象名稱。
 
-![基本資訊會在[!UICONTROL 建立相似對象]彈出視窗中反白顯示。](../images/types/lookalike/basic-info.png)
+![基本資訊會在[!UICONTROL Create a look-alike audience]彈出視窗中反白顯示。](../images/types/lookalike/basic-info.png)
 
-選取「**[!UICONTROL 建立]**」以完成建立相似對象。
+選取&#x200B;**[!UICONTROL Create]**&#x200B;以完成建立相似對象。
 
-![建立按鈕在[!UICONTROL 建立相似對象]彈出視窗中會醒目提示。](../images/types/lookalike/create-audience.png)
+![建立按鈕在[!UICONTROL Create a look-alike audience]彈出視窗內會醒目提示。](../images/types/lookalike/create-audience.png)
 
-新建立的相似對象可在對象詳細資訊頁面的&#x200B;**[!UICONTROL 相似對象]**&#x200B;區段中存取，也可在對象入口網站和其他下游使用中取得。 請注意，要評分相似對象需要一些時間。 在評分之前，設定檔計數會顯示為0。
+新建立的相似對象可在對象詳細資料頁面的&#x200B;**[!UICONTROL Look-alike audiences]**&#x200B;區段中存取，也可以在Audience Portal中和其他下游使用中取得。 請注意，要評分相似對象需要一些時間。 在評分之前，設定檔計數會顯示為0。
 
 ## 檢視相似對象詳細資訊 {#view-details}
 
-若要檢視相似對象的詳細資料，請在基本對象的&#x200B;**[!UICONTROL 相似對象]**&#x200B;區段中選取相似對象。
+若要檢視相似對象的詳細資料，請在基本對象的&#x200B;**[!UICONTROL Look-alike audiences]**&#x200B;區段中選取相似對象。
 
 ![「相似對象」區段已反白顯示。](../images/types/lookalike/select-laa.png)
 
-對象詳細資訊頁面隨即顯示。 如需此頁面的詳細資訊，請參閱對象入口網站概觀[&#128279;](../ui/audience-portal.md#audience-details)的對象詳細資訊區段。
+對象詳細資訊頁面隨即顯示。 如需此頁面的詳細資訊，請參閱對象入口網站概觀[的](../ui/audience-portal.md#audience-details)對象詳細資訊區段。
 
 ![顯示相似對象的詳細資料。](../images/types/lookalike/laa-details.png)
 
