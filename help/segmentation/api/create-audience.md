@@ -4,7 +4,7 @@ description: 瞭解如何使用API為外部對象建立中繼資料。
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
+source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 6%
@@ -52,7 +52,7 @@ POST /audiences?createAudienceMetaOnly=true
 >您&#x200B;**必須**&#x200B;在API要求中加入`Accept: application/vnd.adobe.external.audiences+json; version=2`標頭。
 
 ```shell
-curl -X POST https://platform.adobe.io/core/ais/audiences?createAudienceMetaOnly=true \
+curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMetaOnly=true \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
