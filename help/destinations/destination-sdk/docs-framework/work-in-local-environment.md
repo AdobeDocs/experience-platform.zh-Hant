@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 連線至GitHub並設定您的本機編寫環境 {#set-up-environment}
 
-1. 在您的瀏覽器中，瀏覽至`https://github.com/AdobeDocs/experience-platform.en`
+1. 在您的瀏覽器中，瀏覽至`https://github.com/AdobeDocs/experience-platform.zh-Hant`
 2. 若要[分支](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=zh-Hant#fork-the-repository)存放庫，請按一下&#x200B;**分支**，如下所示。 這會在您自己的GitHub帳戶中建立Experience Platform存放庫的復本。
 
    ![取用Adobe檔案存放庫](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 1. 此時，系統會顯示通知，提示您簽署Adobe貢獻者授權合約(CLA)。 此為必要步驟。 簽署CLA後，請重新整理PR頁面並提交提取請求。
 
-1. 您可以檢查&#x200B;**中的**&#x200B;提取請求`https://github.com/AdobeDocs/experience-platform.en`索引標籤，以確認提取請求已提交。
+1. 您可以檢查&#x200B;**中的**&#x200B;提取請求`https://github.com/AdobeDocs/experience-platform.zh-Hant`索引標籤，以確認提取請求已提交。
 
 ![PR成功](../assets/docs-framework/ssd-pr-successful.png)
 

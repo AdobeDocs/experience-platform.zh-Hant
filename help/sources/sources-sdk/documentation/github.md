@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 設定您的GitHub環境
 
-設定GitHub環境的第一個步驟是導覽至[Adobe Experience Platform GitHub存放庫](https://github.com/AdobeDocs/experience-platform.en)。
+設定GitHub環境的第一個步驟是導覽至[Adobe Experience Platform GitHub存放庫](https://github.com/AdobeDocs/experience-platform.zh-Hant)。
 
 ![平台存放庫](../assets/platform-repo.png)
 
@@ -33,11 +33,11 @@ ht-degree: 0%
 
 ![create-branch](../assets/create-branch.png)
 
-在您取用的存放庫的GitHub資料夾結構中，導覽至[`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create)，然後從清單中為您的來源選取適當的類別。 例如，如果您正在建立新CRM來源的檔案，請選取&#x200B;**crm**。
+在您取用的存放庫的GitHub資料夾結構中，導覽至[`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.zh-Hant/tree/main/help/sources/tutorials/api/create)，然後從清單中為您的來源選取適當的類別。 例如，如果您正在建立新CRM來源的檔案，請選取&#x200B;**crm**。
 
 >[!TIP]
 >
->如果您正在建立UI的檔案，請導覽至[`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create)並為您的來源選取適當的類別。 若要新增影像，請導覽至[`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create)，然後將熒幕擷取畫面新增至`sdk`資料夾。
+>如果您正在建立UI的檔案，請導覽至[`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.zh-Hant/tree/main/help/sources/tutorials/ui/create)並為您的來源選取適當的類別。 若要新增影像，請導覽至[`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.zh-Hant/tree/main/help/sources/images/tutorials/create)，然後將熒幕擷取畫面新增至`sdk`資料夾。
 
 ![crm](../assets/crm.png)
 

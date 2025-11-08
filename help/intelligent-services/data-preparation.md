@@ -96,7 +96,7 @@ CEE結構描述，像所有XDM ExperienceEvent結構描述一樣，會在事件�
 
 和所有XDM結構描述一樣，CEE結構描述欄位群組是可擴充的。 換言之，其他欄位可新增至CEE欄位群組，而不同的變數可視需要包含在多個結構描述中。
 
-在[公用XDM存放庫](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)中可以找到欄位群組的完整範例。 此外，您可以檢視及複製下列[JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)，以取得如何建構資料以符合CEE結構描述的範例。 如需瞭解下節中概述的關鍵欄位，請參閱這兩個範例，以決定如何將您的資料對應到結構描述。
+在[公用XDM存放庫](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)中可以找到欄位群組的完整範例。 此外，您可以檢視及複製下列[JSON檔案](https://github.com/AdobeDocs/experience-platform.zh-Hant/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)，以取得如何建構資料以符合CEE結構描述的範例。 如需瞭解下節中概述的關鍵欄位，請參閱這兩個範例，以決定如何將您的資料對應到結構描述。
 
 ## 關鍵欄位
 
@@ -355,7 +355,7 @@ CEE欄位群組內有數個關鍵欄位，應該使用以便[!DNL Intelligent Se
 
 #### 對應及擷取資料 {#ingest}
 
-建立CEE結構描述和資料集後，您可以開始將資料表格對應至結構描述，並將該資料擷取至Experience Platform。 請參閱有關[將CSV檔案對應到XDM結構描述](../ingestion/tutorials/map-csv/overview.md)的教學課程，以瞭解如何在UI中執行此動作的步驟。 您可以使用下列[範例JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)來測試擷取程式，然後再使用您自己的資料。
+建立CEE結構描述和資料集後，您可以開始將資料表格對應至結構描述，並將該資料擷取至Experience Platform。 請參閱有關[將CSV檔案對應到XDM結構描述](../ingestion/tutorials/map-csv/overview.md)的教學課程，以瞭解如何在UI中執行此動作的步驟。 您可以使用下列[範例JSON檔案](https://github.com/AdobeDocs/experience-platform.zh-Hant/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)來測試擷取程式，然後再使用您自己的資料。
 
 填入資料集後，相同的資料集可用於內嵌其他資料檔案。
 

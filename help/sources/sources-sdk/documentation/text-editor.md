@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 連線至GitHub並設定您的本機編寫環境
 
-設定本機編寫環境的第一個步驟是導覽至[Adobe Experience Platform GitHub存放庫](https://github.com/AdobeDocs/experience-platform.en)。
+設定本機編寫環境的第一個步驟是導覽至[Adobe Experience Platform GitHub存放庫](https://github.com/AdobeDocs/experience-platform.zh-Hant)。
 
 ![平台存放庫](../assets/platform-repo.png)
 
