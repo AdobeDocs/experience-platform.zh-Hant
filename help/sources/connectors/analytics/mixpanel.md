@@ -42,7 +42,7 @@ Experience Platform支援從協力廠商分析應用程式擷取資料。 對分
 
 ![Mixpanel服務帳戶](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-最後，建立[所需的Experience Platform ](../../../xdm/schema/composition.md)結構描述[!DNL Mixpanel Event Export API]。 如需結構描述所需對應的詳細資訊，請參閱[在UI [!DNL Mixpanel] 中建立](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)來源連線的指南。
+最後，建立[所需的Experience Platform &#x200B;](../../../xdm/schema/composition.md)結構描述[!DNL Mixpanel Event Export API]。 如需結構描述所需對應的詳細資訊，請參閱[在UI [!DNL Mixpanel] 中建立](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)來源連線的指南。
 
 ![建立結構描述](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
