@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d57af88cc9507e0164b044a7203c66fe9fd9240e
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -52,6 +52,12 @@ Adobe Experience Platform擷取事件資料中的&#x200B;**[!UICONTROL Profile E
 * [HTTP API目的地](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure 事件中樞](catalog/cloud-storage/azure-event-hubs.md)
+* [Snowflake 串流](catalog/warehouses/snowflake.md)
+* [Snowflake批次](catalog/warehouses/snowflake-batch.md)
+
+>[!NOTE]
+>
+>Snowflake目的地目前僅開放美國客戶使用。 如果您需要美國境外的存取權，請聯絡您的Adobe帳戶團隊。
 
 ### 批次（以檔案為基礎）目的地 {#file-based}
 
