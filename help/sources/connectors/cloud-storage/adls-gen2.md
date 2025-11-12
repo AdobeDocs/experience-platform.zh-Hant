@@ -2,9 +2,9 @@
 title: Azure Data Lake Storage Gen2 Source聯結器概觀
 description: 瞭解如何使用API或使用者介面將Azure Data Lake Storage Gen2連線至Adobe Experience Platform。
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
 
 >[!IMPORTANT]
 >
@@ -34,13 +34,13 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 - 不允許非法URL路徑字元。 類似`\uE000`的程式碼點雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的規則，請參閱[RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt)和[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
 - 不允許下列檔案名稱： LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)和兩個點字元(..)。
 
-## 連線[!DNL Azure Data Lake Storage Gen2]至Experience Platform
+## 將[!DNL Azure Data Lake Storage Gen2]連線至Experience Platform
 
 >[!NOTE]
 >
 >用於建立[!DNL Azure Data Lake Storage Gen2]帳戶的服務主體應至少具有從存取控制(IAM)指派的&#x200B;**儲存Blob資料Reader**&#x200B;角色
 
-以下檔案提供有關如何使用API或使用者介面連線[!DNL Azure Data Lake Storage Gen2]以Experience Platform的資訊：
+以下檔案提供如何使用API或使用者介面將[!DNL Azure Data Lake Storage Gen2]連線至Experience Platform的資訊：
 
 ### 使用API
 

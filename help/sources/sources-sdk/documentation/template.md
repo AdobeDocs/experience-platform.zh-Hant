@@ -3,14 +3,14 @@ keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來
 title: 檔案自助服務範本
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至YOURSOURCE。
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2082'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API建立&#x200B;*YOURSOURCE*&#x200B;連線
+# 使用&#x200B;*API建立* YOURSOURCE[!DNL Flow Service]連線
 
 *當您瀏覽此範本時，請取代或刪除所有斜體字的段落（從此段落開始）。*
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 *在本節中新增客戶在Adobe Experience Platform使用者介面中開始設定來源之前需要注意的任何相關資訊。 這可能約：*
 
-* *需要新增至允許清單*
+* *需要新增到允許清單*
 * *電子郵件雜湊需求*
 * *您這邊的任何帳戶細節*
 * *如何取得API金鑰以連線至您的平台*
@@ -45,15 +45,15 @@ ht-degree: 1%
 
 如需這些認證的詳細資訊，請參閱&#x200B;*YOURSOURCE*&#x200B;驗證檔案。 *請在此加入您平台驗證檔案的連結*。
 
-## 使用[!DNL Flow Service] API將&#x200B;*YOURSOURCE*&#x200B;連線至Experience Platform
+## 使用&#x200B;*API將* YOURSOURCE[!DNL Flow Service]連線至Experience Platform
 
-下列教學課程將逐步引導您建立&#x200B;*YOURSOURCE*&#x200B;來源連線與建立資料流，以使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將&#x200B;*YOURSOURCE*&#x200B;資料帶入Experience Platform。
+下列教學課程將逐步引導您建立&#x200B;*YOURSOURCE*&#x200B;來源連線與建立資料流，以使用&#x200B;*API*&#x200B;將[[!DNL Flow Service] YOURSOURCE](https://www.adobe.io/experience-platform-apis/references/flow-service/)資料帶入Experience Platform。
 
 ### 建立基礎連線 {#base-connection}
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供您的&#x200B;*YOURSOURCE*&#x200B;驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的`/connections`YOURSOURCE *驗證認證作為要求內文的一部分時，對*&#x200B;端點提出POST要求。
 
 **API格式**
 
@@ -299,13 +299,13 @@ curl -X POST \
 
 可透過對[結構描述登入API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)執行POST要求來建立目標XDM結構描述。
 
-如需有關如何建立目標XDM結構描述的詳細步驟，請參閱有關使用API [建立結構描述的教學課程](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=zh-Hant#create)。
+如需有關如何建立目標XDM結構描述的詳細步驟，請參閱有關使用API [建立結構描述的教學課程](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create)。
 
 ### 建立目標資料集 {#target-dataset}
 
 可透過對[目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)執行POST要求，在承載中提供目標結構描述的ID，來建立目標資料集。
 
-如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=zh-Hant)的教學課程。
+如需有關如何建立目標資料集的詳細步驟，請參閱有關[使用API建立資料集](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)的教學課程。
 
 ### 建立目標連線 {#target-connection}
 
@@ -534,20 +534,20 @@ curl -X POST \
 
 ### 監視資料流
 
-建立資料流後，您可以監視透過該資料流擷取的資料，以檢視有關資料流執行、完成狀態和錯誤的資訊。 如需完整的API範例，請閱讀[使用API監視您的來源資料流](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html?lang=zh-Hant)的指南。
+建立資料流後，您可以監視透過該資料流擷取的資料，以檢視有關資料流執行、完成狀態和錯誤的資訊。 如需完整的API範例，請閱讀[使用API監視您的來源資料流](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html)的指南。
 
 ### 更新您的資料流
 
-提供資料流的ID時，透過向[!DNL Flow Service] API的`/flows`端點發出PATCH要求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`If-Match`標頭中提供資料流的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html?lang=zh-Hant)
+提供資料流的ID時，透過向`/flows` API的[!DNL Flow Service]端點發出PATCH要求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`etag`標頭中提供資料流的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### 更新您的帳戶
 
-在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`If-Match`標頭中提供來源帳戶的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html?lang=zh-Hant)。
+在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`etag`標頭中提供來源帳戶的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html)。
 
 ### 刪除您的資料流
 
-提供您要刪除之資料流的ID做為查詢引數的一部分，同時對[!DNL Flow Service] API執行DELETE要求，以刪除您的資料流。 如需完整的API範例，請閱讀[使用API刪除資料流](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html?lang=zh-Hant)的指南。
+提供您要刪除之資料流的ID做為查詢引數的一部分，同時對[!DNL Flow Service] API執行DELETE要求，以刪除您的資料流。 如需完整的API範例，請閱讀[使用API刪除資料流](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html)的指南。
 
 ### 刪除您的帳戶
 
-在提供您要刪除之帳戶的基本連線ID時，對[!DNL Flow Service] API執行DELETE要求，以刪除您的帳戶。 如需完整的API範例，請閱讀[使用API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html?lang=zh-Hant)刪除來源帳戶的指南。
+在提供您要刪除之帳戶的基本連線ID時，對[!DNL Flow Service] API執行DELETE要求，以刪除您的帳戶。 如需完整的API範例，請閱讀[使用API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html)刪除來源帳戶的指南。

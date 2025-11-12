@@ -3,9 +3,9 @@ title: Oracle NetSuite Source概觀
 description: 瞭解如何使用API或使用者介面將Oracle NetSuite連線至Adobe Experience Platform。
 last-substantial-update: 2024-01-30T00:00:00Z
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '722'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ Experience Platform支援擷取資料協力廠商行銷自動化系統。 對行
 
 ## IP位址允許清單 {#ip-allow-list}
 
-使用來源聯結器之前，可能需要將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
 
 ## 先決條件 {#prerequisites}
 

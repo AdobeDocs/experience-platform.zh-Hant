@@ -3,16 +3,16 @@ title: Mixpanel Source聯結器概述
 description: 瞭解如何使用API或使用者介面將Mixpanel連線至Adobe Experience Platform。
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 0%
+source-wordcount: '431'
+ht-degree: 6%
 
 ---
 
 # [!DNL Mixpanel]
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從協力廠商分析應用程式擷取資料。 對分析提供者的支援包括[!DNL Mixpanel]。
 
@@ -22,7 +22,7 @@ Experience Platform支援從協力廠商分析應用程式擷取資料。 對分
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
 
 ## 驗證您的[!DNL Mixpanel]帳戶
 
@@ -30,11 +30,11 @@ Experience Platform支援從協力廠商分析應用程式擷取資料。 對分
 
 若要建立[!DNL Mixpanel]來源連線和資料流，您必須先擁有有效的[!DNL Mixpanel]帳戶。 如果您沒有有效的[!DNL Mixpanel]帳戶，請參閱[Mixpanel登入](https://mixpanel.com/register/)頁面來建立您的帳戶。
 
-當您成功建立[!DNL Mixpanel]帳戶後，請導覽至[!DNL Mixpanel] UI之[!DNL Project Seettings]頁面中的[!DNL Project Details]索引標籤，以擷取您的專案ID並設定您的時區。
+當您成功建立[!DNL Mixpanel]帳戶後，請導覽至[!DNL Project Details] UI之[!DNL Project Seettings]頁面中的[!DNL Mixpanel]索引標籤，以擷取您的專案ID並設定您的時區。
 
 ![mixpanel-project-settings](../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png)
 
-接下來，導覽至[!DNL Mixpanel] UI中[!DNL Project Settings]頁面的[!DNL Service Accounts]索引標籤，以擷取您的服務帳戶認證。
+接下來，導覽至[!DNL Service Accounts] UI中[!DNL Project Settings]頁面的[!DNL Mixpanel]索引標籤，以擷取您的服務帳戶認證。
 
 >[!TIP]
 >
@@ -42,7 +42,7 @@ Experience Platform支援從協力廠商分析應用程式擷取資料。 對分
 
 ![Mixpanel服務帳戶](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-最後，建立[!DNL Mixpanel Event Export API]所需的Experience Platform [結構描述](../../../xdm/schema/composition.md)。 如需結構描述所需對應的詳細資訊，請參閱[在UI](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)中建立 [!DNL Mixpanel] 來源連線的指南。
+最後，建立[所需的Experience Platform ](../../../xdm/schema/composition.md)結構描述[!DNL Mixpanel Event Export API]。 如需結構描述所需對應的詳細資訊，請參閱[在UI [!DNL Mixpanel] 中建立](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources)來源連線的指南。
 
 ![建立結構描述](../../images/tutorials/create/mixpanel-export-events/schema.png)
 

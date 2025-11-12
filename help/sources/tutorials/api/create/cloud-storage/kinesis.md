@@ -3,9 +3,9 @@ title: 使用流量服務API建立Amazon Kinesis Source連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Amazon Kinesis來源。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >[!DNL Amazon Kinesis]來源可在來源目錄中提供給已購買Real-Time Customer Data Platform Ultimate的使用者。
 
-本教學課程將逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)，將[!DNL Amazon Kinesis] （以下稱為&quot;[!DNL Kinesis]&quot;）連線至Experience Platform。
+本教學課程將逐步引導您使用[!DNL Amazon Kinesis]API[!DNL Kinesis]，將[[!DNL Flow Service]  （以下稱為&quot;](https://www.adobe.io/experience-platform-apis/references/flow-service/)&quot;）連線至Experience Platform。
 
 ## 快速入門
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 * [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功將[!DNL Kinesis]連線至Experience Platform。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Kinesis] API成功將[!DNL Flow Service]連線至Experience Platform。
 
 ### 收集必要的認證
 
@@ -48,7 +48,7 @@ ht-degree: 3%
 
 建立來源連線的第一個步驟是驗證您的[!DNL Kinesis]來源並產生基本連線識別碼。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL Kinesis]驗證認證作為要求引數的一部分時，對`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的`/connections`驗證認證作為要求引數的一部分時，對[!DNL Kinesis]端點提出POST要求。
 
 **API格式**
 
@@ -107,7 +107,7 @@ curl -X POST \
 
 來源連線會建立和管理與擷取資料的外部來源的連線。 來源連線包含資料來源、資料格式以及建立資料流所需的來源連線ID等資訊。 租使用者和組織專屬的來源連線例項。
 
-若要建立來源連線，請對[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
+若要建立來源連線，請對`/sourceConnections` API的[!DNL Flow Service]端點提出POST要求。
 
 **API格式**
 
@@ -172,4 +172,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Kinesis]來源連線。 您可以在下一個教學課程中使用此來源連線ID來[使用 [!DNL Flow Service] API](../../collect/streaming.md)建立串流資料流。
+依照此教學課程，您已使用[!DNL Kinesis] API建立[!DNL Flow Service]來源連線。 您可以在下一個教學課程中使用此來源連線ID來[使用 [!DNL Flow Service] API](../../collect/streaming.md)建立串流資料流。

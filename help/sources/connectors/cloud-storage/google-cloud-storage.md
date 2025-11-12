@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google雲端儲存空間Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Google Cloud Storage連線至Adobe Experience Platform。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -23,25 +23,25 @@ Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
 
 ## 連線您的[!DNL Google Cloud Storage]帳戶的先決條件設定
 
-若要連線到Experience Platform，您必須先為您的[!DNL Google Cloud Storage]帳戶啟用互通性。 若要存取互通性設定，請開啟[!DNL Google Cloud Platform]，然後從導覽面板的&#x200B;**[!UICONTROL 雲端儲存空間]**&#x200B;選項中選取&#x200B;**[!UICONTROL 設定]**。
+若要連線到Experience Platform，您必須先為您的[!DNL Google Cloud Storage]帳戶啟用互通性。 若要存取互通性設定，請開啟[!DNL Google Cloud Platform]並從導覽面板的&#x200B;**[!UICONTROL Settings]**&#x200B;選項中選取&#x200B;**[!UICONTROL Cloud Storage]**。
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
-**[!UICONTROL 設定]**&#x200B;頁面隨即顯示。 從這裡，您可以檢視有關您的[!DNL Google]專案ID的資訊，以及有關您的[!DNL Google Cloud Storage]帳戶的詳細資料。 若要存取互通性設定，請從頂端標頭選取&#x200B;**[!UICONTROL 互通性]**。
+**[!UICONTROL Settings]**&#x200B;頁面隨即顯示。 從這裡，您可以檢視有關您的[!DNL Google]專案ID的資訊，以及有關您的[!DNL Google Cloud Storage]帳戶的詳細資料。 若要存取互通性設定，請從頂端標頭選取&#x200B;**[!UICONTROL Interoperability]**。
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
-**[!UICONTROL 互通性]**&#x200B;頁面包含驗證、存取金鑰以及與您的服務帳戶關聯的預設專案的資訊。 若要為您的服務帳戶產生新的存取金鑰ID和機密存取金鑰，請選取&#x200B;**[!UICONTROL 為服務帳戶建立金鑰]**。
+**[!UICONTROL Interoperability]**&#x200B;頁面包含驗證、存取金鑰以及與您的服務帳戶關聯的預設專案的資訊。 若要為您的服務帳戶產生新的存取金鑰識別碼和機密存取金鑰，請選取&#x200B;**[!UICONTROL Create a Key for a Service Account]**。
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 您可以使用新產生的存取金鑰ID和機密存取金鑰，將您的[!DNL Google Cloud Storage]帳戶連線至Experience Platform。
 
-如需詳細資訊，請參閱[!DNL Google Cloud]檔案中[建立和管理服務帳戶金鑰](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)的指南。
+如需詳細資訊，請參閱[檔案中](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)建立和管理服務帳戶金鑰[!DNL Google Cloud]的指南。
 
 ## 檔案和目錄的命名限制
 

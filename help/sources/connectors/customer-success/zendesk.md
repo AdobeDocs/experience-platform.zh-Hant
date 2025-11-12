@@ -3,16 +3,16 @@ title: Zendesk Source Connector概述
 description: 瞭解如何使用API或使用者介面將Zendesk連線至Adobe Experience Platform。
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 0%
+source-wordcount: '330'
+ht-degree: 8%
 
 ---
 
 # [!DNL Zendesk]
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
 Experience Platform支援從協力廠商客戶成功應用程式擷取資料。 對客戶成功提供者的支援包括[!DNL Zendesk]。
 
@@ -20,7 +20,7 @@ Experience Platform支援從協力廠商客戶成功應用程式擷取資料。 
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
 
 ## 驗證您的[!DNL Zendesk]帳戶
 
@@ -45,5 +45,5 @@ Experience Platform支援從協力廠商客戶成功應用程式擷取資料。 
 
 ## 使用UI連線[!DNL Zendesk]至Experience Platform
 
-* [在使用者介面中建立 [!DNL Zendesk &#x200B;]來源連線](../../tutorials/ui/create/customer-success/zendesk.md)
+* [在使用者介面中建立 [!DNL Zendesk ]來源連線](../../tutorials/ui/create/customer-success/zendesk.md)
 * [在UI中建立客戶成功來源連線的資料流](../../tutorials/ui/dataflow/customer-success.md)

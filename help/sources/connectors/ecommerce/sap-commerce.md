@@ -4,9 +4,9 @@ description: 瞭解如何使用API或使用者介面將SAP Commerce連線至Adob
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '335'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 ## IP位址允許清單 {#ip-allow-list}
 
-使用來源聯結器之前，可能需要將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+將來源連線至Experience Platform之前，您必須先將區域特定的IP位址新增至允許清單。 如需詳細資訊，請參閱[允許清單IP位址以連線至Experience Platform](../../ip-address-allow-list.md)的指南以瞭解詳細資訊。
 
 ## 先決條件 {#prerequisites}
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 * [!DNL SAP]服務金鑰。 [!DNL SAP]服務金鑰可讓您透過Experience Platform存取[!DNL SAP Subscription Billing] API。 [!DNL SAP Commerce] 需要下列項目:
    * 用戶端 ID
    * 用戶端密碼
-   * URL。 URL模式如下： `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`。 當您使用API [建立基礎連線](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection)或透過Experience Platform UI [連線您的 [!DNL SAP Commerce] 帳戶](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account)時，此值稍後將用於取得`region`和`tokenEndpoint`的值。
+   * URL。 URL模式如下： `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`。 當您使用API `region`建立基礎連線`tokenEndpoint`或透過Experience Platform UI [連線您的](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection)帳戶[時，此值稍後將用於取得 [!DNL SAP Commerce] 和](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account)的值。
 
 +++選取以檢視服務金鑰的範例
 
@@ -74,5 +74,5 @@ ht-degree: 3%
 以下檔案提供如何使用API或使用者介面將[!DNL SAP Commerce]連線至Experience Platform的資訊：
 
 * [使用API建立來源連線和資料流，將 [!DNL SAP Commerce] 資料匯入Experience Platform](../../tutorials/api/create/ecommerce/sap-commerce.md)。
-* [使用UI](../../tutorials/ui/create/ecommerce/sap-commerce.md)將您的 [!DNL SAP Commerce] 帳戶連線至Experience Platform。
+* [使用UI [!DNL SAP Commerce] 將您的](../../tutorials/ui/create/ecommerce/sap-commerce.md)帳戶連線至Experience Platform。
 * [使用UI為來源建立資料流](../../tutorials/ui/dataflow/ecommerce.md)

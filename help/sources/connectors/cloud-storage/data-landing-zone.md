@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: 瞭解如何將Data Landing Zone連結至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您想要從[!DNL Azure Data Factory]存取[!DNL Data Landing Zone]，則必須使用Experience Platform提供的[SAS認證](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)為[!DNL Data Landing Zone]建立連結的服務。 建立連結的服務後，您就可以選取容器路徑（而非預設的根路徑）來探索[!DNL Data Landing Zone]。
+>如果您想要從[!DNL Data Landing Zone]存取[!DNL Azure Data Factory]，則必須使用Experience Platform提供的[!DNL Data Landing Zone]SAS認證[為](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)建立連結的服務。 建立連結的服務後，您就可以選取容器路徑（而非預設的根路徑）來探索[!DNL Data Landing Zone]。
 
 ### 檔案和目錄的命名限制
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ![Azure Explorer上的選取連線方法，已選取共用存取簽章。](../../images/tutorials/create/dlz/select-connection-method.png)
 
-選取您的連線方法後，您必須接著提供與[!DNL Data Landing Zone]容器相對應的&#x200B;**顯示名稱**&#x200B;和&#x200B;**[!DNL Blob]容器SAS URL**。
+選取您的連線方法後，您必須接著提供與&#x200B;**容器相對應的**&#x200B;顯示名稱&#x200B;**[!DNL Blob]和**&#x200B;容器SAS URL[!DNL Data Landing Zone]。
 
 >[!TIP]
 >
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ![重設資源連線設定的Azure Explorer摘要工作區。](../../images/tutorials/create/dlz/summary.png)
 
-成功連線會以您的[!DNL Data Landing Zone]容器更新您的[!DNL Azure Storage Explorer] UI。
+成功連線會以您的[!DNL Azure Storage Explorer]容器更新您的[!DNL Data Landing Zone] UI。
 
 ![Azure Explorer上的資料登陸區域導覽工作區。](../../images/tutorials/create/dlz/dlz-user-container.png)
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ### 使用Bash上傳檔案
 
-下列範例使用Bash和cURL，透過[!DNL Azure Blob Storage] REST API將檔案上傳至[!DNL Data Landing Zone]：
+下列範例使用Bash和cURL，透過[!DNL Data Landing Zone] REST API將檔案上傳至[!DNL Azure Blob Storage]：
 
 ```shell
 # Set Azure Blob-related settings
@@ -117,7 +117,7 @@ curl -v -X PUT \
 
 >[!TIP]
 >
->雖然下列範例使用完整SAS URI連線至[!DNL Azure Blob]容器，但您可以使用其他方法和作業來進行驗證。 如需詳細資訊，請參閱Python v12 SDK[&#128279;](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)上的此[!DNL Microsoft] 檔案。
+>雖然下列範例使用完整SAS URI連線至[!DNL Azure Blob]容器，但您可以使用其他方法和作業來進行驗證。 如需詳細資訊，請參閱Python v12 SDK[[!DNL Microsoft] 上的此](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)檔案。
 
 ```py
 import os
@@ -146,7 +146,7 @@ except Exception as ex:
 
 >[!TIP]
 >
->雖然下列範例是使用`copy`命令，但您可以使用[!DNL AzCopy]使用其他命令和選項將檔案上傳至[!DNL Data Landing Zone]。 如需詳細資訊，請參閱此[[!DNL Microsoft AzCopy] 檔案](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json)。
+>雖然下列範例是使用`copy`命令，但您可以使用[!DNL Data Landing Zone]使用其他命令和選項將檔案上傳至[!DNL AzCopy]。 如需詳細資訊，請參閱此[[!DNL Microsoft AzCopy] 檔案](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json)。
 
 ```bat
 set sasUri=<FULL SAS URI, PROPERLY ESCAPED>
@@ -159,7 +159,7 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 >[!AVAILABILITY]
 >
->本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/multi-cloud)。
+>本節適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
 請依照下列步驟，瞭解如何在Amazon Web Services (AWS)上為Experience Platform設定[!DNL Data Landing Zone]帳戶。
 
@@ -305,7 +305,7 @@ print(f"Sign-in URL: {signin_url}")
 
 >[!IMPORTANT]
 >
->- 若要連線到來源，您需要&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;存取控制許可權。 如需詳細資訊，請閱讀[存取控制總覽](../../../access-control/home.md)，或連絡您的產品管理員以取得必要的許可權。
+>- 若要連線到來源，您需要&#x200B;**[!UICONTROL View Sources]**&#x200B;和&#x200B;**[!UICONTROL Manage Sources]**&#x200B;存取控制許可權。 如需詳細資訊，請閱讀[存取控制總覽](../../../access-control/home.md)，或連絡您的產品管理員以取得必要的許可權。
 >
 >- 使用[!DNL Data Landing Zone]連線至Experience Platform時，目前不支援私人連結。 唯一支援的存取方法是[這裡](#manage-the-contents-of-your-data-landing-zone)列出的方法。
 
