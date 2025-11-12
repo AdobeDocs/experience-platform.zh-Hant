@@ -3,10 +3,10 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 940128bf73f856d8459bee23905213651b44916e
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 3%
+source-wordcount: '1093'
+ht-degree: 2%
 
 ---
 
@@ -17,19 +17,18 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
-> 自2025年7月起進行[內部升級](../../../release-notes/2025/july-2025.md#destinations)至目的地服務後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少至**，人數為[!DNL The Trade Desk]人。
-> &#x200B;> 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 如需詳細資訊，請參閱此頁面中的[必要對應](#mandatory-mappings)區段。
+> 自2025年7月起進行[內部升級](../../../release-notes/2025/july-2025.md#destinations)至目的地服務後，您可能會注意到資料流中啟用的設定檔數目&#x200B;**有**&#x200B;下降，降至[!DNL The Trade Desk]。
+> 這種下降是由於監視可見性的改善所造成的。 沒有ECID的設定檔現在會在啟用量度中正確計為捨棄。 如需詳細資訊，請參閱此頁面中的[必要對應](#mandatory-mappings)區段。
 >
 >**變更內容：**
 >
->* ECID (Experience Cloud ID)對應現在是所有設定檔啟用的&#x200B;**必要**。
->* 沒有ECID對應的設定檔將會從現有的啟用資料流中&#x200B;**捨棄**。
+>* 目的地服務現在會正確報告何時從啟用中刪除沒有ECID的設定檔。
+>* **重要：**&#x200B;在此升級之前，沒有ECID的設定檔從未送達[!DNL The Trade Desk]。 整合一律需要ECID。 此升級會修正先前無法在量度中看到這些下降的錯誤。
 >
 >**您需要執行的動作：**
 >
 >* 檢閱您的對象資料，以確認設定檔具有有效的ECID值。
->* 監視您的啟用量度，以驗證預期的設定檔計數。
-
+>* 監視您的啟用量度，以驗證預期的設定檔計數。 計數減少反映的是準確的報表，而非目的地行為的變更。
 
 使用此目的地聯結器將設定檔資料傳送至[!DNL The Trade Desk]。 此聯結器會將資料傳送至[!DNL The Trade Desk]第一方端點。 Adobe Experience Platform與[!DNL The Trade Desk]之間的整合不支援匯出資料至[!DNL The Trade Desk]第三方端點。
 
@@ -84,7 +83,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
@@ -157,7 +156,7 @@ ht-degree: 3%
 
 >[!NOTE]
 > 
->在[2025年7月](/help/release-notes/2025/july-2025.md#destinations)升級到目的地服務後，[!DNL ECID]對應已強制執行。 遺失[!DNL ECID]的設定檔現在會如預期般捨棄，其啟用計數可能會比舊版行為低。
+>在[2025年7月](/help/release-notes/2025/july-2025.md#destinations)升級到目的地服務後，遺失[!DNL ECID]的設定檔現在會在啟用量度中正確回報為已捨棄。 整合的行為一律如此 — 沒有[!DNL ECID]的設定檔從未到達[!DNL The Trade Desk] — 但卸料現在可正確顯示在資料流監視中。 較低的啟用計數反映的是準確的報表，而非目的地功能的變更。
 
 ## 匯出的資料 {#exported-data}
 
