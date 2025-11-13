@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services連線
 description: Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: f0db626401d76997e19632c3e27a133f577bc571
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1610'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->此整合適用於[Adobe Campaign 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=zh-Hant#release-8-4-1)。
+>此整合適用於[Adobe Campaign 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)。
 
 ## 概觀 {#overview}
 
-Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=zh-Hant)
+Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 使用 Campaign 可以：
 
@@ -31,7 +31,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 * 您最多可以[啟動](#activate)25個對象到此目的地。
 
-  您可以在Campaign檔案總管的&#x200B;**>** > **[!UICONTROL Administration]**&#x200B;資料夾中更新&#x200B;**[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]**&#x200B;選項的值，以變更此限制。
+  您可以在Campaign檔案總管的&#x200B;**>** > **[!UICONTROL Administration]**&#x200B;資料夾中更新&#x200B;**[!UICONTROL Platform]** NmsCdp_Aep_Audience_List_Limit **[!UICONTROL Options]**&#x200B;選項的值，以變更此限制。 此護欄會限制可匯出至所有已設定目的地之單一Campaign執行個體的Experience Platform對象總數。
 
 * 對於每個對象，您最多可以新增20個欄位至[將](#map)對應至Adobe Campaign。
 
@@ -40,6 +40,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 * Azure Blob儲存資料登陸區域(DLZ)上的資料保留：7天。
 * 啟用頻率為最少3小時。
 * 此連線支援的檔案名稱長度上限為255個字元。 當您[設定匯出的檔案名稱](../../ui/activate-batch-profile-destinations.md#configure-file-names)時，請確定檔案名稱不超過255個字元。 超過檔案名稱長度上限會導致啟用錯誤。
+* 將對象匯出至Adobe Campaign時，不支援包含特殊字元的區段/對象（例如： `&`）。
 
 ## 使用案例 {#use-cases}
 
@@ -60,7 +61,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
   >
   >Adobe Campaign資料庫中已存在的設定檔可使用「設定檔屬性同步」。
 
-[進一步瞭解Adobe Campaign與Adobe Experience Platform的整合](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=zh-Hant)
+[進一步瞭解Adobe Campaign與Adobe Experience Platform的整合](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## 支援的身分 {#supported-identities}
 
@@ -105,7 +106,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL Select instance]**：您的&#x200B;**[!DNL Campaign]**&#x200B;行銷執行個體。
-* **[!UICONTROL Target mapping]**：選取您在&#x200B;**[!DNL Adobe Campaign]**&#x200B;中用來傳送傳遞的目標對應。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=zh-Hant)。
+* **[!UICONTROL Target mapping]**：選取您在&#x200B;**[!DNL Adobe Campaign]**&#x200B;中用來傳送傳遞的目標對應。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)。
 * **[!UICONTROL Select sync type]**：
 
    * **[!UICONTROL Audience sync]**：使用此選項將Adobe Experience Platform對象傳送至Adobe Campaign。
@@ -130,7 +131,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
-讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant)，以取得啟用此目的地的對象資料的相關指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)，以取得啟用此目的地的對象資料的相關指示。
 
 ### 對應屬性和身分 {#map}
 
