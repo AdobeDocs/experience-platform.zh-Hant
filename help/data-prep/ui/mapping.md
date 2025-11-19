@@ -3,14 +3,19 @@ keywords: Experience Platform；首頁；熱門主題；對應csv；對應csv檔
 title: 資料準備UI指南
 description: 瞭解如何在Experience Platform UI中使用資料準備函式，將CSV檔案對應至XDM結構描述。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
+source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
 
-# 資料準備UI指南
+# 資料準備UI指南 {#data-prep-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_import_mapping"
+>title="下載範本"
+>abstract="下載csv範本以離線執行對應。"
 
 閱讀本指南，瞭解如何在Adobe Experience Platform使用者介面中使用[資料準備](../home.md)對應函式，將CSV檔案對應至[體驗資料模型(XDM)結構描述](../../xdm/home.md)。
 
@@ -29,7 +34,7 @@ ht-degree: 0%
 
 您可以透過兩個不同的路徑存取UI中的對應介面。
 
-1. 在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 工作流程]**，然後選取&#x200B;**[!UICONTROL 將CSV對應至XDM結構描述]**。 接下來，提供您的資料流詳細資料，並選取您要擷取的資料。 完成後，您將進入對應介面，您可以在其中設定來源資料和XDM結構描述之間的對應。
+1. 在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL Workflows]**，然後選取&#x200B;**[!UICONTROL Map CSV to XDM schema]**。 接下來，提供您的資料流詳細資料，並選取您要擷取的資料。 完成後，您將進入對應介面，您可以在其中設定來源資料和XDM結構描述之間的對應。
 2. 您也可以透過來源工作區存取對應介面。
 
 ## 將CSV檔案對應至XDM結構描述
@@ -44,10 +49,10 @@ ht-degree: 0%
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 對應的欄位] | 顯示已對應至目標XDM欄位的來源欄位總數（無論是否有錯誤）。 |
-| [!UICONTROL 必要欄位] | 顯示必要對應欄位的數量。 |
-| [!UICONTROL 身分識別欄位] | 顯示定義為身分的對應欄位總數。 這些對應欄位會以指紋圖示表示。 |
-| [!UICONTROL 個錯誤] | 顯示錯誤對應欄位的數量。 |
+| [!UICONTROL Mapped fields] | 顯示已對應至目標XDM欄位的來源欄位總數（無論是否有錯誤）。 |
+| [!UICONTROL Required fields] | 顯示必要對應欄位的數量。 |
+| [!UICONTROL Identity fields] | 顯示定義為身分的對應欄位總數。 這些對應欄位會以指紋圖示表示。 |
+| [!UICONTROL Errors] | 顯示錯誤對應欄位的數量。 |
 
 {style="table-layout:auto"}
 
@@ -55,32 +60,32 @@ ht-degree: 0%
 
 | 選項 | 說明 |
 | --- | --- |
-| [!UICONTROL 搜尋來源欄位] | 使用搜尋列導覽至特定來源欄位。 |
-| [!UICONTROL 所有欄位] | 選取&#x200B;**[!UICONTROL 所有欄位]**&#x200B;以檢視篩選對應所依據的選項下拉式功能表。 可用的篩選選項包括：<ul><li>**[!UICONTROL 必要欄位]**：篩選介面以僅顯示完成工作流程所需的欄位。</li><li> **[!UICONTROL 身分欄位]**：篩選介面以僅顯示標示為身分的欄位。</li><li>**[!UICONTROL 對應的欄位]**：篩選介面以僅顯示已經對應的欄位。</li><li>**[!UICONTROL 未對應的欄位]**：篩選介面以僅顯示尚未對應的欄位。</li><li>**[!UICONTROL 有錯誤的欄位]**：篩選介面以僅顯示有錯誤的欄位。</li></ul> |
-| [!UICONTROL 新欄位型別] | 選取&#x200B;**[!UICONTROL 新欄位型別]**&#x200B;以新增欄位或計算欄位。 如需詳細資訊，請閱讀[新增欄位型別](#add-a-new-field-type)的章節。 |
-| [!UICONTROL 匯入對應] | 選取&#x200B;**[!UICONTROL 匯入對應]**&#x200B;以從現有的檔案或資料流匯入對應。 如需詳細資訊，請閱讀有關[匯入對應](#import-mapping)的章節。 |
-| [!UICONTROL 驗證] | 選取&#x200B;**[!UICONTROL 驗證]**&#x200B;以檢查對應中的錯誤。 |
-| [!UICONTROL 下載範本] | 選取&#x200B;**[!UICONTROL 下載範本]**&#x200B;以匯出並下載您的對應CSV檔案。 |
-| [!UICONTROL 預覽資料] | 選取&#x200B;**[!UICONTROL 預覽資料]**&#x200B;以使用預覽面板，並檢查來源資料集的結構和內容。 |
-| [!UICONTROL 全部清除] | 選取&#x200B;**[!UICONTROL 全部清除]**&#x200B;以刪除介面中的所有對應。 |
+| [!UICONTROL Search source fields] | 使用搜尋列導覽至特定來源欄位。 |
+| [!UICONTROL All fields] | 選取&#x200B;**[!UICONTROL All fields]**&#x200B;以檢視篩選對應所依據的下拉式選項功能表。 可用的篩選選項包括：<ul><li>**[!UICONTROL Required fields]**：篩選介面以僅顯示完成工作流程所需的欄位。</li><li> **[!UICONTROL Identity fields]**：篩選介面以僅顯示標籤為身分的欄位。</li><li>**[!UICONTROL Mapped fields]**：篩選介面以僅顯示已對應的欄位。</li><li>**[!UICONTROL Unmapped fields]**：篩選介面以僅顯示尚未對應的欄位。</li><li>**[!UICONTROL Fields with errors]**：篩選介面以僅顯示有錯誤的欄位。</li></ul> |
+| [!UICONTROL New field type] | 選取&#x200B;**[!UICONTROL New field type]**&#x200B;以新增欄位或計算欄位。 如需詳細資訊，請閱讀[新增欄位型別](#add-a-new-field-type)的章節。 |
+| [!UICONTROL Import mappings] | 選取&#x200B;**[!UICONTROL Import mappings]**&#x200B;以從現有的檔案或資料流匯入對應。 如需詳細資訊，請閱讀有關[匯入對應](#import-mapping)的章節。 |
+| [!UICONTROL Validate] | 選取&#x200B;**[!UICONTROL Validate]**&#x200B;以檢查對應中的錯誤。 |
+| [!UICONTROL Download template] | 選取&#x200B;**[!UICONTROL Download template]**&#x200B;以匯出並下載您的對應CSV檔案。 |
+| [!UICONTROL Preview data] | 選取&#x200B;**[!UICONTROL Preview data]**&#x200B;以使用預覽面板，並檢查來源資料集的結構和內容。 |
+| [!UICONTROL Clear all] | 選取&#x200B;**[!UICONTROL Clear all]**&#x200B;以刪除介面中的所有對應。 |
 
 {style="table-layout:auto"}
 
 ### 新增欄位型別 {#add-a-new-field-type}
 
-您可以選取&#x200B;**[!UICONTROL 新增欄位型別]**，以新增對應欄位或計算欄位。
+您可以選取&#x200B;**[!UICONTROL New field type]**，以新增對應欄位或計算欄位。
 
 #### 新對應欄位
 
-若要新增對應欄位，請選取&#x200B;**[!UICONTROL 新增欄位型別]**，然後從出現的下拉式功能表中選取&#x200B;**[!UICONTROL 新增欄位]**。
+若要新增對應欄位，請選取&#x200B;**[!UICONTROL New field type]**，然後從出現的下拉式功能表中選取&#x200B;**[!UICONTROL Add new field]**。
 
 ![已選取[新增欄位]按鈕的對映介面。](../images/ui/mapping/add_new_field.png)
 
-接著，從出現的來源結構描述樹狀結構中選取您要新增的來源欄位，然後選取&#x200B;**[!UICONTROL 選取]**。
+接著，從出現的來源結構描述樹狀結構中，選取您要新增的來源欄位，然後選取&#x200B;**[!UICONTROL Select]**。
 
 ![來源結構描述已選取「國家/地區」作為額外的新欄位。](../images/ui/mapping/source_field.png)
 
-對應介面會以您選取的來源欄位和空的目標欄位更新。 選取&#x200B;**[!UICONTROL 對應目標欄位]**&#x200B;以開始將新的來源欄位對應到其適當的目標XDM欄位。
+對應介面會以您選取的來源欄位和空的目標欄位更新。 選取&#x200B;**[!UICONTROL Map target field]**&#x200B;以開始將新的來源欄位對應到其適當的目標XDM欄位。
 
 ![具有新的未對應來源欄位的對應介面。](../images/ui/mapping/new_field_added.png)
 
@@ -92,21 +97,21 @@ ht-degree: 0%
 
 計算欄位允許根據輸入結構描述中的屬性建立值。 然後可以將這些值指派給目標架構中的屬性，並提供名稱和說明以便更輕鬆地參考。 計算欄位的長度上限為4096個字元。
 
-若要建立計算欄位，請選取&#x200B;**[!UICONTROL 新增欄位型別]**，然後選取&#x200B;**[!UICONTROL 新增計算欄位]**
+若要建立計算欄位，請選取&#x200B;**[!UICONTROL New field type]**，然後選取&#x200B;**[!UICONTROL Add calculated field]**
 
 ![已選取[新增計算欄位]按鈕的對映介面。](../images/ui/mapping/new_calculated_field.png)
 
-**[!UICONTROL 建立計算欄位]**&#x200B;視窗會出現。 使用介面輸入計算欄位，並參閱左側的對話方塊，瞭解支援的欄位、函式和運運算元。
+**[!UICONTROL Create calculated field]**&#x200B;視窗會出現。 使用介面輸入計算欄位，並參閱左側的對話方塊，瞭解支援的欄位、函式和運運算元。
 
 | 標記 | 說明 |
 | --- | ----------- |
-| [!UICONTROL 函式] | 函式標籤會列出可用來轉換資料的函式。 若要深入瞭解您可以在計算欄位中使用的函式，請參閱[使用資料準備（對應程式）函式](../functions.md)的指南。 |
-| [!UICONTROL 欄位] | 欄位索引標籤會列出來源結構描述中可用的欄位和屬性。 |
-| [!UICONTROL 運運算元] | 運運算元索引標籤會列出可用於轉換資料的運運算元。 |
+| [!UICONTROL Function] | 函式標籤會列出可用來轉換資料的函式。 若要深入瞭解您可以在計算欄位中使用的函式，請參閱[使用資料準備（對應程式）函式](../functions.md)的指南。 |
+| [!UICONTROL Field] | 欄位索引標籤會列出來源結構描述中可用的欄位和屬性。 |
+| [!UICONTROL Operator] | 運運算元索引標籤會列出可用於轉換資料的運運算元。 |
 
 ![計算欄位介面](../images/ui/mapping/calculated_field.png)
 
-您可以使用中央的運算式編輯器，手動新增欄位、函式和運運算元。 選取編輯器以開始建立運算式。 完成之後，請選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以繼續。
+您可以使用中央的運算式編輯器，手動新增欄位、函式和運運算元。 選取編輯器以開始建立運算式。 完成後，請選取「**[!UICONTROL Save]**」以繼續。
 
 ### 匯入對應 {#import-mapping}
 
@@ -114,15 +119,15 @@ ht-degree: 0%
 
 >[!BEGINTABS]
 
->[!TAB 從流程匯入對應]
+>[!TAB 從流程]匯入對應
 
 如果您有多個資料流是根據類似的來源檔案和目標結構描述，那麼您可以匯入現有的對應，並將其重複用於新的資料流。
 
-若要從現有的資料流匯入對應，請選取&#x200B;**[!UICONTROL 匯入對應]**，然後選取&#x200B;**[!UICONTROL 從資料流]**&#x200B;匯入對應。
+若要從現有的資料流匯入對應，請選取&#x200B;**[!UICONTROL Import mappings]**，然後選取&#x200B;**[!UICONTROL Import mapping from flow]**。
 
 ![已選取具有「匯入對應」和「從流程匯入對應」的對應介面。](../images/ui/mapping/import_from_flow.png)
 
-接下來，使用快顯視窗來尋找您要匯入其對應的資料流。 在此步驟中，您也可以使用搜尋功能來隔離特定資料流並擷取其對應。 完成後，選取&#x200B;**[!UICONTROL 選取]**。
+接下來，使用快顯視窗來尋找您要匯入其對應的資料流。 在此步驟中，您也可以使用搜尋功能來隔離特定資料流並擷取其對應。 完成後，選取&#x200B;**[!UICONTROL Select]**。
 
 ![可以匯入對應對應的現有資料流清單。](../images/ui/mapping/import_flow_window.png)
 
@@ -130,11 +135,11 @@ ht-degree: 0%
 
 在某些情況下，您可能需要為資料實作大量對應。 您可以使用對應介面手動執行此操作，但也可以匯出對應範本並在離線試算表上設定對應，以節省時間並避免Experience Platform上的使用者逾時。
 
-若要從匯出的檔案匯入對應，請選取&#x200B;**[!UICONTROL 匯入對應]**，然後選取&#x200B;**[!UICONTROL 從檔案匯入對應]**。
+若要從匯出的檔案匯入對應，請選取&#x200B;**[!UICONTROL Import mappings]**，然後選取&#x200B;**[!UICONTROL Import mapping from file]**。
 
 ![已選取「匯入對應」和「從檔案匯入對應」的對應介面。](../images/ui/mapping/import_from_file.png)
 
-接著，使用[!UICONTROL 上載範本]視窗下載對映的CSV復本。 然後，您可以使用任何支援編輯CSV檔案型別的軟體，在本機裝置上設定對應。 在此步驟中，您必須確保僅使用來源檔案和目標結構描述中提供的欄位。
+接下來，使用[!UICONTROL Upload template]視窗下載對映的CSV復本。 然後，您可以使用任何支援編輯CSV檔案型別的軟體，在本機裝置上設定對應。 在此步驟中，您必須確保僅使用來源檔案和目標結構描述中提供的欄位。
 
 ![此上載範本視窗會顯示下載和上載轉存的對應csv檔案的選項。](../images/ui/mapping/upload_template.png)
 
@@ -144,13 +149,13 @@ ht-degree: 0%
 
 +++
 
-完成時，請選取&#x200B;**[!UICONTROL 上傳檔案]**，然後選取您對應的更新csv檔案。 請讓系統處理一段時間，然後選取&#x200B;**[!UICONTROL 完成]**。
+完成後，請選取&#x200B;**[!UICONTROL Upload file]**&#x200B;並選取您對應的更新csv檔案。 請稍候系統處理，然後選取&#x200B;**[!UICONTROL Done]**。
 
 ![上載範本視窗已上載新檔案。](../images/ui/mapping/upload_successful.png)
 
 >[!ENDTABS]
 
-完成對應後，您現在可以選取&#x200B;**[!UICONTROL 完成]**，然後繼續下一個步驟以完成您的資料流。
+完成對應後，您現在可以選取&#x200B;**[!UICONTROL Finish]**&#x200B;並繼續下一步以完成資料流。
 
 >[!TIP]
 >
