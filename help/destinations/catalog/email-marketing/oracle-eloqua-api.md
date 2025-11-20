@@ -13,9 +13,9 @@ ht-degree: 4%
 
 # [!DNL (API) Oracle Eloqua] 連線
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)可讓行銷人員規劃及執行行銷活動，同時為其潛在客戶提供個人化的客戶體驗。 透過整合式銷售機會管理和輕鬆建立行銷活動，可協助行銷人員在買家歷程中的適當時間，與適當的對象互動，並可優雅地擴充，以涵蓋多個管道，包括電子郵件、顯示搜尋、視訊和行動裝置。 銷售團隊可以更快完成更多交易，透過即時insight提高行銷ROI。
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 它讓行銷人員能夠規劃並執行活動，同時為潛在客戶提供個人化的顧客體驗。 透過整合的潛在客戶管理與簡易的活動創建，它幫助行銷人員在買家旅程中於正確時間吸引正確的受眾，並優雅地擴展至電子郵件、展示搜尋、影片及行動裝置等管道中觸及受眾。 銷售團隊能以更快速度完成更多交易，透過即時洞察提升行銷投資報酬率。
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[&#x200B; REST API中的](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)更新連絡人[!DNL Oracle Eloqua]作業，可讓您&#x200B;**將對象內的身分識別**&#x200B;更新為[!DNL Oracle Eloqua]。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[ REST API中的](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)更新連絡人[!DNL Oracle Eloqua]作業，可讓您&#x200B;**將對象內的身分識別**&#x200B;更新為[!DNL Oracle Eloqua]。
 
 [!DNL Oracle Eloqua]使用[基本驗證](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)與[!DNL Oracle Eloqua] REST API通訊。 [!DNL Oracle Eloqua]向目的地驗證[區段中進一步說明如何向您的](#authenticate)執行個體進行驗證。
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL Oracle Eloqua]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料到[!DNL Oracle Eloqua]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的Experience Platform檔案。
 
@@ -35,7 +35,7 @@ ht-degree: 4%
 
 若要將資料從Experience Platform匯出至您的[!DNL Oracle Eloqua]帳戶，您需要有[!DNL Oracle Eloqua]帳戶。
 
-此外，您至少需要&#x200B;*執行個體的*「進階使用者 — 行銷許可權」[!DNL Oracle Eloqua]。 請參閱&#x200B;*安全使用者存取*&#x200B;頁面上的[「安全性群組」](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)區段以取得指引。 目的地需要在叫用[&#x200B; API時，以程式設計方式](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)決定您的基底URL[!DNL Oracle Eloqua]的存取權。
+此外，你至少需要為你的&#x200B;*實例取得*「進階使用者 - 行銷權限」。[!DNL Oracle Eloqua]請參閱&#x200B;*安全使用者存取*&#x200B;頁面的[「安全群組」](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)區塊以獲得指引。存取權限是目的地在呼叫 [ API 時](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)，程式化決定你的基礎網址[!DNL Oracle Eloqua]所必需的。
 
 #### 收集[!DNL Oracle Eloqua]認證 {#gather-credentials}
 
@@ -43,10 +43,10 @@ ht-degree: 4%
 
 | 認證 | 說明 |
 | --- | --- |
-| `Company Name` | 與您的[!DNL Oracle Eloqua]帳戶相關聯的公司名稱。 <br>您稍後會使用`Company Name`與[!DNL Oracle Eloqua] `Username`作為串連字串，在&#x200B;**[!UICONTROL Username]**&#x200B;對目的地[進行驗證時用作](#authenticate)。 |
-| `Username` | 您[!DNL Oracle Eloqua]帳戶的使用者名稱。 |
-| `Password` | 您的[!DNL Oracle Eloqua]帳戶密碼。 |
-| `Pod` | [!DNL Oracle Eloqua]支援多個資料中心，每個都有唯一的網域名稱。 [!DNL Oracle Eloqua]將這些稱為「pods」，目前總共有七個 — p01、p02、p03、p04、p06、p07和p08。 若要取得您目前所在的POD，請登入[!DNL Oracle Eloqua]，並在您成功登入後記下瀏覽器的URL。 例如，如果瀏覽器URL為`secure.p01.eloqua.com`，則`pod`為`p01`。 如需其他指南，請參閱[決定您的POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua)頁面。 |
+| `Company Name` | 與您的[!DNL Oracle Eloqua]帳戶相關聯的公司名稱。 <br>之後你會將 和 `Company Name` [!DNL Oracle Eloqua] `Username` 作為串接字串，作為驗證目的地&#x200B;**[!UICONTROL Username]**&#x200B;時使用的 。[ ](#authenticate) |
+| `Username` | 你 [!DNL Oracle Eloqua] 帳號的使用者名稱。 |
+| `Password` | 你 [!DNL Oracle Eloqua] 帳號的密碼。 |
+| `Pod` | [!DNL Oracle Eloqua] 支援多個資料中心，每個中心擁有獨特的網域名稱。 [!DNL Oracle Eloqua] 這些稱為「艙」，目前共有七個——P01、P02、P03、P04、P06、P07和P08。 要知道你使用的 POD，請 [!DNL Oracle Eloqua] 在成功登入後，在瀏覽器中記錄網址。 例如，如果瀏覽器URL為`secure.p01.eloqua.com`，則`pod`為`p01`。 如需其他指南，請參閱[決定您的POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua)頁面。 |
 
 如需指引，請參閱[登入 [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing)。
 
@@ -58,18 +58,18 @@ ht-degree: 4%
 
 * [!DNL Oracle Eloqua]的最大限製為250個自訂連絡人欄位。
 * 在匯出新對象之前，請確保[!DNL Oracle Eloqua]內的Experience Platform對象數量和現有對象數量不超過此限制。
-* 如果超過此限制，您將會在Experience Platform中遇到錯誤。 這是因為[!DNL Oracle Eloqua] API無法驗證要求，並以 — *400回應：發生驗證錯誤* — 說明問題的錯誤訊息。
-* 如果您已達到上述指定的限制，則必須從目的地移除現有的對應，並刪除[!DNL Oracle Eloqua]帳戶中對應的自訂聯絡人欄位，才能匯出更多區段。
+* 若超過此限制，體驗平台會出現錯誤。 這是因為 [!DNL Oracle Eloqua] API 未能驗證請求，並回應 - *400：有驗證錯誤* - 錯誤訊息描述問題。
+* 如果你已經達到上述限制，你需要先從目的地移除現有的映射，並刪除帳戶中相應的自訂聯絡欄位 [!DNL Oracle Eloqua] ，才能匯出更多分段。
 
 * 請參閱[[!DNL Oracle Eloqua] 建立連絡人欄位](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm)頁面，瞭解其他限制的相關資訊。
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Oracle Eloqua]支援下表中描述的身分更新。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
+[!DNL Oracle Eloqua] 支援下表中描述的身份更新。 了解更多關於 [身份的](/help/identity-service/features/namespaces.md)資訊。
 
-| 目標身分 | 說明 | 強制 |
+| 目標身份 | 說明 | 命令的 |
 |---|---|---|
-| `EloquaId` | 連絡人的唯一識別碼。 | 是 |
+| `EloquaId` | 聯絡人的唯一識別碼。 | 是 |
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -78,7 +78,7 @@ ht-degree: 4%
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
 | 匯出類型 | **[!UICONTROL Profile-based]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 針對Experience Platform中每個選取的對象，相對應的[!DNL Oracle Eloqua]區段狀態會從Experience Platform更新其對象狀態。</li></ul> |
-| 匯出頻率 | **[!UICONTROL Streaming]** | <ul><li>串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
+| 匯出頻率 | **[!UICONTROL Streaming]** | <ul><li>串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 閱讀更多關於串流平台的[資訊](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,11 +86,11 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>要連接目的地，你需要取得&#x200B;**[!UICONTROL View Destinations]**&#x200B;存取&#x200B;**[!UICONTROL Manage Destinations]**[&#x200B;控制權限](/help/access-control/home.md#permissions)。請閱讀 [存取控制概述](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需權限。
 
-若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
+要連接此目的地，請依照目的地設定教學[中的](../../ui/connect-destination.md)步驟操作。在設定目的地工作流程中，請填寫下方兩個章節列出的欄位。
 
-在&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;內搜尋[!DNL (API) Oracle Eloqua]。 或者，您可以在&#x200B;**[!UICONTROL Email Marketing]**&#x200B;類別下找到它。
+在 **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** 搜尋 [!DNL (API) Oracle Eloqua]。 或者，您可以在&#x200B;**[!UICONTROL Email Marketing]**&#x200B;類別下找到它。
 
 ### 驗證目標 {#authenticate}
 
@@ -99,7 +99,7 @@ ht-degree: 4%
 >title="公司名稱\使用者名稱"
 >abstract="在此欄位中填寫 `{COMPANY_NAME}\{USERNAME}` 表單中來自 Oracle Eloqua 的公司名稱和使用者名稱"
 
-填寫以下必填欄位。 如需任何指引，請參閱[收集 [!DNL Oracle Eloqua] 認證](#gather-credentials)區段。
+請填寫下方必填欄位。 請參閱 [「蒐集 [!DNL Oracle Eloqua] 憑證](#gather-credentials) 」章節以獲得相關指引。
 
 * **[!UICONTROL Password]**：您[!DNL Oracle Eloqua]帳戶的密碼。
 * **[!UICONTROL Username]**：由您的[!DNL Oracle Eloqua]公司名稱和[!DNL Oracle Eloqua]使用者名稱組成的串連字串。<br>串連值採用`{COMPANY_NAME}\{USERNAME}`的形式。<br>注意，請勿使用任何大括弧或空格並保留`\`。 <br>例如，若您的[!DNL Oracle Eloqua]公司名稱是`MyCompany`，[!DNL Oracle Eloqua]使用者名稱是`Username`，則您將在&#x200B;**[!UICONTROL Username]**&#x200B;欄位中使用的串連值為`MyCompany\Username`。
@@ -119,15 +119,15 @@ ht-degree: 4%
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
-![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
+![Experience Platform UI 截圖顯示目的地細節。](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
-* **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+* **[!UICONTROL Name]**：一個你未來會認出這個目的地的名字。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL Pod]**：若要取得您所在的`pod`，請登入[!DNL Oracle Eloqua]，並在您成功登入後，在瀏覽器中記下該URL。 例如，如果您的瀏覽器URL為`secure.p01.eloqua.com`，則需要選取的`pod`值為`p01`。 如需其他指南，請參閱[收集 [!DNL Oracle Eloqua] 認證](#gather-credentials)區段。
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
+你可以啟用警示，接收資料流狀態通知到目的地。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
 當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
@@ -142,17 +142,17 @@ ht-degree: 4%
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Oracle Eloqua]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
+若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Oracle Eloqua]目的地，您必須完成欄位對應步驟。 映射是指在你的體驗平台帳號中，建立經驗資料模型（XDM）架構欄位與其對應的目標目的地對應欄位之間的連結。
 
-若要將您的XDM欄位對應到[!DNL Oracle Eloqua]目的地欄位，請執行下列步驟：
+要將 XDM 欄位對應到 [!DNL Oracle Eloqua] 目的地欄位，請依照以下步驟操作：
 
 1. 在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**。 您會在畫面上看到新的對應列。
 1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**&#x200B;類別並選取XDM屬性，或選擇&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;並選取身分。
-1. 在&#x200B;**[!UICONTROL Select target field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;並選取身分，或選擇&#x200B;**[!UICONTROL Select custom attributes]**&#x200B;並在&#x200B;**[!UICONTROL Attribute name]**&#x200B;欄位中輸入所需的屬性名稱。 您提供的屬性名稱應符合[!DNL Oracle Eloqua]中現有的連絡人屬性。 請參閱[[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html)以取得您可以在[!DNL Oracle Eloqua]中使用的確切屬性名稱。
+1. 在&#x200B;**[!UICONTROL Select target field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;並選取身分，或選擇&#x200B;**[!UICONTROL Select custom attributes]**&#x200B;並在&#x200B;**[!UICONTROL Attribute name]**&#x200B;欄位中輸入所需的屬性名稱。 您提供的屬性名稱應符合[!DNL Oracle Eloqua]中現有的連絡人屬性。 請參考 [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) 你可以在 中使用的 [!DNL Oracle Eloqua]精確屬性名稱。
 
-   * 重複這些步驟，在您的XDM設定檔結構描述和[!DNL Oracle Eloqua]之間新增必要和任何需要的屬性對應：
+   * 重複這些步驟，加入所需的及任何屬性映射，連接你的 XDM 設定檔結構與 [!DNL Oracle Eloqua]：
 
-     | 來源欄位 | 目標欄位 | 強制 |
+     | 來源欄位 | 目標欄位 | 命令的 |
      |---|---|---|
      | `IdentityMap: Eid` | `Identity: EloquaId` | 是 |
      | `xdm: personalEmail.address` | `Attribute: emailAddress` | 是 |
@@ -194,22 +194,22 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->傳送連絡人欄位資訊給[!DNL Oracle Eloqua]時，目的地會在每次執行時，自動將唯一的識別碼尾碼加到選取的對象名稱。 這可確保與您的對象名稱對應的聯絡人欄位名稱不會重疊。 請參考[連絡人詳細資料頁面的](#exported-data)驗證資料匯出[!DNL Oracle Eloqua]區段熒幕擷圖範例，此頁面具有使用對象名稱建立的自訂連絡人欄位。
+>傳送連絡人欄位資訊給[!DNL Oracle Eloqua]時，目的地會在每次執行時，自動將唯一的識別碼尾碼加到選取的對象名稱。 這樣可以確保與受眾名稱對應的聯絡欄位名稱不會重疊。 請參考 [「驗證資料匯出](#exported-data) 」部分截圖範例，該 [!DNL Oracle Eloqua] 頁面包含使用受眾名稱建立的自訂聯絡欄位。
 
 ## 驗證資料匯出 {#exported-data}
 
-若要驗證您是否已正確設定目的地，請遵循下列步驟：
+為了確認你已正確設定目的地，請遵循以下步驟：
 
-1. 選取「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」並導覽至目的地清單。
-1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 選擇 **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** 並導航到目的地清單。
+1. 接著，選擇目的地並切換到 **[!UICONTROL Activation data]** 分頁，然後選擇受眾名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數與區段中的計數相對應。
    ![Experience Platform UI熒幕擷圖範例，顯示區段。](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. 登入[!DNL Oracle Eloqua]網站，然後導覽至&#x200B;**[!UICONTROL Contacts Overview]**&#x200B;頁面，以檢查是否已新增對象中的設定檔。 若要檢視對象狀態，請深入研究至&#x200B;**[!UICONTROL Contact Detail]**&#x200B;頁面，並檢查聯絡人欄位是否已建立且已將選取的對象名稱作為其前置詞。
+1. [!DNL Oracle Eloqua]登入網站，然後前往&#x200B;**[!UICONTROL Contacts Overview]**&#x200B;頁面查看是否有新增受眾的個人檔案。要查看受眾狀態，請 **[!UICONTROL Contact Detail]** 深入頁面，檢查已建立以所選受眾名稱為前綴的聯絡欄位。
 
-![Oracle Eloqua UI熒幕擷取畫面顯示「連絡人詳細資料」頁面，其中包含以對象名稱建立的自訂連絡人欄位。](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![Oracle Eloqua UI 截圖顯示「聯絡詳情」頁面，並以受眾名稱自訂建立聯絡欄位。](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 
@@ -224,12 +224,12 @@ ht-degree: 4%
 
 ## 其他資源 {#additional-resources}
 
-如需其他詳細資料，請參閱[!DNL Oracle Eloqua]檔案：
+更多細節請參閱文件：[!DNL Oracle Eloqua]
 
-* [Oracle Eloqua行銷自動化](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
-* [適用於Oracle Eloqua Marketing Cloud服務的REST API](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+* [Oracle Eloqua 行銷自動化](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
+* [REST API for Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
-### Changelog
+### 更新日誌
 
 本節擷取此目的地聯結器的功能和重要檔案更新。
 

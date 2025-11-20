@@ -6,7 +6,7 @@ description: 本檔案提供在Adobe Experience Platform中設定假名設定檔
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1260'
 ht-degree: 7%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 7%
 - 使用者定義的時間內未發生任何活動。 活動由任何正在內嵌的體驗事件或客戶起始的設定檔屬性更新來定義。
    - 例如，新的頁面檢視事件或年齡屬性更新會視為活動。 但是，非使用者起始的對象成員資格更新是&#x200B;**不會**&#x200B;視為活動。 目前，若要計算資料有效期，設定檔層級的追蹤是根據體驗事件的事件時間和設定檔屬性的擷取時間。
 
-## 存取 {#access}
+## 存取權 {#access}
 
 >[!AVAILABILITY]
 >
@@ -49,15 +49,15 @@ ht-degree: 7%
 >
 >您可以在[存取控制總覽](../access-control/home.md#permissions)中找到Experience Platform內許可權的詳細資訊。
 
-若要將假名設定檔資料到期日新增至您的組織，請移至[設定檔]儀表板，並選取&#x200B;**[!UICONTROL 設定]**。
+若要將假名設定檔資料到期日新增至您的組織，請移至設定檔儀表板並選取&#x200B;**[!UICONTROL Settings]**。
 
 ![設定檔儀表板上的[設定]按鈕會反白顯示。](./images/pseudonymous-profiles/profile-settings.png)
 
-[!UICONTROL 設定檔設定]彈出視窗即會顯示。 在此彈出視窗中，您可以設定假名設定檔資料到期的天數，以及用於資料到期的身分名稱空間。
+[!UICONTROL Profile settings]彈出視窗會出現。 在此彈出視窗中，您可以設定假名設定檔資料到期的天數，以及用於資料到期的身分名稱空間。
 
 對於生產沙箱，預設的假名設定檔資料到期為14天，最小為1天，最大為365天。 對於開發沙箱，預設的假名設定檔資料到期日為3天，最小為1天，最大為365天。
 
-選取&#x200B;**[!UICONTROL 套用]**&#x200B;以儲存您的資料到期設定。
+選取&#x200B;**[!UICONTROL Apply]**&#x200B;以儲存您的資料到期設定。
 
 ![將假名設定檔資料到期日新增至貴組織設定檔的彈出視窗。 已反白顯示[套用]按鈕。](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
@@ -71,7 +71,7 @@ ht-degree: 7%
 
 假名設定檔資料到期和體驗事件資料到期是互補功能。
 
-#### 粒度
+#### 詳細程度
 
 假名設定檔資料到期日適用於&#x200B;**沙箱**&#x200B;層級。 因此，資料過期將會影響沙箱中的所有設定檔。
 

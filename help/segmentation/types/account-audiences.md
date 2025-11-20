@@ -1,12 +1,12 @@
 ---
 title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1498'
 ht-degree: 21%
 
 ---
@@ -33,13 +33,13 @@ ht-degree: 21%
 - **People對象**： People對象是使用&#x200B;**客戶**&#x200B;設定檔資料建立的對象。 客戶設定檔資料可用來建立以您企業的客戶為目標之對象。 如需客戶設定檔的詳細資訊，請閱讀[即時客戶設定檔總覽](../../profile/home.md)。
 - **潛在客戶對象**：潛在客戶對象是使用&#x200B;**潛在客戶**&#x200B;設定檔資料建立的對象。 潛在客戶設定檔資料可用來從未經驗證的使用者建立對象。 如需潛在客戶設定檔的詳細資訊，請閱讀[潛在客戶設定檔概觀](../../profile/ui/prospect-profile.md)。
 
-## 存取 {#access}
+## 存取權 {#access}
 
-若要存取帳戶對象，請在&#x200B;**[!UICONTROL 帳戶]**&#x200B;區段中選取&#x200B;**[!UICONTROL 對象]**。
+若要存取帳戶對象，請在&#x200B;**[!UICONTROL Audiences]**&#x200B;區段中選取&#x200B;**[!UICONTROL Accounts]**。
 
 ![[帳戶]區段中的[對象]按鈕會反白顯示。](../images/types/account/select.png)
 
-顯示[!UICONTROL 瀏覽]頁面，顯示組織所有帳戶對象的清單。
+此時會顯示[!UICONTROL Browse]頁面，顯示組織所有帳戶對象的清單。
 
 ![顯示屬於組織的帳戶對象。](../images/types/account/browse.png)
 
@@ -53,19 +53,19 @@ ht-degree: 21%
 >
 >帳戶對象是使用&#x200B;**批次**&#x200B;細分評估，每24小時評估一次。
 
-若要建立帳戶對象，請在&#x200B;**[!UICONTROL 瀏覽]**&#x200B;頁面上選取[!UICONTROL 建立對象]。
+若要建立帳戶對象，請在&#x200B;**[!UICONTROL Create audience]**&#x200B;頁面上選取[!UICONTROL Browse]。
 
-![帳戶對象瀏覽頁面會醒目顯示[!UICONTROL 建立對象]按鈕。](../images/types/account/select-create-audience.png)
+![帳戶對象瀏覽頁面上會醒目顯示[!UICONTROL Create audience]按鈕。](../images/types/account/select-create-audience.png)
 
-「區段產生器」隨即顯示。 帳戶屬性和對象會顯示在左側導覽列上。 在[!UICONTROL 屬性]標籤下方，您可以同時新增Experience Platform建立的屬性和自訂屬性。
+「區段產生器」隨即顯示。 帳戶屬性和對象會顯示在左側導覽列上。 在「[!UICONTROL Attributes]」標籤下方，您可以同時新增Experience Platform建立和自訂屬性。
 
 ![會顯示區段產生器。 請注意，只會顯示屬性和對象。](../images/types/account/segment-builder.png)
 
-建立帳戶對象時，請注意，事件列在&#x200B;**[!UICONTROL 人員]**&#x200B;下，而不是作為自己的標籤，因為這些屬性與人員相關聯。
+建立帳戶對象時，請注意，事件列在&#x200B;**[!UICONTROL People]**&#x200B;下方，而非其本身的標籤，因為這些屬性與人員相關聯。
 
 ![在[!UICONTROL People]資料夾中尋找事件的位置會反白顯示。](../images/types/account/attributes.png)
 
-在[!UICONTROL 對象]標籤下方，您可以新增先前建立的以人物為基礎的對象，以便在建立您自己的帳戶對象時建置。
+在「[!UICONTROL Audiences]」標籤下方，您可以新增先前建立的使用者型對象，以便在建立您自己的帳戶對象時由建置。
 
 ![區段產生器內的「對象」索引標籤會醒目提示。](../images/types/account/audiences.png)
 
@@ -79,11 +79,11 @@ ht-degree: 21%
 
 ![設定圖示會在[欄位]區段上反白顯示。](../images/types/account/select-settings.png)
 
-在[!UICONTROL 設定]標籤上，選取&#x200B;**[!UICONTROL 欄位關聯性]**&#x200B;區段中的&#x200B;**[!UICONTROL 顯示關聯性選取器]**。
+在[!UICONTROL Settings]標籤上，選取&#x200B;**[!UICONTROL Show relationship selectors]**&#x200B;區段中的&#x200B;**[!UICONTROL Relationship of fields]**。
 
 ![在[設定]索引標籤的[欄位關聯性]區段內已選取[顯示關聯性選取器]切換按鈕。](../images/types/account/show-relation-selectors.png)
 
-再次選取![設定圖示](../../images/icons/settings.png)以返回[!UICONTROL 欄位]索引標籤。 您現在可以看到&#x200B;**[!UICONTROL 建立關係]**&#x200B;區段，讓您建立帳戶與個人的連線方式以及個人與機會的連線方式。
+再次選取![設定圖示](../../images/icons/settings.png)以返回[!UICONTROL Fields]標籤。 您現在可以看到&#x200B;**[!UICONTROL Establish relationships]**&#x200B;區段，讓您建立帳戶與個人的連線方式以及個人與商機的連線方式。
 
 ![「建立關係」區段會反白顯示，顯示如何將帳戶與個人連線以及如何將個人與機會連線的選項。](../images/types/account/establish-relationships.png)
 
@@ -112,11 +112,11 @@ ht-degree: 21%
 
 建立帳戶對象後，您可以對其他下游服務啟用對象。
 
-選取您要啟用的對象，然後選取&#x200B;**[!UICONTROL 啟用到目的地]**。
+選取您要啟用的對象，然後選取&#x200B;**[!UICONTROL Activate to destination]**。
 
-![在選取對象的快速動作功能表中，[!UICONTROL 啟用至目的地]按鈕會醒目提示。](../images/types/account/activate.png)
+![所選對象的[快速動作]功能表中會反白顯示[!UICONTROL Activate to destination]按鈕。](../images/types/account/activate.png)
 
-[!UICONTROL 啟用目的地]頁面隨即顯示。 如需啟動程式的詳細資訊，包括支援的目的地以及欄位對應的詳細資訊，請參閱[啟動帳戶對象](/help/destinations/ui/activate-account-audiences.md)教學課程。
+[!UICONTROL Activate destination]頁面隨即顯示。 如需啟動程式的詳細資訊，包括支援的目的地以及欄位對應的詳細資訊，請參閱[啟動帳戶對象](/help/destinations/ui/activate-account-audiences.md)教學課程。
 
 ## 後續步驟 {#next-steps}
 

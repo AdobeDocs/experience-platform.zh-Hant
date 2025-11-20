@@ -4,8 +4,8 @@ description: 瞭解如何在UI中設定秘密，以驗證用於事件轉送屬�
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 2%
+source-wordcount: '2363'
+ht-degree: 3%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 2%
 | [!UICONTROL Google OAuth 2] | 包含數個屬性以支援[OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)驗證規格，以便用於[Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)和[Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)。 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
 | [!UICONTROL HTTP] | 包含使用者名稱和密碼的兩個字串屬性。 |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
-| [!UICONTROL OAuth 2] | 包含數個屬性，可支援[OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)驗證規格的[使用者端認證授權型別](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)。 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
+| [!UICONTROL OAuth 2] | 包含數個屬性，可支援[OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4)驗證規格的[使用者端認證授權型別](https://datatracker.ietf.org/doc/html/rfc6749)。 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
 | [!UICONTROL OAuth 2 JWT] | 包含數個屬性，可支援[OAuth 2.0授權](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1)授權的JSON Web權杖(JWT)設定檔。 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
 | [!UICONTROL Token] | 代表兩個系統已知且瞭解的驗證Token值的單一字元字串。 |
 
 {style="table-layout:auto"}
 
-本指南提供如何在Experience Platform UI或資料收集UI中設定事件轉送([!UICONTROL Edge])屬性的密碼的高層級概觀。
+本指南提供如何在Experience Platform UI或資料收集UI中設定事件轉送([!UICONTROL Edge])屬性之密碼的整體概觀。
 
 >[!NOTE]
 >
@@ -45,9 +45,9 @@ ht-degree: 2%
 >id="platform_eventforwarding_secrets_environments"
 >title="密碼環境"
 >abstract="為了讓密碼可供事件轉送使用，必須將其指派給現有環境。如果您沒有為事件轉送屬性建立任何環境，則必須進行設定才能繼續。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant" text="環境概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="環境概觀"
 
-若要建立密碼，請在左側導覽中選取&#x200B;**[!UICONTROL 事件轉送]**，然後開啟您想要新增密碼的事件轉送屬性。 接著，在左側導覽中選取&#x200B;**[!UICONTROL 密碼]**，接著選取&#x200B;**[!UICONTROL 建立新密碼]**。
+若要建立密碼，請在左側導覽中選取「**[!UICONTROL Event Forwarding]**」，然後開啟您要新增密碼的事件轉送屬性。 接著，在左側導覽中選取&#x200B;**[!UICONTROL Secrets]**，接著選取&#x200B;**[!UICONTROL Create New Secret]**。
 
 ![建立新密碼](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -55,19 +55,19 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您仍要在將密碼新增至環境之前建立並儲存密碼，請先停用&#x200B;**[!UICONTROL 將密碼附加至環境]**&#x200B;切換功能，然後再填寫其餘的資訊。 請注意，如果您想要使用密碼，您之後必須將其指派給環境。
+>如果您仍要在將密碼新增至環境前建立並儲存密碼，請先停用&#x200B;**[!UICONTROL Attach Secret to Environments]**&#x200B;切換按鈕，再填寫其餘資訊。 請注意，如果您想要使用密碼，您之後必須將其指派給環境。
 >
 >![停用環境](../../images/ui/event-forwarding/secrets/env-disabled.png)
 
-在&#x200B;**[!UICONTROL 目標環境]**&#x200B;下，使用下拉式功能表選取要指派密碼的環境。 在&#x200B;**[!UICONTROL 密碼名稱]**&#x200B;底下，提供環境內容中的密碼名稱。 此名稱在事件轉送屬性下的所有密碼中必須是唯一的。
+在&#x200B;**[!UICONTROL Target Environment]**&#x200B;下方，使用下拉式功能表選取要指派密碼的環境。 在&#x200B;**[!UICONTROL Secret Name]**&#x200B;底下，提供環境內容中的密碼名稱。 此名稱在事件轉送屬性下的所有密碼中必須是唯一的。
 
 ![環境和名稱](../../images/ui/event-forwarding/secrets/env-and-name.png)
 
-一個密碼一次只能指派給一個環境，但您可以視需要為跨不同環境的多個密碼指派相同的認證。 選取&#x200B;**[!UICONTROL 新增環境]**&#x200B;以新增其他資料列至清單。
+一個密碼一次只能指派給一個環境，但您可以視需要為跨不同環境的多個密碼指派相同的認證。 選取&#x200B;**[!UICONTROL Add Environment]**&#x200B;以新增其他資料列至清單。
 
 ![新增環境](../../images/ui/event-forwarding/secrets/add-env.png)
 
-對於您新增的每個環境，您必須為關聯的密碼提供另一個唯一名稱。 如果您耗盡所有可用的環境，**[!UICONTROL 新增環境]**&#x200B;按鈕將不可用。
+對於您新增的每個環境，您必須為關聯的密碼提供另一個唯一名稱。 如果您耗盡所有可用的環境，**[!UICONTROL Add Environment]**&#x200B;按鈕將不可用。
 
 ![無法新增環境](../../images/ui/event-forwarding/secrets/add-env-greyed.png)
 
@@ -78,18 +78,18 @@ ht-degree: 2%
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
-* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
-* [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] Oauth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL Amazon] Oauth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
-若要建立權杖密碼，請從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL 權杖]**。 在出現的&#x200B;**[!UICONTROL Token]**&#x200B;欄位中，提供您正在驗證的系統可辨識的認證字串。 選取&#x200B;**[!UICONTROL 建立密碼]**&#x200B;以儲存密碼。
+若要建立權杖密碼，請從&#x200B;**[!UICONTROL Token]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Type]**。 在出現的&#x200B;**[!UICONTROL Token]**&#x200B;欄位中，提供您正在驗證的系統可辨識的認證字串。 選取&#x200B;**[!UICONTROL Create Secret]**&#x200B;以儲存密碼。
 
 ![權杖密碼](../../images/ui/event-forwarding/secrets/token-secret.png)
 
 ### [!UICONTROL HTTP] {#http}
 
-若要建立HTTP密碼，請從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL 簡單HTTP]**。 在下面顯示的欄位中，請先提供認證的使用者名稱和密碼，再選取&#x200B;**[!UICONTROL 建立密碼]**&#x200B;以儲存密碼。
+若要建立HTTP密碼，請從&#x200B;**[!UICONTROL Simple HTTP]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Type]**。 在下面顯示的欄位中，請先提供認證的使用者名稱和密碼，再選取&#x200B;**[!UICONTROL Create Secret]**&#x200B;儲存密碼。
 
 >[!NOTE]
 >
@@ -99,15 +99,15 @@ ht-degree: 2%
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-若要建立OAuth 2密碼，請從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL OAuth 2]**。 在下面顯示的欄位中，提供您的[[!UICONTROL 使用者端識別碼]和[!UICONTROL 使用者端密碼]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)，以及您的OAuth整合的[[!UICONTROL 權杖URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)。 UI中的[!UICONTROL 權杖URL]欄位是授權伺服器主機和權杖路徑之間的串連。
+若要建立OAuth 2密碼，請從&#x200B;**[!UICONTROL OAuth 2]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Type]**。 在下面顯示的欄位中，提供您的[[!UICONTROL Client ID]和[!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)，以及您的[[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)，以整合您的OAuth。 UI中的[!UICONTROL Token URL]欄位是授權伺服器主機和權杖路徑之間的串連。
 
 ![OAuth 2密碼](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
-在&#x200B;**[!UICONTROL 認證選項]**&#x200B;下，您可以提供其他認證選項，例如`scope`和`audience`，其形式為金鑰值組。 若要新增更多索引鍵/值組，請選取&#x200B;**[!UICONTROL 新增其他]**。
+在&#x200B;**[!UICONTROL Credential Options]**&#x200B;底下，您可以提供其他認證選項，例如`scope`和`audience`，其形式為機碼值組。 若要新增更多索引鍵/值組，請選取&#x200B;**[!UICONTROL Add another]**。
 
 ![認證選項](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
-最後，您可以設定密碼的&#x200B;**[!UICONTROL 重新整理位移]**&#x200B;值。 這表示系統執行自動重新整理的權杖到期前的秒數。 以小時和分鐘為單位的等效時間會顯示在欄位右側，並會在您輸入時自動更新。
+最後，您可以設定密碼的&#x200B;**[!UICONTROL Refresh Offset]**&#x200B;值。 這表示系統執行自動重新整理的權杖到期前的秒數。 以小時和分鐘為單位的等效時間會顯示在欄位右側，並會在您輸入時自動更新。
 
 ![重新整理位移](../../images/ui/event-forwarding/secrets/oauth-secret-3.png)
 
@@ -119,31 +119,31 @@ ht-degree: 2%
 >
 >例如，如果位移設為`28800` （8小時），而存取權杖為`expires_in` / `36000` （10小時），則交換會失敗，因為產生的差異少於4小時。
 
-完成後，選取&#x200B;**[!UICONTROL 建立密碼]**&#x200B;以儲存密碼。
+完成後，選取&#x200B;**[!UICONTROL Create Secret]**&#x200B;以儲存密碼。
 
 ![儲存OAuth 2位移](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
 ### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
-若要建立OAuth 2 JWT密碼，請從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL OAuth 2 JWT]**。
+若要建立OAuth 2 JWT密碼，請從&#x200B;**[!UICONTROL OAuth 2 JWT]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Type]**。
 
-![在[!UICONTROL 型別]下拉式清單中反白顯示OAuth 2 JWT密碼的[!UICONTROL 建立密碼]索引標籤。](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![在[!UICONTROL Create Secret]下拉式清單中反白顯示OAuth 2 JWT密碼的[!UICONTROL Type]索引標籤。](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
->目前唯一支援簽署JWT的[!UICONTROL 演演算法]是RS256。
+>目前唯一支援簽署JWT的[!UICONTROL Algorithm]是RS256。
 
-在下面顯示的欄位中，提供您的[!UICONTROL 簽發者]、[!UICONTROL 主旨]、[!UICONTROL 對象]、[!UICONTROL 自訂宣告]、[!UICONTROL TTL]，然後從下拉式清單中選取[!UICONTROL 演演算法]。 接下來，輸入您的OAuth整合的[!UICONTROL 私密金鑰ID]以及[[!UICONTROL 權杖URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)。 [!UICONTROL 權杖URL]欄位不是必要欄位。 如果提供值，JWT會與存取權杖交換。 將根據回應中的`expires_in`屬性和[!UICONTROL Refresh Offset]值重新整理密碼。 如果未提供值，則推送至邊緣的秘密為JWT。 將根據[!UICONTROL TTL]和[!UICONTROL 重新整理位移]值來重新整理JWT。
+在下面顯示的欄位中，提供您的[!UICONTROL Issuer]、[!UICONTROL Subject]、[!UICONTROL Audience]、[!UICONTROL Custom Claims]、[!UICONTROL TTL]，然後從下拉式清單中選取[!UICONTROL Algorithm]。 接下來，輸入您的OAuth整合的[!UICONTROL Private Key Id]以及您的[[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)。 [!UICONTROL Token URL]欄位不是必要欄位。 如果提供值，JWT會與存取權杖交換。 將根據回應中的`expires_in`屬性和[!UICONTROL Refresh Offset]值重新整理密碼。 如果未提供值，則推送至邊緣的秘密為JWT。 將根據[!UICONTROL TTL]和[!UICONTROL Refresh Offset]值重新整理JWT。
 
-![反白顯示選取的輸入欄位的[!UICONTROL 建立密碼]索引標籤。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![反白顯示輸入欄位的[!UICONTROL Create Secret]索引標籤。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
-在&#x200B;**[!UICONTROL 認證選項]**&#x200B;底下，您可以提供其他認證選項，例如`jwt_param`的金鑰值組形式。 若要新增更多索引鍵/值組，請選取&#x200B;**[!UICONTROL 新增其他]**。
+在&#x200B;**[!UICONTROL Credential Options]**&#x200B;底下，您可以提供其他認證選項，例如`jwt_param` （以金鑰值組的形式）。 若要新增更多索引鍵/值組，請選取&#x200B;**[!UICONTROL Add another]**。
 
-![反白顯示[!UICONTROL 認證選項]欄位的[!UICONTROL 建立密碼]索引標籤。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![醒目提示[!UICONTROL Create Secret]欄位的[!UICONTROL Credential Options]索引標籤。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
-最後，您可以設定密碼的&#x200B;**[!UICONTROL 重新整理位移]**&#x200B;值。 這表示系統執行自動重新整理的權杖到期前的秒數。 以小時和分鐘為單位的等效時間會顯示在欄位右側，並會在您輸入時自動更新。
+最後，您可以設定密碼的&#x200B;**[!UICONTROL Refresh Offset]**&#x200B;值。 這表示系統執行自動重新整理的權杖到期前的秒數。 以小時和分鐘為單位的等效時間會顯示在欄位右側，並會在您輸入時自動更新。
 
-![醒目提示[!UICONTROL 重新整理位移]欄位的[!UICONTROL 建立密碼]索引標籤。](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![醒目提示[!UICONTROL Create Secret]欄位的[!UICONTROL Refresh Offset]索引標籤。](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
 例如，如果重新整理位移設定為預設值`1800` （30分鐘），而存取權杖具有`expires_in`值`3600` （一小時），則系統將會在一小時內自動重新整理密碼。
 
@@ -153,22 +153,22 @@ ht-degree: 2%
 >
 >例如，如果位移設為`1800` （30分鐘），而存取權杖有`expires_in` / `2700` （45分鐘），則交換會失敗，因為產生的差異少於30分鐘。
 
-完成後，選取&#x200B;**[!UICONTROL 建立密碼]**&#x200B;以儲存密碼。
+完成後，選取&#x200B;**[!UICONTROL Create Secret]**&#x200B;以儲存密碼。
 
-![&#x200B; [!UICONTROL 建立密碼]索引標籤醒目提示[!UICONTROL 建立密碼]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![醒目提示[!UICONTROL Create Secret]的[!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)索引標籤
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
-若要建立Google OAuth 2密碼，請從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Google OAuth 2]**。 在&#x200B;**[!UICONTROL 範圍]**&#x200B;下，選取您要使用此密碼授與存取權的Google API。 目前支援下列產品：
+若要建立Google OAuth 2密碼，請從&#x200B;**[!UICONTROL Google OAuth 2]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Type]**。 在&#x200B;**[!UICONTROL Scopes]**&#x200B;底下，選取您要使用此密碼授與存取權的Google API。 目前支援下列產品：
 
 * [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
 * [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
 
-完成後，選取&#x200B;**[!UICONTROL 建立密碼]**。
+完成後，選取&#x200B;**[!UICONTROL Create Secret]**。
 
 ![Google OAuth 2密碼](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
-此時會出現彈出視窗，通知您需要透過Google手動授權密碼。 選取&#x200B;**[!UICONTROL 建立並授權]**&#x200B;以繼續。
+此時會出現彈出視窗，通知您需要透過Google手動授權密碼。 選取&#x200B;**[!UICONTROL Create & Authorize]**&#x200B;以繼續。
 
 ![Google授權彈出視窗](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
@@ -182,19 +182,19 @@ ht-degree: 2%
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
-若要建立[!DNL LinkedIn] OAuth 2密碼，請從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL [!DNL LinkedIn]OAuth 2]**。 接著，選取&#x200B;**[!UICONTROL 建立密碼]**。
+若要建立[!DNL LinkedIn] OAuth 2密碼，請從&#x200B;**[!UICONTROL [!DNL LinkedIn] OAuth 2]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Type]**。 接著選取「**[!UICONTROL Create Secret]**」。
 
-![反白顯示[!UICONTROL 型別]欄位的[!UICONTROL 建立密碼]索引標籤。](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+![反白顯示[!UICONTROL Create Secret]欄位的[!UICONTROL Type]索引標籤。](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
-此時會出現彈出視窗，通知您需要透過[!DNL LinkedIn]手動授權密碼。 選取&#x200B;**[!UICONTROL 使用[!DNL LinkedIn]]**&#x200B;建立並授權密碼以繼續。
+此時會出現彈出視窗，通知您需要透過[!DNL LinkedIn]手動授權密碼。 選取&#x200B;**[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]**&#x200B;以繼續。
 
 ![LinkedIn授權彈出視窗會醒目提示「使用LinkedIn建立並授權密碼」按鈕。](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 會出現一個對話方塊，提示您輸入您的[!DNL LinkedIn]認證。 依照提示操作，授予資料的事件轉送存取權。
 
-授權程式完成後，您將返回&#x200B;**[!UICONTROL 密碼]**&#x200B;標籤，您可以在其中檢視新建立的密碼。 您可以在此處檢視密碼的狀態和到期日。
+授權程式完成後，您將返回&#x200B;**[!UICONTROL Secrets]**&#x200B;標籤，您可以在其中檢視新建立的密碼。 您可以在此處檢視密碼的狀態和到期日。
 
-![醒目提示新建立密碼的[!UICONTROL 密碼]標籤。](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+![醒目提示新建立密碼的[!UICONTROL Secret]索引標籤。](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
 #### 重新授權[!UICONTROL [!DNL LinkedIn] OAuth 2]密碼
 
@@ -202,35 +202,35 @@ ht-degree: 2%
 >
 >您必須每365天重新授權使用您的[!DNL LinkedIn]認證。 如果您未適時重新授權，您的密碼將不會重新整理，且[!DNL LinkedIn]轉換要求將會失敗。
 
-在需要重新授權的機密之前三個月，當您導覽屬性的任何頁面時，將會開始顯示快顯視窗。 選取&#x200B;**[!UICONTROL 按一下這裡以移至您的秘密]**。
+在需要重新授權的機密之前三個月，當您導覽屬性的任何頁面時，將會開始顯示快顯視窗。 選擇「**[!UICONTROL Click here to go to your secrets]**」。
 
-![&#x200B; [!UICONTROL 屬性概述]索引標籤醒目提示密碼重新授權快顯視窗。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+![醒目提示密碼重新授權快顯視窗的[!UICONTROL Property Overview]標籤。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
 
-您被重新導向至[!UICONTROL 密碼]標籤。 此頁面上列出的秘密會經過篩選，僅顯示需要重新授權的秘密。 針對您需要重新授權的密碼選取&#x200B;**[!UICONTROL 需要驗證]**。
+系統已將您重新導向至「[!UICONTROL Secrets]」標籤。 此頁面上列出的秘密會經過篩選，僅顯示需要重新授權的秘密。 選取&#x200B;**[!UICONTROL Auth Needed]**&#x200B;以取得您需要重新授權的密碼。
 
-![&#x200B; [!DNL LinkedIn]密碼的[!UICONTROL 密碼]索引標籤醒目提示[!UICONTROL 需要驗證]。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![醒目提示[!UICONTROL Secret]密碼的[!UICONTROL Auth Needed]的[!DNL LinkedIn]索引標籤。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 會出現一個對話方塊，提示您輸入[!DNL LinkedIn]認證。 依照提示重新授權您的密碼。
 
 ### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
 
-若要建立[!DNL Amazon] OAuth 2密碼，請從&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL [!DNL Amazon]OAuth 2]**。 接著，選取&#x200B;**[!UICONTROL 建立密碼]**。
+若要建立[!DNL Amazon] OAuth 2密碼，請從&#x200B;**[!UICONTROL [!DNL Amazon] OAuth 2]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Type]**。 接著選取「**[!UICONTROL Create Secret]**」。
 
-![反白顯示[!UICONTROL 型別]欄位的[!UICONTROL 建立密碼]索引標籤。](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+![反白顯示[!UICONTROL Create Secret]欄位的[!UICONTROL Type]索引標籤。](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
 
-此時會出現彈出視窗，通知您需要透過[!DNL Amazon]手動授權密碼。 選取&#x200B;**[!UICONTROL 使用[!DNL Amazon]]**&#x200B;建立並授權密碼以繼續。
+此時會出現彈出視窗，通知您需要透過[!DNL Amazon]手動授權密碼。 選取&#x200B;**[!UICONTROL Create & Authorize secret with [!DNL Amazon]]**&#x200B;以繼續。
 
 ![Amazon授權彈出視窗中醒目提示「使用Amazon建立並授權密碼」按鈕。](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
 
 會出現一個對話方塊，提示您輸入您的[!DNL Amazon]認證。 依照提示操作，授予資料的事件轉送存取權。
 
-授權程式完成後，您將返回&#x200B;**[!UICONTROL 密碼]**&#x200B;標籤，您可以在其中檢視新建立的密碼。 您可以在此處檢視密碼的狀態和到期日。
+授權程式完成後，您將返回&#x200B;**[!UICONTROL Secrets]**&#x200B;標籤，您可以在其中檢視新建立的密碼。 您可以在此處檢視密碼的狀態和到期日。
 
-![醒目提示新建立密碼的[!UICONTROL 密碼]標籤。](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
+![醒目提示新建立密碼的[!UICONTROL Secret]索引標籤。](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## 編輯密碼
 
-建立屬性的密碼後，您就可以在&#x200B;**[!UICONTROL 密碼]**&#x200B;工作區中找到這些密碼。 若要編輯現有密碼的詳細資訊，請從清單中選取其名稱。
+建立屬性的密碼後，您就可以在&#x200B;**[!UICONTROL Secrets]**&#x200B;工作區中找到這些密碼。 若要編輯現有密碼的詳細資訊，請從清單中選取其名稱。
 
 ![選取要編輯的密碼](../../images/ui/event-forwarding/secrets/edit-secret.png)
 
@@ -248,13 +248,13 @@ ht-degree: 2%
 
 | 密碼型別 | 重試通訊協定 |
 | --- | --- |
-| [!UICONTROL Token] | 選取&#x200B;**[!UICONTROL Exchange密碼]**&#x200B;以重試密碼交換。 此控制項僅在有附加至密碼的環境時可用。 |
-| [!UICONTROL HTTP] | 如果沒有環境附加至密碼，請選取&#x200B;**[!UICONTROL Exchange Secret]**&#x200B;將認證交換至base64。 如果已附加環境，請選取[選擇&#x200B;**[!UICONTROL Exchange並部署密碼]**]以交換至base64並部署密碼。 |
-| [!UICONTROL OAuth 2] | 選取&#x200B;**[!UICONTROL 產生Token]**&#x200B;以交換認證，並從驗證提供者傳回存取權杖。 |
+| [!UICONTROL Token] | 選取&#x200B;**[!UICONTROL Exchange Secret]**&#x200B;以重試密碼交換。 此控制項僅在有附加至密碼的環境時可用。 |
+| [!UICONTROL HTTP] | 如果沒有環境附加至密碼，請選取&#x200B;**[!UICONTROL Exchange Secret]**&#x200B;將認證交換至base64。 如果已附加環境，請選取[選取&#x200B;**[!UICONTROL Exchange and Deploy Secret]**&#x200B;以交換至base64並部署密碼]。 |
+| [!UICONTROL OAuth 2] | 選取&#x200B;**[!UICONTROL Generate Token]**&#x200B;以交換認證，並從驗證提供者傳回存取權杖。 |
 
 ## 刪除密碼
 
-若要刪除&#x200B;**[!UICONTROL 密碼]**&#x200B;工作區中現有的密碼，請先選取密碼名稱旁的核取方塊，再選取&#x200B;**[!UICONTROL 刪除]**。
+若要刪除&#x200B;**[!UICONTROL Secrets]**&#x200B;工作區中現有的密碼，請先選取密碼名稱旁的核取方塊，再選取&#x200B;**[!UICONTROL Delete]**。
 
 ![刪除密碼](../../images/ui/event-forwarding/secrets/delete.png)
 
@@ -262,7 +262,7 @@ ht-degree: 2%
 
 為了在事件轉送中使用密碼，您必須先建立參考密碼本身的[資料元素](../managing-resources/data-elements.md)。 儲存資料元素後，您可以將它包含在事件轉送[規則](../managing-resources/rules.md)中，並將這些規則新增至[資料庫](../publishing/libraries.md)，這些資料庫可部署到Adobe的伺服器做為[組建](../publishing/builds.md)。
 
-建立資料元素時，請選取&#x200B;**[!UICONTROL 核心]**&#x200B;擴充功能，然後為資料元素型別選取&#x200B;**[!UICONTROL 密碼]**。 右側面板會更新並提供下拉式控制項，以將最多三個密碼指派給資料元素：一個分別適用於[!UICONTROL 開發]、[!UICONTROL 測試]和[!UICONTROL 生產]。
+建立資料元素時，請選取&#x200B;**[!UICONTROL Core]**&#x200B;擴充功能，然後為資料元素型別選取&#x200B;**[!UICONTROL Secret]**。 右側面板會更新並提供下拉式控制項，以將最多三個密碼指派給資料元素：一個分別適用於[!UICONTROL Development]、[!UICONTROL Staging]和[!UICONTROL Production]。
 
 ![資料元素](../../images/ui/event-forwarding/secrets/data-element.png)
 

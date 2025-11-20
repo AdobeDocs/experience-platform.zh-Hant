@@ -4,8 +4,8 @@ description: 瞭解如何在Adobe Experience Platform使用者介面中檢視及
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 27%
+source-wordcount: '812'
+ht-degree: 26%
 
 ---
 
@@ -23,15 +23,15 @@ ht-degree: 27%
 
 ## 列出及篩選現有工單
 
-當您首次在UI中存取&#x200B;**[!UICONTROL 資料生命週期]**&#x200B;工作區時，會顯示現有工單清單及其基本詳細資料。
+當您首次在UI中存取&#x200B;**[!UICONTROL Data Lifecycle]**&#x200B;工作區時，會顯示現有工單清單及其基本詳細資料。
 
-![影像顯示Experience Platform UI中的[!UICONTROL 資料生命週期]工作區](../images/ui/browse/work-order-list.png)
+![影像顯示Experience Platform UI中的[!UICONTROL Data Lifecycle]工作區](../images/ui/browse/work-order-list.png)
 
-清單一次只會顯示一個類別的工作訂單。 選取&#x200B;**[!UICONTROL 取用者]**&#x200B;以檢視記錄刪除工作清單，並選取&#x200B;**[!UICONTROL 資料集]**&#x200B;以檢視排程的資料集到期清單。
+清單一次只會顯示一個類別的工作訂單。 選取&#x200B;**[!UICONTROL Consumer]**&#x200B;以檢視記錄刪除工作清單，並選取&#x200B;**[!UICONTROL Dataset]**&#x200B;以檢視排程的資料集到期日清單。
 
-![影像顯示[!UICONTROL 資料集]標籤](../images/ui/browse/dataset-tab.png)
+顯示![索引標籤的[!UICONTROL Dataset]影像](../images/ui/browse/dataset-tab.png)
 
-選取漏斗圖示（![漏斗圖示的影像](/help/images/icons/filter.png)）以檢視所顯示工單的篩選清單。
+選取funnel圖示(![funnel圖示影像](/help/images/icons/filter.png))以檢視所顯示工單的篩選清單。
 
 ![已顯示工單篩選器的影像](../images/ui/browse/filters.png)
 
@@ -43,9 +43,9 @@ ht-degree: 27%
 
 | 篩選器 | 說明 |
 | --- | --- |
-| [!UICONTROL 狀態] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL 已完成]**：工作已完成。</li><li>**[!UICONTROL 失敗]**：工作發生錯誤，無法完成。</li><li>**[!UICONTROL 正在處理]**：要求已開始，目前正在處理。</li></ul> |
-| [!UICONTROL 建立日期] | 根據產生工單的時間進行篩選。 |
-| [!UICONTROL 日期已更新] | 根據上次更新工單的時間進行篩選。 建立即計為更新。 |
+| [!UICONTROL Status] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL Completed]**：工作已完成。</li><li>**[!UICONTROL Failed]**：工作發生錯誤，無法完成。</li><li>**[!UICONTROL Processing]**：要求已開始，目前正在處理中。</li></ul> |
+| [!UICONTROL Date created] | 根據產生工單的時間進行篩選。 |
+| [!UICONTROL Date updated] | 根據上次更新工單的時間進行篩選。 建立即計為更新。 |
 
 ### 資料集有效期的篩選器
 
@@ -53,10 +53,10 @@ ht-degree: 27%
 
 | 篩選器 | 說明 |
 | --- | --- |
-| [!UICONTROL 狀態] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL 已完成]**：工作已完成。</li><li>**[!UICONTROL 擱置中]**：工作已建立，但尚未執行。 [資料集到期要求](./dataset-expiration.md)會在排定的刪除日期之前假設此狀態。 刪除日期到達後，狀態會更新為[!UICONTROL 正在執行]，除非事先取消工作。</li><li>**[!UICONTROL 正在執行]**：資料集到期要求已開始，目前正在處理中。</li><li>**[!UICONTROL 已取消]**：工作已取消為手動使用者要求的一部分。</li></ul> |
-| [!UICONTROL 建立日期] | 根據產生工單的時間進行篩選。 |
-| [!UICONTROL 到期日] | 根據排程的刪除日期篩選有問題的資料集的資料集到期請求。 |
-| [!UICONTROL 日期已更新] | 根據上次更新工單的時間進行篩選。 建立及過期均會計為更新。 |
+| [!UICONTROL Status] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL Completed]**：工作已完成。</li><li>**[!UICONTROL Pending]**：工作已建立，但尚未執行。 [資料集到期要求](./dataset-expiration.md)會在排定的刪除日期之前假設此狀態。 刪除日期到達後，狀態會更新為[!UICONTROL Executing]，除非工作已預先取消。</li><li>**[!UICONTROL Executing]**：資料集到期要求已開始，目前正在處理中。</li><li>**[!UICONTROL Cancelled]**：工作已取消，因為是手動使用者要求的一部分。</li></ul> |
+| [!UICONTROL Date created] | 根據產生工單的時間進行篩選。 |
+| [!UICONTROL Expiration date] | 根據排程的刪除日期篩選有問題的資料集的資料集到期請求。 |
+| [!UICONTROL Date updated] | 根據上次更新工單的時間進行篩選。 建立及過期均會計為更新。 |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ ht-degree: 27%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="記錄刪除回應"
->abstract="當記錄刪除流程收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;區段下。如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
+>abstract="當記錄刪除程式收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL Result]**&#x200B;區段下。 如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
 選取已列出工單的ID以檢視其詳細資料。
 
@@ -85,7 +85,7 @@ ht-degree: 27%
 
 ### 記錄刪除詳細資料 {#record-delete}
 
-記錄刪除請求的詳細資訊包括其目前狀態以及自提出請求以來經過的時間。 每個要求也包含一個&#x200B;**[!UICONTROL 依服務的狀態]**&#x200B;區段，此區段提供每個與刪除有關的下游服務的個別狀態詳細資訊。 在右邊欄中，您可以使用控制項來更新工單的名稱與描述。
+記錄刪除請求的詳細資訊包括其目前狀態以及自提出請求以來經過的時間。 每個請求也包含&#x200B;**[!UICONTROL Status by service]**&#x200B;區段，提供有關刪除中涉及的每個下游服務的個別狀態詳細資訊。 在右邊欄中，您可以使用控制項來更新工單的名稱與描述。
 
 ![顯示記錄刪除工單之詳細資訊頁面的影像](../images/ui/browse/record-delete-details.png)
 

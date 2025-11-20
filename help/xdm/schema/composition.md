@@ -6,7 +6,7 @@ description: 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Expe
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4350'
+source-wordcount: '4308'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 記錄和時間序列結構描述都包含身分地圖(`xdm:identityMap`)。 此欄位包含主旨的身分表示，從標示為「身分」的欄位中擷取，如下節所述。
 
-### [!UICONTROL 身分識別] {#identity}
+### [!UICONTROL Identity] {#identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
@@ -57,9 +57,9 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 結構描述會定義擷取至Experience Platform的資料結構。 該資料可支援Platform內的多項服務，並協助建立每個人的單一、統一檢視。 因此，在設計結構描述時，請仔細考慮要標籤為身分的欄位，這些欄位控制如何在資料集中拼接設定檔。
 
-為了協助進行此程式，結構描述中的關鍵欄位可以標示為身分。 資料擷取後，這些欄位中的資料會插入該個人的&quot;[!UICONTROL 身分圖表]&quot;。 然後[[!DNL Real-Time Customer Profile]](../../profile/home.md)和其他Experience Platform服務即可存取圖表資料，以提供每個個別客戶的拼接檢視。
+為了協助進行此程式，結構描述中的關鍵欄位可以標示為身分。 資料擷取後，這些欄位中的資料會插入該個人的&quot;[!UICONTROL Identity Graph]&quot;。 然後[[!DNL Real-Time Customer Profile]](../../profile/home.md)和其他Experience Platform服務即可存取圖表資料，以提供每個個別客戶的拼接檢視。
 
-通常標示為「[!UICONTROL 身分]」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。 請考量您組織特定的任何唯一識別碼，因為這些識別碼可能是好的&quot;[!UICONTROL 身分]&quot;欄位。
+通常標示為&quot;[!UICONTROL Identity]&quot;的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 請考量您組織特定的任何唯一識別碼，因為這些識別碼可能也是好的&quot;[!UICONTROL Identity]&quot;欄位。
 
 若要進一步瞭解身分資訊如何協助您為客戶傳遞數位體驗，請參閱[身分識別服務概覽](../../identity-service/home.md)。 請參閱資料模型最佳實務檔案，以取得[建立結構描述](./best-practices.md#data-validation-fields)時使用身分的相關提示。
 
@@ -109,7 +109,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 }
 ```
 
-如上述範例所示，`identityMap`物件中的每個索引鍵都代表一個身分名稱空間。 每個索引鍵的值是一個物件陣列，代表個別名稱空間的識別值(`id`)。 請參閱[!DNL Identity Service]檔案以取得Adobe應用程式可辨識的標準身分名稱空間[&#128279;](../../identity-service/troubleshooting-guide.md#standard-namespaces)清單。
+如上述範例所示，`identityMap`物件中的每個索引鍵都代表一個身分名稱空間。 每個索引鍵的值是一個物件陣列，代表個別名稱空間的識別值(`id`)。 請參閱[!DNL Identity Service]檔案以取得Adobe應用程式可辨識的標準身分名稱空間[清單。](../../identity-service/troubleshooting-guide.md#standard-namespaces)
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ Experience Platform使用組合方法，將標準建置區塊組合以建立方�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_industries"
 >title="行業類型"
->abstract="如果選擇與您業務相關的行業，機器學習模式可以更準確地將來源欄位對應到符合行業標準的標準欄位群組，以提供更好的資料組織。這可確保系統根據您的行業特定需求，量身打造資料整合結果，以產生更精確和相關的資料深入解析。"
+>abstract="如果選擇與您業務相關的行業，機器學習模式可以更準確地將來源欄位對應到符合行業標準的標準欄位群組，以提供更好的資料組織。這可確保系統根據您的行業特定需求，量身打造資料整合結果，以產生更精確和相關的資料洞察。"
 
 構成結構描述從指派類別開始。 類別會定義結構描述將包含之資料（記錄或時間序列）的行為方面。 除此之外，類別會說明基於該類別的所有結構描述所需包含的最小通用屬性數量，並提供合併多個相容資料集的方法。
 
@@ -183,9 +183,9 @@ Experience Platform使用組合方法，將標準建置區塊組合以建立方�
 
 Adobe提供幾個標準（「核心」） XDM類別。 這些類別中的兩個[!DNL XDM Individual Profile]和[!DNL XDM ExperienceEvent]是幾乎所有下游Experience Platform處理序的必要專案。 除了這些核心類別以外，您也可以建立自己的自訂類別，以說明貴組織更具體的使用案例。 當沒有Adobe定義的核心類別可用於描述獨特使用案例時，由組織定義自訂類別。
 
-下列熒幕擷圖示範類別在Experience Platform UI中的呈現方式。 由於顯示的範例結構描述不包含任何欄位群組，因此所有顯示的欄位都由結構描述的類別（[!UICONTROL XDM個別設定檔]）提供。
+下列熒幕擷圖示範類別在Experience Platform UI中的呈現方式。 由於顯示的範例結構描述不包含任何欄位群組，因此所有顯示的欄位都由結構描述的類別([!UICONTROL XDM Individual Profile])提供。
 
-![結構描述編輯器中的[!UICONTROL XDM個別設定檔]。](../images/schema-composition/class.png)
+![結構描述編輯器中的[!UICONTROL XDM Individual Profile]。](../images/schema-composition/class.png)
 
 如需可用標準XDM類別的最新清單，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/tree/master/components/classes)。 或者，如果您偏好在UI中檢視資源，您可以參閱[探索XDM元件](../ui/explore.md)的指南。
 
@@ -207,7 +207,7 @@ Adobe提供幾個標準（「核心」） XDM類別。 這些類別中的兩個[
 
 Experience Platform包含許多標準的Adobe欄位群組，同時也允許廠商為其使用者定義欄位群組，以及允許個別使用者為自己的特定概念定義欄位群組。
 
-例如，若要擷取「[!UICONTROL 忠誠會員]」結構描述的「[!UICONTROL 名字]」和「[!UICONTROL 住家地址]」等詳細資料，您可以使用定義這些一般概念的標準欄位群組。 不過，標準欄位群組可能未涵蓋的組織專用概念（例如自訂忠誠度方案詳細資訊或產品屬性）。 在這種情況下，您必須定義自己的欄位群組來擷取此資訊。
+例如，若要擷取&quot;[!UICONTROL First Name]&quot;結構描述的&quot;[!UICONTROL Home Address]&quot;和&quot;[!UICONTROL Loyalty Members]&quot;等詳細資訊，您可以使用定義這些常見概念的標準欄位群組。 不過，標準欄位群組可能未涵蓋的組織專用概念（例如自訂忠誠度方案詳細資訊或產品屬性）。 在這種情況下，您必須定義自己的欄位群組來擷取此資訊。
 
 >[!NOTE]
 >
@@ -217,9 +217,9 @@ Experience Platform包含許多標準的Adobe欄位群組，同時也允許廠�
 
 請記住，結構描述是由「零個或多個」欄位群組組成，因此這表示您可以撰寫有效的結構描述而不需使用任何欄位群組。
 
-下列熒幕擷圖示範欄位群組在Experience Platform UI中的呈現方式。 在此範例中，單一欄位群組（[!UICONTROL 人口統計詳細資料]）已新增至結構描述，該結構描述提供結構描述結構的一組欄位。
+下列熒幕擷圖示範欄位群組在Experience Platform UI中的呈現方式。 在此範例中，單一欄位群組([!UICONTROL Demographic Details])已新增至結構描述，為結構描述的結構提供一組欄位。
 
-![結構描述編輯器在範例結構描述中反白顯示[!UICONTROL 人口統計詳細資料]欄位群組。](../images/schema-composition/field-group.png)
+![在範例結構描述中反白顯示[!UICONTROL Demographic Details]欄位群組的結構描述編輯器。](../images/schema-composition/field-group.png)
 
 如需可用標準XDM欄位群組的最新清單，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/tree/master/components/fieldgroups)。 或者，如果您偏好在UI中檢視資源，您可以參閱[探索XDM元件](../ui/explore.md)的指南。
 
@@ -237,7 +237,7 @@ Experience Platform包含許多標準的Adobe欄位群組，同時也允許廠�
 
 Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，以支援使用標準模式來說明通用資料結構。 在[結構描述登入教學課程](../tutorials/create-schema-api.md)中對此有更詳細的說明，當您逐步完成定義資料型別的步驟時，將會變得更清晰。
 
-下列熒幕擷圖示範資料型別在Experience Platform UI中的呈現方式。 [!UICONTROL 人口統計詳細資料]欄位群組所提供的其中一個欄位使用&quot;[!UICONTROL Object]&quot;資料型別，如欄位名稱旁的垂直號字元(`|`)後面的文字所指示。 此特定資料型別提供與個人名稱相關的幾個子欄位，此建構可重複用於需要擷取個人名稱的其他欄位。
+下列熒幕擷圖示範資料型別在Experience Platform UI中的呈現方式。 [!UICONTROL Demographic Details]欄位群組提供的其中一個欄位使用&quot;[!UICONTROL Object]&quot;資料型別，如欄位名稱旁的垂直號字元(`|`)後面的文字所指示。 此特定資料型別提供與個人名稱相關的幾個子欄位，此建構可重複用於需要擷取個人名稱的其他欄位。
 
 ![結構描述編輯器中個人全名物件和屬性反白顯示圖。](../images/schema-composition/data-type.png)
 
@@ -280,11 +280,11 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 
 結構描述是使用組合模型建置，並代表要擷取到[!DNL Experience Platform]中的資料格式和結構。 如前所述，這些結構描述由一個類別和零個或多個與該類別相容的欄位群組組成。
 
-例如，描述在零售商店進行的購買的結構描述可能稱為「[!UICONTROL 商店交易]」。 結構描述實作結合標準[!UICONTROL Commerce]欄位群組和使用者定義的[!UICONTROL 產品資訊]欄位群組的[!DNL XDM ExperienceEvent]類別。
+例如，描述在零售商店進行的購買的結構描述可能稱為&quot;[!UICONTROL Store Transactions]&quot;。 結構描述實作結合標準[!DNL XDM ExperienceEvent]欄位群組和使用者定義的[!UICONTROL Commerce]欄位群組的[!UICONTROL Product Info]類別。
 
-追蹤網站流量的另一個結構描述可能稱為「[!UICONTROL 網站造訪]」。 它也實作[!DNL XDM ExperienceEvent]類別，但這次結合標準[!UICONTROL Web]欄位群組。
+追蹤網站流量的另一個結構描述可能稱為&quot;[!UICONTROL Web Visits]&quot;。 它也實作[!DNL XDM ExperienceEvent]類別，但這次結合標準[!UICONTROL Web]欄位群組。
 
-下圖顯示這些結構以及每個欄位群組貢獻的欄位。 其中也包含兩個以[!DNL XDM Individual Profile]類別為基礎的結構描述，包括本指南中先前提及的&quot;[!UICONTROL 忠誠會員]&quot;結構描述。
+下圖顯示這些結構以及每個欄位群組貢獻的欄位。 它還包含基於[!DNL XDM Individual Profile]類別的兩個結構描述，包括本指南中先前提到的&quot;[!UICONTROL Loyalty Members]&quot;結構描述。
 
 ![四個結構描述和貢獻它們的欄位群組的流程圖。](../images/schema-composition/composition.png)
 
@@ -306,8 +306,8 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 
 如果您將受眾從外部系統帶入Experience Platform，您必須在結構中使用下列元件來擷取它們：
 
-* [[!UICONTROL 區段定義]類別](../classes/segment-definition.md)：使用此標準類別來擷取外部區段定義的索引鍵屬性。
-* [[!UICONTROL 區段會籍詳細資料]欄位群組](../field-groups/profile/segmentation.md)：將此欄位群組新增至您的[!UICONTROL XDM個人設定檔]結構描述，以將客戶設定檔與特定對象建立關聯。
+* [[!UICONTROL Segment definition]類別](../classes/segment-definition.md)：使用此標準類別來擷取外部區段定義的索引鍵屬性。
+* [[!UICONTROL Segment Membership Details]欄位群組](../field-groups/profile/segmentation.md)：將此欄位群組新增至您的[!UICONTROL XDM Individual Profile]結構描述，以將客戶設定檔與特定對象建立關聯。
 
 ## 後續步驟
 
@@ -322,7 +322,7 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 
 若要使用UI開始撰寫結構描述，請連同[結構描述編輯器教學課程](../tutorials/create-schema-ui.md)一起建立本檔案中提及的「忠誠會員」結構描述。
 
-若要開始使用[!DNL Schema Registry] API，請先閱讀[Schema Registry API開發人員指南](../api/getting-started.md)。 閱讀開發人員指南後，請依照教學課程中概述的步驟，使用Schema Registry API建立結構描述[&#128279;](../tutorials/create-schema-api.md)。
+若要開始使用[!DNL Schema Registry] API，請先閱讀[Schema Registry API開發人員指南](../api/getting-started.md)。 閱讀開發人員指南後，請依照教學課程中概述的步驟，使用Schema Registry API建立結構描述[](../tutorials/create-schema-api.md)。
 
 ## 附錄
 

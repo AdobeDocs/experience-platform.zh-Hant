@@ -6,8 +6,8 @@ description: 資料使用原則是描述允許或限制您在Adobe Experience Pl
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
-ht-degree: 17%
+source-wordcount: '1207'
+ht-degree: 18%
 
 ---
 
@@ -18,16 +18,16 @@ ht-degree: 17%
 >title="限制資料使用方式"
 >abstract="資料使用原則類型會評估套用於資料控管標籤的特定行銷動作，以限制行銷活動的資料使用方式。"
 
-為了使資料使用標籤有效地支援資料合規性，必須實施資料使用原則。 資料使用原則是描述允許或限制您在[!DNL Experience Platform]內對資料執行的行銷動作型別的規則。
+為了讓資料使用標籤能有效支援資料合規性，必須實施資料使用原則。資料使用原則是描述允許或限制您在[!DNL Experience Platform]內對資料執行的行銷動作型別的規則。
 
 有兩種可用的原則：
 
-* **[!UICONTROL 資料治理原則]**：根據正在執行的行銷動作和有問題的資料所攜帶的資料使用標籤，限制資料啟用。
-* **[!UICONTROL 同意原則]**：根據您客戶的同意或喜好設定，篩選可啟動至[目的地](../../destinations/home.md)的設定檔
+* **[!UICONTROL Data governance policy]**：根據正在執行的行銷動作和有問題的資料所攜帶的資料使用標籤，限制資料啟用。
+* **[!UICONTROL Consent policy]**：根據客戶的同意或偏好設定，篩選可啟用至[目的地](../../destinations/home.md)的設定檔
 
 >[!NOTE]
 >
->資料使用原則不應與[存取控制原則](../../access-control/abac/end-to-end-guide.md#policy)混淆，後者會決定您組織中的某些Experience Platform使用者是否可以存取某些資料欄位，並透過[!UICONTROL 許可權]索引標籤進行設定。
+>資料使用原則不應與[存取控制原則](../../access-control/abac/end-to-end-guide.md#policy)混淆，後者會決定貴組織中的某些Experience Platform使用者是否可以存取某些資料欄位，並透過[!UICONTROL Permissions]索引標籤進行設定。
 
 本檔案提供資料使用原則的高層級概觀，並提供在UI或API中使用原則的其他檔案的連結。
 
@@ -57,7 +57,7 @@ ht-degree: 17%
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=zh-Hant).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## 管理資料使用原則 {#manage}

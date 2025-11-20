@@ -4,7 +4,7 @@ description: 瞭解使用Identity Graph連結規則設定實作資料時應遵�
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1944'
 ht-degree: 6%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 6%
 
 +++
 
-+++選取此選項可檢視具有單一人員識別碼名稱空間的圖表範例
++++選取以檢視具有單一人員識別碼名稱空間的圖表範例
 
 指定唯一的名稱空間（在此案例中是CRMID，而不是兩個完全不同的名稱空間），Identity Service就能夠識別上次與ECID建立關聯的人員識別碼。 在此範例中，由於存在唯一的CRMID，Identity Service能夠識別「共用裝置」情境，其中兩個實體共用相同裝置。
 
@@ -94,7 +94,7 @@ ht-degree: 6%
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/tw/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ ht-degree: 6%
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/tw/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ ht-degree: 6%
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/tw/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -182,8 +182,8 @@ ht-degree: 6%
 
 Identity Service實作程式中的第一個步驟，是確保將您的Experience Platform帳戶新增至已布建必要許可權的角色。 您的管理員可以導覽至Adobe Experience Cloud中的許可權UI，設定您帳戶的許可權。 之後，您的帳戶必須新增至具有以下許可權的角色：
 
-* [!UICONTROL 檢視身分設定]：套用此許可權，以便在身分名稱空間瀏覽頁面中檢視唯一的名稱空間和名稱空間優先順序。
-* [!UICONTROL 編輯身分設定]：套用此許可權，以便能夠編輯並儲存您的身分設定。
+* [!UICONTROL View Identity Settings]：套用此許可權，以便在識別名稱空間瀏覽頁面中檢視唯一的名稱空間和名稱空間優先順序。
+* [!UICONTROL Edit Identity Settings]：套用此許可權，以便編輯並儲存您的身分設定。
 
 如需許可權的詳細資訊，請閱讀[許可權指南](../../access-control/abac/ui/permissions.md)。
 
@@ -199,7 +199,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 ## 設定身分設定 {#identity-settings}
 
-一旦您知道您想要圖形的行為方式，請瀏覽至Identity Service UI工作區中的[身分設定UI](./identity-settings-ui.md)。 若要存取身分設定UI，請從左側導覽選取&#x200B;**[!UICONTROL 身分]**，然後選取&#x200B;**[!UICONTROL 設定]**。
+一旦您知道您想要圖形的行為方式，請瀏覽至Identity Service UI工作區中的[身分設定UI](./identity-settings-ui.md)。 若要存取身分設定UI，請從左側導覽選取&#x200B;**[!UICONTROL Identities]**，然後選取&#x200B;**[!UICONTROL Settings]**。
 
 ![身分瀏覽頁面中反白顯示設定按鈕。](../images/implementation/settings.png "身分瀏覽頁面中反白顯示設定按鈕。"){zoomable="yes"}
 
@@ -245,13 +245,13 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 >
 >擷取您的資料後，XDM原始資料裝載不會變更。 您仍可在UI中看到主要身分設定。 不過，身分設定將會覆寫這些設定。
 
-如需任何意見，請使用Identity Service UI工作區中的&#x200B;**[!UICONTROL Beta意見]**&#x200B;選項。
+如需任何意見，請使用Identity Service UI工作區中的&#x200B;**[!UICONTROL Beta feedback]**&#x200B;選項。
 
 ## 驗證圖表 {#validate}
 
 使用身分儀表板來深入分析身分圖表狀態，例如整體身分計數和圖表計數趨勢、依名稱空間的身分計數和依圖表大小的圖表計數。 您也可以使用身分儀表板來檢視具有兩個或多個身分（依名稱空間組織）的圖表趨勢。
 
-選取省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 檢視更多]**&#x200B;以取得進一步資訊，並驗證沒有收合的圖形。
+選取省略符號(`...`)，然後選取&#x200B;**[!UICONTROL View more]**&#x200B;以取得進一步資訊，並驗證沒有收合的圖形。
 
 ![Identity Service UI工作區中的身分儀表板。](../images/implementation/identity_dashboard.png "身分識別服務UI工作區中的身分識別儀表板。"){zoomable="yes"}
 

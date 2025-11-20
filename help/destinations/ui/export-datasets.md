@@ -5,8 +5,8 @@ description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
 workflow-type: tm+mt
-source-wordcount: '2721'
-ht-degree: 7%
+source-wordcount: '2656'
+ht-degree: 8%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->已購買Real-Time CDP Prime或Ultimate套件、Adobe Journey Optimizer或Customer Journey Analytics的客戶可使用此功能。 如需詳細資訊，請聯絡您的Adobe代表。
+>已購買Real-Time CDP Prime或Ultimate套件、Adobe Journey Optimizer或Customer Journey Analytics的客戶可使用此功能。 請聯絡您的 Adobe 代表以取得更多資訊。
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ ht-degree: 7%
 <thead>
   <tr>
     <th>應用程式/附加元件</th>
-    <th>層級</th>
+    <th>階層</th>
     <th>可供匯出的資料集</th>
   </tr>
 </thead>
@@ -50,16 +50,16 @@ ht-degree: 7%
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=zh-Hant#profile-attribute-datasets">系統產生的設定檔快照集資料集</a>。</li></td>
+    <td><ul><li>在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">系統產生的設定檔快照集資料集</a>。</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=zh-Hant#datasets"> Adobe Journey Optimizer</a>檔案。</td>
+    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>檔案。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=zh-Hant#datasets"> Adobe Journey Optimizer</a>檔案。</td>
+    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>檔案。</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ ht-degree: 7%
 
 請觀看下方的影片，瞭解本頁所述工作流程的端對端說明、使用匯出資料集功能的好處，以及一些建議的使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3448829?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -111,35 +111,35 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ### 必要權限 {#permissions}
 
-若要匯出資料集，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 檢視資料集]**&#x200B;以及&#x200B;**[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+若要匯出資料集，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL View Datasets]**&#x200B;和&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-為確保您擁有匯出資料集的必要許可權以及目的地支援匯出資料集，請瀏覽目的地目錄。 如果目的地有&#x200B;**[!UICONTROL 啟用]**&#x200B;或&#x200B;**[!UICONTROL 匯出資料集]**&#x200B;控制項，則您擁有適當的許可權。
+為確保您擁有匯出資料集的必要許可權以及目的地支援匯出資料集，請瀏覽目的地目錄。 如果目的地有&#x200B;**[!UICONTROL Activate]**&#x200B;或&#x200B;**[!UICONTROL Export datasets]**&#x200B;控制項，則表示您擁有適當的許可權。
 
 ## 選取您的目的地 {#select-destination}
 
 依照指示選取可匯出資料集的目的地：
 
-1. 移至&#x200B;**[!UICONTROL 連線>目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
+1. 移至&#x200B;**[!UICONTROL Connections > Destinations]**，然後選取&#x200B;**[!UICONTROL Catalog]**&#x200B;標籤。
 
    ![目錄控制項反白顯示的目的地目錄標籤。](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. 在對應您要匯出資料集之目的地的卡片上，選取&#x200B;**[!UICONTROL 啟用]**&#x200B;或&#x200B;**[!UICONTROL 匯出資料集]**。
+1. 在與您要匯出資料集的目標相對應的卡片上，選取&#x200B;**[!UICONTROL Activate]**&#x200B;或&#x200B;**[!UICONTROL Export datasets]**。
 
    ![醒目提示「啟動」控制項的目標目錄標籤。](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. 選取&#x200B;**[!UICONTROL 資料型別資料集]**，並選取您要匯出資料集的目的地連線，然後選取&#x200B;**[!UICONTROL 下一步]**。
+1. 選取&#x200B;**[!UICONTROL Data type Datasets]**&#x200B;並選取您要匯出資料集的目的地連線，然後選取&#x200B;**[!UICONTROL Next]**。
 
 >[!TIP]
 > 
->如果要設定匯出資料集的新目的地，請選取&#x200B;**[!UICONTROL 設定新目的地]**&#x200B;以觸發[連線到目的地](/help/destinations/ui/connect-destination.md)工作流程。
+>如果您想要設定匯出資料集的新目的地，請選取&#x200B;**[!UICONTROL Configure new destination]**&#x200B;以觸發[連線到目的地](/help/destinations/ui/connect-destination.md)工作流程。
 
 ![資料集控制項強調顯示的目的地啟用工作流程。](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-1. **[!UICONTROL 選取資料集]**&#x200B;檢視就會顯示。 繼續下一節以[選取要匯出的資料集](#select-datasets)。
+1. **[!UICONTROL Select datasets]**&#x200B;檢視出現。 繼續下一節以[選取要匯出的資料集](#select-datasets)。
 
 ## 選取您的資料集 {#select-datasets}
 
-使用資料集名稱左邊的核取方塊來選取您要匯出至目的地的資料集，然後選取&#x200B;**[!UICONTROL 下一步]**。
+使用資料集名稱左邊的核取方塊來選取您要匯出至目的地的資料集，然後選取&#x200B;**[!UICONTROL Next]**。
 
 ![資料集匯出工作流程顯示「選取資料集」步驟，您可以在此選取要匯出的資料集。](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
@@ -160,17 +160,17 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 >title="更新此資料流主體的結束日期"
 >abstract="由於最近對此目的地進行更新，資料流現在需要結束日期。Adobe 已將預設結束日期設定為 2025 年 9 月 1 日。請更新至您想要的結束日期，否則資料匯出將在預設日期停止。"
 
-使用&#x200B;**[!UICONTROL 排程]**&#x200B;步驟來：
+使用&#x200B;**[!UICONTROL Scheduling]**&#x200B;步驟來：
 
 * 設定開始日期和結束日期，以及資料集匯出的匯出步調。
 * 設定匯出的資料集檔案應該匯出資料集的完整成員資格，還是只對每個匯出事件的成員資格進行累加變更。
 * 自訂資料集應匯出的儲存位置中的資料夾路徑。 深入瞭解如何[編輯匯出資料夾路徑](#edit-folder-path)。
 
-使用頁面上的&#x200B;**[!UICONTROL 編輯排程]**&#x200B;控制項來編輯匯出的匯出步調，以及選取要匯出完整檔案還是增量檔案。
+使用頁面上的&#x200B;**[!UICONTROL Edit schedule]**&#x200B;控制項來編輯匯出的匯出步調，以及選取要匯出完整檔案還是增量檔案。
 
 ![編輯排程步驟中反白顯示的排程控制項。](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
-預設會選取&#x200B;**[!UICONTROL 匯出增量檔案]**&#x200B;選項。 這會觸發一或多個檔案的匯出，這些檔案代表資料集的完整快照。 後續檔案是自上次匯出以來的資料集增量新增。 您也可以選取&#x200B;**[!UICONTROL 匯出完整檔案]**。 在這種情況下，請選取頻率&#x200B;**[!UICONTROL 一次]**&#x200B;以一次完整匯出資料集。
+預設會選取&#x200B;**[!UICONTROL Export incremental files]**&#x200B;選項。 這會觸發一或多個檔案的匯出，這些檔案代表資料集的完整快照。 後續檔案是自上次匯出以來的資料集增量新增。 您也可以選取&#x200B;**[!UICONTROL Export full files]**。 在此情況下，請選取頻率&#x200B;**[!UICONTROL Once]**&#x200B;以一次完整匯出資料集。
 
 >[!IMPORTANT]
 >
@@ -178,16 +178,16 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ![資料集匯出工作流程顯示排程步驟。](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
-1. 使用&#x200B;**[!UICONTROL 頻率]**&#x200B;選擇器來選取匯出頻率：
+1. 使用&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇器來選取匯出頻率：
 
-   * **[!UICONTROL 每日]**：排程增量檔案匯出一次，每天一次，在您指定的時間。
-   * **[!UICONTROL 每小時]**：排程每3、6、8或12小時匯出一次增量檔案。
+   * **[!UICONTROL Daily]**：排程每天在您指定的時間匯出一次增量檔案。
+   * **[!UICONTROL Hourly]**：排程每3、6、8或12小時匯出一次增量檔案。
 
 2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器來選擇要進行匯出的時間（格式為[!DNL UTC]）。
 
-3. 使用&#x200B;**[!UICONTROL 日期]**&#x200B;選擇器來選擇匯出發生的間隔。
+3. 使用&#x200B;**[!UICONTROL Date]**&#x200B;選擇器來選擇匯出發生的間隔。
 
-4. 選取[儲存]以儲存排程，並繼續[檢閱]步驟。**&#x200B;**&#x200B;**&#x200B;**
+4. 選取「**[!UICONTROL Save]**」以儲存排程並繼續&#x200B;**[!UICONTROL Review]**&#x200B;步驟。
 
 >[!NOTE]
 > 
@@ -205,7 +205,7 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 >title="資料集資料夾路徑預覽"
 >abstract="預覽根據您在此視窗中新增巨集而在您的儲存位置中建立的資料夾結構。"
 
-選取「**[!UICONTROL 編輯資料夾路徑]**」以自訂儲存匯出資料集所在儲存位置的資料夾結構。
+選取「**[!UICONTROL Edit folder path]**」以自訂儲存匯出資料集位置的資料夾結構。
 
 ![編輯在排程步驟中反白顯示的資料夾路徑控制項。](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
 
@@ -213,13 +213,13 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ![自訂資料夾模型視窗中反白的巨集選取專案。](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-選取所需的巨集後，您可以看到將在儲存位置中建立的資料夾結構預覽。 資料夾結構的第一個層級代表您&#x200B;**[!UICONTROL 連線至目的地]**&#x200B;以匯出資料集時所指示的[資料夾路徑](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)。
+選取所需的巨集後，您可以看到將在儲存位置中建立的資料夾結構預覽。 資料夾結構的第一個層級代表您&#x200B;**[!UICONTROL Folder path]**&#x200B;連線至目的地[以匯出資料集時所指示的](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)。
 
 ![在自訂資料夾模型視窗中反白顯示的資料夾路徑預覽。](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## 審閱 {#review}
 
-在&#x200B;**[!UICONTROL 檢閱]**&#x200B;頁面上，您可以看到選取專案的摘要。 選取&#x200B;**[!UICONTROL 取消]**&#x200B;以中斷流程，**[!UICONTROL 上一步]**&#x200B;以修改您的設定，或選取&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選取並開始將資料集匯出至目的地。
+在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到選取範圍的摘要。 選取&#x200B;**[!UICONTROL Cancel]**&#x200B;以中斷流程，**[!UICONTROL Back]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選取並開始將資料集匯出至目的地。
 
 ![資料集匯出工作流程顯示稽核步驟。](/help/destinations/assets/ui/export-datasets/review.png)
 
@@ -231,7 +231,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 >[!TIP]
 > 
->此資料夾結構的第一個層級 — `folder-name-you-provided` — 代表您&#x200B;**[!UICONTROL 連線至目的地]**&#x200B;以匯出資料集時所指示的[資料夾路徑](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)。
+>此資料夾結構的第一個層級 — `folder-name-you-provided` — 代表您&#x200B;**[!UICONTROL Folder path]**&#x200B;連線至目的地[以匯出資料集時所指示的](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)。
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -258,7 +258,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 若要從現有資料流移除資料集，請遵循下列步驟：
 
-1. 登入[Experience Platform UI](https://experience.adobe.com/platform/)，並從左側導覽列中選取&#x200B;**[!UICONTROL 目的地]**。 從頂端標題選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;以檢視您現有的目的地資料流。
+1. 登入[Experience Platform UI](https://experience.adobe.com/platform/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Browse]**&#x200B;以檢視您現有的目的地資料流。
 
    ![目的地瀏覽檢視，其中顯示目的地連線，其餘則模糊不清。](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -266,21 +266,21 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
    > 
    >選取左上方的篩選圖示![篩選圖示](/help/images/icons/filter.png)以啟動排序面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
 
-2. 從&#x200B;**[!UICONTROL 啟用資料]**&#x200B;欄中，選取資料集控制項，以檢視對應至此匯出資料流的所有資料集。
+2. 從&#x200B;**[!UICONTROL Activation data]**&#x200B;欄中選取資料集控制項，以檢視對應至此匯出資料流的所有資料集。
 
    ![可用的資料集導覽選項在[啟動資料]欄中反白顯示。](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. 目的地的&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面隨即顯示。 使用資料集清單左側的核取方塊來選取您要移除的資料集，然後在右側邊欄中選取&#x200B;**[!UICONTROL 移除資料集]**，以觸發移除資料集確認對話方塊。
+3. 目的地的&#x200B;**[!UICONTROL Activation data]**&#x200B;頁面隨即顯示。 使用資料集清單左側的核取方塊來選取您要移除的資料集，然後在右側邊欄中選取&#x200B;**[!UICONTROL Remove datasets]**&#x200B;以觸發移除資料集確認對話方塊。
 
    ![移除資料集對話方塊會在右側邊欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-4. 在確認對話方塊中，選取&#x200B;**[!UICONTROL 移除]**&#x200B;以立即從匯出至目的地的資料集中移除資料集。
+4. 在確認對話方塊中，選取&#x200B;**[!UICONTROL Remove]**&#x200B;以立即從匯出至目的地的資料集中移除資料集。
 
    ![對話方塊顯示資料流中的「確認資料集移除」選項。](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
 ## 資料集匯出權益 {#licensing-entitlement}
 
-請參閱產品說明檔案，瞭解您每年每個Experience Platform應用程式有權匯出多少資料。 例如，您可以在[這裡](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)檢視Real-Time CDP產品說明。
+請參閱產品說明檔案，瞭解您每年每個Experience Platform應用程式有權匯出多少資料。 例如，您可以在[這裡](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)檢視Real-Time CDP產品說明。
 
 請注意，不同應用程式的資料匯出許可權並非累加。 例如，這表示如果您購買Real-Time CDP Ultimate和Adobe Journey Optimizer Ultimate，則根據產品說明，設定檔匯出權利將是兩個權利中較大的一個權利。 您的大量權益的計算方式為：取用您的授權設定檔總數，然後乘以Real-Time CDP Prime的500 KB或Real-Time CDP Ultimate的700 KB，以判斷您有權取得的資料量。
 

@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 在概念定義對象後，即會在[!DNL Experience Platform]中建置對象。 一般而言，對象是由行銷人員或對象專家建立，不過有些組織偏好由行銷部門與資料分析師合作建立。 檢閱傳送至[!DNL Experience Platform]的資料後，資料分析人員可以兩種方式建立對象：透過選取將用於建立對象規則或條件的欄位和值來建立區段定義，或使用對象構成來構成對象。
 
-## 建立對象
+## 建立客群
 
 您可以在Adobe Experience Platform上以多種方式建立受眾，包括透過組合、區段定義、同盟資料和資料Distiller。
 
@@ -67,7 +67,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 >id="platform_segments_evaluation_streaming"
 >title="串流評估"
 >abstract="串流分段是持續進行的資料選擇流程；此功能會根據使用者活動來更新對象。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=zh-Hant" text="使用串流分段近乎即時地評估事件"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="使用串流分段近乎即時地評估事件"
 
 Experience Platform 目前支援三種評估客群的方式：串流分段、批次分段以及邊緣分段。
 
@@ -94,9 +94,9 @@ Experience Platform 目前支援三種評估客群的方式：串流分段、批
 >id="platform_segments_evaluation_edge"
 >title="邊緣評估"
 >abstract="邊緣分段指在 Edge Network 上即時評估 Experience Platform 中區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=zh-Hant" text="邊緣分段服務指南"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="邊緣分段服務指南"
 
-Edge區段能在Edge Network[&#128279;](../landing/edge-and-hub-comparison.md)上即時評估Experience Platform中的區段，啟用相同頁面和下一頁個人化使用案例。
+Edge區段能在Edge Network[上即時評估Experience Platform中的區段](../landing/edge-and-hub-comparison.md)，啟用相同頁面和下一頁個人化使用案例。
 
 若要深入瞭解邊緣細分，請閱讀[邊緣細分概觀](./methods/edge-segmentation.md)。
 

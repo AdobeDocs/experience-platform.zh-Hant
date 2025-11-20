@@ -6,12 +6,12 @@ description: 在Adobe Experience Platform使用者介面(UI)中，您可以輕�
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL 聯合結構描述] UI指南
+# [!UICONTROL Union schema] 使用者介面指南
 
 在Adobe Experience Platform使用者介面(UI)中，您可以輕鬆檢視組織內的任何聯合結構描述，並預覽特定類別的欄位、身分、關係和貢獻結構描述。 本指南提供如何使用Experience Platform UI檢視和探索聯合結構的詳細資訊。
 
@@ -40,15 +40,15 @@ ht-degree: 0%
 
 ## 檢視聯合結構描述 {#view-union-schemas}
 
-若要導覽至Experience Platform UI中的聯合結構描述，請從左側導覽中選取&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 聯合結構描述]**&#x200B;索引標籤。 [!UICONTROL 聯合結構描述]索引標籤會開啟，以顯示目前所選類別的聯合結構描述。
+若要導覽至Experience Platform UI中的聯合結構描述，請從左側導覽中選取「**[!UICONTROL Profiles]**」，然後選取「**[!UICONTROL Union Schema]**」標籤。 [!UICONTROL Union Schema]索引標籤會開啟，以顯示目前所選類別的聯合結構描述。
 
 ![顯示[聯合結構描述]頁面，並反白顯示[設定檔與聯合結構描述]索引標籤。](../images/union-schema/landing.png)
 
 ## 選取類別 {#select-a-class}
 
-若要顯示特定XDM類別的聯合結構描述，請從&#x200B;**[!UICONTROL 類別]**&#x200B;下拉式清單中選取類別。 由於並非所有類別都有聯合結構描述，因此下拉式清單中只會顯示具有聯合結構描述的類別（亦即具有已針對設定檔啟用的結構描述的類別）。
+若要顯示特定XDM類別的聯合結構描述，請從&#x200B;**[!UICONTROL Class]**&#x200B;下拉式清單中選取類別。 由於並非所有類別都有聯合結構描述，因此下拉式清單中只會顯示具有聯合結構描述的類別（亦即具有已針對設定檔啟用的結構描述的類別）。
 
-選取類別後，顯示的架構會更新以反映所選類別的聯合架構。 例如，您可以選取&#x200B;**[!UICONTROL XDM個別設定檔]**&#x200B;來檢視該類別的聯合結構描述。
+選取類別後，顯示的架構會更新以反映所選類別的聯合架構。 例如，您可以選取&#x200B;**[!UICONTROL XDM Individual Profile]**&#x200B;來檢視該類別的聯合結構描述。
 
 ![包含聯合結構描述類別的下拉式清單會反白顯示。](../images/union-schema/class.png)
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ## 檢視參與的結構描述 {#view-contributing-schemas}
 
-您也可以選取&#x200B;**[!UICONTROL 所有參與的結構描述]**&#x200B;來展開結構描述清單，以檢視哪些特定結構描述對聯合結構描述有貢獻。 根據您選取的類別以及貴組織在Experience Platform中建立的結構描述數目，這可能是包含單一結構描述的簡短清單，或是包含許多結構描述的完整清單。
+您還可以檢視哪些特定結構描述對聯合結構描述有貢獻，方法是選取&#x200B;**[!UICONTROL All contributing schemas]**&#x200B;以展開結構描述清單。 根據您選取的類別以及貴組織在Experience Platform中建立的結構描述數目，這可能是包含單一結構描述的簡短清單，或是包含許多結構描述的完整清單。
 
 ![加入聯合結構描述的結構描述清單已反白顯示。](../images/union-schema/contributing-schemas.png)
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ## 檢視身分 {#view-identities}
 
-透過UI，您可以選取&#x200B;**[!UICONTROL Identities]**&#x200B;來展開清單，以檢視包含在聯合結構描述中的身分清單。
+透過UI，您可以選取&#x200B;**[!UICONTROL Identities]**&#x200B;展開清單，以檢視聯合結構描述中包含的身分清單。
 
 ![屬於聯合結構描述的身分會反白顯示。](../images/union-schema/identities.png)
 
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 聯合結構描述UI也可讓您檢視已根據所選結構描述類別為結構描述定義的關係。 定義關係是連線屬於不同類別的兩個結構描述的方式，以取得有關客戶資料的更複雜見解。
 
-如果已為選取的類別建立關聯，選取&#x200B;**[!UICONTROL 關聯]**&#x200B;會顯示用來建立關聯的欄位清單。 並非所有結構描述都使用或需要定義關係，因此關係區段通常不包含任何欄位。
+如果已為選取的類別建立關聯，選取&#x200B;**[!UICONTROL Relationships]**&#x200B;會顯示用來建立關聯的欄位清單。 並非所有結構描述都使用或需要定義關係，因此關係區段通常不包含任何欄位。
 
 若要進一步瞭解結構描述關係，包括如何使用UI定義它們，請瀏覽關於結構描述關係[的本檔案](../../xdm/tutorials/relationship-ui.md)。
 

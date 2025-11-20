@@ -5,14 +5,14 @@ title: 訂閱UI中的內容感知警報
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 7%
+source-wordcount: '809'
+ht-degree: 13%
 
 ---
 
 # 訂閱UI中來源資料流程的警報
 
-Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的事件型警報。 警示可減少或消除輪詢[[!DNL Observability Insights] API](../../../observability/api/overview.md)的需求，以檢查工作是否已完成、工作流程中是否已達到特定里程碑，或是否已發生任何錯誤。
+透過 Adobe Experience Platform，您可以訂閱關於 Adobe Experience Platform 活動的事件型警報。有了警報，便可以減少或免除透過輪詢 [[!DNL Observability Insights] API](../../../observability/api/overview.md) 來檢查工作是否完成、是否達到工作流程某個里程碑，或者是否發生任何錯誤的需求。
 
 建立資料流時，您可以訂閱警示以接收有關資料流執行狀態、成功或失敗的警示訊息。
 
@@ -38,7 +38,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 >
 >您必須啟用Experience Platform帳戶的即時電子郵件通知，才能接收資料流程的電子郵件式警報通知。
 
-您可以在來源工作區中來源工作流程的[!UICONTROL 資料流詳細資料]步驟期間，為資料流啟用警示。
+您可以在來源工作區中來源工作流程的[!UICONTROL Dataflow detail]步驟期間啟用資料流程的警報。
 
 ![資料流詳細資料](../../images/tutorials/alerts/dataflow-detail.png)
 
@@ -54,7 +54,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 | 來源資料流執行成功 | 當來源中的資料成功擷取到Experience Platform時，此警報會傳送訊息給您。 |
 | 來源資料流執行失敗 | 如果您的資料流發生錯誤，此警報會傳送訊息給您。 |
 
-選取您要訂閱的警示，然後選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以檢視並完成您的資料流。
+選取您要訂閱的警示，然後選取&#x200B;**[!UICONTROL Next]**&#x200B;以檢視並完成資料流。
 
 ![選取警示](../../images/tutorials/alerts/select-alerts.png)
 
@@ -92,11 +92,11 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-[!UICONTROL 資料流執行總覽]頁面隨即顯示。 畫面的上半部會顯示資料流程的概觀，包括其屬性的相關資訊、對應的資料流程執行ID和高階錯誤摘要。
+[!UICONTROL Dataflow run overview]頁面隨即顯示。 畫面的上半部會顯示資料流程的概觀，包括其屬性的相關資訊、對應的資料流程執行ID和高階錯誤摘要。
 
 ![資料流總覽](../../images/tutorials/alerts/dataflow-overview.png)
 
-頁面下半部顯示在資料流執行階段期間發生的任何[!UICONTROL 資料流執行錯誤]。 從這裡，您可以預覽錯誤診斷，或使用[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/)下載與您的資料流對應的錯誤診斷或檔案資訊清單。
+頁面下半部會顯示資料流執行階段發生的任何[!UICONTROL Dataflow run errors]。 從這裡，您可以預覽錯誤診斷，或使用[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/)下載與您的資料流對應的錯誤診斷或檔案資訊清單。
 
 ![資料流執行錯誤](../../images/tutorials/alerts/dataflow-run-error.png)
 
@@ -108,17 +108,17 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 ![電子郵件](../../images/tutorials/alerts/email.png)
 
-類似於UI警示，[!UICONTROL 資料流執行總覽]頁面會出現，為您提供介面以調查與資料流關聯的任何錯誤。
+與UI警示類似，[!UICONTROL Dataflow run overview]頁面會出現，提供您介面以調查與資料流關聯的任何錯誤。
 
 ![資料流總覽](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## 訂閱和取消訂閱警示
 
-您可以為[!UICONTROL 資料流]頁面中的現有資料流訂閱更多警報或取消訂閱已建立的警報。 找出您從清單建立的資料流，然後選取省略符號(`...`)，以檢視選項的下拉式功能表。 接著，選取&#x200B;**[!UICONTROL 訂閱警示]**&#x200B;以修改資料流程的警示設定。
+您可以在[!UICONTROL Dataflows]頁面中針對現有資料流訂閱更多警報或取消訂閱已建立的警報。 找出您從清單建立的資料流，然後選取省略符號(`...`)，以檢視選項的下拉式功能表。 接著，選取&#x200B;**[!UICONTROL Subscribe alerts]**&#x200B;以修改資料流的警示設定。
 
 ![選項](../../images/tutorials/alerts/options.png)
 
-隨即出現快顯視窗，為您提供來源警示清單。 選取您要訂閱的警示，或取消選取您要取消訂閱的警示。 完成後，選取&#x200B;**[!UICONTROL 儲存]**。
+隨即出現快顯視窗，為您提供來源警示清單。 選取您要訂閱的警示，或取消選取您要取消訂閱的警示。 完成後，選取&#x200B;**[!UICONTROL Save]**。
 
 ![儲存](../../images/tutorials/alerts/save.png)
 

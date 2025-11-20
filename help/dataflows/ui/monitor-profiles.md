@@ -6,8 +6,8 @@ type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1077'
-ht-degree: 7%
+source-wordcount: '1000'
+ht-degree: 8%
 
 ---
 
@@ -39,35 +39,35 @@ ht-degree: 7%
 >title="資料流執行詳細資訊"
 >abstract="資料流執行詳細資訊頁面會顯示有關設定檔資料流執行的詳細資訊，包括其組織 ID 和資料流執行 ID。"
 
-若要存取&#x200B;**[!UICONTROL 設定檔]**&#x200B;儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL 監視]**。 在&#x200B;**[!UICONTROL 監視]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;卡片。
+若要存取&#x200B;**[!UICONTROL Profiles]**&#x200B;儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL Monitoring]**。 在&#x200B;**[!UICONTROL Monitoring]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL Profiles]**&#x200B;卡片。
 
 ![設定檔卡。 顯示關於已接收記錄數、已建立和已更新設定檔片段數以及成功率的資訊。](../assets/ui/monitor-profiles/focus-card.png)
 
-在主要&#x200B;**[!UICONTROL 設定檔]**&#x200B;儀表板上，**[!UICONTROL 設定檔]**&#x200B;卡片會顯示所接收記錄總數、已建立和已更新設定檔片段數目，以及建立和已更新設定檔片段的成功率等相關資訊。
+在主要&#x200B;**[!UICONTROL Profiles]**&#x200B;儀表板上，**[!UICONTROL Profiles]**&#x200B;卡片會顯示所接收記錄總數、已建立和已更新設定檔片段數，以及建立和已更新設定檔片段的成功率的相關資訊。
 
 儀表板本身包含有關設定檔處理的量度。 預設情況下，儀表板將顯示過去24小時內您組織來源的設定檔處理細節。
 
 ![設定檔儀表板。 顯示每個來源接收之設定檔記錄數目的相關資訊。](../assets/ui/monitor-profiles/sources.png)
 
-[!UICONTROL 設定檔處理]頁面包含擷取至[!DNL Profile]的記錄資訊，包括已建立的設定檔片段數、已更新的設定檔片段數，以及設定檔片段總數。
+[!UICONTROL Profile processing]頁面包含擷取至[!DNL Profile]的記錄資訊，包括已建立的設定檔片段數、已更新的設定檔片段，以及設定檔片段總數。
 
 下列量度適用於此儀表板檢視：
 
 | 量度 | 說明 |
 | -------| ----------- |
-| **[!UICONTROL Source名稱]** | 來源的名稱。 |
-| 已接收&#x200B;**[!UICONTROL 筆記錄]** | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 個記錄失敗]** | 已擷取但由於錯誤而未擷取到[!DNL Profile]中的記錄數。 |
-| **[!UICONTROL 已建立的設定檔片段]** | 已新增的淨新[!DNL Profile]片段數目。 |
-| **[!UICONTROL 已更新設定檔片段]** | 已更新現有[!DNL Profile]片段的數量。 |
-| **[!UICONTROL 設定檔片段總數]** | 寫入[!DNL Profile]的記錄總數，包括所有已更新的現有[!DNL Profile]片段以及已建立的新[!DNL Profile]片段。 |
-| **[!UICONTROL 失敗的資料流總數]** | 失敗的資料流執行次數。 |
+| **[!UICONTROL Source name]** | 來源的名稱。 |
+| **[!UICONTROL Records received]** | 從資料湖接收的記錄數。 |
+| **[!UICONTROL Records failed]** | 已擷取但由於錯誤而未擷取到[!DNL Profile]中的記錄數。 |
+| **[!UICONTROL Profile fragments created]** | 已新增的淨新[!DNL Profile]片段數目。 |
+| **[!UICONTROL Profile fragments updated]** | 已更新現有[!DNL Profile]片段的數量。 |
+| **[!UICONTROL Total Profile fragments]** | 寫入[!DNL Profile]的記錄總數，包括所有已更新的現有[!DNL Profile]片段以及已建立的新[!DNL Profile]片段。 |
+| **[!UICONTROL Total failed dataflows]** | 失敗的資料流執行次數。 |
 
 您可以選取來源名稱旁的篩選圖示![篩選圖示](/help/images/icons/filter.png)，以檢視該所選來源資料流程的設定檔處理資訊。
 
 ![篩選圖示會醒目提示。 選取此圖示可讓您檢視所選來源的資料流。](../assets/ui/monitor-profiles/sources-filter.png)
 
-或者，您可以在切換時選取「**[!UICONTROL 資料流]**」，以檢視貴組織過去24小時資料流的設定檔處理詳細資料。
+或者，您可以在切換時選取「**[!UICONTROL Dataflows]**」，以檢視貴組織過去24小時資料流程的設定檔處理詳細資料。
 
 ![設定檔儀表板。 顯示有關每個資料流接收的設定檔記錄數目的資訊。](../assets/ui/monitor-profiles/dataflows.png)
 
@@ -75,22 +75,22 @@ ht-degree: 7%
 
 | 量度 | 說明 |
 | -------| ----------- |
-| **[!UICONTROL 資料流]** | 資料流的名稱。 |
-| **[!UICONTROL 資料集]** | 資料流所插入的資料集名稱。 |
-| **[!UICONTROL Source名稱]** | 資料流所屬的來源名稱。 |
-| 已接收&#x200B;**[!UICONTROL 筆記錄**] | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 個記錄失敗]** | 已擷取但由於錯誤而未擷取到[!DNL Profile]中的記錄數。 |
-| **[!UICONTROL 已建立的設定檔片段]** | 已新增的淨新[!DNL Profile]片段數目。 |
-| **[!UICONTROL 已更新設定檔片段]** | 已更新現有[!DNL Profile]片段的數量 |
-| **[!UICONTROL 設定檔片段總數]** | 寫入[!DNL Profile]的記錄總數，包括所有已更新的現有[!DNL Profile]片段以及已建立的新[!DNL Profile]片段。 |
-| **[!UICONTROL 失敗的資料流執行總數]** | 失敗的資料流執行次數。 |
-| **[!UICONTROL 上次使用中]** | 上次執行資料流的時間戳記。 |
+| **[!UICONTROL Dataflow]** | 資料流的名稱。 |
+| **[!UICONTROL Dataset]** | 資料流所插入的資料集名稱。 |
+| **[!UICONTROL Source name]** | 資料流所屬的來源名稱。 |
+| **[!UICONTROL Records received**] | 從資料湖接收的記錄數。 |
+| **[!UICONTROL Records failed]** | 已擷取但由於錯誤而未擷取到[!DNL Profile]中的記錄數。 |
+| **[!UICONTROL Profile fragments created]** | 已新增的淨新[!DNL Profile]片段數目。 |
+| **[!UICONTROL Profile fragments updated]** | 已更新現有[!DNL Profile]片段的數量 |
+| **[!UICONTROL Total Profile fragments]** | 寫入[!DNL Profile]的記錄總數，包括所有已更新的現有[!DNL Profile]片段以及已建立的新[!DNL Profile]片段。 |
+| **[!UICONTROL Total failed flow runs]** | 失敗的資料流執行次數。 |
+| **[!UICONTROL Last active]** | 上次執行資料流的時間戳記。 |
 
 選取資料流執行開始時間旁的篩選圖示![篩選](/help/images/icons/filter.png)，檢視有關您的[!DNL Profile]資料流執行的詳細資訊。
 
 ![篩選圖示會醒目提示。 選取此圖示可讓您檢視所選資料流的詳細資訊。](../assets/ui/monitor-profiles/dataflows-filter.png)
 
-[!UICONTROL 資料流執行詳細資料]頁面會顯示您[!DNL Profile]資料流執行的詳細資訊，包括其組織ID和資料流執行ID。 此頁面也會顯示[!DNL Profile]提供的對應錯誤碼和錯誤訊息（如果擷取程式發生任何錯誤）。
+[!UICONTROL Dataflow run details]頁面會顯示您[!DNL Profile]資料流執行的詳細資訊，包括其組織ID和資料流執行ID。 此頁面也會顯示[!DNL Profile]提供的對應錯誤碼和錯誤訊息（如果擷取程式發生任何錯誤）。
 
 ![會顯示一個儀表板，顯示所選資料流的詳細資訊。](../assets/ui/monitor-profiles/dataflow-run-details.png)
 
@@ -98,15 +98,15 @@ ht-degree: 7%
 
 | 量度 | 說明 |
 | -------| ----------- |
-| 已接收&#x200B;**[!UICONTROL 筆記錄]** | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 個記錄失敗]** | 已擷取但由於錯誤而未擷取到[!DNL Profile]中的記錄數。 |
-| **[!UICONTROL 已建立的設定檔片段]** | 已新增的淨新[!DNL Profile]片段數目。 |
-| **[!UICONTROL 已更新設定檔片段]** | 已更新現有[!DNL Profile]片段的數量。 |
-| **[!UICONTROL 狀態]** | 定義資料流的整體狀態。 可能的狀態值包括： <ul><li>`Success`：表示資料流作用中，而且正在根據提供的排程擷取資料。</li><li>`Failed`：指出資料流程的啟用程式已因錯誤而中斷。 </li><li>`Processing`：表示資料流尚未啟用。 此狀態通常會在建立新資料流後立即發生。</li></ul> |
-| **[!UICONTROL 資料流執行開始]** | 資料流開始執行的日期和時間。 |
-| **[!UICONTROL 上次更新時間]** | 資料流上次更新的日期和時間。 |
-| **[!UICONTROL 錯誤摘要]** | 如果資料流執行失敗，這會顯示錯誤代碼以及資料流執行失敗原因的摘要。 |
-| **[!UICONTROL 資料流執行ID]** | 資料流執行的識別碼。 |
-| **[!UICONTROL IMS組織ID]** | 資料流執行所屬的組織ID。 |
+| **[!UICONTROL Records received]** | 從資料湖接收的記錄數。 |
+| **[!UICONTROL Records failed]** | 已擷取但由於錯誤而未擷取到[!DNL Profile]中的記錄數。 |
+| **[!UICONTROL Profile fragments created]** | 已新增的淨新[!DNL Profile]片段數目。 |
+| **[!UICONTROL Profile fragments updated]** | 已更新現有[!DNL Profile]片段的數量。 |
+| **[!UICONTROL Status]** | 定義資料流的整體狀態。 可能的狀態值包括： <ul><li>`Success`：表示資料流作用中，而且正在根據提供的排程擷取資料。</li><li>`Failed`：指出資料流程的啟用程式已因錯誤而中斷。 </li><li>`Processing`：表示資料流尚未啟用。 此狀態通常會在建立新資料流後立即發生。</li></ul> |
+| **[!UICONTROL Dataflow run start]** | 資料流開始執行的日期和時間。 |
+| **[!UICONTROL Last updated]** | 資料流上次更新的日期和時間。 |
+| **[!UICONTROL Error summary]** | 如果資料流執行失敗，這會顯示錯誤代碼以及資料流執行失敗原因的摘要。 |
+| **[!UICONTROL Dataflow run ID]** | 資料流執行的識別碼。 |
+| **[!UICONTROL IMS org ID]** | 資料流執行所屬的組織ID。 |
 
 此外，您可以選取切換來檢視失敗的記錄或略過的記錄。 錯誤區段包含有關錯誤代碼和失敗或排除的記錄數的詳細資訊。

@@ -4,7 +4,7 @@ description: 瞭解如何在Adobe Real-Time Customer Data Platform B2B edition�
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1771'
+source-wordcount: '1726'
 ht-degree: 12%
 
 ---
@@ -22,23 +22,23 @@ Adobe Real-Time Customer Data Platform B2B edition提供可擷取基本B2B資料
 
 下圖提供不同B2B類別在基本實作中如何相互關聯的範例：
 
-![B2B類別關係](../images/tutorials/relationship-b2b/classes.png)
+![B2B 階級關係](../images/tutorials/relationship-b2b/classes.png)
 
-本教學課程涵蓋在Real-Time CDP B2B edition中定義兩個結構描述之間多對一關係的步驟。
+本教學涵蓋在即時CDP B2B版中定義兩個結構間多對一關係的步驟。
 
 >[!NOTE]
 >
->如果您未使用Real-Time Customer Data Platform B2B edition或想建立一對一的關係，請改為參閱[建立一對一的關係](./relationship-ui.md)指南。
+>如果你沒有使用即時客戶資料平台 B2B 版，或想建立一對一的關係，請參考建立 [一對一關係](./relationship-ui.md) 的指南。
 >
->本教學課程著重於如何在Experience Platform UI中手動建立B2B結構描述之間的關係。 如果您從B2B來源連線引進資料，您可以使用自動產生公用程式來建立所需的結構描述、身分和關係。 如需使用自動產生公用程式[的詳細資訊，請參閱B2B名稱空間和結構描述的來原始檔](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)。
+>本教學重點在於如何在體驗平台介面中手動建立 B2B 架構之間的關聯。 如果你是從 B2B 來源連線帶入資料，可以用自動產生工具來建立所需的結構、身份和關聯。 欲了解更多自動 [產生工具](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)的使用資訊，請參閱 B2B 命名空間與結構的原始文件。
 
 ## 快速入門
 
-此教學課程需要您實際瞭解[!DNL XDM System]以及[!DNL Experience Platform] UI中的結構描述編輯器。 在開始本教學課程之前，請先檢閱下列檔案：
+這個教學需要對介面中的結構編輯器[!DNL XDM System]有實際的理解[!DNL Experience Platform]。在開始本教學前，請先閱讀以下文件：
 
-* Experience Platform中的[XDM系統](../home.md)： [!DNL Experience Platform]中XDM及其實作的概觀。
-* [結構描述組合的基本概念](../schema/composition.md)： XDM結構描述的建置區塊簡介。
-* [使用 [!DNL Schema Editor]](create-schema-ui.md)建立結構描述：此教學課程涵蓋如何在UI中建立和編輯結構描述的基本知識。
+* [XDM 體驗平台](../home.md)系統：XDM 及其實 [!DNL Experience Platform]作概述。
+* [結構組合](../schema/composition.md)基礎：XDM 架構的基礎單元介紹。
+* [請使用以下 [!DNL Schema Editor]](create-schema-ui.md)工具建立結構：一個教學，涵蓋如何在 UI 中建立和編輯架構的基本知識。
 
 ## 定義來源和參考結構描述
 
@@ -67,15 +67,15 @@ Adobe Real-Time Customer Data Platform B2B edition提供可擷取基本B2B資料
 
 ### 機會結構描述
 
-來源結構描述&quot;[!DNL Opportunities]&quot;是以[!UICONTROL XDM商業機會]類別為基礎。 類別`opportunityKey`提供的其中一個欄位做為結構描述的識別碼。 具體來說，`opportunityKey`物件下的`sourceKey`欄位設定為名為[!DNL B2B Opportunity]的自訂名稱空間下的結構描述主要身分。
+來源結構描述&quot;[!DNL Opportunities]&quot;是以[!UICONTROL XDM Business Opportunity]類別為基礎。 類別`opportunityKey`提供的其中一個欄位做為結構描述的識別碼。 具體來說，`sourceKey`物件下的`opportunityKey`欄位設定為名為[!DNL B2B Opportunity]的自訂名稱空間下的結構描述主要身分。
 
-如在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下所見，此結構描述已在[!DNL Real-Time Customer Profile]中啟用。
+如在&#x200B;**[!UICONTROL Field Properties]**&#x200B;下所見，此結構描述已在[!DNL Real-Time Customer Profile]中啟用。
 
 ![結構描述編輯器中的Opportunity結構描述具有opportunityKey物件和Enable for profile切換反白顯示。](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### [!DNL Accounts]結構描述
 
-參考結構描述&quot;[!DNL Accounts]&quot;是以[!UICONTROL XDM帳戶]類別為基礎。 根層級`accountKey`欄位包含的`sourceKey`在名為[!DNL B2B Account]的自訂名稱空間下充當其主要身分。 此結構描述也已啟用以供設定檔使用。
+參考結構描述&quot;[!DNL Accounts]&quot;是以[!UICONTROL XDM Account]類別為基礎。 根層級`accountKey`欄位包含的`sourceKey`在名為[!DNL B2B Account]的自訂名稱空間下充當其主要身分。 此結構描述也已啟用以供設定檔使用。
 
 ![結構描述編輯器中的Accounts結構描述具有accountKey物件和Enable for profile切換反白顯示。](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,21 +91,21 @@ Adobe Real-Time Customer Data Platform B2B edition提供可擷取基本B2B資料
 >title="參考結構描述中的關係名稱"
 >abstract="說明從參考結構描述到目前結構描述的關係的標籤 (例如，「相關機會」)。此標籤用於設定檔和客戶細分，以從相關 B2B 實體為資料提供上下文。請查看文件以了解有關建置 B2B 結構描述關係的詳細資訊。"
 
-為了定義兩個結構描述之間的關係，來源結構描述必須具有專用欄位，以指示參考結構描述的主要身分。 標準B2B類別包含常用相關商業實體的專用來源索引鍵欄位。 例如，[!UICONTROL XDM商業機會]類別包含相關帳戶(`accountKey`)與相關行銷活動(`campaignKey`)的來源金鑰欄位。 不過，如果您需要超過預設的元件，也可以使用自訂欄位群組，將其他[!UICONTROL B2B Source]欄位新增到結構描述中。
+為了定義兩個結構描述之間的關係，來源結構描述必須具有專用欄位，以指示參考結構描述的主要身分。 標準B2B類別包含常用相關商業實體的專用來源索引鍵欄位。 例如，[!UICONTROL XDM Business Opportunity]類別包含相關帳戶(`accountKey`)和相關行銷活動(`campaignKey`)的來源金鑰欄位。 不過，如果您需要超過預設的元件，也可以使用自訂欄位群組，將其他[!UICONTROL B2B Source]欄位新增到結構描述中。
 
 >[!NOTE]
 >
 >目前，從來源結構描述到參考結構描述只能定義多對一和一對一關係。 對於一對多關係，您必須在代表「許多」的結構描述中定義關係欄位。
 
-若要設定關聯性欄位，請在畫布中選取相關欄位，然後在[!UICONTROL 結構描述屬性]側邊欄中選取&#x200B;**[!UICONTROL 新增關聯性]**。 在[!DNL Opportunities]結構描述的情況下，這是`accountKey.sourceKey`欄位，因為目標是與帳戶建立多對一關係。
+若要設定關聯性欄位，請在畫布中選取相關欄位，然後在&#x200B;**[!UICONTROL Add relationship]**&#x200B;側邊欄中選取[!UICONTROL Schema properties]。 在[!DNL Opportunities]結構描述的情況下，這是`accountKey.sourceKey`欄位，因為目標是與帳戶建立多對一關係。
 
 ![結構描述編輯器，其中sourceKey欄位和Add relationship已反白顯示。](../images/tutorials/relationship-b2b/add-relationship.png)
 
-[!UICONTROL 新增關係]對話方塊就會顯示。 使用此對話方塊來指定關係詳細資料。 關聯性型別預設設定為&#x200B;**[!UICONTROL 多對一]**。
+[!UICONTROL Add relationship]對話方塊隨即顯示。 使用此對話方塊來指定關係詳細資料。 關聯性型別預設設定為&#x200B;**[!UICONTROL Many-to-one]**。
 
 ![反白顯示多對一結構描述關係的[新增關係]對話方塊。](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-在&#x200B;**[!UICONTROL 參考結構描述]**&#x200B;下，使用搜尋列或下拉式功能表來尋找參考結構描述的名稱。 當您反白參考結構描述的名稱時，**[!UICONTROL 參考身分名稱空間]**&#x200B;欄位會自動更新為參考結構描述主要身分的名稱空間。
+在&#x200B;**[!UICONTROL Reference Schema]**&#x200B;底下，使用搜尋列或下拉式功能表來尋找參考結構描述的名稱。 當你選取參考結構的名稱時，該 **[!UICONTROL Reference Identity Namespace]** 欄位會自動更新到參考架構主要身份的命名空間。
 
 >[!NOTE]
 >
@@ -113,34 +113,34 @@ Adobe Real-Time Customer Data Platform B2B edition提供可擷取基本B2B資料
 
 ![含有反白的參照結構描述和參照身分名稱空間欄位的[加入關聯性]對話方塊。](../images/tutorials/relationship-b2b/reference-schema.png)
 
-在&#x200B;**[!UICONTROL 來自目前結構描述的關係名稱]**&#x200B;和&#x200B;**[!UICONTROL 來自參考結構描述的關係名稱]**&#x200B;下，分別提供來源和參考結構描述內容中的關係易記名稱。 完成後，選取&#x200B;**[!UICONTROL 套用]**&#x200B;以確認變更並儲存關係。
+在&#x200B;**[!UICONTROL Relationship Name From Current Schema]**&#x200B;和&#x200B;**[!UICONTROL Relationship Name From Reference Schema]**&#x200B;底下，分別為來源和參考結構描述內容中的關聯性提供易記名稱。 完成後，選取&#x200B;**[!UICONTROL Apply]**&#x200B;以確認變更並儲存關係。
 
 >[!NOTE]
 >
 >關係名稱不得超過35個字元。
 
-![新增關聯性對話方塊，反白顯示關聯性名稱欄位。](../images/tutorials/relationship-b2b/relationship-name.png)
+![「新增關係」對話框中「關係名稱」欄位被高亮顯示。](../images/tutorials/relationship-b2b/relationship-name.png)
 
-畫布會重新出現，關聯欄位現在會以您先前提供的好記名稱標籤。 此關係名稱也會列在左側邊欄上，以方便參考。
+畫布重新出現，關係欄位現在標記為你先前提供的友善名字。 關係名稱也標示在左側欄杆上，方便查閱。
 
-![已套用新關聯性名稱的結構描述編輯器。](../images/tutorials/relationship-b2b/relationship-applied.png)
+![套用了新關係名稱的結構編輯器。](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-如果您檢視參考結構描述的結構，關係標籤會出現在結構描述的主要身分欄位旁和左側邊欄中。
+如果你查看參考結構，關係標記會出現在結構的主要身份欄位旁邊及左側欄。
 
-![結構描述編輯器中的目的地結構描述，新關聯性標籤被反白顯示。](../images/tutorials/relationship-b2b/destination-relationship.png)
+![結構編輯器中目標結構並標示新的關係標記。](../images/tutorials/relationship-b2b/destination-relationship.png)
 
-## 編輯B2B綱要關係 {#edit-schema-relationship}
+## 編輯 B2B 架構關係 {#edit-schema-relationship}
 
-建立結構描述關聯性之後，請選取來源結構描述中的關聯性欄位，然後選取&#x200B;**[!UICONTROL 編輯關聯性]**。
+一旦建立結構關係，選擇來源結構中的關係欄位，接著選擇 **[!UICONTROL Edit relationship]**。
 
 >[!NOTE]
 >
->若要檢視所有關聯關係，請選取參考結構描述中的主要身分欄位，然後選取[!UICONTROL 檢視關係]。
->![結構描述編輯器，已選取關係欄位，並反白顯示檢視關係。](../images/tutorials/relationship-b2b/view-relationships.png "已選取關聯欄位且檢視關聯性已反白的結構描述編輯器。"){width="100" zoomable="yes"}
+>要查看所有相關的關係，請在參考結構中選擇主要身份欄位，然後點選 [!UICONTROL View relationships]。
+>![結構編輯器中選擇了關係欄位並標示了「檢視關係」。](../images/tutorials/relationship-b2b/view-relationships.png "結構編輯器中選擇了關係欄位並標示了「檢視關係」。"){width="100" zoomable="yes"}
 
-![結構描述編輯器，其關聯欄位和編輯關聯性已反白顯示。](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
+![結構編輯器，標示出關聯欄位與編輯關係。](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
 
-[!UICONTROL 編輯關係]對話方塊就會顯示。 您可以在此對話方塊中變更參照結構描述和關係名稱，或刪除關係。 無法變更多對一關係型別。
+[!UICONTROL Edit relationship]對話方塊隨即顯示。 您可以在此對話方塊中變更參照結構描述和關係名稱，或刪除關係。 無法變更多對一關係型別。
 
 ![編輯關聯性對話方塊。](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
 
@@ -152,7 +152,7 @@ Adobe Real-Time Customer Data Platform B2B edition提供可擷取基本B2B資料
 
 ## 篩選和搜尋關係 {#filter-and-search}
 
-您可以從[!UICONTROL 結構描述]工作區的[!UICONTROL 關係]索引標籤，篩選及搜尋結構描述中的特定關係。 您可以使用此檢視快速找到並管理您的關係。 請閱讀[探索結構描述資源](../ui/explore.md#lookup)上的檔案，以取得篩選選項的詳細說明。
+您可以從[!UICONTROL Relationships]工作區的[!UICONTROL Schemas]標籤篩選及搜尋結構描述中的特定關係。 您可以使用此檢視快速找到並管理您的關係。 請閱讀[探索結構描述資源](../ui/explore.md#lookup)上的檔案，以取得篩選選項的詳細說明。
 
 ![結構描述工作區中的[關聯性]索引標籤。](../images/tutorials/relationship-b2b/relationship-tab.png)
 

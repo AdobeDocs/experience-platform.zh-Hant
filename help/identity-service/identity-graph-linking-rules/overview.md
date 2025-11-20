@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
 source-wordcount: '1605'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -40,12 +40,12 @@ ht-degree: 9%
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ ht-degree: 9%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="身分識別圖連結規則概觀" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448283/?format=jpeg&nocache=1747851655227&captions=chi_hant" alt="身分識別圖連結規則概觀"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="身分識別圖連結規則概觀"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ ht-degree: 9%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="身分圖表連結規則 — 圖表模擬" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444054/?format=jpeg&nocache=1747851655237&captions=chi_hant" alt="身分圖表連結規則 — 圖表模擬"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="身分圖表連結規則 — 圖表模擬"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -101,7 +101,7 @@ ht-degree: 9%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="身分圖表連結規則 — 身分設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475973/?captions=chi_hant&format=jpeg&nocache=1747851655218" alt="身分圖表連結規則 — 身分設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="身分圖表連結規則 — 身分設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -109,7 +109,7 @@ ht-degree: 9%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="身分圖表連結規則 — 身分設定">身分圖表連結規則 — 身分設定</a>
+                        <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="身分圖表連結規則 — 身分設定">身分識別圖連結規則 - 身分識別設定</a>
                     </p>
                     <p class="is-size-6">瞭解如何啟用及設定身分圖表連結規則，以建置準確的客戶設定檔</p>
                 </div>

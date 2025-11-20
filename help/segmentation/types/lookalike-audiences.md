@@ -37,7 +37,7 @@ ht-degree: 9%
 
 為了使用相似見解，基礎對象&#x200B;**必須**&#x200B;符合以下資格條件：
 
-- 必須在Experience Platform中建立基礎對象&#x200B;**&#x200B;**。
+- 必須在Experience Platform中建立基礎對象&#x200B;****。
    - 外部產生的對象&#x200B;**不**&#x200B;符合相似深入分析的資格。
 - 基礎對象&#x200B;**必須**&#x200B;使用預設的合併原則。
 - 基礎對象&#x200B;**必須**&#x200B;不使用資料控管所限制的欄位。
@@ -47,7 +47,7 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"
 >title="條件不符"
->abstract="此對象目前不符合相似深入分析的條件，因為其擁有的設定檔數量低於訓練所需的最低數量，或是尚未觸發設定檔匯出。"
+>abstract="此對象目前不符合相似洞察的條件，因為其擁有的設定檔數量低於訓練所需的最低數量，或是尚未觸發設定檔匯出。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_processing"
@@ -124,7 +124,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="影響因素"
 >abstract="影響因素包括屬性、事件和對象會籍；這些因素是說明設定檔與基礎對象成員之相似度的重要依據。資料使用標籤和原則可用來排除某些資料，使其不被視為相似對象模式中的影響因素。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=zh-Hant#exclude" text="排除資料"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="排除資料"
 
 影響因素區段會顯示影響所選基本對象相似模型的前100個因素。 這些影響因子是個人資料屬性、體驗事件和對象會籍，在說明基本對象的相似之處時是最重要的。 瞭解主要影響因素，可讓您針對此對象以及您從中建立的任何相似對象，更妥善地個人化您的行銷內容。 請注意，不會顯示影響相似模型的所有影響因素。
 

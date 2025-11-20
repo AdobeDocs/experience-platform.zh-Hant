@@ -5,7 +5,7 @@ description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1236'
 ht-degree: 4%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->* 若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要連線到支援資料集匯出的目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要連線到支援資料集匯出的目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage and Activate Dataset Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 ## 概觀 {#overview}
 
@@ -23,29 +23,29 @@ ht-degree: 4%
 
 ## 在目錄中尋找所需的目的地 {#setup}
 
-1. 移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
+1. 前往「**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**」，然後選取「**[!UICONTROL Catalog]**」標籤。
 
    ![Experience Platform UI熒幕擷圖，顯示目的地目錄頁面。](../assets/ui/connect-destinations/catalog.png)
 
 2. 目錄中的目的地卡片可能會有不同的動作控制項，實際情形取決於您是否有現有的目的地連線，以及目的地是否支援啟用受眾、匯出資料集或兩者。 您可能會看見目的地卡片的下列任一控制項：
 
-   * **[!UICONTROL 設定]**。 您必須先設定與此目的地的連線，才能啟用對象或匯出資料集。
-   * **[!UICONTROL 啟動]**。 已經設定連線到此目的地。 此目的地支援對象啟用和資料集匯出。
-   * **[!UICONTROL 啟用對象]**。 已經設定連線到此目的地。 此目的地僅支援對象啟用。
+   * **[!UICONTROL Set up]**。您必須先設定與此目的地的連線，才能啟用對象或匯出資料集。
+   * **[!UICONTROL Activate]**。已經設定連線到此目的地。 此目的地支援對象啟用和資料集匯出。
+   * **[!UICONTROL Activate audiences]**。已經設定連線到此目的地。 此目的地僅支援對象啟用。
 
    如需這些控制項之間差異的詳細資訊，您也可以參閱目的地工作區檔案的[目錄](../ui/destinations-workspace.md#catalog)區段。
 
-   根據您可用的控制項，選取&#x200B;**[!UICONTROL 設定]**、**[!UICONTROL 啟用]**&#x200B;或&#x200B;**[!UICONTROL 啟用對象]**。
+   選取&#x200B;**[!UICONTROL Set up]**、**[!UICONTROL Activate]**&#x200B;或&#x200B;**[!UICONTROL Activate audiences]** （視您可用的控制項而定）。
 
    ![Experience Platform UI熒幕擷圖，顯示醒目提示「設定」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/set-up.png)
 
    ![Experience Platform UI熒幕擷圖，顯示反白顯示「啟用對象」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/activate-segments.png)
 
-3. 如果您已選取&#x200B;**[!UICONTROL 設定]**，請跳至下一個步驟，以[驗證](#authenticate)至目的地。
+3. 如果您已選取&#x200B;**[!UICONTROL Set up]**，請跳至下一個步驟，以[驗證](#authenticate)至目的地。
 
-   若您選取&#x200B;**[!UICONTROL 啟用]**、**[!UICONTROL 啟用對象]**&#x200B;或&#x200B;**[!UICONTROL 匯出資料集]**，您現在可以看到現有目的地連線的清單。
+   若您選取&#x200B;**[!UICONTROL Activate]**、**[!UICONTROL Activate audiences]**&#x200B;或&#x200B;**[!UICONTROL Export datasets]**，您現在可以看到現有目的地連線的清單。
 
-   選取&#x200B;**[!UICONTROL 設定新目的地]**&#x200B;以建立與目的地的新連線。
+   選取&#x200B;**[!UICONTROL Configure new destination]**&#x200B;以建立與目的地的新連線。
 
    ![Experience Platform UI熒幕擷圖，顯示可用目的地的清單，並反白顯示「設定新目的地」控制項。](../assets/ui/connect-destinations/configure-new-destination.png)
 
@@ -60,10 +60,10 @@ ht-degree: 4%
 
 根據您連線到的目的地，您可能會被帶往目的地合作夥伴的頁面進行驗證，或者系統可能會要求您直接在Experience Platform工作流程中輸入驗證認證。
 
-設定新的目的地連線時，您必須提供&#x200B;**[!UICONTROL 帳戶名稱]**，以及選擇性的&#x200B;**[!UICONTROL 描述]**。 這些欄位適用於所有目的地。
+設定新的目的地連線時，您必須提供&#x200B;**[!UICONTROL Account name]**&#x200B;以及（選擇性） **[!UICONTROL Description]**。 這些欄位適用於所有目的地。
 
-* **[!UICONTROL 帳戶名稱]**：輸入可協助您日後輕鬆識別此目的地帳戶的名稱。 如果您有多個連線連至同一目標，這個做法尤其實用。
-* **[!UICONTROL 描述]** （選擇性）：新增任何可協助您或您的團隊區分帳戶的其他詳細資料，例如連線的目的或相關的業務內容。
+* **[!UICONTROL Account name]**：輸入名稱，協助您日後輕鬆識別此目的地帳戶。 如果您有多個連線連至同一目標，這個做法尤其實用。
+* **[!UICONTROL Description]** （選擇性）：新增任何其他可協助您或您的團隊區分帳戶的詳細資料，例如連線的目的或相關的業務內容。
 
 在這些欄位中提供清楚的描述性資訊，可讓您在啟用對象時，更輕鬆地管理和選取正確的目的地帳戶。
 
@@ -113,7 +113,7 @@ ht-degree: 4%
 
    ![[設定新目的地]對話方塊中反白了內容中目的地警示訂閱選項。](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
-2. 選取&#x200B;**[!UICONTROL 下一步]**。
+2. 選擇「**[!UICONTROL Next]**」。
 
    ![反白顯示[設定新目的地]對話方塊的[下一步]控制項，讓使用者繼續進行工作流程的下一步。](../assets/ui/connect-destinations/next.png)
 
@@ -123,7 +123,7 @@ ht-degree: 4%
 
    ![此設定新目的地對話方塊中會反白顯示可用的行銷動作。 用來完成「連線至目的地」工作流程的可用控制項也會反白顯示。](../assets/ui/connect-destinations/governance.png)
 
-2. 選取&#x200B;**[!UICONTROL 儲存並退出]**&#x200B;以儲存目的地組態，或選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續前往對象資料[啟動流程](activation-overview.md)。
+2. 選取&#x200B;**[!UICONTROL Save & Exit]**&#x200B;以儲存目的地組態，或選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續前往對象資料[啟動流程](activation-overview.md)。
 
 ## 後續步驟 {#next-steps}
 

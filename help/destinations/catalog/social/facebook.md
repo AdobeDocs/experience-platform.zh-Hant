@@ -138,8 +138,8 @@ ht-degree: 5%
 >[!NOTE]
 >
 >來自未雜湊名稱空間的資料在啟用時由[!DNL Experience Platform]自動雜湊。
->&#x200B;> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
->&#x200B;> **[!UICONTROL Apply transformation]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
+> 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。
+> **[!UICONTROL Apply transformation]**&#x200B;選項只有在您選取屬性做為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
 
 ![套用對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -157,7 +157,7 @@ ht-degree: 5%
 
 以下影片也會示範設定[!DNL Facebook]目的地及啟用對象的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
    ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL Edit details]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL Reconnect OAuth]**&#x200B;並使用您的Facebook認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL Reconnect OAuth]**並使用您的Facebook認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]

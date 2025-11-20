@@ -4,8 +4,8 @@ description: 有關如何在Adobe Experience Platform中管理許可權和控制
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1358'
-ht-degree: 27%
+source-wordcount: '1335'
+ht-degree: 26%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 27%
 
 ## 快速入門
 
-若要設定資料收集的存取控制，您必須針對與Adobe Experience Platform資料收集產品整合的組織擁有管理員許可權。 若要能授予或撤回權限，至少要擁有&#x200B;**產品設定檔管理員**&#x200B;的角色。其他可管理權限的管理員角色為&#x200B;**產品管理員** (可管理產品內的所有輪廓) 和&#x200B;**系統管理員** (沒有任何限制)。如需詳細資訊，請參閱 Adobe 企業版管理指南中有關[管理角色](https://helpx.adobe.com/tw/enterprise/using/admin-roles.html)的文章。
+若要設定資料收集的存取控制，您必須針對與Adobe Experience Platform資料收集產品整合的組織擁有管理員許可權。 若要能授予或撤回權限，至少要擁有&#x200B;**產品設定檔管理員**&#x200B;的角色。其他可管理權限的管理員角色為&#x200B;**產品管理員** (可管理產品內的所有輪廓) 和&#x200B;**系統管理員** (沒有任何限制)。如需詳細資訊，請參閱 Adobe 企業版管理指南中有關[管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html)的文章。
 
 本指南假設您熟悉基本的 Admin Console 概念，例如產品設定檔以及它們如何授予個別使用者和群組產品權限。如需詳細資訊，請參閱 [Admin Console 使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)。
 
@@ -52,7 +52,7 @@ Adobe Experience Platform資料收集下的許可權可控制對標籤和事件�
 
 | 類別 | 權限 | 說明 |
 | --- | --- | --- |
-| 平台 | Web | 與其他屬性許可權結合時，授予[Web屬性](../tags/ui/administration/companies-and-properties.md)的存取權。 |
+| 平台 | 網頁 | 與其他屬性許可權結合時，授予[Web屬性](../tags/ui/administration/companies-and-properties.md)的存取權。 |
 | 平台 | 行動 | 與其他屬性許可權結合時，授予[行動屬性](../tags/ui/administration/companies-and-properties.md)的存取權。 |
 | 平台 | Edge | 與其他屬性許可權結合時，授予[事件轉送Edge屬性](../tags/ui/event-forwarding/getting-started.md)的存取權。 |
 | 屬性 | （不適用） | 根據貴組織下已建立的屬性，您可以在Admin Console中透過此許可權類別控制每個屬性的存取權。<br><br>使用者的屬性許可權只適用於透過此許可權類別授予其存取權的屬性。 |
@@ -87,13 +87,13 @@ Adobe Experience Platform資料收集下的許可權可控制對標籤和事件�
 >
 >若要管理角色的許可權，您需要管理員許可權。 如果您沒有管理員許可權，請聯絡您的系統管理員。
 
-Experience Cloud的&#x200B;**[!UICONTROL 許可權]**&#x200B;區段可讓您定義使用者角色和原則，以管理產品應用程式內功能和物件的存取權。
+Experience Cloud的&#x200B;**[!UICONTROL Permissions]**&#x200B;區段可讓您定義使用者角色和原則，以管理產品應用程式內功能和物件的存取權。
 
-透過[!UICONTROL 許可權]，您可以建立和管理角色，並為這些角色指派所需的資源許可權。
+透過[!UICONTROL Permissions]，您可以建立和管理角色，並為這些角色指派所需的資源許可權。
 
 ![Adobe Experience Cloud醒目提示許可權產品。](./images/permissions/permissions-product.png)
 
-若要存取資料收集功能，您必須啟用&#x200B;**[!UICONTROL 沙箱]**、**[!UICONTROL 資料模型]**、**[!UICONTROL Identity Management]**&#x200B;和&#x200B;**[!UICONTROL 資料收集]**&#x200B;類別中的所有許可權。
+若要存取資料收集功能，您必須啟用&#x200B;**[!UICONTROL Sandboxes]**、**[!UICONTROL Data Modeling]**、**[!UICONTROL Identity Management]**&#x200B;和&#x200B;**[!UICONTROL Data Collection]**&#x200B;類別中的所有許可權。
 
 ![顯示Admin Console中資料彙集產品卡的影像](./images/permissions/platform-permission-card.png)
 
@@ -105,17 +105,17 @@ Experience Cloud的&#x200B;**[!UICONTROL 許可權]**&#x200B;區段可讓您定�
 
 ### 在Adobe Experience Platform Data Collection下管理許可權 {#manage-collection}
 
-若要管理這些許可權，請登入Admin Console並從頂端導覽列中選取&#x200B;**[!UICONTROL 產品]**，然後選取&#x200B;**[!UICONTROL Adobe Experience Platform資料彙集]**。
+若要管理這些許可權，請登入Admin Console並從頂端導覽列中選取&#x200B;**[!UICONTROL Products]**，然後選取&#x200B;**[!UICONTROL Adobe Experience Platform Data Collection]**。
 
 ![顯示Admin Console中資料彙集產品卡的影像](./images/permissions/data-collection-card.png)
 
 #### 選取或建立產品設定檔
 
-下一個畫面顯示貴組織下資料收集的可用產品設定檔清單，預設設定檔為&#x200B;**[!DNL Default Data Collection All Access]**。 您可以視需要選擇編輯預設的產品設定檔，也可以選擇&#x200B;**[!UICONTROL 新增設定檔]**&#x200B;來建立設定檔。 如果您在貴組織中有多個角色或使用者群組，而這些需要不同層級的存取權限，則應為每個角色或使用者建立單獨的產品設定檔。
+下一個畫面顯示貴組織下資料收集的可用產品設定檔清單，預設設定檔為&#x200B;**[!DNL Default Data Collection All Access]**。 您可以視需要選擇編輯預設的產品設定檔，也可以選擇&#x200B;**[!UICONTROL New Profile]**&#x200B;建立設定檔。 如果您在貴組織中有多個角色或使用者群組，而這些需要不同層級的存取權限，則應為每個角色或使用者建立單獨的產品設定檔。
 
 ![顯示Admin Console中資料收集之產品設定檔的影像](./images/permissions/new-profile.png)
 
-選取或建立產品設定檔後，您可以使用&#x200B;**[!UICONTROL 編輯]**&#x200B;圖示來開始[編輯設定檔的許可權](#edit-permissions)，或選取&#x200B;**[!UICONTROL 使用者]**&#x200B;索引標籤來開始[將使用者](#assign-users)指派給設定檔。
+選取或建立產品設定檔後，您可以使用&#x200B;**[!UICONTROL Edit]**&#x200B;圖示來開始[編輯設定檔的許可權](#edit-permissions)，或選取&#x200B;**[!UICONTROL Users]**&#x200B;索引標籤來開始[將使用者](#assign-users)指派給設定檔。
 
 ![顯示產品設定檔 Admin Console 的權限索引標籤的影像](./images/permissions/edit-permission-categories.png)
 
@@ -129,7 +129,7 @@ Experience Cloud的&#x200B;**[!UICONTROL 許可權]**&#x200B;區段可讓您定�
 
 ![影像顯示公司許可權區段在許可權](./images/permissions/switch-category.png)底下
 
-完成設定權限後，即可選取「**[!UICONTROL 儲存]**」。
+完成設定許可權之後，請選取&#x200B;**[!UICONTROL Save]**。
 
 ![顯示已儲存的產品設定檔權限設定的影像](./images/permissions/save-permissions.png)
 
@@ -139,7 +139,7 @@ Experience Cloud的&#x200B;**[!UICONTROL 許可權]**&#x200B;區段可讓您定�
 
 #### 將使用者指派給產品設定檔 {#assign-users}
 
-若要將使用者指派至產品設定檔 (並授予他們輪廓的設定權限)，請選取「**[!UICONTROL 使用者]**」索引標籤，接著選取「**[!UICONTROL 新增使用者]**」。
+若要將使用者指派給產品設定檔（並授予他們設定檔的設定許可權），請選取&#x200B;**[!UICONTROL Users]**&#x200B;索引標籤，然後選取&#x200B;**[!UICONTROL Add user]**。
 
 ![顯示 Admin Console 中產品設定檔的使用者索引標籤的影像](./images/permissions/manage-users.png)
 

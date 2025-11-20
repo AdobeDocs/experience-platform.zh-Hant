@@ -5,7 +5,7 @@ description: 瞭解如何使用計算欄位功能，對匯出至雲端儲存空�
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1604'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="新增計算欄位"
 >abstract="<p>使用「**新增計算欄位**」控制項對匯出到雲端儲存目標的資料執行各種資料轉換。例如，您可以對資料進行雜湊、將陣列串連成字串等等。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=zh-Hant#examples" text="範例"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="範例"
 
 >[!AVAILABILITY]
 >
@@ -31,8 +31,8 @@ ht-degree: 8%
 
 若要使用計算欄位進行資料轉換：
 
-1. [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地。 連線到所需的雲端目的地時，將&#x200B;**[!UICONTROL 匯出陣列、對應、物件]** [選項關閉](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)。
-2. 進行雲端儲存空間目的地[&#128279;](/help/destinations/ui/activate-batch-profile-destinations.md)的啟動步驟，並前往[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。
+1. [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地。 連線到所需的雲端目的地時，將&#x200B;**[!UICONTROL Export arrays, maps, objects]** [選項切換為關閉](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle)。
+2. 進行雲端儲存空間目的地[的](/help/destinations/ui/activate-batch-profile-destinations.md)啟動步驟，並前往[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。
 
 ## 如何使用計算欄位 {#how-to-export-calculated-fields}
 
@@ -50,11 +50,11 @@ ht-degree: 8%
 >
 >無論何時使用計算欄位，除了套用的任何資料轉換函式之外，您還必須使用`array_to_string`函式將欄位串連到字串中。
 
-在雲端儲存體目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL 新增計算欄位]**。
+在雲端儲存體目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL Add calculated field]**。
 
 >[!TIP]
 >
->已針對已關閉&#x200B;**[!UICONTROL 匯出陣列、對應及物件]**&#x200B;控制項的目的地連線，停用&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;控制項。 [閱讀全文](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)。
+>已針對已關閉&#x200B;**[!UICONTROL Add calculated field]**&#x200B;控制項的目的地連線停用&#x200B;**[!UICONTROL Export arrays, maps, and objects]**&#x200B;控制項。 [閱讀全文](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)。
 
 ![新增批次啟動工作流程對應步驟中反白顯示的計算欄位。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
@@ -62,21 +62,21 @@ ht-degree: 8%
 
 ![計算欄位功能的模型視窗，尚未選取函式。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-例如，在`organizations`欄位上使用`array_to_string`函式，如下所示，將組織陣列匯出為CSV檔案中的字串。 檢視[更多關於此專案及下方](#array-to-string-function-export-arrays)其他範例的資訊。
+例如，在`array_to_string`欄位上使用`organizations`函式，如下所示，將組織陣列匯出為CSV檔案中的字串。 檢視[更多關於此專案及下方](#array-to-string-function-export-arrays)其他範例的資訊。
 
 ![已選取陣列至字串函式的計算欄位功能的模型視窗。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
-選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以保留計算欄位並返回對應步驟。
+選取&#x200B;**[!UICONTROL Save]**&#x200B;以保留計算欄位並返回對應步驟。
 
 ![已選取陣列至字串函式，且[儲存]控制項反白顯示的計算欄位功能的模型視窗。](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
-回到工作流程的對應步驟，在匯出的檔案中，以您要用於此欄位的欄標題值填入&#x200B;**[!UICONTROL 目標欄位]**。
+回到工作流程的對應步驟，在匯出的檔案中，以您要用於此欄位的欄標題值填入&#x200B;**[!UICONTROL Target field]**。
 
 ![目標欄位反白顯示的對應步驟。](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![選取目標欄位2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
-準備就緒後，選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續執行啟動工作流程的下一步。
+準備就緒後，選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續執行啟動工作流程的下一步。
 
 ![目標欄位反白且目標值已填入的對映步驟。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
@@ -101,7 +101,7 @@ ht-degree: 8%
 
 ## 用來執行資料轉換的函式範例 {#examples}
 
-如需上述部分函式，請參閱以下章節中的範例和進一步資訊。 如需列出的其餘函式，請參閱「資料準備」區段[&#128279;](/help/data-prep/functions.md)中的一般函式檔案。
+如需上述部分函式，請參閱以下章節中的範例和進一步資訊。 如需列出的其餘函式，請參閱「資料準備」區段[中的](/help/data-prep/functions.md)一般函式檔案。
 
 ### `array_to_string`函式以匯出陣列 {#array-to-string-function-export-arrays}
 
@@ -191,7 +191,7 @@ John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 
 使用`coalesce`函式來存取並將陣列中的第一個非null元素匯出至字串。
 
-例如，您可以使用`coalesce(subscriptions.hasPromotion)`語法來傳回陣列中`false`值的前`true`個，以結合下列XDM欄位，如對應熒幕擷圖中所示：
+例如，您可以使用`coalesce(subscriptions.hasPromotion)`語法來傳回陣列中`true`值的前`false`個，以結合下列XDM欄位，如對應熒幕擷圖中所示：
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]`陣列
 * `person.name.firstName`字串
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->不同於此頁面上說明的其他函式，若要匯出陣列的個別元素，您&#x200B;*不需要*&#x200B;在UI中使用&#x200B;**[!UICONTROL 計算欄位]**&#x200B;控制項。
+>不同於此頁面上說明的其他函式，若要匯出陣列的個別元素，您&#x200B;*不需要*&#x200B;在UI中使用&#x200B;**[!UICONTROL Calculated fields]**&#x200B;控制項。
 
 您可以存取陣列的索引，以從陣列匯出單一專案。 例如，與上述的`size_of`函式範例類似，如果您只想在客戶第一次購買特定產品時存取和匯出，您可以使用`purchaseTime[0]`匯出時間戳記的第一個元素，`purchaseTime[1]`匯出時間戳記的第二個元素，`purchaseTime[2]`匯出時間戳記的第三個元素，依此類推。
 

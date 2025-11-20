@@ -6,14 +6,14 @@ role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 81%
+source-wordcount: '769'
+ht-degree: 71%
 
 ---
 
 # 建立、共用和重複使用教戰手冊執行個體
 
-若要使用教戰手冊，請瀏覽至&#x200B;**[!UICONTROL 使用案例] > [!UICONTROL 教戰手冊]**。瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
+若要使用教戰手冊，請瀏覽至&#x200B;**[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**。 瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
 
 ## 建立教戰手冊實例 {#create-playbook-instance}
 
@@ -22,7 +22,7 @@ ht-degree: 81%
 >title="建立執行個體"
 >abstract="產生資產清單 (例如旅程、對象、結構描述或目的地) 以在旅程或啟動情境中使用。"
 
-在建立教戰手冊執行個體之前，請先探索可用的教戰手冊，以[選擇正確的教戰手冊](/help/use-case-playbooks/playbooks/choose.md)。 當您準備好繼續使用教戰手冊並建立執行個體時，請選取&#x200B;**[!UICONTROL 建立執行個體]**&#x200B;以繼續使用教戰手冊並產生技術資產。
+在建立教戰手冊執行個體之前，請先探索可用的教戰手冊，以[選擇正確的教戰手冊](/help/use-case-playbooks/playbooks/choose.md)。 當您準備好繼續使用行動手冊並建立執行個體時，請選取「**[!UICONTROL Create Instance]**」以繼續使用行動手冊並產生技術資產。
 
 ![建立教戰手冊的執行個體。](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -32,7 +32,7 @@ ht-degree: 81%
 
 ### 使用設定控制編輯執行個體名稱和說明 {#edit-instance-metadata}
 
-根據教戰手冊建立執行個體後，您可以將該執行個體個人化，以和其他使用相同教戰手冊建立之執行個體有所區別。選取設定控制，如下所示。編輯名稱、說明和註釋，並在完成時選取&#x200B;**[!UICONTROL 儲存]**。
+根據教戰手冊建立執行個體後，您可以將該執行個體個人化，以和其他使用相同教戰手冊建立之執行個體有所區別。選取設定控制，如下所示。編輯名稱、說明和附註，然後在完成時選取&#x200B;**[!UICONTROL Save]**。
 
 ![編輯執行個體的名稱和說明。](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
@@ -45,9 +45,9 @@ ht-degree: 81%
 重要的是要了解產生的資產會依據您啟用的使用案例而有所不同：
 
 * 不同類型的教戰手冊會產生不同的資產。這些資產是專門為了透過教戰手冊實現的使用案例所建立的。例如，行動手冊會產生結構、受眾、歷程和訊息。 另一個教戰手冊產生要為其啟用資料的結構描述、受眾和目的地。
-* 不同教戰手冊之間的資產本身有所不同。例如，若為「**[!UICONTROL 傳送生日訊息給來賓]**」教戰手冊，所建立的客群會具有規則 `birthday=today AND year=any`。
+* 不同教戰手冊之間的資產本身有所不同。例如，對於&#x200B;**[!UICONTROL Send A Birthday Message To Guests]**&#x200B;行動手冊，建立的對象具有規則`birthday=today AND year=any`。
 
-以範例說明，若為「**[!UICONTROL 捨棄的購物車：商品]**」教戰手冊，您可以看到建立了一個特定的歷程，其中會包括為此使用案例所建立的訊息。
+為了說明範例，對於&#x200B;**[!UICONTROL Abandoned Cart: Merchandise]** Playbook，您可以看到已建立特定歷程，其中包含為此使用案例建立的訊息。
 
 ![根據使用案例教戰手冊建立的歷程。](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
 

@@ -4,8 +4,8 @@ description: 瞭解如何在Adobe Experience Platform UI中排程資料集有效
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 18%
+source-wordcount: '837'
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 18%
 >title="刪除不要的或過期的客戶記錄和資料集"
 >abstract="<h2>說明</h2><p>要管理與合規性無關的 Experience Platform 資料的生命週期，您可以刪除消費者記錄並排程資料集的過期日。若要建立或管理資料主體要求，請參閱「執行資料主體隱私權要求」使用案例區塊。</p>"
 
-Adobe Experience Platform UI中的[[!UICONTROL 資料生命週期]工作區](./overview.md)可讓您排程資料集的到期日。 當資料集到達其到期日時，資料湖、身分服務和即時客戶設定檔會開始個別程式，從各自的服務中移除資料集的內容。 從所有三項服務中刪除資料後，到期日即會標示為完成。
+Adobe Experience Platform UI中的[[!UICONTROL Data Lifecycle]工作區](./overview.md)可讓您為資料集排程有效期。 當資料集到達其到期日時，資料湖、身分服務和即時客戶設定檔會開始個別程式，從各自的服務中移除資料集的內容。 從所有三項服務中刪除資料後，到期日即會標示為完成。
 
 >[!WARNING]
 >
@@ -39,29 +39,29 @@ Adobe Experience Platform UI中的[[!UICONTROL 資料生命週期]工作區](./o
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="說明"
->abstract="<ul><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=zh-Hant#">資料生命週期</a>，然後選取<b>建立要求</b>。</li><li>如果您要刪除記錄：</li>   <li>選取<b>記錄</b>。</li>   <li>選擇要從中刪除記錄的特定資料集，或選擇從所有資料集中刪除記錄的選項。</li>   <li>提供要刪除其記錄之消費者的身分識別。選取<b>新增身分識別</b>一次提供一個身分識別，或選取<b>選擇檔案</b>改上傳身分識別的 JSON 檔案。</li>   <li>如果需要，選取 <b>範本</b> 以查看 JSON 檔案的預期格式。</li><li>如果您想要 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=zh-Hant#schedule-dataset-expiration">排程資料集的過期日</a>，請參閱文件以取得指示。</li></ul>"
+>abstract="<ul><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html#">資料生命週期</a>，然後選取<b>建立要求</b>。</li><li>如果您要刪除記錄：</li>   <li>選取<b>記錄</b>。</li>   <li>選擇要從中刪除記錄的特定資料集，或選擇從所有資料集中刪除記錄的選項。</li>   <li>提供要刪除其記錄之消費者的身分識別。選取<b>新增身分識別</b>一次提供一個身分識別，或選取<b>選擇檔案</b>改上傳身分識別的 JSON 檔案。</li>   <li>如果需要，選取 <b>範本</b> 以查看 JSON 檔案的預期格式。</li><li>如果您想要 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">排程資料集的過期日</a>，請參閱文件以取得指示。</li></ul>"
 
-若要建立請求，請選取工作區首頁面中的&#x200B;**[!UICONTROL 建立請求]**。
+若要建立請求，請從工作區的首頁面中選取&#x200B;**[!UICONTROL Create request]**。
 
 >[!IMPORTANT]
 >
 >Real-Time CDP、Adobe Journey Optimizer和Customer Journey Analytics使用者有20個擱置中的排程資料集到期工作單。 Healthcare Shield和Privacy and Security Shield使用者有50個擱置中的排程資料集到期工作單。 這表示您可以同時排程刪除20或50個資料集。<br>例如，如果您有20個排程的資料集有效期，而一個資料集將於明天刪除，則在刪除該資料集之前，您無法設定任何其他有效期。
 
-![強調顯示[!UICONTROL 建立請求]的[!UICONTROL 資料生命週期]工作區。](../images/ui/ttl/create-request-button.png)
+![反白顯示[!UICONTROL Data Lifecycle]的[!UICONTROL Create request]工作區。](../images/ui/ttl/create-request-button.png)
 
-此時會出現請求建立工作流程。 在[!UICONTROL 要求的動作]區段下，選取&#x200B;**[!UICONTROL 刪除資料集]**&#x200B;以更新資料集到期排程的控制項。
+此時會出現請求建立工作流程。 在[!UICONTROL Requested Action]區段下，選取&#x200B;**[!UICONTROL Delete Dataset]**&#x200B;以更新資料集到期排程的控制項。
 
-![要求建立工作流程中反白了[!UICONTROL 刪除資料集]選項。](../images/ui/ttl/dataset-selected.png)
+![要求建立工作流程中反白了[!UICONTROL Delete dataset]選項。](../images/ui/ttl/dataset-selected.png)
 
 ### 選取日期和資料集 {#select-date-and-dataset}
 
-在&#x200B;**[!UICONTROL 要求的動作]**&#x200B;區段下，選取要刪除資料集的日期。 您可以手動輸入日期（格式為`mm/dd/yyyy`）或選取行事曆圖示(![行事曆圖示。](/help/images/icons/calendar.png))以從對話方塊中選取日期。
+在&#x200B;**[!UICONTROL Requested Action]**&#x200B;區段下，選取要刪除資料集的日期。 您可以手動輸入日期（格式為`mm/dd/yyyy`）或選取行事曆圖示(![行事曆圖示。](/help/images/icons/calendar.png))以從對話方塊中選取日期。
 
 ![已針對資料集選取並反白到期日的行事曆對話方塊。](../images/ui/ttl/select-date.png)
 
-接下來，在&#x200B;**[!UICONTROL 資料集詳細資料]**&#x200B;下，選取資料庫圖示(![資料庫圖示。](/help/images/icons/database.png))以開啟資料集選取對話方塊。 從清單中選擇要套用到期日的資料集，然後選取&#x200B;**[!UICONTROL 完成]**。
+接下來，在&#x200B;**[!UICONTROL Dataset Details]**&#x200B;下選取資料庫圖示(![資料庫圖示。](/help/images/icons/database.png))以開啟資料集選取對話方塊。 從清單中選擇要套用到期日的資料集，然後選取&#x200B;**[!UICONTROL Done]**。
 
-![已選取資料集並醒目提示[!UICONTROL 完成]的[!UICONTROL 選取資料集]對話方塊。](../images/ui/ttl/select-dataset.png)
+![已選取資料集並醒目提示[!UICONTROL Select dataset]的[!UICONTROL Done]對話方塊。](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
 >
@@ -69,13 +69,13 @@ Adobe Experience Platform UI中的[[!UICONTROL 資料生命週期]工作區](./o
 
 ### 提交請求 {#submit-request}
 
-[!UICONTROL 資料集詳細資料]區段會填入，以包含所選資料集的主要身分和結構描述。 在&#x200B;**[!UICONTROL 要求設定]**&#x200B;下，輸入要求的名稱和選擇性描述，然後是&#x200B;**[!UICONTROL 提交]**。
+[!UICONTROL Dataset Details]區段會填入，以包含所選資料集的主要身分和結構描述。 在&#x200B;**[!UICONTROL Request settings]**&#x200B;底下，輸入要求的名稱和選擇性描述，然後輸入&#x200B;**[!UICONTROL Submit]**。
 
-![已完成的資料集到期要求，其中[!UICONTROL 要求設定]和[!UICONTROL 提交]按鈕已強調顯示。](../images/ui/ttl/submit.png)
+![已完成的資料集到期要求，並反白顯示[!UICONTROL Request settings]和[!UICONTROL Submit]按鈕。](../images/ui/ttl/submit.png)
 
-[!UICONTROL Confirm要求]對話方塊隨即顯示。 系統會要求您確認資料集名稱以及要刪除資料集的日期。 選取&#x200B;**[!UICONTROL 提交]**&#x200B;以繼續。
+[!UICONTROL Confirm request]對話方塊隨即顯示。 系統會要求您確認資料集名稱以及要刪除資料集的日期。 選取&#x200B;**[!UICONTROL Submit]**&#x200B;以繼續。
 
-提交請求後，工作單即建立並顯示在[!UICONTROL 資料生命週期]工作區的主要標籤上。 從這裡，您可以在工單處理請求時監視工單的狀態。
+提交請求後，工作單即建立並顯示在[!UICONTROL Data Lifecycle]工作區的主要標籤上。 從這裡，您可以在工單處理請求時監視工單的狀態。
 
 >[!NOTE]
 >
@@ -83,7 +83,7 @@ Adobe Experience Platform UI中的[[!UICONTROL 資料生命週期]工作區](./o
 
 ## 編輯或取消資料集有效期 {#edit-or-cancel}
 
-若要編輯或取消資料集有效期，請選取工作區首頁面上的&#x200B;**[!UICONTROL 資料集]**，然後從清單中選取資料集有效期。
+若要編輯或取消資料集有效期，請在工作區首頁面上選取「**[!UICONTROL Dataset]**」，然後從清單中選取資料集有效期。
 
 在資料集到期日的詳細資訊頁面上，右側邊欄會顯示用於編輯或取消已排程刪除的控制項。
 

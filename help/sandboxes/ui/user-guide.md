@@ -6,7 +6,7 @@ description: 本檔案提供如何在Adobe Experience Platform使用者介面中
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1086'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 ## 檢視沙箱
 
-在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 沙箱]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以開啟[!UICONTROL 沙箱]儀表板。 儀表板會列出貴組織的所有可用沙箱，包括其個別型別（生產或開發）。
+在Experience Platform UI中，在左側導覽中選取「**[!UICONTROL Sandboxes]**」，然後選取「**[!UICONTROL Browse]**」標籤以開啟「[!UICONTROL Sandboxes]」儀表板。 儀表板會列出貴組織的所有可用沙箱，包括其個別型別（生產或開發）。
 
 ![已選取瀏覽標籤的沙箱儀表板，顯示可用的沙箱清單。](../images/ui/view-sandboxes.png)
 
@@ -49,27 +49,27 @@ ht-degree: 4%
 
 >[!WARNING]
 >
->建立新沙箱需要您將它新增到[[!UICONTROL 許可權]](../../access-control/abac/ui/permissions.md)中的角色，然後才能開始使用。 若要瞭解如何布建角色的沙箱，請參閱角色的[管理沙箱](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role)檔案。
+>建立新沙箱需要您將它新增到[[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md)中的角色，然後才能開始使用。 若要瞭解如何布建角色的沙箱，請參閱角色的[管理沙箱](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role)檔案。
 
 使用下列影片快速概略說明如何在Experience Platform中使用沙箱。
 
->[!VIDEO](https://video.tv.adobe.com/v/3430302/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-若要建立新沙箱，請選取畫面右上角的&#x200B;**[!UICONTROL 建立沙箱]**。
+若要建立新沙箱，請選取畫面右上角的&#x200B;**[!UICONTROL Create sandbox]**。
 
 ![create-sandbox](../images/ui/create-sandbox.png)
 
-**[!UICONTROL 建立沙箱]**&#x200B;對話方塊就會顯示。 選取&#x200B;**[!UICONTROL 型別]**&#x200B;下拉式清單，然後選擇[!UICONTROL 開發]或[!UICONTROL 生產]沙箱型別。
+**[!UICONTROL Create sandbox]**&#x200B;對話方塊就會顯示。 選取&#x200B;**[!UICONTROL Type]**&#x200B;下拉式清單，然後選擇[!UICONTROL Development]或[!UICONTROL Production]沙箱型別。
 
 ![沙箱型別選取器反白顯示的「建立沙箱」對話方塊。](../images/ui/sandbox-type.png)
 
-選取型別後，在&#x200B;**[!UICONTROL 名稱]**&#x200B;欄位中提供沙箱的名稱。 沙箱名稱是用於API呼叫的全小寫識別碼，因此應是唯一的且簡潔的。 沙箱名稱必須以字母開頭，最多可包含256個字元，且僅包含英數字元和連字型大小(-)。 接下來，在&#x200B;**[!UICONTROL 標題]**&#x200B;欄位中提供沙箱的標題。 標題的說明性應該要能讓人看得懂，並且要足以輕鬆識別。
+選取型別後，在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中提供沙箱的名稱。 沙箱名稱是用於API呼叫的全小寫識別碼，因此應是唯一的且簡潔的。 沙箱名稱必須以字母開頭，最多可包含256個字元，且僅包含英數字元和連字型大小(-)。 接下來，在&#x200B;**[!UICONTROL Title]**&#x200B;欄位中為您的沙箱提供標題。 標題的說明性應該要能讓人看得懂，並且要足以輕鬆識別。
 
-完成後，選取&#x200B;**[!UICONTROL 建立]**。
+完成後，選取&#x200B;**[!UICONTROL Create]**。
 
 ![已填入「名稱」和「標題」且「建立」選項反白顯示的「建立沙箱」對話方塊。](../images/ui/sandbox-info.png)
 
-當您完成建立沙箱後，請重新整理頁面，新的沙箱會顯示在&#x200B;**[!UICONTROL 沙箱]**&#x200B;儀表板中，狀態為&quot;[!UICONTROL 正在建立]&quot;。 系統布建新沙箱大約需要30秒，之後沙箱的狀態會變更為&quot;[!UICONTROL 作用中]&quot;。
+當您完成沙箱的建立後，請重新整理頁面，新的沙箱就會出現在&#x200B;**[!UICONTROL Sandboxes]**&#x200B;儀表板中，且狀態為&quot;[!UICONTROL Creating]&quot;。 系統布建新沙箱大約需要30秒，之後其狀態會變更為&quot;[!UICONTROL Active]&quot;。
 
 ![反白顯示新建立沙箱的沙箱儀表板。](../images/ui/new-sandbox.png)
 
@@ -88,15 +88,15 @@ ht-degree: 4%
 
 對象構成目前未與沙箱重設功能整合，因此在執行沙箱重設之前，需要手動刪除對象。
 
-從左側導覽的&#x200B;**[!UICONTROL 客戶]**&#x200B;區段中選取&#x200B;**[!UICONTROL 對象]**，然後選取&#x200B;**[!UICONTROL 組合]**&#x200B;索引標籤。
+從左側導覽的&#x200B;**[!UICONTROL Audiences]**&#x200B;區段中選取&#x200B;**[!UICONTROL Customers]**，然後選取&#x200B;**[!UICONTROL Compositions]**&#x200B;索引標籤。
 
 ![選取並反白了[構成]索引標籤的[對象]儀表板。](../images/ui/audiences.png)
 
-接著，選取第一個對象旁邊的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 刪除]**。
+接著，選取第一個對象旁邊的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL Delete]**。
 
-![標示[!UICONTROL 刪除]選項的對象功能表。](../images/ui/delete-composition.png)
+![標示[!UICONTROL Delete]選項的對象功能表。](../images/ui/delete-composition.png)
 
-顯示成功刪除的確認訊息，並返回&#x200B;**[!UICONTROL 構成]**&#x200B;索引標籤。
+顯示成功刪除的確認訊息，並返回&#x200B;**[!UICONTROL Compositions]**&#x200B;索引標籤。
 
 對您的所有構成重複上述步驟。 這將會從對象詳細目錄中刪除所有對象。 移除所有對象後，您就可以繼續重設沙箱。
 
@@ -104,15 +104,15 @@ ht-degree: 4%
 
 重設生產或開發沙箱會刪除與該沙箱關聯的所有資源（結構描述、資料集等），同時維護沙箱的名稱和關聯的許可權。 此「乾淨」沙箱可繼續以相同名稱供擁有存取權的使用者使用。
 
-從沙箱清單中選取您要重設的沙箱。 在出現的右側導覽面板中，選取&#x200B;**[!UICONTROL 沙箱重設]**。
+從沙箱清單中選取您要重設的沙箱。 在出現的右側導覽面板中，選取&#x200B;**[!UICONTROL Sandbox reset]**。
 
 ![已選取所選沙箱的沙箱儀表板，且已反白顯示沙箱重設選項。](../images/ui/reset.png)
 
-會出現一個對話方塊，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL 繼續]**&#x200B;以繼續。
+會出現一個對話方塊，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL Continue]**&#x200B;以繼續。
 
 ![顯示重設對話方塊，並反白顯示[繼續]選項。](../images/ui/reset-warning.png)
 
-在最後的確認視窗中，在對話方塊中輸入沙箱的名稱，並選取&#x200B;**[!UICONTROL 重設]**。
+在最後的確認視窗中，在對話方塊中輸入沙箱的名稱，並選取&#x200B;**[!UICONTROL Reset]**。
 
 ![含有確認名稱欄位和重設選項的重設對話方塊已反白顯示。](../images/ui/reset-confirm.png)
 
@@ -124,15 +124,15 @@ ht-degree: 4%
 
 刪除生產或開發沙箱會永久移除與該沙箱相關聯的所有資源，包括許可權。
 
-從沙箱清單中選取您要刪除的沙箱。 在出現的右側導覽面板中，選取&#x200B;**[!UICONTROL 刪除]**。
+從沙箱清單中選取您要刪除的沙箱。 在出現的右側導覽面板中，選取&#x200B;**[!UICONTROL Delete]**。
 
 ![已選取所選沙箱的沙箱儀表板，並反白顯示[刪除]選項。](../images/ui/delete.png)
 
-會出現一個對話方塊，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL 繼續]**&#x200B;以繼續。
+會出現一個對話方塊，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL Continue]**&#x200B;以繼續。
 
 ![顯示刪除對話方塊，並反白顯示[繼續]選項。](../images/ui/delete-warning.png)
 
-在最後的確認視窗中，在對話方塊中輸入沙箱的名稱，並選取&#x200B;**[!UICONTROL 繼續]**。
+在最後的確認視窗中，在對話方塊中輸入沙箱的名稱，並選取&#x200B;**[!UICONTROL Continue]**。
 
 ![含有確認名稱欄位及繼續選項的刪除對話方塊已反白顯示。](../images/ui/delete-confirm.png)
 

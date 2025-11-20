@@ -5,7 +5,7 @@ description: 瞭解如何使用Adobe Experience Platform UI將Experience Platfor
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1202'
 ht-degree: 6%
 
 ---
@@ -26,11 +26,11 @@ ht-degree: 6%
 
 ## 將Adobe Campaign Managed Cloud Services連線至Experience Platform
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以用來建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示您可用來建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 您也可以使用搜尋列來縮小顯示的來源。
 
-在&#x200B;**[!UICONTROL Adobe應用程式]**&#x200B;類別下，選取&#x200B;**[!UICONTROL Adobe Campaign Managed Cloud Services]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
+在&#x200B;**[!UICONTROL Adobe applications]**&#x200B;類別下，選取&#x200B;**[!UICONTROL Adobe Campaign Managed Cloud Services]**，然後選取&#x200B;**[!UICONTROL Add data]**。
 
 ![顯示Adobe Campaign Managed Cloud Services卡片的來源目錄。](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -54,7 +54,7 @@ ht-degree: 6%
 >abstract="Adobe Campaign 資料庫中定義的實體的名稱。"
 >text="Learn more in documentation"
 
-[!UICONTROL 選取資料]步驟出現，提供您介面以設定您的[!UICONTROL Adobe Campaign執行個體]、[!UICONTROL 目標對應]和[!UICONTROL 結構描述名稱]。
+[!UICONTROL Select data]步驟出現，為您提供設定[!UICONTROL Adobe Campaign instance]、[!UICONTROL Target mapping]和[!UICONTROL Schema name]的介面。
 
 | 屬性 | 說明 |
 | --- | --- |
@@ -64,15 +64,15 @@ ht-degree: 6%
 
 ![您可以在此介面設定Adobe Campaign執行個體、目標對應和結構描述名稱。](../../../../images/tutorials/create/campaign/select-data.png)
 
-當您提供Campaign執行個體、目標對應和方案名稱的值後，畫面會更新以顯示方案預覽和範例資料集。 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
+當您提供Campaign執行個體、目標對應和方案名稱的值後，畫面會更新以顯示方案預覽和範例資料集。 完成後，選取&#x200B;**[!UICONTROL Next]**。
 
 ![結構描述階層的預覽以及資料集的範例](../../../../images/tutorials/create/campaign/preview.png)
 
 ### 使用現有的資料集
 
-[!UICONTROL 資料流詳細資料]頁面可讓您選取是要使用現有的資料集，還是要為資料流設定新的資料集。
+[!UICONTROL Dataflow detail]頁面可讓您選取您要使用現有的資料集，或是為資料流設定新的資料集。
 
-若要使用現有的資料集，請選取&#x200B;**[!UICONTROL 現有的資料集]**。 您可以使用[!UICONTROL 進階搜尋]選項或捲動下拉式選單中的現有資料集清單，來擷取現有資料集。
+若要使用現有的資料集，請選取&#x200B;**[!UICONTROL Existing dataset]**。 您可以使用[!UICONTROL Advanced search]選項或捲動下拉式選單中的現有資料集清單，來擷取現有資料集。
 
 選取資料集後，為資料流命名並選填說明。
 
@@ -80,7 +80,7 @@ ht-degree: 6%
 
 ### 使用新資料集
 
-若要使用新資料集，請選取&#x200B;**[!UICONTROL 新資料集]**，然後提供輸出資料集名稱和選用的說明。 接下來，使用[!UICONTROL 進階搜尋]選項，或捲動下拉式選單中的現有結構描述清單，選取要對應的結構描述。 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
+若要使用新的資料集，請選取&#x200B;**[!UICONTROL New dataset]**，然後提供輸出資料集名稱和選用的說明。 接下來，使用[!UICONTROL Advanced search]選項或捲動下拉式選單中的現有結構描述清單，選取要對應的結構描述。 完成後，選取&#x200B;**[!UICONTROL Next]**。
 
 ![顯示新資料集選項的介面。](../../../../images/tutorials/create/campaign/new-dataset.png)
 
@@ -88,13 +88,13 @@ ht-degree: 6%
 
 您可以啟用警報以接收有關資料流狀態的通知。 從清單中選取警報，以訂閱並接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱來源警示](../../alerts.md)的指南。
 
-當您完成提供詳細資料給資料流時，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供詳細資料給資料流時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ![您可以為資料流啟用的不同警示型別選擇。](../../../../images/tutorials/create/campaign/alerts.png)
 
 ### 將資料欄位對應至XDM結構描述
 
-[!UICONTROL 對應]步驟出現，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
+[!UICONTROL Mapping]步驟隨即顯示，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
 Experience Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱[資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
 
@@ -104,18 +104,18 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 >
 >您可以為每個對象新增最多20個欄位以對應至Adobe Campaign。 您可以更新Campaign Explorer之「管理」 > 「平台」 > 「選項」資料夾中`NmsCdp_Aep_Sources_Max_Columns`選項的值，以變更此限制。
 
-成功對應來源資料後，請選取&#x200B;**[!UICONTROL 下一步]**。
+成功對應來源資料後，請選取&#x200B;**[!UICONTROL Next]**。
 
 ![對應樹狀結構包含四個來源資料欄位，對應到它們對應的XDM結構描述欄位。](../../../../images/tutorials/create/campaign/mapping.png)
 
 ### 檢閱您的資料流
 
-**[!UICONTROL 檢閱]**&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
+**[!UICONTROL Review]**&#x200B;步驟隨即顯示，可讓您在建立新資料流之前先檢閱該資料流。 詳細資料會分組到以下類別中：
 
-* **[!UICONTROL 連線]**：顯示來源型別、所選來源檔案的相關路徑，以及該來源檔案中的欄數。
-* **[!UICONTROL 指派資料集與對應欄位]**：顯示要將來源資料擷取到哪個資料集，包括資料集所堅持的結構描述。
+* **[!UICONTROL Connection]**：顯示來源型別、所選來源檔案的相關路徑，以及該來源檔案中的欄數。
+* **[!UICONTROL Assign dataset & map fields]**：顯示要將來源資料擷取到哪個資料集，包括資料集所堅持的結構描述。
 
-檢閱您的資料流後，請選取&#x200B;**[!UICONTROL 完成]**，並等待一些時間來建立資料流。
+檢閱您的資料流後，請選取「**[!UICONTROL Finish]**」並允許一段時間以建立資料流。
 
 ![顯示連線和資料集資訊的檢閱頁面。](../../../../images/tutorials/create/campaign/review.png)
 
@@ -123,7 +123,7 @@ Experience Platform會根據您選取的目標結構或資料集，為自動對�
 
 建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率以及成功和失敗批次的相關資訊。
 
-若要開始檢視您的資料集活動，請在來源目錄中選取&#x200B;**[!UICONTROL 資料流程]**。
+若要開始檢視您的資料集活動，請在來源目錄中選取&#x200B;**[!UICONTROL Dataflows]**。
 
 ![已選取資料流標題標籤的來源目錄頁面。](../../../../images/tutorials/create/campaign/dataflows.png)
 

@@ -6,7 +6,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2752'
 ht-degree: 7%
 
 ---
@@ -46,8 +46,8 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 
 | 項目 | 類型 | 附註 |
 | ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-segment-streaming-destinations.md#mapping)的對應畫面中所選。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL Profile-based]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-segment-streaming-destinations.md#mapping)的對應畫面中所選。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「永遠在線」的 API 連線。 一旦 Experience Platform 根據受眾評估更新個人檔案，連接器就會將更新傳送到目的地平台。 閱讀更多關於串流平台的[資訊](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -57,14 +57,14 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 
 * 您必須有支援REST API的HTTP端點。
 * 您的HTTP端點必須支援Experience Platform設定檔結構描述。 HTTP API目的地不支援轉換至第三方裝載結構描述。 如需Experience Platform輸出結構描述的範例，請參閱[匯出的資料](#exported-data)區段。
-* 您的HTTP端點必須支援標頭。
-* 您的HTTP端點必須在2秒內回應，以確保資料處理正確並避免逾時錯誤。
+* 你的 HTTP 端點必須支援標頭。
+* 您的 HTTP 端點必須在 2 秒內回應，以確保資料處理正確並避免逾時錯誤。
 
 >[!TIP]
 >
-> 您也可以使用[Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md)來設定整合，並將Experience Platform設定檔資料傳送至HTTP端點。
+> 你也可以使用 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 設定整合，並將 Experience Platform 設定檔資料傳送到 HTTP 端點。
 
-## mTLS通訊協定支援和憑證 {#mtls-protocol-support}
+## mTLS 協定支援與憑證 {#mtls-protocol-support}
 
 您可以使用[!DNL Mutual Transport Layer Security] ([!DNL mTLS])來確保與您的HTTP API目的地連線的輸出連線中的增強安全性。
 
@@ -74,13 +74,13 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 
 ### 擷取及檢查憑證詳細資料 {#certificate}
 
-如果您要檢查[!DNL Common Name] (CN)和[!DNL Subject Alternative Names] (SAN)等憑證詳細資料以進行其他協力廠商驗證，請使用API來擷取憑證，並從回應中擷取這些欄位。
+如果您想檢查憑證細節，如 [!DNL Common Name] （CN） 和 [!DNL Subject Alternative Names] （SAN）以進行額外的第三方驗證，請使用 API 取得憑證並從回應中擷取這些欄位。
 
-如需詳細資訊，請參閱[公用憑證端點檔案](../../../data-governance/mtls-api/public-certificate-endpoint.md)。
+更多資訊請參閱 [公開憑證端點文件](../../../data-governance/mtls-api/public-certificate-endpoint.md) 。
 
-## IP位址允許清單 {#ip-address-allowlist}
+## IP 位址允許清單 {#ip-address-allowlist}
 
-為了滿足客戶的安全性和合規性要求，Experience Platform提供您可以允許列出HTTP API目的地的靜態IP清單。 如需允許清單的完整IP清單，請參閱串流目的地的[IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md)。
+為了滿足客戶的安全與合規需求，Experience Platform 提供一份靜態 IP 清單，您可以允許 HTTP API 目的地的權限。 如需允許清單的完整IP清單，請參閱串流目的地的[IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md)。
 
 ## 支援的驗證型別 {#supported-authentication-types}
 
@@ -88,7 +88,7 @@ HTTP API目的地支援多種對HTTP端點的驗證型別：
 
 * 沒有驗證的HTTP端點；
 * 持有人權杖驗證；
-* [OAuth 2.0使用者端認證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)驗證內文表單，在HTTP要求內文中有[!DNL client ID]、[!DNL client secret]和[!DNL grant type]，如下列範例所示。
+* [OAuth 2.0 用戶端憑證的](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 認證方式包括 HTTP 請求的主體表單、 [!DNL client ID]、 [!DNL client secret]和 [!DNL grant type] ，如下範例所示。
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -98,7 +98,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* [OAuth 2.0使用者端認證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)具有基本授權，授權標頭包含URL編碼的[!DNL client ID]和[!DNL client secret]。
+* [OAuth 2.0 用戶端憑證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) ，具備基本授權，授權標頭包含 URL 編碼的 [!DNL client ID] [!DNL client secret]和 。
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \
@@ -113,7 +113,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 連線到這個目的地時，您必須提供下列資訊：
 
@@ -126,48 +126,48 @@ curl --location --request POST 'https://some-api.com/token' \
 
 #### 持有人權杖驗證 {#bearer-token-authentication}
 
-如果您選取&#x200B;**[!UICONTROL 持有人權杖]**&#x200B;驗證型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL 連線至目的地]**：
+如果您選取&#x200B;**[!UICONTROL Bearer token]**&#x200B;驗證型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL Connect to destination]**：
 
 ![UI熒幕的影像，您可在此使用持有人權杖驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-bearer.png)
 
-* **[!UICONTROL 持有人權杖]**：插入持有人權杖以驗證您的HTTP位置。
+* **[!UICONTROL Bearer token]**：插入持有人權杖以驗證您的HTTP位置。
 
 #### 無驗證 {#no-authentication}
 
-如果您選取&#x200B;**[!UICONTROL 無]**&#x200B;驗證型別以連線至您的HTTP端點：
+如果您選取&#x200B;**[!UICONTROL None]**&#x200B;驗證型別以連線至您的HTTP端點：
 
 ![UI熒幕的影像，您可在其中使用無驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-none.png)
 
-當您選取這個驗證開啟時，您只需要選取&#x200B;**[!UICONTROL 連線到目的地]**，而且與端點的連線已經建立。
+當您選取此驗證開啟時，您只需要選取&#x200B;**[!UICONTROL Connect to destination]**，即可建立與端點的連線。
 
 #### OAuth 2密碼驗證 {#oauth-2-password-authentication}
 
-如果您選取&#x200B;**[!UICONTROL OAuth 2密碼]**&#x200B;驗證型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL 連線至目的地]**：
+如果您選取&#x200B;**[!UICONTROL OAuth 2 Password]**&#x200B;驗證型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL Connect to destination]**：
 
 ![UI熒幕的影像，您可在此使用OAuth 2搭配密碼驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL 存取權杖URL]**：您那邊發行存取權杖的URL，並可選擇重新整理權杖。
-* **[!UICONTROL 使用者端識別碼]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
-* **[!UICONTROL 使用者端密碼]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
-* **[!UICONTROL 使用者名稱]**：存取您HTTP端點的使用者名稱。
-* **[!UICONTROL 密碼]**：存取您HTTP端點的密碼。
+* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。
+* **[!UICONTROL Client ID]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
+* **[!UICONTROL Client Secret]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
+* **[!UICONTROL Username]**：存取您HTTP端點的使用者名稱。
+* **[!UICONTROL Password]**：存取您HTTP端點的密碼。
 
 #### OAuth 2使用者端憑證驗證 {#oauth-2-client-credentials-authentication}
 
-如果您選取&#x200B;**[!UICONTROL OAuth 2使用者端認證]**&#x200B;驗證型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL 連線至目的地]**：
+如果您選取&#x200B;**[!UICONTROL OAuth 2 Client Credentials]**&#x200B;驗證型別以連線至您的HTTP端點，請輸入下列欄位並選取&#x200B;**[!UICONTROL Connect to destination]**：
 
 ![UI熒幕的影像，您可在此使用OAuth 2搭配使用者端憑證驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 > 
->使用[!UICONTROL OAuth 2使用者端認證]驗證時，[!UICONTROL 存取權杖URL]最多可以有一個查詢引數。 新增包含更多查詢引數的[!UICONTROL 存取權杖URL]可能會導致連線到端點時發生問題。
+>使用[!UICONTROL OAuth 2 Client Credentials]驗證時，[!UICONTROL Access Token URL]最多可以有一個查詢引數。 新增包含更多查詢引數的[!UICONTROL Access Token URL]可能會導致連線至端點時發生問題。
 
-* **[!UICONTROL 存取權杖URL]**：您那邊發行存取權杖的URL，並可選擇重新整理權杖。
-* **[!UICONTROL 使用者端識別碼]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
-* **[!UICONTROL 使用者端密碼]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
-* **[!UICONTROL 使用者端認證型別]**：選取端點支援的OAuth2使用者端認證授權型別：
-   * **[!UICONTROL 已編碼的內文表單]**：在此案例中，[!DNL client ID]和[!DNL client secret]包含在傳送至您目的地的要求&#x200B;*內文中*。 如需範例，請參閱[支援的驗證型別](#supported-authentication-types)區段。
-   * **[!UICONTROL 基本授權]**：在此情況下，[!DNL client ID]和[!DNL client secret]在經過base64編碼並傳送至您的目的地之後，會包含在&#x200B;*標頭`Authorization`中的*。 如需範例，請參閱[支援的驗證型別](#supported-authentication-types)區段。
+* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。
+* **[!UICONTROL Client ID]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
+* **[!UICONTROL Client Secret]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
+* **[!UICONTROL Client Credentials Type]**：選取端點支援的OAuth2使用者端認證授權型別：
+   * **[!UICONTROL Body Form Encoded]**： 在此情況下， [!DNL client ID] 和 [!DNL client secret] 包含 *在發送給你目的地的請求* 正文中。 舉例請參見 [支援的認證類型](#supported-authentication-types) 章節。
+   * **[!UICONTROL Basic Authorization]**：在此情況下，[!DNL client ID]和[!DNL client secret]在經過base64編碼並傳送至您的目的地之後，會包含在&#x200B;*標頭`Authorization`中的*。 如需範例，請參閱[支援的驗證型別](#supported-authentication-types)區段。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -198,34 +198,34 @@ curl --location --request POST 'https://some-api.com/token' \
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![顯示HTTP目的地詳細資訊已完成欄位的UI畫面影像。](../../assets/catalog/http/http-api-destination-details.png)
+![UI 畫面圖片，顯示 HTTP 目的地細節已完成欄位。](../../assets/catalog/http/http-api-destination-details.png)
 
-* **[!UICONTROL 名稱]**：輸入您日後可辨識此目的地的名稱。
-* **[!UICONTROL 描述]**：輸入有助於您日後識別此目的地的描述。
-* **[!UICONTROL 標頭]**：依照以下格式，輸入任何要包含在目的地呼叫中的自訂標頭： `header1:value1,header2:value2,...headerN:valueN`。
-* **[!UICONTROL HTTP端點]**：您要傳送設定檔資料的HTTP端點的URL。
-* **[!UICONTROL 查詢引數]**：您可以選擇將查詢引數新增至HTTP端點URL。 將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。
-* **[!UICONTROL 包含區段名稱]**：如果要讓資料匯出包含您匯出的對象名稱，請切換選項。 **注意**：只有對應到目的地的區段才會包含區段名稱。 匯出中出現的未對應區段不包括`name`欄位。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
-* **[!UICONTROL 包含區段時間戳記]**：若要讓資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL Name]**：輸入一個你未來能認出這個目的地的名字。
+* **[!UICONTROL Description]**&#x200B;輸入描述，幫助你未來辨識該目的地。
+* **[!UICONTROL Headers]**：依照以下格式，輸入任何您想要包含在目的地呼叫中的自訂標頭： `header1:value1,header2:value2,...headerN:valueN`。
+* **[!UICONTROL HTTP Endpoint]**：您要將設定檔資料傳送至的HTTP端點URL。
+* **[!UICONTROL Query parameters]**：您可以選擇將查詢引數新增至HTTP端點URL。 將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。
+* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 **注意**：區段名稱僅包含在映射到目的地的區段。 匯出中出現的未對應區段不包括`name`欄位。 關於選擇此選項的資料匯出範例，請參閱 [下方的「匯出資料](#exported-data) 」區塊。
+* **[!UICONTROL Include Segment Timestamps]**： 切換：如果你希望資料匯出包含受眾建立與更新的時間戳，以及受眾映射到啟用目的地的時間戳。 關於選擇此選項的資料匯出範例，請參閱 [下方的「匯出資料](#exported-data) 」區塊。
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 匯出至HTTP API目的地時目前不支援[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。 [閱讀全文](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
 如需啟用此目的地對象的指示，請參閱[啟用串流設定檔匯出目的地的對象資料](../../ui/activate-streaming-profile-destinations.md)。
 
 ### 目的地屬性 {#attributes}
 
-在[[!UICONTROL 選取屬性]](../../ui/activate-streaming-profile-destinations.md#select-attributes)步驟中，Adobe建議您從[聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 選取唯一識別碼以及您要匯出至目的地的任何其他XDM欄位。
+在[[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes)步驟中，Adobe建議您從[聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 選取唯一識別碼以及您要匯出至目的地的任何其他XDM欄位。
 
 ## 設定檔匯出行為 {#profile-export-behavior}
 
@@ -245,13 +245,13 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至HTTP API目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。<br> **重要**：啟用&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;選項時，只有對應到目的地的區段才會包含區段名稱。 匯出中顯示的未對應區段不會包含`name`欄位，即使該選項已啟用亦然。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果設定檔的`segmentMembership`狀態變更為`realized`或`exiting`，或任何對應的屬性已更新，將會啟動目的地匯出。</li><li>由於身分目前無法對應至HTTP API目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出專案。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會視為變更。</li></ul> | <ul><li>`segmentMembership`物件包含對映在啟動資料流中的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果其他符合設定檔資格的未對應區段與啟動資料流中所對應的區段屬於同一個[合併原則](/help/profile/merge-policies/overview.md)，則這些區段可以是目的地匯出的一部分。<br> **重要**：啟用&#x200B;**[!UICONTROL Include Segment Names]**&#x200B;選項時，只有對應至目的地的區段才會包含區段名稱。 匯出中顯示的未對應區段不會包含`name`欄位，即使該選項已啟用亦然。 </li><li>`identityMap`物件中的所有身分也包括在內(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
 例如，將此資料流視為HTTP目的地，其中在資料流中選取了三個對象，且四個屬性對應至目的地。
 
-![&#x200B; HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![ HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 設定檔匯出至目的地的方式，可由符合或結束&#x200B;*三個對應區段*&#x200B;之一的設定檔來決定。 不過，在資料匯出中，`segmentMembership`物件（請參閱下方的[匯出的資料](#exported-data)區段）可能會顯示其他未對應的對象，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段的資格，但同時也是&#x200B;**觀看的「回到未來」**&#x200B;電影和&#x200B;**科幻迷**&#x200B;區段的成員，則其他這兩個對象也將出現在資料匯出的`segmentMembership`物件中，即使這些對象未對應到資料流中，前提是這些對象與&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段共用相同的合併原則。
 
@@ -318,7 +318,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 }
 ```
 
-根據您在&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;和&#x200B;**[!UICONTROL 包含區段時間戳記]**&#x200B;選項的連線目的地流程中選取的UI設定，以下是匯出資料的更多範例：
+根據您在&#x200B;**[!UICONTROL Include Segment Names]**&#x200B;和&#x200B;**[!UICONTROL Include Segment Timestamps]**&#x200B;選項的連線目的地流程中選取的UI設定，以下是匯出資料的更多範例：
 
 +++ 下列資料匯出範例包含`segmentMembership`區段中的對象名稱
 
@@ -342,7 +342,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
       }
 ```
 
-**注意**：在此範例中，第一個區段(`5b998cb9-9488-4ec3-8d95-fa8338ced490`)已對應到目的地，並包含`name`欄位。 第二個區段(`354e086f-2e11-49a2-9e39-e5d9a76be683`)未對應到目的地，而且不包含`name`欄位，即使已啟用&#x200B;**[!UICONTROL 包含區段名稱]**&#x200B;選項也是如此。
+**注意**：在此範例中，第一個區段(`5b998cb9-9488-4ec3-8d95-fa8338ced490`)已對應到目的地，並包含`name`欄位。 第二個區段(`354e086f-2e11-49a2-9e39-e5d9a76be683`)未對應到目的地，而且不包含`name`欄位，即使已啟用&#x200B;**[!UICONTROL Include Segment Names]**&#x200B;選項也是如此。
 
 +++
 
@@ -365,11 +365,11 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 +++
 
-## 限制和重試原則 {#limits-retry-policy}
+## 限制與重試政策 {#limits-retry-policy}
 
-在95%的時間中，Experience Platform會嘗試針對每個資料流向HTTP目的地的成功傳送訊息，以每秒少於10,000個要求的速率，提供少於10分鐘的輸送量延遲。
+在 95% 的時間裡，Experience Platform 嘗試提供每秒少於 10,000 次資料流 HTTP 目的地的訊息傳輸延遲，且每秒請求次數少於 10 分鐘。
 
-如果對您的HTTP API目的地的請求失敗，Experience Platform會儲存失敗的請求並重試兩次，以將請求傳送至您的端點。
+若 HTTP API 目的地的請求失敗，Experience Platform 會儲存失敗的請求，並重試兩次將請求傳送到你的端點。
 
 ## 疑難排解 {#troubleshooting}
 

@@ -5,7 +5,7 @@ role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 >[!AVAILABILITY]
 >
->彈性的對象評估僅&#x200B;**在[!DNL Microsoft Azure]上執行的Experience Platform執行個體上提供**。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../landing/multi-cloud.md)。
+>彈性的對象評估僅&#x200B;**在**&#x200B;上執行的Experience Platform執行個體上提供[!DNL Microsoft Azure]。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../landing/multi-cloud.md)。
 >
 >此外，彈性的對象評估僅&#x200B;**可**&#x200B;搭配Real-Time CDP B2C Edition使用。
 
@@ -41,11 +41,11 @@ ht-degree: 5%
 >
 >您可以每年購買額外的彈性受眾評估回合。 如需詳細資訊，請聯絡Adobe客戶服務。
 
-## 存取 {#access}
+## 存取權 {#access}
 
 若要使用彈性的對象評估，您必須具備下列許可權：
 
-- **[!UICONTROL 評估區段給&#x200B;**&#x200B;[!DNL Profile Management]&#x200B;**區段下的對象]**。
+- **[!UICONTROL Evaluate Segment to an Audience]**&#x200B;區段下的&#x200B;**[!DNL Profile Management]**。
 
 如需角色型存取控制的詳細資訊，請閱讀[存取控制總覽](../../access-control/home.md)。
 
@@ -300,15 +300,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 >[!TAB Experience Platform UI]
 
-若要在Experience Platform UI中執行彈性的對象評估，請在&#x200B;**[!UICONTROL 客戶]**&#x200B;區段中選取&#x200B;**[!UICONTROL 對象]**。
+若要在Experience Platform UI中執行彈性的對象評估，請在&#x200B;**[!UICONTROL Audiences]**&#x200B;區段中選取&#x200B;**[!UICONTROL Customers]**。
 
 ![「客戶」區段內的「對象」按鈕會醒目提示。 顯示客戶設定檔的對象入口網站。](../images/methods/fae/audience-portal.png)
 
-隨即顯示「對象入口網站」，顯示組織內所有人員對象的清單。 在對象入口網站中，您可以選擇要評估的對象，並選取&#x200B;**[!UICONTROL 評估對象]**。
+隨即顯示「對象入口網站」，顯示組織內所有人員對象的清單。 在Audience Portal中，您可以選擇要評估的對象並選取&#x200B;**[!UICONTROL Evaluate audience]**。
 
 ![您想要使用彈性對象評估的對象已選取。](../images/methods/fae/evaluate-audiences.png)
 
-**[!UICONTROL 依需求評估對象]**&#x200B;彈出視窗會出現，顯示將使用依需求區段工作評估的對象清單。 如果對象不符合依需求評估的資格，系統會自動將其從評估工作中移除。 確認列出的對象是您想要評估的對象。
+「**[!UICONTROL Evaluate audiences on demand]**」彈出視窗隨即顯示，顯示將使用隨選區段作業評估的對象清單。 如果對象不符合依需求評估的資格，系統會自動將其從評估工作中移除。 確認列出的對象是您想要評估的對象。
 
 ![顯示可以使用彈性對象評估來評估的對象。](../images/methods/fae/evaluate-audiences-modal.png)
 
@@ -318,7 +318,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 >
 >區段工作的狀態可能會在監視控制面板中報告為「已排入佇列」狀態。 您可以透過向`/segment/jobs`端點發出GET請求，在請求路徑中提供區段作業的ID，來檢視區段作業的最新狀態。 您可以在API標籤中找到有關使用此端點的更多資訊。
 >
->如果您執行彈性對象評估，並希望評估將對象啟用到目的地，您必須確保頻率設定為&#x200B;**[!UICONTROL 區段評估後]**。 針對已設定在區段評估[&#128279;](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
+>如果您執行彈性對象評估，並希望評估將對象啟用到目的地，您必須確保頻率設定為&#x200B;**[!UICONTROL After segment evaluation]**。 針對已設定在區段評估[後啟動](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
 
 >[!ENDTABS]
 
@@ -326,7 +326,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 下列影片示範如何在Experience Platform中存取和使用彈性的對象評估。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453651?&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 常見問題 {#faq}
 

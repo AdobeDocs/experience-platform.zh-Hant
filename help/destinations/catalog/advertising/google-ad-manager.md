@@ -15,12 +15,12 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 > Google正在發佈[Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)和[Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)的變更，以支援歐盟（[歐盟使用者同意政策](https://digital-markets-act.ec.europa.eu/index_en)）中[數位市場法](https://www.google.com/about/company/user-consent-policy/) (DMA)所定義的法規遵循與同意相關需求。 自2024年3月6日起，將開始強制執行同意要求的這些變更。
-> &#x200B;><br/>
-> &#x200B;>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
-> &#x200B;><br/>
-> &#x200B;>已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
-> &#x200B;><br/>
-> &#x200B;>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
+><br/>
+>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
+><br/>
+>已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
+><br/>
+>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
 
 [!DNL Google Ad Manager] (先前稱為[!DNL DoubleClick for Publishers] (DFP)或[!DNL DoubleClick AdX])是來自[!DNL Google]的廣告服務平台，可讓發佈者透過視訊和行動應用程式管理其網站上廣告的顯示。
@@ -42,7 +42,7 @@ ht-degree: 7%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] |  |
 | IDFA | [!DNL Apple ID for Advertisers] |  |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=zh-Hant)，也稱為[!DNL Device ID]。 Audience Manager與其互動的每個裝置相關聯的數字38位數裝置ID。 | Google使用[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=zh-Hant)來鎖定加州的使用者，並使用所有其他使用者的Google Cookie ID。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)，也稱為[!DNL Device ID]。 Audience Manager與其互動的每個裝置相關聯的數字38位數裝置ID。 | Google使用[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)來鎖定加州的使用者，並使用所有其他使用者的Google Cookie ID。 |
 | [!DNL Google] Cookie ID | [!DNL Google] Cookie ID | [!DNL Google]使用此ID來鎖定加州以外的使用者。 |
 | RIDA | Advertising的Roku ID。 此ID可唯一識別Roku裝置。 |  |
 | MAID | Microsoft Advertising ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
@@ -74,7 +74,7 @@ ht-degree: 7%
 
 ## 先決條件 {#prerequisites}
 
-如果您想要使用[!DNL Google Ad Manager]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=zh-Hant)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Google]整合，您設定的ID同步會移轉到Experience Platform。
+如果您想要使用[!DNL Google Ad Manager]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Google]整合，您設定的ID同步會移轉到Experience Platform。
 
 ### 允許清單 {#allow-listing}
 

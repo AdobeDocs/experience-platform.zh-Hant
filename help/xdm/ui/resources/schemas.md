@@ -83,8 +83,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->儲存後，[!UICONTROL Type]側邊欄中的[!UICONTROL &#x200B; Schema properties]欄位會指出這是[!UICONTROL Relational]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
->&#x200B;>![結構描述編輯器畫布顯示空白的關聯式結構描述結構，並反白顯示關聯式型別。](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>儲存後，[!UICONTROL Type]側邊欄中的[!UICONTROL  Schema properties]欄位會指出這是[!UICONTROL Relational]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
+>![結構描述編輯器畫布顯示空白的關聯式結構描述結構，並反白顯示關聯式型別。](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### 上傳DDL檔案 {#upload-ddl-file}
 
@@ -258,7 +258,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >選取&#x200B;**[!UICONTROL Remove]**&#x200B;會從欄位群組本身刪除欄位，影響使用該欄位群組的&#x200B;*所有*結構描述。
->&#x200B;>除非您想要&#x200B;**從包含欄位群組**&#x200B;的每個結構描述中移除欄位，否則請勿使用此選項。
+>除非您想要&#x200B;**從包含欄位群組**&#x200B;的每個結構描述中移除欄位，否則請勿使用此選項。
 
 若要從欄位群組刪除欄位，請在畫布中選取該欄位，然後在右側邊欄中選取&#x200B;**[!UICONTROL Remove]**。 此範例顯示來自`taxId`群組的&#x200B;**[!UICONTROL Demographic Details]**&#x200B;欄位。
 

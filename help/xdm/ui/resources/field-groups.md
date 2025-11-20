@@ -6,8 +6,8 @@ description: 瞭解如何在Experience Platform使用者介面中建立和編輯
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 8%
+source-wordcount: '966'
+ht-degree: 9%
 
 ---
 
@@ -34,11 +34,11 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 若要建立新的欄位群組，您必須先選取要新增該欄位群組的結構描述。 您可以選擇[建立新的結構描述](./schemas.md#create)或[選取要編輯的現有結構描述](./schemas.md#edit)。
 
-在[!DNL Schema Editor]中開啟結構描述後，在左側邊欄的[!UICONTROL 欄位群組]區段旁選取&#x200B;**[!UICONTROL 新增]**。
+在[!DNL Schema Editor]中開啟結構描述後，在左側邊欄中選取&#x200B;**[!UICONTROL Add]**&#x200B;區段旁的[!UICONTROL Field groups]。
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-在出現的對話方塊中，選取&#x200B;**[!UICONTROL 建立新欄位群組]**。 您可以在這裡提供欄位群組的&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;和&#x200B;**[!UICONTROL 描述]**。 完成後，選取&#x200B;**[!UICONTROL 新增欄位群組]**。
+在出現的對話方塊中，選取&#x200B;**[!UICONTROL Create new field group]**。 您可以在此處提供欄位群組的&#x200B;**[!UICONTROL Display name]**&#x200B;和&#x200B;**[!UICONTROL Description]**。 完成後，選取&#x200B;**[!UICONTROL Add field groups]**。
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -48,9 +48,9 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ## 篩選欄位群組 {#filter}
 
-可用欄位群組清單已根據其建立方式預先進行篩選。預設設定會顯示Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL 標準]選項會顯示Adobe建立的實體，而[!UICONTROL 自訂]選項則會顯示貴組織內建立的實體。
+可用欄位群組清單已根據其建立方式預先進行篩選。預設設定會顯示Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以在[!UICONTROL Standard]與[!UICONTROL Custom]選項之間選擇。 [!UICONTROL Standard]選項會顯示Adobe建立的實體，而[!UICONTROL Custom]選項則會顯示在您的組織內建立的實體。
 
-![&#x200B; [!UICONTROL 結構描述]工作區的[!UICONTROL 欄位群組]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![反白顯示[!UICONTROL Field groups]和[!UICONTROL Schemas]的[!UICONTROL Standard]工作區的[!UICONTROL Custom]索引標籤。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 編輯現有欄位群組 {#edit}
 
@@ -58,7 +58,7 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 >
 >只有貴組織定義的自訂欄位群組才能完全編輯和自訂。 對於Adobe定義的核心欄位群組，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 它們在「結構描述編輯器」中以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png))。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
 >
->儲存自訂欄位群組並在結構描述中使用以進行資料擷取後，之後只能對欄位群組進行附加變更。 如需詳細資訊，請參閱結構描述演化[&#128279;](../../schema/composition.md#evolution)的規則。
+>儲存自訂欄位群組並在結構描述中使用以進行資料擷取後，之後只能對欄位群組進行附加變更。 如需詳細資訊，請參閱結構描述演化[的](../../schema/composition.md#evolution)規則。
 
 若要編輯現有的欄位群組，您必須先開啟採用[!DNL Schema Editor]內欄位群組的結構描述。 您可以[選取要編輯的現有結構描述](./schemas.md#edit)，或者您可以[建立新的結構描述](./schemas.md#create)並新增相關欄位群組。
 
@@ -74,17 +74,17 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-畫布中會出現&#x200B;**[!UICONTROL 未命名的欄位]**&#x200B;預留位置，而右邊欄會更新以顯示控制項，以設定欄位的屬性。 如需有關如何設定不同欄位型別的具體步驟，請參閱[在UI](../fields/overview.md#define)中定義欄位的指南。
+畫布中會出現&#x200B;**[!UICONTROL Untitled Field]**&#x200B;預留位置，而右側邊欄會更新以顯示控制項，以設定欄位的屬性。 如需有關如何設定不同欄位型別的具體步驟，請參閱[在UI](../fields/overview.md#define)中定義欄位的指南。
 
-在&#x200B;**[!UICONTROL 指派給]**&#x200B;下，選取&#x200B;**[!UICONTROL 欄位群組]**&#x200B;選項，然後使用下拉式清單從清單中選取所要的欄位群組。 您可以開始輸入欄位群組的名稱來縮小結果範圍。
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
-
-在&#x200B;**[!UICONTROL 指派給]**&#x200B;下，選取&#x200B;**[!UICONTROL 欄位群組]**&#x200B;選項，然後使用下拉式清單從清單中選取所要的欄位群組。 您可以開始輸入欄位群組的名稱來縮小結果範圍。
+在&#x200B;**[!UICONTROL Assign to]**&#x200B;下，選取&#x200B;**[!UICONTROL Field Group]**&#x200B;選項，然後使用下拉式清單從清單中選取所需的欄位群組。 您可以開始輸入欄位群組的名稱來縮小結果範圍。
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-將欄位新增到結構描述後，就會將其指派給所選的欄位群組。 繼續將所需數量的欄位新增至欄位群組。 完成後，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存結構描述和欄位群組。
+在&#x200B;**[!UICONTROL Assign to]**&#x200B;下，選取&#x200B;**[!UICONTROL Field Group]**&#x200B;選項，然後使用下拉式清單從清單中選取所需的欄位群組。 您可以開始輸入欄位群組的名稱來縮小結果範圍。
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+將欄位新增到結構描述後，就會將其指派給所選的欄位群組。 繼續將所需數量的欄位新增至欄位群組。 完成後，選取&#x200B;**[!UICONTROL Save]**&#x200B;以儲存結構描述和欄位群組。
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -92,6 +92,6 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ## 後續步驟 {#next-steps}
 
-本指南說明如何使用Experience Platform UI建立和編輯欄位群組。 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
+本指南說明如何使用Experience Platform UI建立和編輯欄位群組。 如需[!UICONTROL Schemas]工作區功能的詳細資訊，請參閱[[!UICONTROL Schemas]工作區概觀](../overview.md)。
 
 若要瞭解如何使用[!DNL Schema Registry] API管理欄位群組，請參閱[欄位群組端點指南](../../api/field-groups.md)。

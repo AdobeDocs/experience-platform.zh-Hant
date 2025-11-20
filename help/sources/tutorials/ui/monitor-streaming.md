@@ -5,14 +5,14 @@ title: 在UI中監視串流來源的資料流
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 10%
+source-wordcount: '990'
+ht-degree: 11%
 
 ---
 
 # 在UI中監視串流來源的資料流
 
-本教學課程涵蓋使用[!UICONTROL 來源]工作區監控串流來源資料流的步驟。
+本教學課程涵蓋使用[!UICONTROL Sources]工作區監控串流來源資料流的步驟。
 
 ## 快速入門
 
@@ -25,13 +25,13 @@ ht-degree: 10%
 
 ## 監控串流來源的資料流
 
-在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取「**[!UICONTROL Sources]**」以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示各種來源，您可利用這些來源建立帳戶。
 
-若要檢視串流來源的現有資料流，請從頂端標題選取&#x200B;**[!UICONTROL 資料流]**。
+若要檢視串流來源的現有資料流，請從頂端標題選取「**[!UICONTROL Dataflows]**」。
 
 ![目錄](../../images/tutorials/monitor-streaming/catalog.png)
 
-[!UICONTROL 資料流]頁面包含貴組織中所有現有資料流的清單，包括關於其來源資料、帳戶名稱和資料流執行狀態的資訊。
+[!UICONTROL Dataflows]頁面包含貴組織中所有現有資料流的清單，包括關於其來源資料、帳戶名稱和資料流執行狀態的資訊。
 
 選取您要檢視的資料流名稱。
 
@@ -47,13 +47,13 @@ ht-degree: 10%
 | 錯誤 | `Error`狀態表示資料流程的啟用程式已中斷。 |
 | 無執行 | `No runs`狀態表示已建立資料流，但未啟動任何資料流執行。 |
 
-[!UICONTROL 資料流活動]頁面會顯示串流資料流的特定資訊。 頂端橫幅包含您所選取日期範圍內所有串流資料流執行的累計擷取記錄和失敗記錄數。
+[!UICONTROL Dataflow Activity]頁面會顯示串流資料流的特定資訊。 頂端橫幅包含您所選取日期範圍內所有串流資料流執行的累計擷取記錄和失敗記錄數。
 
 ![資料流活動](../../images/tutorials/monitor-streaming/dataflow-activity.png)
 
-依預設，顯示的資料包含過去七天的擷取率。 選取「**[!UICONTROL 最近7天]**」以調整記錄的時間範圍。
+依預設，顯示的資料包含過去七天的擷取率。 選取&#x200B;**[!UICONTROL Last 7 days]**&#x200B;以調整記錄顯示的時間範圍。
 
-此時會出現一個日曆快顯視窗，為您提供替代擷取時間範圍的選項。 您可以設定資料流執行時間範圍，以檢視過去七天或過去30天的資料流執行。 或者，您可以設定互動式行事曆，以設定自訂的時間範圍。 完成後，選取&#x200B;**[!UICONTROL 套用]**。
+此時會出現一個日曆快顯視窗，為您提供替代擷取時間範圍的選項。 您可以設定資料流執行時間範圍，以檢視過去七天或過去30天的資料流執行。 或者，您可以設定互動式行事曆，以設定自訂的時間範圍。 完成後，選取&#x200B;**[!UICONTROL Apply]**。
 
 ![行事曆](../../images/tutorials/monitor-streaming/calendar.png)
 
@@ -89,24 +89,24 @@ ht-degree: 10%
 
 每個個別資料流執行會顯示下列詳細資訊：
 
-* **[!UICONTROL 資料流執行開始]**：資料流執行開始的時間。
-* **[!UICONTROL 處理時間]**：資料流處理所花的時間。
-* **[!UICONTROL 已接收的記錄數]**：從來源聯結器在資料流中接收的記錄總數。
-* **[!UICONTROL 個擷取的記錄]**：擷取到[!DNL Data Lake]的記錄總數。
-* **[!UICONTROL 含有警告的記錄]**：已擷取的含有警告的記錄總數。 所有對應程式轉換錯誤都會回報為警告，而部分擷取的列會標示為`success`並加上警告。 **注意**：只有串流來源才支援擷取含有警告的記錄。
-* **[!UICONTROL 記錄失敗]**：由於資料發生錯誤，未擷取到[!DNL Data Lake]的記錄數。
-* **[!UICONTROL 擷取率]**：擷取到[!DNL Data Lake]的記錄成功率。 此量度適用於[!UICONTROL 部分擷取]啟用的情況。
-* **[!UICONTROL 狀態]**：代表資料流所處的狀態： [!UICONTROL 已完成]或[!UICONTROL 正在處理]。 [!UICONTROL 已完成]表示對應資料流執行的所有記錄都在一小時內處理。 [!UICONTROL 正在處理]表示資料流執行尚未完成。
+* **[!UICONTROL Dataflow run start]**：資料流開始執行的時間。
+* **[!UICONTROL Processing time]**：資料流處理所花的時間。
+* **[!UICONTROL Records Received]**：在資料流中從來源聯結器收到的記錄總數。
+* **[!UICONTROL Records Ingested]**：擷取到[!DNL Data Lake]的記錄總數。
+* **[!UICONTROL Records with Warnings]**：已擷取含有警告的記錄總數。 所有對應程式轉換錯誤都會回報為警告，而部分擷取的列會標示為`success`並加上警告。 **注意**：只有串流來源才支援擷取含有警告的記錄。
+* **[!UICONTROL Records Failed]**：由於資料中的錯誤而未擷取到[!DNL Data Lake]中的記錄數。
+* **[!UICONTROL Ingestion Rate]**：擷取到[!DNL Data Lake]的記錄成功率。 此量度適用於[!UICONTROL Partial Ingestion]啟用的情況。
+* **[!UICONTROL Status]**：代表資料流所處的狀態： [!UICONTROL Completed]或[!UICONTROL Processing]。 [!UICONTROL Completed]表示對應資料流執行的所有記錄都在一小時內處理。 [!UICONTROL Processing]表示資料流執行尚未完成。
 
-[!UICONTROL 資料流執行總覽]頁面包含您資料流的其他資訊，例如其對應的資料流執行ID、目標資料集和組織ID。
+[!UICONTROL Dataflow run overview]頁面包含您資料流的其他資訊，例如其對應的資料流執行ID、目標資料集和組織ID。
 
-含有錯誤的資料流執行也包含[!UICONTROL 資料流執行錯誤]面板，該面板會顯示導致執行失敗的特定錯誤，以及失敗的記錄總數。
+含有錯誤的資料流執行也包含[!UICONTROL Dataflow run errors]面板，該面板會顯示導致執行失敗的特定錯誤，以及失敗的記錄總數。
 
 ![資料流執行總覽](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
 
 ### 檢視含有警告的記錄 {#warnings}
 
-[!UICONTROL 含有警告的記錄]會顯示資料流執行期間發生的對應程式轉換警告清單。 部分擷取的列會被視為成功，如果發現任何對應程式轉換錯誤，則會附加警告。
+[!UICONTROL Records with warnings]會顯示流程執行期間發生的對應程式轉換警告清單。 部分擷取的列會被視為成功，如果發現任何對應程式轉換錯誤，則會附加警告。
 
 依預設，所有對應程式轉換錯誤都會被視為警告，除非它們屬於下列任一情況：
 
@@ -114,17 +114,17 @@ ht-degree: 10%
 * 對不存在屬性的參照
 * XDM資料型別不相符
 
-若要檢視錯誤診斷，請選取&#x200B;**[!UICONTROL 預覽錯誤診斷]**。
+若要檢視錯誤診斷，請選取&#x200B;**[!UICONTROL Preview error diagnostics]**。
 
 ![個有警告的記錄](../../images/tutorials/monitor-streaming/records-with-warnings.png)
 
-[!UICONTROL 錯誤診斷預覽]視窗可讓您預覽與資料流執行相關的最多100個錯誤和/或警告。 您也可以在此處使用[!DNL Data Access] API下載擷取失敗資訊清單，以取得詳細資訊。
+[!UICONTROL Error diagnostics preview]視窗可讓您預覽與資料流執行相關的最多100個錯誤和/或警告。 您也可以在此處使用[!DNL Data Access] API下載擷取失敗資訊清單，以取得詳細資訊。
 
 ![診斷](../../images/tutorials/monitor-streaming/diagnostics.png)
 
 ## 後續步驟
 
-依照此教學課程，您已成功使用[!UICONTROL 來源]工作區來監視您的串流資料流，並識別導致任何失敗資料流的錯誤。 如需詳細資訊，請參閱下列檔案：
+依照此教學課程，您已成功使用[!UICONTROL Sources]工作區來監視您的串流資料流，並識別導致任何失敗資料流的錯誤。 如需詳細資訊，請參閱下列檔案：
 
 * [來源概觀](../../home.md)
 * [資料流概觀](../../../dataflows/home.md)

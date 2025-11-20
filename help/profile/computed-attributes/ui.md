@@ -4,7 +4,7 @@ description: 瞭解如何使用Adobe Experience Platform UI建立、檢視和更
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1497'
 ht-degree: 6%
 
 ---
@@ -21,65 +21,65 @@ ht-degree: 6%
 
 ## 快速入門
 
-此UI指南需要瞭解與管理[!DNL Real-Time Customer Profiles]有關的各種[!DNL Experience Platform]服務。 在閱讀本指南或使用UI之前，請檢視以下服務的檔案：
+此UI指南需要瞭解與管理[!DNL Experience Platform]有關的各種[!DNL Real-Time Customer Profiles]服務。 在閱讀本指南或使用UI之前，請檢視以下服務的檔案：
 
 - [[!DNL Real-Time Customer Profile]](../home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 
 ## 檢視計算屬性 {#view}
 
-在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 設定檔]**，然後選取&#x200B;**[!UICONTROL 計算屬性]**，以檢視貴組織可用的計算屬性清單。 這包括計算屬性的名稱、說明、上次評估日期和上次評估狀態的相關資訊。
+在Experience Platform UI中，選取左側導覽列中的&#x200B;**[!UICONTROL Profiles]**，然後選取&#x200B;**[!UICONTROL Computed attributes]**&#x200B;以檢視貴組織可用的計算屬性清單。 這包括計算屬性的名稱、說明、上次評估日期和上次評估狀態的相關資訊。
 
-![&#x200B; [!UICONTROL 設定檔]區段和[!UICONTROL 計算屬性]標籤會反白顯示，顯示使用者如何存取計算屬性瀏覽頁面。](./images/ui/browse.png)
+![ [!UICONTROL Profile]區段和[!UICONTROL Computed attributes]標籤會反白顯示，向使用者顯示如何存取計算屬性瀏覽頁面。](./images/ui/browse.png)
 
 若要選取顯示哪些欄位，您可以選取![設定欄圖示](/help/images/icons/column-settings.png)來新增或移除您要顯示的欄位。
 
 | 欄位 | 說明 |
 | ----- | ----------- |
-| [!UICONTROL 名稱] | 計算屬性的顯示名稱。 |
-| [!UICONTROL 說明] | 計算屬性的說明。 |
-| [!UICONTROL 評估方法] | 計算屬性的評估方法。 目前僅支援&#x200B;**批次**。 |
-| [!UICONTROL 上次評估時間] | 此時間戳記代表上次成功的評估執行。 只有在&#x200B;**之前發生**&#x200B;的事件才會被視為上次成功評估中的時間戳記。 |
-| [!UICONTROL 上次評估狀態] | 說明在上次評估執行中是否成功計算運算屬性的狀態。 可能的值包括&#x200B;**[!UICONTROL Success]**&#x200B;或&#x200B;**[!UICONTROL Failed]**。 |
-| [!UICONTROL 重新整理頻率] | 表示計算屬性的重新整理頻率。 可能的值包括每小時、每日、每週或每月。 |
-| [!UICONTROL 快速重新整理] | 顯示是否為此運算屬性啟用快速重新整理的值。 如果已啟用快速重新整理，這可讓計算的屬性每天重新整理，而不是每週、每兩週或每月重新整理。 此值僅適用於回顧期間大於每週的計算屬性。 |
-| [!UICONTROL 生命週期狀態] | 計算屬性的目前狀態。 可能的狀態有三種： <ul><li>**[!UICONTROL 草稿]：**&#x200B;運算屬性&#x200B;**尚未**&#x200B;在結構描述上建立欄位。 在此狀態下，可以編輯計算屬性。 </li><li>**[!UICONTROL 已發佈]：**&#x200B;運算屬性已在結構描述上建立欄位，且已可供使用。 在此狀態下，無法編輯運算屬性&#x200B;**&#x200B;**。</li><li>**[!UICONTROL 非使用中]：**&#x200B;計算屬性已停用。 如需非使用中狀態的詳細資訊，請參閱[常見問題集](./faq.md#inactive-status)。 </li> |
-| [!UICONTROL 已建立] | 顯示計算屬性建立日期與時間的時間戳記。 |
-| [!UICONTROL 上次修改時間] | 顯示上次修改運算屬性的日期與時間的時間戳記。 |
+| [!UICONTROL Name] | 計算屬性的顯示名稱。 |
+| [!UICONTROL Description] | 計算屬性的說明。 |
+| [!UICONTROL Evaluation method] | 計算屬性的評估方法。 目前僅支援&#x200B;**批次**。 |
+| [!UICONTROL Last evaluated] | 此時間戳記代表上次成功的評估執行。 只有在&#x200B;**之前發生**&#x200B;的事件才會被視為上次成功評估中的時間戳記。 |
+| [!UICONTROL Last evaluation status] | 說明在上次評估執行中是否成功計算運算屬性的狀態。 可能的值包括&#x200B;**[!UICONTROL Success]**&#x200B;或&#x200B;**[!UICONTROL Failed]**。 |
+| [!UICONTROL Refresh frequency] | 表示計算屬性的重新整理頻率。 可能的值包括每小時、每日、每週或每月。 |
+| [!UICONTROL Fast refresh] | 顯示是否為此運算屬性啟用快速重新整理的值。 如果已啟用快速重新整理，這可讓計算的屬性每天重新整理，而不是每週、每兩週或每月重新整理。 此值僅適用於回顧期間大於每週的計算屬性。 |
+| [!UICONTROL Lifecycle status] | 計算屬性的目前狀態。 可能的狀態有三種： <ul><li>**[!UICONTROL Draft]：**&#x200B;運算屬性&#x200B;**尚未**&#x200B;在結構描述上建立欄位。 在此狀態下，可以編輯計算屬性。 </li><li>**[!UICONTROL Published]：**&#x200B;運算屬性已在結構描述上建立欄位，且已可供使用。 在此狀態下，無法編輯運算屬性&#x200B;****。</li><li>**[!UICONTROL Inactive]：**&#x200B;計算屬性已停用。 如需非使用中狀態的詳細資訊，請參閱[常見問題集](./faq.md#inactive-status)。 </li> |
+| [!UICONTROL Created] | 顯示計算屬性建立日期與時間的時間戳記。 |
+| [!UICONTROL Last modified] | 顯示上次修改運算屬性的日期與時間的時間戳記。 |
 
-您也可以根據生命週期狀態來篩選顯示的計算屬性。 選取![漏斗](/help/images/icons/filter.png)圖示。
+您也可以根據生命週期狀態來篩選顯示的計算屬性。 選取![funnel](/help/images/icons/filter.png)圖示。
 
 ![篩選圖示已反白顯示。](./images/ui/select-filter.png)
 
-您現在可以選擇依狀態（[!UICONTROL 草稿]、[!UICONTROL 已發佈]和[!UICONTROL 非使用中]）篩選計算屬性。
+您現在可以選擇依狀態（[!UICONTROL Draft]、[!UICONTROL Published]和[!UICONTROL Inactive]）篩選計算屬性。
 
-![您可以用來篩選計算屬性的選項會反白顯示。 這些選項包括[!UICONTROL 草稿]、[!UICONTROL 已發佈]和[!UICONTROL 非使用中].](./images/ui/view-filters.png)
+![您可以用來篩選計算屬性的選項會反白顯示。 這些選項包括[!UICONTROL Draft]、[!UICONTROL Published]和[!UICONTROL Inactive].](./images/ui/view-filters.png)
 
 此外，您可以選取計算屬性來檢視更多相關詳細資訊。 如需計算屬性詳細資訊頁面的詳細資訊，請閱讀[檢視計算屬性的詳細資訊區段](#view-details)。
 
 ## 建立計算屬性 {#create}
 
-若要建立新的計算屬性，請選取&#x200B;**[!UICONTROL 建立計算屬性]**&#x200B;以輸入新的計算屬性工作流程。
+若要建立新的計算屬性，請選取&#x200B;**[!UICONTROL Create computed attribute]**&#x200B;以輸入新的計算屬性工作流程。
 
-![反白顯示[!UICONTROL 建立計算屬性]按鈕，向使用者顯示如何進入建立計算屬性頁面。](./images/ui/create.png)
+![反白顯示[!UICONTROL Create computed attributes]按鈕，向使用者顯示如何存取建立計算屬性頁面。](./images/ui/create.png)
 
-**[!UICONTROL 建立計算屬性]**&#x200B;頁面就會顯示。 您可以在此頁面新增要建立之計算屬性的基本資訊。
+**[!UICONTROL Create computed attribute]**&#x200B;頁面隨即顯示。 您可以在此頁面新增要建立之計算屬性的基本資訊。
 
 | 欄位 | 說明 |
 | ----- | ----------- |
-| [!UICONTROL 顯示名稱] | 計算屬性的名稱。 您應該讓此顯示名稱對每個計算屬性都保持唯一。 最佳做法是，此顯示名稱應包含與計算屬性相關的識別碼。 舉例來說，「過去7天買鞋的總和」。 |
-| [!UICONTROL 欄位名稱] | 用來參照其他下游服務中計算屬性的名稱。 此名稱會自動衍生自顯示名稱，並以camelCase寫入。 |
-| [!UICONTROL 說明] | 您嘗試建立的計算屬性說明。 |
+| [!UICONTROL Display name] | 計算屬性的名稱。 您應該讓此顯示名稱對每個計算屬性都保持唯一。 最佳做法是，此顯示名稱應包含與計算屬性相關的識別碼。 舉例來說，「過去7天買鞋的總和」。 |
+| [!UICONTROL Field name] | 用來參照其他下游服務中計算屬性的名稱。 此名稱會自動衍生自顯示名稱，並以camelCase寫入。 |
+| [!UICONTROL Description] | 您嘗試建立的計算屬性說明。 |
 
-![&#x200B; [!UICONTROL 建立計算屬性]頁面的[!UICONTROL 基本資訊]區段已反白顯示。](./images/ui/basic-information.png)
+![ [!UICONTROL Basic information]頁面的[!UICONTROL Create computed attribute]區段已反白顯示。](./images/ui/basic-information.png)
 
 新增計算屬性詳細資料後，您就可以開始定義規則。
 
 ### 指定事件篩選條件
 
-若要建立規則，請先從&#x200B;**[!UICONTROL 事件]**&#x200B;區段中選取屬性，以篩選您要彙總的事件。 目前僅支援非陣列型別的事件屬性。
+若要建立規則，請先從&#x200B;**[!UICONTROL Events]**&#x200B;區段中選取屬性，以篩選您要彙總的事件。 目前僅支援非陣列型別的事件屬性。
 
-![已反白顯示[!UICONTROL 事件]區段。](./images/ui/events.png)
+![ [!UICONTROL Events]區段已反白顯示。](./images/ui/events.png)
 
 選取要在計算屬性定義中使用的屬性後，您可以選擇此值要與之比較的內容。
 
@@ -87,7 +87,7 @@ ht-degree: 6%
 
 ### 套用彙總函式
 
-現在，您可以將函式套用至條件式輸出的欄位。 首先，選取彙總函式型別。 可用的選項包括[!UICONTROL 總和]、[!UICONTROL 最小值]、[!UICONTROL 最大值]、[!UICONTROL 計數]和[!UICONTROL 最近]。 您可以在運算屬性概觀的[函式區段](./overview.md#functions)中找到有關這些函式的詳細資訊。
+現在，您可以將函式套用至條件式輸出的欄位。 首先，選取彙總函式型別。 可用的選項包括[!UICONTROL Sum]、[!UICONTROL Min]、[!UICONTROL Max]、[!UICONTROL Count]和[!UICONTROL Most Recent]。 您可以在運算屬性概觀的[函式區段](./overview.md#functions)中找到有關這些函式的詳細資訊。
 
 ![已顯示計算屬性函式。](./images/ui/select-function.png)
 
@@ -110,7 +110,7 @@ ht-degree: 6%
 
 套用彙總函式時，如果回顧期間大於一週，您可以啟用快速重新整理。
 
-![已反白顯示[!UICONTROL 快速重新整理]核取方塊。](./images/ui/enable-fast-refresh.png)
+![已反白顯示[!UICONTROL Fast Refresh]核取方塊。](./images/ui/enable-fast-refresh.png)
 
 快速重新整理可讓您的屬性保持為最新狀態。啟用此選項可讓您每天重新整理計算屬性，甚至更長的回顧期間，讓您快速回應使用者活動。
 
@@ -118,7 +118,7 @@ ht-degree: 6%
 
 完成這些步驟後，您現在可以選擇將此計算屬性儲存為草稿，或立即發佈。
 
-![已反白顯示[!UICONTROL 另存為草稿]和[!UICONTROL 發佈]按鈕。](./images/ui/draft-or-publish.png)
+![已反白顯示[!UICONTROL Save as draft]和[!UICONTROL Publish]按鈕。](./images/ui/draft-or-publish.png)
 
 ## 檢視計算屬性的詳細資料 {#view-details}
 
@@ -126,7 +126,7 @@ ht-degree: 6%
 
 ![已反白計算屬性。](./images/ui/select.png)
 
-頁面的內容會有所不同，這取決於運算屬性是&#x200B;**[!UICONTROL Published]**&#x200B;還是&#x200B;**[!UICONTROL Draft]**。
+頁面的內容會有所不同，視運算屬性是&#x200B;**[!UICONTROL Published]**&#x200B;或在&#x200B;**[!UICONTROL Draft]**&#x200B;中而定。
 
 ### 已發佈的計算屬性 {#published}
 
@@ -142,9 +142,9 @@ ht-degree: 6%
 
 ### 草稿計算屬性 {#draft}
 
-選取草稿計算屬性時，會顯示&#x200B;**[!UICONTROL 編輯計算屬性]**&#x200B;頁面。 此頁麵類似於[!UICONTROL 建立計算屬性]頁面，可讓您先編輯計算屬性的基本資訊及其定義，然後再更新草稿或發佈。
+選取草稿計算屬性時，會顯示&#x200B;**[!UICONTROL Edit computed attributes]**&#x200B;頁面。 此頁面與[!UICONTROL Create computed attributes]頁面類似，可讓您先編輯計算屬性的基本資訊及其定義，然後再更新草稿或發佈。
 
-![顯示[!UICONTROL 編輯運算屬性]頁面。](./images/ui/edit.png)
+![顯示[!UICONTROL Edit computed attributes]頁面。](./images/ui/edit.png)
 
 ## 使用計算屬性 {#usage}
 

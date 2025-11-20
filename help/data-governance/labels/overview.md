@@ -44,14 +44,14 @@ Adobe Experience Platform可讓您將資料使用標籤套用至資料集和欄�
 
 [!DNL Experience Platform]能夠與Adobe Audience Manager共用區段。 套用至Audience Manager區段的任何資料匯出控制項都會轉譯為[!DNL Experience Platform]資料控管所識別的同等標籤和行銷動作。
 
-如需瞭解特定資料匯出控制項如何對應至[!DNL Experience Platform]中的資料使用標籤，請參閱[Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aam-data-export-control-in-aep)。
+如需瞭解特定資料匯出控制項如何對應至[!DNL Experience Platform]中的資料使用標籤，請參閱[Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
 
 ## 管理 [!DNL Experience Platform] 中的資料使用標籤 {#manage-labels}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="說明"
->abstract="<ul><li>標記 XDM 欄位和區段以對要限制存取的欄位和/或區段進行分類。</li><li>標記角色，為角色新增標籤可以讓您定義該角色的成員應該有限制的標籤。</li><li>建立原則，原則會建立被標記物件 (例如 XDM 欄位和區段) 的標籤和角色的標籤之間的關係。如果標籤相符，則可以定義允許存取或限制存取。</li></ul>"
+>abstract="<ul><li>賦予 XDM 欄位和區段標籤以對要限制存取的欄位和/或區段進行分類。</li><li>標記角色，為角色新增標籤可以讓您定義該角色的成員應該有限制的標籤。</li><li>建立原則，原則會建立被標記物件 (例如 XDM 欄位和區段) 的標籤和角色的標籤之間的關係。如果標籤相符，則可以定義允許存取或限制存取。</li></ul>"
 
 您可以使用[!DNL Experience Platform] API或使用者介面來管理資料使用標籤。 如需各個專案的詳細資訊，請參閱以下各小節。
 

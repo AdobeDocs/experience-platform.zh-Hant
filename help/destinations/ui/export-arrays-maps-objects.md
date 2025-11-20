@@ -5,7 +5,7 @@ description: 瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至雲
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1062'
 ht-degree: 13%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 13%
 
 取得本節中有關功能的最重要資訊，然後繼續參閱檔案中的其他章節，以取得詳細資訊。
 
-* 對於雲端儲存空間目的地，匯出陣列、地圖和物件的功能取決於您選取的&#x200B;**匯出陣列、地圖、物件**&#x200B;切換。 請在頁面[&#128279;](#export-arrays-maps-objects-toggle)的下一頁閱讀更多相關資訊。
+* 對於雲端儲存空間目的地，匯出陣列、地圖和物件的功能取決於您選取的&#x200B;**匯出陣列、地圖、物件**&#x200B;切換。 請在頁面[的下一頁閱讀更多相關資訊](#export-arrays-maps-objects-toggle)。
 * 您可以匯出陣列、地圖和物件至`JSON`和`Parquet`檔案中的雲端儲存體目的地。 對於Enterprise和Edge個人化目的地，匯出的資料型別為`JSON`。 支援人員和潛在客戶對象，但不支援帳戶對象。
 * 針對以檔案為基礎的雲端儲存目的地，您&#x200B;*可以*&#x200B;將陣列、對應和物件匯出至CSV檔案，但僅透過使用計算欄位功能並使用`array_to_string`功能將它們串連到字串中。
 
@@ -71,11 +71,11 @@ organizations = [{
 
 ## 先決條件 {#prerequisites}
 
-[連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地，完成雲端儲存空間目的地的[啟動步驟](/help/destinations/ui/activate-batch-profile-destinations.md)並到達[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。 連線到所需的雲端目的地時，您必須選取&#x200B;**[!UICONTROL 匯出陣列、對應、物件]**&#x200B;切換開啟。 如需詳細資訊，請參閱以下章節。
+[連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地，完成雲端儲存空間目的地的[啟動步驟](/help/destinations/ui/activate-batch-profile-destinations.md)並到達[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。 連線到所需的雲端目的地時，您必須選取&#x200B;**[!UICONTROL Export arrays, maps, objects]**&#x200B;切換開啟。 如需詳細資訊，請參閱以下章節。
 
 >[!NOTE]
 >
->對於企業和邊緣個人化目的地，無需選取&#x200B;**[!UICONTROL 匯出陣列、對應、物件]**&#x200B;切換即可使用對映型別欄位的匯出支援。 連線到這些型別的目的地時，無法使用或需要此切換按鈕。
+>對於Enterprise和Edge個人化目的地，無需選取&#x200B;**[!UICONTROL Export arrays, maps, objects]**&#x200B;切換即可使用對應型別欄位的匯出支援。 連線到這些型別的目的地時，無法使用或需要此切換按鈕。
 
 ## 匯出陣列、對應及物件的切換開關 {#export-arrays-maps-objects-toggle}
 
@@ -84,7 +84,7 @@ organizations = [{
 >title="匯出陣列、對應及物件"
 >abstract="<p> 將此設定切換為<b>開啟</b>，便可以將陣列、對應及物件匯出至 JSON 或 Parquet 檔案。您可以在對應步驟的來源欄位視圖中選取這些物件類型。在切換為開啟的情況下，您無法在對應步驟中使用計算欄位選項。</p><p>將這項設定切換為<b>關閉</b>後，即可使用計算欄位選項並在啟動客群時套用各種資料轉換函數。但是，您<i>不能</i>將陣列、對應和物件匯出至 JSON 或 Parquet 檔案，並且必須設定不同的目的地才能達成該目的。</p>"
 
-連線到以檔案為基礎的雲端儲存空間目的地時，您可以設定&#x200B;**[!UICONTROL 匯出陣列、地圖、物件]**&#x200B;的開啟或關閉。
+連線到以檔案為基礎的雲端儲存空間目的地時，您可以將&#x200B;**[!UICONTROL Export arrays, maps, objects]**&#x200B;切換設定為開啟或關閉。
 
 ![以開啟或關閉設定以及反白彈出視窗來顯示匯出陣列、地圖、物件切換。](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
@@ -98,7 +98,7 @@ organizations = [{
 
 ![透過啟動工作流程對應步驟中的來源欄位選擇器選取物件。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-選取此選項後，使用者介面會封鎖使用者無法使用計算欄位，而且&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;控制項已停用，如下所示。 若要使用計算欄位進行資料轉換，請在關閉切換功能的情況下設定目的地連線。
+選取此選項後，使用者介面會封鎖使用者，使其無法使用計算欄位，並停用&#x200B;**[!UICONTROL Add calculated fields]**&#x200B;控制項，如下所示。 若要使用計算欄位進行資料轉換，請在關閉切換功能的情況下設定目的地連線。
 
 ![已停用計算欄位控制項。](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 

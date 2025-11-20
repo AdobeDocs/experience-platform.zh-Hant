@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '368'
 ht-degree: 6%
 
 ---
@@ -54,8 +54,8 @@ ht-degree: 6%
 
 ## 使用串流受眾的監控儀表板 {#monitoring-dashboard}
 
-若要存取串流對象的監視儀表板，請移至Experience Platform UI，從左側導覽選取&#x200B;**[!UICONTROL 監視]**，然後選取&#x200B;**[!UICONTROL 串流端對端]**。
+若要存取串流對象的監控儀表板，請前往Experience Platform UI，從左側導覽選取「**[!UICONTROL Monitoring]**」，然後選取「**[!UICONTROL Streaming end-to-end]**」。
 
 影像
 
-控制面板頂端是&#x200B;**[!UICONTROL 對象]**&#x200B;量度卡片。 這會顯示有關對象的&#x200B;**評估率**&#x200B;的資訊。
+儀表板頂端是&#x200B;**[!UICONTROL Audiences]**&#x200B;量度卡。 這會顯示有關對象的&#x200B;**評估率**&#x200B;的資訊。

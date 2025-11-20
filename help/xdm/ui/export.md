@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '636'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 11%
 
 結構描述資料庫中的所有資源都包含在組織內的特定沙箱中。 在某些情況下，您可能會想要在沙箱和組織之間共用Experience Data Model (XDM)資源。
 
-為了滿足此需求，Adobe Experience Platform UI中的[!UICONTROL 結構描述]工作區可讓您為結構描述資料庫中的任何結構描述產生匯出裝載。 然後，此裝載可用於對結構描述登入API的呼叫中，以將結構描述（以及所有相依資源）匯入目標沙箱和組織。
+為了滿足此需求，Adobe Experience Platform UI中的[!UICONTROL Schemas]工作區可讓您為結構描述資料庫中的任何結構描述產生匯出裝載。 然後，此裝載可用於對結構描述登入API的呼叫中，以將結構描述（以及所有相依資源）匯入目標沙箱和組織。
 
 >[!NOTE]
 >
@@ -32,17 +32,17 @@ ht-degree: 11%
 
 ## 產生匯出裝載 {#generate-export-payload}
 
-匯出裝載可在Experience Platform UI中從[!UICONTROL 瀏覽]標籤的詳細資訊面板產生，或直接從結構描述編輯器中的結構描述畫布產生。
+匯出裝載可在Experience Platform UI中從[!UICONTROL Browse]索引標籤的詳細資訊面板產生，或直接從結構描述編輯器的結構描述畫布產生。
 
-若要產生匯出裝載，請在左側導覽中選取&#x200B;**[!UICONTROL 結構描述]**。 在[!UICONTROL 結構描述]工作區中，選取您要匯出的結構描述列，以在右側邊欄中顯示結構描述詳細資訊。
+若要產生匯出裝載，請在左側導覽中選取&#x200B;**[!UICONTROL Schemas]**。 在[!UICONTROL Schemas]工作區中，選取您要匯出的結構描述列，以在右側邊欄中顯示結構描述詳細資料。
 
 >[!TIP]
 >
 >請參閱[探索XDM資源](./explore.md)的指南，以取得有關如何尋找您所尋找XDM資源的詳細資訊。
 
-接著，從可用選項中選取&#x200B;**[!UICONTROL 複製JSON]**&#x200B;圖示（![復製圖示](/help/images/icons/copy.png)）。
+接著，從可用選項中選取&#x200B;**[!UICONTROL Copy JSON]**&#x200B;圖示（![復製圖示](/help/images/icons/copy.png)）。
 
-![包含結構描述列和[!UICONTROL 複製到JSON]的結構描述工作區已反白顯示。](../images/ui/export/copy-json.png)
+![包含結構描述列且[!UICONTROL Copy to JSON]已反白的結構描述工作區。](../images/ui/export/copy-json.png)
 
 這樣會根據結構描述結構產生JSON裝載並複製到剪貼簿。 針對上述的「[!DNL Loyalty Members]」結構描述，會產生下列JSON：
 
@@ -212,13 +212,13 @@ ht-degree: 11%
 
 +++
 
-也可以透過選取結構描述編輯器右上角的[!UICONTROL 更多]來複製裝載。 下拉式功能表提供兩個選項：[!UICONTROL 複製JSON結構]和[!UICONTROL 刪除結構描述]。
+也可以透過選取結構描述編輯器右上角的[!UICONTROL More]來複製裝載。 下拉式功能表提供兩個選項： [!UICONTROL Copy JSON structure]和[!UICONTROL Delete schema]。
 
 >[!NOTE]
 >
 >為設定檔啟用結構描述或具有關聯的資料集時，無法刪除結構描述。
 
-![包含[!UICONTROL 更多]和[!UICONTROL 複製到JSON]的結構描述編輯器已強調顯示。](../images/ui/export/schema-editor-copy-json.png)
+![反白顯示[!UICONTROL More]和[!UICONTROL Copy to JSON]的結構描述編輯器。](../images/ui/export/schema-editor-copy-json.png)
 
 裝載採用陣列形式，每個陣列專案都是代表要匯出的自訂XDM資源的物件。 在上述範例中，已包含&quot;[!DNL Loyalty details]&quot;自訂欄位群組和&quot;[!DNL Loyalty Members]&quot;結構描述。 結構描述採用的任何核心資源都不會包含在匯出中，因為這些資源可用於所有沙箱和組織。
 
@@ -230,4 +230,4 @@ ht-degree: 11%
 
 ## 後續步驟
 
-依照本指南，您已成功將XDM結構描述匯出至不同的組織或沙箱。 如需[!UICONTROL 結構描述] UI功能的詳細資訊，請參閱[[!UICONTROL 結構描述] UI概觀](./overview.md)。
+依照本指南，您已成功將XDM結構描述匯出至不同的組織或沙箱。 如需[!UICONTROL Schemas] UI功能的詳細資訊，請參閱[[!UICONTROL Schemas] UI概觀](./overview.md)。

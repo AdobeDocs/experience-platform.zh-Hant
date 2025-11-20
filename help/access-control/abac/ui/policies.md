@@ -5,7 +5,7 @@ description: 本檔案提供透過Adobe Experience Cloud中的許可權介面管
 exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '648'
 ht-degree: 11%
 
 ---
@@ -120,29 +120,29 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->依預設，會為所有客戶開啟[!UICONTROL 自動包含]功能，這表示所有沙箱都會新增到原則中。
+>依預設，會為所有客戶開啟[!UICONTROL Auto-include]功能，這表示所有沙箱都會新增到原則中。
 
 >[!NOTE]
 >
 >**[!UICONTROL Default-Label-Based-Access-Control-Policy]**&#x200B;原則是目前唯一可供設定的原則。
 
-若要檢視與原則關聯的沙箱，請從&#x200B;**[!UICONTROL 原則]**&#x200B;標籤中選取原則。
+若要檢視與原則關聯的沙箱，請從「**[!UICONTROL Policies]**」標籤中選取原則。
 
 ![顯示可用現有原則清單的原則頁面。](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-接著，選取原則，然後選取&#x200B;**[!UICONTROL 沙箱]**&#x200B;索引標籤。 將顯示與原則關聯的沙箱清單。
+接著，選取原則，然後選取「**[!UICONTROL Sandboxes]**」標籤。 將顯示與原則關聯的沙箱清單。
 
 ![顯示可用現有原則清單的原則頁面。](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### 將原則新增至所有沙箱
 
-使用&#x200B;**[!UICONTROL 沙箱]**&#x200B;標籤上的&#x200B;**[!UICONTROL 自動包含]**&#x200B;切換按鈕，為所有沙箱啟用原則。
+使用「**[!UICONTROL Auto-include]**」標籤上的「**[!UICONTROL Sandboxes]**」切換功能來啟用所有沙箱的原則。
 
-![顯示[!UICONTROL 自動包含]切換的[!UICONTROL 沙箱]標籤。](../../images/flac-ui/abac-policies-auto-include.png)
+![顯示[!UICONTROL Sandboxes]切換的[!UICONTROL Auto-include]索引標籤。](../../images/flac-ui/abac-policies-auto-include.png)
 
-**[!UICONTROL 啟用自動包含]**&#x200B;對話方塊會出現，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL 啟用]**&#x200B;以完成組態設定。
+**[!UICONTROL Enable Auto-include]**&#x200B;對話方塊會出現，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL Enable]**&#x200B;以完成組態設定。
 
-![啟用自動包含]對話方塊醒目提示[!UICONTROL 啟用]。(../../images/flac-ui/abac-policies-auto-include-enable.png)
+![醒目提示[!UICONTROL Enable Auto-include].[!UICONTROL Enable]的](../../images/flac-ui/abac-policies-auto-include-enable.png)對話方塊
 
 >[!SUCCESS]
 >
@@ -152,19 +152,19 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->如果關閉[!UICONTROL 自動包含]切換，則未來沙箱預設不會包含在原則中。 您將需要手動管理沙箱並新增至原則。
+>如果關閉[!UICONTROL Auto-include]切換，則預設不會將未來的沙箱納入原則中。 您將需要手動管理沙箱並新增至原則。
 
-使用&#x200B;**[!UICONTROL 沙箱]**&#x200B;標籤上的&#x200B;**[!UICONTROL 自動包含]**&#x200B;切換功能以停用所有沙箱的原則。
+使用&#x200B;**[!UICONTROL Auto-include]**&#x200B;標籤上的&#x200B;**[!UICONTROL Sandboxes]**&#x200B;切換功能以停用所有沙箱的原則。
 
-![顯示[!UICONTROL 自動包含]切換的[!UICONTROL 沙箱]標籤。](../../images/flac-ui/abac-policies-auto-include.png)
+![顯示[!UICONTROL Sandboxes]切換的[!UICONTROL Auto-include]索引標籤。](../../images/flac-ui/abac-policies-auto-include.png)
 
-從&#x200B;**[!UICONTROL 沙箱]**&#x200B;索引標籤中，選取&#x200B;**[!UICONTROL 新增沙箱]**&#x200B;以選取此原則將套用的沙箱。
+從&#x200B;**[!UICONTROL Sandboxes]**&#x200B;索引標籤，選取&#x200B;**[!UICONTROL Add Sandboxes]**&#x200B;以選取此原則將套用的沙箱。
 
-![顯示新增至原則之沙箱清單的[!UICONTROL 沙箱]標籤。](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![顯示新增至原則之沙箱清單的[!UICONTROL Sandboxes]標籤。](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
-沙箱清單隨即顯示。 從清單中選取您要新增的沙箱。 或者，使用搜尋列來搜尋沙箱。 選取「**[!UICONTROL 儲存]**」。
+沙箱清單隨即顯示。 從清單中選取您要新增的沙箱。 或者，使用搜尋列來搜尋沙箱。 選擇「**[!UICONTROL Save]**」。
 
-![此[!UICONTROL 新增沙箱]頁面顯示可新增至原則的現有沙箱清單。](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![此[!UICONTROL Add Sandboxes]頁面顯示可新增至原則的現有沙箱清單。](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -174,11 +174,11 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 若要移除沙箱，請選取沙箱名稱旁的&#x200B;**X**&#x200B;圖示。
 
-![顯示沙箱清單的[!UICONTROL 沙箱]索引標籤，反白顯示要刪除的[!UICONTROL X]。](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![顯示沙箱清單的[!UICONTROL Sandboxes]索引標籤，反白顯示要刪除的[!UICONTROL X]。](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
-**[!UICONTROL 移除]**&#x200B;對話方塊會出現，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL 確認]**&#x200B;以完成移除。
+**[!UICONTROL Remove]**&#x200B;對話方塊會出現，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL Confirm]**&#x200B;以完成移除。
 
-![醒目提示[!UICONTROL 確認]的[!UICONTROL 移除]對話方塊。](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![醒目提示[!UICONTROL Remove].[!UICONTROL Confirm]的](../../images/flac-ui/abac-policies-remove-sandbox.png)對話方塊
 
 >[!SUCCESS]
 >
@@ -192,7 +192,7 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 >abstract="策略是將屬性組合在一起的陳述式，用於建立允許和不允許的動作。每個組織都有一個預設原則，您必須啟動該原則才能開始根據標籤控制特定物件的存取權。除非使用者被指派的角色擁有相符的標籤，否則資源所套用的標籤將拒絕使用者存取。您不能編輯或刪除預設原則，但可以啟動或停用預設原則。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/abac/permissions-ui/labels" text="管理標籤"
 
-若要啟用現有原則，請從&#x200B;**[!UICONTROL 原則]**&#x200B;標籤中選取原則。
+若要啟用現有原則，請從&#x200B;**[!UICONTROL Policies]**&#x200B;標籤中選取原則。
 
 ![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
@@ -200,12 +200,12 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-**[!UICONTROL 啟用原則]**&#x200B;對話方塊會出現，提示您確認啟用。
+**[!UICONTROL Activate policy]**&#x200B;對話方塊隨即顯示，提示您確認啟動。
 
 ![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
 
-您返回到&#x200B;**[!UICONTROL 原則]**&#x200B;標籤，並且出現啟用確認彈出畫面。 原則狀態會顯示為作用中。
+您會回到&#x200B;**[!UICONTROL policies]**&#x200B;索引標籤，並且顯示啟用確認彈出視窗。 原則狀態會顯示為作用中。
 
 ![flac原則已啟用](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 

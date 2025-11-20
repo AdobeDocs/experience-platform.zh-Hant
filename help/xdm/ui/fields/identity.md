@@ -6,7 +6,7 @@ description: 瞭解如何在Experience Platform使用者介面中定義身分欄
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '657'
 ht-degree: 6%
 
 ---
@@ -30,19 +30,19 @@ ht-degree: 6%
 >title="對主要身分識別的限制"
 >abstract="此結構描述使用的欄位群組用於特定來源連接。此連線要求將 identityMap 做為主要身分識別並已自動設定。"
 
-在UI中定義[新欄位](./overview.md#define)時，您可以選取右側邊欄中的&#x200B;**[!UICONTROL 身分]**&#x200B;核取方塊，將其設定為身分欄位。
+在UI中定義[新欄位](./overview.md#define)時，您可以選取右側邊欄中的&#x200B;**[!UICONTROL Identity]**&#x200B;核取方塊，將其設定為身分欄位。
 
 ![](../../images/ui/fields/special/identity.png)
 
-勾選核取方塊後，會出現其他控制項。 如果您希望此欄位成為結構描述的主要身分，請選取&#x200B;**[!UICONTROL 主要身分]**&#x200B;核取方塊。
+勾選核取方塊後，會出現其他控制項。 如果您希望此欄位成為結構描述的主要身分識別，請選取&#x200B;**[!UICONTROL Primary identity]**&#x200B;核取方塊。
 
 >[!NOTE]
 >
 >單一結構描述可能定義了許多身分欄位，但只能有一個主要身分。 所有身分欄位（主要或其他身分欄位）都會協助個別客戶的身分圖表，但即時客戶設定檔在合併資料片段時，僅使用主要身分作為真實來源。 如果您想要啟用結構描述以用於設定檔，結構描述必須定義主要身分。
 
-在&#x200B;**[!UICONTROL 身分識別名稱空間]**&#x200B;底下，使用下拉式功能表為身分識別欄位選取適當的名稱空間。 Adobe提供的標準名稱空間以及貴組織定義的任何自訂名稱空間都會列在清單中。
+在&#x200B;**[!UICONTROL Identity namespace]**&#x200B;底下，使用下拉式功能表為身分欄位選取適當的名稱空間。 Adobe提供的標準名稱空間以及貴組織定義的任何自訂名稱空間都會列在清單中。
 
-完成後，選取&#x200B;**[!UICONTROL 套用]**&#x200B;將變更套用至結構描述。
+完成後，選取&#x200B;**[!UICONTROL Apply]**&#x200B;將變更套用至結構描述。
 
 >[!IMPORTANT]
 >
@@ -52,7 +52,7 @@ ht-degree: 6%
 
 畫布會更新以反映變更，而選取的欄位會取得指紋符號(![](/help/images/icons/identity-service.png))以將其指定為身分。 在左側欄中，身分欄位現在會列在提供結構描述欄位的類別或結構描述欄位群組的名稱底下。
 
-如果欄位也設定為主要身分，它也會列在左側邊欄的&#x200B;**[!UICONTROL 必要欄位]**&#x200B;下。 如果身分欄位巢狀內嵌於架構結構中，則所有父欄位也會依需求列出。
+如果欄位也設定為主要身分，它也會列在左側邊欄的&#x200B;**[!UICONTROL Required fields]**&#x200B;下。 如果身分欄位巢狀內嵌於架構結構中，則所有父欄位也會依需求列出。
 
 ![](../../images/ui/fields/special/identity-applied.png)
 

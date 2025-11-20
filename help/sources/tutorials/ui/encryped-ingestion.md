@@ -107,7 +107,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_isFileEncrypted"
 >title="檔案是否已加密？"
->abstract="如果您正在收錄加密的檔案，請選取此開關。"
+>abstract="如果您正在收錄加密的檔案，請選取此切換。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_sampleFile"

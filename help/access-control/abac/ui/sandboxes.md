@@ -5,7 +5,7 @@ description: 本檔案提供透過Adobe Experience Cloud中的許可權介面管
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '258'
 ht-degree: 18%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 18%
 
 ## 設定沙箱
 
-若要檢視指派給沙箱的詳細資訊和角色，請選取「**[!UICONTROL 沙箱]**」標籤。
+若要檢視沙箱指派給/伴隨的詳細資訊和角色，請選取「**[!UICONTROL Sandboxes]**」標籤。
 
 ![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
@@ -32,7 +32,7 @@ ht-degree: 18%
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-選取&#x200B;**[!UICONTROL 角色]**&#x200B;標籤以檢視指派給沙箱的角色。
+選取&#x200B;**[!UICONTROL Roles]**&#x200B;索引標籤以檢視指派給沙箱的角色。
 
 ![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 

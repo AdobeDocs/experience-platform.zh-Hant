@@ -16,7 +16,7 @@ ht-degree: 5%
 >
 >**Google Customer Match + Display &amp; Video 360聯結器可用性有限**<br>&#x200B;隨著我們與Google整合的整個成熟度生命週期，我們看到資料指出實作中的弱點，需要修正才能更廣泛地採用。 基於這些考量，Adobe已將此目的地的可見度降低為有限數量的客戶。 我們正在與Google進行主動式對話，以改善產品體驗。 我們明白這可能是一個令人失望的消息，但我們相信這是確保客戶獲得高品質、可靠體驗的負責任方法。</br>
 
-使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail]&#x200B;[!DNL Google Display Network]清單。
+使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail][!DNL Google Display Network]清單。
 
 某些Google整合的第三方(例如Adobe Real-Time CDP)可以使用[!DNL Google Audience Partner API]直接在客戶的[!DNL Customer Match]帳戶中建立[!DNL Display & Video 360]對象。
 
@@ -29,12 +29,12 @@ ht-degree: 5%
 >[!IMPORTANT]
 >
 > Google正在發佈[Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)和[Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)的變更，以支援歐盟（[歐盟使用者同意政策](https://digital-markets-act.ec.europa.eu/index_en)）中[數位市場法](https://www.google.com/about/company/user-consent-policy/) (DMA)所定義的法規遵循與同意相關需求。 自2024年3月6日起，將開始強制執行同意要求的這些變更。
-> &#x200B;><br/>
-> &#x200B;>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
-> &#x200B;><br/>
-> &#x200B;>已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
-> &#x200B;><br/>
-> &#x200B;>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
+><br/>
+>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
+><br/>
+>已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
+><br/>
+>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
 ## 使用此目的地的時間
 
@@ -176,7 +176,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 連線到目標 {#connect}
 

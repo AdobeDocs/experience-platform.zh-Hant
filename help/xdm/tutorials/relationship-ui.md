@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1342'
 ht-degree: 9%
 
 ---
@@ -31,11 +31,11 @@ ht-degree: 9%
 
 瞭解客戶之間的關係以及他們跨不同管道與您品牌的互動，是Adobe Experience Platform的重要一環。 在[!DNL Experience Data Model] (XDM)結構描述的結構中定義這些關係，可讓您獲得有關客戶資料的複雜見解。
 
-雖然結構描述關聯性可透過使用聯合結構描述和[!DNL Real-Time Customer Profile]來推斷，但這僅適用於共用相同類別的結構描述。 若要在屬於不同類別的兩個結構描述之間建立關係，必須將專用關係欄位新增到來源結構描述中，該來源結構描述會參考其他相關結構描述的身分。
+雖然結構描述關聯性可透過使用聯合結構描述和[!DNL Real-Time Customer Profile]來推斷，但這僅適用於共用相同類別的結構描述。 為了建立兩個屬於不同類別的結構之間的關係，必須在來源結構中加入一個專用的關係欄位，該結構會參考另一個相關結構的身份。
 
 >[!NOTE]
 >
->如果來源和目的地結構描述都屬於相同類別，則不應該使用專用關聯性欄位&#x200B;**&#x200B;**。 在此情況下，請使用聯合結構描述UI來檢視關係。 有關如何執行此動作的說明，請參閱聯合結構描述UI指南的[檢視關係](../../profile/ui/union-schema.md#view-relationships)區段。
+>如果來源和目的地結構描述都屬於相同類別，則不應該使用專用關聯性欄位&#x200B;****。 在此情況下，請使用聯合結構描述UI來檢視關係。 有關如何執行此動作的說明，請參閱聯合結構描述UI指南的[檢視關係](../../profile/ui/union-schema.md#view-relationships)區段。
 
 本檔案提供在[!DNL Experience Platform]使用者介面中使用結構描述編輯器來定義兩個結構描述之間關係的教學課程。 如需使用API定義結構描述關係的步驟，請參閱有關[使用結構描述登入API定義關係的教學課程](relationship-api.md)。
 
@@ -65,15 +65,15 @@ ht-degree: 9%
 
 ### [!DNL Loyalty Members]結構描述
 
-來源結構描述&quot;[!DNL Loyalty Members]&quot;以[!DNL XDM Individual Profile]類別為基礎，包含描述熟客方案成員的欄位。 其中一個欄位`personalEmail.addess`會當作[!UICONTROL 電子郵件]名稱空間下結構描述的主要身分。 如在&#x200B;**[!UICONTROL 結構描述屬性]**&#x200B;下所見，此結構描述已在[!DNL Real-Time Customer Profile]中啟用。
+來源結構描述&quot;[!DNL Loyalty Members]&quot;以[!DNL XDM Individual Profile]類別為基礎，包含描述熟客方案成員的欄位。 其中一個欄位`personalEmail.addess`會當作[!UICONTROL Email]名稱空間下結構描述的主要身分。 如在&#x200B;**[!UICONTROL Schema Properties]**&#x200B;下所見，此結構描述已在[!DNL Real-Time Customer Profile]中啟用。
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### [!DNL Hotels]結構描述
 
-參考結構描述&quot;[!DNL Hotels]&quot;以自訂&quot;[!DNL Hotels]&quot;類別為基礎，並包含描述飯店的欄位。 為了參與關聯性，參考結構描述也必須定義主要身分並啟用[!UICONTROL 設定檔]。 在這種情況下，`_tenantId.hotelId`會使用自訂&quot;[!DNL Hotel ID]&quot;身分名稱空間，作為結構描述的主要身分。
+參考結構描述&quot;[!DNL Hotels]&quot;以自訂&quot;[!DNL Hotels]&quot;類別為基礎，並包含描述飯店的欄位。 為了參與關係，參考結構也必須定義一個主要身份，並且對 啟用 [!UICONTROL Profile]。 在此情況下，作為 `_tenantId.hotelId`結構的主要身份，使用自訂的「[!DNL Hotel ID]」身份命名空間。
 
-為設定檔![&#128279;](../images/tutorials/relationship/hotels.png)啟用
+為設定檔![啟用](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
@@ -91,15 +91,15 @@ ht-degree: 9%
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-新的欄位預留位置會顯示在畫布中。 在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;底下，提供欄位名稱和欄位顯示名稱，並將其型別設定為&quot;[!UICONTROL 字串]&quot;。 在&#x200B;**[!UICONTROL 指派給]**&#x200B;下，選取要擴充的現有欄位群組，或輸入唯一名稱以建立新的欄位群組。 在此情況下，會建立新的&quot;[!DNL Preferred Hotel]&quot;欄位群組。
+新的欄位預留位置會顯示在畫布中。 在&#x200B;**[!UICONTROL Field properties]**&#x200B;底下，提供欄位名稱和欄位顯示名稱，並將其型別設定為&quot;[!UICONTROL String]&quot;。 在&#x200B;**[!UICONTROL Assign to]**&#x200B;下，選取要擴充的現有欄位群組，或輸入唯一名稱以建立新的欄位群組。 在此情況下，會建立新的&quot;[!DNL Preferred Hotel]&quot;欄位群組。
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-完成後，選取&#x200B;**[!UICONTROL 套用]**。
+完成後，選取&#x200B;**[!UICONTROL Apply]**。
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-更新的`preferredHotel`欄位會顯示在畫布中，位於`_tenantId`物件下方，因為它是自訂欄位。 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以完成您對結構描述的變更。
+更新的`preferredHotel`欄位會顯示在畫布中，位於`_tenantId`物件下方，因為它是自訂欄位。 選取&#x200B;**[!UICONTROL Save]**&#x200B;以完成您對結構描述的變更。
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -111,11 +111,11 @@ ht-degree: 9%
 >
 >只能對字串或字串陣列欄位支援關係。
 
-在畫布中選取`preferredHotel`欄位，然後在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;側邊欄中選取&#x200B;**[!UICONTROL 新增關係]**。
+在畫布中選取`preferredHotel`欄位，然後在&#x200B;**[!UICONTROL Add relationship]**&#x200B;側邊欄中選取&#x200B;**[!UICONTROL Field properties]**。
 
 ![在Field屬性側邊欄中反白顯示Add關聯性的結構描述編輯器。](../images/tutorials/relationship/add-relationship.png)
 
-[!UICONTROL 新增關係]對話方塊就會顯示。 從這個對話方塊，您可以設定設定關係欄位所需的引數。 對於Real-Time CDP B2C使用者，您只能&#x200B;**在**&#x200B;設定來源和參考結構描述之間的一對一關係。
+[!UICONTROL Add relationship]對話方塊隨即顯示。 從這個對話方塊，您可以設定設定關係欄位所需的引數。 對於Real-Time CDP B2C使用者，您只能&#x200B;**在**&#x200B;設定來源和參考結構描述之間的一對一關係。
 
 >[!NOTE]
 >
@@ -123,33 +123,33 @@ ht-degree: 9%
 
 ![新增關係對話方塊。](../images/tutorials/relationship/add-relationship-dialog.png)
 
-使用&#x200B;**[!UICONTROL 參考結構描述]**&#x200B;的下拉式清單，並選取關聯性的參考結構描述（此範例中為&quot;[!DNL Hotels]&quot;）。
+使用&#x200B;**[!UICONTROL Reference schema]**&#x200B;的下拉式清單，並選取關係的參考結構描述（在此範例中為&quot;[!DNL Hotels]&quot;）。
 
 >[!NOTE]
 >
 >參考結構描述下拉式選單中只會包含主要身分的結構描述。 此保護措施可防止您意外與尚未正確設定的結構描述建立關係。
 
-參考結構描述的身分名稱空間（在此案例中為&quot;[!DNL Hotel ID]&quot;）會自動填入&#x200B;**[!UICONTROL 參考身分名稱空間]**&#x200B;下。 完成時選取&#x200B;**[!UICONTROL 套用]**。
+參考結構描述的身分名稱空間（在此案例中為&quot;[!DNL Hotel ID]&quot;）會自動填入&#x200B;**[!UICONTROL Reference identity namespace]**&#x200B;下。 完成後選取「**[!UICONTROL Apply]**」。
 
 ![已設定關聯性引數且套用的新增關聯性對話方塊已反白顯示。](../images/tutorials/relationship/apply-relationship.png)
 
-`preferredHotel`欄位現在會在畫布中反白為關聯性，顯示參考結構描述的名稱。 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存變更並完成工作流程。
+`preferredHotel`欄位現在會在畫布中反白為關聯性，顯示參考結構描述的名稱。 選取&#x200B;**[!UICONTROL Save]**&#x200B;以儲存變更並完成工作流程。
 
 ![結構描述編輯器，反白顯示關聯性參考和[儲存]。](../images/tutorials/relationship/relationship-save.png)
 
 ### 編輯現有的關係欄位 {#edit-relationship}
 
-若要變更參考結構描述，請選取具有現有關聯性的欄位，然後在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;側邊欄中選取&#x200B;**[!UICONTROL 編輯關聯性]**。
+若要變更參考結構描述，請選取具有現有關係的欄位，然後在&#x200B;**[!UICONTROL Edit relationship]**&#x200B;側邊欄中選取&#x200B;**[!UICONTROL Field properties]**。
 
 ![反白顯示編輯關聯性的結構描述編輯器。](../images/tutorials/relationship/edit-relationship.png)
 
-[!UICONTROL 編輯關係]對話方塊就會顯示。 從此處，您可以依照定義關聯性欄位[&#128279;](#relationship-field)的中概述的程式，或刪除關聯性。 選取&#x200B;**[!UICONTROL 刪除關係]**&#x200B;以移除與參考結構描述的關係。
+[!UICONTROL Edit relationship]對話方塊隨即顯示。 從此處，您可以依照定義關聯性欄位[的](#relationship-field)中概述的程式，或刪除關聯性。 選取&#x200B;**[!UICONTROL Delete relationship]**&#x200B;以移除與參考結構描述的關係。
 
 ![編輯關聯性對話方塊。](../images/tutorials/relationship/edit-relationship-dialog.png)
 
 ## 篩選和搜尋關係 {#filter-and-search}
 
-您可以從[!UICONTROL 結構描述]工作區的[!UICONTROL 關係]索引標籤，篩選及搜尋結構描述中的特定關係。 您可以使用此檢視快速找到並管理您的關係。 請閱讀[探索結構描述資源](../ui/explore.md#lookup)上的檔案，以取得篩選選項的詳細說明。
+你可以從 [!UICONTROL Relationships] 工作區的分頁 [!UICONTROL Schemas] 篩選並搜尋結構中的特定關聯。 你可以利用這個視角快速找到並管理你的人際關係。 請閱讀關於 [探索結構資源](../ui/explore.md#lookup) 的文件，了解篩選選項的詳細說明。
 
 ![結構描述工作區中的[關聯性]索引標籤。](../images/tutorials/relationship-b2b/relationship-tab.png)
 

@@ -2,12 +2,12 @@
 title: Real-Time Customer Data Platform中的對象產生器
 description: 瞭解如何使用Real-Time Customer Data Platform中的對象產生器建立對象。
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 8%
+source-wordcount: '957'
+ht-degree: 9%
 
 ---
 
@@ -42,19 +42,19 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->**[!UICONTROL 欄位選項]**&#x200B;區段目前為測試版，僅供特定客戶使用。 如需詳細資訊，請聯絡Adobe客戶服務。
+>**[!UICONTROL Field options]**&#x200B;區段目前為測試版，僅供特定客戶使用。 如需詳細資訊，請和 Adobe 客戶服務聯絡。
 
-顯示[!UICONTROL 設定]區段。 在此區段中，您可以更新顯示哪些欄位以及欄位之間的關係。
+顯示[!UICONTROL Settings]區段。 在此區段中，您可以更新顯示哪些欄位以及欄位之間的關係。
 
-對於&#x200B;**[!UICONTROL 欄位選項]**，您可以只顯示包含資料的欄位或完整XDM結構描述。
+對於&#x200B;**[!UICONTROL Field options]**，您可以只顯示包含資料的欄位或完整XDM結構描述。
 
-針對欄位的&#x200B;**[!UICONTROL 關聯性]**，您可以使用組織的標準關聯性或顯示關聯性選取器。
+對於&#x200B;**[!UICONTROL Relationship of fields]**，您可以使用組織的標準關係或顯示關係選取器。
 
 ![顯示設定模組。](../assets/segmentation/audience-builder/settings.png){width="300"}
 
 ### 屬性 {#attributes}
 
-[!UICONTROL 屬性]標籤可讓您瀏覽屬於XDM商業帳戶類別的帳戶屬性，以及商機和以人物為基礎的屬性。 每個資料夾都可以展開以顯示其他屬性，其中每個屬性都是一個可拖曳至工作區中央[規則產生器畫布](#rule-builder-canvas)的圖磚。
+[!UICONTROL Attributes]索引標籤可讓您瀏覽屬於XDM商業帳戶類別的帳戶屬性，以及商機和以人物為基礎的屬性。 每個資料夾都可以展開以顯示其他屬性，其中每個屬性都是一個可拖曳至工作區中央[規則產生器畫布](#rule-builder-canvas)的圖磚。
 
 ![「屬性」索引標籤會顯示在「對象產生器」中](../assets/segmentation/audience-builder/attributes.png)
 
@@ -76,7 +76,7 @@ ht-degree: 8%
 
 ### 客群 {#audiences}
 
-**[!UICONTROL 對象]**&#x200B;索引標籤會列出Experience Platform中可用的所有以人物為基礎和以帳戶為基礎的對象。
+**[!UICONTROL Audiences]**&#x200B;索引標籤會列出Experience Platform中可用的所有以人物為基礎和以帳戶為基礎的對象。
 
 您可以將滑鼠停留在對象旁的![資訊圖示](../../images/icons/info.png)上，即可檢視對象的相關資訊，包括其ID、說明以及資料夾階層，以找出對象。
 
@@ -86,7 +86,7 @@ ht-degree: 8%
 
 在Audience Builder中建立的受眾是用來描述目標受眾關鍵特性或行為的規則集合。 這些規則是使用位於「對象產生器」中心的規則產生器畫布所建立。
 
-若要將新規則新增至您的區段定義，請從&#x200B;**[!UICONTROL 欄位]**&#x200B;標籤中拖曳圖磚，並將其拖曳至規則產生器畫布。
+若要將新規則新增至您的區段定義，請從「**[!UICONTROL Fields]**」標籤拖曳圖磚，並將其拖曳至規則產生器畫布。
 
 ![具有新增欄位的規則產生器畫布。](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
@@ -100,25 +100,25 @@ ht-degree: 8%
 
 ## 客群屬性 {#properties}
 
-**[!UICONTROL 對象屬性]**&#x200B;區段會顯示對象的相關資訊，包括預估的對象人數。 您也可以指定有關對象的詳細資料，包括其名稱、說明和標籤。
+**[!UICONTROL Audience properties]**&#x200B;區段顯示對象的相關資訊，包括預估的對象人數。 您也可以指定有關對象的詳細資料，包括其名稱、說明和標籤。
 
 ![對象產生器中會顯示對象的對象屬性區段。](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
-**[!UICONTROL 合格帳戶]**&#x200B;表示符合對象規則的實際帳戶數量。 此數字會在細分工作執行後，每24小時更新一次。
+**[!UICONTROL Qualified accounts]**&#x200B;表示符合對象規則的實際帳戶數量。 此數字會在細分工作執行後，每24小時更新一次。
 
-**[!UICONTROL 預估帳戶]**&#x200B;表示根據範例工作的大約帳戶數。 新增新規則或條件並選取&#x200B;**[!UICONTROL 重新整理預估值]**&#x200B;後，您可以更新此值。
+**[!UICONTROL Estimated accounts]**&#x200B;表示根據範例工作的大約帳戶數。 新增規則或條件並選取&#x200B;**[!UICONTROL Refresh estimate]**&#x200B;之後，您可以更新此值。
 
 ![顯示對象屬性區段中的預估區段。](../assets/segmentation/audience-builder/account-estimates.png){width="300"}
 
-您可以選取&#x200B;**[!UICONTROL 檢視帳戶]**，以檢視符合目前規則對象資格的帳戶抽樣。
+您可以選取&#x200B;**[!UICONTROL View accounts]**，以檢視符合目前規則之對象資格的帳戶取樣。
 
 ![[檢視帳戶]按鈕已反白顯示。](../assets/segmentation/audience-builder/view-accounts.png){width="300"}
 
-**[!UICONTROL 程式碼檢視]**&#x200B;提供對象規則的文字型程式碼描述。
+**[!UICONTROL Code view]**&#x200B;提供對象規則的文字型程式碼描述。
 
 ![帳戶對象的程式碼檢視版本。](../assets/segmentation/audience-builder/code-view.png)
 
-您可以選取&#x200B;**[!UICONTROL 套用存取權標籤]**&#x200B;以套用對象的相關存取權標籤。 如需存取標籤的詳細資訊，請參閱[管理標籤指南](../../access-control/abac/ui/labels.md){target="_blank"}。
+您可以選取&#x200B;**[!UICONTROL Apply access labels]**&#x200B;以套用對象的相關存取標籤。 如需存取標籤的詳細資訊，請參閱[管理標籤指南](../../access-control/abac/ui/labels.md){target="_blank"}。
 
 ![顯示[套用存取權和資料控管標籤]彈出視窗。](../assets/segmentation/audience-builder/apply-access-labels.png)
 

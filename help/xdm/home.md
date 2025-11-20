@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；XDM；XDM系統；XDM個人設定檔；XDM ExperienceEvent；XDM體驗事件；體驗事件；欄位群組；欄位群組；欄位群組；體驗事件；XDM ExperienceEvent；XDM Experienceevent；XDM Experienceevent；體驗資料模型；體驗資料模型；資料模型；結構描述登入；結構描述庫；結構描述庫；記錄資料序列；時間序列
+keywords: 體驗平台;家;熱門話題;XDM;XDM 系統;XDM 個人檔案;XDM 體驗活動;XDM 體驗活動;experienceEvent;體驗活動;現場小組;現場小組;現場小組;現場小組;體驗活動;XDM 體驗活動;XDM 體驗活動;experienceEvent;experienceevent;XDM Experienceevenet;經驗資料模型;經驗資料模型;經驗資料模型;資料模型;資料模型;模式登錄;結構登錄;schema library;結構庫;schema;記錄資料;時間序列;時間序列
 solution: Experience Platform
-title: XDM系統概覽
+title: XDM 系統概述
 description: 標準化和互通性是Adobe Experience Platform背後的重要概念。 體驗資料模型(XDM)採用Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # XDM系統概覽
 
-標準化和互通性是Adobe Experience Platform背後的重要概念。 體驗資料模型(XDM)採用Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
+標準化與互通性是 Adobe 體驗平台的核心理念。 由 Adobe 推動的體驗資料模型（XDM）是一項旨在標準化客戶體驗資料並定義客戶體驗管理架構的努力。
 
-XDM是公開記錄的規格，旨在改善數位體驗的效能。 它提供通用結構和定義，可讓任何應用程式使用來與Experience Platform服務通訊。 只要遵循XDM標準，所有客戶體驗資料都可整合到共同表現中，以更快、更整合的方式提供深入分析。 您可以從客戶動作中獲得有價值的深入分析、透過區段定義客戶對象，以及表達客戶屬性以進行個人化。
+XDM 是一項公開文件化的規範，旨在提升數位體驗的效能。 它提供通用的結構與定義，讓任何應用程式都能用來與 Experience Platform 服務溝通。 透過遵循 XDM 標準，所有客戶體驗資料都能整合成一個統一的表示方式，以更快速、更整合的方式提供洞見。 你可以從顧客行動中獲得有價值的洞察，透過細分定義顧客受眾，並表達顧客屬性以達成個人化目的。
 
-XDM是基礎架構，可讓Adobe Experience Cloud (由Experience Platform提供技術支援)在適當的時間透過適當的管道將適當的訊息傳遞給適當的人。 建置Experience Platform所依據的方法XDM系統可讓Experience Platform服務使用的體驗資料模型結構描述開始運轉。
+XDM 是基礎架構，讓 Adobe Experience Cloud 由 Experience Platform 驅動，能在正確的時機、正確的管道、恰當的時刻，將正確的訊息傳遞給正確的人。 Experience Platform 所依據的方法論 XDM 系統，將經驗資料模型架構實化，供 Experience Platform 服務使用。
 
 瞭解XDM系統在Experience Platform中的角色。
 
@@ -35,7 +35,7 @@ XDM提供標準欄位群組和資料型別的強大集合，旨在擷取不同�
 
 在Experience Platform UI中建構結構描述時，列出的欄位群組會顯示人氣量度。 此量度取決於其他Experience Platform使用者在其結構描述中使用欄位群組的頻率。 數字越高，欄位群組就越受歡迎。 依預設，會顯示從最受歡迎到最不受歡迎的結果，讓您隨時掌握業界的資料模型化趨勢。
 
-![&#x200B; [!UICONTROL Add field group]對話方塊的人氣資料行。](./images/overview/popularity.png)
+![ [!UICONTROL Add field group]對話方塊的人氣資料行。](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
@@ -71,7 +71,7 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
-[!UICONTROL XDM Individual Profile]是以記錄為基礎的類別，可構成已識別與部分識別之主體屬性的單一表示法。 高度識別的設定檔可用於個人通訊或目標參與。 高度識別的設定檔可包含詳細的個人資訊，例如，姓名、性別、出生日期、地點，以及聯絡資訊，包括電話號碼和電子郵件地址。
+[!UICONTROL XDM Individual Profile]是以記錄為基礎的類別，可構成已識別與部分識別之主體屬性的單一表示法。 高度識別的設定檔可用於個人通訊或目標參與。 高度識別的個人資料可能包含詳細的個人資訊，如姓名、性別、出生日期、地點，以及聯絡資訊，包括電話號碼和電子郵件地址。
 
 較少識別的設定檔可能僅由匿名行為訊號（如瀏覽器Cookie）組成。 在這種情況下，會使用稀疏設定檔資料來建立資訊庫，匿名設定檔的興趣和偏好設定會在該資訊庫中整理和儲存。 隨著主體註冊接收通知、訂閱、購買等，這些識別碼可能會隨著時間變得更詳細。 設定檔屬性的這種增加最終可能會導致識別的主題，並允許更高程度的目標參與。
 
@@ -81,7 +81,7 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
-XDM ExperienceEvent是一種以時間序列為基礎的類別，用於在事件（或一組事件）發生時擷取系統的狀態，包括時間點和所涉及主體的身分。 體驗事件是指在該時間點所發生之情況的不可變、真實記錄，代表在沒有彙總或詮釋的情況下所發生的情況。 它們對於時間網域分析至關重要，因為它們可用於分析指定時段內發生的變化，並用於比較多個時段以追蹤趨勢。
+XDM ExperienceEvent 是一個基於時間序列的類別，用於捕捉事件（或事件集合）發生時系統的狀態，包括時間點及受試者的身份。 體驗事件是指在該時間點所發生之情況的不可變、真實記錄，代表在沒有彙總或詮釋的情況下所發生的情況。 它們對於時間網域分析至關重要，因為它們可用於分析指定時段內發生的變化，並用於比較多個時段以追蹤趨勢。
 
 體驗事件可以是明確或隱含的。 明確事件是指在歷程中某個時間點發生的直接可觀察的人類行為。 隱含事件是在沒有直接人類動作的情況下引發，但仍與個人相關的事件。 隱含事件的範例包括排程傳送電子郵件電子報或電池電壓達到特定臨界值。
 
@@ -97,23 +97,23 @@ Experience Platform與結構無關，這表示符合XDM標準的任何結構都�
 
 ### 目錄服務、資料擷取和資料湖 {#ingestion-catalog-and-storage}
 
-目錄服務是Experience Platform資產及其相關結構描述的記錄系統。 目錄並不包含實際的資料檔案或目錄，而是包含這些檔案和目錄的中繼資料和說明。
+目錄服務是 Experience Platform 資產及其相關結構的記錄系統。 目錄並不包含實際的資料檔案或目錄，而是保存這些檔案和目錄的元資料與描述。
 
-目錄資料儲存在Data Lake中，這是高度精細的資料存放區，包含Experience Platform管理的所有資料，無論來源或檔案格式為何。
+目錄資料儲存在資料湖中，這是一個高度細緻的資料儲存庫，包含所有由 Experience Platform 管理的資料，無論來源或檔案格式為何。
 
-若要開始將資料擷取至Experience Platform，您可以使用目錄服務建立資料集。 資料集參考描述要擷取之資料結構的XDM結構描述。 如果在沒有結構描述的情況下建立資料集，Experience Platform會透過檢查所擷取資料欄位的型別和內容來衍生「觀察到的結構描述」。 資料集接著會在目錄服務中受到追蹤，並與資料集所根據的結構描述和觀察的結構描述一起儲存在資料湖中。
+要開始將資料匯入 Experience Platform，您可以使用目錄服務建立資料集。 資料集參考描述要擷取之資料結構的XDM結構描述。 如果在沒有結構描述的情況下建立資料集，Experience Platform會透過檢查所擷取資料欄位的型別和內容來衍生「觀察到的結構描述」。 資料集接著會在目錄服務中受到追蹤，並與資料集所根據的結構描述和觀察的結構描述一起儲存在資料湖中。
 
-如需詳細資訊，請參閱[目錄服務總覽](../catalog/home.md)。 如需有關Adobe Experience Platform資料擷取的詳細資訊，請參閱[資料擷取總覽](../ingestion/home.md)。
+如需詳細資訊，請參閱[目錄服務總覽](../catalog/home.md)。 欲了解更多 Adobe Experience Platform 資料擷取的資訊，請參閱 [資料擷取總覽](../ingestion/home.md) 。
 
-### Data Mirror和關聯式結構描述 {#relational-schemas}
+### 資料鏡像與關聯式結構 {#relational-schemas}
 
 >[!AVAILABILITY]
 >
->Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
+>Data Mirror 與關聯式結構可供 Adobe Journey Optimizer **Orchestrated campaigns** 授權持有者使用。 根據你的授權與功能啟用，客戶旅程分析用戶也有限度地&#x200B;**提供**&#x200B;這些版本。請聯絡您的 Adobe 代表以取得存取權限。
 
 >[!NOTE]
 >
->關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。 功能保持不變，只是術語有所變更，以求清晰明瞭。
+>關聯式結構在早期版本的 Adobe Experience Platform 文件中被稱為基於模型的結構。 功能保持不變，只是術語為清晰度有所改變。
 
 Data Mirror是Adobe Experience Platform的一項功能，可讓您使用關聯式架構進行進階資料庫同步。 如需Data Mirror功能和使用案例的完整總覽，請參閱[Data Mirror總覽](./data-mirror/overview.md)。
 
@@ -153,7 +153,7 @@ Data Mirror透過關聯式結構描述運作，這些結構描述是針對結構
 
 ### 即時客戶輪廓 {#real-time-customer-profile}
 
-即時客戶設定檔提供集中式消費者設定檔，用於針對性和個人化的體驗管理。 每個設定檔都包含跨所有系統彙總的資料，並包含涉及設定檔主旨之事件的可行時間戳記帳戶。 這些事件可能在您搭配Experience Platform使用的任何系統中發生。
+即時客戶檔案提供集中式消費者檔案，以達成目標化且個人化的體驗管理。 每個檔案包含跨所有系統彙整的資料，並包含涉及該檔案主題事件的可操作時間戳記帳號。 這些事件可能在您搭配Experience Platform使用的任何系統中發生。
 
 Real-Time Customer Profile會使用以[!UICONTROL XDM Individual Profile]和[!UICONTROL XDM ExperienceEvent]類別為基礎的結構描述格式化資料，並根據該資料回應查詢。
 

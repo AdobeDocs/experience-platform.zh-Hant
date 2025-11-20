@@ -7,7 +7,7 @@ description: Adobe Experience Platform Data Science Workspace可讓您發佈經�
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '509'
 ht-degree: 4%
 
 ---
@@ -37,15 +37,15 @@ Adobe Experience Platform Data Science Workspace可讓您發佈經過訓練及�
 
 ## 發佈模型 {#publish-a-model}
 
-在Adobe Experience Platform中，選取位於左側導覽欄中的&#x200B;**[!UICONTROL 模型]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以列出所有現有模型。 選取您要作為服務發佈的模型名稱。
+在Adobe Experience Platform中，選取位於左側導覽欄中的&#x200B;**[!UICONTROL Models]**，然後選取「**[!UICONTROL Browse]**」索引標籤以列出所有現有模型。 選取您要作為服務發佈的模型名稱。
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-選取[模型概觀]頁面右上角附近的&#x200B;**[!UICONTROL 發佈]**&#x200B;以開始服務建立程式。
+選取[模型概觀]頁面右上角附近的&#x200B;**[!UICONTROL Publish]**&#x200B;以開始服務建立程式。
 
 ![](../images/models-recipes/publish-model/view_training.png)
 
-輸入所需的服務名稱，並選擇性地提供服務說明，完成後，請選取&#x200B;**[!UICONTROL 下一步]**。
+輸入所需的服務名稱，並選擇性地提供服務說明，完成後選取&#x200B;**[!UICONTROL Next]**。
 
 ![](../images/models-recipes/publish-model/configure_training.png)
 
@@ -53,32 +53,32 @@ Adobe Experience Platform Data Science Workspace可讓您發佈經過訓練及�
 
 ![](../images/models-recipes/publish-model/select_training_run.png)
 
-選取&#x200B;**[!UICONTROL 完成]**&#x200B;以建立服務，並重新導向至&#x200B;**[!UICONTROL 服務庫]**&#x200B;以顯示所有可用的服務，包括新建立的服務。
+選取「**[!UICONTROL Finish]**」以建立服務，並重新導向至「**[!UICONTROL Service Gallery]**」以顯示所有可用的服務，包括新建立的服務。
 
 ![](../images/models-recipes/publish-model/service_gallery.png)
 
 ## 使用服務計分 {#access-a-service}
 
-在Adobe Experience Platform中，選取位於左側導覽欄中的&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤，以存取&#x200B;**[!UICONTROL 服務庫]**。 尋找您要使用的服務，並選取&#x200B;**[!UICONTROL 開啟]**。
+在Adobe Experience Platform中，選取位於左側導覽欄中的&#x200B;**[!UICONTROL Services]**&#x200B;索引標籤以存取&#x200B;**[!UICONTROL Service Gallery]**。 尋找您要使用的服務，並選取&#x200B;**[!UICONTROL Open]**。
 
 ![](../images/models-recipes/publish-model/open_service.png)
 
-在服務概觀頁面中，選取&#x200B;**[!UICONTROL 分數]**。
+在服務概觀頁面中，選取&#x200B;**[!UICONTROL Score]**。
 
 ![](../images/models-recipes/publish-model/score_service.png)
 
-為評分回合選取適當的輸入資料集，然後選取&#x200B;**[!UICONTROL 下一步]**。 系統會要求您對評分資料集執行相同步驟。 選取輸入和輸出資料集後，即可更新設定。
+為評分回合選取適當的輸入資料集，然後選取&#x200B;**[!UICONTROL Next]**。 系統會要求您對評分資料集執行相同步驟。 選取輸入和輸出資料集後，即可更新設定。
 
 ![](../images/models-recipes/publish-model/select_datasets.png)
 
-建立服務時，會繼承預設評分設定。 您可以檢閱這些設定，並視需要按兩下值以調整它們。 在您滿意組態之後，請選取&#x200B;**[!UICONTROL 完成]**&#x200B;以開始評分回合。
+建立服務時，會繼承預設評分設定。 您可以檢閱這些設定，並視需要按兩下值以調整它們。 在您滿意組態之後，請選取&#x200B;**[!UICONTROL Finish]**&#x200B;開始評分回合。
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 
-在服務的&#x200B;**總覽**&#x200B;頁面上，會顯示新評分工作及其進度的詳細資料。 工作完成後，**[!UICONTROL 評分]**&#x200B;容器中的&#x200B;**[!UICONTROL 最近]**&#x200B;標題會更新。
+在服務的&#x200B;**總覽**&#x200B;頁面上，會顯示新評分工作及其進度的詳細資料。 工作完成後，**[!UICONTROL Most Recent]**&#x200B;容器中的&#x200B;**[!UICONTROL Scoring]**&#x200B;標題會更新。
 
 ![](../images/models-recipes/publish-model/pending_scoring.png)
 
 ## 後續步驟 {#next-steps}
 
-依照此教學課程，您已經成功將模型發佈為可存取的服務，並透過[!UICONTROL 服務庫]使用新服務對資料進行評分。 繼續下一個教學課程，瞭解如何[排程服務](./schedule-models-ui.md)上的自動訓練和評分執行。
+依照此教學課程，您已成功發佈模型作為可存取的服務，並透過[!UICONTROL Service Gallery]使用新服務對資料進行評分。 繼續下一個教學課程，瞭解如何[排程服務](./schedule-models-ui.md)上的自動訓練和評分執行。

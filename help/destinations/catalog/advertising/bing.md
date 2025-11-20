@@ -33,7 +33,7 @@ ht-degree: 5%
 
 使用[!DNL Microsoft Bing]目的地將設定檔資料傳送至整個[!DNL Microsoft Advertising Network]，包括[!DNL Display Advertising]、[!DNL Search]和[!DNL Native]。
 
-[!DNL Microsoft Bing]目的地會在Microsoft中建立&#x200B;*[!DNL Custom Audiences]*。 如[!DNL Microsoft Search Network]Microsoft Advertising檔案[!DNL Audience Network]所列，這些在[!DNL Native]和[!DNL Display] ([!DNL Programmatic] /[&#x200B; /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))中均可用。
+[!DNL Microsoft Bing]目的地會在Microsoft中建立&#x200B;*[!DNL Custom Audiences]*。 如[!DNL Microsoft Search Network]Microsoft Advertising檔案[!DNL Audience Network]所列，這些在[!DNL Native]和[!DNL Display] ([!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))中均可用。
 
 若要將設定檔資料傳送至[!DNL Microsoft Bing]，您必須先連線至目的地。
 
@@ -80,7 +80,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=zh-Hant)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步會移轉到Experience Platform。
 
 設定目的地時，您必須提供下列資訊：
 
