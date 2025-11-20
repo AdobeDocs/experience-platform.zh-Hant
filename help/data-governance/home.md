@@ -136,4 +136,4 @@ Adobe Experience Platform 的核心功能之一是整合多個企業系統的數
 
 以下影片提供如何在Experience Platform中套用資料使用標籤至結構描述或整個資料集的指引。
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422788/?captions=chi_hant&learn=on)

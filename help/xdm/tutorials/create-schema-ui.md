@@ -409,7 +409,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Experience Data 
 
 以下影片說明如何在[!DNL Experience Platform] UI中建立簡單結構描述。
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430222?captions=chi_hant&quality=12&learn=on)
 
 以下影片旨在讓您更瞭解如何使用欄位群組和類別。
 

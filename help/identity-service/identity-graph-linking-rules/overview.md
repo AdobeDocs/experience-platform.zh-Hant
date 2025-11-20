@@ -55,7 +55,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="身分識別圖連結規則概觀" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="身分識別圖連結規則概觀"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448283/?captions=chi_hant&format=jpeg&nocache=1747851655227" alt="身分識別圖連結規則概觀"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="身分圖表連結規則 — 圖表模擬" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="身分圖表連結規則 — 圖表模擬"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444054/?captions=chi_hant&format=jpeg&nocache=1747851655237" alt="身分圖表連結規則 — 圖表模擬"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -101,7 +101,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="身分圖表連結規則 — 身分設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="身分圖表連結規則 — 身分設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475973/?captions=chi_hant&format=jpeg&nocache=1747851655218" alt="身分圖表連結規則 — 身分設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
