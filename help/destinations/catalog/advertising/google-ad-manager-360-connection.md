@@ -78,7 +78,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->此規則的例外是現有 [的受眾管理](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 客戶。 如果你已經在 Audience Manager 建立了連結到這個 Google 目的地，那麼就不需要再重複允許清單的流程，可以繼續下一步。
+>此規則的例外是現有 [的受眾管理](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=zh-Hant) 客戶。 如果你已經在 Audience Manager 建立了連結到這個 Google 目的地，那麼就不需要再重複允許清單的流程，可以繼續下一步。
 
 1. 依照[Google Ad Manager檔案](https://support.google.com/admanager/answer/3289669?hl=en)中所述的步驟，將Adobe新增為連結的資料管理平台(DMP)。
 2. 在[!DNL Google Ad Manager]介面中，前往&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]**，並啟用&#x200B;**[!UICONTROL API Access]**&#x200B;滑桿。
@@ -90,7 +90,7 @@ ht-degree: 7%
 > 
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線到此目的地，請依照[目的地組態教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)中所述的步驟進行。 在目的地設定工作流程中，請填寫下方兩個區段列出的欄位。
+若要連線到此目的地，請依照[目的地組態教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)中所述的步驟進行。 在目的地設定工作流程中，請填寫下方兩個區段列出的欄位。
 
 ### 驗證目標 {#authenticate}
 

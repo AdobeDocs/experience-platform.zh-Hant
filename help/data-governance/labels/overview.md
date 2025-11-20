@@ -44,7 +44,7 @@ Adobe Experience Platform可讓您將資料使用標籤套用至資料集和欄�
 
 [!DNL Experience Platform]能夠與Adobe Audience Manager共用區段。 套用至Audience Manager區段的任何資料匯出控制項都會轉譯為[!DNL Experience Platform]資料控管所識別的同等標籤和行銷動作。
 
-如需瞭解特定資料匯出控制項如何對應至[!DNL Experience Platform]中的資料使用標籤，請參閱[Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
+如需瞭解特定資料匯出控制項如何對應至[!DNL Experience Platform]中的資料使用標籤，請參閱[Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aam-data-export-control-in-aep)。
 
 ## 管理 [!DNL Experience Platform] 中的資料使用標籤 {#manage-labels}
 

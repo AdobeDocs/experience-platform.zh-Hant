@@ -24,7 +24,7 @@ ht-degree: 4%
 >title="擷取率"
 >abstract="每秒成功處理的事件數。"
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="監視 UI 中來源的資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=zh-Hant" text="監視 UI 中來源的資料流"
 
 >[!TIP]
 >

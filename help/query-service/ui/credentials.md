@@ -46,11 +46,11 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 >
 >![反白顯示「隱私權與安全性」、「驗證設定」和「最長工作階段壽命」的Admin Console設定標籤。](../images/ui/credentials/max-session-life.png)
 >
->請參閱Adobe說明檔案，以取得有關Admin Console所提供的[進階設定](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings)的詳細資訊。
+>請參閱Adobe說明檔案，以取得有關Admin Console所提供的[進階設定](https://helpx.adobe.com/tw/enterprise/using/authentication-settings.html#advanced-settings)的詳細資訊。
 
 ### 連線至查詢工作階段中的Customer Journey Analytics資料 {#connect-to-customer-journey-analytics}
 
-使用Customer Journey Analytics BI擴充功能搭配Power BI或Tableau，使用SQL存取您的Customer Journey Analytics [資料檢視](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views)。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
+使用Customer Journey Analytics BI擴充功能搭配Power BI或Tableau，使用SQL存取您的Customer Journey Analytics [資料檢視](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-dataviews/data-views)。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
 
 請參閱檔案以瞭解如何[將Query Service連線至各種案頭使用者端應用程式](../clients/overview.md)，例如[Power BI](../clients/power-bi.md)或[Tableau](../clients/tableau.md)
 
@@ -68,7 +68,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 您也可以直接從Query Editor或Postgres CLI存取您的Customer Journey Analytics資料。 若要這麼做，請在撰寫查詢時參考`cja`資料庫。 請參閱查詢編輯器[查詢撰寫指南](./user-guide.md#query-authoring)，以取得如何撰寫、執行和儲存查詢的詳細資訊。
 
-如需使用SQL存取Customer Journey Analytics資料檢視的完整指示，請參閱[BI擴充功能指南](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension)。
+如需使用SQL存取Customer Journey Analytics資料檢視的完整指示，請參閱[BI擴充功能指南](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-dataviews/bi-extension)。
 
 ## 不會到期的認證 {#non-expiring-credentials}
 

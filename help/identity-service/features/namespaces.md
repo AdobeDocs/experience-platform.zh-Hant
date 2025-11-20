@@ -99,19 +99,19 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 | 顯示名稱 | 說明 |
 | ------------ | ----------- |
 | AdCloud | 代表Adobe AdCloud的名稱空間。 |
-| Adobe Analytics (舊 ID) | 代表Adobe Analytics的名稱空間。 如需詳細資訊，請參閱[Adobe Analytics名稱空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces)上的下列檔案。 |
+| Adobe Analytics (舊 ID) | 代表Adobe Analytics的名稱空間。 如需詳細資訊，請參閱[Adobe Analytics名稱空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=zh-Hant#namespaces)上的下列檔案。 |
 | Apple IDFA（廣告主識別碼） | 一個代表 Apple ID 的命名空間，供廣告主使用。 更多資訊請參閱以下關於基於興趣的廣告[文件](https://support.apple.com/en-us/HT202074)。 |
 | Apple 推播通知服務 | 一個代表使用 Apple Push 通知服務收集的身份的命名空間。 更多資訊請參閱以下關於 Apple 推播通知服務[的文件](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)。 |
 | ECID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](./ecid.md)上的下列檔案。 |
 | 電子郵件 | 代表電子郵件地址的名稱空間。 這種型別的名稱空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
-| 電子郵件 (SHA256，小寫) | 一個用於預先雜湊的電子郵件地址命名空間。此命名空間中的數值在用 SHA256 雜湊前會轉為小寫。 在標準化電子郵件地址之前，前置與後置空格需要先修剪。 此設定無法追溯更改。 更多資訊請參閱以下關於 [SHA256 雜湊支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 的文件。 |
+| 電子郵件 (SHA256，小寫) | 一個用於預先雜湊的電子郵件地址命名空間。此命名空間中的數值在用 SHA256 雜湊前會轉為小寫。 在標準化電子郵件地址之前，前置與後置空格需要先修剪。 此設定無法追溯更改。 更多資訊請參閱以下關於 [SHA256 雜湊支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=zh-Hant#hashing-support) 的文件。 |
 | Firebase雲端通訊 | 一個名稱空間，代表使用Google Firebase Cloud Messaging為推播通知所收集的身分。 如需詳細資訊，請參閱[Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)上的下列檔案。 |
 | Google Ad ID（GAID） | 一個代表 Google 廣告 ID 的命名空間。 更多資訊請參閱以下關於 Google 廣告識別[的文件](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)。 |
 | 電話 | 一個代表電話號碼的命名空間。 這種命名空間通常與單一人物相關聯，因此可以用來跨不同頻道識別該人。 |
 | 電話(E.164) | 代表需要以E.164格式雜湊的原始電話號碼的名稱空間。 E.164格式包含加號(`+`)、國際國家/地區撥號代碼、當地區碼和電話號碼。 例如： `(+)(country code)(area code)(phone number)`。 |
 | 電話 (SHA256) | 代表需使用SHA256雜湊處理之電話號碼的名稱空間。 您必須移除符號、字母及任何前導零。 您也必須新增國家/地區呼叫代碼作為前置詞。 |
 | 電話(SHA256_E.164) | 表示需要使用 SHA256 和 E.164 格式進行雜湊的原始電話號碼的命名空間。 |
-| TNTID | 代表Adobe Target的名稱空間。 如需詳細資訊，請參閱[Target](https://experienceleague.adobe.com/docs/target/using/target-home.html)上的下列檔案。 |
+| TNTID | 代表Adobe Target的名稱空間。 如需詳細資訊，請參閱[Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hant)上的下列檔案。 |
 | Windows AID | 代表Windows Advertising ID的名稱空間。 如需詳細資訊，請參閱[Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)上的下列檔案。 |
 
 ### 檢視身分識別命名空間 {#view-identity-namespaces}
