@@ -41,7 +41,7 @@ ht-degree: 11%
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，你也可以透過搜尋功能找到你想合作的特定來源。
 
-在分析&#x200B;**&#x200B;分類中，選擇 [!DNL Mixpanel]，然後選擇 **[!UICONTROL Add data]**。
+在分析&#x200B;**&#x200B;分類中，選擇 [!DNL Mixpanel]，然後選擇 &#x200B;** [!UICONTROL Add data]**。
 
 ![目錄](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 

@@ -70,11 +70,11 @@ ht-degree: 3%
 
 完成第一個身分識別之後，請選取新增圖示(**`+`**)以新增第二個身分識別。
 
-![ {Email： tom@acme.com}的第一個完整身分識別是在圖表模擬的事件面板中輸入。](../images/graph-simulation/event-one-added.png)
+![&#x200B; {Email： tom@acme.com}的第一個完整身分識別是在圖表模擬的事件面板中輸入。](../images/graph-simulation/event-one-added.png)
 
 接下來，重複相同的步驟並新增第二個身分。 需要兩個完全合格的身分才能產生身分圖表。 在下列範例中，ECID會新增為名稱空間，且會提供`111`的值。 完成後，選取&#x200B;**[!UICONTROL Save]**。
 
-![ {ECID： 111}的第二個身分已新增至事件#1。](../images/graph-simulation/first-event.png)
+![&#x200B; {ECID： 111}的第二個身分已新增至事件#1。](../images/graph-simulation/first-event.png)
 
 [!UICONTROL Events]介面會更新以顯示您的第一個事件，在此案例中為： `{Email: tom@acme.com, ECID: 111}`。
 

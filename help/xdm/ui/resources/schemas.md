@@ -83,7 +83,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->儲存後，[!UICONTROL Type]側邊欄中的[!UICONTROL  Schema properties]欄位會指出這是[!UICONTROL Relational]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
+>儲存後，[!UICONTROL Type]側邊欄中的[!UICONTROL &#x200B; Schema properties]欄位會指出這是[!UICONTROL Relational]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
 >![結構描述編輯器畫布顯示空白的關聯式結構描述結構，並反白顯示關聯式型別。](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### 上傳DDL檔案 {#upload-ddl-file}

@@ -218,7 +218,7 @@ ht-degree: 16%
 
 **[!UICONTROL Enrichment criteria]**&#x200B;區段現在會顯示在右側邊欄中。 在此區段中，您可以選取&#x200B;**[!UICONTROL Source join key]**&#x200B;和&#x200B;**[!UICONTROL Enrichment dataset join key]**，好讓您將擴充資料集連結到您嘗試建立的對象。
 
-![ [!UICONTROL Enrichment criteria]區域已反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
+![&#x200B; [!UICONTROL Enrichment criteria]區域已反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
 
 若要選取&#x200B;**[!UICONTROL Source join key]**，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 

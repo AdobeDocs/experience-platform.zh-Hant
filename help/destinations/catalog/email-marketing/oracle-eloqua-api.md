@@ -15,7 +15,7 @@ ht-degree: 4%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 它讓行銷人員能夠規劃並執行活動，同時為潛在客戶提供個人化的顧客體驗。 透過整合的潛在客戶管理與簡易的活動創建，它幫助行銷人員在買家旅程中於正確時間吸引正確的受眾，並優雅地擴展至電子郵件、展示搜尋、影片及行動裝置等管道中觸及受眾。 銷售團隊能以更快速度完成更多交易，透過即時洞察提升行銷投資報酬率。
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[ REST API中的](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)更新連絡人[!DNL Oracle Eloqua]作業，可讓您&#x200B;**將對象內的身分識別**&#x200B;更新為[!DNL Oracle Eloqua]。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[&#x200B; REST API中的](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)更新連絡人[!DNL Oracle Eloqua]作業，可讓您&#x200B;**將對象內的身分識別**&#x200B;更新為[!DNL Oracle Eloqua]。
 
 [!DNL Oracle Eloqua]使用[基本驗證](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)與[!DNL Oracle Eloqua] REST API通訊。 [!DNL Oracle Eloqua]向目的地驗證[區段中進一步說明如何向您的](#authenticate)執行個體進行驗證。
 
@@ -35,7 +35,7 @@ ht-degree: 4%
 
 若要將資料從Experience Platform匯出至您的[!DNL Oracle Eloqua]帳戶，您需要有[!DNL Oracle Eloqua]帳戶。
 
-此外，你至少需要為你的&#x200B;*實例取得*「進階使用者 - 行銷權限」。[!DNL Oracle Eloqua]請參閱&#x200B;*安全使用者存取*&#x200B;頁面的[「安全群組」](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)區塊以獲得指引。存取權限是目的地在呼叫 [ API 時](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)，程式化決定你的基礎網址[!DNL Oracle Eloqua]所必需的。
+此外，你至少需要為你的&#x200B;*實例取得*「進階使用者 - 行銷權限」。[!DNL Oracle Eloqua]請參閱&#x200B;*安全使用者存取*&#x200B;頁面的[「安全群組」](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)區塊以獲得指引。存取權限是目的地在呼叫 [&#x200B; API 時](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)，程式化決定你的基礎網址[!DNL Oracle Eloqua]所必需的。
 
 #### 收集[!DNL Oracle Eloqua]認證 {#gather-credentials}
 
@@ -43,7 +43,7 @@ ht-degree: 4%
 
 | 認證 | 說明 |
 | --- | --- |
-| `Company Name` | 與您的[!DNL Oracle Eloqua]帳戶相關聯的公司名稱。 <br>之後你會將 和 `Company Name` [!DNL Oracle Eloqua] `Username` 作為串接字串，作為驗證目的地&#x200B;**[!UICONTROL Username]**&#x200B;時使用的 。[ ](#authenticate) |
+| `Company Name` | 與您的[!DNL Oracle Eloqua]帳戶相關聯的公司名稱。 <br>之後你會將 和 `Company Name` [!DNL Oracle Eloqua] `Username` 作為串接字串，作為驗證目的地&#x200B;**[!UICONTROL Username]**&#x200B;時使用的 。[&#x200B; &#x200B;](#authenticate) |
 | `Username` | 你 [!DNL Oracle Eloqua] 帳號的使用者名稱。 |
 | `Password` | 你 [!DNL Oracle Eloqua] 帳號的密碼。 |
 | `Pod` | [!DNL Oracle Eloqua] 支援多個資料中心，每個中心擁有獨特的網域名稱。 [!DNL Oracle Eloqua] 這些稱為「艙」，目前共有七個——P01、P02、P03、P04、P06、P07和P08。 要知道你使用的 POD，請 [!DNL Oracle Eloqua] 在成功登入後，在瀏覽器中記錄網址。 例如，如果瀏覽器URL為`secure.p01.eloqua.com`，則`pod`為`p01`。 如需其他指南，請參閱[決定您的POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua)頁面。 |
@@ -86,7 +86,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->要連接目的地，你需要取得&#x200B;**[!UICONTROL View Destinations]**&#x200B;存取&#x200B;**[!UICONTROL Manage Destinations]**[&#x200B;控制權限](/help/access-control/home.md#permissions)。請閱讀 [存取控制概述](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需權限。
+>要連接目的地，你需要取得&#x200B;**[!UICONTROL View Destinations]**&#x200B;存取&#x200B;**[!UICONTROL Manage Destinations]**&#x200B;[&#x200B;控制權限](/help/access-control/home.md#permissions)。請閱讀 [存取控制概述](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需權限。
 
 要連接此目的地，請依照目的地設定教學[中的](../../ui/connect-destination.md)步驟操作。在設定目的地工作流程中，請填寫下方兩個章節列出的欄位。
 

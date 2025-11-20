@@ -101,7 +101,7 @@ After you have successfully connected to your LiveRamp account, enter the requir
 
 ## 目的地特定設定 {#destination-settings}
 
-[支援的每個目的地](#supported-destinations)[!DNL LiveRamp - Distribution]都需要您填寫特定的組態選項。
+[支援的每個目的地](#supported-destinations) [!DNL LiveRamp - Distribution]都需要您填寫特定的組態選項。
 
 如需如何設定每個目的地的詳細指引，請參閱以下各節。
 

@@ -79,7 +79,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 在右側邊欄中選取資料型別的名稱，以在[!DNL Schema Editor]中開啟其結構。
 
-![ [!UICONTROL Data types]工作區的[!UICONTROL Schemas]索引標籤，資料型別[!UICONTROL Custom]和資料型別[!UICONTROL Name]已強調顯示。](../../images/ui/resources/data-types/edit.png)
+![&#x200B; [!UICONTROL Data types]工作區的[!UICONTROL Schemas]索引標籤，資料型別[!UICONTROL Custom]和資料型別[!UICONTROL Name]已強調顯示。](../../images/ui/resources/data-types/edit.png)
 
 ## 新增欄位至資料型別 {#add-fields}
 
