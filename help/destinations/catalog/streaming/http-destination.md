@@ -4,10 +4,10 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的分析，或針對從Experience Platform匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 6d1b73c1557124f283558e1daeb3ddeaaec8e8a4
 workflow-type: tm+mt
-source-wordcount: '2752'
-ht-degree: 7%
+source-wordcount: '3079'
+ht-degree: 6%
 
 ---
 
@@ -47,7 +47,7 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 | 項目 | 類型 | 附註 |
 | ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL Profile-based]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-segment-streaming-destinations.md#mapping)的對應畫面中所選。 |
-| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「永遠在線」的 API 連線。 一旦 Experience Platform 根據受眾評估更新個人檔案，連接器就會將更新傳送到目的地平台。 閱讀更多關於串流平台的[資訊](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -57,30 +57,49 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 
 * 您必須有支援REST API的HTTP端點。
 * 您的HTTP端點必須支援Experience Platform設定檔結構描述。 HTTP API目的地不支援轉換至第三方裝載結構描述。 如需Experience Platform輸出結構描述的範例，請參閱[匯出的資料](#exported-data)區段。
-* 你的 HTTP 端點必須支援標頭。
-* 您的 HTTP 端點必須在 2 秒內回應，以確保資料處理正確並避免逾時錯誤。
+* 您的HTTP端點必須支援標頭。
+* 您的HTTP端點必須在2秒內回應，以確保資料處理正確並避免逾時錯誤。
+* 如果您打算使用mTLS：您的資料接收端點必須停用TLS，而且只能啟用mTLS。 如果您也使用OAuth 2驗證，您必須維護個別的標準HTTPS端點以進行權杖擷取。 如需詳細資訊，請參閱[mTLS考量事項](#mtls-considerations)區段。
 
 >[!TIP]
 >
-> 你也可以使用 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 設定整合，並將 Experience Platform 設定檔資料傳送到 HTTP 端點。
+> 您也可以使用[Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md)來設定整合，並將Experience Platform設定檔資料傳送至HTTP端點。
 
-## mTLS 協定支援與憑證 {#mtls-protocol-support}
+## mTLS通訊協定支援和憑證 {#mtls-protocol-support}
 
 您可以使用[!DNL Mutual Transport Layer Security] ([!DNL mTLS])來確保與您的HTTP API目的地連線的輸出連線中的增強安全性。
 
-[!DNL mTLS]是相互驗證的端對端安全性方法，可確保共用資訊的雙方在共用資料之前，都是聲稱的身分。 與[!DNL mTLS]相比，[!DNL TLS]包含額外的步驟，其中伺服器也會要求使用者端的憑證，並在其結尾加以驗證。
+[!DNL mTLS]是相互驗證通訊協定，可確保共用資訊的雙方在共用資料之前都是他們聲稱的身分。 [!DNL mTLS]包含與標準[!DNL TLS]相比的額外步驟，其中伺服器也會要求並驗證使用者端的憑證，而使用者端會驗證伺服器的憑證。
 
-如果您想要搭配[!DNL mTLS]個目的地使用[!DNL HTTP API]，您放入[目的地詳細資料](#destination-details)頁面的伺服器位址必須停用[!DNL TLS]通訊協定，而且只能啟用[!DNL mTLS]。 如果端點上仍啟用[!DNL TLS] 1.2通訊協定，則不會傳送使用者端驗證的憑證。 這表示若要搭配您的[!DNL mTLS]目的地使用[!DNL HTTP API]，您的「接收」伺服器端點必須是僅限[!DNL mTLS]啟用的連線端點。
+### Mtls考量事項 {#mtls-considerations}
+
+HTTP API目的地的mTLS支援只將&#x200B;**套用至傳送設定檔匯出的資料接收端點** （**[!UICONTROL HTTP Endpoint]**&#x200B;目的地詳細資料[中的](#destination-details)欄位）。
+
+OAuth 2驗證端點不支援&#x200B;**mTLS：**
+
+* OAuth 2使用者端憑證或OAuth 2密碼驗證中使用的&#x200B;**[!UICONTROL Access Token URL]**&#x200B;不支援mTLS
+* 權杖擷取和重新整理請求會透過標準HTTPS傳送，無需使用者端憑證驗證
+
+**必要的架構：**&#x200B;如果您需要資料接收端點的mTLS並使用OAuth 2驗證，您必須維護兩個個別的端點：
+
+* **驗證端點：**&#x200B;用於權杖管理的標準HTTPS （不含mTLS）
+* **資料接收端點：**&#x200B;已啟用mTLS-only以用於設定檔匯出的HTTPS
+
+此架構是目前的平台限制。 正在評估未來版本對驗證端點上的mTLS支援。
+
+### 設定mTLS以匯出資料 {#configuring-mtls}
+
+若要搭配[!DNL mTLS]目的地使用[!DNL HTTP API]，您在&#x200B;**[!UICONTROL HTTP Endpoint]**&#x200B;目的地詳細資料[頁面中設定的](#destination-details) （資料接收端點）必須停用[!DNL TLS]通訊協定，而且只能啟用[!DNL mTLS]。 如果端點上仍啟用[!DNL TLS] 1.2通訊協定，則不會傳送使用者端驗證的憑證。 這表示若要搭配您的[!DNL mTLS]目的地使用[!DNL HTTP API]，您的資料接收伺服器端點必須是僅限[!DNL mTLS]啟用的連線端點。
 
 ### 擷取及檢查憑證詳細資料 {#certificate}
 
-如果您想檢查憑證細節，如 [!DNL Common Name] （CN） 和 [!DNL Subject Alternative Names] （SAN）以進行額外的第三方驗證，請使用 API 取得憑證並從回應中擷取這些欄位。
+如果您要檢查[!DNL Common Name] (CN)和[!DNL Subject Alternative Names] (SAN)等憑證詳細資料以進行其他協力廠商驗證，請使用API來擷取憑證，並從回應中擷取這些欄位。
 
-更多資訊請參閱 [公開憑證端點文件](../../../data-governance/mtls-api/public-certificate-endpoint.md) 。
+如需詳細資訊，請參閱[公用憑證端點檔案](../../../data-governance/mtls-api/public-certificate-endpoint.md)。
 
-## IP 位址允許清單 {#ip-address-allowlist}
+## IP位址允許清單 {#ip-address-allowlist}
 
-為了滿足客戶的安全與合規需求，Experience Platform 提供一份靜態 IP 清單，您可以允許 HTTP API 目的地的權限。 如需允許清單的完整IP清單，請參閱串流目的地的[IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md)。
+為了滿足客戶的安全性和合規性要求，Experience Platform提供您可以允許列出HTTP API目的地的靜態IP清單。 如需允許清單的完整IP清單，請參閱串流目的地的[IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md)。
 
 ## 支援的驗證型別 {#supported-authentication-types}
 
@@ -88,7 +107,7 @@ HTTP API目的地支援多種對HTTP端點的驗證型別：
 
 * 沒有驗證的HTTP端點；
 * 持有人權杖驗證；
-* [OAuth 2.0 用戶端憑證的](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 認證方式包括 HTTP 請求的主體表單、 [!DNL client ID]、 [!DNL client secret]和 [!DNL grant type] ，如下範例所示。
+* [OAuth 2.0使用者端認證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)驗證內文表單，在HTTP要求內文中有[!DNL client ID]、[!DNL client secret]和[!DNL grant type]，如下列範例所示。
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -98,7 +117,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* [OAuth 2.0 用戶端憑證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) ，具備基本授權，授權標頭包含 URL 編碼的 [!DNL client ID] [!DNL client secret]和 。
+* [OAuth 2.0使用者端認證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/)具有基本授權，授權標頭包含URL編碼的[!DNL client ID]和[!DNL client secret]。
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \
@@ -146,7 +165,11 @@ curl --location --request POST 'https://some-api.com/token' \
 
 ![UI熒幕的影像，您可在此使用OAuth 2搭配密碼驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。
+>[!NOTE]
+>
+>**mTLS限制：** [!UICONTROL Access Token URL]不支援mTLS。 如果您打算使用mTLS作為資料接收端點，則您的驗證端點必須使用標準HTTPS。 如需必要架構的詳細資訊，請參閱[mTLS考量事項](#mtls-considerations)一節。
+
+* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。 此端點必須使用標準HTTPS且不支援mTLS。
 * **[!UICONTROL Client ID]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
 * **[!UICONTROL Client Secret]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
 * **[!UICONTROL Username]**：存取您HTTP端點的使用者名稱。
@@ -162,11 +185,15 @@ curl --location --request POST 'https://some-api.com/token' \
 > 
 >使用[!UICONTROL OAuth 2 Client Credentials]驗證時，[!UICONTROL Access Token URL]最多可以有一個查詢引數。 新增包含更多查詢引數的[!UICONTROL Access Token URL]可能會導致連線至端點時發生問題。
 
-* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。
+>[!NOTE]
+>
+>**mTLS限制：** [!UICONTROL Access Token URL]不支援mTLS。 如果您打算使用mTLS作為資料接收端點，則您的驗證端點必須使用標準HTTPS。 如需必要架構的詳細資訊，請參閱[mTLS考量事項](#mtls-considerations)一節。
+
+* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。 此端點必須使用標準HTTPS且不支援mTLS。
 * **[!UICONTROL Client ID]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
 * **[!UICONTROL Client Secret]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
 * **[!UICONTROL Client Credentials Type]**：選取端點支援的OAuth2使用者端認證授權型別：
-   * **[!UICONTROL Body Form Encoded]**： 在此情況下， [!DNL client ID] 和 [!DNL client secret] 包含 *在發送給你目的地的請求* 正文中。 舉例請參見 [支援的認證類型](#supported-authentication-types) 章節。
+   * **[!UICONTROL Body Form Encoded]**：在此情況下，[!DNL client ID]和[!DNL client secret]會包含在傳送至您目的地的要求&#x200B;*內文中*。 如需範例，請參閱[支援的驗證型別](#supported-authentication-types)區段。
    * **[!UICONTROL Basic Authorization]**：在此情況下，[!DNL client ID]和[!DNL client secret]在經過base64編碼並傳送至您的目的地之後，會包含在&#x200B;*標頭`Authorization`中的*。 如需範例，請參閱[支援的驗證型別](#supported-authentication-types)區段。
 
 ### 填寫目標詳細資訊 {#destination-details}
@@ -179,7 +206,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="HTTP 端點"
->abstract="要將設定檔資料傳送到的 HTTP 端點的 URL。"
+>abstract="您要傳送設定檔資料的HTTP端點URL。 這是您的資料接收端點，並支援mTLS （若已設定）。 此與OAuth 2存取權杖URL不同，URL不支援mTLS。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -198,15 +225,15 @@ curl --location --request POST 'https://some-api.com/token' \
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![UI 畫面圖片，顯示 HTTP 目的地細節已完成欄位。](../../assets/catalog/http/http-api-destination-details.png)
+![顯示HTTP目的地詳細資訊已完成欄位的UI畫面影像。](../../assets/catalog/http/http-api-destination-details.png)
 
-* **[!UICONTROL Name]**：輸入一個你未來能認出這個目的地的名字。
-* **[!UICONTROL Description]**&#x200B;輸入描述，幫助你未來辨識該目的地。
+* **[!UICONTROL Name]**：輸入您日後可辨識此目的地的名稱。
+* **[!UICONTROL Description]**：輸入說明，協助您日後識別此目的地。
 * **[!UICONTROL Headers]**：依照以下格式，輸入任何您想要包含在目的地呼叫中的自訂標頭： `header1:value1,header2:value2,...headerN:valueN`。
-* **[!UICONTROL HTTP Endpoint]**：您要將設定檔資料傳送至的HTTP端點URL。
+* **[!UICONTROL HTTP Endpoint]**：您要將設定檔資料傳送至的HTTP端點URL。 這是您的資料接收端點。 如果使用mTLS，此端點必須停用TLS並且只啟用mTLS。 請注意，這與驗證期間設定的OAuth 2存取權杖URL不同。
 * **[!UICONTROL Query parameters]**：您可以選擇將查詢引數新增至HTTP端點URL。 將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。
-* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 **注意**：區段名稱僅包含在映射到目的地的區段。 匯出中出現的未對應區段不包括`name`欄位。 關於選擇此選項的資料匯出範例，請參閱 [下方的「匯出資料](#exported-data) 」區塊。
-* **[!UICONTROL Include Segment Timestamps]**： 切換：如果你希望資料匯出包含受眾建立與更新的時間戳，以及受眾映射到啟用目的地的時間戳。 關於選擇此選項的資料匯出範例，請參閱 [下方的「匯出資料](#exported-data) 」區塊。
+* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 **注意**：只有對應到目的地的區段才會包含區段名稱。 匯出中出現的未對應區段不包括`name`欄位。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -251,7 +278,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 例如，將此資料流視為HTTP目的地，其中在資料流中選取了三個對象，且四個屬性對應至目的地。
 
-![&#x200B; HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![ HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 設定檔匯出至目的地的方式，可由符合或結束&#x200B;*三個對應區段*&#x200B;之一的設定檔來決定。 不過，在資料匯出中，`segmentMembership`物件（請參閱下方的[匯出的資料](#exported-data)區段）可能會顯示其他未對應的對象，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段的資格，但同時也是&#x200B;**觀看的「回到未來」**&#x200B;電影和&#x200B;**科幻迷**&#x200B;區段的成員，則其他這兩個對象也將出現在資料匯出的`segmentMembership`物件中，即使這些對象未對應到資料流中，前提是這些對象與&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段共用相同的合併原則。
 
@@ -365,11 +392,11 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 +++
 
-## 限制與重試政策 {#limits-retry-policy}
+## 限制和重試原則 {#limits-retry-policy}
 
-在 95% 的時間裡，Experience Platform 嘗試提供每秒少於 10,000 次資料流 HTTP 目的地的訊息傳輸延遲，且每秒請求次數少於 10 分鐘。
+在95%的時間中，Experience Platform會嘗試針對每個資料流向HTTP目的地的成功傳送訊息，以每秒少於10,000個要求的速率，提供少於10分鐘的輸送量延遲。
 
-若 HTTP API 目的地的請求失敗，Experience Platform 會儲存失敗的請求，並重試兩次將請求傳送到你的端點。
+如果對您的HTTP API目的地的請求失敗，Experience Platform會儲存失敗的請求並重試兩次，以將請求傳送至您的端點。
 
 ## 疑難排解 {#troubleshooting}
 
