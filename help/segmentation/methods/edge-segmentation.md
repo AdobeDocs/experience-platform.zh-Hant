@@ -2,9 +2,9 @@
 title: Edge分段指南
 description: 瞭解如何使用邊緣細分即時評估Experience Platform中的對象，啟用相同頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
+source-git-commit: d93bf7a3b7447a71fa3ead96e5c35ec9cd2dd99a
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1191'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,9 @@ Edge區段能在Adobe Experience Platform中即時評估[邊緣](../../landing/e
 >
 > 邊緣資料將會儲存在最接近其收集位置的邊緣伺服器位置。 此資料也可能儲存在指定為Adobe Experience Platform資料中心中心（或主體）以外的位置。
 >
-> 此外，邊緣區段引擎將只處理邊緣上有&#x200B;**one**&#x200B;主要標籤身分的請求，這與非邊緣型主要身分一致。
+> 邊緣區段引擎只會處理邊緣上有&#x200B;**one**&#x200B;主要標籤身分的請求，這與非邊緣型主要身分一致。
+>
+> 此外，由於邊緣分段的設計可大規模處理請求，因此邊緣伺服器會動態載入所需的中繼資料。 因此，無論沙箱型別為何，第一次呼叫可能會發生「冷啟動」延遲。 在此視窗期間，前幾個評估呼叫可能會導致逾時。 短暫的溫暖前高載或真實負載有助於消除誤判測試失敗。
 
 ## Edge區段查詢型別 {#query-types}
 
@@ -151,15 +153,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 >[!TAB Audience Portal]
 
-在對象入口網站中，選取&#x200B;**[!UICONTROL 建立對象]**。
+在對象入口網站中，選取&#x200B;**[!UICONTROL Create audience]**。
 
 ![對象入口網站中會醒目顯示[建立對象]按鈕。](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
-彈出視窗隨即顯示。 選取&#x200B;**[!UICONTROL 建置規則]**&#x200B;以輸入區段產生器。
+彈出視窗隨即顯示。 選取&#x200B;**[!UICONTROL Build rules]**&#x200B;以輸入區段產生器。
 
 ![「建立對象」彈出視窗中會醒目顯示「建置規則」按鈕。](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-在區段產生器中，建立符合[合格查詢型別](#eligible-query-types)之一的區段定義。 如果區段定義符合邊緣區段的資格，您就可以選取&#x200B;**[!UICONTROL Edge]**&#x200B;作為&#x200B;**[!UICONTROL 評估方法]**。
+在區段產生器中，建立符合[合格查詢型別](#eligible-query-types)之一的區段定義。 如果區段定義符合邊緣區段的資格，您就可以選取&#x200B;**[!UICONTROL Edge]**&#x200B;作為&#x200B;**[!UICONTROL Evaluation method]**。
 
 ![會顯示區段定義。 評估型別已反白顯示，顯示可以使用邊緣區段來評估區段定義。](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -315,11 +317,11 @@ curl -X GET \
 
 ![對於使用邊緣細分評估的對象，會顯示對象詳細資訊頁面。](../images/methods/edge/audience-details.png)
 
-對於啟用Edge的對象，會顯示&#x200B;**[!UICONTROL 一段時間的設定檔]**&#x200B;卡片，其中顯示合格的總數以及新對象更新的量度。
+對於啟用Edge的對象，會顯示&#x200B;**[!UICONTROL Profiles over time]**&#x200B;卡片，其中顯示合格的總數以及新對象更新的量度。
 
-根據此對象的邊緣評估，**[!UICONTROL 合格總計]**&#x200B;量度代表合格對象的總數。
+**[!UICONTROL Total qualified]**&#x200B;量度代表根據此對象的邊緣評估而判斷的合格對象總數。
 
-**[!UICONTROL 新對象已更新]**&#x200B;量度以折線圖表示，該折線圖顯示透過邊緣細分的對象人數變化。 您可以調整下拉式清單以顯示過去24小時、上週或過去30天。
+**[!UICONTROL New audience updated]**&#x200B;量度以折線圖表示，該圖顯示透過邊緣細分而發生的對象人數變化。 您可以調整下拉式清單以顯示過去24小時、上週或過去30天。
 
 ![已醒目提示一段時間的設定檔卡片。](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
