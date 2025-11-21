@@ -3,9 +3,9 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 940128bf73f856d8459bee23905213651b44916e
+source-git-commit: 4472548fc5b5181cdf8ef8b1666d6e1fafbce588
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
@@ -50,10 +50,10 @@ ht-degree: 2%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
-| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| ECID | Experience Cloud ID | 此身分是整合正常運作的必要條件，但不會用於對象啟用。 |
-| 交易台ID | [!DNL The Trade Desk]平台中的廣告商ID | 根據Trade Desk的專屬ID啟用對象時，請使用此身分識別。 |
+| [!DNL GAID] | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
+| [!DNL IDFA] | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
+| [!DNL ECID] | Experience Cloud ID | 此身分是整合正常運作的必要條件，但不會用於對象啟用。 |
+| [!DNL Tradedesk] | [!DNL TDID]平台中的[!DNL The Trade Desk] | 根據Trade Desk的專屬ID啟用對象時，請使用此身分識別。 |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
