@@ -8,27 +8,27 @@ role: Admin
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 56%
+ht-degree: 57%
 
 ---
 
 
 # 存取控制 {#access-control}
 
-* [存取控制概覽](home.md)
-* 以屬性為基礎的存取控制{#abac}
+* [存取控制概觀](home.md)
+* 屬性型存取控制 {#abac}
    * [概觀](abac/overview.md)
    * [端對端指南](abac/end-to-end-guide.md)
    * [利用存取權標籤管理使用者對於目標資料流的存取](/help/access-control/abac/apply-access-labels-destinations.md)
    * 權限 {#permissions-ui}
       * [瀏覽](abac/ui/browse.md)
-      * [標記](abac/ui/labels.md)
+      * [標籤](abac/ui/labels.md)
       * [權限](abac/ui/permissions.md)
       * [原則](abac/ui/policies.md)
       * [角色](abac/ui/roles.md)
       * [沙箱](abac/ui/sandboxes.md)
       * [使用者](abac/ui/users.md)
-   * 許可權管理員{#permissions-manager}
+   * 許可權管理員 {#permissions-manager}
       * [概觀](abac/permission-manager/overview.md)
       * [權限](abac/permission-manager/permissions.md)
    * 以屬性為基礎的存取控制API {#abac-api}

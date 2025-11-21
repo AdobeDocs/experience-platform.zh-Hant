@@ -38,7 +38,7 @@ ht-degree: 50%
 * 原則服務API {#api}
    * [概觀](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [標記](api/labels.md)
+   * [標籤](api/labels.md)
    * [原則](api/policies.md)
    * [行銷動作](api/marketing-actions.md)
    * [評估](api/evaluation.md)

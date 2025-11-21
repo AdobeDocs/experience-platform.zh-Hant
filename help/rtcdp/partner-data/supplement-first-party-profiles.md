@@ -1,12 +1,12 @@
 ---
 title: 使用合作夥伴提供的屬性補充第一方輪廓
-description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎，對客戶群取得新的分析，以及更佳的客群最佳化。
+description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎，對客戶群取得新的洞察，並使客群最佳化表現更好。
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 78%
+source-wordcount: '1249'
+ht-degree: 73%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 78%
 
 >[!AVAILABILITY]
 >
->* 已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>* 已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
-使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的客群最佳化。
+使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的洞察，並使客群最佳化表現更好。
 
 ![使用合作夥伴提供的屬性使用案例高層級視覺化概觀擴充輪廓。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
@@ -47,7 +47,7 @@ Adobe瞭解沒有一刀切的方法，可與資料和身分識別合作夥伴緊
 
 觀看下方的影片教學課程，逐步瞭解如何使用合作夥伴提供的屬性來補充第一方對象：
 
->[!VIDEO](https://video.tv.adobe.com/v/3452474/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 
@@ -71,14 +71,14 @@ Adobe瞭解沒有一刀切的方法，可與資料和身分識別合作夥伴緊
 
 此刻，您正要擴充 Real-Time CDP 中的資料管理架構，以和合作夥伴提供的屬性相符。
 
-您可選擇建立 **[!UICONTROL XDM 個別輪廓]**&#x200B;類別的新結構描述，或擴充相同類型的現有結構描述以包含合作夥伴提供的屬性。Adobe 強烈建議使用一組最能代表資料廠商的額外屬性的新欄位群組建立新結構描述。這可確保您的資料結構描述未使用過且彼此都可獨立地發展。
+您可以選擇建立&#x200B;**[!UICONTROL XDM Individual Profile]**&#x200B;類別的新結構描述，或擴充相同型別的現有結構描述以包含合作夥伴提供的屬性。 Adobe 強烈建議使用一組最能代表資料廠商的額外屬性的新欄位群組建立新結構描述。這可確保您的資料結構描述未使用過且彼此都可獨立地發展。
 
 若要在結構描述中包含合作夥伴提供的屬性，您可以使用期望的屬性建立新的欄位群組，也可以使用 Adob&#x200B;&#x200B;e 提供的其中一個預先設定的欄位群組。
 
 如需詳細資訊，請閱讀以下文件頁面：
 
-* [結構描述組合的基本](/help/xdm/schema/composition.md)
-* [[!UICONTROL XDM 個別輪廓]類別的概觀](/help/xdm/classes/individual-profile.md)
+* [結構描述構成的基本知識](/help/xdm/schema/composition.md)
+* [[!UICONTROL XDM Individual Profile]類別的概觀](/help/xdm/classes/individual-profile.md)
 * [在 UI 中建立和編輯結構描述](/help/xdm/ui/resources/schemas.md)
 * [在 UI 中建立和編輯結構描述欄位](/help/xdm/ui/resources/field-groups.md)
 
@@ -91,15 +91,15 @@ Commenting out links for now
 
 -->
 
-此外，在此步驟中，請考慮隨著您擴大資料管理策略以包含合作夥伴提供的協力廠商資料時，您的資料治理模式會如何變更。探索以下文件連結中的考量事項：
+此外，在此步驟中，請考慮隨著您擴大資料管理策略以包含合作夥伴提供的第三方商資料時，您的資料治理模式會如何變更。探索以下文件連結中的考量事項：
 
-* (**即將推出**) 將協力廠商資料保存在單獨的資料集中，以便可輕鬆進行刪除及還原整合。
+* (**即將推出**) 將第三方資料保存在單獨的資料集中，以便可輕鬆進行刪除及還原整合。
 * (**即將推出**) 對於購買了資料清理附加元件的用戶端，在資料集上使用[資料集期限](/help/hygiene/ui/dataset-expiration.md)功能。
-* (**即將出**) 建立引入協力廠商資料的衍生資料集時需謹慎小心，因為一旦混合在一起，若要移除協力廠商資料，唯一的解決方案是刪除整個衍生資料集。
+* (**即將出**) 建立引入第三方資料的衍生資料集時需謹慎小心，因為一旦混合在一起，若要移除第三方資料，唯一的解決方案是刪除整個衍生資料集。
 
 >[!TIP]
 >
->如果您選擇使用資料廠商提供的個人型身分識別碼來補充您的客戶輪廓，您可以建立類型為&#x200B;**[[!UICONTROL 合作夥伴 ID]](/help/identity-service/features/namespaces.md)** 的新身分識別類型。
+>如果您選擇使用資料供應商提供的個人識別碼來補充您的客戶設定檔，則可以建立型別&#x200B;**[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**&#x200B;的新識別型別。
 >
 >如需有關合作夥伴 ID 的詳細資訊，請閱讀[身分識別類型章節](/help/identity-service/features/namespaces.md)。
 >閱讀有關在 Experience Platform 使用者介面中[如何定義身分識別欄位](/help/xdm/ui/fields/identity.md)的資訊。
@@ -136,6 +136,6 @@ Commenting out links for now
 
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
-* 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶輪廓來[擴大您的輪廓庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
+* 使用 Real-Time CDP 的第三方資料支援，透過資料合作夥伴的潛在客戶輪廓來[擴大您的輪廓庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
 * [在造訪期間使用合作夥伴協助的訪客辨識](/help/rtcdp/partner-data/onsite-personalization.md)，針對未知的訪客提供個人化現場體驗，使用者不需驗證或擁有您品牌的先前記錄。
 * [擴大啟用潛在客戶輪廓和潛在客戶客群](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

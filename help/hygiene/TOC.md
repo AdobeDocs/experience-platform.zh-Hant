@@ -27,4 +27,4 @@ ht-degree: 57%
    * [記錄刪除](./api/jobs.md)
    * [記錄刪除請求（工單端點）](./api/workorder.md)
    * [配額](./api/quota.md)
-* [最佳作法](./best-practices.md)
+* [最佳做法](./best-practices.md)

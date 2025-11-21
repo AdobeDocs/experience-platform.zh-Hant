@@ -38,16 +38,16 @@ ht-degree: 29%
 >
 > 在&#x200B;**角色**&#x200B;資源中，動作&#x200B;**新增使用者**&#x200B;和&#x200B;**移除使用者**&#x200B;的中繼資料不會包含執行動作之使用者的電子郵件識別碼。 記錄檔而是會顯示系統產生的電子郵件ID (system@adobe.com)。
 
-本文件涵蓋了 Experience Platform 中的稽核日誌，包括如何在 UI 或 API 中查看和管理日誌。
+本檔案涵蓋Experience Platform中的稽核記錄，包括如何在UI或API中檢視和管理它們。
 
 ## 由稽核記錄擷取的事件類型 {#category}
 
-下表說明審計日誌記錄哪些資源的行動：
+下表概述稽核記錄針對哪些資源所記錄的動作：
 
 | 資源 | 動作 |
 | --- | --- |
 | [存取控制原則（以屬性為基礎的存取控制）](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [帳號（Adobe）](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [帳戶(Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [Attribution AI執行個體](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li></ul> |
 | [稽核記錄](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>匯出</li></ul> |
 | [類別](../../../xdm/schema/composition.md#class) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
@@ -58,25 +58,25 @@ ht-degree: 29%
 | [資料類型](../../../xdm/schema/composition.md#data-type) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟用</li><li>資料集移除</li><li>輪廓啟用</li><li>輪廓移除</li></ul> |
 | [欄位群組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [恆等圖](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>檢視</li></ul> |
-| [身份命名空間](../../../identity-service/features/namespaces.md) | <ul><li>建立</li><li>更新</li></ul> |
+| [身分圖表](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>檢視</li></ul> |
+| [身分名稱空間](../../../identity-service/features/namespaces.md) | <ul><li>建立</li><li>更新</li></ul> |
 | [合併原則](../../../profile/merge-policies/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [產品設定檔](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [查詢](../../../query-service/ui/overview.md) | <ul><li>執行</li></ul> |
 | [查詢範本](../../../query-service/ui/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [角色（基於屬性的存取控制）](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>新增使用者</li><li>移除使用者</li></ul> |
+| [角色（以屬性為基礎的存取控制）](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>新增使用者</li><li>移除使用者</li></ul> |
 | [沙箱](../../../sandboxes/home.md) | <ul><li>建立</li><li>更新</li><li>重設</li><li>刪除</li></ul> |
 | [排定的查詢](../../../query-service/ui/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [結構描述](../../../xdm/schema/composition.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>為輪廓啟用</li></ul> |
 | [區段](../../../segmentation/home.md) | <ul><li>建立</li><li>刪除</li><li>區段啟用</li><li>區段移除</li></ul> |
 | [Source資料流程](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟用</li><li>資料集移除</li><li>設定檔啟用</li><li>輪廓移除</li></ul> |
-| [工作訂單](../../../hygiene/home.md) | <ul><li>建立</li></ul> |
+| [工單](../../../hygiene/home.md) | <ul><li>建立</li></ul> |
 
-## 存取稽核日誌
+## 存取稽核記錄
 
-當您的組織啟用此功能時，審計日誌會隨著活動發生自動被收集。 您不需要手動啟用記錄收集。
+為您的組織啟用此功能後，活動發生時會自動收集稽核記錄。 您不需要手動啟用記錄收集。
 
-要查看和匯出稽核日誌，您必須取得 **[!UICONTROL View User Activity Log]** 存取控制權限（可在分類中 [!UICONTROL Data Governance] 取得）。 欲了解如何管理 Experience Platform 功能的個別權限，請參閱 [存取控制文件](../../../access-control/home.md)。
+若要檢視和匯出稽核記錄，您必須授予&#x200B;**[!UICONTROL View User Activity Log]**&#x200B;存取控制許可權（可在[!UICONTROL Data Governance]類別下找到）。 若要瞭解如何管理Experience Platform功能的個別許可權，請參閱[存取控制檔案](../../../access-control/home.md)。
 
 ## 在 UI 中管理稽核記錄 {#managing-audit-logs-in-the-ui}
 
@@ -85,19 +85,19 @@ ht-degree: 29%
 >title="說明"
 >abstract="<ul><li>在左側導覽中選取<b>稽核</b>。「稽核」工作區會顯示已記錄的記錄清單，依預設會從時間最近的開始排序。</li>   <li> 注意：稽核記錄會保留 365 天，超過此天數將從系統中刪除。因此，您最多只能往回查看 365 天。如果您需要查看超過 365 天的資料，您應該定期匯出記錄以符合您的內部原則需求。 </li><li>從清單中選取一個事件以在右邊欄中查看其詳細資料。 </li><li>選取漏斗圖示以顯示篩選控制項清單，可協助縮小結果範圍。僅顯示最後 1,000 條記錄，無論選取的篩選器為何。 </li><li>若要匯出目前的稽核記錄清單，請選取&#x200B;**下載記錄**。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概觀</a>。</li></ul>"
 
-你可以在 Experience Platform UI 中查看 Experience Platform 功能中不同功能的 **[!UICONTROL Audits]** 稽核日誌。 工作區會顯示一份記錄日誌清單，預設依最新到最近排序。
+您可以在Experience Platform UI的&#x200B;**[!UICONTROL Audits]**&#x200B;工作區中，檢視不同Experience Platform功能的稽核記錄。 工作區會顯示記錄日誌的清單，預設情況下會從最近排序為最近排序。
 
-![左側選單中「稽核」儀表板，重點顯示稽核。](../../images/audit-logs/audits.png)
+![左側功能表中反白稽核的稽核儀表板。](../../images/audit-logs/audits.png)
 
-稽核日誌會保留365天，之後會從系統中刪除。 若您需要超過 365 天的資料，應以定期匯出日誌以符合內部政策要求。
+稽核記錄會保留365天，之後會從系統中刪除。 如果您需要超過365天的資料，您應定期匯出記錄檔，以符合內部原則需求。
 
-你申請稽核日誌的方式會改變允許的時間範圍和你可存取的紀錄數量。 [匯出日誌](#export-audit-logs) 可以讓你回溯 365 天（以 90 天為單位）回溯到最多 10,000 筆審計日誌（核心或增強版），而 [Experience Platform 的活動日誌介面](#filter-audit-logs) 則顯示過去 90 天最多 1,000 個核心事件，每個事件都有相應的強化事件。
+請求稽核記錄的方法會變更允許的時段以及您可存取的記錄數。 [匯出記錄檔](#export-audit-logs)可讓您回到365天（以90天為間隔），最多可回到10,000個稽核記錄檔（核心或增強型），其中Experience Platform中的[活動記錄檔UI](#filter-audit-logs)會顯示過去90天，最多可達1000個核心事件，每個事件都有對應的增強型事件。
 
 從清單中選取一個事件以在右邊欄中查看其詳細資料。
 
-![審計儀表板活動日誌標籤，並標示事件詳情面板。](../../images/audit-logs/select-event.png)
+![以醒目提示的事件詳細資料面板稽核儀表板活動記錄標籤。](../../images/audit-logs/select-event.png)
 
-### 過濾器稽核日誌
+### 篩選稽核記錄
 
 選取funnel圖示（![篩選圖示](/help/images/icons/filter.png)）以顯示篩選控制項清單，協助縮小結果範圍。
 
@@ -169,12 +169,12 @@ ht-degree: 29%
 
 ## 管理Adobe Admin Console的稽核記錄
 
-若要瞭解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[檔案](https://helpx.adobe.com/tw/enterprise/using/audit-logs.html)。
+若要瞭解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[檔案](https://helpx.adobe.com/enterprise/using/audit-logs.html)。
 
-## 下一步與額外資源
+## 後續步驟和其他資源
 
-本指南涵蓋了如何在 Experience Platform 管理稽核日誌。 欲了解更多如何監控 Experience Platform 活動的資訊，請參閱有關 [可觀察性洞察](../../../observability/home.md) 與 [監控資料擷取](../../../ingestion/quality/monitor-data-ingestion.md)的文件。
+本指南說明如何在Experience Platform中管理稽核記錄。 如需如何監視Experience Platform活動的詳細資訊，請參閱有關[可觀察性深入分析](../../../observability/home.md)和[監視資料擷取](../../../ingestion/quality/monitor-data-ingestion.md)的檔案。
 
-為了加強你對 Experience Platform 審計日誌的理解，請觀看以下影片：
+若要加深您對Experience Platform稽核記錄的瞭解，請觀看以下影片：
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 66%
 - 對應服務API {#api}
    - [概觀](./api/overview.md)
    - [快速入門](./api/getting-started.md)
-   - [函數](./api/functions.md)
+   - [函式](./api/functions.md)
    - [對應集](./api/mapping-set.md)
 - UI {#ui}
    - [資料準備UI指南](./ui/mapping.md)

@@ -5,7 +5,7 @@ feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1181'
 ht-degree: 8%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 >
 >若要瞭解事件轉送如何在Experience Platform的資料收集生態系統中運作，請參閱[資料收集概觀](../../../collection/home.md)。
 
-結合Adobe Experience Platform [網頁SDK](/help/web-sdk/home.md)和[行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=zh-Hant)的事件轉送提供下列優點：
+結合Adobe Experience Platform [網頁SDK](/help/web-sdk/home.md)和[行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)的事件轉送提供下列優點：
 
 **效能**：
 
@@ -53,7 +53,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 
 ### 屬性 {#properties}
 
-事件轉送會維護其專屬的屬性存放區，這些屬性與標籤不同，您可以在左側導覽中選取&#x200B;**[!UICONTROL 事件轉送]**，以在Experience Platform UI或資料收集UI中檢視這些屬性。
+事件轉送會維護其專屬的屬性存放區，這些屬性與標籤不同，您可以在Experience Platform UI或資料收集UI中檢視，方法是在左側導覽中選取&#x200B;**[!UICONTROL Event Forwarding]**。
 
 >[!TIP]
 >
@@ -65,7 +65,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 
 ### 擴充功能 {#extensions}
 
-事件轉送有其相容擴充功能的目錄，例如[核心](../../extensions/server/core/overview.md)擴充功能和[Adobe雲端聯結器](../../extensions/server/cloud-connector/overview.md)擴充功能。 您可以在左側導覽中選取&#x200B;**[!UICONTROL 擴充功能]**，然後選取&#x200B;**[!UICONTROL 目錄]**，以檢視UI中事件轉送屬性的可用擴充功能。
+事件轉送有其相容擴充功能的目錄，例如[核心](../../extensions/server/core/overview.md)擴充功能和[Adobe雲端聯結器](../../extensions/server/cloud-connector/overview.md)擴充功能。 您可以在左側導覽中選取&#x200B;**[!UICONTROL Extensions]**，然後選取&#x200B;**[!UICONTROL Catalog]**，以檢視UI中事件轉送屬性的可用擴充功能。
 
 您可以從右側面板中選取![about](../../images/ui/event-forwarding/overview/about.png)，檢視其他可用的資源，以進一步瞭解此功能。
 
@@ -79,9 +79,9 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 
 #### 引用Experience Platform Edge Network中的資料 {#data-element-path}
 
-若要參照來自Experience Platform Edge Network的資料，您必須建立提供該資料的有效路徑的資料元素。 在UI中建立資料元素時，請為擴充功能選取&#x200B;**[!UICONTROL 核心]**，為型別選取&#x200B;**[!UICONTROL 路徑]**。
+若要參照來自Experience Platform Edge Network的資料，您必須建立提供該資料的有效路徑的資料元素。 在UI中建立資料元素時，請為擴充功能選取&#x200B;**[!UICONTROL Core]**&#x200B;並為型別選取&#x200B;**[!UICONTROL Path]**。
 
-資料元素的&#x200B;**[!UICONTROL 路徑]**&#x200B;值必須遵循模式`arc.event.{ELEMENT}` （例如： `arc.event.xdm.web.webPageDetails.URL`）。 必須正確指定此路徑才能傳送資料。
+資料元素的&#x200B;**[!UICONTROL Path]**&#x200B;值必須遵循模式`arc.event.{ELEMENT}` （例如： `arc.event.xdm.web.webPageDetails.URL`）。 必須正確指定此路徑才能傳送資料。
 
 您可以從右側面板中選取![about](../../images/ui/event-forwarding/overview/about.png)，檢視其他可用的資源，以進一步瞭解此功能。
 
@@ -107,7 +107,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 
 #### 規則動作順序 {#action-sequencing}
 
-事件轉送規則的[!UICONTROL 動作]區段一律依序執行。 例如，如果規則有兩個動作，則第二個動作要等到前一個動作完成時才會開始執行（如果預期端點會回應，則表示該端點已回應）。 儲存規則時，請確認動作順序正確。此執行序列無法像使用標籤規則時一樣以非同步方式執行。
+事件轉送規則的[!UICONTROL Actions]區段一律依序執行。 例如，如果規則有兩個動作，則第二個動作要等到前一個動作完成時才會開始執行（如果預期端點會回應，則表示該端點已回應）。 儲存規則時，請確認動作順序正確。此執行序列無法像使用標籤規則時一樣以非同步方式執行。
 
 ## 秘密 {#secrets}
 

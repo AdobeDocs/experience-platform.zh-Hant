@@ -18,4 +18,4 @@ ht-degree: 66%
 * [概觀](./overview.md)
 * [帳戶管理](./administration.md)
 * [啟用客群](./activate-audiences.md)
-* [常見問答](./faq.md)
+* [常見問題](./faq.md)

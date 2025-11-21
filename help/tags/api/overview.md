@@ -4,7 +4,7 @@ description: Reactor API 可讓開發人員以程式設計方式管理 Adobe Exp
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1079'
 ht-degree: 4%
 
 ---

@@ -27,7 +27,7 @@ ht-degree: 26%
       - [概觀](data-distiller/derived-datasets/overview.md)
       - [使用SQL建立衍生資料集](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [建立十等分衍生資料集](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 用於擴展應用程式報告的 SQL 深入解析 {#sql-insights}
+   - 用於擴展應用程式報告的 SQL 洞察 {#sql-insights}
       - [概觀](data-distiller/sql-insights/overview.md)
       - [查詢專業模式](data-distiller/sql-insights/query-pro-mode.md)
       - [Accelerated Store概述](data-distiller/sql-insights/accelerated-store-overview.md)
@@ -131,7 +131,7 @@ ht-degree: 26%
    - [稽核記錄指南](data-governance/audit-log-guide.md)
    - [臨時結構描述資料集中的身分](data-governance/ad-hoc-schema-identities.md)
    - [針對臨時結構描述的屬性型存取控制支援](./data-governance/ad-hoc-schema-labels.md)
-- 最佳作法 {#best-practices}
+- 最佳做法 {#best-practices}
    - [查詢執行](best-practices/writing-queries.md)
    - [資料資產組織](./best-practices/organize-data-assets.md)
 - SQL 參照 {#sql}

@@ -6,7 +6,7 @@ role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '523'
 ht-degree: 30%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 30%
 
 ## 概觀 {#overview}
 
-[!UICONTROL 使用案例教戰手冊]可協助您在開始使用Real-Time CDP或Adobe Journey Optimizer時克服問題，但您可能無法確切瞭解如何開始使用或是如何建立正確的資產，進而達成您想要的使用案例。
+當您開始使用Real-Time CDP或Adobe Journey Optimizer時，[!UICONTROL Use Case Playbooks]可以協助您克服問題，但您可能不知道從何開始或是如何建立正確的資產，以達成您想要的使用案例。
 
 使用案例教戰手冊可透過以下方式為您提供幫助：
 
@@ -52,7 +52,7 @@ ht-degree: 30%
 
 ## 可用性 {#availability}
 
-有些[!UICONTROL 使用案例教戰手冊]是針對Real-Time CDP使用案例量身打造的，有些則是最適合使用Journey Optimizer的客戶。 瀏覽目錄以尋找最適合您的產品和使用案例的行動手冊。 在[Adobe產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)中探索有關Real-Time CDP和Journey Optimizer的更多資訊。
+有些[!UICONTROL Use Case Playbooks]是針對Real-Time CDP使用案例量身打造的，有些則最適合使用Journey Optimizer的客戶。 瀏覽目錄以尋找最適合您的產品和使用案例的行動手冊。 在[Real-Time CDP產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中進一步瞭解Adobe和Journey Optimizer。
 
 ## UI 指南 {#ui-guides}
 

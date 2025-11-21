@@ -38,7 +38,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 >id="platform_home_metrics_totalProfiles"
 >title="設定檔總數"
 >abstract="您的組織在 Experience Platform 中擁有的設定檔總數。此計數是根據您組織的合併原則計算，不包括設定檔片段。設定檔數量每 24 小時更新一次。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=zh-Hant#profile-count" text="如需了解詳細資訊，請參閱文件"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="如需了解詳細資訊，請參閱文件"
 
 量度控制面板會顯示Experience Platform資料的最新資訊。 儀表板分為兩個區段：
 
@@ -57,7 +57,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 最近專案會列出組織中最近的變更。 在以下範例中，最新變更與資料集、來源、對象和目的地有關。
 
-![&#x200B; Experience Platform UI首頁中的「最近使用的專案」區段。](assets/platform-home/recent-items.png)
+![ Experience Platform UI首頁中的「最近使用的專案」區段。](assets/platform-home/recent-items.png)
 
 * **最近的資料集**： **[!UICONTROL Recent datasets]**&#x200B;卡片會顯示在組織內建立的五個最近的資料集。 建立新資料集時會更新此清單。 選取資料集以檢視該專案的詳細資料，或選取&#x200B;**[!UICONTROL View all]**&#x200B;以取得資料集清單。 從那裡，您可以選取特定來源以取得詳細資訊。 如需資料集的詳細資訊，請參閱[資料集總覽](../catalog/datasets/overview.md)。
 * **最近的來源**： **[!UICONTROL Recent sources]**&#x200B;量度卡片會顯示組織內建立的五個最近的來源。 此清單會在建立新來源時更新。 選取來源以檢視該專案的詳細資料，或選取&#x200B;**[!UICONTROL View all]**&#x200B;以取得來源清單。 從那裡，您可以選取特定來源以取得詳細資訊。 如需來源的詳細資訊，請參閱[來源概觀](../sources/home.md)。
@@ -68,7 +68,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 最後，資源Widget提供您可參考的其他檔案資源。 這些功能包括：
 
-![&#x200B; Experience Platform UI首頁中的資源區段。](assets/platform-home/resources.png)
+![ Experience Platform UI首頁中的資源區段。](assets/platform-home/resources.png)
 
 * [了解結構描述](../xdm/schema/composition.md)
 * [正在連接來源](../sources/home.md)

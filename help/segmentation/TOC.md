@@ -17,7 +17,7 @@ ht-degree: 43%
 
 - [Segmentation Service概述](home.md)
 - [區段資料型別](data-types.md)
-- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant#segmentation-guardrails)
+- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - 分段API {#api}
    - [概觀](api/overview.md)
    - [快速入門](api/getting-started.md)
@@ -75,7 +75,7 @@ ht-degree: 43%
    - [字串函式](pql/string-functions.md)
    - [物件函式](pql/object-functions.md)
    - [算術函式](pql/arithmetic-functions.md)
-   - [聚合函式](pql/aggregation-functions.md)
+   - [彙總函式](pql/aggregation-functions.md)
    - [日期和時間函式](pql/datetime-functions.md)
    - [篩選函式](pql/filter-functions.md)
    - [邏輯數量詞](pql/logical-quantifiers.md)

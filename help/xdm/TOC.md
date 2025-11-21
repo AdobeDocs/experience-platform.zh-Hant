@@ -266,7 +266,7 @@ ht-degree: 20%
    * [描述項](api/descriptors.md)
    * [聯合](api/unions.md)
    * [CSV到結構描述轉換](api/csv-to-schema.md)
-   * [轉存](api/export.md)
+   * [匯出](api/export.md)
    * [讀入](api/import.md)
    * [樣本資料](api/sample-data.md)
    * [稽核記錄](api/audit-log.md)

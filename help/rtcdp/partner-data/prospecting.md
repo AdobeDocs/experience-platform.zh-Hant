@@ -5,8 +5,8 @@ feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 86%
+source-wordcount: '2027'
+ht-degree: 76%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 86%
 
 >[!AVAILABILITY]
 >
->* 已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>* 已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶輪廓來擴大您的輪廓庫，並與其互動以獲取或接觸新客戶。
 
@@ -22,7 +22,7 @@ ht-degree: 86%
 
 ## 為何考慮此使用案例 {#why-this-use-case}
 
-品牌同時面臨艱鉅的挑戰，需要負責地執行最上層漏斗式客戶贏取使用案例，而不需要依賴第三方Cookie、有限的預算，以及更高的透明度和廣告支出報酬要求。
+品牌同時面臨艱鉅挑戰，需要負責地執行頂級funnel客戶贏取使用案例，而不需要依賴第三方Cookie、有限的預算，以及更高的透明度和廣告支出報酬要求。
 
 Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資料管理平台(DMP)使用案例轉換為無Cookie的替代方案，其方式可將自助式細分、受眾策劃和啟用的完整複雜度和功能整合到單一系統中。 Adobe透過專利的資料控管和同意架構，專注負責任地使用資料，上述舉措絲毫不會打折扣。
 
@@ -34,8 +34,8 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 * 您期望多久一次在 Real-Time CDP 擷取和重新整理合作夥伴提供的輪廓？
 * 您的下游目的地需要什麼身分識別？
-* 確保擷取的身分可在下游供操作
-* 您擷取的合作夥伴資料是否與廣泛接受的持久身分相關聯，例如個人可識別資訊 (PII)、雜湊 PII 或合作夥伴身分？
+* 確保擷取的識別碼可在下游供操作
+* 您擷取的合作夥伴資料是否與廣泛接受的持久身分相關聯，例如個人可識別資訊 (PII)、雜湊 PII 或合作夥伴識別碼？
 * 從合作夥伴的角度以及您自己的法律、隱私權或合規團隊的角度，您需要了解哪些資料使用政策？
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
@@ -55,7 +55,7 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 觀看以下影片教學課程，逐步瞭解如何觸及及吸引潛在客戶受眾：
 
->[!VIDEO](https://video.tv.adobe.com/v/3452871/?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## 如何實現使用案例：逐步說明 {#step-by-step-instructions}
 
@@ -74,7 +74,7 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 * [潛在客戶客群](/help/segmentation/types/prospect-audiences.md)
 * [目的地](/help/destinations/home.md)
 
-### 取得來自合作夥伴的協力廠商輪廓詳細資料 {#license-profiles-from-partner}
+### 取得來自合作夥伴的第三方輪廓詳細資料 {#license-profiles-from-partner}
 
 此步驟包含在[必要條件](#prerequisites-and-planning)中，而且 Adobe 假定您已和受信任的資料廠商簽訂適合的合約協議，可擷取資料合作夥伴提供的潛在客戶輪廓。
 
@@ -84,33 +84,33 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 您將使用的身分識別、資料管理和治理元件包括：
 
-* 新的&#x200B;**[!UICONTROL 合作夥半 ID]** 身分識別類型，用於合作夥伴提供的輪廓
-* 新的 **[!UICONTROL XDM 個別潛在客戶輪廓]** XDM 類別
+* 合作夥伴提供的設定檔有新的&#x200B;**[!UICONTROL Partner ID]**&#x200B;身分型別
+* 新的&#x200B;**[!UICONTROL XDM Individual Prospect Profile]** XDM類別
 * **(文件即將推出)** 為合作夥伴資料支援量身打造的欄位群組
 * **(文件即將推出)** 您將新增到來自合作夥伴之屬性的協力廠商標籤
 
 #### 建立合作夥伴 ID 身分識別命名空間 {#create-partner-id-namespace}
 
-首先建立新的身分識別類型，用於將從合作夥伴收到的輪廓。為此，在「身分識別」區段中，您必須建立類型&#x200B;**[!UICONTROL 合作夥伴 ID]**&#x200B;的新身分識別命名空間。
+首先建立新的身分識別類型，用於將從合作夥伴收到的輪廓。若要這麼做，您必須在[身分]區段中建立型別&#x200B;**[!UICONTROL Partner ID]**&#x200B;的新身分名稱空間。
 
 ![建立新的合作夥伴 ID 身分識別命名空間。](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * 如需有關合作夥伴 ID 命名空間的詳細資訊，請閱讀[身分識別類型章節](/help/identity-service/features/namespaces.md)。
 * 閱讀有關在 Experience Platform 使用者介面中[如何定義身分識別欄位](/help/xdm/ui/fields/identity.md)的資訊。
 
-#### 建立含有 **[!UICONTROL XDM 個別潛在客戶輪廓]**&#x200B;類別的新結構描述
+#### 使用&#x200B;**[!UICONTROL XDM Individual Prospect Profile]**&#x200B;類別建立新的結構描述
 
-接下來，在「**[!UICONTROL 資料管理]** > **[!UICONTROL 結構描述]**」，建立新結構描述並將 **[!UICONTROL XDM 個別潛在客戶輪廓]**&#x200B;類別指派給它。
+接下來，在&#x200B;**[!UICONTROL Data Management]** > **[!UICONTROL Schemas]**&#x200B;中建立新的結構描述，並將其指派給&#x200B;**[!UICONTROL XDM Individual Prospect Profile]**&#x200B;類別。
 
 ![在 XDM 結構描述產生器中搜尋 XDM 個別潛在客戶輪廓類別](/help/rtcdp/assets/partner-data/prospecting/xdm-individual-prospect-class.png)。
 
 閱讀如何[在 UI 中建立和編輯結構描述](/help/xdm/ui/resources/schemas.md)並取得有關 XDM 個別潛在客戶輪廓的完整資訊 (連結即將推出)。
 
-**[!UICONTROL XDM 個別潛在客戶輪廓]**&#x200B;類別預先設定在下方所示欄位。若要使用合作夥伴為潛在客戶輪廓提供的屬性來豐富您的結構描述，您可以建立含有所要屬性的新欄位群組再加入到結構描述，也可以使用其中一個 Adobe 提供的預先設定欄位群組。
+**[!UICONTROL XDM Individual Prospect Profile]**&#x200B;類別已預先設定下列欄位。 若要使用合作夥伴為潛在客戶輪廓提供的屬性來豐富您的結構描述，您可以建立含有所要屬性的新欄位群組再加入到結構描述，也可以使用其中一個 Adobe 提供的預先設定欄位群組。
 
 ![XDM 個別潛在客戶輪廓類別的預先設定欄位](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)。
 
-接下來，您必須選取之前建立的合作夥伴 ID 身分識別作為結構描述的主要身分識別。輪廓記錄必須帶有主要身分。此步驟是必要的，才能確保潛在客戶資料可載入設定檔存放區，並可供細分和啟用。
+接下來，您必須選取之前建立的合作夥伴 ID 身分識別作為結構描述的主要身分識別。輪廓記錄必須帶有主要識別碼。此步驟是必要的，才能確保潛在客戶資料可載入設定檔存放區，並可供細分和啟用。
 
 >[!AVAILABILITY]
 >
@@ -122,27 +122,27 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 ![啟用輪廓結構描述。](/help/rtcdp/assets/partner-data/prospecting/enable-schema-for-profile.png)
 
-#### 將協力廠商資料治理標籤新增到結構描述的所有欄位
+#### 將第三方資料治理標籤新增到結構描述的所有欄位
 
-考慮將協力廠商資料標籤新增到組成結構描述的所有欄位。這對於確保負責任地使用協力廠商資料並將資料洩漏風險降至最低而言非常重要。尋找有關[第三方資料控管標籤](../../data-governance/labels/reference.md#partner-ecosystem-labels)的詳細資訊。
+考慮將第三方資料治理標籤新增到組成結構描述的所有欄位。這對於確保負責任地使用第三方資料並將資料洩漏風險降至最低而言非常重要。尋找有關[第三方資料控管標籤](../../data-governance/labels/reference.md#partner-ecosystem-labels)的詳細資訊。
 
 請依照下列步驟執行此操作：
 
-1. 瀏覽至您建立的結構描述並選取「**[!UICONTROL 標籤]**」索引標籤。
+1. 導覽至您建立的結構描述，並選取「**[!UICONTROL Labels]**」標籤。
 2. 使用最頂部的核取方塊按鈕選取此結構描述中的所有欄位，然後按一下右側的鉛筆圖示，將資料治理標籤套用到此結構描述。
-3. 選取左側類別中的「**[!UICONTROL 合作夥伴生態系統]**」標籤。
-4. 選擇名為&#x200B;**[!UICONTROL 協力廠商]**&#x200B;的標籤，並選取「**[!UICONTROL 儲存]**」。
+3. 從左側的類別中選取&#x200B;**[!UICONTROL Partner Ecosystem]**&#x200B;標籤。
+4. 選擇名為&#x200B;**[!UICONTROL Third Party]**&#x200B;的標籤並選取&#x200B;**[!UICONTROL Save]**。
 5. 請注意，結構描述中的所有欄位現在都含有您在上一步驟選取的標籤。
 
 >[!SUCCESS]
 >
 >您的結構描述現已可供使用，您可以繼續執行下一步驟，從資料合作夥伴擷取潛在客戶資料。
 
-此外，在此步驟中，請考慮隨著您擴大資料管理策略以包含合作夥伴提供的協力廠商資料時，您的資料治理模式會如何變更。探索以下文件連結中的考量事項：
+此外，在此步驟中，請考慮隨著您擴大資料管理策略以包含合作夥伴提供的第三方商資料時，您的資料治理模式會如何變更。探索以下文件連結中的考量事項：
 
-* (**即將推出**) 將協力廠商資料保存在單獨的資料集中，以便可輕鬆進行刪除及還原整合。
+* (**即將推出**) 將第三方資料保存在單獨的資料集中，以便可輕鬆進行刪除及還原整合。
 * (**即將推出**) 對於購買了資料清理附加元件的用戶端，在資料集上使用[資料集期限](/help/hygiene/ui/dataset-expiration.md)功能。
-* (**即將出**) 建立引入協力廠商資料的衍生資料集時需謹慎小心，因為一旦混合在一起，若要移除協力廠商資料，唯一的解決方案是刪除整個衍生資料集。
+* (**即將出**) 建立引入第三方資料的衍生資料集時需謹慎小心，因為一旦混合在一起，若要移除第三方資料，唯一的解決方案是刪除整個衍生資料集。
 
 ### 載入潛在客戶輪廓清單並檢查潛在客戶輪廓檢視
 
@@ -152,11 +152,11 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 若要載入一些範例資料並填入潛在客戶輪廓，請建立資料集並上傳您從資料合作夥伴收到的檔案。完成以下步驟：
 
-1. 瀏覽至「**[!UICONTROL 資料管理]** > **[!UICONTROL 資料集]**」並選取「**[!UICONTROL 建立資料集]**」。
+1. 導覽至&#x200B;**[!UICONTROL Data Management]** > **[!UICONTROL Datasets]**&#x200B;並選取&#x200B;**[!UICONTROL Create dataset]**。
 2. 選取「從結構描述建立資料集」
 3. 選取您在上一步驟中建立的結構描述
 4. 為資料集命名，並提供說明 (非必填)。
-5. 選取「**[!UICONTROL 完成]**」。
+5. 選擇「**[!UICONTROL Finish]**」。
 
 ![為潛在客戶輪廓建立資料集的步驟記錄](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)。
 
@@ -164,7 +164,7 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 ![啟用輪廓資料集](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)。
 
-若要將從合作夥伴收到的檔案載入到資料集中，請選取資料集，在右邊欄向下捲動，然後選取「**[!UICONTROL 新增資料]**」。您可以拖放檔案或選取「**[!UICONTROL 選擇檔案]**」以瀏覽至檔案位置並選取檔案。
+若要將您從合作夥伴收到的檔案載入資料集，請選取資料集，在右側邊欄中向下捲動，然後選取&#x200B;**[!UICONTROL Add data]**。 您可以拖放檔案或選取&#x200B;**[!UICONTROL Choose files]**&#x200B;以瀏覽至檔案位置並加以選取。
 
 ![將檔案新增到資料集](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)。
 
@@ -183,13 +183,13 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 #### 檢查載入的潛在客戶輪廓 {#inspect-profiles}
 
-若要查看潛在客戶輪廓清單，請在左邊欄瀏覽至「**[!UICONTROL 潛在客戶]** > **[!UICONTROL 輪廓]**」。
+若要檢視潛在客戶設定檔清單，請導覽至左側邊欄中的&#x200B;**[!UICONTROL Prospects]** > **[!UICONTROL Profiles]**。
 
-請注意，剛才載入至 Real-Time CDP 的潛在客戶輪廓可能最多需要兩個小時才能顯示在「潛在客戶輪廓」畫面的「**[!UICONTROL 瀏覽]**」檢視。如果頁面顯示「目前沒有可供瀏覽的潛在客戶輪廓」訊息，請稍後再試一次。等待一段時間後，潛在客戶輪廓應該開始顯示在「**[!UICONTROL 瀏覽]**」檢視中。
+請注意，您剛載入Real-Time CDP的潛在客戶設定檔可能需要長達兩個小時的時間，才能顯示在潛在客戶設定檔畫面的&#x200B;**[!UICONTROL Browse]**&#x200B;檢視中。 如果頁面顯示「目前沒有可供瀏覽的潛在客戶輪廓」訊息，請稍後再試一次。等待一段時間後，潛在客戶設定檔應開始顯示在&#x200B;**[!UICONTROL Browse]**&#x200B;檢視中。
 
 >[!TIP]
 >
->請注意，會出現&#x200B;**[!UICONTROL 身分識別命名空間]**&#x200B;欄。如果您與多個資料廠商合作，請使用此欄來推斷潛在客戶輪廓的來源。
+>請注意&#x200B;**[!UICONTROL Identity Namespace]**&#x200B;資料行是否存在。 如果您與多個資料廠商合作，請使用此欄來推斷潛在客戶輪廓的來源。
 
 ![載入至 Real-Time CDP 之潛在客戶輪廓的檢視](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)。
 
@@ -203,7 +203,7 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 使用 Real-Time CDP 細分功能，從您的潛在客戶輪廓建立客群。使用所需的細分規則來建立量身打造的客群。
 
-若要開始使用並建立由潛在客戶輪廓組成的客群，請瀏覽至「**[!UICONTROL 潛在客戶]** > **[!UICONTROL 客群]**」。
+若要開始建立由潛在客戶設定檔組成的對象，請導覽至&#x200B;**[!UICONTROL Prospects]** > **[!UICONTROL Audiences]**。
 
 ![潛在客戶客群的檢視](/help/rtcdp/assets/partner-data/prospecting/prospect-audiences.png)。
 
@@ -227,6 +227,6 @@ Adobe Real-Time Customer Data Platform可協助品牌安全地將其支援的資
 
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
-* [使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的客群最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* [使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的洞察，並使客群最佳化表現更好。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * [在造訪期間使用合作夥伴協助的訪客辨識](/help/rtcdp/partner-data/onsite-personalization.md)，針對未知的訪客提供個人化現場體驗，使用者不需驗證或擁有您品牌的先前記錄。
 * [擴大啟用潛在客戶輪廓和潛在客戶客群](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

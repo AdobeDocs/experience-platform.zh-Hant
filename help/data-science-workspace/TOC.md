@@ -16,10 +16,10 @@ ht-degree: 33%
 
 # Data Science Workspace {#data-science-workspace}
 
-* [資料科學工作區總覽](home.md)
+* [資料科學工作區概觀](home.md)
 * [資料科學Workspace存取與功能](access-features-dsw.md)
 * [資料科學工作區逐步解說](walkthrough.md)
-* JupyterLab筆記本{#jupyterlab}
+* JupyterLab筆記型電腦 {#jupyterlab}
    * [概觀](jupyterlab/overview.md)
    * [資料存取](jupyterlab/access-notebook-data.md)
    * [分析您的資料](jupyterlab/analyze-your-data.md)
@@ -34,19 +34,19 @@ ht-degree: 33%
    * [實驗](api/experiments.md)
    * [模型](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [深入分析](api/insights.md)
+   * [Insights](api/insights.md)
    * [附錄](api/appendix.md)
-* 預先建立配方{#pre-built-recipes}
+* 預先建立的配方 {#pre-built-recipes}
    * [產品推薦配方](pre-built-recipes/product-recommendations.md)
    * [產品購買預測](pre-built-recipes/product-purchase-prediction.md)
    * [零售指導方針](pre-built-recipes/retail-sales.md)
-* 模型製作{#authoring}
+* 模型製作 {#authoring}
    * [模型製作SDK](authoring/sdk.md)
    * [建立特徵管線](authoring/feature-pipeline.md)
    * [使用Experience Platform SDK (Python)進行模型製作](authoring/platform-sdk.md)
    * [Python資料存取](authoring/python.md)
    * [Spark資料存取](authoring/spark.md)
-* 模型與配方教學課程{#models-recipes}
+* 模型與配方教學課程 {#models-recipes}
    * [建立及發佈機器學習模型](models-recipes/create-publish-model.md)
    * [建立示範Luma結構描述和資料集](models-recipes/create-luma-data.md)
    * [建立零售銷售結構描述和資料集](models-recipes/create-retails-sales-dataset.md)

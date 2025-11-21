@@ -2,7 +2,7 @@
 keywords: Experience Platform；概覽；customer ai；熱門主題；customer ai概覽
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: Customer AI 概述
+title: Customer AI 概觀
 description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。不必將企業需求轉換為機器學習問題、挑選演算法、訓練或部署，即可達成上述目的。
 landing-page-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
 short-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
@@ -15,7 +15,7 @@ ht-degree: 21%
 ---
 
 
-# Customer AI 概述
+# Customer AI 概觀
 
 Customer AI是Intelligent Services的一部分，它讓行銷人員能夠產生個人層面的客戶預測並提供解釋。
 

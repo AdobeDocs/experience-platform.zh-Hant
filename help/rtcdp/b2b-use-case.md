@@ -3,7 +3,7 @@ keywords: RTCDP；CDP；Real-Time Customer Data Platform；即時客戶資料平
 title: Real-Time Customer Data Platform B2B edition的範例使用案例
 description: 此範例情境提供您實作 Adobe Real-Time Customer Data Platform B2B Edition 設定的範例。
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -20,7 +20,7 @@ Real-Time Customer Data Platform B2B edition擴充了現有的Real-Time CDP和Ad
 - 根據相關實體的屬性來細分對象。 這包括客戶、商機、行銷活動和行銷清單。 對象不再侷限於「人員」屬性和「體驗事件」。 如需建立B2B特定對象的更多範例，請參閱[B2B細分檔案](./segmentation/b2b.md)。
 - 原生支援與多個帳戶相關之個人的使用案例。
 
-## 使用實例
+## 使用案例
 
 技術公司Bodea推出一項新產品，同時想要透過電子郵件和LinkedIn廣告促銷活動來鎖定客戶。 為了最大化行銷活動的效率，Bodea也想要將目標鎖定於與該現有帳戶相關聯的人員，這些人員先前在其產品上花費超過100萬美元，且上個月造訪過新產品頁面。
 

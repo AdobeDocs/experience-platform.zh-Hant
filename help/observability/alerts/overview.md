@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 3%
+source-wordcount: '799'
+ht-degree: 12%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 3%
 >
 >由於生產沙箱和開發沙箱都支援警報，因此您可以在任何沙箱中訂閱警報。 沙箱重設時，所有訂閱警報也會重設，而沙箱刪除時，所有訂閱警報都會刪除。
 
-Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的事件型警報。 警示可減少或消除輪詢[[!DNL Observability Insights] API](../api/overview.md)的需求，以檢查工作是否已完成、工作流程中是否已達到特定里程碑，或是否已發生任何錯誤。
+透過 Adobe Experience Platform，您可以訂閱關於 Adobe Experience Platform 活動的事件型警報。有了警報，便可以減少或免除透過輪詢 [[!DNL Observability Insights] API](../api/overview.md) 來檢查工作是否完成、是否達到工作流程某個里程碑，或者是否發生任何錯誤的需求。
 
 當您的Experience Platform作業達到特定條件集時（例如系統違反臨界值時會發生潛在問題），Experience Platform可以向組織中訂閱警報訊息的任何使用者傳送警報訊息。 這些訊息可在預先定義的時間間隔內重複，直到警報解決為止。
 
 本檔案提供Adobe Experience Platform中警報的概觀，包括定義警報規則的結構。
 
-## 一次性警報與重複警報
+## 一次性警報與重複性警報
 
 Experience Platform警報可以只傳送一次，也可以在預先定義的間隔內重複傳送，直到解決為止。 這些選項各自的使用案例旨在以下列方式不同：
 
@@ -56,9 +56,9 @@ Experience Platform警報可以只傳送一次，也可以在預先定義的間�
 * [Adobe I/O Events](#events)
 * [EXPERIENCE PLATFORM UI](#ui)
 
-### I/O事件 {#events}
+### I/O 事件 {#events}
 
-可將警報傳送至已設定的webhook，以有效自動化活動監控。 若要透過webhook接收警報，您必須在Adobe Developer Console中註冊Experience Platform警報的webhook。 如需特定步驟，請參閱[訂閱Adobe I/O事件通知](./subscribe.md)指南。
+警報可以傳送至設定好的 Webhook，以便提高活動監視的自動化效率。若要透過webhook接收警報，您必須在Adobe Developer Console中註冊Experience Platform警報的webhook。 如需特定步驟，請參閱[訂閱Adobe I/O事件通知](./subscribe.md)指南。
 
 ### EXPERIENCE PLATFORM UI {#ui}
 
@@ -71,13 +71,13 @@ Experience Platform UI可讓您檢視收到的警報並管理警報規則。 以
 | 權限 | 說明 |
 | --- | --- |
 | 檢視警示 | 可讓您檢視已接收的警示訊息。 |
-| 檢視警示歷史記錄* | 可讓您透過[!UICONTROL 警示]索引標籤檢視已接收警示的歷史記錄。 |
-| 管理警報* | 可讓您透過[!UICONTROL 警示]索引標籤來啟用及停用警示規則。 |
-| 解決警示* | 可讓您透過[!UICONTROL 警示]索引標籤解決觸發的警示。 |
+| 檢視警示歷史記錄* | 可讓您透過[!UICONTROL Alerts]索引標籤檢視已接收警示的歷史記錄。 |
+| 管理警報* | 可讓您透過[!UICONTROL Alerts]索引標籤來啟用及停用警示規則。 |
+| 解決警示* | 可讓您透過[!UICONTROL Alerts]索引標籤解決觸發的警示。 |
 
 {style="table-layout:auto"}
 
-**若要存取[!UICONTROL 警示]標籤，您也必須同時被授與檢視警示許可權與其他許可權之一。*
+**若要存取[!UICONTROL Alerts]標籤，您也必須同時被授與[檢視警示]許可權與其他許可權之一。*
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Experience Platform UI可讓您檢視收到的警報並管理警報規則。 以
 >
 > 選取警示以導覽至相關儀表板，以取得觸發警示原因的詳細資訊。
 
-此外，UI中的[!UICONTROL 警報]索引標籤可讓個別使用者訂閱特定的警報型別，並可讓管理員完全啟用或停用警報規則。 如需管理警示的詳細資訊，請參閱[UI指南](./ui.md)。
+此外，UI中的[!UICONTROL Alerts]索引標籤可讓個別使用者訂閱特定警示型別，並允許管理員完全啟用或停用警示規則。 如需管理警示的詳細資訊，請參閱[UI指南](./ui.md)。
 
 ## 後續步驟
 

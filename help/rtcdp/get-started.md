@@ -6,7 +6,7 @@ feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2321'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 * 將它們合併為單一[!DNL real-time customer profile]
 * 跨裝置提供一致、相關和個人化的體驗。
 
-## 使用實例
+## 使用案例
 
 運動服裝公司Luma一直都在努力改善客戶體驗。 他們推出一項新計畫，以提高與禮品相關的銷售額。 此外也希望減少過度曝光，例如向客戶傳送令人討厭的廣告。
 
@@ -156,7 +156,7 @@ Luma的團隊將其所有行為和客戶資料放在一個地方。
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   例如，選取&#x200B;**[!UICONTROL 連絡人]**。 連絡人資料的預覽會自動載入，因此您可以確定一切都如預期般顯示。
+   例如，選取&#x200B;**[!UICONTROL Contacts]**。 連絡人資料的預覽會自動載入，因此您可以確定一切都如預期般顯示。
 
    Real-Time CDP會將標準欄位自動對應到[!DNL Experience Data Model] (XDM)設定檔結構描述，以省去此程式的大量手動工作。
 
@@ -235,7 +235,7 @@ Loyalty member
 
 當您新增「放棄贈送禮品購物車」對象時，您可以看到大致有多少人屬於此對象。 您可以對其採取動作，使其可用於跨頻道個人化。
 
-選取&#x200B;**[!UICONTROL 傳送至目的地]**。
+選擇「**[!UICONTROL Send to destinations]**」。
 
 在Real-Time CDP中，Luma可順暢地對其對象進行個人化操作。\
 我們在這裡看到Luma將此目的地傳送至的所有目的地，包括Adobe和非Adobe解決方案：
@@ -260,7 +260,7 @@ Loyalty member
 >
 >（選擇性）如果您選取日期欄位，則會自動排程90天。
 
-選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以移至下一頁。
+選取&#x200B;**[!UICONTROL Save]**&#x200B;以移至下一頁。
 
 當此對象中的客戶進行購買時，其對此對象的成員資格會即時被抑制。 他們不再符合資格，因為其狀態已變更。
 

@@ -7,7 +7,7 @@ role: User
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 33%
+ht-degree: 35%
 
 ---
 
@@ -33,24 +33,24 @@ ht-degree: 33%
    * [[!DNL Profile] 使用者介面指南](ui/user-guide.md)
    * [[!DNL Profile]詳細資料自訂](ui/profile-customization.md)
    * [潛在客戶輪廓](ui/prospect-profile.md)
-* 計算屬性{#computed-attributes}
+* 計算屬性 {#computed-attributes}
    * [概觀](computed-attributes/overview.md)
    * [計算屬性API指南](computed-attributes/api.md)
    * [計算屬性UI指南](computed-attributes/ui.md)
    * [常見問題](computed-attributes/faq.md)
-* 合併政策 {#merge-policies}
+* 合併原則 {#merge-policies}
    * [概觀](merge-policies/overview.md)
    * [合併原則API](api/merge-policies.md)
    * [合併原則 UI 指南](merge-policies/ui-guide.md)
    * [建立合併原則（影片）](video/create-merge-policies.md)
-* 聯合結構描述{#union-schemas}
+* 聯合結構描述 {#union-schemas}
    * [聯合結構描述UI指南](ui/union-schema.md)
    * [聯合結構概觀（影片）](video/union-schemas-overview.md)
 * 教學課程 {#tutorials}
    * [新增資料至即時客戶個人檔案](tutorials/add-profile-data.md)
    * [設定設定檔的資料集](tutorials/dataset-configuration.md)
    * [產生資料集重疊報告](tutorials/dataset-overlap-report.md)
-   * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant)
+   * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [隱私權請求處理](privacy.md)
 * [[!DNL Profile]疑難排解指南](troubleshooting.md)
 * [設定檔API參考](https://www.adobe.com/go/profile-apis-en)

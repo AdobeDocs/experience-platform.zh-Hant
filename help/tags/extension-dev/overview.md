@@ -1,5 +1,5 @@
 ---
-title: 擴充功能開發概述
+title: 擴充功能開發概觀
 description: 了解關於不同標記擴充功能類型的主要元件，以及 Adobe Experience Platform 中的擴充功能開發程序。
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
@@ -9,7 +9,7 @@ ht-degree: 23%
 
 ---
 
-# 擴充功能開發概述
+# 擴充功能開發概觀
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Adobe Experience Platform標籤的主要目標之一，是建立開放的生態�
 
 ### 資訊清單檔案
 
-資訊清單檔案([`extension.json`](./manifest.md))必須存在於目錄的根目錄中。 此檔案說明副檔名的組成以及某些檔案在目錄中的位置。 資訊清單的功能與[npm](https://www.npmjs.com/)專案中的[`package.json`](https://docs.npmjs.com/files/package.json)檔案類似。
+資訊清單檔案([`extension.json`](./manifest.md))必須存在於目錄的根目錄中。 此檔案說明副檔名的組成以及某些檔案在目錄中的位置。 資訊清單的功能與[`package.json`npm](https://docs.npmjs.com/files/package.json)專案中的[](https://www.npmjs.com/)檔案類似。
 
 ### 程式庫模組
 
@@ -53,7 +53,7 @@ Adobe Experience Platform標籤的主要目標之一，是建立開放的生態�
 
 ### Web擴充功能的元件 {#web}
 
-在 Web 擴充功能中，規則會透過事件觸發，接著在符合特定條件時執行特定動作。如需詳細資訊，請參閱 [Web 擴充功能中的模組流程](./web/flow.md)概述文件。
+在 Web 擴充功能中，規則會透過事件觸發，接著在符合特定條件時執行特定動作。如需詳細資訊，請參閱 [Web 擴充功能中的模組流程](./web/flow.md)概觀文件。
 
 除了Adobe提供的[核心模組](./web/core.md)之外，您也可以在Web擴充功能中定義下列程式庫元件：
 
@@ -79,7 +79,7 @@ Adobe Experience Platform標籤的主要目標之一，是建立開放的生態�
 
 >[!NOTE]
 >
->若要進一步了解在邊緣擴充功能中實作程式庫模組所需的格式，請參閱[模組格式概述](./edge/format.md)。
+>若要進一步了解在邊緣擴充功能中實作程式庫模組所需的格式，請參閱[模組格式概觀](./edge/format.md)。
 
 ## 擴充功能組態 {#configuration}
 

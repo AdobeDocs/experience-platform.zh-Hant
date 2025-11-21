@@ -47,12 +47,12 @@ ht-degree: 62%
    * [Real-Time CDP B2B 版本中的目的地](destinations/b2b.md)
 * 護欄 {#guardrails}
    * [Real-Time CDP護欄概觀](guardrails/overview.md)
-   * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [&#x200B; [!DNL Edge Network API]的護欄](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
+   * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ [!DNL Edge Network API]的](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}護欄
    * [資料與分段的 [!DNL Real-Time Customer Profile] 護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [資料的 [!DNL Identity Service] 護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [&#x200B; [!DNL Query Service]的護欄](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=zh-Hant){target="_blank"}
+   * [資料的 [!DNL Identity Service] 護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [ [!DNL Query Service]的](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}護欄
+   * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * 身分識別 {#identity}
    * [身分識別和身分識別命名空間](profile/identities-overview.md)
 * 合併原則 {#merge-policies}
@@ -68,7 +68,7 @@ ht-degree: 62%
    * [帳戶相符的銷售機會](b2b-ai-ml-services/lead-to-account-matching.md)
    * 預測性銷售線索與帳戶評分 {#predictive-lead-and-account-scoring-intro}
       * [預測性銷售機會和帳戶評分概觀](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
-      * [管理預測性銷售機會和帳戶評分 &#x200B;](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
+      * [管理預測性銷售機會和帳戶評分 ](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * 結構描述 {#schemas}
    * [結構描述概觀](schemas/overview.md)
    * [Real-Time CDP B2B 版本中的結構描述](schemas/b2b.md)
@@ -84,7 +84,7 @@ ht-degree: 62%
       * [未驗證的伺服器端重新目標定位](./partner-data/unauthenticated-retargeting.md)
    * 輪廓擴充 {#profile-enrichment}
       * [使用合作夥伴提供的屬性補充第一方輪廓](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * 個人化的深入解析和參與 {#personalization-insights-engagement}
+   * 個人化的洞察和參與 {#personalization-insights-engagement}
       * [將一次性客戶價值提升至期限價值](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [以智慧方式重新吸引您的客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [智慧地重新與您的客戶互動：Luma範例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)

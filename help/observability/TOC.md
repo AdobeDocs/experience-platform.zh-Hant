@@ -1,7 +1,7 @@
 ---
 audience: user
-user-guide-title: 檢視範圍指南
-user-guide-description: 了解如何使用 Adobe Experience Platform 檢視範圍的統計量度和事件通知來監視 Experience Platform 活動。
+user-guide-title: 可觀測性洞察指南
+user-guide-description: 了解如何使用 Adobe Experience Platform 可觀察性洞察的統計量度和事件通知來監視 Experience Platform 活動。
 feature: Observability
 role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
@@ -12,7 +12,7 @@ ht-degree: 68%
 ---
 
 
-# 可觀察性深入分析 {#observability}
+# 可觀察性洞察 {#observability}
 
 * [可觀察性深入分析概觀](./home.md)
 * 可觀察性深入分析API {#api}

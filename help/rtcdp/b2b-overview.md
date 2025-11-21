@@ -3,7 +3,7 @@ keywords: RTCDP；CDP；B2B edition；Real-Time Customer Data Platform；即時�
 title: Real-Time CDP B2B edition概觀
 description: Real-Time Customer Data Platform B2B Edition 帳戶概觀
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -28,7 +28,7 @@ Real-Time CDP B2B edition是以Adobe Real-Time Customer Data Platform (Real-Time
 
 ## XDM
 
-Real-Time CDP B2B edition提供數種新的XDM結構描述類別、欄位群組和關係型別，以擷取和建構您的資料並專門用於B2B用途。 如需這些增強功能的詳細資訊，請參閱Real-Time CDP B2B edition[&#128279;](./schemas/b2b.md)中XDM的概觀。
+Real-Time CDP B2B edition提供數種新的XDM結構描述類別、欄位群組和關係型別，以擷取和建構您的資料並專門用於B2B用途。 如需這些增強功能的詳細資訊，請參閱Real-Time CDP B2B edition[中](./schemas/b2b.md)XDM的概觀。
 
 透過使用預先設定的B2B結構描述，您能夠以標準化的可操作結構匯入資料。 許多新結構描述類別幾乎直接對應到主流CRM中遇到的結構描述類別，例如[!DNL Salesforce]、[!DNL Microsoft Dynamics]、[!DNL Marketo]和其他B2B資料來源。 透過Real-Time CDP B2B edition，您可以簡單明瞭的方式將B2B來源的資料匯入Experience Platform，並取得易於稽核的結果。
 
@@ -65,7 +65,7 @@ Experience Platform可讓您從外部來源擷取資料，同時使用Experience
 >
 >[!DNL Marketo]來源是&#x200B;**不需要**&#x200B;才能使用Real-Time CDP B2B edition。
 
-請參閱Real-Time CDP B2B edition[&#128279;](./sources/b2b.md)檔案中的來源，以取得有關Marketo和將B2B資料帶入Experience Platform的詳細資訊。
+請參閱Real-Time CDP B2B edition[檔案中的](./sources/b2b.md)來源，以取得有關Marketo和將B2B資料帶入Experience Platform的詳細資訊。
 
 ## B2B目的地
 
