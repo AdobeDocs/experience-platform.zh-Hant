@@ -5,9 +5,9 @@ title: 使用流程服務API更新目的地資料流程
 type: Tutorial
 description: 本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用流量服務API來啟用或停用資料流、更新其基本資訊，或新增和移除對象和屬性。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2471'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 * [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功更新資料流。
@@ -749,6 +749,14 @@ curl -X PATCH \
 ## 將設定檔屬性新增至資料流 {#add-profile-attribute}
 
 若要將設定檔屬性新增至目的地資料流，請提供您的資料流ID、版本以及要新增的設定檔屬性，同時對[!DNL Flow Service] API執行PATCH要求。
+
+>[!IMPORTANT]
+>
+>**目的地特定對應需求**
+>
+>本節中說明的`profileSelectors`方法適用於大部分的串流目的地。 不過，某些串流目的地(包括&#x200B;**Adobe Target**)需要改為使用資料準備對應集工作流程。
+>
+>**如果成功API回應(202)**&#x200B;後，您的設定檔屬性沒有顯示在Experience Platform UI中，您必須使用[啟用批次目的地的對象](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)中記錄的對應集方法。
 
 **API格式**
 

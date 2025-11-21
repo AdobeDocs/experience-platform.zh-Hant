@@ -2,9 +2,9 @@
 title: 設定資料串流的機器人偵測
 description: 瞭解如何為資料串流設定機器人偵測，以區分人類和非人類流量。
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,19 @@ ht-degree: 0%
 >
 >機器人偵測不會捨棄任何機器人請求。 它只會以機器人評分更新XDM結構描述，並將事件轉送至您設定的[資料流服務](configure.md)。
 >
->Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=zh-Hant)，而不使用Edge Network設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
+>Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)，而不使用Edge Network設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
 
-建立機器人偵測規則後，可能需要最多15分鐘的時間才能在Edge Network中傳播。
+## 技術考量 {#technical-considerations}
+
+在啟用資料串流上的機器人偵測之前，請謹記以下一些要點，以確保準確的結果和順暢的實施：
+
+* 機器人偵測僅適用於傳送給`edge.adobedc.net`的未驗證要求。
+* 傳送至`server.adobedc.net`的已驗證要求不會針對機器人流量進行評估，因為已驗證的流量被視為可信。
+* 建立機器人偵測規則後，可能需要最多15分鐘的時間才能在Edge Network中傳播。
 
 ## 先決條件 {#prerequisites}
 
-若要讓機器人偵測在您的資料流中運作，您必須將&#x200B;**[!UICONTROL 機器人偵測資訊]**&#x200B;欄位群組新增到您的結構描述。 請參閱[XDM結構描述](../xdm/ui/resources/schemas.md#add-field-groups)檔案，瞭解如何將欄位群組新增到結構描述。
+為了讓機器人偵測在您的資料流中運作，您必須將&#x200B;**[!UICONTROL Bot Detection Information]**&#x200B;欄位群組新增到結構描述。 請參閱[XDM結構描述](../xdm/ui/resources/schemas.md#add-field-groups)檔案，瞭解如何將欄位群組新增到結構描述。
 
 ## 設定資料串流的機器人偵測 {#configure}
 
@@ -49,17 +55,17 @@ ht-degree: 0%
 
 ![顯示資料串流清單的資料串流使用者介面。](assets/bot-detection/datastream-list.png)
 
-在資料流詳細資訊頁面中，選取右側邊欄上的&#x200B;**[!UICONTROL 機器人偵測]**&#x200B;選項。
+在資料流詳細資訊頁面中，選取右側邊欄上的&#x200B;**[!UICONTROL Bot Detection]**&#x200B;選項。
 
 資料串流使用者介面中反白顯示的![機器人偵測選項。](assets/bot-detection/bot-detection.png)
 
-顯示&#x200B;**[!UICONTROL 機器人偵測規則]**&#x200B;頁面。
+顯示&#x200B;**[!UICONTROL Bot Detection Rules]**&#x200B;頁面。
 
 ![資料流設定頁面中的機器人偵測設定。](assets/bot-detection/bot-detection-page.png)
 
 在「機器人偵測規則」頁面中，您可以使用下列功能來設定機器人偵測：
 
-* 使用[[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)。
+* 使用[!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)。
 * 建立您自己的機器人偵測規則。
 
 ### 使用IAB/ABC國際編目程式與機器人清單 {#iab-list}
@@ -68,8 +74,8 @@ ht-degree: 0%
 
 若要設定您的資料串流以使用IAB/ABC國際編目程式和機器人清單：
 
-1. 切換&#x200B;**[!UICONTROL 在此資料流]**&#x200B;上使用IAB/ABC國際編目程式和機器人清單進行機器人偵測選項。
-2. 選取&#x200B;**[!UICONTROL 儲存]**，將機器人偵測設定套用至您的資料流。
+1. 切換&#x200B;**[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]**&#x200B;選項。
+2. 選取&#x200B;**[!UICONTROL Save]**&#x200B;將機器人偵測設定套用至您的資料流。
 
 ![IAB編目程式和機器人清單已啟用。](assets/bot-detection/bot-detection-list.png)
 
@@ -97,15 +103,15 @@ ht-degree: 0%
 
 若要建立機器人偵測規則，請遵循下列步驟：
 
-1. 選取&#x200B;**[!UICONTROL 新增規則]**。
+1. 選擇「**[!UICONTROL Add New Rule]**」。
 
    ![以[新增規則]按鈕反白顯示的[機器人偵測設定]畫面。](assets/bot-detection/bot-detection-new-rule.png)
 
-2. 在&#x200B;**[!UICONTROL 規則名稱]**&#x200B;欄位中輸入規則名稱。
+2. 在&#x200B;**[!UICONTROL Rule Name]**&#x200B;欄位中輸入規則名稱。
 
    ![反白顯示規則名稱的Bot偵測規則畫面。](assets/bot-detection/rule-name.png)
 
-3. 選取&#x200B;**[!UICONTROL 新增IP條件]**&#x200B;以新增以IP為基礎的規則。 您可以依IP位址或IP位址範圍定義規則。
+3. 選取&#x200B;**[!UICONTROL Add new IP condition]**&#x200B;以新增以IP為基礎的規則。 您可以依IP位址或IP位址範圍定義規則。
 
    ![醒目提示IP位址欄位的Bot偵測規則畫面。](assets/bot-detection/ip-address-rule.png)
 
@@ -115,7 +121,7 @@ ht-degree: 0%
    >
    >IP條件是以邏輯`OR`作業為基礎。 如果符合您定義的任何IP條件，則會將請求標示為源自機器人。
 
-4. 如果您想要將標頭條件新增至規則，請選取&#x200B;**[!UICONTROL 新增標頭條件群組]**，然後選取您要規則使用的標頭。
+4. 如果您想要將標頭條件新增至規則，請選取&#x200B;**[!UICONTROL Add header conditions group]**，然後選取您要規則使用的標頭。
 
    ![標頭條件反白顯示的Bot偵測規則畫面。](assets/bot-detection/header-conditions.png)
 
@@ -123,7 +129,7 @@ ht-degree: 0%
 
    ![標頭條件反白顯示的Bot偵測規則畫面。](assets/bot-detection/header-condition-rule.png)
 
-5. 設定所需的機器人偵測規則後，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以將規則套用至您的資料流。
+5. 設定所需的機器人偵測規則後，選取「**[!UICONTROL Save]**」以將規則套用至您的資料流。
 
    ![標頭條件反白顯示的Bot偵測規則畫面。](assets/bot-detection/bot-detection-save.png)
 
