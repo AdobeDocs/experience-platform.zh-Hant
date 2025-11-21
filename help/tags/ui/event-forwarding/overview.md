@@ -30,7 +30,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 >
 >若要瞭解事件轉送如何在Experience Platform的資料收集生態系統中運作，請參閱[資料收集概觀](../../../collection/home.md)。
 
-結合Adobe Experience Platform [網頁SDK](/help/web-sdk/home.md)和[行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)的事件轉送提供下列優點：
+結合Adobe Experience Platform [網頁SDK](/help/web-sdk/home.md)和[行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=zh-Hant)的事件轉送提供下列優點：
 
 **效能**：
 

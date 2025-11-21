@@ -47,12 +47,12 @@ ht-degree: 62%
    * [Real-Time CDP B2B 版本中的目的地](destinations/b2b.md)
 * 護欄 {#guardrails}
    * [Real-Time CDP護欄概觀](guardrails/overview.md)
-   * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=zh-Hant){target="_blank"}
    * [&#x200B; [!DNL Edge Network API]的護欄](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [資料與分段的 [!DNL Real-Time Customer Profile] 護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [資料的 [!DNL Identity Service] 護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [&#x200B; [!DNL Query Service]的護欄](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [資料的 [!DNL Identity Service] 護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=zh-Hant){target="_blank"}
+   * [&#x200B; [!DNL Query Service]的護欄](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=zh-Hant){target="_blank"}
+   * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=zh-Hant){target="_blank"}
 * 身分識別 {#identity}
    * [身分識別和身分識別命名空間](profile/identities-overview.md)
 * 合併原則 {#merge-policies}

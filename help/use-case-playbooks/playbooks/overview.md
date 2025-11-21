@@ -52,7 +52,7 @@ ht-degree: 30%
 
 ## 可用性 {#availability}
 
-有些[!UICONTROL Use Case Playbooks]是針對Real-Time CDP使用案例量身打造的，有些則最適合使用Journey Optimizer的客戶。 瀏覽目錄以尋找最適合您的產品和使用案例的行動手冊。 在[Real-Time CDP產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中進一步瞭解Adobe和Journey Optimizer。
+有些[!UICONTROL Use Case Playbooks]是針對Real-Time CDP使用案例量身打造的，有些則最適合使用Journey Optimizer的客戶。 瀏覽目錄以尋找最適合您的產品和使用案例的行動手冊。 在[Real-Time CDP產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)中進一步瞭解Adobe和Journey Optimizer。
 
 ## UI 指南 {#ui-guides}
 
