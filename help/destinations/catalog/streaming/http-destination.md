@@ -278,7 +278,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 例如，將此資料流視為HTTP目的地，其中在資料流中選取了三個對象，且四個屬性對應至目的地。
 
-![&#x200B; HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![ HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 設定檔匯出至目的地的方式，可由符合或結束&#x200B;*三個對應區段*&#x200B;之一的設定檔來決定。 不過，在資料匯出中，`segmentMembership`物件（請參閱下方的[匯出的資料](#exported-data)區段）可能會顯示其他未對應的對象，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段的資格，但同時也是&#x200B;**觀看的「回到未來」**&#x200B;電影和&#x200B;**科幻迷**&#x200B;區段的成員，則其他這兩個對象也將出現在資料匯出的`segmentMembership`物件中，即使這些對象未對應到資料流中，前提是這些對象與&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段共用相同的合併原則。
 
