@@ -3,10 +3,10 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
+source-git-commit: de161bcb29a0d4fc9b0c419506537b18255c79a4
 workflow-type: tm+mt
-source-wordcount: '2656'
-ht-degree: 8%
+source-wordcount: '3005'
+ht-degree: 7%
 
 ---
 
@@ -50,16 +50,16 @@ ht-degree: 8%
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=zh-Hant#profile-attribute-datasets">系統產生的設定檔快照集資料集</a>。</li></td>
+    <td><ul><li>在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">系統產生的設定檔快照集資料集</a>。</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=zh-Hant#datasets"> Adobe Journey Optimizer</a>檔案。</td>
+    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>檔案。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=zh-Hant#datasets"> Adobe Journey Optimizer</a>檔案。</td>
+    <td>請參閱<a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>檔案。</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ ht-degree: 8%
 
 請觀看下方的影片，瞭解本頁所述工作流程的端對端說明、使用匯出資料集功能的好處，以及一些建議的使用案例。
 
->[!VIDEO](https://video.tv.adobe.com/v/3448829?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -143,6 +143,10 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ![資料集匯出工作流程顯示「選取資料集」步驟，您可以在此選取要匯出的資料集。](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
+>[!NOTE]
+>
+>此處選取的所有資料集將共用相同的匯出排程。 如果您需要不同的匯出排程（例如，部分資料集的增量匯出和部分資料集的一次性完整匯出），請為每種排程型別建立個別的資料流。
+
 ## 排程資料集匯出 {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -160,6 +164,16 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 >title="更新此資料流主體的結束日期"
 >abstract="由於最近對此目的地進行更新，資料流現在需要結束日期。Adobe 已將預設結束日期設定為 2025 年 9 月 1 日。請更新至您想要的結束日期，否則資料匯出將在預設日期停止。"
 
+>[!IMPORTANT]
+>
+>**排程適用於資料流中的所有資料集**
+>
+>當您設定或修改匯出排程時，它會套用至目前透過您設定的資料流匯出的&#x200B;**所有資料集**。 您無法為相同資料流中的個別資料集設定不同的排程。
+>
+>如果您需要不同資料集的不同匯出排程，則必須為每個排程型別建立個別的資料流（個別的目的地連線）。
+>
+>**範例：**&#x200B;如果您有資料集A以增量方式匯出，而且您以一次性完整匯出排程新增資料集B，資料集A也會更新為一次性完整匯出排程。
+
 使用&#x200B;**[!UICONTROL Scheduling]**&#x200B;步驟來：
 
 * 設定開始日期和結束日期，以及資料集匯出的匯出步調。
@@ -167,6 +181,10 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 * 自訂資料集應匯出的儲存位置中的資料夾路徑。 深入瞭解如何[編輯匯出資料夾路徑](#edit-folder-path)。
 
 使用頁面上的&#x200B;**[!UICONTROL Edit schedule]**&#x200B;控制項來編輯匯出的匯出步調，以及選取要匯出完整檔案還是增量檔案。
+
+>[!WARNING]
+>
+>在此處修改排程將更新此資料流中所有資料集的匯出行為。 如果此資料流包含多個資料集，這些資料集都將受到此變更的影響。
 
 ![編輯排程步驟中反白顯示的排程控制項。](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
@@ -213,9 +231,18 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ![自訂資料夾模型視窗中反白的巨集選取專案。](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-選取所需的巨集後，您可以看到將在儲存位置中建立的資料夾結構預覽。 資料夾結構的第一個層級代表您&#x200B;**[!UICONTROL Folder path]**&#x200B;連線至目的地[以匯出資料集時所指示的](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)。
+選取所需的巨集後，您可以看到將在儲存位置中建立的資料夾結構預覽。 資料夾結構的第一個層級代表您&#x200B;**[!UICONTROL Folder path]**&#x200B;連線至目的地[以匯出資料集時所指示的](/help/destinations/ui/connect-destination.md#set-up-connection-parameters)。
 
 ![在自訂資料夾模型視窗中反白顯示的資料夾路徑預覽。](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+
+### 管理多個資料集的最佳實務 {#best-practices-multiple-datasets}
+
+匯出多個資料集時，請考慮以下最佳實務：
+
+* **相同的排程需求**：將需要相同匯出排程（頻率、型別）的資料集群組至單一資料流，以方便管理。
+* **不同的排程需求**：針對需要不同匯出排程或匯出型別（增量與完整）的資料集，建立個別的資料流程。 這可確保每個資料集都能根據其特定需求匯出。
+* 修改前&#x200B;**請檢閱**：變更現有資料流上的排程前，請檢閱哪些資料集已透過該資料流匯出，以避免其匯出行為發生意外變更。
+* **記錄您的設定**：追蹤哪些資料集位於哪些資料流中，尤其是在管理不同目的地的多個匯出排程時。
 
 ## 審閱 {#review}
 
@@ -280,7 +307,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 ## 資料集匯出權益 {#licensing-entitlement}
 
-請參閱產品說明檔案，瞭解您每年每個Experience Platform應用程式有權匯出多少資料。 例如，您可以在[這裡](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)檢視Real-Time CDP產品說明。
+請參閱產品說明檔案，瞭解您每年每個Experience Platform應用程式有權匯出多少資料。 例如，您可以在[這裡](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)檢視Real-Time CDP產品說明。
 
 請注意，不同應用程式的資料匯出許可權並非累加。 例如，這表示如果您購買Real-Time CDP Ultimate和Adobe Journey Optimizer Ultimate，則根據產品說明，設定檔匯出權利將是兩個權利中較大的一個權利。 您的大量權益的計算方式為：取用您的授權設定檔總數，然後乘以Real-Time CDP Prime的500 KB或Real-Time CDP Ultimate的700 KB，以判斷您有權取得的資料量。
 
@@ -352,4 +379,10 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 +++回答
 大多數型別的系統錯誤都會自動進行重試。
++++
+
+**我可以針對相同資料流中的不同資料集設定不同的匯出排程嗎？**
+
++++回答
+否，單一資料流中的所有資料集會共用相同的匯出排程。 如果您需要不同資料集的不同匯出排程，則必須為每個排程型別建立個別的資料流（目的地連線）。 例如，如果您希望資料集A每天以增量方式匯出，而資料集B要匯出為一次性完整匯出，則需要建立兩個個別的資料流。
 +++
