@@ -1,14 +1,14 @@
 ---
 title: Demandbase連線
 description: 使用此目標來啟用 Account-Based Marketing (ABM) 使用案例的帳戶客群。透過 DemandBase 的 B2B Demand Side Platform (DSP) 向目標帳戶中的相關人物誌和角色投放廣告。還可以利用 Demandbase 第三方資料來擴充目標帳戶，以用於行銷和銷售中的其他下游使用案例。
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
-badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 17%
+source-wordcount: '785'
+ht-degree: 16%
 
 ---
 
@@ -110,5 +110,7 @@ ht-degree: 17%
 
 ## 其他附註和重要圖說文字 {#additional-notes}
 
-* 如果先前已將具有相同名稱的帳戶對象啟動至Demandbase，則無法透過與Demandbase目的地不同的資料流再次啟動該對象。
-* 如果您已將對象匯出至Demandbase，且在Experience Platform中成功匯出，但並非所有資料都會送達Demandbase，您可能會在Demandbase端遇到API節流。 如需進一步說明，請洽詢他們。
+* **對象命名**：如果先前在Demandbase中啟用同名的帳戶對象，則無法透過不同資料流在Demandbase目的地再次啟用。
+* **Demandbase API護欄**：如果您已將對象匯出至Demandbase，且在Experience Platform中成功匯出，但並非所有資料都會送達Demandbase，則您可能會在Demandbase端遇到API節流。 如需進一步說明，請洽詢他們。
+* **清單刪除**：帳戶清單是唯一的，因此您無法重新建立名稱已在使用中的新清單。 當您從清單中移除帳戶時，這些帳戶將不再可用，但不會刪除。
+* **啟用時間**：在Demandbase中載入的資料必須經過隔夜處理。
