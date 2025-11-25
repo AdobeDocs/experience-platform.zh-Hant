@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 身分識別服務概觀
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
+source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
 workflow-type: tm+mt
 source-wordcount: '1574'
 ht-degree: 2%
@@ -105,7 +105,7 @@ Identity Service提供下列作業，以達成其使命：
 
 以下影片旨在協助您瞭解身分和身分圖表。
 
->[!VIDEO](https://video.tv.adobe.com/v/3422770?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## 瞭解Identity Service在Experience Platform基礎架構中的角色
 
