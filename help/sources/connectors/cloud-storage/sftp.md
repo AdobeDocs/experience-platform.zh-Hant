@@ -2,7 +2,7 @@
 title: SFTP Source聯結器概述
 description: 瞭解如何使用API或使用者介面將SFTP伺服器連線至Adobe Experience Platform。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: 06db0d3023ebf26aa604880fb6b614e331b1b2ea
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 2%
@@ -93,7 +93,7 @@ The key's randomart image is:
 接下來，在提供私密金鑰的檔案路徑時執行以下命令，將您的私密金鑰編碼為[!DNL Base64]：
 
 ```shell
-C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
+C:\Users\lucy> [convert]::ToBase64String((Get-Content "C:\Users\lucy\.ssh\id_rsa" -AsByteStream)) > "C:\Users\lucy\.ssh\id_rsa_base64"
 ```
 
 上述命令會將[!DNL Base64]編碼的私密金鑰儲存在您指定的檔案路徑中。 然後，您可以使用該私密金鑰來驗證[!DNL SFTP]並連線到Experience Platform。
