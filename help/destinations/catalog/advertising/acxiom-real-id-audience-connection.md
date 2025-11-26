@@ -114,7 +114,7 @@ ht-degree: 5%
 
 
 
-在&#x200B;**[!UICONTROL Source Field]**&#x200B;欄中，輸入您要對應至對應目標欄位的來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL  Select source field]**&#x200B;畫面。 然後，選取&#x200B;**[!UICONTROL Next]**。
+在&#x200B;**[!UICONTROL Source Field]**&#x200B;欄中，輸入您要對應至對應目標欄位的來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL &#x200B; Select source field]**&#x200B;畫面。 然後，選取&#x200B;**[!UICONTROL Next]**。
 ![對應熒幕](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
