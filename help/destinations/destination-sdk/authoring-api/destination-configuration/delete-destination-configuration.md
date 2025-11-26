@@ -2,10 +2,10 @@
 description: 此頁面是透過Adobe Experience Platform Destination SDK刪除現有目的地設定的API呼叫範例。
 title: 刪除目的地設定
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fda542e62c448788099d63951277278a146fdfc8
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 1%
+source-wordcount: '279'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 目的地設定API操作快速入門 {#get-started}
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 刪除目的地設定 {#delete}
 
-您可以刪除[現有](create-destination-configuration.md)目的地伺服器組態，方法是對具有您要刪除之目的地組態的`{INSTANCE_ID}`的`/authoring/destinations`端點發出`DELETE`要求。
+您可以刪除[現有](create-destination-configuration.md)目的地組態，方法是向具有您要刪除之目的地組態的`DELETE`的`/authoring/destinations`端點發出`{INSTANCE_ID}`要求。
 
 >[!TIP]
 >
@@ -41,7 +41,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | 您要刪除之目的地組態的`ID`。 |
 
-+++要求
++++請求
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
