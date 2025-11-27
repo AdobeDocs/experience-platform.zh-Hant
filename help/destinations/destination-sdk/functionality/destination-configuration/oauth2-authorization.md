@@ -2,9 +2,9 @@
 description: 本頁說明Destination SDK支援的各種OAuth 2授權流程，並提供為目的地設定OAuth 2授權的指示。
 title: OAuth 2授權
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2182'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Destination SDK支援多種前往目的地的授權方法。 其中一個選項�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -82,7 +82,7 @@ Experience Platform支援下表中的三種OAuth 2授予型別。 如果您有�
 Adobe為OAuth 2授權設計的系統：
 
 * 支援所有三個OAuth 2授權，並解決其中的任何變數，例如其他資料欄位、非標準API呼叫等。
-* 支援具有不同期限值（90天、30分鐘或您指定的任何其他期限值）的存取權杖。
+* 支援具有不同期限值的存取權杖。 Adobe建議您將權杖存留期值設定為最少24小時。
 * 支援具有或不具有重新整理權杖的OAuth 2授權流程。
 
 ## 含授權碼的OAuth 2 {#authorization-code}
