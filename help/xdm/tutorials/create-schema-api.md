@@ -5,9 +5,9 @@ title: 使用結構描述登入API建立結構描述
 type: Tutorial
 description: 本教學課程使用Schema Registry API來逐步引導您執行各個步驟，使用標準類別來撰寫架構。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cc1c2edc8980c562e323357376c2594fd8ea482a
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2853'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ POST /tenant/schemas
 
 **要求**
 
-要求必須包含參考類別`$id`的`allOf`屬性。 此屬性會定義結構描述將實作的「基底類別」。 在此範例中，基底類別是[!DNL XDM Individual Profile]類別。 [!DNL XDM Individual Profile]類別的`$id`在下面的`allOf`陣列中被用作`$ref`欄位的值。
+要求必須包含參考類別`allOf`的`$id`屬性。 此屬性會定義結構描述將實作的「基底類別」。 在此範例中，基底類別是[!DNL XDM Individual Profile]類別。 `$id`類別的[!DNL XDM Individual Profile]在下面的`$ref`陣列中被用作`allOf`欄位的值。
 
 ```SHELL
 curl -X POST \
@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **要求**
 
-此請求會更新熟客方案以包含[[!UICONTROL 人口統計詳細資料]欄位群組](../field-groups/profile/demographic-details.md) (`profile-person-details`)中的欄位。
+此請求會更新熟客方案以包含[[!UICONTROL Demographic Details]欄位群組](../field-groups/profile/demographic-details.md) (`profile-person-details`)中的欄位。
 
 透過新增`profile-person-details`欄位群組，「熟客方案成員」結構描述現在會擷取熟客方案成員的人口統計資訊，例如他們的名字、姓氏和生日。
 
@@ -240,7 +240,7 @@ curl -X PATCH \
 
 **回應**
 
-回應顯示`meta:extends`陣列中新增的欄位群組，並包含`allOf`屬性中欄位群組的`$ref`。
+回應顯示`meta:extends`陣列中新增的欄位群組，並包含`$ref`屬性中欄位群組的`allOf`。
 
 ```JSON
 {
@@ -304,7 +304,7 @@ curl -X PATCH \
 
 >[!TIP]
 >
->檢閱所有可用的欄位群組，以熟悉每個群組包含的欄位是值得的。 您可以透過對每個「全域」和「租使用者」容器執行請求，僅傳回「meta：intendedToExtend」欄位與您使用的類別相符的欄位群組，列出(GET)所有可用於特定類別的欄位群組。 在此案例中，它是[!DNL XDM Individual Profile]類別，因此使用[!DNL XDM Individual Profile] `$id`：
+>檢閱所有可用的欄位群組，以熟悉每個群組包含的欄位是值得的。 您可以透過對每個「全域」和「租使用者」容器執行請求，僅傳回「meta:intendedToExtend」欄位符合您使用之類別的那些欄位群組，來列出(GET)所有可用於特定類別的欄位群組。 在此案例中，它是[!DNL XDM Individual Profile]類別，因此使用[!DNL XDM Individual Profile] `$id`：
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -325,8 +325,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 此請求會更新熟客方案以納入以下標準欄位群組中的欄位：
 
-* [[!UICONTROL 個人聯絡詳細資料]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`)：新增住家地址、電子郵件地址和住家電話等聯絡資訊。
-* [[!UICONTROL 熟客方案詳細資料]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`)：新增住家地址、電子郵件地址和住家電話等連絡資訊。
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`)：新增連絡資訊，例如住家地址、電子郵件地址和住家電話。
+* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`)：新增連絡資訊，例如住家地址、電子郵件地址和住家電話。
 
 ```SHELL
 curl -X PATCH \
@@ -344,9 +344,9 @@ curl -X PATCH \
 
 **回應**
 
-回應顯示`meta:extends`陣列中新增的欄位群組，並包含`allOf`屬性中欄位群組的`$ref`。
+回應顯示`meta:extends`陣列中新增的欄位群組，並包含`$ref`屬性中欄位群組的`allOf`。
 
-忠誠會員結構描述現在應在`allOf`陣列中包含四個`$ref`值： `profile`、`profile-person-details`、`profile-personal-details`及`profile-loyalty-details`，如下所示。
+忠誠會員結構描述現在應在`$ref`陣列中包含四個`allOf`值： `profile`、`profile-person-details`、`profile-personal-details`及`profile-loyalty-details`，如下所示。
 
 ```JSON
 {
@@ -420,11 +420,11 @@ curl -X PATCH \
 
 ### 定義新的欄位群組
 
-雖然標準[!UICONTROL 熟客方案詳細資料]欄位群組為結構描述提供有用的熟客方案相關欄位，但還有其他熟客方案欄位未包含在任何標準欄位群組中。
+雖然標準[!UICONTROL Loyalty Details]欄位群組為結構描述提供了有用的忠誠度相關欄位，但其他忠誠度欄位則未包含在任何標準欄位群組中。
 
 若要新增這些欄位，您可以在`tenant`容器中定義您自己的自訂欄位群組。 這些欄位群組是您組織所獨有的，組織外部的任何人都看不到或無法編輯。
 
-為了建立(POST)新欄位群組，您的要求必須包含包含與欄位群組相容之基底類別的`$id`的`meta:intendedToExtend`欄位，以及欄位群組將包含的屬性。
+為了建立(POST)新欄位群組，您的要求必須包含包含與欄位群組相容之基底類別的`meta:intendedToExtend`的`$id`欄位，以及欄位群組將包含的屬性。
 
 任何自訂屬性都必須巢狀化至`TENANT_ID`下方，以避免與其他欄位群組或欄位衝突。
 
@@ -619,7 +619,7 @@ curl -X PATCH \
 
 **回應**
 
-您會看到欄位群組已成功新增，因為回應現在顯示`meta:extends`陣列中新新增的欄位群組，並包含`allOf`屬性中欄位群組的`$ref`。
+您會看到欄位群組已成功新增，因為回應現在顯示`meta:extends`陣列中新新增的欄位群組，並包含`$ref`屬性中欄位群組的`allOf`。
 
 ```JSON
 {
@@ -955,7 +955,7 @@ curl -X POST \
 }
 ```
 
-您可以使用編碼的URL `$id` URI來執行查詢(GET)要求，以直接檢視新的資料型別。 確定在查閱要求的`Accept`標頭中包含`version`。
+您可以使用編碼的URL `$id` URI來執行查詢(GET)要求，以直接檢視新的資料型別。 確定在查閱要求的`version`標頭中包含`Accept`。
 
 ### 在結構描述中使用資料型別
 
@@ -998,7 +998,7 @@ curl -X PATCH \
 
 **回應**
 
-回應現在包含`loyaltyTier`物件中資料型別的參考(`$ref`)，而不是先前定義的欄位。
+回應現在包含`$ref`物件中資料型別的參考(`loyaltyTier`)，而不是先前定義的欄位。
 
 ```JSON
 {
@@ -1114,9 +1114,9 @@ curl -X PATCH \
 
 結構描述用於將資料擷取至[!DNL Experience Platform]。 這些資料最終會跨多個服務使用，以建立個人的單一、統一檢視。 為協助進行此程式，可將關鍵欄位標示為「身分」，並在資料擷取後，將這些欄位中的資料插入該個人的「身分圖表」。 然後[[!DNL Real-Time Customer Profile]](../../profile/home.md)和其他[!DNL Experience Platform]服務就可以存取圖表資料，以提供每個個別客戶的拼接檢視。
 
-通常標示為「身分」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。 請考量貴組織特有的任何唯一識別碼，因為這些識別碼可能是良好的身分欄位。
+通常標示為「身分」的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 請考量貴組織特有的任何唯一識別碼，因為這些識別碼可能是良好的身分欄位。
 
-身分描述項會指出`sourceSchema`的`sourceProperty`是應視為身分的唯一識別碼。
+身分描述項會指出`sourceProperty`的`sourceSchema`是應視為身分的唯一識別碼。
 
 如需使用描述元的詳細資訊，請參閱[Schema Registry開發人員指南](../api/getting-started.md)。
 
@@ -1151,7 +1151,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->您可以使用[[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)列出可用的「xdm：namespace」值或建立新值。 「xdm：property」的值可以是「xdm：code」或「xdm：id」，具體取決於使用的「xdm：namespace」。
+>您可以使用:namespace[[!DNL Identity Service API]列出可用的「xdm](https://www.adobe.io/experience-platform-apis/references/identity-service)」值或建立新值。 視使用的「xdm:property」而定，「xdm:code」的值可以是「xdm:id」或「xdm:namespace」。
 
 **回應**
 
@@ -1177,15 +1177,15 @@ curl -X POST \
 
 ## 啟用結構描述以用於[!DNL Real-Time Customer Profile] {#profile}
 
-在結構描述套用主要身分描述項後，您可以將`union`標籤新增至`meta:immutableTags`屬性，以啟用[!DNL Real-Time Customer Profile]使用的「忠誠會員」結構描述。
+在結構描述套用主要身分描述項後，您可以將[!DNL Real-Time Customer Profile]標籤新增至`union`屬性，以啟用`meta:immutableTags`使用的「忠誠會員」結構描述。
 
 >[!NOTE]
 >
->如需使用聯合檢視的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中[聯合](../api/unions.md)的章節。
+>如需使用聯合檢視的詳細資訊，請參閱[開發人員指南中](../api/unions.md)聯合[!DNL Schema Registry]的章節。
 
 ### 新增`union`標籤
 
-為了將結構描述包含在合併的聯合檢視中，`union`標籤必須新增到結構描述的`meta:immutableTags`屬性。 這是透過PATCH要求完成的，以更新結構描述並新增值為`union`的`meta:immutableTags`陣列。
+為了將結構描述包含在合併的聯合檢視中，`union`標籤必須新增到結構描述的`meta:immutableTags`屬性。 這是透過PATCH要求完成的，以更新結構描述並新增值為`meta:immutableTags`的`union`陣列。
 
 **API格式**
 
@@ -1300,7 +1300,7 @@ curl -X PATCH \
 
 您現在已成功新增結構描述至[!DNL XDM Individual Profile]聯合。 若要檢視屬於相同聯合的所有結構描述清單，您可以使用查詢引數來執行GET要求以篩選回應。
 
-使用`property`查詢引數，您可以指定只傳回包含`meta:immutableTags`欄位（其`meta:class`等於[!DNL XDM Individual Profile]類別的`$id`）的結構描述。
+使用`property`查詢引數，您可以指定只傳回包含`meta:immutableTags`欄位（其`meta:class`等於`$id`類別的[!DNL XDM Individual Profile]）的結構描述。
 
 **API格式**
 
@@ -1368,6 +1368,52 @@ curl -X GET \
 }
 ```
 
+## 使用UI驗證您的結構描述 {#validate-in-ui}
+
+使用Experience Platform UI驗證您透過[!DNL Schema Registry] API建立的結構描述是否具有正確的結構、屬性和身分設定。 請依照下列步驟操作：
+
+### 找出您的結構描述
+
+若要開始，請導覽至&#x200B;**[!UICONTROL Schemas]** > **[!UICONTROL Browse]**。 使用文字輸入欄位來搜尋結構描述名稱（例如，`Campaign Member`），並從表格中選取結構描述名稱。
+
+![結構描述瀏覽檢視，文字輸入欄位反白顯示，以搜尋並選取您的結構描述。](../images/tutorials/create-schema/schemas-browse.png)
+
+### 確認結構描述結構
+
+方案畫布會顯示方案的完整結構。 確認：
+
+* 您新增的所有標準欄位群組都會顯示在畫布中。
+* 您的自訂欄位群組會顯示在結構中，並展開以顯示其欄位。
+
+![結構描述畫布顯示完整結構描述結構，且標準和自訂欄位群組已展開。](../images/tutorials/create-schema/schema-canvas.png)
+
+### 檢閱結構描述屬性
+
+接著，選取結構描述根節點以開啟&#x200B;**[!UICONTROL Schema properties]**&#x200B;面板並確認關鍵中繼資料：
+
+* 結構描述`$id`
+* 顯示名稱
+* 設定檔啟用狀態
+
+`$id`應該符合您在API回應中傳回的值。
+
+>[!NOTE]
+>
+>指派的類別（在此範例中為&#x200B;**[!UICONTROL XDM Business Campaign Members]**）會顯示在左側&#x200B;**[!UICONTROL Composition]**&#x200B;面板中。
+
+![已選取結構描述根目錄的結構描述編輯器檢視，且結構描述屬性面板已開啟，以檢閱索引鍵中繼資料。](../images/tutorials/create-schema/review-schema-properties.png)
+
+### 驗證身分欄位
+
+新增到結構描述的每個身分欄位都會列在&#x200B;**[!UICONTROL Identities]**&#x200B;面板的&#x200B;**[!UICONTROL Composition]**&#x200B;區段中。 選取身分欄位，以在右側面板中顯示其屬性。 對於每個身分欄位，確認：
+
+* 身分名稱空間正確。
+* 該欄位在適用時會標示為主要身分。
+
+![已選取識別欄位的組合面板識別區段，其識別屬性顯示在右側面板中。](../images/tutorials/create-schema/identitiy-confirmation.png)
+
+如果結構、屬性和身分設定符合您的API設定，您已經透過[!DNL Schema Registry] API成功建立及設定結構描述。
+
 ## 後續步驟
 
 依照本教學課程，您已使用標準欄位群組和您定義的欄位群組成功撰寫結構。 您現在可以使用此結構描述來建立資料集，並將記錄資料擷取至Adobe Experience Platform。
@@ -1384,7 +1430,7 @@ curl -X GET \
 
 在本教學課程中，結構描述會用於描述零售忠誠度計畫的成員。
 
-結構描述實作[!DNL XDM Individual Profile]類別並結合多個欄位群組。 它會使用標準[!DNL Demographic Details]、[!UICONTROL 個人聯絡詳細資料]及[!UICONTROL 熟客詳細資料]欄位群組，以及透過教學課程中定義的自訂熟客層級欄位群組，擷取熟客方案會員的相關資訊。
+結構描述實作[!DNL XDM Individual Profile]類別並結合多個欄位群組。 它會使用標準[!DNL Demographic Details]、[!UICONTROL Personal Contact Details]和[!UICONTROL Loyalty Details]欄位群組，以及透過教學課程中定義的自訂「忠誠度等級」欄位群組，擷取忠誠度會員的相關資訊。
 
 以下顯示JSON格式中完成的熟客方案會員綱要：
 

@@ -2,10 +2,10 @@
 title: 開發擴充功能
 description: 本檔案提供標籤擴充功能開發程式的一般概覽，以及進一步說明檔案的連結，以取得更詳細的程式。
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 36870fa5359b5382cb9f1e9a5220ce8311f0c45c
+source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 28%
+source-wordcount: '436'
+ht-degree: 26%
 
 ---
 
@@ -42,11 +42,7 @@ ht-degree: 28%
 
 ## 範例擴充功能
 
-GitHub上有範例擴充功能，可供檢閱或作為起始專案：
-
-* [Hello World 範例擴充功能](https://github.com/adobe/reactor-helloworld-extension)
-* [Typekit 範例擴充功能](https://github.com/jeffchasin/extension-typekit)
-* [Pinterest 範例擴充功能](https://github.com/jeffchasin/extension-pinterest)
+您可以檢閱或使用GitHub的範例擴充功能，例如[Hello World範例擴充功能](https://github.com/adobe/reactor-helloworld-extension)，作為入門專案。
 
 ## Slack 工作區
 
