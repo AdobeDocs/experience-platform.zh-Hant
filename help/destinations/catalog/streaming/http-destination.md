@@ -4,9 +4,9 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的分析，或針對從Experience Platform匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 6d1b73c1557124f283558e1daeb3ddeaaec8e8a4
+source-git-commit: aacc3cbbc2bc8c02e50f375f78733a851138e1c7
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '2908'
 ht-degree: 6%
 
 ---
@@ -59,7 +59,7 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 * 您的HTTP端點必須支援Experience Platform設定檔結構描述。 HTTP API目的地不支援轉換至第三方裝載結構描述。 如需Experience Platform輸出結構描述的範例，請參閱[匯出的資料](#exported-data)區段。
 * 您的HTTP端點必須支援標頭。
 * 您的HTTP端點必須在2秒內回應，以確保資料處理正確並避免逾時錯誤。
-* 如果您打算使用mTLS：您的資料接收端點必須停用TLS，而且只能啟用mTLS。 如果您也使用OAuth 2驗證，您必須維護個別的標準HTTPS端點以進行權杖擷取。 如需詳細資訊，請參閱[mTLS考量事項](#mtls-considerations)區段。
+* 如果您打算使用mTLS：您的資料接收端點必須停用TLS，而且只能啟用mTLS。 如果您的端點需要OAuth 2密碼或使用者端憑證驗證，則不支援mTLS。
 
 >[!TIP]
 >
@@ -75,17 +75,7 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 
 HTTP API目的地的mTLS支援只將&#x200B;**套用至傳送設定檔匯出的資料接收端點** （**[!UICONTROL HTTP Endpoint]**&#x200B;目的地詳細資料[中的](#destination-details)欄位）。
 
-OAuth 2驗證端點不支援&#x200B;**mTLS：**
-
-* OAuth 2使用者端憑證或OAuth 2密碼驗證中使用的&#x200B;**[!UICONTROL Access Token URL]**&#x200B;不支援mTLS
-* 權杖擷取和重新整理請求會透過標準HTTPS傳送，無需使用者端憑證驗證
-
-**必要的架構：**&#x200B;如果您需要資料接收端點的mTLS並使用OAuth 2驗證，您必須維護兩個個別的端點：
-
-* **驗證端點：**&#x200B;用於權杖管理的標準HTTPS （不含mTLS）
-* **資料接收端點：**&#x200B;已啟用mTLS-only以用於設定檔匯出的HTTPS
-
-此架構是目前的平台限制。 正在評估未來版本對驗證端點上的mTLS支援。
+如果您的端點需要OAuth 2密碼或使用者端認證驗證，則mTLS **不受支援**。
 
 ### 設定mTLS以匯出資料 {#configuring-mtls}
 
@@ -167,9 +157,9 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!NOTE]
 >
->**mTLS限制：** [!UICONTROL Access Token URL]不支援mTLS。 如果您打算使用mTLS作為資料接收端點，則您的驗證端點必須使用標準HTTPS。 如需必要架構的詳細資訊，請參閱[mTLS考量事項](#mtls-considerations)一節。
+>**mTLS限制：** mTLS不支援使用OAuth 2密碼驗證。 如需詳細資訊，請參閱[mTLS考量事項](#mtls-considerations)區段。
 
-* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。 此端點必須使用標準HTTPS且不支援mTLS。
+* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。
 * **[!UICONTROL Client ID]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
 * **[!UICONTROL Client Secret]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
 * **[!UICONTROL Username]**：存取您HTTP端點的使用者名稱。
@@ -187,9 +177,9 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!NOTE]
 >
->**mTLS限制：** [!UICONTROL Access Token URL]不支援mTLS。 如果您打算使用mTLS作為資料接收端點，則您的驗證端點必須使用標準HTTPS。 如需必要架構的詳細資訊，請參閱[mTLS考量事項](#mtls-considerations)一節。
+>**mTLS限制：** mTLS不支援使用OAuth 2使用者端認證驗證。 如需詳細資訊，請參閱[mTLS考量事項](#mtls-considerations)區段。
 
-* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。 此端點必須使用標準HTTPS且不支援mTLS。
+* **[!UICONTROL Access Token URL]**：您發行存取權杖以及選擇性地重新整理權杖的URL。
 * **[!UICONTROL Client ID]**：您的系統指派給Adobe Experience Platform的[!DNL client ID]。
 * **[!UICONTROL Client Secret]**：您的系統指派給Adobe Experience Platform的[!DNL client secret]。
 * **[!UICONTROL Client Credentials Type]**：選取端點支援的OAuth2使用者端認證授權型別：
@@ -206,7 +196,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="HTTP 端點"
->abstract="您要傳送設定檔資料的HTTP端點URL。 這是您的資料接收端點，並支援mTLS （若已設定）。 此與OAuth 2存取權杖URL不同，URL不支援mTLS。"
+>abstract="您要傳送設定檔資料的HTTP端點URL。 這是您的資料接收端點，並支援mTLS （若已設定） （不適用於OAuth 2密碼或使用者端憑證驗證）。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -230,7 +220,7 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL Name]**：輸入您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：輸入說明，協助您日後識別此目的地。
 * **[!UICONTROL Headers]**：依照以下格式，輸入任何您想要包含在目的地呼叫中的自訂標頭： `header1:value1,header2:value2,...headerN:valueN`。
-* **[!UICONTROL HTTP Endpoint]**：您要將設定檔資料傳送至的HTTP端點URL。 這是您的資料接收端點。 如果使用mTLS，此端點必須停用TLS並且只啟用mTLS。 請注意，這與驗證期間設定的OAuth 2存取權杖URL不同。
+* **[!UICONTROL HTTP Endpoint]**：您要將設定檔資料傳送至的HTTP端點URL。 這是您的資料接收端點。 如果您使用mTLS，此端點必須停用TLS並且只啟用mTLS。
 * **[!UICONTROL Query parameters]**：您可以選擇將查詢引數新增至HTTP端點URL。 將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。
 * **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 **注意**：只有對應到目的地的區段才會包含區段名稱。 匯出中出現的未對應區段不包括`name`欄位。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 * **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
@@ -278,7 +268,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 例如，將此資料流視為HTTP目的地，其中在資料流中選取了三個對象，且四個屬性對應至目的地。
 
-![&#x200B; HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![ HTTP API目的地資料流範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 設定檔匯出至目的地的方式，可由符合或結束&#x200B;*三個對應區段*&#x200B;之一的設定檔來決定。 不過，在資料匯出中，`segmentMembership`物件（請參閱下方的[匯出的資料](#exported-data)區段）可能會顯示其他未對應的對象，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段的資格，但同時也是&#x200B;**觀看的「回到未來」**&#x200B;電影和&#x200B;**科幻迷**&#x200B;區段的成員，則其他這兩個對象也將出現在資料匯出的`segmentMembership`物件中，即使這些對象未對應到資料流中，前提是這些對象與&#x200B;**擁有DeLorean Cars的客戶**&#x200B;區段共用相同的合併原則。
 
