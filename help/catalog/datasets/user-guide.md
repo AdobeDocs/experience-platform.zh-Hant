@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 17825151f58548ab82d0ac44beacab06386f0a2d
 workflow-type: tm+mt
-source-wordcount: '4259'
+source-wordcount: '4295'
 ht-degree: 4%
 
 ---
@@ -58,6 +58,13 @@ ht-degree: 4%
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="協調的行銷活動"
 >abstract="啟用此切換即可允許在Adobe Journey Optimizer Orchestrated行銷活動中使用選取的資料集。 資料集必須使用關聯式結構描述，而且每個結構描述只能建立一個資料集。"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="為協調的行銷活動啟用資料集"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_enableforlookup_toggle"
+>title="啟用供查詢使用"
+>abstract="啟用此資料集以進行查詢，以將其在Journey Optimizer中的資料用於個人化、決策和歷程協調。"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="在Journey Optimizer中使用Adobe Experience Platform資料"
 
 在[!DNL Experience Platform] UI中，選取左側導覽中的&#x200B;**[!UICONTROL Datasets]**&#x200B;以開啟&#x200B;**[!UICONTROL Datasets]**&#x200B;儀表板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資料，包括其名稱、資料集所遵守的結構描述，以及最近一次擷取執行的狀態。
 
@@ -65,7 +72,7 @@ ht-degree: 4%
 
 從[!UICONTROL Browse]索引標籤中選取資料集名稱，以存取其&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面並檢視您所選資料集的詳細資料。 活動索引標籤包含將所使用訊息的比率視覺化的圖形，以及成功和失敗批次的清單。
 
-![Metrics and visualizations of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
+![您所選取資料集的量度和視覺效果會強調顯示。](../images/datasets/user-guide/dataset-activity-1.png)
 ![與您選取的資料集相關的範例批次會反白顯示。](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## 更多動作 {#more-actions}
@@ -74,13 +81,13 @@ ht-degree: 4%
 
 ![反白顯示[!UICONTROL ... More]下拉式功能表的資料集工作區。](../images/datasets/user-guide/more-actions.png)
 
-If you select **[!UICONTROL Enable a dataset for Profile]**, a confirmation dialog appears. 選取&#x200B;**[!UICONTROL Enable]**&#x200B;以確認您的選擇。
+如果您選取&#x200B;**[!UICONTROL Enable a dataset for Profile]**，則會顯示確認對話方塊。 選取&#x200B;**[!UICONTROL Enable]**&#x200B;以確認您的選擇。
 
 >[!NOTE]
 >
->To enable a dataset for Profile, the schema that the dataset adheres to must be compatible for use in Real-Time Customer Profile. See the [Enable a dataset for profile](#enable-profile) section for more information.
+>若要為設定檔啟用資料集，資料集堅持的結構必須相容以用於Real-Time Customer Profile。 如需詳細資訊，請參閱[為設定檔](#enable-profile)啟用資料集。
 
-![The Enable dataset confirmation dialog.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+![啟用資料集確認對話方塊。](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
 
 如果您選取&#x200B;**[!UICONTROL Delete]**，則會顯示[!UICONTROL Delete dataset]確認對話方塊。 選取&#x200B;**[!UICONTROL Delete]**&#x200B;以確認您的選擇。
 
@@ -180,7 +187,7 @@ If you select **[!UICONTROL Enable a dataset for Profile]**, a confirmation dial
 
 ![資料集工作區的[瀏覽]索引標籤中會反白顯示省略符號和[啟用統一設定檔]。](../images/datasets/user-guide/enable-for-profile.png)
 
-Alternatively, from the dataset&#39;s **[!UICONTROL Dataset activity]** screen, select the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. 啟用後，會使用擷取到資料集中的資料來填入客戶設定檔。
+或者，從資料集的&#x200B;**[!UICONTROL Dataset activity]**&#x200B;畫面，選取&#x200B;**[!UICONTROL Profile]**&#x200B;欄中的&#x200B;**[!UICONTROL Properties]**&#x200B;切換按鈕。 啟用後，會使用擷取到資料集中的資料來填入客戶設定檔。
 
 >[!NOTE]
 >
@@ -427,15 +434,15 @@ Alternatively, from the dataset&#39;s **[!UICONTROL Dataset activity]** screen, 
 
 ### 使用CSV檔案建立資料集 {#csv}
 
-When a dataset is created using a CSV file, an ad hoc schema is created to provide the dataset with a structure that matches the provided CSV file. In the **[!UICONTROL Create dataset]** screen, select **[!UICONTROL Create dataset from CSV file]**.
+使用CSV檔案建立資料集時，會建立臨時結構描述，為資料集提供符合所提供CSV檔案的結構。 在&#x200B;**[!UICONTROL Create dataset]**&#x200B;畫面中，選取&#x200B;**[!UICONTROL Create dataset from CSV file]**。
 
 ![「從CSV檔案建立資料集」按鈕會醒目提示。](../images/datasets/user-guide/create-dataset-csv.png)
 
-**[!UICONTROL Configure]**&#x200B;步驟隨即顯示。 Provide the dataset with a name and optional description, then select **[!UICONTROL Next]**.
+**[!UICONTROL Configure]**&#x200B;步驟隨即顯示。 提供名稱與選擇性說明的資料集，然後選取&#x200B;**[!UICONTROL Next]**。
 
-![Configuration details of the dataset are inserted. This includes details such as the dataset name and description.](../images/datasets/user-guide/configure-dataset-csv.png)
+![已插入資料集的組態詳細資料。 這包括資料集名稱和說明等詳細資料。](../images/datasets/user-guide/configure-dataset-csv.png)
 
-**[!UICONTROL Add data]**&#x200B;步驟隨即顯示。 將CSV檔案拖放到熒幕中央上傳，或選取&#x200B;**[!UICONTROL Browse]**&#x200B;瀏覽您的檔案目錄。 The file can be up to ten gigabytes in size. 上傳CSV檔案後，請選取「**[!UICONTROL Save]**」以建立資料集。
+**[!UICONTROL Add data]**&#x200B;步驟隨即顯示。 將CSV檔案拖放到熒幕中央上傳，或選取&#x200B;**[!UICONTROL Browse]**&#x200B;瀏覽您的檔案目錄。 檔案大小最多可達10GB。 上傳CSV檔案後，請選取「**[!UICONTROL Save]**」以建立資料集。
 
 >[!NOTE]
 >
