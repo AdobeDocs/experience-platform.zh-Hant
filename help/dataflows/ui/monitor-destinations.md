@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: a4db84f5918e99b3c6dd63ff5a25063b89be2ba7
+source-git-commit: d537284b804214fa8a37febab5f78335a590e9f5
 workflow-type: tm+mt
-source-wordcount: '3484'
+source-wordcount: '3541'
 ht-degree: 10%
 
 ---
@@ -82,6 +82,10 @@ ht-degree: 10%
 - **[!UICONTROL Identities excluded]**：根據缺少屬性和同意違規而略過啟動的個人資料身分總數。
 - **[!UICONTROL Identities failed]**：由於錯誤而未啟用到目的地的設定檔身分總數。
 
+>[!NOTE]
+>
+>啟用、排除和失敗的身分總計代表所有個別資料流執行計數的總和。 由於資料流執行的存留時間(TTL)為90天，因此這些總計通常會涵蓋大約過去3個月。 當較舊的資料流執行到期並從系統中移除時，您可能會看到顯示的總計數減少。
+
 ![串流目的地的資料流執行詳細資料。](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 每個個別資料流執行會顯示下列詳細資訊：
@@ -137,7 +141,7 @@ ht-degree: 10%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
