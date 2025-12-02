@@ -2,7 +2,7 @@
 title: 設定資料串流的機器人偵測
 description: 瞭解如何為資料串流設定機器人偵測，以區分人類和非人類流量。
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
+source-git-commit: 5f599b8572c4cebcdfb9ab85027211da4d8a020c
 workflow-type: tm+mt
 source-wordcount: '1374'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 來自自動化程式、網頁刮刀、編目程式和指令碼掃描器的非人為流量可能讓識別來自人為訪客的事件變得困難。 此類流量可能會對重要的商業量度產生負面影響，導致不正確的流量報表。
 
-機器人偵測可讓您將[網頁SDK](../web-sdk/home.md)、[行動SDK](https://developer.adobe.com/client-sdks/home/)和[[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/)產生的事件識別為已知編目程式和機器人所產生。
+機器人偵測可讓您將[網頁SDK](/help/collection/js/js-overview.md)、[行動SDK](https://developer.adobe.com/client-sdks/home/)和[[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/)產生的事件識別為已知編目程式和機器人所產生。
 
 透過為資料串流設定機器人偵測，您可以識別特定IP位址、IP範圍和請求標題，以分類為機器人事件。 這有助於針對使用者在您網站或行動應用程式上的活動提供更準確的測量。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 >
 >機器人偵測不會捨棄任何機器人請求。 它只會以機器人評分更新XDM結構描述，並將事件轉送至您設定的[資料流服務](configure.md)。
 >
->Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=zh-Hant)，而不使用Edge Network設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
+>Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)，而不使用Edge Network設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
 
 ## 技術考量 {#technical-considerations}
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 在「機器人偵測規則」頁面中，您可以使用下列功能來設定機器人偵測：
 
-* 使用[[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)。
+* 使用[!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)。
 * 建立您自己的機器人偵測規則。
 
 ### 使用IAB/ABC國際編目程式與機器人清單 {#iab-list}

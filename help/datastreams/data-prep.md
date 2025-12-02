@@ -2,10 +2,10 @@
 title: 資料收集的資料準備
 description: 了解設定 Adob​​e Experience Platform Web 和 Mobile SDK 的資料流時如何將資料對應到體驗資料模型 (XDM) 事件結構描述。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1203'
-ht-degree: 53%
+source-wordcount: '1166'
+ht-degree: 43%
 
 ---
 
@@ -30,9 +30,9 @@ ht-degree: 53%
 
 ## 透過WebSDK將現有的資料層傳送至Edge Network {#send-datalayer-via-websdk}
 
-必須使用`sendEvent`命令內的[`data`](/help/web-sdk/commands/sendevent/data.md)物件來傳送現有的資料層。
+必須使用[`data`](/help/collection/js/commands/sendevent/data.md)命令內的`sendEvent`物件來傳送現有的資料層。
 
-如果您使用標籤，則必須使用&#x200B;**[!UICONTROL 傳送事件]**&#x200B;動作型別的&#x200B;**[!UICONTROL 資料]**&#x200B;欄位，如[Web SDK標籤擴充功能檔案](/help/tags/extensions/client/web-sdk/action-types.md)所述。
+如果您使用標籤，則必須使用&#x200B;**[!UICONTROL Data]**&#x200B;動作型別的[**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md)欄位。
 
 本指南的其餘部分著重於在WebSDK傳送資料層後，如何將資料層對應至XDM標準。
 
@@ -50,13 +50,13 @@ ht-degree: 53%
 
 >[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL 選擇資料] {#select-data}
+## [!UICONTROL Select data] {#select-data}
 
-完成資料流的基本設定之後，請選取「**[!UICONTROL 儲存並新增對應]**」，「**[!UICONTROL 選取資料]**」步驟會隨即顯示。從這裡，您必須提供範例JSON物件，代表您計畫傳送至Experience Platform的資料結構。
+完成資料流的基本設定後選取&#x200B;**[!UICONTROL Save and Add Mapping]**，並顯示&#x200B;**[!UICONTROL Select data]**&#x200B;步驟。 從這裡，您必須提供範例JSON物件，代表您計畫傳送至Experience Platform的資料結構。
 
 若要直接從資料層擷取屬性，JSON 物件必須具有單一根屬性`data`。然後應該以對應至您要擷取的資料層屬性的方式建構`data`物件的子屬性。 請選取以下區段，即可檢視正確格式化並具有 `data` 根的 JSON 物件範例。
 
-+++具有 `data` 根的 JSON 檔案範例
++++具有`data`根的範例JSON檔案
 
 ```json
 {
@@ -121,7 +121,7 @@ ht-degree: 53%
 
 若要從 XDM 物件資料元素擷取屬性，相同的規則適用於 JSON 物件，但必須將根屬性鍵入為 `xdm`。請選取以下區段，即可檢視正確格式化並具有 `xdm` 根的 JSON 物件範例。
 
-+++具有 `xdm` 根的 JSON 檔案範例
++++具有`xdm`根的範例JSON檔案
 
 ```json
 {
@@ -152,7 +152,7 @@ ht-degree: 53%
 
 +++
 
-您可以選取將物件以檔案形式上傳的選項，或選擇將原始物件貼到所提供的文字方塊中。如果 JSON 有效，則會在右側面板中顯示預覽結構描述。選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
+您可以選取將物件以檔案形式上傳的選項，或選擇將原始物件貼到所提供的文字方塊中。如果 JSON 有效，則會在右側面板中顯示預覽結構描述。選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
 預期傳入資料的![JSON範例。](assets/data-prep/select-data.png)
 
@@ -160,9 +160,9 @@ ht-degree: 53%
 >
 > 使用範例JSON物件，代表任何頁面上可能使用的每個資料層元素。 例如，並非所有頁面都使用購物車資料層元素。 不過，此範例JSON物件中應包含購物車資料層元素。
 
-## [!UICONTROL 對應]
+## [!UICONTROL Mapping]
 
-**[!UICONTROL 對應]**&#x200B;步驟出現，可讓您將來源資料中的欄位對應到Experience Platform中的目標事件結構描述中的欄位。 在這裡，您可以使用兩種方式設定對應：
+**[!UICONTROL Mapping]**&#x200B;步驟隨即顯示，可讓您將來源資料中的欄位對應到Experience Platform中的目標事件結構描述欄位。 在這裡，您可以使用兩種方式設定對應：
 
 * [透過手動程式為此資料流建立對應規則](#create-mapping)。
 * 從現有資料流[匯入對應規則](#import-mapping)。
@@ -173,19 +173,19 @@ ht-degree: 53%
 
 ### 建立對應規則 {#create-mapping}
 
-若要建立對應規則，請選取&#x200B;**[!UICONTROL 新增對應]**。
+若要建立對應規則，請選取&#x200B;**[!UICONTROL Add new mapping]**。
 
 ![正在新增對應。](assets/data-prep/add-new-mapping.png)
 
-選取來源圖示 (![來源圖示](/help/images/icons/source.png))，然後在顯示的對話框中選取要在所提供的畫布中對應的來源欄位。選擇欄位後，請使用「**[!UICONTROL 選取]**」按鈕以繼續進行。
+選取來源圖示 (![來源圖示](/help/images/icons/source.png))，然後在顯示的對話框中選取要在所提供的畫布中對應的來源欄位。選擇欄位後，請使用&#x200B;**[!UICONTROL Select]**&#x200B;按鈕繼續。
 
 ![正在來源結構描述中選取要對應的欄位。](assets/data-prep/source-mapping.png)
 
-接下來，選取結構描述圖示 (![結構描述圖示](/help/images/icons/schema.png))，開啟目標事件結構描述的類似對話框。選擇要將資料對應到的欄位，然後再確認「**[!UICONTROL 選取]**」。
+接下來，選取結構描述圖示 (![結構描述圖示](/help/images/icons/schema.png))，開啟目標事件結構描述的類似對話框。在向&#x200B;**[!UICONTROL Select]**&#x200B;確認之前，選擇您要對應資料的欄位。
 
 ![選取要在目標結構描述中對應的欄位。](assets/data-prep/target-mapping.png)
 
-對應頁面會隨即重新顯示，並顯示已完成的欄位對應。**[!UICONTROL 對應流程]**&#x200B;區段會更新，以反映已成功對應的欄位總數。
+對應頁面會隨即重新顯示，並顯示已完成的欄位對應。**[!UICONTROL Mapping progress]**&#x200B;區段會更新，以反映已成功對應的欄位總數。
 
 ![欄位已成功對應，進度已反映。](assets/data-prep/field-mapped.png)
 
@@ -203,11 +203,11 @@ ht-degree: 53%
 >
 >從其他資料流匯入對應規則時，會覆寫您在匯入前可能已新增的任何欄位對應。
 
-若要開始，請選取&#x200B;**[!UICONTROL 匯入對應]**。
+若要開始，請選取&#x200B;**[!UICONTROL Import Mapping]**。
 
 正在選取![匯入對應按鈕。](assets/data-prep/import-mapping-button.png)
 
-在顯示的對話框中，選取要匯入其對應規則的資料流。選擇資料流後，請選取&#x200B;**[!UICONTROL 預覽]**。
+在顯示的對話框中，選取要匯入其對應規則的資料流。選擇資料流後，請選取&#x200B;**[!UICONTROL Preview]**。
 
 ![正在選取現有的資料流。](assets/data-prep/select-mapping-rules.png)
 
@@ -215,19 +215,19 @@ ht-degree: 53%
 >
 >資料流只能在相同的[沙箱](../sandboxes/home.md)內匯入。換句話說，您無法將資料流從一個沙箱匯入到另一個沙箱。
 
-下一個畫面會顯示選取的資料流已儲存之對應規則的預覽。請確保顯示的對應符合您的預期，然後選取&#x200B;**[!UICONTROL 匯入]**，以確認對應並將其新增到新資料流。
+下一個畫面會顯示選取的資料流已儲存之對應規則的預覽。確定顯示的對應符合您的預期，然後選取&#x200B;**[!UICONTROL Import]**&#x200B;以確認並將對應新增至新資料流。
 
 ![要匯入的對應規則。](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
->如果匯入的對應規則中的任何來源欄位未包含在您[之前提供的 &#x200B;](#select-data)JSON 資料範例中，則這些欄位對應並不會包含在匯入中。
+>如果匯入的對應規則中的任何來源欄位未包含在您[之前提供的 ](#select-data)JSON 資料範例中，則這些欄位對應並不會包含在匯入中。
 
 ### 完成對應
 
-繼續依照上述步驟將其餘的欄位對應到目標結構描述。雖然您不必對應所有可用的來源欄位，但目標結構描述中設定為必要的任何欄位都必須對應，才能完成此步驟。 **[!UICONTROL 必要欄位]**&#x200B;計數器會顯示目前的設定中有多少個必要欄位尚未對應。
+繼續依照上述步驟將其餘的欄位對應到目標結構描述。雖然您不必對應所有可用的來源欄位，但目標結構描述中設定為必要的任何欄位都必須對應，才能完成此步驟。 **[!UICONTROL Required fields]**&#x200B;計數器指出目前組態中尚未對應多少必要欄位。
 
-當必要的欄位數達到零且您對對應感到滿意後，請選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以完成變更。
+當必要欄位計數達到零且您對對應感到滿意後，請選取&#x200B;**[!UICONTROL Save]**&#x200B;以完成變更。
 
 ![對應完成](assets/data-prep/mapping-complete.png)
 

@@ -6,9 +6,9 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
+source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '834'
 ht-degree: 36%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 36%
 * 用戶端資訊 {#client-side}
    * [概觀](./ui/client-side/overview.md)
    * [非同步部署](./ui/client-side/asynchronous-deployment.md)
-   * [Satellite物件參考](./ui/client-side/satellite-object.md)
    * [部署JavaScript標籤以管理客戶同意](./ui/client-side/consent.md)
    * [內容安全性原則(CSP)支援](./ui/client-side/content-security-policy.md)
    * [子資源完整性(SRI)支援](./ui/client-side/sri.md)
@@ -99,21 +98,46 @@ ht-degree: 36%
       * Adobe Experience Cloud ID服務 {#id-service}
          * [概觀](./extensions/client/id-service/overview.md)
          * [發行說明](./extensions/client/id-service/release-notes.md)
-      * Adobe Experience Platform示範 {#platform-demo}
-         * [概觀](./extensions/client/platform-demo/overview.md)
-      * Adobe Experience Platform Web SDK {#web-sdk}
-         * [概觀](./extensions/client/web-sdk/overview.md)
-         * [設定網頁SDK標籤擴充功能](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
-         * [事件類型](./extensions/client/web-sdk/event-types.md)
-         * [動作類型](./extensions/client/web-sdk/action-types.md)
-         * [資料元素類型](./extensions/client/web-sdk/data-element-types.md)
-         * [存取ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
-         * [Web SDK外掛程式](./extensions/client/web-sdk/web-sdk-plugins.md)
-         * [Web SDK擴充功能發行說明](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [Web SDK外掛程式發行說明](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [概觀](./extensions/client/asset-insights/overview.md)
          * [發行說明](./extensions/client/asset-insights/release-notes.md)
+      * Adobe Experience Platform示範 {#platform-demo}
+         * [概觀](./extensions/client/platform-demo/overview.md)
+      * Adobe Experience Platform Web SDK {#web-sdk}
+         * [概觀](extensions/client/web-sdk/overview.md)
+         * [快速入門](extensions/client/web-sdk/getting-started.md)
+         * 設定 {#configure}
+            * [概觀](extensions/client/web-sdk/configure/config-overview.md)
+            * [自訂建置元件](extensions/client/web-sdk/configure/custom-build-components.md)
+            * [SDK執行個體](extensions/client/web-sdk/configure/general.md)
+            * [資料流](extensions/client/web-sdk/configure/datastreams.md)
+            * [同意](extensions/client/web-sdk/configure/consent.md)
+            * [身分識別](extensions/client/web-sdk/configure/identity.md)
+            * [個人化](extensions/client/web-sdk/configure/personalization.md)
+            * [資料彙集](extensions/client/web-sdk/configure/data-collection.md)
+            * [串流媒體](extensions/client/web-sdk/configure/streaming-media.md)
+            * [推播通知](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Advertising](extensions/client/web-sdk/configure/advertising.md)
+            * [設定覆寫](extensions/client/web-sdk/configure/configuration-overrides.md)
+            * [進階設定](extensions/client/web-sdk/configure/advanced-settings.md)
+         * [事件類型](extensions/client/web-sdk/event-types.md)
+         * 動作類型 {#actions}
+            * [概觀](extensions/client/web-sdk/actions/actions-overview.md)
+            * [套用主張](extensions/client/web-sdk/actions/apply-propositions.md)
+            * [套用回應](extensions/client/web-sdk/actions/apply-response.md)
+            * [評估規則集](extensions/client/web-sdk/actions/evaluate-rulesets.md)
+            * [取得Media Analytics追蹤器](extensions/client/web-sdk/actions/get-media-analytics-tracker.md)
+            * [使用身分重新導向](extensions/client/web-sdk/actions/redirect-with-identity.md)
+            * [重設事件合併ID](extensions/client/web-sdk/actions/reset-event-merge-id.md)
+            * [傳送事件](extensions/client/web-sdk/actions/send-event.md)
+            * [傳送媒體事件](extensions/client/web-sdk/actions/send-media-event.md)
+            * [傳送推播訂閱](extensions/client/web-sdk/actions/send-push-subscription.md)
+            * [設定同意](extensions/client/web-sdk/actions/set-consent.md)
+            * [更新變數](extensions/client/web-sdk/actions/update-variable.md)
+         * [資料元素類型](extensions/client/web-sdk/data-element-types.md)
+         * [存取ECID](extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Web SDK擴充功能發行說明](extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+      * [Adobe Experience Platform Web SDK外掛程式](extensions/client/web-sdk-plugins/web-sdk-plugins.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [概觀](./extensions/client/media-analytics/overview.md)
@@ -205,7 +229,7 @@ ht-degree: 36%
       * [!DNL Snap Pixel] {#snap-pixel}
          * [概觀](./extensions/client/snap-pixel/overview.md)
       * [儲存扳手](https://exchange.adobe.com/apps/ec/102990)
-      * [依回圈水平線的標籤](https://exchange.adobe.com/apps/ec/106092)
+      * 依回圈水平線的[標籤](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium集合](https://exchange.adobe.com/apps/ec/104217)
       * [Tealium資料擴充](https://exchange.adobe.com/apps/ec/104217)
       * [TMMData Foundation平台](https://exchange.adobe.com/apps/ec/100148)
@@ -234,7 +258,7 @@ ht-degree: 36%
          * [概觀](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [概觀](./extensions/server/braze/overview.md)
-      * [適用於Google Analytics的雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
+      * 適用於Google Analytics的[雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
       * 核心 {#core}
          * [概觀](./extensions/server/core/overview.md)
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)

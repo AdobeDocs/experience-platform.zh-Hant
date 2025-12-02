@@ -3,10 +3,10 @@ title: 對目的地啟用潛在客戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用潛在客戶對象
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 16%
+source-wordcount: '595'
+ht-degree: 18%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 16%
 
 >[!AVAILABILITY]
 >
->已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 如需詳細資訊，請聯絡您的Adobe代表。
+>已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 請聯絡您的 Adobe 代表以取得更多資訊。
 
 本文說明從Adobe Experience Platform將[潛在客戶對象](/help/segmentation/types/prospect-audiences.md)匯出至您偏好的目的地所需的工作流程。
 
 ## 支援的目的地 {#supported-destinations}
 
-移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 使用&#x200B;**[!UICONTROL 資料型別]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL 潛在客戶]**，檢視支援啟動潛在客戶對象的目的地。 目前，匯出潛在客戶對象僅適用於雲端儲存目的地。
+前往「**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**」，然後選取「**[!UICONTROL Catalog]**」標籤。 使用&#x200B;**[!UICONTROL Data types]**&#x200B;篩選並選取&#x200B;**[!UICONTROL Prospects]**&#x200B;以檢視支援啟用潛在客戶對象的目的地。 目前，匯出潛在客戶對象僅適用於雲端儲存目的地。
 
 ![支援潛在客戶對象的目的地。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -31,19 +31,19 @@ ht-degree: 16%
 
 ### 必要權限 {#permissions}
 
-若要啟用潛在客戶對象，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 啟用目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+若要啟用潛在客戶對象，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Activate Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-為確保您擁有啟動潛在客戶對象的必要許可權，請瀏覽目的地目錄。 如果目的地有&#x200B;**[!UICONTROL 啟用]**&#x200B;控制項，則表示您擁有適當的許可權。
+為確保您擁有啟動潛在客戶對象的必要許可權，請瀏覽目的地目錄。 如果目的地有&#x200B;**[!UICONTROL Activate]**&#x200B;控制項，則表示您擁有適當的許可權。
 
 ## 選取您的目的地 {#select-destination}
 
 依照指示選取可匯出資料集的目的地：
 
-1. 移至&#x200B;**[!UICONTROL 連線>目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。
+1. 移至&#x200B;**[!UICONTROL Connections > Destinations]**，然後選取&#x200B;**[!UICONTROL Catalog]**&#x200B;標籤。
 
    ![目錄控制項反白顯示的目的地目錄標籤。](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. 在對應您要匯出資料集之目的地的卡片上，選取&#x200B;**[!UICONTROL 啟動]**。
+2. 在對應您要匯出資料集之目的地的卡片上選取&#x200B;**[!UICONTROL Activate]**。
 
 >[!TIP]
 >
@@ -51,11 +51,11 @@ ht-degree: 16%
 
 ![可匯出醒目提示之設定檔對象的Amazon S3目的地頁面。](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
-1. 選取&#x200B;**[!UICONTROL 資料型別[潛在客戶]]**，接著選取您要匯出資料集的目的地連線，然後選取[下一步]&#x200B;**。**
+1. 選取&#x200B;**[!UICONTROL Data type Prospects]**，接著選取您要匯出資料集的目的地連線，然後選取&#x200B;**[!UICONTROL Next]**。
 
 >[!TIP]
 > 
->如果您想要設定新目的地以啟用潛在客戶對象，請選取[設定新目的地] &rbrack;**以觸發[連線到目的地] &lbrack;工作流程。**(/help/destinations/ui/connect-destination.md)
+>如果您想要設定新的目的地以啟用潛在客戶對象，請選取&#x200B;**[!UICONTROL Configure new destination]**&#x200B;以觸發[連線到目的地](/help/destinations/ui/connect-destination.md)工作流程。
 
 ![目標啟用工作流程中反白顯示潛在客戶控制項。](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
@@ -63,7 +63,7 @@ ht-degree: 16%
 
 ## 選取您的潛在客戶對象 {#select-prospect-audiences}
 
-使用潛在客戶對象名稱左邊的核取方塊來選取您要匯出至目的地的對象，然後選取&#x200B;**[!UICONTROL 下一步]**。 請注意，此檢視只會顯示潛在客戶對象，不會顯示其他對象。
+使用潛在客戶對象名稱左邊的核取方塊來選取您要匯出至目的地的對象，然後選取&#x200B;**[!UICONTROL Next]**。 請注意，此檢視只會顯示潛在客戶對象，不會顯示其他對象。
 
 ![資料集匯出工作流程顯示「選取對象」步驟，您可以在此選取要匯出的潛在客戶對象。](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
@@ -85,6 +85,6 @@ Note that we will need to add links to other destination types here as more dest
 
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
-* [使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的客群最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶輪廓來[擴大您的輪廓庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
+* [使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的洞察，並使客群最佳化表現更好。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* 使用 Real-Time CDP 的第三方資料支援，透過資料合作夥伴的潛在客戶輪廓來[擴大您的輪廓庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
 * [利用合作夥伴輔助識別，不需要使用者驗證或之前使用您的品牌的紀錄，即可在造訪期間提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)。

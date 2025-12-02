@@ -3,14 +3,14 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；資料準
 title: 使用「資料準備」將部分列更新傳送到「即時客戶個人檔案」
 description: 瞭解如何使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---
 
-# 使用[!DNL Data Prep]傳送部分資料列更新至[!DNL Real-Time Customer Profile]
+# 使用[!DNL Real-Time Customer Profile]傳送部分資料列更新至[!DNL Data Prep]
 
 >[!IMPORTANT]
 >
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 * 身分資料集必須具有關聯的結構描述做為[!DNL Profile]資料集。 結構描述不相符可能會導致不一致的系統行為。
 * 不過，您必須確保身分資料集與[!DNL Profile]資料集不同。 如果資料集相同，則會覆寫資料而非更新資料。
-* 雖然必須為[!DNL Profile]啟用初始資料集，但身分資料集&#x200B;**不應為[!DNL Profile]啟用**。 否則，也會覆寫資料，而非更新資料。 但是，應該為[!DNL Identity Service]啟用身分資料集&#x200B;**&#x200B;**。
+* 雖然必須為[!DNL Profile]啟用初始資料集，但身分資料集&#x200B;**不應為**&#x200B;啟用[!DNL Profile]。 否則，也會覆寫資料，而非更新資料。 但是，應該為&#x200B;**啟用身分資料集**[!DNL Identity Service]。
 
 #### 與身分資料集相關聯之結構描述中的必填欄位 {#identity-dataset-required-fileds}
 
@@ -220,7 +220,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ### 透過XDM結構描述中的身分對應欄位群組，將其中一個身分欄位指定為主要身分
 
-在此範例中，標頭包含具有`identity`和`identityDatasetId`屬性的`operations`屬性。 這允許資料與[!DNL Real-Time Customer Profile]合併，也允許將身分傳遞給[!DNL Identity Service]。
+在此範例中，標頭包含具有`operations`和`identity`屬性的`identityDatasetId`屬性。 這允許資料與[!DNL Real-Time Customer Profile]合併，也允許將身分傳遞給[!DNL Identity Service]。
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -271,7 +271,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 * 只有在傳送部分資料列更新至[!DNL Real-Time Customer Profile]時，才應該使用串流更新插入方法。 部分資料列更新&#x200B;**不是**&#x200B;由資料湖使用。
 * 串流更新插入方法不支援更新、取代和移除身分。 如果新身分不存在，則會建立新身分。 因此，`identity`作業必須一律設定為建立。 如果身分已經存在，則操作是無操作。
-* 串流更新插入方法目前不支援[Adobe Experience Platform Web SDK](/help/web-sdk/home.md)和[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)。
+* 串流更新插入方法目前不支援[Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)或[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)。
 
 ## 後續步驟
 

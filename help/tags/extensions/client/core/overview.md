@@ -2,9 +2,9 @@
 title: 核心擴充功能概觀
 description: 瞭解Adobe Experience Platform中的核心標籤擴充功能。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '5447'
+source-wordcount: '5425'
 ht-degree: 61%
 
 ---
@@ -178,8 +178,8 @@ ht-degree: 61%
 
 #### 特定元素 \| 任何元素
 
-* 如果選擇&#x200B;**[!UICONTROL 特定元素]**，則會顯示選取元素和屬性值的選項。
-* 如果選擇&#x200B;**[!UICONTROL 任何元素]**，則不需要其他選項來縮小元素。
+* 如果選擇「**[!UICONTROL Specific Elements]**」，則會顯示選取元素和屬性值的選項。
+* 如果選擇「**[!UICONTROL Any Element]**」，則不需要進階選項來縮小元素。
 
 #### 符合 CSS 選擇器的元素
 
@@ -231,9 +231,9 @@ ht-degree: 61%
 
 使用內建程式碼編輯器輸入自訂程式碼：
 
-1. 選取&#x200B;**[!UICONTROL 開啟編輯器]**。
+1. 選擇「**[!UICONTROL Open Editor]**」。
 1. 輸入自訂程式碼。
-1. 選取「**[!UICONTROL 儲存]**」。
+1. 選擇「**[!UICONTROL Save]**」。
 
 名為 `event` 的變數會自動開放使用，以便您在自訂程式碼中參照。`event` 物件將包含觸發規則之事件的實用資訊。要判斷哪些資料事件可供使用，最簡單的方式是將自訂程式碼中的 `event` 登錄到控制台:
 
@@ -557,8 +557,8 @@ return new Promise(function(resolve, reject) {
    * JavaScript
    * HTML
 1. 選取是否要全域執行動作程式碼。
-1. 選取&#x200B;**[!UICONTROL 開啟編輯器]**。
-1. 編輯程式碼，然後選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選擇「**[!UICONTROL Open Editor]**」。
+1. 編輯程式碼，然後選取「**[!UICONTROL Save]**」。
 
 當您選取 JavaScript 作為程式語言時，名為 `event` 的變數會自動開放使用，以便您在自訂程式碼中參照。`event` 物件將包含觸發規則之事件的實用資訊。要判斷哪些資料事件可供使用，最簡單的方式是將自訂程式碼中的 `event` 登錄到控制台:
 
@@ -636,7 +636,7 @@ setTimeout(function() {
 
 ![資料收集UI中觸發直接呼叫動作的熒幕擷圖](../../../images/extensions/client/core/direct-call-action.png)
 
-動作直接對應到`satellite`物件中的[`track`方法](../../../ui/client-side/satellite-object.md#track)，使用者端程式碼可以存取該方法。
+此動作直接對應至[`_satellite.track()`](/help/collection/tags/track.md)。
 
 ## 核心擴充功能資料元素類型
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent類別
 description: 瞭解XDM ExperienceEvent類別和事件資料模型化的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
+source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
 workflow-type: tm+mt
-source-wordcount: '2783'
+source-wordcount: '2728'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 | 屬性 | 說明 |
 | --- | --- |
 | `_id`<br>**（必要）** | 體驗事件類別`_id`欄位可唯一識別擷取至Adobe Experience Platform的個別事件。 此欄位用於追蹤個別事件的唯一性、防止資料重複，以及在下游服務中查詢該事件。<br><br>在偵測到重複事件的地方，Experience Platform應用程式和服務可能會以不同的方式處理重複。 例如，如果設定檔存放區中已存在具有相同`_id`的事件，則會捨棄設定檔服務中的重複事件。 不過，這些事件仍會記錄在資料湖中。<br><br>在某些情況下，`_id`可以是[通用唯一識別碼(UUID)](https://datatracker.ietf.org/doc/html/rfc4122)或[全域唯一識別碼(GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果您要從來源連線串流資料，或直接從Parquet檔案擷取資料，您應該串連特定欄位組合，讓事件具有唯一性，以產生此值。 可串連的事件範例包括主要ID、時間戳記、事件型別等。 串連值必須是`uri-reference`格式字串，這表示必須移除任何冒號字元。 之後，應該使用SHA-256或您選擇的其他演演算法來雜湊串連值。<br><br>請務必注意，**此欄位不代表與個人相關的身分**，而是資料本身的記錄。 與個人相關的身分資料應委派給相容欄位群組所提供的[身分欄位](../schema/composition.md#identity)。 |
-| `eventMergeId` | 如果使用[Adobe Experience Platform Web SDK](/help/web-sdk/home.md)來擷取資料，這表示所擷取批次中造成建立記錄的ID。 此欄位在資料擷取時由系統自動填入。 不支援在網頁SDK實作的內容之外使用此欄位。 |
+| `eventMergeId` | 如果使用[Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)來擷取資料，這表示所擷取批次中造成建立記錄的ID。 此欄位在資料擷取時由系統自動填入。 不支援在網頁SDK實作的內容之外使用此欄位。 |
 | `eventType` | 指出事件型別或類別的字串。 如果您想要將相同結構描述和資料集中的不同事件型別區分開來，例如將產品檢視事件與零售公司的加入購物車事件區分開來，則可以使用此欄位。<br><br>此屬性的標準值在[附錄區段](#eventType)中提供，包括預期使用案例的說明。 此欄位是可延伸的列舉，這表示您也可以使用自己的事件型別字串來分類您正在追蹤的事件。<br><br>`eventType`限制您在應用程式上每個點選只能使用單一事件，因此您必須使用計算欄位，讓系統知道哪個事件最重要。 如需詳細資訊，請參閱[計算欄位](#calculated)的最佳實務一節。 |
 | `producedBy` | 說明事件製作者或來源的字串值。 如有需要，此欄位可用於篩選掉某些事件產生者，以用於分段目的。<br><br>在[附錄區段](#producedBy)中提供了這個屬性的某些建議值。 此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生器。 |
 | `identityMap` | 對應欄位，其中包含套用事件之個人的一組名稱空間身分識別。 系統會在擷取身分資料時自動更新此欄位。 若要針對[即時客戶設定檔](../../profile/home.md)正確使用此欄位，請勿嘗試在您的資料作業中手動更新欄位內容。<br /><br />如需有關其使用案例的詳細資訊，請參閱[結構描述組合基本概念](../schema/composition.md#identityMap)中身分對應一節。 |
@@ -64,29 +64,29 @@ ht-degree: 0%
 
 Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配使用。 以下是類別的一些常用欄位群組清單：
 
-* [[!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent完整擴充功能]](../field-groups/event/advertising-full-extension.md)
-* [[!UICONTROL 餘額轉帳]](../field-groups/event/balance-transfers.md)
-* [[!UICONTROL 行銷活動行銷詳細資料]](../field-groups/event/campaign-marketing-details.md)
-* [[!UICONTROL 卡片動作]](../field-groups/event/card-actions.md)
-* [[!UICONTROL 管道詳細資料]](../field-groups/event/channel-details.md)
-* [[!UICONTROL Commerce詳細資料]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL 存款詳細資料]](../field-groups/event/deposit-details.md)
-* [[!UICONTROL 裝置折舊換新細節]](../field-groups/event/device-trade-in-details.md)
-* [[!UICONTROL 餐飲預訂]](../field-groups/event/dining-reservation.md)
-* [[!UICONTROL 一般使用者ID詳細資料]](../field-groups/event/enduserids.md)
-* [[!UICONTROL 環境詳細資料]](../field-groups/event/environment-details.md)
-* [[!UICONTROL 航班預訂]](../field-groups/event/flight-reservation.md)
-* [[!UICONTROL IAB TCF 2.0同意]](../field-groups/event/iab.md)
-* [[!UICONTROL 住宿預訂]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL MediaAnalytics互動詳細資料]](../field-groups/event/mediaanalytics-interaction.md)
-* [[!UICONTROL 報價請求詳細資料]](../field-groups/event/quote-request-details.md)
-* [[!UICONTROL 預訂詳細資料]](../field-groups/event/reservation-details.md)
-* [[!UICONTROL 網頁詳細資料]](../field-groups/event/web-details.md)
+* [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
+* [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
+* [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)
+* [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
+* [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Deposit Details]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL Device Trade-In Details]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL Dining Reservation]](../field-groups/event/dining-reservation.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
+* [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics Interaction Details]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
+* [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
 
 ## 附錄
 
-以下區段包含有關[!UICONTROL XDM ExperienceEvent]類別的其他資訊。
+下列區段包含有關[!UICONTROL XDM ExperienceEvent]類別的其他資訊。
 
 ### `eventType`的接受值 {#eventType}
 
@@ -126,7 +126,7 @@ Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配�
 | `decisioning.propositionFetch` | 用於表示事件主要是為了擷取決策。 Adobe Analytics會自動刪除此事件。 |
 | `decisioning.propositionInteract` | 此事件型別用於追蹤個人化內容上的互動，例如點按。 |
 | `decisioning.propositionSend` | 此事件會追蹤何時決定傳送建議或優惠給潛在客戶以供考慮。 |
-| `decisioning.propositionTrigger` | [Web SDK](../../web-sdk/home.md)會將此型別的事件儲存在本機儲存體中，但不會傳送至Experience Edge。 每次滿足規則集時，就會產生事件並儲存在本機儲存體中（如果已啟用該設定）。 |
+| `decisioning.propositionTrigger` | 此型別的事件會由Web SDK儲存在本機儲存空間中，但不會傳送至Edge Network。 每次滿足規則集時，就會產生事件並儲存在本機儲存體中（如果已啟用該設定）。 |
 | `delivery.feedback` | 此事件會追蹤傳送的意見反應事件，例如電子郵件傳送。 |
 | `directMarketing.emailBounced` | 此事件會追蹤傳送給個人的電子郵件何時退回。 |
 | `directMarketing.emailBouncedSoft` | 此事件會追蹤傳送給個人的電子郵件何時軟跳出。 |

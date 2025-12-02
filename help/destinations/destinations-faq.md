@@ -3,10 +3,10 @@ keywords: 目的地；問題；常見問題；faq；目的地常見問題
 title: 常見問題
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1673'
-ht-degree: 0%
+source-wordcount: '1670'
+ht-degree: 1%
 
 ---
 
@@ -104,7 +104,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 ### 我需要將任何應用程式或畫素新增到我的[!DNL Facebook]廣告商帳戶嗎？
 
 +++回答
-不適用。 由於這不是以畫素為基礎的整合，因此不需要將任何畫素新增至您的廣告商帳戶。
+不可以。 由於這不是以畫素為基礎的整合，因此不需要將任何畫素新增至您的廣告商帳戶。
 +++
 
 ### Facebook需要多久才能處理來自Adobe Experience Platform的資訊？
@@ -122,7 +122,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 ### [!DNL Facebook Custom Audiences]連線與[!DNL Facebook Pixel]延伸之間有何差異？
 
 +++回答
-傳送對象至[!DNL Facebook]時，[!DNL Facebook Custom Audiences]連線使用[!DNL Experience Platform]身分，而[[!DNL Facebook Pixel] 連線](../destinations/catalog/advertising/facebook-pixel.md)使用整合在網站中的[!DNL Facebook]畫素。
+傳送對象至[!DNL Facebook Custom Audiences]時，[!DNL Experience Platform]連線使用[!DNL Facebook]身分，而[[!DNL Facebook Pixel] 連線](../destinations/catalog/advertising/facebook-pixel.md)使用整合在網站中的[!DNL Facebook]畫素。
 
 這兩項整合相輔相成，您可以同時使用兩者來確保受眾涵蓋範圍更廣。 例如，您可以使用[!DNL Facebook Pixel]擴充功能來協助尚未建立帳戶的潛在網站訪客，而[!DNL Facebook Custom Audiences]則可協助您根據[!DNL Experience Platform]身分鎖定現有客戶。
 +++
@@ -150,7 +150,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 ### 我可以為個別的Facebook帳戶在Experience Platform UI中建立多個Facebook目的地嗎？
 
 +++回答
-是。 Experience Platform中的Facebook目的地與Facebook中的廣告帳戶的比率是1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 遵循[目的地連線教學課程](/help/destinations/ui/connect-destination.md)，並在Experience Platform UI中為每個新的Facebook目的地連線至個別的Facebook帳戶。 您可以連線的Facebook廣告帳戶數量沒有限制。
+可以。Experience Platform中的Facebook目的地是Facebook中廣告帳戶的1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 遵循[目的地連線教學課程](/help/destinations/ui/connect-destination.md)，並在Experience Platform UI中為每個新的Facebook目的地連線至個別的Facebook帳戶。 您可以連線的Facebook廣告帳戶數量沒有限制。
 +++
 
 ## Google 目標客戶比對 {#google-customer-match}
@@ -166,13 +166,13 @@ Google要求對象名稱必須是唯一的。 如果您將相同的對象對應�
 ### 我需要將任何應用程式或畫素新增到我的[!DNL LinkedIn]廣告商帳戶嗎？
 
 +++回答
-不適用。 由於這不是以畫素為基礎的整合，因此不需要將任何畫素新增至您的廣告商帳戶。
+不可以。 由於這不是以畫素為基礎的整合，因此不需要將任何畫素新增至您的廣告商帳戶。
 +++
 
 ### 在[!DNL LinkedIn Matched Audiences]中啟用對象前，我需要做什麼？
 
 +++回答
-使用[!UICONTROL LinkedIn相符對象]目的地之前，請先確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]或更高的許可權等級。
+使用[!UICONTROL LinkedIn Matched Audience]目的地之前，請先確定您的[!DNL LinkedIn Campaign Manager]帳戶具有[!DNL Creative Manager]或更高的許可權等級。
 
 若要瞭解如何編輯您的[!DNL LinkedIn Campaign Manager]使用者許可權，請參閱LinkedIn檔案中的[新增、編輯及移除Advertising帳戶的使用者許可權](https://www.linkedin.com/help/lms/answer/5753)。
 +++
@@ -197,11 +197,11 @@ Google要求對象名稱必須是唯一的。 如果您將相同的對象對應�
 ### 我是否需要使用Experience Platform Web SDK將對象和屬性傳送至Adobe Target？
 
 +++回答
-否，[不需要Web SDK](../web-sdk/home.md)才能為[Adobe Target](catalog/personalization/adobe-target-connection.md)啟用對象。
+否，不需要Web SDK才能為[Adobe Target](catalog/personalization/adobe-target-connection.md)啟用對象。
 
-不過，如果使用[[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=zh-Hant)來代替Web SDK，則僅支援下一次工作階段個人化。
+不過，如果使用[[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)來代替Web SDK，則僅支援下一次工作階段個人化。
 
-針對[相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md)使用案例，您必須使用[網頁SDK](../web-sdk/home.md)或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)。 如需更多實作詳細資訊，請參閱有關[將對象啟用至邊緣目的地](ui/activate-edge-personalization-destinations.md)的檔案。
+針對[相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md)使用案例，您必須使用Web SDK或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)。 如需更多實作詳細資訊，請參閱有關[將對象啟用至邊緣目的地](ui/activate-edge-personalization-destinations.md)的檔案。
 +++
 
 ### 我可以從Real-time Customer Data Platform傳送到Adobe Target或自訂Personalization目的地的屬性數量是否有限制？
@@ -223,13 +223,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### 在Experience Platform中建立受眾後，需要多久才能供邊緣細分使用案例使用？
 
 +++回答
-對象定義最多可在一小時內傳播至[Edge Network](../web-sdk/home.md)。 但是，如果對象在這第一個小時內啟動，可能會錯過一些符合對象資格的訪客。
+對象定義最多可在一小時內傳播至Edge Network。 但是，如果對象在這第一個小時內啟動，可能會錯過一些符合對象資格的訪客。
 +++
 
 ### 我可以在哪裡檢視Adobe Target中已啟用的屬性？
 
 +++回答
-在[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=zh-Hant)和[HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=zh-Hant)選件中，屬性將可在Target中使用。
+在[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)和[HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html)選件中，屬性將可在Target中使用。
 +++
 
 ### 我可以建立沒有資料串流的目的地，然後在稍後將資料串流新增到相同目的地嗎？
@@ -253,19 +253,19 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### 我只能有一個邊緣主動的合併原則。 我可以建立使用不同合併原則的受眾，並且仍將其當作串流受眾傳送給Adobe Target嗎？
 
 +++回答
-不適用。 您要啟用至Adobe Target的所有對象都必須使用active-on-edge [合併原則](../profile/merge-policies/ui-guide.md)。
+不可以。 您要啟用至Adobe Target的所有對象都必須使用active-on-edge [合併原則](../profile/merge-policies/ui-guide.md)。
 +++
 
 ### 資料使用標籤和實作(DULE)和同意原則是否已強制執行？
 
 +++回答
-是。 已建立並與所選行銷動作關聯的[資料控管和同意原則](../data-governance/home.md)將控管所選屬性的啟用。
+可以。已建立並與所選行銷動作關聯的[資料控管和同意原則](../data-governance/home.md)將控管所選屬性的啟用。
 +++
 
 ### [!DNL Adobe Target]和[!DNL Custom Personalization]目的地[!DNL HIPAA]是否相容？
 
 +++回答
-[!DNL Adobe Target]與[[!DNL Adobe Healthcare Shield]](https://business.adobe.com/tw/solutions/industries/healthcare.html)不符合[!DNL HIPPA]。 客戶透過[!DNL Adobe Target]或[!DNL Custom Personalization]目的地使用邊緣個人化之前，應先和自己的法律團隊確認[!DNL HIPPA]自訂最佳化通道的整備程度。
+[!DNL Adobe Target]與[!DNL HIPPA][[!DNL Adobe Healthcare Shield]不符合](https://business.adobe.com/solutions/industries/healthcare.html)。 客戶透過[!DNL HIPPA]或[!DNL Adobe Target]目的地使用邊緣個人化之前，應先和自己的法律團隊確認[!DNL Custom Personalization]自訂最佳化通道的整備程度。
 
 若是需要大規模套用同意原則管理的使用案例，客戶必須購買[!DNL Adobe Privacy & Security Shield]。 [!DNL Adobe Privacy & Security Shield]功能是以進階功能套件形式銷售，不得另行購買。
 

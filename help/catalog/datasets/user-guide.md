@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 17825151f58548ab82d0ac44beacab06386f0a2d
+source-git-commit: 9bfad453b74afce848ca3b00cd66a2336edf8479
 workflow-type: tm+mt
-source-wordcount: '4295'
+source-wordcount: '4294'
 ht-degree: 4%
 
 ---
@@ -58,13 +58,13 @@ ht-degree: 4%
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="協調的行銷活動"
 >abstract="啟用此切換即可允許在Adobe Journey Optimizer Orchestrated行銷活動中使用選取的資料集。 資料集必須使用關聯式結構描述，而且每個結構描述只能建立一個資料集。"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="為協調的行銷活動啟用資料集"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="為協調的行銷活動啟用資料集"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="啟用供查詢使用"
 >abstract="啟用此資料集以進行查詢，以將其在Journey Optimizer中的資料用於個人化、決策和歷程協調。"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/data-management/lookup-aep-data" text="在Journey Optimizer中使用Adobe Experience Platform資料"
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="在Journey Optimizer中使用Adobe Experience Platform資料"
 
 在[!DNL Experience Platform] UI中，選取左側導覽中的&#x200B;**[!UICONTROL Datasets]**&#x200B;以開啟&#x200B;**[!UICONTROL Datasets]**&#x200B;儀表板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資料，包括其名稱、資料集所遵守的結構描述，以及最近一次擷取執行的狀態。
 

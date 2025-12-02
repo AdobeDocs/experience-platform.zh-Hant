@@ -2,9 +2,9 @@
 title: Edge設定檔
 description: 瞭解邊緣設定檔、相關術語、邊緣設定檔的可用區域，以及邊緣設定檔的可用服務。
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Projection Worker Service (MEPW)會監視設定檔上集線器上發生的變更
 
 ## 後續步驟
 
-閱讀本指南後，您應該對邊緣設定檔有基本的瞭解，包括關於邊緣設定檔可用區域和服務的資訊。 如需AdobeExperience Edge的詳細資訊，請閱讀[Edge Network概觀](../web-sdk/home.md#edge-network)。
+閱讀本指南後，您應該對邊緣設定檔有基本的瞭解，包括關於邊緣設定檔可用區域和服務的資訊。 如需Adobe Experience Edge的詳細資訊，請參閱[資料彙集概觀](/help/collection/home.md)。
 
 ## 附錄
 

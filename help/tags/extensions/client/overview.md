@@ -2,10 +2,10 @@
 title: 標籤擴充功能參考
 description: 尋找Adobe Experience Platform中標籤擴充功能的檔案。
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 2%
+ht-degree: 12%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 以下是使用者端標籤擴充功能的檔案清單。 如需可用伺服器端擴充功能的清單，請改為參閱[事件轉送擴充功能參考](../server/overview.md)。
 
 >[!NOTE]
 >
->任何後面有星號(*)的擴充功能名稱，可連結至Adobe Exchange上的擴充功能清單，其中包含安裝和使用說明。 所有其他連結會指向Adobe Experience League上的擴充功能檔案。
+>任何擴充功能名稱，後面加上星號(*)，可連結至Adobe Exchange上的擴充功能清單，其中包含安裝和使用說明。 所有其他連結都指向Adobe Experience League上的擴充功能檔案。
 
 * [可存取的網站速度量度](https://exchange.adobe.com/apps/ec/103053)*
 * [Activity Map自訂者](https://exchange.adobe.com/apps/ec/101531)*
@@ -29,21 +29,21 @@ ht-degree: 2%
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics與Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics與Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
-* [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)*
+* [Adobe Analytics與Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics Product String](./product-string/overview.md)
 * [Adobe Analytics產品字串產生器](https://exchange.adobe.com/apps/ec/101461)*
-* 透過Adobe Experience Platform Web SDK [Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
+* 透過Adobe Experience Platform Web SDK[Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Adobe使用者端資料層](./client-data-layer/overview.md)
-* [AdobeContextHub](./contexthub/overview.md)
+* [Adobe ContextHub](./contexthub/overview.md)
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID服務](./id-service/overview.md)
 * [Adobe Experience Platform示範](./platform-demo/overview.md)
 * [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
-* [Adobe Medium Analytics for Audio and Video](./media-analytics/overview.md)
-* [Adobe Medium Analytics (3.x SDK)](./media-analytics-3x/overview.md)
+* [Adobe Media Analytics for Audio and Video](./media-analytics/overview.md)
+* [Adobe Media Analytics (3.x SDK)](./media-analytics-3x/overview.md)
 * [Adobe隱私權](./privacy/overview.md)
 * [Adobe報表套裝選擇器](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
@@ -65,7 +65,7 @@ ht-degree: 2%
 * [Cheetah體驗](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [常見Analytics外掛程式](./plugins/overview.md)
-* [常見Web SDK外掛程式](./web-sdk/web-sdk-plugins.md)
+* [常見Web SDK外掛程式](web-sdk-plugins/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Usercentrics CMP的Cookie同意管理v2](https://exchange.adobe.com/apps/ec/*107037)*

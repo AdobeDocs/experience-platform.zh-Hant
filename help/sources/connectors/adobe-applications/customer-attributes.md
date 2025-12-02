@@ -4,18 +4,18 @@ solution: Experience Platform
 title: 客戶屬性Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將客戶屬性連結至Adobe Experience Platform
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 7%
+source-wordcount: '382'
+ht-degree: 14%
 
 ---
 
 # 客戶屬性聯結器
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
-Experience Cloud中的[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=zh-Hant)可讓您上傳從客戶關係管理(CRM)資料庫擷取的企業資料。 您可以將資料上傳至 Experience Cloud 中的客戶屬性資料來源，然後將資料用於 Adobe Analytics 和 Adobe Target。
+Experience Cloud中的[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html)可讓您上傳從客戶關係管理(CRM)資料庫擷取的企業資料。 您可以將資料上傳至 Experience Cloud 中的客戶屬性資料來源，然後將資料用於 Adobe Analytics 和 Adobe Target。
 
 Experience Platform支援將[!DNL Customer Attributes]設定檔資料擷取至Adobe Experience Platform。
 
@@ -31,8 +31,8 @@ Experience Platform支援將[!DNL Customer Attributes]設定檔資料擷取至Ad
 
 若要將[!DNL Customer Attributes]資料與其他[!DNL Profile]資料集繫結，其資料和身分必須能夠與Experience Cloud ID相符。
 
-您可以使用[Web SDK](/help/web-sdk/identity/overview.md)、[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)或[Experience Cloud ID服務API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hant)為訪客設定Experience Cloud ID，以建立`CORE`名稱空間。
+您可以使用`CORE`Web SDK[、](/help/collection/use-cases/identity/id-overview.md)Mobile SDK[或](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)Experience Cloud ID服務API[為訪客設定Experience Cloud ID，以建立](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hant)名稱空間。
 
 [!DNL Customer Attributes]檔案未進一步填入任何其他身分關係。 例如，如果[!DNL Customer Attributes]來源資料集包含&#x200B;**電子郵件**&#x200B;和&#x200B;**忠誠度識別碼**&#x200B;欄位，則這些欄位必須在結構描述中標示為身分欄位，才能處理為[!DNL Identity Service]。
 
-如需詳細資訊，請參閱有關[在UI](../../tutorials/ui/create/adobe-applications/customer-attributes.md)中建立 [!DNL Customer Attributes] 來源連線的教學課程。
+如需詳細資訊，請參閱有關[在UI [!DNL Customer Attributes] 中建立](../../tutorials/ui/create/adobe-applications/customer-attributes.md)來源連線的教學課程。

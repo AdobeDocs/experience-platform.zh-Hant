@@ -4,9 +4,9 @@ description: 瞭解如何整合Adobe Experience Platform Web SDK，以便在Adob
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1293'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,8 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 本指南會遵循在UI中使用標籤擴充功能設定SDK的工作流程。 如果您不想使用擴充功能，且想要直接在網站上內嵌獨立版本的SDK，請參閱下列檔案，而非本指南：
 
 * [設定資料流](/help/datastreams/overview.md)
-* [安裝SDK](/help/web-sdk/install/overview.md)
-* [設定SDK的同意命令](/help/web-sdk/commands/configure/defaultconsent.md)
+* [安裝SDK](/help/collection/js/install/overview.md)
+* [設定SDK的同意命令](/help/collection/js/commands/configure/defaultconsent.md)
 
 本指南中的安裝步驟需要您實際瞭解標籤擴充功能及其在Web應用程式中的安裝方式。 如需詳細資訊，請參閱下列檔案：
 
@@ -38,31 +38,31 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 ## 設定資料串流
 
-為了讓SDK將資料傳送至Experience Platform，您必須先設定資料流。 在資料收集UI或Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 資料串流]**。
+為了讓SDK將資料傳送至Experience Platform，您必須先設定資料流。 在資料收集UI或Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL Datastreams]**。
 
-建立新資料流或選取要編輯的現有資料流後，請選取&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;旁的切換按鈕。 接下來，使用下列值完成表單。
+建立新資料流或選取要編輯的現有資料流後，選取&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;旁的切換按鈕。 接下來，使用下列值完成表單。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| 資料流欄位 | 值 |
+| 資料流欄位 | 價值 |
 | --- | --- |
-| [!UICONTROL 沙箱] | Experience Platform [沙箱](../../../sandboxes/home.md)的名稱，其中包含設定資料串流所需的串流連線和資料集。 |
-| [!UICONTROL 事件資料集] | 您打算使用SDK將事件資料傳送至的[!DNL XDM ExperienceEvent]資料集。 雖然您需要提供事件資料集才能建立Experience Platform資料流，但請注意，下游執行工作流程不會遵循透過事件傳送的同意資料。 |
-| [!UICONTROL 輪廓資料集] | 已啟用[!DNL Profile]且含有您建立[earter](#prerequisites)之客戶同意欄位的資料集。 |
+| [!UICONTROL Sandbox] | Experience Platform [沙箱](/help/sandboxes/home.md)的名稱，其中包含設定資料串流所需的串流連線和資料集。 |
+| [!UICONTROL Event Dataset] | 您打算使用SDK將事件資料傳送至的[!DNL XDM ExperienceEvent]資料集。 雖然您需要提供事件資料集才能建立Experience Platform資料流，但請注意，下游執行工作流程不會遵循透過事件傳送的同意資料。 |
+| [!UICONTROL Profile Dataset] | 已啟用[!DNL Profile]且含有您建立[earter](#prerequisites)之客戶同意欄位的資料集。 |
 
-完成時，選取畫面底部的&#x200B;**[!UICONTROL 儲存]**，然後繼續依照其他提示完成設定。
+完成時，選取畫面底部的&#x200B;**[!UICONTROL Save]**，然後繼續按照任何其他提示完成設定。
 
 ## 安裝及設定Experience Platform Web SDK
 
-依照上節所述建立資料串流後，您必須設定Experience Platform Web SDK擴充功能，才能最終在網站上部署。 如果您的標籤屬性上未安裝SDK擴充功能，請在左側導覽中選取&#x200B;**[!UICONTROL 擴充功能]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;索引標籤。 然後，在可用擴充功能清單中，選取Experience Platform SDK擴充功能下方的&#x200B;**[!UICONTROL 安裝]**。
+依照上節所述建立資料串流後，您必須設定Experience Platform Web SDK擴充功能，才能最終在網站上部署。 如果您的標籤屬性上未安裝SDK擴充功能，請在左側導覽中選取「**[!UICONTROL Extensions]**」，然後選取「**[!UICONTROL Catalog]**」標籤。 然後，在可用擴充功能清單中，選取Experience Platform SDK擴充功能底下的&#x200B;**[!UICONTROL Install]**。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-設定SDK時，在「**[!UICONTROL Edge設定]**」下，選取您在上一步中建立的資料流。
+設定SDK時，在「**[!UICONTROL Edge Configurations]**」下選取您在上一步中建立的資料流。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以安裝擴充功能。
+選取&#x200B;**[!UICONTROL Save]**&#x200B;以安裝擴充功能。
 
 ### 建立資料元素以設定預設同意
 
@@ -71,7 +71,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 在此使用案例中，您可以實作下列專案，以根據使用者地區設定預設同意：
 
 1. 判斷使用者在網頁伺服器上的區域。
-1. 在網頁上的`script`標籤（內嵌程式碼）之前，轉譯根據使用者地區設定`adobeDefaultConsent`變數的個別`script`標籤。
+1. 在網頁上的`script`標籤（內嵌程式碼）之前，轉譯根據使用者地區設定`script`變數的個別`adobeDefaultConsent`標籤。
 1. 設定使用`adobeDefaultConsent` JavaScript變數的資料元素，並使用此資料元素作為使用者的預設同意值。
 
 如果使用者的區域由CMP決定，您可以改用以下步驟：
@@ -80,19 +80,19 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 1. 在事件處理常式中，根據使用者的地區設定`adobeDefaultConsent`變數，然後使用JavaScript載入標籤程式庫指令碼。
 1. 設定使用`adobeDefaultConsent` JavaScript變數的資料元素，並使用此資料元素作為使用者的預設同意值。
 
-若要在UI中建立資料元素，請在左側導覽中選取&#x200B;**[!UICONTROL 資料元素]**，然後選取&#x200B;**[!UICONTROL 新增資料元素]**&#x200B;以導覽至資料元素建立對話方塊。
+若要在UI中建立資料元素，請在左側導覽中選取&#x200B;**[!UICONTROL Data Elements]**，然後選取&#x200B;**[!UICONTROL Add Data Element]**&#x200B;以導覽至資料元素建立對話方塊。
 
-您必須從此處，根據`adobeDefaultConsent`建立[!UICONTROL JavaScript變數]資料元素。 完成時選取&#x200B;**[!UICONTROL 儲存]**。
+您必須從此處，根據[!UICONTROL JavaScript Variable]建立`adobeDefaultConsent`資料元素。 完成後選取「**[!UICONTROL Save]**」。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-建立資料元素後，導覽回網頁SDK擴充功能設定頁面。 在[!UICONTROL 隱私權]區段下，選取&#x200B;**[!UICONTROL 資料元素提供的]**，並使用提供的對話方塊來選取您先前建立的預設同意資料元素。
+建立資料元素後，導覽回網頁SDK擴充功能設定頁面。 在[!UICONTROL Privacy]區段下，選取&#x200B;**[!UICONTROL Provided by data element]**，然後使用提供的對話方塊來選取您先前建立的預設同意資料元素。
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
 ### 在您的網站上部署擴充功能
 
-完成擴充功能設定後，即可將其整合至您的網站。 請參閱標籤檔案中的[發佈指南](../../../tags/ui/publishing/overview.md)，以取得有關如何部署已更新程式庫組建的詳細資訊。
+完成擴充功能設定後，即可將其整合至您的網站。 請參閱標籤檔案中的[發佈指南](/help/tags/ui/publishing/overview.md)，以取得有關如何部署已更新程式庫組建的詳細資訊。
 
 ## 發出同意變更命令 {#commands}
 
@@ -101,7 +101,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 `setConsent`命令會執行兩個動作：
 
 1. 直接在設定檔存放區中更新使用者的設定檔屬性。 這不會將任何資料傳送至Data Lake。
-1. 建立記錄同意變更事件之時間戳記帳戶的[體驗事件](../../../xdm/classes/experienceevent.md)。 此資料會直接傳送至Data Lake，並可用來追蹤同意偏好設定在一段時間內的變更。
+1. 建立記錄同意變更事件之時間戳記帳戶的[體驗事件](/help/xdm/classes/experienceevent.md)。 此資料會直接傳送至Data Lake，並可用來追蹤同意偏好設定在一段時間內的變更。
 
 ### 何時呼叫`setConsent`
 
@@ -112,7 +112,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 ### `setConsent`語法
 
-[`setConsent`](/help/web-sdk/commands/setconsent.md)命令需要包含單一陣列型別屬性的裝載物件： `consent`。 `consent`陣列必須至少包含一個物件，以提供Adobe標準的必要同意欄位。
+[`setConsent`](/help/collection/js/commands/setconsent.md)命令需要包含單一陣列型別屬性的裝載物件： `consent`。 `consent`陣列必須至少包含一個物件，以提供Adobe標準的必要同意欄位。
 
 Adobe標準的必要同意欄位會顯示在下列範例`setConsent`呼叫中：
 
@@ -195,9 +195,9 @@ var setConsent = function () {
 
 ## 處理SDK回應
 
-所有[!DNL Experience Platform SDK]命令都會傳回表示呼叫成功或失敗的Promise。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 如需詳細資訊，請參閱[命令回應](/help/web-sdk/commands/command-responses.md)。
+所有[!DNL Experience Platform SDK]命令都會傳回表示呼叫成功或失敗的Promise。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 如需詳細資訊，請參閱[命令回應](/help/collection/js/commands/command-responses.md)。
 
-當您成功使用SDK進行`setConsent`呼叫後，您可以在Experience Platform UI中使用設定檔檢視器，驗證資料是否登陸設定檔存放區。 如需詳細資訊，請參閱[依身分瀏覽設定檔](../../../profile/ui/user-guide.md#browse-identity)的相關章節。
+當您成功使用SDK進行`setConsent`呼叫後，您可以在Experience Platform UI中使用設定檔檢視器，驗證資料是否登陸設定檔存放區。 如需詳細資訊，請參閱[依身分瀏覽設定檔](/help/profile/ui/user-guide.md#browse-identity)的相關章節。
 
 ## 後續步驟
 

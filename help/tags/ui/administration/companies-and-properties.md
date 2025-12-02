@@ -2,10 +2,10 @@
 title: 屬性
 description: 瞭解如何在Adobe Experience Platform中為您的組織組織和分組擴充功能、環境和程式庫。
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 59%
+source-wordcount: '1153'
+ht-degree: 64%
 
 ---
 
@@ -85,7 +85,7 @@ Properties 清單會顯示下列資訊：
 * 平台
 * 狀態
 
-選取屬性即可查看該屬性的概述。此概述會顯示屬性上執行的任何活動，也會列出屬性的度量和擴充功能。
+選取屬性即可查看該屬性的概觀。此概觀會顯示屬性上執行的任何活動。也會列出屬性的度量和擴充功能。
 
 ## 建立或設定屬性
 
@@ -97,7 +97,7 @@ Properties 清單會顯示下列資訊：
 
 開始之前，請檢閱[規劃屬性的最佳作法](companies-and-properties.md#best-practices-for-planning-properties)中的屬性。
 
-導覽至您的公司頁面，然後選取「**[!UICONTROL 新增屬性]**」，或從清單中選取現有屬性，然後選取「**[!UICONTROL 設定]**」。
+導覽至您的公司頁面，然後選取「**[!UICONTROL Add Property]**」，或從清單中選取現有屬性，然後選取「**[!UICONTROL Configure]**」。
 
 ![](../../images/property-settings.png)
 
@@ -111,10 +111,10 @@ Properties 清單會顯示下列資訊：
 
    **Domains：**&#x200B;打算要部署此屬性的網站基本 URL。
 
-1. （進階） **[!UICONTROL 依序執行規則元件]**&#x200B;選取此核取方塊，讓條件和動作等待上一個動作完成後再執行
-1. （進階） **[!UICONTROL 傳回遺失資料元素的空字串：]**&#x200B;如果您參考的資料元素不存在於程式庫中，通常會傳回`undefined`。  如果您希望該案例傳回空字串，請選取此核取方塊。
-1. （進階） **[!UICONTROL 設定擴充功能開發：]**&#x200B;如果您打算安裝公司主動開發的開發擴充功能，請選取此核取方塊
-1. 選取「**[!UICONTROL 儲存]**」。
+1. (進階) **[!UICONTROL Run rule components in sequence]** 選取此核取方塊，使條件和動作等待上一個動作完成後再執行。
+1. （進階） **[!UICONTROL Return an empty string for missing data elements:]**&#x200B;如果您參考的資料元素不存在於程式庫中，通常會傳回`undefined`。 如果您希望該案例傳回空字串，請啟用此核取方塊。
+1. （進階） **[!UICONTROL Configure for extension development:]**&#x200B;如果您打算安裝公司主動開發的開發擴充功能，請啟用此核取方塊
+1. 選擇「**[!UICONTROL Save]**」。
 
 ### 適用於行動
 
@@ -131,7 +131,7 @@ Properties 清單會顯示下列資訊：
 
    * **Use HTTPS：**&#x200B;如果所有資料通訊應經由 HTTP 或 HTTPS 傳送，請選擇此選項。
 
-1. 選取「**[!UICONTROL 儲存]**」。
+1. 選擇「**[!UICONTROL Save]**」。
 
 建立屬性後，Experience Platform會自動新增預設主機、一組環境（開發、測試和生產）和預設擴充功能。
 
@@ -147,4 +147,4 @@ Properties 清單會顯示下列資訊：
 
    您可以選取要刪除的多個屬性。
 
-1. 選取&#x200B;**[!UICONTROL 刪除]**，然後確認移除屬性。
+1. 選取「**[!UICONTROL Delete]**」，接著確認移除屬性。

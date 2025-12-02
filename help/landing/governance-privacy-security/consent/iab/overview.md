@@ -6,9 +6,9 @@ description: 瞭解如何設定您的資料作業和結構描述，以在對Adob
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2509'
 ht-degree: 0%
 
 ---
@@ -42,8 +42,8 @@ Adobe Experience Platform是已登入的[IAB TCF 2.0廠商清單](https://iabeur
 * [體驗資料模型(XDM)](/help/xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md)：透過跨裝置和系統橋接身分，解決客戶體驗資料分散所造成的根本挑戰。
 * [即時客戶設定檔](/help/profile/home.md)：使用[!DNL Identity Service]從資料集即時建立詳細的客戶設定檔。 [!DNL Real-Time Customer Profile]從資料湖提取資料，並將客戶設定檔儲存在其自己的獨立資料存放區中。
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)：使用者端JavaScript程式庫，可讓您將各種Experience Platform服務整合至您面向客戶的網站。
-   * [SDK同意命令](../../../../web-sdk/commands/setconsent.md)：本指南中顯示的同意相關SDK命令的使用案例概觀。
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)：使用者端JavaScript程式庫，可讓您將各種Experience Platform服務整合至您面向客戶的網站。
+   * [SDK同意命令](/help/collection/js/commands/setconsent.md)：本指南中顯示的同意相關SDK命令的使用案例概觀。
 * [Adobe Experience Platform區段服務](/help/segmentation/home.md)：可讓您將[!DNL Real-Time Customer Profile]資料分割成共用類似特徵且對行銷策略有類似回應的個人群組。
 
 除了上述Experience Platform服務之外，您也應該熟悉[目的地](/help/data-governance/home.md)及其在Experience Platform生態系統中的角色。
@@ -63,7 +63,7 @@ Experience Platform可讓您透過下列程式收集客戶同意資料：
 
 除了CMP同意變更掛接所觸發的SDK命令外，同意資料也可以透過任何客戶產生的XDM資料（直接上傳至啟用[!DNL Profile]的資料集）流入Experience Platform。
 
-如果透過[!DNL Experience Cloud Identity Service]將適當的欄位套用至這些區段，Adobe Audience Manager與Experience Platform共用的任何區段（透過[!DNL Audience Manager]來源聯結器或其他方式）也可能包含同意資料。 如需在[!DNL Audience Manager]中收集同意資料的詳細資訊，請參閱適用於IAB TCF的[Adobe Audience Manager外掛程式](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=zh-Hant)上的檔案。
+如果透過[!DNL Audience Manager]將適當的欄位套用至這些區段，Adobe Audience Manager與Experience Platform共用的任何區段（透過[!DNL Experience Cloud Identity Service]來源聯結器或其他方式）也可能包含同意資料。 如需在[!DNL Audience Manager]中收集同意資料的詳細資訊，請參閱適用於IAB TCF的[Adobe Audience Manager外掛程式](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=zh-Hant)上的檔案。
 
 ### 下游同意實作
 
@@ -124,16 +124,16 @@ Experience Platform可讓您透過下列程式收集客戶同意資料：
 
 為資料流提供唯一名稱后，請選取&#x200B;**[!UICONTROL Adobe Experience Platform]**&#x200B;旁的切換按鈕。 接下來，使用下列值完成表單的其餘部分：
 
-| 資料流欄位 | 值 |
+| 資料流欄位 | 價值 |
 | --- | --- |
-| [!UICONTROL 沙箱] | Experience Platform [沙箱](/help/sandboxes/home.md)的名稱，其中包含設定資料串流所需的串流連線和資料集。 |
-| [!UICONTROL 串流入口] | Experience Platform的有效串流連線。 如果您沒有現有的串流入口，請參閱有關[建立串流連線](/help/ingestion/tutorials/create-streaming-connection-ui.md)的教學課程。 |
-| [!UICONTROL 事件資料集] | 選取在[先前的步驟](#datasets)中建立的[!DNL XDM ExperienceEvent]資料集。 如果您在此資料集的結構描述中包含[[!UICONTROL IAB TCF 2.0同意]欄位群組](/help/xdm/field-groups/event/iab.md)，您可以使用[`sendEvent`](#sendEvent)命令追蹤一段時間的同意變更事件，並將該資料儲存在此資料集中。 請記住，儲存在此資料集中的同意值&#x200B;**並非**&#x200B;用於自動執行工作流程。 |
-| [!UICONTROL 輪廓資料集] | 選取在[先前的步驟](#datasets)中建立的[!DNL XDM Individual Profile]資料集。 使用[`setConsent`](#setConsent)命令回應CMP同意變更掛接時，收集的資料會儲存在此資料集中。 由於此資料集已啟用設定檔功能，在自動執行工作流程期間，將會接受儲存在此資料集中的同意值。 |
+| [!UICONTROL Sandbox] | Experience Platform [沙箱](/help/sandboxes/home.md)的名稱，其中包含設定資料串流所需的串流連線和資料集。 |
+| [!UICONTROL Streaming Inlet] | Experience Platform的有效串流連線。 如果您沒有現有的串流入口，請參閱有關[建立串流連線](/help/ingestion/tutorials/create-streaming-connection-ui.md)的教學課程。 |
+| [!UICONTROL Event Dataset] | 選取在[!DNL XDM ExperienceEvent]先前的步驟[中建立的](#datasets)資料集。 如果您在此資料集的結構描述中包含[[!UICONTROL IAB TCF 2.0 Consent]欄位群組](/help/xdm/field-groups/event/iab.md)，您可以使用[`sendEvent`](#sendEvent)命令追蹤一段時間的同意變更事件，並將該資料儲存在此資料集中。 請記住，儲存在此資料集中的同意值&#x200B;**並非**&#x200B;用於自動執行工作流程。 |
+| [!UICONTROL Profile Dataset] | 選取在[!DNL XDM Individual Profile]先前的步驟[中建立的](#datasets)資料集。 使用[`setConsent`](#setConsent)命令回應CMP同意變更掛接時，收集的資料會儲存在此資料集中。 由於此資料集已啟用設定檔功能，在自動執行工作流程期間，將會接受儲存在此資料集中的同意值。 |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-完成時，選取畫面底部的&#x200B;**[!UICONTROL 儲存]**，然後繼續依照其他提示完成設定。
+完成時，選取畫面底部的&#x200B;**[!UICONTROL Save]**，然後繼續按照任何其他提示完成設定。
 
 ### 發出同意變更命令
 
@@ -141,7 +141,7 @@ Experience Platform可讓您透過下列程式收集客戶同意資料：
 
 #### 使用CMP同意變更掛接 {#setConsent}
 
-許多CMP提供可監聽同意變更事件的現成鉤點。 發生這些事件時，您可以使用[`setConsent`](/help/web-sdk/commands/setconsent.md)命令來更新該客戶的同意資料。
+許多CMP提供可監聽同意變更事件的現成鉤點。 發生這些事件時，您可以使用[`setConsent`](/help/collection/js/commands/setconsent.md)命令來更新該客戶的同意資料。
 
 `setConsent`命令需要兩個引數：
 
@@ -224,7 +224,7 @@ alloy("sendEvent", {
 
 ### 處理SDK回應
 
-許多Web SDK命令會傳回promise ，指出呼叫成功或失敗。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 如需詳細資訊，請參閱[命令回應](/help/web-sdk/commands/command-responses.md)。
+許多Web SDK命令會傳回promise ，指出呼叫成功或失敗。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 如需詳細資訊，請參閱[命令回應](/help/collection/js/commands/command-responses.md)。
 
 ## 匯出區段 {#export}
 
@@ -245,7 +245,7 @@ TCF 2.0也要求資料來源在將資料傳送至目的地之前，必須先檢�
 
 >[!NOTE]
 >
->任何與Adobe Audience Manager共用的區段都會包含與其Experience Platform對應區段相同的TCF 2.0同意值。 由於[!DNL Audience Manager]與Experience Platform (565)共用相同的廠商ID，因此需要相同的用途和廠商許可權。 如需詳細資訊，請參閱適用於IAB TCF[&#128279;](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=zh-Hant)的Adobe Audience Manager外掛程式上的檔案。
+>任何與Adobe Audience Manager共用的區段都會包含與其Experience Platform對應區段相同的TCF 2.0同意值。 由於[!DNL Audience Manager]與Experience Platform (565)共用相同的廠商ID，因此需要相同的用途和廠商許可權。 如需詳細資訊，請參閱適用於IAB TCF[的](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=zh-Hant)Adobe Audience Manager外掛程式上的檔案。
 
 ## 測試您的實作 {#test-implementation}
 

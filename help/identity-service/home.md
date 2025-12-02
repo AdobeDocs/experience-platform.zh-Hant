@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 身分識別服務概觀
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1580'
 ht-degree: 2%
 
 ---
@@ -105,7 +105,7 @@ Identity Service提供下列作業，以達成其使命：
 
 以下影片旨在協助您瞭解身分和身分圖表。
 
->[!VIDEO](https://video.tv.adobe.com/v/3422770?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## 瞭解Identity Service在Experience Platform基礎架構中的角色
 
@@ -113,7 +113,7 @@ Identity Service在Experience Platform中扮演著重要的角色。 部分重�
 
 * [結構描述](../xdm/home.md)：在指定的結構描述中，標示為身分的結構描述欄位允許建立身分圖表。
 * [資料集](../catalog/datasets/overview.md)：當資料集已啟用擷取至Real-Time Customer Profile時，會從資料集產生身分圖表，前提是資料集至少有兩個欄位標籤為身分。
-* [網頁SDK](../web-sdk/home.md)： Web SDK會將體驗事件傳送至Adobe Experience Platform，而且當事件中有兩個或多個身分時，身分識別服務會產生圖形。
+* [資料彙集](/help/collection/home.md)：資料彙集資料庫(例如Web SDK)傳送體驗事件至Adobe Experience Platform。 當事件中存在兩個或多個身分時，Identity Service會產生一個圖形。
 * [即時客戶個人檔案](../profile/home.md)：在合併指定個人檔案的屬性和事件之前，即時客戶個人檔案可以參考身分圖表。 如需詳細資訊，請閱讀[瞭解Identity Service和即時客戶個人檔案](./identity-and-profile.md)之間關係的指南。
 * [目的地](../destinations/home.md)：目的地可以根據身分名稱空間將設定檔資訊傳送至其他系統，例如雜湊電子郵件。
 * [區段比對](../segmentation/ui/segment-match/overview.md)：區段比對在兩個具有相同身分名稱空間和身分值的不同沙箱中比對兩個設定檔。

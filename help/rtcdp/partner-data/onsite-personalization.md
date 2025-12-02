@@ -3,7 +3,7 @@ title: 使用合作夥伴協助的訪客辨識功能，為未知訪客提供個�
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
 source-wordcount: '2568'
 ht-degree: 72%
@@ -14,7 +14,7 @@ ht-degree: 72%
 
 >[!AVAILABILITY]
 >
->已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
 了解如何使用合作夥伴輔助的訪客識別為您的 Web 屬性訪客提供個人化的現場體驗。使用本教學課程了解 Experience Platform 和其他 Experience Cloud 解決方案中各種元素的實施順序，以便向經過身分驗證和未經身分驗證的訪客顯示個人化體驗。
 
@@ -47,7 +47,7 @@ ht-degree: 72%
 若要成功實施此使用案例，您必須使用多個區域的 Real-Time Customer Data Platform 和其他 Experience Cloud 解決方案。確保您擁有所有這些區域所需的[屬性型存取控制權限](/help/access-control/abac/overview.md)，或要求系統管理員授予您必要的權限。
 
 * 資料收集
-   * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)
+   * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)
    * [標記](/help/tags/home.md)
    * [資料流](/help/datastreams/overview.md)
 * Real-Time CDP 中的資料管理
@@ -55,7 +55,7 @@ ht-degree: 72%
    * [結構描述](/help/xdm/home.md)
    * [資料使用情況標籤](/help/data-governance/labels/overview.md)
    * [資料集](/help/catalog/datasets/overview.md)
-* Web 屬性個人化
+*  Web 屬性個人化
    * [邊緣分段](/help/segmentation/methods/edge-segmentation.md)
    * [邊緣個人化目的地](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (或您選擇的個人化平台。本使用案例教學課程旨在重點介紹以 Adobe Target 作為個人化引擎)
@@ -64,7 +64,7 @@ ht-degree: 72%
 
 觀看下方的影片教學課程，逐步瞭解如何為未知訪客個人化網站上的體驗：
 
->[!VIDEO](https://video.tv.adobe.com/v/3449263/?captions=chi_hant&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 
@@ -73,7 +73,7 @@ ht-degree: 72%
 1. 身為&#x200B;**客戶**，您可授權&#x200B;**資料合作夥伴**&#x200B;有能力即時擷取對其他匿名網站訪客的洞察。
 2. 作為&#x200B;**訪客**，您可在自己的屬性上部署用戶端資料庫，以呼叫&#x200B;**合作夥伴** API，且您可設定 Web SDK 或行動 SDK 並將合作夥伴提供的訊號發送到 Real-Time CDP。
 3. 瀏覽您的網站或應用程式時，**訪客**&#x200B;是由&#x200B;**合作夥伴**&#x200B;進行概率識別；合作夥伴會傳回屬性和 ID。
-4. Real-Time CDP 會執行邊緣分段來評估導入事件點擊，並持續從 [ECID 識別碼](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)得到結果。
+4. Real-Time CDP 會執行邊緣分段來評估導入事件點擊，並持續從 [ECID 識別碼](https://experienceleague.adobe.com/docs/id-service/using/home.html)得到結果。
 5. Adobe Target 使用邊緣分段輸出將體驗回供給&#x200B;**訪客**，讓他們的工作階段得到個人化體驗。
 6. 該事件將完整地保留下來，進行如分析和重新鎖定的下游工作流程。
 
@@ -157,7 +157,7 @@ UI的&#x200B;**[!UICONTROL Data Collection]**&#x200B;區段看起來與下圖類
 
 ![為您的新屬性填寫必填欄位。](/help/rtcdp/assets/partner-data/onsite-personalization/tag-property-fields.png)
 
-取得有關如何[建立標記屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=zh-Hant)的完整資訊。
+取得有關如何[建立標記屬性](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)的完整資訊。
 
 接下來，您必須在屬性內安裝各種擴充功能。選取您的標籤屬性並導覽至[!UICONTROL Extensions]區段。
 
@@ -175,7 +175,7 @@ UI的&#x200B;**[!UICONTROL Data Collection]**&#x200B;區段看起來與下圖類
 
 在設定Web SDK的畫面中，向下導覽至&#x200B;**[!UICONTROL Datastreams]**&#x200B;區段，並提供您正在使用Experience Platform沙箱的相關資訊。 從下一個下拉式選單中，選取適當的沙箱以及在前面步驟中建立的資料流。您可以為所有其他環境選擇相同的沙箱和資料流數值。保留其他設定不變，並選取&#x200B;**[!UICONTROL Save]**。
 
-取得[如何安裝 Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=zh-Hant)的完整資訊。
+取得[如何安裝 Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html)的完整資訊。
 
 #### 安裝 ID 服務擴充功能
 

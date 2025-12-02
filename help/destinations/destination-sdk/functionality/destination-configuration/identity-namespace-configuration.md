@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定支援的目標身分。
 title: 身分名稱空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '918'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -62,8 +62,8 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 | `acceptsAttributes` | 布林值 | 選填 | 指出客戶是否可將標準設定檔屬性對應至您正在設定的身分。 |
 | `acceptsCustomNamespaces` | 布林值 | 選填 | 指出客戶是否可將自訂身分名稱空間對應至您正在設定的身分名稱空間。 |
 | `acceptedGlobalNamespaces` | - | 選填 | 指出客戶可以將哪些[標準身分名稱空間](../../../../identity-service/features/namespaces.md#standard) （例如[!UICONTROL IDFA]）對應到您正在設定的身分。 |
-| `transformation` | 字串 | 選填 | 當來源欄位是XDM屬性或自訂身分名稱空間時，顯示Experience Platform UI中的[[!UICONTROL 套用轉換]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)核取方塊。 使用此選項可讓使用者在匯出時雜湊來源屬性。 若要啟用此選項，請將值設為`sha256(lower($))`。 |
-| `requiredTransformation` | 字串 | 選填 | 當客戶選取此來源身分名稱空間時，[[!UICONTROL 套用轉換]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)核取方塊會自動套用至對應，且客戶無法停用它。 若要啟用此選項，請將值設為`sha256(lower($))`。 |
+| `transformation` | 字串 | 選填 | 當來源欄位是XDM屬性或自訂身分名稱空間時，顯示Experience Platform UI中的[[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)核取方塊。 使用此選項可讓使用者在匯出時雜湊來源屬性。 若要啟用此選項，請將值設為`sha256(lower($))`。 |
+| `requiredTransformation` | 字串 | 選填 | 當客戶選取此來源身分名稱空間時，[[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation)核取方塊會自動套用至對應，且客戶無法停用它。 若要啟用此選項，請將值設為`sha256(lower($))`。 |
 
 {style="table-layout:auto"}
 
@@ -124,7 +124,7 @@ Experience Platform客戶可選擇以雜湊格式或純文字將資料擷取至E
 
 ## 設定強制來源欄位雜湊
 
-如果您的目的地僅接受雜湊資料，您可以設定匯出的屬性，讓Experience Platform自動對其進行雜湊。 當對應`Email`和`Phone`身分時，下列組態會自動檢查&#x200B;**套用轉換**&#x200B;選項。
+如果您的目的地僅接受雜湊資料，您可以設定匯出的屬性，讓Experience Platform自動對其進行雜湊。 當對應&#x200B;**和**&#x200B;身分時，下列組態會自動檢查`Email`套用轉換`Phone`選項。
 
 ```json {line-numbers="true" highlight="8,11"}
 "identityNamespaces":{

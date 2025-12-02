@@ -3,9 +3,9 @@ title: 啟用串流目的地的受眾資料
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的受眾對應至串流目的地來啟用這些受眾。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 595856842a3890426bb196218bd8be4e321ff8aa
+source-git-commit: 2eb890f06097f1b9766408aad3b6ab11d5d12f9f
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 3%
 
 ---

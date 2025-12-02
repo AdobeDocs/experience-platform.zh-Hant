@@ -2,10 +2,10 @@
 title: 設定資料流覆寫
 description: 瞭解如何在資料串流UI中設定資料串流覆寫，並透過Web SDK或Mobile SDK加以啟用。
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 57%
+source-wordcount: '1045'
+ht-degree: 53%
 
 ---
 
@@ -20,14 +20,14 @@ ht-degree: 57%
 1. 首先，您必須在[資料流設定頁面](configure.md)中定義資料流設定覆寫。
 2. 然後，您必須透過下列其中一種方式，將覆寫傳送至Edge Network：
    * 透過`sendEvent`或`configure` [網頁SDK](#send-overrides)命令。
-   * 透過Web SDK [標籤延伸模組](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)。
+   * 透過Web SDK [標籤延伸模組](../tags/extensions/client/web-sdk/configure/configuration-overrides.md)。
    * 透過Mobile SDK [sendEvent](#send-overrides) API或使用[規則](#send-overrides)。
 
 本文會介紹每種受支援的覆寫類型的端對端資料流設定覆寫流程。
 
 >[!IMPORTANT]
 >
->僅[網頁SDK](../web-sdk/home.md)與[行動SDK](https://developer.adobe.com/client-sdks/home/)整合支援資料流覆寫。 [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)整合目前不支援資料流覆寫。
+>[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)整合目前不支援資料流覆寫。
 ><br>
 >當您需要將不同的資料發送到不同的資料流時，應使用資料流覆寫。請勿對個人化使用案例或同意資料使用資料流覆寫。
 
@@ -62,7 +62,7 @@ ht-degree: 57%
 
 若要設定 Adobe Target 資料流的資料流覆寫，您首先必須建立 Adobe Target 資料流。請依照說明[設定資料流](configure.md)和 [Adobe Target](configure.md#target) 服務。
 
-建立資料流後，請編輯您新增的[Adobe Target](configure.md#target)服務，並使用&#x200B;**[!UICONTROL 屬性權杖覆寫]**&#x200B;區段來新增所需的資料流覆寫，如下圖所示。 每行新增一個屬性語彙基元。
+建立資料流後，請編輯您新增的[Adobe Target](configure.md#target)服務，並使用&#x200B;**[!UICONTROL Property Token Overrides]**&#x200B;區段來新增所需的資料流覆寫，如下圖所示。 每行新增一個屬性語彙基元。
 
 ![顯示 Adobe Target 服務設定的資料流 UI 螢幕擷圖，並醒目顯示屬性語彙基元覆寫。](assets/overrides/override-target.png)
 
@@ -74,9 +74,9 @@ ht-degree: 57%
 
 若要設定 Adobe Analytics 資料流的資料流覆寫，您首先必須建立 [Adobe Analytics](configure.md#analytics)。請依照說明[設定資料流](configure.md)和 [Adobe Analytics](configure.md#analytics) 服務。
 
-建立資料流後，請編輯您新增的[Adobe Analytics](configure.md#target)服務，並使用&#x200B;**[!UICONTROL 報表套裝覆寫]**&#x200B;區段來新增所需的資料流覆寫，如下圖所示。
+建立資料流後，請編輯您新增的[Adobe Analytics](configure.md#target)服務，並使用&#x200B;**[!UICONTROL Report Suite Overrides]**&#x200B;區段來新增所需的資料流覆寫，如下圖所示。
 
-若要啟用報告套裝覆寫的批次編輯，請選取&#x200B;**[!UICONTROL 顯示批次模式]**。您可以複製並貼上報告套裝覆寫的清單，每行輸入一個報告套裝。
+選取&#x200B;**[!UICONTROL Show Batch Mode]**&#x200B;以啟用報告套裝覆寫的批次編輯。 您可以複製並貼上報告套裝覆寫的清單，每行輸入一個報告套裝。
 
 ![顯示 Adobe Analytics 服務設定的資料流 UI 螢幕擷圖，並醒目顯示報告套裝覆寫。](assets/overrides/override-analytics.png)
 
@@ -88,7 +88,7 @@ ht-degree: 57%
 
 若要設定 Experience Platform 事件資料集的資料流覆寫，您首先必須建立 [Adobe Experience Platform](configure.md#aep)。請依照說明[設定資料流](configure.md)和 [Adobe Experience Platform](configure.md#aep) 服務。
 
-建立資料流後，請編輯您新增的[Adobe Experience Platform](configure.md#aep)服務，並選取&#x200B;**[!UICONTROL 新增事件資料集]**&#x200B;選項以新增一或多個覆寫事件資料集，如下圖所示。
+建立資料流後，請編輯您新增的[Adobe Experience Platform](configure.md#aep)服務，並選取&#x200B;**[!UICONTROL Add Event Dataset]**&#x200B;選項以新增一或多個覆寫事件資料集，如下圖所示。
 
 ![顯示 Adobe Experience Platform 服務設定的資料流 UI 螢幕擷圖，並醒目顯示事件資料集覆寫。](assets/overrides/override-aep.png)
 
@@ -100,9 +100,9 @@ ht-degree: 57%
 
 若要設定協力廠商 ID 同步容器的資料流覆寫，您首先必須建立資料流。請依照說明[設定資料流](configure.md)，以建立一個。
 
-建立資料流後，請前往&#x200B;**[!UICONTROL 進階選項]**，並啟用&#x200B;**[!UICONTROL 協力廠商 ID 同步]**&#x200B;選項。
+建立資料串流後，移至&#x200B;**[!UICONTROL Advanced Options]**&#x200B;並啟用&#x200B;**[!UICONTROL Third Party ID Sync]**&#x200B;選項。
 
-然後，在&#x200B;**[!UICONTROL 容器 ID 覆寫]**&#x200B;區段中新增要覆寫預設設定的容器 ID，如下圖所示。
+然後，使用&#x200B;**[!UICONTROL Container ID Overrides]**&#x200B;區段來新增您要覆寫預設設定的容器ID，如下圖所示。
 
 >[!IMPORTANT]
 >
@@ -118,7 +118,7 @@ ht-degree: 57%
 
 在資料收集UI中設定資料流覆寫後，您可以透過Web SDK或Mobile SDK將覆寫傳送至Edge Network。
 
-* **網頁SDK**：如需標籤延伸指示和JavaScript程式庫程式碼範例，請參閱[資料流設定覆寫](../web-sdk/commands/datastream-overrides.md#library)。
+* **網頁SDK**：如需JavaScript程式庫程式碼範例，請參閱[資料流設定覆寫](/help/collection/js/commands/configure/edgeconfigoverrides.md)。
 * **行動SDK**：您可以使用[sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/)或使用[規則](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/)來傳送資料串流ID覆寫。
 
 ## 裝載範例 {#payload-example}

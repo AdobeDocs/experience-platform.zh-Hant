@@ -6,9 +6,9 @@ description: 瞭解如何使用Adobe 2.0標準在Adobe Experience Platform中處
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 
 >[!NOTE]
 >
->本檔案著重於使用Adobe標準處理同意資料。 如果您是依照IAB透明與同意架構(TCF) 2.0處理同意資料，請參閱Adobe Real-Time Customer Data Platform[&#128279;](../iab/overview.md)中TCF 2.0支援指南。
+>本檔案著重於使用Adobe標準處理同意資料。 如果您是依照IAB透明與同意架構(TCF) 2.0處理同意資料，請參閱Adobe Real-Time Customer Data Platform[中](../iab/overview.md)TCF 2.0支援指南。
 
 ## 先決條件
 
@@ -30,8 +30,8 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 * [體驗資料模型(XDM)](/help/xdm/home.md)： Experience Platform用來組織客戶體驗資料的標準化架構。
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md)：透過跨裝置和系統橋接身分，解決客戶體驗資料分散所造成的根本挑戰。
 * [即時客戶設定檔](/help/profile/home.md)：使用[!DNL Identity Service]功能即時從資料集建立詳細的客戶設定檔。 即時客戶設定檔從資料湖提取資料，並將客戶設定檔儲存在其自己的獨立資料存放區中。
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)：使用者端JavaScript程式庫，可讓您將各種Experience Platform服務整合至您面向客戶的網站。
-   * [SDK同意命令](../../../../web-sdk/commands/setconsent.md)：本指南中顯示的同意相關SDK命令的使用案例概觀。
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)：使用者端JavaScript程式庫，可讓您將各種Experience Platform服務整合至您面向客戶的網站。
+   * [SDK同意命令](/help/collection/js/commands/setconsent.md)：本指南中顯示的同意相關SDK命令的使用案例概觀。
 * [Adobe Experience Platform細分服務](/help/segmentation/home.md)：可讓您將即時客戶設定檔資料分割成共用類似特徵且對行銷策略有類似回應的一組個人。
 
 ## 同意處理流程摘要 {#summary}
@@ -51,7 +51,7 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 
 >[!NOTE]
 >
->如需上述XDM同意欄位結構的詳細資訊，請參閱[[!UICONTROL 同意和偏好設定]資料型別](/help/xdm/data-types/consents.md)的指南。
+>如需上述XDM同意欄位結構的詳細資訊，請參閱[[!UICONTROL Consents and Preferences]資料型別](/help/xdm/data-types/consents.md)的指南。
 
 設定系統後，Experience Platform Web SDK會解譯目前使用者的資料收集同意值，以判斷資料應傳送至Adobe Experience Platform Edge Network、從使用者端卸除或持續存在，直到資料收集許可權設為「是」或「否」為止。
 
@@ -77,7 +77,7 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 >
 >如果您沒有任何衝突的資料集，您應該為合併原則設定時間戳記優先順序。 這有助於確保客戶指定的最新同意是使用的同意設定。
 
-如需有關如何使用合併原則的詳細資訊，請先閱讀[合併原則概觀](../../../../profile/merge-policies/overview.md)。 設定合併原則時，您必須確保設定檔包含[!UICONTROL 同意和偏好設定]結構描述欄位群組提供的所有必要同意屬性，如[資料集準備](./dataset.md)指南中所述。
+如需有關如何使用合併原則的詳細資訊，請先閱讀[合併原則概觀](../../../../profile/merge-policies/overview.md)。 設定合併原則時，您必須確保設定檔包含[!UICONTROL Consents and Preferences]結構描述欄位群組提供的所有必要同意屬性，如[資料集準備](./dataset.md)指南中所述。
 
 ## 將同意資料帶入Experience Platform
 
@@ -95,13 +95,13 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 
 如果您的行動應用程式需要客戶同意偏好設定，您可以整合Experience Platform Mobile SDK以擷取及更新同意設定，並在呼叫同意API時將其傳送至Experience Platform。
 
-請參閱Mobile SDK檔案，以瞭解[使用同意API設定同意行動擴充功能](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)和[&#128279;](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)。 如需有關如何使用Mobile SDK處理隱私權問題的詳細資訊，請參閱[隱私權與GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)一節。
+請參閱Mobile SDK檔案，以瞭解[使用同意API設定同意行動擴充功能](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)和[](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)。 如需有關如何使用Mobile SDK處理隱私權問題的詳細資訊，請參閱[隱私權與GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)一節。
 
 ### 直接擷取XDM相容的同意資料 {#batch}
 
 您可以使用批次擷取，從CSV檔案擷取XDM相容的同意資料。 如果您有先前收集的同意資料待處理，且尚未整合至客戶設定檔中，此功能會很有用。
 
-請依照有關[將CSV檔案對應至XDM](../../../../ingestion/tutorials/map-csv/overview.md)的教學課程瞭解如何將資料欄位轉換為XDM並將其擷取至Experience Platform。 為對應選取[!UICONTROL 目的地]時，請確定您選取&#x200B;**[!UICONTROL 使用現有資料集]**&#x200B;選項，並選擇您先前建立的啟用[!DNL Profile]的同意資料集。
+請依照有關[將CSV檔案對應至XDM](../../../../ingestion/tutorials/map-csv/overview.md)的教學課程瞭解如何將資料欄位轉換為XDM並將其擷取至Experience Platform。 為對應選取[!UICONTROL Destination]時，請確定您選取&#x200B;**[!UICONTROL Use existing dataset]**&#x200B;選項，並選擇您先前建立的啟用[!DNL Profile]的同意資料集。
 
 ## 測試您的實作 {#test-implementation}
 
@@ -113,9 +113,9 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 >
 >如果您無法存取此資訊，您可以選取擷取自己的測試同意資料，並將其與自己已知的身分值/名稱空間建立關聯。
 
-請參閱[!DNL Profile] UI指南中有關[依身分瀏覽設定檔](../../../../profile/ui/user-guide.md#browse)的章節，以取得有關如何查閱設定檔詳細資料的特定步驟。
+請參閱[ UI指南中有關](../../../../profile/ui/user-guide.md#browse)依身分瀏覽設定檔[!DNL Profile]的章節，以取得有關如何查閱設定檔詳細資料的特定步驟。
 
-預設情況下，新的同意屬性不會顯示在設定檔的控制面板上。 因此，您必須導覽至設定檔詳細資訊頁面上的&#x200B;**[!UICONTROL 屬性]**&#x200B;索引標籤，以確認已如預期擷取這些屬性。 請參閱[設定檔儀表板](../../../../profile/ui/profile-dashboard.md)上的指南，瞭解如何根據您的需求自訂儀表板。
+預設情況下，新的同意屬性不會顯示在設定檔的控制面板上。 因此，您必須導覽至設定檔詳細資訊頁面上的&#x200B;**[!UICONTROL Attributes]**&#x200B;標籤，以確認其已如預期般內嵌。 請參閱[設定檔儀表板](../../../../profile/ui/profile-dashboard.md)上的指南，瞭解如何根據您的需求自訂儀表板。
 
 <!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
@@ -129,4 +129,4 @@ Customer Journey Management can also send consent-change signals back to Experie
 
 本指南說明如何設定Experience Platform作業，以使用Adobe標準處理客戶同意資料，並在客戶設定檔中呈現這些屬性。 您現在可以將客戶同意偏好設定整合為區段資格及其他下游使用案例中的決定性因素。
 
-如需Experience Platform隱私權相關功能的詳細資訊，請參閱Experience Platform[&#128279;](../../overview.md)中治理、隱私權及安全性的概觀。
+如需Experience Platform隱私權相關功能的詳細資訊，請參閱Experience Platform[中](../../overview.md)治理、隱私權及安全性的概觀。

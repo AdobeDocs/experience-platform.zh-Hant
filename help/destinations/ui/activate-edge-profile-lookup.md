@@ -3,9 +3,9 @@ title: 即時查詢邊緣設定檔屬性
 description: 瞭解如何使用自訂Personalization目的地和Edge Network API即時查詢邊緣設定檔屬性
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1838'
 ht-degree: 1%
 
 ---
@@ -105,7 +105,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
    ![在啟動工作流程中選取目的地步驟。](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
-1. 選取您的對象。 使用對象名稱左側的核取方塊來選取您要啟用至目的地的對象，然後選取&#x200B;**[!UICONTROL Next]**。
+1. 選取您的對象。 使用對象名稱左邊的核取方塊來選取您要啟用至目的地的對象，然後選取&#x200B;**[!UICONTROL Next]**。
 
    您可以根據對象的來源，從多種對象型別中進行選取：
 

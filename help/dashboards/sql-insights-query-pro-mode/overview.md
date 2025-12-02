@@ -2,16 +2,16 @@
 title: 延伸應用程式報表的SQL深入分析
 description: 瞭解如何使用SQL查詢產生自訂儀表板的深入分析。
 exl-id: c60a9218-4ac0-4638-833b-bdbded36ddf5
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1510'
-ht-degree: 0%
+source-wordcount: '1445'
+ht-degree: 1%
 
 ---
 
-# 用於擴展應用程式報告的 SQL 深入解析
+# 用於擴展應用程式報告的 SQL 洞察
 
-使用自訂SQL查詢，從多樣的結構化資料集中有效擷取深入分析。 技術人員可以使用查詢專業模式來執行複雜的SQL分析，然後透過自訂儀表板上的圖表與非技術使用者共用此分析，或將其匯出為CSV檔案。 這種建立深入分析的方法非常適合具有明確關係的表格，並可讓您在深入分析和篩選器中更大程度的自訂，以適合利基使用案例。
+使用自訂SQL查詢，從多樣的結構化資料集中有效擷取深入分析。 技術人員可以使用查詢專業模式來執行複雜的SQL分析，然後透過自訂儀表板上的圖表與非技術使用者共用此分析，或將其匯出為CSV檔案。 這種insight建立方法非常適合具有明確關係的表格，並允許在您的見解和篩選器中進行更大程度的自訂，以適合利基使用案例。
 
 >[!IMPORTANT]
 >
@@ -21,23 +21,23 @@ ht-degree: 0%
 
 ## 建立自訂儀表板 {#create-custom-dashboard}
 
-若要建立自訂儀表板，請從左側導覽面板選取&#x200B;**[!UICONTROL 儀表板]**&#x200B;以開啟儀表板工作區。 接著，選取&#x200B;**[!UICONTROL 建立儀表板]**。
+若要建立自訂儀表板，請從左側導覽面板中選取&#x200B;**[!UICONTROL Dashboards]**&#x200B;以開啟儀表板工作區。 接著選取「**[!UICONTROL Create dashboard]**」。
 
 ![反白顯示[建立儀表板]的儀表板詳細目錄。](../images/sql-insights-query-pro-mode/create-dashboard.png)
 
-**[!UICONTROL 建立儀表板]**&#x200B;對話方塊就會顯示。 有兩個選項可供您選擇您的儀表板建立方法。 若要建立您的深入分析，您可以使用具有[[!UICONTROL 引導式設計模式]](../standard-dashboards.md)的現有資料模型，或您自己的SQL具有[!UICONTROL Query pro模式]。
+**[!UICONTROL Create dashboard]**&#x200B;對話方塊隨即顯示。 有兩個選項可供您選擇您的儀表板建立方法。 若要建立您的深入分析，您可以將現有的資料模型搭配[[!UICONTROL Guided design mode]](../standard-dashboards.md)使用，或將您自己的SQL搭配[!UICONTROL Query pro mode]使用。
 
 <!-- Maybe reference Guided design mode in other places on UDD doc. -->
 
 使用現有的資料模型，其優點在於提供結構化、有效率、可擴充的架構，因應您的特定業務需求而量身打造。 若要瞭解如何[從現有資料模型](../standard-dashboards.md#create-widget)建立深入分析，請參閱自訂儀表板指南。
 
-從SQL查詢產生的深入分析提供更大的彈性和自訂性。 技術人員可以使用查詢專家模式對SQL執行複雜的分析，然後透過此儀表板功能與非技術使用者共用此分析。 選取&#x200B;**[!UICONTROL Query pro mode]**，然後選取&#x200B;**[!UICONTROL 儲存]**。
+從SQL查詢產生的深入分析提供更大的彈性和自訂性。 技術人員可以使用查詢專家模式對SQL執行複雜的分析，然後透過此儀表板功能與非技術使用者共用此分析。 選取&#x200B;**[!UICONTROL Query pro mode]**，接著選取&#x200B;**[!UICONTROL Save]**。
 
 >[!NOTE]
 >
 >選取後，就無法在該控制面板中變更此選取專案。 相反地，您必須使用不同的儀表板建立方法來建立新的儀表板。
 
-![以Query pro模式和[儲存]反白顯示的[!UICONTROL 建立儀表板]對話方塊。](../images/sql-insights-query-pro-mode/query-pro-mode.png)
+![反白顯示[Query pro]模式和[Save]的[!UICONTROL Create dashboard]對話方塊。](../images/sql-insights-query-pro-mode/query-pro-mode.png)
 
 ## Query pro模式概觀 {#query-pro-mode}
 
@@ -45,15 +45,15 @@ Query pro模式是一種SQL編輯器型工作流程，可引導您在Adobe Exper
 
 ## 撰寫SQL {#compose-sql}
 
-當您選擇以查詢專業模式建立儀表板後，**[!UICONTROL 進入SQL]**&#x200B;對話方塊就會顯示。 從下拉式選單中選取要查詢的資料庫（見解資料模型），然後在查詢專家編輯器中為您的資料集輸入合適的查詢。
+當您選擇使用查詢專業模式建立儀表板後，**[!UICONTROL Enter SQL]**&#x200B;對話方塊就會顯示。 從下拉式選單中選取要查詢的資料庫（見解資料模型），然後在查詢專家編輯器中為您的資料集輸入合適的查詢。
 
 >[!NOTE]
 >
->查詢專業模式僅適用於已購買Data Distiller SKU的使用者。 [[!UICONTROL 引導式設計模式]](../standard-dashboards.md)可供所有使用者從現有資料模型建立深入分析。
+>查詢專業模式僅適用於已購買Data Distiller SKU的使用者。 [[!UICONTROL Guided design mode]](../standard-dashboards.md)可供所有使用者從現有資料模型建立深入分析。
 
 請參閱[查詢編輯器使用手冊](../../query-service/ui/user-guide.md#query-authoring)，瞭解其UI元素的資訊。
 
-![此對話方塊[!UICONTROL 輸入SQL]並反白顯示資料集下拉式功能表和執行圖示。此對話方塊已填入SQL查詢，且顯示查詢引數索引標籤。](../images/sql-insights-query-pro-mode/enter-sql-database-dropdown.png)
+![包含資料集下拉式功能表和執行圖示的[!UICONTROL Enter SQL]對話方塊已反白顯示，此對話方塊已填入SQL查詢，且顯示查詢引數索引標籤。](../images/sql-insights-query-pro-mode/enter-sql-database-dropdown.png)
 
 ### 查詢參數 {#query-parameters}
 
@@ -63,23 +63,23 @@ Query pro模式是一種SQL編輯器型工作流程，可引導您在Adobe Exper
 >
 >如果要使用全域篩選，您必須在SQL中放置查詢引數，然後將該查詢引數連結到Widget撰寫器中的全域篩選。 在下方的熒幕擷圖中，`CONSENT_VALUE_FILTER`在SQL中作為全域篩選的查詢引數使用。 如需如何執行此動作的詳細資訊，請參閱[全域篩選檔案](./filters/global-filter.md#enable-global-filter)。
 
-若要執行查詢，請選取執行圖示(![執行圖示。](/help/images/icons/play.png))。 「查詢編輯器」會顯示結果標籤。 接下來，若要確認您的設定並開啟Widget Composer，請選取&#x200B;**[!UICONTROL 選取]**。
+若要執行查詢，請選取執行圖示(![執行圖示。](/help/images/icons/play.png))。 「查詢編輯器」會顯示結果標籤。 接下來，若要確認您的設定並開啟Widget撰寫器，請選取「**[!UICONTROL Select]**」。
 
 >[!TIP]
 >
 >如果您的查詢使用查詢引數，請執行一次查詢以預先填入所有使用的查詢引數索引鍵。 查詢將會失敗，但UI會自動顯示查詢引數索引標籤並列出所有包含的索引鍵。 為您的金鑰新增適當的值。
 
-![包含SQL輸入的[!UICONTROL 輸入SQL]對話方塊、顯示的結果索引標籤，以及反白顯示的[選取]。](../images/sql-insights-query-pro-mode/enter-sql-select.png)
+![含有SQL輸入的[!UICONTROL Enter SQL]對話方塊、顯示的結果索引標籤，以及反白顯示的[選取]。](../images/sql-insights-query-pro-mode/enter-sql-select.png)
 
 ## 填入Widget {#populate-widget}
 
-Widget撰寫器現在會填入已執行SQL中的欄。 儀表板型別會顯示在左上方，在此例中是[!UICONTROL 手動SQL專案]。 選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))隨時編輯SQL。
+Widget撰寫器現在會填入已執行SQL中的欄。 儀表板型別會顯示在左上方，在此例中為[!UICONTROL Manual SQL Entry]。 選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))隨時編輯SQL。
 
 >[!TIP]
 >
 >可用的屬性是從已執行SQL中取得的資料行。
 
-若要建立您的Widget，請使用[!UICONTROL 屬性]欄中列出的屬性。 您可以使用搜尋列來尋找屬性或捲動清單。
+若要建立您的Widget，請使用[!UICONTROL Attributes]欄中列出的屬性。 您可以使用搜尋列來尋找屬性或捲動清單。
 
 ![建立方法與屬性資料行反白顯示的Widget撰寫器。](../images/sql-insights-query-pro-mode/creation-method-and-attribute-column.png)
 
@@ -87,7 +87,7 @@ Widget撰寫器現在會填入已執行SQL中的欄。 儀表板型別會顯示�
 
 若要新增屬性至您的Widget，請選取加號圖示(![A加號圖示。](/help/images/icons/add-circle.png))。 顯示的下拉式功能表可讓您從SQL決定的選項將屬性加入圖表。 不同的圖表型別有不同的選項，例如X軸和Y軸下拉式清單。
 
-在此環形圖範例中，選項為大小和顏色。 顏色會劃分環圈圖結果，而大小是實際使用的量度。 將屬性新增至[!UICONTROL Color]欄位，以便根據結果的該屬性構成將結果分割成不同的顏色。
+在此環形圖範例中，選項為大小和顏色。 顏色會劃分環圈圖結果，而大小是實際使用的量度。 將屬性新增到[!UICONTROL Color]欄位，以根據結果的該屬性構成將結果分割成不同的顏色。
 
 >[!TIP]
 >
@@ -95,33 +95,33 @@ Widget撰寫器現在會填入已執行SQL中的欄。 儀表板型別會顯示�
 
 ![Widget Composer的add-icon下拉式清單和切換箭頭已反白顯示。](../images/sql-insights-query-pro-mode/add-icon-and-switch-arrows.png)
 
-若要變更Widget的圖形或圖表型別，請從[!UICONTROL 標籤]下拉式清單的可用選項中選取。 選項包括[!UICONTROL Line]、[!UICONTROL Donut]、[!UICONTROL Big number]和[!UICONTROL Bar]。 選取後，系統會產生Widget目前設定的預覽視覺效果。
+若要變更Widget的圖形或圖表型別，請從[!UICONTROL Marks]下拉式清單的可用選項中選取。 選項包括[!UICONTROL Line]、[!UICONTROL Donut]、[!UICONTROL Big number]和[!UICONTROL Bar]。 選取後，系統會產生Widget目前設定的預覽視覺效果。
 
 ![醒目提示Widget預覽的Widget Composer。](../images/sql-insights-query-pro-mode/widget-preview.png)
 
 ## 進階表格屬性 {#advanced-attributes}
 
-若要套用表格中任何或所有欄的自動排序功能，請選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以編輯整個儀表板。
+若要套用表格中任何或所有欄的自動排序功能，請選取&#x200B;**[!UICONTROL Edit]**&#x200B;以編輯整個儀表板。
 
 ![醒目提示編輯的自訂儀表板。](../images/sql-insights-query-pro-mode/advanced-edit-dashboard.png)
 
-在表格圖表中選取要新增欄排序的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 編輯]**。
+在表格圖表中選取要新增欄排序的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL Edit]**。
 
 ![顯示[編輯]醒目提示的省略符號功能表的表格。](../images/sql-insights-query-pro-mode/advanced-table-edit.png)
 
-若要啟用任何欄的排序，請核取&#x200B;**[!UICONTROL 可排序]**&#x200B;方塊。
+若要啟用任何欄的排序，請核取&#x200B;**[!UICONTROL Sortable]**&#x200B;方塊。
 
 ![以可排序核取方塊標示的表格編輯頁面。](../images/sql-insights-query-pro-mode/advanced-table-sortable.png)
 
-選取屬性圖示(![屬性圖示。](/help/images/icons/properties.png))以開啟[!UICONTROL 屬性]面板。 在&#x200B;**[!UICONTROL 屬性]**&#x200B;面板中，使用下拉式清單來選取&#x200B;**[!UICONTROL 預設排序]**&#x200B;資料行，然後使用下拉式清單來選取&#x200B;**[!UICONTROL 排序方向]**。 最後，選取&#x200B;**[!UICONTROL 儲存並關閉]**。
+選取屬性圖示(![屬性圖示。](/help/images/icons/properties.png))以開啟[!UICONTROL Properties]面板。 在&#x200B;**[!UICONTROL Properties]**&#x200B;面板中，使用下拉式清單來選取&#x200B;**[!UICONTROL Default sort]**&#x200B;欄，然後使用下拉式清單來選取&#x200B;**[!UICONTROL Sort direction]**。 最後，選取&#x200B;**[!UICONTROL Save and close]**。
 
 ![具有屬性圖示、預設排序、排序方向以及儲存和關閉的Widget撰寫器會反白顯示。](../images/sql-insights-query-pro-mode/advanced-table-properties.png)
 
 若要進一步瞭解如何使用排序、調整欄大小和分頁功能，請參閱[檢視更多](./view-more.md)。
 
-## Widget 屬性 {#properties}
+## 小工具屬性 {#properties}
 
-選取屬性圖示(![屬性圖示。](/help/images/icons/properties.png))以開啟屬性面板。 在[!UICONTROL 屬性]面板的&#x200B;**[!UICONTROL Widget標題]**&#x200B;文字欄位中，輸入Widget的名稱。 您也可以重新命名圖表的各個方面。
+選取屬性圖示(![屬性圖示。](/help/images/icons/properties.png))以開啟屬性面板。 在[!UICONTROL Properties]面板的&#x200B;**[!UICONTROL Widget title]**&#x200B;文字欄位中，輸入Widget的名稱。 您也可以重新命名圖表的各個方面。
 
 >[!NOTE]
 >
@@ -131,21 +131,21 @@ Widget撰寫器現在會填入已執行SQL中的欄。 儀表板型別會顯示�
 
 ## 儲存您的Widget {#save-widget}
 
-在Widget Composer中儲存時，會將Widget本機儲存至您的儀表板。 如果您要儲存工作並稍後繼續，請選取&#x200B;**[!UICONTROL 儲存]**。 Widget名稱下方的勾號圖示表示已儲存Widget。 或者，當您滿意您的Widget時，選取&#x200B;**[!UICONTROL 儲存並關閉]**，讓其他所有可存取您控制面板的使用者都能使用此Widget。 選取「取消」以放棄您的工作並返回您的自訂儀表板。
+在Widget Composer中儲存時，會將Widget本機儲存至您的儀表板。 如果您要儲存工作並稍後繼續，請選取&#x200B;**[!UICONTROL Save]**。 Widget名稱下方的勾號圖示表示已儲存Widget。 或者，在您滿意您的Widget後，選取「**[!UICONTROL Save and close]**」，讓其他可存取您控制面板的使用者也能使用此Widget。 選取「取消」以放棄您的工作並返回您的自訂儀表板。
 
 ![含有「儲存」、「Widget已儲存」和「儲存並關閉」的Widget撰寫器反白顯示。](../images/sql-insights-query-pro-mode/insight-saved.png)
 
 ## 編輯您的儀表板和圖表 {#edit}
 
-選取「**[!UICONTROL 編輯]**」以編輯您的整個儀表板或任何深入分析。 從編輯模式中，您可以調整Widget的大小、編輯SQL，或建立並套用全域和暫時性篩選器。 這些篩選器會限制儀表板Widget中顯示的資料。 這是快速更新和微調不同使用案例深入分析的便利方式。
+選取「**[!UICONTROL Edit]**」以編輯您的整個儀表板或任何深入分析。 從編輯模式中，您可以調整Widget的大小、編輯SQL，或建立並套用全域和暫時性篩選器。 這些篩選器會限制儀表板Widget中顯示的資料。 這是快速更新和微調不同使用案例深入分析的便利方式。
 
 ![醒目提示編輯的自訂儀表板。](../images/sql-insights-query-pro-mode/edit-dashboard.png)
 
-選取&#x200B;**[!UICONTROL 新增篩選器]**&#x200B;以建立[[!UICONTROL 日期篩選器]](#create-date-filter)或[[!UICONTROL 全域篩選器]](#create-global-filter)。 建立後，所有全域和日期篩選器都可以從[篩選器圖示](#select-global-filter) (![篩選器圖示。](/help/images/icons/filter.png))。
+選取&#x200B;**[!UICONTROL Add filter]**&#x200B;以建立[[!UICONTROL Date filter]](#create-date-filter)或[[!UICONTROL Global filter]](#create-global-filter)。 建立後，所有全域和日期篩選器都可以從[篩選器圖示](#select-global-filter) (![篩選器圖示。](/help/images/icons/filter.png))。
 
 ![反白顯示[新增篩選器]下拉式選單的自訂儀表板。](../images/sql-insights-query-pro-mode/add-filter.png)
 
-## 編輯、複製或刪除分析
+## 編輯、複製或刪除insight
 
 請參閱自訂儀表板指南，取得如何[編輯、複製或刪除現有Widget](../standard-dashboards.md#duplicate)的說明。
 

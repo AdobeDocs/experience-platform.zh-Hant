@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 ## 快速入門
 
@@ -109,7 +109,7 @@ Adobe如果您的生產沙箱包含：
 如果您想要針對CRMID保留已驗證的事件，則建議您將主要ID從ECID變更為CRMID。 請閱讀下列檔案，以瞭解如何實作此變更的步驟：
 
 * [設定Experience Platform標籤的身分對應](../tags/extensions/client/web-sdk/data-element-types.md#identity-map)。
-* [Experience Platform Web SDK中的身分資料](../web-sdk/identity/overview.md#using-identitymap)
+* [Experience Platform Web SDK中的身分資料](/help/collection/use-cases/identity/id-overview.md)
 
 ### 範例情境
 
@@ -137,19 +137,19 @@ Adobe如果您的生產沙箱包含：
 * 下圖假設在`timestamp=50`，身分圖表中有50個身分。
 * `(...)`表示圖形內已連結的其他身分。
 
-在此範例中，ECID：32110已擷取並連結至`timestamp=51`處的大型圖表，因此超過50個身分的限制。
+在此範例中，ECID:32110已擷取並連結至`timestamp=51`的大型圖表，因此超過50個身分的限制。
 
 ![](./images/guardrails/before-split.png)
 
 >[!TAB 刪除程式]
 
-因此，Identity Service會根據時間戳記和身分型別刪除最舊的身分。 在此情況下，ECID：35577只會從身分圖表中刪除。
+因此，Identity Service會根據時間戳記和身分型別刪除最舊的身分。 在此情況下，只會從身分圖表刪除ECID:35577。
 
 ![](./images/guardrails/during-split.png)
 
 >[!TAB 圖表輸出]
 
-刪除ECID：35577後，連結CRMID：60013和CRMID：25212與現在已刪除的ECID：35577的邊緣也會被刪除。 此刪除程式會導致圖表被分割成兩個較小的圖表。
+刪除ECID:35577後，連結CRMID:60013和CRMID:25212與現在已刪除的ECID:35577的邊緣也會被刪除。 此刪除程式會導致圖表被分割成兩個較小的圖表。
 
 ![](./images/guardrails/after-split.png)
 
@@ -168,15 +168,15 @@ Adobe如果您的生產沙箱包含：
 
 透過刪除邏輯，某些「中樞」身分也可能會被刪除。 這些中心身分識別是指連結到多個單獨身分識別的節點，否則這些身分識別會解除連結。
 
-在以下範例中，ECID：21011已擷取並連結至位於`timestamp=51`的圖形，因此超過50個身分的限制。
+在下列範例中，ECID:21011已擷取並連結至位於`timestamp=51`的圖形，因此超過50個身分的限制。
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
 >[!TAB 刪除程式]
 
-因此，Identity Service只會從身分圖表刪除最舊的身分，此案例中為ECID：35577。 刪除ECID：35577也會導致以下刪除：
+因此，Identity Service只會從身分圖表刪除最舊的身分，在此案例中是ECID:35577。 刪除ECID:35577也會導致刪除下列專案：
 
-* CRMID：60013和現已刪除的ECID：35577之間的連結，因此會產生圖表分割情況。
+* CRMID： 60013與現已刪除的ECID:35577之間的連結，因此會產生圖表分割情境。
 * IDFA： 32110、IDFA： 02383以及`(...)`所代表的其餘身分。 這些身分會遭到刪除，因為個別身分不會連結至任何其他身分，因此無法在圖形中顯示。
 
 ![](./images/guardrails/hub-and-spoke-process.png)
@@ -199,7 +199,7 @@ Adobe如果您的生產沙箱包含：
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=zh-Hant#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform (B2C版本 — Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

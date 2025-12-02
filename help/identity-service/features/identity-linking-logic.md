@@ -2,7 +2,7 @@
 title: Identity Service連結邏輯
 description: 瞭解Identity Service如何連結不同的身分，以建立客戶的完整檢視。
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 3%
@@ -102,7 +102,7 @@ Identity Service可辨識您的圖形中已存在CRMID:60013ABC，因此僅連�
 | `t=3` | ECID:44675 | 檢視首頁 |
 | `t=4` | ECID:44675，CRMID： 31260XYZ | 檢視購買記錄 |
 
-每個事件的主要身分將會根據[您設定資料元素型別](../../tags/extensions/client/web-sdk/data-element-types.md)的方式而決定。
+每個事件的主要身分將會根據[您設定資料元素型別](/help/tags/extensions/client/web-sdk/data-element-types.md)的方式而決定。
 
 >[!NOTE]
 >

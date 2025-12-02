@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
 workflow-type: tm+mt
-source-wordcount: '2970'
+source-wordcount: '2949'
 ht-degree: 22%
 
 ---
@@ -12,20 +12,20 @@ ht-degree: 22%
 
 # Web SDK擴充功能發行說明
 
-本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/web-sdk/release-notes.md)。
+本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/collection/js/release-notes.md)。
 
 ## 2.33.0版 — 2025年9月24日
 
 **新功能**
 
-- 新增顯示推播通知的支援
-- 包含[2.30.0](../../../../web-sdk/release-notes.md#2-30-0)版的Adobe Experience Platform Web SDK。
+- 新增顯示推播通知的支援。
+- 包含[2.30.0](/help/collection/js/release-notes.md#2-30-0)版的Adobe Experience Platform Web SDK。
 
 ## 2.32.0版 — 2025年9月4日
 
 **新功能**
 
-- 包含[2.29.0](../../../../web-sdk/release-notes.md#2-29-0)版的Adobe Experience Platform Web SDK。
+- 包含[2.29.0](/help/collection/js/release-notes.md#2-29-0)版的Adobe Experience Platform Web SDK。
 - 新增Adobe Advertising作為新自訂建置元件的支援。 在擴充功能設定和傳送事件呼叫中設定。
 - 新增在「設定檔」中記錄推播訂閱詳細資料的支援。 這是透過新動作「推送訂閱詳細資料」
 
@@ -36,13 +36,13 @@ ht-degree: 22%
 ## 2.31.1版 — 2025年7月31日
 
 - 修正無法執行自訂組建的問題。
-- 包含[2.28.1](../../../../web-sdk/release-notes.md#2-28-1)版的Adobe Experience Platform Web SDK。
+- 包含[2.28.1](/help/collection/js/release-notes.md#2-28-1)版的Adobe Experience Platform Web SDK。
 
 ## 2.31.0版 — 2025年7月24日
 
 **新功能**
 
-- 包含[2.28.0](../../../../web-sdk/release-notes.md#2-28-0)版的Adobe Experience Platform Web SDK。
+- 包含[2.28.0](/help/collection/js/release-notes.md#2-28-0)版的Adobe Experience Platform Web SDK。
 
 **修正和改良**
 
@@ -52,7 +52,7 @@ ht-degree: 22%
 
 **已知問題**
 
-- 在v2.31.0發行後，發現[自訂元件組建](/help/web-sdk/install/create-custom-build.md)程式有問題。 當自訂組建繼續運作時，目前所有元件都包含在組建中，因此無論元件選取為何，都會產生完整大小的套件。 正在開發此問題的修正。 如果您仰賴自訂元件選擇來將建置大小減至最低，建議您等待未來版本。
+- 在v2.31.0發行後，發現[自訂元件組建](/help/collection/js/install/create-custom-build.md)程式有問題。 當自訂組建繼續運作時，目前所有元件都包含在組建中，因此無論元件選取為何，都會產生完整大小的套件。 正在開發此問題的修正。 如果您仰賴自訂元件選擇來將建置大小減至最低，建議您等待未來版本。
 
 ## 2.30.1版 — 2025年5月27日
 
@@ -66,7 +66,7 @@ ht-degree: 22%
 
 - 您現在可以在啟用第三方Cookie時指定資料元素。
 - 在程式碼欄位中新增清除按鈕。
-- 包含[2.27.0](../../../../web-sdk/release-notes.md#2-27-0)版的Adobe Experience Platform Web SDK。
+- 包含[2.27.0](/help/collection/js/release-notes.md)版的Adobe Experience Platform Web SDK。
 
 **修正和改良**
 
@@ -82,13 +82,13 @@ ht-degree: 22%
 
 **新功能**
 
-- 您現在可以建立自訂Web SDK組建，並從標籤擴充功能使用者介面選擇所需的元件。 透過排除未使用的元件，這可能會導致較小的組建。 請參閱有關[建立自訂Web SDK組建](web-sdk-extension-configuration.md#custom-build)的檔案。
-- 包含[2.26.0](../../../../web-sdk/release-notes.md#2-26-0)版的Adobe Experience Platform Web SDK。
+- 您現在可以建立自訂Web SDK組建，並從標籤擴充功能使用者介面選擇所需的元件。 透過排除未使用的元件，這可能會導致較小的組建。 請參閱[自訂組建元件](configure/custom-build-components.md)。
+- 包含[2.26.0](/help/collection/js/release-notes.md)版的Adobe Experience Platform Web SDK。
 
 **修正和改良**
 
-- 已在[更新變數](action-types.md#update-variable)動作中新增順利處理遺失的資料元素。 以往，在編輯缺少資料元素的更新變數動作時會顯示錯誤訊息。 現在，您可以選擇不同的資料元素，並且更新變數動作的所有設定仍會套用。 如果刪除資料元素或複製Tags屬性，資料元素可能會遺失。
-- 新增支援以[識別重新導向](action-types.md#redirect-with-identity)動作開啟新標籤。 現在，使用動作時，在重新導向瀏覽器時會使用錨點標籤的`target`屬性。
+- 已在[更新變數](actions/update-variable.md)動作中新增順利處理遺失的資料元素。 以往，在編輯缺少資料元素的更新變數動作時會顯示錯誤訊息。 現在，您可以選擇不同的資料元素，並且更新變數動作的所有設定仍會套用。 如果刪除資料元素或複製Tags屬性，資料元素可能會遺失。
+- 新增支援以[識別重新導向](actions/redirect-with-identity.md)動作開啟新標籤。 現在，使用動作時，在重新導向瀏覽器時會使用錨點標籤的`target`屬性。
 - 修正無法在設定覆寫中停用Adobe Audience Manager的問題。
 
 ## 2.28.0版 — 2025年1月23日
@@ -102,14 +102,14 @@ ht-degree: 22%
 **新功能**
 
 - 新增一項功能，可在XDM物件中的技術名稱和顯示名稱之間切換。
-- 包含[2.25.0](../../../../web-sdk/release-notes.md#2-25-0)版的Adobe Experience Platform Web SDK。
+- 包含[2.25.0](/help/collection/js/release-notes.md)版的Adobe Experience Platform Web SDK。
 
 ## 2.27.0版 — 2024年10月31日
 
 **新功能**
 
-- [資料流覆寫](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides)現在包含停用Experience Cloud解決方案和Adobe Experience Platform服務的設定。
-- 您現在可以為媒體工作階段建立[資料流覆寫](../web-sdk/web-sdk-extension-configuration.md)。
+- [設定覆寫](configure/configuration-overrides.md)現在包含停用Experience Cloud解決方案和Adobe Experience Platform服務的設定。
+- 您現在可以為媒體工作階段建立設定覆寫。
 
 包含2.24.0版的Adobe Experience Platform Web SDK。
 
@@ -126,12 +126,12 @@ ht-degree: 22%
 **新功能**
 
 - 已新增監視連結`triggered`事件。
-- [引導式事件](action-types.md#instance)、[要求預設個人化](action-types.md#personalization)、[訂閱規則集專案](event-types.md#subscribe-ruleset-items)和[評估規則集](action-types.md#evaluate-rulesets)現已普遍可用。
+- [引導式事件](actions/actions-overview.md)、[要求預設個人化](configure/personalization.md)、[訂閱規則集專案](event-types.md#subscribe-ruleset-items)和[評估規則集](actions/evaluate-rulesets.md)現已普遍可用。
 
 **修正和改良**
 
 - 修正重複的變數資料元素可能互相覆寫的問題。
-- 使用[要求預設個人化](action-types.md#personalization)引導式事件時，現在會自動啟用視覺個人化決定。
+- 使用[要求預設個人化](configure/personalization.md)引導式事件時，現在會自動啟用視覺個人化決定。
 
 包含2.22.0版的Adobe Experience Platform Web SDK。
 
@@ -159,16 +159,16 @@ ht-degree: 22%
 
 **新功能**
 
-- 新增擴充功能組態中[`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media)元件的支援。
-- 已新增[`Send Media Event`](action-types.md#send-media-event)功能的[!DNL Streaming Media Collection]動作。
+- 新增擴充功能組態中[`Streaming Media Collection`](configure/streaming-media.md)元件的支援。
+- 已新增[`Send Media Event`](actions/send-media-event.md)功能的[!DNL Streaming Media Collection]動作。
 - 已新增[`Media: Quality of Experience`](data-element-types.md#quality-experience)功能的[!DNL Streaming Media Collection]資料元素。
 
 包含2.20.0版的Adobe Experience Platform Web SDK。
 
 **修正和改良**
 
-- 修正搜尋[更新變數](action-types.md#update-variable)動作中的資料元素時發生的錯誤。
-- 已從建議用於[!UICONTROL 動作的事件型別中移除]媒體`sendEvent`事件型別。
+- 修正搜尋[更新變數](actions/update-variable.md)動作中的資料元素時發生的錯誤。
+- 已從建議用於[!UICONTROL Media]動作的事件型別中移除`sendEvent`個事件型別。
 
 ## 2.22.0版 — 2024年5月3日
 
@@ -235,7 +235,7 @@ ht-degree: 22%
 
 ## 2.19.0版 — 2023年6月21日
 
-- **[!UICONTROL 變數]**&#x200B;資料元素和&#x200B;**[!UICONTROL 更新變數]**&#x200B;動作現在已可供一般使用。
+- **[!UICONTROL Variable]**&#x200B;資料元素和&#x200B;**[!UICONTROL Update Variable]**&#x200B;動作現在已可供一般使用。
 
 ## 2.18.0版 — 2023年5月18日
 
@@ -261,12 +261,12 @@ ht-degree: 22%
 
 **新功能**
 
-- (Beta)已新增&#x200B;**[!UICONTROL 更新變數]**&#x200B;動作和&#x200B;**[!UICONTROL 變數]**&#x200B;資料元素。
-- 已新增[`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md)回呼函式的設定。
+- (Beta)已新增&#x200B;**[!UICONTROL Update variable]**&#x200B;動作和&#x200B;**[!UICONTROL Variable]**&#x200B;資料元素。
+- 已新增[`onBeforeLinkClickSend`](/help/collection/js/commands/configure/onbeforelinkclicksend.md)回呼函式的設定。
 
 **修正和改良**
 
-- 修正使用&#x200B;**[!UICONTROL 具有身分的重新導向]**&#x200B;動作時，點選錨點標籤內元素無法運作的問題。
+- 修正使用&#x200B;**[!UICONTROL Redirect with identity]**&#x200B;動作時，在錨點標籤內按一下元素無法運作的問題。
 - 修正只有一個結構描述時，XDM物件資料元素無法運作的問題。
 - 包含2.15.0版的Adobe Experience Platform Web SDK。
 
@@ -300,7 +300,7 @@ ht-degree: 22%
 ## 2.12.0版 — 2022年6月13日
 
 - 更新`identityMap`資料元素，以根據擴充功能設定所定義的沙箱填入名稱空間選項。
-- 已新增含身分的&#x200B;**[!UICONTROL 重新導向]**&#x200B;動作，以允許跨網域身分共用。
+- 已新增&#x200B;**[!UICONTROL Redirect with identity]**&#x200B;動作以允許跨網域身分共用。
 - 已新增檔案連結至`sendEvent`動作。
 - 升級React Spectrum UI程式庫。
 - 多項使用者介面增強功能。
@@ -385,10 +385,10 @@ ht-degree: 22%
 
 包含 2.4.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-- 已新增[「檔案正在解除安裝」](/help/web-sdk/commands/sendevent/documentunloading.md)核取方塊以傳送事件動作UI。
-- 新增對`out`選項的支援，當[設定預設同意](/help/web-sdk/commands/configure/defaultconsent.md)時，會捨棄所有事件直到收到同意為止（現有的`pending`選項會佇列事件，並在收到同意後傳送它們）。
+- 已將[檔案解除安裝]核取方塊新增至[傳送事件](actions/send-event.md)動作。
+- 新增對`out`選項的支援，當[設定預設同意](configure/consent.md)時，會捨棄所有事件直到收到同意為止（現有的`pending`選項會佇列事件，並在收到同意後傳送它們）。
 - 新增工具提示至預設同意欄位。
-- 新增使用[`setConsent`](/help/web-sdk/commands/setconsent.md)命令時對Adobe的Consent 2.0標準的支援。
+- 新增使用[`Set consent`](actions/set-consent.md)動作時Adobe的Consent 2.0標準支援。
 - 如果使用者的存取權杖無效或布建不正確，XDM物件資料元素UI中現在會顯示更好的錯誤。
 - 修正檢視XDM物件資料元素時，瀏覽器開發人員主控台顯示的跨來源錯誤（不會影響擴充功能的作業）。
 
@@ -413,7 +413,7 @@ ht-degree: 22%
 ## 2.1.0版 — 2020年8月5日
 
 - 重大變更：移除 `syncIdentity` 動作，並改為支援在 `sendEvent` 動作中傳遞這些 ID。升級擴充功能前，請使用此動作停用任何現有規則。
-- 更新至 Alloy v. 2.1.0 ([發行說明](/help/web-sdk/release-notes.md))
+- 已更新至Alloy 2.1.0版。
 - 在 `setConsent` 動作中支援 IAB 2.0 同意標準。
 - 支援在 `sendEvent` 動作中覆寫資料集 ID。
 - 新增全新的 `IdentityMap` 類型「資料元素」，可供在 XDM 物件資料元素 (現已啟用) 以及 `setConsent` 動作中填入 `identityMap` 項目。

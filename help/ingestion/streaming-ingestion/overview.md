@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 串流擷取概觀
 description: Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從使用者端和伺服器端裝置傳送資料至Experience Platform。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
+source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%
@@ -33,13 +33,13 @@ Adobe Experience Platform可讓您為每個個別客戶產生[!DNL Real-Time Cus
 
 一旦您確定您的資料是乾淨的，就可以為[!DNL Real-Time Customer Profile]和[!DNL Identity Service]啟用資料集。
 
-如需為[!DNL Profile]和[!DNL Identity Service]啟用資料集的詳細資訊，請參閱[設定資料集指南](../../profile/tutorials/dataset-configuration.md)。
+如需為[!DNL Profile]和[!DNL Identity Service]啟用資料集的詳細資訊，請參閱[設定資料集指南](/help/profile/tutorials/dataset-configuration.md)。
 
 ## 在Experience Platform上串流擷取預計會延遲多久？
 
 >[!IMPORTANT]
 >
->串流擷取的護欄會繫結至與整個組織對應的授權使用權益總計。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需授權使用權益的詳細資訊，請閱讀[資料管理最佳實務指南](../../landing/license-usage-and-guardrails/data-management-best-practices.md)。 若要瞭解如何設定串流輸送量的限制，請閱讀[容量概觀](../../landing/license-usage-and-guardrails/capacity.md)。
+>串流擷取的護欄會繫結至與整個組織對應的授權使用權益總計。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需授權使用權益的詳細資訊，請閱讀[資料管理最佳實務指南](/help/landing/license-usage-and-guardrails/data-management-best-practices.md)。 若要瞭解如何設定串流輸送量的限制，請閱讀[容量概觀](../../landing/license-usage-and-guardrails/capacity.md)。
 
 | 目標 | 預期延遲 |
 | --------- | ---------------- |
@@ -61,4 +61,4 @@ Adobe Experience Platform可讓您為每個個別客戶產生[!DNL Real-Time Cus
 
 ## Adobe Experience Platform擴充功能
 
-您可以使用Adobe Experience Platform擴充功能來建立新的串流連線。 [!DNL Experience Platform]擴充功能提供動作，可傳送格式化為[!DNL Experience Data Model] (XDM)的信標以即時擷取至[!DNL Experience Platform]。 如需詳細資訊，請造訪[Experience Platform擴充功能](../../tags/extensions/client/web-sdk/overview.md)檔案。
+您可以使用Adobe Experience Platform擴充功能來建立新的串流連線。 [!DNL Experience Platform]擴充功能提供動作，可傳送格式化為[!DNL Experience Data Model] (XDM)的信標以即時擷取至[!DNL Experience Platform]。 如需詳細資訊，請造訪[Experience Platform擴充功能](/help/tags/extensions/client/web-sdk/overview.md)檔案。

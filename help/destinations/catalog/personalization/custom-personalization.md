@@ -3,7 +3,7 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者設定檔對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 9%
@@ -37,9 +37,9 @@ ht-degree: 9%
 
 根據您的實作，此目的地需要使用下列其中一個資料收集方法：
 
-* 如果您想要從網站收集資料，請使用[Adobe Experience Platform Web SDK](/help/web-sdk/home.md)。
+* 如果您想要從網站收集資料，請使用[Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)。
 * 如果您想要從行動應用程式收集資料，請使用[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)。
-* 如果您未使用[網頁SDK](https://developer.adobe.com/data-collection-apis/docs/)或[行動SDK](/help/web-sdk/home.md)，或您想要根據設定檔屬性個人化使用者體驗，請使用[Edge Network API](https://developer.adobe.com/client-sdks/documentation/)。
+* 如果您未使用Web SDK或Mobile SDK，或您想要根據設定檔屬性個人化使用者體驗，請使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)。
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ ht-degree: 9%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流"
 >abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含對象。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 > 
@@ -108,7 +108,7 @@ ht-degree: 9%
 
 ## 匯出的資料 {#exported-data}
 
-如果您使用Adobe Experience Platform[中的](../../../tags/home.md)標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](../../../tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
+如果您使用Adobe Experience Platform[中的](/help/tags/home.md)標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](/help/tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
 
 以下是`event.destinations`變數的範例值：
 
@@ -130,7 +130,7 @@ ht-degree: 9%
 ]
 ```
 
-如果您不是使用[標籤](/help/tags/home.md)來部署Experience Platform Web SDK，請使用[命令回應](/help/web-sdk/commands/command-responses.md)來檢視匯出的資料。
+如果您不是使用[標籤](/help/tags/home.md)來部署Experience Platform Web SDK，請使用[命令回應](/help/collection/js/commands/command-responses.md)來檢視匯出的資料。
 
 來自Adobe Experience Platform的JSON回應可加以剖析，以找出您要與Adobe Experience Platform整合之應用程式的對應整合別名。 對象ID可傳入應用程式的程式碼中作為定位引數。 以下是目標回應特有的內容範例。
 

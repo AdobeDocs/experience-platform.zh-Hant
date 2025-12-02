@@ -1,20 +1,20 @@
 ---
-title: Web SDK擴充功能概觀
-description: 瞭解Adobe Experience Platform中的Web SDK標籤擴充功能。
+title: Web SDK標籤擴充功能概觀
+description: 瞭解Adobe Experience Platform Data Collection中的Web SDK標籤擴充功能。
 exl-id: 2bc738b9-5939-47a6-a829-429937e4c673
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 34%
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform Web SDK擴充功能概觀
+# Adobe Experience Platform Web SDK標籤擴充功能概觀
 
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+Adobe Experience Platform Web SDK標籤擴充功能會透過Adobe Experience Platform Edge Network，將資料從Web屬性傳送至Adobe Experience Cloud。 Experience Platform Web SDK擴充功能可將資料串流至平台、同步身分、選擇加入並自動收集內容資料。
 
-Adobe Experience Platform Web SDK擴充功能會透過Adobe Experience Platform Edge Network，將資料從Web屬性傳送至Adobe Experience Cloud。 Experience Platform Web SDK擴充功能可將資料串流至平台、同步身分、選擇加入並自動收集內容資料。
+請參閱[快速入門](getting-started.md)，瞭解如何設定和部署此標籤延伸以開始收集資料。
 
-如需有關設定Experience Platform Web SDK擴充功能的詳細資訊，請參閱[設定Web SDK標籤擴充功能](web-sdk-extension-configuration.md)。
+觀看以下影片以檢視Adobe Experience Platform [!DNL Web SDK]和[!DNL Edge Network]的實際運作情況，使用單一呼叫將資料傳送至[!DNL Experience Platform]、[!DNL Analytics]、[!DNL Audience Manager]和[!DNL Target]。
+
+>[!VIDEO](https://video.tv.adobe.com/v/34148)

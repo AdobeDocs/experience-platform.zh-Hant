@@ -2,7 +2,7 @@
 title: 命名空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 2%
@@ -65,7 +65,7 @@ ht-degree: 2%
 
 ## 名稱空間優先順序使用方式
 
-目前，名稱空間優先順序會影響即時客戶個人檔案的系統行為。 下圖說明了此概念。 如需詳細資訊，請閱讀[Adobe Experience Platform和應用程式架構圖](https://experienceleague.adobe.com/zh-hant/docs/blueprints-learn/architecture/architecture-overview/platform-applications)的指南。
+目前，名稱空間優先順序會影響即時客戶個人檔案的系統行為。 下圖說明了此概念。 如需詳細資訊，請閱讀[Adobe Experience Platform和應用程式架構圖](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications)的指南。
 
 ![名稱空間優先順序應用程式範圍的圖表。](../images/namespace-priority/application-scope.png "名稱空間優先順序應用程式範圍的圖表。"){zoomable="yes"}
 
@@ -82,7 +82,7 @@ ht-degree: 2%
    * 任何在XDM體驗事件類別結構描述上標示為主要身分的欄位。
    * Adobe Analytics來源聯結器（ECID或AAID）中的預設主要身分設定。
 * 另一方面，**名稱空間優先順序不會決定設定檔記錄**&#x200B;的主要身分。
-   * 針對設定檔記錄，您應該繼續在結構描述中定義身分欄位，包括主要身分。 如需詳細資訊，請參閱[在UI](../../xdm/ui/fields/identity.md)中定義身分欄位的指南。
+   * 針對設定檔記錄，您應該繼續在結構描述中定義身分欄位，包括主要身分。 如需詳細資訊，請參閱[在UI](/help/xdm/ui/fields/identity.md)中定義身分欄位的指南。
 
 >[!TIP]
 >
@@ -148,23 +148,23 @@ ht-degree: 2%
 * 即時客戶設定檔：刪除任何將指定身分識別為主要身分的設定檔片段。 **設定檔上的主要身分現在將根據名稱空間優先順序來判定。**
 * 資料湖：刪除任何以指定身分作為主要身分的記錄。 與即時客戶設定檔不同，資料湖中的主要身分是以WebSDK (`primary=true`)上指定的主要身分或標示為主要身分的欄位為基礎
 
-如需詳細資訊，請閱讀[進階生命週期管理概觀](../../hygiene/home.md)。
+如需詳細資訊，請閱讀[進階生命週期管理概觀](/help/hygiene/home.md)。
 
 ### 計算屬性
 
-如果啟用身分設定，則計算屬性將使用名稱空間優先順序來儲存計算屬性值。 對於指定的事件，具有最高名稱空間優先順序的身分將會擁有針對其寫入的計算屬性的值。 如需詳細資訊，請閱讀[計算屬性UI指南](../../profile/computed-attributes/ui.md)。
+如果啟用身分設定，則計算屬性將使用名稱空間優先順序來儲存計算屬性值。 對於指定的事件，具有最高名稱空間優先順序的身分將會擁有針對其寫入的計算屬性的值。 如需詳細資訊，請閱讀[計算屬性UI指南](/help/profile/computed-attributes/ui.md)。
 
 ### 資料湖
 
-資料湖的資料擷取將繼續遵循在[網頁SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map)和結構描述上設定的主要身分設定。
+資料湖的資料擷取將繼續遵循在[網頁SDK](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map)和結構描述上設定的主要身分設定。
 
 資料湖不會根據名稱空間優先順序來判斷主要身分。 例如，即使在啟用名稱空間優先順序（例如將資料集新增至新連線）後，Adobe Customer Journey Analytics仍會繼續使用身分對應中的值，因為Customer Journey Analytics會消耗其來自資料湖的資料。
 
 ### Experience Data Model (XDM)結構
 
-任何不是XDM體驗事件的結構描述（例如XDM個別設定檔）將繼續遵循您標籤為身分的任何[欄位](../../xdm/ui/fields/identity.md)。
+任何不是XDM體驗事件的結構描述（例如XDM個別設定檔）將繼續遵循您標籤為身分的任何[欄位](/help/xdm/ui/fields/identity.md)。
 
-如需有關XDM結構描述的詳細資訊，請閱讀[結構描述概觀](../../xdm/home.md)。
+如需有關XDM結構描述的詳細資訊，請閱讀[結構描述概觀](/help/xdm/home.md)。
 
 ### Intelligent services
 
@@ -175,7 +175,7 @@ ht-degree: 2%
 
 此設定導致僅使用已驗證的事件計算分數。
 
-如需詳細資訊，請閱讀[Attribution AI](../../intelligent-services/attribution-ai/overview.md)和[Customer AI](../../intelligent-services/customer-ai/overview.md)上的檔案。
+如需詳細資訊，請閱讀[Attribution AI](/help/intelligent-services/attribution-ai/overview.md)和[Customer AI](/help/intelligent-services/customer-ai/overview.md)上的檔案。
 
 ### 合作夥伴建立的目的地
 
@@ -184,7 +184,7 @@ ht-degree: 2%
 * 對象資格僅以匿名活動為基礎。
 * 在短時間內可以跨多個設定檔登入。
 
-如需合作夥伴建立的目的地詳細資訊，請閱讀[目的地概觀](../../destinations/home.md#adobe-built-and-partner-built-destinations)。
+如需合作夥伴建立的目的地詳細資訊，請閱讀[目的地概觀](/help/destinations/home.md#adobe-built-and-partner-built-destinations)。
 
 ### 隱私權服務
 
@@ -193,7 +193,7 @@ ht-degree: 2%
 * 即時客戶設定檔：刪除任何將指定身分值作為主要身分的設定檔片段。 **設定檔上的主要身分現在將根據名稱空間優先順序來判定。**
 * 資料湖：刪除具有指定身分作為主要或次要身分的任何記錄。
 
-如需詳細資訊，請閱讀[隱私權服務概觀](../../privacy-service/home.md)。
+如需詳細資訊，請閱讀[隱私權服務概觀](/help/privacy-service/home.md)。
 
 ### Edge細分和Edge Network應用程式
 
@@ -204,17 +204,17 @@ ht-degree: 2%
 
 #### 邊緣分段
 
-在指定的事件中，請確定所有代表個人實體的名稱空間都包含在`identityMap`中，因為會忽略以XDM欄位[傳送的](../../xdm/ui/fields/identity.md)身分，且不會用於區段會籍中繼資料儲存。
+在指定的事件中，請確定所有代表個人實體的名稱空間都包含在`identityMap`中，因為會忽略以XDM欄位[傳送的](/help/xdm/ui/fields/identity.md)身分，且不會用於區段會籍中繼資料儲存。
 
-* **事件適用性**：此行為僅適用於直接傳送至Edge Network的事件(例如WebSDK和Mobile SDK)。 從[Experience Platform中心](../../landing/edge-and-hub-comparison.md)擷取的事件（例如透過HTTP API來源、其他串流來源及批次來源擷取的事件）不受此限制。
-* **Edge分段特殊性**：此行為是邊緣分段所特有的。 批次和串流區段是集線器上評估的獨立服務，不會遵循相同程式。 如需詳細資訊，請參閱[邊緣分段指南](../../segmentation/methods/edge-segmentation.md)。
-* 如需詳細資訊，請閱讀[Adobe Experience Platform和應用程式架構圖](https://experienceleague.adobe.com/zh-hant/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)和[Edge Network與集線器比較](../../landing/edge-and-hub-comparison.md)頁面。
+* **事件適用性**：此行為僅適用於直接傳送至Edge Network的事件(例如WebSDK和Mobile SDK)。 從[Experience Platform中心](/help/landing/edge-and-hub-comparison.md)擷取的事件（例如透過HTTP API來源、其他串流來源及批次來源擷取的事件）不受此限制。
+* **Edge分段特殊性**：此行為是邊緣分段所特有的。 批次和串流區段是集線器上評估的獨立服務，不會遵循相同程式。 如需詳細資訊，請參閱[邊緣分段指南](/help/segmentation/methods/edge-segmentation.md)。
+* 如需詳細資訊，請閱讀[Adobe Experience Platform和應用程式架構圖](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram)和[Edge Network與集線器比較](/help/landing/edge-and-hub-comparison.md)頁面。
 
 #### Edge Network應用程式
 
 若要確保Edge Network上的應用程式能立即存取Edge設定檔，請確定您的事件包含CRMID上的`primary=true`。 這可確保立即可用，而無需等待來自中樞的身分圖表更新。
 
 * Edge Network上的應用程式(例如Adobe Target、Offer Decisioning和自訂Personalization目的地)將繼續取決於事件中的主要身分，以從Edge設定檔存取設定檔。
-* 閱讀[Experience Platform Web SDK &amp; Edge Network架構圖](https://experienceleague.adobe.com/zh-hant/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)，瞭解Edge Network行為的詳細資訊。
-* 如需如何在Web SDK[上設定主要身分的詳細資訊，請閱讀有關](../../tags/extensions/client/web-sdk/data-element-types.md)資料元素型別[和](../../web-sdk/identity/overview.md)Web SDK中的身分資料的檔案。
+* 閱讀[Experience Platform Web SDK &amp; Edge Network架構圖](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment)，瞭解Edge Network行為的詳細資訊。
+* 如需如何在Web SDK[上設定主要身分的詳細資訊，請閱讀有關](/help/tags/extensions/client/web-sdk/data-element-types.md)資料元素型別[和](/help/collection/use-cases/identity/id-overview.md)Web SDK中的身分資料的檔案。
 * 確認ECID包含在體驗事件中。 如果ECID遺失，則會將其新增至具有`primary=true`的事件裝載，這可能會導致未預期的結果。

@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
+source-git-commit: 8d3da7f33aefa822e24bd60168760d856a85865f
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2088'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,10 @@ ht-degree: 0%
 
 有關建立和設定技術帳戶的其他指引，請參閱：
 
-- [Developer Console安裝程式](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)：設定Adobe Developer Console及取得OAuth憑證的逐步指示。
-- [端對端技術帳戶設定](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorial-comprehensive-technical/setup)：在Adobe Experience Platform中建立和設定技術帳戶的完整逐步解說。
+- [Developer Console安裝程式](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman)：設定Adobe Developer Console及取得OAuth憑證的逐步指示。
+- [端對端技術帳戶設定](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup)：在Adobe Experience Platform中建立和設定技術帳戶的完整逐步解說。
 
-如果您只使用查詢服務UI，請確保您擁有必要許可權，或請和管理技術帳戶的管理員進行協調。 任何已排程的查詢都會新增到[!UICONTROL 已排程的查詢]索引標籤的清單中，您可以在此監視所有已排程查詢工作的狀態、排程詳細資料和錯誤訊息，以及訂閱警示。 如需有關監視和管理查詢的詳細資訊，請參閱[監視排定的查詢檔案](./monitor-queries.md)。
+如果您只使用查詢服務UI，請確保您擁有必要許可權，或請和管理技術帳戶的管理員進行協調。 任何已排程的查詢都會新增至[!UICONTROL Scheduled queries]索引標籤中的清單，您可在此監視所有已排程查詢工作的狀態、排程詳細資料和錯誤訊息，以及訂閱警示。 如需有關監視和管理查詢的詳細資訊，請參閱[監視排定的查詢檔案](./monitor-queries.md)。
 
 此工作流程涵蓋查詢服務UI中的排程程式。 若要瞭解如何使用API新增排程，請參閱[排程查詢端點指南](../api/scheduled-queries.md)。
 
@@ -38,23 +38,23 @@ ht-degree: 0%
 
 ## 建立查詢排程 {#create-schedule}
 
-若要排程查詢，請從[!UICONTROL 排程查詢]索引標籤的[!UICONTROL 範本]索引標籤或[!UICONTROL 範本]資料行中選取查詢範本。 選取範本名稱可將您導覽至查詢編輯器。
+若要排程查詢，請從[!UICONTROL Templates]索引標籤的[!UICONTROL Template]索引標籤或[!UICONTROL Scheduled Queries]資料行中選取查詢範本。 選取範本名稱可將您導覽至查詢編輯器。
 
 如果您從「查詢編輯器」存取已儲存的查詢，則可以建立查詢的排程，或從詳細資訊面板檢視查詢的排程。
 
 >[!TIP]
 >
->選取&#x200B;**[!UICONTROL 檢視排程]**&#x200B;以瀏覽至排程工作區，並快速檢視任何排程的查詢執行。
+>選取&#x200B;**[!UICONTROL View schedule]**&#x200B;以瀏覽至排程工作區，並快速檢視任何排程的查詢執行。
 
-![具有[!UICONTROL 檢視排程]和[!UICONTROL 新增排程]的查詢編輯器已強調顯示。](../images/ui/query-schedules/view-add-schedule.png)
+![已反白顯示[!UICONTROL View schedule]和[!UICONTROL Add schedule]的查詢編輯器。](../images/ui/query-schedules/view-add-schedule.png)
 
-選取&#x200B;**[!UICONTROL 新增排程]**&#x200B;以瀏覽至[排程詳細資料頁面](#schedule-details)。
+選取&#x200B;**[!UICONTROL Add schedule]**&#x200B;以瀏覽至[排程詳細資料頁面](#schedule-details)。
 
-或者，選取查詢名稱下方的&#x200B;**[!UICONTROL 排程]**&#x200B;索引標籤。
+或者，選取查詢名稱下方的&#x200B;**[!UICONTROL Schedules]**&#x200B;索引標籤。
 
 ![反白顯示[排程]索引標籤的[查詢編輯器]。](../images/ui/query-schedules/schedules-tab.png)
 
-排程工作區隨即顯示。 UI會顯示與範本相關聯之任何已排程執行的清單。 選取&#x200B;**[!UICONTROL 新增排程]**&#x200B;以建立排程。
+排程工作區隨即顯示。 UI會顯示與範本相關聯之任何已排程執行的清單。 選取&#x200B;**[!UICONTROL Add Schedule]**&#x200B;以建立排程。
 
 ![已反白新增排程的查詢編輯器排程工作區。](../images/ui/query-schedules/add-schedule.png)
 
@@ -70,49 +70,49 @@ ht-degree: 0%
 
 #### 排定的查詢頻率 {#scheduled-query-frequency}
 
-您可以為&#x200B;**[!UICONTROL 頻率]**&#x200B;選擇下列選項：
+您可以為&#x200B;**[!UICONTROL Frequency]**&#x200B;選擇下列選項：
 
-- **[!UICONTROL 每小時]**：排定的查詢將在您選取的日期期間內每小時執行一次。
-- **[!UICONTROL 每日]**：排定的查詢將在您選取的時間和日期期間每隔X天執行一次。 請注意，選取的時間是&#x200B;**UTC**，而不是您的當地時區。
-- **[!UICONTROL 每週]**：選取的查詢會在您選取的一週、時間和日期期間執行。 請注意，選取的時間是&#x200B;**UTC**，而不是您的當地時區。
-- **[!UICONTROL 每月]**：選取的查詢會在您選取的日期、時間和日期期間每個月執行。 請注意，選取的時間是&#x200B;**UTC**，而不是您的當地時區。
-- **[!UICONTROL 每年]**：選取的查詢每年會在您選取的日、月、時間和日期期間執行。 請注意，選取的時間是&#x200B;**UTC**，而不是您的當地時區。
+- **[!UICONTROL Hourly]**：排定的查詢會在您選取的日期期間內每小時執行一次。
+- **[!UICONTROL Daily]**：排定的查詢將在您選取的時間和日期期間每隔X天執行一次。 請注意，選取的時間是&#x200B;**UTC**，而不是您的當地時區。
+- **[!UICONTROL Weekly]**：選取的查詢會在您選取的一週、時間和日期期間執行。 請注意，選取的時間是&#x200B;**UTC**，而不是您的當地時區。
+- **[!UICONTROL Monthly]**：選取的查詢會在您選取的日期、時間和日期期間每個月執行。 請注意，選取的時間是&#x200B;**UTC**，而不是您的當地時區。
+- **[!UICONTROL Yearly]**：選取的查詢每年會在您選取的日期、月份、時間和日期期間執行。 請注意，選取的時間是&#x200B;**UTC**，而不是您的當地時區。
 
 ### 提供資料集詳細資料 {#dataset-details}
 
 將資料附加至現有資料集，或建立新資料集並將資料附加至現有資料集，以管理查詢結果。
 
-選取&#x200B;**[!UICONTROL 建立並附加至新資料集]**，以在第一次執行查詢時建立資料集。 後續執行會繼續將資料插入該資料集。 最後，提供資料集的名稱和說明。
+選取&#x200B;**[!UICONTROL Create and append into new dataset]**&#x200B;在您第一次執行查詢時建立資料集。 後續執行會繼續將資料插入該資料集。 最後，提供資料集的名稱和說明。
 
 >[!IMPORTANT]
 >
 > 由於您正在使用現有資料集或建立新資料集，因此&#x200B;**不**&#x200B;需要將`INSERT INTO`或`CREATE TABLE AS SELECT`納入查詢中，因為資料集已設定。 將`INSERT INTO`或`CREATE TABLE AS SELECT`加入排定的查詢將會導致錯誤。
 
-![包含資料集詳細資料的「排程」詳細資料面板，以及反白顯示的[!UICONTROL 建立及附加至新資料集]選項。](../images/ui/query-schedules/dataset-details-create-and-append.png)
+![包含資料集詳細資訊和醒目提示[!UICONTROL Create and append into new dataset]選項的「排程」詳細資料面板。](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-或者，也可以選取&#x200B;**[!UICONTROL 附加至現有資料集]**，後面接著資料集圖示（![資料集圖示。](/help/images/icons/database.png)）。
+或者，選取&#x200B;**[!UICONTROL Append into existing dataset]**，然後選取資料集圖示（![資料集圖示。](/help/images/icons/database.png)）。
 
 ![排程詳細資料面板包含醒目提示的資料集詳細資料以及附加至現有資料集的資訊。](../images/ui/query-schedules/dataset-details-existing.png)
 
-**[!UICONTROL 選取輸出資料集]**&#x200B;對話方塊就會顯示。
+**[!UICONTROL Select output dataset]**&#x200B;對話方塊隨即顯示。
 
-接下來，瀏覽現有資料集或使用搜尋欄位來篩選選項。 選取要使用的資料集列。 資料集詳細資料會顯示在右側的面板中。 選取&#x200B;**[!UICONTROL 完成]**&#x200B;以確認您的選擇。
+接下來，瀏覽現有資料集或使用搜尋欄位來篩選選項。 選取要使用的資料集列。 資料集詳細資料會顯示在右側的面板中。 選取&#x200B;**[!UICONTROL Done]**&#x200B;以確認您的選擇。
 
 ![選取輸出資料集對話方塊中會顯示搜尋欄位、資料集列，以及反白顯示的[完成]。](../images/ui/query-schedules/select-output-dataset-dialog.png)
 
 ### 如果查詢持續失敗，則將其隔離 {#quarantine}
 
-建立排程時，您可以在隔離功能中註冊查詢，以保護系統資源並防止潛在的中斷。 隔離功能會自動識別並隔離透過將查詢置於[!UICONTROL 隔離]狀態而重複失敗的查詢。 透過在連續十次失敗後隔離查詢，您可以在允許進一步執行之前介入、檢閱和修正問題。 這有助於維持您的營運效率和資料完整性。
+建立排程時，您可以在隔離功能中註冊查詢，以保護系統資源並防止潛在的中斷。 隔離功能會自動識別並隔離透過將查詢置於[!UICONTROL Quarantined]狀態而重複失敗的查詢。 透過在連續十次失敗後隔離查詢，您可以在允許進一步執行之前介入、檢閱和修正問題。 這有助於維持您的營運效率和資料完整性。
 
-![已反白顯示[!UICONTROL 查詢隔離]且已選取[是]的查詢排程工作區。](../images/ui/query-schedules/quarantine-enroll.png)
+![已反白顯示[!UICONTROL Query Quarantine]且已選取[是]的查詢排程工作區。](../images/ui/query-schedules/quarantine-enroll.png)
 
 在查詢註冊隔離功能後，您可以訂閱此查詢狀態變更的警報。 如果排定的查詢未註冊隔離區，它就不會在[警示對話方塊](./monitor-queries.md#alert-subscription)上顯示為選項。
 
-您也可以從[!UICONTROL 排程查詢]索引標籤的內嵌動作，將排程查詢註冊到隔離功能。 如需詳細資訊，請參閱[監視器查詢檔案](./monitor-queries.md#alert-subscription)。
+您也可以從[!UICONTROL Scheduled Queries]標籤的內嵌動作，將排程查詢註冊至隔離功能。 如需詳細資訊，請參閱[監視器查詢檔案](./monitor-queries.md#alert-subscription)。
 
 ### 設定排程查詢狀態的警示 {#alerts-for-query-status}
 
-您也可以訂閱查詢警示，作為排程查詢設定的一部分。 您可以進行設定，以接收各種情況的通知。 可以為隔離狀態、查詢處理延遲或查詢狀態變更設定警報。 可用的查詢狀態警報選項包括開始、成功和失敗。 警報能以快顯通知或電子郵件的形式接收。 選取核取方塊以訂閱排定查詢之狀態的警示。
+您也可以訂閱查詢警示，作為排程查詢設定的一部分。 您可以進行設定，以接收各種情況的通知。 可以為隔離狀態、查詢處理延遲或查詢狀態變更設定警報。 可用的查詢狀態警報選項包括開始、成功和失敗。 警報能以快顯通知或電子郵件的形式接收。 選取核取方塊以訂閱該排程查詢狀態的警示。
 
 ![標示警示選項的排程詳細資料面板。](../images/ui/query-editor/alerts.png)
 
@@ -123,12 +123,12 @@ ht-degree: 0%
 | `start` | 此警報會在排定的查詢執行起始或開始處理時通知您。 |
 | `success` | 此警報會在排定的查詢執行成功完成時通知您，表示查詢執行時沒有任何錯誤。 |
 | `failed` | 排定的查詢執行發生錯誤或無法成功執行時，就會觸發此警報。 它有助於您及時識別並解決問題。 |
-| `quarantine` | 當排程的查詢執行進入隔離狀態時，此警報便會啟動。 在查詢[註冊隔離功能](#quarantine)後，任何連續執行失敗的排程查詢都會自動進入[!UICONTROL 隔離]狀態。 然後，隔離的查詢需要您的干預，才能進行任何進一步的執行。 注意：您必須為隔離功能註冊查詢，才能訂閱隔離警報。 |
+| `quarantine` | 當排程的查詢執行進入隔離狀態時，此警報便會啟動。 一旦查詢[註冊隔離功能](#quarantine)後，任何連續執行失敗的排程查詢都會自動進入[!UICONTROL Quarantined]狀態。 然後，隔離的查詢需要您的干預，才能進行任何進一步的執行。 注意：您必須為隔離功能註冊查詢，才能訂閱隔離警報。 |
 | `delay` | 此警示會通知您排定的查詢執行結果[是否有](./monitor-queries.md#query-run-delay)延遲超過指定的臨界值。 您可以設定自訂時間，在該期間查詢執行時觸發警報，而不完成或失敗。 預設行為會在查詢開始處理後設定150分鐘的警報。 |
 
 >[!NOTE]
 >
->如果您選擇設定[!UICONTROL 查詢執行延遲]警報，您必須在Experience Platform UI中設定您想要的延遲時間（以分鐘為單位）。 輸入持續時間（分鐘）。 延遲時間上限為24小時（1440分鐘）。
+>如果您選擇設定[!UICONTROL Query Run Delay]警報，您必須在Experience Platform UI中以分鐘為單位設定您想要的延遲時間。 輸入持續時間（分鐘）。 延遲時間上限為24小時（1440分鐘）。
 
 如需Adobe Experience Platform中警示的概觀，包括警示規則的定義結構，請參閱[警示概觀](../../observability/alerts/overview.md)。 如需在Adobe Experience Platform UI中管理警示和警示規則的指南，請參閱[警示UI指南](../../observability/alerts/ui.md)。
 
@@ -138,15 +138,15 @@ ht-degree: 0%
 
 ![排程建立工作流程的「排程詳細資料」區段，其中的「查詢引數」區段反白顯示。](../images/ui/query-schedules/scheduled-query-parameter.png)
 
-確認您的排程詳細資料後，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以建立排程。 您會回到範本的排程標籤。 此工作區會顯示新建立排程的詳細資料，包括排程ID、排程本身以及排程的輸出資料集。
+確認排程詳細資料後，選取「**[!UICONTROL Save]**」以建立排程。 您會回到範本的排程標籤。 此工作區會顯示新建立排程的詳細資料，包括排程ID、排程本身以及排程的輸出資料集。
 
 ## 檢視排定的查詢執行 {#scheduled-query-runs}
 
-從範本的[!UICONTROL 排程]索引標籤中，選取排程ID以瀏覽至新排程查詢的查詢執行清單。
+從範本的[!UICONTROL Schedules]索引標籤中，選取排程ID以瀏覽至新排程查詢的查詢執行清單。
 
 ![已反白新建立排程的排程工作區。](../images/ui/query-schedules/schedules-workspace.png)
 
-或者，若要檢視查詢範本排定的執行清單，請瀏覽至&#x200B;**[!UICONTROL 排定的查詢]**&#x200B;索引標籤，並從可用的清單中選取範本名稱。
+或者，若要檢視查詢範本已排程執行的清單，請瀏覽至&#x200B;**[!UICONTROL Scheduled queries]**&#x200B;索引標籤，並從可用清單中選取範本名稱。
 
 ![反白顯示具名範本的[排程查詢]索引標籤。](../images/ui/query-schedules/view-scheduled-runs.png)
 
@@ -158,7 +158,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->「計算時數」功能是已購買[Data Distiller SKU](../data-distiller/overview.md)的使用者專屬的功能。 如需詳細資訊，請聯絡您的Adobe代表。
+>「計算時數」功能是已購買[Data Distiller SKU](../data-distiller/overview.md)的使用者專屬的功能。 請聯絡您的 Adobe 代表以取得更多資訊。
 
 ![已排程查詢工作區的詳細資訊區段，其中包含已排程查詢反白顯示的查詢執行清單。](../images/ui/query-schedules/list-of-scheduled-runs.png)
 
@@ -166,12 +166,12 @@ ht-degree: 0%
 
 | 欄標題 | 說明 |
 |---------------------|----------------------------------|
-| [!UICONTROL 查詢執行ID] | 顯示每個查詢回合的唯一識別碼，可讓您追蹤和參考已排程查詢的個別執行。 |
-| [!UICONTROL 查詢執行開始] | 表示查詢執行的開始日期和時間，協助您監視每次執行的開始時間。 |
-| [!UICONTROL 查詢執行完成] | 顯示查詢執行的完成日期和時間，以提供insight的執行期間和狀態。 |
-| [!UICONTROL 狀態] | 顯示查詢執行的目前狀態，例如`Completed,` `Running,`或`Failed,`，以快速評估結果。 |
-| [!UICONTROL 資料集] | 列出查詢執行中使用的資料集，以顯示與執行有關的資料來源。 |
-| [!UICONTROL 計算時數] | 顯示用於每次查詢執行的運算時間（以小時為單位）。 這有助於追蹤資源使用情況並最佳化查詢效能。 |
+| [!UICONTROL Query Run ID] | 顯示每個查詢回合的唯一識別碼，可讓您追蹤和參考已排程查詢的個別執行。 |
+| [!UICONTROL Query Run Start] | 表示查詢執行的開始日期和時間，協助您監視每次執行的開始時間。 |
+| [!UICONTROL Query Run Complete] | 顯示查詢執行的完成日期和時間，以提供insight的執行期間和狀態。 |
+| [!UICONTROL Status] | 顯示查詢執行的目前狀態，例如`Completed,` `Running,`或`Failed,`，以快速評估結果。 |
+| [!UICONTROL Datasets] | 列出查詢執行中使用的資料集，以顯示與執行有關的資料來源。 |
+| [!UICONTROL Compute Hours] | 顯示用於每次查詢執行的運算時間（以小時為單位）。 這有助於追蹤資源使用情況並最佳化查詢效能。 |
 
 {style="table-layout:auto"}
 
@@ -181,15 +181,15 @@ ht-degree: 0%
 
 如需有關如何透過UI監視所有查詢工作狀態的完整資訊，請參閱[監視器排程查詢指南](./monitor-queries.md#inline-actions)。
 
-從清單中選取&#x200B;**[!UICONTROL 查詢執行ID]**，以瀏覽至查詢執行總覽。 如需[查詢執行總覽](./monitor-queries.md#query-run-overview)上可用資訊的完整明細，請參閱監視器排程查詢檔案。
+從清單中選取&#x200B;**[!UICONTROL Query run ID]**&#x200B;以導覽至查詢執行總覽。 如需[查詢執行總覽](./monitor-queries.md#query-run-overview)上可用資訊的完整明細，請參閱監視器排程查詢檔案。
 
 若要使用查詢服務API監視排定的查詢，請參閱[排定的查詢執行端點指南](../api/runs-scheduled-queries.md)。
 
 ## 啟用、停用或刪除排程 {#delete-schedule}
 
-您可以從特定查詢的排程工作區或列出所有排程查詢的[!UICONTROL 排程查詢]工作區啟用、停用或刪除排程。
+您可以從特定查詢的排程工作區或列出所有排程查詢的[!UICONTROL Scheduled Queries]工作區啟用、停用或刪除排程。
 
-若要存取您所選查詢的[!UICONTROL 排程]索引標籤，您必須從[!UICONTROL 範本]索引標籤或[!UICONTROL 排程查詢]索引標籤中選取查詢範本的名稱。 這會導覽至該查詢的查詢編輯器。 從查詢編輯器中，選取&#x200B;**[!UICONTROL 排程]**&#x200B;以存取排程工作區。
+若要存取所選查詢的[!UICONTROL Schedules]索引標籤，您必須從[!UICONTROL Templates]索引標籤或[!UICONTROL Scheduled Queries]索引標籤中選取查詢範本的名稱。 這會導覽至該查詢的查詢編輯器。 從查詢編輯器中，選取&#x200B;**[!UICONTROL Schedules]**&#x200B;以存取排程工作區。
 
 從可用排程的列中選取排程，以填入詳細資訊面板。 使用切換可停用（或啟用）排定的查詢。
 
@@ -201,12 +201,12 @@ ht-degree: 0%
 
 ![範本的排程清單，其詳細資料面板已反白顯示。](../images/ui/query-schedules/schedule-details-panel.png)
 
-確認對話方塊隨即顯示。 選取&#x200B;**[!UICONTROL 停用]**&#x200B;以確認動作。
+確認對話方塊隨即顯示。 選取&#x200B;**[!UICONTROL Disable]**&#x200B;以確認動作。
 
 ![停用排程確認對話方塊。](../images/ui/query-schedules/disable-schedule-confirmation-dialog.png)
 
-選取&#x200B;**[!UICONTROL 刪除排程]**&#x200B;以刪除已停用的排程。
+選取&#x200B;**[!UICONTROL Delete a schedule]**&#x200B;以刪除已停用的排程。
 
 ![刪除排程的排程工作區已反白顯示。](../images/ui/query-schedules/delete-schedule.png)
 
-或者，[!UICONTROL 排程查詢]索引標籤會為每個排程查詢提供內嵌動作集合。 可用的內嵌動作包括[!UICONTROL 停用排程]或[!UICONTROL 啟用排程]、[!UICONTROL 刪除排程]和[!UICONTROL 訂閱排程查詢的警示]。 如需有關如何透過排程查詢索引標籤刪除或停用排程查詢的完整指示，請參閱[監視器排程查詢指南](./monitor-queries.md#inline-actions)。
+或者，[!UICONTROL Scheduled Queries]索引標籤會為每個排定的查詢提供內嵌動作集合。 可用的內嵌動作包括[!UICONTROL Disable schedule]或[!UICONTROL Enable schedule]、[!UICONTROL Delete schedule]以及[!UICONTROL Subscribe]排程查詢的警示。 如需有關如何透過排程查詢索引標籤刪除或停用排程查詢的完整指示，請參閱[監視器排程查詢指南](./monitor-queries.md#inline-actions)。
