@@ -89,13 +89,13 @@ Playbook執行個體的&#x200B;**許可權**
 
 ## 在Journey Optimizer中設定沙箱和管道表面 {#configure-channel-surfaces}
 
-如果您的組織已獲得[Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home)的授權，而您想要使用專為Journey Optimizer設計的教戰手冊，請在您的沙箱中設定頻道介面。 管道表面會定義訊息所需的所有技術引數，例如電子郵件型別、寄件者電子郵件和名稱、行動應用程式、簡訊設定等。 [了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces)。
+如果您的組織已獲得[Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home)的授權，而您想要使用專為Journey Optimizer設計的教戰手冊，請在您的沙箱中設定頻道介面。 管道表面會定義訊息所需的所有技術引數，例如電子郵件型別、寄件者電子郵件和名稱、行動應用程式、簡訊設定等。 [了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/channel-surfaces)。
 
 若要在Journey Optimizer中建立教戰手冊的例項，您需要設定電子郵件、推播和簡訊通知的頻道介面。
 
 ### 電子郵件頻道介面
 
-前往Journey Optimizer介面中的`Channels`。 設定行銷電子郵件和異動訊息的個別子網域和IP集區（如果尚未設定）。 這些最佳實務可確保異動訊息（例如訂單確認電子郵件）傳遞至您的客戶。 輸入名稱、電子郵件地址和其他設定。 選取頁面右上方的&#x200B;**提交**，以建立行銷管道表面。 閱讀有關[如何設定電子郵件通道介面](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html)的檔案。
+前往Journey Optimizer介面中的`Channels`。 設定行銷電子郵件和異動訊息的個別子網域和IP集區（如果尚未設定）。 這些最佳實務可確保異動訊息（例如訂單確認電子郵件）傳遞至您的客戶。 輸入名稱、電子郵件地址和其他設定。 選取頁面右上方的&#x200B;**提交**，以建立行銷管道表面。 閱讀有關[如何設定電子郵件通道介面](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=zh-Hant)的檔案。
 
 ### 簡訊頻道介面
 
@@ -111,7 +111,7 @@ Playbook執行個體的&#x200B;**許可權**
 
 接著，選取您在管道設定中檢視的管道、平台和應用程式。 選取&#x200B;**提交**&#x200B;以建立推播通道表面。
 
-閱讀有關[如何設定推播通道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html)的檔案。
+閱讀有關[如何設定推播通道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=zh-Hant)的檔案。
 
 ## 後續步驟 {#next-steps}
 
