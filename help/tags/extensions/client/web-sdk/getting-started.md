@@ -36,7 +36,8 @@ ht-degree: 3%
 
 ![結構描述畫布](assets/getting-started/schema-structure.png)
 
->[!NOTE]\
+>[!NOTE]
+>\
 >儲存後，結構描述僅允許&#x200B;*加總*&#x200B;變更。 如需詳細資訊，請參閱[結構描述演變](/help/xdm/schema/composition.md#evolution)。
 
 ## 建立資料串流 {#datastream}

@@ -69,7 +69,7 @@ ht-degree: 1%
 
 使用搜尋列，您可以尋找並新增您在站上個人化使用案例[期間建立的「合作夥伴ID」事件](#get-data-in)到計算的屬性畫布。
 
-![ [!UICONTROL Events]索引標籤和搜尋列已反白顯示。](../assets/offsite-retargeting/ca-add-partner-id.png)
+![&#x200B; [!UICONTROL Events]索引標籤和搜尋列已反白顯示。](../assets/offsite-retargeting/ca-add-partner-id.png)
 
 將「合作夥伴ID」事件新增至定義後，請將事件篩選條件設為&#x200B;**[!UICONTROL Exists]**，將事件篩選條件設為新增合作夥伴ID的&#x200B;**[!UICONTROL Most Recent]**&#x200B;值，且回顧期間為24小時。
 
@@ -101,7 +101,7 @@ ht-degree: 1%
 
 若要達到尋找這些訪客的目標，您首先需要將&#x200B;**[!UICONTROL Page View]**&#x200B;事件新增到您的對象。 選取「**[!UICONTROL Events]**」下的「**[!UICONTROL Fields]**」索引標籤，然後拖放「**[!UICONTROL Page View]**」事件並將其新增至事件區段畫布。
 
-![ [!UICONTROL Events]區段中的[!UICONTROL Fields]索引標籤在顯示[!UICONTROL Page View]事件時反白顯示。](../assets/offsite-retargeting/add-page-view.png)
+![&#x200B; [!UICONTROL Events]區段中的[!UICONTROL Fields]索引標籤在顯示[!UICONTROL Page View]事件時反白顯示。](../assets/offsite-retargeting/add-page-view.png)
 
 選取新新增的&#x200B;**[!UICONTROL Page View]**&#x200B;事件。 將回顧期間從&#x200B;**[!UICONTROL Any time]**&#x200B;變更為&#x200B;**[!UICONTROL This month]**，並將事件規則變更為至少包含&#x200B;**5**。
 
@@ -155,7 +155,7 @@ ht-degree: 1%
 
 **[!UICONTROL Select attributes]**&#x200B;頁面隨即顯示。 在此頁面上，您可以選取要連同已啟用的對象一起匯出哪些屬性。 您至少會想要包含合作夥伴ID，因為這樣可讓您識別要重新定位的訪客。 選取&#x200B;**[!UICONTROL Add new mapping]**&#x200B;並搜尋計算屬性。 新增必要的屬性之後，請選取&#x200B;**[!UICONTROL Next]**。
 
-![ [!UICONTROL Add new mapping]按鈕和計算屬性都會反白顯示。](../assets/offsite-retargeting/add-new-mapping.png)
+![&#x200B; [!UICONTROL Add new mapping]按鈕和計算屬性都會反白顯示。](../assets/offsite-retargeting/add-new-mapping.png)
 
 **[!UICONTROL Review]**&#x200B;頁面隨即顯示。 您可以在此頁面檢閱對象啟用的詳細資訊。 如果您對提供的詳細資料感到滿意，請選取&#x200B;**[!UICONTROL Finish]**。
 

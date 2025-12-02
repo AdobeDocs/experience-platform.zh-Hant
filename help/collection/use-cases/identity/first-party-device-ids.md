@@ -164,7 +164,7 @@ DNS中的[!DNL CNAME]記錄可讓您建立從某個網域名稱到另一個網�
 >
 >此功能需要您啟用[第一方資料收集](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en)。
 
-**步驟 2.為您的資料流&#x200B;**[!UICONTROL First Party ID Cookie]**啟用**&#x200B;功能
+**步驟 2.為您的資料流&#x200B;**&#x200B;[!UICONTROL First Party ID Cookie]&#x200B;**啟用**&#x200B;功能
 
 設定CNAME之後，您必須為資料流啟用&#x200B;**[!UICONTROL First Party ID Cookie]**&#x200B;選項。 此設定可告知Edge Network在查詢第一方裝置ID時參考指定的Cookie，而不是在[身分對應](#identityMap)中查詢此值。
 

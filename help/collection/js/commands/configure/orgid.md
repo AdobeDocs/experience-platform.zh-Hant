@@ -17,7 +17,7 @@ ht-degree: 0%
 
 1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
 1. 在Adobe Experience Cloud中的任何地方，按&#x200B;**`[Ctrl]`** + **`[I]`**。 [!UICONTROL User Data Debugger]視窗隨即開啟。
-1. 按一下&#x200B;**[!UICONTROL Copy]**&#x200B;旁的![ ](../../assets/copy.png)複製[!UICONTROL Current Org ID]，或按一下「**[!UICONTROL Assigned Orgs]**」索引標籤以檢視您可以存取的其他組織ID。
+1. 按一下&#x200B;**[!UICONTROL Copy]**&#x200B;旁的![&#x200B; &#x200B;](../../assets/copy.png)複製[!UICONTROL Current Org ID]，或按一下「**[!UICONTROL Assigned Orgs]**」索引標籤以檢視您可以存取的其他組織ID。
 1. 完成尋找所需資訊後，請按一下&#x200B;**[!UICONTROL Close]**。
 
 組織ID一律為24個字元的英數字串，且結尾一律為`@AdobeOrg`。
