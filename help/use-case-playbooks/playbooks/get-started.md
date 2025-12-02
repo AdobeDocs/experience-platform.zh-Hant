@@ -4,33 +4,33 @@ title: 開始使用使用使用案例教戰手冊
 description: 了解如何開始使用「使用案例教戰手冊」功能。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: d6b62b9539a04be2d2adc7aa66436a294e08303a
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 14%
+source-wordcount: '942'
+ht-degree: 8%
 
 ---
 
 
 # 快速入門
 
-瞭解如何為使用案例教戰手冊設定帳戶，這些教戰手冊是專為Real-time Customer Data Platform和Adobe Journey Optimizer設計的（如果未自動設定）。 三個主要設定步驟為：
+瞭解如何為使用案例教戰手冊設定帳戶，這些教戰手冊是專為Real-Time Customer Data Platform和Adobe Journey Optimizer設計的（如果未自動設定）。 三個主要設定步驟為：
 
 * 建立沙箱
 * 設定使用者權限
 * 設定電子郵件、推播和簡訊通知的Journey Optimizer頻道介面(如果您打算使用Journey Optimizer教戰手冊)
 
-若要在Experience PlatformUI中存取豐富的使用案例教戰手冊，請從左側導覽中選取&#x200B;**[!UICONTROL 教戰手冊]**。 閱讀有關如何[瀏覽使用案例行動手冊](../playbooks/navigate.md)並開始使用[勵志沙箱](../playbooks/navigate.md)的檔案。
+若要在Experience Platform UI中存取豐富的使用案例教戰手冊，請從左側導覽中選取&#x200B;**[!UICONTROL Playbooks]**。 閱讀有關如何[瀏覽使用案例行動手冊](../playbooks/navigate.md)並開始使用[勵志沙箱](../playbooks/navigate.md)的檔案。
 
 ## 設定使用案例教戰手冊 — 影片逐步解說 {#video}
 
 觀看此影片，瞭解在Journey Optimizer中建立沙箱、設定許可權及設定電子郵件、推播和簡訊通知的頻道介面所需的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3449837?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
 
 ## 建立開發沙箱 {#create-development-sandbox}
 
-使用案例教戰手冊使用特殊型別的開發沙箱。 若要開始使用並存取[[!UICONTROL 使用案例教戰手冊]](/help/use-case-playbooks/playbooks/overview.md)功能，[可建立新的開發沙箱](/help/sandboxes/ui/user-guide.md#create) (確保您沒有選取生產沙箱) 並使用尾碼包含 `-ucp` 或 `-UCP` 的名稱 (非標題)，如下所示。
+使用案例教戰手冊使用特殊型別的開發沙箱。 若要開始使用並存取[[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md)功能，[建立新的開發沙箱](/help/sandboxes/ui/user-guide.md#create) （請確定您未選取生產沙箱），其名稱（而非標題）的字尾中包含`-ucp`或`-UCP`，如下所示。
 
 >[!IMPORTANT]
 >
@@ -39,15 +39,15 @@ ht-degree: 14%
 
 ![建立使用案例教戰手冊的開發沙箱](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-您現在應該會在左側邊欄的[!UICONTROL 使用案例行動手冊]下看到[!UICONTROL 行動手冊]。
+您現在應該會在左側邊欄的[!UICONTROL Playbooks]下看到[!UICONTROL Use Case Playbooks]。
 
 ![建立沙箱後，UI 中的使用案例教戰手冊。](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
-如果您沒有如上面所顯示的在左側邊欄中看到[!UICONTROL 教戰手冊]，可使用此連結 `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates` 直接瀏覽至該處。在連結中，`<YOUR_ORG>` 是您的組織名稱，而 `<YOUR_SANDBOX_NAME>` 則是您建立的開發沙箱的名稱。
+如果您在左側邊欄中看不到如上所示的[!UICONTROL Playbooks]，請使用此連結`https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates`直接導覽至該處。 在連結中，`<YOUR_ORG>` 是您的組織名稱，而 `<YOUR_SANDBOX_NAME>` 則是您建立的開發沙箱的名稱。
 
 ## 授予您的團隊所需的存取權限 {#grant-access-permissions}
 
-若要開始使用[!UICONTROL 使用案例教戰手冊]，您的行銷團隊成員需要正確的許可權，才能檢視已建立的教戰手冊清單或自行建立教戰手冊。
+若要開始使用[!UICONTROL Use Case Playbooks]，您的行銷團隊成員需要正確的許可權，以便他們能夠檢視已建立的教戰手冊清單，或自行建立教戰手冊。
 
 **必要許可權**
 
@@ -69,15 +69,15 @@ Playbook執行個體的&#x200B;**許可權**
 
 結構描述的&#x200B;**許可權**
 
-若要建立和管理結構描述，請利用資料模型化許可權；**[!UICONTROL 管理結構描述]**、**[!UICONTROL 檢視結構描述]**、**[!UICONTROL 管理關係]**、**[!UICONTROL 管理身分中繼資料]**
+若要建立和管理結構描述，請利用資料模型化許可權； **[!UICONTROL Manage Schemas]**、**[!UICONTROL View Schemas]**、**[!UICONTROL Manage Relationships]**、**[!UICONTROL Manage Identity Metadata]**
 
 目的地的&#x200B;**許可權**
 
-若要建立及管理目的地，請使用目的地許可權；**[!UICONTROL 管理]**、**[!UICONTROL 目的地]**、**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 啟用區段但不對應]**、**[!UICONTROL 管理和啟用資料集目的地]**、**[!UICONTROL 目的地製作]**。
+若要建立和管理目的地，請使用目的地許可權； **[!UICONTROL Manage]**、**[!UICONTROL Destinations]**、**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL Manage and Activate Dataset Destination]**、**[!UICONTROL Destination Authoring]**。
 
 **歷程的許可權**
 
-若要建立和管理歷程，請使用歷程許可權；**[!UICONTROL 管理歷程]**、**[!UICONTROL 檢視歷程]**、**[!UICONTROL 檢視歷程報告]**、**[!UICONTROL 管理歷程]**、**[!UICONTROL 事件]**、**[!UICONTROL 資料來源和動作]**、**[!UICONTROL 檢視歷程]**、**[!UICONTROL 事件]**、**[!UICONTROL 資料來源和動作， Publish歷程]**.
+若要建立和管理歷程，請使用歷程許可權； **[!UICONTROL Manage Journeys]**、**[!UICONTROL View Journeys]**、**[!UICONTROL View Journeys Report]**、**[!UICONTROL Manage Journeys]**、**[!UICONTROL Events]**、**[!UICONTROL Data Sources and Actions]**、**[!UICONTROL View Journeys]**、**[!UICONTROL Events]**、**[!UICONTROL Data Sources and Actions, Publish Journeys]**。
 
 下圖顯示使用者檢視、建立和管理教戰手冊的建議許可權快照，以及教戰手冊產生的資產。
 
@@ -89,13 +89,13 @@ Playbook執行個體的&#x200B;**許可權**
 
 ## 在Journey Optimizer中設定沙箱和管道表面 {#configure-channel-surfaces}
 
-如果您的組織已獲得[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)的授權，而您想要使用專為Journey Optimizer設計的教戰手冊，則需要在沙箱中設定頻道預設集，以定義訊息所需的技術引數。 [了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=zh-Hant)。
+如果您的組織已獲得[Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home)的授權，而您想要使用專為Journey Optimizer設計的教戰手冊，請在您的沙箱中設定頻道介面。 管道表面會定義訊息所需的所有技術引數，例如電子郵件型別、寄件者電子郵件和名稱、行動應用程式、簡訊設定等。 [了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces)。
 
 若要在Journey Optimizer中建立教戰手冊的例項，您需要設定電子郵件、推播和簡訊通知的頻道介面。
 
 ### 電子郵件頻道介面
 
-前往Journey Optimizer介面中的`Channels`。 設定行銷電子郵件和異動訊息的個別子網域和IP集區（如果尚未設定）。 這些最佳實務可確保異動訊息（例如訂單確認電子郵件）傳遞至您的客戶。 輸入名稱、電子郵件地址和其他設定。 選取頁面右上方的&#x200B;**提交**，以建立行銷管道表面。 閱讀有關[如何設定電子郵件通道介面](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=zh-Hant)的檔案。
+前往Journey Optimizer介面中的`Channels`。 設定行銷電子郵件和異動訊息的個別子網域和IP集區（如果尚未設定）。 這些最佳實務可確保異動訊息（例如訂單確認電子郵件）傳遞至您的客戶。 輸入名稱、電子郵件地址和其他設定。 選取頁面右上方的&#x200B;**提交**，以建立行銷管道表面。 閱讀有關[如何設定電子郵件通道介面](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html)的檔案。
 
 ### 簡訊頻道介面
 
@@ -105,13 +105,13 @@ Playbook執行個體的&#x200B;**許可權**
 
 ### 推播頻道介面
 
-確認通道設定是從Experience Platform或資料收集介面進行設定。 這是管道設定在資料收集環境中的樣子。
+確認頻道設定是從Experience Platform或資料收集介面設定。 這是管道設定在資料收集環境中的樣子。
 
 <!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
 接著，選取您在管道設定中檢視的管道、平台和應用程式。 選取&#x200B;**提交**&#x200B;以建立推播通道表面。
 
-閱讀有關[如何設定推播通道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=zh-Hant)的檔案。
+閱讀有關[如何設定推播通道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html)的檔案。
 
 ## 後續步驟 {#next-steps}
 
