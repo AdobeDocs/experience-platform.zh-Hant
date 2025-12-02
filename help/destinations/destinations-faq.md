@@ -229,7 +229,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### 我可以在哪裡檢視Adobe Target中已啟用的屬性？
 
 +++回答
-在[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)和[HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html)選件中，屬性將可在Target中使用。
+在[JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=zh-Hant)和[HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=zh-Hant)選件中，屬性將可在Target中使用。
 +++
 
 ### 我可以建立沒有資料串流的目的地，然後在稍後將資料串流新增到相同目的地嗎？
@@ -265,7 +265,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### [!DNL Adobe Target]和[!DNL Custom Personalization]目的地[!DNL HIPAA]是否相容？
 
 +++回答
-[!DNL Adobe Target]與[!DNL HIPPA][[!DNL Adobe Healthcare Shield]不符合](https://business.adobe.com/solutions/industries/healthcare.html)。 客戶透過[!DNL HIPPA]或[!DNL Adobe Target]目的地使用邊緣個人化之前，應先和自己的法律團隊確認[!DNL Custom Personalization]自訂最佳化通道的整備程度。
+[!DNL Adobe Target]與[!DNL HIPPA][[!DNL Adobe Healthcare Shield]不符合](https://business.adobe.com/tw/solutions/industries/healthcare.html)。 客戶透過[!DNL HIPPA]或[!DNL Adobe Target]目的地使用邊緣個人化之前，應先和自己的法律團隊確認[!DNL Custom Personalization]自訂最佳化通道的整備程度。
 
 若是需要大規模套用同意原則管理的使用案例，客戶必須購買[!DNL Adobe Privacy & Security Shield]。 [!DNL Adobe Privacy & Security Shield]功能是以進階功能套件形式銷售，不得另行購買。
 

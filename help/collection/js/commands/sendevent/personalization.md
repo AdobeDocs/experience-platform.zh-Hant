@@ -51,7 +51,7 @@ personalization: {
 
 ## `personalization.surfaces`
 
-`surfaces`屬性是[表面URI](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri)字串的陣列，這些字串會手動定義要求個人化的通道、裝置或內容。 它們可讓您區分不同的數位體驗，例如跨頻道生態系統內的網域、應用程式或裝置平台。 依預設，元件庫推斷來自目前頁面的預設曲面。 您可以使用此屬性來覆寫目前頁面的自動推斷表面。
+`surfaces`屬性是[表面URI](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri)字串的陣列，這些字串會手動定義要求個人化的通道、裝置或內容。 它們可讓您區分不同的數位體驗，例如跨頻道生態系統內的網域、應用程式或裝置平台。 依預設，元件庫推斷來自目前頁面的預設曲面。 您可以使用此屬性來覆寫目前頁面的自動推斷表面。
 
 當您想要使用跨管道個人化時，此屬性很有價值，而且必須區分個人化在個別管道之間的運作方式。 它可讓您在同一Adobe Experience Platform組織下，為不同網站建立不同的選件。
 

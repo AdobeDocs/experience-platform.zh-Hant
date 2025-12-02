@@ -48,7 +48,7 @@ ht-degree: 0%
 ![Experience Platform Tags UI影像顯示「傳送事件」動作型別的Personalization設定。](../assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**：您想要從個人化明確要求的一系列範圍。 您可以手動輸入範圍，或提供資料元素。 手動輸入範圍時，每個欄位代表一個範圍。 選取&#x200B;**[!UICONTROL Add scope]**&#x200B;以新增更多範圍至動作。
-* **[!UICONTROL Surfaces]**：要查詢事件的表面陣列。 如需詳細資訊，請參閱Adobe Journey Optimizer檔案中的[建立網站體驗](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)。 手動輸入曲面時，每個欄位代表一個曲面。 選取&#x200B;**[!UICONTROL Add surface]**&#x200B;以新增更多表面至動作。
+* **[!UICONTROL Surfaces]**：要查詢事件的表面陣列。 如需詳細資訊，請參閱Adobe Journey Optimizer檔案中的[建立網站體驗](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=zh-Hant)。 手動輸入曲面時，每個欄位代表一個曲面。 選取&#x200B;**[!UICONTROL Add surface]**&#x200B;以新增更多表面至動作。
 * **呈現視覺個人化決定：**&#x200B;啟用時，此核取方塊可讓您在頁面上呈現個人化內容。 如需詳細資訊，請參閱[呈現個人化內容](/help/collection/use-cases/personalization/rendering-personalization-content.md#automatically-rendering-content)。
 * **[!UICONTROL Request default personalization]**：控制是否要求全頁範圍與預設表面。 預設會在頁面載入的前`sendEvent`個呼叫期間自動要求它。 與這些選項按鈕等同的JavaScript資料庫為[`requestDefaultPersonalization`](/help/collection/js/commands/sendevent/personalization.md)。 您可以從下列選項中選擇：
    * **[!UICONTROL Automatic]**：預設行為。 只有在尚未要求預設個人化時，才會要求此專案。

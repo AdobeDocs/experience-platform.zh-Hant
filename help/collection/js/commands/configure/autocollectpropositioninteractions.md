@@ -50,7 +50,7 @@ alloy("configure", {
 | 名稱 | 資料屬性 | 說明 |
 | --- | --- | --- |
 | **[!UICONTROL Label]** | `data-aep-click-label` | 若標籤資料屬性存在於點按的元素上，則會與傳送至Edge Network的互動詳細資料一併包含。 Web SDK會尋找以點選元素開始並向DOM樹狀結構上移動的標籤資料屬性。 網頁SDK會使用其找到的第一個標籤。 |
-| **[!UICONTROL Token]** | `data-aep-click-token` | 在[Adobe Journey Optimizer程式碼型行銷活動](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)中運用決定原則時，請使用此Token。 您可以使用代號來區分點按了哪個決定原則專案。 當Token資料屬性存在於點按的元素上時，即會與傳送至Edge Network的互動詳細資料一併包含。 Web SDK會尋找權杖資料屬性，從點選元素並向DOM樹狀結構行進開始。 網頁SDK會使用其找到的第一個Token。 |
+| **[!UICONTROL Token]** | `data-aep-click-token` | 在[Adobe Journey Optimizer程式碼型行銷活動](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/code-based-experience/get-started-code-based)中運用決定原則時，請使用此Token。 您可以使用代號來區分點按了哪個決定原則專案。 當Token資料屬性存在於點按的元素上時，即會與傳送至Edge Network的互動詳細資料一併包含。 Web SDK會尋找權杖資料屬性，從點選元素並向DOM樹狀結構行進開始。 網頁SDK會使用其找到的第一個Token。 |
 | **[!UICONTROL Interact ID]** | `data-aep-interact-id` | 呈現主張時，Web SDK會自動將此唯一ID新增至容器元素。 網頁SDK會使用此ID將DOM元素與主張建立關聯。 由於這是網頁SDK所需的ID，您不應以任何方式加以變更。 您可以安全地忽略它。 |
 
 ## 範例

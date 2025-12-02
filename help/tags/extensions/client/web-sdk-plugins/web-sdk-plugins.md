@@ -50,7 +50,7 @@ ht-degree: 0%
 >
 >此資料元素會設定Cookie並允許將使用者產生的值儲存在Cookie中。 如需詳細資訊，請參閱外掛程式特定檔案。
 
-可讓您設定[`getAndPersistValue` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html)。 `getAndPersistValue`資料元素會將值儲存在Cookie中，以便稍後造訪時擷取。
+可讓您設定[`getAndPersistValue` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getandpersistvalue.html?lang=zh-Hant)。 `getAndPersistValue`資料元素會將值儲存在Cookie中，以便稍後造訪時擷取。
 
 `getAndPersistValue`資料元素提供下列引數：
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 >
 >此外掛程式需要使用者端上的位置存取權，但如果無法取得，則不會擲回例外狀況。
 
-可讓您設定[`getGeoCoordinates` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html)。 `getGeoCoordinates`資料元素會擷取訪客裝置的經緯度。
+可讓您設定[`getGeoCoordinates` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getgeocoordinates.html?lang=zh-Hant)。 `getGeoCoordinates`資料元素會擷取訪客裝置的經緯度。
 
 `getGeoCoordinates`資料元素未使用任何引數。 它會傳回以下其中一個值：
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 >
 >此資料元素會設定Cookie。 如需詳細資訊，請參閱外掛程式特定檔案。
 
-可讓您設定[`getNewRepeat` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html)。 `getNewRepeat`資料元素會判斷網站訪客是新訪客還是在指定天數內回訪的重複訪客。
+可讓您設定[`getNewRepeat` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getnewrepeat.html?lang=zh-Hant)。 `getNewRepeat`資料元素會判斷網站訪客是新訪客還是在指定天數內回訪的重複訪客。
 
 `getNewRepeat`資料元素使用以下引數：
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 ### `getPageName`
 
-可讓您設定[`getPageName` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html)。 `getPageName`資料元素可為目前的URL建立易讀、好記的格式化版本。
+可讓您設定[`getPageName` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpagename.html?lang=zh-Hant)。 `getPageName`資料元素可為目前的URL建立易讀、好記的格式化版本。
 
 `getPageName`資料元素使用以下引數：
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 >
 >此資料元素會設定Cookie並允許將使用者產生的值儲存在Cookie中。 如需詳細資訊，請參閱外掛程式特定檔案。
 
-可讓您設定[`getPreviousValue` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html)。 `getPreviousValue`資料元素會將變數設定為先前點選上設定的值。
+可讓您設定[`getPreviousValue` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getpreviousvalue.html?lang=zh-Hant)。 `getPreviousValue`資料元素會將變數設定為先前點選上設定的值。
 
 `getPreviousValue`資料元素使用以下引數：
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 ### `getQueryParam`
 
-可讓您設定[`getQueryParam` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html)。 `getQueryParam`資料元素會擷取URL中所含任何查詢字串引數的值。 若要從登陸頁面URL擷取內部和外部促銷活動程式碼，此外掛程式非常有用。 擷取搜尋詞或其他查詢字串引數時，它也很有用。 此資料元素提供完善的功能，可剖析複雜的URL，包括雜湊和包含多個查詢字串引數的URL。
+可讓您設定[`getQueryParam` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getqueryparam.html?lang=zh-Hant)。 `getQueryParam`資料元素會擷取URL中所含任何查詢字串引數的值。 若要從登陸頁面URL擷取內部和外部促銷活動程式碼，此外掛程式非常有用。 擷取搜尋詞或其他查詢字串引數時，它也很有用。 此資料元素提供完善的功能，可剖析複雜的URL，包括雜湊和包含多個查詢字串引數的URL。
 
 `getQueryParam`資料元素使用以下引數：
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 
 ### `getTimeParting`
 
-可讓您設定[`getTimeParting` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html)。 `getTimeParting`資料元素會擷取網站上發生任何可測量活動的時間詳細資訊。 如果您想要依指定日期範圍內任何可重複的時間區隔來劃分量度，此資料元素就十分實用。 例如，您可以比較一週內兩天之間的轉換率，例如所有週日比較所有週四。 您也可以比較一天中的時段，例如所有早上比較所有晚上。
+可讓您設定[`getTimeParting` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=zh-Hant)。 `getTimeParting`資料元素會擷取網站上發生任何可測量活動的時間詳細資訊。 如果您想要依指定日期範圍內任何可重複的時間區隔來劃分量度，此資料元素就十分實用。 例如，您可以比較一週內兩天之間的轉換率，例如所有週日比較所有週四。 您也可以比較一天中的時段，例如所有早上比較所有晚上。
 
 `getTimeParting`資料元素使用下列引數：
 
@@ -162,7 +162,7 @@ ht-degree: 0%
 >
 >此資料元素會設定Cookie。 如需詳細資訊，請參閱外掛程式特定檔案。
 
-可讓您設定[`getTimeSinceLastVisit` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html)。 `getTimeSinceLastVisit`資料元素會追蹤訪客從上次造訪到下次回訪您網站經過的時間長度。
+可讓您設定[`getTimeSinceLastVisit` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimesincelastvisit.html?lang=zh-Hant)。 `getTimeSinceLastVisit`資料元素會追蹤訪客從上次造訪到下次回訪您網站經過的時間長度。
 
 `getTimeSinceLastVisit`資料元素未使用任何引數。 它會傳回自訪客上次造訪網站以來經過的時間長度，並以下列格式分組：
 
@@ -177,7 +177,7 @@ ht-degree: 0%
 >
 >此資料元素會設定Cookie並允許將使用者產生的值儲存在Cookie中。 如需詳細資訊，請參閱外掛程式特定檔案。
 
-可讓您設定[`getValOnce` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html)。 `getValOnce`資料元素可防止變數多次設為等於相同值。
+可讓您設定[`getValOnce` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html?lang=zh-Hant)。 `getValOnce`資料元素可防止變數多次設為等於相同值。
 
 `getValOnce`資料元素使用以下引數：
 
@@ -194,7 +194,7 @@ ht-degree: 0%
 >
 >此資料元素會設定Cookie。 如需詳細資訊，請參閱外掛程式特定檔案。
 
-可讓您設定[`getVisitDuration` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html)。 `getVisitDuration`資料元素會追蹤訪客截至該時間點為止在網站上逗留的時間長度，以分鐘為單位。
+可讓您設定[`getVisitDuration` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitduration.html?lang=zh-Hant)。 `getVisitDuration`資料元素會追蹤訪客截至該時間點為止在網站上逗留的時間長度，以分鐘為單位。
 
 `getVisitDuration`資料元素未使用任何引數。 它會傳回以下其中一個值：
 
@@ -209,7 +209,7 @@ ht-degree: 0%
 >
 >此資料元素會設定Cookie。 如需詳細資訊，請參閱外掛程式特定檔案。
 
-可讓您設定[`getVisitNum` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html)。 `getVisitNum`資料元素會傳回在指定天數內造訪過網站的所有訪客造訪次數。
+可讓您設定[`getVisitNum` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvisitnum.html?lang=zh-Hant)。 `getVisitNum`資料元素會傳回在指定天數內造訪過網站的所有訪客造訪次數。
 
 `getVisitNum`資料元素使用以下引數：
 
@@ -223,7 +223,7 @@ ht-degree: 0%
 
 ### `p_fo` （僅限頁面優先）
 
-可讓您設定[`p_fo` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html)。 `p_fo`資料元素是公用程式，可檢查特定JavaScript物件是否存在。 如果物件不存在，則外掛程式會建立該物件並傳回`true`。 如果頁面上已存在JavaScript物件，則會傳回`false`。 若要在頁面上執行一次程式碼，此資料元素相當實用。
+可讓您設定[`p_fo` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/p-fo.html?lang=zh-Hant)。 `p_fo`資料元素是公用程式，可檢查特定JavaScript物件是否存在。 如果物件不存在，則外掛程式會建立該物件並傳回`true`。 如果頁面上已存在JavaScript物件，則會傳回`false`。 若要在頁面上執行一次程式碼，此資料元素相當實用。
 
 `p_fo`資料元素使用以下引數：
 

@@ -32,4 +32,4 @@ Adobe Experience Platform Web SDK標籤擴充功能支援頁面上的多個例�
 
 ## [!UICONTROL Edge domain]
 
-擴充功能傳送及接收資料的網域。 雖然`edge.adobedc.net`的預設值正常運作，但Adobe建議在大多數情況下使用第一方網域。 如需如何設定適合資料收集的第一方網域的指示，請參閱[Adobe管理的憑證方案](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)。 另請參閱JavaScript資料庫檔案中的[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)，以取得設定此值的指引。
+擴充功能傳送及接收資料的網域。 雖然`edge.adobedc.net`的預設值正常運作，但Adobe建議在大多數情況下使用第一方網域。 如需如何設定適合資料收集的第一方網域的指示，請參閱[Adobe管理的憑證方案](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/adobe-managed-cert)。 另請參閱JavaScript資料庫檔案中的[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md)，以取得設定此值的指引。

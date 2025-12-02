@@ -61,7 +61,7 @@ Web SDK提供兩種互補的同意選項：
 | `out` | `out` | 無 | 是 |
 | `out` | 未設定 | 無 | 無 |
 
-如需程式庫設定的Cookie清單，請參閱[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)。
+如需程式庫設定的Cookie清單，請參閱[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/cookies/web-sdk)。
 
 >[!NOTE]
 >

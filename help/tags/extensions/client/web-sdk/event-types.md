@@ -245,7 +245,7 @@ if (discountHtml) {
 
 ### 存取Adobe Target回應Token
 
-從Adobe Target傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，其為有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
+從Adobe Target傳回的Personalization內容包含[回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hant)，其為有關活動、選件、體驗、使用者設定檔、地理資訊等的詳細資料。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
 
 在自訂程式碼動作中（位於處理回應資料的規則中），您可以存取從伺服器傳回的個人化主張。 若要這麼做，請輸入下列自訂程式碼：
 

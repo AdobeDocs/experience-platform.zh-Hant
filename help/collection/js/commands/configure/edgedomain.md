@@ -13,7 +13,7 @@ ht-degree: 3%
 
 `edgeDomain`屬性可讓您變更Web SDK傳送資料的網域。 使用[第一方Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant)的組織經常使用此屬性。 資料會傳送至組織自己的網域，然後CNAME記錄會將該資料轉送至Adobe。
 
-您對`edgeDomain`使用的值取決於您參與[Adobe管理的憑證方案](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)：
+您對`edgeDomain`使用的值取決於您參與[Adobe管理的憑證方案](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/adobe-managed-cert)：
 
 **如果您的組織參與Adobe管理的憑證方案**，請將值設定為設定憑證時選取的第一方網域。 通常此值是您的組織所擁有的子網域。 例如 `data.example.com`。貴組織中的CNAME記錄會將該資料重新導向至Adobe。
 
