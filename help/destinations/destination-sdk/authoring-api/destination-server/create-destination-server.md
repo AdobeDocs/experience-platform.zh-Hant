@@ -2,7 +2,7 @@
 description: 此頁面是透過Adobe Experience Platform Destination SDK建立目的地伺服器所使用的API呼叫範例。
 title: 建立目的地伺服器組態
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 5%
@@ -24,7 +24,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
@@ -32,7 +32,7 @@ ht-degree: 5%
 
 ## 建立目的地伺服器組態 {#create}
 
-您可以對`/authoring/destination-servers`端點發出`POST`要求，以建立新的目的地伺服器組態。
+您可以對`POST`端點發出`/authoring/destination-servers`要求，以建立新的目的地伺服器組態。
 
 >[!TIP]
 >
@@ -62,7 +62,7 @@ POST /authoring/destination-servers
 
 您需要建立類似於以下所示的即時（串流）目的地伺服器，以設定即時（串流） API型整合。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 字串 | *必要。*&#x200B;代表您伺服器的易記名稱，僅對Adobe可見。 合作夥伴或客戶看不到此名稱。 範例`Moviestar destination server`。 |
 | `destinationServerType` | 字串 | *必要。針對即時（串流）目的地，*&#x200B;設為`URL_BASED`。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似`https://api.moviestar.com/data/{{customerData.region}}/items`的端點，其中`region`部分可以因客戶而異，請使用此選項。 在此情況下，您也需要將`region`設定為[目的地設定]&#x200B;(../destination-configuration/create-destination-configuration.md)中的[客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`PEBBLE_V1`欄位中的URL，請使用`value`。 如果您有類似`https://api.moviestar.com/data/{{customerData.region}}/items`的端點，其中`region`部分可以因客戶而異，請使用此選項。 在此情況下，您也需要將`region`設定為[目的地設定](../../functionality/destination-configuration/customer-data-fields.md)(../destination-configuration/create-destination-configuration.md)中的[客戶資料欄位]。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`NONE`的端點，請使用`https://api.moviestar.com/data/items`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必要。*&#x200B;填入Experience Platform應連線的API端點位址。 |
 | `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 選項為`GET`、`PUT`、`POST`、`DELETE`、`PATCH`。 |
 | `httpTemplate.requestBody.templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
@@ -119,7 +119,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 您必須建立類似於下列設定檔案式[!DNL Amazon S3]目的地時所顯示的[!DNL Amazon S3]目的地伺服器。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -231,7 +231,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 您必須建立類似於下列設定檔案式[!DNL SFTP]目的地時所顯示的[!DNL SFTP]目的地伺服器。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -248,7 +248,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },
@@ -343,7 +347,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 您必須建立類似於下列設定檔案式[!DNL Azure Data Lake Storage]目的地時所顯示的[!DNL Azure Data Lake Storage]目的地伺服器。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -449,7 +453,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 您必須建立類似於下列設定檔案式[!DNL Azure Blob Storage]目的地時所顯示的[!DNL Azure Blob Storage]目的地伺服器。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -561,7 +565,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 您必須建立類似於下列設定檔案式[!DNL Data Landing Zone (DLZ)]目的地時所顯示的[!DNL Data Landing Zone (DLZ)]目的地伺服器。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -579,7 +583,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    },
    "fileConfigurations": {
         "compression": {
@@ -668,7 +672,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 您必須建立類似於下列設定檔案式[!DNL Google Cloud Storage]目的地時所顯示的[!DNL Google Cloud Storage]目的地伺服器。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -792,7 +796,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 設定從您自己的API端點擷取設定檔方案的目的地時，您需要建立類似於以下顯示的動態方案伺服器。 相對於靜態結構描述，動態結構描述不會使用`profileFields`陣列。 動態方案會改用動態方案伺服器，此伺服器會連線至您自己的API，從其中擷取方案設定。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -828,7 +832,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 字串 | *必要。*&#x200B;代表您的動態結構描述伺服器的易記名稱，僅對Adobe可見。 |
 | `destinationServerType` | 字串 | *必要。動態結構描述伺服器的*&#x200B;設定為`URL_BASED`。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`PEBBLE_V1`欄位中的URL，請使用`value`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`NONE`的端點，請使用`https://api.moviestar.com/data/items`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必要。*&#x200B;填入Experience Platform應連線的API端點位址，並擷取結構描述欄位，以填入為啟動工作流程對應步驟中的目標欄位。 |
 | `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 對於動態結構描述伺服器，請使用`GET`。 |
 | `responseFields.templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
@@ -866,7 +870,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 設定從您自己的API端點擷取下拉式客戶資料欄位值的目的地時，您需要建立類似於以下顯示的動態下拉式清單伺服器。
 
-+++要求
++++請求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -925,7 +929,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 字串 | *必要。*&#x200B;代表您動態下拉式伺服器的易記名稱，僅對Adobe可見。 |
 | `destinationServerType` | 字串 | *必要。動態下拉式伺服器的*&#x200B;設定為`URL_BASED`。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`PEBBLE_V1`欄位中的URL，請使用`value`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`NONE`的端點，請使用`https://api.moviestar.com/data/items`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必要。*&#x200B;填入Experience Platform應連線的API端點位址並擷取下拉式清單值。 |
 | `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 對於動態下拉式伺服器，請使用`GET`。 |
 | `httpTemplate.headers` | 物件 | *Optiona.l*&#x200B;包含連線至動態下拉式伺服器所需的任何標頭。 |

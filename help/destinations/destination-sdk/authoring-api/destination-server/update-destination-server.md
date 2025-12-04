@@ -2,10 +2,10 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新現有目的地伺服器設定的API呼叫範例。
 title: 更新目的地伺服器設定
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
 workflow-type: tm+mt
 source-wordcount: '1103'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
@@ -34,7 +34,7 @@ ht-degree: 7%
 
 ## 更新目的地伺服器設定 {#update}
 
-您可以藉由對具有更新承載的`/authoring/destination-servers`端點發出`PUT`要求，來更新[現有](create-destination-server.md)目的地伺服器設定。
+您可以藉由對具有更新承載的[端點發出](create-destination-server.md)要求，來更新`PUT`現有`/authoring/destination-servers`目的地伺服器設定。
 
 >[!TIP]
 >
@@ -60,7 +60,7 @@ PUT /authoring/destination-servers/{INSTANCE_ID}
 
 >[!TAB 即時（串流）]
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers\{INSTANCE_ID} \
@@ -94,7 +94,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- | ----------- |
 | `name` | 字串 | *必要。*&#x200B;代表您伺服器的易記名稱，僅對Adobe可見。 合作夥伴或客戶看不到此名稱。 範例`Moviestar destination server`。 |
 | `destinationServerType` | 字串 | *必要。針對即時（串流）目的地，*&#x200B;設為`URL_BASED`。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`value`欄位中的URL，請使用`PEBBLE_V1`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`https://api.moviestar.com/data/items`的端點，請使用`NONE`。</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要。* <ul><li>如果Adobe需要轉換下面`PEBBLE_V1`欄位中的URL，請使用`value`。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`。 </li><li> 如果Adobe端不需要轉換，例如，如果您有類似`NONE`的端點，請使用`https://api.moviestar.com/data/items`。</li></ul> |
 | `urlBasedDestination.url.value` | 字串 | *必要。*&#x200B;填入Experience Platform應連線的API端點位址。 |
 | `httpTemplate.httpMethod` | 字串 | *必要。* Adobe將在呼叫伺服器時使用的方法。 選項為`GET`、`PUT`、`PUT`、`DELETE`、`PATCH`。 |
 | `httpTemplate.requestBody.templatingStrategy` | 字串 | *必要。*&#x200B;使用`PEBBLE_V1`。 |
@@ -113,7 +113,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB Amazon S3]
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers\{INSTANCE_ID} \
@@ -221,7 +221,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB SFTP]
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -238,7 +238,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      }, 
+      },
+      "hostName":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.hostName}}"
+      },
       "port": 22,
       "encryptionMode" : "PGP"
    },
@@ -329,7 +333,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB Azure Data Lake儲存體]
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -431,7 +435,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB Azure Blob儲存體]
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_D} \
@@ -539,7 +543,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB 資料登陸區域(DLZ)]
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -557,7 +561,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    },
    "fileConfigurations": {
         "compression": {
@@ -642,7 +646,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB Google雲端儲存空間]
 
-+++要求
++++請求
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \

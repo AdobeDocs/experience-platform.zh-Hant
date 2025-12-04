@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: d537284b804214fa8a37febab5f78335a590e9f5
+source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
 workflow-type: tm+mt
-source-wordcount: '3541'
+source-wordcount: '3550'
 ht-degree: 10%
 
 ---
@@ -91,7 +91,8 @@ ht-degree: 10%
 每個個別資料流執行會顯示下列詳細資訊：
 
 - **[!UICONTROL Dataflow run start]**：資料流執行開始的時間。 對於串流資料流執行，Experience Platform會以每小時量度的形式，根據資料流執行的開始擷取量度。 這表示對於串流資料流執行，如果資料流執行開始於（例如）10:30PM，則量度在UI中將開始時間顯示為晚上10:00。
-- **[!UICONTROL Processing time]**：資料流執行處理所花的時間。
+- **[!UICONTROL Audience]**：與每個資料流執行相關聯的對象數。
+- **[!UICONTROL Processing duration]**：資料流執行處理所花的時間。
    - 對於&#x200B;**[!UICONTROL completed]**&#x200B;個執行，處理時間量度一律顯示一個小時。
    - 針對仍處於&#x200B;**[!UICONTROL processing]**&#x200B;狀態的資料流執行，擷取所有量度的視窗會保持開啟超過一小時，以處理對應至資料流執行的所有量度。 例如，上午9:30開始的資料流執行可能會維持處理狀態1小時30分鐘，以擷取及處理所有量度。 由於目的地失敗回應而完成的重試，會直接影響處理時間的長度。 接著，在處理視窗關閉且資料流執行更新為&#x200B;**已完成**&#x200B;的狀態後，顯示的處理時間就會變更為一小時。
 - **[!UICONTROL Profiles received]**：資料流中接收的設定檔總數。
@@ -141,7 +142,7 @@ ht-degree: 10%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -169,7 +170,7 @@ ht-degree: 10%
 
 - **[!UICONTROL Dataflow run start]**：資料流執行開始的時間。
 - **[!UICONTROL Audience]**：與每個資料流執行相關聯的對象名稱。
-- **[!UICONTROL Processing time]**：處理資料流執行所花的時間。
+- **[!UICONTROL Processing duration]**：處理資料流執行所花的時間。
 - **[!UICONTROL Profiles received]**：資料流中接收的設定檔總數。 此值每 60 分鐘更新一次。
 - **[!UICONTROL Identities activated]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分識別。
 - **[!UICONTROL Identities excluded]**：根據遺失的屬性和同意違規，從啟用中排除的設定檔身分總數。
