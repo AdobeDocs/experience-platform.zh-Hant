@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段比對概觀
 description: 「區段比對」是Adobe Experience Platform中的區段共用服務，可讓兩位或更多Experience Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: aa56c6bec3544c922521cc611036fd2989feb8b3
+source-git-commit: d4b6b83e37762f73f628b8922bf77f1739492eef
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2000'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe於2021年推出[!DNL Segment Match]，供客戶共同作業和交換對象。 2025年初，Adobe推出[Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/home)，這是符合此使用案例的長期方法。
+>Adobe於2021年推出[!DNL Segment Match]，供客戶共同作業和交換對象。 2025年初，Adobe推出[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)，這是符合此使用案例的長期方法。
 >
->* 美國、加拿大、澳洲和紐西蘭的客戶： Adobe建議Real-Time CDP Prime和Ultimate客戶將資料共同作業使用案例從[!DNL Segment Match]轉移至Real-Time CDP Collaboration。 檢視Real-Time CDP Collaboration的[檔案](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/home)和[快速入門手冊](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/quick-start-guide)，並連絡您的Adobe客戶團隊以深入瞭解。
+>* 美國、加拿大、澳洲、紐西蘭和EMEA的客戶： Adobe建議Real-Time CDP Prime和Ultimate客戶將資料共同作業使用案例從[!DNL Segment Match]轉移至Real-Time CDP Collaboration。 檢視Real-Time CDP Collaboration的[檔案](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)和[快速入門手冊](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide)，並連絡您的Adobe客戶團隊以深入瞭解。
 >* 對於所有其他地區的客戶： [!DNL Segment Match]是推薦選項，直到2026年在這些地區發行Real-Time CDP Collaboration為止。
 
 Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位或以上的Experience Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。 [!DNL Segment Match]使用Experience Platform隱私權標準和個人識別碼，例如雜湊電子郵件、雜湊電話號碼以及裝置識別碼，例如IDFA和GAID。
@@ -51,7 +51,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 | 命名空間 | 說明 |
 | --------- | ----------- |
-| 電子郵件 (SHA256，小寫) | 預先雜湊電子郵件地址的名稱空間。使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 Experience Platform提供兩種支援資料收集雜湊的方法，透過[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=zh-Hant#hashing-support)和[資料準備](../../../data-prep/functions.md#hashing)。 |
+| 電子郵件 (SHA256，小寫) | 預先雜湊電子郵件地址的名稱空間。使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 Experience Platform提供兩種支援資料收集雜湊的方法，透過[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)和[資料準備](../../../data-prep/functions.md#hashing)。 |
 | 電話(SHA256_E.164) | 表示需要使用 SHA256 和 E.164 格式進行雜湊的原始電話號碼的命名空間。 |
 | ECID | 代表Experience Cloud ID (ECID)值的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID總覽](../../../identity-service/features/ecid.md)。 |
 | Apple IDFA （廣告商的ID） | 代表廣告商Apple ID的名稱空間。 如需詳細資訊，請參閱下列有關[興趣型廣告](https://support.apple.com/en-us/HT202074)的檔案。 |
