@@ -2,10 +2,10 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 84817abfbd5023310c37427f426684929cd57fe6
+source-git-commit: ee8c270c63cd9e61c28ea990914a96988524bc03
 workflow-type: tm+mt
-source-wordcount: '3539'
-ht-degree: 5%
+source-wordcount: '3431'
+ht-degree: 6%
 
 ---
 
@@ -70,16 +70,8 @@ ht-degree: 5%
 | [!DNL Adobe Journey Optimizer] | 自訂動作 |  | 自訂動作可獨立新增至套件。 將自訂動作指派給歷程後，就無法再編輯它。 若要更新自訂動作，您應： <ul><li>在移轉歷程之前移動自訂動作</li><li>更新移轉後自訂動作的設定（例如請求標頭、查詢引數和驗證）</li><li>使用您在第一個步驟中新增的自訂動作移轉歷程物件</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 內容範本 | | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer行銷活動和歷程中重複使用自訂內容。 |
 | [!DNL Adobe Journey Optimizer] | 片段 | 所有巢狀片段。 | 片段可以復製為歷程物件的相依物件。 片段是可重複使用的元件，可在各個Journey Optimizer促銷活動和歷程的一封或多封電子郵件中參考。 |
-| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
-| [!DNL Adobe Journey Optimizer] | 決策 | 複製決策物件之前，目標沙箱中必須存在下列物件： <ul><li>用於決策物件的設定檔屬性</li><li>自訂選件屬性的欄位群組</li><li>用於跨規則、排名或上限之內容屬性的資料串流結構。</li></ul> | <ul><li>目前不支援複製使用AI模型的排名公式。</li><li>決定專案（優惠專案）不會自動納入。 若要確保它們已傳輸，請使用&#x200B;**新增至封裝**&#x200B;選項手動新增。</li><li>使用選擇策略的原則需要在複製過程中手動新增關聯的決定專案。 使用手動或遞補決定專案的原則會自動將這些專案作為直接相依性納入。</li><li>必須先複製決定專案，然後再複製任何其他相關物件。</li></ul> |
-
-用於決策物件的設定檔屬性，
-自訂選件屬性的欄位群組，
-用於跨規則、排名或上限之內容屬性的資料串流結構。
-
-不會複製曲面（例如預設集）。 系統會根據訊息型別和表面名稱，自動選取目標沙箱上最接近的相符專案。 如果在目標沙箱上找不到表面，則表面複製將失敗，導致訊息複製失敗，因為訊息需要表面才能用於設定。 在這種情況下，至少需要為訊息的正確通道建立一個表面，副本才能運作。
-
-匯出歷程時，不支援將自訂身分型別當做相依物件使用。
+| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 決策 | 複製決策物件之前，目標沙箱中必須存在下列物件： <ul><li>用於決策物件的設定檔屬性</li><li>自訂選件屬性的欄位群組</li><li>用於跨規則、排名或上限之內容屬性的資料串流結構。</li></ul> | <ul><li>目前不支援複製使用AI模型的排名公式。</li><li>決定專案（優惠專案）不會自動納入。 若要確保它們已傳輸，請使用&#x200B;**新增至封裝**&#x200B;選項手動新增。</li><li>使用選擇策略的原則需要在複製過程中手動新增關聯的決定專案。 使用手動或遞補決定專案的原則會自動將這些專案作為直接相依性納入。</li><li>必須先複製決定專案，然後再複製任何其他相關物件。</li><li>如需支援物件的完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li></ul> |
 
 ## 將物件匯出到套件中 {#export-objects}
 
@@ -361,7 +353,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 以下影片旨在協助您瞭解沙箱工具，並概述如何建立新套件、發佈套件和匯入套件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3446101/?captions=chi_hant&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 後續步驟
 
