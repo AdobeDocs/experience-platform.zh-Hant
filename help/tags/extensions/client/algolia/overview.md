@@ -2,9 +2,9 @@
 title: Algoria標籤擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Algolia標籤擴充功能。
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 904200c5d3ef2be58582e4679109390e8d4aebc1
+source-git-commit: 6eee26df3841a7829625361fc726bf59a278f867
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1954'
 ht-degree: 1%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 1%
 
 ## 安裝並設定[!DNL Algolia] Insights擴充功能 {#install-configure}
 
-若要安裝[!DNL Algolia] Insights擴充功能，請導覽至[!UICONTROL 資料收集UI]，然後從左側導覽中選取&#x200B;**[!UICONTROL 標籤]**。 從這裡，選取要新增擴充功能的屬性，或改為建立新屬性。
+若要安裝[!DNL Algolia] Insights擴充功能，請導覽至[!UICONTROL Data Collection UI]並從左側導覽中選取&#x200B;**[!UICONTROL Tags]**。 從這裡，選取要新增擴充功能的屬性，或改為建立新屬性。
 
-選取或建立所需的屬性後，在左側導覽中選取&#x200B;**[!UICONTROL 擴充功能]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;索引標籤。 搜尋[!DNL Algolia]深入分析卡片，然後選取&#x200B;**[!UICONTROL 安裝]**。
+選取或建立所需的屬性後，在左側導覽中選取「**[!UICONTROL Extensions]**」，然後選取「**[!UICONTROL Catalog]**」標籤。 搜尋[!DNL Algolia]深入分析卡片，然後選取&#x200B;**[!UICONTROL Install]**。
 
 ![](../../../images/extensions/client/algolia/install.png)
 
@@ -42,12 +42,12 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 應用程式識別碼] | 輸入您先前在[!UICONTROL 組態詳細資料]區段中收集的[應用程式識別碼](#configuration-details)。 |
-| [!UICONTROL 搜尋API金鑰] | 輸入您先前在[!UICONTROL 組態詳細資料]區段中收集的[搜尋API金鑰](#configuration-details)。 |
-| [!UICONTROL 索引名稱] | [!UICONTROL 索引名稱]包含產品或內容。  此索引將用作預設值。 |
-| [!UICONTROL 使用者權杖資料元素] | 將傳回使用者權杖的資料元素。 |
-| [!UICONTROL 已驗證的使用者權杖資料元素] | 設定將傳回已驗證使用者權杖的資料元素。 |
-| [!UICONTROL 貨幣] | 選取貨幣型別。 預設值設定為`USD`。 |
+| [!UICONTROL Application ID] | 輸入您先前在[!UICONTROL Application Id]組態詳細資料[區段中收集的](#configuration-details)。 |
+| [!UICONTROL Search API Key] | 輸入您先前在[!UICONTROL Search API Key]組態詳細資料[區段中收集的](#configuration-details)。 |
+| [!UICONTROL Index Name] | [!UICONTROL Index Name]包含產品或內容。  此索引將用作預設值。 |
+| [!UICONTROL User Token Data Element] | 將傳回使用者權杖的資料元素。 |
+| [!UICONTROL Authenticated User Token Data Element] | 設定將傳回已驗證使用者權杖的資料元素。 |
+| [!UICONTROL Currency Code] | 以ISO-4217格式輸入貨幣代碼，例如USD或EUR。 此欄位支援資料元素。 |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -61,33 +61,33 @@ ht-degree: 1%
 >
 >在大多數情況下，建議您在網站的每個頁面載入[!DNL Algolia]深入分析。
 
-將&#x200B;**[!UICONTROL 載入深入分析]**&#x200B;動作新增至您的標籤規則，只要是根據您規則的內容載入[!DNL Algolia]深入分析最合理。 此動作會將`search-insights.js`程式庫載入頁面上。
+將&#x200B;**[!UICONTROL Load Insights]**&#x200B;動作新增至您的標籤規則，只要是根據您規則的內容載入[!DNL Algolia]深入分析最合理。 此動作會將`search-insights.js`程式庫載入頁面上。
 
-建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL 載入深入分析]**&#x200B;作為[!UICONTROL 動作型別]。
+建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL Extension]，並選取&#x200B;**[!UICONTROL Load Insights]**&#x200B;作為[!UICONTROL Action Type]。
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL Insight程式庫版本] | [!DNL Algolia]深入分析版本。 預設值為 `2.13.0`。 |
-| [!UICONTROL 使用者選擇退出資料元素] | 擷取使用者追蹤偏好設定的資料元素。 |
-| [!UICONTROL 使用使用者權杖Cookie] | 核取此方塊可允許[!DNL Algolia]產生使用者權杖Cookie。 依預設，此選項設定為`false`。 |
+| [!UICONTROL Insight Library Version] | [!DNL Algolia]深入分析版本。 預設值為 `2.17.3`。 |
+| [!UICONTROL User Opt Out Data Element] | 擷取使用者追蹤偏好設定的資料元素。 |
+| [!UICONTROL Use User Token Cookie] | 核取此方塊可允許[!DNL Algolia]產生使用者權杖Cookie。 依預設，此選項設定為`true`。 |
 
 ![](../../../images/extensions/client/algolia/load-insights.png)
 
 ### 已點按 {#clicked}
 
-將&#x200B;**[!UICONTROL Click]**&#x200B;動作新增至您的標籤規則，以將點選事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algoria]**&#x200B;做為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL Clicked]**&#x200B;做為[!UICONTROL 動作型別]。
+將&#x200B;**[!UICONTROL Click]**&#x200B;動作新增至您的標籤規則，以將點選事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL Extension]，並選取&#x200B;**[!UICONTROL Clicked]**&#x200B;作為[!UICONTROL Action Type]。
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 事件名稱] | 事件名稱，可用來進一步調整此點按事件。 |
-| [!UICONTROL 事件詳細資料元素] | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （選擇性）</li><li>`position` （選擇性）</li></ul> |
-| [!UICONTROL 記錄ID資料元素] | 在`click`事件期間，記錄ID會作為儲存在瀏覽器儲存區之事件資料的索引鍵。 依預設，頁面URL會作為記錄ID。 若要覆寫此行為，請使用此屬性來提供將記錄ID傳回為字串的資料元素。 |
+| [!UICONTROL Event Name] | 事件名稱，可用來進一步調整此點按事件。 |
+| [!UICONTROL Event Details Data Element] | 資料元素會傳回JSON格式的事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （選擇性）</li><li>`positions` （選擇性）</li><li>`price` （選擇性）</li><li>`quantity` （選擇性）</li><li>`discount` （選擇性）</li><li>`objectData` （選擇性）</li><li>`currency` （選擇性）</li></ul> |
+
 
 >[!NOTE]
 >
->如果同時包含`queryID`和`position`，則事件在搜尋&#x200B;**後會分類為**&#x200B;已點按物件ID。 否則，它被分類為&#x200B;**點選物件識別碼**&#x200B;事件。
->&#x200B;><br>
->&#x200B;>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
+>如果同時包含`queryID`和`positions`，則事件在搜尋&#x200B;**後會分類為**&#x200B;已點按物件ID。 否則，它被分類為&#x200B;**點選物件識別碼**事件。
+><br>
+>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -96,20 +96,18 @@ ht-degree: 1%
 
 ### 已轉換 {#converted}
 
-將&#x200B;**[!UICONTROL 已轉換]**&#x200B;動作新增至您的標籤規則，以將已轉換的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL Converted]**&#x200B;作為[!UICONTROL 動作型別]。
+將&#x200B;**[!UICONTROL Converted]**&#x200B;動作新增至您的標籤規則，以將轉換的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL Extension]，並選取&#x200B;**[!UICONTROL Converted]**&#x200B;作為[!UICONTROL Action Type]。
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 事件名稱] | 將用於進一步調整此&#x200B;**轉換**&#x200B;事件的事件名稱。 |
-| [!UICONTROL 事件詳細資料元素] | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （選擇性）</li></ul> |
-| [!UICONTROL 停用移除事件資料] | 在轉換事件上，事件資料會從儲存空間中移除。 如果後續的轉換事件需要此資料，請停用移除程式以確保事件資料仍然可用。 |
-| [!UICONTROL 記錄ID資料元素] | 記錄ID會作為索引鍵，用於查閱儲存在瀏覽器儲存體中的事件資料。 頁面URL是預設的記錄ID。 若要覆寫此行為，請使用此屬性來提供將記錄ID傳回為字串的資料元素。 |
+| [!UICONTROL Event Name] | 將用於進一步調整此&#x200B;**轉換**&#x200B;事件的事件名稱。 |
+| [!UICONTROL Event Details Data Element] | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` （選擇性）</li><li>`recordID` （選擇性）</li></ul> |
 
 >[!NOTE]
 >
->如果資料元素包含`queryId`，則事件在搜尋後會分類為&#x200B;**已轉換**。 否則，它將被分類為&#x200B;**已轉換**&#x200B;事件。
->&#x200B;><br>
->&#x200B;>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
+>如果資料元素包含`queryId`，則事件在搜尋後會分類為&#x200B;**已轉換**。 否則，它將被分類為&#x200B;**已轉換**事件。
+><br>
+>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -117,21 +115,20 @@ ht-degree: 1%
 
 ### 已新增至購物車 {#added-to-cart}
 
-將&#x200B;**[!UICONTROL 已新增至購物車]**&#x200B;動作新增至您的標籤規則，以將已新增至購物車事件的動作傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL 新增到購物車]**&#x200B;作為[!UICONTROL 動作型別]。
+將&#x200B;**[!UICONTROL Added to Cart]**&#x200B;動作新增至您的標籤規則，以將新增至購物車事件的動作傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL Extension]，並選取&#x200B;**[!UICONTROL Added to cart]**&#x200B;作為[!UICONTROL Action Type]。
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 事件名稱] | 將用於進一步調整此&#x200B;**轉換**&#x200B;事件的事件名稱。 |
-| [!UICONTROL 事件詳細資料元素] | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` （選擇性）</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` （選擇性）</li></ul>。 |
-| [!UICONTROL 貨幣] | 選取貨幣型別。 預設值設定為`USD`。 |
+| [!UICONTROL Event Name] | 將用於進一步調整此&#x200B;**加入購物車**&#x200B;事件的事件名稱。 |
+| [!UICONTROL Event Details Data Element] | 資料元素會傳回JSON格式的事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` （選擇性）</li><li>`queryID` （選擇性）</li><li>`currency` （選擇性）</li></ul>。 |
 
 >[!NOTE]
 >
->如果資料元素包含`queryId`，則事件將會分類為&#x200B;**，在搜尋**&#x200B;後新增到購物車物件ID。 否則，它將分類為&#x200B;**新增到購物車物件識別碼**&#x200B;事件。
->&#x200B;><br>
->&#x200B;>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
->&#x200B;><br>
->&#x200B;>如果預設資料元素不符合您的需求，可以建立自訂的單一資料元素以傳回所需的事件詳細資訊。
+>如果資料元素包含`queryId`，則事件將會分類為&#x200B;**，在搜尋**&#x200B;後新增到購物車物件ID。 否則，它將分類為&#x200B;**新增到購物車物件識別碼**事件。
+><br>
+>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
+><br>
+>如果預設資料元素不符合您的需求，可以建立自訂的單一資料元素以傳回所需的事件詳細資訊。
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -139,21 +136,18 @@ ht-degree: 1%
 
 ### 已購買 {#purchased}
 
-將&#x200B;**[!UICONTROL Purchased]**&#x200B;動作新增至您的標籤規則，以將購買的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL Purchased]**&#x200B;作為[!UICONTROL 動作型別]。
+將&#x200B;**[!UICONTROL Purchased]**&#x200B;動作新增至您的標籤規則，以將已購買的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL Extension]，並選取&#x200B;**[!UICONTROL Purchased]**&#x200B;作為[!UICONTROL Action Type]。
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 事件名稱] | 將用於進一步調整此&#x200B;**購買**&#x200B;事件的事件名稱。 |
-| [!UICONTROL 事件詳細資料元素] | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` （選擇性）</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` （選擇性）</li></ul>。 |
-| [!UICONTROL 貨幣] | 選取貨幣型別。 預設值設定為`USD`。 |
+| [!UICONTROL Event Name] | 將用於進一步調整此&#x200B;**購買**&#x200B;事件的事件名稱。 |
+| [!UICONTROL Event Details Data Element] | 資料元素會傳回JSON格式的事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`</li><li>`price`</li><li>`quantity`</li><li>`discount` （選擇性）</li><li>`queryID` （選擇性）</li><li>`currency` （選擇性）</li></ul>。 |
 
 >[!NOTE]
 >
->如果資料元素包含`queryId`，則搜尋後事件將被分類為&#x200B;**已購買的物件ID**。 否則會分類為&#x200B;**已購買物件識別碼**&#x200B;事件。
->&#x200B;><br>
->&#x200B;>如果資料元素未提供`indexName`，則會在傳送事件時使用&#x200B;**預設索引名稱**。
->&#x200B;><br>
->&#x200B;>如果預設資料元素不符合您的需求，可以建立自訂的單一資料元素以傳回所需的事件詳細資訊。
+>「已購買」動作會根據已購買的專案ID從瀏覽器儲存空間中擷取事件資料。 如果任何購買的專案在其儲存的資料中包含`queryID`，則搜尋後&#x200B;**事件將被分類為**&#x200B;購買物件ID。 否則，將被分類為&#x200B;**已購買物件識別碼**事件。
+><br>
+>此方法可讓購買事件自動包含使用者先前與專案互動的所有相關內容（查詢ID、索引名稱、價格、數量、折扣）。
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
@@ -162,12 +156,12 @@ ht-degree: 1%
 
 ### 已檢視 {#viewed}
 
-將&#x200B;**[!UICONTROL 已檢視]**&#x200B;動作新增至您的標籤規則，以將購買的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algoria]**&#x200B;做為[!UICONTROL 擴充功能]，並選取&#x200B;**[!UICONTROL 已檢視]**&#x200B;做為[!UICONTROL 動作型別]。
+將&#x200B;**[!UICONTROL Viewed]**&#x200B;動作新增至您的標籤規則，以將已購買的事件傳送至[!DNL Algolia]。 建立新標籤規則或開啟現有標籤規則。 根據您的需求定義條件，然後選取&#x200B;**[!UICONTROL Algolia]**&#x200B;作為[!UICONTROL Extension]，並選取&#x200B;**[!UICONTROL Viewed]**&#x200B;作為[!UICONTROL Action Type]。
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 事件名稱] | 將用於進一步調整此&#x200B;**檢視**&#x200B;事件的事件名稱。 |
-| [!UICONTROL 事件詳細資料元素] | 資料元素會傳回事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+| [!UICONTROL Event Name] | 將用於進一步調整此&#x200B;**檢視**&#x200B;事件的事件名稱。 |
+| [!UICONTROL Event Details Data Element] | 資料元素會傳回JSON格式的事件詳細資料，包括： <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]
 >
@@ -183,16 +177,35 @@ ht-degree: 1%
 
 ### 資料集 {#dataset}
 
-DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨後用於[!DNL Algolia]動作。
+DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨後用於[!DNL Algolia]動作。 此資料元素會自動將擷取的事件資料儲存在瀏覽器儲存空間中以供稍後使用（例如轉換或購買事件）。
+
+**一般組態：**
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 點選專案Div/類別名稱] | 包含資料集屬性的HTML元素名稱和/或CSS類別名稱，包括HTML元素上的`data-insights-object-id`以及選擇性的`data-insights-query-id`和`data-insights-position`。 |
-| [!UICONTROL 索引名稱專案Div/類別名稱] | 在HTML元素上具有資料集屬性(`data-indexname`)的HTML元素名稱和/或CSS類別名稱。 |
-| [!UICONTROL 查詢ID資料元素] | 查詢ID會從HTML元素的資料集中擷取。 若要覆寫此行為，請使用此屬性來提供將查詢ID傳回為字串的資料元素。 |
-| [!UICONTROL 物件識別碼資料元素] | 物件ID會從HTML元素的資料集中擷取。 若要覆寫此行為，請使用此屬性來提供將物件ID傳回為陣列的資料元素。 |
-| [!UICONTROL 位置資料元素] | 系統會從HTML元素上的資料集擷取位置。 若要覆寫此行為，請使用此屬性來提供資料元素，該資料元素會以陣列形式傳回Positions。 |
-| [!UICONTROL 索引名稱資料元素] | 此索引名稱會從HTML元素的資料集中擷取。 若要覆寫此行為，請使用此屬性來提供將傳回索引名稱作為字串的資料元素。 |
+| [!UICONTROL Hit Element Div/Class Name] | 包含資料集屬性的HTML元素名稱和/或CSS類別名稱，包括HTML元素上的`data-insights-object-id`以及選擇性的`data-insights-query-id`和`data-insights-position`。 |
+| [!UICONTROL Index Name Element Div/Class Name] | 在HTML元素上具有資料集屬性(`data-indexname`)的HTML元素名稱和/或CSS類別名稱。 |
+
+**Commerce設定（選擇性）：**
+
+| 屬性 | 說明 |
+| --- | --- |
+| [!UICONTROL Price Data Element] | 傳回專案價格的資料元素。 若提供，這會包含在商務事件的已儲存事件資料中。 |
+| [!UICONTROL Quantity Data Element] | 傳回專案數量的資料元素。 若未提供，則預設為1。 |
+| [!UICONTROL Discount Data Element] | 傳回專案折扣小數值的資料元素。 |
+| [!UICONTROL Currency Code] | ISO-4217格式的貨幣代碼。 若未指定貨幣代碼，則會使用擴充功能設定的預設貨幣。 |
+
+**覆寫（選擇性）：**
+
+這些欄位可讓您覆寫從HTML資料集屬性擷取資料的預設行為。
+
+| 屬性 | 說明 |
+| --- | --- |
+| [!UICONTROL Record ID Data Element] | 覆寫使用頁面URL作為記錄ID的預設方法。 記錄ID可用來儲存及查詢資料，以傳送至此產品/頁面的[!DNL Algolia]。 |
+| [!UICONTROL Query ID Data Element] | 查詢ID會從HTML元素的資料集中擷取。 若要覆寫此行為，請使用此屬性來提供將查詢ID傳回為字串的資料元素。 |
+| [!UICONTROL Object IDs Data Element] | 物件ID會從HTML元素的資料集中擷取。 若要覆寫此行為，請使用此屬性來提供將物件ID傳回為陣列的資料元素。 |
+| [!UICONTROL Positions Data Element] | 系統會從HTML元素的資料集中擷取位置。 若要覆寫此行為，請使用此屬性來提供資料元素，該資料元素會以陣列形式傳回Positions。 |
+| [!UICONTROL Index Name Data Element] | 索引名稱會從HTML元素的資料集中擷取。 若要覆寫此行為，請使用此屬性來提供將傳回索引名稱作為字串的資料元素。 |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
 
@@ -204,7 +217,10 @@ DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨�
   queryID,
   indexName,
   objectIDs,
-  positions
+  positions,
+  objectData,  // Optional: commerce data if price is provided
+  currency,    // Optional: if provided
+  recordID
 }
 ```
 
@@ -227,10 +243,10 @@ DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨�
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 物件識別碼引數名稱] | 包含物件ID的查詢引數名稱。 |
-| [!UICONTROL 索引名稱引數名稱] | 包含索引名稱的查詢引數名稱。 |
-| [!UICONTROL 查詢ID引數名稱] | 包含查詢ID的查詢引數名稱。 |
-| [!UICONTROL 位置引數名稱] | 包含「位置」的查詢引數名稱。 |
+| [!UICONTROL Object ID Param Name] | 包含物件ID的查詢引數名稱。 |
+| [!UICONTROL Index Name Param Name] | 包含索引名稱的查詢引數名稱。 |
+| [!UICONTROL Query ID Param Name] | 包含查詢ID的查詢引數名稱。 |
+| [!UICONTROL Position Param Name] | 包含「位置」的查詢引數名稱。 |
 
 ![](../../../images/extensions/client/algolia/query-string.png)
 
@@ -241,42 +257,53 @@ DataSet Data Element會擷取與HTML元素相關聯的資料，這些資料隨�
   timestamp,
   queryID,
   indexName,
-  objectIDs
+  objectIDs,
+  positions
 }
 ```
 
-包含查詢引數的HTML範例。
+包含查詢引數的HTML範例：
 
-```
+```html
 <a href="product.html?objectID=${hit.objectID}&queryID=${hit.__queryID}&indexName=${indexName}&position=${hit.position}">Read More</a>
 ```
 
 ### 儲存空間 {#storage}
 
-存放裝置資料元素會從工作階段存放裝置擷取資料，以用於[!DNL Algolia]動作。
+存放裝置資料元素會從瀏覽器工作階段存放裝置擷取資料，以用於[!DNL Algolia]動作。 此資料元素也可用來以其他商業資訊來增強已儲存的資料。
 
-此資料元素會從工作階段存放區擷取事件詳細資訊。 不需要設定。 資料會在&#x200B;*點按*&#x200B;事件動作期間自動新增，並在&#x200B;*轉換*&#x200B;事件動作期間移除。
+此資料元素會擷取先前儲存在工作階段存放區中的事件詳細資料（通常是由點選事件期間的DataSet資料元素所儲存）。 除非明確停用移除，否則資料會在轉換事件期間自動移除。
+
+**覆寫（選擇性）：**
 
 | 屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 記錄ID資料元素] | 記錄ID會作為索引鍵，用於查閱儲存在瀏覽器儲存體中的事件資料。 頁面URL是預設的記錄ID。 若要覆寫此行為，請使用此屬性來提供將記錄ID傳回為字串的資料元素。 |
+| [!UICONTROL Record ID Data Element] | 記錄ID會作為索引鍵，用於查閱儲存在瀏覽器儲存體中的事件資料。 頁面URL是預設的記錄ID。 若要覆寫此行為，請使用此屬性來提供將記錄ID傳回為字串的資料元素。 |
+| [!UICONTROL Price Data Element] | 傳回專案價格的資料元素。 如果提供，這將會以價格資訊更新儲存的事件資料。 |
+| [!UICONTROL Quantity Data Element] | 傳回專案數量的資料元素。 如果提供，這將會以數量資訊更新儲存的事件資料。 |
+| [!UICONTROL Discount Data Element] | 傳回專案折扣小數值的資料元素。 如果提供，這將會以折扣資訊更新儲存的事件資料。 |
+| [!UICONTROL Currency Code] | 以ISO-4217格式輸入貨幣代碼。 如果提供，這將會以貨幣資訊更新儲存的事件資料。 |
 
 ![](../../../images/extensions/client/algolia/storage.png)
 
-此資料元素會傳回工作階段存放區中儲存的內容。
+此資料元素會傳回工作階段存放區中儲存的內容，包括任何增強的商務資料：
 
 ```javascript
 {
   timestamp,
   queryID,
   indexName,
-  objectIDs
+  objectIDs,
+  positions,      // If available from original event
+  objectData,     // Optional: commerce data if price is provided
+  currency,       // Optional: if provided
+  recordID
 }
 ```
 
 ## 搜尋後點選或轉換 {#clicked-converted-after-search}
 
-搜尋&#x200B;*後按的*&#x200B;或&#x200B;*搜尋後轉換的*&#x200B;事件需要`queryId`，搜尋後按的`position`也需要&#x200B;**。 在InstantSearch和/或Autocomplete查詢引數中啟用`insights`旗標時，這些屬性即可使用。 請參閱下列資源，瞭解如何設定網站的Insights：
+搜尋&#x200B;*後按的*&#x200B;或&#x200B;*搜尋後轉換的*&#x200B;事件需要`queryID`，搜尋後按的`positions`也需要&#x200B;**。 在InstantSearch和/或Autocomplete查詢引數中啟用`insights`旗標時，這些屬性即可使用。 請參閱下列資源，瞭解如何設定網站的Insights：
 
 * [在自動完成時設定深入分析](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-js/autocomplete/#param-insights)
 * [在InstantSearch.js上設定深入分析](https://www.algolia.com/doc/guides/building-search-ui/events/js/#set-the-insights-option-to-true)
