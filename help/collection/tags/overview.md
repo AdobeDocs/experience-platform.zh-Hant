@@ -2,14 +2,16 @@
 title: 衛星物件參考
 description: 瞭解使用者端_satellite物件，以及您可在標籤中執行的各種功能。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: a36e5af39f904370c1e97a9ee1badad7a2eac32e
+source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
 # `_satellite`物件參考
+
+_這些頁面概述如何使用`_satellite`物件，讓您能夠使用JavaScript管理和自訂標籤邏輯。 如需如何在資料收集UI中設定實作的詳細資訊，請參閱[Adobe Experience Platform Web SDK標籤擴充功能](/help/tags/extensions/client/web-sdk/overview.md)。_
 
 `_satellite`物件公開數個支援的進入點，可協助您與網站上發佈的標籤程式庫互動。 如果正確實作載入器標籤，所有標籤部署都會公開`_satellite`。 此物件有幾個主要使用案例：
 
@@ -26,16 +28,18 @@ ht-degree: 0%
 ## 常見使用範例
 
 ```js
-// Read and write a temporary data element value
-const region = _satellite.getVar('user_region');
-_satellite.setVar('promo_code', code);
+// Read and write a temporary data element value (guarded)
+if(window._satellite?.getVar && window._satellite?.setVar) {
+  const region = _satellite.getVar('user_region');
+  _satellite.setVar('promo_code', code);
+}
 
-// Local debugging
-_satellite.setDebug(true);
-_satellite.logger.log('Rule evaluated');
-
-// Manually trigger a rule configured in your tag property
+// Manually trigger a rule configured in your tag property (guarded)
 if (window._satellite?.track) {
   _satellite.track('cart_add', { sku: '123', qty: 2 });
 }
+
+// Local console debugging (guarding not needed)
+_satellite.setDebug(true);
+_satellite.logger.log('Rule evaluated');
 ```

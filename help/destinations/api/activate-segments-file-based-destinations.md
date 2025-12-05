@@ -4,7 +4,7 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 290c20d3deb70372fb2fc691c6e6d04d34a72853
+source-git-commit: ba2de112ba9f1fce35f847e9eb9396e65f2a9232
 workflow-type: tm+mt
 source-wordcount: '4976'
 ht-degree: 4%
