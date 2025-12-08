@@ -6,10 +6,10 @@ breadcrumb-title: 資料收集
 user-guide-description: 瞭解如何將資料傳送至Adobe Experience Platform。
 feature: Data Collection
 role: Developer
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 31%
+source-wordcount: '139'
+ht-degree: 30%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 31%
 + BrightScript {#brightscript}
    + [BrightScript概述](brightscript/brs-overview.md)
 + JavaScript {#js}
-   + [JavaScript概觀](js/js-overview.md)
+   + [Web SDK JavaScript概觀](js/js-overview.md)
    + [發行說明](js/release-notes.md)
    + 安裝 {#install}
       + [安裝概述](js/install/overview.md)
@@ -75,7 +75,7 @@ ht-degree: 31%
       + [命令回應](js/commands/command-responses.md)
    + [監視鉤點](js/monitoring-hooks.md)
    + [常見問題集](js/faq.md)
-+ 標記 {#tags}
++ 標籤使用者端JavaScript {#tags}
    + [概觀](tags/overview.md)
    + [buildInfo](tags/buildinfo.md)
    + [公司](tags/company.md)
@@ -91,7 +91,7 @@ ht-degree: 31%
    + [track](tags/track.md)
 + 使用案例 {#use-cases}
    + [概觀](use-cases/overview.md)
-   + [使用者端提示](use-cases/client-hints.md)
+   + [用戶端提示](use-cases/client-hints.md)
    + [使用者端狀態](use-cases/client-state.md)
    + [收集商務資料](use-cases/collect-commerce-data.md)
    + [設定CSP](use-cases/configuring-a-csp.md)

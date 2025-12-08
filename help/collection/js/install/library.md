@@ -1,17 +1,17 @@
 ---
-title: 使用JavaScript程式庫安裝網頁SDK
+title: 安裝Web SDK JavaScript資料庫
 description: 使用獨立的CDN檔案來參考網頁SDK資料庫。
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-# 使用JavaScript程式庫安裝網頁SDK
+# 安裝Web SDK JavaScript資料庫
 
-不使用[使用標籤擴充功能](/help/tags/extensions/client/web-sdk/overview.md)安裝Web SDK的替代方式，是參考託管於CDN的JavaScript資料庫。 您可以直接參考程式庫，或下載程式庫並在您自己的基礎架構中託管。 提供縮制和完整格式。
+不使用[標籤擴充功能](/help/tags/extensions/client/web-sdk/overview.md)安裝Web SDK的替代方式，是參考託管於CDN的Web SDK JavaScript資料庫。 您可以直接參考程式庫，或下載程式庫並在您自己的基礎架構中託管。 提供縮制和完整格式。
 
 可使用下列URL結構存取Web SDK資料庫：
 

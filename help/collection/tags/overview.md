@@ -1,15 +1,15 @@
 ---
-title: 衛星物件參考
+title: 標籤使用者端JavaScript概述(_satellite)
 description: 瞭解使用者端_satellite物件，以及您可在標籤中執行的各種功能。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# `_satellite`物件參考
+# 標籤使用者端JavaScript概觀(`_satellite`)
 
 _這些頁面概述如何使用`_satellite`物件，讓您能夠使用JavaScript管理和自訂標籤邏輯。 如需如何在資料收集UI中設定實作的詳細資訊，請參閱[Adobe Experience Platform Web SDK標籤擴充功能](/help/tags/extensions/client/web-sdk/overview.md)。_
 

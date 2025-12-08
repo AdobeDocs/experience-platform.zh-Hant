@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得有關Adobe Experience Platform Web SDK常見問題的解答。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 2%
@@ -67,9 +67,9 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 
 **實現價值時間：** Adobe已努力工作（並將繼續），以便透過標籤輕鬆部署Web SDK並將使用者端資料對應至XDM。 完成上述工作後，您就可以在伺服器端開啟或關閉所有其他Adobe解決方案和Adobe Experience Platform服務。 例如，如果您將此用於Adobe Analytics，並且想要開啟Target或Experience Platform，您只需在資料流設定上翻轉切換即可開啟這些使用案例。
 
-## 什麼是 [!DNL alloy.js]？
+## 什麼是 `alloy.js`？
 
-[!DNL alloy.js]是Web SDK JavaScript資料庫的名稱。 SDK原始程式碼和檔案名稱會參照此值。
+`alloy.js`是Web SDK JavaScript資料庫的名稱。 SDK原始程式碼和檔案名稱會參照此值。
 
 ## 客戶是否需要購買Adobe Experience Platform才能使用[!DNL Web SDK]？
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 * *不*&#x200B;可以存取Experience Platform或Real-time CDP並希望使用[!DNL Web SDK]的客戶將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述和資料串流。
 * 有權存取Experience Platform或Real-time CDP並希望使用[!DNL Web SDK]的客戶將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述、資料集、身分名稱空間和資料串流。
 
-如需設定這些許可權的詳細資訊，請參閱我們關於[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=zh-Hant)的檔案。
+如需設定這些許可權的詳細資訊，請參閱我們關於[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)的檔案。
 
 ## 哪些人應該使用網路SDK？
 
@@ -144,7 +144,7 @@ Web SDK需要存取[資料流設定](/help/datastreams/overview.md)和Experience
 
 ## 什麼是CNAME或第一方網域，這為什麼重要？
 
-有關CNAME的詳細資訊，請參閱[Adobe檔案](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=zh-Hant)
+有關CNAME的詳細資訊，請參閱[Adobe檔案](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
 
 ## Adobe Experience Platform Web SDK是否使用Cookie？ 若是如此，會使用哪些Cookie？
 

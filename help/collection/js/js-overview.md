@@ -1,26 +1,19 @@
 ---
-title: JavaScript概觀
+title: Web SDK JavaScript程式庫概觀
 description: 使用JavaScript將資料傳送至Adobe Experience Platform Edge Network。
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
 
-# JavaScript概觀
+# Web SDK JavaScript程式庫概觀
 
-**Adobe Experience Platform Web SDK**&#x200B;是使用者端的JavaScript資料庫，可讓您將資料傳送至Adobe Experience Platform Edge Network。
+**Adobe Experience Platform Web SDK**&#x200B;是使用者端的JavaScript資料庫，可讓您將資料傳送至Adobe Experience Platform Edge Network。 本指南會記錄Web SDK JavaScript程式庫(`alloy.js`)實作路徑，包括核心概念、安裝、設定和命令。 如需資料收集UI中的網頁SDK標籤擴充功能，請參閱[網頁SDK標籤擴充功能](/help/tags/extensions/client/web-sdk/overview.md)。
 
 網頁SDK會以與解決方案無關的方式(XDM)傳送資料至Experience Platform Edge Network，接著將資料對應至解決方案特定的格式和目的地，並即時傳送。
-
-您可以透過兩種方式實作Web SDK：
-
-* 使用[JavaScript資料庫](install/library.md)手動實作（本檔案）
-* [Web SDK標籤延伸模組](/help/tags/extensions/client/web-sdk/overview.md)
-
-本指南包含使用Web Experience Cloud JavaScript資料庫與SDK解決方案互動的相關指示。
 
 ## Experience Platform Edge Network {#edge-network}
 

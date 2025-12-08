@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '2585'
+source-wordcount: '2584'
 ht-degree: 2%
 
 ---
@@ -152,7 +152,7 @@ ht-degree: 2%
 **新功能**
 
 - 新增對自動主張互動追蹤的支援。
-- 新增提供alloy.js檔案的自訂建置指令碼。
+- 新增提供`alloy.js`檔案的自訂建置指令碼。
 - 改善具有ActivityMap和事件群組支援的點選收集。
 
 ## 2.20.0版 — 2024年5月21日
