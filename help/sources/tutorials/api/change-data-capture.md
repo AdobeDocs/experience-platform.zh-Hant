@@ -2,9 +2,9 @@
 title: 在API中啟用來源連線的變更資料擷取
 description: 瞭解如何在API中為來源連線啟用變更資料擷取
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -29,10 +29,6 @@ Experience Platform中的變更資料擷取需要&#x200B;**[Data Mirror](../../.
 >[!AVAILABILITY]
 >
 >Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
-
->[!NOTE]
->
->關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。 其功能和變更資料擷取功能保持不變。
 
 >[!NOTE]
 >
@@ -169,7 +165,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 若要在您的[!DNL Google BigQuery]來源連線中啟用變更記錄，請瀏覽至[!DNL Google BigQuery]主控台中的[!DNL Google Cloud]頁面，並將`enable_change_history`設定為`TRUE`。 此屬性可啟用資料表變更記錄。
 
-如需詳細資訊，請閱讀[&#x200B; [!DNL GoogleSQL]中](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)資料定義語言陳述式的指南。
+如需詳細資訊，請閱讀[ [!DNL GoogleSQL]中](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)資料定義語言陳述式的指南。
 
 請閱讀下列檔案，以瞭解如何為[!DNL Google BigQuery]來源連線啟用變更資料擷取的步驟：
 

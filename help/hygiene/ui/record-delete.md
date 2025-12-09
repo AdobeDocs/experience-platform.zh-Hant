@@ -2,9 +2,9 @@
 title: 記錄刪除請求（UI工作流程）
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2358'
 ht-degree: 6%
 
 ---
@@ -195,7 +195,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 [!UICONTROL Confirm request]對話方塊似乎表示刪除後無法復原身分。 選取&#x200B;**[!UICONTROL Submit]**&#x200B;以確認您要刪除其資料的身分清單。
 
-![&#x200B; [!UICONTROL Confirm request]對話方塊。](../images/ui/record-delete/confirm-request.png)
+![ [!UICONTROL Confirm request]對話方塊。](../images/ui/record-delete/confirm-request.png)
 
 提交請求後，工作單即建立並顯示在[!UICONTROL Record]工作區的[!UICONTROL Data Lifecycle]標籤上。 從這裡，您可以在工單處理請求時監視工單的狀態。
 
@@ -208,10 +208,6 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 ## 根據關聯式結構描述從資料集中刪除記錄 {#relational-record-delete}
 
 如果您要刪除的資料集是根據關聯式結構描述，請檢閱下列考量事項，以確保正確移除記錄，且不會因為Experience Platform與來源系統之間的不相符而重新內嵌。
-
->[!NOTE]
->
->關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。 功能與刪除行為維持不變。
 
 ### 記錄刪除行為
 

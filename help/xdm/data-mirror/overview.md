@@ -5,9 +5,9 @@ title: Data Mirror概觀
 description: 瞭解Data Mirror如何使用具有強制唯一性、關係和版本設定的關聯式結構描述，將外部資料庫的列層級變更擷取到Adobe Experience Platform。
 badge: 有限可用性
 exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,6 @@ ht-degree: 0%
 >[!AVAILABILITY]
 >
 >Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
-
->[!NOTE]
->
->關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。 功能保持不變。
 
 Data Mirror是Adobe Experience Platform的一項功能，可讓您使用關聯式結構描述，將外部資料庫的列層級變更擷取到Data Lake。 它保留資料關係、強制執行唯一性，並支援版本化，而不需要上游擷取、轉換、載入(ETL)程式。
 

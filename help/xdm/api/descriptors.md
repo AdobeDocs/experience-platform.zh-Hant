@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 描述項API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述項。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2882'
 ht-degree: 1%
 
 ---
@@ -35,10 +35,6 @@ ht-degree: 1%
 本指南中使用的端點是[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)的一部分。 在繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience Platform API所需必要標題的重要資訊。
 
 除了標準描述項之外，[!DNL Schema Registry]還支援關聯式結構描述的描述項型別，例如&#x200B;**主索引鍵**、**版本**&#x200B;和&#x200B;**時間戳記**。 這些會強制唯一性、控制版本化，並在架構層級定義時間序列欄位。 如果您不熟悉關聯式結構描述，請先檢閱[Data Mirror概觀](../data-mirror/overview.md)和[關聯式結構描述技術參考](../schema/relational.md)，然後再繼續。
-
->[!NOTE]
->
->在Adobe Experience Platform檔案的舊版本中，關聯式結構描述先前稱為以模型為基礎的結構描述。 描述項功能和API端點維持不變。 僅更新術語，以求清晰明瞭。
 
 >[!IMPORTANT]
 >

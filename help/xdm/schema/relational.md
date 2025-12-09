@@ -2,12 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；關聯式結構描述；關聯式結構描述；結構描述；xdm；體驗資料模型；
 solution: Experience Platform
 title: 關聯式結構描述
-description: 瞭解Adobe Experience Platform中的關聯式結構描述（先前稱為以模型為基礎的結構描述），包括功能、必要欄位、關係和限制。
+description: 瞭解Adobe Experience Platform中的關聯式結構描述，包括功能、必要欄位、關係和限制。
 badge: 有限可用性
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
-source-git-commit: 605c169c9de7a978e6d2f0bdc809371c82cd3280
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 0%
 >
 >資料刪除考量事項適用於所有關聯式結構描述實施。 使用這些結構描述的應用程式必須瞭解刪除如何影響相關資料集、法規遵循需求和下游流程。 規劃刪除案例，並在實作前檢閱[資料衛生指南](../../hygiene/ui/record-delete.md#relational-record-delete)。
 
->[!NOTE]
->
->在Adobe Experience Platform檔案的舊版本中，關聯式結構描述先前稱為以模型為基礎的結構描述。
-
 使用關聯式結構描述可以：
 
 * 使用強制的單欄位或複合主索引鍵確保資料完整性。
@@ -38,7 +34,7 @@ ht-degree: 0%
 
 ## 關聯式結構描述與標準XDM結構描述的差異
 
-Experience Platform中的標準XDM結構描述會遵循下列三種資料行為之一：記錄、時間序列或臨機。 如需定義和詳細資訊，請參閱[XDM資料行為](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/xdm/home#data-behaviors)。
+Experience Platform中的標準XDM結構描述會遵循下列三種資料行為之一：記錄、時間序列或臨機。 如需定義和詳細資訊，請參閱[XDM資料行為](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors)。
 
 在傳統模型中，記錄和時間序列結構描述參與[聯合結構描述](../api/unions.md) （另請參閱[聯合結構描述UI指南](../../profile/ui/union-schema.md)）。 這些結構描述會隨著共用[欄位群組](./composition.md#field-group)的更新而自動演化，且自訂欄位必須巢狀置於租使用者名稱空間下。 此模型雖然功能強大，但可能會拖慢上線速度、產生包含未使用欄位且過於複雜的結構描述，並需要額外的資料對應或轉換。 這些因素會增加學習曲線以及持續的維護工作。
 

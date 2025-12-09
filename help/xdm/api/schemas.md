@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 結構描述API端點
 description: 結構描述登入API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM結構描述。
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2122'
+source-wordcount: '2091'
 ht-degree: 3%
 
 ---
@@ -277,7 +277,7 @@ curl -X POST \
 }
 ```
 
-執行GET要求以[列出租使用者容器中的所有結構描述](#list)現在將包含新的結構描述。 您可以使用URL編碼的[&#x200B; URI執行](#lookup)查詢(GET)要求`$id`，以直接檢視新的結構描述。
+執行GET要求以[列出租使用者容器中的所有結構描述](#list)現在將包含新的結構描述。 您可以使用URL編碼的[ URI執行](#lookup)查詢(GET)要求`$id`，以直接檢視新的結構描述。
 
 若要將其他欄位新增至結構描述，您可以執行[PATCH作業](#patch)，將欄位群組新增至結構描述的`allOf`和`meta:extends`陣列。
 
@@ -286,10 +286,6 @@ curl -X POST \
 >[!AVAILABILITY]
 >
 >Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
-
->[!NOTE]
->
->關聯式結構描述先前在Adobe Experience Platform API檔案的舊版本中稱為模型式結構描述。 功能保持不變 — 只是術語發生了更改，以清楚明瞭。
 
 對`/schemas`端點發出POST要求，以建立關聯式結構描述。 關聯式結構描述儲存結構化的關聯式樣式資料&#x200B;**，但不含**&#x200B;類別或欄位群組。 直接在結構描述上定義欄位，並使用邏輯行為標籤將結構描述識別為關聯式。
 

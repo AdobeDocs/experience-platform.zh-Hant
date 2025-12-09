@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '4652'
-ht-degree: 1%
+source-wordcount: '4635'
+ht-degree: 2%
 
 ---
 
@@ -36,10 +36,6 @@ ht-degree: 1%
 >[!AVAILABILITY]
 >
 >Adobe Journey Optimizer **協調的行銷活動**&#x200B;授權持有人可使用Data Mirror和關聯式結構描述。 視您的授權和功能啟用而定，它們也可作為Customer Journey Analytics使用者的&#x200B;**有限版本**&#x200B;提供。 請聯絡您的Adobe代表以取得存取權。
-
->[!NOTE]
->
->關聯式結構描述先前在舊版Adobe Experience Platform檔案中稱為模型式結構描述。
 
 選取&#x200B;**[!UICONTROL Relational]**&#x200B;以定義結構化、關聯式樣式的綱要，對記錄進行微調控制。 關聯式結構描述透過主要和外部索引鍵支援主索引鍵強制、記錄層級版本設定和結構描述層級關係。 它們也針對使用變更資料擷取的增量擷取進行最佳化，並支援用於Campaign Orchestration、Data Distiller和B2B實作的多種資料模型。
 
@@ -83,7 +79,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->儲存後，[!UICONTROL Type]側邊欄中的[!UICONTROL &#x200B; Schema properties]欄位會指出這是[!UICONTROL Relational]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
+>儲存後，[!UICONTROL Type]側邊欄中的[!UICONTROL  Schema properties]欄位會指出這是[!UICONTROL Relational]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
 >![結構描述編輯器畫布顯示空白的關聯式結構描述結構，並反白顯示關聯式型別。](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### 上傳DDL檔案 {#upload-ddl-file}
