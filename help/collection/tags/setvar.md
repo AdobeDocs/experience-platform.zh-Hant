@@ -1,9 +1,9 @@
 ---
 title: setVar()
 description: 設定您稍後可以使用getVar()擷取的值。
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+source-git-commit: 54c32803136bf37a13bb9ca14b1d1c7b09a2041c
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ _satellite.getVar('title'); // Blinding Light
 _satellite.getVar('category'); // Game
 _satellite.getVar('genre'); // Tower defense
 ```
+
+>[!NOTE]
+>
+>使用此方法設定變數名稱時，請避免使用句點(`.`)。 `getVar()`方法無法辨識包含使用`setVar()`設定的句號的變數。 但是，`getVar()` _會_&#x200B;識別在標籤UI中定義使用句號的資料元素。
