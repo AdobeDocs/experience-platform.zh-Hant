@@ -63,4 +63,4 @@ Analytics分類來源聯結器會要求您的資料先移轉至Adobe Analytics�
 
 * [Adobe Analytics來源聯結器總覽](../../../../connectors/adobe-applications/analytics.md)
 * [在UI中建立報告套裝資料的Analytics來源連線](./analytics.md)
-* [關於分類](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [關於分類](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=zh-Hant)
