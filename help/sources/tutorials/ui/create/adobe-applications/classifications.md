@@ -2,9 +2,9 @@
 description: 瞭解如何在UI中建立Adobe Analytics來源聯結器，以將分類資料帶入Adobe Experience Platform。
 title: 在UI中建立分類資料的Adobe Analytics Source連線
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -29,31 +29,31 @@ Analytics分類來源聯結器會要求您的資料先移轉至Adobe Analytics�
 
 ## 選取您的分類
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取[!UICONTROL Sources]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在&#x200B;*Adobe應用程式*&#x200B;類別下，選取&#x200B;**[!UICONTROL Adobe Analytics]**，然後選取&#x200B;**[!UICONTROL 設定]**。
+在&#x200B;*Adobe應用程式*&#x200B;類別下，選取&#x200B;**[!UICONTROL Adobe Analytics]**，然後選取&#x200B;**[!UICONTROL Set up]**。
 
 >[!TIP]
 >
->如果沒有已驗證的帳戶，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 帳戶通過驗證後，選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
+>如果沒有已驗證的帳戶，來源目錄中的來源會顯示&#x200B;**[!UICONTROL Set up]**&#x200B;選項。 帳戶通過驗證後，選項會變更為&#x200B;**[!UICONTROL Add data]**。
 
 ![已選取Adobe Analytics來源的Experience Platform UI中的來源目錄。](../../../../images/tutorials/create/classifications/catalog.png)
 
-接著，選取「[!UICONTROL 分類]」，然後選取您要擷取至Experience Platform的分類資料集。
+接著，選取「[!UICONTROL Classifications]」，然後選取您要擷取至Experience Platform的分類資料集。 或者，您也可以使用搜尋來篩選及選取特定分類。
 
-您最多可以選取30個不同的分類資料集，以匯入Experience Platform。 您選取的任何資料集都會顯示在右側邊欄中。 完成時，選取[!UICONTROL 下一步]以繼續。
+您最多可以選取30個不同的分類資料集，以匯入Experience Platform。 您選取的任何資料集都會顯示在右側邊欄中。 完成後，選取「[!UICONTROL Next]」以繼續。
 
 ![已選取數個分類資料集的「分類」頁面。](../../../../images/tutorials/create/classifications/select.png)
 
 ## 檢閱您的分類
 
-**[!UICONTROL 檢閱]**&#x200B;步驟隨即顯示，可讓您在建立所選分類資料集之前先檢閱該資料集。 詳細資料會分組到以下類別中：
+**[!UICONTROL Review]**&#x200B;步驟隨即顯示，可讓您在建立所選分類資料集之前先檢閱該資料集。 詳細資料會分組到以下類別中：
 
-* **[!UICONTROL 連線]**：顯示來源平台和連線的狀態。
-* **[!UICONTROL 資料型別]**：顯示選取的分類數目。
-* **[!UICONTROL 排程]**：顯示分類資料的同步處理頻率。 **注意**：分類資料每週都會更新。
+* **[!UICONTROL Connection]**：顯示來源平台和連線的狀態。
+* **[!UICONTROL Data type]**：顯示選取的分類數目。
+* **[!UICONTROL Scheduling]**：顯示分類資料的同步處理頻率。 **注意**：分類資料每週都會更新。
 
-檢閱您的資料流後，請按一下[完成] **&#x200B;**，並等待一些時間來建立資料流。
+檢閱您的資料流後，請按一下「**[!UICONTROL Finish]**」並允許一段時間以建立資料流。
 
 ![Adobe Analytics分類資料的檢閱頁面。](../../../../images/tutorials/create/classifications/review.png)
 
@@ -63,4 +63,4 @@ Analytics分類來源聯結器會要求您的資料先移轉至Adobe Analytics�
 
 * [Adobe Analytics來源聯結器總覽](../../../../connectors/adobe-applications/analytics.md)
 * [在UI中建立報告套裝資料的Analytics來源連線](./analytics.md)
-* [關於分類](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=zh-Hant)
+* [關於分類](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
