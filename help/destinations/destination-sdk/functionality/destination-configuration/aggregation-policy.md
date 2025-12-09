@@ -2,7 +2,7 @@
 description: 瞭解如何設定彙總原則，以判斷應如何分組和批次傳送目的地的HTTP請求。
 title: 彙總原則
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -109,7 +109,7 @@ ht-degree: 2%
 |---------|----------|------|
 | `aggregationType` | 字串 | 指示您的目的地應使用的彙總原則型別。 支援的彙總型別： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | 布林值 | 如果對目的地的呼叫應該依身分分割，請使用此旗標。 如果您的伺服器針對指定的身分識別名稱空間，在每次呼叫僅接受一個身分識別，請將此標幟設為`true`。 |
-| `configurableAggregation.maxBatchAgeInSecs` | 整數 | 此引數與`maxNumEventsInBatch`搭配使用可決定Experience Platform在傳送API呼叫至端點之前應等待的時間長度。 <ul><li>最小值（秒）：1,800</li><li>最大值（秒）：3,600</li></ul> 例如，如果您將兩個引數的最大值都使用，Experience Platform會等候3,600秒或直到10000有合格的設定檔為止，再執行API呼叫（以先發生者為準）。 |
+| `configurableAggregation.maxBatchAgeInSecs` | 整數 | 此引數與`maxNumEventsInBatch`搭配使用可決定Experience Platform在傳送API呼叫至端點之前應等待的時間長度。 <ul><li>最小值（秒）：301</li><li>最大值（秒）：3,600</li></ul> 例如，如果您將兩個引數的最大值都使用，Experience Platform會等候3,600秒或直到10000有合格的設定檔為止，再執行API呼叫（以先發生者為準）。 |
 | `configurableAggregation.maxNumEventsInBatch` | 整數 | 此引數與`maxBatchAgeInSecs`搭配使用，決定了API呼叫中應彙總多少個合格設定檔。 <ul><li>最小值： 1,000</li><li>最大值：10,000</li></ul> 例如，如果您將兩個引數的最大值都使用，Experience Platform會等候3,600秒或直到有10,000個合格的設定檔為止，才會進行API呼叫（以先發生者為準）。 |
 | `configurableAggregation.aggregationKey` | - | 可讓您根據下列描述引數，彙總對應至目的地的匯出設定檔。 |
 | `configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 如果您想要依對象ID將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
