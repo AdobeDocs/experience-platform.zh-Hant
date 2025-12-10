@@ -22,7 +22,7 @@ Web SDK支援下列標準：
    1. 體驗事件結構描述包含[IAB TCF 2.0同意欄位群組](/help/xdm/field-groups/event/iab.md)。
    1. 您在事件[XDM物件](sendevent/xdm.md)中包含IAB同意資訊。 Web SDK在傳送事件資料時不會自動包含同意資訊。
 
-使用此命令時，Web SDK會將使用者的偏好設定寫入[`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) Cookie。 無論訪客的同意偏好設定為何，都會設定此Cookie，因為它會儲存該訪客的同意偏好設定。 下次使用者在瀏覽器中載入您的網站時，SDK會擷取這些持續存在的偏好設定，以判斷事件是否可以傳送至Adobe。
+使用此命令時，Web SDK會將使用者的偏好設定寫入[`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/cookies/web-sdk) Cookie。 無論訪客的同意偏好設定為何，都會設定此Cookie，因為它會儲存該訪客的同意偏好設定。 下次使用者在瀏覽器中載入您的網站時，SDK會擷取這些持續存在的偏好設定，以判斷事件是否可以傳送至Adobe。
 
 Adobe建議您將「同意」對話方塊偏好設定與Web SDK同意分開儲存。 Web SDK並未提供擷取同意的方式。 若要確保使用者偏好設定與SDK保持同步，您可以在每次載入頁面時呼叫`setConsent`命令。 Web SDK只會在同意變更時進行伺服器呼叫。
 
@@ -51,7 +51,7 @@ Web SDK提供兩種互補的同意設定命令：
 | `out` | `out` | 無 | 是 |
 | `out` | 未設定 | 無 | 無 |
 
-如需可設定的Cookie完整清單，請參閱核心服務指南中的[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)。
+如需可設定的Cookie完整清單，請參閱核心服務指南中的[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/cookies/web-sdk)。
 
 ## 使用`setConsent`命令
 

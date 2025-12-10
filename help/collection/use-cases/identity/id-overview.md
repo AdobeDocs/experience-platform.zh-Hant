@@ -22,7 +22,7 @@ Web SDK會使用Cookie指派及追蹤[!DNL ECIDs]，並有多種可用方法來�
 當新使用者進入您的網站時，[Adobe Experience Cloud Identity Service](/help/identity-service/home.md)會嘗試為該使用者設定裝置識別Cookie。
 
 * 首次造訪的訪客會在來自Experience Platform Edge Network的首次回應中產生並傳回[!DNL ECID]。
-* 若為再度訪問的訪客，系統會從[!DNL ECID][`kndctr_<orgId>_identity` Cookie擷取](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)，並將其新增至Edge Network的要求裝載。
+* 若為再度訪問的訪客，系統會從[!DNL ECID][`kndctr_<orgId>_identity` Cookie擷取](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/cookies/web-sdk)，並將其新增至Edge Network的要求裝載。
 
 設定包含[!DNL ECID]的Cookie後，網頁SDK產生的每個後續請求都會在[!DNL ECID] Cookie中包含編碼的`kndctr_<orgId>_identity`。
 
@@ -55,7 +55,7 @@ Web SDK會使用Cookie指派及追蹤[!DNL ECIDs]，並有多種可用方法來�
 
 ### Cookie有效期限對Adobe Experience Cloud應用程式的影響 {#lifespans}
 
-無論您是選擇第一方還是第三方資料收集，Cookie能持續存在的時間長度會直接影響[Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics)和[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/customer-journey-analytics)中的訪客計數。 此外，在網站上使用[Adobe Target](https://experienceleague.adobe.com/en/docs/target)或[Offer Decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision)時，一般使用者可能會遇到不一致的個人化體驗。
+無論您是選擇第一方還是第三方資料收集，Cookie能持續存在的時間長度會直接影響[Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics)和[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/customer-journey-analytics)中的訪客計數。 此外，在網站上使用[Adobe Target](https://experienceleague.adobe.com/zh-hant/docs/target)或[Offer Decisioning](https://experienceleague.adobe.com/zh-hant/docs/target/using/integrate/ajo/offer-decision)時，一般使用者可能會遇到不一致的個人化體驗。
 
 例如，假設您已建立個人化體驗，且使用者在過去七天內檢視過任何專案三次，此體驗會將任何專案提升至首頁。
 
@@ -162,7 +162,7 @@ alloy("sendEvent", {
 | `authenticatedState` | 字串 | **（必要）**&#x200B;識別碼的驗證狀態。 可能的值為`ambiguous`、`authenticated`和`loggedOut`。 |
 | `primary` | 布林值 | 決定是否應將此身分用作設定檔中的主要片段。 依預設，ECID會設為使用者的主要識別碼。 如果省略，此值會預設為`false`。 |
 
-使用`identityMap`欄位來識別裝置或使用者，會產生與使用[`setCustomerIDs`中的](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) [!DNL ID Service API]方法相同的結果。 如需詳細資訊，請參閱[ID服務API檔案](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)。
+使用`identityMap`欄位來識別裝置或使用者，會產生與使用[`setCustomerIDs`中的](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=zh-Hant) [!DNL ID Service API]方法相同的結果。 如需詳細資訊，請參閱[ID服務API檔案](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=zh-Hant)。
 
 ## 從訪客API移轉至ECID {#migrating-visitor-api-ecid}
 
@@ -174,7 +174,7 @@ alloy("sendEvent", {
 
 ### 更新要移轉的特徵
 
-將XDM格式的資料傳送到Audience Manager時，移轉時必須將此資料轉換為訊號。 必須更新您的特徵，以反映XDM提供的新索引鍵。 使用Audience Manager建立的[BAAAM工具](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management)，可讓此程式更容易。
+將XDM格式的資料傳送到Audience Manager時，移轉時必須將此資料轉換為訊號。 必須更新您的特徵，以反映XDM提供的新索引鍵。 使用Audience Manager建立的[BAAAM工具](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=zh-Hant#getting-started-with-bulk-management)，可讓此程式更容易。
 
 ## 用於事件轉送
 
