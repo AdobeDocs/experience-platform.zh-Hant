@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得有關Adobe Experience Platform Web SDK常見問題的解答。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 2%
+source-wordcount: '1665'
+ht-degree: 1%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 * *不*&#x200B;可以存取Experience Platform或Real-time CDP並希望使用[!DNL Web SDK]的客戶將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述和資料串流。
 * 有權存取Experience Platform或Real-time CDP並希望使用[!DNL Web SDK]的客戶將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述、資料集、身分名稱空間和資料串流。
 
-如需設定這些許可權的詳細資訊，請參閱我們關於[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=zh-Hant)的檔案。
+如需設定這些許可權的詳細資訊，請參閱我們關於[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)的檔案。
 
 ## 哪些人應該使用網路SDK？
 
@@ -144,25 +144,11 @@ Web SDK需要存取[資料流設定](/help/datastreams/overview.md)和Experience
 
 ## 什麼是CNAME或第一方網域，這為什麼重要？
 
-有關CNAME的詳細資訊，請參閱[Adobe檔案](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=zh-Hant)
+請參閱核心服務指南中的[Adobe管理的憑證方案](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)。
 
 ## Adobe Experience Platform Web SDK是否使用Cookie？ 若是如此，會使用哪些Cookie？
 
-可以，根據您的實作，目前網路SDK會使用介於一至七個Cookie之間的任何地方。 以下是您在Web SDK中可能會看到的Cookie清單及其使用方式：
-
-| **名稱** | **maxAge** | **友善的年齡** | **說明** |
-|---|---|---|---|
-| **kndct_orgid_identity** | 34128000 | 395 天 | 身分Cookie會儲存ECID以及與ECID相關的其他資訊。 |
-| **kndctr_orgid_consent_check** | 7200 | 2 小時 | 此工作階段型Cookie會傳送訊號給伺服器，讓伺服器查詢同意偏好設定伺服器端。 |
-| **kndctr_orgid_consent** | 15552000 | 180 天 | 此Cookie會儲存使用者對網站的同意偏好設定。 |
-| **kndctr_orgid_cluster** | 1800 | 30 分鐘 | 此Cookie會儲存為目前使用者請求提供服務的Edge Network區域。 URL路徑會使用地區，這樣Edge Network就能將請求路由至正確的地區。 此Cookie具有30分鐘的存留期，因此如果使用者以不同的IP位址連線，則請求可以路由傳送到最接近的區域。 |
-| **mbox** | 63072000 | 2 年 | 當Target移轉設定設為true時，就會顯示此Cookie。 這可讓Web SDK設定Target [mbox Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/)。 |
-| **mboxEdgeCluster** | 1800 | 30 分鐘 | 當Target移轉設定設為true時，就會顯示此Cookie。 此Cookie可讓Web SDK將正確的邊緣叢集通訊至at.js，以便當使用者在網站上導覽時，Target設定檔可以保持同步。 |
-| **AMCV_###@AdobeOrg** | 34128000 | 395 天 | 只有在Adobe Experience Platform Web SDK上啟用ID移轉功能時，此Cookie才會出現。 在網站的某些部分仍在使用visitor.js時，此Cookie可協助您轉換至Web SDK。 如需詳細資訊，請參閱[`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md)。 |
-
-使用Web SDK時，Edge Network會設定上方的一或多個Cookie。 Edge Network會設定具有`secure`和`sameSite="none"`屬性的所有Cookie。
-
-如果您的網站上目前同時有安全和非安全區段，這可能會干擾使用者識別。 當使用者從網站的安全區段導覽到不安全的區段時，Edge Network會使用請求產生新的`ECID`。
+請參閱核心服務指南中的[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)。
 
 ## Adobe Experience Platform Web SDK支援哪些瀏覽器？
 

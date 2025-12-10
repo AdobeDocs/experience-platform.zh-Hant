@@ -2,10 +2,10 @@
 title: setConsent
 description: 用於每個頁面上，以追蹤使用者的同意偏好設定。
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 3%
+source-wordcount: '1117'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ Web SDK支援下列標準：
    1. 體驗事件結構描述包含[IAB TCF 2.0同意欄位群組](/help/xdm/field-groups/event/iab.md)。
    1. 您在事件[XDM物件](sendevent/xdm.md)中包含IAB同意資訊。 Web SDK在傳送事件資料時不會自動包含同意資訊。
 
-使用此命令後，Web SDK會將使用者的偏好設定寫入Cookie。 下次使用者在瀏覽器中載入您的網站時，SDK會擷取這些持續存在的偏好設定，以判斷事件是否可以傳送至Adobe。
+使用此命令時，Web SDK會將使用者的偏好設定寫入[`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) Cookie。 無論訪客的同意偏好設定為何，都會設定此Cookie，因為它會儲存該訪客的同意偏好設定。 下次使用者在瀏覽器中載入您的網站時，SDK會擷取這些持續存在的偏好設定，以判斷事件是否可以傳送至Adobe。
 
 Adobe建議您將「同意」對話方塊偏好設定與Web SDK同意分開儲存。 Web SDK並未提供擷取同意的方式。 若要確保使用者偏好設定與SDK保持同步，您可以在每次載入頁面時呼叫`setConsent`命令。 Web SDK只會在同意變更時進行伺服器呼叫。
 
@@ -34,15 +34,13 @@ Adobe建議您將「同意」對話方塊偏好設定與Web SDK同意分開儲�
 
 Web SDK提供兩種互補的同意設定命令：
 
-* [`defaultConsent`](configure/defaultconsent.md)：此命令旨在使用Web SDK擷取Adobe客戶的同意偏好設定。
-* [`setConsent`](setconsent.md)：這個命令的用意是擷取網站訪客的同意偏好設定。
+* [`defaultConsent`](configure/defaultconsent.md)：在呼叫`setConsent`之前，這個命令會自動設定訪客的預設同意偏好設定。
+* `setConsent` （目前頁面）：這個命令會明確設定訪客的同意偏好設定。
 
-搭配使用時，這些設定可能會產生不同的資料收集和Cookie設定結果，具體取決於其設定的值。
-
-請參閱下表以瞭解何時進行資料收集，以及何時根據同意設定設定Cookie。
+搭配使用時，這些設定可能會產生不同的資料收集和Cookie設定結果，端視其設定的值而定：
 
 | `defaultConsent` | `setConsent` | 發生資料收集 | 網頁SDK設定瀏覽器Cookie |
-|---------|----------|---------|---------|
+| --- | --- | --- | --- |
 | `in` | `in` | 是 | 是 |
 | `in` | `out` | 無 | 是 |
 | `in` | 未設定 | 是 | 是 |
@@ -53,16 +51,9 @@ Web SDK提供兩種互補的同意設定命令：
 | `out` | `out` | 無 | 是 |
 | `out` | 未設定 | 無 | 無 |
 
-同意設定允許時，將會設定下列Cookie：
+如需可設定的Cookie完整清單，請參閱核心服務指南中的[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)。
 
-| 名稱 | 最大年齡 | 說明 |
-|---|---|---|
-| **`AMCV_###@AdobeOrg`** | 34128000 （395天） | [`idMigrationEnabled`](configure/idmigrationenabled.md)啟用時出現。 當網站某些部分仍在使用`visitor.js`時，轉換為Web SDK會有所幫助。 |
-| **`Demdex cookie`** | 15552000 （180天） | 在啟用ID同步時顯示。 Audience Manager設定此Cookie以指派唯一ID給網站訪客。 demdex Cookie可協助Audience Manger執行基本功能，例如：訪客身分識別、ID同步化、分割、模型、報告等。 |
-| **`kndctr_orgid_cluster`** | 1800 （30分鐘） | 儲存Edge Network區域以提供目前使用者的請求。 URL路徑會使用地區，這樣Edge Network就能將請求路由至正確的地區。 如果使用者使用不同的IP位址或在不同的工作階段中連線，則請求會再次路由到最近的區域。 |
-| **`kndct_orgid_identity`** | 34128000 （395天） | 儲存ECID以及與ECID相關的其他資訊。 |
-| **`kndctr_orgid_consent`** | 15552000 （180天） | 儲存網站的使用者同意偏好設定。 |
-| **`s_ecid`** | 63115200 （2年） | 包含Experience Cloud ID ([!DNL ECID])或MID的復本。 MID 儲存在遵循下列語法的機碼-值組中：`s_ecid=MCMID\|<ECID>`。 |
+## 使用`setConsent`命令
 
 呼叫您設定的Web SDK執行個體時執行`setConsent`命令。 您可以在此命令中包含下列物件：
 
