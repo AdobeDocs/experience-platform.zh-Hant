@@ -67,4 +67,4 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->如需上述外掛程式的詳細資訊，請參閱[Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html)。
+>如需上述外掛程式的詳細資訊，請參閱[Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=zh-Hant)。

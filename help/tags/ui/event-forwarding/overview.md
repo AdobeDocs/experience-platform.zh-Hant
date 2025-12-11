@@ -26,7 +26,7 @@ Adobe Experience Platform (先前稱為Adobe Experience Platform Launch伺服器
 >
 >若要瞭解事件轉送如何在Experience Platform的資料收集生態系統中運作，請參閱[資料收集概觀](/help/collection/home.md)。
 
-結合Adobe Experience Platform [網頁SDK](/help/collection/js/js-overview.md)和[行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html)的事件轉送提供下列優點：
+結合Adobe Experience Platform [網頁SDK](/help/collection/js/js-overview.md)和[行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=zh-Hant)的事件轉送提供下列優點：
 
 **效能**：
 

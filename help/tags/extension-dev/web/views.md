@@ -72,7 +72,7 @@ window.extensionBridge.register({
 | `company` | 包含`orgId` (您的24字元Adobe Experience Cloud ID)、`id` （貴公司在Reactor API中的唯一識別碼）和`tenantId` (Adobe Identity Management系統內組織的唯一識別碼)的物件。 |
 | `schema` | [JSON 結構描述](https://json-schema.org/)格式的物件。此物件將來自[擴充功能資訊清單](../manifest.md)，可能有助於驗證您的表單。 |
 | `apiEndpoints` | 包含`reactor`的物件，其中包含對Reactor API網址的參照。 |
-| `userConsentPermissions` | 一個物件，其中包含來自Adobe [產品使用資料](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)的同意標幟。 使用儲存在`globalDataCollectionAndUsage`標幟中的以瞭解您的擴充功能是否允許收集&#x200B;*任何*&#x200B;客戶資料。 |
+| `userConsentPermissions` | 一個物件，其中包含來自Adobe [產品使用資料](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/features/account-preferences#product-usage-data)的同意標幟。 使用儲存在`globalDataCollectionAndUsage`標幟中的以瞭解您的擴充功能是否允許收集&#x200B;*任何*&#x200B;客戶資料。 |
 | `preferredLanguages` | 語言字串陣列。 |
 
 您的檢視應使用這項資訊來呈現和管理其表單。您可能只需處理 `info.settings`，但仍會提供另一項資訊以備不時之需。
