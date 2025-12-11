@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ## 附錄：取得SAS授權值 {#sas}
 
-外部應用程式已透過[!DNL Event Hubs]共用存取簽章(SAS)[被授與](https://learn.microsoft.com/en-us/azure/event-hubs/authorize-access-shared-access-signature)的存取權。 每個[!DNL Event Hubs]名稱空間和事件中心執行個體在建立時自動指派預設SAS授權規則，但如有需要，您也可以為每個資源建立其他原則。
+外部應用程式已透過[!DNL Event Hubs]共用存取簽章(SAS) [被授與](https://learn.microsoft.com/en-us/azure/event-hubs/authorize-access-shared-access-signature)的存取權。 每個[!DNL Event Hubs]名稱空間和事件中心執行個體在建立時自動指派預設SAS授權規則，但如有需要，您也可以為每個資源建立其他原則。
 
 使用[擴充功能](#rule)設定事件轉送規則[!DNL Azure]時，您必須提供管理您要傳送資料的名稱空間或特定事件中樞之授權規則的名稱和主索引鍵。 如需有關如何從[!DNL Azure]入口網站取得這些值的詳細資訊，請參閱[!DNL Azure]檔案中的下列章節：
 

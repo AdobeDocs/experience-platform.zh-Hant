@@ -61,7 +61,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` 標籤**
 
 
-有一個非常重要的先決條件：您必須非同步載入標籤程式庫[](./asynchronous-deployment.md)。 無法同步載入標籤程式庫（這會導致主控台發生錯誤，且規則無法正確執行）。
+有一個非常重要的先決條件：您必須非同步載入標籤程式庫[&#128279;](./asynchronous-deployment.md)。 無法同步載入標籤程式庫（這會導致主控台發生錯誤，且規則無法正確執行）。
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">

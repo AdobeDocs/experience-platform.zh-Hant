@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->存取原則必須附加至用來產生存取認證的[!DNL AWS]帳戶。 此原則必須設定為授與存取許可權，才能將資料傳送至[!DNL Kinesis]資料流。 請參考&#x200B;****&#x200B;之[!DNL AWS]範例原則的[檔案中的 [!DNL Kinesis Data Streams]範例2](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples)，瞭解應該如何定義原則。
+>存取原則必須附加至用來產生存取認證的[!DNL AWS]帳戶。 此原則必須設定為授與存取許可權，才能將資料傳送至[!DNL Kinesis]資料流。 請參考&#x200B;**&#x200B;**&#x200B;之[!DNL AWS]範例原則的[檔案中的 [!DNL Kinesis Data Streams]範例2](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html#kinesis-using-iam-examples)，瞭解應該如何定義原則。
 
 完成後，選取「**[!UICONTROL Save]**」並安裝擴充功能。
 

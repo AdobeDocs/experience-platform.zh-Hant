@@ -61,7 +61,7 @@ ht-degree: 1%
 
 選取&#x200B;**[!UICONTROL Rules]** > **[!UICONTROL Add Rule]**&#x200B;或選取現有規則。 在規則的&#x200B;**[!UICONTROL Then]**&#x200B;部分中，新增動作並選取&#x200B;**[!UICONTROL Extension]**： [!DNL Algolia]事件轉送> **[!UICONTROL Action Type]**： **[!UICONTROL Send Events]**。
 
-![ Algolia事件轉送擴充功能中[傳送事件]動作的設定。](../../../images/extensions/server/algolia/send-event.png)
+![&#x200B; Algolia事件轉送擴充功能中[傳送事件]動作的設定。](../../../images/extensions/server/algolia/send-event.png)
 
 ## 實作[!DNL Algolia]事件欄位群組 {#algolia-field-group}
 
