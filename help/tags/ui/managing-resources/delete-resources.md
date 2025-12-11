@@ -2,18 +2,14 @@
 title: 刪除資源
 description: 瞭解如何刪除Adobe Experience Platform中的標籤資源。
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 74%
+source-wordcount: '512'
+ht-degree: 83%
 
 ---
 
 # 刪除資源
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 刪除資源是從Adobe Experience Platform中永久移除該資源。 如果您想要從特定標籤程式庫中移除資源，但仍希望該資源可用於其他程式庫，請參閱[從程式庫中移除資源](remove-resources-from-library.md)指南。
 
@@ -78,4 +74,4 @@ ht-degree: 74%
 
 ## 刪除資源
 
-從適當的清單檢視中，選取您要刪除的資源，然後選取&#x200B;**[!UICONTROL 刪除]**。
+從適當的清單檢視中選取您要刪除的資源，然後選取「**[!UICONTROL Delete]**」。

@@ -2,18 +2,14 @@
 title: Adobe Experience Cloud Identity Service擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Experience Cloud Identity服務標籤擴充功能。
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 75%
+source-wordcount: '739'
+ht-degree: 82%
 
 ---
 
 # Adobe Experience Cloud Identity Service擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 請使用此參考資料來瞭解有關設定Adobe Experience Cloud ID擴充功能的資訊，以及使用此擴充功能建立規則時可用的選項。
 
@@ -23,9 +19,9 @@ ht-degree: 75%
 
 本節提供設定 Experience Cloud ID 擴充功能時可用選項的參考資料。
 
-如果尚未安裝Experience Cloud ID擴充功能，請開啟屬性，然後選取「**[!UICONTROL 擴充功能>目錄]**」，將游標停留在Experience Cloud ID擴充功能上，然後選取「**[!UICONTROL 安裝]**」。
+如果您尚未安裝 Experience Cloud ID 擴充功能，請開啟屬性，然後選取「**[!UICONTROL Extensions > Catalog]**」，將游標停留在 Experience Cloud ID 擴充功能上方，接著選取「**[!UICONTROL Install]**」。
 
-若要設定擴充功能，請開啟[擴充功能]索引標籤，將游標停留在擴充功能上，然後選取[設定]。**&#x200B;**
+若要設定擴充功能，請開啟「擴充功能」索引標籤、將游標停留在擴充功能上方，然後選取「**[!UICONTROL Configure]**」。
 
 ![](../../../images/optin.jpg)
 
@@ -43,7 +39,7 @@ ht-degree: 75%
 
 (選用) 若這是規則運算式，請啟用 Regex。
 
-選取&#x200B;**[!UICONTROL 新增]**&#x200B;以排除其他路徑。
+選取「**[!UICONTROL Add]**」以排除其他路徑。
 
 ### 加入宣告
 
@@ -73,7 +69,7 @@ ht-degree: 75%
 
 指定在啟用儲存功能的情況下，「加入宣告」Cookie 的到期時間 (以秒為單位)。
 
-輸入數字，然後從下拉式清單中選取時間單位，例如，輸入2並選取&#x200B;**[!UICONTROL 周]**。 預設值為 13 個月。
+輸入數字，然後從下拉式清單中選取時間單位，例如輸入 2 並選取「**[!UICONTROL Weeks]**」。預設值為 13 個月。
 
 **權限？**
 
@@ -117,5 +113,5 @@ ht-degree: 75%
    * 已驗證
    * 已登出
 
-1. （選擇性）選取&#x200B;**[!UICONTROL 新增]**&#x200B;以設定更多客戶ID。
-1. 選取&#x200B;**[!UICONTROL 保留變更]**。
+1. (選用) 選取「**[!UICONTROL Add]**」以設定更多客戶 ID。
+1. 選擇「**[!UICONTROL Keep Changes]**」。

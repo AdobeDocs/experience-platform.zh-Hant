@@ -2,18 +2,14 @@
 title: Experience Cloud組織設定
 description: 瞭解如何註冊Adobe Experience Cloud組織，以開始開發Adobe Experience Platform的擴充功能。
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 31%
+source-wordcount: '528'
+ht-degree: 34%
 
 ---
 
 # Experience Cloud 組織設定
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 若要在Adobe Experience Platform中開發標籤擴充功能，必須註冊Adobe Experience Cloud組織。
 
@@ -31,7 +27,7 @@ ht-degree: 31%
 
 ## 解決方案合作夥伴計畫 (SPP)
 
-此計畫適用於協助Adobe客戶充分利用其投資的顧問公司，以及轉售Adobe解決方案的合作夥伴。 如需如何加入解決方案合作夥伴計畫的逐步指南，請瀏覽至[Adobe Spark網站](https://spark.adobe.com/page/7PKZzIJJjkcDd/)，或如需詳細資訊，請瀏覽[解決方案合作夥伴計畫網站](https://solutionpartners.adobe.com/home.html)。
+此計畫適用於協助Adobe客戶充分利用其投資的諮詢公司以及轉售Adobe解決方案的合作夥伴。 如需如何加入解決方案合作夥伴計畫的逐步指南，請瀏覽至[Adobe Spark網站](https://spark.adobe.com/page/7PKZzIJJjkcDd/)，或如需詳細資訊，請造訪[解決方案合作夥伴計畫網站](https://solutionpartners.adobe.com/home.html)。
 
 >[!NOTE]
 >
@@ -43,7 +39,7 @@ ht-degree: 31%
 
 當貴公司加入Exchange合作夥伴計畫後，您可以登入[Exchange合作夥伴網站](https://partners.adobe.com/tw/exchangeprogram/experiencecloud)，並依照下列步驟要求存取Adobe解決方案。
 
-如果您有Experience Cloud帳戶需要存取資料收集UI和Experience PlatformUI，請參閱[資料收集許可權指南](../../../collection/permissions.md)。
+如果您有Experience Cloud帳戶需要存取資料收集UI和Experience Platform UI，請參閱[資料收集許可權指南](../../../collection/permissions.md)。
 
 ## 獨立開發人員
 

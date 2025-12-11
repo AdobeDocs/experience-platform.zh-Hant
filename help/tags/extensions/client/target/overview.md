@@ -2,18 +2,14 @@
 title: Adobe Target擴充功能概觀
 description: 瞭解Adobe Experience Platform中Adobe Target的標籤擴充功能。
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 71%
+source-wordcount: '1126'
+ht-degree: 78%
 
 ---
 
 # Adobe Target擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 您可參閱此參考文件，了解使用此擴充功能建立規則時可使用哪些選項。
 
@@ -23,9 +19,9 @@ ht-degree: 71%
 >
 > Adobe Target 擴充功能需使用 at.js。不支援 mbox.js。
 
-如果尚未安裝Adobe Target擴充功能，請開啟您的屬性，然後選取「**[!UICONTROL 擴充功能>目錄]**」，將游標停留在Target擴充功能上，然後選取「**[!UICONTROL 安裝]**」。
+如果您尚未安裝 Adobe Target 擴充功能，請開啟您的屬性，然後選取「**[!UICONTROL Extensions > Catalog]**」，將游標停留在 Target 擴充功能上，然後選取「**[!UICONTROL Install]**」。
 
-若要設定擴充功能，請開啟[!UICONTROL 擴充功能]標籤，將游標暫留在擴充功能上，然後選取&#x200B;**[!UICONTROL 設定]**。
+若要設定擴充功能，請開啟「[!UICONTROL Extensions]」索引標籤，並將游標停留在擴充功能上，然後選取「**[!UICONTROL Configure]**」。
 
 ![](../../../images/ext-target-config.png)
 
@@ -62,17 +58,17 @@ ht-degree: 71%
 判斷 Target 在瀏覽器中設定 Cookie 的位置。
 
 * **停用：**&#x200B;僅在第一方網域上設定 Cookie。此為一般設定。
-* **啟用：**&#x200B;在第一方網域和協力廠商 Target 網域 (「伺服器網域」) 上設定 Cookie。
+* **啟用:** 在第一方網域和第三方 Target 網域 (「伺服器網域」) 上設定 Cookie。
 
 #### 逾時 (毫秒)
 
 如果未在定義的期間內收到 Target 的回應，則要求逾時，系統會顯示預設內容。在訪客工作階段期間會繼續嘗試其他要求。預設值為 3000 毫秒，可能與 Target 使用者介面中設定的「逾時」不同。
 
-如需「逾時」設定如何運作的詳細資訊，請參閱 [Adobe Target 說明](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=zh-Hant)。
+如需「逾時」設定如何運作的詳細資訊，請參閱 [Adobe Target 說明](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html)。
 
 #### Target 使用者介面中可用的其他 at.js 設定
 
-Target UI的[!UICONTROL 編輯at.js設定]頁面上可用的數個設定，不屬於Target擴充功能的一部分。 建議因應措施如下：
+Target UI的[!UICONTROL Edit at.js settings]頁面上可用的一些設定不屬於Target擴充功能的一部分。 建議因應措施如下：
 
 * 自動建立全域 mbox 此設定會由 Target 擴充功能中的「引發全域 mbox」動作取代。
 * 程式庫頁首 此設定不屬於 Target 擴充功能的一部分。在使用「載入 Target」動作之前，先將需要在 at.js 之前載入的程式碼置於「核心擴充功能 > 自訂程式碼」動作中。
@@ -115,7 +111,7 @@ Target 擴充功能提供規則的「Then」部分中的下列動作：
 * **主體隱藏：**&#x200B;您可以啟用或停用此設定。預設值為 Enabled，表示 HTML BODY 隱藏。
 * **主體隱藏樣式：**&#x200B;預設值為 `body{opacity:0}`。此值可以變更為其他不同值，例如 `body{display:none}`。
 
-如需詳細資訊，請參閱 [Target 線上說明文件](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=zh-Hant)。
+如需詳細資訊，請參閱 [Target 線上說明文件](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html)。
 
 ## Adobe Target 基本部署
 

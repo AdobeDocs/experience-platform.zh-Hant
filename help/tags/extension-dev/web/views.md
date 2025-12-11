@@ -2,18 +2,14 @@
 title: 網頁擴充功能中的檢視
 description: 瞭解如何在Adobe Experience Platform Web擴充功能中定義程式庫模組的檢視。
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2148'
-ht-degree: 70%
+source-wordcount: '2103'
+ht-degree: 69%
 
 ---
 
 # Web擴充功能中的檢視
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 每個事件、條件、動作或資料元素類型都可提供一個檢視，讓使用者提供設定。擴充功能也可以有頂層[擴充功能組態檢視](../configuration.md)，讓使用者為整個擴充功能提供全域設定。所有檢視類型的檢視建置程序均相同。
 
@@ -76,7 +72,7 @@ window.extensionBridge.register({
 | `company` | 包含`orgId` (您的24字元Adobe Experience Cloud ID)、`id` （貴公司在Reactor API中的唯一識別碼）和`tenantId` (Adobe Identity Management系統內組織的唯一識別碼)的物件。 |
 | `schema` | [JSON 結構描述](https://json-schema.org/)格式的物件。此物件將來自[擴充功能資訊清單](../manifest.md)，可能有助於驗證您的表單。 |
 | `apiEndpoints` | 包含`reactor`的物件，其中包含對Reactor API網址的參照。 |
-| `userConsentPermissions` | 一個物件，其中包含來自Adobe [產品使用資料](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/features/account-preferences#product-usage-data)的同意標幟。 使用儲存在`globalDataCollectionAndUsage`標幟中的以瞭解您的擴充功能是否允許收集&#x200B;*任何*&#x200B;客戶資料。 |
+| `userConsentPermissions` | 一個物件，其中包含來自Adobe [產品使用資料](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data)的同意標幟。 使用儲存在`globalDataCollectionAndUsage`標幟中的以瞭解您的擴充功能是否允許收集&#x200B;*任何*&#x200B;客戶資料。 |
 | `preferredLanguages` | 語言字串陣列。 |
 
 您的檢視應使用這項資訊來呈現和管理其表單。您可能只需處理 `info.settings`，但仍會提供另一項資訊以備不時之需。

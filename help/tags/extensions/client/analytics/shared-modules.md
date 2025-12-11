@@ -2,24 +2,20 @@
 title: Adobe Analytics 擴充功能的共用模組
 description: 瞭解Adobe Experience Platform中的Adobe Analytics標籤擴充功能所提供的共用程式庫模組。
 exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 70%
+source-wordcount: '380'
+ht-degree: 78%
 
 ---
 
 # Adobe Analytics 擴充功能的共用模組
 
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
-
 [Adobe Analytics 擴充功能](./overview.md)提供兩個不同的[共用模組](../../../extension-dev/web/shared.md)，您可將其整合至體驗應用程式。下列各節會介紹這些模組。
 
 ## [!DNL get-tracker]
 
-Adobe Analytics 必須先初始化追蹤器物件，才能傳送任何信標。初始化程序會先載入 [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)，接著建立追蹤器物件。
+Adobe Analytics 必須先初始化追蹤器物件，才能傳送任何信標。初始化程序會先載入 [AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)，接著建立追蹤器物件。
 
 您可使用 `get-tracker` 共用模組，在追蹤器物件完全初始化後加以存取，如下所示：
 

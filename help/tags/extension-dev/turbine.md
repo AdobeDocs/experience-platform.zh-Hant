@@ -2,18 +2,14 @@
 title: Turbine自由變數
 description: 瞭解Turbine物件，這是一個自由變數，提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 43%
+source-wordcount: '561'
+ht-degree: 47%
 
 ---
 
 # Turbine 自由變數
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../term-updates.md)，以取得術語變更的彙總參考資料。
 
 `turbine` 物件是您擴充功能的程式庫模組範圍內的「自由變數」。它提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式，且程式庫模組隨時都可加以使用，而不需使用`require()`。
 

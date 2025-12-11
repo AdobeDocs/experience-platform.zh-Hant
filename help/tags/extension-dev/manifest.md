@@ -2,18 +2,14 @@
 title: 擴充功能資訊清單
 description: 瞭解如何設定JSON資訊清單檔案，以通知Adobe Experience Platform如何正確使用您的擴充功能。
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2652'
-ht-degree: 66%
+source-wordcount: '2607'
+ht-degree: 65%
 
 ---
 
 # 擴充功能資訊清單
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 在擴充功能的基礎目錄中，您必須建立名為 `extension.json` 的檔案。此部分包含有關擴充功能的重要詳細資訊，可讓Adobe Experience Platform正確加以使用。 部分內容是以 [npm `package.json`](https://docs.npmjs.com/files/package.json) 的形式構成的。
 
@@ -75,20 +71,20 @@ ht-degree: 66%
       <td><code>schema</code></td>
       <td><a href="https://json-schema.org/">JSON 結構描述</a>的物件，說明從擴充功能組態檢視中儲存的有效物件格式。由於您是組態檢視的開發人員，因此需負責確保任何儲存的設定物件皆與此結構描述相符。當使用者嘗試使用Experience Platform服務儲存資料時，此結構描述也將用於驗證。<br><br>以下是範例結構描述物件：
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       我們建議使用 <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
     </tr>
@@ -135,20 +131,20 @@ ht-degree: 66%
       <td><code>schema</code></td>
       <td><a href="https://json-schema.org/">JSON 結構描述</a>的物件，說明使用者可儲存的有效設定物件格式。設定通常會由使用者透過資料收集使用者介面來設定和儲存。 在這些情況下，擴充功能的檢視可採取必要步驟來驗證使用者提供的設定。另一方面，有些使用者會選擇不藉助於任何使用者介面，而直接使用標籤API。 此結構描述的目的是讓Experience Platform能正確驗證使用者儲存的設定物件（不論是否使用使用者介面）的格式，與將在執行階段依據設定物件執行動作的程式庫模組相容。<br><br>以下是範例結構描述物件：<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       我們建議使用 <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
     </tr>

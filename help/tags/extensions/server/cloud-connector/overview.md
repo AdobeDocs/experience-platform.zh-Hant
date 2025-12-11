@@ -2,18 +2,14 @@
 title: Cloud Connector擴充功能概述
 description: 瞭解Adobe Experience Platform中的Cloud Connector事件轉送擴充功能。
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 68%
+source-wordcount: '1636'
+ht-degree: 67%
 
 ---
 
 # Cloud Connector擴充功能概述
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 雲端聯結器事件轉送擴充功能可讓您建立自訂HTTP請求，以將資料傳送至目的地或從目的地擷取資料。 Cloud Connector 擴充功能就像 Adobe Experience Platform Edge Network 的郵差一樣，可將資料傳送至尚未具備專屬擴充功能的端點。
 

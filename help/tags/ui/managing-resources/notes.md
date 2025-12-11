@@ -2,18 +2,14 @@
 title: 附註
 description: 瞭解如何在Adobe Experience Platform中新增文字註釋至特定標籤資源。
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 50%
+source-wordcount: '262'
+ht-degree: 73%
 
 ---
 
 # 附註
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 附註是可新增至Adobe Experience Platform中特定標籤資源的文字註釋。 您可為以下資源加上附註：
 
@@ -39,7 +35,7 @@ ht-degree: 50%
 
 如果資源可建立附註，畫面右側會顯示窄邊欄。邊欄中會包含附註圖示。此圖示會顯示目前附加至資源的附註數量。
 
-選取&#x200B;**[!UICONTROL 附註]**&#x200B;以展開右側邊欄並顯示附註。最新的附註會顯示於最上方。  若要新增附註，請在頂端的方塊輸入附註文字，然後選取&#x200B;**[!UICONTROL 新增附註]**。
+選取「**[!UICONTROL Notes]**」即可展開右側邊欄並顯示附註。最新的附註會顯示於最上方。若要新增附註，請在頂端的方塊輸入附註文字，然後選取「**[!UICONTROL Add Note]**」。
 
 ## 其他
 

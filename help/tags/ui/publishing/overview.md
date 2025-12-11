@@ -2,18 +2,14 @@
 title: 發佈概觀
 description: 瞭解在Adobe Experience Platform中發佈變更至標籤管理程式碼程式庫的程式。
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 79%
+source-wordcount: '565'
+ht-degree: 78%
 
 ---
 
 # 發佈概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Adobe Experience Platform可讓您將變更封裝至個別程式庫內的標籤管理程式碼。 由於不同團隊現在可同時開發多個程式庫，這些程式庫在推送至生產環境前，必須依照合併變更的授權程式進行。
 

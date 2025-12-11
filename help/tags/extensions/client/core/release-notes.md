@@ -2,18 +2,14 @@
 title: 核心擴充功能的發行說明
 description: Adobe Experience Platform核心擴充功能最新發行說明。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 46%
+source-wordcount: '1678'
+ht-degree: 45%
 
 ---
 
 # 核心擴充功能發行說明
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 ## 2025年9月25日
 

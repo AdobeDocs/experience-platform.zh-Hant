@@ -2,18 +2,14 @@
 title: Adobe Media Analytics (3.x SDK) for Audio and Video擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Media Analytics (3.x SDK) for Audio and Video標籤擴充功能。
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 72%
+source-wordcount: '648'
+ht-degree: 81%
 
 ---
 
 # Adobe Media Analytics (3.x SDK) for Audio and Video擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 本文件主要說明安裝、設定和實作 Adobe Media Analytics (3.x SDK) for Audio and Video 擴充功能 (Media Analytics 擴充功能) 的相關資訊，其中包含使用此擴充功能來建立規則時可用的選項，以及範例和範例連結。
 
@@ -33,9 +29,9 @@ Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SD
 
 ## 安裝並設定 MA 擴充功能
 
-* **安裝：**&#x200B;若要安裝MA擴充功能，請開啟您的擴充功能屬性，選取&#x200B;**[!UICONTROL 擴充功能>目錄]**，將游標暫留在&#x200B;**[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]**&#x200B;擴充功能上，然後選取&#x200B;**[!UICONTROL 安裝]**。
+* **安裝：**&#x200B;若要安裝 MA 擴充功能，請開啟擴充功能屬性，選取「**[!UICONTROL Extensions > Catalog]**」，接著將游標停留在「**[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]**」擴充功能上方，然後選取「**[!UICONTROL Install]**」。
 
-* **設定：**&#x200B;若要設定MA擴充功能，請開啟[!UICONTROL 擴充功能]標籤，將游標暫留在擴充功能上，然後選取[設定]&#x200B;**：**
+* **設定：**&#x200B;若要設定 MA 擴充功能，請開啟「[!UICONTROL Extensions]」索引標籤，將游標停留在擴充功能上方，然後選取「**[!UICONTROL Configure]**」。
 
 ![MA 擴充功能設定](../../../images/ext-ma-config.png)
 
@@ -52,13 +48,13 @@ Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SD
 | Export APIs to Window Object | 啟用或停用將 Media Analytics API 匯出至全域範圍 |
 | Variable Name | 用來匯出 `window` 物件下 Media Analytics API 的變數 |
 
-**提醒：** MA 擴充功能需有 [&#x200B; Analytics](../analytics/overview.md) 和 [Experience Cloud ID](../id-service/overview.md) 擴充功能，才能正常運作。您也必須將這些擴充功能新增至擴充功能屬性並加以設定。
+**提醒：** MA 擴充功能需有 [ Analytics](../analytics/overview.md) 和 [Experience Cloud ID](../id-service/overview.md) 擴充功能，才能正常運作。您也必須將這些擴充功能新增至擴充功能屬性並加以設定。
 
 ## 使用 MA 擴充功能
 
 ### 從網頁/JS 應用程式使用
 
-MA擴充功能會啟用[!UICONTROL 設定]頁面中的「匯出視窗物件API」設定，匯出全域視窗物件中的Media API。 這會以設定的變數名稱匯出 API。例如，如果變數名稱設為 `ADB`，則可使用 `window.ADB.Media` 來存取 Media API。
+MA 擴充功能會啟用「[!UICONTROL Configuration]」頁面中的「匯出視窗物件 API」設定，匯出全域視窗物件的 Media API。這會以設定的變數名稱匯出 API。例如，如果變數名稱設為 `ADB`，則可使用 `window.ADB.Media` 來存取 Media API。
 
 >[!IMPORTANT]
 >

@@ -2,18 +2,14 @@
 title: 快速入門手冊
 description: 瞭解如何快速上手並執行Adobe Experience Platform中的標籤。
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 44%
+source-wordcount: '1473'
+ht-degree: 42%
 
 ---
 
 # 快速入門手冊
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 標籤是Adobe Experience Platform的下一代標籤管理技術。 這套技術從頭開始打造，以支援開放且永續的生態系統，讓任何人都能自行建立整合功能，供Adobe客戶部署在他們的網站上。 這是 API 優先的應用程式，所以您可以透過 UI 完成的任何工作，也可以透過 API 以程式設計方式完成。
 
@@ -27,7 +23,7 @@ ht-degree: 44%
 6. 在您的開發環境中測試。
 7. 提升至生產環境。
 
-## 1. 設定群組和使用者
+## &#x200B;1. 設定群組和使用者
 
 標籤已與您的Adobe ID完全整合。 使用者許可權是透過Admin Console與來自[!DNL Creative Cloud]、[!DNL Document Cloud]和Experience Cloud的其他Adobe產品和解決方案來管理。
 
@@ -35,21 +31,21 @@ ht-degree: 44%
 
 如需如何建立群組並新增標籤使用者的詳細指示，請參閱[資料彙集許可權指南](../../collection/permissions.md)。
 
-## 2. 登入
+## &#x200B;2. 登入
 
-將標籤許可權新增到Adobe ID後，您需要登入Experience Platform UI或資料收集UI。 您可以直接導覽至[Experience Cloud登入畫面](https://experience.adobe.com/)，並選取&#x200B;**[!UICONTROL 資料彙集]**&#x200B;或&#x200B;**[!UICONTROL Experience Platform]**，以執行此操作。
+將標籤許可權新增到Adobe ID後，您需要登入Experience Platform UI或資料收集UI。 您可以直接導覽至[Experience Cloud登入畫面](https://experience.adobe.com/)，並選取&#x200B;**[!UICONTROL Data Collection]**&#x200B;或&#x200B;**[!UICONTROL Experience Platform]**，以執行此操作。
 
 >[!NOTE]
 >
 >如果您有擁有多個組織許可權的單一帳戶，可以透過選取畫面頂端「控制」列中的組織名稱，並從下拉式清單中選擇不同的組織來變更組織。
 
-## 3. 建立屬性
+## &#x200B;3. 建立屬性
 
 登入UI後，首先要做的就是建立屬性。 屬性基本上是個容器，當您將標籤部署至網站時，在其中裝入擴充功能、規則、資料元素和程式庫。許多人會針對要部署相同標籤集的每個網站 (或具有密切關聯的網站群組) 建立屬性。
 
 如需有關建立屬性的詳細資訊，請參閱[建立屬性](../ui/administration/companies-and-properties.md)。
 
-## 4. 安裝擴充功能
+## &#x200B;4. 安裝擴充功能
 
 擴充功能是由Adobe或Adobe合作夥伴建立的整合功能，為您可部署至網站的標籤新增源源不絕的全新選項。 如果您將標籤當成作業系統，擴充功能就是您安裝的應用程式，用來執行您需執行的特定作業。
 
@@ -57,7 +53,7 @@ ht-degree: 44%
 
 讓Experience Platform中的標籤真正獨特的是任何人都可以建立這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理使用者的隱私權和同意，以協助[!DNL GDPR]的處理？ 請深入了解 Evidon 和 Trust Arc。您是否希望將精細的insight帶入網站上個別使用者的行為中？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱有關[新增擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension)的章節。
 
-## 5. 建立資料元素和規則
+## &#x200B;5. 建立資料元素和規則
 
 **資料元素**&#x200B;是指標，指向您希望收集並傳送至頁面上不同位置的資訊：
 
@@ -71,7 +67,7 @@ ht-degree: 44%
 
 **規則**&#x200B;位於實作的邏輯核心，並控制網站上所有標籤的內容、出現時間與位置以及運作方式。定義事件、設定條件和例外，然後定義動作和順序。最後，發佈變更以查看結果。如需詳細資訊，請參閱[規則](../ui/managing-resources/rules.md)。
 
-## 6. 在您的開發環境中測試
+## &#x200B;6. 在您的開發環境中測試
 
 ### 程式庫與組建
 
@@ -104,7 +100,7 @@ ht-degree: 44%
 * **主機：**&#x200B;每個環境都需要主機，主機會針對在此環境中建立的任何組建，判斷要推送組建的端點。
 * **封存：**&#x200B;預設設定是將您的組建部署為縮小的.js檔案。 如果您使用自訂程式碼，則可能有多個互相參照的檔案。 這些檔案可合併為單一zip檔案並加密。
 
-儲存您的環境後，環境會產生內嵌程式碼，您可以複製程式碼並貼到您的網站上。請注意，內嵌程式碼必須等到您建立程式庫並產生組建後才能運作。 如需詳細資訊，請參閱[環境](../ui/publishing/environments.md)。
+儲存您的環境後，環境會產生嵌入程式碼，您可以複製程式碼並貼到您的網站上。請注意，內嵌程式碼必須等到您建立程式庫並產生組建後才能運作。 如需詳細資訊，請參閱[環境](../ui/publishing/environments.md)。
 
 ### 將組建發佈至開發環境
 
@@ -112,11 +108,11 @@ ht-degree: 44%
 
 1. 建立主機。
 1. 使用您建立的主機建立開發環境。
-1. 將內嵌程式碼從開發環境部署到開發測試網站。
+1. 將嵌入程式碼從開發環境部署到開發測試網站。
 1. 建立程式庫並將其指派至您建立的開發環境。
 1. 建立程式庫。
 
-## 7. 提升至生產環境
+## &#x200B;7. 提升至生產環境
 
 在開發環境中測試組建後，請務必建立預備和生產環境，並將內嵌程式碼置於必要的位置。 您可以為此目的重複使用現有主機。
 
@@ -136,4 +132,4 @@ ht-degree: 44%
 
 * **[資料收集社群](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**：詢問和解答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
 * **[開發人員檔案](../api/overview.md)**：參與標籤開發人員社群，以建立擴充功能或使用標籤API
-* **[教學課程總覽](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=zh-Hant)**：這些檔案會向您介紹Android應用程式中的標籤概念，包括事件轉送和Mobile SDK。
+* **[教學課程總覽](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**：這些檔案會向您介紹Android應用程式中的標籤概念，包括事件轉送和Mobile SDK。

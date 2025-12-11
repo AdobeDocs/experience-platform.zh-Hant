@@ -2,18 +2,14 @@
 title: 組建
 description: 瞭解組建的概念，以及它們在Adobe Experience Platform中的運作方式。
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 54%
+source-wordcount: '746'
+ht-degree: 51%
 
 ---
 
 # 組建
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 組建版本是包含所有在用戶端裝置上執行之程式碼的檔案集。
 
@@ -27,7 +23,7 @@ ht-degree: 54%
 
 組建包含所有模組程式碼（由擴充功能開發人員提供）以及必要的設定（由您輸入），以支援程式庫內所包含的資源。 例如，如果擴充功能提供未在規則內使用的動作，則執行這些動作的程式碼不會包含在組建中。
 
-組建會分成主程式庫檔案和可能許多較小的檔案。主要程式庫檔案會在內嵌程式碼中參考，並在執行階段載入頁面中。該檔案內含：
+組建會分成主程式庫檔案和可能許多較小的檔案。主要程式庫檔案會在嵌入程式碼中參考，並在執行階段載入頁面中。該檔案內含：
 
 * 規則引擎
 * 所有擴充功能組態

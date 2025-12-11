@@ -2,18 +2,14 @@
 title: Web擴充功能中的共用模組
 description: 瞭解如何在Adobe Experience Platform中為Web擴充功能定義共用程式庫模組。
 exl-id: ec013a39-966c-43f3-bc36-31198990a17e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 45%
+source-wordcount: '218'
+ht-degree: 55%
 
 ---
 
 # Web擴充功能中的共用模組
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 共用模組是一種可讓您與其他擴充功能通訊的機制。例如，A 擴充功能可以非同步方式載入資料，並透過 [Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 讓該資料供 B 擴充功能使用。
 

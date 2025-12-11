@@ -2,18 +2,14 @@
 title: YouTube影片追蹤擴充功能概觀
 description: 瞭解Adobe Experience Platform中的YouTube影片追蹤標籤擴充功能。
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 35%
+source-wordcount: '852'
+ht-degree: 32%
 
 ---
 
 # YouTube影片追蹤擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 **先決條件**
 
@@ -98,9 +94,9 @@ document.onreadystatechange = function () {
 
 >[!TIP]
 > 
->對於無法對每個視訊元素使用多個eVar或prop的實作，可在Experience Platform中串連資料元素值，使用「分類規則產生器」工具剖析為分類報表(如[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=zh-Hant](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=zh-Hant)所述)，然後套用為Analysis Workspace中的區段。
+>對於無法對每個視訊元素使用多個eVar或prop的實作，可在Experience Platform中串連資料元素值，使用「分類規則產生器」工具剖析為分類報表(如[https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)所述)，然後套用為Analysis Workspace中的區段。
 
-若要串連視訊資訊值，請建立名為「視訊中繼資料」的新資料元素，並將其設定為提取所有視訊資料元素（如上所列），接著將其彙整起來。 例如：
+若要串連視訊資訊值，請建立名為「視訊Meta資料」的新資料元素，並將其設定為提取所有視訊資料元素（如上所列），接著將其彙整在一起。 例如：
 
 ```javascript
 var r = [];

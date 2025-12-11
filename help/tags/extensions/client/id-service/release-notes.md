@@ -2,20 +2,16 @@
 title: Adobe Experience Cloud Identity Service擴充功能發行說明
 description: Adobe Experience Platform中Adobe Experience Cloud Identity服務標籤擴充功能的最新發行說明。
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 62%
+source-wordcount: '643'
+ht-degree: 67%
 
 ---
 
 # Adobe Experience Cloud Identity Service擴充功能發行說明
 
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
-
-本檔案涵蓋Adobe Experience Cloud Identity Service標籤擴充功能的發行說明。 如需Experience CloudIdentity服務本身的發行說明，請參閱[Identity服務檔案](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=zh-Hant)。
+本檔案涵蓋Adobe Experience Cloud Identity Service標籤擴充功能的發行說明。 如需Experience Cloud Identity服務本身的發行說明，請參閱[Identity服務檔案](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)。
 
 ## 2022 年 10 月 17 日
 
@@ -42,7 +38,7 @@ ht-degree: 62%
    * 隱私權Cookie的最新選擇加入，包含`Secure`和`SameSite`旗標
    * 修正頁面載入子iFrame時的Firefox瀏覽器問題
 
-## 2021年1月12日
+## 2021 年 1 月 12 日
 
 ### Experience Cloud ID 擴充功能 5.2.0
 
@@ -83,9 +79,9 @@ ht-degree: 62%
 
 ### Experience Cloud ID 擴充功能 4.6.0
 
-* 將 `loadSSL` 標幟預設為開啟。所有對 Identity 服務的呼叫均預設為透過 `https` 發出。如果客戶想從 non-ssl 頁面透過 http 呼叫 Identity 服務，可將其設為 false。
+* 將 `loadSSL` 標幟預設為開啟。所有對身分識別服務的呼叫均預設為透過 `https` 發出。如果客戶想從 non-ssl 頁面透過 http 呼叫身分識別服務，可將其設為 false。
 * 更新偵測 Internet-Explorer (IE) 版本的函數，以修正 ESLint 回報的問題。
-* 修正 ECID 獲得 optIn 預先核准並稍後才更新時 Internet-Explorer (IE) 11 所發生的效能問題。
+* 修正 ECID 獲得 optIn 預先核准並稍後才更新時 Internet-Explorer (IE) 11 所發生的效能錯誤。
 
 ## 2020 年 1 月 22 日
 

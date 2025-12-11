@@ -2,18 +2,14 @@
 title: SFTP 主機
 description: 瞭解如何在Adobe Experience Platform中設定標籤，以將程式庫組建傳送至自行託管的安全SFTP伺服器。
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 11%
+source-wordcount: '751'
+ht-degree: 6%
 
 ---
 
 # SFTP主機
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 Experience Platform可讓您將標籤程式庫組建傳送至您自行託管的安全SFTP伺服器，讓您更能掌控組建的儲存和管理方式。 本指南說明如何在Experience Platform UI或資料收集UI中為標籤屬性設定SFTP主機。
 
@@ -51,11 +47,11 @@ Experience Platform會使用加密的金鑰連線至您的SFTP網站。 正確�
 
 ## 建立 SFTP 主機 {#create}
 
-在左側導覽中選取&#x200B;**[!UICONTROL 主機]**，然後選取&#x200B;**[!UICONTROL 新增主機]**。
+在左側導覽中選取&#x200B;**[!UICONTROL Hosts]**，然後選取&#x200B;**[!UICONTROL Add Host]**。
 
 ![影像顯示UI中正在選取[新增主機]按鈕](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-主機建立對話方塊隨即顯示。 提供主機的名稱，並在&#x200B;**[!UICONTROL 型別]**&#x200B;底下選取&#x200B;**[!UICONTROL SFTP]**。
+主機建立對話方塊隨即顯示。 提供主機的名稱，並在&#x200B;**[!UICONTROL Type]**&#x200B;底下選取&#x200B;**[!UICONTROL SFTP]**。
 
 ![顯示正在選取SFTP託管選項的影像](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
@@ -67,18 +63,18 @@ Experience Platform會使用加密的金鑰連線至您的SFTP網站。 正確�
 
 | 設定欄位 | 說明 |
 | --- | --- |
-| [!UICONTROL 不使用Symlink] | 依預設，所有SFTP主機都會使用符號連結(symlink)來參照儲存至伺服器的程式庫[組建](../builds.md)。 不過，並非所有伺服器都支援使用symlink。 選取此選項時，主機會使用複製操作直接更新組建資產，而非使用符號連結。 |
-| [!UICONTROL SFTP伺服器URL] | 您伺服器的URL基底路徑。 |
-| [!UICONTROL 路徑] | 要附加至此主機之基本伺服器URL的路徑。 |
-| [!UICONTROL 連線埠] | 連接埠必須為下列任一項：<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Adobe 會限制可用於傳出流量的連接埠數量，當作安全性最佳實務。通常允許所選連線埠通過公司防火牆，並包含一些彈性範圍。 |
-| [!UICONTROL 使用者名稱] | 存取伺服器時要使用的使用者名稱。 |
-| [!UICONTROL 加密的私密金鑰] | 您在[先前步驟](#access-key)中建立的加密私密金鑰。 |
+| [!UICONTROL Don't Use Symlinks] | 依預設，所有SFTP主機都會使用符號連結(symlink)來參照儲存至伺服器的程式庫[組建](../builds.md)。 不過，並非所有伺服器都支援使用symlink。 選取此選項時，主機會使用複製操作直接更新組建資產，而非使用符號連結。 |
+| [!UICONTROL SFTP Server URL] | 您伺服器的URL基底路徑。 |
+| [!UICONTROL Path] | 要附加至此主機之基本伺服器URL的路徑。 |
+| [!UICONTROL Port] | 連接埠必須為下列任一項：<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Adobe 會限制可用於傳出流量的連接埠數量，當作安全性最佳實務。通常允許所選連線埠通過公司防火牆，並包含一些彈性範圍。 |
+| [!UICONTROL Username] | 存取伺服器時要使用的使用者名稱。 |
+| [!UICONTROL Encrypted Private Key] | 您在[先前步驟](#access-key)中建立的加密私密金鑰。 |
 
-選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以使用選取的組態建立主機。
+選取&#x200B;**[!UICONTROL Save]**&#x200B;以使用選取的組態建立主機。
 
 ![顯示正在儲存之SFTP主機的影像](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-當您選取&#x200B;**[!UICONTROL 儲存]**&#x200B;時，會測試連線及將檔案傳送至SFTP伺服器的能力。 Experience Platform會建立資料夾、在該資料夾中寫入檔案、檢查檔案是否確實存在，然後自行清除。 若您SFTP伺服器上的使用者帳戶(與您提供給Experience Platform的安全憑證連結的帳戶)沒有執行此動作的必要許可權，則主機會進入「失敗」狀態。
+當您選取&#x200B;**[!UICONTROL Save]**&#x200B;時，會測試連線以及傳送檔案至SFTP伺服器的能力。 Experience Platform會建立資料夾、在該資料夾中寫入檔案、檢查檔案是否確實存在，然後自行清除。 若您SFTP伺服器上的使用者帳戶(與您提供給Experience Platform的安全憑證連結的帳戶)沒有執行此動作的必要許可權，則主機會進入「失敗」狀態。
 
 ## 後續步驟
 

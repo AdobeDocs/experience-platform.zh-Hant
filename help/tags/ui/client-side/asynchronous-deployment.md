@@ -2,10 +2,10 @@
 title: 非同步部署
 description: 瞭解如何在網站上非同步部署Adobe Experience Platform標籤程式庫。
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 60%
+source-wordcount: '1001'
+ht-degree: 59%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 60%
 >id="platform_tags_asynchronous_deployment"
 >title="非同步部署"
 >abstract="若啟用此選項，在剖析此指令碼標記時，瀏覽器會開始載入 JavaScript 檔案，但與其等待資料庫載入及執行，瀏覽器應繼續剖析及轉譯其餘的文件。這可以提高網頁效能，但在涉及特定規則的執行方式時具有重要意義。如需詳細資訊，請查看文件。"
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 我們產品所需的JavaScript程式庫效能與非封鎖部署，對Adobe Experience Cloud使用者而言日益重要。 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/)之類的工具建議使用者變更在網站上部署Adobe資料庫的方式。 本文說明如何以非同步方式使用Adobe JavaScript程式庫。
 

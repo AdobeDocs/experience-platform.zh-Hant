@@ -2,18 +2,14 @@
 title: Adobe Analytics擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Analytics標籤擴充功能。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2308'
-ht-degree: 79%
+source-wordcount: '2263'
+ht-degree: 78%
 
 ---
 
 # Adobe Analytics擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 請使用此參考資料來了解有關設定 Adobe Analytics 擴充功能的資訊，以及使用此擴充功能建立規則時可用的選項。
 
@@ -134,13 +130,13 @@ _satellite.cookie.set("sat_track", "true");
 
 判斷影像要求的編碼方式。如果您的實作或網站使用非 ASCII 字元，請務必在這裡定義字元集。您可以選取預設的字元集或指定自訂的字元集。Adobe 建議您使用與您網站相同的字元編碼。通常此值為 UTF-8。
 
-字元集可在 Analytics 自訂程式碼中使用 `s.charSet` 變數設定。如需字元集的詳細資訊，請參閱 [charSet 文件](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=zh-Hant)。
+字元集可在 Analytics 自訂程式碼中使用 `s.charSet` 變數設定。如需字元集的詳細資訊，請參閱 [charSet 文件](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html)。
 
 ### 貨幣代碼
 
 判斷要套用至收入和貨幣事件的轉換率。如果您的網站允許訪客以多種貨幣購買，設定貨幣代碼可確保正確轉換和儲存貨幣金額。
 
-如需支援的貨幣代碼詳細資訊，請參閱 [currencyCode](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html?lang=zh-Hant)。
+如需支援的貨幣代碼詳細資訊，請參閱 [currencyCode](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html)。
 
 ### 追蹤伺服器
 
@@ -148,7 +144,7 @@ _satellite.cookie.set("sat_track", "true");
 
 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServer` 變數設定。
 
-請參閱 Adobe Analytics 實作指南中的 [trackingServer](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html?lang=zh-Hant)。
+請參閱 Adobe Analytics 實作指南中的 [trackingServer](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html)。
 
 ### SSL 追蹤伺服器
 
@@ -156,11 +152,11 @@ _satellite.cookie.set("sat_track", "true");
 
 SSL 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServerSecure` 變數設定。
 
-請參閱 [trackingServerSecure](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserversecure.html?lang=zh-Hant)。
+請參閱 [trackingServerSecure](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserversecure.html)。
 
 ## 全域變數
 
-使用此區段來設定 [eVar 和 Prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=zh-Hant)，以及建立階層。
+使用此區段來設定 [eVar 和 Prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html)，以及建立階層。
 
 全域變數是在頁面上初始化該物件時，在 Analytics 追蹤物件上設定的變數。在每個頁面上建立追蹤物件時，您在此處設定的任何變數都會設定。在設定這些變數後，就會與使用其他方式設定的任何變數一樣。具體來說，這表示規則可以修改、變更或清除這些變數。
 
@@ -172,25 +168,25 @@ SSL 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServerSe
 
 ### 啟用 ClickMap
 
-[ClickMap](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html?lang=zh-Hant) 是 Internet Explorer 和 Firefox 的外掛程式，也是 Reports &amp; Analytics 的模組。
+[ClickMap](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) 是 Internet Explorer 和 Firefox 的外掛程式，也是 Reports &amp; Analytics 的模組。
 
 ### 追蹤下載連結
 
 追蹤網站上的檔案下載連結。
 
-請參閱 [s.trackDownLoadLinks](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackdownloadlinks.html?lang=zh-Hant)。
+請參閱 [s.trackDownLoadLinks](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackdownloadlinks.html)。
 
 ### 下載副檔名
 
 如果啟用「追蹤下載連結」選項，您可以選取「下載報告」中包含之檔案連結的副檔名 (如果您網站包含的連結會連結至具有下列任一副檔名的檔案)，這些連結的 URL 會出現在報告中。
 
-請參閱 [s.linkDownloadFileTypes](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkdownloadfiletypes.html?lang=zh-Hant)。
+請參閱 [s.linkDownloadFileTypes](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkdownloadfiletypes.html)。
 
 ### 追蹤對外連結
 
 判斷選取的連結是否為退出連結。
 
-請參閱 [s.trackExternalLinks](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackexternallinks.html?lang=zh-Hant)。
+請參閱 [s.trackExternalLinks](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackexternallinks.html)。
 
 **單一頁面應用程式考量事項：**&#x200B;由於部分 SPA 網站的編碼方式，對 SPA 網站上頁面的內部連結，看起來可能像是對外連結。
 
@@ -211,7 +207,7 @@ SSL 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServerSe
 
 保留查詢字串。
 
-請參閱 [s.linkLeaveQueryString](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkleavequerystring.html?lang=zh-Hant)。
+請參閱 [s.linkLeaveQueryString](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkleavequerystring.html)。
 
 ## Cookie
 
@@ -227,31 +223,31 @@ SSL 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServerSe
 
 識別 Cookie 設定所在網域的變數。
 
-請參閱 [visitorNamespace](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitornamespace.html?lang=zh-Hant)。
+請參閱 [visitorNamespace](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitornamespace.html)。
 
 ### 網域句號
 
 決定頁面 URL 網域中的句號數後，要在其中設定 Analytics Cookie `s_cc` 和 `s_sq` 的網域。有些外掛程式也會使用此變數來決定用以設定外掛程式 Cookie 的正確網域。
 
-請參閱 [s.cookieDomainPeriods](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookiedomainperiods.html?lang=zh-Hant)。
+請參閱 [s.cookieDomainPeriods](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookiedomainperiods.html)。
 
 ### 第一方網域句號
 
 `fpCookieDomainPeriods` 變數會用於由 JavaScript (`s_sq`、`s_cc` 外掛程式) 設定、原本即為第一方 Cookie 的 Cookie，即使您的實作使用第三方的 2o7.net 或 omtrdc.net 網域亦然。
 
-請參閱 [s.fpCookieDomainPeriods](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/fpcookiedomainperiods.html?lang=zh-Hant)。
+請參閱 [s.fpCookieDomainPeriods](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/fpcookiedomainperiods.html)。
 
 ### Cookie 期限
 
 決定 Cookie 的存留時間。
 
-請參閱 [s.cookieLifetime](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookielifetime.html?lang=zh-Hant)。
+請參閱 [s.cookieLifetime](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookielifetime.html)。
 
 ### 安全 Cookie
 
 此變數可讓 AppMeasurement 編寫安全 Cookie。
 
-請參閱 [writeSecureCookies](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/writesecurecookies.html?lang=zh-Hant)
+請參閱 [writeSecureCookies](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/writesecurecookies.html)
 
 
 ## 自訂頁面代碼
@@ -274,7 +270,7 @@ Audience Manager 子網域由 Adobe Audience Manager 指派。有時稱為「合
 
 ![](../../../images/an-ext-aam-adv.png)
 
-如需各設定的詳細資訊，請選取資訊圖示，或參閱 [Adobe Audience Manager 文件](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=zh-Hant)。
+如需各設定的詳細資訊，請選取資訊圖示，或參閱 [Adobe Audience Manager 文件](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html)。
 
 ## Analytics 擴充功能動作類型
 
@@ -304,7 +300,7 @@ Analytics 擴充功能提供下列動作：
 
 #### eVar
 
-設定一或多個 [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=zh-Hant)。
+設定一或多個 [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html)。
 
 1. 從下拉式清單中選取 eVar。
 1. 指定您要將 eVar 設定為值 (「Set As」) 或複製 (「Duplicate From」) 另一個 eVar。
@@ -314,7 +310,7 @@ Analytics 擴充功能提供下列動作：
 
 #### Prop
 
-設定一或多個 [Prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=zh-Hant)。
+設定一或多個 [Prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html)。
 
 1. 從下拉式清單中選取 Prop。
 1. 指定您要將 Prop 設定為值 (「Set As」) 或複製 (「Duplicate From」) 另一個 eVar。
@@ -324,10 +320,10 @@ Analytics 擴充功能提供下列動作：
 
 #### 事件
 
-設定一或多個[事件](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/events-overview.html?lang=zh-Hant)。
+設定一或多個[事件](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/events-overview.html)。
 
 1. 從下拉式清單中選取事件。
-1. (選用) 選擇或指定用於[事件序列化](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=zh-Hant)的資料元素。
+1. (選用) 選擇或指定用於[事件序列化](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html)的資料元素。
 1. (選用) 選取「**[!UICONTROL Add event]**」以設定更多事件。
 1. 選擇「**[!UICONTROL Keep Changes]**」。
 
@@ -352,7 +348,7 @@ Analytics 擴充功能提供下列動作：
 
 #### 階層
 
-設定 Analytics [階層](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=zh-Hant)變數。
+設定 Analytics [階層](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html)變數。
 
 指定階層中的各個層級。
 
@@ -360,7 +356,7 @@ Analytics 擴充功能提供下列動作：
 
 #### 頁面名稱
 
-此值是指指定頁面的名稱，並與Analytics中的[`pageName`變數](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=zh-Hant)相對應。
+此值是指指定頁面的名稱，並與Analytics中的[`pageName`變數](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html)相對應。
 
 >[!IMPORTANT]
 >

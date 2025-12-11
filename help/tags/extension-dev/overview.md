@@ -2,18 +2,14 @@
 title: 擴充功能開發概觀
 description: 了解關於不同標記擴充功能類型的主要元件，以及 Adobe Experience Platform 中的擴充功能開發程序。
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 23%
+source-wordcount: '893'
+ht-degree: 20%
 
 ---
 
 # 擴充功能開發概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 Adobe Experience Platform標籤的主要目標之一，是建立開放的生態系統，讓Adobe以外的工程師能夠在其網站和行動應用程式上公開其他功能。 這可透過標籤擴充功能來完成。 將擴充功能安裝在標籤屬性上後，該擴充功能即可供屬性的所有使用者使用。
 
@@ -25,7 +21,7 @@ Adobe Experience Platform標籤的主要目標之一，是建立開放的生態�
 
 ### 資訊清單檔案
 
-資訊清單檔案([`extension.json`](./manifest.md))必須存在於目錄的根目錄中。 此檔案說明副檔名的組成以及某些檔案在目錄中的位置。 資訊清單的功能與[`package.json`npm](https://docs.npmjs.com/files/package.json)專案中的[&#128279;](https://www.npmjs.com/)檔案類似。
+資訊清單檔案([`extension.json`](./manifest.md))必須存在於目錄的根目錄中。 此檔案說明副檔名的組成以及某些檔案在目錄中的位置。 資訊清單的功能與[`package.json`npm](https://docs.npmjs.com/files/package.json)專案中的[](https://www.npmjs.com/)檔案類似。
 
 ### 程式庫模組
 

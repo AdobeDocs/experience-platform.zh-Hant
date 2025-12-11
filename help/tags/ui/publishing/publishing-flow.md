@@ -2,10 +2,10 @@
 title: 發佈流程
 description: 瞭解建立程式庫、測試組建以及核准它們以在Adobe Experience Platform中生產的流程。
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 66%
+source-wordcount: '1362'
+ht-degree: 65%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 66%
 >id="platform_tags_publishing_flow"
 >title="發佈流程"
 >abstract="了解發佈流程所需的使用者權限層級，包括開發、核准和發佈權限。"
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Adobe Experience Platform中的標籤發佈流程是指建立程式庫、測試組建及核准以供生產的程式。
 

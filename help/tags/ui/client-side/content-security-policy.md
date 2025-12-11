@@ -2,18 +2,14 @@
 title: 內容安全性原則(CSP)支援
 description: 瞭解將您的網站與Adobe Experience Platform中的標籤整合時，如何處理內容安全性原則(CSP)限制。
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 58%
+source-wordcount: '1031'
+ht-degree: 56%
 
 ---
 
 # 內容安全性原則(CSP)支援
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 內容安全性原則 (CSP) 這項安全性功能有助於防止跨網站指令碼攻擊 (XSS)。瀏覽器遭到誘騙而執行似乎是來自信任的來源但其實是來自其他位置的惡意內容時，就會發生這種情況。 CSP 能讓瀏覽器 (代表使用者) 驗證指令碼是否的確來自信任的來源。
 
@@ -65,7 +61,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` 標籤**
 
 
-有一個非常重要的先決條件：您必須非同步載入標籤程式庫[&#128279;](./asynchronous-deployment.md)。 無法同步載入標籤程式庫（這會導致主控台發生錯誤，且規則無法正確執行）。
+有一個非常重要的先決條件：您必須非同步載入標籤程式庫[](./asynchronous-deployment.md)。 無法同步載入標籤程式庫（這會導致主控台發生錯誤，且規則無法正確執行）。
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -158,4 +154,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 閱讀本檔案後，您現在應瞭解如何設定CSP標頭，以接受標籤程式庫檔案和內嵌指令碼。
 
-您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤等標籤管理系統搭配使用時有一些重大限制。 如需詳細資訊，請參閱Experience Platform[&#128279;](./sri.md)中SRI相容性的指南。
+您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤等標籤管理系統搭配使用時有一些重大限制。 如需詳細資訊，請參閱Experience Platform[中](./sri.md)SRI相容性的指南。

@@ -2,18 +2,14 @@
 title: Web擴充功能的事件型別
 description: 瞭解如何在Adobe Experience Platform中為Web擴充功能定義事件型別程式庫模組。
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1007'
+ht-degree: 29%
 
 ---
 
 # Web擴充功能的事件型別
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 在標籤規則中，事件是必須發生的活動，才會引發規則。 例如，網頁擴充功能可提供「手勢」事件型別，來監視應發生的特定滑鼠或觸控手勢。 一旦該手勢發生，事件邏輯就會引發規則。
 

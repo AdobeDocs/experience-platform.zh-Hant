@@ -2,18 +2,14 @@
 title: 發行擴充功能
 description: 瞭解如何在Adobe Experience Platform中私下或公開發佈標籤擴充功能。
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 25%
+source-wordcount: '433'
+ht-degree: 17%
 
 ---
 
 # 發行擴充功能
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 完成測試和檔案整理後，擴充功能即可發行。 目前可執行的發行有兩種：
 
@@ -38,8 +34,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > 根據預設，發行者需要伺服器對伺服器Oauth流程的Adobe I/O憑證。 舊版`jwt-auth`認證
-> &#x200B;> 可藉由執行`npx @adobe/reactor-releaser@v3.1.3`使用，直到2025年1月1日停止使用。 必要的引數
-> &#x200B;> 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)找到。
+> 可藉由執行`npx @adobe/reactor-releaser@v3.1.3`使用，直到2025年1月1日停止使用。 必要的引數
+> 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5)找到。
 
 發行者僅需要您輸入幾項資訊。 可以從Adobe I/O主控台擷取`clientId`和`clientSecret`。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL View]**。
 

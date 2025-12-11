@@ -2,18 +2,14 @@
 title: Web擴充功能的核心程式庫模組
 description: 瞭解您可以在Web擴充功能中使用的核心程式庫模組。
 exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 70%
+source-wordcount: '250'
+ht-degree: 83%
 
 ---
 
 # Web擴充功能的核心程式庫模組
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 本檔案提供您可以在Web擴充功能中使用的核心程式庫模組清單。 您可以使用 `require('@adobe/{MODULE}')` 來存取這些模組，其中 `{MODULE}` 是要使用的核心模組的名稱。
 

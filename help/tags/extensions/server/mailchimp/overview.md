@@ -7,18 +7,14 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 5%
+source-wordcount: '1205'
+ht-degree: 2%
 
 ---
 
 # Mailchimp事件轉送擴充功能概觀
-
->[!NOTE]
->  
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=zh-Hant)。
 
 Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能會將事件傳送至Mailchimp行銷API，可觸發Mailchimp行銷活動、歷程或交易的電子郵件。
 
@@ -47,7 +43,7 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能�
 
 ### API金鑰
 
-若要尋找您帳戶的API金鑰，請在Mailchimp UI中選取您的設定檔圖示，然後選取&#x200B;**設定檔**。 您應該會看到`https://us11.admin.mailchimp.com/account/profile/`之類的URL，但首碼為&#x200B;**&#x200B;**，而非`us11`。
+若要尋找您帳戶的API金鑰，請在Mailchimp UI中選取您的設定檔圖示，然後選取&#x200B;**設定檔**。 您應該會看到`https://us11.admin.mailchimp.com/account/profile/`之類的URL，但首碼為&#x200B;****，而非`us11`。
 
 選取&#x200B;**額外專案**，然後選取&#x200B;**API金鑰**：
 
@@ -124,7 +120,7 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能�
 | `name` | `arc.event.xdm._tenant.name`<br />或<br /> `arc.event.data._tenant.name` | 字串 | 事件名稱 | **是** | 2-30個字元長度 |
 | `properties` | `arc.event.xdm._tenant.properties`<br />或<br /> `arc.event.data._tenant.properties` | 物件 | JSON格式的選擇性屬性清單，包含有關事件的詳細資訊 | 無 |  |
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br />或<br /> `arc.event.data._tenant.isSyncing` | 布林值 | 以`is_syncing`設定為`true` **建立的事件將不會**&#x200B;觸發自動化 | 無 |  |
-| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br />或`arc.event.data._tenant.occuredAt` | 字串 | 事件發生時的ISO 8601時間戳記 | 無 |  |
+| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br />或 `arc.event.data._tenant.occuredAt` | 字串 | 事件發生時的ISO 8601時間戳記 | 無 |  |
 
 {style="table-layout:auto"}
 

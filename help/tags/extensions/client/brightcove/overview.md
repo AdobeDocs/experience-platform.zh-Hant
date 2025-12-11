@@ -2,18 +2,14 @@
 title: BrightCove影片追蹤擴充功能概觀
 description: 瞭解Adobe Experience Platform中的BrightCove影片追蹤標籤擴充功能。
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 35%
+source-wordcount: '853'
+ht-degree: 36%
 
 ---
 
 # BrightCove影片追蹤擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 ## 先決條件
 
@@ -23,7 +19,7 @@ Adobe Experience Platform中的每個標籤屬性都需要在「擴充功能」�
 * Experience Cloud 訪客 ID 服務
 * 已安裝核心擴充功能
 
-在影片播放器預計運行的每個網頁的HTML中，使用「頁面內嵌程式碼（進階）」程式碼片段。 您可以在[Brightcove檔案](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage)中找到「頁面內嵌程式碼（進階）」HTML片段。 下列連結提供有關[如何產生預覽和已發佈視訊播放器的內嵌程式碼的詳細資訊](https://studio.support.brightcove.com/players/generating-player-embed-code.html)。
+針對影片播放器預計運行的每個網頁，在其HTML中使用「頁面內嵌程式碼（進階）」程式碼片段。 您可以在[Brightcove檔案](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage)中找到「頁面內嵌程式碼（進階）」HTML程式碼片段。 下列連結提供有關[如何產生預覽和已發佈視訊播放器的內嵌程式碼的詳細資訊](https://studio.support.brightcove.com/players/generating-player-embed-code.html)。
 
 此1.1.0版擴充功能支援在單一網頁內嵌多個BrightCove影片。 如果進階內嵌標籤中有多個`id`屬性，請確定每個屬性都有唯一值。 例如，`player1`、`player2`等。
 
@@ -78,7 +74,7 @@ Adobe Experience Platform中的每個標籤屬性都需要在「擴充功能」�
 
 需包括以下影片擴充功能物件：
 
-* **事件**
+* **活動**
 
    1. 影片開始：此事件會在訪客開始播放 BrightCove 影片時觸發規則。
 
@@ -91,16 +87,16 @@ Adobe Experience Platform中的每個標籤屬性都需要在「擴充功能」�
    1. 在 Analytics 的「設定變數」動作中，設定：
 
       * **影片開始**&#x200B;事件 (範例：event17)
-      * **影片名稱**&#x200B;資料元素的prop/eVar(範例：eVar10)
-      * **視訊持續時間**&#x200B;資料元素的prop/eVar(範例：eVar11)
-      * **目前影片位置**&#x200B;資料元素的prop/eVar(範例：eVar12)
+      * **影片名稱**&#x200B;資料元素的prop/eVar (範例：eVar10)
+      * **影片長度**&#x200B;資料元素的prop/eVar (範例：eVar11)
+      * **目前影片位置**&#x200B;資料元素的prop/eVar (範例：eVar12)
 
    1. Analytics 的「傳送信標」動作 (`s.tl`)
    1. Analytics 的「清除變數」動作
 
 >[!TIP]
 >
->若您不想為每個視訊元素布建多個eVar或prop，資料元素值會串連為替代方法。 接著，系統會使用「分類規則產生器」工具，將其剖析為分類報表。 如需詳細資訊，請參閱[分類規則產生器工具](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=zh-Hant)檔案。 最後，這些區段可套用為Analysis Workspace中的區段。
+>若您不想為每個視訊元素布建多個eVar或prop，資料元素值會串連為替代方法。 接著，系統會使用「分類規則產生器」工具，將其剖析為分類報表。 如需詳細資訊，請參閱[分類規則產生器工具](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)檔案。 最後，這些區段可套用為Analysis Workspace中的區段。
 >
 >若要這麼做，請建立「視訊中繼資料」之類的新資料元素，並將其設定為提取所有視訊資料元素（如上所列），接著將其串連。
 

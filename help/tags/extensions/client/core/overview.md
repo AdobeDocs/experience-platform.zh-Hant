@@ -2,18 +2,14 @@
 title: 核心擴充功能概觀
 description: 瞭解Adobe Experience Platform中的核心標籤擴充功能。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '5425'
+source-wordcount: '5380'
 ht-degree: 61%
 
 ---
 
 # 核心擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 核心標籤擴充功能是隨Adobe Experience Platform發佈的預設擴充功能。
 

@@ -2,22 +2,18 @@
 title: 實作協力廠商程式庫
 description: 瞭解在Adobe Experience Platform標籤擴充功能中託管協力廠商程式庫的各種方法。
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 65%
+source-wordcount: '1270'
+ht-degree: 66%
 
 ---
 
-# 實作協力廠商程式庫
+# 實作第三方程式庫
 
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../term-updates.md)，以取得術語變更的彙總參考資料。
+Adobe Experience Platform中標籤擴充功能的主要用途之一，是讓您在自己的網站中輕鬆實作現有的行銷技術（程式庫）。 只要使用擴充功能，您就能實作第三方內容傳遞網路 (CDN) 提供的程式庫，不必手動編輯網站的 HTML。
 
-Adobe Experience Platform中標籤擴充功能的主要用途之一，是讓您在自己的網站中輕鬆實作現有的行銷技術（程式庫）。 只要使用擴充功能，您就能實作協力廠商內容傳遞網路 (CDN) 提供的程式庫，不必手動編輯網站的 HTML。
-
-在擴充功能中託管協力廠商（廠商）程式庫有數種方法。 本文將概述這些實作方法，包括各方法的優缺點。
+在擴充功能中託管協力廠商（廠商）程式庫有數種方法。 本文將概觀這些實作方法，包括各方法的優缺點。
 
 ## 先決條件
 
@@ -25,7 +21,7 @@ Adobe Experience Platform中標籤擴充功能的主要用途之一，是讓您�
 
 ## 基底程式碼載入程序
 
-除了標籤的內容外，瞭解行銷技術一般在網站上載入的方式也相當重要。 協力廠商程式庫的廠商會提供程式碼片段 (稱為基底程式碼)，您必須將這內嵌在網站的 HTML 中，才能載入程式庫的功能。
+除了標籤的內容外，瞭解行銷技術一般在網站上載入的方式也相當重要。 第三方程式庫的廠商會提供程式碼片段 (稱為基底程式碼)，您必須將這嵌入在網站的 HTML 中，才能載入程式庫的功能。
 
 一般而言，行銷技術的基底程式碼在您的網站上載入時，會執行類似以下的程序：
 
@@ -84,7 +80,7 @@ firstScriptElement.parentNode.insertBefore(
 
 ## 標籤實作選項
 
-下一節會以先前所示的 Pinterest 基底程式碼為例，示範在擴充功能中載入廠商程式庫的各種方法。每個範例都涉及建立Web擴充功能[&#128279;](./web/action-types.md)的動作型別，在您的網站上載入程式庫。
+下一節會以先前所示的 Pinterest 基底程式碼為例，示範在擴充功能中載入廠商程式庫的各種方法。每個範例都涉及建立Web擴充功能[的](./web/action-types.md)動作型別，在您的網站上載入程式庫。
 
 >[!NOTE]
 >
@@ -93,14 +89,14 @@ firstScriptElement.parentNode.insertBefore(
 
 本文會說明下列方法：
 
-- [實作協力廠商程式庫](#implementing-third-party-libraries)
+- [實作第三方程式庫](#implementing-third-party-libraries)
    - [先決條件](#prerequisites)
    - [基底程式碼載入程序](#base-code-loading-process)
       - [基底程式碼範例](#base-code-example)
    - [標籤實作選項](#tags-implementation-options)
-      - [在執行階段從廠商主機載入 {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [在執行階段從廠商主機載入](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [在執行階段從標籤程式庫主機載入](#load-at-runtime-from-the-tag-library-host)
-      - [直接內嵌程式庫](#embed-the-library-directly)
+      - [直接嵌入程式庫](#embed-the-library-directly)
    - [後續步驟](#next-steps)
 
 ### 在執行階段從廠商主機載入 {#vendor-host}
@@ -168,7 +164,7 @@ module.exports = function() {
 
 >[!IMPORTANT]
 >
->部分情況下，廠商程式庫可能會從協力廠商伺服器載入額外程式碼，如同 Pinterest 廠商程式庫的範例一樣。在這些情況下，將廠商程式庫綁定您的擴充功能可能無法完全緩解所有風險疑慮。
+>部分情況下，廠商程式庫可能會從第三方伺服器載入額外程式碼，如同 Pinterest 廠商程式庫的範例一樣。在這些情況下，將廠商程式庫綁定您的擴充功能可能無法完全緩解所有風險疑慮。
 
 若要實作，您必須先將廠商程式庫下載到您的電腦上。在 Pinterest 的案例中，廠商程式庫位於 [https://s.pinimg.com/ct/core.js](https://s.pinimg.com/ct/core.js)。下載檔案後，您必須將檔案放在擴充功能專案中。下方範例中，該檔案位於專案目錄的 `vendor` 資料夾，名稱為 `pinterest.js`。
 
@@ -203,7 +199,7 @@ module.exports = function() {
 
 請務必注意，使用此方法時，每當程式庫在其CDN上更新時，您必須手動更新下載的廠商檔案，並發行擴充功能新版本的變更。
 
-### 直接內嵌程式庫
+### 直接嵌入程式庫
 
 您可以直接將程式庫程式碼內嵌至動作程式碼本身，略過必須完整載入廠商程式庫的程式，這麼做可以將程式庫加入主要標籤程式庫。 使用此方法會增加主要程式庫的大小，但您不必另外提出 HTTP 要求來擷取個別檔案。
 

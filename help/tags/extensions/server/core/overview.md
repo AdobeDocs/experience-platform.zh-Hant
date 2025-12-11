@@ -3,18 +3,14 @@ title: 核心事件轉送擴充功能概觀
 description: 瞭解Adobe Experience Platform中的核心事件轉送擴充功能。
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 90%
+source-wordcount: '1662'
+ht-degree: 93%
 
 ---
 
 # 核心事件轉送擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 核心事件轉送擴充功能提供Adobe Experience Platform中事件轉送的預設事件、條件和資料型別。
 
@@ -28,9 +24,9 @@ ht-degree: 90%
 
 指定必須存在作為事件條件的任何自訂程式碼。使用內建程式碼編輯器輸入自訂程式碼。Adobe Experience Platform中的事件轉送支援ES13。
 
-1. 選取&#x200B;**[!UICONTROL 開啟編輯器]**。
+1. 選擇「**[!UICONTROL Open Editor]**」。
 1. 輸入自訂程式碼。
-1. 選取「**[!UICONTROL 儲存]**」。
+1. 選擇「**[!UICONTROL Save]**」。
 
 若要存取自訂程式碼中資料元素的值，請使用 `getDataElementValue` 方法。舉例來說，若要擷取資料元素 `productName` 的值，請編寫以下內容：
 
@@ -141,11 +137,11 @@ module.exports = (context) => {
 
 **為 True：**&#x200B;如果值是布林值且為 true，則條件會傳回 true。若提供的值是任何其他類型，則不會轉換為布林值。帶有 true 值的布林值以外的任何值都會導致條件傳回 false。
 
-**為 Truthy：**&#x200B;如果值在轉換為布林值後為 true，條件會傳回 true。如需 Truthy 值的範例，請參閱 [MDN 的 Truthy 文件](https://developer.mozilla.org/zh-TW/docs/Glossary/Truthy)。
+**為 Truthy：**&#x200B;如果值在轉換為布林值後為 true，條件會傳回 true。如需 Truthy 值的範例 ，請參閱 [MDN 的 Truthy 文件](https://developer.mozilla.org/zh-TW/docs/Glossary/Truthy)。
 
 **為 False：**&#x200B;如果值是布林值且為 false，則條件會傳回 true。若提供的值是任何其他類型，則不會轉換為布林值。帶有 false 值的布林值以外的任何值都會導致條件傳回 false。
 
-**為 Falsy：**&#x200B;如果值轉換為布林值後為 false，條件會傳回 true。如需 Falsy 值的範例，請參閱 [MDN 的 Falsy 文件](https://developer.mozilla.org/zh-TW/docs/Glossary/Falsy)。
+**為 Falsy：**&#x200B;如果值轉換為布林值後為 false，條件會傳回 true。如需 Falsy 值的範例 ，請參閱 [MDN 的 Falsy 文件](https://developer.mozilla.org/zh-TW/docs/Glossary/Falsy)。
 
 
 
@@ -158,8 +154,8 @@ module.exports = (context) => {
 提供觸發事件和評估條件後執行的程式碼。Adobe Experience Platform中的事件轉送支援ES13。
 
 1. 為動作程式碼命名。
-1. 選取&#x200B;**[!UICONTROL 開啟編輯器]**。
-1. 編輯程式碼，然後選取&#x200B;**[!UICONTROL 儲存]**。
+1. 選擇「**[!UICONTROL Open Editor]**」。
+1. 編輯程式碼，然後選取「**[!UICONTROL Save]**」。
 
 若要存取自訂程式碼中資料元素的值，請使用 `getDataElementValue` 方法。舉例來說，若要擷取資料元素 `productName` 的值，請編寫以下內容：
 
@@ -183,9 +179,9 @@ arc.ruleStash.core.productCategory
 
 ### 自訂程式碼
 
-選取&#x200B;**[!UICONTROL 開啟編輯器]**&#x200B;並將程式碼插入編輯器視窗，即可在UI中輸入自訂JavaScript。
+在 UI 中選取「**[!UICONTROL Open Editor]**」，然後在編輯器視窗中插入程式碼，即可輸入自訂的 JavaScript。
 
-編輯器視窗中需有傳回陳述式，以指明應作為資料元素值使用的值。如果未包含傳回陳述式，或系統傳回 `null` 或 `undefined` 值，則資料元素的預設值會反映 `null` 或 `undefined`。
+編輯器視窗中需有傳回陳述式，以指明應作為資料元素值使用的值。如果未包含傳回陳述式或傳回值`null`或`undefined`，則資料元素的預設值會反映`null`或`undefined`。
 
 若要存取自訂程式碼中資料元素的值，請使用 `getDataElementValue` 方法。舉例來說，若要擷取資料元素 `productName` 的值，請編寫以下內容：
 

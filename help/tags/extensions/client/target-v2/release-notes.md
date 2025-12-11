@@ -2,18 +2,14 @@
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 12%
+source-wordcount: '788'
+ht-degree: 15%
 
 ---
 
 # Adobe Target v2擴充功能發行說明
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 ## v0.20.3 （2024年1月23日）
 
@@ -34,7 +30,7 @@ ht-degree: 12%
 
 - 更新以支援`at.js` 2.11.0。
 - 新增在targetGlobalSettings中設定自訂Adobe Experience Platform sandboxId和sandboxName的支援，這些將傳遞至getOffer/getOffers呼叫的傳送API。
-- 選取器中鏈結的：eq()陰影DOM修正。
+- 在選取器中鏈結:eq()的陰影DOM修正。
 
 ## v0.19.3 （2023年9月18日）
 
@@ -71,7 +67,7 @@ ht-degree: 12%
 
 ## v0.17.0 （2022年1月7日）
 
-- 更新以支援`at.js` v2.8.0，目前正在收集功能使用情況和效能遙測資料。  不會收集個人資料。 若要選擇退出此功能，請在`targetGlobalSettings`中將`telemetryEnabled`設定為`false`。
+- 更新以支援`at.js` v2.8.0，目前正在收集功能使用情況和效能遙測資料。  不會收集個人資料。若要選擇退出此功能，請在`telemetryEnabled`中將`false`設定為`targetGlobalSettings`。
 
 ## v0.16.0 （2021年10月28日）
 
@@ -95,7 +91,7 @@ ht-degree: 12%
 - 使用預先擷取請求時，會正確傳回A4T點選量度詳細資料
 - UUID產生不再使用`Math.random()`，但依賴`window.crypto`
 - 在每次網路呼叫時，`sessionId` Cookie到期已正確延長
-- SPA檢視快取初始化現在可以正確處理，而且會遵循`viewsEnable`設定
+- SPA檢視快取初始化現在可以正確處理，而且它接受`viewsEnable`設定
 
 ## v0.14.2 （2021年6月2日）
 
@@ -113,13 +109,13 @@ ht-degree: 12%
 
 ## v0.13.7 （2021年3月25日）
 
-- 修正mbox要求中包含`targetPageParams`的問題。 `targetPageParams`只應包含在`pageLoad`要求中。
+- 已修正 `targetPageParams` 包含在 mbox 要求中的問題。 `targetPageParams`只應包含在`pageLoad`要求中。
 - 已修正標籤擴充功能中的檔案和視窗全域物件的問題，修正方式為將全域物件相依性取代為該相依性的直接參照。
 - 將`at.js`更新至2.4.1。
 
 ## v0.13.6 （2021年1月25日）
 
-- 新增可支援交付 API 客戶 ID 的統一設定檔/平台 ID
+- 新增可支援交付 API 客戶 ID 的統一輪廓/平台 ID
 - 修正無效的樣式標籤插入作業
 - 將at.s更新至2.4.0
 - 未定義的引數可能導致錯誤傳送請求的問題
@@ -150,7 +146,7 @@ ht-degree: 12%
 ## v0.12.0 （2019年10月10日）
 
 - 已將`at.js`更新至v2.2。
-- 已改善Experience CloudID程式庫(ECID) v4.4與`at.js` 2.2之間整合的效能。
+- 已改善Experience Cloud ID程式庫(ECID) v4.4與`at.js` 2.2之間整合的效能。
 - 之前，ECID程式庫要進行兩次封鎖呼叫，`at.js`才能擷取體驗。 這已簡化為單一呼叫，可大幅提升效能。
 
 >[!NOTE]

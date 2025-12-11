@@ -2,18 +2,14 @@
 title: Web擴充功能的動作型別
 description: 瞭解如何為Web屬性中的標籤擴充功能定義動作型別程式庫模組。
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 44%
+source-wordcount: '367'
+ht-degree: 49%
 
 ---
 
 # Web 擴充功能的動作類型
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 在資料收集標籤的內容中，動作是在規則事件發生且所有條件都通過評估後執行的動作。
 
@@ -25,11 +21,11 @@ ht-degree: 44%
 >
 >本文介紹 Web 擴充功能的動作類型。如果您正在開發邊緣擴充功能，請改為參閱[邊緣擴充功能的動作類型](../edge/action-types.md)指南。
 >
->本文也假設您熟悉程式庫模組，以及如何將這些模組整合在Web擴充功能中。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
+>本文也假設您熟悉程式庫模組，以及如何將這些模組整合在Web擴充功能中。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概觀文章，再返回閱讀本指南。
 
 動作型別通常包含下列專案：
 
-1. 顯示於Experience PlatformUI和資料收集UI中的[檢視](./views.md)，可讓使用者修改動作的設定。
+1. 顯示於Experience Platform UI和資料收集UI中的[檢視](./views.md)，可讓使用者修改動作的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用以解譯設定及執行動作。
 
 ```js

@@ -2,18 +2,14 @@
 title: Edge擴充功能流程
 description: 瞭解Adobe Experience Platform中邊緣擴充功能的元件在執行階段如何彼此互動。
 exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 56%
+source-wordcount: '235'
+ht-degree: 44%
 
 ---
 
 # 邊緣擴充功能流程
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 在邊緣擴充功能中，每個條件、動作和資料元素類型都會具備可供使用者修改設定的檢視，以及可依這些使用者定義設定運作的程式庫模組。
 

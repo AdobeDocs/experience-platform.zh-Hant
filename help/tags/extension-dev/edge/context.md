@@ -2,18 +2,14 @@
 title: Edge擴充功能模組中的內容
 description: 瞭解上下文物件，及其在邊緣屬性的標籤擴充功能中與程式庫模組互動時所扮演的角色。
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 73%
+source-wordcount: '681'
+ht-degree: 82%
 
 ---
 
 # 邊緣擴充功能模組中的內容
-
->[!NOTE]
->
-> Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 邊緣擴充功能中的所有程式庫模組執行時，系統都會為其提供 `context` 物件。本文介紹 `context` 物件所提供的屬性，並說明這些屬性在程式庫模組中扮演的角色。
 
@@ -42,7 +38,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-`request` 物件有兩個頂層屬性：`body` 和 `head`。`body`屬性包含體驗資料模型(XDM)資訊，當您導覽至&#x200B;**[!UICONTROL 啟動]**&#x200B;並選取&#x200B;**[!UICONTROL Edge追蹤]**&#x200B;索引標籤時，可在Adobe Experience Platform Debugger中檢視。
+`request` 物件有兩個頂層屬性：`body` 和 `head`。`body` 屬性內含 Experience Data Model (XDM) 資訊，只要您導覽至 **[!UICONTROL Launch]** 並選取「**[!UICONTROL Edge Trace]**」索引標籤，即可在 Adobe Experience Platform Debugger 中查看。
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -122,7 +118,7 @@ context.utils.logger.error('Error!');
 
 ### [!DNL fetch]
 
-此公用程式會實作 [Fetch API](https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API)。您可以使用函數向協力廠商端點提出要求。
+此公用程式會實作 [Fetch API](https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API)。您可以使用函數向第三方端點提出要求。
 
 ```js
 context.utils.fetch('http://example.com/movies.json')

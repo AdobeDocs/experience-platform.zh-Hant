@@ -2,18 +2,14 @@
 title: 擴充功能
 description: 瞭解標籤擴充功能在Adobe Experience Platform中的運作方式。
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 51%
+source-wordcount: '471'
+ht-degree: 66%
 
 ---
 
 # 擴充功能
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 擴充功能是一組封裝程式碼，可擴充標籤或事件轉送所提供的功能。
 
@@ -27,13 +23,13 @@ ht-degree: 51%
 
 使用擴充功能清單頂端的連結，檢視已安裝的擴充功能、擴充功能目錄或更新。
 
-選取擴充功能，然後選取[!UICONTROL 設定]以檢視並變更擴充功能的設定。 如需詳細資訊，請參閱[新增擴充功能](#add-a-new-extension)一節，以取得擴充功能選項的詳細資訊。
+選取擴充功能，然後選取「[!UICONTROL Configure]」以檢視並變更擴充功能的設定。如需詳細資訊，請參閱[新增擴充功能](#add-a-new-extension)一節，以取得擴充功能選項的詳細資訊。
 
 >[!IMPORTANT]
 >
 >變更項目會等到[發佈](../../publishing/overview.md)後才生效。
 
-依預設，Adobe提供支援一般整合的擴充功能。 擴充功能可使用自訂組態加以修改。設定是透過擴充功能提供。若要建立組態，請選取擴充卡，然後選取[新增組態]。**&#x200B;**
+依預設，Adobe提供支援一般整合的擴充功能。 擴充功能可使用自訂組態加以修改。設定是透過擴充功能提供。若要建立設定，請選取擴充功能卡，然後選取「**[!UICONTROL Add New Configuration]**」。
 
 ## 擴充功能目錄
 
@@ -51,7 +47,7 @@ ht-degree: 51%
 
   顯示已安裝擴充功能的更新。
 
-選取&#x200B;**[!UICONTROL 擴充功能]**&#x200B;以檢視所有已安裝的擴充功能。 您也可以使用目錄，查看所有可用擴充功能的清單，以及哪些擴充功能可提供更新。
+選取「**[!UICONTROL Extensions]**」即可查看所有已安裝的擴充功能。您也可以使用目錄，查看所有可用擴充功能的清單，以及哪些擴充功能可提供更新。
 
 如需Adobe擁有的擴充功能之詳細資訊，請參閱[擴充功能參考](../../../extensions/client/overview.md)。
 
@@ -63,7 +59,7 @@ ht-degree: 51%
 >
 >使用右側面板中產品說明內的，深入瞭解擴充功能，並檢視其他可用資源。
 
-1. 從屬性的概觀頁面中，開啟&#x200B;**[!UICONTROL 擴充功能]**&#x200B;標籤。
+1. 從屬性的概觀頁面中開啟 **[!UICONTROL Extensions]** 標籤。
 1. 選取擴充功能。
 
    ![目錄標籤在擴充功能標籤中顯示核心擴充功能。](../../../images/extensions.png)
@@ -84,7 +80,7 @@ ht-degree: 51%
 
 ## 設定擴充功能
 
-將滑鼠移到已安裝的擴充功能上，並選取&#x200B;**[!UICONTROL 設定]**。
+將游標移到已安裝的擴充功能上，然後選取「**[!UICONTROL Configure]**」。
 
 >[!NOTE]
 >

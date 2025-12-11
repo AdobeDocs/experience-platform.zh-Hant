@@ -2,18 +2,14 @@
 title: Adobe Target擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target標籤擴充功能的最新發行說明。
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 70%
+source-wordcount: '533'
+ht-degree: 76%
 
 ---
 
 # Adobe Target發行說明
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 ## 2021 年 9 月 16 日
 
@@ -135,7 +131,7 @@ ht-degree: 70%
 
 #### **功能**
 
-* Target 擴充功能已更新，以使用 at.js v1.3.1。當您使用 Analytics 部署 Target 時，現在會等到所有 Target 呼叫 (包括重新導向選件) 都解決後，Analytics 才會引發，這樣解決了之前存在的競爭條件。
+* Target 擴充功能已更新，以使用 at.js v1.3.1。當您使用 Analytics 部署 Target 時，現在會等到所有 Target 呼叫 (包括重新導向產品建議) 都解決後，Analytics 才會引發，這樣解決了之前存在的競爭條件。
 
 ## 2018 年 2 月 22 日
 
@@ -157,4 +153,4 @@ ht-degree: 70%
 #### **功能**
 
 * 更新擴充功能設定畫面中的檢視
-* at.js 已更新至 1.2.3 版 (新增支援 JSON 選件)
+* at.js 已更新至 1.2.3 版 (新增支援 JSON 產品建議)

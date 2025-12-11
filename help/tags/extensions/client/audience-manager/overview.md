@@ -2,18 +2,14 @@
 title: Adobe Audience Manager擴充功能概觀
 description: 了解 Adobe Experience Platform 中的 Adobe Audience Manager 標記擴充功能。
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 87%
+source-wordcount: '395'
+ht-degree: 85%
 
 ---
 
 # Adobe Audience Manager擴充功能概觀
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 透過Audience Manager標籤擴充功能，您可以整合Audience Manager使用的DIL程式碼和Adobe Experience Platform中的屬性。
 
@@ -51,7 +47,7 @@ ht-degree: 87%
 
 #### 使用 DIL Site Catalyst 模組
 
-[SiteCatalyst 模組](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/r_dil_sc_init.html)與 DIL 搭配使用，將 Analytics 標籤元素傳送至 Audience Manager。
+[SiteCatalyst 模組](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_sc_init.html)與 DIL 搭配使用，將 Analytics 標籤元素傳送至 Audience Manager。
 
 使用程式碼編輯器來設定 siteCatalyst.init 檔案。
 
@@ -59,15 +55,15 @@ ht-degree: 87%
 
 #### 使用 DIL Google Analytics 模組
 
-啟用 [Google Analytics 模組](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/dil-google-universal-analytics.html)。
+啟用 [Google Analytics 模組](https://experiencecloud.adobe.com/resources/help/en_US/aam/dil-google-universal-analytics.html)。
 
 #### DIL.create 初始化屬性
 
-新增 [DIL.create](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/r_dil_create.html) 所使用的初始化屬性，以及新增 [visitorService 物件](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/r_dil_visitor_service.html)的命名空間子屬性。程式碼編輯器的程式碼註解已加入兩個範例使用案例。
+新增 [DIL.create](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html) 所使用的初始化屬性，以及新增 [visitorService 物件](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html)的命名空間子屬性。程式碼編輯器的程式碼註解已加入兩個範例使用案例。
 
 選取「**[!UICONTROL Choose an Item]**」即可新增其他屬性。
 
-將游標停留在「i」圖示上，即可了解每個屬性的用途。您可以在 [Audience Manager DIL 文件](https://experiencecloud.adobe.com/resources/help/zh_TW/aam/r_dil_create.html)中找到屬性的詳細資訊。
+將游標停留在「i」圖示上，即可了解每個屬性的用途。您可以在 [Audience Manager DIL 文件](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)中找到屬性的詳細資訊。
 
 完成擴充功能設定後，選取「**[!UICONTROL Save]**」。
 

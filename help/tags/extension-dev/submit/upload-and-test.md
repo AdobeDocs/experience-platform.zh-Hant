@@ -2,18 +2,14 @@
 title: 上傳並實作擴充功能的端對端測試
 description: 瞭解如何在Adobe Experience Platform中驗證、上傳和測試您的擴充功能。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2344'
-ht-degree: 22%
+source-wordcount: '2299'
+ht-degree: 20%
 
 ---
 
 # 上傳並實作端對端測試
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 若要在Adobe Experience Platform中測試標籤擴充功能，請使用標籤API和/或命令列工具來上傳您的擴充功能套件。 接下來，使用Experience Platform UI或資料收集UI將您的擴充功能套件安裝至屬性，並在標籤程式庫和組建中實作其功能。
 
@@ -63,8 +59,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > 依預設，Uploader會預期伺服器對伺服器Oauth流程的Adobe I/O認證。 舊版`jwt-auth`認證
-> &#x200B;> 可藉由執行`npx @adobe/reactor-uploader@v5.2.0`使用，直到2025年1月1日停止使用。 必要的引數
-> &#x200B;> 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)找到。
+> 可藉由執行`npx @adobe/reactor-uploader@v5.2.0`使用，直到2025年1月1日停止使用。 必要的引數
+> 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)找到。
 
 上傳程式僅需要您輸入幾項資訊。 可以從Adobe I/O主控台擷取`clientId`和`clientSecret`。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/tw/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL View]**。
 

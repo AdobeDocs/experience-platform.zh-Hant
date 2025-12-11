@@ -2,18 +2,14 @@
 title: Edge擴充功能的動作型別
 description: 瞭解如何為Edge屬性中的標籤擴充功能定義動作型別程式庫模組。
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 34%
+source-wordcount: '332'
+ht-degree: 38%
 
 ---
 
 # 邊緣擴充功能的動作類型
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 在標籤規則中，動作是在規則條件通過評估後所執行的動作。 動作型別由擴充功能提供，其效果完全由擴充功能作者定義。
 
@@ -25,11 +21,11 @@ ht-degree: 34%
 >
 >如果您正在開發 Web 擴充功能，請改為參閱 [Web 擴充功能的動作類型](../web/action-types.md)指南。
 >
->本文也假設您熟悉程式庫模組，以及如何將這些模組整合在邊緣擴充功能中。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
+>本文也假設您熟悉程式庫模組，以及如何將這些模組整合在邊緣擴充功能中。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概觀文章，再返回閱讀本指南。
 
 動作型別通常包含下列專案：
 
-1. Experience PlatformUI和資料收集UI中顯示的檢視，可讓使用者修改動作的設定。
+1. Experience Platform UI和資料收集UI中顯示的檢視，可讓使用者修改動作的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用以解譯設定及執行動作。
 
 例如，將部分資料轉送至第三方端點的模組可能如下所示。

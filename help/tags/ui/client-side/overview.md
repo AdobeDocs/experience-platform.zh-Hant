@@ -2,18 +2,14 @@
 title: 使用者端資訊
 description: 瞭解如何管理網頁或行動應用程式使用者端的標籤作業。
 exl-id: 54c66066-93f7-4311-a255-0825055d0dec
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 40%
+source-wordcount: '131'
+ht-degree: 19%
 
 ---
 
 # 用戶端資訊
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 本節包含在Adobe Experience Platform中管理使用者端標籤作業時有用的資訊。
 

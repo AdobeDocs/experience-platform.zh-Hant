@@ -2,18 +2,14 @@
 title: 複製資源
 description: 瞭解如何使用Adobe Experience Platform中現有標籤資源的設定來建立新的標籤資源。
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 74%
+source-wordcount: '785'
+ht-degree: 79%
 
 ---
 
 # 複製資源
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 有時候，使用現有資源的設定來製作新資源會很方便。 在這些情況下，您可以製作副本。
 
@@ -23,11 +19,11 @@ ht-degree: 74%
 
 ## 啟動副本
 
-您可以檢視已安裝的擴充功能，選取&#x200B;**[!UICONTROL 設定]**&#x200B;按鈕上的下拉式箭頭並選取&#x200B;**[!UICONTROL 複製]**，以啟動擴充功能副本。
+您可以檢視已安裝的擴充功能，選取「**[!UICONTROL Configure]**」按鈕上的下拉式箭頭並選取「**[!UICONTROL Copy]**」，以啓動擴充功能副本。
 
 ![複製 Analytics 擴充功能](../../images/copy-initiate-extension.png)
 
-若是屬性、規則和資料元素，只要選取您要複製的資源，然後在動作功能表中選取&#x200B;**[!UICONTROL 複製]**&#x200B;即可。
+若是屬性、規則和資料元素，只要選取您要複製的資源，然後選取動作選單中的「**[!UICONTROL Copy]**」即可。
 
 ![複製我的 Analytics 規則](../../images/copy-initiate-rule.png)
 
@@ -37,7 +33,7 @@ ht-degree: 74%
 >
 >如果有一個屬性設定為擴充開發，而另一個屬性並未設定，則無法將資源複製到另一個屬性。
 
-設定您要的行為之後，請選取&#x200B;**[!UICONTROL 複製]**。
+設定您要的行為後，請選取「**[!UICONTROL Copy]**」。
 
 ## 複製屬性
 

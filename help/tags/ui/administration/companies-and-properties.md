@@ -2,18 +2,14 @@
 title: 屬性
 description: 瞭解如何在Adobe Experience Platform中為您的組織組織和分組擴充功能、環境和程式庫。
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 64%
+source-wordcount: '1108'
+ht-degree: 63%
 
 ---
 
 # 屬性
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 ## Web 屬性
 

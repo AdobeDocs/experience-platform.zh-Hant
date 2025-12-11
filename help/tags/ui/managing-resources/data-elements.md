@@ -2,18 +2,14 @@
 title: 資料元素
 description: 資料元素是資料字典 (或資料地圖) 的建置組塊。使用資料元素，在行銷和廣告技術之間收集、組織和傳遞資料。
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 70%
+source-wordcount: '1549'
+ht-degree: 74%
 
 ---
 
 # 資料元素
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 資料元素是資料字典 (或資料地圖) 的建置組塊。使用資料元素，在行銷和廣告技術之間收集、組織和傳遞資料。
 
@@ -56,7 +52,7 @@ ht-degree: 70%
 
 資料元素是規則的基礎要素。資料元素可讓您為網站上包含的任何物件在頁面上經常使用的項目建立資料字典 (或資料地圖)，而不論其來源為何 (查詢字串、URL 或 Cookie 值)。
 
-1. 從屬性頁面，開啟[!UICONTROL 資料元素]標籤，然後選取&#x200B;**[!UICONTROL 建立新資料元素]**。
+1. 從「屬性」頁面開啟「[!UICONTROL Data Elements]」索引標籤，然後選取「**[!UICONTROL Create New Data Element]**」。
 1. 命名資料元素。
 1. 選取擴充功能和類型。
 
@@ -85,9 +81,9 @@ ht-degree: 70%
    * Visitor
       * 此值會無限期儲存在瀏覽器的本機儲存空間中。
 
-1. 選取「**[!UICONTROL 儲存]**」。
+1. 選擇「**[!UICONTROL Save]**」。
 
-建立或編輯元素時，您可以儲存並建置您[使用中的程式庫](../publishing/libraries.md#active-library)。這樣會立即將變更儲存至您的程式庫並執行組建。組件狀態會隨即顯示。您也可以從[!UICONTROL 使用中程式庫]下拉式清單中建立新程式庫。
+建立或編輯元素時，您可以儲存並建置您[使用中的程式庫](../publishing/libraries.md#active-library)。這樣會立即將變更儲存至您的程式庫並執行組建。組件狀態會隨即顯示。您也可以從[!UICONTROL Active Library]下拉式清單中建立新程式庫。
 
 ## 資料元素型別 {#types-of-data-elements}
 
@@ -107,7 +103,7 @@ ht-degree: 70%
 
 ### 自訂程式碼
 
-選取[!UICONTROL 開啟編輯器]並將程式碼插入編輯器視窗，即可在UI中輸入自訂JavaScript。
+在 UI 中選取「[!UICONTROL Open Editor]」，然後在編輯器視窗中插入程式碼，即可輸入自訂的 JavaScript。
 
 您必須在編輯器視窗中輸入傳回陳述式，以指明應設為資料元素值的值。如果未包含傳回陳述式，資料元素會解析為 `undefined`。這會觸發遞補機制開始尋找所儲存的值；如果未儲存任何值，則系統會尋找預設值。
 
@@ -184,7 +180,7 @@ CSS 選擇器鏈結：
 
 ### 本機儲存
 
-在[!UICONTROL 本機儲存專案名稱]欄位中提供本機儲存專案的名稱。
+在 [!UICONTROL Local Storage Item Name] 欄位中提供本機儲存項目的名稱。
 
 本機儲存讓瀏覽器能在頁面之間儲存資訊 ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp))。本機儲存的運作方式與Cookie類似，但更大也更有彈性。
 
@@ -205,7 +201,7 @@ CSS 選擇器鏈結：
 
 ### 查詢字串參數
 
-在[!UICONTROL URL引數]欄位中指定單一URL引數。
+在 [!UICONTROL URL Parameter] 欄位中指定單一 URL 參數。
 
 只需指定名稱部分，且任何特殊指示項都應省略 (例如「?」或「=」)
 
@@ -232,7 +228,7 @@ CSS 選擇器鏈結：
 
 ### 工作階段儲存
 
-在[!UICONTROL 工作階段儲存專案名稱]欄位中提供工作階段儲存專案的名稱。
+在「[!UICONTROL Session Storage Item Name]」欄位中提供您工作階段儲存項目的名稱。
 
 工作階段儲存與本機儲存類似，除了在工作階段結束後會捨棄資料，但本機儲存或 Cookie 可能會保留資料。
 

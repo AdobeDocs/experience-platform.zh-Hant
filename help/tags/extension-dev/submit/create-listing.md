@@ -2,18 +2,14 @@
 title: 為擴充功能建立Exchange清單
 description: 瞭解如何將擴充功能新增至Adobe Experience Platform中的公開目錄。
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 24%
+source-wordcount: '1147'
+ht-degree: 18%
 
 ---
 
 # 為擴充功能建立Exchange清單
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Adobe Experience Platform有一個統一的目錄，使用者可以在其中檢視可用於安裝的標籤擴充功能。 此目錄可在產品中使用，並包含三種型別的擴充功能：
 
@@ -51,10 +47,9 @@ Adobe Experience Platform有一個統一的目錄，使用者可以在其中檢�
      >這是與擴充功能程式碼所用不同的檔案格式。 擴充功能本身將包含 svg 檔案作為[圖示](../manifest.md)。
 
    - **精選影像** — 使用可獨立顯示您的品牌並突顯您的應用程式的影像，以吸引您的注意。 「精選影像」是當某人分享您的Exchange清單連結或在社群媒體上發佈相關文章時所顯示的影像。 因此，它必須是您品牌的模型表示法。
-   - **App Publisher 的標誌** - 這是您的公司標誌，請確保圖示具有適當尺寸；png 格式請使用 1280 x 720，jpg 格式請使用 2560 x 1440 (16:9)。
+   - **App Publisher的標誌** — 這是您的公司標誌，請確定圖示具有適當尺寸；png格式請使用1280 x 720，jpg格式請使用2560 x 1440 (16:9)。
    - **設定指示** — 告知客戶如何設定您的Adobe Experience Platform擴充功能。 請確定他們在屬性中安裝您的擴充功能後立即顯示您的[組態檢視](../configuration.md)時，瞭解所有必要的設定和後續步驟。
    - **標記** - 在編輯清單的第一個頁面上，請務必在「自訂標記」欄位中加入 &quot;Launch&quot; 這個字。這會使您的清單顯示在Exchange Marketplace的標籤搜尋中：
-
      ![](../images/getting-started/custom-tags.jpg)
    - **沙箱** — 您需先透過沙箱帳戶存取Adobe解決方案，才能存取完整功能版本的Adobe Experience Platform。 您會在建立應用程式清單時要求這些沙箱帳戶。在「**連線**」區段中，選取您所建立的應用程式（標籤延伸模組）適用的特定連線，當您點選「**儲存**」時，就會視需要產生沙箱要求。
 1. 提交您的清單。 Adobe Exchange 團隊將審閱您的應用程式，並在需要更新時提供意見回應。如果您在提交清單時勾選了&#x200B;**立即發佈**&#x200B;核取方塊，則會在核准後立即發佈。 如果您希望稍後再發佈應用程式，請取消勾選核取方塊。 當您的擴充功能清單通過核準時，應用程式（擴充功能）清單頁面會在其旁邊顯示一個藍色的&#x200B;**發佈**&#x200B;按鈕。
@@ -75,4 +70,4 @@ Adobe Experience Platform有一個統一的目錄，使用者可以在其中檢�
 
 ## 將您的擴充功能套件連結至清單
 
-您的清單獲得核准且可供公開使用後，建議您在擴充功能套件中，於`extension.json`檔案的`exchange_url`欄位中提供公開清單的連結。  這會在標籤擴充功能目錄中建立「更多資訊」連結，方便產品內的使用者找到您的清單及其額外資訊。
+您的清單獲得核准且可供公開使用後，建議您在擴充功能套件中，於`exchange_url`檔案的`extension.json`欄位中提供公開清單的連結。  這會在標籤擴充功能目錄中建立「更多資訊」連結，方便產品內的使用者找到您的清單及其額外資訊。

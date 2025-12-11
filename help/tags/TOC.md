@@ -6,9 +6,9 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '824'
 ht-degree: 36%
 
 ---
@@ -229,7 +229,7 @@ ht-degree: 36%
       * [!DNL Snap Pixel] {#snap-pixel}
          * [概觀](./extensions/client/snap-pixel/overview.md)
       * [儲存扳手](https://exchange.adobe.com/apps/ec/102990)
-      * [依回圈水平線的標籤](https://exchange.adobe.com/apps/ec/106092)
+      * 依回圈水平線的[標籤](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium集合](https://exchange.adobe.com/apps/ec/104217)
       * [Tealium資料擴充](https://exchange.adobe.com/apps/ec/104217)
       * [TMMData Foundation平台](https://exchange.adobe.com/apps/ec/100148)
@@ -258,7 +258,7 @@ ht-degree: 36%
          * [概觀](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [概觀](./extensions/server/braze/overview.md)
-      * [適用於Google Analytics的雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
+      * 適用於Google Analytics的[雲端聯結器](https://exchange.adobe.com/apps/ec/106542)
       * 核心 {#core}
          * [概觀](./extensions/server/core/overview.md)
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
@@ -366,7 +366,5 @@ ht-degree: 36%
       * [搜尋資源](./api/guides/search.md)
       * [秘密](./api/guides/secrets.md)
 * [常見問題集](./faq.md)
-* [術語更新](./term-updates.md)
-* [停止支援Internet Explorer 10和11](./ie-deprecation.md)
 * [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
 

@@ -2,22 +2,18 @@
 title: Adobe代管主機概述
 description: 瞭解在Adobe Experience Platform中部署標籤程式庫組建時的預設託管選項。
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 55%
+source-wordcount: '1129'
+ht-degree: 56%
 
 ---
 
-# Adobe 管理主機概述
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+# Adobe 代管主機概觀
 
 Adobe代管主機是您在Adobe Experience Platform中部署標籤程式庫組建時的預設主機設定。 當您透過「資料收集」使用者介面建立新屬性時，系統會為您建立預設的Adobe代管主機。
 
-藉由 Adobe 管理主機，程式庫組建會傳送至 Adobe 簽約合作的第三方內容傳遞網路 (CDN)。這些CDN的運作獨立於Adobe，因此即使Experience Platform處於維護狀態或停止運作，您部署的程式碼仍可在您的網站和應用程式中正常運作。 Adobe 管理主機的內嵌程式碼會參照 CDN 上的主程式庫檔案，讓用戶端裝置可在執行階段擷取檔案。
+藉由 Adobe 管理主機，程式庫組建會傳送至 Adobe 簽約合作的第三方內容傳遞網路 (CDN)。這些CDN的運作獨立於Adobe，因此即使Experience Platform處於維護狀態或停止運作，您部署的程式碼仍可在您的網站和應用程式中正常運作。 Adobe 管理主機的嵌入程式碼會參照 CDN 上的主程式庫檔案，讓用戶端裝置可在執行階段擷取檔案。
 
 本文旨在概略介紹Experience Platform中的Adobe代管主機，並說明在UI中建立新Adobe代管主機的相關步驟。
 
@@ -29,7 +25,7 @@ Adobe代管主機是您在Adobe Experience Platform中部署標籤程式庫組�
 
 如果整個節點停止運作，Akamai會從具有相同快取內容的最近節點提供內容。 系統會根據訪客位置、流量負載和其他因素動態選取節點，從最適當的本機節點，為每個訪客穩定地提供內容。
 
-由 Akamai 託管的檔案主要是使用 `assets.adobedtm.com` 網域。網域參照安全與否 (`http://` 或 `https://`) 取決於內嵌 `<script>` 程式碼中呼叫網域的方式。
+由 Akamai 託管的檔案主要是使用 `assets.adobedtm.com` 網域。網域參照安全與否 (`http://` 或 `https://`) 取決於嵌入 `<script>` 程式碼中呼叫網域的方式。
 
 >[!WARNING]
 >
@@ -84,7 +80,7 @@ CDN的主要用途是以智慧化方式將內容發佈至地理位置上較接�
 | 預備 | `max-age=0, no-cache, no-store` |
 | 生產 | `max-age=3600` |
 
-如上表所示，開發和測試環境均不支援瀏覽器快取。因此，請勿在高流量或生產環境中使用開發或測試用的內嵌程式碼。
+如上表所示，開發和測試環境均不支援瀏覽器快取。因此，請勿在高流量或生產環境中使用開發或測試用的嵌入程式碼。
 
 快取控制標頭僅適用於主要程式庫組建。 主程式庫之下的子資源一律視為全新資源，因此不需在瀏覽器上加以快取。
 
@@ -96,8 +92,8 @@ CDN的主要用途是以智慧化方式將內容發佈至地理位置上較接�
 >
 >如果從所有環境取消指派預設的 Adobe 管理主機，則可刪除該主機。如果您想在執行此動作後切換回 Adobe 管理主機，可依下列步驟建立新主機:
 >
->1. 選取您屬性上的&#x200B;**[!UICONTROL 主機]**&#x200B;索引標籤，然後選取&#x200B;**[!UICONTROL 新增主機]**。
->1. 提供主機的名稱，選取&#x200B;**[!UICONTROL Managed by Adobe]**&#x200B;作為主機型別，然後選取&#x200B;**[!UICONTROL 儲存]**。
+>1. 在內容上選取「**[!UICONTROL Hosts]**」索引標籤，然後選取「**[!UICONTROL Add Host]**」。
+>1. 提供主機的名稱，並選取「**[!UICONTROL Managed by Adobe]**」作為主機類型，然後選取「**[!UICONTROL Save]**」。
 >
 >接著，您就可以視需求將環境重新指派給 Adobe 管理主機。
 

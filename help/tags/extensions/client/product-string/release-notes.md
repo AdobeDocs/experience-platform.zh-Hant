@@ -2,18 +2,14 @@
 title: Adobe Analytics Product String 擴充功能發行說明
 description: Adobe Experience Platform 中 Adob​​e Analytics Product String 標記擴充功能的最新發行說明。
 exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: ht
-source-wordcount: '135'
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+workflow-type: tm+mt
+source-wordcount: '90'
 ht-degree: 100%
 
 ---
 
 # Adobe Analytics Product String 擴充功能發行說明
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 ## 2020 年 1 月 31 日
 

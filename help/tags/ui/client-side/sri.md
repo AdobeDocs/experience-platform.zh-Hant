@@ -2,18 +2,14 @@
 title: 子資源完整性(SRI)支援
 description: 瞭解Adobe Experience Platform如何支援子資源完整性(SRI)。
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 67%
+source-wordcount: '549'
+ht-degree: 72%
 
 ---
 
 # 子資源完整性(SRI)支援
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 本文介紹Adobe Experience Platform如何支援子資源完整性(SRI)。
 
@@ -36,19 +32,19 @@ SRI 驗證程序的摘要如下：
 
 作為標籤管理系統(TMS)，Adobe Experience Platform中的標籤提供編譯的JavaScript程式庫組建，讓您使用單一`<script>`元素（內嵌程式碼）載入到頁面上。 TMS 提供的動態功能是透過動態替換該指令碼的內容來完成，不需要您變更其他任何內容。
 
-不過，指令碼內容變更時，這些內容的密碼編譯雜湊也會變更。因此，讓 SRI 與 TMS 搭配運作的唯一方法是在您發佈新組建的同時更新內嵌程式碼。對許多人來說，這首先否定了使用 TMS 的主要目的。
+不過，指令碼內容變更時，這些內容的密碼編譯雜湊也會變更。因此，讓 SRI 與 TMS 搭配運作的唯一方法是在您發佈新組建的同時更新嵌入程式碼。對許多人來說，這首先否定了使用 TMS 的主要目的。
 
 下一個最佳標籤安全性選擇是實作內容安全性原則。 如需詳細資訊，請參閱[CSP和標籤](./content-security-policy.md)的指南。
 
 ## 將 SRI 整合至組建部署中
 
-如果您仍要將 SRI 用於程式庫組建，則必須使用自行託管。如果您使用 Adobe 代管託管，則必須經過一段時間才能使用 SRI，因為新組建內容與內嵌程式碼的 `integrity` 屬性不符。
+如果您仍要將 SRI 用於程式庫組建，則必須使用自行託管。如果您使用 Adobe 代管託管，則必須經過一段時間才能使用 SRI，因為新組建內容與嵌入程式碼的 `integrity` 屬性不符。
 
-內嵌程式碼更新程序自動化的複雜度會因網站結構而異，但一般步驟的摘要如下：
+嵌入程式碼更新程序自動化的複雜度會因網站結構而異，但一般步驟的摘要如下：
 
 1. 透過 SFTP 傳送或從使用者介面下載封存，擷取生產程式庫組建。
 1. 產生主要組建的密碼編譯雜湊。
-1. 確定內嵌代碼的 `integrity` 屬性已更新為新雜湊，且參照的組建已更新為相同部署的一部分。
+1. 確定嵌入代碼的 `integrity` 屬性已更新為新雜湊，且參照的組建已更新為相同部署的一部分。
 
 >[!IMPORTANT]
 >

@@ -2,18 +2,14 @@
 title: Edge擴充功能中的程式庫模組
 description: 邊緣屬性中標籤擴充功能的格式庫模組。
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 68%
+source-wordcount: '256'
+ht-degree: 80%
 
 ---
 
 # 邊緣擴充功能中的程式庫模組
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 >[!IMPORTANT]
 >

@@ -2,18 +2,14 @@
 title: 標籤擴充功能參考
 description: 尋找Adobe Experience Platform中標籤擴充功能的檔案。
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 12%
+source-wordcount: '427'
+ht-degree: 3%
 
 ---
 
 # 標籤擴充功能參考
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 以下是使用者端標籤擴充功能的檔案清單。 如需可用伺服器端擴充功能的清單，請改為參閱[事件轉送擴充功能參考](../server/overview.md)。
 

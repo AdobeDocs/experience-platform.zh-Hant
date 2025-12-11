@@ -2,18 +2,14 @@
 title: 自行託管程式庫
 description: 瞭解如何在Adobe Experience Platform中實施標籤程式庫組建的自家託管。
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 72%
+source-wordcount: '446'
+ht-degree: 69%
 
 ---
 
 # 自行託管程式庫
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 Adobe Experience Platform中的標籤允許產生一組稱為[組建](../builds.md)的檔案。 這組檔案控制應用程式在執行階段的行為。
 

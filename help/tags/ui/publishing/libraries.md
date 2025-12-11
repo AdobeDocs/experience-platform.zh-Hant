@@ -2,18 +2,14 @@
 title: 程式庫
 description: 瞭解標籤程式庫的概念及其在Adobe Experience Platform中的運作方式。
 exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 49%
+source-wordcount: '711'
+ht-degree: 67%
 
 ---
 
 # 程式庫
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 程式庫是擴充功能、資料元素和規則部署後彼此間互動方式的一組指示。 建立程式庫時，您可以指定要對程式庫進行的變更。 在建置期間，這些變更會與先前程式庫中已提交、核准或發佈的所有內容結合。
 
@@ -29,17 +25,17 @@ ht-degree: 49%
 
 若要建立程式庫，請完成下列步驟。
 
-1. 開啟[!UICONTROL 發佈]標籤。
+1. 開啟 [!UICONTROL Publishing] 標籤。
 
-   [!UICONTROL 發佈]頁面會列出開發程式庫，並提供工具來用於提交以進行核准、將其移至測試環境，或發佈至生產環境。
+   [!UICONTROL Publishing] 頁面會列出開發程式庫，並提供工具來用於提交以進行核准、將其移至預備環境，或發佈至生產環境。
 
-1. 選取&#x200B;**[!UICONTROL 新增資料庫]**。
+1. 選擇「**[!UICONTROL Add New Library]**」。
 
    ![](../../images/library-create.jpg)
 
 1. 為程式庫命名。
 1. 將程式庫指派至開發環境。
-1. 對程式庫新增變更。若要新增專案，請選取&#x200B;**[!UICONTROL 新增變更]**，然後選擇要新增的專案。 任何經過編輯或已刪除的項目，都可以新增至選擇的程式庫。
+1. 對程式庫新增變更。若要新增項目，請選取「**[!UICONTROL Add a Change]**」，然後選擇要新增的項目。任何經過編輯或已刪除的項目，都可以新增至選擇的程式庫。
 
    ![](../../images/library-add-change.jpg)
 
@@ -49,8 +45,8 @@ ht-degree: 49%
    * 資料元素
    * 擴充功能組態
 
-1. 若要新增任何已變更的資源，請選取&#x200B;**[!UICONTROL 新增所有已變更的資源]**。
-1. 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;或&#x200B;**[!UICONTROL 儲存並建置以供開發]**。
+1. 若要新增任何經過變更的資源，請選取「**[!UICONTROL Add All Changed Resources]**」。
+1. 選取「**[!UICONTROL Save]**」或「**[!UICONTROL Save and Build for Development]**」。
 
    進行部署會編譯組建，並將其部署至指派的環境。
 
@@ -72,8 +68,8 @@ ht-degree: 49%
 
 1. 安裝您要新增的[擴充功能](../managing-resources/extensions/overview.md)。
 1. 建立您要新增的[資料元素](../managing-resources/data-elements.md)和規則。
-1. 開啟&#x200B;**[!UICONTROL 發佈]**&#x200B;標籤。
-1. 選取您要變更的[資料庫](libraries.md)，然後選取&#x200B;**[!UICONTROL 編輯]**。
+1. 開啟 **[!UICONTROL Publishing]** 標籤。
+1. 選取您要變更的[程式庫](libraries.md)，然後選取「**[!UICONTROL Edit]**」。
 1. 使用規則、資料元素和擴充功能按鈕，選取要新增至程式庫的項目。
 1. 儲存變更。
 
@@ -89,7 +85,7 @@ ht-degree: 49%
 
 1. 停用您要移除的擴充功能，以及任何依賴這些擴充功能的資料元素和規則。
 1. 停用您要移除的資料元素和規則。
-1. 開啟&#x200B;**[!UICONTROL 發佈]**&#x200B;標籤。
+1. 開啟 **[!UICONTROL Publishing]** 標籤。
 1. 選取您要變更的程式庫。
 1. 使用規則、資料元素和擴充功能按鈕，選取要從程式庫中移除的停用項目。
 1. 儲存變更。
@@ -98,7 +94,7 @@ ht-degree: 49%
 
 若要編輯程式庫選項，請完成下列步驟。
 
-1. 選擇程式庫，然後選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以檢視程式庫變更。 所有變更都會顯示在[!UICONTROL 資料庫內容]清單中。
+1. 選擇程式庫，然後選取「**[!UICONTROL Edit]**」，檢視程式庫的變更情形。所有變更都會顯示在 [!UICONTROL Library Contents] 清單中。
 
    ![](../../images/library-contents.jpg)
 
@@ -107,14 +103,14 @@ ht-degree: 49%
    ![](../../images/library-contents-revision.jpg)
 
 1. 選取是否要顯示&#x200B;**所有**&#x200B;專案或&#x200B;**已變更**&#x200B;專案。
-1. 選取修訂專案，然後選取&#x200B;**[!UICONTROL 選取修訂專案]**。
-1. 選取&#x200B;**[!UICONTROL 新增變更]**&#x200B;或&#x200B;**[!UICONTROL 新增所有變更的資源]**。
+1. 選取修訂項目，然後選取「**[!UICONTROL Select Revision]**」。
+1. 選取「**[!UICONTROL Add a Change]**」或「**[!UICONTROL Add All Changed Resources]**」。
 
 ## 作用中程式庫 {#active-library}
 
 程式庫會封裝您想對已部署的程式碼進行的一組變更。作用中程式庫讓這項工作變得更輕鬆，您可以快速重複變更及查看影響。
 
-擴充功能、規則和資料元素現在可直接儲存至您正在處理的程式庫。 如有需要，您也可以從[!UICONTROL 使用中程式庫]下拉式清單中建立新的組建，或甚至建立新的程式庫。
+擴充功能、規則和資料元素現在可直接儲存至您正在處理的程式庫。 如有需要，您也可以從[!UICONTROL Active Library]下拉式清單中建立新的組建，或甚至建立新的程式庫。
 
 下列清單提供管理使用中程式庫的詳細資訊。
 

@@ -1,21 +1,17 @@
 ---
-title: 標籤概覽
+title: 標籤概觀
 description: Adobe Experience Platform中的標籤是新一代Adobe標籤管理功能。 標籤可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 53%
+source-wordcount: '550'
+ht-degree: 56%
 
 ---
 
 # 標籤總覽
 
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](./term-updates.md)，以取得術語變更的彙總參考資料。
-
-Adobe Experience Platform中的標籤是新一代Adobe標籤管理功能。 標籤可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
+Adobe Experience Platform (先前稱為Adobe Experience Platform Launch)中的標籤是新一代Adobe標籤管理功能。 標籤可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
 
 標籤可讓任何人建置和維護自己的整合，稱為&#x200B;*擴充功能*。 這些擴充功能可為 [!DNL Adobe Experience Cloud] 客戶提供應用程式商店的使用體驗，讓客戶快速安裝、設定和部署自己的標籤。
 

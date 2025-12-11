@@ -2,18 +2,14 @@
 title: 擴充功能提交程式概述
 description: 瞭解在Adobe Experience Platform中提交擴充功能從開發到發行的步驟。
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 30%
+source-wordcount: '186'
+ht-degree: 13%
 
 ---
 
-# 擴充功能提交程序概述
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+# 擴充功能提交程序概觀
 
 在Adobe Experience Platform中將擴充功能提交至資料收集目錄似乎是一項艱鉅的任務。 本檔案提供逐步指南，讓您透過使用個別循序指南來提交擴充功能。 若要提交擴充功能，您必須完成下列步驟：
 

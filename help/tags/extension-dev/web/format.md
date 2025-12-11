@@ -2,18 +2,14 @@
 title: Web擴充功能中的程式庫模組
 description: 瞭解如何在Adobe Experience Platform中為Web擴充功能格式化程式庫模組。
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 63%
+source-wordcount: '327'
+ht-degree: 72%
 
 ---
 
 # Web 擴充功能中的程式庫模組
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 >[!IMPORTANT]
 >

@@ -2,18 +2,14 @@
 title: 重新發佈程式庫
 description: 瞭解如何在Adobe Experience Platform中重新發佈先前的標籤庫。
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 56%
+source-wordcount: '604'
+ht-degree: 53%
 
 ---
 
 # 重新發佈程式庫
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 最新以Web屬性發佈至生產環境的五個程式庫，發佈後仍可擷取。 若在生產程式庫中發現錯誤，且需立即回復至已知的良好狀態，則這項功能會很有幫助。
 
@@ -57,7 +53,7 @@ ht-degree: 56%
 
 1. 在「已發佈」一欄中找到您要重新發佈的程式庫。
 1. 選取「程式庫」卡片右上角的三點圖示 (`...`)。
-1. 選取&#x200B;**[!UICONTROL 重新發佈]**。
+1. 選擇「**[!UICONTROL Republish]**」。
 
 ## 下載
 
@@ -71,4 +67,4 @@ ht-degree: 56%
 
 1. 在「已發佈」一欄中找到您要下載的程式庫。
 1. 選取「程式庫」卡片右上角的三點圖示 (`...`)。
-1. 選取&#x200B;**[!UICONTROL 下載]**。
+1. 選擇「**[!UICONTROL Download]**」。

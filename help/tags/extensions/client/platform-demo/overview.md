@@ -2,18 +2,14 @@
 title: Adobe Experience Platform示範擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Experience Platform示範擴充功能。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 74%
+source-wordcount: '1009'
+ht-degree: 81%
 
 ---
 
 # Adobe Experience Platform 示範擴充功能
-
->[!NOTE]
->
->Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ ht-degree: 74%
 
 本節提供設定 Adobe Experience Platform 擴充功能時可用選項的參考資料。
 
-如果尚未安裝Adobe Experience Platform擴充功能，請開啟屬性，然後選取「**[!UICONTROL 擴充功能>目錄]**」，將游標停留在Adobe Experience Platform擴充功能上，然後選取「**[!UICONTROL 安裝]**」。
+如果您尚未安裝 Adobe Experience Platform 擴充功能，請開啟屬性，然後選取「**[!UICONTROL Extensions > Catalog]**」，將游標停留在 Adobe Experience Platform 擴充功能上，然後選取「**[!UICONTROL Install]**」。
 
-若要設定擴充功能，請開啟[!UICONTROL 擴充功能]標籤，將游標暫留在擴充功能上，然後選取&#x200B;**[!UICONTROL 設定]**。
+若要設定擴充功能，請開啟「[!UICONTROL Extensions]」索引標籤，並將游標停留在擴充功能上，然後選取「**[!UICONTROL Configure]**」。
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### 串流連線
 
-選擇串流連線是您開始將資料串流至 Adobe Experience Platform 的第一步。您可以從串流連線下拉式方塊中選取連線。串流連線是必填欄位。如果您尚未建立任何串流連線，可以選取&#x200B;**[!UICONTROL 「建立串流連線」]**&#x200B;按鈕來建立。
+選擇串流連線是您開始將資料串流至 Adobe Experience Platform 的第一步。您可以從串流連線下拉式方塊中選取連線。串流連線是必填欄位。如果您尚未建立任何串流連線，可選取「**[!UICONTROL Create a streaming connection]**」按鈕加以建立。
 
-如果您選取&#x200B;**[!UICONTROL 建立串流連線]**，將會顯示強制回應視窗。
+如果您選取「**[!UICONTROL Create a streaming connection]**」，畫面會隨即顯示強制回應視窗。
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-強制回應視窗中，某些欄位會預先填入值，您可以依個人需求適時變更。如果您打算建立多個串流連線，請注意&#x200B;**[!UICONTROL 資料Source]**&#x200B;欄位必須是唯一的。 嘗試使用已用於其他連線的&#x200B;**[!UICONTROL 資料Source]**&#x200B;來建立另一個串流連線將會失敗。
+強制回應視窗中，某些欄位會預先填入值，您可以依個人需求適時變更。如果您打算建立多個串流連線，請注意「**[!UICONTROL Data Source]**」欄位必須是唯一的。 如果您嘗試使用其他連線的&#x200B;**[!UICONTROL Data Source]**&#x200B;來建立另一個串流連線，最後會以失敗收場。
 
 在您選取串流端點後，就會產生串流端點 URL 和來源。
 

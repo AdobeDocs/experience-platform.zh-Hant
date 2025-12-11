@@ -2,18 +2,14 @@
 title: 標籤疑難排解指南
 description: 取得有關Adobe Experience Platform標籤常見問題的解答。
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 23%
+source-wordcount: '987'
+ht-degree: 25%
 
 ---
 
 # 標籤疑難排解指南
-
->[!NOTE]
->
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](./term-updates.md)，以取得術語變更的彙總參考資料。
 
 本檔案提供有關Adobe Experience Platform中標籤的常見問題解答。
 
@@ -35,13 +31,13 @@ ht-degree: 23%
 
 標籤內建在Adobe Experience Platform中，且可完全擴充。 客戶、Adobe合作夥伴、代理及行銷或廣告技術廠商能建立標籤擴充功能，藉由它新增功能或修改現有功能。 此系統可協助合作夥伴和客戶建立、管理及更新自己的整合項目。這只是Adobe開放Adobe Experience Platform的一種方式，讓客戶和合作夥伴能在其上建立產品和業務。 每個人都能更輕鬆地將 Adobe 技術與其他廠商的行銷和廣告技術結合在一起。
 
-## 會隨即推出適用所有協力廠商的擴充功能嗎？
+## 會隨即推出適用所有第三方的擴充功能嗎？
 
-擴充功能已可供Adobe解決方案使用，以及大量日益增多的獨立分析、行銷、廣告和同意廠商及技術。 我們會繼續與合作夥伴合作，擴展生態系統。由於技術擁有者可以自行建立、管理及更新擴充功能，客戶不需仰賴Adobe工程團隊建立擴充功能。
+Adobe解決方案已有擴充功能，並且也有不斷增加的大量獨立分析、行銷、廣告和同意廠商及技術。 我們會繼續與合作夥伴合作，擴展生態系統。由於技術擁有者可以自行建立、管理及更新擴充功能，客戶不需仰賴Adobe工程團隊建立擴充功能。
 
 ## 客戶或合作夥伴何時可建立擴充功能？
 
-Tags已開放幾近全自助的入口網站，擴充功能開發人員可透過這個管道建立自己的Adobe Cloud Platform整合功能。
+標籤已開放幾近全自助的入口網站，擴充功能開發人員可透過這個管道建立自己的Adobe Cloud Platform整合功能。
 
 我們有許多客戶也選擇使用相同擴充功能開發法，建立自己的私人擴充功能，僅供公司內部使用。
 
@@ -53,7 +49,7 @@ Tags已開放幾近全自助的入口網站，擴充功能開發人員可透過�
 
 ## 何時可以移至標籤？
 
-現在是移至標籤的最佳時機。 移轉程式可輕鬆將DTM屬性複製到標籤中。 我們建議您廣泛測試，不過我們已盡量將程序自動化 (無需在頁面上內嵌程式碼變更，也不需自動移轉規則和資料元素)。
+現在是移至標籤的最佳時機。 移轉程式可輕鬆將DTM屬性複製到標籤中。 我們建議您廣泛測試，不過我們已盡量將程序自動化 (無需在頁面上嵌入程式碼變更，也不需自動移轉規則和資料元素)。
 
 ## 標籤是否支援單頁應用程式和我慣用的架構？
 
@@ -75,7 +71,7 @@ Tags已開放幾近全自助的入口網站，擴充功能開發人員可透過�
 
 在[這裡](./extension-dev/browsers.md)檢視支援的瀏覽器。
 
-大多數Adobe客戶會使用目前瀏覽器中更現代化的Web平台功能，以建立更優質的使用者體驗，包括單頁應用程式和互動式Ajax密集型網站與頁面。 隨著大部分的客戶網站改用更現代化的作法，他們需要像標籤這樣的解決方案來啟用這些作法。
+大部分的Adobe客戶會使用目前瀏覽器中更現代化的Web平台功能，以建立更優質的使用者體驗，包括單頁應用程式和互動式Ajax密集型網站與頁面。 隨著大部分的客戶網站改用更現代化的作法，他們需要像標籤這樣的解決方案來啟用這些作法。
 
 ## 標籤是否適用於原生行動應用程式？
 
@@ -89,8 +85,8 @@ Tags已開放幾近全自助的入口網站，擴充功能開發人員可透過�
 
 如果您在登入UI時無法建立任何新屬性，這表示您的帳戶不屬於具有「管理屬性」許可權的產品設定檔。
 
-請參閱[管理許可權](../collection/permissions.md)指南，瞭解如何在Adobe Admin Console中設定產品設定檔以授與「管理屬性」許可權。 如需關於標籤不同許可權的詳細資訊，請參閱標籤[&#128279;](./ui/administration/user-permissions.md)的使用者許可權概觀。
+請參閱[管理許可權](../collection/permissions.md)指南，瞭解如何在Adobe Admin Console中設定產品設定檔以授與「管理屬性」許可權。 如需關於標籤不同許可權的詳細資訊，請參閱標籤[的](./ui/administration/user-permissions.md)使用者許可權概觀。
 
 ## 若我有其他問題該怎麼辦？
 
-若您有其他問題，可以在[Adobe Experience Platform資料收集社群頁面](https://adobe.com/go/launchme)的Experience League上提出問題，或加入開發人員與技術實作主題的[社群Slack工作區](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)。
+若您有其他問題，可以在Experience League上的[Adobe Experience Platform資料收集社群頁面](https://adobe.com/go/launchme)上提出問題，或加入開發人員與技術實作主題的[社群Slack工作區](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)。
