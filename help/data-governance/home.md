@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料控管概觀
 description: Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和政策。 它在 Experience Platform 的各個層面發揮關鍵作用，包括編目、資料譜系、資料使用標籤、資料使用原則和控制資料在行銷活動的使用。
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9b1630a4876c0bcd7331f8da264e4f19ce00b59a
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 9%
+source-wordcount: '1656'
+ht-degree: 8%
 
 ---
 
@@ -20,19 +20,19 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant" text="資料治理概觀"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant" text="資料治理標籤概觀"
 
-Adobe Experience Platform 的核心功能之一是整合多個企業系統的數據，讓行銷人員更能識別、理解並吸引客戶。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 因此，確保您的資料操作 [!DNL Experience Platform] 符合資料使用政策非常重要。
+Adobe Experience Platform的核心功能之一，是將來自多個企業系統的資料彙集在一起，以便讓行銷人員更能識別、瞭解客戶並與之互動。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 因此，請務必確保您在[!DNL Experience Platform]內的資料作業符合資料使用原則。
 
-管理客戶資料，確保遵守與 Adobe Experience Platform 資料治理相關的法規、限制與政策。 資料治理在 Experience Platform 中扮演關鍵角色，涵蓋目錄編製、資料血脈、資料使用標籤、資料使用政策，以及控制行銷行動中資料的使用。
+管理客戶資料，並確保符合Adobe Experience Platform資料控管適用於資料的規定、限制和政策。 資料控管在Experience Platform中的各個層級上扮演著重要的角色，包括編目、資料譜系、資料使用標籤、資料使用原則，以及控制行銷動作對資料的使用方式。
 
 >[!NOTE]
 >
->在 Experience Platform 中，資料治理只關注資料如何被使用或啟用，無論使用者執行該動作為何。 關於如何控制組織內特定 Experience Platform 使用者對特定資料欄位的存取權，請參考基於 [屬性的存取控制](../access-control/abac/overview.md) 文件。
+>在Experience Platform中，資料控管只關注資料的使用或啟用方式，無論使用者是否執行動作。 如需有關如何控制組織內特定Experience Platform使用者存取特定資料欄位的資訊，請改為參閱[屬性型存取控制](../access-control/abac/overview.md)的檔案。
 
-## 資料治理職務 {#data-governance-roles}
+## 資料治理角色 {#data-governance-roles}
 
-作為一個概念，資料治理既非自動發生，也非孤立發生。 最初僅由一人擔任，通常被視為資料管理者，隨著資料治理生態系統的擴展，這個角色已大幅成長。 如今，資料治理需要持續的管理和監控才能成功。 有效的資料治理依賴資料管理者擁有工具，能正確標示資料、制定使用政策，並執行這些政策的遵守。
+作為一個概念，資料治理既不是自動的，也不是在真空中發生的。 起初只是一個人的角色，通常被認為是資料管理員，但隨著資料治理生態系統的擴展，該角色已經大幅成長。 現今，資料控管需要持續管理和監控才能取得成功。 有效的資料控管有賴資料管理員擁有可正確標籤資料、建立使用原則及強制遵守這些原則的工具。
 
-雖然資料治理應由組織中每個人負責，但以下是資料治理週期中的一些重要角色：
+雖然資料控管應該是組織中每個人的責任，但以下是資料控管週期中的一些基本角色：
 
 ![圖形傳達四個資料控管角色，並附上各角色職責的引號。](./images/overview/roles.png)
 
@@ -77,7 +77,7 @@ Adobe Experience Platform 的核心功能之一是整合多個企業系統的數
 >
 >如需可用標籤的完整清單，以及每種標籤型別的定義，請參閱[支援的資料使用標籤](labels/reference.md)指南。
 
-標籤可隨時套用，提供你如何管理資料的彈性。 最佳實務建議在資料擷取至Experience Platform時，或資料在[!DNL Experience Platform]中成為可用時，立即加上標籤。
+標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料擷取至Experience Platform時，或資料在[!DNL Experience Platform]中成為可用時，立即加上標籤。
 
 請參閱[資料使用標籤](./labels/overview.md)的概觀，以取得有關如何使用資料使用標籤來協助強制資料控管合規性的詳細資訊。
 
@@ -113,11 +113,11 @@ Adobe Experience Platform 的核心功能之一是整合多個企業系統的數
 
 | 術語 | 定義 |
 |---|---|
-| **合約標籤** | 合約「C」標籤用於分類具有合約義務或與您組織資料治理政策相關的資料。 |
-| **跨站點資料** | 跨站點資料是多個地點資料的組合。 跨站點資料包括現場與異地資料，或多個異地來源資料的組合。 |
-| **資料治理** | 資料治理涵蓋了確保資料符合法規與企業政策的策略與技術。 |
-| **資料管理員** | 資料管理員是負責管理、監督及執行組織資料資產的人。 資料管理員同時確保資料治理政策受到保護，並維護符合政府法規及組織政策。 |
-| **資料使用標籤** | 資料使用標籤讓使用者能夠依據隱私相關考量及合約條件，分類資料以符合法規與企業政策。 |
+| **合約標籤** | 合約「C」標籤可用來對具有合約義務或與貴組織的資料治理原則相關的資料進行分類。 |
+| **跨網站資料** | 跨網站資料是來自多個網站的資料組合。 跨網站資料包含站上和站外資料，或是來自多個站外來源的資料組合。 |
+| **資料控管** | 資料控管包括所使用的策略和技術，以確保資料在資料使用上符合法規和公司政策。 |
+| **資料管理員** | 資料管理員是負責管理、監督及執行組織資料資產的人員。 資料管理員也能確保資料控管政策受到保障和維護，以符合政府法規和組織政策。 |
+| **資料使用標籤** | 資料使用標籤讓使用者能夠分類資料，這些資料會反映隱私權相關考量事項，以及遵循法規和公司政策的合約條件。 |
 | **資料集標籤** | 標籤可新增到結構描述。 資料集內的所有欄位都會繼承結構的標籤。 |
 | **欄位標籤** | 欄位標籤是從結構描述繼承或直接套用至欄位的資料治理標籤。 套用至欄位的資料治理標籤不會繼承到結構描述層級。 |
 | **地理圍欄** | 地理柵欄是虛擬地理邊界，由GPS或RFID技術定義，可讓軟體在行動裝置進入或離開特定區域時觸發回應。 |
@@ -132,8 +132,12 @@ Adobe Experience Platform 的核心功能之一是整合多個企業系統的數
 
 以下影片旨在協助您瞭解資料控管架構。
 
+>[!IMPORTANT]
+>
+>影片參考將標籤套用至個別資料集欄位。 此工作流程已淘汰。 [標籤現在必須套用至結構描述欄位層級](./e2e.md#labels)。 影片中的概念仍維持正確，但標籤工作流程已變更。
+
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 以下影片提供如何在Experience Platform中套用資料使用標籤至結構描述或整個資料集的指引。
 
->[!VIDEO](https://video.tv.adobe.com/v/3422788/?captions=chi_hant&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
