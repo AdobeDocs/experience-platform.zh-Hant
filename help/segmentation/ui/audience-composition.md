@@ -3,14 +3,20 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
+source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2293'
 ht-degree: 16%
 
 ---
 
 # 對象構成UI指南
+
+>[!BEGINSHADEBOX]
+
+如果您是Adobe Journey Optimizer客戶，請參閱Adobe Journey Optimizer檔案中的[開始使用對象構成指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html)，以取得在該內容中使用對象構成的詳細資訊。
+
+>[!ENDSHADEBOX]
 
 >[!AVAILABILITY]
 >
@@ -218,7 +224,7 @@ ht-degree: 16%
 
 **[!UICONTROL Enrichment criteria]**&#x200B;區段現在會顯示在右側邊欄中。 在此區段中，您可以選取&#x200B;**[!UICONTROL Source join key]**&#x200B;和&#x200B;**[!UICONTROL Enrichment dataset join key]**，好讓您將擴充資料集連結到您嘗試建立的對象。
 
-![&#x200B; [!UICONTROL Enrichment criteria]區域已反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
+![ [!UICONTROL Enrichment criteria]區域已反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
 
 若要選取&#x200B;**[!UICONTROL Source join key]**，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
