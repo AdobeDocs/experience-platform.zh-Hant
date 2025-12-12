@@ -3,9 +3,9 @@ keywords: Experience Platform；查詢服務；查詢服務；巢狀資料結構
 title: 平面化巢狀資料結構以用於BI工具
 description: 本檔案說明如何將工作階段期間的所有表格和檢視的XDM結構描述平面化為搭配查詢服務使用協力廠商BI工具。
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fc98b111aa15cdeb64eacdc05cac33a00ee98d80
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
@@ -42,19 +42,19 @@ ht-degree: 0%
 
 輸入內容應採用以下格式：
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 連線字串範例可能如下所示：
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
 ## 範例 {#example}
 
-本指南中使用的範例結構描述採用標準欄位群組[!UICONTROL Commerce詳細資料]，它使用`commerce`物件結構和`productListItems`陣列。 請參閱XDM檔案以取得[有關[!UICONTROL Commerce詳細資料]欄位群組](../../xdm/field-groups/event/commerce-details.md)的詳細資訊。 結構描述結構的代表可以在下圖中看到。
+本指南中使用的範例結構描述採用標準欄位群組[!UICONTROL Commerce Details]，它會使用`commerce`物件結構和`productListItems`陣列。 請參閱XDM檔案以取得[欄位群組[!UICONTROL Commerce Details]的](../../xdm/field-groups/event/commerce-details.md)詳細資訊。 結構描述結構的代表可以在下圖中看到。
 
 ![包含`commerce`和`productListItems`結構的Commerce詳細資料欄位群組的結構描述圖表。](../images/key-concepts/commerce-details.png)
 
@@ -62,13 +62,13 @@ prod:all?FLATTEN
 
 下列值在格式不正確的巢狀欄位中代表`commerce.order.priceTotal` (3018.0)、`commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180)和`commerce.purchases.value` (1.0)。
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 透過`FLATTEN`設定，您可以使用點標籤法及其原始路徑名稱，存取結構描述中的個別欄位或巢狀資料結構的整個區段。 以下是使用`commerce`欄位群組的格式範例。
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value
