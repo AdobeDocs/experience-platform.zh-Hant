@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找有關Experience Data Model (XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
+source-git-commit: 8ba80a1cc4529f9d4693e3f7cbd7584193915410
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2368'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model] (XDM)和XDM系統的常見問題解答，包括常見錯誤的疑難排解指南。 有關其他Experience Platform服務的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-**[!DNL Experience Data Model] (XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取&#x200B;**[!DNL Schema Library]**&#x200B;內的[!DNL Experience Platform]。 如需詳細資訊，請參閱[XDM檔案](home.md)。
+**[!DNL Experience Data Model](XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取&#x200B;**[!DNL Schema Library]**&#x200B;內的[!DNL Experience Platform]。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
 ## 常見問題集
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 所有[!DNL Schema Registry]資源（結構描述、欄位群組、資料型別、類別）都有一個URI做為唯一ID，以供參考和查詢。 在API中檢視結構描述時，您可以在頂層`$id`和`meta:altId`屬性中找到它。
 
-如需詳細資訊，請參閱[&#x200B; API指南中的](api/getting-started.md#resource-identification)資源識別[!DNL Schema Registry]區段。
+如需詳細資訊，請參閱[ API指南中的](api/getting-started.md#resource-identification)資源識別[!DNL Schema Registry]區段。
 
 ### 長欄位型別的大小上限是多少？
 
@@ -94,7 +94,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### 如何為結構描述定義身分？
 
-在[!DNL Experience Platform]中，無論要解譯的資料來源為何，身分都會用來識別主旨（通常是個人）。 它們透過將關鍵欄位標籤為「身分」來定義在結構描述中。 身分識別常用的欄位包括電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID和其他唯一ID欄位。
+在[!DNL Experience Platform]中，無論要解譯的資料來源為何，身分都會用來識別主旨（通常是個人）。 它們透過將關鍵欄位標籤為「身分」來定義在結構描述中。 身分識別常用的欄位包括電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
 
 可使用API或使用者介面將欄位標示為身分。
 
@@ -108,7 +108,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### 在UI中定義身分
 
-在結構描述編輯器中開啟結構描述後，在編輯器的&#x200B;**[!UICONTROL 結構]**&#x200B;區段中選取要標示為身分的欄位。 在右側的&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下，選取&#x200B;**[!UICONTROL 身分]**&#x200B;核取方塊。
+在結構描述編輯器中開啟結構描述後，在編輯器的&#x200B;**[!UICONTROL Structure]**&#x200B;區段中選取您要標示為身分的欄位。 在右側的&#x200B;**[!UICONTROL Field Properties]**&#x200B;下，選取&#x200B;**[!UICONTROL Identity]**&#x200B;核取方塊。
 
 如需在UI中管理身分的詳細資訊，請參閱結構描述編輯器教學課程中[定義身分欄位](./tutorials/create-schema-ui.md#identity-field)區段的相關章節。
 
@@ -132,17 +132,17 @@ XDM對於此資料型別的使用有下列限制：
 
 ### 使用UI啟用[!DNL Profile]的現有結構描述
 
-在[!DNL Experience Platform]中，選取左側導覽的&#x200B;**[!UICONTROL 結構描述]**，然後從結構描述清單中選取您要啟用的結構描述名稱。 然後，在編輯器的右側&#x200B;**[!UICONTROL 結構描述屬性]**&#x200B;下，選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;以將其開啟。
+在[!DNL Experience Platform]中，選取左側導覽的&#x200B;**[!UICONTROL Schemas]**，然後從結構描述清單中選取您要啟用的結構描述名稱。 然後，在編輯器的右側&#x200B;**[!UICONTROL Schema Properties]**&#x200B;下，選取&#x200B;**[!UICONTROL Profile]**&#x200B;以將其開啟。
 
-如需詳細資訊，請參閱[結構描述編輯器](./tutorials/create-schema-ui.md#profile)教學課程中[!UICONTROL 用於即時客戶個人檔案]的相關章節。
+如需詳細資訊，請參閱[教學課程中有關](./tutorials/create-schema-ui.md#profile)用於即時客戶個人檔案[!UICONTROL Schema Editor]的章節。
 
 ### 將Adobe Analytics資料匯入為來源時，是否針對設定檔啟用自動建立的結構描述？
 
 結構描述不會自動為即時客戶設定檔啟用。 您需要根據為設定檔啟用的結構描述，為設定檔明確啟用資料集。 請參閱檔案以瞭解啟用資料集以用於Real-Time Customer Profile[所需的](../catalog/datasets/user-guide.md#enable-profile)步驟和要求。
 
-### 我可以刪除已啟用設定檔的結構描述嗎？
+### 我可以刪除已啟用設定檔的結構描述嗎？ {#delete-profile-enabled}
 
-為即時客戶設定檔啟用結構描述後，您就無法再刪除它。 為設定檔啟用結構描述後，就無法停用或刪除它，也無法從結構描述中移除欄位。 因此，在為設定檔啟用結構描述之前，請務必仔細規劃及驗證該結構描述設定。 不過，您可以刪除已啟用設定檔的資料集。 您可在此找到資訊： <https://experienceleague.adobe.com/zh-hant/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+為即時客戶設定檔啟用結構描述後，您就無法再刪除它。 為設定檔啟用結構描述後，就無法停用或刪除它，也無法從結構描述中移除欄位。 因此，在為設定檔啟用結構描述之前，請務必仔細規劃及驗證該結構描述設定。 不過，您可以刪除已啟用設定檔的資料集。 您可在此找到資訊： <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 如果您不想再使用已啟用設定檔的結構描述，建議將結構描述重新命名為包含&#x200B;**不要使用**&#x200B;或&#x200B;**非使用中**。
 
@@ -158,7 +158,7 @@ XDM對於此資料型別的使用有下列限制：
 
 聯合結構是唯讀的，由系統自動產生。 無法直接編輯它們。 在實作特定類別的結構描述中新增「聯合」標籤時，會為該類別建立聯合結構描述。
 
-如需XDM中聯合的詳細資訊，請參閱[&#x200B; API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
+如需XDM中聯合的詳細資訊，請參閱[ API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
 
 ### 如何格式化資料檔以將資料擷取至我的結構描述？
 
@@ -296,7 +296,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### [!DNL Real-Time Customer Profile]個錯誤
 
-下列錯誤訊息與啟用[!DNL Real-Time Customer Profile]的結構描述相關作業。 如需詳細資訊，請參閱[&#x200B; API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
+下列錯誤訊息與啟用[!DNL Real-Time Customer Profile]的結構描述相關作業。 如需詳細資訊，請參閱[ API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
 
 #### 必須有參考身分描述項
 
