@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制概述
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的相關資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 14028928362d8396c30babfc2279135011dd7c6f
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1929'
 ht-degree: 13%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 13%
 
 以下影片旨在協助您瞭解屬性型存取控制，並概述如何設定角色、資源和原則。
 
->[!VIDEO](https://video.tv.adobe.com/v/3451850?learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## 以屬性為基礎的存取控制術語
 
@@ -33,7 +33,7 @@ ht-degree: 13%
 | 術語 | 定義 |
 | --- | --- |
 | 屬性 | 屬性是識別碼，可指出使用者與其有權存取的Experience Platform資源之間的關聯。 屬性可以是新增至物件的中繼資料，例如新增至結構欄位或區段的標籤。 管理員定義存取原則，其中包含管理使用者存取許可權的屬性。 |
-| 標記 | 標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料內嵌至Experience Platform後立即加上標籤，或資料可在Experience Platform中使用後立即加上標籤。 |
+| 標籤 | 標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。標籤可隨時套用，提供您選擇控管資料方式的靈活性。 最佳實務建議在資料內嵌至Experience Platform後立即加上標籤，或資料可在Experience Platform中使用後立即加上標籤。 |
 | 權限 | 許可權包括檢視和/或使用Experience Platform功能，例如建立沙箱、定義結構以及管理資料集的能力。 |
 | 許可權集 | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | 原則 | 策略是將屬性組合在一起的陳述式，用於建立允許和不允許的動作。原則可以是本機或全域，並且可以覆寫其他原則。 |
@@ -80,7 +80,7 @@ Experience Platform運用[Adobe Admin Console](https://adminconsole.adobe.com)�
 
 ### 目標 {#destinations}
 
-[!DNL Destinations]是預先建立的與目的地平台的整合，可讓您從Experience Platform順暢地啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Experience Platform 的資料。您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 
 身為管理員，您可以使用基於屬性的存取控制功能來：
 
@@ -94,7 +94,7 @@ Experience Platform運用[Adobe Admin Console](https://adminconsole.adobe.com)�
 >總而言之，使用目的地和基於屬性的存取控制時，請記住以下含義：
 >
 >* 您只能啟用您有權在[對象入口網站](/help/segmentation/ui/audience-portal.md#browse)和[選取啟用工作流程的區段步驟](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments)中存取及檢視的對象。
->* 在啟動工作流程[&#128279;](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)的對應步驟中，您只能檢視和選取您有存取許可權的欄位以進行啟動。
+>* 在啟動工作流程[的](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)對應步驟中，您只能檢視和選取您有存取許可權的欄位以進行啟動。
 >* 如果您想要在現有目的地啟用其他區段，而您無權存取對應至匯出之所有欄位，啟用工作流程將為您封鎖。
 
 如需[!DNL Destinations]的詳細資訊，請參閱[[!DNL Destinations] 概觀](../../destinations/home.md)。
@@ -109,7 +109,7 @@ Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身�
 
 ### 即時客戶輪廓
 
-Experience Platform可讓您為客戶推動協調、一致且相關的體驗，無論客戶在哪裡或何時與您的品牌互動。 透過即時客戶輪廓，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 設定檔可讓您將不同的客戶資料整合為統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Experience Platform可讓您為客戶推動協調、一致且相關的體驗，無論客戶在哪裡或何時與您的品牌互動。 即時客戶輪廓會合併來自多個管道的資料 (包括線上、離線、CRM 和協力廠商資料)，讓您可以掌握每位個別客戶的全貌。設定檔可讓您將不同的客戶資料整合為統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 身為管理員，您可以使用基於屬性的存取控制功能來：
 
@@ -120,9 +120,9 @@ Experience Platform可讓您為客戶推動協調、一致且相關的體驗，�
 
 如需設定檔的詳細資訊，請參閱[設定檔總覽](../../profile/home.md)。
 
-### 分段服務
+### 細分服務
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，進而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 身為管理員，您可以使用基於屬性的存取控制功能來：
 
@@ -133,7 +133,7 @@ Experience Platform可讓您為客戶推動協調、一致且相關的體驗，�
 
 ### XDM
 
-Experience Data Model (XDM)是開放原始碼規格，旨在改善數位體驗的力量。 它為任何應用程式提供通用結構和定義，以便與Experience Platform上的服務通訊。 若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
+Experience Data Model (XDM)是開放原始碼規格，旨在改善數位體驗的力量。 它為任何應用程式提供通用結構和定義，以便與Experience Platform上的服務通訊。 若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞洞察。您可以從客戶行為中獲得有價值的洞察，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 使用以屬性為基礎的存取控制，您可以：
 
@@ -141,3 +141,9 @@ Experience Data Model (XDM)是開放原始碼規格，旨在改善數位體驗�
 * 根據指派給使用者的角色所套用的許可權集，設定使用者對特定XDM結構描述欄位的存取權。
 
 如需XDM的詳細資訊，請參閱[XDM概觀](../../xdm/home.md)。
+
+### Customer Journey Analytics (CJA)
+
+Customer Journey Analytics (CJA)存取許可權是在CJA中的應用程式層級管理。 CJA使用自己的屬性型存取控制，不會繼承或套用Adobe Experience Platform中定義的屬性型存取控制。
+
+如需CJA存取控制的詳細資訊，請參閱[CJA存取控制](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control)檔案。
