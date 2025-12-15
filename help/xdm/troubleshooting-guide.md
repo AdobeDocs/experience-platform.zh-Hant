@@ -15,7 +15,7 @@ ht-degree: 0%
 
 本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model] (XDM)和XDM系統的常見問題解答，包括常見錯誤的疑難排解指南。 有關其他Experience Platform服務的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-**[!DNL Experience Data Model](XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取&#x200B;**[!DNL Schema Library]**&#x200B;內的[!DNL Experience Platform]。 如需詳細資訊，請參閱[XDM檔案](home.md)。
+**[!DNL Experience Data Model] (XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Experience Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取&#x200B;**[!DNL Schema Library]**&#x200B;內的[!DNL Experience Platform]。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
 ## 常見問題集
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 所有[!DNL Schema Registry]資源（結構描述、欄位群組、資料型別、類別）都有一個URI做為唯一ID，以供參考和查詢。 在API中檢視結構描述時，您可以在頂層`$id`和`meta:altId`屬性中找到它。
 
-如需詳細資訊，請參閱[ API指南中的](api/getting-started.md#resource-identification)資源識別[!DNL Schema Registry]區段。
+如需詳細資訊，請參閱[&#x200B; API指南中的](api/getting-started.md#resource-identification)資源識別[!DNL Schema Registry]區段。
 
 ### 長欄位型別的大小上限是多少？
 
@@ -158,7 +158,7 @@ XDM對於此資料型別的使用有下列限制：
 
 聯合結構是唯讀的，由系統自動產生。 無法直接編輯它們。 在實作特定類別的結構描述中新增「聯合」標籤時，會為該類別建立聯合結構描述。
 
-如需XDM中聯合的詳細資訊，請參閱[ API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
+如需XDM中聯合的詳細資訊，請參閱[&#x200B; API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
 
 ### 如何格式化資料檔以將資料擷取至我的結構描述？
 
@@ -296,7 +296,7 @@ XDM對於此資料型別的使用有下列限制：
 
 ### [!DNL Real-Time Customer Profile]個錯誤
 
-下列錯誤訊息與啟用[!DNL Real-Time Customer Profile]的結構描述相關作業。 如需詳細資訊，請參閱[ API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
+下列錯誤訊息與啟用[!DNL Real-Time Customer Profile]的結構描述相關作業。 如需詳細資訊，請參閱[&#x200B; API指南中的](./api/unions.md)聯合[!DNL Schema Registry]區段。
 
 #### 必須有參考身分描述項
 
