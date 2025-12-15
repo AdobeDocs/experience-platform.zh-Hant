@@ -146,4 +146,4 @@ Experience Data Model (XDM)是開放原始碼規格，旨在改善數位體驗�
 
 Customer Journey Analytics (CJA)存取許可權是在CJA中的應用程式層級管理。 CJA使用自己的屬性型存取控制，不會繼承或套用Adobe Experience Platform中定義的屬性型存取控制。
 
-如需CJA存取控制的詳細資訊，請參閱[CJA存取控制](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control)檔案。
+如需CJA存取控制的詳細資訊，請參閱[CJA存取控制](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/technotes/access-control)檔案。
