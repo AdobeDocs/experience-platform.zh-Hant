@@ -2,9 +2,9 @@
 description: 瞭解如何設定彙總原則，以判斷應如何分組和批次傳送目的地的HTTP請求。
 title: 彙總原則
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
+source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1235'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -52,7 +52,26 @@ ht-degree: 2%
    "aggregationType":"BEST_EFFORT",
    "bestEffortAggregation":{
       "maxUsersPerRequest":10,
-      "splitUserById":false
+      "splitUserById":false,
+      "aggregationKey":{
+         "includeSegmentId":true,
+         "includeSegmentStatus":true,
+         "includeIdentity":true,
+         "oneIdentityPerGroup":true,
+         "groups":[
+            {
+               "namespaces":[
+                  "IDFA",
+                  "GAID"
+               ]
+            },
+            {
+               "namespaces":[
+                  "EMAIL"
+               ]
+            }
+         ]
+      }
    }
 }
 ```
@@ -62,6 +81,12 @@ ht-degree: 2%
 | `aggregationType` | 字串 | 指示您的目的地應使用的彙總原則型別。 支援的彙總型別： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單一HTTP呼叫中彙總多個匯出的設定檔。 <br><br>此值表示您的端點在單一HTTP呼叫中應接收的設定檔數目上限。 請注意，這是最大努力彙總。 例如，如果您指定值100，Experience Platform在呼叫時可能會傳送任何數量小於100的設定檔。 <br><br>如果您的伺服器不接受每個請求多個使用者，請將此值設定為`1`。 |
 | `bestEffortAggregation.splitUserById` | 布林值 | 如果對目的地的呼叫應該依身分分割，請使用此旗標。 如果您的伺服器針對指定的身分識別名稱空間，在每次呼叫僅接受一個身分識別，請將此標幟設為`true`。 |
+| `bestEffortAggregation.aggregationKey` | 物件 | *選擇性*。 可讓您根據下列描述引數，彙總對應至目的地的匯出設定檔。 若不需要彙總，可省略此引數或將其設為`null`。 提供時，其功能與可設定彙總中的彙總金鑰相同。 |
+| `bestEffortAggregation.aggregationKey.includeSegmentId` | 布林值 | 如果您想要依對象ID將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
+| `bestEffortAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 如果您想要依對象ID和對象狀態將匯出至目的地的設定檔分組，請將此引數和`includeSegmentId`設定為`true`。 |
+| `bestEffortAggregation.aggregationKey.includeIdentity` | 布林值 | 如果您想要依身分名稱空間將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
+| `bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 如果您希望匯出的設定檔根據單一身分識別（GAID、IDFA、電話號碼、電子郵件等）彙總成群組，請將此引數設為`true`。 如果要使用`false`引數來定義自訂身分名稱空間群組，請設為`groups`。 |
+| `bestEffortAggregation.aggregationKey.groups` | 陣列 | 當`oneIdentityPerGroup`設定為`false`時，使用此引數。 如果您想要依身分名稱空間群組將匯出至目的地的設定檔分組，請建立身分群組清單。 例如，您可以使用上述範例中的設定，將包含IDFA和GAID行動識別碼的設定檔合併為對目的地的一次呼叫，並將電子郵件合併為另一個呼叫。 |
 
 {style="table-layout:auto"}
 
@@ -115,8 +140,8 @@ ht-degree: 2%
 | `configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 如果您想要依對象ID將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 如果您想要依對象ID和對象狀態將匯出至目的地的設定檔分組，請將此引數和`includeSegmentId`設定為`true`。 |
 | `configurableAggregation.aggregationKey.includeIdentity` | 布林值 | 如果您想要依身分名稱空間將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 如果您希望匯出的設定檔根據單一身分識別（GAID、IDFA、電話號碼、電子郵件等）彙總成群組，請將此引數設為`true`。 |
-| `configurableAggregation.aggregationKey.groups` | 陣列 | 如果您想要依身分名稱空間群組將匯出至目的地的設定檔分組，請建立身分群組清單。 例如，您可以使用上述範例中的設定，將包含IDFA和GAID行動識別碼的設定檔合併為對目的地的一次呼叫，並將電子郵件合併為另一個呼叫。 |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 如果您希望匯出的設定檔根據單一身分識別（GAID、IDFA、電話號碼、電子郵件等）彙總成群組，請將此引數設為`true`。 如果要使用`false`引數來定義自訂身分名稱空間群組，請設為`groups`。 |
+| `configurableAggregation.aggregationKey.groups` | 陣列 | 當`oneIdentityPerGroup`設定為`false`時，使用此引數。 如果您想要依身分名稱空間群組將匯出至目的地的設定檔分組，請建立身分群組清單。 例如，您可以使用上述範例中的設定，將包含IDFA和GAID行動識別碼的設定檔合併為對目的地的一次呼叫，並將電子郵件合併為另一個呼叫。 |
 
 {style="table-layout:auto"}
 
