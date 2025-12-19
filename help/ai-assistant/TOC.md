@@ -3,8 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 中的 AI 助理指南
 user-guide-description: 了解如何使用 AI 助理來加快 Adobe Experience Platform 和 Real-Time Customer Data Platform 的工作流程。
 description: 本檔案列出Adobe Experience Platform中AI助理的目錄。
+feature: AI Assistant
 role: Admin,User,Developer,Leader
-source-git-commit: 40f7ea3e6477590dc2eed5af8aa9848901a8c204
+source-git-commit: e1bdba5e708b7a51536e8c2ee213a88b64b4c8ec
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 33%
