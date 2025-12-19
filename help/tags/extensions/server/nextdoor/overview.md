@@ -112,7 +112,7 @@ ht-degree: 8%
 
 | 參數 | 說明 | 資料類型 | 必要 | 格式 | 範例 |
 | ------------------------------ | ---------------------------------------------- | ------------------- | -------------------------------- | --------------------------------------- | ----------------------- |
-| [!UICONTROL Order Value] | 購買交易的總值。 | 字串 | 購買事件需要&#x200B;**** | ISO 4217貨幣+金額（無空格） | `USD123.45` |
+| [!UICONTROL Order Value] | 購買交易的總值。 | 字串 | 購買事件需要&#x200B;**&#x200B;** | ISO 4217貨幣+金額（無空格） | `USD123.45` |
 | [!UICONTROL Order ID] | 唯一交易或訂單識別碼。 | 字串 | 選填 | 任何唯一字串 | `order_12345` |
 | [!UICONTROL Delivery Category] | 產品/服務交付方法。 | 字串 | 選填 | <ul><li>`in_store`</li><li>`curbside`</li><li>`home_delivery`</li></ul> | `home_delivery` |
 | [!UICONTROL Product Context] | 有關購買產品的詳細資訊。 | 字串（JSON陣列） | 選填 | 產品物件的JSON陣列 | `[{"id":"SKU123","content_name":"Widget","item_price":29.99,"quantity":1}]` |
@@ -123,10 +123,10 @@ ht-degree: 8%
 
 | 參數 | 說明 | 資料類型 | 必要 | 格式 | 範例 |
 | --------------------------------- | --------------------------------------------- | --------- | --------------------------- | ----------------------------------------- | ----------------- |
-| [!UICONTROL App ID*] | 行動應用程式識別碼。 | 字串 | 應用程式事件需要&#x200B;**** | <ul><li>套件ID (iOS)</li><li>封裝名稱(Android)</li></ul> | `com.company.app` |
-| [!UICONTROL App Tracking Enabled] | iOS應用程式追蹤透明度同意狀態。 | 字串 | 應用程式事件需要&#x200B;**** | 布林值字串 | `true` |
-| [!UICONTROL Platform] | 行動作業系統。 | 字串 | 應用程式事件需要&#x200B;**** | <ul><li>`iOS`</li><li>`Android`</li></ul> | `Android` |
-| [!UICONTROL App Version] | 行動應用程式的版本。 | 字串 | 應用程式事件需要&#x200B;**** | 應用程式定義的版本字串 | `2.0.0-beta` |
+| [!UICONTROL App ID*] | 行動應用程式識別碼。 | 字串 | 應用程式事件需要&#x200B;**&#x200B;** | <ul><li>套件ID (iOS)</li><li>封裝名稱(Android)</li></ul> | `com.company.app` |
+| [!UICONTROL App Tracking Enabled] | iOS應用程式追蹤透明度同意狀態。 | 字串 | 應用程式事件需要&#x200B;**&#x200B;** | 布林值字串 | `true` |
+| [!UICONTROL Platform] | 行動作業系統。 | 字串 | 應用程式事件需要&#x200B;**&#x200B;** | <ul><li>`iOS`</li><li>`Android`</li></ul> | `Android` |
+| [!UICONTROL App Version] | 行動應用程式的版本。 | 字串 | 應用程式事件需要&#x200B;**&#x200B;** | 應用程式定義的版本字串 | `2.0.0-beta` |
 
 ## 事件類型 {#event-types}
 
