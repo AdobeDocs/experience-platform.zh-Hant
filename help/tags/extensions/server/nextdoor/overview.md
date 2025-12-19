@@ -18,7 +18,7 @@ ht-degree: 8%
 
 使用[[!DNL Nextdoor] 轉換API擴充功能](https://help.nextdoor.com/s/article/About-the-Nextdoor-Conversion-API)將轉換事件直接傳送至[!DNL Nextdoor's]轉換API。 此擴充功能可傳送伺服器端轉換資料，協助您追蹤及測量[!DNL Nextdoor]廣告行銷活動的成效。
 
-本指南說明如何在事件轉送[!DNL Nextdoor]規則[中安裝、設定及使用](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) Conversion API擴充功能。
+本指南說明如何在事件轉送[!DNL Nextdoor]規則[中安裝、設定及使用](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/tags/ui/rules) Conversion API擴充功能。
 
 ## 先決條件 {#prerequisites}
 
