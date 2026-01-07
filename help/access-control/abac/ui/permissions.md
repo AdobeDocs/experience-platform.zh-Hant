@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型存取控制；ABAC
 title: 以屬性為基礎的存取控制管理角色許可權
-description: 本檔案提供透過Adobe Experience Cloud中的許可權介面設定角色許可權的相關資訊
+description: 瞭解如何透過Adobe Experience Cloud中的許可權介面設定角色。
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 157fb27ae492971a48ad62c2d6b3eddd674167f4
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1603'
 ht-degree: 17%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 17%
 >id="platform_permissions_roles_about"
 >title="什麼是角色？"
 >abstract="角色會定義管理員、專家或一般使用者對組織資源的存取權。角色會將與 Experience Platform 執行個體互動的使用者分類，也是存取控制原則的建置要素。一個角色具有特定一組權限，而您可以根據組織成員所需的檢視範圍或寫入存取權，對成員指派一個或多個角色。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=zh-Hant" text="管理角色"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="管理角色"
 
 >[!IMPORTANT]
 >
@@ -36,7 +36,7 @@ ht-degree: 17%
 
 UI中的角色可使用下列篩選器：
 
-| 篩選器 | 說明 |
+| 篩選 | 說明 |
 | --- | --- |
 | [!UICONTROL Created between] | 選取開始日期和/或結束日期，以定義篩選結果的日期範圍。 |
 | [!UICONTROL Created by] | 從下拉式清單中選取使用者，依角色建立者篩選。 |
@@ -116,7 +116,7 @@ UI中的角色可使用下列篩選器：
 
 以下影片旨在協助您瞭解如何建立新角色及管理該角色的使用者。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475984/?captions=chi_hant&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## 管理角色 API 認證 {#manage-api-credentials-for-role}
 
