@@ -17,7 +17,7 @@ ht-degree: 1%
 >
 >[!DNL OneTrust Integration]來源僅支援同意和偏好設定資料的擷取，不支援Cookie。
 
-下列教學課程會逐步引導您完成建立來源連線和資料流的步驟，以使用[[!DNL OneTrust Integration]API](https://my.onetrust.com/s/contactsupport?language=en_US)將歷史資料和排程同意資料從[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/)帶入Adobe Experience Platform。
+下列教學課程會逐步引導您完成建立來源連線和資料流的步驟，以使用[[!DNL OneTrust Integration]API](https://my.onetrust.com/s/contactsupport?language=en_US)將歷史資料和排程同意資料從[[!DNL Flow Service] &#x200B;](https://www.adobe.io/experience-platform-apis/references/flow-service/)帶入Adobe Experience Platform。
 
 ## 先決條件
 
