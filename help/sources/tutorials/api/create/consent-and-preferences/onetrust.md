@@ -4,20 +4,20 @@ solution: Experience Platform
 title: 使用流程服務API為OneTrust整合來源建立資料流
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至OneTrust Integration。
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f9ca6b7683c64c36772d02c1a88c3ef18f961b92
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API為[!DNL OneTrust Integration]來源建立資料流
+# 使用[!DNL OneTrust Integration] API為[!DNL Flow Service]來源建立資料流
 
 >[!NOTE]
 >
 >[!DNL OneTrust Integration]來源僅支援同意和偏好設定資料的擷取，不支援Cookie。
 
-下列教學課程會逐步引導您完成建立來源連線和資料流的步驟，以使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將歷史資料和排程同意資料從[[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US)帶入Adobe Experience Platform。
+下列教學課程會逐步引導您完成建立來源連線和資料流的步驟，以使用[[!DNL OneTrust Integration]API](https://my.onetrust.com/s/contactsupport?language=en_US)將歷史資料和排程同意資料從[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/)帶入Adobe Experience Platform。
 
 ## 先決條件
 
@@ -27,21 +27,21 @@ ht-degree: 1%
 
 您必須先擷取存取權杖，才能將[!DNL OneTrust Integration]連線至Experience Platform。 如需尋找存取Token的詳細指示，請參閱[[!DNL OneTrust Integration] OAuth 2指南](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token)。
 
-存取權杖到期後不會自動重新整理，因為[!DNL OneTrust]不支援系統間重新整理權杖。 因此，在連線過期之前，必須確定您的存取權杖已在連線中更新。 存取權杖的最大可設定存留期為一年。 若要深入瞭解如何更新您的存取權杖，請參閱有關管理您的OAuth 2.0使用者端認證[&#128279;](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials)的[!DNL OneTrust] 檔案。
+存取權杖到期後不會自動重新整理，因為[!DNL OneTrust]不支援系統間重新整理權杖。 因此，在連線過期之前，必須確定您的存取權杖已在連線中更新。 存取權杖的最大可設定存留期為一年。 若要深入瞭解如何更新您的存取權杖，請參閱有關管理您的OAuth 2.0使用者端認證[[!DNL OneTrust] 的](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials)檔案。
 
-## 使用[!DNL Flow Service] API連線[!DNL OneTrust Integration]至Experience Platform
+## 使用[!DNL OneTrust Integration] API連線[!DNL Flow Service]至Experience Platform
 
 >[!NOTE]
 >
 >正在與Adobe共用[!DNL OneTrust Integration] API規格以擷取資料。
 
-下列教學課程將逐步引導您完成建立[!DNL OneTrust Integration]來源連線與建立資料流的步驟，以使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將[!DNL OneTrust Integration]資料帶入Experience Platform。
+下列教學課程將逐步引導您完成建立[!DNL OneTrust Integration]來源連線與建立資料流的步驟，以使用[!DNL OneTrust Integration]API[[!DNL Flow Service] 將](https://www.adobe.io/experience-platform-apis/references/flow-service/)資料帶入Experience Platform。
 
 ### 建立基礎連線 {#base-connection}
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL OneTrust Integration]驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的`/connections`驗證認證作為要求內文的一部分時，對[!DNL OneTrust Integration]端點提出POST要求。
 
 **API格式**
 
@@ -757,8 +757,13 @@ curl -X POST \
               "sourceType": "ATTRIBUTE",
               "source": "content.Purposes",
               "destination": "_exchangesandboxbravo.Purposes"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.LinkToken",
+              "destination": "_exchangesandboxbravo.LinkToken",
+              "description": "Link Token"
           }
-
       ]
   }'
 ```
@@ -878,11 +883,11 @@ curl -X POST \
 
 ### 更新您的資料流
 
-提供資料流的ID時，透過向[!DNL Flow Service] API的`/flows`端點發出PATCH要求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`If-Match`標頭中提供資料流的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
+提供資料流的ID時，透過向`/flows` API的[!DNL Flow Service]端點發出PATCH要求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`etag`標頭中提供資料流的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
 
 ### 更新您的帳戶
 
-在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`If-Match`標頭中提供來源帳戶的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
+在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`etag`標頭中提供來源帳戶的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
 
 ### 刪除您的資料流
 
