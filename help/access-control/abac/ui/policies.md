@@ -54,7 +54,7 @@ ht-degree: 8%
 
 ### 手動管理沙箱 {#manually-manage-sandboxes}
 
-當&#x200B;**[!UICONTROL Auto-include]**&#x200B;關閉時，您可以從原則中手動新增或移除特定沙箱。 這可讓您精確控制哪些沙箱會執行原則的存取控制規則。
+當**[!UICONTROL Auto-include]**關閉時，您可以從原則中手動新增或移除特定沙箱。 這可讓您精確控制哪些沙箱會執行原則的存取控制規則。
 
 >[!NOTE]
 >
