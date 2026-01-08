@@ -3,9 +3,9 @@ title: 記錄刪除工單
 description: 瞭解如何使用資料衛生API中的/workorder端點，以管理Adobe Experience Platform中的記錄刪除工單。 本指南涵蓋配額、處理時間表及API使用情形。
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
+source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2541'
 ht-degree: 1%
 
 ---
@@ -202,6 +202,14 @@ POST /workorder
 >[!NOTE]
 >
 >您只能從關聯XDM結構描述定義主要身分或身分對應的資料集中刪除記錄。
+
+>[!IMPORTANT]
+>
+>記錄刪除工單僅在&#x200B;**主要身分**&#x200B;欄位上執行。 下列限制適用：
+>
+>- **未掃描次要身分。**&#x200B;如果資料集包含多個身分欄位，則只會使用主要身分進行比對。 無法根據非主要身分定位或刪除記錄。
+>- **略過沒有填入主要身分的記錄。**&#x200B;如果記錄未填入主要身分中繼資料，則無法刪除。
+>- **在身分設定之前擷取的資料不合格。**&#x200B;如果主要身分欄位在資料擷取後新增到結構描述，則無法透過記錄刪除工作單來刪除先前擷取的記錄。
 
 >[!NOTE]
 >

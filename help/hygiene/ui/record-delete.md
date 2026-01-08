@@ -2,10 +2,10 @@
 title: 記錄刪除請求（UI工作流程）
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
-source-wordcount: '2358'
-ht-degree: 6%
+source-wordcount: '2520'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 ## 先決條件 {#prerequisites}
 
-刪除記錄需要實際瞭解Experience Platform中身分欄位的運作方式。 具體來說，您必須知道要刪除其記錄的實體的身分名稱空間值，端視您要從中刪除這些記錄的資料集（或資料集）而定。
+刪除記錄需要實際瞭解Experience Platform中身分欄位的運作方式。 具體來說，您必須知道要刪除其記錄之實體的主要身分名稱空間和值，端視您要從中刪除這些記錄的資料集（或資料集）而定。
 
 請參閱以下檔案，瞭解有關Experience Platform中身分的詳細資訊：
 
@@ -28,6 +28,14 @@ ht-degree: 6%
 * [即時客戶個人檔案](../../profile/home.md)：使用身分圖表，根據來自多個來源的彙總資料提供統一的消費者個人檔案，近乎即時更新。
 * [體驗資料模型(XDM)](../../xdm/home.md)：透過使用結構描述為Experience Platform資料提供標準定義和結構。 所有Experience Platform資料集都符合特定的XDM結構描述，而結構描述會定義哪些欄位是身分。
 * [身分欄位](../../xdm/ui/fields/identity.md)：瞭解身分欄位在XDM結構描述中的定義方式。
+
+>[!IMPORTANT]
+>
+>記錄刪除僅對資料集結構描述中定義的&#x200B;**主要身分**&#x200B;欄位起作用。 下列限制適用：
+>
+>* **未掃描次要身分。**&#x200B;如果資料集包含多個身分欄位，則只會使用主要身分進行比對。 無法根據非主要身分定位或刪除記錄。
+>* **略過沒有填入主要身分的記錄。**&#x200B;如果記錄未填入主要身分中繼資料，則無法刪除。
+>* **在身分設定之前擷取的資料不合格。**&#x200B;如果主要身分欄位在資料擷取後新增到結構描述，則無法透過此工作流程刪除先前擷取的記錄。
 
 ## 建立請求 {#create-request}
 
@@ -53,13 +61,13 @@ ht-degree: 6%
 
 ![已選取資料集並醒目提示[!UICONTROL Select dataset]的[!UICONTROL Done]對話方塊。](../images/ui/record-delete/select-dataset.png)
 
-若要從所有資料集中刪除，請選取&#x200B;**[!UICONTROL All datasets]**。 此選項會增加操作的範圍，並需要您提供所有相關身分型別。
+若要從所有資料集中刪除，請選取&#x200B;**[!UICONTROL All datasets]**。 此選項會增加操作的範圍，並需要您為每個要定位的資料集提供主要身分型別。
 
 ![已選取[!UICONTROL Select dataset]選項的[!UICONTROL All datasets]對話方塊。](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->選取&#x200B;**[!UICONTROL All datasets]**&#x200B;會將作業展開至您組織中的所有資料集。 每個資料集都可以使用不同的主要身分型別。 您必須提供&#x200B;**所有必要的身分型別**，以確保正確比對。
+>選取&#x200B;**[!UICONTROL All datasets]**&#x200B;會將作業展開至您組織中的所有資料集。 每個資料集都可以使用不同的主要身分型別。 您必須為每個資料集&#x200B;**提供**&#x200B;主要身分型別，以確保正確比對。
 >
 >如果缺少任何身分型別，刪除期間可能會略過某些記錄。 這可能會減慢處理速度，並導致&#x200B;**部分結果**。
 
@@ -72,17 +80,21 @@ Experience Platform中的每個資料集僅支援一個主要身分型別。
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="身分識別命名空間"
->abstract="身分識別命名空間指將記錄和 Experience Platform 中的消費者設定檔繫結的屬性。資料集的身分識別命名空間欄位由資料集建立基礎的結構描述定義。在此欄中，您必須提供記錄的身分識別命名空間的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
+>title="主要身分識別命名空間"
+>abstract="主要身分名稱空間是屬性，可唯一地將記錄與Experience Platform中的消費者設定檔連結。 資料集的主要身分識別欄位由資料集建立基礎的結構描述定義。在此欄中，您必須提供符合資料集結構描述的主要身分名稱空間(例如`email`代表電子郵件地址，或`ecid`代表Experience Cloud ID)。 若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="主要身分識別值"
 >abstract="在此欄中，您必須提供記錄的身分命名空間的值，該值必須和左欄中提供的身分識別類型相對應。如果身分識別命名空間類型是 `email`，則該值應該是記錄的電子郵件地址。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
-刪除記錄時，您必須提供身分資訊，讓系統能夠決定要刪除哪些記錄。 對於Experience Platform中的任何資料集，會根據資料集結構描述所定義的&#x200B;**身分名稱空間**&#x200B;欄位來刪除記錄。
+刪除記錄時，您必須提供身分資訊，讓系統能夠決定要刪除哪些記錄。 對於Experience Platform中的任何資料集，會根據資料集結構描述所定義的&#x200B;**主要身分**&#x200B;欄位來刪除記錄。
 
-和Experience Platform中的所有身分識別欄位一樣，身分識別名稱空間是由兩部分組成： **型別** （有時稱為身分識別名稱空間）和&#x200B;**值**。 身分型別提供欄位如何識別記錄的上下文（例如電子郵件地址）。 值代表該型別的記錄特定身分（例如，`jdoe@example.com`身分型別的`email`）。 做為身分識別的常見欄位包括帳戶資訊、裝置ID和Cookie ID。
+>[!NOTE]
+>
+>雖然UI可讓您選取身分名稱空間，但執行時只會使用資料集結構描述中設定的&#x200B;**主要身分**。 確保您提供的身分值對應到資料集的主要身分欄位。
+
+和Experience Platform中的所有身分欄位一樣，主要身分是由兩部分組成： **型別** （身分名稱空間）和&#x200B;**值**。 身分型別提供欄位如何識別記錄的上下文（例如電子郵件地址）。 值代表該型別的記錄特定身分（例如，`jdoe@example.com`身分型別的`email`）。 作為主要身分識別的常見欄位包括帳戶資訊、裝置ID和Cookie ID。
 
 >[!TIP]
 >
@@ -101,7 +113,7 @@ Experience Platform中的每個資料集僅支援一個主要身分型別。
 
 ![要求建立工作流程，其中包含反白顯示的選擇檔案和拖放介面以上傳JSON檔案。](../images/ui/record-delete/upload-json.png)
 
-JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
+JSON檔案必須格式化為物件陣列，每個物件代表目標資料集的主要身分值。
 
 ```json
 [
@@ -118,7 +130,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 | 屬性 | 說明 |
 | --- | --- |
-| `namespaceCode` | 身分型別。 |
+| `namespaceCode` | 目標資料集的主要身分名稱空間。 |
 | `value` | 型別所代表的主要身分值。 |
 
 上傳檔案後，您就可以繼續[提交要求](#submit)。
@@ -195,7 +207,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 [!UICONTROL Confirm request]對話方塊似乎表示刪除後無法復原身分。 選取&#x200B;**[!UICONTROL Submit]**&#x200B;以確認您要刪除其資料的身分清單。
 
-![&#x200B; [!UICONTROL Confirm request]對話方塊。](../images/ui/record-delete/confirm-request.png)
+![ [!UICONTROL Confirm request]對話方塊。](../images/ui/record-delete/confirm-request.png)
 
 提交請求後，工作單即建立並顯示在[!UICONTROL Record]工作區的[!UICONTROL Data Lifecycle]標籤上。 從這裡，您可以在工單處理請求時監視工單的狀態。
 
