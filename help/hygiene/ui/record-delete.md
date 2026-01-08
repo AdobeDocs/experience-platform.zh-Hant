@@ -207,7 +207,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表目標資料集的�
 
 [!UICONTROL Confirm request]對話方塊似乎表示刪除後無法復原身分。 選取&#x200B;**[!UICONTROL Submit]**&#x200B;以確認您要刪除其資料的身分清單。
 
-![ [!UICONTROL Confirm request]對話方塊。](../images/ui/record-delete/confirm-request.png)
+![&#x200B; [!UICONTROL Confirm request]對話方塊。](../images/ui/record-delete/confirm-request.png)
 
 提交請求後，工作單即建立並顯示在[!UICONTROL Record]工作區的[!UICONTROL Data Lifecycle]標籤上。 從這裡，您可以在工單處理請求時監視工單的狀態。
 
