@@ -4,9 +4,9 @@ title: 硬式連線
 description: Braze是全方位的客戶參與平台，可在客戶與所喜愛品牌之間提供相關且令人難忘的體驗。
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc97efec5fba090378ceaf73441d0b4bd7fbf51f
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1078'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 2%
 
 * **[!UICONTROL Name]**：輸入您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：輸入說明，協助您日後識別此目的地。
-* **[!UICONTROL Endpoint Instance]**：詢問您的[!DNL Braze]代表您應該使用哪個端點執行個體。
+* **[!UICONTROL Endpoint Instance]**： [支援的所有](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)區域特定端點[!DNL Braze]都可供選取。 請詢問您的[!DNL Braze]代表您應該使用哪個端點執行個體。
 
 ### 啟用警示 {#enable-alerts}
 
