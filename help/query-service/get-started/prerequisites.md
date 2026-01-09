@@ -21,7 +21,7 @@ ht-degree: 1%
 - **必要的許可權**：您的使用者帳戶可以存取Experience Platform中的查詢服務。 如果UI中沒有此服務，請檢閱[許可權檔案](../../access-control/home.md#permissions)並連絡您的系統管理員。
 - **資料擷取**：您已將資料擷取到Experience Platform。
 
-如果您需要擷取資料，請觀看[資料擷取教學課程影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)，以瞭解資料集建立、結構描述對應、擷取和驗證的概觀。 如需更深入的資訊和其他學習資源的連結，請參閱[擷取概觀檔案](../../ingestion/home.md)。
+如果您需要擷取資料，請觀看[資料擷取教學課程影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)，以瞭解資料集建立、結構描述對應、擷取和驗證的概觀。 如需更深入的資訊和其他學習資源的連結，請參閱[擷取概觀檔案](../../ingestion/home.md)。
 
 ## 快速入門路徑
 
