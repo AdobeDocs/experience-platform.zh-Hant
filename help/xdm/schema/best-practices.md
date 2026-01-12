@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料模型化的最佳實務
 description: 本檔案介紹Experience Data Model (XDM)結構描述，以及構成要在Adobe Experience Platform中使用的結構描述的建置組塊、原則和最佳實務。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 7a763a978443c0a074e6368448320056759f72bb
 workflow-type: tm+mt
-source-wordcount: '3236'
+source-wordcount: '3429'
 ht-degree: 1%
 
 ---
@@ -83,7 +83,7 @@ ht-degree: 1%
 
 | 客戶ID | 類型 | 產品 ID | 數量 | 時間戳記 |
 | --- | --- | --- | --- | --- |
-| 1234567 | 新增 | 275098 | 2 | 10月1日，上午10:32 |
+| 1234567 | 新增 | 275098 | 2 | 10月1日上午10:32 |
 | 1234567 | 移除 | 275098 | 1 | 10月1日上午10:33 |
 | 1234567 | 新增 | 486502 | 1 | 10月1日上午10:41 |
 | 1234567 | 新增 | 910482 | 5 | 10月3日，下午2:15 |
@@ -198,7 +198,7 @@ ht-degree: 1%
 
 ### 採用反複的模型方法 {#iterative-modeling}
 
-結構描述演化[&#128279;](./composition.md#evolution)的規則規定，在結構描述實作後，只能對結構描述進行非破壞性變更。 換言之，一旦您將欄位新增到結構描述並且已根據該欄位擷取資料，就無法再移除該欄位。 因此，當您首次建立結構描述時，一定要採用反複的模型方法，從隨著時間推移逐漸增加複雜性的簡化實作開始。
+結構描述演化[的](./composition.md#evolution)規則規定，在結構描述實作後，只能對結構描述進行非破壞性變更。 換言之，一旦您將欄位新增到結構描述並且已根據該欄位擷取資料，就無法再移除該欄位。 因此，當您首次建立結構描述時，一定要採用反複的模型方法，從隨著時間推移逐漸增加複雜性的簡化實作開始。
 
 如果您不確定某個特定欄位是否必須包含在結構描述中，最佳作法是將其排除在外。 如果之後確定該欄位是必要的，可隨時將其新增到結構的下一個疊代中。
 
@@ -217,9 +217,9 @@ Experience Platform提供幾個現成的XDM結構描述欄位群組，用於擷�
 * Adobe Campaign
 * Adobe Target
 
-例如，您可以使用[[!UICONTROL Adobe Analytics ExperienceEvent範本]欄位群組](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)，將[!DNL Analytics]特定欄位對應到您的XDM結構描述。 根據您使用的Adobe應用程式，您應在結構中使用這些Adobe提供的欄位群組。
+例如，您可以使用[[!UICONTROL Adobe Analytics ExperienceEvent Template]欄位群組](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)將[!DNL Analytics]特定欄位對應到您的XDM結構描述。 根據您使用的Adobe應用程式，您應在結構中使用這些Adobe提供的欄位群組。
 
-![&#x200B; [!UICONTROL Adobe Analytics ExperienceEvent範本]的結構描述圖表。](../images/best-practices/analytics-field-group.png)
+![ [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)的結構描述圖表
 
 Adobe應用程式欄位群組會透過使用`identityMap`欄位自動指派預設主要身分，該欄位是系統產生的唯讀物件，可對應個別客戶的標準身分值。
 
@@ -231,35 +231,55 @@ Adobe應用程式欄位群組會透過使用`identityMap`欄位自動指派預�
 
 ## 資料驗證欄位 {#data-validation-fields}
 
-當您將資料內嵌至Data Lake時，只會針對受限欄位強制執行資料驗證。 若要在批次擷取期間驗證特定欄位，您必須在XDM結構描述中將欄位標籤為受限。 為了防止將不良資料擷取到Experience Platform，建議您在建立結構描述時，定義欄位層級驗證的條件。
+當您將資料內嵌至Data Lake時，只會針對受限欄位強制執行資料驗證。 若要在批次擷取期間驗證特定欄位，您必須在XDM結構描述中將欄位標籤為受限。 若要防止錯誤資料進入Experience Platform，請在建立結構描述時定義驗證需求。
 
 >[!IMPORTANT]
 >
->驗證不適用於巢狀欄。 如果欄位格式位於陣列欄中，將不會驗證資料。
+>驗證不適用於巢狀欄。 如果欄位格式位於陣列欄中，則不會驗證資料。
 
-若要在特定欄位上設定限制，請從結構描述編輯器中選取欄位，以開啟&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;側欄。 如需可用欄位的確切說明，請參閱[特定型別欄位屬性](../ui/fields/overview.md#type-specific-properties)的相關檔案。
+若要在欄位上設定限制，請選取結構描述編輯器中的欄位，以開啟&#x200B;**[!UICONTROL Field properties]**&#x200B;側欄。 如需可用欄位的確切說明，請參閱[特定型別欄位屬性](../ui/fields/overview.md#type-specific-properties)的相關檔案。
 
-![結構描述編輯器，在[!UICONTROL 欄位屬性]側邊欄中反白顯示限制欄位。](../images/best-practices/data-validation-fields.png)
+![結構描述編輯器，在[!UICONTROL Field properties]側邊欄中反白了限制欄位。](../images/best-practices/data-validation-fields.png)
 
 ### 維持資料完整性的秘訣 {#data-integrity-tips}
 
-以下是在您建立結構描述時用來維護資料完整性的建議集合。
+下列建議可協助您在建立結構描述時維持資料的完整性。
 
 * **以主要身分為例**：對於網頁SDK、行動SDK、Adobe Analytics和Adobe Journey Optimizer等Adobe產品，`identityMap`欄位通常可作為主要身分。 避免將其他欄位指定為該結構描述的主要身分。
-* **確定`_id`未作為身分使用**：體驗事件結構描述中的`_id`欄位無法作為身分使用，因為它適用於記錄唯一性。
+* **請確定`_id`未作為身分識別**：體驗事件結構描述中的`_id`欄位無法作為身分識別，因為它適用於記錄唯一性。
 * **設定長度限制**：最佳實務是在標示為身分的欄位上設定最小和最大長度。 如果您嘗試將自訂名稱空間指派給身分欄位，但不符合最小和最大長度限制，則會觸發警告。 這些限制有助於維持一致性和資料品質。
-* **套用一致值的模式**：如果您的身分值遵循特定模式，您應該使用&#x200B;**[!UICONTROL 模式]**&#x200B;設定來強制此限制。 此設定可包含僅數字、大寫或小寫或特定字元組合等規則。 使用規則運算式來比對字串中的模式。
+* **套用一致值的模式**：如果您的身分值遵循特定模式，請使用&#x200B;**[!UICONTROL Pattern]**&#x200B;設定強制執行限制。 此設定可包含僅數字、大寫或小寫或特定字元組合等規則。 使用規則運算式來比對字串中的模式。
 * **在Analytics結構描述中限制eVar**：通常，Analytics結構描述應該只將一個eVar指定為身分。 如果您打算使用多個eVar作為身分，應仔細檢查資料結構是否可以最佳化。
 * **確定所選欄位的唯一性**：與結構描述中的主要身分相比，您選擇的欄位應該是唯一的。 如果不是，請勿標籤為身分。 例如，如果多位客戶可以提供相同的電子郵件地址，則該名稱空間不是合適的身分。 此原則也適用於其他身分識別名稱空間，例如電話號碼。 將非唯一欄位標示為身分可能會導致不需要的設定檔摺疊。
 * **驗證字串長度下限**：所有字串欄位的長度至少要有一個字元，因為字串值絕不能空白。 不過，可接受非必要欄位的Null值。 新字串欄位預設會有一個最小長度。
 
+## 管理已啟用設定檔的結構描述 {#managing-profile-enabled-schemas}
+
+本節說明如何管理已針對Real-Time Customer Profile啟用的結構描述。 結構描述啟用後，您就無法停用或刪除它。 您必須決定如何防止進一步的使用，以及如何管理無法刪除的資料集。
+
+為設定檔啟用結構描述後，設定便無法還原。 如果結構描述不再使用，請將其重新命名以釐清其狀態，並建立具有正確結構和身分設定的取代結構描述。 這有助於防止在使用者建立新資料集或設定擷取工作流程時，意外重複使用過時的結構描述。
+
+系統資料集有時與啟用即時客戶個人檔案的結構描述一起出現。 您無法刪除系統資料集，即使相關聯的結構描述已過時。 為避免意外使用，請重新命名已棄用的啟用設定檔結構，並確認沒有任何擷取工作流程指向保留在適當位置的系統資料集。
+
+使用下列最佳實務來防止意外重複使用已棄用的啟用設定檔的結構描述：
+
+* 當您淘汰結構描述時，請使用明確的命名慣例。 包括「已棄用」、「請勿使用」或版本標籤等標籤。
+* 根據您要淘汰的結構描述，停止將資料擷取至任何資料集。
+* 使用正確的結構、身分設定和命名模式來建立新的綱要。
+* 檢閱無法刪除的系統資料集，並確認沒有擷取工作流程參考這些資料集。
+* 在內部記錄變更，以便其他使用者瞭解結構描述被棄用的原因。
+
+>[!TIP]
+>
+>請參閱[XDM疑難排解指南](../troubleshooting-guide.md#delete-profile-enabled)，以取得啟用設定檔的結構描述及相關限制的額外指引。
+
 ## 後續步驟
 
-本檔案說明為Experience Platform設計資料模型的一般准則和最佳作法。 總結：
+本文介紹為Experience Platform設計資料模型的一般准則和最佳實務。 總結：
 
-* 在建構方案之前，使用由上而下的方法，將資料表格排序為設定檔、查詢和事件類別。
-* 在設計針對不同目的的結構時，通常有多種方法和選項。
-* 您的資料模型應該支援您的業務使用案例，例如細分或客戶歷程分析。
-* 儘可能簡化您的結構描述，只在絕對必要時新增欄位。
+* 在建構方案之前，請將資料表格排序為設定檔、查詢和事件類別。
+* 當您針對不同使用案例設計結構描述時，請評估多種方法。
+* 確認您的資料模型可支援細分或客戶歷程目標。
+* 儘可能保持方案簡單。 僅在必要時新增欄位。
 
-準備就緒後，請參閱有關[在UI](../tutorials/create-schema-ui.md)中建立結構描述的教學課程，以取得如何建立結構描述、為實體指派適當類別，以及新增欄位以對應資料的逐步指示。
+準備就緒後，請參閱有關[在UI](../tutorials/create-schema-ui.md)中建立結構描述的教學課程，以取得有關結構描述建立、類別指派和欄位對應的逐步指示。
