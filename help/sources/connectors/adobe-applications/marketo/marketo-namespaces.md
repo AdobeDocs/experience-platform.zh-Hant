@@ -2,9 +2,9 @@
 title: B2B名稱空間和結構描述
 description: 本檔案提供建立B2B來源聯結器時所需的自訂名稱空間概觀。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 5eeb0397ddc96a224919a776f94058ae3a539b69
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1538'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->您必須擁有[Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md)的存取權，您的B2B結構描述才能在[即時客戶設定檔](../../../../profile/home.md)中符合資格。
+>- 您必須擁有[Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md)的存取權，您的B2B結構描述才能在[即時客戶設定檔](../../../../profile/home.md)中符合資格。
+>
+>- 自2026年1月起，Real-Time CDP B2B edition將不再支援B2B實體之間的&#x200B;**非標準**&#x200B;關係。 因此，建議您更新B2B實體以使用[B2B名稱空間和結構描述指南](../../../../rtcdp/schemas/b2b.md)中概述的標準關係。
 
 >[!NOTE]
 >
@@ -124,7 +126,7 @@ Experience Platform使用結構描述，以一致且可重複使用的方式說�
 
 ## 後續步驟
 
-若要瞭解如何將您的[!DNL Marketo]資料連線到Experience Platform，請參閱有關在UI中建立Marketo來源聯結器的教學課程[&#128279;](../../../tutorials/ui/create/adobe-applications/marketo.md)。
+若要瞭解如何將您的[!DNL Marketo]資料連線到Experience Platform，請參閱有關在UI中建立Marketo來源聯結器的教學課程[](../../../tutorials/ui/create/adobe-applications/marketo.md)。
 
 <!--
 
