@@ -322,7 +322,7 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 
 若要使用UI開始撰寫結構描述，請連同[結構描述編輯器教學課程](../tutorials/create-schema-ui.md)一起建立本檔案中提及的「忠誠會員」結構描述。
 
-若要開始使用[!DNL Schema Registry] API，請先閱讀[Schema Registry API開發人員指南](../api/getting-started.md)。 閱讀開發人員指南後，請依照教學課程中概述的步驟，使用Schema Registry API建立結構描述[](../tutorials/create-schema-api.md)。
+若要開始使用[!DNL Schema Registry] API，請先閱讀[Schema Registry API開發人員指南](../api/getting-started.md)。 閱讀開發人員指南後，請依照教學課程中概述的步驟，使用Schema Registry API建立結構描述[&#128279;](../tutorials/create-schema-api.md)。
 
 ## 附錄
 
