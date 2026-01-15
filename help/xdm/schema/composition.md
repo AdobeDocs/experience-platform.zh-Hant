@@ -4,20 +4,20 @@ solution: Experience Platform
 title: 結構描述組合基本概念
 description: 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
+source-git-commit: 5b59d491834854829a89a240ccd612367cf558d4
 workflow-type: tm+mt
-source-wordcount: '4308'
+source-wordcount: '4291'
 ht-degree: 8%
 
 ---
 
 # 結構描述構成的基礎知識
 
-瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。 如需XDM的一般資訊以及在[!DNL Experience Platform]中的使用方式，請參閱[XDM系統概覽](../home.md)。
+瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。 如需XDM的一般資訊，以及在Experience Platform中的使用方式，請參閱[XDM系統概覽](../home.md)。
 
 ## 了解結構描述 {#understanding-schemas}
 
-結構是一組規則，可代表及驗證資料的結構和格式。 從高層面來說，結構提供了真實對象 (如人) 的抽象定義，並概述應包含在該對象的每個執行個體中的資料 (如名字、姓氏、生日等)。
+結構描述是一組規則，足以代表並驗證資料的結構和格式。 從高層面來說，結構提供了真實對象 (如人) 的抽象定義，並概述應包含在該對象的每個執行個體中的資料 (如名字、姓氏、生日等)。
 
 除了說明資料結構外，結構描述還會對資料套用限制和期望，以便在系統之間移動時進行驗證。 這些標準定義可讓資料以一致方式解譯，無論其來源為何，並移除跨應用程式翻譯的需求。
 
@@ -44,7 +44,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 * **記錄資料**：提供有關主旨屬性的資訊。 主旨可以是組織或個人。
 * **時間序列資料**：提供記錄主體直接或間接執行動作時的系統快照。
 
-所有XDM結構描述都說明可歸類為記錄或時間序列的資料。 結構描述的資料行為由結構描述的類別定義，該類別在首次建立時指派給結構描述。 本檔案稍後將詳細說明XDM類別。
+所有XDM結構描述都說明可歸類為記錄或時間序列的資料。 結構描述的資料行為由結構描述的類別定義，該類別在首次建立時指派給結構描述。
 
 記錄和時間序列結構描述都包含身分地圖(`xdm:identityMap`)。 此欄位包含主旨的身分表示，從標示為「身分」的欄位中擷取，如下節所述。
 
@@ -59,7 +59,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 為了協助進行此程式，結構描述中的關鍵欄位可以標示為身分。 資料擷取後，這些欄位中的資料會插入該個人的&quot;[!UICONTROL Identity Graph]&quot;。 然後[[!DNL Real-Time Customer Profile]](../../profile/home.md)和其他Experience Platform服務即可存取圖表資料，以提供每個個別客戶的拼接檢視。
 
-通常標示為&quot;[!UICONTROL Identity]&quot;的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID或其他唯一ID欄位。 請考量您組織特定的任何唯一識別碼，因為這些識別碼可能也是好的&quot;[!UICONTROL Identity]&quot;欄位。
+通常標示為&quot;[!UICONTROL Identity]&quot;的欄位包括：電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 請考量您組織特定的任何唯一識別碼，因為這些識別碼可能也是好的&quot;[!UICONTROL Identity]&quot;欄位。
 
 若要進一步瞭解身分資訊如何協助您為客戶傳遞數位體驗，請參閱[身分識別服務概覽](../../identity-service/home.md)。 請參閱資料模型最佳實務檔案，以取得[建立結構描述](./best-practices.md#data-validation-fields)時使用身分的相關提示。
 
@@ -78,7 +78,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 >
 >使用`identityMap`的結構描述可以做為關聯性中的來源結構描述，但不能做為參考結構描述。 這是因為所有參考結構描述都必須具備可見的身分識別，且可以在來源結構描述內的參考欄位中進行對應。 請參閱[關係](../tutorials/relationship-ui.md)的UI指南，以取得來源和參考結構描述需求的詳細資訊。
 
-不過，如果結構描述的身分識別數目不同，或是您從一起儲存身分識別的來源(例如[!DNL Airship]或Adobe Audience Manager)匯入資料，身分對應就相當實用。 此外，如果您使用[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)，則需要身分對應。
+不過，如果結構描述的身分識別數目不同，或是您從一起儲存身分識別的來源(例如[!DNL Airship]或Adobe Audience Manager)匯入資料，身分對應就相當實用。 此外，如果您使用[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)，則需要身分對應。
 
 簡單身分對應的範例看起來像這樣：
 
@@ -113,7 +113,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 >[!NOTE]
 >
->也可以為每個身分值提供布林值，表示值是否為主要身分(`primary`)。 您只需要設定要在[!DNL Real-Time Customer Profile]中使用的結構描述的主要身分。 如需詳細資訊，請參閱[聯合結構描述](#union)的相關章節。
+>也可以為每個身分值提供布林值，表示值是否為主要身分(`primary`)。 您只需要設定要在[!DNL Real-Time Customer Profile]中使用的結構描述的主要身分。
 
 ### 結構描述演化原則 {#evolution}
 
@@ -123,7 +123,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 >[!NOTE]
 >
->您只能在結構描述中引入重大變更，如果尚未使用它來將資料擷取到Experience Platform，並且尚未啟用用於即時客戶個人檔案。 不過，一旦結構描述已在[!DNL Experience Platform]中使用，它就必須遵守加法版本設定原則。
+>您只能在結構描述中引入重大變更，如果尚未使用它來將資料擷取到Experience Platform，並且尚未啟用用於即時客戶個人檔案。 不過，一旦結構描述在Experience Platform中使用，它就必須遵守附加版本設定原則。
 
 下表劃分在編輯方案、欄位群組和資料型別時支援的變更：
 
@@ -148,16 +148,16 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 將先前可選欄位設為必要欄位時，請記住下列事項：
 
 1. 如果您查詢歷史資料並將結果寫入新資料集，某些列會失敗，因為它們包含必要欄位的null值。
-1. 如果欄位參與了[即時客戶設定檔](../../profile/home.md)，而您在視需要設定它之前匯出資料，則某些設定檔可能會為空值。
+1. 如果欄位參與即時客戶設定檔，您在視需要設定之前匯出資料，則某些設定檔的欄位可能為空。
 1. 您可以使用Schema Registry API來檢視Experience Platform中所有XDM資源的時間戳記變更記錄，包括新的必要欄位。 如需詳細資訊，請參閱[稽核記錄端點](../api/audit-log.md)的指南。
 
 ### 結構描述和資料擷取
 
-若要將資料內嵌至Experience Platform，必須先建立資料集。 資料集是[[!DNL Catalog Service]](../../catalog/home.md)的資料轉換和追蹤的建置組塊，通常代表包含擷取資料的資料表或檔案。 所有資料集都以現有的XDM結構描述為基礎，這些結構描述會針對所擷取的資料應該包含的內容以及應該如何建構提供限制。 如需詳細資訊，請參閱[Adobe Experience Platform資料擷取](../../ingestion/home.md)的概觀。
+若要將資料內嵌至Experience Platform，必須先建立資料集。 資料集是[[!DNL Catalog Service]](../../catalog/home.md)的資料轉換和追蹤的建置組塊，通常代表包含擷取資料的資料表或檔案。 所有資料集都以現有的XDM結構描述為基礎，這些結構描述會針對所擷取的資料應該包含的內容以及應該如何建構提供限制。 如需詳細資訊，請參閱[Experience Platform資料擷取](../../ingestion/home.md)的概觀。
 
 ## 結構描述的建置區塊 {#schema-building-blocks}
 
-Experience Platform使用組合方法，將標準建置區塊組合以建立方案。 此方法可促進現有元件的重複使用性，並推動業界標準化，以支援[!DNL Experience Platform]中的廠商結構描述和元件。
+Experience Platform使用組合方法，將標準建置區塊組合以建立方案。 此方法可促進現有元件的重複使用性，並推動整個產業的標準化，以支援Experience Platform中的廠商方案和元件。
 
 使用下列公式來構成結構描述：
 
@@ -179,9 +179,9 @@ Experience Platform使用組合方法，將標準建置區塊組合以建立方�
 
 構成結構描述從指派類別開始。 類別會定義結構描述將包含之資料（記錄或時間序列）的行為方面。 除此之外，類別會說明基於該類別的所有結構描述所需包含的最小通用屬性數量，並提供合併多個相容資料集的方法。
 
-結構描述的類別會決定哪些欄位群組適合在該結構描述中使用。 將在[下一節](#field-group)中更詳細地討論這個問題。
+結構描述的類別會決定哪些欄位群組適合在該結構描述中使用。
 
-Adobe提供幾個標準（「核心」） XDM類別。 這些類別中的兩個[!DNL XDM Individual Profile]和[!DNL XDM ExperienceEvent]是幾乎所有下游Experience Platform處理序的必要專案。 除了這些核心類別以外，您也可以建立自己的自訂類別，以說明貴組織更具體的使用案例。 當沒有Adobe定義的核心類別可用於描述獨特使用案例時，由組織定義自訂類別。
+Adobe提供幾個標準（「核心」） XDM類別。 這些類別中的兩個[!DNL XDM Individual Profile]和[!DNL XDM ExperienceEvent]是幾乎所有下游Experience Platform處理序的必要專案。 除了這些核心類別之外，您也可以建立自己的自訂類別，以說明貴組織更具體的使用案例。 當沒有Adobe定義的核心類別可用於描述獨特使用案例時，由組織定義自訂類別。
 
 下列熒幕擷圖示範類別在Experience Platform UI中的呈現方式。 由於顯示的範例結構描述不包含任何欄位群組，因此所有顯示的欄位都由結構描述的類別([!UICONTROL XDM Individual Profile])提供。
 
@@ -211,9 +211,9 @@ Experience Platform包含許多標準的Adobe欄位群組，同時也允許廠�
 
 >[!NOTE]
 >
->強烈建議您在結構描述中儘可能使用標準欄位群組，因為Experience Platform服務會隱含瞭解這些欄位，且在[!DNL Experience Platform]元件之間使用時可提供較一致的一致性。
+>強烈建議您儘可能在結構描述中使用標準欄位群組，因為Experience Platform服務會隱含瞭解這些欄位，且在Experience Platform元件之間使用時，可提供較一致的一致性。
 >
->標準元件（例如「名字」和「電子郵件地址」）提供的欄位包含基本純量欄位型別以外的新增內涵。 它們會告訴[!DNL Experience Platform]，共用相同資料型別的任何欄位將會以相同的方式運作。 無論資料來自何處，或資料正由哪個[!DNL Experience Platform]服務使用，此行為皆可信賴為一致。
+>標準元件（例如「名字」和「電子郵件地址」）提供的欄位包含基本純量欄位型別以外的新增內涵。 他們告知Experience Platform，任何共用相同資料型別的欄位都將以相同的方式運作。 無論資料來自何處，或資料用於何處Experience Platform服務，此行為可信賴為一致。
 
 請記住，結構描述是由「零個或多個」欄位群組組成，因此這表示您可以撰寫有效的結構描述而不需使用任何欄位群組。
 
@@ -225,7 +225,7 @@ Experience Platform包含許多標準的Adobe欄位群組，同時也允許廠�
 
 >[!NOTE]
 >
-> 標準XDM欄位群組一律在發展，而且某些欄位群組已被取代。 如需最新更新的已棄用欄位群組清單，請參閱官方XDM存放庫中的[已棄用欄位群組區段](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated)。
+> 標準XDM欄位群組一律在發展，而且某些欄位群組已被取代。 如需已棄用欄位群組的最新清單，請參閱官方XDM存放庫中的[已棄用欄位群組區段](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated)。
 
 ### 資料類型 {#data-type}
 
@@ -245,11 +245,11 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 
 >[!NOTE]
 >
-> 標準XDM資料型別一律在發展，部分資料型別已被取代。 如需最新更新的已棄用資料型別清單，請參閱官方XDM存放庫中的[已棄用資料型別區段](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated)。
+> 標準XDM資料型別一律在發展，部分資料型別已被取代。 如需已棄用資料型別的最新清單，請參閱官方XDM存放庫中的[已棄用資料型別區段](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated)。
 
 ### 欄位 {#field}
 
-欄位是結構描述中最基本的建置區塊。 欄位透過定義特定資料型別，提供其可包含之資料型別的相關限制。 這些基本資料型別會定義單一欄位，而先前提到的[資料型別](#data-type)可讓您定義多個子欄位，並在各種結構描述中重複使用相同的多欄位結構。 因此，除了將欄位的「資料型別」定義為登入中定義的其中一種資料型別外，Experience Platform還支援基本純量型別，例如：
+欄位是結構描述中最基本的建置區塊。 欄位透過定義特定資料型別，提供其可包含之資料型別的相關限制。 這些基本資料型別會定義單一欄位，而前述資料型別可讓您定義多個子欄位，並在各種結構描述中重複使用相同的多欄位結構。 因此，除了將欄位的「資料型別」定義為登入中定義的其中一種資料型別外，Experience Platform還支援基本純量型別，例如：
 
 * 字串
 * 整數
@@ -278,7 +278,7 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 
 ## 組合範例 {#composition-example}
 
-結構描述是使用組合模型建置，並代表要擷取到[!DNL Experience Platform]中的資料格式和結構。 如前所述，這些結構描述由一個類別和零個或多個與該類別相容的欄位群組組成。
+結構描述是使用組合模型來建立，並代表要擷取到Experience Platform中的資料格式和結構。 如前所述，這些結構描述由一個類別和零個或多個與該類別相容的欄位群組組成。
 
 例如，描述在零售商店進行的購買的結構描述可能稱為&quot;[!UICONTROL Store Transactions]&quot;。 結構描述實作結合標準[!DNL XDM ExperienceEvent]欄位群組和使用者定義的[!UICONTROL Commerce]欄位群組的[!UICONTROL Product Info]類別。
 
@@ -294,7 +294,7 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 
 ![聯合結構描述流程圖，其中描繪構成這些欄位的欄位。](../images/schema-composition/union.png)
 
-透過啟用結構描述以搭配[!DNL Real-Time Customer Profile]使用，它就包含在該類別型別的聯合中。 [!DNL Profile]針對客戶在與[!DNL Experience Platform]整合的任何系統中發生的每個事件，提供健全且集中的客戶屬性設定檔和時間戳記帳戶。 [!DNL Profile]使用聯合檢視來表示此資料，並提供每個個別客戶的整體檢視。
+透過啟用結構描述以搭配[!DNL Real-Time Customer Profile]使用，它就包含在該類別型別的聯合中。 [!DNL Profile]提供健全且集中的客戶屬性設定檔，以及客戶在任何與Experience Platform整合的系統中所發生事件的時間戳記帳戶。 [!DNL Profile]使用聯合檢視來表示此資料，並提供每個個別客戶的整體檢視。
 
 如需使用[!DNL Profile]的詳細資訊，請參閱[即時客戶個人檔案總覽](../../profile/home.md)。
 
@@ -318,11 +318,11 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-[!DNL Schema Registry]是用來存取Adobe Experience Platform中的[!DNL Schema Library]，並提供使用者介面和RESTful API，以便存取所有可用的程式庫資源。 [!DNL Schema Library]包含由Adobe定義的產業資源、由Experience Platform合作夥伴定義的廠商資源，以及由您組織的成員組成的類別、欄位群組、資料型別和結構描述。
+[!DNL Schema Registry]是用來存取Experience Platform中的[!DNL Schema Library]，並提供使用者介面和RESTful API，以便存取所有可用的程式庫資源。 [!DNL Schema Library]包含由Adobe定義的產業資源、由Experience Platform合作夥伴定義的廠商資源，以及由您組織的成員組成的類別、欄位群組、資料型別和結構描述。
 
 若要使用UI開始撰寫結構描述，請連同[結構描述編輯器教學課程](../tutorials/create-schema-ui.md)一起建立本檔案中提及的「忠誠會員」結構描述。
 
-若要開始使用[!DNL Schema Registry] API，請先閱讀[Schema Registry API開發人員指南](../api/getting-started.md)。 閱讀開發人員指南後，請依照教學課程中概述的步驟，使用Schema Registry API建立結構描述[&#128279;](../tutorials/create-schema-api.md)。
+若要開始使用[!DNL Schema Registry] API，請先閱讀[Schema Registry API開發人員指南](../api/getting-started.md)。 閱讀開發人員指南後，請依照教學課程中概述的步驟，使用Schema Registry API建立結構描述[](../tutorials/create-schema-api.md)。
 
 ## 附錄
 
@@ -364,7 +364,7 @@ Experience Platform在[!DNL Schema Registry]中提供許多通用資料型別，
 **缺點**：
 
 * 欄位會變得更巢狀。
-* 使用[Adobe Experience Platform查詢服務](../../query-service/home.md)時，必須為巢狀物件中的查詢欄位提供較長的參考字串。
+* 使用[Experience Platform查詢服務](../../query-service/home.md)時，必須為巢狀物件中的查詢欄位提供較長的參考字串。
 
 #### 自由格式欄位
 
