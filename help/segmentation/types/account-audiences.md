@@ -1,12 +1,12 @@
 ---
 title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1461'
 ht-degree: 21%
 
 ---
@@ -60,10 +60,6 @@ ht-degree: 21%
 「區段產生器」隨即顯示。 帳戶屬性和對象會顯示在左側導覽列上。 在「[!UICONTROL Attributes]」標籤下方，您可以同時新增Experience Platform建立和自訂屬性。
 
 ![會顯示區段產生器。 請注意，只會顯示屬性和對象。](../images/types/account/segment-builder.png)
-
-建立帳戶對象時，請注意，事件列在&#x200B;**[!UICONTROL People]**&#x200B;下方，而非其本身的標籤，因為這些屬性與人員相關聯。
-
-![在[!UICONTROL People]資料夾中尋找事件的位置會反白顯示。](../images/types/account/attributes.png)
 
 在「[!UICONTROL Audiences]」標籤下方，您可以新增先前建立的使用者型對象，以便在建立您自己的帳戶對象時由建置。
 
@@ -208,8 +204,8 @@ ht-degree: 21%
    - 跨實體是指您在對象內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。
 - 單一欄位可以檢查的值數量上限為 **50**。
    - 例如，如果您有「城市名稱」欄位，您可以根據50個城市名稱檢查該值。
-- 帳戶對象&#x200B;**不能**&#x200B;使用循序事件。
 - 帳戶對象&#x200B;**無法**&#x200B;使用地圖。
+- 帳戶對象&#x200B;**無法**&#x200B;使用事件。
 - 巢狀陣列深度上限為 **5**。
 - 巢狀物件的數量上限為&#x200B;**10**。
 
