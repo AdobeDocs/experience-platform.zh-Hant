@@ -3,9 +3,9 @@ keywords: 廣告；bing；
 title: Microsoft Bing連線
 description: 透過Microsoft Bing連線目的地，您可以在整個Microsoft Advertising網路（包括顯示廣告、搜尋和原生）中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '897'
 ht-degree: 5%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 5%
 
 使用[!DNL Microsoft Bing]目的地將設定檔資料傳送至整個[!DNL Microsoft Advertising Network]，包括[!DNL Display Advertising]、[!DNL Search]和[!DNL Native]。
 
-[!DNL Microsoft Bing]目的地會在Microsoft中建立&#x200B;*[!DNL Custom Audiences]*。 如[!DNL Microsoft Search Network]Microsoft Advertising檔案[!DNL Audience Network]所列，這些在[!DNL Native]和[!DNL Display] ([!DNL Programmatic] /[&#x200B; /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))中均可用。
+[!DNL Microsoft Bing]目的地會在Microsoft中建立&#x200B;*[!DNL Custom Audiences]*。 如[!DNL Microsoft Search Network]Microsoft Advertising檔案[!DNL Audience Network]所列，這些在[!DNL Native]和[!DNL Display] ([!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))中均可用。
 
 若要將設定檔資料傳送至[!DNL Microsoft Bing]，您必須先連線至目的地。
 
@@ -80,7 +80,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=zh-Hant)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步會移轉到Experience Platform。
 
 設定目的地時，您必須提供下列資訊：
 
@@ -114,6 +114,11 @@ ht-degree: 5%
 >id="platform_destinations_bing_mapping_id"
 >title="對應 ID"
 >abstract="輸入要對應選取區段的數值 Bing 對象 ID。如果提供的[!UICONTROL Mapping ID]未對應至Bing目的地中的受眾ID，您不會在Bing帳戶中看到預期的受眾資料。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_bing"
+>title="預先設定的對應集"
+>abstract="我們已為您預先設定這兩個對應集。 當您啟用資料至Microsoft Bing時，符合啟用對象資格的設定檔必須至少有一個與其設定檔相關聯的ECID身分識別，才能成功匯出至目的地。"
 
 >[!IMPORTANT]
 > 

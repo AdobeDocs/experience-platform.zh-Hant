@@ -3,9 +3,9 @@ title: 交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -89,7 +89,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 ### 填寫目的地詳細資料 {#fill-in-details}
 
-您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
+您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Account Type]**：請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;選項。
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
@@ -101,6 +101,11 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 連線到目的地時，設定資料治理原則是完全選用的。 如需詳細資訊，請檢閱Experience Platform [資料控管概觀](/help/data-governance/policies/overview.md)。
 
 ## 啟動此目標的對象 {#activate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttdg"
+>title="預先設定的對應集"
+>abstract="我們已為您預先設定這四個對應集。 當您向Trade Desk啟用資料時，符合啟用對象資格的設定檔不一定要在設定檔中出現全部四個身分，因為此目的地將可搭配此處顯示的任何目標身分使用。"
 
 >[!IMPORTANT]
 > 
@@ -145,7 +150,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 1. 首先，選取「**[!UICONTROL Data]**」標籤，並檢閱「**[!UICONTROL First-Party]**」區段。
 2. 向下捲動頁面，在&#x200B;**[!UICONTROL Imported Data]**&#x200B;下方會找到&#x200B;**[!UICONTROL Adobe 1PD Tile]**。
-3. 按一下&#x200B;**[!UICONTROL Adobe 1PD]**&#x200B;圖磚，它會列出您的廣告商在[!DNL Trade Desk]目的地啟用的所有對象。 您也可以使用搜尋功能。
+3. 按一下**[!UICONTROL Adobe 1PD]**圖磚，它會列出您的廣告商在[!DNL Trade Desk]目的地啟用的所有對象。 您也可以使用搜尋功能。
 4. 來自Experience Platform的區段ID #將顯示為[!DNL Trade Desk] UI中的區段名稱。
 
 ## 資料使用與控管 {#data-usage-governance}
