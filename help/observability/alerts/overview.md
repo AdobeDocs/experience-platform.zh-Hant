@@ -4,9 +4,9 @@ title: 警報概觀
 description: 了解 Adobe Experience Platform 中的警告，包括定義警告規則的結構。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '791'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Experience Platform警報可以只傳送一次，也可以在預先定義的間�
 | --- | --- |
 | 不一定表示有問題。 | 表示可能不想要的狀態。 |
 | 不重複。 | 如果異常狀況持續存在，可以重複此步驟。 |
-| 例如：<ul><li>資料擷取已成功完成。</li><li>查詢執行已完成。</li><li>已刪除資料。</li></ul> | 例如：<ul><li>擷取期間超過服務等級協定(SLA)。</li><li>在過去24小時內未發生每日內嵌。</li><li>串流處理器的錯誤率高於設定的臨界值。</li><li>設定檔總數超過軟體權利檔案。</li></ul> |
+| 例如：<ul><li>資料擷取已成功完成。</li><li>查詢執行已完成。</li><li>已刪除資料。</li></ul> | 例如：<ul><li>擷取期間超過服務等級協定(SLA)。</li><li>在過去24小時內未發生每日內嵌。</li><li>串流處理器的錯誤率高於設定的臨界值。</li></ul> |
 
 {style="table-layout:auto"}
 
