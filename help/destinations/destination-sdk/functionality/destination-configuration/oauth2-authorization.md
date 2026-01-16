@@ -2,9 +2,9 @@
 description: 本頁說明Destination SDK支援的各種OAuth 2授權流程，並提供為目的地設定OAuth 2授權的指示。
 title: OAuth 2授權
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
+source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2273'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Destination SDK支援多種前往目的地的授權方法。 其中一個選項�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -109,7 +109,10 @@ Adobe為OAuth 2授權設計的系統：
       "refreshTokenUrl": "https://api.moviestar.com/OAuth/refresh_token",
       "clientId": "Experience-Platform-client-id",
       "clientSecret": "Experience-Platform-client-secret",
-      "scope": ["read", "write"]
+      "scope": ["read", "write"],
+      "options": {
+          "useBasicAuth": true 
+      }
     }
   ]
 //...
@@ -126,6 +129,7 @@ Adobe為OAuth 2授權設計的系統：
 | `clientId` | 字串 | 系統指派給Adobe Experience Platform的使用者端ID。 |
 | `clientSecret` | 字串 | 您的系統指派給Adobe Experience Platform的使用者端密碼。 |
 | `scope` | 字串清單 | *選擇性*。 設定存取Token可讓Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
+| `options.useBasicAuth` | 布林值 | *選擇性*。 一個布林值，可控制當交換存取權杖的授權碼時，如何將使用者端憑證（使用者端ID和使用者端密碼）傳送到OAuth提供者的權杖端點。 <ul><li>如果設定為`false`或未定義，則認證會以POST要求內文中的`client_id`和`client_secret`引數傳送（預設行為）。</li><li>如果此引數設定為`true`，則會使用基本驗證格式以HTTP `Authorization`標頭傳送認證： `Authorization: Basic base64(clientID:clientSecret)`。</li></ul> 當您的OAuth提供者要求在`useBasicAuth`標頭而非要求內文中傳送使用者端認證時，請將`true`設為`Authorization`。 |
 
 {style="table-layout:auto"}
 
