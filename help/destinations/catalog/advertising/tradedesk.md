@@ -3,9 +3,9 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 4472548fc5b5181cdf8ef8b1666d6e1fafbce588
+source-git-commit: 036d784014e7cdb101f39f63f9d6e8bac01fdc97
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1136'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
@@ -129,6 +129,11 @@ ht-degree: 2%
 對應對象時，Adobe建議您使用Experience Platform對象名稱或較短的形式，以方便使用。 不過，您目的地中的對象ID或名稱不需要符合Experience Platform帳戶中的對象ID。 您在對應欄位中插入的任何值都會反映在目的地中。
 
 ### 強制對應 {#mandatory-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttd"
+>title="預先設定的對應集"
+>abstract="我們已為您預先設定這四個對應集。 當您向Trade Desk啟用資料時，符合啟用對象資格的設定檔不一定要在設定檔中出現全部四個身分，因為此目的地將可搭配此處顯示的任何目標身分使用。"
 
 在[支援的身分](#supported-identities)區段中描述的所有目標身分，都必須在對象啟用工作流程的對應步驟中進行對應。 其中包括：
 
