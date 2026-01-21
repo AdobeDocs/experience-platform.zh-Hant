@@ -2,10 +2,10 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
+source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 24%
+source-wordcount: '1395'
+ht-degree: 20%
 
 ---
 
@@ -54,11 +54,24 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 
 [!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Experience Platform 的資料。您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 
+**全新或已更新的目標**
+
+| 目標 | 說明 |
+| --- | --- |
+| Kevel目的地聯結器現已可用 | [[!DNL Kevel]](https://www.kevel.com/)提供啟用AI的技術和專家指引，協助創新的商務領導在零售媒體中啟動、擴展和成功。 [!DNL Kevel]的Retail Media Cloud功能可針對站上和站外廣告提供針對性、可歸因、可自訂的廣告格式。 |
+| 索引Exchange目的地聯結器現已可用 | [!DNL Index]是全球廣告供應端平台，可協助媒體擁有者將其內容在各熒幕上的價值最大化。 憑藉超過20年的產業領導力，[!DNL Index]將全球各大品牌與頂級體驗製作者連結在一起，以提供高品質的消費者體驗。 |
+| 硬碟連線的區域端點支援 | [支援的所有](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)區域特定端點[!DNL Braze]現在都可在目的地組態流程期間選擇。 請詢問您的[!DNL Braze]代表您應該使用哪個端點執行個體。 |
+| Liveramp入門的每週和每月排程支援 | 您現在可以設定Liveramp入門目的地的每週和每月匯出排程。 |
+| Amazon S3目的地的AES256加密支援 | 您現在可以為Amazon S3匯出設定AES256加密。 |
+| 增強交易台和Microsoft Bing目的地的啟用體驗 | Trade Desk和Microsoft Bing目的地現在包含預先定義的強制對應，以便提供最佳化的啟用體驗。 |
+
 **全新或更新版功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 更新Adobe Target目的地的護欄限制 | 可對應至單一Adobe Target目的地的受眾數量上限，已經從50增加到250。 這可讓Adobe Target符合其他目的地的標準對象限制，為對象啟用工作流程提供更大的彈性。 客戶現在可以對Adobe Target目的地啟用更多對象，而無需建立多個資料流。 |
+| 更新Adobe Target目的地的護欄限制 | 可對應至單一Adobe Target目的地的受眾數量上限，已經從50增加到250。 這可讓Adobe Target符合其他目的地的標準對象限制，為對象啟用工作流程提供更大的彈性。 您現在可以對Adobe Target目的地啟用更多對象，而不需要建立多個資料流。 |
+| [編輯目的地](/help/destinations/ui/edit-destination.md)和[編輯行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)一般可用性 | 編輯目的地和行銷動作的選項現在可供所有使用者使用。 |
+| 在對應步驟中切換欄位顯示名稱 | 將結構描述欄位對應到目的地時，您現在可以在顯示完整XDM欄位名稱與僅顯示顯示名稱之間切換。 |
 
 {style="table-layout:auto"}
 
