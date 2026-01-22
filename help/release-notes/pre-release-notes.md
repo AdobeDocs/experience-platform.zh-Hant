@@ -2,9 +2,9 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
+source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1389'
 ht-degree: 20%
 
 ---
@@ -86,7 +86,7 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 | 功能 | 說明 |
 | --- | --- |
 | 串流容量強制執行 | Experience Platform現在為即時客戶個人資料和身分服務強制執行串流輸送量容量。 當客戶超過其合約的串流容量時，資料將會以先進先出方式排入佇列及處理。 這可確保可預測的系統效能，並防止容量違規影響資料擷取品質。 重要注意事項：超過容量時，資料湖上將無法使用串流更新插入，此強制不適用於擁有Adobe Journey Optimizer授權的客戶，而且一旦容量可用，佇列的資料將會依序處理。 |
-| 不再使用Real-Time CDP Prime的API存取 | 所有Real-Time CDP Prime客戶現在都不再使用體驗事件的API存取。 此變更會影響透過API直接查詢體驗事件的能力。 Real-Time CDP Ultimate客戶可透過正式的例外程式來要求例外狀況，以便視使用案例的需求啟用體驗事件API存取。 此淘汰專案有助於最佳化系統效能，並符合資料存取模式的最佳實務。 |
+| 不再使用Real-Time CDP Prime的API存取 | 所有Real-Time CDP Prime客戶現在都不再使用體驗事件的API存取。 此變更會影響透過API直接查詢體驗事件的能力。 Real-Time CDP Ultimate客戶可透過正式的例外程式來要求例外狀況，以便視使用案例的需求啟用體驗事件API存取。 此項淘汰有助於Real-Time CDP與授權功能保持一致。 |
 | 監視資料流執行 | 您現在可以在Profile中監視資料流執行的進度和整備。 |
 
 {style="table-layout:auto"}

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
 workflow-type: tm+mt
-source-wordcount: '5161'
+source-wordcount: '5175'
 ht-degree: 12%
 
 ---
@@ -21,6 +21,31 @@ ht-degree: 12%
 ![會顯示區段產生器UI。](../images/ui/segment-builder/segment-builder.png)
 
 ## 分段定義建置區塊 {#building-blocks}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="邏輯複雜性"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="事件序列限制"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="查詢效率警報"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="計數篩選器警告"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="巢狀資料警告"
+>abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -115,7 +140,7 @@ ht-degree: 12%
 
 報告套裝對應後，您即可在設定檔相關工作流程和區段中使用這些新對應的欄位。
 
-| 情境 | 聯合結構描述體驗 | 分段通用變數 | 分段對應變數 |
+| 藍本 | 聯合結構描述體驗 | 分段通用變數 | 分段對應變數 |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | 單一報告套裝 | 泛型變數中包含易記名稱描述項。 <br><br>**範例：**&#x200B;頁面名稱(eVar2) | <ul><li>泛型變數中包含的易記名稱描述項</li><li>查詢使用來自特定資料集的資料，因為這是唯一使用資料</li></ul> | 查詢可以使用Adobe Analytics資料，也可能使用其他來源。 |
 | 多報表套裝 | 泛型變數未包含任何易記名稱描述元。 <br><br>**範例：** eVar2 | <ul><li>任何具有多個描述元的欄位都會顯示為一般。 這表示UI中未出現任何好記的名稱。</li><li>查詢可以使用任何包含eVar的資料集中的資料，這可能會導致混合或不正確的結果。</li></ul> | 查詢會正確使用來自多個資料集的合併結果。 |
@@ -274,7 +299,7 @@ ht-degree: 12%
 
 | 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
 | --------------- | ----------- | ------------------- | ------- |
-| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;**&#x200B;**。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -284,7 +309,7 @@ ht-degree: 12%
 | 期間 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在選取的月份或年度內。 如果選取月份，您必須同時選擇屬性或事件發生所在的月份和年份。  如果選取年份，您只需要選擇屬性或事件發生的年份。 如果您選取月份，也可以啟用[!UICONTROL Ignore year]核取方塊。 | 是 | ![正在使用的「During」時間限制範例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
 | 以內(+/-) | 要比較的屬性或事件必須&#x200B;**發生在選取日期後的數天、數週、數月或數年內。**&#x200B;此時間週期為兩個日期的&#x200B;**包含**。 選取的日期可以是今天、昨天或您選擇的其他自訂日期。 | 是 | ![正在使用的「Within」時間限制範例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
 | 早於 | 要比較的屬性或事件&#x200B;**必須**&#x200B;發生在選取的日期之前。 選取的日期可以是您選擇的自訂日期，或是天、周、月或年之間的選擇。 | 是 | ![正在使用的「之前」時間限制範例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| 晚於 | 比較的屬性或事件&#x200B;**必須**&#x200B;發生在選取的日期之後。 選取的日期可以是您選擇的自訂日期，或是天、周、月或年之間的選擇。 | 是 | ![正在使用的「After」時間限制範例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| 之後 | 比較的屬性或事件&#x200B;**必須**&#x200B;發生在選取的日期之後。 選取的日期可以是您選擇的自訂日期，或是天、周、月或年之間的選擇。 | 是 | ![正在使用的「After」時間限制範例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
 | 滾動範圍 | 要比較的屬性或事件必須發生在兩個相對日期之間。 日期能以秒、分鐘、小時、天、周、月或年表示。 | 無 | ![正在使用的「滾動範圍」時間限制範例。](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
 | 下一 | 要比較的屬性或事件必須在下一個選取的時段內發生。 所選的時段包括分鐘、小時、天、周、月和年。 | 無 | ![正在使用的「In next」時間限制範例。](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | 存在 | 屬性已存在。 | 無 | ![正在使用的「存在」時間限制範例。](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
@@ -324,7 +349,7 @@ ht-degree: 12%
 
 | 時間限制 | 說明 |
 | --------------- | ----------- |
-| 晚於 | 後一個事件&#x200B;**必須至少**&#x200B;發生在前一個事件之後。 |
+| 之後 | 後一個事件&#x200B;**必須至少**&#x200B;發生在前一個事件之後。 |
 | 範圍 | 兩個事件&#x200B;**必須**&#x200B;發生在時間限制內所列的時段內。 |
 
 >[!NOTE]
@@ -386,7 +411,7 @@ ht-degree: 12%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估值"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
