@@ -4,9 +4,9 @@ description: 瞭解如何使用UI將資料從Talon.One串流到Adobe Experience 
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
@@ -34,19 +34,19 @@ ht-degree: 2%
 
 ## 瀏覽來源目錄
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 在&#x200B;*[!UICONTROL 類別]*&#x200B;面板中選取適當的類別。 或者，使用搜尋列導覽至您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取&#x200B;*[!UICONTROL Sources]*&#x200B;工作區。 在&#x200B;*[!UICONTROL Categories]*&#x200B;面板中選取適當的類別。 或者，使用搜尋列導覽至您要使用的特定來源。
 
-若要從[!DNL Talon.One]串流資料，請選取&#x200B;**[!UICONTROL 忠誠度]**&#x200B;下的&#x200B;*[!UICONTROL Talon.One串流事件]*&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 新增資料]**。
+若要從[!DNL Talon.One]串流資料，請選取&#x200B;**[!UICONTROL Talon.One Streaming Events]**&#x200B;下的&#x200B;*[!UICONTROL Loyalty]*&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL Add data]**。
 
 >[!TIP]
 >
->當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
+>當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL Set up]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL Add data]**。
 
 ![在UI中選取Talon.One串流事件卡的來源目錄。](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## 選取資料
 
-接下來，使用&#x200B;*[!UICONTROL 選取資料]*&#x200B;介面上傳範例JSON檔案以定義您的來源結構描述。 在此步驟中，您可以使用預覽介面來檢視裝載的檔案結構。 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
+接下來，使用&#x200B;*[!UICONTROL Select data]*&#x200B;介面上傳範例JSON檔案來定義您的來源結構描述。 在此步驟中，您可以使用預覽介面來檢視裝載的檔案結構。 完成後，選取&#x200B;**[!UICONTROL Next]**。
 
 ![來源工作流程的選取資料步驟](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
@@ -66,10 +66,10 @@ ht-degree: 2%
 
 +++選取以啟用設定檔擷取、錯誤診斷及部分擷取的步驟。
 
-如果您的資料集已啟用即時客戶個人檔案，那麼在此步驟中，您可以切換&#x200B;**[!UICONTROL 個人檔案資料集]**&#x200B;以啟用您的資料以進行個人檔案擷取。 您也可以使用此步驟來啟用&#x200B;**[!UICONTROL 錯誤診斷]**&#x200B;和&#x200B;**[!UICONTROL 部分擷取]**。
+如果您的資料集已啟用即時客戶個人檔案，那麼在此步驟中，您可以切換&#x200B;**[!UICONTROL Profile dataset]**&#x200B;以啟用您的資料以進行個人檔案擷取。 您也可以使用此步驟來啟用&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;和&#x200B;**[!UICONTROL Partial ingestion]**。
 
-* **[!UICONTROL 錯誤診斷]**：選取&#x200B;**[!UICONTROL 錯誤診斷]**&#x200B;以指示來源產生錯誤診斷，以便您稍後在監視資料集活動和資料流狀態時參考。
-* **[!UICONTROL 部分擷取]**：部分批次擷取可擷取含有錯誤的資料，最多可達到特定可設定的臨界值。 此功能可讓您將所有精確資料成功擷取到Experience Platform，同時所有不正確的資料會個別批次處理，並提供無效原因的資訊。
+* **[!UICONTROL Error diagnostics]**：選取&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;以指示來源產生錯誤診斷，以便您稍後在監視資料集活動和資料流狀態時參考。
+* **[!UICONTROL Partial ingestion]**：部分批次擷取是擷取包含錯誤的資料的能力，最多可達特定可設定的臨界值。 此功能可讓您將所有精確資料成功擷取到Experience Platform，同時所有不正確的資料會個別批次處理，並提供無效原因的資訊。
 
 +++
 
@@ -99,14 +99,14 @@ ht-degree: 2%
 
 ![Talon.One資料流的對應介面。](../../../../images/tutorials/create/talon-one-streaming/mapping.png)
 
-## 審閱
+## 檢閱
 
-*[!UICONTROL 檢閱]*&#x200B;步驟隨即顯示，可讓您在建立資料流之前先檢閱資料流的詳細資訊。 詳細資料會分組到以下類別中：
+*[!UICONTROL Review]*&#x200B;步驟隨即顯示，可讓您在建立資料流之前先檢閱其詳細資訊。 詳細資料會分組到以下類別中：
 
-* **[!UICONTROL 連線]**：顯示帳戶名稱、來源平台和來源名稱。
-* **[!UICONTROL 指派資料集和對應欄位]**：顯示目標資料集和資料集所遵守的結構描述。
+* **[!UICONTROL Connection]**：顯示帳戶名稱、來源平台和來源名稱。
+* **[!UICONTROL Assign dataset and map fields]**：顯示目標資料集以及資料集所遵守的結構描述。
 
-確認詳細資料正確之後，請選取&#x200B;**[!UICONTROL 完成]**。
+確認詳細資料正確之後，請選取&#x200B;**[!UICONTROL Finish]**。
 
 ![來源工作流程中的檢閱步驟。](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
@@ -118,4 +118,8 @@ ht-degree: 2%
 
 ## 監視資料流
 
-建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需有關如何監視資料流的詳細資訊，請參閱有關UI[中](../../monitor-streaming.md)監視帳戶和資料流的教學課程
+建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需有關如何監視資料流的詳細資訊，請參閱有關UI[中](../../monitor-streaming.md)監視帳戶和資料流的教學課程。
+
+## 已知限制
+
+為確保資料擷取的準確性，您應該從[!DNL Talon.One]的忠誠度點變更、層級升級和層級降級通知傳送資料至聯結器。 由於熟客點數變更通知不包含層級資訊，因此您必須將這些通知傳送至個別的設定檔資料集。 如果您在相同的資料集中結合點變更資料與層級升級或降級通知，則層級資訊將會遺失或以null值覆寫。 層級升級和降級通知可以使用相同的資料集，因為兩者都包含層級詳細資料。 內嵌後，設定檔合併規則將自動更新合併的設定檔，以反映最新的點和層資訊。

@@ -4,9 +4,9 @@ description: 瞭解如何使用UI將批次資料從Talon.One擷取到Adobe Exper
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1420'
 ht-degree: 1%
 
 ---
@@ -34,29 +34,29 @@ ht-degree: 1%
 
 ## 瀏覽來源目錄
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 在&#x200B;*[!UICONTROL 類別]*&#x200B;面板中選取適當的類別。 或者，使用搜尋列導覽至您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取&#x200B;*[!UICONTROL Sources]*&#x200B;工作區。 在&#x200B;*[!UICONTROL Categories]*&#x200B;面板中選取適當的類別。 或者，使用搜尋列導覽至您要使用的特定來源。
 
-若要從[!DNL Talon.One]擷取資料，請選取&#x200B;**[!UICONTROL 忠誠度]**&#x200B;下的&#x200B;*[!UICONTROL Talon.One批次Source聯結器]*&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 新增資料]**。
+若要從[!DNL Talon.One]擷取資料，請在&#x200B;**[!UICONTROL Talon.One Batch Source Connector]**&#x200B;下選取&#x200B;*[!UICONTROL Loyalty]*&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL Add data]**。
 
 >[!TIP]
 >
->當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
+>當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL Set up]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL Add data]**。
 
 ![已選取Talon.One批次來源聯結器卡的來源目錄。](../../../../images/tutorials/create/talon-one-batch/catalog.png)
 
 ### 建立新帳戶
 
-若要為您的[!DNL Talon.One]來源建立新帳戶，請選取&#x200B;**[!UICONTROL 新增帳戶]**，並為您的帳戶提供名稱和選擇性說明。 接下來，提供您的[!DNL Talon.One]網域和您的[!UICONTROL Talon.One管理API金鑰]。 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**，並等待一段時間讓您的連線建立。
+若要為您的[!DNL Talon.One]來源建立新帳戶，請選取&#x200B;**[!UICONTROL New account]**，並為您的帳戶提供名稱和選擇性說明。 接下來，提供您的[!DNL Talon.One]網域和您的[!UICONTROL Talon.One Management API Key]。 完成後，請選取「**[!UICONTROL Connect to source]**」，讓您的連線建立一段時間。
 
 ![來源工作流程的建立新帳戶步驟。](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### 使用現有帳戶
 
-若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後從帳戶介面選取您要使用的[!DNL Talon.One]帳戶。
+若要使用現有帳戶，請選取&#x200B;**[!UICONTROL Existing account]**，然後從帳戶介面選取您要使用的[!DNL Talon.One]帳戶。
 
 ## 選取資料
 
-驗證之後，請提供您&#x200B;**applicationId**&#x200B;和&#x200B;**sessionType**&#x200B;的值。 在此步驟中，您可以使用預覽功能來檢查資料的結構。 完成後，選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續。
+驗證之後，請提供您&#x200B;**applicationId**&#x200B;和&#x200B;**sessionType**&#x200B;的值。 在此步驟中，您可以使用預覽功能來檢查資料的結構。 完成後，選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
 ![來源工作流程的選取資料和預覽步驟。](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
@@ -76,10 +76,10 @@ ht-degree: 1%
 
 +++選取以啟用設定檔擷取、錯誤診斷及部分擷取的步驟。
 
-如果您的資料集已啟用即時客戶個人檔案，那麼在此步驟中，您可以切換&#x200B;**[!UICONTROL 個人檔案資料集]**&#x200B;以啟用您的資料以進行個人檔案擷取。 您也可以使用此步驟來啟用&#x200B;**[!UICONTROL 錯誤診斷]**&#x200B;和&#x200B;**[!UICONTROL 部分擷取]**。
+如果您的資料集已啟用即時客戶個人檔案，那麼在此步驟中，您可以切換&#x200B;**[!UICONTROL Profile dataset]**&#x200B;以啟用您的資料以進行個人檔案擷取。 您也可以使用此步驟來啟用&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;和&#x200B;**[!UICONTROL Partial ingestion]**。
 
-* **[!UICONTROL 錯誤診斷]**：選取&#x200B;**[!UICONTROL 錯誤診斷]**&#x200B;以指示來源產生錯誤診斷，以便您稍後在監視資料集活動和資料流狀態時參考。
-* **[!UICONTROL 部分擷取]**：部分批次擷取可擷取含有錯誤的資料，最多可達到特定可設定的臨界值。 此功能可讓您將所有精確資料成功擷取到Experience Platform，同時所有不正確的資料會個別批次處理，並提供無效原因的資訊。
+* **[!UICONTROL Error diagnostics]**：選取&#x200B;**[!UICONTROL Error diagnostics]**&#x200B;以指示來源產生錯誤診斷，以便您稍後在監視資料集活動和資料流狀態時參考。
+* **[!UICONTROL Partial ingestion]**：部分批次擷取是擷取包含錯誤的資料的能力，最多可達特定可設定的臨界值。 此功能可讓您將所有精確資料成功擷取到Experience Platform，同時所有不正確的資料會個別批次處理，並提供無效原因的資訊。
 
 +++
 
@@ -109,7 +109,7 @@ ht-degree: 1%
 
 ## 排程您的資料流擷取
 
-[!UICONTROL 排程]步驟隨即顯示。 使用介面設定擷取排程，以使用已設定的對應自動擷取選取的來源資料。 根據預設，排程設定為`Once`。 若要調整您的擷取頻率，請選取&#x200B;**[!UICONTROL 頻率]**，然後從下拉式選單中選取選項。
+[!UICONTROL Scheduling]步驟隨即顯示。 使用介面設定擷取排程，以使用已設定的對應自動擷取選取的來源資料。 根據預設，排程設定為`Once`。 若要調整您的擷取頻率，請選取&#x200B;**[!UICONTROL Frequency]**，然後從下拉式選單中選取選項。
 
 >[!TIP]
 >
@@ -130,17 +130,21 @@ ht-degree: 1%
 
 ![來源工作流程的排程設定步驟。](../../../../images/tutorials/create/talon-one-batch/scheduling.png)
 
-## 審閱
+## 檢閱
 
-*[!UICONTROL 檢閱]*&#x200B;步驟隨即顯示，可讓您在建立資料流之前先檢閱資料流的詳細資訊。 詳細資料會分組到以下類別中：
+*[!UICONTROL Review]*&#x200B;步驟隨即顯示，可讓您在建立資料流之前先檢閱其詳細資訊。 詳細資料會分組到以下類別中：
 
-* **[!UICONTROL 連線]**：顯示帳戶名稱、來源平台和來源名稱。
-* **[!UICONTROL 指派資料集和對應欄位]**：顯示目標資料集和資料集所遵守的結構描述。
+* **[!UICONTROL Connection]**：顯示帳戶名稱、來源平台和來源名稱。
+* **[!UICONTROL Assign dataset and map fields]**：顯示目標資料集以及資料集所遵守的結構描述。
 
-確認詳細資料正確之後，請選取&#x200B;**[!UICONTROL 完成]**。
+確認詳細資料正確之後，請選取&#x200B;**[!UICONTROL Finish]**。
 
 ![來源工作流程的稽核步驟。](../../../../images/tutorials/create/talon-one-batch/review.png)
 
 ## 監視資料流
 
 建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需有關如何監視資料流的詳細資訊，請參閱有關UI[中](../../../../../dataflows/ui/monitor-sources.md)監視帳戶和資料流的教學課程。
+
+## 已知限制
+
+將資料從[!DNL Talon.One]的結構描述對應到Adobe Experience Platform時，目前無法在單一交易中擷取相同型別的多個效果。 例如，如果交易包含多個`setDiscount`效果（例如不同行銷活動的折扣），則對應期間只會保留其中一個效果，而其他效果則會被覆寫。
