@@ -136,7 +136,7 @@ v2.0.4
 
 * 新增各種欄位的資料元素支援 — 已在以下事件中新增資料元素支援：「頁面上的時間」、「進入檢視區」、「暫留」和「媒體播放時間」。 以及下列條件：「網站逗留時間」和「值比較」
 * 新增對ctrl/cmd +按一下以及使用滑鼠中鍵按一下來使用「連結延遲」的預設行為的支援
-* **在點選事件上將連結延遲標籤為「不再支援」。** — 如需詳細資訊，請參閱Adobe Experience Platform的[資料收集部落格](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)
+* **在點選事件上將連結延遲標籤為「不再支援」。** — 如需詳細資訊，請參閱Adobe Experience Platform的[資料收集部落格](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=zh-Hant)
 
 ## 2021 年 1 月 6 日
 

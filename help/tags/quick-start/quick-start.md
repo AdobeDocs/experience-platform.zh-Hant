@@ -130,6 +130,6 @@ ht-degree: 42%
 
 若要深入瞭解標籤，請參閱以下資源：
 
-* **[資料收集社群](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**：詢問和解答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
+* **[資料收集社群](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=zh-Hant)**：詢問和解答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
 * **[開發人員檔案](../api/overview.md)**：參與標籤開發人員社群，以建立擴充功能或使用標籤API
 * **[教學課程總覽](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=zh-Hant)**：這些檔案會向您介紹Android應用程式中的標籤概念，包括事件轉送和Mobile SDK。
