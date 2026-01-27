@@ -5,14 +5,22 @@ type: Documentation
 description: Adobe Experience Platform可讓您使用RESTful API或使用者介面存取即時客戶個人檔案資料。 本指南概述如何使用設定檔API存取實體（通常稱為「設定檔」）。
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
+source-git-commit: 17bd3494c2d9b2a05ca86903297ebec85c9350f2
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2290'
 ht-degree: 2%
 
 ---
 
 # 實體端點（設定檔存取）
+
+>[!IMPORTANT]
+>
+>如果您有Real-Time CDP Ultimate，則只能&#x200B;**使用**&#x200B;這些端點。
+>
+>如果您有Real-Time CDP Prime，您可以繼續在Experience Platform UI中擷取和使用個人化使用案例的體驗事件，以及檢視事件，但您&#x200B;**無法**&#x200B;使用API以程式設計方式查詢體驗事件。
+>
+>如果您有Real-Time CDP Ultimate，且&#x200B;**目前不會**&#x200B;以程式設計方式查詢事件，請聯絡Adobe客戶服務以啟用此功能。
 
 Adobe Experience Platform可讓您使用RESTful API或使用者介面存取[!DNL Real-Time Customer Profile]資料。 本指南會概述如何使用API存取實體（通常稱為「設定檔」）。 如需使用[!DNL Experience Platform] UI存取設定檔的詳細資訊，請參閱[設定檔使用手冊](../ui/user-guide.md)。
 

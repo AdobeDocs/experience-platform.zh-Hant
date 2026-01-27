@@ -4,9 +4,9 @@ title: 即時客戶設定檔API指南
 description: 即時客戶設定檔API可讓開發人員探索和使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或錯誤新增的設定檔資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82a9b405a1d36155c84cd27a005c7ec469164ef3
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 若要檢視所有可用的端點和CRUD作業，請造訪[即時客戶設定檔API參考swagger](https://www.adobe.com/go/profile-apis-en)。
 
-如需在[!DNL Experience Platform] UI中使用[!DNL Real-Time Customer Profile]資料的指南，請參閱[設定檔使用者指南](../ui/user-guide.md)。
+如需在[!DNL Real-Time Customer Profile] UI中使用[!DNL Experience Platform]資料的指南，請參閱[設定檔使用者指南](../ui/user-guide.md)。
 
 ## 計算屬性 {#computed-attributes}
 
@@ -30,6 +30,10 @@ ht-degree: 2%
 您可以使用`ca/attributes/`端點來建立、檢視、編輯和刪除計算屬性。 若要瞭解如何使用計算屬性，請參閱[計算屬性概述](../computed-attributes/overview.md)。 若為API作業，請造訪[計算屬性API端點指南](../computed-attributes/api.md)。
 
 ## 實體（[!DNL Profile]存取權） {#entities}
+
+>[!NOTE]
+>
+>如果您有Real-Time CDP Ultimate，則只能使用這些端點。
 
 透過Adobe Experience Platform，您可以使用RESTful API或使用者介面存取[!DNL Real-Time Customer Profile]資料。 若要瞭解如何使用API存取實體（通常稱為「設定檔」），請依照[實體端點指南](entities.md)中概述的步驟操作。 若要使用[!DNL Experience Platform] UI存取設定檔，請參閱[設定檔使用手冊](../ui/user-guide.md)。
 
@@ -49,7 +53,7 @@ ht-degree: 2%
 
 ## 設定檔系統工作 {#profile-system-jobs}
 
-擷取到[!DNL Experience Platform]的已啟用設定檔的資料儲存在[!DNL Data Lake]以及[!DNL Real-Time Customer Profile]資料存放區。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用API來建立[!DNL Profile System Job] （也稱為「[!DNL delete request]」），如有必要，可以修改、監視或刪除。 若要瞭解如何使用[!DNL Real-Time Customer Profile] API中的`/system/jobs`端點來處理刪除請求，請依照[設定檔系統作業端點指南](profile-system-jobs.md)中概述的步驟操作。
+擷取到[!DNL Experience Platform]的已啟用設定檔的資料儲存在[!DNL Data Lake]以及[!DNL Real-Time Customer Profile]資料存放區。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用API來建立[!DNL Profile System Job] （也稱為「[!DNL delete request]」），如有必要，可以修改、監視或刪除。 若要瞭解如何使用`/system/jobs` API中的[!DNL Real-Time Customer Profile]端點來處理刪除請求，請依照[設定檔系統作業端點指南](profile-system-jobs.md)中概述的步驟操作。
 
 ## 更新設定檔屬性 {#update-profile}
 
@@ -57,4 +61,4 @@ ht-degree: 2%
 
 ## 後續步驟 {#next-steps}
 
-若要開始使用[!DNL Real-Time Customer Profile] API進行呼叫，請閱讀[快速入門手冊](getting-started.md)，然後選取其中一個端點指南，以瞭解如何使用特定的[!DNL Profile]相關端點。 若要使用[!DNL Experience Platform] UI處理[!DNL Profile]資料，請參閱[即時客戶設定檔使用手冊](../ui/user-guide.md)。
+若要開始使用[!DNL Real-Time Customer Profile] API進行呼叫，請閱讀[快速入門手冊](getting-started.md)，然後選取其中一個端點指南，以瞭解如何使用特定的[!DNL Profile]相關端點。 若要使用[!DNL Profile] UI處理[!DNL Experience Platform]資料，請參閱[即時客戶設定檔使用手冊](../ui/user-guide.md)。
