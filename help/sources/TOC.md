@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、賦予標籤和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: ded7a095f95bd43a34e694fb0a6fd4b468b4e246
+source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1083'
 ht-degree: 34%
 
 ---
@@ -110,9 +110,10 @@ ht-degree: 34%
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [查特利奧](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
-      - [HubSpot聯結器](connectors/marketing-automation/hubspot.md)
-      - [Mailchimp聯結器](connectors/marketing-automation/mailchimp.md)
-      - [Oracle Eloqua聯結器](connectors/marketing-automation/oracle-eloqua.md)
+      - [HubSpot](connectors/marketing-automation/hubspot.md)
+      - [Mailchimp](connectors/marketing-automation/mailchimp.md)
+      - [Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
+      - [Oracle Eloqua (V2)](connectors/marketing-automation/eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -327,6 +328,7 @@ ht-degree: 34%
          - [Mailchimp 行銷活動](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp 會員](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle Eloqua (V2)](tutorials/ui/create/marketing-automation/eloqua.md)
          - [Oracle NetSuite活動](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite實體](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
