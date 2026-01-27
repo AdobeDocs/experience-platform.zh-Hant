@@ -45,7 +45,7 @@ ht-degree: 2%
 
 瀏覽至&#x200B;**設定** > **平台擴充功能** > **應用程式雲端開發人員** > **建立應用程式**。 提供您應用程式的詳細資料，包括其名稱、說明、圖示和OAuth回呼URL。 完成時選取&#x200B;**儲存**。
 
-![ Eloqua儀表板中的「應用程式開發人員」面板和「建立應用程式」按鈕。](../../images/tutorials/create/eloqua/create-app.png)
+![&#x200B; Eloqua儀表板中的「應用程式開發人員」面板和「建立應用程式」按鈕。](../../images/tutorials/create/eloqua/create-app.png)
 
 | 屬性 | 說明 |
 | --- | --- |
