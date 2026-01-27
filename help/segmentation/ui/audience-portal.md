@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 8fed1f034cd530bd84bf9d9b180d9db3c4ee0faf
 workflow-type: tm+mt
-source-wordcount: '4341'
+source-wordcount: '4434'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | [!UICONTROL Copy] | 細分服務 | 複製選取的對象。 您可以在[區段常見問答集](../faq.md#copy)中找到有關此函式的詳細資訊。 |
 | [!UICONTROL Apply access labels] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請閱讀[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 |
 | [!UICONTROL Publish] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[的](../faq.md#lifecycle-states)生命週期狀態區段。 |
-| [!UICONTROL Deactivate] | 自訂上傳，分段服務 | 停用選取的對象。 請注意，為了停用對象，在&#x200B;**任何**&#x200B;目的地(包括非Experience Platform目的地)中無法&#x200B;**&#x200B;**&#x200B;啟用，或是&#x200B;**任何**&#x200B;其他對象的一部分。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[的](../faq.md#lifecycle-states)生命週期狀態區段。 |
+| [!UICONTROL Deactivate] | 自訂上傳，分段服務 | 停用選取的對象。 請注意，為了停用對象，在&#x200B;**任何**&#x200B;目的地(包括非Experience Platform目的地)中無法&#x200B;****&#x200B;啟用，或是&#x200B;**任何**&#x200B;其他對象的一部分。 如需有關生命週期狀態管理的詳細資訊，請參閱分段常見問答集[的](../faq.md#lifecycle-states)生命週期狀態區段。 |
 | [!UICONTROL Delete] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 不能刪除下游目的地中使用的對象或是其他對象&#x200B;**中的相依對象**。 如需有關刪除對象的詳細資訊，請參閱[區段常見問題集](../faq.md#lifecycle-states)。 |
 | [!UICONTROL Add to package] | 對象構成、自訂上傳、細分服務 | 在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱[沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md)。 |
 
@@ -102,7 +102,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | ----- | ----------- |
 | [!UICONTROL Name] | 對象名稱。 |
 | [!UICONTROL Profile count] | 符合對象資格的設定檔總數。 |
-| [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)和[Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)。 |
+| [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)和[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)。 |
 | [!UICONTROL Lifecycle status] | 對象的狀態。 此欄位可能的值包括`Draft`、`Inactive`和`Published`。 如需生命週期狀態的詳細資訊，包括不同狀態的意義，以及如何將對象移至不同生命週期狀態，請參閱分段常見問答集[的](../faq.md#lifecycle-status)生命週期狀態區段。 |
 | [!UICONTROL Update frequency] | 指出對象資料更新頻率的值。 此欄位可能的值包括[!UICONTROL Batch]、[!UICONTROL Streaming]、[!UICONTROL Edge]和[!UICONTROL Not Scheduled]。 |
 | [!UICONTROL Last updated by] | 上次更新對象的人員名稱。 |
@@ -138,7 +138,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![搜尋列已反白顯示。](../images/ui/audience-portal/browse-audience-search.png)
 
-如需[!DNL Unified Search]的詳細資訊，包括支援的功能，請閱讀[整合式搜尋檔案](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=zh-Hant)。
+如需[!DNL Unified Search]的詳細資訊，包括支援的功能，請閱讀[整合式搜尋檔案](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html)。
 
 #### 標記 {#tags}
 
@@ -191,7 +191,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![顯示屬於特定資料夾的對象。](../images/ui/audience-portal/browse-folders.png)
 
-#### 篩選器 {#filter}
+#### 篩選 {#filter}
 
 您也可以根據各種設定來篩選對象。
 
@@ -201,9 +201,9 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 將顯示可用篩選器清單。
 
-| 篩選器 | 說明 |
+| 篩選 | 說明 |
 | ------ | ----------- |
-| [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/zh-hant/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)和[Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)。 |
+| [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可能的值包括[分段服務](#segment-builder)、[自訂上傳](#import-audience)、[對象構成](#audience-composition)、[Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home)、[相似對象](../types/lookalike-audiences.md)、[同盟對象構成](#fac)、[Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview)、[資料Distiller](#data-distiller)、[AJO B2B](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer-b2b/user/guide-overview)和[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal)。 |
 | [!UICONTROL Has any tag] | 可讓您依標籤篩選。 您可以選取&#x200B;**[!UICONTROL Has any tag]**&#x200B;到&#x200B;**[!UICONTROL Has all tags]**&#x200B;之間。 選取&#x200B;**[!UICONTROL Has any tag]**&#x200B;時，篩選的對象將包含您已新增的&#x200B;**任何**&#x200B;標籤。 選取&#x200B;**[!UICONTROL Has all tags]**&#x200B;時，篩選的對象必須包含您已新增的&#x200B;**所有**&#x200B;標籤。 |
 | [!UICONTROL Lifecycle status] | 可讓您根據對象的生命週期狀態進行篩選。 可用的選項包括[!UICONTROL Deleted]、[!UICONTROL Draft]、[!UICONTROL Inactive]和[!UICONTROL Published]。 |
 | [!UICONTROL Update frequency] | 可讓您根據對象的更新頻率（評估方法）進行篩選。 可用的選項包括[!UICONTROL Batch]、[!UICONTROL Streaming]和[!UICONTROL Edge] |
@@ -264,6 +264,19 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 ![顯示對象詳細資訊頁面，並反白顯示[!UICONTROL Update audience]按鈕。](../images/ui/audience-portal/audience-details-update-audience.png)
 
 選取&#x200B;**[!UICONTROL Update audience]**&#x200B;可讓您重新上傳外部產生的對象。 如需有關匯入外部產生的對象的詳細資訊，請參閱[匯入對象](#import-audience)的章節。
+
+如果您的對象在到期後的七天內，您可以選取「**[!UICONTROL Refresh data expiration]**」以重新擷取該對象的最後一個成功批次。
+
+![對象詳細資訊頁面中會醒目顯示[!UICONTROL Refresh data expiration]按鈕。](../images/ui/audience-portal/refresh-data-expiration.png)
+
+這會將資料到期日延長30天，並使用相同的對象中繼資料。 按下按鈕後，您就無法再選取20分鐘。
+
+此按鈕在下列情況下將&#x200B;**無法**&#x200B;選取：
+
+- 對象沒有成功的批次
+- 初始重新整理失敗
+- 資料到期日超過七天
+- 對象沒有資料
 
 >[!TAB 劃分服務]
 
