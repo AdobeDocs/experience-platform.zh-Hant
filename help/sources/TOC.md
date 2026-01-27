@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、賦予標籤和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: ded7a095f95bd43a34e694fb0a6fd4b468b4e246
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1080'
 ht-degree: 34%
 
 ---
@@ -91,7 +91,7 @@ ht-degree: 34%
       - [Snowflake聯結器](connectors/databases/snowflake.md)
       - [Teradata Vantage聯結器](connectors/databases/teradata-vantage.md)
    - 資料與身分合作夥伴 {#data-partner}
-      - [Acxiom 資料內嵌](connectors/data-partners/acxiom-data-ingestion.md)
+      - [Acxiom 資料攝取](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom 潛在客戶資料匯入](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Algolia 使用者輪廓](connectors/data-partners/algolia-user-profiles.md)
       - [Bombora Intent](connectors/data-partners/bombora.md)
@@ -116,6 +116,7 @@ ht-degree: 34%
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [Salesforce Marketing Cloud (V2)](connectors/marketing-automation/sfmc.md)
    - 付款 {#payments}
       - [方形聯結器](connectors/payments/square.md)
       - [Stripe聯結器](connectors/payments/stripe.md)
@@ -223,7 +224,7 @@ ht-degree: 34%
       - [收集付款資料](tutorials/api/collect/payments.md)
       - [收集通訊協定資料](tutorials/api/collect/protocols.md)
       - [收集串流資料](tutorials/api/collect/streaming.md)
-   - [隨選內嵌](tutorials/api/on-demand-ingestion.md)
+   - [隨選攝取](tutorials/api/on-demand-ingestion.md)
    - [在來源層級篩選資料](tutorials/api/filter.md)
    - [監視資料流](tutorials/api/monitor.md)
    - [更新帳戶](tutorials/api/update.md)
@@ -302,7 +303,7 @@ ht-degree: 34%
          - [Snowflake 串流](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - 資料與身分合作夥伴 {#data-partner}
-         - [Acxiom 資料內嵌](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
+         - [Acxiom 資料攝取](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom 潛在客戶資料匯入](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Algolia 使用者輪廓](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
@@ -331,6 +332,7 @@ ht-degree: 34%
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [轉送聯結器](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud (V2)](tutorials/ui/create/marketing-automation/sfmc.md)
       - 付款 {#payments}
          - [方形](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
@@ -354,7 +356,7 @@ ht-degree: 34%
    - [使用 UI 中的範本建立來源資料流](tutorials/ui/templates.md)
    - [篩選來源物件](tutorials/ui/filter.md)
    - [收錄加密的資料](tutorials/ui/encryped-ingestion.md)
-   - [隨選內嵌](tutorials/ui/on-demand-ingestion.md)
+   - [隨選攝取](tutorials/ui/on-demand-ingestion.md)
    - [監視批次資料流](tutorials/ui/monitor.md)
    - [監視串流資料流](tutorials/ui/monitor-streaming.md)
    - [更新帳戶](tutorials/ui/update.md)
