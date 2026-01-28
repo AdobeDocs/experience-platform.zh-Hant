@@ -2,14 +2,18 @@
 title: 在API中啟用來源連線的變更資料擷取
 description: 瞭解如何在API中為來源連線啟用變更資料擷取
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: bd28d5be932823b8bf9c98280f97694ff221d76d
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
 
 # 在API中啟用來源連線的變更資料擷取
+
+>[!AVAILABILITY]
+>
+>現在當您在連線至VA6資料中心的Amazon Web Services (AWS)上執行Adobe Experience Platform時，可以對[!DNL Amazon S3]和[!DNL Data Landing Zone]來源使用變更資料擷取。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
 在Adobe Experience Platform來源中使用變更資料擷取，讓您的來源和目的地系統近乎即時保持同步。
 
@@ -165,7 +169,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 若要在您的[!DNL Google BigQuery]來源連線中啟用變更記錄，請瀏覽至[!DNL Google BigQuery]主控台中的[!DNL Google Cloud]頁面，並將`enable_change_history`設定為`TRUE`。 此屬性可啟用資料表變更記錄。
 
-如需詳細資訊，請閱讀[&#x200B; [!DNL GoogleSQL]中](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)資料定義語言陳述式的指南。
+如需詳細資訊，請閱讀[ [!DNL GoogleSQL]中](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)資料定義語言陳述式的指南。
 
 請閱讀下列檔案，以瞭解如何為[!DNL Google BigQuery]來源連線啟用變更資料擷取的步驟：
 
