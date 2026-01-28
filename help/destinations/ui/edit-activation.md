@@ -4,9 +4,9 @@ title: 編輯啟動資料流
 type: Tutorial
 description: 請依照本文的步驟，在Adobe Experience Platform中編輯現有的啟用資料流。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 5fae3fe6a3647ba416a26f4cdb9e5b6ce308e990
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '927'
 ht-degree: 0%
 
 ---
@@ -111,11 +111,11 @@ ht-degree: 0%
 
 ![Experience Platform UI影像顯示「匯出資料集」資料流執行選項。](../assets/ui/edit-activation/export-datasets.png)
 
-## [!BADGE Beta]{type=Informative}編輯行銷動作 {#edit-marketing-actions}
+## 編輯行銷動作 {#edit-marketing-actions}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->此功能目前在&#x200B;**beta**&#x200B;中。 若要要求存取權，請聯絡您的Adobe代表。
+>若要編輯行銷動作，您需要&#x200B;**[!UICONTROL Activate Destinations]**&#x200B;與&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 您可以新增或移除最初連線至目的地時設定的行銷動作。
 
