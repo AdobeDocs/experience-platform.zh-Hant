@@ -3,10 +3,10 @@ title: 交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 036d784014e7cdb101f39f63f9d6e8bac01fdc97
+source-git-commit: 47d4078acc73736546d4cbb2d17b49bf8945743a
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 5%
+source-wordcount: '1643'
+ht-degree: 2%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->隨著 EUID (歐洲統一 ID) 的發行，您現在可以查看兩個 [!DNL The Trade Desk - CRM] 目的地 (從[目的地目錄](/help/destinations/catalog/overview.md))。
+>[目的地目錄](/help/destinations/catalog/overview.md)中有兩個Trade Desk - CRM目的地。
 >
->* 如果您要在歐盟獲取資料，請使用 **[!DNL The Trade Desk - CRM (EU)]** 目的地。
->* 如果您要在亞太 (APAC) 或北美 (NAMER) 區域獲取資料，請使用 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 目的地。
+>* 如果您將資料來源設在歐盟，請使用&#x200B;**[!DNL The Trade Desk - CRM (EU)]**&#x200B;目的地。
+>* 如果您在APAC或NAMER地區取得資料來源，請使用&#x200B;**[!DNL The Trade Desk - CRM (NAMER & APAC)]**&#x200B;目的地。
 >
 >此目的地聯結器和檔案頁面是由&#x200B;*[!DNL Trade Desk]*&#x200B;團隊建立和維護。 若有任何查詢或更新要求，請連絡您的[!DNL Trade Desk]代表。
 
@@ -25,19 +25,17 @@ ht-degree: 5%
 
 瞭解如何為您的[!DNL Trade Desk]帳戶啟用設定檔，以根據CRM資料鎖定受眾目標和隱藏。
 
-此聯結器會將資料傳送至[!DNL The Trade Desk]第一方端點。 Adobe Experience Platform與[!DNL The Trade Desk]之間的整合不支援匯出資料至[!DNL The Trade Desk]第三方端點。
-
-[!DNL The Trade Desk(TTD)]不會隨時直接處理電子郵件地址的上傳檔案，[!DNL The Trade Desk]也不會儲存您的原始（未雜湊）電子郵件。
+此聯結器會將資料傳送至[!DNL The Trade Desk]以進行第一方資料啟用。 [!DNL The Trade Desk]儲存您的原始（未雜湊）電子郵件和電話號碼。
 
 >[!TIP]
 >
->使用[!DNL The Trade Desk]個CRM目的地進行CRM資料對應，例如電子郵件或雜湊電子郵件地址。 使用Adobe Experience Platform目錄中的[其他交易台目的地](/help/destinations/catalog/advertising/tradedesk.md)進行Cookie和裝置ID對應。
+>使用[!DNL The Trade Desk - CRM]目的地來傳送CRM資料（例如電子郵件和電話號碼）和其他第一方資料識別碼（例如Cookie和裝置ID）。 您可以繼續使用Experience Platform目錄中的[交易台目的地](/help/destinations/catalog/advertising/tradedesk.md)來進行Cookie與裝置ID對應。
 
 ## 先決條件 {#prerequisites}
 
 >[!IMPORTANT]
 >
->您必須先聯絡您的[!DNL Trade Desk]客戶經理以簽署CRM入門合約，才能在交易台啟用對象。 [!DNL The Trade Desk]將啟用UID2 / EUID的使用並共用其他詳細資料來協助您設定目的地。
+>您必須先連絡您的[!DNL Trade Desk]客戶經理以啟用此功能，才能啟用交易台的對象。 如果您要傳送電子郵件、電話號碼和UID2/EUID，您必須與[!DNL The Trade Desk]共用已簽署的UID2/EUID合約。
 
 ## ID比對要求 {#id-matching-requirements}
 
@@ -47,16 +45,28 @@ ht-degree: 5%
 
 [!DNL The Trade Desk]支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照ID比對需求一節中的指示，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。
+Adobe Experience Platform支援非雜湊和雜湊電子郵件地址和電話號碼。 請依照ID比對需求一節中的指示，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。
 
-| 目標身分 | 說明 | 考量事項 |
-|---|---|---|
-| 電子郵件 | 電子郵件地址（純文字） | 當您的來源識別是電子郵件名稱空間或屬性時，請輸入`email`作為目標識別。 |
-| Email_LC_SHA256 | 電子郵件地址需要使用SHA256和小寫進行雜湊處理。 您稍後將無法變更此設定。 | 當您的來源身分是Email_LC_SHA256名稱空間或屬性時，輸入`hashed_email`作為目標身分。 |
+| 目標身分 | 說明 |
+|---|---|
+| 電子郵件 | 電子郵件地址（純文字） |
+| Email_LC_SHA256 | 電子郵件地址需要使用SHA256和小寫進行雜湊處理。 您稍後將無法變更此設定。 |
+| 電話(E.164) | 需要以E.164格式正規化的電話號碼。 E.164格式包含加號(+)、國際國家/地區撥號代碼、當地區碼和電話號碼。 例如：(+)（國家代碼）（區號）（電話號碼）。 此識別碼不適用於交易台 — 第一方資料(EU)。 |
+| 電話(SHA256_E.164) | 電話號碼已標準化為E.164格式，然後使用SHA-256進行雜湊處理，並產生雜湊的Base64編碼。 此識別碼不適用於交易台 — 第一方資料(EU)。 |
+| TDID | 交易台中的Cookie ID |
+| GAID | GOOGLE ADVERTISING ID |
+| IDFA | 廣告商適用的Apple ID |
+| UID2 | 原始UID2值 |
+| UID2Token | 加密的UID2 Token，也稱為廣告代號。 |
+| EUID | 原始歐盟ID值 |
+| EUIDToken | 加密的EUID權杖，也稱為廣告權杖。 |
+| 斜坡ID | 49個字元或70個字元的RampID （先前稱為IdentityLink或IDL）。 這必須是來自LiveRamp且專為Trade Desk對應的RampID。 |
+| netID | 使用者的netID，如70個字元的base64編碼字串。 此ID僅於歐洲支援。 |
+| 第一ID | 使用者的第一方ID，即通常由法國發佈者設定的第一方Cookie。 此ID僅於歐洲支援。 |
 
 {style="table-layout:auto"}
 
-## 電子郵件雜湊需求 {#hashing-requirements}
+## 電子郵件雜湊需求 {#email-hashing}
 
 您可以將電子郵件地址雜湊再擷取至Adobe Experience Platform中，或使用原始電子郵件地址。
 
@@ -67,8 +77,49 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 * 移除開頭和結尾的空格。
 * 將所有ASCII字元轉換為小寫。
 * 在`gmail.com`個電子郵件地址中，從電子郵件地址的使用者名稱部分移除下列字元：
-   * 句點(. （ASCII代碼46）。 例如，將`jane.doe@gmail.com`標準化為`janedoe@gmail.com`。
-   * 加號(+ （ASCII代碼43）)和所有後續字元。 例如，將`janedoe+home@gmail.com`標準化為`janedoe@gmail.com`。
+
+      *句點(&#39;.&#39;) 字元（ASCII代碼46）。 例如，將「jane.doe@gmail.com」標準化為「janedoe@gmail.com」。
+     *加號(&#39;+&#39;)字元（ASCII代碼43）和所有後續字元。 例如，將&#39;janedoe+home@gmail.com&#39;標準化為&#39;janedoe@gmail.com&#39;。
+  
+## 電話號碼正規化和雜湊需求 {#phone-hashing}
+
+以下是上傳電話號碼時您需要瞭解的事項：
+
+* 無論您是在要求中傳送雜湊或解除雜湊的電話號碼，都必須在要求中傳送號碼前將其標準化。
+* 若要上傳標準化、雜湊和編碼的資料，您必須以標準化電話號碼的Base64編碼SHA-256雜湊傳送。
+
+無論您是要上傳原始或雜湊的電話號碼，您都必須將其標準化。
+
+>[!IMPORTANT]
+>
+>在雜湊處理前進行標準化可確保產生的ID值永遠相同，而且可準確比對資料。
+
+以下是您需要瞭解的電話號碼標準化要求：
+
+* UID2電信業者接受E.164格式的電話號碼，這是可確保全域唯一性的國際電話號碼格式。
+* E.164電話號碼最多可有15位數。
+* 標準化的E.164電話號碼使用下列語法： `[+][country code][subscriber number including area code]`不含空格、連字型大小、括弧或其他特殊字元。 以下是一些範例：
+
+      *美國： 1 (234) 567-8901已標準化為+12345678901。
+     *新加坡： 65 1243 5678已標準化為+6512345678。
+     *澳洲：行動電話號碼0491 570 006已標準化，以新增國碼並捨棄前導零： +61491570006。
+     * UK：行動電話號碼07812 345678已標準化，以新增國碼並捨棄前導零： +447812345678。
+  
+請確定標準化電話號碼是UTF-8，而不是其他編碼系統，例如UTF-16。
+
+電話號碼雜湊是標準化電話號碼的Base64編碼SHA-256雜湊。 首先標準化電話號碼，然後使用SHA-256雜湊演演算法執行雜湊處理，接著使用Base64編碼來編碼雜湊值的結果位元組。 請注意，Base64編碼會套用至雜湊值的位元組，而非十六進位編碼字串表示法。
+下表顯示簡單輸入電話號碼的範例，以及套用每個步驟以得到安全、不透明值的結果。
+
+| 類型 | 範例 | 註解和使用情況 |
+|---|---|---|
+| 原始電話號碼 | 1 (234) 567-8901 | 這是起點。 |
+| 標準化電話號碼 | +12345678901 | 標準化永遠是第一步。 |
+| 標準化電話號碼的SHA-256雜湊 | 10e6f0b47054a83359477dcb35231db6de5c69fb1816e1a6b98e192de9e5b9ee | 此64個字元的字串是32位元組SHA-256的十六進位編碼表示法。 |
+| 規範化和雜湊電話號碼的十六進位至Base64 SHA-256編碼 | EObwtHBUqDNZR33LNSMdtt5cafsYFuGmuY4ZLenlue4 | 此44個字元的字串是32位元組SHA-256的Base64編碼表示法。 SHA-256雜湊是十六進位值。 您必須使用以十六進位值作為輸入的Base64編碼器。 對要求內文中傳送的phone_hash值使用此編碼。 |
+
+>[!IMPORTANT]
+>
+>套用Base64編碼時，請務必使用接受十六進位值作為輸入的函式。 如果您使用接受文字作為輸入的函式，則結果會是較長的字串，對UID2而言無效。
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -89,7 +140,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 ### 填寫目的地詳細資料 {#fill-in-details}
 
-您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
+您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Account Type]**：請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;選項。
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
@@ -125,28 +176,34 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 以下是啟用對象至[!DNL The Trade Desk] CRM目的地時的正確身分對應範例。
 
->[!IMPORTANT]
->
-> [!DNL The Trade Desk] CRM目的地不接受原始和雜湊電子郵件地址作為相同啟用流程中的身分。 為原始和雜湊電子郵件地址建立個別啟用流程。
+選取來源和目標欄位：
 
-選取來源欄位：
+| 來源欄位 | 目標欄位 |
+|---|---|
+| 電子郵件 | 電子郵件 |
+| Email_LC_SHA256 | hashed_email |
+| 電話(E.164) | 電話 |
+| 電話(SHA256_E.164) | hashed_phone |
+| TDID | tdid |
+| GAID | daid |
+| IDFA | idfa |
+| UID2 | uid2 |
+| UID2Token | uid2_token |
+| EUID | euid |
+| EUIDToken | euid_token |
+| 斜坡ID | idl |
+| ID5 | id5 |
+| netID | net_id |
+| 第一ID | first_id |
 
-* 如果在資料擷取時使用原始電子郵件地址，請選取`Email`名稱空間或屬性作為來源身分。
-* 如果您在資料擷取至Experience Platform時雜湊了客戶電子郵件地址，請選取`Email_LC_SHA256`名稱空間或屬性作為來源身分。
-
-選取目標欄位：
-
-* 當來源名稱空間或屬性為`email`時，輸入`Email`作為目標身分。
-* 當來源名稱空間或屬性為`hashed_email`時，輸入`Email_LC_SHA256`作為目標身分。
 
 ## 驗證資料匯出 {#validate}
 
-若要驗證資料是否已正確從Experience Platform匯出並匯入[!DNL The Trade Desk]，請在[!DNL The Trade Desk]資料管理平台(DMP)的Adobe 1PD資料方塊下找到對象。 以下是在[!DNL Trade Desk] UI中尋找對應ID的步驟：
+若要驗證資料是否已正確從Experience Platform匯出並匯入[!DNL The Trade Desk]，請在[!DNL The Trade Desk]「廣告商資料和身分」資料庫的Adobe 1PD標籤下找到對象。 以下是在[!DNL Trade Desk] UI中尋找對應ID的步驟：
 
-1. 首先，選取「**[!UICONTROL Data]**」標籤，並檢閱「**[!UICONTROL First-Party]**」區段。
-2. 向下捲動頁面，在&#x200B;**[!UICONTROL Imported Data]**&#x200B;下方會找到&#x200B;**[!UICONTROL Adobe 1PD Tile]**。
-3. 按一下&#x200B;**[!UICONTROL Adobe 1PD]**&#x200B;圖磚，它會列出您的廣告商在[!DNL Trade Desk]目的地啟用的所有對象。 您也可以使用搜尋功能。
-4. 來自Experience Platform的區段ID #將顯示為[!DNL Trade Desk] UI中的區段名稱。
+1. 首先，選取「**[!UICONTROL Libraries]**」標籤，並檢閱「**[!UICONTROL Advertiser data and identity]**」區段。
+2. 按一下&#x200B;**[!UICONTROL Adobe 1PD]**，它就會列出所有啟用至[!DNL The Trade Desk]的對象。
+3. Experience Platform的區段名稱或區段ID會顯示為[!DNL Trade Desk] UI中的區段名稱。
 
 ## 資料使用與控管 {#data-usage-governance}
 
