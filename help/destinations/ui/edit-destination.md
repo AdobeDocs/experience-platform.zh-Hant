@@ -28,7 +28,7 @@ ht-degree: 0%
 
 1. 導覽至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**。
 2. 選取想要編輯的目的地。
-3. 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯目的地控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**控制項來編輯現有的目的地連線。
+3. 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯目的地控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;控制項來編輯現有的目的地連線。
 4. 在強制回應視窗中，編輯任何需要的設定。 完成時選取&#x200B;**[!UICONTROL Save]**。
 
 在編輯目的地視窗中，您可以更新您最初連線至目的地時所設定的任何設定。 這些設定會因您更新的目標平台而異。
