@@ -2,9 +2,9 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1316'
 ht-degree: 20%
 
 ---
@@ -113,7 +113,6 @@ Experience Platform使用結構描述，以一致且可重複使用的方式說�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 串流細分監視 | 串流區段的即時監視可在沙箱、資料集和受眾層級提供評估率、延遲和資料品品質度的透明度。 此功能支援主動警示和可操作的洞察，可協助資料工程師識別容量違規和攝取問題。監控量度包括評估率、P95擷取延遲，以及接收、評估、失敗和略過的記錄。 逐個資料集和逐個對象檢視功能可全面顯示符合資格和取消資格的淨新設定檔。 |
 | 外部對象TTL重新整理 | 外部對象（例如CSV上傳）現在支援存留時間(TTL)設定的強制重新整理功能。 此功能可讓使用者手動重新整理外部對象的TTL到期日，在對象生命週期管理的控制方面提供更大力。 這對於需要在初始TTL期間之後持續存在或需要重新啟用而不需重新上傳資料的對象特別有用。 |
 
 如需詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../segmentation/home.md)。
