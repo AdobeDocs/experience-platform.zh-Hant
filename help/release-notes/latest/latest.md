@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2026 年 1 月)
 description: Adobe Experience Platform 2026 年 1 月版發行說明。
-source-git-commit: 9a3fbe281195041cf7444c5b6ec185395ff5ad23
+source-git-commit: 54be4d5c309f60e6c3e2a96ab1fea700cc79a608
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 23%
+source-wordcount: '1231'
+ht-degree: 21%
 
 ---
 
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## 目標 {#destinations}
 
@@ -55,14 +55,12 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | 目標 | 說明 |
 | --- | --- |
-| Kevel目的地聯結器現已可用 | Adobe Experience Platform的[!DNL Kevel]串流目的地可讓客戶直接在[!DNL Kevel]的UserDB和區段管理API中啟用Adobe對象，以支援在廣告決策時的即時鎖定目標。 [[!DNL Kevel]](https://www.kevel.com/)提供啟用AI的技術和專家指引，協助創新的商務領導在零售媒體中啟動、擴展和成功。 [!DNL Kevel]的Retail Media Cloud功能可針對站上和站外廣告提供針對性、可歸因、可自訂的廣告格式。 |
-| 索引Exchange目的地聯結器現已可用 | 使用此目的地聯結器可將受眾區段直接從Adobe Experience Platform匯出至[!DNL Index Exchange]的程式化廣告平台。 [!DNL Index]是全球廣告供應端平台，可協助媒體擁有者將其內容在各熒幕上的價值最大化。 憑藉超過20年的產業領導力，[!DNL Index]將全球各大品牌與頂級體驗製作者連結在一起，以提供高品質的消費者體驗。 |
+| [Kevel目的地](/help/destinations/catalog/advertising/kevel.md)聯結器現已可用 | Adobe Experience Platform的[!DNL Kevel]串流目的地可讓客戶直接在[!DNL Kevel]的UserDB和區段管理API中啟用Adobe對象，以支援在廣告決策時的即時鎖定目標。 [[!DNL Kevel]](https://www.kevel.com/)提供啟用AI的技術和專家指引，協助創新的商務領導在零售媒體中啟動、擴展和成功。 [!DNL Kevel]的Retail Media Cloud功能可針對站上和站外廣告提供針對性、可歸因、可自訂的廣告格式。 |
+| [索引Exchange目的地](/help/destinations/catalog/advertising/index-exchange.md)聯結器現已可用 | 使用此目的地聯結器可將受眾區段直接從Adobe Experience Platform匯出至[!DNL Index Exchange]的程式化廣告平台。 [!DNL Index]是全球廣告供應端平台，可協助媒體擁有者將其內容在各熒幕上的價值最大化。 憑藉超過20年的產業領導力，[!DNL Index]將全球各大品牌與頂級體驗製作者連結在一起，以提供高品質的消費者體驗。 |
 | 硬碟連線的區域端點支援 | [支援的所有](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)區域特定端點[!DNL Braze]現在都可在目的地組態流程期間選擇。 請詢問您的[!DNL Braze]代表您應該使用哪個端點執行個體。 |
 | 每週和每月排程支援[Liveramp上線](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | 您現在可以設定Liveramp入門目的地的每週和每月匯出排程。 <br>此版本正在逐步推出，並將於1月30日前完成。 |
 | 加強[交易台](../../destinations/catalog/advertising/tradedesk.md)和[Microsoft Bing](../../destinations/catalog/advertising/bing.md)目的地的啟用體驗 | Trade Desk和Microsoft Bing目的地現在包含預先定義的強制對應，以便提供最佳化的啟用體驗。  <br>此版本正在逐步推出，並將於1月30日前完成。 |
-
-<!-- |AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <br><br>**[!UICONTROL Default]**: If you don't have any custom policies applied on your buckets, data will be encrypted at rest when it lands in S3 with the AES256 algorithm. However, if you have custom policies applied, Experience Platform will respect those policies and Amazon S3 will continue to apply whichever custom encryption policies you have configured.<br><br>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest when it lands in S3 with the AES256 algorithm. | -->
-
+| [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details)目的地的AES256加密支援 | 您現在可以為Amazon S3匯出設定AES256加密。 有兩個可用選項： <ul><li>**[!UICONTROL Default]**：如果您的儲存貯體未套用任何自訂原則，當資料以AES256演演算法在S3上登陸時，將會加密資料。 不過，如果您已套用自訂原則，Experience Platform將會遵守這些原則，而Amazon S3將繼續套用您已設定的任何自訂加密原則。</li><li>**[!UICONTROL SSE-S3/AES256]**： Experience Platform在匯出中新增`s3:x-amz-server-side-encryption": "AES256`標頭，當資料以AES256演演算法在S3上登陸時，將會靜態加密資料。</li></ul>  <br>此版本正在逐步推出，並將於1月30日前完成。 |
 
 **全新或更新版功能**
 
