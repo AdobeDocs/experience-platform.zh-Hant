@@ -141,7 +141,7 @@ Adobe Experience Platform支援非雜湊和雜湊電子郵件地址和電話號�
 
 ### 填寫目的地詳細資料 {#fill-in-details}
 
-您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
+您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Account Type]**：請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;選項。
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
