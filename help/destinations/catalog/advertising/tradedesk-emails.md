@@ -81,6 +81,7 @@ Adobe Experience Platform支援非雜湊和雜湊電子郵件地址和電話號�
       *句點(&#39;.&#39;) 字元（ASCII代碼46）。 例如，將「jane.doe@gmail.com」標準化為「janedoe@gmail.com」。
      *加號(&#39;+&#39;)字元（ASCII代碼43）和所有後續字元。 例如，將&#39;janedoe+home@gmail.com&#39;標準化為&#39;janedoe@gmail.com&#39;。
   
+
 ## 電話號碼正規化和雜湊需求 {#phone-hashing}
 
 以下是上傳電話號碼時您需要瞭解的事項：
