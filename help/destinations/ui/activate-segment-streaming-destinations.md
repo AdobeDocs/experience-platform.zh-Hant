@@ -3,9 +3,9 @@ title: 啟用串流目的地的受眾資料
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的受眾對應至串流目的地來啟用這些受眾。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2eb890f06097f1b9766408aad3b6ab11d5d12f9f
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
@@ -83,6 +83,10 @@ ht-degree: 3%
 
    ![選取來源欄位頁面，顯示數個可用的來源欄位。](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
+   使用&#x200B;**[!UICONTROL Show display names for fields]**&#x200B;切換顯示欄位易記名稱，而非結構描述欄位名稱。
+
+   ![選取來源欄位頁面，顯示顯示顯示名稱的切換。](../assets/ui/activate-segment-streaming-destinations/show-display-names.gif)
+
 1. 選取&#x200B;**[!UICONTROL Target field]**&#x200B;專案右側的按鈕。
 
    ![選取醒目提示的目標欄位。](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
@@ -135,7 +139,7 @@ ht-degree: 3%
 
 1. 選取&#x200B;**[!UICONTROL Next]**&#x200B;以移至[!UICONTROL Review]頁面。
 
-## 審閱 {#review}
+## 檢閱 {#review}
 
 在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到選取範圍的摘要。 選取&#x200B;**[!UICONTROL Cancel]**&#x200B;以中斷流程，**[!UICONTROL Back]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 

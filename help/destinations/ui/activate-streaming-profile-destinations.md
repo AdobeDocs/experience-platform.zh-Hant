@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何透過將受眾傳送至串流設定檔型目的地，以啟用您在Adobe Experience Platform中的受眾資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '762'
 ht-degree: 1%
 
 ---
@@ -75,13 +75,19 @@ ht-degree: 1%
 
    ![在對應步驟中反白顯示如何選取來源欄位的影像。](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. 在&#x200B;**[!UICONTROL Select field]**&#x200B;頁面中，選取您要傳送至目的地的XDM屬性，然後選擇&#x200B;**[!UICONTROL Select]**。
+1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;頁面中，選取您要傳送至目的地的XDM屬性，然後選擇&#x200B;**[!UICONTROL Save]**。
 
-   ![影像顯示您可以選取做為來源欄位的一系列XDM欄位。](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![影像顯示您可以選取做為來源欄位的一系列XDM欄位。](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+
+   使用&#x200B;**[!UICONTROL Show only fields with data]**&#x200B;切換功能，只顯示填入值的結構描述欄位。 依預設，只會顯示填入的結構欄位。
+
+   使用&#x200B;**[!UICONTROL Show display names for fields]**&#x200B;切換顯示欄位易記名稱，而非結構描述欄位名稱。
+
+   ![選取來源欄位頁面，顯示顯示顯示名稱的切換。](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. 若要新增更多欄位，請重複步驟1到3，然後選取&#x200B;**[!UICONTROL Next]**。
 
-## 審閱 {#review}
+## 檢閱 {#review}
 
 在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到選取範圍的摘要。 選取&#x200B;**[!UICONTROL Cancel]**&#x200B;以中斷流程，**[!UICONTROL Back]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 
