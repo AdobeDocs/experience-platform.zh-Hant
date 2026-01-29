@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2026 年 1 月)
 description: Adobe Experience Platform 2026 年 1 月版發行說明。
-source-git-commit: 436e65f22b8866fb9922afcf51811f537c05fc9f
+source-git-commit: 8ce256234be0917242f117ee7e9b806abe90888c
 workflow-type: tm+mt
-source-wordcount: '1272'
-ht-degree: 21%
+source-wordcount: '1287'
+ht-degree: 20%
 
 ---
 
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## 目標 {#destinations}
 
@@ -59,7 +59,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | [索引Exchange目的地](/help/destinations/catalog/advertising/index-exchange.md)聯結器現已可用 | 使用此目的地聯結器可將受眾區段直接從Adobe Experience Platform匯出至[!DNL Index Exchange]的程式化廣告平台。 [!DNL Index]是全球廣告供應端平台，可協助媒體擁有者將其內容在各熒幕上的價值最大化。 憑藉超過20年的產業領導力，[!DNL Index]將全球各大品牌與頂級體驗製作者連結在一起，以提供高品質的消費者體驗。 |
 | 硬碟連線的區域端點支援 | [支援的所有](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)區域特定端點[!DNL Braze]現在都可在目的地組態流程期間選擇。 請詢問您的[!DNL Braze]代表您應該使用哪個端點執行個體。 |
 | 每週和每月排程支援[Liveramp上線](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | 您現在可以設定Liveramp入門目的地的每週和每月匯出排程。 <br>此版本正在逐步推出，並將於1月30日前完成。 |
-| 加強[交易台](../../destinations/catalog/advertising/tradedesk.md)和[Microsoft Bing](../../destinations/catalog/advertising/bing.md)目的地的啟用體驗 | Trade Desk和Microsoft Bing目的地現在包含預先定義的強制對應，以便提供最佳化的啟用體驗。  <br>此版本正在逐步推出，並將於1月30日前完成。 |
+| 加強[交易台](../../destinations/catalog/advertising/tradedesk.md)和[Microsoft Bing](../../destinations/catalog/advertising/bing.md)目的地的啟用體驗 | Trade Desk和Microsoft Bing目的地現在包含預先定義的強制對應，以便提供最佳化的啟用體驗。  <br>此版本正在逐步推出，並將於1月30日前完成。 ![顯示交易台](../2026/assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br>預先定義的對應的影像 ![影像顯示Microsoft Bing預先定義的對應](../2026/assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details)目的地的AES256加密支援 | 您現在可以為Amazon S3匯出設定AES256加密。 有兩個可用選項： <ul><li>**[!UICONTROL Default]**：資料將使用儲存貯體上設定的預設加密演演算法靜態加密。</li><li>**[!UICONTROL SSE-S3/AES256]**： Experience Platform在匯出中新增`s3:x-amz-server-side-encryption": "AES256`標頭，且資料在S3中著陸時，將使用AES256演演算法靜態加密。 **此選項優先於S3儲存貯體**&#x200B;上設定的任何預設加密演演算法。</li></ul> 此版本正逐步推出，並將於1月30日前完成。 |
 | [交易台 — CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing)連線的電話號碼啟用支援 | 除了電子郵件地址之外，Trade Desk - CRM目的地現在還支援啟用電話號碼。 您可以對您的Trade Desk帳戶啟用E.164格式的未雜湊電話號碼和雜湊電話號碼（SHA256_E.164格式），以根據CRM資料鎖定對象目標和隱藏對象。 啟用前，電話號碼必須標準化為E.164格式。 |
 
