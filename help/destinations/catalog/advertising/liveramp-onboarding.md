@@ -3,9 +3,9 @@ title: LiveRamp — 入門連線
 description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-Time Customer Data Platform上線到LiveRamp Connect。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b8540eb20838e7f2228d71bfc002392d07daffe4
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1872'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 4%
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
 | 匯出類型 | **[!UICONTROL Audience export]** | 您正在匯出具有[!DNL LiveRamp - Onboarding]目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL Daily batch]** | 由於設定檔會根據對象評估在Experience Platform中更新，因此設定檔（身分）會每天更新一次，從下游傳送到目的地平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
+| 匯出頻率 | **[!UICONTROL Batch]** | 由於設定檔會根據對象評估在Experience Platform中更新，因此設定檔（身分）會更新，並可每日、每週或每月順序向下傳送到目標平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ ht-degree: 4%
 在[!UICONTROL Scheduling]步驟中，使用下列設定為每個對象建立匯出排程。
 
 * **[!UICONTROL File export options]**： [!UICONTROL Export full files]。 [目前不支援](../../ui/activate-batch-profile-destinations.md#export-incremental-files)目的地的增量檔案匯出[!DNL LiveRamp]。
-* **[!UICONTROL Frequency]**：[!UICONTROL Daily]
+* **[!UICONTROL Frequency]**： [!UICONTROL Daily]、[!UICONTROL Weekly]或[!UICONTROL Monthly]
 * **[!UICONTROL Date]**：視需要選取匯出開始和結束時間。
 
 ![Experience Platform UI熒幕擷圖顯示對象排程步驟。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
@@ -255,6 +255,7 @@ abc101@testemailabc.com,active,active,
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
+| 2025 年 2 月 | 功能和檔案更新 | <ul><li> 新增每週和每月傳送節奏的支援。 |
 | 2024 年 3 月 | 功能和檔案更新 | <ul><li>已新增對傳遞給歐洲和澳洲[!DNL LiveRamp]個[!DNL SFTP]執行個體的支援。</li><li>更新檔案，說明新支援地區的特定設定。</li><li>將檔案大小上限從500萬列增加到1,000萬列。</li><li>更新說明檔案，反映檔案大小增加。</li></ul> |
 | 2023 年 7 月 | 首次發行 | 已發佈初始目的地版本和檔案。 |
 
