@@ -83,7 +83,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
 
 ## 連線到目標 {#connect}
 
@@ -134,7 +134,7 @@ ht-degree: 2%
 >id="platform_destinations_required_mappings_ttd"
 >title="預先設定的對應集"
 >abstract="我們已為您預先設定這四個對應集。 當您向交易台啟用資料時，符合啟用對象資格的設定檔不一定要在設定檔上呈現所有四個身分，因為此目的地將可搭配此處顯示的任何目標身分使用。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="深入瞭解預先設定的對應"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="深入瞭解預先設定的對應"
 
 在[支援的身分](#supported-identities)區段中描述的所有目標身分，都必須在對象啟用工作流程的對應步驟中進行對應。 其中包括：
 
