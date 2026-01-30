@@ -2,10 +2,10 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
+source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 20%
+source-wordcount: '1110'
+ht-degree: 22%
 
 ---
 
@@ -31,9 +31,8 @@ Adobe Experience Platform 的新功能及現有功能更新：
 
 - [Agent Orchestrator](#agent-orchestrator)
 - [目標](#destinations)
-- [即時客戶輪廓](#real-time-customer-profile)
-- [結構描述](#schemas)
-- [細分服務](#segmentation-service)
+- [即時客戶設定檔](#real-time-customer-profile)
+- [Segmentation Service](#segmentation-service)
 - [來源](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
@@ -92,18 +91,6 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 {style="table-layout:auto"}
 
 如需詳細資訊，請閱讀 [[!DNL Real-Time Customer Profile]  概觀](../profile/home.md)。
-
-## 結構描述 {#schemas}
-
-Experience Platform使用結構描述，以一致且可重複使用的方式說明資料結構。 藉由定義跨系統的一致資料，將更容易保留意義，進而從資料中獲得價值。 結構描述是由基底類別和零個或多個結構描述欄位群組所組成。
-
-**新功能或更新功能**
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 使用搜尋、篩選、標籤和資料夾進行結構描述詳細目錄現代化 | 結構描述瀏覽頁面已更新，可提供增強的組織和探索功能。 新功能包括進階搜尋和篩選選項、支援使用者產生的標籤和資料夾來組織結構描述，以及內嵌動作來簡化工作流程。 關鍵改進包括：更新欄（名稱、類別、資料集、身分、關係、為設定檔啟用、行為、結構描述型別、標籤、建立日期、上次修改）、進階篩選器（顯示設定檔、結構描述型別、類別、具有任何標籤、建立者、建立日期、修改日期、具有主要身分、具有關係、主要身分名稱空間）、內嵌動作（編輯、刪除、套用標籤、為非關聯式結構描述建立資料集、管理標籤、移動到資料夾、新增到套件、複製JSON結構、下載範例檔案）以及組織能力使用標籤和資料夾的架構。 這些增強功能提供方案資源的全面可見度，並在沙箱層級實現更有效的方案管理。 |
-
-如需詳細資訊，請閱讀 [[!DNL Schemas]  概觀](../xdm/home.md)。
 
 ## 細分服務 {#segmentation-service}
 
