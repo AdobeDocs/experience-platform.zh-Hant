@@ -3,9 +3,9 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: e145dc91fca471078cf94d84ce1012f659d70293
+source-git-commit: 138bfe721bb20fe3ba614a73ffffca3e00979acb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1242'
 ht-degree: 2%
 
 ---
@@ -13,22 +13,6 @@ ht-degree: 2%
 # [!DNL The Trade Desk] 連線
 
 ## 概觀 {#overview}
-
-
->[!IMPORTANT]
->
-> 自2025年7月起進行[內部升級](../../../release-notes/2025/july-2025.md#destinations)至目的地服務後，您可能會注意到資料流中啟用的設定檔數目&#x200B;**有**&#x200B;下降，降至[!DNL The Trade Desk]。
-> 這種下降是由於監視可見性的改善所造成的。 沒有ECID的設定檔現在會在啟用量度中正確計為捨棄。 如需詳細資訊，請參閱此頁面中的[必要對應](#mandatory-mappings)區段。
->
->**變更內容：**
->
->* 目的地服務現在會正確報告何時從啟用中刪除沒有ECID的設定檔。
->* **重要：**&#x200B;在此升級之前，沒有ECID的設定檔從未送達[!DNL The Trade Desk]。 整合一律需要ECID。 此升級會修正先前無法在量度中看到這些下降的錯誤。
->
->**您需要執行的動作：**
->
->* 檢閱您的對象資料，以確認設定檔具有有效的ECID值。
->* 監視您的啟用量度，以驗證預期的設定檔計數。 計數減少反映的是準確的報表，而非目的地行為的變更。
 
 使用此目的地聯結器將設定檔資料傳送至[!DNL The Trade Desk]。 此聯結器會將資料傳送至[!DNL The Trade Desk]第一方端點。 Adobe Experience Platform與[!DNL The Trade Desk]之間的整合不支援匯出資料至[!DNL The Trade Desk]第三方端點。
 
@@ -46,14 +30,14 @@ ht-degree: 2%
 
 以下是[!DNL The Trade Desk]目的地支援的身分。 這些身分識別可用來啟動[!DNL The Trade Desk]的對象。
 
-下表中的所有身分都是強制對應。
+下表中的所有身分都已預先設定，並在啟用期間自動對應。 您不需要在啟動工作流程中手動設定這些對應。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| [!DNL GAID] | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
-| [!DNL IDFA] | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| [!DNL ECID] | Experience Cloud ID | 此身分是整合正常運作的必要條件，但不會用於對象啟用。 |
-| [!DNL Tradedesk] | [!DNL TDID]平台中的[!DNL The Trade Desk] | 根據Trade Desk的專屬ID啟用對象時，請使用此身分識別。 |
+| GAID | GOOGLE ADVERTISING ID | 當GAID出現在設定檔上時啟用。 |
+| IDFA | 廣告商適用的Apple ID | 當IDFA存在於設定檔上時啟動。 |
+| ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
+| [!DNL Tradedesk] | [!DNL TDID]平台中的[!DNL The Trade Desk] | 當設定檔具有ECID，且Experience Platform中存在ECID對交易台ID對應時啟用。 |
 
 {style="table-layout:auto"}
 
@@ -81,9 +65,16 @@ ht-degree: 2%
 
 ## 先決條件 {#prerequisites}
 
->[!IMPORTANT]
->
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您設定的ID同步會移轉到Experience Platform。
+先決條件取決於您計畫用於對象啟用的身分型別：
+
+**僅針對行動識別碼啟用**，沒有先決條件。 只要您收集並管理客戶的ID （GAID及/或IDFA），您就可以開始將受眾啟用至[!DNL The Trade Desk]。
+
+**針對[!DNL The Trade Desk]**&#x200B;上的Cookie型鎖定目標，請確定已在ECID與[!DNL Trade Desk ID]之間建立對應。 請完成下列步驟以執行此操作：
+
+1. **啟用ID同步功能**：如果您是第一次設定[!DNL The Trade Desk ID]啟用，而且您過去尚未在Experience Cloud ID服務中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) (使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。
+   * 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您現有的ID同步會自動傳遞至Experience Platform。
+
+2. **檢測您的網頁**：在您的網頁上實作程式碼，以建立[!DNL The Trade Desk ID]與Adobe ECID之間的對應。 這可讓Experience Platform將交易台ID與您的客戶設定檔建立關聯。
 
 ## 連線到目標 {#connect}
 
@@ -128,41 +119,43 @@ ht-degree: 2%
 
 對應對象時，Adobe建議您使用Experience Platform對象名稱或較短的形式，以方便使用。 不過，您目的地中的對象ID或名稱不需要符合Experience Platform帳戶中的對象ID。 您在對應欄位中插入的任何值都會反映在目的地中。
 
-### 強制對應 {#mandatory-mappings}
+### 預先設定的對應 {#preconfigured-mappings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="預先設定的對應集"
 >abstract="我們已為您預先設定這四個對應集。 當您向交易台啟用資料時，符合啟用對象資格的設定檔不一定要在設定檔上呈現所有四個身分，因為此目的地將可搭配此處顯示的任何目標身分使用。 <br>若要根據交易台ID進行Cookie型鎖定目標，您需要出現在設定檔上的ECID，以及交易台ID與ECID之間的ID同步對應。"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="深入瞭解預先設定的對應"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="深入瞭解預先設定的對應"
 
-在[支援的身分](#supported-identities)區段中描述的所有目標身分，都必須在對象啟用工作流程的對應步驟中進行對應。 其中包括：
+下列身分對應已預先設定&#x200B;**並在對象啟用工作流程中自動為您填入**：
 
-* [!DNL GAID] (Google Advertising ID)
-* [!DNL IDFA] (廣告商的Apple ID)
-* [!DNL ECID] (Experience Cloud ID)
+* GAID (Google Advertising ID)
+* IDFA (廣告商的Apple ID)
+* ECID (Experience Cloud ID)
 * [!DNL The Trade Desk ID]
 
 ![顯示必要對應的熒幕擷圖](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
-對應所有目標身分可確保啟用可以使用任何存在的身分正確分割並傳遞設定檔。 這並不表示所有身分都必須出現在每個設定檔上。
+這些對應會呈現灰色，而且是唯讀的。 您不需要在此步驟中設定任何專案。 選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
-若要成功匯出至交易台，設定檔必須包含：
+Experience Platform會自動檢查屬於啟用工作流程中對應之對象的每個設定檔，以取得所有支援的身分型別，然後使用出現的任何身分啟用設定檔。
 
-* [!DNL ECID]，和
-* 至少一個： [!DNL GAID]、[!DNL IDFA]或[!DNL The Trade Desk ID]
+### 依啟用型別區分的身分需求
 
-範例：
+**行動ID啟用(GAID/IDFA)：**&#x200B;只包含GAID或IDFA的設定檔就足以啟用。 不需要其他身分或先決條件。
 
-* 僅限[!DNL ECID]：未匯出
-* [!DNL ECID] + [!DNL The Trade Desk ID]：已匯出
-* [!DNL ECID] + [!DNL IDFA]：已匯出
-* [!DNL ECID] + [!DNL GAID]：已匯出
-* [!DNL IDFA] + [!DNL The Trade Desk ID] （無[!DNL ECID]）：未匯出
+**Cookie型鎖定目標([!DNL Trade Desk ID])：**&#x200B;需要兩者：
 
->[!NOTE]
-> 
->在[2025年7月](/help/release-notes/2025/july-2025.md#destinations)升級到目的地服務後，遺失[!DNL ECID]的設定檔現在會在啟用量度中正確回報為已捨棄。 整合的行為一律如此 — 沒有[!DNL ECID]的設定檔從未到達[!DNL The Trade Desk] — 但卸料現在可正確顯示在資料流監視中。 較低的啟用計數反映的是準確的報表，而非目的地功能的變更。
+* 設定檔上存在ECID
+* [!DNL Trade Desk ID]與ECID之間的ID同步對應（如[必要條件](#prerequisites)一節中所述進行設定）
+
+**多個ID行為：**&#x200B;如果設定檔包含多個支援的身分，則每個身分將分別啟動至[!DNL The Trade Desk]。 這可確保您的受眾啟動具有最大的觸及率和彈性。
+
+### 啟用範例
+
+* **行動ID設定檔：**&#x200B;具有GAID和/或IDFA的設定檔已使用各自的廣告ID啟用。 如果設定檔同時包含GAID和IDFA，則每個ID將分別啟動。
+* **以Cookie為基礎的設定檔：**&#x200B;將使用Trade Desk ID來啟動具有ECID與對應[!DNL Trade Desk ID]對應的設定檔，以進行Cookie型目標定位。
+* **僅限ECID的設定檔：**&#x200B;僅具有ECID且沒有[!DNL Trade Desk ID]對應的設定檔&#x200B;**將不會匯出**。 ECID本身不足以啟動。
 
 ## 匯出的資料 {#exported-data}
 

@@ -3,9 +3,9 @@ keywords: 廣告；bing；
 title: Microsoft Bing連線
 description: 透過Microsoft Bing連線目的地，您可以在整個Microsoft Advertising網路（包括顯示廣告、搜尋和原生）中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: e75a5562820490bc56adaa1d21e4066fc649cc44
+source-git-commit: ec31c1d967be4764b22f735429e2f9437f31ed20
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '918'
 ht-degree: 5%
 
 ---
@@ -14,26 +14,9 @@ ht-degree: 5%
 
 ## 概觀 {#overview}
 
-
->[!IMPORTANT]
->
->從2025年8月內部升級至目的地服務後，您的資料流中啟用的設定檔數目&#x200B;**可能會減少至**。[!DNL Microsoft Bing]
->
-> 這個下降是由於針對這個目的地平台的所有啟用引入&#x200B;**ECID對應需求**&#x200B;所造成。 如需詳細資訊，請參閱此頁面中的[必要對應](#mandatory-mappings)區段。
->
->**變更內容：**
->
->* ECID (Experience Cloud ID)對應現在是所有設定檔啟用的&#x200B;**必要**。
->* 沒有ECID對應的設定檔將會從現有的啟用資料流中&#x200B;**捨棄**。
->
->**您需要執行的動作：**
->
->* 檢閱您的對象資料，以確認設定檔具有有效的ECID值。
->* 監視您的啟用量度，以驗證預期的設定檔計數。
-
 使用[!DNL Microsoft Bing]目的地將設定檔資料傳送至整個[!DNL Microsoft Advertising Network]，包括[!DNL Display Advertising]、[!DNL Search]和[!DNL Native]。
 
-[!DNL Microsoft Bing]目的地會在Microsoft中建立&#x200B;*[!DNL Custom Audiences]*。 如[!DNL Microsoft Search Network]Microsoft Advertising檔案[!DNL Audience Network]所列，這些在[!DNL Native]和[!DNL Display] ([!DNL Programmatic] /[&#x200B; /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))中均可用。
+[!DNL Microsoft Bing]目的地會在Microsoft中建立&#x200B;*[!DNL Custom Audiences]*。 如[!DNL Microsoft Search Network]Microsoft Advertising檔案[!DNL Audience Network]所列，這些在[!DNL Native]和[!DNL Display] ([!DNL Programmatic] /[ /](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500))中均可用。
 
 若要將設定檔資料傳送至[!DNL Microsoft Bing]，您必須先連線至目的地。
 
@@ -45,10 +28,12 @@ ht-degree: 5%
 
 [!DNL Microsoft Bing]支援根據下表所示的身分啟用對象。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-| 身分識別 | 說明 |
-|---|---|
-| MAID | MICROSOFT ADVERTISING ID |
-| ECID | Experience Cloud ID。 此身分是整合正常運作的必要條件，但不會用於對象啟用。 |
+下表中的所有身分都已預先設定，並在啟用期間自動對應。 您不需要手動設定這些對應。
+
+| 身分識別 | 說明 | 考量事項 |
+|---|---|---|
+| MAID | MICROSOFT ADVERTISING ID | 當設定檔上存在Microsoft Advertising ID時啟動。 |
+| ECID | Experience Cloud ID | **必要。**&#x200B;所有設定檔都必須有ECID，且具有要匯出的對應Microsoft Advertising ID。 |
 
 {style="table-layout:auto"}
 
@@ -78,9 +63,12 @@ ht-degree: 5%
 
 ## 先決條件 {#prerequisites}
 
->[!IMPORTANT]
->
->如果您想要使用[!DNL Microsoft Bing]建立您的第一個目的地，而且過去尚未在Experience Cloud ID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=zh-Hant)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您設定的ID同步會移轉到Experience Platform。
+[!DNL Microsoft Bing]目的地需要下列安裝程式才能正常運作：
+
+1. **啟用ID同步功能**：如果您是第一次設定[!DNL Microsoft Bing]啟用，而且您過去尚未在Experience Cloud ID服務中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) (使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。
+   * 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您現有的ID同步會自動結轉到Experience Platform。
+
+2. **確認設定檔上的ECID**：所有設定檔都必須有ECID，才能成功匯出。 此目的地的ECID為&#x200B;**必要**。
 
 設定目的地時，您必須提供下列資訊：
 
@@ -119,7 +107,7 @@ ht-degree: 5%
 >id="platform_destinations_required_mappings_bing"
 >title="預先設定的對應集"
 >abstract="我們已為您預先設定這兩個對應集。 當您啟用資料至Microsoft Bing時，符合啟用對象資格的設定檔必須至少有一個與其設定檔相關聯的ECID身分識別，才能成功匯出至目的地。"
->additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="深入瞭解預先設定的對應"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="深入瞭解預先設定的對應"
 
 >[!IMPORTANT]
 > 
@@ -131,14 +119,24 @@ ht-degree: 5%
 
 ![顯示對象排程畫面的UI影像，其中包含如何將對象名稱對應至Bing對應ID的範例。](../../assets/catalog/advertising/bing/mapping-id.png)
 
-### 強制對應 {#mandatory-mappings}
+### 預先設定的對應 {#preconfigured-mappings}
 
-[支援的身分](#supported-identities)區段中說明的所有目標身分都是強制性的，必須在對象啟用程式期間進行對應。 其中包括：
+下列身分對應已預先設定&#x200B;**，並在對象啟用工作流程期間自動填入**：
 
 * **MAID** (Microsoft Advertising ID)
 * **ECID** (Experience Cloud ID)
 
-無法對應所有必要的身分，導致您無法完成啟動工作流程。 每個身分在整合中都有不同的用途，而目的地若要正常運作，則全部為必填。
+這些對應會呈現灰色，而且是唯讀的。 您不需要在此步驟中設定任何專案。 選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
+
+>[!IMPORTANT]
+>
+>需要&#x200B;**ECID才能成功匯出。**&#x200B;在ECID與Microsoft Advertising ID之間沒有ECID或沒有ID同步對應的設定檔將不會匯出。
+
+### 啟用範例
+
+* **具有ECID與Microsoft Advertising ID對應的設定檔：**&#x200B;已成功匯出和啟動
+* **只有ECID的設定檔(沒有Microsoft Advertising ID對應)：**&#x200B;設定檔&#x200B;**未匯出**。 需要ECID與MAID之間的ID同步對應。
+* 不含ECID的&#x200B;**設定檔：**&#x200B;設定檔&#x200B;**未匯出**。 此目的地必須有ECID。
 
 ## 匯出的資料 {#exported-data}
 
