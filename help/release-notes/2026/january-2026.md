@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2026 年 1 月)
 description: Adobe Experience Platform 2026 年 1 月版發行說明。
-source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
+source-git-commit: 76b2537b47c0f7bdf115afdec655a1de8460384c
 workflow-type: tm+mt
-source-wordcount: '1529'
-ht-degree: 18%
+source-wordcount: '1621'
+ht-degree: 21%
 
 ---
 
@@ -40,7 +40,7 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 
 | 功能 | 說明 |
 | --- | --- |
-| Adobe Experience Platform代理程式使用範圍試用版 | **選取的客戶現在可免費試用存取Adobe Experience Platform代理程式**。 您可以透過由Adobe Experience Platform Agent Orchestrator提供支援的AI Assistant介面，使用試用版來探索代理程式並與之互動。 此試用版提供在客戶現有Experience Cloud產品和環境的環境中操作的AI代理程式實際操作體驗，讓團隊在承諾完整購買之前可評估價值。 Adobe Experience Platform代理程式受到使用者輸入和監督的指導，並遵守現有的產品層級存取控制，確保使用者只能執行或檢視他們在基礎Experience Cloud應用程式中為其授權的資料。 如需如何開始使用的詳細資訊，請參閱[Experience Platform代理程式使用繫結試用概覽](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)。 |
+| Adobe Experience Platform代理程式使用範圍試用版 | **選取的客戶現在可免費試用存取Adobe Experience Platform代理程式**。 您可以透過由Adobe Experience Platform Agent Orchestrator提供支援的AI Assistant介面，使用試用版來探索代理程式並與之互動。 此試用版提供在客戶現有Experience Cloud產品和環境的環境中操作的AI代理程式實際操作體驗，讓團隊在承諾完整購買之前可評估價值。 Adobe Experience Platform代理程式受到使用者輸入和監督的指導，並遵守現有的產品層級存取控制，確保使用者只能執行或檢視他們在基礎Experience Cloud應用程式中為其授權的資料。 如需如何開始使用的詳細資訊，請參閱[Experience Platform代理程式使用繫結試用概覽](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)。 |
 
 {style="table-layout:auto"}
 
@@ -87,6 +87,7 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 | [串流容量](/help/landing/license-usage-and-guardrails/capacity.md)強制執行 | Experience Platform現在為即時客戶個人資料和身分服務強制執行串流輸送量容量。 當客戶超過其合約的串流容量時，資料將會以先進先出方式排入佇列及處理。 這可確保可預測的系統效能，並防止容量違規影響資料擷取品質。 重要注意事項: <ul><li>超過容量時，資料湖上將沒有串流更新插入可用</li><li>此強制不適用於擁有Adobe Journey Optimizer授權的客戶</li><li>一旦容量可用，已排入佇列的資料將依序處理。</li></ul> 如需詳細資訊，請閱讀[容量概觀](/help/landing/license-usage-and-guardrails/capacity.md)。 |
 | 實體查詢淘汰 | 所有Real-Time CDP Prime客戶現已棄用實體查詢API來查詢體驗事件。 此項淘汰有助於Real-Time CDP與授權功能保持一致。 想要使用此功能的Real-Time CDP Ultimate客戶可以聯絡Adobe客戶服務以重新啟用此功能。  如需詳細資訊，請閱讀[entities API指南](/help/profile/api/entities.md)。 |
 | 監視設定檔擷取工作狀態 | 您現在可以監視批次設定檔擷取資料流執行的工作層級進度百分比。 此功能可即時顯示批次擷取工作的目前進度，包括指出擷取是否已準備好進行客戶細分和Adobe Journey Optimizer查詢的重要查核點。 對於可能需要數小時處理的大型擷取，此進度透明度可協助您瞭解工作是否正常進行或遇到問題，減少資料處理期間的不確定性。如需詳細資訊，請參閱[監視器設定檔指南](/help/dataflows/ui/monitor-profiles.md)。 |
+| 設定檔檢視器增強功能(GA) | 以下是「設定檔檢視器」的增強功能，現已正式推出。 <ul><li>**合併檢視**：屬性、事件和洞察已經合併至單一視圖。</li><li>**AI 生成的洞察**：現在，輪廓詳細資訊頁面會顯示 AI 生成的洞察，讓您了解利用輪廓產生的詳細資料。這些洞察可能包括傾向分數和趨勢分析等資訊。</li><li>**樣式更新**：輪廓詳細資料頁面已經更新其視覺外觀。</li><li>**瀏覽**：您現在可以利用互動式卡片輪播，透過搜尋和自訂功能來探索各個輪廓。</li></ul> 如需詳細資訊，請閱讀[設定檔檢視器指南](/help/profile/ui/user-guide.md)。 |
 
 {style="table-layout:auto"}
 

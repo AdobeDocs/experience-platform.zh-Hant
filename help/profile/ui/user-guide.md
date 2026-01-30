@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1924'
 ht-degree: 4%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 4%
 
 在&#x200B;**[!UICONTROL Browse]**&#x200B;索引標籤上，您可以選取切換按鈕，在&#x200B;**卡片**&#x200B;檢視或&#x200B;**圖形**&#x200B;檢視中檢視您的設定檔。
 
-![卡片與圖表檢視切換會反白顯示。](../images/user-guide/card-graph-view.png)
+![卡片與圖表檢視切換會反白顯示。](../images/user-guide/change-browse-view.png)
 
 此外，您可以使用合併原則來瀏覽設定檔，或使用身分名稱空間和值來查詢特定設定檔。
 
@@ -127,7 +127,9 @@ ht-degree: 4%
 
 #### AI 洞察小工具 {#ai-insight-widgets}
 
-[!BADGE Alpha]{type=Informative}此功能目前在Alpha中。
+>[!IMPORTANT]
+>
+>如果您是Healthcare Shield客戶，您將&#x200B;**無法**&#x200B;使用AI insight Widget。
 
 **[!UICONTROL AI insight widgets]**&#x200B;區段會顯示AI產生的Widget。 這些介面工具會根據設定檔資料，包括人口統計（例如年齡、性別或位置）、使用者行為（例如購買記錄、網站活動或社群媒體參與）以及心理變數（例如興趣、偏好或生活方式選擇），提供對設定檔的快速深入分析。 所有AI Widget都使用設定檔中已&#x200B;**存在**&#x200B;的資料。
 
@@ -146,8 +148,6 @@ ht-degree: 4%
 ![顯示名稱切換已反白顯示。](../images/user-guide/show-display-names.png)
 
 #### 自動分類的小工具 {#auto-classified-widgets}
-
-[!BADGE Alpha]{type=Informative}此功能目前在Alpha中。
 
 **[!UICONTROL Auto-classified widgets]**&#x200B;區段顯示的小工具可運用聯合結構描述來判斷屬性所屬的來源欄位群組，提供更清楚的資料來源內容。 您可以使用搜尋列更輕鬆地在Widget中尋找關鍵字。
 
