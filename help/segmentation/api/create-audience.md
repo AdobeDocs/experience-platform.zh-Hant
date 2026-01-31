@@ -4,9 +4,9 @@ description: 瞭解如何使用API為外部對象建立中繼資料。
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
+source-git-commit: ea7fd13675a95941be7267f1cf75056b224efcd3
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '264'
 ht-degree: 6%
 
 ---
@@ -61,7 +61,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
  -H 'Accept: application/vnd.adobe.external.audiences+json; version=2'
  -d '{
     "name": "Sample audience name",
-    "description" "A sample description for the audience.",
+    "description": "A sample description for the audience.",
+    "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7",
     "namespace": "agora",
     "originName": "Agora_Collaboration"
  }'
@@ -71,6 +72,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 | -------- | ---- | ----------- |
 | `name` | 字串 | 對象的名稱。 |
 | `description` | 字串 | 適用於對象的說明（選用）。 |
+| `audienceId` | 字串 | 外部為對象產生的ID。 |
 | `namespace` | 字串 | 對象的名稱空間。 |
 | `originName` | 字串 | 對象來源的名稱。 |
 
@@ -80,6 +82,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 
 ```json
 {
+    "id": "6bb1ee15-8f64-49fd-bce3-d5c2f22f1f14",
     "name": "Sample audience name",
     "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7"
 }
@@ -87,5 +90,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 
 | 屬性 | 類型 | 說明 |
 | -------- | ---- | ----------- |
+| `id` | 字串 | 系統產生的對象識別碼。 |
 | `name` | 字串 | 您建立的對象名稱。 |
-| `audienceId` | 字串 | 您建立的對象ID。 |
+| `audienceId` | 字串 | 您建立之對象的外部提供ID。 |
