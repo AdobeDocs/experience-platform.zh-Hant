@@ -71,7 +71,7 @@ ht-degree: 2%
 
 **針對[!DNL The Trade Desk]**&#x200B;上的Cookie型鎖定目標，請確定已在ECID與[!DNL Trade Desk ID]之間建立對應。 請完成下列步驟以執行此操作：
 
-1. **啟用ID同步功能**：如果您是第一次設定[!DNL The Trade Desk ID]啟用，而且您過去尚未在Experience Cloud ID服務中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) (使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。
+1. **啟用ID同步功能**：如果您是第一次設定[!DNL The Trade Desk ID]啟用，而且您過去尚未在Experience Cloud ID服務中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync) (使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。
    * 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您現有的ID同步會自動傳遞至Experience Platform。
 
 2. **檢測您的網頁**：在您的網頁上實作程式碼，以建立[!DNL The Trade Desk ID]與Adobe ECID之間的對應。 這可讓Experience Platform將交易台ID與您的客戶設定檔建立關聯。
@@ -125,7 +125,7 @@ ht-degree: 2%
 >id="platform_destinations_required_mappings_ttd"
 >title="預先設定的對應集"
 >abstract="我們已為您預先設定這四個對應集。 當您向交易台啟用資料時，符合啟用對象資格的設定檔不一定要在設定檔上呈現所有四個身分，因為此目的地將可搭配此處顯示的任何目標身分使用。 <br>若要根據交易台ID進行Cookie型鎖定目標，您需要出現在設定檔上的ECID，以及交易台ID與ECID之間的ID同步對應。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="深入瞭解預先設定的對應"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="深入瞭解預先設定的對應"
 
 下列身分對應已預先設定&#x200B;**並在對象啟用工作流程中自動為您填入**：
 
