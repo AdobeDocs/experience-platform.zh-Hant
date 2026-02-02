@@ -3,10 +3,10 @@ title: Salesforce Marketing Cloud Source概觀
 description: 瞭解如何使用API或使用者介面將Salesforce Marketing Cloud連線至Adobe Experience Platform。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 1%
+source-wordcount: '639'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud]來源將於2026年1月汰除。 新的來源將作為替代方案於今年晚些時候發行。 釋放新來源後，您必須在2026年1月底之前建立新的帳戶連線和資料流，以計畫移轉至新來源。
+>[!DNL Oracle Salesforce Marketing Cloud]來源現已棄用，無法再使用。 使用新的[[!DNL Salesforce Marketing Cloud] (V2)來源](sfmc.md)作為您[!DNL Salesforce Marketing Cloud]資料的新聯結器。
 
 [!DNL Salesforce Marketing Cloud]可讓您從單一平台管理電子郵件、行動裝置、社群媒體和廣告的客戶參與並使其自動化。 使用Email Studio、Journey Builder和Audience Builder等工具，您可以建立針對對象量身打造的個人化行銷活動和客戶歷程。
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 * `campaign_read`
 * `list_and_subscribers_read`
 
-您可以呼叫[!DNL Salesforce Marketing Cloud] API的`v2/userinfo`資源來要求範圍。 如需如何要求與比較範圍的指引，請參閱[[!DNL Salesforce Marketing Cloud] API整合許可權範圍檔案](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>)。
+您可以呼叫`v2/userinfo` API的[!DNL Salesforce Marketing Cloud]資源來要求範圍。 如需如何要求與比較範圍的指引，請參閱[[!DNL Salesforce Marketing Cloud] API整合許可權範圍檔案](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>)。
 
 如需有關範圍的詳細資訊，包括其相關許可權和行為清單，請參閱此[[!DNL Salesforce Marketing Cloud] REST API檔案](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>)。
 

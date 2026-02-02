@@ -1,7 +1,8 @@
 ---
 title: Oracle Eloqua (V2) Source概觀
 description: 瞭解如何將Oracle Eloqua連結至Adobe Experience Platform。
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+last-substantial-update: 2025-02-02T00:00:00Z
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
 source-wordcount: '1824'
 ht-degree: 2%
@@ -45,7 +46,7 @@ ht-degree: 2%
 
 瀏覽至&#x200B;**設定** > **平台擴充功能** > **應用程式雲端開發人員** > **建立應用程式**。 提供您應用程式的詳細資料，包括其名稱、說明、圖示和OAuth回呼URL。 完成時選取&#x200B;**儲存**。
 
-![&#x200B; Eloqua儀表板中的「應用程式開發人員」面板和「建立應用程式」按鈕。](../../images/tutorials/create/eloqua/create-app.png)
+![ Eloqua儀表板中的「應用程式開發人員」面板和「建立應用程式」按鈕。](../../images/tutorials/create/eloqua/create-app.png)
 
 | 屬性 | 說明 |
 | --- | --- |

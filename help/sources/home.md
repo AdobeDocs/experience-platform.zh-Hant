@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1667'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+下列來源僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
@@ -240,11 +240,11 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | 串流 | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | 批次 | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | 批次 | Azure |
-| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | 批次 | Azure |
+| [[!DNL Oracle Eloqua] (V2)](connectors/marketing-automation/eloqua.md) | 批次 | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | 批次 | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | 批次 | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | 串流 | Azure |
-| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | 批次 | Azure、AWS |
+| [[!DNL Salesforce Marketing Cloud] (V2)](connectors/marketing-automation/sfmc.md) | 批次 | Azure |
 
 {style="table-layout:auto"}
 
