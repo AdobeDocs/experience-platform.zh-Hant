@@ -2,13 +2,13 @@
 keywords: rtcdp b2b；b2b；帳戶；帳戶設定檔；帳戶設定檔rtcdp；即時客戶資料平台；
 title: Real-Time CDP B2B edition中的帳戶設定檔
 description: 了解 Adobe Real-Time Customer Data Platform B2B Edition 如何讓您使用帳戶設定檔整合來自多個來源的帳戶資訊。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 769d83155ae70516a296b71baec37d797dd81f34
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 7%
+source-wordcount: '339'
+ht-degree: 6%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 7%
 ## 帳戶設定檔檢視器
 
 透過Real-Time CDP和B2B edition，您可以使用Experience Platform使用者介面檢視帳戶設定檔，並使用連線企業來源的帳戶ID或直接輸入來源詳細資料來搜尋特定帳戶。 如需有關如何在Experience Platform UI中檢視帳戶設定檔的詳細資訊，請參閱[帳戶設定檔UI指南](account-profile-ui-guide.md)。
+
+>[!IMPORTANT]
+>
+>帳戶設定檔需要啟用每日批次分段評估，才能顯示資料。 確保已設定並排程批次細分，以維護準確的帳戶設定檔資訊。 如需詳細資訊，請參閱[批次分段指南](../../segmentation/methods/batch-segmentation.md)。
 
 ## 建立及啟用帳戶對象
 
