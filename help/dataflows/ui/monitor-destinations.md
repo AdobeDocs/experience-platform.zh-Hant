@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
+source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3542'
 ht-degree: 10%
 
 ---
@@ -142,7 +142,7 @@ ht-degree: 10%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -371,7 +371,7 @@ ht-degree: 10%
 - **[!UICONTROL IMS org ID]**：資料流所屬的組織。
 - **[!UICONTROL Last updated]**：上次更新資料流執行的時間。
 
-詳細資訊頁面也會進行切換，以在資料流執行錯誤和對象之間切換。 此選項僅適用於批次目的地中的資料流執行，以及[Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md)串流目的地。
+詳細資訊頁面也會進行切換，以在資料流執行錯誤和對象之間切換。 此選項適用於[對象層級檢視](#segment-level-view)區段中所列的目的地。
 
 資料流執行錯誤檢視會顯示失敗的記錄清單和略過的記錄清單。 顯示失敗和略過的記錄資訊，包括錯誤代碼、身分計數和說明。 依預設，清單會顯示失敗的記錄。 若要顯示略過的記錄，請選取&#x200B;**[!UICONTROL Records skipped]**&#x200B;切換按鈕。
 
