@@ -3,9 +3,9 @@ title: Salesforce Marketing Cloud Source概觀
 description: 瞭解如何使用API或使用者介面將Salesforce Marketing Cloud連線至Adobe Experience Platform。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+source-git-commit: 7481a4c85f14847c13d20372dc7bd26c92a5c3d4
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '638'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->[!DNL Oracle Salesforce Marketing Cloud]來源現已棄用，無法再使用。 使用新的[[!DNL Salesforce Marketing Cloud] (V2)來源](sfmc.md)作為您[!DNL Salesforce Marketing Cloud]資料的新聯結器。
+>[!DNL Oracle Salesforce Marketing Cloud]來源現已棄用且不再可用。 使用新的[[!DNL Salesforce Marketing Cloud] (V2)來源](sfmc.md)作為您[!DNL Salesforce Marketing Cloud]資料的新聯結器。
 
 [!DNL Salesforce Marketing Cloud]可讓您從單一平台管理電子郵件、行動裝置、社群媒體和廣告的客戶參與並使其自動化。 使用Email Studio、Journey Builder和Audience Builder等工具，您可以建立針對對象量身打造的個人化行銷活動和客戶歷程。
 
