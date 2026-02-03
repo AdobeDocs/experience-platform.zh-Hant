@@ -1,7 +1,8 @@
 ---
 title: 索引交換
 description: 連線至Index Exchange （索引）並啟用您的資料，以便在索引UI中建立的交易鎖定您的對象區段。
-source-git-commit: 4ecd3b60a6b45a94285785049fd4dee99d7c9bdf
+last-substantial-update: 2026-01-27T00:00:00Z
+source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 2%
@@ -114,7 +115,7 @@ ht-degree: 2%
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警示以接收有關您資料流到此目的地的狀態通知。 從清單中選取一或多個警報，以訂閱資料流的狀態通知。 如需詳細資訊，請參閱[使用UI訂閱目的地警示指南](../../ui/alerts.md)。
-當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
+當您完成提供目的地連線的詳細資訊時，請選取**[!UICONTROL Next]**。
 
 ## 啟用此目的地的區段 {#activate}
 

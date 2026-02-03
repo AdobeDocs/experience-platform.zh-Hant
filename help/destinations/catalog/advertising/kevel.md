@@ -1,7 +1,8 @@
 ---
 title: Kevel Connection
 description: 使用Kevel串流目的地，直接在Kevel的UserDB和區段管理API中啟用對象，並支援在決策時的即時鎖定目標。
-source-git-commit: d820485fd81efd08d8626f8476338558c4585c20
+last-substantial-update: 2026-01-27T00:00:00Z
+source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 3%
@@ -53,7 +54,7 @@ Adobe Experience Platform的[!DNL Kevel]串流目的地可讓客戶直接在[!DN
 
 [!DNL Kevel]目的地&#x200B;**也接受自訂名稱空間** (如您的Experience Platform實作中所定義)。
 
-這表示：
+這表示:
 
 - 您可以對應&#x200B;**客戶特定的身分識別名稱空間** （例如： `loyalty_id`、`gigya_id`，或您在Identity Service中定義的任何自訂身分）。
 - 這些名稱空間可指派給`kevel_user_key1`、`kevel_user_key2`或`kevel_user_key3`，方式與全域名稱空間相同。

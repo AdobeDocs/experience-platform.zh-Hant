@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2026 年 1 月)
 description: Adobe Experience Platform 2026 年 1 月版發行說明。
-source-git-commit: 76b2537b47c0f7bdf115afdec655a1de8460384c
+source-git-commit: a8eefb3330d0de21fbb8648593eb912c063529d7
 workflow-type: tm+mt
-source-wordcount: '1621'
-ht-degree: 21%
+source-wordcount: '1532'
+ht-degree: 22%
 
 ---
 
@@ -40,7 +40,7 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 
 | 功能 | 說明 |
 | --- | --- |
-| Adobe Experience Platform代理程式使用範圍試用版 | **選取的客戶現在可免費試用存取Adobe Experience Platform代理程式**。 您可以透過由Adobe Experience Platform Agent Orchestrator提供支援的AI Assistant介面，使用試用版來探索代理程式並與之互動。 此試用版提供在客戶現有Experience Cloud產品和環境的環境中操作的AI代理程式實際操作體驗，讓團隊在承諾完整購買之前可評估價值。 Adobe Experience Platform代理程式受到使用者輸入和監督的指導，並遵守現有的產品層級存取控制，確保使用者只能執行或檢視他們在基礎Experience Cloud應用程式中為其授權的資料。 如需如何開始使用的詳細資訊，請參閱[Experience Platform代理程式使用繫結試用概覽](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)。 |
+| Adobe Experience Platform代理程式使用範圍試用版 | **選取的客戶現在可免費試用存取Adobe Experience Platform代理程式**。 您可以透過由Adobe Experience Platform Agent Orchestrator提供支援的AI Assistant介面，使用試用版來探索代理程式並與之互動。 此試用版提供在客戶現有Experience Cloud產品和環境的環境中操作的AI代理程式實際操作體驗，讓團隊在承諾完整購買之前可評估價值。 Adobe Experience Platform代理程式受到使用者輸入和監督的指導，並遵守現有的產品層級存取控制，確保使用者只能執行或檢視他們在基礎Experience Cloud應用程式中為其授權的資料。 如需如何開始使用的詳細資訊，請參閱[Experience Platform代理程式使用繫結試用概覽](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)。 |
 
 {style="table-layout:auto"}
 
@@ -59,10 +59,11 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 | 硬碟連線的區域端點支援 | [支援的所有](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints)區域特定端點[!DNL Braze]現在都可在目的地組態流程期間選擇。 請詢問您的[!DNL Braze]代表您應該使用哪個端點執行個體。 |
 | 每週和每月排程支援[Liveramp上線](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | 您現在可以設定Liveramp入門目的地的每週和每月匯出排程。 <br>此版本正在逐步推出，並將於1月30日前完成。 |
 | 加強[交易台](../../destinations/catalog/advertising/tradedesk.md)和[Microsoft Bing](../../destinations/catalog/advertising/bing.md)目的地的啟用體驗 | Trade Desk和Microsoft Bing目的地現在包含預先定義的強制對應，以便提供最佳化的啟用體驗。  <br>此版本正在逐步推出，並將於1月30日前完成。 ![顯示交易台](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br>預先定義的對應的影像 ![影像顯示Microsoft Bing預先定義的對應](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
-| [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details)目的地的AES256加密支援 | 您現在可以為Amazon S3匯出設定AES256加密。 有兩個可用選項： <ul><li>**[!UICONTROL Default]**：資料將使用儲存貯體上設定的預設加密演演算法靜態加密。</li><li>**[!UICONTROL SSE-S3/AES256]**： Experience Platform在匯出中新增`s3:x-amz-server-side-encryption": "AES256`標頭，且資料在S3中著陸時，將使用AES256演演算法靜態加密。 **此選項優先於S3儲存貯體**&#x200B;上設定的任何預設加密演演算法。</li></ul> 此版本正逐步推出，並將於1月30日前完成。 |
 | [交易台 — CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing)連線的電話號碼啟用支援 | 除了電子郵件地址之外，Trade Desk - CRM目的地現在還支援啟用電話號碼。 您可以對您的Trade Desk帳戶啟用E.164格式的未雜湊電話號碼和雜湊電話號碼（SHA256_E.164格式），以根據CRM資料鎖定對象目標和隱藏對象。 啟用前，電話號碼必須標準化為E.164格式。 |
 | [Snowflake批次](../../destinations/catalog/warehouses/snowflake-batch.md)目的地更新 | Snowflake批次目的地現在包含目的地設定期間的區域選擇功能。 您現在可以選取您的執行個體布建所在的特定Snowflake區域，確保最佳資料傳輸並符合區域要求。 此外，預設的合併原則限制已移除，可讓您匯出對應至任何合併原則的對象。 <br> [!DNL Snowflake]批次目的地目前僅適用於Experience Platform VA7區域中布建的Real-Time CDP客戶。 |
 
+
+<!-- |AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <ul><li>**[!UICONTROL Default]**: Data will be encrypted at rest with the default encryption algorithm set on your bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest with the AES256 algorithm when it lands in S3. **This option takes precedence over any default encryption algorithm configured on your S3 bucket**.</li></ul> This release is being rolled out gradually and will be complete by January 30th.| -->
 
 **全新或更新版功能**
 
