@@ -3,9 +3,9 @@ title: Acxiom對象連線
 description: 使用 [!DNL Acxiom Audience Connection] 目的地以 [!DNL Acxiom's Real ID] 技術增強受眾，並啟用多個平台的受眾，例如 [!DNL Altice]、 [!DNL Ampersand]、 [!DNL Comcast]等。
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
+source-git-commit: 582b8b681163a0e40908cf36ba317954a32f73d0
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '872'
 ht-degree: 7%
 
 ---
@@ -32,8 +32,8 @@ ht-degree: 7%
 
 ## 先決條件 {#prerequisites}
 
-* **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom Audience Connection]使用條款合約，才能設定新的[!DNL Acxiom's]目的地。 執行銷售訂單完成後，您將會收到合約的連結。 在您簽署合約之前，不會在Experience Platform目的地目錄中看到[!DNL Acxiom Audience Connection]目的地卡片。 在您接受並簽署合約後，[!DNL Adobe]將完成您的上線程式，您將會看到[!DNL Acxiom Audience Connection]目的地卡。
-* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
+* **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom Audience Connection]使用條款合約，才能設定新的[!DNL Acxiom's]目的地。 執行銷售訂單完成後，您將會收到合約的連結。
+* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -67,8 +67,8 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 讀取[啟用批次設定檔匯出目的地的對象資料](/help/destinations/ui/activate-batch-profile-destinations.md)，以取得啟用此目的地對象的指示。
 
@@ -82,7 +82,7 @@ ht-degree: 7%
 
 [!DNL Acxiom Audience Connection]僅允許對應到以下目標欄位。 下表所述的目標欄位必須以下列順序對應。
 
-| 欄位名稱 | 說明 | 必填 | 欄位順序 | 最大長度 |
+| 欄位名稱 | 說明 | 必要 | 欄位順序 | 最大長度 |
 |---|---|---|---|---|          
 | 名字 | 個人的名字 | 無 | 1 | 255 |
 | 靠中間 | 個人的中間名或首字母 | 無 | 2 | 50 |
@@ -96,18 +96,18 @@ ht-degree: 7%
 | 電子郵件 | 主要電子郵件依預設，此欄位會作為重複資料刪除索引鍵，讓記錄具有唯一性 | 無 | 10 | 255 |
 | 電話 | 個人的電話號碼（區碼+號碼）<br>依預設，此欄位會作為重複資料刪除索引鍵，讓記錄具有唯一性。 | 無 | 11 | 10 |
 
-在&#x200B;**[!UICONTROL Source欄位]**&#x200B;欄位中，輸入要對應至對應目標欄位的每個來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;畫面。<br>
+在「**[!UICONTROL Source Field]**」欄中，輸入要對應至對應目標欄位的每個來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL  Select source field]**&#x200B;畫面。<br>
 ![對應熒幕](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
-在您對應所有欄位後，選取&#x200B;**[!UICONTROL 下一步]**。
+在您對應所有欄位後，請選取&#x200B;**[!UICONTROL Next]**。
 
 如果您未使用[!DNL Adobe's]標準結構描述，請參閱[查詢服務UI指南](../../../query-service/ui/overview.md)檔案，以瞭解如何使用查詢服務將您的欄位名稱填入[!DNL Adobe]標準結構描述的資訊。
 
-### 審閱 {#review}
+### 檢閱 {#review}
 
 完成上述所有步驟後，您就有機會先檢閱目的地連線狀態和對象詳細資訊，然後再啟用（發佈）該功能。 您選取的對象將顯示在清單底部。 每個對象都會是對[!DNL Acxiom Audience Connection] API的個別呼叫。
 
-如果您對結果滿意，請選取&#x200B;**[!UICONTROL 完成]**&#x200B;以啟用您的目的地。
+如果您對結果滿意，請選取&#x200B;**[!UICONTROL Finish]**&#x200B;以啟用您的目的地。
 
 ![檢閱您的對象](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
 
@@ -128,4 +128,4 @@ ht-degree: 7%
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
