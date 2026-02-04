@@ -5,9 +5,9 @@ title: 使用原則服務API強制執行資料使用原則
 type: Tutorial
 description: 一旦您為資料建立了資料使用標籤，並針對這些標籤建立了行銷動作的使用原則，您就可以使用原則服務API來評估對資料集或任意一組標籤執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應處理原則違規。
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1021'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 **要求**
 
-下列要求會針對標籤`C1`和`C3`測試`exportToThirdParty`行銷動作。 由於您先前在本教學課程中建立的資料使用原則將`C1`標籤定義為其原則運算式中的`deny`條件之一，因此行銷動作應該會觸發原則違規。
+下列要求會針對標籤`exportToThirdParty`和`C1`測試`C3`行銷動作。 由於您先前在本教學課程中建立的資料使用原則將`C1`標籤定義為其原則運算式中的`deny`條件之一，因此行銷動作應該會觸發原則違規。
 
 >[!NOTE]
 >
@@ -128,9 +128,13 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `violatedPolicies` | 陣列會針對提供的`duleLabels`列出因測試行銷動作（在`marketingActionRef`中指定）而違反的任何原則。 |
+| `violatedPolicies` | 陣列會針對提供的`marketingActionRef`列出因測試行銷動作（在`duleLabels`中指定）而違反的任何原則。 |
 
 ## 使用資料集進行評估
+
+>[!WARNING]
+>
+>資料集評估的`/constraints`端點已過時。 若要評估原則違規或執行多個評估工作，請改用[大量評估API (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk)。
 
 您可以針對可收集標籤的一或多個資料集測試行銷動作，以評估資料使用原則。 若要這麼做，請向`/marketingActions/core/{MARKETING_ACTION_NAME}/constraints`發出POST要求，並在要求內文中提供資料集ID，如下列範例所示。
 
@@ -370,7 +374,7 @@ curl -X POST \
 | --- | --- |
 | `duleLabels` | 從要求裝載中提供的資料集擷取的資料使用標籤清單。 |
 | `discoveredLabels` | 請求承載中提供的資料集清單，顯示可在每個資料集找到之資料集層級和欄位層級標籤。 |
-| `violatedPolicies` | 陣列會針對提供的`duleLabels`列出因測試行銷動作（在`marketingActionRef`中指定）而違反的任何原則。 |
+| `violatedPolicies` | 陣列會針對提供的`marketingActionRef`列出因測試行銷動作（在`duleLabels`中指定）而違反的任何原則。 |
 
 ## 後續步驟
 

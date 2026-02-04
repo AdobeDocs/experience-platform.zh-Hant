@@ -5,9 +5,9 @@ title: 原則評估API端點
 description: 建立行銷動作並定義原則後，您就可以使用原則服務API來評估某些動作是否違反了原則。 傳回的限制會採取一組原則的形式，這些原則會在嘗試對包含資料使用標籤的指定資料執行行銷動作時遭到違反。
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ## 使用資料使用標籤評估原則違規 {#labels}
 
-您可以使用GET要求中的`duleLabels`查詢引數，根據特定資料使用標籤集是否存在，評估原則違規。
+您可以在GET要求中使用`duleLabels`查詢引數，根據一組特定資料使用標籤的存在來評估原則違規。
 
 **API格式**
 
@@ -41,7 +41,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對一組資料使用標籤進行測試的行銷動作名稱。 您可以向行銷動作端點[&#128279;](./marketing-actions.md#list)發出GET要求，以擷取可用的行銷動作清單。 |
+| `{MARKETING_ACTION_NAME}` | 針對一組資料使用標籤進行測試的行銷動作名稱。 您可以向行銷動作端點[發出](./marketing-actions.md#list)GET請求，以擷取可用行銷動作清單。 |
 | `{LABELS_LIST}` | 以逗號分隔的資料使用標簽名稱清單，用於測試行銷動作。 例如： `duleLabels=C1,C2,C3`<br><br>請注意，標簽名稱區分大小寫。 在`duleLabels`引數中列出這些專案時，請確定您使用正確的大小寫。 |
 
 **要求**
@@ -123,6 +123,10 @@ curl -X GET \
 
 ## 使用資料集評估原則違規 {#datasets}
 
+>[!WARNING]
+>
+>資料集評估的`/constraints`端點已過時。 若要評估原則違規或執行多個評估工作，請改用[大量評估API (`/bulk-eval`)](#evaluate-policies-in-bulk)。
+
 您可以根據一組可以從中收集資料使用標籤的一個或多個資料集來評估原則違規。 若要這麼做，請針對特定行銷動作對`/constraints`端點執行POST要求，並在要求內文中提供資料集ID清單。
 
 **API格式**
@@ -134,7 +138,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對一或多個資料集進行測試的行銷動作名稱。 您可以向行銷動作端點[&#128279;](./marketing-actions.md#list)發出GET要求，以擷取可用的行銷動作清單。 |
+| `{MARKETING_ACTION_NAME}` | 針對一或多個資料集進行測試的行銷動作名稱。 您可以向行銷動作端點[發出](./marketing-actions.md#list)GET請求，以擷取可用行銷動作清單。 |
 
 **要求**
 
@@ -167,7 +171,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `entityType` | 其識別碼在同層級`entityId`屬性中指示的實體型別。 目前唯一接受的值為`dataSet`。 |
-| `entityId` | 用來測試行銷動作的資料集ID。 藉由向[!DNL Catalog Service] API中的`/dataSets`端點發出GET要求，即可取得資料集清單及其對應的ID。 如需詳細資訊，請參閱[清單 [!DNL Catalog] 物件](../../catalog/api/list-objects.md)的指南。 |
+| `entityId` | 用來測試行銷動作的資料集ID。 向`/dataSets` API中的[!DNL Catalog Service]端點發出GET要求，可取得資料集清單及其對應的ID。 如需詳細資訊，請參閱[清單 [!DNL Catalog] 物件](../../catalog/api/list-objects.md)的指南。 |
 
 **回應**
 
@@ -365,11 +369,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對資料集欄位子集進行測試的行銷動作名稱。 您可以向行銷動作端點[&#128279;](./marketing-actions.md#list)發出GET要求，以擷取可用的行銷動作清單。 |
+| `{MARKETING_ACTION_NAME}` | 針對資料集欄位子集進行測試的行銷動作名稱。 您可以向行銷動作端點[發出](./marketing-actions.md#list)GET請求，以擷取可用行銷動作清單。 |
 
 **要求**
 
-下列要求會對屬於三個資料集的特定欄位集測試行銷動作`crossSiteTargeting`。 承載類似於僅涉及資料集[&#128279;](#datasets)的評估請求，為要從中收集標籤的每個資料集新增特定欄位。
+下列要求會對屬於三個資料集的特定欄位集測試行銷動作`crossSiteTargeting`。 承載類似於僅涉及資料集[的](#datasets)評估請求，為要從中收集標籤的每個資料集新增特定欄位。
 
 ```shell
 curl -X POST \
@@ -415,14 +419,14 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `entityType` | 其識別碼在同層級`entityId`屬性中指示的實體型別。 目前唯一接受的值為`dataSet`。 |
-| `entityId` | 資料集的ID，其欄位將根據行銷動作進行評估。 藉由向[!DNL Catalog Service] API中的`/dataSets`端點發出GET要求，即可取得資料集清單及其對應的ID。 如需詳細資訊，請參閱[清單 [!DNL Catalog] 物件](../../catalog/api/list-objects.md)的指南。 |
+| `entityId` | 資料集的ID，其欄位將根據行銷動作進行評估。 向`/dataSets` API中的[!DNL Catalog Service]端點發出GET要求，可取得資料集清單及其對應的ID。 如需詳細資訊，請參閱[清單 [!DNL Catalog] 物件](../../catalog/api/list-objects.md)的指南。 |
 | `entityMeta.fields` | 資料集結構描述中特定欄位的路徑陣列，以JSON指標字串形式提供。 請參閱API基本指南中[JSON指標](../../landing/api-fundamentals.md#json-pointer)的相關小節，以取得這些字串所接受語法的詳細資訊。 |
 
 **回應**
 
 成功的回應包含`violatedPolicies`陣列，其中包含對提供的資料集欄位執行行銷動作時所違反原則的詳細資料。 如果未違反任何原則，`violatedPolicies`陣列將是空的。
 
-將下列範例回應與僅涉及資料集[&#128279;](#datasets)的回應進行比較，請注意，收集的標籤清單較短。 每個資料集的`discoveredLabels`也已減少，因為它們僅包含在要求內文中指定的欄位。 此外，先前違反的原則`Targeting Ads or Content`需要同時存在`C4 AND C6`個標籤，因此不再違反空的`violatedPolicies`陣列所指示的原則。
+將下列範例回應與僅涉及資料集[的](#datasets)回應進行比較，請注意，收集的標籤清單較短。 每個資料集的`discoveredLabels`也已減少，因為它們僅包含在要求內文中指定的欄位。 此外，先前違反的原則`Targeting Ads or Content`需要同時存在`C4 AND C6`個標籤，因此不再違反空的`violatedPolicies`陣列所指示的原則。
 
 ```JSON
 {
