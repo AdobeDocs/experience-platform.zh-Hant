@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明 (2026 年 1 月)
 description: Adobe Experience Platform 2026 年 1 月版發行說明。
-source-git-commit: a8eefb3330d0de21fbb8648593eb912c063529d7
+source-git-commit: 1761acbcab12acf1596daf5461476d5b91bb0e9b
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1570'
 ht-degree: 22%
 
 ---
@@ -40,7 +40,7 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 
 | 功能 | 說明 |
 | --- | --- |
-| Adobe Experience Platform代理程式使用範圍試用版 | **選取的客戶現在可免費試用存取Adobe Experience Platform代理程式**。 您可以透過由Adobe Experience Platform Agent Orchestrator提供支援的AI Assistant介面，使用試用版來探索代理程式並與之互動。 此試用版提供在客戶現有Experience Cloud產品和環境的環境中操作的AI代理程式實際操作體驗，讓團隊在承諾完整購買之前可評估價值。 Adobe Experience Platform代理程式受到使用者輸入和監督的指導，並遵守現有的產品層級存取控制，確保使用者只能執行或檢視他們在基礎Experience Cloud應用程式中為其授權的資料。 如需如何開始使用的詳細資訊，請參閱[Experience Platform代理程式使用繫結試用概覽](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)。 |
+| Adobe Experience Platform代理程式使用範圍試用版 | **選取的客戶現在可免費試用存取Adobe Experience Platform代理程式**。 您可以透過由Adobe Experience Platform Agent Orchestrator提供支援的AI Assistant介面，使用試用版來探索代理程式並與之互動。 此試用版提供在客戶現有Experience Cloud產品和環境的環境中操作的AI代理程式實際操作體驗，讓團隊在承諾完整購買之前可評估價值。 Adobe Experience Platform代理程式受到使用者輸入和監督的指導，並遵守現有的產品層級存取控制，確保使用者只能執行或檢視他們在基礎Experience Cloud應用程式中為其授權的資料。 如需如何開始使用的詳細資訊，請參閱[Experience Platform代理程式使用繫結試用概覽](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial)。 |
 
 {style="table-layout:auto"}
 
@@ -103,6 +103,7 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 | 功能 | 說明 |
 | ------- | ----------- |
 | 外部受眾資料到期日重新整理 | 外部對象（例如CSV上傳）現在支援資料到期設定的強制重新整理功能。 此功能可讓使用者手動重新整理外部對象的資料有效期，在對象生命週期管理的控制方面提供更大力。 這對於需要在初始資料到期日之後持續存在或需要重新啟用而不需重新上傳資料的對象特別有用。 如需有關此功能的詳細資訊，請閱讀[對象入口網站概觀](../../segmentation/ui/audience-portal.md#audience-summary)。 |
+| 對象驗證 | Experience Platform現在提供內建驗證，確保您的對象準確、穩定且可擴充。 建立對象定義時，會自動即時執行這些檢查。 如需詳細資訊，請閱讀[對象驗證總覽](/help/segmentation/validation.md)。 |
 
 如需詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
 

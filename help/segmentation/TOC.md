@@ -1,23 +1,24 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Segmentation Service
+user-guide-title: Adobe Experience 平台 Segmentation Service
 breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置客群。
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 43%
+source-wordcount: '212'
+ht-degree: 42%
 
 ---
 
 
-# Adobe Experience Platform Segmentation Service {#segmentation}
+# Adobe Experience 平台 Segmentation Service {#segmentation}
 
 - [Segmentation Service概述](home.md)
 - [區段資料型別](data-types.md)
-- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant#segmentation-guardrails)
+- [分段護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [對象驗證](./validation.md)
 - 分段API {#api}
    - [概觀](api/overview.md)
    - [快速入門](api/getting-started.md)

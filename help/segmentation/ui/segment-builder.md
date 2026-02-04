@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
+source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
 workflow-type: tm+mt
-source-wordcount: '5355'
+source-wordcount: '5354'
 ht-degree: 12%
 
 ---
@@ -189,34 +189,9 @@ ht-degree: 12%
 
 ![會顯示警告，指出您已達到值的數量上限。](../images/ui/segment-builder/maximum-values.png)
 
-### 查詢驗證 {#query-validation}
+### 對象驗證 {#audience-validation}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="邏輯複雜性"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="事件序列限制"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="查詢效率警報"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="計數篩選器警告"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="巢狀資料警告"
->abstract=""
-
-區段產生器會自動分析和驗證您的對象查詢，以確保您符合對象定義的最佳實務。 這些最佳實務可設為兩個類別：關鍵驗證和效能最佳化。
+區段產生器會自動分析和驗證您的對象定義，以確保您符合對象定義的最佳實務。 這些最佳實務可設為兩個類別：關鍵驗證和效能最佳化。
 
 如果對象定義破壞重要的驗證最佳實務，您將&#x200B;**無法**&#x200B;儲存您的變更以保持沙箱穩定。 如果對象定義破壞效能最佳化最佳實務，您可以儲存變更，但&#x200B;*強烈建議*&#x200B;更新對象定義以避免效能問題。
 
@@ -227,6 +202,8 @@ ht-degree: 12%
 | 彙總計數 | 效能最佳化 | 對象定義中有超過3個彙總函式。 |
 | 巢狀資料 | 效能最佳化 | 對象定義中有超過2個層級的巢狀資料（陣列或地圖資料型別）深度。 |
 | 對象規模 | 效能最佳化 | 對象資格大小超過沙箱中設定檔總數的30%。 |
+
+如需對象驗證如何運作的詳細資訊，請參閱[對象驗證指南](/help/segmentation/validation.md)。
 
 ### 新增客群
 
@@ -313,7 +290,7 @@ ht-degree: 12%
 
 | 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
 | --------------- | ----------- | ------------------- | ------- |
-| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;**&#x200B;**。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -425,7 +402,7 @@ ht-degree: 12%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估值"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
