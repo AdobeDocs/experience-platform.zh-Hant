@@ -96,7 +96,7 @@ ht-degree: 7%
 | 電子郵件 | 主要電子郵件依預設，此欄位會作為重複資料刪除索引鍵，讓記錄具有唯一性 | 無 | 10 | 255 |
 | 電話 | 個人的電話號碼（區碼+號碼）<br>依預設，此欄位會作為重複資料刪除索引鍵，讓記錄具有唯一性。 | 無 | 11 | 10 |
 
-在「**[!UICONTROL Source Field]**」欄中，輸入要對應至對應目標欄位的每個來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL  Select source field]**&#x200B;畫面。<br>
+在「**[!UICONTROL Source Field]**」欄中，輸入要對應至對應目標欄位的每個來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL &#x200B; Select source field]**&#x200B;畫面。<br>
 ![對應熒幕](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 在您對應所有欄位後，請選取&#x200B;**[!UICONTROL Next]**。
