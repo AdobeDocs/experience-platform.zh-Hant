@@ -4,9 +4,9 @@ title: 預覽範例狀態（設定檔預覽） API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分佈，並產生顯示資料集重疊、身分重疊和未拼接設定檔的報告。
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
+source-git-commit: 399b76f260732015f691fd199c977d6f7e772b01
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2119'
 ht-degree: 1%
 
 ---
@@ -434,110 +434,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/d
 | `profileFragments` | 資料集中存在的設定檔片段總數。 |
 | `records` | 擷取到資料集中的設定檔記錄總數。 |
 | `totalProfiles` | 擷取到資料集中的設定檔總數。 |
-
-+++
-
-## 取得資料集大小 {#character-count}
-
-您可以使用此端點每週取得資料集的大小（以位元組為單位）。
-
-**API格式**
-
-```http
-GET /previewsamplestatus/report/character_count
-```
-
-**要求**
-
-+++產生字元計數報表的範例要求。
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-```
-
-+++
-
-**回應**
-
-成功的回應會傳回HTTP狀態200，其中包含整週資料集大小的相關資訊。
-
-+++ 包含資料過期後資料集大小相關資訊的範例回應。
-
->[!NOTE]
->
->下列回應已截斷，顯示三個資料集。
-
-```json
-{
-    "data": [
-        {
-            "datasetIds": [
-                {
-                    "datasetId": "67aba91a453f7d298cd2a643",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 107773533894,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "67aa6c867c3110298b017f0e",
-                    "recordType": "timeseries",
-                    "weeks": [
-                        {
-                            "size": 242902062440,
-                            "week": "2025-10-26"
-                        },
-                        {
-                            "size": 837539413062,
-                            "week": "2025-10-19"
-                        },
-                        {
-                            "size": 479253986484,
-                            "week": "2025-10-12"
-                        },
-                        {
-                            "size": 358911988990,
-                            "week": "2025-10-05"
-                        },
-                        {
-                            "size": 349701073042,
-                            "week": "2025-09-28"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "680c043667c0d7298c9ea275",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 18392459832,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                }
-            ],
-            "modelName": "_xdm.context.profile",
-            "reportTimestamp": "2025-10-30T00:28:30.069Z"
-        }
-    ],
-    "reportTimestamp": "2025-10-30T00:28:30.069Z"
-}
-```
-
-| 屬性 | 說明 |
-| -------- | ----------- |
-| `datasetId` | 資料集的識別碼。 |
-| `recordType` | 資料集中的資料型別。 記錄型別會影響`weeks`變數的值。 支援的值包括`keyvalue`和`timeseries`。 |
-| `weeks` | 包含資料集大小資訊的陣列。 對於記錄型別`keyvalue`的資料集，這會包含最近一週以及資料集的總大小（位元組）。 對於記錄型別`timeseries`的資料集，這會包含從資料集擷取到最近一週的每一週，以及這些周中每一週的資料集總大小（位元組）。 |
-| `modelName` | 資料集的模型名稱。 可能的值包括`_xdm.context.profile`和`_xdm.context.experienceevent`。 |
-| `reportTimestamp` | 產生報表的日期和時間。 |
 
 +++
 
