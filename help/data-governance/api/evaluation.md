@@ -5,7 +5,7 @@ title: 原則評估API端點
 description: 建立行銷動作並定義原則後，您就可以使用原則服務API來評估某些動作是否違反了原則。 傳回的限制會採取一組原則的形式，這些原則會在嘗試對包含資料使用標籤的指定資料執行行銷動作時遭到違反。
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -125,7 +125,7 @@ curl -X GET \
 
 >[!WARNING]
 >
->資料集評估的`/constraints`端點已過時。 若要評估原則違規或執行多個評估工作，請改用[大量評估API (`/bulk-eval`)](#evaluate-policies-in-bulk)。
+>資料集評估的`/constraints`端點已過時。 若要評估原則違規或執行多個評估工作，請改用[大量評估API (`/bulk-eval`)](#bulk)。
 
 您可以根據一組可以從中收集資料使用標籤的一個或多個資料集來評估原則違規。 若要這麼做，請針對特定行銷動作對`/constraints`端點執行POST要求，並在要求內文中提供資料集ID清單。
 

@@ -5,7 +5,7 @@ title: 使用原則服務API強制執行資料使用原則
 type: Tutorial
 description: 一旦您為資料建立了資料使用標籤，並針對這些標籤建立了行銷動作的使用原則，您就可以使用原則服務API來評估對資料集或任意一組標籤執行的行銷動作是否構成原則違規。 然後，您可以設定自己的內部通訊協定，以根據API回應處理原則違規。
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 1%
@@ -134,7 +134,7 @@ curl -X GET \
 
 >[!WARNING]
 >
->資料集評估的`/constraints`端點已過時。 若要評估原則違規或執行多個評估工作，請改用[大量評估API (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk)。
+>資料集評估的`/constraints`端點已過時。 若要評估原則違規或執行多個評估工作，請改用[大量評估API (`/bulk-eval`)](../api/evaluation.md#bulk)。
 
 您可以針對可收集標籤的一或多個資料集測試行銷動作，以評估資料使用原則。 若要這麼做，請向`/marketingActions/core/{MARKETING_ACTION_NAME}/constraints`發出POST要求，並在要求內文中提供資料集ID，如下列範例所示。
 
