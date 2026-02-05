@@ -31,7 +31,7 @@ Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以
 
 ## 設定Adobe組織對應
 
-您必須先設定Adobe組織對應，才能為[!DNL Marketo Engage]建立對應集。 如需如何完成此作業的詳細步驟，請參閱[為 [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)設定Adobe組織對應的指南。
+您必須先設定Adobe組織對應，才能為[!DNL Marketo Engage]建立對應集。 如需如何完成此作業的詳細步驟，請參閱[為 [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=zh-Hant)設定Adobe組織對應的指南。
 
 ## 驗證您的[!DNL Marketo Engage]聯結器
 
