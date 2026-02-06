@@ -2,7 +2,7 @@
 keywords: rtcdp設定檔；設定檔rtcdp；rtcdp身分；rtcdp合併原則；即時客戶設定檔
 title: 帳戶設定檔UI指南
 description: 透過使用帳戶設定檔，Adobe Real-Time Customer Data Platform B2B edition可讓您統一來自多個來源的帳戶資訊。 本指南提供在Adobe Experience Platform使用者介面中與帳戶設定檔互動的詳細資訊。
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c

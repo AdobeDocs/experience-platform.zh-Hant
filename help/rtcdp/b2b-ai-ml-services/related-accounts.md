@@ -3,7 +3,7 @@ title: Real-Time CDP B2B edition中的相關帳戶
 type: Documentation
 description: 有關Experience Platform Real-Time CDP B2B中相關帳戶功能的概觀和詳細資訊。
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions" newtab=true
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

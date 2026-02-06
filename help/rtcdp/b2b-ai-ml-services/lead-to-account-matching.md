@@ -3,7 +3,7 @@ title: Real-Time CDP B2B中的銷售線索與帳戶相符
 type: Documentation
 description: 有關Experience Platform CDP B2B中帳戶比對功能的潛在客戶概述和詳細資訊。
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

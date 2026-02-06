@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Real-Time CDP Insights資料模型B2B edition
 
-B2B edition的Real-Time CDP Insights資料模型會公開支援[帳戶設定檔](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview)深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以建立B2B行銷和關鍵績效指標(KPI)使用案例的Real-Time CDP報表。 這些深入分析接著可作為控制面板的自訂Widget使用。
+B2B edition的Real-Time CDP Insights資料模型會公開支援[帳戶設定檔](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/rtcdp/account/account-profile-overview)深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以建立B2B行銷和關鍵績效指標(KPI)使用案例的Real-Time CDP報表。 這些深入分析接著可作為控制面板的自訂Widget使用。
 
 >[!AVAILABILITY]
 >
