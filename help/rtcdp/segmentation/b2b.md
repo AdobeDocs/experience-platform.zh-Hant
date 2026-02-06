@@ -2,11 +2,11 @@
 title: Real-Time Customer Data Platform B2B edition的區段使用案例
 description: 各種可用Adobe Real-Time Customer Data Platform B2B edition使用案例的概觀。
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ B2B類別及其屬性在區段工作區中會附加`B2B`標籤，以區別於Rea
 
 由於您的資料模型可能很複雜，因此您可以使用Platform UI來檢視資料模型的更詳細視覺化表示法，以協助尋找使用案例的相關屬性。 若要開始，請前往Platform UI，然後在左側導覽中選取結構描述。
 
-從可用清單中選取適當的結構描述，並從[!UICONTROL 構成]側邊欄中選取適當的關聯性。 在以下範例中，選取「Person」關係會顯示目前結構描述中哪個屬性會參考相關的「Person」結構描述（如果它是關係中的來源結構描述），或被「Person」結構描述（如果它是關係中的參考結構描述）參考。
+從可用清單中選取適當的結構描述，並從[!UICONTROL Composition]側邊欄選取適當的關聯性。 在以下範例中，選取「Person」關係會顯示目前結構描述中哪個屬性會參考相關的「Person」結構描述（如果它是關係中的來源結構描述），或被「Person」結構描述（如果它是關係中的參考結構描述）參考。
 
 ![在結構描述工作區中使用人員關係的來源金鑰範例](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
@@ -74,23 +74,23 @@ B2B類別及其屬性在區段工作區中會附加`B2B`標籤，以區別於Rea
 
 ## 不同區段使用案例的範例 {#use-cases}
 
-以下使用案例適用於透過B2B edition進行分段。 每個範例都會提供對象所做動作的說明，以及用來建立對象的類別說明。 提供的影像反白顯示[!UICONTROL 屬性]側邊欄中的檔案路徑，以反映結構描述的結構。 顯示器右側的[!UICONTROL 區段屬性]區段包含對象屬性的書面劃分。
+以下使用案例適用於透過B2B edition進行分段。 每個範例都會提供對象所做動作的說明，以及用來建立對象的類別說明。 提供的影像反白顯示[!UICONTROL Attributes]側邊欄中的檔案路徑，以反映結構描述的結構。 顯示器右側的[!UICONTROL Segment properties]區段包含對象屬性的書面劃分。
 
 ### 範例1：尋找B2B機會的「決策者」 {#find-decision-maker}
 
-尋找所有商機的「決策者」人員。 此對象需要[!UICONTROL XDM個人設定檔]類別與[!UICONTROL XDM商業機會個人關係]類別之間的連結。
+尋找所有商機的「決策者」人員。 此對象需要[!UICONTROL XDM Individual Profile]類別與[!UICONTROL XDM Business Opportunity Person Relation]類別之間的連結。
 
 ![顯示範例1設定的UI](../assets/segmentation/b2b/example-1.png)
 
 ### 範例2：尋找指派給商機超過特定金額的B2B設定檔 {#find-opportunities-amount}
 
-尋找直接指派給任何商機金額超過指定金額（100萬美元）之商機的所有人員。 此對象需要[!UICONTROL XDM個人設定檔]類別、[!UICONTROL XDM商業機會個人關係]類別和[!UICONTROL XDM商業機會]類別之間的連結。
+尋找直接指派給任何商機金額超過指定金額（100萬美元）之商機的所有人員。 此對象需要[!UICONTROL XDM Individual Profile]類別、[!UICONTROL XDM Business Opportunity Person Relation]類別和[!UICONTROL XDM Business Opportunity]類別之間的連結。
 
 ![顯示範例2設定的UI](../assets/segmentation/b2b/example-2.png)
 
 ### 範例3：依地點尋找指派給商機的B2B設定檔 {#find-opportunities-location}
 
-尋找直接指派至帳戶位於指定位置（加拿大）之任何商機的所有人員。 此對象需要[!UICONTROL XDM個人設定檔]類別、[!UICONTROL XDM商業機會個人關係]類別、[!UICONTROL XDM商業機會]類別和[!UICONTROL XDM商業帳戶]類別之間的連結。
+尋找直接指派至帳戶位於指定位置（加拿大）之任何商機的所有人員。 此對象需要[!UICONTROL XDM Individual Profile]類別、[!UICONTROL XDM Business Opportunity Person Relation]類別、[!UICONTROL XDM Business Opportunity]類別與[!UICONTROL XDM Business Account]類別之間的連結。
 
 ![顯示範例3設定的UI](../assets/segmentation/b2b/example-3.png)
 
@@ -108,13 +108,13 @@ B2B類別及其屬性在區段工作區中會附加`B2B`標籤，以區別於Rea
 
 ### 範例5：依部門名稱和商機金額搜尋商機的B2B設定檔 {#find-department-opportunity-amount}
 
-尋找在人力資源(HR)部門工作的所有人員，以及擁有至少有一個與指定金額（100萬美元）或以上的未結商機之帳戶的所有人員。 此對象需要[!UICONTROL XDM個人設定檔]類別、[!UICONTROL XDM商業帳戶]類別和[!UICONTROL XDM商業機會]類別之間的連結。
+尋找在人力資源(HR)部門工作的所有人員，以及擁有至少有一個與指定金額（100萬美元）或以上的未結商機之帳戶的所有人員。 此對象需要[!UICONTROL XDM Individual Profile]類別、[!UICONTROL XDM Business Account]類別和[!UICONTROL XDM Business Opportunity]類別之間的連結。
 
 ![顯示範例5設定的UI](../assets/segmentation/b2b/example-5.png)
 
 ### 範例6：依職稱和年度帳戶收入尋找B2B設定檔 {#find-by-job-title-and-revenue}
 
-尋找所有職銜為「副總裁」且帳戶年收入達到或超過指定金額（1億美元）的人，並於上個月至少造訪過3次定價頁面。 此對象需要[!UICONTROL XDM個人設定檔]類別、[!UICONTROL XDM商業帳戶]類別和[!UICONTROL XDM ExperienceEvent]類別之間的連結。
+尋找所有職銜為「副總裁」且帳戶年收入達到或超過指定金額（1億美元）的人，並於上個月至少造訪過3次定價頁面。 此對象需要[!UICONTROL XDM Individual Profile]類別、[!UICONTROL XDM Business Account]類別和[!UICONTROL XDM ExperienceEvent]類別之間的連結。
 
 ![顯示範例6設定的UI](../assets/segmentation/b2b/example-6.png)
 
@@ -132,7 +132,7 @@ B2B類別及其屬性在區段工作區中會附加`B2B`標籤，以區別於Rea
 
 ### 範例8：使用相關帳戶來擴大細分範圍 {#related-accounts}
 
-尋找在人力資源(HR)部門工作且與任何帳戶&#x200B;*或帳戶的任何相關帳戶*&#x200B;相關且至少有一個開啟機會值特定金額（$100萬）或以上的所有人員。 此對象需要[!UICONTROL XDM個人設定檔]類別、[!UICONTROL XDM商業帳戶]類別和[!UICONTROL XDM商業機會]類別之間的連結。
+尋找在人力資源(HR)部門工作且與任何帳戶&#x200B;*或帳戶的任何相關帳戶*&#x200B;相關且至少有一個開啟機會值特定金額（$100萬）或以上的所有人員。 此對象需要[!UICONTROL XDM Individual Profile]類別、[!UICONTROL XDM Business Account]類別和[!UICONTROL XDM Business Opportunity]類別之間的連結。
 
 ![UI顯示相關帳戶的分段](../assets/segmentation/b2b/example-8.png)
 

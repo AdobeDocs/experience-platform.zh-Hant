@@ -1,12 +1,11 @@
 ---
 title: 帳戶設定檔深入分析
 description: 探索為您的帳戶設定檔深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索您的客戶及其消費者體驗。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -19,15 +18,15 @@ ht-degree: 0%
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-下列見解全部都可以用作[帳戶設定檔儀表板](../guides/account-profiles.md)或[自訂儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[&#128279;](../customize/custom-widgets.md)在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget的說明。
+下列見解全部都可以用作[帳戶設定檔儀表板](../guides/account-profiles.md)或[自訂儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和](../customize/custom-widgets.md)使用者定義儀表板[中建立及編輯新Widget](../standard-dashboards.md#create-widget)的說明。
 
 ## 已新增的帳戶輪廓 {#account-profiles-added}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 在指定期間內新增了多少帳戶設定檔？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -49,11 +48,11 @@ ORDER BY date_key limit 5000;
 
 ## 依產業的新帳戶 {#accounts-by-industry}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 帳戶設定檔所屬的前五大產業為何？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH rankedindustries AS
@@ -85,11 +84,11 @@ ORDER BY total_accounts DESC limit 5000;
 
 ## 新帳戶（依型別） {#accounts-by-type}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 依帳戶型別區分的帳戶計數是多少？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT t.account_type,
@@ -108,11 +107,11 @@ LIMIT  5000;
 
 ## 已新增的機會 {#opportunities-added}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 在指定期間內新增了多少商機？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT d.date_key,
@@ -131,11 +130,11 @@ LIMIT  5000;
 
 ## 依個人角色的新機會 {#opportunities-by-person-role}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 機會中各種角色的相對大小和計數為何？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT p.person_role,
@@ -153,11 +152,11 @@ LIMIT  5000;
 
 ## 按收入顯示的新商機 {#opportunities-by-revenue}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 依收入排名的20大商機為何（以美元計）？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH ranked_opportunities AS
@@ -193,12 +192,12 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 ## 按狀態和階段的新機會 {#opportunities-by-status-and-stage}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
-- 有哪些商機，在銷售或行銷漏斗的哪個階段？
-- 有哪些已結束的商機？在銷售或行銷漏斗的哪個階段？
+- 有哪些銷售機會？這些機會位於銷售或行銷funnel的哪個階段？
+- 有哪些已結束的商機？商機位於銷售或行銷funnel的哪個階段？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -226,11 +225,11 @@ FROM   opportunities_by_isclosed limit 5000;
 
 ## 贏得新商機 {#opportunities-won}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 已順利關閉或完成的商機數目為何？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -255,11 +254,11 @@ FROM   opportunities_by_iswon limit 5000;
 
 <!-- Q) Can we change this name? -->
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 在指定期間內，有多少機會已成功關閉或完成（成功）？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH opportunities_won_counts AS
@@ -285,13 +284,13 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->[!UICONTROL 每個帳戶的客戶總覽]圖表包含三個鑽研深入分析：每個帳戶的[!UICONTROL 客戶詳細資料]、每個帳戶的[!UICONTROL 機會總覽]和每個帳戶的[!UICONTROL 機會詳細資料]。 這些深入研究可提供更細微的深入分析，並依類別（例如直接和間接客戶）和範圍（例如客戶和機會計數範圍）劃分客戶和機會計數。 這些圖表不受您可能已設定的任何全域日期篩選條件影響。
+>[!UICONTROL Customers per Account Overview]圖表包含三個鑽研深入分析： [!UICONTROL Customers per Account Detail]、[!UICONTROL Opportunities per Account Overview]及[!UICONTROL Opportunities per Account Detail]。 這些深入研究可提供更細微的深入分析，並依類別（例如直接和間接客戶）和範圍（例如客戶和機會計數範圍）劃分客戶和機會計數。 這些圖表不受您可能已設定的任何全域日期篩選條件影響。
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 根據客戶是否有直接或間接客戶，客戶分配情況如何？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -329,13 +328,13 @@ ORDER BY ac.Account_Category;
 
 >[!NOTE]
 >
->此深入分析不受全域日期篩選的影響。
+>此insight不受全域日期篩選器影響。
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 有多少帳戶擁有不同範圍的直接或間接客戶？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->此深入分析不受全域日期篩選的影響。
+>此insight不受全域日期篩選器影響。
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 根據帳戶是否具有相關的商機，帳戶分配情況如何？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH LatestDate AS (
@@ -453,13 +452,13 @@ ORDER BY ac.Opportunity_Category;
 
 >[!NOTE]
 >
->此深入分析不受全域日期篩選的影響。
+>此insight不受全域日期篩選器影響。
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 有多少帳戶擁有不同範圍的相關商機？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 WITH opportunity_ranges AS (

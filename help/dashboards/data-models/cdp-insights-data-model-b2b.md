@@ -1,19 +1,18 @@
 ---
-title: Real-time Customer Data Platform Insights資料模型B2B edition
-description: 瞭解如何搭配Real-time Customer Data Platform Insights Data Models (B2B edition)使用SQL查詢，根據行銷和KPI使用案例自訂您自己的Real-Time CDP報表。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+title: Real-Time Customer Data Platform Insights資料模型B2B edition
+description: 瞭解如何搭配Real-Time Customer Data Platform Insights Data Models (B2B edition)使用SQL查詢，根據行銷和KPI使用案例自訂您自己的Real-Time CDP報表。
+badgeB2B: null
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 0%
+source-wordcount: '438'
+ht-degree: 1%
 
 ---
 
 # Real-Time CDP Insights資料模型B2B edition
 
-B2B edition的Real-Time CDP Insights資料模型會公開支援[帳戶設定檔](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/rtcdp/account/account-profile-overview)深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以建立B2B行銷和關鍵績效指標(KPI)使用案例的Real-Time CDP報表。 這些深入分析接著可作為控制面板的自訂Widget使用。
+B2B edition的Real-Time CDP Insights資料模型會公開支援[帳戶設定檔](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview)深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以建立B2B行銷和關鍵績效指標(KPI)使用案例的Real-Time CDP報表。 這些深入分析接著可作為控制面板的自訂Widget使用。
 
 >[!AVAILABILITY]
 >
@@ -27,7 +26,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 本指南需要深入瞭解自訂儀表板。 在繼續本指南之前，請先閱讀有關[如何建立自訂儀表板](../standard-dashboards.md)的檔案。
 
-## Real-Time CDP B2B深入分析報表與使用案例 {#B2B-insight-reports-and-use-cases}
+## Real-Time CDP B2B insight報告與使用案例 {#B2B-insight-reports-and-use-cases}
 
 Real-Time CDP B2B報告提供您帳戶設定檔資料以及帳戶與商機之間關係的深入分析。 開發下列Star結構描述模型來回答各種常見行銷使用案例，每個資料模型可支援數個使用案例。
 
@@ -52,15 +51,15 @@ Real-Time CDP B2B報告提供您帳戶設定檔資料以及帳戶與商機之間
 
 #### 依產業使用案例的新帳戶 {#accounts-by-industry}
 
-[!UICONTROL 依產業分類的新帳戶]分析所使用的邏輯，會根據帳戶設定檔的數目和彼此的相對大小，傳回前五個產業。 如需詳細資訊，請參閱[[!UICONTROL 依產業的新帳戶] Widget檔案](../guides/account-profiles.md#accounts-by-industry)。
+用於[!UICONTROL New accounts by industry] insight的邏輯會根據帳戶設定檔的數目和彼此的相對大小，傳回前五個產業。 如需詳細資訊，請參閱[[!UICONTROL New accounts By Industry] Widget檔案](../guides/account-profiles.md#accounts-by-industry)。
 
 >[!TIP]
 >
 >您可以自訂此SQL查詢，以傳回大致前五個產業。
 
-可摺疊的區段顯示依據產業分析產生新帳戶的SQL。
+產生[!UICONTROL New accounts by industry] insight的SQL會顯示在下方的可收合區段中。
 
-+++SQL查詢
++++SQL 查詢
 
 ```sql
 WITH RankedIndustries AS (
@@ -97,11 +96,11 @@ LIMIT 5000;
 
 #### 新帳戶（依型別分類）使用案例 {#accounts-by-type}
 
-依型別&rbrack;分析用於[!UICONTROL 新帳戶的邏輯會傳回依型別劃分帳戶的數值明細。 此深入分析可協助引導業務策略與營運，包括資源分配或行銷策略。 如需詳細資訊，請參閱依型別]的&lbrack;[[!UICONTROL 新帳戶Widget檔案]](../guides/account-profiles.md#accounts-by-type)。
+用於[!UICONTROL New accounts by type] insight的邏輯會傳回依型別劃分的帳戶數值。 此insight可協助引導業務策略和營運，包括資源分配或行銷策略。 如需詳細資訊，請參閱[[!UICONTROL New accounts by type] Widget檔案](../guides/account-profiles.md#accounts-by-type)。
 
-在下面的可摺疊區段中可看見依型別分析產生新帳戶的SQL。
+產生[!UICONTROL New accounts by type] insight的SQL會顯示在下方的可收合區段中。
 
-+++SQL查詢
++++SQL 查詢
 
 ```sql
 SELECT t.account_type,

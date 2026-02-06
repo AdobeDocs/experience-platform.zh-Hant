@@ -1,12 +1,10 @@
 ---
 title: Bombora連線
 description: 根據帳戶對象，為您的Bombora行銷活動啟用設定檔，以用於對象目標定位、個人化和抑制。
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
-badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '836'
 ht-degree: 3%
 
 ---
@@ -99,7 +97,7 @@ Bombora需要下表描述的目標識別對應。 深入瞭解[身分](/help/ide
 * **[!UICONTROL Client ID]**：輸入您的[!DNL Bombora]使用者端識別碼。
 * **[!UICONTROL Client secret]**：輸入您的[!DNL Bombora]使用者端密碼。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 

@@ -1,18 +1,18 @@
 ---
 title: 在Real-Time CDP B2B中管理預測性銷售線索和帳戶評分
 type: Documentation
-description: 本檔案提供在Experience PlatformCDP B2B中管理預測性銷售線索和帳戶評分功能的相關資訊。
+description: 本檔案提供在Experience Platform CDP B2B中管理預測性銷售線索和帳戶評分功能的相關資訊。
 feature: Profiles, B2B
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '982'
 ht-degree: 3%
 
 ---
 
-# 在Adobe Real-time Customer Data Platform B2B版本中管理預測性銷售線索和帳戶評分
+# 在Adobe Real-Time Customer Data Platform、B2B edition中管理預測性銷售線索和帳戶評分
 
 >[!NOTE]
 >
@@ -22,27 +22,27 @@ ht-degree: 3%
 
 ## 建立新分數
 
-若要建立新分數，請在側邊欄中選取&#x200B;**[!UICONTROL 服務]**，然後選取&#x200B;**[!UICONTROL 建立分數]**。
+若要建立新分數，請在側邊欄中選取&#x200B;**[!UICONTROL Services]**，然後選取&#x200B;**[!UICONTROL Create score]**。
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
-**[!UICONTROL 基本資訊]**&#x200B;畫面會出現，提示您選取設定檔型別、輸入名稱以及選用的說明。 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
+**[!UICONTROL Basic information]**&#x200B;畫面隨即顯示，提示您選取設定檔型別、輸入名稱以及選用的說明。 完成後，選取&#x200B;**[!UICONTROL Next]**。
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-**[!UICONTROL 定義您的目標]**&#x200B;畫面隨即顯示。 選取下拉箭頭，然後從出現的下拉式視窗中選取目標型別。
+**[!UICONTROL Define your goal]**&#x200B;畫面會出現。 選取下拉箭頭，然後從出現的下拉式視窗中選取目標型別。
 
 ![plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-**[!UICONTROL 目標細節]**&#x200B;對話方塊開啟。 選取下拉箭頭，然後從出現的下拉式視窗中選取目標欄位名稱。
+**[!UICONTROL Goal specifics]**&#x200B;對話方塊開啟。 選取下拉箭頭，然後從出現的下拉式視窗中選取目標欄位名稱。
 
 ![plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-**[!UICONTROL 目標條件]**&#x200B;選取專案隨即顯示。 選取下拉箭頭，然後從出現的下拉式視窗中選取條件。
+**[!UICONTROL Goal conditions]**&#x200B;選取專案隨即顯示。 選取下拉箭頭，然後從出現的下拉式視窗中選取條件。
 
 ![plas-goal-specifics-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-**[!UICONTROL 目標值]**&#x200B;欄位就會顯示。 接下來，設定您的[!UICONTROL 目標細節]。 選取[!UICONTROL 輸入欄位值]面板，然後輸入您的目標值。
+**[!UICONTROL Goal value]**&#x200B;欄位隨即顯示。 接下來，設定您的[!UICONTROL Goal specifics]。 選取[!UICONTROL Enter Field Value]面板並輸入您的目標值。
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 3%
 
 ![plas-goal-specifics-field-value](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-若要新增其他欄位，請選取&#x200B;**[!UICONTROL 新增欄位]**。
+若要新增其他欄位，請選取&#x200B;**[!UICONTROL Add field]**。
 
 ![plas-goal-specifics-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
@@ -58,9 +58,9 @@ ht-degree: 3%
 
 ![plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
-選取的合併原則會決定如何選取人員設定檔的欄位值。 使用下拉箭頭選取您選擇的合併原則，然後選取&#x200B;**[!UICONTROL 完成]**。
+選取的合併原則會決定如何選取人員設定檔的欄位值。 使用下拉箭頭選取您選擇的合併原則，然後選取&#x200B;**[!UICONTROL Finish]**。
 
-**[!UICONTROL 評分設定完成]**&#x200B;對話方塊出現，確認已建立新分數。 選取&#x200B;**[!UICONTROL 確定]**。
+**[!UICONTROL Scoring setup is complete]**&#x200B;對話方塊出現，確認已建立新分數。 選擇「**[!UICONTROL OK]**」。
 
 ![plas-score-complete](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
@@ -68,7 +68,7 @@ ht-degree: 3%
 >
 >完成每個評分程式最多可能需要24小時的時間。
 
-您會回到&#x200B;**[!UICONTROL 服務]**&#x200B;標籤，您可以在其中看到分數清單中建立的新分數。
+您會回到&#x200B;**[!UICONTROL Services]**&#x200B;標籤，您可以在其中檢視分數清單中建立的新分數。
 
 ![plas-score-created](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
@@ -80,11 +80,11 @@ ht-degree: 3%
 
 ## 編輯分數
 
-若要編輯分數，請從&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤中選取分數，然後從畫面右側的其他詳細資料面板中選取&#x200B;**[!UICONTROL 編輯]**。
+若要編輯分數，請從&#x200B;**[!UICONTROL Services]**&#x200B;索引標籤中選取分數，然後從畫面右側的其他詳細資料面板中選取&#x200B;**[!UICONTROL Edit]**。
 
 ![plas-edit-score](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png)
 
-**[!UICONTROL 編輯執行個體]**&#x200B;對話方塊會出現，您可以在其中編輯分數的說明。 進行變更並選取&#x200B;**[!UICONTROL 儲存]**。
+**[!UICONTROL Edit instance]**&#x200B;對話方塊會出現，您可以在其中編輯分數的說明。 進行變更並選取&#x200B;**[!UICONTROL Save]**。
 
 ![plas-edit-save](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
 
@@ -92,33 +92,33 @@ ht-degree: 3%
 >
 >無法變更分數設定，因為這會觸發模型重新訓練與重新評分。 這等同於刪除分數並建立新分數。 若要編輯此分數的設定，您必須複製此分數或建立新分數。
 
-您返回&#x200B;**[!UICONTROL 服務]**&#x200B;標籤。 選取分數可在畫面右側的其他詳細資訊面板中檢視更新的說明詳細資訊。
+您返回&#x200B;**[!UICONTROL Services]**&#x200B;標籤。 選取分數可在畫面右側的其他詳細資訊面板中檢視更新的說明詳細資訊。
 
 ## 原地複製分數
 
-若要複製分數，請從&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤中選取分數，然後從畫面右側的其他詳細資料面板中選取&#x200B;**[!UICONTROL 複製]**。
+若要複製分數，請從&#x200B;**[!UICONTROL Services]**&#x200B;索引標籤中選取分數，然後從畫面右側的其他詳細資料面板中選取&#x200B;**[!UICONTROL Clone]**。
 
 ![複製分數](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
-**[!UICONTROL 基本資訊]**&#x200B;畫面會出現。 設定檔型別、名稱和說明是從原始分數複製而來。 修改這些詳細資料，並選取&#x200B;**[!UICONTROL 下一步]**。
+**[!UICONTROL Basic information]**&#x200B;畫面會出現。 設定檔型別、名稱和說明是從原始分數複製而來。 修改這些詳細資料，並選取&#x200B;**[!UICONTROL Next]**。
 
 ![plas-clone-basic-info](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
-**[!UICONTROL 定義您的目標]**&#x200B;畫面隨即顯示。 完成目標區段，就像建立新分數時一樣，並選取&#x200B;**[!UICONTROL 完成]**。
+**[!UICONTROL Define your goal]**&#x200B;畫面會出現。 完成目標區段，就像建立新分數時一樣，並選取&#x200B;**[!UICONTROL Finish]**。
 
-您會返回&#x200B;**[!UICONTROL 服務]**&#x200B;標籤，您可以在清單中看到新複製的分數。
+您會返回&#x200B;**[!UICONTROL Services]**&#x200B;標籤，您可以在清單中看到新複製的分數。
 
 >[!NOTE]
 >
->**[!UICONTROL 定義您的目標]**&#x200B;區段並非複製自原始分數。
+>**[!UICONTROL Define your goal]**&#x200B;區段並非從原始分數複製。
 
 ## 刪除分數
 
-若要刪除分數，請從&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤中選取分數，然後從熒幕右側的額外詳細資料面板中選取&#x200B;**[!UICONTROL 刪除]**。
+若要刪除分數，請從&#x200B;**[!UICONTROL Services]**&#x200B;索引標籤中選取分數，然後從畫面右側的其他詳細資料面板中選取&#x200B;**[!UICONTROL Delete]**。
 
 ![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-**[!UICONTROL 刪除檔案]**&#x200B;確認對話方塊就會顯示。 選取「**[!UICONTROL 刪除]**」。
+**[!UICONTROL Delete documentation]**&#x200B;確認對話方塊就會顯示。 選擇「**[!UICONTROL Delete]**」。
 
 ![plas-delete-score-confirmation](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
@@ -126,7 +126,7 @@ ht-degree: 3%
 >
 >刪除分數定義也會刪除個人設定檔或帳戶設定檔上的所有預測分數，但不會刪除為分數定義建立的欄位群組。 欄位群組在資料模型中將會保持「孤立」。
 
-您會回到&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤，您無法再在清單中看到分數。
+您會回到&#x200B;**[!UICONTROL Services]**&#x200B;索引標籤，您無法再在清單中看到分數。
 
 ## 潛在客戶AI管道錯誤代碼
 

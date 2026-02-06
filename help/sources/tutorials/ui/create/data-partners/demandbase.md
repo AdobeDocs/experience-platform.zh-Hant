@@ -1,12 +1,10 @@
 ---
 title: 使用UI將Demandbase意圖連線至Experience Platform
 description: 瞭解如何將Demandbase意圖連結至Experience Platform
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
-badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions newtab=true"
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '986'
 ht-degree: 4%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 4%
 
 閱讀本指南，瞭解如何使用使用者介面將您的[!DNL Demandbase Intent]帳戶連結至Adobe Experience Platform。
 
-## 快速入門
+## 開始使用
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
@@ -29,13 +27,13 @@ ht-degree: 4%
 
 ## 瀏覽來源目錄 {#navigate}
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 您可以在&#x200B;*[!UICONTROL 類別]*&#x200B;面板中選取適當的類別。 或者，您可以使用搜尋列導覽至您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取&#x200B;*[!UICONTROL Sources]*&#x200B;工作區。 您可以在&#x200B;*[!UICONTROL Categories]*&#x200B;面板中選取適當的類別。 或者，您可以使用搜尋列導覽至您要使用的特定來源。
 
-若要使用[!DNL Demandbase]，請選取[!UICONTROL 資料與識別合作夥伴]下的&#x200B;**[!UICONTROL Demandbase意圖]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 新增資料]**。
+若要使用[!DNL Demandbase]，請選取&#x200B;**[!UICONTROL Demandbase Intent]**&#x200B;下的[!UICONTROL Data & Identity Partners]來源卡，然後選取&#x200B;**[!UICONTROL Add data]**。
 
 >[!TIP]
 >
->當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL 新增資料]**。
+>當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL Set up]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL Add data]**。
 
 ![已選取「Demandbase意圖」卡片的來源目錄。](../../../../images/tutorials/create/demandbase/catalog.png)
 
@@ -43,9 +41,9 @@ ht-degree: 4%
 
 ### 使用現有帳戶 {#existing}
 
-若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後從介面的帳戶清單中選取您要使用的帳戶。
+若要使用現有帳戶，請選取&#x200B;**[!UICONTROL Existing account]**，然後從介面的帳戶清單中選取您要使用的帳戶。
 
-選取您的帳戶後，選取[下一步] **[!UICONTROL 以繼續執行下一步。]**
+選取您的帳戶後，請選取「**[!UICONTROL Next]**」以繼續執行下一個步驟。
 
 ![來源工作流程的現有帳戶介面。](../../../../images/tutorials/create/demandbase/existing.png)
 
@@ -53,7 +51,7 @@ ht-degree: 4%
 
 如果您沒有現有的帳戶，則必須提供與您來源對應的必要驗證認證，以建立新的帳戶。
 
-若要建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後提供帳戶名稱，並選擇性地提供帳戶詳細資訊的說明。 接下來，提供適當的驗證值，以針對Experience Platform驗證您的來源。 若要連線您的[!DNL Demandbase Intent]帳戶，您必須擁有下列認證：
+若要建立新帳戶，請選取&#x200B;**[!UICONTROL New account]**，然後提供帳戶名稱，並選擇性地提供帳戶詳細資訊的說明。 接下來，提供適當的驗證值，以針對Experience Platform驗證您的來源。 若要連線您的[!DNL Demandbase Intent]帳戶，您必須擁有下列認證：
 
 * **存取金鑰識別碼**：您的[!DNL Demandbase]存取金鑰識別碼。 這是61個字元的英數字串，需要它才能向Experience Platform驗證您的帳戶。
 * **秘密存取金鑰**：您的[!DNL Demandbase]秘密存取金鑰。 這是40個字元、以Base64編碼的字串，驗證您的帳戶給Experience Platform是必要的。
@@ -77,16 +75,16 @@ ht-degree: 4%
 
 * **頻率**：設定頻率以指出資料流應該執行的頻率。 您可以排程[!DNL Demandbase]資料流每週擷取資料。
 * **間隔**：間隔代表每個擷取週期之間的時間量。 [!DNL Demandbase]資料流唯一支援的間隔是`1`。 這表示您的資料流每週會擷取一次資料。
-* **開始時間**：開始時間會指定資料流首次執行反複專案的時間。 [!DNL Demandbase]每週在UTC下午12:00將資料捨棄到Adobe一次。 因此，您必須在UTC下午12:00之後設定擷取開始時間。 此外，您必須向[!DNL Demandbase]確認擷取時間，因為他們可能會變更排程，將檔案拖放至Adobe時。
+* **開始時間**：開始時間會指定資料流首次執行反複專案的時間。 [!DNL Demandbase]每週一次在UTC中午12:00將資料捨棄到Adobe。 因此，您必須在UTC下午12:00後設定擷取開始時間。 此外，您必須向[!DNL Demandbase]確認擷取時間，因為他們可能會變更排程，將檔案拖放至Adobe時。
 * **回填**：回填會決定最初要擷取的資料。 如果已啟用回填，則會在第一次排程擷取期間擷取指定路徑中的所有目前檔案。 如果停用回填，則只會擷取在第一次內嵌執行到開始時間之間載入的檔案。 將不會擷取在開始時間之前載入的檔案。
 
-設定資料流的擷取排程後，請選取&#x200B;**[!UICONTROL 下一步]**。
+設定資料流的擷取排程後，請選取&#x200B;**[!UICONTROL Next]**。
 
 ![來源工作流程的排程介面。](../../../../images/tutorials/create/demandbase/scheduling.png)
 
 ## 檢閱資料流 {#review-dataflow}
 
-資料流建立流程的最後一步是在執行資料流之前進行檢閱。 使用&#x200B;*[!UICONTROL 檢閱]*&#x200B;步驟，在執行新資料流之前先檢閱其詳細資料。 詳細資料會分組到以下類別中：
+資料流建立流程的最後一步是在執行資料流之前進行檢閱。 使用&#x200B;*[!UICONTROL Review]*&#x200B;步驟在執行新資料流之前先檢閱其詳細資料。 詳細資料會分組到以下類別中：
 
 * **連線**：顯示來源型別、所選來源檔案的相關路徑，以及該來源檔案中的欄數。
 * **排程**：顯示內嵌排程的有效期間、頻率和間隔。
@@ -99,7 +97,7 @@ ht-degree: 4%
 
 ### 監視資料流
 
-建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI[&#128279;](../../../../../dataflows/ui/monitor-sources.md)中監視帳戶和資料流的教學課程。
+建立資料流後，您可以監視透過它擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需如何監視資料流的詳細資訊，請造訪有關UI[中](../../../../../dataflows/ui/monitor-sources.md)監視帳戶和資料流的教學課程。
 
 ### 更新您的資料流
 
@@ -107,4 +105,4 @@ ht-degree: 4%
 
 ### 刪除您的資料流
 
-您可以刪除不再需要的資料流，或使用&#x200B;**[!UICONTROL 資料流]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL 刪除]**&#x200B;功能建立錯誤的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[&#128279;](../../delete.md)中刪除資料流。
+您可以刪除不再需要的資料流，或是使用&#x200B;**[!UICONTROL Delete]**&#x200B;工作區中可用的&#x200B;**[!UICONTROL Dataflows]**&#x200B;功能錯誤建立的資料流。 如需有關如何刪除資料流的詳細資訊，請瀏覽教學課程，瞭解如何在UI[中刪除資料流](../../delete.md)。
