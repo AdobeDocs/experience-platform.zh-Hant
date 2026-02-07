@@ -1,17 +1,22 @@
 ---
 title: XDM商業人士元件結構描述欄位群組
 description: 瞭解XDM商業人士元件結構描述欄位群組。
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL XDM商業人士元件]結構描述欄位群組
+# [!UICONTROL XDM Business Person Components]結構描述欄位群組
 
-[!UICONTROL XDM商業人士元件]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組，可擷取個人的多個來源記錄以及個人細分所需的其他屬性。
+>[!AVAILABILITY]
+>
+>此欄位群組僅適用於可存取Real-Time CDP B2B edition的組織。
+
+[!UICONTROL XDM Business Person Components]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組，可擷取個人的多個來源記錄以及個人細分所需的其他屬性。
 
 在Real-Time CDP的B2B edition中，透過[即時客戶設定檔](../../../profile/home.md)為個人建立設定檔時，用來建立該設定檔的資訊可能會來自許多來源記錄。 例如，如果某人供職於兩家不同的公司，則許多CRM系統都會刻意建立該人的重複復本，因此其中一個復本會連結至公司A，而另一個則連結至公司B。將該資料引進Adobe Experience Platform時，此欄位群組用於將這些不同的來源記錄合併為單一表示法。
 
@@ -34,7 +39,7 @@ ht-degree: 2%
 | `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 如果此潛在客戶已轉換，則為相關聯絡人的複合識別碼。 |
 | `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 此人的資料源自的來源系統的複合識別碼。 |
 | `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | 個人的複合識別碼。 |
-| `workEmail` | [[!UICONTROL 電子郵件地址]](../../data-types/b2b-source.md) | 個人的工作電子郵件ID。 |
+| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | 個人的工作電子郵件ID。 |
 | `personGroupID` | 字串 | 適用於個人的群組識別碼。 |
 | `personScore` | 字串 | CRM系統產生的個人分數。 |
 | `personSource` | 字串 | 適用於個人資料來源的來源系統的唯一字串型識別碼。 |

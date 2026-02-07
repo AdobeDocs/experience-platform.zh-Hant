@@ -1,17 +1,22 @@
 ---
 title: XDM商業人士詳細資料結構欄位群組
 description: 瞭解XDM商業人士詳細資料結構欄位群組。
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 5%
+source-wordcount: '572'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL XDM商業人士詳細資料]結構描述欄位群組
+# [!UICONTROL XDM Business Person Details]結構描述欄位群組
 
-[!UICONTROL XDM商業人士詳細資料]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組，可擷取企業對企業內容(B2B)中個別個人的相關資訊。
+>[!AVAILABILITY]
+>
+>此欄位群組僅適用於可存取Real-Time CDP B2B edition的組織。
+
+[!UICONTROL XDM Business Person Details]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組，可擷取企業對企業(B2B)內容中個別人員的相關資訊。
 
 ![](../../images/field-groups/business-person-details.png)
 

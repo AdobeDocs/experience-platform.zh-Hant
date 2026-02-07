@@ -1,13 +1,11 @@
 ---
 title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
+source-git-commit: 53bc79a580641e662d6c51fbf2b0c0f51eb6ddb4
 workflow-type: tm+mt
-source-wordcount: '1461'
-ht-degree: 21%
+source-wordcount: '1451'
+ht-degree: 22%
 
 ---
 
