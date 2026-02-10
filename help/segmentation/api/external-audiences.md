@@ -2,9 +2,9 @@
 title: 外部對象API端點
 description: 瞭解如何使用外部對象API，以從Adobe Experience Platform建立、更新、啟用和刪除外部對象。
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
+source-git-commit: ff58324446f28cbdca369ecbb58d8261614ae684
 workflow-type: tm+mt
-source-wordcount: '2253'
+source-wordcount: '2340'
 ht-degree: 4%
 
 ---
@@ -12,6 +12,16 @@ ht-degree: 4%
 # 外部受眾端點
 
 外部受眾可讓您將設定檔資料從外部來源上傳到Adobe Experience Platform。 您可以使用Segmentation Service API中的`/external-audience`端點來將外部對象擷取到Experience Platform、檢視詳細資料並更新外部對象，以及刪除外部對象。
+
+## 護欄
+
+自3月發行版本開始，當使用外部受眾端點時，將強制執行下列護欄：
+
+| 護欄 | 限制 | 限制型別 | 說明 |
+| --------- | ----- | ---------- | ----------- |
+| 每日對象擷取執行次數 | 100 | 系統強制的護欄 | 每天允許的最大對象擷取執行次數。 此限製為每個&#x200B;**沙箱**&#x200B;層級。 |
+| 每個對象的擷取數 | 10 | 系統強制的護欄 | 可對指定對象執行的擷取次數。 |
+| 外部對象規模 | 10 GB   | 效能護欄 | 外部對象的建議總大小為10GB。 |
 
 ## 快速入門
 
