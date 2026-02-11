@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '2949'
-ht-degree: 22%
+source-wordcount: '3118'
+ht-degree: 21%
 
 ---
 
@@ -13,6 +13,29 @@ ht-degree: 22%
 # Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/collection/js/release-notes.md)。
+
+## 2.34.0版 — 2026年2月9日
+
+**新功能**
+
+- 包含[2.31.0](/help/collection/js/release-notes.md#2-31-0)版的Adobe Experience Platform Web SDK。
+- 已新增標籤延伸的[基底程式碼支援](/help/collection/js/install/base-code.md)。
+- 已新增&#x200B;**[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [內容](configure/data-collection.md#context-settings)至擴充功能設定。
+- 新增Brand Concierge元件。
+- 新增允許搭配標籤使用自行託管Alloy執行個體的選項。
+
+**修正和改良**
+
+- 更新[預設邊緣網域](configure/general.md#edge-domain)以包含作為子網域的公司識別碼。
+- 已將&#x200B;**[!UICONTROL No overrides]**&#x200B;選項新增至[資料流組態覆寫](configure/configuration-overrides.md)。
+- 新增重新整理按鈕，以在某些輸入欄位上重新填入專案。
+- 現在每次建立執行個體時，都會自動產生唯一的執行個體名稱。
+- 修正`combinedValidator`在值為`undefined`或`null`時擲回錯誤的錯誤。
+- 修正刪除執行個體時出現的錯誤。
+- 修正擷取結構描述時發生錯誤，導致XDM物件資料元素無法使用的問題。
+- 已修正在[傳送媒體事件](actions/send-media-event.md)動作中儲存設定。
+- 修正設定檢視中串流媒體欄位未正確還原的問題。
+- 修正XDM物件編輯器中巢狀值的錯誤自動填入警報。
 
 ## 2.33.0版 — 2025年9月24日
 

@@ -2,9 +2,9 @@
 title: clickCollectionEnabled
 description: 瞭解如何設定網頁SDK以測試是否自動收集連結點選資料。
 exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 4d251ff7323e83ac5c47b5817f81e8fde64cb7d9
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,21 @@ ht-degree: 0%
 1. 如果連結目標網域與目前的`window.location.hostname`不同，`xdm.web.webInteraction.type`會設為`"exit"` （如果已啟用`clickCollection.exitLinkEnabled`）。
 1. 如果連結不符合`"download"`或`"exit"`的資格，`xdm.web.webInteraction.type`會設為`"other"`。
 
-在所有情況下，`xdm.web.webInteraction.name`皆設為連結文字標籤，`xdm.web.webInteraction.URL`設為連結目的地URL。 如果您也想要將連結名稱設定為URL，您可以使用`filterClickDetails`物件中的`clickCollection`回呼覆寫此XDM欄位。
+在所有情況下，`xdm.web.webInteraction.name`會依下列順序檢查所點選的元素及其子系，找出第一個非空白值：
+
+1. `innerText` （退回至`textContent`）
+1. 從支援的下階文位元組點串連`nodeValue`
+1. `alt`屬性
+1. `title`屬性
+1. `<input value="...">`屬性
+1. `<img src="...">`屬性
+1. `aria-label`屬性
+1. `name`屬性
+1. 空字串
+
+`xdm.web.webInteraction.URL`欄位已設定為連結目的地URL。 如果您也想要將連結名稱設定為URL，您可以使用`filterClickDetails`物件中的`clickCollection`回呼覆寫此XDM欄位。
+
+## 實作
 
 執行`clickCollectionEnabled`命令時設定`configure`布林值。 如果您在設定Web SDK時省略此屬性，其預設值為`true`。 如果您偏好手動設定`false`和`xdm.web.webInteraction.type`，請將此值設為`xdm.web.webInteraction.value`。
 

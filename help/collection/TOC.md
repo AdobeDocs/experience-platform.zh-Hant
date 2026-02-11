@@ -1,15 +1,15 @@
 ---
 audience: user
 solution: Data Collection
-user-guide-title: 資料收集
-breadcrumb-title: 資料收集
+user-guide-title: 資料彙集
+breadcrumb-title: 資料彙集
 user-guide-description: 瞭解如何將資料傳送至Adobe Experience Platform。
 feature: Data Collection
 role: Developer
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 30%
+source-wordcount: '142'
+ht-degree: 32%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 30%
    + [發行說明](js/release-notes.md)
    + 安裝 {#install}
       + [安裝概述](js/install/overview.md)
+      + [基底程式碼](js/install/base-code.md)
       + [資料庫](js/install/library.md)
       + [npm](js/install/npm.md)
       + [自訂建置](js/install/create-custom-build.md)
@@ -37,7 +38,8 @@ ht-degree: 30%
          + [autoCollectPropositionInteractions](js/commands/configure/autocollectpropositioninteractions.md)
          + [clickCollection](js/commands/configure/clickcollection.md)
          + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
-         + [內容](js/commands/configure/context.md)
+         + [上下文](js/commands/configure/context.md)
+         + [交談](js/commands/configure/conversation.md)
          + [datastreamId](js/commands/configure/datastreamid.md)
          + [debugEnabled](js/commands/configure/debugenabled.md)
          + [defaultConsent](js/commands/configure/defaultconsent.md)
@@ -88,14 +90,14 @@ ht-degree: 30%
    + [監視器(_M)](tags/monitors.md)
    + [setDebug](tags/setdebug.md)
    + [setVar](tags/setvar.md)
-   + [track](tags/track.md)
+   + [追蹤](tags/track.md)
 + 使用案例 {#use-cases}
    + [概觀](use-cases/overview.md)
    + [用戶端提示](use-cases/client-hints.md)
    + [使用者端狀態](use-cases/client-state.md)
    + [收集商務資料](use-cases/collect-commerce-data.md)
    + [設定CSP](use-cases/configuring-a-csp.md)
-   + [偵錯](use-cases/debugging.md)
+   + [除錯](use-cases/debugging.md)
    + [事件重複資料刪除](use-cases/event-duplication.md)
    + 身分識別 {#identity}
       + [概觀](use-cases/identity/id-overview.md)

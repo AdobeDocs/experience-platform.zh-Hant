@@ -2,7 +2,7 @@
 title: 設定Adobe Experience Platform Web SDK
 description: 使用Web SDK時，請使用configure命令來設定必要的設定。
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -30,7 +30,7 @@ alloy("configure", {
     },
     sessionStorageEnabled: true
   },
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"],
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"],
   debugEnabled: true,
   defaultConsent: "pending",
   downloadLinkQualifier: "\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$",
@@ -42,6 +42,9 @@ alloy("configure", {
     if(content.xdm.web?.webReferrer) delete content.xdm.web.webReferrer.URL;
   },
   prehidingStyle: "#container { opacity: 0 !important }",
+  conversation: {
+    stickyConversationSession: false
+  },
   targetMigrationEnabled: true,
   thirdPartyCookiesEnabled: false
 });

@@ -1,9 +1,10 @@
 ---
 title: 自訂建置元件
 description: 建立自訂Web SDK建置，此功能可讓您縮小建置大小。
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -31,6 +32,7 @@ Adobe提供停用下列Web SDK組建元件的功能：
 | **[!UICONTROL Activity collector]** | 允許自動連結收集和Activity Map追蹤。 | |
 | **[!UICONTROL Advertising]** | 啟用Adobe Advertising與Customer Journey Analytics的整合。 | |
 | **[!UICONTROL Audiences]** | 支援與Adobe Audience Manager整合，例如ID同步。 | |
+| **[!UICONTROL Brand concierge]** | 啟用與品牌服務商的整合。 |
 | **[!UICONTROL Consent]** | 允許使用同意功能。 | [[!UICONTROL Set consent]](../actions/set-consent.md)動作 |
 | **[!UICONTROL Event merge]** | 已棄用。 | [[!UICONTROL Event merge ID]](../data-element-types.md)資料元素（已棄用）<br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md)動作（已棄用） |
 | **[!UICONTROL Media Analytics bridge]** | 支援與舊版Media Analytics整合。 | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md)動作 |

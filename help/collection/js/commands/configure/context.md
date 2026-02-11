@@ -1,10 +1,10 @@
 ---
-title: 內容
+title: 上下文
 description: 自動收集裝置、環境或位置資料。
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: c2564f1b9ff036a49c9fa4b9e9ffbdbc598a07a8
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '998'
 ht-degree: 5%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 5%
 | --- | --- | --- | --- |
 | 熒幕高度 | 熒幕的高度（畫素）。 | `xdm.device.screenHeight` | `900` |
 | 熒幕寬度 | 熒幕的寬度（畫素）。 | `xdm.device.screenWidth` | `1440` |
-| 熒幕方向 | 熒幕方向。 | `xdm.device.screenOrientation` | `landscape`或`portrait` |
+| 熒幕方向 | 熒幕方向。 | `xdm.device.screenOrientation` | `landscape`或 `portrait` |
 
 ### 環境
 
@@ -83,7 +83,7 @@ ht-degree: 5%
 
 如果您在[設定您的資料流](/help/datastreams/configure.md)時使用裝置查詢，則資料可以清除掉，以支援裝置查詢值。 某些使用者端提示欄位和裝置查詢欄位不得存在於相同點選中。
 
-| 屬性 | 說明 | HTTP標頭 | XDM 路徑 | 範例 |
+| 屬性 | 說明 | HTTP 標題 | XDM 路徑 | 範例 |
 | --- | --- | --- | --- | --- |
 | 作業系統版本 | 作業系統的版本。 | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
 | 架構 | 底層CPU架構。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
@@ -95,17 +95,28 @@ ht-degree: 5%
 
 如需詳細資訊，請參閱[使用者代理程式使用者端提示](/help/collection/use-cases/client-hints.md)。
 
-執行`context`命令時設定`configure`字串陣列。 如果您在設定SDK時省略此屬性，預設會收集除`"highEntropyUserAgentHints"`以外的所有內容資訊。 如果您想要收集高平均資訊量使用者端提示，或您想要從資料收集中忽略其他內容資訊，請設定此屬性。 字串可以包含在任何順序中。
+### 單次Analytics反向連結 {#one-time-analytics-referrer}
 
->[!NOTE]
+`"oneTimeAnalyticsReferrer"`關鍵字只會在頁面的第一個非決策`sendEvent`呼叫上將反向連結值傳送到Adobe Analytics。 此內容關鍵字的主要使用案例是防止Adobe Analytics中的[Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer)維度被主要用於Analytics和Target整合的點選膨脹。
+
+如果指定的`sendEvent`命令使用決定事件型別(`decisioning.propositionFetch`、`decisioning.propositionDisplay`、`decisioning.propositionInteract`)，則計算頁面上的前`sendEvent`個時會忽略它。 如果頁面上的反向連結值變更，並且觸發另一個`sendEvent`，則新的反向連結值會包含在承載中。 此條件可讓此功能搭配單頁應用程式使用。
+
+偵測到重複的反向連結值時，資料庫會將`data.__adobe.analytics.referrer`設定為空字串(`""`)。
+將此資料物件欄位設定為空字串，實際上可在點選到達Adobe Analytics時清除值，因為資料物件會覆寫任何XDM物件同等欄位。 這不會影響XDM物件，如果您在資料流中包含多項服務，可讓該資料繼續傳送至Experience Platform資料集。
+
+## 實作
+
+執行`context`命令時設定`configure`字串陣列。 如果您在設定SDK時省略此屬性，則預設會收集除`"highEntropyUserAgentHints"`和`"oneTimeAnalyticsReferrer"`以外的所有內容資訊。 如果您想要收集高平均資訊量使用者端提示，或您想要從資料收集中忽略其他內容資訊，請設定此屬性。 字串可以包含在任何順序中。
+
+>[!TIP]
 >
->如果您想要收集所有內容資訊，包括高平均資訊量使用者端提示，您必須在`context`陣列字串中包含每個值。 預設`context`值會省略`highEntropyUserAgentHints`，如果您設定`context`屬性，則任何省略的值都不會收集資料。
+>如果您想要收集所有內容資訊，包括高平均資訊量使用者端提示，您必須在`context`陣列字串中包含每個值。 預設`context`值會省略`"highEntropyUserAgentHints"`和`"oneTimeAnalyticsReferrer"`；如果您設定`context`屬性，則任何省略的值都不會收集資料。
 
 ```js
 alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"]
 });
 ```
 

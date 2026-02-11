@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2673'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,22 @@ ht-degree: 2%
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.31.0版 — 2026年2月9日
+
+**新功能**
+
+- 將`"oneTimeAnalyticsReferrer"`的可用性新增至[`context`](commands/configure/context.md)字串陣列。
+- 新增Brand Concierge元件。
+- 已將`meta.queueTimeMillis`新增至網路要求，以記錄事件建立與傳送時間之間的時間。
+- 能夠儲存身分對應，以便後續呼叫填入。
+
+**修正和改良**
+
+- `aria-label`和`name`屬性現在在[自動連結集合](commands/configure/clickcollectionenabled.md)中已被考慮。
+- 修正整合身分對應時可能出現的競爭條件。
+- 修正`streamingMedia`中未包含時間戳記的問題。
+- 修正自訂程式碼動作僅執行一次的問題。
 
 ## 2.30.0版 — 2025年9月24日
 

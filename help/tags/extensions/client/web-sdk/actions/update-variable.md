@@ -1,7 +1,8 @@
 ---
 title: 更新變數
 description: 修改變數資料元素的內容。
-source-git-commit: f87e6a0e969aa0924656cdb2ea56aa79d2d7c841
+exl-id: 6c558d1e-85b4-45f9-ba4d-5fed1ec6e308
+source-git-commit: 50881ef9498196f2de5519f050800334019a2586
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
@@ -20,6 +21,6 @@ ht-degree: 0%
 
 ![顯示更新屬性的動作設定介面熒幕擷圖](../assets/update-variable-set-property.png)
 
-如果您選取的變數資料元素使用資料物件，而不是XDM物件，則可用欄位取決於設定資料元素時選取的產品。 例如，如果您建立包含Adobe Analytics的資料物件欄位，那麼在此UI中選取變數資料元素將提供您能填寫Adobe Analytics專屬的欄位。
+如果您選取的變數資料元素使用資料物件，而不是XDM物件，則可用欄位取決於設定資料元素時選取的產品。 例如，如果您建立包含Adobe Analytics的資料物件，則選取此UI中的變數資料元素時，會提供您能填寫Adobe Analytics專屬的欄位。
 
 ![動作組態介面的熒幕擷圖，顯示以資料物件為基礎的變數資料元素](../assets/variable-data-element-data.png)
