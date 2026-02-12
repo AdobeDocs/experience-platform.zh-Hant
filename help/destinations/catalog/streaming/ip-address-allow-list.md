@@ -2,12 +2,12 @@
 keywords: IP位址、IP範圍、允許清單目的地、允許清單、允許清單串流目的地
 title: 串流目的地的IP位址允許清單
 type: Documentation
-description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP REST API端點、Amazon Kinesis或Azure事件中樞執行個體。
+description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP REST API端點或Amazon Kinesis執行個體。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
+source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 0%
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
@@ -22,9 +22,14 @@ ht-degree: 0%
 
 此頁面記錄的IP範圍適用於下列目的地：
 
-* [進階企業目的地](../../destination-types.md#advanced-enterprise-destinations)： [HTTP API目的地](./http-destination.md)，[[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)，[[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [進階企業目的地](../../destination-types.md#advanced-enterprise-destinations)： [HTTP API目的地](./http-destination.md)和[[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [串流對象匯出目的地](../../destination-types.md#streaming-destinations)，例如[Pega CDH即時對象](/help/destinations/catalog/personalization/pega-v2.md)、與[Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)和[Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)的API型整合
-* 透過[Destination SDK](../../destination-sdk/getting-started.md)建置的公用或私人目的地
+* 透過 [Destination SDK 建置的公用或私人目標](../../destination-sdk/getting-started.md)
+
+>[!IMPORTANT]
+>
+>此頁面上記錄的IP範圍&#x200B;*不*&#x200B;支援於Microsoft Azure上託管的[!DNL Azure Event Hubs]目的地和串流API型目的地。
+
 
 從Experience Platform到這些目的地的傳出流量一律會通過此頁面上列出的IP。
 
