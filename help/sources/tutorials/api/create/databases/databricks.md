@@ -4,9 +4,9 @@ description: 瞭解如何使用API將Databricks連結至Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '553'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 閱讀本指南，瞭解如何使用[!DNL Databricks]API[[!DNL Flow Service] 將您的](https://developer.adobe.com/experience-platform-apis/references/flow-service/)帳戶連結至Adobe Experience Platform。
 
-## 快速入門
+## 開始使用
 
 本指南需要您深入瞭解下列Experience Platform元件：
 
@@ -42,10 +42,11 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | --- | --- |
-| `domain` | [!DNL Databricks]工作區的URL。 例如 `https://adb-1234567890123456.7.azuredatabricks.net`。 |
+| `domain` | [!DNL Databricks]工作區的URL。 例如：`https://adb-1234567890123456.7.azuredatabricks.net`。 |
 | `clusterId` | [!DNL Databricks]中叢集的識別碼。 此叢集必須是現有的叢集，而且應該是互動式叢集。 |
 | `accessToken` | 驗證您[!DNL Databricks]帳戶的存取Token。 您可以使用[!DNL Databricks]工作區產生存取權杖。 |
 | `database` | 三角湖中的資料庫名稱。 |
+| `catalog` | 您在Delta湖中的目錄名稱。 您不需要為預設目錄指定值。 |
 | `connectionSpec.Id` | 連線規格ID會傳回來源的連線器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Databricks]的連線規格識別碼為`e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`。 |
 
 如需詳細資訊，請閱讀 [[!DNL Databricks]  概觀](../../../../connectors/databases/databricks.md)。

@@ -4,9 +4,9 @@ description: 瞭解如何使用使用者介面將Databricks連線至Experience P
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 請閱讀本指南，瞭解如何使用UI中的來源工作區將您的[!DNL Databricks]帳戶連結至Adobe Experience Platform。
 
-## 快速入門
+## 開始使用
 
 本指南需要您深入瞭解下列Experience Platform元件：
 
@@ -34,7 +34,7 @@ ht-degree: 4%
 
 | 認證 | 說明 |
 | --- | --- |
-| 網域 | [!DNL Databricks]工作區的URL。 例如 `https://adb-1234567890123456.7.azuredatabricks.net`。 |
+| 網域 | [!DNL Databricks]工作區的URL。 例如：`https://adb-1234567890123456.7.azuredatabricks.net`。 |
 | 叢集ID | [!DNL Databricks]中叢集的識別碼。 此叢集必須是現有的叢集，而且應該是互動式叢集。 |
 | 存取權杖 | 驗證您[!DNL Databricks]帳戶的存取Token。 您可以使用[!DNL Databricks]工作區產生存取權杖。 |
 | 資料庫 | 三角湖中的資料庫名稱。 |
@@ -43,34 +43,35 @@ ht-degree: 4%
 
 ## 瀏覽來源目錄
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取&#x200B;*[!UICONTROL 來源]*&#x200B;工作區。 選擇類別或使用搜尋列來尋找您的來源。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取&#x200B;*[!UICONTROL Sources]*&#x200B;工作區。 選擇類別或使用搜尋列來尋找您的來源。
 
-若要連線到[!DNL Databricks]，請移至&#x200B;*[!UICONTROL 資料庫]*&#x200B;類別，選取&#x200B;**[!UICONTROL Azure Databricks]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL 設定]**。
+若要連線到[!DNL Databricks]，請移至&#x200B;*[!UICONTROL Databases]*&#x200B;類別，選取&#x200B;**[!UICONTROL Azure Databricks]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL Set up]**。
 
 >[!TIP]
 >
->當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL 新增資料]**。
+>當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL Set up]**&#x200B;選項。 建立已驗證的帳戶後，此選項會變更為&#x200B;**[!UICONTROL Add data]**。
 
 ![已選取Azure Databricks來源卡的來源目錄。](../../../../images/tutorials/create/databricks/catalog.png)
 
 ### 使用現有帳戶
 
-若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後選取您要使用的[!DNL Azure Databricks]帳戶。
+若要使用現有帳戶，請選取&#x200B;**[!UICONTROL Existing account]**，然後選取您要使用的[!DNL Azure Databricks]帳戶。
 
 ![來源工作流程中已選取「現有帳戶」的現有帳戶介面。](../../../../images/tutorials/create/databricks/existing.png)
 
 ### 建立新帳戶
 
-若要建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，並提供名稱，並選擇性地為您的帳戶新增說明。 接著，提供下列驗證認證的值：
+若要建立新帳戶，請選取&#x200B;**[!UICONTROL New account]**&#x200B;並提供名稱，並選擇性地為您的帳戶新增說明。 接著，提供下列驗證認證的值：
 
 * 網域
 * 叢集ID
 * 存取權杖
 * 資料庫
+* 目錄
 
 ![來源工作流程中的新帳戶介面已提供帳戶名稱和選擇性說明。](../../../../images/tutorials/create/databricks/new.png)
 
-此外，您必須將[!UICONTROL 分段SAS URI]認證複製並貼到您的[!DNL Azure Databricks]環境。 完成後，請選取&#x200B;**[!UICONTROL 連線到來源]**，並等待一段時間以建立連線。
+此外，您必須將[!UICONTROL Staging SAS URI]認證複製並貼到您的[!DNL Azure Databricks]環境。 完成時，請選取&#x200B;**[!UICONTROL Connect to source]**，並等待一段時間以建立連線。
 
 ![SAS URI暫存認證。](../../../../images/tutorials/create/databricks/sas-uri.png)
 
