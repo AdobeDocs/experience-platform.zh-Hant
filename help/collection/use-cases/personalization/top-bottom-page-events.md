@@ -2,9 +2,9 @@
 title: 在網頁SDK中設定頁面事件的頂端和底部
 description: 本文說明如何在Web SDK中使用頁面事件的頂端和底端。
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ alloy("sendEvent", {
 
 | 引數 | 必要/選用 | 說明 |
 |---|---|---|
-| `type` | 必填 | 將此引數設為`decisioning.propositionFetch`。 此特殊事件型別會告知Adobe Analytics刪除此事件。 使用Customer Journey Analytics時，您也可以設定篩選器以放置這些事件。 |
+| `type` | 必要 | 將此引數設為`decisioning.propositionFetch`。 此特殊事件型別會告知Adobe Analytics刪除此事件。 使用Customer Journey Analytics時，您也可以設定篩選器以放置這些事件。 |
 | `renderDecisions` | 必要 | 將此引數設為`true`。 此引數可告知Web SDK轉譯Edge Network傳回的決策。 |
 | `personalization.sendDisplayEvent` | 必要 | 將此引數設為`false`。 這會停止傳送顯示事件。 |
 
@@ -80,7 +80,7 @@ alloy("sendEvent", {
 
 | 參數 | 必要/選用 | 說明 |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | 必填 | 將此引數設為`true`。 如此可傳送已在頁面事件頂端隱藏的顯示事件。 |
+| `personalization.includeRenderedPropositions` | 必要 | 將此引數設為`true`。 如此可傳送已在頁面事件頂端隱藏的顯示事件。 |
 | `xdm` | 選填 | 使用此區段來包含頁面底部事件所需的所有資料。 |
 
 >[!TAB 手動呈現的主張]
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | 引數 | 必要/選用 | 說明 |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | 必填 | 本節定義手動呈現的主張。 您必須包含主張`ID`、`scope`和`scopeDetails`。 請參閱有關如何[手動轉譯個人化](../personalization/rendering-personalization-content.md#manually)的檔案，以取得有關如何記錄手動轉譯內容之顯示事件的詳細資訊。 手動呈現的個人化內容必須包含在頁面點選的底部。 |
+| `xdm._experience.decisioning.propositions` | 必要 | 本節定義手動呈現的主張。 您必須包含主張`ID`、`scope`和`scopeDetails`。 如需詳細資訊，請參閱[管理顯示事件](display-events.md)。 手動呈現的個人化內容必須包含在頁面點選的底部。 |
 | `xdm._experience.decisioning.propositionEventType` | 必要 | 將此引數設為`display: 1`。 |
 | `xdm` | 選填 | 使用此區段來包含頁面底部事件所需的所有資料。 |
 

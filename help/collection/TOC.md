@@ -6,10 +6,10 @@ breadcrumb-title: 資料彙集
 user-guide-description: 瞭解如何將資料傳送至Adobe Experience Platform。
 feature: Data Collection
 role: Developer
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 32%
+source-wordcount: '149'
+ht-degree: 30%
 
 ---
 
@@ -106,7 +106,9 @@ ht-degree: 32%
    + [多個SDK例項](use-cases/multiple-instances.md)
    + 個人化 {#personalization}
       + [概觀](use-cases/personalization/pers-overview.md)
-      + [顯示事件](use-cases/personalization/display-events.md)
+      + [自動轉譯DOM動作](use-cases/personalization/render-auto-pers-content.md)
+      + [呈現HTML選件](use-cases/personalization/render-html-offers.md)
+      + [手動呈現建議](use-cases/personalization/render-manual-propositions.md)
       + [管理忽隱忽現情形](use-cases/personalization/manage-flicker.md)
-      + [呈現個人化內容](use-cases/personalization/rendering-personalization-content.md)
+      + [顯示事件](use-cases/personalization/display-events.md)
       + [頂端和底部頁面事件](use-cases/personalization/top-bottom-page-events.md)

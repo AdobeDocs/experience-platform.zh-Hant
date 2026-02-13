@@ -2,9 +2,9 @@
 title: applyPropositions
 description: 重新呈現已使用sendEvent呈現的主張。
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 0%
    * 範圍
    * 選擇器
    * 動作型別
+
+>[!NOTE]
+>
+>`applyPropositions`命令不會自動傳送顯示事件。 如果需要錄製顯示，請使用`sendEvent`命令，如[管理顯示事件](/help/collection/use-cases/personalization/display-events.md)中所述。
 
 呼叫您設定的Web SDK執行個體時執行`applyPropositions`命令。 包含組態選項的物件支援下列欄位：
 
