@@ -2,22 +2,22 @@
 keywords: Experience Platform；首頁；熱門主題；資料擷取；擷取的資料；串流；概觀；串流擷取；延遲；串流延遲；
 solution: Experience Platform
 title: 串流擷取概觀
-description: Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從使用者端和伺服器端裝置傳送資料至Experience Platform。
+description: 瞭解Adobe Experience Platform中的串流擷取。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
+source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '431'
 ht-degree: 2%
 
 ---
 
 # 串流攝取概觀
 
-Adobe Experience Platform的串流擷取為使用者提供從使用者端和伺服器端裝置即時傳送資料到[!DNL Experience Platform]的方法。
+Adobe Experience Platform的串流擷取為使用者提供一種方法，可即時從使用者端和伺服器端裝置傳送資料至Experience Platform。
 
 ## 您可以使用串流擷取做什麼？
 
-Adobe Experience Platform可讓您為每個個別客戶產生[!DNL Real-Time Customer Profile]，藉此推動協調、一致且相關的體驗。 串流擷取可讓您以儘可能少的延遲將[!DNL Profile]資料傳送到[!DNL Data Lake]，因此在建立這些設定檔時扮演了關鍵角色。
+Adobe Experience Platform可讓您為每個個別客戶產生即時客戶設定檔，藉此推動協調、一致且相關的體驗。 串流擷取可讓您以儘可能少的延遲將設定檔資料傳送至Data Lake，因此在建立這些設定檔的過程中扮演關鍵角色。
 
 以下影片旨在協助您瞭解串流擷取，並概述上述概念。
 
@@ -25,15 +25,15 @@ Adobe Experience Platform可讓您為每個個別客戶產生[!DNL Real-Time Cus
 
 ### 串流設定檔記錄和[!DNL ExperienceEvents]
 
-透過串流擷取，使用者可在數秒內將設定檔記錄和[!DNL ExperienceEvents]串流到[!DNL Experience Platform]，以協助推動即時個人化。 傳送至串流擷取API的所有資料都會自動儲存在[!DNL Data Lake]中。
+透過串流擷取，使用者可在數秒內將設定檔記錄和[!DNL ExperienceEvents]串流到Experience Platform，以推動即時個人化。 所有傳送至串流獲取API的資料都會自動保留在資料湖中。
 
 如需詳細資訊，請參閱[建立串流連線指南](../tutorials/create-streaming-connection.md)。
 
 ### 資料集的資料流
 
-一旦您確定您的資料是乾淨的，就可以為[!DNL Real-Time Customer Profile]和[!DNL Identity Service]啟用資料集。
+一旦您確定您的資料是乾淨的，就可以為Real-Time Customer Profile和[!DNL Identity Service]啟用資料集。
 
-如需為[!DNL Profile]和[!DNL Identity Service]啟用資料集的詳細資訊，請參閱[設定資料集指南](/help/profile/tutorials/dataset-configuration.md)。
+如需為設定檔和[!DNL Identity Service]啟用資料集的詳細資訊，請參閱[設定資料集指南](/help/profile/tutorials/dataset-configuration.md)。
 
 ## 在Experience Platform上串流擷取預計會延遲多久？
 
