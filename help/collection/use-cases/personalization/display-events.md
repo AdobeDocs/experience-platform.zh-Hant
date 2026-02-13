@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 ## 在後續`sendEvent`呼叫中傳送顯示事件
 
-當您想要附加在要求個人化時無法使用的其他頁面載入資料時，在稍後的`sendEvent`呼叫中包含顯示事件會很有用。 常用於實作[頂端和底部頁面事件](/help/collection/use-cases/personalization/top-bottom-page-events.md)。 以這種方式正確實作顯示事件有助於避免Adobe Analytics中的[跳出率](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate)問題。
+當您想要附加在要求個人化時無法使用的其他頁面載入資料時，在稍後的`sendEvent`呼叫中包含顯示事件會很有用。 常用於實作[頂端和底部頁面事件](/help/collection/use-cases/personalization/top-bottom-page-events.md)。 以這種方式正確實作顯示事件有助於避免Adobe Analytics中的[跳出率](https://experienceleague.adobe.com/zh-hant/docs/analytics/components/metrics/bounce-rate)問題。
 
 1. 在初始`sendEvent`呼叫（通常在頁面頂端）上，要求及轉譯內容，但透過將`renderDecisions`設定為`true`並將`personalization.sendDisplayEvent`設定為`false`來隱藏自動顯示事件：
 
