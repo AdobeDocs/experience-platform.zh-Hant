@@ -1,14 +1,15 @@
 ---
 title: 組態設定概觀
 description: 瞭解設定網頁SDK標籤擴充功能時可用的選項。
-source-git-commit: 5f0203cfff3cb5c8b892142ff9b1c121925c3c46
+exl-id: 03f7bc0a-05c9-48ae-ae57-478db6d18f52
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
-# 組態設定概觀
+# 組態設定概觀 {#config-overview}
 
 Adobe Experience Platform Web SDK標籤擴充功能提供數個可自訂的選項。 這些組態設定等同於使用JavaScript資料庫中的[`configure`](/help/collection/js/commands/configure/overview.md)命令。
 

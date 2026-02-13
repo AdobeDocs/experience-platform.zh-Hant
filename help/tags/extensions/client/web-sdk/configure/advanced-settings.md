@@ -1,14 +1,20 @@
 ---
 title: 進階組態設定
 description: 設定Web SDK標籤擴充功能的進階設定。
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 0%
+source-wordcount: '150'
+ht-degree: 2%
 
 ---
 
-# 進階組態設定
+# 進階組態設定 {#advanced}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_advanced"
+>title="進階設定"
+>abstract="進階組態設定。 Adobe建議大部分實施都保留這些選項。"
 
 此組態區段可讓您變更進階設定。 Adobe建議大部分實施都保留這些選項。
 

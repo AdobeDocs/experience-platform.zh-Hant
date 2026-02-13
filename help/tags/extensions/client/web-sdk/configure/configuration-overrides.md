@@ -1,14 +1,20 @@
 ---
 title: 資料流組態覆寫設定
 description: 當符合某些條件時，修改組態設定。
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 68227148-3d74-4807-836c-14acd8a9c1dc
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '600'
 ht-degree: 3%
 
 ---
 
-# 資料流組態覆寫設定
+# 資料流組態覆寫設定 {#config-overrides}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_overrides"
+>title="資料流設定覆寫"
+>abstract="有條件地觸發不同的資料流行為，而不需要單獨的資料流。 在本節中為環境設定任何使用者端資料流設定覆寫，將會覆寫該環境的任何伺服器端動態資料流設定和規則。"
 
 資料流覆寫可讓您為資料流定義其他設定，這些設定會透過網頁SDK傳遞到Edge Network。 此功能可協助您有條件地觸發不同的資料流行為，而不需要建立新的資料流或修改現有的設定。
 

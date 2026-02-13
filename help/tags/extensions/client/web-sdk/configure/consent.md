@@ -1,14 +1,20 @@
 ---
 title: 同意組態設定
 description: 設定標籤擴充功能的預設同意和隱私權設定。
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
-# 同意組態設定
+# 同意組態設定 {#consent}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_consent"
+>title="同意"
+>abstract="選取未提供其他明確同意偏好設定時所假設的預設同意層級。"
 
 **[!UICONTROL Consent]**&#x200B;區段可讓您選取在未提供其他明確同意偏好設定時所假設的預設同意層級。 預設同意層級未儲存到使用者設定檔。
 

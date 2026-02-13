@@ -1,15 +1,20 @@
 ---
-title: 自訂建置元件
+title: 建置選項
 description: 建立自訂Web SDK建置，此功能可讓您縮小建置大小。
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
-# 自訂建置元件
+# 建置選項 {#build-options}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="建置選項"
+>abstract="選擇性地在JavaScript程式庫中納入或排除模組，藉此縮小程式庫大小並提升效能。"
 
 Web SDK資料庫包含多個模組，用於各種功能，例如個人化、身分、連結追蹤等。 根據您的使用案例，您可能只需要特定功能，而不需要整個程式庫。 停用組建元件可讓您僅使用所需的模組，藉此縮小程式庫大小並提升效能。
 

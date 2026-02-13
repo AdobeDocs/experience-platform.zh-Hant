@@ -1,14 +1,20 @@
 ---
 title: 推播通知設定
 description: 設定Web SDK標籤擴充功能的推播通知設定。
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 0%
+source-wordcount: '196'
+ht-degree: 1%
 
 ---
 
-# 推播通知設定
+# 推播通知設定 {#push-notifications}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_pushnotifications"
+>title="推播通知"
+>abstract="設定用於推播通知驗證的VAPID公開金鑰。"
 
 >[!AVAILABILITY]
 >

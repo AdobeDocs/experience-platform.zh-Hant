@@ -2,14 +2,19 @@
 title: 資料彙集組態設定
 description: 在網頁SDK標籤擴充功能中設定資料收集設定。
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 0%
+source-wordcount: '719'
+ht-degree: 1%
 
 ---
 
-# 資料彙集組態設定
+# 資料彙集組態設定 {#data-collection}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="資料彙集"
+>abstract="決定要收集哪些資料，以及如何在標籤擴充功能中收集這些資料。"
 
 此設定區段可讓您決定如何跨擴充功能收集資料。
 

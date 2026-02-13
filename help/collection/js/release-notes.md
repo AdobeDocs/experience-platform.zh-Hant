@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
 workflow-type: tm+mt
-source-wordcount: '2673'
+source-wordcount: '2725'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 2%
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.31.1版 — 2026年2月11日
+
+- 修正URL中有多個與廣告相關的`s_kwcid`或`ef_id`引數時，Web SDK會當機的問題。
+- 已修正傳送Advertising資料以及在給予同意前建立Cookie的問題。
+- 修正Safari中Brand Concierge資料流未正確剖析的問題。
 
 ## 2.31.0版 — 2026年2月9日
 

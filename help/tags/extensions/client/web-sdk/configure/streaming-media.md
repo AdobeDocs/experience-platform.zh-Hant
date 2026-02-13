@@ -1,14 +1,20 @@
 ---
 title: 串流媒體組態設定
 description: 自訂Web SDK標籤擴充功能收集串流媒體資料的方式。
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 4%
+source-wordcount: '310'
+ht-degree: 3%
 
 ---
 
-# 串流媒體組態設定
+# 串流媒體組態設定 {#streaming-media}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_streamingmedia"
+>title="串流媒體"
+>abstract="決定在媒體播放工作階段期間如何收集串流媒體資料。"
 
 媒體收集功能可協助您收集與媒體工作階段相關的資料，例如媒體播放數、暫停數、完成數及其他相關事件。 收集後，您可以將此資料傳送至Adobe Experience Platform或Adobe Analytics以產生報表。 此功能提供全方位的解決方案，可追蹤及瞭解您網站上的媒體使用行為。
 

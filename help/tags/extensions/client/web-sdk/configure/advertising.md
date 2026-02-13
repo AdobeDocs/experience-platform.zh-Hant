@@ -1,18 +1,24 @@
 ---
 title: Adobe Advertising組態設定
 description: 啟用或停用Demand-side Platform功能。
-source-git-commit: 526cb473a6288f367db9cb00c0277cce7543cd57
+exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 0%
+source-wordcount: '209'
+ht-degree: 1%
 
 ---
 
-# Adobe Advertising組態設定
+# Adobe Advertising組態設定 {#advertising}
 
 >[!AVAILABILITY]
 >
 >適用於Web SDK的Adobe Advertising目前處於&#x200B;**測試版**。 功能和檔案可能會有所變更。
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_advertising"
+>title="Adobe Advertising"
+>abstract="設定Adobe Advertising整合的相關設定。 請注意，啟用點進測量不需要廣告設定。 Search、Social和Commerce使用者端不需採取進一步動作，不過，Demand-side Platform (DSP)使用者需要在此區段中設定廣告商，以測量閱覽轉換。"
 
 **[!UICONTROL Adobe Advertising]**&#x200B;區段可讓您啟用或停用Demand-side Platform (DSP)功能（若用於您的實施）。 如果您的實作使用DSP，則只需設定此欄位。
 

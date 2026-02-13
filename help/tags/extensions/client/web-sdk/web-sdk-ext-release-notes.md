@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
 workflow-type: tm+mt
-source-wordcount: '3118'
-ht-degree: 21%
+source-wordcount: '3165'
+ht-degree: 20%
 
 ---
 
@@ -14,11 +14,17 @@ ht-degree: 21%
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/collection/js/release-notes.md)。
 
+## 2.34.1版 — 2026年2月11日
+
+- 包含[2.31.1](/help/collection/js/release-notes.md)版的Adobe Experience Platform Web SDK。
+- 修正在[傳送事件](configure/advertising.md)動作中無法編輯[Adobe Advertising組態設定](actions/send-event.md)的問題。
+- 已新增在`edge.adobedc.net`無法使用時，為[Edge網域](configure/general.md)組態設定的`tenant-id`遞補內容。
+
 ## 2.34.0版 — 2026年2月9日
 
 **新功能**
 
-- 包含[2.31.0](/help/collection/js/release-notes.md#2-31-0)版的Adobe Experience Platform Web SDK。
+- 包含[2.31.0](/help/collection/js/release-notes.md)版的Adobe Experience Platform Web SDK。
 - 已新增標籤延伸的[基底程式碼支援](/help/collection/js/install/base-code.md)。
 - 已新增&#x200B;**[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [內容](configure/data-collection.md#context-settings)至擴充功能設定。
 - 新增Brand Concierge元件。

@@ -1,18 +1,24 @@
 ---
 title: Brand Concierge組態設定
 description: 設定Brand Concierge聊天的工作階段持續性和串流逾時。
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 4%
+source-wordcount: '152'
+ht-degree: 5%
 
 ---
 
-# Brand Concierge組態設定
+# Brand Concierge組態設定 {#brand-concierge}
 
 >[!AVAILABILITY]
 >
 >適用於Web SDK的Brand Concierge目前處於&#x200B;**測試版**。 功能和檔案可能會有所變更。
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_brandconcierge"
+>title="Brand Concierge"
+>abstract="在屬性上使用Brand Concierge時的組態設定。"
 
 **[!UICONTROL Brand Concierge]**&#x200B;區段可讓您控制Brand Concierge聊天工作階段在Web SDK標籤擴充功能中的行為。
 
