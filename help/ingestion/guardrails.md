@@ -59,6 +59,6 @@ ht-degree: 0%
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
 * [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=zh-Hant#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

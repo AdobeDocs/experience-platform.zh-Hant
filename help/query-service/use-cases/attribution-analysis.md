@@ -22,7 +22,7 @@ ht-degree: 0%
 * [Attribution IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=zh-Hant)
 * [Adobe Analytics歸因面板指南](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=zh-Hant)。
 
-在`OVER()`視窗函式區段[中可以找到](../sql/adobe-defined-functions.md#window-functions)函式內引數的說明。 [Adobe行銷與Commerce辭彙](https://business.adobe.com/glossary/index.html)可能也有用。
+在`OVER()`視窗函式區段[中可以找到](../sql/adobe-defined-functions.md#window-functions)函式內引數的說明。 [Adobe行銷與Commerce辭彙](https://business.adobe.com/tw/glossary/index.html)可能也有用。
 
 對於下列每一個使用案例，都會提供引數化SQL查詢範例作為範本供您自訂。 在您想要評估的SQL範例中，只要看到`{ }`，就提供引數。
 
