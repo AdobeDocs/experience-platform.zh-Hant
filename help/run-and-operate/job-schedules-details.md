@@ -4,10 +4,9 @@ solution: Experience Platform
 title: 檢視工作排程詳細資訊
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -67,6 +66,8 @@ ht-degree: 1%
 此配置可讓您快速識別資料管道作業與下游處理之間的時間關係。 理想情況下，上游工作（例如資料湖和設定檔擷取）應在這些垂直標籤的左側完成，以確保資料在細分和啟動開始前就已準備就緒。 作業若延伸超過這些標籤，表示下遊程式可能會在資料完全準備之前啟動的潛在時間問題。
 
 ### 我該使用哪個檢視？ {#which-view}
+
+使用下表為您的任務選擇正確的檢視。 以建議的檢視符合您的需求，以便有效率地導覽。
 
 | 我需要…… | 使用此檢視 |
 |--------------|---------------|

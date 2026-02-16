@@ -2,8 +2,7 @@
 title: 執行與操作概觀
 description: 使用執行和操作工具檢查、疑難排解並最佳化Adobe Experience Platform實施。 瞭解已排程的批次啟用、識別設定問題，並改善系統可靠性。
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 1%
@@ -50,7 +49,7 @@ ht-degree: 1%
    >
    >目前唯一可用的功能是[工作排程](job-schedules.md)。
 
-![Experience Platform UI顯示[執行並操作左側導覽]。](assets/overview/run-and-operate.png)
+![Experience Platform UI顯示[執行並操作]左側導覽。](assets/overview/run-and-operate.png)
 
 ## 可用的工具 {#available-tools}
 
