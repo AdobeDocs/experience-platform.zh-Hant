@@ -1,10 +1,10 @@
 ---
 title: 執行與操作概觀
-description: 使用執行和操作工具檢查、疑難排解並最佳化Adobe Experience Platform實施。 瞭解已排程的批次啟用、識別設定問題，並改善系統可靠性。
+description: 使用執行和操作工具檢查、疑難排解並最佳化Experience Platform實施。 瞭解已排程的批次啟用、識別設定問題，並改善系統可靠性。
 hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
