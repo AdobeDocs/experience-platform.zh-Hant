@@ -1,21 +1,17 @@
 ---
 title: Snowflake批次連線
 description: 建立即時Snowflake資料共用，以共用表格形式直接接收您帳戶的每日對象更新。
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 271700625e8cc1d2b5e737e89435c543caa86264
+source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 4%
+source-wordcount: '1708'
+ht-degree: 3%
 
 ---
 
 # Snowflake批次連線 {#snowflake-destination}
-
->[!AVAILABILITY]
->
->此目的地聯結器的可用性有限，且僅適用於[VA7區域](/help/landing/multi-cloud.md#azure-regions)中布建的Real-Time CDP Ultimate客戶。
 
 ## 概觀 {#overview}
 
@@ -51,7 +47,7 @@ ht-degree: 4%
 
 Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](snowflake.md)和[Snowflake批次](snowflake-batch.md)。
 
-雖然這兩個目的地都會以零副本方式讓您存取Snowflake中的資料，但就每個聯結器的使用案例而言，還是有一些建議的最佳作法。
+雖然兩個目的地都可以讓您存取Snowflake中的資料，而不會將資料實際複製到您的帳戶，但在每個聯結器的使用案例方面，有一些建議的最佳作法。
 
 下表會概述每種資料共用方法最適合的案例，協助您決定要使用哪個聯結器。
 
@@ -83,8 +79,13 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 * 您有權存取[!DNL Snowflake]帳戶。
 * 您的Snowflake帳戶已訂閱私人清單。 您或您公司中擁有Snowflake帳戶管理員許可權的人員可以設定此專案。
+* 您知道您的Snowflake帳戶的雲端服務供應商和地區。 當您連線到目的地時，必須同時輸入兩者。
 
 如需必要許可權的詳細資訊，請參閱[[!DNL Snowflake] 檔案](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing)。
+
+>[!IMPORTANT]
+>
+>此目的地不支援防火牆後面或使用[[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure)的Snowflake帳戶。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -137,7 +138,7 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_accountid"
->title="輸入您的 Snowflake 帳戶 ID"
+>title="輸入您的Snowflake資料共用帳戶識別碼"
 >abstract="如果您的帳戶已連結到組織，請使用此格式：`OrganizationName.AccountName`<br><br> 如果您的帳戶未連結到組織，請使用此格式：`AccountName`"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
@@ -146,10 +147,10 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL Snowflake Account ID]**：您的Snowflake帳戶識別碼。 根據您的帳戶是否連結至組織，使用下列帳戶ID格式：
-   * 如果您的帳戶連結至組織： `OrganizationName.AccountName`。
+* **[!UICONTROL Snowflake Account ID]**：您的[Snowflake資料共用帳戶識別碼](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing)。 根據您的帳戶是否連結至組織，使用下列格式：
+   * 如果您的帳戶連結至組織：輸入組織名稱和帳戶名稱，並以&#x200B;**句點** (`.`)分隔。 例如，如果您的組織名稱為ACME，帳戶名稱為AsiaRegion，請輸入`ACME.AsiaRegion`。
    * 如果您的帳戶未連結至組織： `AccountName`。
-* **[!UICONTROL Select Snowflake Region]**：選取布建Snowflake執行個體的地區。 如需支援的雲端區域的詳細資訊，請參閱Snowflake [檔案](https://docs.snowflake.com/en/user-guide/intro-regions)。
+* **[!UICONTROL Snowflake Region]**：選取布建Snowflake執行個體的地區。 如需支援的雲端區域的詳細資訊，請參閱Snowflake [檔案](https://docs.snowflake.com/en/user-guide/intro-regions)。
 * **[!UICONTROL Account acknowledgment]**：輸入&#x200B;**[!UICONTROL Snowflake Account ID]**&#x200B;後，請在此下拉式清單中選取&#x200B;**[!UICONTROL Yes]**，以確認您的&#x200B;**[!UICONTROL Snowflake Account ID]**&#x200B;正確且屬於您。
 
 >[!IMPORTANT]
@@ -189,17 +190,12 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 動態表格包含下列資料欄：
 
-* **TS**：代表每個資料列上次更新的時間戳記資料行
+* **TS**：表示共用資料表中每個資料列上次更新的時間戳記資料行
+* **合併原則ID**：正在啟用的對象所屬的[合併原則](../../../profile/merge-policies/overview.md)識別碼
 * **對應屬性**：您在啟動工作流程期間選取的每個對應屬性都會在Snowflake中以欄標題表示
 * **對象成員資格**：對應到資料流的任何對象成員資格會透過對應儲存格中的`active`專案表示
 
-![熒幕擷圖顯示具有動態資料表資料的Snowflake介面](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
-
-## 已知限制 {#known-limitations}
-
-### 地區可用性 {#regional-availability}
-
-[!DNL Snowflake]批次目的地目前僅適用於Experience Platform VA7區域中布建的Real-Time CDP客戶。
+![熒幕擷圖顯示具有動態資料表資料的Snowflake介面](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 ## 資料使用與控管 {#data-usage-governance}
 
