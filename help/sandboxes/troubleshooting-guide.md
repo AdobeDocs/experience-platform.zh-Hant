@@ -27,7 +27,7 @@ ht-degree: 9%
 >id="platform_sandboxes_sandboxtypes"
 >title="沙箱類型"
 >abstract="沙箱類型會說明這是生產沙箱或是開發沙箱。生產沙箱包括即時資料，而開發沙箱則用於測試和開發。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="在 UI 中建立沙箱"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=zh-Hant#create" text="在 UI 中建立沙箱"
 
 Experience Platform提供兩種沙箱型別：
 
@@ -53,7 +53,7 @@ Experience Platform執行個體支援多個生產及開發沙箱，每個沙箱�
 
 預設Experience Platform授權共授予您5個沙箱，您可將其分類為生產或開發。 您可以額外授權10個沙箱，最多總共75個沙箱。
 
-生產沙箱可重設或刪除，但Adobe Analytics也將其用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能的生產沙箱，或其中代管的身分圖表也被Adobe Audience Manager用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能除外。
+生產沙箱可重設或刪除，但Adobe Analytics也將其用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=zh-Hant)功能的生產沙箱，或其中代管的身分圖表也被Adobe Audience Manager用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=zh-Hant)功能除外。
 
 您可以更新生產沙箱的標題。 不過，無法重新命名生產沙箱。
 
