@@ -110,7 +110,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 以下影片也會示範設定[!DNL LinkedIn Matched Audiences]目的地及啟用對象的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant)
 
 >[!NOTE]
 >
