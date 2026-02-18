@@ -15,7 +15,7 @@ ht-degree: 18%
 
 請閱讀以下指南，瞭解如何使用監控儀表板追蹤組織中串流設定檔擷取工作的速率和量度。
 
-## 快速入門
+## 開始使用
 
 本指南需要您深入瞭解下列Experience Platform元件：
 
@@ -26,7 +26,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
+>串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
 
 ## 監視串流設定檔攝取的量度 {#streaming-profile-metrics}
 

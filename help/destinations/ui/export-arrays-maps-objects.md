@@ -23,7 +23,7 @@ ht-degree: 13%
 
 | 目的地型別 | 可匯出陣列、地圖和其他自訂物件 |
 |---|---|
-| Adobe編寫的雲端儲存空間目標(Amazon S3、Azure Blob、Azure Data Lake Storage Gen2、資料登陸區、Google雲端儲存空間、SFTP) | 可以，在設定目的地連線時，啟用陣列、地圖和物件的匯出切換功能會開啟。 |
+| Adobe編寫的雲端儲存空間目標(Amazon S3、Azure Blob、Azure Data Lake Storage Gen2、Data Landing Zone、Google Cloud Storage、SFTP) | 可以，在設定目的地連線時，啟用陣列、地圖和物件的匯出切換功能會開啟。 |
 | 檔案式電子郵件行銷目的地(Adobe Campaign、Oracle Eloqua、Oracle Responsys、Salesforce Marketing Cloud) | 無 |
 | 現有自訂合作夥伴建置的雲端儲存空間目的地(透過Destination SDK建置的自訂檔案型目的地) | 無 |
 | 企業目的地(Amazon Kinesis、Azure事件中樞、HTTP API) | 部分。 您可以在啟動工作流程的對應步驟中選取和匯出對應型別物件。 |

@@ -31,11 +31,11 @@ ht-degree: 9%
 
 瞭解客戶之間的關係以及他們跨不同管道與您品牌的互動，是Adobe Experience Platform的重要一環。 在[!DNL Experience Data Model] (XDM)結構描述的結構中定義這些關係，可讓您獲得有關客戶資料的複雜見解。
 
-雖然結構描述關聯性可透過使用聯合結構描述和[!DNL Real-Time Customer Profile]來推斷，但這僅適用於共用相同類別的結構描述。 為了建立兩個屬於不同類別的結構之間的關係，必須在來源結構中加入一個專用的關係欄位，該結構會參考另一個相關結構的身份。
+雖然結構描述關聯性可透過使用聯合結構描述和[!DNL Real-Time Customer Profile]來推斷，但這僅適用於共用相同類別的結構描述。 若要在屬於不同類別的兩個結構描述之間建立關係，必須將專用關係欄位新增到來源結構描述中，該來源結構描述會參考其他相關結構描述的身分。
 
 >[!NOTE]
 >
->如果來源和目的地結構描述都屬於相同類別，則不應該使用專用關聯性欄位&#x200B;**&#x200B;**。 在此情況下，請使用聯合結構描述UI來檢視關係。 有關如何執行此動作的說明，請參閱聯合結構描述UI指南的[檢視關係](../../profile/ui/union-schema.md#view-relationships)區段。
+>如果來源和目的地結構描述都屬於相同類別，則不應該使用專用關聯性欄位&#x200B;****。 在此情況下，請使用聯合結構描述UI來檢視關係。 有關如何執行此動作的說明，請參閱聯合結構描述UI指南的[檢視關係](../../profile/ui/union-schema.md#view-relationships)區段。
 
 本檔案提供在[!DNL Experience Platform]使用者介面中使用結構描述編輯器來定義兩個結構描述之間關係的教學課程。 如需使用API定義結構描述關係的步驟，請參閱有關[使用結構描述登入API定義關係的教學課程](relationship-api.md)。
 
@@ -71,7 +71,7 @@ ht-degree: 9%
 
 ### [!DNL Hotels]結構描述
 
-參考結構描述&quot;[!DNL Hotels]&quot;以自訂&quot;[!DNL Hotels]&quot;類別為基礎，並包含描述飯店的欄位。 為了參與關係，參考結構也必須定義一個主要身份，並且對 啟用 [!UICONTROL Profile]。 在此情況下，作為 `_tenantId.hotelId`結構的主要身份，使用自訂的「[!DNL Hotel ID]」身份命名空間。
+參考結構描述&quot;[!DNL Hotels]&quot;以自訂&quot;[!DNL Hotels]&quot;類別為基礎，並包含描述飯店的欄位。 為了參與關聯性，參考結構描述也必須定義主要身分並為[!UICONTROL Profile]啟用。 在這種情況下，`_tenantId.hotelId`會使用自訂&quot;[!DNL Hotel ID]&quot;身分名稱空間，作為結構描述的主要身分。
 
 為設定檔![啟用](../images/tutorials/relationship/hotels.png)
 
@@ -149,7 +149,7 @@ ht-degree: 9%
 
 ## 篩選和搜尋關係 {#filter-and-search}
 
-你可以從 [!UICONTROL Relationships] 工作區的分頁 [!UICONTROL Schemas] 篩選並搜尋結構中的特定關聯。 你可以利用這個視角快速找到並管理你的人際關係。 請閱讀關於 [探索結構資源](../ui/explore.md#lookup) 的文件，了解篩選選項的詳細說明。
+您可以從[!UICONTROL Relationships]工作區的[!UICONTROL Schemas]標籤篩選及搜尋結構描述中的特定關係。 您可以使用此檢視快速找到並管理您的關係。 請閱讀[探索結構描述資源](../ui/explore.md#lookup)上的檔案，以取得篩選選項的詳細說明。
 
 ![結構描述工作區中的[關聯性]索引標籤。](../images/tutorials/relationship-b2b/relationship-tab.png)
 

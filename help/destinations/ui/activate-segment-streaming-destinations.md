@@ -97,7 +97,7 @@ ht-degree: 3%
 
 1. 若要新增更多對應，請重複步驟1至5。
 
-### 套用轉換 {#apply-transformation}
+### 套用轉換  {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"

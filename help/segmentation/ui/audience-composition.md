@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-如果您是Adobe Journey Optimizer客戶，請參閱Adobe Journey Optimizer檔案中的[開始使用對象構成指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=zh-Hant)，以取得在該內容中使用對象構成的詳細資訊。
+如果您是Adobe Journey Optimizer客戶，請參閱Adobe Journey Optimizer檔案中的[開始使用對象構成指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html)，以取得在該內容中使用對象構成的詳細資訊。
 
 >[!ENDSHADEBOX]
 
@@ -224,7 +224,7 @@ ht-degree: 16%
 
 **[!UICONTROL Enrichment criteria]**&#x200B;區段現在會顯示在右側邊欄中。 在此區段中，您可以選取&#x200B;**[!UICONTROL Source join key]**&#x200B;和&#x200B;**[!UICONTROL Enrichment dataset join key]**，好讓您將擴充資料集連結到您嘗試建立的對象。
 
-![&#x200B; [!UICONTROL Enrichment criteria]區域已反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
+![ [!UICONTROL Enrichment criteria]區域已反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
 
 若要選取&#x200B;**[!UICONTROL Source join key]**，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 

@@ -51,7 +51,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 
 ![圖表圖層和名稱空間優先順序。](../images/namespace-priority/graph-layers.png "圖表圖層和名稱空間優先順序。"){zoomable="yes"}
 
-## 程式 {#process}
+## 處理 {#process}
 
 擷取新身分時，Identity Service會檢查新身分及其對應的名稱空間是否依循唯一的名稱空間設定。 如果依照設定進行，擷取作業會繼續，而新身分會連結至圖形。 不過，如果未依循設定，則身分最佳化演演算法會：
 

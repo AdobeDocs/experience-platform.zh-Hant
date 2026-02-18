@@ -1,5 +1,5 @@
 ---
-keywords: Azure事件中樞目的地；azure事件中樞；azure eventhub
+keywords: Azure事件中心目的地；azure事件中心；azure eventhub
 title: Azure事件中樞連線
 description: 建立與您的 [!DNL Azure Event Hubs] 儲存裝置的即時輸出連線，以從Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"

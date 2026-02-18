@@ -41,7 +41,7 @@ ht-degree: 26%
 
 下列篩選條件適用於記錄刪除請求：
 
-| 篩選器 | 說明 |
+| 篩選 | 說明 |
 | --- | --- |
 | [!UICONTROL Status] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL Completed]**：工作已完成。</li><li>**[!UICONTROL Failed]**：工作發生錯誤，無法完成。</li><li>**[!UICONTROL Processing]**：要求已開始，目前正在處理中。</li></ul> |
 | [!UICONTROL Date created] | 根據產生工單的時間進行篩選。 |
@@ -51,7 +51,7 @@ ht-degree: 26%
 
 下列篩選器適用於資料集過期請求：
 
-| 篩選器 | 說明 |
+| 篩選 | 說明 |
 | --- | --- |
 | [!UICONTROL Status] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL Completed]**：工作已完成。</li><li>**[!UICONTROL Pending]**：工作已建立，但尚未執行。 [資料集到期要求](./dataset-expiration.md)會在排定的刪除日期之前假設此狀態。 刪除日期到達後，狀態會更新為[!UICONTROL Executing]，除非工作已預先取消。</li><li>**[!UICONTROL Executing]**：資料集到期要求已開始，目前正在處理中。</li><li>**[!UICONTROL Cancelled]**：工作已取消，因為是手動使用者要求的一部分。</li></ul> |
 | [!UICONTROL Date created] | 根據產生工單的時間進行篩選。 |

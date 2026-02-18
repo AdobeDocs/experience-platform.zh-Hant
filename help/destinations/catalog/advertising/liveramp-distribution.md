@@ -69,24 +69,24 @@ ht-degree: 39%
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### Authenticate to LiveRamp {#authenticate}
+### 驗證LiveRamp {#authenticate}
 
 若要驗證到目的地，請填寫必填欄位並選取&#x200B;**[!UICONTROL Connect to destination]**。
 
-![Experience Platform UI image showing the destination connection screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
+![顯示目的地連線畫面的Experience Platform UI影像。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
 * **[!UICONTROL LiveRamp Organization ID]**：您的LiveRamp帳戶的組織識別碼（在您的LiveRamp提供的認證中列為&#x200B;_owner_org_）。
 * **[!UICONTROL Password]**：您的LiveRamp帳戶密碼（在您的LiveRamp提供的認證中列為&#x200B;_secret_key_）。
-* **[!UICONTROL Token URL]**: Your LiveRamp token URL.
-* **[!UICONTROL Username]**: Your LiveRamp account username (listed as _account_id_ in your LiveRamp-provided credentials).
+* **[!UICONTROL Token URL]**：您的LiveRamp權杖URL。
+* **[!UICONTROL Username]**：您的LiveRamp帳戶使用者名稱（在您的LiveRamp提供的認證中列為&#x200B;_account_id_）。
 
-### Configure destination details {#destination-details}
+### 設定目的地詳細資料 {#destination-details}
 
-After you have successfully connected to your LiveRamp account, enter the required information to connect to the destination that you want to activate audiences to.
+成功連線至您的LiveRamp帳戶後，請輸入連線至您要啟用對象的目標所需的資訊。
 
-![Experience Platform UI image showing the destination details screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
+![Experience Platform UI影像顯示目的地詳細資訊畫面。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
-* **[!UICONTROL Name]**: Fill in the preferred name for your destination connection.
+* **[!UICONTROL Name]**：填寫您目的地連線的偏好名稱。
 
 >[!NOTE]
 >
@@ -101,7 +101,7 @@ After you have successfully connected to your LiveRamp account, enter the requir
 
 ## 目的地特定設定 {#destination-settings}
 
-[支援的每個目的地](#supported-destinations) [!DNL LiveRamp - Distribution]都需要您填寫特定的組態選項。
+[支援的每個目的地](#supported-destinations)[!DNL LiveRamp - Distribution]都需要您填寫特定的組態選項。
 
 如需如何設定每個目的地的詳細指引，請參閱以下各節。
 
@@ -194,8 +194,8 @@ After you have successfully connected to your LiveRamp account, enter the requir
 ![Experience Platform UI影像顯示Disney目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
 * **[!UICONTROL Advertiser data destination terms agreement]**：輸入`I AGREE`以確認對迪士尼廣告商資料條款的認可與同意。
-* **[!UICONTROL Client name]**: Enter your company name as you want it to be shown to the destination partner.
-* **[!UICONTROL Email address]**: Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement.
+* **[!UICONTROL Client name]**：輸入您想要向目的地合作夥伴顯示的公司名稱。
+* **[!UICONTROL Email address]**：輸入繫結至個人的電子郵件地址。 此電子郵件地址可作為廣告商資料條款合約的簽章。
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -217,9 +217,9 @@ After you have successfully connected to your LiveRamp account, enter the requir
 >title="帳戶名稱"
 >abstract="您的索引 Exchange 用戶端帳戶名稱。請勿使用空格或特殊字元。"
 
-To configure details for the destination, fill in the fields below.
+若要設定目的地的詳細資料，請填寫下列欄位。
 
-![Experience Platform UI image showing the customer data fields for the Index Exchange destination.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
+![顯示Index Exchange目的地之客戶資料欄位的Experience Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
 
 * **[!UICONTROL Account Name]**：您的Index Exchange使用者端帳戶名稱。 請勿使用空格或特殊字元。
 
@@ -230,11 +230,11 @@ To configure details for the destination, fill in the fields below.
 >title="用戶端"
 >abstract="依您希望對目標合作夥伴顯示的用戶端名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
-To configure details for the destination, fill in the fields below.
+若要設定目的地的詳細資料，請填寫下列欄位。
 
-![Experience Platform UI image showing the customer data fields for the Magnite CTV destination.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
+![Experience Platform UI影像顯示Magnite CTV目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
 
-* **[!UICONTROL Client]**: Your client name, as you would like it to be shown to the destination partner. 使用您的公司名稱。請勿使用空格或特殊字元。
+* **[!UICONTROL Client]**：您的使用者端名稱，您希望顯示給目的地合作夥伴的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
 ### [!DNL Magnite DV+ (Rubicon Project)] {#magnite-dv}
 
@@ -293,9 +293,9 @@ To configure details for the destination, fill in the fields below.
 >title="用戶端"
 >abstract="您想要向合作夥伴顯示的您公司/經銷帳戶名稱。如果不確定要使用什麼名稱，請聯絡您的合作夥伴帳戶代表。請勿使用空格或特殊字元。"
 
-To configure details for the destination, fill in the fields below.
+若要設定目的地的詳細資料，請填寫下列欄位。
 
-![Experience Platform UI image showing the customer data fields for the One Fox destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
+![Experience Platform UI影像顯示One Fox目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
 * **[!UICONTROL Client]**：您想要向合作夥伴顯示的公司/通訊群組帳戶名稱。 預設使用您的公司名稱。 如果不確定要使用什麼名稱，請聯絡您的合作夥伴帳戶代表。請勿使用空格或特殊字元。
 
@@ -324,11 +324,11 @@ To configure details for the destination, fill in the fields below.
 >title="Reddit 廣告商名稱"
 >abstract="您的 Reddit 廣告商名稱。請勿使用空格或特殊字元。"
 
-To configure details for the destination, fill in the fields below.
+若要設定目的地的詳細資料，請填寫下列欄位。
 
-![Experience Platform UI image showing the customer data fields for the Reddit destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
+![Experience Platform UI影像顯示Reddit目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
 
-* **[!UICONTROL Reddit advertiser ID]**: Your Reddit advertiser ID. 必須以「t2_」或「a2_」開頭。如果您不知道自己的廣告商 ID，請聯絡您的 Reddit 代表。
+* **[!UICONTROL Reddit advertiser ID]**：您的Reddit廣告商ID。 必須以「t2_」或「a2_」開頭。如果您不知道自己的廣告商 ID，請聯絡您的 Reddit 代表。
 * **[!UICONTROL Reddit advertiser name]**：您的Reddit廣告商名稱。 請勿使用空格或特殊字元。
 
 ### [!DNL Roku] {#roku}
@@ -443,9 +443,9 @@ To configure details for the destination, fill in the fields below.
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
-To verify and monitor the activation of your audiences, log in to your LiveRamp account and check the activation metrics.
+若要驗證及監控對象的啟用情況，請登入您的LiveRamp帳戶並檢查啟用量度。
 
-If you have questions about the audience activation, contact your LiveRamp account representative.
+如果您對受眾啟用有任何疑問，請聯絡您的LiveRamp客戶代表。
 
 ## 資料使用與控管 {#data-usage-governance}
 
@@ -453,4 +453,4 @@ If you have questions about the audience activation, contact your LiveRamp accou
 
 ## 其他資源 {#additional-resources}
 
-For more details on how to configure your [!DNL LiveRamp - Onboarding] destination, see the [LiveRamp - Onboarding documentation](liveramp-onboarding.md).
+如需如何設定[!DNL LiveRamp - Onboarding]目的地的詳細資訊，請參閱[LiveRamp — 入門檔案](liveramp-onboarding.md)。

@@ -15,7 +15,7 @@ ht-degree: 17%
 > 
 >本檔案中說明的檔案格式選專案前僅適用於CSV檔案。
 
-當您[連線](/help/destinations/ui/connect-destination.md)至檔案型目的地(例如[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect)或[SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect))時，可以使用選項為匯出的檔案設定各種檔案格式選項。
+當您[連線](/help/destinations/ui/connect-destination.md)至檔案型目的地(例如[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect)或[SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect))時，即可使用選項來設定匯出檔案的各種檔案格式選項。
 
 您可以使用Experience Platform UI為匯出的檔案設定各種檔案格式選項。 您可以修改匯出檔案的幾個屬性，以符合您這端的檔案接收系統的需求，以便以最佳方式讀取和解譯從Experience Platform接收的檔案。
 
@@ -177,14 +177,14 @@ ht-degree: 17%
 *未顯示在UI熒幕擷圖中*。 此旗標可指出是否應該略過匯出值的前導空格。
 
 已選取&#x200B;**[!UICONTROL True]**&#x200B;的範例輸出： `"male","John","TestLastName"`
-已選取&#x200B;**[!UICONTROL False]**&#x200B;的範例輸出： `" male","John","TestLastName"`
+已選取**[!UICONTROL False]**&#x200B;的範例輸出： `" male","John","TestLastName"`
 
 ### 忽略結尾的空白字元
 
 未顯示在UI熒幕擷圖中。 此旗標可指出是否應該略過匯出值的尾端空格。
 
 已選取&#x200B;**[!UICONTROL True]**&#x200B;的範例輸出： `"male","John","TestLastName"`
-已選取&#x200B;**[!UICONTROL False]**&#x200B;的範例輸出： `"male ","John","TestLastName"`
+已選取**[!UICONTROL False]**&#x200B;的範例輸出： `"male ","John","TestLastName"`
 
 ### 後續步驟 {#next-steps}
 

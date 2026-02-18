@@ -109,7 +109,7 @@ ht-degree: 29%
 
 下列篩選器可用於UI中的稽核事件：
 
-| 篩選器 | 說明 |
+| 篩選 | 說明 |
 | --- | --- |
 | [!UICONTROL Category] | 使用下拉式功能表，依[類別](#category)篩選顯示的結果。 |
 | [!UICONTROL Action] | 依動作篩選。 每項服務的可用動作會顯示在資源表格中。 |
@@ -169,7 +169,7 @@ ht-degree: 29%
 
 ## 管理Adobe Admin Console的稽核記錄
 
-若要瞭解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[檔案](https://helpx.adobe.com/tw/enterprise/using/audit-logs.html)。
+若要瞭解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[檔案](https://helpx.adobe.com/enterprise/using/audit-logs.html)。
 
 ## 後續步驟和其他資源
 

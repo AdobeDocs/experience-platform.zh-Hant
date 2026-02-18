@@ -13,7 +13,7 @@ ht-degree: 7%
 
 閱讀本教學課程，瞭解如何使用Adobe Experience Platform使用者介面中的來源工作區更新現有資料流，包括其排程和對應設定。
 
-## 快速入門
+## 開始使用
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 

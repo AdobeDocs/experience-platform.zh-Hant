@@ -16,7 +16,7 @@ ht-degree: 17%
 >id="platform_permissions_roles_about"
 >title="什麼是角色？"
 >abstract="角色會定義管理員、專家或一般使用者對組織資源的存取權。角色會將與 Experience Platform 執行個體互動的使用者分類，也是存取控制原則的建置要素。一個角色具有特定一組權限，而您可以根據組織成員所需的檢視範圍或寫入存取權，對成員指派一個或多個角色。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=zh-Hant" text="管理角色"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="管理角色"
 
 >[!IMPORTANT]
 >
@@ -116,7 +116,7 @@ UI中的角色可使用下列篩選器：
 
 以下影片旨在協助您瞭解如何建立新角色及管理該角色的使用者。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475984/?captions=chi_hant&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## 管理角色 API 認證 {#manage-api-credentials-for-role}
 
