@@ -5,10 +5,10 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 20%
+source-wordcount: '711'
+ht-degree: 21%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 20%
 * 結構描述 {#schema}
    * [結構描述構成的基礎知識](schema/composition.md)
    * [資料建模的最佳做法](schema/best-practices.md)
+   * [設定檔啟用計畫](./schema/profile-enablement-planning.md)
    * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位型別限制](schema/field-constraints.md)
    * [關聯式結構描述](./schema/relational.md)
@@ -81,7 +82,7 @@ ht-degree: 20%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [藥物](./classes/medication.md)
    * [付款人](./classes/payer.md)
-   * [計畫](./classes/plan.md)
+   * [計劃](./classes/plan.md)
    * [原則](./classes/policy.md)
    * [產品](./classes/product.md)
    * [潛在客戶](./classes/prospect.md)
@@ -146,7 +147,7 @@ ht-degree: 20%
       * [XDM商業活動會員細節](./field-groups/b2b-campaign-members/details.md)
    * 藥物 {#medication}
       * [醫療保健藥物](./field-groups/medication/healthcare-medication.md)
-   * 計畫 {#plan}
+   * 計劃 {#plan}
       * [醫療保健計畫詳細資料](./field-groups/plan/healthcare-plan-details.md)
    * 產品 {#product}
       * [產品目錄](./field-groups/product/product-catalog.md)
