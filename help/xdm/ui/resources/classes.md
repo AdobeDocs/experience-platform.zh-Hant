@@ -133,7 +133,7 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 ![結構描述編輯器，具有現有的類別和[!UICONTROL Create a schema]反白顯示。](../../images/ui/resources/classes/edit-class-options.png)
 
 如果您選擇建立新的結構描述，請參閱[建立結構描述](#create-schema)一節以取得詳細資料。 當您完成建立結構描述後（或選取現有結構描述後），會出現結構描述編輯器。 若要更新現有的類別欄位，請從結構描述結構中選取該欄位。 欄位的資訊將顯示在右側邊欄中。 確定[!UICONTROL Assign to]
-已選取選項**[!UICONTROL Class]**，否則您的更新將不會影響類別。
+已選取選項&#x200B;**[!UICONTROL Class]**，否則您的更新將不會影響類別。
 
 ![結構描述編輯器已選取並反白欄位，且右邊欄已顯示，反白顯示[!UICONTROL Assign to]。](../../images/ui/resources/classes/edit-existing-field.png)
 

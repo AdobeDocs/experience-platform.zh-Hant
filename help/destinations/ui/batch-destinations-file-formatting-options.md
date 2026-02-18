@@ -177,14 +177,14 @@ ht-degree: 17%
 *未顯示在UI熒幕擷圖中*。 此旗標可指出是否應該略過匯出值的前導空格。
 
 已選取&#x200B;**[!UICONTROL True]**&#x200B;的範例輸出： `"male","John","TestLastName"`
-已選取**[!UICONTROL False]**&#x200B;的範例輸出： `" male","John","TestLastName"`
+已選取&#x200B;**[!UICONTROL False]**&#x200B;的範例輸出： `" male","John","TestLastName"`
 
 ### 忽略結尾的空白字元
 
 未顯示在UI熒幕擷圖中。 此旗標可指出是否應該略過匯出值的尾端空格。
 
 已選取&#x200B;**[!UICONTROL True]**&#x200B;的範例輸出： `"male","John","TestLastName"`
-已選取**[!UICONTROL False]**&#x200B;的範例輸出： `"male ","John","TestLastName"`
+已選取&#x200B;**[!UICONTROL False]**&#x200B;的範例輸出： `"male ","John","TestLastName"`
 
 ### 後續步驟 {#next-steps}
 

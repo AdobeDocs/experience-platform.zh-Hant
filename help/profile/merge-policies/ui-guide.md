@@ -217,4 +217,4 @@ ExperienceEvent資料集無法手動排序，如果ExperienceEvent資料集中�
 
 ## 後續步驟
 
-現在您已為組織建立並設定合併原則，您可以使用這些原則在Experience Platform中調整客戶設定檔的檢視，以及從您的設定檔資料建立對象。 如需如何使用[ UI和API建立及使用對象的詳細資訊，請參閱](../../segmentation/home.md)區段總覽[!DNL Experience Platform]。
+現在您已為組織建立並設定合併原則，您可以使用這些原則在Experience Platform中調整客戶設定檔的檢視，以及從您的設定檔資料建立對象。 如需如何使用[&#x200B; UI和API建立及使用對象的詳細資訊，請參閱](../../segmentation/home.md)區段總覽[!DNL Experience Platform]。
