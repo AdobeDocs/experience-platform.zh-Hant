@@ -3,10 +3,10 @@ title: 使用Experience Platform UI隨選將檔案匯出至批次目的地
 type: Tutorial
 description: 瞭解如何使用Experience Platform UI隨選將檔案匯出至批次目的地。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 111f6d5093a0b66a683745b1da8d8909eb17f7eb
+source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 8%
+source-wordcount: '805'
+ht-degree: 5%
 
 ---
 
@@ -26,9 +26,26 @@ ht-degree: 8%
 
 本文說明如何使用Experience Platform UI隨選將檔案匯出至批次目的地，例如[雲端儲存空間](/help/destinations/catalog/cloud-storage/overview.md)和[電子郵件行銷](/help/destinations/catalog/email-marketing/overview.md)目的地。
 
-**[!UICONTROL Export file now]**&#x200B;控制項可讓您匯出完整檔案，而不會中斷先前排程對象的目前匯出排程。 除了先前排程的匯出外，也會進行此匯出，不會變更對象的匯出頻率。 檔案匯出會即刻觸發，並從 Experience Platform 分段執行中獲取最新結果。
+**[!UICONTROL Export file now]**&#x200B;控制項可讓您匯出完整檔案，而不會中斷先前排程對象的目前匯出排程。 除了先前排程的匯出外，也會進行此匯出，不會變更對象的匯出頻率。
+
+檔案匯出會立即觸發，並僅使用最近對象評估快照中的資料。 其中不包含建立快照後發生的設定檔或身分變更。 相比之下，排程的匯出包括快照集資料以及在快照集建立和匯出時間之間發生的增量變更。
 
 您也可以將Experience Platform API用於此用途。 瞭解如何透過Ad Hoc Activation API[將隨選對象](/help/destinations/api/ad-hoc-activation-api.md)啟動至批次目的地。
+
+## 排程匯出與隨選匯出 {#scheduled-vs-ondemand}
+
+隨選匯出和排程匯出使用不同的資料來源，這可能會導致匯出的資料有所不同。 請參閱下表以瞭解每種情況下會匯出的內容。
+
+|  | 立即匯出檔案 | 排程的匯出 |
+|--------|-----------------|-------------------|
+| **資料來源** | 僅快照 | 快照+增量變更 |
+| **輪廓屬性** | 快照時間的值 | 匯出時目前的值 |
+
+>[!NOTE]
+>
+>排程匯出可能會顯示與隨選匯出不同的設定檔計數或屬性值，因為它們包含在對象評估後發生的設定檔更新。
+
+如需詳細資訊，請參閱[瞭解排定的匯出行為](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior)。
 
 ## 先決條件 {#prerequisites}
 
