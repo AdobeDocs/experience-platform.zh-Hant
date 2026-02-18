@@ -1,9 +1,9 @@
 ---
 title: 針對客戶警示的Slack整合
 description: 瞭解如何使用Adobe I/O Events App Builder將Adobe連結至Slack。
-source-git-commit: 11f95eb16110155f8675ee5c83824b790a68f06a
+source-git-commit: c0fa0320b32e1bfe286d47a2e1af5ea1dcf74cb9
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -51,9 +51,13 @@ Adobe Experience Platform可讓您在[Adobe App Builder](https://developer.adobe
    aio app init slack-webhook-proxy
    ```
 
-1. 使用方向鍵選取您的`Organization`，然後選取您先前在Developer Console中建立的`Project`。 選取`Only Templates Supported By My Org`以搜尋範本。 接著，按&#x200B;**Enter**&#x200B;跳過範本並安裝獨立的應用程式。
+1. 使用方向鍵選取您的`Organization`，然後選取您先前在Developer Console中建立的`Project`。 選取`Only Templates Supported By My Org`以搜尋範本。
 
    ![終端機，顯示組織和專案選擇，且只顯示我的組織支援的範本。](../images/alerts/slack-integration/terminal-organization-project.png)
+
+1. 接著，按&#x200B;**Enter**&#x200B;跳過範本並安裝獨立的應用程式。
+
+   ![終端機，顯示組織和專案選擇，且只顯示我的組織支援的範本。](../images/alerts/slack-integration/terminal-skip-templates.png)
 
 1. 指定您要為此專案啟用的Adobe I/O應用程式功能。 使用方向鍵捲動並選取`Actions: Deploy Runtime actions`。
 
