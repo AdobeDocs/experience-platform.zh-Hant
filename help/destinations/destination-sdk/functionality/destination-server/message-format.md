@@ -2,9 +2,9 @@
 description: 此頁面說明從Adobe Experience Platform匯出至目的地的資料中的訊息格式和設定檔轉換。
 title: 訊息格式
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
 workflow-type: tm+mt
-source-wordcount: '2489'
+source-wordcount: '2488'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -1032,7 +1032,6 @@ customerList={{input.aggregationKey.segmentAlias}}
 可能的值包括：
 
 * 已實現
-* 現有
 * 已退出
 
 根據上述值，將以下行新增到範本中，以在區段中新增或移除設定檔：
