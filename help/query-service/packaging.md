@@ -2,10 +2,10 @@
 title: 查詢服務封裝
 description: 以下檔案概述查詢服務可用功能和產品的包裝，並著重說明隨機查詢和批次查詢之間的差異。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 2%
+source-wordcount: '990'
+ht-degree: 3%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 2%
 | 支援的使用案例 | <ul><li>探索&#x200B;</li><li>資料探索&#x200B;</li><li>資料驗證</li><li>實驗</li></ul> | <ul><li>清潔</li><li>塑形</li><li>操控</li><li>充實</li></ul> |
 | 支援的語意 | <ul><li>選取查詢</li></ul> | <ul><li>CTAS和ITAS查詢</li></ul> |
 | 最長執行時間 | 10 分鐘 | 24 小時 |
-| 授權量度 | **查詢使用者並行**： <ul><li>1位同時使用者(Real-Time CDP、Adobe Journey Optimizer)&#x200B;</li><li>5位同時使用者(Customer Journey Analytics&#x200B;)</li></ul> **查詢並行**： <ul><li>1個並行執行查詢(所有應用程式&#x200B;)</li></ul> **可以購買額外的Ad Hoc Query Users Pack附加元件**，以增加您授權的Ad Hoc Query權益。 <ul><li>每包+5個額外的同時使用者</li><li>每包+1個額外的並行執行查詢</li></ul> | **計算時數**： <ul><li>變數（根據您的應用程式權益設定範圍）</li></ul> **計算時數**&#x200B;是當執行批次查詢時，查詢服務引擎讀取、處理及將資料寫入資料湖所花費的時間量。 <br>透過Data Distiller SKU，您還能取得額外的使用者和查詢並行存取，可用於執行特定查詢。  資料Distiller SKU包含：<br><ul><li>+5個額外的同時使用者</li><li>+1個額外的並行執行查詢</li></ul> |
+| 授權量度 | **查詢使用者並行**： <ul><li>1位同時使用者(Real-Time CDP、Adobe Journey Optimizer)&#x200B;</li><li>5位同時使用者(Customer Journey Analytics、Adobe Mix Modeler)&#x200B;</li></ul> **查詢並行**： <ul><li>1個並行執行查詢(所有應用程式&#x200B;)</li></ul> **可以購買額外的Ad Hoc Query Users Pack附加元件**，以增加您授權的Ad Hoc Query權益。 <ul><li>每包+5個額外的同時使用者</li><li>每包+1個額外的並行執行查詢</li></ul> | **計算時數**： <ul><li>變數（根據您的應用程式權益設定範圍）</li></ul> **計算時數**&#x200B;是當執行批次查詢時，查詢服務引擎讀取、處理及將資料寫入資料湖所花費的時間量。 <br>透過Data Distiller SKU，您還能取得額外的使用者和查詢並行存取，可用於執行特定查詢。  資料Distiller SKU包含：<br><ul><li>+5個額外的同時使用者</li><li>+1個額外的並行執行查詢</li></ul> |
 | 加速查詢和報告使用 | 無 | 是 — 並行加速查詢可讓您從加速存放區讀取資料，並在您的儀表板中顯示。 也提供在加速存放區中儲存報告模型和資料集的專用權益。 |
 | 資料湖儲存容量 | 您的總儲存許可權取決於您的平台應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供額外的儲存權益，好讓您的資料Distiller使用案例原始和衍生資料集在七天資料到期日之後繼續儲存。<br>您的資料湖儲存容量是以TB為單位，取決於您購買的計算時數。 如需詳細資訊，請檢視產品說明。 |
 | 資料匯出允許 | 您的總匯出權益取決於您的平台式應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供額外的匯出權利，以允許匯出使用Data Distiller建立的衍生資料集。<br>您每年的資料匯出容量是以TB為單位，而且取決於您購買的計算時數。 如需更多詳細資訊，請檢視產品說明。 |
@@ -69,7 +69,7 @@ Experience Platform的存取控制是透過[Adobe Admin Console](https://adminco
 
 ### 相關的SQL深入分析許可權 {#sql-insights-permissions}
 
-若要在儀表板中建立資料Distiller [SQL深入分析](./data-distiller/sql-insights/overview.md)，必須在Admin Console中啟用下列許可權&#x200B;**&#x200B;**。
+若要在儀表板中建立資料Distiller [SQL深入分析](./data-distiller/sql-insights/overview.md)，必須在Admin Console中啟用下列許可權&#x200B;****。
 
 | 權限 | 函數 |
 |---|---|
@@ -80,7 +80,7 @@ Experience Platform的存取控制是透過[Adobe Admin Console](https://adminco
 
 ## 沙箱支援 {#sandbox-support}
 
-沙箱是單一Experience Platform執行個體中的虛擬分割區。 每個Experience Platform執行個體都支援多個生產和非生產沙箱，每個沙箱都會維護自己的Experience Platform資源資料庫。 非生產沙箱可讓您測試功能、執行實驗並進行自訂設定，而不會影響您的生產沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。 所有查詢服務許可權會在所有沙箱之間共用。
+沙箱是 Experience Platform 單一執行個體內的虛擬分割。每個Experience Platform執行個體都支援多個生產和非生產沙箱，每個沙箱都會維護自己的Experience Platform資源資料庫。 非生產沙箱可讓您測試功能、執行實驗並進行自訂設定，而不會影響您的生產沙箱。 如需沙箱的詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。 所有查詢服務許可權會在所有沙箱之間共用。
 
 ## 後續步驟
 
