@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明 (2026 年 2 月)
 description: Adobe Experience Platform 2026 年 2 月版發行說明。
 exl-id: a677026f-e07e-4e69-bd6c-5ddcb13e8e38
-source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
+source-git-commit: da84f77bbe328747ad7befd92d0bc4a12d8477fb
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '731'
 ht-degree: 48%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform 的新功能及現有功能更新：
 
 - [警報](#alerts)
 - [目的地](#destinations)
+- [細分服務](#segmentation-service)
 - [來源](#sources)
 - [體驗資料模式 (XDM)](#xdm)
 
@@ -66,6 +67,19 @@ Experience Platform 可讓您訂閱各種 Experience Platform 活動的事件型
 {style="table-layout:auto"}
 
 如需詳細資訊，請閱讀[目標概觀](../../destinations/home.md)。
+
+## 細分服務 {#segmentation-service}
+
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，進而定義設定檔的特定子集。客群的根據可以是記錄資料 (例如人口統計資訊) 或是代表客戶與您的品牌互動情形的時間序列事件。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 可編輯的API對象 | 您現在可以在區段產生器中編輯使用區段服務API或Audience Agent建立的對象。 **注意：**&#x200B;目前無法使用區段產生器編輯包含時間序列資料&#x200B;**的對象**。 |
+| 外部受眾資料到期日重新整理 | 您可以使用分段服務API來延長外部對象的資料有效期。 如需詳細資訊，請閱讀[外部對象API指南](/help/segmentation/api/external-audiences.md#extend-data-expiration)。 |
+
+如需詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
