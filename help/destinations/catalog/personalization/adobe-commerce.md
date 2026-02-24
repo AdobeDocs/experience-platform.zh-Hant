@@ -2,10 +2,10 @@
 title: Adobe Commerce目的地聯結器
 description: 瞭解Adobe Commerce和Real-Time CDP商家如何提供高度相關的網站內容和促銷活動，並根據Real-Time CDP中建立和管理之客戶對象進行自訂，進而個人化購物體驗。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 70556134a96260ae111c71ee288d4d646481270b
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 3%
+source-wordcount: '839'
+ht-degree: 4%
 
 ---
 
@@ -22,16 +22,41 @@ ht-degree: 3%
 若要使用此目的地連線，請確定您有以下存取權：
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 您可以存取開發人員主控台，檢視在Adobe Commerce中[完成擴充功能組態](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=zh-Hant#configure-the-extension)所需的服務帳戶和認證資訊。
-- [Adobe Commerce 2.4.4版或更新版本](https://business.adobe.com/tw/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 您可以存取開發人員主控台，檢視在Adobe Commerce中[完成擴充功能組態](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension)所需的服務帳戶和認證資訊。
+- [Adobe Commerce 2.4.4版或更新版本](https://business.adobe.com/products/commerce.html)
 
 在Experience Platform中建立下列專案：
 
-- [結構描述](../../../xdm/schema/composition.md)。 您建立的結構描述代表您計畫從Adobe Commerce擷取的資料。 [深入瞭解](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=zh-Hant)如何建立包含Commerce特定欄位群組的結構描述。
+- [結構描述](../../../xdm/schema/composition.md)。 您建立的結構描述代表您計畫從Adobe Commerce擷取的資料。 [深入瞭解](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html)如何建立包含Commerce特定欄位群組的結構描述。
 - [資料集](../../../catalog/datasets/user-guide.md#create)。 資料集是資料集合的儲存和管理結構。 您會使用先前建立的結構描述建立此資料集。
 - [資料流](../../../datastreams/overview.md#create)。 可讓資料從Adobe Experience Platform流向其他Adobe DX產品的ID。 此ID必須與您特定Adobe Commerce執行個體中的特定網站相關聯。 當您建立此資料流時，請指定您在上面建立的XDM結構描述。
 
 完成先決條件後，請連線至[!DNL Commerce]目的地。
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 連線到目標 {#connect}
 
@@ -71,7 +96,7 @@ ht-degree: 3%
 
 ## [!DNL Adobe Commerce]中的後續步驟
 
-現在您已在Experience Platform中設定[!DNL Commerce]目的地，您必須在[!DNL Audience Activation]中安裝[!DNL Commerce]擴充功能，並設定[!DNL Commerce Admin]以匯入您建立的Real-Time CDP對象。 請參閱[[!DNL Commerce] 檔案](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=zh-Hant)以瞭解更多資訊。
+現在您已在Experience Platform中設定[!DNL Commerce]目的地，您必須在[!DNL Audience Activation]中安裝[!DNL Commerce]擴充功能，並設定[!DNL Commerce Admin]以匯入您建立的Real-Time CDP對象。 請參閱[[!DNL Commerce] 檔案](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)以瞭解更多資訊。
 
 ## 驗證Commerce中的對象啟用 {#exported-data}
 

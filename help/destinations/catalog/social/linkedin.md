@@ -3,9 +3,9 @@ keywords: linkedin連線；linkedin連線；linkedin目的地；linkedin；
 title: Linkedin相符受眾連線
 description: 根據雜湊電子郵件，為您的LinkedIn行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1336'
 ht-degree: 4%
 
 ---
@@ -46,10 +46,24 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -110,7 +124,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 以下影片也會示範設定[!DNL LinkedIn Matched Audiences]目的地及啟用對象的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -134,7 +148,7 @@ LinkedIn權杖每60天過期。 您可以從&#x200B;**[!UICONTROL Account expira
    ![篩選以僅顯示LinkedIn帳戶](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL Edit details]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL Reconnect OAuth]**&#x200B;並使用您的LinkedIn認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL Reconnect OAuth]**並使用您的LinkedIn認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]

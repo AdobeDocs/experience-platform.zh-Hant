@@ -3,9 +3,9 @@ title: Google Customer Match +顯示器和視訊360連線
 description: 透過Google Customer Match + Display & Video 360目的地聯結器，您可以使用Experience Platform的線上和離線資料，透過Google所擁有和營運的屬性(例如搜尋、購物、Gmail和YouTube)聯絡並重新與客戶互動。
 badge: 有限可用性
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2479'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 >
 >**Google Customer Match + Display &amp; Video 360聯結器可用性有限**<br>&#x200B;隨著我們與Google整合的整個成熟度生命週期，我們看到資料指出實作中的弱點，需要修正才能更廣泛地採用。 基於這些考量，Adobe已將此目的地的可見度降低為有限數量的客戶。 我們正在與Google進行主動式對話，以改善產品體驗。 我們明白這可能是一個令人失望的消息，但我們相信這是確保客戶獲得高品質、可靠體驗的負責任方法。</br>
 
-使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail]&#x200B;[!DNL Google Display Network]清單。
+使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail][!DNL Google Display Network]清單。
 
 某些Google整合的第三方(例如Adobe Real-Time CDP)可以使用[!DNL Google Audience Partner API]直接在客戶的[!DNL Customer Match]帳戶中建立[!DNL Display & Video 360]對象。
 
@@ -77,10 +77,24 @@ ht-degree: 5%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -176,7 +190,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 連線到目標 {#connect}
 

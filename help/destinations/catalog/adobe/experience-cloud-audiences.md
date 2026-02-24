@@ -3,15 +3,15 @@ title: Experience Cloud 客群
 description: 瞭解如何從Real-Time Customer Data Platform將受眾分享至各種Experience Cloud應用程式。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 00da5d8c0eaaecb5b1f5ad5bff7482f3bf4023e2
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1810'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL Experience Cloud對象]連線
+# [!UICONTROL Experience Cloud Audiences] 連線
 
 >[!AVAILABILITY]
 >
@@ -19,15 +19,15 @@ ht-degree: 2%
 
 使用此目的地可以啟用從Real-Time CDP到Audience Manager和Adobe Analytics的受眾。
 
-若要將受眾傳送至Adobe Analytics，您需要Audience Manager授權。 如需詳細資訊，請參閱[Audience Analytics概觀](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=zh-Hant)。
+若要將受眾傳送至Adobe Analytics，您需要Audience Manager授權。 如需詳細資訊，請參閱[Audience Analytics概觀](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en)。
 
 若要將對象傳送至其他Adobe解決方案，請使用從Real-Time CDP到[Adobe Target](../personalization/adobe-target-connection.md)、[Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md)、[Adobe Campaign](../email-marketing/adobe-campaign.md)和[Marketo Engage](../adobe/marketo-engage.md)的直接連線。
 
 >[!IMPORTANT]
 >
->此目的地會取代從Real-Time Customer Data Platform到各種Experience Cloud解決方案的[舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aep-segments-in-aam)。
+>此目的地會取代從Real-Time Customer Data Platform到各種Experience Cloud解決方案的[舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)。
 > 
->如果您已透過[舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aep-segments-in-aam)將對象從Real-Time CDP共用至Audience Manager和其他Experience Cloud解決方案，則必須先聯絡客戶服務停用舊版整合，才能使用此目的地。
+>如果您已透過[舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)將對象從Real-Time CDP共用至Audience Manager和其他Experience Cloud解決方案，則必須先聯絡客戶服務停用舊版整合，才能使用此目的地。
 
 ![Experience Cloud Audiences目的地，在目的地目錄中醒目提示。](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -39,8 +39,8 @@ ht-degree: 2%
 
 在Audience Manager中，您可以將Real-Time CDP對象用於「資料管理平台」使用案例，例如：
 
-* 正在新增[第三方資料](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=zh-Hant#third-party-data)至您的區段；
-* [演演算法模型](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=zh-Hant)；
+* 正在新增[第三方資料](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data)至您的區段；
+* [演演算法模型](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html)；
 * 將您的對象啟用至Real-Time CDP目的地目錄尚未支援的Cookie型目的地。
 
 ### 對匯出對象的精細控制 {#segments-control}
@@ -53,7 +53,7 @@ ht-degree: 2%
 
 您傳送至Experience Cloud Audiences目的地的受眾不會自動出現在Adobe Analytics中。
 
-在將對象傳送至Adobe Analytics之前，您必須[實作適用於Analytics和Audience Manager的Experience Cloud Identity服務](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=zh-Hant)。
+在將對象傳送至Adobe Analytics之前，您必須[實作適用於Analytics和Audience Manager的Experience Cloud Identity服務](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en)。
 
 >[!IMPORTANT]
 >
@@ -80,7 +80,7 @@ ht-degree: 2%
 
 ### 適用於使用舊版受眾共用解決方案的客戶
 
-如果您已透過[舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aep-segments-in-aam)將對象從Real-Time CDP共用至Audience Manager和其他Experience Cloud解決方案，您必須聯絡客戶服務以停用舊版整合。
+如果您已透過[舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)將對象從Real-Time CDP共用至Audience Manager和其他Experience Cloud解決方案，您必須聯絡客戶服務以停用舊版整合。
 
 解決取消布建票證的週轉時間為六個工作天或更短。 停用現有的舊版整合後，您可以透過自助服務目的地卡繼續進行[建立連線](#connect)。
 
@@ -94,7 +94,7 @@ ht-degree: 2%
 
 * 目前，您可以在每個組織的單一沙箱上設定Experience Cloud Audiences目的地。 嘗試在另一個沙箱中設定第二個目的地連線會導致錯誤。
 * 連線到目的地時，您可以看到[啟用資料流警示](../../ui/alerts.md)的選項。 雖然可在UI中看到，但目前不支援&#x200B;**啟用警示選項**。
-* **對象回填支援**：首次匯出至Audience Manager或其他Experience Cloud解決方案時，會包含對象的歷史母體。 [舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aep-segments-in-aam)的使用者若設定此目的地，應該會有大約六個小時的回填差異。
+* **對象回填支援**：首次匯出至Audience Manager或其他Experience Cloud解決方案時，會包含對象的歷史母體。 [舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)的使用者若設定此目的地，應該會有大約六個小時的回填差異。
 * 不直接支援源自[對象構成](../../../segmentation/ui/audience-composition.md)的對象。 若要針對此目的地啟用複合對象，您必須根據您的複合對象，透過[區段產生器](../../../segmentation/ui/segment-builder.md)建立對象定義，並啟用新建立的對象。
 
 ### 啟用對象時的延遲 {#audience-activation-latency}
@@ -107,7 +107,7 @@ ht-degree: 2%
 
 ## 支援的身分 {#supported-identities}
 
-匯出至[!UICONTROL Experience Cloud Audiences]目的地的設定檔已對應至下表所述的身分。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
+匯出至[!UICONTROL Experience Cloud Audiences]目的地的設定檔對應到下表所述的身分。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
@@ -123,11 +123,25 @@ ht-degree: 2%
 本節說明您可以將哪種型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
-| ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -135,8 +149,8 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出以上一節所列的身分識別中斷之對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Real-Time CDP中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL Audience export]** | 您正在匯出以上一節所列的身分識別中斷之對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Real-Time CDP中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -144,13 +158,13 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請在目錄中的目的地卡片檢視中選取&#x200B;**[!UICONTROL 設定]**，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請在目錄中的目的地卡片檢視中選取&#x200B;**[!UICONTROL Set up]**，然後選取&#x200B;**[!UICONTROL Connect to destination]**。
 
 ![檢視Experience Cloud Audiences目的地的[連線到目的地]選項。](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
 
@@ -160,14 +174,14 @@ ht-degree: 2%
 
 ![設定新的目的地畫面，顯示連線至Experience Cloud Audiences目的地的必要和選用設定。](../..//assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
 
-* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
+* **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+* **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 閱讀[將設定檔和對象啟用至串流對象匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)，以瞭解啟用此目的地對象的指示。 不需要[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)，而且此目的地沒有可用的[排程步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)。
 
@@ -177,7 +191,7 @@ ht-degree: 2%
 
 ### 在Audience Manager中驗證資料
 
-您的Real-Time CDP對象在Audience Manager中顯示為[訊號](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aep-segments-as-aam-signals)、[特徵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aep-segments-as-aam-traits)和[區段](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#aep-segments-as-aam-segments)。 如果資料如上述檔案連結所述出現，您可以在Audience Manager中驗證。
+您的Real-Time CDP對象在Audience Manager中顯示為[訊號](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals)、[特徵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits)和[區段](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments)。 如果資料如上述檔案連結所述出現，您可以在Audience Manager中驗證。
 
 從Real-Time CDP傳送受眾15分鐘後，Audience Manager中就會開始填入區段名稱。
 
@@ -190,14 +204,14 @@ ht-degree: 2%
 處理您的資料時，所有[!DNL Real-Time CDP]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](/help/data-governance/home.md)。
 
 Real-Time CDP中的資料控管由[資料使用標籤](/help/data-governance/labels/reference.md)和行銷動作強制執行。
-資料使用標籤會傳輸到應用程式，但行銷動作不會。 這表示當受眾著陸Audience Manager後，就可以將來自Real-Time CDP的受眾匯出至任何可用的目的地。 在Audience Manager中，您可以使用[資料匯出控制項](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=zh-Hant)來封鎖將對象匯出至特定目的地的作業。
+資料使用標籤會傳輸到應用程式，但行銷動作不會。 這表示當受眾著陸Audience Manager後，就可以將來自Real-Time CDP的受眾匯出至任何可用的目的地。 在Audience Manager中，您可以使用[資料匯出控制項](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html)來封鎖將對象匯出至特定目的地的作業。
 
 標示有[!DNL HIPAA]行銷動作的對象不會從Real-Time CDP傳送到Audience Manager。
 
 ### Audience Manager中的許可權管理
 
-Audience Manager中的對象和特徵必須遵守[角色型存取控制](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=zh-Hant) (RBAC)。
+Audience Manager中的對象和特徵必須遵守[角色型存取控制](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC)。
 
-從Real-Time CDP匯出的對象會指派給Audience Manager中名為&#x200B;**[!UICONTROL Experience Platform區段]**&#x200B;的特定資料來源。
+從Real-Time CDP匯出的對象會指派給Audience Manager中名為&#x200B;**[!UICONTROL Experience Platform Segments]**&#x200B;的特定資料來源。
 
-若要僅允許特定使用者存取對象，請使用[角色型存取控制](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=zh-Hant)來設定使用者存取從Real-Time CDP對象建立的對象和特徵。
+若要僅允許特定使用者存取對象，請使用[角色型存取控制](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html)來設定使用者存取從Real-Time CDP對象建立的對象和特徵。

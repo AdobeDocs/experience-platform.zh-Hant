@@ -3,9 +3,9 @@ title: Pega設定檔聯結器
 description: 使用Adobe Experience Platform中Amazon S3的Pega設定檔聯結器將完整或增量（或兩者）設定檔資料匯出至Amazon S3雲端儲存空間。 在Pega客戶決策中心，資料工作可在客戶設定檔Designer中排程，以定期從Amazon S3儲存空間匯入設定檔資料。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1256'
 ht-degree: 4%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 4%
 
 * 設定[!DNL Amazon S3]儲存貯體和資料夾路徑，以用於匯出和匯入資料檔案。
 * 設定[!DNL Amazon S3]存取金鑰和[!DNL Amazon S3]秘密金鑰：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授予Experience Platform存取您的[!DNL Amazon S3]帳戶。
-* 若要成功連線並匯出資料至您的[!DNL Amazon S3]儲存位置，請在[!DNL Amazon S3]中為[!DNL Experience Platform]建立識別與存取管理(IAM)使用者，並指派`s3:DeleteObject`、`s3:GetBucketLocation`、`s3:GetObject`、`s3:ListBucket`、`s3:PutObject`、`s3:ListMultipartUploadParts`等許可權
+* 若要成功連線並匯出資料至您的[!DNL Amazon S3]儲存位置，請在[!DNL Experience Platform]中為[!DNL Amazon S3]建立識別與存取管理(IAM)使用者，並指派`s3:DeleteObject`、`s3:GetBucketLocation`、`s3:GetObject`、`s3:ListBucket`、`s3:PutObject`、`s3:ListMultipartUploadParts`等許可權
 * 請確定您的[!DNL Pega Customer Decision Hub]執行個體已升級至8.8版或更新版本。
 
 ## 支援的身分 {#supported-identities}
@@ -53,14 +53,39 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
+| 匯出類型 | **[!UICONTROL Profile-based]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
+| 匯出頻率 | **[!UICONTROL Batch]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
 
 {style="table-layout:auto"}
 
@@ -68,13 +93,13 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請填寫必填欄位並選取&#x200B;**[!UICONTROL Connect to destination]**。
 
 * **[!DNL Amazon S3]存取金鑰**&#x200B;與&#x200B;**[!DNL Amazon S3]秘密金鑰**：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授予Adobe Experience Platform存取您的[!DNL Amazon S3]帳戶。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
 
@@ -84,13 +109,13 @@ ht-degree: 4%
 
 ![顯示Pega設定檔聯結器目的地詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
-若要設定目的地的詳細資料，請填寫必填欄位，然後選取&#x200B;**[!UICONTROL 下一步]**。 UI中欄位旁的星號表示該欄位為必填欄位。
+若要設定目的地的詳細資料，請填寫必填欄位，然後選取&#x200B;**[!UICONTROL Next]**。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-* **[!UICONTROL 名稱]**：輸入可協助您識別此目的地的名稱。
-* **[!UICONTROL 描述]**：輸入此目的地的描述。
-* **[!UICONTROL Bucket名稱]**：輸入要由此目的地使用的[!DNL Amazon S3]儲存貯體的名稱。
-* **[!UICONTROL 資料夾路徑]**：輸入目的地資料夾的路徑，此資料夾將裝載匯出的檔案。
-* **[!UICONTROL 壓縮型別]**：選取壓縮型別為GZIP或NONE。
+* **[!UICONTROL Name]**：輸入可協助您識別此目的地的名稱。
+* **[!UICONTROL Description]**：輸入此目的地的說明。
+* **[!UICONTROL Bucket name]**：輸入此目的地要使用的[!DNL Amazon S3]儲存貯體的名稱。
+* **[!UICONTROL Folder path]**：輸入目的地資料夾的路徑，此資料夾將裝載匯出的檔案。
+* **[!UICONTROL Compression Type]**：選取GZIP或NONE壓縮型別。
 
 >[!TIP]
 >
@@ -100,20 +125,20 @@ ht-degree: 4%
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 請參閱[啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)，以取得啟用對象至此目的地的指示。
 
 ### 對應屬性和身分 {#map}
 
-在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，您可以選取要為設定檔匯出的屬性和身分欄位。 您也可以選取將匯出檔案中的標題變更為任何您想要的易記名稱。 如需詳細資訊，請參閱啟動批次目的地UI教學課程中的[對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)。
+在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，您可以選取要為設定檔匯出的屬性和身分欄位。 您也可以選取將匯出檔案中的標題變更為任何您想要的易記名稱。 如需詳細資訊，請參閱啟動批次目的地UI教學課程中的[對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)。
 
 ## 驗證資料匯出 {#exported-data}
 
@@ -127,7 +152,7 @@ ht-degree: 4%
 
 ## 其他資源 {#additional-resources}
 
-請參閱[!DNL Pega Customer Decision Hub]中的[匯入資料工作](https://academy.pega.com/topic/import-data-jobs/v1)。
+請參閱[中的](https://academy.pega.com/topic/import-data-jobs/v1)匯入資料工作[!DNL Pega Customer Decision Hub]。
 
 ## 資料使用與控管 {#data-usage-governance}
 

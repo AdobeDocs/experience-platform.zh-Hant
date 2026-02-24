@@ -3,9 +3,9 @@ keywords: crm；CRM；crm目的地；salesforce crm；salesforce crm目的地
 title: Salesforce CRM連線
 description: Salesforce CRM目的地可讓您匯出帳戶資料，並在Salesforce CRM中根據您的業務需求加以啟用。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 27f2b28d924fbd85eefbea5a65d1ee9249bafa87
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2734'
+source-wordcount: '2905'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料至Salesforce CRM目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料至Salesforce CRM目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 ### [!DNL Salesforce CRM]中的必要條件 {#prerequisites-destination}
 
@@ -129,6 +129,31 @@ ht-degree: 1%
 |---|---|---|
 | `SalesforceId` | 您透過區段匯出或更新之連絡人或潛在客戶身分的[!DNL Salesforce CRM]識別碼。 | 強制 |
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
@@ -166,7 +191,7 @@ ht-degree: 1%
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL Connected]**&#x200B;狀態，然後您可以繼續下一個步驟。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -255,7 +280,7 @@ ht-degree: 1%
 以下顯示來自[!DNL Salesforce]的自訂欄位範例：
 ![[!DNL Salesforce]顯示自訂欄位的UI熒幕擷圖。](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
-以下顯示指示[!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**&#x200B;位置的範例：
+以下顯示指示[!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**位置的範例：
 ![Experience Platform UI熒幕擷圖範例，顯示排程對象匯出。](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
 如上所示，[!DNL Salesforce] **[!UICONTROL Field Name]**&#x200B;與[!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**&#x200B;中指定的值完全相符。
@@ -279,7 +304,7 @@ ht-degree: 1%
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![Experience Platform UI熒幕擷圖顯示目的地資料流執行。](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!UICONTROL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!UICONTROL Activation data]**標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/salesforce/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。
@@ -289,7 +314,7 @@ ht-degree: 1%
 
    **使用連絡人**
 
-   * 如果您已在您的Experience Platform區段中選取&#x200B;*連絡人*，請瀏覽至&#x200B;**[!DNL Apps]** > **[!DNL Contacts]**&#x200B;頁面。
+   * 如果您已在您的Experience Platform區段中選取&#x200B;*連絡人*，請瀏覽至&#x200B;**[!DNL Apps]** > **[!DNL Contacts]**頁面。
      ![Salesforce CRM熒幕擷圖顯示含有區段設定檔的「連絡人」頁面。](../../assets/catalog/crm/salesforce/contacts.png)
 
    * 選取&#x200B;*連絡人*&#x200B;並檢查欄位是否已更新。 您可以看到根據[!DNL Salesforce CRM]對象排程&#x200B;**[!UICONTROL Mapping ID]**&#x200B;期間提供的[值，](#schedule-segment-export-example)中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
@@ -297,7 +322,7 @@ ht-degree: 1%
 
    **使用銷售機會**
 
-   * 如果您已在您的Experience Platform區段中選取&#x200B;*銷售機會*，請導覽至&#x200B;**[!DNL Apps]** > **[!DNL Leads]**&#x200B;頁面。
+   * 如果您已在您的Experience Platform區段中選取&#x200B;*銷售機會*，請導覽至&#x200B;**[!DNL Apps]** > **[!DNL Leads]**頁面。
      ![Salesforce CRM熒幕擷圖顯示具有區段設定檔的「銷售機會」頁面。](../../assets/catalog/crm/salesforce/leads.png)
 
    * 選取&#x200B;*銷售機會*&#x200B;並檢查欄位是否已更新。 您可以看到根據[!DNL Salesforce CRM]對象排程&#x200B;**[!UICONTROL Mapping ID]**&#x200B;期間提供的[值，](#schedule-segment-export-example)中的每個對象狀態已更新為Experience Platform中的對應對象狀態。

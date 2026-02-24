@@ -3,9 +3,9 @@ title: Google雲端儲存空間連線
 description: 瞭解如何連線至Google Cloud Storage並啟用對象或匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1310'
 ht-degree: 2%
 
 ---
@@ -27,10 +27,24 @@ ht-degree: 2%
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 是 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 是 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -64,7 +78,7 @@ ht-degree: 2%
 
 **[!UICONTROL Settings]**&#x200B;頁面隨即顯示。 從這裡，您可以檢視有關您的[!DNL Google]專案ID的資訊，以及有關您的[!DNL Google Cloud Storage]帳戶的詳細資料。 若要存取互通性設定，請從頂端標頭選取&#x200B;**[!UICONTROL Interoperability]**。
 
-![&#x200B; Google Cloud Platform儀表板中反白顯示的[互通性]索引標籤。](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![ Google Cloud Platform儀表板中反白顯示的[互通性]索引標籤。](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 **[!UICONTROL Interoperability]**&#x200B;頁面包含驗證、存取金鑰以及與您的服務帳戶關聯的預設專案的資訊。 若要為您的服務帳戶產生新的存取金鑰識別碼和機密存取金鑰，請選取&#x200B;**[!UICONTROL Create a Key for a Service Account]**。
 
@@ -92,7 +106,7 @@ ht-degree: 2%
 
 如需這些值的詳細資訊，請參閱[Google雲端儲存空間HMAC金鑰](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)指南。 如需如何產生您自己的存取金鑰ID和秘密存取金鑰的步驟，請參閱[[!DNL Google Cloud Storage] 來源概觀](/help/sources/connectors/cloud-storage/google-cloud-storage.md)。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 

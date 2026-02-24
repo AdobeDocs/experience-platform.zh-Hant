@@ -3,10 +3,10 @@ title: SAP Commerce連線
 description: 使用SAP Commerce目標聯結器更新SAP帳戶中的客戶記錄。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2175'
-ht-degree: 3%
+source-wordcount: '2309'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料至[!DNL SAP Commerce]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=zh-Hant)對象[!DNL Experience Platform]。
+在啟用資料至[!DNL SAP Commerce]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)對象[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的Experience Platform檔案。
 
@@ -121,10 +121,24 @@ ht-degree: 3%
 
 | 客群類型 | 支援 | 說明 |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -163,7 +177,7 @@ ht-degree: 3%
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL Connected]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![來自Experience Platform UI的影像，顯示驗證後要填寫的目的地詳細資料。](../../assets/catalog/ecommerce/sap-commerce/destination-details.png)
@@ -215,7 +229,7 @@ ht-degree: 3%
 
 1. 在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**。 您現在可以在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
-1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**&#x200B;類別並選取XDM屬性。
+1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**類別並選取XDM屬性。
    ![Experience Platform UI熒幕擷圖選取姓氏作為來源屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. 在&#x200B;**[!UICONTROL Select target field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select custom attributes]**&#x200B;類別，並從客戶[!DNL SAP Subscription Billing]結構描述[屬性清單中輸入](https://api.sap.com/api/BusinessPartner_APIs/schema)屬性的名稱。
    ![Experience Platform UI熒幕擷取畫面，其中lastName定義為target屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
@@ -281,7 +295,7 @@ ht-degree: 3%
 
 執行[排程對象匯出](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟時，您必須手動將Experience Platform對象對應到[中的](#prerequisites-attribute)屬性[!DNL SAP Subscription Billing]。
 
-以下顯示反白顯示[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**&#x200B;位置的排程對象匯出步驟範例：
+以下顯示反白顯示[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**位置的排程對象匯出步驟範例：
 ![來自Experience Platform的影像，顯示填入對應ID的排程對象匯出。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 若要這麼做，請選取每個區段，然後在[!DNL SAP Subscription Billing] [!DNL SAP Commerce]目的地聯結器欄位中，輸入來自&#x200B;**[!UICONTROL Mapping ID]**&#x200B;的自訂參考名稱。 如需建立自訂參考的指引，請參閱[在 [!DNL SAP Subscription Billing]](#prerequisites-custom-reference)中建立自訂參考區段。
@@ -289,7 +303,7 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 > 請勿使用自訂參考標籤作為值。
-> &#x200B;>![影像指示您不應該使用自訂參考標籤值來對應。](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
+>![影像指示您不應該使用自訂參考標籤值來對應。](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
 
 例如，如果您選取的Experience Platform對象為`sap_audience1`，而您想要將其狀態更新為[!DNL SAP Subscription Billing]自訂參考`SAP_1`，請在[!DNL SAP_Commerce] **[!UICONTROL Mapping ID]**&#x200B;欄位中指定此值。
 
@@ -314,7 +328,7 @@ ht-degree: 3%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-登入[!DNL SAP Subscription Billing]帳戶，然後導覽至&#x200B;**[!UICONTROL Contacts]**&#x200B;頁面以檢查對象狀態。 清單可設定為顯示自訂參考的欄，並顯示對應的對象狀態。
+登入[!DNL SAP Subscription Billing]帳戶，然後導覽至&#x200B;**[!UICONTROL Contacts]**頁面以檢查對象狀態。 清單可設定為顯示自訂參考的欄，並顯示對應的對象狀態。
 ![SAP訂閱帳單影像，顯示客戶概觀頁面，其欄標題顯示對象名稱和儲存格對象狀態](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## 資料使用與控管 {#data-usage-governance}

@@ -3,9 +3,9 @@ title: Zendesk連線
 description: Zendesk目的地可讓您匯出帳戶資料，並在Zendesk中根據您的業務需求加以啟用。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1579'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL Zendesk]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料到[!DNL Zendesk]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的Experience Platform檔案。
 
@@ -53,6 +53,31 @@ ht-degree: 3%
 | 目標身分 | 範例 | 說明 | 強制 |
 |---|---|---|---|
 | `email` | `test@test.com` | 連絡人的電子郵件地址。 | 是 |
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -86,7 +111,7 @@ ht-degree: 3%
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL Connected]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/crm/zendesk/destination-details.png)
@@ -154,16 +179,16 @@ ht-degree: 3%
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」並導覽至目的地清單。
-1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數與區段中的計數相對應。
    ![Experience Platform UI熒幕擷圖範例，顯示區段。](../../assets/catalog/crm/zendesk/segment.png)
 
-1. 登入[!DNL Zendesk]網站，然後導覽至&#x200B;**[!UICONTROL Contacts]**&#x200B;頁面，以檢查是否已新增對象中的設定檔。 此清單可設定為顯示使用audience&#x200B;**[!UICONTROL Mapping ID]**&#x200B;和對象狀態所建立之其他欄位的欄。
+1. 登入[!DNL Zendesk]網站，然後導覽至&#x200B;**[!UICONTROL Contacts]**&#x200B;頁面，以檢查是否已新增對象中的設定檔。 此清單可設定為顯示使用audience**[!UICONTROL Mapping ID]**和對象狀態所建立之其他欄位的欄。
    ![Zendesk UI熒幕擷圖顯示「連絡人」頁面，其中包含以對象名稱建立的其他欄位。](../../assets/catalog/crm/zendesk/contacts.png)
 
-1. 或者，您可以向下鑽研至個別&#x200B;**[!UICONTROL Person]**&#x200B;頁面，並檢查顯示對象名稱和對象狀態的&#x200B;**[!UICONTROL Additional fields]**&#x200B;區段。
+1. 或者，您可以向下鑽研至個別&#x200B;**[!UICONTROL Person]**&#x200B;頁面，並檢查顯示對象名稱和對象狀態的&#x200B;**[!UICONTROL Additional fields]**區段。
    ![顯示「人員」頁面的Zendesk UI熒幕擷圖，其他欄位區段顯示對象名稱和對象狀態。](../../assets/catalog/crm/zendesk/contact.png)
 
 ## 資料使用與控管 {#data-usage-governance}

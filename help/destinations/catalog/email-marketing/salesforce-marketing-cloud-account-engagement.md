@@ -3,10 +3,10 @@ title: Salesforce Marketing Cloud帳戶參與度
 description: 瞭解如何使用Salesforce Marketing Cloud Account Engagement （先前稱為Pardot）目的地匯出您的帳戶資料，並在Salesforce Marketing Cloud Account Engagement中根據您的業務需求啟用資料。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1482'
-ht-degree: 2%
+source-wordcount: '1653'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL Marketing Cloud Account Engagement]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料到[!DNL Marketing Cloud Account Engagement]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 ### [!DNL Marketing Cloud Account Engagement]中的必要條件 {#prerequisites-destination}
 
@@ -80,6 +80,31 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
@@ -113,7 +138,7 @@ ht-degree: 2%
 
 如果提供的詳細資料有效，UI會顯示訊息： *您已成功連線至Salesforce Marketing Cloud帳戶參與帳戶*&#x200B;訊息，以及帶有綠色勾號的&#x200B;**[!UICONTROL Connected]**&#x200B;狀態，您就可以繼續下一個步驟。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。 如需任何指引，請參閱[收集 [!DNL Marketing Cloud Account Engagement] 認證](#gather-credentials)區段。
 
@@ -172,7 +197,7 @@ ht-degree: 2%
 1. 導覽至您選取的其中一個對象。 選取 **[!DNL Activation data]** 索引標籤。**[!UICONTROL Mapping ID]**&#x200B;欄會顯示在[!DNL Marketing Cloud Account Engagement Prospects]頁面中產生的自訂欄位名稱。
    ![Experience Platform UI熒幕擷圖範例，顯示所選區段的對應ID。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
-1. 登入[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否已新增/更新對象中的潛在客戶。 或者，您也可以存取[[!DNL Salesforce Pardot]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**&#x200B;頁面。
+1. 登入[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否已新增/更新對象中的潛在客戶。 或者，您也可以存取[[!DNL Salesforce Pardot]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**頁面。
    ![顯示[潛在客戶]頁面的Salesforce UI熒幕擷圖。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
 1. 若要檢查潛在客戶是否已更新，請選取潛在客戶並驗證自訂潛在客戶欄位是否已使用Experience Platform對象狀態進行更新。

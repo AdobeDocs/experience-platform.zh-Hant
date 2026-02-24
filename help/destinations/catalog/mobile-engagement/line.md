@@ -4,10 +4,10 @@ title: LINE連線
 description: LINE目的地可讓您新增設定檔至Experience Platform對象，並為已連線的使用者提供個人化體驗。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 2%
+source-wordcount: '1318'
+ht-degree: 3%
 
 ---
 
@@ -61,6 +61,31 @@ ht-degree: 2%
 | 廣告商ID (IFA) | 當來源身分識別是IFA *(廣告商的Apple ID)*&#x200B;或GAID * (Google Advertising ID)名稱空間時，選取廣告商(IFA)目標身分識別的ID。 |
 | LINE使用者ID | 當來源身分識別為LINE使用者ID時，選取UserID目標身分。 |
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
@@ -93,7 +118,7 @@ ht-degree: 2%
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL Connected]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![Experience Platform UI熒幕擷圖顯示目的地詳細資料。](../../assets/catalog/mobile-engagement/line/destination-details.png)
@@ -125,7 +150,7 @@ ht-degree: 2%
 
 | 目標身分 | 來源欄位 | 目標欄位 |
 | --- | --- | --- |
-| 廣告商ID (IFA) | `IDFA`或`GAID` | `LineId` |
+| 廣告商ID (IFA) | `IDFA`或 `GAID` | `LineId` |
 | LINE使用者ID | `UserID` | `LineId` |
 
 如果您的目標身分識別是&#x200B;*LINE使用者ID的*，您將需要下列專案：

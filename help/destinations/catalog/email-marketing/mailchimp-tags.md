@@ -3,10 +3,10 @@ title: Mailchimp標籤
 description: Mailchimp標籤目的地可讓您匯出帳戶資料，並在Mailchimp中將其啟用，以便與聯絡人互動。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 2%
+source-wordcount: '1733'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料至[!DNL Mailchimp Tags]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=zh-Hant)對象[!DNL Experience Platform]。
+在啟用資料至[!DNL Mailchimp Tags]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)對象[!DNL Experience Platform]。
 
 ### [!DNL Mailchimp Tags]目的地的先決條件 {#prerequisites-destination}
 
@@ -88,10 +88,24 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -129,7 +143,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 如果提供的詳細資料有效，UI會顯示帶有綠色勾號的&#x200B;**[!UICONTROL Connected]**&#x200B;狀態。 然後您可以繼續下一步驟。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -189,7 +203,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 登入您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後導覽至&#x200B;**[!DNL Audience]** > **[!DNL All Contacts]**&#x200B;頁面，並檢查對象中的連絡人是否已新增，以及對象中的連絡人是否已使用對象名稱進行更新。
+1. 登入您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後導覽至&#x200B;**[!DNL Audience]** > **[!DNL All Contacts]**頁面，並檢查對象中的連絡人是否已新增，以及對象中的連絡人是否已使用對象名稱進行更新。
    ![顯示「對象」頁面的Mailchimp UI熒幕擷圖。](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## 資料使用與控管 {#data-usage-governance}
@@ -206,6 +220,6 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 * [開始使用 [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [開始使用對象](https://mailchimp.com/help/getting-started-audience/)
-* [建立對象](https://mailchimp.com/help/create-audience/)
+* [建立客群](https://mailchimp.com/help/create-audience/)
 * [開始使用標籤](https://mailchimp.com/help/getting-started-tags/)
 * [行銷API](https://mailchimp.com/developer/marketing/api/)

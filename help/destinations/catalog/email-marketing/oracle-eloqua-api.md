@@ -3,9 +3,9 @@ title: (API) Oracle Eloqua連線
 description: (API) Oracle Eloqua目的地可讓您匯出帳戶資料，並在Oracle Eloqua中根據您的業務需求加以啟用。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '2138'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)可讓行銷人員規劃及執行行銷活動，同時為其潛在客戶提供個人化的客戶體驗。 透過整合式銷售機會管理和輕鬆建立行銷活動，可協助行銷人員在買家歷程中的適當時間，與適當的對象互動，並可優雅地擴充，以涵蓋多個管道，包括電子郵件、顯示搜尋、視訊和行動裝置。 銷售團隊可以更快完成更多交易，透過即時insight提高行銷ROI。
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[&#x200B; REST API中的](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)更新連絡人[!DNL Oracle Eloqua]作業，可讓您&#x200B;**將對象內的身分識別**&#x200B;更新為[!DNL Oracle Eloqua]。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[ REST API中的](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html)更新連絡人[!DNL Oracle Eloqua]作業，可讓您&#x200B;**將對象內的身分識別**&#x200B;更新為[!DNL Oracle Eloqua]。
 
 [!DNL Oracle Eloqua]使用[基本驗證](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)與[!DNL Oracle Eloqua] REST API通訊。 [!DNL Oracle Eloqua]向目的地驗證[區段中進一步說明如何向您的](#authenticate)執行個體進行驗證。
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL Oracle Eloqua]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料到[!DNL Oracle Eloqua]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的Experience Platform檔案。
 
@@ -35,7 +35,7 @@ ht-degree: 4%
 
 若要將資料從Experience Platform匯出至您的[!DNL Oracle Eloqua]帳戶，您需要有[!DNL Oracle Eloqua]帳戶。
 
-此外，您至少需要&#x200B;*執行個體的*「進階使用者 — 行銷許可權」[!DNL Oracle Eloqua]。 請參閱&#x200B;*安全使用者存取*&#x200B;頁面上的[「安全性群組」](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)區段以取得指引。 目的地需要在叫用[&#x200B; API時，以程式設計方式](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)決定您的基底URL[!DNL Oracle Eloqua]的存取權。
+此外，您至少需要&#x200B;*執行個體的*「進階使用者 — 行銷許可權」[!DNL Oracle Eloqua]。 請參閱&#x200B;*安全使用者存取*&#x200B;頁面上的[「安全性群組」](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm)區段以取得指引。 目的地需要在叫用[ API時，以程式設計方式](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html)決定您的基底URL[!DNL Oracle Eloqua]的存取權。
 
 #### 收集[!DNL Oracle Eloqua]認證 {#gather-credentials}
 
@@ -70,6 +70,28 @@ ht-degree: 4%
 | 目標身分 | 說明 | 強制 |
 |---|---|---|
 | `EloquaId` | 連絡人的唯一識別碼。 | 是 |
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+
+{style="table-layout:auto"}
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -201,7 +223,7 @@ ht-degree: 4%
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」並導覽至目的地清單。
-1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 接著，選取目的地並切換至&#x200B;**[!UICONTROL Activation data]**標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數與區段中的計數相對應。

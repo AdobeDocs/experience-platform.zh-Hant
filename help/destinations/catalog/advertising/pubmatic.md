@@ -1,12 +1,12 @@
 ---
 title: PubMatic Connect
-description: PubMatic提供未來程式化的數位行銷供應鏈，以最大化客戶價值。 PubMatic Connect結合平台技術與專屬服務，以強化詳細目錄與資料的封裝與異動方式。
+description: PubMatic提供未來程式化的數位行銷supply chain，實現客戶價值的最大化。 PubMatic Connect結合平台技術與專屬服務，以強化詳細目錄與資料的封裝與異動方式。
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: 2041c06e660e24f63d4c44adc0e8f3082bb007ae
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 2%
+source-wordcount: '1151'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-使用[!DNL PubMatic Connect]提供未來程式化的數位行銷供應鏈，以最大化客戶價值。 [!DNL PubMatic Connect]結合平台技術與專屬服務，以強化詳細目錄與資料的封裝與交易方式。
+使用[!DNL PubMatic Connect]提供未來程式化的數位行銷supply chain，以最大化客戶價值。 [!DNL PubMatic Connect]結合平台技術與專屬服務，以強化詳細目錄與資料的封裝與交易方式。
 
 有兩個可用的目的地可讓您將受眾資料傳送至PubMatic Connect平台。 它們的功能稍有不同：
 
@@ -62,11 +62,25 @@ ht-degree: 2%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
-| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -74,8 +88,8 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 | ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，而這些區段具有PubMatic Connect目的地所使用的識別碼（名稱、電話號碼或其他）。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據區段評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL Segment export]** | 您正在匯出區段（對象）的所有成員，而這些區段具有PubMatic Connect目的地所使用的識別碼（名稱、電話號碼或其他）。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 當根據區段評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -83,17 +97,17 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-> 若要連線到目的地，您需要&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+> 若要連線到目的地，您需要&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
-若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
+若要驗證到目的地，請填寫必填欄位並選取&#x200B;**[!UICONTROL Connect to destination]**。
 
 ![如何驗證](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
 
-- **[!UICONTROL 持有人權杖]**：填入持有人權杖以驗證目的地。
+- **[!UICONTROL Bearer token]**：填寫持有人權杖以驗證目的地。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -101,29 +115,29 @@ ht-degree: 2%
 
 ![目的地詳細資料](../../assets/catalog/advertising/pubmatic/destination-details.png)
 
-- **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-- **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-- **[!UICONTROL 資料合作夥伴識別碼]**：在您[!DNL PubMatic]帳戶中為此整合設定的資料合作夥伴識別碼。
-- **[!UICONTROL 預設國家/地區代碼]**：如果設定檔中未提供任何內容，則應套用至所有身分的預設國家/地區代碼。
-- **[!UICONTROL 帳戶識別碼]**：您的[!DNL PubMatic Connect]帳戶識別碼。
-- **[!UICONTROL 帳戶型別]**： [!DNL PubMatic]平台帳戶的帳戶型別。 如果您有任何選擇的問題，請洽詢您的[!DNL PubMatic]客戶經理。 可用的選項包括：
-   - [!UICONTROL 發行者]
+- **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
+- **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
+- **[!UICONTROL Data partner ID]**：在您[!DNL PubMatic]帳戶中為此整合設定的資料合作夥伴ID。
+- **[!UICONTROL Default country code]**：如果設定檔中未提供任何資料，應套用至所有身分的預設國家/地區代碼。
+- **[!UICONTROL Account ID]**：您的[!DNL PubMatic Connect]帳戶識別碼。
+- **[!UICONTROL Account type]**： [!DNL PubMatic]平台帳戶的帳戶型別。 如果您有任何選擇的問題，請洽詢您的[!DNL PubMatic]客戶經理。 可用的選項包括：
+   - [!UICONTROL PUBLISHER]
    - [!UICONTROL DEMAND_PARTNER]
-   - [!UICONTROL 購買者]
+   - [!UICONTROL BUYER]
 
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
 ## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
 >
-> - 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+> - 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >
-> - 若要匯出&#x200B;_身分_，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](../../assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
+> - 若要匯出&#x200B;_身分_，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](../../assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
 閱讀[啟用串流區段匯出目的地的設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md)，以取得啟用此目的地的對象區段的指示。
 

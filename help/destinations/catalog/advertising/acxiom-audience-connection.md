@@ -3,9 +3,9 @@ title: Acxiom對象連線
 description: 使用 [!DNL Acxiom Audience Connection] 目的地以 [!DNL Acxiom's Real ID] 技術增強受眾，並啟用多個平台的受眾，例如 [!DNL Altice]、 [!DNL Ampersand]、 [!DNL Comcast]等。
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 582b8b681163a0e40908cf36ba317954a32f73d0
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '1043'
 ht-degree: 7%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 7%
 ## 先決條件 {#prerequisites}
 
 * **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom Audience Connection]使用條款合約，才能設定新的[!DNL Acxiom's]目的地。 執行銷售訂單完成後，您將會收到合約的連結。
-* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
+* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -46,6 +46,31 @@ ht-degree: 7%
 * [[!DNL LG Ads]](#lg-ads)
 * [!DNL Spectrum]
 * [!DNL Viant]
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以將哪些型別的對象匯出至此目的地。
+
+| 對象來源 | 支援 | 說明 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 連線到目標 {#connect}
 
@@ -96,7 +121,7 @@ ht-degree: 7%
 | 電子郵件 | 主要電子郵件依預設，此欄位會作為重複資料刪除索引鍵，讓記錄具有唯一性 | 無 | 10 | 255 |
 | 電話 | 個人的電話號碼（區碼+號碼）<br>依預設，此欄位會作為重複資料刪除索引鍵，讓記錄具有唯一性。 | 無 | 11 | 10 |
 
-在「**[!UICONTROL Source Field]**」欄中，輸入要對應至對應目標欄位的每個來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL &#x200B; Select source field]**&#x200B;畫面。<br>
+在「**[!UICONTROL Source Field]**」欄中，輸入要對應至對應目標欄位的每個來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL  Select source field]**&#x200B;畫面。<br>
 ![對應熒幕](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 在您對應所有欄位後，請選取&#x200B;**[!UICONTROL Next]**。
@@ -128,4 +153,4 @@ ht-degree: 7%
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。

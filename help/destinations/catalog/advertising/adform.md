@@ -2,13 +2,13 @@
 title: Adform
 description: Adform是程式化媒體購買和銷售解決方案的領先供應商。 將Adform連線至Adobe Experience Platform後，您就可以根據Experience Cloud ID (ECID)，透過Adform啟用第一方對象。
 last-substantial-update: 2025-10-23T00:00:00Z
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 3%
+source-wordcount: '1106'
+ht-degree: 4%
 
 ---
-
 
 # Adform連線 {#adform}
 
@@ -28,16 +28,16 @@ Adform是程式化媒體購買和銷售解決方案的領先供應商。 將Adfo
 
 使用此目的地將Adobe Real-Time CDP對象傳送至Adform，以根據Experience Cloud ID (ECID)和Adform的ID Fusion進行啟用。 Adform的ID Fusion是Adform的ID解析服務，可讓您根據Experience Cloud ID (ECID)啟用第一方對象。
 
-一個常見案例是根據Experience Cloud ID (ECID)重新鎖定網站或應用程式的網站訪客。 您只需要透過隨時可用的[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform) Adform擴充功能，將Experience Cloud ID (ECID)傳送至Adform。 之後您可以透過Adform目的地與Adform共用對象，以進行啟用 — 僅根據Experience Cloud ID (ECID)。
+一個常見案例是根據Experience Cloud ID (ECID)重新鎖定網站或應用程式的網站訪客。 您只需要透過隨時可用的[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) Adform擴充功能，將Experience Cloud ID (ECID)傳送至Adform。 之後您可以透過Adform目的地與Adform共用對象，以進行啟用 — 僅根據Experience Cloud ID (ECID)。
 
 ## 先決條件 {#prerequisites}
 
 * 您必須是現有Adform客戶才能使用此目的地。
 * 您需要擁有Adform對象基礎資料連線認證。
    * 如果您沒有Adform對象基礎資料連線認證，請聯絡您的Adform代表。
-* 若要正確同步，您必須從實體與Adform網站追蹤建立[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform)連線。
+* 若要正確同步，您必須從實體與Adform網站追蹤建立[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)或[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)連線。
    * 如果您沒有從實體到Adform網站追蹤的事件串流或使用者端連線，請聯絡您的Adform代表。
-   * Adform提供[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)和[使用者端](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/analytics/adform)的Adobe Experience Cloud擴充功能。
+   * Adform提供[事件串流](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking)和[使用者端](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform)的Adobe Experience Cloud擴充功能。
 
 
 ## 支援的身分 {#supported-identities}
@@ -56,10 +56,24 @@ Adform支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 自訂上傳 | ✓ | 對象[從CSV檔案匯入](../../../segmentation/ui/overview.md#import-audience)至Experience Platform。 |
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+依受眾資料型別支援的受眾：
+
+| 對象資料型別 | 支援 | 說明 | 使用案例 |
+|--------------------|-----------|-------------|-----------|
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
+| [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+
+{style="table-layout:auto"}
+
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -90,7 +104,7 @@ Adform支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 * **[!UICONTROL S3 Access Key ID]**：填入Adform提供的S3存取金鑰。
 * **[!UICONTROL S3 Secret Access Key]**：填入Adform提供的S3秘密存取金鑰。
 
-### 填寫目標詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
