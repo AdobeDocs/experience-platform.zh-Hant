@@ -79,7 +79,7 @@ ht-degree: 5%
 
 [!DNL Microsoft Bing]目的地需要下列安裝程式才能正常運作：
 
-1. **啟用ID同步功能**：如果您是第一次設定[!DNL Microsoft Bing]啟用，而且您過去尚未在Experience Cloud ID服務中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) (使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。
+1. **啟用ID同步功能**：如果您是第一次設定[!DNL Microsoft Bing]啟用，而且您過去尚未在Experience Cloud ID服務中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=zh-Hant) (使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。
    * 如果您先前在Audience Manager中設定[!DNL Microsoft Bing]整合，您現有的ID同步會自動結轉到Experience Platform。
 
 2. **確認設定檔上的ECID**：所有設定檔都必須有ECID，才能成功匯出。 此目的地的ECID為&#x200B;**必要**。
@@ -121,7 +121,7 @@ ht-degree: 5%
 >id="platform_destinations_required_mappings_bing"
 >title="預先設定的對應集"
 >abstract="我們已為您預先設定這兩個對應集。 當您啟用資料至Microsoft Bing時，符合啟用對象資格的設定檔必須至少有一個與其設定檔相關聯的ECID身分識別，才能成功匯出至目的地。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="深入瞭解預先設定的對應"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="深入瞭解預先設定的對應"
 
 >[!IMPORTANT]
 > 
