@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform字彙表
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '8169'
+source-wordcount: '8224'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 **對象快照**：對象快照會擷取細分時符合區段條件的所有設定檔。
 
-## B
+## byte
 
 **回填**：對於已排程的來源，回填選項可擷取歷史資料。
 
@@ -177,7 +177,7 @@ ht-degree: 0%
 
 **資料使用標籤**：資料使用標籤可讓您分類反映隱私權相關考量事項，以及遵循法規和公司政策的合約條件的資料。 新增到資料集的資料使用標籤會向下繼承或套用到該資料集內的所有欄位。 資料使用標籤也可以直接套用至欄位。
 
-**資料流**：資料流是從來源流入Experience Platform並流出到目的地的虛擬資料管道。
+**資料流**：資料流是從來源流入Experience Platform並流出到目的地的虛擬資料管道。 在目的地的內容中，資料流與[目的地執行個體](#destination-instance)同義。{#dataflow}
 
 **資料流執行**：資料流執行是根據使用者指定的排程登陸Experience Platform的資料流。
 
@@ -200,6 +200,8 @@ ht-degree: 0%
 **目的地類別**：目的地類別是具有類似特性的目的地群組。
 
 **目的地目錄**：目的地目錄是Experience Platform中可用目的地的清單。
+
+**目的地執行個體**：目的地執行個體是透過UI或API建立的個別已設定連線至Experience Platform中的特定目的地。 它代表從Experience Platform到目的地端點的單一啟用管道。 也稱為[資料流](#dataflow)。{#destination-instance}
 
 **直接呼叫規則**：在標籤的內容中，直接呼叫規則是從頁面直接呼叫時執行的規則，會略過事件偵測和查詢系統。
 

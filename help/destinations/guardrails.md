@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 67dec10b0d1343fffd522ee3e615ac2823894a67
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1747'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 此頁面提供啟動行為的預設使用量和速率限制。 檢閱下列護欄時，假設您已正確[連線至目的地](/help/destinations/ui/connect-destination.md)。
 
@@ -49,8 +49,8 @@ ht-degree: 2%
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
-| 單一目的地的受眾數量上限 | 250 | 效能護欄 | 建議將最多250個對象對應至資料流中的單一目的地。 <br><br>如果您需要針對目的地啟用超過250個對象，您可以： <ul><li> 取消對應您不想再啟用的對象，或</li><li>建立新資料流到所需的目的地，並將對象對應到這個新資料流。</li></ul> <br>請注意，在某些目的地中，您對應至目的地的對象可能限制在250個以內。 這些目的地將在頁面下方各自的區段中進一步說明。 |
-| 對應到目的地的屬性數目上限 | 50 | 效能護欄 | 如果有多種目的地和目的地型別，您可以選取要對應以匯出的設定檔屬性和身分。 為獲得最佳效能，在資料流中應將最多50個屬性對應到目的地。 |
+| 單一目的地的受眾數量上限 | 250 | 效能護欄 | 建議將最多250個對象對應至單一目的地執行個體。 <br><br>如果您需要針對目的地啟用超過250個對象，您可以： <ul><li> 取消對應您不想再啟用的對象，或</li><li>[建立新的目的地執行個體](ui/connect-destination.md)，並將對象對應至該執行個體。</li></ul> <br>請注意，在某些目的地中，您對應至目的地的對象可能限制在250個以內。 這些目的地將在頁面下方各自的區段中進一步說明。 |
+| 對應到目的地的屬性數目上限 | 50 | 效能護欄 | 如果有多種目的地和目的地型別，您可以選取要對應以匯出的設定檔屬性和身分。 為獲得最佳效能，最多50個屬性應該對應至目的地執行個體。 |
 | 目的地數量上限 | 100 | 系統強制的護欄 | 您最多可以建立100個可連線並啟用資料的目的地，每個沙箱&#x200B;*有*&#x200B;個。 [Edge個人化目的地（自訂個人化）](#edge-destinations-activation)在100個建議目的地中最多可組成10個。 |
 | 啟用至目的地的資料型別 | 設定檔資料，包括身分和身分對應 | 系統強制的護欄 | 目前只能將&#x200B;*個人資料記錄屬性*&#x200B;匯出至目的地。 說明事件資料的XDM屬性目前不支援匯出。 |
 | 啟用至目的地的資料型別 — 陣列和對應屬性支援 | 部分可用 | 系統強制的護欄 | 您可以將陣列屬性匯出至[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)。 [閱讀更多](/help/destinations/ui/export-arrays-maps-objects.md)有關此功能的資訊。 |
@@ -74,9 +74,9 @@ ht-degree: 2%
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
 | 啟用頻率 | 每3、6、8或12小時進行一次每日完整匯出或更頻繁的增量匯出。 | 系統強制的護欄 | 閱讀[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)檔案區段，以取得批次匯出頻率增量的詳細資訊。 |
-| 在指定小時可匯出的受眾數上限 | 100 | 效能護欄 | 建議您將最多100個對象新增到批次目的地資料流。 |
+| 在指定小時可匯出的受眾數上限 | 100 | 效能護欄 | 建議向批次目的地執行個體新增最多100個對象。 |
 | 要啟用的每個檔案的最大列數（記錄） | 500萬 | 系統強制的護欄 | Adobe Experience Platform會自動將匯出的檔案分割為每個檔案500萬筆記錄（列）。 每一列代表一個設定檔。 分割檔案名稱會附加一個數字，表示檔案是較大匯出的一部分，例如： `filename.csv`、`filename_2.csv`、`filename_3.csv`。 如需詳細資訊，請參閱啟動批次目的地教學課程的[排程區段](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。 |
-| 可在資料流中啟用的外部對象（例如，FAC、自訂上傳、對象構成）最大數量 | 10 | 系統強制的護欄 | 將外部對象（例如[同盟對象組合](/help/segmentation/ui/audience-portal.md#fac)、[自訂上傳](/help/segmentation/ui/audience-portal.md#import-audience)、[對象組合](/help/segmentation/ui/audience-portal.md#audience-composition)）啟用至批次檔案型目的地時，您可以在資料流中啟用10個這類對象的限制。 如需這些對象型別的詳細資訊，請參閱[對象型別和自訂](/help/segmentation/ui/audience-portal.md#customize)。 深入瞭解[對批次檔案型目的地](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)啟用外部對象的工作流程。 |
+| 可在目的地執行個體中啟用的外部對象（例如，FAC、自訂上傳、對象構成）最大數量 | 10 | 系統強制的護欄 | 將外部對象（例如[同盟對象組合](/help/segmentation/ui/audience-portal.md#fac)、[自訂上傳](/help/segmentation/ui/audience-portal.md#import-audience)、[對象組合](/help/segmentation/ui/audience-portal.md#audience-composition)）啟用至批次檔案型目的地時，您可以在目的地執行個體中啟用10個這類對象的限制。 如需這些對象型別的詳細資訊，請參閱[對象型別和自訂](/help/segmentation/ui/audience-portal.md#customize)。 深入瞭解[對批次檔案型目的地](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)啟用外部對象的工作流程。 |
 
 {style="table-layout:auto"}
 
@@ -97,8 +97,8 @@ ht-degree: 2%
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
-| [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)目的地的數量上限 | 10 | 效能護欄 | 您可以將資料流設定為每個沙箱10個自訂個人化目的地。 |
-| 每個沙箱對應至個人化目的地的最大屬性數量 | 30 | 效能護欄 | 每個沙箱在資料流中最多可以將30個屬性對應到個人化目的地。 |
+| [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)目的地的數量上限 | 10 | 效能護欄 | 您最多可以為每個沙箱設定10個自訂個人化目的地執行個體。 |
+| 每個沙箱對應至個人化目的地的最大屬性數量 | 30 | 效能護欄 | 每個沙箱最多可以將30個屬性對應至個人化目的地執行個體。 |
 
 {style="table-layout:auto"}
 
@@ -143,7 +143,7 @@ ht-degree: 2%
 | 資料集類型 | 護欄 | 護欄型別 | 說明 |
 |---------|----------|---------|-------|
 | 以&#x200B;**XDM體驗事件結構描述**&#x200B;為基礎的資料集 | 過去365天的資料 | 系統強制的護欄 | 系統會匯出上一個日曆年的資料。 |
-| 以&#x200B;**XDM體驗事件結構描述**&#x200B;以外的任何結構描述為基礎的資料集 | 在資料流中所有匯出的檔案有100億筆記錄 | 系統強制的護欄 | 壓縮的JSON或Parquet檔案的資料集記錄計數必須少於十億，未壓縮的Parquet檔案的資料集記錄計數必須少於一百萬個，否則匯出會失敗。 如果資料集大於允許的臨界值，請縮小您嘗試匯出的資料集大小。 |
+| 以&#x200B;**XDM體驗事件結構描述**&#x200B;以外的任何結構描述為基礎的資料集 | 目的地執行個體中所有匯出的檔案有100億筆記錄 | 系統強制的護欄 | 壓縮的JSON或Parquet檔案的資料集記錄計數必須少於十億，未壓縮的Parquet檔案的資料集記錄計數必須少於一百萬個，否則匯出會失敗。 如果資料集大於允許的臨界值，請縮小您嘗試匯出的資料集大小。 |
 
 {style="table-layout:auto"}
 
@@ -160,7 +160,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 |Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
 |---------|---------|-----------|-----------|------------|
 | Datasets based on the **XDM Experience Events schema** |  <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
-| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a dataflow | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
@@ -187,7 +187,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 | 目的地型別 | 說明 |
 | --- | --- |
-| 企業目的地(HTTP API、Amazon Kinesis、Azure EventHubs) | 在95%的時間中，Experience Platform會嘗試針對每個資料流以每秒少於10,000個要求的速率，為成功傳送至企業目的地的訊息提供少於10分鐘的輸送量延遲。 <br>如果對您企業目的地的要求失敗，Experience Platform會儲存失敗的要求並重試兩次，以將要求傳送至您的端點。 |
+| 企業目的地(HTTP API、Amazon Kinesis、Azure EventHubs) | 在95%的時間中，Experience Platform會嘗試針對每個企業目的地執行個體，以每秒少於10,000個要求的速率，為成功傳送的訊息提供少於10分鐘的輸送量延遲。 <br>如果對您企業目的地的要求失敗，Experience Platform會儲存失敗的要求並重試兩次，以將要求傳送至您的端點。 |
 
 {style="table-layout:auto"}
 
@@ -196,7 +196,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=zh-Hant#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
