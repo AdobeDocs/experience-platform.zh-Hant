@@ -5,10 +5,10 @@ title: Privacy Service API指南附錄
 description: 本檔案包含使用Privacy Service API的其他資訊。
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
+source-git-commit: 9b3fb0d545408369d96a3fc7c5c6e9c098af9933
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 5%
+source-wordcount: '552'
+ht-degree: 6%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 5%
 
 下表概述[!DNL Experience Platform]提供的幾種常用預先定義的身分型別，以及其相關的`namespace`值：
 
-| 身分類型 | `namespace` | `namespaceId` |
+| 身分識別類型 | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | 電子郵件 | `Email` | `6` |
 | 電話 | `Phone` | `7` |
-| ADOBE ADVERTISING CLOUD ID | `AdCloud` | `411` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
 | ADOBE AUDIENCE MANAGER UUID | `CORE` | `0` |
 | ADOBE EXPERIENCE CLOUD ID | `ECID` | `4` |
 | ADOBE TARGET ID | `TNTID` | `9` |
@@ -38,13 +38,13 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->每個身分型別也有`namespaceId`整數值，當將身分的`type`屬性設定為「namespaceId」時，可用來取代`namespace`字串。 如需詳細資訊，請參閱[名稱空間限定詞](#namespace-qualifiers)的相關章節。
+>每個身分型別也有`namespaceId`整數值，當將身分的`namespace`屬性設定為「namespaceId」時，可用來取代`type`字串。 如需詳細資訊，請參閱[名稱空間限定詞](#namespace-qualifiers)的相關章節。
 
-您可以向[!DNL Identity Service] API中的`idnamespace/identities`端點發出GET要求，以擷取貴組織正在使用的身分識別名稱空間清單。 如需詳細資訊，請參閱[Identity Service開發人員指南](../../identity-service/api/getting-started.md)。
+您可以向`idnamespace/identities` API中的[!DNL Identity Service]端點發出GET要求，以擷取貴組織正在使用的身分識別名稱空間清單。 如需詳細資訊，請參閱[Identity Service開發人員指南](../../identity-service/api/getting-started.md)。
 
-## 名稱空間限定詞
+## 名稱空間限定詞 {#namespace-qualifiers}
 
-在[!DNL Privacy Service] API中指定`namespace`值時，對應的`type`引數中必須包含&#x200B;**名稱空間限定詞**。 下表概述不同的名稱空間限定詞。
+在`namespace` API中指定[!DNL Privacy Service]值時，對應的&#x200B;**引數中必須包含**&#x200B;名稱空間限定詞`type`。 下表概述不同的名稱空間限定詞。
 
 | 限定詞 | 定義 |
 | --------- | ---------- |
@@ -58,28 +58,31 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-## 接受的產品值
+## 接受的產品值 {#accepted-product-values}
 
-下表概述在工作建立請求的`include`屬性中指定Adobe產品時可接受的值。
+本節列出建立Privacy Service工作（API或UI）時，`include`屬性中接受的產品識別碼值。 在工作請求的`include`陣列中使用這些值。
+
+下表列出支援的產品、其UI顯示名稱及其對應的程式碼值。
 
 >[!NOTE]
 >
->產品清單的值不區分大小寫。 建議使用駝峰式大小寫，但並未強制執行。
+>- 產品值不區分大小寫；建議使用駝峰式大小寫來保持一致性。
+>- UI和API僅支援上述產品。 如果沒有為您的組織布建產品，則可能會忽略該產品或導致驗證錯誤 — 請參閱您的Adobe合約或布建檔案以確認權益。
 
-| 產品 | 用於`include`屬性的值 |
-| --- | --- |
-| Adobe Advertising Cloud | `adCloud` |
-| Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `audienceManager` |
-| Adobe Campaign | `campaign` |
-| Adobe Experience Platform （資料湖） | `aepDataLake` |
-| Adobe Experience Platform （即時客戶個人檔案） | `profileService` |
-| Adobe Pass 驗證 | `primetimeAuthentication` |
-| Adobe Target | `target` |
-| 客戶屬性(CRS) | `CRS` |
-| 客戶歷程管理 | `cjm` |
-| 身分識別服務 | `identity` |
-| Marketo Engage | `marketo` |
-| Marketo Measure | `marketomeasure` |
+| 品牌產品名稱 | UI顯示名稱 | `include` 值 |
+| ------------------------------------------------------ | -------------------------- | ---------------------------------------- |
+| Adobe Analytics | [!UICONTROL Analytics] | `analytics` |
+| Adobe Audience Manager | [!UICONTROL Audience Manager] | `audienceManager` |
+| Adobe Advertising | [!UICONTROL Ad Cloud] | `adCloud` |
+| Adobe Experience Platform （設定檔存放區） | [!UICONTROL Profile] | `profileService` |
+| Adobe Experience Platform （資料湖） | [!UICONTROL AEP Data Lake] | `aepDataLake` |
+| Adobe Campaign | [!UICONTROL Campaign] | `campaign` |
+| Adobe Target | [!UICONTROL Target] | `target` |
+| 客戶屬性 | [!UICONTROL Customer Attributes (CRS)] | `CRS` |
+| Adobe Journey Optimizer | [!UICONTROL Adobe Journey Optimizer] | `cjm` |
+| Marketo Engage | [!UICONTROL Marketo Engage / AJO B2B] | `marketo` |
+| 身分識別服務 | [!UICONTROL Identity] | `identity` |
+| Marketo Measure | [!UICONTROL Marketo Measure] | `marketomeasure` |
+| Adobe Commerce | [!UICONTROL Commerce (Personalization)] | `commerceMarketingData` |
 
 {style="table-layout:auto"}
