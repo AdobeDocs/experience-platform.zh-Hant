@@ -2,9 +2,9 @@
 title: 監視批次查詢授權使用情況
 description: Adobe Experience Platform UI提供控制面板，讓您檢視有關組織Data Distiller授權使用情況的重要資訊。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dce631923bd38f3237da3e1928e2203dc1a266ca
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 授權使用儀表板提供關於貴組織查詢服務授權使用情況和每個所購買產品使用量度的詳細報告。 若要進一步瞭解儀表板中顯示的可用量度，請造訪[授權使用儀表板指南](../../dashboards/guides/license-usage.md#available-metrics)。
 
-控制面板提供每個已購買產品的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 此處顯示的資訊是在Experience Platform執行個體的每日快照期間擷取。
+控制面板提供每個已購買產品的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 此處顯示的資訊是在Experience Platform執行個體的每日快照期間擷取。 管理員可以監視並結束閒置的查詢服務工作階段，以在沒有其他工作階段可用且使用者因閒置（非作用中）工作階段而遭到封鎖時，釋放容量。 如需詳細資訊，請參閱[管理查詢服務工作階段](../ui/session-management.md)。
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 計算時數 {#compute-hours}
 
-[!UICONTROL 計算時數]量度僅適用於擁有Data Distiller授權進行批次查詢的客戶。 [!UICONTROL 計算時數]是查詢服務引擎在執行批次查詢時，讀取、處理及將資料寫入資料湖所花費的時間測量值。
+[!UICONTROL Compute hours]量度僅適用於擁有Data Distiller授權進行批次查詢的客戶。 [!UICONTROL Compute hours]是查詢服務引擎在執行批次查詢時，讀取、處理及將資料寫入資料湖所花費的時間測量值。
 
 ![已反白計算時數量度的授權使用儀表板。](../images/data-distiller/compute-hours.png)
 
