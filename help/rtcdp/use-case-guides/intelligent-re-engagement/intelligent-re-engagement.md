@@ -97,7 +97,7 @@ ht-degree: 45%
 
 在[!UICONTROL Schemas]的[!DNL Adobe Experience Platform]工作區中管理Experience Data Model (XDM)資源。 您可以檢視及探索[!DNL Adobe]提供的核心資源（例如欄位群組），並為您的組織建立自訂資源和結構描述。
 
-如需有關建立[結構描述](/help/xdm/home.md)的詳細資訊，請參閱[建立結構描述教學課程。](/help/xdm/tutorials/create-schema-ui.md)和[使用XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html)為您的客戶體驗資料建立模型。
+如需有關建立[結構描述](/help/xdm/home.md)的詳細資訊，請參閱[建立結構描述教學課程。](/help/xdm/tutorials/create-schema-ui.md)和[使用XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=zh-Hant)為您的客戶體驗資料建立模型。
 
 有四種用於重新吸引使用案例的結構描述設計。每個結構描述都需要設定特定欄位。 您需要啟用要包含在即時客戶個人檔案中的結構描述。 如需啟用結構描述以用於Real-Time Customer Profile的詳細資訊，請閱讀[啟用Real-Time Customer Profile的結構描述](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile)。
 
