@@ -3,13 +3,13 @@ title: 對象構成增強功能
 description: 瞭解透過對象擴充和更快啟動對對象構成進行的增強功能。
 hide: true
 hidefromtoc: true
-source-git-commit: 42e639b403edbaf666d8bc21eb35b2b75530d6b0
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
-
 
 # 對象構成增強功能
 
@@ -26,15 +26,15 @@ ht-degree: 0%
 
 ![已醒目提示「對象」區塊以及「建置規則」按鈕。](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-規則產生器畫布隨即顯示。 您現在可以為對象擴充建立篩選條件。 此篩選條件&#x200B;**必須**&#x200B;包含陣列中的屬性。 陣列屬性取決於您組織的結構描述結構。 建立篩選條件後，在右側面板中選取&#x200B;**[!UICONTROL Delivery]**。
+規則產生器畫布隨即顯示。 您現在可以為對象擴充建立篩選條件。 此篩選條件&#x200B;**必須**&#x200B;包含陣列中的屬性。 陣列屬性取決於您組織的結構描述結構。 建立篩選條件後，在右側面板中選取&#x200B;**[!UICONTROL View enrichment]**。
 
-![規則產生器畫布顯示可以擴充對象的範例。 傳遞按鈕也會反白顯示。](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![規則產生器畫布顯示可以擴充對象的範例。 傳遞按鈕也會反白顯示。](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-從左側面板的清單中，選擇您要用來擴充的物件陣列。 如果設定檔上只有一個陣列，則會自動為您選取該陣列。 選取&#x200B;**[!UICONTROL Save]**&#x200B;以返回對象構成。
+從左側面板的清單中，選擇物件陣列，以及您要在擴充中使用的欄位。 如果設定檔上只有一個陣列，則會自動為您選取該陣列。 選取&#x200B;**[!UICONTROL Save]**&#x200B;以返回對象構成。
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![顯示擴充樹狀結構的結構樹狀結構。](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![顯示擴充樹狀結構的結構樹狀結構。](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
 在對象構成中，您的[!UICONTROL Audience]區塊現在是&quot;[!UICONTROL Rule builder with enhancement]&quot;型別。 選取&#x200B;**[!UICONTROL Publish]**&#x200B;以啟動下一個每日批次的對象。
 
