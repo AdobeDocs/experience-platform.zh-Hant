@@ -3,7 +3,7 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: SendGrid連線
 description: SendGrid目的地可讓您匯出第一方資料，並在SendGrid中根據您的業務需求加以啟用。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 3%
@@ -34,7 +34,7 @@ SendGrid使用API持有人權杖作為驗證機制，與SendGrid API通訊。
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-在啟用資料到SendGrid目的地之前，您必須在[中建立](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。 另請參閱此頁面下方的[限制](#limits)區段。
+在啟用資料到SendGrid目的地之前，您必須在[中建立](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。 另請參閱此頁面下方的[限制](#limits)區段。
 
 >[!IMPORTANT]
 >
@@ -59,7 +59,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 
 ### 填寫目標詳細資訊 {#destination-details}
 
-在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
+在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Name]**：您日後辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的選擇性說明。
@@ -160,10 +160,10 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. 完成對應後，選取&#x200B;**[!UICONTROL Next]**&#x200B;以進入檢閱畫面。
+1. 完成對應後，選取&#x200B;**[!UICONTROL Next]**以進入檢閱畫面。
    ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
-1. 選取&#x200B;**[!UICONTROL Finish]**&#x200B;以完成設定。
+1. 選取&#x200B;**[!UICONTROL Finish]**以完成設定。
    ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
 可為[SendGrid行銷連絡人>新增或更新連絡人API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)設定的支援屬性對應完整清單如下。
@@ -191,7 +191,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. 監視對象摘要，並檢查與資料集中建立的計數對應的設定檔計數。
