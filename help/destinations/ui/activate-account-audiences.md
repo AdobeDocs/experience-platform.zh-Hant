@@ -3,9 +3,9 @@ title: 對目的地啟用帳戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用帳戶對象
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 支援的目的地 {#supported-destinations}
 
-前往「**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**」，然後選取「**[!UICONTROL Catalog]**」標籤。 使用&#x200B;**[!UICONTROL Data types]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob儲存空間](/help/destinations/catalog/cloud-storage/azure-blob.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)和[SFTP](/help/destinations/catalog/cloud-storage/sftp.md))以及[Demandbase](/help/destinations/catalog/advertising/demandbase.md)和[（公司） LinkedIn相符對象](/help/destinations/catalog/social/linkedin-b2b.md)串流目的地。
+前往「**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**」，然後選取「**[!UICONTROL Catalog]**」標籤。 使用&#x200B;**[!UICONTROL Data types]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob儲存空間](/help/destinations/catalog/cloud-storage/azure-blob.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)和[SFTP](/help/destinations/catalog/cloud-storage/sftp.md))以及[Bombora](/help/destinations/catalog/advertising/bombora.md)、[Demandbase](/help/destinations/catalog/advertising/demandbase.md)和[（公司） LinkedIn相符對象](/help/destinations/catalog/social/linkedin-b2b.md)串流目的地。
 
 ![支援帳戶對象的目的地。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 

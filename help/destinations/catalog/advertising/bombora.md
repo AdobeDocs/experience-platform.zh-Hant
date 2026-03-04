@@ -1,19 +1,19 @@
 ---
-title: Bombora連線
+title: Bombora ABM對象連線
 description: 根據帳戶對象，為您的Bombora行銷活動啟用設定檔，以用於對象目標定位、個人化和抑制。
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 4%
+source-wordcount: '1170'
+ht-degree: 3%
 
 ---
 
-# Bombora連線 {#bombora}
+# Bombora ABM對象連線 {#bombora}
 
 >[!AVAILABILITY]
 >
->購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司可以使用Bombora目的地啟用帳戶對象的功能。
+>購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司可以使用Bombora ABM Audiences目的地啟用帳戶對象的功能。
 
 根據[帳戶對象](/help/segmentation/types/account-audiences.md)，為您的Bombora行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 
@@ -52,8 +52,6 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-
-
 依受眾資料型別支援的受眾：
 
 | 對象資料型別 | 支援 | 說明 | 使用案例 |
@@ -91,8 +89,9 @@ Bombora需要下表描述的目標識別對應。 深入瞭解[身分](/help/ide
 
 若要將帳戶對象匯出至Bombra，您需要下列資訊。
 
-1. Bombra帳戶。
+1. Bombra帳戶。 如果您沒有帳戶，可以使用[Bombra對象啟用申請表](https://customers.bombora.com/artcdp/audience-activation-request)來申請Bombra帳戶。
 2. Bombora **[!UICONTROL client ID]**&#x200B;和&#x200B;**[!UICONTROL client secret]**。
+3. 傳送給Bombora的資料必須來自已啟用&#x200B;**設定檔**&#x200B;的資料集，因此該資料集包含在設定檔中。 在啟用此目的地的對象之前，請確定您的資料集已[啟用設定檔](/help/catalog/datasets/enable-for-profile.md)。
 
 ## 連線到目標 {#connect}
 
@@ -135,8 +134,6 @@ Bombora需要下表描述的目標識別對應。 深入瞭解[身分](/help/ide
 
 Bombora目的地需要您設定下列對應才能成功啟用資料。
 
-
-
 | 來源欄位 | 目標欄位 | 說明 |
 |---------|----------|---------|
 | 任何值 | `Identity: primaryId` | Experience Platform必須使用此對應來建立與Bombora的連線。 此值不會匯出至Bombora，但目的地組態需要此值。 您可以為來源欄位選取任何屬性。 |
@@ -144,6 +141,17 @@ Bombora目的地需要您設定下列對應才能成功啟用資料。
 
 ![新增必要對應](../..//assets/catalog/advertising/bombora/mappings.png)
 
+## 對象同步行為 {#sync-behavior}
+
+在初次啟用對象後，Experience Platform中對象的後續更新會逐步同步至Bombora。 下列行為適用：
+
+* **帳戶已新增至對象**：將帳戶新增至Experience Platform中的對象時，會自動新增至Bombora中的對應對象。
+* **帳戶已移除或不再符合**：當帳戶不再符合對象資格或從Experience Platform的對象中移除時，會從Bombora的對應對象中移除。
+* **帳戶或設定檔已刪除**：從Experience Platform中刪除帳戶或設定檔，且該帳戶不再符合對象資格時，就會從Bombora的對應對象中移除該帳戶或設定檔。
+
+### 對象刪除和中斷連線行為 {#deletion-disconnect}
+
+刪除Experience Platform中的對象或從Bombra啟動資料流中移除對象，會從Bombra帳戶中移除對象。
 
 ## 其他附註和重要圖說文字 {#additional-notes}
 

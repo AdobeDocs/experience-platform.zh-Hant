@@ -3,12 +3,13 @@ title: Demandbase連線
 description: 使用此目標來啟用 Account-Based Marketing (ABM) 使用案例的帳戶客群。透過 DemandBase 的 B2B Demand Side Platform (DSP) 向目標帳戶中的相關人物誌和角色投放廣告。還可以利用 Demandbase 第三方資料來擴充目標帳戶，以用於行銷和銷售中的其他下游使用案例。
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 5a03902df358d804cbafb401ffcef54eab240dfd
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 15%
 
 ---
+
 
 # Demandbase連線 {#demandbase}
 
@@ -37,8 +38,6 @@ ht-degree: 15%
 
 {style="table-layout:auto"}
 
-
-
 依受眾資料型別支援的受眾：
 
 | 對象資料型別 | 支援 | 說明 | 使用案例 |
@@ -49,7 +48,6 @@ ht-degree: 15%
 | [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
-
 
 ## 匯出型別和頻率 {#export-type-and-frequency}
 
