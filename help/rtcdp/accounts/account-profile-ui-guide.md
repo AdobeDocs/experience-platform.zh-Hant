@@ -2,10 +2,10 @@
 keywords: rtcdp設定檔；設定檔rtcdp；rtcdp身分；rtcdp合併原則；即時客戶設定檔
 title: 帳戶設定檔UI指南
 description: 透過使用帳戶設定檔，Adobe Real-Time Customer Data Platform B2B edition可讓您統一來自多個來源的帳戶資訊。 本指南提供在Adobe Experience Platform使用者介面中與帳戶設定檔互動的詳細資訊。
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 0%
@@ -118,7 +118,7 @@ Real-Time CDP、B2B edition可讓您為想要檢視的帳戶輸入&#x200B;**[!UI
 
 除了能夠檢視清單中的資料之外，您還可以使用搜尋列搜尋特定屬性，或以JSON檢視記錄資料。
 
-![屬性標籤](images/b2b-account-attributes.png)
+![屬性標籤](images/account-profile-attributes.png)
 
 ## 「人員」索引標籤 {#people-tab}
 
@@ -128,7 +128,7 @@ Real-Time CDP、B2B edition可讓您為想要檢視的帳戶輸入&#x200B;**[!UI
 >
 >[!UICONTROL People]索引標籤會顯示與帳戶相關聯的最多25人清單。 若帳戶擁有超過25個關聯人員，則系統顯示25筆記錄的隨機抽樣。
 
-除了顯示連絡人資訊的快照之外，列出的每個人員也包含&#x200B;**[!UICONTROL Profile ID]**，這是一個可點按的連結，可讓您探索該個人的即時客戶設定檔。 若要進一步瞭解如何檢視與您的帳戶相關的個別客戶設定檔，請瀏覽指南，以在B2B edition的Real-Time CDP中瀏覽設定檔[&#128279;](../profile/profile-browse.md)。
+除了顯示連絡人資訊的快照之外，列出的每個人員也包含&#x200B;**[!UICONTROL Profile ID]**，這是一個可點按的連結，可讓您探索該個人的即時客戶設定檔。 若要進一步瞭解如何檢視與您的帳戶相關的個別客戶設定檔，請瀏覽指南，以在B2B edition的Real-Time CDP中瀏覽設定檔[](../profile/profile-browse.md)。
 
 ![人員索引標籤](images/b2b-account-people.png)
 

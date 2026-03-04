@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
+source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '2123'
 ht-degree: 4%
 
 ---
@@ -40,9 +40,9 @@ ht-degree: 4%
 
 ## [!UICONTROL Browse]索引標籤
 
-在&#x200B;**[!UICONTROL Browse]**&#x200B;索引標籤上，您可以選取切換按鈕，在&#x200B;**卡片**&#x200B;檢視或&#x200B;**圖形**&#x200B;檢視中檢視您的設定檔。
+在&#x200B;**[!UICONTROL Browse]**&#x200B;索引標籤上，您可以選取切換，在&#x200B;**卡片**&#x200B;檢視或&#x200B;**表格**&#x200B;檢視中檢視您的設定檔。
 
-![卡片與圖表檢視切換會反白顯示。](../images/user-guide/change-browse-view.png)
+![卡片與表格檢視切換已反白顯示。](../images/user-guide/change-browse-view.png)
 
 此外，您可以使用合併原則來瀏覽設定檔，或使用身分名稱空間和值來查詢特定設定檔。
 
@@ -98,7 +98,7 @@ ht-degree: 4%
 
 ![符合身分值的設定檔會反白顯示。](../images/user-guide/filtered-identity-value.png)
 
-## 檢視設定檔 {#view-profile}
+## 檢視輪廓 {#view-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
@@ -111,11 +111,11 @@ ht-degree: 4%
 
 ### 詳細資訊標籤 {#profile-detail}
 
-**[!UICONTROL Details]**&#x200B;標籤提供有關所選設定檔的詳細資訊，並分為四個部分：客戶設定檔深入分析、AI insight Widget、可自訂的Widget和自動分類的Widget。
+**[!UICONTROL Details]**&#x200B;索引標籤提供所選設定檔的詳細資訊。 視您處於卡片檢視或圖表檢視而定，詳細資訊標籤會分成多個區段。 對於卡片檢視，會顯示客戶設定檔深入分析、AI insight Widget、可自訂的Widget和自動分類的Widget，而對於圖表檢視，則會顯示設定檔屬性和體驗事件區段。
 
 ![設定檔詳細資訊頁面已顯示。](../images/user-guide/profile-details.png)
 
-此外，您可以切換是否顯示AI產生的深入分析、顯示與邊緣比較的中樞詳細資訊，以及在圖形檢視中檢視詳細資訊。
+此外，您可以切換是否顯示AI產生的深入分析、顯示Hub與邊緣的比較詳細資料，以及在卡片檢視或圖表檢視之間選擇。
 
 ![上方列出的切換(AI產生的深入分析、Hub或Edge資料，以及卡片或圖表檢視)會醒目提示。](../images/user-guide/profile-toggles.png)
 
@@ -158,6 +158,24 @@ ht-degree: 4%
 >如果有多個來源欄位群組，Widget只會使用&#x200B;**一個**&#x200B;可用選項。
 
 ![顯示自動分類的Widget區段。](../images/user-guide/auto-classified-widgets.png)
+
+#### 輪廓屬性 {#profile-attributes}
+
+**[!UICONTROL Profile attributes]**&#x200B;區段會顯示設定檔資料的階層圖表表示。 在此檢視中，中央節點代表設定檔本身，次要節點代表欄位群組，其餘節點代表每個欄位群組中的屬性。
+
+在圖形檢視中，您可以拖放節點以重新排列節點順序、摺疊和展開節點以檢視有關屬性的更多詳細資訊、依屬性搜尋和篩選，以及放大和縮小以更好地檢視屬性詳細資訊。
+
+![設定檔的圖形檢視會顯示，顯示構成設定檔的各種節點。](/help/profile/images/user-guide/profile-attribute-graph.png)
+
+#### 體驗事件 {#experience-events}
+
+**[!UICONTROL Experience events]**&#x200B;區段會顯示包含設定檔之體驗事件的時間軸。
+
+![會顯示「體驗事件」區段，顯示包含設定檔之體驗事件的時間表。](/help/profile/images/user-guide/experience-event-graph.png)
+
+如果您選取&#x200B;**[!UICONTROL View event]**，您可以看到連結至所選事件的事件屬性。 這些詳細資訊包括路徑、屬性、顯示名稱和值。
+
+![會顯示[事件屬性]彈出視窗，顯示與該事件相關的其他詳細資料。](/help/profile/images/user-guide/event-attributes-graph.png)
 
 ### 屬性標籤 {#attributes}
 
