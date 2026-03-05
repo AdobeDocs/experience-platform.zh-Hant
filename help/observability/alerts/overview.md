@@ -97,7 +97,7 @@ Experience Platform UI可讓您檢視收到的警報並管理警報規則。 以
 
 您可以在[Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app)上使用webhook Proxy接收從Experience Platform傳送至[的](https://developer.adobe.com/events/docs/guides/)Adobe I/O Events[!DNL Slack]。 Proxy會處理Adobe的驗證交握，並將事件裝載轉換為[!DNL Slack]則訊息，因此您可以直接接收對您工作區的客戶警示。
 
->[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3480206?captions=chi_hant&learn=on)
 
 如需有關如何整合Experience Platform webhook proxy以在[!DNL Slack]中接收AdobeApp Builder通知的詳細資訊，請參閱[在 [!DNL Slack]](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)中監視Experience Platform事件。
 
