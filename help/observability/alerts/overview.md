@@ -4,10 +4,10 @@ title: 警報概觀
 description: 了解 Adobe Experience Platform 中的警告，包括定義警告規則的結構。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
+source-git-commit: bdddcdb19fe248af8f83d42bf885f07b9749a399
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 12%
+source-wordcount: '865'
+ht-degree: 11%
 
 ---
 
@@ -92,6 +92,14 @@ Experience Platform UI可讓您檢視收到的警報並管理警報規則。 以
 > 選取警示以導覽至相關儀表板，以取得觸發警示原因的詳細資訊。
 
 此外，UI中的[!UICONTROL Alerts]索引標籤可讓個別使用者訂閱特定警示型別，並允許管理員完全啟用或停用警示規則。 如需管理警示的詳細資訊，請參閱[UI指南](./ui.md)。
+
+### Slack整合 {#slack-integration}
+
+您可以在[Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app)上使用webhook Proxy接收從Experience Platform傳送至[的](https://developer.adobe.com/events/docs/guides/)Adobe I/O Events[!DNL Slack]。 Proxy會處理Adobe的驗證交握，並將事件裝載轉換為[!DNL Slack]則訊息，因此您可以直接接收對您工作區的客戶警示。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+
+如需有關如何整合Experience Platform webhook proxy以在[!DNL Slack]中接收AdobeApp Builder通知的詳細資訊，請參閱[在 [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack)中監視Experience Platform事件。
 
 ## 後續步驟
 
