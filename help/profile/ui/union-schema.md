@@ -7,7 +7,7 @@ exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 0%
 * [[!DNL Identity Service]](../../identity-service/home.md)：啟用[!DNL Real-Time Customer Profile]，方法是在不同資料來源中的身分擷取到[!DNL Experience Platform]時將其橋接起來。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 
-## 瞭解聯合結構描述 {#understanding-union-schemas}
+## 了解聯集結構 {#understanding-union-schemas}
 
 >[!CONTEXTUALHELP]
 >id="rtcdp_collaboration_union_schema"
->title="聯合結構描述"
+>title="聯集結構"
 >abstract=""
 
 <!-- The above contextual help is used in the Collaboration UI for a read more link. -->

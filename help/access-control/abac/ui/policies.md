@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: b0094920720c54990953f79de32ab95c2a5c7e1c
 workflow-type: tm+mt
 source-wordcount: '625'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -83,7 +83,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="什麼是原則？"
->abstract="策略是將屬性組合在一起的陳述式，用於建立允許和不允許的動作。每個組織都有一個預設原則，您必須啟動該原則才能開始根據標籤控制特定物件的存取權。除非使用者被指派的角色擁有相符的標籤，否則資源所套用的標籤將拒絕使用者存取。原則無法編輯或刪除，但可加以啟用或停用。"
+>abstract="策略是將屬性組合在一起的陳述式，用於建立允許和不允許的動作。每個組織都有一個預設原則，您必須啟動該原則才能開始根據標籤控制特定物件的存取權。除非使用者被指派的角色擁有相符的標籤，否則資源所套用的標籤將拒絕使用者存取。您不能編輯或刪除原則，但可以啟動或停用預設原則。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/abac/permissions-ui/labels" text="管理標籤"
 
 若要啟用現有原則，請從&#x200B;**[!UICONTROL Policies]**&#x200B;的&#x200B;**[!UICONTROL Permissions]**&#x200B;索引標籤中選取原則。 原則啟用狀態會顯示在&#x200B;**[!UICONTROL Status]**&#x200B;區段下。

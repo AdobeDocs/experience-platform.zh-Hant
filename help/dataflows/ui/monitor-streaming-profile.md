@@ -5,7 +5,7 @@ exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
 source-wordcount: '1835'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -26,14 +26,14 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
+>串流輸送量容量支援每秒最多1500個傳入事件。 您可以購買額外的串流區段來支援每秒最多13,500個額外傳入事件&#x200B;。 如需詳細資訊，請參閱[Real-Time CDP B2C Edition - Prime和Ultimate套件產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)。
 
 ## 監視串流設定檔攝取的量度 {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="監視串流設定檔攝取"
->abstract="串流設定檔的監控儀表板會顯示輸送量和擷取率的相關資訊。 使用此儀表板來檢視、了解及分析送入 Experience Platform 的串流設定檔的資料處理量度。"
+>abstract="串流設定檔的監視儀表板顯示有關輸送量及攝取率的資訊。使用此儀表板來檢視、了解及分析送入 Experience Platform 的串流設定檔的資料處理量度。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]

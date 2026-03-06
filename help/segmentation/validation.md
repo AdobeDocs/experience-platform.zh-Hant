@@ -1,13 +1,13 @@
 ---
 title: 對象驗證
 description: 瞭解Experience Platform如何驗證您的對象，以確保它們在下游的表現良好。
-source-git-commit: 52439e55d3c48631488b17b6b04256bcbbe37bcb
+exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '1630'
-ht-degree: 1%
+ht-degree: 13%
 
 ---
-
 
 # 對象驗證
 
@@ -35,17 +35,17 @@ ht-degree: 1%
 | 巢狀資料 | 效能最佳化 | 對象定義中有超過2個層級的巢狀資料（陣列或地圖資料型別）深度。 |
 | 對象規模 | 效能最佳化 | 對象資格大小超過沙箱中設定檔總數的30%。 |
 
-### [!BADGE 重要驗證]{type=Negative}邏輯複雜性 {#logical-complexity}
+### [!BADGE 關鍵驗證]{type=Negative}邏輯複雜性 {#logical-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_rewritescheck"
 >title="查詢效率警報"
->abstract="您的對象包含太多查詢，導致不必要的邏輯複雜性。 請先簡化您的對象定義，然後再繼續。"
+>abstract="您的客群包含太多查詢，導致不必要的邏輯複雜性。請先簡化您的客群定義，然後再繼續。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
 >title="邏輯複雜性"
->abstract="您的對象包含太多查詢，導致不必要的邏輯複雜性。 請先簡化您的對象定義，然後再繼續。"
+>abstract="您的客群包含太多查詢，導致不必要的邏輯複雜性。請先簡化您的客群定義，然後再繼續。"
 
 邏輯複雜度驗證會分析對象定義中邏輯陳述式(AND、OR、NOT)的結構。 具體來說，它會尋找會強制系統為每個設定檔執行過多比較的受眾定義。
 
@@ -105,12 +105,12 @@ plan.equals("trial") AND region.equals("canada")
 
 +++
 
-### [!BADGE 嚴重驗證]{type=Negative}循序事件複雜性 {#sequential-event-complexity}
+### [!BADGE 關鍵驗證]{type=Negative}序列事件複雜性 {#sequential-event-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
 >title="事件序列限制"
->abstract="您的對象包含太多循序事件。 對象定義中最多只能有6個循序事件。 請先從對象定義中移除一些循序事件，然後再繼續。"
+>abstract="您的客群包含太多序列事件。客群定義中最多只能有 6 個序列事件。請先從客群定義中移除一些序列事件，然後再繼續。"
 
 循序事件複雜性驗證將序列中的循序事件數量限製為6個事件。
 
@@ -145,7 +145,7 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_countaggregationcheck"
 >title="計數篩選器警告"
->abstract="您的對象擁有太多彙總事件。 您應該在對象中最多使用3個彙總事件。 為避免效能問題，您應該從對象定義中移除一些彙總事件。"
+>abstract="您的客群具備太多彙總事件。客群中最多僅應使用 3 個彙總事件。為避免效能問題，您應該從客群定義中移除一些彙總事件。"
 
 彙總計數檢查將對象內使用的彙總事件數限製為3個條件。
 
@@ -158,7 +158,7 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_arraydepthcheck"
 >title="巢狀資料警告"
->abstract="您的對象有太多巢狀資料層。 您應該在對象中最多使用2個資料層。 為避免效能問題，您應該將受眾定義平面化。"
+>abstract="您的客群具備太多巢狀資料層。客群中最多僅應使用 2 層資料。為避免效能問題，您應該將客群定義平面化。"
 
 巢狀資料複雜性驗證會將對象定義中的巢狀資料數量限製為2層。
 
@@ -166,12 +166,12 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 
 如果您經常對深層巢狀屬性執行分段，您可能需要聯絡資料工程團隊，將屬性複製到設定檔結構描述中的更高層級，以方便存取。
 
-### [!BADGE 效能最佳化]{type=Caution}對象人數 {#audience-size}
+### [!BADGE 效能最佳化]{type=Caution}客群規模 {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_profilestorecheck"
->title="對象人數警告"
->abstract="您的對象寫得過於寬泛。 您應該避免撰寫符合沙箱中設定檔總數30%以上的對象定義。 為避免效能問題，您應收緊您的對象定義。"
+>title="客群規模警告"
+>abstract="您的客群寫得過於寬泛。客群定義應該避免符合對象達到沙箱中輪廓總數 30% 以上。為避免效能問題，您應該將客群定義限縮。"
 
 對象人數驗證會檢查您的對象定義是否廣泛，以致於您的沙箱中超過30%的總設定檔符合對象的資格。
 

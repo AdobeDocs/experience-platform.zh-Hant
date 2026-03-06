@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；對應csv；對應csv檔案；將csv檔案對應至xdm；將csv對應至xdm；ui指南；對應程式；對應；資料準備；資料準備；
-title: 資料準備UI指南
+title: 資料準備使用者介面指南
 description: 瞭解如何在Experience Platform UI中使用資料準備函式，將CSV檔案對應至XDM結構描述。
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# 資料準備UI指南 {#data-prep-ui-guide}
+# 資料準備使用者介面指南 {#data-prep-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_import_mapping"
 >title="下載範本"
->abstract="下載csv範本以離線執行對應。"
+>abstract="下載 csv 範本，離線執行對應。"
 
 閱讀本指南，瞭解如何在Adobe Experience Platform使用者介面中使用[資料準備](../home.md)對應函式，將CSV檔案對應至[體驗資料模型(XDM)結構描述](../../xdm/home.md)。
 
-## 快速入門
+## 開始使用
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
@@ -119,7 +119,7 @@ ht-degree: 0%
 
 >[!BEGINTABS]
 
->[!TAB 從流程匯入對應]
+>[!TAB 從流程]匯入對應
 
 如果您有多個資料流是根據類似的來源檔案和目標結構描述，那麼您可以匯入現有的對應，並將其重複用於新的資料流。
 

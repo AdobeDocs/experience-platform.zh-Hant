@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
 workflow-type: tm+mt
 source-wordcount: '2380'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="說明"
->abstract="<ul><li>確保您透過 OneTrust 來源連接器或標準 XDM 結構描述，將偏好設定資料擷取到您的聯合結構描述以取得同意。</li><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=zh-Hant#create-governance-policy">建立原則</a>。</li><li>在 <b>If</b> 區段下，描述將觸發原則檢查的條件或動作。</li><li>在 <b>Then</b> 區塊下，輸入同意屬性，此同意屬性必須存在才能將設定檔包含在觸發原則的動作中。</li><li>選取<b>儲存</b>以建立原則。若要啟用原則，請選取右側邊欄中的 <b>狀態</b>切換。</li><li>當您將區段啟用到目的地時，Experience Platform 會自動強制執行您的已啟用同意原則，並提供每個原則如何影響對象大小的詳細資訊。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=zh-Hant#consent-policy">建立同意原則</a>指南。</li></ul>"
+>abstract="<ul><li>確保您透過 OneTrust 來源連接器或標準 XDM 結構描述，將偏好設定資料擷取到您的聯合結構描述以取得同意。</li><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">建立原則</a>。</li><li>在 <b>If</b> 區段下，描述將觸發原則檢查的條件或動作。</li><li>在 <b>Then</b> 區塊下，輸入同意屬性，此同意屬性必須存在才能將設定檔包含在觸發原則的動作中。</li><li>選取<b>儲存</b>以建立原則。若要啟用原則，請選取右側邊欄中的 <b>狀態</b>切換。</li><li>當您將區段啟用到目的地時，Experience Platform 會自動強制執行您的已啟用同意原則，並提供每個原則如何影響對象大小的詳細資訊。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=zh-Hant#consent-policy">建立同意原則</a>指南。</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -128,7 +128,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="If 條件"
->abstract="首先定義將觸發原則檢查的條件。條件可能包括已執行的特定行銷動作、出現的特定資料治理標籤，或兩者的組合。 使用AND/OR邏輯在多個條件之間建立複雜的條件關係。"
+>abstract="首先定義將觸發原則檢查的條件。條件可以包括正在採取的特定行銷動作、存在的特定資料治理標籤，或兩者的組合。使用 AND/OR 邏輯在多個條件之間建立複雜的條件關係。"
 
 在&#x200B;**[!UICONTROL If]**&#x200B;區段下，選取應觸發此原則的行銷動作和/或資料使用標籤。 選取&#x200B;**[!UICONTROL View all]**&#x200B;和&#x200B;**[!UICONTROL Select labels]**&#x200B;以分別檢視可用行銷動作和標籤的完整清單。
 
@@ -145,7 +145,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Then 條件"
->abstract="定義「If」條件後，使用「Then」部分從聯合結構描述中選擇至少一個同意屬性。您必須導覽容器欄位（物件、地圖、陣列）以存取用於建立規則的基本欄位（字串、數字、布林值等）。 此基本欄位是必須存在的屬性，才能將設定檔包含在此原則所控管的動作中。"
+>abstract="定義「If」條件後，使用「Then」部分從聯合結構描述中選擇至少一個同意屬性。您必須導覽容器欄位（物件、地圖、陣列）以存取用於建立規則的基本欄位（字串、數字、布林值等）。 此基本欄位為必須存在的屬性，這樣輪廓才能包含在此原則治理的動作中。"
 
 在&#x200B;**[!UICONTROL Then]**&#x200B;區段下，從聯合結構描述中選取至少一個同意屬性。 這是必須存在的屬性，才能將設定檔納入此原則所控管的動作中。 您可以選擇其中一個建議的選項，或選取&#x200B;**[!UICONTROL View all]**&#x200B;直接從聯合結構描述中選擇屬性。
 

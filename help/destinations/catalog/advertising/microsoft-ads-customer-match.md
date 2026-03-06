@@ -5,7 +5,8 @@ description: 使用Microsoft Ads客戶比對目的地，依電子郵件地址比
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 6f246d87f44cd1fa9b22e40e9ee7b5d8250452e7
+exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
+source-git-commit: 19c8bc9f0b27e1c04c5038cd268bed43cf57080f
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 3%
