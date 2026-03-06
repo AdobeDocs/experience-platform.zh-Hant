@@ -2,9 +2,9 @@
 title: 外部對象API端點
 description: 瞭解如何使用外部對象API，以從Adobe Experience Platform建立、更新、啟用和刪除外部對象。
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: de18b8292f07c143d63d26a45ca541e50b2ed2f3
+source-git-commit: b024571a33c8c9313e0814c090e496a8ffa98009
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2622'
 ht-degree: 4%
 
 ---
@@ -92,7 +92,11 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": "40",
@@ -108,7 +112,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | 字串 | 適用於外部對象的說明（選用）。 |
 | `customAudienceId` | 字串 | 外部對象的選用識別碼。 |
 | `fields` | 物件陣列 | 欄位清單及其資料型別。 陣列中必須至少有1個欄位，最多有41個欄位。 其中一個欄位&#x200B;**必須**&#x200B;是身分欄位，且包含`identityNs`。 建立欄位清單時，您可以新增下列專案： <ul><li>`name`： **必要**&#x200B;屬於外部對象規格的欄位名稱。</li><li>`type`： **必要**&#x200B;進入欄位的資料型別。 支援的值包括`string`、`number`、`long`、`integer`、`date` (`2025-05-13`)、`datetime` (`2025-05-23T20:19:00+00:00`)和`boolean`。</li><li>`identityNs`： **身分欄位需要**&#x200B;身分欄位使用的名稱空間。 支援的值包含所有有效的名稱空間，例如`ECID`或`email`。</li><li>`labels`： *選擇性*&#x200B;欄位的存取控制標籤陣列。 在[資料使用標籤字彙表](/help/data-governance/labels/reference.md)中找到有關可用存取控制標籤的更多資訊。 </li></ul> |
-| `sourceSpec` | 物件 | 包含外部對象所在資訊的物件。 使用此物件時，您&#x200B;**必須**&#x200B;包含下列資訊： <ul><li>`path`： **必要**：來源內外部對象或包含外部對象的資料夾的位置。 檔案路徑&#x200B;**不能**&#x200B;包含任何空格。 例如，如果您的路徑是`activation/sample-source/Example CSV File.csv`，請將路徑設定為`activation/sample-source/ExampleCSVFile.csv`。 您可以在資料流區段的&#x200B;**Source資料**&#x200B;欄中找到來源的路徑。</li><li>`type`： **必要**&#x200B;您要從來源擷取的物件型別。 此值可以是`file`或`folder`。</li><li>`sourceType`： *選擇性*&#x200B;您要擷取的來源型別。 目前唯一支援的值是`Cloud Storage`。</li><li>`cloudType`： **必要**&#x200B;根據來源型別的雲端儲存型別。 支援的值包括`S3`、`DLZ`、`GCS`、`Azure`和`SFTP`。</li><li>`baseConnectionId`：基礎連線的識別碼，由您的來源提供者提供。 如果使用&#x200B;**、**&#x200B;或`cloudType`的`S3`值，則此值為`GCS`必要`SFTP`。 否則，您&#x200B;**不**&#x200B;需要包含此引數。 如需詳細資訊，請閱讀[來源聯結器總覽](../../sources/home.md)。</li></ul> |
+| `sourceSpec` | 物件 | 包含外部對象所在資訊的物件。 使用此物件時，您&#x200B;**必須**&#x200B;包含下列資訊： <ul><li>`path`： **必要**：來源內外部對象或包含外部對象的資料夾的位置。 檔案路徑&#x200B;**不能**&#x200B;包含任何空格。 例如，如果您的路徑是`activation/sample-source/Example CSV File.csv`，請將路徑設定為`activation/sample-source/ExampleCSVFile.csv`。 您可以在資料流區段的&#x200B;**Source資料**&#x200B;欄中找到來源的路徑。</li><li>`type`： **必要**&#x200B;您要從來源擷取的物件型別。 此值可以是`file`或`folder`。</li><li>`sourceType`： *選擇性*&#x200B;您要擷取的來源型別。 目前唯一支援的值是`Cloud Storage`。</li><li>`cloudType`： **必要**&#x200B;根據來源型別的雲端儲存型別。 支援的值包括`S3`、`DLZ`、`GCS`、`Azure`和`SFTP`。</li><li>`baseConnectionId`：基礎連線的識別碼，由您的來源提供者提供。 如果使用&#x200B;**、**&#x200B;或`cloudType`的`S3`值，則此值為`GCS`必要`SFTP`。 否則，您&#x200B;**不**&#x200B;需要包含此引數。 如需詳細資訊，請閱讀[來源聯結器總覽](../../sources/home.md)。</li><li>`encryption`： *選擇性*&#x200B;包含非同步加密資料擷取所需加密金鑰的物件。</li><ul><li>`publicKeyId`： **必要**：產生加密金鑰組時傳回的公開金鑰識別碼。 如需詳細資訊，請閱讀[加密資料指南](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair)。 </li><li>`signVerificationKeyId`： *選擇性*：當您與Experience Platform共用您的客戶受管理金鑰時傳回的公開金鑰ID。 **注意：**&#x200B;在該API要求的回應中，此欄位標示為`publicKeyId`。 如需詳細資訊，請閱讀[加密資料指南](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform)。</li></ul></ul> |
 | `ttlInDays` | 整數 | 外部對象的資料有效期（天）。 此值可以設定從1到90。 依預設，資料到期日設為30天。 |
 | `audienceType` | 字串 | 外部對象的對象型別。 目前僅支援`people`。 |
 | `originName` | 字串 | **必要**&#x200B;對象來源。 這會指出受眾的來源。 對於外部對象，您應該使用`CUSTOM_UPLOAD`。 |
@@ -155,7 +159,11 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": 40,
@@ -390,6 +398,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ais/external-audience/60ccea95
 >[!NOTE]
 >
 >若要使用下列端點，您必須擁有外部對象的`audienceId`。 您可從對`audienceId`端點的成功呼叫取得您的`GET /external-audiences/operations/{OPERATION_ID}`。
+>
+>此外，如果此端點之前已內嵌，則可用於重新整理對象的資料。
 
 您可以在提供對象ID時，透過向下列端點發出POST請求來開始對象擷取。
 
