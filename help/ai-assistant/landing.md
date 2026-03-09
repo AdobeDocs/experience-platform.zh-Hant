@@ -31,14 +31,14 @@ AI助理（舊版）支援Experience Platform、Real-Time CDP、Adobe Journey Op
     <div><strong>加強您的學習</strong><br/>在不中斷工作流程的情況下，探索、疑難排解並提升您對產品知識的理解。</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/zh-hant/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>造訪AI助理視訊播放清單</strong><br/>瞭解您可以使用AI助理解決許多不同的挑戰和使用案例。</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/zh-hant/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -463,6 +463,6 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 <a href="https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">檔案</a>
 </td>
 <td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank">檔案</a>
+<a href="https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/ai-assistant" target="_blank">檔案</a>
 </td>
 </tr></table>

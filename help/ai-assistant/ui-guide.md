@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->本檔案適用於AI助理（舊版）。 如需AI助理(Next-Gen)的相關資訊，請閱讀Experience Cloud[檔案中](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui)AI的[AI助理UI指南](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/home)。
+>本檔案適用於AI助理（舊版）。 如需AI助理(Next-Gen)的相關資訊，請閱讀Experience Cloud[檔案中](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui)AI的[AI助理UI指南](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/home)。
 
 請參閱下表以取得「AI助理（舊版）」和「AI助理（次世代）」的比較結果：
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 | 功能範圍 | 您可以使用AI助理（舊版）來取得產品知識和營運見解。 | 您可以使用AI Assistant （新一代）來瞭解產品知識、營運深入分析，以及進階代理技能和多步驟任務執行。 |
 | 平台架構 | AI助理（舊版）並非建置在Agent Orchestrator棧疊上。 | AI Assistant (Next-Gen)由[Adobe Experience Platform Agent Orchestrator](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)提供技術支援，可擴充性以及各種功能的進階協調。 |
 | 應用程式涵蓋範圍 | AI助理（舊版）是應用程式專用的實作。 | 您可以使用AI助理（新一代），在所有Adobe Experience Cloud應用程式中提供統一的AI助理體驗。 |
-| 存取與許可權模型 | 應用程式範圍的存取模型會與個別產品邊界對齊。 | 所有使用者都能存取AI Assistant (Next-Gen)和相關聯的Experience Platform代理程式。 **附註**： <ul><li>**Adobe Experience Manager**：您的管理員必須授予您透過[Adobe Admin Console](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)存取AI小幫手(Next-Gen)的許可權。</li><li>**Customer Journey Analytics**：您的管理員必須透過[Customer Journey Analytics存取控制](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en)授與您存取AI小幫手的許可權。 這可讓您詢問產品知識和資料見解問題。 |
+| 存取與許可權模型 | 應用程式範圍的存取模型會與個別產品邊界對齊。 | 所有使用者都能存取AI Assistant (Next-Gen)和相關聯的Experience Platform代理程式。 **附註**： <ul><li>**Adobe Experience Manager**：您的管理員必須授予您透過[Adobe Admin Console](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)存取AI小幫手(Next-Gen)的許可權。</li><li>**Customer Journey Analytics**：您的管理員必須透過[Customer Journey Analytics存取控制](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/technotes/access-control?lang=en)授與您存取AI小幫手的許可權。 這可讓您詢問產品知識和資料見解問題。 |
 
 請閱讀本指南，瞭解如何在Adobe Experience Platform UI中使用AI Assistant。
 
