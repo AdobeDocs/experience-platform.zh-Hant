@@ -3,9 +3,9 @@ title: 記錄刪除工單
 description: 瞭解如何使用資料衛生API中的/workorder端點，以管理Adobe Experience Platform中的記錄刪除工單。 本指南涵蓋配額、處理時間表及API使用情形。
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
+source-git-commit: 5ca3e4feae3096e41689610ac3afac7e93047149
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '3316'
 ht-degree: 1%
 
 ---
@@ -32,27 +32,20 @@ ht-degree: 1%
 
 ### 依產品的每月提交權利 {#quota-limits}
 
-下表顯示產品和權益層級的識別碼提交限制。 對於每種產品，每月上限是兩個值中較小者：固定的識別碼上限，或與授權資料量繫結的百分比型臨界值。
+下表顯示產品和權益層級的識別碼提交限制。 對於每種產品，每月上限是兩個值中較小者：固定的識別碼上限，或與授權資料量繫結的百分比型臨界值。 實際上，根據組織的實際可定址對象或Adobe Customer Journey Analytics列權益，大多陣列織的每月上限較低。
 
 | 產品 | 權益說明 | 每月上限（以較小者為準） |
 |----------|-------------------------|---------------------------------|
 | Real-Time CDP或Adobe Journey Optimizer | 不含Privacy and Security Shield或Healthcare Shield附加元件 | 2,000,000個識別碼或可定址對象的5% |
 | Real-Time CDP或Adobe Journey Optimizer | 搭配Privacy and Security Shield或Healthcare Shield附加元件 | 15,000,000個識別碼或10%的可定址對象 |
-| Customer Journey Analytics | 不含Privacy and Security Shield或Healthcare Shield附加元件 | 每百萬個CJA權益列有2,000,000個識別碼或100個識別碼 |
-| Customer Journey Analytics | 搭配Privacy and Security Shield或Healthcare Shield附加元件 | 每百萬個CJA權益列有15,000,000個識別碼或200個識別碼 |
+| Customer Journey Analytics | 不含Privacy and Security Shield或Healthcare Shield附加元件 | 每百萬個Customer Journey Analytics權益列有2,000,000個識別碼或100個識別碼 |
+| Customer Journey Analytics | 搭配Privacy and Security Shield或Healthcare Shield附加元件 | 每百萬個Customer Journey Analytics權益列有15,000,000個識別碼或200個識別碼 |
 
 >[!NOTE]
 >
->根據組織的實際可定址對象或CJA列權益，大多陣列織的每月限制會較低。
-
->[!NOTE]
->
->配額在每個日曆月的第一天重設。 未使用的配額&#x200B;**不會**&#x200B;延續。
-
->[!NOTE]
->
->配額使用量是以貴組織針對&#x200B;**已提交識別碼**&#x200B;的每月授權為基礎。 配額不是由系統護欄強制執行，但可能被監視和檢閱。\
->記錄刪除工單容量是&#x200B;**共用服務**。 您的每月上限反映了Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analytics和任何適用的Shield附加元件的最高權益。
+>- 配額在每個日曆月的第一天重設。 未使用的配額&#x200B;**不會**&#x200B;延續。
+>- 配額使用量是以貴組織針對&#x200B;**已提交識別碼**&#x200B;的每月授權為基礎。 配額不是由系統護欄強制執行，但可能被監視和檢閱。
+>- 記錄刪除工單容量是&#x200B;**共用服務**。 您的每月上限反映了Real-Time CDP、Adobe Journey Optimizer、Customer Journey Analytics和任何適用的Shield附加元件的最高權益。
 
 ### 處理識別碼提交的時間表 {#sla-processing-timelines}
 
@@ -131,7 +124,8 @@ curl -X GET \
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -168,10 +162,10 @@ curl -X GET \
 | `createdAt` | 建立工單時的時間戳記。 |
 | `updatedAt` | 上次更新工單時的時間戳記。 |
 | `operationCount` | 工單中包含的作業數。 |
-| `targetServices` | 工單的目標服務清單。 |
+| `targetServices` | 處理刪除的目標服務集。 預設值取決於您組織的權益。 對於具有Real-Time CDP或Adobe Journey Optimizer的組織，預設為完整的支援服務集(`["datalake", "identity", "profile", "ajo"]`)。 對於僅限Customer Journey Analytics的組織（沒有即時客戶設定檔權利），唯一有效值為[&quot;datalake&quot;]。 |
 | `status` | 工單的目前狀態。 可能的值為： `received`、`validated`、`submitted`、`ingested`、`completed`和`failed`。 |
 | `createdBy` | 建立工作單之使用者的電子郵件和識別碼。 |
-| `datasetId` | 與工單相關之資料集的唯一識別碼。 如果要求套用至所有資料集，此欄位將會設為「全部」。 |
+| `datasetId` | 工作順序所瞄準的資料集：單一資料集ID、以逗號分隔的資料集ID清單（多個資料集）或常值`ALL`。 當要求使用僅設定檔模式時，這個值為`ALL`。 |
 | `datasetName` | 與工單相關聯的資料集名稱。 |
 | `displayName` | 適用於工單的可讀取標籤。 |
 | `description` | 工單用途的說明。 |
@@ -185,9 +179,9 @@ curl -X GET \
 
 ## 建立記錄刪除工單 {#create}
 
-若要從單一資料集或所有資料集中刪除與一或多個身分相關聯的記錄，請對`/workorder`端點發出POST要求。
+若要從單一資料集、多個資料集或所有資料集中刪除與一或多個身分相關聯的記錄，請對`/workorder`端點發出POST要求。
 
-工單會以非同步方式處理，並在提交後顯示在工單清單中。
+工單會以非同步方式處理，並在提交後顯示在工單清單中。 自2026年3月Experience Platform發行版本起，所有客戶一般都能使用多資料集和僅限設定檔（目標服務）選項。
 
 >[!TIP]
 >
@@ -199,25 +193,36 @@ curl -X GET \
 POST /workorder
 ```
 
->[!NOTE]
->
->您只能從關聯XDM結構描述定義主要身分或身分對應的資料集中刪除記錄。
-
 >[!IMPORTANT]
 >
 >記錄刪除工單僅在&#x200B;**主要身分**&#x200B;欄位上執行。 下列限制適用：
 >
+>- **資料集結構描述必須定義主要身分或身分對應。**&#x200B;您只能從關聯XDM結構描述定義主要身分或身分對應的資料集中刪除記錄。
 >- **未掃描次要身分。**&#x200B;如果資料集包含多個身分欄位，則只會使用主要身分進行比對。 無法根據非主要身分定位或刪除記錄。
 >- **略過沒有填入主要身分的記錄。**&#x200B;如果記錄未填入主要身分中繼資料，則無法刪除。
 >- **在身分設定之前擷取的資料不合格。**&#x200B;如果主要身分欄位在資料擷取後新增到結構描述，則無法透過記錄刪除工作單來刪除先前擷取的記錄。
 
 >[!NOTE]
 >
->如果您嘗試為已有有效到期日的資料集建立記錄刪除工作單，請求會傳回HTTP 400 （錯誤請求）。有效到期日是任何尚未完成的已排程刪除。
+>如果您嘗試為已有有效到期日的資料集建立記錄刪除工單，請求會傳回HTTP 400 （錯誤請求）。 有效到期是指任何尚未完成的排程刪除。
+
+### 身分裝載格式（`namespacesIdentities`或`identities`）
+
+要求內文必須包含下列&#x200B;**其中一個**。
+
+| 格式 | 屬性 | 形狀 | 使用時機 |
+|--------|----------|-------|-------------|
+| **建議** | `namespacesIdentities` | 具有`namespace` （例如`{ "code": "email" }`）和`ids` （識別字串陣列）的物件陣列。 | 用於所有裝載，無論是手動建構或程式碼產生。 當許多身分共用相同的名稱空間時，這尤其能有效減少裝載大小。 |
+| **也接受** | `identities` | 具有`namespace` （例如`{ "code": "email" }`）和單一`id` （字串）的物件陣列。 | 已接受以便回溯相容。 這是[csv至資料衛生轉換指令碼](#convert-id-lists-to-json-for-record-delete-requests)產生的格式。 此服務會在內部標準化此格式，因此產生的行為是相同的。 |
+
+如果您傳送&#x200B;**兩個屬性**、**兩個屬性**，或為您包含的屬性提供&#x200B;**空陣列**，API會傳回&#x200B;**HTTP 400 （錯誤請求）**&#x200B;及下列其中一個訊息：
+
+- **提供的兩個屬性：** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **未提供或空白清單：** `"Identities are Empty for Delete Identity request."`
 
 **要求**
 
-以下請求會從特定資料集中刪除與指定電子郵件地址相關聯的所有記錄。
+以下請求會從特定資料集中刪除與指定電子郵件地址相關聯的所有記錄。 它使用建議的`namespacesIdentities`格式。
 
 ```shell
 curl -X POST \
@@ -237,7 +242,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -254,8 +259,10 @@ curl -X POST \
 | `displayName` | 此記錄刪除工單的可讀取標籤。 |
 | `description` | 記錄刪除工單的說明。 |
 | `action` | 記錄刪除工單所要求的動作。 若要刪除與指定識別相關聯的記錄，請使用`delete_identity`。 |
-| `datasetId` | 資料集的唯一識別碼。 使用特定資料集的資料集ID，或使用`ALL`來鎖定所有資料集。 資料集必須具有主要身分或身分對應。 如果身分對應存在，則會顯示為名為`identityMap`的頂層欄位。<br>請注意，資料集列的身分對應中可能有許多身分，但只能將一個標示為主要身分。 必須包含`"primary": true`以強制`id`符合主要身分。 |
-| `namespacesIdentities` | 物件陣列，每個都包含：<br><ul><li> `namespace`：物件具有`code`屬性，指定了身分名稱空間（例如，「email」）。</li><li> `IDs`：要刪除此名稱空間的一組身分值。</li></ul>身分識別名稱空間會提供身分識別資料的內容。 您可以使用Experience Platform提供的標準名稱空間或建立您自己的名稱空間。 若要深入瞭解，請參閱[身分名稱空間檔案](../../identity-service/features/namespaces.md)和[身分識別服務API規格](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)。 |
+| `datasetId` | 資料集的唯一識別碼。 值必須正好是下列其中之一：常值`ALL`、單一資料集ID，或以逗號分隔的兩個或多個資料集ID清單（例如`"id1,id2,id3"`）。 您無法將`ALL`與特定ID結合。 單一資料集請求的行為與先前相同，多資料集請求會從每個列出的資料集中刪除身分，並`ALL`鎖定每個資料集。 資料集必須具有主要身分或身分對應。 如果身分對應存在，則會顯示為名為`identityMap`的頂層欄位。<br>**注意**：資料集資料列的身分對應中可能有許多身分，但只能將一個標示為主要身分。 必須包含`"primary": true`以強制`id`符合主要身分。<br>使用`targetServices`進行僅設定檔刪除時，`datasetId`必須是`ALL`。 |
+| `targetServices` | 選填。 指定應該處理刪除的服務。 預設值取決於您組織的權益。 依預設，具有Real-Time CDP或Adobe Journey Optimizer的組織會收到完整的支援服務集(`["datalake", "identity", "profile", "ajo"]`)。 擁有Customer Journey Analytics但沒有即時客戶設定檔權益的組織只能使用[&quot;datalake&quot;]。 若要將刪除限製為僅與設定檔相關的資料，並保留資料湖不變，請將此項設為`["identity", "profile", "ajo"]` （以任何順序）。 此僅設定檔模式需要Real-Time CDP或Adobe Journey Optimizer權益，且`datasetId`必須為`ALL`。 |
+| `identities` | **只使用`identities`或`namespacesIdentities`其中之一。**&#x200B;物件陣列，每個具有`namespace` （具有`code`的物件，例如`"email"`）和`id` （單一識別字串）。 接受此項，以便回溯相容及由轉換指令碼產生。 此服務會在內部標準化此格式；行為相同。 請參閱上述[身分裝載格式](#identity-payload-format-identities-or-namespacesidentities)。 |
+| `namespacesIdentities` | **只使用`identities`或`namespacesIdentities`其中之一。**&#x200B;物件陣列，每個具有`namespace` （具有`code`的物件，例如`"email"`）和`ids` （識別字串陣列）。 建議用於所有裝載。 當許多身分共用一個名稱空間時，`namespacesIdentities`屬性會更緊湊。 請參閱上述[身分裝載格式](#identity-payload-format-identities-or-namespacesidentities)。 識別名稱空間： [識別名稱空間檔案](../../identity-service/features/namespaces.md)，[識別服務API](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)。 |
 
 **回應**
 
@@ -273,7 +280,8 @@ curl -X POST \
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -298,20 +306,77 @@ curl -X POST \
 | `targetServices` | 記錄刪除工單的目標服務清單。 |
 | `status` | 記錄刪除工單的目前狀態。 |
 | `createdBy` | 建立記錄刪除工作單之使用者的電子郵件和識別碼。 |
-| `datasetId` | 資料集的唯一識別碼。 如果要求適用於所有資料集，則值將設為`ALL`。 |
+| `datasetId` | 資料集的唯一識別碼。 如果要求適用於所有資料集，則值將設為`ALL`。 對於多資料集請求，值會反映所提交的逗號分隔清單或單一ID。 |
 | `datasetName` | 此記錄刪除工單的資料集名稱。 |
 | `displayName` | 記錄刪除工單的可讀取標籤。 |
 | `description` | 記錄刪除工單的說明。 |
 
 {style="table-layout:auto"}
 
+回應`targetServices`值會回應您的要求，或在省略時顯示完整的預設設定（請參閱上方的回應表格）。
+
+### 多資料集和僅限設定檔(API) {#multi-dataset-profile-only}
+
+以下選項只能透過API使用，資料衛生UI中不支援。 這類許可權可控制哪些資料集和哪些服務會處理刪除，從而啟用多資料集提交和僅限設定檔的目標服務請求。
+
+下表概述每個選項的請求內文和行為變更。
+
+| 選項 | 要求內文變更 | 行為 |
+|--------|---------------------|----------|
+| **多個資料集** | 在`datasetId`中使用逗號分隔清單（例如`"id1,id2,id3"`）。 單一ID或`ALL`未變更。 | 身分會從列出的資料集中刪除（或是從`ALL`時的一個資料集，或是從所有資料集中刪除）。 |
+| **僅設定檔（目標服務）** | 新增`targetServices`並包含`["identity", "profile", "ajo"]` （任何順序）。 需要`datasetId`： `"ALL"`。 | 只有身分、設定檔和Adobe Journey Optimizer會處理刪除；資料湖不會修改。 |
+
+#### 多資料集請求
+
+`datasetId`欄位會以逗號分割：使用單一ID （與之前相同的行為）、以逗號分隔的ID清單或常值`ALL`。 若要以一個工作順序從多個特定資料集中刪除身分，請提供逗號分隔清單：
+
+```json
+"datasetId": "6707eb36eef4d42ab86d9fbe,6643f00c16ddf51767fcf780"
+```
+
+接著會從每個列出的資料集中刪除身分。 單一資料集要求如常運作；使用`ALL`來鎖定每個資料集。 值必須剛好是下列其中一項： `ALL`、單一資料集ID，或兩個以上以逗號分隔的資料集ID （不將`ALL`與特定ID結合）。
+
+#### 僅限設定檔（目標服務）
+
+若要在保持資料湖不受影響時僅移除身分和設定檔相關資料，請以任意順序包含具有這三個值的`targetServices`： `identity`、`profile`和`ajo`。 明確包括身分、設定檔和AJO；排除資料湖。 在此模式中，`datasetId`必須是`ALL` （使用案例是完整設定檔刪除，而不是每個資料集片段）。
+
+下列範例會建立僅設定檔記錄刪除工單：
+
+```shell
+curl -X POST \
+  "https://platform.adobe.io/data/core/hygiene/workorder" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+    "action": "delete_identity",
+    "datasetId": "ALL",
+    "displayName": "Profile-only delete for specified identity",
+    "description": "Delete identity, profile, and AJO data only; datalake unchanged.",
+    "targetServices": ["identity", "profile", "ajo"],
+    "namespacesIdentities": [
+      {
+        "namespace": { "code": "email" },
+        "ids": ["user@example.com"]
+      }
+    ]
+  }'
+```
+
+多資料集或僅限設定檔要求的成功回應會遵循與其他工單回應相同的形狀。 傳回的`datasetId`和`targetServices`反映請求中的值（或省略`targetServices`時的完整預設清單），因此您可以確認已提交的內容。
+
 >[!NOTE]
 >
 >記錄刪除工單的動作屬性目前在API回應中為`identity-delete`。 如果API變更為使用不同的值（例如`delete_identity`），本檔案將會相應地更新。
 
-## 針對記錄刪除請求將ID清單轉換為JSON
+## 針對記錄刪除請求將ID清單轉換為JSON (#convert-id-lists-to-json-for-record-delete-requests)
 
-若要從包含識別碼的CSV、TSV或TXT檔案建立記錄刪除工單，您可以使用轉換指令碼來產生`/workorder`端點的必要JSON裝載。 此方法在處理現有資料檔案時特別實用。 如需立即使用的指令碼和完整的指示，請造訪[csv至資料衛生GitHub存放庫](https://github.com/perlmonger42/csv-to-data-hygiene)。
+當您的識別碼位於CSV、TSV或TXT檔案中時，使用轉換指令碼為`/workorder`端點產生必要的JSON裝載。 此方法在處理現有資料檔案時特別實用。 如需現成的指令碼和指示，請參閱[csv至資料衛生GitHub存放庫](https://github.com/perlmonger42/csv-to-data-hygiene)。
+
+指令碼會輸出&#x200B;**`identities`**&#x200B;格式 — 每個具有`id`的物件一個`namespace`。 API接受此格式的現狀；您可以直接在POST內文中將產生的JSON傳送給`/workorder`，而不需要進行轉換。 建議的格式為&#x200B;**`namespacesIdentities`**；請參閱[建立記錄刪除工單](#create)和[身分裝載格式](#identity-payload-format-identities-or-namespacesidentities)。
 
 ### 產生JSON裝載
 
@@ -365,8 +430,8 @@ done
 | ---           | ---     |
 | `verbose` | 啟用詳細資訊輸出。 |
 | `column` | 包含要刪除之身分值的資料行的索引（以1為基礎）或標題名稱。 若未指定，則預設為第一欄。 |
-| `namespace` | 具有指定身分名稱空間之`code`屬性的物件（例如，&quot;email&quot;）。 |
-| `dataset-id` | 與工單相關之資料集的唯一識別碼。 如果要求套用至所有資料集，此欄位將會設為`ALL`。 |
+| `namespace` | 傳遞給指令碼的身分名稱空間程式碼（例如，`email`）。 產生的JSON會在每個物件的`namespace.code`屬性中使用此專案。 |
+| `dataset-id` | 資料集的唯一識別碼：單一ID、多個資料集使用逗號分隔的ID，或所有資料集使用`ALL`。 |
 | `description` | 記錄刪除工單的說明。 |
 | `output-dir` | 寫入輸出JSON裝載的目錄。 |
 
@@ -402,7 +467,7 @@ done
 | 屬性 | 說明 |
 | ---          | ---     |
 | `action` | 記錄刪除工單所要求的動作。 由轉換指令碼自動設定為`delete_identity`。 |
-| `datasetId` | 資料集的唯一識別碼。 |
+| `datasetId` | 資料集的唯一識別碼：單一ID、逗號分隔的ID或`ALL`。 |
 | `displayName` | 此記錄刪除工單的可讀取標籤。 |
 | `description` | 記錄刪除工單的說明。 |
 | `identities` | 物件陣列，每個都包含：<br><ul><li> `namespace`：物件具有`code`屬性，指定了身分名稱空間（例如，「email」）。</li><li> `id`：要刪除此名稱空間的身分值。</li></ul> |
@@ -411,7 +476,7 @@ done
 
 ### 將產生的JSON資料提交至`/workorder`端點
 
-若要提交請求，請依照[建立記錄刪除工單](#create)區段中的指示進行。 將您的`-d` POST要求傳送至`curl` API端點時，請務必使用轉換的JSON裝載作為要求內文(`/workorder`)。
+指令碼輸出使用`identities`格式，API接受其原樣。 當您將`-d` POST要求傳送至`curl`端點時，請使用轉換的JSON裝載作為要求內文(`/workorder`)。 如需完整的請求選項和驗證規則，請參閱[建立記錄刪除工單](#create)。
 
 ## 擷取特定記錄刪除工單的詳細資料 {#lookup}
 
@@ -482,12 +547,12 @@ curl -X GET \
 | `targetServices` | 受此記錄刪除工單影響的目標服務清單。 |
 | `status` | 記錄刪除工單的目前狀態。 |
 | `createdBy` | 建立記錄刪除工作單之使用者的電子郵件和識別碼。 |
-| `datasetId` | 與工單相關之資料集的唯一識別碼。 |
+| `datasetId` | 與工單相關之資料集的唯一識別碼（單一ID、逗號分隔的ID或`ALL`）。 |
 | `datasetName` | 與工單相關聯的資料集名稱。 |
 | `displayName` | 記錄刪除工單的可讀取標籤。 |
 | `description` | 記錄刪除工單的說明。 |
 
-## 更新記錄刪除工單
+## 更新記錄刪除工單 {#update}
 
 藉由對`name`端點發出PUT要求，更新記錄刪除工作順序的`description`和`/workorder/{WORKORDER_ID}`。
 
@@ -590,7 +655,7 @@ curl -X PUT \
 | `targetServices` | 受此記錄刪除工單影響的目標服務清單。 |
 | `status` | 記錄刪除工單的目前狀態。 可能的值為： `received`、`validated`、`submitted`、`ingested`、`completed`和`failed`。 |
 | `createdBy` | 建立記錄刪除工作單之使用者的電子郵件和識別碼。 |
-| `datasetId` | 與記錄刪除工單相關之資料集的唯一識別碼。 |
+| `datasetId` | 與記錄刪除工作單相關之資料集的唯一識別碼（單一ID、逗號分隔的ID或`ALL`）。 |
 | `datasetName` | 與記錄刪除工單關聯的資料集名稱。 |
 | `displayName` | 記錄刪除工單的可讀取標籤。 |
 | `description` | 記錄刪除工單的說明。 |
