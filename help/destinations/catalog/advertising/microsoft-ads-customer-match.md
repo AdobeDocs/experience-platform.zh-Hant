@@ -6,7 +6,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 19c8bc9f0b27e1c04c5038cd268bed43cf57080f
+source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 3%
@@ -17,11 +17,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->此目的地聯結器目前可用性有限。 若要取得存取權，請連絡您的Adobe代表。</br>
+>This destination connector is currently in limited availability. 若想取得存取權，請聯絡您的 Adobe 代表。
 
 ## 概觀 {#overview}
 
-使用[!DNL Microsoft Ads Customer Match]目的地，依電子郵件地址比對客戶，並在[!DNL Microsoft Advertising Network]中與客戶重新互動，包括搜尋和對象廣告。 將您的[!DNL Microsoft Advertising]帳戶連結至Real-Time CDP，以直接從Experience Platform自動建立和管理客戶比對清單。
+Use the [!DNL Microsoft Ads Customer Match] destination to match customers by email address and reengage with them across the [!DNL Microsoft Advertising Network], including Search and Audience ads. Link your [!DNL Microsoft Advertising] account to Real-Time CDP to automate customer match list creation and management directly from Experience Platform.
 
 ## 使用案例 {#use-cases}
 
@@ -52,7 +52,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 Some examples include: <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -69,18 +69,18 @@ ht-degree: 3%
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
-請參閱下表以取得目的地匯出型別和頻率的資訊。
+Refer to the table below for information about the destination export type and frequency.
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
-| 匯出類型 | **[!UICONTROL Audience export]** | 您正在匯出具有[!DNL Microsoft Ads Customer Match]目的地中所使用識別碼（電子郵件地址）之對象的所有成員。 |
+| 匯出類型 | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (email addresses) used in the [!DNL Microsoft Ads Customer Match] destination. |
 | 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
 ## 先決條件 {#prerequisites}
 
-若要將對象資料傳送至[!DNL Microsoft Ads]，您必須擁有作用中的[!DNL Microsoft Advertising]帳戶。 如需建立帳戶的詳細資訊，請瀏覽[Microsoft Advertising檔案](https://help.ads.microsoft.com/#apex/ads/en/53090/0)。
+To send audience data to [!DNL Microsoft Ads], you need to have an active [!DNL Microsoft Advertising] account. For details on creating an account, visit the [Microsoft Advertising documentation](https://help.ads.microsoft.com/#apex/ads/en/53090/0).
 
 ### 接受客戶比對條款與條件 {#accept-customer-match-terms}
 
@@ -107,23 +107,23 @@ ht-degree: 3%
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="Customer ID"
 >abstract="您的Microsoft Advertising客戶ID，也稱為Manager帳戶ID。 這是Microsoft Advertising中可以有多個廣告商帳戶（客戶帳戶ID）的最上層識別碼。"
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="尋找您的客戶ID"
+>additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Find your Customer ID"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
->title="客戶帳戶ID"
->abstract="您的Microsoft Advertising客戶帳戶ID，也稱為廣告商帳戶ID。 這會在您的客戶ID下識別特定的廣告商帳戶。"
+>title="Customer Account ID"
+>abstract="您的Microsoft Advertising客戶帳戶ID，也稱為廣告商帳戶ID。 This identifies a specific advertiser account under your Customer ID."
 >additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="尋找您的客戶帳戶ID"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
->title="會籍持續時間"
->abstract="使用者保留在客戶比對清單中的天數。 接受的值介於1到390天之間。"
+>title="Membership Duration"
+>abstract="The number of days a user remains in the customer match list. Accepted values are between 1 and 390 days."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_list_availability"
->title="客戶比對清單可用性"
->abstract="選取客戶比對清單是否可供單一廣告商帳戶使用，或可供經理帳戶下的所有帳戶使用。 選取客戶ID ，讓此清單可在您的客戶ID底下的所有廣告商帳戶中使用。 選取「客戶帳戶ID」，將清單限製為特定的「客戶帳戶ID」。"
+>title="Customer Match List Availability"
+>abstract="Select whether the customer match list is available to a single advertiser account or to all accounts under the manager account. Select Customer ID to make the list available across all advertiser accounts under your Customer ID. Select Customer Account ID to restrict the list to the specific Customer Account ID."
 >additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="進一步瞭解Microsoft Advertising中的對象清單共用"
 
 在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
@@ -150,14 +150,14 @@ ht-degree: 3%
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要將&#x200B;*身分*&#x200B;匯出至目的地，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
-如需啟用此目的地的對象的指示，請參閱[啟用串流對象匯出目的地的對象資料](../../ui/activate-segment-streaming-destinations.md)。
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### 對應 {#mapping}
 
-在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，您必須將來源設定檔中的電子郵件識別對應到[!DNL Microsoft Ads Customer Match]中的目標識別。
+In the **[!UICONTROL Mapping]** step, you must map the email identity from your source profiles to the target identity in [!DNL Microsoft Ads Customer Match].
 
-* **Source欄位**：選取`IdentityMap: Email`作為來源欄位，以從您的設定檔對應電子郵件身分識別。 或者，您可以選取XDM屬性（例如`personalEmail.address`）作為來源欄位。
-* **目標欄位**：選取`Identity: email`作為目標欄位。
+* **Source field**: Select `IdentityMap: Email` as the source field to map email identities from your profiles. Alternatively, you can select an XDM attribute such as `personalEmail.address` as the source field.
+* **Target field**: Select `Identity: email` as the target field.
 
 >[!IMPORTANT]
 >
@@ -167,7 +167,7 @@ ht-degree: 3%
 
 ## 匯出的資料 {#exported-data}
 
-若要確認資料是否已成功匯出至[!DNL Microsoft Ads Customer Match]目的地，請檢查您的[!DNL Microsoft Advertising]帳戶。 如果成功啟用，系統會將對象填入您的帳戶作為客戶比對清單。
+若要確認資料是否已成功匯出至[!DNL Microsoft Ads Customer Match]目的地，請檢查您的[!DNL Microsoft Advertising]帳戶。 If activation was successful, audiences are populated in your account as customer match lists.
 
 ## 其他資源 {#additional-resources}
 
