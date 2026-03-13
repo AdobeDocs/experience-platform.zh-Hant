@@ -3,22 +3,24 @@ title: 在Adobe Experience Platform中管理查詢服務工作階段
 description: 瞭解管理員如何檢視、監控和結束使用中的查詢服務工作階段，以釋放閒置容量和維護可靠的資料Distiller工作流程。
 keywords: Experience Platform；查詢服務；工作階段；工作階段管理；資料Distiller；管理員
 solution: Experience Platform
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+badgeLimitedAvailability: label="有限可用性" type="Informative"
+exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
 
 # 管理查詢服務工作階段
 
+>[!AVAILABILITY]
+>
+>查詢服務的工作階段管理目前使用受限，僅供擁有&#x200B;**資料Distiller**&#x200B;權益的組織使用。 若要要求存取權，請聯絡您的Adobe客戶團隊。
+
 使用本指南從Adobe Experience Platform使用者介面管理作用中的查詢服務工作階段。 工作階段管理可協助管理員監視沙箱間的同時查詢編輯器工作階段，並在使用者保持工作階段開啟時釋放容量。
 
 ## 工作階段管理所需的許可權 {#permissions}
-
->[!AVAILABILITY]
->
->工作階段管理僅適用於擁有資料Distiller許可權的組織。
 
 >[!IMPORTANT]
 >
@@ -28,9 +30,9 @@ ht-degree: 1%
 
 ## 檢視作用中工作階段 {#view-active-sessions}
 
-管理員可以檢視貴組織中不同沙箱的所有使用中查詢服務工作階段。 在Experience Platform中，選取左側導覽中的&#x200B;**[!UICONTROL Queries]**&#x200B;以開啟查詢服務工作區，然後選取&#x200B;**[!UICONTROL Admin]**&#x200B;索引標籤以存取工作階段管理。
+管理員可以查看組織中各個沙箱中所有活動的查詢服務會話。 在Experience Platform中，在左側導航中選擇&#x200B;**[!UICONTROL Queries]**&#x200B;以開啟查詢服務工作區，然後選擇&#x200B;**[!UICONTROL Admin]**&#x200B;頁籤以訪問會話管理。
 
-![已選取[管理員]索引標籤的查詢服務工作區。 會顯示「工作階段管理」表格，並列出您組織中多個沙箱中的作用中和非作用中工作階段。](../images/ui/session-management/session-management-admin-tab.png)
+![選中「管理」頁籤的「查詢服務」工作區。 將顯示「會話管理」表，並列出組織中多個沙箱中的活動會話和非活動會話。](../images/ui/session-management/session-management-admin-tab.png)
 
 作業階段管理表格會即時自動更新，並列出目前耗用指定給您組織之「查詢服務」並行作業階段產能的所有作業階段。 每一列代表在查詢編輯器中開啟的單一工作階段。
 
@@ -49,11 +51,11 @@ ht-degree: 1%
 
 ### 工作階段狀態
 
-**[!UICONTROL Inactive]**&#x200B;表示使用者未主動執行查詢；這些工作階段可以結束。 **[!UICONTROL Active]**&#x200B;表示查詢目前正在執行；**[!UICONTROL End session]**&#x200B;控制項在查詢執行完成前無法使用。
+**[!UICONTROL Inactive]**&#x200B;表示用戶未主動運行查詢；這些會話可以結束。 **[!UICONTROL Active]**&#x200B;表示查詢當前正在運行；在查詢執行完成之前，**[!UICONTROL End session]**&#x200B;控制項不可用。
 
-### 閒置時間和剩餘工作階段時間
+### 空閒時間和剩餘會話時間
 
-閒置時間顯示工作階段開啟而未與使用者互動的時間。 剩餘工作階段時間表示在系統自動關閉工作階段之前，工作階段可以保持開啟的時間長度。 工作階段會在允許的最長持續時間（閒置兩個小時）後自動過期。 此持續時間由系統定義，無法設定。
+空閒時間顯示會話在沒有用戶交互的情況下已開啟多長時間。 剩餘工作階段時間表示在系統自動關閉工作階段之前，工作階段可以保持開啟的時間長度。 工作階段會在允許的最長持續時間（閒置兩個小時）後自動過期。 此持續時間由系統定義，無法設定。
 
 ## 結束閒置工作階段 {#end-idle-sessions}
 
@@ -71,17 +73,17 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->無法結束狀態為&#x200B;**[!UICONTROL Active]**&#x200B;的工作階段。 此保護措施可避免中斷進行中的工作負載。
+>無法結束狀態為&#x200B;**[!UICONTROL Active]**&#x200B;的會話。 此保護措施可避免中斷進行中的工作負載。
 
 ## 終止後的工作階段行為 {#session-behavior-after-termination}
 
-管理員結束工作階段時，受影響使用者的程式碼會保留在編輯器中而不會遺失工作。 如果使用者在終止後嘗試執行查詢，系統會偵測到結束的工作階段、自動重新建立連線，並保持「查詢編輯器」內容不變。
+管理員結束工作階段時，受影響使用者的程式碼會保留在編輯器中而不會遺失工作。 如果用戶嘗試在終止後運行查詢，則系統會檢測結束的會話，自動重新建立連接，並保持查詢編輯器內容不變。
 
-此行為可確保使用者不會遺失在編輯器中撰寫的工作，並在建立新工作階段後繼續進行。
+此行為確保用戶不會丟失在編輯器中編寫的工作，並且一旦建立新會話，就可以繼續。
 
-## 工作階段管理的稽核記錄 {#audit-logs}
+## 會話管理的審核日誌 {#audit-logs}
 
-系統會記錄工作階段管理動作，以提供可見度和責任感。 稽核記錄會記錄工作階段ID、工作階段結束的使用者、執行動作的管理員，以及動作的時間。
+系統記錄會話管理操作以提供可見性和可問責性。 稽核記錄會記錄工作階段ID、工作階段結束的使用者、執行動作的管理員，以及動作的時間。
 
 使用稽核記錄檢閱工作階段終止歷程記錄並調查非預期的中斷情形。
 
@@ -93,4 +95,3 @@ ht-degree: 1%
 
 * [瞭解使用者如何在查詢編輯器使用手冊中建立和執行查詢](user-guide.md)
 * [使用排程查詢監視檔案監視排程工作負載](monitor-queries.md)
-
