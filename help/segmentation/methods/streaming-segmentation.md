@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 串流分段指南
 description: 瞭解串流細分是什麼、如何建立使用串流細分評估的受眾，以及如何檢視使用串流細分建立的受眾。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2033'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 為了使用串流細分評估對象，它&#x200B;**必須**&#x200B;限制在24小時時間範圍內。
 
-## 在串流對象中包含批次資料 {#include-batch-data}
+## 包括流式訪問群體中的批處理資料 {#include-batch-data}
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ WHEN(<= 24 hours before now)])
 
 | 客群 | 結構描述 | Source型別 | 查詢定義 | 客群 ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| 最近的放棄 | 體驗事件 | 批次 | 過去24小時內至少有一個放棄事件 | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| 最近放棄 | 體驗事件 | 批次 | 過去24小時內至少有一個放棄事件 | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | 最近結帳 | 體驗事件 | 串流 | 在過去24小時內至少有一個結帳 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 在此情況下，您需要建立第三個對象，如下所示：
@@ -117,8 +117,8 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 | 查詢型別 | 詳細資料 | 查詢 | 範例 |
 | ---------- | ------- | ----- | ------- |
 | 少於24小時時間範圍內的單一事件 | 任何會參照少於24小時之時間範圍內的單一傳入事件的區段定義。 | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內單一事件的範例。](../images/methods/streaming/single-event.png) |
-| 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 | `homeAddress.country.equals("US", false)` | ![顯示的設定檔屬性範例。](../images/methods/streaming/profile-attribute.png) |
-| 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內具有設定檔屬性的單一事件範例。](../images/methods/streaming/single-event-with-profile-attribute.png) |
+| 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 | `homeAddress.country.equals("Canada", false)` | ![顯示的設定檔屬性範例。](../images/methods/streaming/profile-attribute.png) |
+| 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 | `workAddress.country.equals("Canada", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示相對時間範圍內具有設定檔屬性的單一事件範例。](../images/methods/streaming/single-event-with-profile-attribute.png) |
 | 24小時相對時間範圍內的多個事件 | 任何在過去24小時&#x200B;**內參考多個事件**&#x200B;且（選擇性）具有一或多個設定檔屬性的區段定義。 | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![顯示具有設定檔屬性的多個事件範例。](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 在下列情況下，區段定義將&#x200B;**不**&#x200B;適用於串流分段：
@@ -131,7 +131,7 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 請注意下列適用於串流細分查詢的准則：
 
-| 查詢型別 | 方針 |
+| 查詢型別 | 建議 |
 | ---------- | -------- |
 | 單一事件規則集 | 回顧期間限製為&#x200B;**一天**。 |
 | 使用事件歷史記錄進行查詢 | <ul><li>回顧期間限製為&#x200B;**一天**。</li><li>事件之間必須有嚴格的時間排序條件&#x200B;**且**。</li><li>支援至少具有一個否定事件的查詢。 不過，整個事件&#x200B;**不可**&#x200B;為否定。</li></ul> |
@@ -140,7 +140,7 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 此外，區段取消資格（類似於區段資格）會即時發生。 因此，如果對象不再符合區段的資格，則會立即取消資格。 例如，如果區段定義要求「過去三小時內購買紅鞋子的所有使用者」，三小時後，所有最初符合區段定義資格的設定檔都將不合格。
 
-### 合併對象 {#combine-audiences}
+### 結合對象 {#combine-audiences}
 
 若要合併來自批次和串流來源的資料，您必須將批次和串流元件分隔為個別的對象。
 
@@ -174,7 +174,7 @@ WHEN(<= 24 hours before now)])
 | 客群 | 結構描述 | Source型別 | 查詢定義 | 客群 ID |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | 最近的放棄 | 體驗事件 | 批次 | 在過去48小時內至少有一個放棄事件 | `7deb246a-49b4-4687-95f9-6316df049948` |
-| 最近結帳 | 體驗事件 | 串流 | 在過去24小時內至少有一個結帳 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| 最近結帳 | 體驗事件 | 串流 | 過去24小時內至少有一個結帳人 | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 在此情況下，您需要建立第三個對象，如下所示：
 
@@ -289,15 +289,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 >[!TAB Audience Portal]
 
-在對象入口網站中，選取&#x200B;**[!UICONTROL 建立對象]**。
+在對象入口網站中，選取&#x200B;**[!UICONTROL Create audience]**。
 
 ![對象入口網站中會醒目顯示[建立對象]按鈕。](../images/methods/streaming/select-create-audience.png)
 
-彈出視窗隨即顯示。 選取&#x200B;**[!UICONTROL 建置規則]**&#x200B;以輸入區段產生器。
+彈出視窗隨即顯示。 選取&#x200B;**[!UICONTROL Build rules]**&#x200B;以輸入區段產生器。
 
 ![「建立對象」彈出視窗中會醒目顯示「建置規則」按鈕。](../images/methods/streaming/select-build-rules.png)
 
-在區段產生器中，建立符合其中一個[合格規則集](#eligible-rulesets)的區段定義。 如果區段定義符合串流區段的資格，您就可以選取&#x200B;**[!UICONTROL 串流]**&#x200B;作為&#x200B;**[!UICONTROL 評估方法]**。
+在區段產生器中，建立符合其中一個[合格規則集](#eligible-rulesets)的區段定義。 如果區段定義符合串流區段的資格，您就可以選取&#x200B;**[!UICONTROL Streaming]**&#x200B;作為&#x200B;**[!UICONTROL Evaluation method]**。
 
 ![會顯示區段定義。 評估型別已反白顯示，顯示可以使用串流區段來評估區段定義。](../images/methods/streaming/streaming-evaluation-method.png)
 
@@ -439,7 +439,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 ![對象入口網站中會醒目顯示篩選圖示。](../images/methods/filter-audiences.png)
 
-在可用的篩選器內，移至&#x200B;**[!UICONTROL 更新頻率]**&#x200B;並選取[!UICONTROL 串流]。 使用此篩選器會顯示貴組織中使用串流細分評估的所有對象。
+在可用的篩選器中，前往&#x200B;**[!UICONTROL Update frequency]**&#x200B;並選取「[!UICONTROL Streaming]」。 使用此篩選器會顯示貴組織中使用串流細分評估的所有對象。
 
 ![已選取串流更新頻率，顯示組織中使用串流細分評估的所有對象。](../images/methods/streaming/filter-streaming.png)
 
@@ -455,11 +455,11 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 ![對於使用串流細分評估的對象，會顯示對象詳細資訊頁面。](../images/methods/streaming/audience-details.png)
 
-針對已啟用串流的對象，會顯示&#x200B;**[!UICONTROL 設定檔特定時段]**&#x200B;卡片，其中顯示合格的總數以及新對象更新的量度。
+針對已啟用串流的對象，會顯示&#x200B;**[!UICONTROL Profiles over time]**&#x200B;卡片，其中顯示合格的總數以及新對象更新的量度。
 
-根據此對象的批次和串流評估，**[!UICONTROL 合格總計]**&#x200B;量度代表合格對象的總數。
+**[!UICONTROL Total qualified]**&#x200B;量度代表合格對象的總數，根據此對象的批次和串流評估。
 
-**[!UICONTROL 新對象已更新]**&#x200B;量度以折線圖表示，該折線圖顯示透過串流細分而發生的對象人數變化。 您可以調整下拉式清單以顯示過去24小時、上週或過去30天。
+**[!UICONTROL New audience updated]**&#x200B;量度以折線圖表示，該圖顯示透過串流細分而發生的對象人數變化。 您可以調整下拉式清單以顯示過去24小時、上週或過去30天。
 
 ![已醒目提示一段時間的設定檔卡片。](../images/methods/streaming/profiles-over-time.png)
 

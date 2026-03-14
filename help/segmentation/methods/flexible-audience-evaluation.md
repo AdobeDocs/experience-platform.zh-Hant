@@ -1,11 +1,11 @@
 ---
-title: 彈性的對象評估指南
+title: Flexible Audience Evaluation Guide
 description: 瞭解如何使用彈性的對象評估，以應要求執行批次細分工作。
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1206'
 ht-degree: 5%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 5%
 >
 >彈性的對象評估僅&#x200B;**在**&#x200B;上執行的Experience Platform執行個體上提供[!DNL Microsoft Azure]。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../landing/multi-cloud.md)。
 >
->此外，彈性的對象評估僅&#x200B;**可**&#x200B;搭配Real-Time CDP B2C Edition使用。
+>Additionally, flexible audience evaluation is **only** available for use with Real-Time CDP B2C Edition.
 
-彈性的對象評估可讓您視需求執行批次細分工作。 透過彈性的對象評估，您可以執行臨機行銷活動啟動、即時通訊或其他時效性活動。
+Flexible audience evaluation lets you run a batch segmentation job on demand. With flexible audience evaluation, you can run ad-hoc campaign launches, just-in-time communications, or other time-sensitive activities.
 
 ## 護欄 {#guardrails}
 
@@ -30,16 +30,18 @@ ht-degree: 5%
 當您執行彈性的對象評估時，請記住以下條件：
 
 - 每個沙箱每天只能使用彈性對象評估&#x200B;**兩次**。 此限制會在午夜(UTC)重設。
-- 您每&#x200B;**生產**&#x200B;沙箱每年有&#x200B;**最多**&#x200B;次50次彈性對象評估執行。
+- 每年&#x200B;**生產**&#x200B;沙箱有&#x200B;**最多**&#x200B;個靈活的受眾評估運行，共50個。
+   - 年定義為從Experience Platform合同日期開始的一年，以便靈活評估受眾。 例如，如果您在5月18日開始簽訂合同，則每年5月18日，您的靈活受眾評估運行數將重置。
 - 您每&#x200B;**開發**&#x200B;沙箱每年有&#x200B;**最多**&#x200B;次100次彈性對象評估執行。
+   - 一年是指從您的Experience Platform合約日期開始的一年，用於彈性對象評估。 例如，如果您從5月18日開始合約，您彈性的對象評估執行次數將會在每年5月18日重設。
 - 所有對象&#x200B;**都必須**&#x200B;具有「分段服務」的來源。
 - 所有對象&#x200B;**都必須**&#x200B;使用批次細分進行評估。
 - 所有對象&#x200B;**都必須**&#x200B;是以人物為基礎的對象。
-- 每個彈性受眾評估回合最多只能選取20個受眾。
+- You can only select a maximum of 20 audiences per flexible audience evaluation run.
 
 >[!NOTE]
 >
->您可以每年購買額外的彈性受眾評估回合。 如需詳細資訊，請聯絡Adobe客戶服務。
+>You can purchase additional flexible audience evaluation runs per year. For more information, contact Adobe Customer Care.
 
 ## 存取權 {#access}
 
@@ -47,21 +49,21 @@ ht-degree: 5%
 
 - **[!UICONTROL Evaluate Segment to an Audience]**&#x200B;區段下的&#x200B;**[!DNL Profile Management]**。
 
-如需角色型存取控制的詳細資訊，請閱讀[存取控制總覽](../../access-control/home.md)。
+For more information on role-based access control, please read the [access control overview](../../access-control/home.md).
 
-## 執行彈性的對象評估
+## Running flexible audience evaluation
 
-您可以使用Experience Platform API或UI來執行彈性的對象評估。
+You can run flexible audience evaluation by using either the Experience Platform APIs or UI.
 
 >[!BEGINTABS]
 
->[!TAB Experience Platform API]
+>[!TAB Experience Platform APIs]
 
-若要在Experience Platform API內執行彈性的對象評估，您必須建立區段作業，其中包含您要評估的所有區段定義（對象）的ID。
+To run flexible audience evaluation within the Experience Platform APIs, you&#39;ll need to create a segment job that contains the IDs of all the segment definitions (audiences) you want to evaluate.
 
 >[!NOTE]
 >
->您只能為每個區段作業API呼叫新增&#x200B;**最多**&#x200B;個20個區段定義ID。
+>You can only add a **maximum** of 20 segment definition IDs per segment job API call.
 
 您可以對`/segment/jobs`端點發出POST要求，並在要求內文中包含區段定義的ID，藉此建立新的區段作業。
 
@@ -86,7 +88,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `segmentId` | 您要評估之區段定義的ID。 這些區段定義可屬於不同的合併原則。 |
+| `segmentId` | 要計算的段定義的ID。 這些段定義可以屬於不同的合併策略。 |
 
 +++
 
@@ -218,7 +220,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 成功的回應會傳回HTTP狀態200，其中包含指定區段工作的詳細資訊。
 
 
-+++ 擷取區段作業的範例回應。
++++ A sample response for retrieving a segment job.
 
 ```json
 {
@@ -312,7 +314,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 ![顯示可以使用彈性對象評估來評估的對象。](../images/methods/fae/evaluate-audiences-modal.png)
 
-確認列出正確的對象後，您可以繼續處理請求，並展開彈性的對象評估。 您可以在[評估工作監視檢視](../../dataflows/ui/monitor-audiences.md#evaluation-job-details)中檢視此對象評估的狀態。
+在確認列出了正確的受眾後，您可以繼續請求，並開始靈活的受眾評估。 您可以在[評估作業監視視圖](../../dataflows/ui/monitor-audiences.md#evaluation-job-details)中查看此訪問群體評估的狀態。
 
 >[!NOTE]
 >
@@ -326,13 +328,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 下列影片示範如何在Experience Platform中存取和使用彈性的對象評估。
 
->[!VIDEO](https://video.tv.adobe.com/v/3453651?captions=chi_hant&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 常見問題 {#faq}
 
-下節列出與彈性對象評估相關的常見問題。
+The following section lists frequently asked questions related to flexible audience evaluation.
 
-### 我多久才能使用彈性的對象評估來啟用對象？
+### How soon can I activate an audience using flexible audience evaluation?
 
 +++ 回答
 
@@ -340,19 +342,19 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 +++
 
-### 彈性的對象評估需要多久時間？
+### How long does flexible audience evaluation take?
 
 +++ 回答
 
-彈性的對象評估工作最多可能需要四個小時才能完成。
+A flexible audience evaluation job can take up to four hours to complete.
 
 +++
 
-### 我是否可透過彈性的對象評估執行排程？
+### Can I run scheduling with flexible audience evaluation?
 
 +++ 回答
 
-否，排程不適用於彈性的對象評估。
+No, scheduling is not available to use with flexible audience evaluation.
 
 +++
 
@@ -364,11 +366,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 +++
 
-### 我可以使用透過彈性對象評估來評估的對象嗎？
+### 我可以使用靈活的受眾評估評估來評估哪些服務？
 
 +++ 回答
 
-您可以在所有的下游服務(包括目的地和Adobe Journey Optimizer歷程)中使用對象。
+您可以在所有的下游服務（包括目的地和Adobe Journey Optimizer歷程）中使用對象。
 
 +++
 
@@ -384,7 +386,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 +++ 回答
 
-只有具有細分服務來源的受眾才支援進行彈性的受眾評估。 其他對象，例如組合、自訂上傳或資料Distiller，不支援彈性對象評估。
+Only audiences with the origin of Segmentation Service are supported for flexible audience evaluation. Other audiences, such as compositions, custom upload, or Data Distiller, are not supported for flexible audience evaluation.
 
 +++
 
@@ -396,10 +398,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/b31aed3d-b3b1-4
 
 +++
 
-### 使用彈性的對象評估來評估主要對象時，是否需要評估所有相依對象？
+### Do I need to evaluate all dependent audiences when evaluating the main audience with flexible audience evaluation?
 
 +++ 回答
 
-不可以。 彈性的對象評估會自動評估所有相依對象。 例如，如果對象A相依於對象B，您只需要評估對象B。彈性的對象評估會自動評估對象A，然後評估對象B。
+不可以。 Flexible audience evaluation will automatically evaluate all dependent audiences. For example, if Audience A depends on Audience B, you only need to evaluate Audience B. Flexible audience evaluation will automatically evaluate Audience A and then Audience B.
 
 +++
