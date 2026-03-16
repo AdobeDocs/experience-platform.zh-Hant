@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、賦予標籤和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
+source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1089'
 ht-degree: 34%
 
 ---
@@ -77,7 +77,7 @@ ht-degree: 34%
       - [Azure Databricks聯結器](connectors/databases/databricks.md)
       - [Azure Data Explorer聯結器](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics聯結器](connectors/databases/synapse-analytics.md)
-      - [Azure資料表儲存體聯結器](connectors/databases/ats.md)
+      - [Azure表格儲存體聯結器](connectors/databases/ats.md)
       - [Google BigQuery聯結器](connectors/databases/bigquery.md)
       - [GreenPlum聯結器](connectors/databases/greenplum.md)
       - [HP Vertica聯結器](connectors/databases/hp-vertica.md)
@@ -97,6 +97,8 @@ ht-degree: 34%
       - [Bombora Intent](connectors/data-partners/bombora.md)
       - [Demandbase方法](connectors/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
+   - 資料共用 {#data-sharing}
+      - [Deltashare](connectors/data-sharing/deltashare.md)
    - 電子商務 {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -310,6 +312,8 @@ ht-degree: 34%
          - [Bombora Intent](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase方法](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+      - 資料共用 {#data-sharing}
+         - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
       - 電子商務 {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -369,15 +373,15 @@ ht-degree: 34%
    - [將資料流儲存為草稿](tutorials/ui/draft.md)
    - [將存取權標籤套用至資料流](tutorials/ui/labels.md)
    - [建立私人端點](tutorials/ui/private-link.md)
-- 自助來源(批次SDK) {#sdk}
+- 自助來源（批次SDK） {#sdk}
    - [概觀](sources-sdk/overview.md)
    - 設定您的連線規格 {#config}
       - [設定選項](sources-sdk/config/config.md)
       - [設定驗證規格](sources-sdk/config/authspec.md)
       - [設定來源規格](sources-sdk/config/sourcespec.md)
       - [設定瀏覽規格](sources-sdk/config/explorespec.md)
-   - 自助來源(批次SDK) API指南 {#self-serve-api}
-      - [自助來源(批次SDK) API總覽](sources-sdk/api/api-overview.md)
+   - 自助來源（批次SDK） API指南 {#self-serve-api}
+      - [自助來源（批次SDK） API總覽](sources-sdk/api/api-overview.md)
       - [快速入門](sources-sdk/api/getting-started.md)
       - [建立連線規格](sources-sdk/api/create.md)
       - [更新連線規格](sources-sdk/api/update-connection-specs.md)
@@ -390,12 +394,12 @@ ht-degree: 34%
       - [檔案自助服務API範本](sources-sdk/documentation/template.md)
       - [檔案自助服務UI範本](sources-sdk/documentation/ui-template.md)
    - 串流SDK {#streaming-sdk}
-      - [開始使用自助來源(串流SDK)](sources-sdk/streaming/getting-started.md)
+      - [開始使用自助來源（串流SDK）](sources-sdk/streaming/getting-started.md)
       - [建立串流來源的連線規格](sources-sdk/streaming/create.md)
       - [更新串流來源的連線規格](sources-sdk/streaming/update-connection-specs.md)
       - [更新串流流程規格](sources-sdk/streaming/update-flow-specs.md)
       - [測試並提交您的連線規格以進行驗證](sources-sdk/streaming/submit.md)
-      - [記錄您的來源(串流SDK)](sources-sdk/streaming/document-streaming.md)
+      - [記錄您的來源（串流SDK）](sources-sdk/streaming/document-streaming.md)
       - [檔案自助式API串流範本](sources-sdk/streaming/streaming-template-api.md)
       - [檔案自助式UI串流範本](sources-sdk/streaming/streaming-template-ui.md)
 - 錯誤訊息 {#errors}
