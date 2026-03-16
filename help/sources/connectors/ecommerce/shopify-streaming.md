@@ -4,9 +4,9 @@ description: 瞭解如何建立來源連線和資料流，以將來自您的Shop
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '677'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform支援從串流應用程式擷取資料。 對串流提
 
 使用有效的[!DNL Shopify]合作夥伴帳戶，您現在可以使用合作夥伴儀表板繼續並建立您的應用程式。 如需有關如何在[!DNL Shopify]中建立應用程式的完整步驟，請閱讀快速入門的[[!DNL Shopify] 指南](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token)。
 
-建立您的應用程式後，請從[!DNL Shopify]合作夥伴儀表板的&#x200B;**使用者端認證**&#x200B;索引標籤中擷取您的&#x200B;**使用者端識別碼**&#x200B;和&#x200B;**使用者端密碼**。 使用者端ID和使用者端密碼將在後續步驟中使用，以擷取您的授權代碼和存取權杖。
+建立您的應用程式後，請從&#x200B;**合作夥伴儀表板的**&#x200B;使用者端認證&#x200B;**索引標籤中擷取您的**&#x200B;使用者端識別碼&#x200B;**和**&#x200B;使用者端密碼[!DNL Shopify]。 使用者端ID和使用者端密碼將在後續步驟中使用，以擷取您的授權代碼和存取權杖。
 
 ### 擷取您的授權代碼
 
@@ -46,7 +46,7 @@ https://{SHOP}.myshopify.com/admin/oauth/authorize?client_id={API_KEY}&scope={SC
 | 參數 | 說明 |
 | --- | --- |
 | `shop` | 您的子網域`myshopify.com` URL。 |
-| `api_key` | 您的[!DNL Shopify]使用者端識別碼。 您可以從[!DNL Shopify]合作夥伴儀表板的&#x200B;**使用者端認證**&#x200B;標籤擷取使用者端ID。 |
+| `api_key` | 您的[!DNL Shopify]使用者端識別碼。 您可以從&#x200B;**合作夥伴儀表板的**&#x200B;使用者端認證[!DNL Shopify]標籤擷取使用者端ID。 |
 | `scopes` | 您要定義的存取權型別。 例如，您可以將範圍設定為`scope=write_orders,read_customers`，以允許修改訂單和讀取客戶的許可權。 |
 | `redirect_uri` | 將會產生存取權杖的指令碼URL。 |
 
@@ -66,7 +66,7 @@ https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecb
 
 ### 擷取您的存取權杖
 
-現在您已取得使用者端ID、使用者端密碼和授權碼，您可以擷取存取權杖。 若要擷取您的存取Token，請在使用[!DNL Shopify's] API端點附加此URL時向網域的`myshopify.com` URL提出POST要求： `/admin/oauth/access_token`。
+現在您已取得使用者端ID、使用者端密碼和授權碼，您可以擷取存取權杖。 若要擷取您的存取Token，請在使用`myshopify.com` API端點附加此URL時，對您網域的[!DNL Shopify's] URL提出POST要求： `/admin/oauth/access_token`。
 
 **API格式**
 
@@ -104,7 +104,7 @@ curl -X POST \
 
 ## 建立webhook以串流[!DNL Shopify]資料 {#webhook}
 
-Webhook可讓應用程式與您的[!DNL Shopify]資料保持同步，或在商店中發生特定事件後執行動作。 若要將[!DNL Shopify]資料串流至Experience Platform，webhook可用來定義http端點和訂閱的主題。
+Webhook可讓應用程式與您的[!DNL Shopify]資料保持同步，或在商店中發生特定事件後執行動作。 若要將[!DNL Shopify]資料串流至Experience Platform，webhook可用來定義http端點以及訂閱的主題。
 
 **要求**
 
@@ -117,7 +117,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "format": "json"
   }
@@ -126,7 +126,7 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --- | --- | 
-| `webhook.address` | 傳送串流訊息的http端點。 |
+| `webhook.address` | 傳送串流訊息的http端點。 webhook的範本是： `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
 | `webhook.topic` | 您的webhook訂閱主題。 如需詳細資訊，請閱讀[[!DNL Shopify] webhook活動主題指南](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics)。 |
 | `webhook.format` | 資料的格式。 |
 
@@ -138,7 +138,7 @@ curl -X POST \
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",
