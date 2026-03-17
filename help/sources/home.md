@@ -65,7 +65,7 @@ Experience Platform可從其他Adobe應用程式（包括Adobe Analytics和Adobe
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅適用於[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)或已授權獨立進階企業Source聯結器SKU的客戶。
+下列來源僅適用於[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)或已授權獨立進階企業Source聯結器SKU的客戶。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
