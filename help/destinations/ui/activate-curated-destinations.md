@@ -62,7 +62,7 @@ ht-degree: 0%
 
 觀看以下影片，瞭解本頁面所述工作流程的端對端說明。
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452669?captions=chi_hant)
 
 ### 步驟1：透過[!DNL LiveRamp - Onboarding]目的地，將您的對象從Experience Platform傳送至LiveRamp {#onboarding}
 
