@@ -5,7 +5,7 @@ badgeLimitedAvailability: label="有限可用性" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 4%
@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # Audience Analysis目的地
 
-[!UICONTROL Audience Analysis]目的地可讓您將Adobe Experience Platform對象資料擴充至[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=zh-Hant)報表中作為維度使用。
+[!UICONTROL Audience Analysis]目的地可讓您將Adobe Experience Platform對象資料擴充至[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)報表中作為維度使用。
 
 >[!AVAILABILITY]
 >
 >此目的地處於有限測試階段。 如果您有興趣使用此目的地，請聯絡您的Adobe客戶團隊。
 
-## 先決條件
+## 先決條件 {#prerequisites}
 
 使用此目的地之前需要下列專案：
 
@@ -28,7 +28,7 @@ ht-degree: 4%
 * 您必須完成布建才能使用Customer Journey Analytics。
 * 您必須在Adobe Experience Platform中建立至少一個對象。
 
-## 支援的身分
+## 支援的身分 {#supported-identities}
 
 Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。 通常會使用Experience Cloud ID (ECID)。
 
@@ -43,14 +43,14 @@ Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help
 
 {style="table-layout:auto"}
 
-## 支援的對象
+## 支援的對象 {#supported-audiences}
 
 使用此目的地時，支援下列型別的對象：
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help
 {style="table-layout:auto"}
 
 
-## 匯出型別和頻率
+## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
@@ -79,15 +79,15 @@ Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help
 
 {style="table-layout:auto"}
 
-## 設定新的目的地
+## 設定新的目的地 {#configure-destination}
 
 >[!IMPORTANT]
-> 
+>
 >若要建立目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要建立此目的地，請依照[目的地設定教學課程](../../ui/connect-destination.md)中所述的步驟進行。
 
-### 目的地詳細資料
+### 目的地詳細資料 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -96,7 +96,7 @@ Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help
 * **[!UICONTROL Datastream ID]**：您要與合格對象擴充的資料串流ID。 您可以在[資料串流管理員](/help/datastreams/overview.md)中取得此識別碼。
 * **[!UICONTROL Integration alias]**：整合別名。
 
-### 警報
+### 警報 {#alerts}
 
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
@@ -104,7 +104,7 @@ Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help
 
 當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
-### 治理原則與執行動作
+### 治理原則與執行動作 {#governance-policy}
 
 此選擇性區段可讓您定義資料治理原則，並確保使用的資料在傳送及啟用受眾時符合要求。
 
@@ -113,7 +113,7 @@ Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 建立目的地後，您就可以針對目的地啟用所需的對象。

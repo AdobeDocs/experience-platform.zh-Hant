@@ -2,9 +2,9 @@
 description: 此頁面是透過Adobe Experience Platform Destination SDK刪除現有目的地伺服器設定的API呼叫範例。
 title: 刪除目的地伺服器設定
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '329'
 ht-degree: 1%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 刪除目的地伺服器設定 {#delete}
 
-您可以刪除[現有](create-destination-server.md)目的地伺服器組態，方法是使用您要刪除之目的地伺服器組態的`{INSTANCE_ID}`向`/authoring/destination-servers`端點發出`DELETE`要求。
+您可以刪除[現有](create-destination-server.md)目的地伺服器組態，方法是使用您要刪除之目的地伺服器組態的`DELETE`向`/authoring/destination-servers`端點發出`{INSTANCE_ID}`要求。
 
 >[!TIP]
 >
@@ -48,7 +48,9 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | 您要刪除的目的地伺服器組態`ID`。 |
 
-+++要求
+{style="table-layout:auto"}
+
++++請求
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \

@@ -2,11 +2,11 @@
 title: Acxiom資料增強功能
 description: 使用此聯結器在Real-Time CDP中啟動第一方Adobe設定檔至Acxiom，以擴充資料並跨行銷管道使用。 然後，您可以使用 Acxiom 來源匯入含有增強資料的設定檔，並在 Real-Time CDP 中使用它們。
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1436'
 ht-degree: 4%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 4%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -107,13 +107,13 @@ ht-degree: 4%
 | S3秘密金鑰 | 貯體的秘密金鑰ID。 您可以從[!DNL Acxiom]團隊擷取此值。 |
 | 貯體名稱 | 這是您的貯體，檔案將在此共用。 您可以從[!DNL Acxiom]團隊擷取此值。 |
 
-### 新帳戶
+### 新帳戶 {#new-account}
 
 若要定義新的Acxiom Managed S3位置：
 
 ![新帳戶](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### 現有帳戶
+### 現有帳戶 {#existing-account}
 
 已使用[!DNL Acxiom Data Enhancement]目的地定義的帳戶會出現在清單快顯視窗中。 選取後，您可以在右側邊欄中檢視帳戶的詳細資料。 當您導覽至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**&#x200B;時，從UI檢視範例；
 
@@ -152,7 +152,7 @@ ht-degree: 4%
 
 讀取[啟用批次設定檔匯出目的地的對象資料](/help/destinations/ui/activate-batch-profile-destinations.md)，以取得啟用此目的地對象的指示。
 
-### 對應建議
+### 對應建議 {#mapping-suggestions}
 
 在Acxiom端正確處理檔案需要名稱和位址元素。 雖然並非所有元素都需要，但儘可能提供有助於成功比對。
 
@@ -177,7 +177,7 @@ ht-degree: 4%
 
 若要驗證是否已成功匯出資料，請檢查您的[!DNL Amazon S3 Storage]貯體，並確定匯出的檔案包含預期的設定檔母體。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 依照本教學課程中的指示，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至[!DNL Acxiom]受管理的S3位置。 接下來，您需要連絡您的Acxiom代表，提供帳戶名稱、檔案名稱以及儲存貯體路徑，以便設定處理作業。
 

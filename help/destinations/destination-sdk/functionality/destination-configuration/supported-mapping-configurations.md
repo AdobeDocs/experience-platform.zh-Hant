@@ -2,7 +2,7 @@
 description: 瞭解如何針對支援的身分和屬性對應設定來設定您的目的地。
 title: 支援的對應設定
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 串流目的地支援的對應 {#streaming-mappings}
 
@@ -33,6 +33,8 @@ ht-degree: 3%
 | --- | --- |
 | XDM屬性 | 自訂屬性 |
 | 身分識別命名空間 | 身分識別命名空間 |
+
+{style="table-layout:auto"}
 
 以下設定範例可讓客戶使用上表中這兩種對應。
 
@@ -87,6 +89,8 @@ ht-degree: 3%
 | XDM屬性 | 屬性/自訂屬性 |
 | 身分識別命名空間 | 屬性/自訂屬性 |
 | 身分識別命名空間 | 身分識別命名空間 |
+
+{style="table-layout:auto"}
 
 以下設定範例可讓客戶使用上表中的所有對應。
 

@@ -3,16 +3,16 @@ title: 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 type: Tutorial
 description: 瞭解如何使用LiveRamp RampID從Adobe Experience Platform啟用對象至連線的電視和音訊目的地，以及其他整合。
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 # 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 
-使用Adobe Real-Time CDP與[!DNL LiveRamp]的整合，將對象啟用至使用[[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)啟用的精選目的地清單，包括連線電視和音訊目的地，例如下列目的地。
+使用Adobe Real-Time CDP與[!DNL LiveRamp]的整合，將對象啟用至使用[!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)啟用的精選目的地清單，包括連線電視和音訊目的地，例如下列目的地。
 
 >[!IMPORTANT]
 >
@@ -62,11 +62,11 @@ ht-degree: 0%
 
 觀看以下影片，瞭解本頁面所述工作流程的端對端說明。
 
->[!VIDEO](https://video.tv.adobe.com/v/3452669?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### 步驟1：透過[!DNL LiveRamp - Onboarding]目的地，將您的對象從Experience Platform傳送至LiveRamp {#onboarding}
 
-若要將您的對象啟用至根據LiveRamp RampID策劃的目的地，您必須先將對象從Experience Platform匯出至&#x200B;**。[!DNL LiveRamp]**
+若要根據LiveRamp RampID將您的對象啟用至已組織的目的地，您必須先執行下列作業： **將對象從Experience Platform匯出至[!DNL LiveRamp]**。
 
 您可以使用&#x200B;**[!DNL LiveRamp - Onboarding]**&#x200B;目的地來執行此動作。
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 在您[驗證](../catalog/advertising/liveramp-onboarding.md#exported-data)您的對象已成功匯出至LiveRamp後，您就可以開始啟用對象至您偏好的目的地，例如[[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku)、[[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)等。
 
-您使用&#x200B;**[!DNL LiveRamp - Distribution]**&#x200B;目的地來啟用對象（已在[步驟1](#onboarding)中匯出）。
+您使用[目的地來啟用對象（已在](#onboarding)步驟1 **[!DNL LiveRamp - Distribution]**&#x200B;中匯出）。
 
 ![顯示LiveRamp — 散發目的地卡片的Experience Platform UI影像](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->在&#x200B;**[!DNL LiveRamp - Distribution]**&#x200B;目的地的&#x200B;**對象選取**&#x200B;步驟中，您必須選取您已匯出至[步驟1](#onboarding)中的[LiveRamp — 上線](../catalog/advertising/liveramp-onboarding.md)目的地的&#x200B;*完全相同的對象*。
+>在&#x200B;**目的地的**&#x200B;對象選取&#x200B;**[!DNL LiveRamp - Distribution]**&#x200B;步驟中，您必須選取您已匯出至&#x200B;*步驟1*&#x200B;中的[LiveRamp — 上線](../catalog/advertising/liveramp-onboarding.md)目的地的[完全相同的對象](#onboarding)。
 
 設定&#x200B;**[!DNL LiveRamp - Distribution]**&#x200B;目的地時，您必須針對要使用的每個下游目的地（Roku、Disney等）建立專用連線。
 

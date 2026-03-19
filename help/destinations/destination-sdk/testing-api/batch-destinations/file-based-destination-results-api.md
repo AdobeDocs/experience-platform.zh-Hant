@@ -2,10 +2,10 @@
 description: 此頁面說明如何使用/testing/destinationInstance API端點來檢視測試結果的完整詳細資訊。 此API端點傳回的結果，與使用流量服務API監控資料流時所取得的結果相同。
 title: 檢視詳細的啟用結果
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 1%
+source-wordcount: '545'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 如果您已[測試您的目的地](file-based-destination-testing-api.md)並收到有效的API回應，表示您的目的地運作正常。
 
-如果您想檢視啟動流程的詳細資訊，可以使用[目的地測試](file-based-destination-testing-api.md)端點回應中的`results`屬性，如下所述。
+如果您想檢視啟動流程的詳細資訊，可以使用`results`目的地測試[端點回應中的](file-based-destination-testing-api.md)屬性，如下所述。
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 快速入門 {#getting-started}
 
-繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 先決條件 {#prerequisites}
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 在您[驗證目的地組態](file-based-destination-testing-api.md)後，您可以對`authoring/testing/destinationInstance/`端點發出GET要求，並提供您正在測試的目的地的目的地執行個體ID，以及啟用的對象的資料流執行ID，以檢視詳細的啟用結果。
 
-您可以在目的地測試呼叫[&#128279;](file-based-destination-testing-api.md)的回應中傳回的`results`屬性中找到您需要使用的完整API URL。
+您可以在目的地測試呼叫`results`的[回應中傳回的](file-based-destination-testing-api.md)屬性中找到您需要使用的完整API URL。
 
 **API格式**
 
@@ -54,9 +54,13 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | 您要產生範例設定檔之目的地執行個體的ID。 如需如何取得此ID的詳細資訊，請參閱[必要條件](#prerequisites)一節。 |
 
-| 查詢字串引數 | 說明 |
+{style="table-layout:auto"}
+
+| 查詢字串參數 | 說明 |
 | -------- | ----------- |
-| `flowRunIds` | 與已啟動受眾對應的流量執行ID。 您可以在目的地測試呼叫[&#128279;](file-based-destination-testing-api.md)的回應中傳回的`results`屬性中找到資料流執行ID。 |
+| `flowRunIds` | 與已啟動受眾對應的流量執行ID。 您可以在目的地測試呼叫`results`的[回應中傳回的](file-based-destination-testing-api.md)屬性中找到資料流執行ID。 |
+
+{style="table-layout:auto"}
 
 **要求**
 
@@ -215,7 +219,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 閱讀本檔案後，您現在瞭解如何測試檔案型目的地設定，並檢視啟用結果的完整詳細資訊。
 

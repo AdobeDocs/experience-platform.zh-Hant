@@ -3,16 +3,16 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1070'
 ht-degree: 3%
 
 ---
 
 # [!DNL Airship Tags] 連線 {#airship-tags-destination}
 
-## 概觀
+## 概觀 {#overview}
 
 [!DNL Airship]是領先的客戶參與平台，可在客戶生命週期的每個階段協助您為使用者提供有意義、個人化的全通路訊息。
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 >
 >此目的地聯結器和檔案頁面是由[!DNL Airship]團隊建立和維護。 若有任何查詢或更新要求，請直接透過[support.airship.com](https://support.airship.com/)連絡他們。
 
-## 先決條件
+## 先決條件 {#prerequisites}
 
 在將Adobe Experience Platform對象傳送至[!DNL Airship]之前，您必須：
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 * 產生持有人權杖以進行驗證。
 
 >[!TIP]
-> 
+>
 >如果您尚未透過[!DNL Airship]此註冊連結[建立](https://go.airship.eu/accounts/register/plan/starter/)帳戶。
 
 ## 支援的對象 {#supported-audiences}
@@ -43,7 +43,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -72,7 +72,7 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-## 標籤群組
+## 標籤群組 {#tag-groups}
 
 Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https://docs.airship.com/guides/audience/tags/)，在實施上稍有差異。 此整合將使用者在Experience Platform區段[中的](../../../xdm/field-groups/profile/segmentation.md)成員資格狀態對應至[!DNL Airship]標籤是否存在或不存在。 例如，在`xdm:status`變更為`realized`的Experience Platform對象中，標籤已新增至此設定檔對應到的[!DNL Airship]頻道或具名使用者。 如果`xdm:status`變更為`exited`，標籤將會移除。
 
@@ -84,9 +84,9 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 如需建立標籤群組的指示，請參閱[管理標籤群組](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups)。
 
-## 產生持有人權杖
+## 產生持有人權杖 {#generate-bearer-token}
 
-移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[&#x200B; &quot; &#x200B;](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
+移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[ &quot; ](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
 
 按一下「**[!UICONTROL Create Token]**」。
 
@@ -94,15 +94,15 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 按一下&#x200B;**[!UICONTROL Create Token]**&#x200B;並將詳細資料儲存為機密檔案。
 
-## 使用案例
+## 使用案例 {#use-cases}
 
 為協助您更清楚瞭解您應如何及何時使用[!DNL Airship Tags]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
 
-### 使用案例#1
+### 使用案例#1 {#use-case-1}
 
 零售商或娛樂平台可建立其忠誠度客戶的使用者設定檔，並將這些對象傳遞至[!DNL Airship]，以便在行動裝置行銷活動中傳送訊息目標定位。
 
-### 使用案例#2
+### 使用案例#2 {#use-case-2}
 
 當使用者進入或退出Adobe Experience Platform中的特定對象時，即時觸發一對一訊息。
 
@@ -111,7 +111,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 ## 連線到目標 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
@@ -139,18 +139,18 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 如需啟用此目的地的對象的指示，請參閱[啟用串流對象匯出目的地的對象資料](../../ui/activate-segment-streaming-destinations.md)。
 
 ## 對應考量事項 {#mapping-considerations}
 
-[!DNL Airship]標籤可在代表裝置執行個體(例如iPhone)的頻道上設定，或可對映所有使用者裝置至共同識別碼（例如客戶ID）的具名使用者上設定。 如果您的結構描述中有純文字（未雜湊）電子郵件地址作為主要身分，請在&#x200B;**[!UICONTROL Source Attributes]**&#x200B;中選取電子郵件欄位，並將對應到[!DNL Airship]下右側欄中的&#x200B;**[!UICONTROL Target Identities]**&#x200B;具名使用者，如下所示。
+[!DNL Airship]標籤可在代表裝置執行個體（例如iPhone）的頻道上設定，或可對映所有使用者裝置至共同識別碼（例如客戶ID）的已命名使用者上設定。 如果您的結構描述中有純文字（未雜湊）電子郵件地址作為主要身分，請在&#x200B;**[!UICONTROL Source Attributes]**&#x200B;中選取電子郵件欄位，並將對應到[!DNL Airship]下右側欄中的&#x200B;**[!UICONTROL Target Identities]**&#x200B;具名使用者，如下所示。
 
 ![具名使用者對應](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-對於應對應至管道（即裝置）的識別碼，請根據來源對應至適當的管道。 下列影像說明如何將Google Advertising ID對應至[!DNL Airship] Android頻道。
+對於應該對應至管道（即裝置）的識別碼，請根據來源對應至適當的管道。 下列影像說明如何將Google Advertising ID對應至[!DNL Airship] Android頻道。
 
 ![連線到飛艇標籤](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
 ![連線到飛艇標籤](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)

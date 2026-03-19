@@ -2,10 +2,10 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK擷取目的地設定的API呼叫範例。
 title: 擷取目的地設定
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 1%
+source-wordcount: '366'
+ht-degree: 2%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 目的地設定API操作快速入門 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 擷取目的地設定 {#retrieve}
 
-您可以對`/authoring/destination`端點發出`GET`要求，以擷取[現有](create-destination-configuration.md)目的地組態。
+您可以對[端點發出](create-destination-configuration.md)要求，以擷取`GET`現有`/authoring/destination`目的地組態。
 
 >[!TIP]
 >
@@ -52,7 +52,7 @@ GET /authoring/destinations/{INSTANCE_ID}
 
 >[!TAB 擷取所有目的地組態]
 
-+++要求
++++請求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -176,7 +176,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB 擷取特定的目的地組態]
 
-+++要求
++++請求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -189,6 +189,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | 參數 | 說明 |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | 您要擷取之目的地設定的ID。 |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -308,7 +310,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 閱讀本檔案後，您現在知道如何透過Destination SDK `/authoring/destinations` API端點擷取目的地組態。
 

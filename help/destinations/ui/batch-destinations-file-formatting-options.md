@@ -2,9 +2,9 @@
 description: 瞭解在啟用以檔案為基礎的目的地資料時，如何設定檔案格式選項
 title: 設定檔案型目的地的檔案格式選項
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1189'
 ht-degree: 17%
 
 ---
@@ -12,12 +12,12 @@ ht-degree: 17%
 # 設定檔案型目的地的檔案格式選項
 
 >[!IMPORTANT]
-> 
+>
 >本檔案中說明的檔案格式選專案前僅適用於CSV檔案。
 
-當您[連線](/help/destinations/ui/connect-destination.md)至檔案型目的地(例如[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect)或[SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect))時，即可使用選項來設定匯出檔案的各種檔案格式選項。
+當您[連線](/help/destinations/ui/connect-destination.md)至檔案型目的地（例如[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect)、[Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect)或[SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect)）時，即可使用選項來設定匯出檔案的各種檔案格式選項。
 
-您可以使用Experience Platform UI為匯出的檔案設定各種檔案格式選項。 您可以修改匯出檔案的幾個屬性，以符合您這端的檔案接收系統的需求，以便以最佳方式讀取和解譯從Experience Platform接收的檔案。
+您可以使用Experience Platform UI為匯出的檔案設定各種檔案格式選項。 您可以修改匯出檔案的幾個屬性，以符合您這端的檔案接收系統的需求，以最佳方式讀取和解譯從Experience Platform接收的檔案。
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -51,15 +51,15 @@ ht-degree: 17%
 * 分號`(;)`
 * 索引標籤`(\t)`
 
-#### 範例
+#### 範例 {#delimiter-examples}
 
 檢視以下範例，瞭解UI中每個選取專案的匯出CSV檔案內容。
 
-* 已選取&#x200B;**[!UICONTROL Colon `(:)`]**&#x200B;的範例輸出： `male:John:Doe`
-* 已選取&#x200B;**[!UICONTROL Comma `(,)`]**&#x200B;的範例輸出： `male,John,Doe`
-* 已選取&#x200B;**[!UICONTROL Pipe `(|)`]**&#x200B;的範例輸出： `male|John|Doe`
-* 已選取&#x200B;**[!UICONTROL Semicolon `(;)`]**&#x200B;的範例輸出： `male;John;Doe`
-* 已選取&#x200B;**[!UICONTROL Tab `(\t)`]**&#x200B;的範例輸出： `male \t John \t Doe`
+* 已選取[!UICONTROL Colon `(:)`]的範例輸出： `male:John:Doe`
+* 已選取[!UICONTROL Comma `(,)`]的範例輸出： `male,John,Doe`
+* 已選取[!UICONTROL Pipe `(|)`]的範例輸出： `male|John|Doe`
+* 已選取[!UICONTROL Semicolon `(;)`]的範例輸出： `male;John;Doe`
+* 已選取[!UICONTROL Tab `(\t)`]的範例輸出： `male \t John \t Doe`
 
 ### 引號字元 {#quote-character}
 
@@ -72,17 +72,17 @@ ht-degree: 17%
 
 可用的選項包括：
 
-* **[!UICONTROL Null Character (\0000)]**。使用此選項可移除匯出CSV檔案中的雙引號。
-* **[!UICONTROL Double Quotes (")]**。當字串值包含分隔字元或雙引號時，請使用此選項。 此選項可協助您在匯出的CSV檔案中保留分隔符號或雙引號，以便您能夠正確識別哪個值對應到哪個欄位。
+* [!UICONTROL Null Character (\0000)]。使用此選項可移除匯出CSV檔案中的雙引號。
+* [!UICONTROL Double Quotes (")]。當字串值包含分隔字元或雙引號時，請使用此選項。 此選項可協助您在匯出的CSV檔案中保留分隔符號或雙引號，以便您能夠正確識別哪個值對應到哪個欄位。
 
-#### 範例
+#### 範例 {#quote-character-examples}
 
 考慮輸入值`Anna,"Doe,John"`。
 
 檢視以下範例，瞭解UI中每個選取專案的匯出CSV檔案內容。
 
-* 已選取&#x200B;**[!UICONTROL Null Character (\0000)]**&#x200B;的範例輸出： `Anna,Doe,John`
-* 已選取&#x200B;**[!UICONTROL Double Quotes (")]**&#x200B;的範例輸出： `Anna,"Doe,John"`
+* 已選取[!UICONTROL Null Character (\0000)]的範例輸出： `Anna,Doe,John`
+* 已選取[!UICONTROL Double Quotes (")]的範例輸出： `Anna,"Doe,John"`
 
 ### 逸出字元 {#escape-character}
 
@@ -96,12 +96,12 @@ ht-degree: 17%
 * 反斜線`(\)`
 * 單引號`(')`
 
-#### 範例
+#### 範例 {#escape-character-examples}
 
 檢視以下範例，瞭解UI中每個選取專案的匯出CSV檔案內容。
 
-* 已選取&#x200B;**[!UICONTROL Back slash `(\)`]**&#x200B;的範例輸出： `"Test,\"John\",LastName"`
-* 已選取&#x200B;**[!UICONTROL Single quote `(')`]**&#x200B;的範例輸出： `"Test,'"John'",LastName"`
+* 已選取[!UICONTROL Back slash `(\)`]的範例輸出： `"Test,\"John\",LastName"`
+* 已選取[!UICONTROL Single quote `(')`]的範例輸出： `"Test,'"John'",LastName"`
 
 ### 空值輸出 {#empty-value-output}
 
@@ -112,17 +112,17 @@ ht-degree: 17%
 
 使用此控制項來設定空值的字串表示法。 此選項會決定空值在匯出的CSV檔案中的表示方式。 可選擇下列選項：
 
-* **[!UICONTROL Null (null)]**
+* [!UICONTROL Null (null)]
 * **雙引號(&quot;)**&#x200B;中的空字串
-* **[!UICONTROL Empty string]**
+* [!UICONTROL Empty string]
 
-#### 範例
+#### 範例 {#empty-value-examples}
 
 檢視以下範例，瞭解UI中每個選取專案的匯出CSV檔案內容。
 
-* 已選取&#x200B;**[!UICONTROL null]**&#x200B;的範例輸出： `male,NULL,TestLastName`。 在此案例中，Experience Platform會將空白值轉換為null值。
+* 已選取[!UICONTROL null]的範例輸出： `male,NULL,TestLastName`。 在此案例中，Experience Platform會將空白值轉換為null值。
 * 已選取&#x200B;**&quot;**&#x200B;的範例輸出： `male,"",TestLastName`。 在此案例中，Experience Platform會將空白值轉換為一對雙引號。
-* 已選取&#x200B;**[!UICONTROL Empty string]**&#x200B;的範例輸出： `male,,TestLastName`。 在此情況下，Experience Platform會維護空白值並依原樣匯出（不含雙引號）。
+* 已選取[!UICONTROL Empty string]的範例輸出： `male,,TestLastName`。 在此情況下，Experience Platform會維護空白值並依原樣匯出（不含雙引號）。
 
 >[!TIP]
 >
@@ -137,17 +137,17 @@ ht-degree: 17%
 
 使用此控制項在匯出的檔案中設定 Null 值的字串表示方式。此選項會決定Null值在匯出的CSV檔案中的表示方式。 可選擇下列選項：
 
-* **[!UICONTROL Null (null)]**
+* [!UICONTROL Null (null)]
 * **雙引號(&quot;)**&#x200B;中的空字串
-* **[!UICONTROL Empty string]**
+* [!UICONTROL Empty string]
 
-#### 範例
+#### 範例 {#null-value-examples}
 
 檢視以下範例，瞭解UI中每個選取專案的匯出CSV檔案內容。
 
-* 已選取&#x200B;**[!UICONTROL null]**&#x200B;的範例輸出： `male,NULL,TestLastName`。 在這種情況下，不會發生轉換，且CSV檔案包含null值。
+* 已選取[!UICONTROL null]的範例輸出： `male,NULL,TestLastName`。 在這種情況下，不會發生轉換，且CSV檔案包含null值。
 * 已選取&#x200B;**&quot;**&#x200B;的範例輸出： `male,"",TestLastName`。 在此案例中，Experience Platform會在空字串周圍以雙引號取代null值。
-* 已選取&#x200B;**[!UICONTROL Empty string]**&#x200B;的範例輸出： `male,,TestLastName`。 在這種情況下，Experience Platform會以空字串取代null值（不含雙引號）。
+* 已選取[!UICONTROL Empty string]的範例輸出： `male,,TestLastName`。 在這種情況下，Experience Platform會以空字串取代null值（不含雙引號）。
 
 ### 壓縮格式 {#compression-format}
 
@@ -158,33 +158,33 @@ ht-degree: 17%
 
 設定將資料儲存到檔案時要使用的壓縮類型。支援的選項為 GZIP 和 NONE。此選項會決定是否匯出壓縮檔案。
 
-### 編碼
+### 編碼 {#encoding}
 
 *未顯示在UI熒幕擷圖中*。 指定已儲存CSV檔案的編碼（字元集）。 選項為UTF-8或UTF-16。
 
-### 用於逸出引號的字元
+### 用於逸出引號的字元 {#char-to-escape-quote}
 
 *未顯示在UI熒幕擷圖中*。 此旗標可指出是否一律將包含引號的值括在引號中。
 
 預設為逸出包含引號字元的所有值。
 
-### 行分隔符號
+### 行分隔符號 {#line-separator}
 
 *未顯示在UI熒幕擷圖中*。 定義用於寫入的線分隔符號。 長度上限為1個字元。
 
-### 忽略前導空白字元
+### 忽略前導空白字元 {#ignore-leading-whitespace}
 
 *未顯示在UI熒幕擷圖中*。 此旗標可指出是否應該略過匯出值的前導空格。
 
-已選取&#x200B;**[!UICONTROL True]**&#x200B;的範例輸出： `"male","John","TestLastName"`
-已選取&#x200B;**[!UICONTROL False]**&#x200B;的範例輸出： `" male","John","TestLastName"`
+已選取[!UICONTROL True]的範例輸出： `"male","John","TestLastName"`
+已選取[!UICONTROL False]的範例輸出： `" male","John","TestLastName"`
 
-### 忽略結尾的空白字元
+### 忽略結尾的空白字元 {#ignore-trailing-whitespace}
 
 未顯示在UI熒幕擷圖中。 此旗標可指出是否應該略過匯出值的尾端空格。
 
-已選取&#x200B;**[!UICONTROL True]**&#x200B;的範例輸出： `"male","John","TestLastName"`
-已選取&#x200B;**[!UICONTROL False]**&#x200B;的範例輸出： `"male ","John","TestLastName"`
+已選取[!UICONTROL True]的範例輸出： `"male","John","TestLastName"`
+已選取[!UICONTROL False]的範例輸出： `"male ","John","TestLastName"`
 
 ### 後續步驟 {#next-steps}
 

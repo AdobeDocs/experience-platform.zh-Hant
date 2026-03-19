@@ -3,9 +3,9 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 >當[使用資料流ID設定Adobe Target連線](../catalog/personalization/adobe-target-connection.md) *而非*&#x200B;時，不支援本文中所述的使用案例。 在沒有資料流的情況下，僅支援下一次工作階段個人化使用案例。
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料並啟用工作流程的[對應步驟](#mapping)，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。
 >* 若要在不執行工作流程的[對應步驟](#mapping)的情況下啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
@@ -39,21 +39,21 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 >
 >Experience Platform使用者介面經常更新，自從錄製此影片後，可能已經變更。 如需最新資訊，請參閱以下章節所述的設定步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3449804/?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 如需如何將對象和設定檔屬性共用至Adobe Target和自訂個人化目的地的簡短概觀，請觀看以下影片。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447366/?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## 使用案例 {#use-cases}
 
-使用Adobe個人化解決方案(例如Adobe Target)或您自己的個人化合作夥伴平台（例如，[!DNL Optimizely]、[!DNL Pega]），以及專屬系統(例如內部CMS)，透過[自訂Personalization](../catalog/personalization/custom-personalization.md)目的地提供更深入的客戶個人化體驗。 同時利用Experience Platform Edge Network資料收集和細分功能。
+使用Adobe個人化解決方案（例如Adobe Target）或您自己的個人化合作夥伴平台（例如，[!DNL Optimizely]、[!DNL Pega]），以及專屬系統（例如內部CMS），透過[自訂Personalization](../catalog/personalization/custom-personalization.md)目的地提供更深入的客戶個人化體驗。 同時利用Experience Platform Edge Network資料收集和細分功能。
 
 下述使用案例包含網站個人化及鎖定網站上的目標廣告。
 
 若要啟用這些使用案例，客戶需要以快速、簡化的方式從Experience Platform擷取對象和設定檔屬性資訊，並將此資訊傳送至Experience Platform UI中的[Adobe Target](../catalog/personalization/adobe-target-connection.md)或[自訂Personalization](../catalog/personalization/custom-personalization.md)連線。
 
-### 相同頁面個人化 {#same-page}
+### 同一頁面的個人化 {#same-page}
 
 使用者造訪您網站的頁面。 您可以使用目前的頁面瀏覽資訊（例如反向連結URL、瀏覽器語言、內嵌的產品資訊），針對非Adobe平台（例如，[、](../catalog/personalization/custom-personalization.md)或其他）使用[!DNL Pega]自訂個人化[!DNL Optimizely]連線，來選取下一個動作或決定（例如個人化）。
 
@@ -61,7 +61,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 使用者造訪您網站上的頁面A。 根據此互動，使用者已符合一組對象的資格。 接著，使用者按一下連結，系統就會將使用者從頁面A帶往頁面B。使用者在頁面A上先前互動期間符合資格的對象，以及目前網站造訪決定的設定檔更新，將用於支援下一個動作或決定（例如，要向訪客顯示的廣告橫幅，或在A/B測試的情況下，要顯示的頁面版本）。
 
-### 下一次工作階段個人化 {#next-session}
+### 下一個工作階段的個人化 {#next-session}
 
 使用者造訪您網站上的數個頁面。 根據這些互動，使用者已符合一組對象的資格。 然後，使用者會終止目前的瀏覽工作階段。
 
@@ -192,7 +192,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 選取&#x200B;**[!UICONTROL Next]**&#x200B;以移至[!UICONTROL Review]頁面。
 
-## 審閱 {#review}
+## 檢閱 {#review}
 
 在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到選取範圍的摘要。 選取&#x200B;**[!UICONTROL Cancel]**&#x200B;以中斷流程，**[!UICONTROL Back]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 

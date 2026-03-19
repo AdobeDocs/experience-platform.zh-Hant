@@ -3,9 +3,9 @@ title: Pega設定檔聯結器
 description: 使用Adobe Experience Platform中Amazon S3的Pega設定檔聯結器將完整或增量（或兩者）設定檔資料匯出至Amazon S3雲端儲存空間。 在Pega客戶決策中心，資料工作可在客戶設定檔Designer中排程，以定期從Amazon S3儲存空間匯入設定檔資料。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1255'
 ht-degree: 4%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->此目的地聯結器和檔案頁面是由Pegasystems建立和維護的。 若有任何查詢或更新要求，請直接連絡Pega [這裡](mailto:support@pega.com)。
+>此目的地聯結器和檔案頁面是由Pegasystems建立和維護的。 如有任何查詢或更新要求，請直接連絡Pega [這裡](mailto:support@pega.com)。
 
-## 使用案例
+## 使用案例 {#use-cases}
 
 為協助您更清楚瞭解您應如何及何時使用[!DNL Pega Profile Connector]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
 
-### 使用案例1
+### 使用案例1 {#use-case-1}
 
 行銷人員最初想要以從Adobe Experience Platform載入的設定檔資料設定[!DNL Pega Customer Decision Hub]。 這是初始完整載入，之後依排程進行差異載入。
 
-### 使用案例2
+### 使用案例2 {#use-case-2}
 
 行銷人員想要從[!DNL Pega Customer Decision Hub]中可用的Adobe Experience Platform取得最新的設定檔資料，以便持續增強有關客戶設定檔的Pega深入分析。
 
@@ -60,7 +60,7 @@ ht-degree: 4%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ ht-degree: 4%
 ## 連線到目標 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
@@ -130,7 +130,7 @@ ht-degree: 4%
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 

@@ -1,11 +1,11 @@
 ---
 title: Google Customer Match +顯示器和視訊360連線
-description: 透過Google Customer Match + Display & Video 360目的地聯結器，您可以使用Experience Platform的線上和離線資料，透過Google所擁有和營運的屬性(例如搜尋、購物、Gmail和YouTube)聯絡並重新與客戶互動。
-badge: 有限可用性
+description: 透過Google Customer Match + Display & Video 360目的地聯結器，您可以使用Experience Platform的線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物、Gmail和YouTube）聯絡並重新與客戶互動。
+badge: label="有限可用性" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2479'
+source-wordcount: '2475'
 ht-degree: 5%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 5%
 >
 >**Google Customer Match + Display &amp; Video 360聯結器可用性有限**<br>&#x200B;隨著我們與Google整合的整個成熟度生命週期，我們看到資料指出實作中的弱點，需要修正才能更廣泛地採用。 基於這些考量，Adobe已將此目的地的可見度降低為有限數量的客戶。 我們正在與Google進行主動式對話，以改善產品體驗。 我們明白這可能是一個令人失望的消息，但我們相信這是確保客戶獲得高品質、可靠體驗的負責任方法。</br>
 
-使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail]&#x200B;[!DNL Google Display Network]清單。
+使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail][!DNL Google Display Network]清單。
 
-某些Google整合的第三方(例如Adobe Real-Time CDP)可以使用[!DNL Google Audience Partner API]直接在客戶的[!DNL Customer Match]帳戶中建立[!DNL Display & Video 360]對象。
+某些Google整合的第三方（例如Adobe Real-Time CDP）可以使用[!DNL Google Audience Partner API]直接在客戶的[!DNL Customer Match]帳戶中建立[!DNL Display & Video 360]對象。
 
 透過新推出的能夠利用[!DNL Customer Matched]中的[!DNL Display & Video 360]個對象的功能，您現在能夠鎖定擴充的詳細目錄來源名冊中的對象。
 
 ![Google Customer Match + Adobe Experience Platform UI中的DV360目的地。](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
-## 與歐盟更新同意要求有關的Google目的地變更的重要通知
+## 與歐盟更新同意要求有關的Google目的地變更的重要通知 {#eu-consent-notice}
 
 >[!IMPORTANT]
 >
@@ -34,9 +34,9 @@ ht-degree: 5%
 ><br/>
 >已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
 ><br/>
->未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，篩選出未同意的設定檔，才能繼續使用現有的Real-Time CDP Google目的地而不中斷。
+>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，以篩選出未同意的設定檔，繼續使用現有的Real-Time CDP Google目的地而不中斷。
 
-## 使用此目的地的時間
+## 使用此目的地的時間 {#when-to-use}
 
 目的地目錄中有數個與Google的整合，因此可能很難瞭解何時使用每個可用的Google目的地。 閱讀下表中的資訊，瞭解不同的使用案例：
 
@@ -48,11 +48,11 @@ ht-degree: 5%
 
 為協助您更清楚瞭解如何及何時使用此目的地，以下是Adobe Experience Platform客戶可以使用此功能解決的範例使用案例。
 
-### 使用案例#1
+### 使用案例#1 {#use-case-1}
 
 運動服裝品牌想要透過[!DNL Google Search]和[!DNL Google Shopping]觸及現有客戶，以根據他們過去的購買和瀏覽記錄來個人化優惠和專案。 服飾品牌可以從他們自己的CRM擷取電子郵件地址到Experience Platform，並從他們自己的離線資料建立受眾。 接著，他們可以傳送這些對象至[!DNL Google Customer Match + Display & Video 360]目的地，以用於[!DNL Google Display & Video 360]屬性，例如[!DNL Search]、[!DNL YouTube]、[!DNL Gmail]和[!DNL Google Display Network]。
 
-### 使用案例#2
+### 使用案例#2 {#use-case-2}
 
 一家知名科技公司已推出新手機。 為了推廣此新款手機，他們想要讓擁有舊款手機的客戶進一步瞭解手機的新功能和特性。
 
@@ -78,7 +78,7 @@ ht-degree: 5%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -109,7 +109,7 @@ ht-degree: 5%
 
 ## [!DNL Google Customer Match]帳戶必要條件 {#google-account-prerequisites}
 
-在Experience Platform中設定[!DNL Google Customer Match]目的地之前，請確定您已閱讀並遵守Google有關使用[!DNL Customer Match]的原則(如[Google支援檔案](https://support.google.com/google-ads/answer/6299717)中所述)。
+在Experience Platform中設定[!DNL Google Customer Match]目的地之前，請確定您已閱讀並遵守Google有關使用[!DNL Customer Match]的原則（如[Google支援檔案](https://support.google.com/google-ads/answer/6299717)中所述）。
 
 接下來，確定您的[!DNL Google]帳戶已設定為[!DNL Standard]或更高的許可權等級。 如需詳細資訊，請參閱[Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1)。
 
@@ -190,7 +190,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 連線到目標 {#connect}
 
@@ -200,7 +200,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >abstract="請確定在此處輸入的 Google 帳戶 ID 已經連結到您的 Adobe 帳戶。如果您擁有一個包含多個用戶端帳戶的 Google 管理員帳戶，且想要從 Experience Platform 將資料匯出到特定的用戶端帳戶，則必須將該用戶端帳戶連結至您的 Adobe 帳戶，並在此輸入帳戶 ID。"
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。
@@ -225,7 +225,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要將&#x200B;*身分*&#x200B;匯出至目的地，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](../../assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
@@ -271,7 +271,7 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 
 完成啟動流程後，切換至您的&#x200B;**[!UICONTROL Google Ads]**&#x200B;帳戶。 啟用的對象會在您的Google帳戶中顯示為客戶清單。 根據您的對象規模，除非有1000多位活躍使用者可服務，否則部分對象不會填入。 在[Google對象合作夥伴檔案](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list)中尋找進一步資訊。 請注意，您需要向Google詢問連結中檔案的存取權。
 
-## 資料治理
+## 資料治理 {#data-governance}
 
 Experience Platform中的某些目的地對於傳送到目的地平台或從目的地平台接收的資料具有某些規則和義務。 您有責任瞭解您資料的限制與義務，以及如何在Adobe Experience Platform和目的地平台中使用該資料。 Adobe Experience Platform提供資料治理工具，協助您管理其中一些資料使用義務。 [進一步瞭解](../../../data-governance/labels/overview.md)資料治理工具和原則。
 

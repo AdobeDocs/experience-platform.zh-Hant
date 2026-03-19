@@ -2,7 +2,7 @@
 title: Marketo Engage連線
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商業的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化並管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1875'
 ht-degree: 2%
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 ## 先決條件 {#prerequisites}
 
-* 設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
+* 設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
 * 設定此目的地時，將只能使用相同Adobe Real-Time CDP組織上的Marketo Engage執行個體。
 * 只有在Adobe Admin Console中管理使用者的Marketo Engage執行個體才能使用此目的地。
 
@@ -66,7 +66,7 @@ ht-degree: 2%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> <br> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> <br> |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo deduplication field]**
 
 {style="table-layout:auto"}
 
-### 重要考量
+### 重要考量 {#important-considerations}
 
 * **重複資料刪除欄位選擇**：選擇在您的客戶設定檔中一致可用且唯一的欄位（例如：電子郵件地址、客戶識別碼）
 * **磁碟分割處理**：建立新的潛在客戶時，會將它們放置在選取的磁碟分割中（或者，如果未選取磁碟分割，則將&#x200B;**[!UICONTROL Default]**&#x200B;磁碟分割）
@@ -118,7 +118,7 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo deduplication field]**
 ## 連線到目標 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。
 >
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
@@ -145,8 +145,8 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo deduplication field]**
    * **[!UICONTROL Audience and profile]**：當您想要將對象成員新增至Marketo清單，並讓其設定檔資訊保持最新時，請選取此選項。
    * **[!UICONTROL Profile only]**：當您想要讓Marketo銷售機會設定檔與Experience Platform的最新資訊保持最新狀態時，請選取此選項。
    * **[!UICONTROL Audience only]**：當您想要將對象成員新增至Marketo清單，但不更新其設定檔資訊時，請選取此選項。
-* **[!UICONTROL Partition]**： *只有在選擇&#x200B;**[!UICONTROL Profile only]**&#x200B;或&#x200B;**[!UICONTROL Audience and profile]**&#x200B;同步處理型別*&#x200B;時，才能選擇磁碟分割。 選取與您所選工作區相關聯的Marketo分割區ID。 這可讓您指定Marketo中的哪個銷售機會分割區會接收匯出的資料。 如果您未選擇特定的資料分割，您的資料將會傳送到Marketo中的&#x200B;**[!UICONTROL Default]**&#x200B;資料分割。
-* **[!UICONTROL Marketo deduplication field]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/zh-hant/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
+* **[!UICONTROL Partition]**： *只有在選擇&#x200B;**[!UICONTROL Profile only]**或&#x200B;**[!UICONTROL Audience and profile]**同步處理型別*&#x200B;時，才能選擇磁碟分割。 選取與您所選工作區相關聯的Marketo分割區ID。 這可讓您指定Marketo中的哪個銷售機會分割區會接收匯出的資料。 如果您未選擇特定的資料分割，您的資料將會傳送到Marketo中的&#x200B;**[!UICONTROL Default]**&#x200B;資料分割。
+* **[!UICONTROL Marketo deduplication field]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
 
   >[!NOTE]
   >
@@ -165,7 +165,7 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo deduplication field]**
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 

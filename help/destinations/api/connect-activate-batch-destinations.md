@@ -5,17 +5,17 @@ title: 使用流程服務API連線到批次目的地並啟用資料
 description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地，並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3435'
-ht-degree: 4%
+source-wordcount: '3431'
+ht-degree: 3%
 
 ---
 
 # 連線至檔案式電子郵件行銷目的地，並使用流量服務API啟用資料
 
 >[!IMPORTANT]
-> 
+>
 >* 若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。
 >
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。
@@ -27,7 +27,7 @@ ht-degree: 4%
 此教學課程示範如何使用流程服務API來建立檔案式[電子郵件行銷目的地](../catalog/email-marketing/overview.md)、建立資料流到您新建立的目的地，以及透過CSV檔案將資料匯出到您新建立的目的地。
 
 >[!TIP]
-> 
+>
 >若要瞭解如何使用Flow Service API啟用雲端儲存空間目的地的資料，請閱讀[專用API教學課程](/help/destinations/api/activate-segments-file-based-destinations.md)。
 
 本教學課程在所有範例中都使用[!DNL Adobe Campaign]目的地，但檔案式電子郵件行銷目的地的步驟相同。
@@ -44,7 +44,7 @@ ht-degree: 4%
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Adobe Experience Platform]資料在[!DNL Real-Time Customer Profile]中建立對象。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-以下小節提供您需要瞭解的其他資訊，以便在Experience Platform中啟用批次目的地的資料。
+以下小節提供在Experience Platform中啟用批次目的地的資料所需瞭解的其他資訊。
 
 ### 收集必要的認證 {#gather-required-credentials}
 
@@ -65,7 +65,7 @@ ht-degree: 4%
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
-為了對 [!DNL Experience Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人`{ACCESS_TOKEN}`
 * x-api-key： `{API_KEY}`
@@ -144,7 +144,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 1. 首先，您必須透過設定基礎連線，執行呼叫以授權存取[!DNL Experience Platform]中的資料。
 2. 然後，使用基本連線ID執行另一個呼叫，您會在其中建立&#x200B;*來源連線*，以建立與您[!DNL Experience Platform]資料的連線。
 
-### 在[!DNL Experience Platform]中授權存取您的資料
+### 在[!DNL Experience Platform]中授權存取您的資料 {#authorize-access-experience-platform}
 
 **API格式**
 
@@ -551,7 +551,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 [!DNL Adobe Experience Platform]以[!DNL CSV]個檔案的形式，匯出批次電子郵件行銷和雲端儲存目的地的資料。 在此步驟中，您可以決定要匯出檔案之儲存位置的路徑。
 
 >[!IMPORTANT]
-> 
+>
 >[!DNL Adobe Experience Platform]會自動分割匯出檔案，每個檔案為500萬筆記錄（列）。 每一列代表一個設定檔。
 >
 >分割檔案名稱會附加一個數字，表示檔案是較大匯出的一部分，例如： `filename.csv`、`filename_2.csv`、`filename_3.csv`。
@@ -1054,8 +1054,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
 | `frequency` | 強制。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`、`DAILY`、`WEEKLY`或`MONTHLY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |
 | `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`"DAILY_FULL_EXPORT"`選取器中選取`frequency`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日Experience Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新狀態，端視批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
-| `endDate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>在選取`"exportMode":"DAILY_FULL_EXPORT"`和`"frequency":"ONCE"`時不適用。 <br>設定對象成員停止匯出至目的地的日期。 |
-| `startTime` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
+| `endDate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地（如Amazon S3、SFTP或Azure Blob）中將對象新增至資料流時，才需要此欄位。 <br>在選取`"exportMode":"DAILY_FULL_EXPORT"`和`"frequency":"ONCE"`時不適用。 <br>設定對象成員停止匯出至目的地的日期。 |
+| `startTime` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地（如Amazon S3、SFTP或Azure Blob）中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
 
 {style="table-layout:auto"}
 

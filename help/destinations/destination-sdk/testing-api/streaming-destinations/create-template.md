@@ -2,7 +2,7 @@
 description: 瞭解如何使用目的地測試API，在發佈目的地之前先測試串流目的地訊息轉換範本。
 title: 建立及測試訊息轉換範本
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -18,17 +18,17 @@ ht-degree: 0%
 
 若要&#x200B;**在Adobe Experience Platform中的目標結構描述與目的地支援的訊息格式之間，建立並測試訊息轉換範本**，請使用&#x200B;*範本撰寫工具*，如下所述。  在[訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating)中，閱讀有關來源和目標結構描述之間資料轉換的詳細資訊。
 
-以下說明如何建立和測試訊息轉換範本符合Destination SDK中的[目的地設定工作流程](../../guides/configure-destination-instructions.md)：
+以下說明如何建立和測試訊息轉換範本以符合Destination SDK中的[目的地設定工作流程](../../guides/configure-destination-instructions.md)：
 
 ![建立範本步驟適合目的地設定工作流程的圖形](../../assets/testing-api/create-template-step.png)
 
 ## 為何需要建立和測試訊息轉換範本 {#why-create-message-transformation-template}
 
-在Destination SDK中建立目的地的首要步驟之一，就是考慮將對象會籍、身分和設定檔屬性的資料格式從Adobe Experience Platform匯出至目的地時，如何進行轉換。 在[訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating)中尋找有關AdobeXDM結構描述和目的地結構描述之間轉換的資訊。
+在Destination SDK中建立目的地的首要步驟之一，就是考慮將對象會籍、身分和設定檔屬性的資料格式從Adobe Experience Platform匯出至目的地時，如何進行轉換。 在[訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating)中尋找有關Adobe XDM結構描述和目的地結構描述之間轉換的資訊。
 
 若要轉換成功，您必須提供轉換範本，類似於此範例： [建立傳送區段、身分和設定檔屬性的範本](../../functionality/destination-server/message-format.md#segments-identities-attributes)。
 
-Adobe提供範本工具，可讓您建立並測試訊息範本，將資料從AdobeXDM格式轉換為目的地支援的格式。 此工具有兩個API端點可供您使用：
+Adobe提供範本工具，可讓您建立和測試訊息範本，將資料從Adobe XDM格式轉換為目的地支援的格式。 此工具有兩個API端點可供您使用：
 
 * 使用&#x200B;*範例範本API*&#x200B;取得範例範本。
 * 使用&#x200B;*轉譯範本API*&#x200B;來轉譯範例範本，讓您可以比較結果與目的地預期的資料格式。 將匯出的資料與目的地預期的資料格式進行比較後，您可以編輯範本。 如此一來，您產生的匯出資料就會符合目的地預期的資料格式。
@@ -167,6 +167,6 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 編輯範本並呼叫轉譯器範本API端點，直到匯出的設定檔符合您目的地的預期資料格式為止。
 
-## 將您的字元逸出範本新增至目的地伺服器設定
+## 將您的字元逸出範本新增至目的地伺服器設定 {#add-template-to-server-config}
 
-在您滿意訊息轉換範本後，請在`httpTemplate.requestBody.value`中將它新增至您的[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)。
+在您滿意訊息轉換範本後，請在[中將它新增至您的](../../authoring-api/destination-server/create-destination-server.md)目的地伺服器組態`httpTemplate.requestBody.value`。

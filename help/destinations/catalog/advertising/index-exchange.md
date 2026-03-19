@@ -3,10 +3,10 @@ title: 索引交換
 description: 連線至Index Exchange （索引）並啟用您的資料，以便在索引UI中建立的交易鎖定您的對象區段。
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1215'
+ht-degree: 3%
 
 ---
 
@@ -44,7 +44,9 @@ ht-degree: 2%
 
 [!DNL Index]支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-請注意，[!DNL Index Exchange]目的地每個上載僅支援一個身分型別。 設定目的地詳細資料時，您必須指定適當的識別碼型別（請參閱下面的[「填寫目的地詳細資料」](#destination-details)區段）。
+>[!NOTE]
+>
+>[!DNL Index Exchange]目的地每個上載僅支援一個身分型別。 設定目的地詳細資料時，您必須指定適當的識別碼型別（請參閱下面的[「填寫目的地詳細資料」](#destination-details)區段）。
 
 若要上傳多個身分型別，請為每個身分型別分別建立[!DNL Index Exchange]目的地的執行個體。
 
@@ -64,7 +66,7 @@ ht-degree: 2%
 | 對象來源 | 支援 | 說明 |
 | --------- | ---------- | ---------- |
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -96,7 +98,7 @@ ht-degree: 2%
 ## 連線到目標 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
@@ -112,7 +114,7 @@ ht-degree: 2%
 * [!UICONTROL Identifier Type]：選取索引提供的識別碼型別，以符合您要傳送給[!DNL Index]的識別碼。 請參閱下表列出支援的識別碼型別。 如果您不確定要使用哪個識別碼型別，請連絡您的[!DNL Index]代表。 若要傳送多個識別碼型別，請為此目的地建立個別的執行個體。
 * [!UICONTROL Account ID]：輸入您的[!DNL Index]帳戶識別碼。 這與您的發佈者ID不同。 如果您不確定要使用哪個ID，請聯絡您的[!DNL Index]代表。
 
-#### 支援的識別碼型別
+#### 支援的識別碼型別 {#supported-identifier-types}
 
 | 識別碼型別 | 說明 |
 |------------------ | ------------- |
@@ -129,12 +131,12 @@ ht-degree: 2%
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警示以接收有關您資料流到此目的地的狀態通知。 從清單中選取一或多個警報，以訂閱資料流的狀態通知。 如需詳細資訊，請參閱[使用UI訂閱目的地警示指南](../../ui/alerts.md)。
-當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
+當您完成提供目的地連線的詳細資訊時，請選取**[!UICONTROL Next]**。
 
-## 啟用此目的地的區段 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 

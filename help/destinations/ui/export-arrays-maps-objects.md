@@ -3,7 +3,7 @@ title: 從Real-Time CDP匯出陣列、地圖和物件
 type: Tutorial
 description: 瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至雲端儲存空間目標。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 13%
@@ -25,16 +25,16 @@ ht-degree: 13%
 |---|---|
 | Adobe編寫的雲端儲存空間目標(Amazon S3、Azure Blob、Azure Data Lake Storage Gen2、Data Landing Zone、Google Cloud Storage、SFTP) | 可以，在設定目的地連線時，啟用陣列、地圖和物件的匯出切換功能會開啟。 |
 | 檔案式電子郵件行銷目的地(Adobe Campaign、Oracle Eloqua、Oracle Responsys、Salesforce Marketing Cloud) | 無 |
-| 現有自訂合作夥伴建置的雲端儲存空間目的地(透過Destination SDK建置的自訂檔案型目的地) | 無 |
-| 企業目的地(Amazon Kinesis、Azure事件中樞、HTTP API) | 部分。 您可以在啟動工作流程的對應步驟中選取和匯出對應型別物件。 |
-| 串流目的地(例如：Facebook、Braze、Google Customer Match等) | 無 |
+| 現有自訂合作夥伴建置的雲端儲存空間目的地（透過Destination SDK建置的自訂檔案型目的地） | 無 |
+| 企業目的地（Amazon Kinesis、Azure事件中樞、HTTP API） | 部分。 您可以在啟動工作流程的對應步驟中選取和匯出對應型別物件。 |
+| 串流目的地（例如：Facebook、Braze、Google Customer Match等） | 無 |
 | Edge個人化目的地 | 無 |
 
 {style="table-layout:auto"}
 
 請考量此頁面，您可以前往想瞭解如何從Experience Platform匯出陣列、地圖和其他物件型別的任何位置。
 
-## 底線在前面
+## 底線在前面 {#bottom-line}
 
 取得本節中有關功能的最重要資訊，然後繼續參閱檔案中的其他章節，以取得詳細資訊。
 

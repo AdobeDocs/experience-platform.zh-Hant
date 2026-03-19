@@ -2,9 +2,9 @@
 description: 此頁面是透過Adobe Experience Platform Destination SDK更新現有認證設定的API呼叫範例。
 title: 更新認證設定
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '608'
 ht-degree: 7%
 
 ---
@@ -31,11 +31,11 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 認證API操作快速入門 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 更新認證設定 {#update}
 
@@ -199,7 +199,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
 | `url` | 字串 | 授權提供者的URL |
-| `tenant` | 字串 | Azure Data Lake Storage租使用者 |
+| `tenant` | 字串 | Azure Data Lake儲存租使用者 |
 | `servicePrincipalId` | 字串 | [!DNL Azure Service Principal]的[!DNL Azure Data Lake Storage] ID |
 | `servicePrincipalKey` | 字串 | [!DNL Azure Service Principal Key]的[!DNL Azure Data Lake Storage] |
 

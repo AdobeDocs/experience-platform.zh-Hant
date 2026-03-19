@@ -5,10 +5,10 @@ title: 使用流程服務API刪除目的地帳戶
 type: Tutorial
 description: 瞭解如何使用流量服務API刪除目的地帳戶。
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 21%
+source-wordcount: '758'
+ht-degree: 19%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 21%
 * [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 * [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功刪除目的地帳戶。
+下列章節提供使用[!DNL Flow Service] API成功刪除目的地帳戶所需瞭解的其他資訊。
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
@@ -39,7 +39,7 @@ ht-degree: 21%
 
 ### 收集所需標頭的值 {#gather-values-for-required-headers}
 
-為了對 [!DNL Experience Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -87,6 +87,8 @@ GET /connections/{CONNECTION_ID}
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -147,7 +149,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >在刪除目的地帳戶之前，您必須刪除任何傳送到目的地帳戶的現有資料流。
->&#x200B;>若要刪除現有的資料流，請參閱以下頁面：
+>若要刪除現有的資料流，請參閱以下頁面：
 >
 >* [使用Experience Platform UI](../ui/delete-destinations.md)刪除現有的資料流；
 >* [使用流程服務API](delete-destination-dataflow.md)刪除現有的資料流。
@@ -183,6 +185,6 @@ curl -X DELETE \
 
 本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors)。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 依照此教學課程，您已成功使用[!DNL Flow Service] API刪除現有的目的地帳戶。 如需使用目的地的詳細資訊，請參閱[目的地概觀](/help/destinations/home.md)。

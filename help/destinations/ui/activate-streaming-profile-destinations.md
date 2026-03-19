@@ -4,7 +4,7 @@ type: Tutorial
 description: 瞭解如何透過將受眾傳送至串流設定檔型目的地，以啟用您在Adobe Experience Platform中的受眾資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # 啟用受眾以串流設定檔匯出目的地
 
 >[!IMPORTANT]
-> 
+>
 > * 若要啟用資料並啟用工作流程的[對應步驟](#mapping)，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。
 > * 若要在不執行工作流程的[對應步驟](#mapping)的情況下啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Segment without Mapping]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。
 > 
@@ -95,7 +95,7 @@ ht-degree: 1%
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-匯出至三個企業目的地(Amazon Kinesis、Azure事件中樞和HTTP API)時，目前不支援[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
+[目前不支援將同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)匯出到三個企業目的地：Amazon Kinesis、Azure事件中樞和HTTP API。
 
 這表示未同意成為目標&#x200B;*的設定檔會包含在匯出到這三個目的地的內容中*。
 

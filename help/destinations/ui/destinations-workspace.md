@@ -3,9 +3,9 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2150'
+source-wordcount: '2162'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ ht-degree: 0%
 > ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 > 
 > * 選取`...`欄中的省略符號([!UICONTROL Name])，並使用![啟用對象控制項](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]**&#x200B;控制項將對象或資料集匯出至該目的地。
-> * 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯目的地控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
+> * 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯目的地控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
 > * 在`...`欄中選取省略符號([!UICONTROL Name])，並使用![編輯行銷動作控制項](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]**&#x200B;控制項以[變更所選目的地的行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。
 > * 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![刪除控制項](/help/images/icons/delete.png) **[!UICONTROL Delete]**&#x200B;控制項來[移除](delete-destinations.md)與目的地的現有連線。
 > * 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]**&#x200B;控制項，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
@@ -108,6 +108,8 @@ ht-degree: 0%
 | [!UICONTROL Access labels] | 顯示已新增至此目的地資料流的任何存取標籤。 深入瞭解[將存取標籤套用至目的地資料流](/help/access-control/abac/apply-access-labels-destinations.md)。 |
 | [!UICONTROL Tags] | 顯示已新增至此目的地資料流的任何標籤。 使用標籤來組織和分類您的資料流，以方便管理。 |
 
+{style="table-layout:auto"}
+
 按一下目的地列，即可在右側欄中顯示目的地的詳細資訊，例如目的地ID、說明、啟用的對象數量等。
 
 ![按一下目的地列](../assets/ui/workspace/click-destination-row.png)
@@ -130,7 +132,7 @@ ht-degree: 0%
 
 ![瀏覽標籤中的目的地篩選器](../assets/ui/workspace/destination-filters.png)
 
-* **[!UICONTROL Destination platform]**：依特定目的地平台（例如[!DNL Amazon S3]、[!DNL Facebook Custom Audience]、[!DNL LinkedIn Matched Audience]等）篩選資料流程。 您可以同時選取多個平台。
+* **[!UICONTROL Destination platform]**：依特定目的地平台（例如，[!DNL Amazon S3]、[!DNL Facebook Custom Audience]、[!DNL LinkedIn Matched Audience]等）篩選資料流程。 您可以同時選取多個平台。
 * **[!UICONTROL Has any tag]**：篩選已指派特定標籤的資料流。 這可幫助您根據自訂標籤來組織和尋找資料流。
 * **[!UICONTROL Status]**：依資料流的作業狀態篩選資料流：
    * **[!UICONTROL Enabled]**：僅顯示作用中的資料流
@@ -154,7 +156,7 @@ ht-degree: 0%
 您可以：
 
 * 檢視所有目前作用中的篩選器
-* 按一下每個篩選器標籤上的`X`圖示，移除個別的篩選器
+* 選取每個篩選器標籤上的`X`圖示，移除個別的篩選器
 * 使用&#x200B;**[!UICONTROL Clear all]**&#x200B;選項一次清除所有篩選器
 
 ### 管理目的地標籤 {#manage-tags}
@@ -162,7 +164,7 @@ ht-degree: 0%
 標籤可協助您整理和分類目的地資料流，以便更輕鬆管理。 您可以在個別資料流中新增和移除標籤，以根據您的業務需求將其分組。
 
 若要新增標籤至資料流，請在`...`欄中選取省略符號(**[!UICONTROL Name]**)，然後從內容功能表中選取&#x200B;**[!UICONTROL Manage tags]**。
-在&#x200B;**[!UICONTROL Tags]**&#x200B;欄位中輸入新標籤的名稱，並選取&#x200B;**[!UICONTROL Save]**&#x200B;以套用您的變更。
+在**[!UICONTROL Tags]**&#x200B;欄位中輸入新標籤的名稱，並選取&#x200B;**[!UICONTROL Save]**&#x200B;以套用您的變更。
 
 ![管理標籤對話方塊，顯示標籤選取和建立選項](../assets/ui/workspace/tags.gif)
 
@@ -183,9 +185,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![啟用控制項&#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;控制項將對象或資料集匯出至該目的地。
-> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![編輯詳細資訊控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
-> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![刪除控制項&#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
+> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![啟用控制項&#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**控制項將對象或資料集匯出至該目的地。
+> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![編輯詳細資訊控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
+> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![刪除控制項&#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
 
 ![帳戶標籤](../assets/ui/workspace/accounts-tab.png)
 
@@ -197,7 +199,7 @@ ht-degree: 0%
 | [!UICONTROL Username] | 您在[連線目的地工作流程](../catalog/email-marketing/overview.md#connect-destination)中選取的使用者名稱。 |
 | [!UICONTROL Connections] | 代表與針對目的地建立的基本資訊相連結的唯一成功目的地資料流數目。 |
 | [!UICONTROL Authorization date] | 授權連線到此目的地的日期。 |
-| [!UICONTROL Expiration date] | 此目的地的連線授權到期的日期。 <br>警告圖示![帳戶過期警告圖示。](/help/images/icons/alert-expiration.png)會在到期日之前出現，提醒您連線將會到期，而且可能需要續約。 到期連線的資料流已停止，您必須重新驗證以繼續您的啟用工作流程。 <br>**重要**：此資料行目前僅適用於[Pinterest](../catalog/advertising/pinterest.md)、[LinkedIn](../catalog/social/linkedin.md)和[LinkedIn相符對象](../catalog/social/linkedin-b2b.md)連線。<br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| [!UICONTROL Expiration date] | 此目的地的連線授權到期的日期。 <br>警告圖示![帳戶過期警告圖示。](/help/images/icons/alert-expiration.png)會在到期日之前出現，提醒您連線將會到期，而且可能需要續約。 到期連線的資料流已停止，您必須重新驗證以繼續您的啟用工作流程。 <br>**重要**：此資料行目前僅適用於[Pinterest](../catalog/advertising/pinterest.md)、[LinkedIn](../catalog/social/linkedin.md)和[LinkedIn相符對象](../catalog/social/linkedin-b2b.md)連線。<br> ![目的地工作區中反白顯示的過期目的地帳戶。](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -229,7 +231,7 @@ ht-degree: 0%
 您可以：
 
 * 檢視所有目前作用中的篩選器
-* 按一下每個篩選器標籤上的`X`圖示，移除個別的篩選器
+* 選取每個篩選器標籤上的`X`圖示，移除個別的篩選器
 * 使用&#x200B;**[!UICONTROL Clear all]**&#x200B;選項一次清除所有篩選器
 
 ## [!UICONTROL System View] {#system-view}
@@ -238,6 +240,6 @@ ht-degree: 0%
 
 ![資料流程1](../assets/ui/workspace/system-view-dataflows.png)
 
-選取頁面上顯示的任何目的地，然後按一下&#x200B;**[!UICONTROL View dataflows]**&#x200B;以檢視您為每個目的地設定的所有連線的相關資訊。
+選取頁面上顯示的任何目的地，並選取「**[!UICONTROL View dataflows]**」以檢視您為每個目的地設定的所有連線的相關資訊。
 
 ![資料流程2](../assets/ui/workspace/system-view-dataflows-2.png)

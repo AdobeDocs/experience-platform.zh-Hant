@@ -3,22 +3,22 @@ keywords: Experience Platform；首頁；熱門主題；警報；目的地
 description: 您可以在建立資料流時訂閱警報，以接收有關流程執行的狀態、成功或失敗的警報訊息。
 title: 訂閱內容感知目的地警示
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 14%
+source-wordcount: '931'
+ht-degree: 10%
 
 ---
 
 # 訂閱內容感知目的地警示
 
-透過 Adobe Experience Platform，您可以訂閱關於 Adobe Experience Platform 活動的事件型警報。有了警報，便可以減少或免除透過輪詢 [[!DNL Observability Insights] API](../../observability/api/overview.md) 來檢查工作是否完成、是否達到工作流程某個里程碑，或者是否發生任何錯誤的需求。
+透過 Adobe Experience Platform，您可以訂閱關於 Adobe Experience Platform 活動的事件型警報。警示可減少或消除輪詢[[!DNL Observability Insights] API](../../observability/api/overview.md)以檢查工作是否已完成、工作流程中是否已達到特定里程碑，或是否已發生任何錯誤的必要性。
 
 建立資料流時，您可以訂閱警示以接收有關資料流執行狀態、成功或失敗的警示訊息。
 
 本檔案提供如何訂閱目的地資料流接收警報訊息的步驟。
 
-## 快速入門
+## 快速入門 {#getting-started}
 
 參閱本檔案前，請先實際瞭解下列Adobe Experience Platform元件：
 
@@ -56,6 +56,8 @@ ht-degree: 14%
 | 目的地流程執行成功 | 此警報會在對象成功啟用至目的地時通知您。 |
 | 目的地資料流執行開始 | 此警報會在目的地流程執行開始啟用對象時通知您。 |
 | 超過啟用略過率 | 此警報會在啟用略過率超過啟用總數的1%時通知您。 當身分缺少屬性或違反同意時，會在啟用期間略過身分。 |
+
+{style="table-layout:auto"}
 
 ## 接收警示 {#receiving-alerts}
 

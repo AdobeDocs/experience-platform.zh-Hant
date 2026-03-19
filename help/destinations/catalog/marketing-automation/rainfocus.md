@@ -3,10 +3,10 @@ title: RainFocus與會者設定檔
 description: 瞭解如何使用RainFocus與會者設定檔目的地聯結器，將受眾設定檔與RainFocus全域與會者設定檔同步。
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 5%
+source-wordcount: '1091'
+ht-degree: 4%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 5%
 
 ## 概觀 {#overview}
 
-使用 [!DNL RainFocus Attendee Profiles] 目標將客戶設定檔從 Adobe Experience Platform 串流至 [!DNL RainFocus] 平台，以建立及更新與會者設定檔。
+使用[!DNL RainFocus Attendee Profiles]目的地將客戶設定檔從Adobe Experience Platform串流到[!DNL RainFocus]平台，以建立和更新出席者設定檔。
 
 >[!IMPORTANT]
 >
->目的地聯結器和檔案頁面是由[!DNL RainFocus]團隊建立和維護的。 若有任何查詢或更新要求，請直接透過`clientcare@rainfocus.com`聯絡或造訪RainFocus [說明中心](https://help.rainfocus.com/hc/en-us)。
+>目的地聯結器和檔案頁面是由[!DNL RainFocus]團隊建立和維護的。 若有任何查詢或更新要求，請直接透過`clientcare@rainfocus.com`聯絡他們，或造訪RainFocus [說明中心](https://help.rainfocus.com/hc/en-us)。
 
 ## 使用案例 {#use-cases}
 
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 ### 使用案例#1 {#use-case-1}
 
-一家大型企業技術公司即將開放註冊參加即將舉辦的全球博覽會，並且想要將客戶設定檔推送到[!DNL RainFocus]，以簡化註冊程式。
+一家大型企業技術公司即將開放註冊參加即將舉辦的全球博覽會，並希望將客戶設定檔推送到[!DNL RainFocus]以簡化註冊程式。
 
 ### 使用案例#2 {#use-case-2}
 
@@ -59,7 +59,7 @@ ht-degree: 5%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ ht-degree: 5%
 ## 連線到目標 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
@@ -123,13 +123,13 @@ ht-degree: 5%
 
 當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
-## 啟用此目的地的區段 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-閱讀[啟用串流區段匯出目的地的設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md)，以取得啟用此目的地的對象區段的指示。
+閱讀[啟用串流目的地的對象](/help/destinations/ui/activate-segment-streaming-destinations.md)，以取得啟用此目的地對象的指示。
 
 ### 對應屬性和身分 {#map}
 
@@ -172,4 +172,4 @@ ht-degree: 5%
 
 ## 其他資源 {#additional-resources}
 
-* [RainFocus串流Source聯結器](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [RainFocus串流Source聯結器](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

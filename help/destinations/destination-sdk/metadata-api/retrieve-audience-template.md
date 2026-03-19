@@ -2,10 +2,10 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK擷取對象範本的API呼叫範例。
 title: 擷取對象範本
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 0%
+source-wordcount: '419'
+ht-degree: 1%
 
 ---
 
@@ -21,15 +21,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 對象範本API操作快速入門 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 擷取對象範本 {#retrieve}
 
-您可以對`/authoring/audience-templates`端點發出`GET`要求，以擷取現有的對象範本。
+您可以對`GET`端點發出`/authoring/audience-templates`要求，以擷取現有的對象範本。
 
 **API格式**
 
@@ -55,7 +55,7 @@ GET /authoring/audience-templates/{INSTANCE_ID}
 
 下列請求將根據[!DNL IMS Org ID]和沙箱設定，擷取您有權存取的對象範本清單。
 
-+++要求
++++請求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -184,7 +184,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 下列請求將根據[!DNL IMS Org ID]和沙箱設定，擷取您有權存取的對象範本清單。
 
-+++要求
++++請求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \
@@ -197,6 +197,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 | 參數 | 說明 |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | 您要擷取之對象範本的ID。 |
+
+{style="table-layout:auto"}
 
 +++
 

@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API為您的目的地產生測試訊息轉換範本。
 title: 產生範例訊息轉換範本
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '375'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 範本API操作快速入門 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 取得範例範本 {#generate-sample-template}
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->* 您應在此使用的目的地ID是與使用`/destinations`端點建立的目的地組態相對應的`instanceId`。 如需詳細資訊，請參閱[擷取目的地組態](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)。
+>* 您應在此使用的目的地ID是與使用`instanceId`端點建立的目的地組態相對應的`/destinations`。 如需詳細資訊，請參閱[擷取目的地組態](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)。
 
 **API格式**
 
@@ -39,6 +39,8 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 | 參數 | 說明 |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | 您要為其產生訊息轉換範本的目的地組態ID。 |
+
+{style="table-layout:auto"}
 
 **要求**
 

@@ -1,11 +1,11 @@
 ---
 keywords: 廣告目的地；目的地；平台目的地
 title: Advertising目的地概觀
-description: 將Adobe Experience Platform連線至第三方廣告平台（例如DSP、廣告網路、SSP），並在這些平台上共用假名對象。
+description: 將Adobe Experience Platform連線至協力廠商廣告平台（例如DSP、廣告網路、SSP），並在這些平台上共用假名對象。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 8d0cd63b6262170689ca5a6eb76350c4fc024566
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 若要瞭解連線和擴充功能之間的差異，請參閱[目的地型別和類別]頁面中的[連線](../../destination-types.md#connections)。
 
-### 連線
+### 連線 {#connections}
 
 * [(Beta) Acxiom對象分佈](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID受眾連線](acxiom-real-id-audience-connection.md)
@@ -50,7 +50,7 @@ ht-degree: 1%
 * [(Beta)交易台CRM連線](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
-### 擴充功能
+### 擴充功能 {#extensions}
 
 * [Adobe Advertising Cloud擴充功能](adobe-advertising-cloud.md)
 * [Awin Advertising轉換標籤擴充功能](awin-conversiontag.md)

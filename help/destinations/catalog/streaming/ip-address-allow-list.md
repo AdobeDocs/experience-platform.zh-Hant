@@ -2,11 +2,11 @@
 keywords: IP位址、IP範圍、允許清單目的地、允許清單、允許清單串流目的地
 title: 串流目的地的IP位址允許清單
 type: Documentation
-description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP REST API端點或Amazon Kinesis執行個體。
+description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform將資料匯出至HTTP REST API端點或Amazon Kinesis執行個體。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---

@@ -3,9 +3,9 @@ title: 使用新Beta版雲端儲存空間目的地中的上次資格取得時間
 description: 瞭解如何在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性
 badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 # 使用新Beta版雲端儲存空間目的地中的上次資格取得時間XDM屬性 {#last-qualification-time}
 
 >[!IMPORTANT]
-> 
+>
 >本頁說明測試版的功能。 功能和檔案可能會有所變更。 如果您想要存取此測試版計畫，請聯絡您的Adobe代表或客戶服務。
 
 ## 先決條件 {#prerequisites}
@@ -31,7 +31,9 @@ ht-degree: 1%
 
 如果您使用以上列出的六個雲端儲存空間聯結器之一，您可以使用啟動工作流程的[對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)中的最後一個資格時間XDM屬性，在匯出的檔案中建立欄，其最新時間戳記為設定檔符合區段資格的時間。 這可協助您處理某些測量或分析使用案例，且可讓您更清楚瞭解何時啟用某些對象。
 
-請注意，若要將`lastQualificationTime`新增至您的檔案匯出，您目前需要手動將值`xdm: segmentMembership.ups.seg_id.lastQualificationTime`插入來源欄位，如下所示。 您也可以將目標欄位編輯為`lastQualificationTime`或您要為此欄命名的任何其他值。 請注意，由於這是測試版功能，`xdm: segmentMembership.ups.seg_id.lastQualificationTime`值的語法日後可能會變更。
+>[!NOTE]
+>
+>若要將`lastQualificationTime`新增至您的檔案匯出，您目前需要手動將值`xdm: segmentMembership.ups.seg_id.lastQualificationTime`插入來源欄位，如下所示。 您也可以將目標欄位編輯為`lastQualificationTime`或您要為此欄命名的任何其他值。 由於這是測試版功能，`xdm: segmentMembership.ups.seg_id.lastQualificationTime`值的語法日後可能會變更。
 
 ![熒幕錄製，顯示上次將XDM屬性貼到對應步驟中的資格取得時間](/help/destinations/ui/last-qualification-time.gif)
 

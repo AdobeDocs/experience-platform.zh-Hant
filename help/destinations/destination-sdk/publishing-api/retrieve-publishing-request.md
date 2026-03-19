@@ -2,9 +2,9 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK擷取目的地發佈請求之詳細資料的API呼叫範例。
 title: 擷取目的地發佈請求
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '835'
 ht-degree: 2%
 
 ---
@@ -28,11 +28,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## Destination Publishing API操作快速入門 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 列出目的地發佈請求 {#retrieve-list}
 
@@ -62,7 +62,7 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 
 >[!TAB 擷取所有發佈要求]
 
-+++要求
++++請求
 
 下列請求將根據[!DNL IMS Org ID]和沙箱設定，擷取您提交的發佈請求清單。
 
@@ -129,7 +129,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!TAB 擷取特定發佈要求]
 
-+++要求
++++請求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/{DESTINATION_ID} \
@@ -181,6 +181,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 >[!ENDTABS]
 
-## API錯誤處理
+## API錯誤處理 {#error-handling}
 
 Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。

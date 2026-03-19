@@ -2,7 +2,7 @@
 description: 使用對象中繼資料範本，以程式設計方式在您的目的地建立、更新或刪除對象。 Adobe提供可擴充的對象中繼資料範本，您可以根據行銷API的規格進行設定。 定義、測試及提交範本後，Adobe會使用該範本來建構對目的地的API呼叫。
 title: 對象中繼資料管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1309'
 ht-degree: 2%
@@ -25,19 +25,19 @@ ht-degree: 2%
 
 透過Destination SDK中的受眾中繼資料支援，當您設定Experience Platform目的地時，可以為Experience Platform使用者提供下列其中一個選項，方便他們將受眾對應及啟用至您的目的地。 您可以透過目的地組態的[對象中繼資料組態](../functionality/destination-configuration/audience-metadata-configuration.md)區段中的引數，控制使用者可用的選項。
 
-### 使用案例1 — 您有第三方API，使用者不需要輸入對應ID
+### 使用案例1 — 您有第三方API，使用者不需要輸入對應ID {#use-case-1}
 
 如果您有建立/更新/刪除對象或對象的API端點，則可以使用對象中繼資料範本來設定Destination SDK，以符合對象建立/更新/刪除端點的規格。 Experience Platform可以程式設計方式建立/更新/刪除對象，並將中繼資料同步回Experience Platform。
 
 在Experience Platform使用者介面(UI)中，將對象啟用至您的目的地時，使用者不需要手動填寫啟用工作流程中的對象對應ID欄位。
 
-### 使用案例2 — 使用者需要先在您的目的地建立受眾，並需要手動輸入對應ID
+### 使用案例2 — 使用者需要先在您的目的地建立受眾，並需要手動輸入對應ID {#use-case-2}
 
 如果對象和其他中繼資料需要由合作夥伴或使用者在您的目的地手動建立，則使用者必須在啟動工作流程中手動填寫對象對應ID欄位，以在您的目的地和Experience Platform之間同步對象中繼資料。
 
 ![輸入對應識別碼](../assets/functionality/input-mapping-id.png)
 
-### 使用案例3 — 您的目的地接受Experience Platform對象ID，使用者不需要手動輸入對應ID
+### 使用案例3 — 您的目的地接受Experience Platform對象ID，使用者不需要手動輸入對應ID {#use-case-3}
 
 如果您的目的地系統接受Experience Platform對象ID，您可以在對象中繼資料範本中加以設定。 使用者啟用區段時，不必填入對象對應ID。
 

@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定UI屬性，例如檔案連結、目的地卡片類別以及目的地連線型別和頻率。
 title: UI屬性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ UI屬性會定義Adobe應該在Adobe Experience Platform使用者介面中為目
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -47,6 +47,8 @@ UI屬性會定義Adobe應該在Adobe Experience Platform使用者介面中為目
 |---|---|
 | 即時（串流）整合 | 是 |
 | 檔案式（批次）整合 | 是 |
+
+{style="table-layout:auto"}
 
 ## 支援的引數 {#supported-parameters}
 
@@ -66,7 +68,7 @@ UI屬性會定義Adobe應該在Adobe Experience Platform使用者介面中為目
 
 使用以下格式： `http://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是您目的地的名稱。 對於名為Moviestar的目的地，您可以使用`http://www.adobe.com/go/destinations-moviestar-en`。
 
-使用者可以從UI中的目的地目錄頁面檢視和瀏覽您的檔案連結。 他們需要瀏覽到您的目的地卡片，然後選取&#x200B;**[!UICONTROL 其他動作]**，然後選取&#x200B;**[!UICONTROL 檢視檔案]**，如下圖所示。
+使用者可以從UI中的目的地目錄頁面檢視和瀏覽您的檔案連結。 他們需要瀏覽到您的目的地卡片，然後依序選取&#x200B;**[!UICONTROL More actions]**&#x200B;及&#x200B;**[!UICONTROL View documentation]**，如下圖所示。
 
 ![顯示檔案連結位置的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -94,7 +96,7 @@ UI屬性會定義Adobe應該在Adobe Experience Platform使用者介面中為目
 
 `frequency`是字串引數，參考目的地支援的資料匯出型別。 針對以API為基礎的整合設定為`Streaming`，或當您匯出檔案至目的地時設定為`Batch`。
 
-使用者可以在每個目的地連線的&#x200B;**[!UICONTROL 資料流執行]**&#x200B;頁面中看到頻率型別。
+使用者可以在每個目的地連線的&#x200B;**[!UICONTROL Dataflow runs]**&#x200B;頁面中看到頻率型別。
 
 ![UI影像顯示UI中的頻率型別位置。](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 

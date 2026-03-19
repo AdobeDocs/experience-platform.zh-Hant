@@ -2,7 +2,7 @@
 description: 瞭解如何使用目的地測試API，在發佈之前先測試您的串流目的地設定。
 title: 串流目的地測試API概覽
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -233,6 +233,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 如需要求與回應引數的說明，請參閱[目的地測試API作業](../../testing-api/streaming-destinations/destination-testing-api.md)。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 在測試您的目的地並確認已正確設定後，請使用[目的地發佈API](../../publishing-api/create-publishing-request.md)將您的設定提交至Adobe以供檢閱。

@@ -3,7 +3,7 @@ keywords: 語音目的地；語音目的地
 title: 客戶心聲目的地概觀
 description: 語音平台會收集並整理各種來源的資料，包括語音訊息、通話資料及聊天交談。 可以篩選和分析整理的資訊，讓公司能夠最佳化其網站，以符合其需求。
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
-source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # 客戶心聲目的地概觀 {#voice-of-customer-destinations}
 
-## 概觀
+## 概觀 {#overview}
 
 語音平台會收集並整理各種來源的資料，包括語音訊息、通話資料及聊天交談。 可以篩選和分析整理的資訊，讓公司能夠最佳化其網站，以符合其需求。
 

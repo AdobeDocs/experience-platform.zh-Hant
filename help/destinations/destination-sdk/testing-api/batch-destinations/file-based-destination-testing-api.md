@@ -2,9 +2,9 @@
 description: 此頁面說明如何使用/testing/destinationInstance API端點來測試您的檔案型目的地是否已正確設定，以及驗證資料流至您設定之目的地的完整性。
 title: 使用範例設定檔測試您的檔案型目的地
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 快速入門 {#getting-started}
 
-繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 先決條件 {#prerequisites}
 
@@ -240,10 +240,10 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 閱讀本檔案後，您現在知道如何測試以檔案為基礎的目的地設定。
 
-如果您收到有效的API回應，表示您的目的地正常運作。 如果您想檢視啟動流程的詳細資訊，可以使用[回應中的`results`屬性來檢視詳細的啟動結果](file-based-destination-results-api.md)。
+如果您收到有效的API回應，表示您的目的地正常運作。 如果您想檢視啟動流程的詳細資訊，可以使用`results`回應中的[屬性來檢視詳細的啟動結果](file-based-destination-results-api.md)。
 
 如果您正在建立公用目的地，您現在可以[將目的地組態](../../guides/submit-destination.md)提交至Adobe以供檢閱。

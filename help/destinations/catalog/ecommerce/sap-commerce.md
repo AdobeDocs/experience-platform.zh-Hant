@@ -3,9 +3,9 @@ title: SAP Commerce連線
 description: 使用SAP Commerce目標聯結器更新SAP帳戶中的客戶記錄。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2306'
 ht-degree: 4%
 
 ---
@@ -30,13 +30,13 @@ ht-degree: 4%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料至[!DNL SAP Commerce]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=zh-Hant)對象[!DNL Experience Platform]。
+在啟用資料至[!DNL SAP Commerce]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)對象[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的Experience Platform檔案。
 
 ### [!DNL SAP Commerce]目的地的先決條件 {#prerequisites-destination}
 
-若要將資料從Experience Platform匯出至您的[!DNL SAP Commerce]帳戶，請注意下列必要條件：
+請注意下列從Experience Platform匯出資料至您[!DNL SAP Commerce]帳戶的先決條件：
 
 #### 您必須擁有[!DNL SAP Subscription Billing]帳戶 {#prerequisites-account}
 
@@ -122,7 +122,7 @@ ht-degree: 4%
 | 客群類型 | 支援 | 說明 |
 | ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -195,7 +195,7 @@ ht-degree: 4%
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
@@ -205,7 +205,7 @@ ht-degree: 4%
 
 若要將對象資料從Adobe Experience Platform正確傳送至[!DNL SAP Commerce]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL SAP Commerce]目的地欄位，請遵循下列步驟：
 
-#### 對應`customerNumberSAP`身分
+#### 對應`customerNumberSAP`身分 {#map-customer-number-sap}
 
 `customerNumberSAP`識別是這個目的地的必要對應。 請依照下列步驟進行對應：
 
@@ -223,13 +223,13 @@ ht-degree: 4%
 具有身分對應的範例如下所示：
 ![來自Experience Platform UI的影像，顯示customerNumber身分對應範例。](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
-#### 對應屬性
+#### 對應屬性 {#mapping-attributes}
 
 若要在XDM設定檔結構描述與[!DNL SAP Subscription Billing]帳戶之間新增任何其他要更新的屬性，請重複下列步驟：
 
 1. 在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**。 您現在可以在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
-1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**&#x200B;類別並選取XDM屬性。
+1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**類別並選取XDM屬性。
    ![Experience Platform UI熒幕擷圖選取姓氏作為來源屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. 在&#x200B;**[!UICONTROL Select target field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select custom attributes]**&#x200B;類別，並從客戶[!DNL SAP Subscription Billing]結構描述[屬性清單中輸入](https://api.sap.com/api/BusinessPartner_APIs/schema)屬性的名稱。
    ![Experience Platform UI熒幕擷取畫面，其中lastName定義為target屬性。](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
@@ -238,7 +238,7 @@ ht-degree: 4%
 >
 > 目標欄位名稱區分大小寫，且應符合[!DNL SAP Subscription Billing]屬性名稱。 唯一的例外是`country`，您應該改用`countryCode`。 [!DNL SAP Subscription Billing]支援alpha-2 (ISO 3166)國家/地區代碼。 值區分大小寫，且必須介於0到3個字元之間，因此請確定您所提供的內容與定義完全相同，否則您會遇到錯誤： `The country code {} does not exist`或`size must be between 0 and 3`。
 
-#### 對應所選客戶型別的`mandatory`屬性
+#### 對應所選客戶型別的`mandatory`屬性 {#map-mandatory-attributes}
 
 強制屬性對應取決於您選取的&#x200B;**[!UICONTROL Type of Customer]**。 若要對應必要屬性，請從下列選項中選取：
 
@@ -251,6 +251,8 @@ ht-degree: 4%
 | `xdm: person.lastName` | `Attribute: lastName` | 是 |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | 是 |
 
+{style="table-layout:auto"}
+
 >[!TAB 公司客戶]
 
 | 來源欄位 | 目標欄位 | 強制 |
@@ -258,9 +260,11 @@ ht-degree: 4%
 | `xdm: b2b.companyName` | `Attribute: company` | 是 |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | 是 |
 
+{style="table-layout:auto"}
+
 >[!ENDTABS]
 
-#### 對應其他屬性
+#### 對應其他屬性 {#mapping-additional-attributes}
 
 然後，您可以在XDM設定檔結構描述與客戶的[!DNL SAP Subscription Billing] [結構描述](https://api.sap.com/api/BusinessPartner_APIs/schema)屬性之間新增任何其他對應，如下所示：
 
@@ -274,6 +278,8 @@ ht-degree: 4%
 | `xdm: workAddress.street1` | `Attribute: street` | 無 |
 | `xdm: workAddress.city` | `Attribute: city` | 無 |
 
+{style="table-layout:auto"}
+
 以下是客戶為個人的強制和選用屬性對應的範例：
 ![來自Experience Platform UI的影像，顯示具有必要和選用屬性對應的範例，其中客戶為個人。](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
@@ -283,6 +289,8 @@ ht-degree: 4%
 | --- | --- | --- |
 | `xdm: workAddress.street1` | `Attribute: street` | 無 |
 | `xdm: workAddress.city` | `Attribute: city` | 無 |
+
+{style="table-layout:auto"}
 
 以下是客戶為公司的具有強制和選擇性屬性對應的範例：
 ![來自Experience Platform UI的影像，顯示具有強制和選擇性屬性對應的範例，其中客戶是企業使用者。](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
@@ -295,7 +303,7 @@ ht-degree: 4%
 
 執行[排程對象匯出](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling)步驟時，您必須手動將Experience Platform對象對應到[中的](#prerequisites-attribute)屬性[!DNL SAP Subscription Billing]。
 
-以下顯示反白顯示[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**&#x200B;位置的排程對象匯出步驟範例：
+以下顯示反白顯示[!DNL SAP Commerce] **[!UICONTROL Mapping ID]**位置的排程對象匯出步驟範例：
 ![來自Experience Platform的影像，顯示填入對應ID的排程對象匯出。](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 若要這麼做，請選取每個區段，然後在[!DNL SAP Subscription Billing] [!DNL SAP Commerce]目的地聯結器欄位中，輸入來自&#x200B;**[!UICONTROL Mapping ID]**&#x200B;的自訂參考名稱。 如需建立自訂參考的指引，請參閱[在 [!DNL SAP Subscription Billing]](#prerequisites-custom-reference)中建立自訂參考區段。
@@ -328,7 +336,7 @@ ht-degree: 4%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-登入[!DNL SAP Subscription Billing]帳戶，然後導覽至&#x200B;**[!UICONTROL Contacts]**&#x200B;頁面以檢查對象狀態。 清單可設定為顯示自訂參考的欄，並顯示對應的對象狀態。
+登入[!DNL SAP Subscription Billing]帳戶，然後導覽至&#x200B;**[!UICONTROL Contacts]**頁面以檢查對象狀態。 清單可設定為顯示自訂參考的欄，並顯示對應的對象狀態。
 ![SAP訂閱帳單影像，顯示客戶概觀頁面，其欄標題顯示對象名稱和儲存格對象狀態](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## 資料使用與控管 {#data-usage-governance}
@@ -345,7 +353,7 @@ ht-degree: 4%
 
 * [內建SAP訂閱帳單](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
-### Changelog
+### Changelog {#changelog}
 
 本節擷取此目的地聯結器的功能和重要檔案更新。
 

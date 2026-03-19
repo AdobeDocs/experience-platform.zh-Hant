@@ -5,9 +5,9 @@ title: 使用流程服務API更新目的地資料流程
 type: Tutorial
 description: 本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用流量服務API來啟用或停用資料流、更新其基本資訊，或新增和移除對象和屬性。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2471'
+source-wordcount: '2467'
 ht-degree: 3%
 
 ---
@@ -68,6 +68,8 @@ GET /flows/{FLOW_ID}
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{FLOW_ID}` | 您要擷取之目的地資料流的唯一`id`值。 |
+
+{style="table-layout:auto"}
 
 **要求**
 
@@ -389,6 +391,8 @@ curl -X PATCH \
 | `path` | 定義要更新的流程部分。 |
 | `value` | 您想要用來更新引數的新值。 |
 
+{style="table-layout:auto"}
+
 **回應**
 
 成功的回應會傳回您的流程ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的流量ID。
@@ -499,13 +503,15 @@ curl -X PATCH \
 | `value` | 您想要用來更新引數的新值。 |
 | `id` | 指定您要新增至目的地資料流的對象ID。 |
 | `name` | **（選擇性）**。 指定您要新增至目的地資料流的對象名稱。 請注意，此欄位並非必填欄位，您可以在不提供名稱的情況下成功將對象新增至目的地資料流。 |
-| `filenameTemplate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>此欄位決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`： **（選擇性）**。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`： **（選擇性）**。 選取這兩個檔案選項之一，加入Experience Platform產生檔案的時間。</li><li>`custom-text`： **（選擇性）**。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)一節。 |
-| `exportMode` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 |
+| `filenameTemplate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地（如Amazon S3、SFTP或Azure Blob）中將對象新增至資料流時，才需要此欄位。 <br>此欄位決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`： **（選擇性）**。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`： **（選擇性）**。 選取這兩個檔案選項之一，加入Experience Platform產生檔案的時間。</li><li>`custom-text`： **（選擇性）**。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)一節。 |
+| `exportMode` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地（如Amazon S3、SFTP或Azure Blob）中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 |
 | `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
-| `frequency` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`或`DAILY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |
+| `frequency` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地（如Amazon S3、SFTP或Azure Blob）中將對象新增至資料流時，才需要此欄位。 <br>必要。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`或`DAILY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |
 | `triggerType` | 僅適用於&#x200B;*批次目的地*。 只有在`"DAILY_FULL_EXPORT"`選取器中選取`frequency`模式時才需要此欄位。 <br>必要。<br> <ul><li>選取`"AFTER_SEGMENT_EVAL"`讓啟動工作在每日Experience Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取`"SCHEDULED"`讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新狀態，端視批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增`startTime`以指示UTC中應該進行每日匯出的時間。</li></ul> |
-| `endDate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>在選取`"exportMode":"DAILY_FULL_EXPORT"`和`"frequency":"ONCE"`時不適用。 <br>設定對象成員停止匯出至目的地的日期。 |
-| `startTime` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
+| `endDate` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地（如Amazon S3、SFTP或Azure Blob）中將對象新增至資料流時，才需要此欄位。 <br>在選取`"exportMode":"DAILY_FULL_EXPORT"`和`"frequency":"ONCE"`時不適用。 <br>設定對象成員停止匯出至目的地的日期。 |
+| `startTime` | 僅適用於&#x200B;*批次目的地*。 只有在批次檔案匯出目的地（如Amazon S3、SFTP或Azure Blob）中將對象新增至資料流時，才需要此欄位。 <br>必要。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
+
+{style="table-layout:auto"}
 
 **回應**
 
@@ -567,6 +573,7 @@ curl -X PATCH \
 | `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 若要從資料流移除對象，請使用`remove`作業。 |
 | `path` | 根據對象選擇器的索引，指定應該從目的地資料流中移除哪些現有對象。 若要擷取資料流中的對象順序，請對`/flows`端點執行GET呼叫並檢查`transformations.segmentSelectors`屬性。 若要刪除資料流中的第一個對象，請使用`"path":"/transformations/0/params/segmentSelectors/selectors/0"`。 |
 
+{style="table-layout:auto"}
 
 **回應**
 
@@ -754,7 +761,7 @@ curl -X PATCH \
 >
 >**目的地特定對應需求**
 >
->本節中說明的`profileSelectors`方法適用於大部分的串流目的地。 不過，某些串流目的地(包括&#x200B;**Adobe Target**)需要改為使用資料準備對應集工作流程。
+>本節中說明的`profileSelectors`方法適用於大部分的串流目的地。 不過，某些串流目的地（包括&#x200B;**Adobe Target**）需要改為使用資料準備對應集工作流程。
 >
 >**如果成功API回應(202)**&#x200B;後，您的設定檔屬性沒有顯示在Experience Platform UI中，您必須使用[啟用批次目的地的對象](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)中記錄的對應集方法。
 
@@ -795,6 +802,8 @@ curl -X PATCH \
 | `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 若要將設定檔屬性新增至資料流，請使用`add`作業。 |
 | `path` | 定義要更新的流程部分。 將設定檔屬性新增至資料流時，請使用範例中指定的路徑。 |
 | `value.path` | 要新增至資料流的設定檔屬性值。 |
+
+{style="table-layout:auto"}
 
 **回應**
 
@@ -849,6 +858,7 @@ curl -X PATCH \
 | `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 若要從資料流移除對象，請使用`remove`作業。 |
 | `path` | 根據對象選擇器的索引，指定應該從目的地資料流移除的現有設定檔屬性。 若要擷取資料流中的設定檔屬性順序，請對`/flows`端點執行GET呼叫並檢查`transformations.profileSelectors`屬性。 若要刪除資料流中的第一個對象，請使用`"path":"transformations/0/params/segmentSelectors/selectors/0/"`。 |
 
+{style="table-layout:auto"}
 
 **回應**
 

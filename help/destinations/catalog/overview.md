@@ -3,7 +3,7 @@ keywords: 目錄；目錄
 title: 目的地目錄概觀
 description: 目的地目錄會提供準備好接收資料的可用目的地清單。 這些目的地包括Adobe解決方案、廣告平台、調查平台、電子郵件行銷平台等。
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## 目的地類別
+## 目的地類別 {#destination-categories}
 
 您可以在Adobe Experience Platform中將資料啟用至不同的目的地類別。 以下連結提供有關每個目的地類別的詳細資訊：
 

@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定檔案匯出設定。
 title: 批次設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 8e7356bdc5692678e46a61b538d4b6748792a423
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1031'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -109,27 +109,27 @@ ht-degree: 2%
 使用檔案名稱組態巨集來定義匯出的檔案名稱應包含的內容。 下表中的巨集說明在[檔案名稱組態](../../../ui/activate-batch-profile-destinations.md#file-names)畫面的UI中找到的元素。
 
 >[!TIP]
-> 
+>
 >您最好在匯出的檔案名稱中一律包含`SEGMENT_ID`巨集。 區段ID是唯一的，因此將其納入檔案名稱中，也是確保檔案名稱唯一的最佳方式。
 
 | 巨集 | UI標籤 | 說明 | 範例 |
 |---|---|---|---|
-| `DESTINATION` | [!UICONTROL 目標] | ui中的目的地名稱。 | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL 區段識別碼] | Experience Platform產生的唯一受眾ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL 區段名稱] | 使用者定義的對象名稱 | VIP訂閱者 |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL 目的地識別碼] | 目的地執行個體在Experience Platform產生的唯一ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
-| `DESTINATION_INSTANCE_NAME` | [!UICONTROL 目的地名稱] | 目的地執行個體的使用者定義名稱。 | 我的2022 Advertising目的地 |
-| `ORGANIZATION_NAME` | [!UICONTROL 組織名稱] | Adobe Experience Platform中的客戶組織名稱。 | 我的組織名稱 |
-| `SANDBOX_NAME` | [!UICONTROL 沙箱名稱] | 客戶使用的沙箱名稱。 | prod |
-| `DATETIME` / `TIMESTAMP` | [!UICONTROL 日期和時間] | `DATETIME`和`TIMESTAMP`都定義產生檔案的時間，但格式不同。<br><br><ul><li>`DATETIME`使用以下格式： YYYYMMDD_HHMMSS。</li><li>`TIMESTAMP`使用10位數Unix格式。 </li></ul> `DATETIME`與`TIMESTAMP`互斥，不能同時使用。 | <ul><li>`DATETIME`： 20220509_210543</li><li>`TIMESTAMP`： 1652131584</li></ul> |
-| `CUSTOM_TEXT` | [!UICONTROL 自訂文字] | 要包含在檔案名稱中的使用者定義自訂文字。 無法在`defaultFilename`中使用。 | My_Custom_Text |
-| `TIMESTAMP` | [!UICONTROL 日期和時間] | 檔案產生時間的10位數時間戳記，以Unix格式顯示。 | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL 合併原則ID] | 用來產生匯出對象的[合併原則](../../../../profile/merge-policies/overview.md)識別碼。 當您根據合併原則將匯出的對象分組到檔案中時，請使用此巨集。 使用此巨集與`segmentGroupingEnabled:true`。 | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL 合併原則名稱] | 用來產生匯出對象的[合併原則](../../../../profile/merge-policies/overview.md)的名稱。 當您根據合併原則將匯出的對象分組到檔案中時，請使用此巨集。 使用此巨集與`segmentGroupingEnabled:true`。 | 我的自訂合併原則 |
+| `DESTINATION` | [!UICONTROL Destination] | ui中的目的地名稱。 | Amazon S3 |
+| `SEGMENT_ID` | [!UICONTROL Segment ID] | Experience Platform產生的唯一受眾ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Segment Name] | 使用者定義的對象名稱 | VIP訂閱者 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | 目的地執行個體在Experience Platform產生的唯一ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | 目的地執行個體的使用者定義名稱。 | 我的2022 Advertising目的地 |
+| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Adobe Experience Platform中的客戶組織名稱。 | 我的組織名稱 |
+| `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | 客戶使用的沙箱名稱。 | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME`和`TIMESTAMP`都定義產生檔案的時間，但格式不同。<br><br><ul><li>`DATETIME`使用以下格式： YYYYMMDD_HHMMSS。</li><li>`TIMESTAMP`使用10位數Unix格式。 </li></ul> `DATETIME`與`TIMESTAMP`互斥，不能同時使用。 | <ul><li>`DATETIME`： 20220509_210543</li><li>`TIMESTAMP`： 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL Custom text] | 要包含在檔案名稱中的使用者定義自訂文字。 無法在`defaultFilename`中使用。 | My_Custom_Text |
+| `TIMESTAMP` | [!UICONTROL Date and time] | 檔案產生時間的10位數時間戳記，以Unix格式顯示。 | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | 用來產生匯出對象的[合併原則](../../../../profile/merge-policies/overview.md)識別碼。 當您根據合併原則將匯出的對象分組到檔案中時，請使用此巨集。 使用此巨集與`segmentGroupingEnabled:true`。 | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | 用來產生匯出對象的[合併原則](../../../../profile/merge-policies/overview.md)的名稱。 當您根據合併原則將匯出的對象分組到檔案中時，請使用此巨集。 使用此巨集與`segmentGroupingEnabled:true`。 | 我的自訂合併原則 |
 
 {style="table-layout:auto"}
 
-### 檔案名稱設定範例
+### 檔案名稱設定範例 {#file-name-configuration-example}
 
 以下設定範例顯示API呼叫中使用的設定與UI中顯示的選項之間的對應。
 

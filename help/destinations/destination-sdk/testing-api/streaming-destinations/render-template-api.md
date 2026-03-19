@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API，根據您的訊息轉換範本，驗證串流目的地的輸出。
 title: 驗證匯出的設定檔結構
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 開始使用轉譯器範本API作業 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 根據訊息轉換範本演算匯出的設定檔 {#render-exported-data}
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->* 您應在此使用的目的地ID是與使用`/destinations`端點建立的目的地組態相對應的`instanceId`。 如需詳細資訊，請參閱[擷取目的地組態](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)。
+>* 您應在此使用的目的地ID是與使用`instanceId`端點建立的目的地組態相對應的`/destinations`。 如需詳細資訊，請參閱[擷取目的地組態](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)。
 
 **API格式**
 

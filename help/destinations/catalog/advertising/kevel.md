@@ -3,9 +3,9 @@ title: Kevel Connection
 description: 使用Kevel串流目的地，直接在Kevel的UserDB和區段管理API中啟用對象，並支援在決策時的即時鎖定目標。
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1168'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 Adobe Experience Platform的[!DNL Kevel]串流目的地可讓客戶直接在[!DNL Kevel]的UserDB和區段管理API中啟用Adobe對象，以支援在廣告決策時的即時鎖定目標。
 
 >[!IMPORTANT]
-> 
+>
 >如果您有問題或想要請求有關[!DNL Kevel]目的地或其檔案的更新，請傳送電子郵件至[!DNL Kevel]support@kevel.com[，寄給](mailto:support@kevel.com)團隊。
 
 ## 使用案例 {#use-cases}
@@ -50,9 +50,9 @@ Adobe Experience Platform的[!DNL Kevel]串流目的地可讓客戶直接在[!DN
 
 {style="table-layout:auto"}
 
-### 支援自訂身分名稱空間
+### 支援自訂身分名稱空間 {#custom-identity-namespaces}
 
-[!DNL Kevel]目的地&#x200B;**也接受自訂名稱空間** (如您的Experience Platform實作中所定義)。
+[!DNL Kevel]目的地&#x200B;**也接受自訂名稱空間** （如您的Experience Platform實作中所定義）。
 
 這表示:
 
@@ -60,7 +60,7 @@ Adobe Experience Platform的[!DNL Kevel]串流目的地可讓客戶直接在[!DN
 - 這些名稱空間可指派給`kevel_user_key1`、`kevel_user_key2`或`kevel_user_key3`，方式與全域名稱空間相同。
 - [!DNL Kevel]將為每個對應的識別碼&#x200B;**的每個執行個體產生**&#x200B;一個UserDB記錄，允許系統傳送的每個識別碼在廣告決定時間即時比對。
 
-### 身分對應行為
+### 身分對應行為 {#identity-mapping-behavior}
 
 - 您最多可以將&#x200B;**個三個**&#x200B;個Experience Platform身分識別名稱空間對應到[!DNL Kevel]的三個身分識別槽。
 - 對於每個已啟用的設定檔，[!DNL Kevel]會收到每個對應識別&#x200B;**的每個執行個體一個UserDB記錄**。
@@ -73,7 +73,7 @@ Kevel目的地![的](/help/destinations/assets/catalog/advertising/kevel-destina
 | 對象來源 | 支援 | 說明 |
 |-----------------------|-----------|---------------------------------------------------------- |
 | 細分服務 | 是 | 由細分引擎評估的Adobe設定檔對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -105,7 +105,7 @@ Kevel目的地![的](/help/destinations/assets/catalog/advertising/kevel-destina
 遵循標準Experience Platform [連線目的地](../../ui/connect-destination.md)工作流程。
 
 >[!IMPORTANT]
-> 
+>
 >您必須擁有&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理目的地**&#x200B;許可權。
 
 ### 驗證目標 {#authenticate}
@@ -126,10 +126,9 @@ Kevel目的地的![驗證選項](/help/destinations/assets/catalog/advertising/k
 
 Kevel目的地![的](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)目的地詳細資料
 
-## 啟用此目的地的區段 {#activate}
+## 啟動此目標的對象 {#activate}
 
-若要將對象傳送至[!DNL Kevel]，請遵循中的工作流程\
-[啟用串流區段匯出目的地的設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md)。
+若要將對象傳送至[!DNL Kevel]，請依照[將對象啟用至串流目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)中的工作流程操作。
 
 ### 停用對象 {#deactivate}
 
@@ -155,7 +154,7 @@ Kevel目的地![的](/help/destinations/assets/catalog/advertising/kevel-destina
 
 當設定檔符合或退出對象時，Experience Platform會傳送串流更新給[!DNL Kevel]。
 
-### [!DNL Kevel] UserDB收到的範例裝載
+### [!DNL Kevel] UserDB收到的範例裝載 {#sample-payload}
 
 ```json
 PUT /udb/{networkId}/segments?userKey=ECID-12345
@@ -213,7 +212,7 @@ PUT /udb/{networkId}/segments?userKey=ECID-12345
 }
 ```
 
-#### [!DNL Kevel]如何解譯此設定檔
+#### [!DNL Kevel]如何解譯此設定檔 {#kevel-profile-interpretation}
 
 透過[!DNL Kevel]目的地組態，每個對應的識別都會產生不同的UserDB記錄，表示[!DNL Kevel]會接收：
 

@@ -4,9 +4,9 @@ title: Qualtrics自動化
 description: 同步體驗和營運客戶資料，以大規模解除個人化鎖定。 在Adobe Experience Platform中彙總多個營運資料來源，作為Qualtrics Experience Id中的輸入專案，以更好地瞭解您的客戶，並實現目標式外聯，在瞭解意圖、情緒和體驗驅動因素方面縮小差距。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1283'
 ht-degree: 3%
 
 ---
@@ -39,14 +39,14 @@ ht-degree: 3%
 
 **結果**：持續回饋可讓組織調整並改善上線流程，進而提高新員工的參與度和生產力。
 
-## 先決條件
+## 先決條件 {#prerequisites}
 
-在Adobe Experience Platform中設定Qualtrics目的地之前，請確定已符合下列必要條件：
+在Adobe Experience Platform中設定Qualtrics目的地之前，請先確定已符合下列必要條件：
 
 * 您有Qualtrics帳戶。
 * 您已從Qualtrics取得必要的API權杖。
 
-### 取得API權杖
+### 取得API權杖 {#obtaining-api-token}
 
 以下是從Qualtrics取得API權杖的必要步驟。
 
@@ -73,7 +73,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -105,7 +105,7 @@ ht-degree: 3%
 ## 連線到目標 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
@@ -135,18 +135,18 @@ ht-degree: 3%
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-閱讀[啟用串流區段匯出目的地的設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md)，以取得啟用此目的地的對象區段的指示。
+閱讀[啟用串流目的地的對象](/help/destinations/ui/activate-segment-streaming-destinations.md)，以取得啟用此目的地對象的指示。
 
 ### 對應屬性和身分 {#map}
 
 此目的地有開啟的結構描述，因此您可以將任何屬性傳送至Qualtrics。
 
-#### 對應屬性
+#### 對應屬性 {#map-attributes}
 
-若要將屬性加入對應，只要在新增對應時選取&#x200B;**自訂屬性**&#x200B;即可。 您可以為屬性輸入任何名稱。 Qualtrics鼓勵屬性名稱採用&#x200B;*camelCase*&#x200B;命名慣例（請參閱下面的熒幕擷圖範例）。
+若要將屬性加入對應，請在加入新對應時選取&#x200B;**自訂屬性**。 您可以為屬性輸入任何名稱。 Qualtrics鼓勵屬性名稱採用&#x200B;*camelCase*&#x200B;命名慣例（請參閱下面的熒幕擷圖範例）。
 
 ![自訂屬性](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
@@ -154,7 +154,7 @@ ht-degree: 3%
 
 ![範例對應](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
-#### 對應身分識別
+#### 對應身分識別 {#map-identities}
 
 必須為此目的地選取身分名稱空間。 目標欄位對應的兩個可能來源欄位為：
 

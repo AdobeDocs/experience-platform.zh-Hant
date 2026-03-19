@@ -3,7 +3,7 @@ title: Acxiom Real ID受眾連線
 description: 使用 [!DNL Acxiom Real ID Audience Connection] 目的地以 [!DNL Acxiom's Real ID] 技術增強受眾，並啟用多個平台的受眾，例如 [!DNL Altice]、 [!DNL Ampersand]、 [!DNL Comcast]等。
 badge: label="Beta" type="Informative"
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 6%
@@ -34,8 +34,8 @@ ht-degree: 6%
 ## 先決條件 {#prerequisites}
 
 * **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom Real ID Audience Connection]使用條款合約，才能設定新的[!DNL Acxiom's]目的地。 執行銷售訂單完成後，您將會收到合約的連結。
-* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
-* **取得[!DNL Acxiom's Real ID]產品的授權：**&#x200B;取得授權後，請在Real-Time CDP中提供Acxiom的真實ID。 如需詳細資訊，請參閱[Acxiom資料增強功能](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)。
+* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
+* **取得[!DNL Acxiom's Real ID]產品的授權：**&#x200B;取得授權後，請在Real-Time CDP中提供Acxiom的真實ID。 如需詳細資訊，請參閱[Acxiom資料增強功能](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)。
 
 
 ## 支援的身分 {#supported-identities}
@@ -54,7 +54,7 @@ ht-degree: 6%
 | 對象來源 | 支援 | 說明 |
 |---------------|----------------|----------------|
 | 細分服務 | 是 | 透過Experience Platform [細分服務](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ ht-degree: 6%
 
 
 
-讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
 
 >[!NOTE]
 >
@@ -121,12 +121,12 @@ ht-degree: 6%
 [!DNL Acxiom Real ID Audience Connection]僅允許對應到下列目標欄位。
 
 | 欄位名稱 | 說明 | 必要 |
-|--------------------|------------|--------| 
+|--------------------|------------|--------|
 | 真實ID | 實數ID是Acxiom專屬身分解析圖形中的唯一36位元組英數字元識別碼(ID)，類似於關聯式資料庫的主索引鍵。 這是代表個人、家庭或地址的識別碼。 | 是 |
 
+{style="table-layout:auto"}
 
-
-在&#x200B;**[!UICONTROL Source Field]**&#x200B;欄中，輸入您要對應至對應目標欄位的來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL &#x200B; Select source field]**&#x200B;畫面。 然後，選取&#x200B;**[!UICONTROL Next]**。
+在&#x200B;**[!UICONTROL Source Field]**&#x200B;欄中，輸入您要對應至對應目標欄位的來源屬性名稱，或選取箭頭圖示以開啟&#x200B;**[!UICONTROL  Select source field]**&#x200B;畫面。 然後，選取&#x200B;**[!UICONTROL Next]**。
 ![對應熒幕](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
@@ -144,7 +144,7 @@ ht-degree: 6%
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
 
 ## 疑難排解 {#troubleshooting}
 

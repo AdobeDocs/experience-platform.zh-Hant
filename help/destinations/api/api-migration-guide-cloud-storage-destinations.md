@@ -4,10 +4,10 @@ title: 雲端儲存空間目的地的API移轉指南
 description: 瞭解在移轉至新的雲端儲存體目的地卡片的過程中，啟用雲端儲存體目的地的工作流程變更，其中包含其他功能。
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1334'
-ht-degree: 0%
+source-wordcount: '1333'
+ht-degree: 1%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* 本頁所述的功能適用於已購買Real-Time CDP Prime和Ultimate套件的客戶。 如需詳細資訊，請聯絡您的Adobe代表。
+>* 已購買Real-Time CDP Prime和Ultimate套件的客戶可以使用本頁所述的功能。 請聯絡您的 Adobe 代表以取得更多資訊。
 
 ## 移轉內容 {#migration-context}
 
-從[2022年10月](/help/release-notes/2022/october-2022.md#new-or-updated-destinations)開始，您可以在匯出不Experience Platform的檔案時，使用新的檔案匯出功能來存取增強的自訂功能：
+從[2022年10月](/help/release-notes/2022/october-2022.md#new-or-updated-destinations)開始，您可在從Experience Platform匯出檔案時，使用新的檔案匯出功能來存取增強的自訂功能：
 
 * 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
 * 能夠透過[新對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)設定匯出檔案中的自訂檔案標題。
@@ -42,7 +42,7 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-請注意，目前在Experience PlatformUI中，您可以看到三個目的地的兩個並排目的地卡片。 以下顯示的是[!DNL Amazon S3]舊版和新的目的地。 在所有情況下，以&#x200B;**Beta**&#x200B;標籤的卡片都是新的目的地卡片。
+請注意，目前在Experience Platform UI中，您可以看到三個目的地的兩個並排目的地卡片。 以下顯示的是[!DNL Amazon S3]舊版和新的目的地。 在所有情況下，以&#x200B;**Beta**&#x200B;標籤的卡片都是新的目的地卡片。
 
 ![並排檢視中的兩個Amazon S3目的地卡片影像。](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
@@ -50,9 +50,9 @@ Commenting out the three net new cloud storage destinations
 
 ## 此頁面的適用對象 {#who-this-applies-to}
 
-如果您已使用[流量服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)將設定檔匯出至Amazon S3、Azure Blob或SFTP雲端儲存空間目的地，則此API移轉指南適用於您。
+如果您已在使用[流量服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)將設定檔匯出至Amazon S3、Azure Blob或SFTP雲端儲存空間目的地，則此API移轉指南將適用於您。
 
-如果您的[!DNL Amazon S3]、[!DNL Azure Blob]或SFTP雲端儲存空間位置中有指令碼在從Experience Platform匯出的檔案之上執行，請注意，某些引數會隨著新卡片的連線和流量規格以及對應步驟而變更。
+如果您在從Experience Platform匯出的檔案之上的[!DNL Amazon S3]、[!DNL Azure Blob]或SFTP雲端儲存空間位置有正在執行的指令碼，請注意，某些引數會隨著新卡片的連線和流量規格以及對應步驟而變更。
 
 例如，如果您使用指令碼來根據[!DNL Amazon S3]目的地的連線規格，將目的地資料流篩選至[!DNL Amazon S3]目的地，請注意，連線規格將會變更，因此您必須更新篩選器。
 
@@ -93,7 +93,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 >[!TAB 舊式基本連線與目標連線]
 
-+++檢視[!DNL Amazon S3]的舊版[!DNL base connection]
++++檢視[!DNL base connection]的舊版[!DNL Amazon S3]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -126,7 +126,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 +++
 
-+++檢視[!DNL Amazon S3]的舊版[!DNL target connection]
++++檢視[!DNL target connection]的舊版[!DNL Amazon S3]
 
 ```json {line-numbers="true" start-line="1" highlight="12"}
 {
@@ -166,7 +166,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 >[!TAB 新的基底連線和目標連線]
 
-+++檢視[!DNL Amazon S3]的新[!DNL base connection]
++++檢視[!DNL base connection]的新[!DNL Amazon S3]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -199,7 +199,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 +++
 
-+++檢視[!DNL Amazon S3]的新[!DNL target connection]
++++檢視[!DNL target connection]的新[!DNL Amazon S3]
 
 ```json {line-numbers="true" start-line="1" highlight="12, 16-27"}
 {
@@ -265,7 +265,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 >[!TAB 舊式基本連線與目標連線]
 
-+++檢視[!DNL Azure Blob]的舊版[!DNL base connection]
++++檢視[!DNL base connection]的舊版[!DNL Azure Blob]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -297,7 +297,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 +++
 
-+++檢視[!DNL Azure Blob]的舊版[!DNL target connection]
++++檢視[!DNL target connection]的舊版[!DNL Azure Blob]
 
 ```json {line-numbers="true" start-line="1" highlight="13"}
 {
@@ -338,7 +338,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 >[!TAB 新的基底連線和目標連線]
 
-+++檢視[!DNL Azure Blob]的新[!DNL base connection]
++++檢視[!DNL base connection]的新[!DNL Azure Blob]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -370,7 +370,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 +++
 
-+++檢視[!DNL Azure Blob]的新[!DNL target connection]
++++檢視[!DNL target connection]的新[!DNL Azure Blob]
 
 ```json {line-numbers="true" start-line="1" highlight="13, 17-25"}
 {
@@ -473,7 +473,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 +++
 
-+++檢視[!DNL SFTP - SSH key]驗證的舊版[!DNL base connection]
++++檢視[!DNL base connection]驗證的舊版[!DNL SFTP - SSH key]
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -548,7 +548,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 >[!TAB 新的基底連線和目標連線]
 
-+++檢視[!DNL SFTP - password authentication]的新[!DNL base connection]
++++檢視[!DNL base connection]的新[!DNL SFTP - password authentication]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -583,7 +583,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 +++
 
-+++檢視[!DNL SFTP - SSH key]驗證的新[!DNL base connection]
++++檢視[!DNL base connection]驗證的新[!DNL SFTP - SSH key]
 
 ```json {line-numbers="true" start-line="1" highlight="5,12"}
 {
@@ -674,7 +674,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 請注意舊版範例中的`profileSelectors`物件如何被新的`profileMapping`物件取代。
 
-在[API教學課程中尋找關於設定`profileMapping`物件的完整資訊，以將資料匯出至雲端儲存空間目的地](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)。
+在`profileMapping`API教學課程中尋找關於設定[物件的完整資訊，以將資料匯出至雲端儲存空間目的地](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)。
 
 >[!BEGINTABS]
 

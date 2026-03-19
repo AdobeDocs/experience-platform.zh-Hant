@@ -2,9 +2,9 @@
 title: Snap Inc連線
 description: 瞭解如何連線至Snapchat Ads平台以及從Experience Platform匯出您的對象。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1161'
 ht-degree: 3%
 
 ---
@@ -42,12 +42,12 @@ ht-degree: 3%
 所有傳送至&#x200B;*Snap Inc*&#x200B;目的地的識別碼都必須以SHA-256格式進行雜湊處理。 若要在傳送純文字識別碼到目的地之前先進行雜湊處理，請在對應目的地的目標識別碼時核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項。
 
 >[!WARNING]
-> 
+>
 > Snap Inc目的地不會接受未雜湊的識別碼，傳送這些識別碼可能會導致錯誤。
 
 
 >[!IMPORTANT]
-> 
+>
 > Snap Inc目的地不支援多個身分。 請僅選取一個身分。
 
 | 目標身分 | 說明 | 考量事項 |
@@ -66,7 +66,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 | [!DNL Federated Audience Composition] | 是 | 透過[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/start/audiences)匯入到Experience Platform中的對象。 |
 
 {style="table-layout:auto"}
@@ -99,7 +99,7 @@ ht-degree: 3%
 ## 正在連線到Snap Inc {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 ### 驗證目標 {#authenticate}
@@ -124,10 +124,10 @@ ht-degree: 3%
 
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL Account ID]**：與您要匯入對象之廣告帳戶相關聯的廣告帳戶ID。 如需如何尋找此專案的詳細資訊，請參閱Snapchat商務說明中心[上的](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)本檔案。
+* **[!UICONTROL Account ID]**：與您要匯入對象之廣告帳戶相關聯的廣告帳戶ID。 如需如何找到此專案的詳細資訊，請參閱Snapchat商務說明中心[上的](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)本檔案。
 
 >[!IMPORTANT]
-> 
+>
 >輸入不正確或無效的Snapchat廣告帳戶ID將導致對象啟用失敗。 請再次確認您輸入的廣告帳戶ID是否正確。
 
 ### 啟用警示 {#enable-alerts}
@@ -139,7 +139,7 @@ ht-degree: 3%
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
@@ -154,7 +154,7 @@ ht-degree: 3%
 
 ![客群](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱[分段服務總覽](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=zh-Hant#evaluate-segments)。
+請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱[分段服務總覽](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments)。
 
 ## 資料使用與控管 {#data-usage-governance}
 

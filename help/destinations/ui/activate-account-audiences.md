@@ -3,9 +3,9 @@ title: 對目的地啟用帳戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用帳戶對象
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ## 支援的目的地 {#supported-destinations}
 
-前往「**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**」，然後選取「**[!UICONTROL Catalog]**」標籤。 使用&#x200B;**[!UICONTROL Data types]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob儲存空間](/help/destinations/catalog/cloud-storage/azure-blob.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)和[SFTP](/help/destinations/catalog/cloud-storage/sftp.md))以及[Bombora](/help/destinations/catalog/advertising/bombora.md)、[Demandbase](/help/destinations/catalog/advertising/demandbase.md)和[（公司） LinkedIn相符對象](/help/destinations/catalog/social/linkedin-b2b.md)串流目的地。
+前往「**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**」，然後選取「**[!UICONTROL Catalog]**」標籤。 使用&#x200B;**[!UICONTROL Data types]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地（[Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob儲存空間](/help/destinations/catalog/cloud-storage/azure-blob.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)和[SFTP](/help/destinations/catalog/cloud-storage/sftp.md)）以及[Bombora](/help/destinations/catalog/advertising/bombora.md)、[Demandbase](/help/destinations/catalog/advertising/demandbase.md)和[（公司） LinkedIn相符對象](/help/destinations/catalog/social/linkedin-b2b.md)串流目的地。
 
 ![支援帳戶對象的目的地。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
-## 影片概觀
+## 影片概觀 {#video-overview}
 
 請觀看下方的影片，概略瞭解如何建立和啟用帳戶對象，以及啟用帳戶對象時支援的使用案例。
 
@@ -69,17 +69,21 @@ ht-degree: 0%
 
 ## 選取您的帳戶對象 {#select-account-audiences}
 
-使用帳戶對象名稱左側的核取方塊來選取您要匯出至目的地的對象，然後選取&#x200B;**[!UICONTROL Next]**。 請注意，此檢視中只會顯示&#x200B;*帳戶對象*，不會顯示其他對象型別。
+使用帳戶對象名稱左側的核取方塊來選取您要匯出至目的地的對象，然後選取&#x200B;**[!UICONTROL Next]**。
+
+>[!NOTE]
+>
+>此檢視中只會顯示&#x200B;*帳戶對象*，不會顯示其他對象型別。
 
 ![資料集匯出工作流程顯示「選取對象」步驟，您可以在此選取要匯出的帳戶對象。](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
-## 排程和後續步驟
+## 排程和後續步驟 {#scheduling-and-next-steps}
 
 若要進行其餘的啟動工作流程以匯出帳戶對象，請閱讀有關將資料啟動至檔案型目的地的教學課程。 從[排程對象匯出步驟](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)繼續。 如果您要啟用帳戶對象至&#x200B;**[!UICONTROL (Companies) LinkedIn Matched Audiences]**&#x200B;目的地，請閱讀啟用串流目的地的教學課程。 從[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)繼續。
 
 >[!NOTE]
 >
->請注意，將帳戶對象匯出至雲端儲存空間目的地時，在排程步驟中，啟用帳戶對象的工作流程僅允許您依每日排程[匯出](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)完整檔案[和](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)增量檔案&#x200B;__。 不支援每小時匯出。 另請注意，**[!UICONTROL After audience evaluation]**&#x200B;是唯一支援的評估型別。
+>在將帳戶對象匯出至雲端儲存空間目的地時的排程步驟中，啟用帳戶對象的工作流程僅允許您依每日排程[匯出](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)完整檔案[和](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)增量檔案&#x200B;__。 不支援每小時匯出。 **[!UICONTROL After audience evaluation]**&#x200B;是唯一支援的評估型別。
 
 ## 重要圖說文字和已知限制 {#important-callouts-known-limitations}
 
@@ -95,6 +99,8 @@ ht-degree: 0%
 |---------|----------|
 | `accountName` | `companyName` |
 | `accountKey.sourceKey` | `primaryId` （選取&#x200B;**[!UICONTROL Select Identity namespace]**&#x200B;時，在&#x200B;**[!UICONTROL Target Field]**&#x200B;檢視中選取此欄位）。<br> ![選取工作流程中反白的身分名稱空間，以啟用帳戶的對象到目的地。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的帳戶對象。"){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
 
 ### 資料治理實施 {#data-governance-enforcement}
 

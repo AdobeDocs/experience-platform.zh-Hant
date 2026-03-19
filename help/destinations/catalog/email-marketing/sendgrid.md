@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: SendGrid連線
 description: SendGrid目的地可讓您匯出第一方資料，並在SendGrid中根據您的業務需求加以啟用。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1943'
 ht-degree: 3%
 
 ---
@@ -32,13 +32,13 @@ SendGrid使用API持有人權杖作為驗證機制，與SendGrid API通訊。
    * 如需執行哪些動作的指引，請參閱[SendGrid檔案](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key)。
    * 如果您想要以程式設計方式產生API金鑰，請參閱[SendGrid檔案](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys)。
 
-![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
+顯示[建立API金鑰]按鈕的![SendGrid API金鑰設定頁面。](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-在啟用資料到SendGrid目的地之前，您必須在[中建立](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。 另請參閱此頁面下方的[限制](#limits)區段。
+在啟用資料到SendGrid目的地之前，您必須在[中建立](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。 另請參閱此頁面下方的[限制](#limits)區段。
 
 >[!IMPORTANT]
 >
->* 用於從電子郵件設定檔建立郵寄清單的SendGrid API要求在每個設定檔中提供唯一的電子郵件地址。 無論其用作&#x200B;*電子郵件*&#x200B;或&#x200B;*備用電子郵件*&#x200B;的值，皆不適用。 由於SendGrid連線支援電子郵件和備用電子郵件值的對應，請確定在&#x200B;*資料集*&#x200B;的每個設定檔中，使用的所有電子郵件地址都應該是唯一的。 否則，將電子郵件設定檔傳送至SendGrid時，將會導致錯誤，且該電子郵件設定檔將不會出現在資料匯出中。
+>* 用於從電子郵件設定檔建立郵寄清單的SendGrid API要求在每個設定檔中提供唯一的電子郵件地址。 無論其用作&#x200B;*電子郵件*&#x200B;或&#x200B;*備用電子郵件*&#x200B;的值，皆不適用。 由於SendGrid連線同時支援電子郵件和備用電子郵件值的對應，請確定在&#x200B;*資料集*&#x200B;的每個設定檔中，所有使用的電子郵件地址都應該是唯一的。 否則，將電子郵件設定檔傳送至SendGrid時，將會導致錯誤，且該電子郵件設定檔將不會出現在資料匯出中。
 >
 >* 目前，從Experience Platform的對象中移除設定檔時，無法從SendGrid移除設定檔。
 
@@ -59,7 +59,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,14 +92,14 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 
 為了協助您更清楚瞭解您應如何及何時使用SendGrid目的地，以下是[!DNL Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
-### 為多個行銷活動建立行銷清單
+### 為多個行銷活動建立行銷清單 {#create-marketing-list}
 
 使用SendGrid的行銷團隊可以在SendGrid內建立郵寄清單，並填入電子郵件地址。 現在於SendGrid內建立的郵寄清單可隨後用於多個行銷活動。
 
 ## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
@@ -109,26 +109,26 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 1. 在[!DNL Adobe Experience Platform]主控台中，導覽至&#x200B;**目的地**。
 
 1. 選取&#x200B;**目錄**&#x200B;索引標籤並搜尋&#x200B;*SendGrid*。 然後選取&#x200B;**設定**。 在您建立與目的地的連線後，UI標籤會變更為&#x200B;**啟用區段**。
-   ![](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
+   在Experience Platform目的地目錄中的![SendGrid目的地卡片，其設定按鈕反白顯示。](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
 
 1. 系統會顯示精靈，協助您設定SendGrid目的地。 選取&#x200B;**設定新的目的地**，以建立新的目的地。
-   ![](../../assets/catalog/email-marketing/sendgrid/03.jpg)
+   ![SendGrid目的地安裝精靈顯示[設定新的目的地]選項。](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
 1. 選取&#x200B;**新帳戶**&#x200B;選項並填入&#x200B;**持有人權杖**&#x200B;值。 此值是先前在&#x200B;*必要條件區段*&#x200B;中提及的SendGrid [API金鑰](#prerequisites)。
-   ![](../../assets/catalog/email-marketing/sendgrid/04.jpg)
+   ![SendGrid驗證畫面顯示[新帳戶]選項和[持有人權杖]欄位。](../../assets/catalog/email-marketing/sendgrid/04.jpg)
 
 1. 選取&#x200B;**連線到目的地**。 如果您提供的SendGrid *API金鑰*&#x200B;有效，UI會以綠色勾號顯示&#x200B;**已連線**&#x200B;狀態，然後您可以繼續下一個步驟以填寫其他資訊欄位。
 
-![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
+![SendGrid目的地在成功驗證後顯示「已連線」狀態並帶有綠色勾號。](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
 ### 填寫目標詳細資訊 {#destination-details}
 
-在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
+在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Name]**：您日後辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的選擇性說明。
 
-![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+![顯示[名稱]和[描述]欄位的SendGrid目的地詳細資料表單。](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ### 啟用警示 {#enable-alerts}
 
@@ -139,7 +139,7 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
@@ -148,23 +148,23 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 如需此目的地的特定詳細資訊，請參閱下列影像。
 
 1. 選取一或多個要匯出至SendGrid的對象。
-   ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
+   ![對象選取畫面顯示一或多個選取要匯出至SendGrid的對象。](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. 在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**&#x200B;後，您會看到對應頁面，以將來源XDM欄位對應至SendGrid API目標欄位。 下圖示範如何在Experience Platform和SendGrid之間對應身分識別名稱空間。 請確定&#x200B;**[!UICONTROL Source field]** *電子郵件*&#x200B;應該對應至&#x200B;**[!UICONTROL Target field]** *external_id*，如下所示。
-   ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
+   ![對映步驟，顯示在SendGrid啟用工作流程中選取的[新增對應]選項。](../../assets/catalog/email-marketing/sendgrid/13.jpg)
+   ![對應畫面顯示對應到SendGrid中external_id目標欄位的電子郵件來源欄位。](../../assets/catalog/email-marketing/sendgrid/14.jpg)
+   ![顯示已選取要對應至SendGrid目標欄位之XDM來源屬性的對應畫面。](../../assets/catalog/email-marketing/sendgrid/15.jpg)
+   ![顯示在Experience Platform與SendGrid之間設定的其他身分名稱空間對應的對應畫面。](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
 1. 同樣地，對應您要匯出至SendGrid目的地的所需[!DNL Adobe Experience Platform]屬性。
-   ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
+   ![顯示已選取作為SendGrid匯出來源欄位之Experience Platform設定檔屬性的對應畫面。](../../assets/catalog/email-marketing/sendgrid/17.jpg)
+   ![在Experience Platform XDM欄位和SendGrid目標欄位之間顯示已完成屬性對應的對應畫面。](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. 完成對應後，選取&#x200B;**[!UICONTROL Next]**&#x200B;以進入檢閱畫面。
-   ![](../../assets/catalog/email-marketing/sendgrid/22.png)
+1. 完成對應後，選取&#x200B;**[!UICONTROL Next]**以進入檢閱畫面。
+   ![SendGrid啟用檢閱畫面，顯示完成安裝前已設定的對應摘要。](../../assets/catalog/email-marketing/sendgrid/22.png)
 
-1. 選取&#x200B;**[!UICONTROL Finish]**&#x200B;以完成設定。
-   ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
+1. 選取&#x200B;**[!UICONTROL Finish]**以完成設定。
+   ![顯示[完成]按鈕的SendGrid啟用工作流程完成畫面。](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
 可為[SendGrid行銷連絡人>新增或更新連絡人API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)設定的支援屬性對應完整清單如下。
 
@@ -186,26 +186,26 @@ SendGrid支援如下表所述的身分啟用。 深入瞭解[身分](/help/ident
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取「**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**」以導覽至目的地清單。
-   ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
+   ![Experience Platform中的「目的地瀏覽」索引標籤顯示已設定目的地的清單。](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
-   ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
+   在[瀏覽]索引標籤中的![SendGrid目的地顯示已啟用狀態。](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
-   ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
+1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
+   ![SendGrid目的地的啟用資料標籤，顯示選取的對象名稱。](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. 監視對象摘要，並檢查與資料集中建立的計數對應的設定檔計數。
-   ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
+   ![對象摘要面板，顯示所選SendGrid對象的設定檔計數。](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. [SendGrid行銷清單>建立清單API](https://docs.sendgrid.com/api-reference/lists/create-list)是用來在SendGrid中建立唯一的連絡人清單，方法是加入&#x200B;*list_name*屬性的值和資料匯出的時間戳記。 導覽至SendGrid網站，並檢查是否建立了符合名稱模式的新連絡人清單。
-   ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
+   ![SendGrid行銷清單頁面顯示符合預期名稱模式的新建立連絡人清單。](../../assets/catalog/email-marketing/sendgrid/29.jpg)
+   ![SendGrid連絡人清單詳細資料檢視，確認已使用正確名稱建立新清單。](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. 選取新建立的連絡人清單，並檢查您是否將來自您建立之資料集的新電子郵件記錄填入新連絡人清單中。
 
 1. 此外，也檢查一些電子郵件以驗證欄位對應是否正確。
-   ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-   ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
+   ![SendGrid連絡人詳細資料檢視，顯示從匯出資料集填入的電子郵件記錄欄位。](../../assets/catalog/email-marketing/sendgrid/31.jpg)
+   ![SendGrid連絡人記錄顯示確認來自Experience Platform的正確欄位對應的對應欄位值。](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## 資料使用與控管 {#data-usage-governance}
 

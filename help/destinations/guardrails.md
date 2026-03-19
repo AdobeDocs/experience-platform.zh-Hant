@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1749'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 此頁面提供啟動行為的預設使用量和速率限制。 檢閱下列護欄時，假設您已正確[連線至目的地](/help/destinations/ui/connect-destination.md)。
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 | 啟用頻率 | 每3、6、8或12小時進行一次每日完整匯出或更頻繁的增量匯出。 | 系統強制的護欄 | 閱讀[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)檔案區段，以取得批次匯出頻率增量的詳細資訊。 |
 | 在指定小時可匯出的受眾數上限 | 100 | 效能護欄 | 建議向批次目的地執行個體新增最多100個對象。 |
 | 要啟用的每個檔案的最大列數（記錄） | 500萬 | 系統強制的護欄 | Adobe Experience Platform會自動將匯出的檔案分割為每個檔案500萬筆記錄（列）。 每一列代表一個設定檔。 分割檔案名稱會附加一個數字，表示檔案是較大匯出的一部分，例如： `filename.csv`、`filename_2.csv`、`filename_3.csv`。 如需詳細資訊，請參閱啟動批次目的地教學課程的[排程區段](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。 |
-| 可在目的地執行個體中啟用的外部對象（例如，FAC、自訂上傳、對象構成）最大數量 | 10 | 系統強制的護欄 | 將外部對象（例如[同盟對象組合](/help/segmentation/ui/audience-portal.md#fac)、[自訂上傳](/help/segmentation/ui/audience-portal.md#import-audience)、[對象組合](/help/segmentation/ui/audience-portal.md#audience-composition)）啟用至批次檔案型目的地時，您可以在目的地執行個體中啟用10個這類對象的限制。 如需這些對象型別的詳細資訊，請參閱[對象型別和自訂](/help/segmentation/ui/audience-portal.md#customize)。 深入瞭解[對批次檔案型目的地](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)啟用外部對象的工作流程。 |
+| 可在目的地執行個體中啟用的外部對象（例如FAC、自訂上傳、對象構成）最大數量 | 10 | 系統強制的護欄 | 將外部對象（例如[同盟對象組合](/help/segmentation/ui/audience-portal.md#fac)、[自訂上傳](/help/segmentation/ui/audience-portal.md#import-audience)、[對象組合](/help/segmentation/ui/audience-portal.md#audience-composition)）啟用至批次檔案型目的地時，您可以在目的地執行個體中啟用10個這類對象的限制。 如需這些對象型別的詳細資訊，請參閱[對象型別和自訂](/help/segmentation/ui/audience-portal.md#customize)。 深入瞭解[對批次檔案型目的地](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)啟用外部對象的工作流程。 |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-#### 排程資料集匯出的護欄
+#### 排程資料集匯出的護欄 {#scheduled-dataset-exports}
 
 對於排程或循環的資料集匯出，以下護欄對於匯出的檔案的兩種格式（JSON或parquet）相同，並依資料集型別分組。
 
@@ -191,12 +191,12 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 {style="table-layout:auto"}
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=zh-Hant#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform (B2C Edition - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Prime和Ultimate套件)](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform （B2C Edition - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform （B2P - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform （B2B - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

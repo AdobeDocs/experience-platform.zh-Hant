@@ -4,9 +4,9 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: ba2de112ba9f1fce35f847e9eb9396e65f2a9232
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '4976'
+source-wordcount: '4973'
 ht-degree: 4%
 
 ---
@@ -53,7 +53,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Adobe Experience Platform]資料建立對象，並在[!DNL Real-Time Customer Profile]中產生對象。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-以下小節提供您需要瞭解的其他資訊，以便在Experience Platform中將資料啟用至檔案型目的地。
+以下小節提供在Experience Platform中啟用檔案型目的地資料所需瞭解的其他資訊。
 
 ### 必要權限 {#permissions}
 
@@ -103,7 +103,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 |---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
 | Azure Blob 儲存體 | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
-| Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
+| Azure Data Lake Gen 2 (ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
 | 資料登陸區(DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `fd36aaa4-bf2b-43fb-9387-43785eeeb799` |
@@ -703,7 +703,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-使用驗證規格（亦即回應中的`authSpec`）中指定的屬性，您可以使用每個目的地型別特定的必要認證來建立基礎連線，如下列範例所示：
+您可以使用驗證規格（亦即回應中的`authSpec`）中指定的屬性，以每個目的地型別特定的必要認證來建立基礎連線，如下列範例所示：
 
 >[!BEGINTABS]
 
@@ -799,7 +799,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需驗證認證的資訊，請參閱Azure Blob儲存體目的地檔案頁面的[對目的地](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate)驗證區段。
+>如需有關如何取得所需驗證認證的資訊，請參閱Azure Blob儲存體目的地檔案頁面的[對目的地進行驗證](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate)區段。
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需驗證認證的資訊，請參閱Azure Data Lake Gen 2(ADLS Gen2)目的地檔案頁面的[對目的地](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate)驗證區段。
+>有關如何取得所需驗證認證的資訊，請參閱Azure Data Lake Gen 2 (ADLS Gen2)目的地檔案頁面的[對目的地](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate)驗證區段。
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
@@ -1094,7 +1094,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-### 新增加密至匯出的檔案
+### 新增加密至匯出的檔案 {#add-encryption}
 
 您可以選擇將加密新增至匯出的檔案。 若要這麼做，您必須從`encryption`物件新增專案。 請參閱以下請求範例，並將強制引數反白顯示：
 
@@ -2590,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得必要目標引數的資訊，請參閱Azure [目的地檔案頁面的](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)填寫目的地詳細資料[!DNL Data Lake Gen 2(ADLS Gen2)]區段。
+>如需有關如何取得所需目標引數的資訊，請參閱Azure [目的地檔案頁面的](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details)填寫目的地詳細資料[!DNL Data Lake Gen 2(ADLS Gen2)]區段。
 
 請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
@@ -3273,7 +3273,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 記下回應中的資料流ID。 此ID在後續步驟中是必要的。
 
-### 將對象新增至匯出
+### 將對象新增至匯出 {#add-audiences}
 
 在此步驟中，您也可以選取要匯出至目的地的對象。 如需此步驟以及將對象新增至資料流的要求格式的詳細資訊，請檢視API參考檔案的[更新目的地資料流](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById)區段中的範例。
 
@@ -3292,7 +3292,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![對應步驟](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)的範例
 
-### 建立輸入結構描述
+### 建立輸入結構描述 {#create-input-schema}
 
 若要建立輸入結構描述，您必須先擷取您的[聯合結構描述](/help/profile/ui/union-schema.md)以及可匯出到目的地的身分。 這是屬性和身分的結構描述，您可以選取它作為來源對應。
 
@@ -3730,7 +3730,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 回應中的ID代表您已建立的輸入結構描述的唯一識別碼。 從回應中複製ID，因為您將在稍後步驟中重複使用它。
 
-### 建立輸出結構描述
+### 建立輸出結構描述 {#create-output-schema}
 
 接下來，您必須為匯出設定輸出結構描述。 首先，您需要尋找並檢查現有的合作夥伴結構描述。
 

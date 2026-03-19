@@ -3,9 +3,9 @@ title: 對目的地啟用潛在客戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用潛在客戶對象
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 18%
 
 ---
@@ -63,11 +63,15 @@ ht-degree: 18%
 
 ## 選取您的潛在客戶對象 {#select-prospect-audiences}
 
-使用潛在客戶對象名稱左邊的核取方塊來選取您要匯出至目的地的對象，然後選取&#x200B;**[!UICONTROL Next]**。 請注意，此檢視只會顯示潛在客戶對象，不會顯示其他對象。
+使用潛在客戶對象名稱左邊的核取方塊來選取您要匯出至目的地的對象，然後選取&#x200B;**[!UICONTROL Next]**。
+
+>[!NOTE]
+>
+>此檢視只會顯示潛在客戶對象，不會顯示其他對象。
 
 ![資料集匯出工作流程顯示「選取對象」步驟，您可以在此選取要匯出的潛在客戶對象。](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## 排程和後續步驟
+## 排程和後續步驟 {#scheduling-and-next-steps}
 
 如需匯出潛在客戶受眾的其餘啟動工作流程，請閱讀將資料啟動至檔案型目的地的教學課程。 從[排程對象匯出步驟](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)繼續。
 

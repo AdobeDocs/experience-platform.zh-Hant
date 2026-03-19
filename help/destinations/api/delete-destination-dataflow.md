@@ -5,10 +5,10 @@ title: 使用流程服務API刪除目的地資料流
 type: Tutorial
 description: 瞭解如何使用資料流服務API將資料流刪除至批次和串流目的地。
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 14%
+source-wordcount: '563'
+ht-degree: 18%
 
 ---
 
@@ -24,14 +24,14 @@ ht-degree: 14%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 * [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功刪除資料流。
+以下小節提供其他必要資訊，您必須知道這些資訊才能使用[!DNL Flow Service] API成功刪除資料流。
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [!DNL Experience Platform] 疑難排解指南中的[如何讀取範例 API 呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集所需標頭的值 {#gather-values-for-required-headers}
 
@@ -67,6 +67,8 @@ DELETE /flows/{FLOW_ID}
 | --------- | ----------- |
 | `{FLOW_ID}` | 您要刪除之目的地資料流的唯一`id`值。 |
 
+{style="table-layout:auto"}
+
 **要求**
 
 ```shell
@@ -92,4 +94,4 @@ curl -X DELETE \
 
 如需有關如何使用使用者介面執行這些操作的步驟，請參閱有關[在UI中刪除資料流](../ui/delete-destinations.md)的教學課程。
 
-您現在可以使用[!DNL Flow Service] API繼續並[刪除目的地帳戶](/help/destinations/api/delete-destination-account.md)。
+您現在可以使用[ API繼續並](/help/destinations/api/delete-destination-account.md)刪除目的地帳戶[!DNL Flow Service]。

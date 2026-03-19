@@ -2,9 +2,9 @@
 title: Medallia連線
 description: 針對目標Medallia調查和意見回饋收集啟用設定檔，以更好地瞭解客戶需求和期望。
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 3%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 3%
 
 為協助您更清楚瞭解如何使用Medallia目的地，以下是Adobe Experience Platform客戶可使用此目的地解決的範例使用案例。
 
-### 使用案例#1
+### 使用案例#1 {#use-case-1}
 
 B2B品牌想要評估並簡化其上線計畫。 他們想要將個人化調查即時傳送給剛完成入門流程的客戶。
 
-### 使用案例#2
+### 使用案例#2 {#use-case-2}
 
 retailer想要更瞭解客戶對訂單履行情況的偏好設定。 他們想要傳送簡短的1題SMS調查，給過去一個月曾經線上上和店內購買過的客戶。
 
@@ -61,7 +61,7 @@ Medallia支援下表所述的身分啟用。 深入瞭解[身分](/help/identity
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ Medallia支援下表所述的身分啟用。 深入瞭解[身分](/help/identity
 ## 連線到目標 {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
@@ -128,7 +128,7 @@ Medallia支援下表所述的身分啟用。 深入瞭解[身分](/help/identity
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
@@ -153,7 +153,7 @@ Medallia支援下表所述的身分啟用。 深入瞭解[身分](/help/identity
 ![顯示身分和屬性範例對應的影像。](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
-> 
+>
 > 使用&#x200B;**目標欄位** > **選取自訂屬性** > **屬性名稱**，與您的Medallia傳遞團隊共用每個對應目標自訂屬性的確切&#x200B;**屬性名稱**。 您可能希望直接分享對應頁面的熒幕擷圖。
 
 ## 匯出的資料 {#exported-data}

@@ -2,7 +2,7 @@
 description: 瞭解如何透過「/authoring/destination-servers」端點在Adobe Experience Platform Destination SDK中設定目的地伺服器規格。
 title: 使用Destination SDK建立之目的地的伺服器規格
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2775'
 ht-degree: 2%
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-### 何時使用硬式編碼欄位或範本化欄位
+### 何時使用硬式編碼欄位或範本化欄位 {#when-to-use-hard-coded-vs-templatized}
 
 根據您要建立的整合型別，硬式編碼和範本化欄位在Destination SDK中都有各自的用途。
 
@@ -288,7 +288,7 @@ ht-degree: 2%
 | `fileBasedAzureBlobDestination.path.templatingStrategy` | 字串 | *必要*。 根據`path.value`欄位中使用的值型別設定此值。<ul><li>如果您希望使用者在Experience Platform UI中輸入自己的[!DNL Azure Blob] [儲存體帳戶URI](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)，請將此值設定為`PEBBLE_V1`。 在此情況下，您必須將`path.value`欄位範本化，才能從使用者填入的[客戶資料欄位](../destination-configuration/customer-data-fields.md)中讀取值。 此使用案例如上述範例所示。</li><li>如果您使用硬式編碼路徑進行整合，例如`"path.value": "https://myaccount.blob.core.windows.net/"`，則將此值設定為`NONE`。 |
 | `fileBasedAzureBlobDestination.path.value` | 字串 | 您的[!DNL Azure Blob]存放區的路徑。 這可以是範本化欄位（會讀取使用者填入的[客戶資料欄位](../destination-configuration/customer-data-fields.md)中的值，如上述範例所示），或是硬式編碼值（例如`https://myaccount.blob.core.windows.net/`）。 |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | 字串 | *必要*。 根據`container.value`欄位中使用的值型別設定此值。<ul><li>如果您希望使用者在Experience Platform UI中輸入自己的[!DNL Azure Blob] [容器名稱](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)，請將此值設定為`PEBBLE_V1`。 在此情況下，您必須將`container.value`欄位範本化，才能從使用者填入的[客戶資料欄位](../destination-configuration/customer-data-fields.md)中讀取值。 此使用案例如上述範例所示。</li><li>如果您使用硬式編碼容器名稱進行整合，例如`"path.value: myContainer"`，則將此值設定為`NONE`。 |
-| `fileBasedAzureBlobDestination.container.value` | 字串 | 用於此目的地的Azure Blob儲存體容器的名稱。 這可以是範本化欄位（會讀取使用者填入的[客戶資料欄位](../destination-configuration/customer-data-fields.md)中的值，如上述範例所示），或是硬式編碼值（例如`myContainer`）。 |
+| `fileBasedAzureBlobDestination.container.value` | 字串 | 用於此目的地的Azure Blob儲存體容器名稱。 這可以是範本化欄位（會讀取使用者填入的[客戶資料欄位](../destination-configuration/customer-data-fields.md)中的值，如上述範例所示），或是硬式編碼值（例如`myContainer`）。 |
 
 {style="table-layout:auto"}
 

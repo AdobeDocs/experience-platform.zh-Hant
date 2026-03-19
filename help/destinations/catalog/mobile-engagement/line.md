@@ -4,9 +4,9 @@ title: LINE連線
 description: LINE目的地可讓您新增設定檔至Experience Platform對象，並為已連線的使用者提供個人化體驗。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1316'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 ### [!DNL LINE]必要條件 {#prerequisites-destination}
 
-請注意[!DNL LINE]中的下列必要條件，以便從Experience Platform將資料匯出至您的[!DNL LINE]帳戶：
+請注意[!DNL LINE]中的下列先決條件，要將資料從Experience Platform匯出至您的[!DNL LINE]帳戶：
 
 #### 您必須擁有[!DNL LINE]帳戶 {#prerequisites-account}
 
@@ -58,7 +58,7 @@ ht-degree: 3%
 
 | 目標身分 | 說明 |
 |---|---|
-| 廣告商ID (IFA) | 當來源身分識別是IFA *(廣告商的Apple ID)*&#x200B;或GAID * (Google Advertising ID)名稱空間時，選取廣告商(IFA)目標身分識別的ID。 |
+| 廣告商ID (IFA) | 當來源身分識別是IFA *（廣告商的Apple ID）*&#x200B;或GAID * (Google Advertising ID)名稱空間時，選取廣告商(IFA)目標身分識別的ID。 |
 | LINE使用者ID | 當來源身分識別為LINE使用者ID時，選取UserID目標身分。 |
 
 ## 支援的對象 {#supported-audiences}
@@ -68,7 +68,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式(例如Adobe Journey Optimizer)中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -136,7 +136,7 @@ ht-degree: 3%
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
@@ -152,6 +152,8 @@ ht-degree: 3%
 | --- | --- | --- |
 | 廣告商ID (IFA) | `IDFA`或 `GAID` | `LineId` |
 | LINE使用者ID | `UserID` | `LineId` |
+
+{style="table-layout:auto"}
 
 如果您的目標身分識別是&#x200B;*LINE使用者ID的*，您將需要下列專案：
 ![Experience Platform UI熒幕擷圖範例，顯示將LINE使用者ID用於Target身分識別時的Target對應。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)

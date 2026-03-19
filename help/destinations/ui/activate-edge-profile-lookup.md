@@ -3,9 +3,9 @@ title: 即時查詢邊緣設定檔屬性
 description: 瞭解如何使用自訂Personalization目的地和Edge Network API即時查詢邊緣設定檔屬性
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1836'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,12 @@ Adobe Experience Platform使用[即時客戶個人檔案](../../profile/home.md)
 
 Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 如需Edge Network API護欄的詳細資訊，請參閱護欄[檔案頁面](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)。
 
-| Edge Network服務 | Edge區段 | 每秒要求數 |
+| Edge Network服務 | 邊緣細分 | 每秒要求數 |
 |---------|----------|---------|
 | [透過](../catalog/personalization/custom-personalization.md)Edge Network API[自訂個人化目的地](https://developer.adobe.com/data-collection-apis/docs/api/) | 是 | 1500 |
 | [透過](../catalog/personalization/custom-personalization.md)Edge Network API[自訂個人化目的地](https://developer.adobe.com/data-collection-apis/docs/api/) | 無 | 1500 |
+
+{style="table-layout:auto"}
 
 ## 步驟1：建立和設定資料流 {#create-datastream}
 
@@ -71,7 +73,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 
 ## 步驟3：將設定檔屬性資料傳送至Edge Network{#configure-custom-personalization-connection}
 
-為了即時查詢邊緣設定檔，包括屬性和對象成員資格資料，這些資料必須在Edge Network上提供。 為此，您必須建立與&#x200B;**[!UICONTROL Custom Personalization With Attributes]**&#x200B;目的地的連線並啟用對象，包括您想在邊緣設定檔上查閱的屬性。
+若要即時查詢邊緣設定檔，包括屬性和對象成員資格資料，資料必須可在Edge Network上取得。 為此，您必須建立與&#x200B;**[!UICONTROL Custom Personalization With Attributes]**&#x200B;目的地的連線並啟用對象，包括您想在邊緣設定檔上查閱的屬性。
 
 +++ 使用屬性連線設定自訂Personalization
 
@@ -88,7 +90,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 建立&#x200B;**[!UICONTROL Custom Personalization With Attributes]**&#x200B;連線後，您就可以將設定檔資料傳送至Edge Network了。
 
 >[!IMPORTANT]
-> 
+>
 > * 若要啟用資料並啟用工作流程的[對應步驟](#mapping)，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。
 > 
 > 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
@@ -204,6 +206,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | 可以。 | 您在[步驟1](#create-datastream)中建立的資料流的資料流識別碼。 |
 
+{style="table-layout:auto"}
+
 ### 回應 {#response}
 
 成功的回應會傳回HTTP狀態`200 OK`，其中的`Handle`物件包含與下列標籤中範例類似的資訊，端視設定檔是否位於邊緣而定。
@@ -283,6 +287,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | `type` | `handle`物件依型別分組。 若是邊緣設定檔查詢使用案例，`handle`物件的型別一律為`activation:pull`。 |
 | `eventIndex` | Edge Network會以陣列的形式從使用者端接收事件。 陣列中事件的順序會在處理期間保留，並會反映在此索引中。 事件索引從`0`開始。 |
 
+{style="table-layout:auto"}
+
 >[!TAB 邊緣上不存在設定檔]
 
 如果邊緣上沒有設定檔，您可以預期類似以下的回應。
@@ -307,6 +313,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | `payload` | 當設定檔不存在於邊緣時，`payload`物件為空白。 |
 | `type` | `payload`物件依型別分組。 若是邊緣設定檔查詢使用案例，`payload`物件的型別一律為`activation:pull`。 |
 | `eventIndex` | Edge Network會以陣列的形式接收來自使用者端的事件。 陣列中事件的順序會在處理期間保留，並會反映在此索引中。 事件索引從`0`開始。 |
+
+{style="table-layout:auto"}
 
 >[!ENDTABS]
 

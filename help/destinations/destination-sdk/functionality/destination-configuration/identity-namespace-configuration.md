@@ -2,7 +2,7 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定支援的目標身分。
 title: 身分名稱空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -92,11 +92,11 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 
 深入瞭解[身分名稱空間概觀](../../../../identity-service/features/namespaces.md)中的身分。
 
-## 對應考量事項
+## 對應考量事項 {#mapping-considerations}
 
 如果客戶選取來源身分名稱空間但未選取目標對應，Experience Platform會自動以相同名稱的屬性填入目標對應。
 
-## 設定選擇性來源欄位雜湊
+## 設定選擇性來源欄位雜湊 {#configure-optional-hashing}
 
 Experience Platform客戶可選擇以雜湊格式或純文字將資料擷取至Experience Platform。 如果您的目的地平台接受雜湊和未雜湊的資料，您可以讓客戶自行選擇是否要讓Experience Platform在來源欄位值匯出至您的目的地時，將來源欄位值雜湊。
 
@@ -122,7 +122,7 @@ Experience Platform客戶可選擇以雜湊格式或純文字將資料擷取至E
 
 將未雜湊的來源屬性對應到目的地預期雜湊的目標屬性時（例如： `email_lc_sha256`或`phone_sha256`），請核取&#x200B;**套用轉換**&#x200B;選項，讓Adobe Experience Platform在啟用時自動雜湊來源屬性。
 
-## 設定強制來源欄位雜湊
+## 設定強制來源欄位雜湊 {#configure-mandatory-hashing}
 
 如果您的目的地僅接受雜湊資料，您可以設定匯出的屬性，讓Experience Platform自動對其進行雜湊。 當對應&#x200B;**和**&#x200B;身分時，下列組態會自動檢查`Email`套用轉換`Phone`選項。
 

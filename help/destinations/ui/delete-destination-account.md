@@ -4,10 +4,10 @@ title: 刪除目的地帳戶
 type: Tutorial
 description: 本教學課程列出在Adobe Experience Platform UI中刪除目的地帳戶的步驟
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 0%
+source-wordcount: '294'
+ht-degree: 1%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-**[!UICONTROL 帳戶]**&#x200B;索引標籤顯示您已與各種目的地建立之連線的詳細資料。 請參閱[帳戶總覽](../ui/destinations-workspace.md#accounts)，瞭解您可以在每個目的地帳戶上取得的所有資訊。
+「**[!UICONTROL Accounts]**」標籤顯示您已與各種目的地建立之連線的詳細資料。 請參閱[帳戶總覽](../ui/destinations-workspace.md#accounts)，瞭解您可以在每個目的地帳戶上取得的所有資訊。
 
-本教學課程涵蓋使用Experience PlatformUI刪除不再需要的目的地帳戶的步驟。
+本教學課程涵蓋如何使用Experience Platform UI刪除不再需要的目的地帳戶的步驟。
 
 ![帳戶標籤](../assets/ui/update-accounts/destination-accounts.png)
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 請依照下列步驟刪除現有的目的地帳戶。
 
-1. 登入[Experience PlatformUI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL 目的地]**。 從頂端標題選取&#x200B;**[!UICONTROL 帳戶]**&#x200B;以檢視您現有的帳戶。
+1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視您現有的帳戶。
 
    ![帳戶標籤](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -37,16 +37,16 @@ ht-degree: 0%
 
    ![篩選目的地](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. 選取您要刪除之帳戶名稱旁的省略符號(`...`)。 出現快顯面板，其中提供&#x200B;**[!UICONTROL 啟用對象]**、**[!UICONTROL 編輯詳細資料]**&#x200B;和&#x200B;**[!UICONTROL 刪除]**&#x200B;帳戶的選項。 選取![刪除按鈕](/help/images/icons/delete.png) **[!UICONTROL 刪除]**&#x200B;按鈕以刪除所需的帳戶。
+3. 選取您要刪除之帳戶名稱旁的省略符號(`...`)。 出現快顯面板，提供帳戶&#x200B;**[!UICONTROL Activate audiences]**、**[!UICONTROL Edit details]**&#x200B;和&#x200B;**[!UICONTROL Delete]**&#x200B;的選項。 選取![刪除按鈕](/help/images/icons/delete.png) **[!UICONTROL Delete]**&#x200B;按鈕以刪除所需的帳戶。
 
    ![刪除目的地帳戶](../assets/ui/delete-accounts/delete-accounts.png)
 
-4. 最後確認對話方塊出現，選取&#x200B;**[!UICONTROL 刪除]**&#x200B;以完成程式。
+4. 最後確認對話方塊出現，選取&#x200B;**[!UICONTROL Delete]**&#x200B;以完成程式。
 
 ![確認帳戶刪除](../assets/ui/delete-accounts/confirm-account-deletion.png)
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 按照本教學課程，您已成功使用目的地工作區刪除現有帳戶。
 
-如需有關如何使用[!DNL Flow Service] API以程式設計方式執行這些操作的步驟，請參閱有關使用流程服務API [&#128279;](../api/delete-destination-account.md)刪除連線的教學課程
+如需有關如何使用[!DNL Flow Service] API以程式設計方式執行這些操作的步驟，請參閱有關使用Flow Service API [刪除連線的教學課程](../api/delete-destination-account.md)

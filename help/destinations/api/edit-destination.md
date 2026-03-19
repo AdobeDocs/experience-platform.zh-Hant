@@ -4,9 +4,9 @@ title: 使用流程服務API編輯目的地連線
 type: Tutorial
 description: 瞭解如何使用流量服務API編輯目的地連線的各種元件。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1610'
 ht-degree: 5%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 5%
 
 本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 * [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功更新資料流。
@@ -64,7 +64,7 @@ Experience Platform中的所有資源（包括屬於[!DNL Flow Service]的資源
 
 >[!TIP]
 >
->您可以使用Experience Platform UI來取得目的地所需的資料流ID。 前往&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**，選取所需的目的地資料流，然後在右側邊欄中尋找目的地ID。 目的地ID是您將在下一個步驟中作為流量ID使用的值。
+>您可以使用Experience Platform UI來取得目的地所需的資料流ID。 前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**，選取所需的目的地資料流，然後在右側邊欄中尋找目的地ID。 目的地ID是您將在下一個步驟中作為流量ID使用的值。
 >
 > ![使用Experience Platform UI取得目的地ID](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -79,6 +79,8 @@ GET /flows/{FLOW_ID}
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{FLOW_ID}` | 您要擷取之目的地資料流的唯一`id`值。 |
+
+{style="table-layout:auto"}
 
 **要求**
 
@@ -233,6 +235,8 @@ curl -X PATCH \
 | `path` | 定義要更新的流程部分。 |
 | `value` | 您想要用來更新引數的新值。 |
 
+{style="table-layout:auto"}
+
 **回應**
 
 成功的回應會傳回目標連線ID和更新的Etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的目標連線ID。
@@ -248,7 +252,7 @@ curl -X PATCH \
 
 **要求**
 
-下列要求會更新[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md)或[[!DNL Google Ad Manager 360] 目的地](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details)連線的引數，以將新的[**[!UICONTROL 附加對象ID新增至對象名稱]**](/help/release-notes/2023/april-2023.md#destinations)欄位。
+下列要求會更新[[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md)或[[!DNL Google Ad Manager 360] 目的地](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details)連線的引數，以新增新的[**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations)欄位。
 
 ```shell
 curl -X PATCH \
@@ -272,6 +276,8 @@ curl -X PATCH \
 | `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
 | `path` | 定義要更新的流程部分。 |
 | `value` | 您想要用來更新引數的新值。 |
+
+{style="table-layout:auto"}
 
 **回應**
 
@@ -314,6 +320,8 @@ curl -X PATCH \
 | `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
 | `path` | 定義要更新的流程部分。 |
 | `value` | 您想要用來更新引數的新值。 |
+
+{style="table-layout:auto"}
 
 **回應**
 
@@ -392,6 +400,8 @@ curl -X PATCH \
 | `path` | 定義要更新的流程部分。 |
 | `value` | 您想要用來更新引數的新值。 |
 
+{style="table-layout:auto"}
+
 **回應**
 
 成功的回應會傳回您的基本連線ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的基本連線ID。
@@ -433,6 +443,8 @@ curl -X PATCH \
 | `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
 | `path` | 定義要更新的流程部分。 |
 | `value` | 您想要用來更新引數的新值。 |
+
+{style="table-layout:auto"}
 
 **回應**
 

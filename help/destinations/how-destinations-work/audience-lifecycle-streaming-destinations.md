@@ -1,13 +1,13 @@
 ---
 title: Experience Platform和串流目的地的對象生命週期
 description: 瞭解串流目的地平台如何反映Experience Platform的對象名稱和對應。
-source-git-commit: 6b4dfa714e078fb5b97900811aade081ffef0d78
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
 
 ---
-
 
 # 串流目的地的對象生命週期
 
@@ -86,6 +86,6 @@ ht-degree: 2%
 * [Twitter自訂對象](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### 不支援對象移除的目的地
+### 不支援對象移除的目的地 {#no-removal-support}
 
 對於前述未列出的目的地，當您從目的地取消對應對象時，Experience Platform只會移除對應。 目的地平台中的對象會維持作用中，直到您在合作夥伴平台中手動將其刪除為止。

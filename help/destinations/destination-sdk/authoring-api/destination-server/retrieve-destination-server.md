@@ -2,10 +2,10 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK擷取目的地伺服器設定的API呼叫範例。
 title: 擷取目的地伺服器設定
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 0%
+source-wordcount: '465'
+ht-degree: 1%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
-繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)，以取得成功呼叫API所需瞭解的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 擷取目的地伺服器設定 {#retrieve}
 
-您可以對`/authoring/destination-servers`端點發出`GET`要求，以擷取現有的目的地伺服器組態。
+您可以對`GET`端點發出`/authoring/destination-servers`要求，以擷取現有的目的地伺服器組態。
 
 >[!TIP]
 >
@@ -60,7 +60,7 @@ GET /authoring/destination-servers/{INSTANCE_ID}
 
 下列要求將根據[!DNL IMS Org ID]和沙箱設定，擷取您有權存取的目的地伺服器設定清單。
 
-+++要求
++++請求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -155,7 +155,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 下列要求將擷取`{INSTANCE_ID}`引數定義的特定目的地伺服器組態。
 
-+++要求
++++請求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -168,6 +168,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | 參數 | 說明 |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | 您要擷取的目的地伺服器組態ID。 |
+
+{style="table-layout:auto"}
 
 +++
 
