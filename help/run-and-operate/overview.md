@@ -2,13 +2,13 @@
 title: 執行與操作概觀
 description: 使用執行和操作工具檢查、疑難排解並最佳化Experience Platform實施。 瞭解已排程的批次啟用、識別設定問題，並改善系統可靠性。
 hide: true
-source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
+exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
+source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
-
 
 # 執行與操作概觀
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >目前唯一可用的功能是[工作排程](job-schedules.md)。
+   >目前可用的功能是[工作排程](job-schedules.md)和[健康狀態檢查](health-checks.md)。
 
 ![Experience Platform UI顯示[執行並操作]左側導覽。](assets/overview/run-and-operate.png)
 
@@ -78,12 +78,28 @@ ht-degree: 1%
 
 您也可以瞭解資料處理階段之間的相依性，協助您確保在Experience Platform工作流程中穩定傳輸資料。
 
+### 健康情況檢查 {#health-checks}
+
+>[!IMPORTANT]
+>
+>[!UICONTROL Health checks]目前是以限量版提供。
+
+透過[健康狀態檢查](health-checks.md)，您可以主動偵測結構描述和身分設定問題，以免其影響您的業務運作。 此時，健康情況檢查會在您的結構描述和身分名稱空間中執行每日靜態掃描，顯示遺漏的最佳實務、錯誤設定和模式，進而導致下游失敗。
+
+健康情況檢查目前會評估五個基本區域：
+
+* **[身分欄位驗證](health-checks.md#identity-field-validation)**：確認身分欄位具有適當的長度和模式條件約束。
+* **[身分圖表連結規則](health-checks.md#identity-graph-linking-rules)**：確認連結規則已設定為防止設定檔摺疊。
+* **[人員與非人員身分設定](health-checks.md#people-non-people-identity)**：驗證結構描述類別間正確的身分型別使用方式。
+* **[自訂身分名稱空間說明](health-checks.md#namespace-missing-description)**：請確定名稱空間中繼資料已完成。
+* **[已棄用的身分識別名稱空間](health-checks.md#deprecated-namespace)**：偵測過時的名稱空間以進行清除。
+
 ## 後續步驟 {#next-steps}
 
 現在您已瞭解[!UICONTROL Run and Operate]工具的用途和功能，請探索下列資源以深化您的知識：
 
-* 瞭解[批次擷取](../ingestion/batch-ingestion/overview.md)，瞭解如何將資料擷取到Experience Platform
+* 瞭解如何使用[健康情況檢查](health-checks.md)來偵測結構描述和身分識別組態問題
 * 瞭解如何[檢查批次擷取和啟用的工作排程](job-schedules.md)
+* 瞭解[批次擷取](../ingestion/batch-ingestion/overview.md)，瞭解如何將資料擷取到Experience Platform
 * 瞭解如何為批次目的地[設定排定的啟用](../destinations/ui/activate-batch-profile-destinations.md)
 * 探索目的地[資料流監視](../dataflows/ui/monitor-destinations.md)
-

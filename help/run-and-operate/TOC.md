@@ -6,9 +6,9 @@ user-guide-title: Run and Operate指南
 user-guide-description: 使用執行和操作工具檢查、疑難排解並最佳化Adobe Experience Platform實施。 瞭解已排程的批次啟用、識別設定問題，並改善系統可靠性。
 description: 本檔案列出Adobe Experience Platform執行和操作工具的目錄
 role: Admin, User
-source-git-commit: edc3d4bd444a709f45128795e08ca78122dba4f3
+source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
 workflow-type: tm+mt
-source-wordcount: '63'
+source-wordcount: '65'
 ht-degree: 6%
 
 ---
@@ -21,4 +21,4 @@ ht-degree: 6%
    * [檢查工作排程](job-schedules.md)
    * [檢視工作詳細資料](job-schedules-details.md)
    * [識別反模式](job-schedules-anti-patterns.md)
-
+* [健康情況檢查](health-checks.md)
