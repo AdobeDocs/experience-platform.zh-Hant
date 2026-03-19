@@ -1,20 +1,20 @@
 ---
-title: 資料流組態設定
+title: 資料流設定
 description: 設定資料串流，以使用網頁SDK標籤擴充功能將資料傳送至。
 exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '251'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
-# 資料流組態設定 {#datastreams}
+# 資料流設定 {#datastreams}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_datastreams"
 >title="資料串流"
->abstract="必填。在Edge Network中設定您想要傳送資料的目的地資料流。"
+>abstract="必填。設定您要在 Edge Network 中將資料傳送到的資料流。"
 
 此設定區段可讓您決定要將資料傳送至哪個[資料流](/help/datastreams/overview.md)。 **所有傳送至Edge Network的資料都需要資料串流識別碼。**
 

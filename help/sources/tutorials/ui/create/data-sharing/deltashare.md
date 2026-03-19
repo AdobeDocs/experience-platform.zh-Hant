@@ -3,7 +3,8 @@ title: 在UI中使用Deltashare Source聯結器
 description: 瞭解如何在Experience Platform使用者介面中使用Deltashare來源聯結器。
 hide: true
 hidefromtoc: true
-source-git-commit: cb50e7b4175a34acd1cbf1ebe04fdfd1ab4694aa
+exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
+source-git-commit: 1533e35032d6a0508588652b0e1ca4c6717d4acb
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%
@@ -22,4 +23,3 @@ ht-degree: 1%
 **注意：**&#x200B;一旦選取&#x200B;**下一步**，您將無法變更選取的結構描述結構。
 
 如果您已經選取&#x200B;**下一步**&#x200B;並移動超過結構描述選取步驟，如果您回到上一個步驟，就無法再更新選取的結構描述。 若要修改架構，您必須重新啟動資料流設定程式，並從初始步驟開始。
-

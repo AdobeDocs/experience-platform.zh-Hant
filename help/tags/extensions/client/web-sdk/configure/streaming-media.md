@@ -1,15 +1,15 @@
 ---
-title: 串流媒體組態設定
+title: 串流媒體設定
 description: 自訂Web SDK標籤擴充功能收集串流媒體資料的方式。
 exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 3%
+ht-degree: 10%
 
 ---
 
-# 串流媒體組態設定 {#streaming-media}
+# 串流媒體設定 {#streaming-media}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_streamingmedia"

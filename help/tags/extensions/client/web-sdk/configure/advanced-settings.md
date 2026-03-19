@@ -1,22 +1,22 @@
 ---
-title: 進階組態設定
+title: 進階設定
 description: 設定Web SDK標籤擴充功能的進階設定。
 exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
 source-wordcount: '150'
-ht-degree: 2%
+ht-degree: 20%
 
 ---
 
-# 進階組態設定 {#advanced}
+# 進階設定 {#advanced}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advanced"
 >title="進階設定"
->abstract="進階組態設定。 Adobe建議大部分實施都保留這些選項。"
+>abstract="進階設定。Adobe 建議大部分實施都維持這些選項的原狀。"
 
-此組態區段可讓您變更進階設定。 Adobe建議大部分實施都保留這些選項。
+此組態區段可讓您變更進階設定。 Adobe 建議大部分實施都維持這些選項的原狀。
 
 1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
 1. 導覽至&#x200B;**[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**。
