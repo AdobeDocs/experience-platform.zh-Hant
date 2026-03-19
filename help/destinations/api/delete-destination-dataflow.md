@@ -94,4 +94,4 @@ curl -X DELETE \
 
 如需有關如何使用使用者介面執行這些操作的步驟，請參閱有關[在UI中刪除資料流](../ui/delete-destinations.md)的教學課程。
 
-您現在可以使用[ API繼續並](/help/destinations/api/delete-destination-account.md)刪除目的地帳戶[!DNL Flow Service]。
+您現在可以使用[&#x200B; API繼續並](/help/destinations/api/delete-destination-account.md)刪除目的地帳戶[!DNL Flow Service]。
