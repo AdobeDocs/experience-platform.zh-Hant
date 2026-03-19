@@ -4,7 +4,7 @@ description: 瞭解如何建立來源連線和資料流，以將來自您的Shop
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
+source-git-commit: 6ab7c5c2e1f800c82d8906fba78fb897f8639877
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%
@@ -126,7 +126,7 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --- | --- | 
-| `webhook.address` | 傳送串流訊息的http端點。 webhook的範本是： `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
+| `webhook.address` | 傳送串流訊息的http端點。 webhook的範本是： `https://dcs.adobedc.net/collection/{INLET_ID}?{X_ADOBE_FLOW_ID}={FLOW_ID}.` |
 | `webhook.topic` | 您的webhook訂閱主題。 如需詳細資訊，請閱讀[[!DNL Shopify] webhook活動主題指南](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics)。 |
 | `webhook.format` | 資料的格式。 |
 
