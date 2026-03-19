@@ -3,7 +3,7 @@ title: 使用Experience Platform UI隨選將檔案匯出至批次目的地
 type: Tutorial
 description: 瞭解如何使用Experience Platform UI隨選將檔案匯出至批次目的地。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 5%
@@ -14,10 +14,10 @@ ht-degree: 5%
 # 使用Experience Platform UI隨選將檔案匯出至批次目的地
 
 >[!IMPORTANT]
-> 
+>
 >若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-## **[!UICONTROL Export file now]** 概觀 {#overview}
+## [!UICONTROL Export file now] 概觀 {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
