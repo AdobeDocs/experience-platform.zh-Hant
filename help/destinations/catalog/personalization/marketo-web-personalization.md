@@ -16,7 +16,7 @@ ht-degree: 3%
 
 此擴充功能會為[!DNL Marketo's]個Web Personalization和ContentAI應用程式部署指令碼。 [!DNL Marketo] Web Personalization可唯一識別並個人化Web訪客特性的內容，例如匿名訪客的firmographics，以及[!DNL Marketo]參與平台中針對已知訪客的廣泛行為屬性。 [!DNL Marketo] ContentAI包含B2B客戶獨有的AI支援推薦功能，以及網頁和電子郵件行銷活動的個人化功能。
 
-[!DNL Marketo Web Personalization]是Adobe Experience Platform中的個人化擴充功能。 如需Marketo中網頁個人化和ContentAI的詳細資訊，請閱讀[網頁Personalization概觀](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html)。
+[!DNL Marketo Web Personalization]是Adobe Experience Platform中的個人化擴充功能。 如需Marketo中網頁個人化和ContentAI的詳細資訊，請閱讀[網頁Personalization概觀](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=zh-Hant)。
 
 此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 

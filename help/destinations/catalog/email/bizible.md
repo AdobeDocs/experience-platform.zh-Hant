@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [!DNL Bizible]是領先業界的B2B歸因解決方案，可讓您以無與倫比的方式瞭解您的資料，因此您可以做出明智的決策，推動業務成長。
 
-[!DNL Bizible]是Adobe Experience Platform中的電子郵件副檔名。 如需有關Bizible的詳細資訊，請閱讀Bizible概觀資源中的[行銷歸因](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html)。
+[!DNL Bizible]是Adobe Experience Platform中的電子郵件副檔名。 如需有關Bizible的詳細資訊，請閱讀Bizible概觀資源中的[行銷歸因](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=zh-Hant)。
 
 此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
