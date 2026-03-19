@@ -4,10 +4,11 @@ description: 瞭解Adobe Experience Platform上的Talon.One來源
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
+source-git-commit: 5ceef18d479854aa4b633e7e5e393a6698a05b2e
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 3%
+source-wordcount: '439'
+ht-degree: 2%
 
 ---
 
@@ -40,6 +41,28 @@ ht-degree: 3%
 ## 對應 {#mapping}
 
 若要協助您根據每個特效物件的唯一`effectType`值對應該物件，您可以使用資料準備`array_to_map`函式。 這可讓您輕鬆地將無序效果陣列轉換為符合您需求的機碼值組。 如需指引，請參閱下列範例。
+
+您也可以使用Adobe提供的標準化忠誠度欄位群組，以一致的方式模擬您的忠誠度計畫概念。
+
+>[!BEGINTABS]
+
+>[!TAB 熟客方案詳細資料]
+
+這是XDM個人設定檔的標準XDM欄位群組，用於擷取個人記錄屬性（而非事件資料）來說明個人的熟客會籍狀態。 在您的設定檔結構描述中使用此欄位群組來擷取：
+
+* **誰**&#x200B;成員在方案中(`loyaltyID`， `program`， `status`， `tier`)
+* 他們的&#x200B;**目前與期限餘額** （`points`、`lifetimePoints`、`expiredPoints`等）
+* 金鑰&#x200B;**會籍日期** (`joinDate`， `upgradeDate`， `tierExpiryDate`)
+
+>[!TAB 熟客活動詳細資料]
+
+「熟客活動詳細資料」欄位群組的設計目的，是擷取事件層級的熟客活動，例如在特定交易中掙得或兌換的點數。 此欄位群組包含`xdm:points`、`xdm:pointsRedeemed`、`xdm:pointsAsOfDate`和`xdm:program`等欄位。 在您的「體驗事件」結構描述中，使用此事件層級欄位群組來擷取：
+
+* **每個事件的移動**&#x200B;點（已取得、已兌換、已到期）
+* 由忠誠度優惠券或轉介所帶來的&#x200B;**折扣**
+* **方案ID**&#x200B;和交易ID，以便與忠誠度提供者進行調解。
+
+>[!ENDTABS]
 
 | 來源 | 目標 |
 | ---- | --- |
