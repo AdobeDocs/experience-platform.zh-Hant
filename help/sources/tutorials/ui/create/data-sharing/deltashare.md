@@ -7,16 +7,16 @@ exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
 source-git-commit: 1533e35032d6a0508588652b0e1ca4c6717d4acb
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 1%
+ht-degree: 24%
 
 ---
 
-# 在UI中使用[!DNL Deltashare]來源聯結器 {#use-deltashare-in-the-ui}
+# 在 UI 中使用 [!DNL Deltashare] 來源連接器 {#use-deltashare-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_deltashare_schema"
 >title="方案結構"
->abstract="請確定您檢閱了結構描述結構，因為一旦您繼續操作，將無法再對結構描述進行變更。"
+>abstract="請務必審閱結構描述結構，因為一旦您繼續操作，將無法再對結構描述進行變更。"
 
 請閱讀本指南，瞭解如何在Adobe Experience Platform使用者介面中使用[!DNL Deltashare]來源聯結器。
 
