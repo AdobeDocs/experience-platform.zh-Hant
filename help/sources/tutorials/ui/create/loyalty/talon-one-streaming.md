@@ -2,9 +2,8 @@
 title: 使用UI將資料從Talon.One串流到Experience Platform
 description: 瞭解如何使用UI將資料從Talon.One串流到Adobe Experience Platform。 本指南涵蓋設定、資料選擇和資料流設定。
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
+exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
+source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%

@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform 發行說明 (2026 年 3 月)
 description: Adobe Experience Platform 2026 年 3 月的發行說明。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: d7415a9deefac55b8583eb52a7c1f18caf5f3334
 workflow-type: tm+mt
 source-wordcount: '1020'
