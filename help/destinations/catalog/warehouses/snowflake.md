@@ -1,13 +1,13 @@
 ---
 title: Snowflake串流連線
 description: 建立即時Snowflake資料共用，以直接將串流對象更新作為共用表格傳送到您的帳戶。
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2026-03-24T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: f74680fa35490f0e8b2d371739ecf8ef3eed74c9
 workflow-type: tm+mt
-source-wordcount: '1547'
-ht-degree: 4%
+source-wordcount: '1637'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 
 第一次從Adobe的Snowflake執行個體將資料分享給您的執行個體時，系統會提示您接受Adobe的私人清單。
 
-![熒幕擷圖顯示Snowflake私人清單接受畫面](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![熒幕擷圖顯示Snowflake私人清單接受畫面](../../assets/catalog/warehouses/snowflake/snowflake-accept-listing.png)
 
 ### 資料保留和存留時間(TTL) {#ttl}
 
@@ -45,7 +45,7 @@ ht-degree: 4%
 
 ## 串流與批次資料共用 {#batch-vs-streaming}
 
-Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](snowflake.md)和[Snowflake批次](snowflake-batch.md)。
+[!DNL Adobe Experience Platform]提供兩種型別的[!DNL Snowflake]目的地： [Snowflake串流](snowflake.md)和[Snowflake批次](snowflake-batch.md)。
 
 下表會概述每種資料共用方法最適合的案例，協助您決定要使用哪個目的地。
 
@@ -69,14 +69,15 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 * **效率與細微差別**：可快速回應使用者行為變更，讓行銷工作更有效率，更細微差別
 * **即時客戶歷程最佳化**：在區段會籍或設定檔屬性變更時，立即更新客戶體驗
 
-串流資料共用會根據區段變更、身分對應變更或屬性變更提供持續更新，因此適合延遲嚴重且需要立即更新的情況。
+串流資料共用會根據區段變更、身分對應變更或屬性變更提供持續更新，適用於低延遲情況很重要的情況。
 
 ## 先決條件 {#prerequisites}
 
 設定Snowflake連線之前，請確定您符合下列先決條件：
 
 * 您有權存取[!DNL Snowflake]帳戶。
-* 您的Snowflake帳戶已訂閱私人清單。 您或您公司中擁有Snowflake帳戶管理員許可權的人員可以設定此專案。
+* 您的[!DNL Snowflake]帳戶已訂閱私人清單。 您或您公司中擁有[!DNL Snowflake]帳戶管理員許可權的人可以設定此專案。
+* 您知道您的[!DNL Snowflake]帳戶區域，當您連線到目的地時，將會從下拉式清單中選取該區域。
 
 如需必要許可權的詳細資訊，請參閱[[!DNL Snowflake] 檔案](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing)。
 
@@ -86,12 +87,10 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
+| [!DNL Segmentation Service] | 是 | 透過[!DNL Adobe Experience Platform] [細分服務](../../../segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至[!DNL Adobe Experience Platform]，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他[!DNL Adobe Experience Platform]應用程式（例如[!DNL Adobe Journey Optimizer]）中產生的對象 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 依受眾資料型別支援的受眾：
 
@@ -104,7 +103,6 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 {style="table-layout:auto"}
 
-
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
@@ -112,7 +110,7 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
 | 匯出類型 | **[!UICONTROL Audience export]** | 您正在匯出具有[!DNL Snowflake]目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在[!DNL Adobe Experience Platform]中更新設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -128,18 +126,18 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 若要驗證到目的地，請選取&#x200B;**[!UICONTROL Connect to destination]**。
 
-![顯示如何驗證目的地](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)的範例熒幕擷圖
+![顯示如何驗證目的地](../../assets/catalog/warehouses/snowflake/authenticate-destination.png)的範例熒幕擷圖
 
 ### 填寫目標詳細資料 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
 >title="輸入您的 Snowflake 帳戶 ID"
->abstract="如果您的帳戶已連結到組織，請使用此格式：`OrganizationName.AccountName`<br><br> 如果您的帳戶未連結到組織，請使用此格式：`AccountName`"
+>abstract="如果您的帳戶已連結至組織，請使用此格式： `OrganizationName.AccountName`<br><br>如果您的帳戶未連結至組織，請使用此格式： `AccountName`"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![顯示如何填寫目的地詳細資料的熒幕擷圖範例](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![顯示如何填寫目的地詳細資料的熒幕擷圖範例](../../assets/catalog/warehouses/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
@@ -148,9 +146,13 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
    * 如果您的帳戶未連結至組織： `AccountName`。
 * **[!UICONTROL Account acknowledgment]**：開啟Snowflake帳戶ID確認，確認您的帳戶ID正確且屬於您。
 
+>[!NOTE]
+>
+> 在您建立目的地之後，就無法透過&#x200B;**[!UICONTROL Snowflake Account ID]**&#x200B;編輯目的地[工作流程編輯](../../ui/edit-destination.md)。 若要使用不同的帳戶，[請建立新的目的地連線](../../ui/connect-destination.md)。
+
 >[!IMPORTANT]
 >
-> 目的地名稱和Experience Platform沙箱名稱中使用的特殊字元會自動在Snowflake中轉換為底線(`_`)。 為避免混淆，請勿在您的目的地和沙箱名稱中使用任何特殊字元。
+> 目的地名稱中使用的特殊字元和[!DNL Adobe Experience Platform]沙箱名稱會自動轉換為`_`中的底線([!DNL Snowflake])。 為避免混淆，請勿在您的目的地和沙箱名稱中使用任何特殊字元。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -171,23 +173,25 @@ Experience Platform提供兩種型別的Snowflake目的地： [Snowflake串流](
 
 Snowflake目的地支援將設定檔屬性對應至自訂屬性。
 
-![Experience Platform使用者介面影像，顯示Snowflake目的地的對應畫面。](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Experience Platform使用者介面影像，顯示Snowflake目的地的對應畫面。](../../assets/catalog/warehouses/snowflake/mapping.png)
 
 系統會使用您在&#x200B;**[!UICONTROL Attribute name]**&#x200B;欄位中提供的屬性名稱，在Snowflake中自動建立目標屬性。
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
-請檢查您的Snowflake帳戶，確認資料已正確匯出。
+資料會透過共用表格共用至您的Snowflake帳戶。 請檢查您的Snowflake帳戶，確認資料已正確匯出。
 
-## 已知限制 {#known-limitations}
+以下範例顯示共用表格的範例列：某些欄會將身分和區段會籍儲存為JSON；對應的設定檔屬性會顯示為個別的字串欄。
 
-### 預設合併原則限制 {#default-merge-policy-restriction}
+![顯示IDENTITYMAP、SEGMENT_MEMBERSHIP和對應屬性欄的Snowflake工作表列範例](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
-目前，只能匯出對應至預設合併原則的對象。
+### 資料結構 {#data-structure}
 
-### 地區可用性 {#regional-availability}
+上方的熒幕擷圖顯示下列各欄：
 
-[!DNL Snowflake]串流目的地目前僅適用於Experience Platform VA7區域中布建的[!DNL Real-Time CDP]個客戶。
+* **IDENTITYMAP**：每個設定檔身分對應都有JSON物件。
+* **SEGMENT_MEMBERSHIP**：針對在資料流上啟用的每個對象，使用JSON物件。 值包含`lastQualificationTime`和`status` （例如，當設定檔符合區段資格時，`realized`）。
+* **對應屬性**：您在啟動工作流程期間選取的每個對應屬性都會在[!DNL Snowflake]中顯示為資料行標題。
 
 ## 資料使用與控管 {#data-usage-governance}
 
