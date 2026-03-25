@@ -4,8 +4,8 @@ description: 瞭解如何使用Adobe Experience Platform中的健康情況檢查
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: true
-source-git-commit: ab2420b898dc38d19187cee627b5c44e7fb44a6c
+exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 健康情況檢查
 
-健康情況檢查會掃描您在沙箱中使用的結構描述和身分，並提供問題摘要，以便您探索和疑難排解[!UICONTROL AI Assistant]。 未來可以掃描更多物件，以取得更完整的報告。
+健康情況檢查會掃描您在沙箱中使用的結構描述和身分，並提供問題摘要，可用於探索和疑難排解AI Assistant。 未來可以掃描更多物件，以取得更完整的報告。
 
 不良的結構描述和身分設定會導致嚴重的下游問題，包括不正確的設定檔建立、失敗的區段資格和不準確的啟用。 這些問題很難偵測，通常需要專業知識才能診斷。 健康狀態檢查將您的方式從被動式疑難排解轉變為主動預防性維護。
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 * **及早偵測設定問題**：找出遺漏的最佳實務、設定錯誤和模式，導致個人化、啟動等作業效率低下。
 * **接收引導式修正**：取得每個問題的明確指引，以及處理該問題的方式。
-* **持續監視**：在這個時候，健康情況檢查會執行每日自動掃描，以便在問題變成嚴重失敗之前找出問題。 未來版本可能會變更排程。
+* **持續監視**：目前，健康情況檢查會執行每日自動掃描，以便在問題變成嚴重失敗之前先找出問題。 未來版本可能會變更排程。
 
 ## 先決條件 {#prerequisites}
 
@@ -72,14 +72,14 @@ ht-degree: 1%
 | 詳細資料 | 說明 |
 | --- | --- |
 | **問題** | 標籤為身分的欄位缺少最小/最大長度或模式驗證。 |
-| **影響** | 若未驗證，記憶體值可以輸入[!UICONTROL Identity Service]。 例如「0」、「Guest」或大小寫不符的值（例如「xyz123」與「XYZ123」）會損害分段與啟用期間所組裝之設定檔的完整性。 |
+| **影響** | 若未驗證，記憶體值可以輸入[!DNL Identity Service]。 例如「0」、「Guest」或大小寫不符的值（例如「xyz123」與「XYZ123」）會損害分段與啟用期間所組裝之設定檔的完整性。 |
 | **修正** | 在標籤為身分的自訂欄位上設定最小/最大長度和模式限制。 使用規則運算式可強制實施僅數字、大寫或小寫或特定字元組合等規則。 |
 
 選取&#x200B;**[!UICONTROL Identity Field Validation]**&#x200B;卡片時，右側會開啟詳細資料面板。 面板會顯示：
 
 * **[!UICONTROL Description]**：掃描以確保身分識別欄位具有最小/最大長度，以及資料完整性規則運算式模式規則。 列出受影響的方案和欄位。
 * **[!UICONTROL Impact]**：如果結構描述中的身分欄位沒有設定上下限長度和模式驗證，可能會導致資料不一致，進而影響資料的完整性和品質。
-* **[!UICONTROL General areas of impact]**： [!UICONTROL Identity Service]中的低品質識別碼；不可靠的彙整。
+* **[!UICONTROL General areas of impact]**： [!DNL Identity Service]中的低品質識別碼；不可靠的彙整。
 * **[!UICONTROL Experience League Documentation]**：資料模型最佳作法的連結。
 * **[!UICONTROL Affected Schemas]**：受影響的結構描述清單，每個結構描述都有一個擴充功能，可檢視更多詳細資料和開啟結構描述的連結。
 
@@ -117,12 +117,12 @@ ht-degree: 1%
 | --- | --- |
 | **問題** | 非人員識別碼用於個人設定檔或體驗事件類別結構描述，或人員識別碼用於查詢結構描述。 |
 | **影響** | 個人資料結構描述上的非人員識別碼不參與身分圖表，這會導致不完整的身分解析。 查閱結構描述上的人員識別碼會使設定檔計數膨脹，使資料不符合查閱使用案例的資格。 這兩個案例都可能讓未來的產品增強功能破壞您的實作。 |
-| **修正** | 檢閱已標幟的結構描述並更正身分型別指派。 儘可能從個人設定檔結構描述中移除非個人識別碼。 對於資料集已使用的結構描述，請參閱[結構描述演化規則](/help/xdm/schema/composition.md#evolution)。 |
+| **修正** | 檢閱已標幟的結構描述並更正身分型別指派。 儘可能從個人設定檔結構描述中移除非人員識別碼。 對於資料集已使用的結構描述，請參閱[結構描述演化規則](/help/xdm/schema/composition.md#evolution)。 |
 
 選取&#x200B;**[!UICONTROL People & Non-People Identity Config]**&#x200B;卡片時，右側會開啟詳細資料面板。 面板會顯示：
 
 * **[!UICONTROL Description]**：驗證跨結構描述類別正確使用了身分型別。 列出設定錯誤的結構描述，並醒目提示錯誤的指派。
-* **[!UICONTROL Impact]**：如果非個人實體獲得個人身分，將誇大設定檔計數，並使此資料不符合查閱資格。 如果以非個人身分識別個人實體，資料將無法用於串流或邊緣劃分。
+* **[!UICONTROL Impact]**：如果非人員實體獲得人員身分，將誇大設定檔計數，並使此資料不符合查閱資格。 如果以非人員身分識別個人實體，資料將無法用於串流或邊緣劃分。
 * **[!UICONTROL General areas of impact]**：不完整的身分圖表；膨脹的設定檔計數；查詢誤用。
 * **[!UICONTROL Affected Schemas]**：有問題的結構描述清單。 展開結構描述列，以檢視每個設定錯誤的路徑、身分名稱和結構描述型別。 使用連結圖示開啟方案。
 
@@ -172,7 +172,7 @@ ht-degree: 1%
 
 ![已棄用的身分名稱空間詳細資料面板，顯示說明、影響和受影響的名稱空間清單](assets/health-checks/deprecated-namespace-detail.png)
 
-如需詳細資訊，請參閱有關過時名稱空間的[Experience Cloud知識庫文章](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}。
+如需詳細資訊，請參閱有關過時名稱空間的[Experience Cloud知識庫文章](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}。
 
 ## 後續步驟 {#next-steps}
 

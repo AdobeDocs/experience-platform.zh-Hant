@@ -3,27 +3,26 @@ description: 瞭解如何使用Adobe Experience Platform中的「工作排程」
 solution: Experience Platform
 title: 檢查工作排程
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 0%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
-
 # 檢查工作排程
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules]目前是有限版本，僅適用於下列Real-Time CDP工作：
+>[!UICONTROL Job schedules]目前僅適用於下列Real-Time CDP工作：
 >
 > * 批次資料湖擷取
 > * 批次設定檔擷取
-> * 批次區段
-> * 批次目的地啟用。
+> * 批次分段
+> * 批次目的地啟用
 
-[!UICONTROL Job Schedules]提供跨資料管道之所有已排程批次處理工作的統一檢視 — 從擷取到目的地啟用。 檢查執行狀態、識別排程衝突，並在設定問題影響您的業務運作之前診斷這些問題。
+[!UICONTROL Job Schedules]提供跨資料管道的所有已排程批次處理工作（從擷取到目的地啟用）的統一檢視。 檢查執行狀態、識別排程衝突，並在設定問題影響您的業務運作之前診斷這些問題。
 
 使用工作排程來調查失敗、最佳化工作時間，並瞭解資料湖擷取、設定檔處理、細分和目的地啟用之間的相依性。 如需解決常見組態問題的指南，請參閱有關[識別工作排程反模式](job-schedules-anti-patterns.md)的檔案。
 
@@ -107,7 +106,6 @@ ht-degree: 0%
 這些模式可能會導致工作失敗、資料處理不完整和系統效能不佳。 若要瞭解如何識別及解決這些問題，請參閱有關[識別工作排程反模式](job-schedules-anti-patterns.md)的檔案。
 
 當您需要調查特定資料集或工作執行時，您可以向下展開至詳細檢視，以檢視執行歷史記錄、錯誤訊息、效能測量結果和相依性。 如需有關檢視此詳細資料的資訊，請參閱有關[檢視工作詳細資料](job-schedules-details.md)的檔案。
-
 
 ## 後續步驟 {#next-steps}
 
