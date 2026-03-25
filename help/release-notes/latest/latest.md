@@ -52,7 +52,7 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 
 | 功能 | 說明 |
 | --- | --- |
-| [&#x200B; [!DNL Microsoft 365 Copilot]的](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms)Adobe Marketing Agent | [!DNL Microsoft 365 Copilot]的Adobe Marketing Agent是您的內嵌代理程式，可將Adobe的行銷智慧直接帶入日常工具，例如[!DNL Teams]、[!DNL Word]、[!DNL PowerPoint]和其他[!DNL Microsoft 365]應用程式。 當您規劃行銷活動、檢閱對象、與同事合作回答客戶問題時，可以使用此代理程式從Adobe應用程式提取受信任的行銷活動深入分析，並在不離開[!DNL Microsoft 365]工作流程的情況下做出以資料為主的決策。 |
+| [&#x200B; [!DNL Microsoft 365 Copilot]的](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms)Adobe Marketing Agent | [!DNL Microsoft 365 Copilot]的Adobe Marketing Agent是您的內嵌代理程式，可將Adobe的行銷智慧直接帶入日常工具，例如[!DNL Teams]、[!DNL Word]、[!DNL PowerPoint]和其他[!DNL Microsoft 365]應用程式。 當您規劃行銷活動、檢閱對象、與同事合作回答客戶問題時，可以使用此代理程式從Adobe應用程式提取受信任的行銷活動深入分析，並在不離開[!DNL Microsoft 365]工作流程的情況下做出以資料為主的決策。 |
 
 {style="table-layout:auto"}
 
