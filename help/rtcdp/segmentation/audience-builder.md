@@ -2,12 +2,12 @@
 title: Real-Time Customer Data Platform中的對象產生器
 description: 瞭解如何使用Real-Time Customer Data Platform中的對象產生器建立對象。
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 9%
+source-wordcount: '1079'
+ht-degree: 7%
 
 ---
 
@@ -40,10 +40,6 @@ ht-degree: 9%
 
 ![設定圖示會在Audience Builder中反白顯示。](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
->[!NOTE]
->
->**[!UICONTROL Field options]**&#x200B;區段目前為測試版，僅供特定客戶使用。 如需詳細資訊，請和 Adobe 客戶服務聯絡。
-
 顯示[!UICONTROL Settings]區段。 在此區段中，您可以更新顯示哪些欄位以及欄位之間的關係。
 
 對於&#x200B;**[!UICONTROL Field options]**，您可以只顯示包含資料的欄位或完整XDM結構描述。
@@ -58,9 +54,17 @@ ht-degree: 9%
 
 ![「屬性」索引標籤會顯示在「對象產生器」中](../assets/segmentation/audience-builder/attributes.png)
 
-選取屬性時，您可以選取[資訊圖示](../../images/icons/info.png)來檢視摘要資料。 摘要資料包含頂端值、欄位內容的說明，以及包含此屬性值的帳戶百分比等資訊。
+選取屬性時，您可以選取[資訊圖示](../../images/icons/info.png)來檢視摘要資料。 摘要資料包含頂端值、欄位內容的說明、值的記錄計數，以及包含此屬性值的帳戶百分比等資訊。
+
+**[!UICONTROL Populated]**&#x200B;區段顯示已填入屬性的記錄數目與可用記錄總數以及擁有此欄位值的帳戶百分比。
+
+**[!UICONTROL Top values]**&#x200B;區段顯示屬性最常發生的值，並包含值、具有值的記錄數以及值所代表之記錄總數百分比等詳細資訊。
 
 ![顯示屬性之摘要資料完整填入版本的彈出視窗。](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
+
+或者，您可以檢視資料的分佈，其中包含顯示的最小值、平均值（平均值）和最大值。
+
+![顯示屬性統計資料的彈出視窗，包括最小值、平均值和最大值。](../assets/segmentation/audience-builder/statistics.png)
 
 如果屬性由少於25%的帳戶填入，則會改為顯示![資料通知圖示](../../images/icons/data-notice.png)。 無論如何，屬性都會顯示相同的摘要資料。
 
@@ -72,7 +76,11 @@ ht-degree: 9%
 >
 >此摘要資料會每日&#x200B;**更新**。
 
-如需對象產生器的詳細指南，請閱讀[對象產生器使用手冊](../../segmentation/ui/segment-builder.md){target="_blank"}。
+此外，屬性也有&#x200B;**[!UICONTROL Ingestion Type]**。 內嵌型別可讓您知道資料的來源，而且可以是下列其中一個值： **[!UICONTROL Batch]**、**[!UICONTROL Streaming/Edge]**&#x200B;或&#x200B;**[!UICONTROL No Data Ingested]**。
+
+![會顯示屬性的擷取型別。](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+
+如需對象產生器內屬性的詳細指南，請參閱[對象產生器使用手冊](../../segmentation/ui/segment-builder.md){target="_blank"}。
 
 ### 客群 {#audiences}
 

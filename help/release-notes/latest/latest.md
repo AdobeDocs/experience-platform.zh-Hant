@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2026 年 3 月)
 description: Adobe Experience Platform 2026 年 3 月的發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d7415a9deefac55b8583eb52a7c1f18caf5f3334
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 35%
+source-wordcount: '1161'
+ht-degree: 36%
 
 ---
 
@@ -28,7 +28,8 @@ Adobe Experience Platform 的新功能及現有功能更新：
 - [進階資料生命週期管理](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
 - [目的地](#destinations)
-- [體驗資料模型 (XDM)](#xdm)
+- [體驗資料模式 (XDM)](#xdm)
+- [細分服務](#segmentation-service)
 - [來源](#sources)
 
 ## 進階資料生命週期管理 {#advanced-data-lifecycle-management}
@@ -51,7 +52,7 @@ Agent Orchestrator可讓您建置和部署AI支援的代理程式，這些代理
 
 | 功能 | 說明 |
 | --- | --- |
-| [&#x200B; [!DNL Microsoft 365 Copilot]的](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms)Adobe Marketing Agent | [!DNL Microsoft 365 Copilot]的Adobe Marketing Agent是您的內嵌代理程式，可將Adobe的行銷智慧直接帶入日常工具，例如[!DNL Teams]、[!DNL Word]、[!DNL PowerPoint]和其他[!DNL Microsoft 365]應用程式。 當您規劃行銷活動、檢閱對象、與同事合作回答客戶問題時，可以使用此代理程式從Adobe應用程式提取受信任的行銷活動深入分析，並在不離開[!DNL Microsoft 365]工作流程的情況下做出以資料為主的決策。 |
+| [ [!DNL Microsoft 365 Copilot]的](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms)Adobe Marketing Agent | [!DNL Microsoft 365 Copilot]的Adobe Marketing Agent是您的內嵌代理程式，可將Adobe的行銷智慧直接帶入日常工具，例如[!DNL Teams]、[!DNL Word]、[!DNL PowerPoint]和其他[!DNL Microsoft 365]應用程式。 當您規劃行銷活動、檢閱對象、與同事合作回答客戶問題時，可以使用此代理程式從Adobe應用程式提取受信任的行銷活動深入分析，並在不離開[!DNL Microsoft 365]工作流程的情況下做出以資料為主的決策。 |
 
 {style="table-layout:auto"}
 
@@ -108,6 +109,19 @@ Inspect, troubleshoot, and optimize your Experience Platform implementations wit
 {style="table-layout:auto"}
 
 For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md). -->
+
+## 細分服務 {#segmentation-service}
+
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷人員群組的標準，進而定義設定檔的特定子集。客群的根據可以是記錄資料 (例如人口統計資訊) 或是代表客戶與您的品牌互動情形的時間序列事件。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 擷取型別 | 您現在可以檢視屬性的擷取型別。 這可讓您知道資料的來源，讓您建立更好的受眾。 如需有關此功能的詳細資訊，請參閱[區段產生器指南](/help/segmentation/ui/segment-builder.md)。 |
+| 摘要資料 | 您現在可以檢視帳戶和人物型受眾屬性的摘要資料。 如需帳戶對象中有關此功能的詳細資訊，請參閱帳戶[對象產生器指南](/help/rtcdp/segmentation/audience-builder.md)。 如需以人物為基礎的對象中有關此功能的詳細資訊，請參閱[區段產生器指南](/help/segmentation/ui/segment-builder.md)。 |
+
+如需詳細資訊，請閱讀[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
 
 ## 來源
 
