@@ -2,9 +2,9 @@
 title: 舊版Adobe Advertising Cloud DSP連線
 description: Adobe Advertising Cloud DSP是Adobe Real-Time Customer Data Platform的整合目的地，可讓您與核准的廣告商和使用者共用已驗證的第一方受眾，以啟用行銷活動。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1033'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-[!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP)目的地可讓您與已核准的廣告商和使用者共用已驗證的第一方對象，以便透過DSP啟用行銷活動。 若要深入瞭解[!DNL Real-Time CDP]與DSP的整合，請參閱[關於從受眾來源啟用已驗證受眾](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=zh-Hant)。
+[!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP)目的地會與核准的廣告商和使用者共用已驗證的第一方對象，以便透過DSP啟用行銷活動。 若要深入瞭解[!DNL Real-Time CDP]與DSP的整合，請參閱[關於從受眾來源啟用已驗證受眾](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html)。
 
 >[!IMPORTANT]
 >
@@ -39,8 +39,8 @@ ht-degree: 2%
 
 * DSP帳戶層級和促銷活動層級設定可啟用與[!DNL LiveRamp RampID]的對象共用，這會將客戶資料轉譯為[!DNL RampIDs]以建立可定位的區段。 您的DSP帳戶團隊將執行此設定。 [!DNL RampID]可透過DSP與[!DNL LiveRamp]之間的合作關係使用，而且您不需要自己的[!DNL LiveRamp]成員資格即可使用。
 * Experience Platform帳戶的Experience Cloud組織ID。 您可以在[!DNL Real-Time CDP]使用者設定檔頁面上找到您的識別碼。
-* DSP[[!DNL Real-Time CDP] 中用於接收促銷活動啟用對象的](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=zh-Hant)來源。 您的DSP帳戶團隊將使用您的Experience Cloud組織ID建立來源。
-* DSP帳戶或廣告商的來源金鑰，是在DSP[[!DNL Real-Time CDP] 中建立](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=zh-Hant)來源時產生的。 您的DSP客戶團隊將會與您共用此金鑰。 您將在Experience Platform中使用它來建立與Advertising Cloud DSP目的地的目的地連線，如下文[所述](#authenticate)。
+* DSP[[!DNL Real-Time CDP] 中用於接收促銷活動啟用對象的](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)來源。 您的DSP帳戶團隊將使用您的Experience Cloud組織ID建立來源。
+* DSP帳戶或廣告商的來源金鑰，是在DSP[[!DNL Real-Time CDP] 中建立](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)來源時產生的。 您的DSP客戶團隊將會與您共用此金鑰。 您將在Experience Platform中使用它來建立與Advertising Cloud DSP目的地的目的地連線，如下文[所述](#authenticate)。
 * 由電子郵件或雜湊電子郵件組成的客戶資料。
 
 ## 支援的身分 {#supported-identities}
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 若要連線到目的地，請在[!UICONTROL Connection type]區段中提供下列引數，然後選取&#x200B;**[!UICONTROL Connect to destination]**：
 
-* **[!UICONTROL Account or Advertiser Key]**：在DSP使用者介面[!UICONTROL Source Key]中建立[[!DNL Real-Time CDP] 來源時，會產生此](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=zh-Hant)。 您的DSP帳戶團隊會在建立來源後，與您共用此金鑰。
+* **[!UICONTROL Account or Advertiser Key]**：在DSP使用者介面[!UICONTROL Source Key]中建立[[!DNL Real-Time CDP] 來源時，會產生此](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html)。 您的DSP帳戶團隊會在建立來源後，與您共用此金鑰。
 
 ![連線型別欄位](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

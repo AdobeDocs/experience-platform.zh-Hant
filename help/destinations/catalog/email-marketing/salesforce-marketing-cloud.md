@@ -1,8 +1,8 @@
 ---
 title: Salesforce Marketing Cloud連線
-description: Salesforce Marketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您為訪客和客戶建置和自訂歷程，以個人化其體驗。
+description: Salesforce Marketing Cloud是數位行銷套裝，先前稱為ExactTarget，可用來建置和自訂訪客和客戶的歷程，以個人化其體驗。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/)是舊稱為ExactTarget的數位行銷套件，可讓您為訪客和客戶建置和自訂歷程，以個人化其體驗。
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/)是舊稱為ExactTarget的數位行銷套件，可用來建置和自訂訪客和客戶的歷程，以個人化其體驗。
 
 若要將對象資料傳送至[!DNL Salesforce Marketing Cloud]，您必須先[連線至Experience Platform中的目的地](#connect-destination)，然後[設定從儲存位置匯入](#import-data-into-salesforce)到[!DNL Salesforce Marketing Cloud]的資料。
 
@@ -44,7 +44,7 @@ ht-degree: 3%
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
-請參閱下表以取得目的地匯出型別和頻率的資訊。
+請參閱下表，以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|

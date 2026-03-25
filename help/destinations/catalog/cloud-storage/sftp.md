@@ -2,9 +2,9 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1303'
 ht-degree: 8%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 8%
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
-請參閱下表以取得目的地匯出型別和頻率的資訊。
+請參閱下表，以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|

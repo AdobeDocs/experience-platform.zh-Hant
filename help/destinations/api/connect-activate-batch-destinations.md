@@ -5,9 +5,9 @@ title: 使用流程服務API連線到批次目的地並啟用資料
 description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地，並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '3423'
+source-wordcount: '3413'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 3%
 本指南需要您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Adobe Experience Platform]資料在[!DNL Real-Time Customer Profile]中建立對象。
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]會根據您的[!DNL Adobe Experience Platform]資料在[!DNL Real-Time Customer Profile]中建置對象。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 以下小節提供在Experience Platform中啟用批次目的地的資料所需瞭解的其他資訊。
@@ -1257,7 +1257,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功將Experience Platform連線至其中一個慣用的檔案式電子郵件行銷目的地，並設定資料流至個別目的地以匯出資料檔案。 現在，傳出資料可用於電子郵件行銷活動、目標定位廣告和許多其他使用案例的目的地。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
+您已成功將Experience Platform連線至其中一個慣用的檔案式電子郵件行銷目的地，並設定資料流至個別目的地以匯出資料檔案。 現在，傳出資料可用於電子郵件行銷活動、目標定位廣告和許多其他使用案例的目的地。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
 
 * [目的地概觀](../home.md)
 * [目的地目錄概觀](../catalog/overview.md)

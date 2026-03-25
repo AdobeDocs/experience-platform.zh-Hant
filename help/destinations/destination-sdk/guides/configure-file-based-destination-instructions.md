@@ -2,9 +2,9 @@
 description: 本頁面列出並說明使用Destination SDK設定檔案型目的地的步驟。
 title: 使用Destination SDK設定以檔案為基礎的目的地
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -255,7 +255,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 步驟3：建立對象中繼資料設定 {#create-audience-metadata-configuration}
 
-對於某些目的地，Destination SDK需要您設定對象中繼資料設定，以程式設計方式在您的目的地建立、更新或刪除對象。 請參閱[對象中繼資料管理](../functionality/audience-metadata-management.md)，以瞭解何時需要設定此組態及如何設定的相關資訊。
+對於某些目的地，Destination SDK需要您設定對象中繼資料設定，以程式設計方式在您的目的地建立、更新或刪除對象。 請參閱[對象中繼資料管理](../functionality/audience-metadata-management.md)，瞭解何時需要設定此組態及如何設定的相關資訊。
 
 如果您使用對象中繼資料設定，則必須將其連線至您在步驟2中建立的目的地設定。 將對象中繼資料設定的執行個體識別碼新增至目的地設定，做為`audienceTemplateId`。
 
@@ -422,7 +422,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 在測試目的地的程式中，您必須使用Experience Platform UI來建立對象，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
 * [建立對象 — 檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
-* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)
+* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 步驟6：發佈您的目的地 {#publish-destination}
 

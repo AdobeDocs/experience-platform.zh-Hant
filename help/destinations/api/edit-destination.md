@@ -4,9 +4,9 @@ title: 使用流程服務API編輯目的地連線
 type: Tutorial
 description: 瞭解如何使用流量服務API編輯目的地連線的各種元件。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1599'
 ht-degree: 5%
 
 ---
@@ -467,4 +467,4 @@ curl -X PATCH \
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程，您已瞭解如何使用[!DNL Flow Service] API更新目的地連線的各種元件。 如需目的地的詳細資訊，請參閱[目的地概觀](../home.md)。
+您已瞭解如何使用[!DNL Flow Service] API更新目的地連線的各種元件。 如需目的地的詳細資訊，請參閱[目的地概觀](../home.md)。

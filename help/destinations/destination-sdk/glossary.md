@@ -3,16 +3,16 @@ solution: Experience Platform
 title: Adobe Experience Platform Destination SDK字彙表
 description: 瞭解使用Experience Platform Destination SDK編寫目的地時的重要術語。
 exl-id: d65f390a-a980-49b8-9570-840f03534553
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '669'
 ht-degree: 2%
 
 ---
 
 # [!DNL Adobe Experience Platform] Destination SDK字彙表
 
-如需Destination SDK中所使用辭彙的定義，請參閱本辭彙表。 如需其他[!DNL Adobe Experience Platform]術語，請參閱[Experience Platform字彙表](/help/landing/glossary.md)。
+如需Destination SDK中所使用辭彙的定義，請參閱本辭彙表。 如需其他[!DNL Adobe Experience Platform]辭彙，請參閱[Experience Platform字彙表](/help/landing/glossary.md)。
 
 ## A {#a}
 
@@ -44,6 +44,6 @@ ht-degree: 2%
 
 **範本規格和範本化策略**：範本規格是用來格式化從[!DNL Adobe Experience Platform]傳送到目的地之HTTP要求的組態。 他們將XDM結構描述中的設定檔屬性欄位轉換為目的地平台支援的格式。 使用類似於[!DNL Jinja]的範本化語言，這些規格允許根據特定規則和輸入資料進行動態資料轉換。 [了解更多](/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md)。
 
-**測試API**：測試API可讓您在提交發佈要求之前驗證目的地組態。 它提供工具來產生範例設定檔和測試資料流程，確保設定符合目的地的需求。 此API支援串流和檔案型（批次）目的地，提供一種方法來模擬資料並疑難排解設定流程中的潛在問題。 深入瞭解[串流](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)和[檔案型目的地](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)的測試API。
+**測試API**：在提交發佈要求之前，使用測試API驗證您的目的地組態。 它提供工具來產生範例設定檔和測試資料流程，確保設定符合目的地的需求。 此API支援串流和檔案型（批次）目的地，提供一種方法來模擬資料並疑難排解設定流程中的潛在問題。 深入瞭解[串流](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)和[檔案型目的地](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)的測試API。
 
 **轉換範本**：轉換範本會自訂資料格式，從Adobe XDM結構描述轉換成目的地的預期格式。 [了解更多](/help/destinations/destination-sdk/functionality/destination-server/message-format.md)。

@@ -3,9 +3,9 @@ keywords: 梅迪亞文；梅迪亞文
 title: Medallia擴充功能
 description: Medallia擴充功能是Adobe Experience Platform中客戶目的地的聲音。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '448'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-在您的Web屬性上快速且順暢地部署[!DNL Medallia]。 此擴充功能也可讓您偵測調查事件、透過資料元素即時擷取客戶回饋、在規則中使用它來個人化您的客戶體驗，以及與[!DNL Adobe Analytics]共用資料。
+在您的Web屬性上快速且順暢地部署[!DNL Medallia]。 擴充功能也會偵測調查事件、透過資料元素即時擷取客戶意見回應、在規則中加以使用，以個人化您的客戶體驗，並與[!DNL Adobe Analytics]共用資料。
 
 [!DNL Medallia]是[!DNL Adobe Experience Platform]中客戶分機的聲音。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html)上的擴充功能頁面。
 

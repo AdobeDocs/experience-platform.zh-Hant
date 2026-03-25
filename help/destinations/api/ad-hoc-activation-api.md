@@ -5,9 +5,9 @@ title: 透過臨機啟動API將對象啟動至批次目的地
 description: 本文說明透過臨機啟動API啟動對象的端對端工作流程，包括在啟動前進行的細分工作。
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -241,7 +241,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態代碼](../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors)。
 
 ### Ad Hoc Activation API專屬的API錯誤代碼和訊息 {#specific-error-messages}
 

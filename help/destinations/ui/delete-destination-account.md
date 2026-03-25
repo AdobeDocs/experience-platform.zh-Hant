@@ -4,9 +4,9 @@ title: 刪除目的地帳戶
 type: Tutorial
 description: 本教學課程列出在Adobe Experience Platform UI中刪除目的地帳戶的步驟
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-「**[!UICONTROL Accounts]**」標籤顯示您已與各種目的地建立之連線的詳細資料。 請參閱[帳戶總覽](../ui/destinations-workspace.md#accounts)，瞭解您可以在每個目的地帳戶上取得的所有資訊。
+**[!UICONTROL Accounts]**&#x200B;索引標籤顯示您已與各種目的地建立之連線的詳細資料。 如需每個目的地帳戶的所有可用資訊，請參閱[帳戶總覽](../ui/destinations-workspace.md#accounts)。
 
 本教學課程涵蓋如何使用Experience Platform UI刪除不再需要的目的地帳戶的步驟。
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 請依照下列步驟刪除現有的目的地帳戶。
 
-1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視您現有的帳戶。
+1. 前往[Experience Platform UI](https://platform.adobe.com/)，然後從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視您現有的帳戶。
 
    ![帳戶標籤](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -47,6 +47,6 @@ ht-degree: 1%
 
 ## 後續步驟 {#next-steps}
 
-按照本教學課程，您已成功使用目的地工作區刪除現有帳戶。
+您已成功使用目的地工作區來刪除現有帳戶。
 
 如需有關如何使用[!DNL Flow Service] API以程式設計方式執行這些操作的步驟，請參閱有關使用Flow Service API [刪除連線的教學課程](../api/delete-destination-account.md)

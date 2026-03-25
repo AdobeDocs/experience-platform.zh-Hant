@@ -4,9 +4,9 @@ title: 雲端儲存空間目的地的API移轉指南
 description: 瞭解在移轉至新的雲端儲存體目的地卡片的過程中，啟用雲端儲存體目的地的工作流程變更，其中包含其他功能。
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1322'
 ht-degree: 1%
 
 ---
@@ -661,7 +661,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 ### [!DNL Amazon S3]、[!DNL Azure Blob]和SFTP目的地的常見回溯不相容變更 {#changes-all-destinations}
 
-所有三個目的地的設定檔選擇器步驟都由對應步驟取代，該步驟可讓您視需要重新命名匯出檔案中的欄標題。 請檢視下方的並排影像，左側顯示舊屬性選取器步驟，右側顯示新對應步驟。
+所有三個目的地的設定檔選擇器步驟會被對應步驟取代，以便重新命名匯出檔案中的欄標題（如有需要）。 請檢視下方的並排影像，左側顯示舊屬性選取器步驟，右側顯示新對應步驟。
 
 ![移轉指南概觀影像](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
@@ -795,4 +795,4 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 ## 後續步驟 {#next-steps}
 
-閱讀本頁後，您現在就能知道是否需要採取任何動作，為雲端儲存空間的移轉做好準備。 設定API式工作流程，將檔案從Experience Platform匯出至您偏好的雲端儲存空間目的地時，您也可以知道要參考哪些檔案頁面。 接下來，您可以檢視[將資料匯出至雲端儲存空間目的地](/help/destinations/api/activate-segments-file-based-destinations.md)的API教學課程。
+現在，您可以知道自己是否需要採取任何動作，以準備移轉雲端儲存空間。 設定API式工作流程，將檔案從Experience Platform匯出至您偏好的雲端儲存空間目的地時，您也可以知道要參考哪些檔案頁面。 接下來，您可以檢視[將資料匯出至雲端儲存空間目的地](/help/destinations/api/activate-segments-file-based-destinations.md)的API教學課程。

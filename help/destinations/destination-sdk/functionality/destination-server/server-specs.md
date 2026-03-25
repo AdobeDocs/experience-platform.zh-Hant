@@ -2,9 +2,9 @@
 description: 瞭解如何透過「/authoring/destination-servers」端點在Adobe Experience Platform Destination SDK中設定目的地伺服器規格。
 title: 使用Destination SDK建立之目的地的伺服器規格
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2745'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -46,7 +46,7 @@ ht-degree: 2%
 
 ## 硬式編碼欄位與範本化欄位 {#templatized-fields}
 
-透過Destination SDK建立目的地伺服器時，您可以藉由將設定引數硬式編碼至設定，或使用範本化欄位來定義設定引數值。 範本化欄位可讓您從Experience Platform UI讀取使用者提供的值。
+透過Destination SDK建立目的地伺服器時，您可以藉由將設定引數硬式編碼至設定，或使用範本化欄位來定義設定引數值。 範本化欄位會從Experience Platform UI讀取使用者提供的值。
 
 目的地伺服器引數有兩個可設定的欄位。 這些選項指定您是使用硬式編碼值或範本化值。
 
@@ -160,7 +160,7 @@ ht-degree: 2%
 
 ## [!DNL Amazon S3]目的地伺服器 {#s3-example}
 
-此目的地伺服器可讓您將包含[!DNL Adobe Experience Platform]資料的檔案匯出至Amazon S3儲存空間。
+使用此目的地伺服器將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的Amazon S3儲存空間。
 
 以下範例顯示Amazon S3目的地的目的地伺服器設定範例。
 
@@ -194,7 +194,7 @@ ht-degree: 2%
 
 ## [!DNL SFTP]目的地伺服器 {#sftp-example}
 
-此目的地伺服器可讓您將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL SFTP]儲存伺服器。
+使用此目的地伺服器將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL SFTP]儲存伺服器。
 
 以下範例顯示SFTP目的地的目的地伺服器設定範例。
 
@@ -232,7 +232,7 @@ ht-degree: 2%
 
 ## [!DNL Azure Data Lake Storage] ([!DNL ADLS])目的地伺服器 {#adls-example}
 
-此目的地伺服器可讓您將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL Azure Data Lake Storage]帳戶。
+使用此目的地伺服器將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL Azure Data Lake Storage]帳戶。
 
 下列範例顯示[!DNL Azure Data Lake Storage]目的地的目的地伺服器組態範例。
 
@@ -260,7 +260,7 @@ ht-degree: 2%
 
 ## [!DNL Azure Blob Storage]目的地伺服器 {#blob-example}
 
-此目的地伺服器可讓您將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL Azure Blob Storage]容器。
+使用此目的地伺服器將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL Azure Blob Storage]容器。
 
 下列範例顯示[!DNL Azure Blob Storage]目的地的目的地伺服器組態範例。
 
@@ -294,7 +294,7 @@ ht-degree: 2%
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ])目的地伺服器 {#dlz-example}
 
-此目的地伺服器可讓您將包含Experience Platform資料的檔案匯出至[[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md)儲存空間。
+使用此目的地伺服器將包含Experience Platform資料的檔案匯出至[[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md)儲存空間。
 
 下列範例顯示[!DNL Data Landing Zone] ([!DNL DLZ])目的地的目的地伺服器組態範例。
 
@@ -324,7 +324,7 @@ ht-degree: 2%
 
 ## [!DNL Google Cloud Storage]目的地伺服器 {#gcs-example}
 
-此目的地伺服器可讓您將包含Experience Platform資料的檔案匯出至您的[!DNL Google Cloud Storage]帳戶。
+使用此目的地伺服器將包含Experience Platform資料的檔案匯出至您的[!DNL Google Cloud Storage]帳戶。
 
 下列範例顯示[!DNL Google Cloud Storage]目的地的目的地伺服器組態範例。
 

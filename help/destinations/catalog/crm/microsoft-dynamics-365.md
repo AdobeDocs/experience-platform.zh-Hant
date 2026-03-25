@@ -1,12 +1,12 @@
 ---
 keywords: crm；CRM；CRM目的地；Microsoft Dynamics 365；Microsoft Dynamics 365 crm目的地
 title: Microsoft Dynamics 365連線
-description: Microsoft Dynamics 365目的地可讓您匯出帳戶資料，並在Microsoft Dynamics 365中根據您的業務需求加以啟用。
+description: 使用Microsoft Dynamics 365目的地可匯出您的帳戶資料，並在Microsoft Dynamics 365中根據您的業務需求加以啟用。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2076'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [[!DNL Microsoft Dynamics 365]](https://dynamics.microsoft.com/en-us/)是以雲端為基礎的業務應用程式平台，結合企業資源規劃(ERP)、客戶關係管理(CRM)以及生產力應用程式和AI工具，讓端對端的作業更順暢、控制更嚴密、增長潛力更大、成本更低。
 
-此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1)，可讓您將對象中的身分識別更新為[!DNL Dynamics 365]。
+此[!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md)利用[[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1)將對象內的身分識別更新為[!DNL Dynamics 365]。
 
 [!DNL Dynamics 365]使用具有授權授權的OAuth 2作為驗證機制，與[!DNL Contact Entity Reference API]通訊。 [!DNL Dynamics 365]向目的地驗證[區段中進一步說明如何向您的](#authenticate)執行個體進行驗證。
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料至[!DNL Dynamics 365]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=zh-Hant)對象[!DNL Experience Platform]。
+在啟用資料至[!DNL Dynamics 365]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)對象[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱Adobe關於[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的檔案。
 
@@ -118,7 +118,7 @@ ht-degree: 2%
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
-請參閱下表以取得目的地匯出型別和頻率的資訊。
+請參閱下表，以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
@@ -239,13 +239,13 @@ ht-degree: 2%
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![Experience Platform UI熒幕擷圖顯示目的地資料流執行。](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在對象內建立的計數。
    ![顯示對象的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. 登入[!DNL Dynamics 365]網站，然後導覽至[!DNL Customers] > [!DNL Contacts]頁面，並檢查是否已新增對象的設定檔。 您可以看到根據[!DNL Dynamics 365]對象排程&#x200B;**[!UICONTROL Mapping ID]**&#x200B;步驟期間提供的[值，](#schedule-audience-export-example)中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
+1. 前往[!DNL Dynamics 365]網站，然後導覽至[!DNL Customers] > [!DNL Contacts]頁面，並檢查是否已新增對象中的設定檔。 您可以看到根據[!DNL Dynamics 365]對象排程&#x200B;**[!UICONTROL Mapping ID]**&#x200B;步驟期間提供的[值，](#schedule-audience-export-example)中的每個對象狀態已更新為Experience Platform中的對應對象狀態。
    ![Dynamics 365 UI熒幕擷取畫面顯示「連絡人」頁面，其對象狀態已更新。](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## 資料使用與控管 {#data-usage-governance}

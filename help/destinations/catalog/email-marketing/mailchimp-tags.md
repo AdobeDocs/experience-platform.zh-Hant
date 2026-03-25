@@ -1,11 +1,11 @@
 ---
 title: Mailchimp標籤
-description: Mailchimp標籤目的地可讓您匯出帳戶資料，並在Mailchimp中將其啟用，以便與聯絡人互動。
+description: 使用Mailchimp標籤目的地匯出您的帳戶資料，並在Mailchimp中將其啟用，以便與聯絡人互動。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1714'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料至[!DNL Mailchimp Tags]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=zh-Hant)對象[!DNL Experience Platform]。
+在啟用資料至[!DNL Mailchimp Tags]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)對象[!DNL Experience Platform]。
 
 ### [!DNL Mailchimp Tags]目的地的先決條件 {#prerequisites-destination}
 
@@ -48,7 +48,7 @@ ht-degree: 3%
 
 您需要您的[!DNL Mailchimp] **API金鑰**，以針對您的[!DNL Mailchimp Interest Categories]帳戶驗證[!DNL Mailchimp]目的地。 當您&#x200B;**驗證目的地**&#x200B;時，**API金鑰**&#x200B;將用作[密碼](#authenticate)。
 
-如果您沒有&#x200B;**API金鑰**，請登入您的[!DNL Mailchimp]帳戶，並參閱[!DNL Mailchimp]有關[如何產生API金鑰](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key)的檔案。
+如果您沒有&#x200B;**API金鑰**，請登入您的[!DNL Mailchimp]帳戶，並參閱[!DNL Mailchimp]檔案，瞭解如何產生[API金鑰](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key)。
 
 API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
@@ -66,7 +66,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 寫下資料中心值&#x200B;*（`us14`在此範例中）*。 當您[填寫目的地詳細資料](#destination-details)時，將需要此值。
 
-若您需要進一步的指引，請參閱[[!DNL Mailchimp] 基礎檔案](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure)。
+如果您需要進一步的指引，請參閱[[!DNL Mailchimp] 基礎檔案](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure)。
 
 ### 護欄 {#guardrails}
 
@@ -203,7 +203,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 登入您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後導覽至&#x200B;**[!DNL Audience]** > **[!DNL All Contacts]**&#x200B;頁面，並檢查對象中的連絡人是否已新增，以及對象中的連絡人是否已使用對象名稱進行更新。
+1. 前往您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後導覽至&#x200B;**[!DNL Audience]** > **[!DNL All Contacts]**頁面，並檢查對象中的連絡人是否已新增，以及對象中的連絡人是否已使用對象名稱進行更新。
    ![顯示「對象」頁面的Mailchimp UI熒幕擷圖。](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## 資料使用與控管 {#data-usage-governance}

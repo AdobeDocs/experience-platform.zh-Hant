@@ -4,9 +4,9 @@ title: 刪除目的地
 type: Tutorial
 description: 本教學課程列出刪除Adobe Experience Platform UI中現有目的地的步驟
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 請依照下列步驟，從[!UICONTROL Browse]索引標籤中刪除目的地。
 
-1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 若要檢視您現有的目的地，請從頂端標題選取&#x200B;**[!UICONTROL Browse]**。
+1. 前往[Experience Platform UI](https://platform.adobe.com/)，然後從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Browse]**&#x200B;以檢視您現有的目的地。
 
    ![瀏覽目的地](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -43,11 +43,11 @@ ht-degree: 0%
 
    ![確認刪除目的地](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
-## 從目的地詳細資訊頁面刪除目的地{#delete-destination-details-page}
+## 從目的地詳細資訊頁面刪除目的地 {#delete-destination-details-page}
 
 請依照下列步驟，從目的地詳細資訊頁面中刪除目的地。
 
-1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 若要檢視您現有的目的地，請從頂端標題選取&#x200B;**[!UICONTROL Browse]**。
+1. 前往[Experience Platform UI](https://platform.adobe.com/)，然後從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Browse]**&#x200B;以檢視您現有的目的地。
 
    ![瀏覽目的地](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -75,6 +75,6 @@ ht-degree: 0%
 
    ![刪除目的地確認](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
-   >[!NOTE]
-   >
-   >視伺服器負載而定，[!DNL Experience Platform]刪除目的地可能需要幾分鐘的時間。
+>[!NOTE]
+>
+>視伺服器負載而定，[!DNL Experience Platform]刪除目的地可能需要幾分鐘的時間。

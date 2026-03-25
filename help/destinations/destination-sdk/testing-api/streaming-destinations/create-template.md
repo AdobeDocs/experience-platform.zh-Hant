@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API，在發佈目的地之前先測試串流目的地訊息轉換範本。
 title: 建立及測試訊息轉換範本
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 若要轉換成功，您必須提供轉換範本，類似於此範例： [建立傳送區段、身分和設定檔屬性的範本](../../functionality/destination-server/message-format.md#segments-identities-attributes)。
 
-Adobe提供範本工具，可讓您建立和測試訊息範本，將資料從Adobe XDM格式轉換為目的地支援的格式。 此工具有兩個API端點可供您使用：
+Adobe提供範本工具，用於建立和測試訊息範本，將資料從Adobe XDM格式轉換為目的地支援的格式。 此工具有兩個API端點可供您使用：
 
 * 使用&#x200B;*範例範本API*&#x200B;取得範例範本。
 * 使用&#x200B;*轉譯範本API*&#x200B;來轉譯範例範本，讓您可以比較結果與目的地預期的資料格式。 將匯出的資料與目的地預期的資料格式進行比較後，您可以編輯範本。 如此一來，您產生的匯出資料就會符合目的地預期的資料格式。
@@ -158,9 +158,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## 轉譯器範本API {#render-template-api}
 
-使用[範例範本API](create-template.md#sample-template-api)建立訊息轉換範本後，您可以[轉譯範本](render-template-api.md)，以根據範本產生匯出的資料。 這可讓您驗證[!DNL Adobe Experience Platform]將匯出至目的地的設定檔是否符合目的地的預期格式。
+使用[範例範本API](create-template.md#sample-template-api)建立訊息轉換範本後，您可以[轉譯範本](render-template-api.md)，以根據範本產生匯出的資料。 使用此專案來驗證[!DNL Adobe Experience Platform]將匯出至目的地的設定檔是否符合目的地的預期格式。
 
-如需可進行的呼叫範例，請參閱API參考資料：
+請參閱API參考資料，以取得您可以進行的呼叫範例：
 
 * [轉譯內文未傳送任何設定檔的範本](render-template-api.md#best-effort)
 * [使用傳入內文中的設定檔演算範本](render-template-api.md#configurable-aggregation)

@@ -1,10 +1,10 @@
 ---
 title: Marketo Engage連線
-description: Marketo Engage是唯一適用於行銷、廣告、分析和商業的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化並管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
+description: Marketo Engage是唯一適用於行銷、廣告、分析和商業的端對端客戶體驗管理(CXM)解決方案。 使用它來自動化及管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-[!DNL Marketo Engage]是行銷、廣告、分析和商務的唯一端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化並管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
+[!DNL Marketo Engage]是行銷、廣告、分析和商務的唯一端對端客戶體驗管理(CXM)解決方案。 使用它來自動化及管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
 
 使用此目的地在[!DNL Adobe Experience Platform]和Marketo Engage之間即時同步對象資料和設定檔屬性。
 
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 ## 先決條件 {#prerequisites}
 
-* 設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
+* 設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
 * 設定此目的地時，將只能使用相同Adobe [!DNL Real-Time CDP]組織上的Marketo Engage執行個體。
 * 只有在Adobe Admin Console中管理使用者的Marketo Engage執行個體才能使用此目的地。
 
@@ -145,8 +145,8 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo deduplication field]**
    * **[!UICONTROL Audience and profile]**：當您想要將對象成員新增至Marketo清單，並讓其設定檔資訊保持最新時，請選取此選項。
    * **[!UICONTROL Profile only]**：當您想要讓Marketo銷售機會設定檔與Experience Platform的最新資訊保持最新狀態時，請選取此選項。
    * **[!UICONTROL Audience only]**：當您想要將對象成員新增至Marketo清單，但不更新其設定檔資訊時，請選取此選項。
-* **[!UICONTROL Partition]**： *只有在選擇&#x200B;**[!UICONTROL Profile only]**&#x200B;或&#x200B;**[!UICONTROL Audience and profile]**&#x200B;同步處理型別*&#x200B;時，才能選擇磁碟分割。 選取與您所選工作區相關聯的Marketo分割區ID。 這可讓您指定Marketo中的哪個銷售機會分割區會接收匯出的資料。 如果您未選擇特定的資料分割，您的資料將會傳送到Marketo中的&#x200B;**[!UICONTROL Default]**&#x200B;資料分割。
-* **[!UICONTROL Marketo deduplication field]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/zh-hant/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
+* **[!UICONTROL Partition]**： *只有在選擇&#x200B;**[!UICONTROL Profile only]**或&#x200B;**[!UICONTROL Audience and profile]**同步處理型別*&#x200B;時，才能選擇磁碟分割。 選取與您所選工作區相關聯的Marketo分割區ID。 這會指定Marketo中的哪個銷售機會分割區會接收匯出的資料。 如果您未選擇特定的資料分割，您的資料將會傳送到Marketo中的&#x200B;**[!UICONTROL Default]**&#x200B;資料分割。
+* **[!UICONTROL Marketo deduplication field]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
 
   >[!NOTE]
   >

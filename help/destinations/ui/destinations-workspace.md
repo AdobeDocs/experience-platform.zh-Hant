@@ -3,9 +3,9 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2140'
 ht-degree: 0%
 
 ---
@@ -46,10 +46,10 @@ ht-degree: 0%
 
 | 控制 | 說明 |
 |---------|----------|
-| [!UICONTROL Set up] | 可讓您建立與目的地的連線。 |
-| [!UICONTROL Activate] | 建立與目的地的連線後，您可以啟用對象或匯出資料集到此目的地。 |
-| [!UICONTROL Activate audiences] | 建立與目的地的連線後，您就可以啟用此目的地的對象。 |
-| [!UICONTROL Export datasets] | 建立與目的地的連線後，您可以將資料集匯出到此目的地。 |
+| [!UICONTROL Set up] | 建立與目的地的連線。 |
+| [!UICONTROL Activate] | 建立與目的地的連線後，請啟用對象或匯出資料集到此目的地。 |
+| [!UICONTROL Activate audiences] | 建立與目的地的連線後，請啟用此目的地的對象。 |
+| [!UICONTROL Export datasets] | 建立與目的地的連線後，將資料集匯出到此目的地。 |
 | [!UICONTROL View account] | 檢視您已為目的地連線的帳戶。 |
 | [!UICONTROL View dataflows] | 檢視目的地現有的資料啟用流程。 |
 | [!UICONTROL View documentation] | 開啟該特定目的地的檔案頁面連結，以取得詳細資訊並協助您設定。 |
@@ -83,7 +83,7 @@ ht-degree: 0%
 > ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 > 
 > * 選取`...`欄中的省略符號([!UICONTROL Name])，並使用![啟用對象控制項](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]**&#x200B;控制項將對象或資料集匯出至該目的地。
-> * 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯目的地控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
+> * 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯目的地控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**控制項來編輯現有的目的地連線。 如需詳細資訊，請閱讀[編輯目的地](/help/destinations/ui/edit-destination.md)的教學課程。
 > * 在`...`欄中選取省略符號([!UICONTROL Name])，並使用![編輯行銷動作控制項](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]**&#x200B;控制項以[變更所選目的地的行銷動作](/help/destinations/ui/edit-activation.md#edit-marketing-actions)。
 > * 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![刪除控制項](/help/images/icons/delete.png) **[!UICONTROL Delete]**&#x200B;控制項來[移除](delete-destinations.md)與目的地的現有連線。
 > * 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]**&#x200B;控制項，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
@@ -110,11 +110,11 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-按一下目的地列，即可在右側欄中顯示目的地的詳細資訊，例如目的地ID、說明、啟用的對象數量等。
+選取目的地列，即可在右側欄中檢視有關目的地的詳細資訊，例如目的地ID、說明、啟用的對象數量等。
 
 ![按一下目的地列](../assets/ui/workspace/click-destination-row.png)
 
-選取目的地名稱，可檢視與此目的地啟用的對象相關的資訊。 按一下&#x200B;**[!UICONTROL Edit destination]**&#x200B;以[修改目的地設定](/help/destinations/ui/edit-destination.md)或&#x200B;**[!UICONTROL Activate audiences]**&#x200B;將新對象新增至資料流。
+選取目的地名稱，可檢視與此目的地啟用的對象相關的資訊。 選取&#x200B;**[!UICONTROL Edit destination]**&#x200B;以[修改目的地設定](/help/destinations/ui/edit-destination.md)或&#x200B;**[!UICONTROL Activate audiences]**&#x200B;以將新對象新增至資料流。
 
 ### 在瀏覽標籤中篩選資料流 {#filter-browse}
 
@@ -164,7 +164,7 @@ ht-degree: 0%
 標籤可協助您整理和分類目的地資料流，以便更輕鬆管理。 您可以在個別資料流中新增和移除標籤，以根據您的業務需求將其分組。
 
 若要新增標籤至資料流，請在`...`欄中選取省略符號(**[!UICONTROL Name]**)，然後從內容功能表中選取&#x200B;**[!UICONTROL Manage tags]**。
-在&#x200B;**[!UICONTROL Tags]**&#x200B;欄位中輸入新標籤的名稱，並選取&#x200B;**[!UICONTROL Save]**&#x200B;以套用您的變更。
+在**[!UICONTROL Tags]**&#x200B;欄位中輸入新標籤的名稱，並選取&#x200B;**[!UICONTROL Save]**&#x200B;以套用您的變更。
 
 ![管理標籤對話方塊，顯示標籤選取和建立選項](../assets/ui/workspace/tags.gif)
 
@@ -181,13 +181,13 @@ ht-degree: 0%
 
 ## [!UICONTROL Accounts] {#accounts}
 
-**[!UICONTROL Accounts]**&#x200B;索引標籤顯示您已與各種目的地建立之連線的詳細資料，並可讓您更新或刪除現有的帳戶詳細資料。 請參閱下表，以取得每個目的地帳戶的所有資訊。
+**[!UICONTROL Accounts]**&#x200B;索引標籤顯示您已與各種目的地建立之連線的詳細資料。 您可以從此索引標籤更新或刪除現有的帳戶詳細資料。 如需每個目的地帳戶可用的所有資訊，請參閱下表。
 
 >[!TIP]
 >
-> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![啟用控制項&#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;控制項將對象或資料集匯出至該目的地。
-> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![編輯詳細資訊控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
-> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![刪除控制項&#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
+> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![啟用控制項&#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**控制項將對象或資料集匯出至該目的地。
+> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![編輯詳細資訊控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
+> * 選取`...`資料行中的省略符號([!UICONTROL Platform])，並使用![刪除控制項&#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
 
 ![帳戶標籤](../assets/ui/workspace/accounts-tab.png)
 

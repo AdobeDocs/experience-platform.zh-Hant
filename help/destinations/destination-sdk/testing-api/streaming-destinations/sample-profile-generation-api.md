@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API為您的串流目的地產生範例設定檔，以用於目的地測試。
 title: 根據來源結構描述產生範例設定檔
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '974'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 >使用此API端點可針對兩個不同的使用案例產生範例設定檔。 您可以：
 >
 >* 產生設定檔，以使用[目的地ID](create-template.md)做為查詢引數，在&#x200B;*製作及測試訊息轉換範本*&#x200B;時使用。
->* 如果您的目的地設定正確[&#x200B; — 使用](streaming-destination-testing-overview.md)目的地執行個體識別碼&#x200B;*作為查詢引數，產生呼叫*&#x200B;測試時要使用的設定檔。
+>* 如果您的目的地設定正確[ — 使用](streaming-destination-testing-overview.md)目的地執行個體識別碼&#x200B;*作為查詢引數，產生呼叫*&#x200B;測試時要使用的設定檔。
 
 您可以根據Adobe XDM來源結構描述（用於測試您的目的地）或目的地支援的目標結構描述（用於製作範本）產生範例設定檔。 若要瞭解Adobe XDM來源結構描述與目標結構描述之間的差異，請閱讀[訊息格式](../../functionality/destination-server/message-format.md)文章的概述區段。
 
@@ -47,8 +47,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 若要使用此API，您在Experience Platform UI中必須有與目的地的現有連線。 閱讀[連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)以及[啟用設定檔和對象到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=zh-Hant)以取得詳細資訊。
->* 建立與目的地的連線後，在[瀏覽與目的地的連線時](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=zh-Hant)，取得您應該用於此端點之API呼叫中的目的地執行個體識別碼。
+>* 若要使用此API，您在Experience Platform UI中必須有與目的地的現有連線。 閱讀[連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)以及[啟用設定檔和對象到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)以取得詳細資訊。
+>* 建立與目的地的連線後，在[瀏覽與目的地的連線時](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)，取得您應該用於此端點之API呼叫中的目的地執行個體識別碼。
 >
 >![UI影像如何取得目的地執行個體識別碼](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -182,10 +182,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `segmentMembership` | 說明個人對象會籍的地圖物件。 如需`segmentMembership`的詳細資訊，請閱讀[對象成員資格詳細資料](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=zh-Hant)。 |
+| `segmentMembership` | 說明個人對象會籍的地圖物件。 如需`segmentMembership`的詳細資訊，請閱讀[對象成員資格詳細資料](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)。 |
 | `lastQualificationTime` | 此設定檔上次符合區段資格的時間戳記。 |
 | `xdm:status` | 字串欄位，指出是否已在目前請求中實現對象成員資格。 接受下列值： <ul><li>`realized`：設定檔是區段的一部分。</li><li>`exited`：設定檔正在退出對象，做為目前請求的一部分。</li></ul> |
-| `identityMap` | 描述個人各種身分值及其相關名稱空間的對應型別欄位。 如需`identityMap`的詳細資訊，請閱讀[結構描述組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant#identityMap)。 |
+| `identityMap` | 描述個人各種身分值及其相關名稱空間的對應型別欄位。 如需`identityMap`的詳細資訊，請閱讀[結構描述組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap)。 |
 
 {style="table-layout:auto"}
 
@@ -375,7 +375,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 

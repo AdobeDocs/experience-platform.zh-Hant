@@ -5,16 +5,16 @@ badgeLimitedAvailability: label="有限可用性" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '867'
 ht-degree: 4%
 
 ---
 
 # Audience Analysis目的地
 
-[!UICONTROL Audience Analysis]目的地可讓您將[!DNL Adobe Experience Platform]個對象資料擴充至[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=zh-Hant)報表中作為維度使用。
+使用[!UICONTROL Audience Analysis]目的地將[!DNL Adobe Experience Platform]個對象資料擴充至[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)報表中作為維度使用。
 
 >[!AVAILABILITY]
 >
@@ -106,7 +106,7 @@ Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help
 
 ### 治理原則與執行動作 {#governance-policy}
 
-此選擇性區段可讓您定義資料治理原則，並確保使用的資料在傳送及啟用受眾時符合要求。
+此選擇性區段可讓您定義資料治理原則，並確保使用的資料在傳送及啟用對象時符合要求。
 
 當您完成選取目的地所需的行銷動作時，請選取&#x200B;**[!UICONTROL Create]**。
 

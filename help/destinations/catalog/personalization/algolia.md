@@ -2,9 +2,9 @@
 title: 阿爾戈利亞
 description: 使用此聯結器來啟用演演算法的對象以進行個人化，並用於各種搜尋和推薦。 接著，您可以使用Algoria使用者設定檔來源聯結器，將設定檔匯入Real-Time CDP，以建立豐富的受眾。
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1108'
 ht-degree: 4%
 
 ---
@@ -133,9 +133,9 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出身分，您需要檢視身分圖表[存取控制許可權](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。
+>* 若要匯出身分，您需要檢視身分圖表[存取控制許可權](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。
 
-閱讀[將設定檔和對象啟用至串流對象匯出目的地](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)，以瞭解啟用此目的地對象的指示。
+閱讀[將設定檔和對象啟用至串流對象匯出目的地](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)，以瞭解啟用此目的地對象的指示。
 
 ### 對應屬性和身分 {#mapping-attributes-identities}
 
@@ -163,4 +163,4 @@ ht-degree: 4%
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程所述，您已成功建立資料流，以將對象從Experience Platform匯出至您的[!DNL Algolia]應用程式。 如需[!DNL Algolia]平台的詳細資訊，請參閱[Algolia檔案](https://www.algolia.com/doc/)。
+您已成功建立資料流，以將對象從Experience Platform匯出至您的[!DNL Algolia]應用程式。 如需[!DNL Algolia]平台的詳細資訊，請參閱[Algolia檔案](https://www.algolia.com/doc/)。

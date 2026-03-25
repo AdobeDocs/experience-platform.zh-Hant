@@ -4,9 +4,9 @@ title: Azure事件中樞連線
 description: 建立與您的 [!DNL Azure Event Hubs] 儲存裝置的即時輸出連線，以從Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2142'
 ht-degree: 5%
 
 ---
@@ -62,7 +62,7 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
-請參閱下表以取得目的地匯出型別和頻率的資訊。
+請參閱下表，以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
@@ -73,7 +73,7 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 
 ## IP位址允許清單 {#ip-address-allowlist}
 
-為了滿足客戶的安全性和合規性要求，Experience Platform提供您可以為[!DNL Azure Event Hubs]目的地加入允許清單的靜態IP清單。 如需允許清單的完整IP清單，請參閱串流目的地的[IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md)。
+為了滿足客戶的安全性和合規性要求，Experience Platform提供您可以為[!DNL Azure Event Hubs]目的地加入允許清單的靜態IP清單。 如需允許清單的IP完整清單，請參閱串流目的地的[IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md)。
 
 ## 連線到目標 {#connect}
 
@@ -125,8 +125,8 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 * **[!UICONTROL Name]**：填寫與[!DNL Azure Event Hubs]的連線名稱。
 * **[!UICONTROL Description]**：提供連線的說明。 範例：「優質層級客戶」、「對風箏衝浪感興趣的客戶」。
 * **[!UICONTROL eventHubName]**：為您[!DNL Azure Event Hubs]目的地的資料流提供名稱。
-* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
-* **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 如需選取此選項的資料匯出範例，請參閱下方的[匯出資料](#exported-data)區段。
+* **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出資料](#exported-data)區段。
 
 ### 啟用警示 {#enable-alerts}
 

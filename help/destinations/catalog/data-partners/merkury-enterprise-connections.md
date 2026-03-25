@@ -3,9 +3,9 @@ title: Mercury Enterprise連線目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise連線目的地連線。
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1467'
 ht-degree: 5%
 
 ---
@@ -39,8 +39,8 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->* 若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理目的地**、**啟用目的地**、**檢視設定檔**&#x200B;和&#x200B;**檢視區段** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出&#x200B;*身分*，您需要&#x200B;**檢視身分圖表** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。\！[選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* 若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理目的地**、**啟用目的地**、**檢視設定檔**&#x200B;和&#x200B;**檢視區段** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**檢視身分圖表** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。\！[選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## 支援的身分 {#supported-identities}
 
@@ -86,8 +86,8 @@ ht-degree: 5%
 
 | **專案** | **類型** | **附註** |
 |---|---|---|  
-| 匯出類型 | **以設定檔為基礎** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[[目的地啟用工作流程]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)的選取設定檔屬性畫面中所選。 |
-| 頻率 | **批次** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[[批次檔案型頻率目的地]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/destination-types#file-based)。 |
+| 匯出類型 | **以設定檔為基礎** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[[目的地啟用工作流程]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes)的選取設定檔屬性畫面中所選。 |
+| 頻率 | **批次** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[[批次檔案型頻率目的地]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based)。 |
 
 {style="table-layout:auto"}
 
@@ -95,9 +95,9 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理和啟用資料集目的地** [[存取控制許可權]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
+>若要連線到目的地，您需要&#x200B;**檢視目的地**&#x200B;和&#x200B;**管理和啟用資料集目的地** [[存取控制許可權]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。 閱讀[[存取控制總覽]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線到此目的地，請依照[[目的地設定教學課程]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/connect-destination)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
+若要連線到此目的地，請依照[[目的地設定教學課程]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
@@ -142,7 +142,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 ## 啟用警示 {#enable-alerts}
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/alerts)的指南。
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts)的指南。
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**下一步**。
 
@@ -154,7 +154,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 >* 若要匯出身分，您需要&#x200B;**檢視身分圖表**&#x200B;存取控制許可權。
 
 
-讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
 
 ## 對應建議 {#mapping-suggestions}
 
@@ -183,8 +183,8 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至[!DNL Merkury]受管理的S3位置。 接下來，您需要連絡您的[!DNL Merkury]代表，提供帳戶名稱、檔案名稱以及儲存貯體路徑，以便設定處理作業。
+您已成功建立資料流，以將設定檔資料從Experience Platform匯出至[!DNL Merkury]受管理的S3位置。 接下來，您需要連絡您的[!DNL Merkury]代表，提供帳戶名稱、檔案名稱以及儲存貯體路徑，以便設定處理作業。

@@ -5,9 +5,9 @@ title: 使用流程服務API刪除目的地資料流
 type: Tutorial
 description: 瞭解如何使用資料流服務API將資料流刪除至批次和串流目的地。
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '552'
 ht-degree: 19%
 
 ---
@@ -90,8 +90,8 @@ curl -X DELETE \
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功使用[!DNL Flow Service] API刪除到目的地的現有資料流。
+您已成功使用[!DNL Flow Service] API刪除到目的地的現有資料流。
 
 如需有關如何使用使用者介面執行這些操作的步驟，請參閱有關[在UI中刪除資料流](../ui/delete-destinations.md)的教學課程。
 
-您現在可以使用[&#x200B; API繼續並](/help/destinations/api/delete-destination-account.md)刪除目的地帳戶[!DNL Flow Service]。
+您現在可以使用[ API繼續並](/help/destinations/api/delete-destination-account.md)刪除目的地帳戶[!DNL Flow Service]。

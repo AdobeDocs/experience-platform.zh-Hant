@@ -4,9 +4,9 @@ title: 更新目的地帳戶
 type: Tutorial
 description: 本教學課程列出在Adobe Experience Platform UI中更新目的地帳戶的步驟
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-「**[!UICONTROL Accounts]**」標籤顯示您已與各種目的地建立之連線的詳細資料。 請參閱[帳戶總覽](../ui/destinations-workspace.md#accounts)，瞭解您可以在每個目的地帳戶上取得的所有資訊。
+**[!UICONTROL Accounts]**&#x200B;索引標籤顯示您已與各種目的地建立之連線的詳細資料。 如需每個目的地帳戶的所有可用資訊，請參閱[帳戶總覽](../ui/destinations-workspace.md#accounts)。
 
 本教學課程涵蓋使用Experience Platform UI更新目的地帳戶詳細資料的步驟。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 請依照下列步驟，將連線詳細資料更新至現有的目的地。
 
-1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視您現有的帳戶。
+1. 前往[Experience Platform UI](https://platform.adobe.com/)，然後從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Accounts]**&#x200B;以檢視您現有的帳戶。
 
    ![帳戶標籤](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -63,6 +63,6 @@ ht-degree: 0%
 
 ## 後續步驟 {#next-steps}
 
-依照此教學課程，您已成功使用&#x200B;**[!UICONTROL destinations]**&#x200B;工作區來更新現有帳戶。
+您已成功使用&#x200B;**[!UICONTROL destinations]**&#x200B;工作區更新現有帳戶。
 
 如需有關目的地的詳細資訊，請參閱[目的地概觀](../catalog/overview.md)。

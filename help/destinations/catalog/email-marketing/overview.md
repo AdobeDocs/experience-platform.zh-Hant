@@ -4,9 +4,9 @@ title: 電子郵件行銷目的地概觀
 type: Tutorial
 description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 瞭解哪些ESP支援做為Experience Platform目的地。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '370'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 3%
 
 ### 身分選擇 {#identity}
 
-Adobe建議您從[聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 這是將您的使用者身分識別作為輸入資料的欄位。 最常見的情況是，此欄位是電子郵件地址，但也可以是忠誠計畫ID或電話號碼。 請參閱下表，以瞭解結構描述中最常見的唯一識別碼及其XDM欄位。
+Adobe建議您從[聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 這是將您的使用者身分識別作為輸入資料的欄位。 最常見的情況是，此欄位是電子郵件地址，但也可以是忠誠計畫ID或電話號碼。 請參閱下表，瞭解結構描述中最常見的不重複識別碼及其XDM欄位。
 
 | 唯一識別碼 | 統一結構描述中的XDM欄位 |
 |----------------- | ---------------------------|

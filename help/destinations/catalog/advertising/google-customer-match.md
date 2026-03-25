@@ -1,11 +1,11 @@
 ---
 keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
-description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物和Gmail）聯絡客戶，並與客戶重新互動。
+description: Google Customer Match會使用您的線上和離線資料，透過Google所擁有和運作的屬性（例如搜尋、購物和Gmail），聯絡客戶並重新與其互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2812'
 ht-degree: 7%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 7%
 ><br/>
 >未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，以篩選出未同意的設定檔，繼續使用現有的[!DNL Real-Time CDP] Google目的地而不中斷。
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)可讓您使用線上和離線資料，透過Google所擁有和運作的屬性（例如： [!DNL Search]、[!DNL Shopping]和[!DNL Gmail]），聯絡及重新與您的客戶互動。
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)會使用您的線上和離線資料，透過Google所擁有和運作的屬性（例如： [!DNL Search]、[!DNL Shopping]和[!DNL Gmail]）聯絡及重新與您的客戶互動。
 
 >[!TIP]
 >
@@ -170,7 +170,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 影片概觀 {#video-overview}
 

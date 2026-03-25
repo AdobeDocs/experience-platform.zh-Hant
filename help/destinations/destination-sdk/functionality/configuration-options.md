@@ -2,9 +2,9 @@
 description: Adobe Experience Platform中的目的地服務使用數個元件的設定端點，這些元件會建置目的地功能。 瞭解這些元件如何結合，讓Experience Platform可連結至目的地合作夥伴、傳送自訂訊息，並在整個數位生態系統中啟用設定檔資料。
 title: Destination SDK中的設定選項
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
@@ -56,8 +56,8 @@ ht-degree: 0%
 
 ## 對象中繼資料設定 {#audience-metadata-configuration}
 
-此元件可讓您設定如何以程式設計方式在您的目的地建立、更新或刪除對象。 針對以檔案為基礎的目的地，它可讓您在檔案成功傳送至目的地時設定通知。 您可以透過[對象範本端點](../metadata-api/create-audience-template.md)設定此功能。
+使用此元件來設定在您的目的地如何以程式設計方式建立、更新或刪除對象。 針對以檔案為基礎的目的地，每當檔案成功傳送至您的目的地時，請使用它來設定通知。 您可以透過[對象範本端點](../metadata-api/create-audience-template.md)設定此功能。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文章，您現在已大致瞭解Destination SDK所提供的功能，以及需閱讀哪些頁面以取得特定設定的詳細資訊。 接下來，您可以閱讀指南內容，其中包含使用Destination SDK [設定串流](../guides/configure-destination-instructions.md)或[檔案型目的地](../guides/configure-file-based-destination-instructions.md)的所有步驟。
+您現在已大致瞭解Destination SDK所提供的功能，以及需閱讀哪些頁面以取得特定設定的詳細資訊。 接下來，您可以閱讀指南內容，其中包含使用Destination SDK [設定串流](../guides/configure-destination-instructions.md)或[檔案型目的地](../guides/configure-file-based-destination-instructions.md)的所有步驟。

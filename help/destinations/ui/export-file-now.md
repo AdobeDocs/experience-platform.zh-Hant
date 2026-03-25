@@ -3,7 +3,7 @@ title: 使用Experience Platform UI隨選將檔案匯出至批次目的地
 type: Tutorial
 description: 瞭解如何使用Experience Platform UI隨選將檔案匯出至批次目的地。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 5%
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 本文說明如何使用Experience Platform UI隨選將檔案匯出至批次目的地，例如[雲端儲存空間](/help/destinations/catalog/cloud-storage/overview.md)和[電子郵件行銷](/help/destinations/catalog/email-marketing/overview.md)目的地。
 
-**[!UICONTROL Export file now]**&#x200B;控制項可讓您匯出完整檔案，而不會中斷先前排程對象的目前匯出排程。 除了先前排程的匯出外，也會進行此匯出，不會變更對象的匯出頻率。
+使用&#x200B;**[!UICONTROL Export file now]**&#x200B;控制項匯出完整檔案，而不中斷先前排程對象的目前匯出排程。 除了先前排程的匯出外，也會進行此匯出，不會變更對象的匯出頻率。
 
 檔案匯出會立即觸發，並僅使用最近對象評估快照中的資料。 其中不包含建立快照後發生的設定檔或身分變更。 相比之下，排程的匯出包括快照集資料以及在快照集建立和匯出時間之間發生的增量變更。
 

@@ -2,9 +2,9 @@
 description: 設定檔案型目的地的檔案格式選項
 title: 瞭解如何使用Destination SDK來設定檔案型目的地的檔案格式選項。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-Destination SDK可讓您大幅調整匯出檔案的格式和壓縮選項，以符合儲存位置的任何下游需求。
+使用Destination SDK大幅調整匯出檔案的格式和壓縮選項，以符合儲存位置的任何下游需求。
 
 本頁面說明如何使用Destination SDK來設定檔案型目的地的檔案格式選項。
 
 ## 先決條件 {#prerequisites}
 
-在前往下列步驟之前，請參閱[Destination SDK快速入門](../../getting-started.md)頁面，以取得使用Destination SDK API所需的必要Adobe I/O驗證認證和其他必要條件。
+在前往下列步驟之前，請閱讀[Destination SDK快速入門](../../getting-started.md)頁面，以取得使用Destination SDK API所需的必要Adobe I/O驗證認證和其他必要條件。
 
 Adobe也建議您在繼續之前，先閱讀並熟悉下列檔案：
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文章，您現在知道如何使用Destination SDK為匯出的檔案設定自訂檔案格式選項。 接下來，您的團隊可以使用檔案型目的地的[啟動工作流程](../../../ui/activate-batch-profile-destinations.md)，將資料匯出至目的地。
+您現在知道如何使用Destination SDK為匯出的檔案設定自訂檔案格式選項。 接下來，您的團隊可以使用檔案型目的地的[啟動工作流程](../../../ui/activate-batch-profile-destinations.md)，將資料匯出至目的地。

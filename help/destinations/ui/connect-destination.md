@@ -3,9 +3,9 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟用警示，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 4%
    * **[!UICONTROL Activate]**。已經設定連線到此目的地。 此目的地支援對象啟用和資料集匯出。
    * **[!UICONTROL Activate audiences]**。已經設定連線到此目的地。 此目的地僅支援對象啟用。
 
-   如需這些控制項之間差異的詳細資訊，您也可以參閱目的地工作區檔案的[目錄](../ui/destinations-workspace.md#catalog)區段。
+   如需這些控制項之間差異的詳細資訊，請參閱目的地工作區檔案的[目錄](../ui/destinations-workspace.md#catalog)區段。
 
    選取&#x200B;**[!UICONTROL Set up]**、**[!UICONTROL Activate]**&#x200B;或&#x200B;**[!UICONTROL Activate audiences]** （視您可用的控制項而定）。
 
@@ -109,7 +109,7 @@ ht-degree: 4%
 
 ### 啟用目的地警示 {#enable-alerts}
 
-1. （選用）選取您要訂閱的目的地資料流警示。 建立資料流時，您可以訂閱警示以接收有關資料流執行狀態、成功或失敗的警示訊息。 根據您連線的目的地型別（檔案型或串流），可用的警報會有所不同。 閱讀[訂閱內文中目的地警示](alerts.md)，以取得目的地資料流警示的詳細資訊。
+1. （選用）選取您要訂閱的目的地資料流警示。 訂閱建立資料流時的警報，以接收有關資料流執行的狀態、成功或失敗的警報訊息。 根據您連線的目的地型別（檔案型或串流），可用的警報會有所不同。 閱讀[訂閱內文中目的地警示](alerts.md)，以取得目的地資料流警示的詳細資訊。
 
    ![[設定新目的地]對話方塊中反白了內容中目的地警示訂閱選項。](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
@@ -127,6 +127,6 @@ ht-degree: 4%
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您已瞭解如何使用Experience Platform UI建立與目的地的連線。 提醒一下，可用和必要的連線引數會因目的地而異。 您也應該參閱[目的地目錄](/help/destinations/catalog/overview.md)中的目的地檔案頁面，以取得關於每個目的地型別的必要輸入和可用選項的特定資訊。
+您現在瞭解如何使用Experience Platform UI來建立與目的地的連線。 可用和必要的連線引數會因目的地而異。 請參閱[目的地目錄](/help/destinations/catalog/overview.md)中的目的地檔案頁面，以取得關於每個目的地型別的必要輸入和可用選項的特定資訊。
 
-接著，您可以繼續[啟用對象](/help/destinations/ui/activation-overview.md)或[將資料集](/help/destinations/ui/export-datasets.md)匯出至您的目的地。
+接下來，繼續進行[啟用對象](/help/destinations/ui/activation-overview.md)或[匯出資料集](/help/destinations/ui/export-datasets.md)至您的目的地。

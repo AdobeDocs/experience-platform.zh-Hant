@@ -3,9 +3,9 @@ title: 編輯目的地
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform UI中編輯和更新現有的目的地帳戶
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 1. 導覽至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Browse]**。
 2. 選取想要編輯的目的地。
-3. 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯目的地控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;控制項來編輯現有的目的地連線。
+3. 選取`...`資料行中的省略符號([!UICONTROL Name])，並使用![編輯目的地控制項&#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**控制項來編輯現有的目的地連線。
 4. 在強制回應視窗中，編輯任何需要的設定。 完成時選取&#x200B;**[!UICONTROL Save]**。
 
 在編輯目的地視窗中，您可以更新您最初連線至目的地時所設定的任何設定。 這些設定會因您更新的目標平台而異。
@@ -61,6 +61,6 @@ ht-degree: 0%
 
 ## 後續步驟 {#next-steps}
 
-依照此教學課程，您已成功使用&#x200B;**[!UICONTROL destinations]**&#x200B;工作區來更新現有的目的地連線。
+您已成功使用&#x200B;**[!UICONTROL destinations]**&#x200B;工作區更新現有的目的地連線。
 
 如需有關目的地的詳細資訊，請參閱[目的地概觀](../catalog/overview.md)。

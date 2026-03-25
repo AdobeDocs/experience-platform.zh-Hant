@@ -3,9 +3,9 @@ keywords: facebook pixel擴充功能；facebook pixel擴充功能；facebook pix
 title: Facebook Pixel擴充功能
 description: Facebook Pixel擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 6a2c661f-1ad0-4d96-b1bb-bf8c158c8521
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '419'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-[!DNL Facebook Pixel]是一種分析工具，可讓您瞭解訪客在您網站上採取的動作，以評估廣告效益。
+[!DNL Facebook Pixel]是一種分析工具，可透過瞭解訪客在您網站上採取的動作，來評估廣告的成效。
 
 [!DNL Facebook Pixel]是[!DNL Adobe Experience Platform]中的Advertising擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Facebook Pixel網站](https://developers.facebook.com/docs/facebook-pixel/)。
 

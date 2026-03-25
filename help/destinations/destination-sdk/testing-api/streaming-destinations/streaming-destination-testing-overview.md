@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API，在發佈之前先測試您的串流目的地設定。
 title: 串流目的地測試API概覽
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---

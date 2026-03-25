@@ -3,9 +3,9 @@ keywords: Kickfire；Kickfire；Kickfire擴充功能；Kickfire擴充功能
 title: KickFire擴充功能
 description: KickFire擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-[!DNL KickFire's] IP位址智慧與B2B實體資料可讓您將IP位址轉譯為公司、識別匿名網路訪客，以及將帳戶資料整合至您的技術棧疊 — 所有這一切都是根據公司的IP位址而定。
+[!DNL KickFire's] IP位址智慧與B2B實體資料會將IP位址轉譯為公司、識別匿名網路訪客，並將帳戶資料整合到您的技術棧疊中 — 所有這些都是根據公司的IP位址而定。
 
 [!DNL KickFire]是[!DNL Adobe Experience Platform]中的個人化擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Kickfire網站](https://www.kickfire.com/)。
 

@@ -1,10 +1,10 @@
 ---
-description: 瞭解如何使用Destination SDK功能，以自訂檔案名稱和格式選項設定Amazon S3目的地。
+description: 瞭解如何使用Destination SDK來設定具有自訂檔案名稱和格式選項的Amazon S3目的地。
 title: 使用自訂檔案名稱和格式選項設定Amazon S3目的地。
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-此頁面說明如何使用Destination SDK來設定Amazon S3目的地，其中包含自訂[檔案格式選項](configure-file-formatting-options.md)和自訂[檔案名稱組態](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration)。
+本頁說明如何使用Destination SDK來設定Amazon S3目的地，該目的地具有自訂[檔案格式選項](configure-file-formatting-options.md)和自訂[檔案名稱組態](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration)。
 
 此頁面顯示Amazon S3目的地可用的所有設定選項。 您可以編輯下列步驟中顯示的組態，或視需要刪除組態的特定部分。
 
-如需底下所用引數的詳細說明，請參閱Destinations SDK[&#128279;](../../functionality/configuration-options.md)中的組態選項。
+如需底下所用引數的詳細說明，請參閱目的地SDK[中的](../../functionality/configuration-options.md)組態選項。
 
 ## 先決條件 {#prerequisites}
 
-在推進下列步驟之前，請參閱[Destination SDK快速入門](../../getting-started.md)頁面，以取得使用Destination SDKAPI所需的必要Adobe I/O驗證認證和其他必要條件。
+在前往下列步驟之前，請閱讀[Destination SDK快速入門](../../getting-started.md)頁面，以取得使用Destination SDK API所需的必要Adobe I/O驗證認證和其他必要條件。
 
 ## 步驟1：建立伺服器和檔案組態 {#create-server-file-configuration}
 
@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **要求**
 
 以下請求會建立新的目的地伺服器組態，由承載中提供的引數設定。
-以下承載包含一般Amazon S3設定，其中包含使用者可在Experience PlatformUI中定義的自訂[CSV檔案格式](../../functionality/destination-server/file-formatting.md)設定引數。
+以下承載包含一般Amazon S3設定，其中包含使用者可在Experience Platform UI中定義的自訂[CSV檔案格式](../../functionality/destination-server/file-formatting.md)設定引數。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -127,7 +127,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 在上一步中建立目的地伺服器和檔案格式設定後，您現在可以使用`/destinations` API端點來建立目的地設定。
 
-若要將[步驟1](#create-server-file-configuration)中的伺服器設定連線至此目的地設定，請以在[步驟1](#create-server-file-configuration)中建立您的目的地伺服器時所取得的值，取代下列API要求中的`destinationServerId`值。
+若要將[步驟1](#create-server-file-configuration)中的伺服器設定連線至此目的地設定，請以在`destinationServerId`步驟1[中建立您的目的地伺服器時所取得的值，取代下列API要求中的](#create-server-file-configuration)值。
 
 **API格式**
 
@@ -409,7 +409,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 成功的回應會傳回新的目的地組態，包括組態的唯一識別碼(`instanceId`)。 如果您需要進一步提出HTTP請求來更新您的目的地設定，請視需要儲存此值。
 
-## 步驟3：驗證Experience PlatformUI {#verify-ui}
+## 步驟3：驗證Experience Platform UI {#verify-ui}
 
 根據上述設定，Experience Platform目錄現在會顯示新的私人目的地卡供您使用。
 
@@ -433,13 +433,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 如果您要調整上述任何欄位，請重複[步驟1](#create-server-file-configuration)和[兩個](#create-destination-configuration)，以根據您的需求修改設定。
 
-## 步驟4： （選用）將目的地設為Publish {#publish-destination}
+## 步驟4： （選用）發佈您的目的地 {#publish-destination}
 
 >[!NOTE]
 >
 >如果您要建立供自己使用的私人目的地，且不想將其發佈到目的地目錄以供其他客戶使用，則不需要執行此步驟。
 
-設定目的地後，請使用[目的地發佈API](../../publishing-api/create-publishing-request.md)將您的設定提交給Adobe進行檢閱。
+設定目的地後，請使用[目的地發佈API](../../publishing-api/create-publishing-request.md)將您的設定提交至Adobe以供檢閱。
 
 ## 步驟5： （選用）記錄您的目的地 {#document-destination}
 
@@ -451,4 +451,4 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文後，您現在知道如何使用Destination SDK來撰寫自訂[!DNL Amazon S3]目的地。 接下來，您的團隊可以使用檔案型目的地的[啟動工作流程](../../../ui/activate-batch-profile-destinations.md)，將資料匯出至目的地。
+您現在知道如何使用Destination SDK編寫自訂[!DNL Amazon S3]目的地。 接下來，您的團隊可以使用檔案型目的地的[啟動工作流程](../../../ui/activate-batch-profile-destinations.md)，將資料匯出至目的地。

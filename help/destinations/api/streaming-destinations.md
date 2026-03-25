@@ -5,9 +5,9 @@ title: 使用Adobe Experience Platform中的流量服務API連線到串流目的
 description: 本檔案說明如何使用Adobe Experience Platform API建立串流目的地
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2192'
 ht-degree: 2%
 
 ---
@@ -565,7 +565,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 除了設定檔屬性和步驟[啟用資料至您的新目的地](#activate-data)中的對象之外，[!DNL AWS Kinesis]和[!DNL Azure Event Hubs]中的匯出資料也會包含身分對應的相關資訊。 這代表匯出設定檔的身分（例如[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=zh-Hant)、行動ID、Google ID、電子郵件地址等）。 請參閱下列範例。
+> 除了設定檔屬性和步驟[啟用資料至您的新目的地](#activate-data)中的對象之外，[!DNL AWS Kinesis]和[!DNL Azure Event Hubs]中的匯出資料也會包含身分對應的相關資訊。 這代表匯出設定檔的身分（例如[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等）。 請參閱下列範例。
 
 ```json
 {
@@ -636,7 +636,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功將Experience Platform連線至其中一個慣用的串流目的地，並設定流向相應目的地的資料流程。 傳出資料現在可用於客戶分析目的地或您可能想要執行的任何其他資料操作。 如需詳細資訊，請參閱下列頁面：
+您已成功將Experience Platform連線至其中一個慣用的串流目的地，並設定流向各個目的地的資料流程。 傳出資料現在可用於客戶分析目的地或您可能想要執行的任何其他資料操作。 如需詳細資訊，請參閱下列頁面：
 
 * [目的地概觀](../home.md)
 * [目的地目錄概觀](../catalog/overview.md)

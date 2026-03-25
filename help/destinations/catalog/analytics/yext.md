@@ -3,7 +3,7 @@ keywords: Yext轉換追蹤；Yext；yext；yext轉換追蹤
 title: Yext轉換追蹤擴充功能
 description: Yext轉換追蹤擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-[!DNL Yext Conversion Tracking]擴充功能可讓您測量可歸因於使用Yext產品的轉換。
+使用[!DNL Yext Conversion Tracking]擴充功能來測量可歸因於您使用Yext產品的轉換。
 
 [!DNL Yext Conversion Tracking]是[!DNL Adobe Experience Platform]中的Analytics擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html)上的擴充功能頁面。
 

@@ -5,9 +5,9 @@ title: 使用流程服務API刪除目的地帳戶
 type: Tutorial
 description: 瞭解如何使用流量服務API刪除目的地帳戶。
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '743'
 ht-degree: 17%
 
 ---
@@ -183,8 +183,8 @@ curl -X DELETE \
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態碼](../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors)。
+本教學課程中的API端點會遵循一般Experience Platform API錯誤訊息原則。 請參閱Experience Platform疑難排解指南中的[API狀態代碼](../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-依照此教學課程，您已成功使用[!DNL Flow Service] API刪除現有的目的地帳戶。 如需使用目的地的詳細資訊，請參閱[目的地概觀](/help/destinations/home.md)。
+您已成功使用[!DNL Flow Service] API刪除現有的目的地帳戶。 如需使用目的地的詳細資訊，請參閱[目的地概觀](/help/destinations/home.md)。

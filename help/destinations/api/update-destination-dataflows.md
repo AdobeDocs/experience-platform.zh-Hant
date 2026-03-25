@@ -5,9 +5,9 @@ title: 使用流程服務API更新目的地資料流程
 type: Tutorial
 description: 本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用流量服務API來啟用或停用資料流、更新其基本資訊，或新增和移除對象和屬性。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2459'
+source-wordcount: '2452'
 ht-degree: 3%
 
 ---
@@ -877,4 +877,4 @@ curl -X PATCH \
 
 ## 後續步驟 {#next-steps}
 
-依照此教學課程，您已瞭解如何更新目的地資料流程的各種元件，例如使用[!DNL Flow Service] API新增或移除對象或設定檔屬性。 如需目的地的詳細資訊，請參閱[目的地概觀](../home.md)。
+您已瞭解如何使用[!DNL Flow Service] API來更新目的地資料流程的各種元件，例如新增或移除對象或設定檔屬性。 如需目的地的詳細資訊，請參閱[目的地概觀](../home.md)。

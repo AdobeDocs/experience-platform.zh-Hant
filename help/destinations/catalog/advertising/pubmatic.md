@@ -3,7 +3,7 @@ title: PubMatic Connect
 description: PubMatic提供未來程式化的數位行銷supply chain，實現客戶價值的最大化。 PubMatic Connect結合平台技術與專屬服務，以強化詳細目錄與資料的封裝與異動方式。
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 3%
@@ -162,7 +162,7 @@ ht-degree: 3%
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
-[!DNL PubMatic] UI可讓您檢查資料是否已正確推送，以及區段是否可供使用。 推播資料後，可能需要24小時才能更新[!DNL PubMatic] UI。
+使用[!DNL PubMatic] UI檢查資料是否已正確推送，以及區段是否可用。 推播資料後，可能需要24小時才能更新[!DNL PubMatic] UI。
 
 ## 資料使用與控管 {#data-usage-governance}
 

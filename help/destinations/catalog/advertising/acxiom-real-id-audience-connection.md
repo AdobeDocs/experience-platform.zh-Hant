@@ -3,9 +3,9 @@ title: Acxiom Real ID受眾連線
 description: 使用 [!DNL Acxiom Real ID Audience Connection] 目的地以 [!DNL Acxiom's Real ID] 技術增強受眾，並啟用多個平台的受眾，例如 [!DNL Altice]、 [!DNL Ampersand]、 [!DNL Comcast]等。
 badge: label="Beta" type="Informative"
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '999'
 ht-degree: 6%
 
 ---
@@ -34,8 +34,8 @@ ht-degree: 6%
 ## 先決條件 {#prerequisites}
 
 * **確認使用條款：**&#x200B;您必須閱讀並簽署[!DNL Acxiom Real ID Audience Connection]使用條款合約，才能設定新的[!DNL Acxiom's]目的地。 執行銷售訂單完成後，您將會收到合約的連結。
-* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
-* **取得[!DNL Acxiom's Real ID]產品的授權：**&#x200B;取得授權後，請在[!DNL Real-Time CDP]內提供Acxiom的真實ID。 如需詳細資訊，請參閱[Acxiom資料增強功能](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)。
+* **知道您的Adobe組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用者合約條款。 如需如何[!DNL Adobe's]檢視組織ID *的詳細資訊，請參閱Experience Cloud中的* [組織](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)主題。
+* **取得[!DNL Acxiom's Real ID]產品的授權：**&#x200B;取得授權後，請在[!DNL Real-Time CDP]內提供Acxiom的真實ID。 如需詳細資訊，請參閱[Acxiom資料增強功能](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement)。
 
 
 ## 支援的身分 {#supported-identities}
@@ -107,7 +107,7 @@ ht-degree: 6%
 
 
 
-讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations)，以取得啟用此目的地對象的指示。
 
 >[!NOTE]
 >
@@ -144,7 +144,7 @@ ht-degree: 6%
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-governance/home)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home)。
 
 ## 疑難排解 {#troubleshooting}
 
@@ -159,4 +159,4 @@ ht-degree: 6%
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功將對象啟動至選取的目的地平台。 接下來，請聯絡您的目的地平台代表，以開始設定您的行銷活動。
+您已成功將對象啟動至選取的目的地平台。 接下來，請聯絡您的目的地平台代表，以開始設定您的行銷活動。

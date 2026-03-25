@@ -4,10 +4,10 @@ title: Amazon Kinesis連線
 description: 建立與您的Amazon Kinesis儲存空間的即時輸出連線，以從Adobe Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 5%
+source-wordcount: '2061'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 5%
 >
 > 此目的地僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
 
-[!DNL Kinesis Data Streams]的[!DNL Amazon Web Services]服務可讓您即時收集和處理大型資料記錄串流。
+[!DNL Kinesis Data Streams]的[!DNL Amazon Web Services]服務會即時收集和處理大型資料記錄串流。
 
 您可以建立與[!DNL Amazon Kinesis]儲存裝置的即時輸出連線，以從[!DNL Adobe Experience Platform]串流資料。
 
@@ -62,7 +62,7 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
-請參閱下表以取得目的地匯出型別和頻率的資訊。
+請參閱下表，以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
@@ -73,7 +73,7 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 
 ## IP位址允許清單 {#ip-address-allowlist}
 
-為了滿足客戶的安全性和合規性要求，Experience Platform提供您可以為[!DNL Amazon Kinesis]目的地加入允許清單的靜態IP清單。 如需允許清單的完整IP清單，請參閱串流目的地的[IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md)。
+為了滿足客戶的安全性和合規性要求，Experience Platform提供您可以為[!DNL Amazon Kinesis]目的地加入允許清單的靜態IP清單。 如需允許清單的IP完整清單，請參閱串流目的地的[IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md)。
 
 ## 必要的[!DNL Amazon Kinesis]許可權 {#required-kinesis-permission}
 
@@ -152,8 +152,8 @@ UI中的![Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/cata
 * **[!UICONTROL Name]**：提供您連線至[!DNL Amazon Kinesis]的名稱
 * **[!UICONTROL Description]**：提供您連線至[!DNL Amazon Kinesis]的說明。
 * **[!UICONTROL Stream]**：提供您[!DNL Amazon Kinesis]帳戶中現有資料流的名稱。 Experience Platform會將資料匯出至此資料流。
-* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
-* **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
+* **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 如需選取此選項的資料匯出範例，請參閱下方的[匯出資料](#exported-data)區段。
+* **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出資料](#exported-data)區段。
 
 <!--
 

@@ -3,27 +3,27 @@ keywords: Experience Platform；首頁；熱門主題；警報；目的地
 description: 您可以在建立資料流時訂閱警報，以接收有關流程執行的狀態、成功或失敗的警報訊息。
 title: 訂閱內容感知目的地警示
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '906'
 ht-degree: 9%
 
 ---
 
 # 訂閱內容感知目的地警示
 
-[!DNL Adobe Experience Platform]可讓您訂閱關於[!DNL Adobe Experience Platform]個活動的事件型警示。 警示可減少或消除輪詢[[!DNL Observability Insights] API](../../observability/api/overview.md)以檢查工作是否已完成、工作流程中是否已達到特定里程碑，或是否已發生任何錯誤的必要性。
+使用[!DNL Adobe Experience Platform]訂閱有關[!DNL Adobe Experience Platform]活動的事件型警示。 警示可減少或消除輪詢[[!DNL Observability Insights] API](../../observability/api/overview.md)以檢查工作是否已完成、工作流程中是否已達到特定里程碑，或是否已發生任何錯誤的必要性。
 
 建立資料流時，您可以訂閱警示以接收有關資料流執行狀態、成功或失敗的警示訊息。
 
-本檔案提供如何訂閱目的地資料流接收警報訊息的步驟。
+本檔案提供訂閱目的地資料流程之警報訊息的步驟。
 
 ## 快速入門 {#getting-started}
 
 本檔案需要您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
 * [目的地](../home.md)：預先建立與目的地平台的整合，允許從[!DNL Adobe Experience Platform]無縫啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
-* [可觀察性](../../observability/home.md)： [!DNL Observability Insights]可讓您透過使用統計量度和事件通知來監視Experience Platform活動。
+* [可觀察性](../../observability/home.md)：使用[!DNL Observability Insights]透過統計量度和事件通知來監視Experience Platform活動。
    * [警報](../../observability/alerts/overview.md)：當您的Experience Platform作業中達到特定條件集時（例如當系統違反臨界值時會發生潛在問題），Experience Platform可以將警報訊息傳送給組織中訂閱這些訊息的任何使用者。
 
 ## 訂閱 UI 中的警示 {#subscribe-destination-alerts}
@@ -117,4 +117,4 @@ ht-degree: 9%
 
 ## 後續步驟 {#next-steps}
 
-本檔案逐步說明如何訂閱目的地資料流程的內容感知警報。 如需詳細資訊，請參閱[警示使用者介面指南](../../observability/alerts/ui.md)。
+您現在可以為目的地資料流訂閱內容感知警報。 如需詳細資訊，請參閱[警示使用者介面指南](../../observability/alerts/ui.md)。

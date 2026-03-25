@@ -3,9 +3,9 @@ title: Mailchimp興趣類別
 description: Mailchimp （也稱為Intuit Mailchimp）是一種流行的行銷自動化平台和電子郵件行銷服務，企業使用它來管理與聯絡人（客戶、客戶或其他感興趣的當事方）使用郵寄清單和電子郵件行銷活動。 可使用此連接器根據聯絡人的興趣和偏好將他們排序。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2395'
+source-wordcount: '2390'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL Mailchimp Interest Categories]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料到[!DNL Mailchimp Interest Categories]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 ### [!DNL Mailchimp Interest Categories]目的地的先決條件 {#prerequisites-destination}
 
@@ -50,7 +50,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 您需要您的[!DNL Mailchimp] **API金鑰**，以針對您的[!DNL Mailchimp Interest Categories]帳戶驗證[!DNL Mailchimp]目的地。 當您&#x200B;**驗證目的地**&#x200B;時，**API金鑰**&#x200B;將用作[密碼](#authenticate)。
 
-如果您沒有&#x200B;**API金鑰**，請登入您的帳戶並參閱[[!DNL Mailchimp] 產生您的API金鑰](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key)檔案以建立金鑰。
+如果您沒有&#x200B;**API金鑰**，請登入您的帳戶，並參閱[[!DNL Mailchimp] 產生您的API金鑰](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key)檔案以建立金鑰。
 
 API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
@@ -68,11 +68,11 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 寫下資料中心值&#x200B;*（在此範例中為`us14`）*，當您[填寫目的地詳細資料](#destination-details)時，需要此值。
 
-若您需要進一步的指引，請參閱[[!DNL Mailchimp] 基礎檔案](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure)。
+如果您需要進一步的指引，請參閱[[!DNL Mailchimp] 基礎檔案](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure)。
 
 ### 護欄 {#guardrails}
 
-您的[!DNL Mailchimp]個對象中，每個對象都可以在單一群組或相同對象內數個群組間包含最多60個群組名稱（或興趣類別）。 如需任何必要的說明，請參考[!DNL Mailchimp] [群組](https://mailchimp.com/help/getting-started-with-groups/)。 當您達到此限制時，您會從`400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` API收到錯誤回應形式的[!DNL Mailchimp]訊息。
+您的[!DNL Mailchimp]個對象中，每個對象都可以在單一群組或相同對象內數個群組間包含最多60個群組名稱（或興趣類別）。 如需任何必要的說明，請參閱[!DNL Mailchimp] [群組](https://mailchimp.com/help/getting-started-with-groups/)。 當您達到此限制時，您會從`400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` API收到錯誤回應形式的[!DNL Mailchimp]訊息。
 
 此外，請參閱[!DNL Mailchimp] [速率限制](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)，以取得有關[!DNL Mailchimp] API所設限制的詳細資訊。
 
@@ -222,7 +222,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-* 登入您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後，導覽至&#x200B;**[!DNL Audience]**&#x200B;頁面。 接下來，展開&#x200B;**[!DNL Manage Contacts]**&#x200B;功能表並選取&#x200B;**[!DNL Groups]**。
+* 前往您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後，導覽至&#x200B;**[!DNL Audience]**&#x200B;頁面。 接下來，展開&#x200B;**[!DNL Manage Contacts]**&#x200B;功能表並選取&#x200B;**[!DNL Groups]**。
 
 ![顯示「對象」群組頁面的Mailchimp UI熒幕擷圖。](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 

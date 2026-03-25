@@ -4,9 +4,9 @@ title: 編輯啟動資料流
 type: Tutorial
 description: 請依照本文的步驟，在Adobe Experience Platform中編輯現有的啟用資料流。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 請依照下列步驟，瀏覽您現有的啟用資料流程，並識別您要編輯的資料流程。
 
-1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Browse]**&#x200B;以檢視您現有的目的地資料流。
+1. 前往[Experience Platform UI](https://platform.adobe.com/)，然後從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 從頂端標題選取&#x200B;**[!UICONTROL Browse]**&#x200B;以檢視您現有的目的地資料流。
 
    ![瀏覽目的地](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ![Experience Platform UI影像顯示「啟用對象資料流執行」選項。](../assets/ui/edit-activation/activate-audiences.png)
 
-選取啟動工作流程中的&#x200B;**[!UICONTROL Scheduling]**&#x200B;步驟，以編輯資料流程的啟動排程和匯出頻率。 此步驟可讓您設定將資料匯出至目的地的頻率。
+選取啟動工作流程中的&#x200B;**[!UICONTROL Scheduling]**&#x200B;步驟，以編輯資料流程的啟動排程和匯出頻率。 使用此步驟來設定將資料匯出至目的地的頻率。
 
 在啟動工作流程的&#x200B;**[!UICONTROL Scheduling]**&#x200B;步驟中，您可以：
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ![Experience Platform UI影像顯示「啟用對象資料流執行」選項。](../assets/ui/edit-activation/activate-audiences.png)
 
-選取啟動工作流程中的&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟，以編輯啟動資料流程的對應屬性和身分。 這可讓您調整應將哪些設定檔屬性和身分匯出至目的地。
+選取啟動工作流程中的&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟，以編輯啟動資料流程的對應屬性和身分。 使用此步驟來調整要將哪些設定檔屬性和身分匯出到目的地。
 
 在啟動工作流程的&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，您可以：
 
@@ -142,6 +142,6 @@ ht-degree: 0%
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程中的指示，您已成功使用&#x200B;**[!UICONTROL destinations]**&#x200B;工作區來更新現有的目的地資料流。
+您已成功使用&#x200B;**[!UICONTROL destinations]**&#x200B;工作區更新您的目的地資料流程。
 
 如需有關目的地的詳細資訊，請參閱[目的地概觀](../catalog/overview.md)。

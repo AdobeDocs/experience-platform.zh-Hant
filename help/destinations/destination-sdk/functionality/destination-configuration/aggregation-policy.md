@@ -2,9 +2,9 @@
 description: 瞭解如何設定彙總原則，以判斷應如何分組和批次傳送目的地的HTTP請求。
 title: 彙總原則
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1225'
 ht-degree: 2%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
-如需瞭解哪些型別的整合支援本頁面所述功能的詳細資訊，請參閱下表。
+請參閱下表，以取得哪些整合型別支援本頁面上所述功能的詳細資訊。
 
 | 整合型別 | 支援功能 |
 |---|---|
@@ -81,7 +81,7 @@ ht-degree: 2%
 | `aggregationType` | 字串 | 指示您的目的地應使用的彙總原則型別。 支援的彙總型別： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單一HTTP呼叫中彙總多個匯出的設定檔。 <br><br>此值表示您的端點在單一HTTP呼叫中應接收的設定檔數目上限。 請注意，這是最大努力彙總。 例如，如果您指定值100，Experience Platform在呼叫時可能會傳送任何數量小於100的設定檔。 <br><br>如果您的伺服器不接受每個請求多個使用者，請將此值設定為`1`。 |
 | `bestEffortAggregation.splitUserById` | 布林值 | 如果對目的地的呼叫應該依身分分割，請使用此旗標。 如果您的伺服器針對指定的身分識別名稱空間，在每次呼叫僅接受一個身分識別，請將此標幟設為`true`。 |
-| `bestEffortAggregation.aggregationKey` | 物件 | *選擇性*。 可讓您根據下列描述引數，彙總對應至目的地的匯出設定檔。 若不需要彙總，可省略此引數或將其設為`null`。 提供時，其功能與可設定彙總中的彙總金鑰相同。 |
+| `bestEffortAggregation.aggregationKey` | 物件 | *選擇性*。 根據下列描述引數，彙總對應至目的地的匯出設定檔。 若不需要彙總，可省略此引數或將其設為`null`。 提供時，其功能與可設定彙總中的彙總金鑰相同。 |
 | `bestEffortAggregation.aggregationKey.includeSegmentId` | 布林值 | 如果您想要依對象ID將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
 | `bestEffortAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 如果您想要依對象ID和對象狀態將匯出至目的地的設定檔分組，請將此引數和`includeSegmentId`設定為`true`。 |
 | `bestEffortAggregation.aggregationKey.includeIdentity` | 布林值 | 如果您想要依身分名稱空間將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
@@ -96,7 +96,7 @@ ht-degree: 2%
 
 ## 可設定的彙總 {#configurable-aggregation}
 
-如果您偏好以大型批次進行，且同一呼叫具有數千個設定檔，可設定的彙總將最有效果。 此選項也可讓您根據複雜的彙總規則彙總匯出的設定檔。
+如果您偏好以大型批次進行，且同一呼叫具有數千個設定檔，可設定的彙總將最有效果。 此選項也支援根據複雜的彙總規則彙總匯出的設定檔。
 
 以下設定範例顯示可設定的彙總設定。 如需最大努力彙總的範例，請參閱[最大努力彙總](#best-effort-aggregation)區段。 下表記錄適用於可設定之彙總的引數。
 
@@ -136,7 +136,7 @@ ht-degree: 2%
 | `configurableAggregation.splitUserById` | 布林值 | 如果對目的地的呼叫應該依身分分割，請使用此旗標。 如果您的伺服器針對指定的身分識別名稱空間，在每次呼叫僅接受一個身分識別，請將此標幟設為`true`。 |
 | `configurableAggregation.maxBatchAgeInSecs` | 整數 | 此引數與`maxNumEventsInBatch`搭配使用可決定Experience Platform在傳送API呼叫至端點之前應等待的時間長度。 <ul><li>最小值（秒）：301</li><li>最大值（秒）：3,600</li></ul> 例如，如果您將兩個引數的最大值都使用，Experience Platform會等候3,600秒或直到10000有合格的設定檔為止，再執行API呼叫（以先發生者為準）。 |
 | `configurableAggregation.maxNumEventsInBatch` | 整數 | 此引數與`maxBatchAgeInSecs`搭配使用，決定了API呼叫中應彙總多少個合格設定檔。 <ul><li>最小值： 1,000</li><li>最大值：10,000</li></ul> 例如，如果您將兩個引數的最大值都使用，Experience Platform會等候3,600秒或直到有10,000個合格的設定檔為止，才會進行API呼叫（以先發生者為準）。 |
-| `configurableAggregation.aggregationKey` | - | 可讓您根據下列描述引數，彙總對應至目的地的匯出設定檔。 |
+| `configurableAggregation.aggregationKey` | - | 根據下列描述引數，彙總對應至目的地的匯出設定檔。 |
 | `configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 如果您想要依對象ID將匯出至目的地的設定檔分組，請將此引數設為`true`。 |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 如果您想要依對象ID和對象狀態將匯出至目的地的設定檔分組，請將此引數和`includeSegmentId`設定為`true`。 |
 | `configurableAggregation.aggregationKey.includeIdentity` | 布林值 | 如果您想要依身分名稱空間將匯出至目的地的設定檔分組，請將此引數設為`true`。 |

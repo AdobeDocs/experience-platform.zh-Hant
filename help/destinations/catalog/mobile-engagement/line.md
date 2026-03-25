@@ -1,12 +1,12 @@
 ---
 keywords: 行動；行動參與目的地；LINE；LINE行動參與目的地
 title: LINE連線
-description: LINE目的地可讓您新增設定檔至Experience Platform對象，並為已連線的使用者提供個人化體驗。
+description: 使用LINE目的地可將設定檔新增至您的Experience Platform對象，並為連線的使用者提供個人化體驗。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1306'
 ht-degree: 3%
 
 ---
