@@ -3,9 +3,9 @@ title: 交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: b02e746ba0b8a75699510b37937cb57e7eaefcca
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1800'
 ht-degree: 2%
 
 ---
@@ -73,11 +73,9 @@ ht-degree: 2%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 依受眾資料型別支援的受眾：
 
@@ -106,7 +104,6 @@ ht-degree: 2%
       *句點(&#39;.&#39;) 字元（ASCII代碼46）。 例如，將「jane.doe@gmail.com」標準化為「janedoe@gmail.com」。
      *加號(&#39;+&#39;)字元（ASCII代碼43）和所有後續字元。 例如，將&#39;janedoe+home@gmail.com&#39;標準化為&#39;janedoe@gmail.com&#39;。
   
-
 ## 電話號碼正規化和雜湊需求 {#phone-hashing}
 
 以下是上傳電話號碼時您需要瞭解的事項：
@@ -166,7 +163,7 @@ ht-degree: 2%
 
 ### 填寫目的地詳細資料 {#fill-in-details}
 
-您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
+您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Account Type]**：請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;選項。
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
