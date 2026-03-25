@@ -96,7 +96,7 @@ Gainsight PX支援下表所述的身分啟用。 深入瞭解[身分](../../../i
 
 * **[!UICONTROL Password]**：用來登入[[!DNL Gainsight PX]](https://app.aptrinsic.com)的密碼
 * **[!UICONTROL Client ID]**： [公司詳細資料頁面](https://app.aptrinsic.com/settings/subscription)上的Gainsight PX訂閱識別碼
-* **[!UICONTROL Client secret]**： OAuth密碼產生於[ UI中](https://app.aptrinsic.com/settings/subscription)公司詳細資料頁面[!DNL Gainsight PX]的底部。
+* **[!UICONTROL Client secret]**： OAuth密碼產生於[&#x200B; UI中](https://app.aptrinsic.com/settings/subscription)公司詳細資料頁面[!DNL Gainsight PX]的底部。
 * **[!UICONTROL Username]**：用來登入[[!DNL Gainsight PX]](https://app.aptrinsic.com) UI的電子郵件
 
 ### 填寫目標詳細資訊 {#destination-details}
