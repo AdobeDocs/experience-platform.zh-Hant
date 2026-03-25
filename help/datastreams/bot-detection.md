@@ -2,9 +2,9 @@
 title: 設定資料串流的機器人偵測
 description: 瞭解如何為資料串流設定機器人偵測，以區分人類和非人類流量。
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 5f599b8572c4cebcdfb9ab85027211da4d8a020c
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 >
 >機器人偵測不會捨棄任何機器人請求。 它只會以機器人評分更新XDM結構描述，並將事件轉送至您設定的[資料流服務](configure.md)。
 >
->Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=zh-Hant)，而不使用Edge Network設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
+>Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)，而不使用Edge Network設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
 
 ## 技術考量 {#technical-considerations}
 
@@ -65,12 +65,12 @@ ht-degree: 0%
 
 在「機器人偵測規則」頁面中，您可以使用下列功能來設定機器人偵測：
 
-* 使用[[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)。
+* 使用[IAB/ABC國際編目程式與機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)。
 * 建立您自己的機器人偵測規則。
 
 ### 使用IAB/ABC國際編目程式與機器人清單 {#iab-list}
 
-[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)是協力廠商的業界標準網際網路編目程式和機器人清單。 此清單可協助您識別自動流量，例如搜尋引擎編目程式、監控工具，以及您可能不想納入分析計數的其他非人為流量。
+[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)是協力廠商的業界標準網際網路編目程式和機器人清單。 此清單可協助您識別自動流量，例如搜尋引擎爬蟲、監控工具，以及您不想納入分析計數的其他非人為流量。
 
 若要設定您的資料串流以使用IAB/ABC國際編目程式和機器人清單：
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 如果您需要更精細的機器人偵測規則，可將IP條件與請求標頭條件結合。 機器人偵測規則可以使用以下標頭：
 
-| HTTP標頭 | 說明 |
+| HTTP 標題 | 說明 |
 | --- | --- |
 | `user-agent` | 標頭，可讓伺服器和網路對等識別請求使用者代理程式的應用程式、作業系統、廠商和/或版本。 |
 | `content-type` | 表示資源的原始媒體型別（在套用用於傳送的任何內容編碼之前）。 |
@@ -119,7 +119,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >IP條件是以邏輯`OR`作業為基礎。 如果符合您定義的任何IP條件，則會將請求標示為源自機器人。
+   >IP條件是以邏輯`OR`作業為基礎。 如果請求符合您定義的任何IP條件，則會標籤為源自機器人。
 
 4. 如果您想要將標頭條件新增至規則，請選取&#x200B;**[!UICONTROL Add header conditions group]**，然後選取您要規則使用的標頭。
 

@@ -2,9 +2,9 @@
 title: 建立動態資料流設定
 description: 瞭解如何根據規則建立動態資料串流設定，將您的資料路由至各種Experience Cloud服務。
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1092'
 ht-degree: 3%
 
 ---
@@ -52,29 +52,29 @@ ht-degree: 3%
 
 1. 移至&#x200B;**[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**&#x200B;頁面，並選取您建立的資料流。
 
-   ![顯示資料串流清單的資料串流使用者介面影像。](assets/configure-dynamic-datastream/select-datastream.png)
+   ![顯示資料串流清單的資料串流使用者介面。](assets/configure-dynamic-datastream/select-datastream.png)
 
 1. 在您要定義動態組態的服務上選取&#x200B;**[!UICONTROL Edit]**&#x200B;選項。
 
-   ![資料串流使用者介面的影像，顯示新增至資料串流的服務。](assets/configure-dynamic-datastream/select-service.png)
+   ![資料串流使用者介面顯示新增至資料串流的服務。](assets/configure-dynamic-datastream/select-service.png)
 
 1. 在&#x200B;**[!UICONTROL Configure]**&#x200B;頁面中，選取&#x200B;**[!UICONTROL Save and Edit Dynamic Configuration]**。
 
-   ![顯示資料流設定頁面之資料流使用者介面的影像。](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![資料串流使用者介面顯示資料串流設定頁面。](assets/configure-dynamic-datastream/save-and-edit.png)
 
 1. 選擇「**[!UICONTROL Add Dynamic Configuration]**」。
 
-   ![資料串流使用者介面的影像，顯示未新增規則的動態設定。](assets/configure-dynamic-datastream/add-dynamic-config.png)
+   在新增任何規則之前，![顯示動態設定頁面的Datastreams使用者介面。](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. 從&#x200B;**[!UICONTROL Resources]**&#x200B;面板中，將要用來建置規則的專案拖放到視窗右側。 您可以合併多個資源以建置複雜規則。
 
    使用每個資源的選項（例如&#x200B;**[!UICONTROL equals]**、**[!UICONTROL does not equal]**、**[!UICONTROL exists]**&#x200B;等）來微調規則。
 
-   ![顯示動態設定規則之資料串流使用者介面的影像。](assets/configure-dynamic-datastream/drag-resources.png)
+   ![資料串流使用者介面顯示拖曳資源的動態設定規則產生器。](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. 在&#x200B;**[!UICONTROL Configuration]**&#x200B;區段中，根據您要將資料傳送至每個服務，切換您要為每個規則啟用或停用的服務。 如果您關閉切換功能，服務路由會停用，而且不會將任何資料&#x200B;*傳送至上游服務。*
+1. 在&#x200B;**[!UICONTROL Configuration]**&#x200B;區段中，根據您要將資料傳送至每個服務，切換您要為每個規則啟用或停用的服務。 如果您關閉切換功能，服務路由會停用，而且不會將&#x200B;*任何資料*&#x200B;傳送給下游服務。
 
-   ![顯示動態設定規則之資料串流使用者介面的影像。](assets/configure-dynamic-datastream/enable-service.png)
+   ![資料串流使用者介面顯示具有服務切換的動態設定規則。](assets/configure-dynamic-datastream/enable-service.png)
 
 1. 設定完規則後，選取「**[!UICONTROL Save]**」。
 
@@ -135,9 +135,9 @@ ht-degree: 3%
 
 您可以將此規則分成下列較簡單的規則：
 
-![顯示複雜規則的平台UI影像。](assets/configure-dynamic-datastream/simple-rule-1.png)
+![顯示第一個簡化規則的平台UI影像。](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![顯示複雜規則的平台UI影像。](assets/configure-dynamic-datastream/simple-rule-2.png)
+![顯示第二個簡化規則的平台UI影像。](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **避免複雜的規則**。 更簡單的規則可確保更快的評估和更好的可維護性。
 

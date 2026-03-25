@@ -2,16 +2,16 @@
 title: 設定資料流覆寫
 description: 瞭解如何在資料串流UI中設定資料串流覆寫，並透過Web SDK或Mobile SDK加以啟用。
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 53%
+source-wordcount: '1043'
+ht-degree: 52%
 
 ---
 
 # 設定資料流覆寫
 
-資料流覆寫可讓您為資料流定義其他設定，這些設定會透過Web SDK或Mobile SDK傳遞到Edge Network。
+使用資料流覆寫可為您的資料流定義其他設定，這些資料流會透過網頁SDK或Mobile SDK傳遞到Edge Network。
 
 這可幫助您觸發與預設資料流不同的資料流行為，而無需建立資料流或修改現有設定。
 
@@ -74,7 +74,7 @@ ht-degree: 53%
 
 若要設定 Adobe Analytics 資料流的資料流覆寫，您首先必須建立 [Adobe Analytics](configure.md#analytics)。請依照說明[設定資料流](configure.md)和 [Adobe Analytics](configure.md#analytics) 服務。
 
-建立資料流後，請編輯您新增的[Adobe Analytics](configure.md#target)服務，並使用&#x200B;**[!UICONTROL Report Suite Overrides]**&#x200B;區段來新增所需的資料流覆寫，如下圖所示。
+建立資料流後，請編輯您新增的[Adobe Analytics](configure.md#analytics)服務，並使用&#x200B;**[!UICONTROL Report Suite Overrides]**&#x200B;區段來新增所需的資料流覆寫，如下圖所示。
 
 選取&#x200B;**[!UICONTROL Show Batch Mode]**&#x200B;以啟用報告套裝覆寫的批次編輯。 您可以複製並貼上報告套裝覆寫的清單，每行輸入一個報告套裝。
 

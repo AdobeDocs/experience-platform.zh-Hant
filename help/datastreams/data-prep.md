@@ -2,16 +2,16 @@
 title: 資料收集的資料準備
 description: 了解設定 Adob​​e Experience Platform Web 和 Mobile SDK 的資料流時如何將資料對應到體驗資料模型 (XDM) 事件結構描述。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 43%
+source-wordcount: '1167'
+ht-degree: 41%
 
 ---
 
 # 資料收集的資料準備
 
-「資料準備」是一種 Adob&#x200B;&#x200B;e Experience Platform 服務，可讓您和[體驗資料模型 (XDM)](../xdm/home.md) 相互對應、轉換和驗證資料。設定啟用Experience Platform的[資料流](./overview.md)時，您可以在將來源資料傳送到Experience Platform Edge Network時，使用「資料準備」功能將來源資料對應到XDM。
+「資料準備」是一項Adobe Experience Platform服務，可用來對應、轉換及驗證來往於[體驗資料模型(XDM)](../xdm/home.md)的資料。 設定啟用Experience Platform的[資料流](./overview.md)時，您可以在將來源資料傳送到Experience Platform Edge Network時，使用「資料準備」功能將來源資料對應到XDM。
 
 所有從網頁傳送的資料都必須以XDM形式登入Experience Platform。 有3種方式可以將資料從頁面上的資料層轉譯為Experience Platform接受的XDM：
 
@@ -25,7 +25,7 @@ ht-degree: 43%
 
 在兩種使用案例中，「資料收集的資料準備」很有用：
 
-1. 網站具有格式正確、受控管和維護的資料層，且偏好直接傳送給Edge Network，而非使用JavaScript操作在頁面上將其轉換為XDM (透過標籤資料元素或手動JavaScript操作)。
+1. 網站具有格式正確、受控管和維護的資料層，且偏好直接傳送給Edge Network，而非使用JavaScript操作在頁面上將其轉換為XDM （透過標籤資料元素或手動JavaScript操作）。
 2. 網站上會部署標籤系統以外的標籤系統。
 
 ## 透過WebSDK將現有的資料層傳送至Edge Network {#send-datalayer-via-websdk}
@@ -158,7 +158,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
-> 使用範例JSON物件，代表任何頁面上可能使用的每個資料層元素。 例如，並非所有頁面都使用購物車資料層元素。 不過，此範例JSON物件中應包含購物車資料層元素。
+>使用範例JSON物件，代表任何頁面上可能使用的每個資料層元素。 例如，並非所有頁面都使用購物車資料層元素。 不過，此範例JSON物件中應包含購物車資料層元素。
 
 ## [!UICONTROL Mapping]
 
@@ -221,7 +221,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->如果匯入的對應規則中的任何來源欄位未包含在您[之前提供的 &#x200B;](#select-data)JSON 資料範例中，則這些欄位對應並不會包含在匯入中。
+>如果匯入的對應規則中的任何來源欄位未包含在您[之前提供的 ](#select-data)JSON 資料範例中，則這些欄位對應並不會包含在匯入中。
 
 ### 完成對應
 
