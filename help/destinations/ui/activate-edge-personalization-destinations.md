@@ -39,11 +39,11 @@ ht-degree: 0%
 >
 >Experience Platform使用者介面經常更新，自從錄製此影片後，可能已經變更。 如需最新資訊，請參閱以下章節所述的設定步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449804/?captions=chi_hant&quality=12&learn=on)
 
 如需如何將對象和設定檔屬性共用至[!DNL Adobe Target]和自訂個人化目的地的簡短概觀，請觀看以下影片。
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447366/?captions=chi_hant&quality=12&learn=on)
 
 ## 使用案例 {#use-cases}
 
