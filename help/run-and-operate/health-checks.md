@@ -172,7 +172,7 @@ ht-degree: 1%
 
 ![已棄用的身分名稱空間詳細資料面板，顯示說明、影響和受影響的名稱空間清單](assets/health-checks/deprecated-namespace-detail.png)
 
-如需詳細資訊，請參閱有關過時名稱空間的[Experience Cloud知識庫文章](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}。
+如需詳細資訊，請參閱有關過時名稱空間的[Experience Cloud知識庫文章](https://experienceleague.adobe.com/zh-hant/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}。
 
 ## 後續步驟 {#next-steps}
 
