@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
+source-git-commit: faeb53bfc4eba815eb1d9d00c464da4dc1a3b016
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2177'
 ht-degree: 4%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 4%
 
 此外，您可以切換是否顯示AI產生的深入分析、顯示Hub與邊緣的比較詳細資料，以及在卡片檢視或圖表檢視之間選擇。
 
-![上方列出的切換(AI產生的深入分析、Hub或Edge資料，以及卡片或圖表檢視)會醒目提示。](../images/user-guide/profile-toggles.png)
+![上方列出的切換（AI產生的深入分析、Hub或Edge資料，以及卡片或圖表檢視）會醒目提示。](../images/user-guide/profile-toggles.png)
 
 #### 客戶輪廓洞察 {#customer-profile-insights}
 
@@ -169,7 +169,7 @@ ht-degree: 4%
 
 #### 體驗事件 {#experience-events}
 
-**[!UICONTROL Experience events]**&#x200B;區段會顯示包含設定檔之體驗事件的時間軸。
+**[!UICONTROL Experience events]**&#x200B;區段會顯示包含設定檔之體驗事件的時間軸。 依預設，此區段會顯示過去48小時內的體驗事件。 不過，您最多可以設定30天的日期範圍。
 
 ![會顯示「體驗事件」區段，顯示包含設定檔之體驗事件的時間表。](/help/profile/images/user-guide/experience-event-graph.png)
 
@@ -193,7 +193,11 @@ ht-degree: 4%
 
 ### 事件標籤 {#events}
 
-**[!UICONTROL Events]**&#x200B;索引標籤包含來自與客戶相關聯之100個最新ExperienceEvents的資料。 此資料可能包括電子郵件開啟、購物車活動和頁面檢視。 為任何個別事件選取&#x200B;**[!UICONTROL View all]**&#x200B;會提供額外的欄位和值，作為事件的一部分擷取。
+>[!NOTE]
+>
+>事件的顯示最多可延遲15分鐘。
+
+依預設，**[!UICONTROL Events]**&#x200B;索引標籤包含過去48小時的資料，以及與客戶相關聯的100個最新ExperienceEvents。 此資料可能包括電子郵件開啟、購物車活動和頁面檢視。 您也可以設定最多30天的日期範圍。 為任何個別事件選取&#x200B;**[!UICONTROL View all]**&#x200B;會提供額外的欄位和值，作為事件的一部分擷取。
 
 也可以選取&#x200B;**[!UICONTROL View JSON]**，將事件檢視為JSON物件。 這有助於瞭解如何在Experience Platform中擷取事件。
 
