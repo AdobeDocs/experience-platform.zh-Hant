@@ -1,22 +1,15 @@
 ---
 title: 建立動態資料流設定
 description: 瞭解如何根據規則建立動態資料串流設定，將您的資料路由至各種Experience Cloud服務。
-hide: true
-hidefromtoc: true
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1098'
 ht-degree: 3%
 
 ---
 
 # 建立動態資料流設定
-
->[!AVAILABILITY]
->
->* 定義動態資料流設定的選專案前在Beta中，可供有限數量的客戶使用。 若要取得此功能的存取權，請聯絡您的Adobe代表。 文件和功能可能會有所變更。
 
 依預設，Experience Platform Edge Network會將到達資料串流的所有事件傳送至您已為資料串流啟用的所有Experience Cloud [服務](configure.md#add-services)。 根據您的使用案例，這可能並不總是適合您的理想工作流程。
 
@@ -57,33 +50,33 @@ ht-degree: 3%
 
 在您[建立資料流](configure.md)並[新增服務](configure.md#add-services)之後，請依照下列步驟將動態設定新增至服務。
 
-1. 移至&#x200B;**[!UICONTROL 資料收集]** > **[!UICONTROL 資料串流]**&#x200B;頁面，並選取您建立的資料串流。
+1. 移至&#x200B;**[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**&#x200B;頁面，並選取您建立的資料流。
 
    ![顯示資料串流清單的資料串流使用者介面影像。](assets/configure-dynamic-datastream/select-datastream.png)
 
-1. 在您要定義動態組態的服務上選取&#x200B;**[!UICONTROL 編輯]**&#x200B;選項。
+1. 在您要定義動態組態的服務上選取&#x200B;**[!UICONTROL Edit]**&#x200B;選項。
 
    ![資料串流使用者介面的影像，顯示新增至資料串流的服務。](assets/configure-dynamic-datastream/select-service.png)
 
-1. 在&#x200B;**[!UICONTROL 設定]**&#x200B;頁面中，選取&#x200B;**[!UICONTROL 儲存並編輯動態設定]**。
+1. 在&#x200B;**[!UICONTROL Configure]**&#x200B;頁面中，選取&#x200B;**[!UICONTROL Save and Edit Dynamic Configuration]**。
 
    ![顯示資料流設定頁面之資料流使用者介面的影像。](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. 選取&#x200B;**[!UICONTROL 新增動態組態]**。
+1. 選擇「**[!UICONTROL Add Dynamic Configuration]**」。
 
    ![資料串流使用者介面的影像，顯示未新增規則的動態設定。](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
-1. 從&#x200B;**[!UICONTROL 資源]**&#x200B;面板，將您想要用來建置規則的專案拖放到視窗右側。 您可以合併多個資源以建置複雜規則。
+1. 從&#x200B;**[!UICONTROL Resources]**&#x200B;面板中，將要用來建置規則的專案拖放到視窗右側。 您可以合併多個資源以建置複雜規則。
 
-   使用每個資源的選項，例如&#x200B;**[!UICONTROL 等於]**、**[!UICONTROL 不等於]**、**[!UICONTROL 存在]**&#x200B;等等，以微調規則。
+   使用每個資源的選項（例如&#x200B;**[!UICONTROL equals]**、**[!UICONTROL does not equal]**、**[!UICONTROL exists]**&#x200B;等）來微調規則。
 
    ![顯示動態設定規則之資料串流使用者介面的影像。](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. 在&#x200B;**[!UICONTROL 組態]**&#x200B;區段中，根據您是否要傳送資料給每個服務，切換您要為每個規則啟用或停用的服務。 如果您關閉切換功能，服務路由會停用，而且不會將任何資料&#x200B;*傳送至上游服務。*
+1. 在&#x200B;**[!UICONTROL Configuration]**&#x200B;區段中，根據您要將資料傳送至每個服務，切換您要為每個規則啟用或停用的服務。 如果您關閉切換功能，服務路由會停用，而且不會將任何資料&#x200B;*傳送至上游服務。*
 
    ![顯示動態設定規則之資料串流使用者介面的影像。](assets/configure-dynamic-datastream/enable-service.png)
 
-1. 設定完規則後，選取[儲存]。**&#x200B;**
+1. 設定完規則後，選取「**[!UICONTROL Save]**」。
 
 ## 規則優先順序的考量事項 {#considerations}
 
@@ -120,7 +113,7 @@ ht-degree: 3%
 | 資料類型 | 支援的運運算元 |
 |-----------|-------------------|
 | **字串** | `equals`、`starts with`、`ends with`、`contains`、`exists`、`does not equal`、`does not start with`、`does not end with`、`does not contain`、`does not exist` |
-| **數字（長、整數、短、位元組）** | `equals`，`does not equal`，`greater than`，`less than`，`greater than or equal to`，`less than or equal to`，`exists`，`does not exist` |
+| **數字（長、整數、短、位元組）** | `equals`, `does not equal`, `greater than`, `less than`, `greater than or equal to`, `less than or equal to`, `exists`, `does not exist` |
 | **布林值** | `equals true/false`、`does not equal true/false` |
 | **列舉** | `equals`、`does not equal`、`exists`、`does not exist` |
 | **日期** | `today`、`yesterday`、`this month`、`this year`、`custom date`、`in last`、`from`、`during`、`within`、`before`、`after`、`rolling range`、`in next`、`exists`、`does not exist` |
@@ -148,7 +141,7 @@ ht-degree: 3%
 
 **避免複雜的規則**。 更簡單的規則可確保更快的評估和更好的可維護性。
 
-### 最佳作法 {#best-practices}
+### 最佳做法 {#best-practices}
 
 建立動態資料流設定規則時，遵循最佳實務可確保最佳效能、系統可靠性和可維護的設定。 這些指引可協助您避免常見陷阱，並建立順暢配合平台架構的有效規則。
 
