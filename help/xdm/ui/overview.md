@@ -4,18 +4,18 @@ solution: Experience Platform
 title: 結構描述UI總覽
 description: 此概觀涵蓋Experience Platform中結構描述工作區的主要功能。
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '343'
 ht-degree: 9%
 
 ---
 
-# [!UICONTROL 結構描述] UI總覽
+# [!UICONTROL Schemas] UI 概觀
 
-Adobe Experience Platform使用者介面中的[!UICONTROL 結構描述]工作區可讓您管理體驗資料模型(XDM)資源，包括結構描述、類別、結構描述欄位群組和資料型別。 您可以檢視並探索 Adobe 提供的核心資源，並為貴組織建立自訂資源和結構描述。
+Adobe Experience Platform使用者介面中的[!UICONTROL Schemas]工作區可讓您管理Experience Data Model (XDM)資源，包括結構描述、類別、結構描述欄位群組和資料型別。 您可以檢視並探索 Adobe 提供的核心資源，並為貴組織建立自訂資源和結構描述。
 
-若要存取Experience Platform UI中的工作區，請在左側邊欄中選取&#x200B;**[!UICONTROL 結構描述]**。
+若要存取Experience Platform UI中的工作區，請在左側邊欄中選取&#x200B;**[!UICONTROL Schemas]**。
 
 ![在Experience Platform UI左側導覽中反白顯示結構描述的結構描述工作區。](../images/ui/overview/schemas-tab.png)
 
@@ -27,7 +27,11 @@ Adobe Experience Platform使用者介面中的[!UICONTROL 結構描述]工作區
 
 ## 建立和管理XDM資源
 
-[!UICONTROL 結構描述]工作區提供強大的工具，用於建立和自訂組織的XDM資源。 請參閱以下檔案，瞭解如何在UI中建立和編輯每個資源型別：
+>[!NOTE]
+>
+>XDM動作可從詳細目錄表格和資源詳細資料檢視(**[!UICONTROL More]**)中使用。 完整動作僅適用於自訂（租使用者定義的）資源；標準資源的選項有限。 請參閱[管理結構描述、類別、欄位群組和資料型別：動作和刪除](./explore.md#xdm-resource-actions)。
+
+[!UICONTROL Schemas]工作區提供強大的工具，用於建立和自訂組織的XDM資源。 請參閱以下檔案，瞭解如何在UI中建立和編輯每個資源型別：
 
 * [結構描述](./resources/schemas.md)
 * [類別](./resources/classes.md)
@@ -40,4 +44,4 @@ Adobe Experience Platform使用者介面中的[!UICONTROL 結構描述]工作區
 
 ## 後續步驟
 
-本文介紹Experience Platform UI中的[!UICONTROL 結構描述]工作區。 請參閱本概述所連結的檔案，深入瞭解如何管理您的結構描述和其他XDM資源。
+本檔案介紹Experience Platform UI中的[!UICONTROL Schemas]工作區。 請參閱本概述所連結的檔案，深入瞭解如何管理您的結構描述和其他XDM資源。

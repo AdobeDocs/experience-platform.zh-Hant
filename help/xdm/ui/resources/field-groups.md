@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立和編輯結構描述欄位群組
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構欄位群組。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 9%
+source-wordcount: '1004'
+ht-degree: 8%
 
 ---
 
@@ -23,6 +23,10 @@ ht-degree: 9%
 欄位群組會根據欄位群組代表的資料行為（記錄或時間序列），定義其相容的類別。 這表示並非所有欄位群組都可用於所有類別。
 
 Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷使用案例。 不過，您也可以建立和編輯自己的自訂欄位群組，以在XDM結構描述中定義與您的業務相關的其他概念。 本指南概述如何在Experience Platform UI中建立、編輯及管理組織的自訂欄位群組。
+
+>[!NOTE]
+>
+>XDM動作可從詳細目錄表格和資源詳細資料檢視(**[!UICONTROL More]**)中使用。 完整動作僅適用於自訂（租使用者定義的）資源；標準資源的選項有限。 請參閱[管理結構描述、類別、欄位群組和資料型別：動作和刪除](../explore.md#xdm-resource-actions)。
 
 ## 先決條件 {#prerequisites}
 

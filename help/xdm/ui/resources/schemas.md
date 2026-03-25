@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4635'
-ht-degree: 2%
+source-wordcount: '4680'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +79,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->儲存後，[!UICONTROL Type]側邊欄中的[!UICONTROL &#x200B; Schema properties]欄位會指出這是[!UICONTROL Relational]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
+>儲存後，[!UICONTROL Type]側邊欄中的[!UICONTROL  Schema properties]欄位會指出這是[!UICONTROL Relational]結構描述。 這也會在結構描述詳細目錄檢視的詳細資訊側邊欄中指明。
 >![結構描述編輯器畫布顯示空白的關聯式結構描述結構，並反白顯示關聯式型別。](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### 上傳DDL檔案 {#upload-ddl-file}
@@ -151,7 +151,7 @@ ht-degree: 2%
 
 ![從可用類別資料表中選取類別並反白顯示[!UICONTROL Create schema]的[!UICONTROL Next]工作流程。](../../images/ui/resources/schemas/select-class.png)
 
-選取類別之後，[!UICONTROL Name and review]區段就會顯示。 您可以在此段落中提供名稱和說明，以識別您的結構描述。&#x200B;URL結構描述的基本結構（由類別提供）會顯示在畫布中，供您檢閱及驗證選取的類別和結構描述結構。
+選取類別之後，[!UICONTROL Name and review]區段就會顯示。 您可以在此段落中提供名稱和說明，以識別結構描述&#x200B;。結構描述的基本結構（由類別提供）會顯示在畫布中，供您檢閱及驗證選取的類別和結構描述結構。
 
 在文字欄位中輸入人性化的[!UICONTROL Schema display name]。 接下來，輸入適當的說明來協助識別您的結構描述。 當您檢閱了結構描述結構並對設定感到滿意時，請選取「**[!UICONTROL Finish]**」以建立結構描述。
 
@@ -178,6 +178,12 @@ ht-degree: 2%
 選取結構描述後，[!DNL Schema Editor]會出現，其結構描述結構顯示在畫布中。 您現在可以[新增欄位群組](#add-field-groups)到結構描述（或是[新增這些群組中的個別欄位](#add-individual-fields)）、[編輯欄位顯示名稱](#display-names)或[編輯現有的自訂欄位群組](./field-groups.md#edit) （如果結構描述採用任何群組）。
 
 ## 更多動作 {#more}
+
+>[!NOTE]
+>
+>XDM動作可從詳細目錄表格和資源詳細資料檢視(**[!UICONTROL More]**)中使用。 完整動作僅適用於自訂（租使用者定義的）資源；標準資源的選項有限。 請參閱[管理結構描述、類別、欄位群組和資料型別：動作和刪除](../explore.md#xdm-resource-actions)。
+
+以下說明結構描述編輯器標頭動作。
 
 在結構編輯器中，您還可以執行快速動作以複製結構描述的JSON結構，或刪除結構（如果尚未為即時客戶個人檔案啟用或具有關聯的資料集）。 選取檢視頂端的[!UICONTROL More]，以顯示包含快速動作的下拉式清單。
 
@@ -241,7 +247,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+>在結構描述編輯器中，標準（Adobe產生的）類別和欄位群組會以掛鎖圖示![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
 >
 >![結構描述編輯器反白顯示掛鎖圖示](../../images/ui/explore/schema-editor-padlock-icon.png)
 

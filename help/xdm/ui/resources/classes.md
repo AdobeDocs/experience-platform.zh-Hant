@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1600'
 ht-degree: 5%
 
 ---
@@ -23,6 +23,10 @@ ht-degree: 5%
 Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[XDM個人設定檔](../../classes/individual-profile.md)和[XDM ExperienceEvent](../../classes/experienceevent.md)。 除了這些核心類別之外，您也可以建立自己的自訂類別，以說明貴組織更具體的使用案例。
 
 本檔案概述如何在Experience Platform UI中建立、編輯及管理自訂類別。
+
+>[!NOTE]
+>
+>XDM動作可從詳細目錄表格和資源詳細資料檢視(**[!UICONTROL More]**)中使用。 完整動作僅適用於自訂（租使用者定義的）資源；標準資源的選項有限。 請參閱[管理結構描述、類別、欄位群組和資料型別：動作和刪除](../explore.md#xdm-resource-actions)。
 
 ## 先決條件 {#prerequisites}
 
@@ -90,7 +94,7 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 
 ![已選取新類別並反白顯示[!UICONTROL Schema details]的[!UICONTROL Next]區段。](../../images/ui/resources/classes/select-new-class.png)
 
-選取類別之後，[!UICONTROL Name and review]區段就會顯示。 您可以在此段落中提供名稱和說明，以識別您的結構描述。&#x200B;URL結構描述的基本結構（由類別提供）會顯示在畫布中，供您檢閱及驗證選取的類別和結構描述結構。
+選取類別之後，[!UICONTROL Name and review]區段就會顯示。 您可以在此段落中提供名稱和說明，以識別結構描述&#x200B;。結構描述的基本結構（由類別提供）會顯示在畫布中，供您檢閱及驗證選取的類別和結構描述結構。
 
 在文字欄位中輸入人性化的[!UICONTROL Schema display name]。 接下來，輸入適當的說明來協助識別您的結構描述。 當您檢閱了結構描述結構並對設定感到滿意時，請選取「**[!UICONTROL Finish]**」以建立結構描述。
 
@@ -133,7 +137,7 @@ Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[
 ![結構描述編輯器，具有現有的類別和[!UICONTROL Create a schema]反白顯示。](../../images/ui/resources/classes/edit-class-options.png)
 
 如果您選擇建立新的結構描述，請參閱[建立結構描述](#create-schema)一節以取得詳細資料。 當您完成建立結構描述後（或選取現有結構描述後），會出現結構描述編輯器。 若要更新現有的類別欄位，請從結構描述結構中選取該欄位。 欄位的資訊將顯示在右側邊欄中。 確定[!UICONTROL Assign to]
-已選取選項&#x200B;**[!UICONTROL Class]**，否則您的更新將不會影響類別。
+已選取選項**[!UICONTROL Class]**，否則您的更新將不會影響類別。
 
 ![結構描述編輯器已選取並反白欄位，且右邊欄已顯示，反白顯示[!UICONTROL Assign to]。](../../images/ui/resources/classes/edit-existing-field.png)
 

@@ -5,9 +5,9 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4670'
+source-wordcount: '4740'
 ht-degree: 1%
 
 ---
@@ -102,7 +102,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Experience Data 
 
 新的對話方塊隨即出現，顯示可用欄位群組的清單。 每個欄位群組僅供特定類別使用，因此對話方塊僅列出與您選取的類別（在此例中為[!DNL XDM Individual Profile]類別）相容的欄位群組。 如果您使用標準XDM類別，欄位群組清單將會根據使用人氣聰明地排序。
 
-![&#x200B; [!UICONTROL Add field groups]對話方塊。](../images/tutorials/create-schema/field-group-popularity.png)
+![ [!UICONTROL Add field groups]對話方塊。](../images/tutorials/create-schema/field-group-popularity.png)
 
 您可以選取左側邊欄中的其中一個篩選器，將標準欄位群組清單縮小至特定[產業](../schema/industries/overview.md)，例如零售、金融服務及醫療保健。
 
@@ -126,7 +126,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Experience Data 
 
 >[!NOTE]
 >
->在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+>在結構描述編輯器中，標準（Adobe產生的）類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
 >
 >![結構描述編輯器反白顯示掛鎖圖示](../images/ui/explore/padlock-icon-highlight.png)
 
@@ -360,6 +360,10 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Experience Data 
 
 ## 更多動作 {#more}
 
+>[!NOTE]
+>
+>使用XDM資源時，可從詳細目錄表格（列功能表）和資源詳細資料檢視(**[!UICONTROL More]**)中取得動作。 若要存取完整的動作集，包括&#x200B;**刪除**、**複製JSON結構**&#x200B;和&#x200B;**新增到封裝**，您必須選取自訂（租使用者定義的）資源。 標準（Adobe提供）資源的動作有限。 如需動作、限制和許可權的完整概觀，請參閱[管理結構描述、類別、欄位群組和資料型別：動作和刪除](../ui/explore.md#xdm-resource-actions)。
+
 在架構編輯器中，您還可以執行快速動作以複製架構的JSON結構或刪除架構。 選取檢視頂端的[!UICONTROL More]，以顯示包含快速動作的下拉式清單。
 
 ![結構描述編輯器的[更多]按鈕反白顯示，並顯示下拉式選項。](../images/tutorials/create-schema/more-actions.png)
@@ -409,7 +413,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Experience Data 
 
 以下影片說明如何在[!DNL Experience Platform] UI中建立簡單結構描述。
 
->[!VIDEO](https://video.tv.adobe.com/v/3430222?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 以下影片旨在讓您更瞭解如何使用欄位群組和類別。
 

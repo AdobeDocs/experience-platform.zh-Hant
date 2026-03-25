@@ -4,10 +4,10 @@ title: 在UI中匯出XDM結構描述
 description: 瞭解如何在Adobe Experience Platform使用者介面中將現有結構描述匯出至其他沙箱或組織。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 11%
+source-wordcount: '690'
+ht-degree: 10%
 
 ---
 
@@ -29,6 +29,10 @@ ht-degree: 11%
 ## 先決條件
 
 雖然Experience Platform UI可讓您匯出XDM資源，但您必須使用結構描述登入API將這些資源匯入其他沙箱或組織以完成工作流程。 在遵循本指南之前，請參閱[架構登入API快速入門](../api/getting-started.md)指南，以取得有關所需驗證標頭的重要資訊。
+
+>[!NOTE]
+>
+>如果您找不到動作，例如&#x200B;**刪除**&#x200B;或&#x200B;**複製JSON結構**，請確定您使用的是自訂（租使用者定義的）資源，並從表格列功能表或詳細資料檢視(**[!UICONTROL More]**)存取它。 動作可用性也取決於許可權和使用限制。 請參閱[管理結構描述、類別、欄位群組和資料型別：動作和刪除](./explore.md#xdm-resource-actions)。
 
 ## 產生匯出裝載 {#generate-export-payload}
 
