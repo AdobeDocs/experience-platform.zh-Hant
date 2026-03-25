@@ -3,9 +3,9 @@ title: Azure Data Lake Storage Gen2連線
 description: 瞭解如何連線至Azure Data Lake Storage Gen2以啟用對象和匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1039'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -41,7 +41,7 @@ ht-degree: 3%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 是 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 是 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 是 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 是 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ ht-degree: 3%
 
 ### 排程 {#scheduling}
 
-在&#x200B;**[!UICONTROL Scheduling]**&#x200B;步驟中，您可以[設定](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)目的地的匯出排程[!DNL Azure Data Lake Storage Gen2]，也可以[設定匯出檔案的名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
+在&#x200B;**[!UICONTROL Scheduling]**&#x200B;步驟中，您可以[設定](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)目的地的匯出排程[!DNL Azure Data Lake Storage Gen2]，也可以[設定匯出檔案的名稱](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)。
 
 ### 對應屬性和身分 {#map}
 

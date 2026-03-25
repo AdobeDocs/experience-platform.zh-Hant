@@ -2,9 +2,9 @@
 description: 本頁面列出並說明使用Destination SDK設定檔案型目的地的步驟。
 title: 使用Destination SDK設定以檔案為基礎的目的地
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
@@ -410,19 +410,19 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
    * [Azure Data Lake儲存](../functionality/destination-configuration/customer-authentication.md#adls)
    * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
-   * [使用SSH金鑰進行SFTP驗證](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
-   * [使用密碼的SFTP驗證](../functionality/destination-configuration/customer-authentication.md#sftp-password)
+   * [使用SSH金鑰進行SFTP驗證](../functionality/destination-configuration/customer-authentication.md#sftp-ssh-key-auth)
+   * [使用密碼的SFTP驗證](../functionality/destination-configuration/customer-authentication.md#sftp-password-auth)
 
 * 如果您選取`"authenticationRule": "PLATFORM_AUTHENTICATION"`，則必須建立[認證組態](../credentials-api/create-credential-configuration.md)，並在`authenticationId`目的地傳遞[組態的](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication)引數中傳遞認證物件識別碼。
 
 ## 步驟5：測試您的目的地 {#test-destination}
 
-使用先前步驟中的設定端點設定您的目的地後，您可以使用[目的地測試工具](../testing-api/batch-destinations/file-based-destination-testing-overview.md)來測試Adobe Experience Platform與您的目的地之間的整合。
+使用先前步驟中的設定端點設定您的目的地後，您可以使用[目的地測試工具](../testing-api/batch-destinations/file-based-destination-testing-overview.md)來測試[!DNL Adobe Experience Platform]與您的目的地之間的整合。
 
 在測試目的地的程式中，您必須使用Experience Platform UI來建立對象，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
 * [建立對象 — 檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
-* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)
+* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 步驟6：發佈您的目的地 {#publish-destination}
 

@@ -4,9 +4,9 @@ title: 使用流程服務API編輯目的地連線
 type: Tutorial
 description: 瞭解如何使用流量服務API編輯目的地連線的各種元件。
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1604'
 ht-degree: 5%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 5%
 >
 > 在本教學課程中，術語&#x200B;*流程*&#x200B;和&#x200B;*資料流程*&#x200B;可互換使用。 在本教學課程的上下文中，兩者含義相同。
 
-本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
+本教學課程也要求您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從[!DNL Adobe Experience Platform]啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 * [沙箱](../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功更新資料流。

@@ -3,9 +3,9 @@ keywords: linkedin連線；linkedin連線；linkedin目的地；linkedin；
 title: Linkedin相符受眾連線
 description: 根據雜湊電子郵件，為您的LinkedIn行銷活動啟用設定檔，以用於對象目標定位、個人化和隱藏。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1312'
 ht-degree: 4%
 
 ---
@@ -20,9 +20,9 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解如何使用[!DNL LinkedIn Matched Audiences]目的地，以下是Adobe Experience Platform客戶可使用此功能解決的使用案例。
+為協助您更清楚瞭解如何使用[!DNL LinkedIn Matched Audiences]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此功能解決的使用案例。
 
-軟體公司會組織會議並想要與參與者保持聯絡，並根據其會議出席狀態向他們顯示個人化優惠。 公司可從自己的[!DNL CRM]擷取電子郵件地址或行動裝置ID至Adobe Experience Platform。 接著，他們可以從自己的離線資料建立對象，並將這些對象傳送至[!DNL LinkedIn]社交平台，最佳化其廣告支出。
+軟體公司會組織會議並想要與參與者保持聯絡，並根據其會議出席狀態向他們顯示個人化優惠。 公司可從自己的[!DNL CRM]將電子郵件地址或行動裝置ID擷取到[!DNL Adobe Experience Platform]。 接著，他們可以從自己的離線資料建立對象，並將這些對象傳送至[!DNL LinkedIn]社交平台，最佳化其廣告支出。
 
 ## 支援的身分 {#supported-identities}
 
@@ -36,7 +36,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取此目標身分。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[ID符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電子郵件地址。 請依照[ID符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
 {style="table-layout:auto"}
 
@@ -47,7 +47,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -86,11 +86,11 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 [!DNL LinkedIn Matched Audiences]要求未明確傳送任何個人識別資訊(PII)。 因此，啟用至[!DNL LinkedIn Matched Audiences]的對象可以從&#x200B;*雜湊*&#x200B;識別碼中中斷連線，例如電子郵件地址或行動裝置ID。
 
-根據您擷取至Adobe Experience Platform的ID型別，您必須遵守其對應的要求。
+根據您擷取至[!DNL Adobe Experience Platform]的ID型別，您必須遵守其對應的要求。
 
 ## 電子郵件雜湊需求 {#email-hashing-requirements}
 
-您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
+您可以將電子郵件地址雜湊再擷取至[!DNL Adobe Experience Platform]，或在Experience Platform中清除使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
 
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取總覽](/help/ingestion/batch-ingestion/overview.md)和[串流擷取總覽](/help/ingestion/streaming-ingestion/overview.md)。
 
@@ -124,7 +124,7 @@ Adobe Experience Platform UI中的![LinkedIn目的地](../../assets/catalog/soci
 
 以下影片也會示範設定[!DNL LinkedIn Matched Audiences]目的地及啟用對象的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -148,7 +148,7 @@ LinkedIn權杖每60天過期。 您可以從&#x200B;**[!UICONTROL Account expira
    ![篩選以僅顯示LinkedIn帳戶](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL Edit details]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL Reconnect OAuth]**&#x200B;並使用您的LinkedIn認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL Reconnect OAuth]**並使用您的LinkedIn認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -189,4 +189,4 @@ LinkedIn權杖每60天過期。 您可以從&#x200B;**[!UICONTROL Account expira
 
 >[!TIP]
 >
->Adobe Experience Platform與[!DNL LinkedIn Matched Audiences]之間的整合支援歷史受眾回填。 當您對目的地啟用對象時，所有歷史對象資格都會傳送到[!DNL LinkedIn]。
+>[!DNL Adobe Experience Platform]與[!DNL LinkedIn Matched Audiences]之間的整合支援歷史對象回填。 當您對目的地啟用對象時，所有歷史對象資格都會傳送到[!DNL LinkedIn]。

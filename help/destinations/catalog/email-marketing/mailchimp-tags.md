@@ -3,9 +3,9 @@ title: Mailchimp標籤
 description: Mailchimp標籤目的地可讓您匯出帳戶資料，並在Mailchimp中將其啟用，以便與聯絡人互動。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1719'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Mailchimp Tags]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Mailchimp Tags]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 傳送電子郵件給行銷活動的連絡人 {#use-case-send-emails}
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料至[!DNL Mailchimp Tags]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=zh-Hant)對象[!DNL Experience Platform]。
+在啟用資料至[!DNL Mailchimp Tags]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)對象[!DNL Experience Platform]。
 
 ### [!DNL Mailchimp Tags]目的地的先決條件 {#prerequisites-destination}
 
@@ -89,7 +89,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -175,7 +175,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Mailchimp Tags]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
+若要將對象資料從[!DNL Adobe Experience Platform]正確傳送至[!DNL Mailchimp Tags]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
 
 若要將您的XDM欄位正確對應到[!DNL Mailchimp Tags]目的地欄位，請遵循下列步驟：
 
@@ -203,7 +203,7 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 登入您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後導覽至&#x200B;**[!DNL Audience]** > **[!DNL All Contacts]**&#x200B;頁面，並檢查對象中的連絡人是否已新增，以及對象中的連絡人是否已使用對象名稱進行更新。
+1. 登入您的[[!DNL Mailchimp]](https://login.mailchimp.com/)帳戶。 然後導覽至&#x200B;**[!DNL Audience]** > **[!DNL All Contacts]**頁面，並檢查對象中的連絡人是否已新增，以及對象中的連絡人是否已使用對象名稱進行更新。
    ![顯示「對象」頁面的Mailchimp UI熒幕擷圖。](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## 資料使用與控管 {#data-usage-governance}

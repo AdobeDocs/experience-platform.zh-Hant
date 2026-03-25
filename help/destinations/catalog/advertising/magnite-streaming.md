@@ -3,9 +3,9 @@ title: Magnite即時目的地連線
 description: 使用此目的地可將Adobe CDP對象即時傳送至Magnite串流平台。
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1379'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-Adobe Experience Platform中的[!DNL Magnite: Real-Time]和[Magnite：批次](/help/destinations/catalog/advertising/magnite-batch.md)目的地可協助您對應及匯出對象，以便在Magnite串流平台上鎖定和啟動。
+[!DNL Magnite: Real-Time]中的[和](/help/destinations/catalog/advertising/magnite-batch.md)Magnite：批次[!DNL Adobe Experience Platform]目的地可協助您對應及匯出對象，以便在Magnite串流平台上鎖定和啟動。
 
 啟用對象至[!DNL Magnite Streaming]平台是兩個步驟的程式，需要您同時使用Magnite： Real-Time和Magnite： Batch目的地。
 
@@ -33,15 +33,15 @@ Adobe Experience Platform中的[!DNL Magnite: Real-Time]和[Magnite：批次](/h
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Magnite: Real-Time]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Magnite: Real-Time]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 啟用與定位 {#activation-and-targeting}
 
-這項與Magnite的整合可讓客戶將其CDP受眾從Adobe Experience Platform傳遞到Magnite，以用於廣告目標定位。 您可以在Magnite中選取受眾以用於正面目標定位和負面目標定位（隱藏）。
+此與Magnite的整合可讓客戶將其CDP對象從[!DNL Adobe Experience Platform]傳遞到Magnite，以用於廣告目標定位。 您可以在Magnite中選取受眾以用於正面目標定位和負面目標定位（隱藏）。
 
 ## 先決條件 {#prerequisites}
 
-若要在Adobe Experience Platform中使用[!DNL Magnite]目的地，您必須先擁有[!DNL Magnite Streaming]帳戶。 如果您有[!DNL Magnite Streaming]帳戶，請洽詢您的[!DNL Magnite]帳戶管理員，以取得存取[!DNL Magnite's]目的地的認證。
+若要在[!DNL Magnite]中使用[!DNL Adobe Experience Platform]目的地，您必須先擁有[!DNL Magnite Streaming]帳戶。 如果您有[!DNL Magnite Streaming]帳戶，請洽詢您的[!DNL Magnite]帳戶管理員，以取得存取[!DNL Magnite's]目的地的認證。
 如果您沒有[!DNL Magnite Streaming]帳戶，請連絡adobe-tech@magnite.com
 
 ## 支援的身分 {#supported-identities}
@@ -61,7 +61,7 @@ Adobe Experience Platform中的[!DNL Magnite: Real-Time]和[Magnite：批次](/h
 | 對象來源 | 支援 | 說明 |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Adobe Experience Platform中的[!DNL Magnite: Real-Time]和[Magnite：批次](/h
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -178,11 +178,11 @@ Adobe Experience Platform中的[!DNL Magnite: Real-Time]和[Magnite：批次](/h
 
 -->
 
-* 擷取後，對象預計會在幾分鐘內出現在[!DNL Magnite Streaming]中，並可套用至交易。 您可以查詢Adobe Experience Platform中在啟動步驟期間共用的區段ID來確認此專案。
+* 擷取後，對象預計會在幾分鐘內出現在[!DNL Magnite Streaming]中，並可套用至交易。 您可以查詢[!DNL Adobe Experience Platform]中啟動步驟期間共用的區段ID來確認此專案。
 
 ## 透過[!DNL Magnite: Batch]目的地啟用相同的對象 {#activate-magnite-batch}
 
-使用「即時」目的地與[!DNL Magnite Streaming]共用的對象也需要使用Magnite：批次目的地來共用。 正確設定後，[!DNL Magnite Streaming] UI中的區段名稱會更新，以反映Adobe Experience Platform每日更新後所使用的名稱。
+使用「即時」目的地與[!DNL Magnite Streaming]共用的對象也需要使用Magnite：批次目的地來共用。 若設定正確，[!DNL Magnite Streaming] UI中的區段名稱會更新，以反映[!DNL Adobe Experience Platform]每日更新後所使用的名稱。
 
 最後，如果尚未針對整合設定批次目的地，請透過Magnite：批次目的地檔案立即進行設定。
 

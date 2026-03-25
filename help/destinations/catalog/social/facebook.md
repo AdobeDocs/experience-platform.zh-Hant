@@ -3,9 +3,9 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: Facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標選擇、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2734'
 ht-degree: 5%
 
 ---
@@ -22,17 +22,17 @@ ht-degree: 5%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解如何使用[!DNL Facebook]目的地，以下是Adobe Experience Platform客戶可以使用此功能解決的兩個範例使用案例。
+為協助您更清楚瞭解如何使用[!DNL Facebook]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此功能解決的兩個範例使用案例。
 
 ### 使用案例#1 {#use-case-1}
 
-線上retailer想要透過社交平台觸及現有客戶，並根據他們先前的訂單向他們顯示個人化優惠。 線上retailer可從自己的CRM擷取電子郵件地址至Adobe Experience Platform，從自己的離線資料建立對象，並將這些對象傳送至[!DNL Facebook]社交平台，以最佳化其廣告支出。
+線上retailer想要透過社交平台觸及現有客戶，並根據他們先前的訂單向他們顯示個人化優惠。 線上retailer可從自己的CRM擷取電子郵件地址至[!DNL Adobe Experience Platform]、從自己的離線資料建立對象，並將這些對象傳送至[!DNL Facebook]社交平台，以最佳化其廣告支出。
 
 ### 使用案例#2 {#use-case-2}
 
 航空公司有不同的客戶層級（銅、銀和金），並想要透過社交平台為每個層級提供個人化優惠。 不過，並非所有客戶都使用航空公司的行動應用程式，其中部分客戶尚未登入公司網站。 公司對這些客戶擁有的唯一識別碼是會員ID和電子郵件地址。
 
-若要透過社群媒體鎖定他們，他們可以使用電子郵件地址作為識別碼，將客戶資料從其CRM上線到Adobe Experience Platform。
+若要透過社群媒體鎖定他們，他們可以使用電子郵件地址作為識別碼，將客戶資料從其CRM上線到[!DNL Adobe Experience Platform]。
 
 接著，他們可以使用離線資料（包括相關聯的會籍ID和客戶階層）建立可透過[!DNL Facebook]目的地鎖定的新對象。
 
@@ -44,8 +44,8 @@ ht-degree: 5%
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | `IDFA` | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| `phone_sha256` | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| `email_lc_sha256` | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| `phone_sha256` | 使用SHA256演演算法雜湊的電話號碼 | [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| `email_lc_sha256` | 使用SHA256演演算法雜湊的電子郵件地址 | [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | `extern_id` | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 | `gender` | 性別 | 接受的值： <ul><li>男性`m`</li><li>女性`f`</li></ul> Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
 | `date_of_birth` | 出生日期 | 接受的格式： `yyyy-MM-DD`。 <br>Experience Platform **在將此值傳送至Facebook之前，會自動雜湊**。 這種自動雜湊是遵守Facebook安全性和隱私權需求所需。 請&#x200B;**不要**&#x200B;為此欄位提供預先雜湊值，因為這會造成比對程式失敗。 |
@@ -64,7 +64,7 @@ ht-degree: 5%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ ht-degree: 5%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -99,11 +99,11 @@ ht-degree: 5%
 
 * 您的[!DNL Facebook]使用者帳戶必須擁有擁有您正在使用之廣告帳戶的[!DNL Facebook Business Account]的完整存取權。
 * 您的[!DNL Facebook]使用者帳戶必須針對您計畫使用的廣告帳戶啟用&#x200B;**[!DNL Manage campaigns]**&#x200B;許可權。
-* **Adobe Experience Cloud**&#x200B;商業帳戶必須新增為您[!DNL Facebook Ad Account]的廣告合作夥伴。 使用`business ID=206617933627973`。 如需詳細資訊，請參閱Facebook檔案中的[新增合作夥伴至您的Business Manager](https://www.facebook.com/business/help/1717412048538897)。
+* **[!DNL Adobe Experience Cloud]**&#x200B;商業帳戶必須新增為您[!DNL Facebook Ad Account]中的廣告合作夥伴。 使用`business ID=206617933627973`。 如需詳細資訊，請參閱Facebook檔案中的[新增合作夥伴至您的Business Manager](https://www.facebook.com/business/help/1717412048538897)。
 
   >[!IMPORTANT]
   >
-  > 設定Adobe Experience Cloud的許可權時，您必須啟用&#x200B;**管理行銷活動**&#x200B;許可權。 [!DNL Adobe Experience Platform]整合需要許可權。
+  > 設定[!DNL Adobe Experience Cloud]的許可權時，您必須啟用&#x200B;**管理行銷活動**&#x200B;許可權。 [!DNL Adobe Experience Platform]整合需要許可權。
 
 * 閱讀並簽署[!DNL Facebook Custom Audiences]服務條款。 若要這麼做，請移至`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`，其中`accountID`是您的[!DNL Facebook Ad Account ID]。 簽署服務條款時，請確定URL中有`business_id=206617933627973`區段。
 
@@ -115,7 +115,7 @@ ht-degree: 5%
 
 [!DNL Facebook]要求未明確傳送任何個人識別資訊(PII)。 因此，啟用至[!DNL Facebook]的對象可以從&#x200B;*雜湊*&#x200B;識別碼中中斷連線，例如電子郵件地址或電話號碼。
 
-根據您擷取至Adobe Experience Platform的ID型別，您必須遵守其對應的要求。
+根據您擷取至[!DNL Adobe Experience Platform]的ID型別，您必須遵守其對應的要求。
 
 ## 最大化對象匹配率 {#match-rates}
 
@@ -136,7 +136,7 @@ ht-degree: 5%
 
 ## 電子郵件雜湊需求 {#email-hashing-requirements}
 
-您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
+您可以將電子郵件地址雜湊再擷取至[!DNL Adobe Experience Platform]，或在Experience Platform中清除使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
 
 若要瞭解如何在Experience Platform中擷取電子郵件地址，請參閱[批次擷取總覽](/help/ingestion/batch-ingestion/overview.md)和[串流擷取總覽](/help/ingestion/streaming-ingestion/overview.md)。
 
@@ -171,7 +171,7 @@ ht-degree: 5%
 
 以下影片也會示範設定[!DNL Facebook]目的地及啟用對象的步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -201,7 +201,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
    ![篩選以僅顯示Facebook帳戶](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
 3. 選取您要重新整理的帳戶，選取省略符號並選取&#x200B;**[!UICONTROL Edit details]**。
    ![選取[編輯詳細資料]控制項](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png)
-4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL Reconnect OAuth]**&#x200B;並使用您的Facebook認證重新驗證。
+4. 在強制回應視窗中，選取&#x200B;**[!UICONTROL Reconnect OAuth]**並使用您的Facebook認證重新驗證。
    使用Reconnect OAuth選項的![模型視窗](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -295,7 +295,7 @@ Facebook驗證權杖每60天過期一次。 代號過期後，將資料匯出至
 
 >[!TIP]
 >
->Adobe Experience Platform與[!DNL Facebook]之間的整合支援歷史受眾回填。 當您對目的地啟用對象時，所有歷史對象資格都會傳送到[!DNL Facebook]。
+>[!DNL Adobe Experience Platform]與[!DNL Facebook]之間的整合支援歷史對象回填。 當您對目的地啟用對象時，所有歷史對象資格都會傳送到[!DNL Facebook]。
 
 ## 疑難排解 {#troubleshooting}
 

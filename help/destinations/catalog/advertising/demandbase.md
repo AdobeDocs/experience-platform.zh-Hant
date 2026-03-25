@@ -3,9 +3,9 @@ title: Demandbase連線
 description: 使用此目標來啟用 Account-Based Marketing (ABM) 使用案例的帳戶客群。透過 DemandBase 的 B2B Demand Side Platform (DSP) 向目標帳戶中的相關人物誌和角色投放廣告。還可以利用 Demandbase 第三方資料來擴充目標帳戶，以用於行銷和銷售中的其他下游使用案例。
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '904'
 ht-degree: 15%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司，皆可透過Demandbase目的地啟用帳戶對象。
+>針對Demandbase目的地啟用帳戶對象的功能，適用於購買[的](/help/rtcdp/overview.md#rtcdp-b2b)企業對企業[和](/help/rtcdp/overview.md#rtcdp-b2p)企業對個人[!DNL Real-Time Customer Data Platform]版本的公司。
 
 為您的Demandbase行銷活動啟用設定檔，以根據[帳戶對象](/help/segmentation/types/account-audiences.md)進行對象目標定位、個人化和隱藏。
 
@@ -34,7 +34,7 @@ ht-degree: 15%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -45,7 +45,7 @@ ht-degree: 15%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 是 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 

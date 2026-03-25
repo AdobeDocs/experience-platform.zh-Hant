@@ -2,10 +2,10 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定支援的目標身分。
 title: 身分名稱空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 
 * 允許使用者將XDM屬性對應至身分識別名稱空間。
 * 允許使用者將[標準身分名稱空間](../../../../identity-service/features/namespaces.md#standard)對應到您自己的身分名稱空間。
-* 允許使用者將[自訂識別名稱空間](../../../../identity-service/features/namespaces.md#manage-namespaces)對應到您自己的識別名稱空間。
+* 允許使用者將[自訂識別名稱空間](../../../../identity-service/features/namespaces.md#create-namespaces)對應到您自己的識別名稱空間。
 
 若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[設定選項](../configuration-options.md)檔案中的圖表，或參閱如何[使用Destination SDK設定檔案型目的地](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)的指南。
 
@@ -42,7 +42,7 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -118,9 +118,9 @@ Experience Platform客戶可選擇以雜湊格式或純文字將資料擷取至E
    }
 ```
 
-使用未雜湊的來源欄位時勾選此選項，讓 Adobe Experience Platform 在啟動時自動將它們雜湊。
+使用未雜湊的來源欄位時，請核取此選項，以便在啟用時自動雜湊這些欄位[!DNL Adobe Experience Platform]。
 
-將未雜湊的來源屬性對應到目的地預期雜湊的目標屬性時（例如： `email_lc_sha256`或`phone_sha256`），請核取&#x200B;**套用轉換**&#x200B;選項，讓Adobe Experience Platform在啟用時自動雜湊來源屬性。
+將未雜湊的來源屬性對應到目的地預期雜湊的目標屬性時（例如： `email_lc_sha256`或`phone_sha256`），請核取&#x200B;**套用轉換**&#x200B;選項，讓[!DNL Adobe Experience Platform]在啟用時自動雜湊來源屬性。
 
 ## 設定強制來源欄位雜湊 {#configure-mandatory-hashing}
 

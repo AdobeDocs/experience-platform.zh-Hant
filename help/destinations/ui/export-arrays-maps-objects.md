@@ -3,14 +3,14 @@ title: 從Real-Time CDP匯出陣列、地圖和物件
 type: Tutorial
 description: 瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至雲端儲存空間目標。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1056'
 ht-degree: 13%
 
 ---
 
-# 從Real-Time CDP匯出陣列、地圖和物件 {#export-arrays-cloud-storage}
+# 從[!DNL Real-Time CDP]匯出陣列、地圖和物件 {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
@@ -19,12 +19,12 @@ ht-degree: 13%
 >此外，您可以將對應型別欄位匯出至下列目的地： [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)、[HTTP API](/help/destinations/catalog/streaming/http-destination.md)、[Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)。
 
 
-瞭解如何從Real-Time CDP將陣列、地圖和物件匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 此外，您可以將對應型別欄位匯出至[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)和有限的[邊緣個人化目的地](/help/destinations/destination-types.md#edge-personalization-destinations)。 請參閱本檔案以瞭解匯出工作流程、此功能啟用的使用案例和已知限制。 檢視下表以瞭解每種目的地型別可用的功能。
+瞭解如何將陣列、地圖和物件從[!DNL Real-Time CDP]匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 此外，您可以將對應型別欄位匯出至[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)和有限的[邊緣個人化目的地](/help/destinations/destination-types.md#edge-personalization-destinations)。 請參閱本檔案以瞭解匯出工作流程、此功能啟用的使用案例和已知限制。 檢視下表以瞭解每種目的地型別可用的功能。
 
 | 目的地型別 | 可匯出陣列、地圖和其他自訂物件 |
 |---|---|
 | Adobe編寫的雲端儲存空間目標(Amazon S3、Azure Blob、Azure Data Lake Storage Gen2、Data Landing Zone、Google Cloud Storage、SFTP) | 可以，在設定目的地連線時，啟用陣列、地圖和物件的匯出切換功能會開啟。 |
-| 檔案式電子郵件行銷目的地(Adobe Campaign、Oracle Eloqua、Oracle Responsys、Salesforce Marketing Cloud) | 無 |
+| 檔案式電子郵件行銷目的地([!DNL Adobe Campaign]、Oracle Eloqua、Oracle Responsys、Salesforce Marketing Cloud) | 無 |
 | 現有自訂合作夥伴建置的雲端儲存空間目的地（透過Destination SDK建置的自訂檔案型目的地） | 無 |
 | 企業目的地（Amazon Kinesis、Azure事件中樞、HTTP API） | 部分。 您可以在啟動工作流程的對應步驟中選取和匯出對應型別物件。 |
 | 串流目的地（例如：Facebook、Braze、Google Customer Match等） | 無 |
@@ -48,7 +48,7 @@ ht-degree: 13%
 
 Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[如何在Experience Platform UI](/help/xdm/ui/fields/array.md)中管理陣列欄位。 您現在可以匯出陣列物件，例如下列範例。
 
-```
+```js
 organizations = [{
   id: 123,
   orgName: "Acme Inc",

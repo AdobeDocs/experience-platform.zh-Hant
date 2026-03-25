@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定目的地傳送設定，以指出匯出的資料前往何處，以及在資料著陸位置使用什麼驗證規則。
 title: 目的地傳遞
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '640'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 

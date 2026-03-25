@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何透過將受眾傳送至串流設定檔型目的地，以啟用您在Adobe Experience Platform中的受眾資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '759'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-本文說明在Adobe Experience Platform中啟用受眾資料至串流設定檔型目的地（也稱為[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)）所需的工作流程。
+本文說明在[!DNL Adobe Experience Platform]中啟用對象資料至串流設定檔型目的地（也稱為[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)）所需的工作流程。
 
 本文適用於下列三個目的地：
 

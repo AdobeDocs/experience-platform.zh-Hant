@@ -5,9 +5,9 @@ title: 使用流程服務API連線到批次目的地並啟用資料
 description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地，並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3423'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 3%
 
 ## 快速入門 {#get-started}
 
-本指南需要您深入了解下列 Adobe Experience Platform 元件：
+本指南需要您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Adobe Experience Platform]資料在[!DNL Real-Time Customer Profile]中建立對象。
@@ -531,7 +531,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | 提供批次目的地的基本連線名稱。 |
 | `description` | 您可以選擇提供基本連線的說明。 |
 | `connectionSpec.id` | 使用所需批次目的地的連線規格ID。 您在步驟[取得可用目的地的清單](#get-the-list-of-available-destinations)中取得此識別碼。 |
-| `auth.specname` | 表示目的地的驗證格式。 若要尋找您目的地的specName，請對連線規格端點[執行](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.name`。 <br>例如，對於Adobe Campaign目的地，您可以使用任何`S3`、`SFTP with Password`或`SFTP with SSH Key`。 |
+| `auth.specname` | 表示目的地的驗證格式。 若要尋找您目的地的specName，請對連線規格端點[執行](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.name`。 <br>例如，對於[!DNL Adobe Campaign]目的地，您可以使用任何`S3`、`SFTP with Password`或`SFTP with SSH Key`。 |
 | `params` | 根據您連線的目的地，您必須提供不同的必要驗證引數。 針對Amazon S3連線，您必須提供Amazon S3儲存位置的存取ID和秘密金鑰。 <br>若要找出您目的地所需的引數，請對連線規格端點[執行](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)GET呼叫，提供您所要目的地的連線規格。 在回應中尋找引數`authSpec.spec.required`。 |
 
 {style="table-layout:auto"}
@@ -934,7 +934,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | 為您正在建立的資料流命名。 |
 | `description` | 您可以選擇為資料流提供說明。 |
-| `flowSpec.Id` | 使用您要連線之批次目的地的流程規格ID。 若要擷取流程規格ID，請對`flowspecs`端點執行GET作業，如[流程規格API參考檔案](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec)所示。 在回應中，尋找`upsTo`並複製您要連線之批次目的地的對應ID。 例如，若為Adobe Campaign，尋找`upsToCampaign`並複製`id`引數。 |
+| `flowSpec.Id` | 使用您要連線之批次目的地的流程規格ID。 若要擷取流程規格ID，請對`flowspecs`端點執行GET作業，如[流程規格API參考檔案](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec)所示。 在回應中，尋找`upsTo`並複製您要連線之批次目的地的對應ID。 例如，若為[!DNL Adobe Campaign]，尋找`upsToCampaign`並複製`id`引數。 |
 | `sourceConnectionIds` | 使用您在步驟[連線至您的Experience Platform資料](#connect-to-your-experience-platform-data)中取得的來源連線ID。 |
 | `targetConnectionIds` | 使用您在步驟[連線到批次目的地](#connect-to-batch-destination)中取得的目標連線識別碼。 |
 | `transformations` | 在下一步中，您會將要啟用的對象和設定檔屬性填入此區段中。 |
@@ -965,7 +965,7 @@ curl -X POST \
 
 建立所有連線和資料流後，您現在可以將設定檔資料啟動到目的地平台。 在此步驟中，您可以選取要匯出至目的地的對象和設定檔屬性。
 
-您也可以決定匯出檔案的檔案命名格式，以及哪些屬性應該用作[重複資料刪除索引鍵](../ui/activate-batch-profile-destinations.md#mandatory-keys)或[必要屬性](../ui/activate-batch-profile-destinations.md#mandatory-attributes)。 在此步驟中，您也可以決定傳送資料至目的地的排程。
+您也可以決定匯出檔案的檔案命名格式，以及哪些屬性應該用作[重複資料刪除索引鍵](../ui/activate-batch-profile-destinations.md#mandatory-attributes)或[必要屬性](../ui/activate-batch-profile-destinations.md#mandatory-attributes)。 在此步驟中，您也可以決定傳送資料至目的地的排程。
 
 若要將對象啟用至您的新目的地，您必須執行JSON PATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個對象和設定檔屬性。 若要深入瞭解JSON PATCH，請參閱[RFC規格](https://tools.ietf.org/html/rfc6902)。
 
@@ -1049,7 +1049,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | 您想要用來更新引數的新值。 |
 | `id` | 指定您要新增至目的地資料流的對象ID。 |
 | `name` | *選擇性*。 指定您要新增至目的地資料流的對象名稱。 請注意，此欄位並非必填欄位，您可以在不提供名稱的情況下成功將對象新增至目的地資料流。 |
-| `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`：選擇性。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`：選擇性。 選取這兩個檔案選項之一，加入Experience Platform產生檔案的時間。</li><li>`custom-text`：選擇性。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)一節。 |
+| `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br>下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`：選擇性。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)`或`%TIMESTAMP%`：選擇性。 選取這兩個檔案選項之一，加入Experience Platform產生檔案的時間。</li><li>`custom-text`：選擇性。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br>如需設定檔案名稱的詳細資訊，請參閱批次目的地啟動教學課程中的[設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)一節。 |
 | `exportMode` | 強制。 選取`"DAILY_FULL_EXPORT"`或`"FIRST_FULL_THEN_INCREMENTAL"`。 如需有關這兩個選項的詳細資訊，請參閱批次目的地啟動教學課程中的[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)和[匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)。 |
 | `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
 | `frequency` | 強制。<br> <ul><li>對於`"DAILY_FULL_EXPORT"`匯出模式，您可以選取`ONCE`、`DAILY`、`WEEKLY`或`MONTHLY`。</li><li>對於`"FIRST_FULL_THEN_INCREMENTAL"`匯出模式，您可以選取`"DAILY"`、`"EVERY_3_HOURS"`、`"EVERY_6_HOURS"`、`"EVERY_8_HOURS"`、`"EVERY_12_HOURS"`。</li></ul> |

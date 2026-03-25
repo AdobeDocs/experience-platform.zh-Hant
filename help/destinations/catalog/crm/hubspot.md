@@ -3,9 +3,9 @@ title: HubSpot連線
 description: HubSpot目的地可讓您管理HubSpot帳戶中的聯絡人記錄。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL HubSpot]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL HubSpot]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 [!DNL HubSpot]個連絡人儲存與您業務互動之個人的相關資訊。 您的團隊使用[!DNL HubSpot]中存在的連絡人來建立Experience Platform對象。 將這些對象傳送至[!DNL HubSpot]後，其資訊會更新，並且會為每個連絡人指派屬性，其值做為對象名稱，指出該連絡人屬於哪個對象。
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料至[!DNL HubSpot]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=zh-Hant)對象[!DNL Experience Platform]。
+在啟用資料至[!DNL HubSpot]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html)對象[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的Experience Platform檔案。
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 
 您需要您的[!DNL HubSpot] `Access token`允許[!DNL HubSpot]目的地透過[!DNL HubSpot]帳戶內的[!DNL HubSpot]私人應用程式進行API呼叫。 當您`Access token`驗證目的地`Bearer token`時，[將用作](#authenticate)。
 
-如果您沒有私人應用程式，請依照檔案操作，在[&#x200B; [!DNL HubSpot]中](https://developers.hubspot.com/docs/api/private-apps)建立私人應用程式。
+如果您沒有私人應用程式，請依照檔案操作，在[ [!DNL HubSpot]中](https://developers.hubspot.com/docs/api/private-apps)建立私人應用程式。
 
 >[!IMPORTANT]
 >
@@ -81,7 +81,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ ht-degree: 3%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -155,7 +155,7 @@ ht-degree: 3%
 
 ### 對應屬性和身分 {#map}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL HubSpot]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
+若要將您的對象資料從[!DNL Adobe Experience Platform]正確傳送至[!DNL HubSpot]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
 
 若要將您的XDM欄位正確對應到[!DNL HubSpot]目的地欄位，請遵循下列步驟：
 
@@ -165,7 +165,7 @@ ht-degree: 3%
 
 1. 在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**。 您現在可以在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;並選取身分。
+1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**並選取身分。
    ![Experience Platform UI熒幕擷圖選取電子郵件作為來源屬性，以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. 在&#x200B;**[!UICONTROL Select target field]**&#x200B;視窗中選擇&#x200B;**[!UICONTROL Select attributes]**&#x200B;並選取`email`。
    ![Experience Platform UI熒幕擷圖選取電子郵件作為目標屬性，以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
@@ -183,7 +183,7 @@ ht-degree: 3%
 
 1. 在&#x200B;**[!UICONTROL Mapping]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**。 您現在可以在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷取畫面，強調顯示「新增對應」按鈕。](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
-1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**&#x200B;類別並選取XDM屬性。
+1. 在&#x200B;**[!UICONTROL Select source field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**類別並選取XDM屬性。
    ![Experience Platform UI熒幕擷圖選取名字作為來源屬性。](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
 1. 在&#x200B;**[!UICONTROL Select target field]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL Select attributes]**&#x200B;類別，並從自動從您的[!DNL HubSpot]帳戶填入的屬性清單中選取。 目的地使用[[!DNL HubSpot] 屬性](https://developers.hubspot.com/docs/api/crm/properties) API來擷取此資訊。 已擷取[!DNL HubSpot] [預設屬性](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties)及任何自訂屬性，以選取為目標欄位。
    ![Experience Platform UI熒幕擷取畫面選取「名字」做為Target屬性。](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
@@ -207,10 +207,10 @@ ht-degree: 3%
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 登入[!DNL HubSpot]網站，然後導覽至&#x200B;**[!UICONTROL Contacts]**&#x200B;頁面以檢查對象狀態。 此清單可設定為顯示以對象名稱建立之自訂屬性的欄，其值為對象狀態。
+1. 登入[!DNL HubSpot]網站，然後導覽至&#x200B;**[!UICONTROL Contacts]**頁面以檢查對象狀態。 此清單可設定為顯示以對象名稱建立之自訂屬性的欄，其值為對象狀態。
    ![HubSpot UI熒幕擷圖顯示「連絡人」頁面，該頁面具有顯示對象名稱和儲存格對象狀態的欄標題](../../assets/catalog/crm/hubspot/contacts.png)
 
-1. 或者，您可以向下展開至個別&#x200B;**[!UICONTROL Person]**&#x200B;頁面，並導覽至顯示對象名稱和對象狀態的屬性。
+1. 或者，您可以向下展開至個別&#x200B;**[!UICONTROL Person]**頁面，並導覽至顯示對象名稱和對象狀態的屬性。
    ![HubSpot UI熒幕擷圖顯示「連絡人」頁面，該頁面具有顯示對象名稱和對象狀態的自訂屬性。](../../assets/catalog/crm/hubspot/contact.png)
 
 ## 資料使用與控管 {#data-usage-governance}
@@ -222,7 +222,7 @@ ht-degree: 3%
 [!DNL HubSpot]檔案中的其他實用資訊如下：
 
 * HubSpot [上的](https://developers.hubspot.com/docs/api/intro-to-auth)驗證方法
-* [!DNL HubSpot]連絡人[和](https://developers.hubspot.com/docs/api/crm/contacts)屬性[&#x200B; API的](https://developers.hubspot.com/docs/api/crm/properties)個API參考。
+* [!DNL HubSpot]連絡人[和](https://developers.hubspot.com/docs/api/crm/contacts)屬性[ API的](https://developers.hubspot.com/docs/api/crm/properties)個API參考。
 
 ### Changelog {#changelog}
 

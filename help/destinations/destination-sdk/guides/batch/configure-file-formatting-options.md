@@ -2,9 +2,9 @@
 description: 設定檔案型目的地的檔案格式選項
 title: 瞭解如何使用Destination SDK來設定檔案型目的地的檔案格式選項。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -718,7 +718,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 檔案格式選項的特定組合可能會導致不想要的檔案匯出結果。
 Adobe不建議選取下列CSV選項組合：
 
-```
+```properties
 nullValue -> ""
 quote -> "
 emptyValue -> ""

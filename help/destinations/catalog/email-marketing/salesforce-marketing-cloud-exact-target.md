@@ -2,9 +2,9 @@
 title: (API) Salesforce Marketing Cloud連線
 description: Salesforce Marketing Cloud （先前稱為ExactTarget）目的地可讓您匯出帳戶資料，並在Salesforce Marketing Cloud中根據您的業務需求加以啟用。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2936'
 ht-degree: 2%
 
 ---
@@ -27,17 +27,17 @@ ht-degree: 2%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL (API) Salesforce Marketing Cloud]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL (API) Salesforce Marketing Cloud]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 傳送電子郵件給行銷活動的連絡人 {#use-case-send-emails}
 
-家用出租平台的銷售部門想要廣播行銷電子郵件給目標客戶對象。 平台的行銷團隊可以透過Adobe Experience Platform新增連絡人/更新現有的連絡人&#x200B;*（及其電子郵件地址）*、從自己的離線資料建立對象，並將這些對象傳送至[!DNL Salesforce Marketing Cloud]，然後可以使用這些對象來傳送行銷活動電子郵件。
+家用出租平台的銷售部門想要廣播行銷電子郵件給目標客戶對象。 平台的行銷團隊可以新增連絡人/透過&#x200B;*更新現有的連絡人*（及其電子郵件地址）[!DNL Adobe Experience Platform]、從自己的離線資料建立對象，並將這些對象傳送至[!DNL Salesforce Marketing Cloud]，然後可以使用這些對象來傳送行銷活動電子郵件。
 
 ## 先決條件 {#prerequisites}
 
 ### Experience Platform的必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL (API) Salesforce Marketing Cloud]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料到[!DNL (API) Salesforce Marketing Cloud]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 ### [!DNL (API) Salesforce Marketing Cloud]中的必要條件 {#prerequisites-destination}
 
@@ -140,7 +140,7 @@ ht-degree: 2%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -153,7 +153,7 @@ ht-degree: 2%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -220,7 +220,7 @@ ht-degree: 2%
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL (API) Salesforce Marketing Cloud]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
+若要將對象資料從[!DNL Adobe Experience Platform]正確傳送至[!DNL (API) Salesforce Marketing Cloud]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。
 
 若要將您的XDM欄位正確對應到[!DNL (API) Salesforce Marketing Cloud]目的地欄位，請遵循下列步驟。
 
@@ -286,7 +286,7 @@ ht-degree: 2%
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![Experience Platform UI熒幕擷圖顯示目的地資料流執行。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的Experience Platform UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。
@@ -328,7 +328,7 @@ ht-degree: 2%
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
 | 2023 年 10 月 | 文件更新 | <ul><li>我們已更新(API) Salesforce Marketing Cloud[中的](#prerequisites-destination)必要條件，並一般移除檔案中屬性群組的不必要參考。</li> <li>更新檔案以指出只應在[!DNL Salesforce Marketing Cloud]資料延伸內的[!DNL Email Demographics]中建立對象狀態的屬性。</li> <li>我們已更新[對應考量事項和範例](#mapping-considerations-example)區段中的對應表格，`Email Address`資料延伸模組中`Email Addresses`屬性的對應標籤為必要，標示為IMPORTANT的圖說中曾提及此要求，但表格中省略。</li></ul> |
-| 2023 年 4 月 | 文件更新 | <ul><li>我們已更正[&#x200B; Salesforce Marketing Cloud (API) &#x200B;](#prerequisites-destination)中「必要條件」區段中的陳述式及參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 區段先前錯誤地指出使用者需要訂閱Marketing Cloud **帳戶**&#x200B;參與才能繼續。</li> <li>我們已在[先決條件](#prerequisites)下新增一節，以將[角色和許可權](#prerequisites-roles-permissions)指派給[!DNL Salesforce]使用者，讓此目的地正常運作。 (PLATIR-26299)</li></ul> |
+| 2023 年 4 月 | 文件更新 | <ul><li>我們已更正[ Salesforce Marketing Cloud (API) ](#prerequisites-destination)中「必要條件」區段中的陳述式及參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 區段先前錯誤地指出使用者需要訂閱Marketing Cloud **帳戶**&#x200B;參與才能繼續。</li> <li>我們已在[先決條件](#prerequisites)下新增一節，以將[角色和許可權](#prerequisites-roles-permissions)指派給[!DNL Salesforce]使用者，讓此目的地正常運作。 (PLATIR-26299)</li></ul> |
 | 2023 年 2 月 | 文件更新 | 我們已更新(API) Salesforce Marketing Cloud[中的](#prerequisites-destination)必要條件區段，加入參考連結，指出[!DNL Salesforce Marketing Cloud Engagement]是使用此目的地的必要訂閱。 |
 | 2023 年 2 月 | 功能更新 | 我們已修正目的地中不正確的設定導致將格式錯誤的JSON傳送至Salesforce的問題。 這會導致某些使用者在啟用時看到大量身分失敗。 (PLATIR-26299) |
 | 2023 年 1 月 | 文件更新 | <ul><li>我們更新了[中的 [!DNL Salesforce]](#prerequisites-destination)必要條件區段，指出必須在[!DNL Salesforce]端建立屬性。 本節現在包含如何執行此動作的詳細指示，以及命名[!DNL Salesforce]中屬性的最佳作法。 (PLATIR-25602)</li><li>我們新增了明確指示，說明如何在[對象排程](#schedule-segment-export-example)步驟中為每個已啟用的對象使用對應ID。 (PLATIR-25602)</li></ul> |

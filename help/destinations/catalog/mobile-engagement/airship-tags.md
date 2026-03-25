@@ -3,9 +3,9 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1052'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Airship]是領先的客戶參與平台，可在客戶生命週期的每個階段協助您為使用者提供有意義、個人化的全通路訊息。
 
-此整合會將Adobe Experience Platform對象資料作為[!DNL Airship]標籤[傳遞至](https://docs.airship.com/guides/audience/tags/)，以用於鎖定或觸發。
+此整合會將[!DNL Adobe Experience Platform]個對象資料以[!DNL Airship]標籤[的形式傳入](https://docs.airship.com/guides/audience/tags/)，以用於鎖定或觸發。
 
 若要深入瞭解[!DNL Airship]，請參閱[飛艇檔案](https://docs.airship.com)。
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 ## 先決條件 {#prerequisites}
 
-在將Adobe Experience Platform對象傳送至[!DNL Airship]之前，您必須：
+您必須先執行下列作業，才能將[!DNL Adobe Experience Platform]對象傳送至[!DNL Airship]：
 
 * 在您的[!DNL Airship]專案中建立標籤群組。
 * 產生持有人權杖以進行驗證。
@@ -43,7 +43,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -56,7 +56,7 @@ ht-degree: 3%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 ## 產生持有人權杖 {#generate-bearer-token}
 
-移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[&#x200B; &quot; &#x200B;](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
+移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[ &quot; ](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
 
 按一下「**[!UICONTROL Create Token]**」。
 
@@ -96,7 +96,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Airship Tags]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Airship Tags]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 使用案例#1 {#use-case-1}
 
@@ -104,7 +104,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 ### 使用案例#2 {#use-case-2}
 
-當使用者進入或退出Adobe Experience Platform中的特定對象時，即時觸發一對一訊息。
+當使用者在[!DNL Adobe Experience Platform]內進入或離開特定對象時，即時觸發一對一訊息。
 
 例如，retailer會在Experience Platform中設定牛仔褲品牌專屬對象。 retailer現在會在有人將牛仔褲偏好設定為特定品牌時，立即觸發行動訊息。
 

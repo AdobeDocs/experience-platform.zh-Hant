@@ -2,9 +2,9 @@
 title: 目的地啟用工作流程中的身分處理
 description: 瞭解在啟用工作流程中如何根據目的地型別處理身分匯出
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 ## API型串流目的地 {#streaming-destinations}
 
-[以](/help/destinations/destination-types.md#streaming-destination)Destination SDK[建置的API型串流目的地](/help/destinations/destination-sdk/overview.md) （例如[!DNL Facebook]、[!DNL Google Customer Match]、[!DNL Pinterest]、[!DNL Braze]及其他）僅支援匯出的特定識別碼。 如需可匯出至每個目的地的特定身分詳細資訊，請閱讀每個目的地檔案頁面中的&#x200B;*支援的身分*&#x200B;區段（例如，請參閱[目的地頁面中的](/help/destinations/catalog/advertising/pinterest.md)支援的身分割槽段[!DNL Pinterest]）。
+[以](/help/destinations/destination-types.md#streaming-audience-export-destinations)Destination SDK[建置的API型串流目的地](/help/destinations/destination-sdk/overview.md) （例如[!DNL Facebook]、[!DNL Google Customer Match]、[!DNL Pinterest]、[!DNL Braze]及其他）僅支援匯出的特定識別碼。 如需可匯出至每個目的地的特定身分詳細資訊，請閱讀每個目的地檔案頁面中的&#x200B;*支援的身分*&#x200B;區段（例如，請參閱[目的地頁面中的](/help/destinations/catalog/advertising/pinterest.md)支援的身分割槽段[!DNL Pinterest]）。
 
 但是請注意，您可以彈性地使用來自[私人圖形](/help/profile/merge-policies/overview.md#id-stitching)或屬性中的資料做為身分。 這表示您可以將XDM屬性對應至目的地所需的身分欄位。 請參閱以下的[!DNL Pinterest]目的地範例，其中XDM屬性`personalEmail.address`對應到必要的[!DNL Pinterest]身分`pinterest_audience`。
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Audience Manager支援這些廣告目的地的絕大部分（這些目的地型別在Audience Manager中稱為以裝置為基礎的目的地）。 檢視Audience Manager[中所有支援的以裝置為基礎的目的地的](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=zh-Hant)清單。 Experience Platform中只列出少數專案。 如需在Experience Platform和Audience Manager之間共用資料的資訊，請參閱[啟用從Experience Platform到Audience Manager的資料共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant#enable-aep-to-aam-data)一節。 目前沒有支援更多協力廠商Cookie目的地的計畫。
+>Audience Manager支援這些廣告目的地的絕大部分（這些目的地型別在Audience Manager中稱為以裝置為基礎的目的地）。 檢視Audience Manager[中所有支援的以裝置為基礎的目的地的](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)清單。 Experience Platform中只列出少數專案。 如需在Experience Platform和Audience Manager之間共用資料的資訊，請參閱[啟用從Experience Platform到Audience Manager的資料共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data)一節。 目前沒有支援更多協力廠商Cookie目的地的計畫。
 
 ## 企業目的地 {#enterprise-destinations}
 
@@ -101,7 +101,7 @@ ht-degree: 0%
 
 ## Personalization目的地 {#personalization-destinations}
 
-[Personalization （或edge）目的地](/help/destinations/destination-types.md#edge-personalization-destinations) （例如：Adobe Target、[!DNL Custom Personalization]）不需要在啟用工作流程中選擇任何身分，因為整合是設定檔查詢。 使用者端（[!DNL Target]、[!DNL Web SDK]或其他）會查詢[[!UICONTROL Edge]](/help/collection/home.md#edge)並提取它需要的設定檔資訊以進行站上個人化。
+[Personalization （或edge）目的地](/help/destinations/destination-types.md#edge-personalization-destinations) （例如： [!DNL Adobe Target]、[!DNL Custom Personalization]）不需要在啟動工作流程中選擇任何身分，因為整合是設定檔查詢。 使用者端（[!DNL Target]、[!DNL Web SDK]或其他）會查詢[[!UICONTROL Edge]](/help/collection/home.md)並提取它需要的設定檔資訊以進行站上個人化。
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

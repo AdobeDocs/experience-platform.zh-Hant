@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 description: 瞭解如何將資料集匯出資料流的結束日期更新為2025年5月1日的目前結束日期。
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Experience Platform[的2024年9月](/help/release-notes/latest/latest.md#destina
    ![選取排程步驟中反白顯示的結束日期控制項。](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. 繼續工作流程結尾並儲存您的更新。
 
-如需排程步驟的詳細資訊，請參閱[匯出資料集UI教學課程](/help/destinations/api/export-datasets.md#scheduling)。
+如需排程步驟的詳細資訊，請參閱[匯出資料集UI教學課程](/help/destinations/api/export-datasets.md#export-datasets-by-using-the)。
 
 ## 使用API更新結束日期 {#use-api}
 

@@ -2,7 +2,7 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK建立對象範本的API呼叫範例。
 title: 建立對象範本
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 對象範本API操作快速入門 {#get-started}
 
@@ -262,9 +262,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `headers.header` | 字串 | 指定應新增至API呼叫的任何HTTP標頭。 例如, `"Content-Type"` |
 | `headers.value` | 字串 | 指定應新增至API呼叫的HTTP標頭值。 例如, `"application/x-www-form-urlencoded"` |
 | `requestBody` | 字串 | 指定應傳送至API的訊息本文內容。 應新增至`requestBody`物件的引數取決於您的API接受哪些欄位。 請參閱[支援的巨集檔案](../functionality/audience-metadata-management.md#macros)，瞭解您可在郵件內文中包含哪些內容。 |
-| `responseFields.name` | 字串 | 指定API在呼叫時會傳回的任何回應欄位。 如需範例，請參閱對象中繼資料功能檔案中的[範本範例](../functionality/audience-metadata-management.md#examples)。 |
+| `responseFields.name` | 字串 | 指定API在呼叫時會傳回的任何回應欄位。 如需範例，請參閱對象中繼資料功能檔案中的[範本範例](../functionality/audience-metadata-management.md#configuration-examples)。 |
 | `responseFields.value` | 字串 | 指定API在呼叫時傳回之任何回應欄位的值。 |
-| `responseErrorFields.name` | 字串 | 指定API在呼叫時會傳回的任何回應欄位。 如需範例，請參閱對象中繼資料功能檔案中的[範本範例](../functionality/audience-metadata-management.md#examples)。 |
+| `responseErrorFields.name` | 字串 | 指定API在呼叫時會傳回的任何回應欄位。 如需範例，請參閱對象中繼資料功能檔案中的[範本範例](../functionality/audience-metadata-management.md#configuration-examples)。 |
 | `responseErrorFields.value` | 字串 | 剖析來自您目的地的API呼叫回應所傳回的任何錯誤訊息。 這些錯誤訊息會在Experience Platform使用者介面中向使用者顯示。 |
 | `validations.field` | 字串 | 指示在對目的地進行API呼叫之前，是否應對任何欄位執行驗證。 例如，您可以使用`{{validations.accountId}}`來驗證使用者的帳戶ID。 |
 | `validations.regex` | 字串 | 表示欄位應如何建構才能通過驗證。 |

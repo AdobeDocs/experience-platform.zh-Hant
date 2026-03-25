@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: Oracle回應系統連線
 description: Responsys是Oracle所提供用於跨頻道行銷活動的企業電子郵件行銷工具，可將電子郵件、行動裝置、顯示和社交的互動個人化。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '780'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [Responsys](https://www.oracle.com/cx/marketing/campaign-management/)是[!DNL Oracle]提供的跨頻道行銷活動的企業電子郵件行銷工具，可個人化電子郵件、行動裝置、顯示和社交的互動。
 
-若要將對象資料傳送至[!DNL Oracle Responsys]，您必須先[連線至Adobe Experience Platform中的目的地](#connect-destination)，然後[設定從儲存位置匯入](#import-data-into-responsys)到[!DNL Oracle Responsys]的資料。
+若要將對象資料傳送至[!DNL Oracle Responsys]，您必須先在[中](#connect-destination)連線至目的地[!DNL Adobe Experience Platform]，然後[設定將資料從儲存位置匯入](#import-data-into-responsys)至[!DNL Oracle Responsys]。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ ht-degree: 4%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 

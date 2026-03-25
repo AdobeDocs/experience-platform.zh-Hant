@@ -4,9 +4,9 @@ title: 刪除目的地
 type: Tutorial
 description: 本教學課程列出刪除Adobe Experience Platform UI中現有目的地的步驟
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,20 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-在Adobe Experience Platform使用者介面中，您可以刪除與目的地的現有連線。
+在[!DNL Adobe Experience Platform]使用者介面中，您可以刪除與目的地的現有連線。
 
 刪除目的地會移除該目的地的所有現有資料流。 在刪除資料流之前，系統會取消對應在您刪除之目的地啟用的所有對象。
 
 您可透過兩種方法從[!DNL Experience Platform] [!DNL UI]刪除目的地。 您可以：
 
-* [從[!UICONTROL 瀏覽]索引標籤刪除目的地](#delete-browse-tab)
+* [從[!UICONTROL Browse]索引標籤刪除目的地](#delete-browse-tab)
 * [從目的地詳細資訊頁面刪除目的地](#delete-destination-details-page)
 
 ## 從瀏覽標籤刪除目的地{#delete-browse-tab}
 
-請依照下列步驟，從[!UICONTROL 瀏覽]索引標籤中刪除目的地。
+請依照下列步驟，從[!UICONTROL Browse]索引標籤中刪除目的地。
 
-1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL 目的地]**。 若要檢視您現有的目的地，請從頂端標題選取&#x200B;**[!UICONTROL 瀏覽]**。
+1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 若要檢視您現有的目的地，請從頂端標題選取&#x200B;**[!UICONTROL Browse]**。
 
    ![瀏覽目的地](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -36,10 +36,10 @@ ht-degree: 0%
 
    ![篩選目的地](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 在[名稱]資料行中選取![其他按鈕](/help/images/icons/more.png)按鈕，然後選取![刪除按鈕](/help/images/icons/delete.png) **[!UICONTROL 刪除]**&#x200B;以移除現有的目的地連線。
+3. 在[名稱]資料行中選取[其他]按鈕![按鈕，然後選取[刪除]按鈕](/help/images/icons/more.png) ![以移除現有的目的地連線。](/help/images/icons/delete.png)**[!UICONTROL Delete]**
    ![刪除目的地](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. 選取&#x200B;**[!UICONTROL 刪除]**&#x200B;以確認移除目的地連線。
+4. 選取&#x200B;**[!UICONTROL Delete]**&#x200B;以確認移除目的地連線。
 
    ![確認刪除目的地](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 請依照下列步驟，從目的地詳細資訊頁面中刪除目的地。
 
-1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL 目的地]**。 若要檢視您現有的目的地，請從頂端標題選取&#x200B;**[!UICONTROL 瀏覽]**。
+1. 登入[Experience Platform UI](https://platform.adobe.com/)，並從左側導覽列中選取&#x200B;**[!UICONTROL Destinations]**。 若要檢視您現有的目的地，請從頂端標題選取&#x200B;**[!UICONTROL Browse]**。
 
    ![瀏覽目的地](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
    ![選取目的地](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * 如果目的地有現有的資料流，您就會進入[!UICONTROL 資料流執行]索引標籤。
+   * 如果目的地有現有的資料流，則會帶您前往[!UICONTROL Dataflow runs]索引標籤。
 
      ![資料流執行索引標籤](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
@@ -67,11 +67,11 @@ ht-degree: 0%
 
      ![目的地詳細資料](../assets/ui/delete-destinations/destination-details-empty.png)
 
-4. 在右側邊欄中選取&#x200B;**[!UICONTROL 刪除]**。
+4. 在右側邊欄中選取&#x200B;**[!UICONTROL Delete]**。
 
    ![刪除目的地](../assets/ui/delete-destinations/delete-destinations-button.png)
 
-5. 在確認對話方塊中選取&#x200B;**[!UICONTROL 刪除]**&#x200B;以移除目的地。
+5. 在確認對話方塊中選取&#x200B;**[!UICONTROL Delete]**&#x200B;以移除目的地。
 
    ![刪除目的地確認](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 

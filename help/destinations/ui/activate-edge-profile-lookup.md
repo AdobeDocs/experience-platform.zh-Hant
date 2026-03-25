@@ -3,16 +3,16 @@ title: 即時查詢邊緣設定檔屬性
 description: 瞭解如何使用自訂Personalization目的地和Edge Network API即時查詢邊緣設定檔屬性
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1833'
 ht-degree: 1%
 
 ---
 
 # 即時查詢邊緣上的設定檔屬性
 
-Adobe Experience Platform使用[即時客戶個人檔案](../../profile/home.md)作為所有個人檔案資料的單一信任來源。 為了快速即時擷取資料，它使用[邊緣設定檔](../../profile/edge-profiles.md)，這些設定檔是分散在整個[Edge Network](../../collection/home.md#edge)的輕量型設定檔。 這可提供快速、即時的個人化使用案例。
+[!DNL Adobe Experience Platform]使用[即時客戶設定檔](../../profile/home.md)作為所有設定檔資料的單一信任來源。 為了快速即時擷取資料，它使用[邊緣設定檔](../../profile/edge-profiles.md)，這些設定檔是分散在整個[Edge Network](../../collection/home.md)的輕量型設定檔。 這可提供快速、即時的個人化使用案例。
 
 ## 使用案例 {#use-cases}
 
@@ -112,7 +112,7 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
    您可以根據對象的來源，從多種對象型別中進行選取：
 
    * **[!UICONTROL Segmentation Service]**：細分服務在Experience Platform中產生的對象。 如需詳細資訊，請參閱[分段檔案](../../segmentation/ui/overview.md)。
-   * **[!UICONTROL Custom upload]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Experience Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/overview.md#import-audience)的檔案。
+   * **[!UICONTROL Custom upload]**：對象是在Experience Platform外部產生，並以CSV檔案形式上傳至Experience Platform。 若要深入瞭解外部對象，請參閱有關[匯入對象](../../segmentation/ui/audience-portal.md#import-audience)的檔案。
    * 其他型別的對象，源自其他Adobe解決方案，例如[!DNL Audience Manager]。
 
      ![選取啟用工作流程的對象步驟，並反白數個對象。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

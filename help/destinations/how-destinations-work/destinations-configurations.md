@@ -2,9 +2,9 @@
 title: 目的地中可設定的和常用的匯出設定
 description: 瞭解目的地中哪些匯出設定可在目的地層級設定，哪些是固定的且無法編輯。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 在考慮匯出至Experience Platform目的地的行為時，您需要考慮針對哪些設定採取行動的三個單獨層級。
 
-* 在第一個層級，與設定檔匯出行為和組態設定相關的某些設定，在屬於某個目的地型別的所有目的地中都是通用的。 這些設定指會觸發目的地匯出的專案，以及匯出中包含的專案，這些設定無法由目的地開發人員或Real-Time CDP使用者編輯。
+* 在第一個層級，與設定檔匯出行為和組態設定相關的某些設定，在屬於某個目的地型別的所有目的地中都是通用的。 這些設定是指觸發目的地匯出的專案，以及匯出中包含的專案，這些專案無法由目的地開發人員或[!DNL Real-Time CDP]使用者編輯。
 * 在第二層級，目的地開發人員在使用Destination SDK編寫目的地時，可以在目的地層級上自訂某些設定。
-* 第三個層級是Real-Time CDP使用者可在啟動工作流程中設定的組態設定。
+* 在第三層級，有[!DNL Real-Time CDP]個使用者可以在啟動工作流程中設定的組態設定。
 
 ![顯示一般與可設定之目的地匯出設定之間互動的圖表](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 ## 各種目的地型別通用的匯出設定 {#common-settings-across-destination-types}
 
-目的地匯出行為在屬於目的地型別的目的地之間是一致的，這與&#x200B;*觸發目的地匯出的專案*&#x200B;和&#x200B;*目的地匯出專案中所包含的專案有關*。 目的地匯出是由目的地服務從[上游即時客戶設定檔服務](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=zh-Hant#adobe-experience-platform-%26-applications-detailed-architecture-diagram)收到的通知觸發。
+目的地匯出行為在屬於目的地型別的目的地之間是一致的，這與&#x200B;*觸發目的地匯出的專案*&#x200B;和&#x200B;*目的地匯出專案中所包含的專案有關*。 目的地匯出是由目的地服務從[上游即時客戶設定檔服務](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram)收到的通知觸發。
 
-目的地匯出中包含的內容會因目的地型別而略有不同。 深入瞭解每個目的地型別[的](/help/destinations/how-destinations-work/profile-export-behavior.md)常見匯出行為模式。 目的地開發人員或Real-Time CDP使用者無法編輯這些設定。
+目的地匯出中包含的內容會因目的地型別而略有不同。 深入瞭解每個目的地型別[的](/help/destinations/how-destinations-work/profile-export-behavior.md)常見匯出行為模式。 目的地開發人員或[!DNL Real-Time CDP]使用者無法編輯這些設定。
 
 ## 目的地開發人員可自訂的匯出設定 {#customizable-settings-by-destination-developers}
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ![在啟動工作流程的對應步驟中，針對目標欄位選取的身分進行熒幕錄製。](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
-同樣地，對於[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)，目的地開發人員可以決定要為其目的地提供哪些[檔案名稱附加選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)，或要為其提供哪些[檔案格式選項](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)，而且使用者只能從這些選項中進行選取，如下所示：
+同樣地，對於[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)，目的地開發人員可以決定要為其目的地提供哪些[檔案名稱附加選項](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)，或要為其提供哪些[檔案格式選項](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)，而且使用者只能從這些選項中進行選取，如下所示：
 
 ![連線到以檔案為基礎的目的地時，熒幕錄製檔案格式選項。](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 

@@ -4,9 +4,9 @@ title: Activation 概觀
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中將您的對象啟動至各種型別的目的地。
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '337'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
-Adobe Experience Platform支援廣泛的目的地。 受眾啟用工作流程會因支援的受眾資料型別以及資料匯出頻率而因目的地而異。
+[!DNL Adobe Experience Platform]支援多種目的地。 受眾啟用工作流程會因支援的受眾資料型別以及資料匯出頻率而因目的地而異。
 
 ## 啟用方法 {#activation-methods}
 

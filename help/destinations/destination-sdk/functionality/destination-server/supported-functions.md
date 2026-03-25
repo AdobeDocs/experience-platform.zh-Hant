@@ -2,10 +2,10 @@
 description: Experience Platform Destination SDK使用Pebble範本，讓您將從Experience Platform匯出的資料轉換為目的地所需的格式。
 title: Destination SDK支援的轉換函式
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 1%
+source-wordcount: '548'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ Experience Platform Destination SDK使用[[!DNL Pebble] 範本](https://pebblete
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 使用位置 {#where-to-use}
 
@@ -45,7 +45,7 @@ Experience Platform Destination SDK使用[[!DNL Pebble] 範本](https://pebblete
 >反複處理範本中的`for`陣列&#x200B;*或*&#x200B;對應&#x200B;*元素時，使用*&#x200B;會不同。 當反複處理陣列時，可以直接取得元素。 當反複檢視對映時，會取得每個對映專案，每個對映專案都有一個索引鍵/值組。
 >
 > * 如需陣列元素的範例，請考慮[identityMap](message-format.md#identities)名稱空間中的身分，您可以在此重複執行元素，例如`identityMap.gaid`、`identityMap.email`或類似專案。
-> * 如需對應元素的範例，請考慮[segmentMembership](message-format.md#segment-membership)。
+> * 如需對應元素的範例，請考慮[segmentMembership](message-format.md#audience-membership)。
 
 從[!DNL Pebble]篩選區段，Destination SDK支援所有函式。 以下進一步的範例說明如何在Destination SDK中使用`date`函式。
 
@@ -53,7 +53,7 @@ Experience Platform Destination SDK使用[[!DNL Pebble] 範本](https://pebblete
 
 ## 如何使用`date`函式的範例 {#date-function}
 
-若要說明[!DNL Pebble]函式在Destination SDK中的使用方式，請參閱以下說明如何使用日期函式（[Pebble檔案中的連結](https://pebbletemplates.io/wiki/filter/date/)）來轉換時間戳記格式。
+若要說明[!DNL Pebble]函式在Destination SDK中的使用方式，請參閱以下日期函式（[Pebble檔案中的連結](https://pebbletemplates.io/wiki/filter/date/)）如何轉換時間戳記格式。
 
 ### 使用案例 {#date-use-case}
 

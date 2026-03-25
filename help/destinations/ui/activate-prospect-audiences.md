@@ -3,10 +3,10 @@ title: 對目的地啟用潛在客戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用潛在客戶對象
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 18%
+source-wordcount: '583'
+ht-degree: 12%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 18%
 
 >[!AVAILABILITY]
 >
->已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 請聯絡您的 Adobe 代表以取得更多資訊。
+>已購買[!DNL Real-Time CDP] Prime和Ultimate套件的客戶可使用此功能。 請聯絡您的 Adobe 代表以取得更多資訊。
 
-本文說明從Adobe Experience Platform將[潛在客戶對象](/help/segmentation/types/prospect-audiences.md)匯出至您偏好的目的地所需的工作流程。
+本文說明從[將](/help/segmentation/types/prospect-audiences.md)潛在客戶對象[!DNL Adobe Experience Platform]匯出至您偏好的目的地所需的工作流程。
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -77,7 +77,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->請注意，在排程步驟中，啟動潛在客戶對象的工作流程僅允許您[匯出完整的檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)。 不支援增量檔案匯出。
+>請注意，在排程步驟中，啟動潛在客戶對象的工作流程僅允許您[匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)。 不支援增量檔案匯出。
 
 <!--
 
@@ -87,8 +87,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
 
-探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
+探索透過[!DNL Real-Time CDP]中的合作夥伴資料支援啟用的進一步使用案例：
 
 * [使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的洞察，並使客群最佳化表現更好。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* 使用 Real-Time CDP 的第三方資料支援，透過資料合作夥伴的潛在客戶輪廓來[擴大您的輪廓庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
+* 在[!DNL Real-Time CDP]中使用協力廠商資料支援以[利用資料合作夥伴的潛在客戶設定檔擴充您的設定檔基底，並與他們互動以取得或接觸新客戶](/help/rtcdp/partner-data/prospecting.md)。
 * [利用合作夥伴輔助識別，不需要使用者驗證或之前使用您的品牌的紀錄，即可在造訪期間提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)。

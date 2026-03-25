@@ -2,20 +2,20 @@
 description: 若要使用Destination SDK，合作夥伴公司必須符合本檔案所列的先決條件。
 title: 整合必要條件
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
 # 整合必要條件
 
-若要使用Destination SDK，請確定您符合下列各節所列的技術和合作關係先決條件。
+若要使用Destination SDK，請確定您符合下列章節所列的技術和合作夥伴關係先決條件。
 
 ## 串流目的地的技術/ API必要條件 {#streaming-prerequisites}
 
-1. 您有Adobe Experience Platform的REST API端點，可將下列型別的資料傳送至：
+1. 您有[!DNL Adobe Experience Platform]的REST API端點，可將下列型別的資料傳送至：
    * 對象會籍資訊；
    * 設定檔身分資訊；
    * （選用）個人檔案擴充的其他屬性。
@@ -30,4 +30,4 @@ ht-degree: 0%
 
 ## 合作關係必要條件 {#partnership-prerequisites}
 
-如果您是想要使用Destination SDK的獨立軟體廠商(ISV)或系統整合商(SI)，請在[取得存取區段](overview.md#get-access)中閱讀ISV與SI的合作夥伴需求。
+如果您是想要使用Destination SDK的獨立軟體廠商(ISV)或系統整合商(SI)，請在[取得存取權區段](overview.md#get-access)中閱讀ISV與SI的合作夥伴需求。

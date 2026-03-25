@@ -4,9 +4,9 @@ title: Qualtrics自動化
 description: 同步體驗和營運客戶資料，以大規模解除個人化鎖定。 在Adobe Experience Platform中彙總多個營運資料來源，作為Qualtrics Experience Id中的輸入專案，以更好地瞭解您的客戶，並實現目標式外聯，在瞭解意圖、情緒和體驗驅動因素方面縮小差距。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1259'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 同步體驗和營運客戶資料，以大規模解除個人化鎖定。
 
-在Adobe Experience Platform中彙總多個營運資料來源，作為Qualtrics Experience Id中的輸入專案，以更好地瞭解您的客戶，並實現目標式外聯，在瞭解意圖、情緒和體驗驅動因素方面縮小差距。
+使用[!DNL Adobe Experience Platform]中多個營運資料來源的彙總，作為Qualtrics Experience iD中的輸入內容，以更清楚瞭解您的客戶，並啟用目標式外聯，在瞭解意圖、情緒和體驗驅動因素方面縮小差距。
 
 >[!IMPORTANT]
 >
@@ -25,23 +25,23 @@ ht-degree: 3%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用&#x200B;*Qualtrics自動化*&#x200B;目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用&#x200B;*Qualtrics自動化*&#x200B;目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 使用案例#1 {#use-case-1}
 
-**案例**：公司想要測量各種數位接觸點（例如其網站和行動應用程式）的客戶滿意度。 他們使用Adobe Experience Platform根據使用者互動來觸發Qualtrics調查，例如完成購買或造訪特定網頁。
+**案例**：公司想要測量各種數位接觸點（例如其網站和行動應用程式）的客戶滿意度。 他們使用[!DNL Adobe Experience Platform]根據使用者互動來觸發Qualtrics調查，例如完成購買或造訪特定網頁。
 
 **結果**：透過收集即時意見回饋，公司可以改善其客戶體驗，進而提高滿意度和忠誠度。
 
 ### 使用案例#2 {#use-case-2}
 
-**案例**：組織希望提升員工上線流程。 他們利用Adobe Experience Platform透過Qualtrics調查收集新聘人員的意見回饋。 在預先定義的入門期間後，調查會自動觸發。
+**案例**：組織希望提升員工上線流程。 他們利用[!DNL Adobe Experience Platform]透過Qualtrics調查從新聘人員收集意見回饋。 在預先定義的入門期間後，調查會自動觸發。
 
 **結果**：持續回饋可讓組織調整並改善上線流程，進而提高新員工的參與度和生產力。
 
 ## 先決條件 {#prerequisites}
 
-在Adobe Experience Platform中設定Qualtrics目的地之前，請先確定已符合下列必要條件：
+在[!DNL Adobe Experience Platform]中設定Qualtrics目的地之前，請先確定已符合下列必要條件：
 
 * 您有Qualtrics帳戶。
 * 您已從Qualtrics取得必要的API權杖。
@@ -73,7 +73,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ ht-degree: 3%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -205,7 +205,7 @@ ht-degree: 3%
 
 若要確認已在Qualtrics中擷取資料，請前往包含您的&#x200B;**JSON事件**&#x200B;的工作流程，從那裡，移至&#x200B;**執行歷程記錄**，您應該會在此看到工作流程的執行。 每個工作流程的狀態為&#x200B;**成功**&#x200B;或&#x200B;**失敗**。 選取特定執行會顯示其相關詳細資訊，讓您可在遇到任何問題時進行疑難排解。
 
-如果&#x200B;**執行歷程記錄**&#x200B;中沒有可見的執行，則表示尚未觸發工作流程，表示可能有問題。 請確認工作流程已啟用，且Adobe Experience Platform中的目的地&#x200B;**URL**&#x200B;正確無誤。 工作流程執行並非立即執行，因此您可能會必須等候一段時間才能完成。
+如果&#x200B;**執行歷程記錄**&#x200B;中沒有可見的執行，則表示尚未觸發工作流程，表示可能有問題。 請確定工作流程已啟用，且&#x200B;**中目的地的** URL[!DNL Adobe Experience Platform]正確。 工作流程執行並非立即執行，因此您可能會必須等候一段時間才能完成。
 
 ## 資料使用與控管 {#data-usage-governance}
 

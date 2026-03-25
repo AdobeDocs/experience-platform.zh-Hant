@@ -3,9 +3,9 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟用警示，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1233'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-您必須先設定與目的地平台的連線，才能將對象資料傳送至目的地。 本文會說明如何設定新的目的地連線，然後您可以使用Adobe Experience Platform使用者介面啟用對象或匯出資料集。
+您必須先設定與目的地平台的連線，才能將對象資料傳送至目的地。 本文說明如何設定新的目的地連線，然後您可以使用[!DNL Adobe Experience Platform]使用者介面啟用對象或匯出資料集。
 
 ## 在目錄中尋找所需的目的地 {#setup}
 

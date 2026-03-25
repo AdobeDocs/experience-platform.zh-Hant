@@ -5,16 +5,16 @@ title: 使用流程服務API刪除目的地帳戶
 type: Tutorial
 description: 瞭解如何使用流量服務API刪除目的地帳戶。
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 19%
+source-wordcount: '749'
+ht-degree: 17%
 
 ---
 
 # 使用流程服務API刪除目的地帳戶
 
-[!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
+[!DNL Destinations]是預先建立的與目的地平台的整合，允許從[!DNL Adobe Experience Platform]無縫啟用資料。 您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
 在啟用資料之前，您必須先設定目的地帳戶，以連線至目的地。 本教學課程涵蓋使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)刪除不再需要的目的地帳戶的步驟。
 
@@ -26,9 +26,9 @@ ht-degree: 19%
 
 本教學課程要求您具備有效的連線ID。 連線ID代表與目的地的帳戶連線。 如果您沒有有效的連線ID，請從[目的地目錄](../catalog/overview.md)中選取您選擇的目的地，然後依照概述的步驟[連線至目的地](../ui/connect-destination.md)，再嘗試進行此教學課程。
 
-本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
+本教學課程也要求您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從[!DNL Adobe Experience Platform]啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 * [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 下列章節提供使用[!DNL Flow Service] API成功刪除目的地帳戶所需瞭解的其他資訊。

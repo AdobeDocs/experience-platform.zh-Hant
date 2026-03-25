@@ -3,9 +3,9 @@ keywords: 確認數位意見；確認擴充功能；確認
 title: 確認數位意見延伸
 description: Confirm Digital Feedback擴充功能是Adobe Experience Platform中的客戶語音目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '473'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 * 整體客戶滿意度
 * 以及更多功能
 
-[!DNL Confirmit]數位意見是Adobe Experience Platform中的客戶語音擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)上的擴充功能頁面。
+[!DNL Confirmit]數位意見是[!DNL Adobe Experience Platform]中客戶分機的Voice。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)上的擴充功能頁面。
 
 此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform]中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe Experience Cloud]個客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 

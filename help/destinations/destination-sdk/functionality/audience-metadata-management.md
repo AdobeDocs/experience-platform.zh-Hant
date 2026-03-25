@@ -2,9 +2,9 @@
 description: 使用對象中繼資料範本，以程式設計方式在您的目的地建立、更新或刪除對象。 Adobe提供可擴充的對象中繼資料範本，您可以根據行銷API的規格進行設定。 定義、測試及提交範本後，Adobe會使用該範本來建構對目的地的API呼叫。
 title: 對象中繼資料管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1297'
 ht-degree: 2%
 
 ---
@@ -60,13 +60,13 @@ ht-degree: 2%
 
 | 範本區段 | 說明 |
 |--- |--- |
-| `create` | 包含對您的API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標頭、請求和回應內文），以程式設計方式在您的平台中建立區段/對象，並將資訊同步回Adobe Experience Platform。 |
-| `update` | 包含對您的API進行HTTP呼叫、以程式設計方式更新平台中的區段/對象並將資訊同步回Adobe Experience Platform的所有必要元件（URL、HTTP方法、標頭、請求和回應內文）。 |
+| `create` | 包含對您的API進行HTTP呼叫、以程式設計方式在您的平台中建立區段/對象，並將資訊同步回[!DNL Adobe Experience Platform]的所有必要元件（URL、HTTP方法、標頭、請求和回應內文）。 |
+| `update` | 包含對您的API進行HTTP呼叫、以程式設計方式更新您平台中的區段/對象並將資訊同步回[!DNL Adobe Experience Platform]的所有必要元件（URL、HTTP方法、標頭、請求和回應內文）。 |
 | `delete` | 包含對您的API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標題、請求和回應內文），以程式設計方式刪除平台中的區段/對象。 |
 | `validate` | 在呼叫合作夥伴API之前，執行範本設定中任何欄位的驗證。 例如，您可以驗證使用者的帳戶ID是否正確輸入。 |
 | `notify` | 僅適用於以檔案為基礎的目的地。 包含對您的API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標頭、請求和回應內文），以通知您檔案匯出成功。 |
-| `createDestination` | 包含對您的API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標頭、請求和回應內文），以程式設計方式在您的平台中建立資料流，並將資訊同步回Adobe Experience Platform。 |
-| `updateDestination` | 包含對您的API進行HTTP呼叫、以程式設計方式更新您平台中的資料流並將資訊同步回Adobe Experience Platform的所有必要元件（URL、HTTP方法、標頭、請求和回應內文）。 |
+| `createDestination` | 包含對您的API進行HTTP呼叫、以程式設計方式在您的平台中建立資料流並將資訊同步回[!DNL Adobe Experience Platform]的所有必要元件（URL、HTTP方法、標頭、請求和回應內文）。 |
+| `updateDestination` | 包含對您的API進行HTTP呼叫、以程式設計方式更新您平台中的資料流並將資訊同步回[!DNL Adobe Experience Platform]的所有必要元件（URL、HTTP方法、標頭、要求及回應內文）。 |
 | `deleteDestination` | 包含對API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標頭、請求和回應內文），以程式設計方式從您的平台刪除資料流。 |
 
 {style="table-layout:auto"}

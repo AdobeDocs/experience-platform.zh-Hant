@@ -2,9 +2,9 @@
 title: Marketo Engage連線
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商業的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化並管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1875'
+source-wordcount: '1853'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 [!DNL Marketo Engage]是行銷、廣告、分析和商務的唯一端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化並管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
 
-使用此目的地，在Adobe Experience Platform和Marketo Engage之間即時同步對象資料和設定檔屬性。
+使用此目的地在[!DNL Adobe Experience Platform]和Marketo Engage之間即時同步對象資料和設定檔屬性。
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Marketo Engage]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Marketo Engage]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### Audience同步使用案例 {#audience-sync-use-cases}
 
@@ -39,14 +39,14 @@ ht-degree: 2%
 
 **透過完整的設定檔同步重新參與及擴大觸及範圍**
 
-行銷團隊想要為新行銷活動啟用產品興趣對象。 雖然許多設定檔已存在於Marketo中，但有些設定檔是新的，僅存在於Real-Time CDP中。 針對現有人員，他們想要確保在Marketo中更新這些人員，同時也建立新設定檔。
+行銷團隊想要為新行銷活動啟用產品興趣對象。 雖然許多設定檔已存在於Marketo中，但有些設定檔是新的，僅存在於[!DNL Real-Time CDP]中。 針對現有人員，他們想要確保在Marketo中更新這些人員，同時也建立新設定檔。
 
-他們可以啟用Marketo Engage中的受眾，並結合&#x200B;**[!UICONTROL Audience and Profile]**&#x200B;動作使用&#x200B;**[!UICONTROL Update existing and create new persons]**&#x200B;同步型別來確保鎖定來自Marketo的現有銷售機會，並為從Real-Time CDP匯出的新受眾建立新的銷售機會。
+他們可以啟用Marketo Engage中的對象，並結合&#x200B;**[!UICONTROL Audience and Profile]**&#x200B;動作使用&#x200B;**[!UICONTROL Update existing and create new persons]**&#x200B;同步型別，以確保他們能鎖定來自Marketo的現有銷售機會，並為從[!DNL Real-Time CDP]匯出的新對象建立新的銷售機會。
 
 ## 先決條件 {#prerequisites}
 
-* 設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
-* 設定此目的地時，將只能使用相同Adobe Real-Time CDP組織上的Marketo Engage執行個體。
+* 設定目的地的使用者必須在其Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
+* 設定此目的地時，將只能使用相同Adobe [!DNL Real-Time CDP]組織上的Marketo Engage執行個體。
 * 只有在Adobe Admin Console中管理使用者的Marketo Engage執行個體才能使用此目的地。
 
 ## 支援的身分 {#supported-identities}
@@ -66,7 +66,7 @@ ht-degree: 2%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> <br> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> <br> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ ht-degree: 2%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -145,8 +145,8 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo deduplication field]**
    * **[!UICONTROL Audience and profile]**：當您想要將對象成員新增至Marketo清單，並讓其設定檔資訊保持最新時，請選取此選項。
    * **[!UICONTROL Profile only]**：當您想要讓Marketo銷售機會設定檔與Experience Platform的最新資訊保持最新狀態時，請選取此選項。
    * **[!UICONTROL Audience only]**：當您想要將對象成員新增至Marketo清單，但不更新其設定檔資訊時，請選取此選項。
-* **[!UICONTROL Partition]**： *只有在選擇&#x200B;**[!UICONTROL Profile only]**&#x200B;或&#x200B;**[!UICONTROL Audience and profile]**&#x200B;同步處理型別*&#x200B;時，才能選擇磁碟分割。 選取與您所選工作區相關聯的Marketo分割區ID。 這可讓您指定Marketo中的哪個銷售機會分割區會接收匯出的資料。 如果您未選擇特定的資料分割，您的資料將會傳送到Marketo中的&#x200B;**[!UICONTROL Default]**&#x200B;資料分割。
-* **[!UICONTROL Marketo deduplication field]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/zh-hant/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
+* **[!UICONTROL Partition]**： *只有在選擇&#x200B;**[!UICONTROL Profile only]**或&#x200B;**[!UICONTROL Audience and profile]**同步處理型別*&#x200B;時，才能選擇磁碟分割。 選取與您所選工作區相關聯的Marketo分割區ID。 這可讓您指定Marketo中的哪個銷售機會分割區會接收匯出的資料。 如果您未選擇特定的資料分割，您的資料將會傳送到Marketo中的&#x200B;**[!UICONTROL Default]**&#x200B;資料分割。
+* **[!UICONTROL Marketo deduplication field]**：選取您要在更新現有Marketo銷售機會時使用的Marketo重複資料刪除欄位。 此選取器會顯示您在Marketo中標籤為重複資料刪除欄位的欄位。 如果您希望Marketo的特定欄位顯示為重複資料刪除欄位，您必須在Marketo中將欄位標示為[可搜尋的欄位](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database)。
 
   >[!NOTE]
   >
@@ -193,7 +193,7 @@ Marketo會使用您選取的&#x200B;**[!UICONTROL Marketo deduplication field]**
 
 將對象匯出至Marketo Engage後，您應登入您的Marketo帳戶，驗證對象是否已如預期般啟用。 檢查Marketo中的相關銷售機會分割區和工作區，確認對象資料正確顯示，且已執行預期動作（例如更新或建立人員）。
 
-如果您沒有看到預期的資料，請檢閱Adobe Experience Platform中的對應和匯出設定，然後再次嘗試匯出。
+如果您沒有看到預期的資料，請在[!DNL Adobe Experience Platform]中檢閱您的對應和匯出設定，然後再次嘗試匯出。
 
 ## 資料使用與控管 {#data-usage-governance}
 

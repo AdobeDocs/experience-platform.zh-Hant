@@ -4,9 +4,9 @@ title: Azure事件中樞連線
 description: 建立與您的 [!DNL Azure Event Hubs] 儲存裝置的即時輸出連線，以從Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2146'
 ht-degree: 5%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 [!DNL Azure Event Hubs]是巨量資料串流平台和事件擷取服務。 其每秒可接收及處理數百萬個事件。 傳送到事件中樞的資料可以使用任何即時分析提供者或批次/儲存配接卡進行轉換和儲存。
 
-您可以建立與[!DNL Azure Event Hubs]儲存裝置的即時輸出連線，以從Adobe Experience Platform串流資料。
+您可以建立與[!DNL Azure Event Hubs]儲存裝置的即時輸出連線，以從[!DNL Adobe Experience Platform]串流資料。
 
 * 如需[!DNL Azure Event Hubs]的詳細資訊，請參閱[Microsoft檔案](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)。
 * 若要以程式設計方式連線到[!DNL Azure Event Hubs]，請參閱[串流目的地API教學課程](../../api/streaming-destinations.md)。
@@ -42,7 +42,7 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ UI中的![AWS Kinesis](../../assets/catalog/cloud-storage/event-hubs/catalog.png
 ![顯示Azure事件中樞目的地詳細資訊已完成欄位的UI畫面影像](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
 * **[!UICONTROL Name]**：填寫與[!DNL Azure Event Hubs]的連線名稱。
-* **[!UICONTROL Description]**：提供連線的說明。  範例：「優質層級客戶」、「對風箏衝浪感興趣的客戶」。
+* **[!UICONTROL Description]**：提供連線的說明。 範例：「優質層級客戶」、「對風箏衝浪感興趣的客戶」。
 * **[!UICONTROL eventHubName]**：為您[!DNL Azure Event Hubs]目的地的資料流提供名稱。
 * **[!UICONTROL Include Segment Names]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。
 * **[!UICONTROL Include Segment Timestamps]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此專案。 如需選取此選項的資料匯出範例，請參閱下方的[匯出的資料](#exported-data)區段。

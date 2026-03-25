@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] 連線
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式，管理其網站上廣告的顯示方式。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1281'
 ht-degree: 7%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 7%
 ><br/>
 >已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
 ><br/>
->未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，以篩選出未同意的設定檔，繼續使用現有的Real-Time CDP Google目的地而不中斷。
+>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，以篩選出未同意的設定檔，繼續使用現有的[!DNL Real-Time CDP] Google目的地而不中斷。
 
 [!DNL Google Ad Manager 360]連線可透過[!DNL publisher provided identifiers]將[!DNL Google Ad Manager 360] (PPID)的批次上傳至[!DNL Google Cloud Storage]。
 
@@ -55,7 +55,7 @@ ht-degree: 7%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ ht-degree: 7%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->此規則的例外狀況適用於現有[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=zh-Hant)客戶。 如果您已經在Audience Manager中建立了與此Google目的地的連線，則不需要再次進行允許清單程式，您可以繼續後續步驟。
+>此規則的例外狀況適用於現有[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html)客戶。 如果您已經在Audience Manager中建立了與此Google目的地的連線，則不需要再次進行允許清單程式，您可以繼續後續步驟。
 
 1. 依照[Google Ad Manager檔案](https://support.google.com/admanager/answer/3289669?hl=en)中所述的步驟，將Adobe新增為連結的資料管理平台(DMP)。
 2. 在[!DNL Google Ad Manager]介面中，前往&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]**，並啟用&#x200B;**[!UICONTROL API Access]**&#x200B;滑桿。
@@ -104,7 +104,7 @@ ht-degree: 7%
 >
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線到此目的地，請依照[目的地組態教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
+若要連線到此目的地，請依照[目的地組態教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)中所述的步驟進行。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 驗證目標 {#authenticate}
 
@@ -159,7 +159,7 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-[!DNL Google Ad Manager 360]需要這些對應，而且這些對應是由Adobe Experience Platform針對所有[!DNL Google Ad Manager 360]連線自動建立的。
+[!DNL Google Ad Manager 360]需要這些對應，而且由[!DNL Adobe Experience Platform]針對所有[!DNL Google Ad Manager 360]連線自動建立。
 
 ![顯示Google Ad Manager 360對應步驟的UI影像。](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
 

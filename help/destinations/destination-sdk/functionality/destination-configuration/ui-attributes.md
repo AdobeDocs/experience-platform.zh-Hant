@@ -2,16 +2,16 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定UI屬性，例如檔案連結、目的地卡片類別以及目的地連線型別和頻率。
 title: UI屬性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
 
 # UI屬性
 
-UI屬性會定義Adobe應該在Adobe Experience Platform使用者介面中為目的地卡片顯示的視覺元素，例如標誌、檔案頁面的連結、目的地說明及其類別和型別。
+UI屬性會定義Adobe應在[!DNL Adobe Experience Platform]使用者介面中為目的地卡片顯示的視覺元素，例如標誌、檔案頁面的連結、目的地說明及其類別和型別。
 
 若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[設定選項](../configuration-options.md)檔案中的圖表，或檢視以下目的地設定概觀頁面：
 
@@ -37,7 +37,7 @@ UI屬性會定義Adobe應該在Adobe Experience Platform使用者介面中為目
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -64,7 +64,7 @@ UI屬性會定義Adobe應該在Adobe Experience Platform使用者介面中為目
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink`是字串引數，參照到您目的地的[目的地目錄](../../../catalog/overview.md)中的檔案頁面。 Adobe Experience Platform中每個產品化的目的地都必須有對應的檔案頁面。 [瞭解如何為您的目的地建立目的地檔案頁面](../../docs-framework/documentation-instructions.md)。 請注意，私人/自訂目的地不需要此資訊。
+`documentationLink`是字串引數，參照到您目的地的[目的地目錄](../../../catalog/overview.md)中的檔案頁面。 [!DNL Adobe Experience Platform]中的每個產品化目的地都必須有對應的檔案頁面。 [瞭解如何為您的目的地建立目的地檔案頁面](../../docs-framework/documentation-instructions.md)。 請注意，私人/自訂目的地不需要此資訊。
 
 使用以下格式： `http://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是您目的地的名稱。 對於名為Moviestar的目的地，您可以使用`http://www.adobe.com/go/destinations-moviestar-en`。
 
@@ -78,7 +78,7 @@ UI屬性會定義Adobe應該在Adobe Experience Platform使用者介面中為目
 
 ### `category` {#category}
 
-`category`是字串引數，會參照指派給您Adobe Experience Platform中目的地的類別。 如需詳細資訊，請閱讀[目的地類別](../../../destination-types.md)。 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。
+`category`是一個字串引數，它參考到[!DNL Adobe Experience Platform]中指派給您目的地的類別。 如需詳細資訊，請閱讀[目的地類別](../../../destination-types.md)。 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。
 
 使用者可在目的地目錄的畫面左側看到目的地類別清單，如下圖所示。
 

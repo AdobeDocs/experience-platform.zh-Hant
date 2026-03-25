@@ -2,16 +2,16 @@
 description: 瞭解如何透過「/authoring/destination-servers」端點在Adobe Experience Platform Destination SDK中設定目的地伺服器規格。
 title: 使用Destination SDK建立之目的地的伺服器規格
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2775'
+source-wordcount: '2748'
 ht-degree: 2%
 
 ---
 
 # 使用Destination SDK建立之目的地的伺服器規格
 
-目的地伺服器規格會定義從Adobe Experience Platform接收資料的目的地平台型別，以及Experience Platform與您的目的地之間的通訊引數。 例如：
+目的地伺服器規格會定義從[!DNL Adobe Experience Platform]接收資料的目的地平台型別，以及Experience Platform與您的目的地之間的通訊引數。 例如：
 
 * [串流](#streaming-example)目的地伺服器規格定義將從Experience Platform接收HTTP訊息的HTTP伺服器端點。 若要瞭解如何設定端點的HTTP呼叫格式，請閱讀[範本規格](templating-specs.md)頁面。
 * [Amazon S3](#s3-example)目的地伺服器規格定義了Experience Platform將匯出檔案的[!DNL S3]儲存貯體名稱和路徑。
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[設定選項](../configuration-options.md)檔案中的圖表，或檢視以下目的地設定概觀頁面：
 
-* [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
+* [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-server-template-configuration)
 * [使用Destination SDK設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
 
 您可以透過`/authoring/destination-servers`端點設定目的地伺服器規格。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -65,7 +65,7 @@ ht-degree: 2%
 
 當使用者[在Experience Platform UI中連線到您的目的地](../../../ui/connect-destination.md)時，您可能會想要處理目的地連線程式，而不需要他們的輸入。
 
-若要這麼做，您可以在伺服器規格中硬式編碼目的地平台連線引數。 當您在目標伺服器設定中使用硬式編碼引數值時，Adobe Experience Platform與您的目標平台之間的連線無需使用者輸入即可處理。
+若要這麼做，您可以在伺服器規格中硬式編碼目的地平台連線引數。 當您在目的地伺服器組態中使用硬式編碼引數值時，會處理[!DNL Adobe Experience Platform]與目的地平台之間的連線，使用者不會輸入任何內容。
 
 在下列範例中，合作夥伴會建立資料登陸區域目的地伺服器，且將`path.value`欄位以硬式編碼撰寫。
 
@@ -130,7 +130,7 @@ ht-degree: 2%
 
 ## 即時（串流）目的地伺服器 {#streaming-example}
 
-此目的地伺服器型別可讓您透過HTTP請求，將資料從Adobe Experience Platform匯出至您的目的地。 伺服器設定包含接收訊息之伺服器（您這端的伺服器）的相關資訊。
+此目的地伺服器型別可讓您透過HTTP要求，將資料從[!DNL Adobe Experience Platform]匯出至您的目的地。 伺服器設定包含接收訊息之伺服器（您這端的伺服器）的相關資訊。
 
 此程式會以一系列HTTP訊息的形式將使用者資料傳送至您的目的地平台。 以下引數構成HTTP伺服器規格範本。
 
@@ -160,7 +160,7 @@ ht-degree: 2%
 
 ## [!DNL Amazon S3]目的地伺服器 {#s3-example}
 
-此目的地伺服器可讓您將包含Adobe Experience Platform資料的檔案匯出至Amazon S3儲存空間。
+此目的地伺服器可讓您將包含[!DNL Adobe Experience Platform]資料的檔案匯出至Amazon S3儲存空間。
 
 以下範例顯示Amazon S3目的地的目的地伺服器設定範例。
 
@@ -194,7 +194,7 @@ ht-degree: 2%
 
 ## [!DNL SFTP]目的地伺服器 {#sftp-example}
 
-此目的地伺服器可讓您將包含Adobe Experience Platform資料的檔案匯出至您的[!DNL SFTP]儲存伺服器。
+此目的地伺服器可讓您將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL SFTP]儲存伺服器。
 
 以下範例顯示SFTP目的地的目的地伺服器設定範例。
 
@@ -232,7 +232,7 @@ ht-degree: 2%
 
 ## [!DNL Azure Data Lake Storage] ([!DNL ADLS])目的地伺服器 {#adls-example}
 
-此目的地伺服器可讓您將包含Adobe Experience Platform資料的檔案匯出至您的[!DNL Azure Data Lake Storage]帳戶。
+此目的地伺服器可讓您將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL Azure Data Lake Storage]帳戶。
 
 下列範例顯示[!DNL Azure Data Lake Storage]目的地的目的地伺服器組態範例。
 
@@ -260,7 +260,7 @@ ht-degree: 2%
 
 ## [!DNL Azure Blob Storage]目的地伺服器 {#blob-example}
 
-此目的地伺服器可讓您將包含Adobe Experience Platform資料的檔案匯出至[!DNL Azure Blob Storage]容器。
+此目的地伺服器可讓您將包含[!DNL Adobe Experience Platform]資料的檔案匯出至您的[!DNL Azure Blob Storage]容器。
 
 下列範例顯示[!DNL Azure Blob Storage]目的地的目的地伺服器組態範例。
 

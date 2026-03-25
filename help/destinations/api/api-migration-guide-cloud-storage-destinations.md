@@ -4,9 +4,9 @@ title: 雲端儲存空間目的地的API移轉指南
 description: 瞭解在移轉至新的雲端儲存體目的地卡片的過程中，啟用雲端儲存體目的地的工作流程變更，其中包含其他功能。
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1328'
 ht-degree: 1%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 已購買Real-Time CDP Prime和Ultimate套件的客戶可以使用本頁所述的功能。 請聯絡您的 Adobe 代表以取得更多資訊。
+>* 已購買[!DNL Real-Time CDP] Prime和Ultimate套件的客戶可以使用本頁所述的功能。 請聯絡您的 Adobe 代表以取得更多資訊。
 
 ## 移轉內容 {#migration-context}
 
 從[2022年10月](/help/release-notes/2022/october-2022.md#new-or-updated-destinations)開始，您可在從Experience Platform匯出檔案時，使用新的檔案匯出功能來存取增強的自訂功能：
 
-* 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
+* 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)。
 * 能夠透過[新對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)設定匯出檔案中的自訂檔案標題。
 * 能夠選取匯出檔案的[檔案型別](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)。
 * 能夠[自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
@@ -46,7 +46,7 @@ Commenting out the three net new cloud storage destinations
 
 ![並排檢視中的兩個Amazon S3目的地卡片影像。](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-雖然這些具有增強功能的目的地最初是以測試版的形式提供，但&#x200B;*Adobe現在正將所有Real-Time CDP客戶移至新的雲端儲存目的地*。 對於已使用[!DNL Amazon S3]、[!DNL Azure Blob]或SFTP的客戶，這表示現有資料流將移轉到新卡片。 請閱讀下文，深入瞭解移轉作業中的特定變更。
+雖然這些具有增強功能的目的地最初是以測試版的形式提供，但&#x200B;*Adobe現在會將所有[!DNL Real-Time CDP]客戶移至新的雲端儲存目的地*。 對於已使用[!DNL Amazon S3]、[!DNL Azure Blob]或SFTP的客戶，這表示現有資料流將移轉到新卡片。 請閱讀下文，深入瞭解移轉作業中的特定變更。
 
 ## 此頁面的適用對象 {#who-this-applies-to}
 
@@ -60,13 +60,6 @@ Commenting out the three net new cloud storage destinations
 
 本節包含相關的API教學課程和參考檔案，說明將資料匯出至雲端儲存目的地的增強功能。
 
-<!--
-
-TBD if we keep this link but will likely remove it
-
-[Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
-
--->
 * [將受眾匯出至雲端儲存空間目的地的API教學課程](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [目的地流程服務API參考檔案](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
@@ -668,7 +661,7 @@ API使用者回溯不相容的變更是更新的`connection spec ID`和`flow spe
 
 ### [!DNL Amazon S3]、[!DNL Azure Blob]和SFTP目的地的常見回溯不相容變更 {#changes-all-destinations}
 
-所有三個目的地的設定檔選擇器步驟都由對應步驟取代，該步驟允許您根據需要重新命名匯出檔案中的欄標題。 請檢視下方的並排影像，左側顯示舊屬性選取器步驟，右側顯示新對應步驟。
+所有三個目的地的設定檔選擇器步驟都由對應步驟取代，該步驟可讓您視需要重新命名匯出檔案中的欄標題。 請檢視下方的並排影像，左側顯示舊屬性選取器步驟，右側顯示新對應步驟。
 
 ![移轉指南概觀影像](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 

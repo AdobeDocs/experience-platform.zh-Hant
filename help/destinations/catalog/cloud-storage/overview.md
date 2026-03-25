@@ -3,9 +3,9 @@ keywords: 雲端儲存空間目的地；雲端儲存空間
 title: 雲端儲存空間目的地概觀
 description: Adobe Experience Platform可將您的對象以資料檔案的形式傳送至您的Amazon S3、AWS Kinesis、Azure事件中樞或SFTP雲端儲存位置。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '457'
 ht-degree: 6%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 6%
 
 ## 概觀 {#overview}
 
-Adobe Experience Platform能以資料檔案的形式將您的對象傳送至您的雲端儲存位置。 這可讓您透過[!DNL Amazon S3]、[!DNL Azure Blob]、[!DNL Azure Data Lake Storage Gen2]、[!DNL Data Landing Zone]、[!DNL Google Cloud Storage]和SFTP的CSV檔案，將對象及其設定檔屬性傳送至您的內部系統。 針對[!DNL Amazon Kinesis]和[!DNL Azure Event Hubs]目的地，資料會以[!DNL JSON]格式從Experience Platform串流輸出。
+[!DNL Adobe Experience Platform]可以將您的對象以資料檔案的形式傳送至您的雲端儲存位置。 這可讓您透過[!DNL Amazon S3]、[!DNL Azure Blob]、[!DNL Azure Data Lake Storage Gen2]、[!DNL Data Landing Zone]、[!DNL Google Cloud Storage]和SFTP的CSV檔案，將對象及其設定檔屬性傳送至您的內部系統。 針對[!DNL Amazon Kinesis]和[!DNL Azure Event Hubs]目的地，資料會以[!DNL JSON]格式從Experience Platform串流輸出。
 
 ![Adobe雲端儲存空間目的地](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## 支援的雲端儲存空間目的地 {#supported-destinations}
 
-Adobe Experience Platform支援將資料匯出至下列雲端儲存空間目的地：
+[!DNL Adobe Experience Platform]支援將資料匯出至下列雲端儲存空間目的地：
 
 * [Amazon Kinesis連線](amazon-kinesis.md)
 * [Amazon S3連線](amazon-s3.md)

@@ -4,16 +4,16 @@ title: 編輯啟動資料流
 type: Tutorial
 description: 請依照本文的步驟，在Adobe Experience Platform中編輯現有的啟用資料流。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 5fae3fe6a3647ba416a26f4cdb9e5b6ce308e990
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
 
 # 編輯啟動資料流 {#edit-activation-flows}
 
-在Adobe Experience Platform中，您可以將現有啟用資料流的各種元件設定到目的地，例如：
+在[!DNL Adobe Experience Platform]中，您可以將現有啟動資料流的各種元件設定到目的地，例如：
 
 * [啟用或停用](#enable-disable-dataflows)啟用資料流
 * [新增其他對象](#add-audiences)至啟用資料流
@@ -59,8 +59,8 @@ ht-degree: 0%
 啟用工作流程會依目的地型別而略有不同。 如需每種目的地型別之啟用工作流程的詳細資訊，請閱讀下列指南：
 
 * [啟用串流目的地的對象](./activate-segment-streaming-destinations.md) （例如Facebook或Twitter）；
-* [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) (例如，Amazon S3或Oracle Eloqua)；
-* [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) (例如HTTP API或Amazon Kinesis)。
+* [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) （例如，Amazon S3或Oracle Eloqua）；
+* [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) （例如HTTP API或Amazon Kinesis）。
 
 ## 編輯啟用排程和匯出頻率 {#edit-schedule-frequency}
 
@@ -78,8 +78,8 @@ ht-degree: 0%
 您可以執行的排程作業會因目的地型別而稍有不同。 如需每種目的地型別之啟用工作流程的詳細資訊，請閱讀下列指南：
 
 * [啟用串流目的地的對象](./activate-segment-streaming-destinations.md) （例如Facebook或Twitter）；
-* [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) (例如，Amazon S3或Oracle Eloqua)；
-* [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) (例如HTTP API或Amazon Kinesis)。
+* [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) （例如，Amazon S3或Oracle Eloqua）；
+* [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) （例如HTTP API或Amazon Kinesis）。
 
 ## 編輯對應的屬性和身分 {#edit-mapped-attributes}
 
@@ -98,8 +98,8 @@ ht-degree: 0%
 啟用工作流程會依目的地型別而略有不同。 如需每種目的地型別之啟用工作流程的詳細資訊，請閱讀下列指南：
 
 * [啟用串流目的地的對象](./activate-segment-streaming-destinations.md) （例如Facebook或Twitter）；
-* [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) (例如，Amazon S3或Oracle Eloqua)；
-* [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) (例如HTTP API或Amazon Kinesis)。
+* [啟用對象以批次設定檔匯出目的地](./activate-batch-profile-destinations.md) （例如，Amazon S3或Oracle Eloqua）；
+* [啟用受眾以串流設定檔匯出目的地](./activate-streaming-profile-destinations.md) （例如HTTP API或Amazon Kinesis）。
 
 ## 將資料集新增至啟用資料流 {#add-datasets}
 

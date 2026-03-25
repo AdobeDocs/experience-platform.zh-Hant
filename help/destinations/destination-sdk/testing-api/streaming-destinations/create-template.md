@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API，在發佈目的地之前先測試串流目的地訊息轉換範本。
 title: 建立及測試訊息轉換範本
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 作為Destination SDK的一部分，Adobe提供開發人員工具，協助您設定和測試目的地。 此頁面說明如何建立和測試訊息轉換範本。 如需如何測試目的地的詳細資訊，請閱讀[測試目的地組態](streaming-destination-testing-overview.md)。
 
-若要&#x200B;**在Adobe Experience Platform中的目標結構描述與目的地支援的訊息格式之間，建立並測試訊息轉換範本**，請使用&#x200B;*範本撰寫工具*，如下所述。  在[訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating)中，閱讀有關來源和目標結構描述之間資料轉換的詳細資訊。
+若要&#x200B;**在**&#x200B;中的目標結構描述與目的地支援的訊息格式之間，建立並測試訊息轉換範本[!DNL Adobe Experience Platform]，請使用&#x200B;*範本撰寫工具*，如下所述。  在[訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating)中，閱讀有關來源和目標結構描述之間資料轉換的詳細資訊。
 
 以下說明如何建立和測試訊息轉換範本以符合Destination SDK中的[目的地設定工作流程](../../guides/configure-destination-instructions.md)：
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 為何需要建立和測試訊息轉換範本 {#why-create-message-transformation-template}
 
-在Destination SDK中建立目的地的首要步驟之一，就是考慮將對象會籍、身分和設定檔屬性的資料格式從Adobe Experience Platform匯出至目的地時，如何進行轉換。 在[訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating)中尋找有關Adobe XDM結構描述和目的地結構描述之間轉換的資訊。
+在Destination SDK中建立您的目的地的第一個步驟之一，就是考慮將對象會籍、身分和設定檔屬性的資料格式從[!DNL Adobe Experience Platform]匯出到目的地時，如何進行轉換。 在[訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating)中尋找有關Adobe XDM結構描述和目的地結構描述之間轉換的資訊。
 
 若要轉換成功，您必須提供轉換範本，類似於此範例： [建立傳送區段、身分和設定檔屬性的範本](../../functionality/destination-server/message-format.md#segments-identities-attributes)。
 
@@ -158,12 +158,12 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## 轉譯器範本API {#render-template-api}
 
-使用[範例範本API](create-template.md#sample-template-api)建立訊息轉換範本後，您可以[轉譯範本](render-template-api.md)，以根據範本產生匯出的資料。 這可讓您驗證Adobe Experience Platform要匯出至目的地的設定檔是否符合目的地的預期格式。
+使用[範例範本API](create-template.md#sample-template-api)建立訊息轉換範本後，您可以[轉譯範本](render-template-api.md)，以根據範本產生匯出的資料。 這可讓您驗證[!DNL Adobe Experience Platform]將匯出至目的地的設定檔是否符合目的地的預期格式。
 
 如需可進行的呼叫範例，請參閱API參考資料：
 
-* [轉譯內文未傳送任何設定檔的範本](render-template-api.md#multiple-profiles-no-body)
-* [使用傳入內文中的設定檔演算範本](render-template-api.md#multiple-profiles-with-body)
+* [轉譯內文未傳送任何設定檔的範本](render-template-api.md#best-effort)
+* [使用傳入內文中的設定檔演算範本](render-template-api.md#configurable-aggregation)
 
 編輯範本並呼叫轉譯器範本API端點，直到匯出的設定檔符合您目的地的預期資料格式為止。
 

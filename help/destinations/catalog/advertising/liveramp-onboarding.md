@@ -3,22 +3,22 @@ title: LiveRamp — 入門連線
 description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-Time Customer Data Platform上線到LiveRamp Connect。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '1988'
 ht-degree: 4%
 
 ---
 
 # [!DNL LiveRamp - Onboarding] 連線 {#liveramp-onboarding}
 
-使用[!DNL LiveRamp - Onboarding]連線將對象從Adobe Real-Time Customer Data Platform上線到[!DNL LiveRamp Connect]。
+使用[!DNL LiveRamp - Onboarding]連線將對象從Adobe [!DNL Real-Time Customer Data Platform]上線到[!DNL LiveRamp Connect]。
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL LiveRamp - Onboarding]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL LiveRamp - Onboarding]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
-身為行銷人員，我想要將對象從Adobe Experience Platform傳送至內建身分識別至[!DNL LiveRamp Connect]，以便我可以使用[!DNL CTV]識別碼在行動、開啟Web、社交和[!DNL Ramp ID]平台上鎖定使用者。
+身為行銷人員，我想將來自[!DNL Adobe Experience Platform]的受眾傳送至內建身分識別至[!DNL LiveRamp Connect]，以便我可以使用[!DNL CTV]識別碼在行動、開放Web、社交和[!DNL Ramp ID]平台上鎖定使用者。
 
 ## 先決條件 {#prerequisites}
 
@@ -39,7 +39,7 @@ ht-degree: 4%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ ht-degree: 4%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ ht-degree: 4%
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL Region]**：您LiveRamp SFTP儲存空間執行個體的地理區域。
-* **[!UICONTROL Folder path]**：將裝載匯出檔案的[!DNL LiveRamp] `uploads`子資料夾的路徑。 `uploads`首碼會自動新增至資料夾路徑。 [!DNL LiveRamp]建議從Adobe Real-Time CDP建立傳遞的專用子資料夾，以將檔案與其他任何現有的摘要分開，並確保所有自動化運作順暢無礙。
+* **[!UICONTROL Folder path]**：將裝載匯出檔案的[!DNL LiveRamp] `uploads`子資料夾的路徑。 `uploads`首碼會自動新增至資料夾路徑。 [!DNL LiveRamp]建議為Adobe [!DNL Real-Time CDP]的傳遞建立專用的子資料夾，以將檔案與其他任何現有的摘要分開，並確保所有自動化運作順暢無礙。
    * 例如，如果您要將檔案匯出至`uploads/my_export_folder`，請在`my_export_folder`欄位中輸入&#x200B;**[!UICONTROL Folder path]**。
 * **[!UICONTROL Compression format]**：選取Experience Platform應用於匯出檔案的壓縮型別。 可用的選項為&#x200B;**[!UICONTROL GZIP]**&#x200B;或&#x200B;**[!UICONTROL None]**。
 

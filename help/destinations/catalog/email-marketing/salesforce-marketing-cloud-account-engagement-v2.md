@@ -5,18 +5,18 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1878'
 ht-degree: 3%
 
 ---
 
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] 連線
 
-[[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) （先前稱為[!DNL Pardot]）目的地可讓您將您的Adobe Experience Platform設定檔資料匯出至Salesforce的B2B行銷自動化平台。
+[[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) （先前稱為[!DNL Pardot]）目的地可讓您將您的[!DNL Adobe Experience Platform]設定檔資料匯出至Salesforce的B2B行銷自動化平台。
 
-此整合可讓您在Adobe Experience Platform中的客戶設定檔與[!DNL Salesforce Marketing Cloud Account Engagement]中的行銷活動之間無縫同步資料。
+此整合可讓您在[!DNL Adobe Experience Platform]中的客戶設定檔與[!DNL Salesforce Marketing Cloud Account Engagement]中的行銷活動之間無縫同步資料。
 
 此目的地使用[[!DNL Salesforce Import API v5]](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html)有效地處理批次資料匯出。
 
@@ -30,19 +30,19 @@ ht-degree: 3%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL (V2) Marketing Cloud Account Engagement]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL (V2) Marketing Cloud Account Engagement]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### B2B銷售機會管理 {#use-case-lead-management}
 
-將來自Adobe Experience Platform的潛在客戶資料同步至[!DNL Salesforce Marketing Cloud Account Engagement]，以進行全面潛在客戶培養和評分。 您的行銷團隊可以在Experience Platform中建立豐富的對象設定檔，並將其匯出至[!DNL Salesforce Marketing Cloud Account Engagement]，以自動化B2B行銷活動。
+將潛在客戶資料從[!DNL Adobe Experience Platform]同步至[!DNL Salesforce Marketing Cloud Account Engagement]，以進行全面潛在客戶培養與評分。 您的行銷團隊可以在Experience Platform中建立豐富的對象設定檔，並將其匯出至[!DNL Salesforce Marketing Cloud Account Engagement]，以自動化B2B行銷活動。
 
 ### Campaign 自動化 {#use-case-campaign-automation}
 
-您可以使用在Adobe Experience Platform中定義的對象，在[!DNL Salesforce Marketing Cloud Account Engagement]中觸發行銷活動。 將目標對象匯出至[!DNL Salesforce]後，您可以使用這些對象執行電子郵件行銷活動，並透過培養、評分和行銷活動細分來管理您的銷售機會。
+您可以使用在[!DNL Salesforce Marketing Cloud Account Engagement]中定義的對象，在[!DNL Adobe Experience Platform]中觸發行銷活動。 將目標對象匯出至[!DNL Salesforce]後，您可以使用這些對象執行電子郵件行銷活動，並透過培養、評分和行銷活動細分來管理您的銷售機會。
 
 ### 輪廓擴充 {#use-case-profile-enrichment}
 
-使用Adobe Experience Platform的豐富客戶資料增強您的[!DNL Salesforce Marketing Cloud Account Engagement]潛在客戶設定檔。 匯出完整的設定檔屬性，以在[!DNL Salesforce Marketing Cloud Account Engagement]中建立更詳細的潛在客戶記錄，以改善目標定位和個人化。
+使用來自[!DNL Salesforce Marketing Cloud Account Engagement]的豐富客戶資料增強您的[!DNL Adobe Experience Platform]潛在客戶設定檔。 匯出完整的設定檔屬性，以在[!DNL Salesforce Marketing Cloud Account Engagement]中建立更詳細的潛在客戶記錄，以改善目標定位和個人化。
 
 ## 先決條件 {#prerequisites}
 
@@ -74,7 +74,7 @@ ht-degree: 3%
 
 [!DNL (V2) Marketing Cloud Account Engagement]支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-如果使用其中一個識別碼找到相符專案，則將使用Adobe Experience Platform的資料更新現有的帳戶參與潛在客戶記錄。 如果找不到相符專案，系統會在帳戶參與中建立新的潛在客戶記錄。
+如果使用其中一個識別碼找到相符專案，則將使用[!DNL Adobe Experience Platform]中的資料更新現有的帳戶參與潛在客戶記錄。 如果找不到相符專案，系統會在帳戶參與中建立新的潛在客戶記錄。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
@@ -91,7 +91,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ ht-degree: 3%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -138,7 +138,7 @@ ht-degree: 3%
 
 ![Salesforce登入頁面](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Salesforce登入頁面。")
 
-接著，選取「**[!UICONTROL Allow]**」以授與&#x200B;**Adobe Experience Platform**&#x200B;應用程式的許可權以存取您的[!DNL Salesforce Marketing Cloud Account Engagement]帳戶。 *您只需要執行此動作一次*。
+接著，選取「**[!UICONTROL Allow]**」以授予「**[!DNL Adobe Experience Platform]**」應用程式存取您[!DNL Salesforce Marketing Cloud Account Engagement]帳戶的許可權。 *您只需要執行此動作一次*。
 
 ![Salesforce應用程式熒幕擷取畫面確認快顯視窗，可授予Experience Platform應用程式存取Marketing Cloud帳戶參與專案的許可權。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
@@ -171,7 +171,7 @@ ht-degree: 3%
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform傳送到[!DNL (V2) Marketing Cloud Account Engagement]目的地，您必須將體驗資料模型(XDM)結構描述欄位對應到目的地中的對應欄位。
+若要將對象資料從[!DNL Adobe Experience Platform]傳送至[!DNL (V2) Marketing Cloud Account Engagement]目的地，您必須將體驗資料模型(XDM)結構描述欄位對應至目的地中的對應欄位。
 
 如需支援欄位的完整清單，請參閱[Salesforce Prospect API v5檔案](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html)。 請注意，Alpha版本不支援[自訂欄位](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html)。
 
@@ -219,7 +219,7 @@ Salesforce Marketing Cloud帳戶參與目的地支援下表描述的目標屬性
 1. 導覽至您選取的其中一個對象。 選取 **[!DNL Activation data]** 索引標籤。**[!UICONTROL Mapping ID]**&#x200B;欄會顯示在[!DNL Marketing Cloud Account Engagement Prospects]頁面中產生的自訂欄位名稱。
    ![Experience Platform UI熒幕擷圖範例，顯示所選區段的對應ID。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. 登入[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否新增/更新了對象中的潛在客戶。 或者，您也可以存取[[!DNL Account Engagement]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**&#x200B;頁面。
+1. 登入[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否新增/更新了對象中的潛在客戶。 或者，您也可以存取[[!DNL Account Engagement]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**頁面。
    ![顯示[潛在客戶]頁面的Salesforce UI熒幕擷圖。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. 若要檢查潛在客戶是否已更新，請選取潛在客戶並驗證自訂潛在客戶欄位是否已使用Experience Platform對象狀態進行更新。

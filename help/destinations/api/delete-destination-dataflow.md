@@ -5,10 +5,10 @@ title: 使用流程服務API刪除目的地資料流
 type: Tutorial
 description: 瞭解如何使用資料流服務API將資料流刪除至批次和串流目的地。
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 18%
+source-wordcount: '557'
+ht-degree: 19%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 18%
 
 本教學課程要求您具備有效的流量ID。 如果您沒有有效的流量ID，請從[目的地目錄](../catalog/overview.md)中選取您選擇的目的地，並依照概述的步驟[連線至目的地](../ui/connect-destination.md)和[啟用資料](../ui/activation-overview.md)，然後再嘗試進行此教學課程。
 
-本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
+本教學課程也要求您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
-* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
+* [目的地](../home.md)： [!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從[!DNL Adobe Experience Platform]啟用資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 * [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Experience Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 以下小節提供其他必要資訊，您必須知道這些資訊才能使用[!DNL Flow Service] API成功刪除資料流。
@@ -94,4 +94,4 @@ curl -X DELETE \
 
 如需有關如何使用使用者介面執行這些操作的步驟，請參閱有關[在UI中刪除資料流](../ui/delete-destinations.md)的教學課程。
 
-您現在可以使用[&#x200B; API繼續並](/help/destinations/api/delete-destination-account.md)刪除目的地帳戶[!DNL Flow Service]。
+您現在可以使用[ API繼續並](/help/destinations/api/delete-destination-account.md)刪除目的地帳戶[!DNL Flow Service]。

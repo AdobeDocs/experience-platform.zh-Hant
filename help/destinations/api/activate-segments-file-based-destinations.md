@@ -4,9 +4,9 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '4973'
+source-wordcount: '4966'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 從Experience Platform匯出檔案時，請使用增強型檔案匯出功能來存取增強的自訂功能：
 
-* 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。
+* 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names)。
 * 能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。
 * 能夠選取匯出檔案的[檔案型別](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)。
 * [能夠自訂轉存的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
@@ -29,7 +29,7 @@ ht-degree: 4%
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-本文說明使用[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)將合格設定檔從Adobe Experience Platform匯出至上方連結的其中一個雲端儲存空間位置所需的工作流程。
+本文說明使用[流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/)將合格設定檔從[!DNL Adobe Experience Platform]匯出至上方連結的其中一個雲端儲存位置所需的工作流程。
 
 >[!TIP]
 >
@@ -47,7 +47,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![啟用受眾的步驟，這些受眾會醒目顯示使用者目前所在的步驟](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-本指南需要您深入了解下列 Adobe Experience Platform 元件：
+本指南需要您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service]可讓您從[!DNL Adobe Experience Platform]資料建立對象，並在[!DNL Real-Time Customer Profile]中產生對象。
@@ -3489,7 +3489,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ 檢視要在輸入結構描述中使用的可用身分
 
-回應會傳回您在建立輸入結構描述時可使用的身分。 請注意，此回應會傳回您在Experience Platform中設定的[standard](/help/identity-service/features/namespaces.md#standard)和[custom](/help/identity-service/features/namespaces.md#manage-namespaces)身分識別名稱空間。
+回應會傳回您在建立輸入結構描述時可使用的身分。 請注意，此回應會傳回您在Experience Platform中設定的[standard](/help/identity-service/features/namespaces.md#standard)和[custom](/help/identity-service/features/namespaces.md#create-namespaces)身分識別名稱空間。
 
 ```json
 [

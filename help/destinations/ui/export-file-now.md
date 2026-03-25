@@ -3,9 +3,9 @@ title: 使用Experience Platform UI隨選將檔案匯出至批次目的地
 type: Tutorial
 description: 瞭解如何使用Experience Platform UI隨選將檔案匯出至批次目的地。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '804'
 ht-degree: 5%
 
 ---

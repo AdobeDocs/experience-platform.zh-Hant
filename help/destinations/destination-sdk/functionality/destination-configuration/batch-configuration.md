@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定檔案匯出設定。
 title: 批次設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1028'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -106,7 +106,7 @@ ht-degree: 2%
 
 ## 檔案名稱組態 {#file-name-configuration}
 
-使用檔案名稱組態巨集來定義匯出的檔案名稱應包含的內容。 下表中的巨集說明在[檔案名稱組態](../../../ui/activate-batch-profile-destinations.md#file-names)畫面的UI中找到的元素。
+使用檔案名稱組態巨集來定義匯出的檔案名稱應包含的內容。 下表中的巨集說明在[檔案名稱組態](../../../ui/activate-batch-profile-destinations.md#configure-file-names)畫面的UI中找到的元素。
 
 >[!TIP]
 >
@@ -119,7 +119,7 @@ ht-degree: 2%
 | `SEGMENT_NAME` | [!UICONTROL Segment Name] | 使用者定義的對象名稱 | VIP訂閱者 |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | 目的地執行個體在Experience Platform產生的唯一ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | 目的地執行個體的使用者定義名稱。 | 我的2022 Advertising目的地 |
-| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Adobe Experience Platform中的客戶組織名稱。 | 我的組織名稱 |
+| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | [!DNL Adobe Experience Platform]中客戶組織的名稱。 | 我的組織名稱 |
 | `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | 客戶使用的沙箱名稱。 | prod |
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME`和`TIMESTAMP`都定義產生檔案的時間，但格式不同。<br><br><ul><li>`DATETIME`使用以下格式： YYYYMMDD_HHMMSS。</li><li>`TIMESTAMP`使用10位數Unix格式。 </li></ul> `DATETIME`與`TIMESTAMP`互斥，不能同時使用。 | <ul><li>`DATETIME`： 20220509_210543</li><li>`TIMESTAMP`： 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Custom text] | 要包含在檔案名稱中的使用者定義自訂文字。 無法在`defaultFilename`中使用。 | My_Custom_Text |

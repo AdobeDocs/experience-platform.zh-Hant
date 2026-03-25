@@ -3,9 +3,9 @@ keywords: crm；CRM；CRM目的地；外聯；外聯crm目的地
 title: 外展連線
 description: 外展目的地可讓您匯出帳戶資料，並在外展內根據您的業務需求啟用資料。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1792'
 ht-degree: 2%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 2%
 
 ## 使用案例 {#use-cases}
 
-作為行銷人員，您可以根據潛在客戶的Adobe Experience Platform設定檔屬性，為他們提供個人化體驗。 您可以從您的離線資料建立受眾，並將這些受眾傳送至[!DNL Outreach]，以便在Adobe Experience Platform中更新受眾和設定檔後立即顯示在潛在客戶摘要中。
+作為行銷人員，您可以根據潛在客戶[!DNL Adobe Experience Platform]設定檔中的屬性，為他們提供個人化體驗。 您可以從您的離線資料建立對象，並將這些對象傳送至[!DNL Outreach]，以便在[!DNL Adobe Experience Platform]中更新對象和設定檔後立即顯示在潛在客戶摘要中。
 
 ## 先決條件 {#prerequisites}
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL Outreach]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料到[!DNL Outreach]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱Adobe關於[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的檔案。
 
@@ -84,7 +84,7 @@ ht-degree: 2%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ ht-degree: 2%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -167,12 +167,12 @@ ht-degree: 2%
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
-若要將對象資料從Adobe Experience Platform正確傳送至[!DNL Outreach]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL Outreach]目的地欄位，請遵循下列步驟：
+若要將對象資料從[!DNL Adobe Experience Platform]正確傳送至[!DNL Outreach]目的地，您必須完成欄位對應步驟。 對應包括在Experience Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL Outreach]目的地欄位，請遵循下列步驟：
 
 1. 在[!UICONTROL Mapping]步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**。 您會在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷圖顯示如何新增對應](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
-1. 在[!UICONTROL Select source field]視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;類別並新增所需的對應。
+1. 在[!UICONTROL Select source field]視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**類別並新增所需的對應。
    ![Experience Platform UI熒幕擷圖顯示Source對應](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. 在[!UICONTROL Select target field]視窗中，選取您要將來源欄位對應到的目標欄位型別。
@@ -206,7 +206,7 @@ ht-degree: 2%
 
   >[!IMPORTANT]
   >
-  > * 在&#x200B;*內使用的數值`N`(*) [!UICONTROL Mapping ID]應該與尾碼為[!DNL Outreach]內數值的自訂屬性金鑰相符。 範例： *自訂欄位`N`標籤*。
+  > * 在&#x200B;*內使用的數值`N`(*)[!UICONTROL Mapping ID]應該與尾碼為[!DNL Outreach]內數值的自訂屬性金鑰相符。 範例： *自訂欄位`N`標籤*。
   > * 您只需要指定數值，不需要指定整個自訂欄位標籤。
   > * [!DNL Outreach]支援最多150個自訂標籤欄位。
   > * 如需詳細資訊，請參閱[[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect)。
@@ -229,7 +229,7 @@ ht-degree: 2%
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![Experience Platform UI熒幕擷圖顯示所選目的地的目的地資料流執行。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
    ![Experience Platform UI熒幕擷圖顯示目的地啟用資料。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。

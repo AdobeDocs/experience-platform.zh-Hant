@@ -3,9 +3,9 @@ keywords: 語音目的地；語音目的地
 title: 客戶心聲目的地概觀
 description: 語音平台會收集並整理各種來源的資料，包括語音訊息、通話資料及聊天交談。 可以篩選和分析整理的資訊，讓公司能夠最佳化其網站，以符合其需求。
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 ## 支援客戶目的地的聲音 {#supported-destinations}
 
-目前，Adobe Experience Platform支援下列客戶語音目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
+目前，[!DNL Adobe Experience Platform]支援下列客戶語音目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 
 ### 連線 {#connections}
 

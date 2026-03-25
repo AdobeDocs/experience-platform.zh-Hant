@@ -3,9 +3,9 @@ title: Pega設定檔聯結器
 description: 使用Adobe Experience Platform中Amazon S3的Pega設定檔聯結器將完整或增量（或兩者）設定檔資料匯出至Amazon S3雲端儲存空間。 在Pega客戶決策中心，資料工作可在客戶設定檔Designer中排程，以定期從Amazon S3儲存空間匯入設定檔資料。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1225'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-在Adobe Experience Platform中使用[!DNL Pega Profile Connector]建立與您的[!DNL Amazon Web Services] (AWS) S3儲存空間的即時輸出連線，以定期將設定檔資料從Adobe Experience Platform匯出至CSV檔案，並匯入您自己的S3貯體。 在 [!DNL Pega Customer Decision Hub] 中，您可以排程資料作業，從 S3 儲存體匯入此輪廓資料，以更新 [!DNL Pega Customer Decision Hub] 輪廓。
+使用[!DNL Pega Profile Connector]中的[!DNL Adobe Experience Platform]建立與您的[!DNL Amazon Web Services] (AWS) S3儲存區的即時輸出連線，以定期將設定檔資料匯出至您自己的S3儲存貯體中的CSV檔案。 [!DNL Adobe Experience Platform]在 [!DNL Pega Customer Decision Hub] 中，您可以排程資料作業，從 S3 儲存體匯入此輪廓資料，以更新 [!DNL Pega Customer Decision Hub] 輪廓。
 
 此聯結器可協助設定設定檔資料的初始匯出，也可協助定期將新設定檔同步到[!DNL Pega Customer Decision Hub]。  在客戶決策中心擁有最新的資料，可為您的客戶群提供更好、更新的檢視，以便做出下一個最佳決策。
 
@@ -24,19 +24,19 @@ ht-degree: 4%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Pega Profile Connector]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Pega Profile Connector]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 使用案例1 {#use-case-1}
 
-行銷人員最初想要以從Adobe Experience Platform載入的設定檔資料設定[!DNL Pega Customer Decision Hub]。 這是初始完整載入，之後依排程進行差異載入。
+行銷人員最初想要以從[!DNL Pega Customer Decision Hub]載入的設定檔資料設定[!DNL Adobe Experience Platform]。 這是初始完整載入，之後依排程進行差異載入。
 
 ### 使用案例2 {#use-case-2}
 
-行銷人員想要從[!DNL Pega Customer Decision Hub]中可用的Adobe Experience Platform取得最新的設定檔資料，以便持續增強有關客戶設定檔的Pega深入分析。
+行銷人員想要從[!DNL Adobe Experience Platform]中可用的[!DNL Pega Customer Decision Hub]取得最新的設定檔資料，以便持續增強有關客戶設定檔的Pega深入分析。
 
 ## 先決條件 {#prerequisites}
 
-使用此目的地從Adobe Experience Platform匯出資料並將設定檔匯入到[!DNL Pega Customer Decision Hub]之前，請確定您已完成下列必要條件：
+使用此目的地從[!DNL Adobe Experience Platform]匯出資料並將設定檔匯入到[!DNL Pega Customer Decision Hub]之前，請確定您已完成下列必要條件：
 
 * 設定[!DNL Amazon S3]儲存貯體和資料夾路徑，以用於匯出和匯入資料檔案。
 * 設定[!DNL Amazon S3]存取金鑰和[!DNL Amazon S3]秘密金鑰：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授予Experience Platform存取您的[!DNL Amazon S3]帳戶。
@@ -49,7 +49,7 @@ ht-degree: 4%
 
 | 目標身分 | 說明 |
 |---|---|
-| *CustomerID* | 在[!DNL Pega Customer Decision Hub]和Adobe Experience Platform中唯一識別設定檔的一般使用者識別碼 |
+| *CustomerID* | 在[!DNL Pega Customer Decision Hub]和[!DNL Adobe Experience Platform]中唯一識別設定檔的一般使用者識別碼 |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ ht-degree: 4%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ ht-degree: 4%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ ht-degree: 4%
 
 若要驗證到目的地，請填寫必填欄位並選取&#x200B;**[!UICONTROL Connect to destination]**。
 
-* **[!DNL Amazon S3]存取金鑰**&#x200B;與&#x200B;**[!DNL Amazon S3]秘密金鑰**：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授予Adobe Experience Platform存取您的[!DNL Amazon S3]帳戶。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
+* **[!DNL Amazon S3]存取金鑰**&#x200B;與&#x200B;**[!DNL Amazon S3]秘密金鑰**：在[!DNL Amazon S3]中，產生`access key - secret access key`配對以授予[!DNL Adobe Experience Platform]存取您的[!DNL Amazon S3]帳戶。 在[Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)中進一步瞭解。
 
 ### 填寫目標詳細資訊 {#destination-details}
 

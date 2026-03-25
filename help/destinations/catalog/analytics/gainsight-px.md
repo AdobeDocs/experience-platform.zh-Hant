@@ -3,9 +3,9 @@ title: Gainsight PX連線
 description: 使用Gainsight PX目的地將分段資訊傳送到Gainsight PX平台。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '968'
 ht-degree: 4%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 4%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用&#x200B;*Gainsight PX*&#x200B;目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用&#x200B;*Gainsight PX*&#x200B;目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 鎖定應用程式內參與目標 {#targeting-in-app-engagements}
 
-SaaS公司想要透過在Gainsight PX上建構的應用程式內指南與其客戶互動。 已在Adobe Experience Platform上建立接收此參與的受眾。 Gainsight PX目的地會接收受眾，並可在Gainsight PX環境中使用。
+SaaS公司想要透過在Gainsight PX上建構的應用程式內指南與其客戶互動。 已在[!DNL Adobe Experience Platform]上建立接收此參與的受眾。 Gainsight PX目的地會接收受眾，並可在Gainsight PX環境中使用。
 
 ## 先決條件 {#prerequisites}
 
@@ -40,7 +40,7 @@ Gainsight PX支援下表所述的身分啟用。 深入瞭解[身分](../../../i
 
 | 目標身分 | 說明 |
 |---|----|
-| 識別ID | 可在Gainsight PX和Adobe Experience Platform中唯一識別使用者的常見使用者識別碼 |
+| 識別ID | 在Gainsight PX和[!DNL Adobe Experience Platform]中唯一識別使用者的通用使用者識別碼 |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Gainsight PX支援下表所述的身分啟用。 深入瞭解[身分](../../../i
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Gainsight PX支援下表所述的身分啟用。 深入瞭解[身分](../../../i
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Gainsight PX支援下表所述的身分啟用。 深入瞭解[身分](../../../i
 
 * **[!UICONTROL Password]**：用來登入[[!DNL Gainsight PX]](https://app.aptrinsic.com)的密碼
 * **[!UICONTROL Client ID]**： [公司詳細資料頁面](https://app.aptrinsic.com/settings/subscription)上的Gainsight PX訂閱識別碼
-* **[!UICONTROL Client secret]**： OAuth密碼產生於[&#x200B; UI中](https://app.aptrinsic.com/settings/subscription)公司詳細資料頁面[!DNL Gainsight PX]的底部。
+* **[!UICONTROL Client secret]**： OAuth密碼產生於[ UI中](https://app.aptrinsic.com/settings/subscription)公司詳細資料頁面[!DNL Gainsight PX]的底部。
 * **[!UICONTROL Username]**：用來登入[[!DNL Gainsight PX]](https://app.aptrinsic.com) UI的電子郵件
 
 ### 填寫目標詳細資訊 {#destination-details}

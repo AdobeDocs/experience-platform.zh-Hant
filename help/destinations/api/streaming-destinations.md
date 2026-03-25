@@ -5,9 +5,9 @@ title: 使用Adobe Experience Platform中的流量服務API連線到串流目的
 description: 本檔案說明如何使用Adobe Experience Platform API建立串流目的地
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2197'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 >
 >閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-此教學課程示範如何使用API呼叫連線至您的Adobe Experience Platform資料、建立與串流雲端儲存空間目的地（[Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md)或[Azure事件中樞](../catalog/cloud-storage/azure-event-hubs.md)）的連線、建立連線至您新建立之目的地的資料流，以及啟用資料至您新建立的目的地。
+此教學課程示範如何使用API呼叫連線至您的[!DNL Adobe Experience Platform]資料、建立與串流雲端儲存空間目的地（[Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md)或[Azure事件中樞](../catalog/cloud-storage/azure-event-hubs.md)）的連線、建立連線至您新建立之目的地的資料流，以及啟用資料至您新建立的目的地。
 
 本教學課程在所有範例中都使用[!DNL Amazon Kinesis]目的地，但[!DNL Azure Event Hubs]的步驟相同。
 
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 ## 開始使用 {#get-started}
 
-本指南需要您深入了解下列 Adobe Experience Platform 元件：
+本指南需要您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)： Experience Platform組織客戶體驗資料的標準化架構。
 * [[!DNL Catalog Service]](../../catalog/home.md)： [!DNL Catalog]是Experience Platform中資料位置和歷程的記錄系統。
@@ -565,7 +565,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 除了設定檔屬性和步驟[啟用資料至您的新目的地](#activate-data)中的對象之外，[!DNL AWS Kinesis]和[!DNL Azure Event Hubs]中的匯出資料也會包含身分對應的相關資訊。 這代表匯出設定檔的身分（例如[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=zh-Hant)、行動ID、Google ID、電子郵件地址等）。 請參閱下列範例。
+> 除了設定檔屬性和步驟[啟用資料至您的新目的地](#activate-data)中的對象之外，[!DNL AWS Kinesis]和[!DNL Azure Event Hubs]中的匯出資料也會包含身分對應的相關資訊。 這代表匯出設定檔的身分（例如[ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等）。 請參閱下列範例。
 
 ```json
 {

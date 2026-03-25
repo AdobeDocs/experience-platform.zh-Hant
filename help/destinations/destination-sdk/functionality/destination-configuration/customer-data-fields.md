@@ -2,9 +2,9 @@
 description: 瞭解如何在Experience Platform UI中建立輸入欄位，讓使用者指定有關如何連線及將資料匯出至目的地的各種相關資訊。
 title: 客戶資料欄位
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1750'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -62,7 +62,7 @@ ht-degree: 1%
 | `enum` | 字串 | 選填 | 將自訂欄位呈現為下拉式功能表，並列出使用者可用的選項。 |
 | `default` | 字串 | 選填 | 從`enum`清單定義預設值。 |
 | `hidden` | 布林值 | 選填 | 指出客戶資料欄位是否顯示在UI中。 |
-| `unique` | 布林值 | 選填 | 當您需要建立客戶資料欄位時，使用此引數，該欄位的值在使用者的組織設定的所有目的地資料流中必須是唯一的。 例如，[自訂Personalization](../../../catalog/personalization/custom-personalization.md)目的地中的&#x200B;**[!UICONTROL 整合別名]**&#x200B;欄位必須是唯一的，這表示此目的地的兩個個別資料流不能在此欄位中有相同的值。 |
+| `unique` | 布林值 | 選填 | 當您需要建立客戶資料欄位時，使用此引數，該欄位的值在使用者的組織設定的所有目的地資料流中必須是唯一的。 例如，**[!UICONTROL Integration alias]**&#x200B;自訂Personalization[目的地中的](../../../catalog/personalization/custom-personalization.md)欄位必須是唯一的，這表示此目的地的兩個個別資料流不能在此欄位中有相同的值。 |
 | `readOnly` | 布林值 | 選填 | 指出客戶是否可以變更欄位的值。 |
 
 {style="table-layout:auto"}
@@ -103,7 +103,7 @@ ht-degree: 1%
 
 ## 目的地連線名稱和說明 {#names-description}
 
-建立新目的地時，Destination SDK會自動將&#x200B;**[!UICONTROL 名稱]**&#x200B;和&#x200B;**[!UICONTROL 描述]**&#x200B;欄位新增到Experience Platform UI中的目的地連線畫面。 如上述範例所示，**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位會在UI中轉譯，而不會包含在客戶資料欄位設定中。
+建立新目的地時，Destination SDK會自動將&#x200B;**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位新增到Experience Platform UI中的目的地連線畫面。 如上述範例所示，**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位會在UI中轉譯，而不會包含在客戶資料欄位設定中。
 
 >[!IMPORTANT]
 >
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 您在目的地設定中新增客戶資料欄位的順序，會反映在Experience Platform UI中。
 
-例如，下列組態會相應反映在UI中，選項會依序顯示&#x200B;**[!UICONTROL Name]**、**[!UICONTROL Description]**、**[!UICONTROL Bucket名稱]**、**[!UICONTROL 資料夾路徑]**、**[!UICONTROL 檔案型別]**、**[!UICONTROL 壓縮格式]**。
+例如，下列設定會相應反映在UI中，選項會依順序&#x200B;**[!UICONTROL Name]**、**[!UICONTROL Description]**、**[!UICONTROL Bucket name]**、**[!UICONTROL Folder path]**、**[!UICONTROL File Type]**、**[!UICONTROL Compression format]**&#x200B;顯示。
 
 ```json
 "customerDataFields":[
@@ -175,7 +175,7 @@ ht-degree: 1%
 
 您可以將數個客戶資料欄位分組在一個區段中。 在UI中設定與目的地的連線時，使用者可以看到類似欄位的視覺化分組並從中受益。
 
-若要這麼做，請使用`"type": "object"`建立群組，並在`properties`物件中收集所需的客戶資料欄位，如下圖所示，其中群組&#x200B;**[!UICONTROL CSV選項]**&#x200B;已反白顯示。
+若要這麼做，請使用`"type": "object"`建立群組，並在`properties`物件中收集所需的客戶資料欄位，如下圖所示，其中群組&#x200B;**[!UICONTROL CSV Options]**&#x200B;是反白顯示的。
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[
@@ -261,7 +261,7 @@ ht-degree: 1%
 
 若要建立動態下拉式選取器，您必須設定兩個元件：
 
-**步驟1。** [使用動態API呼叫的`responseFields`範本建立目的地伺服器](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers)，如下所示。
+**步驟1。** [使用動態API呼叫的](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers)範本建立目的地伺服器`responseFields`，如下所示。
 
 ```json
 {
@@ -342,7 +342,7 @@ ht-degree: 1%
 
 ## 建立巢狀客戶資料欄位 {#nested-fields}
 
-您可以為複雜的整合模式建立巢狀客戶資料欄位。 這可讓您為客戶鏈結一系列選擇。
+您可以為複雜的整合模式建立巢狀客戶資料欄位。 這可讓您為客戶鏈結一系列選取專案。
 
 例如，您可以新增巢狀客戶資料欄位，要求客戶選取與您目的地的整合型別，然後立即選取另一個專案。 第二個選取專案是整合型別內的巢狀欄位。
 

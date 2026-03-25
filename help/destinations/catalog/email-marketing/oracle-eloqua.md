@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: （檔案） Oracle Eloqua連線
 description: Oracle Eloqua是Oracle所提供用於行銷自動化的軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動和銷售機會開發。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '792'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)是由[!DNL Oracle]提供的軟體即服務(SaaS)平台，用於行銷自動化，旨在協助B2B行銷人員和組織管理行銷活動和銷售機會開發。
 
-若要將對象資料傳送至[!DNL Oracle Eloqua]，您必須先在Adobe Experience Platform中[連線目的地](#connect-destination)，然後[設定資料匯入](#import-data-into-eloqua)從您的儲存位置匯入[!DNL Oracle Eloqua]。
+若要將對象資料傳送至[!DNL Oracle Eloqua]，您必須先在[中](#connect-destination)連線目的地[!DNL Adobe Experience Platform]，然後[設定從儲存位置匯入](#import-data-into-eloqua)到[!DNL Oracle Eloqua]的資料。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -36,7 +36,7 @@ ht-degree: 3%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ title: TikTok連線
 description: 使用您的資料在TikTok上建立自訂對象，以便透過廣告促銷活動進行目標定位。 這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1211'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-使用您的資料在TikTok上建立自訂對象，以便透過廣告促銷活動進行目標定位。 這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。 如需詳細資訊，請造訪[TikTok的商務說明中心](https://ads.tiktok.com/help/article/audiences)。
+使用您的資料在TikTok上建立自訂對象，以便透過廣告促銷活動進行目標定位。 這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從[!DNL Adobe Experience Platform]推送到TikTok。 如需詳細資訊，請造訪[TikTok的商務說明中心](https://ads.tiktok.com/help/article/audiences)。
 
 >[!IMPORTANT]
 >
@@ -22,17 +22,17 @@ ht-degree: 4%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解如何使用TikTok目的地，以下是Adobe Experience Platform客戶的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用TikTok目的地，以下是[!DNL Adobe Experience Platform]客戶的範例使用案例。
 
 ### 使用案例 {#use-case-1}
 
-運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服飾品牌可以從他們自己的CRM擷取電子郵件地址到Adobe Experience Platform，從他們自己的離線資料建立對象，並將這些對象傳送到TikTok以在其客戶的社群媒體摘要中顯示廣告。
+運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服飾品牌可以從自己的CRM擷取電子郵件地址至[!DNL Adobe Experience Platform]、從自己的離線資料建立對象，並將這些對象傳送到TikTok以在其客戶的社群媒體摘要中顯示廣告。
 
 ## 先決條件 {#prerequisites}
 
 您必須擁有[!DNL Admin]或[!DNL Operator]許可權，才能存取您要傳送對象的TikTok Ads Manager帳戶。 如需更多說明，請參閱[TikTok說明中心](https://ads.tiktok.com/help/article/add-users-tiktok-business-center)。
 
-在將資料傳送至您的TikTok Ads Manager帳戶之前，您需要授予Adobe Experience Platform許可權以存取`Audience Management`的廣告帳戶。 在Experience Platform使用者介面中輸入您的廣告管理員ID[，並在重新導向至您的TikTok廣告管理員帳戶後授與許可權，即可提供此許可權。](#authenticate)
+在將資料傳送至您的TikTok廣告管理員帳戶之前，您必須授予[!DNL Adobe Experience Platform]許可權才能存取`Audience Management`的廣告帳戶。 在Experience Platform使用者介面中輸入您的廣告管理員ID[，並在重新導向至您的TikTok廣告管理員帳戶後授與許可權，即可提供此許可權。](#authenticate)
 
 ## 支援的身分 {#supported-identities}
 
@@ -40,10 +40,10 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 Adobe Experience Platform同時支援純文字和SHA256雜湊GAID值。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 Adobe Experience Platform同時支援純文字和SHA256雜湊IDFA值。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| 電話號碼 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform支援純文字和SHA256雜湊電話號碼，且必須採用E.164格式。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| 電子郵件 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊GAID值。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊IDFA值。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| 電話號碼 | 使用SHA256演演算法雜湊的電話號碼 | [!DNL Adobe Experience Platform]支援純文字和SHA256雜湊電話號碼，且必須使用E.164格式。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| 電子郵件 | 使用SHA256演演算法雜湊的電子郵件地址 | [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 | [!DNL Federated Audience Composition] | 是 | 透過[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/start/audiences)匯入到Experience Platform中的對象。 |
 
 {style="table-layout:auto"}
@@ -68,7 +68,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -131,7 +131,7 @@ TikTok支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-s
 
 選取來源欄位：
 
-* 選取識別碼（例如： `Email_LC_SHA256`）作為來源識別碼，以唯一識別Adobe Experience Platform和[!DNL TikTok Ads Manager]中的設定檔。
+* 選取識別碼（例如： `Email_LC_SHA256`），作為在[!DNL Adobe Experience Platform]和[!DNL TikTok Ads Manager]中唯一識別設定檔的來源識別碼。
 
 選取目標欄位：
 

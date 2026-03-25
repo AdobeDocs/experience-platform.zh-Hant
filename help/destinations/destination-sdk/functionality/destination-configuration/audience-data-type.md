@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定對象型別。
 title: 設定對象資料型別
 exl-id: c56fb0f9-adb2-4fb2-ab06-c0398d828600
-source-git-commit: 5d84ea1baa96c288d9d37606122e0a41880478b9
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '732'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 | [人員對象](../../../../segmentation/types/people-audiences.md) | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](../../../../segmentation/types/account-audiences.md) | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](../../../../segmentation/types/prospect-audiences.md) | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](../../../../catalog/datasets/overview.md) | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](../../../../catalog/datasets/overview.md) | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 支援的對象資料型別取決於您建立的目的地型別。
 請參閱下表以瞭解哪些目的地型別支援哪些對象資料型別。

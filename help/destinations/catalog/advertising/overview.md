@@ -3,9 +3,9 @@ keywords: 廣告目的地；目的地；平台目的地
 title: Advertising目的地概觀
 description: 將Adobe Experience Platform連線至協力廠商廣告平台（例如DSP、廣告網路、SSP），並在這些平台上共用假名對象。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '286'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-將Adobe Experience Platform連結至廣告平台，例如需求端平台(DSP)、供應端平台(SSP)和廣告網路，以分享這些平台的已知和匿名受眾。
+將[!DNL Adobe Experience Platform]連線到廣告平台，例如需求端平台(DSP)、供應端平台(SSP)和廣告網路，以共用這些平台的已知和假名受眾。
 
 連線至廣告目的地時，您的對象會以ID的形式傳送至目的地平台，並在該平台上對應至目的地平台已知的ID。
 

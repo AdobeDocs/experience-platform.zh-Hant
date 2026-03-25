@@ -3,9 +3,9 @@ title: 對目的地啟用帳戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用帳戶對象
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->購買[企業對企業](/help/rtcdp/overview.md#rtcdp-b2b)和[企業對個人](/help/rtcdp/overview.md#rtcdp-b2p)版Real-Time Customer Data Platform的公司可以使用啟用帳戶對象到目的地的功能。
+>購買[的](/help/rtcdp/overview.md#rtcdp-b2b)企業對企業[和](/help/rtcdp/overview.md#rtcdp-b2p)企業對個人[!DNL Real-Time Customer Data Platform]版本的公司可以使用啟用帳戶對象到目的地的功能。
 
-本文說明從Adobe Experience Platform將[帳戶對象](/help/segmentation/types/account-audiences.md)匯出至您偏好的目的地所需的工作流程。
+本文說明從[將](/help/segmentation/types/account-audiences.md)帳戶對象[!DNL Adobe Experience Platform]匯出至您偏好的目的地所需的工作流程。
 
 ## 支援的目的地 {#supported-destinations}
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在將帳戶對象匯出至雲端儲存空間目的地時的排程步驟中，啟用帳戶對象的工作流程僅允許您依每日排程[匯出](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)完整檔案[和](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)增量檔案&#x200B;__。 不支援每小時匯出。 **[!UICONTROL After audience evaluation]**&#x200B;是唯一支援的評估型別。
+>在將帳戶對象匯出至雲端儲存空間目的地時的排程步驟中，啟用帳戶對象的工作流程僅可讓您依每日排程[匯出](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files)完整檔案[和](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)增量檔案&#x200B;__。 不支援每小時匯出。 **[!UICONTROL After audience evaluation]**&#x200B;是唯一支援的評估型別。
 
 ## 重要圖說文字和已知限制 {#important-callouts-known-limitations}
 
@@ -108,4 +108,4 @@ ht-degree: 0%
 
 ![啟用帳戶對象工作流程的稽核步驟，同意執行控制項顯示為灰色。](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-支援Real-Time CDP中的其他資料治理機制，例如[資料使用原則檢查](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)和[屬性型存取控制](/help/destinations/home.md#attribute-based-access)。
+支援[!DNL Real-Time CDP]中的其他資料治理機制，例如[資料使用原則檢查](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)和[屬性型存取控制](/help/destinations/home.md#attribute-based-access)。

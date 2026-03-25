@@ -2,9 +2,9 @@
 title: 阿爾戈利亞
 description: 使用此聯結器來啟用演演算法的對象以進行個人化，並用於各種搜尋和推薦。 接著，您可以使用Algoria使用者設定檔來源聯結器，將設定檔匯入Real-Time CDP，以建立豐富的受眾。
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1112'
 ht-degree: 4%
 
 ---
@@ -17,27 +17,27 @@ ht-degree: 4%
 >
 >[!DNL Algolia]目的地聯結器和檔案頁面是由Algolia Integration Services團隊建立和維護的。 如需查詢或更新要求，請透過[adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com)聯絡他們。
 
-使用[!DNL Algolia]目的地連線將Adobe Experience Platform對象傳送至Algolia以進行個人化搜尋和建議。 您必須先設定[!DNL Algolia]來源聯結器，才能使用[[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md)目的地聯結器。 在來源聯結器設定教學課程中，您將建立Algoria使用者權杖身分。 當您設定目的地聯結器時，對應需要此身分。
+使用[!DNL Algolia]目的地連線將[!DNL Adobe Experience Platform]個對象傳送至Algolia進行個人化搜尋與建議。 您必須先設定[!DNL Algolia]來源聯結器，才能使用[[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md)目的地聯結器。 在來源聯結器設定教學課程中，您將建立Algoria使用者權杖身分。 當您設定目的地聯結器時，對應需要此身分。
 
-本教學課程提供使用Adobe Experience Platform使用者介面建立[!DNL Algolia]目的地連線和資料流的步驟。
+本教學課程提供使用[!DNL Algolia]使用者介面建立[!DNL Adobe Experience Platform]目的地連線和資料流的步驟。
 
 ![具有Algoria目的地的目的地目錄。](../../assets/catalog/personalization/algolia/catalog.png)
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Algolia]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Algolia]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### Personalization一致性 {#personalization-consistency}
 
 使用此目的地聯結器，從首頁跨您的網站提供一致的個人化內容以進行搜尋。
 
-例如，身為行銷人員，您可能想要在Adobe Experience Platform中從多個使用者資料來源（包括Algoria）建立豐富的對象。 您可以使用[!DNL Algolia]目的地聯結器來共用目標定位策略的對象，進而提高行銷活動的個人化和轉換。
+例如，身為行銷人員，您可能想要從多個使用者資料來源（包括Algoria）在[!DNL Adobe Experience Platform]中建立豐富的對象。 您可以使用[!DNL Algolia]目的地聯結器來共用目標定位策略的對象，進而提高行銷活動的個人化和轉換。
 
 若要實作此使用案例，您必須同時使用[[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md)來源和[!DNL Algolia]目的地聯結器。
 
-您一開始會將現有的[!DNL Algolia]使用者設定檔匯入Adobe Experience Platform Real-Time CDP和其他來源，以開始使用來源聯結器建立豐富受眾。 行銷人員會使用可傳送至演演算法以供搜尋及建議個人化的設定檔資料來建立對象。
+您應該先將現有的[!DNL Algolia]使用者設定檔匯入至[!DNL Adobe Experience Platform] [!DNL Real-Time CDP]和其他來源，以開始使用來源聯結器建立豐富受眾。 行銷人員會使用可傳送至演演算法以供搜尋及建議個人化的設定檔資料來建立對象。
 
-然後，使用對應的[[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md)來源聯結器將客戶設定檔擷取並增加回Real-Time CDP。
+然後，使用對應的[[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md)來源聯結器將客戶設定檔擷取並擴大回[!DNL Real-Time CDP]。
 
 ## 先決條件 {#prerequisites}
 
@@ -63,7 +63,7 @@ ht-degree: 4%
 | 對象來源 | 支援 | 說明 |
 |---------|---------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ ht-degree: 4%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -133,9 +133,9 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
->* 若要匯出身分，您需要檢視身分圖表[存取控制許可權](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/home#permissions)。
+>* 若要匯出身分，您需要檢視身分圖表[存取控制許可權](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions)。
 
-閱讀[將設定檔和對象啟用至串流對象匯出目的地](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)，以瞭解啟用此目的地對象的指示。
+閱讀[將設定檔和對象啟用至串流對象匯出目的地](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations)，以瞭解啟用此目的地對象的指示。
 
 ### 對應屬性和身分 {#mapping-attributes-identities}
 
@@ -145,7 +145,7 @@ ht-degree: 4%
 
 ## 驗證資料匯出 {#exported-data}
 
-若要確認對象是否已成功匯出至使用者設定檔，請檢查您的[!DNL Algolia]儀表板，並導覽至&#x200B;**[!UICONTROL Advanced Personalization]**&#x200B;並按一下&#x200B;**[!UICONTROL User Inspector]**。 尋找與匯出的Adobe Experience Platform對象相關聯的使用者設定檔，並在使用者檢查器中搜尋該設定檔。 您會在區段區段中看到對象ID。
+若要確認對象是否已成功匯出至使用者設定檔，請檢查您的[!DNL Algolia]儀表板，並導覽至&#x200B;**[!UICONTROL Advanced Personalization]**&#x200B;並按一下&#x200B;**[!UICONTROL User Inspector]**。 尋找與匯出的[!DNL Adobe Experience Platform]對象相關聯的使用者設定檔，並在使用者檢查器中搜尋它。 您會在區段區段中看到對象ID。
 
 ![Algoria使用者檢查器](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 

@@ -2,18 +2,18 @@
 description: Adobe Experience Platform Destination SDK是一組設定API，可讓您根據您選擇的資料和驗證格式，設定Experience Platform的目的地整合模式，以將對象和設定檔資料傳送至您的端點或儲存位置。 設定儲存在Experience Platform中，並可透過API擷取以取得其他更新。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform Destination SDK
+# [!DNL Adobe Experience Platform] Destination SDK
 
-Adobe Experience Platform Destination SDK是一套設定API，可讓您根據您選擇的資料和驗證格式，設定Experience Platform的目的地整合模式，以將對象和設定檔資料傳送至您的端點或儲存位置。 設定儲存在Experience Platform中，並可透過API擷取以取得其他更新。
+[!DNL Adobe Experience Platform] Destination SDK是一套設定API，可讓您根據您選擇的資料和驗證格式，設定Experience Platform的目的地整合模式，以將對象和設定檔資料傳送至您的端點或儲存位置。 設定儲存在Experience Platform中，並可透過API擷取以取得其他更新。
 
-Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Destination SDK來設定、測試和發行與Adobe Experience Platform的生產化目的地整合，並讓您的目的地成為不斷成長的目的地目錄的一部分。 使用Destination SDK，您也可以建立自己的自訂私人目的地，以匯出因應您需求量身打造的資料。
+Destination SDK檔案提供指示，讓您使用[!DNL Adobe Experience Platform] Destination SDK來設定、測試及發行與[!DNL Adobe Experience Platform]的生產化目的地整合，並讓您的目的地成為不斷成長的目的地目錄的一部分。 使用Destination SDK，您也可以建立自己的自訂私人目的地，以匯出因應您需求量身打造的資料。
 
 ![Experience Platform UI的熒幕擷圖，顯示目的地目錄。](assets/destinations-catalog-overview.png)
 
@@ -32,7 +32,7 @@ Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Des
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">說明所有組態選項</a></li>
                 <li> 目的地伺服器組態 — <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">伺服器規格</a>和<a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">範本規格</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">客戶資料欄位和其他目的地設定元件</a></li>
-                <li><a href="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">範本化和巨集</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">範本化和巨集</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Des
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">設定串流目的地的端對端指南</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">透過Pebble範本瞭解資料轉換</a>和<a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">檢視支援的範本功能</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">瞭解資料彙總原則</a></li>
-                <li><a href="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">即時設定範例</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">即時設定範例</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">測試您的串流目的地</a></li>
             </ul>
         </td>
@@ -109,7 +109,7 @@ Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Des
 
 1. 透過預先設定的引數標準化跨客戶的整合設定，並簡化客戶的設定體驗。
 2. 在Experience Platform目的地目錄中推出品牌目的地卡，以簡化客戶設定和認知作業。
-3. 成為與Adobe Experience Platform和Adobe Real-Time Customer Data Platform整合的生產化目的地。
+3. 成為與[!DNL Adobe Experience Platform]和Adobe [!DNL Real-Time Customer Data Platform]整合的生產化目的地。
 
 身為Experience Platform客戶，您也可以編寫自己的私人自訂目的地，以最符合您的啟用需求。
 
@@ -119,7 +119,7 @@ Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Des
 
 ### 即時（串流）整合 {#real-time-integrations}
 
-透過Destination SDK，Adobe Experience Platform支援與具有REST API端點的目的地即時整合（也稱為串流）。 與Experience Platform的即時整合支援如下的功能：
+透過Destination SDK，[!DNL Adobe Experience Platform]支援與具有REST API端點的目的地的即時整合（也稱為串流）。 與Experience Platform的即時整合支援如下的功能：
 
 * 訊息轉換和彙總
 * 設定檔回填
@@ -138,7 +138,7 @@ Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Des
 
 ## 存取Destination SDK {#get-access}
 
-Destination SDK存取權會因您身為合作夥伴或Experience Platform、Real-Time CDP客戶的身份而異。 如需詳細資訊，請參閱下表。
+Destination SDK存取權會因您身為合作夥伴或Experience Platform [!DNL Real-Time CDP]客戶的身份而有所不同。 如需詳細資訊，請參閱下表。
 
 | 合作夥伴或客戶型別 | 如何存取Destination SDK |
 |---------|----------|

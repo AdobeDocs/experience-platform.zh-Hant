@@ -3,7 +3,7 @@ title: 使用計算欄位對匯出到雲端儲存目標的資料執行轉換
 type: Tutorial
 description: 瞭解如何使用計算欄位功能，對匯出至雲端儲存空間的資料執行轉換
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 8%
@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="新增計算欄位"
 >abstract="<p>使用「**新增計算欄位**」控制項對匯出到雲端儲存目標的資料執行各種資料轉換。例如，您可以對資料進行雜湊、將陣列串連成字串等等。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=zh-Hant#examples" text="範例"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="範例"
 
 >[!AVAILABILITY]
 >
@@ -118,7 +118,7 @@ ht-degree: 8%
 
 在此情況下，您的輸出檔案看起來如下所示。 請注意陣列元素如何使用`_`字元串連成單一字串。
 
-```
+```csv
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
@@ -133,7 +133,7 @@ John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'lates
 
 在此情況下，您的輸出檔案看起來如下所示。 請注意陣列中符合條件的兩個元素如何使用`_`字元串連成單一字串。
 
-```
+```csv
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
@@ -147,7 +147,7 @@ John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'lates
 
 在此情況下，您的輸出檔案看起來如下所示。 請注意如何使用`_`字元將陣列的三個元素轉換並串連為單一字串。
 
-```
+```csv
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
@@ -159,7 +159,7 @@ John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 
 在此情況下，您的輸出檔案看起來如下所示。 在此案例中，陣列的第一個元素為行銷，因此該人員為行銷部門的成員。
 
-```
+```csv
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
@@ -174,7 +174,7 @@ John,Doe, johndoe@acme.org, "isMarketing"
 
 在此情況下，您的輸出檔案看起來如下所示。 請注意陣列中的三個元素如何使用`_`字元串連成單一字串，而2023也會附加在字串的結尾。
 
-```
+```csv
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
@@ -202,7 +202,7 @@ John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 
 在此情況下，您的輸出檔案看起來如下所示。 請注意如何將陣列中的第一個非Null `true`值匯出到檔案中。
 
-```
+```csv
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
@@ -220,7 +220,7 @@ John,Doe,true
 
 在此情況下，您的輸出檔案看起來如下所示。 請注意第二欄如何指出陣列中的元素數量，對應於客戶進行的個別購買數量。
 
-```
+```csv
 `Personal_Email,Times_Purchased
 johndoe@acme.org,"5"
 ```
@@ -237,7 +237,7 @@ johndoe@acme.org,"5"
 
 在此情況下，您的輸出檔案看起來如下所示，會在客戶首次購買時匯出：
 
-```
+```csv
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
@@ -250,7 +250,7 @@ johndoe@acme.org,"1538097126"
 
 在此情況下，您的輸出檔案看起來如下所示，匯出客戶第一次和最後一次購買的時間：
 
-```
+```csv
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```

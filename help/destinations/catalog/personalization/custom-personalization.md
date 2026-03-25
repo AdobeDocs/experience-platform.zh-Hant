@@ -3,10 +3,10 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者設定檔對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1126'
-ht-degree: 8%
+source-wordcount: '1111'
+ht-degree: 9%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 8%
 
 ## 概觀 {#overview}
 
-設定此目的地，以允許客戶網站上執行的外部個人化平台、內容管理系統、廣告伺服器及其他應用程式，從Adobe Experience Platform擷取對象資訊。
+設定此目的地，以允許外部個人化平台、內容管理系統、廣告伺服器和其他在客戶網站上執行的應用程式從[!DNL Adobe Experience Platform]擷取對象資訊。
 
 ## 先決條件 {#prerequisites}
 
@@ -58,7 +58,7 @@ ht-degree: 8%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ ht-degree: 8%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ ht-degree: 8%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流"
 >abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含對象。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 >
@@ -126,7 +126,7 @@ ht-degree: 8%
 
 以下是`event.destinations`變數的範例值：
 
-```
+```json
 [
    {
       "type":"profileLookup",
@@ -146,9 +146,9 @@ ht-degree: 8%
 
 如果您不是使用[標籤](/help/tags/home.md)來部署Experience Platform Web SDK，請使用[命令回應](/help/collection/js/commands/command-responses.md)來檢視匯出的資料。
 
-來自Adobe Experience Platform的JSON回應可加以剖析，以找出您要與Adobe Experience Platform整合之應用程式的對應整合別名。 對象ID可傳入應用程式的程式碼中作為定位引數。 以下是目標回應特有的內容範例。
+可以剖析來自[!DNL Adobe Experience Platform]的JSON回應，以尋找您與[!DNL Adobe Experience Platform]整合之應用程式的對應整合別名。 對象ID可傳入應用程式的程式碼中作為定位引數。 以下是目標回應特有的內容範例。
 
-```
+```js
 alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {

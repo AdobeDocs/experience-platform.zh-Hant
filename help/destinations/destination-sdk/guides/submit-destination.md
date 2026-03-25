@@ -2,9 +2,9 @@
 description: 此頁面提供使用Destination SDK創作產品化目的地以供檢閱所需的所有資訊。
 title: 提交產品化目的地以供檢閱
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 在將目的地發佈至[Experience Platform目的地目錄](/help/destinations/catalog/overview.md)之前，您必須向Adobe提供有關目的地和您執行之測試的特定資訊，以確保使用者在將資料啟用至您的平台時享有最佳體驗。
 
-此頁面列出提交或更新您使用Adobe Experience Platform Destination SDK編寫的目的地時，所需的所有資訊。 若要在Adobe Experience Platform中成功提交目的地，請傳送電子郵件至<aepdestsdk@adobe.com>，包括：
+此頁面列出提交或更新您使用[!DNL Adobe Experience Platform] Destination SDK編寫的目的地時，所需的所有資訊。 若要在[!DNL Adobe Experience Platform]中成功提交目的地，請傳送電子郵件至<aepdestsdk@adobe.com>，包括：
 
 * 目的地解決的使用案例說明。 只有在您提交新的目的地設定時，才需要執行此作業。
 * 目的地提交原因的說明。 只有在更新現有的目的地設定時，才需要此專案。
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 ## 使用測試目的地API後的測試結果 {#testing-api-response}
 
-使用[測試目的地API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)端點對您的目的地執行HTTP呼叫後，提供測試結果。 其中包括：
+使用[測試目的地API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)端點對您的目的地執行HTTP呼叫後，提供測試結果。 其中包括:
 
 * 使用測試API對您的目的地端點提出完整API請求（標頭和內文）。
 * 從您的目的地端點接收的API回應。

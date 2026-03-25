@@ -2,9 +2,9 @@
 title: Twitter自訂對象連線
 description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '937'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 ## 概觀 {#overview}
 
-在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再行銷活動。
+在Twitter中鎖定您現有的追隨者和客戶，並透過啟用[!DNL Adobe Experience Platform]中建立的對象來建立相關的再行銷活動。
 
 ## 先決條件 {#prerequisites}
 
@@ -24,12 +24,12 @@ ht-degree: 6%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Twitter Custom Audiences]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
+[!DNL Twitter Custom Audiences]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| device_id | IDFA/AdID/Android ID | Adobe Experience Platform支援廣告商適用的Google Advertising ID (GAID)和Apple ID (IDFA)。 請在目的地啟用工作流程的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中，對應來源結構描述的這些名稱空間和/或屬性。 |
-| 電子郵件 | 使用者的電子郵件地址 | 請將純文字電子郵件地址和SHA256雜湊電子郵件地址對應至此欄位。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 如果您將客戶電子郵件地址雜湊再上傳至Adobe Experience Platform，請注意，這些身分必須使用SHA256進行雜湊處理，不可使用Salt。 |
+| device_id | IDFA/AdID/Android ID | [!DNL Adobe Experience Platform]支援廣告商適用的Google Advertising ID (GAID)和Apple ID (IDFA)。 請在目的地啟用工作流程的[對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)中，對應來源結構描述的這些名稱空間和/或屬性。 |
+| 電子郵件 | 使用者的電子郵件地址 | 請將純文字電子郵件地址和SHA256雜湊電子郵件地址對應至此欄位。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 如果您在上傳至[!DNL Adobe Experience Platform]前先雜湊客戶電子郵件地址，請注意，這些身分識別必須使用SHA256進行雜湊處理，不可使用Salt。 |
 
 {style="table-layout:auto"}
 
@@ -40,7 +40,7 @@ ht-degree: 6%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ ht-degree: 6%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -71,11 +71,11 @@ ht-degree: 6%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Twitter Custom Audiences]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Twitter Custom Audiences]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 使用案例#1 {#use-case-1}
 
-在Twitter中鎖定您現有的追隨者和客戶，並在Twitter中啟用您在Adobe Experience Platform中建立的對象作為[!DNL List Custom Audiences]，以建立相關的再行銷活動。
+在Twitter中鎖定您現有的追隨者和客戶，並在Twitter中將[!DNL Adobe Experience Platform]中建立的對象啟用為[!DNL List Custom Audiences]，以建立相關的再行銷活動。
 
 ## 連線到目的地 {#connect}
 

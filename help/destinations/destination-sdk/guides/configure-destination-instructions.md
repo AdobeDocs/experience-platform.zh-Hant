@@ -2,9 +2,9 @@
 description: 本頁面列出及說明使用Destination SDK設定串流目的地的步驟。
 title: 使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -279,12 +279,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 步驟6：測試您的目的地 {#test-destination}
 
-使用先前步驟中的設定端點設定您的目的地後，您可以使用[目的地測試工具](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)來測試Adobe Experience Platform與您的目的地之間的整合。
+使用先前步驟中的設定端點設定您的目的地後，您可以使用[目的地測試工具](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)來測試[!DNL Adobe Experience Platform]與您的目的地之間的整合。
 
 在測試目的地的程式中，您必須使用Experience Platform UI來建立區段，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
 * [建立對象檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
-* [建立對象視訊逐步說明](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)
+* [建立對象視訊逐步說明](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 步驟7：發佈您的目的地 {#publish-destination}
 

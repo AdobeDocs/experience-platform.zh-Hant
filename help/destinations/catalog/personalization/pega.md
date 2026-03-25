@@ -2,9 +2,9 @@
 title: (V1) Pega CDH即時受眾連線
 description: 在Adobe Experience Platform中使用Pega客戶決定中心即時對象目的地，將設定檔屬性和對象成員資格資料傳送至Pega客戶決定中心，以做出次優決策。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1186'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-使用Adobe Experience Platform中的[!DNL Pega Customer Decision Hub]即時對象目的地，將設定檔屬性和對象成員資格資料傳送至[!DNL Pega Customer Decision Hub]，以做出下一個最佳動作決策。
+在[!DNL Pega Customer Decision Hub]中使用[!DNL Adobe Experience Platform]即時對象目的地，將設定檔屬性和對象成員資格資料傳送至[!DNL Pega Customer Decision Hub]，以做出下一個最佳動作決策。
 
-來自Adobe Experience Platform的設定檔對象成員資格，載入到[!DNL Pega Customer Decision Hub]中時，可用作最適化模型中的預測因子，並幫助提供正確的情境和行為資料，以實現次優行動決策。
+來自[!DNL Adobe Experience Platform]的設定檔對象成員資格，載入到[!DNL Pega Customer Decision Hub]中時，可用作最適化模型中的預測值，並幫助提供正確的情境和行為資料，以實現次優行動決策。
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Customer Decision Hub]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Customer Decision Hub]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 電信 {#telecommunications}
 
@@ -35,11 +35,11 @@ ht-degree: 3%
 
 ### 金融服務 {#financial-services}
 
-行銷人員想要為已訂閱或取消訂閱退休金計畫或退休計畫電子報的客戶最佳化優惠。 金融服務公司可從自己的CRM將多個CustomerID擷取至Adobe Experience Platform，從自己的離線資料建立對象，並將進入和退出對象的設定檔傳送至[!DNL Pega Customer Decision Hub]，以便在傳出頻道中做出次佳動作(NBA)決策。
+行銷人員想要為已訂閱或取消訂閱退休金計畫或退休計畫電子報的客戶最佳化優惠。 金融服務公司可從自己的CRM將多個CustomerID擷取至[!DNL Adobe Experience Platform]、從自己的離線資料建立對象，以及將進入和退出對象的設定檔傳送至[!DNL Pega Customer Decision Hub]，以便在傳出頻道中做出次佳動作(NBA)決策。
 
 ## 先決條件 {#prerequisites}
 
-使用此目的地將資料匯出Adobe Experience Platform之前，請務必先在[!DNL Pega Customer Decision Hub]中完成下列必要條件：
+使用此目的地匯出[!DNL Adobe Experience Platform]中的資料之前，請務必先在[!DNL Pega Customer Decision Hub]中完成下列必要條件：
 
 * 在您的[執行個體中設定](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html)Adobe Experience Platform設定檔和對象成員資格整合元件[!DNL Pega Customer Decision Hub]。
 * 在您的[執行個體中使用使用者端認證](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)授與型別，設定OAuth 2.0 [!DNL Pega Customer Decision Hub]使用者端註冊。
@@ -51,7 +51,7 @@ ht-degree: 3%
 
 | 目標身分 | 說明 |
 |---|---|
-| *CustomerID* | 在[!DNL Pega Customer Decision Hub]和Adobe Experience Platform中唯一識別設定檔的一般使用者識別碼 |
+| *CustomerID* | 在[!DNL Pega Customer Decision Hub]和[!DNL Adobe Experience Platform]中唯一識別設定檔的一般使用者識別碼 |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 無 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ ht-degree: 3%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -138,7 +138,7 @@ ht-degree: 3%
 
 選取來源欄位：
 
-* 選取識別碼（例如：CustomerID）作為來源識別碼，以唯一識別Adobe Experience Platform和[!DNL Pega Customer Decision Hub]中的設定檔。
+* 選取識別碼（例如：CustomerID）作為來源識別，以唯一識別[!DNL Adobe Experience Platform]和[!DNL Pega Customer Decision Hub]中的設定檔。
 * 選取需要在[!DNL Pega Customer Decision Hub]中匯出和更新的XDM來源設定檔屬性變更。
 
 選取目標欄位：

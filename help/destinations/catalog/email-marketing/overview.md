@@ -4,10 +4,10 @@ title: 電子郵件行銷目的地概觀
 type: Tutorial
 description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 瞭解哪些ESP支援做為Experience Platform目的地。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 4%
+source-wordcount: '371'
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 Adobe Experience Platform可讓您對電子郵件行銷目的地啟用對象，以與ESP整合。
+電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 [!DNL Adobe Experience Platform]可讓您啟用電子郵件行銷目的地的對象，藉此與ESP整合。
 
 ## 支援的電子郵件行銷目的地 {#supported-destinations}
 
-Adobe Experience Platform支援下列電子郵件行銷目的地：
+[!DNL Adobe Experience Platform]支援下列電子郵件行銷目的地：
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)

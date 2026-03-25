@@ -4,10 +4,10 @@ title: 使用流量服務API匯出資料集
 description: 瞭解如何使用流量服務API將資料集匯出至所選目的地。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '5203'
-ht-degree: 4%
+source-wordcount: '5178'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->* 已購買Real-Time CDP Prime和Ultimate套件、Adobe Journey Optimizer或Customer Journey Analytics的客戶可使用此功能。 請聯絡您的 Adobe 代表以取得更多資訊。
+>* 已購買[!DNL Real-Time CDP] Prime和Ultimate套件、[!DNL Adobe Journey Optimizer]或Customer Journey Analytics的客戶可使用此功能。 請聯絡您的 Adobe 代表以取得更多資訊。
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 -->
 
-本文說明使用[!DNL Flow Service API]從Adobe Experience Platform將[資料集](/help/catalog/datasets/overview.md)匯出至您偏好的雲端儲存空間位置（例如[!DNL Amazon S3]、SFTP位置或[!DNL Google Cloud Storage]）所需的工作流程。
+本文說明使用[!DNL Flow Service API]從[將](/help/catalog/datasets/overview.md)資料集[!DNL Adobe Experience Platform]匯出至您偏好的雲端儲存位置（例如[!DNL Amazon S3]、SFTP位置或[!DNL Google Cloud Storage]）所需的工作流程。
 
 >[!TIP]
 >
@@ -40,7 +40,7 @@ ht-degree: 4%
 
 ## 可用於匯出的資料集 {#datasets-to-export}
 
-您可以匯出的資料集取決於Experience Platform應用程式(Real-Time CDP、Adobe Journey Optimizer)、層級（Prime或Ultimate）以及您購買的任何附加元件（例如：Data Distiller）。
+您可以匯出的資料集取決於Experience Platform應用程式([!DNL Real-Time CDP]、[!DNL Adobe Journey Optimizer])、階層（Prime或Ultimate）以及您購買的任何附加元件（例如：資料Distiller）。
 
 請參閱UI教學課程頁面[上的](/help/destinations/ui/export-datasets.md#datasets-to-export)表格，瞭解您可以匯出哪些資料集。
 
@@ -68,9 +68,9 @@ ht-degree: 4%
 
 ![概述 — 建立目的地和匯出資料集的步驟](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
-本指南需要您深入了解下列 Adobe Experience Platform 元件：
+本指南需要您實際瞭解[!DNL Adobe Experience Platform]的下列元件：
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md)：所有成功內嵌至Adobe Experience Platform的資料都會以資料集的形式儲存在[!DNL Data Lake]中。 資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 資料集也包含中繼資料，可說明其儲存資料的各個層面。
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md)：所有成功擷取到[!DNL Adobe Experience Platform]的資料都會以資料集的形式保留在[!DNL Data Lake]中。 資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 資料集也包含中繼資料，可說明其儲存資料的各個層面。
    * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform]提供的虛擬沙箱可將單一[!DNL Experience Platform]執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 以下小節提供您必須知道的其他資訊，才能將資料集匯出到Experience Platform中的雲端儲存空間目標。

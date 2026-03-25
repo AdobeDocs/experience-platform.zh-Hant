@@ -3,10 +3,10 @@ keywords: 社交；社交目的地；Livefyre；facebook；Facebook
 title: 社交目的地概觀
 description: 透過社交目的地，您可以啟用行銷活動的設定檔，以根據雜湊電子郵件進行對象目標定位、個人化和歸併。
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 0%
+source-wordcount: '103'
+ht-degree: 4%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 ## 支援的社交目的地 {#supported-destinations}
 
-Adobe Experience Platform目前支援下列社交目的地：
+[!DNL Adobe Experience Platform]目前支援下列社交目的地：
 
-* [[!DNL Facebook]個連線](facebook.md)
-* [[!DNL LinkedIn Matched Audiences]個連線](linkedin.md)
-* [[!DNL TikTok]個連線](tiktok.md)
-* [[!DNL Twitter Custom Audiences]個連線](twitter.md)
+* [[!DNL Facebook] 連線](facebook.md)
+* [[!DNL LinkedIn Matched Audiences] 連線](linkedin.md)
+* [[!DNL TikTok] 連線](tiktok.md)
+* [[!DNL Twitter Custom Audiences] 連線](twitter.md)
 
 ## 連線到新的社交目的地 {#connect-destination}
 

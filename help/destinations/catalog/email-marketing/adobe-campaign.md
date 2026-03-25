@@ -3,20 +3,20 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；a
 title: Adobe Campaign連線
 description: Adobe Campaign 這一組解決方案可協助您針對所有線上和離線管道來實現個人化並提供行銷活動。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '930'
 ht-degree: 5%
 
 ---
 
-# Adobe Campaign連線
+# [!DNL Adobe Campaign] 連線
 
 ## 概觀 {#overview}
 
-Adobe Campaign這一組解決方案可協助您針對所有線上和離線管道來實現個人化並提供行銷活動。 如需詳細資訊，請參閱[開始使用Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html)。
+[!DNL Adobe Campaign]是一組解決方案，可協助您跨所有線上及離線管道個人化並傳遞行銷活動。 如需詳細資訊，請參閱[開始使用Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html)。
 
-若要將對象資料傳送至Adobe Campaign，您必須先在Adobe Experience Platform中[連線目的地](#connect-destination)，然後[設定從儲存位置匯入](#import-data-into-campaign)至Adobe Campaign的資料。
+若要將對象資料傳送至[!DNL Adobe Campaign]，您必須先在[中](#connect-destination)連線目的地[!DNL Adobe Experience Platform]，然後[設定從儲存位置匯入](#import-data-into-campaign)到[!DNL Adobe Campaign]的資料。
 
 ## 支援的對象 {#supported-audiences}
 
@@ -25,7 +25,7 @@ Adobe Campaign這一組解決方案可協助您針對所有線上和離線管道
 | 對象來源 | 支援 | 說明 |
 | ---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ Adobe Campaign這一組解決方案可協助您針對所有線上和離線管道
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -68,14 +68,14 @@ Adobe Campaign這一組解決方案可協助您針對所有線上和離線管道
 
 若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。
 
-Adobe Campaign支援下列連線型別：
+[!DNL Adobe Campaign]支援下列連線型別：
 
 * **[!UICONTROL Amazon S3]**
 * **[!UICONTROL SFTP with Password]**
 * **[!UICONTROL SFTP with SSH Key]**
 * **[!UICONTROL Azure Blob]**
 
-將資料傳送至Adobe Campaign的偏好方法是透過[!DNL Amazon S3]或[!DNL Azure Blob]。
+將資料傳送至[!DNL Adobe Campaign]的偏好方法是透過[!DNL Amazon S3]或[!DNL Azure Blob]。
 
 ### 連線參數 {#parameters}
 
@@ -117,15 +117,15 @@ Adobe Campaign支援下列連線型別：
 
 針對[!DNL Adobe Campaign]目的地，[!DNL Experience Platform]會在您提供的儲存位置中建立`.csv`檔案。 如需檔案的詳細資訊，請參閱對象啟用教學課程中的[驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify)區段。
 
-## 設定資料匯入Adobe Campaign {#import-data-into-campaign}
+## 設定將資料匯入[!DNL Adobe Campaign] {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
->* 在執行此整合時，請記住Adobe Campaign合約中的[!DNL SFTP]儲存空間限制、資料庫儲存空間限制和作用中設定檔限制。
->* 您需要使用[!DNL Campaign]工作流程在Adobe Campaign中排程、匯入及對應匯出的區段。 請參閱Adobe Campaign Classic檔案中的[設定循環匯入](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html)以及Adobe Campaign Standard檔案中的[關於資料管理活動](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=zh-Hant)。
->* 將資料傳送至Adobe Campaign的偏好方法是透過[!DNL Amazon S3]或[!DNL Azure Blob]。
+>* 在執行此整合時，請記住[!DNL SFTP]合約中的[!DNL Adobe Campaign]儲存限制、資料庫儲存限制和作用中設定檔限制。
+>* 您必須使用[!DNL Adobe Campaign]工作流程，在[!DNL Campaign]中排程、匯入及對應匯出的區段。 請參閱[檔案中的](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html)設定循環匯入[!DNL Adobe Campaign Classic]，以及[檔案中的](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html)關於資料管理活動[!DNL Adobe Campaign Standard]。
+>* 將資料傳送至[!DNL Adobe Campaign]的偏好方法是透過[!DNL Amazon S3]或[!DNL Azure Blob]。
 
-將[!DNL Experience Platform]連線至您的[!DNL Amazon S3]或[!DNL Azure Blob]儲存體後，您必須設定從儲存位置匯入Adobe Campaign的資料。 若要瞭解如何完成此作業，請參閱下列Adobe Campaign檔案頁面：
+將[!DNL Experience Platform]連線到您的[!DNL Amazon S3]或[!DNL Azure Blob]儲存體後，您必須設定從儲存位置匯入到[!DNL Adobe Campaign]的資料匯入。 若要瞭解如何完成此作業，請參閱下列[!DNL Adobe Campaign]檔案頁面：
 
-* [開始在Adobe Campaign Classic檔案中匯入和匯出資料](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=zh-Hant)以及[資料載入（檔案）](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=zh-Hant)。
-* [開始使用流程和資料管理](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=zh-Hant)和[在Adobe Campaign Standard檔案中載入檔案](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=zh-Hant)。
+* [開始使用](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=zh-Hant)檔案中的資料匯入和匯出[和](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html)資料載入（檔案）[!DNL Adobe Campaign Classic]。
+* [開始使用處理程式與資料管理](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html)和[在](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html)檔案中載入檔案[!DNL Adobe Campaign Standard]。

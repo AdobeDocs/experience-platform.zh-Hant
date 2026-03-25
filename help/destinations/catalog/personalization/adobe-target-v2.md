@@ -3,20 +3,20 @@ keywords: 目標擴充功能；目標；目標v2；目標v2擴充功能
 title: Adobe Target v2擴充功能
 description: Adobe Target v2擴充功能是Adobe Experience Platform中的個人化目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: d1d5ebbc-9093-42b0-8d88-58779df3ec89
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 12%
+source-wordcount: '455'
+ht-degree: 4%
 
 ---
 
-# Adobe Target v2擴充功能 {#adobe-target-v2-extension}
+# [!DNL Adobe Target] v2副檔名 {#adobe-target-v2-extension}
 
 ## 概觀 {#overview}
 
-Adobe Target 是 Adobe Experience Cloud 解決方案，提供您量身訂做和個人化客戶體驗所需的一切，以將您的網站和行動網站、應用程式、社交媒體和其他數位通道的營收最大化。
+[!DNL Adobe Target]為[!DNL Adobe Experience Cloud]解決方案，提供一切所需工具，讓您量身訂造及個人化您的客戶體驗，藉此為您的網頁以及行動網站、應用程式、社群媒體和其他數位頻道創造最高的收入。
 
-Adobe Target v2是Adobe Experience Platform中的個人化擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html)上的擴充功能頁面。
+[!DNL Adobe Target] v2是[!DNL Adobe Experience Platform]中的個人化擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html)上的擴充功能頁面。
 
 此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
@@ -26,11 +26,11 @@ Adobe Target v2是Adobe Experience Platform中的個人化擴充功能。 如需
 
 此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform]中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe Experience Cloud]個客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
-若要安裝Adobe Target v2擴充功能：
+若要安裝[!DNL Adobe Target] v2擴充功能：
 
 在[Experience Platform介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 

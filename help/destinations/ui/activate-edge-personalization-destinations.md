@@ -3,9 +3,9 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1854'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/edge-segmentation.md)搭配[edge destinations](/help/destinations/destination-types.md#edge-personalization-destinations)讓客戶能夠即時建立並鎖定大規模對象。 此功能可協助您設定相同頁面和下一頁個人化使用案例。
+[!DNL Adobe Experience Platform]會搭配使用[edge segmentation](../../segmentation/methods/edge-segmentation.md)與[edge destinations](/help/destinations/destination-types.md#edge-personalization-destinations)，讓客戶即時建立並鎖定大規模對象。 此功能可協助您設定相同頁面和下一頁個人化使用案例。
 
-邊緣目的地的範例是[Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md)和[自訂個人化](../../destinations/catalog/personalization/custom-personalization.md)連線。
+邊緣目的地的範例為[[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md)和[自訂個人化](../../destinations/catalog/personalization/custom-personalization.md)連線。
 
 >[!NOTE]
 >
->當[使用資料流ID設定Adobe Target連線](../catalog/personalization/adobe-target-connection.md) *而非*&#x200B;時，不支援本文中所述的使用案例。 在沒有資料流的情況下，僅支援下一次工作階段個人化使用案例。
+>當[使用資料流ID設定 [!DNL Adobe Target] 連線](../catalog/personalization/adobe-target-connection.md) *（不含*）時，不支援本文中描述的使用案例。 在沒有資料流的情況下，僅支援下一次工作階段個人化使用案例。
 
 >[!IMPORTANT]
 >
@@ -31,27 +31,27 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 > 
 > 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-本文說明在Adobe Experience Platform邊緣目的地啟用對象所需的工作流程。 在搭配[邊緣區段](../../segmentation/methods/edge-segmentation.md)和選用的[設定檔屬性對應](#mapping)一起使用時，這些目的地會在您的網頁和行動屬性上啟用相同頁面和下一頁個人化使用案例。
+本文說明在[!DNL Adobe Experience Platform]邊緣目的地啟用對象所需的工作流程。 在搭配[邊緣區段](../../segmentation/methods/edge-segmentation.md)和選用的[設定檔屬性對應](#mapping)一起使用時，這些目的地會在您的網頁和行動屬性上啟用相同頁面和下一頁個人化使用案例。
 
-如需如何設定Adobe Target連線以進行Edge Personalization的簡短概覽，請觀看下方的影片。
+如需如何設定Edge個人化[!DNL Adobe Target]連線的簡短概觀，請觀看下方的影片。
 
 >[!NOTE]
 >
 >Experience Platform使用者介面經常更新，自從錄製此影片後，可能已經變更。 如需最新資訊，請參閱以下章節所述的設定步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3449804/?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
-如需如何將對象和設定檔屬性共用至Adobe Target和自訂個人化目的地的簡短概觀，請觀看以下影片。
+如需如何將對象和設定檔屬性共用至[!DNL Adobe Target]和自訂個人化目的地的簡短概觀，請觀看以下影片。
 
->[!VIDEO](https://video.tv.adobe.com/v/3447366/?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## 使用案例 {#use-cases}
 
-使用Adobe個人化解決方案（例如Adobe Target）或您自己的個人化合作夥伴平台（例如，[!DNL Optimizely]、[!DNL Pega]），以及專屬系統（例如內部CMS），透過[自訂Personalization](../catalog/personalization/custom-personalization.md)目的地提供更深入的客戶個人化體驗。 同時利用Experience Platform Edge Network資料收集和細分功能。
+使用Adobe個人化解決方案（例如[!DNL Adobe Target]）或您自己的個人化合作夥伴平台（例如[!DNL Optimizely]、[!DNL Pega]），以及專屬系統（例如內部CMS），透過[自訂Personalization](../catalog/personalization/custom-personalization.md)目的地提供更深入的客戶個人化體驗。 同時利用Experience Platform Edge Network資料收集和細分功能。
 
 下述使用案例包含網站個人化及鎖定網站上的目標廣告。
 
-若要啟用這些使用案例，客戶需要以快速、簡化的方式從Experience Platform擷取對象和設定檔屬性資訊，並將此資訊傳送至Experience Platform UI中的[Adobe Target](../catalog/personalization/adobe-target-connection.md)或[自訂Personalization](../catalog/personalization/custom-personalization.md)連線。
+若要啟用這些使用案例，客戶需要以快速、簡化的方式從Experience Platform擷取對象和設定檔屬性資訊，並將此資訊傳送至Experience Platform UI中的[[!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md)或[自訂Personalization](../catalog/personalization/custom-personalization.md)連線。
 
 ### 同一頁面的個人化 {#same-page}
 
@@ -69,7 +69,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 ### 個人化首頁橫幅 {#home-page-banner}
 
-一家住家租賃和銷售公司想要根據Adobe Experience Platform中的對象資格，以橫幅來個人化他們的首頁。 公司可以選取應該獲得個人化體驗的對象，並將這些對象傳送至Adobe Target，作為其Target選件的鎖定目標條件。
+一家住家租賃與銷售公司想要根據[!DNL Adobe Experience Platform]中的對象資格，以橫幅個人化他們的首頁。 公司可以選取哪些對象應該獲得個人化體驗，並將這些對象傳送給[!DNL Adobe Target]，作為其Target優惠方案的鎖定目標條件。
 
 ## 先決條件 {#prerequisites}
 
@@ -81,7 +81,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 >[!TIP]
 >
->從2024年4月發行版本開始，在[設定與Edge的連線](/help/destinations/catalog/personalization/adobe-target-connection.md)時，您不需要選取「Adobe Target分段」核取方塊。 在這種情況下，[下一個工作階段個人化](#next-session)是唯一可用的個人化使用案例。
+>從2024年4月發行版本開始，在[設定與 [!DNL Adobe Target]](/help/destinations/catalog/personalization/adobe-target-connection.md)的連線時，您不需要選取「Edge分段」核取方塊。 在這種情況下，[下一個工作階段個人化](#next-session)是唯一可用的個人化使用案例。
 
 ![Edge細分和Personalization目的地醒目提示的資料流設定！](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -111,7 +111,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/methods/ed
 
 根據您設定的目的地，請參閱下列文章以取得目的地特定先決條件及相關資訊：
 
-* [Adobe Target連線](../catalog/personalization/adobe-target-connection.md#parameters)
+* [[!DNL Adobe Target] 連線](../catalog/personalization/adobe-target-connection.md#parameters)
 * [自訂個人化連線](../catalog/personalization/custom-personalization.md#parameters)
 
 ## 選取您的目的地 {#select-destination}

@@ -3,22 +3,22 @@ title: 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 type: Tutorial
 description: 瞭解如何使用LiveRamp RampID從Adobe Experience Platform啟用對象至連線的電視和音訊目的地，以及其他整合。
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
 
 # 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 
-使用Adobe Real-Time CDP與[!DNL LiveRamp]的整合，將對象啟用至使用[[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)啟用的精選目的地清單，包括連線電視和音訊目的地，例如下列目的地。
+使用Adobe [!DNL Real-Time CDP]與[!DNL LiveRamp]的整合，將對象啟用至使用[!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html)啟用的精選目的地清單，包括連線電視和音訊目的地，例如下列目的地。
 
 >[!IMPORTANT]
 >
 >您不需要在Experience Platform介面中擷取或以任何方式使用LiveRamp RampID。
 >
-> 如官方[LiveRamp檔案](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers)所述，您可以從Real-Time CDP匯出身分識別，例如PII型識別碼、已知識別碼和自訂ID。 然後，這些身分會在啟動程式中與下游的[!DNL LiveRamp RampIDs]相符。
+> 如官方[!DNL Real-Time CDP]LiveRamp檔案[所述，您可以從](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers)匯出身分識別，例如PII型識別碼、已知識別碼和自訂ID。 然後，這些身分會在啟動程式中與下游的[!DNL LiveRamp RampIDs]相符。
 
 
 * [[!DNL 4C Insights]](#insights)
@@ -42,7 +42,7 @@ ht-degree: 0%
 * [[!DNL Teads]](#teads)
 * [[!DNL WB Discovery]](#wb-discovery)
 
-本文會說明直接從Real-Time CDP UI將受眾從Real-Time CDP啟動至上述目的地所需的工作流程。
+本文會說明直接從[!DNL Real-Time CDP] UI從[!DNL Real-Time CDP]啟動對象至上述目的地所需的工作流程。
 
 ## 啟用工作流程 {#workflow}
 
@@ -50,19 +50,19 @@ ht-degree: 0%
 
 ![圖表顯示透過LiveRamp將對象從Real-Time CDP啟用至已組織目的地的工作流程。](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
-首先，您將對象從Real-Time CDP匯出至[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md)目的地，格式為CSV檔案。
+首先，您以CSV檔案形式將對象從[!DNL Real-Time CDP]匯出至[[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md)目的地。
 
 匯出對象後，請使用[[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md)目的地啟用對象。
 
 >[!TIP]
 >
->此程式可讓您直接從Real-Time CDP UI啟用您的對象到目的地，例如[[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku)、[[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)等，而不需要登入您的[!DNL LiveRamp]帳戶以進行啟用。
+>此程式可讓您直接從[[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku) UI啟用您的對象到目的地，例如[[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)、[!DNL Real-Time CDP]等等，而不需要登入您的[!DNL LiveRamp]帳戶以進行啟用。
 
 ### 教學課程影片 {#video}
 
 觀看以下影片，瞭解本頁面所述工作流程的端對端說明。
 
->[!VIDEO](https://video.tv.adobe.com/v/3452669?captions=chi_hant)
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### 步驟1：透過[!DNL LiveRamp - Onboarding]目的地，將您的對象從Experience Platform傳送至LiveRamp {#onboarding}
 

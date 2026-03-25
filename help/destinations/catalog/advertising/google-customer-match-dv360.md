@@ -3,9 +3,9 @@ title: Google Customer Match +顯示器和視訊360連線
 description: 透過Google Customer Match + Display & Video 360目的地聯結器，您可以使用Experience Platform的線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物、Gmail和YouTube）聯絡並重新與客戶互動。
 badge: label="有限可用性" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2442'
 ht-degree: 5%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 5%
 >
 >**Google Customer Match + Display &amp; Video 360聯結器可用性有限**<br>&#x200B;隨著我們與Google整合的整個成熟度生命週期，我們看到資料指出實作中的弱點，需要修正才能更廣泛地採用。 基於這些考量，Adobe已將此目的地的可見度降低為有限數量的客戶。 我們正在與Google進行主動式對話，以改善產品體驗。 我們明白這可能是一個令人失望的消息，但我們相信這是確保客戶獲得高品質、可靠體驗的負責任方法。</br>
 
-使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail]&#x200B;[!DNL Google Display Network]清單。
+使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail][!DNL Google Display Network]清單。
 
-某些Google整合的第三方（例如Adobe Real-Time CDP）可以使用[!DNL Google Audience Partner API]直接在客戶的[!DNL Customer Match]帳戶中建立[!DNL Display & Video 360]對象。
+某些Google整合的第三方（例如Adobe [!DNL Real-Time CDP]）可以使用[!DNL Google Audience Partner API]直接在客戶的[!DNL Customer Match]帳戶中建立[!DNL Display & Video 360]對象。
 
 透過新推出的能夠利用[!DNL Customer Matched]中的[!DNL Display & Video 360]個對象的功能，您現在能夠鎖定擴充的詳細目錄來源名冊中的對象。
 
@@ -34,7 +34,7 @@ ht-degree: 5%
 ><br/>
 >已購買Adobe Privacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶，不必採取任何動作。
 ><br/>
->未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，以篩選出未同意的設定檔，繼續使用現有的Real-Time CDP Google目的地而不中斷。
+>未購買Adobe Privacy &amp; Security Shield的客戶必須使用[區段產生器](../../../segmentation/home.md#segment-definitions)中的[區段定義](../../../segmentation/ui/segment-builder.md)功能，以篩選出未同意的設定檔，繼續使用現有的[!DNL Real-Time CDP] Google目的地而不中斷。
 
 ## 使用此目的地的時間 {#when-to-use}
 
@@ -46,7 +46,7 @@ ht-degree: 5%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解如何及何時使用此目的地，以下是Adobe Experience Platform客戶可以使用此功能解決的範例使用案例。
+為了協助您更清楚瞭解如何及何時使用此目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此功能解決的範例使用案例。
 
 ### 使用案例#1 {#use-case-1}
 
@@ -66,8 +66,8 @@ ht-degree: 5%
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| phone_sha256_e.164 | E164格式的電話號碼，使用SHA256演演算法雜湊 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| phone_sha256_e.164 | E164格式的電話號碼，使用SHA256演演算法雜湊 | [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電話號碼。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，分別使用適當的名稱空間來使用純文字和雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電子郵件地址。 請依照[識別碼符合需求](#id-matching-requirements-id-matching-requirements)區段中的指示操作，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ ht-degree: 5%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ ht-degree: 5%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -149,7 +149,7 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 [!DNL Google]要求未明確傳送任何個人識別資訊(PII)。 因此，啟用至[!DNL Google Customer Match]的對象必須以&#x200B;*雜湊*&#x200B;識別碼作為輸入資料，例如雜湊電子郵件地址或電話號碼。
 
-根據您擷取至Adobe Experience Platform的ID型別，您必須遵守其對應的要求。
+根據您擷取至[!DNL Adobe Experience Platform]的ID型別，您必須遵守其對應的要求。
 
 ### 電話號碼雜湊需求 {#phone-number-hashing-requirements}
 
@@ -164,7 +164,7 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 ### 電子郵件雜湊需求 {#hashing-requirements}
 
-您可以將電子郵件地址雜湊後再擷取至Adobe Experience Platform，或在Experience Platform中清楚使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
+您可以將電子郵件地址雜湊再擷取至[!DNL Adobe Experience Platform]，或在Experience Platform中清除使用電子郵件地址，並在啟用時將[!DNL Experience Platform]個電子郵件地址雜湊。
 
 如需Google雜湊需求和其他啟用限制的詳細資訊，請參閱Google檔案中的下列章節：
 
@@ -190,7 +190,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## 連線到目標 {#connect}
 
@@ -263,7 +263,7 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 
 ## 監視目的地 {#monitor-destination}
 
-連線到目的地並建立目的地資料流後，您可以使用Real-Time CDP中的[監視功能](/help/dataflows/ui/monitor-destinations.md)來取得每次資料流執行中在您的目的地啟用的設定檔記錄的廣泛資訊。
+連線到目的地並建立目的地資料流後，您可以使用[中的](/help/dataflows/ui/monitor-destinations.md)監視功能[!DNL Real-Time CDP]來取得有關每個資料流執行中啟用到您目的地的設定檔記錄的廣泛資訊。
 
 [!DNL Google Customer Match + Display & Video 360]連線的監視資訊包括與每個資料流和資料流執行中的啟用、排除和失敗身分相關的對象層級資訊。 [閱讀更多](/help/dataflows/ui/monitor-destinations.md#segment-level-view)有關此功能的資訊。
 
@@ -273,7 +273,7 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 
 ## 資料治理 {#data-governance}
 
-Experience Platform中的某些目的地對於傳送到目的地平台或從目的地平台接收的資料具有某些規則和義務。 您有責任瞭解您資料的限制與義務，以及如何在Adobe Experience Platform和目的地平台中使用該資料。 Adobe Experience Platform提供資料治理工具，協助您管理其中一些資料使用義務。 [進一步瞭解](../../../data-governance/labels/overview.md)資料治理工具和原則。
+Experience Platform中的某些目的地對於傳送到目的地平台或從目的地平台接收的資料具有某些規則和義務。 您有責任瞭解您資料的限制與義務，以及您如何在[!DNL Adobe Experience Platform]和目的地平台中使用該資料。 [!DNL Adobe Experience Platform]提供資料治理工具，協助您管理其中一些資料使用義務。 [進一步瞭解](../../../data-governance/labels/overview.md)資料治理工具和原則。
 
 ## 疑難排解 {#troubleshooting}
 

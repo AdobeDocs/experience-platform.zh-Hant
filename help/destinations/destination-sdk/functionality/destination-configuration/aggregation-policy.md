@@ -2,9 +2,9 @@
 description: 瞭解如何設定彙總原則，以判斷應如何分組和批次傳送目的地的HTTP請求。
 title: 彙總原則
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1233'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -96,7 +96,7 @@ ht-degree: 2%
 
 ## 可設定的彙總 {#configurable-aggregation}
 
-如果您偏好以大型批次進行，且同一呼叫具有數千個設定檔，可設定的彙總將最有效果。 此選項也可讓您根據複雜的彙總規則來彙總匯出的設定檔。
+如果您偏好以大型批次進行，且同一呼叫具有數千個設定檔，可設定的彙總將最有效果。 此選項也可讓您根據複雜的彙總規則彙總匯出的設定檔。
 
 以下設定範例顯示可設定的彙總設定。 如需最大努力彙總的範例，請參閱[最大努力彙總](#best-effort-aggregation)區段。 下表記錄適用於可設定之彙總的引數。
 

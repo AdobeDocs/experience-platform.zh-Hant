@@ -2,7 +2,7 @@
 description: 此頁面是用來建立認證設定Adobe Experience Platform Destination SDK的API呼叫範例。
 title: 建立認證設定
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 7%
@@ -31,7 +31,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;**&#x200B;**。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都會區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 認證API操作快速入門 {#get-started}
 

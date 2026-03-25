@@ -2,9 +2,9 @@
 title: 檔案自助範本//將取代為您的目的地名稱
 description: 使用此範本為Adobe Experience Platform目錄中的目的地建立公開檔案。//以總覽區段中的段落取代
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1710'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用&#x200B;*YourDestination*&#x200B;目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為了協助您更清楚瞭解您應如何及何時使用&#x200B;*YourDestination*&#x200B;目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此目的地解決的範例使用案例。
 
 ### 使用案例#1 {#use-case-1}
 
@@ -42,11 +42,11 @@ ht-degree: 2%
 
 *若為社交網路平台：*
 
-*運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服飾品牌可以從自己的CRM擷取電子郵件地址至Adobe Experience Platform、從自己的離線資料建立對象，並將這些對象傳送至YourDestination，以便在客戶的社群媒體摘要中顯示廣告。*
+*運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服裝品牌可以從自己的CRM擷取電子郵件地址至[!DNL Adobe Experience Platform]、從自己的離線資料建立對象，並將這些對象傳送至YourDestination，以便在客戶的社群媒體摘要中顯示廣告。*
 
 ## 先決條件 {#prerequisites}
 
-*在本節中新增客戶在Adobe Experience Platform使用者介面中開始設定目的地之前需要注意的任何相關資訊。 這可能約：*
+*在本節新增客戶在[!DNL Adobe Experience Platform]使用者介面中開始設定目的地之前需要注意的任何相關資訊。 這可能約：*
 
 * *需要新增到允許清單*
 * *電子郵件雜湊需求*
@@ -65,9 +65,9 @@ ht-degree: 2%
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「[!DNL Adobe Experience Cloud] ID」、「[!DNL Adobe Experience Platform] ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | [!DNL Adobe Experience Platform]同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL Apply transformation]**&#x200B;選項，讓[!DNL Experience Platform]在啟用時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 
 {style="table-layout:auto"}
@@ -81,7 +81,7 @@ ht-degree: 2%
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 在其他Experience Platform應用程式（例如Adobe Journey Optimizer）中產生的對象， </li><li> 及更多內容。 </li></ul> |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ ht-degree: 2%
 | [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 是 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 是 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
-| [資料集匯出](/help/catalog/datasets/overview.md) | 是 | 儲存在Adobe Experience Platform Data Lake中的結構化資料集合。 | 報告、資料科學工作流程 |
+| [資料集匯出](/help/catalog/datasets/overview.md) | 是 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
@@ -174,7 +174,7 @@ ht-degree: 2%
 
 *新增有關資料如何匯出至目的地的段落。 這可協助客戶確保已正確與您的目的地整合。 例如，您可以提供類似以下的JSON範例。 或者，您可以從目的地介面提供熒幕擷取畫面與資訊，顯示客戶預期目標平台中會如何填入對象。*
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.com"
