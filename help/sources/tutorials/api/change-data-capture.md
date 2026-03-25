@@ -2,9 +2,9 @@
 title: 在API中啟用來源連線的變更資料擷取
 description: 瞭解如何在API中為來源連線啟用變更資料擷取
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: bd28d5be932823b8bf9c98280f97694ff221d76d
+source-git-commit: 74743d7dc93e2ba291481ad11e923d28088c4903
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1294'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->現在當您在連線至VA6資料中心的Amazon Web Services (AWS)上執行Adobe Experience Platform時，可以對[!DNL Amazon S3]和[!DNL Data Landing Zone]來源使用變更資料擷取。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
+>* 下列來源支援變更資料擷取： [!DNL Amazon S3]、[!DNL Data Landing Zone]、[!DNL Marketo Engage]、[!DNL Microsoft Dynamics]和[!DNL Salesforce]。
+>
+>* 在VA6資料中心的Amazon Web Services (AWS)上使用Adobe Experience Platform時，您也可以為[!DNL Amazon S3]和[!DNL Data Landing Zone]來源啟用變更資料擷取。 請注意，AWS上的Experience Platform目前僅供有限對象使用。 如需基礎架構支援的詳細資訊，請參閱[Experience Platform多雲端總覽](../../../landing/multi-cloud.md)。
 
 在Adobe Experience Platform來源中使用變更資料擷取，讓您的來源和目的地系統近乎即時保持同步。
 
@@ -76,7 +78,7 @@ Data Mirror使用關聯式結構描述來擴充變更資料擷取及啟用進階
 
 >[!NOTE]
 >
->只有當您想要明確控制列層級變更行為時，檔案型來源(Amazon S3、Azure Blob、Google雲端儲存空間、SFTP)才需要`_change_request_type`欄。 對於具有原生CDC功能的資料庫來源，變更操作會透過CDC匯出設定自動處理。 根據預設，檔案式擷取會假設更新插入作業 — 如果您想要在檔案上傳中指定刪除作業，則只需新增此欄。
+>只有當您想要明確控制列層級變更行為時，檔案型來源（Amazon S3、Azure Blob、Google雲端儲存空間、SFTP）才需要`_change_request_type`欄。 對於具有原生CDC功能的資料庫來源，變更操作會透過CDC匯出設定自動處理。 根據預設，檔案式擷取會假設更新插入作業 — 如果您想要在檔案上傳中指定刪除作業，則只需新增此欄。
 
 >[!IMPORTANT]
 >
@@ -169,7 +171,7 @@ set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 若要在您的[!DNL Google BigQuery]來源連線中啟用變更記錄，請瀏覽至[!DNL Google BigQuery]主控台中的[!DNL Google Cloud]頁面，並將`enable_change_history`設定為`TRUE`。 此屬性可啟用資料表變更記錄。
 
-如需詳細資訊，請閱讀[&#x200B; [!DNL GoogleSQL]中](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)資料定義語言陳述式的指南。
+如需詳細資訊，請閱讀[ [!DNL GoogleSQL]中](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list)資料定義語言陳述式的指南。
 
 請閱讀下列檔案，以瞭解如何為[!DNL Google BigQuery]來源連線啟用變更資料擷取的步驟：
 
