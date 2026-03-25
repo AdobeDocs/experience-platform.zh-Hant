@@ -2,10 +2,10 @@
 title: Brand Concierge 設定
 description: 設定Brand Concierge聊天的工作階段持續性和串流逾時。
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 16%
+source-wordcount: '190'
+ht-degree: 13%
 
 ---
 
@@ -37,3 +37,7 @@ ht-degree: 16%
 ## [!UICONTROL Stream timeout (seconds)]
 
 觸發逾時錯誤前，等候交談資料流區塊的最長時間（以秒為單位）。 預設值為`10`秒。
+
+## [!UICONTROL Collect sources]
+
+如果使用者從Brand Concierge對話中的連結導覽至頁面，此核取方塊會收集來源。 預設為未勾選。 如果啟用，程式庫會檢查查詢字串引數`adobe_brand_concierge_source`，並將其值填入`xdm.channel.referringSource`。

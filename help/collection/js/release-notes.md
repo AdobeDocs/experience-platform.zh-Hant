@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
+source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2751'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 2%
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.32.0版 — 2026年3月23日
+
+- 共用核心公用程式現在會以獨立npm套件([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core))發佈，以供擴充功能和整合使用。
+- 當`xdm.placeContext.ianaTimezone`包含在`placeContext`設定變數中時，現在會在XDM欄位[`context`](/help/collection/js/commands/configure/context.md)中包含IANA時區。
+- 品牌接待：修正[`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md)停用時的工作階段ID問題。
 
 ## 2.31.1版 — 2026年2月11日
 
@@ -34,8 +40,6 @@ ht-degree: 2%
 **修正和改良**
 
 - `aria-label`和`name`屬性現在在[自動連結集合](commands/configure/clickcollectionenabled.md)中已被考慮。
-- 修正整合身分對應時可能出現的競爭條件。
-- 修正`streamingMedia`中未包含時間戳記的問題。
 - 修正自訂程式碼動作僅執行一次的問題。
 
 ## 2.30.0版 — 2025年9月24日
@@ -380,7 +384,7 @@ ht-degree: 2%
 - 錯誤修正： `sendBeacon`設為`documentUnloading`或自動追蹤連結點選時，未使用`true`。
 - 錯誤修正：如果錨點元素包含HTML內容，系統不會自動追蹤連結。
 - 錯誤修正：某些包含唯讀`message`屬性的瀏覽器錯誤未適當處理，導致向客戶公開不同的錯誤。
-- 錯誤修正：如果iframe的SDKHTML頁面來自與上層視窗的HTML頁面不同的子網域，則在iframe內執行iframe會導致錯誤。
+- 錯誤修正：如果iframe的SDK頁面來自與上層視窗的HTML頁面不同的子網域，則在iframe內執行iframe會導致錯誤。
 
 ## 2.2.0版 — 2020年10月
 

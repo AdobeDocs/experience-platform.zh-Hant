@@ -2,17 +2,22 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '3165'
+source-wordcount: '3230'
 ht-degree: 20%
 
 ---
 
 
-# Web SDK擴充功能發行說明
+# Web SDK標籤擴充功能發行說明
 
-本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Experience Platform Web SDK發行說明](/help/collection/js/release-notes.md)。
+本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Adobe Experience Platform Web SDK發行說明](/help/collection/js/release-notes.md)。
+
+## 2.34.2版 — 2026年3月23日
+
+- 包含[2.32.0](/help/collection/js/release-notes.md)版的Adobe Experience Platform Web SDK。
+- 修正複製標籤屬性的特定問題，其中更新變數動作可能保留原始屬性中資料元素的參照。 若要修復現有的複製屬性，請開啟並重新儲存每個受影響的「更新變數」動作及其規則。 在重新儲存之前，請避免重新命名複製的資料元素。
 
 ## 2.34.1版 — 2026年2月11日
 

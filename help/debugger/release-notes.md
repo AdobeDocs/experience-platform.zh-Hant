@@ -4,24 +4,24 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 91%
+source-wordcount: '846'
+ht-degree: 89%
 
 ---
 
 # Adobe Experience Platform Debugger 發行說明
 
-## 1.6.4版 — 2025年5月6日
+## 1.6.5版 — 2026年3月24日
 
-### 修正和改良
+* 修正無法在作用中Assurance工作階段傳送AppMeasurement事件的問題。
+
+## 1.6.4版 — 2025年5月6日
 
 * 修正無法登入的問題。
 
 ## 1.6.3版 — 2025年4月30日
-
-### 修正和改良
 
 * 修正Debugger無法運作DTM和Tags功能的問題。
 * 修正Analytics處理後點選未出現在記錄中的問題。
@@ -29,24 +29,15 @@ ht-degree: 91%
 
 ## 1.6.2版 — 2024年10月1日
 
-### 修正和改良
-
 * 修正Debugger對所有CSP錯誤過於敏感的問題
 
 ## 版本 1.6.1 - 2024 年 7 月 25 日
-
-### 修正和改良
 
 * 已修正讓使用者無法將新標記嵌入程式碼新增至沒有程式碼頁面的問題。
 
 ## 版本 1.6.0 - 2024 年 7 月 11 日
 
-### 新功能
-
 * 允許使用者選擇加入/退出技術和個人資料彙集。
-
-### 修正和改良
-
 * 修正 Firefox 指令碼插入和隱私權政策連結。
 * 擷取遺失的 Analytics 請求。
 * 修正含大量複雜主控台訊息的頁面損壞問題。
@@ -54,19 +45,12 @@ ht-degree: 91%
 
 ## 版本 1.5.4 - 2023 年 12 月 19 日
 
-### 修正和改良
-
 * 修正設定未保留的問題。
 * 修正查看 Analytics 處理後點閱時導致 Debugger 損壞的問題。
 
 ## 版本 1.5.3 - 2023 年 12 月 6 日
 
-### 新功能
-
 * 新增「開啟 Debugger 時鎖定活動標記」的設定。
-
-### 修正和改良
-
 * 修正私人網域上遺失 Analytics 請求的問題。
 * 修正 Analytics 請求表中 Activity Map 資料遺失的問題。
 * 修正查看 Target 追踨會導致當機的問題。
@@ -76,13 +60,9 @@ ht-degree: 91%
 
 (僅限 Firefox)
 
-### 修正和改良
-
 * 更新檔案所屬的組織。
 
 ## 版本 1.5.1 - 2023 年 11 月 2 日
-
-### 修正和改良
 
 * 修正 Analytics 事件被忽略或重複的問題。
 * 修正超出最大狀態儲存大小的問題。
@@ -90,12 +70,7 @@ ht-degree: 91%
 
 ## 版本 1.5.0 - 2023 年 10 月 19 日
 
-### 新功能
-
 * 在標記摘要和記錄中顯示至屬性、環境和規則的連結。
-
-### 修正和改良
-
 * 修正標記摘要資料未發送的問題。
 * 修正 Assurance 工作階段會出現 CORS 錯誤的問題
 * 修正導致 Target 追踨無法出現的問題。

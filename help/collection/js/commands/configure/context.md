@@ -2,9 +2,9 @@
 title: 上下文
 description: 自動收集裝置、環境或位置資料。
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1017'
 ht-degree: 5%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 5%
 | 州/省 | 一般使用者的省/市/自治區代碼。 | `xdm.placeContext.geo.stateProvince` | `CA` |
 | 緯度 | 一般使用者位置的緯度。 | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
 | 經度 | 一般使用者位置的經度。 | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
+| iana時區 | 一般使用者的IANA時區。 包含在程式庫2.32.0版或更新版本中。 | `xdm.placeContext.ianaTimezone` | `America/Denver` |
 
 ### 時間戳記
 
@@ -97,7 +98,7 @@ ht-degree: 5%
 
 ### 單次Analytics反向連結 {#one-time-analytics-referrer}
 
-`"oneTimeAnalyticsReferrer"`關鍵字只會在頁面的第一個非決策`sendEvent`呼叫上將反向連結值傳送到Adobe Analytics。 此內容關鍵字的主要使用案例是防止Adobe Analytics中的[Referrer](https://experienceleague.adobe.com/zh-hant/docs/analytics/components/dimensions/referrer)維度被主要用於Analytics和Target整合的點選膨脹。
+`"oneTimeAnalyticsReferrer"`關鍵字只會在頁面的第一個非決策`sendEvent`呼叫上將反向連結值傳送到Adobe Analytics。 此內容關鍵字的主要使用案例是防止Adobe Analytics中的[Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer)維度被主要用於Analytics和Target整合的點選膨脹。
 
 如果指定的`sendEvent`命令使用決定事件型別(`decisioning.propositionFetch`、`decisioning.propositionDisplay`、`decisioning.propositionInteract`)，則計算頁面上的前`sendEvent`個時會忽略它。 如果頁面上的反向連結值變更，並且觸發另一個`sendEvent`，則新的反向連結值會包含在承載中。 此條件可讓此功能搭配單頁應用程式使用。
 
