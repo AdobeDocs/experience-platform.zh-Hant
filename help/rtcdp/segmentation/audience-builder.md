@@ -2,9 +2,9 @@
 title: Real-Time Customer Data Platform中的對象產生器
 description: 瞭解如何使用Real-Time Customer Data Platform中的對象產生器建立對象。
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 7%
@@ -64,7 +64,7 @@ ht-degree: 7%
 
 或者，您可以檢視資料的分佈，其中包含顯示的最小值、平均值（平均值）和最大值。
 
-![顯示屬性統計資料的彈出視窗，包括最小值、平均值和最大值。](../assets/segmentation/audience-builder/statistics.png)
+![顯示屬性統計資料的彈出視窗，包括最小值、平均值和最大值。](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 如果屬性由少於25%的帳戶填入，則會改為顯示![資料通知圖示](../../images/icons/data-notice.png)。 無論如何，屬性都會顯示相同的摘要資料。
 
@@ -78,7 +78,7 @@ ht-degree: 7%
 
 此外，屬性也有&#x200B;**[!UICONTROL Ingestion Type]**。 內嵌型別可讓您知道資料的來源，而且可以是下列其中一個值： **[!UICONTROL Batch]**、**[!UICONTROL Streaming/Edge]**&#x200B;或&#x200B;**[!UICONTROL No Data Ingested]**。
 
-![會顯示屬性的擷取型別。](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+![會顯示屬性的擷取型別。](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
 如需對象產生器內屬性的詳細指南，請參閱[對象產生器使用手冊](../../segmentation/ui/segment-builder.md){target="_blank"}。
 

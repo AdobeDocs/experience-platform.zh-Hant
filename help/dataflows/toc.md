@@ -4,10 +4,10 @@ user-guide-title: 資料流指南
 user-guide-description: 了解資料流以及如何跨不同服務設定資料流。
 feature: Dataflows
 role: Developer
-source-git-commit: 13fc8603cb490ff59e76c18cbb03b68488ebd005
+source-git-commit: ba32ad207654709e4af6ed1ea0dd4d0cf3748486
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 22%
+source-wordcount: '75'
+ht-degree: 21%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 22%
    - [監視目的地的資料流](./ui/monitor-destinations.md)
    - [監控資料流以進行串流設定檔擷取](./ui/monitor-streaming-profile.md)
    - [監視串流細分的資料流](./ui/monitor-streaming-audiences.md)
+   - [監視邊緣的資料串流](./ui/monitor-edge.md)
    - B2B監視 {#b2b}
       - [監視設定檔擴充工作](./ui/b2b/monitor-profile-enrichment.md)
 - [流程服務API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
