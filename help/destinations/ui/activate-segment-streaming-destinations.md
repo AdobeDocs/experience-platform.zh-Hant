@@ -3,10 +3,10 @@ title: 啟用串流目的地的受眾資料
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的受眾對應至串流目的地來啟用這些受眾。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 3%
+source-wordcount: '1115'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-本文說明在Adobe Experience Platform串流目的地啟用對象所需的工作流程。
+本文說明在[!DNL Adobe Experience Platform]串流目的地中啟用對象所需的工作流程。
 
 ## 先決條件 {#prerequisites}
 
@@ -102,9 +102,9 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="套用轉換 "
->abstract="使用未雜湊的來源欄位時勾選此選項，讓 Adobe Experience Platform 在啟動時自動將它們雜湊。"
+>abstract="使用未雜湊的來源欄位時，請核取此選項，以便在啟用時自動雜湊這些欄位[!DNL Adobe Experience Platform]。"
 
-將未雜湊的來源屬性對應到目的地預期雜湊的目標屬性時（例如： `email_lc_sha256`或`phone_sha256`），請核取&#x200B;**套用轉換**&#x200B;選項，讓Adobe Experience Platform在啟用時自動雜湊來源屬性。
+將未雜湊的來源屬性對應到目的地預期雜湊的目標屬性時（例如： `email_lc_sha256`或`phone_sha256`），請核取&#x200B;**套用轉換**&#x200B;選項，讓[!DNL Adobe Experience Platform]在啟用時自動雜湊來源屬性。
 
 ![套用識別對應步驟中反白顯示的轉換控制項。](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
@@ -172,5 +172,5 @@ For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL 
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
+>The integration between [!DNL Adobe Experience Platform] and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
 -->
