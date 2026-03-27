@@ -6,10 +6,10 @@ badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 40a9ea68fd855b2f0d92a4fa336f1b68142f0649
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 16%
+source-wordcount: '1511'
+ht-degree: 14%
 
 ---
 
@@ -25,15 +25,15 @@ ht-degree: 16%
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解如何使用[!DNL Microsoft Ads Customer Match]目的地，以下是[!DNL Adobe Experience Platform]客戶可以使用此功能解決的範例使用案例。
+為協助您更清楚瞭解如何使用[!DNL Microsoft Ads Customer Match]目的地，以下是Adobe Experience Platform客戶可以使用此功能解決的範例使用案例。
 
-### 使用案例#1 {#use-case-1}
+### 透過個人化優惠重新鎖定現有客戶 {#use-case-1}
 
 電子商務品牌想要透過[!DNL Microsoft Search]和[!DNL Microsoft Audience Network]觸及現有客戶，以根據客戶過去的購買和瀏覽記錄來個人化優惠方案。 品牌可以從自己的CRM將電子郵件地址擷取到Experience Platform，從自己的離線資料建立對象，並將這些對象傳送到[!DNL Microsoft Ads Customer Match]以用於搜尋和對象廣告，最佳化其廣告支出。
 
-### 使用案例#2 {#use-case-2}
+### 向現有客戶促銷新產品 {#use-case-2}
 
-一家技術公司推出了一項新產品。 為了推廣此新產品，他們想要提高先前購買過相關產品的客戶的認知度。 他們使用電子郵件地址作為識別碼，從CRM資料庫上傳電子郵件地址到Experience Platform。 建立受眾是根據擁有相關產品的客戶而定。 這些對象會傳送至[!DNL Microsoft Ads Customer Match]，這樣公司就能鎖定整個[!DNL Microsoft Advertising Network]中的目前客戶和類似客戶。
+一家技術公司已推出新產品，並且想要提高先前購買相關產品的客戶的認知度。 他們使用電子郵件地址作為識別碼，從CRM資料庫上傳電子郵件地址到Experience Platform。 建立受眾是根據擁有相關產品的客戶而定。 這些對象會傳送至[!DNL Microsoft Ads Customer Match]，以便公司可以跨[!DNL Microsoft Advertising Network]鎖定目前客戶和類似的客戶。
 
 ## 支援的身分 {#supported-identities}
 
@@ -41,7 +41,7 @@ ht-degree: 16%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| `email` | 純文字電子郵件地址 | [!DNL Microsoft Ads Customer Match]連線只支援純文字電子郵件地址。 Experience Platform會在匯出時自動雜湊電子郵件地址，以符合Microsoft的需求。 |
+| `email` | 純文字電子郵件地址 | 僅支援純文字（未雜湊）電子郵件地址做為對應步驟中的&#x200B;**來源**&#x200B;欄位。 不支援預先雜湊來源欄位。 Experience Platform一律會先雜湊電子郵件地址，再將其匯出至[!DNL Microsoft Ads]。 |
 
 {style="table-layout:auto"}
 
@@ -85,6 +85,20 @@ ht-degree: 16%
 ### 接受客戶比對條款與條件 {#accept-customer-match-terms}
 
 您必須先在您的[!DNL Microsoft Advertising]帳戶中手動建立客戶比對清單，才能透過此目的地啟用對象。 接受客戶比對條款與條件時，需要這種初始手動建立，以便自動建立從Experience Platform傳送的對象。 若未完成此步驟，在啟用對象時可能會導致錯誤。
+
+### 工作帳戶(MS Entra) IT管理員核准 {#work-account-admin-approval}
+
+如果您使用Microsoft工作帳戶（也稱為Microsoft Entra帳戶）進行驗證，則組織的IT管理員可能需要先授權核准，您才能連線至[!DNL Microsoft Advertising]。
+
+當您嘗試使用工作帳戶進行驗證時，您可能會被重新導向到&#x200B;**需要核准**&#x200B;頁面。 此頁面要求連結應用程式的理由，並列出必要的許可權，包括`ads.manage`。 提交請求，您的IT管理員即會收到通知，要求您進行稽核。 您也會收到已提交請求的確認電子郵件。
+
+一旦IT管理員在Azure入口網站核准請求，您就可以返回Experience Platform並使用您的工作帳戶進行驗證。 如需指引，請參閱Microsoft檔案：
+
+* [檢閱管理員同意要求並採取行動](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [設定管理員同意工作流程](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [設定使用者如何同意應用程式](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+
+如果IT管理員尚未核准要求，驗證將會失敗，並出現下列錯誤： `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
 
 ### 帳戶設定 {#account-configuration}
 
@@ -135,7 +149,7 @@ ht-degree: 16%
 * **[!UICONTROL Membership Duration]**：使用者保留在客戶比對清單中的天數。 可接受的值介於 1 至 390 天之間。
 * **[!UICONTROL Customer Match List Availability]**：選取客戶比對清單的可用性。 在[!DNL Microsoft Advertising]中，客戶ID下可以有多個客戶帳戶ID （廣告商帳戶）。 選取&#x200B;**[!UICONTROL Customer ID (all advertising accounts)]**&#x200B;讓您的客戶ID下的所有廣告商帳戶都能使用清單，或選取&#x200B;**[!UICONTROL Customer Account ID (single advertising account)]**&#x200B;將清單限製為您在上方提供的特定客戶帳戶ID。 如需詳細資訊，請參閱[Microsoft Advertising檔案](https://help.ads.microsoft.com/apex/index/3/zh-tw/56727)。
 
-![顯示Microsoft Ads客戶比對目的地之目的地詳細資訊欄位的Platform UI影像。](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+  ![顯示Microsoft Ads客戶比對目的地之目的地詳細資訊欄位的Platform UI影像。](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
 ### 啟用警示 {#enable-alerts}
 
@@ -161,7 +175,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->您必須使用非雜湊（純文字）來源欄位。 請勿使用預先雜湊的來源身分識別，例如`Emails (SHA256, lowercased)`。 Experience Platform會在匯出時自動雜湊電子郵件地址，以符合Microsoft的需求。
+>您必須將純文字（未雜湊）電子郵件地址對應為&#x200B;**來源**&#x200B;欄位。 不支援預先雜湊的來源身分識別，例如`Emails (SHA256, lowercased)`。 Experience Platform一律會先雜湊電子郵件地址，再將其匯出至[!DNL Microsoft Ads]。
 
 ![顯示對應步驟的UI影像，其中IdentityMap電子郵件對應至身分識別電子郵件。](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 
