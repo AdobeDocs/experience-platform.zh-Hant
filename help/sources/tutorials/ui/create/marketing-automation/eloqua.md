@@ -1,9 +1,10 @@
 ---
 title: 在UI中將Oracle Eloqua (V2)連線至Experience Platform
 description: 瞭解如何在UI中將您的Oracle Eloqua帳戶連結至Experience Platform。
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1185'
 ht-degree: 1%
 
 ---
@@ -124,7 +125,6 @@ ht-degree: 1%
 >* **連絡人：** `C_DateModified`
 >* **帳戶：** `M_DateModified`
 >* **活動：** `CreatedAt`
->* **自訂物件：** `UpdatedAt`
 >* **行銷活動：** `updatedAt`
 
 對應完成後，您現在可以為資料流設定擷取排程。 將您的[!UICONTROL Frequency]設為`Once`以設定單次擷取執行。 對於增量擷取，您可以將[!UICONTROL Frequency]設定為`Hour`、`Day`或`Week`。 使用增量擷取時，您也必須設定[!UICONTROL Interval]以定義擷取執行之間發生的時間量。 例如，擷取頻率設為`Day`，而間隔設為`15`，表示您的資料流已排程每15天擷取一次資料。

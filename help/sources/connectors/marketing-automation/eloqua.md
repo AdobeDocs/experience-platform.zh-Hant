@@ -2,9 +2,10 @@
 title: Oracle Eloqua (V2) Source概觀
 description: 瞭解如何將Oracle Eloqua連結至Adobe Experience Platform。
 last-substantial-update: 2025-02-02T00:00:00Z
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+exl-id: f63beebd-920c-41dd-a924-61511135a234
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---
@@ -46,7 +47,7 @@ ht-degree: 2%
 
 瀏覽至&#x200B;**設定** > **平台擴充功能** > **應用程式雲端開發人員** > **建立應用程式**。 提供您應用程式的詳細資料，包括其名稱、說明、圖示和OAuth回呼URL。 完成時選取&#x200B;**儲存**。
 
-![&#x200B; Eloqua儀表板中的「應用程式開發人員」面板和「建立應用程式」按鈕。](../../images/tutorials/create/eloqua/create-app.png)
+![ Eloqua儀表板中的「應用程式開發人員」面板和「建立應用程式」按鈕。](../../images/tutorials/create/eloqua/create-app.png)
 
 | 屬性 | 說明 |
 | --- | --- |
@@ -102,7 +103,6 @@ ht-degree: 2%
 >- **連絡人：** `C_DateModified`
 >- **帳戶：** `M_DateModified`
 >- **活動：** `CreatedAt`
->- **自訂物件：** `UpdatedAt`
 >- **行銷活動：** `updatedAt`
 
 下表提供[!DNL Eloqua]來源欄位與Experience Platform中其對應的Experience Data Model (XDM)目的地欄位之間的詳細對應。 每一列概述轉換邏輯、欄位是否不可變，並提供其他附註以幫助您瞭解如何在Experience Platform中擷取和建構您的[!DNL Eloqua]資料。
@@ -131,7 +131,7 @@ ht-degree: 2%
 | `M_DateModified` | extSourceSystemAudit.lastUpdatedDate | |
 | `M_DateCreated` | extSourceSystemAudit.createdDate | |
 | `M_Industry1` | accountOrganization.industry | |
-| `iif(M_SFDCAccountID != null && M_SFDCAccountID != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", M_SFDCAccountID, "sourceKey", concat(M_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(M_MSCRMAccountID != null && M_MSCRMAccountID != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", M_MSCRMAccountID, "sourceKey", concat(M_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | extSourceSystemAudit.externalKey | 聯結器無法自動偵測您的CRM執行個體ID。 您必須手動將`${CRM_INSTANCE_ID}`取代為您的實際CRM執行個體ID (您的Salesforce或Dynamics執行個體ID)。 在內嵌期間，如果存在`M_SFDCAccountID`，聯結器將使用該值產生外部金鑰並附加`\@CRM_INSTANCE_ID.Salesforce`。 如果該欄位為空，聯結器將使用`M_MSCRMAccountID`並改為附加`\@CRM_INSTANCE_ID.Dynamics`。 如果兩個欄位都為空，此欄位將設定為Null。 |
+| `iif(M_SFDCAccountID != null && M_SFDCAccountID != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", M_SFDCAccountID, "sourceKey", concat(M_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(M_MSCRMAccountID != null && M_MSCRMAccountID != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", M_MSCRMAccountID, "sourceKey", concat(M_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | extSourceSystemAudit.externalKey | 聯結器無法自動偵測您的CRM執行個體ID。 您必須手動將`${CRM_INSTANCE_ID}`取代為您的實際CRM執行個體ID （您的Salesforce或Dynamics執行個體ID）。 在內嵌期間，如果存在`M_SFDCAccountID`，聯結器將使用該值產生外部金鑰並附加`\@CRM_INSTANCE_ID.Salesforce`。 如果該欄位為空，聯結器將使用`M_MSCRMAccountID`並改為附加`\@CRM_INSTANCE_ID.Dynamics`。 如果兩個欄位都為空，此欄位將設定為Null。 |
 
 {style="table-layout:auto"}
 
@@ -200,8 +200,8 @@ ht-degree: 2%
 | `iif(C_MSCRMLeadID != null && C_MSCRMLeadID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMLeadID, "sourceKey", concat(C_MSCRMLeadID, "\\@${CRM_INSTANCE_ID}.Dynamics")), iif(C_MSCRMContactID != null && C_MSCRMContactID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMContactID, "sourceKey", concat(C_MSCRMContactID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | extSourceSystemAudit.externalKey | 如果[!DNL Eloqua]執行個體已與Dynamics同步，則請保留此對應。 否則，請將其移除。 聯結器無法判斷CRM_INSTANCE_ID，因此您必須將${CRM_INSTANCE_ID}取代為您同步的Dynamics執行個體識別碼。 相同的對應適用於personComponents和extSourceSystemAudit，因此請保留兩者。 |
 | `C_DateCreated` | extSourceSystemAudit.createdDate |  |
 | `C_DateModified` | extSourceSystemAudit.lastUpdatedDate |  |
-| `iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | b2b.accountKey | 聯結器無法判斷CRM_INSTANCE_ID，因此您必須將${CRM_INSTANCE_ID}取代為您同步的CRM執行個體ID (Salesforce執行個體ID或Dynamics執行個體ID)。 相同的對應同時適用於b2b.accountKey和personComponents.sourceAccountKey，因此請保留兩者。 |
-| `iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | personComponents.sourceAccountKey | 聯結器無法判斷CRM_INSTANCE_ID，因此您必須將${CRM_INSTANCE_ID}取代為您同步的CRM執行個體ID (Salesforce執行個體ID或Dynamics執行個體ID)。 相同的對應同時適用於b2b.accountKey和personComponents.sourceAccountKey，因此請保留兩者。 |
+| `iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | b2b.accountKey | 聯結器無法判斷CRM_INSTANCE_ID，因此您必須將${CRM_INSTANCE_ID}取代為您同步的CRM執行個體ID （Salesforce執行個體ID或Dynamics執行個體ID）。 相同的對應同時適用於b2b.accountKey和personComponents.sourceAccountKey，因此請保留兩者。 |
+| `iif(C_SFDCAccountID != null && C_SFDCAccountID != "\\", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_SFDCAccountID, "sourceKey", concat(C_SFDCAccountID, "\\@${CRM_INSTANCE_ID}.Salesforce")), iif(C_MSCRMAccountID != null && C_MSCRMAccountID != "\\", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_INSTANCE_ID}", "sourceID", C_MSCRMAccountID, "sourceKey", concat(C_MSCRMAccountID, "\\@${CRM_INSTANCE_ID}.Dynamics")), null))` | personComponents.sourceAccountKey | 聯結器無法判斷CRM_INSTANCE_ID，因此您必須將${CRM_INSTANCE_ID}取代為您同步的CRM執行個體ID （Salesforce執行個體ID或Dynamics執行個體ID）。 相同的對應同時適用於b2b.accountKey和personComponents.sourceAccountKey，因此請保留兩者。 |
 | `C_Lead_Source___Original1` | b2b.personSource | |
 | `C_Lead_Source___Original1` | personComponents.personSource | |
 | `C_Lead_Status1` | b2b.personStatus | |
@@ -244,4 +244,3 @@ ht-degree: 2%
 ## 將[!DNL Eloqua]連線至Experience Platform
 
 繼續在Experience Platform中設定您的[!DNL Eloqua]來源連線。 如需透過UI設定連線的逐步指南，請參閱這裡的[教學課程](../../tutorials/ui/create/marketing-automation/eloqua.md)。 閱讀本教學課程，瞭解如何連線您的[!DNL Eloqua]帳戶、選取資料、對應欄位、排程內嵌及監視資料流程。
-
