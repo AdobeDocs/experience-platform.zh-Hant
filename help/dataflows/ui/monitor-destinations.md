@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
+source-git-commit: b61d6d49e3fcd9a75d2920048ce76d3707592edb
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 10%
+source-wordcount: '3580'
+ht-degree: 9%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="失敗的身分識別"
->abstract="針對所選目的地失敗的個別設定檔身分識別的計數。請檢查錯誤診斷以取得詳細資料。"
+>abstract="針對所選目的地失敗的個別設定檔身分計數。 請檢查錯誤診斷以取得詳細資料。"
 
 針對串流目的地，[!UICONTROL Dataflow runs]索引標籤會提供資料流執行時每小時的量度資料更新。 標示為最顯著的統計資料是用於身分。
 
@@ -98,11 +98,11 @@ ht-degree: 10%
 - **[!UICONTROL Profiles received]**：資料流中接收的設定檔總數。
 - **[!UICONTROL Identities activated]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分識別。
 - **[!UICONTROL Identities excluded]**：根據遺失的屬性和同意違規，從啟用中排除的設定檔身分總數。
-- **[!UICONTROL Identities failed]**&#x200B;由於錯誤而未啟用到目的地的設定檔身分總數。
+- **[!UICONTROL Identities failed]**：由於錯誤而未啟用到目的地的設定檔身分總數。
 
   >[!IMPORTANT]
   >
-  > 自 2025 年 3 月開始，Adobe 推出更新以提高串流目標的報告準確性。此增強功能可確保Experience Platform中的報告與目的地平台之間有更好的一致性。
+  > 自2025年3月起，Adobe將推出更新以提高串流目的地的報表準確性。 此增強功能可確保Experience Platform中的報告與目的地平台之間有更好的一致性。
   >
   > 在此更新之前，**[!UICONTROL Identities failed]**&#x200B;包含所有啟用重試。 在此更新後，只有上次啟用重試會包含在總計數中。
   > 
@@ -142,12 +142,12 @@ ht-degree: 10%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="收到的設定檔"
->abstract="資料流中收到的設定檔總數。此值每 60 分鐘更新一次。"
+>abstract="資料流執行中接收的設定檔總數。 對於已排程的匯出，這包括最新對象快照的設定檔，加上在快照建立時間和匯出時間之間對象成員資格或身分有所變更的任何設定檔。 因此，此計數可能會高於對象中的設定檔數。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
@@ -208,7 +208,7 @@ ht-degree: 10%
 >
 >您現在可以在監視控制面板中檢視資料流及其相關資料流執行的資訊。 如需詳細資訊，請閱讀以下章節。
 
-## 監視目標儀表板 {#monitoring-destinations-dashboard}
+## 監視目的地控制面板 {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
@@ -223,7 +223,7 @@ ht-degree: 10%
 
 使用[!UICONTROL Destinations]儀表板來取得您啟動流程整體狀況的資訊。 首先，您可以針對所有批次和串流目的地取得彙總層級的深入分析，然後深入研究資料流、資料流執行和已啟動對象的詳細檢視，以深入瞭解您的啟動資料。 [!UICONTROL Monitoring]儀表板中的畫面透過量度和錯誤說明提供可操作的深入分析，以協助您疑難排解啟用情況下可能發生的任何問題。
 
-您可以依資料型別篩選顯示的資訊：客戶、帳戶(僅適用於Adobe Real-Time CDP B2B edition)、潛在客戶和帳戶擴充。 請在[監視儀表板指南](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview)中進一步瞭解這些選項。
+您可以依資料型別篩選顯示的資訊：客戶、帳戶（僅適用於Adobe Real-Time CDP B2B edition）、潛在客戶和帳戶擴充。 請在[監視儀表板指南](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview)中進一步瞭解這些選項。
 
 ![監視儀表板檢視中反白顯示的資料型別篩選器。](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
@@ -280,7 +280,7 @@ ht-degree: 10%
 
 ![監視儀表板中反白顯示的所有資料流。](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
-選取資料流以進行進一步檢查後，「資料流詳細資料」頁面會包含切換功能，可讓您檢視資料流中已啟動的資料，並按照資料流執行或對象進行劃分。
+選取資料流以進行進一步檢查後，「資料流詳細資料」頁面會包含切換功能，可讓您檢視資料流中已啟用的資料，並按照資料流執行或對象進行劃分。
 
 ### 資料流執行檢視 {#dataflow-runs-view}
 
@@ -298,7 +298,7 @@ ht-degree: 10%
 
 ![資料流執行檢視，只顯示failures的切換反白顯示](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
-### 對象層級檢視 {#segment-level-view}
+### 對象層級檢視 {#audience-level-view}
 
 選取&#x200B;**[!UICONTROL Audiences]**&#x200B;時，您會在選取的時間範圍內看到啟用至選取之資料流的對象清單。 此畫麵包含受眾層級資訊，瞭解啟用的記錄、排除的記錄，以及上次資料流執行的狀態和時間。 您可以檢閱排除和啟動記錄的量度，以確認對象是否已成功啟動。
 
@@ -351,7 +351,7 @@ ht-degree: 10%
 
 「資料流執行」頁面會顯示您的資料流執行的相關資訊，包括資料流執行開始時間、處理時間、收到的記錄、啟用的記錄、排除的記錄、失敗的記錄、啟用率和狀態。
 
-當您從[對象層級檢視](#segment-level-view)向下鑽研資料流執行頁面時，您可以選擇透過下列選項來篩選資料流執行：
+當您從[對象層級檢視](#audience-level-view)向下鑽研資料流執行頁面時，您可以選擇透過下列選項來篩選資料流執行：
 
 - **[!UICONTROL Dataflow runs with failed records]**：針對選取的對象，此選項會列出所有無法啟用的資料流執行。 若要檢查特定資料流執行中記錄失敗的原因，請參閱該資料流執行的[資料流執行詳細資訊頁面](#dataflow-run-details-page)。
 - **[!UICONTROL Dataflow runs with excluded records]**：針對選取的對象，此選項會列出所有資料流執行，其中有些記錄未完全啟動且有些設定檔被略過。 若要檢查某個資料流執行中的記錄為何被略過，請參閱該資料流執行的[資料流執行詳細資訊頁面](#dataflow-run-details-page)。
@@ -371,7 +371,7 @@ ht-degree: 10%
 - **[!UICONTROL IMS org ID]**：資料流所屬的組織。
 - **[!UICONTROL Last updated]**：上次更新資料流執行的時間。
 
-詳細資訊頁面也會進行切換，以在資料流執行錯誤和對象之間切換。 此選項適用於[對象層級檢視](#segment-level-view)區段中所列的目的地。
+詳細資訊頁面也會進行切換，以在資料流執行錯誤和對象之間切換。 此選項適用於[對象層級檢視](#audience-level-view)區段中所列的目的地。
 
 資料流執行錯誤檢視會顯示失敗的記錄清單和略過的記錄清單。 顯示失敗和略過的記錄資訊，包括錯誤代碼、身分計數和說明。 依預設，清單會顯示失敗的記錄。 若要顯示略過的記錄，請選取&#x200B;**[!UICONTROL Records skipped]**&#x200B;切換按鈕。
 
