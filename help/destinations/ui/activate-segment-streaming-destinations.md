@@ -6,7 +6,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1115'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="套用轉換 "
->abstract="使用未雜湊的來源欄位時，請核取此選項，以便在啟用時自動雜湊這些欄位[!DNL Adobe Experience Platform]。"
+>abstract="使用未雜湊的來源欄位時請勾選此選項，讓 [!DNL Adobe Experience Platform] 在啟動時自動將其進行雜湊。"
 
 將未雜湊的來源屬性對應到目的地預期雜湊的目標屬性時（例如： `email_lc_sha256`或`phone_sha256`），請核取&#x200B;**套用轉換**&#x200B;選項，讓[!DNL Adobe Experience Platform]在啟用時自動雜湊來源屬性。
 

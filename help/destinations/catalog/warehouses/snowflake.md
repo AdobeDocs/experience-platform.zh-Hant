@@ -7,7 +7,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 source-git-commit: f74680fa35490f0e8b2d371739ecf8ef3eed74c9
 workflow-type: tm+mt
 source-wordcount: '1637'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -133,7 +133,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
 >title="輸入您的 Snowflake 帳戶 ID"
->abstract="如果您的帳戶已連結至組織，請使用此格式： `OrganizationName.AccountName`<br><br>如果您的帳戶未連結至組織，請使用此格式： `AccountName`"
+>abstract="如果您的帳戶已連結到組織，請使用此格式：`OrganizationName.AccountName`<br><br>如果您的帳戶未連結到組織，請使用此格式：`AccountName`"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
