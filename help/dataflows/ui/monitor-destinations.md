@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b61d6d49e3fcd9a75d2920048ce76d3707592edb
+source-git-commit: 6aacade76b31268b8f6a9db2b8c191d8c7702a1b
 workflow-type: tm+mt
-source-wordcount: '3580'
+source-wordcount: '3577'
 ht-degree: 9%
 
 ---
@@ -142,7 +142,7 @@ ht-degree: 9%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -212,7 +212,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->Experience Platform *中目前支援所有目的地的目的地監視功能，但* [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)和[自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)目的地除外。
+>目前支援Experience Platform *中除* [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)目的地以外的所有目的地的目的地監視功能。
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
