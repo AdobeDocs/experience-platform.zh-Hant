@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '6574'
 ht-degree: 10%
@@ -144,7 +144,7 @@ ht-degree: 10%
 | 本月 | 值發生在這個行事曆月份。 | 出生月份&#x200B;**是**&#x200B;本月 |
 | 今年 | 值發生於本日曆年度。 | 註冊日期&#x200B;**是**&#x200B;今年 |
 | 自訂日期 | 值在指定日期發生。 | 購買日期&#x200B;**為**&#x200B;自訂日期 |
-| 最近 | 該值發生在最後選擇的時間段內。 上個月的生日&#x200B;**為** |
+| 最近 | 該值發生在最後選擇的時間段內。 上個月的生日&#x200B;**為** | |
 | 從（至） | 該值出現在選擇的兩個日曆日期內。 此時間週期為兩個日期的&#x200B;**包含**。 | 帳戶建立日期&#x200B;**是** （從4月20日至7月13日） |
 | 期間 | 值在選取的月或年內發生。 | 三月期間的銷售&#x200B;**為** |
 | 以內(+/-) | 該值會在選取日期的日、周、月或年內發生。 此時間週期為兩個日期的&#x200B;**包含**。 | 購物車捨棄為&#x200B;**在** 3天內 |
@@ -407,7 +407,7 @@ ht-degree: 10%
 
 | 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
 | --------------- | ----------- | ------------------- | ------- |
-| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;**&#x200B;**。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -549,7 +549,7 @@ ht-degree: 10%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估值"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合提議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
