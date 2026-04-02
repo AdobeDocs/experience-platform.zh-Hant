@@ -2,10 +2,10 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: fad8cc977ec6928420abab4fd3dafca7475c33c4
+source-git-commit: f5c32c5687b5931ed59fa6a379ed5e5927e3a9ac
 workflow-type: tm+mt
-source-wordcount: '3448'
-ht-degree: 6%
+source-wordcount: '3641'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 6%
 
 ### Adobe Journey Optimizer物件 {#abobe-journey-optimizer-objects}
 
-下表列出目前沙箱工具支援的[!DNL Adobe Journey Optimizer]物件與限制。 如需最佳實務的完整清單，請參閱[Journey Optimizer一般最佳實務](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global)指南。
+下表列出目前沙箱工具支援的[!DNL Adobe Journey Optimizer]物件與限制。 如需最佳實務的完整清單，請參閱[Journey Optimizer一般最佳實務](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global)指南。
 
 | 平台 | 物件 | 支援的相依物件 | 詳細資料 |
 | --- | --- | --- | --- |
@@ -70,8 +70,8 @@ ht-degree: 6%
 | [!DNL Adobe Journey Optimizer] | 自訂動作 |  | 自訂動作可獨立新增至套件。 將自訂動作指派給歷程後，就無法再編輯它。 若要更新自訂動作，您應： <ul><li>在移轉歷程之前移動自訂動作</li><li>更新移轉後自訂動作的設定（例如請求標頭、查詢引數和驗證）</li><li>使用您在第一個步驟中新增的自訂動作移轉歷程物件</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 內容範本 | | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer行銷活動和歷程中重複使用自訂內容。 |
 | [!DNL Adobe Journey Optimizer] | 片段 | 所有巢狀片段。 | 片段可以復製為歷程物件的相依物件。 片段是可重複使用的元件，可在各個Journey Optimizer促銷活動和歷程的一封或多封電子郵件中參考。 |
-| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
-| [!DNL Adobe Journey Optimizer] | 決策 | 複製決策物件之前，目標沙箱中必須存在下列物件： <ul><li>用於決策物件的設定檔屬性</li><li>自訂選件屬性的欄位群組</li><li>用於跨規則、排名或上限之內容屬性的資料串流結構。</li></ul> | <ul><li>目前不支援複製使用AI模型的排名公式。</li><li>決定專案（優惠專案）不會自動納入。 若要確保它們已傳輸，請使用&#x200B;**新增至封裝**&#x200B;選項手動新增。</li><li>使用選擇策略的原則需要在複製過程中手動新增關聯的決定專案。 使用手動或遞補決定專案的原則會自動將這些專案作為直接相依性納入。</li><li>必須先複製決定專案，然後再複製任何其他相關物件。</li><li>如需支援物件的完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 決策 | 複製決策物件之前，目標沙箱中必須存在下列物件： <ul><li>用於決策物件的設定檔屬性</li><li>自訂選件屬性的欄位群組</li><li>用於跨規則、排名或上限之內容屬性的資料串流結構。</li></ul> | <ul><li>目前不支援複製使用AI模型的排名公式。</li><li>決定專案（優惠專案）不會自動納入。 若要確保它們已傳輸，請使用&#x200B;**新增至封裝**&#x200B;選項手動新增。</li><li>使用選擇策略的原則需要在複製過程中手動新增關聯的決定專案。 使用手動或遞補決定專案的原則會自動將這些專案作為直接相依性納入。</li><li>必須先複製決定專案，然後再複製任何其他相關物件。</li><li>如需支援物件的完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li></ul> |
 
 ## 將物件匯出到套件中 {#export-objects}
 
@@ -229,13 +229,36 @@ ht-degree: 6%
 
 留出一些時間讓匯入完成。 完成時間會因封裝中的物件數目而異。 您可以從[!UICONTROL Sandboxes] **[!UICONTROL Jobs]**&#x200B;索引標籤監視匯入工作。
 
+### 將物件快速複製到沙箱 {#express-copy}
+
+>[!IMPORTANT]
+>
+>快速複製功能目前為測試版，僅供特定客戶使用。 Express Copy (Beta)目前僅支援結構和來源資料流。
+
+您可以從物件詳細目錄頁面存取快速複製。 例如，若要檢視可用結構描述清單，請從左側導覽選取「**[!UICONTROL Schemas]**」，然後選取「**[!UICONTROL Browse]**」標籤。 接著，選取選取的結構描述旁邊的省略符號(`...`)，在下拉式功能表中檢視控制選項。 從下拉式清單中選取&#x200B;**[!UICONTROL Add to package]**。
+
+![結構描述清單，顯示反白顯示[!UICONTROL Add to package]控制項的下拉式功能表。](../images/ui/sandbox-tooling/add-to-package-express.png)
+
+**[!UICONTROL Add to package]**&#x200B;對話方塊隨即顯示。 選取&#x200B;**[!UICONTROL Express copy]**&#x200B;選項，然後從下拉式清單中選取&#x200B;**[!UICONTROL Target sandbox]**。 最後，選取&#x200B;**[!UICONTROL Add]**&#x200B;以確認您的選擇。
+
+![[!UICONTROL Add to package]對話方塊，顯示從下拉式清單中選取的封裝。](../images/ui/sandbox-tooling/express-copy.png)
+
+>[!NOTE]
+>
+> Express Copy會自動封裝所選物件及其所需的相依性，並將它們部署到目標沙箱。 如果目標沙箱中已存在相依物件，則會重複使用它，否則會建立新物件。
+
+若要檢查快速複製要求的狀態，請從左側導覽選取&#x200B;**[!UICONTROL Sandboxes]**，然後選取&#x200B;**[!UICONTROL Jobs]**&#x200B;標籤。 此時會顯示所有作業和目前處理狀態的清單。
+
+![顯示工作清單的工作標籤。](../images/ui/sandbox-tooling/sandboxes-jobs.png)
+
 ## 監視匯入詳細資料 {#view-import-details}
 
 若要檢視匯入的詳細資料，請瀏覽至[!UICONTROL Sandboxes] **[!UICONTROL Jobs]**&#x200B;標籤，並從清單中選取封裝。 或者，使用搜尋列來搜尋套件。
 
 ![沙箱[!UICONTROL Jobs]索引標籤醒目提示匯入套件選擇。](../images/ui/sandbox-tooling/imports-tab.png)
 
-<!--### View imported objects {#view-imported-objects}
+<!--
+### View imported objects {#view-imported-objects}
 
 On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
@@ -245,7 +268,8 @@ Select **[!UICONTROL View imported objects]** from the right details pane on the
 
 Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+-->
 
 在沙箱環境的&#x200B;**[!UICONTROL View import summary]**&#x200B;索引標籤中，從右邊的詳細資料窗格中選取&#x200B;**[!UICONTROL Jobs]**。
 
@@ -353,7 +377,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 以下影片旨在協助您瞭解沙箱工具，並概述如何建立新套件、發佈套件和匯入套件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3446101/?captions=chi_hant&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 後續步驟
 
