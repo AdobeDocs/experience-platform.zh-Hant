@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Data Distiller - OS656提供最大化價值的重要秘訣
 description: 瞭解如何透過擴充Adobe Experience Platform Data Distiller的即時客戶個人檔案資料，並使用行為深入分析來建立目標受眾，藉此實現最大價值。 此資源包含範例資料集和案例研究，示範如何套用造訪間隔、頻率、貨幣(RFM)模型用於客戶細分。
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '3743'
+source-wordcount: '3664'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-若要執行此使用案例，您的Adobe Experience Platform執行個體必須獲得[Data Distiller](./overview.md)的授權。 如需詳細資訊，請聯絡您的Adobe代表。
+若要執行此使用案例，您的Adobe Experience Platform執行個體必須獲得[Data Distiller](./overview.md)的授權。 請聯絡您的 Adobe 代表以取得更多資訊。
 
 您也需要知道您&#x200B;**組織的租使用者ID**，這是執行查詢的必要條件。 您的租使用者ID是您登入Experience Platform時URL的第一部分，緊接在@符號之後出現。
 
@@ -65,22 +65,22 @@ RFM模型使用三個關鍵引數，根據交易行為來細分客戶。
 
 #### 從CSV檔案建立資料集 {#create-a-dataset}
 
-在Experience Platform UI中，選取左側導覽邊欄中的&#x200B;**[!UICONTROL 資料集]**，然後選取&#x200B;**[!UICONTROL 建立資料集]**。 然後從可用選項中選取&#x200B;**[!UICONTROL 從CSV檔案建立資料集]**。
+在Experience Platform UI中，選取左側導覽邊欄中的&#x200B;**[!UICONTROL Datasets]**，然後選取&#x200B;**[!UICONTROL Create dataset]**。 然後從可用選項中選取&#x200B;**[!UICONTROL Create dataset from CSV file]**。
 
-[!UICONTROL 設定資料集]面板隨即顯示。 在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中，將資料集名稱輸入為&quot;luma_web_data&quot;，然後選取&#x200B;**[!UICONTROL 下一步]**。
+[!UICONTROL Configure Dataset]面板隨即顯示。 在&#x200B;**[!UICONTROL Name]**&#x200B;欄位中，將資料集名稱輸入為&quot;luma_web_data&quot;，然後選取&#x200B;**[!UICONTROL Next]**。
 
-[!UICONTROL 新增資料]面板隨即顯示。 將CSV檔案拖放到&#x200B;**[!UICONTROL 新增資料]**&#x200B;方塊中，或選取&#x200B;**[!UICONTROL 選擇檔案]**&#x200B;以瀏覽並上傳檔案。
+[!UICONTROL Add data]面板隨即顯示。 將CSV檔案拖放到&#x200B;**[!UICONTROL Add data]**&#x200B;方塊中，或選取&#x200B;**[!UICONTROL Choose File]**&#x200B;瀏覽並上傳檔案。
 
 若要深入瞭解此程式，請參閱資料集UI指南中的[批次擷取教學課程](../../ingestion/tutorials/ingest-batch-data.md)和[資料集建立工作流程](../../catalog/datasets/user-guide.md#create)。
 
 #### 檢閱並完成上傳 {#review-and-complete-upload}
 
-上傳檔案後，資料預覽會顯示在UI底部。 選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成上傳。
+上傳檔案後，資料預覽會顯示在UI底部。 選取&#x200B;**[!UICONTROL Finish]**&#x200B;以完成上傳。
 
-![&#x200B; 「從CSV檔案建立資料集」工作流程的「新增資料」區段，其中資料預覽和「完成」都反白顯示。](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
+![ 「從CSV檔案建立資料集」工作流程的「新增資料」區段，其中資料預覽和「完成」都反白顯示。](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 隨即顯示「luma_web_data」資料集的資料集活動檢視。 手動上傳CSV檔案
-已擷取為批次，並由[!UICONTROL 批次ID]識別。 右側的面板會將表格名稱顯示為`luma_web_data`。
+已擷取為批次，並由[!UICONTROL Batch ID]識別。 右側的面板會將表格名稱顯示為`luma_web_data`。
 
 >[!TIP]
 >
@@ -88,11 +88,12 @@ RFM模型使用三個關鍵引數，根據交易行為來細分客戶。
 
 ![新建立的「luma_web_data」資料集的「資料集活動」索引標籤中，資料表名稱、批次ID和「預覽資料集」均反白顯示。](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
-<!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
+<!-- 
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
-資料處理完畢後，選取右上角的[!UICONTROL 預覽資料集]以預覽資料集。 這是資料集預覽的顯示方式：
+資料處理完畢後，選取右上角的[!UICONTROL Preview dataset]以預覽資料集。 這是資料集預覽的顯示方式：
 
 ![「luma_web_data」資料集的資料集預覽。](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
@@ -118,7 +119,7 @@ My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix
 
 #### 執行基本探索查詢 {#basic-exploration-queries}
 
-在Adobe Experience Platform UI中，選取左側導覽邊欄中的&#x200B;**[!UICONTROL 查詢]**，然後選取&#x200B;**[!UICONTROL 建立查詢]**。 「查詢編輯器」即會出現。
+在Adobe Experience Platform UI中，選取左側導覽邊欄中的&#x200B;**[!UICONTROL Queries]**，然後選取&#x200B;**[!UICONTROL Create Query]**。 「查詢編輯器」即會出現。
 
 將下列查詢貼到編輯器中並執行：
 
@@ -126,7 +127,7 @@ My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix
 SELECT * FROM luma_web_data; 
 ```
 
-查詢結果顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;索引標籤中的查詢編輯器下方。 若要展開新對話方塊中的結果，請選取&#x200B;**[!UICONTROL 檢視結果]**。 結果看起來類似下圖。
+查詢結果顯示在&#x200B;**[!UICONTROL Results]**&#x200B;索引標籤中的查詢編輯器下方。 若要展開新對話方塊中的結果，請選取&#x200B;**[!UICONTROL View results]**。 結果看起來類似下圖。
 
 ![基本查詢探索結果的[查詢結果]對話方塊。](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
@@ -335,7 +336,7 @@ AS
 
 結果看起來類似下列影像，但檢視ID不同。
 
-![&#x200B; &#39;rfm_scores&#39;檢視的[查詢結果]對話方塊。](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
+![ &#39;rfm_scores&#39;檢視的[查詢結果]對話方塊。](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### 模型RFM區段 {#model-rfm-segments}
 
@@ -438,7 +439,7 @@ SELECT * FROM rfm_model_segment;
 
 >[!NOTE]
 >
->「電子郵件」名稱空間是Adobe Experience Platform中的[標準身分名稱空間](../../identity-service/features/namespaces.md#standard)。 定義身分欄位時，請確定已指定適當的名稱空間，以促進正確的身分解析。&#x200B;URL
+>「電子郵件」名稱空間是Adobe Experience Platform中的[標準身分名稱空間](../../identity-service/features/namespaces.md#standard)。 定義身分欄位時，請確定已指定適當的名稱空間，以促進正確的身分解析&#x200B;。
 >
 >如需定義身分識別欄位和使用身分識別名稱空間的詳細資訊，請參閱[身分識別服務檔案](../../identity-service/home.md)或[在Adobe Experience Platform UI中定義身分識別欄位的指南](../../xdm/ui/fields/identity.md)。
 
@@ -470,11 +471,11 @@ FROM rfm_model_segment;
 
 此查詢的結果類似於此Playbook中之前的資料集建立，但ID不同。
 
-建立資料集後，請導覽至&#x200B;**[!UICONTROL 資料集]** > **[!UICONTROL 瀏覽]** > `adls_rfm_profile`以驗證資料集是空的。
+建立資料集後，導覽至「**[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile`」以驗證資料集是空的。
 
 ![包含&#39;adls_rfm_profile&#39;資料集詳細資訊的資料集工作區已顯示，且已啟用設定檔的切換已反白顯示。](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-您也可以導覽至「**[!UICONTROL 結構描述]** > **[!UICONTROL 瀏覽]** > `adls_rfm_profile`」，以檢視您新建立之資料集的XDM個別設定檔結構描述圖表及其自訂欄位群組。
+您也可以導覽至「**[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile`」，檢視您新建立資料集的XDM個別設定檔結構描述圖表及其自訂欄位群組。
 
 ![結構描述畫布中顯示&#39;adls_rfm_profile&#39;圖表的XDM工作區。](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -482,7 +483,7 @@ FROM rfm_model_segment;
 
 接下來，將資料從`rfm_model_segment VIEW`插入為即時客戶設定檔啟用的`adls_rfm_profile`。
 
-請確定`INSERT`陳述式的`SELECT`查詢中的欄位順序完全符合`rfm_model_segment`的結構。 此對齊方式可確保將來自`rfm_model_segment`的值正確插入目標資料表中對應的欄位中。 來源和目標欄位之間的未對齊可能導致資料不相符。
+請確定`SELECT`陳述式的`INSERT`查詢中的欄位順序完全符合`rfm_model_segment`的結構。 此對齊方式可確保將來自`rfm_model_segment`的值正確插入目標資料表中對應的欄位中。 來源和目標欄位之間的未對齊可能導致資料不相符。
 
 >[!NOTE]
 >
@@ -503,30 +504,30 @@ FROM   rfm_model_segment;
 
 #### 排程查詢執行
 
-儲存SQL之後，請瀏覽至&#x200B;**[!UICONTROL 範本]**&#x200B;索引標籤，以檢視儲存的查詢並啟動排程程式。 排程查詢的方式有兩種：
+儲存SQL之後，瀏覽至&#x200B;**[!UICONTROL Templates]**&#x200B;索引標籤以檢視儲存的查詢並起始排程程式。 排程查詢的方式有兩種：
 
-從右側邊欄選取&#x200B;**[!UICONTROL 新增排程]**。
+從右側邊欄選取&#x200B;**[!UICONTROL Add Schedule]**。
 
 ![已反白顯示[查詢]工作區的[編輯]索引標籤。](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
-或者，選取範本名稱下方的&#x200B;**[!UICONTROL 排程]**&#x200B;索引標籤，然後選取&#x200B;**[!UICONTROL 新增排程]**。
+或者，選取範本名稱下方的&#x200B;**[!UICONTROL Schedules]**&#x200B;索引標籤，然後選取&#x200B;**[!UICONTROL Add Schedule]**。
 
 ![反白顯示[新增排程]的[查詢]工作區排程。](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
 如需排程查詢的詳細資訊，請參閱[查詢排程檔案](../ui/query-schedules.md)。
 
-[!UICONTROL 排程詳細資料]檢視就會顯示。 從此處，輸入以下詳細資料以設定排程：
+[!UICONTROL Schedule details]檢視出現。 從此處，輸入以下詳細資料以設定排程：
 
-- **[!UICONTROL 執行頻率]**： **每週**
-- **[!UICONTROL 執行日]**： **星期一與星期二**
-- **[!UICONTROL 排程執行時間]**： **上午10:10 UTC**
-- **[!UICONTROL 排程期間]**： **2025年3月17日至4月30日**
+- **[!UICONTROL Execution Frequency]**： **每週**
+- **[!UICONTROL Day of Execution]**： **星期一與星期二**
+- **[!UICONTROL Schedule Execution Time]**： **上午:10 UTC**
+- **[!UICONTROL Schedule Period]**： **2025年3月17日至4月30日**
 
-選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以確認排程。
+選取&#x200B;**[!UICONTROL Save]**&#x200B;以確認排程。
 
 ![排程詳細資料，已設定設定並醒目提示[儲存]。](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-儲存排程後，您可以隨時導覽至&#x200B;**[!UICONTROL 排程查詢]**&#x200B;索引標籤，以監視排程的資料Distiller工作。 有關[檢視查詢執行狀態、錯誤訊息和警示](../ui/monitor-queries.md)的詳細資訊，請參閱監視排程查詢檔案。
+儲存排程後，您可以隨時導覽至「**[!UICONTROL Scheduled Queries]**」索引標籤，以監視已排程的資料Distiller工作。 有關[檢視查詢執行狀態、錯誤訊息和警示](../ui/monitor-queries.md)的詳細資訊，請參閱監視排程查詢檔案。
 
 設定之後，SQL查詢會在定義的間隔自動執行，確保資料保持最新狀態，而不需要手動干預。
 
@@ -543,9 +544,9 @@ FROM   rfm_model_segment;
 
 #### 解決方案1：透過Data Distiller的SQL對象 {#data-distiller-sql-audience}
 
-使用`CREATE AUDIENCE AS SELECT`命令來定義新對象。 建立的對象儲存在資料集中，並在&#x200B;**[!UICONTROL 資料Distiller]**&#x200B;下的&#x200B;**[!UICONTROL 對象]**&#x200B;工作區中註冊。
+使用`CREATE AUDIENCE AS SELECT`命令來定義新對象。 建立的對象儲存在資料集中，並在&#x200B;**[!UICONTROL Audiences]**&#x200B;下的&#x200B;**[!UICONTROL Data Distiller]**&#x200B;工作區中註冊。
 
-使用SQL擴充功能建立的對象會自動在[!UICONTROL 對象]工作區的[!UICONTROL 資料Distiller]來源下註冊。 您可以從[對象入口網站](../../segmentation/ui/audience-portal.md)視需要檢視、管理及啟用對象。
+使用SQL擴充功能建立的對象會自動在[!UICONTROL Data Distiller]工作區的[!UICONTROL Audiences]來源下註冊。 您可以從[對象入口網站](../../segmentation/ui/audience-portal.md)視需要檢視、管理及啟用對象。
 
 ![顯示可用對象的對象入口網站。](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
@@ -646,19 +647,19 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 使用RFM屬性，根據使用者的行為和特性來劃分使用者。 本節將引導您透過Adobe Experience Platform UI，使用RFM分數來定義對象。
 
-若要驗證資料是否已載入即時客戶設定檔，請瀏覽至&#x200B;**[!UICONTROL 客戶] > [!UICONTROL 設定檔] > [!UICONTROL 瀏覽]**。 選取&#x200B;**[!UICONTROL 識別名稱空間]**&#x200B;做為`Email`並輸入`user0076@example.com`。 檢查設定檔詳細資訊，確認其中包含預期的RFM屬性。
+若要驗證資料是否已載入即時客戶個人檔案，請導覽至&#x200B;**[!UICONTROL Customers]> [!UICONTROL Profiles] >[!UICONTROL Browse]**。 選取&#x200B;**[!UICONTROL Identity Namespace]**&#x200B;作為`Email`並輸入`user0076@example.com`。 檢查設定檔詳細資訊，確認其中包含預期的RFM屬性。
 
 ![設定檔工作區會顯示套用電子郵件主要身分和電子郵件值篩選器的可用設定檔。](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
 
 ![設定檔屬性檢視會顯示特定設定檔的屬性。](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
 
-若要瀏覽現有的對象，請從左側導覽面板中選取&#x200B;**[!UICONTROL 對象]**，並確定已選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤。 沙箱中的可用對象清單隨即顯示。 選取對象會顯示其說明、合格規則，以及包含的設定檔數目。
+若要瀏覽現有的對象，請從左側導覽面板中選取「**[!UICONTROL Audiences]**」，並確定已選取「**[!UICONTROL Browse]**」標籤。 沙箱中的可用對象清單隨即顯示。 選取對象會顯示其說明、合格規則，以及包含的設定檔數目。
 
-若要建立新對象，請選取右上角的&#x200B;**[!UICONTROL 建立對象]**。 會顯示一個對話方塊，其中包含兩個選項。 選取&#x200B;**[!UICONTROL 建置規則]**，然後選取&#x200B;**[!UICONTROL 建立]**。
+若要建立新對象，請選取右上角的&#x200B;**[!UICONTROL Create Audience]**。 會顯示一個對話方塊，其中包含兩個選項。 選取&#x200B;**[!UICONTROL Build Rule]**，接著選取&#x200B;**[!UICONTROL Create]**。
 
 ![已選取「建置規則」且「建立」反白顯示的「建立對象」對話方塊。](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
-對象構成UI提供設定檔屬性的存取權。 導覽至&#x200B;**[!UICONTROL 屬性] > [!UICONTROL XDM個別設定檔]**&#x200B;以檢視可用的屬性。
+對象構成UI提供設定檔屬性的存取權。 導覽至&#x200B;**[!UICONTROL Attributes]>[!UICONTROL XDM Individual Profile]**&#x200B;以檢視可用的屬性。
 
 如需使用對象構成的詳細資訊，請參閱[對象構成UI指南](../../segmentation/ui/audience-composition.md)。 如需使用區段產生器的詳細資訊，請參閱[區段產生器UI指南](../../segmentation/ui/segment-builder.md)。
 
@@ -672,6 +673,6 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 ![在對象構成UI中建立對象。](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
-若要完成對象，請選取右上角的&#x200B;**[!UICONTROL 儲存並發佈]**。 儲存後，新建立的對象會出現在[!UICONTROL 對象]工作區中，您可在此檢閱其摘要和合格條件。
+若要結束對象，請選取右上角的&#x200B;**[!UICONTROL Save and Publish]**。 儲存後，新建立的對象會出現在[!UICONTROL Audiences]工作區中，您可在此檢閱其摘要和合格條件。
 
 使用「區段產生器」來存取衍生的RFM屬性，並設計其他對象。 根據RFM分數啟用新建立的SQL對象，並將其傳送到任何偏好的目的地，包括Adobe Journey Optimizer。
