@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2024 年 2 月)
 description: Adobe Experience Platform 2024 年 2 月版發行說明。
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 94%
@@ -17,7 +17,7 @@ Experience Platform 現有功能的更新：
 
 - [警示](#alerts)
 - [資料彙集](#data-collection)
-- [目標](#destinations)
+- [目的地](#destinations)
 - [沙箱](#sandboxes)
 - [細分服務](#segmentation)
 - [來源](#sources)
@@ -50,7 +50,8 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端的客
 
 若要深入了解資料彙集，請閱讀[資料彙集概觀](/help/tags/home.md)。
 
-<!-- ## Data Prep {#data-prep}
+<!-- 
+## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -62,9 +63,10 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). -->
+For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). 
+-->
 
-## 目標 {#destinations}
+## 目的地 {#destinations}
 
 [!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
@@ -107,7 +109,7 @@ Adobe Experience Platform 旨在協助您在全球各地打造更豐富的數位
 
 如需有關沙箱的詳細資訊，請閱讀[沙箱概觀](/help/sandboxes/home.md)。
 
-## Segmentation Service {#segmentation}
+## 細分服務 {#segmentation}
 
 [!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Experience Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
