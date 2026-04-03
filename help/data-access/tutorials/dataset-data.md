@@ -5,7 +5,7 @@ title: 使用資料存取API檢視資料集資料
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform的資料存取API，尋找、存取及下載儲存在資料集中的資料。 本檔案會介紹資料存取API的一些獨特功能，例如分頁和部分下載。
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 9%
@@ -118,7 +118,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{START_TIMESTAMP}` | 以毫秒為單位的開始時間戳記(例如1514836799000)。 |
+| `{START_TIMESTAMP}` | 以毫秒為單位的開始時間戳記（例如1514836799000）。 |
 | `{DATASET_ID}` | 資料集識別碼。 |
 | `{SORT_BY}` | 依提供的值排序回應。 例如，`desc:created`會依建立日期遞減排序物件。 |
 
@@ -348,7 +348,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | 屬性 | 說明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `data._links.self.href` | 下載關聯檔案的URL。 |
 
 此回應傳回包含兩個獨立檔案的目錄，識別碼為`{FILE_ID_2}`和`{FILE_ID_3}`。 在此案例中，您必須追蹤每個檔案的URL才能存取該檔案。
@@ -443,7 +443,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | 屬性 | 說明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `Range: bytes=0-99` | 指定要下載的位元組範圍。 如果未指定，API會下載整個檔案。 在此範例中，會下載前100個位元組。 |
 
 **回應**
@@ -486,7 +486,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**回應**：
+**回應**:
 
 回應包含具有單一專案的`"data"`陣列，如要求引數`limit=1`所指定。 此專案是一個物件，包含第一個可用檔案的詳細資料，如請求中的`start=0`引數所指定（請記住，在零位編號中，第一個專案是&quot;0&quot;）。
 
