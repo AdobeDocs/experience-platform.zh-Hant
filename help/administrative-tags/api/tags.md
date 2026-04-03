@@ -3,7 +3,7 @@ title: 整合標籤端點
 description: 瞭解如何使用Adobe Experience Platform API建立、更新、管理和刪除標籤類別和標籤。
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 3%
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 本指南使用的端點是Adobe Experience Platform API的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)以取得您成功呼叫API所需瞭解的重要資訊，包括必要的標頭以及如何讀取範例API呼叫
 
-### 字彙
+### 字彙表
 
 下列字彙表強調&#x200B;**標籤**&#x200B;與&#x200B;**標籤類別**&#x200B;之間的差異。
 
@@ -45,7 +45,7 @@ GET /tagCategory?{QUERY_PARAMETERS}
 
 擷取標籤類別時，可使用下列選用的查詢引數。
 
-| 查詢引數 | 說明 | 範例 |
+| 查詢參數 | 說明 | 範例 |
 | --------------- | ----------- | ------- |
 | `start` | 結果清單的開始位置。 您可以使用它來指示結果分頁的開始索引。 | `start=a` |
 | `limit` | 每頁擷取的標籤類別數上限。 | `limit=20` |
@@ -55,7 +55,7 @@ GET /tagCategory?{QUERY_PARAMETERS}
 
 **要求**
 
-+++列出組織中所有標籤類別的範例要求
++++列出組織中所有標籤類別的範例請求
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
@@ -104,7 +104,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
 >
 >只有系統管理員和產品管理員可以使用此API呼叫。
 
-您可以向`/tagCategory`端點發出POST要求，以建立新的標籤類別。
+您可以對`/tagCategory`端點發出POST要求，以建立新的標籤類別。
 
 **API格式**
 
@@ -139,7 +139,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 範例回應會傳回HTTP狀態200以及新建立標籤類別的詳細資料。
 
-+++包含新建立標籤類別詳細資訊的範例回應。
++++包含新建立標籤類別詳細資料的範例回應。
 
 ```json
 {
@@ -159,7 +159,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 ## 擷取特定標籤類別 {#get-tag-category}
 
-您可以向`/tagCategory`端點發出GET要求並指定標籤類別的ID，以擷取屬於您組織的特定標籤類別。
+您可以向`/tagCategory`端點發出GET請求，並指定標籤類別的ID，藉此擷取屬於您組織的特定標籤類別。
 
 **API格式**
 
@@ -224,7 +224,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
 >
 >只有系統管理員和產品管理員可以使用此API呼叫。
 
-您可以對`/tagCategory`端點發出PATCH要求並指定標籤類別的ID，以更新屬於您組織的特定標籤類別的詳細資料。
+您可以透過向`/tagCategory`端點發出PATCH請求並指定標籤類別的ID，更新屬於您組織的特定標籤類別的詳細資料。
 
 **API格式**
 
@@ -267,7 +267,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 成功回應HTTP狀態200，其中包含您新更新標籤類別的相關資訊。
 
-+++包含新更新標籤類別詳細資訊的範例回應。
++++包含您新更新標籤類別詳細資訊的範例回應。
 
 ```json
 {
@@ -291,7 +291,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 >
 >只有系統管理員和產品管理員可以使用此API呼叫。
 
-您可以刪除屬於您組織的特定標籤類別，方法是向`/tagCategory`端點發出DELETE要求並指定標籤類別的ID。
+您可以透過向`/tagCategory`端點發出DELETE請求並指定標籤類別的ID，來刪除屬於您組織的特定標籤類別。
 
 **API格式**
 
@@ -323,7 +323,7 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b
 
 ## 擷取標籤清單 {#get-tags}
 
-您可以向`/tags`端點及標籤類別的ID發出GET要求，以擷取屬於您組織的標籤清單。
+您可以透過向`/tags`端點及標籤類別的ID發出GET請求，以擷取屬於您組織的標籤清單。
 
 **API格式**
 
@@ -334,7 +334,7 @@ GET /tags?{QUERY_PARAMETERS}
 
 擷取標籤時，可使用下列選用的查詢引數。
 
-| 查詢引數 | 說明 | 範例 |
+| 查詢參數 | 說明 | 範例 |
 | --------------- | ----------- | ------- |
 | `start` | 結果清單的開始位置。 您可以使用它來指示結果分頁的開始索引。 | `start=a` |
 | `limit` | 每頁要擷取的標籤數上限。 | `limit=20` |
@@ -345,7 +345,7 @@ GET /tags?{QUERY_PARAMETERS}
 
 **要求**
 
-+++擷取屬於特定標籤類別之所有標籤的範例請求
++++擷取屬於特定標籤類別之所有標籤的範例要求
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=e2b7c656-067b-4413-a366-adde0401df50
@@ -542,7 +542,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 成功的回應會傳回HTTP狀態201以及新建立標籤的詳細資料。
 
-+++包含新建立標籤詳細資料的範例回應。
++++包含新建立標籤之詳細資料的範例回應。
 
 ```json
 {
@@ -575,7 +575,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 ## 擷取特定標籤 {#get-tag}
 
-您可以向`/tags`端點發出GET要求，並指定您要擷取之標籤的ID，藉此擷取屬於您組織的特定標籤。
+您可以向`/tags`端點發出GET請求，並指定您要擷取之標籤的ID，藉此擷取屬於您組織的特定標籤。
 
 **API格式**
 
@@ -605,7 +605,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 成功的回應會傳回HTTP狀態200以及指定標籤的詳細資料。
 
-+++包含指定標籤詳細資訊的範例回應。
++++包含指定之標籤詳細資料的範例回應。 
 
 ```json
 {
@@ -649,7 +649,7 @@ POST /tags/validate
 
 **要求**
 
-+++驗證所提供標籤ID的範例要求。
++++驗證所提供之標籤ID的範例要求。
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
@@ -748,7 +748,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 成功的回應會傳回HTTP狀態200以及新更新標籤的詳細資訊。
 
-+++包含更新標籤詳細資訊的範例回應。
++++包含已更新標籤詳細資訊的範例回應。
 
 ```json
 {
@@ -775,7 +775,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 >
 >此外，標籤&#x200B;**無法**&#x200B;與任何企業物件相關聯，而且&#x200B;**必須**&#x200B;封存才能刪除標籤。 您可以使用[更新標籤端點](#update-tag)來封存標籤。
 
-您可以對`/tags`端點建立DELETE標籤，並指定您要刪除之標籤的ID，以刪除特定標籤。
+您可以對`/tags`端點建立DELETE標籤，並指定您要刪除之標籤的ID，藉此刪除特定標籤。
 
 **API格式**
 
