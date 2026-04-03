@@ -2,7 +2,7 @@
 title: (V2) Pega CDH即時受眾連線
 description: 在Adobe Experience Platform中使用Pega客戶決定中心即時對象目的地，將設定檔屬性和對象成員資格資料傳送至Pega客戶決定中心，以做出次優決策。
 exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 4%
