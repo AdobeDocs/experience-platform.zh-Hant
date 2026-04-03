@@ -3,7 +3,7 @@ title: 使用流量服務API為串流SDK建立新的連線規格
 description: 以下檔案提供如何使用「流程服務API」建立連線規格，以及透過「自助式來源」整合新來源的步驟。
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 連線對規格代表來源的結構。 它包含有關來源驗證需求的資訊，定義如何探索和檢查來源資料，並提供有關給定來源屬性的資訊。 `/connectionSpecs` API中的[!DNL Flow Service]端點可讓您以程式設計方式管理組織內的連線規格。
 
-以下檔案提供如何使用[!DNL Flow Service] API建立連線規格，以及透過自助服務來源(串流SDK)整合新來源的步驟。
+以下檔案提供如何使用[!DNL Flow Service] API建立連線規格，以及透過自助服務來源（串流SDK）整合新來源的步驟。
 
 ## 快速入門
 
@@ -72,7 +72,7 @@ ht-degree: 1%
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/zh-Hant/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/zh-Hant/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ curl -X POST \
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/zh-Hant/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false
