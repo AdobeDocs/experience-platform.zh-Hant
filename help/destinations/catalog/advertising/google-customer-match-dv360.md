@@ -3,7 +3,7 @@ title: Google Customer Match +顯示器和視訊360連線
 description: 透過Google Customer Match + Display & Video 360目的地聯結器，您可以使用Experience Platform的線上和離線資料，透過Google所擁有和營運的屬性（例如搜尋、購物、Gmail和YouTube）聯絡並重新與客戶互動。
 badge: label="有限可用性" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '2442'
 ht-degree: 5%
@@ -16,7 +16,7 @@ ht-degree: 5%
 >
 >**Google Customer Match + Display &amp; Video 360聯結器可用性有限**<br>&#x200B;隨著我們與Google整合的整個成熟度生命週期，我們看到資料指出實作中的弱點，需要修正才能更廣泛地採用。 基於這些考量，Adobe已將此目的地的可見度降低為有限數量的客戶。 我們正在與Google進行主動式對話，以改善產品體驗。 我們明白這可能是一個令人失望的消息，但我們相信這是確保客戶獲得高品質、可靠體驗的負責任方法。</br>
 
-使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail]&#x200B;[!DNL Google Display Network]清單。
+使用此目的地直接對[[!DNL Google Customer Match]屬性（例如](https://support.google.com/google-ads/answer/6379332?hl=en)、[!DNL Google Display & Video 360]、[!DNL Search]和[!DNL YouTube]）啟用第一方PII型[!DNL Gmail][!DNL Google Display Network]清單。
 
 某些Google整合的第三方（例如Adobe [!DNL Real-Time CDP]）可以使用[!DNL Google Audience Partner API]直接在客戶的[!DNL Customer Match]帳戶中建立[!DNL Display & Video 360]對象。
 
@@ -177,20 +177,26 @@ Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 如果您選擇自行雜湊電子郵件地址，請務必遵守Google的要求，如上述連結所述。
 
-<!-- ### Using custom namespaces {#custom-namespaces}
+<!-- 
+### Using custom namespaces {#custom-namespaces}
 
-Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. -->
+Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. 
+-->
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
+<!-- 
+Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) 
+-->
 
-<!-- ## Configure destination - video walkthrough {#video}
+<!-- 
+## Configure destination - video walkthrough {#video}
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475121/?quality=12&learn=on&captions=chi_hant) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
+-->
 
 ## 連線到目標 {#connect}
 
@@ -231,11 +237,13 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 如需啟用此目的地的對象的指示，請參閱[啟用串流對象匯出目的地的對象資料](../../ui/activate-segment-streaming-destinations.md)。
 
-<!-- In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
+<!-- 
+In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
 
 ![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. -->
+For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. 
+-->
 
 ### 對應範例：在[!DNL Google Customer Match + Display & Video 360]中啟用對象資料 {#example-gcm}
 
