@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Profile Query Language (PQL)概觀
 description: 本指南提供PQL的一般概述，涵蓋格式化指引，並提供PQL運算式範例。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 3%
@@ -81,7 +81,7 @@ PQL支援下列常值型別：
 | 算術 | 用來對PQL元素執行基本算術。 您可以在[算術函式檔案](./arithmetic-functions.md)中找到有關這些函式的詳細資訊 |
 | 彙總 | 用於將陣列的結果組合成單一結果。 您可以在[彙總函式檔案](./aggregation-functions.md)中找到彙總函式的詳細資訊。 |
 | 日期和時間 | 與日期、時間和日期時間物件搭配使用。 有關這些函式的詳細資訊，請參閱[日期/時間函式檔案](./datetime-functions.md)。 |
-| 篩選器 | 用於篩選陣列中的資料。 在[篩選函式檔案](./filter-functions.md)中可以找到有關這些函式的詳細資訊。 |
+| 篩選 | 用於篩選陣列中的資料。 在[篩選函式檔案](./filter-functions.md)中可以找到有關這些函式的詳細資訊。 |
 | 邏輯數量詞 | 用來判斷陣列中的條件。 在[邏輯數量詞檔案](./logical-quantifiers.md)中可以找到更多資訊。 |
 | 其他 | 在[雜項函式檔案](./misc-functions.md)中找到不符合上述任何類別的函式。 |
 
