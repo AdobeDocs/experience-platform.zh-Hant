@@ -2,7 +2,7 @@
 title: 監控Adobe Experience Platform Web SDK的鉤點
 description: 瞭解如何使用Adobe Experience Platform Web SDK提供的監視鉤點來偵錯實作並擷取Web SDK記錄。
 exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
