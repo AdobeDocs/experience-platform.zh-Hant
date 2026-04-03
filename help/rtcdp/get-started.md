@@ -4,7 +4,7 @@ title: Real-Time Customer Data Platform快速入門
 description: 在設定您的 Adobe Real-Time Customer Data Platform 實作時，可使用此範例情境當作範例。
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 1%
@@ -231,7 +231,7 @@ Loyalty member
 
 因為Sarah在購物車中新增了看似禮品的專案並捨棄了，Luma可以免費贈送禮品套裝優惠來鎖定她。
 
-## 目標
+## 目的地
 
 當您新增「放棄贈送禮品購物車」對象時，您可以看到大致有多少人屬於此對象。 您可以對其採取動作，使其可用於跨頻道個人化。
 
