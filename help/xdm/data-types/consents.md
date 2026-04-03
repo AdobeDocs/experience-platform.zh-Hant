@@ -3,7 +3,7 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 同意和偏好設定資料型別
 description: 「隱私權同意」、「Personalization」和「行銷偏好設定」資料型別旨在支援收集由「同意管理平台」(CMP)和其他資料來源從您的資料作業產生的客戶許可權和偏好設定。
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2305'
 ht-degree: 1%
@@ -277,7 +277,7 @@ ht-degree: 1%
 
 下表概述`val`的接受值：
 
-| 價值 | 標題 | 說明 |
+| 值 | 標題 | 說明 |
 | --- | --- | --- |
 | `y` | 是（選擇加入） | 客戶已選擇加入以獲得同意或偏好設定。 換言之，他們&#x200B;**都**&#x200B;同意使用其資料，如相關同意或偏好設定所指示。 |
 | `n` | 否（選擇退出） | 客戶已選擇退出同意或偏好設定。 換言之，他們&#x200B;**不**&#x200B;同意使用其資料，如相關同意或偏好設定所指示。 |
