@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料使用原則概觀
 description: 資料使用原則是描述允許或限制您在Adobe Experience Platform中對資料執行的行銷動作型別的規則。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 18%
@@ -52,12 +52,13 @@ ht-degree: 18%
 
 請參閱本檔案的附錄，以取得[可用的Adobe定義行銷動作](#core-actions)清單。 您也可以使用[!DNL Policy Service] API或[!DNL Experience Platform]使用者介面來定義您自己的自訂行銷動作。 下一節將提供有關使用行銷動作和原則的詳細資訊。
 
-<!-- (Add after AAM DEC mapping doc is published)
+<!-- 
+(Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=zh-Hant).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## 管理資料使用原則 {#manage}
@@ -66,7 +67,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 >[!IMPORTANT]
 >
->所有資料使用原則(包括Adobe提供的核心原則)預設為停用。 為了考慮執行個別原則，您必須透過API或UI手動啟用該原則。
+>所有資料使用原則（包括Adobe提供的核心原則）預設為停用。 為了考慮執行個別原則，您必須透過API或UI手動啟用該原則。
 
 如需在API中使用行銷動作和資料使用原則的逐步指示，請參閱有關[建立和評估資料使用原則](create.md)的教學課程。 如需由[!DNL Policy Service] API提供的金鑰作業的詳細資訊，請參閱[原則服務開發人員指南](../api/getting-started.md)。
 
@@ -95,7 +96,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 | 跨網站目標定位 | 此動作會將資料用於跨網站廣告目標定位。來自多個網站的資料組合（包括站內資料和站外資料的組合，或來自多個站外來源的資料組合）稱為跨網站資料。 通常會收集和處理跨網站資料，以推斷使用者的興趣。 |
 | 資料科學 | 此動作會將資料用於資料科學工作流程。有些合約包含明確禁令，禁止將資料用於資料科學。有時，這些措辭為禁止將資料用於人工智慧 (AI)、機器學習 (ML) 或建模。 |
 | 資料匯出 | 此動作會將資料匯出至Adobe產品和服務之外的任何位置或目的地。 例如，下載資料至本機電腦、從畫面複製資料、排程傳送資料至Adobe以外的位置、Customer Journey Analytics已排程專案、下載報表、報表API等。 |
-| 電子郵件目標定位 | 此動作會將資料用於電子郵件目標定位行銷活動。 |
+| 電子郵件目標選擇 | 此動作會將資料用於電子郵件目標選擇行銷活動。 |
 | 匯出到第三方 | 此動作會將資料匯出至與客戶沒有直接關係的處理器和實體。許多資料提供者在合約中都有條款，禁止從最初收集資料的地方匯出資料。例如，社交網路合約通常會限制傳輸您從他們那裡收到的資料。 |
 | 現場Advertising | 此動作會將資料用於站內廣告，包括在您組織的網站或應用程式上選擇和投放廣告，或衡量此類廣告的投放和有效性。 |
 | 現場Personalization | 此動作會將資料用於站上內容個人化。 站上個人化是用於推斷使用者興趣的任何資料，並用於根據這些推斷選擇提供哪些內容或廣告。 |
