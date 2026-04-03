@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制建立角色
 description: 透過Adobe Experience Cloud中的許可權介面管理角色。
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: b665d0edce713f1b252e07125aabab79d52a9cba
+source-git-commit: ed966156c253a8c07380079013d98c578821ae03
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 13%
@@ -24,7 +24,7 @@ ht-degree: 13%
 >id="platform_permissions_roles_about_create"
 >title="建立新角色"
 >abstract="建立新角色，改善與 Experience Platform 執行個體互動的使用者之分類方式。例如，您可以為內部行銷團隊建立角色並對該角色套用受監管的健康資料 (RHD) 標籤，讓您的內部行銷團隊可存取受保護的健康資訊 (PHI)。或者，您也可以為外部機構建立角色，而且該角色不會套用 RHD 標籤，藉此拒絕該角色存取 PHI 資料。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=zh-Hant" text="管理角色"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="管理角色"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="將標籤套用至角色"
 
 若要建立新角色，請選取&#x200B;**[!UICONTROL Create role]**。
@@ -59,9 +59,11 @@ ht-degree: 13%
 
 新角色已成功建立，您被重新導向至&#x200B;**[!UICONTROL Roles]**&#x200B;頁面，您將看到新建立的角色出現在清單中。
 
-<!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
+<!-- 
+The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475984/?captions=chi_hant&learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) 
+-->
 
 ## 複製角色
 
