@@ -3,7 +3,7 @@ title: 資料夾端點
 description: 瞭解如何使用Adobe Experience Platform API建立、更新、管理和刪除資料夾。
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 4%
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 ## 擷取資料夾清單 {#list}
 
-您可以向`/folder`端點發出GET要求，並指定資料夾型別和上層資料夾ID，以擷取屬於您組織的資料夾清單。
+您可以向`/folder`端點發出GET請求，並指定資料夾型別和上層資料夾ID，以擷取屬於您組織的資料夾清單。
 
 **API格式**
 
@@ -41,7 +41,7 @@ GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 **要求**
 
-+++列出所有頂層資料夾的範例要求
++++列出所有頂層資料集資料夾的範例請求
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subfolders
@@ -185,7 +185,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
 
 ## 擷取特定資料夾 {#get}
 
-您可以向`/folder`端點發出GET要求，並指定資料夾型別和資料夾的ID，以擷取屬於您組織的特定資料夾。
+您可以向`/folder`端點發出GET請求，並指定資料夾型別和資料夾的ID，以擷取屬於您組織的特定資料夾。
 
 **API格式**
 
@@ -256,7 +256,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 ## 驗證指定的資料夾 {#validate}
 
-您可以透過向`/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate`端點發出GET要求，來驗證資料夾是否符合在其中有物件的資格，並提供資料夾型別和ID。
+您可以透過向`/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate`端點發出GET請求，來驗證資料夾是否符合在其中包含物件的資格，並提供資料夾型別和ID。
 
 **API格式**
 
@@ -271,7 +271,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 **要求**
 
-+++驗證特定資料夾的範例要求
++++驗證特定資料夾的範例請求
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
@@ -288,7 +288,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 成功狀態會傳回HTTP狀態200以及您正在驗證的資料夾詳細資訊。
 
-+++範例回應包含已驗證資料夾的詳細資訊
++++範例回應包含已驗證資料夾的詳細資料
 
 ```json
 {
@@ -378,7 +378,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 ## 刪除特定資料夾 {#delete}
 
-您可以刪除屬於您組織的特定資料夾，方法是向`/folder`發出DELETE要求並指定資料夾型別和資料夾的ID。
+您可以刪除屬於您組織的特定資料夾，方法是向`/folder`發出DELETE請求並指定資料夾型別和資料夾的ID。
 
 ***API格式**
 
