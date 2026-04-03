@@ -4,7 +4,7 @@ title: Azure事件中樞連線
 description: 建立與您的 [!DNL Azure Event Hubs] 儲存裝置的即時輸出連線，以從Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 5%
