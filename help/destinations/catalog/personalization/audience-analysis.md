@@ -5,7 +5,7 @@ badgeLimitedAvailability: label="有限可用性" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Audience Analysis目的地
 
-使用[!UICONTROL Audience Analysis]目的地將[!DNL Adobe Experience Platform]個對象資料擴充至[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=zh-Hant)報表中作為維度使用。
+使用[!UICONTROL Audience Analysis]目的地將[!DNL Adobe Experience Platform]個對象資料擴充至[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)報表中作為維度使用。
 
 >[!AVAILABILITY]
 >
