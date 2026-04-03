@@ -2,7 +2,7 @@
 title: Adobe Campaign Managed Cloud Services連線
 description: Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1721'
 ht-degree: 2%
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->此整合適用於[[!DNL Adobe Campaign] 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=zh-Hant#release-8-4-1)。
+>此整合適用於[[!DNL Adobe Campaign] 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)。
 
 ## 概觀 {#overview}
 
-[!DNL Adobe Campaign Managed Cloud Services]為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=zh-Hant)
+[!DNL Adobe Campaign Managed Cloud Services]為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 使用 Campaign 可以：
 
@@ -61,7 +61,7 @@ ht-degree: 2%
   >
   >設定檔屬性同步可用於[!DNL Adobe Campaign]資料庫中已存在的設定檔。
 
-[深入瞭解 [!DNL Adobe Campaign] 與 [!DNL Adobe Experience Platform]整合](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=zh-Hant)
+[深入瞭解 [!DNL Adobe Campaign] 與 [!DNL Adobe Experience Platform]整合](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## 支援的身分 {#supported-identities}
 
@@ -131,7 +131,7 @@ ht-degree: 2%
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL Select instance]**：您的&#x200B;**[!DNL Campaign]**&#x200B;行銷執行個體。
-* **[!UICONTROL Target mapping]**：選取您在&#x200B;**[!DNL Adobe Campaign]**&#x200B;中用來傳送傳遞的目標對應。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=zh-Hant)。
+* **[!UICONTROL Target mapping]**：選取您在&#x200B;**[!DNL Adobe Campaign]**&#x200B;中用來傳送傳遞的目標對應。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)。
 * **[!UICONTROL Select sync type]**：
 
    * **[!UICONTROL Audience sync]**：使用此選項將[!DNL Adobe Experience Platform]個對象傳送至[!DNL Adobe Campaign]。
@@ -156,7 +156,7 @@ ht-degree: 2%
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 >* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL View Identity Graph]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
-讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant)，以取得啟用此目的地的對象資料的相關指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)，以取得啟用此目的地的對象資料的相關指示。
 
 ### 對應屬性和身分 {#map}
 
