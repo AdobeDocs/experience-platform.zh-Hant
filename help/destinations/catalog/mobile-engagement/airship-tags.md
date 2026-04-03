@@ -3,7 +3,7 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 3%
@@ -86,7 +86,7 @@ Adobe Experience Platform中的對象概念類似於Airship中的[標籤](https:
 
 ## 產生持有人權杖 {#generate-bearer-token}
 
-移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[&#x200B; &quot; &#x200B;](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
+移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[ &quot; ](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
 
 按一下「**[!UICONTROL Create Token]**」。
 
