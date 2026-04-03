@@ -2,7 +2,7 @@
 title: 歸因分析
 description: 本檔案說明如何使用查詢服務，根據首次接觸與上次接觸的行銷歸因模型，建立行銷成效測量技術。
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -19,10 +19,10 @@ ht-degree: 0%
 
 * [報告套裝資料概述的Adobe Analytics來源聯結器](../../sources/connectors/adobe-applications/mapping/analytics.md)。
 * [Analytics欄位對應檔案](../../sources/connectors/adobe-applications/mapping/analytics.md)提供擷取和對應Analytics資料以搭配Query Service使用的詳細資訊。
-* [Attribution IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=zh-Hant)
-* [Adobe Analytics歸因面板指南](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=zh-Hant)。
+* [Attribution IQ概觀](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Adobe Analytics歸因面板指南](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)。
 
-在`OVER()`視窗函式區段[中可以找到](../sql/adobe-defined-functions.md#window-functions)函式內引數的說明。 [Adobe行銷與Commerce辭彙](https://business.adobe.com/tw/glossary/index.html)可能也有用。
+在`OVER()`視窗函式區段[中可以找到](../sql/adobe-defined-functions.md#window-functions)函式內引數的說明。 [Adobe行銷與Commerce辭彙](https://business.adobe.com/glossary/index.html)可能也有用。
 
 對於下列每一個使用案例，都會提供引數化SQL查詢範例作為範本供您自訂。 在您想要評估的SQL範例中，只要看到`{ }`，就提供引數。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 | 參數 | 說明 |
 | ---------- | ----------- |
-| `{NAME}` | 在Azure Data Factory (ADF)中作為標籤輸入的`{CHANNEL_NAME}`。 |
+| `{NAME}` | 在Azure Data Factory (ADF)中輸入為標籤的`{CHANNEL_NAME}`。 |
 | `{VALUE}` | 來自`{CHANNEL_VALUE}`的值，這是指定`{EXP_TIMEOUT}`間隔內的最後一次接觸 |
 | `{TIMESTAMP}` | 發生上次接觸的[!DNL Experience Event]時間戳記 |
 | `{FRACTION}` | 上次接觸的歸因，以小數點表示。 |
