@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 管理存取控制原則
 description: 透過Adobe Experience Cloud中的許可權介面管理存取控制原則。
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: b0094920720c54990953f79de32ab95c2a5c7e1c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 12%
@@ -102,7 +102,8 @@ ht-degree: 12%
 
 啟用原則後，您可以繼續下一步以[管理角色](permissions.md)的許可權。
 
-<!--Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
+<!--
+Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
 
 To begin configuring a policy's sandboxes, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Policies]** from the left panel, then select the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** from the list.
 
