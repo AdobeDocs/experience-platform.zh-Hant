@@ -2,7 +2,7 @@
 title: Trade Desk Real-Time Conversions API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Trade Desk Real-Time Conversions API擴充功能。
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 8cf838b6f6794b52f80cb899945c066014e211c2
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 在下一個畫面中，輸入[!UICONTROL Advertiser ID]，並選擇性地輸入[!UICONTROL Merchant ID]。 您可以將ID直接貼入這些輸入中，也可以改用資料元素。 這些將做為呼叫[!DNL The Trade Desk]即時轉換API事件時使用的預設值。 完成後選取「**[!UICONTROL Save]**」。
 
-若要瞭解如何建立資料元素，並使其可用於標籤屬性中的擴充功能，請依照[建立資料元素](https://experienceleague.adobe.com/zh-hant/docs/platform-learn/data-collection/tags/create-data-elements)教學課程中的指示進行。
+若要瞭解如何建立資料元素，並使其可用於標籤屬性中的擴充功能，請依照[建立資料元素](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements)教學課程中的指示進行。
 
 ![反白顯示[!DNL The Trade Desk]和[!UICONTROL Advertiser ID]欄位的[!UICONTROL Merchant ID]擴充功能組態頁面。](../../../images/extensions/server/tradedesk/configure-extension.png)
 
@@ -71,7 +71,7 @@ ht-degree: 1%
 | 上畫素ID | 事件的通用畫素ID。 |
 | 反向連結URL | 發生事件的網站URL （如果有）。 |
 | 活動名稱 | 合作夥伴平台定義的事件型別。 |
-| 價值 | 小數字串中的收入追蹤值（例如「19.98」）。 |
+| 值 | 小數字串中的收入追蹤值（例如「19.98」）。 |
 | 貨幣 | ISO格式的貨幣代碼。 |
 | 使用者端IP | 使用者端IPv4或IPv6 IP位址。 |
 | 廣告ID | 事件的唯一廣告ID。 |
