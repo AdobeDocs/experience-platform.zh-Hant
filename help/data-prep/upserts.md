@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；資料準
 title: 使用「資料準備」將部分列更新傳送到「即時客戶個人檔案」
 description: 瞭解如何使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* 已棄用透過DCS入口擷取用於設定檔更新的體驗資料模型(XDM)實體更新訊息(含JSON PATCH作業)。 作為替代方法，請遵循本指南中概述的步驟。
+>* 已棄用透過DCS入口擷取用於設定檔更新的體驗資料模型(XDM)實體更新訊息（含JSON PATCH作業）。 作為替代方法，請遵循本指南中概述的步驟。
 >
 >* 您也可以使用HTTP API來源來[將原始資料擷取到DCS入口](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection)，並指定必要的資料對應，以將您的資料轉換為符合XDM規範的訊息以進行設定檔更新。
 >
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 * 身分資料集必須具有關聯的結構描述做為[!DNL Profile]資料集。 結構描述不相符可能會導致不一致的系統行為。
 * 不過，您必須確保身分資料集與[!DNL Profile]資料集不同。 如果資料集相同，則會覆寫資料而非更新資料。
-* 雖然必須為[!DNL Profile]啟用初始資料集，但身分資料集&#x200B;**不應為**&#x200B;啟用[!DNL Profile]。 否則，也會覆寫資料，而非更新資料。 但是，應該為&#x200B;**啟用身分資料集**&#x200B;[!DNL Identity Service]。
+* 雖然必須為[!DNL Profile]啟用初始資料集，但身分資料集&#x200B;**不應為**&#x200B;啟用[!DNL Profile]。 否則，也會覆寫資料，而非更新資料。 但是，應該為&#x200B;**啟用身分資料集**[!DNL Identity Service]。
 
 #### 與身分資料集相關聯之結構描述中的必填欄位 {#identity-dataset-required-fileds}
 
@@ -133,7 +133,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 [!DNL Real-Time Customer Profile]支援下列作業：
 
 | 運作 | 說明 |
-| --- | --- | 
+| --- | --- |
 | `create` | 預設操作。 這會為[!DNL Real-Time Customer Profile]產生XDM實體建立方法。 |
 | `merge` | 這會產生[!DNL Real-Time Customer Profile]的XDM實體更新方法。 |
 | `delete` | 這會產生[!DNL Real-Time Customer Profile]的XDM實體刪除方法，並從[!DNL Profile store]永久移除資料。 |
