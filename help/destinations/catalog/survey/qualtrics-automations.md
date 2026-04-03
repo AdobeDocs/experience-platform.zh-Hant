@@ -4,7 +4,7 @@ title: Qualtrics自動化
 description: 同步體驗和營運客戶資料，以大規模解除個人化鎖定。 在Adobe Experience Platform中彙總多個營運資料來源，作為Qualtrics Experience Id中的輸入專案，以更好地瞭解您的客戶，並實現目標式外聯，在瞭解意圖、情緒和體驗驅動因素方面縮小差距。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 3%
