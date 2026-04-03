@@ -3,7 +3,7 @@ title: 加速查詢端點
 description: 瞭解如何以無狀態方式存取查詢加速存放區，以根據彙總資料快速傳回結果。 本檔案提供查詢服務加速查詢端點的範例HTTP請求和回應。
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -18,13 +18,13 @@ ht-degree: 1%
 
 ## 快速入門
 
-需要Data Distiller SKU才能使用查詢加速存放區。 請參閱[封裝](../packaging.md)和[護欄](../guardrails.md#query-accelerated-store)，以及與Data Distiller SKU相關的[授權](../data-distiller/license-usage.md)檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
+需要Data Distiller SKU才能使用查詢加速存放區。 請參閱[封裝](../packaging.md)和[護欄](../guardrails.md#query-accelerated-store)，以及與Data Distiller SKU相關的[授權](../data-distiller/license-usage.md)檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得詳細資訊。
 
 以下幾節將詳細介紹透過查詢服務API以無狀態方式存取查詢加速存放區所需的API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
 
 ## 執行加速查詢 {#run-accelerated-query}
 
-向`/accelerated-queries`端點發出POST要求以執行加速查詢。 查詢直接包含在請求承載中，或使用範本ID參照。
+對`/accelerated-queries`端點發出POST要求以執行加速查詢。 查詢直接包含在請求承載中，或使用範本ID參照。
 
 **API格式**
 
@@ -80,7 +80,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 
 | 屬性 | 說明 |
 |---|---|
-| `dbName` | 您對其執行加速查詢的資料庫名稱。 `dbName`的值應採用`{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`格式。 提供的資料庫必須存在於加速存放區中，否則請求會導致錯誤。 您也必須確保`dbName`中的`x-sandbox-name`標頭和沙箱名稱參照相同的沙箱。 |
+| `dbName` | 您對其執行加速查詢的資料庫名稱。 `dbName`的值應採用`{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`格式。 提供的資料庫必須存在於加速存放區中，否則請求會導致錯誤。 您也必須確保`x-sandbox-name`中的`dbName`標頭和沙箱名稱參照相同的沙箱。 |
 | `sql` | SQL陳述式字串。 允許的大小上限為1000000個字元。 |
 | `templateId` | 向`/templates`端點發出POST請求時，建立並儲存為範本之查詢的唯一識別碼。 |
 | `name` | 加速查詢的選擇性人性化描述性名稱。 |
