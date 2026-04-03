@@ -76,7 +76,7 @@ Edge Network只接受符合[UUIDv4格式](https://datatracker.ietf.org/doc/html/
 >
 >使用JavaScript的`document.cookie`方法（包括使用標籤方法[`cookie.set()`](../tags/cookie.md)）設定的Cookie，幾乎永遠不會受到限制Cookie持續時間的瀏覽器原則的保護。
 
-請注意，`A`或`AAAA`記錄僅支援設定和追蹤Cookie。 資料收集的主要方法是透過DNS `CNAME`。 使用`A`或`AAAA`記錄設定FPID，並使用`CNAME`傳送至Adobe。 [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)可讓您設定資料收集的`CNAME`。
+請注意，`A`或`AAAA`記錄僅支援設定和追蹤Cookie。 資料收集的主要方法是透過DNS `CNAME`。 使用`A`或`AAAA`記錄設定FPID，並使用`CNAME`傳送至Adobe。 [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant#adobe-managed-certificate-program)可讓您設定資料收集的`CNAME`。
 
 ### 何時設定Cookie {#when-to-set-cookie}
 
@@ -105,7 +105,7 @@ Adobe建議您仔細考慮FPID Cookie的存留期。 請務必將貴組織的隱
 
 若要從您自己的網域設定FPID Cookie，您必須為網頁SDK呼叫設定您自己的`CNAME`，然後在資料流設定中啟用第一方ID Cookie功能。 DNS中的`CNAME`記錄可讓您建立從某個網域名稱到另一個網域名稱的別名。 此別名可讓第三方服務看起來像是您自己的網域的一部分，讓其Cookie看起來像是第一方Cookie。 當使用`CNAME`啟用第一方資料收集時，您網域的所有Cookie都會在對資料收集端點提出請求時傳送。
 
-1. 使用Adobe建立要在您的組織中用於資料收集的`CNAME`記錄。 如需完整程式，請參閱[Adobe管理的憑證程式](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)。
+1. 使用Adobe建立要在您的組織中用於資料收集的`CNAME`記錄。 如需完整程式，請參閱[Adobe管理的憑證程式](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/adobe-managed-cert)。
 1. 啟用資料流中的&#x200B;**[!UICONTROL First Party ID Cookie]**&#x200B;選項。 此設定可告知Edge Network在查詢第一方裝置ID時參考指定的Cookie，而不是在身分對應中查詢值。 啟用此設定時，您必須提供預期儲存FPID的Cookie名稱。 如需詳細資訊，請參閱[建立和設定資料串流](/help/datastreams/configure.md#advanced-options)。
 
    ![顯示資料流設定的平台UI影像，其中強調第一方ID Cookie設定](/help/collection/js/assets/first-party-id-datastreams.png)
@@ -198,7 +198,7 @@ Adobe建議您仔細考慮FPID Cookie的存留期。 請務必將貴組織的隱
 
 | 造訪 | 說明 |
 | --- | --- |
-| 首次造訪 | 假設您尚未開始設定FPID Cookie。 [AMCV Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8)中包含的ECID是用來識別訪客的識別碼。 |
+| 首次造訪 | 假設您尚未開始設定FPID Cookie。 [AMCV Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=zh-Hant#section-c55af54828dc4cce89f6118655d694c8)中包含的ECID是用來識別訪客的識別碼。 |
 | 第二次造訪 | 已開始推出FPID解決方案。 現有的ECID仍存在，且仍然是訪客身分識別的主要識別碼。 |
 | 第三次造訪 | 在第二次和第三次造訪之間，已過了足夠的時間且由於瀏覽器原則已刪除ECID。 但是，由於FPID是使用DNS `A`記錄設定的，所以FPID會持續存在。 FPID現在會視為主要ID，並用來植入寫入一般使用者裝置的ECID。 使用者現在在Adobe Experience Platform和Experience Cloud解決方案中會被視為新訪客。 |
 | 第四次瀏覽 | 在第三次和第四次造訪之間，已過了足夠的時間且由於瀏覽器原則已刪除ECID。 如同先前的造訪，FPID會因設定方式而持續存在。 這次會產生與上次造訪相同的ECID。 在整個Adobe Experience Platform和Experience Cloud解決方案中，使用者會被視為與上次造訪相同的使用者。 |

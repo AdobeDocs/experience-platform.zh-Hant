@@ -47,7 +47,7 @@ ID移轉支援下列轉換模式：
 
 ## Audience Manager特徵更新
 
-移轉期間若將XDM格式的資料傳入Audience Manager，該資料必須轉換為訊號。 必須更新您的特徵，以反映XDM提供的新索引鍵。 使用[BAAAM工具](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management)可簡化此程式。
+移轉期間若將XDM格式的資料傳入Audience Manager，該資料必須轉換為訊號。 必須更新您的特徵，以反映XDM提供的新索引鍵。 使用[BAAAM工具](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=zh-Hant#getting-started-with-bulk-management)可簡化此程式。
 
 ## 第三方ID移轉 {#third-party-id}
 

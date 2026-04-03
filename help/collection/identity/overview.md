@@ -24,9 +24,9 @@ ECID可識別裝置，而非人員。 若要將活動連結至已知人員，您
 
 ## 第一方和第三方集合 {#first-party-and-third-party-collection}
 
-Web SDK一律會在您的網域上將身分識別[Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) （例如`kndctr_` Cookie）設定為第一方Cookie，無論哪個端點會收到資料收集請求。 收集端點（您的實作傳送資料的網域）是另一個選擇，會影響瀏覽器和網路原則處理請求本身的方式。
+Web SDK一律會在您的網域上將身分識別[Cookie](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/cookies/web-sdk) （例如`kndctr_` Cookie）設定為第一方Cookie，無論哪個端點會收到資料收集請求。 收集端點（您的實作傳送資料的網域）是另一個選擇，會影響瀏覽器和網路原則處理請求本身的方式。
 
-**第一方集合**&#x200B;會使用指向Edge Network的CNAME，透過您組織控制的網域（例如`data.example.com`）路由資料集合請求。 由於要求會保留在您的網域上，因此不太可能會遭到廣告封鎖程式或瀏覽器網路限制的封鎖。 第一方集合也是從您自己的伺服器基礎結構設定[第一方裝置識別碼](./fpid.md)的先決條件，這是最耐用的可用身分識別策略。 Adobe建議使用[Adobe管理的憑證程式](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)來設定您實作的第一方集合。
+**第一方集合**&#x200B;會使用指向Edge Network的CNAME，透過您組織控制的網域（例如`data.example.com`）路由資料集合請求。 由於要求會保留在您的網域上，因此不太可能會遭到廣告封鎖程式或瀏覽器網路限制的封鎖。 第一方集合也是從您自己的伺服器基礎結構設定[第一方裝置識別碼](./fpid.md)的先決條件，這是最耐用的可用身分識別策略。 Adobe建議使用[Adobe管理的憑證程式](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/adobe-managed-cert)來設定您實作的第一方集合。
 
 **協力廠商集合**&#x200B;會直接傳送要求給Adobe擁有的[`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) （例如`example.data.adobedc.net`）。 雖然身分Cookie仍會設定為您的網域的第一方，但請求本身會傳送至第三方網域，而有些瀏覽器和廣告封鎖程式可以加以限制。
 

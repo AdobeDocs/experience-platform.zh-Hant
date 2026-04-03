@@ -34,7 +34,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->即使訪客選擇退出，身分和同意Cookie仍會設定。 這些Cookie是尊重訪客的資料收集偏好設定所必需的。 如需Web SDK設定的Cookie完整清單，請參閱[Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)。
+>即使訪客選擇退出，身分和同意Cookie仍會設定。 這些Cookie是尊重訪客的資料收集偏好設定所必需的。 如需Web SDK設定的Cookie完整清單，請參閱[Web SDK Cookie](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/cookies/web-sdk)。
 
 當訪客在先前撤銷同意後重新授與同意（在`setConsent`後與`"general": "in"`呼叫`"general": "out"`）時，Web SDK會恢復傳送事件，並在Cookie中使用現有的ECID （如果尚未過期）。 訪客的身分會保留。
 
