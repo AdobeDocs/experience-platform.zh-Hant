@@ -3,7 +3,7 @@ title: 即時查詢邊緣設定檔屬性
 description: 瞭解如何使用自訂Personalization目的地和Edge Network API即時查詢邊緣設定檔屬性
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 1%
@@ -52,9 +52,11 @@ Edge設定檔查詢使用案例須受下表所述的特定效能護欄約束。 
 * **[!UICONTROL Edge Segmentation]**：如果您需要邊緣分段，請啟用此選項。 如果您只想在邊緣上查詢設定檔屬性，但不想根據邊緣設定檔執行任何分段，則請停用此選項。
 
 
-<!-- >[!IMPORTANT]
+<!-- 
+>[!IMPORTANT]
 >
->Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
+>Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. 
+-->
 
 ![顯示資料流設定畫面的Experience Platform UI影像。](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
