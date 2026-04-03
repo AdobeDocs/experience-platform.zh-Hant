@@ -1,13 +1,13 @@
 ---
 title: 監視邊緣分段
 description: 瞭解如何使用監視儀表板來觀察邊緣分段輸送量。
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+exl-id: 7abba7e8-1f2d-4a21-a93f-8bda7aa4d849
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 3%
 
 ---
-
 
 # 監視邊緣分段
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如果您選取&#x200B;**，則只能看到資料流檢視**&#x200B;[!UICONTROL Edge segmentation throughput]。
+>如果您選取&#x200B;**，則只能看到資料流檢視**[!UICONTROL Edge segmentation throughput]。
 
 如果您依服務篩選，則可以選擇要檢視其輸送量資訊的服務。 其中包括Edge細分、資料收集、Target、Adobe Journey Optimizer、Offer Decisioning、自訂個人化目的地、事件轉送、Adobe Analytics和Adobe Audience Manager等服務。
 
