@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2024 年 1 月)
 description: Adobe Experience Platform 2024 年 1 月版發行說明。
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: ht
-source-wordcount: '1662'
-ht-degree: 100%
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+workflow-type: tm+mt
+source-wordcount: '1649'
+ht-degree: 97%
 
 ---
 
@@ -22,18 +22,18 @@ Experience Platform 現有功能的更新：
 - [屬性型存取控制](#abac)
 - [資料準備](#data-prep)
 - [儀表板](#dashboards)
-- [目標](#destinations)
+- [目的地](#destinations)
 - [身分識別服務](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
-- [即時客戶設定檔](#profile)
+- [即時客戶輪廓](#profile)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
 ## 使用案例教戰手冊 {#use-case-playbooks}
 
-「[!UICONTROL 使用案例教戰手冊]」功能現在已正式推出，可供所有 Real-Time CDP 及 Adobe Journey Optimizer 的客戶使用。「[!UICONTROL 使用案例教戰手冊]」旨在協助使用者克服開始使用 Real-Time Customer Data Platform 或 Adobe Journey Optimizer 時遇到的挑戰。當您不確定要從哪裡開始或如何為所需的使用案例建立正確資產時，使用案例教戰手冊能夠提供靈感和建立不同的資產供您測試，並在準備好時匯入到生產環境中。
+[!UICONTROL Use Case Playbooks]功能現在已可供所有Real-Time CDP和Adobe Journey Optimizer客戶使用。 [!UICONTROL Use Case Playbooks]的設計目的，是協助使用者在開始使用Real-Time Customer Data Platform或Adobe Journey Optimizer時克服挑戰。 當您不確定要從哪裡開始或如何為所需的使用案例建立正確資產時，使用案例教戰手冊能夠提供靈感和建立不同的資產供您測試，並在準備好時匯入到生產環境中。
 
-若要開始使用「[!UICONTROL 使用案例教戰手冊]」，請閱讀以下文件頁面：
+若要開始使用[!UICONTROL Use Case Playbooks]，請閱讀下列檔案頁面：
 
 - 閱讀[概觀頁面](/help/use-case-playbooks/playbooks/overview.md)以了解其目的、可用性資訊，並取得教戰手冊運作方式的端對端示範，包括從發現到建立實例，再到將產生的資產匯入至其他沙箱環境等。
 - 取得依產品分類的所有[可用教戰手冊](/help/use-case-playbooks/playbooks/playbooks-list.md)清單 (Real-Time CDP 或 Journey Optimizer)
@@ -73,23 +73,23 @@ Experience Platform 現有功能的更新：
 
 ## 儀表板 {#dashboards}
 
-Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取的有關組織資料的重要分析。
+Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取的有關組織資料的重要洞察。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 檢視 SQL | 您現在可以使用「檢視 SQL」切換鈕檢視設定檔、客群、目標和自訂深入解析背後的 SQL，然後透過查詢編輯器隨選執行查詢。存取為 Real-time Customer Data Platform 深入解析提供支援的 SQL，可協助您了解資料模型分析背後的邏輯。這種透明度可讓您的 Adobe Real-time CDP 資料更易於存取和理解，並對決策產生影響。<br>從 40 多個現有深入分析的 SQL 中汲取靈感，然後建立新的查詢，以根據您的業務需求從 Experience Platform 資料中獲得獨特的深入分析。SQL 也可用於 Experience League 文件中的[設定檔](../../dashboards/insights/profiles.md)、[客群](../../dashboards/insights/audiences.md)，以及[目標](../../dashboards/insights/destinations.md)深入解析。這些文件特別介紹了能夠透過標準深入解析來回應的業務使用案例。如需詳細資訊，請閱讀[檢視 SQL 深入解析](../../dashboards/view-sql.md)的指南。 |
+| 檢視 SQL | 您現在可以使用「檢視 SQL」切換鈕檢視輪廓、客群、目標和自訂洞察背後的 SQL，然後透過查詢編輯器隨選執行查詢。存取為 Real-time Customer Data Platform 洞察提供支援的 SQL，可協助您了解資料模型分析背後的邏輯。這種透明度可讓您的 Adobe Real-time CDP 資料更易於存取和理解，並對決策產生影響。<br>從 40 多個現有洞察的 SQL 中汲取靈感，然後建立新的查詢，以根據您的業務需求從 Experience Platform 資料中獲得獨特的洞察。SQL 也可用於 Experience League 文件中的[輪廓](../../dashboards/insights/profiles.md)、[客群](../../dashboards/insights/audiences.md)，以及[目標](../../dashboards/insights/destinations.md)洞察。這些文件特別介紹了能夠透過標準洞察來回應的業務使用案例。如需詳細資訊，請閱讀[檢視 SQL 洞察](../../dashboards/view-sql.md)的指南。 |
 
 {style="table-layout:auto"}
 
 如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂小工具，請先閱讀[儀表板概觀](../../dashboards/home.md)。
 
-## 目標 {#destinations}
+## 目的地 {#destinations}
 
-[!DNL Destinations] 是與目標平台的預先建立整合，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Adobe Experience Platform 的資料。您可以使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、定向廣告和其他諸多使用案例。
 
-**新目標** {#new-destinations}
+**新目的地** {#new-destinations}
 
 | 目標 | 說明 |
 | ----------- | ----------- |
@@ -97,7 +97,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 {style="table-layout:auto"}
 
-**新功能或更新的功能** {#destinations-new-updated-functionality}
+**全新或更新版功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | ----------- | ----------- |
@@ -144,9 +144,9 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 若要深入了解 Real-Time CDP，請閱讀 [Real-Time CDP 概觀](../../rtcdp/overview.md)。
 
-## 即時客戶設定檔 {#profile}
+## 即時客戶輪廓 {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 可讓您為客戶提供協調一致且相關的體驗，無論他們何時何地與您的品牌互動。即時客戶輪廓會合併來自多個管道的資料 (包括線上、離線、CRM 和協力廠商資料)，讓您可以掌握每位個別客戶的全貌。設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 **更新的功能**
 
@@ -175,14 +175,14 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 ## 來源 {#sources}
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
+Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] 來源 | 使用來源目錄中的 [!DNL Oracle NetSuite] 整合可將資料從您的 [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) 和 [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) 帳戶帶至 Experience Platform。 |
-| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] 來源 | 使用來源目錄中的 [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 整合可將資料從您的 [!DNL Braze] 帳戶帶至 Experience Platform。 |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite]來源 | 使用來源目錄中的 [!DNL Oracle NetSuite] 整合可將資料從您的 [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) 和 [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) 帳戶帶至 Experience Platform。 |
+| [!BADGE Beta]{type=Informative} [!DNL Braze Currents]來源 | 使用來源目錄中的 [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 整合可將資料從您的 [!DNL Braze] 帳戶帶至 Experience Platform。 |
 | 支援 [!DNL Snowflake] 批次來源的金鑰組驗證 | 現在起，您為批次資料建立新的 [!DNL Snowflake] 帳戶時，可以使用金鑰組驗證了。如需詳細資訊，請閱讀[使用 API 建立 [!DNL Snowflake] 帳戶](../../sources/tutorials/api/create/databases/snowflake.md)的指南，或[透過使用者介面建立 [!DNL Snowflake] 帳戶](../../sources/tutorials/ui/create/databases/snowflake.md)的指南。 |
 
 {style="table-layout:auto"}
