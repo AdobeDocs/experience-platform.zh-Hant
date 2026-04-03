@@ -2,7 +2,7 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 10%
@@ -22,7 +22,7 @@ ht-degree: 10%
 
 透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 若要防止這些不想要的合併，您可以使用透過[!DNL Identity Graph Linking Rules]提供的設定，並允許使用者進行精確的個人化。
 
-## 快速入門
+## 開始使用
 
 下列檔案是瞭解[!DNL Identity Graph Linking Rules]的必要條件。
 
@@ -38,14 +38,15 @@ ht-degree: 10%
 
 觀看以下影片，瞭解身分圖表連結規則的一些基本層面。
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +56,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="身分識別圖連結規則概觀" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448283/?captions=chi_hant&format=jpeg&nocache=1747851655227" alt="身分識別圖連結規則概觀"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="身分識別圖連結規則概觀"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +79,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="身分圖表連結規則 — 圖表模擬" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444054/?captions=chi_hant&format=jpeg&nocache=1747851655237" alt="身分圖表連結規則 — 圖表模擬"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="身分圖表連結規則 — 圖表模擬"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -101,7 +102,7 @@ ht-degree: 10%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="身分圖表連結規則 — 身分設定" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475973/?captions=chi_hant&format=jpeg&nocache=1747851655218" alt="身分圖表連結規則 — 身分設定"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="身分圖表連結規則 — 身分設定"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -195,7 +196,7 @@ ht-degree: 10%
 
 您可以使用身分設定UI工作區將名稱空間設定為唯一。 如此一來，會通知身分最佳化演演算法，指定圖表可能只有一個包含該唯一名稱空間的身分。 這可防止將兩個不同的人員識別碼合併到同一個圖表中。
 
-請考量下列情況：
+假設有下列情況:
 
 * Scott使用平板電腦並開啟Google Chrome瀏覽器，前往acme<span>.com，在此登入並瀏覽新籃球鞋。
    * 在幕後，此情境會記錄下列身分：
