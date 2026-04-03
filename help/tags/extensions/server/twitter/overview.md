@@ -4,7 +4,7 @@ title: Twitter事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能可讓您將事件擷取至Twitter，以滿足您的業務需求。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 2%
@@ -111,7 +111,7 @@ ht-degree: 2%
 
 如果事件集合與[!DNL Experience Platform]整合成功，您將會在[!DNL Twitter] [!UICONTROL Events manager]內看到事件。
 
-![&#x200B; [!DNL Twitter]事件管理員](../../../images/extensions/server/twitter/event-manager.png)
+![ [!DNL Twitter]事件管理員](../../../images/extensions/server/twitter/event-manager.png)
 
 ## 後續步驟
 
