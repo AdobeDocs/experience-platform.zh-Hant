@@ -2,7 +2,7 @@
 title: Cloud Connector擴充功能概述
 description: 瞭解Adobe Experience Platform中的Cloud Connector事件轉送擴充功能。
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 67%
@@ -73,7 +73,7 @@ ht-degree: 67%
 | [Content-Length](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length) | 資源大小，以位元組十進位值表示。 |
 | [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) | 表示資源的媒介類型。 |
 | Cookie | 包含伺服器先前以 [`Set-Cookie`](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Set-Cookie) 標頭傳送及儲存的 [HTTP Cookie](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Cookies)。 |
-| Date | 一般 HTTP 標頭會包含產生訊息的日期和時間。 |
+| 日期 | 一般 HTTP 標頭會包含產生訊息的日期和時間。 |
 | [DNT](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/DNT) | 表示使用者的追蹤偏好設定。 |
 | Expect | 表示伺服器必須滿足才能正確處理要求的期望。 |
 | Forwarded | 包含來自[反向 Proxy 伺服器](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)的資訊，但在要求路徑涉及 Proxy 時，資訊遭到更改或遺失。 |
