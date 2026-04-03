@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform可讓您從設定檔存放區中刪除資料集或批次，以移除不再需要或錯誤新增的即時客戶設定檔資料。 這需要使用設定檔API來建立設定檔系統作業或刪除請求。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2021'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->在Microsoft Azure和Amazon Web Services (AWS)上執行的Adobe Experience Platform實作有下列端點。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/multi-cloud)。
+>在Microsoft Azure上執行的Adobe Experience Platform實作與Amazon Web Services (AWS)可能有所不同，以下是端點。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
 Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強大的設定檔。 擷取到[!DNL Experience Platform]的資料儲存在[!DNL Data Lake]中，如果已為設定檔啟用資料集，則該資料也會儲存在[!DNL Real-Time Customer Profile]資料存放區中。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用[!DNL Real-Time Customer Profile] API來建立[!DNL Profile]系統作業或「刪除請求」。
 
@@ -58,7 +58,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!IMPORTANT]
 >
->Azure和AWS執行個體之間的以下要求不同。
+>以下請求在Azure和AWS執行個體之間有所不同。
 
 >[!BEGINTABS]
 
@@ -100,7 +100,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 
 >[!IMPORTANT]
 >
->Azure和AWS執行個體之間的下列回應不同。
+>以下回應在Azure和AWS執行個體之間有所不同。
 
 >[!BEGINTABS]
 
@@ -224,7 +224,7 @@ POST /system/jobs
 
 >[!IMPORTANT]
 >
->Azure和AWS執行個體之間的以下要求不同。
+>以下請求在Azure和AWS執行個體之間有所不同。
 
 >[!BEGINTABS]
 
@@ -284,7 +284,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Azure和AWS執行個體之間的下列回應不同。
+>以下回應在Azure和AWS執行個體之間有所不同。
 
 >[!BEGINTABS]
 
@@ -357,7 +357,7 @@ curl -X POST \
 >
 > 您無法刪除根據記錄結構描述之資料集的批次，因為記錄型別資料集批次會覆寫先前的記錄，因此無法「復原」或刪除。 根據記錄結構描述移除資料集錯誤批次影響的唯一方法是，使用正確的資料重新內嵌批次，以覆寫不正確的記錄。
 
-如需有關記錄和時間序列行為的詳細資訊，請檢閱[!DNL XDM System]總覽中有關XDM資料行為[&#128279;](../../xdm/home.md#data-behaviors)的區段。
+如需有關記錄和時間序列行為的詳細資訊，請檢閱[總覽中有關XDM資料行為](../../xdm/home.md#data-behaviors)的[!DNL XDM System]區段。
 
 **API格式**
 
@@ -369,7 +369,7 @@ POST /system/jobs
 
 >[!IMPORTANT]
 >
->Azure和AWS執行個體之間的以下要求不同。
+>以下請求在Azure和AWS執行個體之間有所不同。
 
 >[!BEGINTABS]
 
@@ -433,7 +433,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Azure和AWS執行個體之間的下列回應不同。
+>以下回應在Azure和AWS執行個體之間有所不同。
 
 >[!BEGINTABS]
 
@@ -538,7 +538,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!IMPORTANT]
 >
->Azure和AWS執行個體之間的以下要求不同。
+>以下請求在Azure和AWS執行個體之間有所不同。
 
 >[!BEGINTABS]
 
@@ -581,7 +581,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 
 >[!IMPORTANT]
 >
->Azure和AWS執行個體之間的下列回應不同。
+>以下回應在Azure和AWS執行個體之間有所不同。
 
 >[!BEGINTABS]
 
@@ -654,7 +654,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 
 >[!AVAILABILITY]
 >
->此端點在Adobe Experience Platform的Azure執行個體中僅&#x200B;**支援**，而在AWS執行個體中則是&#x200B;**不支援**。
+>此端點僅&#x200B;**在Adobe Experience Platform的Azure執行個體中支援**，在AWS執行個體中則是&#x200B;**不支援**。
 
 [!DNL Experience Platform]可讓您刪除先前的請求，這可能對許多原因有用，包括刪除工作未完成或卡在處理階段中。 若要移除刪除請求，您可以對`/system/jobs`端點執行DELETE請求，並將您要移除之刪除請求的ID加入請求路徑。
 
@@ -684,4 +684,4 @@ curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-4
 
 ## 後續步驟
 
-現在您已經知道從[!DNL Experience Platform]內的[!DNL Profile store]刪除資料集和批次所涉及的步驟，您可以安全地刪除已錯誤新增或您的組織不再需要的。 請注意，刪除請求無法復原，因此您應該僅刪除確信現在不需要且未來不需要的資料。
+現在您已經知道從[!DNL Profile store]內的[!DNL Experience Platform]刪除資料集和批次所涉及的步驟，您可以安全地刪除已錯誤新增或您的組織不再需要的。 請注意，刪除請求無法復原，因此您應該僅刪除確信現在不需要且未來不需要的資料。
