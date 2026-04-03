@@ -4,7 +4,7 @@ title: 區段作業API端點
 description: Adobe Experience Platform Segmentation Service API中的區段作業端點可讓您以程式設計方式管理組織的區段作業。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 2%
@@ -358,7 +358,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | 屬性 | 說明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | 您要擷取之區段作業的`id`值。 |
 
 **要求**
@@ -583,7 +583,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | 屬性 | 說明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | 您要刪除之區段作業的`id`值。 |
 
 **要求**
