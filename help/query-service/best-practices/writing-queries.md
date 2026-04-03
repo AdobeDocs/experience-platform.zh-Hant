@@ -5,7 +5,7 @@ title: 查詢服務中查詢執行的一般指引
 type: Tutorial
 description: 本檔案概述在Adobe Experience Platform查詢服務中寫入查詢時需要瞭解的重要詳細資訊。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 2%
@@ -169,7 +169,7 @@ FROM
 
 ### 後引號
 
-使用點標籤法時，反引號`` ` ``僅用來逸出保留的欄名稱&#x200B;**&#x200B;**。 例如，由於`order`是SQL中的保留字，因此您必須使用反引號來存取欄位`commerce.order`：
+使用點標籤法時，反引號`` ` ``僅用來逸出保留的欄名稱&#x200B;****。 例如，由於`order`是SQL中的保留字，因此您必須使用反引號來存取欄位`commerce.order`：
 
 ```sql
 SELECT 
@@ -238,21 +238,21 @@ LIMIT 10
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 |-------------------+-----------------------------+-----------+----------+---------
- timestamp         | timestamp                   |           |          | 
- _id               | text                        |           |          | 
- productlistitems  | anyarray                    |           |          | 
- commerce          | luma_midvalues_commerce     |           |          | 
- receivedtimestamp | timestamp                   |           |          | 
- enduserids        | luma_midvalues_enduserids   |           |          | 
- datasource        | datasource                  |           |          | 
- web               | luma_midvalues_web          |           |          | 
- placecontext      | luma_midvalues_placecontext |           |          | 
- identitymap       | anymap                      |           |          | 
- marketing         | marketing                   |           |          | 
- environment       | luma_midvalues_environment  |           |          | 
- _experience       | luma_midvalues__experience  |           |          | 
- device            | device                      |           |          | 
- search            | search                      |           |          | 
+ timestamp         | timestamp                   |           |          |
+ _id               | text                        |           |          |
+ productlistitems  | anyarray                    |           |          |
+ commerce          | luma_midvalues_commerce     |           |          |
+ receivedtimestamp | timestamp                   |           |          |
+ enduserids        | luma_midvalues_enduserids   |           |          |
+ datasource        | datasource                  |           |          |
+ web               | luma_midvalues_web          |           |          |
+ placecontext      | luma_midvalues_placecontext |           |          |
+ identitymap       | anymap                      |           |          |
+ marketing         | marketing                   |           |          |
+ environment       | luma_midvalues_environment  |           |          |
+ _experience       | luma_midvalues__experience  |           |          |
+ device            | device                      |           |          |
+ search            | search                      |           |          |
 ```
 
 此外，您可以將欄的名稱附加至表格名稱，以取得特定欄的詳細資訊。 這會以`\d {TABLE_NAME}_{COLUMN}`格式撰寫。
@@ -263,8 +263,8 @@ LIMIT 10
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 |----------------+-----------------------------------+-----------+----------+---------
- webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
- webreferrer    | web_webreferrer                   |           |          | 
+ webpagedetails | luma_midvalues_web_webpagedetails |           |          |
+ webreferrer    | web_webreferrer                   |           |          |
 ```
 
 ## 聯結資料集
