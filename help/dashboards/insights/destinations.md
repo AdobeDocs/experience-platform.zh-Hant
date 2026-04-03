@@ -2,7 +2,7 @@
 title: 目的地分析
 description: 探索為您的目的地深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索Adobe Experience Platform中的資料啟用。
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 3%
@@ -17,16 +17,16 @@ ht-degree: 3%
 
 如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-下列深入分析都可供您用作[目的地儀表板](../guides/destinations.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[&#128279;](../customize/custom-widgets.md)在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget的說明。
+下列深入分析都可供您用作[目的地儀表板](../guides/destinations.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和](../customize/custom-widgets.md)使用者定義儀表板[中建立及編輯新Widget](../standard-dashboards.md#create-widget)的說明。
 
 ## 啟用的客群 {#activated-audiences}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 依特定目的地篩選的已啟用對象總數是多少？
-- 每個目的地啟用的對象人數是多少？
+- 每個目的地啟用的受眾規模為何？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT
@@ -48,16 +48,16 @@ WHERE
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[啟用的對象Widget檔案](../guides/destinations.md#activated-audiences)。
+如需有關此insight外觀和功能的資訊，請參閱[啟用的對象Widget檔案](../guides/destinations.md#activated-audiences)。
 
 ## 已在所有目的地啟用的客群 {#activated-audiences-across-all-destinations}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 在所有目的地啟用多少對象？
 - 啟用的對象總數是多少？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT count(segment_id) AS Activated_Audiences_Count
@@ -71,17 +71,17 @@ WHERE
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱所有目的地Widget檔案中的[已啟動對象](../guides/destinations.md#activated-audiences-across-all-destinations)。
+如需有關此insight的外觀和功能的資訊，請參閱所有目的地Widget檔案中的[已啟動對象](../guides/destinations.md#activated-audiences-across-all-destinations)。
 
 ## 依目的地平台區分的有效目的地 {#active-destinations-by-destination-platform}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 使用中的目的地有幾個？
 - 依目的地平台區分的有效目的地為何？
 - 依每個目的地平台劃分的作用中目的地數量是多少？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT destination_platform_name AS Destination_Platform_Name,
@@ -96,17 +96,17 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[依目的地平台Widget檔案的作用中目的地](../guides/destinations.md#active-destinations-by-destination-platform)。
+如需有關此insight的外觀和功能的資訊，請參閱[依目的地平台Widget檔案的作用中目的地](../guides/destinations.md#active-destinations-by-destination-platform)。
 
-## 客群規模趨勢 {#audience-size-trend}
+## 對象規模趨勢 {#audience-size-trend}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 對象人數如何隨著時間改變，包括對應至目的地的對象出現異常？
 - 如何在30天、90天和12個月的指定期間內，依目的地找到對象人數的整體趨勢？
 - 對象的主要特性是什麼造成大小，例如任何電子郵件行銷活動的尖峰？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT d.destination_name,
@@ -142,17 +142,17 @@ SELECT d.destination_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[對象人數趨勢Widget檔案](../guides/destinations.md#audience-size-trend)。
+如需有關此insight外觀和功能的資訊，請參閱[對象人數趨勢Widget檔案](../guides/destinations.md#audience-size-trend)。
 
-## 常見客群 {#common-audiences}
+## 常見對象 {#common-audiences}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 兩個不同目的地之間有哪些共同受眾？
 - 兩個不同目的地之間的每個共同對象有多少個設定檔？
 - 兩個目的地對應到的最大受眾是哪個？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT k.destination_name1,
@@ -214,17 +214,17 @@ SELECT k.destination_name1,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[常見對象Widget檔案](../guides/destinations.md#common-audiences)。
+如需有關此insight外觀和功能的資訊，請參閱[常見對象Widget檔案](../guides/destinations.md#common-audiences)。
 
 ## 目的地狀態 {#destination-status}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 已啟用使用的目的地總數是多少？
 - 已停用的目的地總數是多少？
 - 已啟用和已停用目的地之間的百分比分割為何？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT COUNT(CASE
@@ -238,16 +238,16 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[目的地狀態Widget檔案](../guides/destinations.md#destination-status)。
+如需有關此insight外觀和功能的資訊，請參閱[目的地狀態Widget檔案](../guides/destinations.md#destination-status)。
 
 ## 目的地計數 {#destinations-count}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 目前設定了多少目的地？
 - 目的地總數在一段時間內有何變更？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT count(destination_id) AS total_number_of_destinations
@@ -256,17 +256,17 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[目的地計數Widget檔案](../guides/destinations.md#destinations-count)。
+如需有關此insight外觀和功能的資訊，請參閱[目的地計數Widget檔案](../guides/destinations.md#destinations-count)。
 
-## 已對應客群的健康情況 {#mapped-audience-health}
+## 已對應對象的健康情況 {#mapped-audience-health}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 哪些對應至目的地的對象在過去30天內有重大變化？
 - 對應對象的最新大小為何，以及上個月是否有變更？
 - 我如何根據上個月大小變化的嚴重性，列出對應到目的地的所有對象？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT destination_name,
@@ -325,17 +325,17 @@ SELECT destination_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[對應的對象健康狀況Widget檔案](../guides/destinations.md#mapped-audience-health)。
+如需有關此insight外觀和功能的資訊，請參閱[對應的對象健康狀況Widget檔案](../guides/destinations.md#mapped-audience-health)。
 
 ## 已對應的客群 {#mapped-audiences}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 有多少對象已對應至特定目的地？
 - 對應對象的數量會隨著時間而如何變化？
 - 我可以在哪裡比較兩個目的地，以檢視對應至每個目的地的對象重疊？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT COUNT(segment_id) AS mapped_audiences_count
@@ -345,9 +345,10 @@ WHERE destination_id = 1458738325;
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[對應的對象Widget檔案](../guides/destinations.md#mapped-audiences)。
+如需有關此insight外觀和功能的資訊，請參閱[對應的對象Widget檔案](../guides/destinations.md#mapped-audiences)。
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -368,13 +369,13 @@ See the [Mapped audiences by identity widget documentation](../guides/destinatio
 
 ## 最常用的目的地 {#most-used-destinations}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 最常使用的目的地有哪些？
 - 每個目的地對應了多少個對象，依最高到最低排序？
 - 將對象對應至目的地如何從一個快照變更為另一個？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -393,17 +394,17 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[最常使用的目的地Widget檔案](../guides/destinations.md#most-used-destinations)。
+如需有關此insight外觀和功能的資訊，請參閱[最常使用的目的地Widget檔案](../guides/destinations.md#most-used-destinations)。
 
-## 最近啟動的客群 {#recently-activated-audiences}
+## 最近啟動的對象 {#recently-activated-audiences}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 對象最近啟用的目的地是哪個目的地？
 - 如何找到依上次更新日期排序的所有目的地清單？
 - 我如何根據最近的啟用比較兩個目的地？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT
@@ -424,17 +425,17 @@ LIMIT
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[最近啟用的對象Widget檔案](../guides/destinations.md#recently-activated-audiences)。
+如需有關此insight外觀和功能的資訊，請參閱[最近啟用的對象Widget檔案](../guides/destinations.md#recently-activated-audiences)。
 
-## 最近啟動的客群 (依目的地) {#recently-activated-audiences-by-destination}
+## 最近啟動的對象 (依目的地) {#recently-activated-audiences-by-destination}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 在特定目的地啟用的對象有哪些？
 - 如何尋找由特定對象從最近到最近啟用的對象清單？
 - 如何依據為特定目的地啟用的日期，找到對象清單？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT c.destination_name,
@@ -455,17 +456,17 @@ SELECT c.destination_name,
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱目的地Widget檔案的[最近啟用的對象](../guides/destinations.md#recently-activated-audiences-by-destination)。
+如需有關此insight的外觀和功能的資訊，請參閱[最近依目的地Widget啟用的對象檔案](../guides/destinations.md#recently-activated-audiences-by-destination)。
 
 ## 最近建立的目的地 {#recently-created-destinations}
 
-此深入分析所回答的問題：
+此insight回答的問題：
 
 - 哪些是最近建立的目的地？
 - 如何找到目的地清單及其建立日期？
 - 最近建立的新目的地？
 
-+++選取以顯示產生此深入分析的SQL
++++選取以顯示產生此insight的SQL
 
 ```sql
 SELECT DISTINCT
@@ -484,9 +485,10 @@ LIMIT
 
 +++
 
-如需此深入分析的外觀和功能的相關資訊，請參閱[最近建立的目的地Widget檔案](../guides/destinations.md#recently-created-destinations)。
+如需有關此insight外觀和功能的資訊，請參閱[最近建立的目的地Widget檔案](../guides/destinations.md#recently-created-destinations)。
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 
