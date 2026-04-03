@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2752'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 2%
 **修正和改良**
 
 - 修正[Media Analytics追蹤器](commands/getmediaanalyticstracker.md)中媒體物件的`length`屬性不正確接受無效資料型別的錯誤。
-- 改善[身分管理](../use-cases/identity/id-overview.md)錯誤處理，以便在身分查詢失敗時正確處理Promise拒絕。
+- 改善[身分管理](../identity/overview.md)錯誤處理，以便在身分查詢失敗時正確處理Promise拒絕。
 - 解決具有HTML內容專案的個人化內容無法呈現的問題，並出現與遺失`renderStatusHandler`相關的錯誤。
 - 修正Activity Map [URL集合](commands/configure/clickcollectionenabled.md)以正確處理非HTTP URL。
 
@@ -147,7 +147,7 @@ ht-degree: 2%
 
 **新功能**
 
-- 新增在[getIdentity](/help/collection/use-cases/identity/id-overview.md)命令中要求[CORE ID](commands/getidentity.md)的支援。
+- 新增在[getIdentity](/help/collection/identity/overview.md#core-id-and-third-party-identity)命令中要求[CORE ID](commands/getidentity.md)的支援。
 
 **修正和改良**
 
@@ -296,7 +296,7 @@ ht-degree: 2%
 
 **新功能**
 
-- 您現在可以在行動應用程式和行動網站內容之間，而且跨網域共用訪客ID，更準確地提供個人化體驗。 請參閱[專屬檔案](../use-cases/identity/id-sharing.md)以瞭解更多資訊。
+- 您現在可以在行動應用程式和行動網站內容之間，而且跨網域共用訪客ID，更準確地提供個人化體驗。 如需瞭解詳細資訊，請參閱資料彙集[中的](../identity/overview.md)身分。
 - 您現在可以將[!DNL Adobe Target]中的主張陣列轉譯或執行為單頁應用程式，而不需要增加分析量度。 這樣可以減少報告錯誤，並提升分析準確度。
 - 已新增其他資訊至`getLibraryInfo`命令，包括可用的命令和執行個體的最終組態。
 

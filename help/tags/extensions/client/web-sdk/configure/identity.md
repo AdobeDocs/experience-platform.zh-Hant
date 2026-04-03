@@ -2,10 +2,10 @@
 title: 身分識別設定
 description: 定義標記擴充功能識別訪客的方式。
 exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 9%
+source-wordcount: '265'
+ht-degree: 10%
 
 ---
 
@@ -35,7 +35,3 @@ ht-degree: 9%
 ## [!UICONTROL Use third-party cookies]
 
 啟用此選項後，Web SDK會嘗試將使用者識別碼儲存在第三方Cookie中。 如果成功，則會在使用者瀏覽多個網域時將其識別為單一使用者，而不是在每個網域上將其識別為個別使用者。 如果已啟用此選項，如果瀏覽器不支援第三方Cookie或使用者已設定不允許第三方Cookie，則SDK可能仍無法將使用者識別碼儲存在第三方Cookie中。 在此情況下，SDK只會將識別碼儲存在第一方網域中。 此核取方塊的JavaScript資料庫等同於[`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md)。
-
->[!IMPORTANT]
->
->第三方Cookie與Web SDK中的[第一方裝置識別碼](/help/collection/use-cases/identity/first-party-device-ids.md)功能不相容。 您可以使用第一方裝置識別碼，或使用第三方Cookie；您無法同時使用這兩項功能。

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得有關Adobe Experience Platform Web SDK常見問題的解答。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1655'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 雖然Experience Platform中的標籤可讓您儘可能輕鬆部署及管理這些程式庫，但下列專案仍有問題：
 
-* 程式庫大小(頁面上的Adobe程式碼過多)
+* 程式庫大小（頁面上的Adobe程式碼過多）
 * 效能（網站載入時間太長）
 * 單一使用案例的多次呼叫
 * 在個人化呼叫之前等候ECID傳回（導致延遲）
@@ -57,13 +57,13 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 
 * **XDM：**&#x200B;您用來傳送資料給Adobe的解決方案無關結構描述。 不再為evar或mbox加上標籤。
 * **網頁SDK：**&#x200B;可讓您輕鬆傳送及接收資料至Adobe Experience Platform Edge Network。
-* **標籤：**&#x200B;簡化網站Web SDK (以及任何其他JavaScript標籤)的部署和設定。
+* **標籤：**&#x200B;簡化網站Web SDK （以及任何其他JavaScript標籤）的部署和設定。
 * **Edge Network：**&#x200B;以資料所需的格式，輕鬆將資料路由至Adobe Experience Platform和解決方案。
 * **Adobe Experience Platform和Adobe解決方案：**&#x200B;啟用其價值主張。
 
 **控制項：**&#x200B;因為所有資料都使用單一且連線的資料流，所以您可以邏輯地追蹤並控制資料在往返應用程式的每毫秒歷程中看起來的樣子。
 
-**現代且準備好迎接未來：**&#x200B;網頁SDK及其與Edge Network的連線已讓Adobe大幅更新Adobe處理資料收集、個人化、同意和未來第三方Cookie的方式。 (這會啟用第一方網域，由Adobe管理。)
+**現代且準備好迎接未來：**&#x200B;網頁SDK及其與Edge Network的連線已讓Adobe大幅更新Adobe處理資料收集、個人化、同意和未來第三方Cookie的方式。 （這會啟用第一方網域，由Adobe管理。）
 
 **實現價值時間：** Adobe已努力工作（並將繼續），以便透過標籤輕鬆部署Web SDK並將使用者端資料對應至XDM。 完成上述工作後，您就可以在伺服器端開啟或關閉所有其他Adobe解決方案和Adobe Experience Platform服務。 例如，如果您將此用於Adobe Analytics，並且想要開啟Target或Experience Platform，您只需在資料流設定上翻轉切換即可開啟這些使用案例。
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 * *不*&#x200B;可以存取Experience Platform或Real-time CDP並希望使用[!DNL Web SDK]的客戶將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述和資料串流。
 * 有權存取Experience Platform或Real-time CDP並希望使用[!DNL Web SDK]的客戶將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述、資料集、身分名稱空間和資料串流。
 
-如需設定這些許可權的詳細資訊，請參閱我們關於[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=zh-Hant)的檔案。
+如需設定這些許可權的詳細資訊，請參閱我們關於[資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)的檔案。
 
 ## 哪些人應該使用網路SDK？
 
@@ -116,7 +116,7 @@ Web SDK需要存取[資料流設定](/help/datastreams/overview.md)和Experience
 
 ## 我可以在開始使用Web SDK時移轉ECID，讓我的網站訪客不會開始顯示為新訪客嗎？
 
-是，Adobe Experience Platform Web SDK提供身分移轉功能。 如需詳細資訊，請依照[Experience Platform Web SDK身分識別檔案](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid)中有關ID移轉的指示操作。
+是，Adobe Experience Platform Web SDK提供身分移轉功能。 請依照[`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md)中的指示操作，以取得詳細資訊。
 
 ## 網頁SDK與標籤有何不同？
 
@@ -144,11 +144,11 @@ Web SDK需要存取[資料流設定](/help/datastreams/overview.md)和Experience
 
 ## 什麼是CNAME或第一方網域，這為什麼重要？
 
-請參閱核心服務指南中的[Adobe管理的憑證方案](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/adobe-managed-cert)。
+請參閱核心服務指南中的[Adobe管理的憑證方案](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)。
 
 ## Adobe Experience Platform Web SDK是否使用Cookie？ 若是如此，會使用哪些Cookie？
 
-請參閱核心服務指南中的[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/cookies/web-sdk)。
+請參閱核心服務指南中的[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk)。
 
 ## Adobe Experience Platform Web SDK支援哪些瀏覽器？
 

@@ -2,16 +2,20 @@
 title: getIdentity
 description: 取得訪客的身分而不傳送事件資料。
 exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
-source-git-commit: aea46e3804d315c1237fc853540771f1b5c2b767
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 2%
+source-wordcount: '331'
+ht-degree: 1%
 
 ---
 
 # `getIdentity`
 
 當您執行[`sendEvent`](sendevent/overview.md)命令時，如果尚未取得訪客的身分，Web SDK會自動取得該身分。 `getIdentity`命令可讓您在不傳送事件資料的情況下取得訪客ID。 如果您需要個別呼叫來產生訪客ID並傳送資料，可以使用此命令。
+
+>[!IMPORTANT]
+>
+>當使用者端需要身分識別資訊時，請使用`getIdentity`。 如果您只需要將ECID對應至XDM，請改用[資料收集的資料準備](/help/datastreams/data-prep.md)或[標籤ECID存取指引](/help/tags/extensions/client/web-sdk/accessing-the-ecid.md)。
 
 `getIdentity`命令會進行下列流程來擷取`ECID`。
 

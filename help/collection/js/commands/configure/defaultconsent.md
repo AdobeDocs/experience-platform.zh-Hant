@@ -2,10 +2,10 @@
 title: defaultConsent
 description: 為您的Web屬性設定預設同意收集方法。
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
-source-git-commit: 1e272eb18fac2f59f9737756d48947a25573d772
+source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 5%
+source-wordcount: '431'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->`defaultConsent`值不會在頁面載入之間持續存在。 請務必在每次呼叫`configure`命令時設定所要的預設同意。
+>`defaultConsent`值不會在頁面載入之間持續存在。 請務必在每次呼叫`configure`命令時設定所要的預設同意。 相反地，訪客的已解析同意（透過[`setConsent`](../setconsent.md)設定）會儲存在Cookie中，並自動套用至後續的頁面載入作業。
 
 ```js
 alloy("configure", {
@@ -40,32 +40,7 @@ alloy("configure", {
 
 ## 將`defaultConsent`與`setConsent`一起使用 {#using-consent}
 
-Web SDK提供兩種互補的同意選項：
-
-* `defaultConsent` （此頁面）：決定預設的同意偏好設定。
-* [`setConsent`](../setconsent.md)：擷取訪客的同意偏好設定。
-
-搭配使用時，這些設定可能會產生不同的資料收集和Cookie設定結果，具體取決於其設定的值。
-
-請參閱下表以瞭解何時進行資料收集，以及何時根據同意設定設定Cookie。
-
-| `defaultConsent` | `setConsent` | 發生資料收集 | 網頁SDK設定瀏覽器Cookie |
-|---------|----------|---------|---------|
-| `in` | `in` | 是 | 是 |
-| `in` | `out` | 無 | 是 |
-| `in` | 未設定 | 是 | 是 |
-| `pending` | `in` | 是 | 是 |
-| `pending` | `out` | 無 | 是 |
-| `pending` | 未設定 | 無 | 無 |
-| `out` | `in` | 是 | 是 |
-| `out` | `out` | 無 | 是 |
-| `out` | 未設定 | 無 | 無 |
-
-如需程式庫設定的Cookie清單，請參閱[Adobe Experience Platform Web SDK Cookie](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/cookies/web-sdk)。
-
->[!NOTE]
->
->即使訪客選擇退出追蹤，身分和同意Cookie仍會設定。 這些Cookie對於遵循其資料收集偏好設定是必要的。
+搭配使用時，`defaultConsent`和`setConsent`會根據其設定的值，產生不同的資料集合、Cookie設定和身分識別結果。 如需完整的互動表格，請參閱資料彙集[中的](/help/collection/identity/consent.md#how-consent-affects-identity)同意與身分。
 
 ## 根據`gdprApplies`設定預設同意
 

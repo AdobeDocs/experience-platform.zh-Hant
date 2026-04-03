@@ -6,10 +6,10 @@ breadcrumb-title: 資料彙集
 user-guide-description: 了解如何將資料傳送至 Adobe Experience Platform。
 feature: Data Collection
 role: Developer
-source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 36%
+source-wordcount: '167'
+ht-degree: 33%
 
 ---
 
@@ -18,6 +18,15 @@ ht-degree: 36%
 
 + [概觀](home.md)
 + [權限](permissions.md)
++ 身分識別 {#identity}
+   + [概觀](identity/overview.md)
+   + [使用identityM](identity/identity-map.md)
+   + [第一方裝置 ID](identity/fpid.md)
+   + [跨網域共用](identity/cross-domain-sharing.md)
+   + [行動應用程式至行動網頁/網頁檢視](identity/mobile-to-web.md)
+   + [統一身分支援](identity/unified-identity-support.md)
+   + [同意與身分](identity/consent.md)
+   + [疑難排解](identity/troubleshooting.md)
 + BrightScript {#brightscript}
    + [BrightScript概述](brightscript/brs-overview.md)
 + JavaScript {#js}
@@ -99,10 +108,6 @@ ht-degree: 36%
    + [設定CSP](use-cases/configuring-a-csp.md)
    + [除錯](use-cases/debugging.md)
    + [事件重複資料刪除](use-cases/event-duplication.md)
-   + 身分識別 {#identity}
-      + [概觀](use-cases/identity/id-overview.md)
-      + [第一方裝置 ID](use-cases/identity/first-party-device-ids.md)
-      + [ID分享](use-cases/identity/id-sharing.md)
    + MCP {#mcp}
       + [chatgpt應用程式](use-cases/mcp/chatgpt.md)
    + [多個SDK例項](use-cases/multiple-instances.md)
