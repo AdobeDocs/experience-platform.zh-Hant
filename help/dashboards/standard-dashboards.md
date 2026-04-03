@@ -2,7 +2,7 @@
 title: 標準儀表板
 description: 瞭解如何建立及管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，將關鍵量度視覺化。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 1%
@@ -14,11 +14,13 @@ ht-degree: 1%
 使用Adobe Experience Platform儀表板可透過儀表板功能加速深入分析和自訂視覺效果。 使用此功能來建立和管理自訂儀表板，您可以在其中建立、新增和編輯自訂的Widget，以視覺化與您的組織相關的關鍵量度。
 
 
-<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
+<!-- 
+Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
 ## Getting started
 
-To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. 
+-->
 
 ## 建立自訂儀表板
 
@@ -28,10 +30,12 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 在新增自訂儀表板之前，儀表板庫存是空的，並顯示「找不到儀表板」。 訊息。 建立後，您的所有儀表板都會列在儀表板詳細目錄中。
 
-<!-- >[!NOTE]
+<!-- 
+>[!NOTE]
 >
 >To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
->![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
+>![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} 
+-->
 
 [!UICONTROL Create dashboard]對話方塊隨即顯示。 為您要建立的Widget集合輸入人性化的描述性名稱，然後選取&#x200B;**[!UICONTROL Save]**。
 
@@ -182,4 +186,4 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 若要加深您對Experience Platform中控制面板的瞭解，請觀看以下影片：
 
->[!VIDEO](https://video.tv.adobe.com/v/3422738?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
