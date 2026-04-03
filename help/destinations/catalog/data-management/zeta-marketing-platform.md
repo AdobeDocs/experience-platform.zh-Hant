@@ -4,7 +4,7 @@ description: Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專�
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1434'
 ht-degree: 2%
