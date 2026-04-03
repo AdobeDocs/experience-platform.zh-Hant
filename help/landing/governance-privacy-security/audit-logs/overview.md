@@ -4,7 +4,7 @@ description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platfor
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1579'
 ht-degree: 29%
@@ -169,7 +169,7 @@ ht-degree: 29%
 
 ## 管理Adobe Admin Console的稽核記錄
 
-若要瞭解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[檔案](https://helpx.adobe.com/tw/enterprise/using/audit-logs.html)。
+若要瞭解如何管理Adobe Admin Console中活動的稽核記錄，請參閱下列[檔案](https://helpx.adobe.com/enterprise/using/audit-logs.html)。
 
 ## 後續步驟和其他資源
 
