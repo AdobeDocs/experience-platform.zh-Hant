@@ -70,7 +70,7 @@ alloy("getIdentity", { namespaces: ["ECID", "CORE"] }).then(function(result) {
 1. **驗證FPID Cookie格式**： FPID必須是有效的[UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122)。 開啟瀏覽器的開發人員工具，尋找FPID Cookie，並確認值與模式`xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx`相符。
 2. **檢查資料流中的Cookie名稱**：如果您使用[資料流Cookie方法](./fpid.md#setting-cookie-datastreams)，資料流中設定的Cookie名稱必須與伺服器設定的Cookie名稱完全相符。
 3. **確認已在要求上傳送Cookie**：在[網路]索引標籤中，檢查Edge Network要求上的`Cookie`標頭。 必須包含FPID Cookie。
-4. **檢查身分優先順序**：如果現有ECID已儲存在`kndctr_` Cookie中，則會優先於FPID。 FPID只會在不存在現有ECID時植入新的ECID。 如需完整的優先順序，請參閱[ FPID的運作方式](./fpid.md#how-fpids-work)。
+4. **檢查身分優先順序**：如果現有ECID已儲存在`kndctr_` Cookie中，則會優先於FPID。 FPID只會在不存在現有ECID時植入新的ECID。 如需完整的優先順序，請參閱[&#x200B; FPID的運作方式](./fpid.md#how-fpids-work)。
 5. **驗證CNAME**：如果使用Datastream Cookie方法，請確認您的第一方集合CNAME已正確設定，且請求已透過它進行路由。
 
 +++
