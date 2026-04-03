@@ -3,7 +3,7 @@ title: Adobe Advertising DSP連線
 description: 瞭解如何使用多種身分型別，與Adobe Advertising Demand-Side Platform (DSP)共用已驗證和未驗證的第一方對象。
 feature: Destinations
 exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
-source-git-commit: 60a8296d20a254f6c431c6986f8b2704dced3516
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 6%
@@ -58,9 +58,9 @@ Adobe Advertising Demand-Side Platform (DSP)目的地可讓使用者與DSP帳戶
 
 * Experience Platform帳戶的Experience Cloud組織ID。 您可以在Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP])使用者設定檔頁面上找到您的識別碼。
 
-* DSP[[!DNL Real-Time CDP] 中用於接收促銷活動啟用對象的](https://experienceleague.adobe.com/zh-hant/docs/advertising/dsp/audiences/sources/source-manage)來源。 您的Adobe帳戶團隊將使用您的Experience Cloud組織ID建立來源。
+* DSP[[!DNL Real-Time CDP] 中用於接收促銷活動啟用對象的](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage)來源。 您的Adobe帳戶團隊將使用您的Experience Cloud組織ID建立來源。
 
-* 在[!DNL DSP][[!DNL Real-Time CDP] 中建立 [!DNL DSP]來源時產生的](https://experienceleague.adobe.com/zh-hant/docs/advertising/dsp/audiences/sources/source-manage)帳戶或廣告商的來源金鑰。 您的[!DNL DSP]帳戶團隊將會與您共用此金鑰。 您將在Experience Platform中使用它來建立與Advertising DSP目的地的目的地連線，如下所述。
+* 在[!DNL DSP][[!DNL Real-Time CDP] 中建立 [!DNL DSP]來源時產生的](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage)帳戶或廣告商的來源金鑰。 您的[!DNL DSP]帳戶團隊將會與您共用此金鑰。 您將在Experience Platform中使用它來建立與Advertising DSP目的地的目的地連線，如下所述。
 
 ### 設定ID同步以共用Cookie {#cookie-sync}
 
@@ -133,7 +133,7 @@ Adobe Advertising DSP目的地支援下表所述的身分啟用。 深入瞭解[
 
 若要連線到目的地，請在[!UICONTROL Connection type]區段中提供下列引數，然後選取&#x200B;**[!UICONTROL Connect to destination]**：
 
-* **[!UICONTROL Account or Advertiser Key]**：在DSP使用者介面[!UICONTROL Source Key]中建立[[!DNL Real-Time CDP] 來源時，會產生此](https://experienceleague.adobe.com/zh-hant/docs/advertising/dsp/audiences/sources/source-manage)。 您的Adobe客戶團隊會在建立來源後，與您共用此金鑰。
+* **[!UICONTROL Account or Advertiser Key]**：在DSP使用者介面[!UICONTROL Source Key]中建立[[!DNL Real-Time CDP] 來源時，會產生此](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage)。 您的Adobe客戶團隊會在建立來源後，與您共用此金鑰。
 
 ![顯示[帳戶]或[廣告商金鑰]欄位之[連線型別]區段的熒幕擷圖。](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
