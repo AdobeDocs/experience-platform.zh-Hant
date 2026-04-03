@@ -2,7 +2,7 @@
 title: 身分圖表連結規則設定指南
 description: 瞭解您可以使用身分圖表連結規則來設定的不同實作型別。
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -24,7 +24,7 @@ ht-degree: 7%
 * **中繼**： [中繼實作](#intermediate-implementations)包含數個變數，例如&#x200B;**多個跨裝置名稱空間**、**非唯一身分**&#x200B;和&#x200B;**多個唯一名稱空間**。
 * **進階**： [進階實作](#advanced-implementations)涉及複雜的多層圖表情境。 對於進階實作，必須建立正確的名稱空間優先順序，以確保移除適當的連結，進而防止圖表摺疊。
 
-## 快速入門
+## 開始使用
 
 在參閱下列檔案之前，請確定您已熟悉Identity Service和[!DNL Identity Graph Linking Rules]的幾個重要概念。
 
@@ -240,7 +240,7 @@ CRMID: Jill, CChash: undefined
 在模擬圖形之前，先在圖形模擬介面中設定下列設定。
 
 | 顯示名稱 | 身分識別符號 | 身分識別類型 | 在每個圖表中唯一 | 命名空間優先順序 |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | 跨裝置 | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | 跨裝置 | ✔️ | 2 |
 | ECID | ECID | COOKIE | | 3 |
@@ -281,6 +281,7 @@ CRMID: Jane, CRMIDhash: aaaa
 ![共用裝置圖表在雜湊處理過程中發生錯誤，導致非唯一的雜湊CRMID。](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
+
 <!-- 
 ### Use case: You are using Real-Time CDP and Adobe Commerce
 
@@ -339,7 +340,8 @@ Email: jane@g, ECID: 111
 
 ![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
->[!ENDTABS] -->
+>[!ENDTABS] 
+-->
 
 ### 使用案例：您的資料包含三個不重複的名稱空間
 
