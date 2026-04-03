@@ -3,7 +3,7 @@ title: 索引交換
 description: 連線至Index Exchange （索引）並啟用您的資料，以便在索引UI中建立的交易鎖定您的對象區段。
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 3%
@@ -89,7 +89,7 @@ ht-degree: 3%
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
-| --------- | ---------- | --------- | 
+| --------- | ---------- | --------- |
 | 匯出類型 | **[!UICONTROL Segment export]** | 匯出區段（對象）的所有成員，其中包含用於[!DNL Index Exchange]目的地中的識別碼（IDFA、GAID或其他）。 |
 | 匯出頻率 | **[!UICONTROL Batch]** | 以3、6、8、12或24小時的間隔將檔案匯出至下游平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
 
@@ -131,7 +131,7 @@ ht-degree: 3%
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警示以接收有關您資料流到此目的地的狀態通知。 從清單中選取一或多個警報，以訂閱資料流的狀態通知。 如需詳細資訊，請參閱[使用UI訂閱目的地警示指南](../../ui/alerts.md)。
-當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
+當您完成提供目的地連線的詳細資訊時，請選取**[!UICONTROL Next]**。
 
 ## 啟動此目標的對象 {#activate}
 
