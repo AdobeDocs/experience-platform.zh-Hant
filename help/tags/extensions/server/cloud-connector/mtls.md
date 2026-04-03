@@ -2,7 +2,7 @@
 title: 相互傳輸層安全性(mTLS)概觀
 description: 瞭解如何使用mTLS安全地擷取Adobe為事件轉送所發行的公開憑證。
 exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 2%
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 已成功建立環境，並且您返回&#x200B;**[!UICONTROL Environments]**&#x200B;標籤，顯示您的新環境。
 
-![&#x200B; [!UICONTROL Environments]索引標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![ [!UICONTROL Environments]索引標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 ## 檢視環境憑證詳細資訊 {#view-certificate}
 
@@ -62,7 +62,7 @@ ht-degree: 2%
 
 若要使用過時的憑證，請導覽至「事件轉送」屬性左側面板中的「**[!UICONTROL Environments]**」標籤，然後選取環境以檢視其詳細資料。
 
-![&#x200B; [!UICONTROL Environments]索引標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![ [!UICONTROL Environments]索引標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 從&#x200B;**[!UICONTROL Certificate]**&#x200B;下拉式清單中，選取過時的憑證，然後選取&#x200B;**[!UICONTROL Save]**。
 
