@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用API管理資料集的資料使用標籤
 description: 資料集服務API可讓您套用及編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的目錄服務API不同。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 >
 >僅資料控管使用案例支援在資料集層級套用標籤。 如果您嘗試建立資料的存取原則，您必須[將標籤套用至資料集所依據的結構描述](../../xdm/tutorials/labels.md)。 如需詳細資訊，請參閱[以屬性為基礎的存取控制](../../access-control/abac/overview.md)的概觀。
 
-本檔案說明如何使用[!DNL Dataset Service API]管理資料集和欄位的標籤。 如需如何使用API呼叫管理資料使用標籤本身的步驟，請參閱[!DNL Policy Service API]的[標籤端點指南](../api/labels.md)。
+本檔案說明如何使用[!DNL Dataset Service API]管理資料集和欄位的標籤。 如需如何使用API呼叫管理資料使用標籤本身的步驟，請參閱[的](../api/labels.md)標籤端點指南[!DNL Policy Service API]。
 
 ## 快速入門
 
@@ -105,7 +105,7 @@ PUT /datasets/{DATASET_ID}/labels
 >
 >如果相關資料集目前存在標籤，則只能透過PUT請求新增新標籤，該請求需要`If-Match`標頭。 標籤新增至資料集後，稍後需要最新的`etag`值才能更新或移除標籤<br>執行PUT方法之前，您必須先對資料集標籤執行GET要求。 請確定您僅更新請求中要修改的特定欄位，其餘欄位保持不變。 此外，請確定PUT呼叫維護與GET呼叫相同的父實體。 任何差異都會導致客戶發生錯誤。
 
-若要擷取最新版本的資料集 — 標籤實體，請對`/datasets/{DATASET_ID}/labels`端點發出[GET請求](#look-up)。 目前值是在`etag`標頭下的回應中傳回。 更新現有的資料集標籤時，最佳實務是先執行資料集的查詢要求，以擷取其最新的`etag`值，然後再在後續PUT要求的`If-Match`標題中使用該值。
+若要擷取最新版本的資料集 — 標籤實體，請對[端點發出](#look-up)GET請求`/datasets/{DATASET_ID}/labels`。 目前值是在`etag`標頭下的回應中傳回。 更新現有的資料集標籤時，最佳實務是先執行資料集的查詢要求，以擷取其最新的`etag`值，然後再在後續PUT要求的`If-Match`標題中使用該值。
 
 ```shell
 curl -X POST \
@@ -185,7 +185,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 以下是套用PUT作業的資料集，其屬性/人員/屬性/位址欄位有C1 optionalLabel，而/properties/人員/屬性/名稱/屬性/完整名稱欄位有C1， C2 optionalLabels。 put作業之後，第一個欄位將沒有標籤（移除C1標籤），而第二個欄位將只有C1標籤（移除C2標籤）
 
-在以下範例案例中，PUT要求用於移除新增至個別欄位的標籤。 在提出要求之前，`fullName`欄位已套用`C1`和`C2`標籤，而`address`欄位已套用`C1`標籤。 PUT要求使用`optionalLabels.labels`引數覆寫`fullName`欄位中具有`C1`標籤的現有標籤`C1, C2`標籤。 請求也會以一組空白欄位標籤覆寫`address`欄位中的`C1`標籤。
+在以下範例案例中，PUT要求用於移除新增至個別欄位的標籤。 在提出要求之前，`fullName`欄位已套用`C1`和`C2`標籤，而`address`欄位已套用`C1`標籤。 PUT要求使用`C1, C2`引數覆寫`fullName`欄位中具有`C1`標籤的現有標籤`optionalLabels.labels`標籤。 請求也會以一組空白欄位標籤覆寫`C1`欄位中的`address`標籤。
 
 ```shell
 curl -X PUT \
