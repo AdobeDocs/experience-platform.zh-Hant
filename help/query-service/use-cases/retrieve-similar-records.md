@@ -2,9 +2,9 @@
 title: 使用高階函式擷取類似記錄
 description: 瞭解如何根據相似度量度和相似度臨界值，從一個或多個資料集中識別及擷取類似或相關記錄。 此工作流程可強調不同資料集之間有意義的關聯或重疊。
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '4031'
+source-wordcount: '4030'
 ht-degree: 3%
 
 ---
@@ -24,13 +24,13 @@ ht-degree: 3%
 - **相似性聯結**&#x200B;是根據記錄之間的相似性測量值，從一或多個資料表中識別及擷取記錄對的作業。 相似性聯結的主要需求如下：
    - **相似度量度**：相似度加入需依賴預先定義的相似度量度或量度。 這類量度包括：Jaccard相似度、餘弦相似度、編輯距離等。 量度取決於資料的性質和使用案例。 此量度可量化兩條記錄的相似或相異程度。
    - **臨界值**：相似度臨界值是用來判斷兩個記錄何時被視為相似到可以包含在聯結結果中。 相似度分數高於臨界值的記錄會被視為符合專案。
-- **Jaccard相似度**&#x200B;指數，或Jaccard相似性測量，是用來測量樣本集相似度和多樣性的統計資料。 其定義為交集的大小除以樣本集的聯集大小。 Jaccard相似性測量的範圍從零到一。 Jaccard相似度為零表示這些集合之間沒有相似性，而Jaccard相似度為1表示這些集合完全相同。
+- **Jaccard相似度**指數，或Jaccard相似性測量，是用來測量樣本集相似度和多樣性的統計資料。 其定義為交集的大小除以樣本集的聯集大小。 Jaccard相似性測量的範圍從零到一。 Jaccard相似度為零表示這些集合之間沒有相似性，而Jaccard相似度為1表示這些集合完全相同。
   ![文氏圖表以說明Jaccard相似性測量。](../images/use-cases/jaccard-similarity.png)
 - **資料Distiller中的高階函式**&#x200B;是動態的內嵌工具，可直接在SQL陳述式中處理及轉換資料。 這些多功能函式消除了資料操作中多個步驟的需求，尤其是當[處理複雜型別（例如陣列和地圖](../sql/higher-order-functions.md)）時。 透過提高查詢效率和簡化轉換，高階函式有助於在各種業務情景中更敏捷地分析和更好的決策。
 
 ## 快速入門
 
-必須使用Data Distiller SKU才能對Adobe Experience Platform資料執行更高階的功能。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
+必須使用Data Distiller SKU才能對Adobe Experience Platform資料執行更高階的功能。 如果您沒有Data Distiller SKU，請聯絡Adobe客戶服務代表以取得詳細資訊。
 
 ## 建立相似性 {#establish-similarity}
 
@@ -107,9 +107,9 @@ SELECT * FROM featurevector1;
 
 - 第1行： `CREATE TEMP TABLE featurevector1 AS`：此陳述式會建立名為`featurevector1`的暫存資料表。 臨時表格通常只能在目前的作業階段中存取，並在作業階段結束時自動捨棄。
 - 第1行和第2行： `SELECT * FROM (...)`：程式碼的這個部分是用於產生插入`featurevector1`資料表中的資料的子查詢。
-在子查詢內，使用`UNION ALL`命令結合多個`SELECT`陳述式。 每個`SELECT`陳述式會產生`ProductName`資料行指定值的一列資料。
-- 第3行： `SELECT 'iPad' AS ProductName`：這會在`ProductName`欄中產生值為`iPad`的列。
-- 第5行： `SELECT 'iPhone'`：這會在`ProductName`欄中產生值為`iPhone`的列。
+在子查詢內，使用`SELECT`命令結合多個`UNION ALL`陳述式。 每個`SELECT`陳述式會產生`ProductName`資料行指定值的一列資料。
+- 第3行： `SELECT 'iPad' AS ProductName`：這會在`iPad`欄中產生值為`ProductName`的列。
+- 第5行： `SELECT 'iPhone'`：這會在`iPhone`欄中產生值為`ProductName`的列。
 
 SQL陳述式會建立表格，如下所示：
 
@@ -146,7 +146,7 @@ SELECT * FROM featurevector2;
 
 以下章節說明在開始代碼化程式之前的先決條件資料轉換，例如重複資料刪除、移除空白字元和小寫轉換。
 
-### 去重複化 {#deduplication}
+### 重複資料刪除 {#deduplication}
 
 接下來，使用`DISTINCT`子句移除重複專案。 此範例中沒有重複專案，不過這是改善任何比較正確性的重要步驟。 必要的SQL顯示如下：
 
@@ -157,7 +157,7 @@ SELECT DISTINCT(ProductName) AS featurevector2_distinct FROM featurevector2
 
 ### 移除空格 {#whitespace-removal}
 
-在以下SQL陳述式中，會從特徵向量中移除空格。 查詢的`replace(ProductName, ' ', '') AS featurevector1_nospaces`部分從`featurevector1`資料表取得`ProductName`資料行並使用`replace()`函式。 `REPLACE`函式會以空字串(&quot;)取代所有出現的空格(&#39; &#39;)。 這會有效地從`ProductName`值中移除所有空格。 結果別名為`featurevector1_nospaces`。
+在以下SQL陳述式中，會從特徵向量中移除空格。 查詢的`replace(ProductName, ' ', '') AS featurevector1_nospaces`部分從`ProductName`資料表取得`featurevector1`資料行並使用`replace()`函式。 `REPLACE`函式會以空字串(&quot;)取代所有出現的空格(&#39; &#39;)。 這會有效地從`ProductName`值中移除所有空格。 結果別名為`featurevector1_nospaces`。
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, replace(ProductName, ' ', '') AS featurevector1_nospaces FROM featurevector1
@@ -325,7 +325,7 @@ FROM
 
 ### 確保設定權杖長度 {#ensure-set-token-length}
 
-可以向陳述式新增其他條件，以確保產生的序列具有特定長度。 下列SQL陳述式會使`transform`函式更複雜，以擴充權杖產生邏輯。 陳述式使用`transform`內的`filter`函式，以確保產生的序列長度為6個字元。 它透過將NULL值指定給這些職位來處理不可能的情況。
+可以向陳述式新增其他條件，以確保產生的序列具有特定長度。 下列SQL陳述式會使`transform`函式更複雜，以擴充權杖產生邏輯。 陳述式使用`filter`內的`transform`函式，以確保產生的序列長度為6個字元。 它透過將NULL值指定給這些職位來處理不可能的情況。
 
 ```SQL
 SELECT
@@ -397,7 +397,7 @@ SELECT transform(
 
 本節會分析精簡版的Tri-gram SQL敘述句，以便更清楚瞭解Data Distiller中高階函式的值，進而更有效率地建立n個字元。
 
-以下陳述式在`featurevector1`資料表中的`ProductName`資料行上運作。 它會使用從產生的序列中取得的位置，產生一組衍生自表格內已修改產品名稱的三字元子字串。
+以下陳述式在`ProductName`資料表中的`featurevector1`資料行上運作。 它會使用從產生的序列中取得的位置，產生一組衍生自表格內已修改產品名稱的三字元子字串。
 
 ```SQL {line-numbers="true"}
 SELECT
@@ -447,7 +447,7 @@ FROM
 
 條件`i -> i + 6 <= length(lower(replace(ProductName, ' ', '')))`可確保起始位置`i`加上`6` （所需7個字元子字串的長度減一）不超過修改的`ProductName`的長度。
 
-`CASE`陳述式用於根據子字串的長度有條件地包含或排除子字串。 只包含7個字元的子字串；其他字串則以NULL取代。 然後`transform`函式會使用這些子字串，從`featurevector1`表格的`ProductName`資料行建立子字串序列。
+`CASE`陳述式用於根據子字串的長度有條件地包含或排除子字串。 只包含7個字元的子字串；其他字串則以NULL取代。 然後`transform`函式會使用這些子字串，從`ProductName`表格的`featurevector1`資料行建立子字串序列。
 
 >[!TIP]
 >
@@ -576,8 +576,8 @@ CROSS JOIN
 
 以下是用來建立交叉聯結的SQl摘要：
 
-- 第2行： `A.featurevector1_distinct AS SetA_ProductNames`從資料表`A`選取`featurevector1_distinct`資料行，並指派別名`SetA_ProductNames`。 SQL的這個區段會產生第一個資料集中的不同產品名稱清單。
-- 第4行： `A.tokens AS SetA_tokens1`從資料表或子查詢`A`選取`tokens`資料行，並指派別名`SetA_tokens1`。 SQL的這個區段會產生與第一個資料集中的產品名稱相關聯的代碼化值清單。
+- 第2行： `A.featurevector1_distinct AS SetA_ProductNames`從資料表`featurevector1_distinct`選取`A`資料行，並指派別名`SetA_ProductNames`。 SQL的這個區段會產生第一個資料集中的不同產品名稱清單。
+- 第4行： `A.tokens AS SetA_tokens1`從資料表或子查詢`tokens`選取`A`資料行，並指派別名`SetA_tokens1`。 SQL的這個區段會產生與第一個資料集中的產品名稱相關聯的代碼化值清單。
 - 第8行： `CROSS JOIN`作業會結合兩個資料集的所有可能資料列組合。 換言之，它將來自第一個資料表的每個產品名稱及其關聯權杖(`A`)與來自第二個資料表的每個產品名稱及其關聯權杖(`B`)配對。 這會產生兩個資料集的笛卡爾乘積，其中輸出中的每一列代表兩個資料集中的產品名稱及其關聯權杖的組合。
 
 結果如下表所示：
@@ -697,7 +697,7 @@ WHERE jaccard_similarity>=0.4
 
 此查詢的結果會提供相似性聯結的欄，如下所示：
 
-+++選取以展開
++++ 選取以展開
 
 |   | SetA_ProductNames | SetA_ProductNames |
 |---|--------------------------|------------------------|
@@ -707,7 +707,7 @@ WHERE jaccard_similarity>=0.4
 
 {style="table-layout:auto"}
 
-+++：
++++
 
 ### 後續步驟 {#next-steps}
 
