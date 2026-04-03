@@ -3,7 +3,7 @@ title: 使用流程服務API建立資料庫來源的資料流
 type: Tutorial
 description: 瞭解如何使用流量服務API建立資料流，並將資料庫中的資料擷取到Experience Platform中。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 2%
@@ -657,15 +657,13 @@ curl -X POST \
     }'
 ```
 
-+++
-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `flowSpec.id` | 在上一步中擷取的[流程規格識別碼](#specs)。 |
 | `sourceConnectionIds` | 已在先前步驟中擷取的[來源連線識別碼](#source)。 |
 | `targetConnectionIds` | 已在先前步驟中擷取的[目標連線識別碼](#target-connection)。 |
 | `transformations.params.mappingId` | 已在先前步驟中擷取的[對應ID](#mapping)。 |
-| `transformations.params.deltaColum` | 用來區分新資料和現有資料的指定欄。 將根據所選欄的時間戳記擷取增量資料。 `deltaColumn`支援的日期格式為`yyyy-MM-dd HH:mm:ss`。 如果您使用Azure資料表儲存體，`deltaColumn`支援的格式為`yyyy-MM-ddTHH:mm:ssZ`。 |
+| `transformations.params.deltaColum` | 用來區分新資料和現有資料的指定欄。 將根據所選欄的時間戳記擷取增量資料。 `deltaColumn`支援的日期格式為`yyyy-MM-dd HH:mm:ss`。 如果您使用Azure表格儲存體，`deltaColumn`支援的格式為`yyyy-MM-ddTHH:mm:ssZ`。 |
 | `transformations.params.mappingId` | 與資料庫關聯的對應ID。 |
 | `scheduleParams.startTime` | 資料流的開始時間（以Epoch時間計）。 |
 | `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`、`minute`、`hour`、`day`或`week`。 |
