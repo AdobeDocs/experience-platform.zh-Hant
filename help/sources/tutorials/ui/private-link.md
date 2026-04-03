@@ -1,10 +1,10 @@
 ---
 title: UI對來源的私人連結支援
-description: 瞭解如何在Experience Platform UI中使用來源的Azure私人連結。
+description: 瞭解如何在Azure UI中使用來源的Experience Platform私人連結。
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ ht-degree: 0%
 
 ## 建立私人端點
 
-若要開始使用私人連結，請導覽至Experience Platform UI的&#x200B;*[!UICONTROL 來源]*&#x200B;目錄，然後從來源工作區的索引標籤功能表中選取&#x200B;**[!UICONTROL 私人端點]**。
+若要開始使用私人連結，請導覽至Experience Platform UI的&#x200B;*[!UICONTROL Sources]*&#x200B;目錄，然後從來源工作區的索引標籤功能表中選取&#x200B;**[!UICONTROL Private endpoints]**。
 
 ![具有「私人端點」的來源目錄。](../../images/tutorials/private-links/catalog.png)
 
-使用介面檢視現有私人端點的相關資訊，例如其ID、相關來源和目前狀態。 若要建立新的私人端點，請選取&#x200B;**[!UICONTROL 建立私人端點]**。
+使用介面檢視現有私人端點的相關資訊，例如其ID、相關來源和目前狀態。 若要建立新的私用端點，請選取&#x200B;**[!UICONTROL Create private endpoint]**。
 
 ![已選取「建立私用端點」的私用端點介面。](../../images/tutorials/private-links/private-endpoints.png)
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-完成後，選取&#x200B;**[!UICONTROL 提交]**。
+完成後，選取&#x200B;**[!UICONTROL Submit]**。
 
 ![在來源UI工作區中建立新私人端點的驗證視窗。](../../images/tutorials/private-links/create-private-endpoint.png)
 
@@ -68,25 +68,25 @@ ht-degree: 0%
 
 若要核准[!DNL Azure Blob]和[!DNL Azure Data Lake Gen2]來源的私人端點要求，請登入[!DNL Azure Portal]。 在左側導覽中選取&#x200B;**[!DNL Data storage]**，然後前往&#x200B;**[!DNL Security + networking]**&#x200B;標籤並選擇&#x200B;**[!DNL Networking]**。 接下來，選取「**[!DNL Private endpoints]**」以檢視與您帳戶相關聯的私人端點清單及其目前的連線狀態。 若要核准擱置的要求，請選取所要的端點，然後按一下&#x200B;**[!DNL Approve]**。
 
-![含有擱置中私人端點清單的Azure入口網站。](../../images/tutorials/private-links/azure.png)
+![含有擱置私人端點清單的Azure入口網站。](../../images/tutorials/private-links/azure.png)
 
 ## 建立具有私人端點的帳戶
 
-導覽至來源目錄，並選取支援私人端點的來源。 接下來，使用您的來源建立新帳戶，並在帳戶驗證期間，選取&#x200B;**[!UICONTROL 私人端點]**&#x200B;切換按鈕。 提供您來源的驗證認證，然後選取&#x200B;**[!UICONTROL 連線到來源]**&#x200B;允許幾分鐘以建立連線。
+導覽至來源目錄，並選取支援私人端點的來源。 接下來，使用您的來源建立新帳戶，並在帳戶驗證期間，選取「**[!UICONTROL Private endpoint]**」切換按鈕。 提供您來源的驗證認證，然後選取&#x200B;**[!UICONTROL Connect to source]**&#x200B;允許幾分鐘以建立連線。
 
 >[!NOTE]
 >
->如果[!UICONTROL 私用端點]選項已啟用，Experience Platform會檢查選取的來源是否存在核准的私用端點。 如果找不到已核准的端點，您將無法建立連線。
+>如果[!UICONTROL Private endpoint]選項已啟用，Experience Platform會檢查選取的來源是否存在核准的私用端點。 如果找不到已核准的端點，您將無法建立連線。
 
 ![已啟用私人端點的新帳戶驗證步驟。](../../images/tutorials/private-links/new-account.png)
 
-接著，瀏覽至您來源的[!UICONTROL 現有帳戶]介面。 使用此介面檢視現有帳戶及其對應狀態的清單。 您可以選取篩選圖示![篩選圖示](../../../images/icons/filter.png)，以僅顯示已啟用與私人端點連線的帳戶。
+接下來，導覽至您來源的[!UICONTROL Existing account]介面。 使用此介面檢視現有帳戶及其對應狀態的清單。 您可以選取篩選圖示![篩選圖示](../../../images/icons/filter.png)，以僅顯示已啟用與私人端點連線的帳戶。
 
 ![來源工作流程中的現有帳戶介面只會顯示已啟用私人端點連線的篩選帳戶。](../../images/tutorials/private-links/existing-private-endpoints.png)
 
-選取您要使用的帳戶，然後啟用&#x200B;**[!UICONTROL 互動式製作]**。 此切換會啟用[!UICONTROL 互動式製作]，這是一個[!DNL Azure]功能，可讓您測試連線、瀏覽資料夾清單及預覽資料。 私用端點連線需要啟用[!UICONTROL 互動式製作]。 請注意，您無法手動關閉此切換按鈕，60分鐘後會自動停用。
+選取您要使用的帳戶，然後啟用&#x200B;**[!UICONTROL Interactive Authoring]**。 此切換會啟用[!UICONTROL Interactive Authoring]，這是[!DNL Azure]功能，可讓您測試連線、瀏覽資料夾清單及預覽資料。 私用端點連線需要啟用[!UICONTROL Interactive Authoring]。 請注意，您無法手動關閉此切換按鈕，60分鐘後會自動停用。
 
-[!UICONTROL 互動式製作]需要幾分鐘才能啟用。 啟用此設定後，請選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續執行下一個步驟，並選取您要擷取的資料。
+[!UICONTROL Interactive Authoring]需要幾分鐘才能啟用。 啟用此設定後，請選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續執行下一個步驟，並選取您要擷取的資料。
 
 ![已選取現有帳戶，且已啟用互動式撰寫。](../../images/tutorials/private-links/interactive-authoring.png)
 
