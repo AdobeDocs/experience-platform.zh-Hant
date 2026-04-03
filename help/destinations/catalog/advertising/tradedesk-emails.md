@@ -3,7 +3,7 @@ title: 交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1799'
 ht-degree: 2%
@@ -104,7 +104,6 @@ ht-degree: 2%
       *句點(&#39;.&#39;) 字元（ASCII代碼46）。 例如，將「jane.doe@gmail.com」標準化為「janedoe@gmail.com」。
      *加號(&#39;+&#39;)字元（ASCII代碼43）和所有後續字元。 例如，將&#39;janedoe+home@gmail.com&#39;標準化為&#39;janedoe@gmail.com&#39;。
   
-
 ## 電話號碼正規化和雜湊需求 {#phone-hashing}
 
 以下是上傳電話號碼時您需要瞭解的事項：
@@ -164,7 +163,7 @@ ht-degree: 2%
 
 ### 填寫目的地詳細資料 {#fill-in-details}
 
-您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
+您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Account Type]**：請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;選項。
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
