@@ -3,7 +3,7 @@ title: Gainsight PX連線
 description: 使用Gainsight PX目的地將分段資訊傳送到Gainsight PX平台。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 4%
@@ -96,7 +96,7 @@ Gainsight PX支援下表所述的身分啟用。 深入瞭解[身分](../../../i
 
 * **[!UICONTROL Password]**：用來登入[[!DNL Gainsight PX]](https://app.aptrinsic.com)的密碼
 * **[!UICONTROL Client ID]**： [公司詳細資料頁面](https://app.aptrinsic.com/settings/subscription)上的Gainsight PX訂閱識別碼
-* **[!UICONTROL Client secret]**： OAuth密碼產生於[&#x200B; UI中](https://app.aptrinsic.com/settings/subscription)公司詳細資料頁面[!DNL Gainsight PX]的底部。
+* **[!UICONTROL Client secret]**： OAuth密碼產生於[ UI中](https://app.aptrinsic.com/settings/subscription)公司詳細資料頁面[!DNL Gainsight PX]的底部。
 * **[!UICONTROL Username]**：用來登入[[!DNL Gainsight PX]](https://app.aptrinsic.com) UI的電子郵件
 
 ### 填寫目標詳細資訊 {#destination-details}
