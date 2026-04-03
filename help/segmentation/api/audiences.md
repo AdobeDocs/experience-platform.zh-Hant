@@ -3,7 +3,7 @@ title: Audiences API端點
 description: 使用Adobe Experience Platform Segmentation Service API中的受眾端點，以程式設計方式建立、管理和更新您組織的受眾。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 2%
@@ -33,7 +33,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->如果您不使用任何查詢引數來使用此端點，則不會傳回非作用中對象&#x200B;**&#x200B;**。 不過，如果您將此端點與`property=audienceId`查詢引數搭配使用，將會傳回非作用中對象&#x200B;**&#x200B;**。
+>如果您不使用任何查詢引數來使用此端點，則不會傳回非作用中對象&#x200B;****。 不過，如果您將此端點與`property=audienceId`查詢引數搭配使用，將會傳回非作用中對象&#x200B;****。
 
 擷取對象清單時，可以使用以下查詢引數：
 
@@ -183,7 +183,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 ```
 
 | 屬性 | 客群類型 | 說明 |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | 兩者 | 適用於對象的系統產生唯讀識別碼。 |
 | `audienceId` | 兩者 | 如果對象是平台產生的對象，此值與`id`相同。 如果對象是外部產生的，此值由使用者端提供。 |
 | `schema` | 兩者 | 對象的Experience Data Model (XDM)結構。 |
@@ -205,7 +205,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 +++
 
-## 建立新對象 {#create}
+## 建立新客群 {#create}
 
 您可以對`/audiences`端點發出POST要求，以建立新對象。
 
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | 屬性 | 說明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | 對象名稱。 |
 | `description` | 對象說明。 |
 | `type` | 顯示對象是平台產生還是外部產生對象的欄位。 可能的值包括`SegmentDefinition`和`ExternalSegment`。 `SegmentDefinition`是指在Platform中產生的對象，而`ExternalSegment`是指未在Platform中產生的對象。 |
@@ -339,7 +339,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | 參數 | 說明 |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | 您嘗試擷取的對象ID。 請注意，這是`id`欄位，而&#x200B;**不是** `audienceId`欄位。 |
 
 **要求**
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | 屬性 | 說明 |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | 對象的ID。 對於外部產生的對象，此值可由使用者提供。 |
 | `name` | 對象名稱。 |
 | `namespace` | 對象的名稱空間。 |
@@ -555,7 +555,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `op` | 所執行的PATCH作業型別。 對於此端點，這個值為&#x200B;**一律為** `/add`。 |
-| `path` | 要更新的欄位路徑。 無法編輯系統產生的欄位，例如`id`、`audienceId`和`namespace` **&#x200B;**。 |
+| `path` | 要更新的欄位路徑。 無法編輯系統產生的欄位，例如`id`、`audienceId`和`namespace` ****。 |
 | `value` | 指派給`path`中指定的屬性的新值。 |
 
 +++
