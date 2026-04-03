@@ -3,7 +3,7 @@ solution: Experience Platform
 title: PQL邏輯數量詞
 description: 邏輯數量詞可用來在Profile Query Language (PQL)中判斷陣列的條件。
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 3%
