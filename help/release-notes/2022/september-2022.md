@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2022 年 9 月)
 description: Adobe Experience Platform 2022 年 9 月版發行說明。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2723'
 ht-degree: 26%
@@ -17,13 +17,13 @@ Adobe Experience Platform 的新功能：
 
 - [屬性型存取控制](#abac)
 
-Adobe Experience Platform 現有功能的更新：
+Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [稽核記錄](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [資料彙集](#data-collection)
-- [目標](#destinations)
+- [目的地](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
 - [查詢服務](#query-service)
@@ -99,7 +99,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 如需有關 [!DNL Dashboards] 的詳細資訊，請參閱 [[!DNL Dashboards] 概觀](../../dashboards/home.md)。
 
-## 資料集合 {#data-collection}
+## 資料彙集 {#data-collection}
 
 Adobe Experience Platform 提供了一套技術，可讓您收集用戶端的客戶體驗資料，並將其傳送到 Adobe Experience Platform Edge Network，然後在其中擴充及轉換資料，再分送至 Adobe 或非 Adobe 目標。
 
@@ -134,7 +134,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端的客
 
 | 目標 | 說明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=zh-Hant)。 請注意，此整合適用於[Adobe Campaign 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=zh-Hant#release-8-4-1)。 |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)。 請注意，此整合適用於[Adobe Campaign 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)。 |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | [!DNL Salesforce CRM]目的地已更新，以支援聯絡人和潛在客戶更新，以及效能改善，以更快更新。 |
 
 {style="table-layout:auto"}
