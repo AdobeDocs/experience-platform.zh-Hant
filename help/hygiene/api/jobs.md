@@ -5,7 +5,7 @@ role: Developer
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 5%
@@ -14,9 +14,11 @@ ht-degree: 5%
 
 # 使用資料衛生API刪除記錄
 
-<!-- >[!IMPORTANT]
+<!-- 
+>[!IMPORTANT]
 >
->This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. 
+-->
 
 資料衛生API可讓您以程式設計方式更正或刪除客戶儲存在Adobe Experience Platform中的個人資料。
 
@@ -54,7 +56,7 @@ POST /jobs
 
 **要求**
 
-要求裝載的結構類似於Privacy Service API[&#128279;](../../privacy-service/api/privacy-jobs.md#access-delete)中刪除要求的結構。 它包含`users`陣列，其物件代表要刪除其資料的使用者。
+要求裝載的結構類似於Privacy Service API[中](../../privacy-service/api/privacy-jobs.md#access-delete)刪除要求的結構。 它包含`users`陣列，其物件代表要刪除其資料的使用者。
 
 ```shell
 curl -X POST \
