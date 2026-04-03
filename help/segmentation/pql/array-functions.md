@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 陣列、清單和設定PQL函式
 description: Profile Query Language (PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 [!DNL Profile Query Language] (PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。 如需其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] 總覽](./overview.md)。
 
-## 位於
+## 在
 
 `in`函式是用來判斷專案是陣列的成員，還是清單為布林值。
 
@@ -90,7 +90,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "green"]
 ```
 
-## 子集: 
+## 子集：
 
 `subsetOf`函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的子集。 換言之，陣列A中的所有元素都是陣列B的元素做為布林值。
 
@@ -108,7 +108,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 person.favoriteCities.subsetOf(person.visitedCities)
 ```
 
-## 超集: 
+## 超集
 
 `supersetOf`函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的超集。 換言之，該陣列A包含陣列B中的所有元素作為布林值。
 
@@ -126,7 +126,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 person.eatenFoods.supersetOf(["sushi", "pizza"])
 ```
 
-## 包括
+## 包含
 
 `includes`函式是用來判斷陣列或清單是否包含指定專案做為布林值。
 
@@ -144,7 +144,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 person.favoriteColors.includes("red")
 ```
 
-## 相異
+## Distinct
 
 `distinct`函式用於從陣列或清單中移除重複值，以作為陣列。
 
@@ -185,7 +185,7 @@ person.orders.storeId.distinct().count() > 1
 xEvent[type="order"].groupBy(storeId)
 ```
 
-## 篩選器
+## 篩選
 
 `filter`函式是用來根據運算式篩選陣列或清單，做為陣列或清單（視輸入而定）。
 
@@ -261,7 +261,7 @@ orders.topN(price, 5)
 ```
 
 | 引數 | 說明 |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | 要排序的陣列或清單。 |
 | `{VALUE}` | 要排序陣列或清單的屬性。 |
 | `{AMOUNT}` | 要傳回的專案數。 |
@@ -274,7 +274,7 @@ orders.topN(price, 5)
 orders.bottomN(price, 5)
 ```
 
-## 第一個項目
+## 第一個專案
 
 `head`函式用來傳回陣列或清單中的第一個專案做為物件。
 
@@ -286,7 +286,7 @@ orders.bottomN(price, 5)
 
 **範例**
 
-下列PQL查詢會傳回價格最高的前五個訂單中的第一個。 有關`topN`函式的詳細資訊可在陣列[&#128279;](#first-n)區段的第一個`n`中找到。
+下列PQL查詢會傳回價格最高的前五個訂單中的第一個。 有關`topN`函式的詳細資訊可在陣列[區段的`n`第一個](#first-n)中找到。
 
 ```sql
 orders.topN(price, 5).head()
