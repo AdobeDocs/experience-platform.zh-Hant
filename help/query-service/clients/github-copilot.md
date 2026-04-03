@@ -2,7 +2,7 @@
 title: 將GitHub Copilot和Visual Studio Code連線至查詢服務
 description: 瞭解如何將GitHub Copilot和Visual Studio Code與Adobe Experience Platform查詢服務連結。
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 本檔案說明使用Adobe Experience Platform查詢服務連線[!DNL GitHub Copilot]和[!DNL VS Code]所需的步驟。
 
-## 快速入門 {#get-started}
+## 開始使用 {#get-started}
 
-本指南要求您已存取GitHub帳戶並註冊[!DNL GitHub Copilot]。 您可以[從GitHub網站](https://github.com/github-copilot/signup)註冊。 您也需要[!DNL VS Code]。 您可從其官方網站[下載 [!DNL VS Code] 1&rbrace;。](https://code.visualstudio.com/download)
+本指南要求您已存取GitHub帳戶並註冊[!DNL GitHub Copilot]。 您可以[從GitHub網站](https://github.com/github-copilot/signup)註冊。 您也需要[!DNL VS Code]。 您可從其官方網站[下載 [!DNL VS Code] 1}。](https://code.visualstudio.com/download)
 
 安裝[!DNL VS Code]並啟動您的[!DNL Copilot]訂閱後，請取得Experience Platform的連線認證。 這些認證位於Experience Platform UI中[!UICONTROL Credentials]工作區的[!UICONTROL Queries]索引標籤中。 閱讀[的認證指南，瞭解如何在Experience Platform UI](../ui/credentials.md)中找到這些值。 如果您目前沒有[!UICONTROL Queries]工作區的存取權，請連絡組織管理員。
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 您的[!DNL VS Code]工作區出現，並附上[!DNL GitHub Copilot]的建議。
 
-![&#x200B; [!DNL VS Code].](../images/clients/github-copilot/connected.png)中的連線SQL工作階段
+![ [!DNL VS Code].](../images/clients/github-copilot/connected.png)中的連線SQL工作階段
 
 ## [!DNL GitHub Copilot]快速指南
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 ## 快速入門：[!DNL GitHub Copilot] {#get-started-with-copilot}
 
-首先，確定您已安裝最新版本的[!DNL VS Code]。 過時的[!DNL VS Code]版本可能會使索引鍵[!DNL Copilot]功能無法如預期運作。 接下來，確定已啟用[!DNL Enable Auto Completions]設定。 如果[!DNL Copilot]已正確執行，**[!DNL Copilot]圖示** （![Copilot圖示](../images/clients/github-copilot/copilot-icon.png)）會顯示在您的狀態列中（如果有問題，則會改為顯示[!DNL Copilot]錯誤圖示）。 選取&#x200B;**[!DNL Copilot]圖示**&#x200B;以開啟[!DNL [!DNL GitHub Copilot]功能表]。 從&#x200B;**[!DNL [!DNL GitHub Copilot]功能表]**，選取&#x200B;**[!DNL Edit Settings]**
+首先，確定您已安裝最新版本的[!DNL VS Code]。 過時的[!DNL VS Code]版本可能會使索引鍵[!DNL Copilot]功能無法如預期運作。 接下來，確定已啟用[!DNL Enable Auto Completions]設定。 如果[!DNL Copilot]已正確執行，**[!DNL Copilot]圖示** （![Copilot圖示](../images/clients/github-copilot/copilot-icon.png)）會顯示在您的狀態列中（如果有問題，則會改為顯示[!DNL Copilot]錯誤圖示）。 選取&#x200B;**[!DNL Copilot]圖示**&#x200B;以開啟[！DNL [!DNL GitHub Copilot]功能表]。 從&#x200B;**[！DNL [!DNL GitHub Copilot]功能表]**，選取&#x200B;**[!DNL Edit Settings]**
 
 ![已顯示[!DNL VS Code]並反白顯示[!DNL GitHub Copilot Menu]圖示和[編輯設定]的[!DNL Copilot]編輯器。](../images/clients/github-copilot/github-copilot-menu.png)
 
@@ -115,13 +115,13 @@ ht-degree: 0%
 
 ### 接受完整的或部分Ghost文字建議 {#accept-suggestions}
 
-當[!DNL GitHub Copilot]建議程式碼完成時，您可以接受部分或完整的建議。 選取&#x200B;**Tab**&#x200B;以接受整個建議，或按住&#x200B;**Control (或Mac上的命令)**&#x200B;並按下&#x200B;**向右鍵**&#x200B;以接受部分文字。 若要關閉建議，請按&#x200B;**Escape**。
+當[!DNL GitHub Copilot]建議程式碼完成時，您可以接受部分或完整的建議。 選取&#x200B;**Tab**&#x200B;以接受整個建議，或按住&#x200B;**Control （或Mac上的命令）**&#x200B;並按下&#x200B;**向右鍵**&#x200B;以接受部分文字。 若要關閉建議，請按&#x200B;**Escape**。
 
 >[!TIP]
 >  
 >如果未取得建議，請確定已以您檔案的語言[[!DNL Copilot] 啟用](#get-started-with-copilot)。
 
-![&#x200B; [!DNL VS Code]編輯器在部分輸入的程式碼旁顯示[!DNL GitHub Copilot]模糊的灰色文字建議，作為Ghost文字。](../images/clients/github-copilot/accept-partial-suggestions.png)
+![ [!DNL VS Code]編輯器在部分輸入的程式碼旁顯示[!DNL GitHub Copilot]模糊的灰色文字建議，作為Ghost文字。](../images/clients/github-copilot/accept-partial-suggestions.png)
 
 ### 替代建議 {#alternative-suggestions}
 
@@ -136,10 +136,11 @@ ht-degree: 0%
 
 ![具有差異檢視的內嵌聊天視窗](../images/clients/github-copilot/inline-chat.png)
 
-<!-- THis section is poss unnecessary:
+<!-- 
+THis section is poss unnecessary:
 There are inline features for chat including doc, expalin, fix and test
 ![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
- -->
+-->
 
 ## 專屬聊天檢視 {#dedicated-chat}
 
