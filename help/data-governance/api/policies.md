@@ -5,7 +5,7 @@ title: 資料控管原則API端點
 description: 資料治理原則是您的組織採用的規則，可說明允許或限制您在Experience Platform中對資料執行的行銷動作型別。 /policies端點用於與檢視、建立、更新或刪除資料治理原則相關的所有API呼叫。
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 2%
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # 資料治理原則端點
 
-資料治理原則是描述允許或限制您在[!DNL Experience Platform]內對資料執行的行銷動作型別的規則。 [!DNL Policy Service API]中的`/policies`端點可讓您以程式設計方式管理組織的資料治理原則。
+資料治理原則是描述允許或限制您在[!DNL Experience Platform]內對資料執行的行銷動作型別的規則。 `/policies`中的[!DNL Policy Service API]端點可讓您以程式設計方式管理組織的資料治理原則。
 
 >[!IMPORTANT]
 >
->治理原則不應與存取控制原則混淆，存取控制原則會決定貴組織中特定Experience Platform使用者可存取的特定資料屬性。 如需如何以程式設計方式管理存取控制原則的詳細資訊，請參閱[存取控制API](../../access-control/abac/api/policies.md)的`/policies`端點指南。
+>治理原則不應與存取控制原則混淆，存取控制原則會決定貴組織中特定Experience Platform使用者可存取的特定資料屬性。 如需如何以程式設計方式管理存取控制原則的詳細資訊，請參閱`/policies`存取控制API[的](../../access-control/abac/api/policies.md)端點指南。
 
 ## 快速入門
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 擷取原則清單 {#list}
 
-您可以分別向`/policies/core`或`/policies/custom`發出GET要求，以列出所有`core`或`custom`原則。
+您可以分別向`core`或`custom`發出GET要求，以列出所有`/policies/core`或`/policies/custom`原則。
 
 **API格式**
 
@@ -284,7 +284,7 @@ POST /policies/custom
 
 **要求**
 
-下列要求會建立新原則，限制在包含標籤`C1 OR (C3 AND C7)`的資料上執行行銷動作`exportToThirdParty`。
+下列要求會建立新原則，限制在包含標籤`exportToThirdParty`的資料上執行行銷動作`C1 OR (C3 AND C7)`。
 
 ```shell
 curl -X POST \
@@ -321,7 +321,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 原則的顯示名稱。 |
 | `status` | 原則的目前狀態。 有三個可能的狀態： `DRAFT`、`ENABLED`或`DISABLED`。 依預設，只有`ENABLED`個原則參與評估。 如需詳細資訊，請參閱[原則評估](../enforcement/overview.md)的概觀。 |
-| `marketingActionRefs` | 此陣列會列出原則所有適用行銷動作的URI。 在[查詢行銷動作](./marketing-actions.md#look-up)的回應中，`_links.self.href`下提供了行銷動作的URI。 |
+| `marketingActionRefs` | 此陣列會列出原則所有適用行銷動作的URI。 在`_links.self.href`查詢行銷動作[的回應中，](./marketing-actions.md#look-up)下提供了行銷動作的URI。 |
 | `description` | 選擇性說明，提供原則使用案例的後續內容。 |
 | `deny` | 說明特定資料使用標籤的原則運算式，其會限制對其執行原則的相關行銷動作。 |
 
@@ -429,7 +429,7 @@ curl -X PUT \
 | --- | --- |
 | `name` | 原則的顯示名稱。 |
 | `status` | 原則的目前狀態。 有三個可能的狀態： `DRAFT`、`ENABLED`或`DISABLED`。 依預設，只有`ENABLED`個原則參與評估。 如需詳細資訊，請參閱[原則評估](../enforcement/overview.md)的概觀。 |
-| `marketingActionRefs` | 此陣列會列出原則所有適用行銷動作的URI。 在[查詢行銷動作](./marketing-actions.md#look-up)的回應中，`_links.self.href`下提供了行銷動作的URI。 |
+| `marketingActionRefs` | 此陣列會列出原則所有適用行銷動作的URI。 在`_links.self.href`查詢行銷動作[的回應中，](./marketing-actions.md#look-up)下提供了行銷動作的URI。 |
 | `description` | 選擇性說明，提供原則使用案例的後續內容。 |
 | `deny` | 說明特定資料使用標籤的原則運算式，其會限制對其執行原則的相關行銷動作。 如需此屬性的詳細資訊，請參閱[建立原則](#create-policy)的相關章節。 |
 
