@@ -2,7 +2,7 @@
 title: 探索資料分析
 description: 瞭解如何使用Data Distiller來探索和分析Python筆記型電腦的資料。
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 13%
@@ -103,9 +103,9 @@ print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
 Approximate count: 1284600.0 using 5.0% sample
 ```
 
-## 電子郵件漏斗分析 {#email-funnel-analysis}
+## 以電子郵件傳送funnel分析 {#email-funnel-analysis}
 
-漏斗分析是瞭解達成目標結果所需步驟，以及有多少使用者完成每個步驟的方法。 以下範例說明通往使用者訂閱電子報的步驟的簡單漏斗分析。 訂閱結果以`web.formFilledOut`的事件型別表示。
+funnel分析是瞭解達成目標結果所需步驟，以及有多少使用者完成每個步驟的方法。 以下範例說明如何透過簡單的funnel分析讓使用者訂閱電子報的步驟。 訂閱結果以`web.formFilledOut`的事件型別表示。
 
 首先，執行查詢以取得每個步驟的使用者人數。
 
@@ -152,7 +152,7 @@ fig.show()
 
 **範例輸出**
 
-![eventType電子郵件漏斗的資訊圖。](../../images/data-distiller/email-funnel.png)
+![eventType電子郵件funnel的資訊圖。](../../images/data-distiller/email-funnel.png)
 
 ## 事件關聯 {#event-correlations}
 
@@ -234,7 +234,7 @@ corrdf.fillna(0)
 
 **範例輸出**：
 
-|    | 變數 | 值 | 功能 | pearsonCorrelation |
+|    | 變數 | value | 功能 | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
 | 0 | `webForms_EmailOpens` | 0.218874 | EmailOpens | 0.218874 |
 | 1 | `webForms_advertisingClicks` | 0.026805 | 廣告點選次數 | 0.026805 |
@@ -262,4 +262,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## 後續步驟
 
-閱讀本檔案後，您已瞭解如何使用Data Distiller來探索和分析[!DNL Python]筆記本中的資料。 在機器學習環境中建立從Experience Platform到摘要自訂模型的功能管道的下一個步驟是[為機器學習設計功能](./feature-engineering.md)。
+閱讀本檔案後，您已瞭解如何使用Data Distiller來探索和分析[!DNL Python]筆記本中的資料。 從Experience Platform建立功能管道以饋送機器學習環境中的自訂模型時，下一個步驟是為[機器學習設計功能](./feature-engineering.md)。
