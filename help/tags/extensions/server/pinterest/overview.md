@@ -4,7 +4,7 @@ title: Pinterest事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能可讓您將事件擷取至Pinterest，以滿足您的業務需求。
 last-substantial-update: 2023-04-27T00:00:00Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1427'
 ht-degree: 3%
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 您必須擁有有效的[!DNL Pinterest] [商業帳戶](https://help.pinterest.com/en/business/article/get-a-business-account)才能使用此延伸模組。 移至[[!DNL Pinterest] 註冊頁面](https://www.pinterest.com/business/create/)進行註冊並建立帳戶（如果尚未建立帳戶）。
 
-您也需要[!DNL Pinterest]開發人員帳戶，該帳戶需要與您的[!DNL Pinterest]企業帳戶相關聯。 若要將您的開發人員帳戶與您的企業帳戶建立關聯，請參閱[[!DNL Pinterest &#x200B;] 開發人員帳戶](https://developers.pinterest.com/account-setup/)。
+您也需要[!DNL Pinterest]開發人員帳戶，該帳戶需要與您的[!DNL Pinterest]企業帳戶相關聯。 若要將您的開發人員帳戶與您的企業帳戶建立關聯，請參閱[[!DNL Pinterest ] 開發人員帳戶](https://developers.pinterest.com/account-setup/)。
 
 ### 收集必要的設定詳細資料 {#configuration-details}
 
@@ -64,7 +64,7 @@ ht-degree: 3%
 
 在下一個畫面中，輸入您先前在[!UICONTROL Ads Account Id]組態詳細資料[!UICONTROL Conversion Access Token]區段中收集的[和](#configuration-details)。 完成後，選取「**[!UICONTROL Save]**」。
 
-![&#x200B; [!DNL Pinterest] [!UICONTROL Configure]畫面醒目提示[!UICONTROL Ads Account Id]和[!UICONTROL Conversion Access Token]輸入欄位。](../../../images/extensions/server/pinterest/input.png)
+![ [!DNL Pinterest] [!UICONTROL Configure]畫面醒目提示[!UICONTROL Ads Account Id]和[!UICONTROL Conversion Access Token]輸入欄位。](../../../images/extensions/server/pinterest/input.png)
 
 ## 設定事件轉送規則 {#config-rule}
 
@@ -81,7 +81,7 @@ ht-degree: 3%
 建立新規則需要下列事件資料：
 
 | 欄位名稱 | 說明 | 範例 |
-| --- | --- | --- | 
+| --- | --- | --- |
 | [!UICONTROL Event Name] | 使用者事件的型別。 這可以是任何事件型別，但若要利用[!DNL Pinterest Analytics]，建議使用[[!DNL Pinterest] 事件代碼](https://help.pinterest.com/en/business/article/add-event-codes) | &amp;amp；ast；簽出<br> &amp;amp；ast； add_to_cart <br> &amp;amp；ast； page_visit <br> &amp;amp；ast；註冊<br> &amp;amp；ast； [使用者定義的事件] |
 | [!UICONTROL Action Source] | 表示轉換事件發生位置的來源。 | &amp;amp；ast； app_android <br> &amp;amp；ast； app_ios <br> &amp;amp；ast；網頁<br> &amp;amp；ast；離線 |
 | [!UICONTROL Event Time] | 這是指事件時間。 使用的預設時間格式為UNIX，格式為`<seconds>.<miliseconds>`，視您的當地時區而定。 如需詳細資訊，請參閱[[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create)。 | 1433188255.500表示2015年6月1日星期一晚上7:50:55 GMT時新紀元後的1433188255秒和500毫秒。 |
@@ -110,7 +110,7 @@ ht-degree: 3%
 下列使用者資料可由輸入，並非必填欄位：
 
 | 欄位名稱 | 說明 | 範例 |
-| --- | --- | --- | 
+| --- | --- | --- |
 | [!UICONTROL Email] | 使用者電子郵件地址或使用者地址電子郵件的SHA256雜湊。 | ebd543592...f2b7e1 |
 | [!UICONTROL Mobile Adverstising IDs] | 使用者的「Google Advertising ID」(GAID)或「Apple的廣告商識別碼」(IDFA)的Sha256雜湊 | ebd543592...f2b7e1 |
 | [!UICONTROL Client IP Address] | 使用者的IP位址，可以是IPv4或IPv6格式。 用於比對。 | 192.168.0.1 |
@@ -146,7 +146,7 @@ ht-degree: 3%
 | 欄位名稱 | 說明 |
 | --- | --- |
 | 貨幣 | ISO-4217貨幣代碼。 如果未提供，[!DNL Pinterest]將預設為廣告商在建立帳戶期間所設定的貨幣。 |
-| 價值 | 事件的總值。 已接受為請求中的字串。 這將會剖析為兩位數。 |
+| 值 | 事件的總值。 已接受為請求中的字串。 這將會剖析為兩位數。 |
 | 搜尋字串 | 與使用者轉換事件相關的搜尋字串。 |
 | 訂單ID | 訂單ID。 傳送`order_id`可協助[!DNL Pinterest]在必要時刪除重複事件。 |
 | 產品數量 | 事件的產品總數。 例如，結帳事件中購買的專案總數。 |
@@ -161,11 +161,11 @@ ht-degree: 3%
 
 如果事件集合和[!DNL Experience Platform]整合成功，您將會在[!DNL Pinterest] UI中看到事件。
 
-![&#x200B; [!DNL Pinterest]事件管理員](../../../images/extensions/server/pinterest/event-history.png)
+![ [!DNL Pinterest]事件管理員](../../../images/extensions/server/pinterest/event-history.png)
 
 您可以進一步鑽研並檢視[!DNL Pinterest]事件資料分佈。
 
-![&#x200B; [!DNL Pinterest]資料分佈](../../../images/extensions/server/pinterest/event-history-distribution.png)
+![ [!DNL Pinterest]資料分佈](../../../images/extensions/server/pinterest/event-history-distribution.png)
 
 ## 後續步驟
 
