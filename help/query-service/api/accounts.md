@@ -5,7 +5,7 @@ title: 帳戶API端點
 description: 您可以為持續性建立查詢服務帳戶。
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 4%
@@ -206,7 +206,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 ## 刪除帳戶
 
-您可以透過向`/accounts`端點發出DELETE要求來刪除您的查詢服務整合帳戶。
+您可以透過向`/accounts`端點發出DELETE請求來刪除您的查詢服務整合帳戶。
 
 **API格式**
 
