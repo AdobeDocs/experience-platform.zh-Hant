@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 2%
+source-wordcount: '1028'
+ht-degree: 1%
 
 ---
 
@@ -31,15 +31,15 @@ ht-degree: 2%
 
 ## 概觀
 
-在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 對象]**&#x200B;以開啟&#x200B;**[!UICONTROL 總覽]**&#x200B;標籤，其中顯示[!UICONTROL 對象]儀表板。
+在Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL Audiences]**&#x200B;以開啟顯示&#x200B;**[!UICONTROL Overview]**&#x200B;儀表板的[!UICONTROL Audiences]索引標籤。
 
 >[!NOTE]
 >
->如果您的組織剛開始使用Experience Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL 受眾]儀表板。 相反，[!UICONTROL 概觀]索引標籤會顯示連結和檔案，以幫助您開始使用對象。
+>如果您的組織剛開始使用Experience Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL Audiences]儀表板。 [!UICONTROL Overview]標籤反而會顯示連結和檔案，協助您開始使用對象。
 
-### [!UICONTROL 對象]儀表板 {#segments-dashboard}
+### [!UICONTROL Audiences]儀表板 {#segments-dashboard}
 
-**[!UICONTROL 對象]**&#x200B;儀表板會概述與您組織的對象資料相關的關鍵量度。
+**[!UICONTROL Audiences]**&#x200B;儀表板概述與貴組織的受眾資料相關的關鍵量度。
 
 若要深入瞭解，請造訪[對象儀表板指南](../../dashboards/guides/audiences.md)。
 
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 ## 瀏覽 {#browse}
 
-選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以檢視對象入口網站。 Audience Portal提供屬於您組織和沙箱的所有受眾清單，並包含設定檔計數、來源、建立日期、上次修改日期、標籤和劃分等詳細資訊。
+選取&#x200B;**[!UICONTROL Browse]**&#x200B;標籤以檢視對象入口網站。 Audience Portal提供屬於您組織和沙箱的所有受眾清單，並包含設定檔計數、來源、建立日期、上次修改日期、標籤和劃分等詳細資訊。
 
 此外，對象入口網站可讓您使用區段產生器或對象構成建立新對象，以及將外部產生的對象匯入Experience Platform。
 
@@ -55,7 +55,7 @@ ht-degree: 2%
 
 ## 構成 {#compositions}
 
-選取&#x200B;**[!UICONTROL 構成]**&#x200B;索引標籤，以檢視透過對象構成為您的組織產生的所有對象清單。
+選取「**[!UICONTROL Compositions]**」標籤，檢視透過對象構成為您的組織產生的所有對象清單。
 
 ![在您組織的對象構成中建立的對象清單。](../images/ui/overview/compositions.png)
 
@@ -78,15 +78,15 @@ ht-degree: 2%
 ![可針對「構成」區段顯示的屬性。](../images/ui/overview/compositions-customize-table.png)
 
 | 欄位 | 說明 |
-| ----- | ----------- | 
-| [!UICONTROL 名稱] | 對象名稱。 |
-| [!UICONTROL 狀態] | 對象的狀態。 此欄位可能的值包括`Draft`、`Inactive`和`Published`。 |
-| [!UICONTROL 已建立] | 建立對象的時間和日期。 |
-| [!UICONTROL 建立者：] | 建立對象的人員名稱。 |
-| [!UICONTROL 已更新] | 上次更新對象的時間和日期。 |
-| [!UICONTROL 更新者] | 上次更新對象的人員名稱。 |
+| ----- | ----------- |
+| [!UICONTROL Name] | 對象名稱。 |
+| [!UICONTROL Status] | 對象的狀態。 此欄位可能的值包括`Draft`、`Inactive`和`Published`。 |
+| [!UICONTROL Created] | 建立對象的時間和日期。 |
+| [!UICONTROL Created by] | 建立對象的人員名稱。 |
+| [!UICONTROL Updated] | 上次更新對象的時間和日期。 |
+| [!UICONTROL Updated by] | 上次更新對象的人員名稱。 |
 
-若要檢視對象的構成方式，請在「[!UICONTROL 對象]」標籤中選取對象名稱。
+若要檢視對象的構成方式，請在「[!UICONTROL Audiences]」標籤中選取對象名稱。
 
 將會顯示「對象構成」頁面，其中包含構成對象的建置區塊。 如需如何使用對象構成的詳細資訊，請參閱[對象構成UI指南](./audience-composition.md)。
 
