@@ -2,7 +2,7 @@
 description: 設定檔案型目的地的檔案格式選項
 title: 瞭解如何使用Destination SDK來設定檔案型目的地的檔案格式選項。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 1%
