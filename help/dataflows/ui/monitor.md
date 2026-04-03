@@ -2,9 +2,9 @@
 title: 監視儀表板總覽
 description: 瞭解如何使用Adobe Experience Platform UI中的監控儀表板
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: cca405c58551a52a044ac513921298637974e88e
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 請閱讀本檔案，瞭解如何使用監視儀表板來監視不同Experience Platform服務之間的資料歷程。
 
-## 快速入門
+## 開始使用
 
 參閱本檔案前，請先實際瞭解下列Experience Platform元件：
 
@@ -38,11 +38,11 @@ ht-degree: 0%
 
 ## 監視儀表板指南
 
-在Experience Platform UI中，選取左側導覽中[!UICONTROL 資料管理]下的&#x200B;**[!UICONTROL 監視]**。
+在Experience Platform UI中，選取左側導覽中&#x200B;**[!UICONTROL Monitoring]**&#x200B;下方的[!UICONTROL Data Management]。
 
 ![Experience Platform UI中的監視儀表板。](../assets/ui/monitor-overview/monitoring.png)
 
-選取&#x200B;**[!UICONTROL 資料型別]**，然後使用下拉式功能表選取您要檢視的資料型別。 資料型別由Experience Data Model (XDM)結構描述類別定義，以確保其資料在擷取至Experience Platform時遵循標準格式。 如需詳細資訊，請瀏覽下列檔案：
+選取&#x200B;**[!UICONTROL Data Type]**，然後使用下拉式功能表來選取您要檢視的資料型別。 資料型別由Experience Data Model (XDM)結構描述類別定義，以確保其資料在擷取至Experience Platform時遵循標準格式。 如需詳細資訊，請瀏覽下列檔案：
 
 * [B2B帳戶資料型別](../../rtcdp/b2b-tutorial.md)
 * [潛在客戶資料型別](../../rtcdp/partner-data/prospecting.md)
@@ -53,19 +53,19 @@ ht-degree: 0%
 
 >[!TAB 全部]
 
-選取「全部&#x200B;**[!UICONTROL 全部]**」以更新您的儀表板，並顯示指定期間內擷取至Experience Platform之所有資料的量度。
+選取&#x200B;**[!UICONTROL All]**&#x200B;以更新您的儀表板，並顯示指定期間內擷取至Experience Platform之所有資料的量度。
 
 ![監視資料型別設定為[全部]。](../assets/ui/monitor-overview/all.png)
 
 >[!TAB 客戶與帳戶]
 
-選取「**[!UICONTROL 客戶與帳戶]**」以更新您的儀表板，並顯示指定期間內擷取至Experience Platform的客戶與帳戶資料量度。
+選取「**[!UICONTROL Customer & Account]**」以更新您的儀表板，並顯示指定期間內擷取至Experience Platform的客戶與帳戶資料量度。
 
 ![監控資料型別設定為[客戶與帳戶]。](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB 帳戶設定檔擴充]
 
-選取&#x200B;**[!UICONTROL 帳戶設定檔擴充]**&#x200B;以更新您的儀表板，並在設定檔擴充資料上顯示量度。 **附註**：如果您有權使用[B2B資料](../../rtcdp/b2b-tutorial.md)，則只能檢視帳戶設定檔擴充量度。
+選取&#x200B;**[!UICONTROL Account profile enrichment]**&#x200B;以更新您的儀表板，並在設定檔擴充資料上顯示量度。 **附註**：如果您有權使用[B2B資料](../../rtcdp/b2b-tutorial.md)，則只能檢視帳戶設定檔擴充量度。
 
 ![監控資料型別已設定為「帳戶設定檔擴充」。](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
@@ -77,31 +77,31 @@ ht-degree: 0%
 
 >[!TAB 資料湖]
 
-選取&#x200B;**[!UICONTROL 資料湖]**&#x200B;以檢視資料湖擷取速率的量度。 如需詳細資訊，請閱讀[監視資料湖擷取](monitor-sources.md)的指南。
+選取&#x200B;**[!UICONTROL Data lake]**&#x200B;以檢視資料湖擷取速率的量度。 如需詳細資訊，請閱讀[監視資料湖擷取](monitor-sources.md)的指南。
 
 ![已選取資料湖卡的UI中的監視儀表板。](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB 身分]
 
-選取&#x200B;**[!UICONTROL 身分]**&#x200B;以檢視身分識別資料的處理成功率。 如需詳細資訊，請閱讀[監視身分資料](monitor-identities.md)的指南。
+選取&#x200B;**[!UICONTROL Identities]**&#x200B;以檢視您身分識別資料的處理成功率。 如需詳細資訊，請閱讀[監視身分資料](monitor-identities.md)的指南。
 
 ![已選取身分卡的UI中的監視儀表板。](../assets/ui/monitor-overview/identities.png)
 
 >[!TAB 輪廓]
 
-選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;以檢視設定檔資料的處理成功率。 如需詳細資訊，請閱讀[監視設定檔資料](monitor-profiles.md)的指南。
+選取&#x200B;**[!UICONTROL Profiles]**&#x200B;以檢視設定檔資料的處理成功率。 如需詳細資訊，請閱讀[監視設定檔資料](monitor-profiles.md)的指南。
 
 ![已選取設定檔卡的UI中的監視儀表板。](../assets/ui/monitor-overview/profiles.png)
 
->[!TAB 對象]
+>[!TAB 客群]
 
-選取「**[!UICONTROL 對象]**」以檢視對象和細分工作的量度。 如需詳細資訊，請閱讀[監控對象資料](monitor-audiences.md)的指南。
+選取&#x200B;**[!UICONTROL Audiences]**&#x200B;以檢視對象和細分工作的量度。 如需詳細資訊，請閱讀[監控對象資料](monitor-audiences.md)的指南。
 
 ![已選取對象卡的Ui中的監視儀表板。](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB 目的地]
 
-選取&#x200B;**[!UICONTROL 目的地]**&#x200B;以檢視您[!UICONTROL 串流啟用率]和[!UICONTROL 批次失敗的資料流執行]上的量度。 如需詳細資訊，請閱讀[監視目的地資料](monitor-destinations.md)的指南。
+選取&#x200B;**[!UICONTROL Destinations]**&#x200B;以檢視您[!UICONTROL Streaming activate rate]和[!UICONTROL Batch failed dataflow runs]上的量度。 如需詳細資訊，請閱讀[監視目的地資料](monitor-destinations.md)的指南。
 
 ![UI中的監視儀表板，已選取目的地卡片。](../assets/ui/monitor-overview/destinations.png)
 
@@ -109,17 +109,17 @@ ht-degree: 0%
 
 ### 設定監視時間範圍 {#configure-monitoring-time-frame}
 
-依預設，監視儀表板會顯示過去24小時內擷取之資料的量度。 若要更新時間範圍，請選取&#x200B;**[!UICONTROL 過去24小時]**。
+依預設，監視儀表板會顯示過去24小時內擷取之資料的量度。 若要更新時間範圍，請選取&#x200B;**[!UICONTROL Last 24 hours]**。
 
 ![UI中選取時間設定的監視儀表板。](../assets/ui/monitor-overview/select-time.png)
 
 您可以在出現的對話方塊中，為資料監視檢視設定新的時間範圍。 您可以選擇建立自訂時間範圍，或從預先設定的選項清單中選取：
 
-* [!UICONTROL 最近24小時]
-* [!UICONTROL 最近7天]
-* [!UICONTROL 最近30天]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
-完成後，選取&#x200B;**[!UICONTROL 套用]**。
+完成後，選取&#x200B;**[!UICONTROL Apply]**。
 
 ![監視儀表板中的時間範圍組態快顯視窗。](../assets/ui/monitor-overview/update-time.png)
 
@@ -133,6 +133,8 @@ ht-degree: 0%
 * [監視對象資料](monitor-audiences.md)。
 * [監視目的地資料](monitor-destinations.md)。
 
-<!-- >[!TAB Prospect]
+<!-- 
+>[!TAB Prospect]
 
-Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). 
+-->
