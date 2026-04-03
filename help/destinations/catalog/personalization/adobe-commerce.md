@@ -2,7 +2,7 @@
 title: Adobe Commerce目的地聯結器
 description: 瞭解Adobe Commerce和Real-Time CDP商家如何提供高度相關的網站內容和促銷活動，並根據Real-Time CDP中建立和管理之客戶對象進行自訂，進而個人化購物體驗。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 4%
@@ -22,12 +22,12 @@ ht-degree: 4%
 若要使用此目的地連線，請確定您有以下存取權：
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 您可以存取開發人員主控台，檢視在Adobe Commerce中[完成擴充功能組態](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=zh-Hant#configure-the-extension)所需的服務帳戶和認證資訊。
-- [Adobe Commerce 2.4.4版或更新版本](https://business.adobe.com/tw/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)。 您可以存取開發人員主控台，檢視在Adobe Commerce中[完成擴充功能組態](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension)所需的服務帳戶和認證資訊。
+- [Adobe Commerce 2.4.4版或更新版本](https://business.adobe.com/products/commerce.html)
 
 在Experience Platform中建立下列專案：
 
-- [結構描述](../../../xdm/schema/composition.md)。 您建立的結構描述代表您計畫從Adobe Commerce擷取的資料。 [深入瞭解](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=zh-Hant)如何建立包含Commerce特定欄位群組的結構描述。
+- [結構描述](../../../xdm/schema/composition.md)。 您建立的結構描述代表您計畫從Adobe Commerce擷取的資料。 [深入瞭解](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html)如何建立包含Commerce特定欄位群組的結構描述。
 - [資料集](../../../catalog/datasets/user-guide.md#create)。 資料集是資料集合的儲存和管理結構。 您會使用先前建立的結構描述建立此資料集。
 - [資料流](../../../datastreams/configure.md#create)。 允許資料從[!DNL Adobe Experience Platform]流向其他Adobe DX產品的ID。 此ID必須與您特定Adobe Commerce執行個體中的特定網站相關聯。 當您建立此資料流時，請指定您在上面建立的XDM結構描述。
 
@@ -96,7 +96,7 @@ ht-degree: 4%
 
 ## [!DNL Adobe Commerce]中的後續步驟 {#next-steps-adobe-commerce}
 
-現在您已在Experience Platform中設定[!DNL Commerce]目的地，您必須在[!DNL Audience Activation]中安裝[!DNL Commerce]擴充功能，並設定[!DNL Commerce Admin]以匯入您建立的[!DNL Real-Time CDP]個對象。 請參閱[[!DNL Commerce] 檔案](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=zh-Hant)以瞭解更多資訊。
+現在您已在Experience Platform中設定[!DNL Commerce]目的地，您必須在[!DNL Audience Activation]中安裝[!DNL Commerce]擴充功能，並設定[!DNL Commerce Admin]以匯入您建立的[!DNL Real-Time CDP]個對象。 請參閱[[!DNL Commerce] 檔案](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html)以瞭解更多資訊。
 
 ## 驗證Commerce中的對象啟用 {#exported-data}
 
