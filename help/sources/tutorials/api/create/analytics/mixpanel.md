@@ -2,16 +2,16 @@
 title: 使用Flow Service API建立Mixpanel的Source連線和資料流
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Mixpanel。
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1992'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Flow Service] API為[!DNL Mixpanel]建立來源連線和資料流
+# 使用[!DNL Mixpanel] API為[!DNL Flow Service]建立來源連線和資料流
 
-下列教學課程會逐步引導您完成建立來源連線和資料流的步驟，以使用[流量服務API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)將[!DNL Mixpanel]資料帶入Adobe Experience Platform。
+下列教學課程會逐步引導您完成建立來源連線和資料流的步驟，以使用[!DNL Mixpanel]流量服務API[將](https://developer.adobe.com/experience-platform-apis/references/flow-service/)資料帶入Adobe Experience Platform。
 
 ## 快速入門
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 * [來源](../../../../home.md)： Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Experience Platform服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../../../sandboxes/home.md)： Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL Mixpanel]。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Mixpanel] API成功連線到[!DNL Flow Service]。
 
 ### 收集必要的認證
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL Mixpanel]驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的`/connections`驗證認證作為要求內文的一部分時，對[!DNL Mixpanel]端點提出POST要求。
 
 **API格式**
 
@@ -674,11 +674,11 @@ curl -X POST \
 
 ### 更新您的資料流
 
-提供資料流的ID時，透過向[!DNL Flow Service] API的`/flows`端點發出PATCH要求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`If-Match`標頭中提供資料流的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
+提供資料流的ID時，透過向`/flows` API的[!DNL Flow Service]端點發出PATCH要求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`etag`標頭中提供資料流的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
 
 ### 更新您的帳戶
 
-在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`If-Match`標頭中提供來源帳戶的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
+在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`etag`標頭中提供來源帳戶的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
 
 ### 刪除您的資料流
 
