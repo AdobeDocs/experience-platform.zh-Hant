@@ -3,7 +3,7 @@ title: 使用流量服務API連線Capillity至Experience Platform
 description: 瞭解如何使用API將Capillity連線至Experience Platform。
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 2%
@@ -234,7 +234,8 @@ curl -X POST \
 
 >[!ENDTABS]
 
-<!--### Supported Events
+<!--
+### Supported Events
 
 The [!DNL Capillary] source supports the following events:
 
@@ -251,7 +252,8 @@ The [!DNL Capillary] source supports the following events:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`-->
+* `customerUpdated`
+-->
 
 ### 歷史資料移轉
 
