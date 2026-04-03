@@ -3,18 +3,18 @@ keywords: Experience Platform；首頁；熱門主題；Teradata Vantage
 title: 使用流量服務API建立Teradata Vantage基本連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連結至Teradata Vantage。
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 4%
 
 ---
 
-# 使用[!DNL Flow Service] API建立[!DNL Teradata Vantage]基本連線
+# 使用[!DNL Teradata Vantage] API建立[!DNL Flow Service]基本連線
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
-本教學課程將逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL Teradata Vantage]建立基礎連線的步驟。
+本教學課程將逐步引導您使用[!DNL Teradata Vantage]API[[!DNL Flow Service] 為](https://www.adobe.io/experience-platform-apis/references/flow-service/)建立基礎連線的步驟。
 
 ## 快速入門
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 如需如何成功呼叫Experience Platform API的詳細資訊，請參閱[Experience Platform API快速入門](../../../../../landing/api-guide.md)指南。
 
-以下章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL Teradata Vantage]。
+以下章節提供您需瞭解的其他資訊，才能使用[!DNL Teradata Vantage] API成功連線到[!DNL Flow Service]。
 
 ### 收集必要的認證
 
@@ -44,7 +44,7 @@ ht-degree: 4%
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基底連線ID，請在提供您的[!DNL Teradata Vantage]驗證認證作為要求內文的一部分時，對`/connections`端點提出POST要求。
+若要建立基底連線ID，請在提供您的`/connections`驗證認證作為要求內文的一部分時，對[!DNL Teradata Vantage]端點提出POST要求。
 
 **API格式**
 
@@ -96,7 +96,7 @@ curl -X POST \
 }
 ```
 
-依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Teradata Vantage]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
+依照此教學課程，您已使用[!DNL Teradata Vantage] API建立[!DNL Flow Service]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
 * [使用 [!DNL Flow Service] API建立資料流以將資料庫資料帶入Experience Platform](../../collect/database-nosql.md)
