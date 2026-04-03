@@ -2,7 +2,7 @@
 title: Demandbase People連線
 description: 使用此目的地來啟用您的對象，並透過Demandbase第三方資料擴充對象，以用於行銷和銷售中的其他下游使用案例。
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 4%
