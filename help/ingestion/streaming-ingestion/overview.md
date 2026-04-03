@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 串流擷取概觀
 description: 瞭解Adobe Experience Platform中的串流擷取。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 2%
