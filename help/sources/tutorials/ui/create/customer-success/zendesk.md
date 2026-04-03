@@ -2,10 +2,10 @@
 title: 在使用者介面中建立Zendesk Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Zendesk來源連線。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 7%
+source-wordcount: '724'
+ht-degree: 8%
 
 ---
 
@@ -39,37 +39,37 @@ ht-degree: 7%
 
 在建立[!DNL Zendesk]來源連線之前，您也必須先建立Experience Platform結構描述以用於您的來源。 如需如何建立結構描述的完整步驟，請參閱有關[建立Experience Platform結構描述](../../../../../xdm/schema/composition.md)的教學課程。
 
-有關[!DNL Zendesk Search API]所需的[!DNL Zendesk]結構描述的其他指引，請參閱以下[限制](#limits)區段。
+有關[!DNL Zendesk]所需的[!DNL Zendesk Search API]結構描述的其他指引，請參閱以下[限制](#limits)區段。
 
 ![建立結構描述](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## 連線您的[!DNL Zendesk]帳戶
 
-在Experience Platform UI中，從左側導覽列選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]畫面會顯示您可以建立帳戶的各種來源。
+在Experience Platform UI中，從左側導覽列選取「**[!UICONTROL Sources]**」以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示您可以建立帳戶的各種來源。
 
 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在&#x200B;*客戶成功*&#x200B;類別下，選取&#x200B;**[!UICONTROL Zendesk]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
+在&#x200B;*客戶成功*&#x200B;類別下，選取&#x200B;**[!UICONTROL Zendesk]**，然後選取&#x200B;**[!UICONTROL Add data]**。
 
 ![目錄](../../../../images/tutorials/create/zendesk/catalog.png)
 
-**[!UICONTROL Connect Zendesk帳戶]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+**[!UICONTROL Connect Zendesk account]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取您要用來建立新資料流的&#x200B;*Zendesk*&#x200B;帳戶，然後選取[下一步]&#x200B;**以繼續。**
+若要使用現有帳戶，請選取您要用來建立新資料流的&#x200B;*Zendesk*&#x200B;帳戶，然後選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
 ![現有](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### 新帳戶
 
-如果您正在建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，然後提供名稱、選擇性說明和您的認證。 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**，然後等待一段時間以建立新連線。
+如果您正在建立新帳戶，請選取&#x200B;**[!UICONTROL New account]**，然後提供名稱、選擇性說明和您的認證。 完成時，請選取&#x200B;**[!UICONTROL Connect to source]**，然後等待一段時間以建立新連線。
 
 ![新](../../../../images/tutorials/create/zendesk/new.png)
 
 ### 選取資料
 
-來源通過驗證後，頁面會更新為互動式結構描述樹狀結構，讓您探索和檢查資料的階層。 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續。
+來源通過驗證後，頁面會更新為互動式結構描述樹狀結構，讓您探索和檢查資料的階層。 選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
@@ -85,7 +85,7 @@ ht-degree: 7%
 
 以下概述您可以採取的步驟，以驗證您是否已成功連線您的[!DNL Zendesk]來源，以及是否正在將[!DNL Zendesk]設定檔擷取到Experience Platform。
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 資料集]**&#x200B;以存取[!UICONTROL 資料集]工作區。 [!UICONTROL 資料集活動]畫面會顯示執行的詳細資訊。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Datasets]**」以存取[!UICONTROL Datasets]工作區。 [!UICONTROL Dataset Activity]畫面會顯示執行的詳細資訊。
 
 ![活動頁面](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -93,7 +93,7 @@ ht-degree: 7%
 
 ![資料流頁面](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-最後，選取&#x200B;**[!UICONTROL 預覽資料集]**&#x200B;以顯示所擷取的資料。
+最後，選取&#x200B;**[!UICONTROL Preview dataset]**&#x200B;以顯示所擷取的資料。
 
 ![Zendesk資料集](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
