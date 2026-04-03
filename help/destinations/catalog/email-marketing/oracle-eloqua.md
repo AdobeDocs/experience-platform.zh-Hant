@@ -3,7 +3,7 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: （檔案） Oracle Eloqua連線
 description: Oracle Eloqua是Oracle所提供用於行銷自動化的軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動和銷售機會開發。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 3%
