@@ -3,7 +3,7 @@ keywords: crm；CRM；CRM目的地；外聯；外聯crm目的地
 title: 外展連線
 description: 使用外展目的地匯出您的帳戶資料，並在外展內根據您的業務需求啟用資料。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1784'
 ht-degree: 2%
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ### Experience Platform必要條件 {#prerequisites-in-experience-platform}
 
-在啟用資料到[!DNL Outreach]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=zh-Hant)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=zh-Hant)區段[!DNL Experience Platform]。
+在啟用資料到[!DNL Outreach]目的地之前，您必須在[中建立](/help/xdm/schema/composition.md)結構描述[、](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)資料集[和](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)區段[!DNL Experience Platform]。
 
 如果您需要對象狀態的指引，請參閱Adobe關於[對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md)的檔案。
 
@@ -172,7 +172,7 @@ ht-degree: 2%
 1. 在[!UICONTROL Mapping]步驟中，選取&#x200B;**[!UICONTROL Add new mapping]**。 您會在畫面上看到新的對應列。
    ![Experience Platform UI熒幕擷圖顯示如何新增對應](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
-1. 在[!UICONTROL Select source field]視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**&#x200B;類別並新增所需的對應。
+1. 在[!UICONTROL Select source field]視窗中，選擇&#x200B;**[!UICONTROL Select identity namespace]**類別並新增所需的對應。
    ![Experience Platform UI熒幕擷圖顯示Source對應](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. 在[!UICONTROL Select target field]視窗中，選取您要將來源欄位對應到的目標欄位型別。
@@ -206,7 +206,7 @@ ht-degree: 2%
 
   >[!IMPORTANT]
   >
-  > * 在&#x200B;*內使用的數值`N`(*) [!UICONTROL Mapping ID]應該與尾碼為[!DNL Outreach]內數值的自訂屬性金鑰相符。 範例： *自訂欄位`N`標籤*。
+  > * 在&#x200B;*內使用的數值`N`(*)[!UICONTROL Mapping ID]應該與尾碼為[!DNL Outreach]內數值的自訂屬性金鑰相符。 範例： *自訂欄位`N`標籤*。
   > * 您只需要指定數值，不需要指定整個自訂欄位標籤。
   > * [!DNL Outreach]支援最多150個自訂標籤欄位。
   > * 如需詳細資訊，請參閱[[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect)。
@@ -229,7 +229,7 @@ ht-degree: 2%
 1. 選取目的地並驗證狀態為&#x200B;**[!UICONTROL enabled]**。
    ![Experience Platform UI熒幕擷圖顯示所選目的地的目的地資料流執行。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. 切換至&#x200B;**[!DNL Activation data]**&#x200B;標籤，然後選取對象名稱。
+1. 切換至&#x200B;**[!DNL Activation data]**標籤，然後選取對象名稱。
    ![Experience Platform UI熒幕擷圖顯示目的地啟用資料。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
 1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。
