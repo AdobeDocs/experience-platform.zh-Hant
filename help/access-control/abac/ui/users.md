@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理使用者
 description: 透過Adobe Experience Cloud中的許可權介面管理使用者和使用者群組。
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: b665d0edce713f1b252e07125aabab79d52a9cba
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 4%
@@ -22,7 +22,8 @@ ht-degree: 4%
 
 ## 管理使用者
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!IMPORTANT]
 >
 >[!UICONTROL Permissions] manages access control for existing Experience Platform users. To add users to Experience Platform, navigate to Adobe Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add users through the Admin Console, follow the [adding users to Experience Platform](...){#target="_blank"} guide.
@@ -56,7 +57,8 @@ ht-degree: 4%
 
 若要從使用者移除角色，請選取該角色名稱旁的&#x200B;**X**。
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 
 >[!NOTE]
 >
@@ -73,11 +75,12 @@ ht-degree: 4%
 
 使用者群組是多個使用者，這些使用者已分組在一起，並且有權執行相同的功能。
 
-<!-- ADD LINKS INTO IMPORTANT NOTE BELOW
+<!-- 
+ADD LINKS INTO IMPORTANT NOTE BELOW
 >[!IMPORTANT]
 >
 >[!UICONTROL Permissions] manages access control for existing Experience Platform user groups. To add user groups to Experience Platform, navigate to Admin Console through the **[!UICONTROL Edit in admin console]** option. To learn how to add user groups in the Admin Console, follow the [adding user groups to Experience Platform](...){#target="_blank"} guide.
- -->
+-->
 
 若要檢視您組織的使用者，請在&#x200B;**[!UICONTROL Permissions]** Adobe Experience Cloud[中導覽至](https://experience.adobe.com/){target="_blank"}。從左側面板的&#x200B;**[!UICONTROL Groups]**&#x200B;區段中選取&#x200B;**[!UICONTROL Users]**。
 
@@ -170,5 +173,5 @@ API認證清單隨即顯示。 從清單中選取您要檢視的API認證。
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446409/?captions=chi_hant&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->
