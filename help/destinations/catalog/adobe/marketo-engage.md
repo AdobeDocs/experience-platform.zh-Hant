@@ -2,7 +2,7 @@
 title: Marketo Engage目的地
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商業的端對端客戶體驗管理(CXM)解決方案。 使用它來自動化及管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 2%
@@ -100,7 +100,7 @@ Marketo V2目的地的改良專案包括：
 >* 若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。
 >* 若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-如需如何設定目的地及啟用對象的詳細指示，請參閱Marketo檔案中的[將Adobe Experience Platform對象推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=zh-Hant)。
+如需如何設定目的地及啟用對象的詳細指示，請參閱Marketo檔案中的[將Adobe Experience Platform對象推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html)。
 
 以下影片也會示範設定Marketo目的地和啟用對象的步驟。
 
@@ -113,7 +113,7 @@ Marketo V2目的地的改良專案包括：
 >* 影片中叫用的兩個限制不再適用。 除了錄製影片時支援的對象成員資格資訊之外，您現在可以對應許多其他設定檔屬性欄位。 您也可以將尚未存在於Marketo靜態清單中的受眾成員匯出至Marketo，這些受眾成員將會新增至清單中。
 >* 在啟動工作流程的&#x200B;**[!UICONTROL Schedule audience step]**&#x200B;中，在Marketo V1中，您需要手動新增&#x200B;**[!UICONTROL Mapping ID]**，才能成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440169?captions=chi_hant&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## 監視目的地 {#monitor-destination}
 
