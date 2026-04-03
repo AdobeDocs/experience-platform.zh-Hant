@@ -2,10 +2,10 @@
 title: Salesforce Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >[!DNL Salesforce]來源的基本驗證將在2026年1月被取代。 您必須移至OAuth 2使用者端認證驗證，才能繼續使用該來源，並將資料從您的[!DNL Salesforce]帳戶擷取至Experience Platform。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存、資料庫和許多其他來源）內嵌資料。
 
 Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的支援包括[!DNL Salesforce]。
 
@@ -27,9 +27,9 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 請依照下列步驟，瞭解如何在Azure上為Experience Platform設定[!DNL Salesforce]帳戶。
 
-### 用於連線到Azure的IP位址允許清單
+### 用於連線至Azure的IP位址允許清單
 
-您必須先將區域特定的IP位址新增至允許清單，才能將來源連線至Azure上的Experience Platform。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請閱讀[IP位址允許清單](../../ip-address-allow-list.md)頁面。
+您必須先將地區特定的IP位址新增至允許清單，才能將您的來源連線到Azure上的Experience Platform。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請閱讀[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
 >[!BEGINTABS]
 
@@ -239,20 +239,20 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 CRM提供者的
 
 | 變數 | 說明 | 範例 |
 | --- | --- | --- |
-| `CLIENT_SECRET` | 用來產生`{ACCESS_TOKEN}`的唯一識別碼。 如需如何擷取`{CLIENT_SECRET}`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON Web權杖(JWT)是用於產生{ACCESS_TOKEN}的驗證認證。 如需如何產生`{JWT_TOKEN}`的相關資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `{JWT_TOKEN}` |
-| `API_KEY` | 用於驗證Experience Platform API呼叫的唯一識別碼。 如需如何擷取`{API_KEY}`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | 完成對Experience Platform API的呼叫所需的授權權杖。 如需如何擷取`{ACCESS_TOKEN}`的詳細資訊，請參閱有關[驗證及存取Experience Platform API](../../../landing/api-authentication.md)的教學課程。 | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | 用來產生`{ACCESS_TOKEN}`的唯一識別碼。 如需如何擷取[的詳細資訊，請參閱有關](../../../landing/api-authentication.md)驗證及存取Experience Platform API`{CLIENT_SECRET}`的教學課程。 | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JSON Web權杖(JWT)是用於產生{ACCESS_TOKEN}的驗證認證。 如需如何產生[的相關資訊，請參閱有關](../../../landing/api-authentication.md)驗證及存取Experience Platform API`{JWT_TOKEN}`的教學課程。 | `{JWT_TOKEN}` |
+| `API_KEY` | 用於驗證Experience Platform API呼叫的唯一識別碼。 如需如何擷取[的詳細資訊，請參閱有關](../../../landing/api-authentication.md)驗證及存取Experience Platform API`{API_KEY}`的教學課程。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | 完成對Experience Platform API的呼叫所需的授權權杖。 如需如何擷取[的詳細資訊，請參閱有關](../../../landing/api-authentication.md)驗證及存取Experience Platform API`{ACCESS_TOKEN}`的教學課程。 | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | 關於[!DNL Marketo]，此值是固定的，並且一律設定為： `ent_dataservices_sdk`。 | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | `global`容器保有所有標準Adobe和Experience Platform合作夥伴提供的類別、結構描述欄位群組、資料型別和結構描述。 關於[!DNL Marketo]，此值是固定的，且一律設為`global`。 | `global` |
 | `PRIVATE_KEY` | 用於向Experience Platform API驗證您的[!DNL Postman]執行個體的認證。 請參閱有關設定開發人員主控台和[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)的教學課程，以瞭解如何擷取{PRIVATE_KEY}的說明。 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | 用來整合至Adobe I/O的認證。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management系統(IMS)提供驗證Adobe服務的架構。 關於[!DNL Marketo]，此值是固定的，且一律設為： `ims-na1.adobelogin.com`。 | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | 企業實體，可以擁有或授權產品及服務並允許存取其成員。 如需如何擷取`{ORG_ID}`資訊的說明，請參閱[設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md)的教學課程。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | 企業實體，可以擁有或授權產品及服務並允許存取其成員。 如需如何擷取[資訊的說明，請參閱 [!DNL Postman]](../../../landing/postman.md)設定開發人員主控台和`{ORG_ID}`的教學課程。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 您正在使用的虛擬沙箱分割的名稱。 | `prod` |
 | `TENANT_ID` | ID，用來確保您建立的資源已正確命名且包含在您的組織內。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | 您對其進行API呼叫的URL端點。 此值是固定的，且一律設為： `http://platform.adobe.io/`。 | `http://platform.adobe.io/` |
-| `munchkinId` | 您的[!DNL Marketo]帳戶的唯一識別碼。 如需如何擷取`munchkinId`的詳細資訊，請參閱[驗證您的 [!DNL Marketo] 執行個體](../adobe-applications/marketo/marketo-auth.md)的教學課程。 | `123-ABC-456` |
+| `munchkinId` | 您的[!DNL Marketo]帳戶的唯一識別碼。 如需如何擷取[的詳細資訊，請參閱 [!DNL Marketo] 驗證您的](../adobe-applications/marketo/marketo-auth.md)執行個體`munchkinId`的教學課程。 | `123-ABC-456` |
 | `sfdc_org_id` | 您的[!DNL Salesforce]帳戶的組織識別碼。 請參閱下列[[!DNL Salesforce] 指南](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1)，以取得您[!DNL Salesforce]組織ID的詳細資訊。 | `00D4W000000FgYJUA0` |
 | `has_abm` | 表示您是否訂閱[!DNL Marketo Account-Based Marketing]的布林值。 | `false` |
 | `has_msi` | 表示您是否訂閱[!DNL Marketo Sales Insight]的布林值。 | `false` |
@@ -438,8 +438,8 @@ public class Main {
 | 屬性 | 設定 |
 | --- | --- |
 | `claimArray[0]` | 以您的使用者端識別碼更新`claimArray[0]`。 |
-| `claimArray[1]` | 以針對應用程式授權的[!DNL Salesforce]使用者名稱更新`claimArray[1]`。 |
-| `claimArray[2]` | 以您的[!DNL Salesforce]登入URL更新`claimArray[2]`。 |
+| `claimArray[1]` | 以針對應用程式授權的`claimArray[1]`使用者名稱更新[!DNL Salesforce]。 |
+| `claimArray[2]` | 以您的`claimArray[2]`登入URL更新[!DNL Salesforce]。 |
 | `claimArray[3]` | 以自epoch時間以來的毫秒格式來更新到期日期的`claimArray[3]`。 例如，`3660624000000`是12-31-2085。 |
 | `/path/to/keystore` | 將`/path/to/keystore`取代為您keystore.jks的正確路徑 |
 | `keystorepassword` | 將`keystorepassword`取代為您的目的地金鑰存放區密碼。 |
