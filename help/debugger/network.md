@@ -1,15 +1,15 @@
 ---
 title: 網路標籤
-description: 瞭解如何使用Adobe Experience Platform Debugger中的「網路」標籤。
+description: 瞭解如何使用Adobe Experience Platform Debugger中的網路索引標籤。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；網路；資訊
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
 exl-id: ed0579ef-ec26-43df-9453-a395c105038a
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 62%
+source-wordcount: '215'
+ht-degree: 63%
 
 ---
 
@@ -29,16 +29,18 @@ ht-degree: 62%
 
 ![](images/network-analytics.jpg)
 
-若要返回顯示所有解決方案，請選取&#x200B;**[!UICONTROL 網路]**
+若要返回顯示所有解決方案，請選取&#x200B;**[!UICONTROL Network]**
 
 選取「網路」檢視中的專案以檢視展開檢視。 從展開的視圖視窗中，您可以將顯示的資訊複製到剪貼簿。
 
 ![](images/network-expand.jpg)
 
-<!--Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
+<!--
+Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
 
-![](images/copy.jpg)-->
+![](images/copy.jpg)
+-->
 
-若要清除清單，請選取&#x200B;**[!UICONTROL 移除事件]**。
+若要清除清單，請選取&#x200B;**[!UICONTROL Remove Events]**。
 
-若要下載包含此熒幕上資訊的Excel檔案，請選取&#x200B;**[!UICONTROL 下載]**。
+若要下載包含此熒幕上資訊的Excel檔案，請選取&#x200B;**[!UICONTROL Download]**。
