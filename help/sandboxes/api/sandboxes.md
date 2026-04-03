@@ -5,7 +5,7 @@ title: 沙箱管理API端點
 description: 沙箱API中的/sandboxes端點可讓您以程式設計方式管理Adobe Experience Platform中的沙箱。
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # 沙箱管理端點
 
-Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。 [!DNL Sandbox] API中的`/sandboxes`端點可讓您以程式設計方式管理Experience Platform中的沙箱。
+Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。 `/sandboxes` API中的[!DNL Sandbox]端點可讓您以程式設計方式管理Experience Platform中的沙箱。
 
 ## 快速入門
 
@@ -199,7 +199,7 @@ curl -X GET \
 
 ### 建立開發沙箱
 
-若要建立開發沙箱，您必須在要求裝載中提供值為`development`的`type`屬性。
+若要建立開發沙箱，您必須在要求裝載中提供值為`type`的`development`屬性。
 
 **API格式**
 
@@ -251,7 +251,7 @@ curl -X POST \
 
 ### 建立生產沙箱
 
-若要建立生產沙箱，您必須在要求裝載中提供值為`production`的`type`屬性。
+若要建立生產沙箱，您必須在要求裝載中提供值為`type`的`production`屬性。
 
 **API格式**
 
@@ -404,7 +404,7 @@ curl -X PUT \
 }
 ```
 
-如果其中代管的身分圖表也被Adobe Analytics用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=zh-Hant)功能，或其中代管的身分圖表也被Adobe Audience Manager用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=zh-Hant)功能，則無法重設預設生產沙箱和任何使用者建立的生產沙箱。
+如果其中代管的身分圖表也被Adobe Analytics用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能，或其中代管的身分圖表也被Adobe Audience Manager用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能，則無法重設預設生產沙箱和任何使用者建立的生產沙箱。
 
 以下是可防止沙箱重設的可能例外清單：
 
