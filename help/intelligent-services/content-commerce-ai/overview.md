@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 內容標籤總覽
 description: 內容標籤是一組AI服務，可讓您從內容中擷取智慧型功能、組織、簡化內容流程，並為客戶提供更有影響力的個人化體驗。
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
