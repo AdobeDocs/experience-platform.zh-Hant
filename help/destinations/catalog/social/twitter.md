@@ -2,7 +2,7 @@
 title: Twitter自訂對象連線
 description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '937'
 ht-degree: 6%
@@ -24,7 +24,7 @@ ht-degree: 6%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Twitter Custom Audiences]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
+[!DNL Twitter Custom Audiences]支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
