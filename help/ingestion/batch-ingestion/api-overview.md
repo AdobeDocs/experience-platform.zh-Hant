@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 批次擷取API指南
 description: 本檔案為使用Adobe Experience Platform批次擷取API的開發人員提供完整指南。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2435'
 ht-degree: 4%
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 >[!NOTE]
 >
->請參閱附錄一節，以取得正確格式化的JSON資料檔[&#128279;](#data-transformation-for-batch-ingestion)的範例。
+>請參閱附錄一節，以取得正確格式化的JSON資料檔[的](#data-transformation-for-batch-ingestion)範例。
 
 **API格式**
 
@@ -801,7 +801,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | 參數 | 說明 |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{DATASET_ID}` | 參考資料集的ID。 |
 
 **回應**
