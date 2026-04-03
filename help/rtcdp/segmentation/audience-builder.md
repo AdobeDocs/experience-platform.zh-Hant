@@ -2,11 +2,11 @@
 title: Real-Time Customer Data Platform中的對象產生器
 description: 瞭解如何使用Real-Time Customer Data Platform中的對象產生器建立對象。
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1115'
 ht-degree: 7%
 
 ---
@@ -54,11 +54,15 @@ ht-degree: 7%
 
 ![「屬性」索引標籤會顯示在「對象產生器」中](../assets/segmentation/audience-builder/attributes.png)
 
+>[!NOTE]
+>
+>摘要資料採用&#x200B;**有限可用性**。
+
 選取屬性時，您可以選取[資訊圖示](../../images/icons/info.png)來檢視摘要資料。 摘要資料包含頂端值、欄位內容的說明、值的記錄計數，以及包含此屬性值的帳戶百分比等資訊。
 
 **[!UICONTROL Populated]**&#x200B;區段顯示已填入屬性的記錄數目與可用記錄總數以及擁有此欄位值的帳戶百分比。
 
-**[!UICONTROL Top values]**&#x200B;區段顯示屬性最常發生的值，並包含值、具有值的記錄數以及值所代表之記錄總數百分比等詳細資訊。
+**[!UICONTROL Top values]**&#x200B;區段顯示屬性最常發生的值，並包含值、具有值的記錄數以及值所代表之記錄總數百分比等詳細資訊。 每個欄位的記錄數由設定檔快照決定，該快照會在合併所有貢獻資料集資料後，提供記錄的整合檢視。
 
 ![顯示屬性之摘要資料完整填入版本的彈出視窗。](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
