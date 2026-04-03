@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用流量服務API為Mailchimp Campaign建立資料流
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連結至MailChimp Campaign。
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1934'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 使用流程服務API為[!DNL Mailchimp Campaign]建立資料流
 
-下列教學課程將逐步引導您完成建立來源連線和資料流的步驟，以使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)將[!DNL Mailchimp Campaign]資料帶入Experience Platform。
+下列教學課程將逐步引導您完成建立來源連線和資料流的步驟，以使用[!DNL Mailchimp Campaign]API[[!DNL Flow Service] 將](https://www.adobe.io/experience-platform-apis/references/flow-service/)資料帶入Experience Platform。
 
 ## 先決條件
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 ### 使用基本驗證建立[!DNL Mailchimp]基本連線
 
-若要使用基本驗證建立[!DNL Mailchimp]基本連線，請在提供您`authorizationTestUrl`、`username`和`password`的認證時，對[!DNL Flow Service] API的`/connections`端點提出POST要求。
+若要使用基本驗證建立[!DNL Mailchimp]基本連線，請在提供您`/connections`、[!DNL Flow Service]和`authorizationTestUrl`的認證時，對`username` API的`password`端點提出POST要求。
 
 **API格式**
 
@@ -90,7 +90,7 @@ curl -X POST \
 
 ### 使用OAuth 2重新整理程式碼建立[!DNL Mailchimp]基本連線
 
-若要使用OAuth 2重新整理程式碼建立[!DNL Mailchimp]基本連線，請在為您的`authorizationTestUrl`和`accessToken`提供認證時，對`/connections`端點提出POST要求。
+若要使用OAuth 2重新整理程式碼建立[!DNL Mailchimp]基本連線，請在為您的`/connections`和`authorizationTestUrl`提供認證時，對`accessToken`端點提出POST要求。
 
 **API格式**
 
@@ -467,7 +467,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
---->
+-->
 
 ## 建立流程 {#flow}
 
@@ -551,11 +551,11 @@ curl -X POST \
 
 ### 更新您的資料流
 
-提供資料流的ID時，透過向[!DNL Flow Service] API的`/flows`端點發出PATCH要求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`If-Match`標頭中提供資料流的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
+提供資料流的ID時，透過向`/flows` API的[!DNL Flow Service]端點發出PATCH要求，更新資料流的詳細資訊，例如其名稱和說明，以及其執行排程和相關聯的對應集。 發出PATCH請求時，您必須在`etag`標頭中提供資料流的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源資料流的指南](../../update-dataflows.md)。
 
 ### 更新您的帳戶
 
-在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`If-Match`標頭中提供來源帳戶的唯一`etag`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
+在提供您的基本連線ID作為查詢引數的同時，透過對[!DNL Flow Service] API執行PATCH請求來更新來源帳戶的名稱、說明和認證。 發出PATCH請求時，您必須在`etag`標頭中提供來源帳戶的唯一`If-Match`。 如需完整的API範例，請閱讀[使用API更新來源帳戶的指南](../../update.md)。
 
 ### 刪除您的資料流
 
