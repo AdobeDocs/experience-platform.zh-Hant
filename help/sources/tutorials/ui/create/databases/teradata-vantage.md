@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；Teradata Vantage
 title: 在使用者介面中建立Teradata Vantage Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Teradata Vantage來源連線。
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '399'
 ht-degree: 2%
 
 ---
@@ -33,27 +33,27 @@ ht-degree: 2%
 
 ## 連線您的[!DNL Teradata Vantage]帳戶
 
-在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取[!UICONTROL Sources]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在[!UICONTROL 資料庫]類別下，選取&#x200B;**[!UICONTROL Teradata Vantage]**，然後選取&#x200B;**[!UICONTROL 設定]**。
+在[!UICONTROL Databases]類別下，選取&#x200B;**[!UICONTROL Teradata Vantage]**，然後選取&#x200B;**[!UICONTROL Set up]**。
 
 >[!TIP]
 >
->當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL 新增資料]**。
+>當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL Set up]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL Add data]**。
 
 ![已選取Teradata Vantage來源的來源目錄。](../../../../images/tutorials/create/teradata/catalog.png)
 
-**[!UICONTROL 連線至Teradata Vantage]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+**[!UICONTROL Connect to Teradata Vantage]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 現有帳戶
 
-若要連線現有帳戶，請選取您要連線的[!DNL Teradata Vantage]帳戶，然後選取[下一步]&#x200B;**[!UICONTROL 以繼續。]**
+若要連線現有帳戶，請選取您要連線的[!DNL Teradata Vantage]帳戶，然後選取&#x200B;**[!UICONTROL Next]**&#x200B;以繼續。
 
 ![來源工作區中的現有帳戶頁面。](../../../../images/tutorials/create/teradata/existing.png)
 
 ### 新帳戶
 
-如果您正在使用新認證，請選取&#x200B;**[!UICONTROL 新帳戶]**。 在出現的輸入表單上，提供名稱、選擇性說明和您的[!DNL Teradata Vantage]認證。 完成時，請選取&#x200B;**[!UICONTROL 連線]**，然後等待一段時間以建立新連線。
+如果您正在使用新認證，請選取&#x200B;**[!UICONTROL New account]**。 在出現的輸入表單上，提供名稱、選擇性說明和您的[!DNL Teradata Vantage]認證。 完成時，請選取&#x200B;**[!UICONTROL Connect]**，然後等待一段時間以建立新連線。
 
 ![來源工作區中的新帳戶建立介面。](../../../../images/tutorials/create/teradata/new.png)
 
