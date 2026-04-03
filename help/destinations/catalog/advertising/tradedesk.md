@@ -3,7 +3,7 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1359'
 ht-degree: 4%
@@ -85,7 +85,7 @@ ht-degree: 4%
 
 **針對[!DNL The Trade Desk]**&#x200B;上的Cookie型鎖定目標，請確定已在ECID與[!DNL Trade Desk ID]之間建立對應。 請完成下列步驟以執行此操作：
 
-1. **啟用ID同步功能**：如果您是第一次設定[!DNL The Trade Desk ID]啟用，而且您過去尚未在Experience Cloud ID服務中啟用[ID同步功能](https://experienceleague.adobe.com/zh-hant/docs/id-service/using/id-service-api/methods/idsync) （使用Adobe Audience Manager或其他應用程式），請聯絡Adobe Consulting或客戶服務以啟用ID同步。
+1. **啟用ID同步功能**：如果您是第一次設定[!DNL The Trade Desk ID]啟用，而且您過去尚未在Experience Cloud ID服務中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) （使用Adobe Audience Manager或其他應用程式），請聯絡Adobe Consulting或客戶服務以啟用ID同步。
    * 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，您現有的ID同步會自動傳遞至Experience Platform。
 
 2. **檢測您的網頁**：在您的網頁上實作程式碼，以建立[!DNL The Trade Desk ID]與Adobe ECID之間的對應。 這可讓Experience Platform將交易台ID與您的客戶設定檔建立關聯。
