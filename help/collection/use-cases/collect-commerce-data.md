@@ -2,9 +2,9 @@
 title: 使用Adobe Experience Platform Web SDK收集商務、產品和訂單資訊
 description: 瞭解如何使用Adobe Experience Platform Web SDK新增與產品或購物車相關的資料。
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 2%
 
 展開以下區段以檢視使用`commerce`物件欄位的Web SDK命令範例。
 
-+++`productViews`
++++ 產品檢視
 
 將`sendEvent`欄位設定為`productViews`的基本Web SDK `1`呼叫：
 
@@ -91,7 +91,7 @@ alloy("sendEvent", {
 
 展開以下區段以檢視使用`commerce`物件的網頁SDK命令範例。
 
-+++`Order`物件範例
++++ `Order`物件範例
 
 網頁SDK `sendEvent`呼叫設定套用至`order`陣列中多個產品的`productListItems`物件：
 
@@ -151,7 +151,7 @@ alloy("sendEvent",{
 
 展開下列各節，檢視使用`productListItems`物件的網頁SDK命令範例。
 
-+++`productListItems`範例
++++ `productListItems`範例
 
 網頁SDK `sendEvent`呼叫設定`productViews`陣列中多個產品的`productListItems`：
 
@@ -179,7 +179,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds`範例
++++ `productListAdds`範例
 
 網頁SDK `sendEvent`呼叫設定`productListAdds`陣列中多個產品的`productListItems`事件：
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts`範例
++++ `checkouts`範例
 
 網頁SDK `sendEvent`呼叫設定`checkouts`陣列中多個產品的`productListItems`事件：
 
