@@ -4,7 +4,7 @@ title: 預覽和預估API端點
 description: 開發區段定義時，您可以使用Adobe Experience Platform中的預估和預覽工具來檢視摘要層級的資訊，協助確保您隔離預期的對象。
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 2%
