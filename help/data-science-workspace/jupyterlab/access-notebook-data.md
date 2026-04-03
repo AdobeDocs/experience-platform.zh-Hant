@@ -2,9 +2,9 @@
 keywords: Experience Platform；JupyterLab；筆記本；資料科學Workspace；熱門主題；%資料集；互動模式；批次模式；Spark sdk；python sdk；存取資料；筆記本資料存取
 solution: Experience Platform
 title: Jupyterlab Notebook中的資料存取
-description: 本指南著重於說明如何使用Jupyter Notebooks (內建於Data Science Workspace)來存取您的資料。
+description: 本指南著重於說明如何使用Jupyter Notebooks （內建於Data Science Workspace）來存取您的資料。
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3274'
 ht-degree: 3%
@@ -374,7 +374,7 @@ spark = SparkSession.builder.getOrCreate()
 
 用於從[!DNL Data Science Workspace]筆記本（[!DNL PySpark] 3核心）讀取或寫入資料集的自訂[!DNL Python]魔術命令。
 
-| 名稱 | 說明 | 必填 |
+| 名稱 | 說明 | 必要 |
 | --- | --- | --- |
 | `{action}` | 要在資料集上執行的動作型別。 有兩個動作可使用「讀取」或「寫入」。 | 是 |
 | `--datasetId {id}` | 用於提供要讀取或寫入的資料集ID。 | 是 |
