@@ -2,7 +2,7 @@
 title: LiveRamp — 散發連線
 description: 瞭解如何使用LiveRamp - Distribution聯結器來編排及啟用先前上線到LiveRamp的受眾，以及下游廣告目的地。
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2807'
 ht-degree: 37%
@@ -126,7 +126,7 @@ ht-degree: 37%
 
 ## 目的地特定設定 {#destination-settings}
 
-[支援的每個目的地](#supported-destinations) [!DNL LiveRamp - Distribution]都需要您填寫特定的組態選項。
+[支援的每個目的地](#supported-destinations)[!DNL LiveRamp - Distribution]都需要您填寫特定的組態選項。
 
 如需如何設定每個目的地的詳細指引，請參閱以下各節。
 
