@@ -3,7 +3,7 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: Oracle回應系統連線
 description: Responsys是Oracle所提供用於跨頻道行銷活動的企業電子郵件行銷工具，可將電子郵件、行動裝置、顯示和社交的互動個人化。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '778'
 ht-degree: 4%
