@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2293'
 ht-degree: 16%
@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-如果您是Adobe Journey Optimizer客戶，請參閱Adobe Journey Optimizer檔案中的[開始使用對象構成指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=zh-Hant)，以取得在該內容中使用對象構成的詳細資訊。
+如果您是Adobe Journey Optimizer客戶，請參閱Adobe Journey Optimizer檔案中的[開始使用對象構成指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html)，以取得在該內容中使用對象構成的詳細資訊。
 
 >[!ENDSHADEBOX]
 
@@ -224,7 +224,7 @@ ht-degree: 16%
 
 **[!UICONTROL Enrichment criteria]**&#x200B;區段現在會顯示在右側邊欄中。 在此區段中，您可以選取&#x200B;**[!UICONTROL Source join key]**&#x200B;和&#x200B;**[!UICONTROL Enrichment dataset join key]**，好讓您將擴充資料集連結到您嘗試建立的對象。
 
-![&#x200B; [!UICONTROL Enrichment criteria]區域已反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
+![ [!UICONTROL Enrichment criteria]區域已反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
 
 若要選取&#x200B;**[!UICONTROL Source join key]**，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
@@ -244,7 +244,8 @@ ht-degree: 16%
 
 ![您想要新增的擴充屬性已反白顯示。](../images/ui/audience-composition/select-enrichment-attribute.png)
 
-<!-- ## [!UICONTROL Join] {#join-block}
+<!-- 
+## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
 
@@ -262,7 +263,8 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Join]** block is selected. 
 
-![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
+![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) 
+-->
 
 ## [!UICONTROL Rank] {#rank-block}
 
@@ -376,7 +378,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 >[!IMPORTANT]
 >
->發佈您的對象構成時，請注意，評估並啟動該對象構成以用於下游服務(例如Real-Time CDP目的地或Adobe Journey Optimizer頻道)可能需要48小時。
+>發佈您的對象構成時，請注意，評估並啟動該對象構成以用於下游服務（例如Real-Time CDP目的地或Adobe Journey Optimizer頻道）可能需要48小時。
 
 建立構成後，您可以選取&#x200B;**[!UICONTROL Publish]**&#x200B;以儲存並發佈。
 
