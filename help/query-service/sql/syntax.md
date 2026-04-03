@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案詳細說明並說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4686'
 ht-degree: 1%
@@ -124,7 +124,7 @@ SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapsho
 
 >[!NOTE]
 >
->在`HEAD`子句中使用`TAIL`或`SNAPSHOT`時，您必須以單引號(例如，&#39;HEAD&#39;、&#39;TAIL&#39;)括住它們。 不使用引號的情況下使用它們會導致語法錯誤。
+>在`HEAD`子句中使用`TAIL`或`SNAPSHOT`時，您必須以單引號（例如，&#39;HEAD&#39;、&#39;TAIL&#39;）括住它們。 不使用引號的情況下使用它們會導致語法錯誤。
 
 下表說明SNAPSHOT子句中每個語法選項的意義。
 
@@ -887,12 +887,12 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 >[!NOTE]
 >
->產生的`Statistics ID`和統計資料只對每一個工作階段有效，無法跨不同的PSQL工作階段存取。<br><br>限制：<ul><li>陣列或對應資料型別不支援產生統計資料</li><li>計算的統計資料是&#x200B;**不**&#x200B;跨工作階段持續存在。</li></ul><br><br>選項：<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>依預設，標幟設定為true。 因此，在不支援的資料型別上請求統計資料時，它不會出錯但會無訊息地略過具有不支援的資料型別的欄位。<br>若要在要求不支援資料型別的統計資料時啟用錯誤通知，請使用： `SET skip_stats_for_complex_datatypes = false`。
+>產生的`Statistics ID`和統計資料只對每一個工作階段有效，無法跨不同的PSQL工作階段存取。<br><br>限制：<ul><li>陣列或對應資料型別不支援產生統計資料</li><li>計算的統計資料是&#x200B;**不**&#x200B;跨工作階段持續存在。</li></ul><br><br>選項:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>依預設，標幟設定為true。 因此，在不支援的資料型別上請求統計資料時，它不會出錯但會無訊息地略過具有不支援的資料型別的欄位。<br>若要在要求不支援資料型別的統計資料時啟用錯誤通知，請使用： `SET skip_stats_for_complex_datatypes = false`。
 
 主控台輸出會顯示如下。
 
 ```console
-|     Statistics ID      | 
+|     Statistics ID      |
 | ---------------------- |
 | adc_geometric_stats_1  |
 (1 row)
@@ -1105,7 +1105,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 | 參數 | 說明 |
 | ------ | ------ |
-| `TEMPORARY`或`TEMP` | 選用引數。 如果指定了引數，則建立的表格為臨時表格。 |
+| `TEMPORARY`或 `TEMP` | 選用引數。 如果指定了引數，則建立的表格為臨時表格。 |
 | `UNLOGGED` | 選用引數。 如果指定了引數，則建立的表格為未記錄的表格。 有關未記錄表格的詳細資訊，請參閱[[!DNL PostgreSQL] 檔案](https://www.postgresql.org/docs/current/sql-createtable.html)。 |
 | `new_table` | 要建立的表格名稱。 |
 
