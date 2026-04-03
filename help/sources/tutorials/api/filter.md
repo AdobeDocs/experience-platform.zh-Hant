@@ -2,10 +2,10 @@
 title: 使用流量服務API篩選Source的列層級資料
 description: 本教學課程涵蓋如何使用Flow Service API在來源層級篩選資料的步驟
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 4%
+source-wordcount: '1820'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)來篩選來源之資料列層級資料的步驟。
 
-## 快速入門
+## 開始使用
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
@@ -43,7 +43,7 @@ ht-degree: 4%
 
 篩選來源的列層級資料的第一步是擷取來源的連線規格，並判斷來源支援的運運算元和語言。
 
-若要擷取指定來源的連線規格，請向[!DNL Flow Service] API的`/connectionSpecs`端點提出GET要求，並提供您來源的屬性名稱做為查詢引數的一部分。
+若要擷取指定來源的連線規格，請向`/connectionSpecs` API的[!DNL Flow Service]端點提出GET要求，並提供您來源的屬性名稱做為查詢引數的一部分。
 
 **API格式**
 
@@ -53,9 +53,9 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 您可以套用`name`屬性並在搜尋中指定`"google-big-query"`來擷取[!DNL Google BigQuery]連線規格。 |
+| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 您可以套用[!DNL Google BigQuery]屬性並在搜尋中指定`name`來擷取`"google-big-query"`連線規格。 |
 
-+++要求
++++請求
 
 下列要求會擷取[!DNL Google BigQuery]的連線規格。
 
@@ -156,7 +156,7 @@ curl -X GET \
 
 ### 預覽您的資料 {#preview-your-data}
 
-您可以預覽資料，方法是向[!DNL Flow Service] API的`/explore`端點發出GET要求，同時提供`filters`作為查詢引數的一部分，並在[!DNL Base64]中指定PQL輸入條件。
+您可以預覽資料，方法是向`/explore` API的[!DNL Flow Service]端點發出GET要求，同時提供`filters`作為查詢引數的一部分，並在[!DNL Base64]中指定PQL輸入條件。
 
 **API格式**
 
@@ -170,7 +170,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | `{TABLE_PATH}` | 您要檢查之資料表的路徑屬性。 |
 | `{FILTERS}` | 您的PQL篩選條件以[!DNL Base64]編碼。 |
 
-+++要求
++++請求
 
 ```shell
 curl -X GET \
@@ -343,7 +343,7 @@ curl -X GET \
 POST /sourceConnections
 ```
 
-+++要求
++++請求
 
 下列要求會建立來源連線，以從`test1.fasTestTable`擷取資料，其中`city` = `DDN`。
 
@@ -416,28 +416,28 @@ curl -X POST \
 | 活動型別ID | 活動型別名稱 |
 | --- | --- |
 | 1 | 造訪網頁 |
-| 2 | 填寫表格 |
+| 2 | 填寫表單 |
 | 3 | 按一下連結 |
 | 6 | 傳送電子郵件 |
-| 7 | 電子郵件已發送 |
+| 7 | 電子郵件已傳遞 |
 | 8 | 電子郵件已退回 |
 | 9 | 取消訂閱電子郵件 |
 | 10 | 開啟電子郵件 |
 | 11 | 按一下電子郵件 |
-| 12 | 新的潛在客戶 |
+| 12 | 新銷售機會 |
 | 21 | 轉換潛在客戶 |
 | 22 | 變更分數 |
 | 24 | 新增至清單 |
 | 25 | 從清單移除 |
-| 27 | 電子郵件已退回 (軟彈) |
-| 32 | 合併潛在客戶 |
+| 27 | 電子郵件已軟退回 |
+| 32 | 合併銷售機會 |
 | 34 | 新增至商機 |
 | 35 | 從機會移除 |
 | 36 | 更新機會 |
 | 46 | 有趣的時刻 |
 | 101 | 變更收入階段 |
 | 104 | 進度中的變更狀態 |
-| 110 | 調用 Webhook |
+| 110 | 呼叫Webhook |
 | 113 | 新增至Nurture |
 | 114 | 變更培養軌跡 |
 | 115 | 變更Nurture步調 |
@@ -457,7 +457,7 @@ curl -X POST \
 
 草擬資料流後，您必須擷取其對應的ID。
 
-在UI中，導覽至來源目錄，然後從頂端標題中選取&#x200B;**[!UICONTROL 資料流程]**。 使用狀態列來識別所有以草稿模式儲存的資料流，然後選取資料流的名稱。 接下來，使用右側的&#x200B;**[!UICONTROL 屬性]**&#x200B;面板來尋找您的資料流ID。
+在UI中，導覽至來源目錄，然後從頂端標題中選取&#x200B;**[!UICONTROL Dataflows]**。 使用狀態列來識別所有以草稿模式儲存的資料流，然後選取資料流的名稱。 接下來，使用右側的&#x200B;**[!UICONTROL Properties]**&#x200B;面板來找出您的資料流ID。
 
 ### 擷取您的資料流詳細資料
 
@@ -473,7 +473,7 @@ GET /flows/{FLOW_ID}
 | --- | --- |
 | `{FLOW_ID}` | 您要擷取的資料流ID。 |
 
-+++要求
++++請求
 
 下列要求會擷取資料流ID的資訊： `a7e88a01-40f9-4ebf-80b2-0fc838ff82ef`。
 
@@ -604,7 +604,7 @@ GET /sourceConnections/{SOURCE_CONNECTION_ID}
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | 您要擷取之來源連線的ID。 |
 
-+++要求
++++請求
 
 ```shell
 curl -X GET \
@@ -695,7 +695,7 @@ PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 | --- | --- |
 | `{SOURCE_CONNECTION_ID}` | 您要更新的來源連線識別碼 |
 
-+++要求
++++請求
 
 ```shell
 curl -X PATCH \
@@ -763,7 +763,7 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 | `{SOURCE_CONNECTION_ID}` | 您要發佈的來源連線ID。 |
 | `op` | 更新查詢來源連線狀態的動作操作。 若要發佈草稿來源連線，請將`op`設為`publish`。 |
 
-+++要求
++++請求
 
 下列要求會發佈草擬的來源連線。
 
@@ -807,7 +807,7 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 | `{TARGET_CONNECTION_ID}` | 您要發佈的目標連線ID。 |
 | `op` | 更新查詢之目標連線狀態的動作操作。 若要發佈草稿目標連線，請將`op`設為`publish`。 |
 
-+++要求
++++請求
 
 下列要求發佈識別碼為`7e53e6e8-b432-4134-bb29-21fc6e8532e5`的目標連線。
 
@@ -852,7 +852,7 @@ POST /flows/{FLOW_ID}/action?op=publish
 | `{FLOW_ID}` | 您要發佈的資料流ID。 |
 | `op` | 更新查詢資料流狀態的動作操作。 若要發佈草稿資料流，請將`op`設為`publish`。 |
 
-+++要求
++++請求
 
 以下請求會發佈您的草稿資料流。
 
@@ -881,7 +881,7 @@ curl -X POST \
 
 +++
 
-您可以使用Experience Platform UI來確認草稿資料流已發佈。 導覽至來源目錄中的資料流頁面，並參考您的資料流的&#x200B;**[!UICONTROL 狀態]**。 如果成功，狀態現在應該設定為&#x200B;**已啟用**。
+您可以使用Experience Platform UI來確認草稿資料流已發佈。 導覽至來源目錄中的資料流頁面，並參考您的資料流&#x200B;**[!UICONTROL Status]**。 如果成功，狀態現在應該設定為&#x200B;**已啟用**。
 
 >[!TIP]
 >
