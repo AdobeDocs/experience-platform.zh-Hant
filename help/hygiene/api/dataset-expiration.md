@@ -3,7 +3,7 @@ title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: ca6d7d257085da65b3f08376f0bd32e51e293533
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 1%
