@@ -2,7 +2,7 @@
 title: Medallia連線
 description: 針對目標Medallia調查和意見回饋收集啟用設定檔，以更好地瞭解客戶需求和期望。
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 3%
