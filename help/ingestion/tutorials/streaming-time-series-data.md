@@ -5,7 +5,7 @@ title: 使用串流獲取API串流時間序列資料
 type: Tutorial
 description: 本教學課程將協助您開始使用串流獲取API，這是Adobe Experience Platform資料獲取服務API的一部分。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 使用串流獲取API串流時間序列資料
 
-本教學課程將協助您開始使用串流獲取API (屬於Adobe Experience Platform [!DNL Data Ingestion Service] API的一部分)。
+本教學課程將協助您開始使用串流獲取API （屬於Adobe Experience Platform [!DNL Data Ingestion Service] API的一部分）。
 
 ## 快速入門
 
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->{&#x200B;0}身分名稱空間程式碼&#x200B;**&#x200B;**
+>{&#x200B;0}身分名稱空間程式碼&#x200B;****
 >
 > 請確定程式碼有效 — 上述範例使用「電子郵件」，這是標準身分名稱空間。 在[Identity Service常見問題集](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)中可找到其他常用的標準身分名稱空間。
 >
