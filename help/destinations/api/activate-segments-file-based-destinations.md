@@ -4,7 +4,7 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '4933'
 ht-degree: 4%
@@ -4066,7 +4066,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **回應**
 
-+++建立輸出結構描述 — 回應
++++ 建立輸出結構描述 — 回應
 
 ```json
 {
@@ -4372,6 +4372,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 回應中的ID代表您已建立的輸入結構描述的唯一識別碼。 從回應中複製ID，因為您將在稍後步驟中重複使用它。
 
++++
+
 >[!ENDSHADEBOX]
 
 ### 建立對應集 {#create-mapping-set}
@@ -4382,7 +4384,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **要求**
 
-+++建立對應集 — 請求
++++ 建立對應集 — 請求
 
 >[!IMPORTANT]
 >
@@ -4775,7 +4777,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **要求**
 
-+++將檔案資訊清單新增至現有的目標連線 — 要求
++++ 將檔案資訊清單新增至現有的目標連線 — 要求
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
@@ -4795,6 +4797,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]'
 ```
 
++++
+
 >[!ENDSHADEBOX]
 
 ## 驗證資料流（取得資料流執行） {#get-dataflow-runs}
@@ -4807,7 +4811,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **要求**
 
-+++取得資料流執行 — 請求
++++ 取得資料流執行 — 請求
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4823,7 +4827,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **回應**
 
-+++取得資料流執行 — 回應
++++ 取得資料流執行 — 回應
 
 ```json
 {
