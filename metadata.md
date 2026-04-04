@@ -3,12 +3,12 @@ cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Experience Platform
 solution-title: Platform Overview
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=zh-Hant
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Documentation
-getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html
+getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html?lang=zh-Hant
 tutorials-title: Tutorials
-tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
+tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant
 git-repo: https://github.com/AdobeDocs/experience-platform.zh-Hant
 solution: Experience Platform
 type: Documentation

@@ -404,7 +404,7 @@ curl -X PUT \
 }
 ```
 
-如果其中代管的身分圖表也被Adobe Analytics用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能，或其中代管的身分圖表也被Adobe Audience Manager用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能，則無法重設預設生產沙箱和任何使用者建立的生產沙箱。
+如果其中代管的身分圖表也被Adobe Analytics用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=zh-Hant)功能，或其中代管的身分圖表也被Adobe Audience Manager用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=zh-Hant)功能，則無法重設預設生產沙箱和任何使用者建立的生產沙箱。
 
 以下是可防止沙箱重設的可能例外清單：
 
