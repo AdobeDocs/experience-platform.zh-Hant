@@ -173,5 +173,5 @@ API認證清單隨即顯示。 從清單中選取您要檢視的API認證。
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446409/?captions=chi_hant&learn=on)
 -->
