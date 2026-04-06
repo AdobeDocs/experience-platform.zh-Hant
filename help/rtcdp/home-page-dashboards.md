@@ -38,7 +38,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 >id="platform_home_metrics_totalProfiles"
 >title="設定檔總數"
 >abstract="您的組織在 Experience Platform 中擁有的設定檔總數。此計數是根據您組織的合併原則計算，不包括設定檔片段。設定檔數量每 24 小時更新一次。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="如需了解詳細資訊，請參閱文件"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=zh-Hant#profile-count" text="如需了解詳細資訊，請參閱文件"
 
 量度控制面板會顯示Experience Platform資料的最新資訊。 儀表板分為兩個區段：
 

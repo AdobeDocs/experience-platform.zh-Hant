@@ -49,8 +49,8 @@ Customer AI的運作方式是藉由分析以下資料集來預測流失率（客
 
 - 使用[Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)的Adobe Analytics資料
 - 使用[Adobe Audience Manager來源聯結器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的Audience Manager資料
-- [體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [取用者體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- [體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=zh-Hant)
+- [取用者體驗事件資料集](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=zh-Hant#cee-schema)
 
 如果每個資料集共用相同的身分型別（名稱空間）（例如ECID），您可以新增來自不同來源的多個資料集。 如需新增多個資料集的詳細資訊，請瀏覽[Customer AI使用手冊](../customer-ai/user-guide/configure.md)。
 

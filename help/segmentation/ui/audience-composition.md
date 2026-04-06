@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-如果您是Adobe Journey Optimizer客戶，請參閱Adobe Journey Optimizer檔案中的[開始使用對象構成指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html)，以取得在該內容中使用對象構成的詳細資訊。
+如果您是Adobe Journey Optimizer客戶，請參閱Adobe Journey Optimizer檔案中的[開始使用對象構成指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=zh-Hant)，以取得在該內容中使用對象構成的詳細資訊。
 
 >[!ENDSHADEBOX]
 

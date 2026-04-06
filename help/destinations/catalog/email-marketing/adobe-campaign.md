@@ -122,10 +122,10 @@ ht-degree: 5%
 >[!IMPORTANT]
 >
 >* 在執行此整合時，請記住[!DNL SFTP]合約中的[!DNL Adobe Campaign]儲存限制、資料庫儲存限制和作用中設定檔限制。
->* 您必須使用[!DNL Adobe Campaign]工作流程，在[!DNL Campaign]中排程、匯入及對應匯出的區段。 請參閱[檔案中的](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html)設定週期性匯入[!DNL Adobe Campaign Classic]，以及[檔案中的](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html)關於資料管理活動[!DNL Adobe Campaign Standard]。
+>* 您必須使用[!DNL Adobe Campaign]工作流程，在[!DNL Campaign]中排程、匯入及對應匯出的區段。 請參閱[檔案中的](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html)設定週期性匯入[!DNL Adobe Campaign Classic]，以及[檔案中的](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=zh-Hant)關於資料管理活動[!DNL Adobe Campaign Standard]。
 >* 將資料傳送至[!DNL Adobe Campaign]的偏好方法是透過[!DNL Amazon S3]或[!DNL Azure Blob]。
 
 將[!DNL Experience Platform]連線到您的[!DNL Amazon S3]或[!DNL Azure Blob]儲存體後，您必須設定從儲存位置匯入到[!DNL Adobe Campaign]的資料匯入。 若要瞭解如何完成此作業，請參閱下列[!DNL Adobe Campaign]檔案頁面：
 
-* [開始使用](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=zh-Hant)檔案中的資料匯入和匯出[和](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html)資料載入（檔案）[!DNL Adobe Campaign Classic]。
-* [開始使用處理程式與資料管理](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html)和[在](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html)檔案中載入檔案[!DNL Adobe Campaign Standard]。
+* [開始使用](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=zh-Hant)檔案中的資料匯入和匯出[和](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=zh-Hant)資料載入（檔案）[!DNL Adobe Campaign Classic]。
+* [開始使用處理程式與資料管理](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=zh-Hant)和[在](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=zh-Hant)檔案中載入檔案[!DNL Adobe Campaign Standard]。

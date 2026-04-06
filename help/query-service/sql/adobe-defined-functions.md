@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 查詢服務中的Adobe定義的SQL函式
 
-Adobe定義的函式（此處稱為ADF）是Adobe Experience Platform查詢服務中預先建立的函式，可協助對[!DNL Experience Event]資料執行常見的業務相關工作。 這些包括[工作階段化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)和[歸因](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)的功能，就像在Adobe Analytics中找到的那些功能。
+Adobe定義的函式（此處稱為ADF）是Adobe Experience Platform查詢服務中預先建立的函式，可協助對[!DNL Experience Event]資料執行常見的業務相關工作。 這些包括[工作階段化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=zh-Hant)和[歸因](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=zh-Hant)的功能，就像在Adobe Analytics中找到的那些功能。
 
 本檔案提供[!DNL Query Service]中可用之Adobe定義函式的資訊。
 
@@ -47,7 +47,7 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 此分組或資料工作階段化有助於關聯事件，以發掘更多有關客戶體驗的內容。
 
-如需Adobe Analytics中工作階段化的詳細資訊，請參閱有關[內容感知工作階段](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)的檔案。
+如需Adobe Analytics中工作階段化的詳細資訊，請參閱有關[內容感知工作階段](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=zh-Hant)的檔案。
 
 **查詢語法**
 
