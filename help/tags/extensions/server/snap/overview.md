@@ -25,7 +25,7 @@ ht-degree: 2%
 
 需要&#x200B;**[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/)帳戶才能使用轉換API。 Business Manager可協助廣告商整合&#x200B;**[!DNL Snapchat]**&#x200B;在其整個企業中的行銷工作，並與外部合作夥伴整合。 如果您沒有Business Manager帳戶，請參閱有關建立帳戶的&#x200B;**[!DNL Snapchat]** [說明中心文章](https://businesshelp.snapchat.com/s/article/get-started?language=en_US)。
 
-必須在Snapchat廣告管理員中設定[!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)，而且您必須具有檢視`Pixel ID`的存取權。 在`Pixel ID`區段中可以找到[!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US)。
+必須在Snapchat廣告管理員中設定[[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)，而且您必須具有檢視`Pixel ID`的存取權。 在`Pixel ID`區段中可以找到[[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US)。
 
 您需要一個靜態、生命週期較長的API Token。 請參閱[[!DNL Snapchat] 轉換API檔案](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token)以取得此Token。
 

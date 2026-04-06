@@ -30,7 +30,7 @@ ht-degree: 6%
 
 在Experience Platform UI中，選取左側導覽列中的&#x200B;**[!UICONTROL Profiles]**，然後選取&#x200B;**[!UICONTROL Computed attributes]**&#x200B;以檢視貴組織可用的計算屬性清單。 這包括計算屬性的名稱、說明、上次評估日期和上次評估狀態的相關資訊。
 
-![ [!UICONTROL Profile]區段和[!UICONTROL Computed attributes]標籤會反白顯示，向使用者顯示如何存取計算屬性瀏覽頁面。](./images/ui/browse.png)
+![&#x200B; [!UICONTROL Profile]區段和[!UICONTROL Computed attributes]標籤會反白顯示，向使用者顯示如何存取計算屬性瀏覽頁面。](./images/ui/browse.png)
 
 若要選取顯示哪些欄位，您可以選取![設定欄圖示](/help/images/icons/column-settings.png)來新增或移除您要顯示的欄位。
 
@@ -43,7 +43,7 @@ ht-degree: 6%
 | [!UICONTROL Last evaluation status] | 說明在上次評估執行中是否成功計算運算屬性的狀態。 可能的值包括&#x200B;**[!UICONTROL Success]**&#x200B;或&#x200B;**[!UICONTROL Failed]**。 |
 | [!UICONTROL Refresh frequency] | 表示計算屬性的重新整理頻率。 可能的值包括每小時、每日、每週或每月。 |
 | [!UICONTROL Fast refresh] | 顯示是否為此運算屬性啟用快速重新整理的值。 如果已啟用快速重新整理，這可讓計算的屬性每天重新整理，而不是每週、每兩週或每月重新整理。 此值僅適用於回顧期間大於每週的計算屬性。 |
-| [!UICONTROL Lifecycle status] | 計算屬性的目前狀態。 可能的狀態有三種： <ul><li>**[!UICONTROL Draft]：**&#x200B;運算屬性&#x200B;**尚未**&#x200B;在結構描述上建立欄位。 在此狀態下，可以編輯計算屬性。 </li><li>**[!UICONTROL Published]：**&#x200B;運算屬性已在結構描述上建立欄位，且已可供使用。 在此狀態下，無法編輯運算屬性&#x200B;****。</li><li>**[!UICONTROL Inactive]：**&#x200B;計算屬性已停用。 如需非使用中狀態的詳細資訊，請參閱[常見問題集](./faq.md#inactive-status)。 </li> |
+| [!UICONTROL Lifecycle status] | 計算屬性的目前狀態。 可能的狀態有三種： <ul><li>**[!UICONTROL Draft]：**&#x200B;運算屬性&#x200B;**尚未**&#x200B;在結構描述上建立欄位。 在此狀態下，可以編輯計算屬性。 </li><li>**[!UICONTROL Published]：**&#x200B;運算屬性已在結構描述上建立欄位，且已可供使用。 在此狀態下，無法編輯運算屬性&#x200B;**&#x200B;**。</li><li>**[!UICONTROL Inactive]：**&#x200B;計算屬性已停用。 如需非使用中狀態的詳細資訊，請參閱[常見問題集](./faq.md#inactive-status)。 </li> |
 | [!UICONTROL Created] | 顯示計算屬性建立日期與時間的時間戳記。 |
 | [!UICONTROL Last modified] | 顯示上次修改運算屬性的日期與時間的時間戳記。 |
 
@@ -71,7 +71,7 @@ ht-degree: 6%
 | [!UICONTROL Field name] | 用來參照其他下游服務中計算屬性的名稱。 此名稱會自動衍生自顯示名稱，並以camelCase寫入。 |
 | [!UICONTROL Description] | 您嘗試建立的計算屬性說明。 |
 
-![ [!UICONTROL Basic information]頁面的[!UICONTROL Create computed attribute]區段已反白顯示。](./images/ui/basic-information.png)
+![&#x200B; [!UICONTROL Basic information]頁面的[!UICONTROL Create computed attribute]區段已反白顯示。](./images/ui/basic-information.png)
 
 新增計算屬性詳細資料後，您就可以開始定義規則。
 
@@ -79,7 +79,7 @@ ht-degree: 6%
 
 若要建立規則，請先從&#x200B;**[!UICONTROL Events]**&#x200B;區段中選取屬性，以篩選您要彙總的事件。 目前僅支援非陣列型別的事件屬性。
 
-![ [!UICONTROL Events]區段已反白顯示。](./images/ui/events.png)
+![&#x200B; [!UICONTROL Events]區段已反白顯示。](./images/ui/events.png)
 
 選取要在計算屬性定義中使用的屬性後，您可以選擇此值要與之比較的內容。
 

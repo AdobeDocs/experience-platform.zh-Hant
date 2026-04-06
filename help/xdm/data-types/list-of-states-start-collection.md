@@ -13,7 +13,7 @@ ht-degree: 8%
 
 [!UICONTROL List of States Start]資料型別是Experience Data Model (XDM)資料型別，設計用於表示與各種播放器屬性的開始狀態相關的資訊。 其中包含指出特定屬性狀態的[!UICONTROL Player State Name]屬性（例如，「fullscreen」、「mute」、「closedCaptioning」）。 此資料型別用於擷取及描述不同播放器狀態的初始條件。
 
-![ [!UICONTROL List of States Start]資料型別的圖表。](../images/data-types/list-of-states-start-collection.png)
+![&#x200B; [!UICONTROL List of States Start]資料型別的圖表。](../images/data-types/list-of-states-start-collection.png)
 
 | 顯示名稱 | 屬性 | 資料類型 | 必要 | 說明 |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|

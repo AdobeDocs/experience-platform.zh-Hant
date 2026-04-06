@@ -219,7 +219,7 @@ Salesforce Marketing Cloud帳戶參與目的地支援下表描述的目標屬性
 1. 導覽至您選取的其中一個對象。 選取 **[!DNL Activation data]** 索引標籤。**[!UICONTROL Mapping ID]**&#x200B;欄會顯示在[!DNL Marketing Cloud Account Engagement Prospects]頁面中產生的自訂欄位名稱。
    ![Experience Platform UI熒幕擷圖範例，顯示所選區段的對應ID。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. 前往[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否新增/更新了對象中的潛在客戶。 或者，您也可以存取[[!DNL Account Engagement]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**頁面。
+1. 前往[[!DNL Salesforce]](https://login.salesforce.com/)網站。 然後導覽至「**[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]**」頁面，並檢查是否新增/更新了對象中的潛在客戶。 或者，您也可以存取[[!DNL Account Engagement]](https://pi.pardot.com/)並存取&#x200B;**[!DNL Prospects]**&#x200B;頁面。
    ![顯示[潛在客戶]頁面的Salesforce UI熒幕擷圖。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. 若要檢查潛在客戶是否已更新，請選取潛在客戶並驗證自訂潛在客戶欄位是否已使用Experience Platform對象狀態進行更新。

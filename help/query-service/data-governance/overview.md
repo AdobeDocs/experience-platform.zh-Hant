@@ -129,7 +129,7 @@ Adobe Experience Platform中的存取控制可讓您使用[Adobe Admin Console](
 
 為了提高安全性，Query Service為SSL連線提供原生支援，以加密使用者端/伺服器通訊。 Experience Platform支援各種SSL選項，以符合您的資料安全需求，並平衡加密和金鑰交換的處理額外負荷。
 
-如需詳細資訊，包括如何使用[ SSL引數值連線，請參閱第三方使用者端連線至查詢服務](../clients/ssl-modes.md)的可用`verify-full`SSL選項指南。
+如需詳細資訊，包括如何使用[&#x200B; SSL引數值連線，請參閱第三方使用者端連線至查詢服務](../clients/ssl-modes.md)的可用`verify-full`SSL選項指南。
 
 ### 加密和客戶管理金鑰(CMK) {#encryption-and-customer-managed-keys}
 

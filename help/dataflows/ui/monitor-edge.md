@@ -33,7 +33,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->如果您選取&#x200B;**，則只能看到資料流檢視**[!UICONTROL Edge segmentation throughput]。
+>如果您選取&#x200B;**，則只能看到資料流檢視**&#x200B;[!UICONTROL Edge segmentation throughput]。
 
 如果您依服務篩選，則可以選擇要檢視其輸送量資訊的服務。 其中包括Edge細分、資料收集、Target、Adobe Journey Optimizer、Offer Decisioning、自訂個人化目的地、事件轉送、Adobe Analytics和Adobe Audience Manager等服務。
 

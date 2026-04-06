@@ -19,7 +19,7 @@ ht-degree: 0%
 
 本指南要求您已存取[!DNL DbVisualizer]案頭應用程式，並熟悉如何導覽其介面。 若要下載[!DNL DbVisualizer]案頭應用程式或如需詳細資訊，請參閱[正式 [!DNL DbVisualizer] 檔案](https://www.dbvis.com/download/)。
 
-若要取得將[!DNL  DbVisualizer]連線到Experience Platform所需的認證，您必須能存取Experience Platform UI中的查詢工作區。 如果您目前無法存取查詢工作區，請聯絡您的組織管理員。
+若要取得將[!DNL &#x200B; DbVisualizer]連線到Experience Platform所需的認證，您必須能存取Experience Platform UI中的查詢工作區。 如果您目前無法存取查詢工作區，請聯絡您的組織管理員。
 
 ## 建立資料庫連線 {#connect-database}
 

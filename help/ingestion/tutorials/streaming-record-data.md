@@ -166,7 +166,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->{&#x200B;0}身&#x200B;分名稱空間程式碼&#x200B;****
+>{&#x200B;0}身&#x200B;分名稱空間程式碼&#x200B;**&#x200B;**
 >
 > 請確定程式碼有效 — 上述範例使用「電子郵件」，這是標準身分名稱空間。 在[Identity Service常見問題集](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)中可找到其他常用的標準身分名稱空間。
 >

@@ -41,7 +41,7 @@ ht-degree: 2%
 
 已成功建立環境，並且您返回&#x200B;**[!UICONTROL Environments]**&#x200B;標籤，顯示您的新環境。
 
-![ [!UICONTROL Environments]索引標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![&#x200B; [!UICONTROL Environments]索引標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 ## 檢視環境憑證詳細資訊 {#view-certificate}
 
@@ -62,7 +62,7 @@ ht-degree: 2%
 
 若要使用過時的憑證，請導覽至「事件轉送」屬性左側面板中的「**[!UICONTROL Environments]**」標籤，然後選取環境以檢視其詳細資料。
 
-![ [!UICONTROL Environments]索引標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
+![&#x200B; [!UICONTROL Environments]索引標籤，醒目提示開發環境。](../../../images/extensions/server/cloud-connector/new-environment-created.png)
 
 從&#x200B;**[!UICONTROL Certificate]**&#x200B;下拉式清單中，選取過時的憑證，然後選取&#x200B;**[!UICONTROL Save]**。
 

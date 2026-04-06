@@ -95,7 +95,7 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 
 如果您的行動應用程式需要客戶同意偏好設定，您可以整合Experience Platform Mobile SDK以擷取及更新同意設定，並在呼叫同意API時將其傳送至Experience Platform。
 
-請參閱Mobile SDK檔案，以瞭解[使用同意API設定同意行動擴充功能](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)和[](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)。 如需有關如何使用Mobile SDK處理隱私權問題的詳細資訊，請參閱[隱私權與GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)一節。
+請參閱Mobile SDK檔案，以瞭解[使用同意API設定同意行動擴充功能](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)和[&#128279;](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/)。 如需有關如何使用Mobile SDK處理隱私權問題的詳細資訊，請參閱[隱私權與GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/)一節。
 
 ### 直接擷取XDM相容的同意資料 {#batch}
 
@@ -113,7 +113,7 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 >
 >如果您無法存取此資訊，您可以選取擷取自己的測試同意資料，並將其與自己已知的身分值/名稱空間建立關聯。
 
-請參閱[ UI指南中有關](../../../../profile/ui/user-guide.md#browse)依身分瀏覽設定檔[!DNL Profile]的章節，以取得有關如何查閱設定檔詳細資料的特定步驟。
+請參閱[&#x200B; UI指南中有關](../../../../profile/ui/user-guide.md#browse)依身分瀏覽設定檔[!DNL Profile]的章節，以取得有關如何查閱設定檔詳細資料的特定步驟。
 
 預設情況下，新的同意屬性不會顯示在設定檔的控制面板上。 因此，您必須導覽至設定檔詳細資訊頁面上的&#x200B;**[!UICONTROL Attributes]**&#x200B;標籤，以確認其已如預期般內嵌。 請參閱[設定檔儀表板](../../../../profile/ui/profile-dashboard.md)上的指南，瞭解如何根據您的需求自訂儀表板。
 

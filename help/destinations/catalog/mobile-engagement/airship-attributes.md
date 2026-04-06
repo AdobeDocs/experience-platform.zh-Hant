@@ -79,7 +79,7 @@ ht-degree: 3%
 
 ## 產生持有人權杖 {#bearer-token}
 
-移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[ &quot; ](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
+移至&#x200B;**[!UICONTROL Settings]**&#x200B;飛艇儀表板&#x200B;**[!UICONTROL APIs & Integrations]**&#x200B;中的[&#x200B; &quot; &#x200B;](https://go.airship.com)，然後在左側功能表中選取&#x200B;**[!UICONTROL Tokens]**。
 
 按一下「**[!UICONTROL Create Token]**」。
 
