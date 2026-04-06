@@ -23,15 +23,15 @@ ht-degree: 8%
 
 | 顯示名稱 | 屬性 | 資料類型 | 必要 | 說明 |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
-| [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#advertiser) | `advertiser` | 字串 | 無 | 廣告中精選產品的公司或品牌。 |
-| [[!UICONTROL Ad Campaign]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#campaign-id) | `campaignID` | 字串 | 無 | 廣告行銷活動的ID。 |
-| [[!UICONTROL Ad Creative ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#creative-id) | `creativeID` | 字串 | 無 | 廣告創意的ID。 |
-| [[!UICONTROL Ad Creative URL]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#creative-url) | `creativeURL` | 字串 | 無 | 廣告創意的URL。 |
-| [[!UICONTROL Ad In Pod Position (Ad Start)]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#ad-start) | `podPosition` | 整數 | 是 | 父級廣告開始內的廣告索引，例如，第一個廣告索引為0，第二個廣告索引為1。 |
-| [[!UICONTROL Ad Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#ad-length) | `length` | 整數 | 是 | 視訊廣告的秒數長度。 |
-| [[!UICONTROL Ad Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#ad-name) | `friendlyName` | 字串 | 是 | 人類看得懂的廣告名稱。 在報表中，「廣告名稱」為分類，而「廣告名稱（變數）」為eVar。 |
-| [[!UICONTROL Ad Placement ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#placement-id) | `placementID` | 字串 | 無 | 廣告版位ID。 |
-| [[!UICONTROL Ad Player Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#ad-player-name) | `playerName` | 字串 | 是 | 負責轉譯廣告之播放器的名稱。 |
-| [[!UICONTROL Ad Site ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html?lang=zh-Hant#site-id) | `siteID` | 字串 | 無 | 廣告網站ID。 |
+| [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | 字串 | 無 | 廣告中精選產品的公司或品牌。 |
+| [[!UICONTROL Ad Campaign]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | 字串 | 無 | 廣告行銷活動的ID。 |
+| [[!UICONTROL Ad Creative ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | 字串 | 無 | 廣告創意的ID。 |
+| [[!UICONTROL Ad Creative URL]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-url) | `creativeURL` | 字串 | 無 | 廣告創意的URL。 |
+| [[!UICONTROL Ad In Pod Position (Ad Start)]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-start) | `podPosition` | 整數 | 是 | 父級廣告開始內的廣告索引，例如，第一個廣告索引為0，第二個廣告索引為1。 |
+| [[!UICONTROL Ad Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-length) | `length` | 整數 | 是 | 視訊廣告的秒數長度。 |
+| [[!UICONTROL Ad Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-name) | `friendlyName` | 字串 | 是 | 人類看得懂的廣告名稱。 在報表中，「廣告名稱」為分類，而「廣告名稱（變數）」為eVar。 |
+| [[!UICONTROL Ad Placement ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | 字串 | 無 | 廣告版位ID。 |
+| [[!UICONTROL Ad Player Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | 字串 | 是 | 負責轉譯廣告之播放器的名稱。 |
+| [[!UICONTROL Ad Site ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | 字串 | 無 | 廣告網站ID。 |
 
 {style="table-layout:auto"}

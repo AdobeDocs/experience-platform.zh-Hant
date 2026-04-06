@@ -26,7 +26,7 @@ ht-degree: 4%
 請務必瞭解本檔案中使用的下列重要用語：
 
 * **標準屬性**：標準屬性是Adobe預先定義的任何屬性。 它們對所有客戶都包含相同涵義，並且可在Analytics來源資料和Analytics結構描述欄位群組中取得。
-* **自訂屬性**：自訂屬性是Analytics中自訂變數階層中的任何屬性。 自訂屬性用於Adobe Analytics實作，將特定資訊擷取至報表套裝，各報表套裝的屬性使用方式可能有所不同。 自訂屬性包括eVar、prop和清單。 如需有關eVar的詳細資訊，請參閱下列有關轉換變數[的](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=zh-Hant)Analytics檔案。
+* **自訂屬性**：自訂屬性是Analytics中自訂變數階層中的任何屬性。 自訂屬性用於Adobe Analytics實作，將特定資訊擷取至報表套裝，各報表套裝的屬性使用方式可能有所不同。 自訂屬性包括eVar、prop和清單。 如需有關eVar的詳細資訊，請參閱下列有關轉換變數[的](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)Analytics檔案。
 * **自訂欄位群組中的任何屬性**：源自客戶建立的欄位群組的屬性都是使用者定義的，且不屬於標準或自訂屬性。
 
 ## 瀏覽來源目錄
@@ -326,5 +326,5 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >
 > 下列影片中顯示的[!DNL Experience Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
 
->[!VIDEO](https://video.tv.adobe.com/v/3430259?captions=chi_hant&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
