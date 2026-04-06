@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存、資料庫和許多其他來源）內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
+source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
 workflow-type: tm+mt
-source-wordcount: '1721'
+source-wordcount: '1724'
 ht-degree: 11%
 
 ---
@@ -65,7 +65,7 @@ Experience Platform可從其他Adobe應用程式（包括Adobe Analytics和Adobe
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅適用於[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)或已授權獨立進階企業Source聯結器SKU的客戶。
+下列來源僅適用於[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)或已授權獨立進階企業Source聯結器SKU的客戶。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
@@ -230,6 +230,7 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 | 來源 | 擷取型別 | 雲端 |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | 串流 | Azure |
+| [[!DNL Talon.One]](connectors/loyalty/talon-one.md) | 批次，串流 | Azure |
 
 {style="table-layout:auto"}
 
