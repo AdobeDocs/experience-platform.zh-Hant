@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->[!DNL Amazon Ads v2]是所有新[!DNL Amazon Ads]連線的目前目的地。 如果您有現有的[（舊版） [!DNL Amazon Ads]](./amazon-ads.md)連線，它將繼續運作，而不會進行任何必要的變更。 [!DNL Amazon Ads v2]連線到[!DNL Ads Data Manager]，後者支援擴充的身分型別、位址相關欄位，以及跨[!DNL Amazon Ads]個產品的資料共用，相較於[ （舊版） [!DNL Amazon Ads]](./amazon-ads.md)改善鎖定目標和對象符合率。
+>[!DNL Amazon Ads v2]是所有新[!DNL Amazon Ads]連線的目前目的地。 如果您有現有的[（舊版） [!DNL Amazon Ads]](./amazon-ads.md)連線，它將繼續運作，而不會進行任何必要的變更。 [!DNL Amazon Ads v2]連線到[!DNL Ads Data Manager]，後者支援擴充的身分型別、位址相關欄位，以及跨[!DNL Amazon Ads]個產品的資料共用，相較於[&#x200B; （舊版） [!DNL Amazon Ads]](./amazon-ads.md)改善鎖定目標和對象符合率。
 >
 >2026年4月底後，[!DNL Amazon Ads v2]將重新命名為[!DNL Amazon Ads]，舊版卡片將隱藏，在目錄中保留單一目的地卡片。 現有的舊版資料流將繼續運作，而您可以在該日期之後的&#x200B;**[!UICONTROL Browse]**&#x200B;索引標籤中管理這些資料流。
 
