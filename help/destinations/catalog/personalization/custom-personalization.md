@@ -1,87 +1,90 @@
 ---
 keywords: 自訂個人化；目的地；experience platform自訂目的地；
-title: 自訂個人化連線
-description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者設定檔對象成員資格，提供即時個人化。
+title: 自訂Personalization連線
+description: 瞭解如何設定自訂Personalization目的地，以從Adobe Experience Platform擷取對象資料，以進行即時站上個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 3779531814cbf7e5718db0ac88aca266f14a1b21
 workflow-type: tm+mt
-source-wordcount: '1111'
-ht-degree: 9%
+source-wordcount: '1136'
+ht-degree: 8%
 
 ---
 
 
-# 自訂個人化連線 {#custom-personalization-connection}
+# 自訂Personalization連線 {#custom-personalization-connection}
 
 ## 目的地變更記錄檔 {#changelog}
 
+使用此變更記錄檔來追蹤對自訂Personalization目的地的更新。
+
 | 發行月份 | 更新型別 | 說明 |
-|---|---|---|
-| 2023 年 5 月 | 功能和檔案更新 | 自2023年5月起，**[!UICONTROL Custom personalization]**&#x200B;連線支援[屬性式個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes)，通常可供所有客戶使用。 |
+| --- | --- | --- |
+| 2023 年 5 月 | 功能和檔案更新 | 自2023年5月起，**[!UICONTROL Custom personalization]**&#x200B;連線支援[屬性式個人化](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes)，通常可供所有客戶使用。 |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 若要保護此資料，您必須在為屬性式個人化設定[目的地時，使用](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)中進行。
+>設定檔屬性可能包含敏感資料。 若要保護此資料，請在設定屬性式個人化的[目的地時，使用](https://developer.adobe.com/data-collection-apis/docs/)Edge Network API **[!UICONTROL Custom Personalization]**。 所有Edge Network API呼叫都必須在[已驗證的內容](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication)中進行。
 >
-><br>您可以新增伺服器端整合，利用您已在網頁或行動SDK實作中使用的相同資料流，透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)擷取設定檔屬性。
+>新增使用您已在網頁或行動SDK實作中使用的相同資料流的伺服器端整合，透過[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)擷取設定檔屬性。
 >
-><br>如果您未遵循上述要求，個人化將僅以對象成員資格為基礎。
+>如果您未遵循上述要求，則個人化僅以對象成員資格為基礎。
 
 ## 概觀 {#overview}
 
-設定此目的地，以允許外部個人化平台、內容管理系統、廣告伺服器和其他在客戶網站上執行的應用程式從[!DNL Adobe Experience Platform]擷取對象資訊。
+設定此目的地，以允許外部個人化平台、內容管理系統、廣告伺服器，以及客戶網站上執行的其他應用程式，從[!DNL Adobe Experience Platform]擷取對象資訊。
 
 ## 先決條件 {#prerequisites}
 
-根據您的實作，此目的地需要使用下列其中一個資料收集方法：
+根據您的實作，此目的地需要下列其中一個資料收集方法：
 
-* 如果您想要從網站收集資料，請使用[Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)。
-* 如果您想要從行動應用程式收集資料，請使用[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)。
+* 使用[Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)從您的網站收集資料。
+* 使用[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)收集行動應用程式的資料。
 * 如果您未使用Web SDK或Mobile SDK，或您想要根據設定檔屬性個人化使用者體驗，請使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)。
 
 >[!IMPORTANT]
 >
->**以屬性為基礎的個人化需求：**&#x200B;如果您想要根據設定檔屬性（而不只是對象成員資格）進行個人化，您&#x200B;**必須**&#x200B;使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)搭配已驗證的伺服器端整合，無論您是否也在使用Web SDK或Mobile SDK進行資料收集。
+>**以屬性為基礎的個人化需求：**&#x200B;若要根據設定檔屬性（而不只是對象成員資格）進行個人化，您&#x200B;**必須**&#x200B;使用[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/)搭配已驗證的伺服器端整合，無論您是否同時使用Web SDK或Mobile SDK進行資料收集。
 >
->僅Web SDK和Mobile SDK僅支援根據對象成員資格進行個人化。 **需要Edge Network API**，才能安全地擷取個人化的設定檔屬性。
+>僅Web SDK和Mobile SDK支援僅根據對象成員資格進行個人化。 **需要Edge Network API**，才能安全地擷取個人化的設定檔屬性。
 
 >[!IMPORTANT]
 >
->在建立自訂個人化連線之前，請閱讀如何[啟用對象資料至Edge個人化目的地](../../ui/activate-edge-personalization-destinations.md)的指南。 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行所需設定步驟。
+>在建立自訂Personalization連線之前，請先閱讀如何[啟用對象資料至邊緣個人化目的地](/help/destinations/ui/activate-edge-personalization-destinations.md)的指南。 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行所需設定步驟。
 
 ## 支援的對象 {#supported-audiences}
 
-本節說明您可以將哪些型別的對象匯出至此目的地。
+下表列出您可以匯出至此目的地的對象型別。
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](../../../segmentation/home.md)產生的對象。 |
-| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li> 自訂上傳對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li> 相似受眾， </li><li> 同盟對象， </li><li> 其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、 </li><li> 及更多內容。 </li></ul> |
+| [!DNL Segmentation Service] | 是 | 透過Experience Platform [細分服務](/help/segmentation/home.md)產生的對象。 |
+| 所有其他受眾來源 | 是 | 此類別包含透過[!DNL Segmentation Service]產生的對象以外的所有對象來源。 閱讀[各種對象來源](/help/segmentation/ui/audience-portal.md#customize)。 部分範例包括： <ul><li>自訂上傳對象[從CSV檔案匯入](/help/segmentation/ui/audience-portal.md#import-audience)至Experience Platform，</li><li>相似受眾，</li><li>同盟對象，</li><li>其他Experience Platform應用程式中產生的對象，例如[!DNL Adobe Journey Optimizer]、</li><li>及更多內容。</li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 依受眾資料型別支援的受眾：
 
 | 對象資料型別 | 支援 | 說明 | 使用案例 |
 |--------------------|-----------|-------------|-----------|
-| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔，可讓您針對行銷活動的特定人群進行定位。 | 經常購買者、購物車放棄者 |
+| [人員對象](/help/segmentation/types/people-audiences.md) | 是 | 根據客戶設定檔鎖定特定群組的人員。 | 經常購買者、購物車放棄者 |
 | [帳戶對象](/help/segmentation/types/account-audiences.md) | 無 | 針對帳戶型行銷策略，鎖定特定組織內的個人。 | B2B行銷 |
 | [潛在客戶對象](/help/segmentation/types/prospect-audiences.md) | 無 | 將目標定位為尚未成為客戶但與目標受眾具有相同特性的個人。 | 使用第三方資料進行勘探 |
 | [資料集匯出](/help/catalog/datasets/overview.md) | 無 | 儲存在[!DNL Adobe Experience Platform]資料湖中的結構化資料集合。 | 報告、資料科學工作流程 |
 
 {style="table-layout:auto"}
 
-
 ## 匯出型別和頻率 {#export-type-frequency}
 
+下表說明此目的地的匯出型別和頻率。
+
 | 項目 | 類型 | 附註 |
-|---------|----------|---------|
-| 匯出類型 | **[!DNL Profile request]** | 您正在請求已對應至單一設定檔之自訂個人化目的地的所有對象。 可以為不同的[Adobe資料收集資料串流](../../../datastreams/overview.md)設定不同的自訂個人化目的地。 |
-| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地是「一律開啟」的API型連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+| --- | --- | --- |
+| 匯出類型 | **[!UICONTROL Profile request]** | 請求在自訂Personalization目的地中對應的所有對象取得單一設定檔。 可以為不同的[Adobe資料收集資料串流](/help/datastreams/overview.md)設定不同的自訂Personalization目的地。 |
+| 匯出頻率 | **[!UICONTROL Streaming]** | 串流目的地永遠是以API為基礎的連線。 根據對象評估在Experience Platform中更新設定檔後，聯結器會立即將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
+
+{style="table-layout:auto"}
 
 ## 連線到目標 {#connect}
 
@@ -89,26 +92,26 @@ ht-degree: 9%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流"
 >abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含對象。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 >
 >若要連線到目的地，您需要&#x200B;**[!UICONTROL View Destinations]**&#x200B;和&#x200B;**[!UICONTROL Manage Destinations]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。
+若要連線到此目的地，請依照[目的地組態教學課程](/help/destinations/ui/connect-destination.md)中所述的步驟進行。
 
 ### 連線參數 {#parameters}
 
-在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
+在[設定](/help/destinations/ui/connect-destination.md)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Name]**：填寫此目的地的偏好名稱。
 * **[!UICONTROL Description]**：輸入目的地的說明。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
-* **[!UICONTROL Integration alias]**：此值會以JSON物件名稱的形式傳送到Experience Platform Web SDK。
-* **[!UICONTROL Datastream]**：這會決定頁面回應中將包含哪些資料收集資料串流中的對象。 下拉選單僅顯示已啟用目的地設定的資料流。如需詳細資訊，請參閱[設定資料串流](../../../datastreams/overview.md)。
+* **[!UICONTROL Integration alias]**：在個人化回應中識別此目的地的必要字串。 別名值會連同與此目的地相關聯的對象（及屬性，若已設定），一併傳回至您的網站或應用程式。 相同資料流中有多個個人化目的地啟用時，請在使用者端或伺服器端程式碼中使用別名，找出並處理正確的個人化物件。 在所有自訂Personalization目的地的沙箱中，別名必須是唯一的。
+* **[!UICONTROL Datastream]**：這會決定頁面回應中將包含哪些資料收集資料串流中的對象。 下拉選單僅顯示已啟用目的地設定的資料流。如需詳細資訊，請參閱[設定資料串流](/help/datastreams/overview.md)。
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
+啟用警示以接收有關您資料流到此目的地的狀態通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](/help/destinations/ui/alerts.md)的指南。
 
 當您完成提供目的地連線的詳細資訊時，請選取&#x200B;**[!UICONTROL Next]**。
 
@@ -118,11 +121,11 @@ ht-degree: 9%
 >
 >若要啟用資料，您需要&#x200B;**[!UICONTROL View Destinations]**、**[!UICONTROL Activate Destinations]**、**[!UICONTROL View Profiles]**&#x200B;和&#x200B;**[!UICONTROL View Segments]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-閱讀[啟用設定檔與對象邊緣個人化目的地](../../ui/activate-edge-personalization-destinations.md)，以取得啟用此目的地的對象的指示。
+閱讀[啟用邊緣個人化目的地的設定檔和對象](/help/destinations/ui/activate-edge-personalization-destinations.md)，以取得啟用此目的地對象的指示。
 
 ## 匯出的資料 {#exported-data}
 
-如果您使用Adobe Experience Platform[中的](/help/tags/home.md)標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](/help/tags/extensions/client/web-sdk/event-types.md)功能，而您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
+如果您使用Adobe Experience Platform[中的](/help/tags/home.md)標籤來部署Experience Platform Web SDK，請使用[傳送事件完成](/help/tags/extensions/client/web-sdk/event-types.md)功能。 您的自訂程式碼動作將有`event.destinations`變數，可用來檢視匯出的資料。
 
 以下是`event.destinations`變數的範例值：
 
@@ -146,7 +149,7 @@ ht-degree: 9%
 
 如果您不是使用[標籤](/help/tags/home.md)來部署Experience Platform Web SDK，請使用[命令回應](/help/collection/js/commands/command-responses.md)來檢視匯出的資料。
 
-可以剖析來自[!DNL Adobe Experience Platform]的JSON回應，以尋找您與[!DNL Adobe Experience Platform]整合之應用程式的對應整合別名。 對象ID可傳入應用程式的程式碼中作為定位引數。 以下是目標回應特有的內容範例。
+剖析來自[!DNL Adobe Experience Platform]的JSON回應，以尋找您正在與[!DNL Adobe Experience Platform]整合之應用程式的整合別名。 將對象ID傳遞至應用程式的程式碼，作為定位引數。 以下是目標回應專屬內容的範例。
 
 ```js
 alloy("sendEvent", {
@@ -163,7 +166,7 @@ alloy("sendEvent", {
   }
 }).then(function(result) {
     if(result.destinations) { // Looking to see if the destination results are there
- 
+
         // Get the destination with a particular alias
         var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
@@ -180,7 +183,7 @@ alloy("sendEvent", {
   });
 ```
 
-### [!UICONTROL Custom Personalization With Attributes]的範例回應 {#example-response-custom-personalization-with-attributes}
+### 具有屬性的自訂Personalization的回應範例 {#example-response-attributes}
 
 使用&#x200B;**[!UICONTROL Custom Personalization With Attributes]**&#x200B;時，API回應將與以下範例類似。
 
@@ -199,7 +202,7 @@ alloy("sendEvent", {
              "membershipStatus": {
                    "value" : "PREMIUM"
               }
-         },         
+         },
         "segments": [
             {
                 "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
@@ -214,4 +217,4 @@ alloy("sendEvent", {
 
 ## 資料使用與控管 {#data-usage-governance}
 
-處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](../../../data-governance/home.md)。
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](/help/data-governance/home.md)。
