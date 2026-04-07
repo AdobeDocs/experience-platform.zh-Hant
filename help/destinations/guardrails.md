@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1f733dd25fafed153c8d1065555d2ca45bbb11f1
+source-git-commit: c6a8a516afe31c5c6eaef67712fc646c2944d31d
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1810'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/tw/legal/product-descriptions.html)。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 此頁面提供啟動行為的預設使用量和速率限制。 檢閱下列護欄時，假設您已正確[連線至目的地](/help/destinations/ui/connect-destination.md)。
 
@@ -50,6 +50,7 @@ ht-degree: 2%
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
 | 單一目的地的受眾數量上限 | 250 | 效能護欄 | 建議將最多250個對象對應至單一目的地執行個體。 <br><br>如果您需要針對目的地啟用超過250個對象，您可以： <ul><li> 取消對應您不想再啟用的對象，或</li><li>[建立新的目的地執行個體](ui/connect-destination.md)，並將對象對應至該執行個體。</li></ul> <br>請注意，在某些目的地中，您對應至目的地的對象可能限制在250個以內。 這些目的地將在頁面下方各自的區段中進一步說明。 |
+| 同時啟用至目的地的最大對象數量 | 50 | 效能護欄 | 不支援在每個目的地一次大量啟用超過50個對象。 最佳實務是以20批次啟用對象，等候幾分鐘，然後重複。 同時啟用超過50個對象可能會導致流程卡住，或導致目的地接收的對象少於預期。 |
 | 對應到目的地的屬性數目上限 | 50 | 效能護欄 | 如果有多種目的地和目的地型別，您可以選取要對應以匯出的設定檔屬性和身分。 為獲得最佳效能，最多50個屬性應該對應至目的地執行個體。 |
 | 目的地數量上限 | 100 | 系統強制的護欄 | 您最多可以建立100個可連線並啟用資料的目的地，每個沙箱&#x200B;*有*&#x200B;個。 [Edge個人化目的地（自訂個人化）](#edge-destinations-activation)在100個建議目的地中最多可組成10個。 |
 | 啟用至目的地的資料型別 | 設定檔資料，包括身分和身分對應 | 系統強制的護欄 | 目前只能將&#x200B;*個人資料記錄屬性*&#x200B;匯出至目的地。 說明事件資料的XDM屬性目前不支援匯出。 |
@@ -196,7 +197,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 請參閱下列檔案，以取得其他Experience Platform服務護欄、端對端延遲資訊，以及[!DNL Real-Time CDP]產品說明檔案的授權資訊的詳細資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=zh-Hant#end-to-end-latency-diagrams)。
-* [Real-Time Customer Data Platform （B2C Edition - Prime和Ultimate套件）](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform （B2P - Prime和Ultimate套件）](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform （B2B - Prime和Ultimate套件）](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-Time Customer Data Platform （B2C Edition - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform （B2P - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform （B2B - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
