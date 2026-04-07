@@ -2,11 +2,11 @@
 title: Real-Time Customer Data Platform中的對象產生器
 description: 瞭解如何使用Real-Time Customer Data Platform中的對象產生器建立對象。
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
+source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1146'
 ht-degree: 7%
 
 ---
@@ -54,13 +54,13 @@ ht-degree: 7%
 
 ![「屬性」索引標籤會顯示在「對象產生器」中](../assets/segmentation/audience-builder/attributes.png)
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->摘要資料採用&#x200B;**有限可用性**。
+>摘要資料採用&#x200B;**有限可用性**，並用於B2B edition和B2P版本。
 
 選取屬性時，您可以選取[資訊圖示](../../images/icons/info.png)來檢視摘要資料。 摘要資料包含頂端值、欄位內容的說明、值的記錄計數，以及包含此屬性值的帳戶百分比等資訊。
 
-**[!UICONTROL Populated]**&#x200B;區段顯示已填入屬性的記錄數目與可用記錄總數以及擁有此欄位值的帳戶百分比。
+**[!UICONTROL Populated]**&#x200B;區段會顯示擁有此欄位值的帳戶百分比。
 
 **[!UICONTROL Top values]**&#x200B;區段顯示屬性最常發生的值，並包含值、具有值的記錄數以及值所代表之記錄總數百分比等詳細資訊。 每個欄位的記錄數由設定檔快照決定，該快照會在合併所有貢獻資料集資料後，提供記錄的整合檢視。
 
@@ -74,11 +74,17 @@ ht-degree: 7%
 
 ![當屬性由少於25%的帳戶填入時，顯示屬性摘要資料版本的彈出視窗。](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+新增包含摘要資料的屬性時，您也可以在規則建立畫布中檢視摘要資料。
+
+![會顯示包含摘要資料的屬性。](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+您可以使用下拉式清單從頂端值中選取，或輸入您的值，該值會自動解析為其中一個頂端值。
+
+![可新增屬性值的下拉式清單會反白顯示。](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->摘要資料僅在屬性屬於Account、Person或Opportunity結構描述時才可用。 此外，只有在欄位&#x200B;**not**&#x200B;包含太多不同的值，而且這些欄位的值通常重複時，才會顯示頂端值。
->
->此摘要資料會每日&#x200B;**更新**。
+>摘要資料會每日&#x200B;**更新**。 此外，值為陣列或索引鍵/值組的屬性&#x200B;**不支援**&#x200B;摘要資料。
 
 此外，屬性也有&#x200B;**[!UICONTROL Ingestion Type]**。 內嵌型別可讓您知道資料的來源，而且可以是下列其中一個值： **[!UICONTROL Batch]**、**[!UICONTROL Streaming/Edge]**&#x200B;或&#x200B;**[!UICONTROL No Data Ingested]**。
 
