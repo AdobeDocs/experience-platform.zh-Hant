@@ -2,13 +2,14 @@
 title: Reddit自訂對象
 description: Reddit Ads將品牌與積極探索其激情和問題的使用者即時聯絡起來。 Reddit Ads將高意圖、社群導向的對話與彈性的廣告格式及強大的目標鎖定相結合，有助於廣告商觸及參與的對象、推動績效結果，並直接從塑造線上文化的社群中學習。 本指南適用於使用Adobe Experience Platform將受眾傳送至Reddit廣告的廣告商和媒體團隊。 它涵蓋連線帳戶、對應身分和啟用對象所需的專案。
 last-substantial-update: 2026-03-31T00:00:00Z
-source-git-commit: c7c74ba9b5c6a66f92dc6a5403d4f2c5614c0049
+exl-id: bcce02bd-d508-47a0-8f5c-bf162db1859d
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: 28bbad7ccbec0b669082658b912d0b52e0374667
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 3%
+source-wordcount: '1231'
+ht-degree: 4%
 
 ---
-
 
 # [!DNL Reddit Custom Audience] 連線 {#reddit-custom-audience-connection}
 
