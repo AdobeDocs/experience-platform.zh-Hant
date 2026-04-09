@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 串流分段指南
 description: 瞭解串流細分是什麼、如何建立使用串流細分評估的受眾，以及如何檢視使用串流細分建立的受眾。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
+source-git-commit: 0be405c34f7fa9d01691059658429652318c13bb
 workflow-type: tm+mt
 source-wordcount: '2117'
 ht-degree: 3%
@@ -476,5 +476,3 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 如果沒有作用中的合併原則集，您需要[設定您的合併原則](../../profile/merge-policies/ui-guide.md#configure)，並將它設定為在Edge上作用中。
 
 +++
-
->[!ENDSHADEBOX]
