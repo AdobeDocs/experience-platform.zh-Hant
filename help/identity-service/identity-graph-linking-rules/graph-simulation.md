@@ -2,9 +2,9 @@
 title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 22c0678ded73e9f840957707c14aed7c761138a2
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1493'
 ht-degree: 3%
 
 ---
@@ -16,165 +16,172 @@ ht-degree: 3%
 >title="圖表模擬"
 >abstract="模擬圖表，用於了解身分識別服務如何連結身分，以及身分識別最佳化演算法如何運作。"
 
-[!DNL Graph Simulation]是Identity Service UI中的工具，可用於模擬指定特定身分組合下身分圖表的行為方式，以及設定[身分最佳化演演算法](./identity-optimization-algorithm.md)的方式。
+[!DNL Graph Simulation]是Identity Service UI中的工具，可用來根據您提供的身分來模擬身分圖表行為，以及設定[身分最佳化演演算法](./identity-optimization-algorithm.md)的方式。
 
-請觀看下列影片，瞭解在Identity Service UI工作區中使用[!DNL Graph Simulation]介面的其他資訊：
+在您將[!DNL Identity Graph Linking Rules]套用至生產資料之前，請使用它來安全地測試圖表行為。 透過定義範例事件並設定身分最佳化演演算法（包括名稱空間優先順序和「每個圖表獨特」設定），您可以檢視身分是否合併為一個圖表或保持獨立，然後視需要調整設定。 此功能可用於：
 
->[!VIDEO](https://video.tv.adobe.com/v/3444054/?captions=chi_hant&learn=on&enablevpops)
+* 防止圖表摺疊（例如，多人共用一部裝置或電話號碼時）
+* 調整名稱空間優先順序（例如，EMAIL或CRM_ID是否應該占主導地位）
+* 評估低品質或重複使用的識別碼如何影響您環境中的彙整。
 
-閱讀本檔案以瞭解如何使用[!DNL Graph Simulation]來更瞭解身分圖表行為以及圖表演演算法如何運作。
+您也可以排練設定變更，以及偵錯下游應用程式中顯示的身分問題。 例如，如果對象大小或合併的設定檔看起來錯誤，您可以在[!DNL Graph Simulation]中重新建置相關事件，以檢視您目前的規則如何塑造圖表，並嘗試更安全的替代方案。
 
-## 瞭解[!DNL Graph Simulation]介面 {#interface}
+內建範例情境可協助您向利害關係人說明身分行為和圖表摺疊風險，並支援資料品質和身分治理的購買。
 
-您可以在Adobe Experience Platform UI中存取[!DNL Graph Simulation]。 從左側導覽選取&#x200B;**[!UICONTROL Identities]**，然後從頂端標題選取&#x200B;**[!UICONTROL Graph Simulation]**。
+## 瞭解[!DNL Graph Simulation]介面
 
-![Adobe Experience Platform UI中的圖表模擬介面。](../images/graph-simulation/graph-simulation.png)
+若要存取[!DNL Graph Simulation]，請導覽至Adobe Experience Platform使用者介面中的Identity Service工作區，然後選取&#x200B;**[!UICONTROL Graph Simulation]**。
 
-[!DNL Graph Simulation]介面可分成三個區段：
+![身分服務中的圖表模擬工作區顯示活動、演演算法設定，以及模擬的圖表區域，以建立和預覽身分圖表。](../images/graph-simulation/graph-simulation-interface.png)
+
+此介面分成三個主要區段：
 
 >[!BEGINTABS]
 
 >[!TAB 活動]
 
-事件：使用&#x200B;**[!UICONTROL Events]**&#x200B;面板新增身分以模擬圖形。 完整身分必須具有身分名稱空間及其對應的身分值。 您必須至少新增兩個身分才能模擬圖形。 您也可以選取&#x200B;**[!UICONTROL Load Example]**&#x200B;以輸入預先設定的事件和演演算法設定。
+使用&#x200B;**[!UICONTROL Activity]**&#x200B;面板新增身分以模擬圖形。 每個身分識別都需要名稱空間和值。 您必須至少新增兩個身分才能執行模擬。 您也可以選取&#x200B;**[!UICONTROL Load]**&#x200B;以匯入預先設定的事件和演演算法設定，或開啟現有的圖表。
 
-![圖表模擬工具的事件面板。](../images/graph-simulation/events.png)
+![活動面板，包含可新增完整身分識別（名稱空間和值）的欄位，以及可匯入已儲存設定或現有圖表的Load控制項。](../images/graph-simulation/activities-panel.png)
 
 >[!TAB 演演算法組態]
 
-演演算法組態：使用&#x200B;**[!UICONTROL Algorithm configuration]**&#x200B;面板為您的名稱空間新增並設定最佳化演演算法。 您可以拖放名稱空間來修改其各自的優先順序排名。 您也可以選取&#x200B;**[!UICONTROL Unique Per Graph]**&#x200B;來判斷名稱空間是否是唯一的。
+使用&#x200B;**[!UICONTROL Algorithm configuration]**&#x200B;面板為您的名稱空間新增及設定最佳化演演算法。 拖放名稱空間列以變更優先順序。 您也可以選取&#x200B;**[!UICONTROL Unique Per Graph]**&#x200B;來標示名稱空間在圖形中是否必須是唯一的。
 
-![圖表模擬工具的演演算法設定。](../images/graph-simulation/algorithm-configuration.png)
+![演演算法設定面板會依優先順序列出名稱空間，並包含拖曳控制代碼和每個資料列的「每個圖表唯一的」選項。](../images/graph-simulation/algo-panel.png)
 
->[!TAB 模擬的圖表檢視器]
+>[!TAB 模擬圖形]
 
-模擬圖形檢視器：模擬圖形檢視器會根據您新增的事件和您設定的演演算法顯示產生的圖形。 兩個身分之間的直線表示已建立連結。 虛線表示連結已移除。
+使用&#x200B;**[!UICONTROL Simulated graph]**&#x200B;顯示來檢閱從您的活動和演演算法設定產生的圖形。 兩個身分之間的實線表示保留連結；虛線表示演演算法已移除該連結。
 
-![模擬圖形檢視器面板，包含模擬圖形的範例。](../images/graph-simulation/simulated-graph.png)
+![具有身分節點的模擬圖表畫布；實線顯示作用中的連結，虛線顯示演演算法移除的連結。](../images/graph-simulation/simulation-panel.png)
 
 >[!ENDTABS]
 
-## 新增事件 {#add-events}
+## [!DNL Graph Simulation]工作流程
 
-若要開始，請選取&#x200B;**[!UICONTROL Add events]**。
+### 新增活動
 
-![已選取[新增事件]按鈕。](../images/graph-simulation/add-events.png)
+若要開始模擬身分圖表，請選取&#x200B;**[!UICONTROL Add Activity]**。
 
-[!UICONTROL Event #1]的快顯視窗會出現。 從這裡，輸入您的身分名稱空間和身分值組合。 您可以使用下拉式選單來選取身分名稱空間。 或者，您可以輸入名稱空間的前幾個字母，然後選取下拉式選單中提供的選項。 選取名稱空間後，請提供與名稱空間對應的身分值。
+![反白顯示「新增活動」的活動區段，以開啟新識別事件的對話方塊。](../images/graph-simulation/add-activity.png)
 
-![具有空白介面的Event #1視窗。](../images/graph-simulation/event-one.png)
+當[!UICONTROL Activity #1]的快顯視窗出現時，請選擇身分名稱空間並輸入其值。 您可以從下拉式清單中選取名稱空間，或輸入一些字母以篩選清單。 選取名稱空間後，請輸入相符的身分值。
 
 >[!TIP]
 >
->您在[!DNL Graph Simulation]練習期間輸入的身分值不必是真正的身分值，而且可以是簡單的預留位置。
+>使用[!DNL Graph Simulation]時，您不必使用真正的身分值。
 
-完成第一個身分識別之後，請選取新增圖示(**`+`**)以新增第二個身分識別。
+[!UICONTROL Activity]介面會更新以顯示您的第一個活動。
 
-![&#x200B; {Email： tom@acme.com}的第一個完整身分識別是在圖表模擬的事件面板中輸入。](../images/graph-simulation/event-one-added.png)
+![新增第一個事件後，顯示具有所選名稱空間與身分識別值的活動#1動清單。](../images/graph-simulation/activity-one.png)
 
-接下來，重複相同的步驟並新增第二個身分。 需要兩個完全合格的身分才能產生身分圖表。 在下列範例中，ECID會新增為名稱空間，且會提供`111`的值。 完成後，選取&#x200B;**[!UICONTROL Save]**。
+再次選取&#x200B;**[!UICONTROL Add Activity]**&#x200B;並完成第二個活動。 您至少需要兩個完整身分（名稱空間加上值）才能產生圖形。
 
-![&#x200B; {ECID： 111}的第二個身分已新增至事件#1。](../images/graph-simulation/first-event.png)
+![具有兩個事件（Activity #1和Activity #2）的活動清單，每個事件都具有名稱空間和值，準備進行模擬。](../images/graph-simulation/activity-two.png)
 
-[!UICONTROL Events]介面會更新以顯示您的第一個事件，在此案例中為： `{Email: tom@acme.com, ECID: 111}`。
-
-![更新的事件介麵包含{Email： tom@acme.com，ECID： 111}。](../images/graph-simulation/add-second-event.png)
-
-接下來，重複相同的步驟以新增第二個事件。 對於事件#2，新增`{Email: summer@acme.com}`作為您的第一個身分，然後新增相同的`{ECID: 111}`作為第二個身分，因此建立第二個事件： `{Email: summer@acme.com}, {ECID: 111}`。 完成後，您應該有兩個事件，一個用於`{Email: tom@acme.com, ECID: 111}`，另一個用於`{Email: summer@acme.com}, {ECID: 111}`。
-
-![更新的事件介麵包含兩個事件。](../images/graph-simulation/two-events.png)
-
-### 載入範例 {#load-example}
-
-選取&#x200B;**[!UICONTROL Load example]**&#x200B;以使用預先設定的演演算法和事件設定來設定範例圖形。
-
-![已選取載入範例選項。](../images/graph-simulation/load-example.png)
-
-此時會出現一個快顯視窗，提供您可用的圖表情境，供您選擇：
-
-| 範例圖表 | 說明 | 範例 |
-| --- | --- | --- |
-| 共用裝置 | 共用裝置是指兩個不同使用者登入同一部裝置的情境。 | 夫妻共用一個iPad進行網際網路瀏覽和電子商務。 |
-| 無效 (非唯一) 電話 | 無效或非唯一電話是指兩個不同使用者使用相同電話號碼建立帳戶的情況。 | 母親和女兒使用他們共用的家庭電話號碼註冊任何電子商務帳戶。 |
-| 「不良」身分識別值 | 「不良」身分值是指身分服務因錯誤實作而產生非唯一IDFA的情況。 | 由於程式碼實作問題，WebSDK會針對每個事件錯誤傳送`user_null`值。 |
-
-![顯示可用預先設定範例的視窗：共用裝置、無效的電話和錯誤的身分值。](../images/graph-simulation/example-options.png)
-
-選取任何選項，以使用預先設定的事件和演演算法載入[!DNL Graph Simulation]。 您仍然可以對任何預先載入的圖表案例範例進行進一步的設定。
-
-![為無效電話設定的事件和演演算法。](../images/graph-simulation/example-loaded.png)
-
-完成後，選取&#x200B;**[!UICONTROL Simulate]**。
-
-![針對無效電話模擬的範例圖表。](../images/graph-simulation/example-simulated.png)
-
-### 使用文字版本 {#use-text-version}
-
-您也可以使用文字模式來設定事件。 若要使用文字模式，請選取設定圖示，然後選取&#x200B;**[!UICONTROL Text (Advanced users)]**。
-
-![選取的設定圖示。](../images/graph-simulation/settings.png)
-
-您可以使用文字模式手動輸入身分。 請使用冒號(`:`)來區別與您輸入的名稱空間對應的身分值，然後使用逗號(`,`)來分隔您的身分。 若要區分不同的事件，請為每個事件使用新行。
-
-![使用文字模式版本的事件面板。](../images/graph-simulation/text-version.png)
-
-### 編輯事件 {#edit-event}
-
-若要編輯事件，請選取指定事件旁的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL Edit]**。
-
-![已選取編輯事件圖示。](../images/graph-simulation/edit.png)
-
-### 刪除事件 {#delete-event}
-
-若要刪除事件，請選取指定事件旁的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL Delete]**。
-
-![已選取刪除事件圖示。](../images/graph-simulation/delete.png)
-
-## 設定演算法 {#configure-algorithm}
+### 設定演算法
 
 >[!IMPORTANT]
 >
->您設定的演演算法會指示Identity Service如何處理您在事件中輸入的名稱空間。 您在[!DNL Graph Simulation UI]中組合的任何設定都不會儲存在身分設定中。
+>您設定的演演算法會控制Identity Service如何處理活動中的名稱空間。 您在[!DNL Graph Simulation UI]中設定的任何專案都不會儲存到Identity Service識別設定。
 
-新增事件後，您現在可以設定將用來模擬圖表的演演算法。 若要開始，請選取&#x200B;**[!UICONTROL Add config]**。
+活動就緒後，請設定模擬的演演算法。 選擇「**[!UICONTROL Add config]**」。
 
-![演演算法設定面板。](../images/graph-simulation/add-config.png)
+![已選取新增設定的演演算法設定區域，以開始新增名稱空間優先順序和唯一性規則。](../images/graph-simulation/add-config.png)
 
-空白的設定列隨即顯示。 首先，輸入您用於事件的相同名稱空間。 在此情況下，請先輸入電子郵件。 輸入名稱空間後，[!UICONTROL Identity Symbol]和[!UICONTROL Identity Type]的欄會自動填入。
+新增您希望演演算法考慮的每個名稱空間。 使用下拉式清單進行搜尋，或輸入前幾個字母以縮小清單。
 
-![第一個組態專案。](../images/graph-simulation/add-namespace.png)
+* **名稱空間優先順序**：您可以控制身分圖表內每個名稱空間的重要順序。 例如，如果您的圖表使用CRMID、ECID、電子郵件和Apple IDFA，您可以設定其優先順序，以反映在連結身分時應先考慮哪些專案。 清單頂端的名稱空間有最高優先順序。
+* **唯一的名稱空間**：當名稱空間標示為唯一時，身分服務會確保圖形中只會出現一個具有該名稱空間的身分。 例如，如果電子郵件設定為唯一，則每個圖表將僅包含一個電子郵件身分。 如果存在多個具有相同電子郵件的身分，則會移除最舊的連線以維持唯一性。
 
-接下來，重複相同的步驟，並新增第二個名稱空間（在此例中為ECID）。 輸入完所有名稱空間後，您就可以開始設定其優先順序和唯一性。
+將名稱空間列拖曳到優先順序：頂端列是最高優先順序，底部是最低優先順序。 若要將名稱空間在圖形中視為唯一，請選取其&#x200B;**[!UICONTROL Unique Per Graph]**&#x200B;核取方塊。
 
-* **名稱空間優先順序**：名稱空間的優先順序決定它與指定身分圖表中的其他名稱空間相比的相對重要性。 例如，如果您的身分圖表有四個不同的名稱空間：CRMID、ECID、Email和Apple IDFA，您可以設定優先順序來判斷四個名稱空間的重要性順序。
-* **唯一的名稱空間**：如果名稱空間被指定為唯一，則身分服務將會產生圖形，並警告只能有一個具有指定唯一名稱空間的身分。 例如，如果電子郵件名稱空間指定為唯一的名稱空間，則圖表只能有一個包含電子郵件的身分。 如果電子郵件名稱空間中有多個身分，則會移除最舊的連結。
+準備就緒後，選取&#x200B;**[!UICONTROL Simulate]**。
 
-若要設定名稱空間優先順序，請選取名稱空間列，並將其拖曳到您想要的優先順序順序，頂端列代表較高的優先順序，底部列代表較低的優先順序。 若要將名稱空間指定為唯一，請選取&#x200B;**[!UICONTROL Unique Per Graph]**&#x200B;核取方塊。
+![演演算法組態，名稱空間已重新排序為優先順序，視需要設定每個圖形的唯一核取方塊，以及模擬可用來執行模擬。](../images/graph-simulation/add-namespaces.png)
 
-完成後，選取&#x200B;**[!UICONTROL Simulate]**。
+### 檢視模擬圖形
 
-![已設定所有名稱空間。](../images/graph-simulation/all-namespaces.png)
-
-## 檢視模擬圖形
-
-[!UICONTROL Simulated Graph]區段會顯示根據您新增的事件和您設定的演演算法所產生的身分圖表。
+[!UICONTROL Simulated Graph]區段會顯示從您的活動和演演算法設定產生的一個或多個圖形。
 
 | 圖表圖示 | 說明 |
 | --- | --- |
 | 實線 | 實線表示兩個身分之間的已建立連結。 |
 | 虛線 | 虛線代表兩個身分之間的已移除連結。 |
-| 線上號碼 | 某一行上的數字代表產生該指定連結時的時間戳記。 最低數字(1)代表最早建立的連結。 |
+| 線上號碼 | 行上的數字表示該連結相對於其他連結形成的時間。 最低數字(1)是最早的連結。 |
 
-在下列範例圖表中，`{Email: tom@acme.com}`和`{ECID: 111}`之間有虛線，原因如下：
+![模擬圖表輸出：身分為節點、以序號標籤的連結（如果適用），符合實線和虛線圖例。](../images/graph-simulation/simulated-graph.png)
 
-* 在演演算法設定步驟中，電子郵件被指定為唯一。 因此，圖形中可能只有一個具有電子郵件名稱空間的身分。
-* `{Email: tom@acme.com}`與`{ECID: 111}`之間的連結是第一個建立的身分識別(事件#1)。 這是最舊的連結，因此會被移除。
+## 其他功能
 
-![模擬圖形檢視器面板，包含模擬圖形的範例。](../images/graph-simulation/simulated-graph.png)
+您也可以編輯或刪除活動、在文字模式中輸入活動、載入範例情境，或從Identity Service提取現有圖形。
+
+### 編輯活動 {#edit-activity}
+
+若要編輯活動，請選取指定活動旁的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL Edit]**。
+
+![已開啟活動旁的列動作功能表，並已選取編輯來變更該活動的名稱空間或值。](../images/graph-simulation/edit.png)
+
+### 刪除活動 {#delete-activity}
+
+若要刪除活動，請選取指定活動旁的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL Delete]**。
+
+![已開啟活動旁的資料列動作功能表，並已選取刪除以將該活動從模擬中移除。](../images/graph-simulation/delete.png)
+
+### 使用文字模式 {#use-text-mode}
+
+您可以使用文字模式來設定活動。 若要使用文字模式，請選取設定圖示，然後選取&#x200B;**[!UICONTROL Text (Advanced users)]**。
+
+![開啟設定控制項以顯示文字（進階使用者），以將活動專案切換至文字模式。](../images/graph-simulation/use-text-mode.png)
+
+在文字模式中，輸入每個身分識別為`namespace:value`。 以逗號(`,`)分隔相同事件中的多個身分。 為每個事件開始新的一行。
+
+![以純文字顯示的活動：每一行都是事件，以名稱空間寫入的身分識別:value配對，以逗號分隔。](../images/graph-simulation/text-mode-display.png)
+
+### 載入範例 {#load-example}
+
+選取&#x200B;**[!UICONTROL Load example]**&#x200B;以載入具有預設活動與演演算法設定的現成圖表。
+
+![載入控制項用來開啟選項，包括載入內建範例情境，其中包含預設的活動和演演算法。](../images/graph-simulation/load.png)
+
+對話方塊會列出您可以開啟的情境：
+
+| 範例圖表 | 說明 | 範例 |
+| --- | --- | --- |
+| 共用裝置 | 兩個不同的使用者登入同一部裝置。 | 夫妻共用一個iPad進行瀏覽和電子商務。 |
+| 無效 (非唯一) 電話 | 兩個不同的使用者使用相同的電話號碼註冊。 | 母親和女兒使用共用的家庭電話號碼註冊電子商務帳戶。 |
+| 「不良」身分識別值 | 實作錯誤會傳送重複或預留位置ID （例如，許多使用者會使用相同的IDFA）。 | 由於程式碼缺陷，Web SDK會在每個活動上傳送`user_null`值。 |
+
+![圖表選擇器對話方塊範例，其中列出共用裝置、無效（非唯一）電話，以及每個案例的簡短說明的「錯誤」身分值。](../images/graph-simulation/example-graph.png)
+
+選擇情境以載入具有相符活動和演演算法設定的[!DNL Graph Simulation]。 您可以像編輯任何其他模擬一樣編輯結果。
+
+載入範例情境後![圖表模擬：活動和演演算法設定面板已預先填入產生的模擬圖表中。](../images/graph-simulation/shared-device.png)
+
+### 載入現有圖表 {#load-existing-graph}
+
+您可以使用[!DNL Graph Simulation]載入現有的圖表，並檢視其活動、演演算法組態和圖表。
+
+選取&#x200B;**[!UICONTROL Load]**，然後選取&#x200B;**[!UICONTROL Existing graph]**。
+
+![已選取現有圖表展開的[載入]功能表，以匯入已儲存在Identity Service中的圖表。](../images/graph-simulation/load-existing.png)
+
+在對話方塊中，輸入屬於您要檢查的圖形的名稱空間和身分值。
+
+![使用欄位識別現有的圖表對話方塊，以輸入屬於您要載入之圖表的名稱空間和身分值。](../images/graph-simulation/identify-graph.png)
+
+載入成功時，[!DNL Graph Simulation]會顯示包含該身分的圖形。
+
+>[!TIP]
+>
+>在前[個身分設定](./identity-settings-ui.md)熒幕上設定您的設定後，您可以使用&#x200B;**載入現有圖形**&#x200B;選項，根據這些確切的設定來模擬您的圖形。 模擬將使用您定義的組態。
+
+![從現有圖形填入的圖形模擬：活動、演演算法設定和模擬的圖形檢視會反映載入的身分圖形。](../images/graph-simulation/existing-graph-loaded.png)
 
 ## 後續步驟
 
-閱讀本檔案後，您現在已瞭解如何使用[!DNL Graph Simulation]工具，以更清楚瞭解在指定一組特定規則和設定時，身分資料的處理方式。 如需詳細資訊，請閱讀下列檔案：
+在變更生產設定之前，您可以使用[!DNL Graph Simulation]來檢視Identity Service如何連結不同規則下的身分。 若要更深入瞭解，請參閱下列檔案：
 
 * [[!DNL Identity Graph Linking Rules] 概觀](./overview.md)
 * [身分識別最佳化演算法](./identity-optimization-algorithm.md)
