@@ -1,12 +1,10 @@
 ---
 title: 使用流量服務API將資料庫連線至Experience Platform
 description: 瞭解如何使用API將Databricks連結至Experience Platform。
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '530'
 ht-degree: 3%
 
 ---
@@ -15,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* [!DNL Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
->
->* [!DNL Databricks]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
+>[!DNL Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 
 閱讀本指南，瞭解如何使用[!DNL Databricks]API[[!DNL Flow Service] 將您的](https://developer.adobe.com/experience-platform-apis/references/flow-service/)帳戶連結至Adobe Experience Platform。
 

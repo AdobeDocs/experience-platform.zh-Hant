@@ -2,12 +2,11 @@
 title: Databricks
 description: 瞭解將Databricks連線至Experience Platform所需的先決條件步驟。
 badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-06-17T00:00:00Z
+last-substantial-update: 2026-03-14T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '606'
 ht-degree: 2%
 
 ---
@@ -16,9 +15,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->* [!DNL Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
->
->* [!DNL Databricks]來源是測試版。 閱讀來源概觀中的[條款與條件](../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
+>[!DNL Databricks]來源可在來源目錄中提供給已購買Real-Time CDP Ultimate的使用者。
 
 [!DNL Databricks]是雲端型平台，專為資料分析、機器學習和AI而設計。 您可以使用[!DNL Databricks]來整合及提供整體環境，以大規模建置、部署及管理資料解決方案。
 
