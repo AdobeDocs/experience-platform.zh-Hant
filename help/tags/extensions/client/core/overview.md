@@ -2,9 +2,9 @@
 title: 核心擴充功能概觀
 description: 瞭解Adobe Experience Platform中的核心標籤擴充功能。
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 0750a684c7383bd3f7cb18749078989ad5571816
 workflow-type: tm+mt
-source-wordcount: '5380'
+source-wordcount: '5387'
 ht-degree: 61%
 
 ---
@@ -122,7 +122,7 @@ ht-degree: 61%
 
 #### 資料元素變更
 
-如果指定的資料元素變更，則觸發此事件。 您必須提供資料元素的名稱。 您可以在文字欄位中輸入資料元素的名稱，或選取文字欄位右側的資料元素圖示，然後從出現的對話方塊內提供的清單中進行選擇，以選取資料元素。
+如果指定的資料元素變更，則觸發此事件。 每秒進行一次變更輪詢。 您必須提供資料元素的名稱。 您可以在文字欄位中輸入資料元素的名稱，或選取文字欄位右側的資料元素圖示，然後從出現的對話方塊內提供的清單中進行選擇，以選取資料元素。
 
 #### 直接呼叫 {#direct-call-event}
 
