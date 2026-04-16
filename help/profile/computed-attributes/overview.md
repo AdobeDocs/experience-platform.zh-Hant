@@ -20,7 +20,7 @@ ht-degree: 2%
 - 跨平台和應用程式使用的彙總設定檔行為資料標準化
 - 將舊的設定檔事件資料合併成有意義的行為深入分析，進而提供更出色的資料管理
 
-這些彙總是根據擷取到Adobe Experience Platform中的使用者建立的設定檔啟用體驗事件資料集來計算。 這表示無法使用透過SDK服務權杖建立之系統產生的資料集，例如Adobe Journey Optimizer系統資料集&#x200B;****。
+這些彙總是根據擷取到Adobe Experience Platform中的使用者建立的設定檔啟用體驗事件資料集來計算。 這表示無法使用透過SDK服務權杖建立之系統產生的資料集，例如Adobe Journey Optimizer系統資料集&#x200B;**&#x200B;**。
 
 每個計算屬性都是您在設定檔聯合結構描述上建立的設定檔屬性，且會分組在聯合結構描述中的「SystemComputedAttribute」欄位群組下。
 
