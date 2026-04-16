@@ -4,7 +4,7 @@ title: Amazon Kinesis連線
 description: 建立與您的Amazon Kinesis儲存空間的即時輸出連線，以從Adobe Experience Platform串流資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
 source-wordcount: '2061'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 ## 概觀 {#overview}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 > 此目的地僅供[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
 
