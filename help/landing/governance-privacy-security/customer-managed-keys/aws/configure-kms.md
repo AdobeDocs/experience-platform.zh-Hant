@@ -2,9 +2,9 @@
 title: 設定客戶自控金鑰的AWS KMS
 description: 瞭解如何設定Amazon Web Services金鑰管理服務(KMS)，以便與Adobe Experience Platform中的客戶自控金鑰搭配使用。
 exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5d59dffa00e041c91b3e1a8943fa3df9e9d7b4ef
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->本檔案適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/landing/multi-cloud)。
->
->AWS上的[客戶自控金鑰](../overview.md) (CMK)支援Privacy and Security Shield，但不適用於Healthcare Shield。 Azure上的CMK同時支援Privacy和Security Shield以及Healthcare Shield。
+>本檔案適用於在Amazon Web Services (AWS)上執行的Experience Platform實作。 目前有限數量的客戶可使用在AWS上執行的Experience Platform 。 若要進一步瞭解支援的Experience Platform基礎結構，請參閱[Experience Platform多雲端總覽](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)。
 
 使用本指南，透過Amazon Web Services (AWS)金鑰管理服務(KMS)建立、管理和控制Adobe Experience Platform的加密金鑰，來保護您的資料。 此整合可簡化法規遵循、透過自動化簡化作業，並免除維護您自己的關鍵管理基礎建設的必要性。
 
-如需Customer Journey Analytics的特定指示，請參閱[Customer Journey Analytics CMK檔案](https://experienceleague.adobe.com/zh-hant/docs/analytics-platform/using/cja-privacy/cmk)
+如需Customer Journey Analytics的特定指示，請參閱[Customer Journey Analytics CMK檔案](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -40,7 +38,7 @@ ht-degree: 0%
 - **Experience Platform的資料安全性**：探索Experience Platform如何確保資料安全性，以及如何與AWS KMS等外部服務整合以進行加密。 Experience Platform使用HTTPS TLS v1.2保護資料以進行傳輸、停止使用雲端提供者加密、隔離儲存以及可自訂的驗證和加密選項。 如需如何確保資料安全的詳細資訊，請參閱[治理、隱私權及安全性總覽](../overview.md)，或Experience Platform中[資料加密](../../encryption.md)的檔案。
 - **AWS Management Console**：中央樞紐，您可從一個Web應用程式存取及管理所有AWS服務。 使用搜尋列快速尋找工具、檢查通知、管理您的帳戶和帳單，以及自訂您的設定。 如需詳細資訊，請參閱[官方AWS管理主控台檔案](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html)。
 
-## 快速入門 {#get-started}
+## 開始使用 {#get-started}
 
 本指南要求您已擁有Amazon Web Services帳戶的存取權和管理主控台的存取權。 請依照下列步驟開始：
 
@@ -112,7 +110,7 @@ AWS KMS僅於特定地區提供。 請確定您在支援KMS的區域中作業。
 
 當您對設定感到滿意時，請選取&#x200B;**[!DNL Next]**&#x200B;以繼續工作流程。
 
-![&#x200B; Configure金鑰工作流程的第二步，並醒目提示別名、說明、標籤和下一步。](../../../images/governance-privacy-security/key-management-service/add-labels.png)
+![ Configure金鑰工作流程的第二步，並醒目提示別名、說明、標籤和下一步。](../../../images/governance-privacy-security/key-management-service/add-labels.png)
 
 ## 定義主要管理許可權 {#define-key-admins}
 
@@ -152,4 +150,4 @@ AWS KMS僅於特定地區提供。 請確定您在支援KMS的區域中作業。
 
 ## 後續步驟
 
-設定AWS KMS後，請使用[!UICONTROL 平台加密設定] UI或Adobe Experience Platform API繼續設定整合。 若要繼續設定客戶自控金鑰功能的一次性程式，請繼續[UI設定指南](./ui-set-up.md)。
+設定AWS KMS後，繼續使用[!UICONTROL Platform Encryption Configuration] UI或Adobe Experience Platform API設定整合。 若要繼續設定客戶自控金鑰功能的一次性程式，請繼續[UI設定指南](./ui-set-up.md)。
