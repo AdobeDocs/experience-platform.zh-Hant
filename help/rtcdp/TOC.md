@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將取自多個企業來源的已知和匿名資料匯整起來，並藉此建立客戶輪廓，利用這些輪廓建立客群，以及對第三方目標啟動這些客群。
 role: Admin
-source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
+source-git-commit: 70dcebedd06c342e02ee2307042d4a5267b364d9
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 62%
+source-wordcount: '320'
+ht-degree: 60%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 62%
 # Real-Time Customer Data Platform 說明 {#rtcdp}
 
 * [Real-Time CDP檔案](home.md)
-* 快速入門 {#intro}
+* 開始使用 {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Real-Time CDP 概觀](overview.md)
       * [開始使用 Real-Time CDP](get-started.md)
@@ -42,17 +42,17 @@ ht-degree: 62%
 * 資料集 {#datasets}
    * [資料集](datasets/dataset.md)
    * [Experience Platform上的資料品質](datasets/data-quality.md)
-* 目標 {#destinations}
+* 目的地 {#destinations}
    * [目的地概觀](destinations/overview.md)
    * [Real-Time CDP B2B 版本中的目的地](destinations/b2b.md)
 * 護欄 {#guardrails}
    * [Real-Time CDP護欄概觀](guardrails/overview.md)
-   * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [&#x200B; [!DNL Edge Network API]的護欄](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
+   * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ [!DNL Edge Network API]的](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}護欄
    * [資料與分段的 [!DNL Real-Time Customer Profile] 護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [資料的 [!DNL Identity Service] 護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [&#x200B; [!DNL Query Service]的護欄](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=zh-Hant){target="_blank"}
+   * [資料的 [!DNL Identity Service] 護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [ [!DNL Query Service]的](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}護欄
+   * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * 身分識別 {#identity}
    * [身分識別和身分識別命名空間](profile/identities-overview.md)
 * 合併原則 {#merge-policies}
@@ -68,7 +68,7 @@ ht-degree: 62%
    * [帳戶相符的銷售機會](b2b-ai-ml-services/lead-to-account-matching.md)
    * 預測性銷售線索與帳戶評分 {#predictive-lead-and-account-scoring-intro}
       * [預測性銷售機會和帳戶評分概觀](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
-      * [管理預測性銷售機會和帳戶評分 &#x200B;](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
+      * [管理預測性銷售機會和帳戶評分 ](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * 結構描述 {#schemas}
    * [結構描述概觀](schemas/overview.md)
    * [Real-Time CDP B2B 版本中的結構描述](schemas/b2b.md)
@@ -77,6 +77,7 @@ ht-degree: 62%
    * [Real-Time CDP B2B 版本中的來源](sources/b2b.md)
 * 使用案例 {#use-cases}
    * [範例使用案例概觀](/help/rtcdp/use-case-guides/overview.md)
+   * [運用客戶體驗使用案例來推動業務目標](/help/rtcdp/use-case-guides/business-use-case-framework.md)
    * 客戶贏取 {#customer-acquisition}
       * [在不依賴第三方Cookie的情況下與新客戶互動及取得新客戶](/help/rtcdp/partner-data/prospecting.md)
       * [使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)
