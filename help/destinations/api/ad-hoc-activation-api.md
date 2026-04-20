@@ -5,9 +5,9 @@ title: 透過臨機啟動API將對象啟動至批次目的地
 description: 本文說明透過臨機啟動API啟動對象的端對端工作流程，包括在啟動前進行的細分工作。
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 944cb03ae8a432b09b54b148e94b2ee1e1bcbc5d
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,10 @@ Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Exp
 包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
 
 * Content-Type： `application/json`
+
+### API參考檔案 {#api-reference-documentation}
+
+在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱[Ad Hoc Activation API參考](https://developer.adobe.com/experience-platform-apis/references/ad-hoc-activation)。
 
 ## 步驟3：在Experience Platform UI中建立啟動流程 {#activation-flow}
 
