@@ -2,20 +2,15 @@
 title: Marketo Engage人員同步
 description: 使用Marketo Engage Person Sync聯結器將個人對象的更新串流至Marketo Engage中的對應記錄。
 last-substantial-update: 2025-01-14T00:00:00Z
-badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: bfff4cd5ffc57abda2f9672d5db487e9ebebee9d
 workflow-type: tm+mt
-source-wordcount: '1196'
-ht-degree: 6%
+source-wordcount: '1176'
+ht-degree: 5%
 
 ---
 
 # Marketo Engage人員同步連線 {#marketo-engage-person-sync}
-
->[!IMPORTANT]
->
->此目標連接器為測試版，僅供精選客戶使用。如欲請求存取權，請和您的 Adobe 代表聯絡。
 
 >[!IMPORTANT]
 >
@@ -91,7 +86,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->設定目的地的使用者必須在Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
+>設定目的地的使用者必須在Marketo執行個體和資料分割中擁有[編輯人員](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database)許可權。
 
 ![連線到目的地](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,7 +97,7 @@ ht-degree: 6%
 * **[!UICONTROL First searchable field]**：要取消重複的欄位。 欄位必須出現在輸入的每個潛在客戶記錄中。 預設為電子郵件
 * **[!UICONTROL First searchable field]**：要進行重複資料刪除的次要欄位。 欄位必須出現在輸入的每個潛在客戶記錄中。 選填
 
-選取執行個體後，您還需要選取要與組態整合的Lead Partition。 [潛在客戶分割](https://experienceleague.adobe.com/zh-hant/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)是Marketo Engage中的概念，用於依業務考量（例如品牌或銷售區域）來區分潛在客戶記錄。 如果您的Marketo訂閱沒有工作區與分割區功能，或是您的訂閱中尚未建立其他分割區，則只有預設分割區可用。 單一設定只能更新存在於其設定分割中的潛在客戶記錄。
+選取執行個體後，您還需要選取要與組態整合的Lead Partition。 [潛在客戶分割](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions)是Marketo Engage中的概念，用於依業務考量（例如品牌或銷售區域）來區分潛在客戶記錄。 如果您的Marketo訂閱沒有工作區與分割區功能，或是您的訂閱中尚未建立其他分割區，則只有預設分割區可用。 單一設定只能更新存在於其設定分割中的潛在客戶記錄。
 
 >[!IMPORTANT]
 >
