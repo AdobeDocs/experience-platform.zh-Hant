@@ -1,9 +1,10 @@
 ---
 title: 事件轉送引導式設定
 description: 瞭解如何使用引導式設定來設定事件轉送。
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+exl-id: c155dec0-9130-4452-834a-08d98a15b006
+source-git-commit: a2dd6b2a5ec8ccf4ca93e845c5b7b2b39d8d1599
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -30,6 +31,10 @@ ht-degree: 1%
 若要開始使用此功能，請在&#x200B;**[!UICONTROL Get Started]**&#x200B;資料集合UI中選取&#x200B;**[!UICONTROL Event Forwarding]**。
 
 ![事件轉送首頁在資料收集UI中顯示[開始使用]卡片](../../images/ui/guided-setup/get-started.png)
+
+>[!INFO]
+>
+>您也可以直接從資料收集首頁存取引導式設定。
 
 ### 建立新的標籤屬性 {#new-property}
 

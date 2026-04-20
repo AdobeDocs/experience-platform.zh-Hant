@@ -2,9 +2,9 @@
 title: Meta Conversions API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Meta Conversions API擴充功能。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: ee615de825e6c415c356b7933a661f0da2121f08
 workflow-type: tm+mt
-source-wordcount: '2437'
+source-wordcount: '2220'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* 已購買Real-Time CDP Prime和Ultimate套件的客戶可使用快速入門功能。 如需詳細資訊，請聯絡您的Adobe代表。
+>* 已購買Real-Time CDP Prime和Ultimate套件的客戶可使用快速入門功能。 如需詳細資訊，請聯絡 Adobe 代表。
 >* 此功能適用於全新實作，目前不支援在現有標籤和事件轉送屬性上自動安裝擴充功能和設定。
 
 >[!NOTE]
@@ -140,40 +140,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此功能旨在協助您開始實施事件轉送。 它不會提供端對端、功能齊全的實施，以配合所有使用案例。
+>引導式設定功能可協助您輕鬆且高效地完成設定。 此工具可自動執行在Adobe標籤和事件轉送中執行的多個步驟。 它不會提供端對端、功能齊全的實施，以配合所有使用案例。
 
-此設定會自動安裝Meta Conversions API和Meta Pixel擴充功能。 Meta建議使用此混合式實作，以收集並轉寄事件轉換伺服器端。
-快速設定功能旨在協助客戶開始事件轉送實作，而非旨在提供因應所有使用案例的端對端完整功能實作。
-
-若要安裝此功能，請在Adobe Experience Platform資料彙集&#x200B;**[!UICONTROL Get Started]**&#x200B;頁面上為&#x200B;**[!DNL Send Conversions Data to Meta]**&#x200B;選取&#x200B;**[!UICONTROL Home]**。
-
-![資料彙集首頁顯示中繼資料的轉換](../../../images/extensions/server/meta/conversion-data-to-meta.png)
-
-輸入您的&#x200B;**[!UICONTROL Domain]**，然後選取&#x200B;**[!UICONTROL Next]**。 此網域將用作您自動產生的標籤和事件轉送屬性、規則、資料元素、資料串流等的命名慣例。
-
-![要求網域名稱的歡迎畫面](../../../images/extensions/server/meta/welcome.png)
-
-在&#x200B;**[!UICONTROL Initial Setup]**&#x200B;對話方塊中，輸入您的&#x200B;**[!UICONTROL Meta Pixel ID]**、**[!UICONTROL Meta Conversion API Access Token]**&#x200B;和&#x200B;**[!UICONTROL Data Layer Path]**，然後選取&#x200B;**[!UICONTROL Next]**。
-
-![初始設定對話方塊](../../../images/extensions/server/meta/initial-setup.png)
-
-請等候數分鐘以完成初始設定程式，然後選取&#x200B;**[!UICONTROL Next]**。
-
-![初始設定完成確認畫面](../../../images/extensions/server/meta/setup-complete.png)
-
-從&#x200B;**[!UICONTROL Add Code on Your Site]**&#x200B;對話方塊中，複製使用複製![複製](/help/images/icons/copy.png)函式提供的程式碼，並將其貼到來源網站的`<head>`中。 實作之後，請選取&#x200B;**[!UICONTROL Start Validation]**
-
-![在您的網站對話方塊上新增程式碼](../../../images/extensions/server/meta/add-code-on-your-site.png)
-
-[!UICONTROL Validation Results]對話方塊會顯示Meta擴充功能實作結果。 選取 **[!UICONTROL Next]**。您也可以選取&#x200B;**[!UICONTROL Assurance]**&#x200B;連結，以檢視其他驗證結果。
-
-![顯示實作結果的測試結果對話方塊](../../../images/extensions/server/meta/test-results.png)
-
-**[!UICONTROL Next Steps]**&#x200B;畫面顯示確認安裝完成。 從這裡，您可以選擇新增事件以最佳化實施，如下節所示。
-
-如果您不想新增其他事件，請選取&#x200B;**[!UICONTROL Close]**。
-
-![後續步驟對話方塊](../../../images/extensions/server/meta/next-steps.png)
+若要開始使用引導式設定，請依照[事件轉送引導式設定](../../../ui/event-forwarding/guided-setup.md)中的指示操作。
 
 #### 新增其他事件
 
