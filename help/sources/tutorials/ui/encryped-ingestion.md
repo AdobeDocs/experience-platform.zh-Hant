@@ -2,7 +2,7 @@
 title: 將加密資料內嵌在來源UI Workspace中
 description: 瞭解如何將加密資料內嵌在來源UI工作區中。
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: c52a0e3910697b420f88425388431a4ad3d53072
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 閱讀本指南，瞭解如何使用UI將加密資料與雲端儲存批次來源一起內嵌。
 
-## 快速入門
+## 開始使用
 
 在繼續本教學課程之前，請閱讀以下檔案，以更加瞭解以下Experience Platform功能和概念。
 
@@ -37,7 +37,7 @@ ht-degree: 6%
 ## 建立加密金鑰對 {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
->id="platform_sources_encrypted_encryptionKeyId"
+>id="platform_sources_encrypted_encryptionkeyid"
 >title="加密金鑰 ID"
 >abstract="提供加密金鑰 ID，且此 ID 必須與用來加密來源資料的加密金鑰對應。"
 
