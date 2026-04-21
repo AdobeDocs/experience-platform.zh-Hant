@@ -1,11 +1,9 @@
 ---
 title: 運用客戶體驗使用案例來推動業務目標
 description: 使用實用的研討會就緒架構，以定義、安排優先順序並啟用與可衡量業務成果相關的客戶體驗使用案例。 套用簡單的Why → Who/What/Where → How模型以協調團隊、指導執行和產生影響。
-hide: true
-hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
+source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
