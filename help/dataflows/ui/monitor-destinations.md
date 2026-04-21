@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 6aacade76b31268b8f6a9db2b8c191d8c7702a1b
 workflow-type: tm+mt
 source-wordcount: '3577'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="失敗的身分識別"
->abstract="針對所選目的地失敗的個別設定檔身分計數。 請檢查錯誤診斷以取得詳細資料。"
+>abstract="針對所選目的地失敗的個體輪廓身分識別的計數。請查看錯誤診斷以取得詳細資料。"
 
 針對串流目的地，[!UICONTROL Dataflow runs]索引標籤會提供資料流執行時每小時的量度資料更新。 標示為最顯著的統計資料是用於身分。
 
@@ -142,12 +142,12 @@ ht-degree: 9%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分識別的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="收到的設定檔"
->abstract="資料流執行中接收的設定檔總數。 對於已排程的匯出，這包括最新對象快照的設定檔，加上在快照建立時間和匯出時間之間對象成員資格或身分有所變更的任何設定檔。 因此，此計數可能會高於對象中的設定檔數。"
+>abstract="資料流執行中收到的輪廓總數。對於排定匯出，這包括最新客群快照的輪廓，加上在快照建立時間和匯出時間之間客群會籍或身分識別有所變更的任何輪廓。因此，此計數可能會高於客群中的輪廓數量。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
@@ -208,7 +208,7 @@ ht-degree: 9%
 >
 >您現在可以在監視控制面板中檢視資料流及其相關資料流執行的資訊。 如需詳細資訊，請閱讀以下章節。
 
-## 監視目的地控制面板 {#monitoring-destinations-dashboard}
+## 監視目的地儀表板 {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
