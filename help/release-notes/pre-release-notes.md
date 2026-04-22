@@ -2,10 +2,10 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d052230ec5ddc4a28495f4928ab32957bf9038ac
+source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 20%
+source-wordcount: '1344'
+ht-degree: 17%
 
 ---
 
@@ -45,10 +45,13 @@ Adobe Experience Platform 的新功能及現有功能更新：
 
 | 目標 | 說明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Microsoft Ads客戶符合](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 依電子郵件地址比對客戶，並在[!DNL Microsoft Advertising Network]中與客戶重新互動，包括搜尋和對象廣告。 將您的[!DNL Microsoft Advertising]帳戶連結至Real-Time CDP，以直接從Experience Platform自動建立和管理客戶比對清單。 |
+| [!BADGE Beta]{type=Informative} [Microsoft Ads客戶符合](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 依電子郵件地址比對客戶，並在[!DNL Microsoft Advertising Network]中與客戶重新互動，包括搜尋和對象廣告。 將您的[!DNL Microsoft Advertising]帳戶連結至Real-Time CDP，以直接從Experience Platform自動建立和管理客戶比對清單。 若要取得存取權，請聯絡您的Adobe客戶經理。 |
 | [!BADGE Beta]{type=Informative} [Reddit自訂對象](../destinations/catalog/advertising/reddit-custom-audience.md) | 將對象從Experience Platform傳送至[!DNL Reddit Ads]。 連線您的[!DNL Reddit]帳戶、對應身分並啟用對象，以聯絡在[!DNL Reddit]上積極探索其興趣的人。 |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]是所有新[!DNL Amazon Ads]連線的目前目的地。 如果您有現有的[（舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)連線，它將繼續運作，而不會進行任何必要的變更。 [!DNL Amazon Ads v2]連線到[!DNL Ads Data Manager]，後者支援擴充的身分型別、位址相關欄位，以及跨[!DNL Amazon Ads]個產品的資料共用，相較於[&#x200B; （舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)改善鎖定目標和對象符合率。 |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]是所有新[!DNL Amazon Ads]連線的目前目的地。 如果您有現有的[（舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)連線，它將繼續運作，而不會進行任何必要的變更。 [!DNL Amazon Ads v2]連線到[!DNL Ads Data Manager]，後者支援擴充的身分型別、位址相關欄位，以及跨[!DNL Amazon Ads]個產品的資料共用，相較於[ （舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)改善鎖定目標和對象符合率。 |
 | [!DNL Rokt] | 使用[!DNL Rokt]將Experience Platform對象連結到AI驅動的即時決策，透過更精確的目標定位、隱藏和個人化來改善行銷活動績效。 |
+| [Criteo](../destinations/catalog/advertising/criteo.md)的外部對象支援 | 從Segmentation Service以外的來源啟用對象至[!DNL Criteo]，包括自訂上傳對象（從CSV匯入）、相似對象、同盟對象，以及在其他Experience Platform應用程式（例如[!DNL Adobe Journey Optimizer]）中建立的對象。 如需詳細資訊，請參閱[支援的對象](../destinations/catalog/advertising/criteo.md#supported-audiences)區段。 |
+| [Acxiom對象連線](../destinations/catalog/advertising/acxiom-audience-connection.md) | [!DNL Acxiom Audience Connection]目的地現在已可供一般使用。 使用它來增強具有[!DNL Acxiom's Real ID]技術的對象，並將他們啟用至其他平台，包括[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]、[!DNL Cox]、[!DNL LG Ads]、[!DNL Spectrum]和[!DNL Viant]。 |
+| [Acxiom真實ID對象連線](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | [!DNL Acxiom Real ID Audience Connection]目的地現在已可供一般使用。 使用它來啟用受眾，將[!DNL Acxiom's Real ID]當做相同受支援平台集的相符索引鍵，包括[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]、[!DNL Cox]、[!DNL LG Ads]、[!DNL Spectrum]和[!DNL Viant]。 |
 
 {style="table-layout:auto"}
 
@@ -57,6 +60,10 @@ Adobe Experience Platform 的新功能及現有功能更新：
 | 修正 | 說明 |
 | --- | --- |
 | 自訂Personalization監控支援 | 目的地的監視儀表板現在支援[!DNL Custom Personalization]個目的地。 已移除從監視中排除[!DNL Custom Personalization]的限制備註。 |
+| 啟動檢閱中的設定檔計數 | 啟用檢閱步驟現在會顯示已啟用的對象的設定檔計數。 也會顯示串流目的地的設定檔計數，而不僅僅是批次目的地。 |
+| [!DNL Pinterest]權杖到期可見性 | [!DNL Pinterest]目的地現在顯示直接從[!DNL Pinterest]傳回的權杖到期時間，因此您可以看到何時需要重新驗證。 |
+| 匯出檔案現在已針對無效排程停用 | 當對象排程無效或過期時，**[!UICONTROL Export file now]**&#x200B;動作現在會停用。 工具提示會說明動作無法使用的原因。 |
+| 啟動工作流程中的欄可見性修正 | 修正變更一個表格中的可見欄位，錯誤地影響啟動工作流程中其他表格的問題。 |
 
 {style="table-layout:auto"}
 
