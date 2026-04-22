@@ -2,7 +2,7 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 5d1825bad97d3ec4beece416dc3e0fc9f6ca636d
+source-git-commit: d052230ec5ddc4a28495f4928ab32957bf9038ac
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 20%
@@ -47,7 +47,7 @@ Adobe Experience Platform 的新功能及現有功能更新：
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [Microsoft Ads客戶符合](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 依電子郵件地址比對客戶，並在[!DNL Microsoft Advertising Network]中與客戶重新互動，包括搜尋和對象廣告。 將您的[!DNL Microsoft Advertising]帳戶連結至Real-Time CDP，以直接從Experience Platform自動建立和管理客戶比對清單。 |
 | [!BADGE Beta]{type=Informative} [Reddit自訂對象](../destinations/catalog/advertising/reddit-custom-audience.md) | 將對象從Experience Platform傳送至[!DNL Reddit Ads]。 連線您的[!DNL Reddit]帳戶、對應身分並啟用對象，以聯絡在[!DNL Reddit]上積極探索其興趣的人。 |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]是所有新[!DNL Amazon Ads]連線的目前目的地。 如果您有現有的[（舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)連線，它將繼續運作，而不會進行任何必要的變更。 [!DNL Amazon Ads v2]連線到[!DNL Ads Data Manager]，後者支援擴充的身分型別、位址相關欄位，以及跨[!DNL Amazon Ads]個產品的資料共用，相較於[&#x200B; （舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)改善鎖定目標和對象符合率。 |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]是所有新[!DNL Amazon Ads]連線的目前目的地。 如果您有現有的[（舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)連線，它將繼續運作，而不會進行任何必要的變更。 [!DNL Amazon Ads v2]連線到[!DNL Ads Data Manager]，後者支援擴充的身分型別、位址相關欄位，以及跨[!DNL Amazon Ads]個產品的資料共用，相較於[ （舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)改善鎖定目標和對象符合率。 |
 | [!DNL Rokt] | 使用[!DNL Rokt]將Experience Platform對象連結到AI驅動的即時決策，透過更精確的目標定位、隱藏和個人化來改善行銷活動績效。 |
 
 {style="table-layout:auto"}
