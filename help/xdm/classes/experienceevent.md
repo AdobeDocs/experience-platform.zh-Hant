@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM ExperienceEvent類別
 description: 瞭解XDM ExperienceEvent類別和事件資料模型化的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '2728'
 ht-degree: 0%
@@ -65,7 +65,7 @@ ht-degree: 0%
 Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配使用。 以下是類別的一些常用欄位群組清單：
 
 * [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
-* [[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
+* [[!UICONTROL Adobe Advertising ExperienceEvent Full Extension]](../field-groups/event/advertising-full-extension.md)
 * [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)

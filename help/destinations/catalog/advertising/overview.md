@@ -3,9 +3,9 @@ keywords: 廣告目的地；目的地；平台目的地
 title: Advertising目的地概觀
 description: 將Adobe Experience Platform連線至協力廠商廣告平台（例如DSP、廣告網路、SSP），並在這些平台上共用假名對象。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2084f45ca89e78f980a8d2a53a08966e0588fcdd
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 * [(Beta) Acxiom對象分佈](acxiom-audience-connection.md)
 * [(Beta) Acxiom Real ID受眾連線](acxiom-real-id-audience-connection.md)
 * [Adobe Advertising DSP連線](adobe-advertising-dsp-connection.md)
-* [舊版Adobe Advertising Cloud DSP連線](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [舊版Adobe Advertising DSP連線](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Amazon Ads連線](amazon-ads.md)
 * [Amazon Ads v2連線](amazon-ads-v2.md)
 * [Bombora連線](bombora.md)
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 ### 擴充功能 {#extensions}
 
-* [Adobe Advertising Cloud擴充功能](adobe-advertising-cloud.md)
+* [Adobe Advertising擴充功能](adobe-advertising-cloud.md)
 * [Awin Advertising轉換標籤擴充功能](awin-conversiontag.md)
 * [Awin Advertising Mastertag擴充功能](awin-mastertag.md)
 * [Bing Ads通用事件追蹤擴充功能](bing-ads.md)

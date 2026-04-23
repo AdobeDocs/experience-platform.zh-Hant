@@ -1,23 +1,23 @@
 ---
 title: Auditor索引標籤
-description: 瞭解如何使用Adobe Experience Platform Debugger中的Auditor標籤來測試您的Adobe Experience Cloud實作。
+description: 瞭解如何使用Adobe Experience Platform Debugger中的Auditor標籤來測試Adobe Experience Cloud實作。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；Auditor；DTM；Target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 35%
+source-wordcount: '361'
+ht-degree: 36%
 
 ---
 
 # Auditor索引標籤
 
-在Adobe Experience Platform Debugger中，您可以使用&#x200B;**[!UICONTROL Auditor]**&#x200B;索引標籤在頁面上執行一系列稽核測試。
+在Adobe Experience Platform Debugger中，您可以使用&#x200B;**[!UICONTROL Auditor]**&#x200B;索引標籤在頁面上執行一連串稽核測試。
 
 若要使用此功能：
 
 1. 在左側導覽中選取&#x200B;**[!UICONTROL Auditor]**。
-1. 選取&#x200B;**[!UICONTROL 執行Auditor測試]**。 測試完成後，其結果會顯示於下方。
+1. 選取 **[!UICONTROL Run Auditor Tests]**。測試完成後，其結果會顯示於下方。
 
 ![Auditor標籤上的測試結果熒幕擷圖](../images/auditor-results.png)
 
@@ -44,14 +44,14 @@ ht-degree: 35%
 
 ## 支援的Adobe技術
 
-Auditor功能可對下列Adobe技術評分：
+Auditor功能可以對下列Adobe技術評分：
 
-* Adobe Advertising Cloud DSP
-* Adobe Advertising Cloud Search
+* Adobe Advertising DSP
+* Adobe Advertising搜尋
 * Adobe Analytics
-* Adobe Experience Cloud Identity Service
+* Adobe Experience Cloud 身分識別服務
 * Adobe Target
-* 標籤(前身為Adobe Experience Platform Launch)
+* 標籤（前身為Adobe Experience Platform Launch）
 
 ## 測試規則
 

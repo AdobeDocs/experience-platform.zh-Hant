@@ -1,11 +1,11 @@
 ---
-keywords: 目的地；experience cloud解決方案；target；target目的地；ad cloud；advertising cloud；audience manager；adobe target目的地；target；audience manager目的地；
+keywords: 目的地；experience cloud解決方案；target；target目的地；ad cloud；廣告；audience manager；adobe target目的地；target；audience manager目的地；
 title: Adobe目的地概觀
 description: 將您在Experience Platform中的資料連線到其他Adobe Experience Cloud解決方案，用於廣告目標定位、個人化、行銷自動化等，藉此管理您的客戶體驗
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '221'
 ht-degree: 7%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 7%
 
 ### 擴充功能 {#extensions}
 
-* [Adobe Advertising Cloud擴充功能](../advertising/adobe-advertising-cloud.md)
+* [Adobe Advertising擴充功能](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics 擴充功能](../analytics/adobe-analytics.md)
 * [Adobe Media Analytics for Audio and Video擴充功能](../analytics/adobe-video-analytics.md)
 * [Adobe Target 擴充功能](../personalization/adobe-target.md)
@@ -49,4 +49,4 @@ ht-degree: 7%
 
 使用Experience Platform受眾共用功能，將您的Experience Platform受眾共用至其他Adobe目的地。 如需詳細資訊（在Audience Manager檔案入口網站中開啟），請參閱以下頁面：
 
-* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising Cloud和Adobe Target共用Experience Platform對象](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant)
+* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising和Adobe Target共用Experience Platform對象](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

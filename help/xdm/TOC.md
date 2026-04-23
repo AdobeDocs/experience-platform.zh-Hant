@@ -5,9 +5,9 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '710'
 ht-degree: 21%
 
 ---
@@ -116,7 +116,7 @@ ht-degree: 21%
       * [合作夥伴潛在客戶詳細資訊（範例）](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics完整擴充功能](./field-groups/event/analytics-full-extension.md)
-      * [Adobe Advertising Cloud完整擴充功能](./field-groups/event/advertising-full-extension.md)
+      * [Adobe Advertising完整擴充功能](./field-groups/event/advertising-full-extension.md)
       * [Advertising詳細資料](./field-groups/event/advertising-details.md)
       * [應用程式詳細資料](./field-groups/event/application-details.md)
       * [餘額轉帳](./field-groups/event/balance-transfers.md)

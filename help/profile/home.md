@@ -2,7 +2,7 @@
 title: 即時客戶個人檔案概述
 description: 即時客戶個人檔案會合併來自各種來源的資料，並以個別客戶個人檔案和相關時間序列事件的形式提供對該資料的存取權。 此功能可讓行銷人員跨多個管道，與其對象推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 1%
@@ -113,7 +113,7 @@ Adobe Experience Platform [!DNL Segmentation Service]會產生支援個別客戶
 
 >[!NOTE]
 >
->透過Adobe解決方案（包括[!DNL Analytics Cloud]、[!DNL Marketing Cloud]和[!DNL Advertising Cloud]）收集的資料會流入[!DNL Experience Platform]並擷取到[!DNL Profile]。
+>透過Adobe解決方案（包括[!DNL Analytics Cloud]、[!DNL Marketing Cloud]和[!DNL Adobe Advertising]）收集的資料會流入[!DNL Experience Platform]並擷取到[!DNL Profile]。
 
 ### 設定檔擷取量度
 

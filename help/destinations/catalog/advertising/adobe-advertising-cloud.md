@@ -1,26 +1,26 @@
 ---
-keywords: Advertising Cloud；advertising cloud擴充功能；advertising cloud目的地
-title: Adobe Advertising Cloud擴充功能
-description: Adobe Advertising Cloud擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
+keywords: 廣告延伸模組；廣告目的地
+title: Adobe Advertising擴充功能
+description: Adobe Advertising擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '409'
 ht-degree: 4%
 
 ---
 
-# [!DNL Adobe Advertising Cloud] 擴充功能 {#adobe-advertising-cloud-extension}
+# [!DNL Adobe Advertising] 擴充功能 {#adobe-advertising-cloud-extension}
 
 ## 概觀 {#overview}
 
-這是[!DNL Advertising Cloud]擴充功能，用於實作DSP和搜尋的[!DNL Advertising Cloud]轉換和對象標籤（目前不支援DCO）。
+這是[!DNL Adobe Advertising]擴充功能，可針對DSP和Search實作廣告轉換和受眾標籤（目前不支援DCO）。
 
-[!DNL Adobe Advertising Cloud]是[!DNL Adobe Experience Platform]中的Advertising擴充功能。
+[!DNL Adobe Advertising]是[!DNL Adobe Experience Platform]中的Advertising擴充功能。
 
 此目的地是標籤延伸模組。 如需有關標籤擴充功能在Experience Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
-![Adobe Advertising Cloud擴充功能](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![Adobe Advertising擴充功能](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 ## 安裝擴充功能 {#install-extension}
 
-若要安裝[!DNL Adobe Advertising Cloud]擴充功能：
+若要安裝[!DNL Adobe Advertising]擴充功能：
 
 在[Experience Platform介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
 

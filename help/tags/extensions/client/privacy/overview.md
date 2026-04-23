@@ -2,10 +2,10 @@
 title: Adobe隱私權擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe隱私權標籤擴充功能。
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 3%
+source-wordcount: '821'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe隱私權標籤擴充功能可讓您收集及移除使用者端裝置上Ado
 * Adobe Audience Manager (AAM)
 * Adobe Target
 * Adobe Experience Cloud Identity服務（訪客或ECID）
-* Adobe Advertising Cloud (AdCloud)
+* Adobe Advertising
 
 選取一或多個解決方案，然後選取&#x200B;**[!UICONTROL Update]**。
 

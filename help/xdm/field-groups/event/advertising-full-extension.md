@@ -1,23 +1,24 @@
 ---
-title: Adobe Advertising Cloud ExperienceEvent完整擴充功能結構欄位群組
-description: 瞭解Adobe Advertising Cloud ExperienceEvent完整擴充功能結構描述欄位群組。
+title: Adobe Advertising ExperienceEvent完整擴充功能結構欄位群組
+description: 瞭解Adobe Advertising ExperienceEvent完整擴充功能結構欄位群組。
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: adfd0220b8bc53c44abc76a711b148a7e03edb7a
+exl-id: 4a9f6bff-6098-424a-b8f4-0f14ec52d906
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 7%
+source-wordcount: '1558'
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Adobe Advertising Cloud ExperienceEvent完整擴充功能]結構描述欄位群組
+# [!UICONTROL Adobe Advertising ExperienceEvent Full Extension]結構描述欄位群組
 
 >[!AVAILABILITY]
 >
->[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]欄位群組目前是測試版。 文件和功能可能會有所變更。
+>[!UICONTROL Adobe Advertising ExperienceEvent Full Extension]欄位群組目前是測試版。 文件和功能可能會有所變更。
 
-[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，可擷取Adobe Advertising （以前稱為「[!DNL Advertising Cloud]」）收集的通用量度。
+[!UICONTROL Adobe Advertising ExperienceEvent Full Extension]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，其會擷取Adobe Advertising （先前稱為&quot;[!DNL Advertising Cloud]&quot;）所收集的一般量度。
 
-本檔案說明[!DNL Advertising Cloud]擴充功能欄位群組的結構和使用案例。
+本檔案說明[!DNL Advertising]擴充功能欄位群組的結構和使用案例。
 
 >[!NOTE]
 >
@@ -27,7 +28,7 @@ ht-degree: 7%
 
 欄位群組提供單一`_experience`物件給結構描述，其本身包含單一`adcloud`物件。
 
-![&#x200B; [!DNL Advertising Cloud]欄位群組的頂層欄位](../../images/field-groups/advertising-full-extension/full-schema.png " [!DNL Advertising Cloud] 欄位群組的頂層欄位")
+![ [!DNL Advertising]欄位群組的頂層欄位](../../images/field-groups/advertising-full-extension/full-schema.png " [!DNL Advertising] 欄位群組的頂層欄位")
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
@@ -86,7 +87,7 @@ adDeliveryDetails物件提供有關廣告傳送的位置和方式的資訊，包
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `accountId` | 字串 | 適用於帳戶的識別碼。 |
-| `dspId` | 字串 | 定義促銷活動之Demand Side Platform (DSP)的識別碼。 此識別碼通常是Adobe Advertising Cloud DSP的ID。 |
+| `dspId` | 字串 | 定義促銷活動之Demand Side Platform (DSP)的識別碼。 此識別碼通常是Adobe Advertising DSP的ID。 |
 | `campaignId` | 字串 | 適用於行銷活動的識別碼。 |
 | `placementId` | 字串 | 位置的識別碼。 |
 | `packageId` | 字串 | Advertising DSP套件的識別碼。 |
@@ -103,8 +104,8 @@ conversionDetails物件會擷取廣告轉換的追蹤資訊，包括追蹤程式
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `trackingCode` | 字串 | 事件的轉換追蹤程式碼。 如需可能的格式清單，請參閱[AMO ID格式](https://experienceleague.adobe.com/zh-hant/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats)。 |
-| `trackingIdentities` | 字串 | 事件的EF ID，或追蹤身分詳細資訊。 如需可能格式的清單，請參閱[EF ID格式](https://experienceleague.adobe.com/zh-hant/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats)。 |
+| `trackingCode` | 字串 | 事件的轉換追蹤程式碼。 如需可能的格式清單，請參閱[AMO ID格式](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats)。 |
+| `trackingIdentities` | 字串 | 事件的EF ID，或追蹤身分詳細資訊。 如需可能格式的清單，請參閱[EF ID格式](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats)。 |
 | `conversionProperties` | 物件 | 轉換屬性的對應，以索引鍵值配對字串的陣列表示（例如`subscriptions=253`）。 |
 
 ## `fees` {#fees}
@@ -142,10 +143,10 @@ conversionDetails物件會擷取廣告轉換的追蹤資訊，包括追蹤程式
 | --- | --- | --- |
 | `sessionId` | 字串 | 與體驗事件相關聯的工作階段ID，用於連結相同工作階段中發生的獨立事件。 |
 | `feedID` | 字串 | 發佈者、廣告交換和其他功能的複合ID。 |
-| `sspPartnerCode` | 字串 | Adobe Advertising Cloud獲得詳細目錄機會的合作夥伴（交換）。 |
+| `sspPartnerCode` | 字串 | Adobe Advertising獲得詳細目錄機會的合作夥伴（交換）。 |
 | `siteID` | 字串 | 提供廣告印象的網站的識別碼。 |
 | `costCurrency` | 字串 | 用於為廣告機會向合作夥伴付款的ISO 4217貨幣代碼。 值必須遵循規則運算式模式^[A-Z]{3}$ （三個大寫字母）。 例如：USD、EUR。 |
-| `inventorySourceId` | 字串 | 傳遞此機會的Adobe Advertising Cloud詳細目錄來源ID。 |
+| `inventorySourceId` | 字串 | 傳遞此機會的Adobe Advertising詳細目錄來源ID。 |
 | `segment` | 物件 | 與使用者細分規則相關的詳細資訊。 其屬性包括：<ul><li>`attributablePartnerId` （字串）：擁有attributeSegmentId的區段提供者的識別碼。</li><li>`attributableSegmentId` （字串）：在位置的目標規則中，為使用者鎖定目標而計入的區段。 這是為了追蹤成本和支付合作夥伴。</li><li>`segments` （字串）：使用者所屬的使用者區段a\)與b\)的交集，該廣告已鎖定目標。 這不是拍賣時使用者所屬區段的完整清單。</li></ul> |
 | `optimizationTag` | 字串 | 和最佳化相關的標籤。 |
 | `attributableDeviceGraphId` | 字串 | 歸因於轉換事件的裝置圖表識別碼。 |
@@ -167,6 +168,6 @@ conversionDetails物件會擷取廣告轉換的追蹤資訊，包括追蹤程式
 
 ## 後續步驟
 
-本檔案涵蓋[!DNL Advertising Cloud]擴充功能欄位群組的結構和使用案例。 如需欄位群組本身的詳細資訊，請參閱[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json)。
+本檔案涵蓋[!DNL Adobe Advertising]擴充功能欄位群組的結構和使用案例。 如需欄位群組本身的詳細資訊，請參閱[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json)。
 
 如果您使用此欄位群組來使用Adobe Experience Platform Web SDK收集[!DNL Advertising]資料，請參閱[設定資料流](../../../datastreams/overview.md)的指南，以瞭解如何將資料對應到伺服器端的XDM。

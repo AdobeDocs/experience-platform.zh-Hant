@@ -1,18 +1,15 @@
 ---
 title: pushNotifications
 description: 設定Web SDK的推播通知，以啟用瀏覽器式的推播訊息。
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '414'
 ht-degree: 3%
 
 ---
 
 # `pushNotifications` {#push-notifications}
-
->[!AVAILABILITY]
->
->Web SDK的推播通知目前在&#x200B;**測試版**&#x200B;中。 功能和檔案可能會有所變更。
 
 `pushNotifications`屬性可讓您設定Web應用程式的推播通知。 此功能可讓您的網頁應用程式接收從伺服器推送的訊息，即使網站目前未載入瀏覽器亦然。
 
