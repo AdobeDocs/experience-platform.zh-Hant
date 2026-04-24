@@ -1,26 +1,30 @@
 ---
 title: edgeDomain
-description: 決定您要傳送資料的目的地根網域。
+description: 決定您要傳送資料的目的地網域。
 exl-id: 6beb5116-cd23-42fd-934c-5cf84d1d7153
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 2d3c31e399989652a0472bbe2174ca8d8554ba30
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '268'
 ht-degree: 3%
 
 ---
 
 # `edgeDomain`
 
-`edgeDomain`屬性可讓您變更Web SDK傳送資料的網域。 使用[第一方Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant)的組織經常使用此屬性。 資料會傳送至組織自己的網域，然後CNAME記錄會將該資料轉送至Adobe。
+`edgeDomain`屬性可讓您變更Web SDK傳送資料的網域。 使用自訂網域有助於減少廣告封鎖程式的影響。
 
-您對`edgeDomain`使用的值取決於您參與[Adobe管理的憑證方案](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/adobe-managed-cert)：
+>[!NOTE]
+>
+>此屬性不會變更Cookie的設定位置。 Web SDK一律會設定[第一方Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant)，無論其最終傳送資料的位置為何。
 
-**如果您的組織參與Adobe管理的憑證方案**，請將值設定為設定憑證時選取的第一方網域。 通常此值是您的組織所擁有的子網域。 例如 `data.example.com`。貴組織中的CNAME記錄會將該資料重新導向至Adobe。
+您對`edgeDomain`使用的值取決於您參與[Adobe管理的憑證方案](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)：
 
-**如果未參與憑證方案**，請將值設定為`data.adobedc.net`的子網域。 Adobe建議您使用組織的公司ID來維持一致性。 例如 `example.data.adobedc.net`。使用下列步驟來決定您的公司ID：
+**如果您的組織參與Adobe管理的憑證方案**，請將值設定為設定憑證時選取的第一方網域。 通常此值是您的組織所擁有的子網域。 例如 `data.example.com`。您組織中的CNAME記錄會將該資料轉送至Adobe。
+
+**如果您的組織未參與憑證方案**，請將值設定為`data.adobedc.net`的子網域。 Adobe建議您使用貴組織的Adobe指派IMS公司ID以維持一致性。 例如 `example.data.adobedc.net`。使用下列步驟來判斷您的IMS公司ID：
 
 1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
-1. 在Experience Cloud介面中的任何位置，按下`[Cmd]` + `[I]` (iOS)或`[Ctrl]` + `[I]` (Windows)。
+1. 在Experience Cloud介面中的任何位置，按下`[Cmd]` + `[I]` (macOS)或`[Ctrl]` + `[I]` (Windows)。
 1. 出現&#x200B;**[!UICONTROL User data debugger]**。 選取 **[!UICONTROL Assigned orgs]** 索引標籤。
 1. 展開所需的IMS組織。
 1. 找到&#x200B;**[!UICONTROL Tenant]**&#x200B;欄位。 建議使用此值的`data.adobedc.net`子網域。

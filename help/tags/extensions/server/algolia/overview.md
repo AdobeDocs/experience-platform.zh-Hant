@@ -3,9 +3,9 @@ title: Algoria事件轉送擴充功能概觀
 description: 瞭解如何在Adobe Experience Platform中設定和使用Algolia事件轉送擴充功能。 透過見解API轉送使用者行為資料、設定規則、對應XDM欄位，以及驗證事件交付。
 last-substantial-update: 2025-05-09T00:00:00Z
 exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 61aeec69f782968a8c157b604ba1cd9e990b7f02
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 1%
 
 選取&#x200B;**[!UICONTROL Rules]** > **[!UICONTROL Add Rule]**&#x200B;或選取現有規則。 在規則的&#x200B;**[!UICONTROL Then]**&#x200B;部分中，新增動作並選取&#x200B;**[!UICONTROL Extension]**： [!DNL Algolia]事件轉送> **[!UICONTROL Action Type]**： **[!UICONTROL Send Events]**。
 
-![&#x200B; Algolia事件轉送擴充功能中[傳送事件]動作的設定。](../../../images/extensions/server/algolia/send-event.png)
+![ Algolia事件轉送擴充功能中[傳送事件]動作的設定。](../../../images/extensions/server/algolia/send-event.png)
 
 ## 實作[!DNL Algolia]事件欄位群組 {#algolia-field-group}
 
@@ -69,15 +69,15 @@ ht-degree: 1%
 
 ![Algolia事件欄位群組設定](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
-### 將[!DNL Algolia]事件欄位群組新增至您的結構描述 {#add-algolia-field-group}
+### 將[!UICONTROL Algolia Event Details]欄位群組新增至您的結構描述 {#add-algolia-field-group}
 
-若要新增[!DNL Algolia]事件欄位群組：
+若要新增[!UICONTROL Algolia Event Details]欄位群組：
 
 瀏覽至&#x200B;**[!UICONTROL Schemas]**&#x200B;並選取&#x200B;**[!UICONTROL Browse]**。
 
 新增結構描述或更新您用來傳送網頁事件的現有結構描述，並將滑鼠游標停留在&#x200B;**[!UICONTROL Add]**&#x200B;圖示上。 在搜尋方塊中輸入&#x200B;*[!DNL Algolia]*&#x200B;以縮小結果範圍。
 
-選取&#x200B;**[!DNL Algolia]事件詳細資料**&#x200B;欄位群組> **[!UICONTROL Add field group]**&#x200B;按鈕> **[!UICONTROL Save]**。
+選取&#x200B;**[!UICONTROL Algolia Event Details]**&#x200B;欄位群組> **[!UICONTROL Add field group]**&#x200B;按鈕> **[!UICONTROL Save]**。
 
 Experience Platform中的![Algolia設定檔欄位群組設定](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
@@ -167,5 +167,5 @@ Experience Platform中的![Algolia設定檔欄位群組設定](../../../images/e
 
 - [[!DNL Algolia] 深入分析API檔案](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] 事件檔案](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] 事件轉送檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=zh-Hant)
+- [[!DNL Adobe Experience Platform] 事件轉送檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
 - [[!DNL Algolia] AI功能總覽](https://www.algolia.com/products/ai-search/)
