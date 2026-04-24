@@ -17,7 +17,7 @@ ht-degree: 3%
 >
 >此屬性不會變更Cookie的設定位置。 Web SDK一律會設定[第一方Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant)，無論其最終傳送資料的位置為何。
 
-您對`edgeDomain`使用的值取決於您參與[Adobe管理的憑證方案](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert)：
+您對`edgeDomain`使用的值取決於您參與[Adobe管理的憑證方案](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/data-collection/adobe-managed-cert)：
 
 **如果您的組織參與Adobe管理的憑證方案**，請將值設定為設定憑證時選取的第一方網域。 通常此值是您的組織所擁有的子網域。 例如 `data.example.com`。您組織中的CNAME記錄會將該資料轉送至Adobe。
 
