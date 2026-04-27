@@ -5,7 +5,7 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。 了解如何建構、賦予標籤和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
+source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 34%
@@ -107,7 +107,7 @@ ht-degree: 34%
       - [本機檔案上傳聯結器](connectors/local-system/local-file-upload.md)
    - 忠誠度 {#loyalty}
       - [毛細管串流事件](connectors/loyalty/capillary.md)
-      - [Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [Kobie](tutorials/ui/create/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - 行銷自動化 {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
