@@ -2,9 +2,9 @@
 title: 查詢服務中的增量載入
 description: 增量載入功能會同時使用匿名區塊和快照功能，以提供近乎即時的解決方案，將資料從資料湖移動至您的資料倉儲，同時忽略相符的資料。
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 0%
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -116,7 +116,7 @@ ht-degree: 0%
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -154,7 +154,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -162,4 +162,4 @@ $$;
 
 ## 後續步驟
 
-閱讀本檔案後，您應該更瞭解如何使用匿名區塊和快照功能來執行增量載入，並且可以將此邏輯套用至您自己的特定查詢。 如需查詢執行的一般指引，請參閱查詢服務[&#128279;](../best-practices/writing-queries.md)中查詢執行的指南。
+閱讀本檔案後，您應該更瞭解如何使用匿名區塊和快照功能來執行增量載入，並且可以將此邏輯套用至您自己的特定查詢。 如需查詢執行的一般指引，請參閱查詢服務](../best-practices/writing-queries.md)中查詢執行的[指南。

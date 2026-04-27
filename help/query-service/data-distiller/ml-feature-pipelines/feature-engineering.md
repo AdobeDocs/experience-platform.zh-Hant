@@ -1,30 +1,30 @@
 ---
-title: 機器學習的工程師功能
-description: 瞭解如何將Adobe Experience Platform中的資料轉換為機器學習模型可以使用的功能或變數。 使用Data Distiller來大規模計算ML功能，並與您的機器學習環境共用這些功能。
+title: Engineer Features for Machine Learning
+description: Learn how to transform data in Adobe Experience Platform into features or variables that can be consumed by a machine learning model. Use Data Distiller to compute ML features at scale and share those features with your machine learning environment.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 13%
+source-wordcount: '1146'
+ht-degree: 18%
 
 ---
 
-# 機器學習的工程師功能
+# Engineer features for machine learning
 
-本檔案示範如何將Adobe Experience Platform中的資料轉換為&#x200B;**功能**&#x200B;或變數，以供機器學習模型使用。 此程式稱為&#x200B;**功能工程**。 使用Data Distiller大規模計算ML功能，並將這些功能與您的機器學習環境共用。 這涉及下列專案：
+This document demonstrates how you can transform data in Adobe Experience Platform into **features**, or variables, that can be consumed by a machine learning model. This process is referred to as **feature engineering**. Use Data Distiller to compute ML features at scale and share those features to your machine learning environment. This involves the following:
 
-1. 建立查詢範本，以定義您要為您的模型計算的目標標籤和特徵
-2. 執行查詢並將結果儲存在訓練資料集中
+1. Create a query template to define the target labels and features you want to compute for your model
+2. Execute the query and store the results in a training dataset
 
-## 定義您的訓練資料 {#define-training-data}
+## Define your training data {#define-training-data}
 
-下列範例說明如何查詢從Experience Events資料集衍生培訓資料，讓模型預測使用者訂閱電子報的傾向。 訂閱事件由事件型別`web.formFilledOut`表示，資料集中的其他行為事件可用來衍生設定檔層級功能以預測訂閱。
+The following example illustrates a query to derive training data from an Experience Events dataset for a model to predict the propensity of a user to subscribe to a newsletter. Subscription events are represented by the event type `web.formFilledOut`, and other behavioral events in the dataset are used to derive profile-level features to predict subscriptions.
 
-### 查詢正面和負面標籤 {#query-positive-and-negative-labels}
+### Query positive and negative labels {#query-positive-and-negative-labels}
 
-訓練（監督）機器學習模型的完整資料集包括目標變數或標籤，代表要預測的結果，以及一組功能或說明變數，用於描述用來訓練模型的範例設定檔。
+A complete dataset for training a (supervised) machine learning model includes target variable or label that represents the outcome to be predicted, and a set of features or explanatory variables used to describe the example profiles used to train the model.
 
-在此案例中，標籤是名為`subscriptionOccurred`的變數，如果使用者設定檔具有型別為`web.formFilledOut`的事件，則等於1，否則為0。 下列查詢會從事件資料集中傳回一組50,000位使用者，包含所有具有正數標籤(`subscriptionOccurred = 1`)的使用者，加上隨機選取具有負數標籤的使用者，以完成50,000位使用者範例大小。 這可確保訓練資料包含正面和負面範例，以供模型學習。
+In this case, the label is a variable called `subscriptionOccurred` which equals 1 if the user profile has an event with type `web.formFilledOut` , and 0 otherwise. The following query returns a set of 50,000 users from the events dataset, including all users with positive labels (`subscriptionOccurred = 1`) plus a set randomly selected user with negative labels to complete the 50,000 user sample size. This ensures that the training data includes both positive and negative examples for the model to learn from.
 
 ```python
 from aepp import queryservice
@@ -52,11 +52,11 @@ print(f"Number of classes: {len(df_labels)}")
 df_labels.head()
 ```
 
-**範例輸出**
+**Sample output**
 
-類別數目： 50000
+Number of classes: 50000
 
-|   | eventType | userId | subscriptionOcked | random_row_number_for_user |
+|   | eventType | userId | subscriptionOccurred | random_row_number_for_user |
 | ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | directMarketing.emailClicked | 01027994177972439148069092698714414382 | 0 | 1 |
 | 1 | directMarketing.emailOpened | 01054714817856066632264746967668888198 | 0 | 1 |
@@ -66,28 +66,28 @@ df_labels.head()
 
 {style="table-layout:auto"}
 
-### 為機器學習定義功能的彙總事件 {#define-features}
+### Aggregate events to define features for ML {#define-features}
 
-透過適當的查詢，您可以將資料集中的事件收集到有意義的、數值的功能中，以便用於訓練傾向模型。 範例事件顯示如下：
+With an appropriate query you can gather the events in the dataset into meaningful, numerical features that can be used to train a propensity model. Example events are seen below:
 
-- **使用者為了行銷目的而傳送和接收的**&#x200B;電子郵件數目。
-- 這些電子郵件中&#x200B;**已開啟**&#x200B;的部分。
-- 使用者&#x200B;**已選取**&#x200B;連結的電子郵件部分。
-- **已檢視的產品數目**。
-- 與&#x200B;**互動的**&#x200B;主張數目。
-- 被解除的&#x200B;**主張數目**。
-- 已選取的&#x200B;**個連結數目**。
-- 收到兩封連續電子郵件的間隔分鐘數。
-- 連續開啟兩封電子郵件的間隔分鐘數。
-- 使用者實際選取連結的兩封連續電子郵件之間的分鐘數。
-- 兩次連續產品檢視之間的分鐘數。
-- 與兩個建議互動的分鐘數。
-- 兩個被駁回的建議之間的分鐘數。
-- 選取的兩個連結之間的分鐘數。
+- **Number of emails** that were sent for marketing purposes and received by the user.
+- Portion of these emails that were **opened**.
+- Portion of these emails where the user **selected** the link.
+- **Number of products** that were viewed.
+- Number of **propositions that were interacted with**.
+- Number of **propositions that were dismissed**.
+- Number of **links that were selected**.
+- Number of minutes between two consecutive emails received.
+- Number of minutes between two consecutive emails opened.
+- Number of minutes between two consecutive emails where the user actually selected the link.
+- Number of minutes between two consecutive product views.
+- Number of minutes between two propositions that were interacted with.
+- Number of minutes between two propositions that were dismissed.
+- Number of minutes between two links that were selected.
 
-下列查詢會彙總這些事件：
+The following query aggregates these events:
 
-+++選取以檢視範例查詢
++++Select to view example query
 
 ```python
 query_features = f"""
@@ -144,9 +144,9 @@ df_features.head()
 
 +++
 
-**範例輸出**
+**Sample output**
 
-|   | userId | 電子郵件已接收 | 電子郵件已開啟 | 電子郵件已點按 | 已檢視的產品 | propositionInteracts | propositionMissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpen | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDiscisse | minutes_since_linkClick |
+|   | userId | emailsReceived | 電子郵件已開啟 | 電子郵件已點按 | 已檢視的產品 | propositionInteracts | propositionMissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpen | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDiscisse | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN |
@@ -232,7 +232,7 @@ df_training_set.head()
 |  | userId | eventType | 時間戳記 | subscriptionOcked | 電子郵件已接收 | 電子郵件已開啟 | 電子郵件已點按 | 已檢視的產品 | propositionInteracts | propositionMissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpen | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDiscisse | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
 | 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | NaN | 1703.0 | NaN | None | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpen | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | NaN | 1703.0 | NaN | None | NaN | 1 |
 | 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | NaN | NaN | None | NaN | 7 |
 | 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
 | 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
@@ -381,7 +381,7 @@ WHERE
 ORDER BY timestamp;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 
 END $$;

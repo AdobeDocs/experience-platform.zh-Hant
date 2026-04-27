@@ -2,9 +2,9 @@
 title: 查詢服務中的匿名區塊
 description: 匿名區塊是Adobe Experience Platform查詢服務支援的SQL語法，可讓您有效執行一系列查詢
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -30,21 +30,21 @@ Adobe Experience Platform查詢服務支援匿名區塊。 匿名區塊功能可
 
 ## 匿名區塊查詢範例
 
-下列查詢顯示鏈結SQL敘述句的範例。 請參閱查詢服務[&#128279;](../sql/syntax.md)檔案中的SQL語法，以取得使用之任何SQL語法的詳細資訊。
+下列查詢顯示鏈結SQL敘述句的範例。 請參閱查詢服務](../sql/syntax.md)檔案中的[SQL語法，以取得使用之任何SQL語法的詳細資訊。
 
 ```SQL
 $$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
     CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
-    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+    EXCEPTION WHEN OTHERS THEN SET @ret = SELECT 'ERROR';
 END
 $$;
 ```
 
 在下列範例中，`SET`會在指定的區域變數中保留`SELECT`查詢的結果。 變數的適用範圍為匿名區塊。
 
-快照識別碼會儲存為區域變數(`@current_sid`)。 然後用於下一個查詢，以根據相同資料集/表格的SNAPSHOT傳回結果。 如需有關快照子句[&#128279;](../sql/syntax.md#SNAPSHOT-clause)的更多資訊，請參閱SQL語法檔案。
+快照識別碼會儲存為區域變數(`@current_sid`)。 然後用於下一個查詢，以根據相同資料集/表格的SNAPSHOT傳回結果。 如需有關快照子句](../sql/syntax.md#SNAPSHOT-clause)的更多[資訊，請參閱SQL語法檔案。
 
 ```SQL
 $$ BEGIN                                             
@@ -66,7 +66,7 @@ $$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
     CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+    EXCEPTION WHEN OTHERS THEN SET @ret = SELECT 'ERROR';
 END
 $$;
 /
