@@ -49,7 +49,7 @@ ht-degree: 1%
 
 ## 先決條件 {#prerequisites}
 
-為了讓機器人偵測在您的資料流中運作，您必須將&#x200B;**[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)**&#x200B;欄位群組新增到結構描述。 請參閱[XDM結構描述](../xdm/ui/resources/schemas.md#add-field-groups)檔案，瞭解如何將欄位群組新增到結構描述。
+為了讓機器人偵測在您的資料流中運作，您必須將&#x200B;**[[!UICONTROL [Bot Detection Information]]](../xdm/field-groups/event/bot-detection-information.md)**&#x200B;欄位群組新增到結構描述。 請參閱[XDM結構描述](../xdm/ui/resources/schemas.md#add-field-groups)檔案，瞭解如何將欄位群組新增到結構描述。
 
 ## 設定資料串流的機器人偵測 {#configure}
 
