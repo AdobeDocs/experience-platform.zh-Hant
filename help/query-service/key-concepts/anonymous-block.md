@@ -30,7 +30,7 @@ Adobe Experience Platform查詢服務支援匿名區塊。 匿名區塊功能可
 
 ## 匿名區塊查詢範例
 
-下列查詢顯示鏈結SQL敘述句的範例。 請參閱查詢服務](../sql/syntax.md)檔案中的[SQL語法，以取得使用之任何SQL語法的詳細資訊。
+下列查詢顯示鏈結SQL敘述句的範例。 請參閱查詢服務[&#128279;](../sql/syntax.md)檔案中的SQL語法，以取得使用之任何SQL語法的詳細資訊。
 
 ```SQL
 $$ BEGIN
@@ -44,7 +44,7 @@ $$;
 
 在下列範例中，`SET`會在指定的區域變數中保留`SELECT`查詢的結果。 變數的適用範圍為匿名區塊。
 
-快照識別碼會儲存為區域變數(`@current_sid`)。 然後用於下一個查詢，以根據相同資料集/表格的SNAPSHOT傳回結果。 如需有關快照子句](../sql/syntax.md#SNAPSHOT-clause)的更多[資訊，請參閱SQL語法檔案。
+快照識別碼會儲存為區域變數(`@current_sid`)。 然後用於下一個查詢，以根據相同資料集/表格的SNAPSHOT傳回結果。 如需有關快照子句[&#128279;](../sql/syntax.md#SNAPSHOT-clause)的更多資訊，請參閱SQL語法檔案。
 
 ```SQL
 $$ BEGIN                                             
