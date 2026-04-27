@@ -1,19 +1,25 @@
 ---
 title: 使用UI將資料從Kobie串流到Experience Platform
 description: 瞭解如何使用UI將資料從Kobie串流到Adobe Experience Platform。
-badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 3cba7ab5ddadc0f3b940f25280eb66a85725d1a6
+exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 2%
+source-wordcount: '881'
+ht-degree: 1%
 
 ---
 
-# 使用UI將資料從[!DNL Kobie]串流到Experience Platform
+# 使用UI將資料從[!DNL Kobie Streaming Events]串流到Experience Platform
 
-閱讀本指南，瞭解如何使用UI中的來源工作區將您的資料從[!DNL Kobie]連線並串流至Adobe Experience Platform。
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)]是高度可設定、安全且可擴充的MACH平台，可因應您的忠誠度策略，加速實現價值、提高效率，並透過企業級控管保護您的品牌。 透過跨CDP、CRM、CMS等的無縫整合，[!DNL KALC]可讓行銷人員跨每個管道提供即時個人化，同時提供彈性和可追蹤性，以隨著您的品牌忠誠度成長而改進。
+
+閱讀本指南，瞭解如何使用UI中的來源工作區將您的資料從[!DNL Kobie Streaming Events]連線並串流至Adobe Experience Platform。
+
+>[!IMPORTANT]
+>
+>如需先決條件設定與對應的詳細資訊，請直接連絡您的[!DNL Kobie Client Services]代表。
 
 ## 快速入門
 
@@ -24,15 +30,11 @@ ht-degree: 2%
    * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
->[!IMPORTANT]
->
->閱讀[[!DNL Kobie] 總覽](../../../../connectors/loyalty/kobie.md)，瞭解將帳戶連線至Experience Platform之前需要完成的先決條件步驟。
-
 ## 瀏覽來源目錄
 
 在Experience Platform UI中，從左側導覽選取「**[!UICONTROL Sources]**」以存取&#x200B;*[!UICONTROL Sources]*&#x200B;工作區。 在&#x200B;*[!UICONTROL Categories]*&#x200B;面板中選取適當的類別。 或者，使用搜尋列導覽至您要使用的特定來源。
 
-若要從[!DNL Kobie]串流資料，請選取&#x200B;**[!UICONTROL Kobie Streaming Events]**&#x200B;下的&#x200B;*[!UICONTROL Loyalty]*&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL Add data]**。
+若要從[!DNL Kobie]串流資料，請選取&#x200B;*[!UICONTROL Loyalty]*&#x200B;下的&#x200B;**[!UICONTROL Kobie Streaming Events]**&#x200B;來源卡，然後選取&#x200B;**[!UICONTROL Add data]**。
 
 >[!TIP]
 >
@@ -85,7 +87,7 @@ ht-degree: 2%
 
 ## 對應
 
-在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。 如需詳細資訊，請閱讀UI[中的](../../../../../data-prep/ui/mapping.md)對應指南。
+在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。 如需詳細資訊，請閱讀UI](../../../../../data-prep/ui/mapping.md)中的[對應指南。
 
 ![工作流程的對應步驟](../../../../images/tutorials/create/kobie/mapping.png)
 
@@ -108,4 +110,4 @@ ht-degree: 2%
 
 ## 監視資料流
 
-建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需有關如何監視資料流的詳細資訊，請參閱有關UI[中](../../monitor-streaming.md)監視帳戶和資料流的教學課程。
+建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需有關如何監視資料流的詳細資訊，請參閱有關UI](../../monitor-streaming.md)中[監視帳戶和資料流的教學課程。

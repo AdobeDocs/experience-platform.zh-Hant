@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
-user-guide-description: 擷取各種來源的資料。了解如何建構、賦予標籤和增強已擷取的資料。
+user-guide-description: 擷取各種來源的資料。 了解如何建構、賦予標籤和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
+source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1113'
 ht-degree: 34%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 34%
       - [本機檔案上傳聯結器](connectors/local-system/local-file-upload.md)
    - 忠誠度 {#loyalty}
       - [毛細管串流事件](connectors/loyalty/capillary.md)
-      - [Kobie](connectors/loyalty/kobie.md)
+      - [Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - 行銷自動化 {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -323,8 +323,6 @@ ht-degree: 34%
          - [本機檔案上傳](tutorials/ui/create/local-system/local-file-upload.md)
       - 忠誠度 {#loyalty}
          - [毛細管串流事件](tutorials/ui/create/loyalty/capillary.md)
-         - [Kobie （批次）](tutorials/ui/create/loyalty/kobie-batch.md)
-         - [Kobie （串流）](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Talon.One串流事件](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Talon.One Batch Source Connector](tutorials/ui/create/loyalty/talon-one-batch.md)
       - 行銷自動化 {#marketing-automation}
@@ -411,5 +409,5 @@ ht-degree: 34%
 - [資料流執行通知](notifications.md)
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問題](./troubleshooting.md)
-- [API 參考資料](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Experience Platform 發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+- [API 參考](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [Experience Platform發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

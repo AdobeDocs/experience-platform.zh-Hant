@@ -3,31 +3,22 @@ title: Kobie Source概觀
 description: 瞭解如何將您的Kobie帳戶連結至Adobe Experience Platform。
 hide: true
 hidefromtoc: true
-source-git-commit: c9f35b85f6c71ceff42a724a189098ed26ba1354
+exl-id: e0a263f1-2803-45c2-be88-21a1975d3286
+source-git-commit: 4feff9b123aa7bf73f5f936c290cba15815c3f3a
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 5%
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 # [!DNL Kobie]
 
-[!DNL Kobie]提供可撰寫的SaaS平台，可用來管理忠誠計畫的整個生命週期。 [!DNL Kobie]平台通常由行銷團隊、資料科學家和客戶體驗管理員使用，其包含無程式碼介面，可用來協調複雜的忠誠度規則。
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)]是高度可設定、安全且可擴充的MACH平台，可因應您的忠誠度策略，加速實現價值、提高效率，並透過企業級控管保護您的品牌。 透過跨CDP、CRM、CMS等的無縫整合，[!DNL KALC]可讓行銷人員跨每個管道提供即時個人化，同時提供彈性和可追蹤性，以隨著您的品牌忠誠度成長而改進。
 
-您可以使用Adobe Experience Platform來源目錄中的[!DNL Kobie]來源，從您的[!DNL Kobie]帳戶中擷取批次和串流熟客資料。
+>[!NOTE]
+>
+>**在Experience Platform上設定許可權**
+>
+>您必須同時為帳戶啟用&#x200B;**[!UICONTROL View Sources]**&#x200B;和&#x200B;**[!UICONTROL Manage Sources]**&#x200B;許可權，才能將您的[!DNL Kobie Streaming Events]帳戶連線至Experience Platform。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀[存取控制UI指南](../../../access-control/abac/ui/permissions.md)。
 
-- [[!DNL Kobie]批次](../../tutorials/ui/create/loyalty/kobie-batch.md)
-- [[!DNL Kobie]串流](../../tutorials/ui/create/loyalty/kobie-streaming.md)
-
-## 先決條件
-
-提供下列認證的值，以驗證及連線[!DNL Kobie Batch Source Connector]。
-
-| 認證 | 說明 | 範例 |
-| --- | --- | --- |
-
-## 對應 {#mapping}
-
-<!-- Mapping info here -->
-
-## 後續步驟
+使用來源目錄中的[[!DNL Kobie Streaming Events] 來源](../../tutorials/ui/create/loyalty/kobie-streaming.md)，將您的[!DNL Kobie]帳戶中的忠誠度資料串流至Adobe Experience Platform。

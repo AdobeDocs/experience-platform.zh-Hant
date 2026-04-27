@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存、資料庫和許多其他來源）內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1764'
 ht-degree: 11%
 
 ---
 
 # Source聯結器概觀
 
-Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源 (如 Adobe 應用程式、雲端型儲存空間、資料庫和其他許多來源) 擷取資料。 
+Adobe Experience Platform 讓您可以從外部來源擷取資料，同時可以使用 Experience Platform 服務來建立、加標籤，同時強化傳入資料。 您可以從多種來源 (如 Adobe 應用程式、雲端型儲存空間、資料庫和其他許多來源) 擷取資料。
 
 [!DNL Flow Service]用於收集及集中來自Experience Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，可讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證協力廠商系統、設定擷取執行時間，以及管理資料擷取輸送量。
 
@@ -65,7 +65,7 @@ Experience Platform可從其他Adobe應用程式（包括Adobe Analytics和Adobe
 
 ### 進階企業原始碼 {#advanced-enterprise-sources}
 
-下列來源僅適用於[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/tw/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)或已授權獨立進階企業Source聯結器SKU的客戶。
+下列來源僅適用於[Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)或已授權獨立進階企業Source聯結器SKU的客戶。
 
 | 來源 | 類別 | 擷取型別 | 雲端 |
 | --- | --- | --- | --- |
@@ -225,7 +225,7 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 
 ### 忠誠度 {#loyalty}
 
-您可以使用以下來源將資料忠誠度擷取至Experience Platform。
+您可以使用以下來源將忠誠度資料擷取至Experience Platform。
 
 | 來源 | 擷取型別 | 雲端 |
 | --- | --- | --- |
@@ -294,7 +294,7 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 | 許可權層級 | 說明 |
 | ---- | ----|
 | **[!UICONTROL View Sources]**&#x200B;於 | 授予「目錄」標籤中每個來源型別以及「瀏覽」、「帳戶」和「資料流」標籤的來源的唯讀存取權。 |
-| **[!UICONTROL Manage Sources]**&#x200B;於 | 除了&#x200B;**[!UICONTROL View Sources]**&#x200B;中包含的函式之外，還授予&#x200B;**[!UICONTROL Connect Source]**&#x200B;中&#x200B;**[!UICONTROL Catalog]**&#x200B;選項的存取權以及&#x200B;**[!UICONTROL Select Data]**&#x200B;中&#x200B;**[!UICONTROL Browse]**&#x200B;選項的存取權。 **[!UICONTROL Manage Sources]**&#x200B;也可讓您啟用或停用&#x200B;**[!UICONTROL DataFlows]**&#x200B;並編輯其排程。 |
+| **[!UICONTROL Manage Sources]**&#x200B;於 | 除了&#x200B;**[!UICONTROL View Sources]**&#x200B;中包含的函式之外，還授予&#x200B;**[!UICONTROL Catalog]**&#x200B;中&#x200B;**[!UICONTROL Connect Source]**&#x200B;選項的存取權以及&#x200B;**[!UICONTROL Browse]**&#x200B;中&#x200B;**[!UICONTROL Select Data]**&#x200B;選項的存取權。 **[!UICONTROL Manage Sources]**&#x200B;也可讓您啟用或停用&#x200B;**[!UICONTROL DataFlows]**&#x200B;並編輯其排程。 |
 | **[!UICONTROL View Sources]**&#x200B;關閉，**[!UICONTROL Manage Sources]**&#x200B;關閉 | 撤銷對來源的所有存取權。 |
 
 如需透過「Adobe許可權」授與之可用許可權的詳細資訊，請參閱[存取控制總覽](../access-control/home.md)。
