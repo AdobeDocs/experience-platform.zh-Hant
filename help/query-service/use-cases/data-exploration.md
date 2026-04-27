@@ -92,7 +92,7 @@ GROUP  BY _acp_system_metadata
 
 >[!TIP]
 >
->若要擷取與該批次ID相關聯的批次ID和查詢記錄，您必須先在Experience Platform中建立批次。 如果您想自行測試此程式，可將CSV資料內嵌至Experience Platform。 閱讀如何使用AI產生的建議](../../ingestion/tutorials/map-csv/recommendations.md)將CSV檔案[對應到現有XDM結構描述的指南。
+>若要擷取與該批次ID相關聯的批次ID和查詢記錄，您必須先在Experience Platform中建立批次。 如果您想自行測試此程式，可將CSV資料內嵌至Experience Platform。 閱讀如何使用AI產生的建議[&#128279;](../../ingestion/tutorials/map-csv/recommendations.md)將CSV檔案對應到現有XDM結構描述的指南。
 
 擷取批次後，您必須針對您擷取資料的資料集，導覽至[!UICONTROL Datasets activity tab]。
 
