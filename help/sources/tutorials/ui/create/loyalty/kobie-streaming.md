@@ -3,15 +3,20 @@ title: 使用UI將資料從Kobie串流到Experience Platform
 description: 瞭解如何使用UI將資料從Kobie串流到Adobe Experience Platform。
 hide: true
 hidefromtoc: true
+badge: Beta
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
-source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
+source-git-commit: 90b197a632a5210c4502094de665cab53b76378b
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 1%
+source-wordcount: '886'
+ht-degree: 2%
 
 ---
 
 # 使用UI將資料從[!DNL Kobie Streaming Events]串流到Experience Platform
+
+>[!AVAILABILITY]
+>
+>[!DNL Kobie Streaming Events]來源是測試版。 閱讀來源概觀中的[條款與條件](../../../../home.md#terms-and-conditions)，以取得有關使用測試版標籤之來源的詳細資訊。
 
 [!DNL Kobie Alchemy Loyalty Cloud (KALC)]是高度可設定、安全且可擴充的MACH平台，可因應您的忠誠度策略，加速實現價值、提高效率，並透過企業級控管保護您的品牌。 透過跨CDP、CRM、CMS等的無縫整合，[!DNL KALC]可讓行銷人員跨每個管道提供即時個人化，同時提供彈性和可追蹤性，以隨著您的品牌忠誠度成長而改進。
 
@@ -87,7 +92,7 @@ ht-degree: 1%
 
 ## 對應
 
-在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。 如需詳細資訊，請閱讀UI[&#128279;](../../../../../data-prep/ui/mapping.md)中的對應指南。
+在將資料擷取至Experience Platform之前，請使用對應介面將來源資料對應至適當的結構描述欄位。 如需詳細資訊，請閱讀UI](../../../../../data-prep/ui/mapping.md)中的[對應指南。
 
 ![工作流程的對應步驟](../../../../images/tutorials/create/kobie/mapping.png)
 
@@ -110,4 +115,4 @@ ht-degree: 1%
 
 ## 監視資料流
 
-建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需有關如何監視資料流的詳細資訊，請參閱有關UI[&#128279;](../../monitor-streaming.md)中監視帳戶和資料流的教學課程。
+建立資料流後，您可以監視透過該資料流擷取的資料，以檢視擷取率、成功和錯誤的資訊。 如需有關如何監視資料流的詳細資訊，請參閱有關UI](../../monitor-streaming.md)中[監視帳戶和資料流的教學課程。
