@@ -105,7 +105,7 @@ ht-degree: 7%
 
 * **[!UICONTROL Publisher Account ID]**：輸入與此目的地關聯的發行者帳戶識別碼。
 
-  ![ [!DNL Amazon]目的地詳細資料面板的熒幕擷取畫面顯示[發行者帳戶ID]欄位。](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png){zoomable="yes"}
+  ![&#x200B; [!DNL Amazon]目的地詳細資料面板的熒幕擷取畫面顯示[發行者帳戶ID]欄位。](../../assets/catalog/advertising/acxiom-audience-distribution/amazon_destination_details.png){zoomable="yes"}
 
 ### [!DNL Facebook] {#facebook}
 
