@@ -34,7 +34,7 @@ ht-degree: 4%
 設定[!DNL Acxiom Real ID Audience Connection]目的地之前，請先完成下列必要條件。
 
 * **確認使用條款：**&#x200B;閱讀並簽署[!DNL Acxiom]的使用條款合約。 執行銷售訂單完成後，您會收到協定的連結。 在您簽署合約之前，[!DNL Acxiom Real ID Audience Connection]目的地卡片不會出現在[!DNL Experience Platform]目的地目錄中。 在您接受並簽署合約之後，[!DNL Adobe]會完成您的設定，且[!DNL Acxiom Real ID Audience Connection]目的地卡片會顯示。
-* **知道您的[!DNL Adobe]組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用條款合約。 如需如何[檢視組織ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)的詳細資訊，請參閱[!DNL Adobe]在Experience Cloud中的&#x200B;*組織*&#x200B;主題。
+* **知道您的[!DNL Adobe]組織識別碼：**&#x200B;需要您的[!DNL Adobe]組織識別碼才能完成您的使用條款合約。 如需如何[檢視組織ID](https://experienceleague.adobe.com/zh-hant/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255)的詳細資訊，請參閱[!DNL Adobe]在Experience Cloud中的&#x200B;*組織*&#x200B;主題。
 * **取得[!DNL Acxiom]之[!DNL Real ID]產品的授權：**&#x200B;取得授權後，請在[!DNL Real-Time CDP]內提供[!DNL Acxiom]的[!DNL Real ID]。 如需詳細資訊，請參閱[Acxiom資料增強功能](/help/destinations/catalog/data-partner/acxiom-data-enhancement.md)。
 
 ## 支援的身分 {#supported-identities}
