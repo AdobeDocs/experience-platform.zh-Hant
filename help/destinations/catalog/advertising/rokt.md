@@ -104,7 +104,7 @@ ht-degree: 4%
 * **[!UICONTROL Username]**：您的API金鑰，由您的[!DNL Rokt]帳戶管理員提供。
 * **[!UICONTROL Password]**：您的API機密，由您的[!DNL Rokt]帳戶管理員提供。
 
-  ![ [!DNL Experience Platform]中的[!DNL Rokt]目的地設定畫面，已填入帳戶詳細資料、驗證欄位和目的地詳細資料。](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
+  ![&#x200B; [!DNL Experience Platform]中的[!DNL Rokt]目的地設定畫面，已填入帳戶詳細資料、驗證欄位和目的地詳細資料。](/help/destinations/assets/catalog/advertising/rokt/aep-configure-destination.png)
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -146,7 +146,7 @@ ht-degree: 4%
 
 以下為完整對應的範例：
 
-![ [!DNL Experience Platform]中[!DNL Rokt]目的地啟用工作流程的對應步驟，已設定來源與目標識別欄位。](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
+![&#x200B; [!DNL Experience Platform]中[!DNL Rokt]目的地啟用工作流程的對應步驟，已設定來源與目標識別欄位。](/help/destinations/assets/catalog/advertising/rokt/aep-identity-mapping.png)
 
 >[!NOTE]
 >
