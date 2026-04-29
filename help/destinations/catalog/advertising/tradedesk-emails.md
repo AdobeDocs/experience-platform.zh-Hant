@@ -1,11 +1,11 @@
 ---
 title: 交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
-last-substantial-update: 2025-01-16T00:00:00Z
+last-substantial-update: 2026-04-29T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: a052203dce4949bc795fe181821a8d890c341673
 workflow-type: tm+mt
-source-wordcount: '1799'
+source-wordcount: '1861'
 ht-degree: 2%
 
 ---
@@ -101,10 +101,9 @@ ht-degree: 2%
 * 將所有ASCII字元轉換為小寫。
 * 在`gmail.com`個電子郵件地址中，從電子郵件地址的使用者名稱部分移除下列字元：
 
-      *句點(&#39;.&#39;) 字元（ASCII代碼46）。 例如，將「jane.doe@gmail.com」標準化為「janedoe@gmail.com」。
+      *句點(&#39;.&#39;)字元（ASCII代碼46）。 例如，將&#39;jane.doe@gmail.com&#39;標準化為&#39;janedoe@gmail.com&#39;.
      *加號(&#39;+&#39;)字元（ASCII代碼43）和所有後續字元。 例如，將&#39;janedoe+home@gmail.com&#39;標準化為&#39;janedoe@gmail.com&#39;。
   
-
 ## 電話號碼正規化和雜湊需求 {#phone-hashing}
 
 以下是上傳電話號碼時您需要瞭解的事項：
@@ -124,10 +123,10 @@ ht-degree: 2%
 * E.164電話號碼最多可有15位數。
 * 標準化的E.164電話號碼使用下列語法： `[+][country code][subscriber number including area code]`不含空格、連字型大小、括弧或其他特殊字元。 以下是一些範例：
 
-      *美國： 1 (234) 567-8901已標準化為+12345678901。
-     *新加坡： 65 1243 5678已標準化為+6512345678。
-     *澳洲：行動電話號碼0491 570 006已標準化，以新增國碼並捨棄前導零： +61491570006。
-     * UK：行動電話號碼07812 345678已標準化，以新增國碼並捨棄前導零： +447812345678。
+      *美國： 1 (234) 567-8901已標準化為+12345678901.
+     *新加坡： 65 1243 5678已標準化為+6512345678.
+     *澳洲：行動電話號碼0491 570 006已標準化為新增國碼並捨棄前導零： +61491570006.
+     *英國：行動電話號碼07812 345678已標準化為新增國碼並捨棄前導零： +447812345678.
   
 請確定標準化電話號碼是UTF-8，而不是其他編碼系統，例如UTF-16。
 
@@ -156,6 +155,10 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>**[立即匯出檔案](/help/destinations/ui/export-file-now.md)**&#x200B;功能不適用於[!DNL The Trade Desk] CRM目的地。 若要匯出對象，請使用[排程的每日批次匯出](#activate)。
+
 ## 連線到目標 {#connect}
 
 ### 驗證至目的地 {#authenticate}
@@ -164,12 +167,12 @@ ht-degree: 2%
 
 ### 填寫目的地詳細資料 {#fill-in-details}
 
-您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=zh-Hant)此目的地時，您必須提供下列資訊：
+您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 在[設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Account Type]**：請選擇&#x200B;**[!UICONTROL Existing Account]**&#x200B;選項。
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL Advertiser ID]**：您的[!DNL Trade Desk Advertiser ID]，可由您的[!DNL Trade Desk]帳戶管理員共用，或可在[!DNL Advertiser Preferences] UI的[!DNL Trade Desk]下找到。
+* **[!UICONTROL Advertiser ID]**：您的[!DNL Trade Desk Advertiser ID]，可由您的[!DNL Trade Desk]帳戶管理員共用，或可在[!DNL Trade Desk] UI的[!DNL Advertiser Preferences]下找到。
 
 ![Experience Platform UI熒幕擷圖顯示如何填寫目的地詳細資料。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
