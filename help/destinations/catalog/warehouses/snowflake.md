@@ -1,12 +1,12 @@
 ---
 title: Snowflake串流連線
 description: 建立即時Snowflake資料共用，以直接將串流對象更新作為共用表格傳送到您的帳戶。
-last-substantial-update: 2026-03-24T00:00:00Z
+last-substantial-update: 2026-04-28T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0d5bb74473551c9eddd823439e8bbe18126242e9
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1681'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->此目的地聯結器的可用性有限，僅適用於[!DNL Real-Time CDP]VA7區域[中布建的](/help/landing/multi-cloud.md#azure-regions)個Ultimate客戶。
+>此目的地聯結器的可用性有限，僅適用於[VA7區域](/help/landing/multi-cloud.md#azure-regions)中布建的[!DNL Real-Time CDP]個Ultimate客戶。
 
 ## 概觀 {#overview}
 
@@ -148,11 +148,11 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-> 在您建立目的地之後，就無法透過&#x200B;**[!UICONTROL Snowflake Account ID]**&#x200B;編輯目的地[工作流程編輯](../../ui/edit-destination.md)。 若要使用不同的帳戶，[請建立新的目的地連線](../../ui/connect-destination.md)。
+> 在您建立目的地之後，就無法透過[編輯目的地](../../ui/edit-destination.md)工作流程編輯&#x200B;**[!UICONTROL Snowflake Account ID]**。 若要使用不同的帳戶，[請建立新的目的地連線](../../ui/connect-destination.md)。
 
 >[!IMPORTANT]
 >
-> 目的地名稱中使用的特殊字元和[!DNL Adobe Experience Platform]沙箱名稱會自動轉換為`_`中的底線([!DNL Snowflake])。 為避免混淆，請勿在您的目的地和沙箱名稱中使用任何特殊字元。
+> 目的地名稱中使用的特殊字元和[!DNL Adobe Experience Platform]沙箱名稱會自動轉換為[!DNL Snowflake]中的底線(`_`)。 為避免混淆，請勿在您的目的地和沙箱名稱中使用任何特殊字元。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -183,12 +183,13 @@ Snowflake目的地支援將設定檔屬性對應至自訂屬性。
 
 以下範例顯示共用表格的範例列：某些欄會將身分和區段會籍儲存為JSON；對應的設定檔屬性會顯示為個別的字串欄。
 
-![顯示IDENTITYMAP、SEGMENT_MEMBERSHIP和對應屬性欄的Snowflake工作表列範例](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![顯示TS、IDENTITYMAP、SEGMENT_MEMBERSHIP和對應屬性欄的Snowflake工作表列範例。](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
 ### 資料結構 {#data-structure}
 
 上方的熒幕擷圖顯示下列各欄：
 
+* **TS**：表示每個資料列上次更新的時間戳記。
 * **IDENTITYMAP**：每個設定檔身分對應都有JSON物件。
 * **SEGMENT_MEMBERSHIP**：針對在資料流上啟用的每個對象，使用JSON物件。 值包含`lastQualificationTime`和`status` （例如，當設定檔符合區段資格時，`realized`）。
 * **對應屬性**：您在啟動工作流程期間選取的每個對應屬性都會在[!DNL Snowflake]中顯示為資料行標題。
