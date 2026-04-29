@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段比對概觀
 description: 「區段比對」是Adobe Experience Platform中的區段共用服務，可讓兩位或更多Experience Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: d4b6b83e37762f73f628b8922bf77f1739492eef
+source-git-commit: bf5a474d7ba6ef27d196bc88c10ff9f19151e111
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '2123'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe於2021年推出[!DNL Segment Match]，供客戶共同作業和交換對象。 2025年初，Adobe推出[Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/home)，這是符合此使用案例的長期方法。
+>Adobe於2021年推出[!DNL Segment Match]，供客戶共同作業和交換對象。 2025年初，Adobe推出[Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)，這是符合此使用案例的長期方法。
 >
->* 美國、加拿大、澳洲、紐西蘭和EMEA的客戶： Adobe建議Real-Time CDP Prime和Ultimate客戶將資料共同作業使用案例從[!DNL Segment Match]轉移至Real-Time CDP Collaboration。 檢視Real-Time CDP Collaboration的[檔案](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/home)和[快速入門手冊](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/quick-start-guide)，並連絡您的Adobe客戶團隊以深入瞭解。
+>* 美國、加拿大、澳洲、紐西蘭和EMEA的客戶： Adobe建議Real-Time CDP Prime和Ultimate客戶將資料共同作業使用案例從[!DNL Segment Match]轉移至Real-Time CDP Collaboration。 檢視Real-Time CDP Collaboration的[檔案](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home)和[快速入門手冊](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide)，並連絡您的Adobe客戶團隊以深入瞭解。
 >* 對於所有其他地區的客戶： [!DNL Segment Match]是推薦選項，直到2026年在這些地區發行Real-Time CDP Collaboration為止。
 
 Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位或以上的Experience Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。 [!DNL Segment Match]使用Experience Platform隱私權標準和個人識別碼，例如雜湊電子郵件、雜湊電話號碼以及裝置識別碼，例如IDFA和GAID。
@@ -51,7 +51,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 | 命名空間 | 說明 |
 | --------- | ----------- |
-| 電子郵件 (SHA256，小寫) | 預先雜湊電子郵件地址的名稱空間。使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 Experience Platform提供兩種支援資料收集雜湊的方法，透過[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=zh-Hant#hashing-support)和[資料準備](../../../data-prep/functions.md#hashing)。 |
+| 電子郵件 (SHA256，小寫) | 預先雜湊電子郵件地址的名稱空間。 使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 Experience Platform提供兩種支援資料收集雜湊的方法，透過[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)和[資料準備](../../../data-prep/functions.md#hashing)。 |
 | 電話(SHA256_E.164) | 表示需要使用 SHA256 和 E.164 格式進行雜湊的原始電話號碼的命名空間。 |
 | ECID | 代表Experience Cloud ID (ECID)值的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID總覽](../../../identity-service/features/ecid.md)。 |
 | Apple IDFA （廣告商的ID） | 代表廣告商Apple ID的名稱空間。 如需詳細資訊，請參閱下列有關[興趣型廣告](https://support.apple.com/en-us/HT202074)的檔案。 |
@@ -59,11 +59,11 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 ### 設定同意設定
 
-您必須提供同意設定，並將其預設值設定為`opt-in`或`opt-out`以進行同意檢查。
+您必須提供同意設定，並將其預設值設定為同意檢查的選擇加入或選擇退出。
 
-選擇加入和選擇退出同意檢查會決定您預設是否可以在同意下操作，以共用使用者資料。 如果同意設定預設設為`opt-out`，則除非使用者明確選擇退出，否則可以共用使用者資料。 如果預設值設為`opt-in`，則無法共用使用者資料，除非使用者明確選擇加入。
+選擇加入和選擇退出同意檢查會決定您預設是否可以在同意下操作，以共用使用者資料。 如果同意設定預設為選擇加入，則除非使用者明確選擇退出，否則可共用使用者資料。 如果預設為選擇退出，則除非使用者明確選擇加入，否則無法分享使用者資料。
 
-[!DNL Segment Match]的預設同意設定設為`opt-out`。 若要對您的資料強制執行選擇加入模型，請傳送電子郵件要求給您的Adobe帳戶團隊。
+區段比對的預設同意設定為選擇退出。 若要對您的資料強制執行選擇加入模型，請傳送電子郵件要求給您的Adobe帳戶團隊。
 
 如需有關用來設定資料共用同意值的`share`屬性的詳細資訊，請參閱下列有關[隱私權與同意欄位群組](../../../xdm/field-groups/profile/consents.md)的檔案。 如需用於擷取消費者同意收集及使用隱私、個人化和行銷偏好設定相關資料的特定欄位群組資訊，請參閱下列[隱私同意、Personalization和行銷偏好設定GitHub範例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)。
 
@@ -84,7 +84,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 | 權限 | 說明 |
 | --- | --- |
 | 管理對象共用連線 | 此許可權可讓您完成夥伴交握程式，該程式會連線兩個組織以啟用[!DNL Segment Match]流程。 |
-| 管理對象共用 | 此許可權可讓您建立、編輯及發佈作用中合作夥伴（由具有[!DNL Segment Match]存取權的管理員使用者所連線的合作夥伴）的摘要（用於&#x200B;**[!UICONTROL Audience Share Connections]**&#x200B;的資料套件）。 |
+| 管理對象共用 | 此許可權可讓您建立、編輯及發佈作用中合作夥伴（由具有&#x200B;**[!UICONTROL Audience Share Connections]**&#x200B;存取權的管理員使用者所連線的合作夥伴）的摘要（用於[!DNL Segment Match]的資料套件）。 |
 
 如需存取控制和許可權的詳細資訊，請參閱[存取控制總覽](../../../access-control/home.md)。
 
@@ -112,7 +112,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 ![建立 — 連線.png](./images/establish-connection.png)
 
-若要建立新的[!UICONTROL connect ID]，請選取&#x200B;**[!UICONTROL Regenerate]**&#x200B;下的[!UICONTROL Share setting]，然後選取新產生的ID旁邊的復製圖示。
+若要建立新的[!UICONTROL connect ID]，請選取[!UICONTROL Share setting]下的&#x200B;**[!UICONTROL Regenerate]**，然後選取新產生的ID旁邊的復製圖示。
 
 ![share-setting.png](./images/share-setting.png)
 
@@ -130,7 +130,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 **摘要**&#x200B;是一組資料（區段）、如何公開或使用該資料的規則，以及決定如何將您的資料與合作夥伴的資料比對的設定。 摘要可以獨立管理，並可透過[!DNL Segment Match]與其他Experience Platform使用者交換。
 
-若要建立新的摘要，請從&#x200B;**[!UICONTROL Create feed]**&#x200B;儀表板選取[!UICONTROL Feeds]。
+若要建立新的摘要，請從[!UICONTROL Feeds]儀表板選取&#x200B;**[!UICONTROL Create feed]**。
 
 ![create-feed.png](./images/create-feed.png)
 
@@ -184,7 +184,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 ### 更新摘要
 
-若要新增或移除區段，請從「**[!UICONTROL Create feed]**」頁面中選取「[!UICONTROL Feeds]」，然後選取「**[!UICONTROL Existing feed]**」。 在出現的現有摘要清單中，選取您要更新的摘要，然後選取&#x200B;**[!UICONTROL Next]**。
+若要新增或移除區段，請從「[!UICONTROL Feeds]」頁面中選取「**[!UICONTROL Create feed]**」，然後選取「**[!UICONTROL Existing feed]**」。 在出現的現有摘要清單中，選取您要更新的摘要，然後選取&#x200B;**[!UICONTROL Next]**。
 
 ![摘要清單](./images/feed-list.png)
 
@@ -198,7 +198,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 ### 接受傳入摘要
 
-若要檢視傳入摘要，請從&#x200B;**[!UICONTROL Received]**&#x200B;頁面的標頭中選取[!UICONTROL Feeds]，然後從清單中選取您要檢視的摘要。 若要接受摘要，請選取「**[!UICONTROL Enable for profile]**」並允許狀態有幾分鐘從[!UICONTROL Pending]更新為[!UICONTROL Enabled]。
+若要檢視傳入摘要，請從[!UICONTROL Feeds]頁面的標頭中選取&#x200B;**[!UICONTROL Received]**，然後從清單中選取您要檢視的摘要。 若要接受摘要，請選取「**[!UICONTROL Enable for profile]**」並允許狀態有幾分鐘從[!UICONTROL Pending]更新為[!UICONTROL Enabled]。
 
 ![已接收.png](./images/received.png)
 
