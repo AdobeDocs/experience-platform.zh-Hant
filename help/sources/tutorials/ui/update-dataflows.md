@@ -2,9 +2,9 @@
 description: 瞭解如何在Experience Platform UI中更新現有的來源資料流。
 title: 更新UI中的Source連線資料流
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
+source-git-commit: 2139566a7c44de8736f7433ba826796dad44715f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '893'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
 >title="資料集期限"
->abstract="此欄表示目標資料集在自動到期之前剩餘的天數。<br>如果目標資料集過期，資料流將會失敗。為避免資料流失敗，請確保將目標資料集設定為在正確的日期到期。請參閱文件以了解如何更新過期日。"
+>abstract="此欄表示目標資料集在自動到期之前剩餘的天數。<br>如果目標資料集過期，資料流將會失敗。 為避免資料流失敗，請確保將目標資料集設定為在正確的日期到期。 請參閱文件以了解如何更新過期日。"
 
 在Experience Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL Sources]**，然後從頂端標題選取&#x200B;**[!UICONTROL Dataflows]**。
 
@@ -47,7 +47,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->下列來源目前不支援編輯對應功能： Adobe Analytics、Adobe Audience Manager、HTTP API和[!DNL Marketo Engage]。
+>下列來源目前不支援編輯對應功能： Adobe Analytics、Adobe Audience Manager和HTTP API。
 
 在此過程中，您也可以更新與資料流關聯的對應集。  對應介面會顯示資料流的現有對應，而不是新的建議對應集。 對應更新僅適用於未來排程的資料流執行。 排程進行一次性內嵌的資料流無法更新其對應集。
 
