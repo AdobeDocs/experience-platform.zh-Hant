@@ -2,9 +2,9 @@
 title: 目的地概觀
 description: 目的地是預先建立的與目的地平台的整合，可無縫地從Adobe Experience Platform啟用資料。 您可以使用Adobe Experience Platform中的「目的地」，針對跨頻道行銷活動、電子郵件行銷活動、鎖定特定目標的廣告和許多其他使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 7f69bbafa5ccd6759b5afcc2b99cbec32220ad3b
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1379'
 ht-degree: 2%
 
 ---
@@ -99,6 +99,12 @@ Experience Platform中的目的地功能可搭配[!DNL Adobe Experience Platform
 ![目的地監視頁面範例。](./assets/overview/monitoring-page-example.png)
 
 您也可以驗證資料是否成功到達您的目的地。 目錄中的大多數目的地檔案頁面都有&#x200B;*驗證資料匯出區段*，這表示您如何在目的地平台中檢查資料是否已成功從Experience Platform匯入。 檢視[Amazon Ads目的地](/help/destinations/catalog/advertising/amazon-ads.md#exported-data)的此區段範例。
+
+## 資料加密 {#encryption}
+
+所有從[!DNL Experience Platform]經由目的地匯出的傳輸中資料，都會使用[HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246)或更新版本，透過安全、加密的連線傳輸。 [!DNL Experience Platform]在輸出通訊中使用的TLS通訊協定也支援[伺服器名稱指示(SNI)](https://www.rfc-editor.org/rfc/rfc6066#page-6)。
+
+如需如何擷取、加密及儲存資料的詳細資訊，請參閱[Experience Platform中的資料加密](../landing/governance-privacy-security/encryption.md)。
 
 ## 啟用目的地的資料治理限制 {#data-governance}
 
