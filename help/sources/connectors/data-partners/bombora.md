@@ -3,9 +3,9 @@ title: Bombora Intent
 description: 瞭解Experience Platform上的Bombora Intent來源。
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1775'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Experience Platform上的[!DNL Bombora]由[!DNL Google Cloud Storage]代管。 �
 | 祕密存取金鑰 | [!DNL Bombora]秘密存取金鑰。 這是40個字元、以Base64編碼的字串，驗證您的帳戶給Experience Platform是必要的。 |
 | 貯體名稱 | 將從其中提取資料的[!DNL Bombora]貯體。 |
 
-如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱[來源概觀 [!DNL Google Cloud Storage] 中的](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)先決條件指南。
+如需這些認證的詳細資訊，請閱讀[[!DNL Google Cloud Storage] HMAC金鑰指南](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)。 如需如何產生您自己的存取金鑰的步驟，請參閱 [!DNL Google Cloud Storage] 來源概觀](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account)中的[先決條件指南。
 
 ## [!DNL Bombora]結構描述 {#schema}
 
@@ -195,7 +195,7 @@ Experience Platform上的[!DNL Bombora]由[!DNL Google Cloud Storage]代管。 �
 
 +++回答
 
-Experience Platform中的網域比對是根據已清除網域欄位值的精確比對。 Experience Platform會自動移除首碼（例如https:/<span>/www.），並保留最上層網域（例如adobe.com）。 相符專案需要精確的網域值，不支援模糊相符或子網域。
+Experience Platform中的網域比對是根據已清除網域欄位值的精確比對。 Experience Platform會自動移除首碼（例如https:/<span>/www）。 並保留最上層網域（例如adobe.com）。 相符專案需要精確的網域值，不支援模糊相符或子網域。
 
 +++
 
@@ -204,5 +204,28 @@ Experience Platform中的網域比對是根據已清除網域欄位值的精確�
 +++回答
 
 意圖資料可用於[帳戶對象](../../../segmentation/types/account-audiences.md)，以強化目標定位、細分和個人化。 透過運用意圖訊號，企業可以識別對特定主題表現出高度興趣的客戶，並與他們互動，以最佳化行銷和銷售推廣。
+
++++
+
+### 標準[!DNL Account Key]欄位群組是否與[!DNL Bombora Account Intent]結構描述相容？
+
++++回答
+
+不可以。 使用`accountID`欄位與B2B帳戶結構描述建立關係。 這可避免在引用或來源結構描述中引入整個欄位群組的需要。
++++
+
+### [!DNL Bombora Account Intent]結構描述如何與B2B帳戶結構描述建立關係？
+
++++回答
+
+[!DNL Bombora Account Intent]結構描述使用`accountID`欄位來連結至對應的B2B帳戶記錄。 在兩個資料集中都找到相符的網域時，系統會在擷取期間自動填入此欄位。 具體來說，[!DNL Bombora]結構描述中的`accountID`參考了標準B2B帳戶結構描述中的`accountKey.sourceKey`。
+
++++
+
+### 為什麼[!DNL Bombora Account Intent]結構描述使用`accountID`，而不是一般的[!DNL Account Key]欄位群組結構？
+
++++回答
+
+[!DNL Bombora Intent]個結構描述專注於儲存和處理效率。 結構描述不使用整個欄位群組，而是使用簡化的單一欄位(`accountID`)來建立關係。 這樣可降低複雜性，並符合意圖資料的最佳處理模式。
 
 +++
