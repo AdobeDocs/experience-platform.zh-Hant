@@ -2,9 +2,9 @@
 title: 設定資料串流的機器人偵測
 description: 瞭解如何為資料串流設定機器人偵測，以區分人類和非人類流量。
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 0787876d80e308c1687304ace7538a51d9a754ff
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1460'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 來自自動化程式、網頁刮刀、編目程式和指令碼掃描器的非人為流量可能讓識別來自人為訪客的事件變得困難。 此類流量會對重要的商業量度造成負面影響，導致流量報告不正確。
 
-機器人偵測可讓您將[網頁SDK](/help/collection/js/js-overview.md)、[行動SDK](https://developer.adobe.com/client-sdks/home/)和[[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/)產生的事件識別為已知編目程式和機器人所產生。
+使用機器人偵測來識別由已知編目程式和機器人產生的[網頁SDK](/help/collection/js/js-overview.md)、[行動SDK](https://developer.adobe.com/client-sdks/home/)和[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)所產生的事件。
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 透過為資料串流設定機器人偵測，您可以識別特定IP位址、IP範圍和請求標題，以分類為機器人事件。 這有助於針對使用者在您網站或行動應用程式上的活動提供更準確的測量。
 
-當對Edge Network的請求符合任何機器人偵測規則時，XDM結構描述會以機器人分數（一律設為1）更新，如下所示：
+當[!DNL Edge Network]的請求符合任何機器人偵測規則時，XDM結構描述會以機器人分數更新（一律設為1）：
 
 ```json
 {
@@ -35,9 +35,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->機器人偵測不會捨棄任何機器人請求。 它只會以機器人評分更新XDM結構描述，並將事件轉送至您設定的[資料流服務](configure.md)。
+>機器人偵測不會捨棄任何機器人請求。 它只會以機器人評分更新XDM結構描述，並將事件轉送至您設定的[資料流服務](/help/datastreams/configure.md)。
 >
->Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=zh-Hant)，而不使用Edge Network設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
+>Adobe解決方案可能會以不同的方式處理機器人評分。 例如，[!DNL Adobe Analytics]使用自己的[機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html)，且不使用[!DNL Edge Network]設定的分數。 這兩個服務使用相同的[IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
 
 ## 技術考量 {#technical-considerations}
 
@@ -45,15 +45,15 @@ ht-degree: 1%
 
 * 機器人偵測僅適用於傳送給`edge.adobedc.net`的未驗證要求。
 * 傳送至`server.adobedc.net`的已驗證要求不會針對機器人流量進行評估，因為已驗證的流量被視為可信。
-* 建立機器人偵測規則後，可能需要最多15分鐘的時間才能在Edge Network中傳播。
+* 建立機器人偵測規則後，最多可能需要15分鐘的時間才能傳播至[!DNL Edge Network]。
 
 ## 先決條件 {#prerequisites}
 
-為了讓機器人偵測在您的資料流中運作，您必須將&#x200B;**[[!UICONTROL [Bot Detection Information]]](../xdm/field-groups/event/bot-detection-information.md)**&#x200B;欄位群組新增到結構描述。 請參閱[XDM結構描述](../xdm/ui/resources/schemas.md#add-field-groups)檔案，瞭解如何將欄位群組新增到結構描述。
+若要讓機器人偵測在您的資料流中運作，您必須將&#x200B;**[機器人偵測資訊](/help/xdm/field-groups/event/bot-detection-information.md)**&#x200B;欄位群組新增到您的結構描述。 請參閱[XDM結構描述](/help/xdm/ui/resources/schemas.md#add-field-groups)檔案，瞭解如何將欄位群組新增到結構描述。
 
 ## 設定資料串流的機器人偵測 {#configure}
 
-您可以在建立資料流設定後設定機器人偵測。 請參閱有關如何[建立及設定資料流](configure.md)的檔案，然後遵循下列指示，將機器人偵測功能新增至您的資料流。
+您可以在建立資料流設定後設定機器人偵測。 請參閱有關如何[建立及設定資料流](/help/datastreams/configure.md)的檔案，然後遵循下列指示，將機器人偵測功能新增至您的資料流。
 
 移至資料串流清單，並選取您要新增機器人偵測的資料串流。
 
@@ -123,19 +123,19 @@ ht-degree: 1%
 
    >[!TIP]
    >
-   >IP條件是以邏輯`OR`作業為基礎。 如果請求符合您定義的任何IP條件，則會標籤為源自機器人。
+   >IP條件是以邏輯[!DNL OR]作業為基礎。 如果請求符合您定義的任何IP條件，則會標籤為源自機器人。
 
 4. 如果您想要將標頭條件新增至規則，請選取&#x200B;**[!UICONTROL Add header conditions group]**，然後選取您要規則使用的標頭。
 
-   ![標頭條件反白顯示的Bot偵測規則畫面。](assets/bot-detection/header-conditions.png)
+   ![機器人偵測規則畫面顯示[新增標頭條件]群組選項。](assets/bot-detection/header-conditions.png)
 
    然後，新增用於所選標頭的條件。
 
-   ![標頭條件反白顯示的Bot偵測規則畫面。](assets/bot-detection/header-condition-rule.png)
+   ![機器人偵測規則畫面顯示已填入的標題條件欄位。](assets/bot-detection/header-condition-rule.png)
 
 5. 設定所需的機器人偵測規則後，選取「**[!UICONTROL Save]**」以將規則套用至您的資料流。
 
-   ![標頭條件反白顯示的Bot偵測規則畫面。](assets/bot-detection/bot-detection-save.png)
+   顯示[儲存]按鈕的![機器人偵測規則畫面反白顯示。](assets/bot-detection/bot-detection-save.png)
 
 
 ## 機器人偵測規則範例 {#examples}
@@ -144,39 +144,35 @@ ht-degree: 1%
 
 ### 根據一個IP位址偵測機器人 {#one-ip}
 
-若要將所有來自特定IP位址的請求標示為機器人流量，請建立新的機器人偵測規則，以評估單一IP位址，如下圖所示。
+若要將所有來自特定IP位址的請求標示為機器人流量，請建立新的機器人偵測規則，以評估單一IP位址。
 
-![以一個IP位址為基礎的機器人偵測規則。](assets/bot-detection/bot-detection-one-ip.png)
+![設定為評估單一IP位址的機器人偵測規則。](assets/bot-detection/bot-detection-one-ip.png)
 
 ### 根據兩個IP位址進行機器人偵測 {#two-ip}
 
-若要將所有來自兩個特定IP位址其中一個的請求標示為機器人流量，請建立新的機器人偵測規則，以評估兩個IP位址，如下圖所示。
+若要將所有來自兩個特定IP位址其中一個的請求標示為機器人流量，請建立新的機器人偵測規則，以評估兩個IP位址。
 
-根據兩個IP位址的![機器人偵測規則。](assets/bot-detection/bot-detection-two-ips.png)
+![設定為評估兩個特定IP位址的機器人偵測規則。](assets/bot-detection/bot-detection-two-ips.png)
 
 ### 根據IP位址範圍的機器人偵測 {#range}
 
-若要將源自特定範圍內任何IP位址的所有要求標示為機器人流量，請建立新的機器人偵測規則，以評估整個IP位址範圍，如下圖所示。
+若要將源自特定範圍內任何IP位址的所有要求標示為機器人流量，請建立新的機器人偵測規則，以評估整個IP位址範圍。
 
-根據IP範圍的![機器人偵測規則。](assets/bot-detection/bot-detection-range.png)
+![設定為評估IP位址範圍的機器人偵測規則。](assets/bot-detection/bot-detection-range.png)
 
 ### 根據IP位址和請求標題進行機器人偵測 {#ip-header}
 
-若要將源自特定IP位址且包含特定請求標題的所有請求標示為機器人流量，請建立新的機器人偵測規則，如下圖所示。
+若要將源自特定IP位址且包含特定請求標題的所有請求標示為機器人流量，請建立新的機器人偵測規則。 此規則會檢查要求是否源自特定IP位址，以及`referer`要求標頭是否以`www.adobe.com`開頭。
 
-此規則會檢查要求是否源自特定IP位址，以及`referer`要求標頭是否以`www.adobe.com`開頭。
-
-![以IP位址和要求標頭為基礎的機器人偵測規則。](assets/bot-detection/bot-detection-header-ip.png)
+![設定為評估IP位址和參照者要求標頭的Bot偵測規則。](assets/bot-detection/bot-detection-header-ip.png)
 
 ### 根據多個條件的機器人偵測 {#multiple-conditions}
 
 您可以根據以下專案建立機器人偵測規則：
 
-* **多個不同的條件**：不同的條件會評估為邏輯`AND`作業，這表示需要同時符合條件，才能將要求識別為源自機器人。
-* **相同型別的多個條件**：將相同型別的條件評估為邏輯`OR`作業，這表示如果符合任何條件，則會將要求識別為源自機器人。
+* **多個不同的條件**：不同的條件會評估為邏輯[!DNL AND]作業，表示系統必須同時符合所有條件，才能將要求識別為機器人流量。
+* **相同型別的多個條件**：將相同型別的條件評估為邏輯[!DNL OR]作業，這表示如果符合任一條件，則要求會識別為機器人流量。
 
-如果符合下列條件，下圖顯示的規則會識別機器人起始的請求：
+如果滿足這些條件，下列規則會識別機器人起始的請求：請求源自兩個IP位址的其中一個，`referer`標頭以`www.adobe.com`開頭，而`sec-ch-ua-mobile`標頭會識別源自案頭瀏覽器的請求。
 
-要求來自兩個IP位址的其中一個，`referer`標頭以`www.adobe.com`開頭，而`sec-ch-ua-mobile`標頭識別要求來自案頭瀏覽器。
-
-![根據多個條件的機器人偵測規則。](assets/bot-detection/bot-detection-multiple.png)
+![設定了多個IP、參照者和使用者代理程式條件的機器人偵測規則。](assets/bot-detection/bot-detection-multiple.png)

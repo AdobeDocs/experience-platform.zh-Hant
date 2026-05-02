@@ -2,27 +2,27 @@
 title: 建立和設定資料串流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及第三方目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '2856'
-ht-degree: 27%
+source-wordcount: '3026'
+ht-degree: 21%
 
 ---
 
 
 # 建立和設定資料串流
 
-本文件會介紹在 UI 中設定[資料流](./overview.md)的步驟。
+本指南涵蓋在UI中設定[資料串流](/help/datastreams/overview.md)的步驟。
 
-## 存取[!UICONTROL Datastreams]工作區
+## 存取[!UICONTROL Datastreams]工作區 {#workspace}
 
-您可以在資料收集UI或Experience Platform UI中建立和管理資料串流，方法是選取左側導覽中的&#x200B;**[!UICONTROL Datastreams]**。
+您可以在資料收集UI或[!DNL Adobe Experience Platform] UI中建立和管理資料串流，方法是選取左側導覽中的&#x200B;**[!UICONTROL Datastreams]**。
 
 資料收集UI中的![資料串流索引標籤。](assets/configure/datastreams-tab.png)
 
 **[!UICONTROL Datastreams]**&#x200B;索引標籤會顯示現有資料串流的清單，包括其易記名稱、ID和上次修改日期。 若要[檢視其詳細資料並設定服務](#view-details)，請選取資料流的名稱。
 
-若要顯示特定資料串流的更多選項，請選取「更多」圖示(**...**)。 若要更新資料流的[基本設定](#configure)，請選取&#x200B;**[!UICONTROL Edit]**。 若要移除資料流，請選取&#x200B;**[!UICONTROL Delete]**。
+若要顯示特定資料串流的更多選項，請選取更多圖示(**...**)。 若要更新資料流的[基本設定](#configure)，請選取&#x200B;**[!UICONTROL Edit]**。 若要移除資料流，請選取&#x200B;**[!UICONTROL Delete]**。
 
 ![編輯或刪除現有資料流的選項。](assets/configure/edit-datastream.png)
 
@@ -32,9 +32,9 @@ ht-degree: 27%
 
 ![選取新的資料流。](assets/configure/new-datastream-button.png)
 
-資料流建立工作流程隨即顯示，首先是設定步驟。在這裡，您必須提供資料流的名稱和說明 (選用)。
+資料流建立工作流程隨即顯示，首先是設定步驟。 在這裡，您必須提供資料流的名稱和說明 (選用)。
 
-如果您設定要在Experience Platform中使用的資料串流，並且也使用網路SDK，您還必須選取[事件型體驗資料模型(XDM)結構描述](../xdm/classes/experienceevent.md)來代表您計畫擷取的資料。
+如果您設定要在Experience Platform中使用的資料串流，並且也使用網路SDK，您還必須選取[事件型體驗資料模型(XDM)結構描述](/help/xdm/classes/experienceevent.md)來代表您計畫擷取的資料。
 
 ![資料串流的基本設定。](assets/configure/configure.png)
 
@@ -51,7 +51,7 @@ ht-degree: 27%
 | [!UICONTROL Geo Lookup] | 根據訪客的IP位址啟用所選選項的地理位置查閱。 可用的選項包括： <ul><li>**國家**：填入`xdm.placeContext.geo.countryCode`</li><li>**郵遞區號**：填入`xdm.placeContext.geo.postalCode`</li><li>**州/省**：填入`xdm.placeContext.geo.stateProvince`</li><li>**DMA**：填入`xdm.placeContext.geo.dmaID`</li><li>**城市**：填入`xdm.placeContext.geo.city`</li><li>**緯度**：填入`xdm.placeContext.geo._schema.latitude`</li><li>**經度**：填入`xdm.placeContext.geo._schema.longitude`</li></ul>選取&#x200B;**[!UICONTROL City]**、**[!UICONTROL Latitude]**&#x200B;或&#x200B;**[!UICONTROL Longitude]**&#x200B;可提供最多兩個小數點的座標，無論選取的其他選項為何。 這被視為城市層級的詳細程度。<br> <br>未選取任何選項會停用地理位置查詢。 地理位置發生在[!UICONTROL IP Obfuscation]之前，這表示它不受[!UICONTROL IP Obfuscation]設定影響。 |
 | [!UICONTROL Network Lookup] | 根據訪客的IP位址啟用所選選項的網路查閱。 可用的選項包括： <ul><li>**行動電信業者**：填入`xdm.environment.carrier`</li><li>**網域**：填入`xdm.environment.domain`</li><li>**ISP**：填入`xdm.environment.ISP`</li><li>**連線型別**：填入`xdm.environment.connectionType`</li></ul> |
 
-如果您啟用任何上述欄位以進行資料收集，請確定您在設定Web SDK時已正確設定[`context`](/help/collection/js/commands/configure/context.md)陣列屬性。
+如果您啟用這些欄位中的任一欄位以進行資料收集，請確定您在設定Web SDK時已正確設定[`context`](/help/collection/js/commands/configure/context.md)陣列屬性。
 
 地理位置查閱欄位使用`context`陣列字串`"placeContext"`，而網路查閱欄位使用`context`陣列字串`"environment"`。
 
@@ -75,7 +75,7 @@ ht-degree: 27%
 | **[!UICONTROL Use device lookup to collect the following information]** | 如果要收集下列一或多個裝置特定資訊，請選取此選項： <ul><li>**[!UICONTROL Device]**&#x200B;資訊：<ul><li>**裝置製造商**：填入`xdm.device.manufacturer`</li><li>**裝置模型**：填入`xdm.device.modelNumber`</li><li>**行銷名稱**：填入`xdm.device.model`</li></ul></li><li>**[!UICONTROL Hardware]**&#x200B;資訊： <ul><li>**硬體型別**：填入`xdm.device.type`</li><li>**顯示高度**：填入`xdm.device.screenHeight`</li><li>**顯示寬度**：填入`xdm.device.screenWidth`</li><li>**顯示色彩深度**：填入`xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL Browser]**&#x200B;資訊： <ul><li>**瀏覽器廠商**：填入`xdm.environment.browserDetails.vendor`</li><li>**瀏覽器名稱**：填入`xdm.environment.browserDetails.name`</li><li>**瀏覽器版本**：填入`xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL Operating system]**&#x200B;資訊： <ul><li>**OS廠商**：填入`xdm.environment.operatingSystemVendor`</li><li>**OS名稱**：填入`xdm.environment.operatingSystem`</li><li>**OS版本**：填入`xdm.environment.operatingSystemVersion`</li></ul></li></ul>裝置查詢資訊無法與使用者代理程式和使用者端提示一起收集。 選擇收集裝置資訊會停用收集使用者代理程式和使用者端提示，反之亦然。 |
 | **[!UICONTROL Do not collect any device information]** | 如果您不想收集任何裝置查詢資訊，請選取此選項。 未收集任何裝置、硬體、瀏覽器、作業系統、使用者代理程式或使用者端提示資料。 |
 
-如果您啟用任何上述欄位以進行資料收集，請確定您在設定Web SDK時已正確設定[`context`](/help/collection/js/commands/configure/context.md)陣列屬性。
+如果您啟用這些欄位中的任一欄位以進行資料收集，請確定您在設定Web SDK時已正確設定[`context`](/help/collection/js/commands/configure/context.md)陣列屬性。
 
 裝置和硬體資訊使用`context`陣列字串`"device"`，而瀏覽器和作業系統資訊使用`context`陣列字串`"environment"`。
 
@@ -83,9 +83,9 @@ ht-degree: 27%
 
 ### 設定進階選項 {#advanced-options}
 
-若要顯示進階組態選項，請選取&#x200B;**[!UICONTROL Advanced Options]**。 您可以在此處設定其他資料流設定，例如IP模糊化、第一方ID Cookie等。
+若要存取進階組態選項，請選取&#x200B;**[!UICONTROL Advanced Options]**。 您可以在此處設定其他資料流設定，例如IP模糊化、第一方ID Cookie等。
 
-![進階組態選項](assets/configure/advanced-settings.png)
+![資料流進階組態選項面板顯示IP模糊化、第一方ID Cookie和其他設定。](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
@@ -95,27 +95,27 @@ ht-degree: 27%
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL IP Obfuscation] | 說明要套用於資料流的 IP 模糊化的類型。任何根據客戶IP的處理會受到IP模糊化設定的影響。 這包括從資料流接收資料的所有Experience Cloud服務。 IP模糊化會在事件傳送至任何下游服務（例如資料準備）之前發生。 <p>可使用的選項：</p> <ul><li>**[!UICONTROL None]**：停用IP模糊化功能。 完整的使用者IP位址會透過資料流傳送。</li><li>**[!UICONTROL Partial]**：針對IPv4位址，模糊化使用者IP位址的最後八位元。 若為 IPv6 位址，模糊化位址的最後 80 個位元。 <p>範例:</p> <ul><li>IPv4：`1.2.3.4` -> `1.2.3.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Full]**：將整個IP位址模糊化。 <p>範例:</p> <ul><li>IPv4：`1.2.3.4` -> `0.0.0.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> IP 模糊化會對其他 Adobe 產品造成影響： <ul><li>**Adobe Target**：在Adobe Target中執行[!UICONTROL IP obfuscation]之前，將資料流層級[!UICONTROL IP obfuscation]套用至要求上存在的所有IP位址。 例如，如果資料流層級[!UICONTROL IP obfuscation]選項設為&#x200B;**[!UICONTROL Full]**，而Adobe Target IP模糊化選項設為&#x200B;**[!UICONTROL Last octet obfuscation]**，Adobe Target會收到完全模糊化的IP。 如果資料流層級[!UICONTROL IP obfuscation]選項設為&#x200B;**[!UICONTROL Partial]**，而Adobe Target IP模糊化選項設為&#x200B;**[!UICONTROL Full]**，Adobe Target會收到部分模糊化的IP，然後套用完整的模糊化選項。 Adobe Target IP模糊化是獨立於資料流管理。 如需更多詳細資料，請至 [IP 模糊化](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/privacy.html?lang=zh-Hant)和[地理位置](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hant)，參閱 Adobe Target 文件。</li><li>**Audience Manager**：在Audience Manager中執行[!UICONTROL IP obfuscation]之前，將資料流層級[!UICONTROL IP obfuscation]設定套用至要求中存在的所有IP位址。 Audience Manager完成的任何地理位置查詢都會受到資料流層級[!UICONTROL IP obfuscation]選項的影響。 在Audience Manager中，根據完全模糊化的IP進行地理位置查詢，會導致未知區域，且不會實現任何根據所產生地理位置資料的區段。 如需更多詳細資料，請至 [IP 模糊化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=zh-Hant)，參閱 Audience Manager 文件。</li><li>**Adobe Analytics**：如果資料流層級IP模糊化設定設為&#x200B;**[!UICONTROL Full]**，Adobe Analytics會將IP位址視為空白。 這會影響任何依賴IP位址的Analytics處理，例如地理位置查詢和IP篩選。 若要讓Analytics接收未模糊化或部分模糊化的IP位址，請將IP模糊化設定設為&#x200B;**[!UICONTROL Partial]**&#x200B;或&#x200B;**[!UICONTROL None]**。 部分模糊化及未模糊化的IP位址在Analytics中可能會進一步模糊化。 如需如何在Analytics中啟用IP模糊化的詳細資訊，請參閱Adobe Analytics [檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html?lang=zh-Hant)。 如果IP位址已完全模糊化，而且頁面點選既沒有[!DNL ECID]也沒有[!DNL VisitorID]，則Analytics會捨棄點選，而非產生部分以IP位址為基礎的[遞補ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-ids.html?lang=zh-Hant)。</li><li>**Adobe Advertising**：當資料流層級IP模糊化設為[!UICONTROL Partial]或[!UICONTROL Full]時，Advertising DSP中除了連線電視廣告外，已停用地理報告和功能（包括測量和重新鎖定目標）。</li></ul> |
-| [!UICONTROL First Party ID Cookie] | 啟用後，在查詢[第一方裝置 ID](/help/collection/identity/fpid.md) 時，此設定會告知 Edge Network 參照指定的 cookie，而不是在身分識別對應中查詢這個值。<br><br>啟用此設定時，您必須提供應儲存ID的Cookie名稱。 |
-| [!UICONTROL Third Party ID Sync] | 將 ID 同步分組至不同的容器中，即可讓不同的 ID 同步在不同時間執行。啟用後，此設定會讓您指定為此資料流執行哪個 ID 同步的容器。 |
-| [!UICONTROL Third Party ID Sync Container ID] | 用於協力廠商 ID 同步之容器的數值 ID。<br><br>**注意：**&#x200B;資料流參考預設的Audience Manager容器識別碼0。 如果您有多個Audience Manager ID同步容器ID，請洽詢Audience Manager顧問，以正確識別並解析ID同步設定。 |
+| [!UICONTROL IP Obfuscation] | 說明要套用於資料流的 IP 模糊化的類型。 任何根據客戶IP的處理會受到IP模糊化設定的影響。 這包括從資料流接收資料的所有Experience Cloud服務。 IP模糊化會在事件傳送至任何下游服務（例如資料準備）之前發生。 <p>可使用的選項：</p> <ul><li>**[!UICONTROL None]**：停用IP模糊化功能。 完整的使用者IP位址會透過資料流傳送。</li><li>**[!UICONTROL Partial]**：針對IPv4位址，模糊化使用者IP位址的最後八位元。 若為 IPv6 位址，模糊化位址的最後 80 個位元。 <p>範例：</p> <ul><li>IPv4：`1.2.3.4` -> `1.2.3.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Full]**：將整個IP位址模糊化。 <p>範例：</p> <ul><li>IPv4：`1.2.3.4` -> `0.0.0.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> IP 模糊化會對其他 Adobe 產品造成影響： <ul><li>**Adobe Target**：在Adobe Target中執行[!UICONTROL IP obfuscation]之前，將資料流層級[!UICONTROL IP obfuscation]套用至要求上存在的所有IP位址。 例如，如果資料流層級[!UICONTROL IP obfuscation]選項設為&#x200B;**[!UICONTROL Full]**，而Adobe Target IP模糊化選項設為&#x200B;**[!UICONTROL Last octet obfuscation]**，Adobe Target會收到完全模糊化的IP。 如果資料流層級[!UICONTROL IP obfuscation]選項設為&#x200B;**[!UICONTROL Partial]**，而Adobe Target IP模糊化選項設為&#x200B;**[!UICONTROL Full]**，Adobe Target會收到部分模糊化的IP，然後套用完整的模糊化選項。 Adobe Target IP模糊化是獨立於資料流管理。 如需更多詳細資料，請至 [IP 模糊化](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/privacy.html)和[地理位置](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html)，參閱 Adobe Target 文件。</li><li>**Audience Manager**：在Audience Manager中執行[!UICONTROL IP obfuscation]之前，將資料流層級[!UICONTROL IP obfuscation]設定套用至要求中存在的所有IP位址。 Audience Manager完成的任何地理位置查詢都會受到資料流層級[!UICONTROL IP obfuscation]選項的影響。 在Audience Manager中，根據完全模糊化的IP進行地理位置查詢，會導致未知區域，且不會實現任何根據所產生地理位置資料的區段。 如需更多詳細資料，請至 [IP 模糊化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html)，參閱 Audience Manager 文件。</li><li>**Adobe Analytics**：如果資料流層級IP模糊化設定設為&#x200B;**[!UICONTROL Full]**，Adobe Analytics會將IP位址視為空白。 這會影響任何依賴IP位址的Analytics處理，例如地理位置查詢和IP篩選。 若要讓Analytics接收未模糊化或部分模糊化的IP位址，請將IP模糊化設定設為&#x200B;**[!UICONTROL Partial]**&#x200B;或&#x200B;**[!UICONTROL None]**。 部分模糊化及未模糊化的IP位址在Analytics中可能會進一步模糊化。 如需如何在Analytics中啟用IP模糊化的詳細資訊，請參閱Adobe Analytics [檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html)。 如果IP位址已完全模糊化，而且頁面點選既沒有[!DNL ECID]也沒有[!DNL VisitorID]，則Analytics會捨棄點選，而非產生部分以IP位址為基礎的[遞補ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-ids.html?lang=en)。</li><li>**[!DNL Adobe Advertising]**：當資料流層級IP模糊化設為[!UICONTROL Partial]或[!UICONTROL Full]時，Advertising DSP中的地理報告和功能（包括測量和再行銷）會停用，連線電視廣告除外。</li></ul> |
+| [!UICONTROL First Party ID Cookie] | 啟用時，此設定可告知Edge Network在查詢[第一方裝置ID](/help/collection/identity/fpid.md)時參考指定的Cookie，而不是在「身分對應」中查詢此值。<br><br>啟用此設定時，您必須提供應儲存ID的Cookie名稱。 |
+| [!UICONTROL Third Party ID Sync] | 將 ID 同步分組至不同的容器中，即可讓不同的 ID 同步在不同時間執行。 啟用後，此設定會讓您指定為此資料流執行哪個 ID 同步的容器。 |
+| [!UICONTROL Third Party ID Sync Container ID] | 用於協力廠商ID同步的容器的數值ID。<br><br>**注意：**&#x200B;資料流參考預設的Audience Manager容器ID，即0。 如果您有多個Audience Manager ID同步容器ID，請洽詢Audience Manager顧問，以正確識別並解析ID同步設定。 |
 | [!UICONTROL Container ID Overrides] | 在此區段中，您可以定義其他第三方ID同步容器ID，以用來覆寫預設的ID。 |
 | [!UICONTROL Access Type] | 定義 Edge Network 接受資料流的驗證類型。 <ul><li>**[!UICONTROL Mixed Authentication]**：選取此選項時，Edge Network會接受已驗證和未驗證的請求。 當您打算使用Web SDK或[Mobile SDK](https://developer.adobe.com/client-sdks/home/)以及[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)時，請選取此選項。 </li><li>**[!UICONTROL Authenticated Only]**：選取此選項時，Edge Network僅接受已驗證的請求。 當您計畫只使用Edge Network API，並想要防止Edge Network處理任何未驗證的請求時，請選取此選項。</li></ul> |
-| [!UICONTROL Media Analytics] | 啟用透過Experience Platform SDK或[Media Edge API](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/)處理Edge Network整合的串流追蹤資料。 從[檔案](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant)瞭解Media Analytics。 |
+| [!UICONTROL Media Analytics] | 啟用透過Experience Platform SDK或[Media Edge API](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/)處理[!DNL Edge Network]整合的串流追蹤資料。 從[檔案](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant)瞭解Media Analytics。 |
 
-如果您正在設定Experience Platform的資料串流，請先按照[資料收集的資料準備](./data-prep.md)上的教學課程將資料對應到Experience Platform事件結構描述，然後再返回本指南。 否則，請選取&#x200B;**[!UICONTROL Save]**&#x200B;並繼續下一節。
+如果您正在設定Experience Platform的資料串流，請先按照[資料收集的資料準備](/help/datastreams/data-prep.md)上的教學課程將資料對應到Experience Platform事件結構描述，然後再返回本指南。 否則，請選取&#x200B;**[!UICONTROL Save]**&#x200B;並繼續下一節。
 
 >[!NOTE]
 >
->儲存資料流設定的變更後，最多需要35分鐘才能將變更傳播至Edge Network中。 在此傳輸視窗期間，請求仍可能以先前的設定提供服務。
+>將變更儲存到資料流設定後，最多允許35分鐘讓變更傳播到[!DNL Edge Network]。 在此傳輸視窗期間，請求仍可能以先前的設定提供服務。
 
 ## 檢視資料流詳細資料 {#view-details}
 
-設定新資料流或選取要檢視的現有資料流後，該資料流的詳細資料頁面會隨即顯示。您可以在此處找到有關資料流的進一步資訊，包括其 ID。
+設定新資料流或選取要檢視的現有資料流後，該資料流的詳細資料頁面會隨即顯示。 您可以在此處找到有關資料流的進一步資訊，包括其 ID。
 
 ![資料流詳細資料頁面。](assets/configure/view-details.png)
 
-在資料流詳細資料畫面中，您可以[新增服務](#add-services)，以啟用您有權存取的 Adobe Experience Cloud 產品的功能。您還可以編輯資料流的[基本設定](#create)、更新其[對應規則](./data-prep.md)、[複製資料流](#copy)，或將其完全刪除。
+在資料流詳細資料畫面中，您可以[新增服務](#add-services)，以啟用您有權存取的 Adobe Experience Cloud 產品的功能。 您還可以編輯資料流的[基本設定](#create)、更新其[對應規則](/help/datastreams/data-prep.md)、[複製資料流](#copy)，或將其完全刪除。
 
 ## 將服務新增至資料流 {#add-services}
 
@@ -123,7 +123,7 @@ ht-degree: 27%
 
 ![選取[新增服務]以繼續。](assets/configure/add-service.png)
 
-在下一個畫面上，使用下拉選單選取要為此資料流設定的服務。此清單中只會顯示您有權存取的服務。
+在下一個畫面上，使用下拉選單選取要為此資料流設定的服務。 此清單中只會顯示您有權存取的服務。
 
 ![從清單中選取服務。](assets/configure/service-selection.png)
 
@@ -135,36 +135,36 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->每個服務組態都包含一個&#x200B;**[!UICONTROL Enabled]**&#x200B;切換，在選取服務時自動啟動。 若要停用此資料流選取的服務，請再次選取&#x200B;**[!UICONTROL Enabled]**&#x200B;切換按鈕。
+>每個服務組態都包含一個&#x200B;**[!UICONTROL Enabled]**&#x200B;選項，當選取服務時，會自動開啟該選項。 若要停用此資料流選取的服務，請再次選取&#x200B;**[!UICONTROL Enabled]**。
 
 ### Adobe Advertising設定 {#advertising}
 
-Adobe Advertising與Customer Journey Analytics整合需要此服務。
+[!DNL Adobe Advertising]與[!DNL Customer Journey Analytics]的整合需要此服務。
 
 ### Adobe Analytics 設定 {#analytics}
 
-此服務可控制是否及如何將資料傳送至Adobe Analytics。
+使用此服務傳送資料給[!DNL Adobe Analytics]。
 
 ![Adobe Analytics資料流設定。](assets/configure/analytics-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL Report Suite ID] | **(必要)** 您要將資料傳送到的 Analytics 報告套裝的 ID。您可以在Adobe Analytics UI的[!UICONTROL Admin] > [!UICONTROL ReportSuites]下找到此ID。 如果指定多個報告套裝，則資料會複製到每個報告套裝。 |
-| [!UICONTROL Visitor ID namespace] | （選用）您要用於Adobe Analytics [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=zh-Hant)的名稱空間。 當您傳送具有為此名稱空間指定值的事件時，系統會自動將其用作Analytics中的`visitorID`。 <br>填入欄位時，資料流會將`visitorID`值傳送至Adobe Analytics。 無論訪客ID是否包含在`identityMap`中，系統仍會產生`ECID`並將其包含在傳出請求中。 Analytics支援包含多個ID。 ID會依照此頁面所述的順序進行評估： [Adobe Analytics識別作業順序](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/id/overview#adobe-analytics-identification-order-of-operations)。 |
+| [!UICONTROL Report Suite ID] | **（必要）**&#x200B;您要傳送資料的[!DNL Analytics]報表套裝識別碼。 您可以在[!DNL Adobe Analytics] UI的[!UICONTROL Admin] > [!UICONTROL ReportSuites]下找到此ID。 如果指定多個報告套裝，則資料會複製到每個報告套裝。 |
+| [!UICONTROL Visitor ID namespace] | （選用）您要用於[!DNL Adobe Analytics] [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=zh-Hant)的名稱空間。 當您傳送具有為此名稱空間指定的值的事件時，它會自動用作[!DNL Analytics]中的`visitorID`。<br> 填入欄位時，資料流會將`visitorID`值傳送至[!DNL Adobe Analytics]。 無論訪客ID是否包含在`identityMap`中，系統仍會產生`ECID`並將其包含在傳出請求中。 [!DNL Analytics]支援包含多個ID。 ID會依照此頁面所述的順序進行評估： [Adobe Analytics識別作業順序](https://experienceleague.adobe.com/en/docs/analytics/implementation/id/overview#adobe-analytics-identification-order-of-operations)。 |
 | [!UICONTROL Report Suite Overrides] | 在本區段中，您可以新增其他報告套裝 ID，以用於覆寫預設的報告套裝 ID。 |
 
-如需詳細資訊，請參閱Analytics實作指南中的[使用Edge Network實作Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/overview)。
+如需詳細資訊，請參閱[!DNL Analytics]實作指南中的[使用Edge Network實作Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/overview)。
 
 ### Adobe Audience Manager 設定 {#audience-manager}
 
-此服務會控制是否將資料傳送到 Adobe Audience Manager 以及傳送方式。若要將資料傳送到 Audience Manager，需要做的就是啟用本區段。其他設定為選用，但建議使用。
+啟用此服務以傳送資料給[!DNL Adobe Audience Manager]。 其他設定為選用，但建議使用。
 
 ![Adobe Audience Manager資料流設定。](assets/configure/audience-manager-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL Cookie Destinations Enabled] | 允許 SDK 透過 [cookie 目的地](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html?lang=zh-Hant)從 [!DNL Audience Manager] 共用區段資訊。 |
-| [!UICONTROL URL Destinations Enabled] | 允許 SDK 透過 [URL 目的地](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html?lang=zh-Hant)從 [!DNL Audience Manager] 共用區段資訊。 |
+| [!UICONTROL Cookie Destinations Enabled] | 啟用SDK透過[!DNL Audience Manager]的[Cookie目的地](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html)共用區段資訊。 |
+| [!UICONTROL URL Destinations Enabled] | 啟用SDK透過[!DNL Audience Manager]的[URL目的地](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)共用區段資訊。 |
 
 ### Adobe Experience Platform 設定 {#aep}
 
@@ -172,39 +172,39 @@ Adobe Advertising與Customer Journey Analytics整合需要此服務。
 >
 >為Experience Platform啟用資料串流時，請記下您目前使用的Experience Platform沙箱，如UI的頂端功能區中所示。
 >
->![選取的沙箱](assets/configure/platform-sandbox.png)
+>![選取的沙箱名稱顯示在Adobe Experience Platform UI的頂端功能區。](assets/configure/platform-sandbox.png)
 >
->沙箱是 Adobe Experience Platform 中的虛擬分區，可讓您將資料和實作與貴組織中的其他項目隔離。資料流建立後，其沙箱即無法變更。如需在 Experience Platform 中的沙箱角色的更多詳細資料，請參閱[沙箱文件](../sandboxes/home.md)。
+>沙箱是[!DNL Adobe Experience Platform]中的虛擬分割區，可將您的資料和實作與組織中的其他人隔離開來。 資料流建立後，其沙箱即無法變更。 如需在 Experience Platform 中的沙箱角色的更多詳細資料，請參閱[沙箱文件](/help/sandboxes/home.md)。
 
-此服務會控制是否將資料傳送到 Adobe Experience Platform 以及傳送方式。
+使用此服務傳送資料給[!DNL Adobe Experience Platform]。
 
 ![Adobe Experience Platform資料流設定。](assets/configure/platform-config.png)
 
 | 設定 | 說明 |
 |---| --- |
-| [!UICONTROL Event Dataset] | **（必要）**&#x200B;選取將串流至客戶事件資料的Experience Platform資料集。 此結構描述必須使用 [XDM 體驗事件類別](../xdm/classes/experienceevent.md)。若要新增其他資料集，請選取&#x200B;**[!UICONTROL Add Event Dataset]**。 |
-| [!UICONTROL Profile Dataset] | 選取將用於傳送&#x200B;**同意**、**推播權杖**&#x200B;和&#x200B;**使用者活動區域**&#x200B;客戶屬性的Experience Platform資料集。 此結構描述必須使用 [XDM 個人輪廓類別](../xdm/classes/individual-profile.md)。 |
-| [!UICONTROL Offer Decisioning] | 為Web SDK實作啟用[Offer Decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant)。 |
-| [!UICONTROL Edge Segmentation] | 啟用此資料流的[邊緣分段](../segmentation/methods/edge-segmentation.md)。 當網頁SDK或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)透過已啟用邊緣細分的資料流傳送資料時，有關設定檔的任何更新對象會籍都會在回應中傳回。<br><br>您可以透過&#x200B;**邊緣目的地**、[Personalization](../destinations/ui/activate-edge-personalization-destinations.md)、[Offer Decisioning](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/decisioning/offer-decisioning/get-started-decision/starting-offer-decisioning)或[Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/target)，針對相同頁面和下一頁個人化使用案例，將此選項與[Adobe Target目的地](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home)搭配使用 |
-| [!UICONTROL Personalization Destinations] | 啟用此資料流的[自訂Personalization](../destinations/catalog/personalization/custom-personalization.md)。 當網頁SDK或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)透過已啟用個人化目的地的資料流傳送資料時，在回應中會傳回相關設定檔的對象成員資格和對應的設定檔屬性（僅適用於已驗證的[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)請求）。 |
-| [!UICONTROL Adobe Journey Optimizer] | 啟用此資料流的[Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home)。<br><br>啟用此選項可讓資料流從Adobe Journey Optimizer中的網頁和應用程式傳入行銷活動傳回個人化內容。<br><br>此選項需要選取的資料集使用包含&#x200B;**[!UICONTROL Experience Event - Proposition Interactions]** [欄位群組](../xdm/ui/resources/schemas.md#add-field-groups)的結構描述。 此欄位群組用於記錄所有使用者與Adobe Journey Optimizer行銷活動和體驗的互動。 |
+| [!UICONTROL Event Dataset] | **（必要）**&#x200B;選取將串流至客戶事件資料的Experience Platform資料集。 此結構描述必須使用 [XDM 體驗事件類別](/help/xdm/classes/experienceevent.md)。 若要新增其他資料集，請選取&#x200B;**[!UICONTROL Add Event Dataset]**。 |
+| [!UICONTROL Profile Dataset] | 選取將用於傳送&#x200B;**同意**、**推播權杖**&#x200B;和&#x200B;**使用者活動區域**&#x200B;客戶屬性的Experience Platform資料集。 此結構描述必須使用 [XDM 個人輪廓類別](/help/xdm/classes/individual-profile.md)。 |
+| [!UICONTROL Offer Decisioning] | 為Web SDK實作啟用決策管理（前身為Offer Decisioning）。 如需實作詳細資料，請參閱[決定管理檔案](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/decisioning/offer-decisioning/get-started-decision/starting-offer-decisioning)。 |
+| [!UICONTROL Edge Segmentation] | 啟用此資料流的[邊緣分段](/help/segmentation/methods/edge-segmentation.md)。 當網頁SDK或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)透過已啟用邊緣細分的資料流傳送資料時，有關設定檔的任何更新對象會籍都會在回應中傳回。<br><br>您可以透過[邊緣目的地](/help/destinations/ui/activate-edge-personalization-destinations.md)、決定管理、[Personalization](https://experienceleague.adobe.com/en/docs/target)或[Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home)，針對相同頁面和下一頁個人化使用案例，將此選項與&#x200B;**Adobe Target目的地**&#x200B;搭配使用。 |
+| [!UICONTROL Personalization Destinations] | 啟用此資料流的[自訂Personalization](/help/destinations/catalog/personalization/custom-personalization.md)。 當網頁SDK或[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)透過已啟用個人化目的地的資料流傳送資料時，在回應中會傳回相關設定檔的對象成員資格和對應的設定檔屬性（僅適用於已驗證的[Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/)請求）。 |
+| [!UICONTROL Adobe Journey Optimizer] | 啟用此資料流的[!DNL Adobe Journey Optimizer]。<br><br>啟用此選項可讓資料流傳回[!DNL Adobe Journey Optimizer]中網頁和應用程式型傳入行銷活動的個人化內容。<br><br>此選項需要選取的資料集使用包含&#x200B;**[!UICONTROL Experience Event - Proposition Interactions]** [欄位群組](/help/xdm/ui/resources/schemas.md#add-field-groups)的結構描述。 此欄位群組用於記錄與[!DNL Adobe Journey Optimizer]行銷活動和體驗的所有使用者互動。 |
 
 ### Adobe Target 設定 {#target}
 
-此服務會控制是否將資料傳送到 Adobe Target 以及傳送方式。
+使用此服務傳送資料給[!DNL Adobe Target]。
 
 ![Adobe Target資料流設定。](assets/configure/target-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL Property Token] | [!DNL Target]允許客戶使用屬性控制許可權。 如需有關屬性的詳細資訊，請至[設定企業權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hant) (在 [!DNL Target] 文件中)，詳閱指南。<br><br>可在Adobe Target UI的[!UICONTROL Setup] > [!UICONTROL Properties]下找到屬性代號。 |
-| [!UICONTROL Target Environment ID] | [Adobe Target 中的環境](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hant)可協助您管理全部開發階段的實作。此設定會指定您將使用此資料流的環境。<br><br>最佳做法是針對您的每個 `dev`、`stage` 和 `prod` 資料流環境對此做不同的設定，以保持事情簡單。但是，如果您已經定義了 Adobe Target 環境，則可以使用已定義的環境。 |
-| [!UICONTROL Target Third Party ID namespace] | 您要用於此資料流之 `mbox3rdPartyId` 的身分識別命名空間。如果您使用Adobe Target的[!DNL Customer Attributes]整合，或透過`thirdPartyId`Adobe Target設定檔API[使用](https://experienceleague.adobe.com/zh-hant/docs/target-dev/developer/api/profile-apis/profiles-api)來更新或建立設定檔，您必須提供您選擇的名稱空間值。 您必須在XDM結構描述的`IdentityMap`區段中使用此名稱空間，以傳送用於客戶屬性檔案上傳或設定檔更新API呼叫的`customerID`或`thirdPartyId`。 |
+| [!UICONTROL Property Token] | [!DNL Target]允許客戶使用屬性控制許可權。 如需有關屬性的詳細資訊，請至[設定企業權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) (在 [!DNL Target] 文件中)，詳閱指南。<br><br>可在[!DNL Adobe Target] UI的[!UICONTROL Setup] > [!UICONTROL Properties]下找到屬性權杖。 |
+| [!UICONTROL Target Environment ID] | [Adobe Target 中的環境](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html)可協助您管理全部開發階段的實作。 此設定會指定您將使用此資料流的環境。<br><br>最佳實務是為每個`dev`、`stage`和`prod`資料流環境設定此專案，以避免設定錯誤。 不過，如果您已定義[!DNL Adobe Target]環境，則可以使用這些環境。 |
+| [!UICONTROL Target Third Party ID namespace] | 您要用於此資料流之 `mbox3rdPartyId` 的身分識別命名空間。 如果您使用[!DNL Customer Attributes]與[!DNL Adobe Target]整合，或使用`thirdPartyId`透過[Adobe Target設定檔API](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api)更新或建立設定檔，您必須提供您選擇的名稱空間值。 您必須在XDM結構描述的`IdentityMap`區段中使用此名稱空間，以傳送用於客戶屬性檔案上傳或設定檔更新API呼叫的`customerID`或`thirdPartyId`。 |
 | [!UICONTROL Property Token Overrides] | 在此區段中，您可以定義其他可用來覆寫預設屬性代號的屬性。 |
 
-### [!UICONTROL Event Forwarding]設定
+### [!UICONTROL Event Forwarding]設定 {#event-forwarding}
 
-此服務會控制是否將資料傳送到[事件轉送](../tags/ui/event-forwarding/overview.md)以及傳送方式。
+使用此服務傳送資料給[事件轉送](/help/tags/ui/event-forwarding/overview.md)。
 
 資料流設定畫面的![事件轉送區段。](assets/configure/event-forwarding-config.png)
 
@@ -223,9 +223,9 @@ Adobe Advertising與Customer Journey Analytics整合需要此服務。
 
 >[!NOTE]
 >
->資料流只能在相同的[沙箱](../sandboxes/home.md)內複製。換句話說，您無法將資料流從一個沙箱複製到另一個沙箱。
+>資料流只能在相同的[沙箱](/help/sandboxes/home.md)內複製。 您無法將資料串流從一個沙箱複製到另一個沙箱。
 
-從[!UICONTROL Datastreams]工作區中的首頁面，選取省略符號(**....**)，然後選取&#x200B;**[!UICONTROL Copy]**。
+從[!UICONTROL Datastreams]工作區中的首頁面，選取省略符號(**....**) 針對相關資料流，然後選取&#x200B;**[!UICONTROL Copy]**。
 
 ![顯示從資料流清單檢視中選取之複製選項的影像。](assets/configure/copy-datastream-list.png)
 
@@ -233,12 +233,12 @@ Adobe Advertising與Customer Journey Analytics整合需要此服務。
 
 ![從資料流詳細資料檢視中選取的複製選項。](assets/configure/copy-datastream-details.png)
 
-確認對話框隨即顯示，提示您為要將建立的新資料流提供唯一名稱，以及有關將複製的設定選項的詳細資料。準備就緒後，選取&#x200B;**[!UICONTROL Copy]**。
+確認對話框隨即顯示，提示您為要將建立的新資料流提供唯一名稱，以及有關將複製的設定選項的詳細資料。 準備就緒後，選取&#x200B;**[!UICONTROL Copy]**。
 
 ![複製資料串流的確認對話方塊。](assets/configure/copy-datastream-confirm.png)
 
 [!UICONTROL Datastreams]工作區的首頁面會重新出現，並列出新的資料流。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
-本指南會介紹如何在資料收集 UI 中管理資料流。如需如何在設定資料串流後安裝和設定Web SDK的詳細資訊，請參閱[Web SDK標籤擴充功能快速入門](../tags/extensions/client/web-sdk/getting-started.md)。
+本指南會介紹如何在資料收集 UI 中管理資料流。 如需如何在設定資料串流後安裝及設定Web SDK的詳細資訊，請參閱[開始使用 [!DNL Web SDK] 標籤擴充功能](/help/tags/extensions/client/web-sdk/getting-started.md)。

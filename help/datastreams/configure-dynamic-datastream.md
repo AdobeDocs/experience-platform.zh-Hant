@@ -2,25 +2,25 @@
 title: 建立動態資料流設定
 description: 瞭解如何根據規則建立動態資料串流設定，將您的資料路由至各種Experience Cloud服務。
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1040'
 ht-degree: 3%
 
 ---
 
 # 建立動態資料流設定
 
-依預設，Experience Platform Edge Network會將到達資料串流的所有事件傳送至您已為資料串流啟用的所有Experience Cloud [服務](configure.md#add-services)。 根據您的使用案例，這可能並不總是適合您的理想工作流程。
+根據預設，[!DNL Adobe Experience Platform Edge Network]會將到達資料流的所有事件傳送至您已為資料流啟用的所有[!DNL Experience Cloud] [服務](/help/datastreams/configure.md#add-services)。 根據您的使用案例，這可能並不一定是理想的工作流程。
 
-動態資料流設定可透過使用者可設定的規則集來解決此問題；您可為為資料流啟用的每個服務定義這些規則集，而這些規則集會規定哪些Experience Cloud解決方案應接收每種型別的資料。
+動態資料流設定會透過您為資料流啟用的每個服務定義的一組規則來解決此問題，這些規則控制哪些[!DNL Experience Cloud]解決方案會接收每種型別的資料。
 
 ## 先決條件 {#prerequisites}
 
 若要為資料串流建立動態設定，您必須符合兩個條件：
 
-* 您必須已建立至少&#x200B;*個*&#x200B;資料流才能使用。 如需詳細資訊，請參閱有關如何[建立資料流](configure.md)的檔案。
-* 您必須將&#x200B;*至少*&#x200B;個Experience Cloud服務新增至資料流。 如需詳細資訊，請參閱有關如何[新增服務](configure.md#add-services)到資料流的檔案。
+* 您必須已建立至少&#x200B;*個*&#x200B;資料流才能使用。 如需詳細資訊，請參閱有關如何[建立資料流](/help/datastreams/configure.md)的檔案。
+* 您必須將&#x200B;*至少*&#x200B;個[!DNL Experience Cloud]服務新增至資料流。 如需詳細資訊，請參閱有關如何[新增服務](/help/datastreams/configure.md#add-services)到資料流的檔案。
 
 建立資料串流並新增Experience Cloud服務之後，您可以[建立動態組態](#create-dynamic-configuration)。
 
@@ -32,19 +32,19 @@ ht-degree: 3%
 |---------|------------|------|
 | Experience Platform服務的每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
 | 事件轉送的每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
-| Adobe Analytics每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
-| Adobe Target每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
-| Adobe Audience Manager每個資料流的最大動態資料流設定數 | 5 | 效能護欄 |
+| [!DNL Adobe Analytics]的每個資料流的最大動態資料流組態數 | 5 | 效能護欄 |
+| [!DNL Adobe Target]的每個資料流的最大動態資料流組態數 | 5 | 效能護欄 |
+| [!DNL Adobe Audience Manager]的每個資料流的最大動態資料流組態數 | 5 | 效能護欄 |
 | 您可以在單一規則中結合的條件（述詞）最大數量 | 100 | 效能護欄 |
 | 逾時前評估每個資料流的所有動態資料流設定所允許的最長時間 | 25毫秒 | 系統強制的護欄 |
 
 ## 動態資料流設定與資料流設定覆寫 {#dynamic-versus-overrides}
 
-動態資料流設定和[資料流設定覆寫](overrides.md)是互斥功能。
+動態資料流設定和[資料流設定覆寫](/help/datastreams/overrides.md)是互斥功能。
 
-這表示您無法使用動態資料流設定以及資料流設定覆寫。 您必須選擇一個或另一個。
+您無法使用動態資料流設定以及資料流設定覆寫。 您必須選擇一個或另一個。
 
-如果您同時啟用動態資料流設定和資料流設定覆寫，設定覆寫將取得優先權，且動態資料流設定規則將被忽略。
+如果您同時啟用兩者，則會以設定覆寫優先，而系統會忽略動態資料流設定規則。
 
 ## 建立動態資料流設定 {#create-dynamic-configuration}
 
@@ -72,13 +72,13 @@ ht-degree: 3%
 
    ![資料串流使用者介面顯示拖曳資源的動態設定規則產生器。](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. 在&#x200B;**[!UICONTROL Configuration]**&#x200B;區段中，根據您要將資料傳送至每個服務，切換您要為每個規則啟用或停用的服務。 如果您關閉切換功能，服務路由會停用，而且不會將&#x200B;*任何資料*&#x200B;傳送給下游服務。
+1. 在&#x200B;**[!UICONTROL Configuration]**&#x200B;區段中，根據您是否要傳送資料給每個服務，啟用或停用每個規則的服務。 如果您停用服務，路由會停用，而且不會將&#x200B;*任何資料*&#x200B;傳送給下游服務。
 
    ![資料串流使用者介面顯示具有服務切換的動態設定規則。](assets/configure-dynamic-datastream/enable-service.png)
 
 1. 設定完規則後，選取「**[!UICONTROL Save]**」。
 
-## 規則優先順序的考量事項 {#considerations}
+## 規則優先順序的考量事項 {#rule-priority}
 
 您可以為每個動態資料流設定定義多個規則。 但是，如果您的資料符合多個規則的條件，則只會考慮清單中的第一個相符規則，而所有其他相符規則則會被忽略。
 
@@ -86,7 +86,7 @@ ht-degree: 3%
 
 若要設定規則順序，您可以依照所需的順序拖放規則視窗。
 
-![GIF顯示如何透過拖放來變更規則順序。](assets/configure-dynamic-datastream/move-rules.gif)
+![使用拖放重新排序動態資料流規則。](assets/configure-dynamic-datastream/move-rules.gif)
 
 ## 規則適用性條件 {#eligibility-criteria}
 
@@ -112,32 +112,32 @@ ht-degree: 3%
 
 | 資料類型 | 支援的運運算元 |
 |-----------|-------------------|
-| **字串** | `equals`、`starts with`、`ends with`、`contains`、`exists`、`does not equal`、`does not start with`、`does not end with`、`does not contain`、`does not exist` |
+| **字串** | `equals`, `starts with`, `ends with`, `contains`, `exists`, `does not equal`, `does not start with`, `does not end with`, `does not contain`, `does not exist` |
 | **數字（長、整數、短、位元組）** | `equals`, `does not equal`, `greater than`, `less than`, `greater than or equal to`, `less than or equal to`, `exists`, `does not exist` |
 | **布林值** | `equals true/false`、`does not equal true/false` |
 | **列舉** | `equals`、`does not equal`、`exists`、`does not exist` |
-| **日期** | `today`、`yesterday`、`this month`、`this year`、`custom date`、`in last`、`from`、`during`、`within`、`before`、`after`、`rolling range`、`in next`、`exists`、`does not exist` |
-| **邏輯** | `INCLUDE`， `ANY/ALL` （相當於AND/OR） |
+| **日期** | `today`, `yesterday`, `this month`, `this year`, `custom date`, `in last`, `from`, `during`, `within`, `before`, `after`, `rolling range`, `in next`, `exists`, `does not exist` |
+| **邏輯** | `INCLUDE`， `ANY/ALL` （相當於[!DNL AND]/[!DNL OR]） |
 
 >[!NOTE]
 >
->不直接支援&#x200B;**[!UICONTROL EXCLUDE]**&#x200B;運運算元，但您可以使用&#x200B;**[!UICONTROL INCLUDE]**&#x200B;搭配否定比較運運算元（例如「不等於」）來達到同等邏輯。
+>不直接支援&#x200B;**[!UICONTROL EXCLUDE]**&#x200B;運運算元，但您可以使用&#x200B;**[!UICONTROL INCLUDE]**&#x200B;搭配否定的比較運運算元（例如「不等於」）來達到同等邏輯。
 
 ### 規則結構 {#rule-structure}
 
 為動態資料流設定建立規則時，瞭解確保最佳效能和系統相容性的結構需求很重要。 規則結構會直接影響系統處理及路由資料的效率。
 
-**僅使用一般運算式**。 您必須將規則定義為平面邏輯運算式。 不支援巢狀邏輯運算式（使用容器或多個層級的AND/OR）。 如果您需要複雜的邏輯，請將其分成多個一般規則。
+**僅使用一般運算式**。 您必須將規則定義為平面邏輯運算式。 不支援巢狀邏輯運算式（使用容器或多個層級的[!DNL AND]/[!DNL OR]）。 如果您需要複雜的邏輯，請將其分成多個一般規則。
 
-例如，請考量下圖所示的複雜規則。
+例如，請考量下列複雜規則。
 
-![顯示複雜規則的平台UI影像。](assets/configure-dynamic-datastream/complex-rule.png)
+![具有多個AND/OR條件的巢狀複雜規則範例。](assets/configure-dynamic-datastream/complex-rule.png)
 
 您可以將此規則分成下列較簡單的規則：
 
-![顯示第一個簡化規則的平台UI影像。](assets/configure-dynamic-datastream/simple-rule-1.png)
+![第一個簡化規則，取代巢狀複雜規則。](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![顯示第二個簡化規則的平台UI影像。](assets/configure-dynamic-datastream/simple-rule-2.png)
+![第二個簡化規則，取代巢狀複雜規則。](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **避免複雜的規則**。 更簡單的規則可確保更快的評估和更好的可維護性。
 
@@ -145,11 +145,7 @@ ht-degree: 3%
 
 建立動態資料流設定規則時，遵循最佳實務可確保最佳效能、系統可靠性和可維護的設定。 這些指引可協助您避免常見陷阱，並建立順暢配合平台架構的有效規則。
 
-* **保持規則簡單且平坦。**&#x200B;如果您需要表達複雜的邏輯，請使用多個規則而非巢狀內嵌。
+* **保持規則簡單且平坦。** 如果您需要表達複雜的邏輯，請使用多個規則而非巢狀內嵌。
 * **僅使用[支援的資料型別](#supported-data-types)和[運運算元](#supported-operators)。**
-* **測試您的規則效能。**&#x200B;過於複雜或不支援的規則可能會導致系統拒絕這些規則或影響系統效能。
-
-
-
-
+* **測試規則效能。** 過於複雜或不支援的規則可能會導致系統拒絕這些規則或影響系統效能。
 
