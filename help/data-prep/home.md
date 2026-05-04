@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 資料準備總覽
 description: 本檔案介紹Adobe Experience Platform中的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4df6f85701f2a509b3f9c7ceddb8d002dd81c6f0
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 3%
 
 ---
 
 
 # 資料準備總覽
 
-「資料準備」可讓資料工程師對應、轉換和驗證與Experience Data Model (XDM)之間的資料。 「資料準備」在資料擷取程式（包括CSV擷取工作流程）中顯示為「對應」步驟。 資料工程師可在擷取期間使用「資料準備」執行下列資料操作：
+「資料準備」讓資料工程師可在體驗資料模式 (XDM) 之間對應、轉換和驗證資料。 「資料準備」在資料擷取程式（包括CSV擷取工作流程）中顯示為「對應」步驟。 資料工程師可在擷取期間使用「資料準備」執行下列資料操作：
 
 - 定義簡單的傳遞對應，將輸入屬性指派給XDM屬性
 - 建立計算欄位以執行可指派給XDM屬性的列內計算
@@ -42,7 +42,20 @@ ht-degree: 0%
 
 ### 逸出特殊字元 {#escape-special-characters}
 
-您可以使用`${...}`來逸出欄位中的特殊字元。 但是，此機制不支援包含具有句點(`.`)之欄位的JSON檔案。 與階層互動時，如果子屬性有句點(`.`)，您必須使用反斜線(`\`)來逸出特殊字元。 例如，`address`是包含屬性`street.name`的物件，然後可以將其稱為`address.street\.name`而非`address.street.name`。
+您可以使用`${...}`來逸出欄位中的特殊字元。 但是，此機制不支援包含具有句點(`.`)之欄位的JSON檔案。
+
+與階層互動時，如果子屬性有句點(`.`)，您必須使用反斜線(`\`)來逸出特殊字元。 例如，下列`address`是包含屬性`street.name`的物件：
+
+```json
+{ 
+  "address": 
+      { 
+        "street.name": "myId" 
+      }
+}
+```
+
+若要在對映中參考此欄位，您必須使用`${address.street\.name}`。
 
 ## 對應集
 
