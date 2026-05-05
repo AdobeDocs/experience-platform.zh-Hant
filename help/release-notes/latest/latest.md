@@ -140,7 +140,7 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 | 來源 | 說明 |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL Talon.One] | 適用於Experience Platform的[[!DNL Talon.One] 來源](../../sources/connectors/loyalty/talon-one.md)現在可同時用於批次和串流模式。 使用[[!DNL Talon.One Batch Source Connector]](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md)定期擷取已關閉的工作階段和歷史忠誠度交易，並使用[[!DNL Talon.One Streaming Events]](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md)來源近乎即時地將[!DNL Talon.One]個事件匯入Experience Platform。 這些功能搭配使用，可讓您更輕鬆地在Real-Time CDP、Adobe Journey Optimizer和Offer Decisioning中載入及啟用[!DNL Talon.One]忠誠度資料。 |
-| 使用SOQL的[!DNL Salesforce]的資料列層級篩選支援 | 您現在可以在[!DNL Salesforce]來源連線中直接套用[!DNL Salesforce]物件查詢語言(SOQL)篩選器，讓您在資料列層級資料擷取到Experience Platform之前先加以限制。 使用功能可以： <ul><li>在Salesforce物件上定義SOQL where-clause樣式條件（例如，僅具有電子郵件!=空值的潛在客戶或特定階段的商機）</li><li>將內嵌限製為符合條件的列，減少不必要的資料移動、儲存和下游處理</li><li>透過控制從來源將哪些記錄帶入Experience Platform，使Experience Platform擷取作業更符合CRM資料存取和合規性規則</li></ul>. 如需詳細資訊，請閱讀來源](../../sources/tutorials/api/filter.md)的[資料列層級篩選指南。 |
+| 使用SOQL的[!DNL Salesforce]的資料列層級篩選支援 | 您現在可以在[!DNL Salesforce]來源連線中直接套用[!DNL Salesforce]物件查詢語言(SOQL)篩選器，讓您在資料列層級資料擷取到Experience Platform之前先加以限制。 使用功能可以： <ul><li>在Salesforce物件上定義SOQL where-clause樣式條件（例如，僅具有電子郵件!=空值的潛在客戶或特定階段的商機）</li><li>將內嵌限製為符合條件的列，減少不必要的資料移動、儲存和下游處理</li><li>透過控制從來源將哪些記錄帶入Experience Platform，使Experience Platform擷取作業更符合CRM資料存取和合規性規則</li></ul>. 如需詳細資訊，請閱讀來源[&#128279;](../../sources/tutorials/api/filter.md)的資料列層級篩選指南。 |
 
 {style="table-layout:auto"}
 
