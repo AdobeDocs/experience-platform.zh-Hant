@@ -35,7 +35,7 @@ Criteo 提供值得信賴且具影響力的廣告，為開放網路上的每位�
 
 ## 支援的身分 {#supported-identities}
 
-標準支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
+標準支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
 
 | 目標身分 | 說明 | 考量事項 |
 | --- | --- | --- |
