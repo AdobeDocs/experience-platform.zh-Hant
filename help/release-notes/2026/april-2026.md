@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform發行說明2026年4月
 description: Adobe Experience Platform 2026年4月版本注意事項。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+exl-id: 47070fcf-b585-43f4-b43b-0d62c18f0693
 source-git-commit: 9ebf498257378f4c5002276a84f104cf2d337601
 workflow-type: tm+mt
 source-wordcount: '1580'
@@ -69,10 +69,10 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端的客
 | 修正 | 說明 |
 | --- | --- |
 | [Snowflake串流](../../destinations/catalog/warehouses/snowflake.md)目的地的新`TS`欄 | [Snowflake串流](../../destinations/catalog/warehouses/snowflake.md)目的地現在包含共用表格中的`TS`時間戳記欄，顯示每個資料列的上次更新時間。 此更新將於4月底推出。 |
-| [自訂Personalization](../../destinations/catalog/personalization/custom-personalization.md)目的地的監視支援 | [資料流執行頁面](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)現在會顯示[自訂Personalization](../../destinations/catalog/personalization/custom-personalization.md)目的地的量度。 以前，這些量度不適用於此目的地型別。 使用它們來驗證對象是否如預期般啟用並診斷問題。<br> ![針對自訂Personalization目的地顯示的資料流執行量度，顯示已啟用、已排除和失敗的身分。自訂Personalization目的地的](../2026/assets/april/dataflow-run-custom-personalization.png "資料流執行量度。"){zoomable="yes"} |
-| 啟動工作流程稽核步驟中的設定檔計數 | 啟動工作流程的稽核步驟現在會顯示已啟動對象的設定檔計數。 也會顯示[串流目的地](../../destinations/ui/activate-segment-streaming-destinations.md)的設定檔計數，而不只是[批次目的地](../../destinations/ui/activate-batch-profile-destinations.md)。<br> ![在已啟動和串流對象之啟動工作流程的稽核步驟中顯示的設定檔計數。](../2026/assets/april/profile-count-review.png "啟動工作流程稽核步驟中的設定檔計數。"){zoomable="yes"} |
+| [自訂Personalization](../../destinations/catalog/personalization/custom-personalization.md)目的地的監視支援 | [資料流執行頁面](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)現在會顯示[自訂Personalization](../../destinations/catalog/personalization/custom-personalization.md)目的地的量度。 以前，這些量度不適用於此目的地型別。 使用它們來驗證對象是否如預期般啟用並診斷問題。<br> ![針對自訂Personalization目的地顯示的資料流執行量度，顯示已啟用、已排除和失敗的身分。自訂Personalization目的地的](./assets/april/dataflow-run-custom-personalization.png "資料流執行量度。"){zoomable="yes"} |
+| 啟動工作流程稽核步驟中的設定檔計數 | 啟動工作流程的稽核步驟現在會顯示已啟動對象的設定檔計數。 也會顯示[串流目的地](../../destinations/ui/activate-segment-streaming-destinations.md)的設定檔計數，而不只是[批次目的地](../../destinations/ui/activate-batch-profile-destinations.md)。<br> ![在已啟動和串流對象之啟動工作流程的稽核步驟中顯示的設定檔計數。](./assets/april/profile-count-review.png "啟動工作流程稽核步驟中的設定檔計數。"){zoomable="yes"} |
 | [!DNL Pinterest]權杖到期可見性 | [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md)目的地現在會顯示權杖到期日，以便您檢視何時需要重新驗證。 [!DNL Pinterest]個Token每30天過期一次。 代號過期時，資料匯出功能會停止運作。 為避免中斷，請在Token過期之前[重新整理您的驗證認證](../../destinations/catalog/advertising/pinterest.md#refresh-authentication-credentials)。 |
-| 匯出檔案現在已針對過期的排程停用 | 當您的對象排程過期時，**[!UICONTROL Export file now]**&#x200B;現在會在您嘗試使用之前停用，工具提示會說明原因。 以前，選取動作會導致錯誤。<br> ![「匯出檔案」動作已停用，工具提示會說明動作無法使用的原因。](../2026/assets/april/export-file-now-disabled.png "匯出檔案現在已停用。"){zoomable="yes"} |
+| 匯出檔案現在已針對過期的排程停用 | 當您的對象排程過期時，**[!UICONTROL Export file now]**&#x200B;現在會在您嘗試使用之前停用，工具提示會說明原因。 以前，選取動作會導致錯誤。<br> ![「匯出檔案」動作已停用，工具提示會說明動作無法使用的原因。](./assets/april/export-file-now-disabled.png "匯出檔案現在已停用。"){zoomable="yes"} |
 | 啟動工作流程中的欄可見性修正 | 修正變更一個表格中的可見欄位，錯誤地影響啟動工作流程中其他表格的問題。 |
 
 {style="table-layout:auto"}
@@ -150,6 +150,9 @@ Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各�
 
 | Data Distiller Accelerators | Run and schedule Adobe-managed, parameterized SQL templates in the Query Service UI to perform common analyses without writing SQL. This helps you standardize analytics workflows and reuse trusted query logic across your organization. See the [Data Distiller accelerators guide](../../query-service/ui/accelerators.md) for more details. |
 
+| [!DNL Delta Sharing] | You can use the [!DNL Delta Sharing] source to bring Delta tables into Experience Platform through a secure, open data‑sharing protocol. After you configure a [!DNL Delta Sharing] connection and select the shares and tables you want to ingest, Platform automatically brings that data into your datasets so you can use it for analysis, segmentation, and activation. |
+| [!DNL Meta Ads] (Beta) | You can use the [!DNL Meta Ads] source connector (Beta) in the Sources workspace to authenticate to [!DNL Meta], select your ad accounts, and schedule ingestion of [!DNL Meta Ads] campaign and performance data into Experience Platform datasets. |
+
 | Automatic dataflow disabling | Sources ingestion dataflows that fail continuously for 30 days are automatically disabled, helping to surface unhealthy dataflows and reduce repeated failed runs. |
 
---->
+-->

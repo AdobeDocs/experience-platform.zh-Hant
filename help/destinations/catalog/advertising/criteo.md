@@ -1,11 +1,11 @@
 ---
 keywords: 廣告；標準；
 title: 標準連線
-description: Criteo 提供值得信賴且具影響力的廣告，為開放網路上的每位消費者帶來更豐富的體驗。Criteo 擁有全球最大的商務資料集和同級最佳的 AI，能確保購物歷程中的接觸點全面個人化，在合適的時機向客戶推送合適的廣告。
+description: Criteo 提供值得信賴且具影響力的廣告，為開放網路上的每位消費者帶來更豐富的體驗。 Criteo 擁有全球最大的商務資料集和同級最佳的 AI，能確保購物歷程中的接觸點全面個人化，在合適的時機向客戶推送合適的廣告。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 495becf1bd5b6dc418a7bc849eeec352e049d898
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1183'
 ht-degree: 12%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 12%
 >
 >此目的地聯結器和檔案頁面是由Criteo建立和維護。 若有任何查詢或更新要求，請直接連絡Criteo [這裡](mailto:criteoTechnicalPartnerships@criteo.com)。
 
-Criteo 提供值得信賴且具影響力的廣告，為開放網路上的每位消費者帶來更豐富的體驗。Criteo 擁有全球最大的商務資料集和同級最佳的 AI，能確保購物歷程中的接觸點全面個人化，在合適的時機向客戶推送合適的廣告。
+Criteo 提供值得信賴且具影響力的廣告，為開放網路上的每位消費者帶來更豐富的體驗。 Criteo 擁有全球最大的商務資料集和同級最佳的 AI，能確保購物歷程中的接觸點全面個人化，在合適的時機向客戶推送合適的廣告。
 
 ## 先決條件 {#prerequisites}
 
@@ -35,7 +35,7 @@ Criteo 提供值得信賴且具影響力的廣告，為開放網路上的每位�
 
 ## 支援的身分 {#supported-identities}
 
-標準支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=zh-Hant#getting-started)。
+標準支援下表所述的身分啟用。 深入瞭解[身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started)。
 
 | 目標身分 | 說明 | 考量事項 |
 | --- | --- | --- |
