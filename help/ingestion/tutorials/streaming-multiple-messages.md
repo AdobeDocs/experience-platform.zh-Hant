@@ -531,7 +531,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 >[!BEGINTABS]
 
->在HTTP要求中[!TAB 群組實體]
+>[!TAB 在HTTP要求中 群組實體]
 
 您可以在單一HTTP要求中，將多個XDM實體包含在`messages`陣列中以串流擷取端點。 只要所有訊息都屬於&#x200B;**相同**&#x200B;組織和沙箱，則所有訊息都可以鎖定相同或不同的資料集和結構描述。
 
