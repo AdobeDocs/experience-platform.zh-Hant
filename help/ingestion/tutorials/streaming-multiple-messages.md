@@ -5,9 +5,9 @@ title: 在單一HTTP要求中傳送多則訊息
 type: Tutorial
 description: 本檔案提供的教學課程，說明如何使用串流擷取，在單一HTTP請求中傳送多則訊息至Adobe Experience Platform。
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1724'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 註冊串流連線後，身為資料製作者，您將擁有唯一URL，可用將資料串流至Experience Platform。
 
-## 串流至資料集
+## 串流至資料集 {#stream-to-dataset}
 
 以下範例說明如何在單一HTTP請求中，將多則訊息傳送至特定資料集。 在訊息標題中插入資料集ID，讓該訊息直接內嵌到其中。
 
@@ -509,7 +509,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
     },
 ```
 
-第三個訊息因標頭中使用無效的組織ID而失敗。 組織必須符合您嘗試張貼到的{CONNECTION_ID}。 若要判斷哪一個組織識別碼符合您正在使用的串流連線，您可以使用`GET inlet`[[!DNL Streaming Ingestion API]執行](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)要求。 如需如何擷取先前建立的串流連線的範例，請參閱[擷取串流連線](./create-streaming-connection.md#get-data-collection-url)。
+第三個訊息因標頭中使用無效的組織ID而失敗。 組織必須符合您嘗試張貼到的{CONNECTION_ID}。 若要判斷哪一個組織識別碼符合您正在使用的串流連線，您可以使用[[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)執行`GET inlet`要求。 如需如何擷取先前建立的串流連線的範例，請參閱[擷取串流連線](./create-streaming-connection.md#get-data-collection-url)。
 
 第四則訊息失敗，因為它未遵循預期的XDM結構描述。 要求標頭和內文中包含的`xdmSchema`不符合`{DATASET_ID}`的XDM結構描述。 更正訊息標頭與內文中的結構描述，可讓結構描述通過DCCS驗證，並成功傳送至[!DNL Experience Platform]。 訊息本文也必須更新以符合`{DATASET_ID}`的XDM結構描述，才能在[!DNL Experience Platform]上傳遞串流驗證。 如需有關成功串流至Experience Platform的訊息有何動作的詳細資訊，請參閱本教學課程的[確認已擷取的訊息](#confirm-messages-ingested)區段。
 
@@ -520,11 +520,47 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 閱讀[擷取失敗的批次](../quality/retrieve-failed-batches.md)指南，以取得有關復原失敗的批次訊息的詳細資訊。
 
+### 將多個XDM實體傳送至資料流 {#send-multiple-xdm-entities-to-a-dataflow}
+
+若要將多個XDM實體傳送至資料流，您可以：
+
+- 將一個HTTP請求中`messages`陣列中的一或多個實體傳送至串流端點。
+- 使用批次擷取上傳含有多個實體的檔案。
+
+選擇符合您的資料量和使用案例的方法。
+
+>[!BEGINTABS]
+
+>在HTTP要求中[!TAB 群組實體]
+
+您可以在單一HTTP要求中，將多個XDM實體包含在`messages`陣列中以串流擷取端點。 只要所有訊息都屬於&#x200B;**相同**&#x200B;組織和沙箱，則所有訊息都可以鎖定相同或不同的資料集和結構描述。
+
+當您想要：
+
+- 透過在一個HTTP呼叫中傳送多個XDM實體來減少請求。
+- 透過擷取端點即時串流資料。
+
+如需有關如何傳送請求的詳細資訊和說明，請閱讀[串流至資料集](#stream-to-dataset)區段。
+
+>[!TAB 上傳批次檔]
+
+您可以將包含一或多個XDM實體的批次檔案上傳到資料流。 在相同批次下上傳的所有檔案都會當作單一擷取單元一起處理。
+
+在下列情況下使用此方法：
+
+- 擷取較大的資料量（例如CSV、JSON或Parquet檔案）。
+- 正在使用來自上游系統的檔案式匯出。
+- 偏好排程或大量擷取。
+
+如需逐步指示，請參閱[批次擷取指南](../batch-ingestion/api-overview.md)。
+
+>[!ENDTABS]
+
 ## 確認已擷取的訊息
 
 通過DCCS驗證的訊息會串流至[!DNL Experience Platform]。 在[!DNL Experience Platform]，批次訊息在被擷取到[!DNL Data Lake]之前，會先透過串流驗證進行測試。 批次的狀態（無論是否成功）會顯示在`{DATASET_ID}`所指定的資料集中。
 
-您可以使用[!DNL Experience Platform]Experience Platform UI[檢視成功串流至](https://platform.adobe.com)的批次訊息的狀態，方法是前往&#x200B;**[!UICONTROL Datasets]**&#x200B;標籤，按一下您要串流至的資料集，然後檢查&#x200B;**[!UICONTROL Dataset Activity]**&#x200B;標籤。
+您可以使用[Experience Platform UI](https://platform.adobe.com)檢視成功串流至[!DNL Experience Platform]的批次訊息的狀態，方法是前往&#x200B;**[!UICONTROL Datasets]**&#x200B;標籤，按一下您要串流至的資料集，然後檢查&#x200B;**[!UICONTROL Dataset Activity]**&#x200B;標籤。
 
 在[!DNL Experience Platform]上通過串流驗證的批次訊息已擷取到[!DNL Data Lake]。 然後這些訊息便可用於分析或匯出。
 

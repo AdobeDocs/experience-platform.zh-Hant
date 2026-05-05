@@ -5,16 +5,16 @@ title: 使用流量服務API監控資料流
 type: Tutorial
 description: 本教學課程涵蓋使用流程服務API監控流程執行資料的完整性、錯誤和量度的步驟。
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 12%
 
 ---
 
 # 使用流量服務API監控資料流
 
-Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。 此外，Experience Platform還允許向外部合作夥伴啟用資料。
+Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Experience Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源（例如Adobe應用程式、雲端儲存、資料庫和許多其他來源）內嵌資料。 此外，Experience Platform還允許向外部合作夥伴啟用資料。
 
 [!DNL Flow Service]用於收集及集中來自Adobe Experience Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，所有支援的來源和目的地都可以從中連線。
 
@@ -34,11 +34,11 @@ Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠�
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [!DNL Experience Platform] 疑難排解指南中的[如何讀取範例 API 呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集所需標頭的值
 
-若要呼叫[!DNL Experience Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了對 [!DNL Experience Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -200,4 +200,6 @@ curl -X GET \
 
 ## 後續步驟
 
-依照本教學課程，您已使用[!DNL Flow Service] API擷取資料流上的量度和錯誤資訊。 您現在可以繼續根據您的擷取排程監視資料流，以追蹤其狀態和擷取率。 如需有關如何監視來源資料流的資訊，請使用使用者介面[&#128279;](../ui/monitor-sources.md)教學課程閱讀來源的[監視資料流。 如需如何監視目的地的資料流的詳細資訊，請使用使用者介面](../ui/monitor-destinations.md)教學課程閱讀目的地的監視資料流。
+依照本教學課程，您已使用[!DNL Flow Service] API擷取資料流上的量度和錯誤資訊。 您現在可以繼續根據您的擷取排程監視資料流，以追蹤其狀態和擷取率。 如需有關如何監視來源資料流的資訊，請使用使用者介面](../ui/monitor-sources.md)教學課程閱讀來源的[監視資料流。 如需如何監視目的地的資料流的詳細資訊，請使用使用者介面](../ui/monitor-destinations.md)教學課程閱讀目的地的[監視資料流。
+
+若要將多個XDM實體傳送至資料流，請在HTTP請求中使用`messages`陣列，或上傳包含多個記錄的檔案（CSV、JSON或Parquet）。 如需詳細指引和最佳實務，請閱讀[如何將多個XDM實體傳送至資料流](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow)。
