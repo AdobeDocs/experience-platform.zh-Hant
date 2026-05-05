@@ -48,7 +48,7 @@ Experience Platform UI中的[!UICONTROL Data Lifecycle]工作區可讓您設定�
 | 資料集已從設定檔服務中刪除 | 3 小時 | 從這時開始，批次和串流分段、預覽或估計、匯出和實體存取等作業將不再從此資料集中讀取資料。 設定檔服務中的資料只會軟刪除，並將一直保留到流程結束為止，之後將硬刪除。 |
 | 設定檔計數和對象已更新 | 48 小時 | 更新所有受影響的設定檔後，所有相關的[對象](../segmentation/home.md)都會更新，以反映其新大小。 根據已移除的資料集以及您正在分割的屬性，每個對象的大小可能會因刪除而增加或減少。 此時，整體設定檔計數的任何結果變更都會反映在[儀表板Widget](../dashboards/guides/profiles.md#profile-count-trend)和其他報表中。 |
 | 歷程和目的地已更新 | 50 小時 | [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html)、[行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)和[目的地](../destinations/home.md)已根據相關區段的變更進行更新。 |
-| 硬刪除完成 | 15 天 | 與資料集相關的所有資料都會從資料湖和設定檔服務中硬刪除。 刪除資料集的資料生命週期工作](./ui/browse.md#view-details)的[狀態已更新，以反映此情況。 |
+| 硬刪除完成 | 15 天 | 與資料集相關的所有資料都會從資料湖和設定檔服務中硬刪除。 刪除資料集的資料生命週期工作[&#128279;](./ui/browse.md#view-details)的狀態已更新，以反映此情況。 |
 
 {style="table-layout:auto"}
 
