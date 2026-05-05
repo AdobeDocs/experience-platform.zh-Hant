@@ -3,10 +3,10 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ce9b0bd5cc733ed67909898b45f4ee42ae015608
 workflow-type: tm+mt
-source-wordcount: '4769'
-ht-degree: 11%
+source-wordcount: '4961'
+ht-degree: 12%
 
 ---
 
@@ -92,7 +92,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
 >title="每月匯出"
->abstract="<sup>*</sup>選取開始日期，而後續匯出將在那個月的那一天進行，直到選取的結束日期為止。對於少於 30 或 31 天的月份，匯出將在該月的最後一天進行。"
+>abstract="<sup>*</sup>選取開始日期，而後續匯出將在那個月的那一天進行，直到選取的結束日期為止。 對於少於 30 或 31 天的月份，匯出將在該月的最後一天進行。"
 
 [!DNL Adobe Experience Platform]會將電子郵件行銷和雲端儲存空間的資料匯出為[不同的檔案型別](#supported-file-formats-export)。 在&#x200B;**[!UICONTROL Scheduling]**&#x200B;頁面中，您可以針對要匯出的每個對象設定排程和檔案名稱。
 
@@ -118,14 +118,14 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
->title="檔案匯出選項 "
->abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有設定檔的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合對象資格的設定檔。<br> 第一個增量檔案匯出包括符合對象資格的所有設定檔，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的設定檔。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#export-incremental-files" text="匯出增量檔案"
+>title="檔案匯出選項"
+>abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有設定檔的完整快照。 選取「**匯出增量檔案**」，僅匯出上次匯出後符合客群資格的輪廓。<br> 第一個增量檔案匯出包括符合客群資格的所有輪廓，做為回填之用。 未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的設定檔。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="對象評估後啟動"
->abstract="<p>每日分段作業完成後立即執行啟動。這可確保匯出最新的設定檔。</p><p>在客群評估後匯出設定檔的選項<i>不</i>適用於每週和每月的匯出頻率。</p>"
+>abstract="<p>每日分段作業完成後立即執行啟動。 這可確保匯出最新的設定檔。</p><p>在客群評估後匯出設定檔的選項<i>不</i>適用於每週和每月的匯出頻率。</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -161,12 +161,12 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
    >[!IMPORTANT]
    >
-   >若您對原已設定為在區段評估後啟用的客群，執行[彈性客群評估](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)，則一旦彈性客群評估工作完成，無論先前的每日啟用工作為何，這些客群都會立即啟用。這可能會導致根據您的動作，一天匯出對象多次。
+   >若您對原已設定為在區段評估後啟用的客群，執行[彈性客群評估](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)，則一旦彈性客群評估工作完成，無論先前的每日啟用工作為何，這些客群都會立即啟用。 這可能會導致根據您的動作，一天匯出對象多次。
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![影像在批次目的地的啟動流程中，醒目提示「區段之後」評估選項。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-使用&#x200B;**[!UICONTROL Scheduled]**&#x200B;選項讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
+使用**[!UICONTROL Scheduled]**&#x200B;選項讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
 
    ![影像在批次目的地的啟動流程中醒目提示「已排程」選項，並顯示時間選擇器。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -210,7 +210,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
 >title="設定檔案名稱"
->abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。 使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 選取&#x200B;**[!UICONTROL Export incremental files]**&#x200B;以觸發匯出，其中第一個檔案是所選對象所有設定檔資格的完整快照，而後續檔案是自上次匯出以來的增量設定檔資格。
 
@@ -241,7 +241,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="設定檔案名稱"
->abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。 使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 對於大多數目的地，預設檔案名稱會包含目的地名稱、對象ID以及日期和時間指示器。 例如，您可以編輯匯出的檔案名稱，以區分不同的促銷活動，或將資料匯出時間附加至檔案。 請注意，某些目的地開發人員可能會選擇為其目的地顯示不同的預設檔案名稱附加選項。
 
@@ -344,7 +344,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="關於強制屬性"
->abstract="選取所有匯出的設定檔應包含的 XDM 結構描述屬性。沒有強制金鑰的設定檔不會匯出到目的地。若未選取強制金鑰，則會匯出所有合格的設定檔，無論其屬性如何。"
+>abstract="選取所有匯出的設定檔應包含的 XDM 結構描述屬性。 沒有強制金鑰的設定檔不會匯出到目的地。 若未選取強制金鑰，則會匯出所有合格的設定檔，無論其屬性如何。"
 
 強制屬性是使用者啟用的核取方塊，可確保所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址&#x200B;。
 
@@ -359,7 +359,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
 >title="關於重複資料刪除索引鍵"
->abstract="選取重複資料刪除金鑰，以消除匯出檔案中同一設定檔的多筆記錄。選取單一命名空間或最多兩個 XDM 結構描述屬性作為重複資料刪除索引鍵。未選取重複資料刪除金鑰可能會導致匯出檔案中出現重複的設定檔項目。"
+>abstract="選取重複資料刪除金鑰，以消除匯出檔案中同一設定檔的多筆記錄。 選取單一命名空間或最多兩個 XDM 結構描述屬性作為重複資料刪除索引鍵。 未選取重複資料刪除金鑰可能會導致匯出檔案中出現重複的設定檔項目。"
 
 >[!IMPORTANT]
 >
@@ -496,7 +496,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 
 ### 具有相同時間戳記之設定檔的重複資料刪除行為 {#deduplication-same-timestamp}
 
-將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
+將設定檔匯出至檔案型目標時，如果有多個設定檔共用相同的去重複化金鑰和相同的參考時間戳記，重複資料刪除的功能可確保僅匯出一個設定檔。 此時間戳記代表設定檔的對象成員資格或身分圖表上次更新的時間。 如需如何更新及匯出設定檔的詳細資訊，請參閱[設定檔匯出行為](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2)檔案。
 
 #### 主要考量事項 {#key-considerations}
 
@@ -554,7 +554,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 * 如果選取`segmentMembership.seg_namespace.seg_id.status`欄位，匯出的檔案會在初始完整快照中包含&#x200B;**[!UICONTROL Active]**&#x200B;個成員，並在後續的增量匯出中包含&#x200B;**[!UICONTROL Active]**&#x200B;和&#x200B;**[!UICONTROL Expired]**&#x200B;個成員。
 * 如果未選取`segmentMembership.seg_namespace.seg_id.status`欄位，則匯出的檔案在初始完整快照和後續的增量匯出中僅包含&#x200B;**[!UICONTROL Active]**&#x200B;個成員。
 
-深入瞭解檔案型目的地[的](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)設定檔匯出行為。
+深入瞭解檔案型目的地](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)的[設定檔匯出行為。
 
 #### 目前無法選取身分名稱空間進行匯出 {#identity-namespaces-export-limitation}
 
@@ -615,9 +615,24 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 >title="排除擴充屬性"
 >abstract="啟用此選項可從選取的自訂已上傳對象匯出設定檔至您的目的地，同時排除其所有屬性。"
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_info_alert"
+>title="階層式輸出已啟用"
+>abstract="此目的地支援階層式輸出，因為已啟用陣列、對應及物件的匯出功能切換。 您可以匯出頂層陣列、陣列元素，或在一個對應中從相同陣列匯出多個欄位。 如需詳細資訊，請查看文件。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_source_field"
+>title="來源欄位"
+>abstract="選取要匯出的擴充屬性。 對於陣列內的欄位，來源會自動填入轉換運算式。 若要在一個對應中匯出多個欄位，請先新增一個欄位，然後編輯來源運算式。 如需詳細資訊，請查看文件。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_target_field"
+>title="目標欄位"
+>abstract="目標欄位會自動填入來源欄位名稱。 如果您希望欄位在匯出的檔案中有不同的名稱，請編輯該欄位以使用不同的別名。"
+
 >[!IMPORTANT]
 >
->只有當您在&#x200B;**[!UICONTROL Custom upload]**&#x200B;對象選取[步驟中選取](#select-audiences)個對象時，才會顯示此步驟。
+>只有當您在[對象選取](#select-audiences)步驟中選取&#x200B;**[!UICONTROL Custom upload]**&#x200B;個對象時，才會顯示此步驟。
 
 擴充屬性對應至在Experience Platform中擷取的自訂上傳對象，做為&#x200B;**[!UICONTROL Custom uploads]**。 在此步驟中，您可以為每個選取的外部對象選取要匯出至目的地的屬性。
 
@@ -626,7 +641,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 請依照下列步驟，為每個外部對象選取擴充屬性：
 
 1. 在&#x200B;**[!UICONTROL Enrichment attributes]**&#x200B;欄中，選取![編輯按鈕](/help/images/icons/edit.png) （編輯）按鈕。
-1. 選取 **[!UICONTROL Add enrichment attribute]**。隨即顯示新的空白結構描述欄位。
+1. 選取 **[!UICONTROL Add enrichment attribute]**。 隨即顯示新的空白結構描述欄位。
    ![顯示擴充屬性模型畫面的UI影像。](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
 1. 選取空白欄位右側的按鈕，以開啟欄位選取畫面。
 1. 選取您要為對象匯出的屬性。
@@ -649,7 +664,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 >* 這些欄位會用於對象定義中。
 >* 這些欄位會設定為目標目的地的投影屬性。
 >
-> 例如，如果欄位`person.name.firstName`的某些資料使用標籤與目的地的行銷動作衝突，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱[中的 [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations)資料控管。
+> 例如，如果欄位`person.name.firstName`的某些資料使用標籤與目的地的行銷動作衝突，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱 [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations)中的[資料控管。
 
 在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到選取範圍的摘要。 選取&#x200B;**[!UICONTROL Cancel]**&#x200B;以中斷流程，**[!UICONTROL Back]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 
