@@ -2,10 +2,10 @@
 title: 瀏覽資料生命週期工單
 description: 瞭解如何在Adobe Experience Platform使用者介面中檢視及管理現有資料生命週期工單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 26%
+source-wordcount: '846'
+ht-degree: 25%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 26%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="工單 ID"
->abstract="將資料生命週期要求傳送到系統時，便會建立執行所要求任務的工單。換句話說，工單代表特定的資料生命週期流程，包括其目前狀態和其他相關的詳細資訊。每個工單在建立時都會被自動指派自己的唯一 ID。"
+>abstract="將資料生命週期要求傳送到系統時，便會建立執行所要求任務的工單。 換句話說，工單代表特定的資料生命週期流程，包括其目前狀態和其他相關的詳細資訊。 每個工單在建立時都會被自動指派自己的唯一 ID。"
 >text="See the data lifecycle UI guide to learn more."
 
-將資料生命週期要求傳送到系統時，便會建立執行所要求任務的工單。工單代表特定資料生命週期程式，例如排程的資料集到期日，其中包括其目前狀態和其他相關詳細資訊。
+將資料生命週期要求傳送到系統時，便會建立執行所要求任務的工單。 工單代表特定資料生命週期程式，例如排程的資料集到期日，其中包括其目前狀態和其他相關詳細資訊。
 
 本指南說明如何在Adobe Experience Platform UI中檢視及管理現有工單。
 
@@ -29,9 +29,9 @@ ht-degree: 26%
 
 清單一次只會顯示一個類別的工作訂單。 選取&#x200B;**[!UICONTROL Consumer]**&#x200B;以檢視記錄刪除工作清單，並選取&#x200B;**[!UICONTROL Dataset]**&#x200B;以檢視排程的資料集到期日清單。
 
-顯示![索引標籤的[!UICONTROL Dataset]影像](../images/ui/browse/dataset-tab.png)
+顯示[!UICONTROL Dataset]索引標籤的![影像](../images/ui/browse/dataset-tab.png)
 
-選取funnel圖示(![funnel圖示影像](/help/images/icons/filter.png))以檢視所顯示工單的篩選清單。
+選取funnel圖示（![funnel圖示影像](/help/images/icons/filter.png)）以檢視所顯示工單的篩選清單。
 
 ![已顯示工單篩選器的影像](../images/ui/browse/filters.png)
 
@@ -65,17 +65,17 @@ ht-degree: 26%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="服務狀態"
->abstract="資料生命週期要求會由多個 Experience Platform 服務獨立處理。本區段會概述各個服務之要求目前的處理狀態。若要了解詳細資訊，請參閱「資料生命週期 UI 指南」。"
+>abstract="資料生命週期要求會由多個 Experience Platform 服務獨立處理。 本區段會概述各個服務之要求目前的處理狀態。 若要了解詳細資訊，請參閱「資料生命週期 UI 指南」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="身分識別的數量"
->abstract="作為此工單的一部分，其記錄被要求更新或刪除的身分識別的數量。計數中包含的身分識別不一定存在於受影響的資料集中。若要了解詳細資訊，請參閱「資料生命週期 UI 指南」。"
+>abstract="作為此工單的一部分，其記錄被要求更新或刪除的身分識別的數量。 計數中包含的身分識別不一定存在於受影響的資料集中。 若要了解詳細資訊，請參閱「資料生命週期 UI 指南」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="記錄刪除回應"
->abstract="當記錄刪除程式收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL Result]**&#x200B;區段下。 如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
+>abstract="當記錄刪除程式收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL Result]**&#x200B;區段下。 如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。 若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
 選取已列出工單的ID以檢視其詳細資料。
 
@@ -86,6 +86,10 @@ ht-degree: 26%
 ### 記錄刪除詳細資料 {#record-delete}
 
 記錄刪除請求的詳細資訊包括其目前狀態以及自提出請求以來經過的時間。 每個請求也包含&#x200B;**[!UICONTROL Status by service]**&#x200B;區段，提供有關刪除中涉及的每個下游服務的個別狀態詳細資訊。 在右邊欄中，您可以使用控制項來更新工單的名稱與描述。
+
+>[!TIP]
+>
+>記錄刪除請求會在處理開始前進行批次處理，在標準SLA下最多可能需要30天才能完成。 如需每個階段所發生情況的明細，請參閱[記錄刪除時間表](../home.md#record-delete-transparency)。
 
 ![顯示記錄刪除工單之詳細資訊頁面的影像](../images/ui/browse/record-delete-details.png)
 

@@ -2,9 +2,9 @@
 title: 進階資料生命週期管理的最佳作法
 description: 瞭解如何使用進階資料生命週期管理UI和資料衛生API，有效管理Adobe Experience Platform中的資料衛生請求。 本指南涵蓋最佳實務，例如最大化每個請求的身分、指定個別資料集，以及注意API節流以防止速度變慢。 本檔案包含設定自動資料集清理的准則、如何監視工單狀態，以及詳細的回應擷取方法。 遵循這些實務來簡化您的請求處理，並最佳化回應時間。
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-本指南需要您實際瞭解資料生命週期工作區和[資料衛生API](./api/overview.md)。 在繼續本檔案之前，請先在UI[&#128279;](./ui/dataset-expiration.md)中或透過API熟悉[進階資料生命週期管理](./home.md)和[建立記錄刪除請求](./ui/record-delete.md)或資料集有效期的指南。
+本指南需要您實際瞭解資料生命週期工作區和[資料衛生API](./api/overview.md)。 在繼續本檔案之前，請先在UI](./ui/dataset-expiration.md)中或透過API熟悉[進階資料生命週期管理](./home.md)和[建立記錄刪除請求](./ui/record-delete.md)或[資料集有效期的指南。
 
 ## 工單建立准則 {#work-order-creation-guidelines}
 
-您可以使用資料衛生API中的`/workorder`端點，以程式設計方式管理Experience Platform中的記錄刪除請求。 使用此端點，您可以建立刪除請求、檢查其狀態或更新現有請求。 請參閱[工單端點檔案](./api/workorder.md)，瞭解如何使用API執行這些動作。
+您可以使用資料衛生API中的`/workorder`端點，以程式設計方式管理Experience Platform中的記錄刪除請求。 使用此端點，您可以建立刪除請求、檢查其狀態或更新現有請求。 請參閱[工單端點檔案](./api/workorder.md)，瞭解如何使用API執行這些動作。 記錄刪除請求會在處理開始前進行批次處理，最多可能需要30天（標準SLA）或15天（Privacy and Security Shield或Healthcare Shield）才能完成。 如需每個階段所發生情況的完整明細，請參閱[記錄刪除時間表](./home.md#record-delete-transparency)。
 
 >[!TIP]
 >
@@ -51,7 +51,7 @@ I/O事件警示可以傳送至已設定的webhook，以啟用活動監視的自�
 
 使用下列資料生命週期方法和准則，有效擷取和監視工作狀態：
 
-### I/O事件 {#io-events}
+### I/O 事件 {#io-events}
 
 若要有效監控資料生命週期工作的進度，請依照下列步驟設定及使用I/O事件：
 
