@@ -2,9 +2,9 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: f5c32c5687b5931ed59fa6a379ed5e5927e3a9ac
+source-git-commit: a026ee1fc33463da663f5a75561df9df34470453
 workflow-type: tm+mt
-source-wordcount: '3641'
+source-wordcount: '3668'
 ht-degree: 5%
 
 ---
@@ -58,20 +58,20 @@ ht-degree: 5%
 
 ### Adobe Journey Optimizer物件 {#abobe-journey-optimizer-objects}
 
-下表列出目前沙箱工具支援的[!DNL Adobe Journey Optimizer]物件與限制。 如需最佳實務的完整清單，請參閱[Journey Optimizer一般最佳實務](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global)指南。
+下表列出目前沙箱工具支援的[!DNL Adobe Journey Optimizer]物件與限制。 如需最佳實務的完整清單，請參閱[Journey Optimizer一般最佳實務](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global)指南。
 
 | 平台 | 物件 | 支援的相依物件 | 詳細資料 |
 | --- | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | 客群 | | 對象可以復製為歷程物件的相依物件。 您可以選取建立新受眾或重複使用目標沙箱中的現有受眾。 |
 | [!DNL Adobe Journey Optimizer] | 結構描述 | | 歷程中使用的結構描述可以復製為相依物件。 您可以選取建立新結構描述，或重複使用目標沙箱中的現有結構描述。 |
 | [!DNL Adobe Journey Optimizer] | 合併原則 | | 歷程中使用的合併原則可以復製為相依物件。 在目標沙箱中，您&#x200B;**無法**&#x200B;建立新的合併原則，您只能使用現有的合併原則。 |
-| [!DNL Adobe Journey Optimizer] | 歷程 | 歷程中使用的下列物件會復製為相依物件。 在匯入工作流程期間，您可以為每個選擇&#x200B;**[!UICONTROL Create new]**&#x200B;或&#x200B;**[!UICONTROL Use existing]**： <ul><li>客群</li><li>畫布詳細資訊</li><li>內容範本</li><li>自訂動作</li><li>資料來源</li><li>活動</li><li>欄位群組</li><li>片段</li><li>結構描述</li></ul> | 當您在匯入過程中選擇&#x200B;**[!UICONTROL Use existing]**&#x200B;將歷程複製到另一個沙箱時，您選擇的現有自訂動作&#x200B;**必須**&#x200B;與來源自訂動作完全相符。 如果兩者不相符，新歷程將產生無法解決的錯誤。<br>系統複製歷程中使用的事件和事件詳細資訊，並在目標沙箱中建立新版本。 |
+| [!DNL Adobe Journey Optimizer] | 歷程 | 歷程中使用的下列物件會復製為相依物件。 在匯入工作流程期間，您可以為每個選擇&#x200B;**[!UICONTROL Create new]**&#x200B;或&#x200B;**[!UICONTROL Use existing]**： <ul><li>客群</li><li>畫布詳細資訊</li><li>內容範本</li><li>自訂動作</li><li>資料來源</li><li>事件</li><li>欄位群組</li><li>片段</li><li>結構描述</li></ul> | 當您在匯入過程中選擇&#x200B;**[!UICONTROL Use existing]**&#x200B;將歷程複製到另一個沙箱時，您選擇的現有自訂動作&#x200B;**必須**&#x200B;與來源自訂動作完全相符。 如果兩者不相符，新歷程將產生無法解決的錯誤。<br>系統複製歷程中使用的事件和事件詳細資訊，並在目標沙箱中建立新版本。 |
 | [!DNL Adobe Journey Optimizer] | 動作 | | 歷程中使用的電子郵件和推播訊息可以復製為相依物件。 用於訊息個人化的歷程欄位中使用的管道動作活動不會檢查完整性。 不會複製內容區塊。<br><br>可以複製歷程中使用的更新設定檔動作。 自訂動作可獨立新增至套件。 歷程中使用的動作詳細資料也會複製。 它一律會在目標沙箱中建立新版本。 |
 | [!DNL Adobe Journey Optimizer] | 自訂動作 |  | 自訂動作可獨立新增至套件。 將自訂動作指派給歷程後，就無法再編輯它。 若要更新自訂動作，您應： <ul><li>在移轉歷程之前移動自訂動作</li><li>更新移轉後自訂動作的設定（例如請求標頭、查詢引數和驗證）</li><li>使用您在第一個步驟中新增的自訂動作移轉歷程物件</li></ul> |
 | [!DNL Adobe Journey Optimizer] | 內容範本 | | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer行銷活動和歷程中重複使用自訂內容。 |
 | [!DNL Adobe Journey Optimizer] | 片段 | 所有巢狀片段。 | 片段可以復製為歷程物件的相依物件。 片段是可重複使用的元件，可在各個Journey Optimizer促銷活動和歷程的一封或多封電子郵件中參考。 |
-| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
-| [!DNL Adobe Journey Optimizer] | 決策 | 複製決策物件之前，目標沙箱中必須存在下列物件： <ul><li>用於決策物件的設定檔屬性</li><li>自訂選件屬性的欄位群組</li><li>用於跨規則、排名或上限之內容屬性的資料串流結構。</li></ul> | <ul><li>目前不支援複製使用AI模型的排名公式。</li><li>決定專案（優惠專案）不會自動納入。 若要確保它們已傳輸，請使用&#x200B;**新增至封裝**&#x200B;選項手動新增。</li><li>使用選擇策略的原則需要在複製過程中手動新增關聯的決定專案。 使用手動或遞補決定專案的原則會自動將這些專案作為直接相依性納入。</li><li>必須先複製決定專案，然後再複製任何其他相關物件。</li><li>如需支援物件的完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 行銷活動 | 促銷活動中使用的下列物件會復製為相依物件： <ul><li>行銷活動</li><li>客群</li><li>結構描述</li><li>內容範本</li><li>片段</li><li>訊息/內容</li><li>管道設定</li><li>統一的決定物件</li><li>實驗設定/變體</li></ul> | <ul><li>行銷活動可與所有與設定檔、對象、結構、內嵌訊息和相依物件相關的專案一起複製。 有些專案不會複製，例如資料使用標籤和語言設定。 如需無法複製的物件完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li><li>如果存在相同的設定，系統將自動檢測並重新使用目標沙箱中的現有通道設定物件。 如果找不到相符的設定，則在匯入期間會跳過頻道設定，使用者必須手動更新此歷程的目標沙箱中的頻道設定。</li><li>使用者可重複使用目標沙箱中的現有實驗與對象，作為所選行銷活動的相依物件。</li></ul> |
+| [!DNL Adobe Journey Optimizer] | 決策 | 複製決策物件之前，目標沙箱中必須存在下列物件： <ul><li>用於決策物件的設定檔屬性</li><li>自訂選件屬性的欄位群組</li><li>用於跨規則、排名或上限之內容屬性的資料串流結構。</li></ul> | <ul><li>目前不支援複製使用AI模型的排名公式。</li><li>決定專案（優惠專案）不會自動納入。 若要確保它們已傳輸，請使用&#x200B;**新增至封裝**&#x200B;選項手動新增。</li><li>使用選擇策略的原則需要在複製過程中手動新增關聯的決定專案。 使用手動或遞補決定專案的原則會自動將這些專案作為直接相依性納入。</li><li>必須先複製決定專案，然後再複製任何其他相關物件。</li><li>如需支援物件的完整清單，請參閱[將物件匯出至另一個沙箱](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox)指南。</li></ul> |
 
 ## 將物件匯出到套件中 {#export-objects}
 
@@ -82,17 +82,17 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="移除一個物件"
->abstract="若要從套件中刪除物件，請選取要刪除的行，然後使用刪除選項 (選取時可用)。請注意，您無法從已發佈的套件中刪除物件。"
+>abstract="若要從套件中刪除物件，請選取要刪除的行，然後使用刪除選項 (選取時可用)。 請注意，您無法從已發佈的套件中刪除物件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="套件有效期設定"
->abstract="套件在草稿狀態一段時間不活動後將過期。預設日期設定為從今天起 90 天。該日期會持續變更，直到該套件發佈為止。如果您明天造訪草稿狀態的套件，則日期會移動 +1 天 (除非您以手動設定)。"
+>abstract="套件在草稿狀態一段時間不活動後將過期。 預設日期設定為從今天起 90 天。 該日期會持續變更，直到該套件發佈為止。 如果您明天造訪草稿狀態的套件，則日期會移動 +1 天 (除非您以手動設定)。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
 >title="套件狀態"
->abstract="依預設，狀態設定為草稿。一旦套件發佈後，狀態將變更為已發佈。套件發佈後，就不能進行任何變更。"
+>abstract="依預設，狀態設定為草稿。 一旦套件發佈後，狀態將變更為已發佈。 套件發佈後，就不能進行任何變更。"
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ ht-degree: 5%
 
 從&#x200B;**[!UICONTROL Add to package]**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL Create new package]**&#x200B;選項。 提供封裝的[!UICONTROL Name]和選用的[!UICONTROL Description]，然後選取&#x200B;**[!UICONTROL Add]**。
 
-![已選取[!UICONTROL Add to package]並醒目提示[!UICONTROL Create new package]的[!UICONTROL Add]對話方塊。](../images/ui/sandbox-tooling/create-new-package.png)
+![已選取[!UICONTROL Create new package]並醒目提示[!UICONTROL Add]的[!UICONTROL Add to package]對話方塊。](../images/ui/sandbox-tooling/create-new-package.png)
 
 您返回&#x200B;**[!UICONTROL Schemas]**&#x200B;環境。 您現在可以依照下列的後續步驟，將其他物件加入您建立的封裝。
 
@@ -134,7 +134,7 @@ ht-degree: 5%
 >
 >發佈後，無法變更套件的內容。 為避免相容性問題，請確保已選取所有必要的資產。 如果必須進行變更，您必須建立新封裝。
 
-您會回到&#x200B;**[!UICONTROL Packages]**&#x200B;環境中的[!UICONTROL Sandboxes]索引標籤，您可以在其中檢視新發佈的封裝。
+您會回到[!UICONTROL Sandboxes]環境中的&#x200B;**[!UICONTROL Packages]**&#x200B;索引標籤，您可以在其中檢視新發佈的封裝。
 
 ![醒目提示新發佈封裝的沙箱封裝清單。](../images/ui/sandbox-tooling/published-packages.png)
 
@@ -168,7 +168,7 @@ ht-degree: 5%
 
 隨即顯示建立新或使用現有專案的選項。 選擇「**[!UICONTROL Use existing]**」。
 
-![顯示相依物件選項[!UICONTROL Package object and dependencies]與[!UICONTROL Create new]的[!UICONTROL Use existing]頁面。](../images/ui/sandbox-tooling/use-existing-object.png)
+![顯示相依物件選項[!UICONTROL Create new]與[!UICONTROL Use existing]的[!UICONTROL Package object and dependencies]頁面。](../images/ui/sandbox-tooling/use-existing-object.png)
 
 **[!UICONTROL Field group]**&#x200B;對話方塊會顯示物件可用的欄位群組清單。 選取所需的欄位群組，然後選取&#x200B;**[!UICONTROL Save]**。
 
@@ -193,17 +193,17 @@ ht-degree: 5%
 
 若要匯出整個沙箱，請導覽至「[!UICONTROL Sandboxes]」**[!UICONTROL Packages]**&#x200B;標籤並選取「**[!UICONTROL Create package]**」。
 
-![醒目提示[!UICONTROL Sandboxes]的&#x200B;**[!UICONTROL Packages]** [!UICONTROL Create package]索引標籤](../images/ui/sandbox-tooling/create-sandbox-package.png)
+![醒目提示[!UICONTROL Create package]的[!UICONTROL Sandboxes] **[!UICONTROL Packages]**&#x200B;索引標籤](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-在&#x200B;**[!UICONTROL Entire sandbox]**&#x200B;對話方塊中選取[!UICONTROL Type of package]的[!UICONTROL Create package]。 為您的新套件提供[!UICONTROL Package name]，並從下拉式清單中選取&#x200B;**[!UICONTROL Sandbox]**。 最後，選取&#x200B;**[!UICONTROL Create]**&#x200B;以確認您的專案。
+在[!UICONTROL Create package]對話方塊中選取[!UICONTROL Type of package]的&#x200B;**[!UICONTROL Entire sandbox]**。 為您的新套件提供[!UICONTROL Package name]，並從下拉式清單中選取&#x200B;**[!UICONTROL Sandbox]**。 最後，選取&#x200B;**[!UICONTROL Create]**&#x200B;以確認您的專案。
 
-![顯示已完成欄位並醒目提示[!UICONTROL Create package]的[!UICONTROL Create]對話方塊。](../images/ui/sandbox-tooling/create-package-dialog.png)
+![顯示已完成欄位並醒目提示[!UICONTROL Create]的[!UICONTROL Create package]對話方塊。](../images/ui/sandbox-tooling/create-package-dialog.png)
 
 已成功建立封裝，請選取&#x200B;**[!UICONTROL Publish]**&#x200B;以發佈封裝。
 
 ![醒目提示新發佈封裝的沙箱封裝清單。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-您會回到&#x200B;**[!UICONTROL Packages]**&#x200B;環境中的[!UICONTROL Sandboxes]索引標籤，您可以在其中檢視新發佈的封裝。
+您會回到[!UICONTROL Sandboxes]環境中的&#x200B;**[!UICONTROL Packages]**&#x200B;索引標籤，您可以在其中檢視新發佈的封裝。
 
 ### 匯入整個沙箱套件 {#import-entire-sandbox-package}
 
@@ -231,11 +231,7 @@ ht-degree: 5%
 
 ### 將物件快速複製到沙箱 {#express-copy}
 
->[!IMPORTANT]
->
->快速複製功能目前為測試版，僅供特定客戶使用。 Express Copy (Beta)目前僅支援結構和來源資料流。
-
-您可以從物件詳細目錄頁面存取快速複製。 例如，若要檢視可用結構描述清單，請從左側導覽選取「**[!UICONTROL Schemas]**」，然後選取「**[!UICONTROL Browse]**」標籤。 接著，選取選取的結構描述旁邊的省略符號(`...`)，在下拉式功能表中檢視控制選項。 從下拉式清單中選取&#x200B;**[!UICONTROL Add to package]**。
+您可以從物件詳細目錄頁面存取快速複製。 例如，若要檢視可用結構描述清單，請從左側導覽選取「**[!UICONTROL Schemas]**」，然後選取「**[!UICONTROL Browse]**」標籤。接著，選取選取的結構描述旁邊的省略符號(`...`)，在下拉式選單中檢視控制選項。 從下拉式清單中選取&#x200B;**[!UICONTROL Add to package]**。
 
 ![結構描述清單，顯示反白顯示[!UICONTROL Add to package]控制項的下拉式功能表。](../images/ui/sandbox-tooling/add-to-package-express.png)
 
@@ -271,7 +267,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 ![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
 -->
 
-在沙箱環境的&#x200B;**[!UICONTROL View import summary]**&#x200B;索引標籤中，從右邊的詳細資料窗格中選取&#x200B;**[!UICONTROL Jobs]**。
+在沙箱環境的&#x200B;**[!UICONTROL Jobs]**&#x200B;索引標籤中，從右邊的詳細資料窗格中選取&#x200B;**[!UICONTROL View import summary]**。
 
 ![沙箱[!UICONTROL Imports]索引標籤會在右窗格中反白顯示[!UICONTROL View import details]選取專案。](../images/ui/sandbox-tooling/view-import-details.png)
 
@@ -377,7 +373,7 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 以下影片旨在協助您瞭解沙箱工具，並概述如何建立新套件、發佈套件和匯入套件。
 
->[!VIDEO](https://video.tv.adobe.com/v/3446101/?captions=chi_hant&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 後續步驟
 
