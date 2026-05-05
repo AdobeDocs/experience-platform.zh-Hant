@@ -5,9 +5,9 @@ title: 探索UI中的結構描述資源
 description: 瞭解如何在Experience Platform使用者介面中探索現有結構描述、類別、結構描述欄位群組和資料型別。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ca90fd3f8615e21fb4c44104c2de7679db1e1025
+source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '2820'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ ht-degree: 0%
 
 ![包含數個反白索引標籤的結構描述工作區。](../images/ui/explore/tabs.png)
 
-篩選圖示（![篩選圖示影像](/help/images/icons/filter.png)）在左側邊欄中顯示控制項，以縮小列出的結果。 資源篩選器可分別用於&#x200B;**[!UICONTROL Browse]**&#x200B;和&#x200B;**[!UICONTROL Relationships]**&#x200B;標籤上的結構描述和關係。
+篩選圖示（![篩選圖示影像](/help/images/icons/filter.png)）在左側邊欄中顯示控制項，以縮小列出的結果。 資源篩選器可分別用於&#x200B;**[!UICONTROL Browse]**&#x200B;和&#x200B;**[!UICONTROL Relationships]**&#x200B;標籤上的結構描述和關係。 在&#x200B;**[!UICONTROL Field groups]**&#x200B;索引標籤上，使用[欄位群組中繼資料和篩選](#field-group-metadata-and-filtering)中說明的篩選，依相容的類別和產業標籤來縮小清單。
 
-在[!UICONTROL Browse]工作區的[!UICONTROL Schemas]索引標籤上，您可以篩選結構描述詳細目錄。 使用&#x200B;**[!UICONTROL Included in Profile]**&#x200B;切換可僅顯示已啟用在[即時客戶個人檔案](../../profile/home.md)中使用的結構描述。 使用&#x200B;**[!UICONTROL Show adhoc schemas]**&#x200B;切換來篩選使用名稱空間為僅供單一資料集使用的欄位建立的結構描述清單。
+在[!UICONTROL Schemas]工作區的[!UICONTROL Browse]索引標籤上，您可以篩選結構描述詳細目錄。 使用&#x200B;**[!UICONTROL Included in Profile]**&#x200B;切換可僅顯示已啟用在[即時客戶個人檔案](../../profile/home.md)中使用的結構描述。 使用&#x200B;**[!UICONTROL Show adhoc schemas]**&#x200B;切換來篩選使用名稱空間為僅供單一資料集使用的欄位建立的結構描述清單。
 
 ![反白顯示篩選面板的[!UICONTROL Schemas]工作區[!UICONTROL Browse]索引標籤。](../images/ui/explore/filters.png)
 
-在[!UICONTROL Relationship]工作區的[!UICONTROL Schemas]標籤上，您可以根據四個條件篩選關係清單。 篩選器包括[!UICONTROL Source schema]、[!UICONTROL Destination schema]、[!UICONTROL Source class]和[!UICONTROL Destination class]。 下表提供篩選的說明。
+在[!UICONTROL Schemas]工作區的[!UICONTROL Relationship]標籤上，您可以根據四個條件篩選關係清單。 篩選器包括[!UICONTROL Source schema]、[!UICONTROL Destination schema]、[!UICONTROL Source class]和[!UICONTROL Destination class]。 下表提供篩選的說明。
 
 | 篩選 | 說明 |
 |-----------------------------------|------------|
@@ -138,7 +138,7 @@ ht-degree: 0%
 
 ### 標準類別和欄位群組指標 {#standard-class-and-field-group-indicator}
 
-在結構描述編輯器中，標準（Adobe產生的）類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+在結構描述編輯器中，標準（Adobe產生的）類別和欄位群組會以掛鎖圖示（![掛鎖圖示。](/help/images/icons/lock-closed.png)）表示。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
 
 ![結構描述編輯器反白顯示掛鎖圖示](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -164,7 +164,7 @@ ht-degree: 0%
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-當您選取畫布中任何欄位的名稱時，右邊欄會更新，以在&#x200B;**[!UICONTROL Field properties]**&#x200B;下顯示該欄位的詳細資訊。 其中包括欄位預期使用案例、預設值、模式、格式、欄位是否為必填等內容的說明。
+當您選取畫布中任何欄位的名稱時，右邊欄會更新，以在&#x200B;**[!UICONTROL Field properties]**&#x200B;下顯示該欄位的詳細資訊。 其中包括欄位預期使用案例、預設值、模式、格式、是否需要欄位等的說明。 當您探索欄位群組時，所選欄位的標籤相關詳細資料也會顯示在這裡；請參閱結構檢視中的[標籤](#field-group-labels-in-structure)。
 
 ![從Commerce資料型別中選取的欄位，其欄位屬性已反白顯示。](../images/ui/explore/field-properties.png)
 
@@ -190,11 +190,97 @@ ht-degree: 0%
 
 ![結構描述編輯器，其關聯欄位和編輯關聯性已反白顯示。](../images/ui/explore/relationship-field.png)
 
-若要檢視參考結構描述主要身分的身分名稱空間，請選取關聯性欄位，然後在&#x200B;**[!UICONTROL Edit relationship]**&#x200B;側邊欄中選取[!UICONTROL Field properties]。 關聯性的引數會顯示在顯示的[!UICONTROL Edit relationship]對話方塊中。
+若要檢視參考結構描述主要身分的身分名稱空間，請選取關聯性欄位，然後在[!UICONTROL Field properties]側邊欄中選取&#x200B;**[!UICONTROL Edit relationship]**。 關聯性的引數會顯示在顯示的[!UICONTROL Edit relationship]對話方塊中。
 
 ![顯示關聯性引數的[編輯關聯性]對話方塊。](../images/ui/explore/edit-relationship-dialog.png)
 
 請參閱有關[在UI](../tutorials/relationship-ui.md)中建立關聯性的教學課程，以瞭解在XDM結構描述中使用關聯性的詳細資訊。
+
+## 探索欄位群組：使用和中繼資料 {#explore-field-groups}
+
+瀏覽至&#x200B;**[!UICONTROL Schemas]** > **[!UICONTROL Field groups]**&#x200B;以探索欄位群組。 在&#x200B;**[!UICONTROL Field groups]**&#x200B;索引標籤中，其他功能可協助您瞭解欄位群組在不同結構描述中的使用位置及其包含的內容，例如相容性、必要欄位（會強制執行擷取要求）和治理訊號。
+
+這些功能可幫助您在進行變更之前評估影響，並在架構設計期間更有效地識別相關欄位群組。
+
+### 檢視欄位群組的結構描述使用情況 {#view-schema-usage-for-field-groups}
+
+從&#x200B;**[!UICONTROL Field groups]**&#x200B;表格中，選取欄位群組以開啟其詳細資料檢視。 畫布會更新以顯示欄位群組結構，而屬性邊欄會顯示所選資源的相關額外資訊。
+
+#### 使用此欄位群組的結構描述
+
+在右側屬性邊欄中，**[!UICONTROL Schemas using this field group]**&#x200B;區段會列出目前包含欄位群組的結構描述。
+
+![欄位群組屬性邊欄顯示使用此欄位群組區段的結構描述。](../images/ui/explore/field-group-properties.png)
+
+- 如果欄位群組由三個或更少的結構描述使用，則會顯示所有結構描述名稱。
+- 如果超過三個結構描述使用此清單，則只會顯示一些名稱，以及檢視完整清單的選項。
+
+選取結構描述名稱，以在新索引標籤中開啟其詳細資料檢視，並檢查欄位群組在該結構描述中的實施方式。
+
+#### 檢視更多和完整的結構描述清單
+
+如果存在的結構描述多於可以內嵌顯示的結構描述，請選取&#x200B;**[!UICONTROL View more]**&#x200B;以開啟完整的對話方塊。
+
+![使用此欄位群組區段的結構描述中的[檢視更多]選項。](../images/ui/explore/view-more-schemas.png)
+
+**[!UICONTROL Schemas using this field group]**&#x200B;對話方塊隨即顯示，顯示使用欄位群組的完整結構描述清單。
+
+![使用此欄位群組對話方塊的結構描述會顯示結構描述清單與資料行。](../images/ui/explore/schemas-using-this-field-group-dialog.png)
+
+在&#x200B;**[!UICONTROL Schemas using this field group]**&#x200B;對話方塊中，您可以：
+
+- 瀏覽使用欄位群組的所有結構描述
+- 翻閱大型結果集
+- 選取結構描述，以在新索引標籤中開啟其詳細資料檢視
+
+您可以檢視結構描述詳細資訊，例如，結構描述名稱、類別和其他屬性。
+
+此工作流程僅適用於&#x200B;**影響分析和探索**。 它不會修改結構或欄位群組。 若要變更結構描述結構，請參閱[在UI中建立和編輯結構描述](./resources/schemas.md)。
+
+### 欄位群組中繼資料和篩選 {#field-group-metadata-and-filtering}
+
+**[!UICONTROL Field groups]**&#x200B;索引標籤提供中繼資料和篩選工具，協助您在選取欄位群組之前找到並評估欄位群組。
+
+#### 瀏覽表格和篩選器
+
+欄位群組清查表包含直接在清單檢視中公開中繼資料的其他欄，例如&#x200B;**[!UICONTROL Compatible classes]**，指示欄位群組可以套用至哪些類別。 欄位群組只能根據它們代表的資料行為（例如以記錄為基礎的或時間序列資料），新增到使用列出的相容類別之一的結構描述中。 當欄位群組與所有類別相容時，表格可能會顯示&#x200B;**[!UICONTROL All]**。 **[!UICONTROL Industry tags]**&#x200B;說明分類欄位群組以進行探索。
+
+若要調整清單，請選取篩選圖示（![篩選圖示影像](/help/images/icons/filter.png)）以開啟左側邊欄中的篩選面板。 下圖顯示左側邊欄中開啟的濾鏡面板。
+
+![顯示相容類別、產業標籤和篩選面板的[欄位群組]索引標籤。](../images/ui/explore/field-group-filters.png)
+
+在篩選器面板中，您可以：
+
+- **[!UICONTROL Compatible classes]** — 使用下拉式清單，依類別相容性篩選欄位群組
+- **[!UICONTROL Industry tags]** — 使用核取方塊依一或多個產業類別篩選
+
+瀏覽時，在表格中選取一列以更新資訊邊欄。 資訊邊欄會顯示如相容類別和產業標籤等中繼資料，因此您不需要開啟欄位群組即可檢閱重要詳細資訊。
+
+#### 欄位群組詳細資料中繼資料
+
+開啟欄位群組時，屬性邊欄會顯示與資源相關的其他中繼資料。
+
+屬性邊欄可顯示下列中繼資料：
+
+- **[!UICONTROL Compatible classes]** — 欄位群組可以擴充的類別
+- **[!UICONTROL Required attributes]** — 資料擷取期間欄位群組要求時，必須具有有效值的屬性。 需求取決於資料結構，而具有遺失或無效必要值的記錄無法驗證
+- **[!UICONTROL Labels]** — 標籤未顯示在欄位群組層級。 選取欄位以在&#x200B;**[!UICONTROL Field properties]**&#x200B;邊欄中檢視標籤詳細資訊
+
+此資訊可協助您在使用或修改欄位群組之前瞭解限制和需求。
+
+#### 結構檢視中的標籤
+
+當在畫布中開啟欄位群組時，您可以直接在結構中檢視標籤資訊。 選取設定圖示（![設定圖示。](../../images/icons/settings.png)） 並啟用&#x200B;**[!UICONTROL Show labels on tree]**&#x200B;以在畫布的欄位上顯示標籤指標。
+
+![顯示樹狀結構顯示選項對話方塊的欄位群組畫布反白顯示樹狀結構上的標籤。](../images/ui/explore/show-labels-on-tree.png)
+
+在畫布中選取欄位以檢視&#x200B;**[!UICONTROL Field properties]**&#x200B;邊欄中的標籤詳細資訊，包括套用至該欄位的標籤。
+
+![欄位群組畫布在欄位屬性邊欄的欄位和標籤詳細資料上顯示標籤。](../images/ui/explore/field-group-labels.png)
+
+標籤會依類別（例如身分和敏感標籤）分組，以顯示套用至資料的治理或存取相關限制。
+
+這些指標僅供顯示，不會變更結構描述結構。 如需詳細資訊，請參閱[管理結構描述](../tutorials/labels.md)的資料使用標籤。
 
 ## 後續步驟
 
