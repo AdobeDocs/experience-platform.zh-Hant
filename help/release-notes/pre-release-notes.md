@@ -2,10 +2,10 @@
 title: Experience Platform發行前說明
 description: Adobe Experience Platform最新版本注意事項預覽。
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
+source-git-commit: 9b191535ba96c8791a4528361a1945ae27c6456c
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 17%
+source-wordcount: '1428'
+ht-degree: 21%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 17%
 >- [聯合客群構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/zh-hant/docs/real-time-cdp-collaboration/using/latest)
 
-**發行日期：2026 年 4 月**
+**發行日期： 2026年4月**
 
 Adobe Experience Platform 的新功能及現有功能更新：
 
@@ -34,12 +34,12 @@ Adobe Experience Platform 的新功能及現有功能更新：
 - [查詢服務](#query-service)
 - [Real-Time CDP](#rtcdp)
 - [沙箱](#sandboxes)
-- [細分服務](#segmentation-service)
+- [Segmentation Service](#segmentation-service)
 - [來源](#sources)
 
 ## 目的地 {#destinations}
 
-[!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Experience Platform 的資料。您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
+[!DNL Destinations] 是預先建立的目標平台整合功能，能夠順暢啟用來自 Experience Platform 的資料。 您可以使用目標來啟用已知和未知的資料，以供跨通道行銷活動、電子郵件行銷活動、定向廣告及其他許多使用案例使用。
 
 **全新或已更新的目標**
 
@@ -47,7 +47,7 @@ Adobe Experience Platform 的新功能及現有功能更新：
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [Microsoft Ads客戶符合](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | 依電子郵件地址比對客戶，並在[!DNL Microsoft Advertising Network]中與客戶重新互動，包括搜尋和對象廣告。 將您的[!DNL Microsoft Advertising]帳戶連結至Real-Time CDP，以直接從Experience Platform自動建立和管理客戶比對清單。 若要取得存取權，請聯絡您的Adobe客戶經理。 |
 | [!BADGE Beta]{type=Informative} [Reddit自訂對象](../destinations/catalog/advertising/reddit-custom-audience.md) | 將對象從Experience Platform傳送至[!DNL Reddit Ads]。 連線您的[!DNL Reddit]帳戶、對應身分並啟用對象，以聯絡在[!DNL Reddit]上積極探索其興趣的人。 |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]是所有新[!DNL Amazon Ads]連線的目前目的地。 如果您有現有的[（舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)連線，它將繼續運作，而不會進行任何必要的變更。 [!DNL Amazon Ads v2]連線到[!DNL Ads Data Manager]，後者支援擴充的身分型別、位址相關欄位，以及跨[!DNL Amazon Ads]個產品的資料共用，相較於[&#x200B; （舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)改善鎖定目標和對象符合率。 |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2]是所有新[!DNL Amazon Ads]連線的目前目的地。 如果您有現有的[（舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)連線，它將繼續運作，而不會進行任何必要的變更。 [!DNL Amazon Ads v2]連線到[!DNL Ads Data Manager]，後者支援擴充的身分型別、位址相關欄位，以及跨[!DNL Amazon Ads]個產品的資料共用，相較於[ （舊版） [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md)改善鎖定目標和對象符合率。 |
 | [!DNL Rokt] | 使用[!DNL Rokt]將Experience Platform對象連結到AI驅動的即時決策，透過更精確的目標定位、隱藏和個人化來改善行銷活動績效。 |
 | [Criteo](../destinations/catalog/advertising/criteo.md)的外部對象支援 | 從Segmentation Service以外的來源啟用對象至[!DNL Criteo]，包括自訂上傳對象（從CSV匯入）、相似對象、同盟對象，以及在其他Experience Platform應用程式（例如[!DNL Adobe Journey Optimizer]）中建立的對象。 如需詳細資訊，請參閱[支援的對象](../destinations/catalog/advertising/criteo.md#supported-audiences)區段。 |
 | [Acxiom對象連線](../destinations/catalog/advertising/acxiom-audience-connection.md) | [!DNL Acxiom Audience Connection]目的地現在已可供一般使用。 使用它來增強具有[!DNL Acxiom's Real ID]技術的對象，並將他們啟用至其他平台，包括[!DNL Altice]、[!DNL Ampersand]、[!DNL Comcast]、[!DNL Cox]、[!DNL LG Ads]、[!DNL Spectrum]和[!DNL Viant]。 |
@@ -71,7 +71,7 @@ Adobe Experience Platform 的新功能及現有功能更新：
 
 ## 體驗資料模型 (XDM) {#xdm}
 
-XDM是開放原始碼規格，為引入Experience Platform的資料提供通用結構和定義（結構描述）。 只要遵循XDM標準，所有客戶體驗資料都可整合到共同表現中，以更快、更整合的方式提供深入分析。
+XDM是開放原始碼規格，為引入Experience Platform的資料提供通用結構和定義（結構描述）。 若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞洞察。
 
 **新功能或更新功能**
 
@@ -105,7 +105,7 @@ XDM是開放原始碼規格，為引入Experience Platform的資料提供通用�
 
 | 功能 | 說明 |
 | --- | --- |
-| Real-Time CDP MCP (Beta) | 使用Real-Time CDP MCP將Real-Time CDP帶入AI代理程式和MCP相容的使用者端，讓您直接透過原生LLM體驗與Real-Time CDP工具互動。 藉由將與MCP相容的使用者端（例如Claude、ChatGPT、Claude Code、Codex、Cursor或VS Code）連線至`https://rtcdp-mcp.adobe.io/mcp`，您可以使用自然語言來檢查對象、目的地設定和啟動執行歷史記錄，而不需要撰寫Experience Platform REST API呼叫或導覽多個UI工作流程。 完成瀏覽器式Adobe登入後，您將擁有工具的唯讀存取權，包括： <ul><li>搜尋現有對象</li><li>預覽對象會籍</li><li>列出目的地型別</li><li>列出已設定的帳戶</li><li>列出已設定的目的地</li><li>列出Source連線</li><li>列出目標連線</li><li>檢查啟動執行</li></ul>. 每個請求都需要`imsOrgId`和`sandboxName`引數，以確保動作範圍限定在您的組織和沙箱中。 請注意，此Beta版本不支援寫入作業。 |
+| Real-Time CDP MCP (Beta) | 使用Real-Time CDP MCP將Real-Time CDP帶入AI代理程式和MCP相容的使用者端，讓您直接透過原生LLM體驗與Real-Time CDP工具互動。 將MCP相容的使用者端（例如Claude、ChatGPT、Claude Code、Codex、Cursor或VS Code）連線至Adobe代表提供的端點，您可以使用自然語言來檢查對象、目的地設定和啟用執行歷史記錄，而不需要撰寫Experience Platform REST API呼叫或導覽多個UI工作流程。 完成瀏覽器式Adobe登入後，您將擁有工具的唯讀存取權，包括： <ul><li>搜尋現有對象</li><li>預覽對象會籍</li><li>列出目的地型別</li><li>列出已設定的帳戶</li><li>列出已設定的目的地</li><li>列出Source連線</li><li>列出目標連線</li><li>檢查啟動執行</li></ul>. 每個請求都需要`imsOrgId`和`sandboxName`引數，以確保動作範圍限定在您的組織和沙箱中。 請注意，此Beta版本不支援寫入作業。 |
 
 {style="table-layout:auto"}
 
@@ -113,7 +113,7 @@ XDM是開放原始碼規格，為引入Experience Platform的資料提供通用�
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗應用程式。公司通常會同時執行多個數位體驗應用程式，而且需要滿足這些應用程式的開發、測試和部署需求，同時確保營運合規性。
+Adobe Experience Platform 旨在協助您在全球各地打造更豐富的數位體驗應用程式。 公司通常會同時執行多個數位體驗應用程式，而且需要滿足這些應用程式的開發、測試和部署需求，同時確保營運合規性。
 
 **新功能或更新功能**
 
@@ -125,7 +125,7 @@ Adobe Experience Platform 旨在協助您在全球各地打造更豐富的數位
 
 如需詳細資訊，請閱讀[沙箱總覽](../sandboxes/home.md)。
 
-## 細分服務 {#segmentation-service}
+## Segmentation Service {#segmentation-service}
 
 使用細分服務從您的客戶資料建立對象，並在Experience Platform中管理其完整的生命週期。
 
@@ -141,7 +141,7 @@ Adobe Experience Platform 旨在協助您在全球各地打造更豐富的數位
 
 ## 來源 {#sources}
 
-Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證，並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間，並管理資料攝取輸送量。
+Experience Platform 提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。 這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
 **新的或更新來源**
 
