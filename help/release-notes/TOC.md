@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 發行說明
 breadcrumb-title: Experience Platform 發行說明
 user-guide-description: 尋找 Adobe Experience Platform 的每月發行說明。
-source-git-commit: d7415a9deefac55b8583eb52a7c1f18caf5f3334
+source-git-commit: a1ca63510b60981daceddea70d7f1d89699b215e
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 95%
+source-wordcount: '188'
+ht-degree: 94%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 95%
 * [目前的Experience Platform發行說明](latest/latest.md)
 * [Experience Platform發行前說明](./pre-release-notes.md)
 * 2026 {#2026}
+   * [2026 年 4 月](2026/april-2026.md)
    * [2026年3月](2026/march-2026.md)
    * [2026 年 2 月](2026/february-2026.md)
    * [2026 年 1 月](2026/january-2026.md)
@@ -76,8 +77,8 @@ ht-degree: 95%
    * [2021 年 3 月](2021/march-2021.md)
    * [2021 年 2 月](2021/february-2021.md)
    * [2021 年 1 月](2021/january-2021.md)
-* 2020 {#2020}
-   * [2020 年 12 月 &#x200B;](2020/december-2020.md)
+* 2020年 {#2020}
+   * [2020 年 12 月](2020/december-2020.md)
    * [2020 年 11 月](2020/november-2020.md)
    * [2020 年 10 月](2020/october-2020.md)
    * [2020 年 9 月](2020/september-2020.md)
@@ -90,7 +91,7 @@ ht-degree: 95%
    * [2020 年 2 月](2020/february-2020.md)
    * [2020 年 1 月](2020/january-2020.md)
 * 2019 {#2019}
-   * [2019 年 12 月 &#x200B;](2019/december-2019.md)
+   * [2019 年 12 月](2019/december-2019.md)
    * [2019 年 11 月](2019/november-2019.md)
    * [2019 年 9 月](2019/september-2019.md)
    * [2019 年 7 月](2019/july-2019.md)
