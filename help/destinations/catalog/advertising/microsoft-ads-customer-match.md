@@ -3,13 +3,11 @@ keywords: 廣告； microsoft ads；客戶符合；
 title: Microsoft Ads Customer Match連線
 description: 使用Microsoft Ads客戶比對目的地，依電子郵件地址比對客戶，並在Microsoft Advertising網路中與客戶重新互動，包括搜尋和受眾廣告。
 badge: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 50bd5be385f62a290fefae60c6ed286d893e430a
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 14%
+source-wordcount: '1642'
+ht-degree: 18%
 
 ---
 
@@ -94,7 +92,7 @@ ht-degree: 14%
 
 一旦IT管理員在Azure入口網站核准請求，您就可以返回Experience Platform並使用您的工作帳戶進行驗證。 如需指引，請參閱Microsoft檔案：
 
-* [檢閱管理員同意要求並採取行動](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [檢閱管理員同意請求並採取行動](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
 * [設定管理員同意工作流程](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
 * [設定使用者如何同意應用程式](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
 
@@ -120,32 +118,32 @@ ht-degree: 14%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="Customer ID"
->abstract="您的 Microsoft Advertising 客戶 ID，也是管理員帳戶 ID。這是 Microsoft Advertising 中最上層的識別碼，其下可以有多個廣告商帳戶 (客戶帳戶 ID)。"
->additional-url="https://learn.microsoft.com/zh-tw/advertising/guides/get-started?view=bingads-13#get-ids" text="尋找您的客戶 ID"
+>abstract="您的 Microsoft Advertising 客戶 ID，也是管理員帳戶 ID。 這是 Microsoft Advertising 中最上層的識別碼，其下可以有多個廣告商帳戶 (客戶帳戶 ID)。"
+>additional-url="https://learn.microsoft.com/zh-hant/advertising/guides/get-started?view=bingads-13#get-ids" text="尋找您的客戶 ID"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
 >title="客戶帳戶 ID"
->abstract="您的 Microsoft Advertising 客戶帳戶 ID，也是廣告商帳戶 ID。您的客戶 ID 下之特定廣告商帳戶以此作為識別。"
+>abstract="您的 Microsoft Advertising 客戶帳戶 ID，也是廣告商帳戶 ID。 您的客戶 ID 下之特定廣告商帳戶以此作為識別。"
 >additional-url="https://learn.microsoft.com/zh-tw/advertising/guides/get-started?view=bingads-13#get-ids" text="尋找您的客戶帳戶 ID"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
 >title="會籍有效期限"
->abstract="使用者留存在客戶比對清單中的天數。可接受的值介於 1 至 390 天之間。"
+>abstract="使用者留存在客戶比對清單中的天數。 可接受的值介於 1 至 390 天之間。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_list_availability"
 >title="客戶比對清單可用性"
->abstract="選取客戶比對清單僅供單一廣告商帳戶使用，或是可供管理員帳戶下所有帳戶使用。選取客戶 ID，讓客戶 ID 下的所有廣告商帳戶皆可使用此清單。選取客戶帳戶 ID，僅限特定的客戶帳戶 ID 使用清單。"
+>abstract="選取客戶比對清單僅供單一廣告商帳戶使用，或是可供管理員帳戶下所有帳戶使用。 選取客戶 ID，讓客戶 ID 下的所有廣告商帳戶皆可使用此清單。 選取客戶帳戶 ID，僅限特定的客戶帳戶 ID 使用清單。"
 >additional-url="https://help.ads.microsoft.com/apex/index/3/zh-tw/56727" text="了解更多關於 Microsoft Advertising 中客群清單共用的資訊"
 
 在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL Name]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL Description]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL Customer ID]**：您的[!DNL Microsoft Ads]客戶識別碼(CID)。 如需如何尋找客戶ID的說明，請參閱[Microsoft Advertising檔案](https://learn.microsoft.com/zh-tw/advertising/guides/get-started?view=bingads-13#get-ids)。
-* **[!UICONTROL Customer Account ID]**：您的[!DNL Microsoft Ads]客戶帳戶識別碼。 如需如何尋找客戶帳戶ID的說明，請參閱[Microsoft Advertising檔案](https://learn.microsoft.com/zh-tw/advertising/guides/get-started?view=bingads-13#get-ids)。
+* **[!UICONTROL Customer ID]**：您的[!DNL Microsoft Ads]客戶識別碼(CID)。 如需如何尋找客戶ID的說明，請參閱[Microsoft Advertising檔案](https://learn.microsoft.com/zh-hant/advertising/guides/get-started?view=bingads-13#get-ids)。
+* **[!UICONTROL Customer Account ID]**：您的[!DNL Microsoft Ads]客戶帳戶識別碼。 如需如何尋找客戶帳戶ID的說明，請參閱[Microsoft Advertising檔案](https://learn.microsoft.com/zh-hant/advertising/guides/get-started?view=bingads-13#get-ids)。
 * **[!UICONTROL Membership Duration]**：使用者保留在客戶比對清單中的天數。 可接受的值介於 1 至 390 天之間。
 * **[!UICONTROL Customer Match List Availability]**：選取客戶比對清單的可用性。 在[!DNL Microsoft Advertising]中，客戶ID下可以有多個客戶帳戶ID （廣告商帳戶）。 選取&#x200B;**[!UICONTROL Customer ID (all advertising accounts)]**&#x200B;讓您的客戶ID下的所有廣告商帳戶都能使用清單，或選取&#x200B;**[!UICONTROL Customer Account ID (single advertising account)]**&#x200B;將清單限製為您在上方提供的特定客戶帳戶ID。 如需詳細資訊，請參閱[Microsoft Advertising檔案](https://help.ads.microsoft.com/apex/index/3/zh-tw/56727)。
 
