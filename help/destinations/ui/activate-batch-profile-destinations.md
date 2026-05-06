@@ -166,7 +166,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![影像在批次目的地的啟動流程中，醒目提示「區段之後」評估選項。](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-使用**[!UICONTROL Scheduled]**&#x200B;選項讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
+使用&#x200B;**[!UICONTROL Scheduled]**&#x200B;選項讓啟動工作以固定時間執行。 此選項可確保每天的相同時間匯出Experience Platform設定檔資料。 不過，您匯出的設定檔可能不是最新的，這取決於批次分段工作是否在啟動工作開始之前完成。
 
    ![影像在批次目的地的啟動流程中醒目提示「已排程」選項，並顯示時間選擇器。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -554,7 +554,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 * 如果選取`segmentMembership.seg_namespace.seg_id.status`欄位，匯出的檔案會在初始完整快照中包含&#x200B;**[!UICONTROL Active]**&#x200B;個成員，並在後續的增量匯出中包含&#x200B;**[!UICONTROL Active]**&#x200B;和&#x200B;**[!UICONTROL Expired]**&#x200B;個成員。
 * 如果未選取`segmentMembership.seg_namespace.seg_id.status`欄位，則匯出的檔案在初始完整快照和後續的增量匯出中僅包含&#x200B;**[!UICONTROL Active]**&#x200B;個成員。
 
-深入瞭解檔案型目的地](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)的[設定檔匯出行為。
+深入瞭解檔案型目的地[&#128279;](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations)的設定檔匯出行為。
 
 #### 目前無法選取身分名稱空間進行匯出 {#identity-namespaces-export-limitation}
 
@@ -664,7 +664,7 @@ Adobe建議選取身分名稱空間（例如[!DNL CRM ID]或電子郵件地址�
 >* 這些欄位會用於對象定義中。
 >* 這些欄位會設定為目標目的地的投影屬性。
 >
-> 例如，如果欄位`person.name.firstName`的某些資料使用標籤與目的地的行銷動作衝突，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱 [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations)中的[資料控管。
+> 例如，如果欄位`person.name.firstName`的某些資料使用標籤與目的地的行銷動作衝突，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱 [!DNL Adobe Experience Platform][&#128279;](../../rtcdp/privacy/data-governance-overview.md#destinations)中的資料控管。
 
 在&#x200B;**[!UICONTROL Review]**&#x200B;頁面上，您可以看到選取範圍的摘要。 選取&#x200B;**[!UICONTROL Cancel]**&#x200B;以中斷流程，**[!UICONTROL Back]**&#x200B;以修改您的設定，或&#x200B;**[!UICONTROL Finish]**&#x200B;以確認您的選擇並開始傳送資料到目的地。
 
