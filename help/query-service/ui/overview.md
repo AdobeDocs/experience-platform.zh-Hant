@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務UI指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2471'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 
 1. 選取&#x200B;**[!UICONTROL Create query]**&#x200B;以快速導覽至查詢編輯器以寫入及執行新查詢。
 2. 選取&#x200B;**[!UICONTROL Learn more]**&#x200B;以檢視如何&#x200B;**[!UICONTROL Write queries]**&#x200B;的詳細檔案。
-3. 在&#x200B;**[!UICONTROL Get started]**&#x200B;區段中選取「**[!UICONTROL Discover Data Distiller]**」以開啟Data Distiller概觀，並瞭解可用的功能。
+3. 在&#x200B;**[!UICONTROL Discover Data Distiller]**&#x200B;區段中選取「**[!UICONTROL Get started]**」以開啟Data Distiller概觀，並瞭解可用的功能。
 
 ![含有[建立查詢]、[瞭解更多]和[開始使用]的查詢服務工作區已反白顯示。](../images/ui/overview/main-panels.png)
 
@@ -42,17 +42,29 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 
 ![已反白顯示資料Distiller功能區段的查詢服務工作區。](../images/ui/overview/data-distiller-capabilities.png)
 
+### 加速器 {#accelerators}
+
+查詢工作區中的&#x200B;**[!UICONTROL Accelerators]**&#x200B;索引標籤提供由Adobe編寫的引數化SQL範本的目錄，以供一般分析使用案例使用。 每個加速器都會顯示為表格中的一列，並包含名稱、SQL預覽和中繼資料。
+
+選取加速器以在「查詢編輯器」中將其開啟。 提供引數值並執行查詢以產生結果。 加速器是唯讀的，並由Adobe進行維護以確保一致性。 若要修改邏輯，請使用&#x200B;**[!UICONTROL Create custom template]**&#x200B;建立可編輯的復本。 請參閱[資料Distiller加速器](./accelerators.md)指南，瞭解如何探索、執行、排程及自訂加速器。
+
 ### 推薦的資料蒸餾器加速器 {#recommended-accelerators}
 
-選取快速連結，以導覽至相關的Data Distiller控制面板[!UICONTROL Templates]。 每個加速器都提供強大的工具和視覺效果，協助您分析受眾資料、最佳化細分及增強鎖定目標策略。
+概觀標籤上的&#x200B;**[!UICONTROL Recommended Data Distiller accelerators]**&#x200B;區段可讓您快速存取常用的加速器。 這些卡片會顯示為卡片，並支援兩個工作流程：
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**：您可以從此儀表板分析多個受眾區段之間的受眾交集，以發掘有價值的深入分析並最佳化細分策略。 您也可以匯出您的見解以用於進一步的離線分析或報告用途。
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**：您可以從此儀表板並排比較和對比關鍵對象量度，以詳細分析兩個對象群組。 這些見解可協助您瞭解對象規模、成長情況和其他關鍵績效指標，讓您透過資料導向式決策，來調整細分和最佳化目標定位策略。
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**：使用[!UICONTROL Audience trends]儀表板，透過關鍵量度（例如對象成長、身分計數和單一身分設定檔），以視覺效果呈現您的對象如何隨時間演變。 追蹤趨勢，以發掘對受眾行為的寶貴深入分析，讓您能夠調整細分、增強參與度，並最佳化鎖定目標策略，以提升行銷活動效率。
-追蹤一段時間內的對象量度，以監控對象人數、身分成長和整體參與度的變化。
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**：使用「對象身分重疊」儀表板來分析所選對象中的身分重疊。 視覺效果和表格資料可提供深入分析，以最佳化身分拼接、減少備援並改善細分。 這些見解有助於更有效地鎖定目標、增強個人化並簡化客戶互動。
+- **在儀表板工作區中開啟儀表板連結的加速器**，其中包含預先建立的視覺效果。 這些不需要引數輸入或手動查詢執行。
+- **查詢式加速器**&#x200B;會在「查詢編輯器」中開啟，您可以在其中提供引數值、執行查詢或排程查詢。
 
-![包含反白顯示資料Distiller加速器區段的Query Service工作區。](../images/ui/overview/data-distiller-accelerators.png)
+選取卡片以開啟加速器。 使用此區段來快速存取常見的工作流程，或導覽至&#x200B;**[!UICONTROL Accelerators]**&#x200B;索引標籤以瀏覽完整目錄。 如需加速器的完整清單和詳細指示，請參閱[加速器標籤](./accelerators.md#discovery-paths)或[資料Distiller加速器指南](./accelerators.md)。
+
+下列控制面板連結的加速器可供使用：
+
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**：分析對象區段之間的交集，以識別重疊模式並調整細分。
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**：比較兩個對象之間的關鍵量度，包括大小、構成和隨時間推移的變更。
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**：追蹤對象量度在一段時間內的變化，包括對象人數和身分計數。
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**：檢查對象中身分型別如何重疊，以支援身分拼接和分段準確性。
+
+![查詢服務總覽顯示「資料Distiller加速器」區段及建議的加速器卡。](../images/ui/overview/data-distiller-accelerators.png)
 
 ### 資料蒸餾器範例 {#data-distiller-examples}
 
@@ -72,7 +84,7 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 
 #### 設定日期篩選 {#set-date-filter}
 
-若要對這些視覺效果套用全域日期篩選，請選取篩選圖示(![篩選圖示。](../../images/icons/filter-icon-white.png))並調整&#x200B;**[!UICONTROL Filters]**&#x200B;對話方塊中的日期範圍。 套用此篩選器以針對特定時間範圍量身打造顯示的量度，並提高分析的相關性。
+若要對這些視覺效果套用全域日期篩選，請選取篩選圖示（![篩選圖示。](../../images/icons/filter-icon-white.png)） 並在&#x200B;**[!UICONTROL Filters]**&#x200B;對話方塊中調整日期範圍。 套用此篩選器以針對特定時間範圍量身打造顯示的量度，並提高分析的相關性。
 
 ![查詢服務Workspace中關鍵量度圖表的「篩選器」對話方塊。](../images/ui/overview/filters-dialog.png)
 
@@ -100,7 +112,7 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 
 ![已反白建立查詢的查詢儀表板。](../images/ui/overview/overview-create-query.png)
 
-當您在「查詢編輯器」中輸入時，編輯器會自動完成SQL保留字、表格和表格內的欄位名稱。 當您完成查詢的撰寫時，請選取播放圖示(![播放圖示。](../../images/icons/play.png))以執行查詢。 編輯器下方的&#x200B;**[!UICONTROL Console]**&#x200B;標籤顯示查詢服務目前正在執行的動作，並指出查詢何時已傳回。 **[!UICONTROL Result]**&#x200B;旁的[!UICONTROL Console]索引標籤會顯示查詢結果。 請參閱[查詢編輯器指南](./user-guide.md)，以取得有關使用查詢編輯器的詳細資訊。
+當您在「查詢編輯器」中輸入時，編輯器會自動完成SQL保留字、表格和表格內的欄位名稱。 當您完成撰寫查詢時，請選取播放圖示（![播放圖示。](../../images/icons/play.png)） 以執行查詢。 編輯器下方的&#x200B;**[!UICONTROL Console]**&#x200B;標籤顯示查詢服務目前正在執行的動作，並指出查詢何時已傳回。 [!UICONTROL Console]旁的&#x200B;**[!UICONTROL Result]**&#x200B;索引標籤會顯示查詢結果。 請參閱[查詢編輯器指南](./user-guide.md)，以取得有關使用查詢編輯器的詳細資訊。
 
 ![查詢編輯器工作區。](../images/ui/overview/query-editor.png)
 
@@ -143,7 +155,7 @@ Query Editor支援引數化查詢，可讓您將變數插入到SQL陳述式中�
 | **[!UICONTROL Last run timestamp]** | 執行查詢時的最新時間戳記。 此欄著重顯示查詢是否已根據其目前排程執行。 |
 | **[!UICONTROL Last run status]** | 最近查詢執行的狀態。 三個狀態值為： `successful` `failed`或`in progress`。 |
 
-請參閱檔案，以取得如何透過Query Service UI[監視](./monitor-queries.md)查詢的詳細資訊。
+請參閱檔案，以取得如何透過Query Service UI](./monitor-queries.md)監視[查詢的詳細資訊。
 
 ## 範本 {#browse}
 
@@ -178,7 +190,7 @@ Query Editor支援引數化查詢，可讓您將變數插入到SQL陳述式中�
 
 >[!NOTE]
 >
->選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))從查詢記錄檔的任一列瀏覽至查詢編輯器。 已預先填入查詢，以方便編輯。
+>選取鉛筆圖示（![鉛筆圖示。](/help/images/icons/edit.png)） 從查詢記錄檔的任一列，瀏覽至「查詢編輯器」。 已預先填入查詢，以方便編輯。
 
 請參閱[查詢記錄檔案](./query-logs.md)，以取得關於查詢事件自動產生的記錄檔的詳細資訊。
 

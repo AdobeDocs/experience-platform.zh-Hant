@@ -2,9 +2,9 @@
 title: 查詢範本
 description: 查詢範本是可重複使用的已儲存SQL查詢，可供其他使用者重複使用，以節省時間和精力。 它們可以使用查詢編輯器或查詢服務API建立，並可用於所有Experience Platform資料集。
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform查詢服務可讓您以查詢範本的形式儲存和�
 
 ## 先決條件
 
-您必須啟用[!UICONTROL 管理查詢]許可權，才能在Experience Platform UI中存取查詢編輯器並檢視查詢儀表板。 許可權是透過Adobe [Admin Console](https://adminconsole.adobe.com/)啟用。 如果您沒有啟用此許可權的管理員許可權，請聯絡貴組織的管理員。 請參閱存取控制檔案以取得[透過Admin Console新增許可權的完整指示](../../access-control/home.md)。
+您必須啟用[!UICONTROL Manage queries]許可權才能存取查詢編輯器，並在Experience Platform UI中檢視查詢儀表板。 許可權是透過Adobe [Admin Console](https://adminconsole.adobe.com/)啟用。 如果您沒有啟用此許可權的管理員許可權，請聯絡貴組織的管理員。 請參閱存取控制檔案以取得[透過Admin Console新增許可權的完整指示](../../access-control/home.md)。
 
 ## 建立查詢範本
 
@@ -25,7 +25,15 @@ Adobe Experience Platform查詢服務可讓您以查詢範本的形式儲存和�
 
 ### 使用查詢編輯器來編寫查詢並將其另存為範本
 
-請參閱檔案，瞭解如何使用查詢編輯器[寫入](./user-guide.md#query-authoring)和[儲存查詢](./user-guide.md#saving-queries)的說明。 當您命名並儲存查詢後，即可從[!UICONTROL 範本]索引標籤將其當做查詢範本重複使用。
+請參閱檔案，瞭解如何使用查詢編輯器[寫入](./user-guide.md#query-authoring)和[儲存查詢](./user-guide.md#saving-queries)的說明。 當您命名並儲存查詢後，即可從[!UICONTROL Templates]索引標籤將其重新用作查詢範本。
+
+### 從Data Distiller加速器建立範本 {#create-from-accelerator}
+
+資料Distiller加速器是唯讀的。 若要修改加速器，請在「查詢編輯器」中建立可編輯的範本。
+
+開啟加速器，然後選取&#x200B;**[!UICONTROL Create custom template]**&#x200B;以複製SQL。 儲存範本以將其新增至「**[!UICONTROL Templates]**」索引標籤。 複製的範本完全可以編輯，而且可以根據需要執行、排程或修改。
+
+請參閱[資料Distiller加速器](./accelerators.md#create-custom-template)指南，以取得詳細指示。
 
 >[!TIP]
 >
@@ -33,7 +41,7 @@ Adobe Experience Platform查詢服務可讓您以查詢範本的形式儲存和�
 
 ## 瀏覽查詢範本 {#browse}
 
-從Experience Platform UI的查詢工作區中，選取&#x200B;**[!UICONTROL 範本]**&#x200B;以顯示可用的已儲存查詢清單。
+從Experience Platform UI的查詢工作區中，選取&#x200B;**[!UICONTROL Templates]**&#x200B;以顯示可用的已儲存查詢清單。
 
 ![已反白顯示[範本]索引標籤的查詢工作區。](../images/ui/query-templates/query-templates.png)
 
@@ -43,10 +51,10 @@ Adobe Experience Platform查詢服務可讓您以查詢範本的形式儲存和�
 
 您可以從詳細資訊面板執行下列動作：
 
-* 選取&#x200B;**[!UICONTROL 以CTAS身分執行]**&#x200B;以從現有資料表選取資料來建立新資料表。 此選項僅在您有SELECT查詢時可用。
-* 選取&#x200B;**[!UICONTROL 新增排程]**&#x200B;以開始編輯查詢範本的排程。
-* 選取「**[!UICONTROL 檢視排程]**」以瀏覽至[查詢編輯器]的[!UICONTROL 排程]標籤。 此檢視包含與查詢相關聯的任何排程資訊。
-* 選取&#x200B;**[!UICONTROL 刪除查詢]**&#x200B;以刪除範本。
+* 選取&#x200B;**[!UICONTROL Run as CTAS]**&#x200B;以從現有資料表中選取資料來建立新資料表。 此選項僅在您有SELECT查詢時可用。
+* 選取&#x200B;**[!UICONTROL Add schedule]**&#x200B;以開始編輯查詢範本的排程。
+* 選取「**[!UICONTROL View schedule]**」以導覽至查詢編輯器的「[!UICONTROL Schedules]」標籤。 此檢視包含與查詢相關聯的任何排程資訊。
+* 選取&#x200B;**[!UICONTROL Delete query]**&#x200B;以刪除範本。
 * 選取範本名稱，以導覽至「查詢編輯器」，其中會預先填入SQL以供編輯。
 
 ### 使用查詢服務API建立範本
