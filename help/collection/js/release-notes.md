@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
+source-git-commit: a8a466778b74e6f64d258f759a36e1a4361f0a6b
 workflow-type: tm+mt
-source-wordcount: '2963'
+source-wordcount: '2988'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 2%
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.33.1版 — 2026年5月7日
+
+- 修正從SDK套件組合中排除必要元件（例如內容）並防止傳送事件的問題。
 
 ## 2.33.0版 — 2026年5月7日
 
@@ -306,7 +310,7 @@ ht-degree: 2%
 
 **新功能**
 
-- 您現在可以在行動應用程式和行動網站內容之間，而且跨網域共用訪客ID，更準確地提供個人化體驗。 如需瞭解詳細資訊，請參閱資料彙集[&#128279;](../identity/overview.md)中的身分。
+- 您現在可以在行動應用程式和行動網站內容之間，而且跨網域共用訪客ID，更準確地提供個人化體驗。 如需瞭解詳細資訊，請參閱資料彙集](../identity/overview.md)中的[身分。
 - 您現在可以將[!DNL Adobe Target]中的主張陣列轉譯或執行為單頁應用程式，而不需要增加分析量度。 這樣可以減少報告錯誤，並提升分析準確度。
 - 已新增其他資訊至`getLibraryInfo`命令，包括可用的命令和執行個體的最終組態。
 
