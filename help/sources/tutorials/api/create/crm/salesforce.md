@@ -2,18 +2,18 @@
 title: 使用流量服務API連線Salesforce至Experience Platform
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Salesforce帳戶。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
+source-git-commit: 11e9e1a25a45f4011f15b1e28753a98d4158012c
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '952'
 ht-degree: 2%
 
 ---
 
-# 使用[!DNL Salesforce] API連線[!DNL Flow Service]至Experience Platform
+# 使用[!DNL Flow Service] API連線[!DNL Salesforce]至Experience Platform
 
-閱讀本指南，瞭解如何使用[!DNL Salesforce]API[[!DNL Flow Service] 將您的](https://developer.adobe.com/experience-platform-apis/references/flow-service/)來源帳戶連結至Adobe Experience Platform。
+閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)將您的[!DNL Salesforce]來源帳戶連結至Adobe Experience Platform。
 
-## 快速入門
+## 開始使用
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
@@ -30,30 +30,7 @@ ht-degree: 2%
 
 ### 收集必要的認證
 
->[!WARNING]
->
->[!DNL Salesforce]來源的基本驗證將在2026年1月被取代。 您必須移至OAuth 2使用者端認證驗證，才能繼續使用該來源，並將資料從您的[!DNL Salesforce]帳戶擷取至Experience Platform。
-
-[!DNL Salesforce]來源支援基本驗證和OAuth2使用者端認證。
-
->[!BEGINTABS]
-
->[!TAB 基本驗證]
-
-若要使用基本驗證將您的[!DNL Salesforce]帳戶連線到[!DNL Flow Service]，請提供下列認證的值：
-
-| 認證 | 說明 |
-| --- | --- |
-| `environmentUrl` | [!DNL Salesforce]來源執行個體的網址。 `environmentUrl`的格式為`https://[domain].my.salesforce.com`。 |
-| `username` | [!DNL Salesforce]使用者帳戶的使用者名稱。 |
-| `password` | [!DNL Salesforce]使用者帳戶的密碼。 |
-| `securityToken` | [!DNL Salesforce]使用者帳戶的安全性權杖。 |
-| `apiVersion` | 選用性)您正在使用的[!DNL Salesforce]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，Experience Platform將自動使用最新可用版本。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Salesforce]的連線規格識別碼為： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
-
-如需開始使用的詳細資訊，請瀏覽[此Salesforce檔案](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)。
-
->[!TAB OAuth 2使用者端認證]
+[!DNL Salesforce]來源支援透過OAuth2使用者端認證進行驗證。
 
 若要使用OAuth 2使用者端認證將您的[!DNL Salesforce]帳戶連線至[!DNL Flow Service]，請提供下列認證的值：
 
@@ -66,11 +43,9 @@ ht-degree: 2%
 | `includeDeletedObjects` | 布林值，用來判斷是否包含軟性刪除的記錄。 若設為True，軟刪除的記錄可包含在您的[!DNL Salesforce]查詢中，並從您的帳戶擷取到Experience Platform中。 如果您未指定設定，此值預設為`false`。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Salesforce]的連線規格識別碼為： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
 
-如需針對[!DNL Salesforce]使用OAuth的詳細資訊，請參閱OAuth授權流程[[!DNL Salesforce] 的](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)指南。
+如需針對[!DNL Salesforce]使用OAuth的詳細資訊，請參閱OAuth授權流程](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)的[[!DNL Salesforce] 指南。
 
->[!ENDTABS]
-
-### 在[!DNL Salesforce]上的Experience Platform中為[!DNL Azure]建立基底連線
+### 在[!DNL Azure]上的Experience Platform中為[!DNL Salesforce]建立基底連線
 
 基本連線會保留來源與Experience Platform之間的資訊，包括來源的驗證認證、連線的目前狀態，以及唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
@@ -82,67 +57,7 @@ ht-degree: 2%
 POST /connections
 ```
 
->[!BEGINTABS]
-
->[!TAB 基本驗證]
-
-+++要求
-
-下列要求使用基本驗證建立[!DNL Salesforce]的基本連線：
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "ACME Salesforce account",
-      "description": "Salesforce account using basic authentication",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params":
-            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-            "username": "acme-salesforce",
-            "password": "xxxx",
-            "securityToken": "xxxx"
-        }
-      },
-      "connectionSpec": {
-          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-          "version": "1.0"
-      }
-  }'
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `auth.params.environmentUrl` | [!DNL Salesforce]執行個體的URL。 |
-| `auth.params.username` | 與您的[!DNL Salesforce]帳戶相關聯的使用者名稱。 |
-| `auth.params.password` | 與您的[!DNL Salesforce]帳戶關聯的密碼。 |
-| `auth.params.securityToken` | 與您的[!DNL Salesforce]帳戶關聯的安全性權杖。 |
-| `connectionSpec.id` | [!DNL Salesforce]連線規格識別碼： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
-
-+++
-
-+++回應
-
-成功的回應會傳回您新建立的基本連線及其唯一ID。
-
-```json
-{
-    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
-    "etag": "\"1700df7b-0000-0200-0000-5e3b424f0000\""
-}
-```
-
-+++
-
->[!TAB OAuth 2使用者端認證]
-
-+++要求
++++選取以檢視請求
 
 以下要求使用OAuth 2使用者端認證為[!DNL Salesforce]建立基礎連線：
 
@@ -186,7 +101,7 @@ curl -X POST \
 +++
 
 
-+++回應
++++選取以檢視回應
 
 成功的回應會傳回您新建立的基本連線及其唯一ID。
 
@@ -198,8 +113,6 @@ curl -X POST \
 ```
 
 +++
-
->[!ENDTABS]
 
 ## 將[!DNL Salesforce]連線到Amazon Web Services (AWS)上的Experience Platform {#aws}
 
@@ -398,7 +311,7 @@ curl -X GET \
 
 ## 後續步驟
 
-依照此教學課程，您已使用[!DNL Salesforce] API建立[!DNL Flow Service]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
+依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Salesforce]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
 * [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
 * [使用 [!DNL Flow Service] API建立資料流以將CRM資料帶入Experience Platform](../../collect/crm.md)

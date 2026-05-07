@@ -2,10 +2,10 @@
 title: 使用流量服務API建立Salesforce Service Cloud Source連線
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至Salesforce Service Cloud。
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: b9a9b00114b3c1159a14b7e39484d250fa7563ba
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 3%
+source-wordcount: '404'
+ht-degree: 5%
 
 ---
 
@@ -26,44 +26,7 @@ ht-degree: 3%
 
 ### 收集必要的認證
 
->[!WARNING]
->
->[!DNL Salesforce Service Cloud]來源的基本驗證將在2026年1月被取代。 您必須移至OAuth 2使用者端認證驗證，才能繼續使用該來源，並將資料從您的[!DNL Salesforce Service Cloud]帳戶擷取至Experience Platform。
-
-[!DNL Salesforce Service Cloud]來源支援基本驗證和OAuth2使用者端認證。
-
->[!BEGINTABS]
-
->[!TAB 基本驗證]
-
-若要使用基本驗證將您的[!DNL Salesforce Service Cloud]帳戶連線到[!DNL Flow Service]，請提供下列認證的值：
-
-| 認證 | 說明 |
-| --- | --- |
-| `environmentUrl` | [!DNL Salesforce Service Cloud]來源執行個體的網址。 |
-| `username` | [!DNL Salesforce Service Cloud]使用者帳戶的使用者名稱。 |
-| `password` | [!DNL Salesforce Service Cloud]使用者帳戶的密碼。 |
-| `securityToken` | [!DNL Salesforce Service Cloud]使用者帳戶的安全性權杖。 |
-| `apiVersion` | （選用）您正在使用的[!DNL Salesforce Service Cloud]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，Experience Platform會自動使用最新可用版本。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Salesforce Service Cloud]的連線規格識別碼為： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
-
-如需開始使用的詳細資訊，請瀏覽[此Salesforce檔案](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)。
-
->[!TAB OAuth 2使用者端認證]
-
-若要使用OAuth 2使用者端認證將您的[!DNL Salesforce Service Cloud]帳戶連線至[!DNL Flow Service]，請提供下列認證的值：
-
-| 認證 | 說明 |
-| --- | --- |
-| `environmentUrl` | [!DNL Salesforce Service Cloud]來源執行個體的網址。 |
-| `clientId` | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce Service Cloud]識別您的應用程式，以代表您的帳戶運作。 |
-| `clientSecret` | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce Service Cloud]識別您的應用程式，以代表您的帳戶運作。 |
-| `apiVersion` | 您正在使用的[!DNL Salesforce Service Cloud]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，Experience Platform會自動使用最新可用版本。 此值是OAuth2使用者端認證驗證的必要專案。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Salesforce Service Cloud]的連線規格識別碼為： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`。 |
-
-如需針對[!DNL Salesforce Service Cloud]使用OAuth的詳細資訊，請參閱OAuth授權流程[&#128279;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5)的[!DNL Salesforce Service Cloud] 指南。
-
->[!ENDTABS]
+閱讀[驗證指南](../../../../connectors/customer-success/salesforce-service-cloud.md#credentials)，以取得擷取認證的詳細資訊。
 
 ### 使用Experience Platform API
 
@@ -82,49 +45,6 @@ POST /connections
 ```
 
 **要求**
-
->[!BEGINTABS]
-
->[!TAB 基本驗證]
-
-下列要求使用基本驗證建立[!DNL Salesforce Service Cloud]的基本連線：
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "Salesforce Service Cloud account for ACME data (basic auth)",
-      "description": "Salesforce Service Cloud account for ACME data (basic auth)",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params": {
-            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-            "username": "acme-salesforce-service-cloud",
-            "password": "xxxx",
-            "securityToken": "xxxx"
-        }
-      },
-      "connectionSpec": {
-          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
-          "version": "1.0"
-      }
-  }'
-```
-
-| 參數 | 說明 |
-| ---| --- |
-| `auth.params.environmentUrl` | [!DNL Salesforce Service Cloud]執行個體的URL。 |
-| `auth.params.username` | 與您的[!DNL Salesforce Service Cloud]帳戶相關聯的使用者名稱。 |
-| `auth.params.password` | 與您的[!DNL Salesforce Service Cloud]帳戶關聯的密碼。 |
-| `auth.params.securityToken` | 與您的[!DNL Salesforce Service Cloud]帳戶關聯的安全性權杖。 |
-| `connectionSpec.id` | [!DNL Salesforce Service Cloud]連線規格識別碼： `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
-
->[!TAB OAuth2使用者端認證]
 
 以下要求使用OAuth 2使用者端認證為[!DNL Salesforce Service Cloud]建立基礎連線：
 
@@ -162,8 +82,6 @@ curl -X POST \
 | `auth.params.clientSecret` | 與您的[!DNL Salesforce Service Cloud]帳戶相關聯的使用者端密碼。 |
 | `auth.params.apiVersion` | 您正在使用的[!DNL Salesforce Service Cloud]執行個體的REST API版本。 |
 | `connectionSpec.id` | [!DNL Salesforce Service Cloud]連線規格識別碼： `cb66ab34-8619-49cb-96d1-39b37ede86ea`。 |
-
->[!ENDTABS]
 
 **回應**
 

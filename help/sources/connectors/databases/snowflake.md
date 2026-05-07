@@ -3,9 +3,9 @@ title: Snowflake Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將Snowflake連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: fdc66601db3e8ae8fb55503b9e32d88ed48381cf
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1705'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如: `myorg-myaccount.snowflakecomputing.com`。閱讀[擷取 [!DNL Snowflake] 帳戶識別碼](#retrieve-your-account-identifier)的相關章節以取得其他指引。 如需詳細資訊，請參閱[[!DNL Snowflake] 文件](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)，以瞭解詳情。 |
+| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如: `myorg-myaccount.snowflakecomputing.com`。 閱讀[擷取 [!DNL Snowflake] 帳戶識別碼](#retrieve-your-account-identifier)的相關章節以取得其他指引。 如需詳細資訊，請參閱[[!DNL Snowflake] 文件](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)，以瞭解詳情。 |
 | `warehouse` | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料帶到Experience Platform時必須個別存取。 |
 | `database` | [!DNL Snowflake]資料庫包含您要帶入Experience Platform的資料。 |
 | `username` | [!DNL Snowflake]帳戶的使用者名稱。 |
@@ -56,9 +56,9 @@ ht-degree: 2%
 
 | 認證 | 說明 |
 | --- | --- |
-| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如: `myorg-myaccount.snowflakecomputing.com`。閱讀[擷取 [!DNL Snowflake] 帳戶識別碼](#retrieve-your-account-identifier)的相關章節以取得其他指引。 如需詳細資訊，請參閱[[!DNL Snowflake] 文件](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)，以瞭解詳情。 |
+| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如: `myorg-myaccount.snowflakecomputing.com`。 閱讀[擷取 [!DNL Snowflake] 帳戶識別碼](#retrieve-your-account-identifier)的相關章節以取得其他指引。 如需詳細資訊，請參閱[[!DNL Snowflake] 文件](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)，以瞭解詳情。 |
 | `username` | 您[!DNL Snowflake]帳戶的使用者名稱。 |
-| `privateKey` | 您[!DNL Base64-]帳戶的[!DNL Snowflake]編碼私密金鑰。 您可以產生加密或未加密的私密金鑰。 如果您使用加密的私密金鑰，則在對Experience Platform進行驗證時，也必須提供私密金鑰複雜密碼。 如需詳細資訊，請閱讀[擷取您的私密金鑰](#retrieve-your-private-key)的相關章節。 |
+| `privateKey` | 您[!DNL Snowflake]帳戶的[!DNL Base64-]編碼私密金鑰。 您可以產生加密或未加密的私密金鑰。 如果您使用加密的私密金鑰，則在對Experience Platform進行驗證時，也必須提供私密金鑰複雜密碼。 如需詳細資訊，請閱讀[擷取您的私密金鑰](#retrieve-your-private-key)的相關章節。 |
 | `privateKeyPassphrase` | 私密金鑰複雜密碼是附加的安全性層級，在使用加密的私密金鑰進行驗證時必須使用此層級。 如果您使用未加密的私密金鑰，則不需要提供複雜密碼。 |
 | `port` | [!DNL Snowflake]透過網際網路連線到伺服器時使用的連線埠號碼。 |
 | `database` | 包含您要擷取至Experience Platform之資料的[!DNL Snowflake]資料庫。 |
@@ -72,7 +72,11 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->[!DNL Snowflake]來源的基本驗證（或帳戶金鑰驗證）將於2025年11月被取代。 您必須移至金鑰組型驗證，才能繼續使用該來源，並將資料庫中的資料擷取至Experience Platform。 如需有關棄用的詳細資訊，請閱讀[[!DNL Snowflake] 減少認證洩露風險的最佳實務指南](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)。
+>[!DNL Snowflake]來源的基本驗證（也稱為帳戶金鑰驗證）在Azure區域中&#x200B;**與Experience Platform的連線已完全淘汰** — 您必須對所有新的和現有的Azure型連線使用金鑰組驗證。
+>
+>對於連線到&#x200B;**AWS地區**&#x200B;中Experience Platform的[!DNL Snowflake]來源，目前仍支援基本驗證，但正在棄用，未來將移除基本驗證。 強烈建議您儘快移轉至金鑰組驗證，以確保持續連線。
+>
+>如需有關棄用和指引的詳細資訊，請參閱[[!DNL Snowflake] 減少認證洩露風險的最佳實務指南](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/)。
 
 | 認證 | 說明 |
 | --- | --- |
@@ -90,7 +94,7 @@ ht-degree: 2%
 
 | 認證 | 說明 |
 | --- | --- |
-| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如: `http://myorg-myaccount.snowflakecomputing.com/`。閱讀[擷取 [!DNL Snowflake] 帳戶識別碼](#etrieve-your-account-identifier)的指南，以取得其他指引。 如需詳細資訊，請參閱[[!DNL Snowflake] 文件](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)，以瞭解詳情。 |
+| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如: `http://myorg-myaccount.snowflakecomputing.com/`。 閱讀[擷取 [!DNL Snowflake] 帳戶識別碼](#etrieve-your-account-identifier)的指南，以取得其他指引。 如需詳細資訊，請參閱[[!DNL Snowflake] 文件](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)，以瞭解詳情。 |
 | `username` | 您[!DNL Snowflake]帳戶的使用者名稱。 |
 | `privateKey` | 您的[!DNL Snowflake]使用者的私密金鑰，以base64編碼為單行，沒有標頭或分行符號。 若要準備它，請複製PEM檔案的內容、移除`BEGIN`/`END`行及所有分行符號，然後以base64編碼結果。 如需詳細資訊，請閱讀[擷取您的私密金鑰](#retrieve-your-private-key)的相關章節。 **注意：** AWS連線目前不支援加密的私密金鑰。 |
 | `port` | [!DNL Snowflake]透過網際網路連線到伺服器時使用的連線埠號碼。 |
@@ -163,7 +167,7 @@ Experience Platform要求私密金鑰必須是[!DNL Base64]編碼，並在連線
 
 ### 驗證設定
 
-在Experience Platform中建立[!DNL Snowflake]來源連線之前，您必須確定使用者的&#x200B;**[!DNL Default Role]**&#x200B;和&#x200B;**[!DNL Default Warehouse]**&#x200B;符合您在Experience Platform中提供的值。 您可以使用[!DNL Snowflake] SQL命令在`DESCRIBE USER {USERNAME}` UI中驗證這些設定。
+在Experience Platform中建立[!DNL Snowflake]來源連線之前，您必須確定使用者的&#x200B;**[!DNL Default Role]**&#x200B;和&#x200B;**[!DNL Default Warehouse]**&#x200B;符合您在Experience Platform中提供的值。 您可以使用`DESCRIBE USER {USERNAME}` SQL命令在[!DNL Snowflake] UI中驗證這些設定。
 
 或者，您可以按照以下步驟驗證您的設定：
 
