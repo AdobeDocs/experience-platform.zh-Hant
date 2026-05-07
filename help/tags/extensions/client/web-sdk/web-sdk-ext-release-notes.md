@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
+source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
 workflow-type: tm+mt
-source-wordcount: '3230'
-ht-degree: 20%
+source-wordcount: '3320'
+ht-degree: 19%
 
 ---
 
@@ -13,6 +13,13 @@ ht-degree: 20%
 # Web SDK標籤擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[Adobe Experience Platform Web SDK發行說明](/help/collection/js/release-notes.md)。
+
+## 2.35.0版 — 2026年5月7日
+
+- 包含[2.33.0](/help/collection/js/release-notes.md)版的Adobe Experience Platform Web SDK。
+- 已移除擴充功能設定頁面中Advertising和推播通知區段的測試版標幟。
+- 修正推播通知的設定在編輯前顯示錯誤的問題。
+- 修正連續更新變數動作會覆寫Analytics事件的問題。
 
 ## 2.34.2版 — 2026年3月23日
 
@@ -22,8 +29,8 @@ ht-degree: 20%
 ## 2.34.1版 — 2026年2月11日
 
 - 包含[2.31.1](/help/collection/js/release-notes.md)版的Adobe Experience Platform Web SDK。
-- 修正在[傳送事件](configure/advertising.md)動作中無法編輯[Adobe Advertising組態設定](actions/send-event.md)的問題。
-- 已新增在`edge.adobedc.net`無法使用時，為[Edge網域](configure/general.md)組態設定的`tenant-id`遞補內容。
+- 修正在[傳送事件](actions/send-event.md)動作中無法編輯[Adobe Advertising組態設定](configure/advertising.md)的問題。
+- 已新增在`tenant-id`無法使用時，為[Edge網域](configure/general.md)組態設定的`edge.adobedc.net`遞補內容。
 
 ## 2.34.0版 — 2026年2月9日
 
@@ -194,15 +201,15 @@ ht-degree: 20%
 **新功能**
 
 - 新增擴充功能組態中[`Streaming Media Collection`](configure/streaming-media.md)元件的支援。
-- 已新增[`Send Media Event`](actions/send-media-event.md)功能的[!DNL Streaming Media Collection]動作。
-- 已新增[`Media: Quality of Experience`](data-element-types.md#quality-experience)功能的[!DNL Streaming Media Collection]資料元素。
+- 已新增[!DNL Streaming Media Collection]功能的[`Send Media Event`](actions/send-media-event.md)動作。
+- 已新增[!DNL Streaming Media Collection]功能的[`Media: Quality of Experience`](data-element-types.md#quality-experience)資料元素。
 
 包含2.20.0版的Adobe Experience Platform Web SDK。
 
 **修正和改良**
 
 - 修正搜尋[更新變數](actions/update-variable.md)動作中的資料元素時發生的錯誤。
-- 已從建議用於[!UICONTROL Media]動作的事件型別中移除`sendEvent`個事件型別。
+- 已從建議用於`sendEvent`動作的事件型別中移除[!UICONTROL Media]個事件型別。
 
 ## 2.22.0版 — 2024年5月3日
 
@@ -281,7 +288,7 @@ ht-degree: 20%
 
 - 包含2.16.0版的Adobe Experience Platform Web SDK。
 - 已新增對[資料流組態覆寫](/help/datastreams/overrides.md)的支援。
-- 在`datasetId`命令的`sendEvent`選項中新增淘汰通知。
+- 在`sendEvent`命令的`datasetId`選項中新增淘汰通知。
 
 **修正和改良**
 
@@ -436,17 +443,17 @@ ht-degree: 20%
 
 ## 2.2.0版 — 2020年10月1日
 
-- 客戶嘗試以沙箱結構描述建立 XDM 物件時，遇到驗證問題。呼叫Experience Platform的API現在可感知環境，因此使用者只會看到他們有權編輯的結構描述。
+- 客戶嘗試以沙箱結構描述建立 XDM 物件時，遇到驗證問題。 呼叫Experience Platform的API現在可感知環境，因此使用者只會看到他們有權編輯的結構描述。
 - 使用`identityMap`資料元素時，下拉式清單現在會預先填入名稱空間，因此您不必手動填寫。
-- `xdmObject` 資料元素的 UI 已改版。在新的 UI 中，您可以看到哪些欄位已填入，不必在物件中輸入每個項目。
+- `xdmObject` 資料元素的 UI 已改版。 在新的 UI 中，您可以看到哪些欄位已填入，不必在物件中輸入每個項目。
 
 ## 2.1.1版 — 2020年8月26日
 
-- 修正 XDM 物件檢視中，Adobe Experience Platform 沙箱無法正常顯示的問題。使用此版本的擴充功能時，如果清單未顯示預期的沙箱，使用者應向其 Adobe Experience Platform 管理員確認是否已正確設定存取權限。
+- 修正 XDM 物件檢視中，Adobe Experience Platform 沙箱無法正常顯示的問題。 使用此版本的擴充功能時，如果清單未顯示預期的沙箱，使用者應向其 Adobe Experience Platform 管理員確認是否已正確設定存取權限。
 
 ## 2.1.0版 — 2020年8月5日
 
-- 重大變更：移除 `syncIdentity` 動作，並改為支援在 `sendEvent` 動作中傳遞這些 ID。升級擴充功能前，請使用此動作停用任何現有規則。
+- 重大變更：移除 `syncIdentity` 動作，並改為支援在 `sendEvent` 動作中傳遞這些 ID。 升級擴充功能前，請使用此動作停用任何現有規則。
 - 已更新至Alloy 2.1.0版。
 - 在 `setConsent` 動作中支援 IAB 2.0 同意標準。
 - 支援在 `sendEvent` 動作中覆寫資料集 ID。
@@ -461,17 +468,17 @@ ht-degree: 20%
 ## 0.1.2版 — 2020年5月4日
 
 - 將 `configId` 重新命名為 `edgeConfigId`。
-- 將 `viewStart` 重新命名為 `renderDecisions`，預設為 false。如果設為 true，系統會擷取個人化產品建議並自動轉譯。
+- 將 `viewStart` 重新命名為 `renderDecisions`，預設為 false。 如果設為 true，系統會擷取個人化產品建議並自動轉譯。
 - `Get Decisions` 相關變更：
    - 移除 `getDecisions` 命令。
-   - `sendEvent` 命令新增「`scopes`」選項。決策會以 `sendEvent` 所解析的 Promise 傳回。
-   - 新增內建 `__view__` 範圍，系統會傳回頁面/檢視範圍產品建議（例如Target中的VEC選件）。
-唯有`sendEvent`設為false，決策才會從`renderDecisions`命令傳回。
+   - `sendEvent` 命令新增「`scopes`」選項。 決策會以 `sendEvent` 所解析的 Promise 傳回。
+   - 新增內建 `__view__` 範圍，系統會傳回頁面/檢視範圍產品建議 （例如Target中的VEC選件）。
+唯有`renderDecisions`設為false，決策才會從`sendEvent`命令傳回。
    - 新增 `Decisions Received` 事件，決策可供使用時就會觸發。
 - 整合單一伺服器呼叫中的多個個人化通知。
 - 修正每次參考資料元素時，「事件合併 ID」都會重設的問題。
 - 將 `setCustomerIds` 動作重新命名為 `syncIdentity`。
-- 新增 `getIdentity` 命令。目前僅能透過自訂程式碼使用。
+- 新增 `getIdentity` 命令。 目前僅能透過自訂程式碼使用。
 - 使用`_satellite`啟用除錯功能後，現在會在Adobe Experience Platform Web SDK中啟用除錯功能。
 - 新增在 XDM 物件中輸入值的相關支援：布林值、數字和小數。
 
@@ -498,7 +505,7 @@ ht-degree: 20%
 
 ## 0.0.3版 — 2019年11月25日
 
-- 「傳送事件」動作新增「合併 ID」和「類型」欄位。將「合併 ID」對應至 XDM 結構的 `xdm.eventMergeID`，並將「類型」對應到 XDM 結構的 `xdm.eventType`。
+- 「傳送事件」動作新增「合併 ID」和「類型」欄位。 將「合併 ID」對應至 XDM 結構的 `xdm.eventMergeID`，並將「類型」對應到 XDM 結構的 `xdm.eventType`。
 
 ## 0.0.2版 — 2019年11月18日
 

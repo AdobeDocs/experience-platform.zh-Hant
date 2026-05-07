@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Experience Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
 workflow-type: tm+mt
-source-wordcount: '2752'
+source-wordcount: '2963'
 ht-degree: 2%
 
 ---
@@ -16,10 +16,20 @@ ht-degree: 2%
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
 
+## 2.33.0版 — 2026年5月7日
+
+- 修正橋接Media Analytics adBreak、Chapter和QoE事件會傳回API錯誤的問題。
+- 設定Adobe Advertising時，已將Advertising `stitchId`新增至傳出體驗事件。
+- 藉由移除ID目的地處理上的區塊，改善`sendEvent`命令的效能。
+- 修正即使未設定廣告，廣告身分解析仍載入第三方指令碼和iframe的問題。
+- 新增從雜湊讀取`adobe_mc`身分傳輸引數的功能（先前僅在查詢引數中）。
+- 修正URL編碼多次時無法讀取`adobe_mc`的問題。
+- 在所有傳出的Brand Concierge事件中包含XDM。
+
 ## 2.32.0版 — 2026年3月23日
 
 - 共用核心公用程式現在會以獨立npm套件([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core))發佈，以供擴充功能和整合使用。
-- 當`xdm.placeContext.ianaTimezone`包含在`placeContext`設定變數中時，現在會在XDM欄位[`context`](/help/collection/js/commands/configure/context.md)中包含IANA時區。
+- 當`placeContext`包含在[`context`](/help/collection/js/commands/configure/context.md)設定變數中時，現在會在XDM欄位`xdm.placeContext.ianaTimezone`中包含IANA時區。
 - 品牌接待：修正[`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md)停用時的工作階段ID問題。
 
 ## 2.31.1版 — 2026年2月11日
@@ -82,7 +92,7 @@ ht-degree: 2%
 
 **已知問題**
 
-- 使用[的](/help/collection/js/install/create-custom-build.md)自訂組建`npx @adobe/alloy`程式目前在2.28.0版中無法如預期運作。所有元件都包含在產生的組建中，無論選取的模組為何。 此問題不會影響CDN上可用的標準JavaScript檔案。 正在進行修正。
+- 使用`npx @adobe/alloy`的[自訂組建](/help/collection/js/install/create-custom-build.md)程式目前在2.28.0版中無法如預期運作。 所有元件都包含在產生的組建中，無論選取的模組為何。 此問題不會影響CDN上可用的標準JavaScript檔案。 正在進行修正。
 
 ## 2.27.0版 — 2025年5月20日
 
@@ -98,11 +108,11 @@ ht-degree: 2%
 **新功能**
 
 - 您現在可以使用Web SDK NPM套件建立自訂Web SDK組建，並僅選取您需要的程式庫元件。 這可讓程式庫大小得以縮小，並最佳化載入時間。 請參閱有關如何使用NPM套件[建立自訂Web SDK組建的檔案](install/create-custom-build.md)。
-- [`getIdentity`](commands/getidentity.md)命令現在會自動直接從`kndctr`身分Cookie讀取ECID。 如果您使用`getIdentity`名稱空間呼叫`ECID`，而且已有身分Cookie，Web SDK將不再向Edge Network要求取得身分。 現在會從Cookie讀取身分識別。
+- [`getIdentity`](commands/getidentity.md)命令現在會自動直接從`kndctr`身分Cookie讀取ECID。 如果您使用`ECID`名稱空間呼叫`getIdentity`，而且已有身分Cookie，Web SDK將不再向Edge Network要求取得身分。 現在會從Cookie讀取身分識別。
 
 **修正和改良**
 
-- 修正傳送`getIdentity`呼叫後，`collect`命令未傳回身分的問題。
+- 修正傳送`collect`呼叫後，`getIdentity`命令未傳回身分的問題。
 - 修正個人化重新導向導致內容在重新導向發生前忽隱忽現的問題。
 
 ## 2.25.0版 — 2025年1月23日
@@ -141,13 +151,13 @@ ht-degree: 2%
    - `Privacy`已重新命名為`Consent`
 - 修正透過[`applyPropositions`](commands/applypropositions.md)轉譯預設內容專案時發生的錯誤。
 - 修正Adobe Target移動和調整動作大小時的CSS錯誤。
-- 已從`machineLearning`回應中移除[`sendEvent`](commands/sendevent/overview.md)金鑰。
+- 已從[`sendEvent`](commands/sendevent/overview.md)回應中移除`machineLearning`金鑰。
 
 ## 2.23.0版 — 2024年9月19日
 
 **新功能**
 
-- 新增在[getIdentity](/help/collection/identity/overview.md#core-id-and-third-party-identity)命令中要求[CORE ID](commands/getidentity.md)的支援。
+- 新增在[getIdentity](commands/getidentity.md)命令中要求[CORE ID](/help/collection/identity/overview.md#core-id-and-third-party-identity)的支援。
 
 **修正和改良**
 
@@ -267,7 +277,7 @@ ht-degree: 2%
 
 ## 2.13.1版 — 2022年10月13日
 
-- 修正設定後定義window.Visitor時，訪客移轉無法運作的問題。 使用Adobe標籤執行時，這個問題尤其嚴重。
+- 修正當視窗設定時，訪客移轉無法運作的問題。訪客是在設定後定義。 使用Adobe標籤執行時，這個問題尤其嚴重。
 - 修正`device.screenWidth`和`device.screenHeight`在某些環境中填入為字串的問題。
 
 ## 2.13.0版 — 2022年9月28日
@@ -296,13 +306,13 @@ ht-degree: 2%
 
 **新功能**
 
-- 您現在可以在行動應用程式和行動網站內容之間，而且跨網域共用訪客ID，更準確地提供個人化體驗。 如需瞭解詳細資訊，請參閱資料彙集[中的](../identity/overview.md)身分。
+- 您現在可以在行動應用程式和行動網站內容之間，而且跨網域共用訪客ID，更準確地提供個人化體驗。 如需瞭解詳細資訊，請參閱資料彙集](../identity/overview.md)中的[身分。
 - 您現在可以將[!DNL Adobe Target]中的主張陣列轉譯或執行為單頁應用程式，而不需要增加分析量度。 這樣可以減少報告錯誤，並提升分析準確度。
 - 已新增其他資訊至`getLibraryInfo`命令，包括可用的命令和執行個體的最終組態。
 
 **修正和改良**
 
-- 已更新Cookie設定以在`sameSite="none"`頁面上使用`secure`和[!DNL HTTPS]標幟。
+- 已更新Cookie設定以在[!DNL HTTPS]頁面上使用`sameSite="none"`和`secure`標幟。
 - 修正使用`eq`虛擬選取器時，個人化內容未正確套用的問題。
 - 修正`localTimezoneOffset`無法通過Experience Platform驗證的問題。
 
@@ -345,7 +355,7 @@ ht-degree: 2%
 
 ## 2.6.2版 — 2021年8月4日
 
-- 修正了即使未存取`result.decisions`屬性，`sendEvent` （由`result.decisions`命令提供）棄用的警告仍會記錄到主控台的問題。 存取`result.decisions`屬性時不會記錄任何警告，但該屬性仍被取代。
+- 修正了即使未存取`result.decisions`屬性，`result.decisions` （由`sendEvent`命令提供）棄用的警告仍會記錄到主控台的問題。 存取`result.decisions`屬性時不會記錄任何警告，但該屬性仍被取代。
 
 ## 2.6.1版 — 2021年7月29日
 
@@ -359,13 +369,13 @@ ht-degree: 2%
 
 - 新增重新導向個人化選件的支援。
 - 自動收集的檢視區寬度和高度如果是負值，將不再傳送至伺服器。
-- 當從`false`回呼傳回`onBeforeEventSend`以取消事件時，現在會記錄訊息。
+- 當從`onBeforeEventSend`回呼傳回`false`以取消事件時，現在會記錄訊息。
 - 修正將用於單一事件的特定XDM資料片段包含於多個事件中的問題。
 
 ## 2.4.0版 — 2021年3月
 
 - SDK現在可以安裝為[NPM套件](install/npm.md)。
-- 新增在`out`設定預設同意[時對](commands/configure/defaultconsent.md)選項的支援，在收到同意之前會捨棄所有事件（現有的`pending`選項會將事件排入佇列，並在收到同意後傳送這些事件）。
+- 新增在[設定預設同意](commands/configure/defaultconsent.md)時對`out`選項的支援，在收到同意之前會捨棄所有事件（現有的`pending`選項會將事件排入佇列，並在收到同意後傳送這些事件）。
 - [`onBeforeEventSend`](commands/configure/onbeforeeventsend.md)回呼現在可用來防止傳送事件。
 - 現在傳送有關個人化內容呈現或點按的事件時，會使用XDM結構描述欄位群組，而非`meta.personalization`。
 - [`getIdentity`](commands/getidentity.md)命令現在會連同身分一併傳回邊緣區域ID。
@@ -381,7 +391,7 @@ ht-degree: 2%
 - 新增Nonce支援，以允許更嚴格的內容安全性原則。
 - 新增對單頁應用程式的個人化支援。
 - 改善與其他可能覆寫`window.console` API的頁面上JavaScript程式碼的相容性。
-- 錯誤修正： `sendBeacon`設為`documentUnloading`或自動追蹤連結點選時，未使用`true`。
+- 錯誤修正： `documentUnloading`設為`true`或自動追蹤連結點選時，未使用`sendBeacon`。
 - 錯誤修正：如果錨點元素包含HTML內容，系統不會自動追蹤連結。
 - 錯誤修正：某些包含唯讀`message`屬性的瀏覽器錯誤未適當處理，導致向客戶公開不同的錯誤。
 - 錯誤修正：如果iframe的SDK頁面來自與上層視窗的HTML頁面不同的子網域，則在iframe內執行iframe會導致錯誤。
@@ -396,6 +406,6 @@ ht-degree: 2%
 - 移除`syncIdentity`命令，並支援在`sendEvent`命令中傳遞這些ID。
 - 支援IAB 2.0同意標準。
 - 支援在`setConsent`命令中傳遞其他ID。
-- 支援覆寫`datasetId`命令中的`sendEvent`。
+- 支援覆寫`sendEvent`命令中的`datasetId`。
 - 支援監視掛接（[瞭解詳情](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
 - 傳遞實作詳細資料內容資料中的`environment: browser`。
