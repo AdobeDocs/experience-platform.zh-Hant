@@ -46,7 +46,7 @@ DTVR：對於參與的節目來源，這會說明在桌上型電腦和行動裝�
 
 工作流程會逐步引導您完成安裝作業。
 
-如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html)上的[Nielsen數位SDK頁面。
+如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange[&#128279;](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html)上的Nielsen數位SDK頁面。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱標籤檔案中有關[新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的章節。
 
