@@ -1,12 +1,12 @@
 ---
 keywords: 目的地；experience cloud解決方案；target；target目的地；ad cloud；廣告；audience manager；adobe target目的地；target；audience manager目的地；
 title: Adobe目的地概觀
-description: 將您在Experience Platform中的資料連線到其他Adobe Experience Cloud解決方案，用於廣告目標定位、個人化、行銷自動化等，藉此管理您的客戶體驗
+description: 將您在Experience Platform中的資料連線到其他Adobe CX企業解決方案，以實現廣告鎖定、個人化、行銷自動化等，藉此管理您的客戶體驗
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 7%
+source-wordcount: '243'
+ht-degree: 6%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 ## 概觀 {#overview}
 
-將[!DNL Adobe Experience Platform]中的資料連線到其他[!DNL Adobe Experience Cloud]解決方案，以進行廣告目標定位、個人化、行銷自動化等，藉此管理您的客戶體驗。
+將[!DNL Adobe Experience Platform]中的資料連線到其他[!DNL Adobe CX Enterprise]解決方案，以進行廣告目標定位、個人化、行銷自動化等，藉此管理您的客戶體驗。
 
 ## 支援的Adobe目的地 {#supported-destinations}
 
@@ -30,7 +30,7 @@ ht-degree: 7%
 * [(Beta) Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage連線](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate連線](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
-* [同盟對象組合連線](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
+* [同盟對象構成連線](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
 ### 擴充功能 {#extensions}
 
@@ -49,4 +49,4 @@ ht-degree: 7%
 
 使用Experience Platform受眾共用功能，將您的Experience Platform受眾共用至其他Adobe目的地。 如需詳細資訊（在Audience Manager檔案入口網站中開啟），請參閱以下頁面：
 
-* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising和Adobe Target共用Experience Platform對象](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=zh-Hant)
+* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising和Adobe Target共用Experience Platform對象](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

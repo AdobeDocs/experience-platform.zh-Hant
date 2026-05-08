@@ -3,9 +3,9 @@ keywords: gtag；google gtag；google擴充功能；google gtag擴充功能；GT
 title: Google gtag擴充功能
 description: Google gtag擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '521'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->此處說明的Google gtag擴充功能已過時，並由[[!DNL Google Global Site Tag (gtag)]開發的](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) [!DNL Acronym]擴充功能取代。 您可以在資料收集UI或Experience Platform UI的[!DNL Google Global Site Tag (gtag)]工作區中找到[[!UICONTROL Tags]](../../../tags/home.md)擴充功能。
+>此處說明的Google gtag擴充功能已過時，並由[!DNL Acronym]開發的[[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)擴充功能取代。 您可以在資料收集UI或Experience Platform UI的[[!UICONTROL Tags]](../../../tags/home.md)工作區中找到[!DNL Google Global Site Tag (gtag)]擴充功能。
 
 ## 概觀 {#overview}
 
@@ -30,7 +30,7 @@ Google gtag是[!DNL Adobe Experience Platform]中的廣告擴充功能。 如需
 
 此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
-若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform]中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe Experience Cloud]個客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform]中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe CX Enterprise]個客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
@@ -42,11 +42,11 @@ Google gtag是[!DNL Adobe Experience Platform]中的廣告擴充功能。 如需
 
 選取目的地，然後在右側邊欄中選取&#x200B;**[!UICONTROL Configure]**。 如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈現灰色，表示您缺少&#x200B;**[!UICONTROL manage_properties]**&#x200B;許可權。 請參閱[必要條件](#prerequisites)。
 
-選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。在標籤檔案的[屬性頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中瞭解屬性。
+選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。 在標籤檔案的[屬性頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中瞭解屬性。
 
 工作流程會逐步引導您完成安裝作業。
 
-如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange[上的](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html)Google gtag頁面。
+如需有關擴充功能組態選項和安裝支援的資訊，請參閱Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html)上的[Google gtag頁面。
 
 您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱標籤檔案中有關[新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的章節。
 

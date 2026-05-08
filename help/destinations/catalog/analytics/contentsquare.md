@@ -3,10 +3,10 @@ keywords: contentsquare副檔名；contentsquare目的地；contentsquare
 title: Contentsquare副檔名
 description: Contentsquare擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 3%
+source-wordcount: '466'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
-若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform]中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe Experience Cloud]個客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform]中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe CX Enterprise]個客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 選取目的地，然後在右側邊欄中選取&#x200B;**[!UICONTROL Configure]**。 如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈現灰色，表示您缺少&#x200B;**[!UICONTROL manage_properties]**&#x200B;許可權。 請參閱[必要條件](#prerequisites)。
 
-選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。在標籤檔案的[屬性頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中瞭解屬性。
+選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。 在標籤檔案的[屬性頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中瞭解屬性。
 
 工作流程會逐步引導您完成安裝作業。
 

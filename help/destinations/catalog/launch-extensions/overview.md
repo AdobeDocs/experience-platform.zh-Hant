@@ -3,16 +3,16 @@ keywords: 標籤擴充功能；標籤擴充功能；launch目的地；platform�
 title: Adobe Experience Platform中的標籤擴充功能
 description: Adobe Experience Platform提供Adobe新一代的標籤管理功能。 Experience Platform可讓您透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '482'
 ht-degree: 2%
 
 ---
 
 # [!DNL Adobe Experience Platform]中的標籤延伸模組
 
-[!DNL Adobe Experience Platform]提供Adobe新一代的標籤管理功能。 Experience Platform可讓您透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。 標籤是以隨附加值功能的形式提供給[!DNL Adobe Experience Cloud]個客戶。
+[!DNL Adobe Experience Platform]提供Adobe新一代的標籤管理功能。 Experience Platform可讓您透過簡單的方式部署及管理所有必要的分析、行銷及廣告整合功能，以便支援相關客戶體驗。 標籤是以隨附加值功能的形式提供給[!DNL Adobe CX Enterprise]個客戶。
 
 如需標籤的簡介，請參閱下列資源：
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 如何在Experience Platform介面中尋找標籤擴充功能 {#how-to-find-extensions-in-interface}
 
-若要在Experience Platform介面中尋找擴充功能，請瀏覽至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**，並在&#x200B;**[!UICONTROL Extensions]**&#x200B;篩選器中選取&#x200B;**[!UICONTROL Types]**。
+若要在Experience Platform介面中尋找擴充功能，請瀏覽至&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**，並在&#x200B;**[!UICONTROL Types]**&#x200B;篩選器中選取&#x200B;**[!UICONTROL Extensions]**。
 
 介面中的![擴充功能篩選器](../../assets/catalog/launch-extensions/filter.png)
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 [標籤擴充功能](../../../tags/home.md#extensions)是增強網站或行動應用程式功能的程式碼套件。 這可能包括傳送原始事件資料到[Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md)之類的目的地，但它們也可以執行其他功能。
 
-區分標籤和事件轉送擴充功能很重要。 Experience Platform目的地使用者介面中出現的擴充功能是&#x200B;*標籤擴充功能*。 請參閱事件轉送概觀，以取得關於標籤和事件轉送[之間](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags)差異的詳細資訊。
+區分標籤和事件轉送擴充功能很重要。 Experience Platform目的地使用者介面中出現的擴充功能是&#x200B;*標籤擴充功能*。 請參閱事件轉送概觀，以取得關於標籤和事件轉送](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags)之間[差異的詳細資訊。
 
 
 

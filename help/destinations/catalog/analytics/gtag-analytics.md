@@ -3,9 +3,9 @@ keywords: Google全域網站標籤；gtag；google gtag；google擴充功能；g
 title: Google全域網站標籤擴充功能
 description: Google全域網站標籤擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 9643adc5-997d-45b3-a2b6-e365164022b8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '458'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-透過[!DNL Google Analytics]或gtag.js將資料傳送至[!DNL Google Ads]、[!DNL Google Marketing Platform]和[!DNL Google's Global Site Tag]。 每個產品可設定多個帳戶。
+透過[!DNL Google's Global Site Tag]或gtag.js將資料傳送至[!DNL Google Analytics]、[!DNL Google Ads]和[!DNL Google Marketing Platform]。 每個產品可設定多個帳戶。
 
 [!DNL Google Global Site Tag]是[!DNL Adobe Experience Platform]中的Analytics擴充功能。 如需有關擴充功能功能的詳細資訊，請參閱[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html)上的擴充功能頁面。
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 此擴充功能會在[!DNL Destinations]目錄中提供給所有已購買Experience Platform的客戶。
 
-若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform]中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe Experience Cloud]個客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取[!DNL Adobe Experience Platform]中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe CX Enterprise]個客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
@@ -38,7 +38,7 @@ ht-degree: 4%
 
 選取目的地，然後在右側邊欄中選取&#x200B;**[!UICONTROL Configure]**。 如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈現灰色，表示您缺少&#x200B;**[!UICONTROL manage_properties]**&#x200B;許可權。 請參閱[必要條件](#prerequisites)。
 
-選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。在標籤檔案的[屬性頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中瞭解屬性。
+選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。 在標籤檔案的[屬性頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中瞭解屬性。
 
 工作流程會逐步引導您完成安裝作業。
 

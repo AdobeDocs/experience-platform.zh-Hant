@@ -3,10 +3,10 @@ keywords: 廣告延伸模組；廣告目的地
 title: Adobe Advertising擴充功能
 description: Adobe Advertising擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+source-git-commit: 863b82892558373116dc3efd2778dd66a20d8973
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 4%
+source-wordcount: '414'
+ht-degree: 5%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 所有已購買Experience Platform的客戶都可在「目的地」目錄中找到此擴充功能。
 
-若要使用此擴充功能，您需要存取Experience Platform中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe Experience Cloud]個客戶。 請聯絡您的組織管理員，以取得UI中資料收集功能的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Experience Platform中的標籤。 標籤是以隨附加值功能的形式提供給[!DNL Adobe CX Enterprise]個客戶。 請聯絡您的組織管理員，以取得UI中資料收集功能的存取權，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，以便您安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
@@ -38,7 +38,7 @@ ht-degree: 4%
 
 選取目的地，然後在右側邊欄中選取&#x200B;**[!UICONTROL Configure]**。 如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈現灰色，表示您缺少&#x200B;**[!UICONTROL manage_properties]**&#x200B;許可權。 請參閱[必要條件](#prerequisites)。
 
-選取您要安裝擴充功能的標籤屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。在[標籤檔案](../../../tags/ui/administration/companies-and-properties.md)中瞭解屬性。
+選取您要安裝擴充功能的標籤屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。 在[標籤檔案](../../../tags/ui/administration/companies-and-properties.md)中瞭解屬性。
 
 工作流程會帶您前往資料收集UI以完成安裝。
 
